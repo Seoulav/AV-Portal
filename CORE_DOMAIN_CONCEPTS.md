@@ -1,5 +1,47 @@
 # CORE DOMAIN CONCEPTS
 
+## 자료 수집 정책 정정 (2026-09-22)
+
+이번 사용자 운영 결정은 아래 기존 URL·출처·자료 수집 요구와 충돌할 경우 우선한다. 최종 Schema나 수집 구현을 확정하는 작업이 아니다.
+
+### RTCOM — 제조사 직접 제공 자료
+
+RTCOM은 사용자가 제조사에서 직접 공식 자료를 제공받는다. **Work는 RTCOM 제품에 대해 별도 웹 조사·자동 웹 검색·크롤링을 수행하지 않는다.** Product / Model List, Datasheet / Specification, User Manual, Front Image, Rear Image, Drawing / CAD 및 기타 제조사 제공 기술자료를 최우선 공식 근거로 사용한다.
+
+공개 Source URL이 없어도 제조사 직접 제공임을 확인할 수 있는 자료는 `MANUFACTURER_DIRECT`와 같은 출처 개념으로 공식성을 표현한다. 제공 주체·수령일·전달 경로·원본 파일·적용 모델/Revision을 추적하고, URL을 임의 생성하지 않는다. URL 부재만으로 직접 제공 자료를 비공식 또는 자료 누락으로 판정하지 않는다. 직접 제공 사실이 사양 충돌을 자동 해소하거나 개별 제품의 모든 공개 요건을 충족한다는 뜻은 아니다.
+
+제품별 공식 웹사이트 또는 제품/Series 페이지 URL은 가능하면 제조사로부터 함께 제공받는다. 제품 전용 페이지가 실제로 존재하지 않는 경우, 공식 제조사 사이트 URL·관련 Series 페이지 URL·`DEDICATED_PRODUCT_PAGE_NOT_AVAILABLE` 같은 부재 사유 개념을 구분한다. 아직 URL을 받지 못한 경우와 전용 페이지가 없다고 확인된 경우는 다르다. 제품 전용 페이지 부재는 제조사 확인 근거와 함께 관리하고, 임의 링크 생성이나 별도 웹 조사로 해결하지 않는다.
+
+Product Detail은 Manual / Datasheet 옆에 확보된 공식 링크를 제공하되 링크 종류를 ‘제조사 공식 제품 페이지’, ‘공식 Series 페이지’, ‘제조사 공식 사이트’로 정확히 표시한다. 전용 페이지가 없으면 그 사실을 구별하며 홈페이지를 전용 제품 페이지로 위장하지 않는다. 전용 페이지 부재는 일반 미수집과 구분하여 공개 준비 검토에 반영한다. 이는 Datasheet·Manual·고해상도 전면/후면 자료의 필수 확보 요건을 면제하는 것이 아니다.
+
+### RTCOM 이외 제조사 — 지정 제품만 조사
+
+Yamaha, Shure, Samsung, AMX, Analog Way 등은 **사용자가 제공한 조사 대상 장비 리스트에 있는 제품만** 조사한다. 제조사 전체 제품이나 관련 모델을 임의로 대량 수집하지 않는다. 지정 제품마다 제조사 공식 Product Page, 공식 Datasheet / Specification, 공식 User Manual, 공식 고해상도 Front Image, 공식 고해상도 Rear Image의 5종을 조사한다.
+
+조사 순서는 **Manufacturer Official Product Page → Official Downloads / Support → Official Datasheet / Manual → Official Media Kit / Press Assets**다. 판매점·블로그·커뮤니티·비공식 이미지 사이트는 공식 자료의 대체 근거로 사용하지 않는다.
+
+항목별 조사 결과는 `FOUND`, `MISSING`, `CONFLICTED`, `REVIEW REQUIRED` 같은 개념으로 남긴다. FOUND는 해당 자료를 찾았다는 뜻이며 자동으로 사양 검증 또는 공개 준비 완료를 뜻하지 않는다. 필수 자료의 누락은 기존 `REQUIRED / MISSING` 요구와 연결한다. 찾지 못한 자료를 추측하거나 다른 모델 자료로 대체하지 않는다.
+
+### 공통 유지 기준
+
+Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 우선한다. 누락 이미지를 생성하거나 저해상도 AI 확대본을 공식 원본으로 취급하지 않는다. 공식 출처·적용 모델·이미지 역할과 실제 원본 해상도를 추적한다. 출처/상태 개념의 명칭은 예시이며 최종 필드명·enum·Product Data Schema는 미확정이다.
+
+기존 4개 모델 제외, Portal 대상 28개 항목, 원본 자료 보존, 기존 시스템 코드·데이터 미변경 범위를 유지한다. 이번에는 자료 수집 정책만 반영하며 새 제품 조사·자료 수집·외부 발송은 실행하지 않는다.
+
+
+## 정식 공개 자료 요건 추가 (2026-09-22)
+
+앞으로 AV Portal에 정식 공개하는 모든 Product는 **① 제조사 공식 해당 제품 페이지 URL ② 공식 Datasheet / Specification ③ 공식 User Manual ④ 고해상도 Front Image ⑤ 고해상도 Rear Image**를 확보해야 한다. RTCOM의 출처 URL 및 전용 페이지 예외는 상단 자료 수집 정책 정정을 따른다. 이 기준은 아래의 자료 부족 제품 공개 관련 이전 제안보다 우선한다. 기존 28개 대상 항목도 자동으로 공개 준비 완료가 되는 것은 아니다.
+
+- Product Detail의 Manual / Datasheet 옆에 **제조사 공식 제품 페이지**로 바로 이동하는 링크를 제공한다. 제조사 홈페이지 첫 화면이나 판매점 페이지를 해당 제품의 공식 페이지로 대체하지 않는다.
+- Front / Rear는 제조사 공식 Product Page, Media Kit, Press Asset 등 공식 출처를 우선한다. 이미지별 Source URL(있는 경우) 또는 제조사 직접 제공 증빙, 제공 주체·원본 파일·해상도·적용 모델·전면/후면 역할의 출처를 추적할 수 있어야 한다. 문서도 공식 출처·적용 모델·Revision을 추적한다.
+- 가능하면 긴 변 **2000px 이상인 고해상도 원본**을 우선한다. 2000px은 우선 확보 목표이며 이번 요구만으로 절대적인 최소 픽셀 기준을 확정하지 않는다. 고해상도 적합성 확인 없이 저해상도 자료를 충족 처리하지 않는다.
+- 제조사가 Rear Image 또는 고해상도 이미지를 제공하지 않으면 해당 자료를 **`REQUIRED / MISSING`**으로 남긴다. 임의 생성, 다른 모델 사진 대체, AI 확대본을 공식 고해상도 원본으로 취급하는 것은 금지한다. 저해상도 참고 파일이 존재하더라도 필수 고해상도 자료의 충족과 구분한다.
+- 5종 중 누락되거나 공식 출처·적용 대상이 확인되지 않은 자료가 있으면 **정식 공개 준비 완료로 판정하지 않는다.** 내부 준비·증빙 보존은 가능하다. 단순 파일 존재, 사양 검증 상태, 제품 판매 상태와 공개 준비 상태를 구분한다.
+- `official_product_url`, `datasheet`, `user_manual`, `front_image`, `rear_image`, `image_source`, `document_source`, `publication_readiness`는 향후 Schema에서 표현할 **요구 개념**이다. 최종 필드명·자료형·상태 enum·저장 구조는 확정하지 않는다. 여기서 자료의 ‘필수’는 운영상 공개 요건이며 Database 필수 필드 설계가 아니다.
+- 기존 4개 모델의 `EXCLUDED FROM PORTAL` 결정은 계속 적용한다. 제외 모델에 이 자료를 새로 수집·검증하지 않는다. 원본 자료는 보존한다.
+
+
 ## 운영 범위 정정 — 제품 제외 (2026-09-21)
 
 사용자 운영 결정에 따라 **HS-88M-U, HS-88MX, HD-D104U, HD-D108U는 `EXCLUDED FROM PORTAL`**이다. 이 결정은 아래 과거 분석·보존 권고보다 우선한다.
