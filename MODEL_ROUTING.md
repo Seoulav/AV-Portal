@@ -289,4 +289,4 @@ Astra는 복잡한 Architecture, 고난도 Reasoning, 해결되지 않는 Debugg
 > analysis or review portion of the task, then return to the default
 > model for routine implementation.
 >
-> See `docs/MODEL_ROUTING.md` for the full policy.
+> See `MODEL_ROUTING.md` at the repository root for the full policy.
