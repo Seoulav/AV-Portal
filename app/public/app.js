@@ -1,4 +1,4 @@
-import { filterProducts, listFacets, safeHttpUrl, verificationLabel, UNKNOWN_BRAND } from './catalog-view.mjs';
+import { filterProducts, listFacets, safeHttpUrl, verificationLabel, groupResources, resourceDisplay, UNKNOWN_BRAND } from './catalog-view.mjs';
 
 const $ = (selector) => document.querySelector(selector);
 const elements = {
@@ -53,10 +53,83 @@ function appendSources(parent, title, sources) {
   parent.append(section);
 }
 
+function appendResourceRegister(detail, body, item) {
+  const section = makeElement('section', 'detail-section resource-register');
+  section.append(makeElement('h5', '', '자료대장'));
+  section.append(makeElement('p', 'resource-intro', '기존 목록 출처와 별도로 연결된 자료 기록입니다.'));
+  const content = makeElement('div', 'resource-content');
+  content.append(makeElement('p', '', '상세를 열면 자료대장을 확인합니다.'));
+  section.append(content);
+  body.append(section);
+
+  let loading = false;
+  let loaded = false;
+  detail.addEventListener('toggle', async () => {
+    if (!detail.open || loading || loaded) return;
+    loading = true;
+    content.replaceChildren(makeElement('p', '', '자료대장을 확인하는 중입니다.'));
+    try {
+      const response = await fetch(`/api/products/${encodeURIComponent(item.id)}/resources`);
+      const result = await response.json();
+      if (!response.ok || result.status === 'unavailable') {
+        throw new Error('resource unavailable');
+      }
+      if (result.status === 'not_configured') {
+        content.replaceChildren(makeElement('p', 'resource-state', '자료대장 미연결 · 기존 목록 자료는 위에서 확인할 수 있습니다.'));
+        loaded = true;
+        return;
+      }
+      if (result.status !== 'available' || !Array.isArray(result.resources)) {
+        throw new Error('unexpected resource response');
+      }
+      if (!result.resources.length) {
+        content.replaceChildren(makeElement('p', 'resource-state', '이 제품에 연결된 자료대장 기록이 없습니다.'));
+        loaded = true;
+        return;
+      }
+      const fragment = document.createDocumentFragment();
+      for (const group of groupResources(result.resources)) {
+        const groupSection = makeElement('div', 'resource-group');
+        groupSection.append(makeElement('h6', '', `${group.label} · ${group.items.length}`));
+        for (const resource of group.items) {
+          const view = resourceDisplay(resource);
+          const row = makeElement('article', 'resource-row');
+          row.append(makeElement('strong', 'resource-title', view.title));
+          const metadata = makeElement('div', 'resource-meta');
+          for (const value of [
+            view.kind, view.authority, view.language, view.revision,
+            view.checked_on, view.verification, view.applicability, view.kind_basis
+          ]) {
+            if (value) metadata.append(makeElement('span', '', value));
+          }
+          row.append(metadata);
+          if (view.url) {
+            const link = makeElement('a', 'resource-link', '자료 웹페이지 열기 ↗');
+            link.href = view.url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            row.append(link);
+          } else {
+            row.append(makeElement('small', 'resource-no-link', '열 수 있는 웹 링크 없음'));
+          }
+          groupSection.append(row);
+        }
+        fragment.append(groupSection);
+      }
+      content.replaceChildren(fragment);
+      loaded = true;
+    } catch {
+      content.replaceChildren(makeElement('p', 'resource-state error', '자료대장을 읽을 수 없습니다. 목록 검색은 계속 사용할 수 있습니다. 다시 열어 재시도하세요.'));
+    } finally {
+      loading = false;
+    }
+  });
+}
 function appendDetails(parent, item) {
   const body = makeElement('div', 'detail-body');
   appendSources(body, '제조사 공식 출처', item.official_sources);
   appendSources(body, '지정 보조 출처', item.supplemental_sources);
+  appendResourceRegister(parent, body, item);
 
   if (item.direct_evidence.length) {
     const direct = makeElement('section', 'detail-section');
