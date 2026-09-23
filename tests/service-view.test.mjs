@@ -15,7 +15,7 @@ test('separates service records from equipment and preserves their IDs and sourc
   const dir = await mkdtemp(join(tmpdir(), 'av-service-'));
   const dataPath = join(dir, 'catalog.json');
   await writeFile(dataPath, JSON.stringify({
-    as_of: '2026-09-23', counts: { catalog_entries: 3, source_item_rows: 3 },
+    as_of: '2026-09-23', counts: { catalog_entries: 3, source_item_rows: 3, private_supplier_count: 340, rtcom: 65 },
     products: [item('EQ-1', 'PRODUCT', 1), item('AVP-0235', 'SERVICE', 142), item('AVP-0236', 'SERVICE', 143)]
   }));
   const server = createAppServer({ dataPath });
@@ -26,11 +26,13 @@ test('separates service records from equipment and preserves their IDs and sourc
   assert.deepEqual(equipment.products.map(x => x.id), ['EQ-1']);
   assert.equal(equipment.counts.catalog_entries, 1);
   assert.equal(equipment.counts.services, 2);
+  assert.equal(Object.hasOwn(equipment.counts, 'private_supplier_count'), false);
   const services = await (await fetch(base + '/api/catalog?view=services')).json();
   assert.deepEqual(services.products.map(x => x.id), ['AVP-0235', 'AVP-0236']);
   assert.deepEqual(services.products.map(x => x.source_records[0].record_id), ['ROW-142', 'ROW-143']);
   assert.equal(services.counts.catalog_entries, 2);
   assert.equal(services.counts.total_entries, 3);
+  assert.equal(services.counts.rtcom, 0);
   assert.equal((await fetch(base + '/api/catalog?view=unknown')).status, 400);
 });
 

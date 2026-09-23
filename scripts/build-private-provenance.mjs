@@ -19,14 +19,18 @@ export function buildPrivateRecord(proposal, catalog, hashes, expected = { sourc
     throw new Error('원본 행 수가 기준과 다릅니다.');
   }
   const seen = new Set();
+  const seenNewPositions = new Set();
   const byOldPosition = new Map();
   const source_versions = proposal.source_version_mapping.map(entry => {
     const original = sourceRows.get(entry.record_id);
+    const newPosition = key(entry.sheet, entry.new_row);
     if (!original || seen.has(entry.record_id) || original.product_id !== entry.product_id ||
-        original.sheet !== entry.sheet || original.row !== entry.old_row || !Number.isInteger(entry.new_row)) {
+        original.sheet !== entry.sheet || original.row !== entry.old_row ||
+        !Number.isInteger(entry.new_row) || entry.new_row < 1 || seenNewPositions.has(newPosition)) {
       throw new Error('기존 ID·원본 행 대응이 변경되었습니다.');
     }
     seen.add(entry.record_id);
+    seenNewPositions.add(newPosition);
     byOldPosition.set(key(entry.sheet, entry.old_row), entry);
     return {
       product_id: entry.product_id, record_id: entry.record_id,

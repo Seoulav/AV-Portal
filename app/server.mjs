@@ -48,9 +48,11 @@ function publicCatalog(catalog, view) {
     research_method: item.research_method, research_status: item.research_status
   }));
   const counts = {
-    ...catalog.counts,
     catalog_entries: products.length,
     source_item_rows: products.reduce((n, item) => n + item.source_records.length, 0),
+    merged_repeats: products.filter(item => item.source_records.length > 1).length,
+    brand_unidentified: products.filter(item => !item.brand).length,
+    rtcom: products.filter(item => item.brand === 'RTCOM').length,
     brands: new Set(products.map(item => item.brand).filter(Boolean)).size,
     with_official_links: products.filter(item => item.official_sources.length).length,
     equipment: equipment.length,

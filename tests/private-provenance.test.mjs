@@ -22,4 +22,11 @@ test('keeps old source identities and new file positions separate from private n
   assert.equal(record.internal_suppliers[0].supplier, 'private supplier');
   assert.deepEqual(record.option_review, { inclusion_candidates: 8, held: 11, products_added: 0 });
   assert.throws(() => buildPrivateRecord(proposal, catalog, { previous_excel: 'wrong' }, { sourceRows: 1, notes: 1, suppliers: 1 }), /해시/);
+  const invalid = structuredClone(proposal);
+  invalid.source_version_mapping[0].new_row = 0;
+  assert.throws(() => buildPrivateRecord(invalid, catalog, proposal.input_hashes_before, { sourceRows: 1, notes: 1, suppliers: 1 }), /대응/);
+  const duplicate = structuredClone(proposal);
+  duplicate.source_version_mapping.push({ sheet: '영상', old_row: 4, new_row: 3, record_id: 'ROW-4', product_id: 'AVP-2' });
+  const twoProducts = { products: [...catalog.products, { id: 'AVP-2', source_records: [{ record_id: 'ROW-4', sheet: '영상', row: 4 }] }] };
+  assert.throws(() => buildPrivateRecord(duplicate, twoProducts, proposal.input_hashes_before, { sourceRows: 2, notes: 1, suppliers: 1 }), /대응/);
 });
