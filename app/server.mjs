@@ -23,6 +23,45 @@ function json(response, status, body) {
   response.end(JSON.stringify(body));
 }
 
+function publicCatalog(catalog, view) {
+  const services = catalog.products.filter(item => item.item_type === 'SERVICE');
+  const equipment = catalog.products.filter(item => item.item_type !== 'SERVICE');
+  const selected = view === 'services' ? services : equipment;
+  const products = selected.map(item => ({
+    id: item.id, brand: item.brand, product: item.product, item_type: item.item_type,
+    categories: item.categories, aliases: item.aliases,
+    official_sources: item.official_sources.map(source => ({
+      url: source.url, verification: source.verification, source_record: source.source_record,
+      title: source.title, document_type: source.document_type,
+      document_type_basis: source.document_type_basis, language: source.language,
+      applicability: source.applicability, checked_on: source.checked_on
+    })),
+    supplemental_sources: item.supplemental_sources.map(source => ({
+      url: source.url, verification: source.verification, source_record: source.source_record,
+      title: source.title, document_type: source.document_type,
+      document_type_basis: source.document_type_basis, language: source.language,
+      applicability: source.applicability, checked_on: source.checked_on
+    })),
+    direct_evidence: item.direct_evidence,
+    source_records: item.source_records.map(record => ({ record_id: record.record_id, sheet: record.sheet, row: record.row })),
+    identity_status: item.identity_status, notes: item.notes,
+    research_method: item.research_method, research_status: item.research_status
+  }));
+  const counts = {
+    catalog_entries: products.length,
+    source_item_rows: products.reduce((n, item) => n + item.source_records.length, 0),
+    merged_repeats: products.filter(item => item.source_records.length > 1).length,
+    brand_unidentified: products.filter(item => !item.brand).length,
+    rtcom: products.filter(item => item.brand === 'RTCOM').length,
+    brands: new Set(products.map(item => item.brand).filter(Boolean)).size,
+    with_official_links: products.filter(item => item.official_sources.length).length,
+    equipment: equipment.length,
+    services: services.length,
+    total_entries: catalog.products.length
+  };
+  return { as_of: catalog.as_of, view, counts, products };
+}
+
 export function createAppServer({ dataPath, resourcePath = null, publicDir = defaultPublicDir }) {
   return createServer(async (request, response) => {
     const url = new URL(request.url, 'http://localhost');
@@ -32,9 +71,13 @@ export function createAppServer({ dataPath, resourcePath = null, publicDir = def
       return;
     }
     if (url.pathname === '/api/catalog') {
+      const view = url.searchParams.get('view') || 'equipment';
+      if (!['equipment', 'services'].includes(view)) {
+        json(response, 400, { error: '목록 보기 형식이 올바르지 않습니다.' });
+        return;
+      }
       try {
-        const { as_of, counts, products } = await loadCatalog(dataPath);
-        json(response, 200, { as_of, counts, products });
+        json(response, 200, publicCatalog(await loadCatalog(dataPath), view));
       } catch (error) {
         json(response, 500, { error: error.message });
       }

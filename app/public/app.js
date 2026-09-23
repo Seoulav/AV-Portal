@@ -15,6 +15,8 @@ const elements = {
 };
 let products = [];
 let visibleLimit = 24;
+let currentView = 'equipment';
+let viewRequest = 0;
 
 function makeElement(tag, className, value) {
   const node = document.createElement(tag);
@@ -164,6 +166,7 @@ function makeCard(item) {
   top.append(makeElement('span', `brand-label${item.brand ? '' : ' unknown'}`, item.brand || '브랜드 미식별'));
   top.append(makeElement('span', 'item-type', item.item_type || 'ITEM'));
   card.append(top, makeElement('h4', '', item.product));
+  card.append(makeElement('small', 'catalog-id', item.id));
   card.append(makeElement('p', 'aliases', item.aliases.length ? `별칭 · ${item.aliases.join(' · ')}` : '별칭 정보 없음'));
 
   const tags = makeElement('div', 'tags');
@@ -199,7 +202,7 @@ function render() {
     brand: elements.brand.value,
     categories
   });
-  elements.resultCount.textContent = `${filtered.length.toLocaleString('ko-KR')}개 제품`;
+  elements.resultCount.textContent = `${filtered.length.toLocaleString('ko-KR')}개 ${currentView === 'services' ? '서비스' : '장비'}`;
   elements.empty.hidden = filtered.length !== 0;
   const fragment = document.createDocumentFragment();
   for (const item of filtered.slice(0, visibleLimit)) fragment.append(makeCard(item));
@@ -208,6 +211,10 @@ function render() {
 }
 
 function setupFacets() {
+  const allBrands = makeElement('option', '', '모든 브랜드');
+  allBrands.value = '';
+  elements.brand.replaceChildren(allBrands);
+  elements.categories.replaceChildren();
   const facets = listFacets(products);
   for (const brand of facets.brands) {
     const option = makeElement('option', '', `${brand.label} (${brand.count})`);
@@ -244,19 +251,36 @@ elements.loadMore.addEventListener('click', () => {
   render();
 });
 
-try {
-  const response = await fetch('/api/catalog');
-  const catalog = await response.json();
-  if (!response.ok) throw new Error(catalog.error || '목록을 불러오지 못했습니다.');
-  products = catalog.products;
-  $('#stat-products').textContent = catalog.counts.catalog_entries.toLocaleString('ko-KR');
-  $('#stat-brands').textContent = catalog.counts.brands.toLocaleString('ko-KR');
-  $('#stat-sources').textContent = catalog.counts.with_official_links.toLocaleString('ko-KR');
-  $('#as-of').textContent = `목록 기준일 ${catalog.as_of} · 실행 시 로컬 파일에서 읽음`;
-  setupFacets();
-  render();
-} catch (error) {
-  elements.resultCount.textContent = '목록을 불러오지 못했습니다.';
-  elements.error.textContent = error.message;
-  elements.error.hidden = false;
+async function loadView(view) {
+  const request = ++viewRequest;
+  try {
+    const response = await fetch(`/api/catalog?view=${view}`);
+    const catalog = await response.json();
+    if (request !== viewRequest) return;
+    if (!response.ok) throw new Error(catalog.error || '목록을 불러오지 못했습니다.');
+    currentView = view;
+    products = catalog.products;
+    $('#view-heading').textContent = view === 'services' ? '서비스 찾아보기' : '장비 찾아보기';
+    for (const mode of ['equipment', 'services']) {
+      $(`#view-${mode}`).setAttribute('aria-pressed', String(mode === view));
+    }
+    elements.search.value = '';
+    elements.error.hidden = true;
+    $('#stat-products').textContent = catalog.counts.equipment.toLocaleString('ko-KR');
+    $('#stat-services').textContent = catalog.counts.services.toLocaleString('ko-KR');
+    $('#stat-brands').textContent = catalog.counts.brands.toLocaleString('ko-KR');
+    $('#stat-sources').textContent = catalog.counts.with_official_links.toLocaleString('ko-KR');
+    $('#as-of').textContent = `목록 기준일 ${catalog.as_of} · 전체 보관 ${catalog.counts.total_entries}건 · 실행 시 로컬 파일에서 읽음`;
+    setupFacets();
+    resetPageAndRender();
+  } catch (error) {
+    if (request !== viewRequest) return;
+    elements.resultCount.textContent = '목록을 불러오지 못했습니다.';
+    elements.error.textContent = error.message;
+    elements.error.hidden = false;
+  }
 }
+
+$('#view-equipment').addEventListener('click', () => loadView('equipment'));
+$('#view-services').addEventListener('click', () => loadView('services'));
+await loadView('equipment');
