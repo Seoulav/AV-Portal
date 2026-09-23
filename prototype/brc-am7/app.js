@@ -135,16 +135,29 @@ $('#show-rear').addEventListener('click', () => {
   $('#thumbnails').children[2].focus();
 });
 
+const quickSymbols = {
+  'Official Product Page': '◫',
+  'User Manual': '▤',
+  Specification: '≡',
+  'Firmware / Support': '↻',
+  'Technical Document': '⌘',
+  'CAD Resource': '◇'
+};
 const quick = data.documents.filter(document => document.quick);
 $('#quick-count').textContent = quick.length;
 for (const document of quick) {
   const card = officialLink(document.url, '', 'quick-card');
+  const icon = node('span', 'document-icon', quickSymbols[document.type] ?? '▣');
+  icon.setAttribute('aria-hidden', 'true');
+  const identity = node('span', 'card-identity');
+  identity.append(icon, node('span', 'card-type', document.type));
   const top = node('div', 'card-top');
-  top.append(node('span', 'card-type', document.type), node('span', 'card-arrow', '↗'));
-  card.append(top, node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note), badge(document.status));
+  top.append(identity, node('span', 'card-arrow', '↗'));
+  const meta = node('div', 'quick-meta');
+  meta.append(node('span', 'quick-language', document.language), badge(document.status));
+  card.append(top, node('strong', '', document.title), node('small', 'quick-detail', document.note), meta);
   $('#quick-docs').append(card);
 }
-
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
 for (const [index, feature] of data.features.entries()) {
   const card = node('article', 'feature-card panel');
@@ -182,23 +195,57 @@ for (const [group, specifications] of grouped) {
 }
 
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
+const ioDefinitions = [
+  ['Video', ['Video']],
+  ['Network / Control', ['Network/PoE', 'PTZ control', 'Tally']],
+  ['Audio', ['Audio']],
+  ['Sync / Timecode', ['Sync', 'Timecode']],
+  ['Power', ['Power']],
+  ['Recording Media', ['Recording media']]
+];
+const ioGroupBySignal = new Map(ioDefinitions.flatMap(([group, signals]) => signals.map(signal => [signal, group])));
+const groupedIo = new Map(ioDefinitions.map(([group]) => [group, []]));
 for (const item of data.io) {
-  const card = node('article', 'io-card panel');
-  const head = node('div', 'io-card-head');
-  head.append(node('h3', '', item.connector), node('span', 'direction', item.direction));
-  const facts = node('div', 'io-facts');
-  for (const [label, value] of [
-    ['SIGNAL', item.signal], ['QUANTITY', item.quantity],
-    ['PROTOCOL / STANDARD', item.protocol], ['FIXED / OPTIONAL', item.availability]
-  ]) {
-    const fact = node('div');
-    fact.append(node('span', '', label), node('strong', '', value));
-    facts.append(fact);
-  }
-  card.append(head, facts, node('p', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
-  $('#io-list').append(card);
+  const group = ioGroupBySignal.get(item.signal);
+  if (!group) throw new Error('분류되지 않은 I/O 신호: ' + item.signal);
+  groupedIo.get(group).push(item);
 }
-
+for (const [index, [group, items]] of [...groupedIo].entries()) {
+  const section = node('section', 'io-group');
+  const heading = node('div', 'io-group-head');
+  const title = node('h3', '', group);
+  title.id = 'io-group-' + index;
+  section.setAttribute('aria-labelledby', title.id);
+  heading.append(title, node('span', '', items.length + ' I/O'));
+  section.append(heading);
+  if (group === 'Power') {
+    const poe = data.io.find(item => item.connector === 'LAN RJ-45');
+    if (poe) {
+      const note = node('p', 'io-group-note', 'PoE++ · ' + poe.connector + ' · ' + poe.condition + ' ');
+      note.append(sourceReference(poe.source));
+      section.append(note);
+    }
+  }
+  const grid = node('div', 'io-grid');
+  for (const item of items) {
+    const card = node('article', 'io-card panel');
+    const head = node('div', 'io-card-head');
+    head.append(node('h4', '', item.connector), node('span', 'direction', item.direction));
+    const facts = node('div', 'io-facts');
+    for (const [label, value] of [
+      ['SIGNAL', item.signal], ['QUANTITY', item.quantity],
+      ['PROTOCOL / STANDARD', item.protocol], ['FIXED / OPTIONAL', item.availability]
+    ]) {
+      const fact = node('div');
+      fact.append(node('span', '', label), node('strong', '', value));
+      facts.append(fact);
+    }
+    card.append(head, facts, node('p', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
+    grid.append(card);
+  }
+  section.append(grid);
+  $('#io-list').append(section);
+}
 for (const document of data.documents) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
@@ -229,10 +276,41 @@ for (const issue of data.issues) {
 
 const sectionLinks = [...document.querySelectorAll('.section-nav a')];
 const observedSections = sectionLinks.map(link => document.querySelector(link.getAttribute('href')));
-const observer = new IntersectionObserver(entries => {
-  for (const entry of entries) {
-    if (!entry.isIntersecting) continue;
-    for (const link of sectionLinks) link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+const navigation = document.querySelector('.section-nav');
+const navScroller = document.querySelector('.section-nav-inner');
+let currentSection = '';
+let scrollFrame = 0;
+function updateSectionNav() {
+  const edge = navigation.getBoundingClientRect().bottom + 48;
+  let visibleSection = '';
+  for (const section of observedSections) {
+    if (section.getBoundingClientRect().top <= edge) visibleSection = section.id;
   }
-}, { rootMargin: '-90px 0px -70% 0px', threshold: 0 });
-for (const section of observedSections) observer.observe(section);
+  if (visibleSection === currentSection) return;
+  currentSection = visibleSection;
+  for (const link of sectionLinks) {
+    const active = link.getAttribute('href') === '#' + visibleSection && Boolean(visibleSection);
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+  if (!visibleSection || navScroller.scrollWidth <= navScroller.clientWidth) return;
+  const activeLink = sectionLinks.find(link => link.getAttribute('href') === '#' + visibleSection);
+  const linkRect = activeLink.getBoundingClientRect();
+  const scrollerRect = navScroller.getBoundingClientRect();
+  if (linkRect.left < scrollerRect.left + 8 || linkRect.right > scrollerRect.right - 8) {
+    const left = navScroller.scrollLeft + linkRect.left - scrollerRect.left - (scrollerRect.width - linkRect.width) / 2;
+    navScroller.scrollTo({ left, behavior: 'smooth' });
+  }
+}
+function scheduleSectionNavUpdate() {
+  if (scrollFrame) return;
+  scrollFrame = requestAnimationFrame(() => {
+    scrollFrame = 0;
+    updateSectionNav();
+  });
+}
+window.addEventListener('scroll', scheduleSectionNavUpdate, { passive: true });
+window.addEventListener('resize', scheduleSectionNavUpdate);
+window.addEventListener('hashchange', scheduleSectionNavUpdate);
+updateSectionNav();
