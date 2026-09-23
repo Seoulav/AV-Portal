@@ -1,0 +1,4 @@
+# Local source material and generated review/deployment bundles never belong in PRs.
+/hkkim/
+/outputs/
+/AGENTS.override.md
