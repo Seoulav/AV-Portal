@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 
 const EXCLUDED_MODELS = new Set(['HS-88M-U', 'HS-88MX', 'HD-D104U', 'HD-D108U']);
+const nonBlank = value => typeof value === 'string' && value.trim().length > 0;
 
 export function validateCatalog(data) {
   if (!data || !Array.isArray(data.products) || !data.counts) {
@@ -10,7 +11,7 @@ export function validateCatalog(data) {
   const rows = new Set();
   for (const item of data.products) {
     if (!item || typeof item !== 'object') throw new Error('제품 항목 형식이 올바르지 않습니다.');
-    if (typeof item.id !== 'string' || !item.id || typeof item.product !== 'string' || !item.product) {
+    if (!nonBlank(item.id) || !nonBlank(item.product)) {
       throw new Error('제품 ID 또는 제품명이 없습니다.');
     }
     if (ids.has(item.id)) throw new Error('중복 제품 ID가 있습니다.');
@@ -22,9 +23,24 @@ export function validateCatalog(data) {
         item.source_records.length === 0) {
       throw new Error('제품의 카테고리·자료·원본 행 형식이 올바르지 않습니다.');
     }
+    if (item.brand !== null && !nonBlank(item.brand)) throw new Error('브랜드 형식이 올바르지 않습니다.');
+    if (!item.categories.length || item.categories.some(category => !nonBlank(category))) {
+      throw new Error('카테고리 항목 형식이 올바르지 않습니다.');
+    }
+    if (item.aliases.some(alias => !nonBlank(alias))) throw new Error('별칭 항목 형식이 올바르지 않습니다.');
+    if (item.direct_evidence.some(reference => !nonBlank(reference))) {
+      throw new Error('직접 제공 참조 형식이 올바르지 않습니다.');
+    }
+    for (const source of [...item.official_sources, ...item.supplemental_sources]) {
+      if (!source || typeof source !== 'object' || !nonBlank(source.url) ||
+          (source.verification != null && typeof source.verification !== 'string') ||
+          (source.source_record != null && typeof source.source_record !== 'string')) {
+        throw new Error('출처 항목 형식이 올바르지 않습니다.');
+      }
+    }
     for (const record of item.source_records) {
       if (!record || typeof record !== 'object') throw new Error('원본 행 정보가 올바르지 않습니다.');
-      if (!record.record_id || !record.sheet || !Number.isInteger(record.row)) {
+      if (!nonBlank(record.record_id) || !nonBlank(record.sheet) || !Number.isInteger(record.row) || record.row < 1) {
         throw new Error('원본 행 정보가 올바르지 않습니다.');
       }
       if (rows.has(record.record_id)) throw new Error('중복 원본 행 ID가 있습니다.');

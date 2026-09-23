@@ -55,3 +55,10 @@ test('reads a catalog at the specified local path', async () => {
 test('reports a malformed product rather than crashing on null input', () => {
   assert.throws(() => validateCatalog({ counts: { catalog_entries: 1, source_item_rows: 0 }, products: [null] }), /제품 항목 형식/);
 });
+
+test('rejects malformed nested categories and evidence sources', () => {
+  assert.throws(() => validateCatalog(catalog([product({ categories: [null] })])), /카테고리/);
+  assert.throws(() => validateCatalog(catalog([product({ official_sources: [null] })])), /출처/);
+  assert.throws(() => validateCatalog(catalog([product({ aliases: [null] })])), /별칭/);
+  assert.throws(() => validateCatalog(catalog([product({ direct_evidence: [null] })])), /직접 제공/);
+});
