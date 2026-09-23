@@ -29,3 +29,4 @@ node beta/serve.mjs --dir '<위 site 폴더 절대 경로>' --port 4174
 ## W-20260923-013 — GitHub Pages 공개 배포
 
 W-012의 위 설명은 당시 로컬 검토 범위의 기록입니다. 이후 사용자가 2026-09-23에 **선별된 장비 25개와 다섯 공개 필드만** GitHub Pages에 게시하도록 승인했습니다. W-013은 이 폴더의 네 파일(`index.html`, `styles.css`, `app.js`, `catalog.json`)만 Pages 아티팩트로 올립니다. `node beta/verify-pages.mjs`가 파일 목록·25개·다섯 필드·승인 스냅샷 해시를 배포 직전에 검사합니다. 내부 원본·결정표·로컬 미리보기 출력은 배포에 포함되지 않습니다.
+실제 공개 주소: [https://seoulav.github.io/AV-Portal/](https://seoulav.github.io/AV-Portal/). GitHub Actions 실행 #35879374484 배포 성공과 실주소 검증을 W-013 결과에 기록했습니다.
