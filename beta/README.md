@@ -25,3 +25,7 @@ node beta/serve.mjs --dir '<위 site 폴더 절대 경로>' --port 4174
 생성기는 `brand`, `product`, `categories`, `kind`, `official_links`만 출력합니다. 제품 ID·원본 행·별칭·내부 메모·공급처·로컬 경로·보조 링크·사진/PDF는 출력하지 않습니다. 확인된 모델 본문 기록, 공식 호스트, HTTPS, 허용 웹페이지 형식을 검사합니다. 결정표·생성 데이터·로컬 상세 검토표는 GitHub에 올리지 않습니다.
 
 외부 배포는 사용자 최종 승인 이후 별도 작업입니다. 후보 방식은 [Cloudflare Pages Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/)의 수동 정적 파일 업로드로, Git 자동 연결 없이 이 폴더만 올릴 수 있습니다. [무료 플랜은 $0](https://www.cloudflare.com/developer-platform/products/pages/)이며 정적 요청에 별도 비용이 없지만, 대시보드 드래그 업로드는 1,000개 파일·개별 25 MiB 제한이 있습니다. 이 묶음은 4개 파일이고 가장 큰 파일도 8 KiB 미만입니다. [무료 플랜 한도](https://developers.cloudflare.com/pages/platform/limits/)를 배포 직전에 다시 확인해야 합니다. 이번 작업에서는 프로젝트 생성·외부 업로드·결제를 하지 않았습니다.
+
+## W-20260923-013 — GitHub Pages 공개 배포
+
+W-012의 위 설명은 당시 로컬 검토 범위의 기록입니다. 이후 사용자가 2026-09-23에 **선별된 장비 25개와 다섯 공개 필드만** GitHub Pages에 게시하도록 승인했습니다. W-013은 이 폴더의 네 파일(`index.html`, `styles.css`, `app.js`, `catalog.json`)만 Pages 아티팩트로 올립니다. `node beta/verify-pages.mjs`가 파일 목록·25개·다섯 필드·승인 스냅샷 해시를 배포 직전에 검사합니다. 내부 원본·결정표·로컬 미리보기 출력은 배포에 포함되지 않습니다.
