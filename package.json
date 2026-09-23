@@ -1,0 +1,14 @@
+{
+  "name": "av-portal-local-catalog",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node app/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify:local": "node --test tests/local-data.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

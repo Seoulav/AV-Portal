@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>AV Portal | 장비 라이브러리</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brandmark" href="/" aria-label="AV Portal 홈"><span class="brandmark-icon">AV<span>·</span></span><span>PORTAL</span></a>
+    <nav class="topnav" aria-label="외부 서비스">
+      <a href="https://seoul-visual-tech.github.io/av-system-builder/" target="_blank" rel="noopener noreferrer">AV System Builder <span aria-hidden="true">↗</span></a>
+      <a href="https://hkkim0454.github.io/svt-led-calculator/src/index.html" target="_blank" rel="noopener noreferrer">LED Configurator <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> EQUIPMENT LIBRARY <span class="eyebrow-edition">/ FIRST EDITION</span></p>
+        <h1>필요한 장비를<br><em>더 빠르게 찾으세요.</em></h1>
+        <p class="hero-description">브랜드와 제품을 탐색하고, 연결된 공식 자료와 보조 출처를 한 자리에서 확인하세요.</p>
+        <p class="hero-note">현재 목록 기반 탐색 화면 · 사양 및 공개 준비 상태는 별도 검토가 필요합니다.</p>
+      </div>
+      <div class="hero-panel" aria-label="목록 현황">
+        <div class="panel-top"><span class="panel-label">CATALOG SNAPSHOT</span><span class="live-dot">LOCAL DATA</span></div>
+        <div class="hero-metric"><strong id="stat-products">—</strong><span>탐색 가능한 고유 제품</span></div>
+        <div class="panel-grid">
+          <div><strong id="stat-brands">—</strong><span>식별된 브랜드</span></div>
+          <div><strong id="stat-sources">—</strong><span>공식 링크 연결 제품</span></div>
+        </div>
+        <p class="panel-foot" id="as-of">목록을 불러오는 중입니다.</p>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="장비 탐색">
+      <div class="section-heading">
+        <div><p class="section-kicker">EXPLORE THE CATALOG</p><h2>장비 찾아보기</h2></div>
+        <span class="section-aside">브랜드 · 제품명 · 별칭으로 탐색</span>
+      </div>
+
+      <div class="search-panel">
+        <label class="field search-field" for="search"><span>통합 검색</span><span class="input-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="예: Shure, BLU-101, XDM…" autocomplete="off"></span></label>
+        <label class="field brand-field" for="brand-filter"><span>브랜드</span><select id="brand-filter"><option value="">모든 브랜드</option></select></label>
+        <details class="category-filter" id="category-filter">
+          <summary><span class="field-label">카테고리</span><span class="category-summary">전체 카테고리 <b id="selected-category-count">0</b><span aria-hidden="true">⌄</span></span></summary>
+          <div class="category-content"><p>여러 카테고리를 선택할 수 있습니다. 선택한 항목 중 하나라도 포함되면 표시합니다.</p><div id="category-options" class="category-options"></div></div>
+        </details>
+      </div>
+
+      <div class="results-bar">
+        <div><span class="results-kicker">SEARCH RESULTS</span><h3 id="result-count" aria-live="polite">목록을 불러오는 중입니다.</h3></div>
+        <button id="clear-filters" class="text-button" type="button">필터 초기화 <span aria-hidden="true">↗</span></button>
+      </div>
+      <div id="load-error" class="notice error" role="alert" hidden></div>
+      <div id="empty-state" class="notice empty" hidden>검색 결과가 없습니다. 검색어나 필터를 조정해 보세요.</div>
+      <div id="product-grid" class="product-grid"></div>
+      <button id="load-more" class="load-more" type="button" hidden>제품 더 보기 <span aria-hidden="true">↓</span></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>AV PORTAL <span class="footer-divider">/</span> EQUIPMENT LIBRARY</span>
+    <span>출처 링크는 목록의 기존 연결이며, 검증 완료를 의미하지 않습니다.</span>
+  </footer>
+</body>
+</html>
