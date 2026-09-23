@@ -1,0 +1,327 @@
+[
+  {
+    "brand": "BSS Audio",
+    "product": "EC-4BV",
+    "categories": [
+      "오디오",
+      "Control",
+      "Control Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/products/EC-4BV"
+    ]
+  },
+  {
+    "brand": "Audinate",
+    "product": "AVIO USB C",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.getdante.com/platform/avio-usb-c/"
+    ]
+  },
+  {
+    "brand": "Shure",
+    "product": "MXCW640",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conferencing Endpoint"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    ]
+  },
+  {
+    "brand": "Yamaha",
+    "product": "DM7",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Mixer"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    ]
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 2/300BL",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html"
+    ]
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Mezzo 322 AD",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    ]
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Quattrocanali 2404 DSP+D",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+    ]
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Quattrocanali 4804 DSP+D",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd"
+    ]
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Duecanali 1604 DSP",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp"
+    ]
+  },
+  {
+    "brand": "Shure",
+    "product": "ULXD4Q",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q"
+    ]
+  },
+  {
+    "brand": "Shure",
+    "product": "QLXD4",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
+    ]
+  },
+  {
+    "brand": "Shure",
+    "product": "UA874XA",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Antenna"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA"
+    ]
+  },
+  {
+    "brand": "Sony",
+    "product": "BRC-AM7",
+    "categories": [
+      "영상",
+      "Video",
+      "Camera"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    ]
+  },
+  {
+    "brand": "Roland",
+    "product": "V-02HD MK II",
+    "categories": [
+      "영상",
+      "Video",
+      "Signal Switcher"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    ]
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS1",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs1"
+    ]
+  },
+  {
+    "brand": "Roland",
+    "product": "UVC-01",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Capture"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://proav.roland.com/global/products/uvc-01/"
+    ]
+  },
+  {
+    "brand": "Ross Video",
+    "product": "ULTRISCAPE",
+    "categories": [
+      "영상",
+      "Video",
+      "License"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/signal-processing/ultriscape/"
+    ]
+  },
+  {
+    "brand": "NETGEAR",
+    "product": "GSM4248PX",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    ]
+  },
+  {
+    "brand": "NETGEAR",
+    "product": "XSM4216F",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
+    ]
+  },
+  {
+    "brand": "Logitech",
+    "product": "Rally Bar",
+    "categories": [
+      "화상회의",
+      "Conferencing",
+      "Video Bar"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+    ]
+  },
+  {
+    "brand": "Epson",
+    "product": "EB-PQ2220B",
+    "categories": [
+      "프로젝터",
+      "Display",
+      "Projector"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851"
+    ]
+  },
+  {
+    "brand": "Epson",
+    "product": "EB-L790SU",
+    "categories": [
+      "프로젝터",
+      "Display",
+      "Projector"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051"
+    ]
+  },
+  {
+    "brand": "Epson",
+    "product": "EB-L690U",
+    "categories": [
+      "프로젝터",
+      "Display",
+      "Projector"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051"
+    ]
+  },
+  {
+    "brand": "Epson",
+    "product": "EB-L530U",
+    "categories": [
+      "프로젝터",
+      "Display",
+      "Projector"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040"
+    ]
+  },
+  {
+    "brand": "Panasonic",
+    "product": "PT-VMZ71",
+    "categories": [
+      "프로젝터",
+      "Display",
+      "Projector"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://docs.connect.panasonic.com/projector/products/vmz71/"
+    ]
+  }
+]
