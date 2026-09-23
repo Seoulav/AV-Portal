@@ -9,6 +9,7 @@ export function validateCatalog(data) {
   const ids = new Set();
   const rows = new Set();
   for (const item of data.products) {
+    if (!item || typeof item !== 'object') throw new Error('제품 항목 형식이 올바르지 않습니다.');
     if (typeof item.id !== 'string' || !item.id || typeof item.product !== 'string' || !item.product) {
       throw new Error('제품 ID 또는 제품명이 없습니다.');
     }
@@ -22,6 +23,7 @@ export function validateCatalog(data) {
       throw new Error('제품의 카테고리·자료·원본 행 형식이 올바르지 않습니다.');
     }
     for (const record of item.source_records) {
+      if (!record || typeof record !== 'object') throw new Error('원본 행 정보가 올바르지 않습니다.');
       if (!record.record_id || !record.sheet || !Number.isInteger(record.row)) {
         throw new Error('원본 행 정보가 올바르지 않습니다.');
       }

@@ -51,3 +51,7 @@ test('reads a catalog at the specified local path', async () => {
   const data = await loadCatalog(path);
   assert.equal(data.products[0].product, 'XDM-1');
 });
+
+test('reports a malformed product rather than crashing on null input', () => {
+  assert.throws(() => validateCatalog({ counts: { catalog_entries: 1, source_item_rows: 0 }, products: [null] }), /제품 항목 형식/);
+});
