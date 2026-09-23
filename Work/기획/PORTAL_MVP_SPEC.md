@@ -1,5 +1,9 @@
 # PORTAL MVP SPEC
 
+## Product Detail 기획 보강 — 2026-09-24
+
+이번 사용자 요청은 Product Detail의 정보 구조·UI 기준 보강 승인이다. 구현 착수·READY 전환·Final Schema·Database/Storage 결정 승인이 아니다. 기준 main은 888b035aafaeb9eb0472abcc2ec4e42a565b578f이며, W-013에서 공개된 베타 25개와 승인된 다섯 필드 범위를 유지한다. 아래 상세 요구는 향후 화면의 목표이며 현재 데이터에 없는 설명·사진·사양을 채우거나 공개하는 승인이 아니다. 기존 정식 공개 자료 요건과 제한된 베타의 승인 범위를 구분한다.
+
 ## 자료 수집 정책 정정 (2026-09-22)
 
 이번 사용자 운영 결정은 아래 기존 URL·출처·자료 수집 요구와 충돌할 경우 우선한다. 최종 Schema나 수집 구현을 확정하는 작업이 아니다.
@@ -28,7 +32,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 
 기존 4개 모델 제외, Portal 대상 28개 항목, 원본 자료 보존, 기존 시스템 코드·데이터 미변경 범위를 유지한다. 이번에는 자료 수집 정책만 반영하며 새 제품 조사·자료 수집·외부 발송은 실행하지 않는다.
 
-
 ## 정식 공개 자료 요건 추가 (2026-09-22)
 
 앞으로 AV Portal에 정식 공개하는 모든 Product는 **① 제조사 공식 해당 제품 페이지 URL ② 공식 Datasheet / Specification ③ 공식 User Manual ④ 고해상도 Front Image ⑤ 고해상도 Rear Image**를 확보해야 한다. RTCOM의 출처 URL 및 전용 페이지 예외는 상단 자료 수집 정책 정정을 따른다. 이 기준은 아래의 자료 부족 제품 공개 관련 이전 제안보다 우선한다. 기존 28개 대상 항목도 자동으로 공개 준비 완료가 되는 것은 아니다.
@@ -41,7 +44,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 - `official_product_url`, `datasheet`, `user_manual`, `front_image`, `rear_image`, `image_source`, `document_source`, `publication_readiness`는 향후 Schema에서 표현할 **요구 개념**이다. 최종 필드명·자료형·상태 enum·저장 구조는 확정하지 않는다. 여기서 자료의 ‘필수’는 운영상 공개 요건이며 Database 필수 필드 설계가 아니다.
 - 기존 4개 모델의 `EXCLUDED FROM PORTAL` 결정은 계속 적용한다. 제외 모델에 이 자료를 새로 수집·검증하지 않는다. 원본 자료는 보존한다.
 
-
 ## 운영 범위 정정 — 제품 제외 (2026-09-21)
 
 사용자 운영 결정에 따라 **HS-88M-U, HS-88MX, HD-D104U, HD-D108U는 `EXCLUDED FROM PORTAL`**이다. 이 결정은 아래 과거 분석·보존 권고보다 우선한다.
@@ -51,7 +53,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 - 원본 ZIP/PDF/Catalog/Datasheet 및 기타 제조사 자료는 수정·삭제하지 않는다. 여러 제품이 수록된 문서도 전체 원본을 보존하되 제외 모델 구역은 제품 데이터 준비에 사용하지 않는다.
 - 기존 Library **31개는 조사 당시 원본 수량**이다. 이 중 HS-88MX, HD-D104U, HD-D108U의 3개 항목을 제외하여 현재 Portal 기준은 **28개 장비·시리즈 항목**이다. HS-88M-U는 원래 31개 목록에 없으므로 다시 차감하지 않는다. Series·묶음이 포함되어 있으므로 28개 SKU를 뜻하지 않는다.
 - 이후 분석과 Product Data 준비는 이 제외 범위를 적용한다. 이번 변경은 문서 반영이며 기존 시스템 코드·데이터를 변경한 것은 아니다.
-
 
 **개발 대상:** AV Equipment Library / RTCOM Configurator → AV Portal  
 **상태:** 사용자 기능·화면 구조 제안 / 검토 대기  
@@ -161,15 +162,16 @@ Home은 통계 대시보드보다 **바로 작업을 시작하는 화면**으로
 
 ### 3.2 Product Detail — MVP
 
-| 화면 순서 | 구성 | 사용자 동작·표시 규칙 |
+| 화면 순서 | 구성 | 표시 기준 |
 |---|---|---|
-| 1. 제품 식별 | 제조사·이름·Model/Series·항목 유형·검증 요약 | 목록 복귀, 비교 추가, 지원되는 경우 RTCOM 구성기 진입 |
-| 2. 이미지 | 대표 이미지, 등록된 경우 전면/후면/기타 이미지 | 확대 보기. 사진의 역할 표시 |
-| 3. 제품 개요 | 용도·주요 특징, Series/관련 모델 안내 | 설명과 개별 수치 사양을 구별 |
-| 4. Specifications | 항목·값·단위·적용 조건·출처/확인 상태 | 항목별 근거 확인. 추출·파생·미확인 값 구분 |
-| 5. I/O Ports | 입력/출력/양방향 구분, 확인된 커넥터·신호·수량 | 고정 포트와 카드 옵션·논리 채널을 구별 |
-| 6. Documents | 관련 자료 유형·제목·버전·언어·출처 | 원문 열기, 허용된 자료 내려받기 |
-| 7. 확인 사항 | 검증 범위, 자료 간 불일치, 미확인 항목 | 근거 자료로 이동 |
+| A. Product Header | Manufacturer, Product / Model, Series, Category, 짧은 영문 설명, 한글 제품 설명, Verification Summary | 이 순서 유지, Category 복수 허용, 미등록 설명 추정 금지 |
+| B. Product Image Gallery | 큰 대표 이미지 + Main / Front / Rear / Perspective / Other 썸네일 | Front·Rear 최소 확보 목표, Missing Image·역할·확대·출처. 다른 모델·AI 이미지 대체 금지 |
+| C. Quick Documents | User Manual, Datasheet, Specification, Technical Document, Drawing / CAD, Brochure, Official Product Page | 설명과 가까운 위치, 2×2/2×3 우선·추가 자료는 다음 행, 없는 버튼 없음 |
+| D. Main Detail Sections | Overview → Features → Specifications → I/O → Documents → Sources & Verification | Desktop Section Navigation, Mobile 가로 스크롤 Sticky Tab |
+
+상세 동작·누락 상태·접근성·검수 기준의 기준 문서는 [UI/UX §5](UI_UX_SPEC.md#5-product-detail--av-engineering-library)다. Specifications는 General / Video / Audio / Control / Network / Power / Physical / Environment 중 적용 그룹별 Name·Value·Unit·Condition·Source·Verification을 보존한다. I/O는 Connector·Signal·Direction·Quantity·Protocol·Fixed/Optional·Card/Module·Condition 및 근거를 독립 영역에서 제공한다. 사진과 I/O의 위치 연결은 향후 검토로 남긴다. 이 항목들은 화면 요구이며 최종 Schema/DB 결정이 아니다.
+
+Manufacturer Official과 Supplemental / Domestic을 구별한다. JBL/AMX/BSS는 공식+TechDataPS, Shure는 공식+삼아프로사운드 비교 정책을 유지한다. 검토 표시는 VERIFIED / CONFLICTED / REVIEW REQUIRED이며 자료 확보·사양 검증·공개 허가는 각각 독립 판단한다.
 
 상세의 긴 내용은 섹션 바로가기로 이동하게 하고 중요한 상태를 접힌 영역에만 숨기지 않는다. 지원 모델 목록이 없는 Series는 카드별 정확한 사양을 추측해 보여주지 않는다.
 
@@ -197,12 +199,12 @@ Verification은 제품 전체의 보증 배지가 아니다. “카탈로그 기
 | 위치 | 데스크톱 | 모바일 |
 |---|---|---|
 | 탐색 줄 | 목록 복귀, 제조사·Category·Series 경로 | 줄바꿈 가능한 경로와 목록 복귀 |
-| 제품 요약 | 왼쪽 대표 이미지·썸네일, 오른쪽 제품명·짧은 설명·항목 유형·검증 요약 | 제품명·검증 요약, 이미지, 짧은 설명 순서 |
+| 제품 요약 | A Header → B Gallery → C Quick Documents | 같은 순서 유지 |
 | 주요 동작 | 비교에 추가, 자료 바로가기, 지원 제품의 RTCOM 구성기 열기 | 같은 동작을 짧은 버튼으로 배치 |
-| 섹션 바로가기 | 개요 / Specifications / I/O Ports / Documents / Verification & Sources | 가로로 이동 가능한 섹션 바로가기 |
-| 본문 | 구조화 사양과 I/O를 먼저 확인하고 자료·상세 근거로 이어짐 | 같은 정보 순서를 세로로 제공 |
+| 섹션 바로가기 | Overview / Features / Specifications / I/O / Documents / Sources & Verification | 같은 순서의 가로 스크롤 Sticky Tab |
+| 본문 | Overview → Features → 사양 → I/O → 자료 → 출처·검증 | 같은 정보 순서를 세로로 제공 |
 
-상단의 큰 홍보 배너를 필수로 두지 않는다. 사용자가 제품 소개뿐 아니라 비교와 검증 작업을 빠르게 시작할 수 있도록 이미지 높이를 조절하고 제품명·핵심 동작이 가까이 있도록 배치한다. 구체적인 색상·크기·시각 디자인은 이번 기능 명세에서 확정하지 않는다.
+상단의 큰 홍보 배너를 필수로 두지 않는다. 사용자가 제품 소개뿐 아니라 비교와 검증 작업을 빠르게 시작할 수 있도록 이미지 높이를 조절하고 제품명·핵심 동작이 가까이 있도록 배치한다. 시각 방향은 UI/UX §5.7의 밝은 RTCOM/LED 계열을 따른다. 구체적 디자인 토큰·코드는 이번에 결정하지 않는다.
 
 **엔지니어링 검토를 위한 추가 동작:**
 
