@@ -27,19 +27,24 @@
       </div>
       <div class="hero-panel" aria-label="목록 현황">
         <div class="panel-top"><span class="panel-label">CATALOG SNAPSHOT</span><span class="live-dot">LOCAL DATA</span></div>
-        <div class="hero-metric"><strong id="stat-products">—</strong><span>탐색 가능한 고유 제품</span></div>
+        <div class="hero-metric"><strong id="stat-products">—</strong><span>탐색 가능한 장비</span></div>
         <div class="panel-grid">
           <div><strong id="stat-brands">—</strong><span>식별된 브랜드</span></div>
           <div><strong id="stat-sources">—</strong><span>공식 링크 연결 제품</span></div>
         </div>
+        <p class="panel-foot">서비스 <strong id="stat-services">—</strong>건은 별도 보기에서 확인할 수 있습니다.</p>
         <p class="panel-foot" id="as-of">목록을 불러오는 중입니다.</p>
       </div>
     </section>
 
     <section class="workspace" aria-label="장비 탐색">
       <div class="section-heading">
-        <div><p class="section-kicker">EXPLORE THE CATALOG</p><h2>장비 찾아보기</h2></div>
+        <div><p class="section-kicker">EXPLORE THE CATALOG</p><h2 id="view-heading">장비 찾아보기</h2></div>
         <span class="section-aside">브랜드 · 제품명 · 별칭으로 탐색</span>
+      </div>
+      <div class="view-tabs" role="group" aria-label="목록 종류">
+        <button id="view-equipment" type="button" aria-pressed="true">장비 보기</button>
+        <button id="view-services" type="button" aria-pressed="false">서비스 보기</button>
       </div>
 
       <div class="search-panel">

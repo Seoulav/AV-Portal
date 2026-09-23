@@ -13,3 +13,6 @@
 .resource-no-link{font-size:10px;color:#83949e}
 .resource-state{font-size:11px;color:#536f7f}
 .resource-state.error{color:#a35a3b}
+.view-tabs { display: flex; gap: 0.65rem; margin: 1.25rem 0; }
+.view-tabs button { border: 1px solid #b8c3c9; border-radius: 999px; padding: 0.55rem 1rem; background: #fff; color: #18303b; cursor: pointer; font: inherit; }
+.view-tabs button[aria-pressed="true"] { background: #18303b; color: #fff; border-color: #18303b; }
