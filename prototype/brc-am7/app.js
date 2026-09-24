@@ -280,45 +280,79 @@ for (const [group, specifications] of grouped) {
 }
 
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
-const groupedIo = data.ioGroups.map(({ name, entries }) => [name, entries]);
-for (const [index, [group, items]] of [...groupedIo].entries()) {
-  const section = node('section', 'io-group');
-  const heading = node('div', 'io-group-head');
-  const title = node('h3', '', group);
-  title.id = 'io-group-' + index;
-  section.setAttribute('aria-labelledby', title.id);
-  heading.append(title, node('span', '', items.length + ' I/O'));
-  section.append(heading);
-  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => note.group === group)) {
-    const note = node('p', 'io-group-note', groupNote.text + ' ');
-    if (groupNote.source) note.append(sourceReference(groupNote.source));
-    section.append(note);
-  }
-  const grid = node('div', 'io-grid');
-  for (const item of items) {
-    const card = node('article', 'io-card panel');
-    const head = node('div', 'io-card-head');
-    head.append(node('h4', '', item.connector), node('span', 'direction', item.direction));
-    const facts = node('div', 'io-facts');
-    const primary = node('p', 'io-facts-primary');
-    const signal = node('strong', '', item.signal);
-    signal.setAttribute('aria-label', '신호 ' + item.signal);
-    const protocol = node('strong', '', item.protocol);
-    protocol.setAttribute('aria-label', '규격 ' + item.protocol);
-    primary.append(signal, node('span', 'io-facts-separator', '·'), protocol);
-    const secondary = node('p', 'io-facts-secondary');
-    secondary.append(node('span', '', '수량 ' + item.quantity), node('span', '', '고정/옵션 ' + item.availability));
-    facts.append(primary, secondary);
-    const main = node('div', 'io-row-main');
-    main.append(head, facts, badge(item.verification ?? 'REVIEW REQUIRED'));
-    const supporting = node('div', 'io-row-support');
-    supporting.append(node('p', 'io-condition', '조건 · ' + (item.condition || '별도 조건 미기록')), sourceReference(item.source));
-    card.append(main, supporting);
-    grid.append(card);
-  }
-  section.append(grid);
-  $('#io-list').append(section);
+const ioTable = node('table', 'io-table');
+ioTable.setAttribute('aria-label', '연결 단자 목록');
+const ioHead = node('thead', 'io-table-head');
+const ioHeaderRow = node('tr');
+for (const label of ['커넥터', '방향', '신호', '수량', '규격', '고정/옵션', '검증']) {
+  const header = node('th', '', label);
+  header.scope = 'col';
+  ioHeaderRow.append(header);
 }
+ioHead.append(ioHeaderRow);
+ioTable.append(ioHead);
+let ioIndex = 0;
+for (const [groupIndex, { name: group, entries: items }] of data.ioGroups.entries()) {
+  const body = node('tbody', 'io-group');
+  const groupRow = node('tr', 'io-group-row');
+  const groupCell = node('th');
+  groupCell.colSpan = 7;
+  groupCell.scope = 'rowgroup';
+  groupCell.id = 'io-group-' + groupIndex;
+  groupCell.append(node('strong', '', group), node('span', '', `${items.length} I/O`));
+  groupRow.append(groupCell);
+  body.append(groupRow);
+  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => note.group === group)) {
+    const noteRow = node('tr', 'io-note-row');
+    const noteCell = node('td');
+    noteCell.colSpan = 7;
+    noteCell.append(node('span', '', groupNote.text + ' '));
+    if (groupNote.source) noteCell.append(sourceReference(groupNote.source));
+    noteRow.append(noteCell);
+    body.append(noteRow);
+  }
+  for (const item of items) {
+    const row = node('tr', 'io-table-row');
+    const connector = node('td', 'io-cell-connector');
+    const detailId = `io-detail-${ioIndex++}`;
+    let detailRow;
+    if (item.condition) {
+      const toggle = node('button', 'io-row-toggle', item.connector);
+      toggle.type = 'button';
+      toggle.setAttribute('aria-label', `${item.connector} 조건과 근거 보기`);
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', detailId);
+      connector.append(toggle);
+      detailRow = node('tr', 'io-detail-row');
+      detailRow.id = detailId;
+      detailRow.hidden = true;
+      const detailCell = node('td');
+      detailCell.colSpan = 7;
+      detailCell.append(node('span', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
+      detailRow.append(detailCell);
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(expanded));
+        detailRow.hidden = !expanded;
+      });
+    } else {
+      connector.append(node('strong', '', item.connector), sourceReference(item.source));
+    }
+    row.append(connector);
+    for (const [className, value] of [
+      ['io-cell-direction', item.direction], ['io-cell-signal', item.signal],
+      ['io-cell-quantity', item.quantity], ['io-cell-protocol', item.protocol],
+      ['io-cell-availability', item.availability]
+    ]) row.append(node('td', className, value));
+    const verification = node('td', 'io-cell-verification');
+    verification.append(badge(item.verification ?? 'REVIEW REQUIRED'));
+    row.append(verification);
+    body.append(row);
+    if (detailRow) body.append(detailRow);
+  }
+  ioTable.append(body);
+}
+$('#io-list').append(ioTable);
 for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
