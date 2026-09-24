@@ -25,6 +25,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #5e8aff;outline-offset:3p
 .library-link{font-size:12px;font-weight:800;color:#3562b2;white-space:nowrap}
 .library-link:hover,.breadcrumb a:hover,.gallery-foot a:hover,.verification-box a:hover{color:#123da2;text-decoration:underline}
 main{max-width:1440px;margin:auto;padding:0 42px 90px}
+.load-failure{margin:24px 0;padding:18px 20px;border:1px solid #d9e3f6;border-radius:14px;background:#fff;color:#29436f}
+.load-failure a{display:block;width:max-content;max-width:100%;margin-top:10px;color:#285ed5;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .breadcrumb{display:flex;align-items:center;gap:10px;padding:28px 0 18px;font-size:12px;color:#8290a9;flex-wrap:wrap}
 .breadcrumb strong{color:#2b477c}
 .context-note{display:flex;align-items:center;gap:9px;margin-bottom:20px;color:#627594;font-size:12px}
@@ -196,7 +198,7 @@ h1{font-size:clamp(46px,5vw,66px);line-height:1.02;letter-spacing:-.065em;margin
 .panel-heading span{font-size:10px;color:#98a5b8}
 .source-item,.issue-item{border-bottom:1px solid #eef1f7;padding:16px 0}
 .source-item:last-child,.issue-item:last-child{border-bottom:0;padding-bottom:0}
-.source-item{display:grid;grid-template-columns:35px minmax(0,1fr);gap:11px}
+.source-item{display:grid;grid-template-columns:35px minmax(0,1fr);gap:11px;scroll-margin-top:100px}
 .source-code{width:31px;height:31px;border-radius:9px;background:#eaf1ff;color:#2f64c0;display:grid;place-items:center;font-size:10px;font-weight:900}
 .source-item a{font-size:12px;font-weight:800;color:#315eae;overflow-wrap:anywhere}
 .source-item a:hover{text-decoration:underline}
