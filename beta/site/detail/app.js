@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=d72c04f';
+import { prepareProductDetail } from './product-detail-model.mjs?v=ae4681b';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
