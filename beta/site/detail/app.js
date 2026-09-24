@@ -110,10 +110,9 @@ $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
 $('#verification-summary').textContent = data.verificationSummary;
-$('#overview-summary').textContent = data.overview ?? data.korean;
+$('#overview-summary').textContent = data.korean ?? data.overview;
 $('#overview-copy').textContent = data.overview ?? data.korean;
 $('#overview-more').hidden = !$('#overview-copy').textContent;
-$('#overview-more').addEventListener('toggle', () => { $('#overview-summary').hidden = $('#overview-more').open; });
 for (const category of data.categories) $('#categories').append(node('span', 'pill', category));
 
 let selectedIndex = 0;
@@ -221,6 +220,19 @@ if (data.officialPage?.url) {
   $('#gallery-source-link').hidden = true;
   $('#dialog-product-link').hidden = true;
 }
+if (!data.images.length) {
+  const inlineStatus = $('#image-status-inline');
+  const statusCount = (data.imageStatuses ?? []).length;
+  $('#image-status-message').textContent = foundImages
+    ? `제품 이미지 · 공식 출처 ${foundImages}건 확인 · 재게시 권한 미확인`
+    : statusCount ? '제품 이미지 · 이미지 역할·사용 조건 검토 중 · 게시 이미지 없음' : '제품 이미지 · 확보된 사진 없음';
+  const rightsBadge = $('#gallery-rights-badge');
+  rightsBadge.hidden = !rightsBadge.textContent;
+  inlineStatus.append(rightsBadge);
+  if (!$('#image-status-details').hidden) inlineStatus.append($('#image-status-details'));
+  inlineStatus.hidden = false;
+  $('.gallery').remove();
+}
 $('#quick-count').textContent = data.quickDocuments.length;
 for (const { label, resource, missingTitle, available } of data.quickDocuments) {
   const card = node('article', 'quick-card' + (available ? '' : ' quick-card-missing'));
@@ -246,7 +258,7 @@ $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
 for (const [group, specifications] of grouped) {
   const panel = node('details', 'spec-group panel');
-  panel.open = true;
+  panel.open = false;
   const head = node('summary', 'spec-group-head');
   head.append(node('strong', '', group), node('span', '', specifications.length + ' items'));
   panel.append(head);
@@ -339,72 +351,73 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const sectionLinks = [...document.querySelectorAll('.section-nav a')];
-const observedSections = sectionLinks.map(link => document.querySelector(link.getAttribute('href')));
-const navigation = document.querySelector('.section-nav');
-const navScroller = document.querySelector('.section-nav-inner');
-let currentSection = '';
-let scrollFrame = 0;
-function updateSectionNav() {
-  const edge = navigation.getBoundingClientRect().bottom + 54;
-  let visibleSection = '';
-  for (const section of observedSections) {
-    if (section.getBoundingClientRect().top <= edge) visibleSection = section.id;
+const tabs = [$('#tab-features'), $('#tab-specifications')];
+const panels = [$('#feature-panel'), $('#spec-panel')];
+function selectTab(index, updateAddress = false) {
+  for (const [position, tab] of tabs.entries()) {
+    const selected = position === index;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+    panels[position].hidden = !selected;
   }
-  if (visibleSection === currentSection) return;
-  currentSection = visibleSection;
-  for (const link of sectionLinks) {
-    const active = link.getAttribute('href') === '#' + visibleSection && Boolean(visibleSection);
-    link.classList.toggle('active', active);
-    if (active) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
-  }
-  if (!visibleSection || navScroller.scrollWidth <= navScroller.clientWidth) return;
-  const activeLink = sectionLinks.find(link => link.getAttribute('href') === '#' + visibleSection);
-  const linkRect = activeLink.getBoundingClientRect();
-  const scrollerRect = navScroller.getBoundingClientRect();
-  if (linkRect.left < scrollerRect.left + 8 || linkRect.right > scrollerRect.right - 8) {
-    const left = navScroller.scrollLeft + linkRect.left - scrollerRect.left - (scrollerRect.width - linkRect.width) / 2;
-    navScroller.scrollTo({ left, behavior: 'smooth' });
+  if (updateAddress) {
+    history.pushState(null, '', index ? '#specifications' : '#features');
+    $('#detail-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-function scheduleSectionNavUpdate() {
-  if (scrollFrame) return;
-  scrollFrame = requestAnimationFrame(() => {
-    scrollFrame = 0;
-    updateSectionNav();
+function hashTarget() {
+  if (!location.hash) return null;
+  try {
+    return document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  } catch {
+    return null;
+  }
+}
+function openForTarget(target) {
+  const isSpec = Boolean(target && panels[1].contains(target));
+  selectTab(isSpec ? 1 : 0);
+  if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
+  if (target && $('#supplemental-docs').contains(target)) $('#supplemental-docs').open = true;
+}
+for (const [index, tab] of tabs.entries()) {
+  tab.addEventListener('click', () => selectTab(index, true));
+  tab.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    const next = (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+    selectTab(next, true);
+    tabs[next].focus();
   });
 }
-window.addEventListener('scroll', scheduleSectionNavUpdate, { passive: true });
-window.addEventListener('resize', scheduleSectionNavUpdate);
-window.addEventListener('hashchange', scheduleSectionNavUpdate);
-updateSectionNav();
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+  let target;
+  try { target = document.getElementById(decodeURIComponent(link.hash.slice(1))); }
+  catch { return; }
+  if (target) openForTarget(target);
+});
+openForTarget(hashTarget());
 
 function restoreInitialHash() {
-  if (!location.hash) return;
-  let id;
-  try {
-    id = decodeURIComponent(location.hash.slice(1));
-  } catch {
-    history.scrollRestoration = 'auto';
-    return;
-  }
-  const target = document.getElementById(id);
+  const target = hashTarget();
   if (!target) {
     history.scrollRestoration = 'auto';
     return;
   }
+  openForTarget(target);
   const root = document.documentElement;
   const previousBehavior = root.style.scrollBehavior;
   root.style.scrollBehavior = 'auto';
   target.scrollIntoView({ behavior: 'auto', block: 'start' });
-  updateSectionNav();
   requestAnimationFrame(() => {
     root.style.scrollBehavior = previousBehavior;
     history.scrollRestoration = 'auto';
   });
 }
 if (!isHistoryTraversal) requestAnimationFrame(restoreInitialHash);
+window.addEventListener('hashchange', () => requestAnimationFrame(restoreInitialHash));
+window.addEventListener('popstate', () => requestAnimationFrame(restoreInitialHash));
 window.addEventListener('pageshow', event => {
   if (!event.persisted && !isHistoryTraversal) requestAnimationFrame(restoreInitialHash);
 });
