@@ -286,14 +286,15 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
     const head = node('div', 'io-card-head');
     head.append(node('h4', '', item.connector), node('span', 'direction', item.direction));
     const facts = node('div', 'io-facts');
-    for (const [label, value] of [
-      ['SIGNAL', item.signal], ['QUANTITY', item.quantity],
-      ['PROTOCOL / STANDARD', item.protocol], ['FIXED / OPTIONAL', item.availability]
-    ]) {
-      const fact = node('div');
-      fact.append(node('span', '', label), node('strong', '', value));
-      facts.append(fact);
-    }
+    const primary = node('p', 'io-facts-primary');
+    const signal = node('strong', '', item.signal);
+    signal.setAttribute('aria-label', '신호 ' + item.signal);
+    const protocol = node('strong', '', item.protocol);
+    protocol.setAttribute('aria-label', '규격 ' + item.protocol);
+    primary.append(signal, node('span', 'io-facts-separator', '·'), protocol);
+    const secondary = node('p', 'io-facts-secondary');
+    secondary.append(node('span', '', '수량 ' + item.quantity), node('span', '', '고정/옵션 ' + item.availability));
+    facts.append(primary, secondary);
     const main = node('div', 'io-row-main');
     main.append(head, facts, badge(item.verification ?? 'REVIEW REQUIRED'));
     const supporting = node('div', 'io-row-support');
