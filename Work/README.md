@@ -9,6 +9,7 @@
 - [핵심 도메인 개념](기획/CORE_DOMAIN_CONCEPTS.md)
 - [Portal MVP](기획/PORTAL_MVP_SPEC.md)
 - [UI/UX](기획/UI_UX_SPEC.md)
+- [제품 자료 조사·재사용 운영 정책](기획/PRODUCT_RESEARCH_OPERATING_POLICY.md)
 - [제품 분류](기획/PRODUCT_TAXONOMY.md)
 - [데이터 스키마 초안](기획/PRODUCT_DATA_SCHEMA_SKELETON.md)
 - [RTCOM 자료 준비](기획/RTCOM_DATA_PREPARATION.md)

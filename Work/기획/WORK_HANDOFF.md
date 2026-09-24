@@ -1,5 +1,7 @@
 # WORK_HANDOFF.md
 
+> 2026-09-24부터 제품별 조사·재사용의 최신 기준은 [제품 자료 조사·재사용 운영 정책](PRODUCT_RESEARCH_OPERATING_POLICY.md)이다. 조사 완료와 공개 승인, 자료 발견과 모델 적용·사양 검증·재게시 권한을 구분하며, MISSING은 정해진 조사 범위의 완료를 막지 않는다.
+
 ## 1. 프로젝트 이름
 AV Equipment Library / RTCOM Configurator → AV Portal
 

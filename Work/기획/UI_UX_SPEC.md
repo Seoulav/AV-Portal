@@ -1,5 +1,11 @@
 # UI / UX SPEC
 
+## 자료 조사·재사용 정책 최신 정정 (2026-09-24)
+
+[제품 자료 조사·재사용 운영 정책](PRODUCT_RESEARCH_OPERATING_POLICY.md)이 Quick Documents와 제품별 기본 조사 완료 판정의 최신 기준이다. Quick Documents는 Manual·시방서·사양서·기술문서 네 유형만 표시하고, Official Product Page는 분리한 외부 링크로 제공한다. CAD·Firmware·Brochure·Quick Start·Installation Guide·Product Page PDF는 이미 확보한 경우 Additional / Supplemental Documents로 보존하되 MVP 필수 조사 항목은 아니다.
+
+기본 조사 완료는 Official Product Page, Manual, 시방서, 사양서, 기술문서, Front Image, Rear Image의 상태를 기록한 때다. 각 항목의 MISSING은 조사 완료를 막지 않으며 자료 발견·모델 적용·사양 검증·공개/재게시 권한은 구분한다. 아래 과거의 정식 공개 요건은 공개 승인 판정에만 적용하고, 조사 완료 판정이나 자료 보완 작업을 무한정 늘리는 근거로 사용하지 않는다.
+
 ## 자료 수집 정책 정정 (2026-09-22)
 
 이번 사용자 운영 결정은 아래 기존 URL·출처·자료 수집 요구와 충돌할 경우 우선한다. 최종 Schema나 수집 구현을 확정하는 작업이 아니다.
