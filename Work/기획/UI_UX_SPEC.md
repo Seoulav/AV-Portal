@@ -1,5 +1,9 @@
 # UI / UX SPEC
 
+## Product Detail 기획 보강 — 2026-09-24
+
+이번 사용자 요청은 Product Detail의 정보 구조·UI 기준 보강 승인이다. 구현 착수·READY 전환·Final Schema·Database/Storage 결정 승인이 아니다. 기준 main은 888b035aafaeb9eb0472abcc2ec4e42a565b578f이며, W-013에서 공개된 베타 25개와 승인된 다섯 필드 범위를 유지한다. 아래 상세 요구는 향후 화면의 목표이며 현재 데이터에 없는 설명·사진·사양을 채우거나 공개하는 승인이 아니다. 기존 정식 공개 자료 요건과 제한된 베타의 승인 범위를 구분한다.
+
 ## 자료 수집 정책 정정 (2026-09-22)
 
 이번 사용자 운영 결정은 아래 기존 URL·출처·자료 수집 요구와 충돌할 경우 우선한다. 최종 Schema나 수집 구현을 확정하는 작업이 아니다.
@@ -28,7 +32,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 
 기존 4개 모델 제외, Portal 대상 28개 항목, 원본 자료 보존, 기존 시스템 코드·데이터 미변경 범위를 유지한다. 이번에는 자료 수집 정책만 반영하며 새 제품 조사·자료 수집·외부 발송은 실행하지 않는다.
 
-
 ## 정식 공개 자료 요건 추가 (2026-09-22)
 
 앞으로 AV Portal에 정식 공개하는 모든 Product는 **① 제조사 공식 해당 제품 페이지 URL ② 공식 Datasheet / Specification ③ 공식 User Manual ④ 고해상도 Front Image ⑤ 고해상도 Rear Image**를 확보해야 한다. RTCOM의 출처 URL 및 전용 페이지 예외는 상단 자료 수집 정책 정정을 따른다. 이 기준은 아래의 자료 부족 제품 공개 관련 이전 제안보다 우선한다. 기존 28개 대상 항목도 자동으로 공개 준비 완료가 되는 것은 아니다.
@@ -41,7 +44,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 - `official_product_url`, `datasheet`, `user_manual`, `front_image`, `rear_image`, `image_source`, `document_source`, `publication_readiness`는 향후 Schema에서 표현할 **요구 개념**이다. 최종 필드명·자료형·상태 enum·저장 구조는 확정하지 않는다. 여기서 자료의 ‘필수’는 운영상 공개 요건이며 Database 필수 필드 설계가 아니다.
 - 기존 4개 모델의 `EXCLUDED FROM PORTAL` 결정은 계속 적용한다. 제외 모델에 이 자료를 새로 수집·검증하지 않는다. 원본 자료는 보존한다.
 
-
 ## 운영 범위 정정 — 제품 제외 (2026-09-21)
 
 사용자 운영 결정에 따라 **HS-88M-U, HS-88MX, HD-D104U, HD-D108U는 `EXCLUDED FROM PORTAL`**이다. 이 결정은 아래 과거 분석·보존 권고보다 우선한다.
@@ -51,7 +53,6 @@ Front / Rear Image는 가능하면 긴 변 2000px 이상의 제조사 원본을 
 - 원본 ZIP/PDF/Catalog/Datasheet 및 기타 제조사 자료는 수정·삭제하지 않는다. 여러 제품이 수록된 문서도 전체 원본을 보존하되 제외 모델 구역은 제품 데이터 준비에 사용하지 않는다.
 - 기존 Library **31개는 조사 당시 원본 수량**이다. 이 중 HS-88MX, HD-D104U, HD-D108U의 3개 항목을 제외하여 현재 Portal 기준은 **28개 장비·시리즈 항목**이다. HS-88M-U는 원래 31개 목록에 없으므로 다시 차감하지 않는다. Series·묶음이 포함되어 있으므로 28개 SKU를 뜻하지 않는다.
 - 이후 분석과 Product Data 준비는 이 제외 범위를 적용한다. 이번 변경은 문서 반영이며 기존 시스템 코드·데이터를 변경한 것은 아니다.
-
 
 **대상:** AV Equipment Library / RTCOM Configurator → AV Portal  
 **상태:** 사용자 검토용 화면·동선 설계 / 미구현  
@@ -186,51 +187,78 @@ Home에는 제조사 카드를 최대 6개까지 배치하고 그 이상은 “�
 
 [TechDataPS 제품 상세](https://techdata-ps.com/m21_view.php?listType=1&c_code=005004&idx=2655)의 제조사 맥락, 제품명·이미지·설명, 자료 바로가기 방식을 참고한다. 이전 단계에서 화면을 확인했으며 디자인·문구·이미지·제품 데이터를 복제하지 않는다. Portal은 Structured Specifications, I/O, Source와 향후 Compare를 연결한다.
 
-### 5.2 섹션과 동작
+### 5.2 기본 순서와 Product Header
 
-| 영역 | 표시 구조 | 주요 동작 |
-|---|---|---|
-| 탐색 경로 | 목록으로, Manufacturer, Category, 확인된 Series | 목록 복귀 또는 해당 조건의 새 탐색 |
-| Product Header | 제품/Model 이름, 제조사·Series·Category·항목 유형, 검증 요약 | 지원되는 제품군에서만 RTCOM 진입. Compare는 MVP 1.5부터 |
-| Product Images | 대표 이미지와 등록된 Main/Front/Rear/Other 썸네일 | 썸네일 선택, 역할 표시, 확대 보기 |
-| Quick Documents | 등록된 Datasheet, User Manual, Installation Guide, Drawing/CAD, Manufacturer Product Page | 파일 또는 공식 페이지 열기. 여러 자료이면 버전/언어 선택 |
-| Overview | 짧은 용도 설명, 핵심 특징 | “제품 소개”로 표현. 사양표와 분리 |
-| Structured Specifications | 이름·값·단위·조건·확인 상태·Source | 항목별 근거 보기 |
-| I/O Ports | 방향별 그룹, Connector·Signal·Quantity·Fixed/Optional | 포트 근거 보기. 고정 포트/장착 카드/요약 채널 구분 |
-| Documents | 전체 관련 자료 목록 | 자료 열기·다운로드, 제품 조건의 Documents 전체 보기 |
-| Verification & Sources | 확인 범위·출처 자료·미확인·충돌·확인일 | 관련 사양 또는 자료로 이동 |
+탐색 경로 아래 기본 읽기·키보드 이동 순서는 **A Product Header → B Product Image Gallery → C Quick Documents → D Main Detail Sections**로 고정한다. Desktop에서도 이 순서를 유지하고, 기존 이미지/요약 2열 제안보다 이 기준을 우선한다. Header의 설명과 Quick Documents 사이에는 Gallery만 두며 홍보 배너를 끼우지 않는다.
 
-Desktop에서는 이미지와 제품 요약을 두 열로 배치하고 그 아래 Quick Documents와 섹션 바로가기를 둔다. 아래 본문은 개요 → 사양 → I/O → Documents → Verification 순서다. 자료가 없는 섹션도 제목과 설명을 남겨 미등록 상태를 이해할 수 있게 한다.
+| 순서 | 정보·동작 |
+|---|---|
+| A. Product Header | Manufacturer → Product / Model → Series → Category(복수 허용) → 짧은 영문 설명 → 한글 제품 설명 → Verification Summary |
+| B. Product Image Gallery | 큰 대표 이미지, 하단 또는 측면 썸네일, 이미지 역할과 출처, 클릭 확대 |
+| C. Quick Documents | 존재하며 공개 가능한 문서·공식 페이지의 유형별 카드 |
+| D. Main Detail Sections | Overview → Features → Specifications → I/O → Documents → Sources & Verification |
 
-### 5.3 Quick Documents와 이미지
+Series·설명이 없으면 사실을 만들어 채우지 않고 미등록 상태로 안내한다. 영문 설명과 한글 설명은 각각 읽을 수 있게 두며 자동 번역을 검증된 설명으로 간주하지 않는다. Header의 검증 요약은 확인 범위를 밝히고 Sources & Verification으로 이동한다. RTCOM 진입은 지원되는 모델에서만, Compare는 기존 MVP 1.5 범위를 따른다.
 
-Quick Documents는 등록된 유형만 노출한다. 여러 버전이 있으면 `매뉴얼 2개`처럼 표시하고 제목·언어·버전/날짜·출처·파일 형식이 있는 선택 목록을 연다. 최신 버전임이 확인되지 않은 파일을 임의로 기본 최신 자료로 표시하지 않는다. 하나의 자료이면 곧바로 열기 또는 다운로드 동작을 제공한다.
+본문은 Overview(용도·제품 개요)와 Features(특징)를 분리하고 마케팅 문구를 검증된 사양값처럼 표시하지 않는다. Desktop은 여섯 섹션으로 이동하는 Section Navigation을 기본으로 한다. Mobile은 가로 스크롤 가능한 Sticky Tab 형태의 섹션 링크를 사용하며 현재 섹션·초점을 표시한다. 본문은 같은 순서로 유지하고 고정 영역이 제목·키보드 초점을 가리지 않게 한다. 자료가 없는 섹션도 제목과 짧은 미등록 안내를 남긴다.
 
-Manufacturer Product Page는 실제 해당 제품·제품군의 확인된 주소일 때만 표시한다. 제조사 홈 주소를 개별 제품 페이지처럼 안내하지 않는다. Quick Documents와 본문 목록은 같은 자료를 가리키며, 파일이 없으면 비활성 다운로드 버튼을 채워 넣지 않는다.
+### 5.3 Product Image Gallery와 Quick Documents
 
-이미지 확대는 배경을 가리는 보기로 열고 닫기·Esc·초점 복귀를 제공한다. 전면/후면이 확인되지 않은 사진은 Other/제품 이미지로 표시한다. 이미지를 자동으로 회전시키지 않는다. 이미지 출처·역할을 확인할 수 있으며 사진을 근거로 포트 수를 추정해 입력하지 않는다.
+이미지 역할은 **Main / Front / Rear / Perspective / Other**다. Front와 Rear 확보가 최소 목표이나 미확보를 다른 모델 사진·AI 생성 이미지로 대체하지 않는다. Main은 대표 이미지 선택 역할이며 Front 등 촬영 방향을 대체하지 않는다. 큰 대표 이미지 아래 또는 옆에 실제 이미지 썸네일을 두고 선택된 역할을 글자로 표시한다. Main 미지정 시 등록된 Front → Rear → Perspective → Other 순으로 대표 표시하되 실제 역할을 바꾸지 않는다.
+
+Front 또는 Rear가 없으면 각각 “Missing Image — Front/Rear”를 비클릭 상태로 안내한다. 이미지가 전혀 없으면 Gallery 영역에 동일한 누락 안내를 제공하며 가짜 썸네일을 만들지 않는다. 전후면을 확인하지 못한 사진은 Other로 표시한다. 이미지별 제공 주체·출처·적용 모델과 공개 가능 여부를 구분한다. 사진에서 포트 수나 호환성을 추정하지 않는다.
+
+클릭 확대는 닫기 버튼·Esc·초점 복귀·키보드 썸네일 선택을 제공하고 배경으로 초점이 빠지지 않게 한다. 이미지를 자동 회전시키지 않는다. 모바일에서는 화면 폭에 맞추며 확대 보기의 닫기 동작을 항상 유지한다.
+
+Quick Documents 기본 유형은 User Manual, Datasheet, Specification, Technical Document, Drawing / CAD, Brochure, Official Product Page다. 기존 Installation Guide도 확인된 자료이면 유지한다. Datasheet와 Specification은 의미가 확인된 경우 구분하며 같은 파일로 두 카드를 부풀리지 않는다.
+
+Desktop/Tablet은 2열 카드 배열(4개일 때 2×2, 6개일 때 2×3)을 우선 사용한다. 7개 이상은 같은 배열의 다음 행으로 이어지고 빈 칸을 가짜 버튼으로 채우지 않는다. Mobile은 가독성에 따라 1열 또는 2열로 전환한다. 카드에는 유형·자료명·언어·확인된 개정·출처와 열기/다운로드 동작을 표시한다. 설명에서 가까운 상단 영역에 유지한다.
+
+등록되고 공개 가능한 자료만 노출한다. 여러 버전이면 제목·언어·개정/날짜·적용 모델·출처·형식이 있는 선택 목록을 연다. 확인되지 않은 파일을 최신 버전으로 자동 선택하지 않는다. 없는 유형에는 비활성 다운로드 버튼도 만들지 않는다. 자료가 전혀 없으면 짧은 안내만 표시한다.
+
+Official Product Page는 실제 해당 제품 또는 적용 제품군의 확인된 주소여야 한다. 제조사 홈페이지를 개별 제품 페이지로 가장하지 않는다. 외부 링크임을 표시하고 Quick Documents와 Documents는 동일한 자료·개정을 가리킨다. 공식 링크 제공과 사진/PDF의 복제·재게시 권한은 별개다. 비공개 자료의 파일명·로컬 경로·업체값은 공개 화면에 노출하지 않는다.
 
 ### 5.4 Structured Specifications
 
-Desktop의 읽기 열은 `Specification Name | Value | Unit | Condition | Verification | Source`다. 조건이 긴 경우 줄바꿈하며 툴팁에만 숨기지 않는다. Unit이 없는 설명형 값은 불필요한 단위를 채우지 않는다. 해당 제품군에 의미 있는 사양 그룹만 사용한다.
+그룹은 **General / Video / Audio / Control / Network / Power / Physical / Environment**를 기준으로 제품에 적용되는 그룹만 사용한다. 읽기 열은 **Name / Value / Unit / Condition / Source / Verification**이다. 이는 화면에서 보존할 의미이며 최종 DB 필드나 Schema 선언이 아니다.
 
-Source의 “근거 보기”는 옆 패널 또는 좁은 화면의 전체 패널을 연다. 자료 제목·발행 주체·문서 버전·확인된 페이지/절·확인 메모를 보여주고 원문 열기를 제공한다. 페이지를 모르면 문서 링크까지만 제공한다. 닫으면 해당 사양 행의 버튼으로 돌아온다.
+단위 없는 설명형 값에 단위를 만들지 않는다. 긴 조건은 줄바꿈하며 툴팁에만 숨기지 않는다. Mobile은 항목별 세로 블록으로 같은 정보를 모두 보존한다. “0 / 미지원 / 해당 없음 / 미확인”을 구별한다.
 
-사양이 아예 없으면 빈 행 수십 개 대신 “구조화된 사양이 아직 등록되지 않았습니다”와 자료가 있는 경우 “원문 자료 보기”를 표시한다. 수치 자료 일부만 있으면 있는 항목을 그대로 보여주고 “일부 항목 확인 필요”를 안내한다. 구조화 표시는 새 Schema 확정이나 원문 자동 추출을 전제하지 않는다.
+Source의 근거 보기는 자료 제목·발행 주체·개정·확인된 페이지/절·적용 범위를 제공한다. 모르는 페이지나 개정을 만들지 않는다. 닫으면 해당 사양으로 초점이 돌아온다. 사양이 없으면 빈 행 대신 “구조화된 사양이 아직 등록되지 않았습니다”를 표시하고 공개 가능한 원문이 있을 때만 연결한다.
 
 ### 5.5 I/O Table
 
-Input / Output / Bidirectional을 명확히 구분한다. 각 행에는 Connector, Signal, Quantity, Fixed/Optional과 필요한 조건·근거를 제공한다. “슬롯 선택에 따라 달라짐”, “카탈로그 요약” 같은 적용 범위를 수량 옆에 둔다.
+I/O는 Specifications와 독립된 섹션으로 유지한다. **Connector / Signal / Direction / Quantity / Protocol / Fixed 또는 Optional / Card 또는 Module / Condition**을 읽을 수 있게 하고 항목별 근거·검토 상태를 연결한다. 모르는 값은 미확인으로 남긴다.
 
-Connector와 Signal을 하나의 열로 합치지 않는다. 프로토콜·거리·대역폭의 정보가 없어도 추측하지 않는다. 양방향 한 포트를 입력 한 개와 출력 한 개로 중복 표시하지 않는다. 원천 정의가 불명확하면 변환하지 말고 “표현 범위 확인 필요”로 안내한다.
+Input / Output / Bidirectional을 구분한다. Connector와 Signal을 합치지 않고 양방향 한 포트를 입력·출력으로 이중 계산하지 않는다. 수량에는 장착 조건·독립 채널·복사/LOOP·논리 채널의 적용 범위를 표시한다. 제품군 최대값을 현재 장착 포트 수처럼 표시하지 않는다. Mobile에서는 방향별 카드에 같은 정보를 보존한다.
 
-데이터가 없으면 “I/O 정보 미등록 · 포트가 없다는 뜻은 아닙니다”로 안내한다. 제품군 최대 포트 수를 선택한 섀시의 현재 장착 포트 수처럼 표시하지 않는다. 이번 문서는 호환 판정이나 연결 가능 여부를 계산하지 않는다.
+데이터가 없으면 “I/O 정보 미등록 · 포트가 없다는 뜻은 아닙니다”로 안내한다. 전면/후면 사진과 포트 행의 상호 강조·위치 연결은 향후 검토 대상이며 이번 필수 구현 요소·호환 계산·최종 Schema로 확정하지 않는다.
 
-### 5.6 Verification & Sources
+### 5.6 Sources & Verification
 
-상단 요약에서 “근거·확인 범위”를 누르면 이 섹션으로 이동한다. 공식 자료 보유 여부, 사양 검토 상태, 자료 불일치를 구분한다. 제품 전체가 검증되었다는 배지로 개별 미확인 항목을 가리지 않는다.
+출처를 다음 두 그룹으로 분리하고 자료별 적용 모델·개정·확인일·검토 범위를 표시한다.
 
-서로 다른 자료의 값이 충돌하면 사양 행에도 “자료 불일치”를 표시하고 각각의 출처·조건을 보여준다. 문서 날짜만으로 한쪽 값을 자동 채택하지 않는다. 날짜가 없으면 “확인일 미등록”으로 표시한다.
+- Manufacturer Official: Product Page, Datasheet, Manual, Technical Documentation.
+- Supplemental / Domestic: TechDataPS, 삼아프로사운드, 기타 승인된 보조 출처. 국내 출처라는 이유로 Manufacturer Official로 승격하지 않는다.
+
+JBL / AMX / BSS는 Manufacturer Official + TechDataPS 비교, Shure는 Manufacturer Official + 삼아프로사운드 정책을 유지한다. 한국어 제조사 공식 자료 우선이며 없으면 글로벌 공식 자료를 사용한다. RTCOM은 직접 제공 자료 우선, 공식 홈페이지 제품 소개·특징의 기본 정보 조사 허용이라는 최신 정정을 유지한다. 이번 보강에서는 제품 조사를 수행하지 않는다.
+
+Review Status는 **VERIFIED(해당 범위 검증됨) / CONFLICTED(자료 불일치) / REVIEW REQUIRED(검토 필요)**로 표시한다. 미등록·미검토 항목은 검증 완료로 계산하지 않는다. VERIFIED에는 근거와 범위를 연결하고 일부 사양의 확인을 제품 전체 보증으로 표시하지 않는다. 충돌 시 양쪽 값·출처·조건을 함께 보이며 문서 날짜만으로 자동 채택하지 않는다.
+
+자료 확보 여부, 사실·사양 검증 상태, 공개/재게시 허가 상태는 각각 구분한다. 이 상태명은 UI 표시 계약이며 저장 enum 확정이 아니다. 공개 준비 관련 내부 기록을 사용자용 출처 영역에 그대로 노출하지 않는다.
+
+### 5.7 시각 방향과 향후 구현 검수 기준
+
+기존 RTCOM / LED Configurator의 밝은 iOS 계열을 따른다. White / Light Gray 바탕, Blue Accent, 제한적인 Blue-Purple Gradient, 큰 Border Radius의 Rounded Card, Soft Shadow, Glass / Layered 표현, Pill Tab을 사용한다. TechDataPS의 Dark Theme·레이아웃 장식·자산을 복제하지 않는다. 반투명 효과보다 본문 대비와 엔지니어링 정보의 가독성을 우선한다.
+
+향후 구현에서는 다음을 확인한다. 이번 문서 변경에서 실행한 앱 테스트를 뜻하지 않는다.
+
+- Desktop/Mobile의 A → B → C → D 순서, 한·영 설명과 여섯 본문 섹션의 분리.
+- 이미지 0장·Front만 있음·Front/Rear 있음의 누락 안내, 역할 선택, 확대/닫기·Esc·초점 복귀.
+- 문서 0/1/4/6/7개 및 여러 개정의 카드 배열·버전 선택, 없는 버튼 미생성.
+- 긴 사양·복수 Category·긴 모델명에서 잘림 없이 읽기; Sticky Tab이 내용·초점을 가리지 않음.
+- I/O 조건과 근거 유지, 공식/보조 출처 분리, 세 검토 상태와 공개 권한의 독립 표시.
+- 25개 베타 범위·기존 데이터·공개 승인 범위 불변. 자료 미확보는 Missing 상태로 설명하고 임의로 보충하지 않음.
 
 ## 6. Documents Library
 
@@ -393,7 +421,7 @@ Desktop은 약 1200px 이상, Tablet은 약 768~1199px, Mobile은 그보다 좁�
 | Home | 검색 전체 폭, Category·제조사 근접 배치, 도구 3열 | Category·제조사 카드 2~3열, 도구 2열 또는 세로 | 검색 우선, Category·제조사 2열, 도구 세로, 자료 목록 |
 | Library Filter | 왼쪽 고정 폭 패널, 결과와 함께 보임 | 결과 2열 확보가 어려우면 “필터 N” 버튼과 패널 | “필터 N” 버튼, 전체 높이 패널, 하단 적용/취소 |
 | Product Card | 2~3열 | 2열 | 기본 1열. 좁은 폭에서 글자를 줄여 2열을 강제하지 않음 |
-| Detail Header | 이미지/제품 요약 2열 | 폭에 따라 2열 또는 세로 | 제품명·상태 → 이미지 → 설명 → Quick Documents |
+| Detail Header | A Header → B Gallery → C Quick Documents | 같은 순서, 카드 2열 우선 | 같은 순서, 카드 1~2열·Sticky 섹션 링크 |
 | Specifications | 6열 의미 표, 조건 줄바꿈 | 값·단위 병합 표시 가능, 조건·근거 줄바꿈 | 사양별 블록: 이름/값·단위/조건/상태/근거. 정보 삭제 없음 |
 | I/O | 방향 그룹별 표 | 열 수가 많으면 행 안 조건 줄바꿈 | 방향별 카드: Connector·Signal·수량·고정/옵션·근거 |
 | Documents | 필터+넓은 행 목록 | 접이 필터, 제목·메타정보 2줄 | 한 자료당 세로 카드, 열기/다운로드 구분 |
@@ -491,32 +519,26 @@ Mobile: 제목 → 검색 → 결과 수·정렬 → `[필터 N]` → Chip → �
 ### 14.3 Product Detail — MVP 1
 
 ```text
-+-------------------------------------------------------------------+
-| Portal | Home | Equipment Library* | RTCOM | Documents | 외부 도구 |
-+-------------------------------------------------------------------+
-| [목록으로]  제조사 > Category > Series(등록 시)                     |
-+---------------------------+---------------------------------------+
-|                           | 제조사 · 제품/Model 이름             |
-|       대표 이미지         | Category · Series · 항목 유형         |
-|                           | Verification 요약 [확인 범위]        |
-| [Main][Front][Rear][Other] | 짧은 설명 · 정보 제공 현황            |
-|        (등록된 것만)      | [RTCOM 열기: 지원되는 경우]           |
-+---------------------------+---------------------------------------+
-| Quick Documents: [Datasheet ↗][Manual ↗][Drawing ↗][공식 페이지 ↗] |
-|                    (등록 자료만, 여러 개이면 목록 선택)           |
-+-------------------------------------------------------------------+
-| [개요] [Specifications] [I/O] [Documents] [Verification & Sources]  |
-| 개요: 용도·특징                                                    |
-| 사양명 | 값 | 단위 | 조건 | 확인 상태 | [근거 보기]                |
-| I/O: 방향 | Connector | Signal | 수량 | 고정/옵션 | [근거]        |
-| 전체 Documents: 제목·유형·버전·출처                    [열기]     |
-| Verification & Sources: 확인 범위·미확인·자료 불일치              |
-+-------------------------------------------------------------------+
-| [비교에 추가]는 MVP 1.5에서 제품 요약 영역에 추가                   |
-+-------------------------------------------------------------------+
+[목록으로] 제조사 > Category > Series
+A Header: Manufacturer / Product·Model / Series / Category
+          짧은 영문 설명 / 한글 제품 설명 / Verification Summary
+B Gallery: 큰 대표 이미지
+           Main · Front · Rear · Perspective · Other 실제 썸네일
+           미확보 역할: Missing Image (비클릭)
+C Quick Documents: 실제 공개 가능 자료 카드, 2열 우선
+                   여러 개정은 선택 목록, 없는 자료 버튼 없음
+D Section Navigation (Mobile: 가로 스크롤 Sticky Pill 링크)
+[Overview] [Features] [Specifications] [I/O] [Documents] [Sources & Verification]
+Overview: 용도·개요
+Features: 특징
+Specifications: 그룹별 Name / Value / Unit / Condition / Source / Verification
+I/O: Connector / Signal / Direction / Quantity / Protocol
+     Fixed·Optional / Card·Module / Condition / 근거
+Documents: 관련 공개 가능 자료 전체 목록
+Sources & Verification: 공식·보조 출처 / 검토 범위·충돌·미확인
 ```
 
-Mobile: 목록 복귀·경로 → 제품명·상태 → 이미지/썸네일 → 설명·현황 → Quick Documents → 섹션 바로가기 → 개요 → 사양별 블록 → 방향별 I/O 카드 → 자료 → 근거. 가로로 긴 사양 표를 축소해 글자를 읽기 어렵게 만들지 않는다.
+Mobile도 같은 순서다. 사양과 I/O는 세로 블록으로 정보를 보존한다. Compare는 기존 MVP 1.5 범위이며 이 보강으로 앞당기지 않는다.
 
 ### 14.4 Documents — MVP 1
 
@@ -661,7 +683,7 @@ flowchart LR
 3. Mobile의 필터 적용/취소, 단일 제품의 세로 사양 블록, Compare의 가로 대조 표.
 4. 기존 RTCOM 작업 보존이 확인되기 전에는 Portal 복귀를 새 탭으로 제공하는 방식.
 
-**이번 결과물은 UI_UX_SPEC.md 한 개다.** 코드·기존 데이터·기존 문서를 수정하지 않았다. Framework·Database·Architecture·최종 Product Schema·Authentication을 결정하지 않았으며, Admin·Builder·LED·RTCOM Logic·공통 BOM·공통 Compatibility·AI 추천을 구현하지 않았다. 문서 작성 후 작업을 멈추고 사용자 검토를 기다린다.
+**이전 작성 단계의 종료 기록:** 당시 결과물은 UI_UX_SPEC.md 한 개였다. 코드·기존 데이터·기존 문서를 수정하지 않았다. Framework·Database·Architecture·최종 Product Schema·Authentication을 결정하지 않았으며, Admin·Builder·LED·RTCOM Logic·공통 BOM·공통 Compatibility·AI 추천을 구현하지 않았다. 문서 작성 후 작업을 멈추고 사용자 검토를 기다린다.
 
 ## 추가 UX 요구 — 공식 자료와 공개 준비
 

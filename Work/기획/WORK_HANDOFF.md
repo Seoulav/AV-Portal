@@ -1,5 +1,9 @@
 # WORK_HANDOFF.md
 
+## Product Detail 기획 보강 — 2026-09-24
+
+이번 사용자 요청은 Product Detail의 정보 구조·UI 기준 보강 승인이다. 구현 착수·READY 전환·Final Schema·Database/Storage 결정 승인이 아니다. 기준 main은 888b035aafaeb9eb0472abcc2ec4e42a565b578f이며, W-013에서 공개된 베타 25개와 승인된 다섯 필드 범위를 유지한다. 아래 상세 요구는 향후 화면의 목표이며 현재 데이터에 없는 설명·사진·사양을 채우거나 공개하는 승인이 아니다. 기존 정식 공개 자료 요건과 제한된 베타의 승인 범위를 구분한다.
+
 ## 1. 프로젝트 이름
 AV Equipment Library / RTCOM Configurator → AV Portal
 
@@ -79,26 +83,22 @@ Top-Level Domain 후보:
 - Repository 통합
 - Builder / LED 수정
 
-## 6. Product Detail 방향
-Product Detail 기본 구조:
-- Manufacturer / Model / Series / Category
-- Main / Front / Rear / Other Image
-- Quick Documents
-- Overview
-- Structured Specifications
-- I/O Ports
-- Documents
-- Verification & Sources
+## 6. Product Detail 방향 — 2026-09-24 갱신
 
-중요 원칙:
-- 0
-- 미지원
-- 해당 없음
-- 정보 없음
+기준은 [UI/UX §5](UI_UX_SPEC.md#5-product-detail--av-engineering-library)와 [MVP §3](PORTAL_MVP_SPEC.md#3-equipment-library와-product-detail)이다.
 
-을 서로 다르게 취급한다.
+1. A Product Header: Manufacturer → Product / Model → Series → Category → 짧은 영문 설명 → 한글 제품 설명 → Verification Summary.
+2. B Product Image Gallery: 큰 대표 이미지, Main / Front / Rear / Perspective / Other 썸네일, 확대. Front·Rear 최소 확보 목표와 Missing Image 표시. 다른 모델·AI 생성 이미지 대체 금지.
+3. C Quick Documents: 실제 공개 가능한 일곱 기본 유형, 2열 카드 우선, 여러 개정 선택. 없는 자료 버튼 없음.
+4. D 본문: Overview → Features → Specifications → I/O → Documents → Sources & Verification. Desktop Section Navigation, Mobile 가로 스크롤 Sticky Tab.
 
-정보가 없다고 0 또는 미지원으로 추측하지 않는다.
+사양은 8개 기준 그룹 중 적용되는 그룹의 Name·Value·Unit·Condition·Source·Verification을 보존한다. I/O는 별도로 Connector·Signal·Direction·Quantity·Protocol·Fixed/Optional·Card/Module·Condition과 근거를 제공한다. 사진과 포트 위치 연결은 향후 검토다.
+
+공식/보조 출처와 VERIFIED / CONFLICTED / REVIEW REQUIRED를 구분한다. JBL/AMX/BSS 공식+TechDataPS, Shure 공식+삼아프로사운드 정책을 유지한다. 자료 확보·사양 검증·공개 허가는 서로 대체하지 않는다. 0 / 미지원 / 해당 없음 / 미확인은 구별한다.
+
+밝은 RTCOM/LED 계열의 White·Light Gray, Blue Accent, 일부 Blue-Purple Gradient, 큰 Rounded Card·Soft Shadow·Glass/Layered·Pill Tab을 유지한다. TechDataPS는 정보 우선순위만 참고한다.
+
+이번 보강으로 기존 항목 중 이미지·문서·사양·I/O·출처 요구는 유지하고, A–D 순서·한영 설명·Perspective·별도 Features·문서 카드·Sticky Tab·출처별 상태를 명확히 했다. 구현 코드·제품 데이터·Schema·DB는 변경하지 않는다.
 
 ## 7. Product Data Schema 현재 상태
 최종 PRODUCT_DATA_SCHEMA.md는 아직 작성하지 않았다.
@@ -224,6 +224,18 @@ HD-D104U / HD-D108U와 구분한다.
 - 향후 RTCOM 공식 자료
 
 ## 13. 현재 작업 위치
+
+### 2026-09-24 최신 인계
+
+W-013 공개 베타 배포 완료 기록은 [지시서](../지시서.md)에서 확인한다. 공개 범위는 25개·승인된 다섯 필드이며 이번 기획으로 확대하지 않는다. Product Detail 목표 UI와 현재 공개 데이터의 차이는 미등록 상태로 다룬다.
+
+이번 요청은 세 기획 문서의 보강만 승인했다. 새 READY 명세나 구현 지시는 만들지 않는다. 향후 구현에는 별도 작업의 승인·선행 조건·main 병합 확인이 필요하다. 자료 확보를 위해 완료된 제품 조사를 반복하거나 비공개 원본을 GitHub로 옮기지 않는다. hkkim/·outputs/는 다른 PC나 GitHub에서 자동 접근할 수 없다.
+
+RTCOM은 사용자/제조사 직접 제공 자료 우선이며 공식 홈페이지 제품 소개·특징의 기본 정보 조사는 허용한다. 과거의 일괄 웹 금지보다 최신 정정을 적용한다.
+
+### 이전 기획 시점의 기록
+
+아래 완료·대기 목록과 자료 수령 후 순서는 과거 인계 맥락이다. 현재 앱·공개 베타가 미구현이라는 뜻이나 최종 Schema 확정 지시로 해석하지 않는다.
 
 완료:
 - 기존 시스템 분석
