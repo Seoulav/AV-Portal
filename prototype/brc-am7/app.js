@@ -75,6 +75,7 @@ $('#item-type').textContent = data.itemType ?? 'PRODUCT';
 $('#package-status').textContent = data.packageStatus ?? 'READY';
 $('#package-status').classList.add(data.packageStatus?.includes('REVIEW') ? 'state-review' : 'state-ready');
 $('#gallery-count').textContent = `${data.images.length} VIEWS`;
+$('.hero-grid').classList.toggle('gallery-unavailable', data.images.length === 0);
 $('.gallery').classList.toggle('gallery-empty', data.images.length === 0);
 $('#thumbnails').style.gridTemplateColumns = `repeat(${Math.min(data.images.length || 1, 4)}, minmax(0, 1fr))`;
 $('#gallery-rights-badge').textContent = data.presentation.galleryRightsBadge ?? '';
@@ -228,10 +229,9 @@ for (const [index, feature] of data.features.entries()) {
   const body = node('div');
   body.append(node('p', '', feature.text), sourceReference(feature.source));
   card.append(node('span', 'feature-number', String(index + 1).padStart(2, '0')), body);
-  (index < 3 ? $('#feature-list') : $('#feature-more-list')).append(card);
+  $('#feature-list').append(card);
 }
-$('#feature-more').hidden = data.features.length <= 3;
-$('#feature-more summary').textContent = `나머지 ${Math.max(0, data.features.length - 3)}개 특징 보기`;
+$('#feature-more').hidden = true;
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
@@ -335,7 +335,7 @@ const navScroller = document.querySelector('.section-nav-inner');
 let currentSection = '';
 let scrollFrame = 0;
 function updateSectionNav() {
-  const edge = navigation.getBoundingClientRect().bottom + 48;
+  const edge = navigation.getBoundingClientRect().bottom + 54;
   let visibleSection = '';
   for (const section of observedSections) {
     if (section.getBoundingClientRect().top <= edge) visibleSection = section.id;
