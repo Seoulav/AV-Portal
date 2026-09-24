@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { filterProducts, listFacets, safeHttpUrl, verificationLabel } from '../app/public/catalog-view.mjs';
+import { filterProducts, listFacets, safeHttpUrl, verificationLabel, prioritizeOfficialSources } from '../app/public/catalog-view.mjs';
 
 const products = [
   { id: '1', brand: 'BSS Audio', product: 'BLU-101', aliases: ['AEC / Bluelink'], categories: ['오디오', 'Audio', 'DSP'] },
@@ -37,4 +37,19 @@ test('accepts only external HTTPS links without credentials', () => {
 test('does not turn inherited research into a verified claim', () => {
   assert.match(verificationLabel('INHERITED_RESEARCH'), /재확인/);
   assert.match(verificationLabel('OFFICIAL_SUPPORT_LISTING_2026-09-23_NOT_MANUFACTURER_PROOF'), /제조사 미확정/);
+});
+
+test('puts explicitly Korean manufacturer sources first without changing verification or original order', () => {
+  const sources = [
+    { url: 'https://example.com/en-a', language: 'en', verification: 'INHERITED_RESEARCH' },
+    { url: 'https://example.com/unknown' },
+    { url: 'https://example.com/ko-a', language: 'ko' },
+    { url: 'https://example.com/ko-b', language: 'ko' }
+  ];
+  assert.deepEqual(prioritizeOfficialSources(sources).map(item => item.url), [
+    'https://example.com/ko-a', 'https://example.com/ko-b',
+    'https://example.com/en-a', 'https://example.com/unknown'
+  ]);
+  assert.equal(sources[0].url, 'https://example.com/en-a');
+  assert.equal(prioritizeOfficialSources(sources)[2].verification, 'INHERITED_RESEARCH');
 });
