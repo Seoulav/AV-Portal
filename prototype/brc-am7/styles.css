@@ -3,6 +3,7 @@
   color:#17284c;background:#f5f7fc;font-synthesis:none;
   --blue:#2662db;--ink:#17284c;--muted:#65738e;--line:#e1e7f2;--shadow:0 18px 48px rgba(40,66,124,.075);
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-width:0}
@@ -635,3 +636,65 @@ main{max-width:1200px;padding-bottom:72px}
   #spec-panel .io-detail-row[hidden]{display:none}
   #spec-panel .io-detail-row td,#spec-panel .io-note-row td{display:block;padding:8px}
 }
+
+/* BRC-AM7 illustration preview only; other public details retain their current theme. */
+body.brc-pictogram{background:#f7f9fd;color:#27354d}
+body.brc-pictogram .site-header{background:#fff;border-color:#e7edf6}
+body.brc-pictogram .portal-mark strong,body.brc-pictogram #product-name{color:#202c42}
+body.brc-pictogram .local-label{background:#eff5ff;color:#4270af;border-color:#dbe8fb}
+body.brc-pictogram .breadcrumb{color:#7c8ba2;border:0}
+body.brc-pictogram .breadcrumb strong{color:#2f466c}
+body.brc-pictogram .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"gallery header" "gallery quick";gap:14px;align-items:start}
+body.brc-pictogram .panel{background:#fff;border:1px solid #e6ecf5;border-radius:18px;box-shadow:0 12px 28px #193f790d}
+body.brc-pictogram .product-header{display:flex;flex-direction:column;padding:26px 28px 8px;border-radius:18px 18px 0 0;border-bottom:0;box-shadow:none}
+body.brc-pictogram .product-header::before{display:none}
+body.brc-pictogram #product-name{order:2;font-size:clamp(38px,4vw,56px);line-height:1.08;margin:4px 0 8px}
+body.brc-pictogram .manufacturer{order:1;color:#2862b3;font-size:15px;font-weight:800;margin:0}
+body.brc-pictogram .product-full-name{order:3;color:#697a94}
+body.brc-pictogram .english-description{order:4;color:#67758d;border:0;padding:0;margin:0 0 10px}
+body.brc-pictogram .korean-description{order:5;color:#41516a;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin:0 0 9px}
+body.brc-pictogram .pills{order:6;margin:0 0 9px}
+body.brc-pictogram .pill{background:#ecf3ff;border-color:#dfebfc;color:#3166b7}
+body.brc-pictogram .product-facts{order:7;border-color:#e6ecf5}
+body.brc-pictogram .product-facts summary,body.brc-pictogram .quick-heading p{color:#738199}
+body.brc-pictogram .gallery{grid-row:1 / span 2;padding:16px}
+body.brc-pictogram .gallery .section-eyebrow,body.brc-pictogram .thumbnails{display:none}
+body.brc-pictogram .gallery-heading h2,body.brc-pictogram .quick-heading h2{color:#2a3d5b;font-size:16px}
+body.brc-pictogram .image-stage{height:395px;min-height:395px;background:radial-gradient(circle at 50% 42%,#fbfdff,#eaf2ff);border:0;border-radius:13px}
+body.brc-pictogram .image-stage img{height:395px;mix-blend-mode:normal;padding:8px}
+body.brc-pictogram .image-role,body.brc-pictogram .zoom-button{background:#fff;color:#275db0;border:1px solid #e0e8f4;border-radius:9px}
+body.brc-pictogram .gallery-foot a,body.brc-pictogram .image-trace a{color:#2963b7}
+body.brc-pictogram .gallery-foot p span,body.brc-pictogram .image-trace,body.brc-pictogram .gallery-rights{color:#7c8aa1}
+body.brc-pictogram .gallery-rights{border-color:#e7edf6}
+body.brc-pictogram #gallery-rights-badge{background:#eaf3ff;color:#3566ab}
+body.brc-pictogram .quick-documents{padding:8px 28px 24px;margin-top:-14px;border-top:0;border-radius:0 0 18px 18px}
+body.brc-pictogram .quick-grid{gap:8px;border:0}
+body.brc-pictogram .quick-card,body.brc-pictogram .quick-card-missing{background:#fff;border:1px solid #e6ecf5!important;border-radius:11px;min-height:93px}
+body.brc-pictogram .quick-card .card-type{color:#2a3954}
+body.brc-pictogram .quick-card strong{color:#68778f}
+body.brc-pictogram .quick-card .quick-open,body.brc-pictogram .official-product-link{color:#2464c0}
+body.brc-pictogram #overview{background:#fff;border:1px solid #e7edf6;border-radius:15px}
+body.brc-pictogram #overview .overview-summary{color:#44546e}
+body.brc-pictogram .detail-tabs{background:#fff;border:1px solid #e7edf6;border-radius:12px}
+body.brc-pictogram .detail-tabs button{color:#6b7a91}
+body.brc-pictogram .detail-tabs button[aria-selected=true]{color:#2866c2;border-bottom-color:#2b73e5}
+body.brc-pictogram .feature-card,body.brc-pictogram .spec-group,body.brc-pictogram #spec-panel .io-table{background:#fff;border-color:#e5ebf5;color:#34445e}
+body.brc-pictogram .feature-card p,body.brc-pictogram .spec-value{color:#263b60}
+body.brc-pictogram .section-title h2,body.brc-pictogram .spec-group-head strong{color:#2f5da3}
+body.brc-pictogram #spec-panel .io-table-head th{background:#f1f5fc;color:#5d75a0}
+body.brc-pictogram #spec-panel .io-group-row th{background:#eaf1fc}
+body.brc-pictogram #spec-panel .io-table-row td{color:#455671;border-color:#edf1f7}
+body.brc-pictogram .site-footer{color:#8b9ab0;border-color:#e3eaf3}
+body.brc-pictogram .image-dialog{background:#fff;color:#293a55}
+@media(max-width:880px){body.brc-pictogram .hero-grid{grid-template-columns:1fr;grid-template-areas:"header" "gallery" "quick"}body.brc-pictogram .gallery{grid-row:auto}body.brc-pictogram .product-header,body.brc-pictogram .quick-documents{border:1px solid #e6ecf5;border-radius:18px;padding:20px;margin:0}}
+@media(max-width:650px){body.brc-pictogram .product-header,body.brc-pictogram .gallery,body.brc-pictogram .quick-documents{border:1px solid #e6ecf5;border-radius:16px;padding:16px}body.brc-pictogram .image-stage,body.brc-pictogram .image-stage img{height:245px;min-height:245px}body.brc-pictogram .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body.brc-pictogram main,body.brc-pictogram .header-inner{max-width:1440px}
+body.brc-pictogram .portal-icon{background:linear-gradient(145deg,#144ba7,#598df0);border:0;border-radius:11px}
+body.brc-pictogram .portal-mark small{color:#71809a}
+body.brc-pictogram .library-link{color:#2863b7}
+body.brc-pictogram .image-status-details summary{background:#f5f8fe;border:1px solid #e3ebf8;color:#456cae;border-radius:10px}
+body.brc-pictogram .image-status-card{background:#f8faff;border-color:#e1e8f3;color:#45627e}
+body.brc-pictogram .quick-card,body.brc-pictogram .quick-card-missing{position:relative;padding:10px 10px 9px 45px}
+body.brc-pictogram .quick-card::before{content:'▤';position:absolute;top:12px;left:10px;display:grid;place-items:center;width:27px;height:32px;border-radius:6px;background:#e8f1ff;color:#2869cb;font-size:19px}
+body.brc-pictogram .quick-card:nth-child(3)::before{background:#e7f8f3;color:#179d73}
+body.brc-pictogram .quick-card:nth-child(4)::before{background:#f5ecff;color:#9458c9}

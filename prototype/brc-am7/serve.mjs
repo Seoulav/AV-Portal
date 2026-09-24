@@ -57,6 +57,7 @@ export function createPreviewServer({ pictogram = false } = {}) {
           publicationStatus: 'CC0 1.0'
         }];
         content.presentation.galleryRightsBadge = '자체 제작 · CC0 픽토그램';
+        content.presentation.visualVariant = 'brc-pictogram';
         content.presentation.galleryFootNote = '실물 사진이 아닌 범용 그림';
         content.presentation.galleryRights = '현재 그림은 BRC-AM7 실물 사진이 아닙니다. 직접 촬영한 사진이 준비되면 교체할 수 있습니다.';
         content.presentation.footerNote = 'SONY BRC-AM7 · 범용 픽토그램 시안 · 실물 사진 준비 중';
