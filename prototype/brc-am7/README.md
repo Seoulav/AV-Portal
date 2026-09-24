@@ -1,6 +1,6 @@
-# SONY BRC-AM7 Product Detail 로컬 시안
+# Product Detail 로컬 시안과 임시 UI 데이터
 
-PR #33의 BRC-AM7 원고(기준 커밋 `3217646c5ba1b612c0520cc4492bb7a0bcc4462d`)와 2026-09-24 사용자 구현 지시를 바탕으로 한 **단일 제품 시안**입니다. 공개 Library의 `beta/site`와 GitHub Pages 워크플로는 수정하지 않습니다.
+현재 입력은 `content.json`의 SONY BRC-AM7 **한 제품**입니다. `product-detail-model.mjs`가 한 제품 데이터 객체에서 화면용 Quick Documents 4칸, 추가 문서, 가변 사양 그룹, 가변 I/O 그룹과 Rear 이미지 위치를 준비하고 `app.js`가 같은 UI로 렌더링합니다. 이는 최종 제품 스키마, DB 또는 API 계약이 아닙니다. 다른 실제 제품 데이터는 아직 등록하지 않았습니다.
 
 저장소 루트에서 Node.js 20 이상으로 실행합니다.
 
@@ -9,8 +9,10 @@ node prototype/brc-am7/fetch-images.mjs
 node prototype/brc-am7/serve.mjs --port 4185
 ```
 
-회사 PC 브라우저에서 `http://127.0.0.1:4185/`를 엽니다. 서버는 `127.0.0.1`에만 연결되고, 정해진 시안 파일과 네 역할의 이미지 파일만 제공합니다. Main·Front·Rear·Perspective Sony 공식 이미지는 `outputs/brc-am7-detail/images/`에 **로컬 전용**으로 저장되며 Git에서 제외됩니다. 이 폴더가 없으면 Gallery는 로컬 이미지 없음 상태와 공식 출처 링크를 보여 줍니다. 이미지·PDF·CAD 원본을 Git에 커밋하거나 Pages에 올리지 않습니다. 이미지 URL은 브라우저에서 외부 핫링크로 사용하지 않습니다.
+회사 PC 브라우저에서 `http://127.0.0.1:4185/`를 엽니다. `fetch-images.mjs`는 BRC-AM7의 공식 이미지를 **로컬 전용** `outputs/brc-am7-detail/images/`에 확보할 때만 사용합니다. 이미 저장돼 있다면 다시 실행할 필요가 없습니다. 루프백 서버는 정해진 시안 파일과 전용 이미지 폴더의 안전한 파일명만 제공합니다. 이미지/PDF/CAD 원본은 Git에서 제외하며 공개 URL에서 핫링크하지 않습니다.
 
-화면에는 공식 제품 페이지, 한국어 Manual·Specification, 지원 페이지를 Quick Documents 상단에 두고, free-d·CAD는 검토 필요인 리소스 소개 페이지로 표시합니다. 없는 Datasheet·Brochure·Installation·Quick Start는 링크 없는 MISSING 상태입니다. Features 8, 사양 27, I/O 14는 PR #33 원고의 조건·근거를 유지합니다. 확장 줌 C1 충돌은 확정 사양에서 제외했습니다.
+향후 Work가 승인된 다른 제품의 자료를 넘기면, 이 UI가 실제로 쓰는 필드만 가진 제품 객체를 `content.json` 입력 대신 연결하면 됩니다. 기본 식별·설명·카테고리, `images`, `documents`, `features`, `specifications`, `io`, `sources`, `issues`와 선택적인 `presentation` 표시 문구를 전달합니다. `specifications[].group`은 입력에 있는 이름으로만 묶고, I/O는 `io[].group` 또는 `presentation.ioSignalGroups`의 신호 매핑으로 묶습니다. 화면에 쓸 그룹이 없는 I/O는 원래 `signal` 이름을 그룹으로 사용합니다. 특정 제품군의 그룹 목록은 코드에 없습니다. BRC-AM7의 고유 문구와 PoE++ 참조 안내는 `content.json`의 `presentation`에 있습니다.
 
-이 시안은 레이아웃과 정보 밀도를 검토하기 위한 결과입니다. 다른 24개 제품 확장, 최종 Schema/DB/Storage, 이미지·PDF 재게시 권한 결정은 포함하지 않습니다.
+Quick Documents는 User Manual/Independent Specification/Specification/Technical Document 네 종류만 고정 슬롯으로 표시합니다. 독립 시방서처럼 문서가 없거나 상태가 MISSING이면 열기 링크가 없습니다. Official Product Page는 카드 밖에 따로 표시하고, 나머지 확인된 문서는 Additional / Supplemental Documents에 남깁니다. `images`가 비거나 Front/Rear가 일부만 있으면 있는 썸네일만 표시하며, 이미지가 전혀 없을 때는 빈 상태를 보여 줍니다. Rear 버튼은 Rear 사진이 있을 때만 보입니다. 로컬 이미지 파일이 없는 경우에도 가짜 이미지를 만들지 않습니다.
+
+BRC-AM7 기준 Features 8·사양 27·I/O 14, 사진 네 역할, 기존 검증·출처·문서 정보는 유지합니다. 확장 줌 충돌은 확정 사양에 넣지 않았고, 이미지/PDF/CAD의 재게시 권한은 미확인입니다. 다른 24개 제품 확장, 최종 Schema/DB/Storage, Pages 재배포는 포함하지 않습니다.

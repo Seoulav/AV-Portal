@@ -10,11 +10,9 @@ const routes = new Map([
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
+  ['/product-detail-model.mjs', ['product-detail-model.mjs', 'text/javascript; charset=utf-8']],
   ['/content.json', ['content.json', 'application/json; charset=utf-8']]
 ]);
-for (const role of ['main', 'front', 'rear', 'perspective']) {
-  routes.set('/images/' + role + '.jpg', [role + '.jpg', 'image/jpeg', true]);
-}
 const headers = {
   'Cache-Control': 'no-store',
   'X-Content-Type-Options': 'nosniff',
@@ -24,7 +22,9 @@ const headers = {
 export function createPreviewServer() {
   return createServer(async (request, response) => {
     const pathname = new URL(request.url, 'http://127.0.0.1').pathname;
-    const route = routes.get(pathname);
+    const imageMatch = /^\/images\/([a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp))$/.exec(pathname);
+    const imageType = imageMatch?.[1].split('.').at(-1).toLowerCase();
+    const route = routes.get(pathname) ?? (imageMatch ? [imageMatch[1], imageType === 'png' ? 'image/png' : imageType === 'webp' ? 'image/webp' : 'image/jpeg', true] : null);
     if (request.method !== 'GET' || !route) {
       response.writeHead(route ? 405 : 404, headers);
       response.end();

@@ -1,3 +1,4 @@
+import { prepareProductDetail } from './product-detail-model.mjs';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -25,17 +26,18 @@ function officialLink(url, text, className = '') {
   link.rel = 'noopener noreferrer';
   return link;
 }
-function sourceReference(raw) {
+function sourceReference(raw = '') {
   const wrap = node('span', 'source-ref');
   wrap.append(node('span', '', '근거 '));
-  const codes = [...new Set(raw.match(/\b(?:PP|HS|HC|SP|H|P)\b/g) ?? [])];
+  const tokens = String(raw).split(/([A-Za-z][A-Za-z0-9-]*)/);
+  const codes = [...new Set(tokens.filter(token => data.sources.some(source => source.code === token)))];
   for (const [index, code] of codes.entries()) {
     if (index) wrap.append(document.createTextNode(' · '));
     const link = node('a', '', code);
     link.href = '#source-' + code;
     wrap.append(link);
   }
-  const detail = raw.replace(/\b(?:PP|HS|HC|SP|H|P)\b/g, '').replace(/^[\s,;·]+|[\s,;·]+$/g, '');
+  const detail = tokens.filter(token => !codes.includes(token)).join('').replace(/^[\s,;·]+|[\s,;·]+$/g, '');
   if (detail) wrap.append(node('span', '', ' · ' + detail));
   return wrap;
 }
@@ -44,10 +46,7 @@ let data;
 try {
   const response = await fetch('./content.json');
   if (!response.ok) throw new Error('시안 콘텐츠를 읽을 수 없습니다.');
-  data = await response.json();
-  if (data.model !== 'BRC-AM7' || data.features.length !== 8 || data.specifications.length !== 27 || data.io.length !== 14) {
-    throw new Error('PR #33 원고와 콘텐츠 수량이 일치하지 않습니다.');
-  }
+  data = prepareProductDetail(await response.json());
 } catch (error) {
   const notice = node('div', 'load-failure', error.message);
   notice.setAttribute('role', 'alert');
@@ -55,6 +54,35 @@ try {
   throw error;
 }
 
+document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
+$('#breadcrumb-brand').textContent = data.manufacturer;
+$('#breadcrumb-model').textContent = data.model;
+$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 한 제품의 로컬 시안입니다. 공개 베타와 별도로 검토합니다.`;
+$('#header-eyebrow').textContent = data.presentation.headerEyebrow ?? data.manufacturer;
+$('#model-status').textContent = data.presentation.modelStatus ?? '';
+$('#model-status').hidden = !data.presentation.modelStatus;
+$('#manufacturer').textContent = data.manufacturer;
+$('#product-name').textContent = data.model;
+$('#gallery-count').textContent = `${data.images.length} VIEWS`;
+$('#thumbnails').style.gridTemplateColumns = `repeat(${Math.min(data.images.length || 1, 4)}, minmax(0, 1fr))`;
+$('#gallery-rights-badge').textContent = data.presentation.galleryRightsBadge ?? '';
+$('#gallery-rights-badge').hidden = !data.images.length || !data.presentation.galleryRightsBadge;
+if (!data.images.length) $('#image-missing').querySelector('span').textContent = '등록된 이미지가 없습니다.';
+$('#gallery-foot-note').textContent = data.presentation.galleryFootNote ?? '';
+$('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
+$('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
+$('#overview-heading').hidden = !data.presentation.overviewHeading;
+$('#spec-intro').textContent = data.presentation.specIntro ?? '';
+$('#io-intro').textContent = data.presentation.ioIntro ?? '';
+$('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
+$('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
+$('#dialog-product').textContent = `${data.manufacturer} ${data.model}`;
+for (const highlight of data.presentation.overviewHighlights ?? []) {
+  const item = node('div');
+  item.append(node('strong', '', highlight.value), node('span', '', highlight.label));
+  $('#overview-points').append(item);
+}
+$('#overview-points').hidden = !$('#overview-points').children.length;
 $('#english-description').textContent = data.english;
 $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote;
@@ -72,6 +100,7 @@ let zoomOpener = null;
 function selectImage(index) {
   selectedIndex = index;
   const item = data.images[index];
+  if (!item) return;
   featured.hidden = false;
   missing.hidden = true;
   zoomButton.disabled = false;
@@ -79,10 +108,10 @@ function selectImage(index) {
   featured.src = './images/' + item.file;
   $('#image-role').textContent = item.role.toUpperCase();
   $('#image-caption').textContent = item.note;
-  const sourceUrl = new URL(item.sourceUrl);
-  if (sourceUrl.protocol !== 'https:' || sourceUrl.hostname !== 'www.sony.com') throw new Error('이미지 공식 출처가 올바르지 않습니다.');
-  $('#image-source-link').href = sourceUrl.href;
-  $('#image-provenance').textContent = `${item.provider} · ${item.model} · P 갤러리 ${item.galleryPosition} · 표시 요청 ${item.requestedSize} · 원본 크기 ${item.originalSize} · 공개 권한 ${item.publicationStatus}`;
+  const sourceLink = $('#image-source-link');
+  sourceLink.hidden = !item.sourceUrl;
+  if (item.sourceUrl) sourceLink.href = officialLink(item.sourceUrl, '').href;
+  $('#image-provenance').textContent = [item.provider, item.model, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
   for (const [position, button] of [...$('#thumbnails').children].entries()) {
     button.setAttribute('aria-pressed', String(position === index));
   }
@@ -116,7 +145,16 @@ for (const [index, image] of data.images.entries()) {
   button.addEventListener('click', () => selectImage(index));
   $('#thumbnails').append(button);
 }
-selectImage(0);
+if (data.images.length) selectImage(0);
+else {
+  featured.hidden = true;
+  missing.hidden = false;
+  zoomButton.disabled = true;
+  $('#image-role').hidden = true;
+  $('#thumbnails').hidden = true;
+  $('#image-source-link').hidden = true;
+  $('#gallery-source-link').hidden = true;
+}
 zoomButton.addEventListener('click', () => {
   if (!featured.complete || featured.naturalWidth === 0) return;
   zoomOpener = zoomButton;
@@ -129,36 +167,32 @@ zoomButton.addEventListener('click', () => {
 $('#dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => zoomOpener?.focus());
-$('#show-rear').addEventListener('click', () => {
-  selectImage(2);
+const rearButton = $('#show-rear');
+rearButton.hidden = data.rearIndex < 0;
+rearButton.addEventListener('click', () => {
+  if (data.rearIndex < 0) return;
+  selectImage(data.rearIndex);
   $('#gallery-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  $('#thumbnails').children[2].focus();
+  $('#thumbnails').children[data.rearIndex].focus();
 });
 
-const officialPage = data.documents.find(item => item.type === 'Official Product Page');
-if (!officialPage) throw new Error('공식 제품 페이지가 없습니다.');
-const productLink = officialLink(officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link');
-$('#official-product-link').append(productLink);
-
-const coreDocuments = [
-  { label: '매뉴얼', resource: data.documents.find(item => item.type === 'User Manual') },
-  { label: '시방서', resource: data.documents.find(item => item.type === 'Independent Specification') },
-  { label: '사양서', resource: data.documents.find(item => item.type === 'Specification') },
-  { label: '기술문서', resource: data.documents.find(item => item.type === 'Technical Document') }
-];
-$('#quick-count').textContent = coreDocuments.length;
-for (const { label, resource } of coreDocuments) {
-  const card = node('article', 'quick-card' + (resource ? '' : ' quick-card-missing'));
-  card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? '공식 독립 시방서 미확인'));
+if (data.officialPage?.url) {
+  $('#official-product-link').append(officialLink(data.officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link'));
+  $('#gallery-source-link').href = data.officialPage.url;
+  $('#dialog-product-link').href = data.officialPage.url;
+} else {
+  $('#gallery-source-link').hidden = true;
+  $('#dialog-product-link').hidden = true;
+}
+$('#quick-count').textContent = data.quickDocuments.length;
+for (const { label, resource, missingTitle, available } of data.quickDocuments) {
+  const card = node('article', 'quick-card' + (available ? '' : ' quick-card-missing'));
+  card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? missingTitle));
   const meta = node('div', 'quick-meta');
-  meta.append(node('span', 'quick-language', resource?.type === 'Technical Document' ? '본문 언어 미확인' : (resource?.language ?? '언어 미확인')), badge(resource?.status ?? 'MISSING'));
+  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), badge(available ? (resource.status ?? 'REVIEW REQUIRED') : 'MISSING'));
   card.append(meta);
-  if (resource) {
-    const label = resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗';
-    card.append(officialLink(resource.url, label, 'quick-open'));
-  } else {
-    card.append(node('span', 'quick-unavailable', '열기 링크 없음'));
-  }
+  if (available) card.append(officialLink(resource.url, resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗', 'quick-open'));
+  else card.append(node('span', 'quick-unavailable', '열기 링크 없음'));
   $('#quick-docs').append(card);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
@@ -171,11 +205,7 @@ for (const [index, feature] of data.features.entries()) {
 }
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
-const grouped = new Map();
-for (const specification of data.specifications) {
-  if (!grouped.has(specification.group)) grouped.set(specification.group, []);
-  grouped.get(specification.group).push(specification);
-}
+const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
 for (const [group, specifications] of grouped) {
   const panel = node('section', 'spec-group panel');
   const head = node('div', 'spec-group-head');
@@ -198,21 +228,7 @@ for (const [group, specifications] of grouped) {
 }
 
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
-const ioDefinitions = [
-  ['Video', ['Video']],
-  ['Network / Control', ['Network/PoE', 'PTZ control', 'Tally']],
-  ['Audio', ['Audio']],
-  ['Sync / Timecode', ['Sync', 'Timecode']],
-  ['Power', ['Power']],
-  ['Recording Media', ['Recording media']]
-];
-const ioGroupBySignal = new Map(ioDefinitions.flatMap(([group, signals]) => signals.map(signal => [signal, group])));
-const groupedIo = new Map(ioDefinitions.map(([group]) => [group, []]));
-for (const item of data.io) {
-  const group = ioGroupBySignal.get(item.signal);
-  if (!group) throw new Error('분류되지 않은 I/O 신호: ' + item.signal);
-  groupedIo.get(group).push(item);
-}
+const groupedIo = data.ioGroups.map(({ name, entries }) => [name, entries]);
 for (const [index, [group, items]] of [...groupedIo].entries()) {
   const section = node('section', 'io-group');
   const heading = node('div', 'io-group-head');
@@ -221,13 +237,10 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
   section.setAttribute('aria-labelledby', title.id);
   heading.append(title, node('span', '', items.length + ' I/O'));
   section.append(heading);
-  if (group === 'Power') {
-    const poe = data.io.find(item => item.connector === 'LAN RJ-45');
-    if (poe) {
-      const note = node('p', 'io-group-note', 'PoE++ · ' + poe.connector + ' · ' + poe.condition + ' ');
-      note.append(sourceReference(poe.source));
-      section.append(note);
-    }
+  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => note.group === group)) {
+    const note = node('p', 'io-group-note', groupNote.text + ' ');
+    if (groupNote.source) note.append(sourceReference(groupNote.source));
+    section.append(note);
   }
   const grid = node('div', 'io-grid');
   for (const item of items) {
@@ -249,16 +262,18 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
   section.append(grid);
   $('#io-list').append(section);
 }
-const coreDocumentTypes = new Set(['Official Product Page', 'User Manual', 'Independent Specification', 'Specification', 'Technical Document']);
-for (const document of data.documents.filter(item => !coreDocumentTypes.has(item.type))) {
+for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
   main.append(node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note + ' · 출처 ' + document.source));
   const side = node('div', 'document-side');
-  side.append(badge(document.status), officialLink(document.url, '제조사에서 열기 ↗'));
+  side.append(badge(document.status ?? 'REVIEW REQUIRED'));
+  if (document.url && document.status !== 'MISSING') side.append(officialLink(document.url, '제조사에서 열기 ↗'));
+  else side.append(node('span', 'quick-unavailable', '열기 링크 없음'));
   row.append(node('span', 'document-type', document.type), main, side);
   $('#all-documents').append(row);
 }
+$('#missing-documents-panel').hidden = !data.missingDocuments.length;
 for (const title of data.missingDocuments) $('#missing-documents').append(node('span', '', title));
 
 $('#source-count').textContent = data.sources.length + ' SOURCES';
@@ -266,7 +281,7 @@ for (const source of data.sources) {
   const item = node('div', 'source-item');
   item.id = 'source-' + source.code;
   const description = node('div');
-  description.append(officialLink(source.url, source.name + ' ↗'), node('p', '', source.scope));
+  description.append(source.url ? officialLink(source.url, source.name + ' ↗') : node('strong', '', source.name), node('p', '', source.scope));
   item.append(node('span', 'source-code', source.code), description);
   $('#source-list').append(item);
 }

@@ -574,7 +574,8 @@
       "source": "P",
       "status": "REVIEW REQUIRED",
       "note": "리소스 소개 페이지 · 본문/개정 미확인",
-      "quick": true
+      "quick": true,
+      "displayLanguage": "본문 언어 미확인"
     },
     {
       "type": "CAD Resource",
@@ -644,5 +645,79 @@
       "title": "독립 문서",
       "detail": "Datasheet, Brochure, Installation Guide, Quick Start Guide는 확인되지 않았습니다."
     }
-  ]
+  ],
+  "presentation": {
+    "headerEyebrow": "SONY PROFESSIONAL · PTZ CAMERA",
+    "modelStatus": "모델 확인",
+    "galleryFootNote": "제조사 공식 · BRC-AM7 모델 확인",
+    "galleryRightsBadge": "공개 사용 권한 미확인",
+    "galleryRights": "사진은 이 PC의 로컬 시안에서만 표시합니다. 이미지 재게시·핫링크 허가는 확인되지 않았습니다.",
+    "overviewHeading": "영상 제작 환경을 위한 4K PTZ 카메라",
+    "overviewHighlights": [
+      {
+        "value": "4K 60p",
+        "label": "출력 조건 확인"
+      },
+      {
+        "value": "20×",
+        "label": "광학 줌"
+      },
+      {
+        "value": "PoE++",
+        "label": "전원 방식"
+      }
+    ],
+    "specIntro": "조건과 근거를 값과 함께 읽을 수 있도록 그룹별로 정리했습니다. 확장 줌 충돌 값은 확정 사양에서 제외했습니다.",
+    "ioIntro": "실물 커넥터의 신호·방향·수량·장착 조건을 별도로 표시합니다. 후면 사진과 단자 위치 연결은 후속 검토 대상입니다.",
+    "supplementalNote": "이 제품 시안에는 등록된 보조 출처가 없습니다.",
+    "footerNote": "SONY BRC-AM7 · 공식 출처 기반 · 게시 권한 미확인",
+    "ioSignalGroups": [
+      {
+        "name": "Video",
+        "signals": [
+          "Video"
+        ]
+      },
+      {
+        "name": "Network / Control",
+        "signals": [
+          "Network/PoE",
+          "PTZ control",
+          "Tally"
+        ]
+      },
+      {
+        "name": "Audio",
+        "signals": [
+          "Audio"
+        ]
+      },
+      {
+        "name": "Sync / Timecode",
+        "signals": [
+          "Sync",
+          "Timecode"
+        ]
+      },
+      {
+        "name": "Power",
+        "signals": [
+          "Power"
+        ]
+      },
+      {
+        "name": "Recording Media",
+        "signals": [
+          "Recording media"
+        ]
+      }
+    ],
+    "ioGroupNotes": [
+      {
+        "group": "Power",
+        "text": "PoE++ · LAN RJ-45 · PoE++ 공급은 적합 스위치 필요",
+        "source": "HS, HC"
+      }
+    ]
+  }
 }
