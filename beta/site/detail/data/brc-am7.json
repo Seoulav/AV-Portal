@@ -1,0 +1,631 @@
+{
+  "manufacturer": "SONY",
+  "productName": "BRC-AM7",
+  "model": "BRC-AM7",
+  "series": "BRC",
+  "seriesNote": "모델 접두어이며 별도 판매 시리즈 명칭은 미확인입니다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "PTZ/원격 카메라",
+    "4K 카메라"
+  ],
+  "english": "4K 60p PTZ camera with AI-assisted auto framing and 20× optical zoom.",
+  "korean": "BRC-AM7은 1.0형 이미지 센서와 광학 20배 줌을 갖춘 Sony의 4K PTZ 카메라입니다. 자동 프레이밍, 유선 IP 제어와 SDI·HDMI 출력을 지원해 스튜디오와 현장 영상 제작에 사용할 수 있습니다.",
+  "verificationSummary": "한국 공식 제품 페이지와 사용 안내·사양을 확인했습니다. 줌 용어, 일부 기능 조건과 자료 게시 권한은 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "BRC-AM7은 스튜디오, 공연장, 강의·기업 공간에서 원격 촬영을 수행하는 4K PTZ 카메라다. 1.0형 Exmor RS CMOS 센서와 광학 20배 줌을 사용하며 최대 4K 59.94/50p 출력을 지원한다.\n\nSDI·HDMI 영상 출력, 유선 IP 제어, 네트워크 스트리밍, RS-422 VISCA 제어를 한 본체에 제공한다. 12V DC와 PoE++ 전원을 지원하므로 고정 설치 환경에서 전원·제어·영상 경로를 함께 설계할 수 있다.\n\n자동 프레이밍과 일부 스트리밍 기능은 설정 또는 펌웨어 조건을 확인해야 한다. 확장 줌은 Sony 공식 자료 사이 용어가 충돌하므로 광학 20배만 확정 표시한다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "BRC-AM7 도움말 안내",
+      "language": "ko",
+      "status": "FOUND",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "시방서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "BRC-AM7 사양",
+      "language": "ko",
+      "status": "FOUND",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html"
+    },
+    {
+      "type": "Technical Document",
+      "title": "free-d Integration Manual",
+      "language": "언어 미확인",
+      "status": "REVIEW REQUIRED",
+      "url": "https://pro.sony/ko_KR/product-resources/knowledge/free-d-integration-manual-brc-am7"
+    },
+    {
+      "type": "Official Product Page",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "status": "VERIFIED",
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+    },
+    {
+      "type": "Firmware / Support",
+      "title": "Sony Korea BRC-AM7 지원",
+      "language": "한국어",
+      "status": "REVIEW REQUIRED",
+      "url": "https://www.sony.co.kr/electronics/support/studio-and-broadcast-cameras-pan-tilt-zoom-cameras/brc-am7"
+    },
+    {
+      "type": "CAD Resource",
+      "title": "BRC-AM7 CAD Data",
+      "language": "영문 제목",
+      "status": "REVIEW REQUIRED",
+      "url": "https://pro.sony/ko_KR/product-resources/diagrams/outline-views-brc-am-7"
+    },
+    {
+      "type": "User Manual PDF",
+      "title": "BRC-AM7 도움말 인쇄가능 PDF",
+      "language": "한국어",
+      "status": "REVIEW REQUIRED",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/print.pdf"
+    },
+    {
+      "type": "Product Page PDF",
+      "title": "BRC-AM7 제품 페이지 PDF 내보내기",
+      "language": "한국어",
+      "status": "REVIEW REQUIRED",
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/brc-am7"
+    }
+  ],
+  "features": [
+    {
+      "text": "1.0형 Exmor RS CMOS 센서로 최대 4K 59.94/50p 영상을 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "광학 20배 줌과 24–480mm 35mm 환산 범위를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "AI 분석 기반 자동 프레이밍으로 사람을 따라 구도를 조정할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "팬 ±175°, 틸트 −30°~210° 범위에서 PTZ 제어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "12G-SDI, 3G-SDI, HDMI와 선택형 SFP+ 광 출력을 구분해 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "LAN을 통한 IP 제어와 RTSP·SRT 등 네트워크 스트림을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "12V DC 또는 IEEE 802.3bt Type 4 Class 8 PoE++ 전원을 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "XLR 오디오 입력 2개와 3.5mm 마이크 입력 1개를 제공한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "센서",
+      "value": "Exmor RS CMOS, 1.0형",
+      "unit": "",
+      "condition": "",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "최대 유효 화소",
+      "value": "약 14.0",
+      "unit": "MP",
+      "condition": "촬영 모드·설정에 따라 달라짐",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "AF",
+      "value": "위상차+콘트라스트",
+      "unit": "",
+      "condition": "촬영 설정에 따라 동작",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "ND 필터",
+      "value": "1/4–1/128",
+      "unit": "ND",
+      "condition": "선형 가변 범위",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "SDI OUT1 최대 출력",
+      "value": "3840×2160/59.94p",
+      "unit": "pixel/fps",
+      "condition": "출력 형식·주파수 설정",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 최대 출력",
+      "value": "3840×2160/59.94p",
+      "unit": "pixel/fps",
+      "condition": "출력 형식·주파수 설정",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "내부 기록 형식",
+      "value": "XAVC HS/S, XAVC Long/Intra",
+      "unit": "",
+      "condition": "코덱·컨테이너·매체별 제약 있음",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "광학 줌",
+      "value": "20",
+      "unit": "×",
+      "condition": "",
+      "source": "HS, PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "초점 거리",
+      "value": "24–480",
+      "unit": "mm",
+      "condition": "35mm 환산",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "최대 개방 조리개",
+      "value": "F2.8–F4.5",
+      "unit": "F",
+      "condition": "줌 위치에 따라 변경",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "수평 화각",
+      "value": "약 75",
+      "unit": "degree",
+      "condition": "광각",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "팬 범위",
+      "value": "−175–+175",
+      "unit": "degree",
+      "condition": "",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "틸트 범위",
+      "value": "−30–210",
+      "unit": "degree",
+      "condition": "",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "팬/틸트 속도",
+      "value": "0.004–180",
+      "unit": "degree/s",
+      "condition": "설정에 따라 달라짐",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "프리셋",
+      "value": "최대 100",
+      "unit": "count",
+      "condition": "리모컨/웹 앱별 이용 가능 수 다름",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "LAN",
+      "value": "1000BASE-T",
+      "unit": "",
+      "condition": "RJ-45",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "IP 스트리밍",
+      "value": "RTP/RTCP, RTSP, RTMP/RTMPS, SRT, NDI|HX",
+      "unit": "",
+      "condition": "서비스·펌웨어·구성 조건 재확인",
+      "source": "PP",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Control",
+      "name": "제어",
+      "value": "VISCA RS-422, VISCA over IP",
+      "unit": "",
+      "condition": "관리자·네트워크 설정 필요",
+      "source": "HC, PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 입력",
+      "value": "XLR 3핀 ×2, 3.5mm MIC ×1",
+      "unit": "",
+      "condition": "LINE/MIC/+48V 선택은 XLR",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "기록 오디오",
+      "value": "LPCM 24-bit/48kHz/4ch",
+      "unit": "",
+      "condition": "기록 형식에 따라",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "DC 전원",
+      "value": "12",
+      "unit": "V",
+      "condition": "허용 입력 11–17V",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "PoE++",
+      "value": "IEEE 802.3bt Type 4 Class 8",
+      "unit": "",
+      "condition": "스위치 전력 예산 확인",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비 전력, DC",
+      "value": "132",
+      "unit": "W",
+      "condition": "DC IN 공급",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비 전력, PoE++",
+      "value": "71.3",
+      "unit": "W",
+      "condition": "PoE++ 공급",
+      "source": "HS",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "질량",
+      "value": "약 3.5",
+      "unit": "kg",
+      "condition": "",
+      "source": "HS, PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "약 168.7×225.2×192.3",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "HS",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "SDI OUT1 BNC",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "12G/6G/3G/HD-SDI",
+      "availability": "Fixed",
+      "condition": "출력 설정별",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "SDI OUT2 BNC",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "3G-SDI Level A/HD-SDI",
+      "availability": "Fixed",
+      "condition": "SDI1과 별도 포트",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Type A",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "형식·프레임 설정별",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "OPTICAL SFP+",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "SDI 광 변환",
+      "availability": "Optional module",
+      "condition": "SFP+ 모듈 필요; SDI OUT1과 동일 신호",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network / Power",
+      "connector": "LAN RJ-45",
+      "signal": "Network/PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "1000BASE-T, PoE++",
+      "availability": "Fixed",
+      "condition": "적합 PoE++ 스위치 필요",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA IN RJ-45",
+      "signal": "PTZ control",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "VISCA RS-422",
+      "availability": "Fixed",
+      "condition": "관리자 설정 필요",
+      "source": "HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA OUT RJ-45",
+      "signal": "PTZ control",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "VISCA RS-422",
+      "availability": "Fixed",
+      "condition": "데이지체인 구성 확인",
+      "source": "HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR 3핀",
+      "signal": "Audio",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "LINE/MIC/MIC+48V",
+      "availability": "Fixed",
+      "condition": "입력별 설정 확인",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm stereo",
+      "signal": "Audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Plug-in power 호환",
+      "availability": "Fixed",
+      "condition": "XLR과 별도 입력",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "GENLOCK IN BNC",
+      "signal": "Sync",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "1.0Vp-p, 75Ω",
+      "availability": "Fixed",
+      "condition": "외부 동기",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "TC IN BNC",
+      "signal": "Timecode",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "TC",
+      "availability": "Fixed",
+      "condition": "출력 아님",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC IN XLR 4핀",
+      "signal": "Power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "11–17V DC",
+      "availability": "Fixed",
+      "condition": "공칭 12V",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "OPTION RJ-45",
+      "signal": "Tally",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Red/green tally",
+      "availability": "Fixed connector",
+      "condition": "구성·배선 확인",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Recording",
+      "connector": "CFexpress Type A/SD slots",
+      "signal": "Media",
+      "direction": "I/O",
+      "quantity": "2",
+      "protocol": "CFexpress A 또는 SD",
+      "availability": "Fixed",
+      "condition": "카드 미포함, 지원 조합 확인",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "H",
+      "name": "제조사 한국어 도움말",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "HS",
+      "name": "제조사 한국어 사양",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "HC",
+      "name": "제조사 커넥터 안내",
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/connector_block.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "SP",
+      "name": "제조사 지원 페이지",
+      "url": "https://www.sony.co.kr/electronics/support/studio-and-broadcast-cameras-pan-tilt-zoom-cameras/brc-am7",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PP",
+      "name": "제조사 제품 페이지 PDF",
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/brc-am7",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "C1",
+      "status": "CONFLICTED",
+      "title": "확장 줌 용어·배율",
+      "detail": "공식 자료 간 용어가 다릅니다. 광학 20배만 확정 사양으로 표시합니다."
+    },
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지·문서 게시 권한",
+      "detail": "사진·PDF·CAD의 재게시 또는 핫링크 권한은 확인되지 않았습니다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "기능·펌웨어 조건",
+      "detail": "일부 스트리밍과 자동 프레이밍 기능의 설정·펌웨어 조건을 확인해야 합니다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "기술문서·CAD",
+      "detail": "free-d 기술문서와 CAD 자료의 개정·적용 범위가 검토 중입니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "이미지 권한 검토 중",
+    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "SONY BRC-AM7 · 공식 출처 기반"
+  }
+}

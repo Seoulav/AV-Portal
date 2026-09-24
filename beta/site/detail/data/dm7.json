@@ -1,0 +1,487 @@
+{
+  "manufacturer": "Yamaha",
+  "productName": "DM7 Digital Mixing Console",
+  "model": "DM7",
+  "series": "DM7 Series",
+  "seriesNote": "",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "디지털 믹싱 콘솔"
+  ],
+  "english": "Dante-equipped digital mixing console with 120 mono input channels and 28 motorized faders.",
+  "korean": "DM7은 Dante 네트워크를 내장한 디지털 믹싱 콘솔입니다. 120개 모노 입력 채널, 48 Mix·12 Matrix 버스, 28개 모터 페이더와 세 개의 멀티터치 화면을 제공하며 공연장·방송·프로덕션 믹싱에 사용할 수 있습니다.",
+  "verificationSummary": "공식 제품 페이지와 매뉴얼을 확인했습니다. 이미지 역할, Technical Data Sheet의 분류·개정과 자료 사용 권한은 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "DM7은 공연장, 이벤트 공간, 방송·프로덕션 환경에서 사용하는 Dante 기반 디지털 믹싱 콘솔이다. 120개 모노 입력 채널과 48 Mix, 12 Matrix, 2 Stereo 버스를 처리하며 96kHz 또는 48kHz로 운용할 수 있다.\n\n조작부는 12.1인치 멀티터치 화면 두 개, 7인치 화면 한 개와 28개의 100mm 모터 페이더로 구성된다. 로컬 아날로그 입력 32개와 출력 16개, AES/EBU, Dante 144×144, USB 오디오 18×18을 제공한다.\n\n내장 이중 전원과 별도 DC 백업 입력을 제공하고, PY 카드 슬롯으로 I/O를 확장할 수 있다. DM7 Compact, DM7 Control, 별도 패키지·옵션은 이 본체 데이터에 합치지 않는다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    },
+    {
+      "role": "Front",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    },
+    {
+      "role": "Perspective",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "DM7 Reference Manual",
+      "language": "ko",
+      "status": "FOUND",
+      "url": "https://kr.yamaha.com/files/download/other_assets/7/2235257/dm7_ko_rm_a0.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "Architectural and Engineering Specifications for DM7",
+      "language": "en",
+      "status": "REVIEW REQUIRED"
+    },
+    {
+      "type": "Specification",
+      "title": "Digital Mixing Console DM7 Technical Data Sheet",
+      "language": "en",
+      "status": "REVIEW REQUIRED"
+    },
+    {
+      "type": "Technical Document",
+      "title": "기술문서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Official Product Page",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "status": "VERIFIED",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+    }
+  ],
+  "features": [
+    {
+      "text": "120개 모노 입력 채널과 48 Mix·12 Matrix·2 Stereo 버스를 처리한다.",
+      "source": ""
+    },
+    {
+      "text": "Dante 네트워크에서 144채널 입력과 144채널 출력을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "12.1인치 화면 두 개와 7인치 화면 한 개로 콘솔을 조작한다.",
+      "source": ""
+    },
+    {
+      "text": "28개의 100mm 터치 감지 모터 페이더를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "로컬 XLR 아날로그 입력 32개와 OMNI OUT 16개를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "USB-C 연결로 최대 18입력/18출력 오디오 인터페이스로 동작한다.",
+      "source": ""
+    },
+    {
+      "text": "PY 카드 슬롯을 통해 선택형 I/O를 확장할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "잠금형 AC 입력 두 개를 사용하는 내장 이중 전원 구조를 제공한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mixing",
+      "name": "입력 믹싱 채널",
+      "value": "120 mono",
+      "unit": "channel",
+      "condition": "",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Mixing",
+      "name": "Mix 버스",
+      "value": "48",
+      "unit": "bus",
+      "condition": "",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Mixing",
+      "name": "Matrix 버스",
+      "value": "12",
+      "unit": "bus",
+      "condition": "Input-to-Matrix 지원",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Mixing",
+      "name": "Stereo / Mono 버스",
+      "value": "2 Stereo / 1 Mono",
+      "unit": "bus",
+      "condition": "Stereo B를 Mono로 변경 가능",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플링 주파수",
+      "value": "48 / 96",
+      "unit": "kHz",
+      "condition": "내·외부 클록",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "신호 지연",
+      "value": "1.5 미만",
+      "unit": "ms",
+      "condition": "INPUT→OMNI OUT, Fs=96kHz",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "Dante I/O",
+      "value": "144 in / 144 out",
+      "unit": "channel",
+      "condition": "24/32-bit, 1000BASE-T",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "USB 오디오",
+      "value": "18 in / 18 out",
+      "unit": "channel",
+      "condition": "USB-C, USB 2.0",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "Scene memory",
+      "value": "500",
+      "unit": "scene",
+      "condition": "",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "GPI",
+      "value": "5 in / 5 out",
+      "unit": "channel",
+      "condition": "D-sub 15핀",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Interface",
+      "name": "Displays",
+      "value": "12.1인치 ×2, 7인치 ×1",
+      "unit": "display",
+      "condition": "멀티터치",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Interface",
+      "name": "Faders",
+      "value": "28",
+      "unit": "fader",
+      "condition": "100mm, 터치 감지 모터식",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "AC 입력",
+      "value": "100–240, 50/60",
+      "unit": "V, Hz",
+      "condition": "이중 잠금형 AC inlet",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비 전력",
+      "value": "240",
+      "unit": "W",
+      "condition": "",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "793×324×564",
+      "unit": "mm",
+      "condition": "W×H×D, 고무발 포함",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "23.5",
+      "unit": "kg",
+      "condition": "",
+      "source": "TD",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "XLR 3-hole",
+      "signal": "Analog mic/line",
+      "direction": "IN",
+      "quantity": "32",
+      "protocol": "Balanced, +48V selectable",
+      "availability": "Fixed",
+      "condition": "INPUT 1–32",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR 3-pin",
+      "signal": "Analog audio",
+      "direction": "OUT",
+      "quantity": "16",
+      "protocol": "Balanced OMNI OUT",
+      "availability": "Fixed",
+      "condition": "OMNI OUT 1–16",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "AES/EBU",
+      "direction": "IN",
+      "quantity": "2 stereo pairs / 4ch",
+      "protocol": "AES/EBU, SRC",
+      "availability": "Fixed",
+      "condition": "DM7 본체",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "AES/EBU",
+      "direction": "OUT",
+      "quantity": "2 stereo pairs / 4ch",
+      "protocol": "AES/EBU, SRC",
+      "availability": "Fixed",
+      "condition": "DM7 본체",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network / Audio",
+      "connector": "etherCON RJ-45",
+      "signal": "Dante audio",
+      "direction": "I/O",
+      "quantity": "2",
+      "protocol": "Primary / Secondary, 1000BASE-T",
+      "availability": "Fixed",
+      "condition": "CAT5e 이상, STP 권장",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB / Audio",
+      "connector": "USB-C",
+      "signal": "Audio / MIDI / DAW control",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "USB 2.0, 18×18",
+      "availability": "Fixed",
+      "condition": "Yamaha driver 조건",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "connector": "USB-A",
+      "signal": "Storage / 2-track record-play",
+      "direction": "I/O",
+      "quantity": "2",
+      "protocol": "USB 2.0/1.1",
+      "availability": "Fixed",
+      "condition": "포트당 최대 1A",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "BNC",
+      "signal": "Word clock",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "75Ω termination",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "BNC",
+      "signal": "Word clock",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "TTL/75Ω",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "XLR 3-hole",
+      "signal": "Timecode",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "SMPTE",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "D-sub 15-hole",
+      "signal": "GPI",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "5 in / 5 out",
+      "availability": "Fixed",
+      "condition": "전압·전류 조건은 TD 참조",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network / Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet control",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "10BASE-T/100BASE-TX",
+      "availability": "Fixed",
+      "condition": "CAT5 이상",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Expansion",
+      "connector": "PY slot",
+      "signal": "Audio / control expansion",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "PY card dependent",
+      "availability": "Optional card",
+      "condition": "카드별 사양 분리",
+      "source": "TD, RM",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "V-Lock AC inlet",
+      "signal": "AC power",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "100–240V, 50/60Hz",
+      "availability": "Fixed",
+      "condition": "내장 이중 전원",
+      "source": "TD",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "XLR 4-pin",
+      "signal": "Backup DC power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "24V DC",
+      "availability": "Optional supply",
+      "condition": "PA-700 등 권장 전원",
+      "source": "RM",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "RM",
+      "name": "제조사 Reference Manual",
+      "url": "https://kr.yamaha.com/files/download/other_assets/7/2235257/dm7_ko_rm_a0.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "TD",
+      "name": "제조사 Technical Data Sheet",
+      "scope": "공개 원문 링크 미확인"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "scope": "공개 원문 링크 미확인"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 역할·권한",
+      "detail": "Main·Front·Perspective 방향과 이미지 재사용 권한을 확인해야 합니다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "문서 분류·개정",
+      "detail": "시방서와 Technical Data Sheet의 공개 URL·개정 및 Quick Documents 분류가 검토 중입니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "이미지 권한 검토 중",
+    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yamaha DM7 · 공식 출처 기반"
+  }
+}

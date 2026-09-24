@@ -323,5 +323,27 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ]
+  },
+  {
+    "brand": "AJA",
+    "product": "Ki Pro GO2",
+    "categories": [
+      "영상",
+      "멀티채널 레코더/플레이어"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.aja.com/products/ki-pro-go2"
+    ]
+  },
+  {
+    "brand": "Panasonic",
+    "product": "PT-MZ17K",
+    "categories": [
+      "프로젝터",
+      "대형 공간용 레이저 프로젝터"
+    ],
+    "kind": "equipment",
+    "official_links": []
   }
 ]

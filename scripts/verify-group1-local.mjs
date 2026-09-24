@@ -34,18 +34,18 @@ await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
 try {
   const base = `http://127.0.0.1:${server.address().port}`;
   const catalog = await (await fetch(base + '/catalog.json')).json();
-  assert.equal(publicCatalog.length, 25);
+  assert.equal(publicCatalog.length, 27);
   assert.equal(catalog.length, 27);
-  assert.deepEqual(catalog.slice(0, 25), publicCatalog);
+  assert.deepEqual(catalog, publicCatalog);
   assert.deepEqual(catalog.slice(25).map(item => item.product), ['Ki Pro GO2', 'PT-MZ17K']);
   for (const slug of expected.keys()) {
-    const response = await fetch(base + `/detail/content.json?product=${slug}`);
+    const response = await fetch(base + `/detail/data/${slug}.json`);
     assert.equal(response.status, 200);
     const data = await response.json();
     assert.equal(data.model.toLowerCase().replaceAll(' ', '-'), slug);
     assert.ok(!JSON.stringify(data).includes(packagesDir));
   }
-  assert.equal((await fetch(base + '/detail/content.json?product=missing')).status, 404);
+  assert.equal((await fetch(base + '/detail/data/missing.json')).status, 404);
   console.log('Group 1 local: five details, 25 preserved + two local Library entries, counts/states/links checked.');
 } finally {
   await new Promise(resolve => server.close(resolve));
