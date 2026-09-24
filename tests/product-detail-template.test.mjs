@@ -35,7 +35,7 @@ test('partial images and arbitrary product-specific groups work', () => {
     images: [{ role: 'Front', file: 'front.jpg' }],
     specifications: [{ group: 'DSP', name: 'Channels' }, { group: 'Audio', name: 'Input' }, { group: 'DSP', name: 'Mix' }],
     io: [{ group: 'Custom Signal', connector: 'A' }, { group: 'Audio', connector: 'B' }],
-    documents: [{ type: 'User Manual', title: 'Manual', url: 'https://example.test/manual' }]
+    documents: [{ type: 'User Manual', title: 'Manual', url: 'https://example.test/manual', status: 'FOUND' }]
   });
   assert.equal(view.rearIndex, -1);
   assert.deepEqual(view.specificationGroups.map(group => [group.name, group.entries.length]), [['DSP', 2], ['Audio', 1]]);
@@ -52,4 +52,12 @@ test('MISSING resources never count as openable even when a URL is present', () 
   ] });
   assert.equal(view.officialPage, null);
   assert.equal(view.quickDocuments[0].available, false);
+});
+
+test('REVIEW REQUIRED documents retain their source without becoming quick-open links', () => {
+  const view = prepareProductDetail({ manufacturer: 'Fixture', model: 'Review', documents: [
+    { type: 'Technical Document', url: 'https://example.test/review', status: 'REVIEW REQUIRED' }
+  ] });
+  assert.equal(view.quickDocuments[3].resource.status, 'REVIEW REQUIRED');
+  assert.equal(view.quickDocuments[3].available, false);
 });

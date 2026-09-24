@@ -276,3 +276,10 @@ h1{font-size:clamp(46px,5.4vw,77px);line-height:1.02;letter-spacing:-.065em;marg
   .image-trace span{max-width:none}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.product-full-name { color: #405475; font-weight: 650; margin: -.4rem 0 .8rem; }
+.image-statuses { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: .65rem; margin: .8rem 0; }
+.image-status-card { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; padding: .75rem; border: 1px solid #dce5f1; border-radius: 1rem; background: #f8faff; min-width: 0; }
+.image-status-card small { display: block; width: 100%; color: #61718a; }
+.image-source { font-size: .8rem; color: #26559e; }
+.state-found, .state-ready { background: #eaf2ff; color: #345a92; }
+.state-partial { background: #fff3db; color: #855d11; }

@@ -37,7 +37,7 @@ export function prepareProductDetail(input) {
     officialPage: documents.find(item => item.type === 'Official Product Page' && item.url && item.status !== 'MISSING') ?? null,
     quickDocuments: QUICK_DOCUMENTS.map(([label, type, missingTitle]) => {
       const resource = documents.find(item => item.type === type) ?? null;
-      return { label, resource, missingTitle, available: Boolean(resource?.url && resource.status !== 'MISSING') };
+      return { label, resource, missingTitle, available: Boolean(resource?.url && ['FOUND', 'VERIFIED'].includes(resource.status)) };
     }),
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups: group(specifications, item => item.group),

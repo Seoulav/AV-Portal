@@ -8,6 +8,9 @@ const node = (tag, className, text) => {
 };
 const statusClass = {
   VERIFIED: 'state-verified',
+  FOUND: 'state-found',
+  READY: 'state-ready',
+  PARTIAL: 'state-partial',
   'REVIEW REQUIRED': 'state-review',
   CONFLICTED: 'state-conflict',
   MISSING: 'state-missing'
@@ -28,6 +31,7 @@ function officialLink(url, text, className = '') {
 }
 function sourceReference(raw = '') {
   const wrap = node('span', 'source-ref');
+  if (!raw) return wrap;
   wrap.append(node('span', '', '근거 '));
   const tokens = String(raw).split(/([A-Za-z][A-Za-z0-9-]*)/);
   const codes = [...new Set(tokens.filter(token => data.sources.some(source => source.code === token)))];
@@ -44,7 +48,8 @@ function sourceReference(raw = '') {
 
 let data;
 try {
-  const response = await fetch('./content.json');
+  const productKey = new URLSearchParams(location.search).get('product');
+  const response = await fetch(productKey ? './content.json?product=' + encodeURIComponent(productKey) : './content.json');
   if (!response.ok) throw new Error('시안 콘텐츠를 읽을 수 없습니다.');
   data = prepareProductDetail(await response.json());
 } catch (error) {
@@ -57,12 +62,17 @@ try {
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
 $('#breadcrumb-brand').textContent = data.manufacturer;
 $('#breadcrumb-model').textContent = data.model;
-$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 한 제품의 로컬 시안입니다. 공개 베타와 별도로 검토합니다.`;
+$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 제품의 로컬 검토본입니다. 공개 사이트와 별도로 검토합니다.`;
 $('#header-eyebrow').textContent = data.presentation.headerEyebrow ?? data.manufacturer;
 $('#model-status').textContent = data.presentation.modelStatus ?? '';
 $('#model-status').hidden = !data.presentation.modelStatus;
 $('#manufacturer').textContent = data.manufacturer;
 $('#product-name').textContent = data.model;
+$('#product-full-name').textContent = data.productName && data.productName !== data.model ? data.productName : '';
+$('#product-full-name').hidden = !$('#product-full-name').textContent;
+$('#item-type').textContent = data.itemType ?? 'PRODUCT';
+$('#package-status').textContent = data.packageStatus ?? 'READY';
+$('#package-status').classList.add(data.packageStatus?.includes('REVIEW') ? 'state-review' : 'state-ready');
 $('#gallery-count').textContent = `${data.images.length} VIEWS`;
 $('#thumbnails').style.gridTemplateColumns = `repeat(${Math.min(data.images.length || 1, 4)}, minmax(0, 1fr))`;
 $('#gallery-rights-badge').textContent = data.presentation.galleryRightsBadge ?? '';
@@ -85,10 +95,10 @@ for (const highlight of data.presentation.overviewHighlights ?? []) {
 $('#overview-points').hidden = !$('#overview-points').children.length;
 $('#english-description').textContent = data.english;
 $('#series').textContent = data.series;
-$('#series-note').textContent = data.seriesNote;
+$('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
 $('#verification-summary').textContent = data.verificationSummary;
-$('#overview-copy').textContent = data.korean;
+$('#overview-copy').textContent = data.overview ?? data.korean;
 for (const category of data.categories) $('#categories').append(node('span', 'pill', category));
 
 let selectedIndex = 0;
@@ -155,6 +165,15 @@ else {
   $('#image-source-link').hidden = true;
   $('#gallery-source-link').hidden = true;
 }
+for (const item of data.imageStatuses ?? []) {
+  const card = node('div', 'image-status-card');
+  card.append(node('strong', '', item.role), badge(item.status));
+  if (item.status === 'FOUND') card.append(node('small', '', '공식 이미지 확인 · 로컬 표시 파일 없음'));
+  else card.append(node('small', '', item.status === 'MISSING' ? '이미지 미확인' : '역할 또는 사용 조건 검토 중'));
+  if (item.sourceUrl) card.append(officialLink(item.sourceUrl, '공식 출처 ↗', 'image-source'));
+  $('#image-statuses').append(card);
+}
+$('#image-statuses').hidden = !$('#image-statuses').children.length;
 zoomButton.addEventListener('click', () => {
   if (!featured.complete || featured.naturalWidth === 0) return;
   zoomOpener = zoomButton;
@@ -178,6 +197,7 @@ rearButton.addEventListener('click', () => {
 
 if (data.officialPage?.url) {
   $('#official-product-link').append(officialLink(data.officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link'));
+  if (data.officialPage.status !== 'VERIFIED') $('#official-product-link').append(badge(data.officialPage.status));
   $('#gallery-source-link').href = data.officialPage.url;
   $('#dialog-product-link').href = data.officialPage.url;
 } else {
@@ -189,10 +209,10 @@ for (const { label, resource, missingTitle, available } of data.quickDocuments) 
   const card = node('article', 'quick-card' + (available ? '' : ' quick-card-missing'));
   card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? missingTitle));
   const meta = node('div', 'quick-meta');
-  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), badge(available ? (resource.status ?? 'REVIEW REQUIRED') : 'MISSING'));
+  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), badge(resource?.status ?? 'MISSING'));
   card.append(meta);
   if (available) card.append(officialLink(resource.url, resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗', 'quick-open'));
-  else card.append(node('span', 'quick-unavailable', '열기 링크 없음'));
+  else card.append(node('span', 'quick-unavailable', resource?.status === 'REVIEW REQUIRED' ? '자료 링크 검토 중' : '열기 링크 없음'));
   $('#quick-docs').append(card);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
@@ -256,7 +276,7 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
       fact.append(node('span', '', label), node('strong', '', value));
       facts.append(fact);
     }
-    card.append(head, facts, node('p', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
+    card.append(head, facts, node('p', 'io-condition', '조건 · ' + (item.condition || '별도 조건 미기록')), sourceReference(item.source), badge(item.verification ?? 'REVIEW REQUIRED'));
     grid.append(card);
   }
   section.append(grid);
@@ -268,7 +288,7 @@ for (const document of data.additionalDocuments) {
   main.append(node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note + ' · 출처 ' + document.source));
   const side = node('div', 'document-side');
   side.append(badge(document.status ?? 'REVIEW REQUIRED'));
-  if (document.url && document.status !== 'MISSING') side.append(officialLink(document.url, '제조사에서 열기 ↗'));
+  if (document.url && ['FOUND', 'VERIFIED'].includes(document.status)) side.append(officialLink(document.url, '제조사에서 열기 ↗'));
   else side.append(node('span', 'quick-unavailable', '열기 링크 없음'));
   row.append(node('span', 'document-type', document.type), main, side);
   $('#all-documents').append(row);
