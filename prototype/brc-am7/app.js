@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w012-techdata-1';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-summary-3';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -71,6 +71,7 @@ try {
 }
 
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
+document.body.classList.add('summary-detail');
 if (data.presentation.visualVariant === 'brc-pictogram') {
   document.body.classList.add('brc-pictogram');
   document.querySelector('meta[name="color-scheme"]').content = 'light';
@@ -102,10 +103,11 @@ $('#gallery-foot-note').textContent = data.presentation.galleryFootNote ?? '';
 $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
 $('#overview-heading').hidden = !data.presentation.overviewHeading;
-$('#spec-intro').textContent = data.presentation.specIntro ?? '';
-$('#io-intro').textContent = data.presentation.ioIntro ?? '';
+$('#spec-intro').textContent = '핵심 값만 먼저 표시합니다. 적용 조건은 전체 사양에서 확인하세요.';
+$('#io-intro').textContent = '주요 연결만 먼저 표시합니다. 조건과 근거는 전체 목록에서 확인하세요.';
 $('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
 $('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
+$('#footer-manufacturer').textContent = data.manufacturer;
 $('#dialog-product').textContent = `${data.manufacturer} ${data.model}`;
 for (const highlight of data.presentation.overviewHighlights ?? []) {
   const item = node('div');
@@ -118,7 +120,7 @@ $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
 $('#verification-summary').textContent = data.verificationSummary;
-$('#overview-summary').textContent = data.korean ?? data.overview;
+$('#overview-summary').textContent = (data.overview ?? data.korean ?? '').split(/\n\s*\n/)[0];
 $('#overview-copy').textContent = data.overview ?? data.korean;
 $('#overview-more').hidden = !$('#overview-copy').textContent;
 for (const category of data.categories) $('#categories').append(node('span', 'pill', category));
@@ -177,6 +179,7 @@ for (const [index, image] of data.images.entries()) {
   button.addEventListener('click', () => selectImage(index));
   $('#thumbnails').append(button);
 }
+if (data.images.length === 1) $('#thumbnails').hidden = true;
 if (data.images.length) selectImage(0);
 else {
   featured.hidden = true;
@@ -196,6 +199,10 @@ for (const item of data.imageStatuses ?? []) {
   $('#image-statuses').append(card);
 }
 $('#image-status-details').hidden = !$('#image-statuses').children.length;
+if (data.images.length) {
+  $('#image-status-details').append($('.image-trace'), $('#gallery-rights'));
+  $('#gallery-source-link').hidden = true;
+}
 const foundImages = (data.imageStatuses ?? []).filter(item => item.status === 'FOUND').length;
 $('#image-status-summary').textContent = data.images.length ? '이미지별 확인 상태 보기' : `공식 이미지 ${foundImages}건 확인 · 게시 이미지 없음`;
 zoomButton.addEventListener('click', () => {
@@ -224,6 +231,7 @@ if (data.officialPage?.url) {
   if (data.officialPage.status !== 'VERIFIED') $('#official-product-link').append(badge(data.officialPage.status));
   $('#gallery-source-link').href = data.officialPage.url;
   $('#dialog-product-link').href = data.officialPage.url;
+  $('#footer-official-link').append(officialLink(data.officialPage.url, '제조사 공식 홈페이지 ↗'));
 } else {
   $('#gallery-source-link').hidden = true;
   $('#dialog-product-link').hidden = true;
@@ -243,27 +251,36 @@ if (!data.images.length) {
 }
 $('#quick-count').textContent = data.quickDocuments.length;
 for (const { label, resource, missingTitle, available } of data.quickDocuments) {
+  const rawStatus = resource?.status ?? 'MISSING';
+  const displayStatus = rawStatus === 'MISSING' ? '자료 없음' : ['REVIEW REQUIRED', 'CONFLICTED', 'PARTIAL'].includes(rawStatus) ? '검토 중' : '자료 있음';
   const card = node('article', 'quick-card' + (available ? '' : ' quick-card-missing'));
+  card.dataset.verification = rawStatus;
   card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? missingTitle));
   const meta = node('div', 'quick-meta');
-  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), badge(resource?.status ?? 'MISSING'));
+  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), node('span', 'quick-status', displayStatus));
   card.append(meta);
   if (available) card.append(officialLink(resource.url, resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗', 'quick-open'));
   else card.append(node('span', 'quick-unavailable', resource?.status === 'REVIEW REQUIRED' ? '자료 링크 검토 중' : '열기 링크 없음'));
   $('#quick-docs').append(card);
+  const verificationRow = node('div', 'verification-document-row');
+  verificationRow.append(node('strong', '', label), node('span', '', resource?.title ?? missingTitle), badge(rawStatus));
+  $('#verification-documents').append(verificationRow);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
 for (const [index, feature] of data.features.entries()) {
-  const card = node('article', 'feature-card panel');
-  const body = node('div');
-  body.append(node('p', '', feature.text), sourceReference(feature.source));
-  card.append(node('span', 'feature-number', String(index + 1).padStart(2, '0')), body);
-  $('#feature-list').append(card);
+  const card = node('li', 'feature-card');
+  card.append(node('span', 'feature-check', '✓'), node('span', '', feature.text));
+  if (index < 6) $('#feature-list').append(card);
+  else $('#feature-more-list').append(card);
+  const evidence = node('div', 'feature-evidence-row');
+  evidence.append(node('span', '', feature.text), sourceReference(feature.source));
+  $('#feature-evidence-list').append(evidence);
 }
-$('#feature-more').hidden = true;
+$('#feature-more').hidden = data.features.length <= 6;
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
+let keySpecCount = 0;
 for (const [group, specifications] of grouped) {
   const panel = node('details', 'spec-group panel');
   panel.open = false;
@@ -271,6 +288,20 @@ for (const [group, specifications] of grouped) {
   head.append(node('strong', '', group), node('span', '', specifications.length + ' items'));
   panel.append(head);
   for (const specification of specifications) {
+    if (keySpecCount < 10 && !['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(specification.verification) && specifications.indexOf(specification) < 2) {
+      const item = node('div', 'key-spec');
+      item.append(node('span', 'key-spec-label', specification.name));
+      const value = node('strong', '', specification.value);
+      if (specification.unit) value.append(node('small', '', ' ' + specification.unit));
+      if (specification.condition) {
+        const condition = node('small', 'key-spec-condition', '조건 있음');
+        condition.title = specification.condition;
+        value.append(condition);
+      }
+      item.append(value);
+      $('#key-specs').append(item);
+      keySpecCount++;
+    }
     const row = node('div', 'spec-row');
     const main = node('div', 'spec-main');
     const value = node('strong', 'spec-value', specification.value);
@@ -287,6 +318,24 @@ for (const [group, specifications] of grouped) {
 }
 
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
+let keyIoCount = 0;
+for (const { name, entries } of data.ioGroups) {
+  const selected = entries.slice(0, 2);
+  if (!selected.length || keyIoCount >= 8) continue;
+  const group = node('div', 'key-io-group');
+  group.append(node('h3', '', name));
+  for (const item of selected.slice(0, 8 - keyIoCount)) {
+    const row = node('div', 'key-io-row');
+    const identity = node('strong', '', item.connector);
+    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(item.verification)) identity.append(node('small', 'key-review', ' · 검토 중'));
+    if (item.condition) identity.append(node('small', 'key-condition', ' · 조건 있음'));
+    row.append(identity, node('span', '', item.quantity ?? ''));
+    group.append(row);
+    keyIoCount++;
+  }
+  $('#key-io').append(group);
+}
+if (!keyIoCount) $('#key-io').append(node('p', '', '확인된 주요 단자는 전체 목록에서 확인해 주세요.'));
 const ioTable = node('table', 'io-table');
 ioTable.setAttribute('aria-label', '연결 단자 목록');
 const ioHead = node('thead', 'io-table-head');
@@ -393,18 +442,14 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const tabs = [$('#tab-features'), $('#tab-specifications')];
-const panels = [$('#feature-panel'), $('#spec-panel')];
-function selectTab(index, updateAddress = false) {
-  for (const [position, tab] of tabs.entries()) {
-    const selected = position === index;
-    tab.setAttribute('aria-selected', String(selected));
-    tab.tabIndex = selected ? 0 : -1;
-    panels[position].hidden = !selected;
-  }
-  if (updateAddress) {
-    history.pushState(null, '', index ? '#specifications' : '#features');
-    $('#detail-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+const navigationLinks = [...$('#detail-tabs').querySelectorAll('a')];
+function updateNavigation(target) {
+  const section = target?.closest('#overview, #specifications, #io, #documents') ?? $('#overview');
+  for (const link of navigationLinks) {
+    const active = link.hash === '#' + section.id;
+    link.classList.toggle('is-active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   }
 }
 function hashTarget() {
@@ -416,21 +461,23 @@ function hashTarget() {
   }
 }
 function openForTarget(target) {
-  const isSpec = Boolean(target && panels[1].contains(target));
-  selectTab(isSpec ? 1 : 0);
+  if (target && $('#all-specs').contains(target)) $('#all-specs').open = true;
+  if (target && $('#all-io').contains(target)) $('#all-io').open = true;
   if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
-  if (target && $('#supplemental-docs').contains(target)) $('#supplemental-docs').open = true;
+  if (target && (target === $('#supplemental-docs') || $('#supplemental-docs').contains(target))) $('#supplemental-docs').open = true;
+  updateNavigation(target);
 }
-for (const [index, tab] of tabs.entries()) {
-  tab.addEventListener('click', () => selectTab(index, true));
-  tab.addEventListener('keydown', event => {
-    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-    event.preventDefault();
-    const next = (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
-    selectTab(next, true);
-    tabs[next].focus();
+for (const link of navigationLinks) link.addEventListener('click', () => updateNavigation(document.getElementById(link.hash.slice(1))));
+let navigationFrame = 0;
+window.addEventListener('scroll', () => {
+  if (navigationFrame) return;
+  navigationFrame = requestAnimationFrame(() => {
+    navigationFrame = 0;
+    const current = [...document.querySelectorAll('#overview, #specifications, #io, #documents')]
+      .filter(section => section.getBoundingClientRect().top <= 130).at(-1);
+    updateNavigation(current);
   });
-}
+}, { passive: true });
 document.addEventListener('click', event => {
   const link = event.target.closest('a[href^="#"]');
   if (!link) return;
