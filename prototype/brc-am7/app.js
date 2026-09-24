@@ -237,6 +237,7 @@ $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
 for (const [group, specifications] of grouped) {
   const panel = node('details', 'spec-group panel');
+  panel.open = true;
   const head = node('summary', 'spec-group-head');
   head.append(node('strong', '', group), node('span', '', specifications.length + ' items'));
   panel.append(head);
