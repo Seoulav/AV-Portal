@@ -1,4 +1,4 @@
-import { filterProducts, listFacets, safeHttpUrl, verificationLabel, groupResources, resourceDisplay, UNKNOWN_BRAND } from './catalog-view.mjs';
+import { filterProducts, listFacets, safeHttpUrl, verificationLabel, groupResources, resourceDisplay, prioritizeOfficialSources, UNKNOWN_BRAND } from './catalog-view.mjs';
 
 const $ = (selector) => document.querySelector(selector);
 const elements = {
@@ -47,6 +47,7 @@ function appendSources(parent, title, sources) {
         row.append(makeElement('span', '', '링크 형식 확인 필요'));
         list.append(row);
       }
+      if (title === '제조사 공식 출처' && source.language === 'ko') row.append(makeElement('small', '', '한국어 제조사 공식'));
       row.append(makeElement('small', '', verificationLabel(source.verification)));
       if (source.source_record) row.append(makeElement('small', '', `연결 원본 행: ${source.source_record}`));
     }
@@ -129,7 +130,7 @@ function appendResourceRegister(detail, body, item) {
 }
 function appendDetails(parent, item) {
   const body = makeElement('div', 'detail-body');
-  appendSources(body, '제조사 공식 출처', item.official_sources);
+  appendSources(body, '제조사 공식 출처', prioritizeOfficialSources(item.official_sources));
   appendSources(body, '지정 보조 출처', item.supplemental_sources);
   appendResourceRegister(parent, body, item);
 

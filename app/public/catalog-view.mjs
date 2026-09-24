@@ -32,6 +32,14 @@ export function listFacets(products) {
   };
 }
 
+// Only an explicitly recorded language is used for priority; URL locale is not proof.
+export function prioritizeOfficialSources(sources) {
+  return sources.map((source, order) => ({ source, order }))
+    .sort((a, b) => (a.source.language === 'ko' ? 0 : 1) -
+      (b.source.language === 'ko' ? 0 : 1) || a.order - b.order)
+    .map(({ source }) => source);
+}
+
 export function safeHttpUrl(value) {
   try {
     const url = new URL(value);
