@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs';
+import { prepareProductDetail } from './product-detail-model.mjs?v=01a3576';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -47,6 +47,7 @@ function sourceReference(raw = '') {
 }
 
 let data;
+history.scrollRestoration = 'manual';
 const productKey = new URLSearchParams(location.search).get('product');
 if (!productKey) {
   location.replace('../');
@@ -393,4 +394,5 @@ function restoreInitialHash() {
   requestAnimationFrame(() => { root.style.scrollBehavior = previousBehavior; });
 }
 requestAnimationFrame(restoreInitialHash);
+window.addEventListener('pageshow', () => requestAnimationFrame(restoreInitialHash));
 }
