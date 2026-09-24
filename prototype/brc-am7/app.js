@@ -135,27 +135,30 @@ $('#show-rear').addEventListener('click', () => {
   $('#thumbnails').children[2].focus();
 });
 
-const quickSymbols = {
-  'Official Product Page': '◫',
-  'User Manual': '▤',
-  Specification: '≡',
-  'Firmware / Support': '↻',
-  'Technical Document': '⌘',
-  'CAD Resource': '◇'
-};
-const quick = data.documents.filter(document => document.quick);
-$('#quick-count').textContent = quick.length;
-for (const document of quick) {
-  const card = officialLink(document.url, '', 'quick-card');
-  const icon = node('span', 'document-icon', quickSymbols[document.type] ?? '▣');
-  icon.setAttribute('aria-hidden', 'true');
-  const identity = node('span', 'card-identity');
-  identity.append(icon, node('span', 'card-type', document.type));
-  const top = node('div', 'card-top');
-  top.append(identity, node('span', 'card-arrow', '↗'));
+const officialPage = data.documents.find(item => item.type === 'Official Product Page');
+if (!officialPage) throw new Error('공식 제품 페이지가 없습니다.');
+const productLink = officialLink(officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link');
+$('#official-product-link').append(productLink);
+
+const coreDocuments = [
+  { label: '매뉴얼', resource: data.documents.find(item => item.type === 'User Manual') },
+  { label: '시방서', resource: data.documents.find(item => item.type === 'Independent Specification') },
+  { label: '사양서', resource: data.documents.find(item => item.type === 'Specification') },
+  { label: '기술문서', resource: data.documents.find(item => item.type === 'Technical Document') }
+];
+$('#quick-count').textContent = coreDocuments.length;
+for (const { label, resource } of coreDocuments) {
+  const card = node('article', 'quick-card' + (resource ? '' : ' quick-card-missing'));
+  card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? '공식 독립 시방서 미확인'));
   const meta = node('div', 'quick-meta');
-  meta.append(node('span', 'quick-language', document.language), badge(document.status));
-  card.append(top, node('strong', '', document.title), node('small', 'quick-detail', document.note), meta);
+  meta.append(node('span', 'quick-language', resource?.type === 'Technical Document' ? '본문 언어 미확인' : (resource?.language ?? '언어 미확인')), badge(resource?.status ?? 'MISSING'));
+  card.append(meta);
+  if (resource) {
+    const label = resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗';
+    card.append(officialLink(resource.url, label, 'quick-open'));
+  } else {
+    card.append(node('span', 'quick-unavailable', '열기 링크 없음'));
+  }
   $('#quick-docs').append(card);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
@@ -246,7 +249,8 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
   section.append(grid);
   $('#io-list').append(section);
 }
-for (const document of data.documents) {
+const coreDocumentTypes = new Set(['Official Product Page', 'User Manual', 'Independent Specification', 'Specification', 'Technical Document']);
+for (const document of data.documents.filter(item => !coreDocumentTypes.has(item.type))) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
   main.append(node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note + ' · 출처 ' + document.source));
