@@ -288,7 +288,7 @@ for (const document of data.additionalDocuments) {
   main.append(node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note + ' · 출처 ' + document.source));
   const side = node('div', 'document-side');
   side.append(badge(document.status ?? 'REVIEW REQUIRED'));
-  if (document.url && ['FOUND', 'VERIFIED'].includes(document.status)) side.append(officialLink(document.url, '제조사에서 열기 ↗'));
+  if (document.url && document.status !== 'MISSING') side.append(officialLink(document.url, document.status === 'REVIEW REQUIRED' ? '공식 출처 확인 ↗' : '제조사에서 열기 ↗'));
   else side.append(node('span', 'quick-unavailable', '열기 링크 없음'));
   row.append(node('span', 'document-type', document.type), main, side);
   $('#all-documents').append(row);

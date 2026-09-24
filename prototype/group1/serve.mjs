@@ -45,7 +45,7 @@ export async function loadGroup1(packagesDir) {
     ...brc,
     packageStatus: 'READY FOR CODEX',
     images: visual.images,
-    imageStatuses: [],
+    imageStatuses: brc.imageStatuses.filter(item => !visual.images.some(image => image.role === item.role)),
     documents: [...brc.documents, ...visual.documents.filter(item => !coreTypes.has(item.type))],
     sources: visual.sources,
     issues: visual.issues,

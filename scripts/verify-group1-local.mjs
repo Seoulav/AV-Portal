@@ -25,6 +25,7 @@ for (const [slug, [features, specs, io, status]] of expected) {
   assert.ok(product.io.every(item => item.group && item.verification));
 }
 assert.deepEqual(products.get('brc-am7').images.map(item => item.role), ['Main', 'Front', 'Rear', 'Perspective']);
+assert.equal(products.get('brc-am7').imageStatuses.find(item => item.role === 'Other').status, 'REVIEW REQUIRED');
 assert.equal(products.get('pt-mz17k').imageStatuses.find(item => item.role === 'Rear').status, 'MISSING');
 assert.equal(products.get('rally-bar').issues.some(item => item.status === 'CONFLICTED'), true);
 const publicCatalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
