@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=01a3576';
+import { prepareProductDetail } from './product-detail-model.mjs?v=d72c04f';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -47,7 +47,9 @@ function sourceReference(raw = '') {
 }
 
 let data;
-history.scrollRestoration = 'manual';
+const isHistoryTraversal = performance.getEntriesByType('navigation')[0]?.type === 'back_forward';
+// Keep the browser's saved position when returning to a detail page via Back.
+if (location.hash && !isHistoryTraversal) history.scrollRestoration = 'manual';
 const productKey = new URLSearchParams(location.search).get('product');
 if (!productKey) {
   location.replace('../');
@@ -382,17 +384,26 @@ function restoreInitialHash() {
   try {
     id = decodeURIComponent(location.hash.slice(1));
   } catch {
+    history.scrollRestoration = 'auto';
     return;
   }
   const target = document.getElementById(id);
-  if (!target) return;
+  if (!target) {
+    history.scrollRestoration = 'auto';
+    return;
+  }
   const root = document.documentElement;
   const previousBehavior = root.style.scrollBehavior;
   root.style.scrollBehavior = 'auto';
   target.scrollIntoView({ behavior: 'auto', block: 'start' });
   updateSectionNav();
-  requestAnimationFrame(() => { root.style.scrollBehavior = previousBehavior; });
+  requestAnimationFrame(() => {
+    root.style.scrollBehavior = previousBehavior;
+    history.scrollRestoration = 'auto';
+  });
 }
-requestAnimationFrame(restoreInitialHash);
-window.addEventListener('pageshow', () => requestAnimationFrame(restoreInitialHash));
+if (!isHistoryTraversal) requestAnimationFrame(restoreInitialHash);
+window.addEventListener('pageshow', event => {
+  if (!event.persisted && !isHistoryTraversal) requestAnimationFrame(restoreInitialHash);
+});
 }
