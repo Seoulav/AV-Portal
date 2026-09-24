@@ -7,6 +7,16 @@ const ui = {
 let products = [];
 let view = 'equipment';
 const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
+// Only imagery already cleared for this public site belongs here. Add later products
+// individually after their image and publication status have been checked.
+const publicImages = new Map([
+  ['sony\0brc-am7', {
+    src: './detail/images/ptz-pictogram.svg',
+    detail: './detail/?product=brc-am7',
+    alt: '범용 PTZ 카메라 픽토그램. BRC-AM7 실물 사진이 아닙니다.',
+    note: '픽토그램 · 실물 사진 아님'
+  }]
+]);
 
 function element(tag, className, content) {
   const node = document.createElement(tag);
@@ -41,6 +51,20 @@ function setFacets() {
 
 function createCard(item) {
   const card = element('article', 'card');
+  const image = publicImages.get(`${fold(item.brand)}\0${fold(item.product)}`);
+  if (image) {
+    const media = element('a', 'card-media');
+    media.href = image.detail;
+    media.setAttribute('aria-label', `${item.brand} ${item.product} 상세 보기`);
+    const picture = element('img');
+    picture.src = image.src;
+    picture.alt = image.alt;
+    picture.loading = 'lazy';
+    picture.width = 800;
+    picture.height = 560;
+    media.append(picture, element('span', 'card-media-note', image.note));
+    card.append(media);
+  }
   card.append(element('span', 'card-brand', item.brand), element('h4', '', item.product));
   const tags = element('div', 'tags');
   for (const category of item.categories) tags.append(element('span', 'tag', category));
