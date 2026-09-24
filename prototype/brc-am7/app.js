@@ -63,8 +63,8 @@ try {
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
 $('#breadcrumb-brand').textContent = data.manufacturer;
 $('#breadcrumb-model').textContent = data.model;
-$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 제품의 로컬 검토본입니다. 공개 사이트와 별도로 검토합니다.`;
 $('#header-eyebrow').textContent = data.presentation.headerEyebrow ?? data.manufacturer;
+$('#header-eyebrow').hidden = $('#header-eyebrow').textContent.trim().toLowerCase() === data.manufacturer.trim().toLowerCase();
 $('#model-status').textContent = data.presentation.modelStatus ?? '';
 $('#model-status').hidden = !data.presentation.modelStatus;
 $('#manufacturer').textContent = data.manufacturer;
@@ -75,10 +75,11 @@ $('#item-type').textContent = data.itemType ?? 'PRODUCT';
 $('#package-status').textContent = data.packageStatus ?? 'READY';
 $('#package-status').classList.add(data.packageStatus?.includes('REVIEW') ? 'state-review' : 'state-ready');
 $('#gallery-count').textContent = `${data.images.length} VIEWS`;
+$('.gallery').classList.toggle('gallery-empty', data.images.length === 0);
 $('#thumbnails').style.gridTemplateColumns = `repeat(${Math.min(data.images.length || 1, 4)}, minmax(0, 1fr))`;
 $('#gallery-rights-badge').textContent = data.presentation.galleryRightsBadge ?? '';
 $('#gallery-rights-badge').hidden = !data.images.length || !data.presentation.galleryRightsBadge;
-if (!data.images.length) $('#image-missing').querySelector('span').textContent = '등록된 이미지가 없습니다.';
+if (!data.images.length) $('#image-missing').querySelector('span').textContent = '사진은 제조사 공식 출처에서 확인할 수 있습니다.';
 $('#gallery-foot-note').textContent = data.presentation.galleryFootNote ?? '';
 $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
@@ -99,7 +100,10 @@ $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
 $('#verification-summary').textContent = data.verificationSummary;
+$('#overview-summary').textContent = data.overview ?? data.korean;
 $('#overview-copy').textContent = data.overview ?? data.korean;
+$('#overview-more').hidden = !$('#overview-copy').textContent;
+$('#overview-more').addEventListener('toggle', () => { $('#overview-summary').hidden = $('#overview-more').open; });
 for (const category of data.categories) $('#categories').append(node('span', 'pill', category));
 
 let selectedIndex = 0;
@@ -169,12 +173,14 @@ else {
 for (const item of data.imageStatuses ?? []) {
   const card = node('div', 'image-status-card');
   card.append(node('strong', '', item.role), badge(item.status));
-  if (item.status === 'FOUND') card.append(node('small', '', '공식 이미지 확인 · 로컬 표시 파일 없음'));
+  if (item.status === 'FOUND') card.append(node('small', '', '공식 이미지 확인 · 게시 이미지 없음'));
   else card.append(node('small', '', item.status === 'MISSING' ? '이미지 미확인' : '역할 또는 사용 조건 검토 중'));
   if (item.sourceUrl) card.append(officialLink(item.sourceUrl, '공식 출처 ↗', 'image-source'));
   $('#image-statuses').append(card);
 }
-$('#image-statuses').hidden = !$('#image-statuses').children.length;
+$('#image-status-details').hidden = !$('#image-statuses').children.length;
+const foundImages = (data.imageStatuses ?? []).filter(item => item.status === 'FOUND').length;
+$('#image-status-summary').textContent = data.images.length ? '이미지별 확인 상태 보기' : `공식 이미지 ${foundImages}건 확인 · 게시 이미지 없음`;
 zoomButton.addEventListener('click', () => {
   if (!featured.complete || featured.naturalWidth === 0) return;
   zoomOpener = zoomButton;
@@ -222,15 +228,17 @@ for (const [index, feature] of data.features.entries()) {
   const body = node('div');
   body.append(node('p', '', feature.text), sourceReference(feature.source));
   card.append(node('span', 'feature-number', String(index + 1).padStart(2, '0')), body);
-  $('#feature-list').append(card);
+  (index < 3 ? $('#feature-list') : $('#feature-more-list')).append(card);
 }
+$('#feature-more').hidden = data.features.length <= 3;
+$('#feature-more summary').textContent = `나머지 ${Math.max(0, data.features.length - 3)}개 특징 보기`;
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
 for (const [group, specifications] of grouped) {
-  const panel = node('section', 'spec-group panel');
-  const head = node('div', 'spec-group-head');
-  head.append(node('h3', '', group), node('span', '', specifications.length + ' items'));
+  const panel = node('details', 'spec-group panel');
+  const head = node('summary', 'spec-group-head');
+  head.append(node('strong', '', group), node('span', '', specifications.length + ' items'));
   panel.append(head);
   for (const specification of specifications) {
     const row = node('div', 'spec-row');
@@ -251,9 +259,9 @@ for (const [group, specifications] of grouped) {
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
 const groupedIo = data.ioGroups.map(({ name, entries }) => [name, entries]);
 for (const [index, [group, items]] of [...groupedIo].entries()) {
-  const section = node('section', 'io-group');
-  const heading = node('div', 'io-group-head');
-  const title = node('h3', '', group);
+  const section = node('details', 'io-group');
+  const heading = node('summary', 'io-group-head');
+  const title = node('strong', '', group);
   title.id = 'io-group-' + index;
   section.setAttribute('aria-labelledby', title.id);
   heading.append(title, node('span', '', items.length + ' I/O'));
@@ -286,7 +294,9 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
 for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
-  main.append(node('strong', '', document.title), node('small', '', document.language + ' · ' + document.note + ' · 출처 ' + document.source));
+  const metadata = [document.language, document.note, document.source && `출처 ${document.source}`].filter(value => value && value !== 'undefined');
+  main.append(node('strong', '', document.title));
+  if (metadata.length) main.append(node('small', '', metadata.join(' · ')));
   const side = node('div', 'document-side');
   side.append(badge(document.status ?? 'REVIEW REQUIRED'));
   if (document.url && document.status !== 'MISSING') side.append(officialLink(document.url, document.status === 'REVIEW REQUIRED' ? '공식 출처 확인 ↗' : '제조사에서 열기 ↗'));
