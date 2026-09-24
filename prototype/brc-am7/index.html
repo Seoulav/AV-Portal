@@ -32,7 +32,9 @@
         <div class="headline-top"><span id="header-eyebrow" class="eyebrow"></span><span id="model-status" class="state state-verified"></span></div>
         <p id="manufacturer" class="manufacturer"></p>
         <h1 id="product-name"></h1>
+        <p id="product-full-name" class="product-full-name"></p>
         <p id="english-description" class="english-description"></p>
+        <div class="identity-line"><span class="field-label">ITEM TYPE</span><strong id="item-type"></strong><span id="package-status" class="state"></span></div>
         <div class="identity-line"><span class="field-label">SERIES</span><strong id="series"></strong><span id="series-note" class="series-note"></span></div>
         <div id="categories" class="pills" aria-label="제품 카테고리"></div>
         <p id="korean-description" class="korean-description"></p>
@@ -49,6 +51,7 @@
           <button id="zoom-button" class="zoom-button" type="button" aria-label="선택한 제품 이미지 확대"><span aria-hidden="true">⛶</span> 확대 보기</button>
         </div>
         <div id="thumbnails" class="thumbnails" role="group" aria-label="이미지 방향 선택"></div>
+        <div id="image-statuses" class="image-statuses" aria-label="이미지 확인 상태"></div>
         <div class="gallery-foot"><p><strong id="image-caption"></strong><span id="gallery-foot-note"></span></p><a id="gallery-source-link" target="_blank" rel="noopener noreferrer">제조사 공식 출처 <span aria-hidden="true">↗</span></a></div>
         <div class="image-trace"><span id="image-provenance"></span><a id="image-source-link" target="_blank" rel="noopener noreferrer">선택 사진 공식 URL ↗</a></div>
         <p id="gallery-rights" class="gallery-rights"></p>
@@ -107,7 +110,7 @@
 
       <section id="sources" class="detail-section" aria-labelledby="sources-title">
         <div class="section-title"><span class="section-index">06</span><div><p class="eyebrow">EVIDENCE & STATUS</p><h2 id="sources-title">Sources & Verification</h2></div></div>
-        <div class="verification-legend"><div><span class="state state-official">Manufacturer Official</span><p>제조사 웹페이지·도움말·지원 자료</p></div><div><span class="state state-verified">VERIFIED</span><p>표시한 범위의 모델 적용 확인</p></div><div><span class="state state-review">REVIEW REQUIRED</span><p>조건·개정·권한 추가 검토</p></div><div><span class="state state-conflict">CONFLICTED</span><p>공식 자료 간 표기 차이</p></div><div><span class="state state-missing">MISSING</span><p>확인된 독립 자료 없음</p></div></div>
+        <div class="verification-legend"><div><span class="state state-official">Manufacturer Official</span><p>제조사 웹페이지·도움말·지원 자료</p></div><div><span class="state state-verified">VERIFIED</span><p>표시한 범위의 모델 적용 확인</p></div><div><span class="state state-found">FOUND</span><p>자료를 확인함, 권한은 별도</p></div><div><span class="state state-ready">READY</span><p>화면 연결 가능</p></div><div><span class="state state-partial">PARTIAL</span><p>일부 값만 확인</p></div><div><span class="state state-review">REVIEW REQUIRED</span><p>조건·개정·권한 추가 검토</p></div><div><span class="state state-conflict">CONFLICTED</span><p>공식 자료 간 표기 차이</p></div><div><span class="state state-missing">MISSING</span><p>확인된 독립 자료 없음</p></div></div>
         <div class="source-layout"><div class="panel source-panel"><div class="panel-heading"><h3>Manufacturer Official</h3><span id="source-count"></span></div><div id="source-list" class="source-list"></div></div><div class="panel review-panel"><div class="panel-heading"><h3>검토 중인 항목</h3><span>확정 사양과 분리</span></div><div id="issue-list" class="issue-list"></div></div></div>
         <div class="supplemental-note"><strong>Supplemental / Domestic</strong><span id="supplemental-note"></span></div>
       </section>
