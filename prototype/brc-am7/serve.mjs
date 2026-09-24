@@ -9,6 +9,7 @@ const routes = new Map([
   ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
+  ['/local-visual.css', ['local-visual.css', 'text/css; charset=utf-8']],
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
   ['/product-detail-model.mjs', ['product-detail-model.mjs', 'text/javascript; charset=utf-8']],
   ['/content.json', ['content.json', 'application/json; charset=utf-8']]
@@ -32,7 +33,13 @@ export function createPreviewServer() {
     }
     try {
       const file = (route[2] ? imageDir : siteDir) + '/' + route[0];
-      const body = await readFile(file);
+      let body = await readFile(file);
+      if (route[0] === 'index.html') {
+        body = Buffer.from(body.toString('utf8')
+          .replace('<meta name="color-scheme" content="dark">', '<meta name="color-scheme" content="light">')
+          .replace('</head>', '  <link rel="stylesheet" href="./local-visual.css">\n</head>')
+          .replace('PRODUCT DETAIL LAB', 'LOCAL VISUAL STUDY'));
+      }
       response.writeHead(200, { ...headers, 'Content-Type': route[1] });
       response.end(body);
     } catch {
