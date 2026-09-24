@@ -139,6 +139,12 @@ main{max-width:1440px;padding-bottom:80px}
 .dialog-image-wrap{background:#f4f7fb;border-radius:12px}
 .image-dialog>p{color:#74839a}
 .image-dialog>p a{color:#2a65bb}
+.pictogram-preview .image-stage{background:radial-gradient(circle at 50% 42%,#fbfdff,#eaf2ff)}
+.pictogram-preview .image-stage img{mix-blend-mode:normal;padding:8px}
+.pictogram-preview .thumbnails{display:none}
+.pictogram-preview #gallery-rights-badge{background:#eaf3ff;color:#3566ab}
+.pictogram-preview .image-role{letter-spacing:.04em}
+.pictogram-preview .image-trace{margin-top:9px}
 @media(max-width:880px){
   .hero-grid,.hero-grid.gallery-unavailable{grid-template-columns:1fr;grid-template-areas:"header" "gallery" "quick";gap:12px}
   .gallery{grid-row:auto}

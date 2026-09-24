@@ -27,3 +27,31 @@ test('the private-photo preview loads its light design only through the local se
   const unknownImage = await fetch(`${base}/images/unapproved.jpg`);
   assert.equal(unknownImage.status, 404);
 });
+
+test('the pictogram preview replaces only local images with an original SVG', async () => {
+  const preview = createPreviewServer({ pictogram: true });
+  await new Promise(resolve => preview.listen(0, '127.0.0.1', resolve));
+  const previewBase = `http://127.0.0.1:${preview.address().port}`;
+  try {
+    const html = await (await fetch(previewBase)).text();
+    assert.match(html, /class="pictogram-preview"/);
+    assert.match(html, /id="gallery-title">제품 시각화/);
+    const content = await (await fetch(`${previewBase}/content.json`)).json();
+    assert.equal(content.images.length, 1);
+    assert.equal(content.images[0].file, 'ptz-pictogram.svg');
+    assert.equal(content.images[0].sourceUrl, undefined);
+    assert.equal(content.images[0].publicationStatus, 'CC0 1.0');
+    assert.match(content.images[0].alt, /실제 제품 사진이 아닌/);
+    assert.equal(content.features.length, 8);
+    assert.equal(content.specifications.length, 27);
+    assert.equal(content.io.length, 14);
+    const icon = await fetch(`${previewBase}/images/ptz-pictogram.svg`);
+    assert.equal(icon.status, 200);
+    assert.match(icon.headers.get('content-type'), /image\/svg\+xml/);
+    const svg = await icon.text();
+    assert.match(svg, /SPDX-License-Identifier: CC0-1\.0/);
+    assert.doesNotMatch(svg, /<script|<image|(?:href|src)="|url\(https?:/);
+  } finally {
+    await new Promise(resolve => preview.close(resolve));
+  }
+});
