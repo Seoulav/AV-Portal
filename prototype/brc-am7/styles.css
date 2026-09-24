@@ -504,3 +504,26 @@ main{max-width:1200px;padding-bottom:72px}
   .feature-card{padding:11px 12px}
   .io-row-main{grid-template-columns:1fr}
 }
+/* W-20260924-014: compact I/O rows with immediate signal and protocol. */
+.io-groups{gap:0}
+.io-group{padding:0;background:transparent;border:0;border-top:1px solid #4b4b4b}
+.io-group:last-child{border-bottom:1px solid #4b4b4b}
+.io-group-head{padding:15px 0 11px;border:0}
+.io-card,.io-card:last-child{padding:13px 0}
+.io-row-main{grid-template-columns:minmax(150px,210px) minmax(0,1fr) auto;gap:24px;align-items:start}
+.io-card-head{flex-wrap:wrap}
+.io-facts{display:grid;grid-template-columns:1fr;gap:5px}
+.io-facts-primary,.io-facts-secondary{margin:0;min-width:0}
+.io-facts-primary{display:flex;flex-wrap:wrap;gap:0 6px;line-height:1.5}
+.io-facts-primary strong{font-size:13px;color:#eee}
+.io-facts-primary .io-facts-separator{display:inline;margin:0;color:#a8a8a8;font-size:13px}
+.io-facts-secondary{display:flex;flex-wrap:wrap;gap:4px 14px;color:#bdbdbd;font-size:10px}
+.io-facts-secondary span{display:inline;margin:0;color:#bdbdbd;font-size:10px;font-weight:500;letter-spacing:normal}
+.io-row-main>.state{margin-top:2px}
+.io-row-support{padding-left:234px;margin-top:5px}
+@media(max-width:650px){
+  .io-group{padding:0}
+  .io-row-main{grid-template-columns:1fr;gap:8px}
+  .io-row-support{padding-left:0}
+  .io-card-head h4{font-size:14px}
+}
