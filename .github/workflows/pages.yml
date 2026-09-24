@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: '24'
       - run: node beta/verify-pages.mjs
+      - run: npm test
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

@@ -47,15 +47,21 @@ function sourceReference(raw = '') {
 }
 
 let data;
+const productKey = new URLSearchParams(location.search).get('product');
+if (!productKey) {
+  location.replace('../');
+} else {
 try {
-  const productKey = new URLSearchParams(location.search).get('product');
-  if (productKey && !/^[a-z0-9-]+$/.test(productKey)) throw new Error('제품 주소 형식이 올바르지 않습니다.');
-  const response = await fetch(productKey ? `./data/${productKey}.json` : './content.json');
+  if (!/^[a-z0-9-]+$/.test(productKey)) throw new Error('제품 주소 형식이 올바르지 않습니다.');
+  const response = await fetch(`./data/${productKey}.json`);
   if (!response.ok) throw new Error('제품 상세 데이터를 읽을 수 없습니다.');
   data = prepareProductDetail(await response.json());
 } catch (error) {
   const notice = node('div', 'load-failure', error.message);
   notice.setAttribute('role', 'alert');
+  const back = node('a', '', 'Library로 돌아가기 →');
+  back.href = '../';
+  notice.append(back);
   $('#main').prepend(notice);
   throw error;
 }
@@ -368,3 +374,23 @@ window.addEventListener('scroll', scheduleSectionNavUpdate, { passive: true });
 window.addEventListener('resize', scheduleSectionNavUpdate);
 window.addEventListener('hashchange', scheduleSectionNavUpdate);
 updateSectionNav();
+
+function restoreInitialHash() {
+  if (!location.hash) return;
+  let id;
+  try {
+    id = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return;
+  }
+  const target = document.getElementById(id);
+  if (!target) return;
+  const root = document.documentElement;
+  const previousBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  target.scrollIntoView({ behavior: 'auto', block: 'start' });
+  updateSectionNav();
+  requestAnimationFrame(() => { root.style.scrollBehavior = previousBehavior; });
+}
+requestAnimationFrame(restoreInitialHash);
+}
