@@ -69,6 +69,22 @@ const products = await loadGroup1(packagesDir);
 const rawBrc = parseGroup1Package(await readFile(join(packagesDir, filenames.get('brc-am7')), 'utf8'));
 products.get('brc-am7').imageStatuses = rawBrc.imageStatuses;
 const publicProducts = new Map([...products].map(([slug, product]) => [slug, projectPublicDetail(product, options[slug])]));
+const brc = publicProducts.get('brc-am7');
+assert.equal(brc.model, 'BRC-AM7');
+assert.deepEqual(brc.images, []);
+brc.images = [{
+  role: 'Illustration', file: 'ptz-pictogram.svg',
+  alt: '실제 제품 사진이 아닌 자체 제작 범용 PTZ 카메라 픽토그램',
+  note: '제품 사진 준비 중 · 실제 외형과 다를 수 있음',
+  provider: 'AV Portal 자체 제작', model: '범용 PTZ 카메라', publicationStatus: 'CC0 1.0'
+}];
+Object.assign(brc.presentation, {
+  visualVariant: 'brc-pictogram',
+  galleryRightsBadge: '자체 제작 · CC0 픽토그램',
+  galleryFootNote: '실물 사진이 아닌 범용 그림',
+  galleryRights: '현재 그림은 BRC-AM7 실물 사진이 아닙니다. 직접 촬영한 사진이 준비되면 교체할 수 있습니다.',
+  footerNote: 'SONY BRC-AM7 · 범용 픽토그램 시안 · 실물 사진 준비 중'
+});
 const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()]);
 assert.equal(catalog.length, 27);
 await mkdir(join(site, 'detail/data'), { recursive: true });

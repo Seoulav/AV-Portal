@@ -70,6 +70,13 @@ try {
 }
 
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
+if (data.presentation.visualVariant === 'brc-pictogram') {
+  document.body.classList.add('brc-pictogram');
+  document.querySelector('meta[name="color-scheme"]').content = 'light';
+  $('#gallery-title').textContent = '제품 시각화';
+  $('#gallery-source-link').firstChild.textContent = '제품 공식 페이지 ';
+  $('.image-dialog > p').firstChild.textContent = '자체 제작 픽토그램 · 실물 사진 아님 · ';
+}
 $('#breadcrumb-brand').textContent = data.manufacturer;
 $('#breadcrumb-model').textContent = data.model;
 $('#header-eyebrow').textContent = data.presentation.headerEyebrow ?? data.manufacturer;

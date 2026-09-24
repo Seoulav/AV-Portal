@@ -6,7 +6,12 @@ const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
 assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'index.html', 'styles.css']);
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'index.html', 'product-detail-model.mjs', 'styles.css']);
+assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
+assert.deepEqual(await readdir(new URL('images/', detail)), ['ptz-pictogram.svg']);
+const pictogram = await readFile(new URL('images/ptz-pictogram.svg', detail), 'utf8');
+assert.equal(pictogram.replaceAll('\r\n', '\n'), (await readFile(new URL('../prototype/brc-am7/ptz-pictogram.svg', import.meta.url), 'utf8')).replaceAll('\r\n', '\n'));
+assert.match(pictogram, /SPDX-License-Identifier: CC0-1\.0/);
+assert.ok(!/<script|<image|(?:href|src)="|url\(https?:/i.test(pictogram), 'Illustration must not embed external content');
 const slugs = ['brc-am7', 'dm7', 'ki-pro-go2', 'pt-mz17k', 'rally-bar'];
 assert.deepEqual((await readdir(new URL('data/', detail))).sort(), slugs.map(slug => `${slug}.json`).sort());
 
@@ -40,7 +45,7 @@ for (const item of catalog) {
   identities.add(identity);
 }
 const expectedDetails = {
-  'brc-am7': ['4DAF69EC06DB6B7B9B0B5FCBFC85DDDCD9C443C4555A4DC3073EBD897C14B1A9', 8, 27, 14],
+  'brc-am7': ['A86C6AAF778A8CCE95221D03B47F03D10AF4721751C22341563D0D0DCD5F3820', 8, 27, 14],
   dm7: ['422986C310C69E574E7A33D296641B698C01C14180644CE49686277E829B2C3B', 8, 16, 15],
   'ki-pro-go2': ['66F40798DAE58F12E4923D7601B69E6779A5CBF92612B9BAC41D9978946175A3', 8, 16, 11],
   'pt-mz17k': ['BF2F9CD82D33006E301377E56396077AA7F6E9FDB95CE0BF4BCEAD24E0183D55', 7, 13, 4],
@@ -69,7 +74,7 @@ const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outpu
 for (const filename of files.filter(name => name !== 'detail')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
-for (const filename of (await readdir(detail)).filter(name => name !== 'data')) {
+for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, detail), 'utf8')), `detail/${filename} private marker`);
 }
 for (const slug of slugs) {
@@ -79,7 +84,17 @@ for (const slug of slugs) {
   assert.ok(!privateMarkers.test(content), `${slug} private marker`);
   const product = JSON.parse(content);
   verifyOfficialUrls(product, slug);
-  assert.deepEqual(product.images, [], 'No image binaries or hotlinks');
+  if (slug === 'brc-am7') {
+    assert.equal(product.images.length, 1);
+    assert.equal(product.images[0].role, 'Illustration');
+    assert.equal(product.images[0].file, 'ptz-pictogram.svg');
+    assert.equal(product.images[0].sourceUrl, undefined);
+    assert.equal(product.images[0].publicationStatus, 'CC0 1.0');
+    assert.equal(product.presentation.visualVariant, 'brc-pictogram');
+  } else {
+    assert.deepEqual(product.images, [], `${slug}: manufacturer photos remain unpublished`);
+    assert.notEqual(product.presentation.visualVariant, 'brc-pictogram');
+  }
   assert.equal(product.features.length, featureCount);
   assert.equal(product.specifications.length, specCount);
   assert.equal(product.io.length, ioCount);
@@ -87,4 +102,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log('Public Pages artifact: 27 equipment items, 5 public-safe details, fixed snapshots, no image/PDF binaries.');
+console.log('Public Pages artifact: 27 equipment items, 5 public-safe details, one CC0 SVG, no manufacturer image/PDF binaries.');

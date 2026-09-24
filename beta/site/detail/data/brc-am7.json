@@ -15,7 +15,17 @@
   "verificationSummary": "한국 공식 제품 페이지와 사용 안내·사양을 확인했습니다. 줌 용어, 일부 기능 조건과 자료 게시 권한은 검토 중입니다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "BRC-AM7은 스튜디오, 공연장, 강의·기업 공간에서 원격 촬영을 수행하는 4K PTZ 카메라다. 1.0형 Exmor RS CMOS 센서와 광학 20배 줌을 사용하며 최대 4K 59.94/50p 출력을 지원한다.\n\nSDI·HDMI 영상 출력, 유선 IP 제어, 네트워크 스트리밍, RS-422 VISCA 제어를 한 본체에 제공한다. 12V DC와 PoE++ 전원을 지원하므로 고정 설치 환경에서 전원·제어·영상 경로를 함께 설계할 수 있다.\n\n자동 프레이밍과 일부 스트리밍 기능은 설정 또는 펌웨어 조건을 확인해야 한다. 확장 줌은 Sony 공식 자료 사이 용어가 충돌하므로 광학 20배만 확정 표시한다.",
-  "images": [],
+  "images": [
+    {
+      "role": "Illustration",
+      "file": "ptz-pictogram.svg",
+      "alt": "실제 제품 사진이 아닌 자체 제작 범용 PTZ 카메라 픽토그램",
+      "note": "제품 사진 준비 중 · 실제 외형과 다를 수 있음",
+      "provider": "AV Portal 자체 제작",
+      "model": "범용 PTZ 카메라",
+      "publicationStatus": "CC0 1.0"
+    }
+  ],
   "imageStatuses": [
     {
       "role": "Main",
@@ -621,11 +631,13 @@
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "이미지 권한 검토 중",
-    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "galleryRightsBadge": "자체 제작 · CC0 픽토그램",
+    "galleryRights": "현재 그림은 BRC-AM7 실물 사진이 아닙니다. 직접 촬영한 사진이 준비되면 교체할 수 있습니다.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
     "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
-    "footerNote": "SONY BRC-AM7 · 공식 출처 기반"
+    "footerNote": "SONY BRC-AM7 · 범용 픽토그램 시안 · 실물 사진 준비 중",
+    "visualVariant": "brc-pictogram",
+    "galleryFootNote": "실물 사진이 아닌 범용 그림"
   }
 }
