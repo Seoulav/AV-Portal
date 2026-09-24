@@ -259,9 +259,9 @@ for (const [group, specifications] of grouped) {
 $('#io-count').textContent = String(data.io.length).padStart(2, '0');
 const groupedIo = data.ioGroups.map(({ name, entries }) => [name, entries]);
 for (const [index, [group, items]] of [...groupedIo].entries()) {
-  const section = node('details', 'io-group');
-  const heading = node('summary', 'io-group-head');
-  const title = node('strong', '', group);
+  const section = node('section', 'io-group');
+  const heading = node('div', 'io-group-head');
+  const title = node('h3', '', group);
   title.id = 'io-group-' + index;
   section.setAttribute('aria-labelledby', title.id);
   heading.append(title, node('span', '', items.length + ' I/O'));
@@ -285,7 +285,11 @@ for (const [index, [group, items]] of [...groupedIo].entries()) {
       fact.append(node('span', '', label), node('strong', '', value));
       facts.append(fact);
     }
-    card.append(head, facts, node('p', 'io-condition', '조건 · ' + (item.condition || '별도 조건 미기록')), sourceReference(item.source), badge(item.verification ?? 'REVIEW REQUIRED'));
+    const main = node('div', 'io-row-main');
+    main.append(head, facts, badge(item.verification ?? 'REVIEW REQUIRED'));
+    const supporting = node('div', 'io-row-support');
+    supporting.append(node('p', 'io-condition', '조건 · ' + (item.condition || '별도 조건 미기록')), sourceReference(item.source));
+    card.append(main, supporting);
     grid.append(card);
   }
   section.append(grid);
