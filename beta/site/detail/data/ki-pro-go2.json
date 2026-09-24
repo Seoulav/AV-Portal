@@ -1,0 +1,443 @@
+{
+  "manufacturer": "AJA",
+  "productName": "Ki Pro GO2",
+  "model": "Ki Pro GO2",
+  "series": "Ki Pro",
+  "seriesNote": "",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "멀티채널 레코더/플레이어"
+  ],
+  "english": "Portable four-channel H.265/H.264 HD/SD recorder with USB and SMB network recording.",
+  "korean": "Ki Pro GO2는 최대 4채널의 HD 또는 SD 영상을 H.265/H.264로 기록하는 휴대형 레코더입니다. 3G-SDI와 HDMI 입력, USB 저장장치와 SMB 네트워크 스토리지, SDI·HDMI 모니터 출력을 제공해 라이브 행사와 멀티카메라 제작에 사용할 수 있습니다.",
+  "verificationSummary": "공식 제품 페이지와 Manual v5.0r1을 확인했습니다. 이미지 방향·해상도와 게시 권한은 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Ki Pro GO2는 최대 네 개의 HD 또는 SD 입력을 동시에 H.265 또는 H.264 MP4 파일로 기록하는 휴대형 레코더다. 네 개의 3G-SDI 입력과 네 개의 HDMI 입력 중 채널별 소스를 배정하며, 입력 프레임 동기화 기능으로 서로 동기되지 않은 소스를 함께 사용할 수 있다.\n\n기록 대상은 전면 네 개와 후면 한 개의 USB 3.2 Gen 1 포트, 또는 Gigabit Ethernet을 통한 SMB 네트워크 스토리지다. USB와 네트워크 저장소를 함께 사용한 중복 기록도 지원한다.\n\nSDI·HDMI 모니터 출력에서는 최대 네 채널의 매트릭스 보기와 상태 오버레이를 제공한다. 본체 전면 LCD와 버튼 또는 웹 UI로 제어하며, REST 기반 원격 제어도 제공한다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "role": "Front",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "role": "Rear",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "role": "Perspective",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "Ki Pro GO2 Manual",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://www.aja.com/assets/support/files/9951/en/AJA_Ki_Pro_GO2_Manual_v5.0r1.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "시방서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "Ki Pro GO2 Tech Specs",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "type": "Technical Document",
+      "title": "기술문서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Official Product Page",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "status": "VERIFIED",
+      "url": "https://www.aja.com/products/ki-pro-go2"
+    },
+    {
+      "type": "Supplemental Document",
+      "title": "AJA Ki Pro GO2 Quick Start Guide v1",
+      "language": "언어 미확인",
+      "status": "REVIEW REQUIRED",
+      "url": "https://www.aja.com/support/item-download/9710/Ki%20Pro_GO2_Quick_Start_Guide_v1.pdf"
+    }
+  ],
+  "features": [
+    {
+      "text": "최대 4채널의 HD/SD 영상을 H.265 또는 H.264로 동시에 기록한다.",
+      "source": ""
+    },
+    {
+      "text": "4개의 3G-SDI 입력과 4개의 HDMI 입력을 채널별로 유연하게 배정한다.",
+      "source": ""
+    },
+    {
+      "text": "내장 프레임 동기화와 디인터레이싱으로 비동기·인터레이스 입력을 기록한다.",
+      "source": ""
+    },
+    {
+      "text": "USB 저장장치와 SMB 네트워크 스토리지에 기록하고 중복 기록 대상을 선택할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "SDI·HDMI 모니터 출력에서 멀티채널 매트릭스와 상태 오버레이를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "입력별 임베디드 오디오 또는 XLR 아날로그 오디오를 기록 채널에 배정한다.",
+      "source": ""
+    },
+    {
+      "text": "전면 1280×720 LCD와 전용 전송 버튼으로 단독 운용한다.",
+      "source": ""
+    },
+    {
+      "text": "Gigabit Ethernet 웹 UI와 REST를 통해 설정·제어·파일 다운로드를 수행한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Recording",
+      "name": "동시 기록 채널",
+      "value": "최대 4",
+      "unit": "channel",
+      "condition": "모든 입력은 같은 프레임률·해상도 필요",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Recording",
+      "name": "코덱",
+      "value": "H.265/HEVC, H.264/AVC",
+      "unit": "",
+      "condition": "채널별 설정",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Recording",
+      "name": "최대 비트레이트",
+      "value": "H.265 15 / H.264 25",
+      "unit": "Mbps",
+      "condition": "VBR 5단계",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Recording",
+      "name": "파일 컨테이너",
+      "value": "MP4",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "최대 기록 형식",
+      "value": "1080p 60",
+      "unit": "fps",
+      "condition": "HD/SD 지원, 입력 형식별 조건",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "입력 변환",
+      "value": "Deinterlace, PsF→Progressive",
+      "unit": "",
+      "condition": "기록 시",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "채널당 오디오",
+      "value": "2",
+      "unit": "channel",
+      "condition": "Embedded 또는 analog assignment",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 코덱",
+      "value": "MPEG-4 AAC-LC",
+      "unit": "",
+      "condition": "최대 320kbps",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Storage",
+      "name": "USB 미디어 포트",
+      "value": "5",
+      "unit": "port",
+      "condition": "USB 3.2 Gen 1, 포트당 5V/1A",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Storage",
+      "name": "파일 시스템",
+      "value": "FAT16, FAT32, exFAT",
+      "unit": "",
+      "condition": "본체 포맷은 exFAT",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 스토리지",
+      "value": "SMB",
+      "unit": "",
+      "condition": "동시에 1개 장치; 약 150Mbps 가용 대역 요구",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Interface",
+      "name": "내장 디스플레이",
+      "value": "1280×720 TFT LCD",
+      "unit": "pixel",
+      "condition": "모니터·상태·메뉴 표시",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "DC 입력",
+      "value": "12–18",
+      "unit": "V",
+      "condition": "이중 중복 4핀 XLR; 55W typical, 90W max",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "219.46×268.90×84.08",
+      "unit": "mm",
+      "condition": "W×D×H",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "2.3",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "Video",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "3G-SDI",
+      "availability": "Fixed",
+      "condition": "채널별 소스 배정",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "Video",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "채널별 소스 배정",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "Video pass-through",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "3G-SDI",
+      "availability": "Fixed",
+      "condition": "입력 패스스루",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "Monitor video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "3G-SDI",
+      "availability": "Fixed",
+      "condition": "단일/매트릭스·Super Out",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "Monitor video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "단일/매트릭스·Super Out",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "Analog audio",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "Balanced mic/line/+48V",
+      "availability": "Fixed",
+      "condition": "기록 채널에 배정",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Storage",
+      "connector": "USB Type-A",
+      "signal": "Recording media",
+      "direction": "I/O",
+      "quantity": "5",
+      "protocol": "USB 3.2 Gen 1",
+      "availability": "Fixed",
+      "condition": "전면 4, 후면 1",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Network / storage / control",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "10/100/1000 Ethernet, SMB, HTTP, REST",
+      "availability": "Fixed",
+      "condition": "SMB 대역 조건",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "BNC",
+      "signal": "Reference",
+      "direction": "IN/LOOP",
+      "quantity": "2",
+      "protocol": "Tri-level / analog composite",
+      "availability": "Fixed",
+      "condition": "루프형, 비종단",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "SDI BNC / XLR R",
+      "signal": "Timecode",
+      "direction": "IN",
+      "quantity": "1 path",
+      "protocol": "RP-188/SMPTE 12M 또는 LTC",
+      "availability": "Fixed",
+      "condition": "LTC 사용 시 아날로그 오디오 채널 사용",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "XLR 4-pin",
+      "signal": "DC power",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "12–18V DC",
+      "availability": "Fixed redundant inputs",
+      "condition": "두 번째 어댑터는 옵션",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.aja.com/products/ki-pro-go2",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://www.aja.com/assets/support/files/9951/en/AJA_Ki_Pro_GO2_Manual_v5.0r1.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제품 이미지",
+      "detail": "Main·Front·Rear·Perspective 역할, 해상도와 재사용 권한이 확인되지 않았습니다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "Quick Start Guide",
+      "detail": "추가 문서의 적용 범위와 본문 확인이 필요합니다."
+    },
+    {
+      "code": "M1",
+      "status": "MISSING",
+      "title": "한국어 공식 문서",
+      "detail": "현재 확보된 자료에서 한국어 공식 문서는 확인되지 않았습니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "이미지 권한 검토 중",
+    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "AJA Ki Pro GO2 · 공식 출처 기반"
+  }
+}

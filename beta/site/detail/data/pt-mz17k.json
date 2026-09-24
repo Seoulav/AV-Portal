@@ -1,0 +1,340 @@
+{
+  "manufacturer": "Panasonic",
+  "productName": "PT-MZ17K",
+  "model": "PT-MZ17K",
+  "series": "PT-MZ20K Series",
+  "seriesNote": "",
+  "itemType": "PRODUCT",
+  "categories": [
+    "프로젝터",
+    "대형 공간용 레이저 프로젝터"
+  ],
+  "english": "16,500-lumen WUXGA 3LCD laser projector for large-venue installations.",
+  "korean": "PT-MZ17K는 16,500lm 광출력과 WUXGA 해상도를 제공하는 3LCD 레이저 프로젝터입니다. 교환식 렌즈를 별도로 선택하는 설치형 제품이며, 대형 공간에서 네트워크 감시·제어와 함께 운용할 수 있습니다.",
+  "verificationSummary": "공식 시리즈 자료에서 PT-MZ17K 모델과 일부 사양을 확인했습니다. 지역·렌즈 접미어, 물리 I/O와 이미지 상태는 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "PT-MZ17K는 대형 강당, 전시장, 이벤트 공간과 같은 고광량 설치 환경을 위한 WUXGA 3LCD 레이저 프로젝터다. 제조사 공식 비교표에는 16,500lm 광출력, 1920×1200 해상도와 16:10 화면비가 모델별 값으로 기록돼 있다.\n\n투사 렌즈는 본체와 별도로 판매되므로 Product Detail에서 특정 렌즈, 투사비 또는 설치 거리를 기본 사양으로 합치지 않는다. 색상과 지역에 따라 붙는 접미어도 모델 본체와 구분해 보존한다.\n\n공식 시리즈 매뉴얼은 PT-MZ17K를 적용 모델로 명시하며 LAN 기반 웹·명령·PJLink 제어와 Panasonic 감시 도구 연동을 설명한다. 현재 확인된 공식 근거에는 물리 영상 입력 단자표가 충분하지 않아 I/O는 부분 상태로 둔다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    },
+    {
+      "role": "Perspective",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "PT-MZ20K Series Operating Instructions — Functional Manual",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://ap.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_en.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "시방서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "PT-MZ17K Specification",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/"
+    },
+    {
+      "type": "Technical Document",
+      "title": "Panasonic Projector Feature Comparison Chart",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://docs.connect.panasonic.com/projector//feature_guide/docs/Feature_comparison_chart.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "status": "REVIEW REQUIRED",
+      "url": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+    }
+  ],
+  "features": [
+    {
+      "text": "PT-MZ17K 모델 기준 16,500lm 광출력을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "1920×1200 WUXGA 해상도와 16:10 화면비를 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "3LCD 투사 방식과 SOLID SHINE 레이저 광원을 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "교환식 투사 렌즈를 별도로 선택하는 설치형 구성을 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "LAN을 통한 웹 제어, 명령 제어와 PJLink 제어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Crestron Connected V2, Crestron XiO Cloud, AMX Device Discovery 연동이 공식 기술자료에 기록돼 있다.",
+      "source": ""
+    },
+    {
+      "text": "Panasonic Multi Monitoring and Control Software에서 상태 감시·데이터 복제·원격 미리보기 기능 대상 모델로 분류된다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Projection",
+      "name": "투사 방식",
+      "value": "3LCD",
+      "unit": "",
+      "condition": "모델 비교표",
+      "source": "F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Image",
+      "name": "광출력",
+      "value": "16,500",
+      "unit": "lm",
+      "condition": "PT-MZ17K 열 기준",
+      "source": "F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Image",
+      "name": "해상도",
+      "value": "1920×1200, WUXGA",
+      "unit": "pixel",
+      "condition": "",
+      "source": "F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Image",
+      "name": "화면비",
+      "value": "16:10",
+      "unit": "",
+      "condition": "",
+      "source": "F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Light Source",
+      "name": "광원",
+      "value": "SOLID SHINE Laser",
+      "unit": "",
+      "condition": "비교표 표기",
+      "source": "F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "투사 렌즈",
+      "value": "별매",
+      "unit": "",
+      "condition": "렌즈 모델·투사비를 본체 값으로 합치지 않음",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "LAN 제어",
+      "value": "Web, Command, PJLink Class 2",
+      "unit": "",
+      "condition": "네트워크 설정 필요",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "통합 프로토콜",
+      "value": "Art-Net, Crestron Connected V2, Crestron XiO Cloud, AMX Device Discovery",
+      "unit": "",
+      "condition": "펌웨어 조건이 있는 항목은 구현 시 표시",
+      "source": "",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Software",
+      "name": "감시·관리",
+      "value": "Multi Monitoring and Control Software",
+      "unit": "",
+      "condition": "지원 기능별 제약 있음",
+      "source": "",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Firmware",
+      "name": "Manual applicability",
+      "value": "Firmware 1.23 이상",
+      "unit": "",
+      "condition": "해당 Functional Manual 기준",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "색상/지역/렌즈 접미어",
+      "value": "D/E/EJ/J/X, L, B/W 등",
+      "unit": "",
+      "condition": "주문 구성별; 자동 병합 금지",
+      "source": "",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "name": "전원·소비전력",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "모델별 값 미확인",
+      "source": "",
+      "verification": "MISSING"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "모델별 값 미확인",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network / Control",
+      "connector": "LAN connector",
+      "signal": "Network control",
+      "direction": "I/O",
+      "quantity": "REVIEW REQUIRED",
+      "protocol": "Web control, command control, PJLink Class 2",
+      "availability": "Fixed 여부 REVIEW REQUIRED",
+      "condition": "물리 커넥터 종류·수량은 모델별 수량 미확인",
+      "source": "M",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Video",
+      "connector": "MISSING",
+      "signal": "Video",
+      "direction": "IN",
+      "quantity": "—",
+      "protocol": "—",
+      "availability": "—",
+      "condition": "물리 입력 단자표 미정리",
+      "source": "",
+      "verification": "MISSING"
+    },
+    {
+      "group": "Control",
+      "connector": "MISSING",
+      "signal": "Serial / remote control",
+      "direction": "I/O",
+      "quantity": "—",
+      "protocol": "—",
+      "availability": "—",
+      "condition": "물리 제어 단자표 미정리",
+      "source": "",
+      "verification": "MISSING"
+    },
+    {
+      "group": "Power",
+      "connector": "MISSING",
+      "signal": "AC power",
+      "direction": "IN",
+      "quantity": "—",
+      "protocol": "—",
+      "availability": "—",
+      "condition": "모델별 값 미정리",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl",
+      "scope": "모델·지역 표기 검토 중"
+    },
+    {
+      "code": "R",
+      "name": "제조사 자료 목록",
+      "url": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://ap.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_en.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "F",
+      "name": "제조사 기술 자료",
+      "url": "https://docs.connect.panasonic.com/projector//feature_guide/docs/Feature_comparison_chart.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "모델·지역 표기",
+      "detail": "공식 제품 페이지의 L·지역 접미어가 기본 모델과 정확히 어떻게 대응하는지 확인해야 합니다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "물리 I/O·전원",
+      "detail": "영상·제어 커넥터 수량과 전원·크기·무게 값은 모델별 근거 확인이 필요합니다."
+    },
+    {
+      "code": "M1",
+      "status": "MISSING",
+      "title": "Rear 이미지",
+      "detail": "후면 제품 이미지는 확인되지 않았습니다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "확인된 전면 이미지를 포함해 재게시 권한은 확인되지 않았습니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "이미지 권한 검토 중",
+    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Panasonic PT-MZ17K · 공식 출처 기반"
+  }
+}

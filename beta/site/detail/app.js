@@ -51,7 +51,7 @@ try {
   const productKey = new URLSearchParams(location.search).get('product');
   if (productKey && !/^[a-z0-9-]+$/.test(productKey)) throw new Error('제품 주소 형식이 올바르지 않습니다.');
   const response = await fetch(productKey ? `./data/${productKey}.json` : './content.json');
-  if (!response.ok) throw new Error('시안 콘텐츠를 읽을 수 없습니다.');
+  if (!response.ok) throw new Error('제품 상세 데이터를 읽을 수 없습니다.');
   data = prepareProductDetail(await response.json());
 } catch (error) {
   const notice = node('div', 'load-failure', error.message);
@@ -60,10 +60,10 @@ try {
   throw error;
 }
 
-document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
+document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
 $('#breadcrumb-brand').textContent = data.manufacturer;
 $('#breadcrumb-model').textContent = data.model;
-$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 제품의 로컬 검토본입니다. 공개 사이트와 별도로 검토합니다.`;
+$('#context-note-text').textContent = `이 화면은 ${data.manufacturer} ${data.model} 제품의 공개 Beta 상세페이지입니다. 검토 중인 항목은 상태를 확인해 주세요.`;
 $('#header-eyebrow').textContent = data.presentation.headerEyebrow ?? data.manufacturer;
 $('#model-status').textContent = data.presentation.modelStatus ?? '';
 $('#model-status').hidden = !data.presentation.modelStatus;
@@ -150,7 +150,7 @@ for (const [index, image] of data.images.entries()) {
     picture.remove();
     button.disabled = true;
     button.setAttribute('aria-label', image.role + ' 이미지 없음');
-    button.prepend(node('span', 'thumb-fallback', '로컬 이미지 없음'));
+    button.prepend(node('span', 'thumb-fallback', '게시 이미지 없음'));
   });
   button.append(picture, node('span', '', image.role));
   button.addEventListener('click', () => selectImage(index));
@@ -169,7 +169,7 @@ else {
 for (const item of data.imageStatuses ?? []) {
   const card = node('div', 'image-status-card');
   card.append(node('strong', '', item.role), badge(item.status));
-  if (item.status === 'FOUND') card.append(node('small', '', '공식 이미지 확인 · 로컬 표시 파일 없음'));
+  if (item.status === 'FOUND') card.append(node('small', '', '공식 이미지 확인 · 게시 이미지 없음'));
   else card.append(node('small', '', item.status === 'MISSING' ? '이미지 미확인' : '역할 또는 사용 조건 검토 중'));
   if (item.sourceUrl) card.append(officialLink(item.sourceUrl, '공식 출처 ↗', 'image-source'));
   $('#image-statuses').append(card);

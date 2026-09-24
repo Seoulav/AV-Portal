@@ -1,0 +1,4 @@
+.detail-link { background: #e9f0ff; color: #174c9c; border-color: #b9cdf5; font-weight: 700; }
+.detail-link:hover, .detail-link:focus-visible { background: #dce8ff; }
+.card h4 a { color: inherit; text-decoration: none; }
+.card h4 a:hover, .card h4 a:focus-visible { color: #174c9c; text-decoration: underline; }

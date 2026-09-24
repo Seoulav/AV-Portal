@@ -75,8 +75,9 @@ export async function createGroup1Server({ packagesDir, imagesDir }) {
       else if (path === '/detail/' || path === '/detail/index.html') {
         body = (await readFile(join(root, 'prototype/brc-am7/index.html'), 'utf8'))
           .replaceAll('https://seoulav.github.io/AV-Portal/', '/');
-      } else if (path === '/detail/content.json') {
-        const product = products.get(url.searchParams.get('product'));
+      } else if (/^\/detail\/data\/[a-z0-9-]+\.json$/.test(path)) {
+        const slug = path.slice('/detail/data/'.length, -'.json'.length);
+        const product = products.get(slug);
         if (!product) { response.writeHead(404, headers).end(); return; }
         body = JSON.stringify(product); type = 'application/json; charset=utf-8';
       } else if (files[path]) {
