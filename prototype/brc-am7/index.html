@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light">
   <title>AV Portal Product Detail 시안</title>
-  <link rel="stylesheet" href="./styles.css?v=w020-pictogram-1">
-  <script type="module" src="./app.js?v=w020-pictogram-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=w025-mobile-1">
+  <script type="module" src="./app.js?v=w025-mobile-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -33,6 +33,7 @@
         <p id="product-full-name" class="product-full-name"></p>
         <p id="english-description" class="english-description"></p>
         <p id="korean-description" class="korean-description"></p>
+        <button id="header-description-toggle" class="header-description-toggle" type="button" aria-controls="korean-description" aria-expanded="false" hidden>설명 더 보기</button>
         <div id="categories" class="pills" aria-label="제품 카테고리"></div>
         <details class="product-facts"><summary>제품 정보 · 검증 상태 <span id="model-status" class="state state-verified"></span></summary>
           <span id="header-eyebrow" class="eyebrow" hidden></span>
@@ -61,60 +62,60 @@
       <section class="quick-documents panel" aria-labelledby="quick-documents-title">
         <div class="section-eyebrow"><span>02 / QUICK ACCESS</span><span>MANUFACTURER OFFICIAL</span></div>
         <div class="quick-heading"><div><h2 id="quick-documents-title">문서 바로가기</h2><p>제조사 공식 자료 4종</p></div><span id="quick-count" class="count-bubble"></span></div>
-        <div id="official-product-link" class="official-product-action"></div>
         <div id="quick-docs" class="quick-grid"></div>
+        <div id="official-product-link" class="official-product-action"></div>
         <div id="image-status-inline" class="image-status-inline" hidden><p id="image-status-message"></p></div>
       </section>
     </div>
 
     <div class="body-sections">
-      <section id="overview" class="detail-section" aria-labelledby="overview-title">
-        <h2 id="overview-title" class="visually-hidden">제품 소개</h2>
-        <p id="overview-summary" class="overview-summary"></p>
-        <details id="overview-more" class="overview-more"><summary>제품 소개 더 보기</summary><h3 id="overview-heading"></h3><p id="overview-copy"></p><div id="overview-points" class="overview-points"></div></details>
+      <nav id="detail-tabs" class="detail-tabs" aria-label="제품 상세 정보">
+        <a href="#overview">개요</a><a href="#specifications">주요 사양</a><a href="#io">연결 단자</a><a href="#documents">자료</a>
+      </nav>
+      <section id="overview" class="detail-section overview-grid" aria-labelledby="overview-title">
+        <div class="overview-card panel"><h2 id="overview-title">제품 개요</h2><p id="overview-summary" class="overview-summary"></p>
+          <details id="overview-more" class="overview-more"><summary>전체 설명 보기</summary><h3 id="overview-heading"></h3><p id="overview-copy"></p><div id="overview-points" class="overview-points"></div></details>
+        </div>
+        <div id="features" class="overview-card panel" aria-labelledby="features-title"><h2 id="features-title">주요 특징</h2><ul id="feature-list" class="feature-grid"></ul><details id="feature-more" class="feature-more"><summary>전체 특징 보기 (<span id="feature-count"></span>)</summary><ul id="feature-more-list" class="feature-grid"></ul></details></div>
       </section>
-
-      <div id="detail-tabs" class="detail-tabs" role="tablist" aria-label="제품 상세 정보">
-        <button id="tab-features" type="button" role="tab" aria-selected="true" aria-controls="feature-panel" tabindex="0">특징</button>
-        <button id="tab-specifications" type="button" role="tab" aria-selected="false" aria-controls="spec-panel" tabindex="-1">스펙</button>
-      </div>
-      <div id="feature-panel" class="tab-panel" role="tabpanel" aria-labelledby="tab-features" tabindex="0">
-      <section id="features" class="detail-section" aria-labelledby="features-title">
-        <div class="section-title"><span class="section-index">02</span><div><p class="eyebrow">CONFIRMED CAPABILITIES</p><h2 id="features-title">특징 <span id="feature-count"></span></h2></div></div>
-        <div id="feature-list" class="feature-grid"></div>
-        <details id="feature-more" class="feature-more"><summary></summary><div id="feature-more-list" class="feature-grid"></div></details>
-      </section>
-      </div>
-
-      <div id="spec-panel" class="tab-panel" role="tabpanel" aria-labelledby="tab-specifications" tabindex="0" hidden>
 
       <section id="specifications" class="detail-section" aria-labelledby="specifications-title">
-        <div class="section-title"><span class="section-index">03</span><div><p class="eyebrow">STRUCTURED TECHNICAL DATA</p><h2 id="specifications-title">스펙 <span id="spec-count"></span></h2></div></div>
+        <div class="section-title"><div><h2 id="specifications-title">주요 사양</h2></div></div>
         <p id="spec-intro" class="section-lead"></p>
-        <div id="spec-groups" class="spec-groups"></div>
+        <div id="key-specs" class="key-specs panel"></div>
+        <details id="all-specs" class="expanded-data"><summary>전체 사양 보기 (<span id="spec-count"></span>)</summary><div id="spec-groups" class="spec-groups"></div></details>
       </section>
 
       <section id="io" class="detail-section" aria-labelledby="io-title">
-        <div class="section-title"><span class="section-index">04</span><div><p class="eyebrow">PHYSICAL CONNECTIVITY</p><h2 id="io-title">연결 단자 <span id="io-count"></span></h2></div></div>
-        <div class="io-intro"><p id="io-intro"></p><button id="show-rear" type="button" class="secondary-button">Rear 이미지 보기 <span aria-hidden="true">↗</span></button></div>
-        <div id="io-list" class="io-groups"></div>
+        <div class="section-title"><div><h2 id="io-title">연결 단자</h2></div></div>
+        <div class="io-intro"><p id="io-intro"></p><span class="io-total">총 <strong id="io-count"></strong>개</span></div>
+        <div id="io-summary" class="io-summary" role="list" aria-label="연결 단자 그룹 요약"></div>
+        <div id="connector-layout" class="connector-layout">
+          <figure id="rear-connector-panel" class="rear-connector-panel panel" hidden>
+            <div class="rear-image-frame"><img id="rear-connector-image" alt=""></div>
+            <figcaption><strong>후면 단자 배치</strong><span>위치 번호는 정확한 근거가 없어 표시하지 않습니다.</span><a id="rear-connector-source" target="_blank" rel="noopener noreferrer">공식 이미지 출처 ↗</a></figcaption>
+          </figure>
+          <p id="rear-unavailable" class="rear-unavailable" hidden>후면 이미지 없음 · 다른 모델 사진으로 대체하지 않았습니다.</p>
+          <section class="key-connectors panel" aria-labelledby="key-connectors-title">
+            <div class="key-connectors-heading"><div><span>QUICK VIEW</span><h3 id="key-connectors-title">주요 연결</h3></div><strong><span id="key-connector-count"></span>개</strong></div>
+            <div id="key-connector-list" class="key-connector-list"></div>
+          </section>
+        </div>
+        <details id="all-connectors" class="all-connectors expanded-data"><summary>전체 연결 단자 보기 (<span id="all-connector-count"></span>)</summary><div id="io-list" class="connector-groups"></div></details>
       </section>
 
+      <section id="documents" class="detail-section resources-section" aria-labelledby="documents-title"><div class="section-title"><h2 id="documents-title">자료</h2></div>
+      <details id="supplemental-docs" class="supplemental-docs"><summary>추가 문서 보기</summary><div id="all-documents" class="documents-list"></div><div id="missing-documents-panel" class="missing-docs panel"><div><span class="state state-missing">MISSING</span><h3>아직 확인되지 않은 독립 문서</h3></div><div id="missing-documents" class="missing-list"></div></div></details>
       <details id="sources" class="detail-section source-disclosure" aria-labelledby="sources-title">
-        <summary class="section-title"><span class="section-index">05</span><div><p class="eyebrow">EVIDENCE & STATUS</p><h2 id="sources-title">출처·검증</h2></div></summary>
+        <summary class="section-title"><h3 id="sources-title">검증 정보 보기</h3></summary>
+        <div id="verification-documents" class="verification-documents"></div>
+        <details class="feature-evidence"><summary>특징별 근거 보기</summary><div id="feature-evidence-list"></div></details>
         <details class="verification-guide"><summary>검증 상태 설명 보기</summary><div class="verification-legend"><div><span class="state state-official">Manufacturer Official</span><p>제조사 웹페이지·도움말·지원 자료</p></div><div><span class="state state-verified">VERIFIED</span><p>표시한 범위의 모델 적용 확인</p></div><div><span class="state state-found">FOUND</span><p>자료를 확인함, 권한은 별도</p></div><div><span class="state state-ready">READY</span><p>화면 연결 가능</p></div><div><span class="state state-partial">PARTIAL</span><p>일부 값만 확인</p></div><div><span class="state state-review">REVIEW REQUIRED</span><p>조건·개정·권한 추가 검토</p></div><div><span class="state state-conflict">CONFLICTED</span><p>공식 자료 간 표기 차이</p></div><div><span class="state state-missing">MISSING</span><p>확인된 독립 자료 없음</p></div></div></details>
         <div class="source-layout"><div class="panel source-panel"><div class="panel-heading"><h3>Manufacturer Official</h3><span id="source-count"></span></div><div id="source-list" class="source-list"></div></div><div class="panel review-panel"><div class="panel-heading"><h3>검토 중인 항목</h3><span>확정 사양과 분리</span></div><div id="issue-list" class="issue-list"></div></div></div>
         <div class="supplemental-note"><strong>Supplemental / Domestic</strong><span id="supplemental-note"></span></div>
       </details>
-      <details id="supplemental-docs" class="supplemental-docs"><summary>Additional / Supplemental Documents</summary>
-        <section id="documents" class="detail-section" aria-labelledby="documents-title">
-          <div class="section-title"><span class="section-index">06</span><div><p class="eyebrow">OFFICIAL RESOURCES</p><h2 id="documents-title">보조 자료</h2></div></div>
-          <p class="section-lead">상단 핵심 문서 외에 확보한 공식 자료를 보존합니다. 자료의 존재와 재게시 허가는 다른 상태입니다.</p>
-          <div id="all-documents" class="documents-list"></div>
-          <div id="missing-documents-panel" class="missing-docs panel"><div><span class="state state-missing">MISSING</span><h3>아직 확인되지 않은 독립 문서</h3></div><div id="missing-documents" class="missing-list"></div><p>없는 자료에는 열기·다운로드 버튼을 만들지 않았습니다.</p></div>
-        </section>
-      </details>
-      </div>
+      </section>
+      <div class="manufacturer-footer panel"><span>MANUFACTURER</span><strong id="footer-manufacturer"></strong><div id="footer-official-link"></div></div>
     </div>
   </main>
 

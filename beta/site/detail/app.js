@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w012-techdata-1';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-mobile-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -70,6 +70,8 @@ try {
 }
 
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
+document.body.classList.add('summary-detail');
+const mobileDetail = matchMedia('(max-width: 650px)');
 if (data.presentation.visualVariant === 'brc-pictogram') {
   document.body.classList.add('brc-pictogram');
   document.querySelector('meta[name="color-scheme"]').content = 'light';
@@ -101,10 +103,11 @@ $('#gallery-foot-note').textContent = data.presentation.galleryFootNote ?? '';
 $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
 $('#overview-heading').hidden = !data.presentation.overviewHeading;
-$('#spec-intro').textContent = data.presentation.specIntro ?? '';
-$('#io-intro').textContent = data.presentation.ioIntro ?? '';
+$('#spec-intro').textContent = '핵심 값만 먼저 표시합니다. 적용 조건은 전체 사양에서 확인하세요.';
+$('#io-intro').textContent = '주요 연결만 먼저 표시합니다. 전체 보기에서 모든 단자와 상세 근거를 확인하세요.';
 $('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
 $('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
+$('#footer-manufacturer').textContent = data.manufacturer;
 $('#dialog-product').textContent = `${data.manufacturer} ${data.model}`;
 for (const highlight of data.presentation.overviewHighlights ?? []) {
   const item = node('div');
@@ -116,8 +119,29 @@ $('#english-description').textContent = data.english;
 $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
+const headerDescription = $('#korean-description');
+const headerDescriptionToggle = $('#header-description-toggle');
+function updateHeaderDescription() {
+  headerDescription.classList.remove('is-expanded');
+  headerDescriptionToggle.setAttribute('aria-expanded', 'false');
+  headerDescriptionToggle.textContent = '설명 더 보기';
+  if (!mobileDetail.matches) {
+    headerDescriptionToggle.hidden = true;
+    return;
+  }
+  headerDescriptionToggle.hidden = false;
+  headerDescriptionToggle.hidden = headerDescription.scrollHeight <= headerDescription.clientHeight + 1;
+}
+headerDescriptionToggle.addEventListener('click', () => {
+  const expanded = headerDescriptionToggle.getAttribute('aria-expanded') !== 'true';
+  headerDescription.classList.toggle('is-expanded', expanded);
+  headerDescriptionToggle.setAttribute('aria-expanded', String(expanded));
+  headerDescriptionToggle.textContent = expanded ? '설명 접기' : '설명 더 보기';
+});
+mobileDetail.addEventListener('change', updateHeaderDescription);
+requestAnimationFrame(updateHeaderDescription);
 $('#verification-summary').textContent = data.verificationSummary;
-$('#overview-summary').textContent = data.korean ?? data.overview;
+$('#overview-summary').textContent = (data.overview ?? data.korean ?? '').split(/\n\s*\n/)[0];
 $('#overview-copy').textContent = data.overview ?? data.korean;
 $('#overview-more').hidden = !$('#overview-copy').textContent;
 for (const category of data.categories) $('#categories').append(node('span', 'pill', category));
@@ -176,6 +200,7 @@ for (const [index, image] of data.images.entries()) {
   button.addEventListener('click', () => selectImage(index));
   $('#thumbnails').append(button);
 }
+if (data.images.length === 1) $('#thumbnails').hidden = true;
 if (data.images.length) selectImage(0);
 else {
   featured.hidden = true;
@@ -195,6 +220,10 @@ for (const item of data.imageStatuses ?? []) {
   $('#image-statuses').append(card);
 }
 $('#image-status-details').hidden = !$('#image-statuses').children.length;
+if (data.images.length) {
+  $('#image-status-details').append($('.image-trace'), $('#gallery-rights'));
+  $('#gallery-source-link').hidden = true;
+}
 const foundImages = (data.imageStatuses ?? []).filter(item => item.status === 'FOUND').length;
 $('#image-status-summary').textContent = data.images.length ? '이미지별 확인 상태 보기' : `공식 이미지 ${foundImages}건 확인 · 게시 이미지 없음`;
 zoomButton.addEventListener('click', () => {
@@ -209,20 +238,12 @@ zoomButton.addEventListener('click', () => {
 $('#dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => zoomOpener?.focus());
-const rearButton = $('#show-rear');
-rearButton.hidden = data.rearIndex < 0;
-rearButton.addEventListener('click', () => {
-  if (data.rearIndex < 0) return;
-  selectImage(data.rearIndex);
-  $('#gallery-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  $('#thumbnails').children[data.rearIndex].focus();
-});
-
 if (data.officialPage?.url) {
   $('#official-product-link').append(officialLink(data.officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link'));
   if (data.officialPage.status !== 'VERIFIED') $('#official-product-link').append(badge(data.officialPage.status));
   $('#gallery-source-link').href = data.officialPage.url;
   $('#dialog-product-link').href = data.officialPage.url;
+  $('#footer-official-link').append(officialLink(data.officialPage.url, '제조사 공식 홈페이지 ↗'));
 } else {
   $('#gallery-source-link').hidden = true;
   $('#dialog-product-link').hidden = true;
@@ -242,24 +263,41 @@ if (!data.images.length) {
 }
 $('#quick-count').textContent = data.quickDocuments.length;
 for (const { label, resource, missingTitle, available } of data.quickDocuments) {
+  const rawStatus = resource?.status ?? 'MISSING';
+  const displayStatus = rawStatus === 'MISSING' ? '자료 없음' : ['REVIEW REQUIRED', 'CONFLICTED', 'PARTIAL'].includes(rawStatus) ? '검토 중' : '자료 있음';
   const card = node('article', 'quick-card' + (available ? '' : ' quick-card-missing'));
+  card.dataset.verification = rawStatus;
   card.append(node('span', 'card-type', label), node('strong', '', resource?.title ?? missingTitle));
   const meta = node('div', 'quick-meta');
-  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), badge(resource?.status ?? 'MISSING'));
+  meta.append(node('span', 'quick-language', resource?.displayLanguage ?? resource?.language ?? '언어 미확인'), node('span', 'quick-status', displayStatus));
   card.append(meta);
   if (available) card.append(officialLink(resource.url, resource.type === 'Technical Document' ? '자료 페이지 열기 ↗' : '열기 ↗', 'quick-open'));
   else card.append(node('span', 'quick-unavailable', resource?.status === 'REVIEW REQUIRED' ? '자료 링크 검토 중' : '열기 링크 없음'));
   $('#quick-docs').append(card);
+  const verificationRow = node('div', 'verification-document-row');
+  verificationRow.append(node('strong', '', label), node('span', '', resource?.title ?? missingTitle), badge(rawStatus));
+  $('#verification-documents').append(verificationRow);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
-for (const [index, feature] of data.features.entries()) {
-  const card = node('article', 'feature-card panel');
-  const body = node('div');
-  body.append(node('p', '', feature.text), sourceReference(feature.source));
-  card.append(node('span', 'feature-number', String(index + 1).padStart(2, '0')), body);
-  $('#feature-list').append(card);
+const featureCard = feature => {
+  const card = node('li', 'feature-card');
+  card.append(node('span', 'feature-check', '✓'), node('span', '', feature.text));
+  return card;
+};
+function renderFeatureSummary() {
+  const limit = mobileDetail.matches ? 4 : 6;
+  $('#feature-list').replaceChildren(...data.features.slice(0, limit).map(featureCard));
+  $('#feature-more-list').replaceChildren(...data.features.slice(limit).map(featureCard));
+  $('#feature-more').hidden = data.features.length <= limit;
+  if ($('#feature-more').hidden) $('#feature-more').open = false;
 }
-$('#feature-more').hidden = true;
+for (const feature of data.features) {
+  const evidence = node('div', 'feature-evidence-row');
+  evidence.append(node('span', '', feature.text), sourceReference(feature.source));
+  $('#feature-evidence-list').append(evidence);
+}
+renderFeatureSummary();
+mobileDetail.addEventListener('change', renderFeatureSummary);
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
@@ -284,81 +322,131 @@ for (const [group, specifications] of grouped) {
   }
   $('#spec-groups').append(panel);
 }
+const keySpec = specification => {
+  const item = node('div', 'key-spec');
+  item.append(node('span', 'key-spec-label', specification.name));
+  const value = node('strong', '', specification.value);
+  if (specification.unit) value.append(node('small', '', ' ' + specification.unit));
+  if (specification.condition) {
+    const condition = node('small', 'key-spec-condition', '조건 있음');
+    condition.title = specification.condition;
+    value.append(condition);
+  }
+  item.append(value);
+  return item;
+};
+function renderKeySpecifications() {
+  const limit = mobileDetail.matches ? 8 : 10;
+  $('#key-specs').replaceChildren(...data.keySpecifications.slice(0, limit).map(keySpec));
+}
+renderKeySpecifications();
+mobileDetail.addEventListener('change', renderKeySpecifications);
 
-$('#io-count').textContent = String(data.io.length).padStart(2, '0');
-const ioTable = node('table', 'io-table');
-ioTable.setAttribute('aria-label', '연결 단자 목록');
-const ioHead = node('thead', 'io-table-head');
-const ioHeaderRow = node('tr');
-for (const label of ['커넥터', '방향', '신호', '수량', '규격', '고정/옵션', '검증']) {
-  const header = node('th', '', label);
-  header.scope = 'col';
-  ioHeaderRow.append(header);
+$('#io-count').textContent = String(data.io.length);
+$('#all-connector-count').textContent = String(data.io.length);
+const rearItem = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
+const rearPanel = $('#rear-connector-panel');
+const rearUnavailable = $('#rear-unavailable');
+const connectorLayout = $('#connector-layout');
+function hideRearPanel() {
+  rearPanel.hidden = true;
+  rearUnavailable.hidden = false;
+  connectorLayout.classList.add('without-rear');
 }
-ioHead.append(ioHeaderRow);
-ioTable.append(ioHead);
-let ioIndex = 0;
-for (const [groupIndex, { name: group, entries: items }] of data.ioGroups.entries()) {
-  const body = node('tbody', 'io-group');
-  const groupRow = node('tr', 'io-group-row');
-  const groupCell = node('th');
-  groupCell.colSpan = 7;
-  groupCell.scope = 'rowgroup';
-  groupCell.id = 'io-group-' + groupIndex;
-  groupCell.append(node('strong', '', group), node('span', '', `${items.length} I/O`));
-  groupRow.append(groupCell);
-  body.append(groupRow);
-  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => note.group === group)) {
-    const noteRow = node('tr', 'io-note-row');
-    const noteCell = node('td');
-    noteCell.colSpan = 7;
-    noteCell.append(node('span', '', groupNote.text + ' '));
-    if (groupNote.source) noteCell.append(sourceReference(groupNote.source));
-    noteRow.append(noteCell);
-    body.append(noteRow);
-  }
-  for (const item of items) {
-    const row = node('tr', 'io-table-row');
-    const connector = node('td', 'io-cell-connector');
-    const detailId = `io-detail-${ioIndex++}`;
-    let detailRow;
-    if (item.condition) {
-      const toggle = node('button', 'io-row-toggle', item.connector);
-      toggle.type = 'button';
-      toggle.setAttribute('aria-label', `${item.connector} 조건과 근거 보기`);
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-controls', detailId);
-      connector.append(toggle);
-      detailRow = node('tr', 'io-detail-row');
-      detailRow.id = detailId;
-      detailRow.hidden = true;
-      const detailCell = node('td');
-      detailCell.colSpan = 7;
-      detailCell.append(node('span', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
-      detailRow.append(detailCell);
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
-        toggle.setAttribute('aria-expanded', String(expanded));
-        detailRow.hidden = !expanded;
-      });
-    } else {
-      connector.append(node('strong', '', item.connector), sourceReference(item.source));
+if (rearItem) {
+  const rearImage = $('#rear-connector-image');
+  rearImage.src = './images/' + rearItem.file;
+  rearImage.alt = `${data.manufacturer} ${data.model} 후면 연결 단자 이미지`;
+  rearImage.addEventListener('error', hideRearPanel);
+  rearPanel.hidden = false;
+  rearUnavailable.hidden = true;
+  if (rearItem.sourceUrl) $('#rear-connector-source').href = officialLink(rearItem.sourceUrl, '').href;
+  else $('#rear-connector-source').hidden = true;
+} else hideRearPanel();
+
+const conditionBadge = (className, text) => node('span', `connector-flag ${className}`, text);
+for (const item of data.keyConnectors) {
+  const row = node('div', 'key-connector-row');
+  const identity = node('div', 'key-connector-identity');
+  identity.append(node('strong', '', item.connector || '미확인'), node('small', '', item.protocol || item.signal || ''));
+  row.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`));
+  $('#key-connector-list').append(row);
+}
+if (!data.keyConnectors.length) $('#key-connector-list').append(node('p', 'rear-unavailable', '확인된 주요 연결 단자가 없습니다.'));
+const updateKeyConnectorCount = () => {
+  $('#key-connector-count').textContent = String(Math.min(data.keyConnectors.length, mobileDetail.matches ? 5 : 6));
+};
+updateKeyConnectorCount();
+mobileDetail.addEventListener('change', updateKeyConnectorCount);
+let connectorIndex = 0;
+for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
+  const groupId = `connector-group-${groupData.key}-${groupIndex}`;
+  const summaryItem = node('span', 'io-summary-chip');
+  summaryItem.setAttribute('role', 'listitem');
+  summaryItem.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
+  $('#io-summary').append(summaryItem);
+
+  const group = node('details', 'connector-group panel');
+  group.id = groupId;
+  group.open = !mobileDetail.matches || groupIndex === 0;
+  const heading = node('summary', 'connector-group-heading');
+  const headingText = node('span');
+  headingText.append(node('strong', '', groupData.label), node('small', '', `${groupData.entries.length}개`));
+  const reviewCount = groupData.entries.filter(item => ['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)).length;
+  heading.append(headingText);
+  if (reviewCount) heading.append(node('span', 'connector-review-count', `검토 ${reviewCount}`));
+  group.append(heading);
+
+  const columns = node('div', 'connector-columns');
+  for (const label of ['연결 단자', '방향', '수량', '규격']) columns.append(node('span', '', label));
+  group.append(columns);
+
+  for (const item of groupData.entries) {
+    const itemId = `connector-detail-${connectorIndex++}`;
+    const row = node('article', 'connector-item');
+    const primary = node('div', 'connector-primary');
+    const name = node('strong', 'connector-name', item.connector || '미확인');
+    const flags = node('span', 'connector-flags');
+    if (item.availability && !/^fixed$/i.test(item.availability) && item.availability !== '—') {
+      flags.append(conditionBadge('is-option', /option|module/i.test(item.availability) ? '옵션' : '조건 있음'));
     }
-    row.append(connector);
-    for (const [className, value] of [
-      ['io-cell-direction', item.direction], ['io-cell-signal', item.signal],
-      ['io-cell-quantity', item.quantity], ['io-cell-protocol', item.protocol],
-      ['io-cell-availability', item.availability]
-    ]) row.append(node('td', className, value));
-    const verification = node('td', 'io-cell-verification');
-    verification.append(badge(item.verification ?? 'REVIEW REQUIRED'));
-    row.append(verification);
-    body.append(row);
-    if (detailRow) body.append(detailRow);
+    if (item.condition && item.condition !== '—') flags.append(conditionBadge('has-condition', '조건 있음'));
+    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)) flags.append(conditionBadge('needs-review', '검토 중'));
+    const identity = node('div', 'connector-identity');
+    identity.append(name, flags);
+    primary.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`), node('span', 'connector-protocol', item.protocol || '—'));
+    row.append(primary);
+
+    const detail = node('details', 'connector-detail');
+    detail.id = itemId;
+    detail.append(node('summary', '', '상세 보기'));
+    const detailGrid = node('dl', 'connector-detail-grid');
+    const addDetail = (label, value, showUnknown = false) => {
+      if (!value || (!showUnknown && value === '—')) return;
+      detailGrid.append(node('dt', '', label), node('dd', '', value));
+    };
+    addDetail('원본 그룹', item.sourceGroup);
+    addDetail('Signal', item.signal);
+    addDetail('Protocol / Standard', item.protocol);
+    addDetail('Fixed / Optional', item.availability, true);
+    addDetail('Condition', item.condition);
+    addDetail('Applicability', item.applicability);
+    addDetail('Notes', item.notes ?? item.note);
+    const verification = node('div', 'connector-verification');
+    verification.append(node('span', '', '검증'), badge(item.verification ?? 'REVIEW REQUIRED'));
+    if (item.source) verification.append(sourceReference(item.source));
+    detail.append(detailGrid, verification);
+    row.append(detail);
+    group.append(row);
   }
-  ioTable.append(body);
+  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => groupData.sourceGroups.includes(note.group))) {
+    const note = node('p', 'connector-group-note', groupNote.text + ' ');
+    if (groupNote.source) note.append(sourceReference(groupNote.source));
+    group.append(note);
+  }
+  $('#io-list').append(group);
 }
-$('#io-list').append(ioTable);
+if (!data.connectorGroups.length) $('#io-list').append(node('p', 'rear-unavailable', '확인된 연결 단자 정보가 없습니다.'));
 for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
@@ -392,18 +480,14 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const tabs = [$('#tab-features'), $('#tab-specifications')];
-const panels = [$('#feature-panel'), $('#spec-panel')];
-function selectTab(index, updateAddress = false) {
-  for (const [position, tab] of tabs.entries()) {
-    const selected = position === index;
-    tab.setAttribute('aria-selected', String(selected));
-    tab.tabIndex = selected ? 0 : -1;
-    panels[position].hidden = !selected;
-  }
-  if (updateAddress) {
-    history.pushState(null, '', index ? '#specifications' : '#features');
-    $('#detail-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+const navigationLinks = [...$('#detail-tabs').querySelectorAll('a')];
+function updateNavigation(target) {
+  const section = target?.closest('#overview, #specifications, #io, #documents') ?? $('#overview');
+  for (const link of navigationLinks) {
+    const active = link.hash === '#' + section.id;
+    link.classList.toggle('is-active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   }
 }
 function hashTarget() {
@@ -415,21 +499,29 @@ function hashTarget() {
   }
 }
 function openForTarget(target) {
-  const isSpec = Boolean(target && panels[1].contains(target));
-  selectTab(isSpec ? 1 : 0);
+  if (target && $('#all-specs').contains(target)) $('#all-specs').open = true;
+  if (target && $('#all-connectors').contains(target)) $('#all-connectors').open = true;
+  if (target) {
+    const disclosure = target.matches?.('.connector-group, .connector-detail') ? target : target.closest?.('.connector-group, .connector-detail');
+    if (disclosure instanceof HTMLDetailsElement) disclosure.open = true;
+    const parentGroup = disclosure?.closest?.('.connector-group');
+    if (parentGroup instanceof HTMLDetailsElement) parentGroup.open = true;
+  }
   if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
-  if (target && $('#supplemental-docs').contains(target)) $('#supplemental-docs').open = true;
+  if (target && (target === $('#supplemental-docs') || $('#supplemental-docs').contains(target))) $('#supplemental-docs').open = true;
+  updateNavigation(target);
 }
-for (const [index, tab] of tabs.entries()) {
-  tab.addEventListener('click', () => selectTab(index, true));
-  tab.addEventListener('keydown', event => {
-    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-    event.preventDefault();
-    const next = (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
-    selectTab(next, true);
-    tabs[next].focus();
+for (const link of navigationLinks) link.addEventListener('click', () => updateNavigation(document.getElementById(link.hash.slice(1))));
+let navigationFrame = 0;
+window.addEventListener('scroll', () => {
+  if (navigationFrame) return;
+  navigationFrame = requestAnimationFrame(() => {
+    navigationFrame = 0;
+    const current = [...document.querySelectorAll('#overview, #specifications, #io, #documents')]
+      .filter(section => section.getBoundingClientRect().top <= 130).at(-1);
+    updateNavigation(current);
   });
-}
+}, { passive: true });
 document.addEventListener('click', event => {
   const link = event.target.closest('a[href^="#"]');
   if (!link) return;

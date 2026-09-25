@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -60,4 +60,72 @@ test('REVIEW REQUIRED documents retain their source without becoming quick-open 
   ] });
   assert.equal(view.quickDocuments[3].resource.status, 'REVIEW REQUIRED');
   assert.equal(view.quickDocuments[3].available, false);
+});
+
+test('connector groups collapse mixed labels without losing entries or direction text', () => {
+  const input = [
+    { name: 'Audio', entries: [{ connector: 'XLR', direction: 'INPUT', quantity: '2' }] },
+    { name: 'Network / Audio', entries: [{ connector: 'etherCON', direction: 'I/O', quantity: '2' }] },
+    { name: 'Control', entries: [{ connector: 'D-sub', direction: 'OUT', quantity: '1' }] },
+    { name: 'USB / Audio', entries: [{ connector: 'USB Type-C', direction: 'Bidirectional', quantity: '1' }] },
+    { name: 'USB', entries: [{ connector: 'USB Type-A', direction: 'IN', quantity: '2' }] }
+  ];
+
+  const groups = prepareConnectorGroups(input);
+
+  assert.deepEqual(groups.map(group => [group.key, group.label, group.entries.length]), [
+    ['audio', '오디오', 1],
+    ['network-control', '네트워크·제어', 2],
+    ['usb', 'USB', 2]
+  ]);
+  assert.deepEqual(groups.flatMap(group => group.entries).map(item => item.displayDirection), ['IN', 'I/O', 'OUT', 'I/O', 'IN']);
+  assert.equal(groups.flatMap(group => group.entries).length, 5);
+});
+
+test('key connector selection favors the primary group and still covers following groups', () => {
+  const groups = prepareConnectorGroups([
+    { name: 'Audio', entries: [
+      { connector: 'XLR IN', direction: 'IN' },
+      { connector: 'XLR OUT', direction: 'OUT' },
+      { connector: 'AES', direction: 'I/O' }
+    ] },
+    { name: 'Network / Control', entries: [{ connector: 'etherCON', direction: 'I/O' }] },
+    { name: 'USB', entries: [{ connector: 'USB-C', direction: 'I/O' }] },
+    { name: 'Sync', entries: [{ connector: 'BNC', direction: 'IN' }] },
+    { name: 'Expansion', entries: [{ connector: 'PY slot', direction: 'I/O' }] },
+    { name: 'Power', entries: [{ connector: 'V-Lock', direction: 'IN' }] }
+  ]);
+
+  assert.deepEqual(selectKeyConnectors(groups, 6).map(item => item.connector), [
+    'XLR IN', 'XLR OUT', 'etherCON', 'USB-C', 'BNC', 'PY slot'
+  ]);
+});
+
+test('key connector selection excludes missing placeholders but full groups retain them', () => {
+  const groups = prepareConnectorGroups([
+    { name: 'Video', entries: [{ connector: 'MISSING', verification: 'MISSING' }] },
+    { name: 'Network / Control', entries: [{ connector: 'LAN connector', verification: 'PARTIAL' }] },
+    { name: 'Power', entries: [{ connector: 'MISSING', verification: 'MISSING' }] }
+  ]);
+
+  assert.deepEqual(selectKeyConnectors(groups).map(item => item.connector), ['LAN connector']);
+  assert.equal(groups.flatMap(group => group.entries).length, 3);
+});
+
+test('key specification selection limits verified values while preserving group order', () => {
+  const groups = [
+    { name: 'Audio', entries: [
+      { name: 'Inputs', verification: 'VERIFIED' },
+      { name: 'Mix buses', verification: 'VERIFIED' },
+      { name: 'Hidden third', verification: 'VERIFIED' }
+    ] },
+    { name: 'Network', entries: [
+      { name: 'Dante', verification: 'VERIFIED' },
+      { name: 'Review value', verification: 'REVIEW REQUIRED' }
+    ] },
+    { name: 'Power', entries: [{ name: 'AC', verification: 'VERIFIED' }] }
+  ];
+
+  assert.deepEqual(selectKeySpecifications(groups, 4).map(item => item.name), ['Inputs', 'Mix buses', 'Dante', 'AC']);
+  assert.equal(groups.flatMap(group => group.entries).length, 6);
 });
