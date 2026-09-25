@@ -19,6 +19,8 @@ export function transformDetailHtml(source) {
     .replaceAll('Product Detail 시안', 'Product Detail Beta')
     .replaceAll('https://seoulav.github.io/AV-Portal/', '../')
     .replace('href="./favicon.svg"', 'href="../favicon.svg"')
+    .replace('href="../../beta/site/system-version.css"', 'href="../system-version.css"')
+    .replace('src="../../beta/site/system-version.js"', 'src="../system-version.js"')
     .replaceAll('PRODUCT DETAIL LAB', 'PRODUCT DETAIL')
     .replaceAll('LOCAL PREVIEW', 'PUBLIC BETA')
     .replaceAll('공개 Library', 'Library')
