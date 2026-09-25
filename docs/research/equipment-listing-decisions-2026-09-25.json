@@ -1,0 +1,2929 @@
+{
+  "purpose": "W-20260925-B 목록 등재를 위한 분류·등급 결정표. 공개 카탈로그 자체가 아니며 제품 상세·사양·게시 권한을 확정하지 않는다.",
+  "as_of": "2026-09-25",
+  "decided_by": "Work (Claude, Opus 5) — 분류 기준과 등급 구간은 이 파일이 근거다.",
+  "source": "docs/research/major-equipment-official-links-2026-09-23.json 의 source_records 중 resource_kind 가 공식 제품/시리즈 또는 공식 카드/시리즈 인 것.",
+  "row_key": "원본 워크북의 시트명과 엑셀 행 번호. 워크북 자체는 로컬에 있고 이 저장소에 없다. 업체명 열은 어떤 형태로도 포함하지 않는다.",
+  "taxonomy": {
+    "levels": [
+      "1단 원본 시트 구분",
+      "2단 도메인",
+      "3단 제품 종류"
+    ],
+    "domain_set": [
+      "Audio",
+      "Video",
+      "Display",
+      "Control",
+      "Network",
+      "Conferencing"
+    ],
+    "domain_note": "이 여섯 개는 beta/site/app.js 의 TOP_CATEGORIES terms 가 이미 인식한다. 이 집합을 벗어나면 홈 카테고리 카드에 잡히지 않으므로 코드 변경이 필요해진다.",
+    "top_by_sheet": {
+      "오디오": "오디오",
+      "영상": "영상",
+      "TV": "사이니지",
+      "제어": "제어",
+      "화상회의": "화상회의",
+      "프로젝터": "프로젝터"
+    },
+    "rule": "3단은 원본의 품명(한국어 설명)에서 도출했다. 품명은 로컬 자료이므로 결과 분류만 남기고 원문은 싣지 않는다. 제조사 사양을 추론해 붙인 값은 없다."
+  },
+  "grades": {
+    "A": {
+      "meaning": "공식 페이지에서 해당 모델을 확인했거나, 공식 페이지가 그 모델을 명시적으로 나열한다. 이번 등재 대상.",
+      "verification_values": [
+        "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE",
+        "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF",
+        "EXACT_OFFICIAL",
+        "EXACT_OFFICIAL_MODEL_PAGE",
+        "EXACT_OFFICIAL_MODEL_RESULT",
+        "EXACT_OFFICIAL_VARIANT",
+        "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE",
+        "OFFICIAL_BROCHURE_EXACT_CODE_REFERENCED",
+        "OFFICIAL_EXACT_MODULE_IN_GUIDE",
+        "OFFICIAL_FAMILY_LISTS_COMPONENT",
+        "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED",
+        "OFFICIAL_FAMILY_SPEC_EXACT_MODEL_REFERENCED",
+        "OFFICIAL_GUIDE_MODEL_CONFIRMED",
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH",
+        "OFFICIAL_MANUAL_EXACT_MODEL_REFERENCED",
+        "OFFICIAL_MANUAL_MODEL_CONFIRMED",
+        "OFFICIAL_SELECTOR_MODEL_LISTED",
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED",
+        "VERIFIED_EXACT_CARD_SECTION",
+        "VERIFIED_EXACT_MODEL",
+        "VERIFIED_EXACT_MODEL_EPSON_GLOBAL",
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA",
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL",
+        "VERIFIED_EXACT_MODEL_SECTION",
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    "B": {
+      "meaning": "제조사 공식 페이지를 찾았으나 정확한 모델까지는 확인되지 않았다(계열·시리즈 페이지). 이번 등재에서 제외한다.",
+      "rule": "A에도 없고 C에도 없는 나머지 전부"
+    },
+    "C": {
+      "meaning": "모델 자체가 확정되지 않았다. 공개하지 않는다.",
+      "verification_values": [
+        "DUPLICATE_MODEL_SOURCE_INTENT_UNCONFIRMED",
+        "LIKELY_MODEL_NORMALIZATION_REVIEW",
+        "LIKELY_SUCCESSOR_MODEL_REVIEW_REQUIRED",
+        "MODEL_BLANK",
+        "PORT_DESCRIPTION_ONLY_NOT_UNIQUE_SKU",
+        "POSSIBLE_ACCESSORY_NOT_EXACT_MODEL"
+      ]
+    }
+  },
+  "grade_rule": "한 행에 여러 레코드가 있으면 A값이 하나라도 있으면 A, 전부 C면 C, 그 밖은 B.",
+  "counts": {
+    "graded_rows": 268,
+    "A": 177,
+    "B": 79,
+    "C": 12,
+    "A_classified": 177
+  },
+  "url_rule": "공식 URL이 여러 개인 행은 제조사 한국 도메인을 우선한다. 없으면 목록의 첫 번째를 쓴다. 카탈로그에는 항목당 한 개만 넣는다.",
+  "excluded": {
+    "RTCOM": "RTCOM 65행은 조사 대상에서 제외됐다. AGENTS.md 에 따라 제조사가 직접 제공한 자료로만 다루며 이번 등재에 포함하지 않는다.",
+    "no_manufacturer": "A등급이지만 제조사가 특정되지 않은 2행(삼성 전자칠판 이동형 스탠드)은 제외한다.",
+    "already_public": "현재 공개 27개와 제조사·모델이 같은 19행은 새로 추가하지 않는다."
+  },
+  "entries": [
+    {
+      "row": "TV|7",
+      "manufacturer": "Samsung",
+      "model": "HG43U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|8",
+      "manufacturer": "Samsung",
+      "model": "HG50U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|10",
+      "manufacturer": "Samsung",
+      "model": "HG65U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|15",
+      "manufacturer": "Samsung",
+      "model": "LH32QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|16",
+      "manufacturer": "Samsung",
+      "model": "LH43QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|21",
+      "manufacturer": "Samsung",
+      "model": "LH85QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|22",
+      "manufacturer": "Samsung",
+      "model": "LH98QECEDGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|23",
+      "manufacturer": "Samsung",
+      "model": "LH98QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|25",
+      "manufacturer": "Samsung",
+      "model": "LH43QHCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|29",
+      "manufacturer": "Samsung",
+      "model": "LH75QHCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|30",
+      "manufacturer": "Samsung",
+      "model": "LH115QHFEBGXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|36",
+      "manufacturer": "Samsung",
+      "model": "LH55VMCRBGBXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Video Wall"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|39",
+      "manufacturer": "Samsung",
+      "model": "LH55VHCRBGBXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Video Wall"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|43",
+      "manufacturer": "Samsung",
+      "model": "KQ75LSF03WFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Display"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/hk_en/support/model/KQ75LSF03WFXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|46",
+      "manufacturer": "Samsung",
+      "model": "LH55WMFWBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Interactive Display"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|48",
+      "manufacturer": null,
+      "model": "HA-AFN-STAND-BK",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Display Accessory"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/support/model/HA-AFN-STAND-BK/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|51",
+      "manufacturer": null,
+      "model": "HA-AFN-STAND-BK",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Display Accessory"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/support/model/HA-AFN-STAND-BK/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "TV|53",
+      "manufacturer": "Samsung",
+      "model": "LH75WMFWLGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Interactive Display"
+      ],
+      "official_urls": [
+        "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "영상|7",
+      "manufacturer": "Sony",
+      "model": "BRC-AM7",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|8",
+      "manufacturer": "Sony",
+      "model": "SRG-X40UH",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-x40uh"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|9",
+      "manufacturer": "Sony",
+      "model": "SRG-A40",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|10",
+      "manufacturer": "Sony",
+      "model": "RM-IP10",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera Controller"
+      ],
+      "official_urls": [
+        "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|11",
+      "manufacturer": "Sony",
+      "model": "RM-IP500",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera Controller"
+      ],
+      "official_urls": [
+        "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|13",
+      "manufacturer": "AVer",
+      "model": "TR535N",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://kr.presentation.aver.com/model/tr535n"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|14",
+      "manufacturer": "AVer",
+      "model": "TR535",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://kr.presentation.aver.com/model/tr535"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|15",
+      "manufacturer": "AVer",
+      "model": "TR335",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://kr.presentation.aver.com/model/tr335"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|16",
+      "manufacturer": "AVer",
+      "model": "TR315",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "official_urls": [
+        "https://kr.presentation.aver.com/model/tr315"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|17",
+      "manufacturer": "AVer",
+      "model": "CL01",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera Controller"
+      ],
+      "official_urls": [
+        "https://kr.presentation.aver.com/model/cl01"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|20",
+      "manufacturer": "Roland",
+      "model": "V-02HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-02hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|21",
+      "manufacturer": "Roland",
+      "model": "V-02HD MK II",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|22",
+      "manufacturer": "Roland",
+      "model": "V-1HD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-1hd_plus/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|23",
+      "manufacturer": "Roland",
+      "model": "VR-4HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/vr-4hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|24",
+      "manufacturer": "Roland",
+      "model": "VR-6HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/vr-6hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|25",
+      "manufacturer": "Roland",
+      "model": "V-8HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-8hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|26",
+      "manufacturer": "Roland",
+      "model": "V-60HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-60hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|27",
+      "manufacturer": "Roland",
+      "model": "V-80HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-80hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|28",
+      "manufacturer": "Roland",
+      "model": "V-160HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/v-160hd/"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|29",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS5",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://www.lumantek.com/index/product_intro/68"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|30",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS10",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://www.lumantek.com/index/product_intro/37"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|32",
+      "manufacturer": "Analog Way",
+      "model": "Pulse 4K",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/pulse-4k"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|33",
+      "manufacturer": "Analog Way",
+      "model": "Eikos 4K",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/eikos-4k"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|34",
+      "manufacturer": "Analog Way",
+      "model": "Aquilon RS1",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/aquilon-rs1"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|35",
+      "manufacturer": "Analog Way",
+      "model": "Aquilon RS2",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Wall Controller"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/aquilon-rs2"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|36",
+      "manufacturer": "Analog Way",
+      "model": "Zenith 100",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/zenith-100"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|37",
+      "manufacturer": "Analog Way",
+      "model": "Zenith 200",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/zenith-200"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|38",
+      "manufacturer": "Analog Way",
+      "model": "RC400T",
+      "categories": [
+        "영상",
+        "Video",
+        "Control Console"
+      ],
+      "official_urls": [
+        "https://www.analogway.com/products/rc400t"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|40",
+      "manufacturer": "Magnimage",
+      "model": "LED-780H",
+      "categories": [
+        "영상",
+        "Video",
+        "LED Processor"
+      ],
+      "official_urls": [
+        "https://www.magnimage.com/article/780H"
+      ],
+      "verification": [
+        "VERIFIED_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "영상|42",
+      "manufacturer": "NovaStar",
+      "model": "H5",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE"
+      ]
+    },
+    {
+      "row": "영상|43",
+      "manufacturer": "NovaStar",
+      "model": "H2",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE"
+      ]
+    },
+    {
+      "row": "영상|44",
+      "manufacturer": "NovaStar",
+      "model": "H_2xRJ45+1xHDMI1.3 preview card",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|45",
+      "manufacturer": "NovaStar",
+      "model": "H_4xHDMI input card",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|46",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0+1xDP1.2 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|47",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|48",
+      "manufacturer": "NovaStar",
+      "model": "H_1xDP1.2 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|49",
+      "manufacturer": "NovaStar",
+      "model": "H_2xHDMI2.0+2xDP1.2 input card",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|50",
+      "manufacturer": "NovaStar",
+      "model": "H_1x12G SDI input card",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
+      ]
+    },
+    {
+      "row": "영상|56",
+      "manufacturer": "Colorlight",
+      "model": "X100Pro 7U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://en.colorlightinside.com/product/download/111"
+      ],
+      "verification": [
+        "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
+      ]
+    },
+    {
+      "row": "영상|57",
+      "manufacturer": "Colorlight",
+      "model": "X100Pro 4U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://en.colorlightinside.com/product/download/111"
+      ],
+      "verification": [
+        "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
+      ]
+    },
+    {
+      "row": "영상|58",
+      "manufacturer": "Colorlight",
+      "model": "X100Pro 2U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://en.colorlightinside.com/product/download/111"
+      ],
+      "verification": [
+        "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
+      ]
+    },
+    {
+      "row": "영상|69",
+      "manufacturer": "AJA",
+      "model": "Ki Pro GO2",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "official_urls": [
+        "https://www.aja.com/products/ki-pro-go2"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL"
+      ]
+    },
+    {
+      "row": "영상|71",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Pro",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "official_urls": [
+        "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_SECTION"
+      ]
+    },
+    {
+      "row": "영상|72",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Plus",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "official_urls": [
+        "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_SECTION"
+      ]
+    },
+    {
+      "row": "영상|73",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Mini",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "official_urls": [
+        "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_SECTION"
+      ]
+    },
+    {
+      "row": "영상|134",
+      "manufacturer": "Lightware",
+      "model": "HDMI20-OPTJ-TX90",
+      "categories": [
+        "영상",
+        "Video",
+        "Extender"
+      ],
+      "official_urls": [
+        "https://archive.lightware.com/pub/media/lightware/filedownloader/file/Product-Brief/HDMI20_OPTJ_series_v02.pdf"
+      ],
+      "verification": [
+        "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
+      ]
+    },
+    {
+      "row": "영상|135",
+      "manufacturer": "Lightware",
+      "model": "HDMI20-OPTJ-RX90",
+      "categories": [
+        "영상",
+        "Video",
+        "Extender"
+      ],
+      "official_urls": [
+        "https://archive.lightware.com/pub/media/lightware/filedownloader/file/Product-Brief/HDMI20_OPTJ_series_v02.pdf"
+      ],
+      "verification": [
+        "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
+      ]
+    },
+    {
+      "row": "영상|153",
+      "manufacturer": "Lumantek",
+      "model": "ez-MD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "official_urls": [
+        "https://www.lumantek.com/index/product_intro/60"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL"
+      ]
+    },
+    {
+      "row": "영상|154",
+      "manufacturer": "Lumantek",
+      "model": "ez-SHV+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "official_urls": [
+        "https://www.lumantek.com/index/product_intro/59"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL"
+      ]
+    },
+    {
+      "row": "영상|155",
+      "manufacturer": "Lumantek",
+      "model": "ez-HSV+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "official_urls": [
+        "https://www.lumantek.com/index/product_intro/62"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL"
+      ]
+    },
+    {
+      "row": "영상|158",
+      "manufacturer": "Roland",
+      "model": "UVC-01",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Capture"
+      ],
+      "official_urls": [
+        "https://proav.roland.com/global/products/uvc-01/"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL"
+      ]
+    },
+    {
+      "row": "영상|160",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIX-NS-FR2",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Frame"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_SPEC_EXACT_MODEL_REFERENCED"
+      ]
+    },
+    {
+      "row": "영상|163",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIX-HDX-IO",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_CARD_SECTION"
+      ]
+    },
+    {
+      "row": "영상|164",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIPOWER",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED"
+      ]
+    },
+    {
+      "row": "영상|165",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIPOWER-PS",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED"
+      ]
+    },
+    {
+      "row": "영상|166",
+      "manufacturer": "Ross Video",
+      "model": "ULTRITOUCH-2-HR",
+      "categories": [
+        "영상",
+        "Video",
+        "Control Panel"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+      ],
+      "verification": [
+        "OFFICIAL_MANUAL_EXACT_MODEL_REFERENCED"
+      ]
+    },
+    {
+      "row": "영상|167",
+      "manufacturer": "Ross Video",
+      "model": "ULTRITOUCH-PS",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply"
+      ],
+      "official_urls": [
+        "https://documentation.rossvideo.com/files/Brochures/Routers/Ultritouch/Ultritouch%20Brochure.pdf"
+      ],
+      "verification": [
+        "OFFICIAL_BROCHURE_EXACT_CODE_REFERENCED"
+      ]
+    },
+    {
+      "row": "영상|170",
+      "manufacturer": "Ross Video",
+      "model": "SFP-MADI-COAX",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "official_urls": [
+        "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Ultrix%20SFP%20Modules%20Guide%20%282101DR-008%29.pdf"
+      ],
+      "verification": [
+        "OFFICIAL_EXACT_MODULE_IN_GUIDE"
+      ]
+    },
+    {
+      "row": "오디오|45",
+      "manufacturer": "Yamaha",
+      "model": "Tio1608-D2",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|51",
+      "manufacturer": "Crown",
+      "model": "DCI 2/300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/dci-2-300"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|56",
+      "manufacturer": "Crown",
+      "model": "CDI 2/300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/CDi-2-300"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|63",
+      "manufacturer": "Crown",
+      "model": "DCI 2/300N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/dci-2-300n.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|67",
+      "manufacturer": "Crown",
+      "model": "I-TECH 4X3500HD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/i-tech-4x3500hd"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|69",
+      "manufacturer": "Crown",
+      "model": "CDI 2/600BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/cdi-2-600bl"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|75",
+      "manufacturer": "Crown",
+      "model": "DCI 4/300DA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en/products/dci-4-300da"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|79",
+      "manufacturer": "Crown",
+      "model": "ComTech D 4125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/ctd-4125"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|80",
+      "manufacturer": "Crown",
+      "model": "ComTech D 8125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/products/ctd-8125"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|82",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 322 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|83",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|87",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 322 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-322-a"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|88",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-602-a"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|93",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 1604 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|94",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 1204 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|95",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 2404 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-2404-dspd"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|96",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 4804 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-4804dspd"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|98",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 804 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|99",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 1604 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|100",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 1204 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|102",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 4804 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL"
+      ]
+    },
+    {
+      "row": "오디오|109",
+      "manufacturer": "Shure",
+      "model": "A900W-R-GM",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone Accessory"
+      ],
+      "official_urls": [
+        "https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_VARIANT"
+      ]
+    },
+    {
+      "row": "오디오|110",
+      "manufacturer": "Shure",
+      "model": "MX395",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Microphone"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/docs/guide/MX395"
+      ],
+      "verification": [
+        "OFFICIAL_MANUAL_MODEL_CONFIRMED"
+      ]
+    },
+    {
+      "row": "오디오|115",
+      "manufacturer": "Shure",
+      "model": "ULXD2/BETA58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LISTS_COMPONENT"
+      ]
+    },
+    {
+      "row": "오디오|117",
+      "manufacturer": "Shure",
+      "model": "ULXD2/BETA87",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LISTS_COMPONENT"
+      ]
+    },
+    {
+      "row": "오디오|118",
+      "manufacturer": "Shure",
+      "model": "ULXD1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LISTS_COMPONENT"
+      ]
+    },
+    {
+      "row": "오디오|119",
+      "manufacturer": "Shure",
+      "model": "ULXD8",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone Accessory"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LISTS_COMPONENT"
+      ]
+    },
+    {
+      "row": "오디오|133",
+      "manufacturer": "Shure",
+      "model": "UA845UWB",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna Distributor"
+      ],
+      "official_urls": [
+        "https://pubs.shure.com/view/guide/UA845UWB/en-US.pdf"
+      ],
+      "verification": [
+        "OFFICIAL_GUIDE_MODEL_CONFIRMED"
+      ]
+    },
+    {
+      "row": "오디오|134",
+      "manufacturer": "Shure",
+      "model": "UA844+SWB",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna Distributor"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_VARIANT"
+      ]
+    },
+    {
+      "row": "오디오|136",
+      "manufacturer": "Shure",
+      "model": "UA874XA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_VARIANT"
+      ]
+    },
+    {
+      "row": "오디오|138",
+      "manufacturer": "Shure",
+      "model": "MX418D/C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "official_urls": [
+        "https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_VARIANT"
+      ]
+    },
+    {
+      "row": "오디오|143",
+      "manufacturer": "JBL",
+      "model": "Control 23-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|144",
+      "manufacturer": "JBL",
+      "model": "Control 25-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers"
+      ],
+      "verification": [
+        "OFFICIAL_SELECTOR_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "오디오|145",
+      "manufacturer": "JBL",
+      "model": "Control 28-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-28-1/1000"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|146",
+      "manufacturer": "JBL",
+      "model": "AC18/95",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/ac18-95.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|147",
+      "manufacturer": "JBL",
+      "model": "AC18/26",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/ac18-26"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|149",
+      "manufacturer": "JBL",
+      "model": "CONTROL 412C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-412c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|150",
+      "manufacturer": "JBL",
+      "model": "CONTROL 414C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-414c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|151",
+      "manufacturer": "JBL",
+      "model": "CONTROL 416C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-416c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|152",
+      "manufacturer": "JBL",
+      "model": "CONTROL 418C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-418c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|153",
+      "manufacturer": "JBL",
+      "model": "CONTROL 447C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/es/products/control-447c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|154",
+      "manufacturer": "JBL",
+      "model": "CONTROL 419CS/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Subwoofer"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-419cs-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|155",
+      "manufacturer": "JBL",
+      "model": "CONTROL 440CS/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Subwoofer"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-440cs-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|157",
+      "manufacturer": "JBL",
+      "model": "CONTROL 424C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-424c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|158",
+      "manufacturer": "JBL",
+      "model": "CONTROL 424LP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-424lp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|159",
+      "manufacturer": "JBL",
+      "model": "CONTROL 426C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-426c-t"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "오디오|160",
+      "manufacturer": "JBL",
+      "model": "CONTROL 426LP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Speaker"
+      ],
+      "official_urls": [
+        "https://jblpro.com/en-US/products/control-426lp"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_PAGE"
+      ]
+    },
+    {
+      "row": "제어|7",
+      "manufacturer": "AMX",
+      "model": "NX-3200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/nx-3200"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|8",
+      "manufacturer": "AMX",
+      "model": "NX-2200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/nx-2200"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|9",
+      "manufacturer": "AMX",
+      "model": "NX-1200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|11",
+      "manufacturer": "AMX",
+      "model": "VARIA-100",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/varia-100"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|12",
+      "manufacturer": "AMX",
+      "model": "VARIA-80",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/varia-80"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|13",
+      "manufacturer": "AMX",
+      "model": "VARIA-SL80",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/varia-sl80"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|14",
+      "manufacturer": "AMX",
+      "model": "VARIA-SL50",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "official_urls": [
+        "https://www.amx.com/en-US/products/varia-sl50"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|17",
+      "manufacturer": "SurgeX",
+      "model": "SX-1216-RTi",
+      "categories": [
+        "제어",
+        "Control",
+        "Power Protection"
+      ],
+      "official_urls": [
+        "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|19",
+      "manufacturer": "NETGEAR",
+      "model": "GS728TPP",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.downloads.netgear.com/files/GDC/GS728TP/GS752TP_GS728TP_GS728TPP_SWA_3Dec2013.pdf"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|21",
+      "manufacturer": "NETGEAR",
+      "model": "GS116PP",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/uk/media/GS108LP-GS108PP-GS116LP-GS116PP_tcm158-83756.pdf"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|22",
+      "manufacturer": "NETGEAR",
+      "model": "GS108PP",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/uk/media/GS108LP-GS108PP-GS116LP-GS116PP_tcm158-83756.pdf"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|24",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4212P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|26",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4230P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|27",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4230PX",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|28",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4248P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|29",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4248PX",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248px/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "제어|30",
+      "manufacturer": "NETGEAR",
+      "model": "XSM4216F",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "official_urls": [
+        "https://www.netgear.com/uk/business/wired/switches/fully-managed/xsm4216f/"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "프로젝터|7",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2220B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PQ2220B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|8",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2216B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PQ2216B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|9",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2213B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PQ2213B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|10",
+      "manufacturer": "Epson",
+      "model": "EB-L895E",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|11",
+      "manufacturer": "Epson",
+      "model": "EB-L795SE",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|12",
+      "manufacturer": "Epson",
+      "model": "EB-L695SE",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|14",
+      "manufacturer": "Epson",
+      "model": "EB-PU2216B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PU2216B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|15",
+      "manufacturer": "Epson",
+      "model": "EB-PU2213B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PU2213B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|16",
+      "manufacturer": "Epson",
+      "model": "EB-PU2010W/B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840",
+        "https://www.epson.eu/en_EU/products/projector/professional/eb-pu2010w-projector/p/32086"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_GLOBAL",
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|18",
+      "manufacturer": "Epson",
+      "model": "EB-PU1008B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/EB-PU1008B"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+      ]
+    },
+    {
+      "row": "프로젝터|20",
+      "manufacturer": "Epson",
+      "model": "EB-L895U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|21",
+      "manufacturer": "Epson",
+      "model": "EB-L790U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|22",
+      "manufacturer": "Epson",
+      "model": "EB-L790SU",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|23",
+      "manufacturer": "Epson",
+      "model": "EB-L690U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L690U/p/V11HB29051"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|24",
+      "manufacturer": "Epson",
+      "model": "EB-L530U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|25",
+      "manufacturer": "Epson",
+      "model": "EB-L260F",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051"
+      ],
+      "verification": [
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
+      ]
+    },
+    {
+      "row": "프로젝터|28",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ17K",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/mz20k/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|29",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ14K",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/mz20k/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|30",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ11K",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/mz20k/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|32",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ882",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/mz882/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|33",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ71",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/vmz71/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|34",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ61",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/vmz71/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "프로젝터|35",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ51",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "official_urls": [
+        "https://docs.connect.panasonic.com/projector/products/vmz71/"
+      ],
+      "verification": [
+        "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
+      ]
+    },
+    {
+      "row": "화상회의|7",
+      "manufacturer": "Logitech",
+      "model": "Rally Bar",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Bar"
+      ],
+      "official_urls": [
+        "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|8",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "official_urls": [
+        "https://www.logitech.com/assets/65641/rally-acessories-datasheet.ENG.pdf"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|9",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod Hub",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Hub"
+      ],
+      "official_urls": [
+        "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|10",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod Extension Cable",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Cable"
+      ],
+      "official_urls": [
+        "https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|11",
+      "manufacturer": "Logitech",
+      "model": "Strong USB-A to USB-C Cable 10m",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Cable"
+      ],
+      "official_urls": [
+        "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|13",
+      "manufacturer": "Logitech",
+      "model": "Rally Plus",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "official_urls": [
+        "https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|16",
+      "manufacturer": "Yealink",
+      "model": "SmartVision40",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/smartvision40"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|17",
+      "manufacturer": "Yealink",
+      "model": "VCM35",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|19",
+      "manufacturer": "Yealink",
+      "model": "UVC86",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|20",
+      "manufacturer": "Yealink",
+      "model": "CM20",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/accessories-cm20"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|21",
+      "manufacturer": "Yealink",
+      "model": "CS10",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Speaker"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|22",
+      "manufacturer": "Yealink",
+      "model": "AVHub",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Hub"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/room-system-avhub"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|24",
+      "manufacturer": "Yealink",
+      "model": "UVC85-BYOD",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-tech-specs/uvc85-byod"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    },
+    {
+      "row": "화상회의|25",
+      "manufacturer": "Yealink",
+      "model": "CPE40",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Speakerphone"
+      ],
+      "official_urls": [
+        "https://www.yealink.com/en/product-detail/cpe40"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ]
+    }
+  ]
+}
