@@ -15,7 +15,9 @@ export const manufacturerHosts = {
   'Ross Video': ['rossvideo.com'],
   Shure: ['shure.com', 'shureweb.eu'],
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
-  Yamaha: ['yamaha.com']
+  Televic: ['televic-conference.com', 'televic.digital', 'televic.com'],
+  Yamaha: ['yamaha.com'],
+  Yealink: ['yealink.com']
 };
 
 export function allowedHostsFor(brand) {
