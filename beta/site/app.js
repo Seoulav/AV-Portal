@@ -107,7 +107,13 @@ if (typeof document !== 'undefined') {
   let products = [];
   let state = parseExploreState(location.search);
   let activeSuggestion = -1;
-  const publicImages = new Map([['sony\0brc-am7', { src: './detail/images/ptz-pictogram.svg', alt: '범용 PTZ 카메라 픽토그램. BRC-AM7 실물 사진이 아닙니다.', note: '픽토그램 · 실물 사진 아님' }]]);
+  const publicImages = new Map([
+    ['sony\0brc-am7', { src: './detail/images/brc-am7-main.webp', alt: 'Sony BRC-AM7 검정색 본체', note: '제조사 공식 이미지' }],
+    ['yamaha\0dm7', { src: './detail/images/dm7-perspective.webp', alt: 'Yamaha DM7 디지털 믹싱 콘솔', note: '제조사 공식 이미지' }],
+    ['aja\0ki pro go2', { src: './detail/images/ki-pro-go2-main.webp', alt: 'AJA Ki Pro GO2 레코더', note: '제조사 공식 이미지' }],
+    ['panasonic\0pt-mz17k', { src: './detail/images/pt-mz17k-perspective.webp', alt: 'Panasonic PT-MZ17K 프로젝터', note: '제조사 공식 이미지' }],
+    ['logitech\0rally bar', { src: './detail/images/rally-bar-front.webp', alt: 'Logitech Rally Bar 그래파이트', note: '제조사 공식 이미지' }]
+  ]);
 
   const hasExploration = () => Boolean(state.query || state.topCategory || state.brand || state.categories.length || state.resource);
   const saveUrl = push => {
