@@ -9,11 +9,6 @@ export const TOP_CATEGORIES = [
   { id: 'power-infrastructure', label: '전원·인프라', icon: 'ϟ', terms: ['power', '전원', 'infrastructure', 'rack', 'ups'] }
 ];
 
-const DETAIL_PRODUCTS = new Map([
-  ['sony\0brc-am7', 'brc-am7'], ['yamaha\0dm7', 'dm7'], ['aja\0ki pro go2', 'ki-pro-go2'],
-  ['panasonic\0pt-mz17k', 'pt-mz17k'], ['logitech\0rally bar', 'rally-bar']
-]);
-
 const categoryFor = item => TOP_CATEGORIES.filter(group => item.categories.some(category => group.terms.includes(fold(category))));
 
 export function mapTopCategories(items) {
@@ -86,7 +81,7 @@ export function serializeExploreState(state) {
 
 async function loadDetailSearchTerms(items) {
   await Promise.all(items.map(async item => {
-    item.slug = DETAIL_PRODUCTS.get(`${fold(item.brand)}\0${fold(item.product)}`) ?? null;
+    item.slug = item.slug ?? null;
     item.searchTerms = [];
     if (!item.slug) return;
     try {
@@ -96,6 +91,8 @@ async function loadDetailSearchTerms(items) {
       item.aliases = [detail.model, detail.productName, detail.series].filter(Boolean);
       item.searchTerms = publicDetailSearchTerms(detail);
       item.verificationState = detail.packageStatus ?? '';
+      const card = detail.images?.find(image => image.file === item.card_image);
+      if (card) item.cardImage = { src: `./detail/images/${card.file}`, alt: card.alt, note: '제조사 공식 이미지' };
     } catch { /* Public Library remains usable if one optional detail index fails. */ }
   }));
 }
@@ -107,13 +104,6 @@ if (typeof document !== 'undefined') {
   let products = [];
   let state = parseExploreState(location.search);
   let activeSuggestion = -1;
-  const publicImages = new Map([
-    ['sony\0brc-am7', { src: './detail/images/brc-am7-main.webp', alt: 'Sony BRC-AM7 검정색 본체', note: '제조사 공식 이미지' }],
-    ['yamaha\0dm7', { src: './detail/images/dm7-perspective.webp', alt: 'Yamaha DM7 디지털 믹싱 콘솔', note: '제조사 공식 이미지' }],
-    ['aja\0ki pro go2', { src: './detail/images/ki-pro-go2-main.webp', alt: 'AJA Ki Pro GO2 레코더', note: '제조사 공식 이미지' }],
-    ['panasonic\0pt-mz17k', { src: './detail/images/pt-mz17k-perspective.webp', alt: 'Panasonic PT-MZ17K 프로젝터', note: '제조사 공식 이미지' }],
-    ['logitech\0rally bar', { src: './detail/images/rally-bar-front.webp', alt: 'Logitech Rally Bar 그래파이트', note: '제조사 공식 이미지' }]
-  ]);
 
   const hasExploration = () => Boolean(state.query || state.topCategory || state.brand || state.categories.length || state.resource);
   const saveUrl = push => {
@@ -145,7 +135,7 @@ if (typeof document !== 'undefined') {
 
   function createCard(item) {
     const card = element('article', 'card');
-    const image = publicImages.get(`${fold(item.brand)}\0${fold(item.product)}`);
+    const image = item.cardImage;
     card.classList.toggle('has-media', Boolean(image));
     if (image) { const media = element(item.slug ? 'a' : 'div', 'card-media'); if (item.slug) media.href = `./detail/?product=${item.slug}`; const img = element('img'); img.src = image.src; img.alt = image.alt; img.loading = 'lazy'; media.append(img, element('span', 'card-media-note', image.note)); card.append(media); }
     card.append(element('span', 'card-brand', item.brand), element('h3', '', item.product));

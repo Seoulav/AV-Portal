@@ -49,7 +49,9 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
-    ]
+    ],
+    "slug": "dm7",
+    "card_image": "dm7-perspective.webp"
   },
   {
     "brand": "Crown",
@@ -166,7 +168,9 @@
     "kind": "equipment",
     "official_links": [
       "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
-    ]
+    ],
+    "slug": "brc-am7",
+    "card_image": "brc-am7-main.webp"
   },
   {
     "brand": "Roland",
@@ -257,7 +261,9 @@
     "kind": "equipment",
     "official_links": [
       "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
-    ]
+    ],
+    "slug": "rally-bar",
+    "card_image": "rally-bar-front.webp"
   },
   {
     "brand": "Epson",
@@ -334,7 +340,9 @@
     "kind": "equipment",
     "official_links": [
       "https://www.aja.com/products/ki-pro-go2"
-    ]
+    ],
+    "slug": "ki-pro-go2",
+    "card_image": "ki-pro-go2-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -344,6 +352,8 @@
       "대형 공간용 레이저 프로젝터"
     ],
     "kind": "equipment",
-    "official_links": []
+    "official_links": [],
+    "slug": "pt-mz17k",
+    "card_image": "pt-mz17k-perspective.webp"
   }
 ]
