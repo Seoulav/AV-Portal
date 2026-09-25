@@ -89,7 +89,8 @@ export const derivedCatalogFields = ['slug', 'card_image', 'preview_image', 'pre
 export const previewImageScopes = ['series'];
 
 // 값이 있을 때만 넣는 공개 필드. link_scope는 공식 링크가 제품군 페이지일 때만 'series'로 둔다.
-export const optionalCatalogFields = ['link_scope'];
+// manual_link는 제조사 서버의 매뉴얼·사양서 URL만 저장한다(파일 재호스핑 없음). official_links와 달리 PDF를 허용한다.
+export const optionalCatalogFields = ['link_scope', 'manual_link'];
 export const linkScopes = ['series'];
 
 export function stripDerivedCatalogFields(item) {

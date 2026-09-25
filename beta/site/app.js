@@ -153,6 +153,7 @@ if (typeof document !== 'undefined') {
     const actions = element('div', 'card-actions');
     if (item.slug) { const detail = element('a', 'detail-link', '제품 상세 보기'); detail.href = `./detail/?product=${item.slug}`; detail.addEventListener('click', saveScroll); actions.append(detail); }
     const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', item.link_scope === 'series' ? '제조사 제품군 페이지 ↗' : '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
+    if (item.manual_link) { const link = element('a', 'manual-link', '제조사 매뉴얼 ↗'); link.href = item.manual_link; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     card.append(actions); return card;
   }
 

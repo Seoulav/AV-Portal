@@ -83,6 +83,14 @@ for (const item of catalog) {
     assert.equal(url.password, '');
     assert.ok(!/\.pdf$/i.test(url.pathname));
   }
+  if (item.manual_link !== undefined) {
+    assert.ok(typeof item.manual_link === 'string' && item.manual_link.trim(), `${item.product}: 매뉴얼 링크`);
+    const manualUrl = new URL(item.manual_link);
+    assert.equal(manualUrl.protocol, 'https:');
+    assert.equal(manualUrl.username, '');
+    assert.equal(manualUrl.password, '');
+    assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
+  }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');
     assert.ok(group1Images[item.slug], `${item.slug}: 검토된 이미지 매니페스트 없음`);
