@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildVersionMetadata, formatVersionLabel } from '../beta/system-version.mjs';
+import { buildVersionMetadata, formatVersionLabel, isMainModule } from '../beta/system-version.mjs';
 
 test('deployment metadata produces a stable visible system version', () => {
   const metadata = buildVersionMetadata({
@@ -18,6 +18,12 @@ test('deployment metadata produces a stable visible system version', () => {
     deployedAt: '2026-09-25T08:30:00.000Z'
   });
   assert.equal(formatVersionLabel(metadata), 'SYSTEM v0.1.0 · build 82 · 0123456');
+});
+
+test('deployment script recognizes direct execution on Windows and Linux', () => {
+  assert.equal(isMainModule('file:///C:/repo/beta/system-version.mjs', 'C:\\repo\\beta\\system-version.mjs'), true);
+  assert.equal(isMainModule('file:///home/runner/repo/beta/system-version.mjs', '/home/runner/repo/beta/system-version.mjs'), true);
+  assert.equal(isMainModule('file:///home/runner/repo/beta/system-version.mjs', '/home/runner/repo/tests/importer.mjs'), false);
 });
 
 test('home and product detail include the shared system version badge', async () => {

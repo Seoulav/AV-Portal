@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 export function buildVersionMetadata({ packageVersion, runNumber, sha, deployedAt }) {
   return {
@@ -14,6 +15,16 @@ export function formatVersionLabel(metadata) {
   return `SYSTEM v${metadata.version} · build ${metadata.build} · ${metadata.revision}`;
 }
 
+function executableFileUrl(argvPath) {
+  if (/^[a-z]:[\\/]/i.test(argvPath)) return new URL(`file:///${argvPath.replaceAll('\\', '/')}`).href;
+  if (argvPath.startsWith('/')) return new URL(`file://${argvPath}`).href;
+  return pathToFileURL(resolve(argvPath)).href;
+}
+
+export function isMainModule(moduleUrl, argvPath) {
+  return Boolean(argvPath) && executableFileUrl(argvPath) === moduleUrl;
+}
+
 async function stampVersion() {
   const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
   const metadata = buildVersionMetadata({
@@ -26,6 +37,6 @@ async function stampVersion() {
   console.log(formatVersionLabel(metadata));
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(`file:///${process.argv[1].replaceAll('\\', '/')}`))) {
+if (isMainModule(import.meta.url, process.argv[1])) {
   await stampVersion();
 }
