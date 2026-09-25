@@ -144,10 +144,10 @@ test('connector presentation separates physical port counts from channel descrip
     protocol: 'AES/EBU, SRC', availability: 'Fixed', condition: 'DM7 본체', verification: 'VERIFIED'
   }), {
     displayConnector: 'XLR 디지털 오디오',
-    portCount: '—',
+    portCount: '미확인',
     channelSignal: '2 stereo pairs / 4ch · AES/EBU',
     specificationCondition: 'AES/EBU, SRC · 조건: DM7 본체',
-    flags: ['조건 있음']
+    flags: []
   });
   assert.deepEqual(connectorPresentation({
     connector: 'USB-C', signal: 'Audio / MIDI / DAW control', direction: 'I/O', quantity: '1',
@@ -157,7 +157,7 @@ test('connector presentation separates physical port counts from channel descrip
     portCount: '1',
     channelSignal: 'Audio / MIDI / DAW control',
     specificationCondition: 'USB 2.0, 18×18 · 조건: Yamaha driver 조건',
-    flags: ['조건 있음']
+    flags: []
   });
 });
 
@@ -167,16 +167,16 @@ test('connector presentation normalizes confirmed names and omits empty conditio
   });
   assert.equal(connectorPresentation({ connector: 'D-sub 15-hole', direction: 'I/O', quantity: '1' }).displayConnector, 'D-sub 15핀');
   assert.equal(connectorPresentation({ connector: 'XLR 4-pin', direction: 'IN', quantity: '2' }).displayConnector, 'XLR 4핀 입력');
-  assert.deepEqual(connectorPresentation({ connector: 'PY slot', quantity: '1', availability: 'Optional card', condition: '카드별 사양 분리' }).flags, ['카드 필요', '조건 있음']);
+  assert.deepEqual(connectorPresentation({ connector: 'PY slot', quantity: '1', availability: 'Optional card', condition: '카드별 사양 분리' }).flags, ['카드 필요']);
 });
 
 test('connector presentation keeps unresolved quantity markers out of channel data', () => {
   const review = connectorPresentation({ connector: 'LAN connector', quantity: 'REVIEW REQUIRED', signal: 'Network control', verification: 'PARTIAL' });
-  assert.equal(review.portCount, '—');
+  assert.equal(review.portCount, '미확인');
   assert.equal(review.channelSignal, 'Network control');
   assert.deepEqual(review.flags, ['확인 필요']);
   const missing = connectorPresentation({ connector: 'MISSING', quantity: 'MISSING', signal: 'Serial / remote control', verification: 'MISSING' });
-  assert.equal(missing.portCount, '—');
+  assert.equal(missing.portCount, '미확인');
   assert.equal(missing.channelSignal, 'Serial / remote control');
 });
 

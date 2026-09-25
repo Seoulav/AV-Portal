@@ -70,11 +70,10 @@ export function connectorPresentation(item = {}) {
   if (/optional.*card|card.*required/i.test(availability)) flags.push('카드 필요');
   else if (/optional.*module|module.*required/i.test(availability)) flags.push('모듈 필요');
   else if (/^optional\b|^option\b/i.test(availability)) flags.push('옵션');
-  if (condition) flags.push('조건 있음');
   if (unresolved) flags.push('확인 필요');
   return {
     displayConnector: connectorDisplayName(item),
-    portCount: numericQuantity ? quantity : '—',
+    portCount: numericQuantity ? quantity : '미확인',
     channelSignal: [descriptiveQuantity, item.signal].filter(Boolean).join(' · ') || '—',
     specificationCondition: [protocol, condition ? `조건: ${condition}` : ''].filter(Boolean).join(' · ') || (unresolved ? '확인 필요' : '—'),
     flags

@@ -75,6 +75,8 @@ test('explore state round-trips through URL parameters', () => {
 test('home and detail templates expose the approved navigation structure', async () => {
   const home = await readFile(new URL('../beta/site/index.html', import.meta.url), 'utf8');
   const detail = await readFile(new URL('../prototype/brc-am7/index.html', import.meta.url), 'utf8');
+  const detailApp = await readFile(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
+  const detailStyles = await readFile(new URL('../prototype/brc-am7/styles.css', import.meta.url), 'utf8');
   assert.match(home, /id="global-search"/);
   assert.match(home, /id="header-search-form"[^>]+hidden/);
   assert.match(home, /id="top-categories"/);
@@ -83,4 +85,7 @@ test('home and detail templates expose the approved navigation structure', async
   for (const id of ['overview', 'features', 'specifications', 'io', 'related-products', 'documents', 'sources']) assert.match(detail, new RegExp(`href="#${id}"`));
   assert.match(detail, /<th>포트 수<\/th><th>채널·신호<\/th><th>규격·조건<\/th>/);
   assert.match(detail, /id="connector-mobile-groups"/);
+  assert.match(detailApp, /mobileHeading\.setAttribute\('aria-expanded', String\(mobileGroup\.open\)\)/);
+  assert.match(detailApp, /mobileGroup\.addEventListener\('toggle'/);
+  assert.match(detailStyles, /\.connector-mobile-group\[open\]>\.connector-group-heading::after\{content:'−'\}/);
 });

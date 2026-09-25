@@ -383,7 +383,9 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
   mobileGroup.id = groupId;
   mobileGroup.open = groupIndex === 0;
   const mobileHeading = node('summary', 'connector-group-heading');
+  mobileHeading.setAttribute('aria-expanded', String(mobileGroup.open));
   mobileHeading.append(node('strong', '', groupData.label), node('span', '', `${groupData.entries.length}종`));
+  mobileGroup.addEventListener('toggle', () => mobileHeading.setAttribute('aria-expanded', String(mobileGroup.open)));
   mobileGroup.append(mobileHeading);
 
   for (const item of groupData.entries) {
@@ -394,7 +396,7 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
     nameCell.append(node('strong', '', item.displayConnector));
     const flags = node('span', 'connector-flags');
     for (const label of item.flags) {
-      const className = label === '확인 필요' ? 'needs-review' : label === '조건 있음' ? 'has-condition' : 'is-option';
+      const className = label === '확인 필요' ? 'needs-review' : 'is-option';
       flags.append(conditionBadge(className, label));
     }
     nameCell.append(flags);
@@ -403,7 +405,7 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
 
     const mobileRow = node('div', 'connector-mobile-row');
     const mobileIdentity = node('div'); mobileIdentity.append(node('strong', '', item.displayConnector), flags.cloneNode(true), node('small', '', item.channelSignal));
-    const portText = item.portCount === '—' ? '포트 수 미확인' : `포트 ${item.portCount}`;
+    const portText = item.portCount === '미확인' ? '포트 수 미확인' : `포트 ${item.portCount}`;
     mobileRow.append(mobileIdentity, node('span', 'connector-direction-text', item.directionLabel), node('b', '', portText));
     mobileGroup.append(mobileRow);
 
