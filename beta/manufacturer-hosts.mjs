@@ -8,9 +8,11 @@ export const manufacturerHosts = {
   Epson: ['epson.co.kr', 'goepson.com'],
   Logitech: ['logitech.com'],
   NETGEAR: ['netgear.com'],
+  NovaStar: ['novastar.tech'],
   Panasonic: ['panasonic.com'],
   Powersoft: ['powersoft.com'],
   Roland: ['roland.com'],
+  'Ross Video': ['rossvideo.com'],
   Shure: ['shure.com', 'shureweb.eu'],
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
   Yamaha: ['yamaha.com']

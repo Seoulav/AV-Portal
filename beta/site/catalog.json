@@ -100,7 +100,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -113,7 +114,8 @@
     "kind": "equipment",
     "official_links": [
       "https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -126,7 +128,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -139,7 +142,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -152,7 +156,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -165,7 +170,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA874"
   },
   {
     "brand": "Sony",
@@ -241,7 +247,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/signal-processing/ultriscape/"
-    ]
+    ],
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf"
   },
   {
     "brand": "NETGEAR",
@@ -298,7 +305,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2220B/s/SPT_V11HB05851#manuals"
   },
   {
     "brand": "Epson",
@@ -311,7 +319,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790SU/s/SPT_V11HB30051#manuals"
   },
   {
     "brand": "Epson",
@@ -324,7 +333,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals"
   },
   {
     "brand": "Epson",
@@ -941,7 +951,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -955,7 +966,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -969,7 +981,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -983,7 +996,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -997,7 +1011,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1011,7 +1026,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1025,7 +1041,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1039,7 +1056,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1053,7 +1071,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "Colorlight",
@@ -1190,7 +1209,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
   },
   {
     "brand": "Ross Video",
@@ -1246,7 +1266,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
   },
   {
     "brand": "Yamaha",
@@ -1376,7 +1397,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1389,7 +1411,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-322-a"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1402,7 +1425,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-602-a"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1415,7 +1439,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1428,7 +1453,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1441,7 +1467,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1454,7 +1481,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1467,7 +1495,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -1480,7 +1509,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/A900-GM"
   },
   {
     "brand": "Shure",
@@ -1508,7 +1538,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1522,7 +1553,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1536,7 +1568,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1550,7 +1583,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1563,7 +1597,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA844SWBplus"
   },
   {
     "brand": "Shure",
@@ -1576,7 +1611,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX400D"
   },
   {
     "brand": "JBL",
@@ -1954,7 +1990,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PQ2216B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals"
   },
   {
     "brand": "Epson",
@@ -1967,7 +2004,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PQ2213B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals"
   },
   {
     "brand": "Epson",
@@ -1980,7 +2018,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/c/EB-L895E/s/SPT_V11HB24151#manuals"
   },
   {
     "brand": "Epson",
@@ -1993,7 +2032,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/c/EB-L795SE/s/SPT_V11HB26151#manuals"
   },
   {
     "brand": "Epson",
@@ -2006,7 +2046,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L695SE/s/SPT_V11HB36151#manuals"
   },
   {
     "brand": "Epson",
@@ -2019,7 +2060,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU2216B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals"
   },
   {
     "brand": "Epson",
@@ -2032,7 +2074,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU2213B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals"
   },
   {
     "brand": "Epson",
@@ -2045,7 +2088,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2010B-NL/s/SPT_V11HA52840#manuals"
   },
   {
     "brand": "Epson",
@@ -2058,7 +2102,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU1008B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals"
   },
   {
     "brand": "Epson",
@@ -2071,7 +2116,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L895U/s/SPT_V11HB27151#manuals"
   },
   {
     "brand": "Epson",
@@ -2084,7 +2130,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790U/s/SPT_V11HB28051#manuals"
   },
   {
     "brand": "Epson",
@@ -2097,7 +2144,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L260F/s/SPT_V11HA69051#manuals"
   },
   {
     "brand": "Panasonic",
@@ -2337,7 +2385,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2351,7 +2400,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2365,7 +2415,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2379,7 +2430,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "Ross Video",
@@ -2393,7 +2445,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf"
   },
   {
     "brand": "Ross Video",
@@ -2407,7 +2460,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
   },
   {
     "brand": "Ross Video",
@@ -2421,7 +2475,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf"
   },
   {
     "brand": "BSS Audio",
@@ -2729,7 +2784,8 @@
     "official_links": [
       "https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
   },
   {
     "brand": "Shure",
@@ -2743,7 +2799,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
   },
   {
     "brand": "Yamaha",
@@ -3037,7 +3094,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3051,7 +3109,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3065,7 +3124,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3079,7 +3139,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3093,7 +3154,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-804"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -3107,7 +3169,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -3121,7 +3184,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/microphones/mxa925"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXA925"
   },
   {
     "brand": "Shure",
@@ -3135,7 +3199,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3149,7 +3214,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3163,7 +3229,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3177,7 +3244,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3191,7 +3259,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3205,7 +3274,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3219,7 +3289,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3233,7 +3304,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3247,7 +3319,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3261,7 +3334,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3275,7 +3349,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3289,7 +3364,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3303,7 +3379,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua864"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA864"
   },
   {
     "brand": "Shure",
@@ -3317,7 +3394,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/microphones/mx392"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX39x"
   },
   {
     "brand": "Lightware",
@@ -3357,7 +3435,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
   },
   {
     "brand": "Ross Video",
@@ -3371,7 +3450,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20SFP%20Modules%20Guide%20(2101DR-008).pdf"
   },
   {
     "brand": "Shure",
@@ -3384,7 +3464,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua845uwb"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA845UWB"
   },
   {
     "brand": "NETGEAR",
