@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-connectors-1';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-connectors-2';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -103,7 +103,7 @@ $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
 $('#overview-heading').hidden = !data.presentation.overviewHeading;
 $('#spec-intro').textContent = '핵심 값만 먼저 표시합니다. 적용 조건은 전체 사양에서 확인하세요.';
-$('#io-intro').textContent = '연결 구성을 그룹별로 정리했습니다. 상세 보기에서 조건과 근거를 확인하세요.';
+$('#io-intro').textContent = '주요 연결만 먼저 표시합니다. 전체 보기에서 모든 단자와 상세 근거를 확인하세요.';
 $('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
 $('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
 $('#footer-manufacturer').textContent = data.manufacturer;
@@ -308,6 +308,7 @@ for (const [group, specifications] of grouped) {
 }
 
 $('#io-count').textContent = String(data.io.length);
+$('#all-connector-count').textContent = String(data.io.length);
 const rearItem = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
 const rearPanel = $('#rear-connector-panel');
 const rearUnavailable = $('#rear-unavailable');
@@ -329,13 +330,27 @@ if (rearItem) {
 } else hideRearPanel();
 
 const conditionBadge = (className, text) => node('span', `connector-flag ${className}`, text);
+for (const item of data.keyConnectors) {
+  const row = node('div', 'key-connector-row');
+  const identity = node('div', 'key-connector-identity');
+  identity.append(node('strong', '', item.connector || '미확인'), node('small', '', item.protocol || item.signal || ''));
+  row.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`));
+  $('#key-connector-list').append(row);
+}
+if (!data.keyConnectors.length) $('#key-connector-list').append(node('p', 'rear-unavailable', '확인된 주요 연결 단자가 없습니다.'));
+const mobileConnectors = matchMedia('(max-width: 650px)');
+const updateKeyConnectorCount = () => {
+  $('#key-connector-count').textContent = String(Math.min(data.keyConnectors.length, mobileConnectors.matches ? 5 : 6));
+};
+updateKeyConnectorCount();
+mobileConnectors.addEventListener('change', updateKeyConnectorCount);
 let connectorIndex = 0;
 for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
   const groupId = `connector-group-${groupData.key}-${groupIndex}`;
-  const summaryLink = node('a', 'io-summary-chip');
-  summaryLink.href = '#' + groupId;
-  summaryLink.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
-  $('#io-summary').append(summaryLink);
+  const summaryItem = node('span', 'io-summary-chip');
+  summaryItem.setAttribute('role', 'listitem');
+  summaryItem.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
+  $('#io-summary').append(summaryItem);
 
   const group = node('details', 'connector-group panel');
   group.id = groupId;
@@ -451,6 +466,7 @@ function hashTarget() {
 }
 function openForTarget(target) {
   if (target && $('#all-specs').contains(target)) $('#all-specs').open = true;
+  if (target && $('#all-connectors').contains(target)) $('#all-connectors').open = true;
   if (target) {
     const disclosure = target.matches?.('.connector-group, .connector-detail') ? target : target.closest?.('.connector-group, .connector-detail');
     if (disclosure instanceof HTMLDetailsElement) disclosure.open = true;

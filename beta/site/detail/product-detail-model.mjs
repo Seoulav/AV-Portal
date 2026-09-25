@@ -51,6 +51,22 @@ export function prepareConnectorGroups(ioGroups = []) {
   return [...grouped.values()];
 }
 
+export function selectKeyConnectors(connectorGroups = [], limit = 6) {
+  if (limit <= 0) return [];
+  const eligibleGroups = connectorGroups.map(group => ({
+    ...group,
+    entries: group.entries.filter(item => item.verification !== 'MISSING' && !/^missing$/i.test(String(item.connector).trim()))
+  }));
+  const selected = [];
+  const add = item => {
+    if (item && selected.length < limit && !selected.includes(item)) selected.push(item);
+  };
+  for (const item of eligibleGroups[0]?.entries.slice(0, 2) ?? []) add(item);
+  for (const group of eligibleGroups.slice(1)) add(group.entries[0]);
+  for (const group of eligibleGroups) for (const item of group.entries) add(item);
+  return selected;
+}
+
 export function prepareProductDetail(input) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
@@ -71,6 +87,7 @@ export function prepareProductDetail(input) {
   };
   const ioGroupBySignal = new Map((presentation.ioSignalGroups ?? []).flatMap(({ name, signals }) => signals.map(signal => [signal, name])));
   const ioGroups = group(io, item => item.group ?? ioGroupBySignal.get(item.signal) ?? item.signal);
+  const connectorGroups = prepareConnectorGroups(ioGroups);
   return {
     ...input,
     images,
@@ -89,7 +106,8 @@ export function prepareProductDetail(input) {
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups: group(specifications, item => item.group),
     ioGroups,
-    connectorGroups: prepareConnectorGroups(ioGroups),
+    connectorGroups,
+    keyConnectors: selectKeyConnectors(connectorGroups),
     rearIndex: images.findIndex(item => item.role?.toLowerCase() === 'rear')
   };
 }
