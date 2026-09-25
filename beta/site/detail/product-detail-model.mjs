@@ -136,6 +136,33 @@ export function summarizeQuickDocuments(quickDocuments = []) {
   return summary;
 }
 
+const VERIFICATION_STATUS_ORDER = ['VERIFIED', 'FOUND', 'READY', 'PARTIAL', 'REVIEW REQUIRED', 'CONFLICTED', 'MISSING'];
+const VERIFICATION_STATUS_LABELS = {
+  VERIFIED: '검증',
+  FOUND: '자료 있음',
+  READY: '준비됨',
+  PARTIAL: '일부',
+  'REVIEW REQUIRED': '검토 중',
+  CONFLICTED: '충돌 있음',
+  MISSING: '미확인'
+};
+
+export function summarizeVerificationStatuses(items = []) {
+  const counts = new Map();
+  for (const item of items) {
+    const status = item?.verification ?? 'MISSING';
+    counts.set(status, (counts.get(status) ?? 0) + 1);
+  }
+  const statuses = [...VERIFICATION_STATUS_ORDER, ...[...counts.keys()].filter(status => !VERIFICATION_STATUS_ORDER.includes(status))];
+  return {
+    total: items.length,
+    verified: counts.get('VERIFIED') ?? 0,
+    entries: statuses
+      .filter(status => counts.has(status))
+      .map(status => ({ status, label: VERIFICATION_STATUS_LABELS[status] ?? status, count: counts.get(status) }))
+  };
+}
+
 export function prepareProductDetail(input) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
