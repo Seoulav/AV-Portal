@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-mobile-1';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-navigation-2';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -72,6 +72,11 @@ try {
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
 document.body.classList.add('summary-detail');
 const mobileDetail = matchMedia('(max-width: 650px)');
+$('#detail-search-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const query = $('#detail-search').value.trim();
+  if (query) location.href = (productKey ? '../' : 'https://seoulav.github.io/AV-Portal/') + `?q=${encodeURIComponent(query)}`;
+});
 if (data.presentation.visualVariant === 'brc-pictogram') {
   document.body.classList.add('brc-pictogram');
   document.querySelector('meta[name="color-scheme"]').content = 'light';
@@ -104,7 +109,7 @@ $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
 $('#overview-heading').hidden = !data.presentation.overviewHeading;
 $('#spec-intro').textContent = '핵심 값만 먼저 표시합니다. 적용 조건은 전체 사양에서 확인하세요.';
-$('#io-intro').textContent = '주요 연결만 먼저 표시합니다. 전체 보기에서 모든 단자와 상세 근거를 확인하세요.';
+$('#io-intro').textContent = '전체 연결 단자를 표 또는 그룹 목록으로 확인하고, 출처와 조건은 근거 및 검증 보기에서 확인하세요.';
 $('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
 $('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
 $('#footer-manufacturer').textContent = data.manufacturer;
@@ -365,61 +370,47 @@ if (rearItem) {
 } else hideRearPanel();
 
 const conditionBadge = (className, text) => node('span', `connector-flag ${className}`, text);
-for (const item of data.keyConnectors) {
-  const row = node('div', 'key-connector-row');
-  const identity = node('div', 'key-connector-identity');
-  identity.append(node('strong', '', item.connector || '미확인'), node('small', '', item.protocol || item.signal || ''));
-  row.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`));
-  $('#key-connector-list').append(row);
-}
-if (!data.keyConnectors.length) $('#key-connector-list').append(node('p', 'rear-unavailable', '확인된 주요 연결 단자가 없습니다.'));
-const updateKeyConnectorCount = () => {
-  $('#key-connector-count').textContent = String(Math.min(data.keyConnectors.length, mobileDetail.matches ? 5 : 6));
-};
-updateKeyConnectorCount();
-mobileDetail.addEventListener('change', updateKeyConnectorCount);
 let connectorIndex = 0;
 for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
   const groupId = `connector-group-${groupData.key}-${groupIndex}`;
   const summaryItem = node('span', 'io-summary-chip');
   summaryItem.setAttribute('role', 'listitem');
-  summaryItem.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
+  summaryItem.append(node('span', '', groupData.label), node('strong', '', `${groupData.entries.length}종`));
   $('#io-summary').append(summaryItem);
 
-  const group = node('details', 'connector-group panel');
-  group.id = groupId;
-  group.open = !mobileDetail.matches || groupIndex === 0;
-  const heading = node('summary', 'connector-group-heading');
-  const headingText = node('span');
-  headingText.append(node('strong', '', groupData.label), node('small', '', `${groupData.entries.length}개`));
-  const reviewCount = groupData.entries.filter(item => ['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)).length;
-  heading.append(headingText);
-  if (reviewCount) heading.append(node('span', 'connector-review-count', `검토 ${reviewCount}`));
-  group.append(heading);
-
-  const columns = node('div', 'connector-columns');
-  for (const label of ['연결 단자', '방향', '수량', '규격']) columns.append(node('span', '', label));
-  group.append(columns);
+  const mobileGroup = node('details', 'connector-mobile-group panel');
+  mobileGroup.id = groupId;
+  mobileGroup.open = groupIndex === 0;
+  const mobileHeading = node('summary', 'connector-group-heading');
+  mobileHeading.setAttribute('aria-expanded', String(mobileGroup.open));
+  mobileHeading.append(node('strong', '', groupData.label), node('span', '', `${groupData.entries.length}종`));
+  mobileGroup.addEventListener('toggle', () => mobileHeading.setAttribute('aria-expanded', String(mobileGroup.open)));
+  mobileGroup.append(mobileHeading);
 
   for (const item of groupData.entries) {
     const itemId = `connector-detail-${connectorIndex++}`;
-    const row = node('article', 'connector-item');
-    const primary = node('div', 'connector-primary');
-    const name = node('strong', 'connector-name', item.connector || '미확인');
+    const tableRow = node('tr', 'connector-table-row');
+    tableRow.append(node('td', 'connector-group-cell', groupData.label));
+    const nameCell = node('td', 'connector-name-cell');
+    nameCell.append(node('strong', '', item.displayConnector));
     const flags = node('span', 'connector-flags');
-    if (item.availability && !/^fixed$/i.test(item.availability) && item.availability !== '—') {
-      flags.append(conditionBadge('is-option', /option|module/i.test(item.availability) ? '옵션' : '조건 있음'));
+    for (const label of item.flags) {
+      const className = label === '확인 필요' ? 'needs-review' : 'is-option';
+      flags.append(conditionBadge(className, label));
     }
-    if (item.condition && item.condition !== '—') flags.append(conditionBadge('has-condition', '조건 있음'));
-    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)) flags.append(conditionBadge('needs-review', '검토 중'));
-    const identity = node('div', 'connector-identity');
-    identity.append(name, flags);
-    primary.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`), node('span', 'connector-protocol', item.protocol || '—'));
-    row.append(primary);
+    nameCell.append(flags);
+    tableRow.append(nameCell, node('td', 'connector-direction-text', item.directionLabel), node('td', 'connector-port-count', item.portCount), node('td', 'connector-channel-signal', item.channelSignal), node('td', 'connector-purpose', item.specificationCondition));
+    $('#connector-table-body').append(tableRow);
 
-    const detail = node('details', 'connector-detail');
+    const mobileRow = node('div', 'connector-mobile-row');
+    const mobileIdentity = node('div'); mobileIdentity.append(node('strong', '', item.displayConnector), flags.cloneNode(true), node('small', '', item.channelSignal));
+    const portText = item.portCount === '미확인' ? '포트 수 미확인' : `포트 ${item.portCount}`;
+    mobileRow.append(mobileIdentity, node('span', 'connector-direction-text', item.directionLabel), node('b', '', portText));
+    mobileGroup.append(mobileRow);
+
+    const detail = node('details', 'connector-detail connector-evidence-item');
     detail.id = itemId;
-    detail.append(node('summary', '', '상세 보기'));
+    detail.append(node('summary', '', `${groupData.label} · ${item.connector || '미확인'} · ${item.directionLabel} ×${item.quantity ?? '—'}`));
     const detailGrid = node('dl', 'connector-detail-grid');
     const addDetail = (label, value, showUnknown = false) => {
       if (!value || (!showUnknown && value === '—')) return;
@@ -436,17 +427,20 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
     verification.append(node('span', '', '검증'), badge(item.verification ?? 'REVIEW REQUIRED'));
     if (item.source) verification.append(sourceReference(item.source));
     detail.append(detailGrid, verification);
-    row.append(detail);
-    group.append(row);
+    $('#io-list').append(detail);
   }
   for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => groupData.sourceGroups.includes(note.group))) {
     const note = node('p', 'connector-group-note', groupNote.text + ' ');
     if (groupNote.source) note.append(sourceReference(groupNote.source));
-    group.append(note);
+    mobileGroup.append(note);
+    $('#io-list').append(note.cloneNode(true));
   }
-  $('#io-list').append(group);
+  $('#connector-mobile-groups').append(mobileGroup);
 }
-if (!data.connectorGroups.length) $('#io-list').append(node('p', 'rear-unavailable', '확인된 연결 단자 정보가 없습니다.'));
+if (!data.connectorGroups.length) {
+  $('#connector-table').hidden = true;
+  $('#connector-mobile-groups').append(node('p', 'rear-unavailable', '확인된 연결 단자 정보가 없습니다.'));
+}
 for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
@@ -482,7 +476,7 @@ for (const issue of data.issues) {
 
 const navigationLinks = [...$('#detail-tabs').querySelectorAll('a')];
 function updateNavigation(target) {
-  const section = target?.closest('#overview, #specifications, #io, #documents') ?? $('#overview');
+  const section = target?.closest('#overview, #features, #specifications, #io, #related-products, #documents, #sources') ?? $('#overview');
   for (const link of navigationLinks) {
     const active = link.hash === '#' + section.id;
     link.classList.toggle('is-active', active);
@@ -500,11 +494,11 @@ function hashTarget() {
 }
 function openForTarget(target) {
   if (target && $('#all-specs').contains(target)) $('#all-specs').open = true;
-  if (target && $('#all-connectors').contains(target)) $('#all-connectors').open = true;
+  if (target && $('#connector-evidence').contains(target)) $('#connector-evidence').open = true;
   if (target) {
-    const disclosure = target.matches?.('.connector-group, .connector-detail') ? target : target.closest?.('.connector-group, .connector-detail');
+    const disclosure = target.matches?.('.connector-mobile-group, .connector-detail') ? target : target.closest?.('.connector-mobile-group, .connector-detail');
     if (disclosure instanceof HTMLDetailsElement) disclosure.open = true;
-    const parentGroup = disclosure?.closest?.('.connector-group');
+    const parentGroup = disclosure?.closest?.('.connector-mobile-group');
     if (parentGroup instanceof HTMLDetailsElement) parentGroup.open = true;
   }
   if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
@@ -517,8 +511,12 @@ window.addEventListener('scroll', () => {
   if (navigationFrame) return;
   navigationFrame = requestAnimationFrame(() => {
     navigationFrame = 0;
-    const current = [...document.querySelectorAll('#overview, #specifications, #io, #documents')]
-      .filter(section => section.getBoundingClientRect().top <= 130).at(-1);
+    const visible = [...document.querySelectorAll('#overview, #features, #specifications, #io, #related-products, #documents, #sources')]
+      .filter(section => section.getBoundingClientRect().top <= 130);
+    let current = visible.at(-1);
+    if (current === $('#features')) {
+      current = location.hash === '#features' ? current : $('#overview');
+    }
     updateNavigation(current);
   });
 }, { passive: true });
