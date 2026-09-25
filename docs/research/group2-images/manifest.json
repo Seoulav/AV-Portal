@@ -13,12 +13,13 @@
         "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
         "sourceFile": "front-322a-orig.img",
         "officialSource": true,
-        "modelMatch": "REVIEW REQUIRED",
+        "modelMatch": "SERIES",
         "originalSize": "1024×500",
         "resolution": "1024×500",
         "bytes": 10608,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인",
+        "modelMatchNote": "Powersoft가 Mezzo 322 A·322 AD·324 AD 세 제품 페이지에 같은 파일을 og:image·schema.org Product.image로 쓴다. 전면 패널에 모델 표기가 없는 계열 공용 전면 사진이다."
       }
     ]
   },
@@ -41,7 +42,7 @@
         "resolution": "1800×1198",
         "bytes": 108956,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Front",
@@ -57,7 +58,7 @@
         "resolution": "1800×914",
         "bytes": 92294,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Rear",
@@ -73,7 +74,7 @@
         "resolution": "1800×571",
         "bytes": 73280,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Perspective",
@@ -89,7 +90,7 @@
         "resolution": "1800×1203",
         "bytes": 110922,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   },
@@ -112,7 +113,7 @@
         "resolution": "1800×1272",
         "bytes": 52374,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Front",
@@ -128,7 +129,7 @@
         "resolution": "1800×1272",
         "bytes": 19584,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Rear",
@@ -144,7 +145,7 @@
         "resolution": "1800×1272",
         "bytes": 29804,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Perspective",
@@ -160,7 +161,7 @@
         "resolution": "1800×1272",
         "bytes": 63268,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   },
@@ -183,7 +184,7 @@
         "resolution": "690×460",
         "bytes": 8768,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Front",
@@ -199,7 +200,7 @@
         "resolution": "690×460",
         "bytes": 3982,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Rear",
@@ -215,7 +216,7 @@
         "resolution": "690×460",
         "bytes": 14002,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Perspective",
@@ -231,7 +232,7 @@
         "resolution": "690×460",
         "bytes": 14400,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   },
@@ -254,7 +255,7 @@
         "resolution": "1800×1224",
         "bytes": 187614,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Front",
@@ -270,7 +271,7 @@
         "resolution": "446×333",
         "bytes": 10820,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   },
@@ -293,7 +294,7 @@
         "resolution": "1800×1800",
         "bytes": 118900,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Perspective",
@@ -309,7 +310,7 @@
         "resolution": "1800×1800",
         "bytes": 87212,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Side",
@@ -325,7 +326,7 @@
         "resolution": "1800×1800",
         "bytes": 61338,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Top",
@@ -341,7 +342,7 @@
         "resolution": "1800×1800",
         "bytes": 148212,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Bottom",
@@ -357,7 +358,7 @@
         "resolution": "1800×1800",
         "bytes": 147106,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   },
@@ -367,20 +368,21 @@
     "officialPage": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/",
     "images": [
       {
-        "role": "Main",
-        "file": "gsm4248px-main.webp",
-        "alt": "NETGEAR GSM4248PX 스위치 포트면 원근 이미지",
+        "role": "Rear",
+        "file": "gsm4248px-rear.webp",
+        "alt": "NETGEAR GSM4248PX 후면 포트면 원근 이미지",
         "provider": "NETGEAR",
         "model": "GSM4248PX",
         "sourceUrl": "https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32",
         "sourceFile": "b6.img",
         "officialSource": true,
-        "modelMatch": "REVIEW REQUIRED",
+        "modelMatch": "VERIFIED",
         "originalSize": "779×536",
         "resolution": "779×536",
         "bytes": 15850,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인",
+        "modelMatchNote": "PX 전용 자산(B6_gsm4248px_32, GSM4248P는 B6_gsm4248p_32로 별도). NETGEAR가 제품을 rear-facing ports로 설명하므로 포트면을 후면으로 배정했다."
       }
     ]
   },
@@ -403,7 +405,7 @@
         "resolution": "1800×1005",
         "bytes": 58340,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       },
       {
         "role": "Rear",
@@ -419,7 +421,7 @@
         "resolution": "1800×775",
         "bytes": 319146,
         "verificationStatus": "FOUND",
-        "publicationStatus": "미게시 · 사용자 게시 승인 대기 · 제조사 재사용 권리 미확인"
+        "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
       }
     ]
   }
