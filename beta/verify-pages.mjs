@@ -2,13 +2,29 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
+import { userManuals, userManualLinkFor } from './user-manuals.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'manuals', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼 PDF: 파일명 중복 없음, 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
+{
+  const manualFiles = userManuals.map(entry => entry.file);
+  assert.equal(new Set(manualFiles).size, manualFiles.length, '사용자 업로드 매뉴얼 파일명 중복');
+  const manualsDir = new URL('manuals/', site);
+  const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
+  assert.deepEqual(onDisk.sort(), manualFiles.sort(), '업로드 매뉴얼 폴더와 목록이 다름');
+  for (const entry of userManuals) {
+    assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 매뉴얼 파일명`);
+    assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.product}: 업로드 매뉴얼 제목`);
+    const bytes = await readFile(new URL(entry.file, manualsDir));
+    assert.ok(bytes.length > 1_000, `${entry.product}: 업로드 매뉴얼 파일이 비정상적으로 작음`);
+    assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${entry.product}: PDF 형식 아님`);
+  }
+}
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
@@ -85,11 +101,18 @@ for (const item of catalog) {
   }
   if (item.manual_link !== undefined) {
     assert.ok(typeof item.manual_link === 'string' && item.manual_link.trim(), `${item.product}: 매뉴얼 링크`);
-    const manualUrl = new URL(item.manual_link);
-    assert.equal(manualUrl.protocol, 'https:');
-    assert.equal(manualUrl.username, '');
-    assert.equal(manualUrl.password, '');
-    assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
+    const uploaded = userManualLinkFor(item);
+    if (uploaded !== null) {
+      assert.equal(item.manual_link, uploaded, `${item.product}: 매뉴얼 링크가 사용자 업로드 목록과 다름`);
+    } else {
+      const manualUrl = new URL(item.manual_link);
+      assert.equal(manualUrl.protocol, 'https:');
+      assert.equal(manualUrl.username, '');
+      assert.equal(manualUrl.password, '');
+      assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
+    }
+  } else {
+    assert.equal(userManualLinkFor(item), null, `${item.product}: 사용자 업로드 매뉴얼이 있는데 manual_link가 비어 있음`);
   }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');
@@ -140,7 +163,7 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => name !== 'detail')) {
+for (const filename of files.filter(name => name !== 'detail' && name !== 'manuals')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
