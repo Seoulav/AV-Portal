@@ -1,7 +1,7 @@
 {
   "purpose": "W-20260925-B 목록 등재를 위한 분류·등급 결정표. 공개 카탈로그 자체가 아니며 제품 상세·사양·게시 권한을 확정하지 않는다.",
   "as_of": "2026-09-25",
-  "decided_by": "Work (Claude, Opus 5) — 분류 기준과 등급 구간은 이 파일이 근거다.",
+  "decided_by": "Work (Claude, Opus) — 분류 기준·등급 구간·링크 성격은 이 파일이 근거다.",
   "source": "docs/research/major-equipment-official-links-2026-09-23.json 의 source_records 중 resource_kind 가 공식 제품/시리즈 또는 공식 카드/시리즈 인 것.",
   "row_key": "원본 워크북의 시트명과 엑셀 행 번호. 워크북 자체는 로컬에 있고 이 저장소에 없다. 업체명 열은 어떤 형태로도 포함하지 않는다.",
   "taxonomy": {
@@ -82,7 +82,8 @@
     "A": 177,
     "B": 79,
     "C": 12,
-    "A_classified": 177
+    "A_classified": 177,
+    "B_classified": 79
   },
   "url_rule": "공식 URL이 여러 개인 행은 제조사 한국 도메인을 우선한다. 없으면 목록의 첫 번째를 쓴다. 카탈로그에는 항목당 한 개만 넣는다.",
   "excluded": {
@@ -105,7 +106,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|8",
@@ -121,7 +124,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|10",
@@ -137,7 +142,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|15",
@@ -153,7 +160,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|16",
@@ -169,7 +178,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|21",
@@ -185,7 +196,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|22",
@@ -201,7 +214,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|23",
@@ -217,7 +232,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|25",
@@ -233,7 +250,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|29",
@@ -249,7 +268,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|30",
@@ -265,7 +286,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|36",
@@ -281,7 +304,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|39",
@@ -297,7 +322,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|43",
@@ -313,7 +340,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|46",
@@ -329,7 +358,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|48",
@@ -345,7 +376,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|51",
@@ -361,7 +394,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "TV|53",
@@ -377,7 +412,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|7",
@@ -393,7 +430,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|8",
@@ -409,7 +448,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|9",
@@ -425,7 +466,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|10",
@@ -441,7 +484,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|11",
@@ -457,7 +502,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|13",
@@ -473,7 +520,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|14",
@@ -489,7 +538,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|15",
@@ -505,7 +556,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|16",
@@ -521,7 +574,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|17",
@@ -537,7 +592,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|20",
@@ -553,7 +610,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|21",
@@ -569,7 +628,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|22",
@@ -585,7 +646,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|23",
@@ -601,7 +664,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|24",
@@ -617,7 +682,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|25",
@@ -633,7 +700,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|26",
@@ -649,7 +718,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|27",
@@ -665,7 +736,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|28",
@@ -681,7 +754,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|29",
@@ -697,7 +772,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|30",
@@ -713,7 +790,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|32",
@@ -729,7 +808,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|33",
@@ -745,7 +826,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|34",
@@ -761,7 +844,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|35",
@@ -777,7 +862,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|36",
@@ -793,7 +880,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|37",
@@ -809,7 +898,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|38",
@@ -825,7 +916,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|40",
@@ -841,7 +934,9 @@
       ],
       "verification": [
         "VERIFIED_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|42",
@@ -857,7 +952,9 @@
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|43",
@@ -873,7 +970,9 @@
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|44",
@@ -889,7 +988,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|45",
@@ -905,7 +1006,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|46",
@@ -921,7 +1024,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|47",
@@ -937,7 +1042,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|48",
@@ -953,7 +1060,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|49",
@@ -969,7 +1078,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|50",
@@ -985,7 +1096,9 @@
       ],
       "verification": [
         "OFFICIAL_H_SERIES_CARD_LIST_MATCH"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|56",
@@ -1001,7 +1114,9 @@
       ],
       "verification": [
         "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|57",
@@ -1017,7 +1132,9 @@
       ],
       "verification": [
         "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|58",
@@ -1033,7 +1150,9 @@
       ],
       "verification": [
         "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|69",
@@ -1049,7 +1168,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|71",
@@ -1065,7 +1186,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_SECTION"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|72",
@@ -1081,7 +1204,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_SECTION"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|73",
@@ -1097,7 +1222,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_SECTION"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|134",
@@ -1113,7 +1240,9 @@
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|135",
@@ -1129,7 +1258,9 @@
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|153",
@@ -1145,7 +1276,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|154",
@@ -1161,7 +1294,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|155",
@@ -1177,7 +1312,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|158",
@@ -1193,7 +1330,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "영상|160",
@@ -1209,7 +1348,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_SPEC_EXACT_MODEL_REFERENCED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|163",
@@ -1225,7 +1366,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_CARD_SECTION"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|164",
@@ -1241,7 +1384,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|165",
@@ -1257,7 +1402,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|166",
@@ -1273,7 +1420,9 @@
       ],
       "verification": [
         "OFFICIAL_MANUAL_EXACT_MODEL_REFERENCED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|167",
@@ -1289,7 +1438,9 @@
       ],
       "verification": [
         "OFFICIAL_BROCHURE_EXACT_CODE_REFERENCED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "영상|170",
@@ -1305,7 +1456,9 @@
       ],
       "verification": [
         "OFFICIAL_EXACT_MODULE_IN_GUIDE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|45",
@@ -1321,7 +1474,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|51",
@@ -1337,7 +1492,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|56",
@@ -1353,7 +1510,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|63",
@@ -1369,7 +1528,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|67",
@@ -1385,7 +1546,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|69",
@@ -1401,7 +1564,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|75",
@@ -1417,7 +1582,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|79",
@@ -1433,7 +1600,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|80",
@@ -1449,7 +1618,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|82",
@@ -1465,7 +1636,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|83",
@@ -1481,7 +1654,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|87",
@@ -1497,7 +1672,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|88",
@@ -1513,7 +1690,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|93",
@@ -1529,7 +1708,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|94",
@@ -1545,7 +1726,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|95",
@@ -1561,7 +1744,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|96",
@@ -1577,7 +1762,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|98",
@@ -1593,7 +1780,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|99",
@@ -1609,7 +1798,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|100",
@@ -1625,7 +1816,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|102",
@@ -1641,7 +1834,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|109",
@@ -1657,7 +1852,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_VARIANT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|110",
@@ -1673,7 +1870,9 @@
       ],
       "verification": [
         "OFFICIAL_MANUAL_MODEL_CONFIRMED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|115",
@@ -1689,7 +1888,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_LISTS_COMPONENT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|117",
@@ -1705,7 +1906,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_LISTS_COMPONENT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|118",
@@ -1721,7 +1924,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_LISTS_COMPONENT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|119",
@@ -1737,7 +1942,9 @@
       ],
       "verification": [
         "OFFICIAL_FAMILY_LISTS_COMPONENT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|133",
@@ -1753,7 +1960,9 @@
       ],
       "verification": [
         "OFFICIAL_GUIDE_MODEL_CONFIRMED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|134",
@@ -1769,7 +1978,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_VARIANT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|136",
@@ -1785,7 +1996,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_VARIANT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|138",
@@ -1801,7 +2014,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_VARIANT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|143",
@@ -1817,7 +2032,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|144",
@@ -1833,7 +2050,9 @@
       ],
       "verification": [
         "OFFICIAL_SELECTOR_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "오디오|145",
@@ -1849,7 +2068,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|146",
@@ -1865,7 +2086,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|147",
@@ -1881,7 +2104,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|149",
@@ -1897,7 +2122,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|150",
@@ -1913,7 +2140,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|151",
@@ -1929,7 +2158,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|152",
@@ -1945,7 +2176,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|153",
@@ -1961,7 +2194,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|154",
@@ -1977,7 +2212,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|155",
@@ -1993,7 +2230,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|157",
@@ -2009,7 +2248,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|158",
@@ -2025,7 +2266,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|159",
@@ -2041,7 +2284,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "오디오|160",
@@ -2057,7 +2302,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_PAGE"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|7",
@@ -2073,7 +2320,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|8",
@@ -2089,7 +2338,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|9",
@@ -2105,7 +2356,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|11",
@@ -2121,7 +2374,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|12",
@@ -2137,7 +2392,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|13",
@@ -2153,7 +2410,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|14",
@@ -2169,7 +2428,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|17",
@@ -2185,7 +2446,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|19",
@@ -2201,7 +2464,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|21",
@@ -2217,7 +2482,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|22",
@@ -2233,7 +2500,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|24",
@@ -2249,7 +2518,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|26",
@@ -2265,7 +2536,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|27",
@@ -2281,7 +2554,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|28",
@@ -2297,7 +2572,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|29",
@@ -2313,7 +2590,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "제어|30",
@@ -2329,7 +2608,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|7",
@@ -2345,7 +2626,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|8",
@@ -2361,7 +2644,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|9",
@@ -2377,7 +2662,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|10",
@@ -2393,7 +2680,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|11",
@@ -2409,7 +2698,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|12",
@@ -2425,7 +2716,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|14",
@@ -2441,7 +2734,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|15",
@@ -2457,7 +2752,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|16",
@@ -2475,7 +2772,9 @@
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_GLOBAL",
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|18",
@@ -2491,7 +2790,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|20",
@@ -2507,7 +2808,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|21",
@@ -2523,7 +2826,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|22",
@@ -2539,7 +2844,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|23",
@@ -2555,7 +2862,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|24",
@@ -2571,7 +2880,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|25",
@@ -2587,7 +2898,9 @@
       ],
       "verification": [
         "VERIFIED_EXACT_MODEL_EPSON_KOREA"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "프로젝터|28",
@@ -2603,7 +2916,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|29",
@@ -2619,7 +2934,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|30",
@@ -2635,7 +2952,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|32",
@@ -2651,7 +2970,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|33",
@@ -2667,7 +2988,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|34",
@@ -2683,7 +3006,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "프로젝터|35",
@@ -2699,7 +3024,9 @@
       ],
       "verification": [
         "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "series"
     },
     {
       "row": "화상회의|7",
@@ -2715,7 +3042,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|8",
@@ -2731,7 +3060,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|9",
@@ -2747,7 +3078,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|10",
@@ -2763,7 +3096,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|11",
@@ -2779,7 +3114,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|13",
@@ -2795,7 +3132,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|16",
@@ -2811,7 +3150,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|17",
@@ -2827,7 +3168,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|19",
@@ -2843,7 +3186,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|20",
@@ -2859,7 +3204,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|21",
@@ -2875,7 +3222,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|22",
@@ -2891,7 +3240,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|24",
@@ -2907,7 +3258,9 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
     },
     {
       "row": "화상회의|25",
@@ -2923,7 +3276,1455 @@
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
-      ]
+      ],
+      "grade": "A",
+      "link_scope": "model"
+    },
+    {
+      "row": "영상|51",
+      "manufacturer": "NovaStar",
+      "model": "H_4x3 SDI input card",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_NAME_DIFFERS"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|52",
+      "manufacturer": "NovaStar",
+      "model": "H_4xHDMI  output  card\n(HDMI  1.4  -  Dual  Link)",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_NAME_DIFFERS"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|53",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0  output  card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Processor Card"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "OFFICIAL_NAME_DIFFERS"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|54",
+      "manufacturer": "NovaStar",
+      "model": "H_800W",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "official_urls": [
+        "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+      ],
+      "verification": [
+        "EXACT_SKU_UNVERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|168",
+      "manufacturer": "Ross Video",
+      "model": "ULTRISCAPE",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_FEATURE_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|169",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIMIX-MXR",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_FEATURE_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|171",
+      "manufacturer": "Ross Video",
+      "model": "ULTRISYNC-18",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Frame"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_FEATURE_VERIFIED_EXACT_BUNDLE_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "영상|172",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIMIX-DANTE",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_FEATURE_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|7",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-101",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/products/blu-101"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|8",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-100",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/products/blu-100"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|9",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-160",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/products/blu-160"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|10",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-50",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/products/blu-50"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|11",
+      "manufacturer": "BSS Audio",
+      "model": "BLUAEC-IN",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|12",
+      "manufacturer": "BSS Audio",
+      "model": "BLUCARD-IN",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|13",
+      "manufacturer": "BSS Audio",
+      "model": "BLUCARD-OUT",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|14",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-DAN",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/support_downloads/products/blu-dan"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|15",
+      "manufacturer": "BSS Audio",
+      "model": "EC-4BV",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/en-US/products/EC-4BV"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|17",
+      "manufacturer": "Audinate",
+      "model": "AVIO USB C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://www.audinate.com/products/devices/dante-avio"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|18",
+      "manufacturer": "Audinate",
+      "model": "AVIO BT",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://www.audinate.com/products/devices/dante-avio"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|19",
+      "manufacturer": "Audinate",
+      "model": "AVIO 2CH IN",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://www.audinate.com/products/devices/dante-avio"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|20",
+      "manufacturer": "Audinate",
+      "model": "AVIO 2CH OUT",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://www.audinate.com/products/devices/dante-avio"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|23",
+      "manufacturer": "Televic",
+      "model": "D-Cerno CU",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|25",
+      "manufacturer": "Televic",
+      "model": "D-Cerno AE",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|26",
+      "manufacturer": "Televic",
+      "model": "D-Cerno Advanced",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|27",
+      "manufacturer": "Televic",
+      "model": "D-Cerno D SL",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|28",
+      "manufacturer": "Televic",
+      "model": "D-Mic 50 SL",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/microphones/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|30",
+      "manufacturer": "Televic",
+      "model": "Plixus AE-R Dante",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/plixus/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|32",
+      "manufacturer": "Televic",
+      "model": "Plixus AE-R PS",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/plixus/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|33",
+      "manufacturer": "Televic",
+      "model": "Confidea FLEX",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|34",
+      "manufacturer": "Televic",
+      "model": "Plixus NEXT",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/plixus/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|36",
+      "manufacturer": "Televic",
+      "model": "D-Mic 40 SL",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://conference.televic.digital/knowledgebase/products/microphones/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|38",
+      "manufacturer": "Shure",
+      "model": "MXCWAPT-W",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|39",
+      "manufacturer": "Shure",
+      "model": "MXCW640",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|40",
+      "manufacturer": "Shure",
+      "model": "MXC420/C",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|43",
+      "manufacturer": "Yamaha",
+      "model": "DM7",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Mixer"
+      ],
+      "official_urls": [
+        "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|44",
+      "manufacturer": "Yamaha",
+      "model": "DM3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Mixer"
+      ],
+      "official_urls": [
+        "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/"
+      ],
+      "verification": [
+        "공식 사이트 확인"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|46",
+      "manufacturer": "Yamaha",
+      "model": "Rio1608-D3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|47",
+      "manufacturer": "Yamaha",
+      "model": "Rio3224-D3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "official_urls": [
+        "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|52",
+      "manufacturer": "Crown",
+      "model": "DCI 2/600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|53",
+      "manufacturer": "Crown",
+      "model": "DCI 4/300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|54",
+      "manufacturer": "Crown",
+      "model": "DCI 4/600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|57",
+      "manufacturer": "Crown",
+      "model": "CDI 2/600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|58",
+      "manufacturer": "Crown",
+      "model": "CDI 2/1200",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|59",
+      "manufacturer": "Crown",
+      "model": "CDI 4/300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|60",
+      "manufacturer": "Crown",
+      "model": "CDI 4/600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|61",
+      "manufacturer": "Crown",
+      "model": "CDI 4/1200",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|64",
+      "manufacturer": "Crown",
+      "model": "DCI 2/600N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|65",
+      "manufacturer": "Crown",
+      "model": "DCI 4/300N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|66",
+      "manufacturer": "Crown",
+      "model": "DCI 4/600N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|68",
+      "manufacturer": "Crown",
+      "model": "CDI 2/300BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|70",
+      "manufacturer": "Crown",
+      "model": "CDI 2/1200BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|71",
+      "manufacturer": "Crown",
+      "model": "CDI 4/300BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|72",
+      "manufacturer": "Crown",
+      "model": "CDI 4/600BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|73",
+      "manufacturer": "Crown",
+      "model": "CDI 4/1200BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|76",
+      "manufacturer": "Crown",
+      "model": "DCI 4/600DA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|78",
+      "manufacturer": "Crown",
+      "model": "ComTech D 2125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.crownaudio.com/en-US/product_families/comtech-d-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|84",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|85",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|89",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|90",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|92",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 804 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/duecanali-804"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|101",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 2404 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "official_urls": [
+        "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
+      ],
+      "verification": [
+        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|108",
+      "manufacturer": "Shure",
+      "model": "MXA925W-R",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Ceiling Microphone"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/microphones/mxa925"
+      ],
+      "verification": [
+        "FAMILY_PAGE_ROUND_WHITE_VARIANT_UNVERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|112",
+      "manufacturer": "Shure",
+      "model": "ULXD4Q",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4q"
+      ],
+      "verification": [
+        "EXACT_COMPONENT_PAGE_BAND_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|113",
+      "manufacturer": "Shure",
+      "model": "ULXD4D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
+      ],
+      "verification": [
+        "EXACT_COMPONENT_PAGE_BAND_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|114",
+      "manufacturer": "Shure",
+      "model": "ULXD4",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
+      ],
+      "verification": [
+        "EXACT_COMPONENT_PAGE_BAND_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|116",
+      "manufacturer": "Shure",
+      "model": "ULXD2/KSM9",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9"
+      ],
+      "verification": [
+        "EXACT_COMPONENT_PAGE_BAND_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|121",
+      "manufacturer": "Shure",
+      "model": "QLXD4",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
+      ],
+      "verification": [
+        "EXACT_COMPONENT_PAGE_BAND_UNRESOLVED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|122",
+      "manufacturer": "Shure",
+      "model": "QLXD2/BETA87A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|123",
+      "manufacturer": "Shure",
+      "model": "QLXD2/BETA58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|124",
+      "manufacturer": "Shure",
+      "model": "QLXD1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|126",
+      "manufacturer": "Shure",
+      "model": "SLXD4D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|127",
+      "manufacturer": "Shure",
+      "model": "SLXD4",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|128",
+      "manufacturer": "Shure",
+      "model": "SLXD2/SM58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|129",
+      "manufacturer": "Shure",
+      "model": "SLXD2/BETA58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|130",
+      "manufacturer": "Shure",
+      "model": "SLXD2/BETA87",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|131",
+      "manufacturer": "Shure",
+      "model": "SLXD1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|135",
+      "manufacturer": "Shure",
+      "model": "UA864A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/accessories/ua864"
+      ],
+      "verification": [
+        "OFFICIAL_FAMILY_A_SUFFIX_UNVERIFIED"
+      ],
+      "grade": "B",
+      "link_scope": "series"
+    },
+    {
+      "row": "오디오|140",
+      "manufacturer": "Shure",
+      "model": "MX392/C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/microphones/mx392"
+      ],
+      "verification": [
+        "EXACT_MODEL_VARIANT_REVIEW"
+      ],
+      "grade": "B",
+      "link_scope": "series"
     }
-  ]
+  ],
+  "link_scope": {
+    "model": "공식 페이지가 그 모델 전용이다. 카드에 \"제조사 공식 페이지\"로 표시한다.",
+    "series": "공식 페이지가 제품군·시리즈 단위다(모델이 명시돼 있거나 계열 페이지). 카드에 \"제조사 제품군 페이지\"로 표시한다.",
+    "series_rule": "A등급은 verification 값이 모두 series_values 안에 있거나, 선택된 URL을 다른 A등급 항목과 공유하면 series. B등급은 전부 series.",
+    "series_values": [
+      "EXACT_MODEL_ON_OFFICIAL_H_SERIES_PAGE",
+      "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF",
+      "EXACT_VARIANT_ON_OFFICIAL_X100_PRO_FAMILY_PAGE",
+      "OFFICIAL_BROCHURE_EXACT_CODE_REFERENCED",
+      "OFFICIAL_EXACT_MODULE_IN_GUIDE",
+      "OFFICIAL_FAMILY_LISTS_COMPONENT",
+      "OFFICIAL_FAMILY_SPEC_EXACT_CODE_REFERENCED",
+      "OFFICIAL_FAMILY_SPEC_EXACT_MODEL_REFERENCED",
+      "OFFICIAL_GUIDE_MODEL_CONFIRMED",
+      "OFFICIAL_H_SERIES_CARD_LIST_MATCH",
+      "OFFICIAL_MANUAL_EXACT_MODEL_REFERENCED",
+      "OFFICIAL_MANUAL_MODEL_CONFIRMED",
+      "OFFICIAL_SELECTOR_MODEL_LISTED",
+      "OFFICIAL_SERIES_PAGE_EXACT_MODEL_LISTED",
+      "VERIFIED_EXACT_CARD_SECTION",
+      "VERIFIED_EXACT_MODEL_SECTION"
+    ],
+    "note": "2026-09-25 사용자 승인(W-20260925-010)으로 추가. 공개 카탈로그에는 series일 때만 link_scope 필드를 넣는다."
+  }
 }

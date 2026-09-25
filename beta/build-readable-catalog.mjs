@@ -14,7 +14,8 @@ export const escapeHtml = value => String(value)
 export function buildCatalogHtml(catalog) {
   const cards = catalog.map(item => {
     const slug = item.slug;
-    const links = item.official_links.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">공식 링크 ${index + 1}</a>`);
+    const label = item.link_scope === 'series' ? '제품군 링크' : '공식 링크';
+    const links = item.official_links.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">${label} ${index + 1}</a>`);
     if (slug) links.unshift(`<a href="./detail/?product=${slug}">Product Detail</a>`);
     return `      <article class="catalog-product">
         <p class="brand">${escapeHtml(item.brand)}</p>
@@ -60,7 +61,7 @@ export function buildLlmsText(catalog) {
       `- 제품: ${item.brand} ${item.product}`,
       `  분류: ${item.categories.join(' | ')}`,
       '  종류: 장비',
-      ...item.official_links.map(url => `  공식 링크: ${url}`)
+      ...item.official_links.map(url => `  ${item.link_scope === 'series' ? '제품군 링크' : '공식 링크'}: ${url}`)
     ];
     if (slug) lines.push(`  상세: ${publicBase}detail/?product=${slug}`);
     return lines.join('\n');
@@ -73,8 +74,9 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: ${publicBase}catalog.html
 - 공개 JSON: ${publicBase}catalog.json
 - 공개 장비: ${catalog.length}개
-- Product Detail: 5개
+- Product Detail: ${catalog.filter(item => item.slug).length}개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
+- 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
 
 ## Public products

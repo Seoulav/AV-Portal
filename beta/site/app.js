@@ -2,11 +2,11 @@ const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
 
 export const TOP_CATEGORIES = [
   { id: 'audio', label: '음향', icon: '◖', terms: ['오디오', 'audio', 'mixer', 'amplifier', 'wireless microphone system', 'antenna', 'audio interface'] },
-  { id: 'video', label: '영상', icon: '▣', terms: ['영상', 'video', 'signal switcher', 'video processor', 'video capture', 'license', '멀티채널 레코더/플레이어'] },
+  { id: 'video', label: '영상', icon: '▣', terms: ['영상', 'video', 'signal switcher', 'video processor', 'video capture', 'license'] },
   { id: 'camera-conference', label: '카메라·회의', icon: '◉', terms: ['camera', 'conferencing', 'conferencing endpoint', 'video bar', '화상회의'] },
-  { id: 'display-projection', label: '디스플레이·프로젝션', icon: '▱', terms: ['프로젝터', 'display', 'projector', '대형 공간용 레이저 프로젝터'] },
+  { id: 'display-projection', label: '디스플레이·프로젝션', icon: '▱', terms: ['프로젝터', 'display', 'projector'] },
   { id: 'network-control', label: '네트워크·제어', icon: '⌘', terms: ['제어', 'control', 'control interface', 'network', 'network switch'] },
-  { id: 'power-infrastructure', label: '전원·인프라', icon: 'ϟ', terms: ['power', '전원', 'infrastructure', 'rack', 'ups'] }
+  { id: 'power-infrastructure', label: '전원·인프라', icon: 'ϟ', terms: ['power', '전원', 'infrastructure', 'rack', 'ups', 'power supply', 'power protection'] }
 ];
 
 const categoryFor = item => TOP_CATEGORIES.filter(group => item.categories.some(category => group.terms.includes(fold(category))));
@@ -144,7 +144,7 @@ if (typeof document !== 'undefined') {
     card.append(element('span', 'card-status', status));
     const actions = element('div', 'card-actions');
     if (item.slug) { const detail = element('a', 'detail-link', '제품 상세 보기'); detail.href = `./detail/?product=${item.slug}`; detail.addEventListener('click', saveScroll); actions.append(detail); }
-    const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
+    const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', item.link_scope === 'series' ? '제조사 제품군 페이지 ↗' : '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     card.append(actions); return card;
   }
 

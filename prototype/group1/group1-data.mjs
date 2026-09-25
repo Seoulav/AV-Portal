@@ -86,6 +86,10 @@ export function parseGroup1Package(markdown) {
 // 상세 페이지가 있는 항목에만 붙는 파생 필드. 기준 목록 해시는 이 필드를 뺀 형태로 계산한다.
 export const derivedCatalogFields = ['slug', 'card_image'];
 
+// 값이 있을 때만 넣는 공개 필드. link_scope는 공식 링크가 제품군 페이지일 때만 'series'로 둔다.
+export const optionalCatalogFields = ['link_scope'];
+export const linkScopes = ['series'];
+
 export function stripDerivedCatalogFields(item) {
   const copy = { ...item };
   for (const field of derivedCatalogFields) delete copy[field];

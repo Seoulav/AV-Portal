@@ -61,3 +61,50 @@ test('buildPreviewCatalog는 기존 항목과 새 항목 모두에 slug를 붙�
   assert.equal(result[1].slug, 'ki-pro-go2');
   assert.equal(result[1].card_image, undefined);
 });
+
+test('link_scope는 series 값만, 공식 링크 1개와 함께 쓴다', async () => {
+  const { linkScopes } = await import('../prototype/group1/group1-data.mjs');
+  const withScope = catalog.filter(item => 'link_scope' in item);
+  assert.ok(withScope.length > 0);
+  for (const item of withScope) {
+    assert.ok(linkScopes.includes(item.link_scope), `${item.product}: ${item.link_scope}`);
+    assert.equal(item.official_links.length, 1);
+  }
+});
+
+test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일치한다', async () => {
+  const decisions = JSON.parse(await readFile(new URL('../docs/research/equipment-listing-decisions-2026-09-25.json', import.meta.url), 'utf8'));
+  const norm = value => String(value ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const scopeOf = new Map(decisions.entries.filter(entry => entry.manufacturer).map(entry => [`${norm(entry.manufacturer)}\0${norm(entry.model)}`, entry.link_scope]));
+  // 기준 27개는 결정표 이전에 개별 검토된 항목이라 대상이 아니다.
+  for (const item of catalog.slice(27)) {
+    const scope = scopeOf.get(`${norm(item.brand)}\0${norm(item.product)}`);
+    assert.ok(scope, `${item.brand} ${item.product}: 결정표에 없음`);
+    assert.equal(item.link_scope ?? 'model', scope, `${item.brand} ${item.product}`);
+  }
+});
+
+test('모든 공개 목록 항목의 카테고리는 3단이다', () => {
+  // 상세 페이지의 categories는 한국어 설명형 표시값이라 이 규칙의 대상이 아니다.
+  for (const item of catalog) assert.equal(item.categories.length, 3, `${item.brand} ${item.product}`);
+});
+
+test('홈 카테고리 카드 여섯 개가 모두 비어 있지 않다', async () => {
+  const { mapTopCategories } = await import('../beta/site/app.js');
+  for (const group of mapTopCategories(catalog)) assert.ok(group.count > 0, `${group.label} 카드가 비어 있음`);
+});
+
+test('Group 1 재생성은 기준 25개 뒤에 등재한 항목과 link_scope를 지우지 않는다', () => {
+  const existing = catalog.map(stripDerivedCatalogFields);
+  const product = item => ({ manufacturer: item.brand, model: item.product, categories: item.categories, documents: [] });
+  const result = buildPreviewCatalog(existing, withDetail.map(product), { slugOf: made => withDetail.find(item => item.product === made.model).slug });
+  assert.equal(result.length, catalog.length);
+  assert.deepEqual(result.map(item => item.link_scope ?? null), catalog.map(item => item.link_scope ?? null));
+  assert.deepEqual(result.map(item => item.slug ?? null), catalog.map(item => item.slug ?? null));
+});
+
+test('Group 1 빌더는 공개 목록 전체를 기준으로 삼는다', async () => {
+  const source = await readFile(new URL('../beta/build-group1-pages.mjs', import.meta.url), 'utf8');
+  assert.match(source, /buildPreviewCatalog\(existingCatalog,/);
+  assert.doesNotMatch(source, /assert\.equal\(catalog\.length, 27\)/);
+});
