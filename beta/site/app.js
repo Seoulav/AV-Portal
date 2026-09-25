@@ -79,10 +79,18 @@ export function serializeExploreState(state) {
   return params;
 }
 
+// 상세페이지가 아직 없는 항목의 카드 대표 사진. 상세가 있는 항목은 상세 갤러리의 card_image를 쓴다.
+export function previewCardImage(item) {
+  if (item.slug || !item.preview_image) return null;
+  return { src: `./detail/images/${item.preview_image}`, alt: item.preview_image_alt, note: item.preview_image_scope === 'series' ? '제조사 공식 이미지 · 계열 공용' : '제조사 공식 이미지' };
+}
+
 async function loadDetailSearchTerms(items) {
   await Promise.all(items.map(async item => {
     item.slug = item.slug ?? null;
     item.searchTerms = [];
+    const preview = previewCardImage(item);
+    if (preview) item.cardImage = preview;
     if (!item.slug) return;
     try {
       const response = await fetch(`./detail/data/${item.slug}.json`);

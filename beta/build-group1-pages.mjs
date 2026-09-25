@@ -7,6 +7,7 @@ import { loadGroup1 } from '../prototype/group1/serve.mjs';
 import { parseGroup1Package, buildPreviewCatalog, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 import { projectPublicDetail } from './group1-public.mjs';
 import { applyPublishedImages, cardImages } from './group1-images.mjs';
+import { previewCatalogFieldsFor } from './group2-images.mjs';
 import { detailAssetPairs, transformDetailAsset } from './detail-asset-transforms.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -91,7 +92,8 @@ for (const [slug, product] of publicProducts) applyPublishedImages(product, slug
 const slugByProduct = new Map([...publicProducts].map(([slug, product]) => [product, slug]));
 const catalog = buildPreviewCatalog(existingCatalog, [...publicProducts.values()], {
   slugOf: product => slugByProduct.get(product) ?? null,
-  cardImageOf: product => cardImages[slugByProduct.get(product)] ?? null
+  cardImageOf: product => cardImages[slugByProduct.get(product)] ?? null,
+  previewOf: previewCatalogFieldsFor
 });
 assert.ok(catalog.length >= existingCatalog.length, '재생성이 기존 공개 항목을 지우면 안 된다');
 assert.equal(catalog.filter(item => item.slug).length, publicProducts.size);

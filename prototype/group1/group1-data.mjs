@@ -83,8 +83,10 @@ export function parseGroup1Package(markdown) {
   };
 }
 
-// 상세 페이지가 있는 항목에만 붙는 파생 필드. 기준 목록 해시는 이 필드를 뺀 형태로 계산한다.
-export const derivedCatalogFields = ['slug', 'card_image'];
+// 상세 페이지가 있는 항목에만 붙는 파생 필드(slug·card_image)와, 상세가 없는 항목의 카드 대표 사진 필드(preview_*).
+// 기준 목록 해시는 이 필드를 뺀 형태로 계산한다. 재생성할 때는 slugOf·cardImageOf·previewOf로 다시 붙인다.
+export const derivedCatalogFields = ['slug', 'card_image', 'preview_image', 'preview_image_alt', 'preview_image_scope'];
+export const previewImageScopes = ['series'];
 
 // 값이 있을 때만 넣는 공개 필드. link_scope는 공식 링크가 제품군 페이지일 때만 'series'로 둔다.
 export const optionalCatalogFields = ['link_scope'];
@@ -98,7 +100,7 @@ export function stripDerivedCatalogFields(item) {
 
 const catalogIdentity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;
 
-export function buildPreviewCatalog(publicCatalog, products, { slugOf, cardImageOf } = {}) {
+export function buildPreviewCatalog(publicCatalog, products, { slugOf, cardImageOf, previewOf } = {}) {
   const result = publicCatalog.map(item => ({ ...stripDerivedCatalogFields(item), categories: [...item.categories], official_links: [...item.official_links] }));
   const byIdentity = new Map(result.map(item => [catalogIdentity(item.brand, item.product), item]));
   for (const product of products) {
@@ -113,5 +115,7 @@ export function buildPreviewCatalog(publicCatalog, products, { slugOf, cardImage
     result.push(entry);
     byIdentity.set(identity, entry);
   }
+  // 상세가 있는 항목은 상세 갤러리의 card_image를 쓰므로 preview 필드를 붙이지 않는다.
+  if (previewOf) for (const item of result) if (!item.slug) Object.assign(item, previewOf(item) ?? {});
   return result;
 }
