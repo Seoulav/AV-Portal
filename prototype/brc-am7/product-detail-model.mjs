@@ -35,6 +35,16 @@ function displayDirection(direction = '') {
   return direction || '—';
 }
 
+export function directionLabel(direction = '') {
+  if (String(direction).trim().toUpperCase() === 'IN/LOOP') return '입력/루프 출력';
+  const normalized = displayDirection(direction);
+  if (normalized === 'IN') return '입력';
+  if (normalized === 'OUT') return '출력';
+  if (normalized === 'I/O') return '양방향';
+  if (/option/i.test(String(direction))) return '옵션';
+  return normalized === '—' ? '미확인' : normalized;
+}
+
 export function prepareConnectorGroups(ioGroups = []) {
   const grouped = new Map();
   for (const sourceGroup of ioGroups) {
@@ -45,7 +55,8 @@ export function prepareConnectorGroups(ioGroups = []) {
     target.entries.push(...sourceGroup.entries.map(item => ({
       ...item,
       sourceGroup: sourceGroup.name,
-      displayDirection: displayDirection(item.direction)
+      displayDirection: displayDirection(item.direction),
+      directionLabel: directionLabel(item.direction)
     })));
   }
   return [...grouped.values()];

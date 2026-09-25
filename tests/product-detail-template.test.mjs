@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications, directionLabel } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -128,4 +128,12 @@ test('key specification selection limits verified values while preserving group 
 
   assert.deepEqual(selectKeySpecifications(groups, 4).map(item => item.name), ['Inputs', 'Mix buses', 'Dante', 'AC']);
   assert.equal(groups.flatMap(group => group.entries).length, 6);
+});
+
+test('connector directions use explicit Korean text in the public table', () => {
+  assert.equal(directionLabel('IN'), '입력');
+  assert.equal(directionLabel('OUTPUT'), '출력');
+  assert.equal(directionLabel('Bidirectional'), '양방향');
+  assert.equal(directionLabel('IN/LOOP'), '입력/루프 출력');
+  assert.equal(directionLabel('OPTION'), '옵션');
 });

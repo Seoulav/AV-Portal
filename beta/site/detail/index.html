@@ -17,8 +17,8 @@
         <span><strong>AV PORTAL</strong><small>PRODUCT DETAIL</small></span>
       </a>
       <div class="header-actions">
-        <span class="local-label">PUBLIC BETA</span>
-        <a class="library-link" href="../" target="_blank" rel="noopener noreferrer">Library <span aria-hidden="true">↗</span></a>
+        <form id="detail-search-form" class="detail-search" role="search"><label class="sr-only" for="detail-search">제품 통합 검색</label><span aria-hidden="true">⌕</span><input id="detail-search" type="search" placeholder="다른 제품 검색" autocomplete="off"><button type="submit">검색</button></form>
+        <a class="library-link" href="../">제품 탐색</a>
       </div>
     </div>
   </header>
@@ -70,7 +70,7 @@
 
     <div class="body-sections">
       <nav id="detail-tabs" class="detail-tabs" aria-label="제품 상세 정보">
-        <a href="#overview">개요</a><a href="#specifications">주요 사양</a><a href="#io">연결 단자</a><a href="#documents">자료</a>
+        <a href="#overview">개요</a><a href="#features">특징</a><a href="#specifications">스펙</a><a href="#io">연결 단자</a><a href="#related-products">관련 제품</a><a href="#documents">문서</a><a href="#sources">출처·검증</a>
       </nav>
       <section id="overview" class="detail-section overview-grid" aria-labelledby="overview-title">
         <div class="overview-card panel"><h2 id="overview-title">제품 개요</h2><p id="overview-summary" class="overview-summary"></p>
@@ -96,13 +96,13 @@
             <figcaption><strong>후면 단자 배치</strong><span>위치 번호는 정확한 근거가 없어 표시하지 않습니다.</span><a id="rear-connector-source" target="_blank" rel="noopener noreferrer">공식 이미지 출처 ↗</a></figcaption>
           </figure>
           <p id="rear-unavailable" class="rear-unavailable" hidden>후면 이미지 없음 · 다른 모델 사진으로 대체하지 않았습니다.</p>
-          <section class="key-connectors panel" aria-labelledby="key-connectors-title">
-            <div class="key-connectors-heading"><div><span>QUICK VIEW</span><h3 id="key-connectors-title">주요 연결</h3></div><strong><span id="key-connector-count"></span>개</strong></div>
-            <div id="key-connector-list" class="key-connector-list"></div>
-          </section>
         </div>
-        <details id="all-connectors" class="all-connectors expanded-data"><summary>전체 연결 단자 보기 (<span id="all-connector-count"></span>)</summary><div id="io-list" class="connector-groups"></div></details>
+        <div id="connector-table" class="connector-table-wrap panel" aria-label="전체 연결 단자 표"><table class="connector-table"><thead><tr><th>구분</th><th>연결 단자</th><th>방향</th><th>수량</th><th>규격 및 용도</th></tr></thead><tbody id="connector-table-body"></tbody></table></div>
+        <div id="connector-mobile-groups" class="connector-mobile-groups" aria-label="신호 그룹별 연결 단자"></div>
+        <details id="connector-evidence" class="expanded-data connector-evidence"><summary>연결 단자 근거 및 검증 보기 (<span id="all-connector-count"></span>)</summary><div id="io-list" class="connector-evidence-list"></div></details>
       </section>
+
+      <section id="related-products" class="detail-section related-products" aria-labelledby="related-products-title"><div class="section-title"><h2 id="related-products-title">관련 제품</h2></div><div class="related-empty panel"><strong>등록된 관련 제품이 없습니다.</strong><span>검증된 제품 관계가 준비되면 이 영역에 표시합니다.</span></div></section>
 
       <section id="documents" class="detail-section resources-section" aria-labelledby="documents-title"><div class="section-title"><h2 id="documents-title">자료</h2></div>
       <details id="supplemental-docs" class="supplemental-docs"><summary>추가 문서 보기</summary><div id="all-documents" class="documents-list"></div><div id="missing-documents-panel" class="missing-docs panel"><div><span class="state state-missing">MISSING</span><h3>아직 확인되지 않은 독립 문서</h3></div><div id="missing-documents" class="missing-list"></div></div></details>
