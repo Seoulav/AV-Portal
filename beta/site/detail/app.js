@@ -497,8 +497,16 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const navigationTabs = [...$('#detail-tabs').querySelectorAll('[role="tab"]')];
+const tabs = $('#detail-tabs');
+const navigationTabs = [...tabs.querySelectorAll('[role="tab"]')];
 const tabPanels = [...document.querySelectorAll('[role="tabpanel"]')];
+function revealActiveTab(tab, smooth = false) {
+  if (!mobileDetail.matches) return;
+  const maxLeft = Math.max(0, tabs.scrollWidth - tabs.clientWidth);
+  const centeredLeft = tab.offsetLeft - (tabs.clientWidth - tab.offsetWidth) / 2;
+  const targetLeft = Math.max(0, Math.min(maxLeft, centeredLeft));
+  if (Math.abs(tabs.scrollLeft - targetLeft) > 1) tabs.scrollTo({ left: targetLeft, behavior: smooth ? 'smooth' : 'auto' });
+}
 function hashTarget() {
   if (!location.hash) return null;
   try {
@@ -532,7 +540,7 @@ function activatePanel(panel, { updateHash = false, focusTab = false } = {}) {
     tab.tabIndex = active ? 0 : -1;
     tab.classList.toggle('is-active', active);
     if (active && focusTab) tab.focus();
-    if (active && focusTab && mobileDetail.matches) tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (active) revealActiveTab(tab, updateHash || focusTab);
   }
   if (updateHash) history.pushState(null, '', '#' + panel.id);
 }
