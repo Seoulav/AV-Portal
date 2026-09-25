@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { createPreviewServer } from '../beta/serve.mjs';
+import { escapeHtml } from '../beta/build-readable-catalog.mjs';
 
 const site = new URL('../beta/site/', import.meta.url);
 const catalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8'));
@@ -13,7 +14,7 @@ test('static catalog exposes every public product without JavaScript', async () 
   assert.equal((html.match(/<article class="catalog-product"/g) ?? []).length, catalog.length);
   for (const item of catalog) {
     assert.match(html, new RegExp(`>${item.product.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}<`));
-    for (const link of item.official_links) assert.ok(html.includes(`href="${link}"`));
+    for (const link of item.official_links) assert.ok(html.includes(`href="${escapeHtml(link)}"`));
   }
 });
 

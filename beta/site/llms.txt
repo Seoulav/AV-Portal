@@ -5,7 +5,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 27개
+- 공개 장비: 174개
 - Product Detail: 5개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -150,3 +150,738 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 프로젝터 | 대형 공간용 레이저 프로젝터
   종류: 장비
   상세: https://seoulav.github.io/AV-Portal/detail/?product=pt-mz17k
+
+- 제품: Samsung HG43U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/
+
+- 제품: Samsung HG50U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/
+
+- 제품: Samsung HG65U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/
+
+- 제품: Samsung LH32QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/
+
+- 제품: Samsung LH43QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/
+
+- 제품: Samsung LH85QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
+
+- 제품: Samsung LH98QECEDGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
+
+- 제품: Samsung LH98QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/
+
+- 제품: Samsung LH43QHCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
+
+- 제품: Samsung LH75QHCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/
+
+- 제품: Samsung LH115QHFEBGXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/
+
+- 제품: Samsung LH55VMCRBGBXKR
+  분류: 사이니지 | Display | Video Wall
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/
+
+- 제품: Samsung LH55VHCRBGBXKR
+  분류: 사이니지 | Display | Video Wall
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/
+
+- 제품: Samsung KQ75LSF03WFXKR
+  분류: 사이니지 | Display | Display
+  종류: 장비
+  공식 링크: https://www.samsung.com/hk_en/support/model/KQ75LSF03WFXKR/
+
+- 제품: Samsung LH55WMFWBGCXKR
+  분류: 사이니지 | Display | Interactive Display
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/
+
+- 제품: Samsung LH75WMFWLGCXKR
+  분류: 사이니지 | Display | Interactive Display
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/
+
+- 제품: Sony SRG-X40UH
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://pro.sony/ko_KR/products/ptz-network-cameras/srg-x40uh
+
+- 제품: Sony SRG-A40
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40
+
+- 제품: Sony RM-IP10
+  분류: 영상 | Video | Camera Controller
+  종류: 장비
+  공식 링크: https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10
+
+- 제품: Sony RM-IP500
+  분류: 영상 | Video | Camera Controller
+  종류: 장비
+  공식 링크: https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500
+
+- 제품: AVer TR535N
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://kr.presentation.aver.com/model/tr535n
+
+- 제품: AVer TR535
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://kr.presentation.aver.com/model/tr535
+
+- 제품: AVer TR335
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://kr.presentation.aver.com/model/tr335
+
+- 제품: AVer TR315
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://kr.presentation.aver.com/model/tr315
+
+- 제품: AVer CL01
+  분류: 영상 | Video | Camera Controller
+  종류: 장비
+  공식 링크: https://kr.presentation.aver.com/model/cl01
+
+- 제품: Roland V-02HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-02hd/
+
+- 제품: Roland V-1HD+
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-1hd_plus/
+
+- 제품: Roland VR-4HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/vr-4hd/
+
+- 제품: Roland VR-6HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/vr-6hd/
+
+- 제품: Roland V-8HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-8hd/
+
+- 제품: Roland V-60HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-60hd/
+
+- 제품: Roland V-80HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-80hd/
+
+- 제품: Roland V-160HD
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-160hd/
+
+- 제품: Lumantek ez-Pro VS5
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://www.lumantek.com/index/product_intro/68
+
+- 제품: Lumantek ez-Pro VS10
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://www.lumantek.com/index/product_intro/37
+
+- 제품: Analog Way Pulse 4K
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/pulse-4k
+
+- 제품: Analog Way Eikos 4K
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/eikos-4k
+
+- 제품: Analog Way Aquilon RS2
+  분류: 영상 | Video | Video Wall Controller
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-rs2
+
+- 제품: Analog Way Zenith 100
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/zenith-100
+
+- 제품: Analog Way Zenith 200
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/zenith-200
+
+- 제품: Analog Way RC400T
+  분류: 영상 | Video | Control Console
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/rc400t
+
+- 제품: Magnimage LED-780H
+  분류: 영상 | Video | LED Processor
+  종류: 장비
+  공식 링크: https://www.magnimage.com/article/780H
+
+- 제품: NovaStar H5
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H2
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_2xRJ45+1xHDMI1.3 preview card
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_4xHDMI input card
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_1xHDMI2.0+1xDP1.2 input card(4K)
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_1xHDMI2.0 input card(4K)
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_1xDP1.2 input card(4K)
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_2xHDMI2.0+2xDP1.2 input card
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: NovaStar H_1x12G SDI input card
+  분류: 영상 | Video | Processor Card
+  종류: 장비
+  공식 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
+
+- 제품: Colorlight X100Pro 7U
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://en.colorlightinside.com/product/download/111
+
+- 제품: Colorlight X100Pro 4U
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://en.colorlightinside.com/product/download/111
+
+- 제품: Colorlight X100Pro 2U
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://en.colorlightinside.com/product/download/111
+
+- 제품: Blackmagic Design HyperDeck Studio HD Pro
+  분류: 영상 | Video | Recorder
+  종류: 장비
+  공식 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
+
+- 제품: Blackmagic Design HyperDeck Studio HD Plus
+  분류: 영상 | Video | Recorder
+  종류: 장비
+  공식 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
+
+- 제품: Blackmagic Design HyperDeck Studio HD Mini
+  분류: 영상 | Video | Recorder
+  종류: 장비
+  공식 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
+
+- 제품: Lumantek ez-MD+
+  분류: 영상 | Video | Converter
+  종류: 장비
+  공식 링크: https://www.lumantek.com/index/product_intro/60
+
+- 제품: Lumantek ez-SHV+
+  분류: 영상 | Video | Converter
+  종류: 장비
+  공식 링크: https://www.lumantek.com/index/product_intro/59
+
+- 제품: Lumantek ez-HSV+
+  분류: 영상 | Video | Converter
+  종류: 장비
+  공식 링크: https://www.lumantek.com/index/product_intro/62
+
+- 제품: Ross Video ULTRIX-NS-FR2
+  분류: 영상 | Video | Router Frame
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+
+- 제품: Ross Video ULTRIX-HDX-IO
+  분류: 영상 | Video | Router Module
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/
+
+- 제품: Ross Video ULTRIPOWER
+  분류: 영상 | Video | Power Supply
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+
+- 제품: Ross Video ULTRIPOWER-PS
+  분류: 영상 | Video | Power Supply
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+
+- 제품: Ross Video ULTRITOUCH-2-HR
+  분류: 영상 | Video | Control Panel
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/routing-systems/ultritouch/
+
+- 제품: Yamaha Tio1608-D2
+  분류: 오디오 | Audio | Audio Interface
+  종류: 장비
+  공식 링크: https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/
+
+- 제품: Crown DCI 2/300
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300
+
+- 제품: Crown CDI 2/300
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/CDi-2-300
+
+- 제품: Crown DCI 2/300N
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300n.html
+
+- 제품: Crown I-TECH 4X3500HD
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/i-tech-4x3500hd
+
+- 제품: Crown CDI 2/600BL
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/cdi-2-600bl
+
+- 제품: Crown DCI 4/300DA
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en/products/dci-4-300da
+
+- 제품: Crown ComTech D 4125
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/ctd-4125
+
+- 제품: Crown ComTech D 8125
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/en-US/products/ctd-8125
+
+- 제품: Powersoft Mezzo 602 AD
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad
+
+- 제품: Powersoft Mezzo 322 A
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-322-a
+
+- 제품: Powersoft Mezzo 602 A
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-602-a
+
+- 제품: Powersoft Duecanali 1604 DSP+D
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd
+
+- 제품: Powersoft Quattrocanali 1204 DSP+D
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd
+
+- 제품: Powersoft Duecanali 804 DSP
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp
+
+- 제품: Powersoft Quattrocanali 1204 DSP
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp
+
+- 제품: Powersoft Quattrocanali 4804 DSP
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp
+
+- 제품: Shure A900W-R-GM
+  분류: 오디오 | Audio | Microphone Accessory
+  종류: 장비
+  공식 링크: https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM
+
+- 제품: Shure MX395
+  분류: 오디오 | Audio | Ceiling Microphone
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/docs/guide/MX395
+
+- 제품: Shure ULXD2/BETA58
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
+
+- 제품: Shure ULXD2/BETA87
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
+
+- 제품: Shure ULXD1
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
+
+- 제품: Shure ULXD8
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
+
+- 제품: Shure UA844+SWB
+  분류: 오디오 | Audio | Antenna Distributor
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB
+
+- 제품: Shure MX418D/C
+  분류: 오디오 | Audio | Microphone
+  종류: 장비
+  공식 링크: https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC
+
+- 제품: JBL Control 23-1
+  분류: 오디오 | Audio | Loudspeaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/jbl-professional-control-23-1
+
+- 제품: JBL Control 25-1
+  분류: 오디오 | Audio | Loudspeaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers
+
+- 제품: JBL Control 28-1
+  분류: 오디오 | Audio | Loudspeaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-28-1/1000
+
+- 제품: JBL AC18/95
+  분류: 오디오 | Audio | Loudspeaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/ac18-95.html
+
+- 제품: JBL AC18/26
+  분류: 오디오 | Audio | Loudspeaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/ac18-26
+
+- 제품: JBL CONTROL 412C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-412c-t
+
+- 제품: JBL CONTROL 414C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-414c-t
+
+- 제품: JBL CONTROL 416C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-416c-t
+
+- 제품: JBL CONTROL 418C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-418c-t
+
+- 제품: JBL CONTROL 447C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/es/products/control-447c-t
+
+- 제품: JBL CONTROL 419CS/T
+  분류: 오디오 | Audio | Subwoofer
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-419cs-t
+
+- 제품: JBL CONTROL 440CS/T
+  분류: 오디오 | Audio | Subwoofer
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-440cs-t
+
+- 제품: JBL CONTROL 424C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-424c-t
+
+- 제품: JBL CONTROL 424LP
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-424lp
+
+- 제품: JBL CONTROL 426C/T
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-426c-t
+
+- 제품: JBL CONTROL 426LP
+  분류: 오디오 | Audio | Ceiling Speaker
+  종류: 장비
+  공식 링크: https://jblpro.com/en-US/products/control-426lp
+
+- 제품: AMX NX-3200
+  분류: 제어 | Control | Control Processor
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/nx-3200
+
+- 제품: AMX NX-2200
+  분류: 제어 | Control | Control Processor
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/nx-2200
+
+- 제품: AMX NX-1200
+  분류: 제어 | Control | Control Processor
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf
+
+- 제품: AMX VARIA-100
+  분류: 제어 | Control | Touch Panel
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/varia-100
+
+- 제품: AMX VARIA-80
+  분류: 제어 | Control | Touch Panel
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/varia-80
+
+- 제품: AMX VARIA-SL80
+  분류: 제어 | Control | Touch Panel
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/varia-sl80
+
+- 제품: AMX VARIA-SL50
+  분류: 제어 | Control | Touch Panel
+  종류: 장비
+  공식 링크: https://www.amx.com/en-US/products/varia-sl50
+
+- 제품: SurgeX SX-1216-RTi
+  분류: 제어 | Control | Power Protection
+  종류: 장비
+  공식 링크: https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page
+
+- 제품: NETGEAR GSM4212P
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/
+
+- 제품: NETGEAR GSM4230P
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/
+
+- 제품: NETGEAR GSM4230PX
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/
+
+- 제품: NETGEAR GSM4248P
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/
+
+- 제품: Epson EB-PQ2216B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/EB-PQ2216B
+
+- 제품: Epson EB-PQ2213B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/EB-PQ2213B
+
+- 제품: Epson EB-L895E
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151
+
+- 제품: Epson EB-L795SE
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151
+
+- 제품: Epson EB-L695SE
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151
+
+- 제품: Epson EB-PU2216B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/EB-PU2216B
+
+- 제품: Epson EB-PU2213B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/EB-PU2213B
+
+- 제품: Epson EB-PU2010W/B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840
+
+- 제품: Epson EB-PU1008B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/EB-PU1008B
+
+- 제품: Epson EB-L895U
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151
+
+- 제품: Epson EB-L790U
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051
+
+- 제품: Epson EB-L260F
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051
+
+- 제품: Panasonic PT-MZ14K
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/mz20k/
+
+- 제품: Panasonic PT-MZ11K
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/mz20k/
+
+- 제품: Panasonic PT-MZ882
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/mz882/
+
+- 제품: Panasonic PT-VMZ61
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/vmz71/
+
+- 제품: Panasonic PT-VMZ51
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/vmz71/
+
+- 제품: Logitech Rally Mic Pod Hub
+  분류: 화상회의 | Conferencing | Hub
+  종류: 장비
+  공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html
+
+- 제품: Logitech Rally Mic Pod Extension Cable
+  분류: 화상회의 | Conferencing | Cable
+  종류: 장비
+  공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html
+
+- 제품: Logitech Strong USB-A to USB-C Cable 10m
+  분류: 화상회의 | Conferencing | Cable
+  종류: 장비
+  공식 링크: https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html
+
+- 제품: Logitech Rally Plus
+  분류: 화상회의 | Conferencing | Video Conferencing System
+  종류: 장비
+  공식 링크: https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO
+
+- 제품: Yealink SmartVision40
+  분류: 화상회의 | Conferencing | Video Conferencing System
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/smartvision40
+
+- 제품: Yealink VCM35
+  분류: 화상회의 | Conferencing | Microphone
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-vcm35
+
+- 제품: Yealink UVC86
+  분류: 화상회의 | Conferencing | Video Conferencing System
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-detail/compatible-camera-uvc86
+
+- 제품: Yealink CM20
+  분류: 화상회의 | Conferencing | Microphone
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-cm20
+
+- 제품: Yealink CS10
+  분류: 화상회의 | Conferencing | Speaker
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d
+
+- 제품: Yealink AVHub
+  분류: 화상회의 | Conferencing | Hub
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/room-system-avhub
+
+- 제품: Yealink UVC85-BYOD
+  분류: 화상회의 | Conferencing | Video Conferencing System
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-tech-specs/uvc85-byod
+
+- 제품: Yealink CPE40
+  분류: 화상회의 | Conferencing | Speakerphone
+  종류: 장비
+  공식 링크: https://www.yealink.com/en/product-detail/cpe40
