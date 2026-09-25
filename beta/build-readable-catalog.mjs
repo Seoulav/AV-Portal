@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 const site = new URL('./site/', import.meta.url);
 const publicBase = 'https://seoulav.github.io/AV-Portal/';
 
-const escapeHtml = value => String(value)
+export const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;')
