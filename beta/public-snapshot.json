@@ -1,0 +1,41 @@
+{
+  "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
+  "catalog": {
+    "count": 27,
+    "sha256": "8521EAC47F3972849C044F2AF9D9E8E71C580907FA3152C20F9CA81D8EBBBCAB",
+    "baselineCount": 25,
+    "baselineSha256": "5A330BBEC27FA2CCA38B619984C4707C17F097BB67C11A17097772DBAD5AE212"
+  },
+  "details": {
+    "brc-am7": {
+      "sha256": "6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D",
+      "features": 8,
+      "specifications": 27,
+      "io": 14
+    },
+    "dm7": {
+      "sha256": "23CF9158991028C11E9B554A3597928DB990490CC57DFE85FB8B5F9B9D70D1F9",
+      "features": 8,
+      "specifications": 16,
+      "io": 15
+    },
+    "ki-pro-go2": {
+      "sha256": "07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488",
+      "features": 8,
+      "specifications": 16,
+      "io": 11
+    },
+    "pt-mz17k": {
+      "sha256": "B340C0BE082DDAF64D0D5B628D8F39BC580E1120EA4F6A8BFE3E3ABD7281D7EC",
+      "features": 7,
+      "specifications": 13,
+      "io": 4
+    },
+    "rally-bar": {
+      "sha256": "34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1",
+      "features": 8,
+      "specifications": 16,
+      "io": 9
+    }
+  }
+}

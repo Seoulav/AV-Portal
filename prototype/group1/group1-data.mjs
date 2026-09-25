@@ -83,15 +83,31 @@ export function parseGroup1Package(markdown) {
   };
 }
 
-export function buildPreviewCatalog(publicCatalog, products) {
-  const result = publicCatalog.map(item => ({ ...item, categories: [...item.categories], official_links: [...item.official_links] }));
-  const identities = new Set(result.map(item => `${item.brand.toLowerCase()}\0${item.product.toLowerCase()}`));
+// 상세 페이지가 있는 항목에만 붙는 파생 필드. 기준 목록 해시는 이 필드를 뺀 형태로 계산한다.
+export const derivedCatalogFields = ['slug', 'card_image'];
+
+export function stripDerivedCatalogFields(item) {
+  const copy = { ...item };
+  for (const field of derivedCatalogFields) delete copy[field];
+  return copy;
+}
+
+const catalogIdentity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;
+
+export function buildPreviewCatalog(publicCatalog, products, { slugOf, cardImageOf } = {}) {
+  const result = publicCatalog.map(item => ({ ...stripDerivedCatalogFields(item), categories: [...item.categories], official_links: [...item.official_links] }));
+  const byIdentity = new Map(result.map(item => [catalogIdentity(item.brand, item.product), item]));
   for (const product of products) {
-    const identity = `${product.manufacturer.toLowerCase()}\0${product.model.toLowerCase()}`;
-    if (identities.has(identity)) continue;
+    const identity = catalogIdentity(product.manufacturer, product.model);
+    const slug = slugOf?.(product) ?? null;
+    const cardImage = slug ? cardImageOf?.(product) ?? null : null;
+    const detailFields = slug ? { slug, ...(cardImage ? { card_image: cardImage } : {}) } : {};
+    const existing = byIdentity.get(identity);
+    if (existing) { Object.assign(existing, detailFields); continue; }
     const official = product.documents.find(item => item.type === 'Official Product Page' && item.status === 'VERIFIED');
-    result.push({ brand: product.manufacturer, product: product.model, categories: product.categories, kind: 'equipment', official_links: official?.url ? [official.url] : [] });
-    identities.add(identity);
+    const entry = { brand: product.manufacturer, product: product.model, categories: product.categories, kind: 'equipment', official_links: official?.url ? [official.url] : [], ...detailFields };
+    result.push(entry);
+    byIdentity.set(identity, entry);
   }
   return result;
 }

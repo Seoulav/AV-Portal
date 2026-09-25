@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGroup1 } from '../prototype/group1/serve.mjs';
-import { parseGroup1Package, buildPreviewCatalog } from '../prototype/group1/group1-data.mjs';
+import { parseGroup1Package, buildPreviewCatalog, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 import { projectPublicDetail } from './group1-public.mjs';
-import { applyPublishedImages } from './group1-images.mjs';
+import { applyPublishedImages, cardImages } from './group1-images.mjs';
 import { detailAssetPairs, transformDetailAsset } from './detail-asset-transforms.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -55,27 +55,44 @@ const options = {
     ]
   }
 };
-const filenames = new Map([
-  ['brc-am7', 'BRC-AM7_PRODUCT_DETAIL_DATA.md'], ['dm7', 'DM7_PRODUCT_DETAIL_DATA.md'],
-  ['ki-pro-go2', 'KI_PRO_GO2_PRODUCT_DETAIL_DATA.md'], ['pt-mz17k', 'PT-MZ17K_PRODUCT_DETAIL_DATA.md'],
-  ['rally-bar', 'RALLY_BAR_PRODUCT_DETAIL_DATA.md']
-]);
+const normalizeSlug = value => value.toLowerCase().replace(/[^a-z0-9]/g, '');
+// 로컬 패키지 파일명은 제품마다 구분자가 달라 slug를 정규화해 맞춘다.
+async function packageFilenames(dir) {
+  const found = new Map();
+  for (const name of await readdir(dir)) {
+    const match = /^(.+)_PRODUCT_DETAIL_DATA\.md$/i.exec(name);
+    if (!match) continue;
+    const key = normalizeSlug(match[1]);
+    if (found.has(key)) throw new Error(`로컬 패키지 파일명이 중복됩니다: ${name}`);
+    found.set(key, name);
+  }
+  return found;
+}
 const index = process.argv.indexOf('--packages');
 const packagesDir = index >= 0 ? process.argv[index + 1] : process.env.AV_PORTAL_GROUP1_PACKAGES;
 if (!packagesDir) throw new Error('로컬 Group 1 패키지 폴더를 --packages로 지정하세요.');
-const baseline = JSON.parse(await readFile(join(site, 'catalog.json'), 'utf8')).slice(0, 25);
+// 기준 25개는 파생 필드를 뺀 형태로 고정한다. 재생성해도 이 해시는 바뀌지 않는다.
+const baseline = JSON.parse(await readFile(join(site, 'catalog.json'), 'utf8')).slice(0, 25).map(stripDerivedCatalogFields);
 assert.equal(baseline.length, 25);
 assert.equal(createHash('sha256').update(JSON.stringify(baseline)).digest('hex').toUpperCase(), '5A330BBEC27FA2CCA38B619984C4707C17F097BB67C11A17097772DBAD5AE212');
+const filenames = await packageFilenames(packagesDir);
 const products = await loadGroup1(packagesDir);
-const rawBrc = parseGroup1Package(await readFile(join(packagesDir, filenames.get('brc-am7')), 'utf8'));
+const brcFile = filenames.get(normalizeSlug('brc-am7'));
+if (!brcFile) throw new Error('BRC-AM7 로컬 패키지를 찾지 못했습니다.');
+const rawBrc = parseGroup1Package(await readFile(join(packagesDir, brcFile), 'utf8'));
 products.get('brc-am7').imageStatuses = rawBrc.imageStatuses;
 const publicProducts = new Map([...products].map(([slug, product]) => [slug, projectPublicDetail(product, options[slug])]));
 const brc = publicProducts.get('brc-am7');
 assert.equal(brc.model, 'BRC-AM7');
 assert.deepEqual(brc.images, []);
 for (const [slug, product] of publicProducts) applyPublishedImages(product, slug);
-const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()]);
+const slugByProduct = new Map([...publicProducts].map(([slug, product]) => [product, slug]));
+const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()], {
+  slugOf: product => slugByProduct.get(product) ?? null,
+  cardImageOf: product => cardImages[slugByProduct.get(product)] ?? null
+});
 assert.equal(catalog.length, 27);
+assert.equal(catalog.filter(item => item.slug).length, publicProducts.size);
 await mkdir(join(site, 'detail/data'), { recursive: true });
 await writeFile(join(site, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n', 'utf8');
 for (const [slug, product] of publicProducts) await writeFile(join(site, 'detail/data', `${slug}.json`), JSON.stringify(product, null, 2) + '\n', 'utf8');
@@ -83,8 +100,4 @@ for (const [source, generated, kind] of detailAssetPairs) {
   const content = await readFile(join(root, source), 'utf8');
   await writeFile(join(root, generated), transformDetailAsset(content, kind), 'utf8');
 }
-const libraryHtml = await readFile(join(root, 'beta/site/index.html'), 'utf8');
-await writeFile(join(site, 'index.html'), libraryHtml
-  .replace('<script type="module" src="./app.js"></script>', libraryHtml.includes('detail-links.js') ? '<script type="module" src="./app.js"></script>' : '<script type="module" src="./app.js"></script>\n  <script type="module" src="./detail-links.js"></script>')
-  .replace('<link rel="stylesheet" href="./styles.css">', libraryHtml.includes('detail-links.css') ? '<link rel="stylesheet" href="./styles.css">' : '<link rel="stylesheet" href="./styles.css">\n  <link rel="stylesheet" href="./detail-links.css">'), 'utf8');
 console.log('Group 1 Pages bundle: 27 Library entries, five details, 13 reviewed official images, no PDF binaries.');

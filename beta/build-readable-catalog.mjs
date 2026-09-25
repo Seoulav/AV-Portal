@@ -3,13 +3,6 @@ import { fileURLToPath } from 'node:url';
 
 const site = new URL('./site/', import.meta.url);
 const publicBase = 'https://seoulav.github.io/AV-Portal/';
-const detailSlugs = new Map([
-  ['sony\0brc-am7', 'brc-am7'],
-  ['yamaha\0dm7', 'dm7'],
-  ['aja\0ki pro go2', 'ki-pro-go2'],
-  ['panasonic\0pt-mz17k', 'pt-mz17k'],
-  ['logitech\0rally bar', 'rally-bar']
-]);
 
 const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
@@ -20,8 +13,7 @@ const escapeHtml = value => String(value)
 
 export function buildCatalogHtml(catalog) {
   const cards = catalog.map(item => {
-    const key = `${item.brand.toLowerCase()}\0${item.product.toLowerCase()}`;
-    const slug = detailSlugs.get(key);
+    const slug = item.slug;
     const links = item.official_links.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">공식 링크 ${index + 1}</a>`);
     if (slug) links.unshift(`<a href="./detail/?product=${slug}">Product Detail</a>`);
     return `      <article class="catalog-product">
@@ -63,8 +55,7 @@ ${cards}
 
 export function buildLlmsText(catalog) {
   const products = catalog.map(item => {
-    const key = `${item.brand.toLowerCase()}\0${item.product.toLowerCase()}`;
-    const slug = detailSlugs.get(key);
+    const slug = item.slug;
     const lines = [
       `- 제품: ${item.brand} ${item.product}`,
       `  분류: ${item.categories.join(' | ')}`,

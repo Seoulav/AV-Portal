@@ -57,3 +57,12 @@ export function applyPublishedImages(product, slug) {
   });
   return product;
 }
+
+// Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
+export const cardImages = {
+  'brc-am7': 'brc-am7-main.webp',
+  dm7: 'dm7-perspective.webp',
+  'ki-pro-go2': 'ki-pro-go2-main.webp',
+  'pt-mz17k': 'pt-mz17k-perspective.webp',
+  'rally-bar': 'rally-bar-front.webp'
+};
