@@ -167,6 +167,9 @@ if (typeof document !== 'undefined') {
     ui.headerSearch.hidden = !active;
     ui.heroSearch.hidden = active;
     ui.heroNote.hidden = active;
+    ui.globalSearch.disabled = !active;
+    for (const control of [ui.resultSearch, ui.brand, ui.resource, ui.sort]) control.disabled = !active;
+    ui.categories.querySelectorAll('input').forEach(input => { input.disabled = !active; });
     document.querySelectorAll('[data-top-category]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.topCategory === state.topCategory)));
     document.querySelectorAll('[data-manufacturer]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.manufacturer === state.brand)));
     if (!active) { ui.cards.replaceChildren(); saveUrl(push); return; }

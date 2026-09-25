@@ -4,6 +4,7 @@
   --blue:#2662db;--ink:#17284c;--muted:#65738e;--line:#e1e7f2;--shadow:0 18px 48px rgba(40,66,124,.075);
 }
 
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-width:0}
@@ -997,3 +998,66 @@ body.summary-detail .related-empty strong{color:#34567f;font-size:12px}
  body.summary-detail .connector-evidence-list{grid-template-columns:1fr;padding:8px}
  body.summary-detail .related-empty{display:grid;gap:3px;padding:12px 14px}
 }
+
+/* W-20260925-003: seven accessible panels and light-theme readability. */
+body.summary-detail .body-sections{display:block;padding-top:18px}
+body.summary-detail .detail-tabs{padding:7px;gap:5px;justify-content:flex-start;border-radius:18px}
+body.summary-detail .detail-tabs button{flex:1;min-width:max-content;padding:10px 15px;border:0;border-radius:999px;background:transparent;color:#53657d;font-size:12px;font-weight:850;cursor:pointer}
+body.summary-detail .detail-tabs button[aria-selected="true"]{background:#2467c6;color:#fff;box-shadow:0 5px 14px #2467c62b}
+body.summary-detail .detail-tabs button:hover{background:#edf4ff;color:#174f9e}
+body.summary-detail .detail-tabs button[aria-selected="true"]:hover{background:#2467c6;color:#fff}
+body.summary-detail [role="tabpanel"]{margin-top:18px;scroll-margin-top:92px}
+body.summary-detail [role="tabpanel"][hidden]{display:none!important}
+body.summary-detail #features>.overview-card{max-width:none}
+body.summary-detail :is(a,button,input,summary,[tabindex]):focus-visible{outline:3px solid #174f9e!important;outline-offset:3px!important;box-shadow:0 0 0 5px #dce9ff!important}
+body.summary-detail .portal-mark strong,body.summary-detail .portal-mark small,body.summary-detail .library-link{color:#234b81}
+body.summary-detail .portal-mark small{font-size:11px}.library-link{font-size:12px!important}
+body.summary-detail .section-eyebrow,body.summary-detail .eyebrow,body.summary-detail .tiny-label,body.summary-detail .field-label{font-size:11px}
+body.summary-detail .quick-card .state,body.summary-detail .spec-meta .state,body.summary-detail .connector-verification .state,body.summary-detail .image-status-inline>.state{font-size:11px}
+body.summary-detail .thumb .thumb-fallback,body.summary-detail .thumb span,body.summary-detail .quick-status,body.summary-detail .quick-card .quick-language,body.summary-detail .overview-points span,body.summary-detail .evidence-line,body.summary-detail .spec-value small,body.summary-detail .source-ref,body.summary-detail .io-group-head span,body.summary-detail .io-facts span,body.summary-detail .io-facts strong,body.summary-detail .io-row-main>.state,body.summary-detail .io-condition,body.summary-detail .document-main small,body.summary-detail .missing-docs>p,body.summary-detail .verification-legend p,body.summary-detail .panel-heading span,body.summary-detail .source-code,body.summary-detail .source-item p,body.summary-detail .issue-item p,body.summary-detail .site-footer,body.summary-detail .image-dialog>p{font-size:11px}
+body.summary-detail .header-description-toggle,body.summary-detail .key-spec small,body.summary-detail .key-review,body.summary-detail .key-condition,body.summary-detail .io-summary-chip strong,body.summary-detail .rear-connector-panel figcaption,body.summary-detail .key-connectors-heading span,body.summary-detail .key-connectors-heading>strong,body.summary-detail .key-connector-row,body.summary-detail .key-connector-identity small,body.summary-detail .connector-group-heading small,body.summary-detail .connector-review-count,body.summary-detail .connector-columns,body.summary-detail .connector-flag,body.summary-detail .connector-direction,body.summary-detail .connector-detail,body.summary-detail .connector-verification .state,body.summary-detail .connector-group-note,body.summary-detail .detail-search input,body.summary-detail .detail-search button,body.summary-detail .connector-evidence-item,body.summary-detail .related-empty{font-size:11px}
+body.summary-detail .key-spec-condition{display:block;margin:3px 0 0;color:#62748e;font-size:11px;font-weight:500}
+body.summary-detail .supplemental-note{color:#52647d}.supplemental-note strong{color:#334e73}
+body.summary-detail .image-status-details summary,body.summary-detail .image-status-card{color:#365d7d}
+body.summary-detail .image-status-card small{font-size:11px;color:#526b86}
+body.summary-detail{color:#1f3857}
+body.summary-detail main :where(p,span,strong,small,summary,label){color:#294867}
+body.summary-detail main a{color:#1559a8}
+body.summary-detail .breadcrumbs,body.summary-detail .breadcrumbs :where(a,span){color:#4f647b}
+body.summary-detail .field-label,body.summary-detail .tiny-label,body.summary-detail .series-note{color:#52677e}
+body.summary-detail .verification-note p,body.summary-detail .overview-card p,body.summary-detail .summary-copy{color:#324f6d}
+body.summary-detail .quick-language,body.summary-detail .quick-status,body.summary-detail .quick-unavailable{color:#52677e}
+body.summary-detail .image-source{color:#1559a8}
+body.summary-detail .state{color:#294867}
+body.summary-detail .state-ready{color:#176040}
+body.summary-detail .state-review,body.summary-detail .state-conflicted{color:#75430a}
+body.summary-detail .count-bubble,body.summary-detail .tab-button.is-active{color:#fff}
+body.summary-detail .site-footer,body.summary-detail .site-footer span{color:#4f647b}
+body.summary-detail .product-full-name,body.summary-detail .quick-card strong{color:#233f5d}
+body.summary-detail .state-review,body.summary-detail .state-partial{background:#fff1cb;color:#643700}
+body.summary-detail .state-found,body.summary-detail .state-ready,body.summary-detail .state-official,body.summary-detail .state-verified{background:#e4f5ec;color:#174d38}
+body.summary-detail .state-conflict{background:#fee8e7;color:#7b2924}
+body.summary-detail .state-missing{background:#e9eef5;color:#344b66}
+body.summary-detail .count-bubble{background:#245fae;color:#fff}
+body.summary-detail .site-search span{color:#385774}
+body.summary-detail :is(a,button,input,select,summary,[tabindex]):focus{outline:3px solid #174f9e;outline-offset:3px}
+body.summary-detail .section-lead,body.summary-detail .key-spec-condition,body.summary-detail .key-spec small,body.summary-detail .rear-unavailable{color:#4b6078}
+body.summary-detail .feature-check{color:#1e5da8}
+body.summary-detail .verification-guide summary{background:#f7faff;border-color:#c9d9ee;color:#234f89}
+body.summary-detail .verification-legend>div{background:#fff;border-color:#dce5f0}
+body.summary-detail .verification-legend p{color:#425a73}
+body.summary-detail .source-code{background:#e5effd;color:#234f89}
+body.summary-detail #gallery-rights-badge{background:#e5eefb;color:#345f91}
+body.summary-detail :is(a,button,input,select,summary,[tabindex]):focus{outline:3px solid #174f9e!important;outline-offset:3px!important;box-shadow:0 0 0 2px #fff,0 0 0 5px #174f9e!important}
+body.summary-detail .detail-search{color:#294b6d}
+body.summary-detail .connector-detail-grid dt{color:#4b6078}
+body.summary-detail .connector-mobile-row small,body.summary-detail .connector-group-heading span{color:#405873}
+body.summary-detail .gallery-rights,body.summary-detail .image-trace,body.summary-detail .image-trace span,body.summary-detail .quick-heading p{color:#425a73}
+body.summary-detail .io-summary-chip strong{color:#36516f}
+body.summary-detail .gallery-foot p span{color:#425a73}
+body.summary-detail .connector-group-heading span,body.summary-detail .io-summary-chip strong{color:#304b67}
+body.summary-detail .portal-icon{background-color:#243a61}
+body.summary-detail .connector-group-heading span,body.summary-detail .io-summary-chip strong{color:#233f5d}
+body.summary-detail .connector-group-heading span,body.summary-detail .io-summary-chip strong{color:#102f4f!important}
+body.summary-detail.source-anchor-active main{padding-bottom:50vh}
+@media(max-width:650px){body.summary-detail .quick-card strong,body.summary-detail .quick-card .quick-language,body.summary-detail .quick-status,body.summary-detail .quick-card .quick-open,body.summary-detail .quick-card .quick-unavailable,body.summary-detail .official-product-link,body.summary-detail .feature-more summary,body.summary-detail .section-lead,body.summary-detail .key-spec,body.summary-detail .key-spec small,body.summary-detail .expanded-data>summary,body.summary-detail .connector-protocol,body.summary-detail .supplemental-docs>summary,body.summary-detail .source-disclosure>summary,body.summary-detail .manufacturer-footer a,body.summary-detail .connector-mobile-group>.connector-group-heading span,body.summary-detail .connector-mobile-row,body.summary-detail .connector-mobile-row strong,body.summary-detail .connector-mobile-row small,body.summary-detail .connector-mobile-row>b{font-size:11px}body.summary-detail .detail-tabs button{font-size:12px;padding:10px 13px}}

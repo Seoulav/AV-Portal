@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-navigation-2';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w003-tabs-contrast-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -70,6 +70,15 @@ try {
 }
 
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
+const setMeta = (selector, value) => {
+  const item = document.querySelector(selector);
+  if (item && value) item.content = value;
+};
+const detailTitle = `${data.manufacturer} ${data.model}`;
+setMeta('meta[name="description"]', data.english);
+setMeta('meta[property="og:title"]', detailTitle);
+setMeta('meta[property="og:description"]', data.english);
+setMeta('meta[property="og:url"]', location.href.split('#')[0]);
 document.body.classList.add('summary-detail');
 const mobileDetail = matchMedia('(max-width: 650px)');
 $('#detail-search-form').addEventListener('submit', event => {
@@ -332,12 +341,8 @@ const keySpec = specification => {
   item.append(node('span', 'key-spec-label', specification.name));
   const value = node('strong', '', specification.value);
   if (specification.unit) value.append(node('small', '', ' ' + specification.unit));
-  if (specification.condition) {
-    const condition = node('small', 'key-spec-condition', '조건 있음');
-    condition.title = specification.condition;
-    value.append(condition);
-  }
   item.append(value);
+  if (specification.condition) item.append(node('small', 'key-spec-condition', '조건 · ' + specification.condition));
   return item;
 };
 function renderKeySpecifications() {
@@ -474,16 +479,8 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const navigationLinks = [...$('#detail-tabs').querySelectorAll('a')];
-function updateNavigation(target) {
-  const section = target?.closest('#overview, #features, #specifications, #io, #related-products, #documents, #sources') ?? $('#overview');
-  for (const link of navigationLinks) {
-    const active = link.hash === '#' + section.id;
-    link.classList.toggle('is-active', active);
-    if (active) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
-  }
-}
+const navigationTabs = [...$('#detail-tabs').querySelectorAll('[role="tab"]')];
+const tabPanels = [...document.querySelectorAll('[role="tabpanel"]')];
 function hashTarget() {
   if (!location.hash) return null;
   try {
@@ -503,39 +500,62 @@ function openForTarget(target) {
   }
   if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
   if (target && (target === $('#supplemental-docs') || $('#supplemental-docs').contains(target))) $('#supplemental-docs').open = true;
-  updateNavigation(target);
 }
-for (const link of navigationLinks) link.addEventListener('click', () => updateNavigation(document.getElementById(link.hash.slice(1))));
-let navigationFrame = 0;
-window.addEventListener('scroll', () => {
-  if (navigationFrame) return;
-  navigationFrame = requestAnimationFrame(() => {
-    navigationFrame = 0;
-    const visible = [...document.querySelectorAll('#overview, #features, #specifications, #io, #related-products, #documents, #sources')]
-      .filter(section => section.getBoundingClientRect().top <= 130);
-    let current = visible.at(-1);
-    if (current === $('#features')) {
-      current = location.hash === '#features' ? current : $('#overview');
-    }
-    updateNavigation(current);
+function panelForTarget(target) {
+  return target?.closest?.('[role="tabpanel"]') ?? $('#overview');
+}
+function activatePanel(panel, { updateHash = false, focusTab = false } = {}) {
+  if (!panel) panel = $('#overview');
+  for (const candidate of tabPanels) candidate.hidden = candidate !== panel;
+  if (panel instanceof HTMLDetailsElement) panel.open = true;
+  for (const tab of navigationTabs) {
+    const active = tab.getAttribute('aria-controls') === panel.id;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+    tab.classList.toggle('is-active', active);
+    if (active && focusTab) tab.focus();
+  }
+  if (updateHash) history.pushState(null, '', '#' + panel.id);
+}
+for (const [index, tab] of navigationTabs.entries()) {
+  tab.addEventListener('click', () => {
+    const panel = document.getElementById(tab.getAttribute('aria-controls'));
+    activatePanel(panel, { updateHash: true });
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-}, { passive: true });
+  tab.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    let next = event.key === 'Home' ? 0 : event.key === 'End' ? navigationTabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + navigationTabs.length) % navigationTabs.length;
+    const nextTab = navigationTabs[next];
+    const panel = document.getElementById(nextTab.getAttribute('aria-controls'));
+    activatePanel(panel, { updateHash: true, focusTab: true });
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
 document.addEventListener('click', event => {
   const link = event.target.closest('a[href^="#"]');
   if (!link) return;
   let target;
   try { target = document.getElementById(decodeURIComponent(link.hash.slice(1))); }
   catch { return; }
-  if (target) openForTarget(target);
+  if (target) {
+    activatePanel(panelForTarget(target));
+    openForTarget(target);
+  }
 });
-openForTarget(hashTarget());
+const initialTarget = hashTarget();
+activatePanel(panelForTarget(initialTarget));
+openForTarget(initialTarget);
 
 function restoreInitialHash() {
   const target = hashTarget();
+  document.body.classList.toggle('source-anchor-active', Boolean(target?.id?.startsWith('source-')));
   if (!target) {
     history.scrollRestoration = 'auto';
     return;
   }
+  activatePanel(panelForTarget(target));
   openForTarget(target);
   const root = document.documentElement;
   const previousBehavior = root.style.scrollBehavior;

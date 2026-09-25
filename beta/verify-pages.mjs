@@ -4,7 +4,7 @@ import { readFile, readdir } from 'node:fs/promises';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'index.html', 'styles.css']);
+assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'styles.css']);
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 assert.deepEqual(await readdir(new URL('images/', detail)), ['ptz-pictogram.svg']);

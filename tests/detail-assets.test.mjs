@@ -13,7 +13,7 @@ test('prototype source retains public detail deep-link and failure protections',
   assert.match(source, /scrollRestoration = 'manual'/);
 });
 
-test('all six generated detail assets match the builder source and shared transforms', async () => {
+test('all generated detail assets match the builder source and shared transforms', async () => {
   const normalized = text => text.replace(/\r\n/g, '\n');
   for (const [sourcePath, generatedPath, kind] of detailAssetPairs) {
     const source = await file(sourcePath);
