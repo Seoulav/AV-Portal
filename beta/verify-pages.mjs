@@ -5,7 +5,7 @@ import { group1Images } from './group1-images.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'llms.txt', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
