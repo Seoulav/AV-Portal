@@ -22,7 +22,7 @@ for (const entry of group2Previews) {
   assert.equal(image.officialSource, true);
   assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
   assert.match(image.publicationStatus, /사용자 게시 승인/);
-  assert.match(image.publicationStatus, /제조사 재사용 권리 미확인/);
+  assert.match(image.publicationStatus, /공식 대리점 구매·계약 기반 사용/);
   assert.ok(typeof image.alt === 'string' && image.alt.trim(), `${entry.product}: 카드 사진 대체 텍스트`);
   if (entry.scope !== undefined) assert.ok(previewImageScopes.includes(entry.scope), `${entry.product}: 허용되지 않은 사진 범위`);
   const url = new URL(image.sourceUrl);
@@ -82,6 +82,14 @@ for (const item of catalog) {
     assert.equal(url.username, '');
     assert.equal(url.password, '');
     assert.ok(!/\.pdf$/i.test(url.pathname));
+  }
+  if (item.manual_link !== undefined) {
+    assert.ok(typeof item.manual_link === 'string' && item.manual_link.trim(), `${item.product}: 매뉴얼 링크`);
+    const manualUrl = new URL(item.manual_link);
+    assert.equal(manualUrl.protocol, 'https:');
+    assert.equal(manualUrl.username, '');
+    assert.equal(manualUrl.password, '');
+    assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
   }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');

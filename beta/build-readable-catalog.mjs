@@ -16,6 +16,7 @@ export function buildCatalogHtml(catalog) {
     const slug = item.slug;
     const label = item.link_scope === 'series' ? '제품군 링크' : '공식 링크';
     const links = item.official_links.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">${label} ${index + 1}</a>`);
+    if (item.manual_link) links.push(`<a href="${escapeHtml(item.manual_link)}" rel="noopener noreferrer">제조사 매뉴얼</a>`);
     if (slug) links.unshift(`<a href="./detail/?product=${slug}">Product Detail</a>`);
     return `      <article class="catalog-product">
         <p class="brand">${escapeHtml(item.brand)}</p>
@@ -61,7 +62,8 @@ export function buildLlmsText(catalog) {
       `- 제품: ${item.brand} ${item.product}`,
       `  분류: ${item.categories.join(' | ')}`,
       '  종류: 장비',
-      ...item.official_links.map(url => `  ${item.link_scope === 'series' ? '제품군 링크' : '공식 링크'}: ${url}`)
+      ...item.official_links.map(url => `  ${item.link_scope === 'series' ? '제품군 링크' : '공식 링크'}: ${url}`),
+      ...(item.manual_link ? [`  매뉴얼: ${item.manual_link}`] : [])
     ];
     if (slug) lines.push(`  상세: ${publicBase}detail/?product=${slug}`);
     return lines.join('\n');
