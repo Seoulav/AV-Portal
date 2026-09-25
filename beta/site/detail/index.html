@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
+  <meta name="description" content="AV Portal 제품 상세 정보">
+  <meta property="og:title" content="AV Portal 제품 상세">
+  <meta property="og:description" content="AV Portal 제품 상세 정보">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="../detail/">
+  <meta property="og:site_name" content="AV Portal">
   <title>AV Portal Product Detail Beta</title>
-  <link rel="stylesheet" href="./styles.css?v=w025-navigation-2">
-  <script type="module" src="./app.js?v=w025-navigation-2"></script>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=w003-tabs-contrast-1">
+  <script type="module" src="./app.js?v=w003-tabs-contrast-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -69,24 +76,24 @@
     </div>
 
     <div class="body-sections">
-      <nav id="detail-tabs" class="detail-tabs" aria-label="제품 상세 정보">
-        <a href="#overview">개요</a><a href="#features">특징</a><a href="#specifications">스펙</a><a href="#io">연결 단자</a><a href="#related-products">관련 제품</a><a href="#documents">문서</a><a href="#sources">출처·검증</a>
+      <nav id="detail-tabs" class="detail-tabs" aria-label="제품 상세 정보" role="tablist">
+        <button id="tab-overview" type="button" role="tab" aria-controls="overview" aria-selected="true" tabindex="0">개요</button><button id="tab-features" type="button" role="tab" aria-controls="features" aria-selected="false" tabindex="-1">특징</button><button id="tab-specifications" type="button" role="tab" aria-controls="specifications" aria-selected="false" tabindex="-1">스펙</button><button id="tab-io" type="button" role="tab" aria-controls="io" aria-selected="false" tabindex="-1">연결 단자</button><button id="tab-related-products" type="button" role="tab" aria-controls="related-products" aria-selected="false" tabindex="-1">관련 제품</button><button id="tab-documents" type="button" role="tab" aria-controls="documents" aria-selected="false" tabindex="-1">문서</button><button id="tab-sources" type="button" role="tab" aria-controls="sources" aria-selected="false" tabindex="-1">출처·검증</button>
       </nav>
-      <section id="overview" class="detail-section overview-grid" aria-labelledby="overview-title">
+      <section id="overview" class="detail-section overview-grid" role="tabpanel" aria-labelledby="tab-overview">
         <div class="overview-card panel"><h2 id="overview-title">제품 개요</h2><p id="overview-summary" class="overview-summary"></p>
           <details id="overview-more" class="overview-more"><summary>전체 설명 보기</summary><h3 id="overview-heading"></h3><p id="overview-copy"></p><div id="overview-points" class="overview-points"></div></details>
         </div>
-        <div id="features" class="overview-card panel" aria-labelledby="features-title"><h2 id="features-title">주요 특징</h2><ul id="feature-list" class="feature-grid"></ul><details id="feature-more" class="feature-more"><summary>전체 특징 보기 (<span id="feature-count"></span>)</summary><ul id="feature-more-list" class="feature-grid"></ul></details></div>
       </section>
+      <section id="features" class="detail-section overview-grid" role="tabpanel" aria-labelledby="tab-features" hidden><div class="overview-card panel"><h2 id="features-title">주요 특징</h2><ul id="feature-list" class="feature-grid"></ul><details id="feature-more" class="feature-more"><summary>전체 특징 보기 (<span id="feature-count"></span>)</summary><ul id="feature-more-list" class="feature-grid"></ul></details></div></section>
 
-      <section id="specifications" class="detail-section" aria-labelledby="specifications-title">
+      <section id="specifications" class="detail-section" role="tabpanel" aria-labelledby="tab-specifications" hidden>
         <div class="section-title"><div><h2 id="specifications-title">주요 사양</h2></div></div>
         <p id="spec-intro" class="section-lead"></p>
         <div id="key-specs" class="key-specs panel"></div>
         <details id="all-specs" class="expanded-data"><summary>전체 사양 보기 (<span id="spec-count"></span>)</summary><div id="spec-groups" class="spec-groups"></div></details>
       </section>
 
-      <section id="io" class="detail-section" aria-labelledby="io-title">
+      <section id="io" class="detail-section" role="tabpanel" aria-labelledby="tab-io" hidden>
         <div class="section-title"><div><h2 id="io-title">연결 단자</h2></div></div>
         <div class="io-intro"><p id="io-intro"></p><span class="io-total"><strong id="io-count"></strong>개 연결 항목</span></div>
         <div id="io-summary" class="io-summary" role="list" aria-label="연결 단자 그룹 요약"></div>
@@ -102,11 +109,12 @@
         <details id="connector-evidence" class="expanded-data connector-evidence"><summary><span id="all-connector-count"></span>개 항목의 근거 및 검증 보기</summary><div id="io-list" class="connector-evidence-list"></div></details>
       </section>
 
-      <section id="related-products" class="detail-section related-products" aria-labelledby="related-products-title"><div class="section-title"><h2 id="related-products-title">관련 제품</h2></div><div class="related-empty panel"><strong>등록된 관련 제품이 없습니다.</strong><span>검증된 제품 관계가 준비되면 이 영역에 표시합니다.</span></div></section>
+      <section id="related-products" class="detail-section related-products" role="tabpanel" aria-labelledby="tab-related-products" hidden><div class="section-title"><h2 id="related-products-title">관련 제품</h2></div><div class="related-empty panel"><strong>등록된 관련 제품이 없습니다.</strong><span>검증된 제품 관계가 준비되면 이 영역에 표시합니다.</span></div></section>
 
-      <section id="documents" class="detail-section resources-section" aria-labelledby="documents-title"><div class="section-title"><h2 id="documents-title">자료</h2></div>
+      <section id="documents" class="detail-section resources-section" role="tabpanel" aria-labelledby="tab-documents" hidden><div class="section-title"><h2 id="documents-title">자료</h2></div>
       <details id="supplemental-docs" class="supplemental-docs"><summary>추가 문서 보기</summary><div id="all-documents" class="documents-list"></div><div id="missing-documents-panel" class="missing-docs panel"><div><span class="state state-missing">MISSING</span><h3>아직 확인되지 않은 독립 문서</h3></div><div id="missing-documents" class="missing-list"></div></div></details>
-      <details id="sources" class="detail-section source-disclosure" aria-labelledby="sources-title">
+      </section>
+      <details id="sources" class="detail-section source-disclosure resources-section" role="tabpanel" aria-labelledby="tab-sources" hidden>
         <summary class="section-title"><h3 id="sources-title">검증 정보 보기</h3></summary>
         <div id="verification-documents" class="verification-documents"></div>
         <details class="feature-evidence"><summary>특징별 근거 보기</summary><div id="feature-evidence-list"></div></details>
@@ -114,7 +122,6 @@
         <div class="source-layout"><div class="panel source-panel"><div class="panel-heading"><h3>Manufacturer Official</h3><span id="source-count"></span></div><div id="source-list" class="source-list"></div></div><div class="panel review-panel"><div class="panel-heading"><h3>검토 중인 항목</h3><span>확정 사양과 분리</span></div><div id="issue-list" class="issue-list"></div></div></div>
         <div class="supplemental-note"><strong>Supplemental / Domestic</strong><span id="supplemental-note"></span></div>
       </details>
-      </section>
       <div class="manufacturer-footer panel"><span>MANUFACTURER</span><strong id="footer-manufacturer"></strong><div id="footer-official-link"></div></div>
     </div>
   </main>

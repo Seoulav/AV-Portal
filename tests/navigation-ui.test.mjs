@@ -82,10 +82,23 @@ test('home and detail templates expose the approved navigation structure', async
   assert.match(home, /id="top-categories"/);
   assert.match(home, /id="manufacturer-browser"/);
   assert.match(home, /id="results-workspace"[^>]+hidden/);
-  for (const id of ['overview', 'features', 'specifications', 'io', 'related-products', 'documents', 'sources']) assert.match(detail, new RegExp(`href="#${id}"`));
+  for (const id of ['overview', 'features', 'specifications', 'io', 'related-products', 'documents', 'sources']) {
+    assert.match(detail, new RegExp(`role="tab"[^>]+aria-controls="${id}"`));
+    assert.match(detail, new RegExp(`id="${id}"[^>]+role="tabpanel"`));
+  }
+  assert.match(detail, /role="tablist"/);
   assert.match(detail, /<th>포트 수<\/th><th>채널·신호<\/th><th>규격·조건<\/th>/);
   assert.match(detail, /id="connector-mobile-groups"/);
   assert.match(detailApp, /mobileHeading\.setAttribute\('aria-expanded', String\(mobileGroup\.open\)\)/);
   assert.match(detailApp, /mobileGroup\.addEventListener\('toggle'/);
   assert.match(detailStyles, /\.connector-mobile-group\[open\]>\.connector-group-heading::after\{content:'−'\}/);
+});
+
+test('public pages include share metadata and an explicit favicon', async () => {
+  for (const path of ['../beta/site/index.html', '../prototype/brc-am7/index.html']) {
+    const html = await readFile(new URL(path, import.meta.url), 'utf8');
+    assert.match(html, /<meta name="description"/);
+    for (const property of ['og:title', 'og:description', 'og:type', 'og:url', 'og:site_name']) assert.match(html, new RegExp(`property="${property}"`));
+    assert.match(html, /rel="icon"[^>]+favicon\.svg/);
+  }
 });

@@ -4,6 +4,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
   ['prototype/brc-am7/product-detail-model.mjs', 'beta/site/detail/product-detail-model.mjs', 'copy'],
+  ['prototype/brc-am7/favicon.svg', 'beta/site/favicon.svg', 'copy'],
   ['prototype/group1/group1-links.js', 'beta/site/detail-links.js', 'copy'],
   ['prototype/group1/group1.css', 'beta/site/detail-links.css', 'copy']
 ];
@@ -17,6 +18,7 @@ export function transformDetailHtml(source) {
   return source
     .replaceAll('Product Detail 시안', 'Product Detail Beta')
     .replaceAll('https://seoulav.github.io/AV-Portal/', '../')
+    .replace('href="./favicon.svg"', 'href="../favicon.svg"')
     .replaceAll('PRODUCT DETAIL LAB', 'PRODUCT DETAIL')
     .replaceAll('LOCAL PREVIEW', 'PUBLIC BETA')
     .replaceAll('공개 Library', 'Library')
