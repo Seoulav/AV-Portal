@@ -14,12 +14,41 @@
   "verificationSummary": "공식 제품 페이지와 Manual v5.0r1을 확인했습니다. 이미지 방향·해상도와 게시 권한은 검토 중입니다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "Ki Pro GO2는 최대 네 개의 HD 또는 SD 입력을 동시에 H.265 또는 H.264 MP4 파일로 기록하는 휴대형 레코더다. 네 개의 3G-SDI 입력과 네 개의 HDMI 입력 중 채널별 소스를 배정하며, 입력 프레임 동기화 기능으로 서로 동기되지 않은 소스를 함께 사용할 수 있다.\n\n기록 대상은 전면 네 개와 후면 한 개의 USB 3.2 Gen 1 포트, 또는 Gigabit Ethernet을 통한 SMB 네트워크 스토리지다. USB와 네트워크 저장소를 함께 사용한 중복 기록도 지원한다.\n\nSDI·HDMI 모니터 출력에서는 최대 네 채널의 매트릭스 보기와 상태 오버레이를 제공한다. 본체 전면 LCD와 버튼 또는 웹 UI로 제어하며, REST 기반 원격 제어도 제공한다.",
-  "images": [],
+  "images": [
+    {
+      "role": "Main",
+      "file": "ki-pro-go2-main.webp",
+      "alt": "AJA Ki Pro GO2 메인 제품 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "AJA",
+      "model": "Ki Pro GO2",
+      "sourceUrl": "https://d26ddnfpy9hzf8.cloudfront.net/aja-web/public/assets/products/img/728/ki_pro_go_2_product_3600.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3600×944",
+      "resolution": "1800×472",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ki-pro-go2-rear.webp",
+      "alt": "AJA Ki Pro GO2 후면 연결 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "AJA",
+      "model": "Ki Pro GO2",
+      "sourceUrl": "https://d26ddnfpy9hzf8.cloudfront.net/aja-web/public/assets/images/products/728/6346-Ki_Pro_Go2_feature_rear.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1140×450",
+      "resolution": "1140×450",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
   "imageStatuses": [
     {
       "role": "Main",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+      "status": "FOUND",
+      "sourceUrl": "https://d26ddnfpy9hzf8.cloudfront.net/aja-web/public/assets/products/img/728/ki_pro_go_2_product_3600.png"
     },
     {
       "role": "Front",
@@ -28,8 +57,8 @@
     },
     {
       "role": "Rear",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.aja.com/products/ki-pro-go2"
+      "status": "FOUND",
+      "sourceUrl": "https://d26ddnfpy9hzf8.cloudfront.net/aja-web/public/assets/images/products/728/6346-Ki_Pro_Go2_feature_rear.png"
     },
     {
       "role": "Perspective",
@@ -433,11 +462,13 @@
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "이미지 권한 검토 중",
-    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
     "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
-    "footerNote": "AJA Ki Pro GO2 · 공식 출처 기반"
+    "footerNote": "AJA Ki Pro GO2 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
   }
 }

@@ -125,6 +125,17 @@ export function selectKeySpecifications(specificationGroups = [], limit = 10) {
   return selected;
 }
 
+export function summarizeQuickDocuments(quickDocuments = []) {
+  const summary = { secured: 0, review: 0, missing: 0 };
+  for (const item of quickDocuments) {
+    const status = item.resource?.status ?? 'MISSING';
+    if (['VERIFIED', 'FOUND', 'READY'].includes(status)) summary.secured += 1;
+    else if (['REVIEW REQUIRED', 'CONFLICTED', 'PARTIAL'].includes(status)) summary.review += 1;
+    else summary.missing += 1;
+  }
+  return summary;
+}
+
 export function prepareProductDetail(input) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
@@ -160,7 +171,7 @@ export function prepareProductDetail(input) {
     officialPage: documents.find(item => item.type === 'Official Product Page' && item.url && item.status !== 'MISSING') ?? null,
     quickDocuments: QUICK_DOCUMENTS.map(([label, type, missingTitle]) => {
       const resource = documents.find(item => item.type === type) ?? null;
-      return { label, resource, missingTitle, available: Boolean(resource?.url && ['FOUND', 'VERIFIED'].includes(resource.status)) };
+      return { label, resource, missingTitle, available: Boolean(resource?.url && ['FOUND', 'VERIFIED', 'READY'].includes(resource.status)) };
     }),
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups,

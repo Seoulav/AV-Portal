@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications, directionLabel, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications, summarizeQuickDocuments, directionLabel, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -60,6 +60,21 @@ test('REVIEW REQUIRED documents retain their source without becoming quick-open 
   ] });
   assert.equal(view.quickDocuments[3].resource.status, 'REVIEW REQUIRED');
   assert.equal(view.quickDocuments[3].available, false);
+});
+
+test('quick document summary counts actual secured, review and missing states', () => {
+  assert.deepEqual(summarizeQuickDocuments([
+    { resource: { status: 'VERIFIED' } },
+    { resource: { status: 'FOUND' } },
+    { resource: { status: 'REVIEW REQUIRED' } },
+    { resource: null }
+  ]), { secured: 2, review: 1, missing: 1 });
+  assert.deepEqual(summarizeQuickDocuments([
+    { resource: { status: 'READY' } },
+    { resource: { status: 'CONFLICTED' } },
+    { resource: { status: 'MISSING' } },
+    { resource: null }
+  ]), { secured: 1, review: 1, missing: 2 });
 });
 
 test('connector groups collapse mixed labels without losing entries or direction text', () => {

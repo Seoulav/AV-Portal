@@ -12,8 +12,8 @@
   <meta property="og:site_name" content="AV Portal">
   <title>AV Portal Product Detail Beta</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=w003-tabs-contrast-1">
-  <script type="module" src="./app.js?v=w003-tabs-contrast-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=w004-image-detail-1">
+  <script type="module" src="./app.js?v=w004-image-detail-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -24,6 +24,7 @@
         <span><strong>AV PORTAL</strong><small>PRODUCT DETAIL</small></span>
       </a>
       <div class="header-actions">
+        <button id="detail-search-toggle" class="detail-search-toggle" type="button" aria-controls="detail-search-form" aria-expanded="false" aria-label="제품 검색 열기"><span aria-hidden="true">⌕</span></button>
         <form id="detail-search-form" class="detail-search" role="search"><label class="sr-only" for="detail-search">제품 통합 검색</label><span aria-hidden="true">⌕</span><input id="detail-search" type="search" placeholder="다른 제품 검색" autocomplete="off"><button type="submit">검색</button></form>
         <a class="library-link" href="../">제품 탐색</a>
       </div>
@@ -35,24 +36,16 @@
 
     <div class="hero-grid">
       <section class="product-header panel" aria-labelledby="product-name">
-        <h1 id="product-name"></h1>
         <p id="manufacturer" class="manufacturer"></p>
+        <h1 id="product-name"></h1>
         <p id="product-full-name" class="product-full-name"></p>
-        <p id="english-description" class="english-description"></p>
-        <p id="korean-description" class="korean-description"></p>
-        <button id="header-description-toggle" class="header-description-toggle" type="button" aria-controls="korean-description" aria-expanded="false" hidden>설명 더 보기</button>
-        <div id="categories" class="pills" aria-label="제품 카테고리"></div>
-        <details class="product-facts"><summary>제품 정보 · 검증 상태 <span id="model-status" class="state state-verified"></span></summary>
-          <span id="header-eyebrow" class="eyebrow" hidden></span>
-          <div class="identity-line"><span class="field-label">ITEM TYPE</span><strong id="item-type"></strong><span id="package-status" class="state"></span></div>
-          <div class="identity-line"><span class="field-label">SERIES</span><strong id="series"></strong><span id="series-note" class="series-note"></span></div>
-          <div class="verification-box"><div><span class="tiny-label">VERIFICATION SUMMARY</span><a href="#sources">근거 보기 <span aria-hidden="true">↘</span></a></div><p id="verification-summary"></p></div>
-        </details>
+        <div class="identity-summary"><span><small>SERIES</small><strong id="series"></strong></span><span><small>TYPE</small><strong id="item-type"></strong></span></div>
       </section>
 
       <section class="gallery panel" aria-labelledby="gallery-title">
         <div class="section-eyebrow"><span>01 / PRODUCT GALLERY</span><span id="gallery-count" class="gallery-count"></span></div>
         <div class="gallery-heading"><h2 id="gallery-title">제품 이미지</h2><span id="gallery-rights-badge" class="state state-review">공개 사용 권한 미확인</span></div>
+        <p id="gallery-empty-summary" class="gallery-empty-summary" hidden></p>
         <div class="image-stage">
           <img id="featured-image" alt="" hidden>
           <div id="image-missing" class="image-missing" hidden><strong>게시된 이미지가 없습니다</strong><span>공식 제품 페이지에서 사진을 확인해 주세요.</span></div>
@@ -66,9 +59,21 @@
         <p id="gallery-rights" class="gallery-rights"></p>
       </section>
 
+      <section class="product-description panel" aria-label="제품 설명과 상태">
+        <p id="english-description" class="english-description"></p>
+        <p id="korean-description" class="korean-description"></p>
+        <button id="header-description-toggle" class="header-description-toggle" type="button" aria-controls="korean-description" aria-expanded="false" hidden>설명 더 보기</button>
+        <div id="categories" class="pills" aria-label="제품 카테고리"></div>
+        <details class="product-facts"><summary>제품 정보 · 검증 상태 <span id="model-status" class="state state-verified"></span></summary>
+          <span id="header-eyebrow" class="eyebrow" hidden></span>
+          <span id="series-note" class="series-note"></span><span id="package-status" class="state"></span>
+          <div class="verification-box"><div><span class="tiny-label">VERIFICATION SUMMARY</span><a href="#sources">근거 보기 <span aria-hidden="true">↘</span></a></div><p id="verification-summary"></p></div>
+        </details>
+      </section>
+
       <section class="quick-documents panel" aria-labelledby="quick-documents-title">
         <div class="section-eyebrow"><span>02 / QUICK ACCESS</span><span>MANUFACTURER OFFICIAL</span></div>
-        <div class="quick-heading"><div><h2 id="quick-documents-title">문서 바로가기</h2><p>제조사 공식 자료 4종</p></div><span id="quick-count" class="count-bubble"></span></div>
+        <div class="quick-heading"><div><h2 id="quick-documents-title">문서 바로가기</h2><p id="quick-state-summary"></p></div><span id="quick-count" class="count-bubble" aria-label="문서 슬롯 수"></span></div>
         <div id="quick-docs" class="quick-grid"></div>
         <div id="official-product-link" class="official-product-action"></div>
         <div id="image-status-inline" class="image-status-inline" hidden><p id="image-status-message"></p></div>

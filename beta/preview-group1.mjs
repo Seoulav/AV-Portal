@@ -55,7 +55,7 @@ export function createGroup1PreviewServer() {
         const localImages = (await Promise.all(images[dataKey].map(async image => {
           try { await access(join(photos, image.file)); return image; } catch { return null; }
         }))).filter(Boolean);
-        if (localImages.length) {
+        if (!record.images?.length && localImages.length) {
           record.images = localImages;
           record.presentation ??= {};
           record.presentation.visualVariant = 'official-local';

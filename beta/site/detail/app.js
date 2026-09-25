@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w003-tabs-contrast-1';
+import { prepareProductDetail, summarizeQuickDocuments } from './product-detail-model.mjs?v=w004-image-detail-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -81,6 +81,25 @@ setMeta('meta[property="og:description"]', data.english);
 setMeta('meta[property="og:url"]', location.href.split('#')[0]);
 document.body.classList.add('summary-detail');
 const mobileDetail = matchMedia('(max-width: 650px)');
+const detailSearchForm = $('#detail-search-form');
+const detailSearchToggle = $('#detail-search-toggle');
+function setMobileSearch(open = false) {
+  const compact = mobileDetail.matches;
+  detailSearchToggle.hidden = !compact;
+  detailSearchForm.hidden = compact && !open;
+  detailSearchToggle.setAttribute('aria-expanded', String(compact && open));
+  detailSearchToggle.setAttribute('aria-label', open ? '제품 검색 닫기' : '제품 검색 열기');
+  if (compact && open) requestAnimationFrame(() => $('#detail-search').focus());
+}
+detailSearchToggle.addEventListener('click', () => setMobileSearch(detailSearchToggle.getAttribute('aria-expanded') !== 'true'));
+detailSearchForm.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && mobileDetail.matches) {
+    setMobileSearch(false);
+    detailSearchToggle.focus();
+  }
+});
+mobileDetail.addEventListener('change', () => setMobileSearch(false));
+setMobileSearch(false);
 $('#detail-search-form').addEventListener('submit', event => {
   event.preventDefault();
   const query = $('#detail-search').value.trim();
@@ -180,7 +199,7 @@ function selectImage(index) {
   const sourceLink = $('#image-source-link');
   sourceLink.hidden = !item.sourceUrl;
   if (item.sourceUrl) sourceLink.href = officialLink(item.sourceUrl, '').href;
-  $('#image-provenance').textContent = [item.provider, item.model, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
+  $('#image-provenance').textContent = [item.provider, item.model, item.role && `역할 ${item.role}`, item.verification && `검증 ${item.verification}`, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.resolution && `해상도 ${item.resolution}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
   for (const [position, button] of [...$('#thumbnails').children].entries()) {
     button.setAttribute('aria-pressed', String(position === index));
   }
@@ -263,19 +282,18 @@ if (data.officialPage?.url) {
   $('#dialog-product-link').hidden = true;
 }
 if (!data.images.length) {
-  const inlineStatus = $('#image-status-inline');
   const statusCount = (data.imageStatuses ?? []).length;
-  $('#image-status-message').textContent = foundImages
+  $('#gallery-title').textContent = '제품 이미지 준비 중';
+  $('#gallery-empty-summary').textContent = foundImages
     ? `제품 이미지 · 공식 출처 ${foundImages}건 확인 · 재게시 권한 미확인`
     : statusCount ? '제품 이미지 · 이미지 역할·사용 조건 검토 중 · 게시 이미지 없음' : '제품 이미지 · 확보된 사진 없음';
+  $('#gallery-empty-summary').hidden = false;
   const rightsBadge = $('#gallery-rights-badge');
   rightsBadge.hidden = !rightsBadge.textContent;
-  inlineStatus.append(rightsBadge);
-  if (!$('#image-status-details').hidden) inlineStatus.append($('#image-status-details'));
-  inlineStatus.hidden = false;
-  $('.gallery').remove();
 }
-$('#quick-count').textContent = data.quickDocuments.length;
+const documentSummary = summarizeQuickDocuments(data.quickDocuments);
+$('#quick-count').textContent = `${data.quickDocuments.length} 슬롯`;
+$('#quick-state-summary').textContent = `확보 ${documentSummary.secured} · 검토 ${documentSummary.review} · 없음 ${documentSummary.missing}`;
 for (const { label, resource, missingTitle, available } of data.quickDocuments) {
   const rawStatus = resource?.status ?? 'MISSING';
   const displayStatus = rawStatus === 'MISSING' ? '자료 없음' : ['REVIEW REQUIRED', 'CONFLICTED', 'PARTIAL'].includes(rawStatus) ? '검토 중' : '자료 있음';
@@ -479,8 +497,16 @@ for (const issue of data.issues) {
   $('#issue-list').append(item);
 }
 
-const navigationTabs = [...$('#detail-tabs').querySelectorAll('[role="tab"]')];
+const tabs = $('#detail-tabs');
+const navigationTabs = [...tabs.querySelectorAll('[role="tab"]')];
 const tabPanels = [...document.querySelectorAll('[role="tabpanel"]')];
+function revealActiveTab(tab, smooth = false) {
+  if (!mobileDetail.matches) return;
+  const maxLeft = Math.max(0, tabs.scrollWidth - tabs.clientWidth);
+  const centeredLeft = tab.offsetLeft - (tabs.clientWidth - tab.offsetWidth) / 2;
+  const targetLeft = Math.max(0, Math.min(maxLeft, centeredLeft));
+  if (Math.abs(tabs.scrollLeft - targetLeft) > 1) tabs.scrollTo({ left: targetLeft, behavior: smooth ? 'smooth' : 'auto' });
+}
 function hashTarget() {
   if (!location.hash) return null;
   try {
@@ -514,6 +540,7 @@ function activatePanel(panel, { updateHash = false, focusTab = false } = {}) {
     tab.tabIndex = active ? 0 : -1;
     tab.classList.toggle('is-active', active);
     if (active && focusTab) tab.focus();
+    if (active) revealActiveTab(tab, updateHash || focusTab);
   }
   if (updateHash) history.pushState(null, '', '#' + panel.id);
 }

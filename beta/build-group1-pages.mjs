@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { loadGroup1 } from '../prototype/group1/serve.mjs';
 import { parseGroup1Package, buildPreviewCatalog } from '../prototype/group1/group1-data.mjs';
 import { projectPublicDetail } from './group1-public.mjs';
+import { applyPublishedImages } from './group1-images.mjs';
 import { detailAssetPairs, transformDetailAsset } from './detail-asset-transforms.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -72,19 +73,7 @@ const publicProducts = new Map([...products].map(([slug, product]) => [slug, pro
 const brc = publicProducts.get('brc-am7');
 assert.equal(brc.model, 'BRC-AM7');
 assert.deepEqual(brc.images, []);
-brc.images = [{
-  role: 'Illustration', file: 'ptz-pictogram.svg',
-  alt: '실제 제품 사진이 아닌 자체 제작 범용 PTZ 카메라 픽토그램',
-  note: '제품 사진 준비 중 · 실제 외형과 다를 수 있음',
-  provider: 'AV Portal 자체 제작', model: '범용 PTZ 카메라', publicationStatus: 'CC0 1.0'
-}];
-Object.assign(brc.presentation, {
-  visualVariant: 'brc-pictogram',
-  galleryRightsBadge: '자체 제작 · CC0 픽토그램',
-  galleryFootNote: '실물 사진이 아닌 범용 그림',
-  galleryRights: '현재 그림은 BRC-AM7 실물 사진이 아닙니다. 직접 촬영한 사진이 준비되면 교체할 수 있습니다.',
-  footerNote: 'SONY BRC-AM7 · 범용 픽토그램 시안 · 실물 사진 준비 중'
-});
+for (const [slug, product] of publicProducts) applyPublishedImages(product, slug);
 const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()]);
 assert.equal(catalog.length, 27);
 await mkdir(join(site, 'detail/data'), { recursive: true });
@@ -98,4 +87,4 @@ const libraryHtml = await readFile(join(root, 'beta/site/index.html'), 'utf8');
 await writeFile(join(site, 'index.html'), libraryHtml
   .replace('<script type="module" src="./app.js"></script>', libraryHtml.includes('detail-links.js') ? '<script type="module" src="./app.js"></script>' : '<script type="module" src="./app.js"></script>\n  <script type="module" src="./detail-links.js"></script>')
   .replace('<link rel="stylesheet" href="./styles.css">', libraryHtml.includes('detail-links.css') ? '<link rel="stylesheet" href="./styles.css">' : '<link rel="stylesheet" href="./styles.css">\n  <link rel="stylesheet" href="./detail-links.css">'), 'utf8');
-console.log('Group 1 Pages bundle: 27 Library entries, five public-safe details, no image/PDF binaries.');
+console.log('Group 1 Pages bundle: 27 Library entries, five details, 13 reviewed official images, no PDF binaries.');
