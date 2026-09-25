@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -110,4 +110,22 @@ test('key connector selection excludes missing placeholders but full groups reta
 
   assert.deepEqual(selectKeyConnectors(groups).map(item => item.connector), ['LAN connector']);
   assert.equal(groups.flatMap(group => group.entries).length, 3);
+});
+
+test('key specification selection limits verified values while preserving group order', () => {
+  const groups = [
+    { name: 'Audio', entries: [
+      { name: 'Inputs', verification: 'VERIFIED' },
+      { name: 'Mix buses', verification: 'VERIFIED' },
+      { name: 'Hidden third', verification: 'VERIFIED' }
+    ] },
+    { name: 'Network', entries: [
+      { name: 'Dante', verification: 'VERIFIED' },
+      { name: 'Review value', verification: 'REVIEW REQUIRED' }
+    ] },
+    { name: 'Power', entries: [{ name: 'AC', verification: 'VERIFIED' }] }
+  ];
+
+  assert.deepEqual(selectKeySpecifications(groups, 4).map(item => item.name), ['Inputs', 'Mix buses', 'Dante', 'AC']);
+  assert.equal(groups.flatMap(group => group.entries).length, 6);
 });

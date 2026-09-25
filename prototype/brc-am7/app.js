@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-connectors-2';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-mobile-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -72,6 +72,7 @@ try {
 
 document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
 document.body.classList.add('summary-detail');
+const mobileDetail = matchMedia('(max-width: 650px)');
 if (data.presentation.visualVariant === 'brc-pictogram') {
   document.body.classList.add('brc-pictogram');
   document.querySelector('meta[name="color-scheme"]').content = 'light';
@@ -119,6 +120,27 @@ $('#english-description').textContent = data.english;
 $('#series').textContent = data.series;
 $('#series-note').textContent = data.seriesNote ?? '';
 $('#korean-description').textContent = data.korean;
+const headerDescription = $('#korean-description');
+const headerDescriptionToggle = $('#header-description-toggle');
+function updateHeaderDescription() {
+  headerDescription.classList.remove('is-expanded');
+  headerDescriptionToggle.setAttribute('aria-expanded', 'false');
+  headerDescriptionToggle.textContent = '설명 더 보기';
+  if (!mobileDetail.matches) {
+    headerDescriptionToggle.hidden = true;
+    return;
+  }
+  headerDescriptionToggle.hidden = false;
+  headerDescriptionToggle.hidden = headerDescription.scrollHeight <= headerDescription.clientHeight + 1;
+}
+headerDescriptionToggle.addEventListener('click', () => {
+  const expanded = headerDescriptionToggle.getAttribute('aria-expanded') !== 'true';
+  headerDescription.classList.toggle('is-expanded', expanded);
+  headerDescriptionToggle.setAttribute('aria-expanded', String(expanded));
+  headerDescriptionToggle.textContent = expanded ? '설명 접기' : '설명 더 보기';
+});
+mobileDetail.addEventListener('change', updateHeaderDescription);
+requestAnimationFrame(updateHeaderDescription);
 $('#verification-summary').textContent = data.verificationSummary;
 $('#overview-summary').textContent = (data.overview ?? data.korean ?? '').split(/\n\s*\n/)[0];
 $('#overview-copy').textContent = data.overview ?? data.korean;
@@ -258,20 +280,28 @@ for (const { label, resource, missingTitle, available } of data.quickDocuments) 
   $('#verification-documents').append(verificationRow);
 }
 $('#feature-count').textContent = String(data.features.length).padStart(2, '0');
-for (const [index, feature] of data.features.entries()) {
+const featureCard = feature => {
   const card = node('li', 'feature-card');
   card.append(node('span', 'feature-check', '✓'), node('span', '', feature.text));
-  if (index < 6) $('#feature-list').append(card);
-  else $('#feature-more-list').append(card);
+  return card;
+};
+function renderFeatureSummary() {
+  const limit = mobileDetail.matches ? 4 : 6;
+  $('#feature-list').replaceChildren(...data.features.slice(0, limit).map(featureCard));
+  $('#feature-more-list').replaceChildren(...data.features.slice(limit).map(featureCard));
+  $('#feature-more').hidden = data.features.length <= limit;
+  if ($('#feature-more').hidden) $('#feature-more').open = false;
+}
+for (const feature of data.features) {
   const evidence = node('div', 'feature-evidence-row');
   evidence.append(node('span', '', feature.text), sourceReference(feature.source));
   $('#feature-evidence-list').append(evidence);
 }
-$('#feature-more').hidden = data.features.length <= 6;
+renderFeatureSummary();
+mobileDetail.addEventListener('change', renderFeatureSummary);
 
 $('#spec-count').textContent = String(data.specifications.length).padStart(2, '0');
 const grouped = data.specificationGroups.map(({ name, entries }) => [name, entries]);
-let keySpecCount = 0;
 for (const [group, specifications] of grouped) {
   const panel = node('details', 'spec-group panel');
   panel.open = false;
@@ -279,20 +309,6 @@ for (const [group, specifications] of grouped) {
   head.append(node('strong', '', group), node('span', '', specifications.length + ' items'));
   panel.append(head);
   for (const specification of specifications) {
-    if (keySpecCount < 10 && !['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(specification.verification) && specifications.indexOf(specification) < 2) {
-      const item = node('div', 'key-spec');
-      item.append(node('span', 'key-spec-label', specification.name));
-      const value = node('strong', '', specification.value);
-      if (specification.unit) value.append(node('small', '', ' ' + specification.unit));
-      if (specification.condition) {
-        const condition = node('small', 'key-spec-condition', '조건 있음');
-        condition.title = specification.condition;
-        value.append(condition);
-      }
-      item.append(value);
-      $('#key-specs').append(item);
-      keySpecCount++;
-    }
     const row = node('div', 'spec-row');
     const main = node('div', 'spec-main');
     const value = node('strong', 'spec-value', specification.value);
@@ -307,6 +323,25 @@ for (const [group, specifications] of grouped) {
   }
   $('#spec-groups').append(panel);
 }
+const keySpec = specification => {
+  const item = node('div', 'key-spec');
+  item.append(node('span', 'key-spec-label', specification.name));
+  const value = node('strong', '', specification.value);
+  if (specification.unit) value.append(node('small', '', ' ' + specification.unit));
+  if (specification.condition) {
+    const condition = node('small', 'key-spec-condition', '조건 있음');
+    condition.title = specification.condition;
+    value.append(condition);
+  }
+  item.append(value);
+  return item;
+};
+function renderKeySpecifications() {
+  const limit = mobileDetail.matches ? 8 : 10;
+  $('#key-specs').replaceChildren(...data.keySpecifications.slice(0, limit).map(keySpec));
+}
+renderKeySpecifications();
+mobileDetail.addEventListener('change', renderKeySpecifications);
 
 $('#io-count').textContent = String(data.io.length);
 $('#all-connector-count').textContent = String(data.io.length);
@@ -339,12 +374,11 @@ for (const item of data.keyConnectors) {
   $('#key-connector-list').append(row);
 }
 if (!data.keyConnectors.length) $('#key-connector-list').append(node('p', 'rear-unavailable', '확인된 주요 연결 단자가 없습니다.'));
-const mobileConnectors = matchMedia('(max-width: 650px)');
 const updateKeyConnectorCount = () => {
-  $('#key-connector-count').textContent = String(Math.min(data.keyConnectors.length, mobileConnectors.matches ? 5 : 6));
+  $('#key-connector-count').textContent = String(Math.min(data.keyConnectors.length, mobileDetail.matches ? 5 : 6));
 };
 updateKeyConnectorCount();
-mobileConnectors.addEventListener('change', updateKeyConnectorCount);
+mobileDetail.addEventListener('change', updateKeyConnectorCount);
 let connectorIndex = 0;
 for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
   const groupId = `connector-group-${groupData.key}-${groupIndex}`;
@@ -355,7 +389,7 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
 
   const group = node('details', 'connector-group panel');
   group.id = groupId;
-  group.open = !matchMedia('(max-width: 650px)').matches || groupIndex === 0;
+  group.open = !mobileDetail.matches || groupIndex === 0;
   const heading = node('summary', 'connector-group-heading');
   const headingText = node('span');
   headingText.append(node('strong', '', groupData.label), node('small', '', `${groupData.entries.length}개`));

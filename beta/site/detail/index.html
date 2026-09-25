@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>AV Portal Product Detail Beta</title>
-  <link rel="stylesheet" href="./styles.css?v=w025-connectors-2">
-  <script type="module" src="./app.js?v=w025-connectors-2"></script>
+  <link rel="stylesheet" href="./styles.css?v=w025-mobile-1">
+  <script type="module" src="./app.js?v=w025-mobile-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -33,6 +33,7 @@
         <p id="product-full-name" class="product-full-name"></p>
         <p id="english-description" class="english-description"></p>
         <p id="korean-description" class="korean-description"></p>
+        <button id="header-description-toggle" class="header-description-toggle" type="button" aria-controls="korean-description" aria-expanded="false" hidden>설명 더 보기</button>
         <div id="categories" class="pills" aria-label="제품 카테고리"></div>
         <details class="product-facts"><summary>제품 정보 · 검증 상태 <span id="model-status" class="state state-verified"></span></summary>
           <span id="header-eyebrow" class="eyebrow" hidden></span>
@@ -73,7 +74,7 @@
       </nav>
       <section id="overview" class="detail-section overview-grid" aria-labelledby="overview-title">
         <div class="overview-card panel"><h2 id="overview-title">제품 개요</h2><p id="overview-summary" class="overview-summary"></p>
-          <details id="overview-more" class="overview-more"><summary>설명 더 보기</summary><h3 id="overview-heading"></h3><p id="overview-copy"></p><div id="overview-points" class="overview-points"></div></details>
+          <details id="overview-more" class="overview-more"><summary>전체 설명 보기</summary><h3 id="overview-heading"></h3><p id="overview-copy"></p><div id="overview-points" class="overview-points"></div></details>
         </div>
         <div id="features" class="overview-card panel" aria-labelledby="features-title"><h2 id="features-title">주요 특징</h2><ul id="feature-list" class="feature-grid"></ul><details id="feature-more" class="feature-more"><summary>전체 특징 보기 (<span id="feature-count"></span>)</summary><ul id="feature-more-list" class="feature-grid"></ul></details></div>
       </section>

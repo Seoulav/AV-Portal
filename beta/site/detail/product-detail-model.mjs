@@ -67,6 +67,17 @@ export function selectKeyConnectors(connectorGroups = [], limit = 6) {
   return selected;
 }
 
+export function selectKeySpecifications(specificationGroups = [], limit = 10) {
+  const selected = [];
+  for (const group of specificationGroups) {
+    for (const item of group.entries.slice(0, 2)) {
+      if (selected.length >= limit) return selected;
+      if (!['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(item.verification)) selected.push(item);
+    }
+  }
+  return selected;
+}
+
 export function prepareProductDetail(input) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
@@ -88,6 +99,7 @@ export function prepareProductDetail(input) {
   const ioGroupBySignal = new Map((presentation.ioSignalGroups ?? []).flatMap(({ name, signals }) => signals.map(signal => [signal, name])));
   const ioGroups = group(io, item => item.group ?? ioGroupBySignal.get(item.signal) ?? item.signal);
   const connectorGroups = prepareConnectorGroups(ioGroups);
+  const specificationGroups = group(specifications, item => item.group);
   return {
     ...input,
     images,
@@ -104,7 +116,8 @@ export function prepareProductDetail(input) {
       return { label, resource, missingTitle, available: Boolean(resource?.url && ['FOUND', 'VERIFIED'].includes(resource.status)) };
     }),
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
-    specificationGroups: group(specifications, item => item.group),
+    specificationGroups,
+    keySpecifications: selectKeySpecifications(specificationGroups),
     ioGroups,
     connectorGroups,
     keyConnectors: selectKeyConnectors(connectorGroups),
