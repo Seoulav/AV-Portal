@@ -5,7 +5,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 245개
+- 공개 장비: 254개
 - Product Detail: 5개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
@@ -1241,3 +1241,48 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 오디오 | Audio | Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/microphones/mx392
+
+- 제품: Lightware HDMI20-OPTJ-TX90
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90
+
+- 제품: Lightware HDMI20-OPTJ-RX90
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90
+
+- 제품: Ross Video ULTRITOUCH-PS
+  분류: 영상 | Video | Power Supply
+  종류: 장비
+  제품군 링크: https://www.rossvideo.com/products/routing-systems/ultritouch/
+
+- 제품: Ross Video SFP-MADI-COAX
+  분류: 영상 | Video | Router Module
+  종류: 장비
+  제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/
+
+- 제품: Shure UA845UWB
+  분류: 오디오 | Audio | Antenna Distributor
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/accessories/ua845uwb
+
+- 제품: NETGEAR GS728TPP
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/support/product/gs728tpp
+
+- 제품: NETGEAR GS116PP
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/
+
+- 제품: NETGEAR GS108PP
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/
+
+- 제품: Logitech Rally Mic Pod
+  분류: 화상회의 | Conferencing | Microphone
+  종류: 장비
+  공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html

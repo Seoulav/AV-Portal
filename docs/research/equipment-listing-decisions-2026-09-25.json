@@ -1236,13 +1236,18 @@
         "Extender"
       ],
       "official_urls": [
+        "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90",
         "https://archive.lightware.com/pub/media/lightware/filedownloader/file/Product-Brief/HDMI20_OPTJ_series_v02.pdf"
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
       ],
       "grade": "A",
-      "link_scope": "series"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "영상|135",
@@ -1254,13 +1259,18 @@
         "Extender"
       ],
       "official_urls": [
+        "https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90",
         "https://archive.lightware.com/pub/media/lightware/filedownloader/file/Product-Brief/HDMI20_OPTJ_series_v02.pdf"
       ],
       "verification": [
         "EXACT_MODEL_ON_OFFICIAL_SERIES_BRIEF"
       ],
       "grade": "A",
-      "link_scope": "series"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "영상|153",
@@ -1434,13 +1444,18 @@
         "Power Supply"
       ],
       "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultritouch/",
         "https://documentation.rossvideo.com/files/Brochures/Routers/Ultritouch/Ultritouch%20Brochure.pdf"
       ],
       "verification": [
         "OFFICIAL_BROCHURE_EXACT_CODE_REFERENCED"
       ],
       "grade": "A",
-      "link_scope": "series"
+      "link_scope": "series",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "영상|170",
@@ -1452,13 +1467,18 @@
         "Router Module"
       ],
       "official_urls": [
+        "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/",
         "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Ultrix%20SFP%20Modules%20Guide%20%282101DR-008%29.pdf"
       ],
       "verification": [
         "OFFICIAL_EXACT_MODULE_IN_GUIDE"
       ],
       "grade": "A",
-      "link_scope": "series"
+      "link_scope": "series",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "오디오|45",
@@ -1956,13 +1976,18 @@
         "Antenna Distributor"
       ],
       "official_urls": [
+        "https://www.shure.com/en-US/products/accessories/ua845uwb",
         "https://pubs.shure.com/view/guide/UA845UWB/en-US.pdf"
       ],
       "verification": [
         "OFFICIAL_GUIDE_MODEL_CONFIRMED"
       ],
       "grade": "A",
-      "link_scope": "series"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "오디오|134",
@@ -2460,13 +2485,18 @@
         "Network Switch"
       ],
       "official_urls": [
+        "https://www.netgear.com/support/product/gs728tpp",
         "https://www.downloads.netgear.com/files/GDC/GS728TP/GS752TP_GS728TP_GS728TPP_SWA_3Dec2013.pdf"
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "제어|21",
@@ -2478,13 +2508,18 @@
         "Network Switch"
       ],
       "official_urls": [
+        "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/",
         "https://www.netgear.com/uk/media/GS108LP-GS108PP-GS116LP-GS116PP_tcm158-83756.pdf"
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "제어|22",
@@ -2496,13 +2531,18 @@
         "Network Switch"
       ],
       "official_urls": [
+        "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/",
         "https://www.netgear.com/uk/media/GS108LP-GS108PP-GS116LP-GS116PP_tcm158-83756.pdf"
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "제어|24",
@@ -3056,13 +3096,18 @@
         "Microphone"
       ],
       "official_urls": [
+        "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html",
         "https://www.logitech.com/assets/65641/rally-acessories-datasheet.ENG.pdf"
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "pdf_only_resolved": {
+        "resolved_at": "2026-09-25",
+        "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      }
     },
     {
       "row": "화상회의|9",
