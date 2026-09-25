@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
+import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
-import { derivedCatalogFields, linkScopes, optionalCatalogFields, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
+import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
@@ -11,7 +12,27 @@ assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'fa
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
-assert.deepEqual((await readdir(new URL('images/', detail))).sort(), [...productImageFiles, 'ptz-pictogram.svg'].sort());
+const previewImageFiles = group2Previews.map(entry => entry.image.file);
+assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');
+assert.deepEqual((await readdir(new URL('images/', detail))).sort(), [...productImageFiles, ...previewImageFiles, 'ptz-pictogram.svg'].sort());
+// 상세가 없는 항목의 카드 대표 사진: 승인·권리 상태, 제조사 호스트, WebP 파일을 확인한다.
+for (const entry of group2Previews) {
+  const { image } = entry;
+  assert.match(image.file, /^[a-z0-9-]+\.webp$/, `${entry.product}: 카드 사진 파일명`);
+  assert.equal(image.officialSource, true);
+  assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
+  assert.match(image.publicationStatus, /사용자 게시 승인/);
+  assert.match(image.publicationStatus, /제조사 재사용 권리 미확인/);
+  assert.ok(typeof image.alt === 'string' && image.alt.trim(), `${entry.product}: 카드 사진 대체 텍스트`);
+  if (entry.scope !== undefined) assert.ok(previewImageScopes.includes(entry.scope), `${entry.product}: 허용되지 않은 사진 범위`);
+  const url = new URL(image.sourceUrl);
+  assert.equal(url.protocol, 'https:');
+  assert.ok(isAllowedHost(url.hostname, allowedHostsFor(entry.brand)), `${entry.product}: non-manufacturer image URL`);
+  const bytes = await readFile(new URL(`images/${image.file}`, detail));
+  assert.ok(bytes.length > 1_000, `${image.file}: usable image file`);
+  assert.equal(bytes.subarray(0, 4).toString('ascii'), 'RIFF', `${image.file}: WebP RIFF header`);
+  assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', `${image.file}: WebP signature`);
+}
 const pictogram = await readFile(new URL('images/ptz-pictogram.svg', detail), 'utf8');
 assert.equal(pictogram.replaceAll('\r\n', '\n'), (await readFile(new URL('../prototype/brc-am7/ptz-pictogram.svg', import.meta.url), 'utf8')).replaceAll('\r\n', '\n'));
 assert.match(pictogram, /SPDX-License-Identifier: CC0-1\.0/);
@@ -39,6 +60,7 @@ assert.equal(hashText(JSON.stringify(catalog.slice(0, snapshot.catalog.baselineC
 const required = ['brand', 'categories', 'kind', 'official_links', 'product'];
 const identities = new Set();
 const catalogSlugs = [];
+let previewCount = 0;
 for (const item of catalog) {
   const keys = Object.keys(item).sort();
   assert.deepEqual(keys.filter(key => !derivedCatalogFields.includes(key) && !optionalCatalogFields.includes(key)), required);
@@ -67,12 +89,21 @@ for (const item of catalog) {
     assert.equal(item.card_image, cardImages[item.slug], `${item.slug}: 카드 이미지가 매니페스트와 다름`);
     assert.ok(group1Images[item.slug].some(image => image.file === item.card_image), `${item.slug}: 카드 이미지가 게시 이미지에 없음`);
     catalogSlugs.push(item.slug);
-  } else assert.equal(item.card_image, undefined, '상세가 없는 항목에는 카드 이미지를 두지 않는다');
+    for (const field of ['preview_image', 'preview_image_alt', 'preview_image_scope']) assert.equal(item[field], undefined, `${item.slug}: 상세가 있으면 상세 갤러리의 card_image를 쓴다`);
+  } else {
+    assert.equal(item.card_image, undefined, '상세가 없는 항목에는 상세 갤러리 카드 이미지(card_image)를 두지 않는다');
+    // 카드 대표 사진은 group2-images.mjs에 승인 기록이 있는 것만 둔다.
+    const preview = previewCatalogFieldsFor(item);
+    const present = Object.fromEntries(['preview_image', 'preview_image_alt', 'preview_image_scope'].filter(field => item[field] !== undefined).map(field => [field, item[field]]));
+    assert.deepEqual(present, preview ?? {}, `${item.product}: 카드 대표 사진이 group2-images.mjs와 다름`);
+    if (preview) previewCount++;
+  }
   const identity = `${item.brand}\0${item.product}`;
   assert.ok(!identities.has(identity), 'Duplicate public product');
   identities.add(identity);
 }
 // 상세 데이터·이미지 매니페스트·스냅샷·카탈로그의 제품 집합이 한 곳에서만 갈라지지 않도록 서로 대조한다.
+assert.equal(previewCount, group2Previews.length, 'group2-images.mjs의 카드 대표 사진이 카탈로그에 모두 반영되지 않았다');
 const slugs = catalogSlugs.slice().sort();
 assert.deepEqual(new Set(catalogSlugs).size, catalogSlugs.length, 'Duplicate detail slug');
 assert.deepEqual((await readdir(new URL('data/', detail))).sort(), slugs.map(slug => `${slug}.json`).sort());
@@ -129,4 +160,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, no PDF binaries.`);
+console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, no PDF binaries.`);
