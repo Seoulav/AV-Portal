@@ -282,17 +282,14 @@ if (data.officialPage?.url) {
   $('#dialog-product-link').hidden = true;
 }
 if (!data.images.length) {
-  const inlineStatus = $('#image-status-inline');
   const statusCount = (data.imageStatuses ?? []).length;
-  $('#image-status-message').textContent = foundImages
+  $('#gallery-title').textContent = '제품 이미지 준비 중';
+  $('#gallery-empty-summary').textContent = foundImages
     ? `제품 이미지 · 공식 출처 ${foundImages}건 확인 · 재게시 권한 미확인`
     : statusCount ? '제품 이미지 · 이미지 역할·사용 조건 검토 중 · 게시 이미지 없음' : '제품 이미지 · 확보된 사진 없음';
+  $('#gallery-empty-summary').hidden = false;
   const rightsBadge = $('#gallery-rights-badge');
   rightsBadge.hidden = !rightsBadge.textContent;
-  inlineStatus.append(rightsBadge);
-  if (!$('#image-status-details').hidden) inlineStatus.append($('#image-status-details'));
-  inlineStatus.hidden = false;
-  $('.gallery').remove();
 }
 const documentSummary = summarizeQuickDocuments(data.quickDocuments);
 $('#quick-count').textContent = `${data.quickDocuments.length} 슬롯`;
@@ -535,7 +532,7 @@ function activatePanel(panel, { updateHash = false, focusTab = false } = {}) {
     tab.tabIndex = active ? 0 : -1;
     tab.classList.toggle('is-active', active);
     if (active && focusTab) tab.focus();
-    if (active && mobileDetail.matches) tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (active && focusTab && mobileDetail.matches) tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   }
   if (updateHash) history.pushState(null, '', '#' + panel.id);
 }

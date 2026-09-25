@@ -96,6 +96,9 @@ test('home and detail templates expose the approved navigation structure', async
   assert.match(detailApp, /mobileHeading\.setAttribute\('aria-expanded', String\(mobileGroup\.open\)\)/);
   assert.match(detailApp, /mobileGroup\.addEventListener\('toggle'/);
   assert.match(detailApp, /scrollIntoView\(\{ behavior: 'smooth', block: 'nearest', inline: 'center' \}\)/);
+  assert.match(detailApp, /active && focusTab && mobileDetail\.matches/);
+  assert.doesNotMatch(detailApp, /\$\('\.gallery'\)\.remove\(\)/);
+  assert.match(detail, /id="gallery-empty-summary"/);
   assert.match(detailApp, /확보 \$\{documentSummary\.secured\} · 검토 \$\{documentSummary\.review\} · 없음 \$\{documentSummary\.missing\}/);
   assert.match(detailStyles, /\.connector-mobile-group\[open\]>\.connector-group-heading::after\{content:'−'\}/);
   assert.match(detailStyles, /\.io-summary\{[^}]*flex-wrap:wrap/);

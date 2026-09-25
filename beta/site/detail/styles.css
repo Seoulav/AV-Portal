@@ -1064,7 +1064,7 @@ body.summary-detail.source-anchor-active main{padding-bottom:50vh}
 
 /* W-20260925-004: keep the model, image, description and documents in reading order. */
 body.summary-detail .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);grid-template-areas:"header quick" "gallery quick" "description quick";align-items:start}
-body.summary-detail .hero-grid.gallery-unavailable{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);grid-template-areas:"header quick" "description quick"}
+body.summary-detail .hero-grid.gallery-unavailable{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);grid-template-areas:"header quick" "gallery quick" "description quick"}
 body.summary-detail .product-header{padding:22px 26px 16px;border:1px solid #e2e9f3;border-radius:18px}
 body.summary-detail .manufacturer{order:0}
 body.summary-detail #product-name{order:0}
@@ -1074,6 +1074,11 @@ body.summary-detail .identity-summary>span{display:inline-flex;align-items:cente
 body.summary-detail .identity-summary small{font-size:11px;font-weight:800;color:#71819a}
 body.summary-detail .identity-summary strong{font-size:12px;color:#294f83}
 body.summary-detail .gallery{grid-area:gallery;grid-row:auto;padding:17px}
+body.summary-detail .gallery-empty{padding:14px 18px}
+body.summary-detail .gallery-empty .section-eyebrow,body.summary-detail .gallery-empty .image-stage,body.summary-detail .gallery-empty .gallery-foot,body.summary-detail .gallery-empty .image-trace,body.summary-detail .gallery-empty .gallery-rights{display:none}
+body.summary-detail .gallery-empty .gallery-heading{display:flex;margin:0 0 6px}
+body.summary-detail .gallery-empty .image-status-details{margin-top:8px}
+body.summary-detail .gallery-empty-summary{margin:0;color:#52657d;font-size:12px;line-height:1.5}
 body.summary-detail .product-description{grid-area:description;padding:18px 24px}
 body.summary-detail .product-description .english-description,body.summary-detail .product-description .korean-description,body.summary-detail .product-description .pills,body.summary-detail .product-description .product-facts{order:initial}
 body.summary-detail .quick-documents{grid-area:quick;align-self:start;margin:0;padding:22px 24px;border:1px solid #e2e9f3;border-radius:18px}
@@ -1084,7 +1089,7 @@ body.summary-detail .detail-search-toggle{display:none;width:40px;height:40px;bo
 
 @media(max-width:880px){
  body.summary-detail .hero-grid,body.summary-detail .hero-grid.gallery-unavailable{grid-template-columns:1fr;grid-template-areas:"header" "gallery" "description" "quick"}
- body.summary-detail .hero-grid.gallery-unavailable{grid-template-areas:"header" "description" "quick"}
+ body.summary-detail .hero-grid.gallery-unavailable{grid-template-areas:"header" "gallery" "description" "quick"}
  body.summary-detail .product-description{border:1px solid #e2e9f3;border-radius:17px;padding:20px}
  body.summary-detail .quick-documents{padding:20px}
 }
