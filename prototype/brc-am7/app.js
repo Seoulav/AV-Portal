@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w003-tabs-contrast-1';
+import { prepareProductDetail, summarizeQuickDocuments } from './product-detail-model.mjs?v=w004-image-detail-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -82,6 +82,25 @@ setMeta('meta[property="og:description"]', data.english);
 setMeta('meta[property="og:url"]', location.href.split('#')[0]);
 document.body.classList.add('summary-detail');
 const mobileDetail = matchMedia('(max-width: 650px)');
+const detailSearchForm = $('#detail-search-form');
+const detailSearchToggle = $('#detail-search-toggle');
+function setMobileSearch(open = false) {
+  const compact = mobileDetail.matches;
+  detailSearchToggle.hidden = !compact;
+  detailSearchForm.hidden = compact && !open;
+  detailSearchToggle.setAttribute('aria-expanded', String(compact && open));
+  detailSearchToggle.setAttribute('aria-label', open ? '제품 검색 닫기' : '제품 검색 열기');
+  if (compact && open) requestAnimationFrame(() => $('#detail-search').focus());
+}
+detailSearchToggle.addEventListener('click', () => setMobileSearch(detailSearchToggle.getAttribute('aria-expanded') !== 'true'));
+detailSearchForm.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && mobileDetail.matches) {
+    setMobileSearch(false);
+    detailSearchToggle.focus();
+  }
+});
+mobileDetail.addEventListener('change', () => setMobileSearch(false));
+setMobileSearch(false);
 $('#detail-search-form').addEventListener('submit', event => {
   event.preventDefault();
   const query = $('#detail-search').value.trim();
@@ -181,7 +200,7 @@ function selectImage(index) {
   const sourceLink = $('#image-source-link');
   sourceLink.hidden = !item.sourceUrl;
   if (item.sourceUrl) sourceLink.href = officialLink(item.sourceUrl, '').href;
-  $('#image-provenance').textContent = [item.provider, item.model, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
+  $('#image-provenance').textContent = [item.provider, item.model, item.role && `역할 ${item.role}`, item.verification && `검증 ${item.verification}`, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.resolution && `해상도 ${item.resolution}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
   for (const [position, button] of [...$('#thumbnails').children].entries()) {
     button.setAttribute('aria-pressed', String(position === index));
   }
@@ -276,7 +295,9 @@ if (!data.images.length) {
   inlineStatus.hidden = false;
   $('.gallery').remove();
 }
-$('#quick-count').textContent = data.quickDocuments.length;
+const documentSummary = summarizeQuickDocuments(data.quickDocuments);
+$('#quick-count').textContent = `${data.quickDocuments.length} 슬롯`;
+$('#quick-state-summary').textContent = `확보 ${documentSummary.secured} · 검토 ${documentSummary.review} · 없음 ${documentSummary.missing}`;
 for (const { label, resource, missingTitle, available } of data.quickDocuments) {
   const rawStatus = resource?.status ?? 'MISSING';
   const displayStatus = rawStatus === 'MISSING' ? '자료 없음' : ['REVIEW REQUIRED', 'CONFLICTED', 'PARTIAL'].includes(rawStatus) ? '검토 중' : '자료 있음';
@@ -515,6 +536,7 @@ function activatePanel(panel, { updateHash = false, focusTab = false } = {}) {
     tab.tabIndex = active ? 0 : -1;
     tab.classList.toggle('is-active', active);
     if (active && focusTab) tab.focus();
+    if (active && mobileDetail.matches) tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
   }
   if (updateHash) history.pushState(null, '', '#' + panel.id);
 }

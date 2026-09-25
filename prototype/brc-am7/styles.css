@@ -1061,3 +1061,46 @@ body.summary-detail .connector-group-heading span,body.summary-detail .io-summar
 body.summary-detail .connector-group-heading span,body.summary-detail .io-summary-chip strong{color:#102f4f!important}
 body.summary-detail.source-anchor-active main{padding-bottom:50vh}
 @media(max-width:650px){body.summary-detail .quick-card strong,body.summary-detail .quick-card .quick-language,body.summary-detail .quick-status,body.summary-detail .quick-card .quick-open,body.summary-detail .quick-card .quick-unavailable,body.summary-detail .official-product-link,body.summary-detail .feature-more summary,body.summary-detail .section-lead,body.summary-detail .key-spec,body.summary-detail .key-spec small,body.summary-detail .expanded-data>summary,body.summary-detail .connector-protocol,body.summary-detail .supplemental-docs>summary,body.summary-detail .source-disclosure>summary,body.summary-detail .manufacturer-footer a,body.summary-detail .connector-mobile-group>.connector-group-heading span,body.summary-detail .connector-mobile-row,body.summary-detail .connector-mobile-row strong,body.summary-detail .connector-mobile-row small,body.summary-detail .connector-mobile-row>b{font-size:11px}body.summary-detail .detail-tabs button{font-size:12px;padding:10px 13px}}
+
+/* W-20260925-004: keep the model, image, description and documents in reading order. */
+body.summary-detail .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);grid-template-areas:"header quick" "gallery quick" "description quick";align-items:start}
+body.summary-detail .hero-grid.gallery-unavailable{grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);grid-template-areas:"header quick" "description quick"}
+body.summary-detail .product-header{padding:22px 26px 16px;border:1px solid #e2e9f3;border-radius:18px}
+body.summary-detail .manufacturer{order:0}
+body.summary-detail #product-name{order:0}
+body.summary-detail .product-full-name{order:0}
+body.summary-detail .identity-summary{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+body.summary-detail .identity-summary>span{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border-radius:999px;background:#f2f6fc;color:#4c607b}
+body.summary-detail .identity-summary small{font-size:11px;font-weight:800;color:#71819a}
+body.summary-detail .identity-summary strong{font-size:12px;color:#294f83}
+body.summary-detail .gallery{grid-area:gallery;grid-row:auto;padding:17px}
+body.summary-detail .product-description{grid-area:description;padding:18px 24px}
+body.summary-detail .product-description .english-description,body.summary-detail .product-description .korean-description,body.summary-detail .product-description .pills,body.summary-detail .product-description .product-facts{order:initial}
+body.summary-detail .quick-documents{grid-area:quick;align-self:start;margin:0;padding:22px 24px;border:1px solid #e2e9f3;border-radius:18px}
+body.summary-detail .quick-heading p{color:#52657d;font-weight:700}
+body.summary-detail .count-bubble{width:auto;min-width:0;padding:0 10px}
+body.summary-detail .quick-card-missing .quick-unavailable{font-weight:700;text-decoration:none;cursor:default}
+body.summary-detail .detail-search-toggle{display:none;width:40px;height:40px;border:1px solid #dce5f1;border-radius:12px;background:#f4f7fc;color:#245fae;font-size:20px;font-weight:900}
+
+@media(max-width:880px){
+ body.summary-detail .hero-grid,body.summary-detail .hero-grid.gallery-unavailable{grid-template-columns:1fr;grid-template-areas:"header" "gallery" "description" "quick"}
+ body.summary-detail .hero-grid.gallery-unavailable{grid-template-areas:"header" "description" "quick"}
+ body.summary-detail .product-description{border:1px solid #e2e9f3;border-radius:17px;padding:20px}
+ body.summary-detail .quick-documents{padding:20px}
+}
+@media(max-width:650px){
+ body.summary-detail .header-inner{align-items:center}
+ body.summary-detail .portal-mark{margin-right:auto}
+ body.summary-detail .header-actions{width:auto;display:grid;grid-template-columns:auto auto;gap:7px;align-items:center}
+ body.summary-detail .detail-search-toggle:not([hidden]){display:grid;place-items:center}
+ body.summary-detail .library-link{grid-column:2;grid-row:1}
+ body.summary-detail .detail-search{grid-column:1 / -1;grid-row:2;width:min(100%,360px);justify-self:end}
+ body.summary-detail .product-header,body.summary-detail .product-description,body.summary-detail .gallery,body.summary-detail .quick-documents{padding:14px;border-radius:15px}
+ body.summary-detail .identity-summary{margin-top:5px}
+ body.summary-detail .gallery{margin-top:-1px}
+ body.summary-detail .product-description{margin-top:-1px}
+ body.summary-detail .quick-heading p{display:block;font-size:11px;margin-top:3px}
+ body.summary-detail .io-summary{flex-wrap:wrap;overflow:visible;max-height:none;padding-bottom:0}
+ body.summary-detail .io-summary-chip{flex:0 0 auto}
+ body.summary-detail .detail-tabs{top:0;scroll-padding-inline:45%;mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 24px),transparent 100%)}
+}
