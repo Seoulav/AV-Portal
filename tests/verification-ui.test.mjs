@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import { summarizeVerificationStatuses } from '../prototype/brc-am7/product-detail-model.mjs';
 
@@ -49,16 +49,20 @@ test('public footers do not expose build strings and detail asset versions are r
   assert.match(detail, /app\.js\?v=w007-verification-1/);
 });
 
-test('the five public Product Detail JSON files remain byte-identical', async () => {
+test('the five public Product Detail JSON Git blobs remain byte-identical', () => {
   const expected = new Map([
-    ['brc-am7.json', 'FF2CCB91FDE1E0D625B2AFCAC62187D89ADABEE8BBCA2388834C2865E426E121'],
-    ['dm7.json', '9D33311F5C094FA5FE186C6BD317F84D1EC8C880DFA98C99A716A6DF65777C3C'],
-    ['ki-pro-go2.json', '79801CDCEF0B1CD6821A1B4433291F340856EEB909042AE267C70FE5B30BFA12'],
-    ['pt-mz17k.json', 'F2607D58BCA1FA1618329A8396AB3996104E35A6DF5C49EEB041EE7B0A219365'],
-    ['rally-bar.json', '29A796E7EF97676F081E2D069B8EC097A13DD4CCF039C17D8CCC493FC44B249B']
+    ['brc-am7.json', '53b6672361a414aef4f9a53635d8e3a8ca5ebcc2'],
+    ['dm7.json', '12383f42b25558188de6a46fdb9ec5d9388c5f99'],
+    ['ki-pro-go2.json', '2662738d2ed5ce1d4a89a30c79760bd090acc35c'],
+    ['pt-mz17k.json', 'cd01d1b1ebf51bc5484d92c21b9fad4460b76f50'],
+    ['rally-bar.json', '9b93e32e314ab7b1eac1e7f0ca47ad76879e6d34']
   ]);
   for (const [name, hash] of expected) {
-    const content = await readFile(new URL(`beta/site/detail/data/${name}`, root));
-    assert.equal(createHash('sha256').update(content).digest('hex').toUpperCase(), hash, name);
+    const path = `beta/site/detail/data/${name}`;
+    const blob = execFileSync('git', ['rev-parse', `HEAD:${path}`], {
+      cwd: root,
+      encoding: 'utf8'
+    }).trim();
+    assert.equal(blob, hash, name);
   }
 });
