@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications, directionLabel } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups, selectKeyConnectors, selectKeySpecifications, directionLabel, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -136,4 +136,60 @@ test('connector directions use explicit Korean text in the public table', () => 
   assert.equal(directionLabel('Bidirectional'), '양방향');
   assert.equal(directionLabel('IN/LOOP'), '입력/루프 출력');
   assert.equal(directionLabel('OPTION'), '옵션');
+});
+
+test('connector presentation separates physical port counts from channel descriptions', () => {
+  assert.deepEqual(connectorPresentation({
+    connector: 'XLR', signal: 'AES/EBU', direction: 'IN', quantity: '2 stereo pairs / 4ch',
+    protocol: 'AES/EBU, SRC', availability: 'Fixed', condition: 'DM7 본체', verification: 'VERIFIED'
+  }), {
+    displayConnector: 'XLR 디지털 오디오',
+    portCount: '—',
+    channelSignal: '2 stereo pairs / 4ch · AES/EBU',
+    specificationCondition: 'AES/EBU, SRC · 조건: DM7 본체',
+    flags: ['조건 있음']
+  });
+  assert.deepEqual(connectorPresentation({
+    connector: 'USB-C', signal: 'Audio / MIDI / DAW control', direction: 'I/O', quantity: '1',
+    protocol: 'USB 2.0, 18×18', availability: 'Fixed', condition: 'Yamaha driver 조건', verification: 'VERIFIED'
+  }), {
+    displayConnector: 'USB-C',
+    portCount: '1',
+    channelSignal: 'Audio / MIDI / DAW control',
+    specificationCondition: 'USB 2.0, 18×18 · 조건: Yamaha driver 조건',
+    flags: ['조건 있음']
+  });
+});
+
+test('connector presentation normalizes confirmed names and omits empty condition badges', () => {
+  assert.deepEqual(connectorPresentation({ connector: 'XLR 3-hole', signal: 'Analog mic/line', direction: 'IN', quantity: '32', protocol: 'Balanced', availability: 'Fixed', condition: '조건 없음', verification: 'VERIFIED' }), {
+    displayConnector: 'XLR 3핀 입력', portCount: '32', channelSignal: 'Analog mic/line', specificationCondition: 'Balanced', flags: []
+  });
+  assert.equal(connectorPresentation({ connector: 'D-sub 15-hole', direction: 'I/O', quantity: '1' }).displayConnector, 'D-sub 15핀');
+  assert.equal(connectorPresentation({ connector: 'XLR 4-pin', direction: 'IN', quantity: '2' }).displayConnector, 'XLR 4핀 입력');
+  assert.deepEqual(connectorPresentation({ connector: 'PY slot', quantity: '1', availability: 'Optional card', condition: '카드별 사양 분리' }).flags, ['카드 필요', '조건 있음']);
+});
+
+test('connector presentation keeps unresolved quantity markers out of channel data', () => {
+  const review = connectorPresentation({ connector: 'LAN connector', quantity: 'REVIEW REQUIRED', signal: 'Network control', verification: 'PARTIAL' });
+  assert.equal(review.portCount, '—');
+  assert.equal(review.channelSignal, 'Network control');
+  assert.deepEqual(review.flags, ['확인 필요']);
+  const missing = connectorPresentation({ connector: 'MISSING', quantity: 'MISSING', signal: 'Serial / remote control', verification: 'MISSING' });
+  assert.equal(missing.portCount, '—');
+  assert.equal(missing.channelSignal, 'Serial / remote control');
+});
+
+test('connector presentation flags only explicit optional availability', () => {
+  assert.deepEqual(connectorPresentation({ connector: 'XLR 4-pin', quantity: '2', availability: 'Fixed redundant inputs', verification: 'VERIFIED' }).flags, []);
+  assert.deepEqual(connectorPresentation({ connector: 'RJ-45', quantity: '1', availability: 'Fixed, region dependent', verification: 'REVIEW REQUIRED' }).flags, ['확인 필요']);
+  assert.deepEqual(connectorPresentation({ connector: 'SFP+', quantity: '1', availability: 'Optional module', verification: 'VERIFIED' }).flags, ['모듈 필요']);
+  assert.deepEqual(connectorPresentation({ connector: 'DC IN', quantity: '1', availability: 'Optional supply', verification: 'VERIFIED' }).flags, ['옵션']);
+});
+
+test('missing connector notes remain evidence instead of becoming operating conditions', () => {
+  const missing = connectorPresentation({ connector: 'MISSING', quantity: 'MISSING', signal: 'Serial / remote control', protocol: 'MISSING', condition: '물리 입력 단자표 미정리', verification: 'MISSING' });
+  assert.equal(missing.displayConnector, '단자 미확인');
+  assert.equal(missing.specificationCondition, '확인 필요');
+  assert.deepEqual(missing.flags, ['확인 필요']);
 });

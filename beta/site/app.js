@@ -95,6 +95,7 @@ async function loadDetailSearchTerms(items) {
       const detail = await response.json();
       item.aliases = [detail.model, detail.productName, detail.series].filter(Boolean);
       item.searchTerms = publicDetailSearchTerms(detail);
+      item.verificationState = detail.packageStatus ?? '';
     } catch { /* Public Library remains usable if one optional detail index fails. */ }
   }));
 }
@@ -102,7 +103,7 @@ async function loadDetailSearchTerms(items) {
 if (typeof document !== 'undefined') {
   const $ = selector => document.querySelector(selector);
   const element = (tag, className, content) => { const item = document.createElement(tag); if (className) item.className = className; if (content !== undefined) item.textContent = content; return item; };
-  const ui = { search: $('#search'), globalSearch: $('#global-search'), resultSearch: $('#result-search'), brand: $('#brand-filter'), categories: $('#categories'), categoryCount: $('#category-count'), resource: $('#resource-filter'), sort: $('#sort-filter'), cards: $('#cards'), resultCount: $('#result-count'), workspace: $('#results-workspace'), empty: $('#empty-state'), error: $('#load-error'), suggestions: $('#search-suggestions') };
+  const ui = { search: $('#search'), heroSearch: $('#hero-search-form'), heroNote: $('.hero-note'), headerSearch: $('#header-search-form'), globalSearch: $('#global-search'), resultSearch: $('#result-search'), brand: $('#brand-filter'), categories: $('#categories'), categoryCount: $('#category-count'), resource: $('#resource-filter'), sort: $('#sort-filter'), cards: $('#cards'), resultCount: $('#result-count'), workspace: $('#results-workspace'), empty: $('#empty-state'), error: $('#load-error'), suggestions: $('#search-suggestions') };
   let products = [];
   let state = parseExploreState(location.search);
   let activeSuggestion = -1;
@@ -139,9 +140,12 @@ if (typeof document !== 'undefined') {
   function createCard(item) {
     const card = element('article', 'card');
     const image = publicImages.get(`${fold(item.brand)}\0${fold(item.product)}`);
+    card.classList.toggle('has-media', Boolean(image));
     if (image) { const media = element(item.slug ? 'a' : 'div', 'card-media'); if (item.slug) media.href = `./detail/?product=${item.slug}`; const img = element('img'); img.src = image.src; img.alt = image.alt; img.loading = 'lazy'; media.append(img, element('span', 'card-media-note', image.note)); card.append(media); }
     card.append(element('span', 'card-brand', item.brand), element('h3', '', item.product));
     const tags = element('div', 'tags'); item.categories.slice(0, 3).forEach(category => tags.append(element('span', 'tag', category))); card.append(tags);
+    const status = item.verificationState === 'REVIEW REQUIRED' ? '검토 중' : item.slug ? '상세 정보 있음' : item.official_links?.length ? '공식 링크 확인' : '자료 미확인';
+    card.append(element('span', 'card-status', status));
     const actions = element('div', 'card-actions');
     if (item.slug) { const detail = element('a', 'detail-link', '제품 상세 보기'); detail.href = `./detail/?product=${item.slug}`; detail.addEventListener('click', saveScroll); actions.append(detail); }
     const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
@@ -160,6 +164,9 @@ if (typeof document !== 'undefined') {
   function render(push = false) {
     ui.search.value = state.query; ui.globalSearch.value = state.query; ui.resultSearch.value = state.query; ui.resource.value = state.resource; ui.sort.value = state.sort;
     const active = hasExploration(); ui.workspace.hidden = !active;
+    ui.headerSearch.hidden = !active;
+    ui.heroSearch.hidden = active;
+    ui.heroNote.hidden = active;
     document.querySelectorAll('[data-top-category]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.topCategory === state.topCategory)));
     document.querySelectorAll('[data-manufacturer]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.manufacturer === state.brand)));
     if (!active) { ui.cards.replaceChildren(); saveUrl(push); return; }

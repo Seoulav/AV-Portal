@@ -45,6 +45,42 @@ export function directionLabel(direction = '') {
   return normalized === '—' ? '미확인' : normalized;
 }
 
+const hasCondition = value => Boolean(value && !/^(?:—|-|none|n\/a|조건 없음|해당 없음)$/i.test(String(value).trim()));
+
+function connectorDisplayName(item = {}) {
+  const connector = String(item.connector || '미확인').trim();
+  const direction = directionLabel(item.direction);
+  if (/^xlr 3-hole$/i.test(connector) || /^xlr 3-pin$/i.test(connector)) return `XLR 3핀${['입력', '출력'].includes(direction) ? ` ${direction}` : ''}`;
+  if (/^xlr 4-pin$/i.test(connector)) return `XLR 4핀${['입력', '출력'].includes(direction) ? ` ${direction}` : ''}`;
+  if (/^xlr$/i.test(connector) && /aes\/ebu/i.test(String(item.signal))) return 'XLR 디지털 오디오';
+  if (/^d-sub 15-hole$/i.test(connector)) return 'D-sub 15핀';
+  if (/^missing$/i.test(connector)) return '단자 미확인';
+  return connector;
+}
+
+export function connectorPresentation(item = {}) {
+  const quantity = String(item.quantity ?? '').trim();
+  const numericQuantity = /^\d+$/.test(quantity);
+  const descriptiveQuantity = !numericQuantity && !/^(?:—|-|review required|missing|partial|conflicted|unknown|미확인)$/i.test(quantity) ? quantity : '';
+  const unresolved = ['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification);
+  const condition = item.verification !== 'MISSING' && hasCondition(item.condition) ? String(item.condition).trim() : '';
+  const protocol = /^(?:—|-|review required|missing|partial|conflicted|unknown|미확인)$/i.test(String(item.protocol ?? '').trim()) ? '' : item.protocol;
+  const flags = [];
+  const availability = String(item.availability ?? '').trim();
+  if (/optional.*card|card.*required/i.test(availability)) flags.push('카드 필요');
+  else if (/optional.*module|module.*required/i.test(availability)) flags.push('모듈 필요');
+  else if (/^optional\b|^option\b/i.test(availability)) flags.push('옵션');
+  if (condition) flags.push('조건 있음');
+  if (unresolved) flags.push('확인 필요');
+  return {
+    displayConnector: connectorDisplayName(item),
+    portCount: numericQuantity ? quantity : '—',
+    channelSignal: [descriptiveQuantity, item.signal].filter(Boolean).join(' · ') || '—',
+    specificationCondition: [protocol, condition ? `조건: ${condition}` : ''].filter(Boolean).join(' · ') || (unresolved ? '확인 필요' : '—'),
+    flags
+  };
+}
+
 export function prepareConnectorGroups(ioGroups = []) {
   const grouped = new Map();
   for (const sourceGroup of ioGroups) {
@@ -56,7 +92,8 @@ export function prepareConnectorGroups(ioGroups = []) {
       ...item,
       sourceGroup: sourceGroup.name,
       displayDirection: displayDirection(item.direction),
-      directionLabel: directionLabel(item.direction)
+      directionLabel: directionLabel(item.direction),
+      ...connectorPresentation(item)
     })));
   }
   return [...grouped.values()];

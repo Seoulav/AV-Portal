@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-navigation-1';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-navigation-2';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -376,13 +376,14 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
   const groupId = `connector-group-${groupData.key}-${groupIndex}`;
   const summaryItem = node('span', 'io-summary-chip');
   summaryItem.setAttribute('role', 'listitem');
-  summaryItem.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
+  summaryItem.append(node('span', '', groupData.label), node('strong', '', `${groupData.entries.length}종`));
   $('#io-summary').append(summaryItem);
 
   const mobileGroup = node('details', 'connector-mobile-group panel');
   mobileGroup.id = groupId;
+  mobileGroup.open = groupIndex === 0;
   const mobileHeading = node('summary', 'connector-group-heading');
-  mobileHeading.append(node('strong', '', groupData.label), node('span', '', `${groupData.entries.length}개`));
+  mobileHeading.append(node('strong', '', groupData.label), node('span', '', `${groupData.entries.length}종`));
   mobileGroup.append(mobileHeading);
 
   for (const item of groupData.entries) {
@@ -390,21 +391,20 @@ for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
     const tableRow = node('tr', 'connector-table-row');
     tableRow.append(node('td', 'connector-group-cell', groupData.label));
     const nameCell = node('td', 'connector-name-cell');
-    nameCell.append(node('strong', '', item.connector || '미확인'));
+    nameCell.append(node('strong', '', item.displayConnector));
     const flags = node('span', 'connector-flags');
-    if (item.availability && !/^fixed$/i.test(item.availability) && item.availability !== '—') {
-      flags.append(conditionBadge('is-option', /option|module/i.test(item.availability) ? '옵션' : '조건 있음'));
+    for (const label of item.flags) {
+      const className = label === '확인 필요' ? 'needs-review' : label === '조건 있음' ? 'has-condition' : 'is-option';
+      flags.append(conditionBadge(className, label));
     }
-    if (item.condition && item.condition !== '—') flags.append(conditionBadge('has-condition', '조건 있음'));
-    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)) flags.append(conditionBadge('needs-review', '검토 중'));
     nameCell.append(flags);
-    const purpose = [item.protocol, item.signal && item.signal !== item.protocol ? item.signal : '', item.condition && item.condition !== '—' ? `조건: ${item.condition}` : ''].filter(Boolean).join(' · ') || '—';
-    tableRow.append(nameCell, node('td', 'connector-direction-text', item.directionLabel), node('td', 'connector-quantity', item.quantity ?? '—'), node('td', 'connector-purpose', purpose));
+    tableRow.append(nameCell, node('td', 'connector-direction-text', item.directionLabel), node('td', 'connector-port-count', item.portCount), node('td', 'connector-channel-signal', item.channelSignal), node('td', 'connector-purpose', item.specificationCondition));
     $('#connector-table-body').append(tableRow);
 
     const mobileRow = node('div', 'connector-mobile-row');
-    const mobileIdentity = node('div'); mobileIdentity.append(node('strong', '', item.connector || '미확인'), flags.cloneNode(true), node('small', '', item.protocol || item.signal || '—'));
-    mobileRow.append(mobileIdentity, node('span', 'connector-direction-text', item.directionLabel), node('b', '', `×${item.quantity ?? '—'}`));
+    const mobileIdentity = node('div'); mobileIdentity.append(node('strong', '', item.displayConnector), flags.cloneNode(true), node('small', '', item.channelSignal));
+    const portText = item.portCount === '—' ? '포트 수 미확인' : `포트 ${item.portCount}`;
+    mobileRow.append(mobileIdentity, node('span', 'connector-direction-text', item.directionLabel), node('b', '', portText));
     mobileGroup.append(mobileRow);
 
     const detail = node('details', 'connector-detail connector-evidence-item');

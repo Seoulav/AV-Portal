@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>AV Portal Product Detail 시안</title>
-  <link rel="stylesheet" href="./styles.css?v=w025-mobile-1">
-  <script type="module" src="./app.js?v=w025-mobile-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=w025-navigation-2">
+  <script type="module" src="./app.js?v=w025-navigation-2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -88,7 +88,7 @@
 
       <section id="io" class="detail-section" aria-labelledby="io-title">
         <div class="section-title"><div><h2 id="io-title">연결 단자</h2></div></div>
-        <div class="io-intro"><p id="io-intro"></p><span class="io-total">총 <strong id="io-count"></strong>개</span></div>
+        <div class="io-intro"><p id="io-intro"></p><span class="io-total"><strong id="io-count"></strong>개 연결 항목</span></div>
         <div id="io-summary" class="io-summary" role="list" aria-label="연결 단자 그룹 요약"></div>
         <div id="connector-layout" class="connector-layout">
           <figure id="rear-connector-panel" class="rear-connector-panel panel" hidden>
@@ -97,9 +97,9 @@
           </figure>
           <p id="rear-unavailable" class="rear-unavailable" hidden>후면 이미지 없음 · 다른 모델 사진으로 대체하지 않았습니다.</p>
         </div>
-        <div id="connector-table" class="connector-table-wrap panel" aria-label="전체 연결 단자 표"><table class="connector-table"><thead><tr><th>구분</th><th>연결 단자</th><th>방향</th><th>수량</th><th>규격 및 용도</th></tr></thead><tbody id="connector-table-body"></tbody></table></div>
+        <div id="connector-table" class="connector-table-wrap panel" aria-label="전체 연결 단자 표"><table class="connector-table"><thead><tr><th>구분</th><th>연결 단자</th><th>방향</th><th>포트 수</th><th>채널·신호</th><th>규격·조건</th></tr></thead><tbody id="connector-table-body"></tbody></table></div>
         <div id="connector-mobile-groups" class="connector-mobile-groups" aria-label="신호 그룹별 연결 단자"></div>
-        <details id="connector-evidence" class="expanded-data connector-evidence"><summary>연결 단자 근거 및 검증 보기 (<span id="all-connector-count"></span>)</summary><div id="io-list" class="connector-evidence-list"></div></details>
+        <details id="connector-evidence" class="expanded-data connector-evidence"><summary><span id="all-connector-count"></span>개 항목의 근거 및 검증 보기</summary><div id="io-list" class="connector-evidence-list"></div></details>
       </section>
 
       <section id="related-products" class="detail-section related-products" aria-labelledby="related-products-title"><div class="section-title"><h2 id="related-products-title">관련 제품</h2></div><div class="related-empty panel"><strong>등록된 관련 제품이 없습니다.</strong><span>검증된 제품 관계가 준비되면 이 영역에 표시합니다.</span></div></section>

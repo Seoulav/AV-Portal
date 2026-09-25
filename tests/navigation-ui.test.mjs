@@ -76,10 +76,11 @@ test('home and detail templates expose the approved navigation structure', async
   const home = await readFile(new URL('../beta/site/index.html', import.meta.url), 'utf8');
   const detail = await readFile(new URL('../prototype/brc-am7/index.html', import.meta.url), 'utf8');
   assert.match(home, /id="global-search"/);
+  assert.match(home, /id="header-search-form"[^>]+hidden/);
   assert.match(home, /id="top-categories"/);
   assert.match(home, /id="manufacturer-browser"/);
   assert.match(home, /id="results-workspace"[^>]+hidden/);
   for (const id of ['overview', 'features', 'specifications', 'io', 'related-products', 'documents', 'sources']) assert.match(detail, new RegExp(`href="#${id}"`));
-  assert.match(detail, /id="connector-table"/);
+  assert.match(detail, /<th>포트 수<\/th><th>채널·신호<\/th><th>규격·조건<\/th>/);
   assert.match(detail, /id="connector-mobile-groups"/);
 });
