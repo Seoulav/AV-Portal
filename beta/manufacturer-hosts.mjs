@@ -6,7 +6,9 @@ export const manufacturerHosts = {
   'Analog Way': ['analogway.com'],
   Audinate: ['getdante.com'],
   AVer: ['aver.com', 'averusa.com'],
+  'Blackmagic Design': ['blackmagicdesign.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
+  Lightware: ['lightware.com'],
   Logitech: ['logitech.com'],
   Lumantek: ['lumantek.com'],
   NETGEAR: ['netgear.com'],
@@ -17,6 +19,7 @@ export const manufacturerHosts = {
   'Ross Video': ['rossvideo.com'],
   Shure: ['shure.com', 'shureweb.eu'],
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
+  SurgeX: ['ametekesp.com'],
   Televic: ['televic-conference.com', 'televic.digital', 'televic.com'],
   Yamaha: ['yamaha.com'],
   Yealink: ['yealink.com']
