@@ -3293,5 +3293,124 @@
       "https://www.shure.com/en-US/products/microphones/mx392"
     ],
     "link_scope": "series"
+  },
+  {
+    "brand": "Lightware",
+    "product": "HDMI20-OPTJ-TX90",
+    "categories": [
+      "영상",
+      "Video",
+      "Extender"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    ]
+  },
+  {
+    "brand": "Lightware",
+    "product": "HDMI20-OPTJ-RX90",
+    "categories": [
+      "영상",
+      "Video",
+      "Extender"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90"
+    ]
+  },
+  {
+    "brand": "Ross Video",
+    "product": "ULTRITOUCH-PS",
+    "categories": [
+      "영상",
+      "Video",
+      "Power Supply"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Ross Video",
+    "product": "SFP-MADI-COAX",
+    "categories": [
+      "영상",
+      "Video",
+      "Router Module"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "UA845UWB",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Antenna Distributor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/accessories/ua845uwb"
+    ]
+  },
+  {
+    "brand": "NETGEAR",
+    "product": "GS728TPP",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/support/product/gs728tpp"
+    ]
+  },
+  {
+    "brand": "NETGEAR",
+    "product": "GS116PP",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+    ]
+  },
+  {
+    "brand": "NETGEAR",
+    "product": "GS108PP",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+    ]
+  },
+  {
+    "brand": "Logitech",
+    "product": "Rally Mic Pod",
+    "categories": [
+      "화상회의",
+      "Conferencing",
+      "Microphone"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    ]
   }
 ]
