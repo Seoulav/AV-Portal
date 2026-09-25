@@ -5,7 +5,7 @@ import { group1Images } from './group1-images.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'styles.css']);
+assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
@@ -18,6 +18,16 @@ const slugs = ['brc-am7', 'dm7', 'ki-pro-go2', 'pt-mz17k', 'rally-bar'];
 assert.deepEqual((await readdir(new URL('data/', detail))).sort(), slugs.map(slug => `${slug}.json`).sort());
 
 const raw = await readFile(new URL('catalog.json', site), 'utf8');
+const homeHtml = await readFile(new URL('index.html', site), 'utf8');
+const detailHtml = await readFile(new URL('index.html', detail), 'utf8');
+const version = JSON.parse(await readFile(new URL('version.json', site), 'utf8'));
+assert.match(homeHtml, /data-system-version/);
+assert.match(detailHtml, /data-system-version/);
+assert.match(homeHtml, /src="\.\/system-version\.js"/);
+assert.match(detailHtml, /src="\.\.\/system-version\.js"/);
+assert.match(version.version, /^\d+\.\d+\.\d+$/);
+assert.ok(String(version.build).length > 0);
+assert.ok(String(version.revision).length > 0);
 const hash = text => createHash('sha256').update(text.replaceAll('\r\n', '\n')).digest('hex').toUpperCase();
 assert.equal(hash(raw), '50BA7AD7F1F0493DD5C92B5BDB7B5C42897B33950006796FE47AFEEB9974F30B');
 
