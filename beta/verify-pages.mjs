@@ -3,7 +3,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
-import { derivedCatalogFields, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
+import { derivedCatalogFields, linkScopes, optionalCatalogFields, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
@@ -41,8 +41,12 @@ const identities = new Set();
 const catalogSlugs = [];
 for (const item of catalog) {
   const keys = Object.keys(item).sort();
-  assert.deepEqual(keys.filter(key => !derivedCatalogFields.includes(key)), required);
-  assert.ok(keys.every(key => required.includes(key) || derivedCatalogFields.includes(key)), '카탈로그에 허용되지 않은 필드');
+  assert.deepEqual(keys.filter(key => !derivedCatalogFields.includes(key) && !optionalCatalogFields.includes(key)), required);
+  assert.ok(keys.every(key => required.includes(key) || derivedCatalogFields.includes(key) || optionalCatalogFields.includes(key)), '카탈로그에 허용되지 않은 필드');
+  if (item.link_scope !== undefined) {
+    assert.ok(linkScopes.includes(item.link_scope), `${item.product}: 허용되지 않은 link_scope`);
+    assert.equal(item.official_links.length, 1, `${item.product}: 제품군 링크는 정확히 1개`);
+  }
   assert.equal(item.kind, 'equipment');
   assert.ok(typeof item.brand === 'string' && item.brand.trim());
   assert.ok(typeof item.product === 'string' && item.product.trim());

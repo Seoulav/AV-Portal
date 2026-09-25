@@ -335,7 +335,8 @@
     "product": "Ki Pro GO2",
     "categories": [
       "영상",
-      "멀티채널 레코더/플레이어"
+      "Video",
+      "Recorder"
     ],
     "kind": "equipment",
     "official_links": [
@@ -349,7 +350,8 @@
     "product": "PT-MZ17K",
     "categories": [
       "프로젝터",
-      "대형 공간용 레이저 프로젝터"
+      "Display",
+      "Projector"
     ],
     "kind": "equipment",
     "official_links": [],
@@ -913,7 +915,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -926,7 +929,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -939,7 +943,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -952,7 +957,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -965,7 +971,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -978,7 +985,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -991,7 +999,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -1004,7 +1013,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "NovaStar",
@@ -1017,7 +1027,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Colorlight",
@@ -1030,7 +1041,8 @@
     "kind": "equipment",
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Colorlight",
@@ -1043,7 +1055,8 @@
     "kind": "equipment",
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Colorlight",
@@ -1056,7 +1069,8 @@
     "kind": "equipment",
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Blackmagic Design",
@@ -1069,7 +1083,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Blackmagic Design",
@@ -1082,7 +1097,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Blackmagic Design",
@@ -1095,7 +1111,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Lumantek",
@@ -1147,7 +1164,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Ross Video",
@@ -1160,7 +1178,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Ross Video",
@@ -1173,7 +1192,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Ross Video",
@@ -1186,7 +1206,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Ross Video",
@@ -1199,7 +1220,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Yamaha",
@@ -1446,7 +1468,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/docs/guide/MX395"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Shure",
@@ -1459,7 +1482,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Shure",
@@ -1472,7 +1496,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Shure",
@@ -1485,7 +1510,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Shure",
@@ -1498,7 +1524,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Shure",
@@ -1550,7 +1577,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "JBL",
@@ -2057,7 +2085,8 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Panasonic",
@@ -2070,7 +2099,8 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Panasonic",
@@ -2083,7 +2113,8 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz882/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Panasonic",
@@ -2096,7 +2127,8 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Panasonic",
@@ -2109,7 +2141,8 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
-    ]
+    ],
+    "link_scope": "series"
   },
   {
     "brand": "Logitech",
@@ -2266,5 +2299,999 @@
     "official_links": [
       "https://www.yealink.com/en/product-detail/cpe40"
     ]
+  },
+  {
+    "brand": "NovaStar",
+    "product": "H_4x3 SDI input card",
+    "categories": [
+      "영상",
+      "Video",
+      "Processor Card"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "NovaStar",
+    "product": "H_4xHDMI output card (HDMI 1.4 - Dual Link)",
+    "categories": [
+      "영상",
+      "Video",
+      "Processor Card"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "NovaStar",
+    "product": "H_1xHDMI2.0 output card(4K)",
+    "categories": [
+      "영상",
+      "Video",
+      "Processor Card"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "NovaStar",
+    "product": "H_800W",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Ross Video",
+    "product": "ULTRIMIX-MXR",
+    "categories": [
+      "영상",
+      "Video",
+      "Router Module"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Ross Video",
+    "product": "ULTRISYNC-18",
+    "categories": [
+      "영상",
+      "Video",
+      "Router Frame"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Ross Video",
+    "product": "ULTRIMIX-DANTE",
+    "categories": [
+      "영상",
+      "Video",
+      "Router Module"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLU-101",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/products/blu-101"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLU-100",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/products/blu-100"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLU-160",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/products/blu-160"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLU-50",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/products/blu-50"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLUAEC-IN",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLUCARD-IN",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLUCARD-OUT",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/product_families/inputoutput-cards"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "BSS Audio",
+    "product": "BLU-DAN",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/en-US/support_downloads/products/blu-dan"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Audinate",
+    "product": "AVIO BT",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.audinate.com/products/devices/dante-avio"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Audinate",
+    "product": "AVIO 2CH IN",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.audinate.com/products/devices/dante-avio"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Audinate",
+    "product": "AVIO 2CH OUT",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.audinate.com/products/devices/dante-avio"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Cerno CU",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Cerno AE",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Cerno Advanced",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Cerno D SL",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Mic 50 SL",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/microphones/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "Plixus AE-R Dante",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/plixus/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "Plixus AE-R PS",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/plixus/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "Confidea FLEX",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "Plixus NEXT",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/plixus/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Televic",
+    "product": "D-Mic 40 SL",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://conference.televic.digital/knowledgebase/products/microphones/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "MXCWAPT-W",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "MXC420/C",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Conference System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Yamaha",
+    "product": "DM3",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Mixer"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Yamaha",
+    "product": "Rio1608-D3",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Yamaha",
+    "product": "Rio3224-D3",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Interface"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 2/600",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 4/300",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 4/600",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 2/600",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 2/1200",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/300",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/600",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/1200",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 2/600N",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 4/300N",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 4/600N",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 2/1200BL",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/300BL",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/600BL",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "CDI 4/1200BL",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "DCI 4/600DA",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Crown",
+    "product": "ComTech D 2125",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.crownaudio.com/en-US/product_families/comtech-d-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Mezzo 324 AD",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Mezzo 604 AD",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Mezzo 324 A",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Mezzo 604 A",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/mezzo-series"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Duecanali 804 DSP+D",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/duecanali-804"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Powersoft",
+    "product": "Quattrocanali 2404 DSP",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Amplifier"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "MXA925W-R",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Ceiling Microphone"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/microphones/mxa925"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "ULXD4D",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "ULXD4",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "ULXD2/KSM9",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "QLXD2/BETA87A",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "QLXD2/BETA58",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "QLXD1",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD4D",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD4",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2/SM58",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2/BETA58",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2/BETA87",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD1",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "UA864A",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Antenna"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/accessories/ua864"
+    ],
+    "link_scope": "series"
+  },
+  {
+    "brand": "Shure",
+    "product": "MX392/C",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Microphone"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/microphones/mx392"
+    ],
+    "link_scope": "series"
   }
 ]

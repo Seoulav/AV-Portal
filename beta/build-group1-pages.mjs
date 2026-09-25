@@ -72,7 +72,9 @@ const index = process.argv.indexOf('--packages');
 const packagesDir = index >= 0 ? process.argv[index + 1] : process.env.AV_PORTAL_GROUP1_PACKAGES;
 if (!packagesDir) throw new Error('로컬 Group 1 패키지 폴더를 --packages로 지정하세요.');
 // 기준 25개는 파생 필드를 뺀 형태로 고정한다. 재생성해도 이 해시는 바뀌지 않는다.
-const baseline = JSON.parse(await readFile(join(site, 'catalog.json'), 'utf8')).slice(0, 25).map(stripDerivedCatalogFields);
+// 현재 공개 목록 전체를 기준으로 삼는다. 앞 25개만 읽으면 그 뒤에 등재한 항목이 재생성 때 지워진다.
+const existingCatalog = JSON.parse(await readFile(join(site, 'catalog.json'), 'utf8')).map(stripDerivedCatalogFields);
+const baseline = existingCatalog.slice(0, 25);
 assert.equal(baseline.length, 25);
 assert.equal(createHash('sha256').update(JSON.stringify(baseline)).digest('hex').toUpperCase(), '5A330BBEC27FA2CCA38B619984C4707C17F097BB67C11A17097772DBAD5AE212');
 const filenames = await packageFilenames(packagesDir);
@@ -87,11 +89,11 @@ assert.equal(brc.model, 'BRC-AM7');
 assert.deepEqual(brc.images, []);
 for (const [slug, product] of publicProducts) applyPublishedImages(product, slug);
 const slugByProduct = new Map([...publicProducts].map(([slug, product]) => [product, slug]));
-const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()], {
+const catalog = buildPreviewCatalog(existingCatalog, [...publicProducts.values()], {
   slugOf: product => slugByProduct.get(product) ?? null,
   cardImageOf: product => cardImages[slugByProduct.get(product)] ?? null
 });
-assert.equal(catalog.length, 27);
+assert.ok(catalog.length >= existingCatalog.length, '재생성이 기존 공개 항목을 지우면 안 된다');
 assert.equal(catalog.filter(item => item.slug).length, publicProducts.size);
 await mkdir(join(site, 'detail/data'), { recursive: true });
 await writeFile(join(site, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n', 'utf8');
@@ -100,4 +102,4 @@ for (const [source, generated, kind] of detailAssetPairs) {
   const content = await readFile(join(root, source), 'utf8');
   await writeFile(join(root, generated), transformDetailAsset(content, kind), 'utf8');
 }
-console.log('Group 1 Pages bundle: 27 Library entries, five details, 13 reviewed official images, no PDF binaries.');
+console.log(`Group 1 Pages bundle: ${catalog.length} Library entries, ${publicProducts.size} details, no PDF binaries.`);
