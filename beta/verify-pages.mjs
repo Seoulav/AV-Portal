@@ -22,7 +22,7 @@ for (const entry of group2Previews) {
   assert.equal(image.officialSource, true);
   assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
   assert.match(image.publicationStatus, /사용자 게시 승인/);
-  assert.match(image.publicationStatus, /제조사 재사용 권리 미확인/);
+  assert.match(image.publicationStatus, /공식 대리점 구매·계약 기반 사용/);
   assert.ok(typeof image.alt === 'string' && image.alt.trim(), `${entry.product}: 카드 사진 대체 텍스트`);
   if (entry.scope !== undefined) assert.ok(previewImageScopes.includes(entry.scope), `${entry.product}: 허용되지 않은 사진 범위`);
   const url = new URL(image.sourceUrl);
