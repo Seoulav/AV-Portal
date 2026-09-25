@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>AV Portal Product Detail Beta</title>
-  <link rel="stylesheet" href="./styles.css?v=w025-summary-3">
-  <script type="module" src="./app.js?v=w025-summary-3"></script>
+  <link rel="stylesheet" href="./styles.css?v=w025-connectors-1">
+  <script type="module" src="./app.js?v=w025-connectors-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
@@ -87,9 +87,16 @@
 
       <section id="io" class="detail-section" aria-labelledby="io-title">
         <div class="section-title"><div><h2 id="io-title">연결 단자</h2></div></div>
-        <div class="io-intro"><p id="io-intro"></p><button id="show-rear" type="button" class="secondary-button">Rear 이미지 보기 <span aria-hidden="true">↗</span></button></div>
-        <div id="key-io" class="key-io panel"></div>
-        <details id="all-io" class="expanded-data"><summary>전체 연결 단자 보기 (<span id="io-count"></span>)</summary><div id="io-list" class="io-groups"></div></details>
+        <div class="io-intro"><p id="io-intro"></p><span class="io-total">총 <strong id="io-count"></strong>개</span></div>
+        <nav id="io-summary" class="io-summary" aria-label="연결 단자 그룹 요약"></nav>
+        <div id="connector-layout" class="connector-layout">
+          <figure id="rear-connector-panel" class="rear-connector-panel panel" hidden>
+            <div class="rear-image-frame"><img id="rear-connector-image" alt=""></div>
+            <figcaption><strong>후면 단자 배치</strong><span>위치 번호는 정확한 근거가 없어 표시하지 않습니다.</span><a id="rear-connector-source" target="_blank" rel="noopener noreferrer">공식 이미지 출처 ↗</a></figcaption>
+          </figure>
+          <p id="rear-unavailable" class="rear-unavailable" hidden>후면 이미지 없음 · 다른 모델 사진으로 대체하지 않았습니다.</p>
+          <div id="io-list" class="connector-groups"></div>
+        </div>
       </section>
 
       <section id="documents" class="detail-section resources-section" aria-labelledby="documents-title"><div class="section-title"><h2 id="documents-title">자료</h2></div>

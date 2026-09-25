@@ -1,4 +1,4 @@
-import { prepareProductDetail } from './product-detail-model.mjs?v=w025-summary-3';
+import { prepareProductDetail } from './product-detail-model.mjs?v=w025-connectors-1';
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
   const item = document.createElement(tag);
@@ -103,7 +103,7 @@ $('#gallery-rights').textContent = data.presentation.galleryRights ?? '';
 $('#overview-heading').textContent = data.presentation.overviewHeading ?? '';
 $('#overview-heading').hidden = !data.presentation.overviewHeading;
 $('#spec-intro').textContent = '핵심 값만 먼저 표시합니다. 적용 조건은 전체 사양에서 확인하세요.';
-$('#io-intro').textContent = '주요 연결만 먼저 표시합니다. 조건과 근거는 전체 목록에서 확인하세요.';
+$('#io-intro').textContent = '연결 구성을 그룹별로 정리했습니다. 상세 보기에서 조건과 근거를 확인하세요.';
 $('#supplemental-note').textContent = data.presentation.supplementalNote ?? '';
 $('#footer-product').textContent = data.presentation.footerNote ?? `${data.manufacturer} ${data.model}`;
 $('#footer-manufacturer').textContent = data.manufacturer;
@@ -216,15 +216,6 @@ zoomButton.addEventListener('click', () => {
 $('#dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => zoomOpener?.focus());
-const rearButton = $('#show-rear');
-rearButton.hidden = data.rearIndex < 0;
-rearButton.addEventListener('click', () => {
-  if (data.rearIndex < 0) return;
-  selectImage(data.rearIndex);
-  $('#gallery-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  $('#thumbnails').children[data.rearIndex].focus();
-});
-
 if (data.officialPage?.url) {
   $('#official-product-link').append(officialLink(data.officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link'));
   if (data.officialPage.status !== 'VERIFIED') $('#official-product-link').append(badge(data.officialPage.status));
@@ -316,98 +307,97 @@ for (const [group, specifications] of grouped) {
   $('#spec-groups').append(panel);
 }
 
-$('#io-count').textContent = String(data.io.length).padStart(2, '0');
-let keyIoCount = 0;
-for (const { name, entries } of data.ioGroups) {
-  const selected = entries.slice(0, 2);
-  if (!selected.length || keyIoCount >= 8) continue;
-  const group = node('div', 'key-io-group');
-  group.append(node('h3', '', name));
-  for (const item of selected.slice(0, 8 - keyIoCount)) {
-    const row = node('div', 'key-io-row');
-    const identity = node('strong', '', item.connector);
-    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(item.verification)) identity.append(node('small', 'key-review', ' · 검토 중'));
-    if (item.condition) identity.append(node('small', 'key-condition', ' · 조건 있음'));
-    row.append(identity, node('span', '', item.quantity ?? ''));
-    group.append(row);
-    keyIoCount++;
-  }
-  $('#key-io').append(group);
+$('#io-count').textContent = String(data.io.length);
+const rearItem = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
+const rearPanel = $('#rear-connector-panel');
+const rearUnavailable = $('#rear-unavailable');
+const connectorLayout = $('#connector-layout');
+function hideRearPanel() {
+  rearPanel.hidden = true;
+  rearUnavailable.hidden = false;
+  connectorLayout.classList.add('without-rear');
 }
-if (!keyIoCount) $('#key-io').append(node('p', '', '확인된 주요 단자는 전체 목록에서 확인해 주세요.'));
-const ioTable = node('table', 'io-table');
-ioTable.setAttribute('aria-label', '연결 단자 목록');
-const ioHead = node('thead', 'io-table-head');
-const ioHeaderRow = node('tr');
-for (const label of ['커넥터', '방향', '신호', '수량', '규격', '고정/옵션', '검증']) {
-  const header = node('th', '', label);
-  header.scope = 'col';
-  ioHeaderRow.append(header);
-}
-ioHead.append(ioHeaderRow);
-ioTable.append(ioHead);
-let ioIndex = 0;
-for (const [groupIndex, { name: group, entries: items }] of data.ioGroups.entries()) {
-  const body = node('tbody', 'io-group');
-  const groupRow = node('tr', 'io-group-row');
-  const groupCell = node('th');
-  groupCell.colSpan = 7;
-  groupCell.scope = 'rowgroup';
-  groupCell.id = 'io-group-' + groupIndex;
-  groupCell.append(node('strong', '', group), node('span', '', `${items.length} I/O`));
-  groupRow.append(groupCell);
-  body.append(groupRow);
-  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => note.group === group)) {
-    const noteRow = node('tr', 'io-note-row');
-    const noteCell = node('td');
-    noteCell.colSpan = 7;
-    noteCell.append(node('span', '', groupNote.text + ' '));
-    if (groupNote.source) noteCell.append(sourceReference(groupNote.source));
-    noteRow.append(noteCell);
-    body.append(noteRow);
-  }
-  for (const item of items) {
-    const row = node('tr', 'io-table-row');
-    const connector = node('td', 'io-cell-connector');
-    const detailId = `io-detail-${ioIndex++}`;
-    let detailRow;
-    if (item.condition) {
-      const toggle = node('button', 'io-row-toggle', item.connector);
-      toggle.type = 'button';
-      toggle.setAttribute('aria-label', `${item.connector} 조건과 근거 보기`);
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-controls', detailId);
-      connector.append(toggle);
-      detailRow = node('tr', 'io-detail-row');
-      detailRow.id = detailId;
-      detailRow.hidden = true;
-      const detailCell = node('td');
-      detailCell.colSpan = 7;
-      detailCell.append(node('span', 'io-condition', '조건 · ' + item.condition), sourceReference(item.source));
-      detailRow.append(detailCell);
-      toggle.addEventListener('click', () => {
-        const expanded = toggle.getAttribute('aria-expanded') !== 'true';
-        toggle.setAttribute('aria-expanded', String(expanded));
-        detailRow.hidden = !expanded;
-      });
-    } else {
-      connector.append(node('strong', '', item.connector), sourceReference(item.source));
+if (rearItem) {
+  const rearImage = $('#rear-connector-image');
+  rearImage.src = './images/' + rearItem.file;
+  rearImage.alt = `${data.manufacturer} ${data.model} 후면 연결 단자 이미지`;
+  rearImage.addEventListener('error', hideRearPanel);
+  rearPanel.hidden = false;
+  rearUnavailable.hidden = true;
+  if (rearItem.sourceUrl) $('#rear-connector-source').href = officialLink(rearItem.sourceUrl, '').href;
+  else $('#rear-connector-source').hidden = true;
+} else hideRearPanel();
+
+const conditionBadge = (className, text) => node('span', `connector-flag ${className}`, text);
+let connectorIndex = 0;
+for (const [groupIndex, groupData] of data.connectorGroups.entries()) {
+  const groupId = `connector-group-${groupData.key}-${groupIndex}`;
+  const summaryLink = node('a', 'io-summary-chip');
+  summaryLink.href = '#' + groupId;
+  summaryLink.append(node('span', '', groupData.label), node('strong', '', groupData.entries.length));
+  $('#io-summary').append(summaryLink);
+
+  const group = node('details', 'connector-group panel');
+  group.id = groupId;
+  group.open = !matchMedia('(max-width: 650px)').matches || groupIndex === 0;
+  const heading = node('summary', 'connector-group-heading');
+  const headingText = node('span');
+  headingText.append(node('strong', '', groupData.label), node('small', '', `${groupData.entries.length}개`));
+  const reviewCount = groupData.entries.filter(item => ['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)).length;
+  heading.append(headingText);
+  if (reviewCount) heading.append(node('span', 'connector-review-count', `검토 ${reviewCount}`));
+  group.append(heading);
+
+  const columns = node('div', 'connector-columns');
+  for (const label of ['연결 단자', '방향', '수량', '규격']) columns.append(node('span', '', label));
+  group.append(columns);
+
+  for (const item of groupData.entries) {
+    const itemId = `connector-detail-${connectorIndex++}`;
+    const row = node('article', 'connector-item');
+    const primary = node('div', 'connector-primary');
+    const name = node('strong', 'connector-name', item.connector || '미확인');
+    const flags = node('span', 'connector-flags');
+    if (item.availability && !/^fixed$/i.test(item.availability) && item.availability !== '—') {
+      flags.append(conditionBadge('is-option', /option|module/i.test(item.availability) ? '옵션' : '조건 있음'));
     }
-    row.append(connector);
-    for (const [className, value] of [
-      ['io-cell-direction', item.direction], ['io-cell-signal', item.signal],
-      ['io-cell-quantity', item.quantity], ['io-cell-protocol', item.protocol],
-      ['io-cell-availability', item.availability]
-    ]) row.append(node('td', className, value));
-    const verification = node('td', 'io-cell-verification');
-    verification.append(badge(item.verification ?? 'REVIEW REQUIRED'));
-    row.append(verification);
-    body.append(row);
-    if (detailRow) body.append(detailRow);
+    if (item.condition && item.condition !== '—') flags.append(conditionBadge('has-condition', '조건 있음'));
+    if (['REVIEW REQUIRED', 'CONFLICTED', 'MISSING', 'PARTIAL'].includes(item.verification)) flags.append(conditionBadge('needs-review', '검토 중'));
+    const identity = node('div', 'connector-identity');
+    identity.append(name, flags);
+    primary.append(identity, node('span', 'connector-direction', item.displayDirection), node('span', 'connector-quantity', `×${item.quantity ?? '—'}`), node('span', 'connector-protocol', item.protocol || '—'));
+    row.append(primary);
+
+    const detail = node('details', 'connector-detail');
+    detail.id = itemId;
+    detail.append(node('summary', '', '상세 보기'));
+    const detailGrid = node('dl', 'connector-detail-grid');
+    const addDetail = (label, value, showUnknown = false) => {
+      if (!value || (!showUnknown && value === '—')) return;
+      detailGrid.append(node('dt', '', label), node('dd', '', value));
+    };
+    addDetail('원본 그룹', item.sourceGroup);
+    addDetail('Signal', item.signal);
+    addDetail('Protocol / Standard', item.protocol);
+    addDetail('Fixed / Optional', item.availability, true);
+    addDetail('Condition', item.condition);
+    addDetail('Applicability', item.applicability);
+    addDetail('Notes', item.notes ?? item.note);
+    const verification = node('div', 'connector-verification');
+    verification.append(node('span', '', '검증'), badge(item.verification ?? 'REVIEW REQUIRED'));
+    if (item.source) verification.append(sourceReference(item.source));
+    detail.append(detailGrid, verification);
+    row.append(detail);
+    group.append(row);
   }
-  ioTable.append(body);
+  for (const groupNote of (data.presentation.ioGroupNotes ?? []).filter(note => groupData.sourceGroups.includes(note.group))) {
+    const note = node('p', 'connector-group-note', groupNote.text + ' ');
+    if (groupNote.source) note.append(sourceReference(groupNote.source));
+    group.append(note);
+  }
+  $('#io-list').append(group);
 }
-$('#io-list').append(ioTable);
+if (!data.connectorGroups.length) $('#io-list').append(node('p', 'rear-unavailable', '확인된 연결 단자 정보가 없습니다.'));
 for (const document of data.additionalDocuments) {
   const row = node('article', 'document-row panel');
   const main = node('div', 'document-main');
@@ -461,7 +451,12 @@ function hashTarget() {
 }
 function openForTarget(target) {
   if (target && $('#all-specs').contains(target)) $('#all-specs').open = true;
-  if (target && $('#all-io').contains(target)) $('#all-io').open = true;
+  if (target) {
+    const disclosure = target.matches?.('.connector-group, .connector-detail') ? target : target.closest?.('.connector-group, .connector-detail');
+    if (disclosure instanceof HTMLDetailsElement) disclosure.open = true;
+    const parentGroup = disclosure?.closest?.('.connector-group');
+    if (parentGroup instanceof HTMLDetailsElement) parentGroup.open = true;
+  }
   if (target && (target === $('#sources') || $('#sources').contains(target))) $('#sources').open = true;
   if (target && (target === $('#supplemental-docs') || $('#supplemental-docs').contains(target))) $('#supplemental-docs').open = true;
   updateNavigation(target);

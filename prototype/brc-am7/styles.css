@@ -772,6 +772,55 @@ body.summary-detail .key-io-row{display:flex;justify-content:space-between;gap:1
 body.summary-detail .key-io-row strong{font-weight:700}
 body.summary-detail .key-review{font-size:10px;font-weight:500;color:#9b6d28}
 body.summary-detail .key-condition{font-size:10px;font-weight:500;color:#7586a0}
+body.summary-detail .io-intro{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 10px}
+body.summary-detail .io-intro p{margin:0}
+body.summary-detail .io-total{flex:0 0 auto;color:#6d7f98;font-size:11px}
+body.summary-detail .io-total strong{color:#275fae;font-size:14px}
+body.summary-detail .io-summary{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px}
+body.summary-detail .io-summary-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #dce6f4;border-radius:999px;background:#f8fbff;color:#536a88;font-size:11px;font-weight:700}
+body.summary-detail .io-summary-chip strong{display:grid;place-items:center;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:#e6f0ff;color:#2366be;font-size:10px}
+body.summary-detail .connector-layout{display:grid;grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);gap:14px;align-items:start}
+body.summary-detail .connector-layout.without-rear{grid-template-columns:1fr}
+body.summary-detail .rear-connector-panel{position:sticky;top:64px;margin:0;padding:13px;overflow:hidden}
+body.summary-detail .rear-image-frame{display:grid;place-items:center;min-height:245px;border-radius:11px;background:#f4f7fb;overflow:hidden}
+body.summary-detail .rear-image-frame img{display:block;width:100%;height:245px;object-fit:contain}
+body.summary-detail .rear-connector-panel figcaption{display:grid;gap:4px;padding:11px 3px 1px;color:#74849b;font-size:10px;line-height:1.45}
+body.summary-detail .rear-connector-panel figcaption strong{color:#2b4669;font-size:12px}
+body.summary-detail .rear-connector-panel figcaption a{width:max-content;color:#2869bd;font-weight:700}
+body.summary-detail .rear-unavailable{margin:0 0 10px;padding:10px 12px;border:1px dashed #dce5f1;border-radius:10px;color:#77879c;background:#fafcff;font-size:11px}
+body.summary-detail .connector-groups{display:grid;gap:9px;min-width:0}
+body.summary-detail .connector-group{margin:0;padding:0;border:1px solid #dfe7f2;border-radius:12px;background:#fff;box-shadow:0 4px 12px #1d3f7110;overflow:hidden}
+body.summary-detail .connector-group-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 13px;cursor:pointer;list-style:none;color:#254c80;background:#f7faff}
+body.summary-detail .connector-group-heading::-webkit-details-marker{display:none}
+body.summary-detail .connector-group-heading>span:first-child{display:flex;align-items:baseline;gap:7px}
+body.summary-detail .connector-group-heading strong{font-size:13px}
+body.summary-detail .connector-group-heading small{color:#8090a6;font-size:10px}
+body.summary-detail .connector-group-heading::after{content:'＋';margin-left:auto;color:#5480bb;font-size:14px}
+body.summary-detail .connector-group[open]>.connector-group-heading::after{content:'−'}
+body.summary-detail .connector-review-count{padding:3px 7px;border-radius:999px;background:#fff3da;color:#8b6427;font-size:9px;font-weight:800}
+body.summary-detail .connector-columns,body.summary-detail .connector-primary{display:grid;grid-template-columns:minmax(150px,1.35fr) 52px 70px minmax(140px,1fr);gap:8px;align-items:center}
+body.summary-detail .connector-columns{padding:7px 13px;border-top:1px solid #e7edf5;border-bottom:1px solid #e7edf5;background:#fbfcfe;color:#8491a3;font-size:9px;font-weight:800;text-transform:uppercase}
+body.summary-detail .connector-item{padding:0 13px;border-bottom:1px solid #edf1f6}
+body.summary-detail .connector-item:last-of-type{border-bottom:0}
+body.summary-detail .connector-primary{min-height:40px;color:#4c5e77;font-size:10.5px}
+body.summary-detail .connector-identity{display:flex;align-items:center;min-width:0;gap:5px;flex-wrap:wrap}
+body.summary-detail .connector-name{color:#294768;font-size:11px;overflow-wrap:anywhere}
+body.summary-detail .connector-flags{display:inline-flex;gap:3px;flex-wrap:wrap}
+body.summary-detail .connector-flag{padding:2px 5px;border-radius:999px;background:#f2f5f9;color:#6e7e92;font-size:8px;font-weight:800;white-space:nowrap}
+body.summary-detail .connector-flag.is-option{background:#edf3ff;color:#426da9}
+body.summary-detail .connector-flag.has-condition{background:#f7f1e8;color:#84683d}
+body.summary-detail .connector-flag.needs-review{background:#fff0d6;color:#89622b}
+body.summary-detail .connector-direction{width:max-content;padding:3px 6px;border:1px solid #cfe0f6;border-radius:5px;color:#275fa8;background:#f4f8fe;font-size:9px;font-weight:900}
+body.summary-detail .connector-quantity{color:#314f73;font-weight:800;white-space:nowrap}
+body.summary-detail .connector-protocol{overflow-wrap:anywhere}
+body.summary-detail .connector-detail{margin:0 0 7px;color:#52709a;font-size:9px}
+body.summary-detail .connector-detail>summary{width:max-content;padding:2px 0;cursor:pointer;font-weight:800}
+body.summary-detail .connector-detail-grid{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:3px 9px;margin:6px 0;padding:8px 10px;border-radius:8px;background:#f7f9fc;color:#596b82}
+body.summary-detail .connector-detail-grid dt{font-weight:800;color:#7a899d}
+body.summary-detail .connector-detail-grid dd{margin:0;overflow-wrap:anywhere}
+body.summary-detail .connector-verification{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:5px 0 2px;color:#78879b}
+body.summary-detail .connector-verification .state{font-size:8px}
+body.summary-detail .connector-group-note{margin:0;padding:8px 13px;border-top:1px solid #e8edf4;color:#6b7c92;background:#fbfcfe;font-size:9px;line-height:1.45}
 body.summary-detail .expanded-data{margin-top:11px;border:1px solid #dfe8f5;border-radius:12px;background:#fff}
 body.summary-detail .expanded-data>summary{padding:13px 17px;color:#245eb3;font-size:12px;font-weight:800;cursor:pointer}
 body.summary-detail .expanded-data[open]>summary{border-bottom:1px solid #e2e9f3}
@@ -805,6 +854,10 @@ body.summary-detail .manufacturer-footer a{color:#2367bd;font-weight:800}
 body.summary-detail .site-footer{color:#71819a;border-color:#e4eaf4}
 body.summary-detail .image-dialog{background:#fff;color:#293a55}
 body.summary-detail .gallery-unavailable .quick-documents{margin:0;border:1px solid #e2e9f3;border-radius:18px;padding:20px}
+@media(max-width:1000px){
+ body.summary-detail .connector-layout{grid-template-columns:1fr}
+ body.summary-detail .rear-connector-panel{position:static}
+}
 @media(max-width:880px){
  body.summary-detail .hero-grid{grid-template-columns:1fr;grid-template-areas:"header" "gallery" "quick"}
  body.summary-detail .gallery{grid-row:auto}
@@ -824,6 +877,23 @@ body.summary-detail .gallery-unavailable .quick-documents{margin:0;border:1px so
  body.summary-detail .quick-card .card-type{font-size:12px}
  body.summary-detail .detail-tabs a{font-size:12px;padding:12px 9px}
  body.summary-detail .overview-grid,body.summary-detail .key-specs,body.summary-detail .key-io{grid-template-columns:1fr}
+ body.summary-detail .io-intro{align-items:flex-start;flex-direction:row}
+ body.summary-detail .io-summary{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scrollbar-width:thin}
+ body.summary-detail .io-summary-chip{flex:0 0 auto}
+ body.summary-detail .connector-layout{grid-template-columns:1fr;gap:9px}
+ body.summary-detail .rear-connector-panel{position:static;padding:10px}
+ body.summary-detail .rear-image-frame,body.summary-detail .rear-image-frame img{height:210px;min-height:210px}
+ body.summary-detail .connector-columns{display:none}
+ body.summary-detail .connector-group-heading{padding:12px}
+ body.summary-detail .connector-item{padding:7px 11px}
+ body.summary-detail .connector-primary{grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:'name direction quantity' 'protocol protocol protocol';gap:5px 8px;min-height:0}
+ body.summary-detail .connector-identity{grid-area:name}
+ body.summary-detail .connector-direction{grid-area:direction}
+ body.summary-detail .connector-quantity{grid-area:quantity}
+ body.summary-detail .connector-protocol{grid-area:protocol;color:#75859a;font-size:9px}
+ body.summary-detail .connector-detail{margin:3px 0 0}
+ body.summary-detail .connector-detail-grid{grid-template-columns:1fr;margin-top:5px}
+ body.summary-detail .connector-detail-grid dt{margin-top:3px}
  body.summary-detail .overview-card{padding:17px}
  body.summary-detail .manufacturer-footer{flex-wrap:wrap}
 }

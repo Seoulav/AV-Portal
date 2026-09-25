@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
+import { prepareProductDetail, prepareConnectorGroups } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const brc = JSON.parse(await readFile(new URL('../prototype/brc-am7/content.json', import.meta.url), 'utf8'));
 
@@ -60,4 +60,24 @@ test('REVIEW REQUIRED documents retain their source without becoming quick-open 
   ] });
   assert.equal(view.quickDocuments[3].resource.status, 'REVIEW REQUIRED');
   assert.equal(view.quickDocuments[3].available, false);
+});
+
+test('connector groups collapse mixed labels without losing entries or direction text', () => {
+  const input = [
+    { name: 'Audio', entries: [{ connector: 'XLR', direction: 'INPUT', quantity: '2' }] },
+    { name: 'Network / Audio', entries: [{ connector: 'etherCON', direction: 'I/O', quantity: '2' }] },
+    { name: 'Control', entries: [{ connector: 'D-sub', direction: 'OUT', quantity: '1' }] },
+    { name: 'USB / Audio', entries: [{ connector: 'USB Type-C', direction: 'Bidirectional', quantity: '1' }] },
+    { name: 'USB', entries: [{ connector: 'USB Type-A', direction: 'IN', quantity: '2' }] }
+  ];
+
+  const groups = prepareConnectorGroups(input);
+
+  assert.deepEqual(groups.map(group => [group.key, group.label, group.entries.length]), [
+    ['audio', '오디오', 1],
+    ['network-control', '네트워크·제어', 2],
+    ['usb', 'USB', 2]
+  ]);
+  assert.deepEqual(groups.flatMap(group => group.entries).map(item => item.displayDirection), ['IN', 'I/O', 'OUT', 'I/O', 'IN']);
+  assert.equal(groups.flatMap(group => group.entries).length, 5);
 });

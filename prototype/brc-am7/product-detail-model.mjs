@@ -5,6 +5,52 @@ const QUICK_DOCUMENTS = [
   ['기술문서', 'Technical Document', '기술문서 미확인']
 ];
 
+const CONNECTOR_GROUPS = [
+  { key: 'video', label: '영상', matches: ['video'] },
+  { key: 'audio', label: '오디오', matches: ['audio'] },
+  { key: 'network-control', label: '네트워크·제어', matches: ['network', 'control'] },
+  { key: 'usb', label: 'USB', matches: ['usb'] },
+  { key: 'sync', label: '동기', matches: ['sync', 'timecode'] },
+  { key: 'power', label: '전원', matches: ['power'] },
+  { key: 'recording-media', label: '저장·미디어', matches: ['recording', 'storage', 'media'] },
+  { key: 'expansion', label: '확장', matches: ['expansion'] }
+];
+
+function connectorGroup(groupName = '') {
+  const normalized = groupName.toLowerCase();
+  // USB and pure audio groups stay distinct even when the source label contains Audio.
+  if (normalized.includes('usb')) return CONNECTOR_GROUPS.find(group => group.key === 'usb');
+  if (normalized.includes('network') || normalized.includes('control')) return CONNECTOR_GROUPS.find(group => group.key === 'network-control');
+  return CONNECTOR_GROUPS.find(group => group.matches.some(token => normalized.includes(token))) ?? {
+    key: normalized.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'other',
+    label: groupName || '기타'
+  };
+}
+
+function displayDirection(direction = '') {
+  const normalized = String(direction).trim().toUpperCase();
+  if (['IN', 'INPUT'].includes(normalized)) return 'IN';
+  if (['OUT', 'OUTPUT'].includes(normalized)) return 'OUT';
+  if (['I/O', 'IO', 'IN/OUT', 'BIDIRECTIONAL', 'BI-DIRECTIONAL'].includes(normalized)) return 'I/O';
+  return direction || '—';
+}
+
+export function prepareConnectorGroups(ioGroups = []) {
+  const grouped = new Map();
+  for (const sourceGroup of ioGroups) {
+    const presentation = connectorGroup(sourceGroup.name);
+    if (!grouped.has(presentation.key)) grouped.set(presentation.key, { ...presentation, sourceGroups: [], entries: [] });
+    const target = grouped.get(presentation.key);
+    target.sourceGroups.push(sourceGroup.name);
+    target.entries.push(...sourceGroup.entries.map(item => ({
+      ...item,
+      sourceGroup: sourceGroup.name,
+      displayDirection: displayDirection(item.direction)
+    })));
+  }
+  return [...grouped.values()];
+}
+
 export function prepareProductDetail(input) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
@@ -24,6 +70,7 @@ export function prepareProductDetail(input) {
     return [...groups].map(([name, entries]) => ({ name, entries }));
   };
   const ioGroupBySignal = new Map((presentation.ioSignalGroups ?? []).flatMap(({ name, signals }) => signals.map(signal => [signal, name])));
+  const ioGroups = group(io, item => item.group ?? ioGroupBySignal.get(item.signal) ?? item.signal);
   return {
     ...input,
     images,
@@ -41,7 +88,8 @@ export function prepareProductDetail(input) {
     }),
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups: group(specifications, item => item.group),
-    ioGroups: group(io, item => item.group ?? ioGroupBySignal.get(item.signal) ?? item.signal),
+    ioGroups,
+    connectorGroups: prepareConnectorGroups(ioGroups),
     rearIndex: images.findIndex(item => item.role?.toLowerCase() === 'rear')
   };
 }
