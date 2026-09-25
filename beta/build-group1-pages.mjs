@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadGroup1 } from '../prototype/group1/serve.mjs';
 import { parseGroup1Package, buildPreviewCatalog } from '../prototype/group1/group1-data.mjs';
 import { projectPublicDetail } from './group1-public.mjs';
+import { applyPublishedImages } from './group1-images.mjs';
+import { detailAssetPairs, transformDetailAsset } from './detail-asset-transforms.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const site = join(root, 'beta/site');
@@ -68,34 +70,21 @@ const products = await loadGroup1(packagesDir);
 const rawBrc = parseGroup1Package(await readFile(join(packagesDir, filenames.get('brc-am7')), 'utf8'));
 products.get('brc-am7').imageStatuses = rawBrc.imageStatuses;
 const publicProducts = new Map([...products].map(([slug, product]) => [slug, projectPublicDetail(product, options[slug])]));
+const brc = publicProducts.get('brc-am7');
+assert.equal(brc.model, 'BRC-AM7');
+assert.deepEqual(brc.images, []);
+for (const [slug, product] of publicProducts) applyPublishedImages(product, slug);
 const catalog = buildPreviewCatalog(baseline, [...publicProducts.values()]);
 assert.equal(catalog.length, 27);
 await mkdir(join(site, 'detail/data'), { recursive: true });
 await writeFile(join(site, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n', 'utf8');
 for (const [slug, product] of publicProducts) await writeFile(join(site, 'detail/data', `${slug}.json`), JSON.stringify(product, null, 2) + '\n', 'utf8');
-await copyFile(join(root, 'prototype/brc-am7/styles.css'), join(site, 'detail/styles.css'));
-await copyFile(join(root, 'prototype/brc-am7/product-detail-model.mjs'), join(site, 'detail/product-detail-model.mjs'));
-await copyFile(join(root, 'prototype/group1/group1-links.js'), join(site, 'detail-links.js'));
-await copyFile(join(root, 'prototype/group1/group1.css'), join(site, 'detail-links.css'));
+for (const [source, generated, kind] of detailAssetPairs) {
+  const content = await readFile(join(root, source), 'utf8');
+  await writeFile(join(root, generated), transformDetailAsset(content, kind), 'utf8');
+}
 const libraryHtml = await readFile(join(root, 'beta/site/index.html'), 'utf8');
 await writeFile(join(site, 'index.html'), libraryHtml
   .replace('<script type="module" src="./app.js"></script>', libraryHtml.includes('detail-links.js') ? '<script type="module" src="./app.js"></script>' : '<script type="module" src="./app.js"></script>\n  <script type="module" src="./detail-links.js"></script>')
   .replace('<link rel="stylesheet" href="./styles.css">', libraryHtml.includes('detail-links.css') ? '<link rel="stylesheet" href="./styles.css">' : '<link rel="stylesheet" href="./styles.css">\n  <link rel="stylesheet" href="./detail-links.css">'), 'utf8');
-const prototypeHtml = await readFile(join(root, 'prototype/brc-am7/index.html'), 'utf8');
-await writeFile(join(site, 'detail/index.html'), prototypeHtml
-  .replaceAll('Product Detail 시안', 'Product Detail Beta')
-  .replaceAll('https://seoulav.github.io/AV-Portal/', '../')
-  .replaceAll('PRODUCT DETAIL LAB', 'PRODUCT DETAIL')
-  .replaceAll('LOCAL PREVIEW', 'PUBLIC BETA')
-  .replaceAll('공개 Library', 'Library')
-  .replaceAll('로컬 이미지가 없습니다', '게시된 이미지가 없습니다')
-  .replaceAll('로컬 시안 이미지', '공식 제품 이미지')
-  .replaceAll('AV PORTAL · PRODUCT DETAIL LOCAL STUDY', 'AV PORTAL · PRODUCT DETAIL BETA'), 'utf8');
-const prototypeApp = await readFile(join(root, 'prototype/brc-am7/app.js'), 'utf8');
-await writeFile(join(site, 'detail/app.js'), prototypeApp
-  .replace('Product Detail 시안', 'Product Detail')
-  .replace('시안 콘텐츠를 읽을 수 없습니다.', '제품 상세 데이터를 읽을 수 없습니다.')
-  .replace('제품의 로컬 검토본입니다. 공개 사이트와 별도로 검토합니다.', '제품의 공개 Beta 상세페이지입니다. 검토 중인 항목은 상태를 확인해 주세요.')
-  .replaceAll('로컬 이미지 없음', '게시 이미지 없음')
-  .replaceAll('로컬 표시 파일 없음', '게시 이미지 없음'), 'utf8');
-console.log('Group 1 Pages bundle: 27 Library entries, five public-safe details, no image/PDF binaries.');
+console.log('Group 1 Pages bundle: 27 Library entries, five details, 13 reviewed official images, no PDF binaries.');

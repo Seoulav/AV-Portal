@@ -1,16 +1,31 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
+import { group1Images } from './group1-images.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'index.html', 'styles.css']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'detail-links.css', 'detail-links.js', 'favicon.svg', 'index.html', 'llms.txt', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'index.html', 'product-detail-model.mjs', 'styles.css']);
+assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
+const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
+assert.deepEqual((await readdir(new URL('images/', detail))).sort(), [...productImageFiles, 'ptz-pictogram.svg'].sort());
+const pictogram = await readFile(new URL('images/ptz-pictogram.svg', detail), 'utf8');
+assert.equal(pictogram.replaceAll('\r\n', '\n'), (await readFile(new URL('../prototype/brc-am7/ptz-pictogram.svg', import.meta.url), 'utf8')).replaceAll('\r\n', '\n'));
+assert.match(pictogram, /SPDX-License-Identifier: CC0-1\.0/);
+assert.ok(!/<script|<image|(?:href|src)="|url\(https?:/i.test(pictogram), 'Illustration must not embed external content');
 const slugs = ['brc-am7', 'dm7', 'ki-pro-go2', 'pt-mz17k', 'rally-bar'];
 assert.deepEqual((await readdir(new URL('data/', detail))).sort(), slugs.map(slug => `${slug}.json`).sort());
 
 const raw = await readFile(new URL('catalog.json', site), 'utf8');
+const homeHtml = await readFile(new URL('index.html', site), 'utf8');
+const detailHtml = await readFile(new URL('index.html', detail), 'utf8');
+const version = JSON.parse(await readFile(new URL('version.json', site), 'utf8'));
+assert.doesNotMatch(homeHtml, /data-system-version|SYSTEM v\d|build local|system-version\.(?:css|js)/);
+assert.doesNotMatch(detailHtml, /data-system-version|SYSTEM v\d|build local|system-version\.(?:css|js)/);
+assert.match(version.version, /^\d+\.\d+\.\d+$/);
+assert.ok(String(version.build).length > 0);
+assert.ok(String(version.revision).length > 0);
 const hash = text => createHash('sha256').update(text.replaceAll('\r\n', '\n')).digest('hex').toUpperCase();
 assert.equal(hash(raw), '50BA7AD7F1F0493DD5C92B5BDB7B5C42897B33950006796FE47AFEEB9974F30B');
 
@@ -40,15 +55,15 @@ for (const item of catalog) {
   identities.add(identity);
 }
 const expectedDetails = {
-  'brc-am7': ['4DAF69EC06DB6B7B9B0B5FCBFC85DDDCD9C443C4555A4DC3073EBD897C14B1A9', 8, 27, 14],
-  dm7: ['422986C310C69E574E7A33D296641B698C01C14180644CE49686277E829B2C3B', 8, 16, 15],
-  'ki-pro-go2': ['66F40798DAE58F12E4923D7601B69E6779A5CBF92612B9BAC41D9978946175A3', 8, 16, 11],
-  'pt-mz17k': ['BF2F9CD82D33006E301377E56396077AA7F6E9FDB95CE0BF4BCEAD24E0183D55', 7, 13, 4],
-  'rally-bar': ['E218EB627AA196FE50407CDDD0DF3211E65EF094D1B1B6C6179C4F661EB29ED0', 8, 16, 9]
+  'brc-am7': ['6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D', 8, 27, 14],
+  dm7: ['23CF9158991028C11E9B554A3597928DB990490CC57DFE85FB8B5F9B9D70D1F9', 8, 16, 15],
+  'ki-pro-go2': ['07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488', 8, 16, 11],
+  'pt-mz17k': ['B340C0BE082DDAF64D0D5B628D8F39BC580E1120EA4F6A8BFE3E3ABD7281D7EC', 7, 13, 4],
+  'rally-bar': ['34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1', 8, 16, 9]
 };
 const officialHosts = {
   'brc-am7': ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
-  dm7: ['yamaha.com'], 'ki-pro-go2': ['aja.com'],
+  dm7: ['yamaha.com'], 'ki-pro-go2': ['aja.com', 'd26ddnfpy9hzf8.cloudfront.net'],
   'pt-mz17k': ['panasonic.com'], 'rally-bar': ['logitech.com']
 };
 function verifyOfficialUrls(value, slug) {
@@ -69,7 +84,7 @@ const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outpu
 for (const filename of files.filter(name => name !== 'detail')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
-for (const filename of (await readdir(detail)).filter(name => name !== 'data')) {
+for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, detail), 'utf8')), `detail/${filename} private marker`);
 }
 for (const slug of slugs) {
@@ -79,7 +94,9 @@ for (const slug of slugs) {
   assert.ok(!privateMarkers.test(content), `${slug} private marker`);
   const product = JSON.parse(content);
   verifyOfficialUrls(product, slug);
-  assert.deepEqual(product.images, [], 'No image binaries or hotlinks');
+  assert.deepEqual(product.images, group1Images[slug], `${slug}: reviewed official image manifest`);
+  assert.equal(product.presentation.visualVariant, 'official-product-images');
+  assert.match(product.presentation.galleryRights, /제조사 재사용 권리.*미확인/);
   assert.equal(product.features.length, featureCount);
   assert.equal(product.specifications.length, specCount);
   assert.equal(product.io.length, ioCount);
@@ -87,4 +104,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log('Public Pages artifact: 27 equipment items, 5 public-safe details, fixed snapshots, no image/PDF binaries.');
+console.log('Public Pages artifact: 27 equipment items, 5 details, 13 reviewed official WebP images, no PDF binaries.');

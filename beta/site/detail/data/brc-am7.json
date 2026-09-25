@@ -15,27 +15,84 @@
   "verificationSummary": "한국 공식 제품 페이지와 사용 안내·사양을 확인했습니다. 줌 용어, 일부 기능 조건과 자료 게시 권한은 검토 중입니다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "BRC-AM7은 스튜디오, 공연장, 강의·기업 공간에서 원격 촬영을 수행하는 4K PTZ 카메라다. 1.0형 Exmor RS CMOS 센서와 광학 20배 줌을 사용하며 최대 4K 59.94/50p 출력을 지원한다.\n\nSDI·HDMI 영상 출력, 유선 IP 제어, 네트워크 스트리밍, RS-422 VISCA 제어를 한 본체에 제공한다. 12V DC와 PoE++ 전원을 지원하므로 고정 설치 환경에서 전원·제어·영상 경로를 함께 설계할 수 있다.\n\n자동 프레이밍과 일부 스트리밍 기능은 설정 또는 펌웨어 조건을 확인해야 한다. 확장 줌은 Sony 공식 자료 사이 용어가 충돌하므로 광학 20배만 확정 표시한다.",
-  "images": [],
-  "imageStatuses": [
+  "images": [
     {
       "role": "Main",
-      "status": "FOUND",
-      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+      "file": "brc-am7-main.webp",
+      "alt": "Sony BRC-AM7 검정색 본체 메인 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "BRC-AM7",
+      "sourceUrl": "https://www.sony.com/image/826ea30c6742e760e0c500edc5787dff?fmt=jpeg&wid=1200&hei=720",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×720",
+      "resolution": "1200×720",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     },
     {
       "role": "Front",
-      "status": "FOUND",
-      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+      "file": "brc-am7-front.webp",
+      "alt": "Sony BRC-AM7 검정색 본체 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "BRC-AM7",
+      "sourceUrl": "https://www.sony.com/image/90470eb5cd45473e16b04e7ff772fb9b?fmt=jpeg&wid=1200&hei=720",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×720",
+      "resolution": "1200×720",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     },
     {
       "role": "Rear",
-      "status": "FOUND",
-      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+      "file": "brc-am7-rear.webp",
+      "alt": "Sony BRC-AM7 검정색 본체 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "BRC-AM7",
+      "sourceUrl": "https://www.sony.com/image/ff7d8e54abe4d0be10dbd75baceaff7d?fmt=jpeg&wid=1200&hei=720",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×720",
+      "resolution": "1200×720",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     },
     {
       "role": "Perspective",
-      "status": "FOUND",
-      "sourceUrl": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7"
+      "file": "brc-am7-perspective.webp",
+      "alt": "Sony BRC-AM7 검정색 본체 원근 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "BRC-AM7",
+      "sourceUrl": "https://www.sony.com/image/e7123a37278e1e6838d2a9d17326cbfc?fmt=jpeg&wid=1200&hei=720",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×720",
+      "resolution": "1200×720",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/826ea30c6742e760e0c500edc5787dff?fmt=jpeg&wid=1200&hei=720"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/90470eb5cd45473e16b04e7ff772fb9b?fmt=jpeg&wid=1200&hei=720"
+    },
+    {
+      "role": "Rear",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/ff7d8e54abe4d0be10dbd75baceaff7d?fmt=jpeg&wid=1200&hei=720"
+    },
+    {
+      "role": "Perspective",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/e7123a37278e1e6838d2a9d17326cbfc?fmt=jpeg&wid=1200&hei=720"
     },
     {
       "role": "Other",
@@ -621,11 +678,13 @@
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "이미지 권한 검토 중",
-    "galleryRights": "이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.",
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
     "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
-    "footerNote": "SONY BRC-AM7 · 공식 출처 기반"
+    "footerNote": "SONY BRC-AM7 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
   }
 }

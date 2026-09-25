@@ -25,7 +25,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - run: node beta/system-version.mjs
+      - run: node beta/build-readable-catalog.mjs
       - run: node beta/verify-pages.mjs
+      - run: npm test
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

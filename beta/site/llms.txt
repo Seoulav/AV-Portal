@@ -1,0 +1,152 @@
+# AV Portal
+
+AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으로 탐색하는 공개 베타 사이트입니다.
+
+- 홈: https://seoulav.github.io/AV-Portal/
+- 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
+- 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
+- 공개 장비: 27개
+- Product Detail: 5개
+- 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
+- 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
+
+## Public products
+
+- 제품: BSS Audio EC-4BV
+  분류: 오디오 | Control | Control Interface
+  종류: 장비
+  공식 링크: https://bssaudio.com/en-US/products/EC-4BV
+
+- 제품: Audinate AVIO USB C
+  분류: 오디오 | Audio | Audio Interface
+  종류: 장비
+  공식 링크: https://www.getdante.com/platform/avio-usb-c/
+
+- 제품: Shure MXCW640
+  분류: 오디오 | Conferencing | Conferencing Endpoint
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640
+
+- 제품: Yamaha DM7
+  분류: 오디오 | Audio | Mixer
+  종류: 장비
+  공식 링크: https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dm7
+
+- 제품: Crown CDI 2/300BL
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html
+
+- 제품: Powersoft Mezzo 322 AD
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-322-ad
+
+- 제품: Powersoft Quattrocanali 2404 DSP+D
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd
+
+- 제품: Powersoft Quattrocanali 4804 DSP+D
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd
+
+- 제품: Powersoft Duecanali 1604 DSP
+  분류: 오디오 | Audio | Amplifier
+  종류: 장비
+  공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp
+
+- 제품: Shure ULXD4Q
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q
+
+- 제품: Shure QLXD4
+  분류: 오디오 | Audio | Wireless Microphone System
+  종류: 장비
+  공식 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4
+
+- 제품: Shure UA874XA
+  분류: 오디오 | Audio | Antenna
+  종류: 장비
+  공식 링크: https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA
+
+- 제품: Sony BRC-AM7
+  분류: 영상 | Video | Camera
+  종류: 장비
+  공식 링크: https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=brc-am7
+
+- 제품: Roland V-02HD MK II
+  분류: 영상 | Video | Signal Switcher
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/v-02hd_mk_ii/
+
+- 제품: Analog Way Aquilon RS1
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-rs1
+
+- 제품: Roland UVC-01
+  분류: 영상 | Video | Video Capture
+  종류: 장비
+  공식 링크: https://proav.roland.com/global/products/uvc-01/
+
+- 제품: Ross Video ULTRISCAPE
+  분류: 영상 | Video | License
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/signal-processing/ultriscape/
+
+- 제품: NETGEAR GSM4248PX
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/
+
+- 제품: NETGEAR XSM4216F
+  분류: 제어 | Network | Network Switch
+  종류: 장비
+  공식 링크: https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/
+
+- 제품: Logitech Rally Bar
+  분류: 화상회의 | Conferencing | Video Bar
+  종류: 장비
+  공식 링크: https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-bar
+
+- 제품: Epson EB-PQ2220B
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851
+
+- 제품: Epson EB-L790SU
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051
+
+- 제품: Epson EB-L690U
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051
+
+- 제품: Epson EB-L530U
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040
+
+- 제품: Panasonic PT-VMZ71
+  분류: 프로젝터 | Display | Projector
+  종류: 장비
+  공식 링크: https://docs.connect.panasonic.com/projector/products/vmz71/
+
+- 제품: AJA Ki Pro GO2
+  분류: 영상 | 멀티채널 레코더/플레이어
+  종류: 장비
+  공식 링크: https://www.aja.com/products/ki-pro-go2
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ki-pro-go2
+
+- 제품: Panasonic PT-MZ17K
+  분류: 프로젝터 | 대형 공간용 레이저 프로젝터
+  종류: 장비
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=pt-mz17k

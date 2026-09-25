@@ -8,6 +8,8 @@ const routes = new Map([
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
+  ['/catalog.html', ['catalog.html', 'text/html; charset=utf-8']],
+  ['/llms.txt', ['llms.txt', 'text/plain; charset=utf-8']],
   ['/catalog.json', ['catalog.json', 'application/json; charset=utf-8']]
 ]);
 const headers = {
