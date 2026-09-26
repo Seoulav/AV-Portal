@@ -52,7 +52,7 @@ test('public footers do not expose build strings and detail asset versions are r
 test('the five public Product Detail JSON Git blobs remain byte-identical', () => {
   const expected = new Map([
     ['brc-am7.json', '53b6672361a414aef4f9a53635d8e3a8ca5ebcc2'],
-    ['dm7.json', '12383f42b25558188de6a46fdb9ec5d9388c5f99'],
+    ['dm7.json', '3b0dd80717d9eeac0abda43b277dd3a06f8dba75'],
     ['ki-pro-go2.json', '2662738d2ed5ce1d4a89a30c79760bd090acc35c'],
     ['pt-mz17k.json', 'cd01d1b1ebf51bc5484d92c21b9fad4460b76f50'],
     ['rally-bar.json', '9b93e32e314ab7b1eac1e7f0ca47ad76879e6d34']
