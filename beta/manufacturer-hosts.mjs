@@ -3,11 +3,15 @@
 // 새 제조사를 추가할 때만 여기에 한 줄을 더한다. 확인한 호스트만 적는다.
 export const manufacturerHosts = {
   AJA: ['aja.com', 'd26ddnfpy9hzf8.cloudfront.net'],
+  AMX: ['techdata-ps.com'],
   'Analog Way': ['analogway.com'],
   Audinate: ['getdante.com'],
   AVer: ['aver.com', 'averusa.com'],
   'Blackmagic Design': ['blackmagicdesign.com'],
+  'BSS Audio': ['techdata-ps.com'],
+  Crown: ['techdata-ps.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
+  JBL: ['techdata-ps.com'],
   Lightware: ['lightware.com'],
   Logitech: ['logitech.com'],
   Lumantek: ['lumantek.com'],
