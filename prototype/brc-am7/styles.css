@@ -1024,6 +1024,7 @@ body.summary-detail .image-status-details summary,body.summary-detail .image-sta
 body.summary-detail .image-status-card small{font-size:11px;color:#526b86}
 body.summary-detail{color:#1f3857}
 body.summary-detail main :where(p,span,strong,small,summary,label){color:#294867}
+body.summary-detail .image-role,body.summary-detail .zoom-button span{color:#eee}
 body.summary-detail main a{color:#1559a8}
 body.summary-detail .breadcrumbs,body.summary-detail .breadcrumbs :where(a,span){color:#4f647b}
 body.summary-detail .field-label,body.summary-detail .tiny-label,body.summary-detail .series-note{color:#52677e}
