@@ -1,0 +1,307 @@
+{
+  "manufacturer": "Crown",
+  "productName": "Crown CTD-8125",
+  "model": "Crown CTD-8125",
+  "series": "ComTech D Series",
+  "seriesNote": "ComTech D 계열 공용 사용설명서·데이터시트 기준(모델별 표는 페이지에서 개별 확인).",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Amplifier"
+  ],
+  "english": "8-channel installation amplifier with onboard DriveCore DSP and Dante/AES67 networking.",
+  "korean": "CTD-8125는 8채널 125W(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다.",
+  "verificationSummary": "techdata-ps.com(하만 계열 국내 1순위 출처)은 제품 상세 페이지가 자바스크립트 렌더링 방식이라 사양·이미지를 추출할 수 없어, Crown Audio 공식 사이트(crownaudio.com)를 실제 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "CTD-8125는 8채널 125W(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다. Dante 네트워크 오디오와 내장 DSP, 팩토리 JBL 스피커 튜닝, 웹 UI 설정, GPIO, HControl 프로토콜을 지원하며 1U 컴팩트 폼팩터에 다채널을 집약한 것이 특징이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ctd-8125-front.webp",
+      "alt": "Crown ComTech CTD-8125 전면",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "HARMAN",
+      "model": "Crown CTD-8125",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/13172_1748629462/Crown_ComTech_CTD-8125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x533",
+      "resolution": "2000x260",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/ctd-8125"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/13172_1748629462/Crown_ComTech_CTD-8125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/ctd-8125"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/ctd-8125"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/ctd-8125"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Crown ComTech D Series Owner's Manual",
+      "language": "en",
+      "note": "ComTech D 시리즈 공용 사용설명서",
+      "url": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Crown ComTech D Series Cutsheet",
+      "language": "en",
+      "note": "ComTech D 시리즈 공용 데이터시트",
+      "url": "https://www.crownaudio.com/en-US/site_elements/data-sheet-comtech-d-series"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.crownaudio.com/en-US/products/ctd-8125"
+    }
+  ],
+  "features": [
+    {
+      "text": "8채널 구성 파워앰프다.",
+      "source": ""
+    },
+    {
+      "text": "온보드 DSP(DriveCore)를 내장해 이퀄라이저·크로스오버·딜레이·리미터 등 신호 처리를 자체적으로 수행한다.",
+      "source": ""
+    },
+    {
+      "text": "Dante/AES67 오디오 네트워크를 지원해 이더넷 기반 오디오 전송과 원격 제어를 함께 처리한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "출력",
+      "name": "전 채널 구동시 채널당 출력(Lo-Z/Hi-Z)",
+      "value": "125",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력",
+      "name": "파워쉐어링(1-4채널 그룹)",
+      "value": "500",
+      "unit": "W",
+      "condition": "그룹 내 비대칭 배분",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력",
+      "name": "파워쉐어링(5-8채널 그룹)",
+      "value": "500",
+      "unit": "W",
+      "condition": "그룹 내 비대칭 배분",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "Dante 입출력",
+      "value": "지원",
+      "unit": "",
+      "condition": "채널수/샘플레이트 상세는 정보 없음",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "HControl 프로토콜",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "설정",
+      "value": "웹 UI",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "GPIO",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP/기능",
+      "name": "DSP",
+      "value": "룸/스피커 튜닝용 내장 DSP",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP/기능",
+      "name": "스피커 튜닝",
+      "value": "팩토리 JBL SpeakerTunings",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP/기능",
+      "name": "Lo-Z/Hi-Z",
+      "value": "채널별 전환 가능",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "채널수",
+      "value": "8",
+      "unit": "채널",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "랙 유닛",
+      "value": "1U",
+      "unit": "",
+      "condition": "정확한 W x D x H(mm), 무게는 정보 없음",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Output",
+      "connector": "출력 단자(제조사 자료에 커넥터 규격 미기재)",
+      "signal": "Speaker output",
+      "direction": "OUT",
+      "quantity": "8채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Audio Network",
+      "connector": "지원",
+      "signal": "Dante/AES67 audio",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "Dante, AES67",
+      "availability": "DA 모델",
+      "condition": "채널수/샘플레이트 상세는 정보 없음",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "GPIO/AUX",
+      "signal": "GPIO 제어 입출력",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.crownaudio.com/en-US/products/ctd-8125",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://www.crownaudio.com/en-US/site_elements/data-sheet-comtech-d-series",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "후면(커넥터) 이미지 미확인(정면 제품컷만 게시됨).",
+      "detail": "후면(커넥터) 이미지 미확인(정면 제품컷만 게시됨)."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "THD/주파수응답/SNR/치수/무게/운영온도/인증 등 다수 항목…",
+      "detail": "THD/주파수응답/SNR/치수/무게/운영온도/인증 등 다수 항목 정보 없음(데이터시트 PDF 직접 열람 필요)."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Crown Crown CTD-8125 · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

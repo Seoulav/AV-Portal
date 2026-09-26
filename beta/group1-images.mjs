@@ -611,6 +611,108 @@ export const group1Images = {
   'quattrocanali-2404-dsp': [
     image('Front', 'quattrocanali-2404-dsp-front.webp', 'Powersoft Quattrocanali 2404 DSP 전면부', 'Powersoft', 'Quattrocanali 2404 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-3.png', '1024x500', '1007x131')
   ]
+,
+  'cdi-2-300bl': [
+    image('Front', 'cdi-2-300bl-front.webp', 'Crown CDi 2|300BL 전면', 'HARMAN', 'Crown CDi 2|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6020_1728939592/Crown_CDi_DriveCore_2300BL_Front_x_large_2x.webp', '4096x1283', '2000x626'),
+    image('Rear', 'cdi-2-300bl-rear.webp', 'Crown CDi 2|300BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6024_1728990132/Crown_CDi_DriveCore_2300BL_Rear_x_large_2x.webp', '4096x1377', '2000x672')
+  ],
+  'dci-2-300': [
+    image('Front', 'dci-2-300-front.webp', 'Crown DCi 2|300 전면', 'HARMAN', 'Crown DCi 2|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/2095_1728943332/DCi_Analog_2-300_front_no_top_shadow_x_large_2x.webp', '4096x988', '2000x482'),
+    image('Rear', 'dci-2-300-rear.webp', 'Crown DCi 2채널 후면 커넥터 패널(공용 이미지)', 'HARMAN', 'Crown DCi 2|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/2195_1729004892/Back_2_Channel_no_top_w_shadow_x_large_2x.webp', '4096x1209', '2000x590')
+  ],
+  'cdi-2-300': [
+    image('Front', 'cdi-2-300-front.webp', 'Crown CDi 2|300 전면', 'HARMAN', 'Crown CDi 2|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/6012_1728939605/Crown_CDi_DriveCore_2300_Front_x_large_2x.webp', '4096x1287', '2000x628'),
+    image('Rear', 'cdi-2-300-rear.webp', 'Crown CDi 2|300 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/6016_1728990219/Crown_CDi_DriveCore_2300_Rear_x_large_2x.webp', '4096x1365', '2000x667')
+  ],
+  'dci-2-300n': [
+    image('Front', 'dci-2-300n-front.webp', 'Crown DCi 2|300N 전면', 'HARMAN', 'Crown DCi 2|300N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2097_1728943320/DCi_2-300N_front_no_top_shadow_x_large_2x.webp', '4096x989', '2000x483'),
+    image('Rear', 'dci-2-300n-rear.webp', 'Crown DCi Network 2채널 후면 커넥터 패널', 'HARMAN', 'Crown DCi 2|300N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2196_1729004820/DCi_Network_2_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1119', '2000x546')
+  ],
+  'i-tech-4x3500hd': [
+    image('Front', 'itech-4x3500hd-front.webp', 'Crown I-Tech 4x3500HD 전면', 'HARMAN', 'Crown I-Tech 4x3500HD', 'https://adn.harmanpro.com/product_attachments/product_attachments/2141_1728943168/ITHD4_3500_front_no_top_shadow_original_x_large_2x.webp', '4096x1023', '2000x500'),
+    image('Rear', 'itech-4x3500hd-rear.webp', 'Crown I-Tech 4x3500HD 후면 Speakon 커넥터 패널', 'HARMAN', 'Crown I-Tech 4x3500HD', 'https://adn.harmanpro.com/product_attachments/product_attachments/2461_1729005023/ITHD4_Backpanel_Speakon_w_Reflection--straight_on_x_large_2x.webp', '4096x2731', '2000x1333')
+  ],
+  'cdi-2-600bl': [
+    image('Front', 'cdi-2-600bl-front.webp', 'Crown CDi 2|600BL 전면', 'HARMAN', 'Crown CDi 2|600BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6036_1728939568/Crown_CDi_DriveCore_2600BL_Front_x_large_2x.webp', '4096x1304', '2000x637'),
+    image('Rear', 'cdi-2-600bl-rear.webp', 'Crown CDi 2|600BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|600BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6040_1728989961/Crown_CDi_DriveCore_2600BL_Rear_x_large_2x.webp', '4096x1436', '2000x701')
+  ],
+  'dci-4-300da': [
+    image('Front', 'dci-4-300da-front.webp', 'Crown DCi 4|300DA 전면', 'HARMAN', 'Crown DCi 4|300DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/6729_1728935052/Crown_DCi_4300_DA_Front_x_large_2x.webp', '4096x892', '2000x436'),
+    image('Rear', 'dci-4-300da-rear.webp', 'Crown DCi 4|300DA 후면 Dante/AES67 포트 패널', 'HARMAN', 'Crown DCi 4|300DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/10508_1728962207/Crown_DCi_4300_DA_Back_x_large_2x.webp', '4096x2731', '2000x1333')
+  ],
+  'comtech-d-4125': [
+    image('Front', 'ctd-4125-front.webp', 'Crown ComTech CTD-4125 전면', 'HARMAN', 'Crown CTD-4125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13174_1748629693/Crown_ComTech_CTD-4125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x789', '2000x385')
+  ],
+  'comtech-d-8125': [
+    image('Front', 'ctd-8125-front.webp', 'Crown ComTech CTD-8125 전면', 'HARMAN', 'Crown CTD-8125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13172_1748629462/Crown_ComTech_CTD-8125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x533', '2000x260')
+  ],
+  'dci-2-600': [
+    image('Front', 'dci-2-600-front.webp', 'Crown DCi 2|600 전면', 'HARMAN', 'Crown DCi 2|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/2105_1728943309/DCi_Analog_2-600_front_no_top_shadow_x_large_2x.webp', '4096x990', '2000x483'),
+    image('Rear', 'dci-2-600-rear.webp', 'Crown DCi 2채널 후면 커넥터 패널(공용 이미지)', 'HARMAN', 'Crown DCi 2|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/2197_1729004904/Back_2_Channel_no_top_w_shadow_x_large_2x.webp', '4096x1209', '2000x590')
+  ],
+  'dci-4-300': [
+    image('Front', 'dci-4-300-front.webp', 'Crown DCi 4|300 전면', 'HARMAN', 'Crown DCi 4|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/2114_1728943267/DCi_Analog_4-300_front_no_top_shadow_x_large_2x.webp', '4096x1019', '2000x498'),
+    image('Rear', 'dci-4-300-rear.webp', 'Crown DCi 4채널 후면 커넥터 패널(공용 이미지)', 'HARMAN', 'Crown DCi 4|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/2199_1729004914/DCi_4_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1262', '2000x616')
+  ],
+  'dci-4-600': [
+    image('Front', 'dci-4-600-front.webp', 'Crown DCi 4|600 전면', 'HARMAN', 'Crown DCi 4|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/2121_1728943254/DCi_Analog_4-600_front_no_top_shadow_x_large_2x.webp', '4096x984', '2000x480'),
+    image('Rear', 'dci-4-600-rear.webp', 'Crown DCi 4채널 후면 커넥터 패널(공용 이미지)', 'HARMAN', 'Crown DCi 4|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/2209_1729004927/DCi_4_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1262', '2000x616')
+  ],
+  'cdi-2-600': [
+    image('Front', 'cdi-2-600-front.webp', 'Crown CDi 2|600 전면', 'HARMAN', 'Crown CDi 2|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/6028_1728939582/Crown_CDi_DriveCore_2600_Front_x_large_2x.webp', '4096x1304', '2000x637'),
+    image('Rear', 'cdi-2-600-rear.webp', 'Crown CDi 2|600 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/6032_1728990047/Crown_CDi_DriveCore_2600_Rear_x_large_2x.webp', '4096x1365', '2000x667')
+  ],
+  'cdi-2-1200': [
+    image('Front', 'cdi-2-1200-front.webp', 'Crown CDi 2|1200 전면', 'HARMAN', 'Crown CDi 2|1200', 'https://adn.harmanpro.com/product_attachments/product_attachments/6076_1728939508/Crown_CDi_DriveCore_21200_Front_x_large_2x.webp', '4096x1318', '2000x644'),
+    image('Rear', 'cdi-2-1200-rear.webp', 'Crown CDi 2|1200 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|1200', 'https://adn.harmanpro.com/product_attachments/product_attachments/6080_1728989527/Crown_CDi_DriveCore_21200_Rear_x_large_2x.webp', '4096x1415', '2000x691')
+  ],
+  'cdi-4-300': [
+    image('Front', 'cdi-4-300-front.webp', 'Crown CDi 4|300 전면', 'HARMAN', 'Crown CDi 4|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/6044_1728939556/Crown_CDi_DriveCore_4300_Front_x_large_2x.webp', '4096x1312', '2000x641'),
+    image('Rear', 'cdi-4-300-rear.webp', 'Crown CDi 4|300 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|300', 'https://adn.harmanpro.com/product_attachments/product_attachments/6048_1728989873/Crown_CDi_DriveCore_4300_Rear_x_large_2x.webp', '4096x1397', '2000x682')
+  ],
+  'cdi-4-600': [
+    image('Front', 'cdi-4-600-front.webp', 'Crown CDi 4|600 전면', 'HARMAN', 'Crown CDi 4|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/6060_1728939532/Crown_CDi_DriveCore_4600_Front_x_large_2x.webp', '4096x1343', '2000x656'),
+    image('Rear', 'cdi-4-600-rear.webp', 'Crown CDi 4|600 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/6064_1728989700/Crown_CDi_DriveCore_4600_Rear_x_large_2x.webp', '4096x1420', '2000x693')
+  ],
+  'cdi-4-1200': [
+    image('Front', 'cdi-4-1200-front.webp', 'Crown CDi 4|1200 전면', 'HARMAN', 'Crown CDi 4|1200', 'https://adn.harmanpro.com/product_attachments/product_attachments/6092_1728939484/Crown_CDi_DriveCore_41200_Front_x_large_2x.webp', '4096x1292', '2000x631'),
+    image('Rear', 'cdi-4-1200-rear.webp', 'Crown CDi 4|1200 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|1200', 'https://adn.harmanpro.com/product_attachments/product_attachments/6096_1728989354/Crown_CDi_DriveCore_41200_Rear_x_large_2x.webp', '4096x1436', '2000x701')
+  ],
+  'dci-2-600n': [
+    image('Front', 'dci-2-600n-front.webp', 'Crown DCi 2|600N 전면', 'HARMAN', 'Crown DCi 2|600N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2106_1728943297/DCi_2-600N_front_no_top_shadow_x_large_2x.webp', '4096x964', '2000x471'),
+    image('Rear', 'dci-2-600n-rear.webp', 'Crown DCi Network 2채널 후면 커넥터 패널', 'HARMAN', 'Crown DCi 2|600N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2205_1729004830/DCi_Network_2_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1119', '2000x546')
+  ],
+  'dci-4-300n': [
+    image('Front', 'dci-4-300n-front.webp', 'Crown DCi 4|300N 전면', 'HARMAN', 'Crown DCi 4|300N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2129_1728943216/DCi_4-300N_front_no_top_shadow_x_large_2x.webp', '4096x985', '2000x481'),
+    image('Rear', 'dci-4-300n-rear.webp', 'Crown DCi Network 4채널 후면 커넥터 패널', 'HARMAN', 'Crown DCi 4|300N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2202_1729004843/DCi_Network_4_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1114', '2000x544')
+  ],
+  'dci-4-600n': [
+    image('Front', 'dci-4-600n-front.webp', 'Crown DCi 4|600N 전면', 'HARMAN', 'Crown DCi 4|600N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2123_1728943243/DCi_4-600N_front_no_top_shadow_x_large_2x.webp', '4096x990', '2000x483'),
+    image('Rear', 'dci-4-600n-rear.webp', 'Crown DCi Network 4채널 후면 커넥터 패널', 'HARMAN', 'Crown DCi 4|600N', 'https://adn.harmanpro.com/product_attachments/product_attachments/2210_1729004854/DCi_Network_4_CH_Backpanel_no_top_w_shadow_x_large_2x.webp', '4096x1114', '2000x544')
+  ],
+  'cdi-2-1200bl': [
+    image('Front', 'cdi-2-1200bl-front.webp', 'Crown CDi 2|1200BL 전면', 'HARMAN', 'Crown CDi 2|1200BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6084_1728939495/Crown_CDi_DriveCore_21200BL_Front_x_large_2x.webp', '4096x1274', '2000x622'),
+    image('Rear', 'cdi-2-1200bl-rear.webp', 'Crown CDi 2|1200BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|1200BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6088_1728989443/Crown_CDi_DriveCore_21200BL_Rear_x_large_2x.webp', '4096x1386', '2000x677')
+  ],
+  'cdi-4-300bl': [
+    image('Front', 'cdi-4-300bl-front.webp', 'Crown CDi 4|300BL 전면', 'HARMAN', 'Crown CDi 4|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6052_1728939545/Crown_CDi_DriveCore_4300BL_Front_x_large_2x.webp', '4096x1231', '2000x601'),
+    image('Rear', 'cdi-4-300bl-rear.webp', 'Crown CDi 4|300BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6056_1728989787/Crown_CDi_DriveCore_4300BL_Rear_x_large_2x.webp', '4096x1394', '2000x681')
+  ],
+  'cdi-4-600bl': [
+    image('Front', 'cdi-4-600bl-front.webp', 'Crown CDi 4|600BL 전면', 'HARMAN', 'Crown CDi 4|600BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6068_1728939519/Crown_CDi_DriveCore_4600BL_Front_x_large_2x.webp', '4096x1332', '2000x650'),
+    image('Rear', 'cdi-4-600bl-rear.webp', 'Crown CDi 4|600BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|600BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6072_1728989614/Crown_CDi_DriveCore_4600BL_Rear_x_large_2x.webp', '4096x1398', '2000x683')
+  ],
+  'cdi-4-1200bl': [
+    image('Front', 'cdi-4-1200bl-front.webp', 'Crown CDi 4|1200BL 전면', 'HARMAN', 'Crown CDi 4|1200BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6100_1728939470/Crown_CDi_DriveCore_41200BL_Front_x_large_2x.webp', '4096x1319', '2000x644'),
+    image('Rear', 'cdi-4-1200bl-rear.webp', 'Crown CDi 4|1200BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 4|1200BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6104_1728989269/Crown_CDi_DriveCore_41200BL_Rear_x_large_2x.webp', '4096x1418', '2000x692')
+  ],
+  'dci-4-600da': [
+    image('Front', 'dci-4-600da-front.webp', 'Crown DCi 4|600DA 전면', 'HARMAN', 'Crown DCi 4|600DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/6730_1728935045/Crown_DCi_4600_DA_Front_x_large_2x.webp', '4096x892', '2000x436'),
+    image('Rear', 'dci-4-600da-rear.webp', 'Crown DCi 4|600DA 후면 Dante/AES67 포트 패널', 'HARMAN', 'Crown DCi 4|600DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/10509_1728962194/Crown_DCi_4600_DA_Back_x_large_2x.webp', '4096x2731', '2000x1333')
+  ],
+  'comtech-d-2125': [
+    image('Front', 'ctd-2125-front.webp', 'Crown ComTech CTD-2125 전면', 'HARMAN', 'Crown CTD-2125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13173_1748629581/Crown_ComTech_CTD-2125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x832', '2000x406')
+  ]
 };
 
 export function applyPublishedImages(product, slug) {
@@ -819,4 +921,31 @@ export const cardImages = {
   'mezzo-604-a': 'mezzo-604-a-front.webp',
   'duecanali-804-dspd': 'duecanali-804-dspd-front.webp',
   'quattrocanali-2404-dsp': 'quattrocanali-2404-dsp-front.webp'
+,
+  'cdi-2-300bl': 'cdi-2-300bl-front.webp',
+  'dci-2-300': 'dci-2-300-front.webp',
+  'cdi-2-300': 'cdi-2-300-front.webp',
+  'dci-2-300n': 'dci-2-300n-front.webp',
+  'i-tech-4x3500hd': 'itech-4x3500hd-front.webp',
+  'cdi-2-600bl': 'cdi-2-600bl-front.webp',
+  'dci-4-300da': 'dci-4-300da-front.webp',
+  'comtech-d-4125': 'ctd-4125-front.webp',
+  'comtech-d-8125': 'ctd-8125-front.webp',
+  'dci-2-600': 'dci-2-600-front.webp',
+  'dci-4-300': 'dci-4-300-front.webp',
+  'dci-4-600': 'dci-4-600-front.webp',
+  'cdi-2-600': 'cdi-2-600-front.webp',
+  'cdi-2-1200': 'cdi-2-1200-front.webp',
+  'cdi-4-300': 'cdi-4-300-front.webp',
+  'cdi-4-600': 'cdi-4-600-front.webp',
+  'cdi-4-1200': 'cdi-4-1200-front.webp',
+  'dci-2-600n': 'dci-2-600n-front.webp',
+  'dci-4-300n': 'dci-4-300n-front.webp',
+  'dci-4-600n': 'dci-4-600n-front.webp',
+  'cdi-2-1200bl': 'cdi-2-1200bl-front.webp',
+  'cdi-4-300bl': 'cdi-4-300bl-front.webp',
+  'cdi-4-600bl': 'cdi-4-600bl-front.webp',
+  'cdi-4-1200bl': 'cdi-4-1200bl-front.webp',
+  'dci-4-600da': 'dci-4-600da-front.webp',
+  'comtech-d-2125': 'ctd-2125-front.webp'
 };

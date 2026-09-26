@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 187개
+- Product Detail: 213개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -45,6 +45,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762892auukm8e4t4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-300bl
 
 - 제품: Powersoft Mezzo 322 AD
   분류: 오디오 | Audio | Amplifier
@@ -644,48 +645,56 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761888fzzsbzteoz.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-300
 
 - 제품: Crown CDI 2/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/CDi-2-300
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762827nmoims0at3.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-300
 
 - 제품: Crown DCI 2/300N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300n.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763954d5bkckkyeq.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-300n
 
 - 제품: Crown I-TECH 4X3500HD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/i-tech-4x3500hd
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605765434a2ngresszr.pdf&o_file_name=crown+i-tech+4x3500+hd+%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=i-tech-4x3500hd
 
 - 제품: Crown CDI 2/600BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/cdi-2-600bl
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763015ow3gweitfl.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-600bl
 
 - 제품: Crown DCI 4/300DA
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en/products/dci-4-300da
   매뉴얼: ./manuals/crown-dci-install-da-series-manual.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300da
 
 - 제품: Crown ComTech D 4125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/ctd-4125
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788184832oije7xqbsg.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-4125
 
 - 제품: Crown ComTech D 8125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/ctd-8125
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1787821350tikkz3quya.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-8125
 
 - 제품: Powersoft Mezzo 602 AD
   분류: 오디오 | Audio | Amplifier
@@ -1418,102 +1427,119 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761971s4gdgy7izt.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-600
 
 - 제품: Crown DCI 4/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057621340oy9dhzwum.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300
 
 - 제품: Crown DCI 4/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057622030qrbfvpjkg.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600
 
 - 제품: Crown CDI 2/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762955gde1sr7o8x.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-600
 
 - 제품: Crown CDI 2/1200
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987728x5rl649ihn.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-1200
 
 - 제품: Crown CDI 4/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763409ao6h09cvuq.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-300
 
 - 제품: Crown CDI 4/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_160498811380y1239y95.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-600
 
 - 제품: Crown CDI 4/1200
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049878640zsz4tlbyz.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-1200
 
 - 제품: Crown DCI 2/600N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764047lp6k9gucvl.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-600n
 
 - 제품: Crown DCI 4/300N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764597xhkacai6zx.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300n
 
 - 제품: Crown DCI 4/600N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764672nupmdpxixt.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600n
 
 - 제품: Crown CDI 2/1200BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987999i44fv0ugee.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-1200bl
 
 - 제품: Crown CDI 4/300BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057634633isrk0v367.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-300bl
 
 - 제품: Crown CDI 4/600BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987936vunfkk3ev4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-600bl
 
 - 제품: Crown CDI 4/1200BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987793jgwsejke1b.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-1200bl
 
 - 제품: Crown DCI 4/600DA
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series
   매뉴얼: ./manuals/crown-dci-install-da-series-manual.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600da
 
 - 제품: Crown ComTech D 2125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/comtech-d-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788185624fwhgji4oak.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-2125
 
 - 제품: Powersoft Mezzo 324 AD
   분류: 오디오 | Audio | Amplifier

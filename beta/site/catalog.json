@@ -74,7 +74,9 @@
     "official_links": [
       "https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762892auukm8e4t4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762892auukm8e4t4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-300bl",
+    "card_image": "cdi-2-300bl-front.webp"
   },
   {
     "brand": "Powersoft",
@@ -1484,7 +1486,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/dci-2-300"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761888fzzsbzteoz.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761888fzzsbzteoz.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-2-300",
+    "card_image": "dci-2-300-front.webp"
   },
   {
     "brand": "Crown",
@@ -1498,7 +1502,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/CDi-2-300"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762827nmoims0at3.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762827nmoims0at3.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-300",
+    "card_image": "cdi-2-300-front.webp"
   },
   {
     "brand": "Crown",
@@ -1512,7 +1518,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/dci-2-300n.html"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763954d5bkckkyeq.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763954d5bkckkyeq.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-2-300n",
+    "card_image": "dci-2-300n-front.webp"
   },
   {
     "brand": "Crown",
@@ -1526,7 +1534,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/i-tech-4x3500hd"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605765434a2ngresszr.pdf&o_file_name=crown+i-tech+4x3500+hd+%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605765434a2ngresszr.pdf&o_file_name=crown+i-tech+4x3500+hd+%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "slug": "i-tech-4x3500hd",
+    "card_image": "itech-4x3500hd-front.webp"
   },
   {
     "brand": "Crown",
@@ -1540,7 +1550,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/cdi-2-600bl"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763015ow3gweitfl.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763015ow3gweitfl.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-600bl",
+    "card_image": "cdi-2-600bl-front.webp"
   },
   {
     "brand": "Crown",
@@ -1554,7 +1566,9 @@
     "official_links": [
       "https://www.crownaudio.com/en/products/dci-4-300da"
     ],
-    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf",
+    "slug": "dci-4-300da",
+    "card_image": "dci-4-300da-front.webp"
   },
   {
     "brand": "Crown",
@@ -1568,7 +1582,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/ctd-4125"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788184832oije7xqbsg.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788184832oije7xqbsg.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf",
+    "slug": "comtech-d-4125",
+    "card_image": "ctd-4125-front.webp"
   },
   {
     "brand": "Crown",
@@ -1582,7 +1598,9 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/products/ctd-8125"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1787821350tikkz3quya.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1787821350tikkz3quya.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf",
+    "slug": "comtech-d-8125",
+    "card_image": "ctd-8125-front.webp"
   },
   {
     "brand": "Powersoft",
@@ -3319,7 +3337,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761971s4gdgy7izt.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761971s4gdgy7izt.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-2-600",
+    "card_image": "dci-2-600-front.webp"
   },
   {
     "brand": "Crown",
@@ -3334,7 +3354,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057621340oy9dhzwum.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057621340oy9dhzwum.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-4-300",
+    "card_image": "dci-4-300-front.webp"
   },
   {
     "brand": "Crown",
@@ -3349,7 +3371,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057622030qrbfvpjkg.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057622030qrbfvpjkg.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-4-600",
+    "card_image": "dci-4-600-front.webp"
   },
   {
     "brand": "Crown",
@@ -3364,7 +3388,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762955gde1sr7o8x.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762955gde1sr7o8x.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-600",
+    "card_image": "cdi-2-600-front.webp"
   },
   {
     "brand": "Crown",
@@ -3379,7 +3405,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987728x5rl649ihn.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987728x5rl649ihn.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-1200",
+    "card_image": "cdi-2-1200-front.webp"
   },
   {
     "brand": "Crown",
@@ -3394,7 +3422,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763409ao6h09cvuq.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763409ao6h09cvuq.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-300",
+    "card_image": "cdi-4-300-front.webp"
   },
   {
     "brand": "Crown",
@@ -3409,7 +3439,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_160498811380y1239y95.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_160498811380y1239y95.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-600",
+    "card_image": "cdi-4-600-front.webp"
   },
   {
     "brand": "Crown",
@@ -3424,7 +3456,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049878640zsz4tlbyz.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049878640zsz4tlbyz.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-1200",
+    "card_image": "cdi-4-1200-front.webp"
   },
   {
     "brand": "Crown",
@@ -3439,7 +3473,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764047lp6k9gucvl.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764047lp6k9gucvl.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-2-600n",
+    "card_image": "dci-2-600n-front.webp"
   },
   {
     "brand": "Crown",
@@ -3454,7 +3490,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764597xhkacai6zx.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764597xhkacai6zx.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-4-300n",
+    "card_image": "dci-4-300n-front.webp"
   },
   {
     "brand": "Crown",
@@ -3469,7 +3507,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764672nupmdpxixt.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764672nupmdpxixt.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf",
+    "slug": "dci-4-600n",
+    "card_image": "dci-4-600n-front.webp"
   },
   {
     "brand": "Crown",
@@ -3484,7 +3524,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987999i44fv0ugee.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987999i44fv0ugee.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-2-1200bl",
+    "card_image": "cdi-2-1200bl-front.webp"
   },
   {
     "brand": "Crown",
@@ -3499,7 +3541,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057634633isrk0v367.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057634633isrk0v367.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-300bl",
+    "card_image": "cdi-4-300bl-front.webp"
   },
   {
     "brand": "Crown",
@@ -3514,7 +3558,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987936vunfkk3ev4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987936vunfkk3ev4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-600bl",
+    "card_image": "cdi-4-600bl-front.webp"
   },
   {
     "brand": "Crown",
@@ -3529,7 +3575,9 @@
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987793jgwsejke1b.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987793jgwsejke1b.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf",
+    "slug": "cdi-4-1200bl",
+    "card_image": "cdi-4-1200bl-front.webp"
   },
   {
     "brand": "Crown",
@@ -3544,7 +3592,9 @@
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series"
     ],
     "link_scope": "series",
-    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf",
+    "slug": "dci-4-600da",
+    "card_image": "dci-4-600da-front.webp"
   },
   {
     "brand": "Crown",
@@ -3559,7 +3609,9 @@
       "https://www.crownaudio.com/en-US/product_families/comtech-d-series"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788185624fwhgji4oak.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788185624fwhgji4oak.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf",
+    "slug": "comtech-d-2125",
+    "card_image": "ctd-2125-front.webp"
   },
   {
     "brand": "Powersoft",

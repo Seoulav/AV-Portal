@@ -10,7 +10,7 @@ export const manufacturerHosts = {
   'Blackmagic Design': ['blackmagicdesign.com'],
   'BSS Audio': ['techdata-ps.com', 'bssaudio.com', 'harmanpro.com'],
   Colorlight: ['colorlightinside.com'],
-  Crown: ['techdata-ps.com'],
+  Crown: ['techdata-ps.com', 'crownaudio.com', 'harmanpro.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
   JBL: ['techdata-ps.com', 'jblpro.com', 'harmanpro.com'],
   Lightware: ['lightware.com'],
