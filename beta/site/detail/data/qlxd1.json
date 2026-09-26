@@ -103,6 +103,10 @@
       "source": ""
     },
     {
+      "text": "AES-256 암호화를 지원한다.",
+      "source": ""
+    },
+    {
       "text": "배터리 사양: Shure SB900C 충전식 리튬이온 또는 AA(1.5V) 알칼라인 · 런타임 >11 시간 (470–865 MHz, SB900C)",
       "source": ""
     }
@@ -276,6 +280,15 @@
       "value": "Cast aluminum",
       "unit": "",
       "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "보안",
+      "name": "암호화",
+      "value": "AES-256",
+      "unit": "",
+      "condition": "표준 탑재, 설정으로 활성화(QLX-D 사용자 가이드)",
       "source": "P",
       "verification": "VERIFIED"
     }

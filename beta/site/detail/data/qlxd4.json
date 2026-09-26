@@ -105,6 +105,10 @@
     {
       "text": "RF 반송 주파수 범위는 470–937.5MHz이다(지역에 따라 다름).",
       "source": ""
+    },
+    {
+      "text": "AES-256 암호화를 지원한다.",
+      "source": ""
     }
   ],
   "specifications": [
@@ -359,6 +363,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "보안",
+      "name": "암호화",
+      "value": "AES-256",
+      "unit": "",
+      "condition": "표준 탑재, 설정으로 활성화(QLX-D 사용자 가이드)",
+      "source": "P",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -428,12 +441,6 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
-      "title": "QLX-D는 ULX-D와 달리 always-on AES-256…",
-      "detail": "QLX-D는 ULX-D와 달리 always-on AES-256 암호화가 표준 사양으로 명시되어 있지 않다(공식 매뉴얼에 QLX-D 암호화 관련 언급이 ULX-D만큼 명확히 확인되지 않음). 확정적 문구를 확인하지 못해 이 항목은 스펙 표에서 제외했다(임의 추정 금지 원칙에 따름)."
-    },
-    {
-      "code": "R2",
       "status": "REVIEW REQUIRED",
       "title": "Shure 공식 콘텐츠…",
       "detail": "Shure 공식 콘텐츠 CDN(content-files.shure.com/publications/specSheet/en/)에 QLX-D 전용 spec-sheet PDF가 게시되어 있지 않아(Access Denied) datasheet_pdf_url을 None으로 표기했다. 3rd-party 미러(markertek.com, springtree.net) PDF는 확인했으나 공식 shure.com/공식 CDN 출처가 아니므로 datasheet 링크로 채택하지 않았다."

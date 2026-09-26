@@ -890,9 +890,9 @@
       "io": 2
     },
     "mx418d-c": {
-      "sha256": "2A90EDF0321E0A6102A962D2AE94AF1AE4F22466CECC7D9D00BF60E9570B17C2",
+      "sha256": "53892D97996EA92A512E93DE9DD02E3FA300565FBF585F324B7C99D9B113B20A",
       "features": 3,
-      "specifications": 24,
+      "specifications": 25,
       "io": 2
     },
     "mxa925w-r": {
@@ -1016,27 +1016,27 @@
       "io": 10
     },
     "qlxd1": {
-      "sha256": "BFB45C596FDDE0977E6DF3F3F1E9F7F753B671BDE7999389F10145B29247D431",
-      "features": 2,
-      "specifications": 19,
+      "sha256": "93EE79D51875D74B15C3582B5A6E04332D8C03AF43B23064723767CEFDC14139",
+      "features": 3,
+      "specifications": 20,
       "io": 2
     },
     "qlxd2-beta58": {
-      "sha256": "339BAA794EA516C4EDD23419ED5F35E6C48A3FF01E844AAF7ED4A9AC8A4E6E1E",
-      "features": 3,
-      "specifications": 15,
-      "io": 0
-    },
-    "qlxd2-beta87a": {
-      "sha256": "C51E5D56BDB87D2BFF98DD020647429E85998AC5430A8BCADB6844897B984C43",
-      "features": 3,
+      "sha256": "CBBF1BFEEE169E9E8E05BE30780BDAB3550F0D22A0E1F14B125CCF6D1852D7E0",
+      "features": 4,
       "specifications": 16,
       "io": 0
     },
+    "qlxd2-beta87a": {
+      "sha256": "B8943D59636668BB0E44F7544F553E39E1FBEB45BF58F0E4F5BAA5CAF103FF18",
+      "features": 4,
+      "specifications": 17,
+      "io": 0
+    },
     "qlxd4": {
-      "sha256": "E3FC21493A113D72CF8B93B0229E71B12265282258E5FE137743DCEC708B4414",
-      "features": 2,
-      "specifications": 28,
+      "sha256": "0263DB5CB3982CBF762880ACD84530ABB8965A368631B5A6204D1C84AE103B92",
+      "features": 3,
+      "specifications": 29,
       "io": 4
     },
     "quattrocanali-1204-dsp": {
@@ -1262,13 +1262,13 @@
       "io": 5
     },
     "ulxd4q": {
-      "sha256": "CDF4242723D20C6E24E396AC6F0660F78DC1E559B42E2736D5DA6DFF5CB56BC7",
+      "sha256": "DCEE3FC466BBECEEE6D4BE1261FAA7F32ED4F556D30DA7A7F1BFC8111A13BDBF",
       "features": 4,
       "specifications": 33,
       "io": 5
     },
     "ulxd8": {
-      "sha256": "BB16981BA8FE5E43029F0D23EE5EC6BD0BE924E9CE92DF8BE9921B890CFE992C",
+      "sha256": "F87A5213857031A2338002FA1D4A1CE1E59A90577028C06EBA2AC71908E1121A",
       "features": 2,
       "specifications": 9,
       "io": 0
