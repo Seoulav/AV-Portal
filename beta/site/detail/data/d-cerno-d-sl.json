@@ -1,0 +1,355 @@
+{
+  "manufacturer": "Televic",
+  "productName": "D-Cerno D SL",
+  "model": "D-Cerno D SL",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conference System"
+  ],
+  "english": "D-Cerno D SL is a delegate discussion unit with a removable screw-lock microphone connector, digital signal processing, a shielded mobile-phone-interference-immune microphone, and loop-through daisy-chain cabling; part of the legacy/discontinued D-Cerno SL range.",
+  "korean": "D-Cerno D SL은 스크류락(screw-lock) 방식의 탈착식 마이크 커넥터를 갖춘 델리게이트 디스커션 유닛으로, 디지털 신호처리와 휴대폰 전파 간섭에 강한 실드 마이크, 루프스루 데이지체인 배선을 지원하는 단종된(legacy) D-Cerno SL 제품군의 일부이다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, 단종 제품 D-Cerno 페이지)와 71.98.0306 데이터시트(PDF, Version 1.7, 2026년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "D-Cerno D SL은 델리게이트(참석자)용 디스커션 유닛으로, 슬림하고 낮은 프로파일의 디자인이 특징이다. 디지털 신호처리 기반으로 명료한 음질을 제공하며, 실드 마이크가 휴대폰 등 이동통신 전파 간섭을 차단한다. 2개의 디지털 버스 커넥터(IN/OUT 상호 교환 가능)를 통해 실드 CAT5 케이블로 유닛 간 데이지체인 연결하며, 배선 방향을 자동 감지해 배선 오류 가능성을 없앴다.\n\n스크류락 소켓을 통해 D-MIC 30/40/50/60/70 SL 및 70 FF 등 다양한 길이의 탈착식 마이크를 장착할 수 있어 운송·보관 시 마이크를 분리해 부피를 줄일 수 있다. 마이크 On/Off 또는 발언 요청(Request-to-speak) 버튼과 2개의 상태 LED, 이색(bi-color) 바 인디케이터를 갖추고 있으며, 고품질 내장 스피커와 헤드폰 출력(볼륨 조절 가능)을 제공한다. 하부 셸이 무게 중심을 잡아 안정성을 높였고, 패턴화된 이중화(fail-safe redundancy) 기능으로 루프 배선 시 장애에 강하다.\n\n본 제품은 단종(legacy) 제품이며, 후속 제품은 D-Cerno DISCUSS D(71.98.0396)이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "d-cerno-d-sl-main.webp",
+      "alt": "D-Cerno D SL 델리게이트 디스커션 유닛(탈착식 마이크 장착)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "D-Cerno D SL",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1902x1123",
+      "resolution": "1902x1123",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "D-Cerno D SL Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    }
+  ],
+  "features": [
+    {
+      "text": "스크류락 방식 탈착식 마이크 커넥터로 30/40/50/60/70cm 등 다양한 길이 마이크 교체 가능",
+      "source": "P"
+    },
+    {
+      "text": "휴대폰 전파 간섭에 강한 실드 마이크로 명료한 음질 확보",
+      "source": "P"
+    },
+    {
+      "text": "고품질 내장 스피커 및 헤드폰 출력(볼륨 조절 가능)",
+      "source": "P"
+    },
+    {
+      "text": "2개의 IN/OUT 겸용 디지털 버스 커넥터로 배선 방향 자동 감지, 루프 배선 시 이중화 지원",
+      "source": "P"
+    },
+    {
+      "text": "마이크 On/Off 또는 Request-to-speak 버튼과 2개 상태 LED, 이색 바 인디케이터",
+      "source": "P"
+    },
+    {
+      "text": "슬림하고 낮은 프로파일 디자인으로 회의 테이블에 자연스럽게 어울림",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "PC/ABS & Zamak",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Black",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기",
+      "value": "211.4 x 136 x 48.2",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기",
+      "value": "230 x 150 x 80",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "760",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "975",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원",
+      "value": "48 VDC, Cat5 케이블을 통한 전원 공급",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비 전력",
+      "value": "2",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "오디오 품질",
+      "value": "16 bit digital",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "주파수 응답",
+      "value": "25 Hz ~ 15,000 Hz (±3 dB)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Speaker",
+      "name": "정격 출력",
+      "value": "4",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Speaker",
+      "name": "평균 음압 레벨",
+      "value": "80",
+      "unit": "dB SPL @ 1m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Headphone",
+      "name": "임피던스",
+      "value": "16-150",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Headphone",
+      "name": "출력 레벨",
+      "value": "최대 70 mW @ 32 Ω",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "5 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "습도/보호등급",
+      "value": "IEC 60069_2.14 준거, 보호등급 EP10",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45 (실드 Cat5)",
+      "signal": "디지털 버스 (데이지체인, IN/OUT 겸용)",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "IN/OUT 상호 교환 가능(자동 감지), 2m 패치 케이블 동봉",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "3.5mm 스테레오 잭",
+      "signal": "헤드폰 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "TEL152 헤드폰(71.04.0154) 별매",
+      "condition": "볼륨 조절 가능",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Microphone",
+      "connector": "스크류락(Screw-lock) 소켓",
+      "signal": "탈착식 마이크 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "D-MIC 30/40/50/60/70 SL, 70 FF 호환",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (단종 제품 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.0306, D-Cerno D SL, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M2",
+      "name": "제조사 공식 퀵스타트 가이드 (D-Cerno C SL / D SL)",
+      "url": "https://documents.televic.digital/conference/index.php/s/ErmKZCxLpRQFznp",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "단종(discontinued) 제품",
+      "detail": "D-Cerno D SL(71.98.0306)은 제조사가 단종을 공지한 레거시 제품이며, 후속 제품은 D-Cerno DISCUSS D(71.98.0396)이다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic D-Cerno D SL 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -2925,7 +2925,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "d-cerno-cu",
+    "card_image": "d-cerno-cu-main.webp"
   },
   {
     "brand": "Televic",
@@ -2940,7 +2942,9 @@
       "https://conference.televic.digital/knowledgebase/products/d-cerno/"
     ],
     "link_scope": "series",
-    "manual_link": "https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm"
+    "manual_link": "https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm",
+    "slug": "d-cerno-ae",
+    "card_image": "d-cerno-ae-main.webp"
   },
   {
     "brand": "Televic",
@@ -2969,7 +2973,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "d-cerno-d-sl",
+    "card_image": "d-cerno-d-sl-main.webp"
   },
   {
     "brand": "Televic",
@@ -2983,7 +2989,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/microphones/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "d-mic-50-sl",
+    "card_image": "d-mic-50-sl-main.webp"
   },
   {
     "brand": "Televic",
@@ -2997,7 +3005,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/plixus/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "plixus-ae-r-dante",
+    "card_image": "plixus-ae-r-dante-main.webp"
   },
   {
     "brand": "Televic",
@@ -3011,7 +3021,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/plixus/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "plixus-ae-r-ps",
+    "card_image": "plixus-ae-r-ps-main.webp"
   },
   {
     "brand": "Televic",
@@ -3025,7 +3037,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "confidea-flex",
+    "card_image": "confidea-flex-main.webp"
   },
   {
     "brand": "Televic",
@@ -3039,7 +3053,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/plixus/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "plixus-next",
+    "card_image": "plixus-next-main.webp"
   },
   {
     "brand": "Televic",
@@ -3053,7 +3069,9 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/microphones/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "d-mic-40-sl",
+    "card_image": "d-mic-40-sl-main.webp"
   },
   {
     "brand": "Shure",

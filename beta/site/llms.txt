@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 96개
+- Product Detail: 105개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1247,12 +1247,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-cu
 
 - 제품: Televic D-Cerno AE
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/d-cerno/
   매뉴얼: https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-ae
 
 - 제품: Televic D-Cerno Advanced
   분류: 오디오 | Conferencing | Conference System
@@ -1264,36 +1266,43 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-d-sl
 
 - 제품: Televic D-Mic 50 SL
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/microphones/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-mic-50-sl
 
 - 제품: Televic Plixus AE-R Dante
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-ae-r-dante
 
 - 제품: Televic Plixus AE-R PS
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-ae-r-ps
 
 - 제품: Televic Confidea FLEX
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/confidea-flex/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=confidea-flex
 
 - 제품: Televic Plixus NEXT
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-next
 
 - 제품: Televic D-Mic 40 SL
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/microphones/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-mic-40-sl
 
 - 제품: Shure MXCWAPT-W
   분류: 오디오 | Conferencing | Conference System

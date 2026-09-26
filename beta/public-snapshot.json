@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "70E69D6AF3AE254AD0C388EAF0DB0A298E78CCC3A715E4A2AEDAB1B1EF27F608",
+    "sha256": "845C1625E05945ECDD6C78AECA868FD971F285E7CD8A6C69C6C1D457EABBE376",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -115,6 +115,12 @@
       "specifications": 14,
       "io": 0
     },
+    "confidea-flex": {
+      "sha256": "E4C324400E17F6030427D420C7F0006562C501950E540F71A2A7ED2275B0B502",
+      "features": 6,
+      "specifications": 30,
+      "io": 4
+    },
     "cpe40": {
       "sha256": "CD00C36A5552967757A4AC66D1F047B5F53B7DC91672A3301BB26E6E1BA1C4E4",
       "features": 6,
@@ -126,6 +132,36 @@
       "features": 6,
       "specifications": 12,
       "io": 0
+    },
+    "d-cerno-ae": {
+      "sha256": "3BBFAD04825E5F367116BC9341E4DAAFF15DDC9016E64166F8C0D517039991F6",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "d-cerno-cu": {
+      "sha256": "6204A9E1D3EE5E9637223B69EFA983B5F51923FE54A821779C0F48B38BC53141",
+      "features": 6,
+      "specifications": 23,
+      "io": 6
+    },
+    "d-cerno-d-sl": {
+      "sha256": "B800F60EEB00DC7321FE87D9435F4323BF43FD94CEF47CAED784093DF36B1A91",
+      "features": 6,
+      "specifications": 17,
+      "io": 3
+    },
+    "d-mic-40-sl": {
+      "sha256": "4F94CF82CFFAAB70FDEADFE44F03349991724BFA6DF506B8D339DFBF540B2CF2",
+      "features": 5,
+      "specifications": 20,
+      "io": 1
+    },
+    "d-mic-50-sl": {
+      "sha256": "A4956E54DD34915D556A9348529DFE59C54CB67D4EFA7A23AEBEACF8DAA3BB00",
+      "features": 5,
+      "specifications": 20,
+      "io": 1
     },
     "dm3": {
       "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
@@ -288,6 +324,24 @@
       "features": 6,
       "specifications": 19,
       "io": 8
+    },
+    "plixus-ae-r-dante": {
+      "sha256": "2333869C19A98D43AC9B76856907B8B8C888956DEA38298824D1A00E458655AA",
+      "features": 6,
+      "specifications": 27,
+      "io": 9
+    },
+    "plixus-ae-r-ps": {
+      "sha256": "6AF095814B58B2BD4A87F11499D2B4CF22E1FEB9497220A4DFDE618DFF4F5AA2",
+      "features": 5,
+      "specifications": 21,
+      "io": 2
+    },
+    "plixus-next": {
+      "sha256": "FA27D28D4BAACB09E465B9503E42C02E64E36D0036927613964C90745F2F1DF0",
+      "features": 5,
+      "specifications": 12,
+      "io": 3
     },
     "pt-mz11k": {
       "sha256": "7B9C7F5FE8F7EA47C0B2CADF0E06ADFAA3735F0E395449ECA60103FF296CB694",

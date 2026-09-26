@@ -1,0 +1,477 @@
+{
+  "manufacturer": "Televic",
+  "productName": "Confidea FLEX",
+  "model": "Confidea FLEX (71.98.0131)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conference System"
+  ],
+  "english": "Confidea FLEX is an all-in-one tabletop conference unit with an integrated 5.2-inch fingerprint-coated touch screen, configurable via license as delegate, chairperson, or dual-use unit, supporting voting, identification, interpretation and dual-use functionality.",
+  "korean": "Confidea FLEX는 5.2인치 지문 방지 코팅 터치스크린을 내장한 올인원 탁상형 회의 유닛으로, 라이선스를 통해 델리게이트·의장·이중 사용(dual-use) 유닛으로 구성 가능하며 투표·신원확인·통역·이중 사용 등의 기능을 지원한다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, Confidea FLEX 제품 페이지)와 71.98.0131 데이터시트(PDF, Version 1.10, 2024년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Confidea FLEX는 Televic의 올인원 탁상형 회의 유닛으로, 5.2인치 정전식(capacitive) 터치스크린(LCD TFT, 480x128, 지문방지 코팅)을 내장했다. 하나의 물리 버튼이 'secret until lit' 방식으로 설정에 따라 델리게이트, 의장, 이중 사용(dual-use) 델리게이트 등 서로 다른 기능을 수행하며, Plixus 웹서버를 통해 유닛의 역할과 라이선스를 손쉽게 변경할 수 있다.\n\n라이선스 모델은 투표(L-VT), 신원확인(L-ID), 언어 선택/통역(L-LS), 이중 사용(L-DU), 블루투스(L-BT) 등으로 구성되어 있어, 하드웨어 재투자 없이 시간이 지남에 따라 기능을 확장할 수 있다. 의장은 화면에서 회의 시작/일시정지/녹음, 투표 세션 시작/종료, 안건 전환 등을 직접 제어할 수 있으며, 델리게이트는 현재 안건, 남은 발언 시간, 발언 순서, 투표 결과 등을 화면으로 확인할 수 있다. NFC 카드 리더(ISO 14443 MIFARE)를 내장해 자유 좌석(free-seating) 환경에서 탭 로그인 및 좌석 추적이 가능하다.\n\n스크류락 소켓으로 D-MIC 30/40/50 SL 등 탈착식 마이크를 장착하며, 마이크 활성화 시 자동 음소거되는 고품질 내장 스피커와 볼륨 조절이 가능한 2개의 헤드폰 출력을 제공한다. Cat5e 기반 Plixus 네트워크로 데이지체인/루프 연결되며, 핫스왑 기능으로 회의 중에도 예비 유닛으로 신속히 교체할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "confidea-flex-main.webp",
+      "alt": "Confidea FLEX 터치스크린 탁상형 회의 유닛",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "Confidea FLEX",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2902x1659",
+      "resolution": "2902x1659",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Confidea FLEX Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+    }
+  ],
+  "features": [
+    {
+      "text": "5.2인치 정전식 터치스크린(지문방지 코팅)과 시각장애인을 배려한 촉각 기준선(tactile reference) 설계",
+      "source": "P"
+    },
+    {
+      "text": "라이선스 기반 기능 확장: 투표(L-VT), 신원확인(L-ID), 언어선택/통역(L-LS), 이중사용(L-DU), 블루투스(L-BT)",
+      "source": "P"
+    },
+    {
+      "text": "스크류락 탈착식 마이크(D-MIC 30/40/50 SL 호환), 휴대폰 전파 간섭에 강함",
+      "source": "P"
+    },
+    {
+      "text": "NFC 카드 리더 기반 탭 로그인으로 자유 좌석 회의에서 좌석 위치 추적",
+      "source": "P"
+    },
+    {
+      "text": "터치스크린 햅틱(진동) 피드백 및 조도 센서를 통한 화면 밝기 자동 조절",
+      "source": "P"
+    },
+    {
+      "text": "핫스왑 지원으로 회의 중에도 예비 유닛으로 신속 교체 가능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "PC/ABS & Zamak",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Black",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(W x H x D)",
+      "value": "220 x 50 x 165",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(W x H x D)",
+      "value": "240 x 60 x 170",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "995",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "1106",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원",
+      "value": "48",
+      "unit": "VDC",
+      "condition": "Plixus 네트워크를 통한 전원 공급",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비 전력",
+      "value": "6",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "카드 리더",
+      "value": "ISO 14443 MIFARE Card Reader",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "크기",
+      "value": "5.2",
+      "unit": "인치",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "기술 방식",
+      "value": "LCD TFT",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "터치 방식",
+      "value": "Capacitive (정전식)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "코팅",
+      "value": "Anti-fingerprint (AF)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "활성 영역",
+      "value": "127 x 33.9",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "480 x 128",
+      "unit": "px",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "리프레시율",
+      "value": "60",
+      "unit": "Hz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각",
+      "value": "좌 65° / 우 65° / 상 55° / 하 65°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "휘도",
+      "value": "최소 800",
+      "unit": "cd/m²",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "500:1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색심도",
+      "value": "RGB 24bit",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Speaker",
+      "name": "최대 출력",
+      "value": "> 1",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Speaker",
+      "name": "주파수 응답",
+      "value": "200 ~ 20,000",
+      "unit": "Hz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Speaker",
+      "name": "부하 임피던스",
+      "value": "4",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Headphone",
+      "name": "최대 출력",
+      "value": "> 10",
+      "unit": "mW",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Headphone",
+      "name": "부하 임피던스",
+      "value": "16-32",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Microphone Input",
+      "name": "공칭/최대 입력 레벨",
+      "value": "공칭 -54.7 dBV / 최대 -24.6 dBV",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Microphone Input",
+      "name": "주파수 응답",
+      "value": "25 ~ 20,000",
+      "unit": "Hz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "0 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "보관 온도",
+      "value": "-20 ~ 60",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Plixus 네트워크(루프스루)",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Plixus 독자 프로토콜",
+      "availability": "",
+      "condition": "본체 하단 은폐형",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "3.5mm 스테레오 잭",
+      "signal": "헤드폰 출력",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "단일 볼륨 컨트롤",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Microphone",
+      "connector": "스크류락(Screw-lock) 소켓",
+      "signal": "탈착식 마이크 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "D-MIC 30/40/50 SL 호환",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Card Reader",
+      "connector": "NFC/RFID (ISO 14443 MIFARE)",
+      "signal": "카드 태그 리더",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "ISO 14443",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (Confidea FLEX 제품 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/products/confidea-flex/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.0131, Confidea FLEX, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M2",
+      "name": "제조사 공식 사용자 매뉴얼 (Confidea FLEX / FLEX G4)",
+      "url": "https://documents.televic.digital/conference/index.php/s/qzZJsm3p2MLEdCE",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic Confidea FLEX 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

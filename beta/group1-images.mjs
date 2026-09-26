@@ -326,6 +326,33 @@ export const group1Images = {
   ],
   'blu-dan': [
     image('Main', 'blu-dan-main.webp', 'BSS Audio BLU-DA(구 BLU-DAN) Dante/AES67-BLU link 브리지 전면부', 'BSS Audio', 'BLU-DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/5192_1728940298/BSS_BLU-DA_x_large_2x.webp', '4096x819', '4096x819', 'VERIFIED')
+  ],
+  'd-cerno-cu': [
+    image('Main', 'd-cerno-cu-main.webp', 'D-Cerno CU 중앙 제어 장치', 'Televic', 'D-Cerno CU', 'https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT', '1902x1123', '1902x1123', 'VERIFIED')
+  ],
+  'd-cerno-ae': [
+    image('Main', 'd-cerno-ae-main.webp', 'D-Cerno AE 랙형 중앙 엔진', 'Televic', 'D-Cerno AE', 'https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7', '2038x786', '2038x786', 'VERIFIED')
+  ],
+  'd-cerno-d-sl': [
+    image('Main', 'd-cerno-d-sl-main.webp', 'D-Cerno D SL 델리게이트 디스커션 유닛(탈착식 마이크 장착)', 'Televic', 'D-Cerno D SL', 'https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt', '1902x1123', '1902x1123', 'VERIFIED')
+  ],
+  'd-mic-50-sl': [
+    image('Main', 'd-mic-50-sl-main.webp', 'D-Mic 50 SL 구스넥 마이크(50cm)', 'Televic', 'D-Mic 50 SL', 'https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF', '2000x496', '2000x496', 'VERIFIED')
+  ],
+  'plixus-ae-r-dante': [
+    image('Main', 'plixus-ae-r-dante-main.webp', 'Plixus AE-R Dante 랙형 오디오 엔진', 'Televic', 'Plixus AE-R Dante', 'https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC', '2119x1123', '2119x1123', 'VERIFIED')
+  ],
+  'plixus-ae-r-ps': [
+    image('Main', 'plixus-ae-r-ps-main.webp', 'Plixus AE-R PS 외장 전원 공급 장치', 'Televic', 'Plixus AE-R PS', 'https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX', '1867x990', '1867x990', 'VERIFIED')
+  ],
+  'confidea-flex': [
+    image('Main', 'confidea-flex-main.webp', 'Confidea FLEX 터치스크린 탁상형 회의 유닛', 'Televic', 'Confidea FLEX', 'https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf', '2902x1659', '2902x1659', 'VERIFIED')
+  ],
+  'plixus-next': [
+    image('Main', 'plixus-next-main.webp', 'Plixus NEXT 네트워크 익스텐더', 'Televic', 'Plixus NEXT', 'https://documents.televic.digital/conference/index.php/s/W9kbS3grpBJJncP', '1868x990', '1868x990', 'VERIFIED')
+  ],
+  'd-mic-40-sl': [
+    image('Main', 'd-mic-40-sl-main.webp', 'D-Mic 40 SL 구스넥 마이크(40cm)', 'Televic', 'D-Mic 40 SL', 'https://documents.televic.digital/conference/index.php/s/WG4bzxmaNPkRg9a', '2000x652', '2000x652', 'VERIFIED')
   ]
 };
 
@@ -443,5 +470,14 @@ export const cardImages = {
   'blu-aec-in': 'blu-aec-in-main.webp',
   'blucard-in': 'blucard-in-main.webp',
   'blucard-out': 'blucard-out-main.webp',
-  'blu-dan': 'blu-dan-main.webp'
+  'blu-dan': 'blu-dan-main.webp',
+  'd-cerno-cu': 'd-cerno-cu-main.webp',
+  'd-cerno-ae': 'd-cerno-ae-main.webp',
+  'd-cerno-d-sl': 'd-cerno-d-sl-main.webp',
+  'd-mic-50-sl': 'd-mic-50-sl-main.webp',
+  'plixus-ae-r-dante': 'plixus-ae-r-dante-main.webp',
+  'plixus-ae-r-ps': 'plixus-ae-r-ps-main.webp',
+  'confidea-flex': 'confidea-flex-main.webp',
+  'plixus-next': 'plixus-next-main.webp',
+  'd-mic-40-sl': 'd-mic-40-sl-main.webp'
 };

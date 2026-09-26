@@ -1,0 +1,498 @@
+{
+  "manufacturer": "Televic",
+  "productName": "D-Cerno AE",
+  "model": "D-Cerno AE",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conference System"
+  ],
+  "english": "D-Cerno AE is the rack-based central engine (19-inch) that enables the D-Cerno discussion system for small to medium-sized meetings, with hybrid-meeting USB interfacing, AES67 networking, and support for up to 250 delegate units with D-Cerno NEXT expansion.",
+  "korean": "D-Cerno AE는 소형~중형 회의실을 위한 D-Cerno 디스커션 시스템의 랙형(19인치) 중앙 엔진으로, USB를 통한 하이브리드 회의 연동과 AES67 네트워크 연동을 지원하며, D-Cerno NEXT 확장 시 최대 250대의 델리게이트 유닛을 제어할 수 있다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, D-Cerno 현행 제품 페이지)와 71.98.0322 데이터시트(PDF, Version 1.12, 2026년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "D-Cerno AE는 D-Cerno CU의 후속 제품으로, 최신 오디오 프로세싱 기술을 탑재한 19인치 랙 마운트형(테이블 거치도 가능) 중앙 엔진이다. 자체적으로 최대 50대의 델리게이트 유닛을 직접 제어하며, D-Cerno NEXT 네트워크 익스텐더를 추가하면 최대 250대까지 확장 가능하다. USB 케이블 연결만으로 PC에 스피커/마이크 오디오 장치를 자동 생성하는 하이브리드 미팅 기능과, 버튼을 누르지 않아도 발언이 가능한 핸즈프리 마이크 모드(최대 16개 동시)를 지원한다.\n\nAES67 및 멀티채널 USB 연결을 통해 외부 DSP나 녹음 장비와 쉽게 연동할 수 있으며, 내장 오디오 구성기(Audio Configurator)로 스피커·마이크·헤드폰 잭별 라우팅을 세밀하게 제어할 수 있다. 내장 웹서버를 통해 브라우저에서 마이크 모드 및 녹음 설정을 직접 제어할 수 있고, 내부 저장소(3GB) 또는 USB 플래시 드라이브(최대 500GB, NTFS/FAT32)에 MP3/WAV로 회의를 녹음할 수 있다.\n\n팬리스 설계로 무소음 동작을 보장하며, IEEE 802.1X(MD5, TLS, PEAP-MSCHAPv2) 네트워크 보안과 REST API를 통한 외부 시스템 연동을 지원한다. D-Cerno Advanced 라이선스(71.98.0360)를 추가하면 멀티채널 USB(8x8), AES-67(8x8), DSP 모드, 커스텀 오디오 라우팅, 오퍼레이터 모드 등 고급 기능이 잠금 해제된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "d-cerno-ae-main.webp",
+      "alt": "D-Cerno AE 랙형 중앙 엔진",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "D-Cerno AE",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2038x786",
+      "resolution": "2038x786",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "D-Cerno AE Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/products/d-cerno/"
+    }
+  ],
+  "features": [
+    {
+      "text": "USB 케이블 연결만으로 PC 화상회의 플랫폼과 즉시 연동되는 하이브리드 미팅 기능",
+      "source": "P"
+    },
+    {
+      "text": "버튼 조작 없이 발언 가능한 핸즈프리 마이크 모드(최대 16개 동시 활성화)",
+      "source": "P"
+    },
+    {
+      "text": "AES67, 멀티채널 USB(USB-C)를 통한 외부 DSP·녹음 장비 연동",
+      "source": "P"
+    },
+    {
+      "text": "내부 저장소(3GB) 및 USB 플래시 드라이브(최대 500GB)를 이용한 자동 회의 녹음",
+      "source": "P"
+    },
+    {
+      "text": "내장 웹서버를 통한 브라우저 기반 마이크 모드·녹음·오디오 라우팅 설정",
+      "source": "P"
+    },
+    {
+      "text": "19인치 랙 마운트 또는 탁상 설치가 모두 가능한 팬리스(무소음) 1U 설계",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질/색상",
+      "value": "Aluminium, Black (RAL 9011)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(W x D x H)",
+      "value": "48 x 17 x 4.5",
+      "unit": "cm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(W x D x H)",
+      "value": "57 x 42 x 6.4",
+      "unit": "cm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "2.48",
+      "unit": "kg",
+      "condition": "PSU 미포함",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "3.36",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "외부 전원 어댑터 입력",
+      "value": "100-240 VAC, 50/60 Hz, 2.5 A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "중앙 유닛 전원 공급",
+      "value": "48 VDC, 4.4 A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "오디오 품질",
+      "value": "16 bit, 32 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "회의 네트워크 포트",
+      "value": "4 포트, 최대 50대(D-Cerno NEXT로 최대 250대 확장)",
+      "unit": "",
+      "condition": "48 VDC, 포트당 최대 2A 제한",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "케이블 규격",
+      "value": "CAT 5E 이상, 실드, SFTP, AWG 24, 실드 RJ45 커넥터",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "유닛 간 최대 거리",
+      "value": "80",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "루프 내 최대 총 케이블 길이",
+      "value": "400",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - LAN",
+      "name": "링크 속도",
+      "value": "10/100 Mbps - 1 Gbps",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - LAN",
+      "name": "보안",
+      "value": "802.1X (MD5, TLS, PEAP-MSCHAPv2)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Analog Output",
+      "name": "발란스 출력(후면 XLR)",
+      "value": "2개, 최대 +10 dBV, 부하 임피던스 > 600 Ω, SNR > 95 dB(A)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Analog Output",
+      "name": "언밸런스 출력(전면 3.5mm)",
+      "value": "1개, 최대 0 dBV, 부하 임피던스 > 16 Ω, SNR > 90 dB(A)",
+      "unit": "",
+      "condition": "Line/헤드폰 겸용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Analog Input",
+      "name": "발란스 입력(후면 XLR)",
+      "value": "2개, 최대 +10 dBV, 입력 임피던스 > 10 kΩ, SNR > 95 dB(A)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Analog Input",
+      "name": "언밸런스 입력(전면 3.5mm)",
+      "value": "1개, 최대 0 dBV, 입력 임피던스 > 16 Ω, SNR > 90 dB(A)",
+      "unit": "",
+      "condition": "Line/마이크 겸용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "name": "USB 포트 1 (Port 1)",
+      "value": "오디오 장치 1x1(UAC2, 16bit, 32kHz) 또는 Mass storage host",
+      "unit": "",
+      "condition": "USB-C, 전원 공급 5V-0.5A",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "name": "USB 포트 2 (Port 2)",
+      "value": "오디오 장치 8x8(UAC2, 16bit, 32kHz) 또는 Mass storage host",
+      "unit": "",
+      "condition": "USB-C, USB 2.0",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Recording",
+      "name": "내부 저장 용량",
+      "value": "3",
+      "unit": "GB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Recording",
+      "name": "외부 저장",
+      "value": "USB 플래시 드라이브(NTFS 또는 FAT32), 최대 500GB",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Recording",
+      "name": "녹음 포맷/음질",
+      "value": "MP3, WAV, 64/128/196/256 kbps",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "System",
+      "name": "제어 가능 델리게이트 유닛 수",
+      "value": "최대 250대",
+      "unit": "",
+      "condition": "D-Cerno NEXT로 확장, 단독 사용 시 최대 50대",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "5 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "지원 브라우저",
+      "value": "Google Chrome(v124 이상), Microsoft Edge(v124 이상)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "회의 네트워크(델리게이트 유닛 버스)",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "4개 분기 또는 2개 폐루프, 최대 50대(NEXT로 250대 확장)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "LAN (제어 및 AES-67)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "AES67 / TCP-IP",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB-C",
+      "signal": "멀티채널 오디오 / 플래시드라이브 / 하이브리드 미팅",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "USB 2.0",
+      "availability": "",
+      "condition": "잠금식",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Input",
+      "connector": "XLR",
+      "signal": "발란스 오디오 입력(후면)",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "Balanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "XLR",
+      "signal": "발란스 오디오 출력(후면)",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "Balanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Input",
+      "connector": "3.5mm 잭",
+      "signal": "Line/마이크 레벨 입력(전면)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "3.5mm 잭",
+      "signal": "Line/헤드폰 레벨 출력(전면)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "전용 전원 커넥터",
+      "signal": "48VDC 전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "외부 100-240VAC 어댑터 사용",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (D-Cerno 현행 제품 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/products/d-cerno/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.0322, D-Cerno AE, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M2",
+      "name": "제조사 공식 사용자·설치 매뉴얼 (D-Cerno AE)",
+      "url": "https://documents.televic.digital/conference/index.php/s/Z5sNBPkC9jdaLcZ",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic D-Cerno AE 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
