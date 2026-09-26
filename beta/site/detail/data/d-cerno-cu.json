@@ -430,6 +430,12 @@
       "status": "REVIEW REQUIRED",
       "title": "버스 커넥터 물리 규격 미기재",
       "detail": "데이터시트에는 '4 Bus connections (4 branches or 2 loops)'라고만 기재되어 있고, 커넥터 타입(예: RJ45)이 CU 자체 데이터시트에는 명시되어 있지 않다. 후속 제품(D-Cerno AE) 데이터시트에는 CAT5E 실드 RJ45로 명시되어 있으나 CU에 동일하게 적용된다고 단정하지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "입력 전류 값 원문 대조 필요",
+      "detail": "페이지의 입력 전류 '2.5 A'는 공식 데이터시트 원문 표기가 '25 A'로 보인다(오타 또는 돌입 전류 여부 불명). 원문 대조 필요."
     }
   ],
   "presentation": {

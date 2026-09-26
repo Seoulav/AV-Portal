@@ -385,7 +385,7 @@
       "signal": "Dante",
       "direction": "IN/OUT",
       "quantity": "2",
-      "protocol": "Dante (AES67 계열)",
+      "protocol": "Dante",
       "availability": "",
       "condition": "이중화(redundant) 포트",
       "source": "P",

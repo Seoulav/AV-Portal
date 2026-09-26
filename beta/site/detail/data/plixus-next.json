@@ -242,7 +242,7 @@
     },
     {
       "group": "Network",
-      "connector": "RJ45 (LAN, Downstream)",
+      "connector": "RJ45 (Conference Network, Downstream)",
       "signal": "델리게이트 유닛 방향 연결(전원 공급)",
       "direction": "OUT",
       "quantity": "4",

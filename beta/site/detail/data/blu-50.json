@@ -307,6 +307,18 @@
       "condition": "",
       "source": "D",
       "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "signal": "RS-232",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "표준",
+      "condition": "공식 자료로 RS-232 포트 존재 확인, 커넥터 형태 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
     }
   ],
   "sources": [
@@ -329,6 +341,12 @@
       "status": "REVIEW REQUIRED",
       "title": "단종 및 후속 모델 확인 필요",
       "detail": "제조사 공식 페이지가 BLU-50을 'Discontinued'로 표시하며 신규/대체 모델은 BLU-50v2라고 명시한다. 카탈로그의 판매 가능 여부·후속 모델 등록 여부를 함께 검토할 필요가 있다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "광 연장 거리 공식 자료 간 불일치",
+      "detail": "광 연장 거리가 데이터시트는 'over 40km', 제품 페이지는 'over 10km … single mode fiber'로 서로 다르다. 한쪽으로 확정하지 않음."
     }
   ],
   "presentation": {

@@ -162,10 +162,10 @@
     {
       "group": "I/O",
       "name": "팬텀 파워",
-      "value": "지원",
+      "value": "48V (nominal)",
       "unit": "",
-      "condition": "채널별 선택, 48V 나머지 전압 데이터시트 명시 없음(제품 개요만 확인)",
-      "source": "P",
+      "condition": "채널별 선택",
+      "source": "D",
       "verification": "FOUND"
     },
     {

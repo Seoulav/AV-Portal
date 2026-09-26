@@ -262,7 +262,7 @@
       "name": "언밸런스 출력(전면 3.5mm)",
       "value": "1개, 최대 0 dBV, 부하 임피던스 > 16 Ω, SNR > 90 dB(A)",
       "unit": "",
-      "condition": "Line/헤드폰 겸용",
+      "condition": "Line/헤드폰 레벨 선택은 향후 업데이트 예정(제조사 표기 *)",
       "source": "P",
       "verification": "FOUND"
     },
@@ -280,7 +280,7 @@
       "name": "언밸런스 입력(전면 3.5mm)",
       "value": "1개, 최대 0 dBV, 입력 임피던스 > 16 Ω, SNR > 90 dB(A)",
       "unit": "",
-      "condition": "Line/마이크 겸용",
+      "condition": "Line/마이크 레벨 선택은 향후 업데이트 예정(제조사 표기 *)",
       "source": "P",
       "verification": "FOUND"
     },
@@ -430,24 +430,24 @@
     {
       "group": "Audio Input",
       "connector": "3.5mm 잭",
-      "signal": "Line/마이크 레벨 입력(전면)",
+      "signal": "Line 레벨 입력(전면)",
       "direction": "IN",
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "마이크 레벨 선택은 향후 업데이트 예정(제조사 표기 *)",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Audio Output",
       "connector": "3.5mm 잭",
-      "signal": "Line/헤드폰 레벨 출력(전면)",
+      "signal": "Line 레벨 출력(전면)",
       "direction": "OUT",
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "헤드폰 레벨 선택은 향후 업데이트 예정(제조사 표기 *)",
       "source": "P",
       "verification": "FOUND"
     },
@@ -484,7 +484,14 @@
       "scope": "제조사 공식 출처"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "AES67 채널 수·외부 저장 용량 근거 미확인",
+      "detail": "개요의 'AES-67(8x8)' 채널 수와 '외부 저장 최대 500GB'는 공식 데이터시트(71.98.0322)·사용자 매뉴얼에서 확인되지 않는다(8x8은 DSP mode·USB Port 2 항목에만 표기, 저장 매체는 'USB flash drive (NTFS or FAT32)'만 명시). Plixus AE-R 값이 섞였을 가능성이 있어 확인 필요."
+    }
+  ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
     "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",

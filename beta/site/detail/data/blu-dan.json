@@ -221,15 +221,15 @@
     },
     {
       "group": "Control",
-      "connector": "D-sub/터미널",
+      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
       "signal": "RS-232",
-      "direction": "OUT",
+      "direction": "I/O",
       "quantity": "1",
       "protocol": "RS-232",
       "availability": "표준",
-      "condition": "",
+      "condition": "공식 자료는 RS-232 포트 존재만 명시(후면 인쇄 'RS232'), 커넥터 형태 미기재",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "PARTIAL"
     }
   ],
   "sources": [

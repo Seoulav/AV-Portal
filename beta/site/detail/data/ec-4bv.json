@@ -208,7 +208,7 @@
       "name": "소비전력",
       "value": "300",
       "unit": "mA (48VDC 기준, 최대)",
-      "condition": "약 13W, VW-1 등급 이더넷 케이블 권장",
+      "condition": "최대 300mA @ 48VDC(약 14.4W). 권장 이더넷 케이블 배선: VW-1 등급, 48VDC, 13W",
       "source": "D",
       "verification": "FOUND"
     },

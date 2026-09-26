@@ -165,6 +165,12 @@
       "status": "REVIEW REQUIRED",
       "title": "전용 하드웨어 사진 부재",
       "detail": "공식 웹사이트에서 개별 전원 모듈의 실제 사진을 찾지 못해 이미지를 비워두었다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "입력 전압 공식 자료 간 불일치",
+      "detail": "입력 전압이 설치 가이드는 100-264VAC, 컷시트는 90-240VAC로 서로 다르다. 한쪽으로 확정하지 않음."
     }
   ],
   "presentation": {
