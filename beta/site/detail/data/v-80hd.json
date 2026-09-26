@@ -12,11 +12,7 @@
   "korean": "SDI·HDMI·USB-C·LAN·SRT 연결을 지원하는 다이렉트 스트리밍 비디오 스위처.",
   "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": [
-    "V-80HD는 대면 이벤트, 라이브 스트리밍, 스튜디오 제작 등 전문 영상 제작 요구를 충족하는 콤팩트한 하이브리드 이벤트 스위처다. HDMI 4입력과 SDI 4입력을 합쳐 총 8채널을 제공하며, 그중 2개 HDMI 입력에는 4K 다운스케일러가 내장되어 게이밍 콘솔 등 4K 소스도 병렬로 연결할 수 있다. SRT 입력을 크로스포인트 버튼에 SDI·HDMI 입력과 함께 배정할 수도 있다.",
-    "출력은 SDI 2계통, HDMI 3계통, USB-C 스트리밍, LAN(RTMP/SRT)을 포함해 총 7개이며, 각 출력을 10개 버스 중 하나로 자유롭게 배정할 수 있다. USB-C 출력은 웹캠과 동일한 방식으로 동작해 Zoom·Teams 등 플러그 앤 플레이 스트리밍이 가능하고, LAN을 통한 RTMP 직송출과 SRT(Secure Reliable Transport) 암호화 전송도 지원한다.",
-    "5레이어 비디오 이펙트 엔진(PinP 2, DSK 1 포함 Fill/Key 합성 지원)과 28채널 디지털 오디오 믹서를 탑재했고, SDXC 카드에 H.264 MP4 영상과 WAV 오디오를 직접 녹화할 수 있다. Canon·JVC·Panasonic·Sony·PTZOptics·Avonic 등 PTZ 카메라를 최대 8대까지 동시 제어할 수 있으며, Yamaha DM3 시리즈 디지털 믹서와의 씬 메모리·오디오 제어 연동(Version 1.1)도 지원한다."
-  ],
+  "overview": "V-80HD는 대면 이벤트, 라이브 스트리밍, 스튜디오 제작 등 전문 영상 제작 요구를 충족하는 콤팩트한 하이브리드 이벤트 스위처다. HDMI 4입력과 SDI 4입력을 합쳐 총 8채널을 제공하며, 그중 2개 HDMI 입력에는 4K 다운스케일러가 내장되어 게이밍 콘솔 등 4K 소스도 병렬로 연결할 수 있다. SRT 입력을 크로스포인트 버튼에 SDI·HDMI 입력과 함께 배정할 수도 있다.\n\n출력은 SDI 2계통, HDMI 3계통, USB-C 스트리밍, LAN(RTMP/SRT)을 포함해 총 7개이며, 각 출력을 10개 버스 중 하나로 자유롭게 배정할 수 있다. USB-C 출력은 웹캠과 동일한 방식으로 동작해 Zoom·Teams 등 플러그 앤 플레이 스트리밍이 가능하고, LAN을 통한 RTMP 직송출과 SRT(Secure Reliable Transport) 암호화 전송도 지원한다.\n\n5레이어 비디오 이펙트 엔진(PinP 2, DSK 1 포함 Fill/Key 합성 지원)과 28채널 디지털 오디오 믹서를 탑재했고, SDXC 카드에 H.264 MP4 영상과 WAV 오디오를 직접 녹화할 수 있다. Canon·JVC·Panasonic·Sony·PTZOptics·Avonic 등 PTZ 카메라를 최대 8대까지 동시 제어할 수 있으며, Yamaha DM3 시리즈 디지털 믹서와의 씬 메모리·오디오 제어 연동(Version 1.1)도 지원한다.",
   "images": [
     {
       "role": "Main",

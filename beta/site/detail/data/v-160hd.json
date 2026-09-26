@@ -12,11 +12,7 @@
   "korean": "SDI 8입력, HDMI 8입력, 40채널 오디오 믹서를 갖춘 스트리밍 비디오 스위처.",
   "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": [
-    "V-160HD는 Roland V-시리즈의 플래그십 모델로, 하이브리드 이벤트 스위칭의 새로운 표준을 제시한다. 포괄적인 SDI·HDMI I/O로 대면 관객에게는 Full HD 화질을 제공하는 동시에 USB-C를 통해 웹 플랫폼에 동시 스트리밍할 수 있다. 8레이어 비디오 이펙트 엔진, 40채널 디지털 오디오 믹서, 통합 PTZ 카메라 제어, 차세대 큐 관리·라이브 쇼 오토메이션 기능을 갖췄으며, 1인 운영자도 다룰 수 있는 방송국 스타일 인터페이스로 설계되었다.",
-    "SDI 8입력(프레임레이트 컨버터 내장)과 HDMI 8입력(그중 4계통은 실시간 스케일러 내장)을 제공하며, SDI 3, HDMI 3, USB-C 스트리밍을 포함해 총 7개의 출력을 지원한다. Program, Sub-Program, Preview, 3개의 Aux 버스, 2개의 DSK 소스, 3종 멀티뷰 옵션 등 선택 가능한 출력 모드를 제공해 매우 유연한 라우팅이 가능하다.",
-    "8레이어 비디오 이펙트(PinP x4, Keyer x4, DSK x2)와 40채널 오디오 믹서(Loudness Auto Gain Control, Adaptive Noise Reduction 등)를 탑재했고, 최대 16대의 PTZ 카메라를 여러 브랜드·프로토콜 혼합으로 동시 제어할 수 있다. Version 3 이상에서는 Graphics Presenter, 새로운 크로마키 엔진, VC-100UHD 연동, VenuSet 지원, Yamaha DM3 시리즈 연동이 추가되었다. Reference IN/THRU(블랙버스트, Bi-Level/Tri-Level) 동기 입력을 지원해 대규모 방송 시스템에도 통합할 수 있다."
-  ],
+  "overview": "V-160HD는 Roland V-시리즈의 플래그십 모델로, 하이브리드 이벤트 스위칭의 새로운 표준을 제시한다. 포괄적인 SDI·HDMI I/O로 대면 관객에게는 Full HD 화질을 제공하는 동시에 USB-C를 통해 웹 플랫폼에 동시 스트리밍할 수 있다. 8레이어 비디오 이펙트 엔진, 40채널 디지털 오디오 믹서, 통합 PTZ 카메라 제어, 차세대 큐 관리·라이브 쇼 오토메이션 기능을 갖췄으며, 1인 운영자도 다룰 수 있는 방송국 스타일 인터페이스로 설계되었다.\n\nSDI 8입력(프레임레이트 컨버터 내장)과 HDMI 8입력(그중 4계통은 실시간 스케일러 내장)을 제공하며, SDI 3, HDMI 3, USB-C 스트리밍을 포함해 총 7개의 출력을 지원한다. Program, Sub-Program, Preview, 3개의 Aux 버스, 2개의 DSK 소스, 3종 멀티뷰 옵션 등 선택 가능한 출력 모드를 제공해 매우 유연한 라우팅이 가능하다.\n\n8레이어 비디오 이펙트(PinP x4, Keyer x4, DSK x2)와 40채널 오디오 믹서(Loudness Auto Gain Control, Adaptive Noise Reduction 등)를 탑재했고, 최대 16대의 PTZ 카메라를 여러 브랜드·프로토콜 혼합으로 동시 제어할 수 있다. Version 3 이상에서는 Graphics Presenter, 새로운 크로마키 엔진, VC-100UHD 연동, VenuSet 지원, Yamaha DM3 시리즈 연동이 추가되었다. Reference IN/THRU(블랙버스트, Bi-Level/Tri-Level) 동기 입력을 지원해 대규모 방송 시스템에도 통합할 수 있다.",
   "images": [
     {
       "role": "Main",

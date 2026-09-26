@@ -12,11 +12,7 @@
   "korean": "SDI·HDMI 입력과 PTZ 카메라 제어, 멀티채널 오디오를 지원하는 HD 비디오 스위처.",
   "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": [
-    "V-60HD는 카메라 소스용 SDI 입력과 데이터·컴퓨터·태블릿용 스케일드 HDMI 입력을 결합해 라이브 이벤트 제작과 스트리밍 워크플로우를 단순화한 프로덕션 스위처다. 멀티채널 임베디드 오디오, XLR·RCA 아날로그 입력, SDI/HDMI 디지털 소스의 디임베드 오디오 등 강력한 오디오 기능과 Program/AUX 버스를 갖춰 다양한 라이브 이벤트·스트리밍 응용에 적합하다. 4K는 지원하지 않으며, 현재 홈페이지에 'Discontinued' 표기가 있다.",
-    "SDI 입력 4계통(디인터레이서 내장으로 1080i/1080p 소스 혼용 가능)과 HDMI 입력 2계통(그중 1계통은 RGB/컴포넌트 겸용)을 제공하며, Auto Mixing 기능이 여러 마이크·비디오 소스의 오디오 레벨을 자동으로 균형 있게 조정해 준다. Smart Tally(무선 IP 기반 텔리)와 LAN을 통한 RCS(Remote Control Software) 원격 제어를 지원하고, JVC·Panasonic·Sony·PTZOptics·Avonic 등 여러 브랜드의 PTZ 카메라를 통합 제어할 수 있다.",
-    "Version 3.1 업데이트로 플래그십 V-160HD에서 도입된 선택형 dry/pre-fader/post-fader AUX 버스, SDI 임베디드 오디오, 확장된 카메라 원격 제어 호환성이 추가되었다. 8종 프리셋 메모리, PinP(사각/원/하트/다이아몬드)와 4종 Split, DSK 등의 비디오 이펙트를 지원한다."
-  ],
+  "overview": "V-60HD는 카메라 소스용 SDI 입력과 데이터·컴퓨터·태블릿용 스케일드 HDMI 입력을 결합해 라이브 이벤트 제작과 스트리밍 워크플로우를 단순화한 프로덕션 스위처다. 멀티채널 임베디드 오디오, XLR·RCA 아날로그 입력, SDI/HDMI 디지털 소스의 디임베드 오디오 등 강력한 오디오 기능과 Program/AUX 버스를 갖춰 다양한 라이브 이벤트·스트리밍 응용에 적합하다. 4K는 지원하지 않으며, 현재 홈페이지에 'Discontinued' 표기가 있다.\n\nSDI 입력 4계통(디인터레이서 내장으로 1080i/1080p 소스 혼용 가능)과 HDMI 입력 2계통(그중 1계통은 RGB/컴포넌트 겸용)을 제공하며, Auto Mixing 기능이 여러 마이크·비디오 소스의 오디오 레벨을 자동으로 균형 있게 조정해 준다. Smart Tally(무선 IP 기반 텔리)와 LAN을 통한 RCS(Remote Control Software) 원격 제어를 지원하고, JVC·Panasonic·Sony·PTZOptics·Avonic 등 여러 브랜드의 PTZ 카메라를 통합 제어할 수 있다.\n\nVersion 3.1 업데이트로 플래그십 V-160HD에서 도입된 선택형 dry/pre-fader/post-fader AUX 버스, SDI 임베디드 오디오, 확장된 카메라 원격 제어 호환성이 추가되었다. 8종 프리셋 메모리, PinP(사각/원/하트/다이아몬드)와 4종 Split, DSK 등의 비디오 이펙트를 지원한다.",
   "images": [
     {
       "role": "Main",
