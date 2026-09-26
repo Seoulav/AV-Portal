@@ -230,7 +230,7 @@
       "name": "화면 보정",
       "value": "스마트 캘리브레이션",
       "unit": "",
-      "condition": "갤럭시 S9+ 이상 일부 특정 모델에서만 지원",
+      "condition": "특정 모바일 기기에서만 지원",
       "source": "P",
       "verification": "FOUND"
     }
@@ -238,8 +238,8 @@
   "io": [
     {
       "group": "Wireless",
-      "connector": "스마트 뷰+",
-      "signal": "무선 화면 공유",
+      "connector": "무선(물리 단자 없음)",
+      "signal": "무선 화면 공유(스마트 뷰+)",
       "direction": "IN",
       "quantity": "",
       "protocol": "SmartView+",
