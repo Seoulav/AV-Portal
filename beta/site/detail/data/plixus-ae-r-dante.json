@@ -1,0 +1,510 @@
+{
+  "manufacturer": "Televic",
+  "productName": "Plixus AE-R Dante",
+  "model": "Plixus AE-R Dante (71.98.2904)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conference System"
+  ],
+  "english": "Plixus AE-R Dante is a 19-inch rack-mountable Plixus audio engine with built-in recording, an integrated web server, and a 64x64 Dante audio networking card for interfacing with third-party DSPs, mixers and recording devices.",
+  "korean": "Plixus AE-R Dante는 19인치 랙 마운트형 Plixus 오디오 엔진으로, 내장 녹음 기능과 웹서버, 64x64 채널 Dante 오디오 네트워킹 카드를 탑재하여 서드파티 DSP·믹서·녹음 장비와 손쉽게 연동할 수 있다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, Plixus Central Equipment 페이지)와 71.98.2904 데이터시트(PDF, Version 1.2, 2024년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Plixus AE-R Dante는 Plixus 회의 네트워크를 구동하는 1U 랙 마운트형 오디오 엔진으로, 별도의 PC 없이도 핵심 오디오 처리 기능을 자체적으로 수행한다. 4개의 회의 네트워크 포트를 통해 Cat5e 실드 케이블 한 가닥으로 델리게이트 유닛을 데이지체인 또는 폐루프(Dual Branch 이중화 기술)로 연결하며, 패킷 기반의 독자 프로토콜(Plixus)로 대역폭을 동적으로 할당해 48kSps 무압축 오디오 품질을 보장한다.\n\n내장 8GB 저장소에 128kbps MP3 기준 100시간 이상 녹음이 가능하며, USB 포트로 최대 500GB까지 저장 용량을 확장할 수 있다. Dante(64x64) 오디오 네트워킹 카드를 탑재해 Lingua Infrared, DSP, 오디오 믹서, 녹음 장비 등 서드파티 Dante 지원 기기와 손쉽게 연동되며, Dante Controller를 통해 라우팅을 세밀하게 제어할 수 있다.\n\n외장형 전원 공급 방식으로 본체 내부에 팬이 없어 무소음이며 1U의 슬림한 폭을 유지하고, 이중 전원 슬롯을 통해 추가 이중화도 지원한다. 기본 11개 언어(+Floor) 통역 채널을 지원하며 라이선스로 최대 63개 언어(+Floor)까지 확장 가능하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "plixus-ae-r-dante-main.webp",
+      "alt": "Plixus AE-R Dante 랙형 오디오 엔진",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "Plixus AE-R Dante",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2119x1123",
+      "resolution": "2119x1123",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Plixus AE-R Dante Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    }
+  ],
+  "features": [
+    {
+      "text": "Dante 64x64 오디오 네트워킹 카드로 서드파티 DSP·믹서·녹음 장비와 간편한 연동",
+      "source": "P"
+    },
+    {
+      "text": "내장 8GB 저장소(최대 100시간 이상 MP3 녹음) + USB로 최대 500GB 확장",
+      "source": "P"
+    },
+    {
+      "text": "패킷 기반 독자 프로토콜과 자가 치유(Self-Healing) 토폴로지로 케이블/유닛 장애 시에도 무중단 운영",
+      "source": "P"
+    },
+    {
+      "text": "48kSps 무압축 HD 오디오 전송, 24bit/48kHz Dante 인터페이스",
+      "source": "P"
+    },
+    {
+      "text": "기본 11개 언어(+Floor) 통역 채널 지원, 라이선스로 최대 63개 언어까지 확장",
+      "source": "P"
+    },
+    {
+      "text": "내장 웹서버를 통한 마이크 관리·통역 채널·오디오 라우팅·카메라 제어 및 진단(Diagnostics) 기능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "Steel",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Black, RAL9011",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(W x H x D)",
+      "value": "482 x 43 x 195",
+      "unit": "mm",
+      "condition": "1U",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(W x H x D)",
+      "value": "567 x 141 x 257",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "2700",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "4800",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 공급",
+      "value": "External, 90-264 VAC, 47-63 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비 전력",
+      "value": "최대 445",
+      "unit": "W",
+      "condition": "외부 전원 포함",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "오디오 품질",
+      "value": "24 bit, 48 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power Over Cable",
+      "name": "전압/연속 출력 전류",
+      "value": "48 VDC / 2A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Recording",
+      "name": "내부 저장",
+      "value": "8",
+      "unit": "GB",
+      "condition": "MP3, 64/128/196/256 kbps",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Recording",
+      "name": "외부 저장",
+      "value": "USB 2.0, NTFS, 최대 500GB",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "케이블 규격",
+      "value": "Cat 5e, 실드, FTP",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "유닛 간 최대 거리",
+      "value": "80",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "루프 내 최대 총 케이블 길이",
+      "value": "400",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - Conference",
+      "name": "커넥터/보안",
+      "value": "RJ45 표준(실드), 802.1X(MD5, TLS, PEAP-MSCHAPv2)-LAN 포트 한정(Confero 사용 시)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network - IP Control",
+      "name": "제어 포트 링크 속도",
+      "value": "100",
+      "unit": "Mbps",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Dante Interface",
+      "name": "링크 속도",
+      "value": "1",
+      "unit": "Gbps",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Dante Interface",
+      "name": "샘플레이트/비트폭",
+      "value": "48kHz, 24bit",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Dante Interface",
+      "name": "최대 입출력 채널",
+      "value": "64 in / 64 out",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Analog Audio",
+      "name": "AUX IN XLR 발란스",
+      "value": "공칭 +4 dBu, 최대 +24 dBu, 임피던스 10kΩ, 다이나믹레인지 > 90dB, 20-20,000Hz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Analog Audio",
+      "name": "AUX OUT 발란스",
+      "value": "공칭 +4 dBu, 최대 +24 dBu, 다이나믹레인지 > 90dB, THD 0.1%, 부하 임피던스 > 600Ω",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Analog Audio",
+      "name": "AUX IN RCA 언밸런스",
+      "value": "공칭 -10 dBV, 최대 10 dBV, 임피던스 10kΩ, 다이나믹레인지 > 90dB",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Analog Audio",
+      "name": "AUX OUT RCA 언밸런스",
+      "value": "공칭 -10 dBV, 최대 10 dBV, 다이나믹레인지 > 90dB, THD 0.1%, 부하 임피던스 > 10kΩ",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "System",
+      "name": "통역 채널",
+      "value": "기본 11개 언어 + Floor(라이선스로 최대 63개 언어 + Floor까지 확장)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "5 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "회의 네트워크 포트(델리게이트 유닛)",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "Plixus 독자 프로토콜",
+      "availability": "",
+      "condition": "데이지체인 또는 폐루프(Dual Branch)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Dante",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante (AES67 계열)",
+      "availability": "",
+      "condition": "이중화(redundant) 포트",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "LAN(IP 제어)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB 2.0",
+      "signal": "녹음 확장 저장소",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "최대 500GB, NTFS",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Input",
+      "connector": "XLR",
+      "signal": "AUX IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Balanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "XLR",
+      "signal": "AUX OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "Balanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Input",
+      "connector": "RCA (Cinch)",
+      "signal": "AUX IN",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "Unbalanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "RCA (Cinch)",
+      "signal": "AUX OUT",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "Unbalanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "전용 전원 커넥터",
+      "signal": "전원 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "이중화 지원(2번째 슬롯에 예비 전원 장착 가능)",
+      "condition": "외부 전원공급장치(Plixus PS/Plixus AE-R PS) 필요",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (Plixus Central Equipment 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/products/plixus/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.2904, Plixus AE-R Dante, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M2",
+      "name": "제조사 공식 Plixus 설치 가이드",
+      "url": "https://documents.televic.digital/conference/index.php/s/LjLPYwz5MFxXHtC",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic Plixus AE-R Dante 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

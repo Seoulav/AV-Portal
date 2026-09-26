@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 64개
+- Product Detail: 236개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -18,6 +18,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://bssaudio.com/en-US/products/EC-4BV
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16058660935uecux3ldj.pdf&o_file_name=ec-4bv+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ec-4bv
 
 - 제품: Audinate AVIO USB C
   분류: 오디오 | Audio | Audio Interface
@@ -44,6 +45,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762892auukm8e4t4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-300bl
 
 - 제품: Powersoft Mezzo 322 AD
   분류: 오디오 | Audio | Amplifier
@@ -57,36 +59,42 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-2404-dspd
 
 - 제품: Powersoft Quattrocanali 4804 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-4804-dspd
 
 - 제품: Powersoft Duecanali 1604 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-1604-dsp
 
 - 제품: Shure ULXD4Q
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   공식 링크: https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4q
 
 - 제품: Shure QLXD4
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd4
 
 - 제품: Shure UA874XA
   분류: 오디오 | Audio | Antenna
   종류: 장비
   공식 링크: https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA874
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua874xa
 
 - 제품: Sony BRC-AM7
   분류: 영상 | Video | Camera
@@ -133,6 +141,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/
   매뉴얼: https://www.netgear.com/support/product/xsm4216f
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=xsm4216f
 
 - 제품: Logitech Rally Bar
   분류: 화상회의 | Conferencing | Video Bar
@@ -145,18 +154,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2220B/s/SPT_V11HB05851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2220b
 
 - 제품: Epson EB-L790SU
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790SU/s/SPT_V11HB30051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l790su
 
 - 제품: Epson EB-L690U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l690u
 
 - 제품: Epson EB-L530U
   분류: 프로젝터 | Display | Projector
@@ -188,96 +200,112 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG43U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg43u800fnfxkr
 
 - 제품: Samsung HG50U800FNFXKR
   분류: 사이니지 | Display | Hospitality TV
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG50U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg50u800fnfxkr
 
 - 제품: Samsung HG65U800FNFXKR
   분류: 사이니지 | Display | Hospitality TV
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG65U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg65u800fnfxkr
 
 - 제품: Samsung LH32QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH32QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh32qmcebgcxkr
 
 - 제품: Samsung LH43QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH43QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr
 
 - 제품: Samsung LH85QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh85qmcebgcxkr
 
 - 제품: Samsung LH98QECEDGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh98qecedgcxkr
 
 - 제품: Samsung LH98QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH98QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh98qmcebgcxkr
 
 - 제품: Samsung LH43QHCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh43qhcebgcxkr
 
 - 제품: Samsung LH75QHCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH75QHCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75qhcebgcxkr
 
 - 제품: Samsung LH115QHFEBGXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH115QHFEBGXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh115qhfebgxkr
 
 - 제품: Samsung LH55VMCRBGBXKR
   분류: 사이니지 | Display | Video Wall
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55VMCRBGBXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55vmcrbgbxkr
 
 - 제품: Samsung LH55VHCRBGBXKR
   분류: 사이니지 | Display | Video Wall
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55VHCRBGBXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55vhcrbgbxkr
 
 - 제품: Samsung KQ75LSF03WFXKR
   분류: 사이니지 | Display | Display
   종류: 장비
   공식 링크: https://www.samsung.com/hk_en/support/model/KQ75LSF03WFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=KQ75LSF03WFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=kq75lsf03wfxkr
 
 - 제품: Samsung LH55WMFWBGCXKR
   분류: 사이니지 | Display | Interactive Display
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55WMFWBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr
 
 - 제품: Samsung LH75WMFWLGCXKR
   분류: 사이니지 | Display | Interactive Display
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH75WMFWLGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr
 
 - 제품: Sony SRG-X40UH
   분류: 영상 | Video | Camera
@@ -339,48 +367,56 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-02hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-02hd
 
 - 제품: Roland V-1HD+
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-1hd_plus/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-1hd-plus
 
 - 제품: Roland VR-4HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/vr-4hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=vr-4hd
 
 - 제품: Roland VR-6HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/vr-6hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/vr-6hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=vr-6hd
 
 - 제품: Roland V-8HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-8hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-8hd
 
 - 제품: Roland V-60HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-60hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-60hd
 
 - 제품: Roland V-80HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-80hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-80hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-80hd
 
 - 제품: Roland V-160HD
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-160hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-160hd/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-160hd
 
 - 제품: Lumantek ez-Pro VS5
   분류: 영상 | Video | Signal Switcher
@@ -450,54 +486,63 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=novastar-h5
 
 - 제품: NovaStar H2
   분류: 영상 | Video | Video Processor
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=novastar-h2
 
 - 제품: NovaStar H_2xRJ45+1xHDMI1.3 preview card
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-preview-card-2xrj45-1xhdmi13
 
 - 제품: NovaStar H_4xHDMI input card
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-4xhdmi
 
 - 제품: NovaStar H_1xHDMI2.0+1xDP1.2 input card(4K)
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-hdmi20-dp12-4k
 
 - 제품: NovaStar H_1xHDMI2.0 input card(4K)
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-hdmi20-4k
 
 - 제품: NovaStar H_1xDP1.2 input card(4K)
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-dp12-4k
 
 - 제품: NovaStar H_2xHDMI2.0+2xDP1.2 input card
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-2xhdmi20-2xdp12
 
 - 제품: NovaStar H_1x12G SDI input card
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-12g-sdi
 
 - 제품: Colorlight X100Pro 7U
   분류: 영상 | Video | Video Processor
@@ -564,27 +609,32 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrix-ns-fr2
 
 - 제품: Ross Video ULTRIX-HDX-IO
   분류: 영상 | Video | Router Module
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrix-hdx-io
 
 - 제품: Ross Video ULTRIPOWER
   분류: 영상 | Video | Power Supply
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultripower
 
 - 제품: Ross Video ULTRIPOWER-PS
   분류: 영상 | Video | Power Supply
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultripower-ps
 
 - 제품: Ross Video ULTRITOUCH-2-HR
   분류: 영상 | Video | Control Panel
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultritouch/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultritouch-2-hr
 
 - 제품: Yamaha Tio1608-D2
   분류: 오디오 | Audio | Audio Interface
@@ -598,161 +648,188 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761888fzzsbzteoz.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-300
 
 - 제품: Crown CDI 2/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/CDi-2-300
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762827nmoims0at3.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-300
 
 - 제품: Crown DCI 2/300N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/dci-2-300n.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763954d5bkckkyeq.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-300n
 
 - 제품: Crown I-TECH 4X3500HD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/i-tech-4x3500hd
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605765434a2ngresszr.pdf&o_file_name=crown+i-tech+4x3500+hd+%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=i-tech-4x3500hd
 
 - 제품: Crown CDI 2/600BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/cdi-2-600bl
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763015ow3gweitfl.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-600bl
 
 - 제품: Crown DCI 4/300DA
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en/products/dci-4-300da
   매뉴얼: ./manuals/crown-dci-install-da-series-manual.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300da
 
 - 제품: Crown ComTech D 4125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/ctd-4125
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788184832oije7xqbsg.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-4125
 
 - 제품: Crown ComTech D 8125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.crownaudio.com/en-US/products/ctd-8125
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1787821350tikkz3quya.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-8125
 
 - 제품: Powersoft Mezzo 602 AD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-602-ad
 
 - 제품: Powersoft Mezzo 322 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-322-a
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-322-a
 
 - 제품: Powersoft Mezzo 602 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-602-a
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-602-a
 
 - 제품: Powersoft Duecanali 1604 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-1604-dspd
 
 - 제품: Powersoft Quattrocanali 1204 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-1204-dspd
 
 - 제품: Powersoft Duecanali 804 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-804-dsp
 
 - 제품: Powersoft Quattrocanali 1204 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-1204-dsp
 
 - 제품: Powersoft Quattrocanali 4804 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-4804-dsp
 
 - 제품: Shure A900W-R-GM
   분류: 오디오 | Audio | Microphone Accessory
   종류: 장비
   공식 링크: https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM
   매뉴얼: https://www.shure.com/en-US/docs/guide/A900-GM
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=a900w-r-gm
 
 - 제품: Shure MX395
   분류: 오디오 | Audio | Ceiling Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/docs/guide/MX395
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx395
 
 - 제품: Shure ULXD2/BETA58
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-beta58
 
 - 제품: Shure ULXD2/BETA87
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-beta87
 
 - 제품: Shure ULXD1
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd1
 
 - 제품: Shure ULXD8
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd8
 
 - 제품: Shure UA844+SWB
   분류: 오디오 | Audio | Antenna Distributor
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA844SWBplus
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua844-swb
 
 - 제품: Shure MX418D/C
   분류: 오디오 | Audio | Microphone
   종류: 장비
   공식 링크: https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC
   매뉴얼: https://www.shure.com/en-US/docs/guide/MX400D
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx418d-c
 
 - 제품: JBL Control 23-1
   분류: 오디오 | Audio | Loudspeaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/jbl-professional-control-23-1
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605095541geg5exvrrk.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-23-1
 
 - 제품: JBL Control 25-1
   분류: 오디오 | Audio | Loudspeaker
   종류: 장비
   제품군 링크: https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605144420obrb68f8px.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-25-1
 
 - 제품: JBL Control 28-1
   분류: 오디오 | Audio | Loudspeaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-28-1/1000
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16051684686gjb6d76u3.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-28-1
 
 - 제품: JBL AC18/95
   분류: 오디오 | Audio | Loudspeaker
@@ -760,6 +837,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://jblpro.com/en-US/products/ac18-95.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605154898rrmbu4pd7b.pdf&o_file_name=jbl_ac18_95-082016.pdf
   참고자료: ./manuals/jbl-ae-series-u-bracket-handbook.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ac18-95
 
 - 제품: JBL AC18/26
   분류: 오디오 | Audio | Loudspeaker
@@ -767,72 +845,84 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://jblpro.com/en-US/products/ac18-26
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605766688m0d2qhy2fq.pdf&o_file_name=ac18_26+spec+sheet.pdf
   참고자료: ./manuals/jbl-ae-series-u-bracket-handbook.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ac18-26
 
 - 제품: JBL CONTROL 412C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-412c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345034oy3sqaxuwu.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-412ct
 
 - 제품: JBL CONTROL 414C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-414c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345342pm82utzzmh.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-414ct
 
 - 제품: JBL CONTROL 416C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-416c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770339666vf9njnubod.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-416ct
 
 - 제품: JBL CONTROL 418C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-418c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770346024e22uie18g3.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-418ct
 
 - 제품: JBL CONTROL 447C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/es/products/control-447c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770615261tnq7fybv3j.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-447ct
 
 - 제품: JBL CONTROL 419CS/T
   분류: 오디오 | Audio | Subwoofer
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-419cs-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743146874esba1f630q.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-419cst
 
 - 제품: JBL CONTROL 440CS/T
   분류: 오디오 | Audio | Subwoofer
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-440cs-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770616172cx61md0n71.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-440cst
 
 - 제품: JBL CONTROL 424C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-424c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743129675qsfxza301o.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-424ct
 
 - 제품: JBL CONTROL 424LP
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-424lp
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431407306qhm9nxa4l.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-424lp
 
 - 제품: JBL CONTROL 426C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-426c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743143029g164fiofxh.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-426ct
 
 - 제품: JBL CONTROL 426LP
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-426lp
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431441528wpwmyacz4.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-426lp
 
 - 제품: AMX NX-3200
   분류: 제어 | Control | Control Processor
@@ -895,96 +985,112 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/
   매뉴얼: https://www.netgear.com/support/product/gsm4212p
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4212p
 
 - 제품: NETGEAR GSM4230P
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/
   매뉴얼: https://www.netgear.com/support/product/gsm4230p
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4230p
 
 - 제품: NETGEAR GSM4230PX
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/
   매뉴얼: https://www.netgear.com/support/product/gsm4230px
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4230px
 
 - 제품: NETGEAR GSM4248P
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/
   매뉴얼: https://www.netgear.com/support/product/gsm4248p
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4248p
 
 - 제품: Epson EB-PQ2216B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PQ2216B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2216b
 
 - 제품: Epson EB-PQ2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PQ2213B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2213b
 
 - 제품: Epson EB-L895E
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151
   매뉴얼: https://www.epson.co.kr/c/EB-L895E/s/SPT_V11HB24151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l895e
 
 - 제품: Epson EB-L795SE
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151
   매뉴얼: https://www.epson.co.kr/c/EB-L795SE/s/SPT_V11HB26151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l795se
 
 - 제품: Epson EB-L695SE
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L695SE/s/SPT_V11HB36151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l695se
 
 - 제품: Epson EB-PU2216B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU2216B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2216b
 
 - 제품: Epson EB-PU2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU2213B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2213b
 
 - 제품: Epson EB-PU2010W/B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2010B-NL/s/SPT_V11HA52840#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2010w-b
 
 - 제품: Epson EB-PU1008B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU1008B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu1008b
 
 - 제품: Epson EB-L895U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L895U/s/SPT_V11HB27151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l895u
 
 - 제품: Epson EB-L790U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790U/s/SPT_V11HB28051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l790u
 
 - 제품: Epson EB-L260F
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L260F/s/SPT_V11HA69051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l260f
 
 - 제품: Panasonic PT-MZ14K
   분류: 프로젝터 | Display | Projector
@@ -1054,72 +1160,84 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/smartvision40
   매뉴얼: https://www.yealink.com/en/product-resource/smartvision40
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=smartvision40
 
 - 제품: Yealink VCM35
   분류: 화상회의 | Conferencing | Microphone
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-vcm35
   매뉴얼: https://www.yealink.com/en/product-resource/accessories-vcm35
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=vcm35
 
 - 제품: Yealink UVC86
   분류: 화상회의 | Conferencing | Video Conferencing System
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-detail/compatible-camera-uvc86
   매뉴얼: https://www.yealink.com/en/product-resource/compatible-camera-uvc86
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=uvc86
 
 - 제품: Yealink CM20
   분류: 화상회의 | Conferencing | Microphone
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-cm20
   매뉴얼: https://www.yealink.com/en/product-resource/accessories-cm20
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cm20
 
 - 제품: Yealink CS10
   분류: 화상회의 | Conferencing | Speaker
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d
   매뉴얼: https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cs10
 
 - 제품: Yealink AVHub
   분류: 화상회의 | Conferencing | Hub
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/room-system-avhub
   매뉴얼: https://www.yealink.com/en/product-resource/room-system-avhub
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=avhub
 
 - 제품: Yealink UVC85-BYOD
   분류: 화상회의 | Conferencing | Video Conferencing System
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/uvc85-byod
   매뉴얼: https://www.yealink.com/en/product-resource/uvc85-byod
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=uvc85-byod
 
 - 제품: Yealink CPE40
   분류: 화상회의 | Conferencing | Speakerphone
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-detail/cpe40
   매뉴얼: https://www.yealink.com/en/product-resource/cpe40
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cpe40
 
 - 제품: NovaStar H_4x3 SDI input card
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-4x3g-sdi
 
 - 제품: NovaStar H_4xHDMI output card (HDMI 1.4 - Dual Link)
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-output-card-4xhdmi-dl
 
 - 제품: NovaStar H_1xHDMI2.0 output card(4K)
   분류: 영상 | Video | Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-output-card-hdmi20-4k
 
 - 제품: NovaStar H_800W
   분류: 영상 | Video | Video Processor
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=h-800w-psu
 
 - 제품: Ross Video ULTRIMIX-MXR
   분류: 영상 | Video | Router Module
@@ -1144,12 +1262,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-101
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-101
 
 - 제품: BSS Audio BLU-100
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-100
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754472qtmq1puk0x.pdf&o_file_name=bss_blu-100_kor_%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-100
 
 - 제품: BSS Audio BLU-160
   분류: 오디오 | Audio | Audio Processor
@@ -1158,12 +1278,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754235ycz0u085f3.pdf&o_file_name=bss+blu_%EB%A7%A4%EB%89%B4%EC%96%BC_kor.pdf
   참고자료: https://bssaudio.com/en/product_families/input-output-cards
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-160
 
 - 제품: BSS Audio BLU-50
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-50
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-50
 
 - 제품: BSS Audio BLU AEC-IN
   분류: 오디오 | Audio | Audio Processor
@@ -1171,6 +1293,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-aec-in
 
 - 제품: BSS Audio BLUCARD-IN
   분류: 오디오 | Audio | Audio Processor
@@ -1178,6 +1301,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blucard-in
 
 - 제품: BSS Audio BLUCARD-OUT
   분류: 오디오 | Audio | Audio Processor
@@ -1185,12 +1309,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/analog-output-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blucard-out
 
 - 제품: BSS Audio BLU-DAN
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/support_downloads/products/blu-dan
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605866326oo14knng0m.pdf&o_file_name=blu-da_and_blu-dan_install_guide_5099141-00-a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-dan
 
 - 제품: Audinate AVIO BT
   분류: 오디오 | Audio | Audio Interface
@@ -1217,12 +1343,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-cu
 
 - 제품: Televic D-Cerno AE
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/d-cerno/
   매뉴얼: https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-ae
 
 - 제품: Televic D-Cerno Advanced
   분류: 오디오 | Conferencing | Conference System
@@ -1234,48 +1362,57 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-d-sl
 
 - 제품: Televic D-Mic 50 SL
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/microphones/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-mic-50-sl
 
 - 제품: Televic Plixus AE-R Dante
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-ae-r-dante
 
 - 제품: Televic Plixus AE-R PS
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-ae-r-ps
 
 - 제품: Televic Confidea FLEX
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/confidea-flex/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=confidea-flex
 
 - 제품: Televic Plixus NEXT
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/plixus/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=plixus-next
 
 - 제품: Televic D-Mic 40 SL
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/microphones/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-mic-40-sl
 
 - 제품: Shure MXCWAPT-W
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxcwapt-w
 
 - 제품: Shure MXC420/C
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxc420-c
 
 - 제품: Yamaha DM3
   분류: 오디오 | Audio | Mixer
@@ -1303,180 +1440,210 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761971s4gdgy7izt.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-600
 
 - 제품: Crown DCI 4/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057621340oy9dhzwum.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300
 
 - 제품: Crown DCI 4/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057622030qrbfvpjkg.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600
 
 - 제품: Crown CDI 2/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762955gde1sr7o8x.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-600
 
 - 제품: Crown CDI 2/1200
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987728x5rl649ihn.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-1200
 
 - 제품: Crown CDI 4/300
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763409ao6h09cvuq.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-300
 
 - 제품: Crown CDI 4/600
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_160498811380y1239y95.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-600
 
 - 제품: Crown CDI 4/1200
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049878640zsz4tlbyz.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-1200
 
 - 제품: Crown DCI 2/600N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764047lp6k9gucvl.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-2-600n
 
 - 제품: Crown DCI 4/300N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764597xhkacai6zx.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-300n
 
 - 제품: Crown DCI 4/600N
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764672nupmdpxixt.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600n
 
 - 제품: Crown CDI 2/1200BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987999i44fv0ugee.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-2-1200bl
 
 - 제품: Crown CDI 4/300BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057634633isrk0v367.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-300bl
 
 - 제품: Crown CDI 4/600BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987936vunfkk3ev4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-600bl
 
 - 제품: Crown CDI 4/1200BL
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987793jgwsejke1b.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cdi-4-1200bl
 
 - 제품: Crown DCI 4/600DA
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series
   매뉴얼: ./manuals/crown-dci-install-da-series-manual.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dci-4-600da
 
 - 제품: Crown ComTech D 2125
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.crownaudio.com/en-US/product_families/comtech-d-series
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788185624fwhgji4oak.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-2125
 
 - 제품: Powersoft Mezzo 324 AD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-324-ad
 
 - 제품: Powersoft Mezzo 604 AD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-604-ad
 
 - 제품: Powersoft Mezzo 324 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-324-a
 
 - 제품: Powersoft Mezzo 604 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-604-a
 
 - 제품: Powersoft Duecanali 804 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-804-dspd
 
 - 제품: Powersoft Quattrocanali 2404 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-2404-dsp
 
 - 제품: Shure MXA925W-R
   분류: 오디오 | Audio | Ceiling Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/microphones/mxa925
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXA925
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxa925w-r
 
 - 제품: Shure ULXD4D
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4d
 
 - 제품: Shure ULXD4
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4
 
 - 제품: Shure ULXD2/KSM9
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-ksm9
 
 - 제품: Shure QLXD2/BETA87A
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd2-beta87a
 
 - 제품: Shure QLXD2/BETA58
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd2-beta58
 
 - 제품: Shure QLXD1
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd1
 
 - 제품: Shure SLXD4D
   분류: 오디오 | Audio | Wireless Microphone System
@@ -1519,12 +1686,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/accessories/ua864
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA864
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua864a
 
 - 제품: Shure MX392/C
   분류: 오디오 | Audio | Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/microphones/mx392
   매뉴얼: https://www.shure.com/en-US/docs/guide/MX39x
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx392-c
 
 - 제품: Lightware HDMI20-OPTJ-TX90
   분류: 영상 | Video | Extender
@@ -1557,6 +1726,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/accessories/ua845uwb
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA845UWB
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua845uwb
 
 - 제품: NETGEAR GS728TPP
   분류: 제어 | Network | Network Switch
@@ -1569,12 +1739,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/
   매뉴얼: https://www.netgear.com/support/product/gs116pp
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gs116pp
 
 - 제품: NETGEAR GS108PP
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/
   매뉴얼: https://www.netgear.com/support/product/gs108pp
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gs108pp
 
 - 제품: Logitech Rally Mic Pod
   분류: 화상회의 | Conferencing | Microphone

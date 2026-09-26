@@ -1,0 +1,342 @@
+{
+  "manufacturer": "Ross Video",
+  "productName": "ULTRIX-HDX-IO",
+  "model": "ULTRIX-HDX-IO",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Router Module"
+  ],
+  "english": "The ULTRIX-HDX-IO is a high-performance SDI I/O plug-in card for the Ultrix router platform, providing 16x16 HD-BNC SDI I/O from 270Mb/s to 12Gb/s per port, plus 2 auxiliary SFP ports, and powering Ultrix's software-defined multiviewer, audio mixing, and processing features.",
+  "korean": "ULTRIX-HDX-IO는 Ultrix 라우터 플랫폼용 고성능 SDI I/O 플러그인 카드로, 포트당 270Mb/s~12Gb/s를 지원하는 16×16 HD-BNC SDI I/O와 AUX SFP 포트 2개를 제공하며, Ultrix의 멀티뷰어·오디오 믹싱·신호처리 등 소프트웨어 정의 기능의 처리 능력을 담당한다.",
+  "verificationSummary": "제조사 공식 Ultrix I/O Cards 페이지와 Ultrix Specifications 페이지, Ultrix User Guide(2101DR-004)로 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ULTRIX-HDX-IO는 Ultrix 모듈형 라우터 프레임(ULTRIX-NS-FR1/FR2/FR5, ULTRIX-FR5/FR12)에 장착하는 실제 물리적 SDI I/O 플러그인 카드이다. 16개의 HD-BNC 입력과 16개의 HD-BNC 출력을 제공하며, 모든 포트가 270Mb/s부터 12Gb/s(UHD)까지의 SDI 신호를 지원한다. 여기에 더해 AUX A/B 포트는 추가 SDI I/O, HDMI I/O 또는 64채널 MADI I/O로 SFP를 교체해 사용할 수 있고, AUX C/D 포트는 라이선스 시 Dante 오디오 I/O 또는 Ultristream(NDI) 멀티뷰어 출력으로 활용할 수 있다.\n\n이 카드는 단순 I/O 포트 제공을 넘어 Ultriscape 멀티뷰어(카드당 최대 3헤드 라이선스), Ultrisync 프레임 동기화, Ultriformat 포맷 변환, Ultriproc(-3DLUT) 색보정/HDR 변환, Ultristream, Ultrimix-Dante 등 Ultrix의 각종 소프트웨어 정의 라이선스 기능이 실제로 동작하는 처리 엔진 역할도 겸한다. 카드를 ProcMode로 설정하면 I/O 전용이 아닌 16개 내부 처리 경로를 갖는 고밀도 프로세싱 엔진으로 전환할 수도 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ultrix-hdx-io-main.webp",
+      "alt": "ULTRIX-HDX-IO SDI I/O 카드 (Ultrix I/O Cards 제품 페이지 공식 이미지)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRIX-HDX-IO",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2048x521",
+      "resolution": "2048x521",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ULTRIX-HDX-IO 공식 자료",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
+    }
+  ],
+  "features": [
+    {
+      "text": "16×16 HD-BNC SDI I/O, 전 포트 270Mb/s~12Gb/s(UHD) 지원",
+      "source": "P"
+    },
+    {
+      "text": "AUX A/B 포트로 추가 SDI/HDMI I/O 또는 64채널 MADI I/O 확장 가능",
+      "source": "P"
+    },
+    {
+      "text": "라이선스 시 AUX C/D 포트로 Dante 오디오 I/O 또는 Ultristream(NDI) 멀티뷰어 출력 제공",
+      "source": "P"
+    },
+    {
+      "text": "모든 출력에 표준 제공되는 Clean/Quiet 스위칭 및 Ultrimix 오디오 임베드/디임베드 처리",
+      "source": "P"
+    },
+    {
+      "text": "Ultriscape, Ultrisync, Ultriformat, Ultriproc(-3DLUT), Ultristream, Ultrimix-Dante 등 소프트웨어 정의 기능의 라이선스 처리 엔진 역할",
+      "source": "P"
+    },
+    {
+      "text": "ProcMode 설정 시 16개 내부 경로를 가진 고밀도 신호처리 엔진으로 전환 가능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O",
+      "name": "신호 형식",
+      "value": "SDI, 270Mb/s ~ 12Gb/s",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "포트 수량",
+      "value": "16",
+      "unit": "포트",
+      "condition": "입력/출력 각각",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "커넥터",
+      "value": "HD-BNC",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "임피던스",
+      "value": "75",
+      "unit": "Ohm",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "출력 진폭",
+      "value": "800mV ±10%",
+      "unit": "",
+      "condition": "출력 기준",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "리턴 로스",
+      "value": "Per SMPTE 2082-1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "지터",
+      "value": "<0.2 UI(3G 이하 정렬)/<0.3 UI(12G 정렬)/<2UI(270M 타이밍)/<1UI(1.5G 타이밍)/<2UI(3G,12G 타이밍)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AUX",
+      "name": "AUX A/B 포트 기능",
+      "value": "추가 SDI I/O, HDMI I/O 또는 64채널 MADI I/O",
+      "unit": "",
+      "condition": "SFP 교체 방식",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AUX",
+      "name": "AUX C 포트 기능",
+      "value": "Dante I/O (라이선스 시)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AUX",
+      "name": "AUX D 포트 기능",
+      "value": "Ultristream MV 출력 또는 Dante I/O (라이선스 시)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "I/O당 오디오 채널 수",
+      "value": "16",
+      "unit": "채널",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Processing",
+      "name": "표준 처리 기능",
+      "value": "Ultriclean (Clean/Quiet 스위칭)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Processing",
+      "name": "라이선스 가능 기능",
+      "value": "UltriSRC, Ultrisync, Ultriscape, Ultriformat, Ultriproc, Ultriproc-3DLUT, Ultristream, Ultrimix-Dante",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Processing",
+      "name": "카드당 최대 라이선스 가능 Ultriscape 헤드 수",
+      "value": "3",
+      "unit": "헤드",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compatibility",
+      "name": "지원 프레임",
+      "value": "ULTRIX-NS-FR1, ULTRIX-NS-FR2, ULTRIX-NS-FR5, ULTRIX-FR5, ULTRIX-FR12",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "SDI",
+      "connector": "HD-BNC",
+      "signal": "SDI, 270Mb/s ~ 12Gb/s",
+      "direction": "입력",
+      "quantity": "16",
+      "protocol": "SDI",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "SDI",
+      "connector": "HD-BNC",
+      "signal": "SDI, 270Mb/s ~ 12Gb/s",
+      "direction": "출력",
+      "quantity": "16",
+      "protocol": "SDI",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AUX",
+      "connector": "SFP (AUX A, AUX B)",
+      "signal": "추가 SDI, HDMI 또는 64채널 MADI",
+      "direction": "양방향",
+      "quantity": "2",
+      "protocol": "SDI/HDMI/MADI",
+      "availability": "SFP 옵션에 따름",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AUX",
+      "connector": "SFP (AUX C, AUX D)",
+      "signal": "Dante 오디오 I/O 또는 Ultristream(NDI) 출력",
+      "direction": "양방향",
+      "quantity": "2",
+      "protocol": "Dante/NDI",
+      "availability": "라이선스 필요",
+      "condition": "AUX D는 Ultristream 또는 Dante 중 선택",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 Ultrix I/O Cards 페이지",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S1",
+      "name": "제조사 공식 Ultrix Specifications 페이지",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 Ultrix User Guide",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Ross Video ULTRIX-HDX-IO 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

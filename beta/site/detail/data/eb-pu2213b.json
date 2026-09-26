@@ -1,0 +1,532 @@
+{
+  "manufacturer": "Epson",
+  "productName": "EB-PU2213B",
+  "model": "EB-PU2213B",
+  "itemType": "PRODUCT",
+  "categories": [
+    "프로젝터",
+    "Display",
+    "Projector"
+  ],
+  "english": "Epson EB-PU2213B is a compact, high-brightness 3LCD laser projector delivering 13,000 lm color/white brightness with WUXGA resolution and 4K Enhancement.",
+  "korean": "엡손 EB-PU2213B는 13,000루멘의 컬러/백색 밝기와 WUXGA 해상도(4K Enhancement 지원)를 제공하는 콤팩트한 고광량 3LCD 레이저 프로젝터다.",
+  "verificationSummary": "제조사 공식 한글 사이트(epson.co.kr)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "EB-PU2213B는 엡손 고유의 액체 냉각 시스템과 최적화된 구조가 적용된 작고 가벼운 13,000루멘 3LCD 레이저 프로젝터다. 약 23.7kg의 무게와 콤팩트한 사이즈로 유연한 설치가 가능해 비용 절감 효과를 제공한다.\n\nWUXGA 해상도에 4K Enhancement 기술을 더해 4K 상당의 고해상도 영상을 지원하며 HDR10, Hybrid Log-Gamma를 지원한다. 다양한 옵티컬 렌즈 라인업과 제로 옵셋 초단초점 렌즈를 지원해 설치 환경에 맞는 최적의 구성이 가능하다.\n\n레이저 광원으로 최대 20,000시간까지 별도의 유지보수 없이 작동하며, IP5X 인증을 받은 광학 엔진과 레이저 광원 모듈로 방진 성능을 갖추었다. ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정 기능도 지원한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "eb-pu2213b-main.webp",
+      "alt": "엡손 EB-PU2213B 고광량 레이저 프로젝터 정면 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-PU2213B",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "690x460",
+      "resolution": "690x460",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "EB-PU2213B 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851"
+    }
+  ],
+  "features": [
+    {
+      "text": "22년 연속 세계 판매 1위 엡손 3LCD 프로젝터, 13,000루멘의 백색·컬러 밝기",
+      "source": "P"
+    },
+    {
+      "text": "4K Enhancement의 고해상도 영상, HDR10 및 Hybrid Log-Gamma 지원",
+      "source": "P"
+    },
+    {
+      "text": "IP5X 인증을 받은 광학 엔진과 레이저 광원 모듈로 탁월한 방진 기능",
+      "source": "P"
+    },
+    {
+      "text": "레이저 광원으로 최대 20,000시간 동안 별도의 유지보수가 필요 없음",
+      "source": "P"
+    },
+    {
+      "text": "정교한 액체 냉각 시스템으로 소형화 실현, 장소에 맞는 다양한 옵티컬 렌즈 라인업과 제로 옵셋 초단초점 렌즈 지원",
+      "source": "P"
+    },
+    {
+      "text": "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, NFC 기능으로 간편한 설정",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "백색 밝기",
+      "value": "13,000",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "컬러 밝기",
+      "value": "13,000",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "Over 5,000,000:1",
+      "unit": "",
+      "condition": "Auto Iris : On (Dynamic)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "기본 해상도",
+      "value": "WUXGA",
+      "unit": "",
+      "condition": "4K Enhancement 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "LCD 크기",
+      "value": "1.0",
+      "unit": "인치(2.54cm)",
+      "condition": "C2fine",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "광출력 균일도",
+      "value": "85",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 시스템",
+      "value": "RGB 액정 크리스탈 셔터 투사 시스템",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 방식",
+      "value": "전면, 전면/천장, 후면, 후면/천장",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면 분할",
+      "value": "지원(Split Screen)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "엣지 블렌딩",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "키스톤 보정",
+      "value": "V: -45°~+45°, H: -30°~+30°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 방식",
+      "value": "Laser Diode",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 수명",
+      "value": "Normal 20,000 / Extended 30,000",
+      "unit": "시간",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "초점 거리",
+      "value": "36.0 - 57.4",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "줌 비율",
+      "value": "1 - 1.6",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "렌즈 시프트 범위",
+      "value": "H: -18%~+18%, V: -60%~+60%",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "투사 렌즈 타입",
+      "value": "Power zoom, Power focus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "화면 크기(투사 거리)",
+      "value": "60\"~1000\" (Wide: 1.99m~34.43m, Tele: 3.26m~55.63m)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "옵션 렌즈",
+      "value": "ELPLX02S, ELPLU03S, ELPLU04, ELPLW08, ELPLW06, ELPLM15, ELPLM10, ELPLM11, ELPLL08",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최대)",
+      "value": "586 x 218 x 492",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최소)",
+      "value": "586 x 185 x 492",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 23.7",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "팬소음",
+      "value": "Normal 34 / ECO 29",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "100-240V AC 50/60Hz 8.9-4.0A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "정격 전력 소비량",
+      "value": "864 / 633",
+      "unit": "W",
+      "condition": "Normal / Extended",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "Epson iProjection",
+      "value": "지원(Wireless LAN 필요)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "D-sub 15pin",
+      "signal": "아날로그 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "DVI-D",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDCP 1.4",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDBaseT",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "디지털 비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo mini",
+      "signal": "오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "ELPEC01, SMF1, 펌웨어 업데이트, OSD 설정 복사, 콘텐츠 재생 또는 5V/2A 전원 공급",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A(WiFi)",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "무선 LAN, SMF1, 펌웨어 업데이트, OSD 설정 복사, 콘텐츠 재생 또는 5V/0.9A 전원 공급",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-B",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "펌웨어 업데이트, OSD 설정 복사",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "유선 LAN",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Wireless LAN",
+      "signal": "무선 LAN",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "Type A",
+      "availability": "옵션 ELPAP11",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "LINK-FALLBACK",
+      "status": "INFO",
+      "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
+      "detail": "카탈로그의 https://www.epson.co.kr/EB-PU2213B 단축 URL도 사양표를 포함하고 있었으나, 검색으로 찾은 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU2213B/p/V11HA68851)가 더 상세한 특징 설명과 옵션 렌즈 목록을 포함해 이를 기준으로 정리했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Epson EB-PU2213B 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "EC-4BV",
+  "model": "EC-4BV",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Control",
+    "Control Interface"
+  ],
+  "english": "Soundweb Contrio EC-4BV is an Ethernet wall controller with 4 buttons and volume control for use in HARMAN HiQnet systems.",
+  "korean": "BSS Soundweb Contrio EC-4BV는 4개의 버튼과 볼륨 컨트롤을 갖춘 이더넷 벽면 컨트롤러로, HARMAN HiQnet 시스템에서 사용된다.",
+  "verificationSummary": "제조사 공식 제품 페이지(bssaudio.com)와 공식 데이터시트(Cut Sheet, Install Guide)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "EC-4BV는 BSS Audio의 Soundweb Contrio 시리즈에 속하는 이더넷 벽면 컨트롤러로, Soundweb London 및 Crown DCi 앰프 등 HARMAN HiQnet 기반 장비를 제어·모니터링하는 데 사용된다. 1개의 푸시/로터리 인코더, 인코더 링, 4개의 버튼, 1개의 LCD 화면으로 구성되며, 버튼과 인코더 링, LCD는 8가지 색상으로 멀티컬러 백라이트 표시가 가능하다.\n\n단일 이더넷 포트를 통해 PoE(Power over Ethernet)로 전원 공급, 제어, 모니터링, 구성이 모두 이루어지며, HiQnet Audio Architect 소프트웨어에서 드래그 앤 드롭 방식으로 간단히 구성할 수 있다. 미국 Decora 1구(단일 갱) 또는 유럽형 단일 갱 벽스위치 박스에 설치 가능하며, 블랙 또는 화이트 색상으로 제공된다.\n\n무입력 상태가 일정 시간 지속되면 모든 LED를 끄는 슬립(Sleep) 기능, 4자리 PIN을 통한 로컬 잠금/해제 및 원격 잠금 기능을 지원하며, 1존/4존/하이브리드 모드 등 다중 운용 모드를 제공해 다양한 회의실·공용 공간의 존 볼륨/뮤트 제어에 활용된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ec-4bv-main.webp",
+      "alt": "BSS Audio EC-4BV 이더넷 벽면 컨트롤러(화이트, US Decora형)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "EC-4BV",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1966_1729004360/EC-4BV-WHT_US_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3686x3072",
+      "resolution": "3686x3072",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1966_1729004360/EC-4BV-WHT_US_x_large_2x.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/EC-4BV"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/EC-4BV"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/EC-4BV"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/en-US/products/EC-4BV"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "EC-4BV Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://bssaudio.com/en-US/product_documents/contriocontrollers_ec-4bv_web_datasheet_060215-pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://bssaudio.com/en-US/products/EC-4BV"
+    }
+  ],
+  "features": [
+    {
+      "text": "PoE(Power over Ethernet)로 전원, 제어, 구성을 하나의 Cat 5e 케이블로 처리하는 이더넷 벽면 컨트롤러",
+      "source": "P"
+    },
+    {
+      "text": "Soundweb London, Crown DCi 등 HARMAN HiQnet 호환 기기와 연동 가능",
+      "source": "P"
+    },
+    {
+      "text": "1개의 프로그래머블 푸시/로터리 인코더와 멀티컬러 인코더 링으로 볼륨 조절 및 음소거/프리셋 호출 지원",
+      "source": "P"
+    },
+    {
+      "text": "4개의 프로그래머블 멀티컬러 버튼과 64x128 픽셀 멀티컬러 LCD로 소스 선택 및 상태 표시",
+      "source": "P"
+    },
+    {
+      "text": "슬립 기능과 4자리 PIN 잠금으로 유휴 시 LED 소등 및 무단 조작 방지",
+      "source": "P"
+    },
+    {
+      "text": "1존/4존/하이브리드 등 다중 운용 모드를 지원해 다양한 공간 구성에 대응",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Chassis",
+      "name": "폼팩터",
+      "value": "단일 갱(Single-Gang), US Decora 또는 EU 사각/원형 박스형",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Chassis",
+      "name": "색상",
+      "value": "블랙 또는 화이트",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "인코더",
+      "value": "푸시/로터리 인코더 1개, 인코더 링 1개(멀티컬러)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "버튼",
+      "value": "4",
+      "unit": "개(멀티컬러)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "LCD 해상도",
+      "value": "64 x 128",
+      "unit": "픽셀",
+      "condition": "멀티컬러, 사용자 지정 텍스트/그래픽 표시 가능",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "제어 프로토콜",
+      "value": "HiQnet",
+      "unit": "",
+      "condition": "HiQnet Audio Architect로 드래그 앤 드롭 구성",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 포트",
+      "value": "1",
+      "unit": "포트 (Ethernet, RJ-45)",
+      "condition": "구성/제어/모니터링/전원(PoE) 겸용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "최대 케이블 길이",
+      "value": "328 (100)",
+      "unit": "피트(미터)",
+      "condition": "PoE 사용 시",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 방식",
+      "value": "PoE(Power over Ethernet)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "300",
+      "unit": "mA (48VDC 기준, 최대)",
+      "condition": "약 13W, VW-1 등급 이더넷 케이블 권장",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Feature",
+      "name": "보안 기능",
+      "value": "원격 잠금/해제, 4자리 PIN 로컬 잠금",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Feature",
+      "name": "동작 모드",
+      "value": "1존 모드, 4존 모드, 하이브리드 모드",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network/Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet (제어/구성/모니터링/PoE 전원)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HiQnet / PoE",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://bssaudio.com/en-US/products/EC-4BV",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(Cut Sheet)",
+      "url": "https://bssaudio.com/en-US/product_documents/contriocontrollers_ec-4bv_web_datasheet_060215-pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "정확한 외형 치수 미확인",
+      "detail": "Install Guide PDF에서 텍스트 추출 시 치수 도면의 숫자가 벽스위치 박스별 위치 정보와 분리되어 정확한 W x H x D 수치를 신뢰성 있게 확정하지 못했다. 필요 시 도면(DXF) 원본을 직접 확인해야 한다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio EC-4BV 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

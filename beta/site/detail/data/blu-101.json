@@ -1,0 +1,386 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "BLU-101",
+  "model": "BLU-101",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio Processor (DSP)"
+  ],
+  "english": "Soundweb London BLU-101 is a conferencing processor offering 12 analog inputs, 8 analog outputs, configurable signal processing, and dedicated AEC processing.",
+  "korean": "BSS Soundweb London BLU-101은 12개의 아날로그 입력과 8개의 아날로그 출력, 구성 가능한 신호처리, 전용 AEC(음향반향제거) 처리 기능을 갖춘 컨퍼런싱 프로세서다.",
+  "verificationSummary": "제조사 공식 제품 페이지(bssaudio.com)와 공식 데이터시트에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "BLU-101은 BSS Audio Soundweb London 제품군의 고정 구성(fixed configuration) 프로세서로, 12개의 아날로그 입력과 8개의 아날로그 출력을 제공하며 최대 12채널의 독립적인 AEC(Acoustic Echo Cancellation) 알고리즘을 내장한다. 각 AEC 채널에는 자동 게인 제어(AGC)와 노이즈 캔슬레이션(NC)이 함께 제공되어, 다중 회의 공간에서 마이크 레벨을 최적으로 유지하고 프로젝터 팬이나 공조기 소음 같은 정상상태 잡음을 제거한다.\n\nHiQnet Audio Architect(구 London Architect)로 완전히 구성 가능한 개방형 아키텍처를 가지며, 표준 Cat 5e 케이블로 최대 100m 거리의 48채널 BLU link 디지털 오디오 버스를 지원한다(광컨버터 사용 시 40km 이상 확장 가능). BLU-800, BLU-320, BLU-160 등 상위 섀시와 연동 시 256채널 버스의 1~48번 채널로 통합된다.\n\n아날로그 입력은 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절이 가능하고 팬텀 파워를 채널별로 선택할 수 있다. 전면 LED로 신호 유무, 클립, 팬텀 파워 상태를 PC 없이 확인할 수 있으며, 12개의 제어 입력과 6개의 로직 출력을 통해 서드파티 제어 시스템과 GPIO 연동이 가능하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "blu-101-main.webp",
+      "alt": "BSS Audio BLU-101 컨퍼런싱 프로세서 전면부",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-101",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1330_1728944425/BLU-101_Front_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x410",
+      "resolution": "4096x410",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1330_1728944425/BLU-101_Front_x_large_2x.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-101"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-101"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-101"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-101"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "BLU-101 Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://bssaudio.com/en-US/products/blu-101"
+    }
+  ],
+  "features": [
+    {
+      "text": "12개 아날로그 입력(채널별 48V 팬텀 파워)과 8개 아날로그 출력을 갖춘 고정 구성 컨퍼런싱 프로세서",
+      "source": "P"
+    },
+    {
+      "text": "최대 12채널 독립 AEC 처리, 자동 게인 제어(AGC) 및 노이즈 캔슬레이션(NC) 내장",
+      "source": "P"
+    },
+    {
+      "text": "48채널 저지연·고내결함성 BLU link 디지털 오디오 버스로 Soundweb London 전 제품군과 연동",
+      "source": "P"
+    },
+    {
+      "text": "HiQnet Audio Architect의 드래그 앤 드롭 방식으로 신호처리 및 로직 오브젝트 구성",
+      "source": "P"
+    },
+    {
+      "text": "전면 LED로 신호 유무/클립/팬텀 파워 상태 확인 및 양방향 로케이트 기능 지원",
+      "source": "P"
+    },
+    {
+      "text": "12개 제어 입력, 6개 로직 출력으로 GPIO 및 서드파티 제어 시스템과 연동",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Chassis",
+      "name": "섀시",
+      "value": "19인치 랙, 1U",
+      "unit": "",
+      "condition": "고정 구성(카드 슬롯 없음)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 입력",
+      "value": "12",
+      "unit": "채널",
+      "condition": "Phoenix/Combicon 착탈식 스크류 커넥터, 48V 팬텀 파워 채널별 선택",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 출력",
+      "value": "8",
+      "unit": "채널",
+      "condition": "Phoenix/Combicon 착탈식 스크류 커넥터",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "AEC 처리 채널",
+      "value": "12",
+      "unit": "채널(독립 알고리즘)",
+      "condition": "AGC, 노이즈 캔슬레이션 포함",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "AEC 처리 지연(오리지널 8k 알고리즘)",
+      "value": "49.69",
+      "unit": "ms @48kHz",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "AEC 처리 지연(풀밴드 알고리즘)",
+      "value": "33.52",
+      "unit": "ms @48kHz",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "AEC 테일 길이",
+      "value": "200",
+      "unit": "ms",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "신호처리 성능",
+      "value": "400",
+      "unit": "MHz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "BLU link 디지털 오디오 버스",
+      "value": "48",
+      "unit": "채널",
+      "condition": "Cat 5e, 최대 100m, 노드 최대 60개",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "Dante 지원",
+      "value": "없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "AVB/CobraNet 지원",
+      "value": "없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "제어 입출력",
+      "value": "제어 입력 12개, 로직 출력 6개",
+      "unit": "",
+      "condition": "GPIO",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "RS-232",
+      "value": "지원",
+      "unit": "",
+      "condition": "로직 프로세싱용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답",
+      "value": "20Hz-20kHz (+0.5dB/-1dB)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "다이내믹 레인지",
+      "value": "108",
+      "unit": "dB (typical, 22Hz-22kHz unweighted)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240V AC, 50/60Hz",
+      "unit": "",
+      "condition": "소비전력 55VA 미만",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "외형 치수(H x W x D)",
+      "value": "45 x 483 x 318",
+      "unit": "mm (1.75\" x 19\" x 12.5\")",
+      "condition": "1U",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "4.1 (9.1)",
+      "unit": "kg (lbs)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio In",
+      "connector": "Phoenix/Combicon 스크류 단자",
+      "signal": "Mic/Line 아날로그 입력",
+      "direction": "IN",
+      "quantity": "12",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "48V 팬텀 파워 채널별 선택, +48dB까지 게인",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Out",
+      "connector": "Phoenix/Combicon 스크류 단자",
+      "signal": "라인 레벨 아날로그 출력",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "BLU link 디지털 오디오 버스",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "BLU link",
+      "availability": "표준",
+      "condition": "Cat 5e, 최대 100m",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet 제어망",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "HiQnet",
+      "availability": "표준",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "D-sub/터미널",
+      "signal": "RS-232",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "Phoenix/Combicon",
+      "signal": "제어 입력/로직 출력(GPIO)",
+      "direction": "IN/OUT",
+      "quantity": "12 입력 / 6 출력",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "워치독 출력 포함",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://bssaudio.com/en-US/products/blu-101",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(18-0818-B)",
+      "url": "https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio BLU-101 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

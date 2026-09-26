@@ -1,0 +1,493 @@
+{
+  "manufacturer": "Epson",
+  "productName": "EB-L690U",
+  "model": "EB-L690U",
+  "itemType": "PRODUCT",
+  "categories": [
+    "프로젝터",
+    "Display",
+    "Projector"
+  ],
+  "english": "Epson EB-L690U is a laser projector delivering 6,500 lm color/white brightness and WUXGA resolution, capable of screens up to 500 inches.",
+  "korean": "엡손 EB-L690U는 6,500루멘의 컬러/백색 밝기와 WUXGA 해상도를 제공하며 최대 500인치 화면 구현이 가능한 레이저 프로젝터다.",
+  "verificationSummary": "제조사 공식 한글 사이트(epson.co.kr)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "EB-L690U는 엡손 레이저 프로젝터로 6,500루멘의 컬러 밝기와 백색 밝기, WUXGA 해상도를 제공한다. 최대 500인치까지 구현 가능해 회의실, 강의실, 전시장 등 다양한 공간에서 몰입감 있는 프레젠테이션 환경을 만들 수 있다.\n\n24년 연속 세계 판매 1위(엡손 자체 발표 기준)의 3LCD 기술을 기반으로 하며, Wi-Fi 6E 내장 무선랜과 10W 모노 내장 스피커를 갖추었다. 최대 4분할 화면과 360도 자유 설치, 넓은 범위의 줌·렌즈 시프트를 지원한다.\n\n레이저 광원으로 Normal 모드 기준 20,000시간, Extended 모드 기준 30,000시간까지 유지보수가 필요 없으며, 콘텐츠 플레이백 모드로 디지털 사이니지 용도로도 활용할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "eb-l690u-main.webp",
+      "alt": "엡손 EB-L690U 레이저 프로젝터 정면 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-L690U",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "960x640",
+      "resolution": "960x640",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "EB-L690U 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051"
+    }
+  ],
+  "features": [
+    {
+      "text": "24년 연속 세계 판매 1위 엡손 3LCD 기술 기반, 6,500루멘의 컬러/백색 밝기",
+      "source": "P"
+    },
+    {
+      "text": "WUXGA 해상도로 최대 500인치 대화면 구현 가능",
+      "source": "P"
+    },
+    {
+      "text": "레이저 광원으로 최대 20,000시간까지 유지보수 없이 작동, 수은·램프 폐기물 없는 친환경 설계",
+      "source": "P"
+    },
+    {
+      "text": "16:6, 21:9 고해상도 와이드 스크린 지원으로 화이트보드 전체 활용 및 디지털·아날로그 병행 작업 가능",
+      "source": "P"
+    },
+    {
+      "text": "유연한 360도 설치, 넓은 범위의 줌과 렌즈 시프트, 최대 4분할 화면 지원",
+      "source": "P"
+    },
+    {
+      "text": "Wi-Fi 6E 내장 무선 LAN, Epson Projector Professional Tool 및 ELPEC01 외장 카메라 지원",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "컬러 밝기",
+      "value": "6,500",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "백색 밝기",
+      "value": "6,500",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "Over 5,000,000:1",
+      "unit": "",
+      "condition": "Dynamic Contrast : On",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "기본 해상도",
+      "value": "WUXGA",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "광출력 균일도",
+      "value": "88",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 시스템",
+      "value": "RGB 액정 셔터 크리스탈 프로젝션 시스템",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 방식",
+      "value": "360° free",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "엣지 블렌딩",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면 분할",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "키스톤 보정",
+      "value": "V: -30°~+30°, H: -30°~+30°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 방식",
+      "value": "Laser Diode",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 수명",
+      "value": "Normal 20,000 / Extended 30,000",
+      "unit": "시간",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "초점 거리",
+      "value": "20.0 - 31.8",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "줌 비율",
+      "value": "1 - 1.6",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "렌즈 시프트 범위",
+      "value": "V: -50°~+50°, H: -20°~+20°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "투사 렌즈 타입",
+      "value": "Optical Zoom(Manual)/Focus(Manual)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "화면 크기(투사 거리)",
+      "value": "50\"~500\" (1.44m~14.76m Wide, 2.35m~23.84m Tele)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최대)",
+      "value": "440 x 138 x 340",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최소)",
+      "value": "440 x 122 x 304",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 8.2",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "팬소음",
+      "value": "Normal 32 / ECO 25",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "내장 스피커",
+      "value": "10",
+      "unit": "W 모노",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "100-240V AC 50/60Hz 4.4-2.0A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "정격 전력 소비량",
+      "value": "100-120V: 415/305, 220-240V: 399/295",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "무선 LAN 사양",
+      "value": "Wi-Fi 6E",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "Epson iProjection",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDBaseT",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo mini",
+      "signal": "오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "PC Free, Document Camera, 펌웨어 업데이트, OSD 설정 복사, 콘텐츠 재생, ELPEC01 또는 5V/2A(0.9A) 전원 공급",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-B",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "펌웨어 업데이트, OSD 설정 복사",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "유선 LAN",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Wireless LAN",
+      "signal": "무선 LAN",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "Wi-Fi 6E",
+      "availability": "내장(Built-in)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "LINK-FALLBACK",
+      "status": "INFO",
+      "title": "카탈로그 official_link이 지원 페이지였음",
+      "detail": "카탈로그에 등록된 official_link(https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L690U/s/SPT_V11HB29051)는 다운로드/FAQ 위주의 지원 페이지로 사양표가 없어, 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-L690U/p/V11HB29051)를 찾아 사양을 확인했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Epson EB-L690U 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

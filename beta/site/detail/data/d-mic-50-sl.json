@@ -1,0 +1,341 @@
+{
+  "manufacturer": "Televic",
+  "productName": "D-Mic 50 SL",
+  "model": "D-Mic 50 SL (71.98.0055)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Microphone"
+  ],
+  "english": "D-Mic 50 SL is a 50 cm removable gooseneck directional (unidirectional, cardioid) condenser microphone with a screw-lock connector for Televic delegate and interpreter units, with a status LED ring.",
+  "korean": "D-Mic 50 SL은 Televic 델리게이트·통역 유닛에 장착하는 50cm 길이의 탈착식 구스넥 지향성(단일지향성, 카디오이드) 콘덴서 마이크로, 스크류락 커넥터와 상태 표시 LED 링을 갖추고 있다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, 마이크 제품군 페이지)와 71.98.0055 데이터시트(PDF, Version 1.6, 2026년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "D-Mic 50 SL은 Televic의 D-Cerno·Confidea 등 델리게이트/통역 유닛에 스크류락 커넥터로 장착하는 50cm 길이의 탈착식 구스넥 마이크이다. 백일렉트릿(condenser) 방식의 단일지향성(카디오이드) 픽업 패턴으로, 주변 소음이 많은 환경에서도 우수한 음성 채록 성능을 제공하며, 구스넥 구조 덕분에 발화자에 맞춰 자유롭게 각도를 조절할 수 있다.\n\n휴대폰 등 이동통신 전파 간섭에 대한 내성이 매우 낮아(간섭에 덜 민감) 회의 중 안정적인 음질을 유지하며, 자연스럽고 풍부한 음색으로 장시간 회의에서도 청취 피로를 줄여준다. 마이크 헤드의 조명 링은 꺼졌을 때 불투명하고, 활성화 시 빨간색, 발언 요청(Request) 상태일 때 초록색으로 점등되어 상태를 시각적으로 표시한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "d-mic-50-sl-main.webp",
+      "alt": "D-Mic 50 SL 구스넥 마이크(50cm)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "D-Mic 50 SL",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000x496",
+      "resolution": "2000x496",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/microphones/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/microphones/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/microphones/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/microphones/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "D-Mic 50 SL Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/products/microphones/"
+    }
+  ],
+  "features": [
+    {
+      "text": "50cm 길이 구스넥으로 발화자에 맞춘 자유로운 각도 조절",
+      "source": "P"
+    },
+    {
+      "text": "단일지향성(카디오이드) 픽업 패턴으로 주변 소음이 많은 환경에서도 우수한 음성 채록",
+      "source": "P"
+    },
+    {
+      "text": "휴대폰 등 이동통신 전파 간섭에 대한 낮은 민감도",
+      "source": "P"
+    },
+    {
+      "text": "On/Off(빨강)·발언 요청(초록) 상태를 표시하는 LED 링",
+      "source": "P"
+    },
+    {
+      "text": "스크류락 커넥터로 D-Cerno D SL 등 호환 유닛에 간편하게 탈부착",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "Brass",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Matt black, RAL 9011",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(W x H x D)",
+      "value": "505 x 25 x 25",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(W x H x D)",
+      "value": "575 x 50 x 50",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "110",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "200",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "스템 직경",
+      "value": "가변부 8mm / 고정부 6.3mm",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "변환 방식",
+      "value": "Back electret (condenser)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "동작 원리",
+      "value": "Pressure gradient",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "픽업 패턴",
+      "value": "단일지향성(Unidirectional), 카디오이드",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "정격 조건",
+      "value": "Bias resistor = 1k2, Vdd = 3.3 V DC, 1 Pa = 94 dB SPL",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "최대 음압 레벨 @ 1kHz",
+      "value": "110",
+      "unit": "dB SPL (1% THD+N)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "신호 대 잡음비",
+      "value": "> 67",
+      "unit": "dB(A)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "자유음장 감도",
+      "value": "(-40.5±2)",
+      "unit": "dBV @ 1Pa, 1kHz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원",
+      "value": "3.3 V DC, 0.5 mA",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비전류",
+      "value": "0.5 mA(LED 링 미점등) / 최대 25 mA(LED 링 점등)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "연결 방식",
+      "value": "Screw lock",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "5 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "습도",
+      "value": "< 95%, > 5%",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Connector",
+      "connector": "Screw-lock",
+      "signal": "마이크 신호/전원",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "D-Cerno D SL 등 스크류락 소켓 탑재 유닛과 호환",
+      "condition": "XLR 아님, Televic 독자 스크류락 규격",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (마이크 제품군 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/products/microphones/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.0055, D-Mic 50 SL, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic D-Mic 50 SL 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

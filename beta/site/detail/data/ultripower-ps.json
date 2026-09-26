@@ -1,0 +1,180 @@
+{
+  "manufacturer": "Ross Video",
+  "productName": "ULTRIPOWER-PS",
+  "model": "ULTRIPOWER-PS",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Power Supply"
+  ],
+  "english": "ULTRIPOWER-PS refers to the individual hot-swappable power supply module that installs into the Ultripower 1RU chassis, delivering 15VDC/20A per connection (up to 1200W) to power ULTRIX-FR5/FR12 router frames.",
+  "korean": "ULTRIPOWER-PS는 Ultripower 1RU 섀시에 장착되는 개별 전원 공급 모듈(전원 모듈)을 가리키며, 접속당 15VDC/20A(최대 1200W)를 공급해 ULTRIX-FR5/FR12 라우터 프레임에 전원을 제공한다.",
+  "verificationSummary": "제조사 공식 Ultrix Installation Guide(2101DR-003)에서 확인된 'Ultripower fitted with power module(s)' 서술을 근거로 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "제조사 공식 문서에서는 'Ultripower'라는 이름으로 1RU 랙마운트 PSU 섀시 자체를 지칭하며, 이 섀시에 'power module'을 1개 또는 2개까지 장착할 수 있다고 설명한다. 카탈로그의 ULTRIPOWER-PS 항목은 이 개별 전원 모듈(파워 모듈)을 의미하는 것으로 추정되며, ULTRIPOWER(섀시 완제품)와 ULTRIPOWER-PS(교체/증설용 개별 전원 모듈)의 관계로 보인다.\n\n다만 rossvideo.com 공식 자료에서 'ULTRIPOWER-PS'라는 정확한 품번이나 별도 스펙시트를 직접 확인하지는 못했다. 전기적 사양(15VDC@20A, 최대 1200W, 입력 100-264VAC)은 Ultripower 섀시 전체에 대한 문서 값을 인용한 것이며, 개별 모듈 단위로 별도 공시된 값이 아니므로 검토가 필요하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ultripower-ps-main.webp",
+      "alt": "Ross Video Ultripower-PS 개별 전원 모듈(섀시에 장착된 상태, 모듈 전면에 'Ultripower-PS' 라벨과 냉각팬 확인 가능)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRIPOWER-PS",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1229x200",
+      "resolution": "1229x200",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ULTRIPOWER-PS 공식 자료",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    }
+  ],
+  "features": [
+    {
+      "text": "Ultripower 1RU 섀시에 장착되는 핫스왑 가능한 개별 전원 공급 모듈로 추정",
+      "source": "I"
+    },
+    {
+      "text": "모듈 2개 장착 시 전원 이중화(리던던시) 구성 지원",
+      "source": "I"
+    },
+    {
+      "text": "AC 케이블을 DC 케이블 연결 이후에 인가하도록 설계되어 안전한 전원 투입 절차 제공",
+      "source": "I"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Power",
+      "name": "출력 전압/전류 (Ultripower 섀시 기준)",
+      "value": "15VDC @ 20A",
+      "unit": "",
+      "condition": "커넥션당, Ultripower 전체 사양 인용",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "최대 출력 전력 (Ultripower 섀시 기준)",
+      "value": "1200 (110VAC 입력 시 1100으로 감소)",
+      "unit": "W",
+      "condition": "Ultripower 전체 사양 인용",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 (Ultripower 섀시 기준)",
+      "value": "100-264VAC, 50/60Hz, 10A",
+      "unit": "",
+      "condition": "Ultripower 전체 사양 인용",
+      "source": "I",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "I",
+      "name": "제조사 공식 Ultrix Installation Guide",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Installation%20Guides/Ultrix%20Installation%20Guide%20(2101DR-003).pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 Cutsheet/Quick Start Guide",
+      "url": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "ULTRIPOWER와의 구분이 추정에 근거함",
+      "detail": "공식 문서에는 'ULTRIPOWER-PS'라는 정확한 품번이 별도로 등장하지 않는다. 문서상 'Ultripower(섀시)에 전원 모듈(power module) 1개 또는 2개를 장착한다'는 서술만 확인되어, 카탈로그의 ULTRIPOWER(완제품)과 ULTRIPOWER-PS(개별 전원 모듈) 구분을 추정으로 반영했다. 실제 SKU 정의는 Ross Video 가격표/주문 가이드 등 이번 조사 범위 밖의 자료 확인이 필요하다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "전용 하드웨어 사진 부재",
+      "detail": "공식 웹사이트에서 개별 전원 모듈의 실제 사진을 찾지 못해 이미지를 비워두었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Ross Video ULTRIPOWER-PS 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

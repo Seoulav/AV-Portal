@@ -1,0 +1,285 @@
+{
+  "manufacturer": "Yealink",
+  "productName": "VCM35",
+  "model": "VCM35",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Microphone"
+  ],
+  "english": "Wired video conferencing microphone array with a 3-microphone array, 6-meter 360-degree pickup range, and star-cascaded (daisy-chain) deployment.",
+  "korean": "3마이크 어레이, 6m 360도 음성 픽업 범위, 스타형 캐스케이드(데이지체인) 배치를 지원하는 유선 화상회의용 마이크로폰 어레이.",
+  "verificationSummary": "제조사 공식 제품 페이지 및 공식 데이터시트(PDF)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Yealink VCM35는 Yealink 화상회의 시스템을 위해 설계된 유선 마이크로폰 어레이로, 다양한 크기의 회의실 공간에 적합하다. 내장된 3-마이크로폰 어레이는 6m(20ft) 반경의 360도 음성 픽업 범위를 제공해 우수한 오디오 경험을 지원하는 이상적인 솔루션이다.\n\nYealink Acoustic Echo Canceling 및 Yealink Noise Proof Technology를 통해 주변 소음을 최대 90dB까지 효과적으로 감소시키며, 풀 듀플렉스 통화에서도 고품질 오디오 경험을 제공한다. 스타 캐스케이드(star-cascaded) 배치를 지원해 확장성과 유연성이 높아 다양한 규모의 회의실을 완전히 커버할 수 있도록 설치를 간편하고 빠르게 만든다.\n\n원형 디스크 형태(지름 100mm, 두께 17mm)의 소형 폼팩터이며, 터치패드로 마이크를 음소거할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "vcm35-main.webp",
+      "alt": "Yealink VCM35 원형 마이크로폰 어레이, 케이블 연결 모습",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Yealink",
+      "model": "VCM35",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20230904/202309040633222863a10699a427e9d528ed0e244e682.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "602x415",
+      "resolution": "602x415",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20230904/202309040633222863a10699a427e9d528ed0e244e682.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "VCM35 Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20230516/20230516102035377a7970e624703a53a98a498010531.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
+    }
+  ],
+  "features": [
+    {
+      "text": "Optima HD Audio 및 Yealink Full Duplex Technology로 자연스러운 양방향 음성 통화 지원",
+      "source": "P"
+    },
+    {
+      "text": "3-마이크로폰 어레이 기반 6m(20ft) 반경, 360도 전방위 음성 픽업",
+      "source": "P"
+    },
+    {
+      "text": "Yealink Acoustic Echo Canceling 및 Noise Proof Technology로 주변 소음 최대 90dB 감소",
+      "source": "M"
+    },
+    {
+      "text": "VAD(Voice Activity Detection)로 발화 구간을 정확히 감지",
+      "source": "P"
+    },
+    {
+      "text": "터치패드 방식의 마이크 음소거 버튼 탑재",
+      "source": "P"
+    },
+    {
+      "text": "스타 캐스케이드(데이지체인) 배치로 다양한 회의실 규모에 유연하게 확장 설치 가능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "마이크로폰 구성",
+      "value": "3-마이크로폰 어레이",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "음성 픽업 범위",
+      "value": "6",
+      "unit": "m (반경, 360도)",
+      "condition": "20ft",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답",
+      "value": "100Hz-8kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "소음 감소",
+      "value": "최대 90",
+      "unit": "dB",
+      "condition": "Yealink Noise Proof Technology 적용 시",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "핵심 오디오 기술",
+      "value": "Optima HD Audio, Full Duplex Technology, Acoustic Echo Canceling, Noise Proof Technology, VAD",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Deployment",
+      "name": "배치 방식",
+      "value": "스타 캐스케이드(Star-cascaded) 데이지체인 배치 지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수",
+      "value": "φ100 x T17",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "199",
+      "unit": "g",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "연결 케이블",
+      "value": "5m 네트워크 케이블 (분리 불가, 고정형)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "10~90",
+      "unit": "%",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0~40",
+      "unit": "℃",
+      "condition": "+32~104℉",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "구성품",
+      "value": "VCM35 본체, RJ45 이더넷 커넥터, 양면테이프, 퀵스타트 가이드",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "이더넷(비분리형 5m 케이블)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "Ethernet",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "터치패드",
+      "signal": "마이크 음소거 버튼",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트(PDF)",
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20230516/20230516102035377a7970e624703a53a98a498010531.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yealink VCM35 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

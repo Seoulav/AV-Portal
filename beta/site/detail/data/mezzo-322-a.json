@@ -1,0 +1,766 @@
+{
+  "manufacturer": "Powersoft",
+  "productName": "Mezzo 322 A",
+  "model": "Mezzo 322 A",
+  "series": "Mezzo Series",
+  "seriesNote": "Mezzo 계열 공용 사용설명서·데이터시트 기준(모델별 표는 페이지에서 개별 확인).",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Amplifier"
+  ],
+  "english": "2-channel installation amplifier with onboard DSP and Power Sharing.",
+  "korean": "Mezzo 322 A는 하프 랙(1/2U) 크기의 2채널 320W급 컴팩트 설치용 앰프로, 온보드 DSP를 내장하되 오디오 네트워킹은 지원하지 않는 아날로그 전용 모델이다.",
+  "verificationSummary": "다산SR(dasansr.com)은 봇 차단(CUPID 캡차)으로 접근할 수 없어 Powersoft 공식 제품 페이지·데이터시트·사용설명서를 1차 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Mezzo 322 A는 하프 랙(1/2U) 크기의 2채널 320W급 컴팩트 설치용 앰프로, 온보드 DSP를 내장하되 오디오 네트워킹은 지원하지 않는 아날로그 전용 모델이다. 밀폐형(sealed) 설계로 천장 속이나 벽체 내부 등 은폐 설치가 가능하며, Auto-Setup 기능으로 연결 스피커에 맞춰 자동으로 게인·리미터·하이패스 필터를 최적화한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "mezzo-322-a-front.webp",
+      "alt": "Powersoft Mezzo 322 A 전면부",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Powersoft",
+      "model": "Mezzo 322 A",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1024x500",
+      "resolution": "511x129",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "mezzo-322-a-rear.webp",
+      "alt": "Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Powersoft",
+      "model": "Mezzo 322 A",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1024x500",
+      "resolution": "530x137",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Powersoft Mezzo Series User Guide",
+      "language": "en",
+      "note": "Mezzo 시리즈 공용 사용설명서",
+      "url": "https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Powersoft Mezzo Series Datasheet",
+      "language": "en",
+      "note": "Mezzo 시리즈 공용 데이터시트",
+      "url": "https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+    }
+  ],
+  "features": [
+    {
+      "text": "2채널 구성이며, 채널당 출력 @ 8Ω (대칭) 기준 채널당 160W를 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "온보드 DSP를 내장해 이퀄라이저·크로스오버·리미터 등 신호 처리를 자체적으로 수행한다.",
+      "source": ""
+    },
+    {
+      "text": "100-240VAC ±10%(50-60Hz) 유니버설 스위칭 전원을 사용해 다양한 전원 환경에서 동작한다.",
+      "source": ""
+    },
+    {
+      "text": "CE, FCC, CCC, CSA, CB, RoHS 등 국제 인증을 확보했다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "채널/구성",
+      "name": "출력 채널 수",
+      "value": "2",
+      "unit": "채널",
+      "condition": "Euro 5mm 커넥터",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "아날로그 밸런스 입력",
+      "value": "2",
+      "unit": "채널",
+      "condition": "Euro 3.8mm",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "아날로그 언밸런스 입력",
+      "value": "2",
+      "unit": "채널",
+      "condition": "3.5mm 스테레오 미니잭, 입력1·2와 병렬",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "라인레벨 출력",
+      "value": "2",
+      "unit": "채널",
+      "condition": "Euro 3.8mm",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "폼팩터",
+      "value": "1/2 랙(하프 랙) 유닛",
+      "unit": "",
+      "condition": "밀폐형 설계, 천장/벽체 은폐 설치 가능",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "상용 정격 출력",
+      "value": "320",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 100V (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 70V (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 25V (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 16Ω (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 8Ω (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 4Ω (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 출력 @ 2Ω (대칭)",
+      "value": "160",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 파워쉐어링 최대 출력 @ 100V/70V/8Ω/4Ω",
+      "value": "320",
+      "unit": "W",
+      "condition": "Auto-Setup 결과에 따른 채널당 최대 배분치, 전 부하 공통",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "최대 무클리핑 출력 전압",
+      "value": "142",
+      "unit": "Vpeak",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "최대 출력 전류",
+      "value": "15.6",
+      "unit": "Apeak",
+      "condition": "과전류 보호 18.7 Apeak",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "게인 범위",
+      "value": "17~47",
+      "unit": "dB",
+      "condition": "0.1dB 단위 조절",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "SNR (20Hz-20kHz @ 8Ω)",
+      "value": ">103",
+      "unit": "dB(A)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 감도",
+      "value": "4 dBu(balanced) / -10 dBV(unbalanced)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "최대 입력 레벨",
+      "value": "18 dBu / 6.16",
+      "unit": "Vrms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "주파수 응답 @ 8Ω",
+      "value": "20Hz - 20kHz ±0.5dB",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "크로스토크 (1kHz)",
+      "value": "-60",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 임피던스",
+      "value": "10kΩ(대 GND) / 20kΩ(balanced)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "CMRR",
+      "value": "60",
+      "unit": "dB",
+      "condition": "typical",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "AD 컨버터",
+      "value": "24bit @ 48kHz, 125dB-A Dynamic Range",
+      "unit": "",
+      "condition": "THD+N 0.00x%",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "DA 컨버터",
+      "value": "24bit @ 48kHz, 115dB-A Dynamic Range",
+      "unit": "",
+      "condition": "THD+N 0.00x%",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "내부 연산 정밀도",
+      "value": "32",
+      "unit": "bit float",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "슬립 복귀 시간",
+      "value": "2",
+      "unit": "s",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "레이턴시",
+      "value": "2.5",
+      "unit": "ms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "딜레이",
+      "value": "100",
+      "unit": "ms/출력",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "이퀄라이저",
+      "value": "Parametric IIR: peaking, hi/lo-shelving, all-pass, band-pass, band-stop",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "크로스오버",
+      "value": "Butterworth, Linkwitz-Riley, Bessel, 6~24dB/oct(IIR)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "하이패스 필터",
+      "value": "Auto-Setup 기반 12dB Butterworth 자동 설정",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "리미터",
+      "value": "RMS voltage, Peak limiter",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "부하 모니터링",
+      "value": "트리거 임피던스 스윕, 평균 임피던스 및 파일럿톤 모니터링",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹",
+      "name": "네트워크 포트",
+      "value": "1 x RJ45 Fast Ethernet",
+      "unit": "",
+      "condition": "제어/모니터링 전용 (오디오 네트워킹 미지원)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "전원 공급 방식",
+      "value": "Universal regulated switch mode with PFC, SRM",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "정격 전압",
+      "value": "100-240",
+      "unit": "VAC ±10%",
+      "condition": "50-60Hz",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "동작 전압 범위",
+      "value": "90-264",
+      "unit": "VAC",
+      "condition": "50/60Hz",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "AC 메인 커넥터",
+      "value": "IEC 10A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "대기(Idle) 전력",
+      "value": "14",
+      "unit": "W",
+      "condition": "데이터시트 322/602 A 공용값",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "냉각",
+      "name": "냉각 방식",
+      "value": "밀폐형, 내부 공랭(무팬)",
+      "unit": "",
+      "condition": "322/324 모델군",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "냉각",
+      "name": "무팬 상태 평균 출력 용량",
+      "value": "4",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "냉각",
+      "name": "Whisper 모드 소음",
+      "value": "8 W 출력 시 26",
+      "unit": "dBA",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "냉각",
+      "name": "최대 소음",
+      "value": "30",
+      "unit": "dBA",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "크기 (W x D x H)",
+      "value": "210 x 275 x 40",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "무게",
+      "value": "2.6",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "동작 온도 범위",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "제품페이지/데이터시트에 별도 명시 없음",
+      "source": "P",
+      "verification": "MISSING"
+    },
+    {
+      "group": "인증",
+      "name": "CE",
+      "value": "EMC + LVD 적합성 확인서 보유",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "FCC",
+      "value": "Supplier's Declaration of Conformity",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CCC",
+      "value": "중국",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CSA",
+      "value": "캐나다",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CB",
+      "value": "국제",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "RoHS",
+      "value": "EU 및 중국 적합",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "REACH",
+      "value": "적합",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "EPA",
+      "value": "적합성 선언",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "UK DoC",
+      "value": "영국 적합성 선언",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Output",
+      "connector": "Euro 5mm 커넥터",
+      "signal": "Speaker output",
+      "direction": "OUT",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Euro 3.8mm",
+      "signal": "Balanced analog audio in",
+      "direction": "IN",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm 스테레오 미니잭, 입력1·2와 병렬",
+      "signal": "Unbalanced analog audio in",
+      "direction": "IN",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Euro 3.8mm",
+      "signal": "Line level audio out",
+      "direction": "OUT",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "1 x RJ45 Fast Ethernet",
+      "signal": "제어/모니터링 네트워크",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "ArmoníaPlus",
+      "availability": "",
+      "condition": "제어/모니터링 전용 (오디오 네트워킹 미지원)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "IEC 10A",
+      "signal": "Mains power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가…",
+      "detail": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가 Mezzo A(4채널 604 A) 페이지에서 공용으로 사용하는 후면 대표 이미지임."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Powersoft Mezzo 322 A · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

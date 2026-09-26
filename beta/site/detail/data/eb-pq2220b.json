@@ -1,0 +1,456 @@
+{
+  "manufacturer": "Epson",
+  "productName": "EB-PQ2220B",
+  "model": "EB-PQ2220B",
+  "itemType": "PRODUCT",
+  "categories": [
+    "프로젝터",
+    "Display",
+    "Projector"
+  ],
+  "english": "Epson EB-PQ2220B is the world's lightest and most compact 4K, 20,000-lumen 3LCD laser projector with 4K Crystal Motion technology.",
+  "korean": "엡손 EB-PQ2220B는 세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 3LCD 레이저 프로젝터로 4K 크리스탈 모션 기술을 탑재했다.",
+  "verificationSummary": "제조사 공식 한글 사이트(epson.co.kr)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "EB-PQ2220B는 엡손의 4K, 20,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가볍고 콤팩트한 크기(2023년 엡손 자체 조사 기준, 렌즈와 받침대 제외)를 구현했다. 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 효율적인 광원 구조, 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n20,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 광범위한 렌즈 라인업과 초단초점(UST) 렌즈를 지원해 다양한 설치 환경에 대응할 수 있다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "eb-pq2220b-main.webp",
+      "alt": "엡손 EB-PQ2220B 4K 레이저 프로젝터 정면 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-PQ2220B",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "690x460",
+      "resolution": "690x460",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "EB-PQ2220B 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851"
+    }
+  ],
+  "features": [
+    {
+      "text": "세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+      "source": "P"
+    },
+    {
+      "text": "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+      "source": "P"
+    },
+    {
+      "text": "20,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+      "source": "P"
+    },
+    {
+      "text": "높은 명암비(Over 5,000,000:1, Dynamic Contrast On)와 33x33 그리드 포인트 보정 지원",
+      "source": "P"
+    },
+    {
+      "text": "광범위한 렌즈 라인업과 초단초점(UST) 렌즈(투사율 0.34, 제로 오프셋) 지원",
+      "source": "P"
+    },
+    {
+      "text": "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "백색 밝기",
+      "value": "20,000",
+      "unit": "lm",
+      "condition": "Normal mode, ISO 21118:2020 기준",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "컬러 밝기",
+      "value": "20,000",
+      "unit": "lm",
+      "condition": "Normal mode, IDMS 15.4 기준",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "Over 5,000,000:1",
+      "unit": "",
+      "condition": "Dynamic Contrast : On",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "기본 해상도",
+      "value": "4K",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "LCD 크기",
+      "value": "1.04",
+      "unit": "인치(2.64cm)",
+      "condition": "C2fine",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "광출력 균일도",
+      "value": "85",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 시스템",
+      "value": "RGB 액정 셔터 크리스탈 프로젝션 시스템",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 방식",
+      "value": "360° free",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "엣지 블렌딩",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면 분할",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "키스톤 보정",
+      "value": "V: -45°~+45°, H: -30°~+30°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 방식",
+      "value": "Laser Diode",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 수명",
+      "value": "Normal 20,000 / Quiet 20,000 / Extended 30,000",
+      "unit": "시간",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "초점 거리",
+      "value": "36.0 - 57.3",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "줌 비율",
+      "value": "1 - 1.61",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "렌즈 시프트 범위",
+      "value": "H: -16%~+16%, V: -58%~+58%",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "투사 렌즈 타입",
+      "value": "Power zoom, Power focus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "화면 크기(투사 거리)",
+      "value": "60\"~1000\" (1.98m~34.19m Wide, 3.24m~55.28m Tele)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최대)",
+      "value": "586 x 218 x 492",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최소)",
+      "value": "586 x 185 x 492",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 29.2",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "팬소음",
+      "value": "Normal 48 / ECO 39",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "100-240V AC +/-10% 50/60Hz 8.2A, 200-240V AC +/-10% 50/60Hz 6.6A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "정격 전력 소비량",
+      "value": "1431 / 975",
+      "unit": "W",
+      "condition": "Normal,Custom mode / Quiet,Extended mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "Epson iProjection",
+      "value": "버전 4.01(Windows 이상)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "HDMI Type A, Deep Color, CEC",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI Type A, Deep Color, CEC",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo mini",
+      "signal": "오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "ELPEC01, SMF1, 펌웨어 업데이트, OSD 설정 복사 또는 5V/2A 전원 공급, 콘텐츠 재생",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-B",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "펌웨어 업데이트, OSD 설정 복사",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "유선 LAN",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Wireless LAN",
+      "signal": "무선 LAN",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "Type A",
+      "availability": "옵션 ELPAP11",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Epson EB-PQ2220B 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

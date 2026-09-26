@@ -2,11 +2,29 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "31D65A1F0D6D5926B35933ECEBBBF18B2DED007F24728C723F02D0D22EA013E6",
+    "sha256": "DC5B2E46E686915102B7D2C6DEFEAC60B94F755EE06DD4DBC9EE17436E31791C",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
   "details": {
+    "a900w-r-gm": {
+      "sha256": "E8F4BD18EB02C806E4AD37DEC0BD99E75731B186A6BD2C1951F57EDA2816F580",
+      "features": 2,
+      "specifications": 6,
+      "io": 0
+    },
+    "ac18-26": {
+      "sha256": "EEFC1F8A5CFC8FCAA07812E7E5FDC8C10073776D73BEEFFE9CCE48AD8150717F",
+      "features": 6,
+      "specifications": 17,
+      "io": 2
+    },
+    "ac18-95": {
+      "sha256": "0670834E30AB240B45B8AD6CDB2093C41C6015703B8147FBE8D40289AAFBEAED",
+      "features": 6,
+      "specifications": 16,
+      "io": 2
+    },
     "aquilon-rs1": {
       "sha256": "B10AD280485B1427BD15AD4ADC120C24B0C294C73748F09BBE0D23318A27ECAE",
       "features": 7,
@@ -18,6 +36,12 @@
       "features": 6,
       "specifications": 16,
       "io": 6
+    },
+    "avhub": {
+      "sha256": "DC18C70DFB8849E4C2CC6060C3E2E92A174EC06107B78F01EA64D791E6AAD93B",
+      "features": 6,
+      "specifications": 8,
+      "io": 8
     },
     "avio-2ch-in": {
       "sha256": "363A68213F1C7AE6C93A77E5A225B5FC75F392CB57E374991A5846CBF7CF15EB",
@@ -43,17 +67,353 @@
       "specifications": 11,
       "io": 2
     },
+    "blu-100": {
+      "sha256": "EB31DC017B057737557ED744588A9734D315B7EE51773B4A8A8A020586D5AE9F",
+      "features": 5,
+      "specifications": 14,
+      "io": 6
+    },
+    "blu-101": {
+      "sha256": "F447B62F975DE4B39078BF1E6A5C3780458A68FAD7AD2016F345B3A7B23E5F09",
+      "features": 6,
+      "specifications": 18,
+      "io": 6
+    },
+    "blu-160": {
+      "sha256": "376ACF43F2ACCAA954CEFEA223CBB43943B0131257875B51BD08A5A3AFBAC68E",
+      "features": 6,
+      "specifications": 19,
+      "io": 9
+    },
+    "blu-50": {
+      "sha256": "2EEAB31816AE453FE9FEB98208C744718073B8547BB736B14097FDA1E91A9A5E",
+      "features": 5,
+      "specifications": 13,
+      "io": 6
+    },
+    "blu-aec-in": {
+      "sha256": "1772EE664F74D0C5666D8B7DEE195A70D5D005CB463B64DC3C38ABE7C2DDFA74",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "blu-dan": {
+      "sha256": "F7036CB2ACCA378C51DF7BB58B1BD8B6E9BCD5BDECE4F392BC47B94EFECFD53D",
+      "features": 5,
+      "specifications": 7,
+      "io": 4
+    },
+    "blucard-in": {
+      "sha256": "AACE1BB38E2D0A673DD7BFF02B270ED602DA2245AFC7692FB2AAF68EE653B7D1",
+      "features": 4,
+      "specifications": 10,
+      "io": 3
+    },
+    "blucard-out": {
+      "sha256": "E3AE1A3F74099D87BC729124F84517E45C89C326523B4693305C3216E21014CB",
+      "features": 4,
+      "specifications": 11,
+      "io": 3
+    },
     "brc-am7": {
       "sha256": "6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D",
       "features": 8,
       "specifications": 27,
       "io": 14
     },
+    "cdi-2-1200": {
+      "sha256": "FED3352A5A475D80723C1F45E5028E427FA51827471D517EC31369E2FB3C13BF",
+      "features": 3,
+      "specifications": 25,
+      "io": 2
+    },
+    "cdi-2-1200bl": {
+      "sha256": "BFC601B5ADDA2403C4226D057CABD4AC5FB887458E5BF0D86E026FC673AC8B1D",
+      "features": 3,
+      "specifications": 26,
+      "io": 3
+    },
+    "cdi-2-300": {
+      "sha256": "1C83770865A987364952BD9E337420D4A328CDA4A98C5B5D7DF9589CFB7A5EB4",
+      "features": 4,
+      "specifications": 30,
+      "io": 5
+    },
+    "cdi-2-300bl": {
+      "sha256": "D67514ECA63AB7D3507DD74E6491C05479AA94BE4BDDE0BF27A3AEF2E9F750BB",
+      "features": 4,
+      "specifications": 29,
+      "io": 6
+    },
+    "cdi-2-600": {
+      "sha256": "5FA82618DB467AE7344639D97C24EE7A4BEF53C556762E4E98AB2D4DC0FC1EA3",
+      "features": 3,
+      "specifications": 24,
+      "io": 2
+    },
+    "cdi-2-600bl": {
+      "sha256": "5AEA92C11EC6D3D17237BE6A2C838D3A9E9C6C74764B157721E7FC11A49825A6",
+      "features": 4,
+      "specifications": 27,
+      "io": 4
+    },
+    "cdi-4-1200": {
+      "sha256": "5585331C1A66F37B3C8C46DD77C56D7B74B7F95D905CB1737C9FDC2949C60C36",
+      "features": 3,
+      "specifications": 25,
+      "io": 2
+    },
+    "cdi-4-1200bl": {
+      "sha256": "3001003DE8CE45BCC286A6C61DD53AEBD8A696582ABC2AEF73F7EE9D62B46760",
+      "features": 4,
+      "specifications": 25,
+      "io": 3
+    },
+    "cdi-4-300": {
+      "sha256": "0F6BE92DCE43FFFC43242F6BE1480AF633D55FB513EAB5CE51C61C2D139434D9",
+      "features": 3,
+      "specifications": 26,
+      "io": 3
+    },
+    "cdi-4-300bl": {
+      "sha256": "B335E6DC92344A37EA1B0CA4AB080F7F9E984D0CCB0BED0BD17ECA6EF42754D4",
+      "features": 3,
+      "specifications": 26,
+      "io": 3
+    },
+    "cdi-4-600": {
+      "sha256": "7BE4DD3AC69DF24883F7F300A71EF4F391FDF81F8241F7C1966F0893419442F6",
+      "features": 3,
+      "specifications": 25,
+      "io": 2
+    },
+    "cdi-4-600bl": {
+      "sha256": "2598A93C3358829F6696E919B87F4D7460FE82F7B57431264C3B846859BEED65",
+      "features": 4,
+      "specifications": 26,
+      "io": 3
+    },
     "cl01": {
       "sha256": "AC45897920AD904550138359517DFFA9C02A0B5576AC01A4FF047859F012F888",
       "features": 5,
       "specifications": 11,
       "io": 5
+    },
+    "cm20": {
+      "sha256": "30D4D6D0001ADFE6D3708A3818CF459CD4848C25CD406206F0F349A1D5139903",
+      "features": 6,
+      "specifications": 14,
+      "io": 0
+    },
+    "comtech-d-2125": {
+      "sha256": "D4EB343994DAC5BC9339F7C5FF62527DDD7B8E35DADB794314BE8BC4693223CC",
+      "features": 3,
+      "specifications": 13,
+      "io": 3
+    },
+    "comtech-d-4125": {
+      "sha256": "89AA1123F1B18DE95F18DCAC86290622873739F41AACBEACBD1419C632AC290B",
+      "features": 3,
+      "specifications": 13,
+      "io": 3
+    },
+    "comtech-d-8125": {
+      "sha256": "066D0FAAC071900D79E44392A6FAB798A04567572936CE5F28E1968C4C506181",
+      "features": 3,
+      "specifications": 12,
+      "io": 3
+    },
+    "confidea-flex": {
+      "sha256": "E4C324400E17F6030427D420C7F0006562C501950E540F71A2A7ED2275B0B502",
+      "features": 6,
+      "specifications": 30,
+      "io": 4
+    },
+    "control-23-1": {
+      "sha256": "7F1E86939ED1E104262E467A6DD1EB8EE33EF5091E5546410CCCEC84A3B8E290",
+      "features": 6,
+      "specifications": 25,
+      "io": 1
+    },
+    "control-25-1": {
+      "sha256": "D3508BD676B8257A3333F5F9234FEE9781B3B6E7068D81B7EB726B2F9FA2E316",
+      "features": 6,
+      "specifications": 25,
+      "io": 1
+    },
+    "control-28-1": {
+      "sha256": "4A117B23E7F74857837069973B0F772F81685EC4C232EA49B462F6D997BEA7EB",
+      "features": 6,
+      "specifications": 25,
+      "io": 1
+    },
+    "control-412ct": {
+      "sha256": "74877F0316D6525B5B0886FD88FFFB57F81C82A2A8E0490DC531903FE962D148",
+      "features": 6,
+      "specifications": 15,
+      "io": 1
+    },
+    "control-414ct": {
+      "sha256": "F71984745C56F36D67BE43A36F6CBD80877DB6C2F51C831ACAF2DA764B2EB84E",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-416ct": {
+      "sha256": "BBE0739E387F3BA367D97DE140CC0E3A412F2B6B6102372262EF29EFFDC8F7D3",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-418ct": {
+      "sha256": "01E61E06F21E281300B39912F01769946BC52AF0DCE2E42B7EE08D62B52C46F1",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-419cst": {
+      "sha256": "5B49F6E8827744318B5036787D73D8955743A05A7364C3F8B9D073E977713D7A",
+      "features": 6,
+      "specifications": 15,
+      "io": 1
+    },
+    "control-424ct": {
+      "sha256": "2882505D1ADC28FD64F7154C6024D80FDA7E557848659BC6507CE245B15DCA0C",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-424lp": {
+      "sha256": "F81B777612EF7839842EF060850AA9C2BABCD753CE41DE35383D7A3FE8FEF176",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-426ct": {
+      "sha256": "6D49AC2A1B8DBC0643AFD8F589D222070834993B2DEA42C9B768A84E0B5715F4",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-426lp": {
+      "sha256": "EE2AC46AFA74272337C173E1C2E713C2132D3F50F6BE81154DB56C2932095983",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "control-440cst": {
+      "sha256": "2D2AED1E1334434AA833480E4728DDE4F1BF8E3458CF7636D53EA2225A9B29E2",
+      "features": 6,
+      "specifications": 15,
+      "io": 1
+    },
+    "control-447ct": {
+      "sha256": "6E8FCC5062F562834DE6872800BA8C177A7A0D815D8687688A09B666FF788AD1",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
+    },
+    "cpe40": {
+      "sha256": "CD00C36A5552967757A4AC66D1F047B5F53B7DC91672A3301BB26E6E1BA1C4E4",
+      "features": 6,
+      "specifications": 7,
+      "io": 1
+    },
+    "cs10": {
+      "sha256": "94B743AE4D056306B86E87F4548443B602131093A09DCF69FBCB14AED794E7F6",
+      "features": 6,
+      "specifications": 12,
+      "io": 0
+    },
+    "d-cerno-ae": {
+      "sha256": "3BBFAD04825E5F367116BC9341E4DAAFF15DDC9016E64166F8C0D517039991F6",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "d-cerno-cu": {
+      "sha256": "6204A9E1D3EE5E9637223B69EFA983B5F51923FE54A821779C0F48B38BC53141",
+      "features": 6,
+      "specifications": 23,
+      "io": 6
+    },
+    "d-cerno-d-sl": {
+      "sha256": "B800F60EEB00DC7321FE87D9435F4323BF43FD94CEF47CAED784093DF36B1A91",
+      "features": 6,
+      "specifications": 17,
+      "io": 3
+    },
+    "d-mic-40-sl": {
+      "sha256": "4F94CF82CFFAAB70FDEADFE44F03349991724BFA6DF506B8D339DFBF540B2CF2",
+      "features": 5,
+      "specifications": 20,
+      "io": 1
+    },
+    "d-mic-50-sl": {
+      "sha256": "A4956E54DD34915D556A9348529DFE59C54CB67D4EFA7A23AEBEACF8DAA3BB00",
+      "features": 5,
+      "specifications": 20,
+      "io": 1
+    },
+    "dci-2-300": {
+      "sha256": "B01B72561715F54D0935A4D3575A655EB964F90625342A4F6E08DD70BF4B0855",
+      "features": 3,
+      "specifications": 24,
+      "io": 2
+    },
+    "dci-2-300n": {
+      "sha256": "87C74854EFC91E589128ECE1561269D6A1E59FC86DB2EFCAD6697B73BCFDC40A",
+      "features": 4,
+      "specifications": 25,
+      "io": 4
+    },
+    "dci-2-600": {
+      "sha256": "D5DBC21542B9BDC28E6DFBAD35CA07005FB723908297FD6746C2951F7A06ECF1",
+      "features": 2,
+      "specifications": 22,
+      "io": 2
+    },
+    "dci-2-600n": {
+      "sha256": "91D651F6509EEBE2189853035B1593ECC03A956D2ACF2BDBF771487DFBB940B7",
+      "features": 4,
+      "specifications": 24,
+      "io": 3
+    },
+    "dci-4-300": {
+      "sha256": "44E6E8B2B76B8009C0030C20BF09A51C3DF598E427612BCECCC2CDFC75843715",
+      "features": 3,
+      "specifications": 22,
+      "io": 2
+    },
+    "dci-4-300da": {
+      "sha256": "5B6CAF59000AC2B014B98847A101EF3EAB87D75EE5A4C7EDE61235C36CA1EA1F",
+      "features": 4,
+      "specifications": 34,
+      "io": 4
+    },
+    "dci-4-300n": {
+      "sha256": "57A2E26098FA091111146226606DD5645E3D3F780080F4CCFB5C59BB0C96DF1A",
+      "features": 3,
+      "specifications": 26,
+      "io": 4
+    },
+    "dci-4-600": {
+      "sha256": "7D1B3CA634D52EDAA932F239EB28BD8F5D66DD8AEC65652202185D6CC0A98E6D",
+      "features": 2,
+      "specifications": 20,
+      "io": 1
+    },
+    "dci-4-600da": {
+      "sha256": "E44368E726AF0AD62F22AED82B8C6B021284D69BA0914E4E277629D10915531B",
+      "features": 4,
+      "specifications": 33,
+      "io": 4
+    },
+    "dci-4-600n": {
+      "sha256": "3C6BE45E1B708702DEC79ADA81DADD15EA731CE40DA68D5B39276DC30AE967CD",
+      "features": 3,
+      "specifications": 25,
+      "io": 3
     },
     "dm3": {
       "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
@@ -67,11 +427,131 @@
       "specifications": 16,
       "io": 15
     },
+    "duecanali-1604-dsp": {
+      "sha256": "97D8FD377704AD0B369A4E2A0A203B5F30ABDA8A1CD3FD4984FC3E1F2EA08B0A",
+      "features": 4,
+      "specifications": 48,
+      "io": 3
+    },
+    "duecanali-1604-dspd": {
+      "sha256": "EF9353051F204FD861FAC8EA6B2C671EFB0C28E31C16443406BD283B1F64CD1D",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "duecanali-804-dsp": {
+      "sha256": "42F5E9BFF693E383825D2ED7AE07F81737B6596C22235412D279295035AC4993",
+      "features": 4,
+      "specifications": 48,
+      "io": 3
+    },
+    "duecanali-804-dspd": {
+      "sha256": "5FC1B59ECEB3E82F1791841359D8457D44DDA321168E1DC7185B7545FED5A1A9",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "eb-l260f": {
+      "sha256": "4B15686BF75984285D8397FEAF75B0BC6CDDB9559DAEC7C137D51E9782368BBF",
+      "features": 6,
+      "specifications": 25,
+      "io": 12
+    },
     "eb-l530u": {
       "sha256": "BDF9A268D01ED50A1960A1DAAAAF9BA4ECEB4DA9BBCC224EFA90F5396B976B70",
       "features": 6,
       "specifications": 12,
       "io": 11
+    },
+    "eb-l690u": {
+      "sha256": "3608697E0DDA592AE2A98909CC8207D36C42DCE74161D56C87841FAEF44C52E2",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l695se": {
+      "sha256": "52CA861832F8B6EC412C990B530F325F1960122AD6FD2162BEC32CF41F50A384",
+      "features": 6,
+      "specifications": 26,
+      "io": 8
+    },
+    "eb-l790su": {
+      "sha256": "B7CD6ED0852A1752C1C6CC05963493D0A1D3EEA666821144274CEF2DC445CE25",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l790u": {
+      "sha256": "7D5E472A72B867F917A0D5319E2B60214BB4D12AD4238E20E6E9D6AE301CA066",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l795se": {
+      "sha256": "F40A511AFA9A7C01C59AE01C5B5090C7CA366B08B1D117453ED6F6550E587753",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l895e": {
+      "sha256": "015B72049095FBFE4D1BE6803CB29EA4A133CBF2D9EFF83945C634C80BD4AB23",
+      "features": 6,
+      "specifications": 28,
+      "io": 8
+    },
+    "eb-l895u": {
+      "sha256": "20B1CB0FF0D081A0D21D47F917C69B08D96C12AC6AF492F45590ED371A336233",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-pq2213b": {
+      "sha256": "DE43E124737C61C5F42335A38F6E8D42A7F4C1CF0A9047750B7F36C4A435DFD7",
+      "features": 6,
+      "specifications": 24,
+      "io": 7
+    },
+    "eb-pq2216b": {
+      "sha256": "ACA446E66CAAEC49A030985D73C6E6C8E0C1B7419E1C7A0010AE7BCFBBF2080A",
+      "features": 6,
+      "specifications": 24,
+      "io": 7
+    },
+    "eb-pq2220b": {
+      "sha256": "264EC689DE722024FE5C39DA260A049185D428E5664FCA832DD9513D7770A3E7",
+      "features": 6,
+      "specifications": 25,
+      "io": 7
+    },
+    "eb-pu1008b": {
+      "sha256": "62D84EF17AD1CCB7A39356C27FAD0F0CBB49EDAD4D612297FFB8E3036C8FB2EC",
+      "features": 6,
+      "specifications": 26,
+      "io": 9
+    },
+    "eb-pu2010w-b": {
+      "sha256": "0C01D232394612CC34B478604AB0ACCAE0EB5CB2D3C684481B4B45F873F9FE03",
+      "features": 6,
+      "specifications": 26,
+      "io": 11
+    },
+    "eb-pu2213b": {
+      "sha256": "080CC516A1456538EEB0E194A80BE850551C93FEE598F1A7EE587C907900BAB4",
+      "features": 6,
+      "specifications": 26,
+      "io": 12
+    },
+    "eb-pu2216b": {
+      "sha256": "1218D0F14815D7B0E9657737B945C34618011D7E7030E3D640C5054AE6933A38",
+      "features": 6,
+      "specifications": 26,
+      "io": 12
+    },
+    "ec-4bv": {
+      "sha256": "30C84B8CF326226287438080853827D3DA98F635455A7D4F2DB68E94C6A2B06D",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
     },
     "eikos-4k": {
       "sha256": "628520AD87F049B6151653E0425771AC4BFF3ED4051858A34E9EAF35C0085504",
@@ -97,10 +577,112 @@
       "specifications": 13,
       "io": 5
     },
+    "gs108pp": {
+      "sha256": "F196A0999AB90242650FB5FD4B2D748ED91828BA68B71D5F2E4E2B8B4878A381",
+      "features": 5,
+      "specifications": 14,
+      "io": 1
+    },
+    "gs116pp": {
+      "sha256": "BB3092E47311D5EC563A386E27E4431D266CDC9958266AE71D35FFE01D5204D6",
+      "features": 5,
+      "specifications": 19,
+      "io": 1
+    },
+    "gsm4212p": {
+      "sha256": "296A29ADF10422DB2825450579132CC13467BCC3BA942E1F7FAC7AF6310B2E54",
+      "features": 5,
+      "specifications": 15,
+      "io": 3
+    },
+    "gsm4230p": {
+      "sha256": "12F60EA88F4B582BFD84498E82E5EDAA242FB95328B5B751E70A0AD9D34E4EF8",
+      "features": 5,
+      "specifications": 15,
+      "io": 4
+    },
+    "gsm4230px": {
+      "sha256": "6816762D6FC8698EBEB2CFC5393CF893A2973F82FA2CF815413FE6AE666D33FB",
+      "features": 5,
+      "specifications": 15,
+      "io": 4
+    },
+    "gsm4248p": {
+      "sha256": "D5B6D8445A765BCA4AC4FFC9124E2D3DFAD46BA5A903FE5F2991ECDE9A3B2472",
+      "features": 5,
+      "specifications": 15,
+      "io": 3
+    },
     "gsm4248px": {
       "sha256": "5C82557553544677F9E42274939BD7B56430F7063F726C6A6411A9140B636223",
       "features": 6,
       "specifications": 10,
+      "io": 2
+    },
+    "h-800w-psu": {
+      "sha256": "2526760044131BFE99AACF16B1609D11FF3237D33AF54E5B9111A692CFFC6819",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "h-input-card-12g-sdi": {
+      "sha256": "046B53159329E68A13DE2AC8893867726E8563ABFC5E35348EB2922F6BD1F26E",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-2xhdmi20-2xdp12": {
+      "sha256": "EFF691B111B5BDE20A733A204F5FDD9F0A15C0ECA4B0FC3AE722DE22B19806E9",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-4x3g-sdi": {
+      "sha256": "B0E6918FD4071237CF9012730A58D2B72FE1877C6A2F95621E9608B29D45335B",
+      "features": 3,
+      "specifications": 5,
+      "io": 1
+    },
+    "h-input-card-4xhdmi": {
+      "sha256": "F82DDAD373F43D7BD660504583682D5539E2ACDAB728A8F79BFC542E89D42BA6",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-dp12-4k": {
+      "sha256": "FA9A44A780D6BD30149A8C5277E1E96F159CD60D3D588D7C41FAB80076D834F3",
+      "features": 4,
+      "specifications": 6,
+      "io": 1
+    },
+    "h-input-card-hdmi20-4k": {
+      "sha256": "282CD792823CDDDC0AFAECD06D53C936996EC82789F5AF7B852B419FDC5E7807",
+      "features": 4,
+      "specifications": 6,
+      "io": 1
+    },
+    "h-input-card-hdmi20-dp12-4k": {
+      "sha256": "AB975EB9F380805BE1C5AD7DB859C545C0D4C24F167AD400DED5191207BD90AE",
+      "features": 4,
+      "specifications": 7,
+      "io": 2
+    },
+    "h-output-card-4xhdmi-dl": {
+      "sha256": "F1B6A3BEAF269E2B1B3DEC08229416D9F8D36E38C8EE8FD81FEC9E14D7F7938D",
+      "features": 4,
+      "specifications": 7,
+      "io": 1
+    },
+    "h-output-card-hdmi20-4k": {
+      "sha256": "B542F3FEB203E91D3FAB6DA36C0E063BB1CC8B5A7C5481EE6BA057AE0C997DCF",
+      "features": 3,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-preview-card-2xrj45-1xhdmi13": {
+      "sha256": "EEEDE951FC555F688EE7775B16CC09FB9220B6368BB5A83A211399700BD4E06D",
+      "features": 4,
+      "specifications": 4,
       "io": 2
     },
     "hdmi20-optj-rx90": {
@@ -114,6 +696,24 @@
       "features": 6,
       "specifications": 10,
       "io": 3
+    },
+    "hg43u800fnfxkr": {
+      "sha256": "18CB962DDE6D83A784F35EB54772CFA6F1919C5FD241AE8B2F41838C97465A3C",
+      "features": 7,
+      "specifications": 7,
+      "io": 2
+    },
+    "hg50u800fnfxkr": {
+      "sha256": "FDFD96D4635E233ACFFA3D188A2F009693A5E0FD308EDAB0E19BC550896E292B",
+      "features": 6,
+      "specifications": 6,
+      "io": 2
+    },
+    "hg65u800fnfxkr": {
+      "sha256": "FED2AF8F9471FAB1BBDA4EA39763C5B5770CEFE60A80294CD7EE5827E351E97E",
+      "features": 6,
+      "specifications": 6,
+      "io": 2
     },
     "hyperdeck-studio-hd-mini": {
       "sha256": "70EADE7CA5C936F8347E4F97AF791E774DD7DFEACD402095F6A9BCBE9C8A0A47",
@@ -133,16 +733,106 @@
       "specifications": 8,
       "io": 6
     },
+    "i-tech-4x3500hd": {
+      "sha256": "23D85B227E27938CF4946381B544BCB2645B81DDD54BD0A49C8537CE88AD744C",
+      "features": 2,
+      "specifications": 17,
+      "io": 3
+    },
     "ki-pro-go2": {
       "sha256": "07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488",
       "features": 8,
       "specifications": 16,
       "io": 11
     },
+    "kq75lsf03wfxkr": {
+      "sha256": "F151A9114D6FCAE85FF6D0BCC7702C301A6533F09019914E66398BEC305415B3",
+      "features": 6,
+      "specifications": 28,
+      "io": 6
+    },
     "led-780h": {
       "sha256": "05C5322CAE43B1365B03B8B0F9B6103CB49E4A44932B77F1A6EF2777C616D83F",
       "features": 7,
       "specifications": 11,
+      "io": 6
+    },
+    "lh115qhfebgxkr": {
+      "sha256": "D4597BDE058816466D36B8EDB638140192648F282039F0988164582D3800E6F7",
+      "features": 7,
+      "specifications": 12,
+      "io": 1
+    },
+    "lh32qmcebgcxkr": {
+      "sha256": "AAB348646BB861D0D68B756CD1CA46352933D18A91A69F59056F502362E5CB6C",
+      "features": 4,
+      "specifications": 4,
+      "io": 0
+    },
+    "lh43qhcebgcxkr": {
+      "sha256": "1FD1B1BD75C161204F099A25A0AF625D9C0B98DF35E2548E92EF225391B65A1C",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
+    },
+    "lh43qmcebgcxkr": {
+      "sha256": "6019B46E38B1F099DFC9109CAD9946B10CC0C512A045CA09DACD3EBF40B54166",
+      "features": 7,
+      "specifications": 8,
+      "io": 0
+    },
+    "lh55vhcrbgbxkr": {
+      "sha256": "301BDC3EA583121DD34442826DE0603BD0809AF03C06F893D2EADE7D6EBB8811",
+      "features": 6,
+      "specifications": 8,
+      "io": 2
+    },
+    "lh55vmcrbgbxkr": {
+      "sha256": "65E34831D2181EE59426A91FD669D120249DE49E35C579BFA199A057A2C60638",
+      "features": 6,
+      "specifications": 8,
+      "io": 2
+    },
+    "lh55wmfwbgcxkr": {
+      "sha256": "269D211360AF3A9BDFB9994E22498B0DA58149BAE57CCEF3E01BFDAC41D96800",
+      "features": 7,
+      "specifications": 9,
+      "io": 2
+    },
+    "lh75qhcebgcxkr": {
+      "sha256": "13E1655931B7DC20FE8C1056DCBE8568EDF7B64BD4293C60162E5A89DC437EFD",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
+    },
+    "lh75wmfwlgcxkr": {
+      "sha256": "8752A6ECA66DE6DF4B752B1CF9F3FFB58E31EBAF771793D2170AB5217A48BF7B",
+      "features": 7,
+      "specifications": 9,
+      "io": 2
+    },
+    "lh85qmcebgcxkr": {
+      "sha256": "DAFCD1ECF3ACC2F5F537E3119897B841384702B2C520C7B12AA8235787F2AB21",
+      "features": 7,
+      "specifications": 8,
+      "io": 0
+    },
+    "lh98qecedgcxkr": {
+      "sha256": "DAD59D683A22FCAC7A85C07E7C5DC646466A5A6D0FBD9C03592FC8A98D5733A3",
+      "features": 3,
+      "specifications": 3,
+      "io": 0
+    },
+    "lh98qmcebgcxkr": {
+      "sha256": "E7D0B45347B99F850A35BDD3AAD34A47C6376B6674A7DC22C0A850FD12FCAEB2",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
+    },
+    "mezzo-322-a": {
+      "sha256": "F6A21C1632E45EA886339B70771AD584A2BD5F88E1FAD3202163D1C27CCE8FF4",
+      "features": 4,
+      "specifications": 57,
       "io": 6
     },
     "mezzo-322-ad": {
@@ -151,11 +841,95 @@
       "specifications": 11,
       "io": 5
     },
+    "mezzo-324-a": {
+      "sha256": "C12FC4A751265C1F23808733D49FF95C1567C6B5582C3C4920FD85EDBC53E8DB",
+      "features": 4,
+      "specifications": 56,
+      "io": 5
+    },
+    "mezzo-324-ad": {
+      "sha256": "3B463C55049251F48AA8BF960643C9953990F486330A46DE198ECD3A8B6E26CE",
+      "features": 5,
+      "specifications": 59,
+      "io": 7
+    },
+    "mezzo-602-a": {
+      "sha256": "8E647E34DA23670ADD8562607ACE6484CF8634EBDFF6B01360193FC9C8C712B9",
+      "features": 4,
+      "specifications": 60,
+      "io": 6
+    },
+    "mezzo-602-ad": {
+      "sha256": "C249199B79A484B525DCB9279ECB0B38528AF815A5549289E3DCD8E93EF44027",
+      "features": 5,
+      "specifications": 63,
+      "io": 8
+    },
+    "mezzo-604-a": {
+      "sha256": "A32BC9D11187250B621E08AF0287746A81159966B96EE7E0EF6E1828ADF7917C",
+      "features": 4,
+      "specifications": 59,
+      "io": 5
+    },
+    "mezzo-604-ad": {
+      "sha256": "601E86D55B034C584EE1FA878ACBD81E2EE69431C57C6440AC04423EE2AB2C31",
+      "features": 5,
+      "specifications": 62,
+      "io": 7
+    },
+    "mx392-c": {
+      "sha256": "82FD286F4AEEE178B2AFC4BED4BAF78A1742D07B32725B76E2B65843CC8B0069",
+      "features": 3,
+      "specifications": 24,
+      "io": 1
+    },
+    "mx395": {
+      "sha256": "1FBD8A1E5DD264B234B858F99A145FBF9B4239E81ECADB3273CC18F9A4E43A26",
+      "features": 3,
+      "specifications": 24,
+      "io": 1
+    },
+    "mx418d-c": {
+      "sha256": "972F140056F73F8511066F26ECE0EEC3C1395FFD309C4AF438307FB7D0330F44",
+      "features": 3,
+      "specifications": 24,
+      "io": 1
+    },
+    "mxa925w-r": {
+      "sha256": "86E357A339F7F31D6D7C40117DB273DFDD1D6938B9B4C55076030CC09E1C7263",
+      "features": 2,
+      "specifications": 30,
+      "io": 2
+    },
+    "mxc420-c": {
+      "sha256": "FD8AADEC35A19DE916E7187F27444A7B6F24EB0EB985D74EB1BC497D1B0739E0",
+      "features": 3,
+      "specifications": 12,
+      "io": 0
+    },
     "mxcw640": {
       "sha256": "C47DB31FF44956FFE6D9FF3347BC99D34CF7410023D011F9A038B390281F43E9",
       "features": 7,
       "specifications": 10,
       "io": 4
+    },
+    "mxcwapt-w": {
+      "sha256": "D09CD99704F6FA3B834E5460C9267F9A4F7CDEAB3747FFD96A9132145D8C7918",
+      "features": 3,
+      "specifications": 20,
+      "io": 3
+    },
+    "novastar-h2": {
+      "sha256": "A47F7AFB20FF45A8102969E7E538D4B98C2483D62137A88CBF6AF237CF9693E7",
+      "features": 6,
+      "specifications": 26,
+      "io": 7
+    },
+    "novastar-h5": {
+      "sha256": "AB2841DB61F924EDBD9C94144B9B962F13AEF8B634AE157FFA9C0A431D3438E1",
+      "features": 6,
+      "specifications": 26,
+      "io": 7
     },
     "nx-1200": {
       "sha256": "649AB28D95E8E694A899380193605E74F3F427D9CDD4E099667AAB95422E7BE1",
@@ -174,6 +948,24 @@
       "features": 6,
       "specifications": 19,
       "io": 8
+    },
+    "plixus-ae-r-dante": {
+      "sha256": "2333869C19A98D43AC9B76856907B8B8C888956DEA38298824D1A00E458655AA",
+      "features": 6,
+      "specifications": 27,
+      "io": 9
+    },
+    "plixus-ae-r-ps": {
+      "sha256": "6AF095814B58B2BD4A87F11499D2B4CF22E1FEB9497220A4DFDE618DFF4F5AA2",
+      "features": 5,
+      "specifications": 21,
+      "io": 2
+    },
+    "plixus-next": {
+      "sha256": "FA27D28D4BAACB09E465B9503E42C02E64E36D0036927613964C90745F2F1DF0",
+      "features": 5,
+      "specifications": 12,
+      "io": 3
     },
     "pt-mz11k": {
       "sha256": "7B9C7F5FE8F7EA47C0B2CADF0E06ADFAA3735F0E395449ECA60103FF296CB694",
@@ -223,6 +1015,66 @@
       "specifications": 14,
       "io": 10
     },
+    "qlxd1": {
+      "sha256": "2DDECDE4F30D7C9959A7D2A1F6DA4B4627C775073DCA47755F1F0D2D0CD1F924",
+      "features": 2,
+      "specifications": 19,
+      "io": 1
+    },
+    "qlxd2-beta58": {
+      "sha256": "8CC7ED3C730A56C172B0C6E6B5F94B87DBA4995DB7B268AFA136C7F580C18165",
+      "features": 3,
+      "specifications": 15,
+      "io": 0
+    },
+    "qlxd2-beta87a": {
+      "sha256": "CF744E9C12334A89960CBF67D8D203CA062E5BD89FD6953109BD35DE4A4F6F8E",
+      "features": 3,
+      "specifications": 16,
+      "io": 0
+    },
+    "qlxd4": {
+      "sha256": "B6A9E9B0095128DF45D010E846BD2930C255E9CF06DC6B67B4D7F33F625C0F58",
+      "features": 2,
+      "specifications": 28,
+      "io": 4
+    },
+    "quattrocanali-1204-dsp": {
+      "sha256": "F2519205B6D445708E7055AA6C73A99428074C6A8A55C960C0A1734AA77ABFBA",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-1204-dspd": {
+      "sha256": "1CBE17EBD109EC99DC9BBFFC31141CBA1C91B70F245E3E0404CD4164F2CFC650",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "quattrocanali-2404-dsp": {
+      "sha256": "D552E9E198B78C7C5D6729EE989E16B5CF90006E12C6116ECCAF2031FB4DB2FF",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-2404-dspd": {
+      "sha256": "9EAF18C3C194C53BF1938E64C6126D97F3BC0425E842B36E75E67553C0FB5D12",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "quattrocanali-4804-dsp": {
+      "sha256": "D0E5F1822A2DCA6507C0C08B9175B30BDDFFD2B46CF4969E959FEAB432F163D7",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-4804-dspd": {
+      "sha256": "107BEE7B252AC8411E44F4B03C4903234E4E094D345B699B2E71A8FB3CB8AB76",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
     "rally-bar": {
       "sha256": "34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1",
       "features": 8,
@@ -271,6 +1123,12 @@
       "specifications": 12,
       "io": 6
     },
+    "smartvision40": {
+      "sha256": "6B2EC4A2390502D9A512A4A0125D3794176E03105B6A5211B3744B101696312F",
+      "features": 6,
+      "specifications": 10,
+      "io": 0
+    },
     "strong-usb-cable": {
       "sha256": "1ECCF2EED991666210ADA72DC0A20D24481A6E26D4C772F4C0B3135D7669252E",
       "features": 3,
@@ -313,17 +1171,167 @@
       "specifications": 12,
       "io": 6
     },
+    "ua844-swb": {
+      "sha256": "D7AC9446C949F6FABD44DE728236D700BC000D0CC7F55CCE1F7778B354B510EB",
+      "features": 2,
+      "specifications": 16,
+      "io": 2
+    },
+    "ua845uwb": {
+      "sha256": "F85121F0B2D9CD0CAD075C7EFB9B176309ADA907732B047C4CE925DB6412FD12",
+      "features": 2,
+      "specifications": 13,
+      "io": 2
+    },
+    "ua864a": {
+      "sha256": "C9C806D8145E1214B60E2D1F870D3079D0B8D369B2A5AD357E4010E87C8B3766",
+      "features": 2,
+      "specifications": 13,
+      "io": 2
+    },
+    "ua874xa": {
+      "sha256": "D38745831BA5E702A6AF518C44D1B4A2DA2124BEDACD8C94FEB93FE2091A4338",
+      "features": 2,
+      "specifications": 14,
+      "io": 2
+    },
+    "ultripower-ps": {
+      "sha256": "1AC00C669EB4756C6C464604A952628E271CDBF56E451646BF79316D96FA9444",
+      "features": 3,
+      "specifications": 3,
+      "io": 0
+    },
+    "ultripower": {
+      "sha256": "91D1B335B7DF6A3E4E8FFD7422BE73CC8A1450658E10949697339ABD81B69AF2",
+      "features": 4,
+      "specifications": 10,
+      "io": 2
+    },
+    "ultritouch-2-hr": {
+      "sha256": "AF06BC4C8C7800F9DD2E4FB9B6B0FF5D49B015B511E911D9308661D08C1CC26E",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "ultrix-hdx-io": {
+      "sha256": "6A28FFFFE3ADBB3429694036A10735BD125F07CF4D5E1C546113F67DE94715A6",
+      "features": 6,
+      "specifications": 15,
+      "io": 4
+    },
+    "ultrix-ns-fr2": {
+      "sha256": "E1F4BF899BD42A3654F2A0DA6775B2BD1CE910512013356D5FA34F8B8C143AC3",
+      "features": 5,
+      "specifications": 28,
+      "io": 6
+    },
+    "ulxd1": {
+      "sha256": "1CA1213E359155B7D1CF394FBB986E3AE0D129CF0EAC78A17A9440F78B0FF714",
+      "features": 2,
+      "specifications": 20,
+      "io": 1
+    },
+    "ulxd2-beta58": {
+      "sha256": "ED440DFE10DEE83ED43AB4C42A5CC34671EEE752727681BD626286474453698A",
+      "features": 3,
+      "specifications": 18,
+      "io": 0
+    },
+    "ulxd2-beta87": {
+      "sha256": "ED1E80F3E55343E5CB721B1FFE12F62058599B206977AAC6ACDE697A73559893",
+      "features": 3,
+      "specifications": 17,
+      "io": 0
+    },
+    "ulxd2-ksm9": {
+      "sha256": "AC5BDE22472A815A89D2ED0D240DDCFCB23B6D75366BCD20F0C18281DABE2C12",
+      "features": 3,
+      "specifications": 17,
+      "io": 0
+    },
+    "ulxd4": {
+      "sha256": "4498ED7F1CF1734F55709AEFA41586D38489A74CD83598698937A488355EC906",
+      "features": 4,
+      "specifications": 27,
+      "io": 3
+    },
+    "ulxd4d": {
+      "sha256": "B3E1747D13110B3CDDF2C632F11CCC3095345AC8597938540760359E4156D39B",
+      "features": 4,
+      "specifications": 29,
+      "io": 5
+    },
+    "ulxd4q": {
+      "sha256": "F309B13EB6AD752E4A869FD0E0510EE1415277DA1E40F2E7D4B41AA8E6DF1134",
+      "features": 4,
+      "specifications": 33,
+      "io": 5
+    },
+    "ulxd8": {
+      "sha256": "2E1031838CCAA21B01241D2EBC4F37AB69742BB5216A16768FEDBAFA7858E657",
+      "features": 2,
+      "specifications": 9,
+      "io": 0
+    },
     "uvc-01": {
       "sha256": "CCEA0CA92DE4D3F3F6C3975895CB62CE14E779620220D452F0251716A724018B",
       "features": 5,
       "specifications": 10,
       "io": 3
     },
+    "uvc85-byod": {
+      "sha256": "62E769D4AA8028AF52E2AEA590077C92E629DBD7A6005B99114847E0E16C5291",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "uvc86": {
+      "sha256": "18F6ACEDF1DE425F7F9033AA77CA8BBF10CB24489C81D32E7B721666C744F506",
+      "features": 6,
+      "specifications": 16,
+      "io": 8
+    },
     "v-02hd-mk-ii": {
       "sha256": "AB9E3908ED3123DE4D4C7C87ABBF9AC17948B5D2024378E21A20DA056A825FE8",
       "features": 6,
       "specifications": 10,
       "io": 6
+    },
+    "v-02hd": {
+      "sha256": "E9EECCA0CF9EDE940C70F4CD96B64386D36DBF61B47E65ED34CDD754706FA032",
+      "features": 6,
+      "specifications": 15,
+      "io": 7
+    },
+    "v-160hd": {
+      "sha256": "F7D7F236BE19C8B4B1F0C97987B9D08BB21A543A2F810574F00797A81CB477A2",
+      "features": 6,
+      "specifications": 18,
+      "io": 18
+    },
+    "v-1hd-plus": {
+      "sha256": "1CD28BC2E5D291E36BEDFFDEFF59FEB56FA7BDB733A33725694EDB5FECE84723",
+      "features": 6,
+      "specifications": 17,
+      "io": 12
+    },
+    "v-60hd": {
+      "sha256": "8CE8CB5F7115A6513BE0AF0E843BE6EFB3925DA92C34A6504FEE6689FAEF68C3",
+      "features": 6,
+      "specifications": 19,
+      "io": 15
+    },
+    "v-80hd": {
+      "sha256": "9958658E160B05E2511D4644F57F8C898BD601F308E1A296C2F695BCDB827400",
+      "features": 6,
+      "specifications": 21,
+      "io": 15
+    },
+    "v-8hd": {
+      "sha256": "4150F5EBAE60E6BD0E48C1CAA233C2617E3D92E64EC09ECE6FE81FE37167D879",
+      "features": 6,
+      "specifications": 18,
+      "io": 9
     },
     "varia-100": {
       "sha256": "E5E644B7A1DB22A230F52F56375ABBC3EE735F88C83E18C77F020940F91D4EFC",
@@ -348,6 +1356,24 @@
       "features": 6,
       "specifications": 12,
       "io": 1
+    },
+    "vcm35": {
+      "sha256": "6444B0BAA28F7A63106EC2E25C5F592F78B380A5C0039A258F688F6C9D35DF0A",
+      "features": 6,
+      "specifications": 12,
+      "io": 2
+    },
+    "vr-4hd": {
+      "sha256": "492AF092052EF943C5D3DED33914BD2E191CD91D182868689BF21FA6FE14417A",
+      "features": 6,
+      "specifications": 18,
+      "io": 18
+    },
+    "vr-6hd": {
+      "sha256": "8092AAB2F58EA4445A5731406F85C487416E5540DBA99D93394AAE20CA08DA29",
+      "features": 6,
+      "specifications": 23,
+      "io": 13
     },
     "vs10": {
       "sha256": "A70FB2A7A50AF18938F090FCFD3EA64FAE8D831C5FA7897A397B9B49D13EE78E",
@@ -377,6 +1403,12 @@
       "sha256": "6C30EFFF5530712B8EE15FAD54638D83D1ECF68BCB2F5CFE0C564BAB52778A46",
       "features": 6,
       "specifications": 13,
+      "io": 2
+    },
+    "xsm4216f": {
+      "sha256": "A9E87A218F6D38A8EE00276269D3279005A37DB2F84E1F0711A31880059217EA",
+      "features": 5,
+      "specifications": 14,
       "io": 2
     },
     "zenith-100": {

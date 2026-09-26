@@ -1,0 +1,307 @@
+{
+  "manufacturer": "Shure",
+  "productName": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
+  "model": "UA845UWB",
+  "series": "UA800 Series Antenna Distribution",
+  "seriesNote": "UA800 Series Antenna Distribution 계열 공식 자료 기준.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "액세서리"
+  ],
+  "english": "UA800 Series Antenna Distribution",
+  "korean": "UA845UWB는 한 쌍의 안테나 신호를 최대 4~5대의 Shure Axient Digital, UHF-R, ULX-D, BLX4R, SLX4 등 수신기로 분배하는 내장 전원공급 방식의 능동형 광대역(VHF/UHF) 안테나 분배 시스템이다.",
+  "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "UA845UWB는 한 쌍의 안테나 신호를 최대 4~5대의 Shure Axient Digital, UHF-R, ULX-D, BLX4R, SLX4 등 수신기로 분배하는 내장 전원공급 방식의 능동형 광대역(VHF/UHF) 안테나 분배 시스템이다. 신호 분배로 인한 삽입 손실을 RF 증폭으로 보상하며, 캐스케이드 포트를 통해 5번째 수신기 또는 추가 UA845UWB 유닛을 연결해 확장할 수 있다. 최대 5대의 U4/UR4 수신기를 데이지체인으로 연결해 단일 전원에서 전원을 공급하는 기능도 지원한다(ULX/ULX-D 수신기는 해당 없음).",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ua845uwb-front.webp",
+      "alt": "UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3300x3300",
+      "resolution": "1500x1500",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ua845uwb-rear.webp",
+      "alt": "UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3300x3300",
+      "resolution": "1500x1500",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua845uwb"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua845uwb"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua845uwb"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Shure UA800 Series Antenna Distribution User Guide",
+      "language": "en",
+      "note": "",
+      "url": "https://pubs.shure.com/guide/UA845UWB/en-US"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.shure.com/en-US/products/accessories/ua845uwb"
+    }
+  ],
+  "features": [
+    {
+      "text": "UA845UWB는 한 쌍의 안테나 신호를 최대 4~5대의 Shure Axient Digital, UHF-R, ULX-D, BLX4R, SLX4 등 수신기로 분배하는 내장 전원공급 방식의 능동형 광대역(VHF/UHF) 안테나 분배 시스템이다.",
+      "source": ""
+    },
+    {
+      "text": "신호 분배로 인한 삽입 손실을 RF 증폭으로 보상하며, 캐스케이드 포트를 통해 5번째 수신기 또는 추가 UA845UWB 유닛을 연결해 확장할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "일반",
+      "name": "지원 주파수 대역 (5개 밴드 스위치 선택)",
+      "value": "Band1 174-216MHz / Band2 470-960MHz / Band3 1240-1260MHz / Band4 1492-1525MHz / Band5 1785-1805MHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "커넥터 타입",
+      "value": "BNC",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "임피던스",
+      "value": "50",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "입출력 AC 전원",
+      "value": "100-240V AC, 50/60Hz (스위칭)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "DC 출력 (수신기 전원 공급용)",
+      "value": "15V DC x 4 커넥터",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "출력 전류 (전체 DC 출력 합산)",
+      "value": "2.5",
+      "unit": "A (최대)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "전력 소비 (본체, 안테나/수신기 미연결 기준)",
+      "value": "14.1",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "분배 출력 레벨 (게인)",
+      "value": "0dB typical (수신기 안테나 입력-출력 포트1~4: -2~+2dB, 캐스케이드 출력: -1~+1dB)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "출력 커넥터 격리도",
+      "value": ">25",
+      "unit": "dB (typical)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "3차 상호변조 차단점 (OIP3)",
+      "value": "24",
+      "unit": "dBm (typical)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원/RF",
+      "name": "동작 온도 범위",
+      "value": "-18°C ~ 63°C",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구",
+      "name": "치수",
+      "value": "44.5 x 482.6 x 295.3",
+      "unit": "mm (H x W x D)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구",
+      "name": "무게",
+      "value": "3.32",
+      "unit": "kg (7.3 lbs)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
+      "signal": "Power input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "100-240V AC, 50/60Hz (스위칭)",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "RF",
+      "connector": "BNC",
+      "signal": "RF output to receiver",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.shure.com/en-US/products/accessories/ua845uwb",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://pubs.shure.com/guide/UA845UWB/en-US",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인…",
+      "detail": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인 'Ultra Wide Band'가 아니라, Shure 제품 표기 관례상 넓은 주파수 대역(광대역, VHF~UHF 5개 밴드 커버)을 지원한다는 의미의 자체 모델 코드로 확인됨. 공식 매뉴얼에서도 'UWB'의 철자 풀이는 별도로 제공하지 않으며, 'amplified, VHF and UHF Antenna Distribution System'으로만 설명하고 있어 이를 기준으로 기재함."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "UA844+SWB와 달리 UA845UWB는 AC…",
+      "detail": "UA844+SWB와 달리 UA845UWB는 AC 전원(100-240V)을 직접 사용하는 내장 전원공급 방식이며, 랙마운트 외장 전원공급장치(PS60)를 별도로 사용하는 UA844+ 계열과 전원 구조가 다름."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Shure UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way) · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

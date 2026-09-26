@@ -1,0 +1,278 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH115QHFEBGXKR",
+  "model": "LH115QHFEBGXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung standalone large-format signage (QHFX), 115-inch, 34.1mm ultra-slim with Quantum Mini LED Pro, 4.2.2ch 60W built-in speakers and 24/7 operation.",
+  "korean": "삼성 단독형 대형 사이니지(QHFX) 115인치 모델로, 두께 34.1mm에 퀀텀 Mini LED 프로와 4.2.2채널 60W 내장 스피커, 24시간 연속 운영을 지원한다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) 단독형 UHD H 시리즈(QHFX) 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH115QHFEBGXKR(QHFX)은 삼성전자의 단독형 초대형 사이니지 115인치(290.7cm) 모델로, 하이엔드 매장, 대형 컨퍼런스룸, 영화관, 실내 경기장 등 다양한 상업 공간을 위한 압도적인 비주얼 경험을 목표로 설계됐다. 가로형·세로형 설치를 모두 지원하며, 24시간 365일 안정적으로 운영되도록 설계됐다.\n\n290.7cm 초대형 화면임에도 두께 34.1mm의 초슬림 디자인을 구현했으며, 삼성의 퀀텀 Mini LED 프로(기존 LED 대비 1/50 크기의 초소형 LED, 퀀텀 매트릭스 테크놀로지 프로로 정밀 제어)로 디테일과 명암비를 정교하게 표현한다. 슈퍼 픽처 인핸서와 4K AI 업스케일링 Pro로 초대형 화면에 최적화된 화질을 제공하며, 안티글레어 패널로 밝은 환경에서도 반사를 최소화한다.\n\n4.2.2채널 60W의 강력한 내장 스피커로 별도 스피커 없이도 풍부한 오디오를 구현하고, 디렉터 모드·DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드, 커스텀 홈(회의실 설정 고정), 스마트 캘리브레이션(갤럭시 특정 모델 지원), Tizen 엔터프라이즈 플랫폼, 삼성 Knox 보안을 갖췄다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh115qhfebgxkr-main.webp",
+      "alt": "단독형 UHD H 시리즈 290.7cm 세로형 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH115QHFEBGXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2025/08/28/3a33df49-4b10-4ad7-8ede-93e5d4bf3f05.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2025/08/28/3a33df49-4b10-4ad7-8ede-93e5d4bf3f05.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH115QHFEBGXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "290.7cm(115인치) 초대형 화면에 두께 34.1mm의 초슬림 디자인을 구현했다.",
+      "source": "P"
+    },
+    {
+      "text": "퀀텀 Mini LED 프로(기존 LED 대비 1/50 크기)와 퀀텀 매트릭스 테크놀로지 프로로 정교한 명암비를 표현한다.",
+      "source": "P"
+    },
+    {
+      "text": "4.2.2채널 60W 내장 스피커로 별도 스피커 없이도 풍부하고 균형 잡힌 오디오를 구현한다.",
+      "source": "P"
+    },
+    {
+      "text": "24시간 365일 안정적으로 운영되도록 설계되었으며 가로형·세로형 설치를 모두 지원한다.",
+      "source": "P"
+    },
+    {
+      "text": "슈퍼 픽처 인핸서와 4K AI 업스케일링 Pro로 초대형 화면에 최적화된 화질을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "디렉터 모드·DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드와 커스텀 홈(회의실 설정 고정) 기능을 갖췄다.",
+      "source": "P"
+    },
+    {
+      "text": "안티글레어 패널, 삼성 Knox 보안, Tizen 엔터프라이즈 플랫폼을 지원한다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "115 (290.7)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "영상 처리 엔진",
+      "value": "퀀텀 Mini LED 프로 + 퀀텀 매트릭스 테크놀로지 프로",
+      "unit": "",
+      "condition": "기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 특성",
+      "value": "안티글레어 패널(최적화된 헤이즈 설계)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화질 처리",
+      "value": "슈퍼 픽처 인핸서, 4K AI 업스케일링 Pro",
+      "unit": "",
+      "condition": "PC 연결·게임 모드에는 적용되지 않을 수 있음",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "전문가 모드",
+      "value": "Director Mode, DICOM Simulation Mode",
+      "unit": "",
+      "condition": "프로페셔널 모드 내장",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "운영 시간",
+      "value": "24시간 365일 연속 운영",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 두께",
+      "value": "34.1",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "설치 방향",
+      "value": "가로형/세로형 설치 지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "내장 스피커",
+      "value": "4.2.2채널, 60",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제/플랫폼",
+      "value": "Tizen 엔터프라이즈 플랫폼(TEP)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Security",
+      "name": "보안",
+      "value": "삼성 Knox",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "화면 보정",
+      "value": "스마트 캘리브레이션",
+      "unit": "",
+      "condition": "갤럭시 S9+ 이상 일부 특정 모델에서만 지원",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Wireless",
+      "connector": "스마트 뷰+",
+      "signal": "무선 화면 공유",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "SmartView+",
+      "availability": "Windows, Android, iOS 지원",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "상세 스펙 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기(니트)·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH115QHFEBGXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

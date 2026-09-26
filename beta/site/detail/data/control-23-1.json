@@ -1,0 +1,391 @@
+{
+  "manufacturer": "JBL",
+  "productName": "Control 23-1",
+  "model": "Control 23-1",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Loudspeaker"
+  ],
+  "english": "Control 23-1 is an ultra-compact 3-inch two-way indoor/outdoor background/foreground speaker with InvisiBall mounting hardware and a built-in 70V/100V transformer.",
+  "korean": "Control 23-1은 InvisiBall 마운팅 하드웨어와 70V/100V 트랜스포머를 내장한 초소형 3인치 2-way 실내외 배경/전경음악용 스피커이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(jblpro.com)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "JBL Control 23-1은 3인치 우퍼와 0.5인치 PEI 트위터를 탑재한 초소형 2-way 실내외 겸용 스피커로, 매장, 레스토랑, 헬스클럽, 테마파크, 교육시설, 호스피탈리티 등 배경/전경 음악 및 방송용으로 설계되었다.\n\n100° x 100°의 넓은 커버리지와 우수한 지향 특성을 제공하며, 내후성 인클로저와 트랜스듀서를 채택해 실외 설치도 가능하다. 8Ω 다이렉트 구동 시 최대 100W 프로그램 전력을 처리하며, 70V/100V 멀티탭 트랜스포머(15W)를 내장해 분산 음향 시스템에도 사용할 수 있다.\n\nInvisiBall 벽면 마운팅 시스템이 기본 제공되어 별도의 브래킷 없이도 각도 조절이 가능하며, 선택 사양으로 U-브래킷과 WeatherMax 그릴을 장착하면 IP-55 등급까지 방수 성능을 높일 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "control-23-1-main.webp",
+      "alt": "JBL Control 23-1 실내외 겸용 스피커 정면 각도컷",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 23-1",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1500x986",
+      "resolution": "1500x986",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Control 23-1 공식 제품 페이지 사양",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
+    }
+  ],
+  "features": [
+    {
+      "text": "우븐 파이버글라스 콘의 3인치 우퍼와 유체 냉각 방식 0.5인치 PEI 다이어프램 트위터 구성",
+      "source": "P"
+    },
+    {
+      "text": "InvisiBall 마운팅 하드웨어를 기본 내장, 선택형 U-브래킷도 지원",
+      "source": "P"
+    },
+    {
+      "text": "내후성 인클로저와 트랜스듀서로 IP-44(옵션 그릴 장착 시 IP-55) 실외 설치 대응",
+      "source": "P"
+    },
+    {
+      "text": "100° x 100°의 넓고 균일한 커버리지 패턴",
+      "source": "P"
+    },
+    {
+      "text": "8Ω 다이렉트 50W(프로그램 100W) 및 70V/100V 15W 멀티탭 트랜스포머 내장",
+      "source": "P"
+    },
+    {
+      "text": "70Hz~20kHz의 넓은 주파수 대역으로 고음질 사운드 재생",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Acoustic",
+      "name": "주파수 범위(-10dB)",
+      "value": "70 Hz – 20 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "95 Hz – 19 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 정격",
+      "value": "100W 컨티뉴어스 프로그램(2시간) / 50W(피크 200W), 핑크노이즈 컨티뉴어스(2시간) 40W(피크 160W), 핑크노이즈 컨티뉴어스(100시간)",
+      "unit": "",
+      "condition": "8Ω 다이렉트",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "최대 입력 전압",
+      "value": "17.2 V RMS(2시간) / 34.4 V 피크",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "최대 SPL(1m)",
+      "value": "103 dB(평균, 컨티뉴어스 핑크노이즈) / 109 dB(피크)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "감도",
+      "value": "86",
+      "unit": "dB, 1W/1m",
+      "condition": "평균 100 Hz–10 kHz",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "커버리지 각도",
+      "value": "100°H x 100°V",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "지향 계수(Q)",
+      "value": "5.8",
+      "unit": "",
+      "condition": "평균 1kHz–16kHz",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "지향 지수(DI)",
+      "value": "7.2",
+      "unit": "dB",
+      "condition": "평균 1kHz–16kHz",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "공칭 임피던스",
+      "value": "8",
+      "unit": "ohm",
+      "condition": "THRU 설정",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "크로스오버 타입",
+      "value": "2차 로우패스, 2차 하이패스",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "트랜스포머 탭",
+      "value": "70V: 15W, 7.5W, 3.7W, 1.8W / 100V: 15W, 7.5W, 3.7W",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "권장 보호용 하이패스",
+      "value": "70 Hz 하이패스(24 dB/oct)",
+      "unit": "",
+      "condition": "8Ω 및 모든 70V/100V 탭 설정",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "LF 드라이버",
+      "value": "76 mm(3.0 in), 우븐 파이버글라스 콘, 순수 부틸고무 서라운드, Weather-Edge 프레임, 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "HF 드라이버",
+      "value": "13 mm(0.5 in) PEI 다이어프램, 저점도 자성유체 냉각, 경량 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "인클로저 재질",
+      "value": "고내충격성 폴리스티렌(HIPS), 화이트(-WH) 버전은 UV 저항 도장 처리",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "그릴",
+      "value": "아연 도금 후 TGIC 폴리에스터 파우더코팅, 옵션 MTC-23WMG-1 WeatherMax 그릴 장착 가능",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "마운팅 하드웨어",
+      "value": "InvisiBall 벽면 마운팅 시스템 기본 제공, 상하 6mm 부착점(옵션 U-브래킷용), 후면 보조 안전 고리 포함",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "실외 방수 등급",
+      "value": "IP-44(IEC529 기준), 옵션 WeatherMax 그릴 및 MTC-PC2/PC3 패널 커버 장착 시 IP-55",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "입력 커넥터",
+      "value": "스크류다운 터미널 스트립, 아연도금 동합금, 니켈 도금 나사/와셔, 최대 9mm 외경/4mm 내경 러그(#6, #8, #10) 및 12AWG(2.5mm²) 나선 대응",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compliance",
+      "name": "인증",
+      "value": "RoHS 준수, 트랜스포머 UL1876 인증",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "색상",
+      "value": "블랙(RAL9004) 또는 화이트(-WH, RAL9016)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수(H x W x D)",
+      "value": "200 x 141 x 111",
+      "unit": "mm",
+      "condition": "InvisiBall 마운트 장착 시 깊이 141mm",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "순중량",
+      "value": "1.8",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "출하 중량",
+      "value": "3.85 kg(2조 페어팩) / 12.0 kg(6조 마스터팩)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "Screw Terminal",
+      "signal": "스피커 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "70V/100V 트랜스포머 탭 선택 가능(70V: 15/7.5/3.7/1.8W, 100V: 15/7.5/3.7W), 8Ω 다이렉트 겸용",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://jblpro.com/en-US/products/jbl-professional-control-23-1",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-SHEET",
+      "status": "INFO",
+      "title": "별도 Spec Sheet PDF 직접 링크 미확보",
+      "detail": "제품 페이지 다운로드 섹션에 'Control 23-1 Spec Sheet'(버전 B, 2020년 10월) 존재가 확인되나, 정적 HTML에서 직접 PDF URL을 추출하지 못했다. techdata-ps.com의 매뉴얼 링크로 대체 확인 필요."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "JBL Control 23-1 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

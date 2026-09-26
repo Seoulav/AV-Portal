@@ -1,0 +1,542 @@
+{
+  "manufacturer": "Roland",
+  "productName": "VR-4HD",
+  "model": "VR-4HD",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "All-in-one HD AV Mixer with built-in USB 3.0 for web streaming and recording.",
+  "korean": "웹 스트리밍·녹화용 USB 3.0을 내장한 올인원 HD AV 믹서.",
+  "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": [
+    "VR-4HD는 여러 개의 개별 AV 장비를 하나로 대체하는 올인원 HD 스튜디오형 AV 믹서다. 1인 운영을 염두에 두고 설계되어, 하드웨어 페이더·버튼과 터치스크린 인터페이스를 통해 오디오·비디오 신호를 동시에 스위칭·믹싱할 수 있다. 디지털 오디오 믹서, 비디오 스위처, 멀티뷰어 터치스크린, USB 비디오/오디오 스트리밍 인터페이스를 하나의 본체에 통합했으며 학교, 교회, 시의회, 기업 행사, 스포츠, 트레이닝 세션 등 다양한 라이브 이벤트에 적합하다.",
+    "6입력 4채널 비디오 스위처 구성으로 HDMI 3계통, RGB/컴포넌트 겸용 스케일러가 내장된 4번째 입력(HDMI/RGB·컴포넌트/컴포지트 겸용)을 제공한다. XLR/TRS 콤보 4채널, RCA 2채널, 1/8인치 스테레오 입력에 HDMI 임베디드 오디오까지 더해 18채널 디지털 오디오 믹서로 통합 처리하며, 오토 믹싱과 에코 캔슬 기능으로 화상회의용 웹 컨퍼런싱 도구로도 활용할 수 있다.",
+    "USB 3.0을 통해 최대 1080/30p 무압축 영상+오디오를 PC/Mac으로 출력해 녹화·스트리밍이 가능하며, 무료 VR Video Capture 애플리케이션이 제공된다. DSK, PinP, Split, Quad 합성 이펙트를 지원하고, RS-232 및 Tally/GPIO(D-sub 15핀)를 통한 외부 제어도 가능하다. 현재 홈페이지에는 'Discontinued' 표기가 있다."
+  ],
+  "images": [
+    {
+      "role": "Main",
+      "file": "vr-4hd-main.webp",
+      "alt": "Roland VR-4HD AV 믹서 컨트롤 패널 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Roland",
+      "model": "VR-4HD",
+      "sourceUrl": "https://static.roland.com/assets/images/products/gallery/vr4hd_top_main_gal.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1665x1050",
+      "resolution": "1665x1050",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://static.roland.com/assets/images/products/gallery/vr4hd_top_main_gal.jpg"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/vr-4hd/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/vr-4hd/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/vr-4hd/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://proav.roland.com/global/products/vr-4hd/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "VR-4HD Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://static.roland.com/assets/media/pdf/VR-4HD_v21_eng01_W.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://proav.roland.com/global/products/vr-4hd/"
+    }
+  ],
+  "features": [
+    {
+      "text": "비디오 스위처·오디오 믹서·멀티뷰어·USB 스트리밍 인터페이스를 하나로 통합한 올인원 설계",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 3입력 + 스케일러 내장 RGB/컴포넌트/컴포지트 겸용 입력으로 신구 소스 모두 대응",
+      "source": "P"
+    },
+    {
+      "text": "XLR 4채널을 포함한 18채널 디지털 오디오 믹서, 오토 믹싱·에코 캔슬 기능",
+      "source": "P"
+    },
+    {
+      "text": "USB 3.0으로 최대 1080/30p 무압축 영상 캡처, 무료 VR Video Capture 앱 제공",
+      "source": "P"
+    },
+    {
+      "text": "DSK·PinP·Split·Quad 합성 이펙트 및 터치스크린 멀티뷰어 내장",
+      "source": "P"
+    },
+    {
+      "text": "RS-232 및 Tally/GPIO(D-sub 15핀)를 통한 외부 시스템 연동",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "비디오 처리",
+      "value": "4:2:2 (Y/Pb/Pr), 8-bit",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "입력 해상도",
+      "value": "720p, 1080i/p 등(HDMI 1-3), 480i/p~1080p·VGA~WUXGA(입력4)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "출력 해상도",
+      "value": "480i/p~1080p, VGA~WUXGA (MAIN OUT); 720/29.97p, 1080/29.97p 등(USB3.0)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "트랜지션",
+      "value": "CUT, MIX(DISSOLVE/FAM/NAM/MOSAIC), WIPE 30종",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "비주얼 이펙트",
+      "value": "NEGATIVE, EMBOSS, COLORIZE 등 8종",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "합성 이펙트",
+      "value": "PinP, SPLIT, QUAD, KEY(루미넌스/크로마)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 처리",
+      "value": "24bit/48kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "채널 수",
+      "value": "18채널 디지털 오디오 믹서",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "팬텀 전원",
+      "value": "DC 48V (무부하 최대), 10mA (최대 부하)",
+      "unit": "",
+      "condition": "채널당",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 이펙트",
+      "value": "Auto Mixing, Echo Cancel, EQ, Delay, Compressor, HPF, Gate, Reverb, Multi-Band Compressor, Limiter",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "기타 커넥터",
+      "value": "RS-232(D-sub 9핀), Tally/GPIO(Mini D-sub 15핀), USB 3.0/2.0(USB B)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "디스플레이",
+      "value": "그래픽 컬러 LCD, 320x240 도트, 터치패널",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "기타 기능",
+      "value": "MEMORY 8종, FREEZE, OUTPUT FADE",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "AC 어댑터",
+      "unit": "",
+      "condition": "전류 소비 3A",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "36",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "동작 온도",
+      "value": "0~40",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "크기(W x D x H)",
+      "value": "339 x 217 x 87",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "무게",
+      "value": "2.4",
+      "unit": "kg",
+      "condition": "AC 어댑터 제외",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI Type A(19핀)",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "",
+      "availability": "",
+      "condition": "INPUT 1-3, HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Type A(19핀)",
+      "signal": "비디오 입력(스케일러)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "INPUT 4, HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "Mini D-sub 15핀",
+      "signal": "RGB/COMPONENT IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "INPUT 4 겸용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "RCA",
+      "signal": "COMPOSITE IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "INPUT 4 겸용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Type A(19핀)",
+      "signal": "MAIN OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "Mini D-sub 15핀",
+      "signal": "RGB/COMPONENT OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Type A(19핀)",
+      "signal": "PREVIEW OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "USB B",
+      "signal": "USB3.0 비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB 3.0",
+      "availability": "",
+      "condition": "최대 1080/30p 무압축",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR/TRS 콤보",
+      "signal": "AUDIO IN 1-4",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "팬텀 전원 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "RCA",
+      "signal": "AUDIO IN 5-6",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo Mini",
+      "signal": "AUDIO IN 7/8",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "USB B",
+      "signal": "USB 오디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "스테레오",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "AUDIO OUT L/R",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "RCA",
+      "signal": "AUDIO OUT L/R",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "RCA",
+      "signal": "AUX OUT L/R",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo Mini",
+      "signal": "PHONES",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "D-sub 9핀",
+      "signal": "RS-232",
+      "direction": "N/A",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "Mini D-sub 15핀",
+      "signal": "TALLY/GPIO",
+      "direction": "N/A",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://proav.roland.com/global/products/vr-4hd/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 Owner's Manual",
+      "url": "https://static.roland.com/assets/media/pdf/VR-4HD_v21_eng01_W.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제조사 단종(Discontinued) 표기",
+      "detail": "제조사 홈페이지에 'Discontinued(단종)' 표기가 있다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Roland VR-4HD 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

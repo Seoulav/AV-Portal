@@ -1,0 +1,445 @@
+{
+  "manufacturer": "Televic",
+  "productName": "D-Cerno CU",
+  "model": "D-Cerno CU",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conference System"
+  ],
+  "english": "D-Cerno Central Unit: the digital signal processing heart that powers small to mid-sized discussion meetings, controlling up to 50 delegate units (expandable to 150 with a controller/peripheral configuration).",
+  "korean": "소형~중형 회의실용 D-Cerno 디스커션 시스템의 중앙 제어 장치로, 최대 50대(컨트롤러/주변기기 구성 시 최대 150대)의 회의 유닛을 제어한다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital)의 단종 제품(Legacy D-Cerno) 페이지와 71.98.0320 데이터시트(PDF, Version 1.0, 2021년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "D-Cerno CU는 Televic의 엔트리 레벨 디지털 디스커션 시스템인 D-Cerno의 중앙 제어 장치(Central Unit)로, 소형~중형 회의실을 대상으로 한다. 터치 센서 버튼과 대형 LCD 메뉴를 통해 시스템을 제어하며, Direct access·Request·Push to talk·FIFO·Vox control 등 다양한 회의 모드를 지원한다. 델리게이트 유닛은 4개의 버스 라인(4개 분기 또는 2개 폐루프)으로 데이지체인 연결되며, 루프 배선 시 케이블 단선에도 시스템이 계속 동작하는 이중화(redundancy) 메커니즘을 갖췄다.\n\n팬리스(fan-less) 설계로 무소음 동작이 가능해 의장석이나 델리게이트 인근에 배치해도 소음 우려가 없으며, 절전 모드와 슬립 상태를 지원해 에너지 효율성을 높였다. 발란스 XLR 입력 1개, 언밸런스 RCA 입력 1개, RCA 출력 2개 등 외부 음향 장비(룸 앰프, 무선 마이크, 화상회의 시스템 등) 연동을 위한 입출력을 제공한다.\n\n본 제품은 현재 단종(discontinued) 상태이며, 후속 제품은 D-Cerno AE(71.98.0322) 중앙 유닛이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "d-cerno-cu-main.webp",
+      "alt": "D-Cerno CU 중앙 제어 장치",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "D-Cerno CU",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1902x1123",
+      "resolution": "1902x1123",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "D-Cerno CU Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
+    }
+  ],
+  "features": [
+    {
+      "text": "터치 센서 버튼과 대형 LCD 메뉴를 통한 직관적인 시스템 제어",
+      "source": "P"
+    },
+    {
+      "text": "Direct access, Request, Push to talk, FIFO, Vox control 등 다양한 회의 진행 모드 지원",
+      "source": "P"
+    },
+    {
+      "text": "4개 버스 라인(4분기 또는 2폐루프) 데이지체인 구성과 루프 배선 시 장애 복구(이중화) 기능",
+      "source": "P"
+    },
+    {
+      "text": "팬리스 설계로 무소음 동작, 절전 모드 및 자동 슬립 기능으로 에너지 절감",
+      "source": "P"
+    },
+    {
+      "text": "최대 50대 델리게이트 유닛 직접 제어, 컨트롤러/주변기기 구성 시 최대 150대까지 확장",
+      "source": "P"
+    },
+    {
+      "text": "플러그 앤 플레이 방식으로 별도 기술 전문 지식 없이 설치 가능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "PC/ABS",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Black",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(W x H x D)",
+      "value": "300 x 135 x 50",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(W x H x D)",
+      "value": "345 x 250 x 155",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "1300",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "2600",
+      "unit": "g",
+      "condition": "D-Cerno PS(전원공급장치), 케이블 포함",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 입력",
+      "value": "External, 100-240 VAC, 50-60 Hz, 2.5 A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 출력(유닛 공급용)",
+      "value": "48 VDC, 3.35 A, 최대 180 W",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비 전력",
+      "value": "Active 4 W / Standby 0.7 W",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 품질",
+      "value": "16 bit digital",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "볼륨 컨트롤",
+      "value": "0 dB ~ -72 dB + OFF",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX 1 IN (XLR 밸런스) 입력 임피던스",
+      "value": "≥ 7",
+      "unit": "kΩ",
+      "condition": "asymm.",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX IN (RCA 언밸런스) 입력 임피던스",
+      "value": "≥ 20",
+      "unit": "kΩ",
+      "condition": "asymm.",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX IN 게인 조정",
+      "value": "+24 dB ~ -51 dB + OFF",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX OUT 1,2(RCA 언밸런스) 최대 출력 레벨",
+      "value": "0 dBV = -10 dBFS",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX OUT 출력 임피던스",
+      "value": "≤ 600",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX OUT 게인 조정",
+      "value": "+24 dB ~ -51 dB + OFF",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "헤드폰 부하 임피던스",
+      "value": "16-150",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "헤드폰 출력 전력",
+      "value": "최대 70 mW @ 32 Ω",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "헤드폰 볼륨 컨트롤",
+      "value": "0 dB ~ -72 dB + OFF",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "System",
+      "name": "제어 가능 델리게이트 유닛 수",
+      "value": "최대 50대(컨트롤러/주변기기 구성 시 최대 150대)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "5 ~ 50",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE",
+      "unit": "",
+      "condition": "Europe",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio Input",
+      "connector": "XLR",
+      "signal": "AUX 1 IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Balanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Input",
+      "connector": "RCA",
+      "signal": "AUX IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Unbalanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "RCA",
+      "signal": "AUX OUT",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "Unbalanced",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Bus connector",
+      "signal": "D-Cerno 델리게이트 유닛 버스",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "4개 분기 또는 2개 폐루프 데이지체인 구성 (구체적 커넥터 규격은 데이터시트에 미기재)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "Lockable power connector",
+      "signal": "전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "잠금식",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Output",
+      "connector": "3.5mm 헤드폰 잭",
+      "signal": "헤드폰 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "본체 전면 모니터링용으로 추정(위치 미기재)",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (단종 제품 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.0320, D-Cerno CU, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "단종(discontinued) 제품",
+      "detail": "D-Cerno CU(71.98.0320)는 제조사가 단종을 공지한 레거시 제품이며, 후속 제품은 D-Cerno AE(71.98.0322)이다. 지식베이스의 legacy-d-cerno 페이지는 신규 제품 페이지 대비 문서량이 적어 확인 가능한 사양만 기록했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "버스 커넥터 물리 규격 미기재",
+      "detail": "데이터시트에는 '4 Bus connections (4 branches or 2 loops)'라고만 기재되어 있고, 커넥터 타입(예: RJ45)이 CU 자체 데이터시트에는 명시되어 있지 않다. 후속 제품(D-Cerno AE) 데이터시트에는 CAT5E 실드 RJ45로 명시되어 있으나 CU에 동일하게 적용된다고 단정하지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic D-Cerno CU 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

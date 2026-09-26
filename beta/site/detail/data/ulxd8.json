@@ -1,0 +1,239 @@
+{
+  "manufacturer": "Shure",
+  "productName": "ULXD8 Wireless Gooseneck Base Transmitter",
+  "model": "ULXD8",
+  "series": "Shure ULX-D Digital Wireless",
+  "seriesNote": "Shure ULX-D Digital Wireless 계열 공식 자료 기준.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "무선 시스템"
+  ],
+  "english": "Shure ULX-D Digital Wireless",
+  "korean": "ULX-D 구즈넥 마이크용 데스크/테이블 베이스 송신기. Shure Microflex MX405, MX410, MX415 구즈넥 마이크 및 MX410DF/MX415DF Dualflex 구즈넥 마이크(모두 별매)와 결합해 사용한다.",
+  "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ULX-D 구즈넥 마이크용 데스크/테이블 베이스 송신기. Shure Microflex MX405, MX410, MX415 구즈넥 마이크 및 MX410DF/MX415DF Dualflex 구즈넥 마이크(모두 별매)와 결합해 사용한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ulxd8-front.webp",
+      "alt": "Shure ULXD8 구즈넥 베이스 송신기 정면(구즈넥 마이크 미포함)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD8 Wireless Gooseneck Base Transmitter",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/2cb/d03/e8-/large/e7ec7bd49e113c832e2594fa8d8ff9bc.jpeg",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1500x1500",
+      "resolution": "1500x1500",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/2cb/d03/e8-/large/e7ec7bd49e113c832e2594fa8d8ff9bc.jpeg"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "language": "en",
+      "note": "",
+      "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Shure ULXD8 Wireless Gooseneck Base Transmitter Specification Sheet",
+      "language": "en",
+      "note": "",
+      "url": "https://content-files.shure.com/Pubs/ulx/ulx-d-brochure.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8"
+    }
+  ],
+  "features": [
+    {
+      "text": "AES-256 암호화를 지원해 무선 오디오 전송 보안을 강화한다.",
+      "source": ""
+    },
+    {
+      "text": "배터리 관련 사양: 배터리 타입 AA 배터리 또는 지능형 충전식(리튬이온) 솔루션().",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "일반",
+      "name": "제품 유형",
+      "value": "구즈넥 마이크 베이스 송신기(Gooseneck Base Transmitter)",
+      "unit": "",
+      "condition": "바운더리(경계면) 마이크 트랜스미터 아님 — Shure 공식 바운더리 트랜스미터는 별도 모델 ULXD6",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "호환 마이크",
+      "value": "Shure Microflex MX405 / MX410 / MX415, MX410DF / MX415DF(Dualflex)",
+      "unit": "",
+      "condition": "구즈넥 마이크는 별매",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "On/Off 스위치 옵션",
+      "value": "있음/없음 선택 가능(스위치 유무 옵션 SKU 구분)",
+      "unit": "",
+      "condition": "shure.com 옵션 선택 항목 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF/보안",
+      "name": "전송 거리",
+      "value": "최대 300 ft (약 100 m)",
+      "unit": "",
+      "condition": "대형 회의/컨벤션 환경 기준 typical",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF/보안",
+      "name": "암호화",
+      "value": "AES-256",
+      "unit": "",
+      "condition": "사용마다 랜덤 키 생성",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF/보안",
+      "name": "레이턴시",
+      "value": "매우 낮음(라이브 사운드 보강에 적합)",
+      "unit": "",
+      "condition": "정확한 ms 수치는 공식 자료에 별도 확인 필요 — 정보 없음",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "배터리",
+      "name": "배터리 타입",
+      "value": "AA 배터리 또는 지능형 충전식(리튬이온) 솔루션",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "배터리",
+      "name": "배터리 런타임",
+      "value": "최대 9시간(AA 기준)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "배터리",
+      "name": "배터리 런타임(옵션 SB900C 충전식)",
+      "value": "최대 12시간",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://content-files.shure.com/Pubs/ulx/ulx-d-brochure.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "작업 목록에는 ULXD8이 'ULX-D Digital…",
+      "detail": "작업 목록에는 ULXD8이 'ULX-D Digital Wireless Boundary Microphone Transmitter'로 기재되어 있으나 이는 부정확하다. Shure 공식 자료(ULX-D Dual and Quad Wireless Microphone System 매뉴얼, Optional Accessories 표, pubs.shure.com/guide/ULXD-DQ) 기준으로 ULXD8은 '구즈넥 베이스 트랜스미터(Gooseneck Base Transmitter)'이며, '바운더리 트랜스미터(Boundary Transmitter)'는 별도 모델 ULXD6이다. ULXD8은 실존하는 정식 Shure SKU(SKU 예시: ULXD8W=-J50A 등)가 맞으므로 카탈로그에서 제외하지 않되, 제품 설명을 '구즈넥 베이스'로 정정해서 등록해야 한다. 카탈로그 원 설명대로 '바운더리 마이크 트랜스미터'로 표기하면 사실과 다르다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "ULXD8 자체의 상세 RF 감도/치수/무게 등 세부 스펙표는…",
+      "detail": "ULXD8 자체의 상세 RF 감도/치수/무게 등 세부 스펙표는 ULX-D Dual/Quad 매뉴얼의 본문 스펙 챕터(ULXD1/ULXD2 스펙 표)에 포함되어 있지 않고, 액세서리 취급으로만 언급된다. 정확한 자체 치수·무게 수치는 Shure 공식 자료에서 별도로 확인하지 못해 '정보 없음' 처리했다(임의 추정하지 않음). RF 반송 주파수 범위 등은 ULX-D 시스템 공통 사양을 따르는 것으로 보이나(같은 시스템의 송신기이므로), ULXD8 전용 스펙 시트로 별도 확인은 하지 못했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Shure ULXD8 Wireless Gooseneck Base Transmitter · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

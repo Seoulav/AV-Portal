@@ -1,0 +1,635 @@
+{
+  "manufacturer": "Powersoft",
+  "productName": "Duecanali 804 DSP",
+  "model": "Duecanali 804 DSP",
+  "series": "Duecanali Series",
+  "seriesNote": "Duecanali 계열 공용 사용설명서·데이터시트 기준(모델별 표는 페이지에서 개별 확인).",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Amplifier"
+  ],
+  "english": "2-channel installation amplifier with onboard DSP.",
+  "korean": "Duecanali 804 DSP는 2채널 1RU 설치용 앰프로, Class D 증폭 방식의 우수한 음질과 전력 효율을 제공한다.",
+  "verificationSummary": "다산SR(dasansr.com)은 봇 차단(CUPID 캡차)으로 접근할 수 없어 Powersoft 공식 제품 페이지·데이터시트·사용설명서를 1차 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Duecanali 804 DSP는 2채널 1RU 설치용 앰프로, Class D 증폭 방식의 우수한 음질과 전력 효율을 제공한다. 2옴 저임피던스부터 70V/100V 정전압 분산 라인까지 혼합 구성이 가능하며, 과전압/저전압, 클리핑, 단락 등으로부터 시스템을 보호하는 전체 보호 회로를 내장했다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "duecanali-804-dsp-front.webp",
+      "alt": "Powersoft Duecanali 804 DSP 전면부",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Powersoft",
+      "model": "Duecanali 804 DSP",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1024x500",
+      "resolution": "1006x131",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Powersoft Duecanali Series User Guide",
+      "language": "en",
+      "note": "Duecanali 시리즈 공용 사용설명서",
+      "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Powersoft Duecanali Series Datasheet",
+      "language": "en",
+      "note": "Duecanali 시리즈 공용 데이터시트",
+      "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Duecanali_DS_EN_WEB.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+    }
+  ],
+  "features": [
+    {
+      "text": "2채널 구성이며, 채널당 최대 출력 @ 8Ω 기준 채널당 400W를 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "온보드 DSP를 내장해 이퀄라이저·크로스오버·리미터 등 신호 처리를 자체적으로 수행한다.",
+      "source": ""
+    },
+    {
+      "text": "100-240VAC ±10%(50-60Hz) 유니버설 스위칭 전원을 사용해 다양한 전원 환경에서 동작한다.",
+      "source": ""
+    },
+    {
+      "text": "CE, FCC, CCC, CSA, CB, RoHS 등 국제 인증을 확보했다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "채널/구성",
+      "name": "출력 채널 수",
+      "value": "2",
+      "unit": "채널",
+      "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/8-STF1-7,62",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "아날로그 입력 채널 수",
+      "value": "2",
+      "unit": "채널",
+      "condition": "Phoenix MC 1,5/12-ST-3,81",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "채널/구성",
+      "name": "랙 유닛",
+      "value": "1",
+      "unit": "RU",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 최대 출력 @ 8Ω",
+      "value": "400",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 최대 출력 @ 4Ω",
+      "value": "400",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "채널당 최대 출력 @ 2Ω",
+      "value": "500",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "브릿지 출력 @ 4Ω",
+      "value": "1000",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "브릿지 출력 @ 8Ω",
+      "value": "800",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "분산 라인 출력 @ 100V",
+      "value": "400",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "분산 라인 출력 @ 70V",
+      "value": "400",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "최대 무클리핑 출력 전압 @ 8Ω",
+      "value": "80",
+      "unit": "Vpeak",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(정격)",
+      "name": "최대 출력 전류",
+      "value": "39",
+      "unit": "Apeak",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 감도 @ 8Ω, 26dB 게인",
+      "value": "2.84",
+      "unit": "Vrms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 감도 @ 8Ω, 29dB 게인",
+      "value": "2.01",
+      "unit": "Vrms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 감도 @ 8Ω, 32dB 게인",
+      "value": "1.42",
+      "unit": "Vrms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 감도 @ 8Ω, 35dB 게인",
+      "value": "1.01",
+      "unit": "Vrms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "SNR (20Hz-20kHz @ 8Ω)",
+      "value": ">106",
+      "unit": "dB(A)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "최대 입력 레벨",
+      "value": "20",
+      "unit": "dBu",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "주파수 응답",
+      "value": "20Hz - 20kHz ±0.5dB, 1W @ 8Ω",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "크로스토크 (1kHz)",
+      "value": "-70",
+      "unit": "dB",
+      "condition": "typical",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "입력 임피던스",
+      "value": "20",
+      "unit": "kΩ",
+      "condition": "balanced",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "THD+N (0.1W~Full Power)",
+      "value": "<0.1 (typ <0.05)",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "DIM (0.1W~Full Power)",
+      "value": "<0.05",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "댐핑 팩터",
+      "value": ">1000",
+      "unit": "",
+      "condition": "@ 8Ω, 20Hz-100Hz",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹",
+      "name": "표준 준수",
+      "value": "auto-sensing Fast Ethernet (IEEE 802.3u, 100 Mbit/s)",
+      "unit": "",
+      "condition": "Dante 미지원(DSP 전용 모델)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹",
+      "name": "지원 토폴로지",
+      "value": "Star",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹",
+      "name": "원격 제어 인터페이스",
+      "value": "ArmoníaPlus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "전원 공급 방식",
+      "value": "Universal regulated switch mode with PFC, SRM",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "정격 전압",
+      "value": "100-240",
+      "unit": "VAC ±10%",
+      "condition": "50-60Hz",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "동작 전압 범위",
+      "value": "60-264",
+      "unit": "VAC",
+      "condition": "90V 이하에서 출력 저하",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "AC 메인 커넥터",
+      "value": "IEC C20 inlet (20A max)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "대기(Idle) 전력 @115V",
+      "value": "25.6",
+      "unit": "W",
+      "condition": "전류 0.38Arms, 열손실 87 BTU/h",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "1/8 파워 소비 @115V, 4Ω",
+      "value": "150",
+      "unit": "W",
+      "condition": "전류 1.4Arms, 열손실 171 BTU/h",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "대기(Idle) 전력 @230V",
+      "value": "24.7",
+      "unit": "W",
+      "condition": "전류 0.23Arms, 열손실 84 BTU/h",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "1/8 파워 소비 @230V, 4Ω",
+      "value": "149",
+      "unit": "W",
+      "condition": "전류 0.92Arms, 열손실 168 BTU/h",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15.4 lb",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "동작 온도 범위",
+      "value": "0 ~ 45",
+      "unit": "°C",
+      "condition": "32 ~ 113 °F",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "구조/환경",
+      "name": "냉각 방식",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "데이터시트 미기재",
+      "source": "P",
+      "verification": "MISSING"
+    },
+    {
+      "group": "인증",
+      "name": "CE",
+      "value": "EMC + LVD 적합성 확인서 보유",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "FCC",
+      "value": "Supplier's Declaration of Conformity",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CCC",
+      "value": "중국",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CSA",
+      "value": "캐나다",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "CB",
+      "value": "국제",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "RoHS",
+      "value": "EU 및 중국 적합",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "REACH",
+      "value": "적합",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "EPA",
+      "value": "적합성 선언",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "UK DoC",
+      "value": "영국 적합성 선언",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Output",
+      "connector": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/8-STF1-7,62",
+      "signal": "Speaker output",
+      "direction": "OUT",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Phoenix MC 1,5/12-ST-3,81",
+      "signal": "Analog audio in",
+      "direction": "IN",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "IEC C20 inlet (20A max)",
+      "signal": "Mains power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Duecanali_DS_EN_WEB.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "슬루 레이트(Slew Rate) 항목이 기본 데이터시트에는 '26…",
+      "detail": "슬루 레이트(Slew Rate) 항목이 기본 데이터시트에는 '26 mΩ'로 표기되어 단위 불일치(원본 오기 추정)이므로 표에서 제외하고 댐핑 팩터로 대체함."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Powersoft Duecanali 804 DSP · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
