@@ -5,11 +5,27 @@
 export const uploadNote = '사용자 업로드 자료';
 
 // file은 beta/site/manuals/ 안의 실제 파일명이다. 확장자는 PDF만 허용한다.
+// 여러 모델을 한 매뉴얼이 함께 다루는 경우(예: Crown DriveCore Install DA Series 매뉴얼)
+// 같은 file을 여러 항목이 공유할 수 있다.
 export const userManuals = [
   // 예시: { brand: 'Powersoft', product: 'Mezzo 322 A', file: 'mezzo-322-a-manual.pdf', title: 'Mezzo 322 A 사용설명서', note: uploadNote }
+  {
+    brand: 'Crown',
+    product: 'DCI 4/300DA',
+    file: 'crown-dci-install-da-series-manual.pdf',
+    title: 'DriveCore Install DA Series Manual (5072439-C, 2022) — DCi 4|300DA·4|600DA·4|1250DA·8|300DA·8|600DA 공용',
+    note: uploadNote
+  },
+  {
+    brand: 'Crown',
+    product: 'DCI 4/600DA',
+    file: 'crown-dci-install-da-series-manual.pdf',
+    title: 'DriveCore Install DA Series Manual (5072439-C, 2022) — DCi 4|300DA·4|600DA·4|1250DA·8|300DA·8|600DA 공용',
+    note: uploadNote
+  }
 ];
 
-const identity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;
+export const identity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;
 const byIdentity = new Map(userManuals.map(entry => [identity(entry.brand, entry.product), entry]));
 
 // 카탈로그 항목에 붙일 manual_link 값. 해당 업로드가 없으면 null.

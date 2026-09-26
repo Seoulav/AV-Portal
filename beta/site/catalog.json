@@ -1411,7 +1411,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en/products/dci-4-300da"
-    ]
+    ],
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
   },
   {
     "brand": "Crown",
@@ -3198,7 +3199,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
   },
   {
     "brand": "Crown",

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
-import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor } from './user-manuals.mjs';
+import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, identity } from './user-manuals.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
@@ -10,13 +10,14 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
 assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'manuals', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
-// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 파일명 중복 없음, 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
-// 참고자료(userReferences)는 여러 카탈로그 항목이 같은 파일을 공유할 수 있으므로(예: 여러 모델을 함께 다루는
-// 브라켓 핸드북) 파일명 중복 검사에서 제외하고, 폴더 내용은 매뉴얼·참고자료 파일명 합집합과 비교한다.
+// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
+// 한 파일을 여러 카탈로그 항목이 공유할 수 있으므로(예: 여러 모델을 함께 다루는 시리즈 매뉴얼·브라켓 핸드북)
+// 파일명 자체의 중복은 허용하고, 대신 각 목록 안에서 같은 (brand, product)가 두 번 나오지 않는지만 확인한다.
 {
   const manualFiles = userManuals.map(entry => entry.file);
-  assert.equal(new Set(manualFiles).size, manualFiles.length, '사용자 업로드 매뉴얼 파일명 중복');
+  assert.equal(new Set(userManuals.map(entry => identity(entry.brand, entry.product))).size, userManuals.length, '사용자 업로드 매뉴얼에 같은 제품이 중복 등록됨');
   const referenceFiles = userReferences.map(entry => entry.file);
+  assert.equal(new Set(userReferences.map(entry => identity(entry.brand, entry.product))).size, userReferences.length, '사용자 업로드 참고자료에 같은 제품이 중복 등록됨');
   const manualsDir = new URL('manuals/', site);
   const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
   const expectedFiles = [...new Set([...manualFiles, ...referenceFiles])];
