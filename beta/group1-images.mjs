@@ -67,6 +67,46 @@ export const group1Images = {
   ],
   'aquilon-rs1': [
     group2Image('Front', 'aquilon-rs1-front.webp', 'Analog Way Aquilon RS1 전면 이미지', 'Analog Way', 'Aquilon RS1', 'https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg', '3175×1772', '1800×768')
+  ],
+  'sx-1216-rti': [
+    image('Front', 'sx-1216-rti-front.webp', 'SurgeX SX-1216-RTi 전면 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '798×111', 'VERIFIED'),
+    image('Rear', 'sx-1216-rti-rear.webp', 'SurgeX SX-1216-RTi 후면 단자 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '740×120', 'FOUND')
+  ],
+  'led-780h': [
+    image('Front', 'led-780h-front.webp', 'Magnimage LED-780H 전면 이미지', 'Magnimage', 'LED-780H', 'https://www.magnimage.com/article/ddddeffeefe', '880×278(제조사 제품 목록 대표 이미지)', '880×159', 'FOUND')
+  ],
+  'hdmi20-optj-tx90': [
+    image('Front', 'hdmi20-optj-tx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-TX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '905×177', 'FOUND')
+  ],
+  'hdmi20-optj-rx90': [
+    image('Front', 'hdmi20-optj-rx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-RX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-RX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '905×177', 'FOUND')
+  ],
+  'avio-bt': [
+    image('Main', 'avio-bt-main.webp', 'Audinate Dante AVIO Bluetooth I/O Adapter 이미지', 'Audinate', 'Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)', 'https://www.getdante.com/wp-content/uploads/2024/01/avio-bluetooth-crop.png', '약 460×346(WordPress 미디어)', '385×129', 'VERIFIED')
+  ],
+  'avio-2ch-in': [
+    image('Main', 'avio-2ch-in-main.webp', 'Audinate Dante AVIO 2CH Analog Input Adapter 이미지', 'Audinate', 'Dante AVIO Analog Input Adapter, 2ch (ADP-DAI-AU-2x0)', 'https://www.getdante.com/wp-content/uploads/2024/01/avio-analog-input.png', '890×664(WordPress 미디어)', '890×664', 'VERIFIED')
+  ],
+  'avio-2ch-out': [
+    image('Main', 'avio-2ch-out-main.webp', 'Audinate Dante AVIO 2CH Analog Output Adapter 이미지', 'Audinate', 'Dante AVIO Analog Output Adapter, 2ch (ADP-DAO-AU-0x2)', 'https://www.getdante.com/wp-content/uploads/2024/01/avio-analog-output.png', '772×626(WordPress 미디어)', '772×626', 'VERIFIED')
+  ],
+  'hyperdeck-studio-hd-pro': [
+    image('Main', 'hyperdeck-studio-hd-pro-main.webp', 'Blackmagic Design HyperDeck Studio HD Pro 이미지', 'Blackmagic Design', 'HyperDeck Studio HD Pro', 'https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-pro.jpg?_v=1627443058', '306×215', '306×54', 'FOUND')
+  ],
+  'hyperdeck-studio-hd-plus': [
+    image('Main', 'hyperdeck-studio-hd-plus-main.webp', 'Blackmagic Design HyperDeck Studio HD Plus 이미지', 'Blackmagic Design', 'HyperDeck Studio HD Plus', 'https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-plus.jpg?_v=1627443057', '306×215', '261×71', 'FOUND')
+  ],
+  'hyperdeck-studio-hd-mini': [
+    image('Main', 'hyperdeck-studio-hd-mini-main.webp', 'Blackmagic Design HyperDeck Studio HD Mini 이미지', 'Blackmagic Design', 'HyperDeck Studio HD Mini', 'https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-mini.jpg?_v=1627443057', '306×215', '203×70', 'FOUND')
+  ],
+  'x100pro-7u': [
+    image('Front', 'x100pro-7u-front.webp', 'Colorlight X100 Pro-7U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-7U', 'https://support.colorlightinside.com/uploads/X100Pro-7U_1755598432.png', '2489×1886', '1800×1032', 'VERIFIED')
+  ],
+  'x100pro-4u': [
+    image('Front', 'x100pro-4u-front.webp', 'Colorlight X100 Pro-4U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-4U', 'https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf', '2001×740(사양서 내장 이미지)', '1800×665', 'VERIFIED')
+  ],
+  'x100pro-2u': [
+    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED')
   ]
 };
 
@@ -101,5 +141,18 @@ export const cardImages = {
   'avio-usb-c': 'avio-usb-c-main.webp',
   mxcw640: 'mxcw640-main.webp',
   gsm4248px: 'gsm4248px-rear.webp',
-  'aquilon-rs1': 'aquilon-rs1-front.webp'
+  'aquilon-rs1': 'aquilon-rs1-front.webp',
+  'sx-1216-rti': 'sx-1216-rti-front.webp',
+  'led-780h': 'led-780h-front.webp',
+  'hdmi20-optj-tx90': 'hdmi20-optj-tx90-front.webp',
+  'hdmi20-optj-rx90': 'hdmi20-optj-rx90-front.webp',
+  'avio-bt': 'avio-bt-main.webp',
+  'avio-2ch-in': 'avio-2ch-in-main.webp',
+  'avio-2ch-out': 'avio-2ch-out-main.webp',
+  'hyperdeck-studio-hd-pro': 'hyperdeck-studio-hd-pro-main.webp',
+  'hyperdeck-studio-hd-plus': 'hyperdeck-studio-hd-plus-main.webp',
+  'hyperdeck-studio-hd-mini': 'hyperdeck-studio-hd-mini-main.webp',
+  'x100pro-7u': 'x100pro-7u-front.webp',
+  'x100pro-4u': 'x100pro-4u-front.webp',
+  'x100pro-2u': 'x100pro-2u-front.webp'
 };

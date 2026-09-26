@@ -1,0 +1,278 @@
+{
+  "manufacturer": "Audinate",
+  "productName": "AVIO 2CH OUT",
+  "model": "Dante AVIO Analog Output Adapter, 2ch (ADP-DAO-AU-0x2)",
+  "series": "Dante AVIO Series",
+  "seriesNote": "Analog 어댑터는 입력/출력, 1채널/2채널 버전으로 나뉜다. 이 항목은 2채널 출력(ADP-DAO-AU-0x2) 전용.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Audio Interface"
+  ],
+  "english": "2-channel balanced Dante-to-analog output adapter with XLR connectors.",
+  "korean": "Dante AVIO 2CH Analog Output Adapter는 Dante 오디오 네트워크의 신호를 아날로그 2채널로 변환해 출력하는 어댑터다.",
+  "verificationSummary": "제조사 공식 데이터시트에서 채널·레벨·임피던스·전원 사양을 확인했다. 정확한 크기·무게는 데이터시트에 기재되지 않았다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Dante AVIO 2CH Analog Output Adapter는 Dante 네트워크의 오디오 신호를 아날로그 파워드 스피커·앰프 등으로 전달하는 2채널 출력 전용 어댑터다. XLR-M 커넥터로 밸런스 출력을 제공하며, 최대 신호레벨(밸런스) +18dBu/+4dBu/0dBu, 임피던스 150kΩ(밸런스)·75kΩ(언밸런스)을 지원한다.\n\nRJ45 포트로 Class 1 802.3af PoE 전원을 받아 별도 전원 어댑터가 필요 없으며, 44.1/48/88.2/96kHz 샘플레이트와 16/24/32bit 심도를 지원한다. Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "avio-2ch-out-main.webp",
+      "alt": "Audinate Dante AVIO 2CH Analog Output Adapter 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Audinate",
+      "model": "Dante AVIO Analog Output Adapter, 2ch (ADP-DAO-AU-0x2)",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/avio-analog-output.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "772×626(WordPress 미디어)",
+      "resolution": "772×626",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/avio-analog-output.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.audinate.com/products/devices/dante-avio"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.audinate.com/products/devices/dante-avio"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.audinate.com/products/devices/dante-avio"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.audinate.com/products/devices/dante-avio"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Dante AVIO Analog Adapters Datasheet",
+      "language": "en",
+      "note": "Analog In/Out 1·2채널 전 모델 공용 데이터시트",
+      "url": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.audinate.com/products/devices/dante-avio"
+    }
+  ],
+  "features": [
+    {
+      "text": "Dante 네트워크의 오디오 신호를 아날로그 2채널로 변환해 출력하는 전용 어댑터다.",
+      "source": ""
+    },
+    {
+      "text": "XLR-M 밸런스 출력, 최대 +18dBu 신호레벨을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "44.1/48/88.2/96kHz 샘플레이트와 16/24/32bit 심도를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Class 1 802.3af PoE로 동작해 별도 전원 어댑터가 필요 없다.",
+      "source": ""
+    },
+    {
+      "text": "동적 범위 100dB 이상, THD 0.01% 미만(+4dBu 기준)의 오디오 품질을 제공한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "최대 신호레벨(밸런스)",
+      "value": "+18dBu / +4dBu / 0dBu",
+      "unit": "",
+      "condition": "언밸런스: 0dBV / -10dBV",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답",
+      "value": "20Hz-20kHz",
+      "unit": "±0.5dB",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "출력 임피던스",
+      "value": "150k(밸런스) / 75k(언밸런스)",
+      "unit": "Ω",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "동적 범위",
+      "value": ">100",
+      "unit": "dB",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "THD",
+      "value": "<0.01",
+      "unit": "% at +4dBu",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플레이트",
+      "value": "44.1, 48, 88.2, 96",
+      "unit": "kHz",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "비트 심도",
+      "value": "16, 24, 32",
+      "unit": "bit",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "Class 1 802.3af PoE",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "2 미만",
+      "unit": "W",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "데이터시트에 값 미기재",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "XLR-M",
+      "signal": "Balanced analog audio out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Dante/AES67 audio + PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Dante, AES67",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.audinate.com/products/devices/dante-avio",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "M1",
+      "status": "MISSING",
+      "title": "크기·무게",
+      "detail": "데이터시트에 물리 크기·무게 값이 없다."
+    },
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 웹 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Audinate Dante AVIO Analog Output Adapter, 2ch (ADP-DAO-AU-0x2) · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

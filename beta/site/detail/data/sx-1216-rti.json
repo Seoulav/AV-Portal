@@ -1,0 +1,315 @@
+{
+  "manufacturer": "SurgeX",
+  "productName": "SX-1216-RTi",
+  "model": "SX-1216-RTi",
+  "series": "Remote Turn-On Series",
+  "seriesNote": "국가별 전원·콘센트 규격에 따라 SX-121x-RTi/SX-221x-RT 여러 모델로 나뉜다. 16A/240V·CEE7/7 사양은 SX-1216-RTi 전용.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "전원",
+    "Power",
+    "Power Conditioner"
+  ],
+  "english": "16A/240V rack-mount surge eliminator and power conditioner with remote turn-on.",
+  "korean": "SX-1216-RTi는 Advanced Series Mode 서지 제거 기술을 적용한 16A/240V 랙마운트 전원 컨디셔너로, 원격 전원 On/Off 기능을 제공한다.",
+  "verificationSummary": "제조사 공식 제품 페이지와 Remote Turn-On 제품군 데이터시트에서 모델별 전원·출력 사양표를 확인했다. 정확한 크기·무게는 데이터시트에 기재되지 않아 미확인이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "SX-1216-RTi는 SurgeX Remote Turn-On 제품군 중 16A/240V, CEE7/7 메인 전원 사양의 모델로, Advanced Series Mode 기술로 최대 6,000V의 서지 에너지를 흡수해 접속된 AV 장비를 보호한다. IEC C13 출력 11개를 제공하며, 기술자를 대신해 원격으로 장비 전원을 켜고 끌 수 있어 재부팅을 위한 현장 출동을 줄여준다.\n\n제품군 데이터시트는 SX-1210-RTi(10A)·SX-1213-RTi(13A)·SX-1215-RTi(15A)·SX-1216-RTi(16A) 등 전원 규격별 여러 모델을 한 표로 함께 다루며, 각 모델은 정격 전류·출력 커넥터·메인 플러그 규격이 다르다. 이 표에서 SX-1216-RTi는 16A/240V 입력, IEC C13 x11 출력, CEE7/7 메인 플러그로 명확히 구분된다.\n\n열 회로 차단기 과부하 보호, 자가진단 회로와 시각 표시등, 자성 차폐 강철 인클로저를 갖췄고 비희생형(non-sacrificial) 부품을 사용해 서지에도 부품 교체 없이 반복 보호가 가능하다. 정확한 본체 크기·무게는 확인된 자료에서 찾지 못해 미확인으로 남긴다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "sx-1216-rti-front.webp",
+      "alt": "SurgeX SX-1216-RTi 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "SurgeX",
+      "model": "SX-1216-RTi",
+      "sourceUrl": "https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "800×800(원본 합성 이미지에서 분리)",
+      "resolution": "798×111",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "sx-1216-rti-rear.webp",
+      "alt": "SurgeX SX-1216-RTi 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "SurgeX",
+      "model": "SX-1216-RTi",
+      "sourceUrl": "https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "800×800(원본 합성 이미지에서 분리)",
+      "resolution": "740×120",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "SurgeX Remote Turn-On Product Sheet (International)",
+      "language": "en",
+      "note": "Remote Turn-On 제품군 공용 데이터시트, 모델별 사양표(SX-1216-RTi 포함) 수록",
+      "url": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
+    }
+  ],
+  "features": [
+    {
+      "text": "Advanced Series Mode 기술로 최대 6,000V의 서지 에너지를 100% 비희생형으로 제거한다.",
+      "source": ""
+    },
+    {
+      "text": "COUVS(Catastrophic Over/Under Voltage Shutdown)로 과전압·저전압 상황에서 장비를 차단 보호한다.",
+      "source": ""
+    },
+    {
+      "text": "SurgeX ICE(Inrush Current Elimination)로 전원 투입 시 돌입전류를 억제한다.",
+      "source": ""
+    },
+    {
+      "text": "원격 전원 On/Off(Remote Turn-On) 기능으로 현장 출동 없이 장비를 재부팅할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "열 회로 차단기 과부하 보호와 자가진단 회로·시각 표시등을 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "자성 차폐 강철 인클로저와 2.44m 접지 3선 코드를 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "IEC C13 출력 11개와 CEE7/7 메인 플러그를 제공한다(16A/240V 사양).",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Power",
+      "name": "정격 입력",
+      "value": "16",
+      "unit": "A / 240V",
+      "condition": "제품군 데이터시트 SX-1216-RTi 행 기준",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "메인 플러그",
+      "value": "CEE7/7",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "출력 커넥터",
+      "value": "IEC C13 x 11",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Protection",
+      "name": "서지 제거 방식",
+      "value": "Advanced Series Mode",
+      "unit": "",
+      "condition": "최대 6,000V 서지 에너지 제거",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Protection",
+      "name": "과전류 보호",
+      "value": "열 회로 차단기",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "원격 제어",
+      "value": "Remote Turn-On (원격 전원 On/Off)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Certification",
+      "name": "인증",
+      "value": "A-1-1 Certified",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "케이블 길이",
+      "value": "2.44",
+      "unit": "m",
+      "condition": "접지 3선 코드",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "확인된 자료에 값 없음",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Output",
+      "connector": "IEC C13",
+      "signal": "AC power out",
+      "direction": "OUT",
+      "quantity": "11",
+      "protocol": "",
+      "availability": "",
+      "condition": "230V, 16A each receptacle, 16A max load total(제품 후면 표기)",
+      "source": "IMG",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "CEE7/7",
+      "signal": "AC mains in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "Terminal block",
+      "signal": "Remote turn-on trigger",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "정확한 트리거 전압 미확인",
+      "source": "",
+      "verification": "REVIEW REQUIRED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "크기·무게 미확인",
+      "detail": "공식 제품 페이지·데이터시트에서 본체 크기·무게 값을 확인하지 못했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "원격 트리거 전압",
+      "detail": "Remote Turn-On 트리거 단자의 정확한 전압·신호 사양은 확인하지 못했다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "SurgeX SX-1216-RTi · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

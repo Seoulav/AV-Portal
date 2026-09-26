@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "8B3E7809FA158239CA89D2BF6B4819EF51C442A626CE8841574C38E2D7E6D2E1",
+    "sha256": "451D5F8C1DD3835024B2FA9C1D8E1DAFCBE4154627B861382EDEE5A9A9646AFC",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -12,6 +12,24 @@
       "features": 7,
       "specifications": 13,
       "io": 5
+    },
+    "avio-2ch-in": {
+      "sha256": "363A68213F1C7AE6C93A77E5A225B5FC75F392CB57E374991A5846CBF7CF15EB",
+      "features": 5,
+      "specifications": 10,
+      "io": 2
+    },
+    "avio-2ch-out": {
+      "sha256": "28C2040396AF3E11CDA7FF57999784A778A5AAB822DCA6968FB92F6A17971F2A",
+      "features": 5,
+      "specifications": 10,
+      "io": 2
+    },
+    "avio-bt": {
+      "sha256": "174C1F42ADF8049FF8C71850DF68530A333F56BFF11E22D2C1C74AD851354690",
+      "features": 6,
+      "specifications": 9,
+      "io": 2
     },
     "avio-usb-c": {
       "sha256": "F86A50EAE5C603CDDE5CAC4E23B507FADDF1B9C408C00ED528091847EC424F1F",
@@ -43,11 +61,47 @@
       "specifications": 10,
       "io": 2
     },
+    "hdmi20-optj-rx90": {
+      "sha256": "910542D4DCFAD52A7CCB81CA5F57F7F4BA1BF4BF2C455B206A6E254032797ACF",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "hdmi20-optj-tx90": {
+      "sha256": "A0A118588265CD62DA85A9C9679E7DA11D2080BCB1A4771621590B0B7F453ED0",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "hyperdeck-studio-hd-mini": {
+      "sha256": "70EADE7CA5C936F8347E4F97AF791E774DD7DFEACD402095F6A9BCBE9C8A0A47",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
+    "hyperdeck-studio-hd-plus": {
+      "sha256": "44DB79130614EC342C6340028FD5B871AEC7FB4C8B9ED9821D07FF784542F3BB",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
+    "hyperdeck-studio-hd-pro": {
+      "sha256": "3662EFBE65F23A7127DE8FB490DAE8D1EA043F548BF8C2448AFCC8399935B744",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
     "ki-pro-go2": {
       "sha256": "07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488",
       "features": 8,
       "specifications": 16,
       "io": 11
+    },
+    "led-780h": {
+      "sha256": "05C5322CAE43B1365B03B8B0F9B6103CB49E4A44932B77F1A6EF2777C616D83F",
+      "features": 7,
+      "specifications": 11,
+      "io": 6
     },
     "mezzo-322-ad": {
       "sha256": "A66CAB092F65EE010F03F45C5EE62CD9FA2BD3640329CB0CAEB3B930420FCF12",
@@ -73,6 +127,12 @@
       "specifications": 16,
       "io": 9
     },
+    "sx-1216-rti": {
+      "sha256": "3E15B51D0245F817E01380482DADE7DE981D6C9478F01E0A60C799D1C3D40CBE",
+      "features": 7,
+      "specifications": 9,
+      "io": 3
+    },
     "uvc-01": {
       "sha256": "CCEA0CA92DE4D3F3F6C3975895CB62CE14E779620220D452F0251716A724018B",
       "features": 5,
@@ -84,6 +144,24 @@
       "features": 6,
       "specifications": 10,
       "io": 6
+    },
+    "x100pro-2u": {
+      "sha256": "70F2EE95BC84D4DB5B3BDA904FF1E4CC86DA0AFFF9388AFECBCADDBCC8BD8AAC",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "x100pro-4u": {
+      "sha256": "44E62FEC5A82E1F22BEC61EB1B77F3708DCDAB97690A742FB08393BF38A237A8",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "x100pro-7u": {
+      "sha256": "6C30EFFF5530712B8EE15FAD54638D83D1ECF68BCB2F5CFE0C564BAB52778A46",
+      "features": 6,
+      "specifications": 13,
+      "io": 2
     }
   }
 }

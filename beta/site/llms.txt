@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 13개
+- Product Detail: 26개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -428,6 +428,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 영상 | Video | LED Processor
   종류: 장비
   공식 링크: https://www.magnimage.com/article/780H
+  매뉴얼: ./manuals/magnimage-led-780h-user-manual.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=led-780h
 
 - 제품: NovaStar H5
   분류: 영상 | Video | Video Processor
@@ -487,34 +489,40 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 영상 | Video | Video Processor
   종류: 장비
   제품군 링크: https://en.colorlightinside.com/product/download/111
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=x100pro-7u
 
 - 제품: Colorlight X100Pro 4U
   분류: 영상 | Video | Video Processor
   종류: 장비
   제품군 링크: https://en.colorlightinside.com/product/download/111
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=x100pro-4u
 
 - 제품: Colorlight X100Pro 2U
   분류: 영상 | Video | Video Processor
   종류: 장비
   제품군 링크: https://en.colorlightinside.com/product/download/111
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=x100pro-2u
 
 - 제품: Blackmagic Design HyperDeck Studio HD Pro
   분류: 영상 | Video | Recorder
   종류: 장비
   제품군 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
   매뉴얼: https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hyperdeck-studio-hd-pro
 
 - 제품: Blackmagic Design HyperDeck Studio HD Plus
   분류: 영상 | Video | Recorder
   종류: 장비
   제품군 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
   매뉴얼: https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hyperdeck-studio-hd-plus
 
 - 제품: Blackmagic Design HyperDeck Studio HD Mini
   분류: 영상 | Video | Recorder
   종류: 장비
   제품군 링크: https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs
   매뉴얼: https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hyperdeck-studio-hd-mini
 
 - 제품: Lumantek ez-MD+
   분류: 영상 | Video | Converter
@@ -855,6 +863,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page
   매뉴얼: https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=sx-1216-rti
 
 - 제품: NETGEAR GSM4212P
   분류: 제어 | Network | Network Switch
@@ -1154,18 +1163,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.audinate.com/products/devices/dante-avio
   매뉴얼: https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=avio-bt
 
 - 제품: Audinate AVIO 2CH IN
   분류: 오디오 | Audio | Audio Interface
   종류: 장비
   제품군 링크: https://www.audinate.com/products/devices/dante-avio
   매뉴얼: https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=avio-2ch-in
 
 - 제품: Audinate AVIO 2CH OUT
   분류: 오디오 | Audio | Audio Interface
   종류: 장비
   제품군 링크: https://www.audinate.com/products/devices/dante-avio
   매뉴얼: https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=avio-2ch-out
 
 - 제품: Televic D-Cerno CU
   분류: 오디오 | Conferencing | Conference System
@@ -1482,12 +1494,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90
   매뉴얼: https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hdmi20-optj-tx90
 
 - 제품: Lightware HDMI20-OPTJ-RX90
   분류: 영상 | Video | Extender
   종류: 장비
   공식 링크: https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90
   매뉴얼: https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-RX90_AE_Specification.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hdmi20-optj-rx90
 
 - 제품: Ross Video ULTRITOUCH-PS
   분류: 영상 | Video | Power Supply

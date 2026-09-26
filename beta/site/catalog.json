@@ -977,7 +977,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.magnimage.com/article/780H"
-    ]
+    ],
+    "slug": "led-780h",
+    "card_image": "led-780h-front.webp",
+    "manual_link": "./manuals/magnimage-led-780h-user-manual.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1126,7 +1129,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-7u",
+    "card_image": "x100pro-7u-front.webp"
   },
   {
     "brand": "Colorlight",
@@ -1140,7 +1145,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-4u",
+    "card_image": "x100pro-4u-front.webp"
   },
   {
     "brand": "Colorlight",
@@ -1154,7 +1161,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-2u",
+    "card_image": "x100pro-2u-front.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1169,7 +1178,9 @@
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
     "link_scope": "series",
-    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000"
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-pro",
+    "card_image": "hyperdeck-studio-hd-pro-main.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1184,7 +1195,9 @@
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
     "link_scope": "series",
-    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000"
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-plus",
+    "card_image": "hyperdeck-studio-hd-plus-main.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1199,7 +1212,9 @@
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
     "link_scope": "series",
-    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000"
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-mini",
+    "card_image": "hyperdeck-studio-hd-mini-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -2010,7 +2025,9 @@
     "official_links": [
       "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
     ],
-    "manual_link": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44"
+    "manual_link": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44",
+    "slug": "sx-1216-rti",
+    "card_image": "sx-1216-rti-front.webp"
   },
   {
     "brand": "NETGEAR",
@@ -2730,7 +2747,9 @@
       "https://www.audinate.com/products/devices/dante-avio"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf"
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf",
+    "slug": "avio-bt",
+    "card_image": "avio-bt-main.webp"
   },
   {
     "brand": "Audinate",
@@ -2745,7 +2764,9 @@
       "https://www.audinate.com/products/devices/dante-avio"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf"
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+    "slug": "avio-2ch-in",
+    "card_image": "avio-2ch-in-main.webp"
   },
   {
     "brand": "Audinate",
@@ -2760,7 +2781,9 @@
       "https://www.audinate.com/products/devices/dante-avio"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf"
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+    "slug": "avio-2ch-out",
+    "card_image": "avio-2ch-out-main.webp"
   },
   {
     "brand": "Televic",
@@ -3561,7 +3584,9 @@
     "official_links": [
       "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
     ],
-    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf"
+    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf",
+    "slug": "hdmi20-optj-tx90",
+    "card_image": "hdmi20-optj-tx90-front.webp"
   },
   {
     "brand": "Lightware",
@@ -3575,7 +3600,9 @@
     "official_links": [
       "https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90"
     ],
-    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-RX90_AE_Specification.pdf"
+    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-RX90_AE_Specification.pdf",
+    "slug": "hdmi20-optj-rx90",
+    "card_image": "hdmi20-optj-rx90-front.webp"
   },
   {
     "brand": "Ross Video",

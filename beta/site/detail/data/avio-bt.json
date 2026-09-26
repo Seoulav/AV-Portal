@@ -1,0 +1,273 @@
+{
+  "manufacturer": "Audinate",
+  "productName": "AVIO BT",
+  "model": "Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)",
+  "series": "Dante AVIO Series",
+  "seriesNote": "AVIO 어댑터 중 Bluetooth 무선 연결 모델. USB/Analog 등 다른 AVIO 어댑터와 채널·전원 사양이 다르다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Audio Interface"
+  ],
+  "english": "Bluetooth-to-Dante adapter with 2x1 wireless audio channels and PoE support.",
+  "korean": "Dante AVIO Bluetooth 어댑터는 스마트폰·PC를 블루투스로 Dante 오디오 네트워크에 연결하는 2입력/1출력 무선 오디오 어댑터다.",
+  "verificationSummary": "제조사 공식 데이터시트에서 채널·전원·블루투스 사양을 확인했다. 정확한 크기·무게는 데이터시트에 기재되지 않았다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Dante AVIO Bluetooth 어댑터는 PC나 모바일 기기를 블루투스로 연결해 Dante 오디오 네트워크와 무선으로 오디오를 주고받는 2입력/1출력(2x1) 어댑터다. 미디어 플레이어나 화상회의 소프트웨어의 오디오를 Dante로 연결된 스피커·마이크·믹서·DSP로 전달할 수 있다.\n\nRJ45 포트로 Class 1 802.3af PoE 전원을 받아 별도 전원 어댑터가 필요 없으며, 블루투스 5.0을 지원한다. 샘플레이트 48kHz로 Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.\n\n공식 제품 페이지(getdante.com/platform/avio-bluetooth/)는 개별 제품 사진이 없는 카테고리성 페이지라, 대표 이미지는 제조사 WordPress 미디어에서 별도로 확보했다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "avio-bt-main.webp",
+      "alt": "Audinate Dante AVIO Bluetooth I/O Adapter 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Audinate",
+      "model": "Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/avio-bluetooth-crop.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "약 460×346(WordPress 미디어)",
+      "resolution": "385×129",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/avio-bluetooth-crop.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-bluetooth/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-bluetooth/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-bluetooth/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.getdante.com/platform/avio-bluetooth/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Dante AVIO Bluetooth I/O Adapter Datasheet",
+      "language": "en",
+      "note": "",
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.getdante.com/platform/avio-bluetooth/"
+    }
+  ],
+  "features": [
+    {
+      "text": "PC·모바일 기기를 블루투스로 Dante 오디오 네트워크에 무선 연결한다.",
+      "source": ""
+    },
+    {
+      "text": "2입력/1출력(2x1) 채널을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Class 1 802.3af PoE로 동작해 별도 전원 어댑터가 필요 없다.",
+      "source": ""
+    },
+    {
+      "text": "블루투스 5.0을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Dante Domain Manager(DDM)와 호환되며 AES67 RTP 전송도 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "채널",
+      "value": "2 in, 1 out",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플레이트",
+      "value": "48",
+      "unit": "kHz",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 전송",
+      "value": "Dante Audio over IP, AES67 RTP",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "지연시간",
+      "value": "1, 2, 5",
+      "unit": "ms(선택)",
+      "condition": "Dante Controller로 설정",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Bluetooth",
+      "name": "규격",
+      "value": "5.0",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "Class 1 802.3af PoE",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "2.5 미만",
+      "unit": "W",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작/보관 온도",
+      "value": "-10~+50 / -25~+70",
+      "unit": "℃",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "데이터시트에 값 미기재",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Dante/AES67 audio + PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Dante, AES67",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Wireless",
+      "connector": "Bluetooth 5.0",
+      "signal": "Wireless audio",
+      "direction": "I/O",
+      "quantity": "2 in, 1 out",
+      "protocol": "Bluetooth",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.getdante.com/platform/avio-bluetooth/",
+      "scope": "모델·지역 표기 검토 중"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 페이지 성격",
+      "detail": "getdante.com의 avio-bluetooth 페이지는 카테고리성 페이지라 대표 이미지는 WordPress 미디어에서 별도 확보했다."
+    },
+    {
+      "code": "M1",
+      "status": "MISSING",
+      "title": "크기·무게",
+      "detail": "데이터시트에 물리 크기·무게 값이 없다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Audinate Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1) · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

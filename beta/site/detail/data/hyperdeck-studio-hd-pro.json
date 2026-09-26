@@ -1,0 +1,319 @@
+{
+  "manufacturer": "Blackmagic Design",
+  "productName": "HyperDeck Studio HD Pro",
+  "model": "HyperDeck Studio HD Pro",
+  "series": "HyperDeck Studio Series",
+  "seriesNote": "HD Pro·HD Plus·HD Mini는 같은 techspecs 페이지에서 함께 비교 제공되는 시리즈 모델. 사용설명서(HyperDeckHDManual.pdf)도 3개 모델 공용.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Recorder"
+  ],
+  "english": "Broadcast HD disk recorder with dual SSD/SD slots and 6G-SDI I/O.",
+  "korean": "HyperDeck Studio HD Pro는 SSD 2개·SD카드 2개 슬롯을 갖춘 방송용 HD 디스크 레코더다.",
+  "verificationSummary": "제조사 공식 techspecs 페이지에서 모델별 비교표를 확인했다. 사용설명서는 3개 모델 공용 PDF다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "HyperDeck Studio HD Pro는 2.5인치 SSD 슬롯 2개와 SD카드 슬롯 2개를 동시에 갖춰 미디어 교체 없이 연속 녹화·백업이 가능한 1RU 방송용 HD 레코더다. 6G-SDI 입력 1·출력 2·모니터 출력 1, HDMI 2.0 입출력을 제공하며 ProRes(HQ/422/LT/Proxy)·ProRes 4444(재생 전용)·DNxHD/DNxHR·H.264를 지원한다.\n\nSD(525i59.94/625i50)부터 HD 1080p60, 2K DCI, UHD/4K DCI(각 최대 30fps)까지 다양한 해상도를 녹화할 수 있다. RS-422 입출력, 1Gb/s 이더넷, USB-C 3.0으로 제어·파일 전송이 가능하며, 이중화된 100-240V AC 전원(최대 100W)을 사용한다.\n\n제조사 techspecs 페이지는 HD Pro·HD Plus·HD Mini 3개 모델을 한 표로 비교하며, 사용설명서도 3개 모델 공용이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "hyperdeck-studio-hd-pro-main.webp",
+      "alt": "Blackmagic Design HyperDeck Studio HD Pro 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Pro",
+      "sourceUrl": "https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-pro.jpg?_v=1627443058",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "306×215",
+      "resolution": "306×54",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-pro.jpg?_v=1627443058"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "HyperDeck Studio HD Manual",
+      "language": "en",
+      "note": "HD Pro·HD Plus·HD Mini 공용 사용설명서",
+      "url": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "HyperDeck Studio Tech Specs",
+      "language": "ko",
+      "note": "3개 모델 비교표",
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio"
+    }
+  ],
+  "features": [
+    {
+      "text": "2.5인치 SSD 2개와 SD카드 2개 슬롯을 동시에 갖춰 미디어 교체 없이 연속 녹화·백업이 가능하다.",
+      "source": ""
+    },
+    {
+      "text": "6G-SDI 입력 1·출력 2·모니터 출력 1, HDMI 2.0 입출력을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "ProRes(HQ/422/LT/Proxy)·ProRes 4444(재생 전용)·DNxHD/DNxHR·H.264를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "SD부터 HD 1080p60, 2K DCI, UHD/4K DCI(각 최대 30fps)까지 녹화한다.",
+      "source": ""
+    },
+    {
+      "text": "RS-422 입출력, 1Gb/s 이더넷, USB-C 3.0으로 원격 제어·파일 전송을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "이중화된 100-240V AC 전원(최대 100W)을 사용한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Storage",
+      "name": "저장매체",
+      "value": "2.5인치 SSD x2, SD카드 x2",
+      "unit": "",
+      "condition": "ExFAT 또는 HFS+",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Codec",
+      "name": "지원 코덱",
+      "value": "ProRes(HQ/422/LT/Proxy), ProRes 4444(재생 전용, 최대 1080p60), DNxHD/DNxHR, H.264(최대 1080p60)",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Resolution",
+      "name": "지원 해상도",
+      "value": "SD(525i59.94/625i50)~1080p60, 2K DCI(최대 30fps), UHD/4K DCI(최대 30fps)",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "SDI",
+      "value": "6G-SDI 입력 1, 출력 2, 모니터 출력 1",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI",
+      "value": "HDMI 2.0 입력 1, 출력 1",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어 포트",
+      "value": "RS-422 입출력, 1Gb/s Ethernet, USB-C 3.0",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "최대 100",
+      "unit": "W",
+      "condition": "이중화 100-240V AC 전원",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "폭",
+      "value": "1RU 랙 표준폭",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "REVIEW REQUIRED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "6G-SDI",
+      "signal": "SDI video",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "6G-SDI",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "6G-SDI",
+      "signal": "SDI video out + monitor",
+      "direction": "OUT",
+      "quantity": "3(출력 2 + 모니터 1)",
+      "protocol": "6G-SDI",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "HDMI video",
+      "direction": "I/O",
+      "quantity": "입력 1, 출력 1",
+      "protocol": "HDMI 2.0",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-422",
+      "signal": "Deck control",
+      "direction": "I/O",
+      "quantity": "입출력 각 1",
+      "protocol": "RS-422",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "1Gb/s Ethernet",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data",
+      "connector": "USB-C",
+      "signal": "File transfer / control",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "USB 3.0",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "물리 크기·무게",
+      "detail": "techspecs 비교표에 랙 폭(1RU)은 확인되나 정확한 mm 치수·무게 값은 확인하지 못했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 해상도",
+      "detail": "제조사 제품 그리드 썸네일(306×215)만 확보되어 해상도가 낮다. 고해상도 이미지는 검토 중이다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Blackmagic Design HyperDeck Studio HD Pro · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

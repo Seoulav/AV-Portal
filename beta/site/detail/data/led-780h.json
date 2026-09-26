@@ -1,0 +1,347 @@
+{
+  "manufacturer": "Magnimage",
+  "productName": "LED-780H",
+  "model": "LED-780H",
+  "series": "LED-780 Series",
+  "seriesNote": "LED-780H는 기본(standard) 모델. LED-780HD·HDV·HDS·HV 등 접미어 모델은 확장 입력 포트가 추가된 파생 모델로, 본체 값과 구분한다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Processor"
+  ],
+  "english": "4K x 2K video processor supporting 4-screen splicing with up to 8,000,000 pixels per unit.",
+  "korean": "LED-780H는 최대 800만 화소, 4화면 스플라이싱을 지원하는 4K×2K LED 비디오 프로세서다.",
+  "verificationSummary": "제조사 공식 사용설명서(User Manual V2.1)에서 입출력 포트·기술 사양·전원·크기·무게를 확인했다. 제조사 공식 웹사이트의 다운로드 자료는 referer 제한으로 직접 링크가 불가능해 사용자 업로드로 반영했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LED-780H는 8개의 DVI 출력 포트를 4개 그룹으로 나눠 가로/세로/동일크기/이형크기 스플라이싱을 지원하는 4K×2K LED 비디오 프로세서로, 단일 유닛이 최대 800만 화소를 업로드하고 4화면 스플라이싱을 처리한다. 비스플라이싱 모드에서는 출력마다 4개 레이어를 자유롭게 배치할 수 있다.\n\n기본 입력은 DVI 2개, HDMI 2개, DP 1개(3840×1080/60Hz 또는 3840×2160/30Hz), SDI 1개(루프 포함)이며, 확장 포트를 통해 VGA·DVI·SDI·USB 중 2개 2K 입력 또는 DP1.1·HDMI1.4 중 1개 4K 입력을 추가할 수 있다. LED-780HD·HDV·HDS·HV 등은 이 확장 포트가 이미 장착된 파생 모델명이다.\n\n제조사 공식 사용설명서에 따르면 전원 입력은 100-240V AC 50/60Hz(0.8A), 전체 소비전력 55W, 크기 482.6×452×66.75mm, 무게 6.0kg이다. 제조사 웹사이트(magnimage.com)의 다운로드 자료는 지정된 페이지(referer)에서만 열람 가능하도록 제한되어 있어, 이 사이트에서 직접 링크할 경우 접근이 거부된다 — 이 때문에 매뉴얼 원본을 사용자 업로드로 반영했다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "led-780h-front.webp",
+      "alt": "Magnimage LED-780H 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Magnimage",
+      "model": "LED-780H",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "880×278(제조사 제품 목록 대표 이미지)",
+      "resolution": "880×159",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "LED-780H User Manual V2.1",
+      "language": "en",
+      "note": "카탈로그 manual_link 필드(./manuals/magnimage-led-780h-user-manual.pdf)로 사용자 업로드 게시. 제조사 공식 웹사이트 다운로드, referer 제한으로 이 상세 문서에는 직접 링크하지 않음"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.magnimage.com/article/ddddeffeefe"
+    }
+  ],
+  "features": [
+    {
+      "text": "8개 DVI 출력을 4개 그룹으로 나눠 가로·세로·동일크기·이형크기 스플라이싱을 지원하며, 단일 유닛 최대 800만 화소를 처리한다.",
+      "source": ""
+    },
+    {
+      "text": "비스플라이싱 모드에서 각 출력마다 4개 레이어를 임의 크기·위치로 표시할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "1개 이미지와 3개 이미지 사이, 또는 4K와 4K 사이 프리뷰 전환을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "다수 장비를 캐스케이드 연결해 초광폭 디스플레이를 구성할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "8개 입력 간 끊김 없는 전환을 위한 내장 입력 매트릭스를 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "EDID 관리와 사용자 정의 출력 해상도, 로고 저장·이미지 크롭 기능을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "컴퓨터 호스트 제어와 프리셋 저장·불러오기, 이미지 프리즈 기능을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Input",
+      "name": "DVI 입력",
+      "value": "2",
+      "unit": "포트",
+      "condition": "표준 유닛 기준",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "HDMI 입력",
+      "value": "2",
+      "unit": "포트",
+      "condition": "EIA/CEA-861, HDMI-1.3",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "DP 입력",
+      "value": "1",
+      "unit": "포트",
+      "condition": "DisplayPort 1.1/1.2",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "SDI 입력",
+      "value": "1",
+      "unit": "포트",
+      "condition": "480i~1080p(3G SDI), 루프 포함",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "DVI 출력",
+      "value": "8",
+      "unit": "포트, 4그룹",
+      "condition": "그룹당 다양한 출력 해상도, 최대 3840×3000(대역폭 최적화 커스텀)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "DP/SDI 루프",
+      "value": "각 1",
+      "unit": "",
+      "condition": "입력 신호와 동일",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 입력",
+      "value": "100-240",
+      "unit": "V AC 50/60Hz",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "55",
+      "unit": "W",
+      "condition": "전체(Overall Power Dissipation)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(L×W×H)",
+      "value": "482.6×452×66.75",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "6.0",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0-45",
+      "unit": "℃",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "DVI1-DVI2",
+      "signal": "Digital video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "DVI",
+      "availability": "",
+      "condition": "1024×768/60Hz, 1920×1080/60Hz 등 VESA 표준",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI1-HDMI2",
+      "signal": "Digital video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "HDMI-1.3",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "DP",
+      "signal": "Digital video in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DisplayPort 1.1/1.2",
+      "availability": "",
+      "condition": "3840×1080/60Hz 또는 3840×2160/30Hz",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "SDI",
+      "signal": "Digital video in + loop",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "3G-SDI",
+      "availability": "",
+      "condition": "480i~1080p",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "DVI1A/B-DVI4A/B",
+      "signal": "Digital video out (4그룹, 각 backup 포함)",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "DVI",
+      "availability": "",
+      "condition": "그룹별 다양한 출력 해상도",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "EXT.1 / EXT.2",
+      "signal": "Extended port(확장 입력 카드용)",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "모델 접미어에 따라 카드 종류 결정",
+      "condition": "본체(LED-780H)는 확장 카드 미장착 상태 기준",
+      "source": "M",
+      "verification": "REVIEW REQUIRED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.magnimage.com/article/ddddeffeefe",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "scope": "사용자 업로드(카탈로그 manual_link 필드로 게시, 제조사 공식 자료)"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "확장 포트 EXT.1/EXT.2 사양",
+      "detail": "확장 카드(LED-780HD·HDV·HDS·HV 등)에 따라 EXT 포트 종류가 달라진다. 기본 모델의 EXT 포트 자체 사양은 매뉴얼에 명시되지 않았다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한·모델 일치",
+      "detail": "전면 이미지는 제조사 제품 목록 페이지의 대표 이미지로, 모델 라벨 텍스트는 저해상도로 완전히 판독하지 못했다(버튼 배치는 매뉴얼과 정확히 일치)."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "제조사 사이트 접근 제한",
+      "detail": "제조사 자료 다운로드는 referer 화이트리스트로 보호되어 있어 직접 링크 시 방문자에게 AccessDenied 오류가 발생한다. 이 때문에 매뉴얼을 사용자 업로드로 반영했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Magnimage LED-780H · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
