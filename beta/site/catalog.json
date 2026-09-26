@@ -1325,7 +1325,9 @@
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
     ],
     "link_scope": "series",
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+    "slug": "ultrix-ns-fr2",
+    "card_image": "ultrix-ns-fr2-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -1339,7 +1341,9 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "ultrix-hdx-io",
+    "card_image": "ultrix-hdx-io-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -1353,7 +1357,9 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "ultripower",
+    "card_image": "ultripower-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -1367,7 +1373,9 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "ultripower-ps",
+    "card_image": "ultripower-ps-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -1382,7 +1390,9 @@
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
     ],
     "link_scope": "series",
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf",
+    "slug": "ultritouch-2-hr",
+    "card_image": "ultritouch-2-hr-main.webp"
   },
   {
     "brand": "Yamaha",

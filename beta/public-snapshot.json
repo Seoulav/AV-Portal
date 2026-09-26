@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "845C1625E05945ECDD6C78AECA868FD971F285E7CD8A6C69C6C1D457EABBE376",
+    "sha256": "96749BE9EF0DF1B626DE80FD95DACB236B903024F346802DD804AE6981FB20BA",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -485,6 +485,36 @@
       "sha256": "1942CC660DA81353CD634FFFD41FC0C2DEF95FB0A2FBF791D63EF91B793E533C",
       "features": 6,
       "specifications": 12,
+      "io": 6
+    },
+    "ultripower-ps": {
+      "sha256": "1AC00C669EB4756C6C464604A952628E271CDBF56E451646BF79316D96FA9444",
+      "features": 3,
+      "specifications": 3,
+      "io": 0
+    },
+    "ultripower": {
+      "sha256": "91D1B335B7DF6A3E4E8FFD7422BE73CC8A1450658E10949697339ABD81B69AF2",
+      "features": 4,
+      "specifications": 10,
+      "io": 2
+    },
+    "ultritouch-2-hr": {
+      "sha256": "AF06BC4C8C7800F9DD2E4FB9B6B0FF5D49B015B511E911D9308661D08C1CC26E",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "ultrix-hdx-io": {
+      "sha256": "6A28FFFFE3ADBB3429694036A10735BD125F07CF4D5E1C546113F67DE94715A6",
+      "features": 6,
+      "specifications": 15,
+      "io": 4
+    },
+    "ultrix-ns-fr2": {
+      "sha256": "E1F4BF899BD42A3654F2A0DA6775B2BD1CE910512013356D5FA34F8B8C143AC3",
+      "features": 5,
+      "specifications": 28,
       "io": 6
     },
     "uvc-01": {

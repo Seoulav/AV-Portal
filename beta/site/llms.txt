@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 105개
+- Product Detail: 110개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -574,27 +574,32 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrix-ns-fr2
 
 - 제품: Ross Video ULTRIX-HDX-IO
   분류: 영상 | Video | Router Module
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrix-hdx-io
 
 - 제품: Ross Video ULTRIPOWER
   분류: 영상 | Video | Power Supply
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultripower
 
 - 제품: Ross Video ULTRIPOWER-PS
   분류: 영상 | Video | Power Supply
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultripower-ps
 
 - 제품: Ross Video ULTRITOUCH-2-HR
   분류: 영상 | Video | Control Panel
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultritouch/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultritouch-2-hr
 
 - 제품: Yamaha Tio1608-D2
   분류: 오디오 | Audio | Audio Interface

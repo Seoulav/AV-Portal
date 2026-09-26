@@ -1,0 +1,286 @@
+{
+  "manufacturer": "Ross Video",
+  "productName": "ULTRIPOWER",
+  "model": "ULTRIPOWER",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Power Supply"
+  ],
+  "english": "Ultripower is a 1RU rack-mount external Power Supply Unit chassis required to power the ULTRIX(-NS)-FR5 and ULTRIX-FR12 router frames, fitted with one or two hot-swappable power modules, delivering 15VDC per connection and up to 1200W of output power.",
+  "korean": "Ultripower는 ULTRIX(-NS)-FR5 및 ULTRIX-FR12 라우터 프레임에 전원을 공급하기 위한 1RU 랙마운트 외장 전원 공급 유닛(PSU) 섀시로, 전원 모듈 1개 또는 2개를 장착하며 접속당 15VDC, 최대 1200W의 출력을 제공한다.",
+  "verificationSummary": "제조사 공식 Ultrix Installation Guide(2101DR-003) 및 Ultrix Specifications 페이지로 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Ultripower는 Ultrix 라우터 시리즈 중 5RU(ULTRIX-FR5, ULTRIX-NS-FR5)와 12RU(ULTRIX-FR12) 프레임에 전원을 공급하기 위해 반드시 필요한 1RU 외장 랙마운트 전원 공급 유닛(Rack Mount Power Supply Unit)이다. FR1/FR2 프레임처럼 프레임 후면에 개별 15VDC 브릭을 직접 꽂는 방식이 아니라, Ultripower라는 별도의 1RU 섀시를 프레임과 케이블로 연결해 전원을 공급하는 구조이며, 개별 전원 공급을 통한 FR5 구동은 지원되지 않는다.\n\nUltripower 섀시에는 전원 모듈(power module)을 1개 또는 2개까지 장착할 수 있으며, 2개를 장착하면 이중화 구성이 된다. 라우터 프레임 크기와 장착된 카드 구성에 따라 필요한 Ultripower 대수가 달라지며(예: 2RU 프레임은 최대 2대, 12RU 프레임은 최대 3대), FR5/FR12에서는 Ultripower 연결이 필수(Standard)이고 FR1/FR2에서는 선택 사항(Optional)이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ultripower-main.webp",
+      "alt": "Ross Video Ultripower 1RU 랙마운트 전원 공급 유닛 전면(중앙에 'Ultripower', 좌우 슬롯에 'Ultripower-PS' 모듈 2개 장착)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRIPOWER",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1229x200",
+      "resolution": "1229x200",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ultripower-rear.webp",
+      "alt": "Ross Video Ultripower 후면 패널(이더넷 포트, OUT 1-4 전원 커넥터, IEC 전원 인렛 A/B 확인 가능)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRIPOWER",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1225x200",
+      "resolution": "1225x200",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ULTRIPOWER 공식 자료",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+    }
+  ],
+  "features": [
+    {
+      "text": "ULTRIX-FR5/NS-FR5, ULTRIX-FR12 프레임 전용 1RU 외장 전원 공급 유닛(필수 구성 요소)",
+      "source": "I"
+    },
+    {
+      "text": "전원 모듈 1개 또는 2개 장착 가능, 2개 장착 시 이중화(리던던시) 구성",
+      "source": "I"
+    },
+    {
+      "text": "AC 케이블 연결 전 DC 케이블을 먼저 연결하도록 설계되어 있어 핫스왑 및 안전한 전원 인가 절차 제공",
+      "source": "I"
+    },
+    {
+      "text": "프레임 크기에 따라 여러 대의 Ultripower를 조합해 확장 가능(최대 3대, 12RU 프레임 기준)",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Physical",
+      "name": "랙 유닛",
+      "value": "1",
+      "unit": "RU",
+      "condition": "",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "출력 전압/전류",
+      "value": "15VDC @ 20A",
+      "unit": "",
+      "condition": "커넥션당",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "최대 출력 전력",
+      "value": "1200 (110VAC 입력 시 1100으로 감소)",
+      "unit": "W",
+      "condition": "",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력",
+      "value": "100-264VAC, 50/60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전류",
+      "value": "10",
+      "unit": "A",
+      "condition": "",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "필요 대수 (FR5/NS-FR5)",
+      "value": "최소 1대(전원 모듈 1개 장착) ~ 1대(전원 모듈 2개 장착, 이중화)",
+      "unit": "",
+      "condition": "",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "필요 대수 (2RU 프레임 옵션 구성)",
+      "value": "최대 2대",
+      "unit": "",
+      "condition": "장착 카드 구성에 따라 다름",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "필요 대수 (12RU 프레임 옵션 구성)",
+      "value": "최대 3대",
+      "unit": "",
+      "condition": "장착 카드 구성에 따라 다름",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compatibility",
+      "name": "지원 여부 (FR1/FR2)",
+      "value": "Optional",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compatibility",
+      "name": "지원 여부 (FR5/FR12)",
+      "value": "Standard (필수)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "AC 인렛",
+      "signal": "100-264VAC, 50/60Hz",
+      "direction": "입력",
+      "quantity": "1~2",
+      "protocol": "",
+      "availability": "전원 모듈당 1개",
+      "condition": "PSU 1(필수)/PSU 2(이중화 옵션)",
+      "source": "I",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "DC OUT 소켓",
+      "signal": "15VDC @ 20A",
+      "direction": "출력",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "Ultrix 프레임으로 연결되는 DC 출력 케이블 소켓",
+      "source": "I",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "I",
+      "name": "제조사 공식 Ultrix Installation Guide",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Installation%20Guides/Ultrix%20Installation%20Guide%20(2101DR-003).pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 Ultrix Specifications 페이지",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 Cutsheet/Quick Start Guide",
+      "url": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "전용 제품 페이지 및 공식 하드웨어 사진 부재",
+      "detail": "Ultripower는 rossvideo.com에 독립된 제품 페이지가 없고 Ultrix 프레임/설치 가이드 문서에서만 언급된다. 공식 웹사이트에서 실제 하드웨어 사진을 찾지 못해 이미지를 비워두었다. 별도의 Ultripower User Guide 문서가 존재할 가능성이 있으나 이번 조사 범위(주어진 URL)에서는 확인하지 못했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Ross Video ULTRIPOWER 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

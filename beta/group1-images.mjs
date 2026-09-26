@@ -353,6 +353,23 @@ export const group1Images = {
   ],
   'd-mic-40-sl': [
     image('Main', 'd-mic-40-sl-main.webp', 'D-Mic 40 SL 구스넥 마이크(40cm)', 'Televic', 'D-Mic 40 SL', 'https://documents.televic.digital/conference/index.php/s/WG4bzxmaNPkRg9a', '2000x652', '2000x652', 'VERIFIED')
+  ],
+  'ultrix-ns-fr2': [
+    image('Main', 'ultrix-ns-fr2-main.webp', 'ULTRIX-NS-FR2 2RU 프레임 (Ultrix 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-NS-FR2', 'https://www.rossvideo.com/wp-content/uploads/2026/07/ULTRIX_FAMILY_FR2.png', '768x440', '768x440', 'VERIFIED')
+  ],
+  'ultrix-hdx-io': [
+    image('Main', 'ultrix-hdx-io-main.webp', 'ULTRIX-HDX-IO SDI I/O 카드 (Ultrix I/O Cards 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-HDX-IO', 'https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png', '2048x521', '2048x521', 'VERIFIED')
+  ],
+  ultripower: [
+    image('Main', 'ultripower-main.webp', 'Ross Video Ultripower 1RU 랙마운트 전원 공급 유닛 전면(중앙에 \'Ultripower\', 좌우 슬롯에 \'Ultripower-PS\' 모듈 2개 장착)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED'),
+    image('Rear', 'ultripower-rear.webp', 'Ross Video Ultripower 후면 패널(이더넷 포트, OUT 1-4 전원 커넥터, IEC 전원 인렛 A/B 확인 가능)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1225x200', '1225x200', 'FOUND')
+  ],
+  'ultripower-ps': [
+    image('Main', 'ultripower-ps-main.webp', 'Ross Video Ultripower-PS 개별 전원 모듈(섀시에 장착된 상태, 모듈 전면에 \'Ultripower-PS\' 라벨과 냉각팬 확인 가능)', 'Ross Video', 'ULTRIPOWER-PS', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED')
+  ],
+  'ultritouch-2-hr': [
+    image('Front', 'ultritouch-2-hr-main.webp', 'Ultritouch-2-HR 전면 (Ultritouch 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg', '1600x800', '1600x800', 'VERIFIED'),
+    image('Rear', 'ultritouch-2-hr-rear.webp', 'Ultritouch 후면 패널 - 전원/네트워크 커넥터 (참고용, 2RU/4RU 공용 이미지일 가능성 있음)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back.jpg', '1600x800', '1600x800', 'FOUND')
   ]
 };
 
@@ -479,5 +496,10 @@ export const cardImages = {
   'plixus-ae-r-ps': 'plixus-ae-r-ps-main.webp',
   'confidea-flex': 'confidea-flex-main.webp',
   'plixus-next': 'plixus-next-main.webp',
-  'd-mic-40-sl': 'd-mic-40-sl-main.webp'
+  'd-mic-40-sl': 'd-mic-40-sl-main.webp',
+  'ultrix-ns-fr2': 'ultrix-ns-fr2-main.webp',
+  'ultrix-hdx-io': 'ultrix-hdx-io-main.webp',
+  ultripower: 'ultripower-main.webp',
+  'ultripower-ps': 'ultripower-ps-main.webp',
+  'ultritouch-2-hr': 'ultritouch-2-hr-main.webp'
 };
