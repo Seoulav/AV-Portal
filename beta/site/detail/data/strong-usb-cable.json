@@ -1,0 +1,213 @@
+{
+  "manufacturer": "Logitech",
+  "productName": "Strong USB-A to USB-C Cable 10m",
+  "model": "Strong USB Cable",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Cable"
+  ],
+  "english": "10 meter active USB-A to USB-C cable for long-distance, reliable USB video conferencing connections.",
+  "korean": "Strong USB 케이블은 장거리에서도 안정적인 USB 화상회의 연결을 위한 10미터 액티브 USB-A to USB-C 케이블이다.",
+  "verificationSummary": "제조사 한국 공식 사이트(logitech.com/ko-kr)에서 개요·호환 기기를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Strong USB 케이블은 Tap, Rally 카메라, MeetUp 등 로지텍 화상회의 장비를 회의실 컴퓨터와 먼 거리에서도 안정적으로 연결하기 위한 10미터 액티브(신호 증폭) USB-A to USB-C 케이블이다. 일반 수동(passive) USB 케이블은 5미터 안팎에서 신호 손실이 발생할 수 있으나, 액티브 케이블 설계로 장거리에서도 USB 연결의 신뢰성을 유지한다.\n\n제조사 공식 페이지에 따르면 이 케이블은 Logitech Tap, Rally 카메라, MeetUp 등과 함께 사용하도록 설계되었다. 커넥터는 한쪽 USB-C(로지텍 로고 각인), 반대쪽 USB-A로 구성된다(제품 이미지로 직접 확인, 케이블 자체 텍스트 사양 페이지에는 상세 전기 규격이 별도 명시되어 있지 않음).",
+  "images": [
+    {
+      "role": "Main",
+      "file": "logitech-strong-usb-cable-main.webp",
+      "alt": "Logitech Strong USB-A to USB-C 케이블 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Logitech",
+      "model": "Strong USB Cable",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1600×1374",
+      "resolution": "1371×1187",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": "제품 전용 데이터시트는 확인하지 못함. 공식 제품 페이지 본문 사양 사용"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    }
+  ],
+  "features": [
+    {
+      "text": "10미터 길이의 액티브(신호 증폭) 설계로 장거리에서도 USB 연결 신뢰성을 유지한다.",
+      "source": ""
+    },
+    {
+      "text": "Logitech Tap, Rally 카메라, MeetUp 등 화상회의 장비와 회의실 컴퓨터를 연결하는 용도로 설계되었다.",
+      "source": ""
+    },
+    {
+      "text": "한쪽 USB-C, 반대쪽 USB-A 커넥터로 구성된다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Cable",
+      "name": "길이",
+      "value": "10",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Cable",
+      "name": "타입",
+      "value": "액티브(신호 증폭) USB 케이블",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "name": "커넥터",
+      "value": "USB-C ↔ USB-A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Compatibility",
+      "name": "호환 기기",
+      "value": "Logitech Tap, Rally 카메라, MeetUp",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Connector",
+      "connector": "USB-C",
+      "signal": "USB 신호",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "케이블 한쪽 끝",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "connector": "USB-A",
+      "signal": "USB 신호",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "케이블 반대쪽 끝",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 한국 공식 제품 페이지",
+      "url": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "상세 전기 규격 미확인",
+      "detail": "USB 버전(예: USB 3.1 Gen1/Gen2)·최대 대역폭 등 상세 전기 규격은 제조사 페이지에 명시되어 있지 않아 확인하지 못했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Logitech Strong USB-A to USB-C Cable 10m 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

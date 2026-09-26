@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 30개
+- Product Detail: 45개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -303,30 +303,35 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://kr.presentation.aver.com/model/tr535n
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr535n
 
 - 제품: AVer TR535
   분류: 영상 | Video | Camera
   종류: 장비
   공식 링크: https://kr.presentation.aver.com/model/tr535
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr535
 
 - 제품: AVer TR335
   분류: 영상 | Video | Camera
   종류: 장비
   공식 링크: https://kr.presentation.aver.com/model/tr335
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr335
 
 - 제품: AVer TR315
   분류: 영상 | Video | Camera
   종류: 장비
   공식 링크: https://kr.presentation.aver.com/model/tr315
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr315
 
 - 제품: AVer CL01
   분류: 영상 | Video | Camera Controller
   종류: 장비
   공식 링크: https://kr.presentation.aver.com/model/cl01
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=cl01
 
 - 제품: Roland V-02HD
   분류: 영상 | Video | Signal Switcher
@@ -381,12 +386,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.lumantek.com/index/product_intro/68
   매뉴얼: https://www.lumantek.com/index/download/product/68
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=vs5
 
 - 제품: Lumantek ez-Pro VS10
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://www.lumantek.com/index/product_intro/37
   매뉴얼: https://www.lumantek.com/index/download/product/37
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=vs10
 
 - 제품: Analog Way Pulse 4K
   분류: 영상 | Video | Signal Switcher
@@ -529,18 +536,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.lumantek.com/index/product_intro/60
   매뉴얼: https://www.lumantek.com/index/download/product/60
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ez-md-plus
 
 - 제품: Lumantek ez-SHV+
   분류: 영상 | Video | Converter
   종류: 장비
   공식 링크: https://www.lumantek.com/index/product_intro/59
   매뉴얼: https://www.lumantek.com/index/download/product/59
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ez-shv-plus
 
 - 제품: Lumantek ez-HSV+
   분류: 영상 | Video | Converter
   종류: 장비
   공식 링크: https://www.lumantek.com/index/product_intro/62
   매뉴얼: https://www.lumantek.com/index/download/product/62
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ez-hsv-plus
 
 - 제품: Ross Video ULTRIX-NS-FR2
   분류: 영상 | Video | Router Frame
@@ -997,24 +1007,28 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-mic-pod-hub
 
 - 제품: Logitech Rally Mic Pod Extension Cable
   분류: 화상회의 | Conferencing | Cable
   종류: 장비
   공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-mic-pod-extension-cable
 
 - 제품: Logitech Strong USB-A to USB-C Cable 10m
   분류: 화상회의 | Conferencing | Cable
   종류: 장비
   공식 링크: https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/ko_kr/video-collaboration/pdf/strong-usb-accessory.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=strong-usb-cable
 
 - 제품: Logitech Rally Plus
   분류: 화상회의 | Conferencing | Video Conferencing System
   종류: 장비
   공식 링크: https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-plus
 
 - 제품: Yealink SmartVision40
   분류: 화상회의 | Conferencing | Video Conferencing System
@@ -1548,3 +1562,4 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-mic-pod

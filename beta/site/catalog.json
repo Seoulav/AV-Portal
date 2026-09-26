@@ -684,7 +684,9 @@
     "official_links": [
       "https://kr.presentation.aver.com/model/tr535n"
     ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf"
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
+    "slug": "tr535n",
+    "card_image": "tr535n-front.webp"
   },
   {
     "brand": "AVer",
@@ -698,7 +700,9 @@
     "official_links": [
       "https://kr.presentation.aver.com/model/tr535"
     ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf"
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
+    "slug": "tr535",
+    "card_image": "tr535-front.webp"
   },
   {
     "brand": "AVer",
@@ -712,7 +716,9 @@
     "official_links": [
       "https://kr.presentation.aver.com/model/tr335"
     ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf"
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf",
+    "slug": "tr335",
+    "card_image": "tr335-front.webp"
   },
   {
     "brand": "AVer",
@@ -726,7 +732,9 @@
     "official_links": [
       "https://kr.presentation.aver.com/model/tr315"
     ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf"
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf",
+    "slug": "tr315",
+    "card_image": "tr315-perspective.webp"
   },
   {
     "brand": "AVer",
@@ -740,7 +748,9 @@
     "official_links": [
       "https://kr.presentation.aver.com/model/cl01"
     ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf"
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf",
+    "slug": "cl01",
+    "card_image": "cl01-front.webp"
   },
   {
     "brand": "Roland",
@@ -866,7 +876,9 @@
     "official_links": [
       "https://www.lumantek.com/index/product_intro/68"
     ],
-    "manual_link": "https://www.lumantek.com/index/download/product/68"
+    "manual_link": "https://www.lumantek.com/index/download/product/68",
+    "slug": "vs5",
+    "card_image": "lumantek-vs5-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -880,7 +892,9 @@
     "official_links": [
       "https://www.lumantek.com/index/product_intro/37"
     ],
-    "manual_link": "https://www.lumantek.com/index/download/product/37"
+    "manual_link": "https://www.lumantek.com/index/download/product/37",
+    "slug": "vs10",
+    "card_image": "lumantek-vs10-main.webp"
   },
   {
     "brand": "Analog Way",
@@ -1228,7 +1242,9 @@
     "official_links": [
       "https://www.lumantek.com/index/product_intro/60"
     ],
-    "manual_link": "https://www.lumantek.com/index/download/product/60"
+    "manual_link": "https://www.lumantek.com/index/download/product/60",
+    "slug": "ez-md-plus",
+    "card_image": "lumantek-ez-md-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -1242,7 +1258,9 @@
     "official_links": [
       "https://www.lumantek.com/index/product_intro/59"
     ],
-    "manual_link": "https://www.lumantek.com/index/download/product/59"
+    "manual_link": "https://www.lumantek.com/index/download/product/59",
+    "slug": "ez-shv-plus",
+    "card_image": "lumantek-ez-shv-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -1256,7 +1274,9 @@
     "official_links": [
       "https://www.lumantek.com/index/product_intro/62"
     ],
-    "manual_link": "https://www.lumantek.com/index/download/product/62"
+    "manual_link": "https://www.lumantek.com/index/download/product/62",
+    "slug": "ez-hsv-plus",
+    "card_image": "lumantek-ez-hsv-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -2342,7 +2362,9 @@
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
     ],
-    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf"
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod-hub",
+    "card_image": "logitech-rally-mic-pod-hub-perspective.webp"
   },
   {
     "brand": "Logitech",
@@ -2356,7 +2378,9 @@
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html"
     ],
-    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf"
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod-extension-cable",
+    "card_image": "logitech-rally-mic-pod-extension-cable-main.webp"
   },
   {
     "brand": "Logitech",
@@ -2370,7 +2394,9 @@
     "official_links": [
       "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
     ],
-    "manual_link": "https://www.logitech.com/content/dam/logitech/ko_kr/video-collaboration/pdf/strong-usb-accessory.pdf"
+    "manual_link": "https://www.logitech.com/content/dam/logitech/ko_kr/video-collaboration/pdf/strong-usb-accessory.pdf",
+    "slug": "strong-usb-cable",
+    "card_image": "logitech-strong-usb-cable-main.webp"
   },
   {
     "brand": "Logitech",
@@ -2384,7 +2410,9 @@
     "official_links": [
       "https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO"
     ],
-    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf"
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
+    "slug": "rally-plus",
+    "card_image": "logitech-rally-plus-main.webp"
   },
   {
     "brand": "Yealink",
@@ -3710,6 +3738,8 @@
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
     ],
-    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf"
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod",
+    "card_image": "logitech-rally-mic-pod-perspective.webp"
   }
 ]

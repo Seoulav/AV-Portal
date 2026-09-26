@@ -1,0 +1,368 @@
+{
+  "manufacturer": "AVer",
+  "productName": "TR535N",
+  "model": "TR535N",
+  "series": "TR series",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Camera"
+  ],
+  "english": "NDI High Bandwidth dual-lens AI auto tracking PTZ camera with 30X optical zoom.",
+  "korean": "TR535N은 NDI High Bandwidth를 지원하는 듀얼 렌즈 AI 자동 트래킹 카메라로, 30배 광학줌 PTZ 카메라와 광각 카메라를 결합했다.",
+  "verificationSummary": "제조사 공식 브로셔(AVer TR535N Brochure, kr.presentation.aver.com 다운로드)와 공식 사용설명서(averusa.com 호스팅)에서 사양·특징·이미지를 확인했다. 한국 대리점 사이트(kr.presentation.aver.com)에서는 단종(Discontinued) 상태로 표시되나, 미국 공식 사이트(averusa.com)에는 현재도 판매 중인 제품 페이지가 있어 글로벌 단종은 아니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "TR535N은 30배 광학줌 4K PTZ 카메라와 110도 화각의 광각 카메라를 결합한 듀얼 렌즈 자동 트래킹 카메라로, Presenter·Zone·Hybrid·Segment 4가지 AI 트래킹 모드를 지원한다. NDI High Bandwidth와 NDI HX2를 모두 지원하며, HDMI 2개·3G-SDI·IP·USB로 동시에 4K 스트리밍을 출력할 수 있다.\n\n제조사 공식 브로셔에 따르면 PTZ 카메라는 1/2.8인치 4K Exmor CMOS 센서(800만 화소)를 사용하며, 팬 ±170°·틸트 +90°/-30°를 지원한다. 전원은 AC 100-240V를 DC 12V/5A로 변환해 29W를 소비하며, 크기는 202.5×250.7×218.5mm, 무게는 3.6±0.1kg이다.\n\n한국 대리점(kr.presentation.aver.com) 제품 페이지는 이 모델을 단종(Discontinued)으로 표시하고 있으나, 미국 공식 사이트(averusa.com)의 Auto Tracking Camera 라인업에는 TR535N이 현재도 판매 중인 제품으로 등재되어 있어, 이는 한국 유통 채널에 국한된 표시로 보인다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "tr535n-front.webp",
+      "alt": "AVer TR535N 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "AVer",
+      "model": "TR535N",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr535n/ptz-front.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1200×1200",
+      "resolution": "360×417",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "tr535n-rear.webp",
+      "alt": "AVer TR535N 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "AVer",
+      "model": "TR535N",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr535n/ptz-back.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1200×1200",
+      "resolution": "351×392",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr535n"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr535n/ptz-front.png"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr535n/ptz-back.png"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr535n"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr535n"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "TR535N Owner's Manual (영문, 2023-06)",
+      "language": "en",
+      "note": "카탈로그 manual_link와 동일",
+      "url": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "AVer TR535N Brochure",
+      "language": "en",
+      "note": "제조사 한국 대리점 사이트 공식 브로셔, Product Specifications 전체 표 수록",
+      "url": "https://kr.presentation.aver.com/DownloadFile.ashx?n=3258&t=ModelBrochure"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr535n"
+    }
+  ],
+  "features": [
+    {
+      "text": "110° 광각 카메라와 30배 광학줌 PTZ 카메라를 결합한 듀얼 렌즈 설계로 거의 360도에 가까운 커버리지를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "Presenter·Zone·Hybrid·Segment 4가지 AI 자동 트래킹 모드를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "NDI High Bandwidth(1채널)와 NDI HX2(2채널)를 모두 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "HDMI 2개(동시 출력)·3G-SDI·IP·USB 3.2 Gen 1로 다중 스트림을 동시 출력할 수 있다(4K 60fps 기준 RTSP x2, HDMI x2, USB x2, NDI High Bandwidth x1, NDI HX2 x2).",
+      "source": ""
+    },
+    {
+      "text": "PoE++로 단일 케이블 전원·데이터 연결이 가능하다.",
+      "source": ""
+    },
+    {
+      "text": "VISCA/PELCO-D·P(RS-232/RS-422/IP), ONVIF 등 다양한 제어 프로토콜을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "PTZ Camera",
+      "name": "이미지 센서",
+      "value": "1/2.8인치 4K Exmor CMOS",
+      "unit": "",
+      "condition": "유효화소 800만",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "광학줌",
+      "value": "30X",
+      "unit": "",
+      "condition": "디지털줌 1X, 총 30X",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "출력 해상도",
+      "value": "4K/60, 4K/59.94, 4K/50, 4K/30 등 ~ 720p/50",
+      "unit": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "팬/틸트 각도",
+      "value": "팬 ±170°, 틸트 +90°/-30°",
+      "unit": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Wide Camera",
+      "name": "이미지 센서",
+      "value": "1/2.8인치 4K Low Lux CMOS",
+      "unit": "",
+      "condition": "유효화소 800만, 화각 DFOV 113°/HFOV 105°/VFOV 71°",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "NDI",
+      "value": "NDI High Bandwidth, NDI HX2",
+      "unit": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 인터페이스",
+      "value": "10/100/1000/2500 Base-T",
+      "unit": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "AC 100-240V → DC 12V/5A",
+      "unit": "",
+      "condition": "PoE++ 지원",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "29",
+      "unit": "W",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "202.5 × 250.7 × 218.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "3.6 (±0.1)",
+      "unit": "kg",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "Video/Audio out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "동시 출력 지원",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "3G-SDI",
+      "signal": "Video/Audio out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "USB",
+      "signal": "UVC video out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB 3.2 Gen 1",
+      "availability": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232 (DIN8)",
+      "signal": "VISCA/PELCO-D·P",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-422 (RJ45)",
+      "signal": "VISCA/PELCO-D·P",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "Mic in / Line in",
+      "signal": "Audio in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "B",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "B",
+      "name": "제조사 공식 브로셔(TR535N)",
+      "url": "https://kr.presentation.aver.com/DownloadFile.ashx?n=3258&t=ModelBrochure",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(averusa.com)",
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr535n",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://www.averusa.com/images-aver/products/tr535n/ptz-front.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "한국 대리점 단종 표시",
+      "detail": "kr.presentation.aver.com은 이 모델을 Discontinued로 표시하나, 미국 공식 사이트(averusa.com)에는 현재도 판매 중인 페이지가 있다. 국내 유통 재고·후속 대응 정책은 별도 확인 필요."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "AVer TR535N 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "manufacturer": "AVer",
+  "productName": "CL01",
+  "model": "CL01",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Camera Controller"
+  ],
+  "english": "Professional PTZ camera controller supporting up to 255 cameras.",
+  "korean": "CL01은 최대 255대의 PTZ 카메라를 제어할 수 있는 전문가용 카메라 컨트롤러다.",
+  "verificationSummary": "제조사 공식 제품 페이지(averusa.com)와 공식 데이터시트(cl01-datasheet.pdf), 사용설명서에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "CL01은 3개의 회전 노브와 조이스틱, OLED 디스플레이를 갖춘 전문가용 PTZ 카메라 컨트롤러로, VISCA·PELCO-D/P 프로토콜을 지원하는 AVer 및 타사 PTZ 카메라를 최대 255대까지 제어할 수 있다. 7개의 카메라 단축 채널(Cam 1~7)로 손쉽게 카메라를 전환할 수 있다.\n\n제조사 공식 데이터시트에 따르면 통신 인터페이스는 RS-485·RS-422·RS-232·IP·Micro USB(펌웨어 업데이트용)를 지원하며, Baud Rate는 2400~38400bps다. 전원은 DC 12V/2A 또는 AC 100-240V, 소비전력 24W이며, 크기는 173(W)×99(H)×350(D)mm, 무게는 2.5kg이다.\n\n제조사 사용설명서의 Specifications 절과 공식 데이터시트 수치가 일치함을 교차 확인했다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "cl01-front.webp",
+      "alt": "AVer CL01 상단 조작부 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "AVer",
+      "model": "CL01",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/cl01/controller-top.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "515×314",
+      "resolution": "515×301",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "cl01-rear.webp",
+      "alt": "AVer CL01 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "AVer",
+      "model": "CL01",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/cl01/controller-back.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "515×314",
+      "resolution": "515×264",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/ptz-controller/cl01"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/cl01/controller-top.png"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/cl01/controller-back.png"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/ptz-controller/cl01"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.averusa.com/products/ptz-controller/cl01"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "CL01 Camera Controller Manual (영문, 2019-11)",
+      "language": "en",
+      "note": "카탈로그 manual_link와 동일, Specifications 절 수록",
+      "url": "https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "CL01 Datasheet",
+      "language": "en",
+      "note": "모델 전용 데이터시트, Product Specifications 전체 표 수록",
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/cl01-datasheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.averusa.com/products/ptz-controller/cl01"
+    }
+  ],
+  "features": [
+    {
+      "text": "3개의 회전 노브(줌·화이트밸런스·초점)와 조이스틱, OLED 디스플레이로 직관적인 PTZ 제어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "VISCA, SONY VISCA, PELCO-D/P, UDP, VISCA over IP 프로토콜로 최대 255대의 PTZ 카메라를 제어할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "7개의 카메라 단축 채널(CAM 1~7)로 빠른 카메라 전환이 가능하다.",
+      "source": ""
+    },
+    {
+      "text": "RS-485·RS-422·RS-232·IP 등 다중 통신 인터페이스를 동시에 지원한다(모든 통신 포트 동시 사용 가능).",
+      "source": ""
+    },
+    {
+      "text": "Micro USB 포트를 통한 펌웨어 업그레이드를 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O Interface",
+      "name": "통신 인터페이스",
+      "value": "RS-485, RS-422, RS-232, IP, Micro USB(펌웨어 업그레이드용)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O Interface",
+      "name": "Baud Rate",
+      "value": "2400, 4800, 9600, 19200, 38400",
+      "unit": "bps",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "제어 프로토콜",
+      "value": "VISCA, SONY VISCA, PELCO-D/P, UDP, VISCA over IP",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "최대 제어 카메라 수",
+      "value": "255",
+      "unit": "대",
+      "condition": "Cam ID 1~7 및 추가",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "디스플레이",
+      "value": "OLED",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "회전 노브 / 조이스틱",
+      "value": "3 / 1",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "DC 12V/2A, AC 100-240V",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "24",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "173 × 99 × 350",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "2.5",
+      "unit": "kg",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Control",
+      "connector": "RS-485 (4-pin terminal)",
+      "signal": "PTZ control",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "동시 사용 가능",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232 (DB9 male)",
+      "signal": "PTZ control",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "동시 사용 가능",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45 (LAN)",
+      "signal": "PTZ control (IP)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "UDP/VISCA over IP",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Update",
+      "connector": "Micro USB",
+      "signal": "Firmware upgrade",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC Jack",
+      "signal": "DC power in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DC 12V",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트·사용설명서",
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/cl01-datasheet.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.averusa.com/products/ptz-controller/cl01",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://www.averusa.com/images-aver/products/cl01/controller-top.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "AVer CL01 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

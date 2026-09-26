@@ -123,6 +123,56 @@ export const group1Images = {
   'rio3224-d3': [
     image('Front', 'rio3224-d3-front.webp', 'Yamaha Rio3224-D3 전면 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-front01_tcm144-2339162.jpg', '1200×1200', '1086×569', 'VERIFIED'),
     image('Rear', 'rio3224-d3-rear.webp', 'Yamaha Rio3224-D3 후면 단자 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-rear05_tcm144-2339157.jpg', '1200×1200', '1084×515', 'VERIFIED')
+  ],
+  tr535n: [
+    image('Front', 'tr535n-front.webp', 'AVer TR535N 전면 이미지', 'AVer', 'TR535N', 'https://www.averusa.com/images-aver/products/tr535n/ptz-front.png', '1200×1200', '360×417', 'FOUND'),
+    image('Rear', 'tr535n-rear.webp', 'AVer TR535N 후면 단자 이미지', 'AVer', 'TR535N', 'https://www.averusa.com/images-aver/products/tr535n/ptz-back.png', '1200×1200', '351×392', 'FOUND')
+  ],
+  tr535: [
+    image('Front', 'tr535-front.webp', 'AVer TR535 전면 이미지', 'AVer', 'TR535', 'https://kr.presentation.aver.com/Upload/Model/3259/LargeImg.png', '640×390', '296×385', 'FOUND')
+  ],
+  tr335: [
+    image('Front', 'tr335-front.webp', 'AVer TR335 전면 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png', '474×458', '338×381', 'FOUND'),
+    image('Rear', 'tr335-rear.webp', 'AVer TR335 후면 단자 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png', '474×458', '308×411', 'FOUND')
+  ],
+  tr315: [
+    image('Perspective', 'tr315-perspective.webp', 'AVer TR315 원근 이미지(제조사 마케팅 이미지, NDI 배지 포함)', 'AVer', 'TR315', 'https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png', '1100×1000', '1053×982', 'FOUND')
+  ],
+  cl01: [
+    image('Front', 'cl01-front.webp', 'AVer CL01 상단 조작부 이미지', 'AVer', 'CL01', 'https://www.averusa.com/images-aver/products/cl01/controller-top.png', '515×314', '515×301', 'FOUND'),
+    image('Rear', 'cl01-rear.webp', 'AVer CL01 후면 단자 이미지', 'AVer', 'CL01', 'https://www.averusa.com/images-aver/products/cl01/controller-back.png', '515×314', '515×264', 'FOUND')
+  ],
+  vs5: [
+    image('Front', 'lumantek-vs5-main.webp', 'Lumantek ez-Pro VS5 전면 조작부 이미지', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png', '860×550', '743×550', 'VERIFIED')
+  ],
+  vs10: [
+    image('Front', 'lumantek-vs10-main.webp', 'Lumantek ez-Pro VS10 전면 조작부 이미지', 'Lumantek', 'VS10', 'https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png', '860×550', '785×550', 'VERIFIED')
+  ],
+  'ez-md-plus': [
+    image('Front', 'lumantek-ez-md-main.webp', 'Lumantek ez-MD+ 상단 라벨·단자 이미지', 'Lumantek', 'ez-MD+', 'https://lumantek.co.kr/uploads/product/8c299ed3858a91699c6a593c2f930d67.png', '609×330', '600×296', 'VERIFIED')
+  ],
+  'ez-shv-plus': [
+    image('Front', 'lumantek-ez-shv-main.webp', 'Lumantek ez-SHV+ 전면 디스플레이·단자 이미지', 'Lumantek', 'ez-SHV+', 'https://lumantek.co.kr/uploads/product/1d6e7bf9fd8417dcbbb9af3fc15e32bb.png', '1063×500', '568×500', 'VERIFIED')
+  ],
+  'ez-hsv-plus': [
+    image('Front', 'lumantek-ez-hsv-main.webp', 'Lumantek ez-HSV+ 전면 디스플레이·단자 이미지', 'Lumantek', 'ez-HSV+', 'https://lumantek.co.kr/uploads/product/a3d341a2299241436357289f2b6fdddd.png', '1063×500', '569×500', 'VERIFIED')
+  ],
+  'rally-mic-pod-hub': [
+    image('Perspective', 'logitech-rally-mic-pod-hub-perspective.webp', 'Logitech Rally Mic Pod Hub 상단 원근 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-2.png', '1600×1374', '1528×814', 'FOUND'),
+    image('Rear', 'logitech-rally-mic-pod-hub-front.webp', 'Logitech Rally Mic Pod Hub 하단 커넥터 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png', '1600×1374', '1559×816', 'FOUND')
+  ],
+  'rally-mic-pod-extension-cable': [
+    image('Main', 'logitech-rally-mic-pod-extension-cable-main.webp', 'Logitech Rally Mic Pod Extension Cable 이미지', 'Logitech', 'Rally Mic Pod Extension Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/mic-pod-extension-cable/gallery-1.png', '1569×1098', '1362×851', 'FOUND')
+  ],
+  'strong-usb-cable': [
+    image('Main', 'logitech-strong-usb-cable-main.webp', 'Logitech Strong USB-A to USB-C 케이블 이미지', 'Logitech', 'Strong USB Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png', '1600×1374', '1371×1187', 'VERIFIED')
+  ],
+  'rally-plus': [
+    image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND')
+  ],
+  'rally-mic-pod': [
+    image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
+    image('Other', 'logitech-rally-mic-pod-top.webp', 'Logitech Rally Mic Pod 상단 음소거 버튼 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png', '1600×1200', '1106×1183', 'FOUND')
   ]
 };
 
@@ -174,5 +224,20 @@ export const cardImages = {
   'tio1608-d2': 'tio1608-d2-front.webp',
   dm3: 'dm3-front.webp',
   'rio1608-d3': 'rio1608-d3-front.webp',
-  'rio3224-d3': 'rio3224-d3-front.webp'
+  'rio3224-d3': 'rio3224-d3-front.webp',
+  tr535n: 'tr535n-front.webp',
+  tr535: 'tr535-front.webp',
+  tr335: 'tr335-front.webp',
+  tr315: 'tr315-perspective.webp',
+  cl01: 'cl01-front.webp',
+  vs5: 'lumantek-vs5-main.webp',
+  vs10: 'lumantek-vs10-main.webp',
+  'ez-md-plus': 'lumantek-ez-md-main.webp',
+  'ez-shv-plus': 'lumantek-ez-shv-main.webp',
+  'ez-hsv-plus': 'lumantek-ez-hsv-main.webp',
+  'rally-mic-pod-hub': 'logitech-rally-mic-pod-hub-perspective.webp',
+  'rally-mic-pod-extension-cable': 'logitech-rally-mic-pod-extension-cable-main.webp',
+  'strong-usb-cable': 'logitech-strong-usb-cable-main.webp',
+  'rally-plus': 'logitech-rally-plus-main.webp',
+  'rally-mic-pod': 'logitech-rally-mic-pod-perspective.webp'
 };

@@ -1,0 +1,416 @@
+{
+  "manufacturer": "Lumantek",
+  "productName": "ez-MD+",
+  "model": "ez-MD+",
+  "series": "ez-Converters",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Converter"
+  ],
+  "english": "HDMI/SDI cross converter with audio mux/demux and built-in scaler.",
+  "korean": "ez-MD+는 스케일러를 내장한 HDMI/SDI 크로스 컨버터로, 오디오 Mux/Demux 기능을 지원한다.",
+  "verificationSummary": "제조사 한국 공식 사이트(lumantek.co.kr)의 시스템사양 페이지에서 전체 입출력·전기·물리 사양표를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ez-MD+는 HDMI와 SDI 신호를 상호 변환하는 크로스 컨버터로, SDI 입력 1(BNC 75Ω)·HDMI 입력 1(Type A)을 SDI 출력 1·HDMI 출력 1로 동시에 변환 출력한다. 레퍼런스 입력(B.B, TRI, BNC 75Ω)으로 Free Running·Input Lock·Genlock 동기 모드를 지원하며, D-SUB 9핀 오디오 입출력으로 오디오 Mux/Demux가 가능하다.\n\n제조사 공식 시스템사양에 따르면 10극 DIP 스위치로 출력 해상도·출력 비율·비디오 입력 선택(SDI/HDMI)·오디오 소스(내장/외부)·동기 모드·오디오 게인(0/-10dB)을 설정하며, 10단 로터리 스위치와 50ms 단위 오디오 딜레이 컨트롤을 갖췄다.\n\n전원은 DC +11V~+13V(최대 8W)이며, 크기는 130×100.4×26.9mm(커넥터 포함), 무게는 0.4kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "lumantek-ez-md-main.webp",
+      "alt": "Lumantek ez-MD+ 상단 라벨·단자 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-MD+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/8c299ed3858a91699c6a593c2f930d67.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "609×330",
+      "resolution": "600×296",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/44"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/8c299ed3858a91699c6a593c2f930d67.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/44"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/44"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/44"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ez-MD+ 시스템사양 (공식 웹페이지)",
+      "language": "ko/en",
+      "note": "Data Input/Output, Connections, Electrical, Physical 전체 표 수록",
+      "url": "https://lumantek.co.kr/index/product_view/44"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://lumantek.co.kr/index/product_intro/44"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI와 SDI 신호를 상호 변환하는 크로스 컨버터로, 두 방향 동시 출력을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "B.B·TRI 레퍼런스 입력으로 Free Running, Input Lock, Genlock 동기 모드를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "D-SUB 9핀 오디오 입출력으로 오디오 Mux/Demux 기능을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "10극 DIP 스위치로 출력 해상도·비율·입력 소스·오디오 소스·동기 모드·오디오 게인을 설정한다.",
+      "source": ""
+    },
+    {
+      "text": "50ms 단위 오디오 딜레이 컨트롤을 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "Micro-USB 포트를 통한 펌웨어 업데이트를 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Data Input",
+      "name": "SDI 비디오 입력",
+      "value": "SD/HD/3G-SDI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "HDMI 비디오 입력",
+      "value": "SD/HD/3G (HDMI Type A) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "레퍼런스 입력",
+      "value": "B.B, TRI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "오디오 입력",
+      "value": "D-SUB 9핀(Female) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "지원 비디오 포맷",
+      "value": "720x480i@59.94/60 ~ 1920x1080p@50/59.94/60",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "SDI 비디오 출력",
+      "value": "SD/HD/3G-SDI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "HDMI 비디오 출력",
+      "value": "SD/HD/3G (HDMI Type A) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "오디오 출력",
+      "value": "D-SUB 9핀(Female) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "DIP 스위치",
+      "value": "10극 x1",
+      "unit": "",
+      "condition": "출력 해상도·비율, 입력 선택, 오디오 소스, 동기 모드(Free Running/Input Lock/Genlock), 오디오 게인(0/-10dB)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "로터리 스위치",
+      "value": "10단 x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "오디오 딜레이 컨트롤",
+      "value": "50ms 단위",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "업데이트",
+      "value": "Micro-USB x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 입력",
+      "value": "DC +11V ~ +13V",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비전력",
+      "value": "8",
+      "unit": "W (max.)",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "130 × 100.4 × 26.9",
+      "unit": "mm",
+      "condition": "커넥터 포함",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "0.4",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "BNC 75Ω",
+      "signal": "SD/HD/3G-SDI in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI Type A",
+      "signal": "SD/HD/3G video in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "BNC 75Ω",
+      "signal": "Reference in (B.B/TRI)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "BNC 75Ω",
+      "signal": "SD/HD/3G-SDI out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI Type A",
+      "signal": "SD/HD/3G video out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "D-SUB 9핀 (Female)",
+      "signal": "Audio in/out",
+      "direction": "IN/OUT",
+      "quantity": "각 1",
+      "protocol": "",
+      "availability": "",
+      "condition": "Mux/Demux",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Update",
+      "connector": "Micro-USB",
+      "signal": "Firmware update",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC Jack",
+      "signal": "DC power in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DC +11~13V",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "M",
+      "name": "제조사 공식 시스템사양 페이지",
+      "url": "https://lumantek.co.kr/index/product_view/44",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://lumantek.co.kr/uploads/product/8c299ed3858a91699c6a593c2f930d67.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "사용설명서 없음",
+      "detail": "제조사 공식 사이트에서 별도 PDF 사용설명서·데이터시트를 찾지 못해, 웹페이지 내 시스템사양 표를 근거로 사용했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lumantek ez-MD+ 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

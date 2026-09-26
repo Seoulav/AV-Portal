@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "3AD60CDD8778DC3A2C9302E49022F15ED9708709BA857A3A9B1F5EB0D9BA2E28",
+    "sha256": "1151E2B5B87AA96EA3A15BEF855627C16C44B9862F397F3C63F519BA27BBCF43",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -43,6 +43,12 @@
       "specifications": 27,
       "io": 14
     },
+    "cl01": {
+      "sha256": "AC45897920AD904550138359517DFFA9C02A0B5576AC01A4FF047859F012F888",
+      "features": 5,
+      "specifications": 11,
+      "io": 5
+    },
     "dm3": {
       "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
       "features": 6,
@@ -60,6 +66,24 @@
       "features": 6,
       "specifications": 12,
       "io": 11
+    },
+    "ez-hsv-plus": {
+      "sha256": "5D94B173837BE5C14C5EA7BDD1334BF115ED6865728EA0985C8E2337C7C6E2D3",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "ez-md-plus": {
+      "sha256": "6EB068F976D213443D0F18334EEC711F9B589905DF2534A06DE982CF07944136",
+      "features": 6,
+      "specifications": 17,
+      "io": 8
+    },
+    "ez-shv-plus": {
+      "sha256": "D8CF1A8D707F4AF86B4A579EEEF51E681F66D8C432ED52C171487F7A550DE810",
+      "features": 5,
+      "specifications": 13,
+      "io": 5
     },
     "gsm4248px": {
       "sha256": "5C82557553544677F9E42274939BD7B56430F7063F726C6A6411A9140B636223",
@@ -133,6 +157,30 @@
       "specifications": 16,
       "io": 9
     },
+    "rally-mic-pod-extension-cable": {
+      "sha256": "8A28FE02F269CCACC4915675A7AEE997BAC641F71F6CBA220CC0ADE553AD789E",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "rally-mic-pod-hub": {
+      "sha256": "726D1AEA399D3390523E38732D5B92623305BEC3F07F6EDF9C5AB1A331C17073",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "rally-mic-pod": {
+      "sha256": "607AD217A7834366B6401FCAC4B971FF6D23931EDF32582A3DA348A5744F0CD1",
+      "features": 5,
+      "specifications": 13,
+      "io": 2
+    },
+    "rally-plus": {
+      "sha256": "93D59677251272DD4488001A433C4A1E11C69D7B22E33C4D6618BB1373419BA5",
+      "features": 5,
+      "specifications": 15,
+      "io": 8
+    },
     "rio1608-d3": {
       "sha256": "AFC24771DE047DD6E2E55644CE2A6F2BC95E9579B6C662EB6BF9E6D9783EF1A2",
       "features": 5,
@@ -144,6 +192,12 @@
       "features": 5,
       "specifications": 12,
       "io": 6
+    },
+    "strong-usb-cable": {
+      "sha256": "1ECCF2EED991666210ADA72DC0A20D24481A6E26D4C772F4C0B3135D7669252E",
+      "features": 3,
+      "specifications": 4,
+      "io": 2
     },
     "sx-1216-rti": {
       "sha256": "3E15B51D0245F817E01380482DADE7DE981D6C9478F01E0A60C799D1C3D40CBE",
@@ -157,6 +211,30 @@
       "specifications": 12,
       "io": 3
     },
+    "tr315": {
+      "sha256": "9452595DC7C8D4DD6AF8E52D7096626B15F521FE1094B7C66CA15ED0E841A8B4",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "tr335": {
+      "sha256": "13560DA74428E8B8F2F73745BA8928C24AF204ED3D6D675E34A7C3EC3F98D741",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "tr535": {
+      "sha256": "7625AE21254D53F4A4FA592B862FAF2708ED3EBD94FC838ED125B0A0898C353B",
+      "features": 4,
+      "specifications": 12,
+      "io": 6
+    },
+    "tr535n": {
+      "sha256": "1942CC660DA81353CD634FFFD41FC0C2DEF95FB0A2FBF791D63EF91B793E533C",
+      "features": 6,
+      "specifications": 12,
+      "io": 6
+    },
     "uvc-01": {
       "sha256": "CCEA0CA92DE4D3F3F6C3975895CB62CE14E779620220D452F0251716A724018B",
       "features": 5,
@@ -168,6 +246,18 @@
       "features": 6,
       "specifications": 10,
       "io": 6
+    },
+    "vs10": {
+      "sha256": "A70FB2A7A50AF18938F090FCFD3EA64FAE8D831C5FA7897A397B9B49D13EE78E",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
+    },
+    "vs5": {
+      "sha256": "2E3E1A54DA3ED457467D73BA01B573388C95883DDC0670606C059056BDA90375",
+      "features": 6,
+      "specifications": 13,
+      "io": 8
     },
     "x100pro-2u": {
       "sha256": "70F2EE95BC84D4DB5B3BDA904FF1E4CC86DA0AFFF9388AFECBCADDBCC8BD8AAC",

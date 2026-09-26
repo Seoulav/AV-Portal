@@ -1,0 +1,385 @@
+{
+  "manufacturer": "Lumantek",
+  "productName": "ez-Pro VS10",
+  "model": "VS10",
+  "series": "ez-Pro Series",
+  "seriesNote": "5채널 ez-Pro VS5보다 상위인 10채널 모델.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "10-channel Full HD 1080p60 video switcher with internal scalers on all inputs.",
+  "korean": "ez-Pro VS10은 모든 입력에 내장 스케일러를 갖춘 10채널 Full HD 1080p60 비디오 스위처다.",
+  "verificationSummary": "제조사 공식 영문 사이트(lumantek.com) 제품 페이지·카탈로그(211221_catalog.pdf)와 공식 사용설명서(VS10_MANUAL_ENG_211228.pdf)에서 특징·전체 시스템 스펙을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ez-Pro VS10은 8개의 3G-SDI와 2개의 HDMI 입력(모두 내장 스케일러 적용) 총 10채널을 지원하는 Full HD 비디오 스위처로, 6개의 3G-SDI 출력(AUX1~4, PGM×2)과 2개의 HDMI 출력(PGM/멀티뷰)을 제공한다. 4.98인치 정전식 터치스크린과 T-바 스위치, 로터리 노브·조이스틱으로 조작하며, 버튼에 비디오 소스를 자유롭게 매핑할 수 있다.\n\n제조사 공식 사용설명서에 따르면 비디오 스위처는 Mix & Effect 1, PIP 2, KEY(LUMA/CHROMA) 1, 다운스트림 키어(FILL/KEY) 1, 패턴 제너레이터(컬러바/컬러BG) 2, 미디어 2, 10/13/16 멀티뷰 1을 지원하며, 오디오 믹서는 10 스테레오 입력 믹서 1개를 내장했다.\n\n전원은 DC 12V(최대 40W)이며, 크기는 89(H)×400(W)×294(D)mm, 무게는 3.7kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "lumantek-vs10-main.webp",
+      "alt": "Lumantek ez-Pro VS10 전면 조작부 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "VS10",
+      "sourceUrl": "https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "860×550",
+      "resolution": "785×550",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lumantek.com/index/product_intro/37"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lumantek.com/index/product_intro/37"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lumantek.com/index/product_intro/37"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.lumantek.com/index/product_intro/37"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "VS10 Manual ENG (2021-12)",
+      "language": "en",
+      "note": "카탈로그 manual_link와 동일. 6. System Specifications 절에 전체 사양표 수록",
+      "url": "https://www.lumantek.com/index.php/dataFunction/fileDown?location=uploads/download/6f0cb729e616d0c294f183cd48aa6b5f.pdf&name=VS10_MANUAL_ENG_211228.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Lumantek Product Catalog (211221)",
+      "language": "en",
+      "note": "VS10 소개·특징 페이지 수록(전체 카탈로그 중 일부)",
+      "url": "https://www.lumantek.com/index.php/dataFunction/fileDown?location=uploads/download/ae422cc69ee561b1250091f2dfb856fb.pdf&name=211221_catalog.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.lumantek.com/index/product_intro/37"
+    }
+  ],
+  "features": [
+    {
+      "text": "8개의 3G-SDI와 2개의 HDMI 입력(총 10채널) 모두에 내장 스케일러를 갖춰 서로 다른 해상도의 소스를 자유롭게 연결한다.",
+      "source": ""
+    },
+    {
+      "text": "6개의 3G-SDI 출력(AUX1~4, PGM×2)과 2개의 HDMI 출력(PGM/멀티뷰)을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "4.98인치 정전식 터치스크린과 T-바 스위치, 로터리 노브·조이스틱으로 직관적으로 조작한다.",
+      "source": ""
+    },
+    {
+      "text": "Mix & Effect·PIP 2ea·LUMA/CHROMA 키어·다운스트림 키어(FILL/KEY)·패턴 제너레이터 2ea·미디어 2ea·10/13/16 멀티뷰를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "10 스테레오 입력 오디오 믹서를 내장했다.",
+      "source": ""
+    },
+    {
+      "text": "ez-CGER mini와 연동해 모든 SDI 입력에서 Fill & Key 신호로 실시간 CG 삽입이 가능하다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Connections",
+      "name": "3G/HD/SD-SDI 입력",
+      "value": "8",
+      "unit": "BNC 75Ω, 스케일러 내장",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "HDMI 입력",
+      "value": "2",
+      "unit": "스케일러 내장",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "3G/HD/SD-SDI 출력",
+      "value": "6",
+      "unit": "BNC 75Ω",
+      "condition": "AUX1/AUX2/AUX3/AUX4/PGM×2",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "HDMI 출력",
+      "value": "2",
+      "unit": "",
+      "condition": "PGM/멀티뷰",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "외부 아날로그 오디오 입/출력",
+      "value": "XLR 2 / XLR 2",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video Format",
+      "name": "지원 포맷",
+      "value": "480i59/576i50(입력 전용), 1080p23~30, 1080i50~60, 720p50~60, 1080p50~60",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video Switcher",
+      "name": "구성",
+      "value": "Mix&Effect 1, PIP 2, KEY(LUMA/CHROMA) 1, DSK(FILL/KEY) 1, 패턴제너레이터 2, 미디어 2, 멀티뷰(10/13/16view) 1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio Mixer",
+      "name": "구성",
+      "value": "10 스테레오 입력 믹서 1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Management",
+      "name": "디스플레이",
+      "value": "TFT-LCD 4.98인치 정전식 터치스크린",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "DC 12V",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "40",
+      "unit": "W (max.)",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(H×W×D)",
+      "value": "89 × 400 × 294",
+      "unit": "mm",
+      "condition": "커넥터 제외",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "3.7",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "3G/HD/SD-SDI (BNC 75Ω)",
+      "signal": "Video in",
+      "direction": "IN",
+      "quantity": "8",
+      "protocol": "",
+      "availability": "",
+      "condition": "스케일러 내장",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI",
+      "signal": "Video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "스케일러 내장",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "3G/HD/SD-SDI (BNC 75Ω)",
+      "signal": "AUX/PGM out",
+      "direction": "OUT",
+      "quantity": "6",
+      "protocol": "",
+      "availability": "",
+      "condition": "AUX1-4, PGM×2",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI",
+      "signal": "PGM/멀티뷰 out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "Analog audio in/out",
+      "direction": "IN/OUT",
+      "quantity": "각 2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB2.0",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Reference",
+      "connector": "Reference Input",
+      "signal": "Genlock 등",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "Remote",
+      "signal": "Remote",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "M",
+      "name": "제조사 공식 사용설명서·카탈로그",
+      "url": "https://www.lumantek.com/index.php/dataFunction/fileDown?location=uploads/download/6f0cb729e616d0c294f183cd48aa6b5f.pdf&name=VS10_MANUAL_ENG_211228.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lumantek ez-Pro VS10 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "manufacturer": "AVer",
+  "productName": "TR315",
+  "model": "TR315",
+  "series": "TR3xx series",
+  "seriesNote": "TR335(30X 줌)와 하드웨어를 공유하는 형제 모델(12X 줌). AVer 구형 TR313V2의 후속.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Camera"
+  ],
+  "english": "AI auto tracking 12X 4K PTZ streaming camera.",
+  "korean": "TR315는 12배 광학줌을 지원하는 4K AI 자동 트래킹 PTZ 스트리밍 카메라다.",
+  "verificationSummary": "제조사 공식 제품 페이지(averusa.com)와 모델 전용 데이터시트(tr315-datasheet.pdf)에서 전체 사양표를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "TR315는 12배 광학줌·8MP 카메라·4K 해상도를 지원하는 AI 자동 트래킹 PTZ 카메라로, TR335와 동일한 본체·인터페이스를 사용하되 렌즈 줌 배율만 다르다. Presenter·Zone·Hybrid 트래킹 모드와 제스처 컨트롤을 지원하며, 3G-SDI·HDMI·IP·USB 4가지 출력을 동시에 제공한다.\n\n제조사 공식 데이터시트에 따르면 센서는 1/2.8인치 CMOS(8MP)로 TR335와 동일하나, 초점거리는 f=3.9~46.8mm이되 광학줌이 12X(총줌 12X, TR335는 30X·360X)이고 화각도 78°(Wide)~7°(Tele)로 더 넓다. 팬 -170°~+170°·틸트 -30°~+90°, PoE+(IEEE802.3at), 크기 W180×D145×H192mm, 무게 2.0±0.1kg, 소비전력 18W로 TR335와 물리 사양이 동일하다.\n\n최소 작업 거리가 Wide 0.3m·Tele 1.5m로 TR335(Wide 0.1m·Tele 1.2m)보다 다소 길다.",
+  "images": [
+    {
+      "role": "Perspective",
+      "file": "tr315-perspective.webp",
+      "alt": "AVer TR315 원근 이미지(제조사 마케팅 이미지, NDI 배지 포함)",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "AVer",
+      "model": "TR315",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1100×1000",
+      "resolution": "1053×982",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "AI Auto Tracking PTZ Camera User Manual — TR315 외 V3 시리즈 공용",
+      "language": "en",
+      "note": "카탈로그 manual_link와 동일. TR335/TR335N/TR315/TR315N 등 8개 모델 공용 매뉴얼(모델별 상세 수치는 없음)",
+      "url": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "TR315 Datasheet",
+      "language": "en",
+      "note": "모델 전용 데이터시트, Product Specifications 전체 표 수록",
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr315-datasheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+    }
+  ],
+  "features": [
+    {
+      "text": "12배 광학줌·8MP 카메라·4K 60fps 해상도를 지원하는 AI 자동 트래킹 PTZ 카메라다.",
+      "source": ""
+    },
+    {
+      "text": "Presenter·Zone·Hybrid 3가지 자동 트래킹 모드와 제스처 컨트롤을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "3G-SDI·HDMI·IP·USB 4가지 출력을 동시에 지원하며(최대 2160p60), 최신 NDI|HX3 프로토콜을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "PoE+(IEEE802.3at)로 단일 케이블 전원·데이터 연결이 가능하다.",
+      "source": ""
+    },
+    {
+      "text": "TR335보다 넓은 화각(78° Wide)으로 근거리 설치 환경에 적합하다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "센서 크기",
+      "value": "1/2.8인치 CMOS",
+      "unit": "",
+      "condition": "8MP",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "광학줌/디지털줌/총줌",
+      "value": "12X / 12X / 12X",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "초점거리",
+      "value": "f=3.9 ~ 46.8",
+      "unit": "mm",
+      "condition": "Iris F1.6(Wide) ~ F2.8(Tele)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "화각(D/H/V FOV)",
+      "value": "78°/70°/42° (Wide) ~ 7°/6°/3° (Tele)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "최소 조도",
+      "value": "0.5",
+      "unit": "lux",
+      "condition": "50 IRE, F1.6, Max AGC, 1/30",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Parameter",
+      "name": "팬/틸트 각도",
+      "value": "팬 -170°~+170°, 틸트 -30°~+90°",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "IP Streaming",
+      "name": "최대 해상도",
+      "value": "4K",
+      "unit": "60fps",
+      "condition": "H.264/H.265/MJPEG",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "NDI",
+      "value": "NDI|HX3",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "POE",
+      "value": "PoE+ (IEEE802.3at)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "소비전력",
+      "value": "18",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "크기(W×D×H)",
+      "value": "180 × 145 × 192",
+      "unit": "mm",
+      "condition": "커넥터 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "무게",
+      "value": "2.0 (±0.1)",
+      "unit": "kg",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "3G-SDI, HDMI, IP, USB",
+      "signal": "Video/Audio out",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "동시 출력(멀티스트림) 지원",
+      "condition": "3G-SDI는 1080p60까지만 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "USB3.0 Type B",
+      "signal": "UVC video out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB3.0",
+      "availability": "",
+      "condition": "MJPG, 최대 2160p",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232/RS-422/Ethernet",
+      "signal": "VISCA/PELCO-D, CGI(IP)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "PoE+/Ethernet",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "IEEE802.3at",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(TR315)",
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr315-datasheet.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr315",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "전용 전면·후면 개별 사진 없음",
+      "detail": "averusa.com에서 TR315 전용 전면/후면 개별 사진을 찾지 못해, 마케팅 합성 이미지(NDI Built-In 배지 포함)를 대신 사용했다. 배지 부분을 제외한 카메라 본체 자체는 공식 이미지다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "AVer TR315 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

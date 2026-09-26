@@ -15,7 +15,7 @@ export const manufacturerHosts = {
   JBL: ['techdata-ps.com'],
   Lightware: ['lightware.com'],
   Logitech: ['logitech.com'],
-  Lumantek: ['lumantek.com'],
+  Lumantek: ['lumantek.com', 'lumantek.co.kr'],
   Magnimage: ['magnimage.com'],
   NETGEAR: ['netgear.com'],
   NovaStar: ['novastar.tech'],
