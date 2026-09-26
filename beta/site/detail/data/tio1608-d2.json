@@ -1,0 +1,325 @@
+{
+  "manufacturer": "Yamaha",
+  "productName": "Tio1608-D2",
+  "model": "Tio1608-D2",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Audio Interface"
+  ],
+  "english": "Dante-compatible I/O rack with 16 mic/line inputs and 8 line outputs.",
+  "korean": "Tio1608-D2는 16 mic/line 입력과 8 line 출력을 지원하는 Dante 호환 I/O 랙이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(kr.yamaha.com)와 공식 사양 탭(specs.html), Owner's Manual(영문, 122p 사양 섹션)에서 전체 사양·입출력·크기·무게를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Tio1608-D2는 16개의 mic/line 입력과 8개의 line 출력을 지원하는 Dante 호환 I/O 랙으로, TF 시리즈·DM3 디지털 믹서와 CAT5e 케이블 하나로 연결해 심플한 스테이지 박스 시스템을 구성할 수 있다. TF 시리즈와 DM3에서 리모트 헤드앰프(Remote HA) 컨트롤이 가능하며, TF 시리즈는 NY64-D 확장카드로 최대 3대까지, DM3는 1대까지 연결할 수 있다.\n\n입력에는 TF 시리즈와 동일한 리콜 가능한 D-PRE 마이크 프리앰프를 탑재해 일관되고 자연스러운 사운드를 재현한다. 44.1/48/88.2/96kHz 샘플링을 지원해 RIVAGE PM이나 DME7과 같은 대규모 설치에서도 범용 I/O 랙으로 사용할 수 있다.\n\n제조사 공식 사양에 따르면 신호 지연은 DM3와 연결 시(Dante 수신 지연 0.25ms 설정) Fs=96kHz에서 1.3ms 미만, Fs=48kHz에서 2.6ms 미만이며, 크기는 480(W)×88(H)×364(D)mm, 무게는 5.7kg, 소비전력은 50W(발열 43.5kcal/h)이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "tio1608-d2-front.webp",
+      "alt": "Yamaha Tio1608-D2 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Yamaha",
+      "model": "Tio1608-D2",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×1200",
+      "resolution": "1086×202",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "tio1608-d2-rear.webp",
+      "alt": "Yamaha Tio1608-D2 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Yamaha",
+      "model": "Tio1608-D2",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Tio1608-D2-rear_tcm144-1681743.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×1200",
+      "resolution": "1086×222",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Tio1608-D2-rear_tcm144-1681743.jpg"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Tio1608-D2 Owner's Manual (영문, 2023-06)",
+      "language": "en",
+      "note": "카탈로그 manual_link와 동일",
+      "url": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "공식 제품 페이지 사양(Specs) 탭",
+      "language": "ko",
+      "note": "General/Analog/Digital 특성표 수록",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/specs.html"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
+    }
+  ],
+  "features": [
+    {
+      "text": "16 mic/line 입력, 8 line 출력을 지원하는 Dante 호환 I/O 랙으로 TF 시리즈·DM3와 CAT5e 케이블 하나로 연결한다.",
+      "source": ""
+    },
+    {
+      "text": "TF 시리즈 개발 과정에서 확립된 리콜 가능한 D-PRE 마이크 프리앰프를 탑재했다.",
+      "source": ""
+    },
+    {
+      "text": "TF 시리즈의 QUICK CONFIG, DM3의 AUTO CONFIG 기능으로 네트워크·오디오 패치를 자동 구성한다.",
+      "source": ""
+    },
+    {
+      "text": "전면 패널의 QUICK CONFIG 스위치와 유닛 ID로 최대 3대까지 데이지 체인 연결이 가능하다(TF 시리즈 기준).",
+      "source": ""
+    },
+    {
+      "text": "44.1/48/88.2/96kHz 샘플링 주파수를 지원해 RIVAGE PM·DME7 등 대규모 설치에도 사용할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Dante Primary/Secondary 포트(etherCON Cat5e)로 이중화 네트워크 구성을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "입력",
+      "value": "16",
+      "unit": "채널, mic/line",
+      "condition": "Combo(XLR-3-31 또는 TRS phone), GAIN +66dB/-6dB",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "출력",
+      "value": "8",
+      "unit": "채널, line",
+      "condition": "XLR-3-32, +4dBu nominal",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플링 주파수",
+      "value": "44.1 / 48 / 88.2 / 96",
+      "unit": "kHz",
+      "condition": "External Clock",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "신호 지연",
+      "value": "1.3(96kHz) / 2.6(48kHz)",
+      "unit": "ms 미만",
+      "condition": "INPUT to OUTPUT, DM3 연결, Dante Receive Latency 0.25ms(편도)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "다이내믹 레인지",
+      "value": "108(INPUT-OUTPUT, Gain -6dB) / 112(DA, Fs 48kHz), 110(DA, Fs 96kHz)",
+      "unit": "dB",
+      "condition": "A-weighting",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "THD",
+      "value": "0.2(Gain +66dB) / 0.05(Gain -6dB) 이하, Fs 88.2/96kHz; 0.1(Gain +66dB)/0.05(Gain -6dB) 이하, Fs 44.1/48kHz",
+      "unit": "%",
+      "condition": "+4dBu@20Hz-20kHz into 600Ω, -18dB/oct filter@80kHz",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "Dante",
+      "value": "Primary/Secondary",
+      "unit": "etherCON Cat5e",
+      "condition": "24/32bit, 1000BASE-T, 16ch(본체→외부)/8ch(외부→본체)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240",
+      "unit": "V, 50/60Hz",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "50",
+      "unit": "W",
+      "condition": "발열 43.5kcal/h",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "480 × 88 × 364",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "5.7",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "Combo (XLR-3-31 / TRS phone)",
+      "signal": "Mic/Line in",
+      "direction": "IN",
+      "quantity": "16",
+      "protocol": "아날로그",
+      "availability": "48V 팬텀 개별 스위치",
+      "condition": "GAIN +66dB/-6dB, 50-600Ω Mics 또는 600Ω Lines",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "XLR-3-32",
+      "signal": "Line out",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "아날로그",
+      "availability": "",
+      "condition": "+4dBu nominal, +24dBu max",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "etherCON Cat5e",
+      "signal": "Dante Primary/Secondary",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante, 1000BASE-T",
+      "availability": "",
+      "condition": "16ch 송신/8ch 수신",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "M",
+      "name": "제조사 공식 매뉴얼·사양 페이지",
+      "url": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yamaha Tio1608-D2 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

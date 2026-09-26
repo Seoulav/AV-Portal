@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 26개
+- Product Detail: 30개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -574,6 +574,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/
   매뉴얼: https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=tio1608-d2
 
 - 제품: Crown DCI 2/300
   분류: 오디오 | Audio | Amplifier
@@ -1248,18 +1249,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/
   매뉴얼: https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=dm3
 
 - 제품: Yamaha Rio1608-D3
   분류: 오디오 | Audio | Audio Interface
   종류: 장비
   제품군 링크: https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/
   매뉴얼: https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rio1608-d3
 
 - 제품: Yamaha Rio3224-D3
   분류: 오디오 | Audio | Audio Interface
   종류: 장비
   제품군 링크: https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/
   매뉴얼: https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rio3224-d3
 
 - 제품: Crown DCI 2/600
   분류: 오디오 | Audio | Amplifier

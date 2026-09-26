@@ -1342,7 +1342,9 @@
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
     ],
-    "manual_link": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf"
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf",
+    "slug": "tio1608-d2",
+    "card_image": "tio1608-d2-front.webp"
   },
   {
     "brand": "Crown",
@@ -2970,7 +2972,9 @@
       "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/"
     ],
     "link_scope": "series",
-    "manual_link": "https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/"
+    "manual_link": "https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/",
+    "slug": "dm3",
+    "card_image": "dm3-front.webp"
   },
   {
     "brand": "Yamaha",
@@ -2985,7 +2989,9 @@
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
     ],
     "link_scope": "series",
-    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf"
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf",
+    "slug": "rio1608-d3",
+    "card_image": "rio1608-d3-front.webp"
   },
   {
     "brand": "Yamaha",
@@ -3000,7 +3006,9 @@
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
     ],
     "link_scope": "series",
-    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf"
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf",
+    "slug": "rio3224-d3",
+    "card_image": "rio3224-d3-front.webp"
   },
   {
     "brand": "Crown",

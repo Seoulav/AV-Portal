@@ -1,0 +1,347 @@
+{
+  "manufacturer": "Yamaha",
+  "productName": "Rio1608-D3",
+  "model": "Rio1608-D3",
+  "series": "R-series ADDA-3 (Rio-D3)",
+  "seriesNote": "Rio3224-D3(32in/16out)와 한 쌍인 소형 모델(16in/8out). 두 모델은 사용설명서를 공유하며(표지: 'Rio3224-D3 Rio1608-D3 사용설명서'), 매뉴얼 안에서 Rio1608-D3 전용 값은 중괄호 { }로 별도 표기된다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Audio Interface"
+  ],
+  "english": "Dante-compatible I/O rack with 16 analog inputs and 8 analog outputs.",
+  "korean": "Rio1608-D3는 16 아날로그 입력과 8 아날로그 출력을 지원하는 Dante 호환 I/O 랙이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(R-series ADDA-3)와 공식 사양 탭, Rio3224-D3/Rio1608-D3 공용 사용설명서(한국어 PDF)에서 Rio1608-D3 전용 사양표를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Rio1608-D3는 Dante 호환 I/O 랙 Rio-D3 시리즈의 소형 모델로, 아날로그 입력 16(Combo XLR, D-PRE 프리앰프), 아날로그 출력 8(XLR), PHONES 1(TRS)을 제공한다. DM7, DM3, CL, QL 시리즈 등 다양한 Dante 지원 콘솔과 연결해 스테이지 박스로 사용할 수 있으며, PRIMARY/SECONDARY Dante 포트로 데이지 체인 또는 이중화 네트워크를 구성한다.\n\n형제 모델 Rio3224-D3(32in/16out)와 사용설명서를 공유하는데, 표지에 두 모델명이 함께 표기되어 있고 본문에서는 Rio1608-D3에만 적용되는 값을 중괄호 { }로 별도 표시하는 방식을 취한다(예: [INPUT] 1-32 {1-16}). 이는 데이터 오류가 아니라 제조사가 의도적으로 채택한 공용 매뉴얼 표기 방식이다.\n\n제조사 공식 사양에 따르면 크기는 480(W)×132(H)×370(D)mm, 무게는 9.4kg, 소비전력은 60W(발열 52kcal/h)이며, AES/EBU 출력은 지원하지 않는다(Rio3224-D3 전용 기능).",
+  "images": [
+    {
+      "role": "Front",
+      "file": "rio1608-d3-front.webp",
+      "alt": "Yamaha Rio1608-D3 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Yamaha",
+      "model": "Rio1608-D3",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Rio1608-D3-front01_tcm144-2339163.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×1200",
+      "resolution": "1086×373",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "rio1608-d3-rear.webp",
+      "alt": "Yamaha Rio1608-D3 후면 단자 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Yamaha",
+      "model": "Rio1608-D3",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Rio1608-D3-rear05_tcm144-2339161.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×1200",
+      "resolution": "1087×308",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Rio1608-D3-front01_tcm144-2339163.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://kr.yamaha.com/ko/files/Rio1608-D3-rear05_tcm144-2339161.jpg"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Rio3224-D3 / Rio1608-D3 사용설명서 (한국어)",
+      "language": "ko",
+      "note": "카탈로그 manual_link와 동일. Rio3224-D3와 공용 매뉴얼(표지에 두 모델명 병기, Rio1608-D3 전용 값은 { } 표기)",
+      "url": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "공식 제품 페이지 사양(Specs) 탭 — Rio1608-D3 열",
+      "language": "en/ko",
+      "note": "General/Analog/Digital 특성표, Rio3224-D3와 나란히 비교 제공",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/specs.html"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
+    }
+  ],
+  "features": [
+    {
+      "text": "아날로그 입력 16, 출력 8을 지원하는 Dante 호환 I/O 랙으로, DM7·DM3·CL·QL 시리즈 등과 연결해 스테이지 박스로 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "PRIMARY/SECONDARY Dante 포트(etherCON Cat5e)로 데이지 체인 또는 이중화 네트워크를 구성한다.",
+      "source": ""
+    },
+    {
+      "text": "전면 디스플레이와 PHONES/METER, MENU/HOME 버튼으로 유닛 상태를 직접 확인·설정할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Rio3224-D3와 사용설명서를 공유하는 형제 모델로, 랙 마운트 시 팬 속도·환기 요구사항을 함께 규정한다.",
+      "source": ""
+    },
+    {
+      "text": "44.1/48/88.2/96kHz 샘플링과 ±200ppm 외부 클록 동기를 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "아날로그 입력",
+      "value": "16",
+      "unit": "채널",
+      "condition": "XLR 3홀 섀시, GAIN +66dB/-6dB",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "아날로그 출력",
+      "value": "8",
+      "unit": "채널",
+      "condition": "XLR 3핀 섀시, +4dBu nominal",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "AES/EBU 출력",
+      "value": "0",
+      "unit": "",
+      "condition": "Rio3224-D3 전용 기능(8출력), Rio1608-D3에는 없음",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "PHONES",
+      "value": "1",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플링 주파수",
+      "value": "44.1 / 48 / 88.2 / 96",
+      "unit": "kHz",
+      "condition": "±200ppm 외부 클록",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "신호 지연",
+      "value": "1.7",
+      "unit": "ms 미만",
+      "condition": "Rio-D3 INPUT-OUTPUT, Dante Fs=96kHz, 수신 지연 0.25ms 설정, DM7/DM3 등과 연결 기준",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240",
+      "unit": "V, 50/60Hz",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "60",
+      "unit": "W",
+      "condition": "발열 52kcal/h",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "480 × 132 × 370",
+      "unit": "mm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "9.4",
+      "unit": "kg",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "Dante",
+      "value": "PRIMARY/SECONDARY",
+      "unit": "etherCON Cat5e",
+      "condition": "24/32bit, 1000BASE-T, 16ch 송신/10ch 수신",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "XLR 3-hole chassis",
+      "signal": "Mic/Line in",
+      "direction": "IN",
+      "quantity": "16",
+      "protocol": "아날로그",
+      "availability": "48V 팬텀 개별 스위치",
+      "condition": "GAIN +66dB/-6dB, 50-600Ω Mics 또는 600Ω Lines",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "XLR 3-pin chassis",
+      "signal": "Line out",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "아날로그",
+      "availability": "",
+      "condition": "+4dBu nominal, +24dBu max",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "TRS Phone (6.3mm)",
+      "signal": "Phones out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "아날로그",
+      "availability": "",
+      "condition": "60/100mW",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "etherCON Cat5e",
+      "signal": "Dante Primary/Secondary",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante, 1000BASE-T",
+      "availability": "",
+      "condition": "16ch 송신/10ch 수신",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Network(제어)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "IEEE802.3, 1000BASE-T/100BASE-TX",
+      "availability": "STP 케이블 사용",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "S",
+      "name": "제조사 공식 사용설명서·사양 탭",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/specs.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(R-series ADDA-3)",
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://kr.yamaha.com/ko/files/Rio1608-D3-front01_tcm144-2339163.jpg",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yamaha Rio1608-D3 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

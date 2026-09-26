@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "451D5F8C1DD3835024B2FA9C1D8E1DAFCBE4154627B861382EDEE5A9A9646AFC",
+    "sha256": "3AD60CDD8778DC3A2C9302E49022F15ED9708709BA857A3A9B1F5EB0D9BA2E28",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -42,6 +42,12 @@
       "features": 8,
       "specifications": 27,
       "io": 14
+    },
+    "dm3": {
+      "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
+      "features": 6,
+      "specifications": 15,
+      "io": 8
     },
     "dm7": {
       "sha256": "23CF9158991028C11E9B554A3597928DB990490CC57DFE85FB8B5F9B9D70D1F9",
@@ -127,10 +133,28 @@
       "specifications": 16,
       "io": 9
     },
+    "rio1608-d3": {
+      "sha256": "AFC24771DE047DD6E2E55644CE2A6F2BC95E9579B6C662EB6BF9E6D9783EF1A2",
+      "features": 5,
+      "specifications": 12,
+      "io": 5
+    },
+    "rio3224-d3": {
+      "sha256": "53E58F32310CFAE4C99599F4D56D89AE9785FABA5F8210C03EED7501DFB6210F",
+      "features": 5,
+      "specifications": 12,
+      "io": 6
+    },
     "sx-1216-rti": {
       "sha256": "3E15B51D0245F817E01380482DADE7DE981D6C9478F01E0A60C799D1C3D40CBE",
       "features": 7,
       "specifications": 9,
+      "io": 3
+    },
+    "tio1608-d2": {
+      "sha256": "AF67F76A5FFADFBBBB4A0837AFE4DF264E0140049B96B9C0AF13C0C586DFC780",
+      "features": 6,
+      "specifications": 12,
       "io": 3
     },
     "uvc-01": {

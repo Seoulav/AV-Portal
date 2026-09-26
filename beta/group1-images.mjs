@@ -107,6 +107,22 @@ export const group1Images = {
   ],
   'x100pro-2u': [
     image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED')
+  ],
+  'tio1608-d2': [
+    image('Front', 'tio1608-d2-front.webp', 'Yamaha Tio1608-D2 전면 이미지', 'Yamaha', 'Tio1608-D2', 'https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg', '1200×1200', '1086×202', 'VERIFIED'),
+    image('Rear', 'tio1608-d2-rear.webp', 'Yamaha Tio1608-D2 후면 단자 이미지', 'Yamaha', 'Tio1608-D2', 'https://kr.yamaha.com/ko/files/Tio1608-D2-rear_tcm144-1681743.jpg', '1200×1200', '1086×222', 'VERIFIED')
+  ],
+  dm3: [
+    image('Front', 'dm3-front.webp', 'Yamaha DM3 전면 이미지', 'Yamaha', 'DM3', 'https://kr.yamaha.com/ko/files/DM3-front_tcm144-1729385.jpg', '1200×1200', '1076×1061', 'VERIFIED'),
+    image('Rear', 'dm3-rear.webp', 'Yamaha DM3 후면 단자 이미지', 'Yamaha', 'DM3', 'https://kr.yamaha.com/ko/files/DM3-rear_tcm144-1735859.jpg', '1200×1200', '1082×476', 'VERIFIED')
+  ],
+  'rio1608-d3': [
+    image('Front', 'rio1608-d3-front.webp', 'Yamaha Rio1608-D3 전면 이미지', 'Yamaha', 'Rio1608-D3', 'https://kr.yamaha.com/ko/files/Rio1608-D3-front01_tcm144-2339163.jpg', '1200×1200', '1086×373', 'VERIFIED'),
+    image('Rear', 'rio1608-d3-rear.webp', 'Yamaha Rio1608-D3 후면 단자 이미지', 'Yamaha', 'Rio1608-D3', 'https://kr.yamaha.com/ko/files/Rio1608-D3-rear05_tcm144-2339161.jpg', '1200×1200', '1087×308', 'VERIFIED')
+  ],
+  'rio3224-d3': [
+    image('Front', 'rio3224-d3-front.webp', 'Yamaha Rio3224-D3 전면 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-front01_tcm144-2339162.jpg', '1200×1200', '1086×569', 'VERIFIED'),
+    image('Rear', 'rio3224-d3-rear.webp', 'Yamaha Rio3224-D3 후면 단자 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-rear05_tcm144-2339157.jpg', '1200×1200', '1084×515', 'VERIFIED')
   ]
 };
 
@@ -154,5 +170,9 @@ export const cardImages = {
   'hyperdeck-studio-hd-mini': 'hyperdeck-studio-hd-mini-main.webp',
   'x100pro-7u': 'x100pro-7u-front.webp',
   'x100pro-4u': 'x100pro-4u-front.webp',
-  'x100pro-2u': 'x100pro-2u-front.webp'
+  'x100pro-2u': 'x100pro-2u-front.webp',
+  'tio1608-d2': 'tio1608-d2-front.webp',
+  dm3: 'dm3-front.webp',
+  'rio1608-d3': 'rio1608-d3-front.webp',
+  'rio3224-d3': 'rio3224-d3-front.webp'
 };
