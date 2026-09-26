@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "145A642CC0C0F184AA267677733E33781EA95A81459CD532770E518970F17CED",
+    "sha256": "DFC474795F8D04C2C26B249EB703DBC031E1CD9C597397DB736B0537A150E353",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -270,6 +270,30 @@
       "features": 8,
       "specifications": 16,
       "io": 15
+    },
+    "duecanali-1604-dsp": {
+      "sha256": "97D8FD377704AD0B369A4E2A0A203B5F30ABDA8A1CD3FD4984FC3E1F2EA08B0A",
+      "features": 4,
+      "specifications": 48,
+      "io": 3
+    },
+    "duecanali-1604-dspd": {
+      "sha256": "EF9353051F204FD861FAC8EA6B2C671EFB0C28E31C16443406BD283B1F64CD1D",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "duecanali-804-dsp": {
+      "sha256": "42F5E9BFF693E383825D2ED7AE07F81737B6596C22235412D279295035AC4993",
+      "features": 4,
+      "specifications": 48,
+      "io": 3
+    },
+    "duecanali-804-dspd": {
+      "sha256": "5FC1B59ECEB3E82F1791841359D8457D44DDA321168E1DC7185B7545FED5A1A9",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
     },
     "eb-l260f": {
       "sha256": "4B15686BF75984285D8397FEAF75B0BC6CDDB9559DAEC7C137D51E9782368BBF",
@@ -643,11 +667,53 @@
       "specifications": 9,
       "io": 0
     },
+    "mezzo-322-a": {
+      "sha256": "F6A21C1632E45EA886339B70771AD584A2BD5F88E1FAD3202163D1C27CCE8FF4",
+      "features": 4,
+      "specifications": 57,
+      "io": 6
+    },
     "mezzo-322-ad": {
       "sha256": "A66CAB092F65EE010F03F45C5EE62CD9FA2BD3640329CB0CAEB3B930420FCF12",
       "features": 7,
       "specifications": 11,
       "io": 5
+    },
+    "mezzo-324-a": {
+      "sha256": "C12FC4A751265C1F23808733D49FF95C1567C6B5582C3C4920FD85EDBC53E8DB",
+      "features": 4,
+      "specifications": 56,
+      "io": 5
+    },
+    "mezzo-324-ad": {
+      "sha256": "3B463C55049251F48AA8BF960643C9953990F486330A46DE198ECD3A8B6E26CE",
+      "features": 5,
+      "specifications": 59,
+      "io": 7
+    },
+    "mezzo-602-a": {
+      "sha256": "8E647E34DA23670ADD8562607ACE6484CF8634EBDFF6B01360193FC9C8C712B9",
+      "features": 4,
+      "specifications": 60,
+      "io": 6
+    },
+    "mezzo-602-ad": {
+      "sha256": "C249199B79A484B525DCB9279ECB0B38528AF815A5549289E3DCD8E93EF44027",
+      "features": 5,
+      "specifications": 63,
+      "io": 8
+    },
+    "mezzo-604-a": {
+      "sha256": "A32BC9D11187250B621E08AF0287746A81159966B96EE7E0EF6E1828ADF7917C",
+      "features": 4,
+      "specifications": 59,
+      "io": 5
+    },
+    "mezzo-604-ad": {
+      "sha256": "601E86D55B034C584EE1FA878ACBD81E2EE69431C57C6440AC04423EE2AB2C31",
+      "features": 5,
+      "specifications": 62,
+      "io": 7
     },
     "mxcw640": {
       "sha256": "C47DB31FF44956FFE6D9FF3347BC99D34CF7410023D011F9A038B390281F43E9",
@@ -750,6 +816,42 @@
       "features": 6,
       "specifications": 14,
       "io": 10
+    },
+    "quattrocanali-1204-dsp": {
+      "sha256": "F2519205B6D445708E7055AA6C73A99428074C6A8A55C960C0A1734AA77ABFBA",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-1204-dspd": {
+      "sha256": "1CBE17EBD109EC99DC9BBFFC31141CBA1C91B70F245E3E0404CD4164F2CFC650",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "quattrocanali-2404-dsp": {
+      "sha256": "D552E9E198B78C7C5D6729EE989E16B5CF90006E12C6116ECCAF2031FB4DB2FF",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-2404-dspd": {
+      "sha256": "9EAF18C3C194C53BF1938E64C6126D97F3BC0425E842B36E75E67553C0FB5D12",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
+    },
+    "quattrocanali-4804-dsp": {
+      "sha256": "D0E5F1822A2DCA6507C0C08B9175B30BDDFFD2B46CF4969E959FEAB432F163D7",
+      "features": 4,
+      "specifications": 49,
+      "io": 3
+    },
+    "quattrocanali-4804-dspd": {
+      "sha256": "107BEE7B252AC8411E44F4B03C4903234E4E094D345B699B2E71A8FB3CB8AB76",
+      "features": 5,
+      "specifications": 67,
+      "io": 5
     },
     "rally-bar": {
       "sha256": "34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1",

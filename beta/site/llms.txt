@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 170개
+- Product Detail: 187개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -58,18 +58,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-2404-dspd
 
 - 제품: Powersoft Quattrocanali 4804 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-4804-dspd
 
 - 제품: Powersoft Duecanali 1604 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-1604-dsp
 
 - 제품: Shure ULXD4Q
   분류: 오디오 | Audio | Wireless Microphone System
@@ -689,48 +692,56 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-602-ad
 
 - 제품: Powersoft Mezzo 322 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-322-a
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-322-a
 
 - 제품: Powersoft Mezzo 602 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-602-a
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-602-a
 
 - 제품: Powersoft Duecanali 1604 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-1604-dspd
 
 - 제품: Powersoft Quattrocanali 1204 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-1204-dspd
 
 - 제품: Powersoft Duecanali 804 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-804-dsp
 
 - 제품: Powersoft Quattrocanali 1204 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-1204-dsp
 
 - 제품: Powersoft Quattrocanali 4804 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-4804-dsp
 
 - 제품: Shure A900W-R-GM
   분류: 오디오 | Audio | Microphone Accessory
@@ -1509,36 +1520,42 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-324-ad
 
 - 제품: Powersoft Mezzo 604 AD
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-604-ad
 
 - 제품: Powersoft Mezzo 324 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-324-a
 
 - 제품: Powersoft Mezzo 604 A
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/mezzo-series
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-604-a
 
 - 제품: Powersoft Duecanali 804 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-804-dspd
 
 - 제품: Powersoft Quattrocanali 2404 DSP
   분류: 오디오 | Audio | Amplifier
   종류: 장비
   제품군 링크: https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=quattrocanali-2404-dsp
 
 - 제품: Shure MXA925W-R
   분류: 오디오 | Audio | Ceiling Microphone
