@@ -360,7 +360,7 @@
   "io": [
     {
       "group": "Output",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "커넥터 규격 정보 없음",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "4채널",
@@ -372,7 +372,7 @@
     },
     {
       "group": "Audio Network",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "커넥터 규격 정보 없음",
       "signal": "HARMAN BLU link digital audio bus",
       "direction": "I/O",
       "quantity": "",
@@ -384,7 +384,7 @@
     },
     {
       "group": "Control",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "커넥터 규격 정보 없음",
       "signal": "HiQnet 제어/모니터링 네트워크",
       "direction": "I/O",
       "quantity": "",

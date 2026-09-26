@@ -9,10 +9,10 @@
     "Microphone"
   ],
   "english": "AI-powered beamforming ceiling microphone with a 16-element omnidirectional microphone array and built-in DSP for plug-and-play integration with Yealink MVC systems.",
-  "korean": "16개 전방향 마이크로폰 어레이와 내장 DSP를 갖춘 AI 빔포밍 천장형 마이크로폰으로, Yealink MVC 시스템과 플러그앤플레이로 연동된다.",
+  "korean": "16개 전방향 마이크로폰 어레이와 내장 DSP를 갖춘 AI 빔포밍 천장형 마이크로폰으로, Yealink MVC 시스템과 플러그 앤 플레이로 연동된다.",
   "verificationSummary": "제조사 공식 제품 페이지(Overview/Specs 탭)에서 사양을 확인했다. 별도의 공식 데이터시트 PDF는 웹사이트에서 직접 확인하지 못했으며, 상세 자료는 Yealink 지원 포털(로그인/스크립트 기반)로 안내되어 접근하지 못했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "Yealink CM20은 전문 회의 환경에서 오디오 성능을 향상시키기 위해 설계된 프리미엄 천장형 마이크로폰이다. 16개의 전방향 마이크로폰으로 구성된 고급 어레이를 탑재해 360도로 음성을 픽업하며, 모든 참석자의 발언을 명확하고 포괄적으로 담아낸다. 통합 DSP를 내장해 Yealink MVC 시스템과 플러그앤플레이로 연동되므로 별도의 외부 오디오 처리 장치가 필요 없다.\n\n80mm의 저프로파일 디자인과 스냅온 방식의 탈부착 마그네틱 커버(블랙/화이트 색상 선택 가능)를 적용해 천장에 자연스럽게 통합되면서도 미관을 해치지 않는다. 8개의 독립적인 픽업 존을 통해 최대 4m 반경(공칭 커버리지)을 커버하며, 고품질(풀 듀플렉스) 픽업 반경은 3m이다.\n\nAI Dynamic Noise Reduction과 AI Reverberation Suppression 알고리즘을 적용해 주변 소음과 반향을 실시간으로 최소화하며, 사람 음성을 강조하도록 EQ가 튜닝되어 있다. 중·대형 및 가변형(divisible) 회의실에 적합하다.",
+  "overview": "Yealink CM20은 전문 회의 환경에서 오디오 성능을 향상시키기 위해 설계된 프리미엄 천장형 마이크로폰이다. 16개의 전방향 마이크로폰으로 구성된 고급 어레이를 탑재해 360도로 음성을 픽업하며, 모든 참석자의 발언을 명확하고 포괄적으로 담아낸다. 통합 DSP를 내장해 Yealink MVC 시스템과 플러그 앤 플레이로 연동되므로 별도의 외부 오디오 처리 장치가 필요 없다.\n\n80mm의 저프로파일 디자인과 스냅온 방식의 탈부착 마그네틱 커버(블랙/화이트 색상 선택 가능)를 적용해 천장에 자연스럽게 통합되면서도 미관을 해치지 않는다. 8개의 독립적인 픽업 존을 통해 최대 4m 반경(공칭 커버리지)을 커버하며, 고품질(풀 듀플렉스) 픽업 반경은 3m이다.\n\nAI Dynamic Noise Reduction과 AI Reverberation Suppression 알고리즘을 적용해 주변 소음과 반향을 실시간으로 최소화하며, 사람 음성을 강조하도록 EQ가 튜닝되어 있다. 중·대형 및 가변형(divisible) 회의실에 적합하다.",
   "images": [
     {
       "role": "Main",
@@ -105,7 +105,7 @@
       "source": "P"
     },
     {
-      "text": "통합 DSP 내장으로 Yealink MVC 시스템과 별도 장치 없이 플러그앤플레이 연동",
+      "text": "통합 DSP 내장으로 Yealink MVC 시스템과 별도 장치 없이 플러그 앤 플레이 연동",
       "source": "P"
     },
     {
