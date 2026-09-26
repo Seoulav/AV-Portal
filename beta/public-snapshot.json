@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "2B1AF1313A6AF0AED9B4CE93D00BE200FEEDD88CD3B704D68D040288D0A87BEA",
+    "sha256": "31D65A1F0D6D5926B35933ECEBBBF18B2DED007F24728C723F02D0D22EA013E6",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -157,6 +157,24 @@
       "specifications": 10,
       "io": 4
     },
+    "nx-1200": {
+      "sha256": "649AB28D95E8E694A899380193605E74F3F427D9CDD4E099667AAB95422E7BE1",
+      "features": 6,
+      "specifications": 19,
+      "io": 7
+    },
+    "nx-2200": {
+      "sha256": "FC6FB58D436D9EA2B381EBC890F2E3B495A069AA81B540CF112B4CCCFB6A3DC9",
+      "features": 6,
+      "specifications": 19,
+      "io": 8
+    },
+    "nx-3200": {
+      "sha256": "16766DCCFF7DD634CC15E235C62505D0B649F92BB6AB2D858AF00859031E9893",
+      "features": 6,
+      "specifications": 19,
+      "io": 8
+    },
     "pt-mz11k": {
       "sha256": "7B9C7F5FE8F7EA47C0B2CADF0E06ADFAA3735F0E395449ECA60103FF296CB694",
       "features": 5,
@@ -306,6 +324,30 @@
       "features": 6,
       "specifications": 10,
       "io": 6
+    },
+    "varia-100": {
+      "sha256": "E5E644B7A1DB22A230F52F56375ABBC3EE735F88C83E18C77F020940F91D4EFC",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-80": {
+      "sha256": "EC2C90D17225C9B53017FFBBEC279DC78909C9A497514C2939809ABEAC65852C",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-sl50": {
+      "sha256": "F5568EE86AE89B1B04ECB4B653574E2E167B208A935C939B3FF0D88FAD348630",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-sl80": {
+      "sha256": "3578EB02503A8266651F6CE7B48B4B802F2C96A187C7730C2265B21E77458AA8",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
     },
     "vs10": {
       "sha256": "A70FB2A7A50AF18938F090FCFD3EA64FAE8D831C5FA7897A397B9B49D13EE78E",

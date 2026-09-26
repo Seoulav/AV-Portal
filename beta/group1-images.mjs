@@ -208,7 +208,28 @@ export const group1Images = {
     image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED')
   ],
   rc400t: [
-    image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED')
+    image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED'),
+  ],
+  'nx-1200': [
+    image('Main', 'nx1200-main.webp', "AMX NX-1200 컨트롤러 이미지(전면·측면에 모델명 'NX-1200' 표기)", 'AMX', 'NX-1200', 'https://adn.harmanpro.com/productattachment/3636/product_attachment/vert_medium_2x-2077089418107c053c25f6d7f573c47a.webp', '900×298', '900×298', 'VERIFIED')
+  ],
+  'nx-2200': [
+    image('Main', 'nx2200-main.webp', "AMX NX-2200 컨트롤러 이미지(전면·측면에 모델명 'NX-2200' 표기)", 'AMX', 'NX-2200', 'https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp', '900×177', '900×177', 'VERIFIED')
+  ],
+  'nx-3200': [
+    image('Main', 'nx3200-main.webp', "AMX NX-3200 컨트롤러 이미지(전면·측면에 모델명 'NX-3200' 표기)", 'AMX', 'NX-3200', 'https://adn.harmanpro.com/productattachment/4413/product_attachment/vert_medium_2x-86148d69acc35fb5a6de8440292e50c8.webp', '894×178', '894×178', 'VERIFIED')
+  ],
+  'varia-100': [
+    image('Main', 'varia100-main.webp', 'AMX VARIA-100 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-100', 'https://adn.harmanpro.com/productattachment/11307/product_attachment/vert_medium_2x-5ffd7c598db880c51902abd7ce7ed8ca.webp', '1500×1124', '1500×1124', 'FOUND')
+  ],
+  'varia-80': [
+    image('Main', 'varia80-main.webp', 'AMX VARIA-80 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-80', 'https://adn.harmanpro.com/productattachment/11343/product_attachment/vert_medium_2x-750e4f76640b57bf2614b868d022c13b.webp', '1500×1124', '1500×1124', 'FOUND')
+  ],
+  'varia-sl80': [
+    image('Main', 'variasl80-main.webp', 'AMX VARIA-SL80 벽면 매립형 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL80', 'https://adn.harmanpro.com/productattachment/11287/product_attachment/vert_medium_2x-100a351b0438a37795b807f7728193a9.webp', '1500×1125', '1500×1125', 'FOUND')
+  ],
+  'varia-sl50': [
+    image('Main', 'variasl50-main.webp', 'AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL50', 'https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp', '1136×1600', '1136×1600', 'FOUND')
   ]
 };
 
@@ -287,5 +308,12 @@ export const cardImages = {
   'aquilon-rs2': 'aquilonrs2-front.webp',
   'zenith-100': 'zenith100-front.webp',
   'zenith-200': 'zenith200-front.webp',
-  rc400t: 'rc400t-front.webp'
+  rc400t: 'rc400t-front.webp',
+  'nx-1200': 'nx1200-main.webp',
+  'nx-2200': 'nx2200-main.webp',
+  'nx-3200': 'nx3200-main.webp',
+  'varia-100': 'varia100-main.webp',
+  'varia-80': 'varia80-main.webp',
+  'varia-sl80': 'variasl80-main.webp',
+  'varia-sl50': 'variasl50-main.webp'
 };

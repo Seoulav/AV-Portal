@@ -1963,7 +1963,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/nx-3200"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049129678i6ep3qjgz.zip&o_file_name=nx-3200+manual.zip"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049129678i6ep3qjgz.zip&o_file_name=nx-3200+manual.zip",
+    "slug": "nx-3200",
+    "card_image": "nx3200-main.webp"
   },
   {
     "brand": "AMX",
@@ -1977,7 +1979,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/nx-2200"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912878st8q8s8i1a.zip&o_file_name=nx-2200+manual.zip"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912878st8q8s8i1a.zip&o_file_name=nx-2200+manual.zip",
+    "slug": "nx-2200",
+    "card_image": "nx2200-main.webp"
   },
   {
     "brand": "AMX",
@@ -1991,7 +1995,9 @@
     "official_links": [
       "https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912796h8pe1artw2.zip&o_file_name=nx-1200.quickstartguide.zip"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912796h8pe1artw2.zip&o_file_name=nx-1200.quickstartguide.zip",
+    "slug": "nx-1200",
+    "card_image": "nx1200-main.webp"
   },
   {
     "brand": "AMX",
@@ -2005,7 +2011,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/varia-100"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686896266qwb1jvy37q.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686896266qwb1jvy37q.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-100",
+    "card_image": "varia100-main.webp"
   },
   {
     "brand": "AMX",
@@ -2019,7 +2027,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/varia-80"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686895363571rrknbw3.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686895363571rrknbw3.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-80",
+    "card_image": "varia80-main.webp"
   },
   {
     "brand": "AMX",
@@ -2033,7 +2043,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/varia-sl80"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686725087g8k0n0s6rt.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686725087g8k0n0s6rt.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-sl80",
+    "card_image": "variasl80-main.webp"
   },
   {
     "brand": "AMX",
@@ -2047,7 +2059,9 @@
     "official_links": [
       "https://www.amx.com/en-US/products/varia-sl50"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16867178743ym3tt2mew.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16867178743ym3tt2mew.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-sl50",
+    "card_image": "variasl50-main.webp"
   },
   {
     "brand": "SurgeX",

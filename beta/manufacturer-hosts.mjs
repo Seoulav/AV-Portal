@@ -3,7 +3,7 @@
 // 새 제조사를 추가할 때만 여기에 한 줄을 더한다. 확인한 호스트만 적는다.
 export const manufacturerHosts = {
   AJA: ['aja.com', 'd26ddnfpy9hzf8.cloudfront.net'],
-  AMX: ['techdata-ps.com'],
+  AMX: ['techdata-ps.com', 'amx.com', 'harmanpro.com'],
   'Analog Way': ['analogway.com', 'website-files.com'],
   Audinate: ['getdante.com', 'audinate.com'],
   AVer: ['aver.com', 'averusa.com'],
