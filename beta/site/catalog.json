@@ -366,7 +366,9 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ],
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz71",
+    "card_image": "pt-vmz71-main.webp"
   },
   {
     "brand": "AJA",
@@ -908,7 +910,9 @@
     "official_links": [
       "https://www.analogway.com/products/pulse-4k"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Quick+Start+Guide/pulse-4k-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Quick+Start+Guide/pulse-4k-quick-start-guide.pdf",
+    "slug": "pulse-4k",
+    "card_image": "pulse4k-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -922,7 +926,9 @@
     "official_links": [
       "https://www.analogway.com/products/eikos-4k"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Quick+Start+Guide/eikos-4k-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Quick+Start+Guide/eikos-4k-quick-start-guide.pdf",
+    "slug": "eikos-4k",
+    "card_image": "eikos4k-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -936,7 +942,9 @@
     "official_links": [
       "https://www.analogway.com/products/aquilon-rs2"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Quick+Start+Guide/Aquilon-RS2-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Quick+Start+Guide/Aquilon-RS2-quick-start-guide.pdf",
+    "slug": "aquilon-rs2",
+    "card_image": "aquilonrs2-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -950,7 +958,9 @@
     "official_links": [
       "https://www.analogway.com/products/zenith-100"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Quick+Start+Guide/zenith-100-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Quick+Start+Guide/zenith-100-quick-start-guide.pdf",
+    "slug": "zenith-100",
+    "card_image": "zenith100-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -964,7 +974,9 @@
     "official_links": [
       "https://www.analogway.com/products/zenith-200"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Quick+Start+Guide/zenith-200-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Quick+Start+Guide/zenith-200-quick-start-guide.pdf",
+    "slug": "zenith-200",
+    "card_image": "zenith200-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -978,7 +990,9 @@
     "official_links": [
       "https://www.analogway.com/products/rc400t"
     ],
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Quick+Start+Guide/RC400T-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Quick+Start+Guide/RC400T-quick-start-guide.pdf",
+    "slug": "rc400t",
+    "card_image": "rc400t-front.webp"
   },
   {
     "brand": "Magnimage",
@@ -2288,7 +2302,9 @@
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
     ],
     "link_scope": "series",
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+    "slug": "pt-mz14k",
+    "card_image": "pt-mz14kl-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2303,7 +2319,9 @@
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
     ],
     "link_scope": "series",
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+    "slug": "pt-mz11k",
+    "card_image": "pt-mz11kl-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2318,7 +2336,9 @@
       "https://docs.connect.panasonic.com/projector/products/mz882/"
     ],
     "link_scope": "series",
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz882/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz882/resources/",
+    "slug": "pt-mz882",
+    "card_image": "pt-mz882-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2333,7 +2353,9 @@
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ],
     "link_scope": "series",
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz61",
+    "card_image": "pt-vmz61-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2348,7 +2370,9 @@
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ],
     "link_scope": "series",
-    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/"
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz51",
+    "card_image": "pt-vmz51-main.webp"
   },
   {
     "brand": "Logitech",

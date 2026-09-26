@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "1151E2B5B87AA96EA3A15BEF855627C16C44B9862F397F3C63F519BA27BBCF43",
+    "sha256": "2B1AF1313A6AF0AED9B4CE93D00BE200FEEDD88CD3B704D68D040288D0A87BEA",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -12,6 +12,12 @@
       "features": 7,
       "specifications": 13,
       "io": 5
+    },
+    "aquilon-rs2": {
+      "sha256": "5FD169DB43B6BDB7C437D457B87E61D5F0EA55D894C720850DED5CCC2B0E39BD",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
     },
     "avio-2ch-in": {
       "sha256": "363A68213F1C7AE6C93A77E5A225B5FC75F392CB57E374991A5846CBF7CF15EB",
@@ -66,6 +72,12 @@
       "features": 6,
       "specifications": 12,
       "io": 11
+    },
+    "eikos-4k": {
+      "sha256": "628520AD87F049B6151653E0425771AC4BFF3ED4051858A34E9EAF35C0085504",
+      "features": 6,
+      "specifications": 15,
+      "io": 10
     },
     "ez-hsv-plus": {
       "sha256": "5D94B173837BE5C14C5EA7BDD1334BF115ED6865728EA0985C8E2337C7C6E2D3",
@@ -145,11 +157,53 @@
       "specifications": 10,
       "io": 4
     },
+    "pt-mz11k": {
+      "sha256": "7B9C7F5FE8F7EA47C0B2CADF0E06ADFAA3735F0E395449ECA60103FF296CB694",
+      "features": 5,
+      "specifications": 14,
+      "io": 8
+    },
+    "pt-mz14k": {
+      "sha256": "C6A0600D009D0F6BECD1FB63249BFE36382E81D303EE49878F2BE8ABD9160636",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
+    },
     "pt-mz17k": {
       "sha256": "B340C0BE082DDAF64D0D5B628D8F39BC580E1120EA4F6A8BFE3E3ABD7281D7EC",
       "features": 7,
       "specifications": 13,
       "io": 4
+    },
+    "pt-mz882": {
+      "sha256": "A1E5E7F95E7E1E2D978307D06766E3F5E371C0BA651EDC9A4DE365E946D8F88A",
+      "features": 6,
+      "specifications": 14,
+      "io": 10
+    },
+    "pt-vmz51": {
+      "sha256": "016D0A75A9C19C2EDD6976847019A22CE2BC157EC9586BF59A919F7E3CF1A20F",
+      "features": 5,
+      "specifications": 15,
+      "io": 7
+    },
+    "pt-vmz61": {
+      "sha256": "079EF62E77D891B28FA18B8A6F7C24DD8B4F72B83A72742D9F49F28D59A029F3",
+      "features": 5,
+      "specifications": 15,
+      "io": 7
+    },
+    "pt-vmz71": {
+      "sha256": "FB23160DF07CFAE7BB581144322570F943EDFF3D48BDE7D2AF8337ABF63E4D90",
+      "features": 6,
+      "specifications": 15,
+      "io": 7
+    },
+    "pulse-4k": {
+      "sha256": "C619AE475C121B559DFC1086311A80D26850967504CD0F614CDA644759C18F08",
+      "features": 6,
+      "specifications": 14,
+      "io": 10
     },
     "rally-bar": {
       "sha256": "34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1",
@@ -180,6 +234,12 @@
       "features": 5,
       "specifications": 15,
       "io": 8
+    },
+    "rc400t": {
+      "sha256": "7D8CEBD5E03465F45C163C7CBE1A60E336C412935BD6E2A4297241792C4DFF46",
+      "features": 5,
+      "specifications": 10,
+      "io": 3
     },
     "rio1608-d3": {
       "sha256": "AFC24771DE047DD6E2E55644CE2A6F2BC95E9579B6C662EB6BF9E6D9783EF1A2",
@@ -276,6 +336,18 @@
       "features": 6,
       "specifications": 13,
       "io": 2
+    },
+    "zenith-100": {
+      "sha256": "FCBEA3FA1A5C38A6D40DEDE4FBEE376AD077BF663512E222CFBCA252669B115C",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
+    },
+    "zenith-200": {
+      "sha256": "0C3E00011052BDE54E4FF1B6F1CDCF79E2C7DAF3435D74A040A2A9125C366B65",
+      "features": 6,
+      "specifications": 16,
+      "io": 7
     }
   }
 }

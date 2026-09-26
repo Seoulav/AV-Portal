@@ -1,0 +1,397 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "Zenith 200",
+  "model": "ZEN200",
+  "series": "Alta 4K",
+  "seriesNote": "Alta 4K 플랫폼 기반. Zenith 100(13입력·4출력)의 상위 모델(16입력·6출력).",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Processor"
+  ],
+  "english": "Multi-screen, multi-layer 4K60 presentation switcher and videowall processor with sixteen inputs, six outputs and one dedicated Multiviewer.",
+  "korean": "Zenith 200은 16개 입력, 6개 출력, 전용 멀티뷰어 1개를 갖춘 멀티스크린·멀티레이어 4K60 프레젠테이션 스위처 겸 비디오월 프로세서다.",
+  "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 모델 전용 Technical Datasheet(dwn01.analogway.com)에서 개요·기능·전체 기술 사양·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Zenith 200은 14개의 4K60 입력(8x HDMI 2.0, 4x DisplayPort 1.2, 2x 12G-SDI)과 2개의 1080p 입력(사용자 선택 HDMI/SDI) 총 16개 입력을 지원하며, 6개의 독립 4K60 출력(각 미러링 HDMI+SDI, 그중 4개는 SFP+ 커넥터 추가)과 전용 멀티뷰어 출력을 갖췄다.\n\n제조사 공식 데이터시트에 따르면 Zenith 100과 동일한 5세대 스케일링 엔진 기반 네이티브 4K60 10비트 4:4:4 초저지연 영상 처리를 제공하며, 입출력 custom format 지원 폭이 최대 8192 width/height까지 확장된다(Zenith 100은 4096). 출력은 최대 4개의 4K60 PGM 화면으로 구성하거나 미사용 출력을 1080p 보조 출력으로 활용할 수 있으며, 최대 8개의 분할 레이어(또는 4개의 믹싱 레이어)를 지원한다.\n\n전원은 100-240VAC(최대 250W), 3RU 랙 마운트 섀시(핸들 포함 482.5×133×533.5mm, Zenith 100과 동일 크기), 액세서리 제외 무게 12.80kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "zenith200-front.webp",
+      "alt": "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Analog Way",
+      "model": "Zenith 200",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2362×764",
+      "resolution": "1800×533",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Alta 4K User Manual (2026-05-21)",
+      "language": "en",
+      "note": "Alta 4K 플랫폼(Zenith 100/200) 공용 사용설명서",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Zenith 200 Technical Datasheet (2026-05-21)",
+      "language": "en",
+      "note": "Key features, Technical specifications, Product Specifications 전체 수록",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/zenith-200"
+    }
+  ],
+  "features": [
+    {
+      "text": "8x HDMI + 4x DisplayPort + 2x 12G-SDI + 2x 1080p 선택 입력 총 16개 입력과 6개의 독립 4K60 출력(그중 4개는 SFP+ 커넥터 추가)을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Zenith 100과 동일한 5세대 스케일링 엔진 기반 네이티브 4K60 10비트 4:4:4 초저지연 영상 처리를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "커스텀 입출력 포맷을 최대 8192 width/height까지 지원해 Zenith 100(4096)보다 넓은 캔버스를 구성할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "출력을 최대 4개의 4K60 PGM 화면으로 구성하거나 미사용 출력을 1080p 보조 출력으로 활용할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "최대 8개의 4K 분할 레이어(또는 4개의 믹싱 레이어)와 라이브/정지영상 배경을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "전용 멀티뷰어(27개 위젯, 20개 메모리)로 프로그램·프리뷰·보조 화면·모든 입력을 모니터링한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Inputs",
+      "name": "구성",
+      "value": "8x HDMI 2.0, 4x DisplayPort 1.2, 2x 12G/6G/3G-SDI(Level A&B), 2x HDMI 1.4 또는 3G-SDI(사용자 선택)",
+      "unit": "",
+      "condition": "최대 4K60(HDMI/DP), 4K60 10bit 4:2:2(SDI), 2K60(선택 입력)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Inputs",
+      "name": "커스텀 포맷",
+      "value": "최대 8192 width/height",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "출력 A(2개)",
+      "value": "2x HDMI 2.0 + 2x 미러링 12G-SDI",
+      "unit": "",
+      "condition": "4K60 8bit 4:4:4/12bit 4:2:2(HDMI), 4K60 10bit 4:2:2(SDI)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "출력 B(4개)",
+      "value": "4x HDMI 2.0 + 2x 미러링 12G-SDI + 2x 미러링 SFP+",
+      "unit": "",
+      "condition": "동일 해상도, SFP+는 광섬유/ST2110 모듈 호환",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "커스텀 포맷",
+      "value": "최대 8192 width/height",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "멀티뷰어 출력",
+      "value": "1x HDMI 1.4 + 1x 미러링 3G-SDI",
+      "unit": "",
+      "condition": "최대 2560x1600@60 8bit 4:2:2, 27개 위젯",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 엔진",
+      "value": "Analog Way 5세대 스케일링 엔진, 네이티브 4K60 10bit 4:4:4 초저지연",
+      "unit": "",
+      "condition": "BT.709/2020 색공간, 최대 144Hz",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Screens",
+      "name": "화면 구성",
+      "value": "최대 4x 4K60 PGM 출력 또는 스케일된 1080p 보조 출력",
+      "unit": "",
+      "condition": "최대 8개 분할 레이어(또는 4개 믹싱 레이어)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming",
+      "name": "라이브스트리밍",
+      "value": "RTMP/RTMPS, H.264 1080p30 최대 6Mbps, AAC 오디오",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(RU)",
+      "value": "3RU",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.5 × 133 × 533.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "12.80",
+      "unit": "kg",
+      "condition": "액세서리 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240 VAC, 7A, 50/60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "250",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "3년(부품·공임, 공장 반송 기준)",
+      "unit": "",
+      "condition": "커넥터 손상은 보증 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "HDMI 2.0",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "8",
+      "protocol": "",
+      "availability": "",
+      "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "DisplayPort 1.2",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "12G/6G/3G-SDI (Level A&B)",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "10bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI 1.4 또는 3G-SDI",
+      "signal": "2K60 video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "사용자 선택 커넥터",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0 + 12G-SDI(미러링)",
+      "signal": "4K60 out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0 + 12G-SDI + SFP+(미러링)",
+      "signal": "4K60 out",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "SFP+ 옵션 모듈 필요",
+      "condition": "광섬유/ST2110 호환",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+      "signal": "Multiviewer out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "최대 2560x1600@60",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/zenith-200",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Zenith 200 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

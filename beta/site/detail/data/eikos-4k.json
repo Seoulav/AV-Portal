@@ -1,0 +1,424 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "Eikos 4K",
+  "model": "EKS-4K",
+  "series": "Midra 4K",
+  "seriesNote": "Midra 4K 플랫폼 기반. Pulse 4K에 Hard/Soft Edge 모드가 추가된 상위 모델.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "4K60 multi-layer video mixer and seamless presentation switcher with ten inputs, two PGM outputs with hard/soft edge support and one dedicated Multiviewer.",
+  "korean": "Eikos 4K는 10개 입력, Hard/Soft Edge를 지원하는 2개 PGM 출력, 전용 멀티뷰어 1개를 갖춘 4K60 멀티레이어 비디오 믹서 겸 프레젠테이션 스위처다.",
+  "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 모델 전용 Technical Datasheet(dwn01.analogway.com)에서 개요·기능·전체 기술 사양·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Eikos 4K는 Pulse 4K와 동일한 10개 입력(8x 4K60 + 2x 1080p)과 2개의 4K60 미러링 출력 구성을 가지면서, Hard/Soft Edge 모드·Matrix 모드(2 PGM)·Mixer 모드(1 PGM+1 AUX) 3가지 운영 모드를 지원하는 상위 모델이다. 전용 멀티뷰어(최대 2560x1600@60)로 프로그램·프리뷰·모든 입력을 모니터링한다.\n\n제조사 공식 데이터시트에 따르면 Midra 4K FPGA 하드웨어 플랫폼과 5세대 스케일링 엔진을 기반으로 4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리, HDR10·HLG 지원, HDCP 1.4/2.2 호환을 제공한다. 라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어)를 구성할 수 있으며, 라이브스트리밍은 H.264 최대 1080p30까지 지원한다(Pulse 4K는 720p30).\n\n전원·물리 사양은 Pulse 4K와 동일하다: 100-240VAC(최대 95W), 2RU 랙 마운트 섀시(핸들 포함 482.5×88×474mm), 액세서리 제외 무게 7.60kg.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "eikos4k-front.webp",
+      "alt": "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Analog Way",
+      "model": "Eikos 4K",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "6844×1848",
+      "resolution": "1800×395",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Midra 4K User Manual (Eikos 4K 포함 공용, 2026-05-21)",
+      "language": "en",
+      "note": "Midra 4K 플랫폼(Pulse 4K/Eikos 4K 등) 공용 사용설명서",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Eikos 4K Technical Datasheet (2026-05-21)",
+      "language": "en",
+      "note": "Key features, Technical specifications, Product Specifications 전체 수록",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/eikos-4k"
+    }
+  ],
+  "features": [
+    {
+      "text": "Pulse 4K와 동일한 8x 4K60 + 2x 1080p 총 10개 입력과 2개의 4K60 미러링(HDMI+SDI) 출력을 지원하며, Hard/Soft Edge·Matrix·Mixer 3가지 모드로 동작한다.",
+      "source": ""
+    },
+    {
+      "text": "4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리와 HDR10·HLG 지원, 3D LUT 기반 색공간 변환을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어) + 1개의 4K 정지영상 전경 레이어를 구성할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "전용 멀티뷰어(HDMI+미러링 SDI, 최대 2560x1600@60, 17개 위젯)로 프로그램·프리뷰·모든 입력을 모니터링한다.",
+      "source": ""
+    },
+    {
+      "text": "RTMP/RTMPS 기반으로 임의의 입력·출력을 최대 1080p30까지 라이브 스트리밍할 수 있다(Pulse 4K 대비 상향된 사양).",
+      "source": ""
+    },
+    {
+      "text": "HTML5 기반 Web RCS 인터페이스, RC400T 이벤트 컨트롤러 등 다양한 제어 옵션을 지원하며, 옵션으로 32x32 Dante 오디오 네트워킹 카드를 장착할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Inputs",
+      "name": "구성",
+      "value": "4x HDMI 2.0, 2x DisplayPort 1.2, 2x 12G/6G/3G-SDI(Level A&B), 2x HDMI 1.4 또는 3G-SDI(사용자 선택)",
+      "unit": "",
+      "condition": "최대 4K60(HDMI/DP), 4K60 10bit 4:2:2(SDI), 2K60(선택 입력)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "PGM 출력",
+      "value": "2x HDMI 2.0 + 2x 미러링 12G/6G/3G-SDI(Level A&B)",
+      "unit": "",
+      "condition": "4K60 8bit 4:4:4/12bit 4:2:2(HDMI), 4K60 10bit 4:2:2(SDI)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "멀티뷰어 출력",
+      "value": "1x HDMI 1.4 + 1x 미러링 3G-SDI",
+      "unit": "",
+      "condition": "최대 2560x1600@60 8bit 4:2:2, 17개 위젯",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Modes",
+      "name": "동작 모드",
+      "value": "Hard/Soft Edge, Matrix(2 PGM), Mixer(1 PGM+1 AUX)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 엔진",
+      "value": "Analog Way 5세대 스케일링 엔진 기반, 초저지연 16ms@60Hz",
+      "unit": "",
+      "condition": "BT.601/709/2020 색공간 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "HDR",
+      "value": "HDR10, HLG 호환, 3D LUT 기반 색보정",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming",
+      "name": "라이브스트리밍",
+      "value": "RTMP/RTMPS, H.264 최대 1080p30 6Mbps",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 옵션",
+      "value": "아날로그+Dante 오디오 네트워킹 카드(옵션), 32x32 Dante @48kHz",
+      "unit": "",
+      "condition": "이중화 이더넷 포트",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(RU)",
+      "value": "2RU",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.5 × 88 × 474",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "7.60",
+      "unit": "kg",
+      "condition": "액세서리 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240 VAC, 3A, 50/60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "95",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "3년(부품·공임, 공장 반송 기준)",
+      "unit": "",
+      "condition": "커넥터 손상은 보증 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "HDMI 2.0",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "DisplayPort 1.2",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "12G/6G/3G-SDI (Level A&B)",
+      "signal": "4K60 video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "10bit 4:2:2",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI 1.4 또는 3G-SDI",
+      "signal": "2K60 video in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "사용자 선택 커넥터",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0 + 12G/6G/3G-SDI(미러링)",
+      "signal": "4K60 PGM/AUX out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+      "signal": "Multiviewer out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "최대 2560x1600@60",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "Neutrik RJ45",
+      "signal": "Gigabit Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB Host Type A",
+      "signal": "펌웨어 업데이트/설정 백업",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "BNC (loop)",
+      "signal": "Genlock, Blackburst, Tri-level",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio(옵션)",
+      "connector": "3.5mm 스테레오 미니잭",
+      "signal": "Analog audio in/out",
+      "direction": "IN/OUT",
+      "quantity": "각 2",
+      "protocol": "",
+      "availability": "옵션 카드 필요",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/eikos-4k",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Eikos 4K 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

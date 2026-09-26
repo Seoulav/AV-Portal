@@ -173,6 +173,42 @@ export const group1Images = {
   'rally-mic-pod': [
     image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
     image('Other', 'logitech-rally-mic-pod-top.webp', 'Logitech Rally Mic Pod 상단 음소거 버튼 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png', '1600×1200', '1106×1183', 'FOUND')
+  ],
+  'pt-vmz71': [
+    image('Main', 'pt-vmz71-main.webp', 'Panasonic PT-VMZ71 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+  ],
+  'pt-vmz61': [
+    image('Main', 'pt-vmz61-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+  ],
+  'pt-vmz51': [
+    image('Main', 'pt-vmz51-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+  ],
+  'pt-mz14k': [
+    image('Main', 'pt-mz14kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+  ],
+  'pt-mz11k': [
+    image('Main', 'pt-mz11kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+  ],
+  'pt-mz882': [
+    image('Main', 'pt-mz882-main.webp', 'Panasonic PT-MZ882 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ882 Series', 'https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+  ],
+  'pulse-4k': [
+    image('Front', 'pulse4k-front.webp', "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)", 'Analog Way', 'Pulse 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg', '6952×1960', '1800×390', 'VERIFIED')
+  ],
+  'eikos-4k': [
+    image('Front', 'eikos4k-front.webp', "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)", 'Analog Way', 'Eikos 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg', '6844×1848', '1800×395', 'VERIFIED')
+  ],
+  'aquilon-rs2': [
+    image('Front', 'aquilonrs2-front.webp', "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)", 'Analog Way', 'Aquilon RS2', 'https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg', '3175×1772', '1800×686', 'VERIFIED')
+  ],
+  'zenith-100': [
+    image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED')
+  ],
+  'zenith-200': [
+    image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED')
+  ],
+  rc400t: [
+    image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED')
   ]
 };
 
@@ -239,5 +275,17 @@ export const cardImages = {
   'rally-mic-pod-extension-cable': 'logitech-rally-mic-pod-extension-cable-main.webp',
   'strong-usb-cable': 'logitech-strong-usb-cable-main.webp',
   'rally-plus': 'logitech-rally-plus-main.webp',
-  'rally-mic-pod': 'logitech-rally-mic-pod-perspective.webp'
+  'rally-mic-pod': 'logitech-rally-mic-pod-perspective.webp',
+  'pt-vmz71': 'pt-vmz71-main.webp',
+  'pt-vmz61': 'pt-vmz61-main.webp',
+  'pt-vmz51': 'pt-vmz51-main.webp',
+  'pt-mz14k': 'pt-mz14kl-main.webp',
+  'pt-mz11k': 'pt-mz11kl-main.webp',
+  'pt-mz882': 'pt-mz882-main.webp',
+  'pulse-4k': 'pulse4k-front.webp',
+  'eikos-4k': 'eikos4k-front.webp',
+  'aquilon-rs2': 'aquilonrs2-front.webp',
+  'zenith-100': 'zenith100-front.webp',
+  'zenith-200': 'zenith200-front.webp',
+  rc400t: 'rc400t-front.webp'
 };

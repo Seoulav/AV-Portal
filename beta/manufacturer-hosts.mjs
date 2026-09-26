@@ -4,7 +4,7 @@
 export const manufacturerHosts = {
   AJA: ['aja.com', 'd26ddnfpy9hzf8.cloudfront.net'],
   AMX: ['techdata-ps.com'],
-  'Analog Way': ['analogway.com'],
+  'Analog Way': ['analogway.com', 'website-files.com'],
   Audinate: ['getdante.com', 'audinate.com'],
   AVer: ['aver.com', 'averusa.com'],
   'Blackmagic Design': ['blackmagicdesign.com'],
