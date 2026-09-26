@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 138개
+- Product Detail: 154개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -193,96 +193,112 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG43U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg43u800fnfxkr
 
 - 제품: Samsung HG50U800FNFXKR
   분류: 사이니지 | Display | Hospitality TV
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG50U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg50u800fnfxkr
 
 - 제품: Samsung HG65U800FNFXKR
   분류: 사이니지 | Display | Hospitality TV
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG65U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg65u800fnfxkr
 
 - 제품: Samsung LH32QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH32QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh32qmcebgcxkr
 
 - 제품: Samsung LH43QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH43QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr
 
 - 제품: Samsung LH85QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh85qmcebgcxkr
 
 - 제품: Samsung LH98QECEDGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh98qecedgcxkr
 
 - 제품: Samsung LH98QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH98QMCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh98qmcebgcxkr
 
 - 제품: Samsung LH43QHCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh43qhcebgcxkr
 
 - 제품: Samsung LH75QHCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH75QHCEBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75qhcebgcxkr
 
 - 제품: Samsung LH115QHFEBGXKR
   분류: 사이니지 | Display | Digital Signage
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH115QHFEBGXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh115qhfebgxkr
 
 - 제품: Samsung LH55VMCRBGBXKR
   분류: 사이니지 | Display | Video Wall
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55VMCRBGBXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55vmcrbgbxkr
 
 - 제품: Samsung LH55VHCRBGBXKR
   분류: 사이니지 | Display | Video Wall
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55VHCRBGBXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55vhcrbgbxkr
 
 - 제품: Samsung KQ75LSF03WFXKR
   분류: 사이니지 | Display | Display
   종류: 장비
   공식 링크: https://www.samsung.com/hk_en/support/model/KQ75LSF03WFXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=KQ75LSF03WFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=kq75lsf03wfxkr
 
 - 제품: Samsung LH55WMFWBGCXKR
   분류: 사이니지 | Display | Interactive Display
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH55WMFWBGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr
 
 - 제품: Samsung LH75WMFWLGCXKR
   분류: 사이니지 | Display | Interactive Display
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH75WMFWLGCXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr
 
 - 제품: Sony SRG-X40UH
   분류: 영상 | Video | Camera

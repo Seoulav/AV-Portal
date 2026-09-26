@@ -1,0 +1,234 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH75QHCEBGCXKR",
+  "model": "LH75QHCEBGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung standalone UHD H-series digital signage (QH75C), 75-inch, with Professional Mode (Director Mode / DICOM simulation).",
+  "korean": "삼성 단독형 UHD H 시리즈(QH75C) 디지털 사이니지 75인치 모델로, 디렉터 모드·DICOM 시뮬레이션 모드 등 프로페셔널 모드를 지원한다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) QHC 시리즈 제품 페이지(43인치 모델과 동일 마케팅 템플릿)에서 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH75QHCEBGCXKR(QH75C)은 삼성전자의 단독형 UHD H 시리즈 디지털 사이니지 75인치 모델로, 두께 28.5mm로 삼성 UHD 사이니지 중 가장 얇은 스크린 옵션이다. 슬림 핏 월 마운트가 함께 제공되며, 4면 두께가 동일한 균일 베젤과 중앙 VESA 홀 설계로 세로 모드에서도 안정적으로 장착할 수 있다.\n\n퀀텀 프로세서 Lite 4K의 지능형 UHD 업스케일링과 10억 가지 색상의 다이내믹 크리스탈 컬러로 생생한 화질을 구현하고, 논글래어 패널로 밝은 조명 환경에서도 가시성을 확보한다. QHC 시리즈는 내장 프로페셔널 모드를 제공해 디렉터 모드(제작자 의도 그대로의 이미지 품질 유지)와 DICOM 시뮬레이션 모드(비진단용 의료 이미지의 그레이스케일 재현)를 지원하는 것이 특징이다.\n\n업그레이드된 홈 UI, SmartView+ 무선 화면 공유, 모바일 앱 기반 스마트 캘리브레이션을 갖췄고, MagicINFO·VXT CMS 솔루션(별도 구매)으로 콘텐츠와 원격 장치를 관리할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh75qhcebgcxkr-main.webp",
+      "alt": "단독형 UHD H 시리즈 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH75QHCEBGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/09/04/44853db9-5581-45fe-b0c1-99142514e49d.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/09/04/44853db9-5581-45fe-b0c1-99142514e49d.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH75QHCEBGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "28.5mm 두께로 삼성 UHD 사이니지 중 가장 얇은 스크린이며 슬림 핏 월 마운트를 함께 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "4면 두께가 동일한 균일 베젤과 중앙 VESA 홀 설계로 세로 모드 전환 시에도 안정적으로 장착할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "퀀텀 프로세서 Lite 4K의 지능형 UHD 업스케일링과 다이내믹 크리스탈 컬러로 생생한 화질을 구현한다.",
+      "source": "P"
+    },
+    {
+      "text": "디렉터 모드와 DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드로 전문 분야 전용 시청 표준을 지원한다.",
+      "source": "P"
+    },
+    {
+      "text": "논글래어 패널, SmartView+ 무선 화면 공유, 모바일 앱 기반 스마트 캘리브레이션을 갖췄다.",
+      "source": "P"
+    },
+    {
+      "text": "MagicINFO, VXT CMS 솔루션으로 콘텐츠 관리와 원격 장치 관리를 지원한다(별도 구매 필요).",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "75 (189.3)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "영상 처리 엔진",
+      "value": "퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)",
+      "unit": "",
+      "condition": "지능형 UHD 업스케일링 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 특성",
+      "value": "논글래어(반사방지) 패널",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "전문가 모드",
+      "value": "Director Mode, DICOM Simulation Mode",
+      "unit": "",
+      "condition": "프로페셔널 모드 내장",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 두께",
+      "value": "28.5",
+      "unit": "mm",
+      "condition": "삼성 UHD 사이니지 시리즈 중 최박형(43/75인치 QHC 공통 마케팅 수치)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 마운트",
+      "value": "중앙 배치형 VESA 홀",
+      "unit": "",
+      "condition": "세로 모드 안전 장착을 위한 중앙 하중 분산 설계",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 구조",
+      "value": "4면 균일 베젤",
+      "unit": "",
+      "condition": "삼성 기존 UHD 사이니지 모델과의 비교 기준",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "무선 화면 공유",
+      "value": "SmartView+",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "CMS 솔루션",
+      "value": "MagicINFO, VXT",
+      "unit": "",
+      "condition": "별도 구매 필요, VXT는 국내 추후 출시 예정",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "상세 스펙 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH75QHCEBGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

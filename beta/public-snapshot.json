@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "9F67C333EAFC65E96D6F8037F9BE0D31BC617DBA31192A9F099B4676D00751F4",
+    "sha256": "394D575578C5B7D26795EEC1A84CD496D55220864A7DF0C0A098ED92A94DC96A",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -421,6 +421,24 @@
       "specifications": 10,
       "io": 3
     },
+    "hg43u800fnfxkr": {
+      "sha256": "18CB962DDE6D83A784F35EB54772CFA6F1919C5FD241AE8B2F41838C97465A3C",
+      "features": 7,
+      "specifications": 7,
+      "io": 2
+    },
+    "hg50u800fnfxkr": {
+      "sha256": "FDFD96D4635E233ACFFA3D188A2F009693A5E0FD308EDAB0E19BC550896E292B",
+      "features": 6,
+      "specifications": 6,
+      "io": 2
+    },
+    "hg65u800fnfxkr": {
+      "sha256": "FED2AF8F9471FAB1BBDA4EA39763C5B5770CEFE60A80294CD7EE5827E351E97E",
+      "features": 6,
+      "specifications": 6,
+      "io": 2
+    },
     "hyperdeck-studio-hd-mini": {
       "sha256": "70EADE7CA5C936F8347E4F97AF791E774DD7DFEACD402095F6A9BCBE9C8A0A47",
       "features": 6,
@@ -445,11 +463,89 @@
       "specifications": 16,
       "io": 11
     },
+    "kq75lsf03wfxkr": {
+      "sha256": "F151A9114D6FCAE85FF6D0BCC7702C301A6533F09019914E66398BEC305415B3",
+      "features": 6,
+      "specifications": 28,
+      "io": 6
+    },
     "led-780h": {
       "sha256": "05C5322CAE43B1365B03B8B0F9B6103CB49E4A44932B77F1A6EF2777C616D83F",
       "features": 7,
       "specifications": 11,
       "io": 6
+    },
+    "lh115qhfebgxkr": {
+      "sha256": "D4597BDE058816466D36B8EDB638140192648F282039F0988164582D3800E6F7",
+      "features": 7,
+      "specifications": 12,
+      "io": 1
+    },
+    "lh32qmcebgcxkr": {
+      "sha256": "AAB348646BB861D0D68B756CD1CA46352933D18A91A69F59056F502362E5CB6C",
+      "features": 4,
+      "specifications": 4,
+      "io": 0
+    },
+    "lh43qhcebgcxkr": {
+      "sha256": "1FD1B1BD75C161204F099A25A0AF625D9C0B98DF35E2548E92EF225391B65A1C",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
+    },
+    "lh43qmcebgcxkr": {
+      "sha256": "6019B46E38B1F099DFC9109CAD9946B10CC0C512A045CA09DACD3EBF40B54166",
+      "features": 7,
+      "specifications": 8,
+      "io": 0
+    },
+    "lh55vhcrbgbxkr": {
+      "sha256": "301BDC3EA583121DD34442826DE0603BD0809AF03C06F893D2EADE7D6EBB8811",
+      "features": 6,
+      "specifications": 8,
+      "io": 2
+    },
+    "lh55vmcrbgbxkr": {
+      "sha256": "65E34831D2181EE59426A91FD669D120249DE49E35C579BFA199A057A2C60638",
+      "features": 6,
+      "specifications": 8,
+      "io": 2
+    },
+    "lh55wmfwbgcxkr": {
+      "sha256": "269D211360AF3A9BDFB9994E22498B0DA58149BAE57CCEF3E01BFDAC41D96800",
+      "features": 7,
+      "specifications": 9,
+      "io": 2
+    },
+    "lh75qhcebgcxkr": {
+      "sha256": "13E1655931B7DC20FE8C1056DCBE8568EDF7B64BD4293C60162E5A89DC437EFD",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
+    },
+    "lh75wmfwlgcxkr": {
+      "sha256": "8752A6ECA66DE6DF4B752B1CF9F3FFB58E31EBAF771793D2170AB5217A48BF7B",
+      "features": 7,
+      "specifications": 9,
+      "io": 2
+    },
+    "lh85qmcebgcxkr": {
+      "sha256": "DAFCD1ECF3ACC2F5F537E3119897B841384702B2C520C7B12AA8235787F2AB21",
+      "features": 7,
+      "specifications": 8,
+      "io": 0
+    },
+    "lh98qecedgcxkr": {
+      "sha256": "DAD59D683A22FCAC7A85C07E7C5DC646466A5A6D0FBD9C03592FC8A98D5733A3",
+      "features": 3,
+      "specifications": 3,
+      "io": 0
+    },
+    "lh98qmcebgcxkr": {
+      "sha256": "E7D0B45347B99F850A35BDD3AAD34A47C6376B6674A7DC22C0A850FD12FCAEB2",
+      "features": 6,
+      "specifications": 9,
+      "io": 0
     },
     "mezzo-322-ad": {
       "sha256": "A66CAB092F65EE010F03F45C5EE62CD9FA2BD3640329CB0CAEB3B930420FCF12",

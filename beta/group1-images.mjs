@@ -456,6 +456,54 @@ export const group1Images = {
   ],
   'eb-l260f': [
     image('Main', 'eb-l260f-main.webp', '엡손 EB-L260F 레이저 비즈니스 프로젝터 정면 이미지', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=170c32f51f2061c5ccee14b400fe17a5107c0c17&vid=170c32f51f2061c5ccee14b400fe17a5107c0c17&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  hg43u800fnfxkr: [
+    image('Main', 'hg43u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG43U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  hg50u800fnfxkr: [
+    image('Main', 'hg50u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG50U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/cfdadb87-1342-48f3-9107-71e55db7b799.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  hg65u800fnfxkr: [
+    image('Main', 'hg65u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG65U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh32qmcebgcxkr: [
+    image('Main', 'lh32qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 80.1cm 정면', 'Samsung', 'LH32QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh43qmcebgcxkr: [
+    image('Main', 'lh43qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 정면', 'Samsung', 'LH43QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/7912ee7f-7c9f-4202-9adb-62491be478c7.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh85qmcebgcxkr: [
+    image('Main', 'lh85qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 정면', 'Samsung', 'LH85QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/9124bf3b-fa36-43fc-b25b-460d045ba5e7.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh98qecedgcxkr: [
+    image('Main', 'lh98qecedgcxkr-main.webp', '단독형 UHD E 시리즈 98인치 정면', 'Samsung', 'LH98QECEDGCXKR', 'https://images.samsung.com/kdp/goods/2024/08/26/619b8046-e8f2-4617-a3b7-65559d31ea30.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh98qmcebgcxkr: [
+    image('Main', 'lh98qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 첫번째 이미지', 'Samsung', 'LH98QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2024/10/14/eb43a1c6-2c2d-4277-99c3-af1da01b2272.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh43qhcebgcxkr: [
+    image('Main', 'lh43qhcebgcxkr-main.webp', '단독형 UHD H 시리즈 정면', 'Samsung', 'LH43QHCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/09/04/85db0f25-511c-449a-94cc-935bb8e4f18d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh75qhcebgcxkr: [
+    image('Main', 'lh75qhcebgcxkr-main.webp', '단독형 UHD H 시리즈 정면', 'Samsung', 'LH75QHCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/09/04/44853db9-5581-45fe-b0c1-99142514e49d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh115qhfebgxkr: [
+    image('Main', 'lh115qhfebgxkr-main.webp', '단독형 UHD H 시리즈 290.7cm 세로형 정면', 'Samsung', 'LH115QHFEBGXKR', 'https://images.samsung.com/kdp/goods/2025/08/28/3a33df49-4b10-4ad7-8ede-93e5d4bf3f05.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh55vmcrbgbxkr: [
+    image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh55vhcrbgbxkr: [
+    image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  kq75lsf03wfxkr: [
+    image('Main', 'kq75lsf03wfxkr-main.webp', '2025 The Frame Pro 189cm 정면', 'Samsung', 'KQ75LSF03WFXKR', 'https://images.samsung.com/kdp/goods/2025/03/05/a852d262-818e-4fca-bee4-f4d77eb2c7af.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh55wmfwbgcxkr: [
+    image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  lh75wmfwlgcxkr: [
+    image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ]
 };
 
@@ -615,5 +663,21 @@ export const cardImages = {
   'eb-pu2213b': 'eb-pu2213b-main.webp',
   'eb-pu2010w-b': 'eb-pu2010w-b-main.webp',
   'eb-pu1008b': 'eb-pu1008b-main.webp',
-  'eb-l260f': 'eb-l260f-main.webp'
+  'eb-l260f': 'eb-l260f-main.webp',
+  hg43u800fnfxkr: 'hg43u800fnfxkr-main.webp',
+  hg50u800fnfxkr: 'hg50u800fnfxkr-main.webp',
+  hg65u800fnfxkr: 'hg65u800fnfxkr-main.webp',
+  lh32qmcebgcxkr: 'lh32qmcebgcxkr-main.webp',
+  lh43qmcebgcxkr: 'lh43qmcebgcxkr-main.webp',
+  lh85qmcebgcxkr: 'lh85qmcebgcxkr-main.webp',
+  lh98qecedgcxkr: 'lh98qecedgcxkr-main.webp',
+  lh98qmcebgcxkr: 'lh98qmcebgcxkr-main.webp',
+  lh43qhcebgcxkr: 'lh43qhcebgcxkr-main.webp',
+  lh75qhcebgcxkr: 'lh75qhcebgcxkr-main.webp',
+  lh115qhfebgxkr: 'lh115qhfebgxkr-main.webp',
+  lh55vmcrbgbxkr: 'lh55vmcrbgbxkr-main.webp',
+  lh55vhcrbgbxkr: 'lh55vhcrbgbxkr-main.webp',
+  kq75lsf03wfxkr: 'kq75lsf03wfxkr-main.webp',
+  lh55wmfwbgcxkr: 'lh55wmfwbgcxkr-main.webp',
+  lh75wmfwlgcxkr: 'lh75wmfwlgcxkr-main.webp'
 };

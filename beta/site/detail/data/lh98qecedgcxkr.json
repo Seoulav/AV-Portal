@@ -1,0 +1,174 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH98QECEDGCXKR",
+  "model": "LH98QECEDGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung standalone UHD E-series digital signage (QE98C), 98-inch large-format display with Quantum Processor 4K.",
+  "korean": "삼성 단독형 UHD E 시리즈(QE98C) 디지털 사이니지 98인치 초대형 모델로, 퀀텀 프로세서 4K를 탑재했다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) QEC 시리즈 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH98QECEDGCXKR(QE98C)은 삼성전자의 단독형 UHD E 시리즈 디지털 사이니지 98인치 초대형 모델이다. 98인치 대화면으로 매장·공공장소 등 어떤 공간에서도 사실적인 비주얼과 색상으로 스크린을 가득 채워 콘텐츠 전달 효과를 높인다.\n\n슬림한 두께와 매끈한 외관으로 벽면에 자연스럽게 부착할 수 있는 미니멀 디자인을 갖췄으며(벽걸이는 별도 구매), 퀀텀 프로세서 4K의 지능형 UHD 업스케일링 기술로 저해상도 영상을 UHD급으로 끌어올려 선명도와 몰입감을 높인다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh98qecedgcxkr-main.webp",
+      "alt": "단독형 UHD E 시리즈 98인치 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH98QECEDGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2024/08/26/619b8046-e8f2-4617-a3b7-65559d31ea30.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2024/08/26/619b8046-e8f2-4617-a3b7-65559d31ea30.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH98QECEDGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "98인치 초대형 화면으로 사실적인 비주얼과 색상을 전달한다.",
+      "source": "P"
+    },
+    {
+      "text": "슬림한 두께의 미니멀 디자인으로 벽면에 자연스럽게 부착할 수 있다(벽걸이 별도 구매).",
+      "source": "P"
+    },
+    {
+      "text": "퀀텀 프로세서 4K의 지능형 UHD 업스케일링으로 저해상도 영상을 UHD급으로 향상시킨다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "98",
+      "unit": "인치",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "영상 처리 엔진",
+      "value": "퀀텀 프로세서 4K (Quantum Processor 4K)",
+      "unit": "",
+      "condition": "지능형 UHD 업스케일링 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "디자인",
+      "value": "슬림 디자인, 벽면 부착형",
+      "unit": "",
+      "condition": "벽걸이(마운트)는 별도 구매 필요",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "URL-SUBSTITUTION",
+      "status": "RESOLVED",
+      "title": "카탈로그 링크 보완",
+      "detail": "카탈로그에는 samsungsvc.co.kr 다운로드 페이지만 있었으나, 웹 검색으로 samsung.com/sec의 실제 제품 페이지 경로가 'qec-series-d'(과제 안내의 'qec-series'가 아님)임을 확인해 official_page로 사용했다."
+    },
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "상세 스펙 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH98QECEDGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

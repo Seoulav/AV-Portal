@@ -1,0 +1,269 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH75WMFWLGCXKR",
+  "model": "LH75WMFWLGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Interactive Display"
+  ],
+  "english": "Samsung Flip Pro interactive whiteboard display, 75-inch, with 26ms/2048-level pressure pen, 450 nits, 43.5mm slim depth, SmartView+ and Knox security.",
+  "korean": "삼성 Flip Pro 전자칠판 75인치 모델로, 반응속도 26ms·2,048단계 필압 펜, 450니트 밝기, 43.5mm 슬림 두께, 스마트뷰+, Knox 보안을 지원한다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) Flip Pro 제품 페이지에서 마케팅 사양을 확인했다(55인치 모델과 동일 마케팅 템플릿, 두께 수치는 75인치 모델 고유). 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH75WMFWLGCXKR은 삼성전자의 전자칠판(인터랙티브 디스플레이) Flip Pro 75인치 모델이다. 반응 속도 26ms, 2,048단계 압력 감지 펜으로 실제 잉크에 가까운 자연스러운 필기 경험을 제공하며, 손가락과 손바닥으로 바로 지울 수 있는 지우개 기능을 지원한다. 향상된 성능의 화이트보드 앱에서는 AI 필기 도구로 손글씨 텍스트 검색과 손그림 도형의 자동 정리 기능을 제공한다.\n\nFlip Home에서 화이트보드, Note On, 워크스페이스, 화면 공유 등 자주 쓰는 앱을 배치해 빠르게 실행할 수 있고, 멀티 윈도우 모드로 여러 창을 동시에 표시할 수 있다. 최대 9대 기기까지 케이블 없이 연결하는 스마트뷰+와 에어플레이 2로 무선 화면 공유가 가능하며, Knox 기반 보안 워크스페이스로 원격 PC·네트워크 드라이브 접속과 Office 365 등 클라우드 앱 실행을 지원한다.\n\n450니트 밝기와 눈부심 방지 코팅으로 밝은 회의실에서도 선명한 화면을 유지하며, 43.5mm의 슬림한 두께로 대형 모델임에도 공간 활용도를 높였다. USB-C 허브와 HDMI 출력으로 외부 기기·대형 화면과의 연결도 간편하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh75wmfwlgcxkr-main.webp",
+      "alt": "Flip Pro 전자칠판 75인치 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH75WMFWLGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH75WMFWLGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "반응 속도 26ms, 2,048단계 압력 센서의 펜으로 실제 잉크에 가까운 필기 경험을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "AI 필기 도구가 손글씨 텍스트 검색과 손그림 도형의 자동 정리를 지원하는 화이트보드 앱을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "삼성 Knox 보안과 Knox 기반 워크스페이스로 부팅부터 종료까지 데이터를 안전하게 보호한다.",
+      "source": "P"
+    },
+    {
+      "text": "최대 9대 기기까지 케이블 없이 연결하는 스마트뷰+와 에어플레이 2로 무선 화면 공유를 지원한다.",
+      "source": "P"
+    },
+    {
+      "text": "450니트 밝기와 눈부심 방지 코팅으로 밝은 회의실에서도 선명한 화면을 유지한다.",
+      "source": "P"
+    },
+    {
+      "text": "43.5mm의 슬림한 두께로 75인치 대형 모델에서도 공간 디자인을 새롭게 정의한다.",
+      "source": "P"
+    },
+    {
+      "text": "USB-C 허브와 HDMI 출력으로 카메라 등 외부 기기 연결과 대형 화면·프로젝터 미러링을 지원한다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "75",
+      "unit": "인치",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "밝기",
+      "value": "450",
+      "unit": "nits",
+      "condition": "눈부심 방지 코팅 적용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Touch/Pen",
+      "name": "펜 반응 속도",
+      "value": "26",
+      "unit": "ms",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Touch/Pen",
+      "name": "펜 압력 감지 단계",
+      "value": "2048",
+      "unit": "단계",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 두께",
+      "value": "43.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "협업 앱",
+      "value": "화이트보드, Note On, 워크스페이스, Flip Home, 멀티 윈도우",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "무선 화면 공유",
+      "value": "스마트뷰+ (최대 9대 기기)",
+      "unit": "",
+      "condition": "Windows, Android, iOS 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Apple 연결",
+      "value": "AirPlay 2",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Security",
+      "name": "보안",
+      "value": "삼성 Knox (Knox 기반 워크스페이스)",
+      "unit": "",
+      "condition": "원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요)",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Data",
+      "connector": "USB-C 허브",
+      "signal": "외부기기 연결/PC 공유",
+      "direction": "IN/OUT",
+      "quantity": "",
+      "protocol": "USB-C",
+      "availability": "",
+      "condition": "카메라, 문서 리더기 등 연결",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI 출력",
+      "signal": "화면 미러링 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "HDMI",
+      "availability": "",
+      "condition": "대형 디스플레이·프로젝터로 미러링",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    },
+    {
+      "code": "ROTATE-NOTE",
+      "status": "OPEN",
+      "title": "회전형 디자인 미적용 확인",
+      "detail": "55인치 모델 페이지에는 '회전형 디자인은 LH55WMFWBGCXKR, LH65WMFWBGCXKR 모델에 한해 적용됩니다'라는 각주가 있어, 75인치 모델(LH75WMFWLGCXKR)은 회전형 디자인이 적용되지 않는 것으로 보인다. 이에 따라 회전형 디자인 기능/스펙 항목을 75인치 모델에는 포함하지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH75WMFWLGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
