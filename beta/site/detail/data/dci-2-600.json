@@ -325,14 +325,14 @@
   "io": [
     {
       "group": "Output",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "2채널",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {

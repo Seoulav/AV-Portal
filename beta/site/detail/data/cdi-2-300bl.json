@@ -396,14 +396,14 @@
   "io": [
     {
       "group": "Output",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "2채널",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {
@@ -420,38 +420,38 @@
     },
     {
       "group": "Audio Network",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ-45",
       "signal": "HARMAN BLU link digital audio bus",
       "direction": "I/O",
       "quantity": "",
       "protocol": "BLU link",
       "availability": "BL/N 모델",
       "condition": "BLU link: 지원 (256채널 디지털 오디오 버스) (non-BL 모델과의 차이점)",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {
       "group": "Control",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ-45",
       "signal": "HiQnet 제어/모니터링 네트워크",
       "direction": "I/O",
       "quantity": "",
       "protocol": "HiQnet Audio Architect",
       "availability": "",
       "condition": "",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {
       "group": "Control",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "8핀 블록 커넥터(GPIO·AUX 공용)",
       "signal": "GPIO/AUX 제어 입출력",
       "direction": "I/O",
       "quantity": "",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {

@@ -441,26 +441,26 @@
     },
     {
       "group": "Network",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ-45",
       "signal": "Network / Dante audio",
       "direction": "I/O",
       "quantity": "",
       "protocol": "Dante",
       "availability": "",
       "condition": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {
       "group": "Power",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "IEC 전원 인렛(100–240V AC)",
       "signal": "Power input",
       "direction": "IN",
       "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "100–240 V AC, 50–60 Hz, 최대 0.26 A",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     }
   ],
