@@ -370,6 +370,47 @@ export const group1Images = {
   'ultritouch-2-hr': [
     image('Front', 'ultritouch-2-hr-main.webp', 'Ultritouch-2-HR 전면 (Ultritouch 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg', '1600x800', '1600x800', 'VERIFIED'),
     image('Rear', 'ultritouch-2-hr-rear.webp', 'Ultritouch 후면 패널 - 전원/네트워크 커넥터 (참고용, 2RU/4RU 공용 이미지일 가능성 있음)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back.jpg', '1600x800', '1600x800', 'FOUND')
+  ],
+  'novastar-h2': [
+    image('Front', 'h2-front.webp', 'NovaStar H2 전면부', 'NovaStar', 'H2', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x532', '2400x532', 'VERIFIED'),
+    image('Rear', 'h2-rear.webp', 'NovaStar H2 후면부(카드 슬롯)', 'NovaStar', 'H2', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x534', '2400x534', 'VERIFIED')
+  ],
+  'novastar-h5': [
+    image('Front', 'h5-front.webp', 'NovaStar H5 전면부(터치스크린 LCD)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1176', '2400x1176', 'VERIFIED'),
+    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED')
+  ],
+  'h-preview-card-2xrj45-1xhdmi13': [
+    image('Main', 'h-preview-card-2xrj45-1xhdmi13-main.webp', 'H_2xRJ45+1xHDMI1.3 프리뷰 카드 전면 커넥터', 'NovaStar', 'H_2xRJ45+1xHDMI1.3 Preview Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1126x117', '1126x117', 'VERIFIED')
+  ],
+  'h-input-card-4xhdmi': [
+    image('Main', 'h-input-card-4xhdmi-main.webp', 'H_4xHDMI 입력 카드 전면 커넥터(HDMI 1.3 x2, HDMI 1.4 x2)', 'NovaStar', 'H_4xHDMI Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x155', '1342x155', 'VERIFIED')
+  ],
+  'h-input-card-hdmi20-dp12-4k': [
+    image('Main', 'h-input-card-hdmi20-dp12-4k-main.webp', 'H_1xHDMI2.0+1xDP1.2 입력 카드 전면 커넥터', 'NovaStar', 'H_1xHDMI2.0+1xDP1.2 Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x155', '1342x155', 'VERIFIED')
+  ],
+  'h-input-card-hdmi20-4k': [
+    image('Main', 'h-input-card-hdmi20-4k-main.webp', 'H_1xHDMI2.0 입력 카드 전면 커넥터', 'NovaStar', 'H_1xHDMI2.0 Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x137', '1342x137', 'VERIFIED')
+  ],
+  'h-input-card-dp12-4k': [
+    image('Main', 'h-input-card-dp12-4k-main.webp', 'H_1xDP1.2 입력 카드 전면 커넥터', 'NovaStar', 'H_1xDP1.2 Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x155', '1342x155', 'VERIFIED')
+  ],
+  'h-input-card-2xhdmi20-2xdp12': [
+    image('Main', 'h-input-card-2xhdmi20-2xdp12-main.webp', 'H_2xHDMI2.0+2xDP1.2 입력 카드 전면 커넥터', 'NovaStar', 'H_2xHDMI2.0+2xDP1.2 Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x155', '1342x155', 'VERIFIED')
+  ],
+  'h-input-card-12g-sdi': [
+    image('Main', 'h-input-card-12g-sdi-main.webp', 'H_1x12G SDI 입력 카드 전면 커넥터(IN / LOOP)', 'NovaStar', 'H_1x12G SDI Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x139', '1342x139', 'VERIFIED')
+  ],
+  'h-input-card-4x3g-sdi': [
+    image('Main', 'h-input-card-4x3g-sdi-main.webp', 'H_4x3G SDI 입력 카드 전면 커넥터', 'NovaStar', 'H_4x3G SDI Input Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x139', '1342x139', 'VERIFIED')
+  ],
+  'h-output-card-4xhdmi-dl': [
+    image('Main', 'h-output-card-4xhdmi-dl-main.webp', 'H_4xHDMI 출력 카드 전면 커넥터(HDMI 1.4 x4)', 'NovaStar', 'H_4xHDMI Output Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1126x115', '1126x115', 'VERIFIED')
+  ],
+  'h-output-card-hdmi20-4k': [
+    image('Main', 'h-output-card-hdmi20-4k-main.webp', 'H_1xHDMI2.0 출력 카드 전면 커넥터(주 출력 + 복제 출력)', 'NovaStar', 'H_1xHDMI2.0 Output Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x137', '1342x137', 'VERIFIED')
+  ],
+  'h-800w-psu': [
+    image('Main', 'h-800w-psu-main.webp', 'H_800W 전원 공급 모듈 실물 사진', 'NovaStar', 'H_800W Power', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '550x466', '550x466', 'VERIFIED')
   ]
 };
 
@@ -501,5 +542,18 @@ export const cardImages = {
   'ultrix-hdx-io': 'ultrix-hdx-io-main.webp',
   ultripower: 'ultripower-main.webp',
   'ultripower-ps': 'ultripower-ps-main.webp',
-  'ultritouch-2-hr': 'ultritouch-2-hr-main.webp'
+  'ultritouch-2-hr': 'ultritouch-2-hr-main.webp',
+  'novastar-h2': 'h2-front.webp',
+  'novastar-h5': 'h5-front.webp',
+  'h-preview-card-2xrj45-1xhdmi13': 'h-preview-card-2xrj45-1xhdmi13-main.webp',
+  'h-input-card-4xhdmi': 'h-input-card-4xhdmi-main.webp',
+  'h-input-card-hdmi20-dp12-4k': 'h-input-card-hdmi20-dp12-4k-main.webp',
+  'h-input-card-hdmi20-4k': 'h-input-card-hdmi20-4k-main.webp',
+  'h-input-card-dp12-4k': 'h-input-card-dp12-4k-main.webp',
+  'h-input-card-2xhdmi20-2xdp12': 'h-input-card-2xhdmi20-2xdp12-main.webp',
+  'h-input-card-12g-sdi': 'h-input-card-12g-sdi-main.webp',
+  'h-input-card-4x3g-sdi': 'h-input-card-4x3g-sdi-main.webp',
+  'h-output-card-4xhdmi-dl': 'h-output-card-4xhdmi-dl-main.webp',
+  'h-output-card-hdmi20-4k': 'h-output-card-hdmi20-4k-main.webp',
+  'h-800w-psu': 'h-800w-psu-main.webp'
 };

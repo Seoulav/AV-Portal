@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "96749BE9EF0DF1B626DE80FD95DACB236B903024F346802DD804AE6981FB20BA",
+    "sha256": "EFABD71BA6AED4DC32990ACAB3247A1201D8A56F142F0B5D2570E0C69CC219DC",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -253,6 +253,72 @@
       "specifications": 10,
       "io": 2
     },
+    "h-800w-psu": {
+      "sha256": "2526760044131BFE99AACF16B1609D11FF3237D33AF54E5B9111A692CFFC6819",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "h-input-card-12g-sdi": {
+      "sha256": "046B53159329E68A13DE2AC8893867726E8563ABFC5E35348EB2922F6BD1F26E",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-2xhdmi20-2xdp12": {
+      "sha256": "EFF691B111B5BDE20A733A204F5FDD9F0A15C0ECA4B0FC3AE722DE22B19806E9",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-4x3g-sdi": {
+      "sha256": "B0E6918FD4071237CF9012730A58D2B72FE1877C6A2F95621E9608B29D45335B",
+      "features": 3,
+      "specifications": 5,
+      "io": 1
+    },
+    "h-input-card-4xhdmi": {
+      "sha256": "F82DDAD373F43D7BD660504583682D5539E2ACDAB728A8F79BFC542E89D42BA6",
+      "features": 4,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-input-card-dp12-4k": {
+      "sha256": "FA9A44A780D6BD30149A8C5277E1E96F159CD60D3D588D7C41FAB80076D834F3",
+      "features": 4,
+      "specifications": 6,
+      "io": 1
+    },
+    "h-input-card-hdmi20-4k": {
+      "sha256": "282CD792823CDDDC0AFAECD06D53C936996EC82789F5AF7B852B419FDC5E7807",
+      "features": 4,
+      "specifications": 6,
+      "io": 1
+    },
+    "h-input-card-hdmi20-dp12-4k": {
+      "sha256": "AB975EB9F380805BE1C5AD7DB859C545C0D4C24F167AD400DED5191207BD90AE",
+      "features": 4,
+      "specifications": 7,
+      "io": 2
+    },
+    "h-output-card-4xhdmi-dl": {
+      "sha256": "F1B6A3BEAF269E2B1B3DEC08229416D9F8D36E38C8EE8FD81FEC9E14D7F7938D",
+      "features": 4,
+      "specifications": 7,
+      "io": 1
+    },
+    "h-output-card-hdmi20-4k": {
+      "sha256": "B542F3FEB203E91D3FAB6DA36C0E063BB1CC8B5A7C5481EE6BA057AE0C997DCF",
+      "features": 3,
+      "specifications": 6,
+      "io": 2
+    },
+    "h-preview-card-2xrj45-1xhdmi13": {
+      "sha256": "EEEDE951FC555F688EE7775B16CC09FB9220B6368BB5A83A211399700BD4E06D",
+      "features": 4,
+      "specifications": 4,
+      "io": 2
+    },
     "hdmi20-optj-rx90": {
       "sha256": "910542D4DCFAD52A7CCB81CA5F57F7F4BA1BF4BF2C455B206A6E254032797ACF",
       "features": 6,
@@ -306,6 +372,18 @@
       "features": 7,
       "specifications": 10,
       "io": 4
+    },
+    "novastar-h2": {
+      "sha256": "A47F7AFB20FF45A8102969E7E538D4B98C2483D62137A88CBF6AF237CF9693E7",
+      "features": 6,
+      "specifications": 26,
+      "io": 7
+    },
+    "novastar-h5": {
+      "sha256": "AB2841DB61F924EDBD9C94144B9B962F13AEF8B634AE157FFA9C0A431D3438E1",
+      "features": 6,
+      "specifications": 26,
+      "io": 7
     },
     "nx-1200": {
       "sha256": "649AB28D95E8E694A899380193605E74F3F427D9CDD4E099667AAB95422E7BE1",

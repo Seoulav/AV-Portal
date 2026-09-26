@@ -18,7 +18,7 @@ export const manufacturerHosts = {
   Lumantek: ['lumantek.com', 'lumantek.co.kr'],
   Magnimage: ['magnimage.com'],
   NETGEAR: ['netgear.com'],
-  NovaStar: ['novastar.tech'],
+  NovaStar: ['novastar.tech', 'en-website001.oss-us-east-1.aliyuncs.com'],
   Panasonic: ['panasonic.com'],
   Powersoft: ['powersoft.com'],
   Roland: ['roland.com'],

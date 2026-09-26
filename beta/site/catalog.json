@@ -1043,7 +1043,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "novastar-h5",
+    "card_image": "h5-front.webp"
   },
   {
     "brand": "NovaStar",
@@ -1058,7 +1060,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "novastar-h2",
+    "card_image": "h2-front.webp"
   },
   {
     "brand": "NovaStar",
@@ -1073,7 +1077,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-preview-card-2xrj45-1xhdmi13",
+    "card_image": "h-preview-card-2xrj45-1xhdmi13-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1088,7 +1094,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-4xhdmi",
+    "card_image": "h-input-card-4xhdmi-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1103,7 +1111,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-hdmi20-dp12-4k",
+    "card_image": "h-input-card-hdmi20-dp12-4k-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1118,7 +1128,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-hdmi20-4k",
+    "card_image": "h-input-card-hdmi20-4k-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1133,7 +1145,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-dp12-4k",
+    "card_image": "h-input-card-dp12-4k-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1148,7 +1162,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-2xhdmi20-2xdp12",
+    "card_image": "h-input-card-2xhdmi20-2xdp12-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -1163,7 +1179,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-12g-sdi",
+    "card_image": "h-input-card-12g-sdi-main.webp"
   },
   {
     "brand": "Colorlight",
@@ -2631,7 +2649,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-input-card-4x3g-sdi",
+    "card_image": "h-input-card-4x3g-sdi-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -2646,7 +2666,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-output-card-4xhdmi-dl",
+    "card_image": "h-output-card-4xhdmi-dl-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -2661,7 +2683,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-output-card-hdmi20-4k",
+    "card_image": "h-output-card-hdmi20-4k-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -2676,7 +2700,9 @@
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
     "link_scope": "series",
-    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf",
+    "slug": "h-800w-psu",
+    "card_image": "h-800w-psu-main.webp"
   },
   {
     "brand": "Ross Video",
