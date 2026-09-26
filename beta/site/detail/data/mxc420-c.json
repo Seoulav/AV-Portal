@@ -220,6 +220,15 @@
       "condition": "듀얼플렉스 버전은 MXC416DF/420DF/425DF",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -254,6 +263,11 @@
       "name": "제조사 데이터시트",
       "url": "https://content-files.shure.com/Pubs/mxc416-mxc420-mxc425/mxc416-mxc420-mxc425-gooseneck-spec-sheet-letter-en.pdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
     }
   ],
   "issues": [

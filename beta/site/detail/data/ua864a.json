@@ -238,6 +238,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -278,6 +287,11 @@
       "name": "제조사 사용 안내",
       "url": "https://pubs.shure.com/guide/UA864/en-US",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
     }
   ],
   "issues": [

@@ -482,6 +482,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -516,6 +525,11 @@
       "name": "제조사 데이터시트",
       "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
     }
   ],
   "issues": [
@@ -540,23 +554,17 @@
     {
       "code": "R4",
       "status": "REVIEW REQUIRED",
-      "title": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로…",
-      "detail": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로 확인 불가"
-    },
-    {
-      "code": "R5",
-      "status": "REVIEW REQUIRED",
       "title": "shure.com DB의…",
       "detail": "shure.com DB의 weight/transmitter_weight 필드는 0(미입력) — 무게는 스펙시트·가이드의 89 g 사용"
     },
     {
-      "code": "R6",
+      "code": "R5",
       "status": "REVIEW REQUIRED",
       "title": "한국 지역 전용 SKU 접미사는 없음. 대역 변형…",
       "detail": "한국 지역 전용 SKU 접미사는 없음. 대역 변형 SLXD1+=-G64, SLXD1+=-X51 존재"
     },
     {
-      "code": "R7",
+      "code": "R6",
       "status": "REVIEW REQUIRED",
       "title": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+…",
       "detail": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+ 시스템 공통 사양"

@@ -462,6 +462,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
     }
   ],
   "io": [],
@@ -483,6 +492,11 @@
       "name": "제조사 데이터시트",
       "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
     }
   ],
   "issues": [
@@ -507,23 +521,17 @@
     {
       "code": "R4",
       "status": "REVIEW REQUIRED",
-      "title": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로…",
-      "detail": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로 확인 불가"
-    },
-    {
-      "code": "R5",
-      "status": "REVIEW REQUIRED",
       "title": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리…",
       "detail": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리 images 0개, en-GB/en-ASIA 동일) — 후면/두 번째 각도 이미지 없음"
     },
     {
-      "code": "R6",
+      "code": "R5",
       "status": "REVIEW REQUIRED",
       "title": "공식 SKU 표기는 'SLXD2+/58'(구형…",
       "detail": "공식 SKU 표기는 'SLXD2+/58'(구형 'SLXD2/SM58'과 표기 다름). 중국 변형만 'SLXD2+CN/SM58'"
     },
     {
-      "code": "R7",
+      "code": "R6",
       "status": "REVIEW REQUIRED",
       "title": "대역 변형에 =-G64, =-X51 포함",
       "detail": "대역 변형에 =-G64, =-X51 포함"

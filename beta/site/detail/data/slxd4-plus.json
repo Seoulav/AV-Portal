@@ -581,6 +581,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -651,6 +660,11 @@
       "name": "제조사 데이터시트",
       "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
     }
   ],
   "issues": [
@@ -675,29 +689,23 @@
     {
       "code": "R4",
       "status": "REVIEW REQUIRED",
-      "title": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로…",
-      "detail": "한국 대역 G64/X51의 국내 인증·허용 여부는 공식 자료로 확인 불가"
-    },
-    {
-      "code": "R5",
-      "status": "REVIEW REQUIRED",
       "title": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식…",
       "detail": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식 사양(스펙시트·사용자 가이드)은 '15 VDC @ 360 mA' — 소비전류 값 불일치(인쇄는 어댑터 정격일 가능성 있으나 공식 설명 없음)"
     },
     {
-      "code": "R6",
+      "code": "R5",
       "status": "REVIEW REQUIRED",
       "title": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로…",
       "detail": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로 구분 불가 — shure.com SLX-D+ 해당 제품 페이지 갤러리 이미지임을 근거로 채택"
     },
     {
-      "code": "R7",
+      "code": "R6",
       "status": "REVIEW REQUIRED",
       "title": "SKU 표기: 한국 지역 코드 변형 SLXD4+K=-G64,…",
       "detail": "SKU 표기: 한국 지역 코드 변형 SLXD4+K=-G64, SLXD4+K=-X51"
     },
     {
-      "code": "R8",
+      "code": "R7",
       "status": "REVIEW REQUIRED",
       "title": "shure.com 상세 제목은 'Digital Wireless…",
       "detail": "shure.com 상세 제목은 'Digital Wireless Receiver'(SLXD4D+는 'Dual Channel Wireless Receiver')"

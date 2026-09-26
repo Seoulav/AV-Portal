@@ -8,9 +8,9 @@
   },
   "details": {
     "a900w-r-gm": {
-      "sha256": "90F1F4207A1C5950824F618A6162A3A3743FB20F1608A67B4A1BDCD2D4D1B514",
+      "sha256": "C7F92BD9F9A1430EAB070CBB862E1E404C7F5A5D17343BC943E0A937551F2537",
       "features": 2,
-      "specifications": 6,
+      "specifications": 7,
       "io": 1
     },
     "ac18-26": {
@@ -884,45 +884,45 @@
       "io": 7
     },
     "mx392-c": {
-      "sha256": "F849B444DAB3A21E87985FED2F5DC2DED9B69BF4744E7FF77B4331483733A799",
-      "features": 3,
-      "specifications": 24,
-      "io": 2
-    },
-    "mx395": {
-      "sha256": "A10AD7D0AC899F24EF996DF5E2EE197749E865E21E61FB7932C247F16DD72416",
-      "features": 3,
-      "specifications": 24,
-      "io": 2
-    },
-    "mx418d-c": {
-      "sha256": "53892D97996EA92A512E93DE9DD02E3FA300565FBF585F324B7C99D9B113B20A",
+      "sha256": "B2200FDE01BB48254FA3ACCDF0077EFC3CB1164CA6E0C4C05160CFE6921CAAA0",
       "features": 3,
       "specifications": 25,
       "io": 2
     },
+    "mx395": {
+      "sha256": "283CBE0E42D97962F84978773A286E90ED90FBA2ED157EB2FBAE02096A6640D3",
+      "features": 3,
+      "specifications": 25,
+      "io": 2
+    },
+    "mx418d-c": {
+      "sha256": "A29E813C9203357B96E707FA192DF5C6F4848A32C6BCA585E924F856C938C1F0",
+      "features": 3,
+      "specifications": 26,
+      "io": 2
+    },
     "mxa925w-r": {
-      "sha256": "90E19A4499C829588AA9FDD751245165D01434E5E2A0547452D7FA2E3897EEDA",
+      "sha256": "D8535392452FE7514D5FFC8C8ADF15FC7A3292B178C3D6BE9D1DE78A7616065F",
       "features": 2,
-      "specifications": 30,
+      "specifications": 31,
       "io": 3
     },
     "mxc420-c": {
-      "sha256": "139BD45D9C1D9ECEB5D5C1EC19D96B74D68CB52B10BBEF44A4E90A4F6649B0B4",
+      "sha256": "AAADCFB491904358B36ECF222AD3EE3DAF4F14D3FE306A7CE29C0AAE1A323705",
       "features": 3,
-      "specifications": 12,
+      "specifications": 13,
       "io": 1
     },
     "mxcw640": {
-      "sha256": "C47DB31FF44956FFE6D9FF3347BC99D34CF7410023D011F9A038B390281F43E9",
+      "sha256": "447E666F6BE58E5B4031C02542AD5BA73682F80F20362DF1451FBE2EF4A1D7A4",
       "features": 7,
-      "specifications": 10,
+      "specifications": 11,
       "io": 4
     },
     "mxcwapt-w": {
-      "sha256": "929A56B761ED7615BBF10DE5A0311F3FC5BC0A71592118856855C4161DB7F668",
+      "sha256": "30335F84B2FC6FD19FBFF5BB0286C651FA3657E3C2B3A3A7C2CE5961D71276B7",
       "features": 3,
-      "specifications": 20,
+      "specifications": 21,
       "io": 3
     },
     "novastar-h2": {
@@ -1022,27 +1022,27 @@
       "io": 10
     },
     "qlxd1": {
-      "sha256": "19BA9785AD7815AEA9767A1B5EE2BB4BEA8B127A0BAD5055AE5C82A3675E72FE",
+      "sha256": "3BFF4AB52B55E6A2ECB459F2ED1E3AF47D5935353DFEF19C4A1AF2C2ADFB2444",
       "features": 3,
-      "specifications": 20,
+      "specifications": 21,
       "io": 2
     },
     "qlxd2-beta58": {
-      "sha256": "CBBF1BFEEE169E9E8E05BE30780BDAB3550F0D22A0E1F14B125CCF6D1852D7E0",
-      "features": 4,
-      "specifications": 16,
-      "io": 0
-    },
-    "qlxd2-beta87a": {
-      "sha256": "B8943D59636668BB0E44F7544F553E39E1FBEB45BF58F0E4F5BAA5CAF103FF18",
+      "sha256": "7518BB0C50A3F11F7F26BAB372E635CAA27B4919E6C02CCDFC9C92DADD07BE17",
       "features": 4,
       "specifications": 17,
       "io": 0
     },
+    "qlxd2-beta87a": {
+      "sha256": "A7C7BCF62B79DEB5A36440570542220FA4F6A4666EB3D194B32B81C2351F8811",
+      "features": 4,
+      "specifications": 18,
+      "io": 0
+    },
     "qlxd4": {
-      "sha256": "A9D487A3393D8983EF350D746C81C6E08E40156E1D8A6353EB1115E0B0C7A25E",
+      "sha256": "12F632632B9C2A82B63540A1C456E9E05600CDEE1BFF12C52EB82B6E78F957AC",
       "features": 3,
-      "specifications": 29,
+      "specifications": 30,
       "io": 4
     },
     "quattrocanali-1204-dsp": {
@@ -1130,39 +1130,39 @@
       "io": 6
     },
     "slxd1-plus": {
-      "sha256": "3BC8A60C5791541451607AA92331065D30DBB9E965FB102B5CC66D2D58F891C9",
+      "sha256": "43161A356BCC1A8C2FA4359DE6F4DC5E1872D6A570DEE668D8F9CFC7A59DC598",
       "features": 3,
-      "specifications": 38,
+      "specifications": 39,
       "io": 1
     },
     "slxd2-plus-58": {
-      "sha256": "B71482030FC65109D3DA730E4E43C95AB43C7680C0AA19254A9E7C8D2B324F10",
+      "sha256": "BFCA3DA5F63F57449DF3AA62376C9F8AEC6EF8EA5DD0181C0DB197EF39241CEB",
       "features": 5,
-      "specifications": 38,
+      "specifications": 39,
       "io": 0
     },
     "slxd2-plus-b58": {
-      "sha256": "BAD87B58FB6BE5BACDD7E076A1F4564286F933E659763528C8A5CEB1CCB76867",
+      "sha256": "913768FD3770B423438AB39654D12314AFDE0B679C590E4344DC24F1DC9C84E9",
       "features": 5,
-      "specifications": 38,
+      "specifications": 39,
       "io": 0
     },
     "slxd2-plus-b87a": {
-      "sha256": "C419B76A228702C2322A683553782D4AE2041075F1CCED1A853C915DF1AB7748",
+      "sha256": "1625F41F8B31652EC36CCC255FF69F28DADC8AE4915F58D63C8B84783E002269",
       "features": 5,
-      "specifications": 38,
+      "specifications": 39,
       "io": 0
     },
     "slxd4-plus": {
-      "sha256": "9133AEBFF789FE3709A96C30425AEE6D44575AAE23A9E991B691F10C4B9A5D18",
+      "sha256": "AA06AECD9970A85A28BCFB60E3E4D791AC09267002A5F0196E76F8606E7D3713",
       "features": 3,
-      "specifications": 49,
+      "specifications": 50,
       "io": 4
     },
     "slxd4d-plus": {
-      "sha256": "11541542ECCBE98069B8145C044C430DEA1F50D5F90025AA1AEE973FEB00E0FF",
+      "sha256": "8373A824F58ACBAB1F8420AB36B277BF6A6CC1205469851368EDCFC73C6A2681",
       "features": 3,
-      "specifications": 49,
+      "specifications": 50,
       "io": 4
     },
     "smartvision40": {
@@ -1214,27 +1214,27 @@
       "io": 6
     },
     "ua844-swb": {
-      "sha256": "809FE34079AA8F303902D90C99EB9386D506587861B669EF92722150AEC3DB17",
+      "sha256": "2AB5A3EBEBB434EC2154E2EDBFA5568E9147462401A92CE5C11784E7D6B51B3A",
       "features": 2,
-      "specifications": 16,
+      "specifications": 17,
       "io": 4
     },
     "ua845uwb": {
-      "sha256": "D0E6E96D3D1C2DAA2E75562C3DABA5F8572A277BFB3A7AFE36199388CA260E71",
+      "sha256": "6D7BEA3D381F8A0ADE75FC45795BCA367B0B12A0B4269D4835D5120845ED6023",
       "features": 2,
-      "specifications": 13,
+      "specifications": 14,
       "io": 3
     },
     "ua864a": {
-      "sha256": "010BABC338A21DE2A300E9DCF35B01D19C97039F0021439A8940FE4E09DE0EC6",
+      "sha256": "3BB603EE1864E705C25A7E026393AFB8569B13436A28F87678BD4EEF0B41B1AB",
       "features": 2,
-      "specifications": 13,
+      "specifications": 14,
       "io": 2
     },
     "ua874xa": {
-      "sha256": "6F35BB21C7DF8CF82262DB96B281233F2BE28DC33FBF69D16462E7C45A43146A",
+      "sha256": "241791CD1D01EA3A7001017257B60DB78CAA7095C9B0DE881848C854B7407203",
       "features": 2,
-      "specifications": 14,
+      "specifications": 15,
       "io": 2
     },
     "ultripower-ps": {
@@ -1268,51 +1268,51 @@
       "io": 6
     },
     "ulxd1": {
-      "sha256": "C8394F966505BB08A70F2552E20EE3E237AAC75542943A07A58C8DAC7DA0E66D",
+      "sha256": "C4EA23803499898EB7460D139907801F32C9F4465472FA543B1BC5B55D0075B7",
       "features": 2,
-      "specifications": 20,
+      "specifications": 21,
       "io": 2
     },
     "ulxd2-beta58": {
-      "sha256": "96CB8A94682A7E9040E90758E2967E7584FAE093A2B86E974A4210D5BD065015",
+      "sha256": "1770CFB237532082E21569E0145D70C035875F2C5C254FD9E7A7693CA50A847B",
+      "features": 3,
+      "specifications": 19,
+      "io": 0
+    },
+    "ulxd2-beta87": {
+      "sha256": "1A7B31F35D919B46E4A81C0A85D0A21A9CC0364FEB6E5DE08114229E0FC8F57A",
       "features": 3,
       "specifications": 18,
       "io": 0
     },
-    "ulxd2-beta87": {
-      "sha256": "1A332EBEF031CD585C72822A7294395F9EB693ACF6811AF5750F4BBED253A364",
-      "features": 3,
-      "specifications": 17,
-      "io": 0
-    },
     "ulxd2-ksm9": {
-      "sha256": "26CCDD2CF23FEB61335CD9D566F8C2C803D5C752125899EE6BDDE35BED36F490",
+      "sha256": "AD70A182107B4D3997A62E87AAB0FFB788A7120E51D97DBFFBA5726EB29E1ACF",
       "features": 3,
-      "specifications": 17,
+      "specifications": 18,
       "io": 0
     },
     "ulxd4": {
-      "sha256": "A5BBAC204B5523D6E159AD8366B29274593B202A6B4978575FE0E5B1F20D95DF",
+      "sha256": "16BDC2F9470439D16D383B3D2FA1CC552C70F1579BE7A9DAD788392349FB98E3",
       "features": 3,
-      "specifications": 27,
+      "specifications": 28,
       "io": 3
     },
     "ulxd4d": {
-      "sha256": "EE53B4AA3808569FEA0E8A649FEC2B4B1D552C6B624B8CBCA1CB37E967DF8129",
+      "sha256": "7D1F13EC9E7EBECE2B77E6808C820165552993EC820B47A89643AA33AB780207",
       "features": 4,
-      "specifications": 29,
+      "specifications": 30,
       "io": 5
     },
     "ulxd4q": {
-      "sha256": "2C89FA964589C6E031866813C8E1568B5DC67E170AC7C1312DE166780596A697",
+      "sha256": "226E314C65DB60FDD76728DC56EED981ADA96A1FBF5B3CFE8A9B6508CE48BC60",
       "features": 4,
-      "specifications": 33,
+      "specifications": 34,
       "io": 5
     },
     "ulxd8": {
-      "sha256": "F87A5213857031A2338002FA1D4A1CE1E59A90577028C06EBA2AC71908E1121A",
+      "sha256": "AA264F5A22F03E610B74A71A0CFF54389507954FDA7A84F40DA2349597612DA9",
       "features": 2,
-      "specifications": 9,
+      "specifications": 10,
       "io": 0
     },
     "uvc-01": {
