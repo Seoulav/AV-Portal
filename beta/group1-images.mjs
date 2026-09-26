@@ -299,6 +299,33 @@ export const group1Images = {
   ],
   cpe40: [
     image('Main', 'cpe40-main.webp', 'Yealink CPE40 원형 확장 마이크로폰/스피커폰, 음소거·볼륨 버튼 상단 모습', 'Yealink', 'CPE40', 'https://www.yealink.com/website-service/attachment/product/image/20241029/20241029033402640e470.png', '744x533', '744x533', 'VERIFIED')
+  ],
+  'ec-4bv': [
+    image('Main', 'ec-4bv-main.webp', 'BSS Audio EC-4BV 이더넷 벽면 컨트롤러(화이트, US Decora형)', 'BSS Audio', 'EC-4BV', 'https://adn.harmanpro.com/product_attachments/product_attachments/1966_1729004360/EC-4BV-WHT_US_x_large_2x.webp', '3686x3072', '3686x3072', 'VERIFIED')
+  ],
+  'blu-101': [
+    image('Main', 'blu-101-main.webp', 'BSS Audio BLU-101 컨퍼런싱 프로세서 전면부', 'BSS Audio', 'BLU-101', 'https://adn.harmanpro.com/product_attachments/product_attachments/1330_1728944425/BLU-101_Front_x_large_2x.webp', '4096x410', '4096x410', 'VERIFIED')
+  ],
+  'blu-100': [
+    image('Main', 'blu-100-main.webp', 'BSS Audio BLU-100 신호처리기 전면부', 'BSS Audio', 'BLU-100', 'https://adn.harmanpro.com/product_attachments/product_attachments/1328_1728944439/BLU-100_Front_x_large_2x.webp', '4096x438', '4096x438', 'VERIFIED')
+  ],
+  'blu-160': [
+    image('Main', 'blu-160-main.webp', 'BSS Audio BLU-160 신호처리기 전면부(카드 슬롯 4개)', 'BSS Audio', 'BLU-160', 'https://adn.harmanpro.com/product_attachments/product_attachments/1344_1728944378/BLU-160_Front_x_large_2x.webp', '4096x438', '4096x438', 'VERIFIED')
+  ],
+  'blu-50': [
+    image('Main', 'blu-50-main.webp', 'BSS Audio BLU-50 하프랙 신호처리기 전면부', 'BSS Audio', 'BLU-50', 'https://adn.harmanpro.com/product_attachments/product_attachments/1580_1728152802/BLU-50_Front_x_large_2x.webp', '4096x438', '4096x438', 'VERIFIED')
+  ],
+  'blu-aec-in': [
+    image('Main', 'blu-aec-in-main.webp', 'BSS Audio AEC 입력 카드(AEC Card) 실물 사진', 'BSS Audio', 'AEC Card', 'https://adn.harmanpro.com/productattachment/1466/product_attachment/x_large_2x-c7d50aa6f6a82a84d90db9a75d3a0d2c.webp', '1845x3072', '1845x3072', 'VERIFIED')
+  ],
+  'blucard-in': [
+    image('Main', 'blucard-in-main.webp', 'BSS Audio Analog Input Card 실물 사진', 'BSS Audio', 'Analog Input Card', 'https://adn.harmanpro.com/productattachment/1469/product_attachment/x_large_2x-1ab54fb5d4eef9229e8a80d3136f269a.webp', '1845x3072', '1845x3072', 'VERIFIED')
+  ],
+  'blucard-out': [
+    image('Main', 'blucard-out-main.webp', 'BSS Audio Analog Output Card 실물 사진', 'BSS Audio', 'Analog Output Card', 'https://adn.harmanpro.com/productattachment/1470/product_attachment/x_large_2x-f48e1f712c6729c357af2f5a8b7924a5.webp', '1845x3072', '1845x3072', 'VERIFIED')
+  ],
+  'blu-dan': [
+    image('Main', 'blu-dan-main.webp', 'BSS Audio BLU-DA(구 BLU-DAN) Dante/AES67-BLU link 브리지 전면부', 'BSS Audio', 'BLU-DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/5192_1728940298/BSS_BLU-DA_x_large_2x.webp', '4096x819', '4096x819', 'VERIFIED')
   ]
 };
 
@@ -407,5 +434,14 @@ export const cardImages = {
   cs10: 'cs10-main.webp',
   avhub: 'avhub-main.webp',
   'uvc85-byod': 'uvc85-byod-main.webp',
-  cpe40: 'cpe40-main.webp'
+  cpe40: 'cpe40-main.webp',
+  'ec-4bv': 'ec-4bv-main.webp',
+  'blu-101': 'blu-101-main.webp',
+  'blu-100': 'blu-100-main.webp',
+  'blu-160': 'blu-160-main.webp',
+  'blu-50': 'blu-50-main.webp',
+  'blu-aec-in': 'blu-aec-in-main.webp',
+  'blucard-in': 'blucard-in-main.webp',
+  'blucard-out': 'blucard-out-main.webp',
+  'blu-dan': 'blu-dan-main.webp'
 };

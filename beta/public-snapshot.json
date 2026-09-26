@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "52740B7A550B290AD952F622D0717A1BD71EC1FBC1784901C135F16E995C209A",
+    "sha256": "70E69D6AF3AE254AD0C388EAF0DB0A298E78CCC3A715E4A2AEDAB1B1EF27F608",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -48,6 +48,54 @@
       "features": 7,
       "specifications": 11,
       "io": 2
+    },
+    "blu-100": {
+      "sha256": "EB31DC017B057737557ED744588A9734D315B7EE51773B4A8A8A020586D5AE9F",
+      "features": 5,
+      "specifications": 14,
+      "io": 6
+    },
+    "blu-101": {
+      "sha256": "F447B62F975DE4B39078BF1E6A5C3780458A68FAD7AD2016F345B3A7B23E5F09",
+      "features": 6,
+      "specifications": 18,
+      "io": 6
+    },
+    "blu-160": {
+      "sha256": "376ACF43F2ACCAA954CEFEA223CBB43943B0131257875B51BD08A5A3AFBAC68E",
+      "features": 6,
+      "specifications": 19,
+      "io": 9
+    },
+    "blu-50": {
+      "sha256": "2EEAB31816AE453FE9FEB98208C744718073B8547BB736B14097FDA1E91A9A5E",
+      "features": 5,
+      "specifications": 13,
+      "io": 6
+    },
+    "blu-aec-in": {
+      "sha256": "1772EE664F74D0C5666D8B7DEE195A70D5D005CB463B64DC3C38ABE7C2DDFA74",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "blu-dan": {
+      "sha256": "F7036CB2ACCA378C51DF7BB58B1BD8B6E9BCD5BDECE4F392BC47B94EFECFD53D",
+      "features": 5,
+      "specifications": 7,
+      "io": 4
+    },
+    "blucard-in": {
+      "sha256": "AACE1BB38E2D0A673DD7BFF02B270ED602DA2245AFC7692FB2AAF68EE653B7D1",
+      "features": 4,
+      "specifications": 10,
+      "io": 3
+    },
+    "blucard-out": {
+      "sha256": "E3AE1A3F74099D87BC729124F84517E45C89C326523B4693305C3216E21014CB",
+      "features": 4,
+      "specifications": 11,
+      "io": 3
     },
     "brc-am7": {
       "sha256": "6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D",
@@ -96,6 +144,12 @@
       "features": 6,
       "specifications": 12,
       "io": 11
+    },
+    "ec-4bv": {
+      "sha256": "30C84B8CF326226287438080853827D3DA98F635455A7D4F2DB68E94C6A2B06D",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
     },
     "eikos-4k": {
       "sha256": "628520AD87F049B6151653E0425771AC4BFF3ED4051858A34E9EAF35C0085504",

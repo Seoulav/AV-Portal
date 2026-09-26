@@ -1,0 +1,438 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "BLU-160",
+  "model": "BLU-160",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio Processor (DSP)"
+  ],
+  "english": "Soundweb London BLU-160 is a configurable I/O signal processor with four card slots, a 256-channel BLU link digital audio bus, and EN 54-16 compliance for life safety applications.",
+  "korean": "BSS Soundweb London BLU-160은 4개의 I/O 카드 슬롯을 갖춘 구성형 신호처리기로, 256채널 BLU link 디지털 오디오 버스를 지원하며 생명안전(EN 54-16) 규격을 준수한다.",
+  "verificationSummary": "제조사 공식 제품 페이지(bssaudio.com)와 공식 데이터시트에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "BLU-160은 BSS Audio Soundweb London 제품군의 카드 기반 구성형 섀시로, 4개의 I/O 카드 슬롯을 제공한다. 각 슬롯에는 Analog Input Card, Analog Output Card, Digital Input Card, Digital Output Card, AEC Input Card, Telephone Hybrid Card 등 6종의 카드 중 하나를 자유롭게 조합해 장착할 수 있으며(카드당 4채널), 최대 16채널까지 입출력을 구성할 수 있다.\n\n아날로그 입력 카드는 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하며, 디지털 입출력 카드는 AES/EBU 및 S/PDIF를 지원하고 다양한 클럭·싱크 옵션을 제공한다. 전면 LCD 디스플레이를 통해 장치명, 장치 유형, 펌웨어 버전, 시간, IP 주소, 서브넷 마스크 등의 정보를 PC 없이 확인할 수 있다.\n\n표준 Cat 5e 케이블로 최대 100m 거리의 256채널 BLU link 디지털 오디오 버스를 지원하며(광컨버터 사용 시 40km 이상 확장 가능), 12개의 제어 입력과 6개의 로직 출력으로 GPIO 및 서드파티 제어 시스템과 연동된다. 본 제품은 생명안전 응용을 위한 EN 54-16 인증을 받았다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "blu-160-main.webp",
+      "alt": "BSS Audio BLU-160 신호처리기 전면부(카드 슬롯 4개)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-160",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1344_1728944378/BLU-160_Front_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x438",
+      "resolution": "4096x438",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1344_1728944378/BLU-160_Front_x_large_2x.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-160"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-160"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-160"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-160"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "BLU-160 Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://bssaudio.com/en-US/products/blu-160"
+    }
+  ],
+  "features": [
+    {
+      "text": "4개의 I/O 카드 슬롯으로 아날로그/디지털/AEC/전화 하이브리드 카드를 자유롭게 조합",
+      "source": "P"
+    },
+    {
+      "text": "카드 구성에 따라 아날로그·디지털 입출력 각각 최대 16채널까지 확장 가능",
+      "source": "P"
+    },
+    {
+      "text": "256채널 저지연·고내결함성 BLU link 디지털 오디오 버스로 대규모 Soundweb London 시스템 구축 가능",
+      "source": "P"
+    },
+    {
+      "text": "전면 LCD로 장치명, IP 주소, 펌웨어 버전 등 상세 정보 확인 가능",
+      "source": "P"
+    },
+    {
+      "text": "생명안전 응용을 위한 EN 54-16 인증 취득",
+      "source": "P"
+    },
+    {
+      "text": "12개 제어 입력, 6개 로직 출력으로 GPIO 및 서드파티 제어 시스템과 연동",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Chassis",
+      "name": "섀시",
+      "value": "19인치 랙, 1U",
+      "unit": "",
+      "condition": "카드 기반 구성형 I/O(4슬롯)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "카드 슬롯",
+      "value": "4",
+      "unit": "슬롯",
+      "condition": "슬롯당 4채널 카드 장착, 카드 종류: Analog In/Out, Digital In/Out, AEC In, Telephone Hybrid",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 입력(최대)",
+      "value": "최대 16",
+      "unit": "채널",
+      "condition": "Analog Input Card 4장 장착 시",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 출력(최대)",
+      "value": "최대 16",
+      "unit": "채널",
+      "condition": "Analog Output Card 4장 장착 시",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "디지털 입력(최대)",
+      "value": "최대 16",
+      "unit": "채널",
+      "condition": "AES/EBU 또는 S/PDIF, Digital Input Card 4장 장착 시",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "디지털 출력(최대)",
+      "value": "최대 16",
+      "unit": "채널",
+      "condition": "AES/EBU 또는 S/PDIF, Digital Output Card 4장 장착 시",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "AEC 입력(최대)",
+      "value": "최대 16",
+      "unit": "채널",
+      "condition": "AEC Input Card 4장 장착 시",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "전화 접속(최대)",
+      "value": "최대 4",
+      "unit": "회선",
+      "condition": "Telephone Hybrid Card 장착 시",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Digital I/O",
+      "name": "디지털 입출력 샘플레이트",
+      "value": "48 또는 96",
+      "unit": "kHz",
+      "condition": "샘플레이트 컨버전 범위 8kHz-96kHz",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "신호처리 성능",
+      "value": "800",
+      "unit": "MHz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "BLU link 디지털 오디오 버스",
+      "value": "256",
+      "unit": "채널",
+      "condition": "Cat 5e, 최대 100m, 노드 최대 60개",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "Dante 지원",
+      "value": "없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "전면 디스플레이",
+      "value": "있음",
+      "unit": "",
+      "condition": "장치명/IP/서브넷/펌웨어 버전 등 표시",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "제어 입출력",
+      "value": "제어 입력 12개, 로직 출력 6개",
+      "unit": "",
+      "condition": "GPIO",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "RS-232",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compliance",
+      "name": "인증",
+      "value": "EN 54-16",
+      "unit": "",
+      "condition": "생명안전 응용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240V AC, 50/60Hz",
+      "unit": "",
+      "condition": "소비전력 35VA 미만",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "외형 치수(H x W x D)",
+      "value": "45 x 483 x 318",
+      "unit": "mm (1.75\" x 19\" x 12.5\")",
+      "condition": "1U",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 4.1 (9)",
+      "unit": "kg (lbs), 추정치",
+      "condition": "제조사 자료에 estimated로 표기",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio In",
+      "connector": "Phoenix/Combicon (Analog Input Card)",
+      "signal": "Mic/Line 아날로그 입력",
+      "direction": "IN",
+      "quantity": "슬롯당 4, 최대 16",
+      "protocol": "",
+      "availability": "옵션(카드 장착 시)",
+      "condition": "48V 팬텀 파워 채널별 선택",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Out",
+      "connector": "Phoenix/Combicon (Analog Output Card)",
+      "signal": "라인 레벨 아날로그 출력",
+      "direction": "OUT",
+      "quantity": "슬롯당 4, 최대 16",
+      "protocol": "",
+      "availability": "옵션(카드 장착 시)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio In",
+      "connector": "Phoenix/Combicon (Digital Input Card)",
+      "signal": "AES/EBU, S/PDIF 디지털 입력",
+      "direction": "IN",
+      "quantity": "슬롯당 4, 최대 16",
+      "protocol": "AES/EBU, S/PDIF",
+      "availability": "옵션(카드 장착 시)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Out",
+      "connector": "Phoenix/Combicon (Digital Output Card)",
+      "signal": "AES/EBU, S/PDIF 디지털 출력",
+      "direction": "OUT",
+      "quantity": "슬롯당 4, 최대 16",
+      "protocol": "AES/EBU, S/PDIF",
+      "availability": "옵션(카드 장착 시)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio In",
+      "connector": "Phoenix/Combicon (AEC Input Card)",
+      "signal": "AEC 마이크 입력",
+      "direction": "IN",
+      "quantity": "슬롯당 4, 최대 16",
+      "protocol": "",
+      "availability": "옵션(카드 장착 시)",
+      "condition": "48V 팬텀 파워",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "BLU link 디지털 오디오 버스",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "BLU link",
+      "availability": "표준",
+      "condition": "Cat 5e, 최대 100m",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet 제어망",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "HiQnet",
+      "availability": "표준",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "D-sub/터미널",
+      "signal": "RS-232",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "Phoenix/Combicon",
+      "signal": "제어 입력/로직 출력(GPIO)",
+      "direction": "IN/OUT",
+      "quantity": "12 입력 / 6 출력",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://bssaudio.com/en-US/products/blu-160",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(18-0650-B)",
+      "url": "https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "옵션 I/O 카드 참조 링크",
+      "detail": "작업 지시서에 언급된 https://bssaudio.com/en/product_families/input-output-cards 및 https://bssaudio.com/ko/products/aec-card 는 BLU-160에 장착 가능한 확장 카드(Analog/Digital In/Out, AEC, Telephone Hybrid) 제품군 페이지이며, BLU-160 본체와는 별개의 액세서리 제품(이 배치의 blu-aec-in, blucard-in, blucard-out 항목 포함)이다. 필요 시 카탈로그에서 관련 상품으로 교차 링크하는 것을 권장한다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio BLU-160 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "BLU-DAN",
+  "model": "BLU-DA (formerly BLU-DAN)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio Processor (DSP)",
+    "Network Bridge"
+  ],
+  "english": "Soundweb London BLU-DA (formerly known as BLU-DAN) is a Dante/AES67 to BLU link bridge supporting up to 64x64 channels, EN 54-16 compliant for life safety applications.",
+  "korean": "BSS Soundweb London BLU-DA(구 BLU-DAN)는 Dante/AES67 오디오를 BLU link 디지털 오디오 버스로 연결하는 브리지 장비로, 최대 64x64채널을 지원하며 생명안전(EN 54-16) 규격을 준수한다.",
+  "verificationSummary": "제조사 공식 제품 페이지(bssaudio.com)와 공식 데이터시트에서 사양을 확인했다. 제조사 사이트는 현재 제품명을 'BLU-DA'로 표기하며 'BLU-DAN'을 이전 명칭(Formerly known as)으로 병기하고 있어, 두 명칭이 동일 제품임을 issues에 명시했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "BLU-DA(구 BLU-DAN)는 BSS Soundweb London 제품군에서 Dante/AES67 네트워크 오디오를 BLU link 디지털 오디오 버스에 연결하는 하프랙 크기의 브리지 장치다. 하나 이상의 BLU link 장비에 Dante/AES67 오디오를 '추가'하는 역할을 하며, 최대 64채널을 동시에 송수신(64x64)할 수 있다. Primary/Secondary 이중 포트로 네트워크 이중화(장애 대응)를 지원하며, 별도의 이더넷 포트를 통해 제어가 이루어진다. Dante 4.0 펌웨어를 지원해 Dante Domain Manager와 연동할 수 있다.\n\nBLU link 측에서는 표준 Cat 5e 케이블로 최대 100m 거리의 256채널 디지털 오디오 버스를 지원하며, 광컨버터 사용 시 40km 이상까지 확장 가능하다. HiQnet Audio Architect에서 드래그 앤 드롭 방식으로 구성하며, 양방향 로케이트 기능으로 시스템 내 장비를 손쉽게 식별할 수 있다.\n\n본 제품은 AES67 호환이며, 생명안전 응용을 위한 EN 54-16 인증을 받았다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "blu-dan-main.webp",
+      "alt": "BSS Audio BLU-DA(구 BLU-DAN) Dante/AES67-BLU link 브리지 전면부",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-DA",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/5192_1728940298/BSS_BLU-DA_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x819",
+      "resolution": "4096x819",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/5192_1728940298/BSS_BLU-DA_x_large_2x.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-da"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-da"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-da"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/en-US/products/blu-da"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "BLU-DAN Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://bssaudio.com/en-US/product_documents/blu-dan_datasheet_060315-pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://bssaudio.com/en-US/products/blu-da"
+    }
+  ],
+  "features": [
+    {
+      "text": "Dante/AES67 오디오를 BLU link 디지털 오디오 버스에 연결하는 브리지(최대 64x64채널)",
+      "source": "P"
+    },
+    {
+      "text": "256채널 저지연·고내결함성 BLU link 디지털 오디오 버스 지원",
+      "source": "P"
+    },
+    {
+      "text": "Primary/Secondary 이중 네트워크 포트로 장애 대응(fault tolerance) 지원",
+      "source": "P"
+    },
+    {
+      "text": "Dante 4.0 펌웨어 지원으로 Dante Domain Manager 연동 가능",
+      "source": "P"
+    },
+    {
+      "text": "1RU 하프랙 크기, AES67 호환, 생명안전 응용을 위한 EN 54-16 인증 취득",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Chassis",
+      "name": "섀시",
+      "value": "19인치 랙, 1U 하프랙(반폭)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "Dante/AES67",
+      "value": "지원",
+      "unit": "",
+      "condition": "최대 64x64채널 동시 송수신, Primary/Secondary 이중화 포트",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "BLU link 디지털 오디오 버스",
+      "value": "256",
+      "unit": "채널",
+      "condition": "Cat 5e, 최대 100m",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "제어 포트",
+      "value": "별도 이더넷 포트",
+      "unit": "",
+      "condition": "Dante 오디오 포트와 분리",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "Dante 펌웨어",
+      "value": "Dante 4.0",
+      "unit": "",
+      "condition": "Dante Domain Manager 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "RS-232",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compliance",
+      "name": "인증",
+      "value": "EN 54-16, AES67 호환",
+      "unit": "",
+      "condition": "생명안전 응용",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ-45 (Primary/Secondary)",
+      "signal": "Dante/AES67 오디오",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante / AES67",
+      "availability": "표준",
+      "condition": "최대 64x64채널, 이중화",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "BLU link 디지털 오디오 버스",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "BLU link",
+      "availability": "표준",
+      "condition": "Cat 5e, 최대 100m",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet 제어망",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "HiQnet",
+      "availability": "표준",
+      "condition": "오디오망과 분리된 별도 포트",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "D-sub/터미널",
+      "signal": "RS-232",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "표준",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://bssaudio.com/en-US/products/blu-da",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(060315)",
+      "url": "https://bssaudio.com/en-US/product_documents/blu-dan_datasheet_060315-pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R7",
+      "status": "REVIEW REQUIRED",
+      "title": "제품명 변경(BLU-DAN → BLU-DA)",
+      "detail": "제조사 공식 페이지 제목은 'BLU-DA (BLU-DAN)'이며 본문에 'Formerly known as BLU-DAN'이라고 명시되어 있어, 현재 공식 판매명은 BLU-DA이고 BLU-DAN은 구 명칭임을 확인했다. 카탈로그에는 'BLU-DAN'으로 등록되어 있어 동일 제품이 맞는지, 모델명을 BLU-DA로 갱신할지 검토가 필요하다. 정확한 입출력 채널 커넥터의 상세 핀아웃(터미널 블록 규격 등)은 데이터시트에 명시되지 않아 추가 확인이 필요하다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio BLU-DAN 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

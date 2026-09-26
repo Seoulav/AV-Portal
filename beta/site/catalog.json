@@ -11,7 +11,9 @@
     "official_links": [
       "https://bssaudio.com/en-US/products/EC-4BV"
     ],
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16058660935uecux3ldj.pdf&o_file_name=ec-4bv+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16058660935uecux3ldj.pdf&o_file_name=ec-4bv+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "slug": "ec-4bv",
+    "card_image": "ec-4bv-main.webp"
   },
   {
     "brand": "Audinate",
@@ -2724,7 +2726,9 @@
       "https://bssaudio.com/en-US/products/blu-101"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip",
+    "slug": "blu-101",
+    "card_image": "blu-101-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2739,7 +2743,9 @@
       "https://bssaudio.com/en-US/products/blu-100"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754472qtmq1puk0x.pdf&o_file_name=bss_blu-100_kor_%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754472qtmq1puk0x.pdf&o_file_name=bss_blu-100_kor_%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "slug": "blu-100",
+    "card_image": "blu-100-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2758,7 +2764,9 @@
     "reference_link": [
       "https://bssaudio.com/en/product_families/input-output-cards",
       "https://bssaudio.com/ko/products/aec-card"
-    ]
+    ],
+    "slug": "blu-160",
+    "card_image": "blu-160-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2773,7 +2781,9 @@
       "https://bssaudio.com/en-US/products/blu-50"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "slug": "blu-50",
+    "card_image": "blu-50-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2791,7 +2801,9 @@
     "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
     "reference_link": [
       "https://bssaudio.com/ko/products/aec-card"
-    ]
+    ],
+    "slug": "blu-aec-in",
+    "card_image": "blu-aec-in-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2809,7 +2821,9 @@
     "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
     "reference_link": [
       "https://bssaudio.com/ko/products/aec-card"
-    ]
+    ],
+    "slug": "blucard-in",
+    "card_image": "blucard-in-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2827,7 +2841,9 @@
     "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
     "reference_link": [
       "https://bssaudio.com/ko/products/analog-output-card"
-    ]
+    ],
+    "slug": "blucard-out",
+    "card_image": "blucard-out-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -2842,7 +2858,9 @@
       "https://bssaudio.com/en-US/support_downloads/products/blu-dan"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605866326oo14knng0m.pdf&o_file_name=blu-da_and_blu-dan_install_guide_5099141-00-a.pdf"
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605866326oo14knng0m.pdf&o_file_name=blu-da_and_blu-dan_install_guide_5099141-00-a.pdf",
+    "slug": "blu-dan",
+    "card_image": "blu-dan-main.webp"
   },
   {
     "brand": "Audinate",

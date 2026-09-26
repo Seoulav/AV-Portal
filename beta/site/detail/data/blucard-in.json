@@ -1,0 +1,284 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "BLUCARD-IN",
+  "model": "Analog Input Card",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio Processor",
+    "Input/Output Card"
+  ],
+  "english": "Soundweb London Analog Input Card is a 4-channel Mic/Line analog input card that populates a card slot on compatible BLU chassis.",
+  "korean": "BSS Soundweb London 아날로그 입력 카드(공식 명칭: Analog Input Card)는 호환 BLU 섀시의 카드 슬롯에 장착하는 4채널 Mic/Line 아날로그 입력 카드다.",
+  "verificationSummary": "제조사 공식 제품 페이지(bssaudio.com) 및 공식 데이터시트에서 사양을 확인했다. 사이트의 공식 제품명은 'Analog Input Card'이며, 카탈로그 명칭 'BLUCARD-IN'과 다르므로 issues에 기록했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Analog Input Card는 BSS Soundweb London 제품군의 카드형 I/O 확장 모듈로, BLU-800/805/806, BLU-320/325/326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16 등 4개의 카드 슬롯을 가진 섀시에 장착되어 마이크/라인 레벨 아날로그 신호를 받아들인다. 카드 1장당 4개의 독립 입력 채널을 제공하며, 채널별로 6dB 단위 최대 +48dB 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하다.\n\n2개의 Combicon 커넥터를 통해 4채널을 입력받으며(커넥터 1: 채널 1-2, 커넥터 2: 채널 3-4), 각 커넥터는 밸런스/언밸런스 오디오 신호를 모두 수용한다. 카드 리비전은 Rev. A와 Rev. B가 존재하며, A/D 레이턴시가 서로 다르다(Rev. A: 0.85ms@48k, Rev. B: 0.25ms@48k). Rev. A는 현재 단종되어 더 이상 출하되지 않는다.\n\n이 카드는 독립형 제품이 아니라 BLU-160, BLU-800 등 섀시 본체에 장착해야 동작하는 액세서리 카드이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "blucard-in-main.webp",
+      "alt": "BSS Audio Analog Input Card 실물 사진",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "Analog Input Card",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/1469/product_attachment/x_large_2x-1ab54fb5d4eef9229e8a80d3136f269a.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1845x3072",
+      "resolution": "1845x3072",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/1469/product_attachment/x_large_2x-1ab54fb5d4eef9229e8a80d3136f269a.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/analog-input-card"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/analog-input-card"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://bssaudio.com/en-US/products/analog-input-card"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/en-US/products/analog-input-card"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "BLUCARD-IN Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://bssaudio.com/en-US/products/analog-input-card"
+    }
+  ],
+  "features": [
+    {
+      "text": "BLU-800/805/806, BLU-320/325/326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16 섀시의 카드 슬롯에 장착하는 4채널 아날로그 입력 카드",
+      "source": "P"
+    },
+    {
+      "text": "채널별 48V 팬텀 파워 및 6dB 단위 최대 +48dB 소프트웨어 게인 조절",
+      "source": "P"
+    },
+    {
+      "text": "2개의 Combicon 커넥터로 밸런스/언밸런스 Mic/Line 신호 수용",
+      "source": "P"
+    },
+    {
+      "text": "Rev. B 카드는 Rev. A 대비 A/D 레이턴시가 대폭 개선(0.85ms → 0.25ms @48kHz)",
+      "source": "D"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O",
+      "name": "아날로그 입력",
+      "value": "4",
+      "unit": "채널(Mic/Line)",
+      "condition": "카드 1장 기준",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "입력 타입",
+      "value": "밸런스/언밸런스",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "커넥터",
+      "value": "Mic/Line Combicon x 2",
+      "unit": "",
+      "condition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "입력 임피던스",
+      "value": "3.5",
+      "unit": "kΩ",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "게인 범위",
+      "value": "0 ~ 48",
+      "unit": "dB (6dB 단위)",
+      "condition": "소프트웨어 제어",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "팬텀 파워",
+      "value": "지원",
+      "unit": "",
+      "condition": "채널별 선택, 48V 나머지 전압 데이터시트 명시 없음(제품 개요만 확인)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "최대 입력 레벨",
+      "value": "+20 (0dB 게인) / +8 (12dB 게인)",
+      "unit": "dBu",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "A/D 레이턴시(Rev. A)",
+      "value": "0.85 (@48k) / 0.43 (@96k)",
+      "unit": "ms",
+      "condition": "Rev. A는 단종, 더 이상 출하되지 않음",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "A/D 레이턴시(Rev. B)",
+      "value": "0.25 (@48k) / 0.13 (@96k)",
+      "unit": "ms",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compatibility",
+      "name": "호환 섀시",
+      "value": "BLU-800, BLU-805, BLU-806, BLU-320, BLU-325, BLU-326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio In",
+      "connector": "Mic/Line Combicon (커넥터 1)",
+      "signal": "아날로그 입력 채널 1-2",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "밸런스/언밸런스",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio In",
+      "connector": "Mic/Line Combicon (커넥터 2)",
+      "signal": "아날로그 입력 채널 3-4",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "밸런스/언밸런스",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Chassis",
+      "connector": "카드 슬롯(백플레인)",
+      "signal": "섀시 내부 버스 연결",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "BLU-160/BLU-800 등 4슬롯 섀시 중 1슬롯 점유",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://bssaudio.com/en-US/products/analog-input-card",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(18-0579-B, Analog Input/Output Cards 공용)",
+      "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "카탈로그 명칭과 공식 제품명 불일치",
+      "detail": "카탈로그에 등록된 명칭은 'BLUCARD-IN'이나, bssaudio.com의 공식 제품명은 'Analog Input Card'(제품 페이지 타이틀: Analog Audio Input Card: 4-Input)이다. 동일 제품으로 판단되나 정확한 모델 표기 확인이 필요하다. 이 카드는 독립형 프로세서가 아니라 섀시에 장착하는 액세서리 카드이므로 categories/itemType 분류를 검토할 필요가 있다."
+    },
+    {
+      "code": "R5B",
+      "status": "REVIEW REQUIRED",
+      "title": "동일 이미지가 3개 카드 제품에 공통 사용됨",
+      "detail": "제조사 공식 페이지(AEC Card, Analog Input Card, Analog Output Card)에서 각각 내려받은 제품 사진의 MD5 해시가 모두 동일하다(4095eb80b69324c9b06a319f4bf732bc). 즉 bssaudio.com이 이 3개 카드 제품에 동일한 범용 PCB 카드 사진을 게시하고 있어, 사진만으로는 각 카드를 시각적으로 구분할 수 없다. 제조사 원본 자료 자체의 한계이며 임의 대체 이미지를 사용한 것은 아니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio BLUCARD-IN 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

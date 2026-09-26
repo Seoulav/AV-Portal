@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 87개
+- Product Detail: 96개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -18,6 +18,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://bssaudio.com/en-US/products/EC-4BV
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16058660935uecux3ldj.pdf&o_file_name=ec-4bv+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ec-4bv
 
 - 제품: Audinate AVIO USB C
   분류: 오디오 | Audio | Audio Interface
@@ -1165,12 +1166,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-101
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-101
 
 - 제품: BSS Audio BLU-100
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-100
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754472qtmq1puk0x.pdf&o_file_name=bss_blu-100_kor_%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-100
 
 - 제품: BSS Audio BLU-160
   분류: 오디오 | Audio | Audio Processor
@@ -1179,12 +1182,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754235ycz0u085f3.pdf&o_file_name=bss+blu_%EB%A7%A4%EB%89%B4%EC%96%BC_kor.pdf
   참고자료: https://bssaudio.com/en/product_families/input-output-cards
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-160
 
 - 제품: BSS Audio BLU-50
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/products/blu-50
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-50
 
 - 제품: BSS Audio BLU AEC-IN
   분류: 오디오 | Audio | Audio Processor
@@ -1192,6 +1197,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-aec-in
 
 - 제품: BSS Audio BLUCARD-IN
   분류: 오디오 | Audio | Audio Processor
@@ -1199,6 +1205,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/aec-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blucard-in
 
 - 제품: BSS Audio BLUCARD-OUT
   분류: 오디오 | Audio | Audio Processor
@@ -1206,12 +1213,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   제품군 링크: https://bssaudio.com/en-US/product_families/inputoutput-cards
   매뉴얼: https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
   참고자료: https://bssaudio.com/ko/products/analog-output-card
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blucard-out
 
 - 제품: BSS Audio BLU-DAN
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
   제품군 링크: https://bssaudio.com/en-US/support_downloads/products/blu-dan
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605866326oo14knng0m.pdf&o_file_name=blu-da_and_blu-dan_install_guide_5099141-00-a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-dan
 
 - 제품: Audinate AVIO BT
   분류: 오디오 | Audio | Audio Interface
