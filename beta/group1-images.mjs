@@ -411,6 +411,51 @@ export const group1Images = {
   ],
   'h-800w-psu': [
     image('Main', 'h-800w-psu-main.webp', 'H_800W 전원 공급 모듈 실물 사진', 'NovaStar', 'H_800W Power', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '550x466', '550x466', 'VERIFIED')
+  ],
+  'eb-pq2220b': [
+    image('Main', 'eb-pq2220b-main.webp', '엡손 EB-PQ2220B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2220B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-l790su': [
+    image('Main', 'eb-l790su-main.webp', '엡손 EB-L790SU 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L790SU', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l690u': [
+    image('Main', 'eb-l690u-main.webp', '엡손 EB-L690U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L690U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l895e': [
+    image('Main', 'eb-l895e-main.webp', '엡손 EB-L895E 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895E', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l795se': [
+    image('Main', 'eb-l795se-main.webp', '엡손 EB-L795SE 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L795SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&vid=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l695se': [
+    image('Main', 'eb-l695se-main.webp', '엡손 EB-L695SE 레이저 초단초점 프로젝터 정면 이미지', 'Epson', 'EB-L695SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&vid=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l895u': [
+    image('Main', 'eb-l895u-main.webp', '엡손 EB-L895U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-l790u': [
+    image('Main', 'eb-l790u-main.webp', '엡손 EB-L790U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L790U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+  ],
+  'eb-pq2216b': [
+    image('Main', 'eb-pq2216b-main.webp', '엡손 EB-PQ2216B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-pq2213b': [
+    image('Main', 'eb-pq2213b-main.webp', '엡손 EB-PQ2213B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-pu2216b': [
+    image('Main', 'eb-pu2216b-main.webp', '엡손 EB-PU2216B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-pu2213b': [
+    image('Main', 'eb-pu2213b-main.webp', '엡손 EB-PU2213B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-pu2010w-b': [
+    image('Main', 'eb-pu2010w-b-main.webp', '엡손 EB-PU2010B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2010B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=022c18ef0c0846e91456d68312067cdbba072569&vid=022c18ef0c0846e91456d68312067cdbba072569&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-pu1008b': [
+    image('Main', 'eb-pu1008b-main.webp', '엡손 EB-PU1008B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU1008B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&vid=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+  ],
+  'eb-l260f': [
+    image('Main', 'eb-l260f-main.webp', '엡손 EB-L260F 레이저 비즈니스 프로젝터 정면 이미지', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=170c32f51f2061c5ccee14b400fe17a5107c0c17&vid=170c32f51f2061c5ccee14b400fe17a5107c0c17&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
   ]
 };
 
@@ -555,5 +600,20 @@ export const cardImages = {
   'h-input-card-4x3g-sdi': 'h-input-card-4x3g-sdi-main.webp',
   'h-output-card-4xhdmi-dl': 'h-output-card-4xhdmi-dl-main.webp',
   'h-output-card-hdmi20-4k': 'h-output-card-hdmi20-4k-main.webp',
-  'h-800w-psu': 'h-800w-psu-main.webp'
+  'h-800w-psu': 'h-800w-psu-main.webp',
+  'eb-pq2220b': 'eb-pq2220b-main.webp',
+  'eb-l790su': 'eb-l790su-main.webp',
+  'eb-l690u': 'eb-l690u-main.webp',
+  'eb-l895e': 'eb-l895e-main.webp',
+  'eb-l795se': 'eb-l795se-main.webp',
+  'eb-l695se': 'eb-l695se-main.webp',
+  'eb-l895u': 'eb-l895u-main.webp',
+  'eb-l790u': 'eb-l790u-main.webp',
+  'eb-pq2216b': 'eb-pq2216b-main.webp',
+  'eb-pq2213b': 'eb-pq2213b-main.webp',
+  'eb-pu2216b': 'eb-pu2216b-main.webp',
+  'eb-pu2213b': 'eb-pu2213b-main.webp',
+  'eb-pu2010w-b': 'eb-pu2010w-b-main.webp',
+  'eb-pu1008b': 'eb-pu1008b-main.webp',
+  'eb-l260f': 'eb-l260f-main.webp'
 };

@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "EFABD71BA6AED4DC32990ACAB3247A1201D8A56F142F0B5D2570E0C69CC219DC",
+    "sha256": "9F67C333EAFC65E96D6F8037F9BE0D31BC617DBA31192A9F099B4676D00751F4",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -175,11 +175,101 @@
       "specifications": 16,
       "io": 15
     },
+    "eb-l260f": {
+      "sha256": "4B15686BF75984285D8397FEAF75B0BC6CDDB9559DAEC7C137D51E9782368BBF",
+      "features": 6,
+      "specifications": 25,
+      "io": 12
+    },
     "eb-l530u": {
       "sha256": "BDF9A268D01ED50A1960A1DAAAAF9BA4ECEB4DA9BBCC224EFA90F5396B976B70",
       "features": 6,
       "specifications": 12,
       "io": 11
+    },
+    "eb-l690u": {
+      "sha256": "3608697E0DDA592AE2A98909CC8207D36C42DCE74161D56C87841FAEF44C52E2",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l695se": {
+      "sha256": "52CA861832F8B6EC412C990B530F325F1960122AD6FD2162BEC32CF41F50A384",
+      "features": 6,
+      "specifications": 26,
+      "io": 8
+    },
+    "eb-l790su": {
+      "sha256": "B7CD6ED0852A1752C1C6CC05963493D0A1D3EEA666821144274CEF2DC445CE25",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l790u": {
+      "sha256": "7D5E472A72B867F917A0D5319E2B60214BB4D12AD4238E20E6E9D6AE301CA066",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l795se": {
+      "sha256": "F40A511AFA9A7C01C59AE01C5B5090C7CA366B08B1D117453ED6F6550E587753",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-l895e": {
+      "sha256": "015B72049095FBFE4D1BE6803CB29EA4A133CBF2D9EFF83945C634C80BD4AB23",
+      "features": 6,
+      "specifications": 28,
+      "io": 8
+    },
+    "eb-l895u": {
+      "sha256": "20B1CB0FF0D081A0D21D47F917C69B08D96C12AC6AF492F45590ED371A336233",
+      "features": 6,
+      "specifications": 27,
+      "io": 8
+    },
+    "eb-pq2213b": {
+      "sha256": "DE43E124737C61C5F42335A38F6E8D42A7F4C1CF0A9047750B7F36C4A435DFD7",
+      "features": 6,
+      "specifications": 24,
+      "io": 7
+    },
+    "eb-pq2216b": {
+      "sha256": "ACA446E66CAAEC49A030985D73C6E6C8E0C1B7419E1C7A0010AE7BCFBBF2080A",
+      "features": 6,
+      "specifications": 24,
+      "io": 7
+    },
+    "eb-pq2220b": {
+      "sha256": "264EC689DE722024FE5C39DA260A049185D428E5664FCA832DD9513D7770A3E7",
+      "features": 6,
+      "specifications": 25,
+      "io": 7
+    },
+    "eb-pu1008b": {
+      "sha256": "62D84EF17AD1CCB7A39356C27FAD0F0CBB49EDAD4D612297FFB8E3036C8FB2EC",
+      "features": 6,
+      "specifications": 26,
+      "io": 9
+    },
+    "eb-pu2010w-b": {
+      "sha256": "0C01D232394612CC34B478604AB0ACCAE0EB5CB2D3C684481B4B45F873F9FE03",
+      "features": 6,
+      "specifications": 26,
+      "io": 11
+    },
+    "eb-pu2213b": {
+      "sha256": "080CC516A1456538EEB0E194A80BE850551C93FEE598F1A7EE587C907900BAB4",
+      "features": 6,
+      "specifications": 26,
+      "io": 12
+    },
+    "eb-pu2216b": {
+      "sha256": "1218D0F14815D7B0E9657737B945C34618011D7E7030E3D640C5054AE6933A38",
+      "features": 6,
+      "specifications": 26,
+      "io": 12
     },
     "ec-4bv": {
       "sha256": "30C84B8CF326226287438080853827D3DA98F635455A7D4F2DB68E94C6A2B06D",

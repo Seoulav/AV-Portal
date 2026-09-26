@@ -1,0 +1,486 @@
+{
+  "manufacturer": "Epson",
+  "productName": "EB-L790SU",
+  "model": "EB-L790SU",
+  "itemType": "PRODUCT",
+  "categories": [
+    "프로젝터",
+    "Display",
+    "Projector"
+  ],
+  "english": "Epson EB-L790SU is a short-throw laser projector offering 7,000 lm color/white brightness and WUXGA resolution with a minimum throw distance from 0.79.",
+  "korean": "엡손 EB-L790SU는 7,000루멘의 컬러/백색 밝기와 WUXGA 해상도를 제공하며, 최소 0.79의 투사거리부터 설치 가능한 레이저 단초점 프로젝터다.",
+  "verificationSummary": "제조사 공식 한글 사이트(epson.co.kr)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "EB-L790SU는 엡손 레이저 단초점 프로젝터로, 7,000루멘의 컬러 밝기와 백색 밝기, WUXGA 해상도를 제공한다. 단초점 렌즈를 탑재해 투사거리 0.79부터 설치할 수 있어 좁은 공간에서도 대화면 구현이 가능하다.\n\n24년 연속 세계 판매 1위(엡손 자체 발표 기준)를 이어온 3LCD 기술을 기반으로 하며, Wi-Fi 6E 내장 무선랜, 10W 모노 스피커, 최대 4분할 화면 지원 등 회의실·강의실·전시 공간에 적합한 기능을 갖추었다.\n\n레이저 광원은 Normal 모드 기준 20,000시간, Extended 모드 기준 30,000시간까지 별도 유지보수 없이 사용할 수 있어 총소유비용(TCO)이 낮고, 360도 자유 설치가 가능하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "eb-l790su-main.webp",
+      "alt": "엡손 EB-L790SU 레이저 단초점 프로젝터 정면 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-L790SU",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "960x640",
+      "resolution": "960x640",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "EB-L790SU 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051"
+    }
+  ],
+  "features": [
+    {
+      "text": "24년 연속 세계 판매 1위 엡손 3LCD 기술 기반, 7,000루멘의 컬러/백색 밝기",
+      "source": "P"
+    },
+    {
+      "text": "최소 투사거리 0.79의 단초점 렌즈로 좁은 공간에서도 대화면 설치 가능",
+      "source": "P"
+    },
+    {
+      "text": "WUXGA 해상도와 16:6, 21:9 와이드 스크린 지원으로 다양한 작업 환경에 대응",
+      "source": "P"
+    },
+    {
+      "text": "레이저 광원으로 최대 20,000시간까지 유지보수 없이 작동, 수은·램프 폐기물 없는 친환경 설계",
+      "source": "P"
+    },
+    {
+      "text": "유연한 360도 설치와 넓은 범위의 줌·렌즈 시프트, 최대 4분할 화면 지원",
+      "source": "P"
+    },
+    {
+      "text": "Wi-Fi 6E 내장 무선 LAN, Epson Projector Professional Tool 및 ELPEC01 외장 카메라 지원",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "컬러 밝기",
+      "value": "7,000",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "백색 밝기",
+      "value": "7,000",
+      "unit": "lm",
+      "condition": "Normal mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "Over 5,000,000:1",
+      "unit": "",
+      "condition": "Dynamic Contrast : On",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "기본 해상도",
+      "value": "WUXGA",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "광출력 균일도",
+      "value": "88",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 시스템",
+      "value": "RGB 액정 셔터 크리스탈 프로젝션 시스템",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "투사 방식",
+      "value": "360° free",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "엣지 블렌딩",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면 분할",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "키스톤 보정",
+      "value": "V: -30°~+30°, H: -30°~+30°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 방식",
+      "value": "Laser Diode",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "광원 수명",
+      "value": "Normal 20,000 / Extended 30,000",
+      "unit": "시간",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "초점 거리",
+      "value": "11.6 - 19.9",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "줌 비율",
+      "value": "1 - 1.7",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "렌즈 시프트 범위",
+      "value": "V: -50°~+50°, H: -20°~+20°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "투사 렌즈 타입",
+      "value": "Optical Zoom(Manual)/Focus(Manual)/Distortion(Manual)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Optics",
+      "name": "화면 크기(투사 거리)",
+      "value": "60\"~400\" (1.02m~6.95m Wide, 1.75m~11.89m Tele)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최대)",
+      "value": "440 x 151 x 362",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(최소)",
+      "value": "440 x 122 x 304",
+      "unit": "mm",
+      "condition": "W x H x D",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 9.2",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "팬소음",
+      "value": "Normal 36 / ECO 26",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "내장 스피커",
+      "value": "10",
+      "unit": "W 모노",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "100-240V AC 50/60Hz 4.8-2.1A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "정격 전력 소비량",
+      "value": "470 / 341",
+      "unit": "W",
+      "condition": "Normal mode / Extended mode",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "무선 LAN 사양",
+      "value": "Wi-Fi 6E",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "Epson iProjection",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDBaseT",
+      "signal": "디지털 비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "디지털 비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDCP 2.3",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo mini",
+      "signal": "오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "PC Free, Document Camera, 펌웨어 업데이트, OSD 설정 복사, 콘텐츠 재생, ELPEC01 또는 5V/2A(0.9A) 전원 공급",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-B",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "펌웨어 업데이트, OSD 설정 복사",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "유선 LAN",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Wireless LAN",
+      "signal": "무선 LAN",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "Wi-Fi 6E",
+      "availability": "내장(Built-in)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Epson EB-L790SU 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

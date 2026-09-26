@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 123개
+- Product Detail: 138개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -147,18 +147,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2220B/s/SPT_V11HB05851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2220b
 
 - 제품: Epson EB-L790SU
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790SU/s/SPT_V11HB30051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l790su
 
 - 제품: Epson EB-L690U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l690u
 
 - 제품: Epson EB-L530U
   분류: 프로젝터 | Display | Projector
@@ -947,72 +950,84 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PQ2216B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2216b
 
 - 제품: Epson EB-PQ2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PQ2213B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2213b
 
 - 제품: Epson EB-L895E
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151
   매뉴얼: https://www.epson.co.kr/c/EB-L895E/s/SPT_V11HB24151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l895e
 
 - 제품: Epson EB-L795SE
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151
   매뉴얼: https://www.epson.co.kr/c/EB-L795SE/s/SPT_V11HB26151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l795se
 
 - 제품: Epson EB-L695SE
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L695SE/s/SPT_V11HB36151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l695se
 
 - 제품: Epson EB-PU2216B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU2216B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2216b
 
 - 제품: Epson EB-PU2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU2213B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2213b
 
 - 제품: Epson EB-PU2010W/B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2010B-NL/s/SPT_V11HA52840#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2010w-b
 
 - 제품: Epson EB-PU1008B
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/EB-PU1008B
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu1008b
 
 - 제품: Epson EB-L895U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L895U/s/SPT_V11HB27151#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l895u
 
 - 제품: Epson EB-L790U
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790U/s/SPT_V11HB28051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l790u
 
 - 제품: Epson EB-L260F
   분류: 프로젝터 | Display | Projector
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L260F/s/SPT_V11HA69051#manuals
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l260f
 
 - 제품: Panasonic PT-MZ14K
   분류: 프로젝터 | Display | Projector
