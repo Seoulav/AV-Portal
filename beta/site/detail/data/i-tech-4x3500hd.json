@@ -404,7 +404,7 @@
     },
     {
       "group": "Audio",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "커넥터 규격 정보 없음",
       "signal": "Audio input (Analog, AES3, CobraNet, VDrive)",
       "direction": "IN",
       "quantity": "4채널",

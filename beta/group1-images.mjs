@@ -287,7 +287,7 @@ export const group1Images = {
     image('Main', 'v-02hd-main.webp', 'Roland V-02HD 멀티포맷 비디오 믹서 컨트롤 패널', 'Roland', 'V-02HD', 'https://static.roland.com/assets/images/products/gallery/v-02hd_top_front_gal.jpg', '1500x815', '1500x815', 'VERIFIED')
   ],
   'v-1hd-plus': [
-    image('Main', 'v-1hd-plus-main.webp', 'Roland V-1HD+ HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-1HD+', 'https://static.roland.com/assets/images/products/gallery/v-1hd_plus_front30_B_main_gal.jpg', '1680x500', '1680x500', 'VERIFIED')
+    image('Main', 'v-1hd-plus-main.webp', 'Roland V-1HD+ 비디오 스위처 컨트롤 패널', 'Roland', 'V-1HD+', 'https://static.roland.com/assets/images/products/gallery/v-1hd_plus_front30_B_main_gal.jpg', '1680x500', '1680x500', 'VERIFIED')
   ],
   'vr-4hd': [
     image('Main', 'vr-4hd-main.webp', 'Roland VR-4HD AV 믹서 컨트롤 패널 정면', 'Roland', 'VR-4HD', 'https://static.roland.com/assets/images/products/gallery/vr4hd_top_main_gal.jpg', '1665x1050', '1665x1050', 'VERIFIED')
@@ -296,10 +296,10 @@ export const group1Images = {
     image('Main', 'vr-6hd-main.webp', 'Roland VR-6HD 다이렉트 스트리밍 AV 믹서 컨트롤 패널', 'Roland', 'VR-6HD', 'https://static.roland.com/assets/images/products/gallery/vr-6hd_front30_gal.jpg', '1680x765', '1680x765', 'VERIFIED')
   ],
   'v-8hd': [
-    image('Main', 'v-8hd-main.webp', 'Roland V-8HD HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-8HD', 'https://static.roland.com/assets/images/products/gallery/v-8hd_top_front_2_gal.jpg', '1680x656', '1680x656', 'VERIFIED')
+    image('Main', 'v-8hd-main.webp', 'Roland V-8HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-8HD', 'https://static.roland.com/assets/images/products/gallery/v-8hd_top_front_2_gal.jpg', '1680x656', '1680x656', 'VERIFIED')
   ],
   'v-60hd': [
-    image('Main', 'v-60hd-main.webp', 'Roland V-60HD HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-60HD', 'https://static.roland.com/assets/images/products/gallery/v-60hd_main_gal.jpg', '1500x609', '1500x609', 'VERIFIED')
+    image('Main', 'v-60hd-main.webp', 'Roland V-60HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-60HD', 'https://static.roland.com/assets/images/products/gallery/v-60hd_main_gal.jpg', '1500x609', '1500x609', 'VERIFIED')
   ],
   'v-80hd': [
     image('Main', 'v-80hd-main.webp', 'Roland V-80HD 다이렉트 스트리밍 비디오 스위처 컨트롤 패널', 'Roland', 'V-80HD', 'https://static.roland.com/assets/images/products/gallery/v-80hd_front30.jpg', '1680x700', '1680x700', 'VERIFIED')
