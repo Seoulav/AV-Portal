@@ -206,21 +206,21 @@
       "io": 0
     },
     "comtech-d-2125": {
-      "sha256": "8165CA6DA874D982F57E92C35BB085C93BE2F894A51095A9F99E04E909B4C70F",
+      "sha256": "6D3C1DA6D710A0F217509835FB8427F12FE08DDB176103E3785756ABA10B164E",
       "features": 3,
-      "specifications": 13,
+      "specifications": 15,
       "io": 3
     },
     "comtech-d-4125": {
-      "sha256": "A74FD8ABA6C2E5EC992B6008A1B48F2AB3EFF596FE163060C0CA03325569EFFC",
+      "sha256": "BE9DA30CEE85BF775DDBBD992013E6A1E8A46B3FC0D0801DACBF3BFD3318CB95",
       "features": 3,
-      "specifications": 13,
+      "specifications": 15,
       "io": 3
     },
     "comtech-d-8125": {
-      "sha256": "A73C45BD4CBC528D98F594D31A754FF9971B00817A52868B2CE1B0DCC9AF0745",
+      "sha256": "19E7F63869F61799F0C565559972D533CC5C6B2E796BE5D9DCE7611C343C531B",
       "features": 3,
-      "specifications": 12,
+      "specifications": 14,
       "io": 3
     },
     "confidea-flex": {
@@ -410,7 +410,7 @@
       "io": 3
     },
     "dci-4-600n": {
-      "sha256": "B89C892A08F30B1BD2D2D784B734CF9A6FF81EBCAE567B992B26EA9C705CAE6A",
+      "sha256": "6BC084306012DBBDA16B0813F9E22EC4EB93CC22E0D13454CD86778F391927F2",
       "features": 4,
       "specifications": 25,
       "io": 4
@@ -734,9 +734,9 @@
       "io": 6
     },
     "i-tech-4x3500hd": {
-      "sha256": "50AB04D525993A67B9FC61AD99F3E4CD5BE6DB789B8F8EA1F3A8734063F30D7E",
-      "features": 2,
-      "specifications": 17,
+      "sha256": "FA87B3C22A79DBC3E5A3E82407956AA363AFA886989DC3139AEE71D3871B110B",
+      "features": 3,
+      "specifications": 29,
       "io": 3
     },
     "ki-pro-go2": {

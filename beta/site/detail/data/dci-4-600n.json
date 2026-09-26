@@ -49,7 +49,7 @@
     {
       "role": "Main",
       "status": "MISSING",
-      "sourceUrl": "https://www.crownaudio.com/en-US/products/DCi-4-600"
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/dci-4-600n"
     },
     {
       "role": "Front",
@@ -64,12 +64,12 @@
     {
       "role": "Perspective",
       "status": "MISSING",
-      "sourceUrl": "https://www.crownaudio.com/en-US/products/DCi-4-600"
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/dci-4-600n"
     },
     {
       "role": "Other",
       "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.crownaudio.com/en-US/products/DCi-4-600"
+      "sourceUrl": "https://www.crownaudio.com/en-US/products/dci-4-600n"
     }
   ],
   "documents": [
@@ -109,7 +109,7 @@
       "title": "공식 제품 페이지",
       "language": "언어 미확인",
       "note": "",
-      "url": "https://www.crownaudio.com/en-US/products/DCi-4-600"
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-600n"
     }
   ],
   "features": [
@@ -411,7 +411,7 @@
     {
       "code": "P",
       "name": "제조사 공식 제품 페이지",
-      "url": "https://www.crownaudio.com/en-US/products/DCi-4-600",
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-600n",
       "scope": "제조사 공식 출처"
     },
     {
@@ -433,12 +433,6 @@
       "status": "REVIEW REQUIRED",
       "title": "중요: 'N' 접미사는 Dante가 아니라 HARMAN…",
       "detail": "중요: 'N' 접미사는 Dante가 아니라 HARMAN BLU-Link 기반 'Network Series'임. Dante 스펙은 이 모델에 해당하지 않음."
-    },
-    {
-      "code": "R2",
-      "status": "REVIEW REQUIRED",
-      "title": "제품 URL이 실제 사이트에서는 대소문자…",
-      "detail": "제품 URL이 실제 사이트에서는 대소문자 혼용(/products/DCi-4-600)으로 게시되어 있어 DCi 4/600(N) 계열 페이지 slug가 4/600과 사실상 동일 계열로 취급되는 것으로 보임 -> 수치는 검색으로 확보한 DCi 4|600N 페이지 내용을 그대로 반영."
     }
   ],
   "presentation": {

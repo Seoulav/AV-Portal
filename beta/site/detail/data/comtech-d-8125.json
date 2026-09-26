@@ -214,10 +214,28 @@
     },
     {
       "group": "물리 사양",
-      "name": "랙 유닛",
-      "value": "1U",
+      "name": "폼팩터",
+      "value": "1U, 풀랙 폭(고정 랙 이어)",
       "unit": "",
-      "condition": "정확한 W x D x H(mm), 무게는 정보 없음",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "크기(D×W×H)",
+      "value": "378 x 482 x 43",
+      "unit": "mm",
+      "condition": "데이터시트 표기 순서",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "무게",
+      "value": "5.9",
+      "unit": "kg",
+      "condition": "13 lbs",
       "source": "P",
       "verification": "VERIFIED"
     }
@@ -290,8 +308,14 @@
     {
       "code": "R2",
       "status": "REVIEW REQUIRED",
-      "title": "THD/주파수응답/SNR/치수/무게/운영온도/인증 등 다수 항목…",
-      "detail": "THD/주파수응답/SNR/치수/무게/운영온도/인증 등 다수 항목 정보 없음(데이터시트 PDF 직접 열람 필요)."
+      "title": "THD/주파수응답/SNR/운영온도/인증 등 다수 항목 정보…",
+      "detail": "THD/주파수응답/SNR/운영온도/인증 등 다수 항목 정보 없음(데이터시트 PDF 직접 열람 필요)."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
+      "detail": "모델명은 공식 표기로 CTD-2125/4125/8125이며 시리즈명은 ComTech D Series다. 카탈로그 표시명 'ComTech D xxxx'는 유지함."
     }
   ],
   "presentation": {

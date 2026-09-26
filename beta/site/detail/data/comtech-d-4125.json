@@ -217,7 +217,25 @@
       "name": "폼팩터",
       "value": "1U, 하프랙 폭",
       "unit": "",
-      "condition": "정확한 W x D x H(mm), 무게는 정보 없음(CAD 도면 PDF 필요)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "크기(D×W×H)",
+      "value": "358 x 220 x 43",
+      "unit": "mm",
+      "condition": "데이터시트 표기 순서",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "물리 사양",
+      "name": "무게",
+      "value": "3.2",
+      "unit": "kg",
+      "condition": "7.1 lbs",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -299,14 +317,20 @@
     {
       "code": "R2",
       "status": "REVIEW REQUIRED",
-      "title": "THD, 주파수응답, SNR, 입력임피던스, 정확한 치수/무게,…",
-      "detail": "THD, 주파수응답, SNR, 입력임피던스, 정확한 치수/무게, 운영온도, 인증 등 다수 스펙이 웹페이지 텍스트에는 없고 데이터시트/사용자매뉴얼 PDF에만 있을 가능성이 높음(정보 없음으로 표기, PDF 직접 열람 필요)."
+      "title": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등…",
+      "detail": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등 다수 스펙이 웹페이지 텍스트에는 없고 데이터시트/사용자매뉴얼 PDF에만 있을 가능성이 높음(정보 없음으로 표기, PDF 직접 열람 필요)."
     },
     {
       "code": "R3",
       "status": "REVIEW REQUIRED",
       "title": "techdata-ps.com에서는 이 모델에 대한 별도…",
       "detail": "techdata-ps.com에서는 이 모델에 대한 별도 상세페이지를 찾지 못함(검색 결과 없음)."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
+      "detail": "모델명은 공식 표기로 CTD-2125/4125/8125이며 시리즈명은 ComTech D Series다. 카탈로그 표시명 'ComTech D xxxx'는 유지함."
     }
   ],
   "presentation": {

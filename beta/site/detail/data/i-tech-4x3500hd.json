@@ -10,7 +10,7 @@
     "Audio",
     "Amplifier"
   ],
-  "english": "4-channel touring amplifier.",
+  "english": "4-channel touring amplifier with onboard DSP.",
   "korean": "I-Tech 4x3500HD는 아날로그, AES3, CobraNet 입력을 4개 출력 중 어디로든 라우팅할 수 있는 4채널 고출력 투어링 앰프다.",
   "verificationSummary": "techdata-ps.com(하만 계열 국내 1순위 출처)은 제품 상세 페이지가 자바스크립트 렌더링 방식이라 사양·이미지를 추출할 수 없어, Crown Audio 공식 사이트(crownaudio.com)를 실제 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -114,7 +114,11 @@
   ],
   "features": [
     {
-      "text": "4채널 구성 파워앰프다.",
+      "text": "4채널 구성이며, 8Ω 부하 연속 정격 기준 채널당 1900W를 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "온보드 DSP를 내장해 스피커 튜닝과 신호 처리를 앰프 자체에서 수행한다.",
       "source": ""
     },
     {
@@ -124,11 +128,110 @@
   ],
   "specifications": [
     {
-      "group": "출력",
-      "name": "4Ω(4채널 구동)",
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "2Ω",
+      "value": "2100",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "2.7Ω",
+      "value": "2200",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "4Ω",
+      "value": "2400",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "8Ω",
+      "value": "1900",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "4Ω 브리지",
+      "value": "4200",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "8Ω 브리지",
+      "value": "4800",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "70V",
+      "value": "2100",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+      "name": "100V",
+      "value": "2300",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 버스트, 1kHz 20ms, 전 채널 구동)",
+      "name": "2Ω",
+      "value": "3500",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 버스트, 1kHz 20ms, 전 채널 구동)",
+      "name": "2.7Ω",
+      "value": "3800",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 버스트, 1kHz 20ms, 전 채널 구동)",
+      "name": "4Ω",
       "value": "4000",
       "unit": "W",
-      "condition": "전체 4채널 합산 기준(채널당 약 1000W대)",
+      "condition": "제품 페이지 대표 표기 '4000W @ 4Ω'의 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "출력(채널당 버스트, 1kHz 20ms, 전 채널 구동)",
+      "name": "8Ω",
+      "value": "1900 / 2100",
+      "unit": "W",
+      "condition": "사용자 매뉴얼 1900W, 브로셔·데이터시트 2100W — 공식 자료 간 불일치",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -275,6 +378,15 @@
       "condition": "",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "DSP",
+      "name": "신호 처리",
+      "value": "BSS OMNIDRIVEHD DSP (IIR 필터 및 선형위상 FIR 필터)",
+      "unit": "",
+      "condition": "사용자 매뉴얼: Sharc DSP 탑재",
+      "source": "P",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -339,14 +451,20 @@
     {
       "code": "R1",
       "status": "REVIEW REQUIRED",
-      "title": "2/8/16Ω, 70V/100V, 브리지 모드별 채널당 출력 표는…",
-      "detail": "2/8/16Ω, 70V/100V, 브리지 모드별 채널당 출력 표는 제품 페이지 텍스트 추출본에 표 형태로 제공되지 않아 확보하지 못함(정보 없음, 데이터시트 PDF 원문 대조 필요)."
+      "title": "이전 조사본의 '4Ω 4채널 합산 4000W(채널당 약…",
+      "detail": "이전 조사본의 '4Ω 4채널 합산 4000W(채널당 약 1000W)' 해석은 잘못이었다. 4000W는 4Ω·1kHz 20ms 버스트·전 채널 구동 시 채널당 정격이며, 연속 정격(20Hz–20kHz, 0.35% THD)은 4Ω 채널당 2400W이다(사용자 매뉴얼 기준으로 정정)."
     },
     {
       "code": "R2",
       "status": "REVIEW REQUIRED",
-      "title": "입력 임피던스, 운영 온도 범위 수치는 페이지에서 확인되지…",
-      "detail": "입력 임피던스, 운영 온도 범위 수치는 페이지에서 확인되지 않음(정보 없음)."
+      "title": "8Ω 버스트 정격은 공식 문서끼리 다르다(매뉴얼 1900W,…",
+      "detail": "8Ω 버스트 정격은 공식 문서끼리 다르다(매뉴얼 1900W, 브로셔·데이터시트 2100W). 브리지 버스트 7000W/6000W도 문서마다 4Ω·8Ω 배정이 반대로 적혀 있어 수치를 싣지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "입력 임피던스, 운영 온도 범위 수치는 이번 조사에서 확인하지…",
+      "detail": "입력 임피던스, 운영 온도 범위 수치는 이번 조사에서 확인하지 못함(정보 없음)."
     }
   ],
   "presentation": {
