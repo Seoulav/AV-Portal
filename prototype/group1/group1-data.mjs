@@ -90,8 +90,9 @@ export const previewImageScopes = ['series'];
 
 // 값이 있을 때만 넣는 공개 필드. link_scope는 공식 링크가 제품군 페이지일 때만 'series'로 둔다.
 // manual_link는 제조사 서버의 매뉴얼·사양서 URL만 저장한다(파일 재호스핑 없음). official_links와 달리 PDF를 허용한다.
-// reference_link는 제품 자체의 매뉴얼이 아닌 부속 참고자료(예: 여러 모델을 함께 다루는 브라켓 설치 핸드북)를
-// 가리킨다. manual_link와 별도로 존재할 수 있으며, 현재는 사용자 업로드 자료만 지원한다.
+// reference_link는 제품 자체의 매뉴얼이 아닌 부속 참고자료(예: 여러 모델을 함께 다루는 브라켓 설치
+// 핸드북, 옵션 카드 구성 페이지)를 가리키는 URL 배열이다(한 제품에 여러 참고자료가 있을 수 있음).
+// manual_link와 별도로 존재할 수 있으며, 사용자 업로드 자료와 제조사 공식 URL을 모두 지원한다.
 export const optionalCatalogFields = ['link_scope', 'manual_link', 'reference_link'];
 export const linkScopes = ['series'];
 

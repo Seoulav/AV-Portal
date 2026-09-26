@@ -1726,7 +1726,9 @@
       "https://jblpro.com/en-US/products/ac18-95.html"
     ],
     "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605154898rrmbu4pd7b.pdf&o_file_name=jbl_ac18_95-082016.pdf",
-    "reference_link": "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
+    "reference_link": [
+      "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
+    ]
   },
   {
     "brand": "JBL",
@@ -1741,7 +1743,9 @@
       "https://jblpro.com/en-US/products/ac18-26"
     ],
     "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605766688m0d2qhy2fq.pdf&o_file_name=ac18_26+spec+sheet.pdf",
-    "reference_link": "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
+    "reference_link": [
+      "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
+    ]
   },
   {
     "brand": "JBL",
@@ -2625,7 +2629,10 @@
     ],
     "link_scope": "series",
     "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754235ycz0u085f3.pdf&o_file_name=bss+blu_%EB%A7%A4%EB%89%B4%EC%96%BC_kor.pdf",
-    "reference_link": "https://bssaudio.com/en/product_families/input-output-cards"
+    "reference_link": [
+      "https://bssaudio.com/en/product_families/input-output-cards",
+      "https://bssaudio.com/ko/products/aec-card"
+    ]
   },
   {
     "brand": "BSS Audio",

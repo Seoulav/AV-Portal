@@ -17,7 +17,7 @@ export function buildCatalogHtml(catalog) {
     const label = item.link_scope === 'series' ? '제품군 링크' : '공식 링크';
     const links = item.official_links.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">${label} ${index + 1}</a>`);
     if (item.manual_link) links.push(`<a href="${escapeHtml(item.manual_link)}" rel="noopener noreferrer">제조사 매뉴얼</a>`);
-    if (item.reference_link) links.push(`<a href="${escapeHtml(item.reference_link)}" rel="noopener noreferrer">참고자료</a>`);
+    if (item.reference_link) links.push(...item.reference_link.map((url, index) => `<a href="${escapeHtml(url)}" rel="noopener noreferrer">참고자료${item.reference_link.length > 1 ? ` ${index + 1}` : ''}</a>`));
     if (slug) links.unshift(`<a href="./detail/?product=${slug}">Product Detail</a>`);
     return `      <article class="catalog-product">
         <p class="brand">${escapeHtml(item.brand)}</p>
@@ -65,7 +65,7 @@ export function buildLlmsText(catalog) {
       '  종류: 장비',
       ...item.official_links.map(url => `  ${item.link_scope === 'series' ? '제품군 링크' : '공식 링크'}: ${url}`),
       ...(item.manual_link ? [`  매뉴얼: ${item.manual_link}`] : []),
-      ...(item.reference_link ? [`  참고자료: ${item.reference_link}`] : [])
+      ...(item.reference_link ? item.reference_link.map(url => `  참고자료: ${url}`) : [])
     ];
     if (slug) lines.push(`  상세: ${publicBase}detail/?product=${slug}`);
     return lines.join('\n');

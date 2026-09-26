@@ -122,16 +122,20 @@ for (const item of catalog) {
     assert.equal(userManualLinkFor(item), null, `${item.product}: 사용자 업로드 매뉴얼이 있는데 manual_link가 비어 있음`);
   }
   if (item.reference_link !== undefined) {
-    assert.ok(typeof item.reference_link === 'string' && item.reference_link.trim(), `${item.product}: 참고자료 링크`);
+    assert.ok(Array.isArray(item.reference_link) && item.reference_link.length > 0, `${item.product}: 참고자료 링크`);
+    assert.equal(new Set(item.reference_link).size, item.reference_link.length, `${item.product}: 참고자료 링크 중복`);
     const uploaded = userReferenceLinkFor(item);
     if (uploaded !== null) {
-      assert.equal(item.reference_link, uploaded, `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+      assert.deepEqual(item.reference_link, [uploaded], `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
     } else {
-      const refUrl = new URL(item.reference_link);
-      assert.equal(refUrl.protocol, 'https:');
-      assert.equal(refUrl.username, '');
-      assert.equal(refUrl.password, '');
-      assert.ok(isAllowedHost(refUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer reference URL`);
+      for (const link of item.reference_link) {
+        assert.ok(typeof link === 'string' && link.trim(), `${item.product}: 참고자료 링크`);
+        const refUrl = new URL(link);
+        assert.equal(refUrl.protocol, 'https:');
+        assert.equal(refUrl.username, '');
+        assert.equal(refUrl.password, '');
+        assert.ok(isAllowedHost(refUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer reference URL`);
+      }
     }
   } else {
     assert.equal(userReferenceLinkFor(item), null, `${item.product}: 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음`);
