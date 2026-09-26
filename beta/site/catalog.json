@@ -2692,7 +2692,10 @@
       "https://bssaudio.com/en-US/product_families/inputoutput-cards"
     ],
     "link_scope": "series",
-    "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
+    "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "reference_link": [
+      "https://bssaudio.com/ko/products/analog-output-card"
+    ]
   },
   {
     "brand": "BSS Audio",
