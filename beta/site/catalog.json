@@ -689,7 +689,9 @@
     "kind": "equipment",
     "official_links": [
       "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-x40uh"
-    ]
+    ],
+    "slug": "srg-x40uh",
+    "card_image": "srg-x40uh-main.webp"
   },
   {
     "brand": "Sony",
@@ -702,7 +704,9 @@
     "kind": "equipment",
     "official_links": [
       "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40"
-    ]
+    ],
+    "slug": "srg-a40",
+    "card_image": "srg-a40-main.webp"
   },
   {
     "brand": "Sony",
@@ -715,7 +719,9 @@
     "kind": "equipment",
     "official_links": [
       "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10"
-    ]
+    ],
+    "slug": "rm-ip10",
+    "card_image": "rm-ip10-main.webp"
   },
   {
     "brand": "Sony",
@@ -728,7 +734,9 @@
     "kind": "equipment",
     "official_links": [
       "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500"
-    ]
+    ],
+    "slug": "rm-ip500",
+    "card_image": "rm-ip500-main.webp"
   },
   {
     "brand": "AVer",

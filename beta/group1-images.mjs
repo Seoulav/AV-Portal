@@ -21,6 +21,29 @@ const image = imageWith(publicationStatus);
 const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
+  'srg-x40uh': [
+    image('Main', 'srg-x40uh-main.webp', 'Sony SRG-X40UH 블랙 본체를 비스듬히 본 메인 이미지. 전면 SONY 로고와 POWER·STANDBY 표시등이 보인다', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/10dcbda61364021579978a436d10e29f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1812x2000', 'VERIFIED'),
+    image('Front', 'srg-x40uh-front.webp', 'Sony SRG-X40UH 블랙 본체 정면 이미지', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/01f294822eabc58f4dc38dcec152c4f3?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1704x2000', 'VERIFIED'),
+    image('Rear', 'srg-x40uh-rear.webp', 'Sony SRG-X40UH 블랙 본체 후면 단자 이미지. SYSTEM SELECT, IR SELECT, VISCA RS-422 IN/OUT, VIDEO OUT(USB Type-C), HDMI, LAN, 12V DC 입력이 보인다', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/422ffc3f0a462157faca4d048d6b707f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1888x2000', 'VERIFIED'),
+    image('Perspective', 'srg-x40uh-perspective.webp', 'Sony SRG-X40UH 화이트 본체를 비스듬히 본 이미지', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/ba76add27b606f6ee1a248e0be8cb414?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1808x2000', 'VERIFIED')
+  ],
+  'srg-a40': [
+    image('Main', 'srg-a40-main.webp', 'Sony SRG-A40 블랙 본체를 비스듬히 본 메인 이미지. 상단 탈리 램프와 POWER·NETWORK 표시등이 보인다', 'Sony', 'SRG-A40', 'https://www.sony.com/image/73b36cc15a15967c002762c049f6d13e?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '753x850', 'VERIFIED'),
+    image('Front', 'srg-a40-front.webp', 'Sony SRG-A40 블랙 본체 정면 이미지', 'Sony', 'SRG-A40', 'https://www.sony.com/image/ff42019896aa0a428518619ad9ae303f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '778x946', 'VERIFIED'),
+    image('Rear', 'srg-a40-rear.webp', 'Sony SRG-A40 블랙 본체 후면 단자 이미지. MIC, IR SELECT, SYSTEM SELECT, CAMERA SETUP, 19.5V DC 입력, VISCA RS-422 IN/OUT, HDMI, SDI OUT, LAN과 냉각 팬이 보인다', 'Sony', 'SRG-A40', 'https://www.sony.com/image/b1faf50b20f34ba565c39dbdc108c28f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '814x907', 'VERIFIED'),
+    image('Perspective', 'srg-a40-perspective.webp', 'Sony SRG-A40 화이트 본체를 비스듬히 본 이미지', 'Sony', 'SRG-A40', 'https://www.sony.com/image/4cb1867112ec4a7994cec79bdc23081e?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '752x850', 'VERIFIED')
+  ],
+  'rm-ip10': [
+    image('Main', 'rm-ip10-main.webp', 'Sony RM-IP10 IP 리모트 컨트롤러를 비스듬히 본 메인 이미지. 조이스틱과 GROUP/POSITION·CAMERA 버튼이 보인다', 'Sony', 'RM-IP10', 'https://www.sony.com/image/125f430ba3f90a87a814c0f7411fad6e?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '984x487', 'VERIFIED'),
+    image('Front', 'rm-ip10-front.webp', 'Sony RM-IP10 상판 조작부를 위에서 본 이미지. \'IP REMOTE CONTROLLER RM-IP10\' 표기, POSITION 1–16 버튼, CAMERA 1–7 버튼, 조이스틱이 보인다', 'Sony', 'RM-IP10', 'https://www.sony.com/image/18414847dd0bc8765c6c8368cf1d3f96?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '961x379', 'VERIFIED'),
+    image('Rear', 'rm-ip10-rear.webp', 'Sony RM-IP10 후면 단자 이미지. LAN(RJ-45), 단자대 커넥터, DC 입력 등이 보인다', 'Sony', 'RM-IP10', 'https://www.sony.com/image/f52df0275a9192e307728d8e08e79997?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '982x428', 'VERIFIED')
+  ],
+  'rm-ip500': [
+    image('Main', 'rm-ip500-main.webp', 'Sony RM-IP500 PTZ 카메라 리모트 컨트롤러를 비스듬히 본 메인 이미지. LCD, 페인트 노브, 숫자 키패드와 조이스틱이 보인다', 'Sony', 'RM-IP500', 'https://www.sony.com/image/dd0103a99c2c711918e36531162f8b2a?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '895x484', 'VERIFIED'),
+    image('Front', 'rm-ip500-front.webp', 'Sony RM-IP500 전면 방향에서 본 이미지. IRIS·FOCUS 노브, ZOOM 시소 레버, POSITION 키패드와 조이스틱이 보인다', 'Sony', 'RM-IP500', 'https://www.sony.com/image/3b894467a93838c17041e0007d4b0fc3?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '913x492', 'VERIFIED'),
+    image('Rear', 'rm-ip500-rear.webp', 'Sony RM-IP500 후면 단자 이미지. GPI I/O(D-sub 15핀), LAN(RJ-45), VISCA RS-422(RJ-45), 12V DC 입력과 전원 스위치가 보인다', 'Sony', 'RM-IP500', 'https://www.sony.com/image/1ec6e0727ce4adba1d89bab46f4cf10f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '888x442', 'VERIFIED'),
+    image('Other', 'rm-ip500-other.webp', 'Sony RM-IP500 상판을 위에서 본 이미지. 우측 상단에 \'RM-IP500\' 모델 표기가 보인다', 'Sony', 'RM-IP500', 'https://www.sony.com/image/15afc76a8696e8d7ac4c70093daf4ca4?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '833x635', 'VERIFIED')
+  ],
   'slxd4d-plus': [
     image('Front', 'slxd4d-plus-front.webp', 'Shure SLXD4D+ 듀얼 채널 무선 수신기 정면', 'Shure', 'SLXD4D+ Dual Channel Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/526/485/60-/original/5d8c0175164861b4b499f93a9dd59111.webp', '3000x3000', '2000x469'),
     image('Rear', 'slxd4d-plus-rear.webp', 'Shure SLXD4D+ 후면 패널(BNC 안테나 A/B, DC 전원, Ethernet, XLR·1/4" 출력 ×2)', 'Shure', 'SLXD4D+ Dual Channel Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/df2/e5c/00-/original/54a0e1793181a86c67f775ea34c97a96.webp', '3000x3000', '2000x1324'),
@@ -851,6 +874,10 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  'srg-x40uh': 'srg-x40uh-main.webp',
+  'srg-a40': 'srg-a40-main.webp',
+  'rm-ip10': 'rm-ip10-main.webp',
+  'rm-ip500': 'rm-ip500-main.webp',
   'slxd4d-plus': 'slxd4d-plus-front.webp',
   'slxd4-plus': 'slxd4-plus-front.webp',
   'slxd2-plus-58': 'slxd2-plus-58-front.webp',
