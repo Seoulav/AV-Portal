@@ -1,0 +1,520 @@
+{
+  "manufacturer": "SONY",
+  "productName": "RM-IP500",
+  "model": "RM-IP500",
+  "series": "RM-IP",
+  "seriesNote": "모델 접두어이며 별도 판매 시리즈 명칭은 미확인입니다. 미국/캐나다용 RM-IP500/1은 AC 전원 공급 장치가 포함된 지역 모델입니다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "PTZ/원격 카메라",
+    "카메라 컨트롤러"
+  ],
+  "english": "Compact joystick PTZ remote controller for up to 100 Sony BRC/SRG and ILME-FR7 cameras over IP, with presets, trace memory, paint control and tally.",
+  "korean": "RM-IP500은 고품질 조이스틱과 전용 노브로 Sony BRC/SRG 시리즈와 ILME-FR7 PTZ 카메라를 IP로 최대 100대까지 제어하는 컴팩트 리모트 컨트롤러입니다. 프리셋·트레이스 메모리, 카메라 페인트 조정, 탈리 연동을 지원합니다.",
+  "verificationSummary": "Sony 한국어 공식 제품 페이지와 PDF 내보내기, 글로벌(미국) 제품 PDF, 영문 사용 설명서(2024-11-24 게시)에서 사양을 확인했습니다. 시스템당 최대 컨트롤러 수는 공식 사양표와 본문·사용 설명서가 달라 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "RM-IP500은 라이브 이벤트, 회의실, 방송 스튜디오, 교육·종교 시설의 멀티 카메라 제작을 위한 PTZ 카메라 리모트 컨트롤러다. 조이스틱으로 팬·틸트·줌을 한 손으로 조작하고, 보조 줌 시소 레버와 PT·줌·초점별 속도 다이얼 3개로 세밀하게 제어한다.\n\nLAN(10BASE-T/100BASE-TX)과 VISCA over IP로 호환 Sony BRC/SRG 시리즈와 ILME-FR7을 최대 100대, VISCA RS-422 직렬 연결로 최대 7대 제어한다. 네트워크에 연결된 카메라에 IP 주소와 카메라 번호를 자동 할당하며, 카메라 설정을 최대 100개 프리셋(카메라 사양에 따라 다름)으로 저장하고 트레이스 메모리로 PTZ 동작을 최대 16개 패턴까지 기록한다.\n\n블랙 레벨, 화이트 밸런스, 플리커, 디테일, 니 포인트, AE 레벨, 조리개, 게인, 셔터 스피드를 카메라 메뉴 없이 직접 조정하며, GPI I/O(D-sub 15핀)로 탈리 입력과 접점 출력을 지원한다. 전원은 12V DC이며 AC 어댑터는 미국/캐나다용 RM-IP500/1을 제외하고 별매다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "rm-ip500-main.webp",
+      "alt": "Sony RM-IP500 PTZ 카메라 리모트 컨트롤러를 비스듬히 본 메인 이미지. LCD, 페인트 노브, 숫자 키패드와 조이스틱이 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP500",
+      "sourceUrl": "https://www.sony.com/image/dd0103a99c2c711918e36531162f8b2a?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "895x484",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Front",
+      "file": "rm-ip500-front.webp",
+      "alt": "Sony RM-IP500 전면 방향에서 본 이미지. IRIS·FOCUS 노브, ZOOM 시소 레버, POSITION 키패드와 조이스틱이 보인다",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP500",
+      "sourceUrl": "https://www.sony.com/image/3b894467a93838c17041e0007d4b0fc3?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "913x492",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "rm-ip500-rear.webp",
+      "alt": "Sony RM-IP500 후면 단자 이미지. GPI I/O(D-sub 15핀), LAN(RJ-45), VISCA RS-422(RJ-45), 12V DC 입력과 전원 스위치가 보인다",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP500",
+      "sourceUrl": "https://www.sony.com/image/1ec6e0727ce4adba1d89bab46f4cf10f?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "888x442",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "rm-ip500-other.webp",
+      "alt": "Sony RM-IP500 상판을 위에서 본 이미지. 우측 상단에 'RM-IP500' 모델 표기가 보인다",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP500",
+      "sourceUrl": "https://www.sony.com/image/15afc76a8696e8d7ac4c70093daf4ca4?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "833x635",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/dd0103a99c2c711918e36531162f8b2a?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/3b894467a93838c17041e0007d4b0fc3?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Rear",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/1ec6e0727ce4adba1d89bab46f4cf10f?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Other",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/15afc76a8696e8d7ac4c70093daf4ca4?fmt=png-alpha&wid=3000&hei=3000"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "RM-IP500 Operating Instructions",
+      "language": "en",
+      "note": "영문 사용 설명서(2024-11-24 게시, 91쪽, BRC-AM7·ILME-FR7 조작 포함). 한국어판은 확인되지 않음. 매뉴얼 목록: https://pro.sony/ue_US/support-resources/rm-ip500/manual",
+      "url": "https://www.sony.com/electronics/support/res/manuals/4696/c0e8f25a2e17f02ff8d68f5d11fc5489/46962571M.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": "RM-IP500 단독 시방서는 Sony 공식 출처에서 확인되지 않음"
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "RM-IP500 제품 페이지 PDF 내보내기(사양 포함)",
+      "language": "ko",
+      "note": "Sony 한국어 제품 페이지의 PDF 내보내기(2026-09-26 생성). 글로벌(미국) PDF: https://pro.sony/ue_US/pdf/products/network-camera-accessories/rm-ip500",
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip500"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "RM-IP Setup Tool Guide",
+      "language": "en",
+      "note": "User's Guide - RM-IP Setup Tool Guide(5-072-831-11, 2025-10-14 게시). Remote Camera System Guide: https://www.sony.com/electronics/support/res/manuals/C960/cd5d9b33286a9cc3afa54695e80a542a/C9601001M.pdf",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5072/7ae48f4b6b6dee5ee8a619ce6070c9f4/50728311M.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "RM-IP500 공식 제품 페이지",
+      "language": "ko",
+      "note": "한국어 공식 페이지. 글로벌(미국): https://pro.sony/ue_US/products/network-camera-accessories/rm-ip500",
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500"
+    }
+  ],
+  "features": [
+    {
+      "text": "IP 네트워크로 호환 Sony BRC/SRG 시리즈와 ILME-FR7을 최대 100대, VISCA RS-422로 최대 7대 제어하며 여러 모델을 혼용할 수 있다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "네트워크에 연결된 카메라에 IP 주소와 카메라 번호를 자동 할당해 PC 없이 시스템을 구성할 수 있다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "카메라 앵글과 설정을 최대 100개 프리셋으로 저장하고, 트레이스 메모리로 PTZ 동작을 최대 16개 패턴까지 기록한다(카메라 사양에 따라 다름).",
+      "source": "PP, OI"
+    },
+    {
+      "text": "블랙 레벨, 화이트 밸런스, 플리커, 디테일, 니 포인트, AE 레벨, 조리개, 게인, 셔터 스피드를 카메라 메뉴 없이 직접 조정한다.",
+      "source": "PP"
+    },
+    {
+      "text": "일반 탈리 / 온에어 탈리 / 접점 모드를 지원하며 GPI I/O로 스위처와 연동한다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "조이스틱 줌 링과 줌 시소 레버, PT·줌·초점 개별 속도 다이얼 3개, ASSIGN 버튼 6개를 갖추었다.",
+      "source": "PP"
+    },
+    {
+      "text": "ILME-FR7 전용 패널 시트가 포함되며(V2.20 이상), 녹화 시작/정지·가변 ND·초점 영역을 제어할 수 있다.",
+      "source": "PP"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera Control",
+      "name": "최대 IP 연결 카메라",
+      "value": "100",
+      "unit": "count",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "최대 직렬 연결 카메라",
+      "value": "7",
+      "unit": "count",
+      "condition": "VISCA RS-422, SRG-360SHE는 1대",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "시스템당 최대 컨트롤러",
+      "value": "5 (본문·사용 설명서) / 1 *1 (사양표)",
+      "unit": "count",
+      "condition": "RM-IP10 혼용 시 합계 5대(본문). 자료 간 상충(R1)",
+      "source": "PP, PE, OI",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "제어 프로토콜",
+      "value": "VISCA over IP / VISCA RS-422 전환",
+      "unit": "",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "프리셋",
+      "value": "최대 100",
+      "unit": "count",
+      "condition": "카메라 사양·펌웨어에 따라 다름",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "트레이스 메모리",
+      "value": "최대 16",
+      "unit": "pattern",
+      "condition": "지원 카메라 한정",
+      "source": "OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "지원 카메라",
+      "value": "Sony BRC/SRG 시리즈, ILME-FR7, BRC-AM7 등",
+      "unit": "",
+      "condition": "ILME-FR7은 V2.20 이상, 기능은 카메라 사양에 따라 다름",
+      "source": "PP, OI, RG",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control Signal",
+      "name": "RS-422 통신 속도",
+      "value": "9,600 / 38,400",
+      "unit": "bps",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "LAN",
+      "value": "10BASE-T/100BASE-TX 자동 감지",
+      "unit": "",
+      "condition": "RJ-45",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "디스플레이",
+      "value": "지원(LCD)",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "속도 조절",
+      "value": "3개 다이얼(PT, 줌, 초점 별도)",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "줌 제어",
+      "value": "시소 레버 또는 조이스틱 링 선택",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "ASSIGN 버튼",
+      "value": "6",
+      "unit": "count",
+      "condition": "",
+      "source": "PP, PE",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "켄싱턴 잠금 홀",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "탈리 모드",
+      "value": "일반 탈리 / 온에어 탈리 / 접점",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전압",
+      "value": "12",
+      "unit": "V DC",
+      "condition": "10.8–13.2V DC",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비 전류",
+      "value": "최대 0.6A(모든 램프 점등), 7.2W / 일반 0.2A(2.4W)",
+      "unit": "",
+      "condition": "12V DC",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "AC 어댑터",
+      "value": "별매(AC-UES1230 시리즈)",
+      "unit": "",
+      "condition": "미국/캐나다용 RM-IP500/1은 포함",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "306×159.3×224.1",
+      "unit": "mm",
+      "condition": "W×H×D, 돌출부 제외",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "질량",
+      "value": "약 2,400",
+      "unit": "g",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "−20–+60",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Package",
+      "name": "포함 액세서리",
+      "value": "안전 규정, 보증(중국 판매 모델 제외), 다운로드 사이트 정보, ILME-FR7용 패널 시트",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "LAN RJ-45",
+      "signal": "Network",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "10BASE-T/100BASE-TX 자동 감지, VISCA over IP",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA RS-422 OUT RJ-45",
+      "signal": "PTZ control",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "VISCA RS-422, 9,600/38,400bps",
+      "availability": "Fixed",
+      "condition": "최대 7대",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "GPI I/O D-sub 15핀(암)",
+      "signal": "Tally/Contact",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "TALLY IN / CONTACT OUT",
+      "availability": "Fixed",
+      "condition": "스위처용 케이블 필요",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC IN 12V (JEITA type 4)",
+      "signal": "Power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "12V DC",
+      "availability": "Fixed",
+      "condition": "AC 어댑터 별매(RM-IP500/1 제외)",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PP",
+      "name": "제조사 제품 페이지 PDF(한국어)",
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip500",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PE",
+      "name": "제조사 제품 페이지 PDF(글로벌/미국)",
+      "url": "https://pro.sony/ue_US/pdf/products/network-camera-accessories/rm-ip500",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "OI",
+      "name": "제조사 영문 사용 설명서(Operating Instructions)",
+      "url": "https://www.sony.com/electronics/support/res/manuals/4696/c0e8f25a2e17f02ff8d68f5d11fc5489/46962571M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "ST",
+      "name": "제조사 RM-IP Setup Tool Guide",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5072/7ae48f4b6b6dee5ee8a619ce6070c9f4/50728311M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "RG",
+      "name": "제조사 Remote Camera System Guide",
+      "url": "https://www.sony.com/electronics/support/res/manuals/C960/cd5d9b33286a9cc3afa54695e80a542a/C9601001M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 공식 이미지 서버(제품 페이지 갤러리)",
+      "url": "https://www.sony.com/image/dd0103a99c2c711918e36531162f8b2a?fmt=png-alpha&wid=3000&hei=3000",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 제공 정리 자료",
+      "url": "",
+      "scope": "사용자 제공(2026-09-27, 서울영상테크 SI사업본부 정리): pro.sony·공식 유통사 스펙 기준, 제조사 원문 아님"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "시스템당 최대 컨트롤러 수",
+      "detail": "제품 페이지 본문(한국어·글로벌)은 '단일 네트워크에서 최대 5대의 RM-IP500, RM-IP10과 혼용 시 합계 최대 5대'로 설명하고, 사용 설명서도 '같은 네트워크에 카메라 최대 100대와 리모트 컨트롤러 5대'로 적는다. 반면 같은 페이지의 사양표 '최대 컨트롤러 수량(/시스템)'은 '1 *1'이다. 어느 값도 임의로 확정하지 않고 두 값을 함께 표시했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "AC 어댑터 포함 여부",
+      "detail": "RM-IP500/1(미국/캐나다용)만 AC-UES1230MT AC 전원 공급 장치와 코드가 포함되며 기타 지역은 별매다. 운영사 자료(U)에는 이 조건이 없다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "기능의 카메라·펌웨어 의존성",
+      "detail": "프리셋 수, 트레이스 메모리, 페인트 조정, ASSIGN 항목은 카메라 사양과 펌웨어 버전에 따라 다르다. ILME-FR7 제어는 펌웨어 V2.20 이상이 필요하다."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지·문서 게시 권한",
+      "detail": "제품 사진(sony.com 이미지 서버)과 PDF의 재게시 권리는 확인되지 않았다. 사용자 게시 승인만 반영했다."
+    },
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "한국어 자료 접근 한계",
+      "detail": "sony.co.kr 지원 페이지는 스크립트 렌더링 페이지로 내용이 확인되지 않았고, 한국어 사용 설명서는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지",
+    "footerNote": "SONY RM-IP500 · 공식 출처 기반"
+  }
+}

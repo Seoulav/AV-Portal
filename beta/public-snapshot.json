@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "21F917488CCB4B008135CB2FAF27AC6DF626B0D17377C6BFB82D4B005F8CC3D8",
+    "sha256": "727384E196DDC7436CAE8462D48766CAF5C15008CD7B369726F9554C43AAABAF",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -1129,6 +1129,18 @@
       "specifications": 12,
       "io": 6
     },
+    "rm-ip10": {
+      "sha256": "8887006075FB35B6EB2609922C814A0CEF6E1388C670E5AF43C8E252F735E654",
+      "features": 6,
+      "specifications": 21,
+      "io": 5
+    },
+    "rm-ip500": {
+      "sha256": "976D20B3FAAA214FEF79AFCE006E84A65FFAF1D591A934E9CF8B8D2655892DA4",
+      "features": 7,
+      "specifications": 23,
+      "io": 4
+    },
     "slxd1-plus": {
       "sha256": "43161A356BCC1A8C2FA4359DE6F4DC5E1872D6A570DEE668D8F9CFC7A59DC598",
       "features": 3,
@@ -1170,6 +1182,18 @@
       "features": 6,
       "specifications": 10,
       "io": 0
+    },
+    "srg-a40": {
+      "sha256": "0A1E5CB6EB98D04427B0E14C675B1AF15453E07F533914D42D11C153DE8EA1CA",
+      "features": 8,
+      "specifications": 54,
+      "io": 8
+    },
+    "srg-x40uh": {
+      "sha256": "159CBAE0A84F5857DCE76CDC82EE8493C9F7C5162A0D6C2DECE5CF9CEAB5D5A3",
+      "features": 8,
+      "specifications": 46,
+      "io": 7
     },
     "strong-usb-cable": {
       "sha256": "1ECCF2EED991666210ADA72DC0A20D24481A6E26D4C772F4C0B3135D7669252E",

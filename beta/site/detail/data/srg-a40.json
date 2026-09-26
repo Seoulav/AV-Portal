@@ -1,0 +1,863 @@
+{
+  "manufacturer": "SONY",
+  "productName": "SRG-A40",
+  "model": "SRG-A40",
+  "series": "SRG",
+  "seriesNote": "모델 접두어이며 별도 판매 시리즈 명칭은 미확인입니다. 공식 페이지와 사용 설명서는 광학 12배 모델 SRG-A12와 공용입니다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "PTZ/원격 카메라",
+    "4K 카메라"
+  ],
+  "english": "4K PTZ camera with built-in AI analytics for PTZ Auto Framing, 20× optical zoom, SDI/HDMI/IP output and PoE++.",
+  "korean": "SRG-A40은 내장 AI 분석 엔진으로 발표자를 자동 추적·구도화하는 PTZ 오토 프레이밍 4K 카메라입니다. 1/2.5형 Exmor R CMOS 센서와 광학 20배 줌을 갖추고, 3G-SDI·HDMI 출력과 IP 스트리밍을 동시에 제공하며 PoE++ 단일 케이블 설치를 지원합니다.",
+  "verificationSummary": "Sony 한국어 공식 제품 페이지와 PDF 내보내기, 글로벌(미국) 제품 PDF, 영문 사용 설명서(2026-04-13 게시)에서 사양을 확인했습니다. 팬/틸트 속도 조건 표기, NDI|HX 라이선스 방식, RTMP 지원 표기, 펌웨어 4.0 기능 제공 시점은 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "SRG-A40은 강의 녹화, 기업 행사, 예배·공연 중계처럼 전담 카메라 운영자 없이 발표자를 촬영해야 하는 환경을 위한 4K PTZ 카메라다. 내장 AI 분석 엔진이 인물의 골격과 머리 위치를 감지해 자세·동작·복장과 관계없이 팬·틸트·줌으로 자동 추적하고 자연스러운 구도를 유지한다(PTZ 오토 프레이밍). 멀티 퍼슨 프레이밍(최대 8명), 얼굴 등록, 트래킹 범위, 고정식 앵글 위치, Lead Room 효과를 지원한다.\n\n1/2.5형 Exmor R CMOS 센서(유효 약 850만 화소)와 광학 20배 줌(f=4.4–88.0mm, F2.0–F3.8)을 사용하며 클리어 이미지 줌으로 FHD 약 2배·QFHD 약 1.5배를 추가한다. 3G-SDI(최대 1080/59.94p), HDMI(최대 3840×2160/29.97p)와 H.264/H.265 IP 스트리밍(RTP/RTCP, RTSP, SRT, NDI|HX, 최대 60fps, 512Kbps–50Mbps)을 동시에 출력할 수 있다.\n\n전원은 19.5V DC 또는 PoE++(IEEE 802.3bt Type 4 Class 8)이며 VISCA RS-422, VISCA over IP, HTTP/HTTPS(CGI)와 포함 IR 리모컨으로 제어한다. 중앙 탈리 램프는 적색(촬영 중)·녹색(오토 프레이밍 ON)으로 표시된다. 구기 스포츠(농구) 모드와 얼굴 데이터 가져오기 등 일부 기능은 펌웨어 4.0 이상이 필요하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "srg-a40-main.webp",
+      "alt": "Sony SRG-A40 블랙 본체를 비스듬히 본 메인 이미지. 상단 탈리 램프와 POWER·NETWORK 표시등이 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "SRG-A40",
+      "sourceUrl": "https://www.sony.com/image/73b36cc15a15967c002762c049f6d13e?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "753x850",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Front",
+      "file": "srg-a40-front.webp",
+      "alt": "Sony SRG-A40 블랙 본체 정면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "SRG-A40",
+      "sourceUrl": "https://www.sony.com/image/ff42019896aa0a428518619ad9ae303f?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "778x946",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "srg-a40-rear.webp",
+      "alt": "Sony SRG-A40 블랙 본체 후면 단자 이미지. MIC, IR SELECT, SYSTEM SELECT, CAMERA SETUP, 19.5V DC 입력, VISCA RS-422 IN/OUT, HDMI, SDI OUT, LAN과 냉각 팬이 보인다",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "SRG-A40",
+      "sourceUrl": "https://www.sony.com/image/b1faf50b20f34ba565c39dbdc108c28f?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "814x907",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "srg-a40-perspective.webp",
+      "alt": "Sony SRG-A40 화이트 본체를 비스듬히 본 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "SRG-A40",
+      "sourceUrl": "https://www.sony.com/image/4cb1867112ec4a7994cec79bdc23081e?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "752x850",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/73b36cc15a15967c002762c049f6d13e?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/ff42019896aa0a428518619ad9ae303f?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Rear",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/b1faf50b20f34ba565c39dbdc108c28f?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Perspective",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/4cb1867112ec4a7994cec79bdc23081e?fmt=png-alpha&wid=3000&hei=3000"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "SRG-A40/A12 Operating Instructions",
+      "language": "en",
+      "note": "영문 사용 설명서(2026-04-13 게시, 114쪽). 한국어판은 확인되지 않음. 매뉴얼 목록: https://pro.sony/ue_US/support-resources/srg-a40/manual",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/7964e8723a6c3c92e14125ad162509e6/50531541M.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": "SRG-A40 단독 시방서는 Sony 공식 출처에서 확인되지 않음"
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "SRG-A40/SRG-A12 제품 페이지 PDF 내보내기(사양 포함)",
+      "language": "ko",
+      "note": "Sony 한국어 제품 페이지의 PDF 내보내기(2026-09-26 생성). 글로벌(미국) PDF: https://pro.sony/ue_US/pdf/products/ptz-network-cameras/srg-a40",
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/srg-a40"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "SRG-A40/A12 VISCA Command List",
+      "language": "en",
+      "note": "Technical Manual - VISCA/CGI COMMAND LIST(5-053-155-16). NDI HX Introduction·Remote Camera System Guide는 매뉴얼 목록 참조",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/f48354480e724f0aef3d45d2e1eeab63/50531551M.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "SRG-A40 공식 제품 페이지",
+      "language": "ko",
+      "note": "한국어 공식 페이지(SRG-A40/SRG-A12 공용). 글로벌(미국): https://pro.sony/ue_US/products/ptz-network-cameras/srg-a40",
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40"
+    }
+  ],
+  "features": [
+    {
+      "text": "내장 AI 분석 엔진으로 인물의 골격·머리 위치를 감지해 자세·동작·복장과 관계없이 팬·틸트·줌으로 자동 추적하고 구도를 잡는다.",
+      "source": "P, PP"
+    },
+    {
+      "text": "멀티 퍼슨 프레이밍(최대 8명), 얼굴 등록, 트래킹 범위, 고정식 앵글 위치, Lead Room 효과(3단계)를 지원한다.",
+      "source": "PP"
+    },
+    {
+      "text": "구도 프리셋 3개(출하 시 클로즈업·허리·전신 크기)를 저장·호출하며, 펌웨어 4.0부터 30단계 피사체 크기 설정을 제공한다.",
+      "source": "OI, PP"
+    },
+    {
+      "text": "구기 스포츠(농구) 프레이밍 모드를 펌웨어 4.0부터 지원하며 인물 프레이밍 모드와 동시에 사용할 수 없다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "광학 20배 줌과 클리어 이미지 줌으로 FHD 40배·4K 30배 확대를 지원하고 광각 수평 화각은 약 70°다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "3G-SDI·HDMI 출력과 H.264/H.265 IP 스트리밍(RTSP, SRT, NDI|HX 등)을 동시에 제공한다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "PoE++(IEEE 802.3bt Type 4 Class 8) 단일 LAN 케이블로 전원·영상·오디오·제어를 통합할 수 있다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "중앙 탈리 램프가 적색(촬영 중)·녹색(오토 프레이밍 ON)으로 상태를 표시하고, RM-IP500 리모트 컨트롤러로도 제어할 수 있다.",
+      "source": "PP, OI"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "이미지 센서",
+      "value": "1/2.5형 Exmor R CMOS",
+      "unit": "",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "유효 화소",
+      "value": "약 8.5",
+      "unit": "MP",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "최소 조도",
+      "value": "1.6",
+      "unit": "lx",
+      "condition": "F2.0, 1/30s, 50IRE, 고감도 OFF, 소니 측정 조건",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "게인",
+      "value": "자동/수동, 0–+48",
+      "unit": "dB",
+      "condition": "고감도 ON",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "셔터 스피드",
+      "value": "1/1–1/10000",
+      "unit": "s",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "노출 제어",
+      "value": "자동/수동/우선 AE(셔터, 조리개)",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "화이트 밸런스",
+      "value": "자동1/자동2/원푸시 WB/실내/실외/수동",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "Day/Night·Auto ICR·이미지 스테빌라이저",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "내장 ND 필터",
+      "value": "미지원",
+      "unit": "",
+      "condition": "공식 사양 '아니요'",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "광학 줌",
+      "value": "20",
+      "unit": "×",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "클리어 이미지 줌",
+      "value": "약 1.5(QFHD) / 약 2(FHD)",
+      "unit": "×",
+      "condition": "FHD 40배·4K 30배 상당",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "디지털 줌",
+      "value": "12",
+      "unit": "×",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "망원 변환 모드",
+      "value": "2.0",
+      "unit": "×",
+      "condition": "1920×1080 전용",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "초점 거리",
+      "value": "4.4–88.0",
+      "unit": "mm",
+      "condition": "35mm 환산 26.8–536.0mm",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "조리개",
+      "value": "F2.0–F3.8",
+      "unit": "F",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "수평 화각",
+      "value": "약 70.0",
+      "unit": "degree",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Lens",
+      "name": "최소 피사체 거리",
+      "value": "80(광각) / 800(망원)",
+      "unit": "mm",
+      "condition": "제품 페이지: 렌즈 전면 기준 약 80mm–무한대",
+      "source": "OI, PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "팬 범위",
+      "value": "−170–+170",
+      "unit": "degree",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "틸트 범위",
+      "value": "−20–+90",
+      "unit": "degree",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "팬 속도(수동 조작)",
+      "value": "0.5–101",
+      "unit": "degree/s",
+      "condition": "사용 설명서 기준(R1)",
+      "source": "OI",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "PTZ",
+      "name": "틸트 속도(수동 조작)",
+      "value": "0.5–91",
+      "unit": "degree/s",
+      "condition": "사용 설명서 기준(R1)",
+      "source": "OI",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "PTZ",
+      "name": "최고 속도(프리셋 호출)",
+      "value": "팬 300 / 틸트 126",
+      "unit": "degree/s",
+      "condition": "프리셋 호출 시. 제품 페이지는 조건 없이 팬 0.5–300°/s·틸트 0.5–126°/s로 표기(R1)",
+      "source": "OI, PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "프리셋",
+      "value": "256(CGI) / 100(VISCA)",
+      "unit": "count",
+      "condition": "",
+      "source": "PP, PE",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "픽처 프리즈 프리셋·PTZ Motion Sync",
+      "value": "지원",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PTZ",
+      "name": "작동 소음",
+      "value": "NC30 이하",
+      "unit": "",
+      "condition": "소니 측정 조건",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "SDI 출력",
+      "value": "3G-SDI(Level A/B), HD-SDI, 최대 1920×1080/59.94p",
+      "unit": "",
+      "condition": "4K SDI 출력 미지원",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 최대 출력",
+      "value": "3840×2160/29.97p",
+      "unit": "pixel/fps",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 색공간",
+      "value": "YCbCr 4:2:2 8bit / RGB 4:4:4 8bit",
+      "unit": "",
+      "condition": "",
+      "source": "OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "UVC·광 출력",
+      "value": "미지원",
+      "unit": "",
+      "condition": "공식 사양 '아니요'",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "IP 스트림 해상도",
+      "value": "3840×2160, 1920×1080, 1280×720, 640×360",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "압축 방식",
+      "value": "H.264(High/Main/Baseline), H.265(Main)",
+      "unit": "",
+      "condition": "스트림 3은 JPEG",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "최대 프레임 레이트",
+      "value": "60",
+      "unit": "fps",
+      "condition": "H.264·H.265",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "비트레이트",
+      "value": "512Kbps–50Mbps, CBR/VBR",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "비디오 스트림 수",
+      "value": "3",
+      "unit": "stream",
+      "condition": "스트림 1·2 H.264/H.265, 스트림 3 JPEG",
+      "source": "OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Streaming / Protocol",
+      "name": "스트리밍 프로토콜",
+      "value": "RTP/RTCP, RTSP, SRT, NDI|HX",
+      "unit": "",
+      "condition": "NDI|HX는 소프트웨어 3.0 이상(R2). RTMP/RTMPS는 사용 설명서에만 기재(R3)",
+      "source": "PP, OI",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Network",
+      "name": "LAN",
+      "value": "1000BASE-T",
+      "unit": "",
+      "condition": "RJ-45",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 프로토콜",
+      "value": "IPv4: ARP, ICMP, IGMP, TCP, UDP, DHCP, DNS, mDNS, NTP / IPv6: ICMPv6, MLD, TCP, UDP, DHCPv6, DNS, mDNS, NTP",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어 프로토콜",
+      "value": "HTTP/HTTPS, VISCA over IP, VISCA RS-422",
+      "unit": "",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "적외선 리모컨",
+      "value": "지원(RMT-RC2 포함)",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Auto Framing",
+      "name": "PTZ 오토 프레이밍",
+      "value": "싱글 퍼슨 / 멀티 퍼슨(최대 8명)",
+      "unit": "",
+      "condition": "감지 부위: 머리",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Auto Framing",
+      "name": "구기 스포츠(농구) 모드",
+      "value": "지원",
+      "unit": "",
+      "condition": "펌웨어 4.0 이상, 실내 5대5 농구 전용, 인물 모드와 동시 사용 불가",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Auto Framing",
+      "name": "얼굴 등록·트래킹 범위·고정식 앵글 위치·Lead Room",
+      "value": "지원",
+      "unit": "",
+      "condition": "일부 오버레이·가져오기 기능은 펌웨어 4.0 이상",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 입력",
+      "value": "3.5mm 스테레오 미니잭 ×1",
+      "unit": "",
+      "condition": "MIC/LINE 선택, 플러그인 파워 지원",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Indicator",
+      "name": "탈리 램프",
+      "value": "중앙 ×1, 적색/녹색",
+      "unit": "",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "DC 전원",
+      "value": "19.5",
+      "unit": "V",
+      "condition": "IEC60130-10 Type5, 포함 AC 어댑터",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "PoE",
+      "value": "PoE++ (IEEE 802.3bt Type 4 Class 8)",
+      "unit": "",
+      "condition": "스위치 전력 예산 확인",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비 전력",
+      "value": "DC 19.5V: 80 이하 / PoE++: 71.3 이하",
+      "unit": "W",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "약 156.7×184.0×200.0",
+      "unit": "mm",
+      "condition": "W×H×D, 돌출부 제외",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "질량",
+      "value": "약 2.0",
+      "unit": "kg",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "본체 색상",
+      "value": "블랙, 화이트",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "설치",
+      "value": "데스크톱 / 천장(브래킷 포함)",
+      "unit": "",
+      "condition": "설치 각도 ±15° 이하, 삼각대 나사 1/4-20UNC",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "−20–+60",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Web App",
+      "name": "지원 OS",
+      "value": "Windows 11 이상, macOS 14 이상, iPadOS 17 이상, Android 14 이상",
+      "unit": "",
+      "condition": "브라우저: Chrome, Edge(Windows), Safari(iPad)",
+      "source": "PP",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "SDI OUT BNC",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "3G-SDI(Level A/B), HD-SDI",
+      "availability": "Fixed",
+      "condition": "4K 출력 미지원",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Type A",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI, 최대 3840×2160/29.97p",
+      "availability": "Fixed",
+      "condition": "SDI와 동시 출력",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network / Power",
+      "connector": "LAN RJ-45",
+      "signal": "Network/PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "1000BASE-T, PoE++ (IEEE 802.3bt Type 4 Class 8)",
+      "availability": "Fixed",
+      "condition": "IP 스트리밍·VISCA over IP·HTTP 제어",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA RS-422 IN RJ-45",
+      "signal": "PTZ control",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "VISCA RS-422",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA RS-422 OUT RJ-45",
+      "signal": "PTZ control",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "VISCA RS-422",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "MIC 3.5mm stereo mini",
+      "signal": "Audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "MIC/LINE, 플러그인 파워",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC IN 19.5V (IEC60130-10 Type5)",
+      "signal": "Power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "19.5V DC",
+      "availability": "Fixed",
+      "condition": "포함 AC 어댑터",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "GENLOCK / TC",
+      "signal": "Sync",
+      "direction": "IN",
+      "quantity": "0",
+      "protocol": "미지원",
+      "availability": "Not available",
+      "condition": "공식 사양 '젠록 입력 아니요', 'TC 입력/출력 아니요'",
+      "source": "PP",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PP",
+      "name": "제조사 제품 페이지 PDF(한국어)",
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/srg-a40",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PE",
+      "name": "제조사 제품 페이지 PDF(글로벌/미국)",
+      "url": "https://pro.sony/ue_US/pdf/products/ptz-network-cameras/srg-a40",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "OI",
+      "name": "제조사 영문 사용 설명서(Operating Instructions)",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/7964e8723a6c3c92e14125ad162509e6/50531541M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "VC",
+      "name": "제조사 VISCA/CGI Command List",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/f48354480e724f0aef3d45d2e1eeab63/50531551M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "RG",
+      "name": "제조사 Remote Camera System Guide",
+      "url": "https://www.sony.com/electronics/support/res/manuals/C960/cd5d9b33286a9cc3afa54695e80a542a/C9601001M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 공식 이미지 서버(제품 페이지 갤러리)",
+      "url": "https://www.sony.com/image/73b36cc15a15967c002762c049f6d13e?fmt=png-alpha&wid=3000&hei=3000",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 제공 정리 자료",
+      "url": "",
+      "scope": "사용자 제공(2026-09-27, 서울영상테크 SI사업본부 정리): pro.sony·공식 유통사 스펙 기준, 제조사 원문 아님"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "팬/틸트 속도 표기 조건",
+      "detail": "제품 페이지(한국어·글로벌)는 팬 0.5–300°/s, 틸트 0.5–126°/s로 조건 없이 표기한다. 사용 설명서는 수동 조작 팬 0.5–101°/s·틸트 0.5–91°/s, 프리셋 호출 시 팬 최대 300°/s·틸트 최대 126°/s(최소 1.1°/s)로 구분한다. 운영사 자료(U)의 '팬 300°/s / 틸트 126°/s'는 프리셋 호출 조건 값이다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "NDI|HX 라이선스 방식",
+      "detail": "한국어 제품 페이지 관련 링크는 'NDI|HX 옵션 라이선스를 다운로드해야 한다'고 안내하고, 사양표는 'NDI|HX 기능 지원(버전 3.0 이상 필요)', 사용 설명서(2026-04)는 '소프트웨어 3.0 이상부터 NDI|HX 라이선스가 사전 설치됨, 3.0 미만은 라이선스 설치'로 적는다. 운영사 자료(U)의 '/N 모델은 라이선스 포함'은 Sony 공식 자료에서 확인되지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "RTMP/RTMPS 지원 표기",
+      "detail": "사용 설명서는 RTMP/RTMPS 스트리밍 지원을 기재하지만 제품 페이지 스트리밍 프로토콜 목록(RTP/RTCP, RTSP, SRT, NDI|HX)에는 없다. 펌웨어 조건 확인이 필요해 확정 사양에서 제외했다."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "펌웨어 4.0 기능 제공 시점",
+      "detail": "한국어 제품 페이지는 버전 4.0 기능(농구 모드, 얼굴 데이터 가져오기, 트래킹 범위 오버레이 등)을 '2026년 4월 이후 제공 예정'으로 안내한다. 실제 배포 여부와 설치 펌웨어 버전을 확인해야 한다."
+    },
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "포함 액세서리 목록 차이",
+      "detail": "제품 페이지는 리모컨(RMT-RC2), QR 코드 스티커, AC 파워 코드, 보증 책자 등을, 사용 설명서는 HDMI 케이블 고정판, 케이블 클램퍼, URL 라벨 등을 기재한다. 판매 국가별 차이 가능성이 있어 구성품은 요약만 표시했다."
+    },
+    {
+      "code": "R6",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지·문서 게시 권한",
+      "detail": "제품 사진(sony.com 이미지 서버)과 PDF의 재게시 권리는 확인되지 않았다. 사용자 게시 승인만 반영했다."
+    },
+    {
+      "code": "R7",
+      "status": "REVIEW REQUIRED",
+      "title": "한국어 자료 접근 한계",
+      "detail": "pro.sony 한국어 매뉴얼 목록과 sony.co.kr 지원 페이지는 조사 시점에 응답하지 않거나(연결 재설정) 내용이 렌더링되지 않았다. 한국어 사용 설명서는 확인하지 못했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지",
+    "footerNote": "SONY SRG-A40 · 공식 출처 기반"
+  }
+}
