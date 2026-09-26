@@ -29,6 +29,20 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "qlxd4-rear.webp",
+      "alt": "Shure QLXD4 후면 패널(12V DC 전원, RJ45, 안테나 A/B, XLR, 1/4\" 출력)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "QLXD4 Digital Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/f56/8de/de-/original/3d4e558d5919c5b82454e0bf47165c4c.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x517",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/f56/8de/de-/original/3d4e558d5919c5b82454e0bf47165c4c.webp"
     },
     {
       "role": "Perspective",
@@ -444,6 +458,12 @@
       "status": "REVIEW REQUIRED",
       "title": "Shure 공식 콘텐츠…",
       "detail": "Shure 공식 콘텐츠 CDN(content-files.shure.com/publications/specSheet/en/)에 QLX-D 전용 spec-sheet PDF가 게시되어 있지 않아(Access Denied) datasheet_pdf_url을 None으로 표기했다. 3rd-party 미러(markertek.com, springtree.net) PDF는 확인했으나 공식 shure.com/공식 CDN 출처가 아니므로 datasheet 링크로 채택하지 않았다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "전원 표기가 자료마다 다르다: 공식 후면 사진의 인쇄는 '12V…",
+      "detail": "전원 표기가 자료마다 다르다: 공식 후면 사진의 인쇄는 '12V 0.35A', 사용자 가이드 전원 사양은 12 V DC @ 0.4 A. 두 값을 병기함."
     }
   ],
   "presentation": {

@@ -718,13 +718,17 @@ export const group1Images = {
   ]
 ,
   ulxd4q: [
-    image('Front', 'ulxd4q-front.webp', 'Shure ULXD4Q 쿼드 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4Q Quad-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/8ed/a9e/17-/large/e5ed31006c35010746bf58406c28c521.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'ulxd4q-front.webp', 'Shure ULXD4Q 쿼드 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4Q Quad-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/8ed/a9e/17-/large/e5ed31006c35010746bf58406c28c521.jpeg', '1500x1500', '1500x1500'),
+    image('Rear', 'ulxd4q-rear.webp', 'Shure ULXD4Q 후면 패널(IEC 전원, 안테나 입력·캐스케이드 출력, XLR 출력 1~4, Dante RJ45 2개)', 'Shure', 'ULXD4Q Quad-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/28b/723/64-/original/9f1934387c0f628fed66206bdb62c42d.webp', '3000x3000', '2000x264')
   ],
   ulxd4d: [
-    image('Front', 'ulxd4d-front.webp', 'Shure ULXD4D 듀얼 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4D Dual-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/e56/bfb/5a-/large/f57b35ec5c33ecffc76308949745308c.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'ulxd4d-front.webp', 'Shure ULXD4D 듀얼 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4D Dual-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/e56/bfb/5a-/large/f57b35ec5c33ecffc76308949745308c.jpeg', '1500x1500', '1500x1500'),
+    image('Rear', 'ulxd4d-rear.webp', 'Shure ULXD4D 후면 패널(IEC 전원, 안테나 입력·캐스케이드 출력, XLR 출력 1·2, Dante RJ45 2개)', 'Shure', 'ULXD4D Dual-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/613/97e/2c-/original/ff60bd7d25905571a129c281cf8c37d8.webp', '3000x3000', '2000x291')
   ],
   ulxd4: [
-    image('Front', 'ulxd4-front.webp', 'Shure ULXD4 단일 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0d/43b/33-/large/c13a96be17d516bdbc82c29ad244bb8d.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'ulxd4-front.webp', 'Shure ULXD4 단일 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0d/43b/33-/large/c13a96be17d516bdbc82c29ad244bb8d.jpeg', '1500x1500', '1500x1500'),
+    image('Rear', 'ulxd4-rear.webp', 'Shure ULXD4 후면 패널(15V DC 전원, RJ45, XLR, 1/4" 출력, 안테나 A/B)', 'Shure', 'ULXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/eab/913/25-/original/f81d041c0c16bd144ecaf1417b450f53.webp', '3000x3000', '2000x490'),
+    image('Perspective', 'ulxd4-angle-front.webp', 'Shure ULXD4 전면 3/4 각도', 'Shure', 'ULXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/8da/cc2/fe-/original/21f61ffd729e5784832a0d142fc18463.webp', '3000x3000', '2000x705')
   ],
   'ulxd2-beta58': [
     image('Front', 'ulxd2-beta58-front.webp', 'Shure ULXD2/B58 핸드헬드 송신기(BETA 58A 캡슐) 정면', 'Shure', 'ULXD2/B58 Digital Handheld Transmitter with BETA 58A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/5f0/bf7/b6-/large/21f64fc1083c70ea7c7f935e9346e799.jpeg', '1500x1500', '1500x1500')
@@ -733,7 +737,10 @@ export const group1Images = {
     image('Front', 'ulxd2-beta87-front.webp', 'Shure ULXD2/B87A 핸드헬드 송신기(BETA 87A 캡슐) 정면', 'Shure', 'ULXD2/B87A Digital Handheld Transmitter with BETA 87A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/789/0e3/cb-/large/8ffa3b5e2885876add7f5dcbfbfe7917.jpeg', '1500x1500', '1500x1500')
   ],
   ulxd1: [
-    image('Front', 'ulxd1-front.webp', 'Shure ULXD1 바디팩 송신기 정면', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0a/c6b/28-/large/73167ef4f4c40e32e7b2acec5bd46931.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'ulxd1-front.webp', 'Shure ULXD1 바디팩 송신기 정면', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0a/c6b/28-/large/73167ef4f4c40e32e7b2acec5bd46931.jpeg', '1500x1500', '1500x1500'),
+    image('Rear', 'ulxd1-rear.webp', 'Shure ULXD1 후면(벨트 클립, 충전 접점)', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/8a4/848/53-/original/71149ac44a15d3dee70af8e76d97a684.webp', '3000x3000', '753x2211'),
+    image('Perspective', 'ulxd1-angle-front.webp', 'Shure ULXD1 전면 각도', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/9e7/d63/de-/original/a8aaf087323bb5cc93c75e181dfdc767.webp', '3000x3000', '694x2237'),
+    image('Other', 'ulxd1-top.webp', 'Shure ULXD1 상단 커넥터 패널(TA4M 입력, 전원 스위치, 안테나 커넥터)', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/20d/904/1b-/original/13d09da89773053027ff826007c74d7c.webp', '3000x3000', '1410x617')
   ],
   ulxd8: [
     image('Front', 'ulxd8-front.webp', 'Shure ULXD8 구즈넥 베이스 송신기 정면(구즈넥 마이크 미포함)', 'Shure', 'ULXD8 Wireless Gooseneck Base Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/2cb/d03/e8-/large/e7ec7bd49e113c832e2594fa8d8ff9bc.jpeg', '1500x1500', '1500x1500')
@@ -742,10 +749,12 @@ export const group1Images = {
     image('Front', 'ulxd2-ksm9-front.webp', 'Shure ULXD2/KSM9 핸드헬드 송신기(KSM9 캡슐) 정면', 'Shure', 'ULXD2/KSM9 Digital Handheld Transmitter with KSM9 Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b48/96d/cd-/large/fe4e1404fa789de278c62e853c455d11.jpeg', '1500x1500', '1500x1500')
   ],
   qlxd4: [
-    image('Front', 'qlxd4-front.webp', 'Shure QLXD4 디지털 무선 수신기 정면', 'Shure', 'QLXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/068/c56/55-/large/fe74a71f0230c0e16aff9fb54e9387d6.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'qlxd4-front.webp', 'Shure QLXD4 디지털 무선 수신기 정면', 'Shure', 'QLXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/068/c56/55-/large/fe74a71f0230c0e16aff9fb54e9387d6.jpeg', '1500x1500', '1500x1500'),
+    image('Rear', 'qlxd4-rear.webp', 'Shure QLXD4 후면 패널(12V DC 전원, RJ45, 안테나 A/B, XLR, 1/4" 출력)', 'Shure', 'QLXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/f56/8de/de-/original/3d4e558d5919c5b82454e0bf47165c4c.webp', '3000x3000', '2000x517')
   ],
   qlxd1: [
-    image('Front', 'qlxd1-front.webp', 'Shure QLXD1 바디팩 송신기 정면', 'Shure', 'QLXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/1d1/efc/61-/large/c81c9a619ef8966f5506a229ca954e5b.jpeg', '1500x1500', '1500x1500')
+    image('Front', 'qlxd1-front.webp', 'Shure QLXD1 바디팩 송신기 정면', 'Shure', 'QLXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/1d1/efc/61-/large/c81c9a619ef8966f5506a229ca954e5b.jpeg', '1500x1500', '1500x1500'),
+    image('Perspective', 'qlxd1-angle-front.webp', 'Shure QLXD1 전면 각도', 'Shure', 'QLXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/bd5/a7b/86-/original/08a6f0dcacef5d2c90e59360f99a4d8b.webp', '3000x3000', '889x2629')
   ],
   'qlxd2-beta87a': [
     image('Front', 'qlxd2-beta87a-front.webp', 'Shure QLXD2/B87A 핸드헬드 송신기(BETA 87A 캡슐) 정면', 'Shure', 'QLXD2/B87A Handheld Transmitter with BETA 87A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/be7/f9b/fd-/large/731c0285f0a34a2d7a1e0f659dea54a8.jpeg', '1500x1500', '1500x1500')

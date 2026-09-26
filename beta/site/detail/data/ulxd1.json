@@ -29,6 +29,48 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ulxd1-rear.webp",
+      "alt": "Shure ULXD1 후면(벨트 클립, 충전 접점)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD1 Bodypack Transmitter",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/8a4/848/53-/original/71149ac44a15d3dee70af8e76d97a684.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "753x2211",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "ulxd1-angle-front.webp",
+      "alt": "Shure ULXD1 전면 각도",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD1 Bodypack Transmitter",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/9e7/d63/de-/original/a8aaf087323bb5cc93c75e181dfdc767.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "694x2237",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "ulxd1-top.webp",
+      "alt": "Shure ULXD1 상단 커넥터 패널(TA4M 입력, 전원 스위치, 안테나 커넥터)",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD1 Bodypack Transmitter",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/20d/904/1b-/original/13d09da89773053027ff826007c74d7c.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "1410x617",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,18 +86,18 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd1"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/8a4/848/53-/original/71149ac44a15d3dee70af8e76d97a684.webp"
     },
     {
       "role": "Perspective",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd1"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/9e7/d63/de-/original/a8aaf087323bb5cc93c75e181dfdc767.webp"
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd1"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/20d/904/1b-/original/13d09da89773053027ff826007c74d7c.webp"
     }
   ],
   "documents": [

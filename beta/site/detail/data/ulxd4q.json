@@ -29,6 +29,20 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ulxd4q-rear.webp",
+      "alt": "Shure ULXD4Q 후면 패널(IEC 전원, 안테나 입력·캐스케이드 출력, XLR 출력 1~4, Dante RJ45 2개)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD4Q Quad-Channel Digital Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/28b/723/64-/original/9f1934387c0f628fed66206bdb62c42d.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x264",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4q"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/28b/723/64-/original/9f1934387c0f628fed66206bdb62c42d.webp"
     },
     {
       "role": "Perspective",
@@ -500,12 +514,6 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
-      "title": "리어 패널(커넥터부) 전용 고해상도 사진은 shure.com 제품…",
-      "detail": "리어 패널(커넥터부) 전용 고해상도 사진은 shure.com 제품 페이지의 이미지 자산에서 별도로 제공되지 않았다(정면 제품 사진 1장만 CDN에 존재). 리어 패널 커넥터 배치는 공식 사용자 안내서(ULX-D Dual and Quad Wireless Microphone System, pubs.shure.com)의 다이어그램으로만 확인 가능하다."
-    },
-    {
-      "code": "R2",
       "status": "REVIEW REQUIRED",
       "title": "확장 튜닝 대역폭(최대 166 MHz)은 지역 및 주파수 밴드에…",
       "detail": "확장 튜닝 대역폭(최대 166 MHz)은 지역 및 주파수 밴드에 따라 다르며, 국내(한국) 정확한 인가 대역/채널 수는 별도 국내 대리점/전파관리 자료 확인이 필요하다(정보 없음으로 표기하지 않고 공식 자료의 '지역에 따라 다름' 문구를 그대로 보존함)."

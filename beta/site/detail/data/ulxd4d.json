@@ -29,6 +29,20 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ulxd4d-rear.webp",
+      "alt": "Shure ULXD4D 후면 패널(IEC 전원, 안테나 입력·캐스케이드 출력, XLR 출력 1·2, Dante RJ45 2개)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD4D Dual-Channel Digital Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/613/97e/2c-/original/ff60bd7d25905571a129c281cf8c37d8.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x291",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/613/97e/2c-/original/ff60bd7d25905571a129c281cf8c37d8.webp"
     },
     {
       "role": "Perspective",

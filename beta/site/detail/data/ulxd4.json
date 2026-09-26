@@ -29,6 +29,34 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ulxd4-rear.webp",
+      "alt": "Shure ULXD4 후면 패널(15V DC 전원, RJ45, XLR, 1/4\" 출력, 안테나 A/B)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD4 Digital Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/eab/913/25-/original/f81d041c0c16bd144ecaf1417b450f53.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x490",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "ulxd4-angle-front.webp",
+      "alt": "Shure ULXD4 전면 3/4 각도",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "ULXD4 Digital Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/8da/cc2/fe-/original/21f61ffd729e5784832a0d142fc18463.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x705",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,13 +72,13 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/eab/913/25-/original/f81d041c0c16bd144ecaf1417b450f53.webp"
     },
     {
       "role": "Perspective",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/8da/cc2/fe-/original/21f61ffd729e5784832a0d142fc18463.webp"
     },
     {
       "role": "Other",

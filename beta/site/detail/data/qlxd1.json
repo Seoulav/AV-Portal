@@ -29,6 +29,20 @@
       "originalSize": "1500x1500",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "qlxd1-angle-front.webp",
+      "alt": "Shure QLXD1 전면 각도",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "QLXD1 Bodypack Transmitter",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/bd5/a7b/86-/original/08a6f0dcacef5d2c90e59360f99a4d8b.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "889x2629",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -49,8 +63,8 @@
     },
     {
       "role": "Perspective",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd1"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/bd5/a7b/86-/original/08a6f0dcacef5d2c90e59360f99a4d8b.webp"
     },
     {
       "role": "Other",
