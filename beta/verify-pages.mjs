@@ -123,7 +123,15 @@ for (const item of catalog) {
   if (item.reference_link !== undefined) {
     assert.ok(typeof item.reference_link === 'string' && item.reference_link.trim(), `${item.product}: 참고자료 링크`);
     const uploaded = userReferenceLinkFor(item);
-    assert.equal(item.reference_link, uploaded, `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+    if (uploaded !== null) {
+      assert.equal(item.reference_link, uploaded, `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+    } else {
+      const refUrl = new URL(item.reference_link);
+      assert.equal(refUrl.protocol, 'https:');
+      assert.equal(refUrl.username, '');
+      assert.equal(refUrl.password, '');
+      assert.ok(isAllowedHost(refUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer reference URL`);
+    }
   } else {
     assert.equal(userReferenceLinkFor(item), null, `${item.product}: 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음`);
   }

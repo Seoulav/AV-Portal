@@ -8,7 +8,7 @@ export const manufacturerHosts = {
   Audinate: ['getdante.com'],
   AVer: ['aver.com', 'averusa.com'],
   'Blackmagic Design': ['blackmagicdesign.com'],
-  'BSS Audio': ['techdata-ps.com'],
+  'BSS Audio': ['techdata-ps.com', 'bssaudio.com'],
   Crown: ['techdata-ps.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
   JBL: ['techdata-ps.com'],
