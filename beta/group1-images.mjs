@@ -713,6 +713,80 @@ export const group1Images = {
   'comtech-d-2125': [
     image('Front', 'ctd-2125-front.webp', 'Crown ComTech CTD-2125 전면', 'HARMAN', 'Crown CTD-2125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13173_1748629581/Crown_ComTech_CTD-2125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x832', '2000x406')
   ]
+,
+  ulxd4q: [
+    image('Front', 'ulxd4q-front.webp', 'Shure ULXD4Q 쿼드 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4Q Quad-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/8ed/a9e/17-/large/e5ed31006c35010746bf58406c28c521.jpeg', '1500x1500', '1500x1500')
+  ],
+  ulxd4d: [
+    image('Front', 'ulxd4d-front.webp', 'Shure ULXD4D 듀얼 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4D Dual-Channel Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/e56/bfb/5a-/large/f57b35ec5c33ecffc76308949745308c.jpeg', '1500x1500', '1500x1500')
+  ],
+  ulxd4: [
+    image('Front', 'ulxd4-front.webp', 'Shure ULXD4 단일 채널 디지털 무선 수신기 정면', 'Shure', 'ULXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0d/43b/33-/large/c13a96be17d516bdbc82c29ad244bb8d.jpeg', '1500x1500', '1500x1500')
+  ],
+  'ulxd2-beta58': [
+    image('Front', 'ulxd2-beta58-front.webp', 'Shure ULXD2/B58 핸드헬드 송신기(BETA 58A 캡슐) 정면', 'Shure', 'ULXD2/B58 Digital Handheld Transmitter with BETA 58A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/5f0/bf7/b6-/large/21f64fc1083c70ea7c7f935e9346e799.jpeg', '1500x1500', '1500x1500')
+  ],
+  'ulxd2-beta87': [
+    image('Front', 'ulxd2-beta87-front.webp', 'Shure ULXD2/B87A 핸드헬드 송신기(BETA 87A 캡슐) 정면', 'Shure', 'ULXD2/B87A Digital Handheld Transmitter with BETA 87A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/789/0e3/cb-/large/8ffa3b5e2885876add7f5dcbfbfe7917.jpeg', '1500x1500', '1500x1500')
+  ],
+  ulxd1: [
+    image('Front', 'ulxd1-front.webp', 'Shure ULXD1 바디팩 송신기 정면', 'Shure', 'ULXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/a0a/c6b/28-/large/73167ef4f4c40e32e7b2acec5bd46931.jpeg', '1500x1500', '1500x1500')
+  ],
+  ulxd8: [
+    image('Front', 'ulxd8-front.webp', 'Shure ULXD8 구즈넥 베이스 송신기 정면(구즈넥 마이크 미포함)', 'Shure', 'ULXD8 Wireless Gooseneck Base Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/2cb/d03/e8-/large/e7ec7bd49e113c832e2594fa8d8ff9bc.jpeg', '1500x1500', '1500x1500')
+  ],
+  'ulxd2-ksm9': [
+    image('Front', 'ulxd2-ksm9-front.webp', 'Shure ULXD2/KSM9 핸드헬드 송신기(KSM9 캡슐) 정면', 'Shure', 'ULXD2/KSM9 Digital Handheld Transmitter with KSM9 Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b48/96d/cd-/large/fe4e1404fa789de278c62e853c455d11.jpeg', '1500x1500', '1500x1500')
+  ],
+  qlxd4: [
+    image('Front', 'qlxd4-front.webp', 'Shure QLXD4 디지털 무선 수신기 정면', 'Shure', 'QLXD4 Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/068/c56/55-/large/fe74a71f0230c0e16aff9fb54e9387d6.jpeg', '1500x1500', '1500x1500')
+  ],
+  qlxd1: [
+    image('Front', 'qlxd1-front.webp', 'Shure QLXD1 바디팩 송신기 정면', 'Shure', 'QLXD1 Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/1d1/efc/61-/large/c81c9a619ef8966f5506a229ca954e5b.jpeg', '1500x1500', '1500x1500')
+  ],
+  'qlxd2-beta87a': [
+    image('Front', 'qlxd2-beta87a-front.webp', 'Shure QLXD2/B87A 핸드헬드 송신기(BETA 87A 캡슐) 정면', 'Shure', 'QLXD2/B87A Handheld Transmitter with BETA 87A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/be7/f9b/fd-/large/731c0285f0a34a2d7a1e0f659dea54a8.jpeg', '1500x1500', '1500x1500')
+  ],
+  'qlxd2-beta58': [
+    image('Front', 'qlxd2-beta58-front.webp', 'Shure QLXD2/B58A 핸드헬드 송신기(BETA 58A 캡슐) 정면', 'Shure', 'QLXD2/B58A Handheld Transmitter with BETA 58A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/bac/92-/large/eb22fb750c52c34d58c82492cce87518.jpeg', '1500x1500', '1500x1500')
+  ],
+  ua874xa: [
+    image('Front', 'ua874xa-front.webp', 'Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)', 'Shure', 'UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp', '3000x3000', '1500x1500')
+  ],
+  'a900w-r-gm': [
+    image('Front', 'a900w-r-gm-front.webp', 'A900W-R-GM 키트 구성품 (흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이)', 'Shure', 'A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/902/02b/95-/original/e52db7762240a04554eea3dea3fd4ad3.webp', '3000x3000', '1500x1500')
+  ],
+  mx395: [
+    image('Front', 'mx395-front.webp', 'MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지', 'Shure', 'MX395 Microflex Low Profile Boundary Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp', '2397x2397', '1500x1500')
+  ],
+  'ua844-swb': [
+    image('Front', 'ua844swb-front.webp', 'UA844+SWB 랙마운트 전면 패널 (전원 LED, 470-952MHz 표기)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/6f8/07b/2a-/original/5dc9d3e64aaa92a9c959f1ef9bbed0a3.webp', '3000x3000', '1500x1500'),
+    image('Rear', 'ua844swb-rear.webp', 'UA844+SWB 후면 패널 (Antenna A/B, RF Output A/B, Cascade, Power In/Out 커넥터)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_images/files/64a/850/63-/original/de2d6cc3ee3e23eccb299dffdc5a22c9.webp', '3000x3000', '1500x1500')
+  ],
+  'mx418d-c': [
+    image('Front', 'mx418dc-front.webp', 'MX400 시리즈 구스넥 마이크 패밀리 (좌측 데스크탑 베이스 부착형이 MX418D/C 해당)', 'Shure', 'MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18", Cardioid, with Desktop Base', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/95c/0be/80-/original/7a0d43b8f52361576df757e5dc85dc75.png', '3000x3000', '1500x1500')
+  ],
+  'mxcwapt-w': [
+    image('Front', 'mxcwaptw-front.webp', 'MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp', '3000x3000', '1500x1500'),
+    image('Other', 'mxcwaptw-detail.webp', 'MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp', '3000x3000', '1500x1500')
+  ],
+  'mxc420-c': [
+    image('Front', 'mxc420c-front.webp', 'MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부', 'Shure', 'MXC420/C — MXC Gooseneck Microphone, 20", Single-flex, Cardioid', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp', '2562x2562', '1500x1500')
+  ],
+  'mxa925w-r': [
+    image('Front', 'mxa925wr-front.webp', 'MXA925 색상/폼팩터 4종 패밀리샷 (화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형) — MXA925W-R은 우측에서 세 번째(화이트 원형)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/420/286/fd-/original/a679930bcdb71c96a20196bd0b19d15d.webp', '3000x3000', '1500x1500')
+  ],
+  ua864a: [
+    image('Front', 'ua864a-front.webp', 'UA864 벽면형 광대역 안테나 (화이트 하우징, 전면 게인 스위치/LED)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/265/152/2a-/original/360efcae2b1c88e5f044c28fd536eedc.webp', '3000x3000', '1500x1500'),
+    image('Rear', 'ua864a-rear.webp', 'UA864 후면 마운팅 플레이트 (케이블 배선 채널, BNC 커넥터, 게인 스위치 라벨)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a39/ea7/e1-/original/bbe7a66c6bc370a61bc0e5047fe0a083.webp', '3000x3000', '1500x1500')
+  ],
+  'mx392-c': [
+    image('Front', 'mx392c-front.webp', 'MX392 바운더리 마이크로폰 (원형 로우프로파일 하우징, 상단 케이블 출구)', 'Shure', 'MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/831/97f/c9-/original/77bca0e1da0c0c30e908e78d266c8c8a.webp', '3000x3000', '1500x1500')
+  ],
+  ua845uwb: [
+    image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '1500x1500'),
+    image('Rear', 'ua845uwb-rear.webp', 'UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp', '3300x3300', '1500x1500')
+  ]
 };
 
 export function applyPublishedImages(product, slug) {
@@ -948,4 +1022,28 @@ export const cardImages = {
   'cdi-4-1200bl': 'cdi-4-1200bl-front.webp',
   'dci-4-600da': 'dci-4-600da-front.webp',
   'comtech-d-2125': 'ctd-2125-front.webp'
+,
+  ulxd4q: 'ulxd4q-front.webp',
+  ulxd4d: 'ulxd4d-front.webp',
+  ulxd4: 'ulxd4-front.webp',
+  'ulxd2-beta58': 'ulxd2-beta58-front.webp',
+  'ulxd2-beta87': 'ulxd2-beta87-front.webp',
+  ulxd1: 'ulxd1-front.webp',
+  ulxd8: 'ulxd8-front.webp',
+  'ulxd2-ksm9': 'ulxd2-ksm9-front.webp',
+  qlxd4: 'qlxd4-front.webp',
+  qlxd1: 'qlxd1-front.webp',
+  'qlxd2-beta87a': 'qlxd2-beta87a-front.webp',
+  'qlxd2-beta58': 'qlxd2-beta58-front.webp',
+  ua874xa: 'ua874xa-front.webp',
+  'a900w-r-gm': 'a900w-r-gm-front.webp',
+  mx395: 'mx395-front.webp',
+  'ua844-swb': 'ua844swb-front.webp',
+  'mx418d-c': 'mx418dc-front.webp',
+  'mxcwapt-w': 'mxcwaptw-front.webp',
+  'mxc420-c': 'mxc420c-front.webp',
+  'mxa925w-r': 'mxa925wr-front.webp',
+  ua864a: 'ua864a-front.webp',
+  'mx392-c': 'mx392c-front.webp',
+  ua845uwb: 'ua845uwb-front.webp'
 };

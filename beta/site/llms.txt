@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 213개
+- Product Detail: 236개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -80,18 +80,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4q
 
 - 제품: Shure QLXD4
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd4
 
 - 제품: Shure UA874XA
   분류: 오디오 | Audio | Antenna
   종류: 장비
   공식 링크: https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA874
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua874xa
 
 - 제품: Sony BRC-AM7
   분류: 영상 | Video | Camera
@@ -757,47 +760,55 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM
   매뉴얼: https://www.shure.com/en-US/docs/guide/A900-GM
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=a900w-r-gm
 
 - 제품: Shure MX395
   분류: 오디오 | Audio | Ceiling Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/docs/guide/MX395
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx395
 
 - 제품: Shure ULXD2/BETA58
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-beta58
 
 - 제품: Shure ULXD2/BETA87
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-beta87
 
 - 제품: Shure ULXD1
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd1
 
 - 제품: Shure ULXD8
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd8
 
 - 제품: Shure UA844+SWB
   분류: 오디오 | Audio | Antenna Distributor
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA844SWBplus
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua844-swb
 
 - 제품: Shure MX418D/C
   분류: 오디오 | Audio | Microphone
   종류: 장비
   공식 링크: https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC
   매뉴얼: https://www.shure.com/en-US/docs/guide/MX400D
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx418d-c
 
 - 제품: JBL Control 23-1
   분류: 오디오 | Audio | Loudspeaker
@@ -1394,12 +1405,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxcwapt-w
 
 - 제품: Shure MXC420/C
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxc420-c
 
 - 제품: Yamaha DM3
   분류: 오디오 | Audio | Mixer
@@ -1588,42 +1601,49 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/microphones/mxa925
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXA925
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxa925w-r
 
 - 제품: Shure ULXD4D
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4d
 
 - 제품: Shure ULXD4
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd4
 
 - 제품: Shure ULXD2/KSM9
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9
   매뉴얼: https://www.shure.com/en-US/docs/guide/ULXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ulxd2-ksm9
 
 - 제품: Shure QLXD2/BETA87A
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd2-beta87a
 
 - 제품: Shure QLXD2/BETA58
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd2-beta58
 
 - 제품: Shure QLXD1
   분류: 오디오 | Audio | Wireless Microphone System
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless
   매뉴얼: https://www.shure.com/en-US/docs/guide/QLXD
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=qlxd1
 
 - 제품: Shure SLXD4D
   분류: 오디오 | Audio | Wireless Microphone System
@@ -1666,12 +1686,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/accessories/ua864
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA864
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua864a
 
 - 제품: Shure MX392/C
   분류: 오디오 | Audio | Microphone
   종류: 장비
   제품군 링크: https://www.shure.com/en-US/products/microphones/mx392
   매뉴얼: https://www.shure.com/en-US/docs/guide/MX39x
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mx392-c
 
 - 제품: Lightware HDMI20-OPTJ-TX90
   분류: 영상 | Video | Extender
@@ -1704,6 +1726,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/accessories/ua845uwb
   매뉴얼: https://www.shure.com/en-US/docs/guide/UA845UWB
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ua845uwb
 
 - 제품: NETGEAR GS728TPP
   분류: 제어 | Network | Network Switch

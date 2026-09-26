@@ -1,0 +1,302 @@
+{
+  "manufacturer": "Shure",
+  "productName": "UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)",
+  "model": "UA874XA",
+  "series": "UA800 Series / Wireless Antennas",
+  "seriesNote": "UA800 Series / Wireless Antennas 계열 공식 자료 기준.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "안테나"
+  ],
+  "english": "UA800 Series / Wireless Antennas",
+  "korean": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+  "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다. 내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다. UA874XA는 902-960 MHz 대역용 변형 모델이며, ULX-D/QLX-D/SLX-D 등 10-15V DC 바이어스를 공급하는 Shure 수신기·안테나 분배 시스템과 함께 사용한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ua874xa-front.webp",
+      "alt": "Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "1500x1500",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Shure UA800 Series / Wireless Antennas User Guide",
+      "language": "en",
+      "note": "",
+      "url": "https://pubs.shure.com/guide/UA874/en-US"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA"
+    }
+  ],
+  "features": [
+    {
+      "text": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+      "source": ""
+    },
+    {
+      "text": "내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "일반",
+      "name": "커넥터 타입",
+      "value": "BNC (Female)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "임피던스",
+      "value": "50",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "전원 요구사항",
+      "value": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75",
+      "unit": "mA",
+      "condition": "바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "RF 주파수 대역 (UA874XA)",
+      "value": "902-960",
+      "unit": "MHz",
+      "condition": "다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF 성능",
+      "name": "수신 패턴 (3dB 빔폭)",
+      "value": "70",
+      "unit": "도(degrees)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF 성능",
+      "name": "3차 상호변조 차단점 (OIP3)",
+      "value": ">30",
+      "unit": "dBm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF 성능",
+      "name": "안테나 게인 (On-Axis)",
+      "value": "7.5",
+      "unit": "dBi",
+      "condition": "0dB 게인 설정, 중심 주파수 기준 (UA874XA)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF 성능",
+      "name": "신호 게인 (스위치 선택)",
+      "value": "+12 / +6 / 0 / -6",
+      "unit": "dB",
+      "condition": "±1 dB, 4단 스위치 전환",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF 성능",
+      "name": "RF 과부하 LED 임계값",
+      "value": "-5",
+      "unit": "dBm",
+      "condition": "패시브 게인(0dB, -6dB) 설정에서는 RF 과부하 LED 미작동",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구/환경",
+      "name": "치수 (UA874XA)",
+      "value": "224 x 234 x 36",
+      "unit": "mm (H x W x D)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구/환경",
+      "name": "무게 (UA874XA)",
+      "value": "213",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구/환경",
+      "name": "동작 온도 범위",
+      "value": "-18°C ~ 63°C",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구/환경",
+      "name": "보관 온도 범위",
+      "value": "-29°C ~ 74°C",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "기구/환경",
+      "name": "설치 방식",
+      "value": "마이크 스탠드 마운트, 천장 서스펜션, 벽면 마운트(스위블 브래킷 내장)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
+      "signal": "Power input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "RF",
+      "connector": "BNC (Female)",
+      "signal": "RF output to receiver",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://pubs.shure.com/guide/UA874/en-US",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제품…",
+      "detail": "제품 매뉴얼(pubs.shure.com/view/guide/UA874)의 표지 및 본문에는 대표 변형 모델로 'UA874Z'가 표기되어 있으나, 동일 문서 내 Specifications 표에 UA874XA(902-960MHz, 224x234x36mm, 213g) 항목이 별도로 명시되어 있어 이를 기준으로 기재함."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US)…",
+      "detail": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US) 공식 페이지를 기준으로 조사함."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Shure UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz) · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

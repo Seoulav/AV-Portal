@@ -154,7 +154,9 @@
     "official_links": [
       "https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd4q",
+    "card_image": "ulxd4q-front.webp"
   },
   {
     "brand": "Shure",
@@ -168,7 +170,9 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
+    "slug": "qlxd4",
+    "card_image": "qlxd4-front.webp"
   },
   {
     "brand": "Shure",
@@ -182,7 +186,9 @@
     "official_links": [
       "https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/UA874"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA874",
+    "slug": "ua874xa",
+    "card_image": "ua874xa-front.webp"
   },
   {
     "brand": "Sony",
@@ -1742,7 +1748,9 @@
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/A900-GM"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/A900-GM",
+    "slug": "a900w-r-gm",
+    "card_image": "a900w-r-gm-front.webp"
   },
   {
     "brand": "Shure",
@@ -1756,7 +1764,9 @@
     "official_links": [
       "https://www.shure.com/en-US/docs/guide/MX395"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "mx395",
+    "card_image": "mx395-front.webp"
   },
   {
     "brand": "Shure",
@@ -1771,7 +1781,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd2-beta58",
+    "card_image": "ulxd2-beta58-front.webp"
   },
   {
     "brand": "Shure",
@@ -1786,7 +1798,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd2-beta87",
+    "card_image": "ulxd2-beta87-front.webp"
   },
   {
     "brand": "Shure",
@@ -1801,7 +1815,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd1",
+    "card_image": "ulxd1-front.webp"
   },
   {
     "brand": "Shure",
@@ -1816,7 +1832,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd8",
+    "card_image": "ulxd8-front.webp"
   },
   {
     "brand": "Shure",
@@ -1830,7 +1848,9 @@
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/UA844SWBplus"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA844SWBplus",
+    "slug": "ua844-swb",
+    "card_image": "ua844swb-front.webp"
   },
   {
     "brand": "Shure",
@@ -1844,7 +1864,9 @@
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MX400D"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX400D",
+    "slug": "mx418d-c",
+    "card_image": "mx418dc-front.webp"
   },
   {
     "brand": "JBL",
@@ -3256,7 +3278,9 @@
       "https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
+    "slug": "mxcwapt-w",
+    "card_image": "mxcwaptw-front.webp"
   },
   {
     "brand": "Shure",
@@ -3271,7 +3295,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
+    "slug": "mxc420-c",
+    "card_image": "mxc420c-front.webp"
   },
   {
     "brand": "Yamaha",
@@ -3728,7 +3754,9 @@
       "https://www.shure.com/en-US/products/microphones/mxa925"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MXA925"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXA925",
+    "slug": "mxa925w-r",
+    "card_image": "mxa925wr-front.webp"
   },
   {
     "brand": "Shure",
@@ -3743,7 +3771,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd4d",
+    "card_image": "ulxd4d-front.webp"
   },
   {
     "brand": "Shure",
@@ -3758,7 +3788,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd4",
+    "card_image": "ulxd4-front.webp"
   },
   {
     "brand": "Shure",
@@ -3773,7 +3805,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
+    "slug": "ulxd2-ksm9",
+    "card_image": "ulxd2-ksm9-front.webp"
   },
   {
     "brand": "Shure",
@@ -3788,7 +3822,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
+    "slug": "qlxd2-beta87a",
+    "card_image": "qlxd2-beta87a-front.webp"
   },
   {
     "brand": "Shure",
@@ -3803,7 +3839,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
+    "slug": "qlxd2-beta58",
+    "card_image": "qlxd2-beta58-front.webp"
   },
   {
     "brand": "Shure",
@@ -3818,7 +3856,9 @@
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
+    "slug": "qlxd1",
+    "card_image": "qlxd1-front.webp"
   },
   {
     "brand": "Shure",
@@ -3923,7 +3963,9 @@
       "https://www.shure.com/en-US/products/accessories/ua864"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/UA864"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA864",
+    "slug": "ua864a",
+    "card_image": "ua864a-front.webp"
   },
   {
     "brand": "Shure",
@@ -3938,7 +3980,9 @@
       "https://www.shure.com/en-US/products/microphones/mx392"
     ],
     "link_scope": "series",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MX39x"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX39x",
+    "slug": "mx392-c",
+    "card_image": "mx392c-front.webp"
   },
   {
     "brand": "Lightware",
@@ -4014,7 +4058,9 @@
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua845uwb"
     ],
-    "manual_link": "https://www.shure.com/en-US/docs/guide/UA845UWB"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA845UWB",
+    "slug": "ua845uwb",
+    "card_image": "ua845uwb-front.webp"
   },
   {
     "brand": "NETGEAR",
