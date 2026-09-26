@@ -455,7 +455,7 @@
       "name": "무게",
       "value": "6.8",
       "unit": "kg",
-      "condition": "15 lb",
+      "condition": "15 lb · 데이터시트 기준. 제품 페이지 Features는 7 kg(15.4 lbs)로 표기",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -629,6 +629,12 @@
       "status": "REVIEW REQUIRED",
       "title": "공식 사이트의 4804 DSP와 4804 DSP+D 제품 페이지가…",
       "detail": "공식 사이트의 4804 DSP와 4804 DSP+D 제품 페이지가 동일한 전면 이미지 파일(front-6)을 공유함."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "무게가 공식 자료끼리 다르다: 데이터시트 6.8 kg, 제품…",
+      "detail": "무게가 공식 자료끼리 다르다: 데이터시트 6.8 kg, 제품 페이지 7 kg. 데이터시트 값을 표에 쓰고 제품 페이지 값을 병기함."
     }
   ],
   "presentation": {

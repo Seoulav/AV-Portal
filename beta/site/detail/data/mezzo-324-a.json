@@ -487,7 +487,7 @@
       "name": "대기(Idle) 전력",
       "value": "18",
       "unit": "W",
-      "condition": "시리즈 통합 데이터시트 324/604 A 공용값",
+      "condition": "시리즈 통합 데이터시트 324/604 A 공용값. 제품 페이지 실측값은 115V 15 W / 230V 16 W",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -730,6 +730,12 @@
       "status": "REVIEW REQUIRED",
       "title": "Powersoft 공식 제품페이지가 324 A 전용 전면 사진을…",
       "detail": "Powersoft 공식 제품페이지가 324 A 전용 전면 사진을 제공하지 않고 322 A(2채널)의 전면 이미지를 그대로 재사용하고 있음."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "대기전력이 제품 페이지(115V 15 W / 230V 16 W)와…",
+      "detail": "대기전력이 제품 페이지(115V 15 W / 230V 16 W)와 시리즈 데이터시트(18 W)에서 다르다. 두 값을 병기함."
     }
   ],
   "presentation": {

@@ -496,7 +496,7 @@
       "name": "대기(Idle) 전력",
       "value": "14",
       "unit": "W",
-      "condition": "데이터시트 322/602 A 공용값",
+      "condition": "데이터시트 322/602 A 공용값. 제품 페이지 실측값은 115V 11 W / 230V 12 W",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -751,6 +751,12 @@
       "status": "REVIEW REQUIRED",
       "title": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가…",
       "detail": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가 Mezzo A(4채널 604 A) 페이지에서 공용으로 사용하는 후면 대표 이미지임."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와…",
+      "detail": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와 시리즈 데이터시트(14 W)에서 다르다. 두 값을 병기함."
     }
   ],
   "presentation": {

@@ -428,7 +428,7 @@
       "io": 15
     },
     "duecanali-1604-dsp": {
-      "sha256": "ED9A44B293CAE912CEB7D07E18E6B87521E4B77B8DDB597AFBCF0BBFE76781E0",
+      "sha256": "C13B1EF55CEB560372E0694709058C1F14E19D76247CB0A8D6177B5A2BC12AF7",
       "features": 4,
       "specifications": 48,
       "io": 3
@@ -440,7 +440,7 @@
       "io": 4
     },
     "duecanali-804-dsp": {
-      "sha256": "DC99C4595158A6C9F2C9CDED711974E9EF3A3B15B8102B6883A31C592247BE25",
+      "sha256": "BDE54F0F3FAD0600FEE9A790443445643EDEF5CF5D6EEC3763EDF8D153B16675",
       "features": 4,
       "specifications": 48,
       "io": 3
@@ -830,7 +830,7 @@
       "io": 0
     },
     "mezzo-322-a": {
-      "sha256": "D1413EBCE2E6978E634FC1816F7C043EA9A9E265AAAFB279BD022C5C3487ED18",
+      "sha256": "B0A8E47B8FC17F4157E86CE666BAD29E0FA418CDBC996472621A293E7B655199",
       "features": 4,
       "specifications": 57,
       "io": 6
@@ -842,7 +842,7 @@
       "io": 5
     },
     "mezzo-324-a": {
-      "sha256": "930EDC77FD4A081F60518B11B63D18431FE78628A605FEEB2728D903CF2D9B64",
+      "sha256": "114C1FFE910DF75835C1479DDCE3BA2E7C0FC14004B0AB192D848B090557BBE1",
       "features": 4,
       "specifications": 56,
       "io": 5
@@ -1046,7 +1046,7 @@
       "io": 3
     },
     "quattrocanali-1204-dspd": {
-      "sha256": "7F77205AD608029DD57954685F78D049655796FB4DED04810E9CE0068F22D462",
+      "sha256": "EB9A7CE31CAE7CE4D8DECBA36FAC16E7870D41651C41D5375E5ADB90DFDE6A32",
       "features": 5,
       "specifications": 67,
       "io": 4
@@ -1058,19 +1058,19 @@
       "io": 3
     },
     "quattrocanali-2404-dspd": {
-      "sha256": "7B434D086CB7DFB541A49954CBA92BAC4AE6BF4E21BA840392EC5ED1E7C60548",
+      "sha256": "3181494513C401AFBA468739D8DA823CBCA5B02C57CAABEB48ACE28CDE996245",
       "features": 5,
       "specifications": 67,
       "io": 4
     },
     "quattrocanali-4804-dsp": {
-      "sha256": "2BA78CBBD5F554939C355D70B69F61EF73B50691E3CA4F9370B66B0B25FD091F",
+      "sha256": "A65151BA438D0F5F2FDE9743954F30ED2C41063720B6C78C7F28A3BDF3EC848B",
       "features": 4,
       "specifications": 49,
       "io": 3
     },
     "quattrocanali-4804-dspd": {
-      "sha256": "A714FE2616D021EE8BE97A8E029EB0365B75AA1FC185C38DBA947024F19F6B2E",
+      "sha256": "D54AC8984FB453051C77A566AF98299FF7DF2A7258585FA16607FB906B34E105",
       "features": 5,
       "specifications": 67,
       "io": 4

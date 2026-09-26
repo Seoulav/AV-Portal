@@ -122,7 +122,7 @@
       "name": "출력 채널 수",
       "value": "2",
       "unit": "채널",
-      "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/8-STF1-7,62",
+      "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/8-STF1-7,62(기본형 데이터시트) / PC 5/4-STF1-7,62(사용자 가이드·DSP+D 데이터시트)",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -131,7 +131,7 @@
       "name": "아날로그 입력 채널 수",
       "value": "2",
       "unit": "채널",
-      "condition": "Phoenix MC 1,5/12-ST-3,81",
+      "condition": "Phoenix MC 1,5/12-ST-3,81(기본형 데이터시트) / MC 1,5/6-ST-3,81(사용자 가이드·DSP+D 데이터시트)",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -553,7 +553,7 @@
   "io": [
     {
       "group": "Output",
-      "connector": "Phoenix PC 5/8-STF1-7,62",
+      "connector": "Phoenix PC 5/8-STF1-7,62(기본형 데이터시트) / PC 5/4-STF1-7,62(사용자 가이드·DSP+D 데이터시트)",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "2채널",
@@ -565,7 +565,7 @@
     },
     {
       "group": "Audio",
-      "connector": "Phoenix MC 1,5/12-ST-3,81",
+      "connector": "Phoenix MC 1,5/12-ST-3,81(기본형 데이터시트) / MC 1,5/6-ST-3,81(사용자 가이드·DSP+D 데이터시트)",
       "signal": "Analog audio in",
       "direction": "IN",
       "quantity": "2채널",
@@ -620,6 +620,12 @@
       "status": "REVIEW REQUIRED",
       "title": "슬루 레이트(Slew Rate) 항목이 기본 데이터시트에는 '26…",
       "detail": "슬루 레이트(Slew Rate) 항목이 기본 데이터시트에는 '26 mΩ'로 표기되어 단위 불일치(원본 오기 추정)이므로 표에서 제외하고 댐핑 팩터로 대체함."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "출력·입력 커넥터 부품번호가 공식 자료끼리 다르다. 기본형…",
+      "detail": "출력·입력 커넥터 부품번호가 공식 자료끼리 다르다. 기본형 데이터시트는 Phoenix PC 5/8-STF1-7,62·MC 1,5/12-ST-3,81(4채널 모델과 같은 값), 사용자 가이드(2025)와 DSP+D 데이터시트는 PC 5/4-STF1-7,62·MC 1,5/6-ST-3,81이다. 2채널 구성상 후자일 가능성이 높으나 확정하지 않고 두 값을 병기함."
     }
   ],
   "presentation": {
