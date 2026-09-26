@@ -2497,6 +2497,11 @@
       "pdf_only_resolved": {
         "resolved_at": "2026-09-25",
         "method": "웹 검색으로 제조사 공식 페이지 확인. 이 작업 환경의 egress 정책으로 직접 열람은 못 했고, 검색 결과 제목·스니펫이 모델/제품군을 명확히 식별하는 것으로 판단했다."
+      },
+      "detail_published": {
+        "published_at": "2026-09-26",
+        "note": "사용자 승인으로 보류 해제, 상세페이지 게시(공식 데이터시트 전면·설치 가이드 후면 그림 사용)",
+        "work_id": "W-20260926-020"
       }
     },
     {
@@ -2555,13 +2560,21 @@
         "Network Switch"
       ],
       "official_urls": [
-        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/"
+        "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/"
       ],
       "verification": [
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "url_corrected": {
+        "corrected_at": "2026-09-26",
+        "previous_urls": [
+          "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/"
+        ],
+        "reason": "이전 URL은 다른 모델(GSM4210PX) 페이지였다. GSM4212P(M4250-10G2F-PoE+) 공식 한국어 페이지로 교체. 원조사 기록(major-equipment-official-links-2026-09-23.json)도 URL 슬러그 불일치를 경고했었다.",
+        "work_id": "W-20260926-022"
+      }
     },
     {
       "row": "제어|26",
@@ -4620,7 +4633,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD4D+",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|127",
@@ -4638,7 +4657,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD4+",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|128",
@@ -4656,7 +4681,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD2+/58",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|129",
@@ -4674,7 +4705,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD2+/B58",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|130",
@@ -4692,7 +4729,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD2+/B87A",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|131",
@@ -4710,7 +4753,13 @@
         "OFFICIAL_FAMILY_LEGACY_VS_PLUS_REVIEW"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "removed": {
+        "removed_at": "2026-09-26",
+        "reason": "사용자 지시: 단종(shure.com 후속 SLX-D+ 출시)으로 공개 카탈로그에서 삭제",
+        "replaced_by": "SLXD1+",
+        "work_id": "W-20260926-020"
+      }
     },
     {
       "row": "오디오|135",
