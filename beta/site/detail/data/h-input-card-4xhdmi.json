@@ -178,7 +178,7 @@
       "quantity": "2",
       "protocol": "HDMI 1.3, HDCP 1.4",
       "availability": "HDMI 1.4 포트 사용 시 비활성화",
-      "condition": "최대 2048x1152@60Hz",
+      "condition": "최대 2048x1152@60Hz. HDMI 1.3 모드에서는 4개 커넥터 모두 입력으로 사용(HDMI 1.4 모드에서는 2개만 입력)",
       "source": "D",
       "verification": "FOUND"
     },

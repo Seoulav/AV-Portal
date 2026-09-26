@@ -517,6 +517,12 @@
       "status": "INFO",
       "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
       "detail": "카탈로그의 https://www.epson.co.kr/EB-PU2213B 단축 URL도 사양표를 포함하고 있었으나, 검색으로 찾은 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU2213B/p/V11HA68851)가 더 상세한 특징 설명과 옵션 렌즈 목록을 포함해 이를 기준으로 정리했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "전원 정격 공식 자료 간 불일치",
+      "detail": "전원 정격이 제품 페이지(8.2A/6.6A)와 PU2200 카탈로그(8.9-4.0A)에서 다르다. 한쪽으로 확정하지 않음."
     }
   ],
   "presentation": {

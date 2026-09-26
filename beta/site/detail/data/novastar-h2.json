@@ -440,7 +440,7 @@
       "quantity": "4",
       "protocol": "",
       "availability": "",
-      "condition": "옵션 입력 카드 장착용",
+      "condition": "옵션 입력 카드 장착용; 일부 입력 슬롯은 프리뷰 카드 겸용(데이터시트: 'can accept an input card or preview card')",
       "source": "D",
       "verification": "FOUND"
     },
@@ -452,7 +452,7 @@
       "quantity": "2",
       "protocol": "",
       "availability": "",
-      "condition": "옵션 출력 카드/프리뷰 카드 장착용",
+      "condition": "옵션 출력 카드 장착용(출력 전용 슬롯)",
       "source": "D",
       "verification": "FOUND"
     }

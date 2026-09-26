@@ -319,14 +319,26 @@
     {
       "group": "USB",
       "connector": "USB Type A",
-      "signal": "Power supply / PC-Free",
+      "signal": "PC Free / 펌웨어 업데이트 / OSD 설정 복사",
       "direction": "I/O",
-      "quantity": "2",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "5V/2A 전원 공급 전용(HA25~29용), USB 데이터 기능 없음",
+      "condition": "USB 데이터 기능",
       "source": "S",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type A",
+      "signal": "전원 공급",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "5V/2A 전원 공급 전용(HA25~HA29용), USB 데이터 기능 없음",
+      "source": "S",
+      "verification": "FOUND"
     },
     {
       "group": "USB",
@@ -397,6 +409,12 @@
       "status": "REVIEW REQUIRED",
       "title": "이미지 권한",
       "detail": "정면 대표 이미지의 제조사 재사용 권리는 확인되지 않았다."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "전원·소비전력·깊이 공식 자료 간 불일치",
+      "detail": "한국 카탈로그(3.1-1.4A, 293/223W, 깊이 339mm)와 한국 제품 페이지(3.6-1.6A, 345/258W, 깊이 304mm)가 서로 다르다. 페이지는 카탈로그 값을 썼으며 한쪽으로 확정하지 않음."
     }
   ],
   "presentation": {

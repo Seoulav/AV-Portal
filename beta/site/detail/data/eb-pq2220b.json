@@ -432,6 +432,54 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "RJ45 (HDBaseT)",
+      "signal": "HDBaseT 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDBaseT",
+      "availability": "",
+      "condition": "글로벌 브로셔 기준(한국 페이지 미기재)",
+      "source": "G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "12G-SDI 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "12G-SDI",
+      "availability": "",
+      "condition": "글로벌 브로셔 기준(한국 페이지 미기재)",
+      "source": "G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "BNC",
+      "signal": "12G-SDI 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "12G-SDI",
+      "availability": "",
+      "condition": "글로벌 브로셔 기준(한국 페이지 미기재)",
+      "source": "G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C",
+      "signal": "시리얼 제어",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "RS-232C",
+      "availability": "",
+      "condition": "글로벌 브로셔 기준(한국 페이지 미기재), 커넥터 형태 미기재",
+      "source": "G",
+      "verification": "PARTIAL"
     }
   ],
   "sources": [
@@ -440,9 +488,28 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "G",
+      "name": "제조사 공식 글로벌 브로셔(EB-PQ2000/PQ2200 시리즈)",
+      "url": "https://mediaserver.goepson.com/ImConvServlet/imconv/381cda380258a5980eec9191886db188dfd107da/original?assetDescr=Pro_Series_Projector_Brochure_EB-PQ2000_EB-PQ2200_CPD-64228R1_Single-Page_Final.pdf",
+      "scope": "제조사 공식 출처"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "입출력 단자 한국·글로벌 자료 차이",
+      "detail": "한국 제품 페이지는 HDMI 입력 2·출력 1만 적지만, Epson 글로벌 브로셔는 HDBaseT ×1, 12G-SDI 입·출력, RS-232C ×1을 추가로 명시한다. 글로벌 브로셔 기준으로 단자를 보완했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "기본 해상도 공식 자료 간 불일치",
+      "detail": "한국 페이지는 '기본 해상도: 4K', 글로벌 브로셔는 'Native Resolution 1080p with 4K Crystal Motion, Resolution on Screen 4K UHD'로 표기한다. 한쪽으로 확정하지 않음."
+    }
+  ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
     "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",

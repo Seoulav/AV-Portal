@@ -117,7 +117,7 @@
       "source": "P"
     },
     {
-      "text": "새로운 심플 스태킹 기능과 SDI 신호 지원, NFC로 간편한 설정, Epson Projector Management로 최대 2,000대 모니터링",
+      "text": "새로운 심플 스태킹 기능, NFC로 간편한 설정, Epson Projector Management로 최대 2,000대 모니터링",
       "source": "P"
     }
   ],
@@ -481,6 +481,12 @@
       "status": "INFO",
       "title": "카탈로그 official_link이 지원 페이지(404)였음",
       "detail": "카탈로그에 등록된 official_link(https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-PU1008B-NL/s/SPT_V11HA33840)와 단축 URL(https://www.epson.co.kr/EB-PU1008B)은 모두 페이지를 찾을 수 없다는 오류를 반환하여, 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU1008B/p/V11HA33840)를 찾아 사양을 확인했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "SDI 지원 표기 정정",
+      "detail": "한국 제품 페이지 특징 목록의 'SDI 신호 지원'은 시리즈 공통 문구다. 카탈로그 각주상 SDI는 EB-PU2010B만 해당하고 PU1008B 사양표 SDI 항목은 '-'이므로 특징에서 제외했다."
     }
   ],
   "presentation": {
