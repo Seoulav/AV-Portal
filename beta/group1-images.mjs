@@ -259,7 +259,10 @@ export const group1Images = {
     image('Main', 'xsm4216f-main.webp', 'NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32', '779x536', '779x536', 'FOUND')
   ],
   gsm4212p: [
-    image('Main', 'gsm4212p-main.webp', "NETGEAR GSM4210PX(M4250-8G2XF-PoE+ 30W) 스위치 전면부, 8개의 PoE+ RJ45 포트와 2개의 SFP+ 포트, 콘솔 포트가 보이며 전면 라벨에 'M4250-8G2XF-PoE+ 30W' 모델명이 표시되어 있다", 'NETGEAR', 'GSM4210PX', 'https://assets.netgear.com/transform/pdp-desktop/f167aa72-e4f7-45a2-af74-53c1dc5269f9/GSM4210PX_flange_F_Tipoff_NS', '802x552', '802x552', 'VERIFIED')
+    image('Main', 'gsm4212p-main.webp', 'NETGEAR GSM4212P(M4250-10G2F-PoE+) 1U 랙마운트 스위치를 포트 패널 쪽에서 비스듬히 본 모습. OOB·콘솔·USB-C, 1G RJ45 10개와 SFP 2개, C14 전원 인렛과 전원 스위치가 보인다', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x708', 'VERIFIED'),
+    image('Front', 'gsm4212p-front.webp', 'NETGEAR GSM4212P 전면 디스플레이 패널. \'NETGEAR AV Line\' 로고와 \'M4250-10G2F-PoE+ | 30W\' 라벨, USB-A 스토리지 포트, LED EXT USB-C 포트, M10 나사 구멍, 12개 포트 상태 LED와 Power/Fan/PoE LED가 보인다', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x393', 'VERIFIED'),
+    image('Rear', 'gsm4212p-rear.webp', 'NETGEAR GSM4212P 후면 포트 패널. OOB RJ45, 콘솔 RJ45, USB-C 콘솔, 1~8번 PoE+ RJ45, 9~10번 1G RJ45, 11~12번 SFP 포트와 C14 전원 인렛·전원 스위치가 보인다', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x393', 'VERIFIED'),
+    image('Perspective', 'gsm4212p-perspective.webp', 'NETGEAR GSM4212P를 전면 디스플레이 패널과 측면 팬 흡배기구가 보이도록 비스듬히 본 모습', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x1124', 'VERIFIED')
   ],
   gsm4230p: [
     image('Main', 'gsm4230p-main.webp', 'NETGEAR GSM4230P(M4250-26G4F-PoE+) 스위치 후면 근접 사시도, 24개의 PoE+ RJ45 포트, SFP 슬롯, 전원 커넥터가 보인다', 'NETGEAR', 'GSM4230P', 'https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32', '779x536', '779x536', 'FOUND')
