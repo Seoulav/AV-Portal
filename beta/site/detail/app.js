@@ -253,6 +253,33 @@ zoomButton.addEventListener('click', () => {
 $('#dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
 dialog.addEventListener('close', () => zoomOpener?.focus());
+
+// 원형 돋보기(확대 렌즈) — 확대 보기 안에서 커서를 따라 해당 부분을 확대해 보여준다.
+const loupeWrap = $('#dialog-image-wrap');
+const loupe = $('#dialog-loupe');
+const LOUPE_SIZE = 180, LOUPE_ZOOM = 3;
+function moveLoupe(event) {
+  const image = $('#dialog-image');
+  if (!image.complete || !image.naturalWidth) return;
+  const rect = image.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+    loupe.hidden = true;
+    return;
+  }
+  const wrapRect = loupeWrap.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+  loupe.hidden = false;
+  loupe.style.left = (event.clientX - wrapRect.left - LOUPE_SIZE / 2) + 'px';
+  loupe.style.top = (event.clientY - wrapRect.top - LOUPE_SIZE / 2) + 'px';
+  loupe.style.backgroundImage = `url("${image.src}")`;
+  loupe.style.backgroundSize = (rect.width * LOUPE_ZOOM) + 'px ' + (rect.height * LOUPE_ZOOM) + 'px';
+  loupe.style.backgroundPosition = `${LOUPE_SIZE / 2 - x * LOUPE_ZOOM}px ${LOUPE_SIZE / 2 - y * LOUPE_ZOOM}px`;
+}
+function hideLoupe() { loupe.hidden = true; }
+loupeWrap.addEventListener('pointermove', event => { if (event.pointerType === 'mouse') moveLoupe(event); });
+['pointerleave', 'pointerup', 'pointercancel'].forEach(type => loupeWrap.addEventListener(type, hideLoupe));
+dialog.addEventListener('close', hideLoupe);
 if (data.officialPage?.url) {
   $('#official-product-link').append(officialLink(data.officialPage.url, '공식 제품 페이지 열기 ↗', 'official-product-link'));
   if (data.officialPage.status !== 'VERIFIED') $('#official-product-link').append(badge(data.officialPage.status));

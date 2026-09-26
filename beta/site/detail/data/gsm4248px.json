@@ -14,7 +14,7 @@
   "korean": "GSM4248PX는 AV-over-IP용으로 설계된 48포트 완전관리형 스위치로, 960W PoE+ 전력을 제공한다.",
   "verificationSummary": "제조사 공식 제품 페이지에서 포트 구성·PoE·크기·전력 사양을 확인했다. 관련 문서는 M4250 시리즈 공용 자료다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "GSM4248PX는 NETGEAR M4250 시리즈(AV Line)에 속하는 48포트 완전관리형 이더넷 스위치로, 40개의 1G PoE+ RJ45 포트와 8개의 SFP+ 포트를 제공하며 최대 960W의 PoE 전력 예산을 갖는다. AV-over-IP 랙 통합을 위해 후면 포트·전면 상태 표시등 구조를 사용하고, NETGEAR IGMP Plus로 멀티캐스트 트래픽을 강화 관리한다.\n\n최대 12KB 점보 프레임을 지원하고, 라이선스를 추가하면 AVB(Audio Video Bridging)도 사용할 수 있다. 팬리스 또는 25℃ 기준 59dB 팬 옵션 중 선택할 수 있으며, VESA 또는 표준 랙 마운트를 모두 지원한다.\n\n제조사가 제공하는 사용설명서·데이터시트·제품 브리프는 GSM4248PX 단일 모델 전용이 아니라 M4250 시리즈 전체를 함께 다루는 공용 문서다.",
+  "overview": "GSM4248PX는 NETGEAR M4250 시리즈(AV Line)에 속하는 48포트 완전관리형 이더넷 스위치로, 40개의 1G PoE+ RJ45 포트와 8개의 SFP+ 포트를 제공하며 최대 960W의 PoE 전력 예산을 갖는다. AV-over-IP 랙 통합을 위해 후면 포트·전면 상태 표시등 구조를 사용하고, NETGEAR IGMP Plus로 멀티캐스트 트래픽을 강화 관리한다.\n\n최대 12KB 점보 프레임을 지원하고, 라이선스를 추가하면 AVB(Audio Video Bridging)도 사용할 수 있다. 팬은 Quiet/Cool 모드를 선택할 수 있으며(팬리스 모드 미지원, 데이터시트 기준), VESA 또는 표준 랙 마운트를 모두 지원한다.\n\n제조사가 제공하는 사용설명서·데이터시트·제품 브리프는 GSM4248PX 단일 모델 전용이 아니라 M4250 시리즈 전체를 함께 다루는 공용 문서다.",
   "images": [
     {
       "role": "Rear",
@@ -121,7 +121,7 @@
       "source": ""
     },
     {
-      "text": "팬리스 또는 59dB(25℃ 기준) 팬 옵션 중 선택 가능하며 VESA·표준 랙 마운트를 모두 지원한다.",
+      "text": "Quiet/Cool 팬 모드를 선택할 수 있으며(팬리스 모드 미지원), VESA·표준 랙 마운트를 모두 지원한다.",
       "source": ""
     }
   ],
@@ -263,6 +263,12 @@
       "status": "REVIEW REQUIRED",
       "title": "이미지 권한",
       "detail": "후면 포트면 이미지의 제조사 재사용 권리는 확인되지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "팬리스 표기 공식 자료 간 불일치",
+      "detail": "제품 페이지는 'Fanless or 59dB'로 표기하지만 M4250 데이터시트 Acoustic 표는 M4250-40G8XF-PoE+의 팬리스를 'Not Supported'로, 주문 정보는 'Selectable fan modes for quiet or cool operation'으로 적는다. 데이터시트 기준으로 정정했다."
     }
   ],
   "presentation": {

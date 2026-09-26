@@ -1,0 +1,369 @@
+{
+  "manufacturer": "Televic",
+  "productName": "Plixus AE-R PS",
+  "model": "Plixus AE-R PS (71.98.2931)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Power Supply"
+  ],
+  "english": "Plixus AE-R PS is a separate external power supply unit for the Plixus AE-R audio engine, used for setups with more than 40 delegate units or for redundant power configurations.",
+  "korean": "Plixus AE-R PS는 Plixus AE-R 오디오 엔진용 별도 외장 전원 공급 장치로, 델리게이트 유닛 40대를 초과하는 구성이나 이중화(예비) 전원 구성에 사용된다.",
+  "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, Plixus Central Equipment 페이지)와 71.98.2931 데이터시트(PDF, Version 1.0, 2018년)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Plixus AE-R PS는 Plixus AE-R 오디오 엔진에 사용하는 별도의 외장형 전원 공급 장치(파워 서플라이)이다. 지식베이스의 Plixus 페이지에는 'Power Management' 항목의 예비 전원 공급 장치(spare power supply)로 분류되어 있으며, Plixus AE-R 데이터시트에는 '델리게이트 유닛이 40대를 초과하는 구성'에 필요한 액세서리로 안내되어 있다. 즉, Dante 유무로 구분되는 오디오 엔진 라인업이 아니라 AE-R용 추가/예비 전원 공급 장치이다.\n\n잠금식 커넥터를 갖추고 있으며, 100-240 VAC 범위의 넓은 입력 전압을 지원하고 48V/5.62A(최대 270W, 일반 220W) 출력을 제공한다. 단락·과전압·과전력·과열 보호 회로를 내장하고 있으며, 자연 공랭 방식이다. CE(유럽), FCC(미국), CCC(중국) 인증과 CB/TUV/UL 글로벌 인증을 획득했다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "plixus-ae-r-ps-main.webp",
+      "alt": "Plixus AE-R PS 외장 전원 공급 장치",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Televic",
+      "model": "Plixus AE-R PS",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1867x990",
+      "resolution": "1867x990",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Plixus AE-R PS Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://conference.televic.digital/knowledgebase/products/plixus/"
+    }
+  ],
+  "features": [
+    {
+      "text": "Plixus AE-R 오디오 엔진용 추가/예비 외장 전원 공급 장치",
+      "source": "P"
+    },
+    {
+      "text": "델리게이트 유닛 40대 초과 구성 시 필요한 액세서리",
+      "source": "P"
+    },
+    {
+      "text": "잠금식 출력 커넥터로 진동/충격에 의한 전원 이탈 방지",
+      "source": "P"
+    },
+    {
+      "text": "단락·과전압·과전력·과열 보호 회로 내장",
+      "source": "P"
+    },
+    {
+      "text": "100-240 VAC 광범위 입력, 유럽/미국/중국 등 글로벌 인증 획득",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Mechanical",
+      "name": "재질",
+      "value": "ABS",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "색상",
+      "value": "Black",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "입력 AC 소켓 타입",
+      "value": "IEC 320-C14",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "크기(L x W x H)",
+      "value": "204 x 88 x 42",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 크기(L x W x H)",
+      "value": "317 x 147 x 50",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "중량",
+      "value": "1280",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Mechanical",
+      "name": "포장 중량",
+      "value": "1350",
+      "unit": "g",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "정격 입력 전압",
+      "value": "100 ~ 240",
+      "unit": "Vac",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "입력 전압 범위",
+      "value": "90 ~ 264",
+      "unit": "Vac",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "입력 주파수 범위",
+      "value": "47 ~ 63 (±1)",
+      "unit": "Hz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "입력 전류(100/240Vac, 5.62A 부하)",
+      "value": "≤ 3.5",
+      "unit": "A",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "효율(100Vac / 240Vac, 5.62A 부하)",
+      "value": "≥ 87% / ≥ 89%",
+      "unit": "",
+      "condition": "워밍업 10분 후",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Input",
+      "name": "대기 전력",
+      "value": "≤ 0.15",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Output",
+      "name": "공급 전압",
+      "value": "48V / 5.62A",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Output",
+      "name": "최대 소비 전력",
+      "value": "270",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Electrical Output",
+      "name": "일반 공급 전력",
+      "value": "220",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Protection",
+      "name": "보호 기능",
+      "value": "단락(YES), 과전압(YES), 과전력(YES), 과열(YES)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도",
+      "value": "0 ~ 40°C(안전 기준), 40 ~ 70°C 구간은 70°C에서 부하 50%까지 선형 감소",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "보관 온도",
+      "value": "20 ~ +80",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "습도(동작/보관)",
+      "value": "20~80% / 10~90%",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "인증",
+      "value": "CE(유럽), FCC(미국), CCC(중국), CB/TUV/UL(글로벌)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "IEC 320-C14",
+      "signal": "AC 전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "잠금식(Lockable) DC 출력 커넥터",
+      "signal": "48VDC 출력(Plixus AE-R 연결)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 지식베이스 (Plixus Central Equipment 페이지)",
+      "url": "https://conference.televic.digital/knowledgebase/products/plixus/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트 (71.98.2931, Plixus AE-R PS, PDF)",
+      "url": "https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "예상과 다른 제품 성격 확인",
+      "detail": "과업 설명에서는 'Plixus AE-R PS'가 Dante 유무로 구분되는 오디오 엔진 변형일 것으로 추정했으나, 실제로는 Plixus AE-R 오디오 엔진용 별도 외장 전원 공급 장치(파워 서플라이)이며 지식베이스에도 'Power Management(전원 관리)' 항목으로 분류되어 있다. Plixus AE-R 데이터시트에는 '델리게이트 유닛 40대 초과 시 필요'라고 명시되어 있다. 오디오 엔진 자체가 아니므로 오디오/네트워크 처리 사양(채널 용량, Dante 등)은 해당 사항 없음(NA)으로 남긴다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Televic Plixus AE-R PS 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

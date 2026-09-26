@@ -276,6 +276,12 @@
       "status": "REVIEW REQUIRED",
       "title": "이미지 권한",
       "detail": "제조사 제공 이미지(사양서 내장 이미지)의 재사용 권리는 확인되지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "사양서 PDF 외부 접속 차단",
+      "detail": "2026-09-26 링크 점검에서 support.colorlightinside.com의 사양서 PDF·이미지 원본이 제조사 사이트(colorlightinside.com)에서 넘어온 요청에만 열리고, 그 외 경로(AV Portal에서 클릭, 주소 직접 입력)에서는 403을 반환했다. 링크 자체는 제조사 공식 파일이며 삭제되지 않았다. 포털에서 바로 열리는 대체 경로(제조사 제품 페이지의 다운로드 영역 등)는 확인하지 못했다."
     }
   ],
   "presentation": {

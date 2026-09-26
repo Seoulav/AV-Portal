@@ -1,0 +1,399 @@
+{
+  "manufacturer": "Yealink",
+  "productName": "UVC86",
+  "model": "UVC86",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Video Conferencing System"
+  ],
+  "english": "4K dual-eye intelligent tracking PTZ camera with a panoramic detection lens and a 12x optical zoom PTZ lens, designed for medium and large meeting rooms.",
+  "korean": "파노라믹 감지 렌즈와 12배 광학줌 PTZ 렌즈를 결합한 4K 듀얼아이 지능형 트래킹 카메라로, 중·대형 회의실을 위해 설계되었다.",
+  "verificationSummary": "제조사 공식 제품 페이지 및 공식 데이터시트(PDF)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Yealink UVC86은 중형·대형 회의실을 위해 설계된 4K 듀얼아이(Dual-eye) 지능형 트래킹 카메라로, 회의 참석자 전원과 세부 디테일까지 완벽하게 보여준다. 참석자를 실시간 감지하는 파노라믹 카메라와 최적의 화면을 포착하는 PTZ 카메라를 함께 내장해, 90도 시야각과 12배 광학줌으로 정확하고 부드러운 트래킹 경험을 제공한다.\n\nAuto Framing, Speaker Tracking, Presenter Tracking(Wide Area/Stage/Segment Tracking 포함), Picture-in-Picture(PIP), Multi Focus 등 AI 기반 트래킹 기능을 지원하며, 4K 30fps 영상을 출력한다. 리모컨 또는 Yealink 카메라 제어 플러그인 소프트웨어로 부드러운 PTZ 제어가 가능하다.\n\n회의를 진행하지 않을 때는 파노라믹 카메라의 전동 렌즈 캡이 자동으로 닫히고 PTZ 카메라가 자동으로 아래로 접혀 프라이버시를 보호하며, 회의 시작 시 자동으로 열려 참석자를 향한다. 테이블, TV 스탠드, 삼각대, 벽, 천장, TV 상단 등 다양한 설치 방식을 지원한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "uvc86-main.webp",
+      "alt": "Yealink UVC86 카메라 설치 예시 모음(회의실 배치, 선반, 천장, TV 상단 거치)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Yealink",
+      "model": "UVC86",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240627/20240627054727337521e.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1400x1175",
+      "resolution": "1400x1175",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240627/20240627054727337521e.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "UVC86 Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20231109/202311090136162567f08f91f430b84befb73cfee991f.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
+    }
+  ],
+  "features": [
+    {
+      "text": "8MP 소니 센서 기반 PTZ 카메라(12배 광학줌)와 파노라믹 카메라(120도 DFOV)의 듀얼아이 구조",
+      "source": "M"
+    },
+    {
+      "text": "Auto Framing, Speaker Tracking, Presenter Tracking(광역/스테이지/구간 추적) 등 AI 트래킹 기능",
+      "source": "P"
+    },
+    {
+      "text": "4K 영상을 30fps로 출력하며 12배 광학줌과 1.7배 디지털줌으로 총 20.4배 HD줌 지원",
+      "source": "M"
+    },
+    {
+      "text": "회의 미사용 시 전동 렌즈 캡 자동 폐쇄 및 PTZ 카메라 자동 접힘으로 프라이버시 보호",
+      "source": "M"
+    },
+    {
+      "text": "USB 3.0/2.0, HDMI 출력, VCH(RJ45) 등 다양한 연결 방식과 VCM34/VCM38, MSpeaker II 등 Yealink 오디오 장치와 연동",
+      "source": "M"
+    },
+    {
+      "text": "테이블, 벽, 천장, TV 상단, TV 스탠드, 삼각대 등 다양한 설치 옵션 제공",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "PTZ Camera",
+      "name": "센서",
+      "value": "8MP Sony Sensor",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "시야각",
+      "value": "DFOV 90도, HFOV 81도, VFOV 50도",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "줌",
+      "value": "20.4x HD 줌 (12x 광학 + 1.7x 디지털)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "팬/틸트 범위",
+      "value": "Pan ±100도, Tilt +40도/-90도",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "초점 거리",
+      "value": "1m ~ 무한대",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "PTZ Camera",
+      "name": "카메라 프리셋",
+      "value": "9",
+      "unit": "개",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Panoramic Camera",
+      "name": "센서",
+      "value": "8MP Sony Sensor",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Panoramic Camera",
+      "name": "시야각",
+      "value": "DFOV 120도, HFOV 110도, VFOV 78도",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Panoramic Camera",
+      "name": "틸트",
+      "value": "수동 틸트 ±9도",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "영상 스트림",
+      "value": "4K",
+      "unit": "",
+      "condition": "30fps",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AI Features",
+      "name": "지능형 기능",
+      "value": "Auto Framing, Speaker Tracking, Presenter Tracking(Wide Area/Stage/Segment), PIP, Multi Focus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수(대기 상태)",
+      "value": "210 x 156 x 183",
+      "unit": "mm (W x D x H)",
+      "condition": "Sleeping Dimensions",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수(작동 상태)",
+      "value": "210 x 156 x 156",
+      "unit": "mm (W x D x H)",
+      "condition": "Working Dimensions",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "작동 높이",
+      "value": "156 ~ 192",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "3.27",
+      "unit": "kg",
+      "condition": "N.W",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "구성품",
+      "value": "UVC86 카메라, VCR20 리모컨, 전원 어댑터, 벽걸이 브래킷 및 부속품, 7m USB 케이블(ZVC 번들은 2.5m)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "USB",
+      "connector": "USB 3.0 Type-B",
+      "signal": "PC 연결(UVC/UAC)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB 3.0",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB 2.0 Type-A",
+      "signal": "확장 포트",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "USB 2.0",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Yealink VCH Port (RJ45)",
+      "signal": "오디오 장치/BYOD 익스텐더/Yealink 코덱 연결",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "VCH",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm",
+      "signal": "Line-In",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI Out",
+      "signal": "비디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "",
+      "condition": "VCS 장치와 호환, MVC 장치와는 비호환",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "전용 전원 포트",
+      "signal": "전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Security",
+      "connector": "Security Lock Slot",
+      "signal": "물리적 보안 잠금",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "Reset Slot",
+      "signal": "리셋 버튼",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 데이터시트(PDF)",
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20231109/202311090136162567f08f91f430b84befb73cfee991f.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "Q",
+      "name": "제조사 공식 Quick Start Guide(PDF)",
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20231016/20231016025933461d8829c80478b9773a5508514b89d.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yealink UVC86 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

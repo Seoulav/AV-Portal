@@ -204,6 +204,8 @@ for (const slug of slugs) {
   const keys = Object.keys(product);
   for (const key of keys) assert.ok(detailAllowedKeys.has(key), `${slug}: 허용되지 않은 상세 키 ${key}`);
   for (const key of detailRequiredKeys) assert.ok(keys.includes(key), `${slug}: 필수 상세 키 누락 ${key}`);
+  // 상세 화면은 개요·영문·한글 설명을 문자열로 다룬다(배열이면 개요 이후 렌더링이 멈춘다).
+  for (const key of ['english', 'korean', 'overview']) assert.equal(typeof product[key], 'string', `${slug}: ${key}는 문자열이어야 합니다`);
   verifyOfficialUrls(product, slug, allowedHostsFor(brandBySlug.get(slug)));
   assert.ok(Array.isArray(product.images) && product.images.length > 0, `${slug}: 게시 이미지가 비어 있음`);
   assert.deepEqual(product.images, group1Images[slug], `${slug}: reviewed official image manifest`);

@@ -1,0 +1,234 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH98QMCEBGCXKR",
+  "model": "LH98QMCEBGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung standalone UHD M-series digital signage (QM98C), 98-inch, 48.1mm thin / 56.3kg with side-mounted connectors and Tizen OS.",
+  "korean": "삼성 단독형 UHD M 시리즈(QM98C) 디지털 사이니지 98인치 모델로, 두께 48.1mm·무게 56.3kg의 슬림한 사양과 측면 단자 설계를 갖췄다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) QMC 98인치 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH98QMCEBGCXKR(QM98C)은 삼성전자의 단독형 UHD M 시리즈 디지털 사이니지 98인치 초대형 모델이다. 247.7cm 대화면으로 베젤을 최소화해 몰입도 높은 콘텐츠 경험을 제공하며, 두께 48.1mm·무게 56.3kg의 슬림하고 콤팩트한 사양에 측면 단자 디자인을 적용해 벽면 밀착 설치로 공간 효율을 높였다. 4면에 동일한 베젤 사이즈를 적용해 가로·세로 모드에서도 일관된 화질을 유지한다.\n\n퀀텀 프로세서 Lite 4K와 논글레어 패널로 다양한 조명 환경에서도 뛰어난 가시성을 제공하며, 10억 가지 색상의 다이내믹 크리스탈 컬러로 생생한 화질을 구현한다. 삼성 Tizen OS 기반으로 안정성·보안 체계를 갖췄고, 업그레이드된 홈 UI, 무선 화면 공유 스마트 뷰+, 모바일 앱 기반 스마트 캘리브레이션 등 운영 편의 기능을 제공한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh98qmcebgcxkr-main.webp",
+      "alt": "단독형 UHD M 시리즈 첫번째 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH98QMCEBGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/14/eb43a1c6-2c2d-4277-99c3-af1da01b2272.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/14/eb43a1c6-2c2d-4277-99c3-af1da01b2272.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH98QMCEBGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "247.7cm(98인치) 초대형 화면과 베젤 최소화 설계로 몰입도 높은 콘텐츠 경험을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "두께 48.1mm, 무게 56.3kg의 슬림하고 콤팩트한 사양에 측면 단자 디자인을 적용해 벽면 밀착 설치가 가능하다.",
+      "source": "P"
+    },
+    {
+      "text": "4면 동일 베젤 사이즈로 가로·세로 모드 모두에서 일관된 화질을 유지한다.",
+      "source": "P"
+    },
+    {
+      "text": "퀀텀 프로세서 Lite 4K와 논글레어 패널로 다양한 각도·조명에서도 뛰어난 가시성을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "삼성 Tizen OS 기반의 안정적인 운영 체계와 지속적인 소프트웨어 업데이트를 지원한다.",
+      "source": "P"
+    },
+    {
+      "text": "스마트 뷰+ 무선 화면 공유와 모바일 앱 기반 스마트 캘리브레이션으로 운영 편의성을 높인다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "98 (247.7)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "영상 처리 엔진",
+      "value": "퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 특성",
+      "value": "논글레어(반사방지) 패널",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 두께",
+      "value": "48.1",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 무게",
+      "value": "56.3",
+      "unit": "kg",
+      "condition": "스탠드/포장 제외 기준 명시 없음",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "단자 배치",
+      "value": "측면 단자 디자인",
+      "unit": "",
+      "condition": "벽면 밀착 설치를 위한 설계",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 구조",
+      "value": "4면 동일 베젤 사이즈",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제",
+      "value": "삼성 Tizen OS",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "무선 화면 공유",
+      "value": "스마트 뷰+ (SmartView+)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "상세 스펙 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH98QMCEBGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

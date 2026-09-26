@@ -1,0 +1,294 @@
+{
+  "manufacturer": "JBL",
+  "productName": "Control 419CS/T",
+  "model": "Control 419CS/T",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Subwoofer"
+  ],
+  "english": "Control 419CS/T is an 8-inch ceiling subwoofer designed to extend the low-frequency output of JBL Control 400 Series full-range models.",
+  "korean": "Control 419CS/T는 JBL Control 400 시리즈 풀레인지 모델의 저역을 확장하기 위한 8인치 천장매입형 서브우퍼이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(jblpro.com)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "JBL Control 419CS/T는 8인치 우퍼와 일체형 인클로저를 갖춘 천장매입형 서브우퍼로, 대부분의 천장 플레넘 공간에 설치할 수 있다. Control 400 시리즈 풀레인지 모델과 결합해 저역 출력을 크게 확장하는 용도로 설계되었다.\n\n두 개의 대형 테이퍼드 포트를 통해 따뜻하고 부드러운 저역 응답을 구현하며, 풀레인지 스피커와의 간편한 연동을 위해 패시브 로우패스 필터를 내장했다. 재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 새로운 도그이어 설계는 다양한 천장 두께에 대응한다.\n\n70V/100V 서브우퍼 대역 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "control-419cst-main.webp",
+      "alt": "JBL Control 419CS/T 천장매입형 서브우퍼",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 419CS/T",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12906/product_attachment/x_large_2x-8cf339e050a6c8ee4275c8d3a9aa2982.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2141x1605",
+      "resolution": "2141x1605",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12906/product_attachment/x_large_2x-8cf339e050a6c8ee4275c8d3a9aa2982.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/control-419cs-t"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/control-419cs-t"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/control-419cs-t"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://jblpro.com/en-US/products/control-419cs-t"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Control 419CS/T 공식 제품 페이지 사양",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://jblpro.com/en-US/products/control-419cs-t"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://jblpro.com/en-US/products/control-419cs-t"
+    }
+  ],
+  "features": [
+    {
+      "text": "200mm(8인치) 우퍼 탑재",
+      "source": "P"
+    },
+    {
+      "text": "두 개의 대형 테이퍼드 포트로 따뜻하고 부드러운 저역 응답 구현",
+      "source": "P"
+    },
+    {
+      "text": "풀레인지 스피커와의 간편한 연동을 위한 패시브 로우패스 필터 내장",
+      "source": "P"
+    },
+    {
+      "text": "70V/100V 서브우퍼 대역 멀티탭 트랜스포머와 8Ω 다이렉트 입력 동시 지원",
+      "source": "P"
+    },
+    {
+      "text": "도장이 가능한 풀페이스 마그네틱 그릴, 블랙/사각형 그릴 옵션 제공",
+      "source": "P"
+    },
+    {
+      "text": "상단·측면 케이블 인입 옵션과 다양한 천장 두께 대응 도그이어 설계, IP33 등급",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Acoustic",
+      "name": "주파수 범위(-10dB)",
+      "value": "47 Hz – 320 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 용량",
+      "value": "160W(피크 640W) 컨티뉴어스 IEC 핑크노이즈(2시간) / 80W(피크 320W) 컨티뉴어스 IEC 핑크노이즈(100시간)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "감도(1m/1W)",
+      "value": "90",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "커버리지 각도",
+      "value": "180°(원추형)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "최대 SPL(1m)",
+      "value": "112 dB(컨티뉴어스 핑크노이즈) / 118 dB(피크)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "공칭 임피던스",
+      "value": "8",
+      "unit": "ohm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "트랜스포머 탭",
+      "value": "70V: 60W, 30W, 15W, 7.5W / 100V: 60W, 30W, 15W",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "드라이버",
+      "value": "200mm(8 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "천장 컷아웃 지름",
+      "value": "308",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수",
+      "value": "높이 289mm x 지름 346mm, 천장 타일 하단부터 백캔 상단까지 280mm",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Compliance",
+      "name": "안전 인증",
+      "value": "UL2043, NFPA 90A/70, CSA C22.2 no. 205 및 S7232/UL1480A 등재",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "환경 등급",
+      "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "색상",
+      "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "순중량(개당)",
+      "value": "8.8",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "출하 중량(2조)",
+      "value": "25.27",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "Screw Terminal",
+      "signal": "스피커 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "70V/100V 서브우퍼 대역 트랜스포머 탭 선택(70V: 60/30/15/7.5W, 100V: 60/30/15W), 8Ω 다이렉트 겸용",
+      "condition": "터미널 커버 상단/측면 케이블 인입 지원",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://jblpro.com/en-US/products/control-419cs-t",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "JBL Control 419CS/T 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

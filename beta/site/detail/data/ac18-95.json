@@ -1,0 +1,322 @@
+{
+  "manufacturer": "JBL",
+  "productName": "AC18/95",
+  "model": "AC18/95",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Loudspeaker"
+  ],
+  "english": "AC18/95 is a compact 8-inch two-way loudspeaker with a 90° x 50° rotatable Progressive Transition waveguide, part of the JBL AE Compact series.",
+  "korean": "AC18/95는 90° x 50° 회전형 Progressive Transition 웨이브가이드를 탑재한 컴팩트 8인치 2-way 스피커로, JBL AE Compact 시리즈에 속한다.",
+  "verificationSummary": "제조사 공식 제품 페이지(jblpro.com)에서 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "JBL AC18/95는 업계를 선도하는 AE(Application Engineered) 시리즈의 확장 라인인 AE Compact 제품군에 속하는 8인치 2-way 스피커로, 1인치 익시트 컴프레션 드라이버와 JBL 고유의 Progressive Transition(PT) 회전형 웨이브가이드를 채택해 90° x 50° 커버리지를 제공한다.\n\n동일 캐비닛의 AC18/26(120° x 60°)과 달리 좁은 커버리지 각도로 설계되어 공연장, 극장, 예배당, 라이브 클럽, 스포츠 시설 등 정밀한 커버리지 제어가 필요한 설치 환경에 적합하다. 12mm/15mm 외장등급 다층 합판 인클로저를 사용하며, FIR 튜닝을 통해 주파수 및 위상 응답, 커버리지 일관성을 최적화했다.\n\nNeutrik NL4 커넥터 2조와 스크류 터미널을 병행 지원하며, 다양한 서스펜션 포인트(M8 6개소, M6 4개소)를 통해 OmniMount, MultiMount 등 제3자 브래킷과도 호환된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ac18-95-main.webp",
+      "alt": "JBL AC18/95 8인치 2-way 스피커",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "AC18/95",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/9529/product_attachment/x_large_2x-3b7b974f27f7f842357828dac7f13d64.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1500x986",
+      "resolution": "1500x986",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/9529/product_attachment/x_large_2x-3b7b974f27f7f842357828dac7f13d64.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/ac18-95.html"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/ac18-95.html"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://jblpro.com/en-US/products/ac18-95.html"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://jblpro.com/en-US/products/ac18-95.html"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "AC18/95 공식 제품 페이지 사양",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://jblpro.com/en-US/products/ac18-95.html"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://jblpro.com/en-US/products/ac18-95.html"
+    }
+  ],
+  "features": [
+    {
+      "text": "1인치 익시트 컴프레션 드라이버와 회전형 Progressive Transition(PT) 웨이브가이드로 90° x 50° 커버리지 구현",
+      "source": "P"
+    },
+    {
+      "text": "205mm(8인치) LF 트랜스듀서를 탑재한 컴팩트 인클로저",
+      "source": "P"
+    },
+    {
+      "text": "프로그램 500W 전력 처리",
+      "source": "P"
+    },
+    {
+      "text": "듀얼 Neutrik NL4 커넥터와 스크류 터미널을 함께 지원",
+      "source": "P"
+    },
+    {
+      "text": "FIR 튜닝 세트로 주파수/위상 응답과 커버리지 일관성, 음질 최적화",
+      "source": "P"
+    },
+    {
+      "text": "U-브래킷 및 제3자 OmniMount 타입 브래킷·스탠드 마운트 부착점 제공",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Acoustic",
+      "name": "주파수 범위(-10dB)",
+      "value": "52 Hz – 20 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "63 Hz – 19 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "시스템 전력 정격",
+      "value": "250W 컨티뉴어스 핑크노이즈 / 500W 프로그램 / 1000W 피크",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "공칭 임피던스",
+      "value": "8",
+      "unit": "ohm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "커버리지 패턴",
+      "value": "90° x 50°",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "치수(H x W x D)",
+      "value": "469.9 x 237.5 x 254.0",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "순중량(개당)",
+      "value": "12.8",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "크로스오버 방식",
+      "value": "패시브",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "최대 SPL(1m)",
+      "value": "117",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "시스템 감도(1W@1m)",
+      "value": "93",
+      "unit": "dB SPL",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "LF 드라이버",
+      "value": "JBL 228H, 205mm(8 in) SFG 드라이버, 64mm(2.5 in) 에지 와운드 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "LF 드라이버 임피던스",
+      "value": "8",
+      "unit": "ohm",
+      "condition": "공칭",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Driver",
+      "name": "HF 드라이버",
+      "value": "2408H-1, 25mm(1 in) 익시트 컴프레션 드라이버, 38mm(1.5 in) 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "인클로저 재질",
+      "value": "12mm 및 15mm 외장등급 다층 하드우드 합판",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "서스펜션 부착점",
+      "value": "M8 6개소(상단 1, 하단 3, 후면 2), OmniMount 30.0 및 MultiMount MM-022-BT/MM-024-BT/MM-020-CM용 M6 후면 4개소",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Enclosure",
+      "name": "환경 등급",
+      "value": "Mil-Std 810, IPx3(IEC529 기준). 상위 환경 등급이 필요할 경우 WRC 또는 WRX 모델 사용",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "Neutrik NL4 (Speakon)",
+      "signal": "스피커 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Screw Terminal",
+      "signal": "스피커 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://jblpro.com/en-US/products/ac18-95.html",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SHARED-IMAGE",
+      "status": "INFO",
+      "title": "AC18/95와 AC18/26의 제품 이미지가 동일",
+      "detail": "두 모델은 동일한 외형의 캐비닛을 공유하며(내부 회전형 웨이브가이드 각도만 상이) 제조사 페이지에 게재된 대표 이미지의 MD5 해시가 동일함을 확인했다. 실제 커버리지 각도 차이는 웨이브가이드 내부 구조 차이로, 외부에서 육안 구분이 어렵다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "JBL AC18/95 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "manufacturer": "Yealink",
+  "productName": "CPE40",
+  "model": "CPE40",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Speakerphone"
+  ],
+  "english": "Professional-grade conference omnidirectional expansion microphone/speakerphone with an 8-element microphone array, 6-meter pickup range, and PoE daisy-chaining paired with the CP50.",
+  "korean": "8-엘리먼트 마이크로폰 어레이와 6m 픽업 범위를 갖춘 전문가급 전방향 확장 마이크로폰/스피커폰으로, CP50과 함께 PoE 데이지체인 방식으로 확장 배치된다.",
+  "verificationSummary": "제조사 공식 제품 페이지(Overview/FAQ)에서 사양을 확인했다. 별도의 공식 데이터시트 PDF는 웹사이트에서 직접 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Yealink CPE40은 Yealink의 첨단 오디오 및 AI 알고리즘을 활용한 전문가급 전방향(omnidirectional) 마이크로폰으로, 화상회의를 위해 설계되었다. 강력한 음성 픽업, 무손실 재생, 노이즈 캔슬링, 에코 감소, 풀 듀플렉스 통신을 제공한다. 음소거, 볼륨 업, 볼륨 다운의 3개 물리 버튼을 갖추고 있으며, 회의 소프트웨어와 동기화되어 간편하게 제어할 수 있다.\n\nCPE40은 중·대형 회의실의 오디오 확장 요구를 충족하기 위해 Yealink CP50과 페어링하여 데이지체이닝하도록 설계되었다(CPE40은 이더넷을 통해 CP50에 연결되어 통합 전원을 공급받는다). 8-엘리먼트 전방향 마이크로폰 어레이를 탑재해 360도 오디오 픽업과 6m 범위를 지원하며, 높은 민감도와 넓은 주파수 응답으로 우수한 오디오 캡처를 실현한다. 고품질 풀레인지 스피커를 장착해 자연스러운 음성을 재현, 몰입감 있고 편안한 화상회의 경험을 제공한다.\n\nYealink의 2세대 오디오 알고리즘을 활용해 회의실의 환경 소음, 에코, 잔향을 자동으로 제거하고 풀 듀플렉스 통신을 지원해 끊김 없는 양방향 대화가 가능하다. 자동 음성 게인 조정 기능으로 발화자의 음량과 관계없이 모든 목소리가 명확하게 들리도록 보정한다. CP50에 연결 시 단일 PoE 네트워크 케이블만으로 최대 8대의 마이크로폰을 데이지체인할 수 있어(4대 이상 연결 시 48V 2A 전원 어댑터 별도 필요), 소형/중형/대형 회의실의 음성 픽업 및 증폭 요구를 충족하면서 복잡한 배선 없이 깔끔한 설치가 가능하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "cpe40-main.webp",
+      "alt": "Yealink CPE40 원형 확장 마이크로폰/스피커폰, 음소거·볼륨 버튼 상단 모습",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Yealink",
+      "model": "CPE40",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20241029/20241029033402640e470.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "744x533",
+      "resolution": "744x533",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20241029/20241029033402640e470.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/cpe40"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/cpe40"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/cpe40"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.yealink.com/en/product-detail/cpe40"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "CPE40 공식 제품 페이지 사양",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.yealink.com/en/product-detail/cpe40"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.yealink.com/en/product-detail/cpe40"
+    }
+  ],
+  "features": [
+    {
+      "text": "8-엘리먼트 전방향 마이크로폰 어레이로 360도, 6m 범위의 고품질 음성 픽업",
+      "source": "P"
+    },
+    {
+      "text": "2세대 Yealink 오디오 알고리즘으로 소음·에코·잔향(리버브레이션)을 자동 제거",
+      "source": "P"
+    },
+    {
+      "text": "풀 듀플렉스 통신 및 자동 음성 게인 조정으로 발화자 음량에 관계없이 명료한 통화 품질 제공",
+      "source": "P"
+    },
+    {
+      "text": "음소거/볼륨 업/볼륨 다운 물리 버튼 탑재, 회의 소프트웨어와 동기화되어 간편 제어",
+      "source": "P"
+    },
+    {
+      "text": "CP50과 페어링해 단일 PoE 케이블로 최대 8대까지 데이지체인 확장, 복잡한 배선 없이 간편한 설치",
+      "source": "P"
+    },
+    {
+      "text": "고품질 풀레인지 스피커 탑재로 자연스럽고 몰입감 있는 음성 재현",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "마이크로폰 구성",
+      "value": "8-엘리먼트 전방향 마이크로폰 어레이",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "픽업 범위",
+      "value": "6",
+      "unit": "m, 360도",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 처리",
+      "value": "2세대 Yealink 오디오 알고리즘 기반 소음/에코/잔향 제거, 자동 음성 게인 조정, 풀 듀플렉스",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커",
+      "value": "고품질 풀레인지(full-range) 스피커 내장",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "물리 버튼",
+      "value": "음소거, 볼륨 업, 볼륨 다운 (3개)",
+      "unit": "",
+      "condition": "회의 소프트웨어와 동기화",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Expansion",
+      "name": "데이지체인",
+      "value": "최대 8",
+      "unit": "대",
+      "condition": "CP50 기준 단일 PoE 케이블, 4대 이상 연결 시 48V 2A 전원 어댑터 별도 필요",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "CP50 연결",
+      "value": "이더넷 케이블을 통해 CP50에 연결, 통합 전원 공급(unified power supply)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "이더넷(PoE)",
+      "signal": "CP50 연결 및 데이지체인, 전원 공급",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "PoE",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.yealink.com/en/product-detail/cpe40",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "데이터시트 PDF 없음",
+      "detail": "product-resource 페이지가 별도의 Specs/Resources 탭 없이 Overview 페이지로 리디렉션되어, 데이터시트 PDF나 상세 스펙 표를 확인하지 못했다. 치수, 무게, 주파수 응답, SPL, 사용 설명서(User Guide) PDF 링크는 support.yealink.com의 자바스크립트 지식베이스 문서로만 안내되어 이 환경에서 원문을 확인하지 못했다. 정보 없음으로 남긴다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yealink CPE40 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

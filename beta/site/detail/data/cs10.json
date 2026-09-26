@@ -1,0 +1,267 @@
+{
+  "manufacturer": "Yealink",
+  "productName": "CS10",
+  "model": "CS10",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Speaker"
+  ],
+  "english": "Low-profile 2-way coaxial PoE ceiling loudspeaker tuned for conference-room voice reproduction, offered alongside the Dante-enabled CS10-D variant.",
+  "korean": "회의실 음성 재생에 특화된 저프로파일 2웨이 동축 PoE 천장형 스피커. Dante를 지원하는 CS10-D 변형 모델과 함께 출시되었다.",
+  "verificationSummary": "제조사 공식 제품 페이지(Overview/Specs 탭)에서 사양을 확인했다. CS10과 CS10-D는 동일 페이지에서 함께 소개되며, CS10-D는 Dante 프로토콜을 지원하는 별도 에디션이다. 데이터시트 PDF는 공식 웹사이트에서 직접 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Yealink CS10은 저프로파일(120mm 깊이) 2웨이 동축 설계의 PoE 액티브 천장형 스피커로, 회의실 환경에 맞춰 특별히 설계되었다. 고품질 오디오와 우아하고 미니멀한 디자인을 결합해 현대적인 회의실에 잘 어울린다. 내장 DAC와 PoE 기술을 통해 네트워크로부터 신속한 디지털 신호 처리가 가능해 간편한 설치와 최소 지연시간을 실현한다.\n\n음향 파라미터는 화상회의 음성 재생에 최적화되어 있으며, 사람 음성 품질을 강조하도록 EQ가 보정되어 있다. 중역대 주파수 응답을 강조해 화상회의에서 음성 재생 성능을 향상시킨다. 다양한 천장 타입에 대응하는 유연한 실내 설치 솔루션을 제공하며, 중형~대형 및 가변형(divisible) 회의실에 배치할 수 있다.\n\nYealink는 동일 제품군에 Dante 오디오 전송 프로토콜을 지원하는 CS10-D(Dante 에디션, Zoom 인증)를 별도로 제공한다. CS10은 일반 에디션(General edition)이며, 카탈로그 대상 모델은 CS10이다. 두 모델은 폼팩터와 기본 음향 사양(저프로파일 2웨이 동축 디자인, 탈착식 마그네틱 메쉬 커버)을 공유하지만, CS10-D는 표준 Dante 장치와 연동되는 네트워크 오디오 전송 방식을 추가로 지원한다는 점에서 구분된다. CS10에는 블랙 메쉬 커버가 기본 포함되지 않으며 별도 구매가 필요하다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "cs10-main.webp",
+      "alt": "Yealink CS10 원형 천장형 스피커, 화이트 메쉬 커버 정면 모습",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Yealink",
+      "model": "CS10",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240130/2024013007073877150dd232f4c2ca19c4defb8f2eea6.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "602x415",
+      "resolution": "602x415",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240130/2024013007073877150dd232f4c2ca19c4defb8f2eea6.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "CS10 공식 제품 페이지 사양(보조)",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
+    }
+  ],
+  "features": [
+    {
+      "text": "저프로파일(120mm 깊이) 2웨이 동축 스피커 설계로 회의실 천장에 미려하게 통합",
+      "source": "P"
+    },
+    {
+      "text": "PoE 급전 액티브 스피커로 별도 전원 배선 없이 네트워크 케이블만으로 설치 가능",
+      "source": "P"
+    },
+    {
+      "text": "내장 DAC를 통한 네트워크 디지털 신호 처리로 간편한 설치와 최소 지연시간 구현",
+      "source": "P"
+    },
+    {
+      "text": "사람 음성 재생에 최적화된 중역대 강조 EQ 튜닝으로 화상회의 음성 명료도 향상",
+      "source": "P"
+    },
+    {
+      "text": "탈착식 마그네틱 메쉬 커버 적용, 다양한 천장 타입에 대응하는 유연한 설치 방식 지원",
+      "source": "P"
+    },
+    {
+      "text": "Dante 프로토콜 지원 CS10-D 에디션도 별도 제공(카탈로그 대상은 일반 에디션 CS10)",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "주파수 응답(-6dB)",
+      "value": "100-20000",
+      "unit": "Hz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "최대 SPL(연속)",
+      "value": "99",
+      "unit": "dB",
+      "condition": "@20W, 1m",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "감도",
+      "value": "88",
+      "unit": "dB",
+      "condition": "@1m, 1W",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "저역 드라이버(우퍼)",
+      "value": "5.7인치 (145mm)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "고역 드라이버(트위터)",
+      "value": "1.1인치 (28mm)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "공칭 임피던스",
+      "value": "8",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "공칭 커버리지 각도",
+      "value": "120",
+      "unit": "도",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(커버 메쉬 포함)",
+      "value": "φ294 x H125.8",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(커버 메쉬 미포함)",
+      "value": "φ287.2 x H125",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "깊이",
+      "value": "120",
+      "unit": "mm",
+      "condition": "저프로파일 설계",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "전원 방식",
+      "value": "PoE(Power over Ethernet) 지원 액티브 스피커",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Variant",
+      "name": "CS10-D 차이점",
+      "value": "Dante 오디오 전송 프로토콜 지원, Zoom 인증(Zoom Certified) 에디션",
+      "unit": "",
+      "condition": "CS10-D는 별도 SKU이며 본 카탈로그 대상 모델(CS10)과 상이",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P2",
+      "name": "제조사 공식 리소스 페이지(지원 포털로 연결)",
+      "url": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "데이터시트 PDF 접근 불가",
+      "detail": "공식 리소스 페이지는 자체 PDF 없이 Yealink 지원 포털(support.yealink.com, 자바스크립트 기반 SPA)로 안내되어 데이터시트/사용자 가이드 PDF의 정확한 URL을 확인하지 못했다. 무게, 전원 소비, 케이블/커넥터 유형은 확인하지 못해 정보 없음으로 남긴다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yealink CS10 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

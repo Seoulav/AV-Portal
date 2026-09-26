@@ -1,0 +1,724 @@
+{
+  "manufacturer": "Shure",
+  "productName": "SLXD4D+ Dual Channel Wireless Receiver",
+  "model": "SLXD4D+",
+  "series": "SLX-D+",
+  "seriesNote": "SLX-D+ 계열 공식 자료 기준.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "무선 시스템"
+  ],
+  "english": "SLXD4D+ Dual Channel Wireless Receiver",
+  "korean": "SLXD4D+는 하프랙 크기의 2채널 디지털 무선 수신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 송신기와 수신기가 동기화된 상태를 유지합니다.",
+  "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "SLXD4D+는 하프랙 크기의 2채널 디지털 무선 수신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 송신기와 수신기가 동기화된 상태를 유지합니다. 간섭 관리, 새 채널 스캔, 깨끗한 전송을 위한 자동 업데이트를 지원하며 페어링된 모바일 기기로 모니터링·설정할 수 있습니다. 24-bit/>118 dB 다이내믹 레인지, 특허 디지털 피드백 리듀서, AES-256 암호화, 2채널 오디오 서밍을 제공합니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+  "images": [
+    {
+      "role": "Front",
+      "file": "slxd4d-plus-front.webp",
+      "alt": "Shure SLXD4D+ 듀얼 채널 무선 수신기 정면",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "SLXD4D+ Dual Channel Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/526/485/60-/original/5d8c0175164861b4b499f93a9dd59111.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x469",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "slxd4d-plus-rear.webp",
+      "alt": "Shure SLXD4D+ 후면 패널(BNC 안테나 A/B, DC 전원, Ethernet, XLR·1/4\" 출력 ×2)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "SLXD4D+ Dual Channel Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/df2/e5c/00-/original/54a0e1793181a86c67f775ea34c97a96.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x1324",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "slxd4d-plus-angle.webp",
+      "alt": "Shure SLXD4D+ 정면 사선 뷰",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "SLXD4D+ Dual Channel Wireless Receiver",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/233/494/26-/original/eb2787df764a89f90eea1d4d6abc1d5d.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000x3000",
+      "resolution": "2000x1410",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/526/485/60-/original/5d8c0175164861b4b499f93a9dd59111.webp"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/df2/e5c/00-/original/54a0e1793181a86c67f775ea34c97a96.webp"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus"
+    },
+    {
+      "role": "Other",
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/233/494/26-/original/eb2787df764a89f90eea1d4d6abc1d5d.webp"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Shure SLX-D+ User Guide",
+      "language": "en",
+      "note": "",
+      "url": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Shure SLXD4D+ Dual Channel Wireless Receiver Specification Sheet",
+      "language": "en",
+      "note": "",
+      "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus"
+    }
+  ],
+  "features": [
+    {
+      "text": "2채널 수신기다.",
+      "source": ""
+    },
+    {
+      "text": "RF 반송 주파수 범위는 470–937.5MHz이다(지역별 상이(대역표 참조)).",
+      "source": ""
+    },
+    {
+      "text": "AES-256 암호화를 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "일반",
+      "name": "모델",
+      "value": "SLXD4D+",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "채널 수",
+      "value": "2",
+      "unit": "ch",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "폼팩터",
+      "value": "하프랙 수신기(랙 마운트 하드웨어 동봉)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "치수(H×W×D)",
+      "value": "42 × 197 × 152 (1.65 × 7.76 × 5.98 in)",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "무게",
+      "value": "930",
+      "unit": "g",
+      "condition": "안테나 제외",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "하우징",
+      "value": "아연도금 강판(Galvanized Steel)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "일반",
+      "name": "오디오 서밍",
+      "value": "지원(2채널 믹서 기능)",
+      "unit": "",
+      "condition": "사용자 가이드: 듀얼 수신기에서 사용 가능",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 반송파 주파수 범위",
+      "value": "470–937.5",
+      "unit": "MHz",
+      "condition": "지역별 상이(대역표 참조)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "광대역 튜닝 폭",
+      "value": "138",
+      "unit": "MHz",
+      "condition": "지역에 따라 다름. 레거시 SLX-D 송신기와 사용 시 44 MHz",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "대역 정보(한국)",
+      "value": "G64: 470–616 MHz / X51: 925–937.5 MHz",
+      "unit": "",
+      "condition": "사용자 가이드 'Compatible Frequency Bands' 표에 South Korea 대역으로 G64, X51 기재. 국내 전파 인증·허용 주파수 여부는 공식 자료로 미확인",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "동시 운용 시스템 수",
+      "value": "6 MHz TV 대역당 최대 11 / 8 MHz TV 대역당 최대 14",
+      "unit": "",
+      "condition": "국가 규정·운용 환경에 따라 다름",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 튜닝 스텝",
+      "value": "25 (JB 대역 125)",
+      "unit": "kHz",
+      "condition": "지역별 상이",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 감도",
+      "value": "−97",
+      "unit": "dBm",
+      "condition": "10^-5 BER 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "이미지 제거비",
+      "value": "> 85",
+      "unit": "dB",
+      "condition": "typical",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "스퓨리어스 제거비",
+      "value": "> 75",
+      "unit": "dB",
+      "condition": "typical",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 입력 커넥터",
+      "value": "BNC ×2 (antenna A/B)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 입력 임피던스",
+      "value": "50",
+      "unit": "Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "안테나 바이어스 전압",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "SLXD4+/SLXD4D+ 사양에는 미기재(SLXD4Q+에만 기재)",
+      "source": "P",
+      "verification": "MISSING"
+    },
+    {
+      "group": "RF",
+      "name": "기본 제공 안테나",
+      "value": "1/4 파장 안테나 ×2",
+      "unit": "",
+      "condition": "사용자 가이드 구성품 목록",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "레이턴시",
+      "value": "2.8",
+      "unit": "ms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "오디오 다이내믹 레인지",
+      "value": "118",
+      "unit": "dB",
+      "condition": "1% THD, A-weighted, 20 Hz–20 kHz, typical (마케팅 표기 >118 dB)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "전고조파 왜곡(THD)",
+      "value": "< 0.02",
+      "unit": "%",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "디지털 오디오",
+      "value": "24-bit",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "하이패스 필터",
+      "value": "160 Hz, −12 dB/octave",
+      "unit": "",
+      "condition": "공장 출하 시 Off",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "마이크 오프셋 범위",
+      "value": "0 ~ 21 (3 dB 단위)",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "오디오 주파수 응답",
+      "value": "20 Hz – 20 kHz (+1, −2 dB)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "게인 조정 범위",
+      "value": "−18 ~ +42 (1 dB 단위)",
+      "unit": "dB",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "출력 구성",
+      "value": "XLR: 밸런스(1=GND, 2=+, 3=−) / 1/4\"(6.35 mm): 임피던스 밸런스(T=+, R=−, S=GND)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "출력 임피던스",
+      "value": "1/4\": 1.1 kΩ (언밸런스 550 Ω) / XLR(line): 500 Ω (언밸런스 250 Ω) / XLR(mic): 150 Ω",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "최대 출력 레벨(Full Scale)",
+      "value": "1/4\": +18 dBV 차동(+12 dBV 싱글) / XLR LINE: +18 dBV / XLR MIC: −12 dBV",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "Mic/Line 전환",
+      "value": "30 dB 패드",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "팬텀 전원 보호",
+      "value": "1/4\": 예 / XLR: 예",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "디지털 피드백 리듀서(DFR)",
+      "value": "내장(채널별 활성화)",
+      "unit": "",
+      "condition": "Shure 특허 소프트웨어",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "오디오",
+      "name": "출력 커넥터",
+      "value": "XLR ×2, 1/4\"(6.35 mm) ×2 (채널별 XLR + inst/aux)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "네트워크 인터페이스",
+      "value": "단일 포트 Ethernet 10/100 Mbps (RJ45)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "네트워크 주소",
+      "value": "DHCP 또는 수동 IP",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "최대 케이블 길이",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "Dante",
+      "value": "미지원",
+      "unit": "",
+      "condition": "SLX-D+ 제품군 중 Dante는 SLXD4QDAN+에만 해당. SLXD4+/SLXD4D+ 사양·설명에 Dante 없음",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "제어 소프트웨어",
+      "value": "Wireless Workbench(데스크톱), WWB Mobile 앱(Wi-Fi 또는 Bluetooth)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "서드파티 제어",
+      "value": "Ethernet 경유 서드파티 설정·제어 지원(Command Strings 공개)",
+      "unit": "",
+      "condition": "수신기 메뉴 Controller Access 기본값 Block",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "ShowLink Ease",
+      "value": "수신기에서 송신기 주파수·게인/출력·잠금·펌웨어 원격 제어",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "네트워킹/제어",
+      "name": "Bluetooth(BLE)",
+      "value": "2402–2480 MHz, 10 mW EIRP, GFSK, 칩 안테나(−0.7 dBi)",
+      "unit": "",
+      "condition": "사용자 가이드 System 사양 항목(탑재 기기 개별 명시 없음)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "보안",
+      "name": "암호화",
+      "value": "AES-256",
+      "unit": "",
+      "condition": "메뉴 Device Configuration > Audio > Audio Encryption에서 활성화, IR 싱크로 키 공유(ShowLink Ease로는 공유 안 됨)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "전원 요구사항",
+      "value": "15 VDC @ 360 mA",
+      "unit": "",
+      "condition": "외부 전원 공급기, 팁 +",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "전원",
+      "name": "전원 어댑터 모델",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "구성품에 'Power supply'로만 기재",
+      "source": "P",
+      "verification": "MISSING"
+    },
+    {
+      "group": "전원",
+      "name": "전원 스위치",
+      "value": "전면 전원 버튼",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "환경",
+      "name": "동작 온도",
+      "value": "−18 ~ 50 (0 °F ~ 122 °F)",
+      "unit": "°C",
+      "condition": "배터리 특성에 따라 제한될 수 있음",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "환경",
+      "name": "보관 온도",
+      "value": "−29 ~ 74 (−20 °F ~ 165 °F)",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "인증",
+      "name": "국내 인증",
+      "value": "인증 완료",
+      "unit": "",
+      "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+      "source": "U",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "RF",
+      "connector": "BNC ×2 (antenna A/B)",
+      "signal": "RF antenna input",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR ×2, 1/4\"(6.35 mm) ×2 (채널별 XLR + inst/aux)",
+      "signal": "Audio output",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Network (control only)",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "단일 포트 Ethernet 10/100 Mbps (RJ45)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "DC 입력 (외부 전원공급장치)",
+      "signal": "Power input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "15 VDC @ 360 mA (외부 전원 공급기, 팁 +)",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-26): Shure 전 제품 국내 인증 완료"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+      "detail": "한국어 shure.com 페이지 없음: ko-KR 경로는 en-ASIA로 리다이렉트되고 SLX-D+ 제품 경로는 404. en-US 페이지 사용"
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+      "detail": "스펙시트 URL은 shure.widen.net 뷰어(HTML) 링크. PDF 직접 링크는 서명·만료형 preview URL이라 저장하지 않음"
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+      "detail": "shure.com 제품 페이지 __NEXT_DATA__의 사양 필드(rf_sensitivity, power_requirements 등)는 비어 있음 → 사양은 공식 스펙시트(SLX-D+ Spec Sheet)와 사용자 가이드(SLXD4+, SLXD4D+, PDF 2026-09-16 생성본)에서 수집"
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식…",
+      "detail": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식 사양(스펙시트·사용자 가이드)은 '15 VDC @ 360 mA' — 소비전류 값 불일치(인쇄는 어댑터 정격일 가능성 있으나 공식 설명 없음)"
+    },
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로…",
+      "detail": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로 구분 불가 — shure.com SLX-D+ 해당 제품 페이지 갤러리 이미지임을 근거로 채택"
+    },
+    {
+      "code": "R6",
+      "status": "REVIEW REQUIRED",
+      "title": "SKU 표기: 한국 지역 코드 변형 SLXD4D+K=-G64,…",
+      "detail": "SKU 표기: 한국 지역 코드 변형 SLXD4D+K=-G64, SLXD4D+K=-X51 (shure.com skus 목록)"
+    },
+    {
+      "code": "R7",
+      "status": "REVIEW REQUIRED",
+      "title": "제품 페이지 문서 목록에 SLXD4D+ 전용 가이드는 없고…",
+      "detail": "제품 페이지 문서 목록에 SLXD4D+ 전용 가이드는 없고 'SLXD4+ User Guide'(표지 SLXD4+, SLXD4D+ 공용)만 연결됨"
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Shure SLXD4D+ Dual Channel Wireless Receiver · 공식 출처 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

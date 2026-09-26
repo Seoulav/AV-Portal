@@ -1,0 +1,181 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH32QMCEBGCXKR",
+  "model": "LH32QMCEBGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung standalone UHD M-series digital signage (QM32C), 32-inch, 28.5mm ultra-slim design with uniform bezel.",
+  "korean": "삼성 단독형 UHD M 시리즈(QM32C) 디지털 사이니지 32인치 모델로, 28.5mm 초슬림 두께와 4면 균일 베젤을 갖췄다.",
+  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) QMC 시리즈 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH32QMCEBGCXKR(QM32C)은 삼성전자의 단독형 UHD M 시리즈 디지털 사이니지 32인치 모델이다. 28.5mm의 초슬림 두께로 설치 공간을 최소화하며, 상하좌우 4면의 베젤 두께가 동일해 가로·세로 모드 전환 시에도 시각적 이질감이 없다.\n\n업그레이드된 홈 화면 UI로 기능·소스·설정 등 자주 쓰는 카테고리를 한 화면에서 사용할 수 있고, 즐겨찾기 폴더로 빠른 접근이 가능하다. 콘텐츠 관리·원격 장치 관리를 위한 CMS 솔루션으로 MagicINFO와 VXT(국내 추후 출시 예정)를 지원한다(모두 별도 구매 필요).",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh32qmcebgcxkr-main.webp",
+      "alt": "단독형 UHD M 시리즈 80.1cm 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH32QMCEBGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "LH32QMCEBGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "28.5mm의 초슬림 두께로 벽면에 가깝게 설치할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "4면 두께가 동일한 균일 베젤로 세로 모드 전환 시에도 시각적 이질감이 없다.",
+      "source": "P"
+    },
+    {
+      "text": "업그레이드된 홈 UI와 즐겨찾기 폴더로 자주 쓰는 기능·소스·설정에 빠르게 접근할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "MagicINFO, VXT CMS 솔루션으로 콘텐츠 관리와 원격 장치 관리를 지원한다(별도 구매 필요).",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "32 (80.1)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 두께",
+      "value": "28.5",
+      "unit": "mm",
+      "condition": "QMC 시리즈 공통 슬림 디자인 수치",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 구조",
+      "value": "4면 균일 베젤",
+      "unit": "",
+      "condition": "기존 32인치 삼성 사이니지 모델과의 비교 기준",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "CMS 솔루션",
+      "value": "MagicINFO, VXT",
+      "unit": "",
+      "condition": "별도 구매 필요, VXT는 국내 추후 출시 예정",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "SPEC-AJAX",
+      "status": "OPEN",
+      "title": "상세 스펙 표 미확인",
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX(/sec/business/xhr/goods/goodsSpec)로 로드되어 해상도·밝기·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH32QMCEBGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

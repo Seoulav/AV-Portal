@@ -1,0 +1,319 @@
+{
+  "manufacturer": "Ross Video",
+  "productName": "ULTRITOUCH-2-HR",
+  "model": "ULTRITOUCH-2-HR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Control Panel"
+  ],
+  "english": "The Ultritouch-2-HR is a 2RU rack-mountable, high-resolution touchscreen system control and monitoring panel for the Ultrix router platform, powered by SmartTouch and DashBoard PanelBuilder, providing a 1920x285 resolution touch display.",
+  "korean": "Ultritouch-2-HR은 Ultrix 라우터 플랫폼용 2RU 랙마운트형 고해상도 터치스크린 시스템 제어·모니터링 패널로, SmartTouch와 DashBoard PanelBuilder 기반의 1920×285 해상도 터치 디스플레이를 제공한다.",
+  "verificationSummary": "제조사 공식 Ultritouch 제품 페이지와 Ultritouch User Guide(2201DR-304)로 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Ultritouch-2-HR은 Ross Video Ultrix 라우팅 시스템 및 기타 OGP(Open Gear Protocol) 지원 장치를 제어·모니터링하기 위한 물리적 하드웨어 컨트롤 패널이다. \"2\"는 2RU 랙 높이를, \"HR\"은 고해상도(High Resolution) 버전임을 의미하며, 동일한 2RU 폼팩터의 표준 해상도 모델(Ultritouch-2, 1366×203)과 구분된다. Ultritouch-2-HR의 실제 터치스크린 해상도는 1920×285이다.\n\n스마트폰과 유사한 직관적 UI(SmartTouch)와 DashBoard의 PanelBuilder를 결합해 라우터, 멀티뷰어(Ultriscape), 신호처리 장치는 물론 DashBoard Connect를 지원하는 수백 종의 서드파티 장치까지 하나의 패널에서 제어할 수 있다. Ultrimix-MXR 오디오 믹서 전용 제어 패널 지원 등 Ultrix 라이선스 기능과도 긴밀하게 연동된다.\n\n랙마운트 전용(19인치 표준 랙)이며, 후면에 2개의 15VDC 전원 커넥터(PWR1/PWR2)를 제공해 기본 1개의 외장 전원 공급 장치(PSU)로 동작하고 추가 PSU를 연결하면 전원 이중화가 가능하다. 네트워크는 RJ45 이더넷 포트 2개(ENET1이 실사용, ENET2는 비활성)를 통해 연결한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ultritouch-2-hr-main.webp",
+      "alt": "Ultritouch-2-HR 전면 (Ultritouch 제품 페이지 공식 이미지)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRITOUCH-2-HR",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1600x800",
+      "resolution": "1600x800",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ultritouch-2-hr-rear.webp",
+      "alt": "Ultritouch 후면 패널 - 전원/네트워크 커넥터 (참고용, 2RU/4RU 공용 이미지일 가능성 있음)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Ross Video",
+      "model": "ULTRITOUCH-2-HR",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back.jpg",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1600x800",
+      "resolution": "1600x800",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back.jpg"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ULTRITOUCH-2-HR 공식 자료",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultritouch/"
+    }
+  ],
+  "features": [
+    {
+      "text": "2RU 랙마운트형 고해상도(1920×285) 터치스크린 컨트롤 패널",
+      "source": "P"
+    },
+    {
+      "text": "SmartTouch UI와 DashBoard PanelBuilder를 결합해 스마트폰과 유사한 조작 경험 제공",
+      "source": "P"
+    },
+    {
+      "text": "라우터, Ultriscape 멀티뷰어, Ultrimix-MXR 오디오 믹서 등 다양한 Ross 및 서드파티(OGP) 장치를 한 화면에서 제어",
+      "source": "P"
+    },
+    {
+      "text": "패널 레이아웃을 운영자별로 자유롭게 커스터마이징하고 드로어(Drawer)로 화면 공간을 효율적으로 관리",
+      "source": "P"
+    },
+    {
+      "text": "외장 15VDC 전원 공급 유닛 2계통(PWR1/PWR2) 지원으로 전원 이중화 구성 가능",
+      "source": "T"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "1920 x 285",
+      "unit": "px",
+      "condition": "Ultritouch-2-HR 모델",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "랙 유닛",
+      "value": "2",
+      "unit": "RU",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "너비",
+      "value": "19 (48)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "깊이",
+      "value": "2.5 (6)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "높이",
+      "value": "3.5 (9)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게(근사치)",
+      "value": "2.40 (5.25)",
+      "unit": "kg (lb)",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "이더넷 포트 수",
+      "value": "2 (실사용 1)",
+      "unit": "포트",
+      "condition": "8핀 RJ45, ENET2는 미구현, 링크 애그리게이션/본딩 구성",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 커넥터 수",
+      "value": "2",
+      "unit": "포트",
+      "condition": "PWR1/PWR2, 이중화 옵션",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "15VDC @ 4A",
+      "unit": "",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력",
+      "value": "100-240VAC, 50/60Hz, 1.4A",
+      "unit": "",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "동작 온도 범위",
+      "value": "0 ~ 40 (32 ~ 104)",
+      "unit": "°C (°F)",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environmental",
+      "name": "습도(비응축)",
+      "value": "< 95",
+      "unit": "%",
+      "condition": "",
+      "source": "T",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "External DC 커넥터",
+      "signal": "15VDC",
+      "direction": "입력",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "PWR1 표준/PWR2 이중화 옵션",
+      "condition": "각 15VDC@4A",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45 (8핀)",
+      "signal": "1GbE",
+      "direction": "양방향",
+      "quantity": "2",
+      "protocol": "Ethernet/TCP-IP",
+      "availability": "ENET1 표준(실사용)/ENET2 미구현",
+      "condition": "PoE 미지원",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AV",
+      "connector": "HDMI",
+      "signal": "",
+      "direction": "출력",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "미구현",
+      "condition": "포트는 존재하나 기능이 구현되어 있지 않음",
+      "source": "T",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AV",
+      "connector": "USB",
+      "signal": "",
+      "direction": "양방향",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "미구현",
+      "condition": "포트는 존재하나 기능이 구현되어 있지 않음",
+      "source": "T",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 Ultritouch 제품 페이지",
+      "url": "https://www.rossvideo.com/products/routing-systems/ultritouch/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "T",
+      "name": "제조사 공식 Ultritouch User Guide",
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Ross Video ULTRITOUCH-2-HR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

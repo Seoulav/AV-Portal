@@ -1,0 +1,746 @@
+{
+  "manufacturer": "NETGEAR",
+  "productName": "GSM4212P",
+  "model": "M4250-10G2F-PoE+ (GSM4212P)",
+  "series": "NETGEAR AV Line M4250 Series",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Network",
+    "Network Switch"
+  ],
+  "english": "NETGEAR AV Line M4250-10G2F-PoE+ (GSM4212P) 1U managed switch with 8x 1G PoE+ ports (30W per port, 125W budget), 2x additional 1G RJ45 ports and 2x 1G SFP ports, engineered for 1G AV over IP with rear-facing ports for clean AV rack integration.",
+  "korean": "1G PoE+ 포트 8개(포트당 30W, 총 125W), 1G RJ45 2개, 1G SFP 2개를 갖춘 1U 관리형 스위치로, 모든 포트를 후면에 배치해 AV 랙에 깔끔하게 통합되도록 설계된 1G AV over IP용 모델이다.",
+  "verificationSummary": "NETGEAR 한국어·글로벌 공식 제품 페이지(제목 'GSM4212P')와 M4250 시리즈 공식 데이터시트의 GSM4212P(M4250-10G2F-PoE+) 행에서 사양을 확인했다. 제품 이미지는 공식 페이지에 링크된 GSM4212P 전용 고해상도 이미지 ZIP에서 확보했다. 이전 페이지는 다른 모델(GSM4210PX)을 기술하고 있어 전면 재작성했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "GSM4212P(M4250-10G2F-PoE+)는 NETGEAR AV Line M4250 시리즈의 1U 랙마운트 관리형 스위치로, 1G AV over IP 환경을 위해 설계되었다. 1G RJ45 10개(이 중 1~8번은 포트당 최대 30W의 PoE+, 총 125W 예산)와 1G SFP 2개로 총 12포트를 제공하며, 24Gbps 논블로킹 스위칭 용량과 17.86Mpps 포워딩 성능, 16K MAC 테이블, 16Mb 패킷 버퍼를 갖추었다.\n\n전면은 블랙 디스플레이 패널과 포트 상태 LED로 구성되고 모든 포트와 전원 인렛은 후면에 배치되어 AV 랙에 깔끔하게 통합된다. 필요하면 역방향으로 장착해 포트를 전면에 둘 수 있다. 랙 장착 표준 브래킷과 약 5cm 매립 장착용 긴 브래킷이 기본 제공되며, 전면 M10 나사 구멍(클램프용)과 하단 50x100mm VESA 나사 구멍으로 랙 외부 설치도 지원한다. 크기는 440 x 200 x 43.2mm, 무게는 2.85kg이다.\n\nNETGEAR IGMP Plus™로 별도 설정 없이 멀티캐스트를 사용할 수 있고, AV 전용 웹 UI에서 Dante·Q-SYS·AES67·AVB 오디오 프로필과 NVX·NDI·SDVoE 등 비디오 프로필을 포트별로 지정할 수 있다(시리즈 공통 기재). AVB는 전자 라이선스(AVB4212P-10000S)로 활성화한다. 팬 모드는 Fan Off(0dBA, PoE 80W 이하)·Quiet(27.38dBA)·Cool(55dBA)을 선택할 수 있다. 전력 소비는 PoE 최대 부하 시 163.9W, PoE 미사용 시 17.32W이며, NETGEAR ProSAFE 제한적 평생 하드웨어 보증이 적용된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "gsm4212p-main.webp",
+      "alt": "NETGEAR GSM4212P(M4250-10G2F-PoE+) 1U 랙마운트 스위치를 포트 패널 쪽에서 비스듬히 본 모습. OOB·콘솔·USB-C, 1G RJ45 10개와 SFP 2개, C14 전원 인렛과 전원 스위치가 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4212P",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "7680x5254",
+      "resolution": "2400x708",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Front",
+      "file": "gsm4212p-front.webp",
+      "alt": "NETGEAR GSM4212P 전면 디스플레이 패널. 'NETGEAR AV Line' 로고와 'M4250-10G2F-PoE+ | 30W' 라벨, USB-A 스토리지 포트, LED EXT USB-C 포트, M10 나사 구멍, 12개 포트 상태 LED와 Power/Fan/PoE LED가 보인다",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4212P",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "7680x5254",
+      "resolution": "2400x393",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "gsm4212p-rear.webp",
+      "alt": "NETGEAR GSM4212P 후면 포트 패널. OOB RJ45, 콘솔 RJ45, USB-C 콘솔, 1~8번 PoE+ RJ45, 9~10번 1G RJ45, 11~12번 SFP 포트와 C14 전원 인렛·전원 스위치가 보인다",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4212P",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "7680x5254",
+      "resolution": "2400x393",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "gsm4212p-perspective.webp",
+      "alt": "NETGEAR GSM4212P를 전면 디스플레이 패널과 측면 팬 흡배기구가 보이도록 비스듬히 본 모습",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4212P",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "7680x5254",
+      "resolution": "2400x1124",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "AV Line of Fully Managed Switches M4250 Series Audio Video User Manual (202-12937-02)",
+      "language": "en",
+      "note": "M4250 시리즈 공통 AV UI 사용 설명서(2026년 9월판). 공식 제품 페이지 '사용 설명서' 링크",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": "GSM4212P 단독 사양서는 확인되지 않음. 시리즈 공통 데이터시트(PDF/Excel)만 제공"
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "NETGEAR M4250 Series Datasheet (AV Line Managed Switches)",
+      "language": "en",
+      "note": "M4250 시리즈 공통 데이터시트(64쪽, 13.0.4 소프트웨어 기준). GSM4212P(M4250-10G2F-PoE+) 행 확인. Excel판: https://www.downloads.netgear.com/files/GDC/M4250/M4250-Datasheet.xlsx",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "AV Line of Fully Managed Switches M4250 Series Installation Guide",
+      "language": "en",
+      "note": "M4250 시리즈 공통 설치 가이드. 공식 제품 페이지 '설치 가이드' 링크",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_IG_EN.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "후면 포트 구성 관리형 스위치 - GSM4212P - NETGEAR",
+      "language": "ko",
+      "note": "한국어 공식 페이지. 글로벌(영문): https://www.netgear.com/business/wired/switches/fully-managed/gsm4212p/",
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/"
+    }
+  ],
+  "features": [
+    {
+      "text": "1G RJ45 10개와 1G SFP 2개로 총 12포트를 제공하며, 이 중 8개 포트는 포트당 최대 30W의 PoE+를 지원한다(총 125W 예산).",
+      "source": "P, D"
+    },
+    {
+      "text": "모든 포트와 전원 인렛을 후면에 배치하고 전면에는 블랙 디스플레이 패널과 상태 LED를 두어 AV 랙에 깔끔하게 통합된다. 역방향 장착으로 포트를 전면에 둘 수도 있다.",
+      "source": "P, D"
+    },
+    {
+      "text": "간소화된 AV 웹 UI에서 공장 기본 AV 설정이나 사용자 지정 AV 프로필을 포트별로 몇 번의 클릭만으로 지정할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "NETGEAR IGMP Plus™가 내장되어 대부분의 AV over IP 애플리케이션에서 별도 설정 없이 멀티캐스트를 사용할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "Fan Off·Quiet·Cool 팬 모드를 선택할 수 있어 조건 충족 시 팬리스(0dBA)로 운용할 수 있다.",
+      "source": "D"
+    },
+    {
+      "text": "랙 표준 브래킷, 매립용 긴 브래킷, 전면 M10 클램프 구멍, 하단 VESA(50x100mm) 구멍으로 다양한 설치 방식을 지원한다.",
+      "source": "D"
+    },
+    {
+      "text": "Auto-Trunk 및 Auto-LAG 기능으로 다른 M4250/M4300 스위치와 자동으로 연결되며, NETGEAR Engage™ Controller로 관리할 수 있다.",
+      "source": "P, D"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "General",
+      "name": "모델 설명",
+      "value": "AV Line 8x1G PoE+ 125W 2x1G 및 2xSFP 관리형 스위치(M4250-10G2F-PoE+)",
+      "unit": "",
+      "condition": "모델 번호 GSM4212P",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "주문 코드",
+      "value": "GSM4212P-100NAS / GSM4212P-100EUS / GSM4212P-100AJS / GSM4212P-100PRS",
+      "unit": "",
+      "condition": "미주 / 유럽 / 아시아태평양 / 중국",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "폼팩터",
+      "value": "1U 랙마운트",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포트 수",
+      "value": "12",
+      "unit": "포트",
+      "condition": "1G RJ45 10개(PoE+ 8개 포함), 1G SFP 2개",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "기본 포트 속도",
+      "value": "1",
+      "unit": "Gigabit",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "PoE 포트/예산",
+      "value": "PoE+(802.3at) 8개, 포트당 최대 30W",
+      "unit": "",
+      "condition": "총 125W 예산. 802.3bt 미지원",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "스위칭 용량",
+      "value": "24",
+      "unit": "Gbps",
+      "condition": "12포트 논블로킹(라인레이트)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포워딩 속도",
+      "value": "17.86",
+      "unit": "Mpps",
+      "condition": "64바이트 프레임",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "지연 시간(1G 구리)",
+      "value": "2.133~2.142",
+      "unit": "µs",
+      "condition": "64~1518바이트 프레임",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "지연 시간(1G 광)",
+      "value": "2.257~2.271",
+      "unit": "µs",
+      "condition": "64~1518바이트 프레임",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "MAC 주소 테이블",
+      "value": "16K",
+      "unit": "",
+      "condition": "ARP/NDP 4K",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "패킷 버퍼",
+      "value": "16",
+      "unit": "Mb",
+      "condition": "사용 중인 포트 간 동적 공유",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포워딩 방식",
+      "value": "Store-and-forward",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "VLAN",
+      "value": "4,093",
+      "unit": "개",
+      "condition": "802.1Q 동시",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "IGMP 지원",
+      "value": "향상형(NETGEAR IGMP Plus™)",
+      "unit": "",
+      "condition": "멀티캐스트 그룹 4K(IPv4 2,048 / IPv6 2,048)",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "점보 프레임 지원",
+      "value": "예",
+      "unit": "",
+      "condition": "최대 12KB",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "LAG",
+      "value": "8그룹, 그룹당 최대 8포트",
+      "unit": "",
+      "condition": "802.3ad / 802.1AX-2008",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "PTP",
+      "value": "IEEE 1588 PTPv2 1-step Transparent Clock",
+      "unit": "",
+      "condition": "시리즈 공통 기능",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "AVB 지원",
+      "value": "예(전자 라이선스 필요, 활성화 키 이메일 전송)",
+      "unit": "",
+      "condition": "SKU: AVB4212P-10000S",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AV",
+      "name": "AV 프로필",
+      "value": "오디오: Dante, Q-SYS, AES67, AVB / 비디오: NVX, SVSI, AMX, Q-SYS, NDI, Kramer KDS, Aurora Multimedia, ZeeVee, Atlona, Dante, SDVoE 등",
+      "unit": "",
+      "condition": "시리즈 공통 기재. 오디오/비디오/컨트롤 혼합 프로필 제공",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "관리 방식",
+      "value": "AV 전용 웹 UI, NETGEAR IT 웹 UI, CLI(Telnet/SSH), SNMP, sFlow, RSPAN, NETGEAR Engage™ Controller",
+      "unit": "",
+      "condition": "시리즈 공통 기재",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "관리 포트",
+      "value": "OOB 1G RJ45 1개(후면), RS232 RJ45 콘솔 및 USB-C 콘솔(후면), USB-A 스토리지(전면)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "CPU/메모리",
+      "value": "ARM A9 1.25GHz 32-bit / 2GB RAM",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "내장 PSU 1개(C14 인렛), 전원 스위치 1개",
+      "unit": "",
+      "condition": "100-240V~, 50-60Hz, 3.5-2.25A(제품 이미지 표기)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 최대 부하)",
+      "value": "163.9",
+      "unit": "W",
+      "condition": "559.55 Btu/hr",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 미사용)",
+      "value": "17.32",
+      "unit": "W",
+      "condition": "59.13 Btu/hr",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(포트 미연결 대기)",
+      "value": "8.53",
+      "unit": "W",
+      "condition": "29.12 Btu/hr",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "냉각",
+      "value": "측면 흡배기(Side-to-side) 팬, 팬 모드 선택(Fan Off / Quiet / Cool)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음(Fan Off 모드)",
+      "value": "0",
+      "unit": "dBA",
+      "condition": "25℃, PoE 부하 80W 이하, 케이스 온도 41.8℃",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음(Quiet 모드)",
+      "value": "27.38",
+      "unit": "dBA",
+      "condition": "25℃, PoE 0~125W, 팬 듀티 25%",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음(Cool 모드)",
+      "value": "55",
+      "unit": "dBA",
+      "condition": "25℃, 팬 듀티 100%",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음(제품 페이지 표기)",
+      "value": "팬리스 또는 30",
+      "unit": "dB@25℃",
+      "condition": "데이터시트 세부값과 표기 방식 상이",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0~45",
+      "unit": "℃",
+      "condition": "습도 90% 이하(비응축), 고도 3,000m 이하",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20~70",
+      "unit": "℃",
+      "condition": "습도 95% 이하(비응축)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "MTBF",
+      "value": "778,769",
+      "unit": "시간",
+      "condition": "25℃ 기준. 45℃ 기준 530,659시간",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W x D x H)",
+      "value": "440 x 200 x 43.2",
+      "unit": "mm",
+      "condition": "1U",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "2.85",
+      "unit": "kg",
+      "condition": "6.28 lb",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "마운팅",
+      "value": "랙 장착 표준 브래킷, 매립 장착용 긴 브래킷(약 5cm), 전면 M10 나사 구멍(클램프용), 하단 M5 나사 구멍 4개(50x100mm VESA), 탁상용 고무 풋",
+      "unit": "",
+      "condition": "역방향 장착 시 포트를 전면으로 배치 가능",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC 인증",
+      "value": "FCC Part 15 Class A, ISED ICES-003, CE, RCM, CCC, VCCI, KC(KN32/KN35 Class A), EAC, BSMI",
+      "unit": "",
+      "condition": "시리즈 공통 기재",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 인증",
+      "value": "CB(IEC 62368-1), CSA(UL/ANSI 62368-1), CE(EN 62368-1), RCM, CCC, KC(K 60950-1), EAC, BSMI",
+      "unit": "",
+      "condition": "시리즈 공통 기재",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Support",
+      "name": "보증",
+      "value": "Lifetime",
+      "unit": "",
+      "condition": "NETGEAR ProSAFE 제한적 평생 하드웨어 보증(공인 대리점 구입, 90일 내 등록 조건, 실내용)",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Support",
+      "name": "기술 지원",
+      "value": "구입일로부터 90일 전화·채팅 지원",
+      "unit": "",
+      "condition": "한국어 페이지 기준. 글로벌 페이지는 Sprint/Overdrive 계약 옵션 안내",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "구성품",
+      "value": "본체, 전원 코드, USB Type-C 및 RJ45-DB9 콘솔 케이블, 랙 장착 표준 브래킷, 매립 장착용 긴 브래킷, 고무 풋패드, 설치 가이드",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "8",
+      "protocol": "PoE+ (802.3af/at)",
+      "availability": "포트 1~8, 포트당 최대 30W",
+      "condition": "총 PoE 예산 125W, 후면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "포트 9~10, PoE 미지원",
+      "condition": "후면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "SFP",
+      "signal": "1000BASE-X Fiber",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "포트 11~12, 1G 전용",
+      "condition": "후면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet (Out-of-band)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "관리 전용(OOB)",
+      "condition": "후면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Console",
+      "connector": "RJ-45",
+      "signal": "RS232 Console",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "후면 배치, RJ45-DB9 케이블 포함",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Console",
+      "connector": "USB Type-C",
+      "signal": "Console",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "후면 배치, USB-C 케이블 포함",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Storage",
+      "connector": "USB Type-A",
+      "signal": "USB Storage",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "전면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Other",
+      "connector": "USB Type-C",
+      "signal": "LED EXT",
+      "direction": "정보 없음",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "용도·사양 정보 없음",
+      "condition": "전면 배치. 제조사 이미지 라벨로만 확인",
+      "source": "IMG",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "connector": "IEC C14",
+      "signal": "AC 100-240V",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "전원 스위치 포함",
+      "condition": "후면 배치",
+      "source": "P, D",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P-EN",
+      "name": "제조사 공식 제품 페이지(글로벌)",
+      "url": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4212p/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 Data Sheet(M4250 시리즈 공통)",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 공식 고해상도 이미지 ZIP(GSM4212P)",
+      "url": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IG",
+      "name": "제조사 공식 설치 가이드(M4250 시리즈 공통)",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_IG_EN.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "UM",
+      "name": "제조사 공식 AV 사용 설명서(M4250 시리즈 공통)",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이전 페이지가 다른 모델(GSM4210PX)을 기술함",
+      "detail": "기존 페이지는 official_links URL(.../gsm4210px/)을 따라가 GSM4210PX(M4250-8G2XF-PoE+, 데스크톱형 8x1G PoE+ 220W + 2xSFP+)의 사양·이미지를 GSM4212P로 게시하고 있었다. GSM4212P는 별도로 존재하는 모델(M4250-10G2F-PoE+, 1U 12포트, PoE+ 125W)이며, 본 페이지는 GSM4212P 공식 페이지(.../gsm4212p/)와 데이터시트 기준으로 전면 재작성했다. 카탈로그의 official_links도 GSM4212P URL로 교체했다(2026-09-26). 원본 목록·조사 기록의 기존 링크(.../gsm4210px/)는 운영자 확인 후 갱신이 필요하다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 전면/후면 명칭이 제조사 파일명과 반대",
+      "detail": "데이터시트는 '전면 블랙 디스플레이 패널, 모든 포트는 후면'으로 정의한다. 이에 따라 포트 패널 이미지(제조사 파일명 GSM4212P_woShadow_Front)를 Rear로, 디스플레이 패널 이미지(파일명 GSM4212P_woShadow_Back)를 Front로 지정했다. 게시 시 명칭 기준 확인이 필요하다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "소음 표기 차이 및 시리즈 공통 항목",
+      "detail": "제품 페이지는 '팬리스 또는 30dB@25ºC'로, 데이터시트는 Fan Off 0dBA / Quiet 27.38dBA / Cool 55dBA로 표기한다. AV 프로필(Dante·AES67·NDI·SDVoE 등), 관리 방식, 인증 목록은 M4250 시리즈 공통 기재이며 GSM4212P 단독 확인 자료는 없다. 전면 'LED EXT' USB-C 포트는 이미지 라벨로만 확인되며 용도·사양은 정보 없음."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "기술 지원 조건 페이지별 상이",
+      "detail": "한국어 페이지는 구입 후 90일 전화·채팅 지원을, 글로벌 페이지와 데이터시트는 Sprint/Overdrive 지원 계약 옵션(데이터시트: 3년 Sprint 지원 포함)을 안내한다. 국내 적용 조건 확인이 필요하다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "NETGEAR GSM4212P 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

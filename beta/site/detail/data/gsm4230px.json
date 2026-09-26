@@ -1,0 +1,339 @@
+{
+  "manufacturer": "NETGEAR",
+  "productName": "GSM4230PX",
+  "model": "M4250-26G4XF-PoE+ (GSM4230PX)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Network",
+    "Network Switch"
+  ],
+  "english": "M4250-26G4XF-PoE+ (GSM4230PX) fully managed switch with 24x 1G PoE+ ports (480W budget), 2x 1G and 4x SFP+ ports, engineered for 1G AV over IP with rear-facing ports for clean AV rack integration.",
+  "korean": "24개의 1G PoE+ 포트(480W 예산)와 2개의 1G 포트, 4개의 SFP+ 포트를 제공하는 완전관리형 스위치로, 후면 포트 배치를 통해 AV 랙에 깔끔하게 통합되도록 설계된 1G AV over IP 전용 모델이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(netgear.com, 한국어)에서 전체 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "GSM4230PX(모델명 M4250-26G4XF-PoE+)는 NETGEAR M4250 Pro AV 시리즈의 30포트 완전관리형 스위치로, GSM4230P와 유사한 포트 구성(24x 1G PoE+, 2x 1G, 4x SFP+)이지만 PoE 예산이 480W로 확대되고 업링크가 SFP+(10G 대응)로 강화된 상위 모델이다. AV over IP 환경에 맞춰 전면 LED 상태 표시, 후면 배선 배치의 AV 특화 디자인을 적용했다.\n\nNETGEAR IGMP Plus 멀티캐스트 기능이 기본 탑재되어 있으며, 최대 12KB 점보 프레임을 지원한다. 전자 라이선스(AVB4230PX-10000S) 구매 시 AVB 기능을 활성화할 수 있다. 팬리스 모드 또는 25도 기준 42dB 소음의 팬 냉각 모드를 선택할 수 있으며, TAA 준수 SKU도 별도 문의를 통해 제공된다.\n\n크기는 440 x 400 x 43.2mm, 무게는 5.45kg이며, 표준 랙마운트 브래킷과 매립형(recessed) 장착용 긴 브래킷, 탁상 설치용 고무 풋을 함께 제공한다. PoE 풀로드 시 전력 소비는 614W(2096.2 Btu/hr)이며, NETGEAR ProSAFE 평생 하드웨어 보증이 적용된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "gsm4230px-main.webp",
+      "alt": "NETGEAR GSM4230PX(M4250-26G4XF-PoE+) 스위치 전면 및 측면 사시도, 24개의 PoE+ RJ45 포트와 SFP+ 슬롯, 냉각 통풍구가 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4230PX",
+      "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "779x536",
+      "resolution": "779x536",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "GSM4230PX Data Sheet",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+    }
+  ],
+  "features": [
+    {
+      "text": "간소화된 AV 웹 UI를 통해 공장 기본 AV 설정이나 사용자 지정 AV 프로필을 포트별로 몇 번의 클릭만으로 지정할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "NETGEAR IGMP Plus 기능이 기본 내장되어 별도 설정 없이도 대부분의 AV over IP 애플리케이션에서 멀티캐스트를 즉시 사용할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "GSM4230P 대비 확장된 480W PoE 예산과 SFP+ 업링크를 제공해 고밀도 PoE 장치 구성에 유리하다.",
+      "source": "P"
+    },
+    {
+      "text": "팬리스 동작 또는 저소음 모드를 제공해 이벤트 현장에서 팬 소음 걱정 없이 AV 랙에 설치할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "Auto-Trunk 및 Auto-LAG 기능으로 다른 M4250/M4300 스위치와 자동으로 연결 구성을 맺을 수 있다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "General",
+      "name": "모델 설명",
+      "value": "24x 1G PoE+, 2x 1G, 4x SFP+ 완전관리형 스위치(M4250-26G4XF-PoE+)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포트 수",
+      "value": "30",
+      "unit": "포트",
+      "condition": "1G PoE+ 24개, 1G 2개, SFP+ 4개",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "기본 포트 속도",
+      "value": "1",
+      "unit": "Gigabit",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "PoE 포트/예산",
+      "value": "PoE+ 24개(포트당 30W)",
+      "unit": "",
+      "condition": "총 480W 예산",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "IGMP 지원",
+      "value": "향상형(NETGEAR IGMP Plus)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "점보 프레임 지원",
+      "value": "예",
+      "unit": "",
+      "condition": "최대 12KB",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "AVB 지원",
+      "value": "예(전자 라이선스 필요, 활성화 키 이메일 전송)",
+      "unit": "",
+      "condition": "SKU: AVB4230PX-10000S",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 사용 시)",
+      "value": "614",
+      "unit": "W",
+      "condition": "2096.2 Btu/hr",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 미사용)",
+      "value": "46.8",
+      "unit": "W",
+      "condition": "159.78 Btu/hr",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(포트 미연결 대기)",
+      "value": "33.9",
+      "unit": "W",
+      "condition": "115.73 Btu/hr",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음",
+      "value": "팬리스 또는 42",
+      "unit": "dB@25℃",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W x D x H)",
+      "value": "440 x 400 x 43.2",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "5.45",
+      "unit": "kg",
+      "condition": "12.02 lb",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "마운팅",
+      "value": "랙 장착 표준 브래킷 및 매립 장착용 긴 브래킷, 탁상 설치용 고무 풋",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Support",
+      "name": "보증",
+      "value": "Lifetime",
+      "unit": "",
+      "condition": "NETGEAR ProSAFE 평생(Limited Lifetime) 하드웨어 보증(수정되지 않은 하드웨어/팬/내부 전원 공급 장치 한정, 실내용)",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "24",
+      "protocol": "PoE+ (802.3at)",
+      "availability": "PoE+ 전 포트 지원, 포트당 최대 30W",
+      "condition": "총 PoE 예산 480W",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "PoE 미지원 업링크 포트",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "SFP+",
+      "signal": "1G/10G Fiber",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "",
+      "condition": "업링크 전용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Console",
+      "connector": "USB Type-C / RJ45-DB9",
+      "signal": "Console",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "구성품에 콘솔 케이블 2종 포함",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 Data Sheet(M4250 시리즈 공통)",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제품 사진 모델명 미판독",
+      "detail": "다운로드한 제품 이미지에는 NETGEAR 로고와 일부 작은 텍스트가 보이나 GSM4230PX/M4250-26G4XF-PoE+ 모델명이 육안으로 확실히 판독되지 않아 verificationStatus를 FOUND로 표시함."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "NETGEAR GSM4230PX 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
