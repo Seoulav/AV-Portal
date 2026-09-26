@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "31D65A1F0D6D5926B35933ECEBBBF18B2DED007F24728C723F02D0D22EA013E6",
+    "sha256": "52740B7A550B290AD952F622D0717A1BD71EC1FBC1784901C135F16E995C209A",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -18,6 +18,12 @@
       "features": 6,
       "specifications": 16,
       "io": 6
+    },
+    "avhub": {
+      "sha256": "DC18C70DFB8849E4C2CC6060C3E2E92A174EC06107B78F01EA64D791E6AAD93B",
+      "features": 6,
+      "specifications": 8,
+      "io": 8
     },
     "avio-2ch-in": {
       "sha256": "363A68213F1C7AE6C93A77E5A225B5FC75F392CB57E374991A5846CBF7CF15EB",
@@ -54,6 +60,24 @@
       "features": 5,
       "specifications": 11,
       "io": 5
+    },
+    "cm20": {
+      "sha256": "30D4D6D0001ADFE6D3708A3818CF459CD4848C25CD406206F0F349A1D5139903",
+      "features": 6,
+      "specifications": 14,
+      "io": 0
+    },
+    "cpe40": {
+      "sha256": "CD00C36A5552967757A4AC66D1F047B5F53B7DC91672A3301BB26E6E1BA1C4E4",
+      "features": 6,
+      "specifications": 7,
+      "io": 1
+    },
+    "cs10": {
+      "sha256": "94B743AE4D056306B86E87F4548443B602131093A09DCF69FBCB14AED794E7F6",
+      "features": 6,
+      "specifications": 12,
+      "io": 0
     },
     "dm3": {
       "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
@@ -96,6 +120,42 @@
       "features": 5,
       "specifications": 13,
       "io": 5
+    },
+    "gs108pp": {
+      "sha256": "F196A0999AB90242650FB5FD4B2D748ED91828BA68B71D5F2E4E2B8B4878A381",
+      "features": 5,
+      "specifications": 14,
+      "io": 1
+    },
+    "gs116pp": {
+      "sha256": "BB3092E47311D5EC563A386E27E4431D266CDC9958266AE71D35FFE01D5204D6",
+      "features": 5,
+      "specifications": 19,
+      "io": 1
+    },
+    "gsm4212p": {
+      "sha256": "296A29ADF10422DB2825450579132CC13467BCC3BA942E1F7FAC7AF6310B2E54",
+      "features": 5,
+      "specifications": 15,
+      "io": 3
+    },
+    "gsm4230p": {
+      "sha256": "12F60EA88F4B582BFD84498E82E5EDAA242FB95328B5B751E70A0AD9D34E4EF8",
+      "features": 5,
+      "specifications": 15,
+      "io": 4
+    },
+    "gsm4230px": {
+      "sha256": "6816762D6FC8698EBEB2CFC5393CF893A2973F82FA2CF815413FE6AE666D33FB",
+      "features": 5,
+      "specifications": 15,
+      "io": 4
+    },
+    "gsm4248p": {
+      "sha256": "D5B6D8445A765BCA4AC4FFC9124E2D3DFAD46BA5A903FE5F2991ECDE9A3B2472",
+      "features": 5,
+      "specifications": 15,
+      "io": 3
     },
     "gsm4248px": {
       "sha256": "5C82557553544677F9E42274939BD7B56430F7063F726C6A6411A9140B636223",
@@ -271,6 +331,12 @@
       "specifications": 12,
       "io": 6
     },
+    "smartvision40": {
+      "sha256": "6B2EC4A2390502D9A512A4A0125D3794176E03105B6A5211B3744B101696312F",
+      "features": 6,
+      "specifications": 10,
+      "io": 0
+    },
     "strong-usb-cable": {
       "sha256": "1ECCF2EED991666210ADA72DC0A20D24481A6E26D4C772F4C0B3135D7669252E",
       "features": 3,
@@ -319,11 +385,59 @@
       "specifications": 10,
       "io": 3
     },
+    "uvc85-byod": {
+      "sha256": "62E769D4AA8028AF52E2AEA590077C92E629DBD7A6005B99114847E0E16C5291",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "uvc86": {
+      "sha256": "18F6ACEDF1DE425F7F9033AA77CA8BBF10CB24489C81D32E7B721666C744F506",
+      "features": 6,
+      "specifications": 16,
+      "io": 8
+    },
     "v-02hd-mk-ii": {
       "sha256": "AB9E3908ED3123DE4D4C7C87ABBF9AC17948B5D2024378E21A20DA056A825FE8",
       "features": 6,
       "specifications": 10,
       "io": 6
+    },
+    "v-02hd": {
+      "sha256": "E9EECCA0CF9EDE940C70F4CD96B64386D36DBF61B47E65ED34CDD754706FA032",
+      "features": 6,
+      "specifications": 15,
+      "io": 7
+    },
+    "v-160hd": {
+      "sha256": "F7D7F236BE19C8B4B1F0C97987B9D08BB21A543A2F810574F00797A81CB477A2",
+      "features": 6,
+      "specifications": 18,
+      "io": 18
+    },
+    "v-1hd-plus": {
+      "sha256": "1CD28BC2E5D291E36BEDFFDEFF59FEB56FA7BDB733A33725694EDB5FECE84723",
+      "features": 6,
+      "specifications": 17,
+      "io": 12
+    },
+    "v-60hd": {
+      "sha256": "8CE8CB5F7115A6513BE0AF0E843BE6EFB3925DA92C34A6504FEE6689FAEF68C3",
+      "features": 6,
+      "specifications": 19,
+      "io": 15
+    },
+    "v-80hd": {
+      "sha256": "9958658E160B05E2511D4644F57F8C898BD601F308E1A296C2F695BCDB827400",
+      "features": 6,
+      "specifications": 21,
+      "io": 15
+    },
+    "v-8hd": {
+      "sha256": "4150F5EBAE60E6BD0E48C1CAA233C2617E3D92E64EC09ECE6FE81FE37167D879",
+      "features": 6,
+      "specifications": 18,
+      "io": 9
     },
     "varia-100": {
       "sha256": "E5E644B7A1DB22A230F52F56375ABBC3EE735F88C83E18C77F020940F91D4EFC",
@@ -348,6 +462,24 @@
       "features": 6,
       "specifications": 12,
       "io": 1
+    },
+    "vcm35": {
+      "sha256": "6444B0BAA28F7A63106EC2E25C5F592F78B380A5C0039A258F688F6C9D35DF0A",
+      "features": 6,
+      "specifications": 12,
+      "io": 2
+    },
+    "vr-4hd": {
+      "sha256": "492AF092052EF943C5D3DED33914BD2E191CD91D182868689BF21FA6FE14417A",
+      "features": 6,
+      "specifications": 18,
+      "io": 18
+    },
+    "vr-6hd": {
+      "sha256": "8092AAB2F58EA4445A5731406F85C487416E5540DBA99D93394AAE20CA08DA29",
+      "features": 6,
+      "specifications": 23,
+      "io": 13
     },
     "vs10": {
       "sha256": "A70FB2A7A50AF18938F090FCFD3EA64FAE8D831C5FA7897A397B9B49D13EE78E",
@@ -377,6 +509,12 @@
       "sha256": "6C30EFFF5530712B8EE15FAD54638D83D1ECF68BCB2F5CFE0C564BAB52778A46",
       "features": 6,
       "specifications": 13,
+      "io": 2
+    },
+    "xsm4216f": {
+      "sha256": "A9E87A218F6D38A8EE00276269D3279005A37DB2F84E1F0711A31880059217EA",
+      "features": 5,
+      "specifications": 14,
       "io": 2
     },
     "zenith-100": {

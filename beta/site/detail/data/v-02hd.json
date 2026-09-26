@@ -1,0 +1,383 @@
+{
+  "manufacturer": "Roland",
+  "productName": "V-02HD",
+  "model": "V-02HD",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "Multi-Format Video Mixer with 2 HDMI inputs, scaling, and audio processing.",
+  "korean": "2채널 HDMI 입력과 스케일링, 오디오 프로세싱을 갖춘 멀티포맷 비디오 믹서.",
+  "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": [
+    "V-02HD는 Roland V-시리즈의 초소형 '마이크로 스위처'로, 스위처·스케일러·인풋 익스팬더·오디오 프로세싱·인라인 비디오 이펙트 기능을 하나의 휴대용 장치에 담았다. HDMI 입력 2계통을 갖추고 있으며 각 입력에 입출력 스케일러가 내장되어 있어 해상도가 서로 다른 컴퓨터·카메라·태블릿 등을 10비트 4:4:4 컬러 스페이스로 매끄럽게 전환할 수 있다. 현재는 단종(Discontinued) 상태이며, 공식 홈페이지에는 후속 모델인 'V-02HD MK II'로의 이전 안내가 게재되어 있다(이 문서가 다루는 제품은 MK II가 아닌 기존 V-02HD 단일 모델이다).",
+    "2대의 카메라를 이용하는 1인 진행 촬영·라이브 스트리밍, 프레젠테이션용 컴퓨터-디스플레이 간 전환, HDMI 신호에 대한 오디오 임베드/디임베드 등 소규모 제작 환경에 최적화되어 있다. 3밴드 EQ와 다이내믹스, 정지 화면 캡처/재생, 14종의 실시간 비주얼 이펙트, PinP·크로마키 등 5종의 합성 이펙트를 제공하며, 무료 iPad 리모트 앱으로 오디오 페이더 제어와 최대 8개의 커스텀 씬 구성이 가능하다.",
+    "출력은 PROGRAM OUT과 PREVIEW OUT 2계통(HDMI)이며, 최대 1080/60p 입력을 지원한다(4K 미지원). 전원 소비 10.0W, 무게 0.6kg으로 삼각대에 장착해 휴대용 촬영 리그로 사용하는 것을 전제로 설계됐다."
+  ],
+  "images": [
+    {
+      "role": "Main",
+      "file": "v-02hd-main.webp",
+      "alt": "Roland V-02HD 멀티포맷 비디오 믹서 컨트롤 패널",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Roland",
+      "model": "V-02HD",
+      "sourceUrl": "https://static.roland.com/assets/images/products/gallery/v-02hd_top_front_gal.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1500x815",
+      "resolution": "1500x815",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://static.roland.com/assets/images/products/gallery/v-02hd_top_front_gal.jpg"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "V-02HD Manual/Reference",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://static.roland.com/assets/media/pdf/V-02HD_reference_eng05_W.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://proav.roland.com/global/products/v-02hd/"
+    }
+  ],
+  "features": [
+    {
+      "text": "휴대용 카메라 리그에 장착 가능한 초소형 '마이크로 스위처' 폼팩터",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 2입력, 10비트 4:4:4 컬러로 저지연 스위칭 및 입출력 스케일링 지원",
+      "source": "P"
+    },
+    {
+      "text": "14종의 실시간 비주얼 이펙트와 PinP·크로마키 등 5종의 합성 이펙트 내장",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 신호에 대한 아날로그 오디오 임베드/디임베드 및 3밴드 EQ·다이내믹스 처리",
+      "source": "P"
+    },
+    {
+      "text": "무료 iPad 리모트 앱으로 오디오 페이더 제어 및 최대 8개 프리셋 씬 구성",
+      "source": "P"
+    },
+    {
+      "text": "정지 이미지 캡처/재생 기능으로 입력 소스 장애 시 백업 화면 표시 가능",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "비디오 처리",
+      "value": "4:4:4 (Y/Pb/Pr), 10-bit",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "입력 해상도",
+      "value": "480i/p, 576i/p, 720p, 1080i/p(23.98~60p), VGA~WUXGA",
+      "unit": "",
+      "condition": "INPUT 1-2 (HDMI)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "출력 해상도",
+      "value": "480p, 576p, 720p, 1080i/p, VGA~WUXGA",
+      "unit": "",
+      "condition": "PROGRAM/PREVIEW OUT",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "트랜지션",
+      "value": "CUT, MIX(DISSOLVE), WIPE 9종",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "합성 이펙트",
+      "value": "PinP(사각/원/다이아몬드), KEY(루미넌스/크로마키)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "비주얼 이펙트",
+      "value": "MOSAIC, WAVE, RGB REPLACE 등 14종",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 처리",
+      "value": "24bit/48kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 이펙트",
+      "value": "Delay, HPF, Compressor, Noise gate, Equalizer, Multi-band compressor, Limiter",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "기타 커넥터",
+      "value": "USB Type B(백업/iPad 리모트), CTL/EXP 1/4인치 TRS",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "기타 기능",
+      "value": "프리셋 메모리 8종, 패널 잠금, EDID 에뮬레이터, 오토 스위칭, 오토 입력 감지",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "AC 어댑터",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "10.0",
+      "unit": "W",
+      "condition": "전류 소비 1.1A",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "동작 온도",
+      "value": "0~40",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "크기(W x D x H)",
+      "value": "160 x 108 x 51",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "무게",
+      "value": "0.6",
+      "unit": "kg",
+      "condition": "AC 어댑터 제외",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "INPUT 1-2, HDCP 지원, 최대 1080/60p 및 컴퓨터 해상도(WUXGA)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "PROGRAM OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "PREVIEW OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "HDCP 지원",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo Mini",
+      "signal": "AUDIO IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "입력 레벨 -15dBu(최대 +3dBu)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "Stereo Mini",
+      "signal": "PHONES",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "92mW+92mW (32ohm)",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "USB Type B",
+      "signal": "USB (백업/iPad 리모트)",
+      "direction": "N/A",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "1/4인치 TRS",
+      "signal": "CTL/EXP",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "풋스위치/익스프레션 페달용",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://proav.roland.com/global/products/v-02hd/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 Owner's Manual",
+      "url": "https://static.roland.com/assets/media/pdf/V-02HD_reference_eng05_W.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제조사 단종(Discontinued) 표기",
+      "detail": "제조사 홈페이지에 'Discontinued(단종)' 표기가 있으며 후속 모델 'V-02HD MK II'가 별도 제품으로 존재함(본 문서는 기존 V-02HD 단일 모델)."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Roland V-02HD 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

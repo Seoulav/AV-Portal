@@ -279,7 +279,9 @@
     "official_links": [
       "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/xsm4216f"
+    "manual_link": "https://www.netgear.com/support/product/xsm4216f",
+    "slug": "xsm4216f",
+    "card_image": "xsm4216f-main.webp"
   },
   {
     "brand": "Logitech",
@@ -766,7 +768,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-02hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/",
+    "slug": "v-02hd",
+    "card_image": "v-02hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -780,7 +784,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-1hd_plus/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/",
+    "slug": "v-1hd-plus",
+    "card_image": "v-1hd-plus-main.webp"
   },
   {
     "brand": "Roland",
@@ -794,7 +800,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/vr-4hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/",
+    "slug": "vr-4hd",
+    "card_image": "vr-4hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -808,7 +816,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/vr-6hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/vr-6hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/vr-6hd/owners_manuals/",
+    "slug": "vr-6hd",
+    "card_image": "vr-6hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -822,7 +832,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-8hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/",
+    "slug": "v-8hd",
+    "card_image": "v-8hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -836,7 +848,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-60hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/",
+    "slug": "v-60hd",
+    "card_image": "v-60hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -850,7 +864,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-80hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-80hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-80hd/owners_manuals/",
+    "slug": "v-80hd",
+    "card_image": "v-80hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -864,7 +880,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-160hd/"
     ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-160hd/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-160hd/owners_manuals/",
+    "slug": "v-160hd",
+    "card_image": "v-160hd-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -2091,7 +2109,9 @@
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4212p"
+    "manual_link": "https://www.netgear.com/support/product/gsm4212p",
+    "slug": "gsm4212p",
+    "card_image": "gsm4212p-main.webp"
   },
   {
     "brand": "NETGEAR",
@@ -2105,7 +2125,9 @@
     "official_links": [
       "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4230p"
+    "manual_link": "https://www.netgear.com/support/product/gsm4230p",
+    "slug": "gsm4230p",
+    "card_image": "gsm4230p-main.webp"
   },
   {
     "brand": "NETGEAR",
@@ -2119,7 +2141,9 @@
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4230px"
+    "manual_link": "https://www.netgear.com/support/product/gsm4230px",
+    "slug": "gsm4230px",
+    "card_image": "gsm4230px-main.webp"
   },
   {
     "brand": "NETGEAR",
@@ -2133,7 +2157,9 @@
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4248p"
+    "manual_link": "https://www.netgear.com/support/product/gsm4248p",
+    "slug": "gsm4248p",
+    "card_image": "gsm4248p-main.webp"
   },
   {
     "brand": "Epson",
@@ -2464,7 +2490,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/smartvision40"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/smartvision40"
+    "manual_link": "https://www.yealink.com/en/product-resource/smartvision40",
+    "slug": "smartvision40",
+    "card_image": "smartvision40-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2478,7 +2506,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/accessories-vcm35"
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-vcm35",
+    "slug": "vcm35",
+    "card_image": "vcm35-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2492,7 +2522,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/compatible-camera-uvc86"
+    "manual_link": "https://www.yealink.com/en/product-resource/compatible-camera-uvc86",
+    "slug": "uvc86",
+    "card_image": "uvc86-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2506,7 +2538,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-cm20"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cm20"
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cm20",
+    "slug": "cm20",
+    "card_image": "cm20-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2520,7 +2554,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d"
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d",
+    "slug": "cs10",
+    "card_image": "cs10-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2534,7 +2570,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/room-system-avhub"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/room-system-avhub"
+    "manual_link": "https://www.yealink.com/en/product-resource/room-system-avhub",
+    "slug": "avhub",
+    "card_image": "avhub-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2548,7 +2586,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/uvc85-byod"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/uvc85-byod"
+    "manual_link": "https://www.yealink.com/en/product-resource/uvc85-byod",
+    "slug": "uvc85-byod",
+    "card_image": "uvc85-byod-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2562,7 +2602,9 @@
     "official_links": [
       "https://www.yealink.com/en/product-detail/cpe40"
     ],
-    "manual_link": "https://www.yealink.com/en/product-resource/cpe40"
+    "manual_link": "https://www.yealink.com/en/product-resource/cpe40",
+    "slug": "cpe40",
+    "card_image": "cpe40-main.webp"
   },
   {
     "brand": "NovaStar",
@@ -3748,7 +3790,9 @@
     "official_links": [
       "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gs116pp"
+    "manual_link": "https://www.netgear.com/support/product/gs116pp",
+    "slug": "gs116pp",
+    "card_image": "gs116pp-main.webp"
   },
   {
     "brand": "NETGEAR",
@@ -3762,7 +3806,9 @@
     "official_links": [
       "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gs108pp"
+    "manual_link": "https://www.netgear.com/support/product/gs108pp",
+    "slug": "gs108pp",
+    "card_image": "gs108pp-main.webp"
   },
   {
     "brand": "Logitech",

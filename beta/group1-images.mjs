@@ -230,6 +230,75 @@ export const group1Images = {
   ],
   'varia-sl50': [
     image('Main', 'variasl50-main.webp', 'AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL50', 'https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp', '1136×1600', '1136×1600', 'FOUND')
+  ],
+  xsm4216f: [
+    image('Main', 'xsm4216f-main.webp', 'NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32', '779x536', '779x536', 'FOUND')
+  ],
+  gsm4212p: [
+    image('Main', 'gsm4212p-main.webp', "NETGEAR GSM4210PX(M4250-8G2XF-PoE+ 30W) 스위치 전면부, 8개의 PoE+ RJ45 포트와 2개의 SFP+ 포트, 콘솔 포트가 보이며 전면 라벨에 'M4250-8G2XF-PoE+ 30W' 모델명이 표시되어 있다", 'NETGEAR', 'GSM4210PX', 'https://assets.netgear.com/transform/pdp-desktop/f167aa72-e4f7-45a2-af74-53c1dc5269f9/GSM4210PX_flange_F_Tipoff_NS', '802x552', '802x552', 'VERIFIED')
+  ],
+  gsm4230p: [
+    image('Main', 'gsm4230p-main.webp', 'NETGEAR GSM4230P(M4250-26G4F-PoE+) 스위치 후면 근접 사시도, 24개의 PoE+ RJ45 포트, SFP 슬롯, 전원 커넥터가 보인다', 'NETGEAR', 'GSM4230P', 'https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32', '779x536', '779x536', 'FOUND')
+  ],
+  gsm4230px: [
+    image('Main', 'gsm4230px-main.webp', 'NETGEAR GSM4230PX(M4250-26G4XF-PoE+) 스위치 전면 및 측면 사시도, 24개의 PoE+ RJ45 포트와 SFP+ 슬롯, 냉각 통풍구가 보인다', 'NETGEAR', 'GSM4230PX', 'https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32', '779x536', '779x536', 'FOUND')
+  ],
+  gsm4248p: [
+    image('Main', 'gsm4248p-main.webp', 'NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32', '779x536', '779x536', 'FOUND')
+  ],
+  gs116pp: [
+    image('Main', 'gs116pp-main.webp', "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image', '779x536', '779x536', 'VERIFIED')
+  ],
+  gs108pp: [
+    image('Main', 'gs108pp-main.webp', "NETGEAR GS108PP 비관리형 PoE+ 스위치 정면 사시도, 8개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 측면 라벨의 'GS108PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS108PP', 'https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32', '779x536', '779x536', 'VERIFIED')
+  ],
+  'v-02hd': [
+    image('Main', 'v-02hd-main.webp', 'Roland V-02HD 멀티포맷 비디오 믹서 컨트롤 패널', 'Roland', 'V-02HD', 'https://static.roland.com/assets/images/products/gallery/v-02hd_top_front_gal.jpg', '1500x815', '1500x815', 'VERIFIED')
+  ],
+  'v-1hd-plus': [
+    image('Main', 'v-1hd-plus-main.webp', 'Roland V-1HD+ HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-1HD+', 'https://static.roland.com/assets/images/products/gallery/v-1hd_plus_front30_B_main_gal.jpg', '1680x500', '1680x500', 'VERIFIED')
+  ],
+  'vr-4hd': [
+    image('Main', 'vr-4hd-main.webp', 'Roland VR-4HD AV 믹서 컨트롤 패널 정면', 'Roland', 'VR-4HD', 'https://static.roland.com/assets/images/products/gallery/vr4hd_top_main_gal.jpg', '1665x1050', '1665x1050', 'VERIFIED')
+  ],
+  'vr-6hd': [
+    image('Main', 'vr-6hd-main.webp', 'Roland VR-6HD 다이렉트 스트리밍 AV 믹서 컨트롤 패널', 'Roland', 'VR-6HD', 'https://static.roland.com/assets/images/products/gallery/vr-6hd_front30_gal.jpg', '1680x765', '1680x765', 'VERIFIED')
+  ],
+  'v-8hd': [
+    image('Main', 'v-8hd-main.webp', 'Roland V-8HD HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-8HD', 'https://static.roland.com/assets/images/products/gallery/v-8hd_top_front_2_gal.jpg', '1680x656', '1680x656', 'VERIFIED')
+  ],
+  'v-60hd': [
+    image('Main', 'v-60hd-main.webp', 'Roland V-60HD HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-60HD', 'https://static.roland.com/assets/images/products/gallery/v-60hd_main_gal.jpg', '1500x609', '1500x609', 'VERIFIED')
+  ],
+  'v-80hd': [
+    image('Main', 'v-80hd-main.webp', 'Roland V-80HD 다이렉트 스트리밍 비디오 스위처 컨트롤 패널', 'Roland', 'V-80HD', 'https://static.roland.com/assets/images/products/gallery/v-80hd_front30.jpg', '1680x700', '1680x700', 'VERIFIED')
+  ],
+  'v-160hd': [
+    image('Main', 'v-160hd-main.webp', 'Roland V-160HD 스트리밍 비디오 스위처 컨트롤 패널', 'Roland', 'V-160HD', 'https://static.roland.com/assets/images/products/gallery/v-160hd_front30_B_gal.jpg', '1680x643', '1680x643', 'VERIFIED')
+  ],
+  smartvision40: [
+    image('Main', 'smartvision40-main.webp', 'Yealink SmartVision 40 올인원 비디오바 전면, 듀얼 카메라와 120도 시야각 표시', 'Yealink', 'SmartVision40', 'https://www.yealink.com/website-service/attachment/product/image/20240627/20240627053009982101b.png', '1920x784', '1920x784', 'VERIFIED')
+  ],
+  vcm35: [
+    image('Main', 'vcm35-main.webp', 'Yealink VCM35 원형 마이크로폰 어레이, 케이블 연결 모습', 'Yealink', 'VCM35', 'https://www.yealink.com/website-service/attachment/product/image/20230904/202309040633222863a10699a427e9d528ed0e244e682.png', '602x415', '602x415', 'VERIFIED')
+  ],
+  uvc86: [
+    image('Main', 'uvc86-main.webp', 'Yealink UVC86 카메라 설치 예시 모음(회의실 배치, 선반, 천장, TV 상단 거치)', 'Yealink', 'UVC86', 'https://www.yealink.com/website-service/attachment/product/image/20240627/20240627054727337521e.png', '1400x1175', '1400x1175', 'VERIFIED')
+  ],
+  cm20: [
+    image('Main', 'cm20-main.webp', 'Yealink CM20 천장형 마이크로폰, 화이트 메쉬 커버와 블랙 하우징 분리 모습', 'Yealink', 'CM20', 'https://www.yealink.com/website-service/attachment/product/image/20241030/2024103007303973857a6.png', '1920x1353', '1920x1353', 'VERIFIED')
+  ],
+  cs10: [
+    image('Main', 'cs10-main.webp', 'Yealink CS10 원형 천장형 스피커, 화이트 메쉬 커버 정면 모습', 'Yealink', 'CS10', 'https://www.yealink.com/website-service/attachment/product/image/20240130/2024013007073877150dd232f4c2ca19c4defb8f2eea6.png', '602x415', '602x415', 'VERIFIED')
+  ],
+  avhub: [
+    image('Main', 'avhub-main.webp', 'Yealink AVHub 본체 전면, USB 포트 및 Yealink 로고', 'Yealink', 'AVHub', 'https://www.yealink.com/website-service/attachment/product/image/20241106/20241106085123775e608.png', '1920x1200', '1920x1200', 'VERIFIED')
+  ],
+  'uvc85-byod': [
+    image('Main', 'uvc85-byod-main.webp', 'Yealink UVC85-BYOD 키트 구성품(UVC85 카메라, CP50, CPE40) 전체 모습', 'Yealink', 'UVC85-BYOD', 'https://www.yealink.com/website-service/attachment/product/other/20250320/2025032002203411f155.webp', '1057x596', '1057x596', 'VERIFIED')
+  ],
+  cpe40: [
+    image('Main', 'cpe40-main.webp', 'Yealink CPE40 원형 확장 마이크로폰/스피커폰, 음소거·볼륨 버튼 상단 모습', 'Yealink', 'CPE40', 'https://www.yealink.com/website-service/attachment/product/image/20241029/20241029033402640e470.png', '744x533', '744x533', 'VERIFIED')
   ]
 };
 
@@ -315,5 +384,28 @@ export const cardImages = {
   'varia-100': 'varia100-main.webp',
   'varia-80': 'varia80-main.webp',
   'varia-sl80': 'variasl80-main.webp',
-  'varia-sl50': 'variasl50-main.webp'
+  'varia-sl50': 'variasl50-main.webp',
+  xsm4216f: 'xsm4216f-main.webp',
+  gsm4212p: 'gsm4212p-main.webp',
+  gsm4230p: 'gsm4230p-main.webp',
+  gsm4230px: 'gsm4230px-main.webp',
+  gsm4248p: 'gsm4248p-main.webp',
+  gs116pp: 'gs116pp-main.webp',
+  gs108pp: 'gs108pp-main.webp',
+  'v-02hd': 'v-02hd-main.webp',
+  'v-1hd-plus': 'v-1hd-plus-main.webp',
+  'vr-4hd': 'vr-4hd-main.webp',
+  'vr-6hd': 'vr-6hd-main.webp',
+  'v-8hd': 'v-8hd-main.webp',
+  'v-60hd': 'v-60hd-main.webp',
+  'v-80hd': 'v-80hd-main.webp',
+  'v-160hd': 'v-160hd-main.webp',
+  smartvision40: 'smartvision40-main.webp',
+  vcm35: 'vcm35-main.webp',
+  uvc86: 'uvc86-main.webp',
+  cm20: 'cm20-main.webp',
+  cs10: 'cs10-main.webp',
+  avhub: 'avhub-main.webp',
+  'uvc85-byod': 'uvc85-byod-main.webp',
+  cpe40: 'cpe40-main.webp'
 };

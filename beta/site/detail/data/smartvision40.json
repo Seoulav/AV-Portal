@@ -1,0 +1,249 @@
+{
+  "manufacturer": "Yealink",
+  "productName": "SmartVision40",
+  "model": "SmartVision40",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Video Conferencing System"
+  ],
+  "english": "Intelligent all-in-one video bar with a dual 48MP camera system and 8-microphone array, designed for small-to-medium Microsoft Teams Rooms.",
+  "korean": "듀얼 48MP 카메라 시스템과 8마이크 어레이를 탑재한 소/중형 회의실용 지능형 올인원 비디오바.",
+  "verificationSummary": "제조사 공식 제품 페이지(yealink.com)에서 사양을 확인했다. 상세 치수·인터페이스 수치는 공식 페이지에 게시되어 있지 않아 확인하지 못했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Yealink SmartVision 40은 소형~중형 회의실을 위한 초고화질 지능형 올인원 화상회의 시스템이다. 두 개의 48MP 렌즈 이미지를 결합하여 더 높은 해상도와 선명한 화질을 구현하며, DFOV 120도의 시야각과 6배 디지털 줌을 지원한다. Microsoft Teams Rooms 환경에 최적화된 사운드바 일체형 제품이다.\n\n내장 스테레오 스피커(2x10W)와 8개의 MEMS 마이크로폰 어레이를 갖추고 있으며, 최대 2대의 확장 마이크로폰을 추가로 연결할 수 있다. 지능형 노이즈 감소 기술로 우수한 음성 픽업 경험을 제공하며, IntelliFocus, Video Fence, Auto Framing, Speaker Tracking 등 AI 기반 영상 처리 기능을 지원한다.\n\n제조사는 초고화질 화질, AI 기능, 고품질 오디오 픽업, 원격 기기 관리, 간편한 배포, 프라이버시 보호를 핵심 특징으로 제시하고 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "smartvision40-main.webp",
+      "alt": "Yealink SmartVision 40 올인원 비디오바 전면, 듀얼 카메라와 120도 시야각 표시",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Yealink",
+      "model": "SmartVision40",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240627/20240627053009982101b.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x784",
+      "resolution": "1920x784",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.yealink.com/website-service/attachment/product/image/20240627/20240627053009982101b.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/smartvision40"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/smartvision40"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/smartvision40"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.yealink.com/en/product-tech-specs/smartvision40"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "SmartVision40 공식 제품 페이지 사양(보조)",
+      "language": "en",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.yealink.com/en/product-resource/smartvision40"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.yealink.com/en/product-tech-specs/smartvision40"
+    }
+  ],
+  "features": [
+    {
+      "text": "48MP 렌즈 2개를 결합해 더 높은 해상도의 선명한 화질을 제공하는 올인원 카메라 설계",
+      "source": "P"
+    },
+    {
+      "text": "DFOV 120도 시야각과 6배 디지털 줌으로 소·중형 회의실을 폭넓게 커버",
+      "source": "P"
+    },
+    {
+      "text": "8개 MEMS 마이크로폰 어레이 기반 6m 음성 픽업 범위(고품질 픽업은 4m)",
+      "source": "P"
+    },
+    {
+      "text": "최대 2대의 확장 마이크로폰 연결 지원으로 회의실 규모에 맞게 오디오 확장 가능",
+      "source": "P"
+    },
+    {
+      "text": "IntelliFocus, Video Fence, Auto Framing, Speaker Tracking 등 AI 기반 영상 지능 기능 탑재",
+      "source": "P"
+    },
+    {
+      "text": "내장 2x10W 스테레오 스피커로 별도 스피커 없이 올인원 오디오 출력 제공",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "카메라 구성",
+      "value": "듀얼 아이(48MP x 2) 카메라 시스템",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "시야각(DFOV)",
+      "value": "120",
+      "unit": "도",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "줌",
+      "value": "6",
+      "unit": "배 디지털 줌",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "마이크로폰 어레이",
+      "value": "8 MEMS 마이크로폰 어레이 내장",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "음성 픽업 범위",
+      "value": "6",
+      "unit": "m",
+      "condition": "일반 음성 픽업 범위",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "고품질 음성 픽업 범위",
+      "value": "4",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "확장 마이크로폰",
+      "value": "최대 2대 지원",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "내장 스피커",
+      "value": "2x10W 스테레오 스피커",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "AI Features",
+      "name": "지능형 기능",
+      "value": "IntelliFocus, Video Fence, Auto Framing, Speaker Tracking",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Form Factor",
+      "name": "폼팩터",
+      "value": "All-in-One 사운드바형 비디오 바",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.yealink.com/en/product-tech-specs/smartvision40",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P2",
+      "name": "제조사 공식 리소스 페이지",
+      "url": "https://www.yealink.com/en/product-resource/smartvision40",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "세부 물리 사양 미확인",
+      "detail": "공식 tech-specs 페이지에는 세부 스펙 표(치수/무게/USB·HDMI 등 물리적 I/O, 센서 상세, 영상 출력 해상도/프레임레이트)가 게시되어 있지 않다. product-resource 페이지에도 별도 Datasheet PDF가 없어(Security Whitepaper, Video Center 링크만 존재) 물리적 커넥터 구성과 치수/무게를 확인하지 못했다. 정보 없음으로 남긴다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Yealink SmartVision40 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
