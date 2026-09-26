@@ -14,7 +14,7 @@
   "korean": "PT-MZ14KL은 14,000루멘 WUXGA 해상도의 3LCD 레이저 프로젝터로, 렌즈는 별매다.",
   "verificationSummary": "제조사 공식 제품 페이지·사양(Spec) 페이지(docs.connect.panasonic.com)에서 시리즈 전체 사양표를 확인했다. 'PT-MZ14K'(L 없음) 단독 페이지는 404로 존재하지 않아, 공식 모델명 'PT-MZ14KL'의 사양을 반영했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "PT-MZ14KL은 PT-MZ20K 시리즈의 3번째 밝기 등급 모델로, WUXGA(1920×1200) 해상도에 14,000lm(ISO/IEC 21118 기준, ANSI 동일)의 밝기를 제공한다. 렌즈는 별매(옵션)이며, 다양한 옵션 렌즈(예: ET-EMU100 초단초점 줌 렌즈)를 조합해 사용한다.\n\n제조사 공식 사양에 따르면 SDI 입력 1(BNC, 3G/HD-SDI), HDMI 입력 2(HDCP 2.3, Deep Color, 4K/60p 호환), DIGITAL LINK(HDBaseT, Art-Net 호환) 등을 갖췄으며, 렌즈 시프트는 수직 ±60%·수평 ±20%(전동)까지 지원한다(장착 렌즈에 따라 범위 상이). 명암비는 3,000,000:1(DYNAMIC 모드, DYNAMIC CONTRAST 3 기준)이다.\n\n전원은 AC 100-240V, 최대 소비전력 800W이며, 크기는 약 650×185×440mm(다리 최단 위치 기준 650×211×440mm), 무게는 약 22.5kg이다.\n\n**모델명 확인**: 제조사 공식 사이트(docs.connect.panasonic.com)에서 'PT-MZ14K'(L 접미사 없음) 단독 페이지는 404를 반환했고, 이 시리즈 페이지에는 'PT-MZ14KL'만 등재되어 있다. 카탈로그의 'PT-MZ14K' 표기가 공식 모델명과 다른 점을 이슈로 남긴다(제조사 모델명 오기 또는 국내 유통사 표기 관례 차이일 수 있음, Work 확인 필요).",
+  "overview": "PT-MZ14KL은 PT-MZ20K 시리즈의 3번째 밝기 등급 모델로, WUXGA(1920×1200) 해상도에 14,000lm(ISO/IEC 21118 기준, ANSI 동일)의 밝기를 제공한다. 렌즈는 별매(옵션)이며, 다양한 옵션 렌즈(예: ET-EMU100 초단초점 줌 렌즈)를 조합해 사용한다.\n\n제조사 공식 사양에 따르면 SDI 입력 1(BNC, 3G/HD-SDI), HDMI 입력 2(HDCP 2.3, Deep Color, 4K/60p 호환), DIGITAL LINK(HDBaseT, Art-Net 호환) 등을 갖췄으며, 렌즈 시프트는 수직 ±60%·수평 ±20%(전동)까지 지원한다(장착 렌즈에 따라 범위 상이). 명암비는 3,000,000:1(DYNAMIC 모드, DYNAMIC CONTRAST 3 기준)이다.\n\n전원은 AC 100-240V, 최대 소비전력 800W이며, 크기는 약 650×185×440mm(다리 최단 위치 기준 650×211×440mm), 무게는 약 22.5kg이다.",
   "images": [
     {
       "role": "Main",

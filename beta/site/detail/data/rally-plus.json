@@ -14,7 +14,7 @@
   "korean": "Rally Plus는 Ultra-HD PTZ 카메라와 스피커 2개, 마이크 팟 2개로 구성된 대형 회의실용 모듈형 화상회의 시스템이다.",
   "verificationSummary": "제조사 공식 제품 페이지(logitech.com, 페이지 타이틀 'Rally Plus Video Conferencing Camera System')와 공식 Tech Specs 데이터시트(rally-plus.pdf)에서 전체 구성·사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "Rally Plus는 Ultra-HD(최대 4K) PTZ 카메라, Table Hub, Display Hub, 스피커 2개, 마이크 팟 2개로 구성된 모듈형 화상회의 시스템으로, 대형 회의실(최대 16석, 마이크 팟 최대 7개까지 추가 시 46석)에 적합하다. RightSight(자동 프레이밍)·RightLight(WDR 기반 자연스러운 피부톤)·RightSound(노이즈 억제·음성 자동 레벨링) 등 RightSense 기술을 탑재했다.\n\n제조사 공식 Tech Specs에 따르면 Rally 카메라는 팬 ±90°·틸트 +50°/-90°, 15배 HD 줌, 90° 화각을 지원하며, 카메라 크기는 182.5×152×152mm다. 스피커는 3인치(76mm) 드라이버를 탑재하고 Mini XLR 케이블(2.95m)로 Display Hub에 연결되며, 마이크 팟은 4개의 마이크로폰과 8개의 빔포밍 엘리먼트로 15ft(4.5m) 지름의 픽업 범위를 갖는다.\n\n부품번호는 Rally Plus 전체 세트 960-001225이며, USB 플러그앤플레이 방식으로 Zoom·Teams·Google Meet 등 다양한 화상회의 플랫폼과 호환된다.",
+  "overview": "Rally Plus는 Ultra-HD(최대 4K) PTZ 카메라, Table Hub, Display Hub, 스피커 2개, 마이크 팟 2개로 구성된 모듈형 화상회의 시스템으로, 대형 회의실(최대 16석, 마이크 팟 최대 7개까지 추가 시 46석)에 적합하다. RightSight(자동 프레이밍)·RightLight(WDR 기반 자연스러운 피부톤)·RightSound(노이즈 억제·음성 자동 레벨링) 등 RightSense 기술을 탑재했다.\n\n제조사 공식 Tech Specs에 따르면 Rally 카메라는 팬 ±90°·틸트 +50°/-90°, 15배 HD 줌, 90° 화각을 지원하며, 카메라 크기는 182.5×152×152mm다. 스피커는 3인치(76mm) 드라이버를 탑재하고 Mini XLR 케이블(2.95m)로 Display Hub에 연결되며, 마이크 팟은 4개의 마이크로폰과 8개의 빔포밍 엘리먼트로 15ft(4.5m) 지름의 픽업 범위를 갖는다.\n\n부품번호는 Rally Plus 전체 세트 960-001225이며, USB 플러그 앤 플레이 방식으로 Zoom·Teams·Google Meet 등 다양한 화상회의 플랫폼과 호환된다.",
   "images": [
     {
       "role": "Main",
@@ -115,7 +115,7 @@
       "source": ""
     },
     {
-      "text": "USB 플러그앤플레이로 Zoom, Microsoft Teams, Google Meet 등 주요 화상회의 플랫폼과 호환된다.",
+      "text": "USB 플러그 앤 플레이로 Zoom, Microsoft Teams, Google Meet 등 주요 화상회의 플랫폼과 호환된다.",
       "source": ""
     }
   ],

@@ -159,7 +159,7 @@
       "name": "레이턴시",
       "value": "매우 낮음(라이브 사운드 보강에 적합)",
       "unit": "",
-      "condition": "정확한 ms 수치는 공식 자료에 별도 확인 필요 — 정보 없음",
+      "condition": "정확한 수치(ms)는 공식 자료에 없음",
       "source": "P",
       "verification": "VERIFIED"
     },

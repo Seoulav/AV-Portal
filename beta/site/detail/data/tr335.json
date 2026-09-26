@@ -200,7 +200,7 @@
     },
     {
       "group": "I/O",
-      "name": "POE",
+      "name": "PoE",
       "value": "PoE+ (IEEE802.3at)",
       "unit": "",
       "condition": "",
