@@ -1,0 +1,278 @@
+{
+  "manufacturer": "NETGEAR",
+  "productName": "GSM4248PX",
+  "model": "GSM4248PX",
+  "series": "M4250 Series (AV Line)",
+  "seriesNote": "제조사 자료(사용설명서·데이터시트·제품 브리프)는 M4250 시리즈 전 모델을 함께 다루는 공용 문서다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Network",
+    "Network Switch"
+  ],
+  "english": "48-port fully managed PoE+ switch for AV-over-IP with 960W PoE budget.",
+  "korean": "GSM4248PX는 AV-over-IP용으로 설계된 48포트 완전관리형 스위치로, 960W PoE+ 전력을 제공한다.",
+  "verificationSummary": "제조사 공식 제품 페이지에서 포트 구성·PoE·크기·전력 사양을 확인했다. 관련 문서는 M4250 시리즈 공용 자료다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "GSM4248PX는 NETGEAR M4250 시리즈(AV Line)에 속하는 48포트 완전관리형 이더넷 스위치로, 40개의 1G PoE+ RJ45 포트와 8개의 SFP+ 포트를 제공하며 최대 960W의 PoE 전력 예산을 갖는다. AV-over-IP 랙 통합을 위해 후면 포트·전면 상태 표시등 구조를 사용하고, NETGEAR IGMP Plus로 멀티캐스트 트래픽을 강화 관리한다.\n\n최대 12KB 점보 프레임을 지원하고, 라이선스를 추가하면 AVB(Audio Video Bridging)도 사용할 수 있다. 팬리스 또는 25℃ 기준 59dB 팬 옵션 중 선택할 수 있으며, VESA 또는 표준 랙 마운트를 모두 지원한다.\n\n제조사가 제공하는 사용설명서·데이터시트·제품 브리프는 GSM4248PX 단일 모델 전용이 아니라 M4250 시리즈 전체를 함께 다루는 공용 문서다.",
+  "images": [
+    {
+      "role": "Rear",
+      "file": "gsm4248px-rear.webp",
+      "alt": "NETGEAR GSM4248PX 후면 포트면 원근 이미지",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GSM4248PX",
+      "sourceUrl": "https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "779×536",
+      "resolution": "730×236",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "M4250 Series AV Line User Manual",
+      "language": "en",
+      "note": "M4250 시리즈 공용 사용설명서(GSM4248PX 포함)",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "M4250 Series Datasheet",
+      "language": "en",
+      "note": "M4250 시리즈 공용 데이터시트",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "M4250 Series Product Brief",
+      "language": "en",
+      "note": "M4250 시리즈 공용 제품 브리프",
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_ProductBrief.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+    }
+  ],
+  "features": [
+    {
+      "text": "40개의 1G PoE+ RJ45 포트와 8개의 SFP+ 포트, 총 48포트를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 960W PoE+ 전력 예산을 제공하며 포트당 최대 30W까지 공급한다.",
+      "source": ""
+    },
+    {
+      "text": "AV-over-IP 랙 통합을 위해 후면 포트·전면 상태 표시등 구조를 사용한다.",
+      "source": ""
+    },
+    {
+      "text": "NETGEAR IGMP Plus로 멀티캐스트 트래픽을 강화 관리한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 12KB 점보 프레임을 지원하고, 라이선스 추가 시 AVB를 사용할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "팬리스 또는 59dB(25℃ 기준) 팬 옵션 중 선택 가능하며 VESA·표준 랙 마운트를 모두 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Ports",
+      "name": "포트 구성",
+      "value": "40x 1G PoE+ RJ45 + 8x SFP+",
+      "unit": "",
+      "condition": "총 48포트",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PoE",
+      "name": "PoE 전력 예산",
+      "value": "960",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "PoE",
+      "name": "포트당 PoE+",
+      "value": "30",
+      "unit": "W",
+      "condition": "최대",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Performance",
+      "name": "점보 프레임",
+      "value": "12",
+      "unit": "KB",
+      "condition": "최대",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Management",
+      "name": "멀티캐스트 관리",
+      "value": "NETGEAR IGMP Plus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Management",
+      "name": "AVB",
+      "value": "지원(전자 라이선스 필요)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "440×400×43.2",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "6.31",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(풀로드, PoE 포함)",
+      "value": "1197",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(대기, 무연결)",
+      "value": "74.5",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45 (1G PoE+)",
+      "signal": "Ethernet + PoE+",
+      "direction": "I/O",
+      "quantity": "40",
+      "protocol": "1000BASE-T",
+      "availability": "",
+      "condition": "포트당 최대 30W",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "SFP+",
+      "signal": "10G uplink",
+      "direction": "I/O",
+      "quantity": "8",
+      "protocol": "SFP+",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "문서가 시리즈 공용",
+      "detail": "사용설명서·데이터시트·제품 브리프 모두 GSM4248PX 단일 모델 전용이 아니라 M4250 시리즈 공용 문서다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "후면 포트면 이미지의 제조사 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "NETGEAR GSM4248PX · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

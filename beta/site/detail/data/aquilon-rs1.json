@@ -1,0 +1,351 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "Aquilon RS1",
+  "model": "Aquilon RS1 (AQL-RS1)",
+  "series": "Aquilon (LivePremier) Series",
+  "seriesNote": "브로슈어·드라이버 등 일부 문서는 Aquilon 시리즈 전체 공용이다. 기술 데이터시트(Technical Datasheet)는 RS1 전용.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Processor"
+  ],
+  "english": "4RU multi-screen presentation switcher/processor with 16x 4K60p inputs and 8x 4K60p outputs.",
+  "korean": "Aquilon RS1은 16개의 4K60p 입력과 8개의 4K60p 출력을 갖춘 4RU 멀티스크린 프레젠테이션 프로세서다.",
+  "verificationSummary": "제조사 공식 기술 데이터시트(모델 전용)에서 I/O·처리 성능·크기·무게·전원 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Aquilon RS1은 필드 교체형 I/O 카드로 구성을 바꿀 수 있는 4RU 멀티스크린 프레젠테이션 프로세서로, 16개의 4K60p 입력(HDMI 2.0 8·DisplayPort 1.2/1.4 4·12G-SDI 4 구성 가능)과 8개의 4K60p 출력, 2개의 전용 멀티뷰어 출력을 제공한다. 최대 4×4K 또는 8×DL/2K 믹싱 레이어를 지원하고 10-12bit 4:4:4 처리로 10bit 4:4:4 60Hz 기준 40메가픽셀 스루풋을 낸다.\n\nHTML5 기반 Web RCS로 실시간 소스 축소판을 보며 제어할 수 있고, IP(Ethernet) TCP/IP 소켓 제어와 Q-SYS·AMX·Crestron 드라이버, AW VideoCompositor를 지원한다. 온보드 Dante 카드로 48kHz 기준 64x64, 96kHz 기준 32x32 채널의 오디오 네트워킹을 지원하며 OPT-RSX-LINK로 최대 3대의 다른 Aquilon 시스템과 연결할 수 있다.\n\n전원은 100-240VAC(12-7A, 50/60Hz)이며 1+1 이중화 교체형 전원 공급 장치를 사용하고 최대 소비전력은 540W다. 랙 마운트 없이 439.8×177×700mm, 핸들 포함 482.4×221.2×701mm이며 본체 무게는 26.1kg(운송 무게 45.1kg)이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "aquilon-rs1-front.webp",
+      "alt": "Analog Way Aquilon RS1 전면 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Analog Way",
+      "model": "Aquilon RS1",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3175×1772",
+      "resolution": "1800×768",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs1"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs1"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs1"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs1"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Aquilon RS1 Quick Start Guide",
+      "language": "en",
+      "note": "설치 절차 중심 퀵스타트 가이드(전체 사용설명서 아님)",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Aquilon RS1 Technical Datasheet",
+      "language": "en",
+      "note": "모델 전용 기술 데이터시트",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "Aquilon Series Brochure",
+      "language": "en",
+      "note": "Aquilon 시리즈 공용 브로슈어",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/aquilon-rs1"
+    }
+  ],
+  "features": [
+    {
+      "text": "16개의 4K60p 입력(HDMI 2.0·DisplayPort 1.2/1.4·12G-SDI 카드 조합)과 8개의 4K60p 출력, 2개의 전용 멀티뷰어 출력을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 4×4K 또는 8×DL/2K 믹싱 레이어와 10-12bit 4:4:4 영상 처리를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "HTML5 기반 Web RCS로 실시간 소스 축소판을 보며 제어할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "IP(TCP/IP 소켓) 제어와 Q-SYS·AMX·Crestron 드라이버, AW VideoCompositor 연동을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "온보드 Dante 카드로 48kHz 기준 64x64, 96kHz 기준 32x32 채널 오디오 네트워킹을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "OPT-RSX-LINK 하드웨어 업그레이드로 최대 3대의 다른 Aquilon 시스템과 연결할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "1+1 이중화 교체형 전원 공급 장치와 스마트 열 관리로 상시 가동을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O",
+      "name": "4K60p 입력",
+      "value": "16",
+      "unit": "",
+      "condition": "필드 교체형 I/O 카드(HDMI 2.0·DP 1.2/1.4·12G-SDI 등)",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "4K60p 출력",
+      "value": "8",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "멀티뷰어 출력",
+      "value": "2",
+      "unit": "",
+      "condition": "전용",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "최대 믹싱 레이어",
+      "value": "4×4K 또는 8×DL/2K",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 스루풋",
+      "value": "40",
+      "unit": "메가픽셀",
+      "condition": "10bit 4:4:4 @60Hz 기준",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "Dante 채널",
+      "value": "64x64 @48kHz 또는 32x32 @96kHz",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(랙귀 제외)",
+      "value": "439.8×177×700",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.4×221.2×701",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "26.1",
+      "unit": "kg",
+      "condition": "부속품 미포함",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "운송 무게",
+      "value": "45.1",
+      "unit": "kg",
+      "condition": "부속품 포함",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "랙 유닛",
+      "value": "4",
+      "unit": "RU",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 입력",
+      "value": "100-240VAC, 12-7A, 50/60Hz",
+      "unit": "",
+      "condition": "1+1 이중화 교체형",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "540",
+      "unit": "W",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI 2.0 / DisplayPort 1.2·1.4 / 12G-SDI 카드",
+      "signal": "4K60p input",
+      "direction": "IN",
+      "quantity": "16(카드 구성에 따라 배분)",
+      "protocol": "",
+      "availability": "필드 교체형",
+      "condition": "카드 조합에 따라 입력 채널 배분이 달라짐",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "출력 카드(HDMI 2.0 등)",
+      "signal": "4K60p output",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "",
+      "availability": "필드 교체형",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "멀티뷰어 출력",
+      "signal": "Multiviewer output",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "HDMI 2.0 또는 DisplayPort 1.2",
+      "availability": "",
+      "condition": "전용",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio Network",
+      "connector": "온보드 Dante 카드",
+      "signal": "Dante audio networking",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Dante",
+      "availability": "",
+      "condition": "이중화",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Link",
+      "connector": "OPT-RSX-LINK(옵션)",
+      "signal": "System link",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "40GbE QSFP+ 또는 DAC",
+      "availability": "옵션 하드웨어 업그레이드",
+      "condition": "최대 3대 연결",
+      "source": "S",
+      "verification": "PARTIAL"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/aquilon-rs1",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "I/O 카드 구성",
+      "detail": "입력 16·출력 8은 필드 교체형 카드 조합에 따른 총합이며, 실제 커넥터 타입별 개수는 발주 구성에 따라 달라진다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "전면 이미지의 제조사 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Aquilon RS1 (AQL-RS1) · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

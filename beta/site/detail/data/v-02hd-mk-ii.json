@@ -1,0 +1,324 @@
+{
+  "manufacturer": "Roland",
+  "productName": "V-02HD MK II",
+  "model": "V-02HD MK II",
+  "series": "V-02HD Series",
+  "seriesNote": "구형 V-02HD와 별도 모델. MK II 표기를 유지하고 혼동하지 않는다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "Compact 2-input HDMI video switcher with USB-C streaming and onboard audio mixing.",
+  "korean": "V-02HD MK II는 HDMI 2입력을 전환·합성하고 USB Type-C로 최대 1080p60을 스트리밍하는 소형 비디오 스위처다.",
+  "verificationSummary": "공식 제품 페이지에서 대부분의 영상·오디오·제어 사양을 확인했다. 개별 매뉴얼 PDF·부속품 동봉 여부는 검토 중이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "V-02HD MK II는 HDMI 입력 2개를 PGM/PREVIEW로 전환·합성하는 소형 비디오 스위처로, USB Type-C 스트림 출력을 통해 컴퓨터에 UVC/UAC 웹캠처럼 인식되어 최대 1080p60 영상을 전달한다. 10채널 디지털 오디오 믹서(24bit/48kHz)를 내장해 컴프레서·EQ·리버브·보이스체인저 등 이펙트를 적용할 수 있다.\n\n하드웨어로 PinP(화면 속 화면)와 타이틀·정지화면 합성을 처리하며, BOSS 풋스위치(FS-5U·FS-6·FS-7)와 익스프레션 페달(EV-5, FV-500L/H)을 연결해 핸즈프리로 전환할 수 있다. iPad용 원격 앱과 macOS/Windows RCS 소프트웨어로 원격 제어를 지원하고, AeroCaster iPad 앱을 통한 무선 카메라 확장 기능도 공식 자료에 소개되어 있다.\n\n공식 매뉴얼은 개별 PDF가 아니라 모델별 다운로드 허브 페이지로 제공되어, 정확한 개정판·언어별 파일은 이 허브에서 선택해야 한다.",
+  "images": [
+    {
+      "role": "Perspective",
+      "file": "v-02hd-mk-ii-perspective.webp",
+      "alt": "Roland V-02HD MK II 좌측 45도 원근 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Roland",
+      "model": "V-02HD MK II",
+      "sourceUrl": "https://static.roland.com/assets/media/zip/v-02hdmkii_hr_img.zip",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4048×2705",
+      "resolution": "1800×1203",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://static.roland.com/assets/media/zip/v-02hdmkii_hr_img.zip"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "V-02HD MK II Owner's Manuals (다운로드 허브)",
+      "language": "en",
+      "note": "개별 매뉴얼 PDF는 이 허브 페이지에서 선택",
+      "url": "https://proav.roland.com/global/support/by_product/v-02hd_mk_ii/owners_manuals/"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://proav.roland.com/global/products/v-02hd_mk_ii/"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 2입력을 PGM/PREVIEW로 전환·합성하는 하드웨어 PinP·타이틀·정지화면 기능을 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "USB Type-C 스트림 출력으로 컴퓨터에 UVC/UAC 웹캠처럼 연결해 비압축 YUY2 또는 Motion JPEG로 최대 1080p60을 전송한다.",
+      "source": ""
+    },
+    {
+      "text": "10채널 디지털 오디오 믹서(24bit/48kHz)와 컴프레서·EQ·리버브·보이스체인저·딜레이·노이즈게이트·디에서 이펙트를 내장한다.",
+      "source": ""
+    },
+    {
+      "text": "BOSS 풋스위치(FS-5U·FS-6·FS-7)와 익스프레션 페달(EV-5, FV-500L/H)로 핸즈프리 제어가 가능하다.",
+      "source": ""
+    },
+    {
+      "text": "iPad 원격 앱과 macOS/Windows RCS 소프트웨어로 원격 제어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "AeroCaster iPad 앱을 통한 무선 카메라 확장 기능을 공식 자료에서 소개한다(세부 조건 검토 필요).",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "비디오 입력",
+      "value": "HDMI Type A x2",
+      "unit": "",
+      "condition": "HDCP 지원, 480i/p~1080p, VGA~WUXGA 컴퓨터 해상도",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "PGM/PREVIEW 출력",
+      "value": "HDMI Type A",
+      "unit": "",
+      "condition": "각 1",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "USB 스트림 출력",
+      "value": "USB Type-C",
+      "unit": "",
+      "condition": "비압축 YUY2 또는 Motion JPEG, 최대 1080p/60fps",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "아날로그 오디오 입력",
+      "value": "3.5mm 스테레오 x2",
+      "unit": "",
+      "condition": "플러그인 파워 지원",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "헤드폰 출력",
+      "value": "3.5mm 스테레오 x1",
+      "unit": "92mW @ 32Ω",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "오디오 믹서",
+      "value": "10채널, 24bit/48kHz",
+      "unit": "",
+      "condition": "컴프레서·EQ·리버브 등 내장 이펙트",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "풋스위치/페달 입력",
+      "value": "1/4\" TRS",
+      "unit": "",
+      "condition": "BOSS FS-5U·FS-6·FS-7, EV-5, FV-500L/H 지원",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "12V AC 어댑터",
+      "unit": "12.6W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "160×108×51",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "0.6",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI IN",
+      "signal": "Video",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "HDMI",
+      "availability": "",
+      "condition": "HDCP 지원",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "PGM OUT / PREVIEW OUT",
+      "signal": "Video",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "HDMI",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video/USB",
+      "connector": "USB STREAM",
+      "signal": "Uncompressed video/audio",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB Type-C",
+      "availability": "",
+      "condition": "UVC/UAC 클래스 호환",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "AUDIO IN L/R",
+      "signal": "Analog audio",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "3.5mm stereo",
+      "availability": "",
+      "condition": "플러그인 파워 지원",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "PHONES",
+      "signal": "Analog audio",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "3.5mm stereo",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "FOOTSWITCH / EXP PEDAL",
+      "signal": "Control",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "1/4\" TRS",
+      "availability": "",
+      "condition": "BOSS 풋스위치·익스프레션 페달",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://proav.roland.com/global/products/v-02hd_mk_ii/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "매뉴얼 개별 파일 미확정",
+      "detail": "공식 매뉴얼은 다운로드 허브 페이지로만 확인했고, 개별 PDF·개정판·언어는 확정하지 않았다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "공식 고해상도 이미지 키트에서 받은 사진의 재게시 권한은 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Roland V-02HD MK II · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

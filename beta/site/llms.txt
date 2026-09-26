@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 5개
+- Product Detail: 13개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -24,12 +24,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.getdante.com/platform/avio-usb-c/
   매뉴얼: https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=avio-usb-c
 
 - 제품: Shure MXCW640
   분류: 오디오 | Conferencing | Conferencing Endpoint
   종류: 장비
   공식 링크: https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mxcw640
 
 - 제품: Yamaha DM7
   분류: 오디오 | Audio | Mixer
@@ -48,6 +50,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.powersoft.com/en/products/install-amps/mezzo-322-ad
   매뉴얼: https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=mezzo-322-ad
 
 - 제품: Powersoft Quattrocanali 2404 DSP+D
   분류: 오디오 | Audio | Amplifier
@@ -96,18 +99,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-02hd_mk_ii/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-02hd_mk_ii/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-02hd-mk-ii
 
 - 제품: Analog Way Aquilon RS1
   분류: 영상 | Video | Video Processor
   종류: 장비
   공식 링크: https://www.analogway.com/products/aquilon-rs1
   매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-rs1
 
 - 제품: Roland UVC-01
   분류: 영상 | Video | Video Capture
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/uvc-01/
   매뉴얼: https://proav.roland.com/global/support/by_product/uvc-01/owners_manuals/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=uvc-01
 
 - 제품: Ross Video ULTRISCAPE
   분류: 영상 | Video | License
@@ -120,6 +126,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/
   매뉴얼: https://www.netgear.com/support/product/gsm4248px
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4248px
 
 - 제품: NETGEAR XSM4216F
   분류: 제어 | Network | Network Switch
@@ -156,6 +163,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040
   매뉴얼: https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L530U/s/SPT_V11HA27040
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l530u
 
 - 제품: Panasonic PT-VMZ71
   분류: 프로젝터 | Display | Projector

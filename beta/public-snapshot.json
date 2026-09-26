@@ -2,11 +2,23 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "6C1333312CA1132D5D77E02FD74BD17A3D86ED87E19A9F6B84DCDF4574F64629",
+    "sha256": "8B3E7809FA158239CA89D2BF6B4819EF51C442A626CE8841574C38E2D7E6D2E1",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
   "details": {
+    "aquilon-rs1": {
+      "sha256": "B10AD280485B1427BD15AD4ADC120C24B0C294C73748F09BBE0D23318A27ECAE",
+      "features": 7,
+      "specifications": 13,
+      "io": 5
+    },
+    "avio-usb-c": {
+      "sha256": "F86A50EAE5C603CDDE5CAC4E23B507FADDF1B9C408C00ED528091847EC424F1F",
+      "features": 7,
+      "specifications": 11,
+      "io": 2
+    },
     "brc-am7": {
       "sha256": "6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D",
       "features": 8,
@@ -19,11 +31,35 @@
       "specifications": 16,
       "io": 15
     },
+    "eb-l530u": {
+      "sha256": "BDF9A268D01ED50A1960A1DAAAAF9BA4ECEB4DA9BBCC224EFA90F5396B976B70",
+      "features": 6,
+      "specifications": 12,
+      "io": 11
+    },
+    "gsm4248px": {
+      "sha256": "5C82557553544677F9E42274939BD7B56430F7063F726C6A6411A9140B636223",
+      "features": 6,
+      "specifications": 10,
+      "io": 2
+    },
     "ki-pro-go2": {
       "sha256": "07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488",
       "features": 8,
       "specifications": 16,
       "io": 11
+    },
+    "mezzo-322-ad": {
+      "sha256": "A66CAB092F65EE010F03F45C5EE62CD9FA2BD3640329CB0CAEB3B930420FCF12",
+      "features": 7,
+      "specifications": 11,
+      "io": 5
+    },
+    "mxcw640": {
+      "sha256": "C47DB31FF44956FFE6D9FF3347BC99D34CF7410023D011F9A038B390281F43E9",
+      "features": 7,
+      "specifications": 10,
+      "io": 4
     },
     "pt-mz17k": {
       "sha256": "B340C0BE082DDAF64D0D5B628D8F39BC580E1120EA4F6A8BFE3E3ABD7281D7EC",
@@ -36,6 +72,18 @@
       "features": 8,
       "specifications": 16,
       "io": 9
+    },
+    "uvc-01": {
+      "sha256": "CCEA0CA92DE4D3F3F6C3975895CB62CE14E779620220D452F0251716A724018B",
+      "features": 5,
+      "specifications": 10,
+      "io": 3
+    },
+    "v-02hd-mk-ii": {
+      "sha256": "AB9E3908ED3123DE4D4C7C87ABBF9AC17948B5D2024378E21A20DA056A825FE8",
+      "features": 6,
+      "specifications": 10,
+      "io": 6
     }
   }
 }

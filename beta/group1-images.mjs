@@ -1,6 +1,8 @@
 export const publicationStatus = '사용자 게시 승인 · 제조사 재사용 권리 미확인';
+// Group 2에서 넘어온 사진은 조사 당시 확인된 권리 문구(공식 대리점 구매·계약 기반 사용)를 그대로 유지한다.
+const group2PublicationStatus = '사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용';
 
-const image = (role, file, alt, provider, model, sourceUrl, originalSize, resolution, verificationStatus = 'FOUND') => ({
+const imageWith = (rights) => (role, file, alt, provider, model, sourceUrl, originalSize, resolution, verificationStatus = 'FOUND') => ({
   role,
   file,
   alt,
@@ -12,8 +14,11 @@ const image = (role, file, alt, provider, model, sourceUrl, originalSize, resolu
   verificationStatus,
   originalSize,
   resolution,
-  publicationStatus
+  publicationStatus: rights
 });
+const image = imageWith(publicationStatus);
+// Group 2 카드 대표 사진 조사 기록(Work/기록/W-20260925-012-사진조사.md)에서 넘어온 8개 제품 전용.
+const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
   'brc-am7': [
@@ -38,6 +43,30 @@ export const group1Images = {
   'rally-bar': [
     image('Front', 'rally-bar-front.webp', 'Logitech Rally Bar 그래파이트 전면 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1', '1384×1038', '1384×1038'),
     image('Perspective', 'rally-bar-perspective.webp', 'Logitech Rally Bar 그래파이트 원근 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1', '1384×1038', '1384×1038')
+  ],
+  'mezzo-322-ad': [
+    group2Image('Front', 'mezzo-322-ad-front.webp', 'Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)', 'Powersoft', 'Mezzo 322 AD', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024×500', '509×127')
+  ],
+  'v-02hd-mk-ii': [
+    group2Image('Perspective', 'v-02hd-mk-ii-perspective.webp', 'Roland V-02HD MK II 좌측 45도 원근 이미지', 'Roland', 'V-02HD MK II', 'https://static.roland.com/assets/media/zip/v-02hdmkii_hr_img.zip', '4048×2705', '1800×1203')
+  ],
+  'uvc-01': [
+    group2Image('Perspective', 'uvc-01-perspective.webp', 'Roland UVC-01 우측 45도 원근 이미지', 'Roland', 'UVC-01', 'https://static.roland.com/assets/media/zip/uvc-01_hr_img.zip', '3840×2714', '1210×929')
+  ],
+  'eb-l530u': [
+    group2Image('Main', 'eb-l530u-main.webp', 'Epson EB-L530U 프로젝터 정면 렌즈 방향 대표 이미지', 'Epson', 'EB-L530U (V11HA27040)', 'https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040', '690×460', '686×294')
+  ],
+  'avio-usb-c': [
+    group2Image('Main', 'avio-usb-c-main.webp', 'Audinate Dante AVIO USB-C 어댑터 RJ45·USB-C 케이블 이미지', 'Audinate', 'Dante AVIO USB-C (ADP-USBC-AU-2X2)', 'https://www.getdante.com/wp-content/uploads/2024/01/AVIO-2CH-USB-C-showConnectors-trans-layers-long-cable.png', '2448×1665', '1561×1071')
+  ],
+  mxcw640: [
+    group2Image('Main', 'mxcw640-main.webp', 'Shure MXCW640 회의 단말 정면 이미지', 'Shure', 'MXCW640', 'https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640', '3000×3000', '1573×675')
+  ],
+  gsm4248px: [
+    group2Image('Rear', 'gsm4248px-rear.webp', 'NETGEAR GSM4248PX 후면 포트면 원근 이미지', 'NETGEAR', 'GSM4248PX', 'https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32', '779×536', '730×236')
+  ],
+  'aquilon-rs1': [
+    group2Image('Front', 'aquilon-rs1-front.webp', 'Analog Way Aquilon RS1 전면 이미지', 'Analog Way', 'Aquilon RS1', 'https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg', '3175×1772', '1800×768')
   ]
 };
 
@@ -64,5 +93,13 @@ export const cardImages = {
   dm7: 'dm7-perspective.webp',
   'ki-pro-go2': 'ki-pro-go2-main.webp',
   'pt-mz17k': 'pt-mz17k-perspective.webp',
-  'rally-bar': 'rally-bar-front.webp'
+  'rally-bar': 'rally-bar-front.webp',
+  'mezzo-322-ad': 'mezzo-322-ad-front.webp',
+  'v-02hd-mk-ii': 'v-02hd-mk-ii-perspective.webp',
+  'uvc-01': 'uvc-01-perspective.webp',
+  'eb-l530u': 'eb-l530u-main.webp',
+  'avio-usb-c': 'avio-usb-c-main.webp',
+  mxcw640: 'mxcw640-main.webp',
+  gsm4248px: 'gsm4248px-rear.webp',
+  'aquilon-rs1': 'aquilon-rs1-front.webp'
 };

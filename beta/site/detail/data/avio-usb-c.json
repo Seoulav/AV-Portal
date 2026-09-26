@@ -1,0 +1,295 @@
+{
+  "manufacturer": "Audinate",
+  "productName": "AVIO USB C",
+  "model": "Dante AVIO USB-C (ADP-USBC-AU-2X2)",
+  "series": "Dante AVIO Series",
+  "seriesNote": "USB-C 모델(ADP-USBC-AU-2X2) 기준. USB-A 모델(ADP-USB-AU-2X2)은 USB Power Delivery·소비전력 값이 다르다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Audio Interface"
+  ],
+  "english": "USB-C to Dante 2x2 channel bidirectional audio adapter with PoE support.",
+  "korean": "Dante AVIO USB-C는 USB-C 기기를 드라이버 없이 Dante 오디오 네트워크에 연결하는 2입력/2출력 양방향 오디오 어댑터다.",
+  "verificationSummary": "제조사 공식 데이터시트에서 채널·전원·네트워크 사양을 확인했다. 정확한 크기·무게는 데이터시트에 기재되지 않아 미확인이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Dante AVIO USB-C 어댑터는 USB-C 포트가 있는 컴퓨터·모바일 기기를 별도 드라이버 없이 Dante 오디오 네트워크에 연결하는 2입력/2출력(2x2) 양방향 오디오 인터페이스다. RJ45 포트로 Class 1 802.3af PoE 전원을 받거나 USB 버스 파워로 동작하며, USB Power Delivery(5V 1.5A)를 지원해 연결 기기에 전원을 공급할 수도 있다.\n\n샘플레이트 48kHz·24bit로 Dante Audio over IP와 AES67 RTP 전송을 지원하고, Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다. Dante Domain Manager(DDM)와 호환되어 IT 수준의 보안·관리가 가능하다.\n\n공식 자료(`getdante.com/platform/avio-usb-c/`)는 개별 제품 사진이 없는 아카이브형 페이지라, 대표 이미지는 제조사 WordPress 미디어에서 별도로 확보했다. 제품 카테고리 성격의 페이지라 공식 제품 페이지 상태를 REVIEW REQUIRED로 표시한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "avio-usb-c-main.webp",
+      "alt": "Audinate Dante AVIO USB-C 어댑터 RJ45·USB-C 케이블 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Audinate",
+      "model": "Dante AVIO USB-C (ADP-USBC-AU-2X2)",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/AVIO-2CH-USB-C-showConnectors-trans-layers-long-cable.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2448×1665",
+      "resolution": "1561×1071",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.getdante.com/wp-content/uploads/2024/01/AVIO-2CH-USB-C-showConnectors-trans-layers-long-cable.png"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-usb-c/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-usb-c/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.getdante.com/platform/avio-usb-c/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.getdante.com/platform/avio-usb-c/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Dante AVIO USB and USB-C I/O Adapter Datasheet",
+      "language": "en",
+      "note": "USB-A/USB-C 두 모델을 함께 다루는 데이터시트",
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.getdante.com/platform/avio-usb-c/"
+    }
+  ],
+  "features": [
+    {
+      "text": "USB-C 커넥터로 컴퓨터·모바일 기기를 별도 드라이버 없이 Dante 오디오 네트워크에 연결한다.",
+      "source": ""
+    },
+    {
+      "text": "2입력/2출력(2x2) 양방향 오디오 채널을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Class 1 802.3af PoE 또는 USB 버스 파워로 동작해 별도 전원 어댑터가 필요 없다.",
+      "source": ""
+    },
+    {
+      "text": "USB Power Delivery(5V 1.5A)를 지원해 연결 기기에 전원을 공급할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "AES67 RTP 전송을 지원해 비-Dante 네트워크와도 연동한다.",
+      "source": ""
+    },
+    {
+      "text": "Dante Domain Manager(DDM)와 호환되어 IT 수준의 보안·관리가 가능하다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Audio",
+      "name": "채널",
+      "value": "2 in, 2 out",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "샘플레이트",
+      "value": "48",
+      "unit": "kHz",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "비트 심도",
+      "value": "24",
+      "unit": "bit",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 전송",
+      "value": "Dante Audio over IP, AES67 RTP",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "지연시간",
+      "value": "1, 2, 5",
+      "unit": "ms",
+      "condition": "Dante Controller로 설정",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "Class 1 802.3af PoE 또는 USB",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "10 미만(USB PD 미사용 시 2 미만)",
+      "unit": "W",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "USB Power Delivery",
+      "value": "5V 1.5A(7.5W)",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "USB 규격",
+      "value": "Class compliant USB 2.0 device",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작/보관 온도",
+      "value": "-10~+50 / -25~+70",
+      "unit": "℃",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "데이터시트에 값 미기재",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ45",
+      "signal": "Dante/AES67 audio + PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Dante, AES67",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-C",
+      "signal": "USB audio class + power",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "USB 2.0",
+      "availability": "",
+      "condition": "USB Power Delivery 5V 1.5A 지원",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.getdante.com/platform/avio-usb-c/",
+      "scope": "모델·지역 표기 검토 중"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 페이지 성격",
+      "detail": "getdante.com의 AVIO USB-C 페이지는 개별 제품 페이지가 아니라 카테고리성 아카이브 페이지다. 대표 이미지는 WordPress 미디어에서 별도로 확보했다."
+    },
+    {
+      "code": "M1",
+      "status": "MISSING",
+      "title": "크기·무게",
+      "detail": "데이터시트에 물리 크기·무게 값이 없다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Audinate Dante AVIO USB-C (ADP-USBC-AU-2X2) · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
