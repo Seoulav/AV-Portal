@@ -246,6 +246,10 @@ export const group1Images = {
   gsm4248p: [
     image('Main', 'gsm4248p-main.webp', 'NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32', '779x536', '779x536', 'FOUND')
   ],
+  gs728tpp: [
+    image('Front', 'gs728tpp-front.webp', 'NETGEAR GS728TPP 전면 패널. RJ45 24포트와 SFP 4포트, 우측 상단 \'ProSafe GS728TPP\' 인쇄', 'NETGEAR', 'GS728TPP', 'https://www.downloads.netgear.com/files/GDC/datasheet/en/GS516TP-GS728TP-GS728TPP-GS752TP.pdf', '893x96', '893x96', 'VERIFIED'),
+    image('Rear', 'gs728tpp-rear.webp', 'NETGEAR GS728TPP 후면 패널. RPS 커넥터와 AC 전원 커넥터', 'NETGEAR', 'GS728TPP', 'https://www.downloads.netgear.com/files/GDC/GS728TP/GS728TP_TPP_752TP_HIG_18Dec2012.pdf', '837x123', '837x123', 'VERIFIED')
+  ],
   gs116pp: [
     image('Main', 'gs116pp-main.webp', "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image', '779x536', '779x536', 'VERIFIED')
   ],
@@ -889,6 +893,7 @@ export const cardImages = {
   gsm4230p: 'gsm4230p-main.webp',
   gsm4230px: 'gsm4230px-main.webp',
   gsm4248p: 'gsm4248p-main.webp',
+  gs728tpp: 'gs728tpp-front.webp',
   gs116pp: 'gs116pp-main.webp',
   gs108pp: 'gs108pp-main.webp',
   'v-02hd': 'v-02hd-main.webp',

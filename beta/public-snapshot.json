@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 248,
-    "sha256": "A84BF0C6276502CD49AA461B0F94FF03F2F6BF233FDC752678ACC13DBDD61841",
+    "sha256": "40D85E7B7F348D4D4B0DD7275D0EA18C776DAFC4B40E81C47142479D2754C036",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -588,6 +588,12 @@
       "features": 5,
       "specifications": 19,
       "io": 1
+    },
+    "gs728tpp": {
+      "sha256": "9731A7EC4CBF9D4D8ADE0FD2A0FF0B380058FE8AC3F95835A9E36640F3EFF4C7",
+      "features": 5,
+      "specifications": 30,
+      "io": 4
     },
     "gsm4212p": {
       "sha256": "296A29ADF10422DB2825450579132CC13467BCC3BA942E1F7FAC7AF6310B2E54",
