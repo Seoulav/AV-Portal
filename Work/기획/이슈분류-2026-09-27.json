@@ -1,0 +1,3629 @@
+[
+ {
+  "slug": "a900w-r-gm",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "작업 브리핑에서 예상한 대로 이 SKU는 마이크로폰이 아니라…",
+  "category": "E",
+  "reason": "페이지 설명이 \"마이크로폰이 아니라 서스펜션 마운트 키트\"로 작성됨.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "a900w-r-gm",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "A900-GM 사용자 안내서(2022년판)는 호환 기종을…",
+  "category": "D",
+  "reason": "A900 가이드(MXA920)와 MXA925 스펙시트의 호환성 문구 차이 — 참고자료로 보존.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "ac18-26",
+  "issue_code": "SHARED-IMAGE",
+  "status": "INFO",
+  "title": "AC18/26과 AC18/95의 제품 이미지가 동일",
+  "category": "A",
+  "reason": "AC18/26·AC18/95 제조사 이미지 MD5 동일(외형 동일, 웨이브가이드만 상이).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "ac18-95",
+  "issue_code": "SHARED-IMAGE",
+  "status": "INFO",
+  "title": "AC18/95와 AC18/26의 제품 이미지가 동일",
+  "category": "A",
+  "reason": "AC18/26·AC18/95 제조사 이미지 MD5 동일(외형 동일, 웨이브가이드만 상이).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "aquilon-rs1",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "I/O 카드 구성",
+  "category": "D",
+  "reason": "입력 16·출력 8은 카드 조합 총합, 커넥터별 개수는 발주 구성에 따라 다름.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "aquilon-rs1",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "aquilon-rs2",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "avhub",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "일부 물리·전원 사양 미확인",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "avio-2ch-in",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "크기·무게",
+  "category": "C",
+  "reason": "데이터시트에 크기·무게 값 없음(다른 공식 문서 미확인).",
+  "bundle_id": "BND-20"
+ },
+ {
+  "slug": "avio-2ch-in",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "avio-2ch-out",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "크기·무게",
+  "category": "C",
+  "reason": "데이터시트에 크기·무게 값 없음(다른 공식 문서 미확인).",
+  "bundle_id": "BND-20"
+ },
+ {
+  "slug": "avio-2ch-out",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "avio-bt",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 페이지 성격",
+  "category": "D",
+  "reason": "getdante.com의 해당 페이지가 카테고리성 페이지(개별 제품 페이지 없음), 이미지는 WordPress 미디어에서 확보.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "avio-bt",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "크기·무게",
+  "category": "C",
+  "reason": "데이터시트에 크기·무게 값 없음(다른 공식 문서 미확인).",
+  "bundle_id": "BND-20"
+ },
+ {
+  "slug": "avio-usb-c",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 페이지 성격",
+  "category": "D",
+  "reason": "getdante.com의 해당 페이지가 카테고리성 페이지(개별 제품 페이지 없음), 이미지는 WordPress 미디어에서 확보.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "avio-usb-c",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "크기·무게",
+  "category": "C",
+  "reason": "데이터시트에 크기·무게 값 없음(다른 공식 문서 미확인).",
+  "bundle_id": "BND-20"
+ },
+ {
+  "slug": "blu-160",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "옵션 I/O 카드 참조 링크",
+  "category": "A",
+  "reason": "BLU-160 상세에 장착 가능한 카드(blu-aec-in, blucard-in/out) 교차 링크를 넣을지 예/아니오.",
+  "bundle_id": null
+ },
+ {
+  "slug": "blu-50",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "단종 및 후속 모델 확인 필요",
+  "category": "B",
+  "reason": "공식 페이지 Discontinued, 후속 BLU-50v2.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "blu-50",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "광 연장 거리 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "광 연장 거리: 데이터시트 over 40km vs 제품 페이지 over 10km.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "blu-aec-in",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "카탈로그 명칭과 공식 제품명 불일치",
+  "category": "B",
+  "reason": "카탈로그명(BLU AEC-IN/BLUCARD-IN/OUT)과 공식명 불일치 + 섀시 장착 카드인데 카탈로그 카테고리는 Audio Processor.",
+  "bundle_id": "BND-08"
+ },
+ {
+  "slug": "blu-aec-in",
+  "issue_code": "R4B",
+  "status": "REVIEW REQUIRED",
+  "title": "동일 이미지가 3개 카드 제품에 공통 사용됨",
+  "category": "A",
+  "reason": "bssaudio.com이 카드 3종에 동일 PCB 사진(MD5 동일) 게시.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "blu-dan",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "제품명 변경(BLU-DAN → BLU-DA)",
+  "category": "A",
+  "reason": "공식 판매명 BLU-DA(구 BLU-DAN). 카탈로그 BLU-DAN. 터미널 핀아웃 세부는 데이터시트 미기재(부수 사항).",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "blucard-in",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "카탈로그 명칭과 공식 제품명 불일치",
+  "category": "B",
+  "reason": "카탈로그명(BLU AEC-IN/BLUCARD-IN/OUT)과 공식명 불일치 + 섀시 장착 카드인데 카탈로그 카테고리는 Audio Processor.",
+  "bundle_id": "BND-08"
+ },
+ {
+  "slug": "blucard-in",
+  "issue_code": "R5B",
+  "status": "REVIEW REQUIRED",
+  "title": "동일 이미지가 3개 카드 제품에 공통 사용됨",
+  "category": "A",
+  "reason": "bssaudio.com이 카드 3종에 동일 PCB 사진(MD5 동일) 게시.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "blucard-out",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "카탈로그 명칭과 공식 제품명 불일치",
+  "category": "B",
+  "reason": "카탈로그명(BLU AEC-IN/BLUCARD-IN/OUT)과 공식명 불일치 + 섀시 장착 카드인데 카탈로그 카테고리는 Audio Processor.",
+  "bundle_id": "BND-08"
+ },
+ {
+  "slug": "blucard-out",
+  "issue_code": "R6B",
+  "status": "REVIEW REQUIRED",
+  "title": "동일 이미지가 3개 카드 제품에 공통 사용됨",
+  "category": "A",
+  "reason": "bssaudio.com이 카드 3종에 동일 PCB 사진(MD5 동일) 게시.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "brc-am7",
+  "issue_code": "C1",
+  "status": "CONFLICTED",
+  "title": "확장 줌 용어·배율",
+  "category": "D",
+  "reason": "BRC-AM7 확장 줌 용어가 공식 자료 간 상이, 광학 20배만 확정.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "brc-am7",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지·문서 게시 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "brc-am7",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "기능·펌웨어 조건",
+  "category": "C",
+  "reason": "스트리밍·자동 프레이밍 기능의 설정·펌웨어 조건 미확인.",
+  "bundle_id": "BND-15"
+ },
+ {
+  "slug": "brc-am7",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "기술문서·CAD",
+  "category": "C",
+  "reason": "free-d 기술문서·CAD의 개정·적용 범위 검토 중.",
+  "bundle_id": "BND-15"
+ },
+ {
+  "slug": "cdi-2-1200",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-2-1200bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "\"BL\" 접미사는 전력/전압 variant가 아니라 BLU…",
+  "category": "E",
+  "reason": "페이지 설명에 \"BLU link 디지털 오디오 버스 추가 모델\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "cdi-2-300",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도 범위, 상세 인증(CE/UL 등) 목록은 페이지…",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-2-300bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "\"BL\" 접미사는 전력/전압 variant가 아니라 BLU…",
+  "category": "E",
+  "reason": "페이지 설명에 \"BLU link 디지털 오디오 버스 추가 모델\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "cdi-2-300bl",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입력 커넥터 타입은 CDi 시리즈 브로셔 기준 '밸런스 XLR'로…",
+  "category": "C",
+  "reason": "입력 커넥터(밸런스 XLR)를 브로셔 기준으로 기재, 데이터시트 원문 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-2-300bl",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도 범위, CE/UL 인증 세부 목록은 페이지 텍스트…",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-2-600",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-2-600bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도 범위, 상세 인증 목록은 페이지 텍스트에서 확인되지…",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-1200",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-1200bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-300",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-300bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-600",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cdi-4-600bl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "운영 온도, 인증 상세는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown CDi: 운영 온도·인증 세부 미확인(데이터시트 PDF 대조 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "cl01",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "cm20",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "데이터시트 PDF 접근 불가",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "comtech-d-2125",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등…",
+  "category": "C",
+  "reason": "ComTech D: THD·주파수응답·SNR 등 PDF 원문 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "comtech-d-2125",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
+  "category": "A",
+  "reason": "공식 모델명 CTD-2125/4125/8125. 카탈로그는 \"ComTech D xxxx\" 유지 중.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "comtech-d-4125",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등…",
+  "category": "C",
+  "reason": "ComTech D: THD·주파수응답·SNR 등 PDF 원문 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "comtech-d-4125",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "techdata-ps.com에서는 이 모델에 대한 별도…",
+  "category": "C",
+  "reason": "techdata-ps.com에서 CTD-4125 상세페이지를 찾지 못함(1순위 출처 재확인 필요).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "comtech-d-4125",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
+  "category": "A",
+  "reason": "공식 모델명 CTD-2125/4125/8125. 카탈로그는 \"ComTech D xxxx\" 유지 중.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "comtech-d-8125",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "THD/주파수응답/SNR/운영온도/인증 등 다수 항목 정보…",
+  "category": "C",
+  "reason": "ComTech D: THD·주파수응답·SNR 등 PDF 원문 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "comtech-d-8125",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
+  "category": "A",
+  "reason": "공식 모델명 CTD-2125/4125/8125. 카탈로그는 \"ComTech D xxxx\" 유지 중.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "control-23-1",
+  "issue_code": "SPEC-SHEET",
+  "status": "INFO",
+  "title": "별도 Spec Sheet PDF 직접 링크 미확보",
+  "category": "C",
+  "reason": "Control 23-1 Spec Sheet(버전 B) 존재 확인, PDF URL 미추출.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "control-412ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 400 시리즈 4개 모델과 공유됨",
+  "category": "D",
+  "reason": "Control 412/414/416/418C/T가 매뉴얼 1종 공유(모델별 사양은 제품 페이지로 개별 확인).",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-414ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 400 시리즈 4개 모델과 공유됨",
+  "category": "D",
+  "reason": "Control 412/414/416/418C/T가 매뉴얼 1종 공유(모델별 사양은 제품 페이지로 개별 확인).",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-416ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 400 시리즈 4개 모델과 공유됨",
+  "category": "D",
+  "reason": "Control 412/414/416/418C/T가 매뉴얼 1종 공유(모델별 사양은 제품 페이지로 개별 확인).",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-418ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 400 시리즈 4개 모델과 공유됨",
+  "category": "D",
+  "reason": "Control 412/414/416/418C/T가 매뉴얼 1종 공유(모델별 사양은 제품 페이지로 개별 확인).",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-424ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 420 계열 모델들과 공유됨",
+  "category": "D",
+  "reason": "Control 419CS/T·424·426 계열 공용 매뉴얼.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-424lp",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 420 계열 모델들과 공유됨",
+  "category": "D",
+  "reason": "Control 419CS/T·424·426 계열 공용 매뉴얼.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-426ct",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 420 계열 모델들과 공유됨",
+  "category": "D",
+  "reason": "Control 419CS/T·424·426 계열 공용 매뉴얼.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-426lp",
+  "issue_code": "SHARED-MANUAL",
+  "status": "INFO",
+  "title": "Owner's Manual이 Control 420 계열 모델들과 공유됨",
+  "category": "D",
+  "reason": "Control 419CS/T·424·426 계열 공용 매뉴얼.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "control-440cst",
+  "issue_code": "SPEC-MISSING",
+  "status": "INFO",
+  "title": "커버리지 각도 미기재",
+  "category": "E",
+  "reason": "페이지 사양 \"커버리지 각도: 공식 사양표 표기 없음(\"-\")\"로 기록.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "cpe40",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "데이터시트 PDF 없음",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "cs10",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "데이터시트 PDF 접근 불가",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "d-cerno-ae",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "AES67 채널 수·외부 저장 용량 근거 미확인",
+  "category": "C",
+  "reason": "개요의 AES67 8x8·외부 저장 500GB가 D-Cerno AE 공식 자료에서 미확인(Plixus AE-R 값 혼입 의심).",
+  "bundle_id": null
+ },
+ {
+  "slug": "d-cerno-cu",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "단종(discontinued) 제품",
+  "category": "B",
+  "reason": "D-Cerno CU 단종, 후속 D-Cerno AE(카탈로그에 AE 이미 존재).",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "d-cerno-cu",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "버스 커넥터 물리 규격 미기재",
+  "category": "D",
+  "reason": "CU 데이터시트에 버스 커넥터 타입 미기재, 후속 AE 값을 적용하지 않음.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "d-cerno-cu",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "입력 전류 값 원문 대조 필요",
+  "category": "C",
+  "reason": "입력 전류 2.5 A vs 데이터시트 원문 25 A 추정 — 원문 대조.",
+  "bundle_id": null
+ },
+ {
+  "slug": "d-cerno-d-sl",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "단종(discontinued) 제품",
+  "category": "B",
+  "reason": "D-Cerno D SL 단종, 후속 D-Cerno DISCUSS D.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "dci-2-300",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "SNR, 크로스토크, 입력 임피던스 수치는 제품 페이지 텍스트에서…",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-2-300",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 이미지는 Crown 사이트에서 'DCi 2채널 공용 후면'…",
+  "category": "A",
+  "reason": "DCi 2채널 공용 후면 이미지.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "dci-2-300n",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "중요: crownaudio.com 제품 영상 설명 원문에 따르면…",
+  "category": "E",
+  "reason": "페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "dci-2-300n",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "Dante 채널수/샘플레이트/레이턴시 스펙은 이 모델에 해당하지…",
+  "category": "D",
+  "reason": "N 모델은 BLU-Link, 상세 대역폭·레이턴시 수치 미게시.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "dci-2-600",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "SNR, 입력 임피던스 수치는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-2-600n",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "중요: 'N' 접미사는 Dante가 아니라 HARMAN…",
+  "category": "E",
+  "reason": "페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "dci-4-300",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "SNR, 입력 임피던스 수치는 확인되지 않음(정보 없음).",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-4-300da",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Dante 레이턴시 수치, SNR/크로스토크 수치는 페이지…",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-4-300n",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "중요: 'N' 접미사는 Dante가 아니라 HARMAN…",
+  "category": "E",
+  "reason": "페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "dci-4-600",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "전원 커넥터(15A/20A IEC 등) 세부, SNR, 입력…",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-4-600da",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Dante 레이턴시 수치, SNR/크로스토크 수치는 페이지…",
+  "category": "C",
+  "reason": "Crown DCi: SNR·입력 임피던스·Dante 레이턴시 등 데이터시트 대조 필요.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "dci-4-600n",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "중요: 'N' 접미사는 Dante가 아니라 HARMAN…",
+  "category": "E",
+  "reason": "페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "dm3",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "dm3",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "DM3 vs DM3 Standard",
+  "category": "A",
+  "reason": "카탈로그 \"DM3\"를 Dante 지원 DM3(DM3 Standard 아님)로 확정할지 예/아니오. 현재 Dante 모델 값 채택.",
+  "bundle_id": null
+ },
+ {
+  "slug": "dm7",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 역할·권한",
+  "category": "A",
+  "reason": "이미지 재사용 권리 미확인 + Main·Front·Perspective 역할 지정 확인(운영자 육안 확인 가능).",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "dm7",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "문서 분류·개정",
+  "category": "C",
+  "reason": "DM7 시방서·Technical Data Sheet 공개 URL·개정, Quick Documents 분류 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "duecanali-1604-dsp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "duecanali-1604-dsp",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "슬루 레이트(Slew Rate) 항목이 원본 Duecanali…",
+  "category": "D",
+  "reason": "기본형 데이터시트 슬루 레이트 \"26 mΩ\" 단위 오기, 표에서 제외.",
+  "bundle_id": "BND-27"
+ },
+ {
+  "slug": "duecanali-1604-dsp",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "출력·입력 커넥터 부품번호가 공식 자료끼리 다르다. 기본형…",
+  "category": "D",
+  "reason": "커넥터 부품번호: 기본형 데이터시트 vs 사용자 가이드·DSP+D 데이터시트 상이, 병기.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "duecanali-1604-dspd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "duecanali-1604-dspd",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입력/출력 커넥터 파트번호가 Duecanali 기본(비Dante)…",
+  "category": "D",
+  "reason": "커넥터 부품번호가 기본형·DSP+D 데이터시트 간 상이, 병기.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "duecanali-804-dsp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "duecanali-804-dsp",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "슬루 레이트(Slew Rate) 항목이 기본 데이터시트에는 '26…",
+  "category": "D",
+  "reason": "기본형 데이터시트 슬루 레이트 \"26 mΩ\" 단위 오기, 표에서 제외.",
+  "bundle_id": "BND-27"
+ },
+ {
+  "slug": "duecanali-804-dsp",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "출력·입력 커넥터 부품번호가 공식 자료끼리 다르다. 기본형…",
+  "category": "D",
+  "reason": "커넥터 부품번호 공식 자료 간 상이, 병기.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "duecanali-804-dspd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "duecanali-804-dspd",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입출력 커넥터 파트번호가 기본(비Dante) 데이터시트와…",
+  "category": "D",
+  "reason": "커넥터 부품번호 공식 자료 간 상이, 병기.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-l530u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "고객지원 페이지 자료 불일치",
+  "category": "C",
+  "reason": "EB-L530U 지원 페이지 매뉴얼 파일명이 EB-L735U — 파일 내용이 L530U인지 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "eb-l530u",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈·투사거리 세부",
+  "category": "C",
+  "reason": "투사 거리표 등 세부 설치 조건 미반영.",
+  "bundle_id": null
+ },
+ {
+  "slug": "eb-l530u",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "eb-l530u",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "전원·소비전력·깊이 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "한국 카탈로그 vs 한국 제품 페이지 전원·소비전력·깊이 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-l690u",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 지원 페이지였음",
+  "category": "A",
+  "reason": "카탈로그 링크가 아직 지원(다운로드/FAQ) 페이지. 상세페이지는 /p/V11HB29051 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "eb-l690u",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l695se",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l790su",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l790u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l795se",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "화면 크기·투사거리 원문 오기 의심",
+  "category": "C",
+  "reason": "EB-L795SE 화면 크기 50\"-500\"(1.44-14.76m)가 투사율 0.79와 맞지 않아 원문 오기 의심.",
+  "bundle_id": null
+ },
+ {
+  "slug": "eb-l795se",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l895e",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-l895u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "렌즈 시프트 단위 확인 필요",
+  "category": "C",
+  "reason": "한국 공식 페이지 단위 \"°\"를 원문대로 둠. 같은 섀시 L530U 카탈로그는 \"%\".",
+  "bundle_id": "BND-13"
+ },
+ {
+  "slug": "eb-pq2213b",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
+  "category": "A",
+  "reason": "카탈로그 링크가 아직 단축 URL(마케팅 랜딩). 상세페이지는 /p/ 제품 상세 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "eb-pq2213b",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입출력 단자 한국·글로벌 자료 차이",
+  "category": "D",
+  "reason": "한국 페이지(HDMI만) vs 글로벌 브로셔(HDBaseT·12G-SDI·RS-232C) 단자 차이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pq2213b",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "기본 해상도 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "기본 해상도: 한국 \"4K\" vs 글로벌 \"1080p + 4K Crystal Motion\".",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pq2216b",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
+  "category": "A",
+  "reason": "카탈로그 링크가 아직 단축 URL(마케팅 랜딩). 상세페이지는 /p/ 제품 상세 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "eb-pq2216b",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입출력 단자 한국·글로벌 자료 차이",
+  "category": "D",
+  "reason": "한국 페이지 vs 글로벌 브로셔 단자 차이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pq2216b",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "기본 해상도 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "기본 해상도 표기 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pq2220b",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "입출력 단자 한국·글로벌 자료 차이",
+  "category": "D",
+  "reason": "한국 페이지 vs 글로벌 브로셔 단자 차이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pq2220b",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "기본 해상도 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "기본 해상도 표기 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pu1008b",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 지원 페이지(404)였음",
+  "category": "A",
+  "reason": "카탈로그 링크(https://www.epson.co.kr/EB-PU1008B)는 조사 시 404. 상세페이지는 /p/V11HA33840 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "eb-pu1008b",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "SDI 지원 표기 정정",
+  "category": "E",
+  "reason": "SDI 문구를 특징에서 제외(페이지 특징 목록에 SDI 없음).",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "eb-pu2010w-b",
+  "issue_code": "MODEL-NAME",
+  "status": "INFO",
+  "title": "카탈로그 모델명과 제품 페이지 모델명 표기 차이",
+  "category": "A",
+  "reason": "카탈로그 EB-PU2010W/B, 공식 EB-PU2010B(카탈로그 링크는 이미 PU2010B 페이지).",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "eb-pu2213b",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
+  "category": "A",
+  "reason": "카탈로그 단축 URL도 사양표는 있으나 상세페이지는 /p/ 제품 상세 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "eb-pu2213b",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "전원 정격 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "전원 정격: 제품 페이지 vs PU2200 카탈로그 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "eb-pu2216b",
+  "issue_code": "LINK-FALLBACK",
+  "status": "INFO",
+  "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
+  "category": "A",
+  "reason": "카탈로그 단축 URL도 사양표는 있으나 상세페이지는 /p/ 제품 상세 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "ec-4bv",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "정확한 외형 치수 미확인",
+  "category": "C",
+  "reason": "EC-4BV 치수 도면 수치 미확정.",
+  "bundle_id": null
+ },
+ {
+  "slug": "eikos-4k",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "ez-hsv-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "사용설명서 없음",
+  "category": "D",
+  "reason": "Lumantek 공식 사이트에 PDF 설명서·데이터시트 없음, 웹 사양표 사용.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "ez-hsv-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "ez-md-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "사용설명서 없음",
+  "category": "D",
+  "reason": "Lumantek 공식 사이트에 PDF 설명서·데이터시트 없음, 웹 사양표 사용.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "ez-md-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "ez-shv-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "사용설명서 없음",
+  "category": "D",
+  "reason": "Lumantek 공식 사이트에 PDF 설명서·데이터시트 없음, 웹 사양표 사용.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "ez-shv-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "gs108pp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "팬 유무 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "팬: 제품 페이지 QUIET FANS vs 데이터시트 Fanless.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "gs116pp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "FlexPoE 하향 예산 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "FlexPoE 예산: 데이터시트 115W vs 제품 페이지 155W.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "gs728tpp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 해상도 낮음",
+  "category": "C",
+  "reason": "공식 고해상도 사진 미확보, 데이터시트(893x96)·설치 가이드 이미지 사용.",
+  "bundle_id": "BND-18"
+ },
+ {
+  "slug": "gs728tpp",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "설치 가이드 그림 캡션 오류",
+  "category": "D",
+  "reason": "설치 가이드 Figure 5 캡션 오류, 올바른 Figure 7 사용.",
+  "bundle_id": "BND-27"
+ },
+ {
+  "slug": "gs728tpp",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "v1/v2 구분",
+  "category": "B",
+  "reason": "GS728TPP 초기형 기준. v2는 별도 SKU, 단종 여부 미확인.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "gsm4212p",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이전 페이지가 다른 모델(GSM4210PX)을 기술함",
+  "category": "E",
+  "reason": "페이지를 GSM4212P 공식 자료로 전면 재작성, 카탈로그 official_links가 .../gsm4212p/ 로 교체됨(원본 목록 갱신은 페이지 밖 후속 사항).",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "gsm4212p",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 전면/후면 명칭이 제조사 파일명과 반대",
+  "category": "A",
+  "reason": "데이터시트 정의(전면 디스플레이, 포트는 후면)에 따라 제조사 파일명과 반대로 Front/Rear를 지정한 것을 승인할지 예/아니오.",
+  "bundle_id": null
+ },
+ {
+  "slug": "gsm4212p",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "소음 표기 차이 및 시리즈 공통 항목",
+  "category": "D",
+  "reason": "소음 표기 페이지·데이터시트 상이, AV 프로필 등은 시리즈 공통 기재.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "gsm4212p",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "기술 지원 조건 페이지별 상이",
+  "category": "C",
+  "reason": "기술 지원 조건: 한국어 페이지(90일) vs 글로벌·데이터시트(Sprint/Overdrive) — 국내 적용 조건 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "gsm4230p",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 사진 모델명 표기 판독 어려움",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "gsm4230px",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 사진 모델명 미판독",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "gsm4248p",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "구성 물품 목록 내 모델명 오기 가능성",
+  "category": "D",
+  "reason": "공식 페이지 구성 물품 \"(GSM4230P)\" 오탈자, 페이지 제목·사양 기준 GSM4248P.",
+  "bundle_id": "BND-27"
+ },
+ {
+  "slug": "gsm4248p",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 사진 모델명 미판독",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "gsm4248px",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "문서가 시리즈 공용",
+  "category": "D",
+  "reason": "GSM4248PX 문서가 M4250 시리즈 공용.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "gsm4248px",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "gsm4248px",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "팬리스 표기 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "팬리스: 제품 페이지 vs 데이터시트 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "h-800w-psu",
+  "issue_code": "I1",
+  "status": "REVIEW REQUIRED",
+  "title": "무게 및 핫스왑 인증 여부 미기재",
+  "category": "C",
+  "reason": "H_800W 무게·핫스왑 명시 문구 미기재(시리즈 일반 서술만).",
+  "bundle_id": null
+ },
+ {
+  "slug": "h-800w-psu",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "일부 항목 출처 근거 부족",
+  "category": "C",
+  "reason": "슬라이드인·후면 탈부착 특징과 IEC C14 단자가 데이터시트 H_800W 항목에 없음.",
+  "bundle_id": null
+ },
+ {
+  "slug": "h-input-card-4xhdmi",
+  "issue_code": "I1",
+  "status": "REVIEW REQUIRED",
+  "title": "카탈로그 설명과 실제 커넥터 구성 차이",
+  "category": "E",
+  "reason": "페이지 설명이 \"2x HDMI 1.3 + 2x HDMI 1.4\"로 반영.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "hdmi20-optj-rx90",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 대표성",
+  "category": "A",
+  "reason": "TX90·RX90 공용 외관 사진.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "hdmi20-optj-rx90",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "hdmi20-optj-tx90",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 대표성",
+  "category": "A",
+  "reason": "TX90·RX90 공용 외관 사진.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "hdmi20-optj-tx90",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "hg43u800fnfxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "hg50u800fnfxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "hg65u800fnfxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-mini",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "물리 크기·무게",
+  "category": "C",
+  "reason": "폼팩터만 확인, mm 치수·무게 미확인.",
+  "bundle_id": "BND-19"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-mini",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 해상도",
+  "category": "C",
+  "reason": "제조사 그리드 썸네일(306×215)만 확보.",
+  "bundle_id": "BND-18"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "물리 크기·무게",
+  "category": "C",
+  "reason": "폼팩터만 확인, mm 치수·무게 미확인.",
+  "bundle_id": "BND-19"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 해상도",
+  "category": "C",
+  "reason": "제조사 그리드 썸네일(306×215)만 확보.",
+  "bundle_id": "BND-18"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-pro",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "물리 크기·무게",
+  "category": "C",
+  "reason": "폼팩터만 확인, mm 치수·무게 미확인.",
+  "bundle_id": "BND-19"
+ },
+ {
+  "slug": "hyperdeck-studio-hd-pro",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 해상도",
+  "category": "C",
+  "reason": "제조사 그리드 썸네일(306×215)만 확보.",
+  "bundle_id": "BND-18"
+ },
+ {
+  "slug": "i-tech-4x3500hd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이전 조사본의 '4Ω 4채널 합산 4000W(채널당 약…",
+  "category": "E",
+  "reason": "페이지 사양에 4Ω 연속 2400W, 4000W는 버스트 기준으로 분리 표기.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "i-tech-4x3500hd",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "8Ω 버스트 정격은 공식 문서끼리 다르다(매뉴얼 1900W,…",
+  "category": "D",
+  "reason": "8Ω 버스트 1900W vs 2100W, 브리지 버스트 배정 반대.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "i-tech-4x3500hd",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "입력 임피던스, 운영 온도 범위 수치는 이번 조사에서 확인하지…",
+  "category": "C",
+  "reason": "I-Tech 4x3500HD 입력 임피던스·운영 온도 미확인.",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "ki-pro-go2",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 이미지",
+  "category": "A",
+  "reason": "Main·Rear 확보(FOUND), Front·Perspective 역할과 재사용 권리 미확인.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "ki-pro-go2",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "Quick Start Guide",
+  "category": "C",
+  "reason": "Quick Start Guide의 적용 범위·본문 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "ki-pro-go2",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "한국어 공식 문서",
+  "category": "D",
+  "reason": "확보 자료에서 AJA 한국어 공식 문서 없음.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "kq75lsf03wfxkr",
+  "issue_code": "CATEGORY-NOTE",
+  "status": "OPEN",
+  "title": "제품 성격 재확인 필요",
+  "category": "B",
+  "reason": "KQ75LSF03WFXKR(더 프레임 프로, 소비자용 라이프스타일 TV)을 사이니지 카테고리에 둘지.",
+  "bundle_id": null
+ },
+ {
+  "slug": "kq75lsf03wfxkr",
+  "issue_code": "NEO-QLED-UNVERIFIED",
+  "status": "REVIEW REQUIRED",
+  "title": "'Neo QLED' 표기 공식 근거 미확인",
+  "category": "C",
+  "reason": "\"Neo QLED\" 표기 근거 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "led-780h",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "확장 포트 EXT.1/EXT.2 사양",
+  "category": "D",
+  "reason": "EXT 포트 종류는 확장 카드에 따라 다르고 기본 모델 사양은 매뉴얼 미기재.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "led-780h",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한·모델 일치",
+  "category": "A",
+  "reason": "이미지 재사용 권리 미확인. 모델 라벨은 저해상도이나 버튼 배치가 매뉴얼과 일치.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "led-780h",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "제조사 사이트 접근 제한",
+  "category": "D",
+  "reason": "제조사 다운로드가 referer 화이트리스트로 보호, 매뉴얼은 사용자 업로드로 반영.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "lh115qhfebgxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh32qmcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh43qhcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh43qmcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh55vhcrbgbxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "정확한 베젤투베젤 실측치·해상도·무게·입출력 단자 수 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh55vmcrbgbxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "정확한 베젤투베젤 실측치·해상도·무게·입출력 단자 수 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh55wmfwbgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh75qhcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh75wmfwlgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh75wmfwlgcxkr",
+  "issue_code": "ROTATE-NOTE",
+  "status": "OPEN",
+  "title": "회전형 디자인 미적용 확인",
+  "category": "E",
+  "reason": "75인치 페이지에 회전형 디자인 항목 없음(각주대로 제외).",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "lh85qmcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh98qecedgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "lh98qmcebgcxkr",
+  "issue_code": "SPEC-AJAX",
+  "status": "OPEN",
+  "title": "상세 스펙 표 미확인",
+  "category": "C",
+  "reason": "스펙 탭이 로그인 세션 AJAX(HTTP 500), samsungsvc 다운로드도 비어 정량 사양 미확인.",
+  "bundle_id": "BND-10"
+ },
+ {
+  "slug": "mezzo-322-a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-322-a",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가…",
+  "category": "A",
+  "reason": "Mezzo 시리즈 공용 후면 대표 이미지.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mezzo-322-a",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와…",
+  "category": "D",
+  "reason": "대기전력: 제품 페이지 11/12W vs 데이터시트 14W.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "mezzo-322-ad",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "크기·무게 미확인",
+  "category": "C",
+  "reason": "Mezzo 322 AD 본체 크기·무게 미확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "mezzo-322-ad",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "I/O 커넥터 상세",
+  "category": "C",
+  "reason": "아날로그 입력 블록 커넥터 규격·채널 배치 미확정.",
+  "bundle_id": null
+ },
+ {
+  "slug": "mezzo-322-ad",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "mezzo-324-a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-324-a",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "Powersoft 공식 제품페이지가 324 A 전용 전면 사진을…",
+  "category": "A",
+  "reason": "324 A/AD 페이지가 322 A 전면 이미지를 재사용.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mezzo-324-a",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "대기전력이 제품 페이지(115V 15 W / 230V 16 W)와…",
+  "category": "D",
+  "reason": "대기전력: 제품 페이지 15/16W vs 데이터시트 18W.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "mezzo-324-ad",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-324-ad",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "Powersoft 공식 제품페이지가 324 AD 전용 전면 사진을…",
+  "category": "A",
+  "reason": "324 A/AD 페이지가 322 A 전면 이미지를 재사용.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mezzo-602-a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-602-a",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "대기전력(idle power) 수치가 제품페이지 실측…",
+  "category": "D",
+  "reason": "대기전력 11W vs 18W, 데이터시트 1/8 파워 값 이례.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "mezzo-602-ad",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-602-ad",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 이미지는 602 AD 전용 촬영본이 아니라…",
+  "category": "A",
+  "reason": "Mezzo 시리즈 공용 후면 대표 이미지.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mezzo-602-ad",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "대기전력(idle power) 수치가 제품페이지 실측…",
+  "category": "D",
+  "reason": "대기전력 12W vs 17W.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "mezzo-604-a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-604-a",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "604 A 제품페이지의 전면 이미지 파일명이…",
+  "category": "A",
+  "reason": "604 A·604 AD 이미지 파일명 뒤바뀜 가능성. 공식 페이지 표시 이미지 그대로 사용.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mezzo-604-ad",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "mezzo-604-ad",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "604 AD 제품페이지의 전면 이미지 파일명이…",
+  "category": "A",
+  "reason": "604 A·604 AD 이미지 파일명 뒤바뀜 가능성. 공식 페이지 표시 이미지 그대로 사용.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mx392-c",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Shure 공식 제품 페이지(NEXT_DATA)에서…",
+  "category": "D",
+  "reason": "shure.com images 배열 비어 있음(main_image만 제공).",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "mx395",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지는 Shure 공식 제품 페이지의 대표 이미지로,…",
+  "category": "A",
+  "reason": "Shure 공식 대표 이미지가 여러 변형을 함께 보여주는 패밀리샷.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mx395",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "MX395는 SKU가 매우 세분화되어 있음(색상 3종 x 패턴…",
+  "category": "D",
+  "reason": "MX395 SKU 44개 변형, 공통 사양 기준 정리.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "mx418d-c",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "LED 링은 없다. 다만 D(데스크톱) 모델은 베이스에 프로그래밍…",
+  "category": "E",
+  "reason": "이슈 본문에 이전 조사본 설명을 \"정정함\"으로 기재.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "mx418d-c",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "대표 이미지는 MX412D/MX418D 등 MX400D 시리즈…",
+  "category": "A",
+  "reason": "Shure 공식 대표 이미지가 여러 변형을 함께 보여주는 패밀리샷.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mxa925w-r",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "대표 이미지는 4가지 색상/형태(화이트 사각, 블랙 사각, 화이트…",
+  "category": "A",
+  "reason": "Shure 공식 대표 이미지가 여러 변형을 함께 보여주는 패밀리샷.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mxa925w-r",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "A900W-R-GM 액세서리와의 호환성이 MXA925 스펙시트에…",
+  "category": "D",
+  "reason": "MXA925 스펙시트에 A900W-R-GM 호환 명시 — A900 교차검증 근거.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "mxa925w-r",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet'…",
+  "category": "D",
+  "reason": "MXA925 스펙시트는 shure.widen.net에만 있음(content-files 사본 없음).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "mxc420-c",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "브리핑에서 'Microflex Advance 계열'로 추정했으나,…",
+  "category": "E",
+  "reason": "페이지 설명이 \"Microflex Complete(MXC/MXCW)용 구스넥 마이크\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "mxc420-c",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "대표 이미지는 MXC416/420/425 패밀리 3종을 함께…",
+  "category": "A",
+  "reason": "Shure 공식 대표 이미지가 여러 변형을 함께 보여주는 패밀리샷.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "mxcw640",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "마이크로폰 지향성 패턴",
+  "category": "C",
+  "reason": "MXCW640 구즈넥 카트리지 극성 패턴 미확정.",
+  "bundle_id": null
+ },
+ {
+  "slug": "mxcw640",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "mxcwapt-w",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "중요 정정: 작업 브리핑은 'MXCWAPT-W'를 화이트 색상…",
+  "category": "E",
+  "reason": "페이지 설명이 \"MXCW 시스템의 액세스 포인트 트랜시버\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "mxcwapt-w",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "브리핑의 '무선 충전(wireless charging) 액세스…",
+  "category": "E",
+  "reason": "페이지 설명이 \"MXCW 시스템의 액세스 포인트 트랜시버\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "novastar-h2",
+  "issue_code": "I1",
+  "status": "REVIEW REQUIRED",
+  "title": "데이터시트 버전 차이",
+  "category": "A",
+  "reason": "확인본 V1.17.0, 사전 확인본 V1.12.0과 핵심 수치 일치하나 전체 대조 안 함.",
+  "bundle_id": "BND-06"
+ },
+ {
+  "slug": "novastar-h2",
+  "issue_code": "I2",
+  "status": "REVIEW REQUIRED",
+  "title": "냉각/팬 사양 미기재",
+  "category": "D",
+  "reason": "H2/H5 데이터시트에 냉각·팬 사양 미기재.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "novastar-h5",
+  "issue_code": "I1",
+  "status": "REVIEW REQUIRED",
+  "title": "데이터시트 버전 차이",
+  "category": "A",
+  "reason": "확인본 V1.17.0, 사전 확인본 V1.12.0과 핵심 수치 일치하나 전체 대조 안 함.",
+  "bundle_id": "BND-06"
+ },
+ {
+  "slug": "novastar-h5",
+  "issue_code": "I2",
+  "status": "REVIEW REQUIRED",
+  "title": "냉각/팬 사양 미기재",
+  "category": "D",
+  "reason": "H2/H5 데이터시트에 냉각·팬 사양 미기재.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "plixus-ae-r-ps",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "예상과 다른 제품 성격 확인",
+  "category": "E",
+  "reason": "페이지 카테고리 Power Supply, 설명 \"외장 전원 공급 장치\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "plixus-next",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "예상과 다른 제품 성격 확인",
+  "category": "E",
+  "reason": "페이지 카테고리 Network Extender, 설명 \"네트워크 확장 장치\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "plixus-next",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "포장 크기/무게 미기재",
+  "category": "D",
+  "reason": "데이터시트에 포장 크기·중량이 TBD로 명시.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "pt-mz11k",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "모델명 표기 차이(PT-MZ11K vs PT-MZ11KL)",
+  "category": "A",
+  "reason": "공식 사이트는 L 접미사 모델(PT-MZ11KL/MZ14KL)만 등재, L 없는 단독 페이지 404.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "pt-mz11k",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-mz11k",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-mz14k",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "모델명 표기 차이(PT-MZ14K vs PT-MZ14KL)",
+  "category": "A",
+  "reason": "공식 사이트는 L 접미사 모델(PT-MZ11KL/MZ14KL)만 등재, L 없는 단독 페이지 404.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "pt-mz14k",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-mz14k",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-mz17k",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "모델·지역 표기",
+  "category": "A",
+  "reason": "공식 페이지는 PT-MZ17KL. L·지역 접미사와 카탈로그 PT-MZ17K 대응 확인.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "pt-mz17k",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "물리 I/O·전원",
+  "category": "C",
+  "reason": "PT-MZ17K 영상·제어 커넥터 수량, 전원·크기·무게 모델별 근거 확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "pt-mz17k",
+  "issue_code": "M1",
+  "status": "MISSING",
+  "title": "Rear 이미지",
+  "category": "C",
+  "reason": "PT-MZ17K 후면 이미지 미확인(현재 Front·Perspective만 FOUND).",
+  "bundle_id": null
+ },
+ {
+  "slug": "pt-mz17k",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-mz882",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-mz882",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-vmz51",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-vmz51",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-vmz61",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-vmz61",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pt-vmz71",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "시리즈 공용 이미지",
+  "category": "A",
+  "reason": "Panasonic 시리즈 대표 이미지(단독 사진 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "pt-vmz71",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "pulse-4k",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "qlxd4",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Shure 공식 콘텐츠…",
+  "category": "D",
+  "reason": "QLX-D 전용 스펙시트 PDF가 공식 CDN에 없음(Access Denied), 3rd-party 미러는 미채택.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "qlxd4",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "전원 표기가 자료마다 다르다: 공식 후면 사진의 인쇄는 '12V…",
+  "category": "D",
+  "reason": "전원: 후면 인쇄 12V 0.35A vs 가이드 12V 0.4A.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "quattrocanali-1204-dsp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-1204-dspd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-2404-dsp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-2404-dspd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 자동 봇 차단(캡차) 시스템…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-2404-dspd",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지가 800x391(또는 1024x500) 웹용 PNG로,…",
+  "category": "D",
+  "reason": "공식 최대 해상도가 800x391 웹 PNG, 고해상도 원본 없음.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "quattrocanali-2404-dspd",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "8804 DSP+D는 이번 조사 대상이 아니라 표에서 제외함(동일…",
+  "category": "D",
+  "reason": "8804 DSP+D는 조사 범위 밖이라 표에서 제외.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "quattrocanali-4804-dsp",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-4804-dsp",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 사이트의 4804 DSP와 4804 DSP+D 제품 페이지가…",
+  "category": "A",
+  "reason": "4804 DSP·DSP+D가 같은 전면 이미지(front-6) 공유.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "quattrocanali-4804-dsp",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "무게가 공식 자료끼리 다르다: 데이터시트 6.8 kg, 제품…",
+  "category": "D",
+  "reason": "무게: 데이터시트 6.8kg vs 제품 페이지 7kg.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "quattrocanali-4804-dspd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
+  "category": "C",
+  "reason": "다산SR 캡차로 자동 접근 불가, Powersoft 공식 자료로 대체.",
+  "bundle_id": "BND-09"
+ },
+ {
+  "slug": "quattrocanali-4804-dspd",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 사이트의 4804 DSP와 4804 DSP+D 제품 페이지가…",
+  "category": "A",
+  "reason": "4804 DSP·DSP+D가 같은 전면 이미지(front-6) 공유.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "rally-bar",
+  "issue_code": "C1",
+  "status": "CONFLICTED",
+  "title": "추가 Mic Pod 최대 수",
+  "category": "D",
+  "reason": "Rally Bar 추가 Mic Pod 최대 수 공식 자료 간 상이(CONFLICTED).",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "rally-bar",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "지역·SKU 변형",
+  "category": "B",
+  "reason": "Rally Bar No-Radio·색상·지역 품번을 기본 본체와 통합할지 별도 항목으로 둘지.",
+  "bundle_id": null
+ },
+ {
+  "slug": "rally-bar",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 역할·권한",
+  "category": "A",
+  "reason": "이미지 재사용 권리 미확인 + Front·Rear 역할 지정 확인(운영자 육안 확인 가능).",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rally-mic-pod-extension-cable",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "커넥터 규격 미명시",
+  "category": "C",
+  "reason": "커넥터 규격을 Mic Pod·Hub 12핀 사양에서 추정 — 제조사 직접 명시 확인 필요.",
+  "bundle_id": null
+ },
+ {
+  "slug": "rally-mic-pod-extension-cable",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rally-mic-pod-hub",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 자체 라벨 미확인",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "rally-mic-pod-hub",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rally-mic-pod",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 자체 라벨 미확인",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "rally-mic-pod",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rally-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "카탈로그 official_link 갱신 필요",
+  "category": "A",
+  "reason": "카탈로그 링크가 아직 커뮤니티 허브(hub.sync.logitech.com). 상세페이지는 logitech.com 제품 페이지 사용.",
+  "bundle_id": "BND-05"
+ },
+ {
+  "slug": "rally-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rc400t",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rc400t",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 호스팅 위치 차이",
+  "category": "E",
+  "reason": "Webflow CDN 도메인을 허용 목록에 추가해 처리됨(이슈 본문).",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "rio1608-d3",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rio3224-d3",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rm-ip10",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "SRG-X40UH·SRG-A40 조합 호환성",
+  "category": "C",
+  "reason": "RM-IP10 구판 설명서엔 미기재, Remote Camera System Guide(2023)·카메라 설명서엔 포함 — 상충.",
+  "bundle_id": "BND-16"
+ },
+ {
+  "slug": "rm-ip10",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 제품명 표기",
+  "category": "D",
+  "reason": "한국어 제목은 BRC용이지만 자료는 SRG 제어도 기술, 공식 표기 유지.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "rm-ip10",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "포지션 수 출처",
+  "category": "E",
+  "reason": "16 포지션을 사용 설명서로 확인, 운영사 자료와 일치.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "rm-ip10",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지·문서 게시 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rm-ip10",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 자료 접근 한계",
+  "category": "C",
+  "reason": "sony.co.kr·pro.sony 한국어 페이지 연결 재설정/HTTP 500/렌더링 안 됨. 한국어 설명서 미확인.",
+  "bundle_id": "BND-14"
+ },
+ {
+  "slug": "rm-ip500",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "시스템당 최대 컨트롤러 수",
+  "category": "D",
+  "reason": "최대 컨트롤러 수: 본문·설명서 5대 vs 사양표 1.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "rm-ip500",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "AC 어댑터 포함 여부",
+  "category": "D",
+  "reason": "AC 어댑터는 RM-IP500/1(미국·캐나다)만 포함.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "rm-ip500",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "기능의 카메라·펌웨어 의존성",
+  "category": "D",
+  "reason": "프리셋 수 등은 카메라·펌웨어에 의존, ILME-FR7은 V2.20 이상.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "rm-ip500",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지·문서 게시 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "rm-ip500",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 자료 접근 한계",
+  "category": "C",
+  "reason": "sony.co.kr·pro.sony 한국어 페이지 연결 재설정/HTTP 500/렌더링 안 됨. 한국어 설명서 미확인.",
+  "bundle_id": "BND-14"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com DB의…",
+  "category": "D",
+  "reason": "shure.com DB 무게 필드 0(미입력) → 스펙시트 89 g 사용.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "한국 지역 전용 SKU 접미사는 없음. 대역 변형…",
+  "category": "D",
+  "reason": "대역 변형 =-G64, =-X51 존재, 한국 전용 접미사 없음.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd1-plus",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+…",
+  "category": "D",
+  "reason": "광대역 튜닝·동시 운용 수·레이턴시는 SLX-D+ 시스템 공통 사양.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리…",
+  "category": "D",
+  "reason": "shure.com·스펙시트 모두 정면 1장뿐(en-GB/en-ASIA 동일).",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 SKU 표기는 'SLXD2+/58'(구형…",
+  "category": "D",
+  "reason": "공식 SKU 표기(SLXD2+/58, SLXD2+/B58)가 구형 SKU와 다름.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd2-plus-58",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "대역 변형에 =-G64, =-X51 포함",
+  "category": "D",
+  "reason": "대역 변형 =-G64, =-X51 존재, 한국 전용 접미사 없음.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리…",
+  "category": "D",
+  "reason": "shure.com·스펙시트 모두 정면 1장뿐(en-GB/en-ASIA 동일).",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 자료 충돌: shure.com 짧은 설명은 'Beta®…",
+  "category": "D",
+  "reason": "Beta 58C(짧은 설명) vs Beta 58A(상세 제목·스펙시트).",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 SKU 표기는 'SLXD2+/B58'(구형…",
+  "category": "D",
+  "reason": "공식 SKU 표기(SLXD2+/58, SLXD2+/B58)가 구형 SKU와 다름.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd2-plus-b58",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "대역 변형에 =-G64, =-X51 포함",
+  "category": "D",
+  "reason": "대역 변형 =-G64, =-X51 존재, 한국 전용 접미사 없음.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리…",
+  "category": "D",
+  "reason": "shure.com·스펙시트 모두 정면 1장뿐(en-GB/en-ASIA 동일).",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "구형 SKU 'SLXD2/BETA87'의 캡슐(Beta 87A…",
+  "category": "B",
+  "reason": "구형 SLXD2/BETA87의 후속을 SLXD2+/B87A로 볼지 SLXD2+/B87C로 볼지(구형 캡슐 원자료 미확인).",
+  "bundle_id": null
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "B87A 대역 변형에는 G54, JB, K60 없음(=-G64,…",
+  "category": "D",
+  "reason": "공식 SKU 표기 SLXD2+/B87A.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd2-plus-b87a",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 SKU 표기는 'SLXD2+/B87A'",
+  "category": "D",
+  "reason": "B87A 대역 변형에 G54·JB·K60 없음.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식…",
+  "category": "D",
+  "reason": "후면 인쇄 15V 600mA vs 공식 15VDC 360mA.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로…",
+  "category": "A",
+  "reason": "후면에 \"+\" 표기 없음. SLX-D+ 공식 페이지 갤러리 이미지라는 근거로 채택.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "SKU 표기: 한국 지역 코드 변형 SLXD4+K=-G64,…",
+  "category": "D",
+  "reason": "한국 지역 코드 변형 SLXD4(D)+K=-G64/-X51.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd4-plus",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 상세 제목은 'Digital Wireless…",
+  "category": "D",
+  "reason": "shure.com 상세 제목 표기(Digital Wireless Receiver / Dual Channel).",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
+  "category": "D",
+  "reason": "shure.com ko-KR은 en-ASIA로 리다이렉트, SLX-D+ 경로 404 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
+  "category": "D",
+  "reason": "스펙시트는 shure.widen.net 뷰어 링크(PDF 직링크는 서명·만료형이라 미저장).",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
+  "category": "D",
+  "reason": "shure.com __NEXT_DATA__ 사양 필드 비어 있음 → 스펙시트·가이드로 수집.",
+  "bundle_id": "BND-25"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 사진의 전원 단자 인쇄는 '15V ⎓ 600mA'이나 공식…",
+  "category": "D",
+  "reason": "후면 인쇄 15V 600mA vs 공식 15VDC 360mA.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "후면 패널에는 '+' 모델 표기가 없어 원판 SLX-D와 외관으로…",
+  "category": "A",
+  "reason": "후면에 \"+\" 표기 없음. SLX-D+ 공식 페이지 갤러리 이미지라는 근거로 채택.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "SKU 표기: 한국 지역 코드 변형 SLXD4D+K=-G64,…",
+  "category": "D",
+  "reason": "한국 지역 코드 변형 SLXD4(D)+K=-G64/-X51.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "slxd4d-plus",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 페이지 문서 목록에 SLXD4D+ 전용 가이드는 없고…",
+  "category": "D",
+  "reason": "SLXD4+ User Guide가 SLXD4+/SLXD4D+ 공용.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "smartvision40",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "세부 물리 사양 미확인",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "팬/틸트 속도 표기 조건",
+  "category": "D",
+  "reason": "팬/틸트 속도: 제품 페이지(조건 없음) vs 설명서(수동/프리셋 구분), 조건 분리 표시.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "NDI|HX 라이선스 방식",
+  "category": "C",
+  "reason": "NDI|HX 라이선스(3.0 이상 사전 설치 vs 옵션 다운로드), 운영사 자료 \"/N 모델 포함\"은 공식 미확인.",
+  "bundle_id": "BND-15"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "RTMP/RTMPS 지원 표기",
+  "category": "C",
+  "reason": "RTMP/RTMPS는 설명서에만 기재, 펌웨어 조건 확인 필요.",
+  "bundle_id": "BND-15"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "펌웨어 4.0 기능 제공 시점",
+  "category": "C",
+  "reason": "펌웨어 4.0 기능 \"2026년 4월 이후 제공 예정\" — 실제 배포 여부 확인 필요.",
+  "bundle_id": "BND-15"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "포함 액세서리 목록 차이",
+  "category": "D",
+  "reason": "포함 액세서리가 제품 페이지·설명서 간 상이(국가별 차이 가능), 요약만 표시.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지·문서 게시 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "srg-a40",
+  "issue_code": "R7",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 자료 접근 한계",
+  "category": "C",
+  "reason": "sony.co.kr·pro.sony 한국어 페이지 연결 재설정/HTTP 500/렌더링 안 됨. 한국어 설명서 미확인.",
+  "bundle_id": "BND-14"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "팬/틸트 속도 표기 조건",
+  "category": "D",
+  "reason": "팬/틸트 속도 조건 분리 표시, 수동 최저 0.5 vs 1.1°/s 상이.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "HDMI YCbCr 비트 심도",
+  "category": "D",
+  "reason": "HDMI YCbCr 4:2:2: 제품 페이지 8bit vs 설명서 12bit.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "RM-IP10 호환성 표기",
+  "category": "C",
+  "reason": "RM-IP10 구판 설명서엔 미기재, Remote Camera System Guide(2023)·카메라 설명서엔 포함 — 상충.",
+  "bundle_id": "BND-16"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R4",
+  "status": "REVIEW REQUIRED",
+  "title": "IP 스트리밍·오디오 정보",
+  "category": "D",
+  "reason": "공식 사양표에 IP 스트리밍·오디오 항목 없음, \"정보 없음\" 유지.",
+  "bundle_id": "BND-28"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R5",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지·문서 게시 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "srg-x40uh",
+  "issue_code": "R6",
+  "status": "REVIEW REQUIRED",
+  "title": "한국어 자료 접근 한계",
+  "category": "C",
+  "reason": "sony.co.kr·pro.sony 한국어 페이지 연결 재설정/HTTP 500/렌더링 안 됨. 한국어 설명서 미확인.",
+  "bundle_id": "BND-14"
+ },
+ {
+  "slug": "strong-usb-cable",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "상세 전기 규격 미확인",
+  "category": "C",
+  "reason": "Strong USB Cable USB 버전·대역폭 미확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "strong-usb-cable",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "sx-1216-rti",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "크기·무게 미확인",
+  "category": "C",
+  "reason": "SX-1216-RTi 본체 크기·무게 미확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "sx-1216-rti",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "원격 트리거 전압",
+  "category": "C",
+  "reason": "Remote Turn-On 트리거 전압·신호 사양 미확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "sx-1216-rti",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "tio1608-d2",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "tr315",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "전용 전면·후면 개별 사진 없음",
+  "category": "A",
+  "reason": "전용 전·후면 사진 없음. 마케팅 합성 이미지(NDI 배지) 사용.",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "tr315",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "tr335",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "tr535",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "단종 모델",
+  "category": "B",
+  "reason": "TR535 단종, 후속 TR535N(카탈로그에 이미 존재).",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "tr535",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "전용 매뉴얼 없음",
+  "category": "D",
+  "reason": "TR535 매뉴얼이 TR535N과 공유, 전용 매뉴얼 없음.",
+  "bundle_id": "BND-23"
+ },
+ {
+  "slug": "tr535",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "tr535n",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "한국 대리점 단종 표시",
+  "category": "B",
+  "reason": "TR535N: 한국 대리점 Discontinued, 미국 공식 사이트 판매 중.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "tr535n",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "ua844-swb",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "작업 브리핑의 추정('SWB = Switched 유사')은…",
+  "category": "E",
+  "reason": "페이지 설명이 공식 표현(안테나 분배 시스템)으로 작성됨.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "ua845uwb",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인…",
+  "category": "E",
+  "reason": "페이지 설명이 공식 표현(안테나 분배 시스템)으로 작성됨.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "ua845uwb",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "UA844+SWB와 달리 UA845UWB는 AC…",
+  "category": "D",
+  "reason": "UA845UWB는 내장 전원, UA844+ 계열(PS60 외장)과 전원 구조 다름.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "ua864a",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "대표 이미지(전면/후면)에는 특정 대역 라벨이 표기되어 있지 않아…",
+  "category": "A",
+  "reason": "UA864 계열 공용 하우징 사진(대역 라벨 없음).",
+  "bundle_id": "BND-02"
+ },
+ {
+  "slug": "ua874xa",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품…",
+  "category": "D",
+  "reason": "매뉴얼 표지는 UA874Z, 사양표에 UA874XA 별도 명시 — 사양표 기준.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "ua874xa",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US)…",
+  "category": "D",
+  "reason": "UA874XA 국문 페이지 없음 → en-US 사용.",
+  "bundle_id": "BND-24"
+ },
+ {
+  "slug": "ultripower-ps",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "ULTRIPOWER와의 구분이 추정에 근거함",
+  "category": "C",
+  "reason": "ULTRIPOWER(완제품)/ULTRIPOWER-PS(개별 모듈) SKU 정의 확인. 컷시트 이미지의 \"Ultripower-PS\" 모듈 라벨은 부분 근거.",
+  "bundle_id": null
+ },
+ {
+  "slug": "ultripower-ps",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "전용 하드웨어 사진 부재",
+  "category": "E",
+  "reason": "현재 페이지에 Ultripower 컷시트의 공식 Main 이미지(모듈 라벨 \"Ultripower-PS\" 표시, VERIFIED) 있음.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "ultripower-ps",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "입력 전압 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "입력 전압: 설치 가이드 100-264VAC vs 컷시트 90-240VAC.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "ultripower",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "전용 제품 페이지 및 공식 하드웨어 사진 부재",
+  "category": "E",
+  "reason": "현재 페이지에 컷시트 공식 Main(VERIFIED)·Rear(FOUND) 이미지 있음. 전용 제품 페이지 부재는 사실 기록.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "ultripower",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "입력 전압 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "입력 전압: 설치 가이드 100-264VAC vs 컷시트 90-240VAC.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "ulxd2-beta87",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 목록의 표기 'ULXD2/BETA87'은 Shure 공식…",
+  "category": "A",
+  "reason": "카탈로그 ULXD2/BETA87 = 공식 SKU ULXD2/B87A. 표시명 교체 여부.",
+  "bundle_id": "BND-04"
+ },
+ {
+  "slug": "ulxd2-ksm9",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "ULXD2/KSM9HS(하이퍼카디오이드/서브카디오이드 버전…",
+  "category": "D",
+  "reason": "별도 SKU ULXD2/KSM9HS 존재, 본 항목은 표준 KSM9 기준.",
+  "bundle_id": "BND-26"
+ },
+ {
+  "slug": "ulxd4",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "리어 패널 전용 사진은 확보하지 못했다.",
+  "category": "E",
+  "reason": "현재 페이지에 Rear 이미지(후면 패널, FOUND) 있음.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "ulxd4",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "ULX-D Dual/Quad 매뉴얼에는 Dante 오디오 다이내믹…",
+  "category": "D",
+  "reason": "Dante 다이내믹 레인지 130 dB는 ULXD4D/4Q 전용(각주 확인), ULXD4 미해당.",
+  "bundle_id": "BND-29"
+ },
+ {
+  "slug": "ulxd4d",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "리어 패널 전용 사진은 확보하지 못했다(정면 사진 1장만 CDN…",
+  "category": "E",
+  "reason": "현재 페이지에 Rear 이미지(후면 패널, FOUND) 있음.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "ulxd4q",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "확장 튜닝 대역폭(최대 166 MHz)은 지역 및 주파수 밴드에…",
+  "category": "C",
+  "reason": "국내 인가 대역·채널 수 미확인(\"지역에 따라 다름\" 보존). 국내 인증 \"인증 완료(U)\"는 기록됨.",
+  "bundle_id": null
+ },
+ {
+  "slug": "ulxd8",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "작업 목록에는 ULXD8이 'ULX-D Digital…",
+  "category": "E",
+  "reason": "페이지 설명이 \"구즈넥 마이크용 데스크/테이블 베이스 송신기\"로 반영.",
+  "bundle_id": "BND-30"
+ },
+ {
+  "slug": "ulxd8",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "ULXD8 자체의 상세 RF 감도/치수/무게 등 세부 스펙표는…",
+  "category": "C",
+  "reason": "ULXD8 자체 치수·무게·RF 사양 미확인.",
+  "bundle_id": null
+ },
+ {
+  "slug": "uvc-01",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "매뉴얼 개별 파일 미확정",
+  "category": "C",
+  "reason": "공식 매뉴얼을 다운로드 허브 페이지로만 확인.",
+  "bundle_id": "BND-21"
+ },
+ {
+  "slug": "uvc-01",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "uvc85-byod",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "번들 개별 구성품 세부 사양 미확인",
+  "category": "C",
+  "reason": "치수·무게·전원·I/O 등이 support.yealink.com(자바스크립트) 문서에만 있어 미확인.",
+  "bundle_id": "BND-12"
+ },
+ {
+  "slug": "v-02hd-mk-ii",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "매뉴얼 개별 파일 미확정",
+  "category": "C",
+  "reason": "공식 매뉴얼을 다운로드 허브 페이지로만 확인.",
+  "bundle_id": "BND-21"
+ },
+ {
+  "slug": "v-02hd-mk-ii",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "v-02hd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제조사 단종(Discontinued) 표기",
+  "category": "B",
+  "reason": "V-02HD 단종, 후속 V-02HD MK II(카탈로그에 이미 존재).",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "v-60hd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제조사 단종(Discontinued) 표기 및 4K 미지원 안내",
+  "category": "B",
+  "reason": "V-60HD 단종 + 4K 미지원 안내.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "varia-100",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Data Sheet PDF 접근 불가",
+  "category": "C",
+  "reason": "AMX VARIA Data Sheet PDF 접근 불가(제품 페이지 사양표로 대체).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "varia-80",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Data Sheet PDF 접근 불가",
+  "category": "C",
+  "reason": "AMX VARIA Data Sheet PDF 접근 불가(제품 페이지 사양표로 대체).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "varia-sl50",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Data Sheet PDF 접근 불가",
+  "category": "C",
+  "reason": "AMX VARIA Data Sheet PDF 접근 불가(제품 페이지 사양표로 대체).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "varia-sl80",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "Data Sheet PDF 접근 불가",
+  "category": "C",
+  "reason": "AMX VARIA Data Sheet PDF 접근 불가(제품 페이지 사양표로 대체).",
+  "bundle_id": "BND-11"
+ },
+ {
+  "slug": "vcm35",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "픽업 반경 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "픽업 반경: 데이터시트 6m vs 제품 페이지 5m.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "vr-4hd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "제조사 단종(Discontinued) 표기",
+  "category": "B",
+  "reason": "VR-4HD 단종 표기.",
+  "bundle_id": "BND-07"
+ },
+ {
+  "slug": "vr-6hd",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "오디오 플레이어 내부 트랙 수 불일치",
+  "category": "D",
+  "reason": "오디오 플레이어: 개요 12 files vs 사양 16 tracks.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "vs10",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "vs5",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "영문 사이트 데이터 누락",
+  "category": "E",
+  "reason": "한국 공식 사이트(lumantek.co.kr)로 확인 — AGENTS상 공식 한글 사이트가 1순위 출처.",
+  "bundle_id": "BND-31"
+ },
+ {
+  "slug": "vs5",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "x100pro-2u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 페이지 성격",
+  "category": "C",
+  "reason": "official_links가 다운로드 센터 페이지(개별 제품 페이지 아님).",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "x100pro-2u",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "x100pro-2u",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "사양서 PDF 외부 접속 차단",
+  "category": "C",
+  "reason": "support.colorlightinside.com 사양서 PDF가 제조사 사이트 경유 요청 외 403.",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "x100pro-4u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 페이지 성격",
+  "category": "C",
+  "reason": "official_links가 다운로드 센터 페이지(개별 제품 페이지 아님).",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "x100pro-4u",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "x100pro-4u",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "사양서 PDF 외부 접속 차단",
+  "category": "C",
+  "reason": "support.colorlightinside.com 사양서 PDF가 제조사 사이트 경유 요청 외 403.",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "x100pro-7u",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "공식 페이지 성격",
+  "category": "C",
+  "reason": "official_links가 다운로드 센터 페이지(개별 제품 페이지 아님).",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "x100pro-7u",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "x100pro-7u",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "사양서 PDF 외부 접속 차단",
+  "category": "C",
+  "reason": "support.colorlightinside.com 사양서 PDF가 제조사 사이트 경유 요청 외 403.",
+  "bundle_id": "BND-17"
+ },
+ {
+  "slug": "xsm4216f",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "다국어(독일어/오스트리아) 페이지에서 수집",
+  "category": "C",
+  "reason": "official_links가 독일어(오스트리아) 페이지로 리다이렉트 — 한국어/영어 공식 페이지 대조.",
+  "bundle_id": null
+ },
+ {
+  "slug": "xsm4216f",
+  "issue_code": "R2",
+  "status": "REVIEW REQUIRED",
+  "title": "제품 사진에 모델명 미표시",
+  "category": "A",
+  "reason": "이미지에 모델명 미판독·미인쇄. 제조사 페이지 귀속만으로 FOUND.",
+  "bundle_id": "BND-03"
+ },
+ {
+  "slug": "xsm4216f",
+  "issue_code": "R3",
+  "status": "REVIEW REQUIRED",
+  "title": "무게 공식 자료 간 불일치",
+  "category": "D",
+  "reason": "무게: 제품 페이지 2.80kg vs 데이터시트 1.74kg.",
+  "bundle_id": "BND-22"
+ },
+ {
+  "slug": "zenith-100",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ },
+ {
+  "slug": "zenith-200",
+  "issue_code": "R1",
+  "status": "REVIEW REQUIRED",
+  "title": "이미지 권한",
+  "category": "A",
+  "reason": "이미지(일부는 PDF·CAD 포함) 재사용 권리 미확인. 사용자 게시 승인은 기록됨.",
+  "bundle_id": "BND-01"
+ }
+]
