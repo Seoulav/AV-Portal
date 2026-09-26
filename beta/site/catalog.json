@@ -3973,6 +3973,102 @@
     "card_image": "ua845uwb-front.webp"
   },
   {
+    "brand": "Shure",
+    "product": "SLXD4D+",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd4d-plus",
+    "card_image": "slxd4d-plus-front.webp"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD4+",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4plus"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd4-plus",
+    "card_image": "slxd4-plus-front.webp"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2+/58",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-58"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd2-plus-58",
+    "card_image": "slxd2-plus-58-front.webp"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2+/B58",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b58"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd2-plus-b58",
+    "card_image": "slxd2-plus-b58-front.webp"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD2+/B87A",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b87a"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd2-plus-b87a",
+    "card_image": "slxd2-plus-b87a-front.webp"
+  },
+  {
+    "brand": "Shure",
+    "product": "SLXD1+",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Wireless Microphone System"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd1plus"
+    ],
+    "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+    "slug": "slxd1-plus",
+    "card_image": "slxd1-plus-front.webp"
+  },
+  {
     "brand": "NETGEAR",
     "product": "GS728TPP",
     "categories": [

@@ -21,6 +21,30 @@ const image = imageWith(publicationStatus);
 const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
+  'slxd4d-plus': [
+    image('Front', 'slxd4d-plus-front.webp', 'Shure SLXD4D+ 듀얼 채널 무선 수신기 정면', 'Shure', 'SLXD4D+ Dual Channel Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/526/485/60-/original/5d8c0175164861b4b499f93a9dd59111.webp', '3000x3000', '2000x469'),
+    image('Rear', 'slxd4d-plus-rear.webp', 'Shure SLXD4D+ 후면 패널(BNC 안테나 A/B, DC 전원, Ethernet, XLR·1/4" 출력 ×2)', 'Shure', 'SLXD4D+ Dual Channel Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/df2/e5c/00-/original/54a0e1793181a86c67f775ea34c97a96.webp', '3000x3000', '2000x1324'),
+    image('Other', 'slxd4d-plus-angle.webp', 'Shure SLXD4D+ 정면 사선 뷰', 'Shure', 'SLXD4D+ Dual Channel Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/233/494/26-/original/eb2787df764a89f90eea1d4d6abc1d5d.webp', '3000x3000', '2000x1410')
+  ],
+  'slxd4-plus': [
+    image('Front', 'slxd4-plus-front.webp', 'Shure SLXD4+ 싱글 채널 무선 수신기 정면', 'Shure', 'SLXD4+ Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/2b1/cd1/65-/original/7a14c5fd97c236a1bf2120cb32ece92d.webp', '3000x3000', '2000x474'),
+    image('Rear', 'slxd4-plus-rear.webp', 'Shure SLXD4+ 후면 패널(BNC 안테나 A/B, DC 전원, Ethernet, XLR·1/4" 출력)', 'Shure', 'SLXD4+ Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/bcf/520/f4-/original/7304c4386acae9f2fcf90c5f6ab0b1c2.webp', '3000x3000', '2000x1340'),
+    image('Other', 'slxd4-plus-angle.webp', 'Shure SLXD4+ 정면 사선 뷰', 'Shure', 'SLXD4+ Digital Wireless Receiver', 'https://products.shureweb.eu/shure_product_db/product_images/files/32f/ded/6e-/original/0ff6ff3ac1f82531f0f3661047edf5fa.webp', '3000x3000', '2000x1407')
+  ],
+  'slxd2-plus-58': [
+    image('Front', 'slxd2-plus-58-front.webp', 'Shure SLXD2+/58 핸드헬드 송신기 정면', 'Shure', 'SLXD2+/58 Wireless Handheld Transmitter with SM58® Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/60b/e3a/79-/original/d762e5f92b9aeeb66f8dbb9333ddb615.webp', '3000x3000', '465x2000')
+  ],
+  'slxd2-plus-b58': [
+    image('Front', 'slxd2-plus-b58-front.webp', 'Shure SLXD2+/B58 핸드헬드 송신기 정면', 'Shure', 'SLXD2+/B58 Wireless Handheld Transmitter with Beta® 58A Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/d89/8d3/a6-/original/983706fc577f201da1a2ad3cf664738e.webp', '3000x3000', '483x2000')
+  ],
+  'slxd2-plus-b87a': [
+    image('Front', 'slxd2-plus-b87a-front.webp', 'Shure SLXD2+/B87A 핸드헬드 송신기 정면', 'Shure', 'SLXD2+/B87A Wireless Handheld Transmitter with Beta® 87A Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/8bb/ab1/a7-/original/f5418228835eaafc196a54094b7f4524.webp', '3000x3000', '473x2000')
+  ],
+  'slxd1-plus': [
+    image('Front', 'slxd1-plus-front.webp', 'Shure SLXD1+ 바디팩 송신기 정면(디스플레이)', 'Shure', 'SLXD1+ Wireless Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/70a/d79/5d-/original/2b4d76e87a59e47e1a4b2d069a3c5417.webp', '3000x3000', '679x2000'),
+    image('Rear', 'slxd1-plus-rear.webp', 'Shure SLXD1+ 후면(벨트 클립·라벨)', 'Shure', 'SLXD1+ Wireless Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/ea2/97a/1e-/original/80f5a94180d7c7cce8538c08be3f8ae4.webp', '3000x3000', '679x2000'),
+    image('Other', 'slxd1-plus-top.webp', 'Shure SLXD1+ 상단(TA4M 입력·안테나)', 'Shure', 'SLXD1+ Wireless Bodypack Transmitter', 'https://products.shureweb.eu/shure_product_db/product_images/files/f23/33b/04-/original/db049b9fe6c6df0ebbbf71515cc43a19.webp', '3000x3000', '1528x632')
+  ],
   'brc-am7': [
     image('Main', 'brc-am7-main.webp', 'Sony BRC-AM7 검정색 본체 메인 이미지', 'Sony', 'BRC-AM7', 'https://www.sony.com/image/826ea30c6742e760e0c500edc5787dff?fmt=jpeg&wid=1200&hei=720', '1200×720', '1200×720', 'VERIFIED'),
     image('Front', 'brc-am7-front.webp', 'Sony BRC-AM7 검정색 본체 전면 이미지', 'Sony', 'BRC-AM7', 'https://www.sony.com/image/90470eb5cd45473e16b04e7ff772fb9b?fmt=jpeg&wid=1200&hei=720', '1200×720', '1200×720', 'VERIFIED'),
@@ -824,6 +848,12 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  'slxd4d-plus': 'slxd4d-plus-front.webp',
+  'slxd4-plus': 'slxd4-plus-front.webp',
+  'slxd2-plus-58': 'slxd2-plus-58-front.webp',
+  'slxd2-plus-b58': 'slxd2-plus-b58-front.webp',
+  'slxd2-plus-b87a': 'slxd2-plus-b87a-front.webp',
+  'slxd1-plus': 'slxd1-plus-front.webp',
   'brc-am7': 'brc-am7-main.webp',
   dm7: 'dm7-perspective.webp',
   'ki-pro-go2': 'ki-pro-go2-main.webp',

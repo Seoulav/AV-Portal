@@ -76,10 +76,11 @@
     },
     {
       "type": "Specification",
-      "status": "MISSING",
-      "title": "Specification 미확인",
-      "language": "언어 미확인",
-      "note": ""
+      "status": "FOUND",
+      "title": "Shure MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round) Specification Sheet",
+      "language": "en",
+      "note": "",
+      "url": "https://shure.widen.net/s/cpktdxcnxm/mxa925_specsheet_en"
     },
     {
       "type": "Technical Document",
@@ -429,6 +430,12 @@
       "name": "제조사 사용 안내",
       "url": "https://pubs.shure.com/guide/MXA925/en-US",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 데이터시트",
+      "url": "https://shure.widen.net/s/cpktdxcnxm/mxa925_specsheet_en",
+      "scope": "제조사 공식 출처"
     }
   ],
   "issues": [
@@ -447,8 +454,8 @@
     {
       "code": "R3",
       "status": "REVIEW REQUIRED",
-      "title": "데이터시트 PDF는 영국 대리점(audiologic.co.uk)…",
-      "detail": "데이터시트 PDF는 영국 대리점(audiologic.co.uk) 호스팅 사본만 확인되어 제조사 공식 출처 기준에 맞지 않아 제외함(Specification 문서는 MISSING으로 표기). Shure 공식 사이트 자체 스펙시트 URL 확인 필요."
+      "title": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet'…",
+      "detail": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet' 링크가 연결하는 Shure 공식 자산 포털(shure.widen.net)에 있다(2026-08-11 작성, MXA925W-R 기재). content-files.shure.com 사본은 없다."
     }
   ],
   "presentation": {

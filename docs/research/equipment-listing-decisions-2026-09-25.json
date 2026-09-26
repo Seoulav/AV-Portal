@@ -89,7 +89,8 @@
   "excluded": {
     "RTCOM": "RTCOM 65행은 조사 대상에서 제외됐다. AGENTS.md 에 따라 제조사가 직접 제공한 자료로만 다루며 이번 등재에 포함하지 않는다.",
     "no_manufacturer": "A등급이지만 제조사가 특정되지 않은 2행(삼성 전자칠판 이동형 스탠드)은 제외한다.",
-    "already_public": "현재 공개 27개와 제조사·모델이 같은 19행은 새로 추가하지 않는다."
+    "already_public": "현재 공개 27개와 제조사·모델이 같은 19행은 새로 추가하지 않는다.",
+    "discontinued_slxd": "SLX-D(비Plus) 6개(SLXD4D, SLXD4, SLXD2/SM58, SLXD2/BETA58, SLXD2/BETA87, SLXD1)는 2026-09-26 사용자 지시로 공개 목록에서 삭제하고 SLX-D+ 후속 모델로 교체했다. 원래 행 기록은 보존한다."
   },
   "entries": [
     {
@@ -4746,6 +4747,144 @@
       ],
       "grade": "B",
       "link_scope": "series"
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD4D+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD4D(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD4+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4plus"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD4(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD2+/58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-58"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD2/SM58(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD2+/B58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b58"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD2/BETA58(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD2+/B87A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b87a"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD2/BETA87(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
+    },
+    {
+      "row": null,
+      "manufacturer": "Shure",
+      "model": "SLXD1+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "official_urls": [
+        "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd1plus"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-26",
+        "reason": "사용자 지시: 단종 SLXD1(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260926-020"
+      }
     }
   ],
   "link_scope": {

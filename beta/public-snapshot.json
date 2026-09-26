@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 248,
-    "sha256": "40D85E7B7F348D4D4B0DD7275D0EA18C776DAFC4B40E81C47142479D2754C036",
+    "count": 254,
+    "sha256": "1285800ED4AF2409603D0243AB530C89EA5F531FB2554BA81279E0B19979C220",
     "baselineCount": 25,
     "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
@@ -902,7 +902,7 @@
       "io": 2
     },
     "mxa925w-r": {
-      "sha256": "6B65B91F42A0F0DD6A2C5EE867B2CBFDAF4227E982A90E79CF8BF5803529755F",
+      "sha256": "90E19A4499C829588AA9FDD751245165D01434E5E2A0547452D7FA2E3897EEDA",
       "features": 2,
       "specifications": 30,
       "io": 3
@@ -1128,6 +1128,42 @@
       "features": 5,
       "specifications": 12,
       "io": 6
+    },
+    "slxd1-plus": {
+      "sha256": "3BC8A60C5791541451607AA92331065D30DBB9E965FB102B5CC66D2D58F891C9",
+      "features": 3,
+      "specifications": 38,
+      "io": 1
+    },
+    "slxd2-plus-58": {
+      "sha256": "B71482030FC65109D3DA730E4E43C95AB43C7680C0AA19254A9E7C8D2B324F10",
+      "features": 5,
+      "specifications": 38,
+      "io": 0
+    },
+    "slxd2-plus-b58": {
+      "sha256": "BAD87B58FB6BE5BACDD7E076A1F4564286F933E659763528C8A5CEB1CCB76867",
+      "features": 5,
+      "specifications": 38,
+      "io": 0
+    },
+    "slxd2-plus-b87a": {
+      "sha256": "C419B76A228702C2322A683553782D4AE2041075F1CCED1A853C915DF1AB7748",
+      "features": 5,
+      "specifications": 38,
+      "io": 0
+    },
+    "slxd4-plus": {
+      "sha256": "9133AEBFF789FE3709A96C30425AEE6D44575AAE23A9E991B691F10C4B9A5D18",
+      "features": 3,
+      "specifications": 49,
+      "io": 4
+    },
+    "slxd4d-plus": {
+      "sha256": "11541542ECCBE98069B8145C044C430DEA1F50D5F90025AA1AEE973FEB00E0FF",
+      "features": 3,
+      "specifications": 49,
+      "io": 4
     },
     "smartvision40": {
       "sha256": "6B2EC4A2390502D9A512A4A0125D3794176E03105B6A5211B3744B101696312F",
