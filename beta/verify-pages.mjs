@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
-import { userManuals, userManualLinkFor } from './user-manuals.mjs';
+import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor } from './user-manuals.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
@@ -10,19 +10,25 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
 assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'manuals', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
-// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼 PDF: 파일명 중복 없음, 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
+// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 파일명 중복 없음, 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
+// 참고자료(userReferences)는 여러 카탈로그 항목이 같은 파일을 공유할 수 있으므로(예: 여러 모델을 함께 다루는
+// 브라켓 핸드북) 파일명 중복 검사에서 제외하고, 폴더 내용은 매뉴얼·참고자료 파일명 합집합과 비교한다.
 {
   const manualFiles = userManuals.map(entry => entry.file);
   assert.equal(new Set(manualFiles).size, manualFiles.length, '사용자 업로드 매뉴얼 파일명 중복');
+  const referenceFiles = userReferences.map(entry => entry.file);
   const manualsDir = new URL('manuals/', site);
   const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
-  assert.deepEqual(onDisk.sort(), manualFiles.sort(), '업로드 매뉴얼 폴더와 목록이 다름');
-  for (const entry of userManuals) {
-    assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 매뉴얼 파일명`);
-    assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.product}: 업로드 매뉴얼 제목`);
-    const bytes = await readFile(new URL(entry.file, manualsDir));
-    assert.ok(bytes.length > 1_000, `${entry.product}: 업로드 매뉴얼 파일이 비정상적으로 작음`);
-    assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${entry.product}: PDF 형식 아님`);
+  const expectedFiles = [...new Set([...manualFiles, ...referenceFiles])];
+  assert.deepEqual(onDisk.sort(), expectedFiles.sort(), '업로드 매뉴얼·참고자료 폴더와 목록이 다름');
+  for (const entry of [...userManuals, ...userReferences]) {
+    assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 파일명`);
+    assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.product}: 업로드 자료 제목`);
+  }
+  for (const file of expectedFiles) {
+    const bytes = await readFile(new URL(file, manualsDir));
+    assert.ok(bytes.length > 1_000, `${file}: 업로드 파일이 비정상적으로 작음`);
+    assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${file}: PDF 형식 아님`);
   }
 }
 const detail = new URL('detail/', site);
@@ -114,6 +120,13 @@ for (const item of catalog) {
   } else {
     assert.equal(userManualLinkFor(item), null, `${item.product}: 사용자 업로드 매뉴얼이 있는데 manual_link가 비어 있음`);
   }
+  if (item.reference_link !== undefined) {
+    assert.ok(typeof item.reference_link === 'string' && item.reference_link.trim(), `${item.product}: 참고자료 링크`);
+    const uploaded = userReferenceLinkFor(item);
+    assert.equal(item.reference_link, uploaded, `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+  } else {
+    assert.equal(userReferenceLinkFor(item), null, `${item.product}: 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음`);
+  }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');
     assert.ok(group1Images[item.slug], `${item.slug}: 검토된 이미지 매니페스트 없음`);
@@ -191,4 +204,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, no PDF binaries.`);
+console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, ${userManuals.length + userReferences.length} user-uploaded PDF entries.`);

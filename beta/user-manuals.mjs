@@ -18,3 +18,32 @@ export function userManualLinkFor(item) {
   if (!entry) return null;
   return `./manuals/${entry.file}`;
 }
+
+// 제품 자체의 매뉴얼은 아니지만 함께 참고할 부속 자료(예: 여러 모델을 함께 다루는
+// 브라켓 설치 핸드북). brand/product는 target(여러 제품에 매핑될 수 있는 하나의 파일)이 아니라
+// 이 참고자료가 붙는 카탈로그 항목 각각을 기준으로 한 줄씩 적는다.
+export const userReferences = [
+  {
+    brand: 'JBL',
+    product: 'AC18/95',
+    file: 'jbl-ae-series-u-bracket-handbook.pdf',
+    title: 'AE Series U-Bracket Handbook (브라켓 설치·치수 참고자료, AC18 외 다수 모델 공용)',
+    note: uploadNote
+  },
+  {
+    brand: 'JBL',
+    product: 'AC18/26',
+    file: 'jbl-ae-series-u-bracket-handbook.pdf',
+    title: 'AE Series U-Bracket Handbook (브라켓 설치·치수 참고자료, AC18 외 다수 모델 공용)',
+    note: uploadNote
+  }
+];
+
+const referencesByIdentity = new Map(userReferences.map(entry => [identity(entry.brand, entry.product), entry]));
+
+// 카탈로그 항목에 붙일 reference_link 값. 해당 참고자료가 없으면 null.
+export function userReferenceLinkFor(item) {
+  const entry = referencesByIdentity.get(identity(item.brand, item.product));
+  if (!entry) return null;
+  return `./manuals/${entry.file}`;
+}
