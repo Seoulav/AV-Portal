@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 254개
-- Product Detail: 154개
+- Product Detail: 170개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -784,18 +784,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/jbl-professional-control-23-1
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605095541geg5exvrrk.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-23-1
 
 - 제품: JBL Control 25-1
   분류: 오디오 | Audio | Loudspeaker
   종류: 장비
   제품군 링크: https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605144420obrb68f8px.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-25-1
 
 - 제품: JBL Control 28-1
   분류: 오디오 | Audio | Loudspeaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-28-1/1000
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16051684686gjb6d76u3.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-28-1
 
 - 제품: JBL AC18/95
   분류: 오디오 | Audio | Loudspeaker
@@ -803,6 +806,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://jblpro.com/en-US/products/ac18-95.html
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605154898rrmbu4pd7b.pdf&o_file_name=jbl_ac18_95-082016.pdf
   참고자료: ./manuals/jbl-ae-series-u-bracket-handbook.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ac18-95
 
 - 제품: JBL AC18/26
   분류: 오디오 | Audio | Loudspeaker
@@ -810,72 +814,84 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://jblpro.com/en-US/products/ac18-26
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605766688m0d2qhy2fq.pdf&o_file_name=ac18_26+spec+sheet.pdf
   참고자료: ./manuals/jbl-ae-series-u-bracket-handbook.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ac18-26
 
 - 제품: JBL CONTROL 412C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-412c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345034oy3sqaxuwu.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-412ct
 
 - 제품: JBL CONTROL 414C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-414c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345342pm82utzzmh.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-414ct
 
 - 제품: JBL CONTROL 416C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-416c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770339666vf9njnubod.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-416ct
 
 - 제품: JBL CONTROL 418C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-418c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770346024e22uie18g3.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-418ct
 
 - 제품: JBL CONTROL 447C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/es/products/control-447c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770615261tnq7fybv3j.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-447ct
 
 - 제품: JBL CONTROL 419CS/T
   분류: 오디오 | Audio | Subwoofer
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-419cs-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743146874esba1f630q.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-419cst
 
 - 제품: JBL CONTROL 440CS/T
   분류: 오디오 | Audio | Subwoofer
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-440cs-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770616172cx61md0n71.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-440cst
 
 - 제품: JBL CONTROL 424C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-424c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743129675qsfxza301o.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-424ct
 
 - 제품: JBL CONTROL 424LP
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-424lp
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431407306qhm9nxa4l.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-424lp
 
 - 제품: JBL CONTROL 426C/T
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-426c-t
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743143029g164fiofxh.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-426ct
 
 - 제품: JBL CONTROL 426LP
   분류: 오디오 | Audio | Ceiling Speaker
   종류: 장비
   공식 링크: https://jblpro.com/en-US/products/control-426lp
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431441528wpwmyacz4.pdf&o_file_name=jbl-c420_manual_a.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=control-426lp
 
 - 제품: AMX NX-3200
   분류: 제어 | Control | Control Processor

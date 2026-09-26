@@ -504,6 +504,54 @@ export const group1Images = {
   ],
   lh75wmfwlgcxkr: [
     image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+  ],
+  'control-23-1': [
+    image('Main', 'control-23-1-main.webp', 'JBL Control 23-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp', '1500x986', '1500x986', 'VERIFIED')
+  ],
+  'control-25-1': [
+    image('Main', 'control-25-1-main.webp', 'JBL Control 25-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 25-1', 'https://adn.harmanpro.com/productattachment/7362/product_attachment/x_large_2x-b1bdb34cf58fa0730a34c8f41b7dacb2.webp', '1500x986', '1500x986', 'VERIFIED')
+  ],
+  'control-28-1': [
+    image('Main', 'control-28-1-main.webp', 'JBL Control 28-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 28-1', 'https://adn.harmanpro.com/productattachment/7370/product_attachment/x_large_2x-a18e6b1172950f3ff0186c68d31ba836.webp', '1500x986', '1500x986', 'VERIFIED')
+  ],
+  'ac18-95': [
+    image('Main', 'ac18-95-main.webp', 'JBL AC18/95 8인치 2-way 스피커', 'JBL', 'AC18/95', 'https://adn.harmanpro.com/productattachment/9529/product_attachment/x_large_2x-3b7b974f27f7f842357828dac7f13d64.webp', '1500x986', '1500x986', 'VERIFIED')
+  ],
+  'ac18-26': [
+    image('Main', 'ac18-26-main.webp', 'JBL AC18/26 8인치 2-way 스피커', 'JBL', 'AC18/26', 'https://adn.harmanpro.com/productattachment/7472/product_attachment/x_large_2x-205a1ef14cc0712cfec4de4daefd511d.webp', '1500x986', '1500x986', 'VERIFIED')
+  ],
+  'control-412ct': [
+    image('Main', 'control-412ct-main.webp', 'JBL Control 412C/T 천장매입형 스피커', 'JBL', 'Control 412C/T', 'https://adn.harmanpro.com/productattachment/13468/product_attachment/x_large_2x-eb54e55ceb8e8543644466108eb1d651.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-414ct': [
+    image('Main', 'control-414ct-main.webp', 'JBL Control 414C/T 천장매입형 스피커', 'JBL', 'Control 414C/T', 'https://adn.harmanpro.com/productattachment/13476/product_attachment/x_large_2x-4ef25d1dd6f33efb57eceed876f42403.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-416ct': [
+    image('Main', 'control-416ct-main.webp', 'JBL Control 416C/T 천장매입형 스피커', 'JBL', 'Control 416C/T', 'https://adn.harmanpro.com/productattachment/13515/product_attachment/x_large_2x-01950787c3c7601434d8d3aeb2fddec3.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-418ct': [
+    image('Main', 'control-418ct-main.webp', 'JBL Control 418C/T 천장매입형 스피커', 'JBL', 'Control 418C/T', 'https://adn.harmanpro.com/productattachment/13483/product_attachment/x_large_2x-8f3d95bd428a0d479700ee038dd4d60b.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-447ct': [
+    image('Main', 'control-447ct-main.webp', 'JBL Control 447C/T 천장매입형 스피커', 'JBL', 'Control 447C/T', 'https://adn.harmanpro.com/productattachment/13555/product_attachment/x_large_2x-19f26a5cf1122a0608d8f17f1283304e.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-419cst': [
+    image('Main', 'control-419cst-main.webp', 'JBL Control 419CS/T 천장매입형 서브우퍼', 'JBL', 'Control 419CS/T', 'https://adn.harmanpro.com/productattachment/12906/product_attachment/x_large_2x-8cf339e050a6c8ee4275c8d3a9aa2982.webp', '2141x1605', '2141x1605', 'VERIFIED')
+  ],
+  'control-440cst': [
+    image('Main', 'control-440cst-main.webp', 'JBL Control 440CS/T 천장매입형 서브우퍼', 'JBL', 'Control 440CS/T', 'https://adn.harmanpro.com/productattachment/13578/product_attachment/x_large_2x-c38ea84849e7cce026f6513fadb9f69f.webp', '1605x1605', '1605x1605', 'VERIFIED')
+  ],
+  'control-424ct': [
+    image('Main', 'control-424ct-main.webp', 'JBL Control 424C/T 천장매입형 스피커', 'JBL', 'Control 424C/T', 'https://adn.harmanpro.com/productattachment/13053/product_attachment/x_large_2x-f224719ed4ed63273c83322fa623c2d8.webp', '1450x1605', '1450x1605', 'VERIFIED')
+  ],
+  'control-424lp': [
+    image('Main', 'control-424lp-main.webp', 'JBL Control 424LP 저심도 천장매입형 스피커', 'JBL', 'Control 424LP', 'https://adn.harmanpro.com/productattachment/12920/product_attachment/x_large_2x-e359522ec10c157e439ead17a7acfd42.webp', '1450x1605', '1450x1605', 'VERIFIED')
+  ],
+  'control-426ct': [
+    image('Main', 'control-426ct-main.webp', 'JBL Control 426C/T 천장매입형 스피커', 'JBL', 'Control 426C/T', 'https://adn.harmanpro.com/productattachment/12941/product_attachment/x_large_2x-8239b57ad60d042c03bfd413d7bbc86c.webp', '1424x1605', '1424x1605', 'VERIFIED')
+  ],
+  'control-426lp': [
+    image('Main', 'control-426lp-main.webp', 'JBL Control 426LP 저심도 천장매입형 스피커', 'JBL', 'Control 426LP', 'https://adn.harmanpro.com/productattachment/12927/product_attachment/x_large_2x-340066799085d22ff8cd6a76e28cfaa9.webp', '1742x1605', '1742x1605', 'VERIFIED')
   ]
 };
 
@@ -679,5 +727,21 @@ export const cardImages = {
   lh55vhcrbgbxkr: 'lh55vhcrbgbxkr-main.webp',
   kq75lsf03wfxkr: 'kq75lsf03wfxkr-main.webp',
   lh55wmfwbgcxkr: 'lh55wmfwbgcxkr-main.webp',
-  lh75wmfwlgcxkr: 'lh75wmfwlgcxkr-main.webp'
+  lh75wmfwlgcxkr: 'lh75wmfwlgcxkr-main.webp',
+  'control-23-1': 'control-23-1-main.webp',
+  'control-25-1': 'control-25-1-main.webp',
+  'control-28-1': 'control-28-1-main.webp',
+  'ac18-95': 'ac18-95-main.webp',
+  'ac18-26': 'ac18-26-main.webp',
+  'control-412ct': 'control-412ct-main.webp',
+  'control-414ct': 'control-414ct-main.webp',
+  'control-416ct': 'control-416ct-main.webp',
+  'control-418ct': 'control-418ct-main.webp',
+  'control-447ct': 'control-447ct-main.webp',
+  'control-419cst': 'control-419cst-main.webp',
+  'control-440cst': 'control-440cst-main.webp',
+  'control-424ct': 'control-424ct-main.webp',
+  'control-424lp': 'control-424lp-main.webp',
+  'control-426ct': 'control-426ct-main.webp',
+  'control-426lp': 'control-426lp-main.webp'
 };
