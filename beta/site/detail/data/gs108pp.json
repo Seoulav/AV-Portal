@@ -109,7 +109,7 @@
       "source": "P"
     },
     {
-      "text": "소형 금속 케이스와 조용한 팬을 탑재해 내구성이 높고 공간을 절약하면서도 조용하게 작동한다.",
+      "text": "소형 금속 케이스와 팬리스(무소음) 설계로 내구성이 높고 공간을 절약하면서도 조용하게 작동한다.",
       "source": "P"
     },
     {
@@ -273,7 +273,14 @@
       "scope": "제조사 공식 출처"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "팬 유무 공식 자료 간 불일치",
+      "detail": "제품 페이지 문구는 'QUIET FANS'지만 데이터시트는 'Fanless', 'Acoustic noise 0 (fanless)'로 적는다. 데이터시트 기준으로 팬리스로 표기했다."
+    }
+  ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
     "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",

@@ -223,10 +223,10 @@
     },
     {
       "group": "Physical",
-      "name": "본체 지름",
-      "value": "80",
+      "name": "크기",
+      "value": "Φ223 × H83 (커버 포함) / Φ215 × H81 (커버 제외)",
       "unit": "mm",
-      "condition": "저프로파일 디자인",
+      "condition": "80mm는 높이(저프로파일) 기준",
       "source": "P",
       "verification": "FOUND"
     },

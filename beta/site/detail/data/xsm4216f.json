@@ -12,7 +12,7 @@
   "korean": "1G AV over IP 환경을 위해 설계된 16포트 SFP+ 광 전용 완전관리형 스위치이며, 후면 포트 배치로 AV 랙에 깔끔하게 통합할 수 있다.",
   "verificationSummary": "제조사 공식 제품 페이지(netgear.com, 오스트리아/독일어 로케일)에서 전체 사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "XSM4216F(모델명 M4250-16XF)는 16개의 1G/10G 광 SFP+ 포트로만 구성된 NETGEAR M4250 Pro AV 라인의 완전관리형 스위치로, PoE 급전 기능은 없다. AV over IP 환경에 맞춰 전면에 포트 상태 LED를, 후면에 실제 배선을 배치하는 AV 특화 디자인을 적용했으며, NETGEAR IGMP Plus 멀티캐스트 기능이 기본 탑재되어 별도 설정 없이 멀티캐스트 스트리밍이 가능하다.\n\n스위칭 용량은 1기가비트급이며 최대 12KB 점보 프레임을 지원한다. 팬리스 동작 또는 25도 기준 56.7dB 소음의 팬 냉각 모드를 선택할 수 있어 AV 랙 소음 관리에 유리하다. AVB(Audio Video Bridging) 기능은 전자 라이선스(AVB4216F-10000S)를 구매해 활성화하는 방식으로 지원된다.\n\n크기는 440 x 200 x 43.2mm, 무게는 2.80kg이며, 표준 랙 마운트 브래킷과 언더테이블/벽면 장착용 긴 브래킷, 탁상 설치용 고무 풋을 함께 제공한다. NETGEAR 평생 제한 하드웨어 보증이 적용된다.",
+  "overview": "XSM4216F(모델명 M4250-16XF)는 16개의 1G/10G 광 SFP+ 포트로만 구성된 NETGEAR M4250 Pro AV 라인의 완전관리형 스위치로, PoE 급전 기능은 없다. AV over IP 환경에 맞춰 전면에 포트 상태 LED를, 후면에 실제 배선을 배치하는 AV 특화 디자인을 적용했으며, NETGEAR IGMP Plus 멀티캐스트 기능이 기본 탑재되어 별도 설정 없이 멀티캐스트 스트리밍이 가능하다.\n\n16개 포트 전체에 320Gbps 논블로킹 패브릭을 제공하며(SFP+ 10G 전용, 1~12번 포트는 1G도 지원), 최대 12KB 점보 프레임을 지원한다. 팬리스 동작 또는 25도 기준 56.7dB 소음의 팬 냉각 모드를 선택할 수 있어 AV 랙 소음 관리에 유리하다. AVB(Audio Video Bridging) 기능은 전자 라이선스(AVB4216F-10000S)를 구매해 활성화하는 방식으로 지원된다.\n\n크기는 440 x 200 x 43.2mm, 무게는 2.80kg이며, 표준 랙 마운트 브래킷과 언더테이블/벽면 장착용 긴 브래킷, 탁상 설치용 고무 풋을 함께 제공한다. NETGEAR 평생 제한 하드웨어 보증이 적용된다.",
   "images": [
     {
       "role": "Main",
@@ -132,7 +132,7 @@
       "name": "포트 수",
       "value": "16",
       "unit": "포트",
-      "condition": "16 x 1G/10G Fiber SFP+",
+      "condition": "16 x 10G SFP+ (1G는 1~12번 포트만)",
       "source": "P",
       "verification": "FOUND"
     },
@@ -297,6 +297,12 @@
       "status": "REVIEW REQUIRED",
       "title": "제품 사진에 모델명 미표시",
       "detail": "다운로드한 제품 이미지에는 NETGEAR 로고만 보이고 XSM4216F/M4250-16XF 모델명이 육안으로 식별되지 않아 verificationStatus를 FOUND로 표시함(VERIFIED 아님)."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "무게 공식 자료 간 불일치",
+      "detail": "무게가 제품 페이지 2.80kg, M4250 데이터시트 1.74kg로 서로 다르다. 한쪽으로 확정하지 않음."
     }
   ],
   "presentation": {
