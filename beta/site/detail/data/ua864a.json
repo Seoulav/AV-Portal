@@ -10,7 +10,7 @@
     "Audio",
     "안테나"
   ],
-  "english": "UA800 Series / Wireless Antennas",
+  "english": "UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)",
   "korean": "UA864는 벽면이나 천장, 금속 표면에 낮은 프로파일로 설치할 수 있는 능동형 지향성 광대역 안테나로, 최대 100도(중심 주파수 기준, 지역별 상이)의 커버리지 패턴을 제공한다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -242,18 +242,6 @@
   ],
   "io": [
     {
-      "group": "Power",
-      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
-      "signal": "Power input",
-      "direction": "IN",
-      "quantity": "1",
-      "protocol": "",
-      "availability": "",
-      "condition": "10~15V DC 바이어스 (동축 커넥터를 통해 공급), 75mA",
-      "source": "P",
-      "verification": "PARTIAL"
-    },
-    {
       "group": "RF",
       "connector": "BNC (Female)",
       "signal": "RF output to receiver",
@@ -262,6 +250,18 @@
       "protocol": "",
       "availability": "",
       "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "BNC (동축 바이어스 공급)",
+      "signal": "Power input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "10~15V DC 바이어스 (동축 커넥터를 통해 공급), 75mA",
       "source": "P",
       "verification": "FOUND"
     }

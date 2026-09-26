@@ -10,7 +10,7 @@
     "Audio",
     "마이크로폰"
   ],
-  "english": "Microflex Complete (MXC) / Microflex Complete Wireless (MXCW) Gooseneck Microphones",
+  "english": "MXC420/C — MXC Gooseneck Microphone, 20\", Single-flex, Cardioid",
   "korean": "MXC420/C는 Shure의 디지털 컨퍼런스 시스템 Microflex Complete(MXC) 및 무선 버전 Microflex Complete Wireless(MXCW) 컨퍼런스/통역 유닛에 연결해 사용하는 20인치(50cm) 구스넥 마이크로폰이다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -222,7 +222,20 @@
       "verification": "VERIFIED"
     }
   ],
-  "io": [],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "10-pin modular plug",
+      "signal": "Conference unit connection",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "탈부착식, 핵스키로 잠금 가능",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
   "sources": [
     {
       "code": "P",

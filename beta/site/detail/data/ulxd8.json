@@ -10,7 +10,7 @@
     "Audio",
     "무선 시스템"
   ],
-  "english": "Shure ULX-D Digital Wireless",
+  "english": "ULXD8 Wireless Gooseneck Base Transmitter",
   "korean": "ULX-D 구즈넥 마이크용 데스크/테이블 베이스 송신기. Shure Microflex MX405, MX410, MX415 구즈넥 마이크 및 MX410DF/MX415DF Dualflex 구즈넥 마이크(모두 별매)와 결합해 사용한다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -100,11 +100,11 @@
   ],
   "features": [
     {
-      "text": "AES-256 암호화를 지원해 무선 오디오 전송 보안을 강화한다.",
+      "text": "AES-256 암호화를 지원한다.",
       "source": ""
     },
     {
-      "text": "배터리 관련 사양: 배터리 타입 AA 배터리 또는 지능형 충전식(리튬이온) 솔루션().",
+      "text": "배터리 사양: AA 배터리 또는 지능형 충전식(리튬이온) 솔루션 · 런타임 최대 9시간(AA 기준)",
       "source": ""
     }
   ],

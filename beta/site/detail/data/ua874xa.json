@@ -10,7 +10,7 @@
     "Audio",
     "안테나"
   ],
-  "english": "UA800 Series / Wireless Antennas",
+  "english": "UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)",
   "korean": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -237,18 +237,6 @@
   ],
   "io": [
     {
-      "group": "Power",
-      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
-      "signal": "Power input",
-      "direction": "IN",
-      "quantity": "1",
-      "protocol": "",
-      "availability": "",
-      "condition": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75",
-      "source": "P",
-      "verification": "PARTIAL"
-    },
-    {
       "group": "RF",
       "connector": "BNC (Female)",
       "signal": "RF output to receiver",
@@ -257,6 +245,18 @@
       "protocol": "",
       "availability": "",
       "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "BNC (동축 바이어스 공급)",
+      "signal": "Power input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))",
       "source": "P",
       "verification": "FOUND"
     }

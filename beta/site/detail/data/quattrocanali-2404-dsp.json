@@ -100,7 +100,7 @@
   ],
   "features": [
     {
-      "text": "4채널 구성이며, 채널당 최대 출력 @ 8Ω 기준 채널당 600W를 출력한다.",
+      "text": "4채널 구성이며, 8Ω 부하 기준 채널당 600W를 출력한다.",
       "source": ""
     },
     {
@@ -562,13 +562,13 @@
   "io": [
     {
       "group": "Output",
-      "connector": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/8-STF1-7,62",
+      "connector": "Phoenix PC 5/8-STF1-7,62",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "4채널",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
       "source": "P",
       "verification": "FOUND"
     },

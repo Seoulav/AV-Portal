@@ -10,7 +10,7 @@
     "Audio",
     "네트워크 기기"
   ],
-  "english": "Microflex Complete Wireless (MXCW)",
+  "english": "MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)",
   "korean": "MXCWAPT는 Shure Microflex Complete Wireless(MXCW) 회의 시스템의 중앙 허브 역할을 하는 액세스 포인트 트랜시버로, 최대 125대의 무선 회의 유닛(MXCW640 등)에 대한 오디오 라우팅, 주파수 조정, 시스템 제어를 담당한다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -114,7 +114,7 @@
   ],
   "features": [
     {
-      "text": "AES-256 암호화를 지원해 무선 오디오 전송 보안을 강화한다.",
+      "text": "AES-128 암호화를 지원한다(RF (무선 회의 유닛과의 통신)).",
       "source": ""
     },
     {
@@ -323,27 +323,27 @@
     },
     {
       "group": "Network",
-      "connector": "Gigabit Ethernet, Dante 디지털 오디오",
+      "connector": "RJ45",
       "signal": "Network / Dante audio",
       "direction": "I/O",
       "quantity": "",
       "protocol": "Dante",
       "availability": "",
-      "condition": "10/100/1000Mbps",
+      "condition": "Gigabit Ethernet, Dante 디지털 오디오 (10/100/1000Mbps)",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Power",
-      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
+      "connector": "RJ45 (PoE)",
       "signal": "Power input",
       "direction": "IN",
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "Power over Ethernet (PoE)",
+      "condition": "Power over Ethernet (PoE) (37-57V DC 공급전압)",
       "source": "P",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
     }
   ],
   "sources": [

@@ -10,7 +10,7 @@
     "Audio",
     "마이크로폰"
   ],
-  "english": "Microflex Standard Gooseneck Microphones (MX400D Desktop Series)",
+  "english": "MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18\", Cardioid, with Desktop Base",
   "korean": "MX418D/C는 18인치 길이의 카디오이드 구스넥 콘덴서 마이크로폰으로, 탁상용 데스크탑 베이스와 10피트(3m) XLR 케이블이 부착되어 임시 회의나 다목적 공간에서 빠르게 설치·철거할 수 있도록 설계되었다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -332,8 +332,20 @@
   ],
   "io": [
     {
+      "group": "Audio",
+      "connector": "3핀 male XLR (부착형 케이블)",
+      "signal": "Microphone audio output (phantom powered)",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "3m(10ft) 부착형, 3핀 male XLR + 로직용 비종단 3선",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
       "group": "Power",
-      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
+      "connector": "XLR (팬텀 전원)",
       "signal": "Power input",
       "direction": "IN",
       "quantity": "1",
@@ -341,7 +353,7 @@
       "availability": "",
       "condition": "11-52V DC 팬텀, 2.0mA",
       "source": "P",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
     }
   ],
   "sources": [

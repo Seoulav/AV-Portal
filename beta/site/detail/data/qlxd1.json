@@ -10,7 +10,7 @@
     "Audio",
     "무선 시스템"
   ],
-  "english": "Shure QLX-D Digital Wireless",
+  "english": "QLXD1 Bodypack Transmitter",
   "korean": "QLX-D 디지털 무선 바디팩(벨트팩) 송신기. TA4M 커넥터로 라발리에/헤드셋/악기용 케이블과 연결한다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -103,7 +103,7 @@
       "source": ""
     },
     {
-      "text": "배터리 관련 사양: 배터리 타입 Shure SB900C 충전식 리튬이온 또는 AA(1.5V) 알칼라인().",
+      "text": "배터리 사양: Shure SB900C 충전식 리튬이온 또는 AA(1.5V) 알칼라인 · 런타임 >11 시간 (470–865 MHz, SB900C)",
       "source": ""
     }
   ],
@@ -282,9 +282,21 @@
   ],
   "io": [
     {
+      "group": "RF",
+      "connector": "SMA",
+      "signal": "RF antenna output",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
       "group": "Audio",
       "connector": "4핀 male mini connector (TA4M)",
-      "signal": "Audio/mic input",
+      "signal": "Mic/instrument input",
       "direction": "IN",
       "quantity": "",
       "protocol": "",

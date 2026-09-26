@@ -100,7 +100,7 @@
   ],
   "features": [
     {
-      "text": "2채널 구성이며, 채널당 최대 출력 @ 8Ω (대칭) 기준 채널당 800W를 출력한다.",
+      "text": "2채널 구성이며, 8Ω 부하 기준 채널당 800W를 출력한다.",
       "source": ""
     },
     {
@@ -728,13 +728,13 @@
   "io": [
     {
       "group": "Output",
-      "connector": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능, Phoenix PC 5/4-STF1-7,62",
+      "connector": "Phoenix PC 5/4-STF1-7,62",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "2채널",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
       "source": "P",
       "verification": "FOUND"
     },
@@ -758,19 +758,7 @@
       "quantity": "2채널",
       "protocol": "Dante, AES67",
       "availability": "AD/DSP+D 모델",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Control",
-      "connector": "1 x RJ45",
-      "signal": "제어/모니터링 네트워크",
-      "direction": "I/O",
-      "quantity": "",
-      "protocol": "ArmoníaPlus",
-      "availability": "",
-      "condition": "",
+      "condition": "제어·모니터링 겸용 포트",
       "source": "P",
       "verification": "FOUND"
     },

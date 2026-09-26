@@ -10,7 +10,7 @@
     "Audio",
     "액세서리"
   ],
-  "english": "UA800 Series Antenna Distribution",
+  "english": "UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)",
   "korean": "UA844+SWB는 한 쌍의 안테나 신호를 최대 5대의 무선 수신기(QLX-D, ULX, ULX-D, SLX, BLX4R 등)로 분배하는 능동형(앰프 내장) 안테나/전원 분배 시스템이다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -281,14 +281,38 @@
       "verification": "FOUND"
     },
     {
+      "group": "RF",
+      "connector": "BNC",
+      "signal": "RF output to receivers",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
       "group": "Power",
-      "connector": "전원 커넥터(제조사 자료에 세부 규격 미기재)",
+      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
       "signal": "Power input",
       "direction": "IN",
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "14 ~ 18",
+      "condition": "14 ~ 18 V DC",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "signal": "DC power output to receivers",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "14~18V DC x 4채널",
       "source": "P",
       "verification": "PARTIAL"
     }

@@ -10,7 +10,7 @@
     "Audio",
     "무선 시스템"
   ],
-  "english": "Shure ULX-D Digital Wireless",
+  "english": "ULXD2/B87A Digital Handheld Transmitter with BETA 87A Capsule",
   "korean": "ULX-D 핸드헬드 송신기 본체에 Shure BETA 87A(슈퍼카디오이드 컨덴서 보컬 카트리지)를 결합한 정식 카탈로그 SKU.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
@@ -104,7 +104,7 @@
       "source": ""
     },
     {
-      "text": "배터리 관련 사양: 배터리 타입 Shure SB900-series 충전식 리튬이온 또는 AA(1.5V) 알칼라인().",
+      "text": "배터리 사양: Shure SB900-series 충전식 리튬이온 또는 AA(1.5V) 알칼라인 · 런타임 >11 시간 (SB900C, 10mW)",
       "source": ""
     },
     {

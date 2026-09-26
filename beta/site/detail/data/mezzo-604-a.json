@@ -114,7 +114,7 @@
   ],
   "features": [
     {
-      "text": "4채널 구성이며, 채널당 출력 @ 8Ω (대칭) 기준 채널당 150W를 출력한다.",
+      "text": "4채널 구성이며, 8Ω 부하 기준 채널당 150W를 출력한다.",
       "source": ""
     },
     {
@@ -690,13 +690,13 @@
     },
     {
       "group": "Audio",
-      "connector": "3.5mm 스테레오 미니잭, 입력1·2와 병렬",
+      "connector": "3.5mm 스테레오 미니잭",
       "signal": "Unbalanced analog audio in",
       "direction": "IN",
       "quantity": "2채널",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "입력1·2와 병렬",
       "source": "P",
       "verification": "FOUND"
     },
