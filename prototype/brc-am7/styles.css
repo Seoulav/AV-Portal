@@ -214,8 +214,9 @@ h1{font-size:clamp(46px,5vw,66px);line-height:1.02;letter-spacing:-.065em;margin
 .dialog-top strong{display:block;font-size:16px;margin-top:5px}
 .dialog-top button{border:1px solid #dce5f4;background:#f5f7fb;border-radius:10px;padding:9px 13px;color:#375481;font-size:12px;font-weight:800}
 .dialog-top button span{font-size:18px;vertical-align:-1px}
-.dialog-image-wrap{background:#f7f9fc;border-radius:15px;overflow:hidden;display:grid;place-items:center}
+.dialog-image-wrap{position:relative;background:#f7f9fc;border-radius:15px;overflow:hidden;display:grid;place-items:center;cursor:zoom-in}
 .dialog-image-wrap img{display:block;width:100%;max-height:calc(94vh - 145px);object-fit:contain}
+.image-loupe{position:absolute;width:180px;height:180px;border-radius:50%;border:2px solid #fff;box-shadow:0 6px 24px #071c4a55,0 0 0 1px #071c4a22;pointer-events:none;background-repeat:no-repeat;z-index:2}
 .image-dialog>p{font-size:10px;color:#8290a7;padding:3px 6px 0;margin-bottom:0}
 .image-dialog>p a{color:#2e66c6;text-decoration:underline}
 @media(max-width:1100px){
@@ -477,6 +478,7 @@ main{max-width:1200px;padding-bottom:72px}
 .image-dialog{background:#262626;border:1px solid #555;color:#eee;border-radius:3px}
 .dialog-top button{background:#353535;border-color:#666;color:#eee}
 .dialog-image-wrap{background:#1b1b1b;border-radius:2px}
+.image-loupe{border-color:#eee;box-shadow:0 6px 24px #00000088,0 0 0 1px #000000aa}
 .image-dialog>p{color:#bbb}
 .image-dialog>p a{color:#c3d4ff}
 @media(max-width:880px){
