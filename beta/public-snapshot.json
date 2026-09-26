@@ -206,22 +206,22 @@
       "io": 0
     },
     "comtech-d-2125": {
-      "sha256": "6D3C1DA6D710A0F217509835FB8427F12FE08DDB176103E3785756ABA10B164E",
+      "sha256": "B8843175FCBEE937E0C14A07BCD208030044BC789E962514697B1C024474148C",
       "features": 3,
-      "specifications": 15,
-      "io": 3
+      "specifications": 20,
+      "io": 5
     },
     "comtech-d-4125": {
-      "sha256": "BE9DA30CEE85BF775DDBBD992013E6A1E8A46B3FC0D0801DACBF3BFD3318CB95",
+      "sha256": "5C21AB4846F576FC36D81255B2CB1953361B8EC91022F3C1863C7FCF03139E3D",
       "features": 3,
-      "specifications": 15,
-      "io": 3
+      "specifications": 20,
+      "io": 5
     },
     "comtech-d-8125": {
-      "sha256": "19E7F63869F61799F0C565559972D533CC5C6B2E796BE5D9DCE7611C343C531B",
+      "sha256": "0FEE7DE32C79C9E14F2B244A7FB8050A661C293A3CC7A3AD6F7FFDF0F7D9F9A4",
       "features": 3,
-      "specifications": 14,
-      "io": 3
+      "specifications": 19,
+      "io": 5
     },
     "confidea-flex": {
       "sha256": "E4C324400E17F6030427D420C7F0006562C501950E540F71A2A7ED2275B0B502",

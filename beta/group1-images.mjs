@@ -641,10 +641,12 @@ export const group1Images = {
     image('Rear', 'dci-4-300da-rear.webp', 'Crown DCi 4|300DA 후면 Dante/AES67 포트 패널', 'HARMAN', 'Crown DCi 4|300DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/10508_1728962207/Crown_DCi_4300_DA_Back_x_large_2x.webp', '4096x2731', '2000x1333')
   ],
   'comtech-d-4125': [
-    image('Front', 'ctd-4125-front.webp', 'Crown ComTech CTD-4125 전면', 'HARMAN', 'Crown CTD-4125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13174_1748629693/Crown_ComTech_CTD-4125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x789', '2000x385')
+    image('Front', 'ctd-4125-front.webp', 'Crown ComTech CTD-4125 전면', 'HARMAN', 'Crown CTD-4125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13174_1748629693/Crown_ComTech_CTD-4125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x789', '2000x385'),
+    image('Rear', 'ctd-4125-rear.webp', 'Crown ComTech CTD-4125 후면 커넥터 패널', 'HARMAN', 'Crown CTD-4125', 'https://adn.harmanpro.com/productattachment/13161/product_attachment/x_large_2x-18c8095e9a27253142ad0321e5e357e0.webp', '1605x1605', '1310x292')
   ],
   'comtech-d-8125': [
-    image('Front', 'ctd-8125-front.webp', 'Crown ComTech CTD-8125 전면', 'HARMAN', 'Crown CTD-8125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13172_1748629462/Crown_ComTech_CTD-8125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x533', '2000x260')
+    image('Front', 'ctd-8125-front.webp', 'Crown ComTech CTD-8125 전면', 'HARMAN', 'Crown CTD-8125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13172_1748629462/Crown_ComTech_CTD-8125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x533', '2000x260'),
+    image('Rear', 'ctd-8125-rear.webp', 'Crown ComTech CTD-8125 후면 커넥터 패널', 'HARMAN', 'Crown CTD-8125', 'https://adn.harmanpro.com/productattachment/13165/product_attachment/x_large_2x-fbbda157c10ba22fd84b0767b9815d87.webp', '1605x1605', '1519x188')
   ],
   'dci-2-600': [
     image('Front', 'dci-2-600-front.webp', 'Crown DCi 2|600 전면', 'HARMAN', 'Crown DCi 2|600', 'https://adn.harmanpro.com/product_attachments/product_attachments/2105_1728943309/DCi_Analog_2-600_front_no_top_shadow_x_large_2x.webp', '4096x990', '2000x483'),
@@ -711,7 +713,8 @@ export const group1Images = {
     image('Rear', 'dci-4-600da-rear.webp', 'Crown DCi 4|600DA 후면 Dante/AES67 포트 패널', 'HARMAN', 'Crown DCi 4|600DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/10509_1728962194/Crown_DCi_4600_DA_Back_x_large_2x.webp', '4096x2731', '2000x1333')
   ],
   'comtech-d-2125': [
-    image('Front', 'ctd-2125-front.webp', 'Crown ComTech CTD-2125 전면', 'HARMAN', 'Crown CTD-2125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13173_1748629581/Crown_ComTech_CTD-2125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x832', '2000x406')
+    image('Front', 'ctd-2125-front.webp', 'Crown ComTech CTD-2125 전면', 'HARMAN', 'Crown CTD-2125', 'https://adn.harmanpro.com/product_attachments/product_attachments/13173_1748629581/Crown_ComTech_CTD-2125_ProductPhoto_Front_1605x1605_x_large_x_large_2x.webp', '4096x832', '2000x406'),
+    image('Rear', 'ctd-2125-rear.webp', 'Crown ComTech CTD-2125 후면 커넥터 패널', 'HARMAN', 'Crown CTD-2125', 'https://adn.harmanpro.com/productattachment/13170/product_attachment/x_large_2x-a1008a26cbbe926a453e56f1296b3daf.webp', '1605x1605', '1312x295')
   ]
 ,
   ulxd4q: [

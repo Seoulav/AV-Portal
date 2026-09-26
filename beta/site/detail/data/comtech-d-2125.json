@@ -29,6 +29,20 @@
       "originalSize": "4096x832",
       "resolution": "2000x406",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "ctd-2125-rear.webp",
+      "alt": "Crown ComTech CTD-2125 후면 커넥터 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "HARMAN",
+      "model": "Crown CTD-2125",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/13170/product_attachment/x_large_2x-a1008a26cbbe926a453e56f1296b3daf.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1605x1605",
+      "resolution": "1312x295",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.crownaudio.com/en-US/products/ctd-2125"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/13170/product_attachment/x_large_2x-a1008a26cbbe926a453e56f1296b3daf.webp"
     },
     {
       "role": "Perspective",
@@ -134,9 +148,9 @@
     {
       "group": "네트워킹/제어",
       "name": "Dante 입출력",
-      "value": "지원",
+      "value": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
       "unit": "",
-      "condition": "채널수/샘플레이트 상세는 정보 없음, 데이터시트 PDF 필요",
+      "condition": "데이터시트 'Digital Audio Input/Output (Dante/AES67) 2x RJ45'; 채널수·샘플레이트는 정보 없음",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -247,12 +261,57 @@
       "condition": "6.4 lbs",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "커넥터(후면)",
+      "name": "출력 커넥터",
+      "value": "4핀 유로블록 x1 (2채널당 1개)",
+      "unit": "",
+      "condition": "공식 후면 사진 판독",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "커넥터(후면)",
+      "name": "입력 커넥터",
+      "value": "6핀 유로블록 x1 (S/+/−, 2채널당 1개)",
+      "unit": "",
+      "condition": "공식 후면 사진 판독",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "커넥터(후면)",
+      "name": "GPI",
+      "value": "6핀 유로블록 (1-4, 5V)",
+      "unit": "",
+      "condition": "공식 후면 사진 판독",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "커넥터(후면)",
+      "name": "FAULT 릴레이",
+      "value": "3핀 (NO/COM/NC)",
+      "unit": "",
+      "condition": "공식 후면 사진 판독",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "커넥터(후면)",
+      "name": "전원 커넥터",
+      "value": "IEC 인렛",
+      "unit": "",
+      "condition": "공식 후면 사진 판독, 후면 표기 '100-240VAC 50/60Hz'",
+      "source": "P",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
     {
       "group": "Output",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "4핀 유로블록 x1 (2채널당 1개)",
       "signal": "Speaker output",
       "direction": "OUT",
       "quantity": "2채널",
@@ -260,31 +319,55 @@
       "availability": "",
       "condition": "",
       "source": "P",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "6핀 유로블록 x1 (S/+/−, 2채널당 1개)",
+      "signal": "Analog audio in",
+      "direction": "IN",
+      "quantity": "2채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "공식 후면 사진 판독",
+      "source": "P",
+      "verification": "FOUND"
     },
     {
       "group": "Audio Network",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
       "signal": "Dante/AES67 audio",
       "direction": "I/O",
       "quantity": "",
       "protocol": "Dante, AES67",
       "availability": "DA/ComTech D 모델",
-      "condition": "Dante 입출력: 지원 (채널수/샘플레이트 상세는 정보 없음, 데이터시트 PDF 필요)",
+      "condition": "Dante 입출력: 지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary) (데이터시트 'Digital Audio Input/Output (Dante/AES67) 2x RJ45'; 채널수·샘플레이트는 정보 없음)",
       "source": "P",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
     },
     {
       "group": "Control",
-      "connector": "커넥터 규격 미기재(제조사 자료 확인 필요)",
+      "connector": "6핀 유로블록 (1-4, 5V)",
       "signal": "GPIO/AUX 제어 입출력",
       "direction": "I/O",
       "quantity": "",
       "protocol": "",
       "availability": "",
-      "condition": "",
+      "condition": "공식 후면 사진 판독",
       "source": "P",
-      "verification": "PARTIAL"
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "IEC 인렛",
+      "signal": "Mains power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "공식 후면 사진 판독, 후면 표기 '100-240VAC 50/60Hz'",
+      "source": "P",
+      "verification": "FOUND"
     }
   ],
   "sources": [
@@ -311,17 +394,11 @@
     {
       "code": "R1",
       "status": "REVIEW REQUIRED",
-      "title": "후면(커넥터) 이미지는 crownaudio.com 제품 페이지에서…",
-      "detail": "후면(커넥터) 이미지는 crownaudio.com 제품 페이지에서 확인되지 않음(정면 제품컷 1종만 게시됨)."
-    },
-    {
-      "code": "R2",
-      "status": "REVIEW REQUIRED",
       "title": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등…",
       "detail": "THD, 주파수응답, SNR, 입력임피던스, 운영온도, 인증 등 다수 스펙이 웹페이지 텍스트에는 없고 데이터시트/사용자매뉴얼 PDF에만 있을 가능성이 높음(정보 없음으로 표기, PDF 직접 열람 필요)."
     },
     {
-      "code": "R3",
+      "code": "R2",
       "status": "REVIEW REQUIRED",
       "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
       "detail": "모델명은 공식 표기로 CTD-2125/4125/8125이며 시리즈명은 ComTech D Series다. 카탈로그 표시명 'ComTech D xxxx'는 유지함."
