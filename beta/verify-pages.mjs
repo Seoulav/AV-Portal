@@ -2,13 +2,36 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
+import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, identity } from './user-manuals.mjs';
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'manuals', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+// 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
+// 한 파일을 여러 카탈로그 항목이 공유할 수 있으므로(예: 여러 모델을 함께 다루는 시리즈 매뉴얼·브라켓 핸드북)
+// 파일명 자체의 중복은 허용하고, 대신 각 목록 안에서 같은 (brand, product)가 두 번 나오지 않는지만 확인한다.
+{
+  const manualFiles = userManuals.map(entry => entry.file);
+  assert.equal(new Set(userManuals.map(entry => identity(entry.brand, entry.product))).size, userManuals.length, '사용자 업로드 매뉴얼에 같은 제품이 중복 등록됨');
+  const referenceFiles = userReferences.map(entry => entry.file);
+  assert.equal(new Set(userReferences.map(entry => identity(entry.brand, entry.product))).size, userReferences.length, '사용자 업로드 참고자료에 같은 제품이 중복 등록됨');
+  const manualsDir = new URL('manuals/', site);
+  const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
+  const expectedFiles = [...new Set([...manualFiles, ...referenceFiles])];
+  assert.deepEqual(onDisk.sort(), expectedFiles.sort(), '업로드 매뉴얼·참고자료 폴더와 목록이 다름');
+  for (const entry of [...userManuals, ...userReferences]) {
+    assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 파일명`);
+    assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.product}: 업로드 자료 제목`);
+  }
+  for (const file of expectedFiles) {
+    const bytes = await readFile(new URL(file, manualsDir));
+    assert.ok(bytes.length > 1_000, `${file}: 업로드 파일이 비정상적으로 작음`);
+    assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${file}: PDF 형식 아님`);
+  }
+}
 const detail = new URL('detail/', site);
 assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
@@ -85,11 +108,37 @@ for (const item of catalog) {
   }
   if (item.manual_link !== undefined) {
     assert.ok(typeof item.manual_link === 'string' && item.manual_link.trim(), `${item.product}: 매뉴얼 링크`);
-    const manualUrl = new URL(item.manual_link);
-    assert.equal(manualUrl.protocol, 'https:');
-    assert.equal(manualUrl.username, '');
-    assert.equal(manualUrl.password, '');
-    assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
+    const uploaded = userManualLinkFor(item);
+    if (uploaded !== null) {
+      assert.equal(item.manual_link, uploaded, `${item.product}: 매뉴얼 링크가 사용자 업로드 목록과 다름`);
+    } else {
+      const manualUrl = new URL(item.manual_link);
+      assert.equal(manualUrl.protocol, 'https:');
+      assert.equal(manualUrl.username, '');
+      assert.equal(manualUrl.password, '');
+      assert.ok(isAllowedHost(manualUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer manual URL`);
+    }
+  } else {
+    assert.equal(userManualLinkFor(item), null, `${item.product}: 사용자 업로드 매뉴얼이 있는데 manual_link가 비어 있음`);
+  }
+  if (item.reference_link !== undefined) {
+    assert.ok(Array.isArray(item.reference_link) && item.reference_link.length > 0, `${item.product}: 참고자료 링크`);
+    assert.equal(new Set(item.reference_link).size, item.reference_link.length, `${item.product}: 참고자료 링크 중복`);
+    const uploaded = userReferenceLinkFor(item);
+    if (uploaded !== null) {
+      assert.deepEqual(item.reference_link, [uploaded], `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+    } else {
+      for (const link of item.reference_link) {
+        assert.ok(typeof link === 'string' && link.trim(), `${item.product}: 참고자료 링크`);
+        const refUrl = new URL(link);
+        assert.equal(refUrl.protocol, 'https:');
+        assert.equal(refUrl.username, '');
+        assert.equal(refUrl.password, '');
+        assert.ok(isAllowedHost(refUrl.hostname, allowedHostsFor(item.brand)), `${item.product}: non-manufacturer reference URL`);
+      }
+    }
+  } else {
+    assert.equal(userReferenceLinkFor(item), null, `${item.product}: 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음`);
   }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');
@@ -140,7 +189,7 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => name !== 'detail')) {
+for (const filename of files.filter(name => name !== 'detail' && name !== 'manuals')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
@@ -168,4 +217,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, no PDF binaries.`);
+console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, ${userManuals.length + userReferences.length} user-uploaded PDF entries.`);

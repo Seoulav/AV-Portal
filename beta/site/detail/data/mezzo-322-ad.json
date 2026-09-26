@@ -1,0 +1,338 @@
+{
+  "manufacturer": "Powersoft",
+  "productName": "Mezzo 322 AD",
+  "model": "Mezzo 322 AD",
+  "series": "Mezzo Series",
+  "seriesNote": "2채널 모델(A/A+/AD 공용). 공식 사용설명서·기술자료는 2채널·4채널 전 모델을 함께 다룬다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio",
+    "Amplifier"
+  ],
+  "english": "2-channel installation amplifier with onboard DSP, Power Sharing, and Dante/AES67 networking.",
+  "korean": "Mezzo 322 AD는 채널당 최대 160W를 출력하는 2채널 인스톨용 파워앰프로, DSP를 내장하고 Dante/AES67 오디오 네트워크를 지원한다.",
+  "verificationSummary": "공식 제품 페이지와 Mezzo 시리즈 공용 사용설명서·기술자료에서 322 AD 사양을 확인했다. 정확한 크기·무게와 커넥터 상세 배치는 검토 중이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Mezzo 322 AD는 Powersoft의 Mezzo 시리즈 중 2채널 구성 인스톨용 파워앰프로, 채널당 2/4/8Ω 부하에서 160W를 출력하며 두 채널의 여유 전력을 서로 배분하는 Power Sharing 기능을 지원한다. AD 모델은 Dante와 AES67 오디오 네트워크 프로토콜을 지원해 두 개의 Ethernet 포트 중 하나로 Dante 오디오와 DSP 제어·모니터링을 함께 처리할 수 있다.\n\n공식 사용설명서(User Guide)와 기술 자료(TDCD)는 2채널(322/324 A·A+·AD)과 4채널(602/604 A·AD) 전 모델을 함께 다루는 시리즈 공용 문서이며, 322 AD만의 별도 사양서는 확인되지 않았다. I/O 라우팅 설명에 따르면 2채널 모델은 언밸런스 아날로그 입력 2개와 밸런스 아날로그 입력 2개가 섞여 있고, AD 모델은 여기에 Dante/AES67 입출력이 추가된다.\n\n제품 페이지 기준 전원부는 100-240V(±10%) 유니버설 스위칭 전원을 사용하며, ArmoníaPlus 소프트웨어로 원격 제어·구성을, MyPowersoft로 원격 서비스를 지원한다. 정확한 본체 크기·무게는 공식 자료에서 모델별로 확인하지 못해 미확인으로 남긴다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "mezzo-322-ad-front.webp",
+      "alt": "Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Powersoft",
+      "model": "Mezzo 322 AD",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1024×500",
+      "resolution": "509×127",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Powersoft MEZZO Series User Guide",
+      "language": "en",
+      "note": "Mezzo 시리즈(2채널·4채널, A/A+/AD) 공용 사용설명서",
+      "url": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "Powersoft MEZZO Series Technical Data (Current Draw & Thermal Dissipation)",
+      "language": "en",
+      "note": "Mezzo 시리즈 공용 자료, 322 AD 표 포함",
+      "url": "https://www.powersoft.com/files/2019/11/powersoft_TDCD_MEZZO.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+    }
+  ],
+  "features": [
+    {
+      "text": "2채널(Lo/Hi) 구성이며 채널당 2/4/8Ω 부하에서 160W를 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "Power Sharing 기능으로 한 채널의 여유 전력을 다른 채널에 배분해 최대 320W까지 활용할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "DSP를 온보드로 내장해 별도 프로세서 없이 신호 처리를 수행한다.",
+      "source": ""
+    },
+    {
+      "text": "AD 모델은 Dante·AES67 오디오 네트워크를 지원하며, Ethernet 포트 하나로 Dante 오디오와 제어·모니터링을 함께 처리한다.",
+      "source": ""
+    },
+    {
+      "text": "ArmoníaPlus 소프트웨어로 원격 구성·모니터링을, MyPowersoft로 원격 서비스를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "Auto-Setup 기능으로 연결된 부하에 맞춰 초기 게인 설정을 자동 구성한다.",
+      "source": ""
+    },
+    {
+      "text": "100-240V(±10%) 유니버설 스위칭 전원(PFC 포함)을 사용해 다양한 전원 환경에서 동작한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Power",
+      "name": "채널당 정격 출력(2Ω)",
+      "value": "160",
+      "unit": "W",
+      "condition": "제조사 공식 제품 페이지 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "채널당 정격 출력(4Ω)",
+      "value": "160",
+      "unit": "W",
+      "condition": "제조사 공식 제품 페이지 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "채널당 정격 출력(8Ω)",
+      "value": "160",
+      "unit": "W",
+      "condition": "제조사 공식 제품 페이지 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "Power Sharing 최대 출력",
+      "value": "320",
+      "unit": "W",
+      "condition": "채널 간 전력 공유 시(4Ω·8Ω)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "최대 출력 전압",
+      "value": "142",
+      "unit": "Vpeak",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "최대 출력 전류",
+      "value": "15.6",
+      "unit": "Apeak",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power Supply",
+      "name": "전원 입력",
+      "value": "100-240",
+      "unit": "V AC ±10%, 50-60Hz",
+      "condition": "유니버설 스위칭, PFC 포함",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power Supply",
+      "name": "동작 전압 범위",
+      "value": "90-264",
+      "unit": "V",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Networking",
+      "name": "오디오 네트워크",
+      "value": "Dante, AES67",
+      "unit": "",
+      "condition": "AD 모델 기준",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어 소프트웨어",
+      "value": "ArmoníaPlus",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기·무게",
+      "value": "MISSING",
+      "unit": "",
+      "condition": "모델별 값 미확인",
+      "source": "",
+      "verification": "MISSING"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio",
+      "connector": "MISSING",
+      "signal": "Balanced/Unbalanced analog audio in",
+      "direction": "IN",
+      "quantity": "2채널(언밸런스 2 + 밸런스 2 혼합)",
+      "protocol": "",
+      "availability": "",
+      "condition": "블록 커넥터 방식, 정확한 커넥터 규격 미확인",
+      "source": "M",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Audio Network",
+      "connector": "Ethernet (RJ45)",
+      "signal": "Dante/AES67 audio + DSP control/monitoring",
+      "direction": "I/O",
+      "quantity": "2",
+      "protocol": "Dante, AES67",
+      "availability": "AD 모델",
+      "condition": "두 포트가 연결되어 있으며 하나는 Dante 전용, 나머지는 제어·Dante 겸용",
+      "source": "M",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Control",
+      "connector": "GPI",
+      "signal": "출력 레벨 조절용 GPI 입력",
+      "direction": "IN",
+      "quantity": "2(2채널 모델 기준, I1·I2)",
+      "protocol": "",
+      "availability": "",
+      "condition": "10kΩ 수동 포텐셔미터 연결",
+      "source": "M",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "connector": "AC 인렛",
+      "signal": "Mains power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Output",
+      "connector": "Output terminal block",
+      "signal": "Speaker output",
+      "direction": "OUT",
+      "quantity": "2(2채널)",
+      "protocol": "",
+      "availability": "",
+      "condition": "락킹 방식 출력단자, 배선 전 락 체결 필요",
+      "source": "M",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 사용 안내",
+      "url": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "크기·무게 미확인",
+      "detail": "공식 제품 페이지·문서에서 322 AD 본체의 정확한 크기·무게를 확인하지 못했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "I/O 커넥터 상세",
+      "detail": "아날로그 입력 블록 커넥터의 정확한 규격과 채널별 배치는 사용설명서 서술만으로 확정하지 않았다."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "전면 패널 이미지(계열 공용)는 확보했으나 제조사 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Powersoft Mezzo 322 AD · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

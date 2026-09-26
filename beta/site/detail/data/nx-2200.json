@@ -1,0 +1,420 @@
+{
+  "manufacturer": "AMX",
+  "productName": "NX-2200",
+  "model": "NX-2200 (FG2106-02)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Control",
+    "Control Processor"
+  ],
+  "english": "NetLinx NX Integrated Controller for medium-sized rooms and multi-room applications.",
+  "korean": "NX-2200은 중형 회의실 및 멀티룸 환경을 위한 NetLinx NX 통합 컨트롤러다.",
+  "verificationSummary": "제조사 공식 Data Sheet(adn.harmanpro.com 호스팅, amx.com 제품 페이지에서 링크 확인)에서 개요·기능·전체 기술 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "NX-2200은 다양한 아날로그·디지털 포맷을 사용해 AV 및 빌딩 기술을 제어하도록 설계된 프로그래머블 네트워크 어플라이언스로, NX-1200보다 많은 포트와 보안 기능을 제공해 중형 회의실·강의실·홈시어터·호텔 객실·빌딩 환경 시스템 제어에 적합하다.\n\n제조사 공식 데이터시트에 따르면 1600 MIPS 프로세서, 512MB 온보드 RAM, 1MB 비휘발성 메모리, 8GB SDHC 플래시 메모리를 탑재했으며, 1RU 랙 공간을 차지한다. AxLink 인터페이스 1개, 10/100 LAN 인터페이스 1개, 10/100 ICSLan 인터페이스 1개(Dual NIC), 디지털 I/O 포트 4개, RS-232/422/485 포트 1개, RS-232 전용 포트 3개, IR/Serial 출력 포트 4개, 릴레이 포트 4개를 갖췄다.\n\n크기는 1 4/5\" x 17\" x 9 1/8\"(45.15 x 431.80 x 231.64mm), 무게는 6.08 lb(2.758kg)이다. 전원은 12VDC(9-18VDC 범위), 소비전력 4.2W이며, 동작 온도는 0~50°C다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "nx2200-main.webp",
+      "alt": "AMX NX-2200 컨트롤러 이미지(전면·측면에 모델명 'NX-2200' 표기)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "NX-2200",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "900×177",
+      "resolution": "900×177",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "NX-2200 Data Sheet",
+      "language": "en",
+      "note": "Specifications 전체 수록",
+      "url": "https://www.amx.com/en-US/product_documents/nx-2200-datasheet-pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.amx.com/en-US/products/nx-2200"
+    }
+  ],
+  "features": [
+    {
+      "text": "Dual NIC 구성으로 LAN 포트(외부 네트워크)와 ICSLan 포트(AMX/타사 AV 장비 전용)를 물리적으로 분리해 보안을 강화한다.",
+      "source": "D"
+    },
+    {
+      "text": "IPv6, IEEE 802.1X, X.509 인증서, Full LDAP 통합 등 엔터프라이즈급 네트워크 보안 기능을 지원한다.",
+      "source": "D"
+    },
+    {
+      "text": "RPM, NetLinx, Java 등 유연한 프로그래밍 플랫폼을 지원하는 고성능 아키텍처를 갖췄다.",
+      "source": "D"
+    },
+    {
+      "text": "TLS/SSH 클라이언트를 지원해 원격 장치·서버와의 보안 통신을 관리할 수 있다.",
+      "source": "D"
+    },
+    {
+      "text": "FIPS 140-2 기준의 암호화를 지원하며, USB 드라이브를 통한 설정 백업/복원 및 펌웨어 업데이트가 가능하다.",
+      "source": "D"
+    },
+    {
+      "text": "NX-1200 대비 확장된 포트 구성(디지털 I/O 4개, 릴레이 4개, IR/Serial 4개, RS-232 3개)으로 중형 시스템을 지원한다.",
+      "source": "D"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "General",
+      "name": "인클로저",
+      "value": "메탈, 무광 블랙 마감",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "크기(H×W×D)",
+      "value": "45.15 × 431.80 × 231.64",
+      "unit": "mm",
+      "condition": "1 4/5\" × 17\" × 9 1/8\"",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "무게",
+      "value": "2.758",
+      "unit": "kg",
+      "condition": "6.08 lb",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "랙 공간",
+      "value": "1RU",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전압",
+      "value": "12",
+      "unit": "VDC",
+      "condition": "허용 범위 9-18VDC(typical)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전류",
+      "value": "250",
+      "unit": "mA",
+      "condition": "@ 12VDC",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "4.2",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 커넥터",
+      "value": "3.5mm Phoenix",
+      "unit": "",
+      "condition": "리테이닝 스크류 포함",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 50",
+      "unit": "°C",
+      "condition": "32°F ~ 122°F",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-10 ~ 60",
+      "unit": "°C",
+      "condition": "14°F ~ 140°F",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "5 ~ 85",
+      "unit": "%RH",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "발열량",
+      "value": "14.3",
+      "unit": "BTU/hr",
+      "condition": "typical",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "프로세서",
+      "value": "1600 MIPS",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "프로그램 포트",
+      "value": "USB Standard B",
+      "unit": "",
+      "condition": "1개",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "USB Host 포트",
+      "value": "USB Standard A",
+      "unit": "",
+      "condition": "2개(전면 1, 후면 1)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Memory",
+      "name": "NVRAM",
+      "value": "1",
+      "unit": "MB",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Memory",
+      "name": "메모리 카드",
+      "value": "8",
+      "unit": "GB",
+      "condition": "SD",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Memory",
+      "name": "DDRAM",
+      "value": "512",
+      "unit": "MB",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Regulatory",
+      "name": "규격 인증",
+      "value": "FCC Part 15, CE EN 55022/55024/60950-1, IEC 60950-1, UL 60950-1, C-Tick/IC/VCCI CISPR 22, RoHS, WEEE",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100 Ethernet(LAN)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "TCP/IP, IPv4/IPv6, HTTP/HTTPS/Telnet/FTP",
+      "availability": "",
+      "condition": "Auto MDI/MDI-X",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100 Ethernet(ICSLan)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "IPv4/IPv6, HTTP/HTTPS/Telnet/FTP",
+      "availability": "",
+      "condition": "AMX/타사 AV 장비 전용 격리 네트워크(Dual NIC)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(4-pin)",
+      "signal": "AxLink",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "외부 AxLink 장치에 데이터·전원 공급",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(10-pin)",
+      "signal": "RS-232/422/485",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "300-115,200 baud, XON/XOFF, CTS/RTS",
+      "availability": "NetLinx Port 1",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(2-pin)",
+      "signal": "RS-232",
+      "direction": "IN/OUT",
+      "quantity": "3",
+      "protocol": "300-115,200 baud, XON/XOFF, CTS/RTS",
+      "availability": "NetLinx Port 2-4",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(2-pin)",
+      "signal": "IR/Serial(1-way) 송신",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "최대 1.142MHz 고주파 캐리어, 동시 4채널",
+      "availability": "NetLinx Port 11-14",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(6-pin)",
+      "signal": "디지털 I/O(접점 폐쇄, 전압 감지 가능)",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "NetLinx Port 22, Channel 1-4",
+      "condition": "6핀 터미널 1개에 4채널 통합",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3.5mm Screw Terminal(8-pin)",
+      "signal": "릴레이(SPST)",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "최대 24VDC 또는 28VAC @ 1A, 채널별 독립 제어",
+      "availability": "NetLinx Port 21, Channel 1-4",
+      "condition": "8핀 터미널 1개에 4채널 통합",
+      "source": "D",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Data Sheet",
+      "url": "https://www.amx.com/en-US/product_documents/nx-2200-datasheet-pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.amx.com/en-US/products/nx-2200",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "AMX NX-2200 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

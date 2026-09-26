@@ -1,0 +1,294 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "RC400T",
+  "model": "RC400T",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Control Console"
+  ],
+  "english": "Event controller for the Aquilon, Alta 4K and Midra 4K multi-screen live presentation systems.",
+  "korean": "RC400T는 Aquilon, Alta 4K, Midra 4K 멀티스크린 라이브 프레젠테이션 시스템용 이벤트 컨트롤러다.",
+  "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 공식 Technical Datasheet(dwn01.analogway.com)에서 개요·전체 기술 사양·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "RC400T는 Aquilon, Alta 4K, Midra 4K 이미지 프로세서의 화면·레이어·소스·메모리 등 핵심 기능에 즉시 접근할 수 있도록 설계된 이벤트 컨트롤러로, 최대 5대의 프로세서를 동시에(온더플라이 전환) 제어할 수 있다. 56개의 사용자 프로그래밍 가능 버튼, 고해상도 T-바, 3축 조이스틱(PIP 크기·위치 조정용)을 갖췄다.\n\n제조사 공식 데이터시트에 따르면 전원은 100-240VAC(최대 25W)이며, 크기는 570×122.5×382mm, 무게는 약 8kg이다. 전면·후면 각 1개의 USB 포트와 1개의 이더넷 네트워크 인터페이스를 갖췄으며, 데스크 거치 또는 콘솔 표면 매립 설치가 모두 가능하다. LED 램프용 4핀 XLR 커넥터도 제공한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "rc400t-front.webp",
+      "alt": "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Analog Way",
+      "model": "RC400T",
+      "sourceUrl": "https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "500×220",
+      "resolution": "471×215",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/rc400t"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/rc400t"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/rc400t"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/rc400t"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "RC400T Technical Datasheet",
+      "language": "en",
+      "note": "Technical Specifications, Key Features 전체 수록",
+      "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Technical+Datasheet/rc400t-datasheet-en.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/rc400t"
+    }
+  ],
+  "features": [
+    {
+      "text": "Aquilon, Alta 4K, Midra 4K 등 최대 5대의 이미지 프로세서를 동시에(온더플라이 전환) 제어할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "56개의 사용자 프로그래밍 가능 버튼과 고해상도 T-바를 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "3축 조이스틱으로 PIP 크기 조정과 위치 지정을 빠르고 쉽게 수행할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Aquilon 시리즈에서는 Web RCS를 통해 버튼 행(row)을 다양한 버튼 타입으로 커스터마이징할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "전면·후면 각 1개의 USB 포트와 1개의 이더넷 인터페이스를 갖췄으며, 데스크 거치 또는 콘솔 매립 설치가 가능하다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Control",
+      "name": "제어 대상",
+      "value": "Aquilon, Alta 4K, Midra 4K",
+      "unit": "",
+      "condition": "최대 5대 동시 제어(온더플라이 전환)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "버튼",
+      "value": "56개 사용자 프로그래밍 가능 버튼",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "T-바",
+      "value": "고해상도 T-바 1개",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "조이스틱",
+      "value": "3축 조이스틱 1개",
+      "unit": "",
+      "condition": "PIP 크기·위치 조정용",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240 VAC, 50/60Hz, 2.2A",
+      "unit": "",
+      "condition": "퓨즈 카트리지 T2.5A 250VAC 5x20mm",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "25",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "570 × 122.5 × 382",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "약 8",
+      "unit": "kg",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "3년(부품·공임, 공장 반송 기준)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Control",
+      "connector": "USB",
+      "signal": "펌웨어/설정",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "전면 1개, 후면 1개",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Accessory",
+      "connector": "XLR 4-pin",
+      "signal": "LED 램프 전원",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Technical+Datasheet/rc400t-datasheet-en.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/rc400t",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 호스팅 위치 차이",
+      "detail": "다른 5개 제품과 달리 RC400T의 공식 이미지는 dwn01.analogway.com의 'High Resolution Pictures' 폴더가 아니라 analogway.com 웹사이트 자체(Webflow CDN, cdn.prod.website-files.com)에서 제공된다. 제조사 공식 웹사이트에 직접 임베드된 자산이므로 manufacturer-hosts.mjs에 해당 CDN 도메인을 허용 목록으로 추가했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way RC400T 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

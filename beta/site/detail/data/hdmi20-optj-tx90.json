@@ -1,0 +1,294 @@
+{
+  "manufacturer": "Lightware",
+  "productName": "HDMI20-OPTJ-TX90",
+  "model": "HDMI20-OPTJ-TX90",
+  "series": "OPTJ Series (HDMI 2.0 Optical Extender)",
+  "seriesNote": "TX90(송신기)과 RX90(수신기)은 한 쌍으로 사용하며 외관·사양이 대칭적으로 동일하다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Extender"
+  ],
+  "english": "HDMI 2.0 fiber optical transmitter extending uncompressed video up to 1100m.",
+  "korean": "HDMI20-OPTJ-TX90은 HDMI 2.0 신호를 단일 광섬유로 무압축 전송하는 송신기(TX)다.",
+  "verificationSummary": "제조사 공식 A&E Specification 문서에서 영상·오디오·전원·크기·무게를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "HDMI20-OPTJ-TX90은 HDMI 2.0 호환 광섬유 송신기로, 무압축 HDMI 영상·내장 오디오를 단일 멀티모드 광섬유를 통해 짝을 이루는 HDMI20-OPTJ-RX90 수신기로 전송한다. 최대 4K UHD@60Hz, 3D, Deep Color, HDR 콘텐츠 전송을 지원하며 EDID/CEC/HDCP를 투명하게 처리한다.\n\nHDCP 1.4/2.2를 소스·싱크에 따라 자동으로 선택하고, OM1~OM4 등급의 멀티모드 광섬유에서 최대 150m~1100m까지 전송 가능하다. USB-A 전원 커넥터로 외부 전원을 공급받거나, HDMI 소스가 5V/500mA를 제공하면 별도 전원 없이 동작할 수 있다.\n\n무거운 금속 인클로저로 무팬 수동냉각을 하며, OPTJ Power Tray(1RU)에 최대 16개 TX/RX 유닛을 수납해 전원을 공급하는 랙 마운트 구성도 가능하다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "hdmi20-optj-tx90-front.webp",
+      "alt": "Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lightware",
+      "model": "HDMI20-OPTJ-TX90",
+      "sourceUrl": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1200×780",
+      "resolution": "905×177",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "HDMI20-OPTJ-TX90 A&E Specification",
+      "language": "en",
+      "note": "제조사 공식 아키텍처·엔지니어링 사양서",
+      "url": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 2.0 신호를 단일 멀티모드 광섬유(SC 심플렉스)로 최대 1100m(OM4 기준)까지 무압축 전송한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 4096×2160@60Hz(4:4:4) 또는 3840×2160@60Hz(4:4:4) 해상도를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "HDCP 1.4/2.2를 소스·싱크에 따라 자동 선택하며 EDID·CEC도 투명하게 통과시킨다.",
+      "source": ""
+    },
+    {
+      "text": "8채널 PCM, Dolby Atmos/TrueHD, DTS-HD Master Audio 7.1 등 HBR 오디오를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "HDMI 소스가 5V/500mA를 제공하면 별도 전원 없이 HDMI 급전만으로 동작할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "OPTJ Power Tray(1RU)에 최대 16개 TX/RX 유닛을 수납해 전원을 공급할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "지원 해상도",
+      "value": "최대 4096×2160@60Hz 또는 3840×2160@60Hz (4:4:4)",
+      "unit": "",
+      "condition": "8bit/color 기준",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDCP",
+      "value": "HDCP 1.4, HDCP 2.2",
+      "unit": "",
+      "condition": "소스/싱크에 따라 자동 선택",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Optical",
+      "name": "광 케이블",
+      "value": "SC 심플렉스 멀티모드",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Optical",
+      "name": "최대 전송거리(OM4)",
+      "value": "1100",
+      "unit": "m",
+      "condition": "OM1 150m·OM2 350m·OM3 800m·OM4 1100m",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "지원 포맷",
+      "value": "8ch PCM, Dolby Digital/Plus/TrueHD/Atmos, DTS, DTS-HD Master Audio 7.1, WMA Pro",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "외부 전원 어댑터",
+      "value": "100-240V AC, 5V DC 1A 출력",
+      "unit": "",
+      "condition": "USB-A 전원 커넥터",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "USB 급전",
+      "value": "USB 1.1 이상 호스트 포트",
+      "unit": "",
+      "condition": "Power-only USB 포트에서도 급전 가능",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "110.5×35.5×11.4",
+      "unit": "mm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "145",
+      "unit": "g",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "인클로저",
+      "value": "알루미늄, 무팬 수동냉각",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI (19-pin Type A)",
+      "signal": "HDMI video+audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDMI 1.4/2.0",
+      "availability": "",
+      "condition": "HDCP 1.4/2.2 자동",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Optical",
+      "connector": "SC simplex",
+      "signal": "Optical fiber link",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "멀티모드 전용",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "USB-A power",
+      "signal": "5V DC 1A",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "HDMI 급전 시 생략 가능(TX만 해당)",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 대표성",
+      "detail": "웹 이미지는 TX90·RX90 공용 외관 사진으로, 모델을 시각적으로 구분하는 표기는 없다(사양상 두 모델은 동일 외관)."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 웹 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lightware HDMI20-OPTJ-TX90 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

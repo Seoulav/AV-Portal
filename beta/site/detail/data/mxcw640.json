@@ -1,0 +1,312 @@
+{
+  "manufacturer": "Shure",
+  "productName": "MXCW640",
+  "model": "MXCW640",
+  "series": "Microflex Complete Wireless (MXCW)",
+  "seriesNote": "MXCWAPT(액세스 포인트)와 함께 구성되는 시스템의 회의 단말 모델.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Conferencing Endpoint"
+  ],
+  "english": "Wireless conference unit with touchscreen, built-in speaker, and removable Li-Ion battery.",
+  "korean": "MXCW640은 마이크·스피커·터치스크린을 통합한 무선 회의 단말로, MXCWAPT 액세스 포인트와 함께 시스템을 구성한다.",
+  "verificationSummary": "제조사 공식 데이터시트에서 RF·오디오·전원 사양을 확인했다. 마이크로폰 카트리지의 정확한 극성 패턴(지향성)은 검토 중이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "MXCW640은 마이크(10핀 모듈형, MXC 시리즈 구즈넥 마이크 연결), 스피커, 4.3인치 컬러 터치스크린, 이중 3.5mm 헤드폰 잭을 통합한 무선 회의 단말이다. SB930 리튬이온 배터리(동봉)로 11시간 이상 동작하며, MXCWNCS 충전 스테이션이나 본체 Micro-USB로 충전한다.\n\nMXCWAPT 액세스 포인트와 2.4GHz/5GHz(UNII 대역 포함, DFS 채널 지원) 대역에서 통신하며, 거리에 따라 8m(Low)~45m(Maximum)의 RF 작동 범위를 제공한다. Chairman·Delegate·Listener·Ambient 등 여러 동작 모드를 지원하고 NFC 카드 슬롯으로 참석자를 식별할 수 있다.\n\n공식 제품 페이지에는 RF 대역·크기·무게가 나와 있지 않아, 시스템 데이터시트(Systempage)를 근거로 이 값들을 보충했다. 마이크로폰 카트리지의 정확한 극성 패턴은 제품 페이지·데이터시트 모두에서 확정하지 못해 검토 중으로 남긴다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "mxcw640-main.webp",
+      "alt": "Shure MXCW640 회의 단말 정면 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "MXCW640",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3000×3000",
+      "resolution": "1573×675",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "MXCW Series User Guide (다운로드 허브)",
+      "language": "en",
+      "note": "MXCW 시리즈 공용 사용 설명서 허브 페이지",
+      "url": "https://www.shure.com/en-US/docs/guide/MXCW"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "MXCW Datasheet (Systempage)",
+      "language": "en",
+      "note": "MXCW 시스템(APT+회의 단말) 공용 데이터시트",
+      "url": "https://content-files.shure.com/Pubs/MXCWNCS/MXCW_Datasheet_Systempage_EN_letter_1809.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "MXCW Brochure",
+      "language": "en",
+      "note": "MXCW 시리즈 브로슈어",
+      "url": "https://content-files.shure.com/Pubs/sb930/mxcw-brochure-shure.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+    }
+  ],
+  "features": [
+    {
+      "text": "10핀 모듈형 커넥터로 MXC 시리즈 구즈넥 마이크를 연결한다.",
+      "source": ""
+    },
+    {
+      "text": "4.3인치 컬러 터치스크린으로 사용자 제어·투표·회의 정보를 표시한다.",
+      "source": ""
+    },
+    {
+      "text": "SB930 리튬이온 배터리(동봉)로 11시간 이상 동작하며 4시간 이내 재충전된다.",
+      "source": ""
+    },
+    {
+      "text": "이중 3.5mm 헤드폰 잭과 볼륨 조절, Speak/Mute 버튼과 LED 상태 표시를 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "Chairman·Delegate·Listener·Ambient Microphone 등 여러 동작 모드를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "NFC 카드 슬롯으로 참석자 식별(ID) 기능을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "2.4GHz/5GHz 대역(DFS 채널 포함)에서 자동 주파수 관리로 간섭을 회피한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "RF",
+      "name": "RF 주파수 대역",
+      "value": "2.4GHz ISM / 5GHz UNII",
+      "unit": "",
+      "condition": "IEEE 802.11a,g 기반",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RF",
+      "name": "RF 작동 범위",
+      "value": "8(Low) / 15(Medium) / 30(High) / 45(Maximum)",
+      "unit": "m",
+      "condition": "MXCWAPT 기준 가시선(line-of-sight)",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답(헤드폰 경로)",
+      "value": "100Hz-20kHz (+0.5/-3dB)",
+      "unit": "",
+      "condition": "마이크 입력→APT→헤드폰 출력 경로",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "동적 범위(헤드폰 경로)",
+      "value": "100dB(A-weighted), 97dB(unweighted)",
+      "unit": "",
+      "condition": "",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "배터리",
+      "value": "SB930 리튬이온(탈착식, 동봉)",
+      "unit": "",
+      "condition": "11시간 이상 사용, 4시간 이내 충전",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "충전 방식",
+      "value": "본체 Micro-USB 또는 MXCWNCS 충전 스테이션",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "디스플레이",
+      "value": "4.3인치 컬러 TFT 정전식 터치스크린",
+      "unit": "",
+      "condition": "",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "148×257.5×70.2",
+      "unit": "mm",
+      "condition": "제품 자체 표기 순서는 데이터시트 기준(70.2×148×257.5)",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "1.21(배터리 포함) / 1.025(배터리 미포함)",
+      "unit": "kg",
+      "condition": "",
+      "source": "SP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "name": "마이크 연결",
+      "value": "10핀 모듈형 잠금 커넥터",
+      "unit": "",
+      "condition": "MXC 시리즈 구즈넥 마이크 전용",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Microphone",
+      "connector": "10-pin modular connector",
+      "signal": "Gooseneck microphone",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "MXC 시리즈 전용, 잠금 방식",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm headphone jack",
+      "signal": "Analog audio",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "볼륨 조절 포함",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "Micro-USB",
+      "signal": "Charging",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Identification",
+      "connector": "NFC card slot",
+      "signal": "Participant ID",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "NFC",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "SP",
+      "name": "제조사 사양 자료",
+      "url": "https://content-files.shure.com/Pubs/MXCWNCS/MXCW_Datasheet_Systempage_EN_letter_1809.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "마이크로폰 지향성 패턴",
+      "detail": "구즈넥 마이크 카트리지의 정확한 극성 패턴(지향성)은 공식 자료에서 모델별로 확정하지 못했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "정면 이미지의 제조사 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Shure MXCW640 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

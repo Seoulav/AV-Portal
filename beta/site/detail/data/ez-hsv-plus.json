@@ -1,0 +1,320 @@
+{
+  "manufacturer": "Lumantek",
+  "productName": "ez-HSV+",
+  "model": "ez-HSV+",
+  "series": "ez-Converters",
+  "seriesNote": "ez-SHV+(SDI→HDMI 방향)의 반대 방향 컨버터(HDMI→SDI).",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Converter"
+  ],
+  "english": "HDMI to SDI converter with display, featuring built-in scaler and real-time monitoring.",
+  "korean": "ez-HSV+는 디스플레이가 내장된 HDMI to SDI 컨버터로, 실시간 모니터링과 스케일러 기능을 갖췄다.",
+  "verificationSummary": "제조사 한국 공식 사이트(lumantek.co.kr)의 제품소개·시스템사양 페이지에서 전체 입출력·전기·물리 사양표를 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ez-HSV+는 HDMI 입력 1(Type A)을 SDI 2채널로 변환하는 스케일러 내장 컨버터로, 2.7인치 TFT LCD 화면을 통해 입력 신호의 해상도와 케이블 상태, 오디오 레벨미터를 실시간으로 확인할 수 있다.\n\n제조사 공식 시스템사양에 따르면 6극 DIP 스위치로 비디오 입출력 해상도와 출력 비율, 오디오(내장/외부)를 설정하며, MODE 푸시 스위치로 LCD On/Off와 메뉴를 조작한다. 전원은 DC +5V~+18V(12V 기준 0.33A)이며 최대 소비전력은 3W 미만으로 저전력 설계다.\n\n크기는 86.3×57.2×26.6mm(커넥터 포함), 무게는 0.3kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "lumantek-ez-hsv-main.webp",
+      "alt": "Lumantek ez-HSV+ 전면 디스플레이·단자 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-HSV+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/a3d341a2299241436357289f2b6fdddd.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1063×500",
+      "resolution": "569×500",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/66"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/a3d341a2299241436357289f2b6fdddd.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/66"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/66"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/66"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ez-HSV+ 시스템사양 (공식 웹페이지)",
+      "language": "ko/en",
+      "note": "Data Input/Output, Connections, Electrical, Physical 전체 표 수록",
+      "url": "https://lumantek.co.kr/index/product_view/66"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://lumantek.co.kr/index/product_intro/66"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 입력 1개를 SDI 2채널로 스케일링 변환한다.",
+      "source": ""
+    },
+    {
+      "text": "2.7인치 TFT LCD로 입력 비디오, 케이블 거리, 입출력 해상도를 실시간으로 확인할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "오디오 레벨미터를 화면에 표시해 입력 신호 유무와 상태를 확인할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "최대 소비전력 3W 미만의 저전력 설계로 DC +5V~+18V 범위에서 동작한다.",
+      "source": ""
+    },
+    {
+      "text": "6극 DIP 스위치로 입출력 해상도·출력 비율·오디오 소스를 설정한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Data Input",
+      "name": "HDMI 비디오 입력",
+      "value": "SD/HD/3G (HDMI Type A) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "아날로그 오디오 입력",
+      "value": "Stereo Jack x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "지원 비디오 포맷",
+      "value": "720x480i@59.94 ~ 1920x1080p@50/59.94/60",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "SDI 비디오 출력",
+      "value": "SD/HD/3G-SDI (BNC 75Ω) x2",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "DIP 스위치",
+      "value": "6극 x1",
+      "unit": "",
+      "condition": "비디오 입출력 해상도, 출력 비율, 오디오(내장/외부)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "MODE 스위치",
+      "value": "푸시 스위치 x1",
+      "unit": "",
+      "condition": "LCD ON/OFF, 메뉴 선택",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "화면",
+      "value": "2.7인치 TFT LCD",
+      "unit": "",
+      "condition": "입력 비디오, 입출력 해상도, 입력 오디오 레벨미터 표시",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 입력",
+      "value": "DC +5V ~ +18V (0.33A @ 12V)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비전력",
+      "value": "4",
+      "unit": "W (max.)",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 45",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "86.3 × 57.2 × 26.6",
+      "unit": "mm",
+      "condition": "커넥터 포함",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "0.3",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "HDMI Type A",
+      "signal": "SD/HD/3G video in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "Stereo Jack",
+      "signal": "Analog audio in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "BNC 75Ω",
+      "signal": "SDI out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC Jack (OD 5.5mm, ID 2.1mm)",
+      "signal": "DC power in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DC +5~18V",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "M",
+      "name": "제조사 공식 시스템사양 페이지",
+      "url": "https://lumantek.co.kr/index/product_view/66",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://lumantek.co.kr/uploads/product/a3d341a2299241436357289f2b6fdddd.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "사용설명서 없음",
+      "detail": "제조사 공식 사이트에서 별도 PDF 사용설명서·데이터시트를 찾지 못해, 웹페이지 내 시스템사양 표를 근거로 사용했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lumantek ez-HSV+ 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

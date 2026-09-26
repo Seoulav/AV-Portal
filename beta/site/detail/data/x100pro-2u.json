@@ -1,0 +1,291 @@
+{
+  "manufacturer": "Colorlight",
+  "productName": "X100Pro 2U",
+  "model": "X100 Pro-2U",
+  "series": "X100 Pro Series",
+  "seriesNote": "2U·4U·7U 세 모델은 입출력 보드 슬롯 수·크기·무게만 다르고 인터페이스 종류는 동일하다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Processor"
+  ],
+  "english": "Modular video wall processor with up to 2 input boards / 4 output boards and 26M pixel load.",
+  "korean": "X100 Pro-2U는 최대 2개 입력 보드·4개 출력 보드를 장착해 최대 2,600만 화소를 처리하는 모듈형 비디오 스플라이서다.",
+  "verificationSummary": "제조사 공식 모델 전용 사양서(Specification V2.0)에서 입출력 보드 수·크기·무게·전원을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "X100 Pro-2U는 Colorlight X100 Pro 시리즈의 가장 작은 모델로, 최대 2개 입력 보드와 4개 출력 보드를 장착해 2×4K@60Hz 또는 8×2K@60Hz 입력, 4×4K@60Hz 또는 16×2K@60Hz 출력을 처리한다. 1G 이더넷 포트 기준 최대 2,600만 화소, 최대 32개 레이어를 지원한다.\n\n파이버·포트 이중화, 이중 전원 백업, HD 프리뷰·모니터링, 지능형 팬 속도 제어로 안정성을 높였고 크롭·스케일링·배경화면·자막·로고 추가 등 다양한 영상 처리 기능을 지원한다.\n\n제조사 사양서 기준 크기는 482.6×110.0×404.0mm(고무발 제외)로 시리즈 중 가장 낮은 랙 높이를 가지며, 순중량 8.00kg, 최대 소비전력 110.8W다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "x100pro-2u-front.webp",
+      "alt": "Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Colorlight",
+      "model": "X100 Pro-2U",
+      "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2362×603(사양서 내장 이미지)",
+      "resolution": "1800×459",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "X100 Pro-2U Specification V2.0",
+      "language": "en",
+      "note": "모델 전용 사양서",
+      "url": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://en.colorlightinside.com/product/download/111"
+    }
+  ],
+  "features": [
+    {
+      "text": "최대 2개 입력 보드로 2×4K@60Hz 또는 8×2K@60Hz를 입력받는다.",
+      "source": ""
+    },
+    {
+      "text": "최대 4개 출력 보드로 4×4K@60Hz 또는 16×2K@60Hz를 출력한다.",
+      "source": ""
+    },
+    {
+      "text": "1G 이더넷 포트 기준 최대 2,600만 화소를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 32개 레이어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "시리즈 중 가장 낮은 랙 높이(110mm)로 공간 제약이 있는 설치 환경에 적합하다.",
+      "source": ""
+    },
+    {
+      "text": "크롭·스케일링·배경화면·자막·로고 추가 등 다양한 영상 처리 기능을 지원한다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O",
+      "name": "최대 입력 보드",
+      "value": "2",
+      "unit": "개",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "최대 입력",
+      "value": "2×4K@60Hz / 8×2K@60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "최대 출력 보드",
+      "value": "4",
+      "unit": "개",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "최대 출력",
+      "value": "4×4K@60Hz / 16×2K@60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Capacity",
+      "name": "최대 로드(1G 이더넷)",
+      "value": "26,000,000",
+      "unit": "픽셀",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Capacity",
+      "name": "최대 레이어",
+      "value": "32",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "482.6×110.0×404.0",
+      "unit": "mm",
+      "condition": "고무발 제외",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "순중량",
+      "value": "8.00",
+      "unit": "kg",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "총중량(포장)",
+      "value": "11.25",
+      "unit": "kg",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 입력",
+      "value": "100-240V AC 50/60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "110.8",
+      "unit": "W",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "입력 보드(선택형)",
+      "signal": "Video in",
+      "direction": "IN",
+      "quantity": "최대 2",
+      "protocol": "HDMI, DP, SDI, DVI, IP, VGA, CVBS 중 선택",
+      "availability": "필드 교체형",
+      "condition": "카드 구성에 따라 배분",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "출력 보드(선택형)",
+      "signal": "Video/network out",
+      "direction": "OUT",
+      "quantity": "최대 4",
+      "protocol": "Gigabit Ethernet, 10G Fiber, HDMI, DVI",
+      "availability": "필드 교체형",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://en.colorlightinside.com/product/download/111",
+      "scope": "다운로드 센터 페이지"
+    },
+    {
+      "code": "S",
+      "name": "제조사 사양 자료",
+      "url": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 페이지 성격",
+      "detail": "official_links가 개별 제품 페이지가 아니라 다운로드 센터 페이지라 모델·지역 표기가 명확하지 않다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제공 이미지(사양서 내장 이미지)의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Colorlight X100 Pro-2U · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

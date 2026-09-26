@@ -1,0 +1,385 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "Aquilon RS2",
+  "model": "AQL-RS2",
+  "series": "Aquilon",
+  "seriesNote": "Aquilon 시리즈(RSalpha/RS1~RS6, Cmini/C/C+/Cmax) 중 16입력·12출력 모듈형 모델. RS1(8입력·4출력)의 상위 모델.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Wall Controller"
+  ],
+  "english": "Mission-critical 4K/8K multi-screen presentation system and videowall processor with 16x 4K60p inputs and 12x 4K60p outputs.",
+  "korean": "Aquilon RS2는 16개의 4K60p 입력과 12개의 4K60p 출력을 갖춘 미션 크리티컬 4K/8K 멀티스크린 프레젠테이션 시스템 겸 비디오월 프로세서다.",
+  "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 모델 전용 Technical Datasheet(dwn01.analogway.com)에서 개요·기능·전체 기술 사양·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Aquilon RS2는 필드 교체 가능한 4개의 입력 카드(16x 4K60p 입력)와 3개의 출력 카드(12x 4K60p 출력)로 구성되는 모듈형 미션 크리티컬 프로세서로, 8x HDMI 2.0/4x DisplayPort/4x 12G-SDI 입력 카드와 12x HDMI 2.0 출력 카드를 비롯해 HDMI 1.4, DP 1.2/1.4, 3G-SDI, NDI+12G-SDI, SFP+, Optical, SDVoE, ST 2110 등 다양한 입출력 카드를 별도 옵션으로 조합할 수 있다.\n\n제조사 공식 데이터시트에 따르면 Analog Way 5세대 스케일링 엔진 기반 초저지연(적정 구성 시 1프레임) 10/12비트 4:4:4 영상 처리를 제공하며, 프로그램 기준 10비트 4:4:4 @60Hz에서 80메가픽셀 처리량을 달성한다. 최대 8x 4K 또는 16x DL/2K 믹싱 레이어를 지원하고, 144Hz까지의 고프레임레이트와 스테레오스코픽 3D(DisplayPort)를 지원한다. 오디오는 De-embed/embed 기반 64x32 Dante @48kHz 또는 32x32 Dante @96kHz 오디오 네트워킹을 기본 내장한다.\n\n전원은 100-240VAC(최대 700W, 1+1 이중화 전원), 4RU 랙 마운트 섀시(핸들 포함 482.4×221.2×701mm), 액세서리 제외 무게 28.2kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "aquilonrs2-front.webp",
+      "alt": "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Analog Way",
+      "model": "Aquilon RS2",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3175×1772",
+      "resolution": "1800×686",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs2"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs2"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs2"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs2"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Aquilon User Manual v6.2",
+      "language": "en",
+      "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Aquilon RS2 Technical Datasheet (2026-07-03)",
+      "language": "en",
+      "note": "Technical Specifications, Product Specifications 전체 수록",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/aquilon-rs2"
+    }
+  ],
+  "features": [
+    {
+      "text": "필드 교체 가능한 입력 카드 4개(16x 4K60p)와 출력 카드 3개(12x 4K60p)로 구성되는 모듈형 설계다.",
+      "source": ""
+    },
+    {
+      "text": "Analog Way 5세대 스케일링 엔진 기반 초저지연(적정 구성 시 1프레임) 10/12비트 4:4:4 영상 처리, 최대 144Hz 고프레임레이트를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 8x 4K 또는 16x DL/2K 믹싱 레이어(분할 레이어는 2배)를 지원하며, DisplayPort 입출력에서 스테레오스코픽 3D를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "64x32 Dante @48kHz 또는 32x32 Dante @96kHz 오디오 네트워킹을 기본 내장하며, 이중화 이더넷 포트(AES67 지원)를 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "HTML5 기반 Web RCS로 실시간 소스 썸네일, 다중 운영자 협업(비밀번호 보호), 최대 3개의 가상 RC400T 컨트롤러를 GUI에서 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 3대의 추가 Aquilon 시스템과 링크 연결(OPT-RSX-LINK)해 확장할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Inputs",
+      "name": "구성",
+      "value": "16x 4K60p (필드 교체형 입력 카드 4개)",
+      "unit": "",
+      "condition": "8x HDMI 2.0 기본, 4x DP·4x 12G-SDI 등 옵션 카드로 구성",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Inputs",
+      "name": "HDMI 2.0 카드",
+      "value": "최대 4K60p 8bit 4:4:4 또는 12bit 4:2:2, 최대 4K30p 12bit 4:4:4",
+      "unit": "",
+      "condition": "2560x1440 144Hz 8bit 4:4:4도 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Inputs",
+      "name": "DisplayPort 카드",
+      "value": "DP1.4 모드 최대 5K60p 10bit 4:4:4, 최대 7680x4320RB 30Hz",
+      "unit": "",
+      "condition": "스테레오스코픽 3D 지원(프레임 시퀀셜)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Inputs",
+      "name": "12G-SDI 카드",
+      "value": "최대 4K60p 10bit 4:2:2, 3G/6G-SDI 호환",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "구성",
+      "value": "12x 4K60p (필드 교체형 출력 카드 3개)",
+      "unit": "",
+      "condition": "12x HDMI 2.0 기본, DP/12G-SDI/SFP+/Optical/SDVoE/ST2110 등 옵션 카드",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Outputs",
+      "name": "멀티뷰어 출력",
+      "value": "2x HDMI 2.0",
+      "unit": "",
+      "condition": "최대 2x 4K30p 또는 1x 4K60p+1 복제, 64개 위젯",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 엔진",
+      "value": "Analog Way 5세대 스케일링 엔진, 초저지연(적정 구성 시 1프레임)",
+      "unit": "",
+      "condition": "80메가픽셀 처리량(10bit 4:4:4 @60Hz, Program 기준)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "레이어",
+      "value": "최대 8x 4K 또는 16x DL/2K 믹싱 레이어(분할 레이어는 2배)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "Dante 네트워킹",
+      "value": "64x32 @48kHz 또는 32x32 @96kHz(내장)",
+      "unit": "",
+      "condition": "이중화 이더넷, AES67 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(RU)",
+      "value": "4RU",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.4 × 221.2 × 701",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "28.2",
+      "unit": "kg",
+      "condition": "액세서리 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240 VAC, 12-7A, 50/60Hz",
+      "unit": "",
+      "condition": "1+1 이중화 스왑 가능 전원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "700",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "3년(부품·공임, 공장 반송 기준)",
+      "unit": "",
+      "condition": "커넥터 손상은 보증 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "HDMI 2.0 (기본 8개, 카드형)",
+      "signal": "4K60p video in",
+      "direction": "IN",
+      "quantity": "16",
+      "protocol": "",
+      "availability": "필드 교체형 입력 카드 4개로 구성",
+      "condition": "다른 카드로 교체 가능(DP, SDI, NDI+SDI, SFP+, Optical, SDVoE, ST2110 등)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0 (기본, 카드형)",
+      "signal": "4K60p video out",
+      "direction": "OUT",
+      "quantity": "12",
+      "protocol": "",
+      "availability": "필드 교체형 출력 카드 3개로 구성",
+      "condition": "다른 카드로 교체 가능(DP, 12G-SDI, SFP+, Optical, SDVoE, ST2110 등)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0",
+      "signal": "멀티뷰어 out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "최대 2x 4K30p 또는 1x 4K60p+복제",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Dante 오디오 네트워킹(이중화)",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante, AES67",
+      "availability": "",
+      "condition": "64x32@48kHz 또는 32x32@96kHz",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB",
+      "signal": "펌웨어 업데이트/설정 백업",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Link",
+      "connector": "링크 포트",
+      "signal": "다중 Aquilon 시스템 연결",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "OPT-RSX-LINK 옵션 필요",
+      "condition": "최대 3대 추가 연결",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/aquilon-rs2",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Aquilon RS2 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

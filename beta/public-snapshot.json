@@ -2,16 +2,64 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 254,
-    "sha256": "4955274B02B0D1834D459DC21C4B2250F349229D5B76393D46CB635B8C70F045",
+    "sha256": "31D65A1F0D6D5926B35933ECEBBBF18B2DED007F24728C723F02D0D22EA013E6",
     "baselineCount": 25,
-    "baselineSha256": "782D3D136C9D0A7C9F19AB763518EC81CF3D5F4F3DA60DBA892578CA4D9DC530"
+    "baselineSha256": "178BE56164387FC81C6CEDA9002BC5210E4828FFC65C21D720C6DADF5A9BF24F"
   },
   "details": {
+    "aquilon-rs1": {
+      "sha256": "B10AD280485B1427BD15AD4ADC120C24B0C294C73748F09BBE0D23318A27ECAE",
+      "features": 7,
+      "specifications": 13,
+      "io": 5
+    },
+    "aquilon-rs2": {
+      "sha256": "5FD169DB43B6BDB7C437D457B87E61D5F0EA55D894C720850DED5CCC2B0E39BD",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
+    },
+    "avio-2ch-in": {
+      "sha256": "363A68213F1C7AE6C93A77E5A225B5FC75F392CB57E374991A5846CBF7CF15EB",
+      "features": 5,
+      "specifications": 10,
+      "io": 2
+    },
+    "avio-2ch-out": {
+      "sha256": "28C2040396AF3E11CDA7FF57999784A778A5AAB822DCA6968FB92F6A17971F2A",
+      "features": 5,
+      "specifications": 10,
+      "io": 2
+    },
+    "avio-bt": {
+      "sha256": "174C1F42ADF8049FF8C71850DF68530A333F56BFF11E22D2C1C74AD851354690",
+      "features": 6,
+      "specifications": 9,
+      "io": 2
+    },
+    "avio-usb-c": {
+      "sha256": "F86A50EAE5C603CDDE5CAC4E23B507FADDF1B9C408C00ED528091847EC424F1F",
+      "features": 7,
+      "specifications": 11,
+      "io": 2
+    },
     "brc-am7": {
       "sha256": "6A506D626F1C544818EDB0B7647E4F1547A63EC3098EE1EFDC6354558D3B410D",
       "features": 8,
       "specifications": 27,
       "io": 14
+    },
+    "cl01": {
+      "sha256": "AC45897920AD904550138359517DFFA9C02A0B5576AC01A4FF047859F012F888",
+      "features": 5,
+      "specifications": 11,
+      "io": 5
+    },
+    "dm3": {
+      "sha256": "87ED8083241A87001EAFD0AADB18A44AAC83467333B0FF70CD4344CF21A37C37",
+      "features": 6,
+      "specifications": 15,
+      "io": 8
     },
     "dm7": {
       "sha256": "23CF9158991028C11E9B554A3597928DB990490CC57DFE85FB8B5F9B9D70D1F9",
@@ -19,11 +67,125 @@
       "specifications": 16,
       "io": 15
     },
+    "eb-l530u": {
+      "sha256": "BDF9A268D01ED50A1960A1DAAAAF9BA4ECEB4DA9BBCC224EFA90F5396B976B70",
+      "features": 6,
+      "specifications": 12,
+      "io": 11
+    },
+    "eikos-4k": {
+      "sha256": "628520AD87F049B6151653E0425771AC4BFF3ED4051858A34E9EAF35C0085504",
+      "features": 6,
+      "specifications": 15,
+      "io": 10
+    },
+    "ez-hsv-plus": {
+      "sha256": "5D94B173837BE5C14C5EA7BDD1334BF115ED6865728EA0985C8E2337C7C6E2D3",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "ez-md-plus": {
+      "sha256": "6EB068F976D213443D0F18334EEC711F9B589905DF2534A06DE982CF07944136",
+      "features": 6,
+      "specifications": 17,
+      "io": 8
+    },
+    "ez-shv-plus": {
+      "sha256": "D8CF1A8D707F4AF86B4A579EEEF51E681F66D8C432ED52C171487F7A550DE810",
+      "features": 5,
+      "specifications": 13,
+      "io": 5
+    },
+    "gsm4248px": {
+      "sha256": "5C82557553544677F9E42274939BD7B56430F7063F726C6A6411A9140B636223",
+      "features": 6,
+      "specifications": 10,
+      "io": 2
+    },
+    "hdmi20-optj-rx90": {
+      "sha256": "910542D4DCFAD52A7CCB81CA5F57F7F4BA1BF4BF2C455B206A6E254032797ACF",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "hdmi20-optj-tx90": {
+      "sha256": "A0A118588265CD62DA85A9C9679E7DA11D2080BCB1A4771621590B0B7F453ED0",
+      "features": 6,
+      "specifications": 10,
+      "io": 3
+    },
+    "hyperdeck-studio-hd-mini": {
+      "sha256": "70EADE7CA5C936F8347E4F97AF791E774DD7DFEACD402095F6A9BCBE9C8A0A47",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
+    "hyperdeck-studio-hd-plus": {
+      "sha256": "44DB79130614EC342C6340028FD5B871AEC7FB4C8B9ED9821D07FF784542F3BB",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
+    "hyperdeck-studio-hd-pro": {
+      "sha256": "3662EFBE65F23A7127DE8FB490DAE8D1EA043F548BF8C2448AFCC8399935B744",
+      "features": 6,
+      "specifications": 8,
+      "io": 6
+    },
     "ki-pro-go2": {
       "sha256": "07E11BFAC9D4B0D66ADBB1FC713B4C45ECB2DFFC49C61F278728359BF9DAC488",
       "features": 8,
       "specifications": 16,
       "io": 11
+    },
+    "led-780h": {
+      "sha256": "05C5322CAE43B1365B03B8B0F9B6103CB49E4A44932B77F1A6EF2777C616D83F",
+      "features": 7,
+      "specifications": 11,
+      "io": 6
+    },
+    "mezzo-322-ad": {
+      "sha256": "A66CAB092F65EE010F03F45C5EE62CD9FA2BD3640329CB0CAEB3B930420FCF12",
+      "features": 7,
+      "specifications": 11,
+      "io": 5
+    },
+    "mxcw640": {
+      "sha256": "C47DB31FF44956FFE6D9FF3347BC99D34CF7410023D011F9A038B390281F43E9",
+      "features": 7,
+      "specifications": 10,
+      "io": 4
+    },
+    "nx-1200": {
+      "sha256": "649AB28D95E8E694A899380193605E74F3F427D9CDD4E099667AAB95422E7BE1",
+      "features": 6,
+      "specifications": 19,
+      "io": 7
+    },
+    "nx-2200": {
+      "sha256": "FC6FB58D436D9EA2B381EBC890F2E3B495A069AA81B540CF112B4CCCFB6A3DC9",
+      "features": 6,
+      "specifications": 19,
+      "io": 8
+    },
+    "nx-3200": {
+      "sha256": "16766DCCFF7DD634CC15E235C62505D0B649F92BB6AB2D858AF00859031E9893",
+      "features": 6,
+      "specifications": 19,
+      "io": 8
+    },
+    "pt-mz11k": {
+      "sha256": "7B9C7F5FE8F7EA47C0B2CADF0E06ADFAA3735F0E395449ECA60103FF296CB694",
+      "features": 5,
+      "specifications": 14,
+      "io": 8
+    },
+    "pt-mz14k": {
+      "sha256": "C6A0600D009D0F6BECD1FB63249BFE36382E81D303EE49878F2BE8ABD9160636",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
     },
     "pt-mz17k": {
       "sha256": "B340C0BE082DDAF64D0D5B628D8F39BC580E1120EA4F6A8BFE3E3ABD7281D7EC",
@@ -31,11 +193,203 @@
       "specifications": 13,
       "io": 4
     },
+    "pt-mz882": {
+      "sha256": "A1E5E7F95E7E1E2D978307D06766E3F5E371C0BA651EDC9A4DE365E946D8F88A",
+      "features": 6,
+      "specifications": 14,
+      "io": 10
+    },
+    "pt-vmz51": {
+      "sha256": "016D0A75A9C19C2EDD6976847019A22CE2BC157EC9586BF59A919F7E3CF1A20F",
+      "features": 5,
+      "specifications": 15,
+      "io": 7
+    },
+    "pt-vmz61": {
+      "sha256": "079EF62E77D891B28FA18B8A6F7C24DD8B4F72B83A72742D9F49F28D59A029F3",
+      "features": 5,
+      "specifications": 15,
+      "io": 7
+    },
+    "pt-vmz71": {
+      "sha256": "FB23160DF07CFAE7BB581144322570F943EDFF3D48BDE7D2AF8337ABF63E4D90",
+      "features": 6,
+      "specifications": 15,
+      "io": 7
+    },
+    "pulse-4k": {
+      "sha256": "C619AE475C121B559DFC1086311A80D26850967504CD0F614CDA644759C18F08",
+      "features": 6,
+      "specifications": 14,
+      "io": 10
+    },
     "rally-bar": {
       "sha256": "34DE780FE55639917F118C4B5E110D6083142BD5BBC69CA1E5FCB3DF7B2C06F1",
       "features": 8,
       "specifications": 16,
       "io": 9
+    },
+    "rally-mic-pod-extension-cable": {
+      "sha256": "8A28FE02F269CCACC4915675A7AEE997BAC641F71F6CBA220CC0ADE553AD789E",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "rally-mic-pod-hub": {
+      "sha256": "726D1AEA399D3390523E38732D5B92623305BEC3F07F6EDF9C5AB1A331C17073",
+      "features": 4,
+      "specifications": 5,
+      "io": 1
+    },
+    "rally-mic-pod": {
+      "sha256": "607AD217A7834366B6401FCAC4B971FF6D23931EDF32582A3DA348A5744F0CD1",
+      "features": 5,
+      "specifications": 13,
+      "io": 2
+    },
+    "rally-plus": {
+      "sha256": "93D59677251272DD4488001A433C4A1E11C69D7B22E33C4D6618BB1373419BA5",
+      "features": 5,
+      "specifications": 15,
+      "io": 8
+    },
+    "rc400t": {
+      "sha256": "7D8CEBD5E03465F45C163C7CBE1A60E336C412935BD6E2A4297241792C4DFF46",
+      "features": 5,
+      "specifications": 10,
+      "io": 3
+    },
+    "rio1608-d3": {
+      "sha256": "AFC24771DE047DD6E2E55644CE2A6F2BC95E9579B6C662EB6BF9E6D9783EF1A2",
+      "features": 5,
+      "specifications": 12,
+      "io": 5
+    },
+    "rio3224-d3": {
+      "sha256": "53E58F32310CFAE4C99599F4D56D89AE9785FABA5F8210C03EED7501DFB6210F",
+      "features": 5,
+      "specifications": 12,
+      "io": 6
+    },
+    "strong-usb-cable": {
+      "sha256": "1ECCF2EED991666210ADA72DC0A20D24481A6E26D4C772F4C0B3135D7669252E",
+      "features": 3,
+      "specifications": 4,
+      "io": 2
+    },
+    "sx-1216-rti": {
+      "sha256": "3E15B51D0245F817E01380482DADE7DE981D6C9478F01E0A60C799D1C3D40CBE",
+      "features": 7,
+      "specifications": 9,
+      "io": 3
+    },
+    "tio1608-d2": {
+      "sha256": "AF67F76A5FFADFBBBB4A0837AFE4DF264E0140049B96B9C0AF13C0C586DFC780",
+      "features": 6,
+      "specifications": 12,
+      "io": 3
+    },
+    "tr315": {
+      "sha256": "9452595DC7C8D4DD6AF8E52D7096626B15F521FE1094B7C66CA15ED0E841A8B4",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "tr335": {
+      "sha256": "13560DA74428E8B8F2F73745BA8928C24AF204ED3D6D675E34A7C3EC3F98D741",
+      "features": 5,
+      "specifications": 12,
+      "io": 4
+    },
+    "tr535": {
+      "sha256": "7625AE21254D53F4A4FA592B862FAF2708ED3EBD94FC838ED125B0A0898C353B",
+      "features": 4,
+      "specifications": 12,
+      "io": 6
+    },
+    "tr535n": {
+      "sha256": "1942CC660DA81353CD634FFFD41FC0C2DEF95FB0A2FBF791D63EF91B793E533C",
+      "features": 6,
+      "specifications": 12,
+      "io": 6
+    },
+    "uvc-01": {
+      "sha256": "CCEA0CA92DE4D3F3F6C3975895CB62CE14E779620220D452F0251716A724018B",
+      "features": 5,
+      "specifications": 10,
+      "io": 3
+    },
+    "v-02hd-mk-ii": {
+      "sha256": "AB9E3908ED3123DE4D4C7C87ABBF9AC17948B5D2024378E21A20DA056A825FE8",
+      "features": 6,
+      "specifications": 10,
+      "io": 6
+    },
+    "varia-100": {
+      "sha256": "E5E644B7A1DB22A230F52F56375ABBC3EE735F88C83E18C77F020940F91D4EFC",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-80": {
+      "sha256": "EC2C90D17225C9B53017FFBBEC279DC78909C9A497514C2939809ABEAC65852C",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-sl50": {
+      "sha256": "F5568EE86AE89B1B04ECB4B653574E2E167B208A935C939B3FF0D88FAD348630",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "varia-sl80": {
+      "sha256": "3578EB02503A8266651F6CE7B48B4B802F2C96A187C7730C2265B21E77458AA8",
+      "features": 6,
+      "specifications": 12,
+      "io": 1
+    },
+    "vs10": {
+      "sha256": "A70FB2A7A50AF18938F090FCFD3EA64FAE8D831C5FA7897A397B9B49D13EE78E",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
+    },
+    "vs5": {
+      "sha256": "2E3E1A54DA3ED457467D73BA01B573388C95883DDC0670606C059056BDA90375",
+      "features": 6,
+      "specifications": 13,
+      "io": 8
+    },
+    "x100pro-2u": {
+      "sha256": "70F2EE95BC84D4DB5B3BDA904FF1E4CC86DA0AFFF9388AFECBCADDBCC8BD8AAC",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "x100pro-4u": {
+      "sha256": "44E62FEC5A82E1F22BEC61EB1B77F3708DCDAB97690A742FB08393BF38A237A8",
+      "features": 6,
+      "specifications": 11,
+      "io": 2
+    },
+    "x100pro-7u": {
+      "sha256": "6C30EFFF5530712B8EE15FAD54638D83D1ECF68BCB2F5CFE0C564BAB52778A46",
+      "features": 6,
+      "specifications": 13,
+      "io": 2
+    },
+    "zenith-100": {
+      "sha256": "FCBEA3FA1A5C38A6D40DEDE4FBEE376AD077BF663512E222CFBCA252669B115C",
+      "features": 6,
+      "specifications": 14,
+      "io": 8
+    },
+    "zenith-200": {
+      "sha256": "0C3E00011052BDE54E4FF1B6F1CDCF79E2C7DAF3435D74A040A2A9125C366B65",
+      "features": 6,
+      "specifications": 16,
+      "io": 7
     }
   }
 }

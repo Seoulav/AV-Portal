@@ -1,0 +1,318 @@
+{
+  "manufacturer": "Logitech",
+  "productName": "Rally Mic Pod",
+  "model": "989-000430",
+  "series": "Rally Accessories",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Microphone"
+  ],
+  "english": "Modular microphone pod with RightSound for Rally, Rally Bar, and Rally Bar Mini.",
+  "korean": "Rally Mic Pod는 Rally, Rally Bar, Rally Bar Mini용 RightSound 지원 모듈형 마이크로폰 팟이다.",
+  "verificationSummary": "제조사 공식 제품 페이지(logitech.com)의 개요·Technical Specifications 섹션에서 마이크·인터페이스·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Rally Mic Pod는 Rally, Rally Bar, Rally Bar Mini와 함께 사용하는 모듈형 마이크로폰 팟으로, 4개의 무지향성 마이크로폰이 8개의 음향 빔을 형성해 잡음이 아닌 음성만을 포착한다. 낮은 프로파일의 프리미엄 소재 디자인에 음소거 버튼과 LED 상태 표시등을 갖췄으며, 아연 합금 프레임으로 진동을 감쇠한다.\n\n제조사 공식 Technical Specifications에 따르면 주파수 응답은 90Hz~16kHz, 감도는 >-27dB ±1dB @1Pa, 마이크 데이터 출력 레이트는 48kHz다. 픽업 범위는 15ft(4.5m) 지름이며, AEC(음향 에코 제거)·VAD(음성 활동 감지)·AI 노이즈 억제 필터를 지원한다.\n\n출력은 9.6ft(2.95m) 12핀 캡티브 케이블이며, 입력은 12핀 인터페이스로 다른 마이크 팟을 데이지체인하거나 Rally Mic Pod Hub에 연결할 수 있다. 크기는 21×102×102mm이며, 그래파이트(Graphite) 색상 부품번호는 989-000430이다.",
+  "images": [
+    {
+      "role": "Perspective",
+      "file": "logitech-rally-mic-pod-perspective.webp",
+      "alt": "Logitech Rally Mic Pod 원근 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Logitech",
+      "model": "Rally Mic Pod",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1600×1200",
+      "resolution": "1400×822",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "logitech-rally-mic-pod-top.webp",
+      "alt": "Logitech Rally Mic Pod 상단 음소거 버튼 이미지",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Logitech",
+      "model": "Rally Mic Pod",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1600×1200",
+      "resolution": "1106×1183",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png"
+    },
+    {
+      "role": "Other",
+      "status": "FOUND",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "제조사 공식 제품 페이지 — Technical Specifications 섹션",
+      "language": "en",
+      "note": "Microphones/Interfaces/Device Management/Physical/Ordering 전체 표 수록",
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+    }
+  ],
+  "features": [
+    {
+      "text": "4개의 무지향성 마이크로폰이 8개의 음향 빔을 형성해 잡음이 아닌 음성만을 포착한다.",
+      "source": ""
+    },
+    {
+      "text": "RightSound 기술로 음성을 자동 레벨링하고 배경 소음을 억제한다.",
+      "source": ""
+    },
+    {
+      "text": "음소거 버튼과 LED 상태 표시등을 갖췄으며, 아연 합금 프레임으로 진동을 감쇠한다.",
+      "source": ""
+    },
+    {
+      "text": "12핀 캡티브 케이블(9.6ft)로 출력하며, 12핀 입력으로 다른 마이크 팟을 데이지체인하거나 Rally Mic Pod Hub에 연결할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Logitech Sync 플랫폼으로 장치를 관리할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Microphones",
+      "name": "주파수 응답",
+      "value": "90Hz ~ 16kHz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "감도",
+      "value": ">-27 dB ±1dB @ 1Pa",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "마이크 데이터 출력 레이트",
+      "value": "48",
+      "unit": "kHz",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "픽업 범위",
+      "value": "15 ft / 4.5m",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "빔포밍 엘리먼트",
+      "value": "무지향성 마이크 4개 → 음향 빔 8개",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "오디오 처리",
+      "value": "AEC(음향 에코 제거), VAD(음성 활동 감지)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Microphones",
+      "name": "노이즈 억제",
+      "value": "AI 필터",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Interfaces",
+      "name": "출력",
+      "value": "9.6 ft (2.95 m) 12핀 캡티브 케이블",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Interfaces",
+      "name": "입력",
+      "value": "12핀 인터페이스",
+      "unit": "",
+      "condition": "Mic Pod 데이지체인 또는 Rally Mic Pod Hub 연결",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Device Management",
+      "name": "플랫폼",
+      "value": "Logitech Sync",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(H×W×D)",
+      "value": "21 × 102 × 102",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Ordering",
+      "name": "부품번호(그래파이트)",
+      "value": "989-000430",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "2년 제한 하드웨어 보증",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Connector",
+      "connector": "12-pin captive cable",
+      "signal": "Mic Pod → Hub/Bar 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "9.6ft(2.95m)",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "connector": "12-pin",
+      "signal": "데이지체인 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "다른 Mic Pod 또는 Mic Pod Hub 연결",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "제품 자체 라벨 미확인",
+      "detail": "제품 이미지에 모델명 텍스트가 인쇄되어 있지 않아, 제조사 페이지 귀속만으로 FOUND 등급을 부여했다(VERIFIED 아님)."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Logitech Rally Mic Pod 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

@@ -45,7 +45,9 @@ test('Group 1 재생성은 카드 대표 사진을 지우지 않고 공개 목�
 
 test('카드 대표 사진은 기준 25개 해시에 영향을 주지 않는다', () => {
   const baseline = catalog.slice(0, 25);
-  assert.ok(baseline.some(item => item.preview_image), '기준 25개 안의 항목에 사진이 붙어 있어야 이 검사가 의미 있다');
+  // group2Previews가 전부 상세페이지로 전환되어 현재는 미리보기 사진이 하나도 없다.
+  // 새 Group 2 사진이 추가되면 이 항목 중 하나가 기준 25개 안에 있는지 다시 확인한다.
+  if (group2Previews.length > 0) assert.ok(baseline.some(item => item.preview_image), '기준 25개 안의 항목에 사진이 붙어 있어야 이 검사가 의미 있다');
   for (const item of baseline.map(stripDerivedCatalogFields)) for (const field of previewFields) assert.equal(item[field], undefined);
 });
 

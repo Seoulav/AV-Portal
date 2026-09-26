@@ -1,0 +1,282 @@
+{
+  "manufacturer": "Roland",
+  "productName": "UVC-01",
+  "model": "UVC-01",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Capture"
+  ],
+  "english": "USB 3.0 HDMI-to-UVC video capture device delivering uncompressed 1080p60.",
+  "korean": "UVC-01은 HDMI 입력 영상을 비압축 1080p60 UVC/UAC 웹캠 신호로 변환해 USB 3.0으로 컴퓨터에 전달하는 캡처 장치다.",
+  "verificationSummary": "공식 제품 페이지에서 영상·오디오·전원·크기 사양을 확인했다. 개별 매뉴얼 PDF는 검토 중이다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "UVC-01은 HDMI IN 커넥터로 들어온 영상을 USB 3.0 Type B(USB STREAM)로 비압축 YUY2 포맷 전송해, 별도 드라이버 없이 Mac·Windows에서 UVC 웹캠처럼 인식되는 소형 캡처 장치다. 최대 1920×1200 해상도, 60fps까지 지원하며 Roland V시리즈 스위처나 HDMI 카메라와 조합해 사용할 수 있다.\n\nAUX IN 단자(3.5mm 스테레오)로 별도 오디오를 합성해 함께 전송할 수 있고, 전원은 컴퓨터 USB 포트에서 공급받아 별도 어댑터가 필요 없다. 공식 매뉴얼은 개별 PDF가 아니라 모델별 다운로드 허브 페이지로 제공된다.",
+  "images": [
+    {
+      "role": "Perspective",
+      "file": "uvc-01-perspective.webp",
+      "alt": "Roland UVC-01 우측 45도 원근 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "Roland",
+      "model": "UVC-01",
+      "sourceUrl": "https://static.roland.com/assets/media/zip/uvc-01_hr_img.zip",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3840×2714",
+      "resolution": "1210×929",
+      "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/uvc-01/"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/uvc-01/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://proav.roland.com/global/products/uvc-01/"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://static.roland.com/assets/media/zip/uvc-01_hr_img.zip"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://proav.roland.com/global/products/uvc-01/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "UVC-01 Owner's Manuals (다운로드 허브)",
+      "language": "en",
+      "note": "개별 매뉴얼 PDF는 이 허브 페이지에서 선택",
+      "url": "https://proav.roland.com/global/support/by_product/uvc-01/owners_manuals/"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://proav.roland.com/global/products/uvc-01/"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 입력 영상을 비압축 1080p60 UVC 웹캠 신호로 변환해 USB 3.0으로 전달한다.",
+      "source": ""
+    },
+    {
+      "text": "별도 드라이버 없이 Mac·Windows에서 플러그 앤 플레이 USB 웹캠으로 인식된다.",
+      "source": ""
+    },
+    {
+      "text": "AUX IN(3.5mm 스테레오)으로 별도 오디오를 입력·합성할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "컴퓨터 USB 포트에서 전원을 공급받아 별도 전원 어댑터가 필요 없다.",
+      "source": ""
+    },
+    {
+      "text": "Roland V시리즈 비디오 스위처 및 HDMI 카메라와 조합해 사용할 수 있다(공식 자료 소개)",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "HDMI 입력",
+      "value": "HDMI Type A",
+      "unit": "",
+      "condition": "HDCP 미지원, 480i~1080p, VGA~UXGA",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "USB 출력",
+      "value": "USB 3.0 Type B",
+      "unit": "",
+      "condition": "비압축 YUY2",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "최대 해상도/프레임",
+      "value": "1920×1200 / 60fps",
+      "unit": "",
+      "condition": "출력 해상도는 320×240~1920×1200 범위",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "HDMI 오디오",
+      "value": "Linear PCM 48/44.1kHz, 24/20/16bit stereo",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "USB 오디오",
+      "value": "Linear PCM 48kHz 16bit stereo",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "AUX IN",
+      "value": "3.5mm 스테레오",
+      "unit": "-10dBu 공칭 입력",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "USB 버스 파워",
+      "unit": "500mA",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "90×37×23",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "96",
+      "unit": "g",
+      "condition": "케이블 제외",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0~40",
+      "unit": "℃",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI IN",
+      "signal": "Video",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "",
+      "condition": "HDCP 미지원",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video/USB",
+      "connector": "USB STREAM",
+      "signal": "Uncompressed video (UVC)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB 3.0 Type B",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "AUX IN",
+      "signal": "Analog audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "3.5mm stereo",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://proav.roland.com/global/products/uvc-01/",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "매뉴얼 개별 파일 미확정",
+      "detail": "공식 매뉴얼은 다운로드 허브 페이지로만 확인했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "공식 고해상도 이미지 키트에서 받은 사진의 재게시 권한은 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Roland UVC-01 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

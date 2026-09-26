@@ -10,7 +10,8 @@
     "kind": "equipment",
     "official_links": [
       "https://bssaudio.com/en-US/products/EC-4BV"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16058660935uecux3ldj.pdf&o_file_name=ec-4bv+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
   },
   {
     "brand": "Audinate",
@@ -24,9 +25,9 @@
     "official_links": [
       "https://www.getdante.com/platform/avio-usb-c/"
     ],
-    "preview_image": "avio-usb-c-main.webp",
-    "preview_image_alt": "Audinate Dante AVIO USB-C 어댑터 RJ45·USB-C 케이블 이미지",
-    "manual_link": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf"
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf",
+    "slug": "avio-usb-c",
+    "card_image": "avio-usb-c-main.webp"
   },
   {
     "brand": "Shure",
@@ -40,9 +41,9 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
     ],
-    "preview_image": "mxcw640-main.webp",
-    "preview_image_alt": "Shure MXCW640 회의 단말 정면 이미지",
-    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
+    "slug": "mxcw640",
+    "card_image": "mxcw640-main.webp"
   },
   {
     "brand": "Yamaha",
@@ -70,7 +71,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/pt-BR/products/cdi-2-300bl.html"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762892auukm8e4t4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Powersoft",
@@ -84,10 +86,9 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
     ],
-    "preview_image": "mezzo-322-ad-front.webp",
-    "preview_image_alt": "Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)",
-    "preview_image_scope": "series",
-    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw",
+    "slug": "mezzo-322-ad",
+    "card_image": "mezzo-322-ad-front.webp"
   },
   {
     "brand": "Powersoft",
@@ -100,7 +101,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -113,7 +115,8 @@
     "kind": "equipment",
     "official_links": [
       "https://powersoft.com/en/products/install-amps/quattrocanali-4804dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -126,7 +129,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -139,7 +143,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/pt-BR/produtos/microfones-sem-fio/ulx-d_digital_wireless/ulxd4q"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -152,7 +157,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -165,7 +171,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-ASIA/products/accessories/ua874?variant=UA874XA"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA874"
   },
   {
     "brand": "Sony",
@@ -194,9 +201,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/v-02hd_mk_ii/"
     ],
-    "preview_image": "v-02hd-mk-ii-perspective.webp",
-    "preview_image_alt": "Roland V-02HD MK II 좌측 45도 원근 이미지",
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd_mk_ii/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd_mk_ii/owners_manuals/",
+    "slug": "v-02hd-mk-ii",
+    "card_image": "v-02hd-mk-ii-perspective.webp"
   },
   {
     "brand": "Analog Way",
@@ -210,9 +217,9 @@
     "official_links": [
       "https://www.analogway.com/products/aquilon-rs1"
     ],
-    "preview_image": "aquilon-rs1-front.webp",
-    "preview_image_alt": "Analog Way Aquilon RS1 전면 이미지",
-    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf"
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf",
+    "slug": "aquilon-rs1",
+    "card_image": "aquilon-rs1-front.webp"
   },
   {
     "brand": "Roland",
@@ -226,9 +233,9 @@
     "official_links": [
       "https://proav.roland.com/global/products/uvc-01/"
     ],
-    "preview_image": "uvc-01-perspective.webp",
-    "preview_image_alt": "Roland UVC-01 우측 45도 원근 이미지",
-    "manual_link": "https://proav.roland.com/global/support/by_product/uvc-01/owners_manuals/"
+    "manual_link": "https://proav.roland.com/global/support/by_product/uvc-01/owners_manuals/",
+    "slug": "uvc-01",
+    "card_image": "uvc-01-perspective.webp"
   },
   {
     "brand": "Ross Video",
@@ -241,7 +248,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/signal-processing/ultriscape/"
-    ]
+    ],
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf"
   },
   {
     "brand": "NETGEAR",
@@ -255,9 +263,9 @@
     "official_links": [
       "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
     ],
-    "preview_image": "gsm4248px-rear.webp",
-    "preview_image_alt": "NETGEAR GSM4248PX 후면 포트면 원근 이미지",
-    "manual_link": "https://www.netgear.com/support/product/gsm4248px"
+    "manual_link": "https://www.netgear.com/support/product/gsm4248px",
+    "slug": "gsm4248px",
+    "card_image": "gsm4248px-rear.webp"
   },
   {
     "brand": "NETGEAR",
@@ -270,7 +278,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/xsm4216f"
   },
   {
     "brand": "Logitech",
@@ -298,7 +307,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2220B/s/SPT_V11HB05851#manuals"
   },
   {
     "brand": "Epson",
@@ -311,7 +321,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790SU/p/V11HB30051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790SU/s/SPT_V11HB30051#manuals"
   },
   {
     "brand": "Epson",
@@ -324,7 +335,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals"
   },
   {
     "brand": "Epson",
@@ -338,9 +350,9 @@
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040"
     ],
-    "preview_image": "eb-l530u-main.webp",
-    "preview_image_alt": "Epson EB-L530U 프로젝터 정면 렌즈 방향 대표 이미지",
-    "manual_link": "https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L530U/s/SPT_V11HA27040"
+    "manual_link": "https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L530U/s/SPT_V11HA27040",
+    "slug": "eb-l530u",
+    "card_image": "eb-l530u-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -353,7 +365,10 @@
     "kind": "equipment",
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
-    ]
+    ],
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz71",
+    "card_image": "pt-vmz71-main.webp"
   },
   {
     "brand": "AJA",
@@ -394,7 +409,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG43U800FNFXKR"
   },
   {
     "brand": "Samsung",
@@ -407,7 +423,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG50U800FNFXKR"
   },
   {
     "brand": "Samsung",
@@ -420,7 +437,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG65U800FNFXKR"
   },
   {
     "brand": "Samsung",
@@ -433,7 +451,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH32QMCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -446,7 +465,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH43QMCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -459,7 +479,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH85QMCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -472,7 +493,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH98QECEDGCXKR"
   },
   {
     "brand": "Samsung",
@@ -485,7 +507,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH98QMCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -498,7 +521,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR&prd1DepNm=PC%2F%EB%AA%A8%EB%8B%88%ED%84%B0&prd2DepNm=%EB%AA%A8%EB%8B%88%ED%84%B0"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH43QHCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -511,7 +535,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH75QHCEBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -524,7 +549,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH115QHFEBGXKR"
   },
   {
     "brand": "Samsung",
@@ -537,7 +563,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH55VMCRBGBXKR"
   },
   {
     "brand": "Samsung",
@@ -550,7 +577,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH55VHCRBGBXKR"
   },
   {
     "brand": "Samsung",
@@ -563,7 +591,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/hk_en/support/model/KQ75LSF03WFXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=KQ75LSF03WFXKR"
   },
   {
     "brand": "Samsung",
@@ -576,7 +605,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH55WMFWBGCXKR"
   },
   {
     "brand": "Samsung",
@@ -589,7 +619,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
-    ]
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=LH75WMFWLGCXKR"
   },
   {
     "brand": "Sony",
@@ -654,7 +685,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.presentation.aver.com/model/tr535n"
-    ]
+    ],
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
+    "slug": "tr535n",
+    "card_image": "tr535n-front.webp"
   },
   {
     "brand": "AVer",
@@ -667,7 +701,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.presentation.aver.com/model/tr535"
-    ]
+    ],
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
+    "slug": "tr535",
+    "card_image": "tr535-front.webp"
   },
   {
     "brand": "AVer",
@@ -680,7 +717,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.presentation.aver.com/model/tr335"
-    ]
+    ],
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf",
+    "slug": "tr335",
+    "card_image": "tr335-front.webp"
   },
   {
     "brand": "AVer",
@@ -693,7 +733,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.presentation.aver.com/model/tr315"
-    ]
+    ],
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf",
+    "slug": "tr315",
+    "card_image": "tr315-perspective.webp"
   },
   {
     "brand": "AVer",
@@ -706,7 +749,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.presentation.aver.com/model/cl01"
-    ]
+    ],
+    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf",
+    "slug": "cl01",
+    "card_image": "cl01-front.webp"
   },
   {
     "brand": "Roland",
@@ -719,7 +765,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-02hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -732,7 +779,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-1hd_plus/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -745,7 +793,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/vr-4hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -758,7 +807,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/vr-6hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/vr-6hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -771,7 +821,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-8hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -784,7 +835,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-60hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -797,7 +849,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-80hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-80hd/owners_manuals/"
   },
   {
     "brand": "Roland",
@@ -810,7 +863,8 @@
     "kind": "equipment",
     "official_links": [
       "https://proav.roland.com/global/products/v-160hd/"
-    ]
+    ],
+    "manual_link": "https://proav.roland.com/global/support/by_product/v-160hd/owners_manuals/"
   },
   {
     "brand": "Lumantek",
@@ -823,7 +877,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lumantek.com/index/product_intro/68"
-    ]
+    ],
+    "manual_link": "https://www.lumantek.com/index/download/product/68",
+    "slug": "vs5",
+    "card_image": "lumantek-vs5-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -836,7 +893,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lumantek.com/index/product_intro/37"
-    ]
+    ],
+    "manual_link": "https://www.lumantek.com/index/download/product/37",
+    "slug": "vs10",
+    "card_image": "lumantek-vs10-main.webp"
   },
   {
     "brand": "Analog Way",
@@ -849,7 +909,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/pulse-4k"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Quick+Start+Guide/pulse-4k-quick-start-guide.pdf",
+    "slug": "pulse-4k",
+    "card_image": "pulse4k-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -862,7 +925,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/eikos-4k"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Quick+Start+Guide/eikos-4k-quick-start-guide.pdf",
+    "slug": "eikos-4k",
+    "card_image": "eikos4k-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -875,7 +941,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/aquilon-rs2"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Quick+Start+Guide/Aquilon-RS2-quick-start-guide.pdf",
+    "slug": "aquilon-rs2",
+    "card_image": "aquilonrs2-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -888,7 +957,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/zenith-100"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Quick+Start+Guide/zenith-100-quick-start-guide.pdf",
+    "slug": "zenith-100",
+    "card_image": "zenith100-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -901,7 +973,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/zenith-200"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Quick+Start+Guide/zenith-200-quick-start-guide.pdf",
+    "slug": "zenith-200",
+    "card_image": "zenith200-front.webp"
   },
   {
     "brand": "Analog Way",
@@ -914,7 +989,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.analogway.com/products/rc400t"
-    ]
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Quick+Start+Guide/RC400T-quick-start-guide.pdf",
+    "slug": "rc400t",
+    "card_image": "rc400t-front.webp"
   },
   {
     "brand": "Magnimage",
@@ -927,7 +1005,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.magnimage.com/article/780H"
-    ]
+    ],
+    "slug": "led-780h",
+    "card_image": "led-780h-front.webp",
+    "manual_link": "./manuals/magnimage-led-780h-user-manual.pdf"
   },
   {
     "brand": "NovaStar",
@@ -941,7 +1022,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -955,7 +1037,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -969,7 +1052,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -983,7 +1067,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -997,7 +1082,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1011,7 +1097,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1025,7 +1112,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1039,7 +1127,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -1053,7 +1142,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "Colorlight",
@@ -1067,7 +1157,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-7u",
+    "card_image": "x100pro-7u-front.webp"
   },
   {
     "brand": "Colorlight",
@@ -1081,7 +1173,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-4u",
+    "card_image": "x100pro-4u-front.webp"
   },
   {
     "brand": "Colorlight",
@@ -1095,7 +1189,9 @@
     "official_links": [
       "https://en.colorlightinside.com/product/download/111"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "slug": "x100pro-2u",
+    "card_image": "x100pro-2u-front.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1109,7 +1205,10 @@
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-pro",
+    "card_image": "hyperdeck-studio-hd-pro-main.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1123,7 +1222,10 @@
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-plus",
+    "card_image": "hyperdeck-studio-hd-plus-main.webp"
   },
   {
     "brand": "Blackmagic Design",
@@ -1137,7 +1239,10 @@
     "official_links": [
       "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+    "slug": "hyperdeck-studio-hd-mini",
+    "card_image": "hyperdeck-studio-hd-mini-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -1150,7 +1255,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lumantek.com/index/product_intro/60"
-    ]
+    ],
+    "manual_link": "https://www.lumantek.com/index/download/product/60",
+    "slug": "ez-md-plus",
+    "card_image": "lumantek-ez-md-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -1163,7 +1271,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lumantek.com/index/product_intro/59"
-    ]
+    ],
+    "manual_link": "https://www.lumantek.com/index/download/product/59",
+    "slug": "ez-shv-plus",
+    "card_image": "lumantek-ez-shv-main.webp"
   },
   {
     "brand": "Lumantek",
@@ -1176,7 +1287,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lumantek.com/index/product_intro/62"
-    ]
+    ],
+    "manual_link": "https://www.lumantek.com/index/download/product/62",
+    "slug": "ez-hsv-plus",
+    "card_image": "lumantek-ez-hsv-main.webp"
   },
   {
     "brand": "Ross Video",
@@ -1190,7 +1304,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
   },
   {
     "brand": "Ross Video",
@@ -1246,7 +1361,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
   },
   {
     "brand": "Yamaha",
@@ -1259,7 +1375,10 @@
     "kind": "equipment",
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/"
-    ]
+    ],
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf",
+    "slug": "tio1608-d2",
+    "card_image": "tio1608-d2-front.webp"
   },
   {
     "brand": "Crown",
@@ -1272,7 +1391,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/dci-2-300"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761888fzzsbzteoz.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -1285,7 +1405,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/CDi-2-300"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762827nmoims0at3.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -1298,7 +1419,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/dci-2-300n.html"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763954d5bkckkyeq.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -1311,7 +1433,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/i-tech-4x3500hd"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605765434a2ngresszr.pdf&o_file_name=crown+i-tech+4x3500+hd+%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
   },
   {
     "brand": "Crown",
@@ -1324,7 +1447,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/cdi-2-600bl"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763015ow3gweitfl.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -1337,7 +1461,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en/products/dci-4-300da"
-    ]
+    ],
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
   },
   {
     "brand": "Crown",
@@ -1350,7 +1475,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/ctd-4125"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788184832oije7xqbsg.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
   },
   {
     "brand": "Crown",
@@ -1363,7 +1489,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.crownaudio.com/en-US/products/ctd-8125"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1787821350tikkz3quya.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
   },
   {
     "brand": "Powersoft",
@@ -1376,7 +1503,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1389,7 +1517,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-322-a"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1402,7 +1531,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-602-a"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -1415,7 +1545,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-1604-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1428,7 +1559,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dspd"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1441,7 +1573,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-804-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1454,7 +1587,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -1467,7 +1601,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-4804-dsp"
-    ]
+    ],
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -1480,7 +1615,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/accesorios/a900gm?variant=A900W-R-GM"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/A900-GM"
   },
   {
     "brand": "Shure",
@@ -1508,7 +1644,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1522,7 +1659,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1536,7 +1674,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1550,7 +1689,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -1563,7 +1703,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA844SWBplus"
   },
   {
     "brand": "Shure",
@@ -1576,7 +1717,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/es-LATAM/productos/microfonos/mx418?variant=MX418D%2FC"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX400D"
   },
   {
     "brand": "JBL",
@@ -1589,7 +1731,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/jbl-professional-control-23-1"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605095541geg5exvrrk.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf"
   },
   {
     "brand": "JBL",
@@ -1603,7 +1746,8 @@
     "official_links": [
       "https://jblpro.com/en-US/product_selector/product_families/surface-mount-speakers"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605144420obrb68f8px.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf"
   },
   {
     "brand": "JBL",
@@ -1616,7 +1760,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-28-1/1000"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16051684686gjb6d76u3.pdf&o_file_name=cc_surface_bracket_+instr_160328_x3.pdf"
   },
   {
     "brand": "JBL",
@@ -1629,6 +1774,10 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/ac18-95.html"
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605154898rrmbu4pd7b.pdf&o_file_name=jbl_ac18_95-082016.pdf",
+    "reference_link": [
+      "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
     ]
   },
   {
@@ -1642,6 +1791,10 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/ac18-26"
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file6_1605766688m0d2qhy2fq.pdf&o_file_name=ac18_26+spec+sheet.pdf",
+    "reference_link": [
+      "./manuals/jbl-ae-series-u-bracket-handbook.pdf"
     ]
   },
   {
@@ -1655,7 +1808,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-412c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345034oy3sqaxuwu.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1668,7 +1822,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-414c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770345342pm82utzzmh.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1681,7 +1836,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-416c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770339666vf9njnubod.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1694,7 +1850,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-418c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770346024e22uie18g3.pdf&o_file_name=pro_jbl_control410-series-ownersmanual-051625r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1707,7 +1864,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/es/products/control-447c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770615261tnq7fybv3j.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1720,7 +1878,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-419cs-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743146874esba1f630q.pdf&o_file_name=jbl-c420_manual_a.pdf"
   },
   {
     "brand": "JBL",
@@ -1733,7 +1892,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-440cs-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1770616172cx61md0n71.pdf&o_file_name=control440-ownersmanual-246x190-052025r1.pdf"
   },
   {
     "brand": "JBL",
@@ -1746,7 +1906,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-424c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743129675qsfxza301o.pdf&o_file_name=jbl-c420_manual_a.pdf"
   },
   {
     "brand": "JBL",
@@ -1759,7 +1920,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-424lp"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431407306qhm9nxa4l.pdf&o_file_name=jbl-c420_manual_a.pdf"
   },
   {
     "brand": "JBL",
@@ -1772,7 +1934,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-426c-t"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1743143029g164fiofxh.pdf&o_file_name=jbl-c420_manual_a.pdf"
   },
   {
     "brand": "JBL",
@@ -1785,7 +1948,8 @@
     "kind": "equipment",
     "official_links": [
       "https://jblpro.com/en-US/products/control-426lp"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_17431441528wpwmyacz4.pdf&o_file_name=jbl-c420_manual_a.pdf"
   },
   {
     "brand": "AMX",
@@ -1798,7 +1962,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/nx-3200"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049129678i6ep3qjgz.zip&o_file_name=nx-3200+manual.zip",
+    "slug": "nx-3200",
+    "card_image": "nx3200-main.webp"
   },
   {
     "brand": "AMX",
@@ -1811,7 +1978,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/nx-2200"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912878st8q8s8i1a.zip&o_file_name=nx-2200+manual.zip",
+    "slug": "nx-2200",
+    "card_image": "nx2200-main.webp"
   },
   {
     "brand": "AMX",
@@ -1824,7 +1994,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604912796h8pe1artw2.zip&o_file_name=nx-1200.quickstartguide.zip",
+    "slug": "nx-1200",
+    "card_image": "nx1200-main.webp"
   },
   {
     "brand": "AMX",
@@ -1837,7 +2010,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/varia-100"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686896266qwb1jvy37q.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-100",
+    "card_image": "varia100-main.webp"
   },
   {
     "brand": "AMX",
@@ -1850,7 +2026,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/varia-80"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686895363571rrknbw3.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-80",
+    "card_image": "varia80-main.webp"
   },
   {
     "brand": "AMX",
@@ -1863,7 +2042,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/varia-sl80"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1686725087g8k0n0s6rt.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-sl80",
+    "card_image": "variasl80-main.webp"
   },
   {
     "brand": "AMX",
@@ -1876,7 +2058,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.amx.com/en-US/products/varia-sl50"
-    ]
+    ],
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16867178743ym3tt2mew.pdf&o_file_name=varia-configuration-programming-manual-rev01.pdf",
+    "slug": "varia-sl50",
+    "card_image": "variasl50-main.webp"
   },
   {
     "brand": "SurgeX",
@@ -1889,7 +2074,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page"
-    ]
+    ],
+    "manual_link": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44",
+    "slug": "sx-1216-rti",
+    "card_image": "sx-1216-rti-front.webp"
   },
   {
     "brand": "NETGEAR",
@@ -1902,7 +2090,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4210px/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gsm4212p"
   },
   {
     "brand": "NETGEAR",
@@ -1915,7 +2104,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gsm4230p"
   },
   {
     "brand": "NETGEAR",
@@ -1928,7 +2118,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gsm4230px"
   },
   {
     "brand": "NETGEAR",
@@ -1941,7 +2132,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gsm4248p"
   },
   {
     "brand": "Epson",
@@ -1954,7 +2146,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PQ2216B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals"
   },
   {
     "brand": "Epson",
@@ -1967,7 +2160,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PQ2213B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals"
   },
   {
     "brand": "Epson",
@@ -1980,7 +2174,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895E/p/V11HB24151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/c/EB-L895E/s/SPT_V11HB24151#manuals"
   },
   {
     "brand": "Epson",
@@ -1993,7 +2188,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L795SE/p/V11HB26151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/c/EB-L795SE/s/SPT_V11HB26151#manuals"
   },
   {
     "brand": "Epson",
@@ -2006,7 +2202,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L695SE/p/V11HB36151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L695SE/s/SPT_V11HB36151#manuals"
   },
   {
     "brand": "Epson",
@@ -2019,7 +2216,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU2216B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals"
   },
   {
     "brand": "Epson",
@@ -2032,7 +2230,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU2213B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals"
   },
   {
     "brand": "Epson",
@@ -2045,7 +2244,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2010B/p/V11HA52840"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2010B-NL/s/SPT_V11HA52840#manuals"
   },
   {
     "brand": "Epson",
@@ -2058,7 +2258,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/EB-PU1008B"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals"
   },
   {
     "brand": "Epson",
@@ -2071,7 +2272,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L895U/p/V11HB27151"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L895U/s/SPT_V11HB27151#manuals"
   },
   {
     "brand": "Epson",
@@ -2084,7 +2286,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L790U/p/V11HB28051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L790U/s/SPT_V11HB28051#manuals"
   },
   {
     "brand": "Epson",
@@ -2097,7 +2300,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L260F/p/V11HA69051"
-    ]
+    ],
+    "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L260F/s/SPT_V11HA69051#manuals"
   },
   {
     "brand": "Panasonic",
@@ -2111,7 +2315,10 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+    "slug": "pt-mz14k",
+    "card_image": "pt-mz14kl-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2125,7 +2332,10 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz20k/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+    "slug": "pt-mz11k",
+    "card_image": "pt-mz11kl-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2139,7 +2349,10 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/mz882/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/mz882/resources/",
+    "slug": "pt-mz882",
+    "card_image": "pt-mz882-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2153,7 +2366,10 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz61",
+    "card_image": "pt-vmz61-main.webp"
   },
   {
     "brand": "Panasonic",
@@ -2167,7 +2383,10 @@
     "official_links": [
       "https://docs.connect.panasonic.com/projector/products/vmz71/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://docs.connect.panasonic.com/projector/products/vmz71/resources/",
+    "slug": "pt-vmz51",
+    "card_image": "pt-vmz51-main.webp"
   },
   {
     "brand": "Logitech",
@@ -2180,7 +2399,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
-    ]
+    ],
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod-hub",
+    "card_image": "logitech-rally-mic-pod-hub-perspective.webp"
   },
   {
     "brand": "Logitech",
@@ -2193,7 +2415,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html"
-    ]
+    ],
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod-extension-cable",
+    "card_image": "logitech-rally-mic-pod-extension-cable-main.webp"
   },
   {
     "brand": "Logitech",
@@ -2206,7 +2431,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
-    ]
+    ],
+    "manual_link": "https://www.logitech.com/content/dam/logitech/ko_kr/video-collaboration/pdf/strong-usb-accessory.pdf",
+    "slug": "strong-usb-cable",
+    "card_image": "logitech-strong-usb-cable-main.webp"
   },
   {
     "brand": "Logitech",
@@ -2219,7 +2447,10 @@
     "kind": "equipment",
     "official_links": [
       "https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO"
-    ]
+    ],
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
+    "slug": "rally-plus",
+    "card_image": "logitech-rally-plus-main.webp"
   },
   {
     "brand": "Yealink",
@@ -2232,7 +2463,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/smartvision40"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/smartvision40"
   },
   {
     "brand": "Yealink",
@@ -2245,7 +2477,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-vcm35"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-vcm35"
   },
   {
     "brand": "Yealink",
@@ -2258,7 +2491,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-detail/compatible-camera-uvc86"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/compatible-camera-uvc86"
   },
   {
     "brand": "Yealink",
@@ -2271,7 +2505,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-cm20"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cm20"
   },
   {
     "brand": "Yealink",
@@ -2284,7 +2519,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d"
   },
   {
     "brand": "Yealink",
@@ -2297,7 +2533,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/room-system-avhub"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/room-system-avhub"
   },
   {
     "brand": "Yealink",
@@ -2310,7 +2547,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-tech-specs/uvc85-byod"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/uvc85-byod"
   },
   {
     "brand": "Yealink",
@@ -2323,7 +2561,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.yealink.com/en/product-detail/cpe40"
-    ]
+    ],
+    "manual_link": "https://www.yealink.com/en/product-resource/cpe40"
   },
   {
     "brand": "NovaStar",
@@ -2337,7 +2576,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2351,7 +2591,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2365,7 +2606,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "NovaStar",
@@ -2379,7 +2621,8 @@
     "official_links": [
       "https://www.novastar.tech/product/detail.html?catid=3&id=39"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf"
   },
   {
     "brand": "Ross Video",
@@ -2393,7 +2636,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf"
   },
   {
     "brand": "Ross Video",
@@ -2407,7 +2651,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
   },
   {
     "brand": "Ross Video",
@@ -2421,7 +2666,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf"
   },
   {
     "brand": "BSS Audio",
@@ -2435,7 +2681,8 @@
     "official_links": [
       "https://bssaudio.com/en-US/products/blu-101"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip"
   },
   {
     "brand": "BSS Audio",
@@ -2449,7 +2696,8 @@
     "official_links": [
       "https://bssaudio.com/en-US/products/blu-100"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754472qtmq1puk0x.pdf&o_file_name=bss_blu-100_kor_%ED%95%9C%EA%B8%80%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
   },
   {
     "brand": "BSS Audio",
@@ -2463,7 +2711,12 @@
     "official_links": [
       "https://bssaudio.com/en-US/products/blu-160"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605754235ycz0u085f3.pdf&o_file_name=bss+blu_%EB%A7%A4%EB%89%B4%EC%96%BC_kor.pdf",
+    "reference_link": [
+      "https://bssaudio.com/en/product_families/input-output-cards",
+      "https://bssaudio.com/ko/products/aec-card"
+    ]
   },
   {
     "brand": "BSS Audio",
@@ -2477,11 +2730,12 @@
     "official_links": [
       "https://bssaudio.com/en-US/products/blu-50"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf"
   },
   {
     "brand": "BSS Audio",
-    "product": "BLUAEC-IN",
+    "product": "BLU AEC-IN",
     "categories": [
       "오디오",
       "Audio",
@@ -2491,7 +2745,11 @@
     "official_links": [
       "https://bssaudio.com/en-US/product_families/inputoutput-cards"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "reference_link": [
+      "https://bssaudio.com/ko/products/aec-card"
+    ]
   },
   {
     "brand": "BSS Audio",
@@ -2505,7 +2763,11 @@
     "official_links": [
       "https://bssaudio.com/en-US/product_families/inputoutput-cards"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605760087kleujmeip4.pdf&o_file_name=aec+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "reference_link": [
+      "https://bssaudio.com/ko/products/aec-card"
+    ]
   },
   {
     "brand": "BSS Audio",
@@ -2519,7 +2781,11 @@
     "official_links": [
       "https://bssaudio.com/en-US/product_families/inputoutput-cards"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759825t3ileh4r6w.pdf&o_file_name=analog+output+card+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+    "reference_link": [
+      "https://bssaudio.com/ko/products/analog-output-card"
+    ]
   },
   {
     "brand": "BSS Audio",
@@ -2533,7 +2799,8 @@
     "official_links": [
       "https://bssaudio.com/en-US/support_downloads/products/blu-dan"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605866326oo14knng0m.pdf&o_file_name=blu-da_and_blu-dan_install_guide_5099141-00-a.pdf"
   },
   {
     "brand": "Audinate",
@@ -2547,7 +2814,10 @@
     "official_links": [
       "https://www.audinate.com/products/devices/dante-avio"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf",
+    "slug": "avio-bt",
+    "card_image": "avio-bt-main.webp"
   },
   {
     "brand": "Audinate",
@@ -2561,7 +2831,10 @@
     "official_links": [
       "https://www.audinate.com/products/devices/dante-avio"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+    "slug": "avio-2ch-in",
+    "card_image": "avio-2ch-in-main.webp"
   },
   {
     "brand": "Audinate",
@@ -2575,7 +2848,10 @@
     "official_links": [
       "https://www.audinate.com/products/devices/dante-avio"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+    "slug": "avio-2ch-out",
+    "card_image": "avio-2ch-out-main.webp"
   },
   {
     "brand": "Televic",
@@ -2603,7 +2879,8 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/d-cerno/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm"
   },
   {
     "brand": "Televic",
@@ -2617,7 +2894,8 @@
     "official_links": [
       "https://conference.televic.digital/knowledgebase/products/d-cerno/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm"
   },
   {
     "brand": "Televic",
@@ -2729,7 +3007,8 @@
     "official_links": [
       "https://www.shure.com/en-GB/products/wireless-systems/mxcw/mxcwapt"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
   },
   {
     "brand": "Shure",
@@ -2743,7 +3022,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW"
   },
   {
     "brand": "Yamaha",
@@ -2757,7 +3037,10 @@
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/",
+    "slug": "dm3",
+    "card_image": "dm3-front.webp"
   },
   {
     "brand": "Yamaha",
@@ -2771,7 +3054,10 @@
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf",
+    "slug": "rio1608-d3",
+    "card_image": "rio1608-d3-front.webp"
   },
   {
     "brand": "Yamaha",
@@ -2785,7 +3071,10 @@
     "official_links": [
       "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf",
+    "slug": "rio3224-d3",
+    "card_image": "rio3224-d3-front.webp"
   },
   {
     "brand": "Crown",
@@ -2799,7 +3088,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605761971s4gdgy7izt.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2813,7 +3103,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057621340oy9dhzwum.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2827,7 +3118,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-analog-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057622030qrbfvpjkg.pdf&o_file_name=crown+dci+analog+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2841,7 +3133,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605762955gde1sr7o8x.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2855,7 +3148,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987728x5rl649ihn.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2869,7 +3163,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605763409ao6h09cvuq.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2883,7 +3178,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_160498811380y1239y95.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2897,7 +3193,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-analog"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16049878640zsz4tlbyz.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2911,7 +3208,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764047lp6k9gucvl.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2925,7 +3223,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764597xhkacai6zx.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2939,7 +3238,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-network-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605764672nupmdpxixt.pdf&o_file_name=crown+dci+network+%EB%A7%A4%EB%89%B4%EC%96%BC_kor_%EC%95%95%EC%B6%95.pdf"
   },
   {
     "brand": "Crown",
@@ -2953,7 +3253,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987999i44fv0ugee.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2967,7 +3268,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057634633isrk0v367.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2981,7 +3283,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987936vunfkk3ev4.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -2995,7 +3298,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/cdi-drivecore-series-blu-link"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1604987793jgwsejke1b.pdf&o_file_name=cdi+drivecore+manual+5074176-b.pdf"
   },
   {
     "brand": "Crown",
@@ -3009,7 +3313,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/drivecore-install-da-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "./manuals/crown-dci-install-da-series-manual.pdf"
   },
   {
     "brand": "Crown",
@@ -3023,7 +3328,8 @@
     "official_links": [
       "https://www.crownaudio.com/en-US/product_families/comtech-d-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1788185624fwhgji4oak.pdf&o_file_name=comtech_d_user_manual_en_0726.pdf"
   },
   {
     "brand": "Powersoft",
@@ -3037,7 +3343,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3051,7 +3358,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3065,7 +3373,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3079,7 +3388,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/mezzo-series"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw"
   },
   {
     "brand": "Powersoft",
@@ -3093,7 +3403,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/duecanali-804"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Powersoft",
@@ -3107,7 +3418,8 @@
     "official_links": [
       "https://www.powersoft.com/en/products/install-amps/quattrocanali-1204-dsp"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq"
   },
   {
     "brand": "Shure",
@@ -3121,7 +3433,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/microphones/mxa925"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MXA925"
   },
   {
     "brand": "Shure",
@@ -3135,7 +3448,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3149,7 +3463,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3163,7 +3478,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD"
   },
   {
     "brand": "Shure",
@@ -3177,7 +3493,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3191,7 +3508,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3205,7 +3523,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD"
   },
   {
     "brand": "Shure",
@@ -3219,7 +3538,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3233,7 +3553,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3247,7 +3568,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3261,7 +3583,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3275,7 +3598,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3289,7 +3613,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/wireless-systems/slx_d_digital_wireless"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/SLXD"
   },
   {
     "brand": "Shure",
@@ -3303,7 +3628,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua864"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA864"
   },
   {
     "brand": "Shure",
@@ -3317,7 +3643,8 @@
     "official_links": [
       "https://www.shure.com/en-US/products/microphones/mx392"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://www.shure.com/en-US/docs/guide/MX39x"
   },
   {
     "brand": "Lightware",
@@ -3330,7 +3657,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90"
-    ]
+    ],
+    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf",
+    "slug": "hdmi20-optj-tx90",
+    "card_image": "hdmi20-optj-tx90-front.webp"
   },
   {
     "brand": "Lightware",
@@ -3343,7 +3673,10 @@
     "kind": "equipment",
     "official_links": [
       "https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90"
-    ]
+    ],
+    "manual_link": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-RX90_AE_Specification.pdf",
+    "slug": "hdmi20-optj-rx90",
+    "card_image": "hdmi20-optj-rx90-front.webp"
   },
   {
     "brand": "Ross Video",
@@ -3357,7 +3690,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultritouch/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf"
   },
   {
     "brand": "Ross Video",
@@ -3371,7 +3705,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/"
     ],
-    "link_scope": "series"
+    "link_scope": "series",
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20SFP%20Modules%20Guide%20(2101DR-008).pdf"
   },
   {
     "brand": "Shure",
@@ -3384,7 +3719,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.shure.com/en-US/products/accessories/ua845uwb"
-    ]
+    ],
+    "manual_link": "https://www.shure.com/en-US/docs/guide/UA845UWB"
   },
   {
     "brand": "NETGEAR",
@@ -3397,7 +3733,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/support/product/gs728tpp"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gs728tpp"
   },
   {
     "brand": "NETGEAR",
@@ -3410,7 +3747,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gs116pp"
   },
   {
     "brand": "NETGEAR",
@@ -3423,7 +3761,8 @@
     "kind": "equipment",
     "official_links": [
       "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
-    ]
+    ],
+    "manual_link": "https://www.netgear.com/support/product/gs108pp"
   },
   {
     "brand": "Logitech",
@@ -3436,6 +3775,9 @@
     "kind": "equipment",
     "official_links": [
       "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
-    ]
+    ],
+    "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
+    "slug": "rally-mic-pod",
+    "card_image": "logitech-rally-mic-pod-perspective.webp"
   }
 ]

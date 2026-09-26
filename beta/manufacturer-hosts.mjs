@@ -3,17 +3,33 @@
 // 새 제조사를 추가할 때만 여기에 한 줄을 더한다. 확인한 호스트만 적는다.
 export const manufacturerHosts = {
   AJA: ['aja.com', 'd26ddnfpy9hzf8.cloudfront.net'],
-  'Analog Way': ['analogway.com'],
-  Audinate: ['getdante.com'],
+  AMX: ['techdata-ps.com', 'amx.com', 'harmanpro.com'],
+  'Analog Way': ['analogway.com', 'website-files.com'],
+  Audinate: ['getdante.com', 'audinate.com'],
+  AVer: ['aver.com', 'averusa.com'],
+  'Blackmagic Design': ['blackmagicdesign.com'],
+  'BSS Audio': ['techdata-ps.com', 'bssaudio.com'],
+  Colorlight: ['colorlightinside.com'],
+  Crown: ['techdata-ps.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
+  JBL: ['techdata-ps.com'],
+  Lightware: ['lightware.com'],
   Logitech: ['logitech.com'],
+  Lumantek: ['lumantek.com', 'lumantek.co.kr'],
+  Magnimage: ['magnimage.com'],
   NETGEAR: ['netgear.com'],
+  NovaStar: ['novastar.tech'],
   Panasonic: ['panasonic.com'],
   Powersoft: ['powersoft.com'],
   Roland: ['roland.com'],
+  'Ross Video': ['rossvideo.com'],
+  Samsung: ['samsung.com', 'samsungsvc.co.kr'],
   Shure: ['shure.com', 'shureweb.eu'],
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
-  Yamaha: ['yamaha.com']
+  SurgeX: ['ametekesp.com'],
+  Televic: ['televic-conference.com', 'televic.digital', 'televic.com'],
+  Yamaha: ['yamaha.com'],
+  Yealink: ['yealink.com']
 };
 
 export function allowedHostsFor(brand) {

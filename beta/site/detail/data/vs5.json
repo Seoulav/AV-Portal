@@ -1,0 +1,381 @@
+{
+  "manufacturer": "Lumantek",
+  "productName": "ez-Pro VS5",
+  "model": "VS5",
+  "series": "ez-Pro Series",
+  "seriesNote": "10채널 ez-Pro VS10의 소형 5채널 버전.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Signal Switcher"
+  ],
+  "english": "All-in-one live production switcher integrating video switcher, audio mixer, IP streaming encoder, and media player.",
+  "korean": "ez-Pro VS5는 비디오 스위처, 오디오 믹서, IP 스트리밍 인코더, 미디어 플레이어를 통합한 5채널 올인원 라이브 방송 장비다.",
+  "verificationSummary": "제조사 한국 공식 사이트(lumantek.co.kr)의 제품소개 페이지와 공식 사용설명서(VS5_USER_MANUAL.pdf)에서 특징·전체 시스템 스펙을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ez-Pro VS5는 소규모 방송 시스템 구성을 위한 5채널 비디오 스위처로, 비디오 입력 SDI 3개·HDMI 2개, 내부 미디어 플레이어·컬러바·컬러매트를 포함해 6개 소스를 지원한다. 출력으로는 SDI 1개·HDMI 1개(+멀티뷰 전용 HDMI 1개)·UVC(USB3.0/2.0 Video Class) 1개·RTMP/HLS IP 스트리밍을 제공한다.\n\n제조사 공식 사용설명서에 따르면 비디오 믹서는 PIP·LCK(Luma/Chroma Keyer)·DSK·MLK·로고 오버레이를 각 1개씩 지원하고, Mix/Cut과 20종의 Wipe 패턴, Graphic/Stinger Wipe 전환 효과를 갖췄다. 오디오 믹서는 7개 스테레오 입력(SDI 임베디드 3, HDMI 임베디드 2, 아날로그 1, 미디어 플레이어)을 지원한다.\n\n전원은 DC +7V~+14V(최대 30W)이며, 크기는 70(H)×297(W)×230(D)mm, 무게는 1.7kg이다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "lumantek-vs5-main.webp",
+      "alt": "Lumantek ez-Pro VS5 전면 조작부 이미지",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "VS5",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "860×550",
+      "resolution": "743×550",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "VS5 User Manual (한국어/영문 혼용)",
+      "language": "ko/en",
+      "note": "카탈로그 manual_link와 동일. 6. 제품 시스템 스펙 절에 전체 사양표 수록",
+      "url": "https://lumantek.co.kr/index.php/dataFunction/fileDown?location=uploads/download/7e7863c8499572e43198c0aafbed54aa.pdf&name=VS5_USER_MANUAL.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": "별도 데이터시트는 확인하지 못함. 사용설명서 내 시스템 스펙 절로 대체"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://lumantek.co.kr/index/product_intro/74"
+    }
+  ],
+  "features": [
+    {
+      "text": "SDI 3개·HDMI 2개 외부 입력과 미디어 플레이어·컬러바·컬러매트 내부 소스를 합쳐 6개 입력을 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "PIP·LCK(Luma/Chroma Keyer)·DSK·MLK·로고 오버레이를 각 1개씩 지원하며, 20종의 Wipe 패턴과 Graphic/Stinger Wipe 전환 효과를 갖췄다.",
+      "source": ""
+    },
+    {
+      "text": "7개 스테레오 오디오 입력을 갖춘 오디오 믹서를 내장했다(SDI 임베디드 3, HDMI 임베디드 2, 아날로그 1, 미디어 플레이어 1).",
+      "source": ""
+    },
+    {
+      "text": "UVC(USB3.0/2.0) 출력으로 비압축(YUV) 1080p60까지 지원하며, H.264/AAC 기반 RTMP 동시 출력(최대 3개 주소) 및 HLS 서버·플레이어를 내장했다.",
+      "source": ""
+    },
+    {
+      "text": "Web GUI를 통해 모든 상태를 한눈에 확인하고 제어할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "12GB 내장 메모리와 USB 메모리로 미디어 플레이어 소스를 저장·재생할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Input",
+      "name": "비디오 입력",
+      "value": "IN1/2/3: 3G-SDI(BNC 75Ω), IN4/5: HDMI 1.4(Type-A)",
+      "unit": "",
+      "condition": "패턴(컬러바/컬러매트)·미디어 플레이어(USB/내장 eMMC) 포함 6소스",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "SDI 표준",
+      "value": "SD-SDI, HD-SDI, 3G-SDI Level A/B",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "아날로그 오디오 입력",
+      "value": "DB9 to XLR 브레이크아웃 케이블, Female XLR 2ea(L/R)",
+      "unit": "",
+      "condition": "48kHz 24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "비디오 출력",
+      "value": "SDI(BNC 75Ω) 1, HDMI 1.4 1, HDMI 1.4 멀티뷰 전용 1, UVC(USB3.0 Type-C) 1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "IP 스트리밍",
+      "value": "RJ-45 1Gbps: RTMP 3ea, HLS",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "아날로그 오디오 출력",
+      "value": "DB9 to XLR 브레이크아웃 케이블, Male XLR 2ea(L/R)",
+      "unit": "",
+      "condition": "48kHz 24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Media Player",
+      "name": "코덱",
+      "value": "비디오: H.264, H.265(HEVC) / 오디오: MP2, MP3, AAC",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "미디어 플레이어 저장",
+      "value": "내장 eMMC 12GB, USB 메모리",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "DC +7V ~ +14V",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "30",
+      "unit": "W (max.)",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(H×W×D)",
+      "value": "70 × 297 × 230",
+      "unit": "mm",
+      "condition": "커넥터 제외",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "1.7",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "3G-SDI (BNC 75Ω)",
+      "signal": "Video/Audio in",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "SD/HD/3G-SDI",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI 1.4 (Type-A)",
+      "signal": "Video/Audio in",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "SDI (BNC 75Ω)",
+      "signal": "Program out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "3G-SDI",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 1.4 (Type-A)",
+      "signal": "Program out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 1.4 (Type-A)",
+      "signal": "Multiview out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "멀티뷰 전용",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "USB3.0 Type-C",
+      "signal": "UVC video out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB3.0/2.0 Video Class",
+      "availability": "",
+      "condition": "1080p60 비압축(YUV) 지원",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "1Gbps Ethernet(RTMP/HLS)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "RTMP 3개 동시 출력",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "DB9 (XLR 브레이크아웃)",
+      "signal": "Analog audio in/out",
+      "direction": "IN/OUT",
+      "quantity": "각 1",
+      "protocol": "",
+      "availability": "",
+      "condition": "48kHz 24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "M",
+      "name": "제조사 공식 사용설명서·제품 페이지",
+      "url": "https://lumantek.co.kr/index/product_intro/74",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료",
+      "url": "https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "영문 사이트 데이터 누락",
+      "detail": "제조사 영문 사이트(lumantek.com)의 이 제품 페이지·다운로드 페이지는 CMS 오류(PHP Notice)로 내용이 비어 있었다. 한국 공식 사이트(lumantek.co.kr)에서 대체 확인했다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "이미지 권한",
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lumantek ez-Pro VS5 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
