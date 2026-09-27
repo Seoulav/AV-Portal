@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 254개
-- Product Detail: 247개
+- 공개 장비: 246개
+- Product Detail: 239개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -133,7 +133,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/
-  매뉴얼: https://www.netgear.com/support/product/gsm4248px
+  매뉴얼: https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4248px
 
 - 제품: NETGEAR XSM4216F
@@ -166,7 +166,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Epson EB-L690U
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L690U/p/V11HB29051
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-l690u
 
@@ -331,20 +331,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500
   상세: https://seoulav.github.io/AV-Portal/detail/?product=rm-ip500
 
-- 제품: AVer TR535N
-  분류: 영상 | Video | Camera
-  종류: 장비
-  공식 링크: https://kr.presentation.aver.com/model/tr535n
-  매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr535n
-
-- 제품: AVer TR535
-  분류: 영상 | Video | Camera
-  종류: 장비
-  공식 링크: https://kr.presentation.aver.com/model/tr535
-  매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=tr535
-
 - 제품: AVer TR335
   분류: 영상 | Video | Camera
   종류: 장비
@@ -366,26 +352,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   매뉴얼: https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=cl01
 
-- 제품: Roland V-02HD
-  분류: 영상 | Video | Signal Switcher
-  종류: 장비
-  공식 링크: https://proav.roland.com/global/products/v-02hd/
-  매뉴얼: https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-02hd
-
 - 제품: Roland V-1HD+
   분류: 영상 | Video | Signal Switcher
   종류: 장비
   공식 링크: https://proav.roland.com/global/products/v-1hd_plus/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/
   상세: https://seoulav.github.io/AV-Portal/detail/?product=v-1hd-plus
-
-- 제품: Roland VR-4HD
-  분류: 영상 | Video | Signal Switcher
-  종류: 장비
-  공식 링크: https://proav.roland.com/global/products/vr-4hd/
-  매뉴얼: https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=vr-4hd
 
 - 제품: Roland VR-6HD
   분류: 영상 | Video | Signal Switcher
@@ -400,13 +372,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://proav.roland.com/global/products/v-8hd/
   매뉴얼: https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/
   상세: https://seoulav.github.io/AV-Portal/detail/?product=v-8hd
-
-- 제품: Roland V-60HD
-  분류: 영상 | Video | Signal Switcher
-  종류: 장비
-  공식 링크: https://proav.roland.com/global/products/v-60hd/
-  매뉴얼: https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=v-60hd
 
 - 제품: Roland V-80HD
   분류: 영상 | Video | Signal Switcher
@@ -988,7 +953,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   분류: 제어 | Network | Network Switch
   종류: 장비
   공식 링크: https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/
-  매뉴얼: https://www.netgear.com/support/product/gsm4212p
+  매뉴얼: https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=gsm4212p
 
 - 제품: NETGEAR GSM4230P
@@ -1015,14 +980,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Epson EB-PQ2216B
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/EB-PQ2216B
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2216B/p/V11HB04851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2216b
 
 - 제품: Epson EB-PQ2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/EB-PQ2213B
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2213B/p/V11HB03851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pq2213b
 
@@ -1050,14 +1015,14 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Epson EB-PU2216B
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/EB-PU2216B
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2216B/p/V11HA67851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2216b
 
 - 제품: Epson EB-PU2213B
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/EB-PU2213B
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2213B/p/V11HA68851
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu2213b
 
@@ -1071,7 +1036,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Epson EB-PU1008B
   분류: 프로젝터 | Display | Projector
   종류: 장비
-  공식 링크: https://www.epson.co.kr/EB-PU1008B
+  공식 링크: https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU1008B/p/V11HA33840
   매뉴얼: https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals
   상세: https://seoulav.github.io/AV-Portal/detail/?product=eb-pu1008b
 
@@ -1155,7 +1120,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Logitech Rally Plus
   분류: 화상회의 | Conferencing | Video Conferencing System
   종류: 장비
-  공식 링크: https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO
+  공식 링크: https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-plus
 
@@ -1268,6 +1233,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_16057545291dwu5xd085.zip&o_file_name=blu-101+%EB%A7%A4%EB%89%B4%EC%96%BC.zip
   상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-101
 
+- 제품: BSS Audio BLU-50v2
+  분류: 오디오 | Audio | Audio Processor
+  종류: 장비
+  공식 링크: https://bssaudio.com/ko/products/blu-50v2
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-50v2
+
 - 제품: BSS Audio BLU-100
   분류: 오디오 | Audio | Audio Processor
   종류: 장비
@@ -1283,13 +1254,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   참고자료: https://bssaudio.com/en/product_families/input-output-cards
   참고자료: https://bssaudio.com/ko/products/aec-card
   상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-160
-
-- 제품: BSS Audio BLU-50
-  분류: 오디오 | Audio | Audio Processor
-  종류: 장비
-  제품군 링크: https://bssaudio.com/en-US/products/blu-50
-  매뉴얼: https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=blu-50
 
 - 제품: BSS Audio BLU AEC-IN
   분류: 오디오 | Audio | Audio Processor
@@ -1343,12 +1307,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   매뉴얼: https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=avio-2ch-out
 
-- 제품: Televic D-Cerno CU
-  분류: 오디오 | Conferencing | Conference System
-  종류: 장비
-  제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-cu
-
 - 제품: Televic D-Cerno AE
   분류: 오디오 | Conferencing | Conference System
   종류: 장비
@@ -1361,12 +1319,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://conference.televic.digital/knowledgebase/products/d-cerno/
   매뉴얼: https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm
-
-- 제품: Televic D-Cerno D SL
-  분류: 오디오 | Conferencing | Conference System
-  종류: 장비
-  제품군 링크: https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=d-cerno-d-sl
 
 - 제품: Televic D-Mic 50 SL
   분류: 오디오 | Conferencing | Conference System
@@ -1737,13 +1689,6 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd1plus
   매뉴얼: https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=slxd1-plus
-
-- 제품: NETGEAR GS728TPP
-  분류: 제어 | Network | Network Switch
-  종류: 장비
-  공식 링크: https://www.netgear.com/support/product/gs728tpp
-  매뉴얼: https://www.netgear.com/support/product/gs728tpp
-  상세: https://seoulav.github.io/AV-Portal/detail/?product=gs728tpp
 
 - 제품: NETGEAR GS116PP
   분류: 제어 | Network | Network Switch

@@ -492,9 +492,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "리어 패널 전용 사진은 확보하지 못했다(정면 사진 1장만 CDN…",
-      "detail": "리어 패널 전용 사진은 확보하지 못했다(정면 사진 1장만 CDN 확인)."
+      "detail": "리어 패널 전용 사진은 확보하지 못했다(정면 사진 1장만 CDN 확인). [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 현재 페이지에 Rear 이미지(후면 패널, FOUND) 있음.]"
     }
   ],
   "presentation": {

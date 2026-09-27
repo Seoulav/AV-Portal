@@ -321,9 +321,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "FlexPoE 하향 예산 공식 자료 간 불일치",
-      "detail": "데이터시트는 'Can be upgraded from 76W to 115W or 183W'와 액세서리 표 'EPS130W → 115W'로 적지만, 제품 페이지는 155W로 표기한다. 130W 어댑터로 155W PoE는 불가능하므로 데이터시트 값(115W)을 썼다."
+      "detail": "데이터시트는 'Can be upgraded from 76W to 115W or 183W'와 액세서리 표 'EPS130W → 115W'로 적지만, 제품 페이지는 155W로 표기한다. 130W 어댑터로 155W PoE는 불가능하므로 데이터시트 값(115W)을 썼다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

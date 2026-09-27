@@ -455,21 +455,21 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "대표 이미지는 4가지 색상/형태(화이트 사각, 블랙 사각, 화이트…",
-      "detail": "대표 이미지는 4가지 색상/형태(화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형)를 함께 보여주는 패밀리샷이며, MXA925W-R(화이트, 원형) 단독 제품 사진은 Shure 공식 페이지에서 별도로 제공되지 않음."
+      "detail": "대표 이미지는 4가지 색상/형태(화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형)를 함께 보여주는 패밀리샷이며, MXA925W-R(화이트, 원형) 단독 제품 사진은 Shure 공식 페이지에서 별도로 제공되지 않음. [운영자 결정(2026-09-27): 제조사 공식 공용 이미지를 대표 이미지로 사용, 공용 사진 설명 유지 조건으로 종결.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "A900W-R-GM 액세서리와의 호환성이 MXA925 스펙시트에…",
-      "detail": "A900W-R-GM 액세서리와의 호환성이 MXA925 스펙시트에 명시적으로 확인되어, A900W-R-GM 항목의 '이슈'에 기재한 교차검증 근거가 됨."
+      "detail": "A900W-R-GM 액세서리와의 호환성이 MXA925 스펙시트에 명시적으로 확인되어, A900W-R-GM 항목의 '이슈'에 기재한 교차검증 근거가 됨. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet'…",
-      "detail": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet' 링크가 연결하는 Shure 공식 자산 포털(shure.widen.net)에 있다(2026-08-11 작성, MXA925W-R 기재). content-files.shure.com 사본은 없다."
+      "detail": "스펙시트는 shure.com 제품 페이지의 'Spec Sheet' 링크가 연결하는 Shure 공식 자산 포털(shure.widen.net)에 있다(2026-08-11 작성, MXA925W-R 기재). content-files.shure.com 사본은 없다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

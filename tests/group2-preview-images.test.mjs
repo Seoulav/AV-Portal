@@ -23,7 +23,8 @@ test('카드 대표 사진은 상세가 없는 항목에만 있고 group2-images
 });
 
 test('형제 모델에는 카드 대표 사진을 붙이지 않는다', () => {
-  for (const [brand, product] of [['Powersoft', 'Mezzo 322 A'], ['Roland', 'V-02HD'], ['NETGEAR', 'GSM4248P']]) {
+  // V-02HD는 2026-09-27 단종 모델 삭제로 카탈로그에서 빠져, 같은 Roland 형제 계열의 V-02HD MK II로 확인한다.
+  for (const [brand, product] of [['Powersoft', 'Mezzo 322 A'], ['Roland', 'V-02HD MK II'], ['NETGEAR', 'GSM4248P']]) {
     const item = catalog.find(entry => entry.brand === brand && entry.product === product);
     assert.ok(item, `${product}: 카탈로그에 있어야 비교가 의미 있다`);
     assert.equal(previewCatalogFieldsFor(item), null);

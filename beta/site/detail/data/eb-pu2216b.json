@@ -514,9 +514,9 @@
   "issues": [
     {
       "code": "LINK-FALLBACK",
-      "status": "INFO",
+      "status": "RESOLVED",
       "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
-      "detail": "카탈로그의 https://www.epson.co.kr/EB-PU2216B 단축 URL도 사양표를 포함하고 있었으나, 검색으로 찾은 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU2216B/p/V11HA67851)가 더 상세한 특징 설명과 옵션 렌즈 목록을 포함해 이를 기준으로 정리했다."
+      "detail": "카탈로그의 https://www.epson.co.kr/EB-PU2216B 단축 URL도 사양표를 포함하고 있었으나, 검색으로 찾은 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU2216B/p/V11HA67851)가 더 상세한 특징 설명과 옵션 렌즈 목록을 포함해 이를 기준으로 정리했다. [운영자 결정(2026-09-27): 카탈로그 official_links를 상세페이지가 사용하는 공식 제품 페이지로 교체, 종결.]"
     }
   ],
   "presentation": {

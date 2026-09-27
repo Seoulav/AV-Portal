@@ -475,9 +475,9 @@
   "issues": [
     {
       "code": "LINK-FALLBACK",
-      "status": "INFO",
+      "status": "RESOLVED",
       "title": "카탈로그 official_link이 지원 페이지였음",
-      "detail": "카탈로그에 등록된 official_link(https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L690U/s/SPT_V11HB29051)는 다운로드/FAQ 위주의 지원 페이지로 사양표가 없어, 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-L690U/p/V11HB29051)를 찾아 사양을 확인했다."
+      "detail": "카탈로그에 등록된 official_link(https://www.epson.co.kr/고객지원/프로젝터/EB-시리즈/EB-L690U/s/SPT_V11HB29051)는 다운로드/FAQ 위주의 지원 페이지로 사양표가 없어, 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-L690U/p/V11HB29051)를 찾아 사양을 확인했다. [운영자 결정(2026-09-27): 카탈로그 official_links를 상세페이지가 사용하는 공식 제품 페이지로 교체, 종결.]"
     },
     {
       "code": "R2",

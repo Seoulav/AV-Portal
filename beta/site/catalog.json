@@ -279,7 +279,7 @@
     "official_links": [
       "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4248px",
+    "manual_link": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf",
     "slug": "gsm4248px",
     "card_image": "gsm4248px-rear.webp"
   },
@@ -356,7 +356,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L690U/p/V11HB29051"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-L690U/s/SPT_V11HB29051#manuals",
     "slug": "eb-l690u",
@@ -740,38 +740,6 @@
   },
   {
     "brand": "AVer",
-    "product": "TR535N",
-    "categories": [
-      "영상",
-      "Video",
-      "Camera"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://kr.presentation.aver.com/model/tr535n"
-    ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
-    "slug": "tr535n",
-    "card_image": "tr535n-front.webp"
-  },
-  {
-    "brand": "AVer",
-    "product": "TR535",
-    "categories": [
-      "영상",
-      "Video",
-      "Camera"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://kr.presentation.aver.com/model/tr535"
-    ],
-    "manual_link": "https://www.averusa.com/pro-av/downloads/user-manual/TR535N_User_Manual_EN_202408.pdf",
-    "slug": "tr535",
-    "card_image": "tr535-front.webp"
-  },
-  {
-    "brand": "AVer",
     "product": "TR335",
     "categories": [
       "영상",
@@ -820,22 +788,6 @@
   },
   {
     "brand": "Roland",
-    "product": "V-02HD",
-    "categories": [
-      "영상",
-      "Video",
-      "Signal Switcher"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://proav.roland.com/global/products/v-02hd/"
-    ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-02hd/owners_manuals/",
-    "slug": "v-02hd",
-    "card_image": "v-02hd-main.webp"
-  },
-  {
-    "brand": "Roland",
     "product": "V-1HD+",
     "categories": [
       "영상",
@@ -849,22 +801,6 @@
     "manual_link": "https://proav.roland.com/global/support/by_product/v-1hd_plus/owners_manuals/",
     "slug": "v-1hd-plus",
     "card_image": "v-1hd-plus-main.webp"
-  },
-  {
-    "brand": "Roland",
-    "product": "VR-4HD",
-    "categories": [
-      "영상",
-      "Video",
-      "Signal Switcher"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://proav.roland.com/global/products/vr-4hd/"
-    ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/vr-4hd/owners_manuals/",
-    "slug": "vr-4hd",
-    "card_image": "vr-4hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -897,22 +833,6 @@
     "manual_link": "https://proav.roland.com/global/support/by_product/v-8hd/owners_manuals/",
     "slug": "v-8hd",
     "card_image": "v-8hd-main.webp"
-  },
-  {
-    "brand": "Roland",
-    "product": "V-60HD",
-    "categories": [
-      "영상",
-      "Video",
-      "Signal Switcher"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://proav.roland.com/global/products/v-60hd/"
-    ],
-    "manual_link": "https://proav.roland.com/global/support/by_product/v-60hd/owners_manuals/",
-    "slug": "v-60hd",
-    "card_image": "v-60hd-main.webp"
   },
   {
     "brand": "Roland",
@@ -2279,7 +2199,7 @@
     "official_links": [
       "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/"
     ],
-    "manual_link": "https://www.netgear.com/support/product/gsm4212p",
+    "manual_link": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf",
     "slug": "gsm4212p",
     "card_image": "gsm4212p-main.webp"
   },
@@ -2341,7 +2261,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/EB-PQ2216B"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2216B/p/V11HB04851"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2216B/s/SPT_V11HB04851#manuals",
     "slug": "eb-pq2216b",
@@ -2357,7 +2277,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/EB-PQ2213B"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2213B/p/V11HB03851"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PQ2213B/s/SPT_V11HB03851#manuals",
     "slug": "eb-pq2213b",
@@ -2421,7 +2341,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/EB-PU2216B"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2216B/p/V11HA67851"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2216B/s/SPT_V11HA67851#manuals",
     "slug": "eb-pu2216b",
@@ -2437,7 +2357,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/EB-PU2213B"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU2213B/p/V11HA68851"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU2213B/s/SPT_V11HA68851#manuals",
     "slug": "eb-pu2213b",
@@ -2469,7 +2389,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.epson.co.kr/EB-PU1008B"
+      "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU1008B/p/V11HA33840"
     ],
     "manual_link": "https://www.epson.co.kr/%EA%B3%A0%EA%B0%9D%EC%A7%80%EC%9B%90/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-%EC%8B%9C%EB%A6%AC%EC%A6%88/EB-PU1008B/s/SPT_V11HA33840#manuals",
     "slug": "eb-pu1008b",
@@ -2666,7 +2586,7 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://hub.sync.logitech.com/rally/post/rally-system-accessory-setup-guides-cEnKWvHN1blt1RO"
+      "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
     ],
     "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
     "slug": "rally-plus",
@@ -2932,6 +2852,21 @@
   },
   {
     "brand": "BSS Audio",
+    "product": "BLU-50v2",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/ko/products/blu-50v2"
+    ],
+    "slug": "blu-50v2",
+    "card_image": "blu-50v2-main.webp"
+  },
+  {
+    "brand": "BSS Audio",
     "product": "BLU-100",
     "categories": [
       "오디오",
@@ -2967,23 +2902,6 @@
     ],
     "slug": "blu-160",
     "card_image": "blu-160-main.webp"
-  },
-  {
-    "brand": "BSS Audio",
-    "product": "BLU-50",
-    "categories": [
-      "오디오",
-      "Audio",
-      "Audio Processor"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://bssaudio.com/en-US/products/blu-50"
-    ],
-    "link_scope": "series",
-    "manual_link": "https://www.techdata-ps.com/board/download.php?board=N&bo_table=product&file_name=file1_1605759421kbc2hgwz9q.pdf&o_file_name=blu-50+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
-    "slug": "blu-50",
-    "card_image": "blu-50-main.webp"
   },
   {
     "brand": "BSS Audio",
@@ -3115,22 +3033,6 @@
   },
   {
     "brand": "Televic",
-    "product": "D-Cerno CU",
-    "categories": [
-      "오디오",
-      "Conferencing",
-      "Conference System"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
-    ],
-    "link_scope": "series",
-    "slug": "d-cerno-cu",
-    "card_image": "d-cerno-cu-main.webp"
-  },
-  {
-    "brand": "Televic",
     "product": "D-Cerno AE",
     "categories": [
       "오디오",
@@ -3160,22 +3062,6 @@
     ],
     "link_scope": "series",
     "manual_link": "https://static.televic-conference.com/manuals/d-cerno/D-Cerno_UserGuide.htm"
-  },
-  {
-    "brand": "Televic",
-    "product": "D-Cerno D SL",
-    "categories": [
-      "오디오",
-      "Conferencing",
-      "Conference System"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://conference.televic.digital/knowledgebase/discontinued-products/legacy-d-cerno/"
-    ],
-    "link_scope": "series",
-    "slug": "d-cerno-d-sl",
-    "card_image": "d-cerno-d-sl-main.webp"
   },
   {
     "brand": "Televic",
@@ -4075,22 +3961,6 @@
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd1-plus",
     "card_image": "slxd1-plus-front.webp"
-  },
-  {
-    "brand": "NETGEAR",
-    "product": "GS728TPP",
-    "categories": [
-      "제어",
-      "Network",
-      "Network Switch"
-    ],
-    "kind": "equipment",
-    "official_links": [
-      "https://www.netgear.com/support/product/gs728tpp"
-    ],
-    "manual_link": "https://www.netgear.com/support/product/gs728tpp",
-    "slug": "gs728tpp",
-    "card_image": "gs728tpp-front.webp"
   },
   {
     "brand": "NETGEAR",

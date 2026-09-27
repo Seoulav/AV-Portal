@@ -1,7 +1,7 @@
 {
   "manufacturer": "Epson",
-  "productName": "EB-PU2010W/B",
-  "model": "EB-PU2010B",
+  "productName": "EB-PU2010B",
+  "model": "EB-PU2010W/B",
   "itemType": "PRODUCT",
   "categories": [
     "프로젝터",
@@ -502,9 +502,9 @@
   "issues": [
     {
       "code": "MODEL-NAME",
-      "status": "INFO",
+      "status": "RESOLVED",
       "title": "카탈로그 모델명과 제품 페이지 모델명 표기 차이",
-      "detail": "카탈로그에는 EB-PU2010W/B로 등록되어 있으나, 제조사 공식 제품 페이지와 사양표는 EB-PU2010B로 표기되어 있다. 화이트(W)/블랙(B) 색상 구분 표기로 추정되며, 사양 자체는 페이지에 게시된 EB-PU2010B 기준으로 수집했다."
+      "detail": "카탈로그에는 EB-PU2010W/B로 등록되어 있으나, 제조사 공식 제품 페이지와 사양표는 EB-PU2010B로 표기되어 있다. 화이트(W)/블랙(B) 색상 구분 표기로 추정되며, 사양 자체는 페이지에 게시된 EB-PU2010B 기준으로 수집했다. [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     }
   ],
   "presentation": {

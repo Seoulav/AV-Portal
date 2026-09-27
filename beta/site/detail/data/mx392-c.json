@@ -393,9 +393,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "Shure 공식 제품 페이지(NEXT_DATA)에서…",
-      "detail": "Shure 공식 제품 페이지(NEXT_DATA)에서 MX392/C에 대한 추가 'images' 배열은 비어 있어(main_image만 제공), 상세/측면 이미지는 확보하지 못함."
+      "detail": "Shure 공식 제품 페이지(NEXT_DATA)에서 MX392/C에 대한 추가 'images' 배열은 비어 있어(main_image만 제공), 상세/측면 이미지는 확보하지 못함. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

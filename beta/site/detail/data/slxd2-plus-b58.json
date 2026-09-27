@@ -502,45 +502,45 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
-      "detail": "한국어 shure.com 페이지 없음: ko-KR 경로는 en-ASIA로 리다이렉트되고 SLX-D+ 제품 경로는 404. en-US 페이지 사용"
+      "detail": "한국어 shure.com 페이지 없음: ko-KR 경로는 en-ASIA로 리다이렉트되고 SLX-D+ 제품 경로는 404. en-US 페이지 사용 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
-      "detail": "스펙시트 URL은 shure.widen.net 뷰어(HTML) 링크. PDF 직접 링크는 서명·만료형 preview URL이라 저장하지 않음"
+      "detail": "스펙시트 URL은 shure.widen.net 뷰어(HTML) 링크. PDF 직접 링크는 서명·만료형 preview URL이라 저장하지 않음 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
-      "detail": "shure.com 제품 페이지 __NEXT_DATA__의 사양 필드(rf_sensitivity, power_requirements 등)는 비어 있음 → 사양은 공식 스펙시트(SLX-D+ Spec Sheet)와 사용자 가이드(SLXD4+, SLXD4D+, PDF 2026-09-16 생성본)에서 수집"
+      "detail": "shure.com 제품 페이지 __NEXT_DATA__의 사양 필드(rf_sensitivity, power_requirements 등)는 비어 있음 → 사양은 공식 스펙시트(SLX-D+ Spec Sheet)와 사용자 가이드(SLXD4+, SLXD4D+, PDF 2026-09-16 생성본)에서 수집 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R4",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리…",
-      "detail": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리 images 0개, en-GB/en-ASIA 동일) — 후면/두 번째 각도 이미지 없음"
+      "detail": "shure.com·스펙시트 모두 공식 이미지가 정면 1장뿐(갤러리 images 0개, en-GB/en-ASIA 동일) — 후면/두 번째 각도 이미지 없음 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R5",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "공식 자료 충돌: shure.com 짧은 설명은 'Beta®…",
-      "detail": "공식 자료 충돌: shure.com 짧은 설명은 'Beta® 58C supercardioid dynamic'이라 기재했으나 상세 제목·스펙시트는 'Beta 58A (Supercardioid)' — Beta 58A로 표기(오타 추정, 미확정)"
+      "detail": "공식 자료 충돌: shure.com 짧은 설명은 'Beta® 58C supercardioid dynamic'이라 기재했으나 상세 제목·스펙시트는 'Beta 58A (Supercardioid)' — Beta 58A로 표기(오타 추정, 미확정) [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R6",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "공식 SKU 표기는 'SLXD2+/B58'(구형…",
-      "detail": "공식 SKU 표기는 'SLXD2+/B58'(구형 'SLXD2/BETA58'과 표기 다름)"
+      "detail": "공식 SKU 표기는 'SLXD2+/B58'(구형 'SLXD2/BETA58'과 표기 다름) [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R7",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "대역 변형에 =-G64, =-X51 포함",
-      "detail": "대역 변형에 =-G64, =-X51 포함"
+      "detail": "대역 변형에 =-G64, =-X51 포함 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

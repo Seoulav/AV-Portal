@@ -620,9 +620,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
-      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함."
+      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함. [운영자 결정(2026-09-27): 다산SR 자료 확인 없이 기존에 조사한 Powersoft 공식 자료를 그대로 사용하고 종결(AGENTS.md: 다산SR에 자료가 없으면 기존 제조사 자료 사용).]"
     }
   ],
   "presentation": {

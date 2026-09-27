@@ -1,7 +1,7 @@
 {
   "manufacturer": "Lumantek",
-  "productName": "ez-Pro VS5",
-  "model": "VS5",
+  "productName": "VS5",
+  "model": "ez-Pro VS5",
   "series": "ez-Pro Series",
   "seriesNote": "10채널 ez-Pro VS10의 소형 5채널 버전.",
   "itemType": "PRODUCT",
@@ -357,15 +357,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "영문 사이트 데이터 누락",
-      "detail": "제조사 영문 사이트(lumantek.com)의 이 제품 페이지·다운로드 페이지는 CMS 오류(PHP Notice)로 내용이 비어 있었다. 한국 공식 사이트(lumantek.co.kr)에서 대체 확인했다."
+      "detail": "제조사 영문 사이트(lumantek.com)의 이 제품 페이지·다운로드 페이지는 CMS 오류(PHP Notice)로 내용이 비어 있었다. 한국 공식 사이트(lumantek.co.kr)에서 대체 확인했다. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 한국 공식 사이트(lumantek.co.kr)로 확인 — AGENTS상 공식 한글 사이트가 1순위 출처.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {

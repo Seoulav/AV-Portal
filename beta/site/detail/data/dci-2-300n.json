@@ -442,15 +442,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "중요: crownaudio.com 제품 영상 설명 원문에 따르면…",
-      "detail": "중요: crownaudio.com 제품 영상 설명 원문에 따르면 'N(Network) Series'는 Dante가 아니라 HARMAN 독자 프로토콜 BLU-Link 기반이다. 실제 Dante/AES67 네트워크 오디오는 'DA' 접미사 모델(DCi 4|300DA, DCi 4|600DA)에서 지원된다. 작업 지시서의 'N=Dante' 가정은 부정확하므로 카탈로그 등록 시 반드시 정정 필요."
+      "detail": "중요: crownaudio.com 제품 영상 설명 원문에 따르면 'N(Network) Series'는 Dante가 아니라 HARMAN 독자 프로토콜 BLU-Link 기반이다. 실제 Dante/AES67 네트워크 오디오는 'DA' 접미사 모델(DCi 4|300DA, DCi 4|600DA)에서 지원된다. 작업 지시서의 'N=Dante' 가정은 부정확하므로 카탈로그 등록 시 반드시 정정 필요. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "Dante 채널수/샘플레이트/레이턴시 스펙은 이 모델에 해당하지…",
-      "detail": "Dante 채널수/샘플레이트/레이턴시 스펙은 이 모델에 해당하지 않음(BLU-Link 사양이며 페이지에 상세 대역폭/레이턴시 수치는 게시되어 있지 않음, 정보 없음)."
+      "detail": "Dante 채널수/샘플레이트/레이턴시 스펙은 이 모델에 해당하지 않음(BLU-Link 사양이며 페이지에 상세 대역폭/레이턴시 수치는 게시되어 있지 않음, 정보 없음). [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

@@ -1,7 +1,7 @@
 {
   "manufacturer": "Analog Way",
-  "productName": "Eikos 4K",
-  "model": "EKS-4K",
+  "productName": "EKS-4K",
+  "model": "Eikos 4K",
   "series": "Midra 4K",
   "seriesNote": "Midra 4K 플랫폼 기반. Pulse 4K에 Hard/Soft Edge 모드가 추가된 상위 모델.",
   "itemType": "PRODUCT",
@@ -406,9 +406,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {

@@ -292,15 +292,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "제품…",
-      "detail": "제품 매뉴얼(pubs.shure.com/view/guide/UA874)의 표지 및 본문에는 대표 변형 모델로 'UA874Z'가 표기되어 있으나, 동일 문서 내 Specifications 표에 UA874XA(902-960MHz, 224x234x36mm, 213g) 항목이 별도로 명시되어 있어 이를 기준으로 기재함."
+      "detail": "제품 매뉴얼(pubs.shure.com/view/guide/UA874)의 표지 및 본문에는 대표 변형 모델로 'UA874Z'가 표기되어 있으나, 동일 문서 내 Specifications 표에 UA874XA(902-960MHz, 224x234x36mm, 213g) 항목이 별도로 명시되어 있어 이를 기준으로 기재함. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US)…",
-      "detail": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US) 공식 페이지를 기준으로 조사함."
+      "detail": "국문(ko-KR) 전용 페이지는 확인되지 않아 영어(en-US) 공식 페이지를 기준으로 조사함. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {
