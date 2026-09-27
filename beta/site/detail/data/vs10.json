@@ -29,6 +29,20 @@
       "originalSize": "860×550",
       "resolution": "785×550",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "lumantek-vs10-rear.webp",
+      "alt": "Lumantek ez-Pro VS10 후면 단자부 이미지(AUX1-4/PGM x2 BNC 출력, Genlock, PTZ Remote D-sub9, HDMI/SDI 입력, Multiview/PGM HDMI 출력, Ethernet, USB, XLR Audio In/Out, 라벨 표기 포함)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "VS10",
+      "sourceUrl": "https://www.lumantek.com/uploads/product/be0a70f241ac0a4619088bc5831da0d3.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2810×1272",
+      "resolution": "2000×905",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.lumantek.com/index/product_intro/37"
+      "status": "FOUND",
+      "sourceUrl": "https://www.lumantek.com/uploads/product/be0a70f241ac0a4619088bc5831da0d3.png"
     },
     {
       "role": "Perspective",

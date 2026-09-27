@@ -194,10 +194,12 @@ export const group1Images = {
     image('Rear', 'cl01-rear.webp', 'AVer CL01 후면 단자 이미지', 'AVer', 'CL01', 'https://www.averusa.com/images-aver/products/cl01/controller-back.png', '515×314', '515×264', 'FOUND')
   ],
   vs5: [
-    image('Front', 'lumantek-vs5-main.webp', 'Lumantek ez-Pro VS5 전면 조작부 이미지', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png', '860×550', '743×550', 'VERIFIED')
+    image('Front', 'lumantek-vs5-main.webp', 'Lumantek ez-Pro VS5 전면 조작부 이미지', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png', '860×550', '743×550', 'VERIFIED'),
+    image('Rear', 'lumantek-vs5-rear.webp', 'Lumantek ez-Pro VS5 후면 단자부 이미지(전원, USB Host, 1Gbps Ethernet, UVC USB3.0, Multiview HDMI, Program HDMI/SDI 출력, SDI/HDMI 입력 5계통, Audio In/Out D-sub9, 라벨 표기 포함)', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png', '1200×512', '1162×422', 'VERIFIED')
   ],
   vs10: [
-    image('Front', 'lumantek-vs10-main.webp', 'Lumantek ez-Pro VS10 전면 조작부 이미지', 'Lumantek', 'VS10', 'https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png', '860×550', '785×550', 'VERIFIED')
+    image('Front', 'lumantek-vs10-main.webp', 'Lumantek ez-Pro VS10 전면 조작부 이미지', 'Lumantek', 'VS10', 'https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png', '860×550', '785×550', 'VERIFIED'),
+    image('Rear', 'lumantek-vs10-rear.webp', 'Lumantek ez-Pro VS10 후면 단자부 이미지(AUX1-4/PGM x2 BNC 출력, Genlock, PTZ Remote D-sub9, HDMI/SDI 입력, Multiview/PGM HDMI 출력, Ethernet, USB, XLR Audio In/Out, 라벨 표기 포함)', 'Lumantek', 'VS10', 'https://www.lumantek.com/uploads/product/be0a70f241ac0a4619088bc5831da0d3.png', '2810×1272', '2000×905', 'VERIFIED')
   ],
   'ez-md-plus': [
     image('Front', 'lumantek-ez-md-main.webp', 'Lumantek ez-MD+ 상단 라벨·단자 이미지', 'Lumantek', 'ez-MD+', 'https://lumantek.co.kr/uploads/product/8c299ed3858a91699c6a593c2f930d67.png', '609×330', '600×296', 'VERIFIED')
