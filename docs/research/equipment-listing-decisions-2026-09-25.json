@@ -2888,7 +2888,7 @@
         "previous_urls": [
           "https://www.epson.co.kr/EB-PU1008B"
         ],
-        "reason": "이전 단축 URL은 404였다. 한국엡손 공식 페이지 제목과 본문에서 EB-PU1008B를 확인한 제품 상세 URL로 교체했다.",
+        "reason": "이전 단축 URL은 404였다. 공개 카탈로그는 W-20260927-002(d565473)에서 이미 한국엡손 EB-PU1008B 상세 URL로 교체됐고, 이번에 결정표를 같은 URL로 맞췄다.",
         "work_id": "W-20260927-008"
       }
     },
@@ -4491,7 +4491,7 @@
         "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
       ],
       "verification": [
-        "VERIFIED_EXACT_MODEL"
+        "EXACT_OFFICIAL_VARIANT"
       ],
       "grade": "A",
       "link_scope": "model",
