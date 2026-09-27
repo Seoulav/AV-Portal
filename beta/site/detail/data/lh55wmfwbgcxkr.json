@@ -138,10 +138,10 @@
     {
       "group": "Display",
       "name": "밝기",
-      "value": "450",
-      "unit": "nits",
-      "condition": "눈부심 방지 코팅 적용",
-      "source": "P",
+      "value": "450 (유리 미장착) / 300 (유리 장착)",
+      "unit": "nit",
+      "condition": "영국 판매 모델 공식 사양표(S2) Brightness(Typ) 기준, 유리 장착 여부별 값",
+      "source": "P, S2",
       "verification": "FOUND"
     },
     {
@@ -206,6 +206,294 @@
       "condition": "원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요)",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "VA",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.315 x 0.315",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "4,000:1 (유리 미장착)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "9.5",
+      "unit": "ms",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색재현율",
+      "value": "72% (NTSC)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "2 (유리 미장착)",
+      "unit": "%",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30 - 81 kHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "148.5 MHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48 - 75 Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "운영 시간",
+      "value": "12/7 (일 시간/주 일수)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC100-240V 50/60Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(On 모드)",
+      "value": "154",
+      "unit": "W",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(가로x높이x깊이)",
+      "value": "1297.4 x 768.2 x 59.9",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "포장 크기(가로x높이x깊이)",
+      "value": "1464 x 915 x 190",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량",
+      "value": "28.6",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(포장 포함)",
+      "value": "35.9",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 - 40 ℃",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "10 - 80% (결로 없음)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "400 x 400",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "26.2(4면 균일)",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Gray White",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Non-Glossy(Plastic)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-4277SF",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-WM55R",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제 버전",
+      "value": "Tizen 9.0",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "내장 플래시 메모리",
+      "value": "64GB",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Touch/Pen",
+      "name": "터치 방식",
+      "value": "IR",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -232,6 +520,66 @@
       "condition": "대형 디스플레이·프로젝터로 미러링",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "비디오/오디오 입력",
+      "direction": "IN",
+      "quantity": "2 (본체 1, 옵션 트레이 1)",
+      "protocol": "HDMI",
+      "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1(후면), 1 (옵션 트레이 장착 시)",
+      "protocol": "USB",
+      "availability": "",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 출력",
+      "signal": "아날로그 오디오 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "있음(스테레오 미니 잭)",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 입력",
+      "signal": "외부 제어",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45(LAN)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "Ethernet",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55WMFWBGCXEN 공식 사양표 기준(국내 LH55WMFWBGCXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
+      "source": "S2",
+      "verification": "FOUND"
     }
   ],
   "sources": [
@@ -240,14 +588,32 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S2",
+      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+      "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-55-inch-wmfx-lh55wmfwbgcxen/",
+      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
     }
   ],
   "issues": [
     {
       "code": "SPEC-AJAX",
-      "status": "OPEN",
+      "status": "RESOLVED",
       "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
-      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+    },
+    {
+      "code": "SPEC-REGION",
+      "status": "REVIEW REQUIRED",
+      "title": "정량 사양은 해외 지역 모델(LH55WMFWBGCXEN) 공식 사양표 기준",
+      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+    },
+    {
+      "code": "RESPONSE-TIME",
+      "status": "REVIEW REQUIRED",
+      "title": "응답 속도 9.5ms(패널)와 펜 반응 속도 26ms는 별개 항목",
+      "detail": "공식 사양표 Response Time 9.5ms는 패널 응답 속도이며, 기존 26ms는 펜 필기 지연 값이다. 두 값을 혼동하지 않도록 별도 행으로 기록했다."
     }
   ],
   "presentation": {
