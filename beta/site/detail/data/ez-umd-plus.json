@@ -1,0 +1,718 @@
+{
+  "manufacturer": "Lumantek",
+  "productName": "ez-UMD+",
+  "model": "ez-UMD+",
+  "series": "ez-Converters",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Converter"
+  ],
+  "english": "4K multi-converter with 12G-SDI and HDMI 2.0 I/O, 4K scaler, frame sync/genlock and multichannel audio embedding/de-embedding.",
+  "korean": "ez-UMD+는 12G-SDI와 HDMI 2.0 입출력을 지원하고 4K 스케일러·프레임 싱크·젠락·멀티채널 오디오 임베딩/디임베딩 기능을 갖춘 4K 멀티 컨버터다.",
+  "verificationSummary": "제조사 한국 공식 사이트(lumantek.co.kr)의 제품소개·시스템사양 페이지와 다운로드 탭의 한국어 사용자 매뉴얼(PDF, 2026/08/07 업데이트)을 대조했고, 글로벌 사이트(lumantek.com) 사양표와도 비교했다. 영상 컬러 포맷과 USB Type-C 전원 입력 표기에 출처 간 차이가 있어 검토가 필요하다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "ez-UMD+는 12G-SDI 및 HDMI 2.0 입출력을 지원하는 4K 멀티 컨버터로, SD부터 UHD(2160p60)까지의 입력을 원하는 해상도로 변환해 SDI와 HDMI로 동시에 출력한다. SDI 입력 1(12G-SDI, BNC 75Ω)·HDMI 입력 1(HDMI 2.0, Type-A)·레퍼런스 입력 1(Tri-level/Black Burst, BNC 75Ω)과 SDI 출력 1(스케일러)·SDI LOOP 1(항상 동작)·HDMI 출력 1(스케일러 또는 Bypass)을 갖췄다.\n\n제조사 공식 시스템사양에 따르면 Motion Adaptive 디인터레이서, Triple Buffering 프레임 레이트 컨버터/싱커, Internal·Input·REF IN 동기 소스 선택을 지원한다. SDI(16ch 중 2~8ch)·HDMI(2~8ch) 임베디드 오디오를 디임베딩/임베딩하며, 5입력·1출력 PCM 스테레오 믹서로 다운믹스를 처리한다. D-SUB 9핀 AUDIO 단자와 브레이크아웃 케이블로 아날로그 XLR 입력(Female×2)·출력(Male×2)을 제공한다.\n\n2.7인치 컬러 TFT LCD와 4개 키(ESC·Up·Down·OK)로 OSD 메뉴, 오디오 레벨 미터, SDI Eye Diagram, HDMI Eye Scan, SDI 케이블 길이 표시를 제어하며, USB Type-C로 펌웨어 업데이트와 ez-Control 연결을 지원한다. 전원은 DC Jack DC +5~+14V(최대 15W)이며, 크기는 137×104×30mm(커넥터·브라켓 제외), 무게는 450g(브라켓 포함)이다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "ez-umd-plus-main.webp",
+      "alt": "Lumantek ez-UMD+ 상단 패널과 하단면을 겹쳐 보여주는 제품 대표 이미지(평면 합성 렌더링)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-UMD+",
+      "sourceUrl": "https://lumantek.co.kr/boardUpFile/5d7c8244b8acdffb35216686c214fb0d.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000×1258",
+      "resolution": "1951×1257",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Front",
+      "file": "ez-umd-plus-front.webp",
+      "alt": "Lumantek ez-UMD+ 상단 패널(LCD·4키·단자 라벨) 이미지. 실제 단자는 좌·우 측면에 위치. 사용자 매뉴얼 PDF 5쪽 내장 이미지에서 추출",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-UMD+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3326×2955",
+      "resolution": "2000×1777",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "ez-umd-plus-other-left.webp",
+      "alt": "Lumantek ez-UMD+ 좌측면 단자(AUDIO D-SUB 9핀, HDMI IN, HDMI OUT). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-UMD+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920×2048",
+      "resolution": "497×1933",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "ez-umd-plus-other-right.webp",
+      "alt": "Lumantek ez-UMD+ 우측면 단자(DC Jack, USB Type-C, BNC 4개: REF IN·SDI IN·SDI LOOP·SDI OUT). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-UMD+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920×2048",
+      "resolution": "504×1954",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Other",
+      "file": "ez-umd-plus-other-bottom.webp",
+      "alt": "Lumantek ez-UMD+ 하단면(모델명 ez-UMD+ 라벨·인증 마크·흡기구). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출",
+      "note": "Other · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "ez-UMD+",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2048×1694",
+      "resolution": "1534×1367",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/boardUpFile/5d7c8244b8acdffb35216686c214fb0d.png"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/75"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://lumantek.co.kr/index/product_intro/75"
+    },
+    {
+      "role": "Other",
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "ez-UMD+ 사용자 매뉴얼",
+      "language": "ko",
+      "note": "다운로드 탭 매뉴얼 항목(2026/08/07 업데이트, 24.93 MB, 29쪽). 9장 제품 사양·10장 구성품 목록 수록",
+      "url": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "ez-UMD+ 시스템사양 (공식 웹페이지)",
+      "language": "ko/en",
+      "note": "Input, Output, Video Scaler, PCM Stereo Audio Mixer, User Interface, Power, Environmental, Physical 전체 표 수록",
+      "url": "https://lumantek.co.kr/index/product_view/75"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "ko",
+      "note": "",
+      "url": "https://lumantek.co.kr/index/product_intro/75"
+    }
+  ],
+  "features": [
+    {
+      "text": "SD부터 UHD(2160p60)까지 대부분의 입력 포맷을 지원하고, DCI 포맷 포함 40종의 출력 포맷으로 변환한다.",
+      "source": "P"
+    },
+    {
+      "text": "SDI IN의 LOOP 출력과 스케일러 SDI OUT을 동시에 지원하며, HDMI OUT은 HDMI IN Bypass 또는 스케일러 출력을 선택한다.",
+      "source": "P"
+    },
+    {
+      "text": "REF IN(Black Burst/Tri-Level)으로 젠락을 지원하고, Triple Buffering 방식 프레임 레이트 컨버터·싱커를 내장했다.",
+      "source": "M"
+    },
+    {
+      "text": "SDI/HDMI의 스테레오·멀티채널(최대 8채널, 7.1ch/5.1ch) 오디오를 임베딩·디임베딩하고 스테레오로 다운믹스한다.",
+      "source": "P"
+    },
+    {
+      "text": "D-SUB 9핀 AUDIO 단자와 브레이크아웃 케이블로 아날로그 스테레오 XLR 입력·출력을 지원한다.",
+      "source": "M"
+    },
+    {
+      "text": "2.7인치 LCD로 입력 영상, 오디오 레벨 미터, SDI Eye Diagram, HDMI Eye Scan, SDI 케이블 길이(64단계)를 표시한다.",
+      "source": "P"
+    },
+    {
+      "text": "4개 키(ESC·Up·Down·OK)와 LCD OSD 메뉴로 모든 설정을 제어하며, USB Type-C로 연결한 ez-Control(PC·모바일)에서도 동일하게 제어한다.",
+      "source": "P"
+    },
+    {
+      "text": "UF2 파일 방식 펌웨어 업데이트로 별도 소프트웨어 설치가 필요 없다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Data Input",
+      "name": "SDI 비디오 입력",
+      "value": "12G-SDI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "HDMI 비디오 입력",
+      "value": "HDMI 2.0 (Type-A) x1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "레퍼런스 입력",
+      "value": "Tri-level / Black Burst (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "Genlock",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "내부 테스트 패턴",
+      "value": "Color Bar / Solid Color, H/V Counter Pattern",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "SDI 입력 표준",
+      "value": "SD-SDI ST 259, HD-SDI ST 292, 3G-SDI Level A/B-DL/B-DS ST 425-1, 6G-SDI ST 2081-10 Mode 1/2, 12G-SDI ST 2082-10 Mode 1",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "지원 입력 해상도",
+      "value": "720x486i@59.94 ~ 3840x2160@47.95/48/50/59.94/60",
+      "unit": "",
+      "condition": "DCI(ST 2048-1) 2048x1080·4096x2160 지원, HDMI는 일반 PC 해상도 추가 지원",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "입력 컬러 포맷",
+      "value": "YCbCr 4:2:2 / YCbCr 4:4:4 / RGB 4:4:4, 8/10/12bit",
+      "unit": "",
+      "condition": "공식 웹 사양 기준. 매뉴얼 표기와 다름(R1)",
+      "source": "M",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Data Input",
+      "name": "임베디드 오디오 입력",
+      "value": "SDI 16ch 중 2~8ch, HDMI 2~8ch",
+      "unit": "",
+      "condition": "32~96kHz, 16~24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Input",
+      "name": "아날로그 오디오 입력",
+      "value": "XLR Female x2 (L/R)",
+      "unit": "",
+      "condition": "D-SUB 9핀 AUDIO 단자 + 브레이크아웃 케이블, 48kHz 24bit, Delay 0~450ms(50ms 단위), Analog Gain 0/-10dB",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "SDI 비디오 출력",
+      "value": "12G-SDI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "스케일러 출력",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "SDI LOOP 출력",
+      "value": "12G-SDI (BNC 75Ω) x1",
+      "unit": "",
+      "condition": "SDI IN Loop, 항상 동작",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "HDMI 비디오 출력",
+      "value": "HDMI 2.0 (Type-A) x1",
+      "unit": "",
+      "condition": "스케일러 출력 또는 HDMI IN Bypass(Menu>HDMI>Bypass)",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "출력 해상도·SDI 표준",
+      "value": "720x486i@59.94(SD-SDI) ~ 3840x2160@47.95/48/50/59.94/60(12G-SDI Mode1)",
+      "unit": "",
+      "condition": "DCI 2048x1080·4096x2160 지원, 해상도별 SDI 표준 자동 적용",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "출력 컬러 포맷",
+      "value": "YCbCr 4:2:2, 10bit",
+      "unit": "",
+      "condition": "공식 웹 사양 기준. 매뉴얼은 HDMI 출력에 RGB 4:4:4 8bit 추가 표기(R1)",
+      "source": "M",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Data Output",
+      "name": "임베디드 오디오 출력",
+      "value": "SDI 2~8ch, HDMI 2~8ch",
+      "unit": "",
+      "condition": "48kHz 24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "톤 제너레이터",
+      "value": "Sine wave, Gain / Frequency 제어",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data Output",
+      "name": "아날로그 오디오 출력",
+      "value": "XLR Male x2 (L/R)",
+      "unit": "",
+      "condition": "D-SUB 9핀 AUDIO 단자 + 브레이크아웃 케이블, 48kHz 24bit",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "내부 처리 포맷",
+      "value": "YCbCr 4:2:2 10bit",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "컬러 스페이스 변환",
+      "value": "RGB to YCbCr, bypass YCbCr",
+      "unit": "",
+      "condition": "입력 Gamut(BT.601/BT.709/BT.2020) 추종",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "디인터레이서",
+      "value": "Motion Adaptive",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "프레임 레이트 컨버터/싱커",
+      "value": "Triple Buffering",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "Genlock 동기 소스",
+      "value": "Internal(free run) / Input / REF IN",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "PCM 스테레오 오디오 믹서",
+      "value": "입력 5 채널 페어 / 출력 1 채널 페어",
+      "unit": "",
+      "condition": "Input Gain, Output Master Gain, Level Meter on LCD",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "LCD",
+      "value": "2.7인치 컬러 TFT x1",
+      "unit": "",
+      "condition": "Menu & Status Display",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "컨트롤 패널",
+      "value": "4키 (ESC, Up, Down, OK)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "상태 LED",
+      "value": "4개",
+      "unit": "",
+      "condition": "HDMI 입력 5V, HDMI 출력 HPD, SDI 입력 Equalizer Lock, SDI 출력 Driver Lock",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connections",
+      "name": "USB 디바이스 포트",
+      "value": "USB Type-C x1",
+      "unit": "",
+      "condition": "펌웨어 업데이트 & ez-Control, USB Composite: CDC ACM & CDC NCM",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "전원 입력 커넥터",
+      "value": "DC Jack",
+      "unit": "",
+      "condition": "시스템사양 기준. 제품소개·매뉴얼 특징은 USB Type-C 전원 입력도 지원한다고 기재(R2)",
+      "source": "M",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Electrical",
+      "name": "입력 전압",
+      "value": "DC +5 ~ +14V",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "소비전력",
+      "value": "15",
+      "unit": "W (max.)",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Electrical",
+      "name": "동봉 DC 어댑터",
+      "value": "AC IN 100~240VAC 50/60Hz / DC OUT 12V 2A",
+      "unit": "",
+      "condition": "구성품",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-10 ~ 50",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "상대 습도",
+      "value": "10 ~ 50",
+      "unit": "%",
+      "condition": "비응축",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기 (W×H×D)",
+      "value": "137 × 104 × 30",
+      "unit": "mm",
+      "condition": "커넥터·브라켓 제외",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "450",
+      "unit": "g",
+      "condition": "브라켓 포함",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "BNC 75Ω",
+      "signal": "12G-SDI in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "HDMI Type-A",
+      "signal": "HDMI 2.0 in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "connector": "BNC 75Ω",
+      "signal": "Reference in (Tri-level/Black Burst, Genlock)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "BNC 75Ω",
+      "signal": "12G-SDI out (Scaler)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "BNC 75Ω",
+      "signal": "12G-SDI LOOP (SDI IN loop, Always On)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI Type-A",
+      "signal": "HDMI 2.0 out (Scaler/Bypass)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "D-SUB 9핀 (본체 단자 성별 정보 없음)",
+      "signal": "Analog audio in/out (AUDIO)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "동봉 브레이크아웃 케이블(D-Sub 9pin Male) 연결",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR Female (브레이크아웃 케이블)",
+      "signal": "Analog stereo audio in (L/R)",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "48kHz 24bit",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR Male (브레이크아웃 케이블)",
+      "signal": "Analog stereo audio out (L/R)",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "48kHz 24bit",
+      "availability": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB Type-C",
+      "signal": "Firmware update & ez-Control",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "USB CDC ACM & CDC NCM",
+      "availability": "",
+      "condition": "제품소개·매뉴얼 특징은 전원 입력도 지원한다고 기재(R2)",
+      "source": "M",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC Jack",
+      "signal": "DC power in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DC +5~+14V",
+      "availability": "",
+      "condition": "최대 15W",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://lumantek.co.kr/index/product_intro/75",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "제조사 공식 시스템사양 페이지",
+      "url": "https://lumantek.co.kr/index/product_view/75",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 사용자 매뉴얼(PDF, 한국어) · 상단/측면/하단 이미지 출처",
+      "url": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "G",
+      "name": "제조사 글로벌 사이트 Tech Specs 페이지(영문)",
+      "url": "https://lumantek.com/index/product_view/70",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 이미지 자료(제품 페이지 대표 이미지)",
+      "url": "https://lumantek.co.kr/boardUpFile/5d7c8244b8acdffb35216686c214fb0d.png",
+      "scope": "제조사 공식 출처"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "영상 컬러 포맷 표기 충돌",
+      "detail": "공식 시스템사양 웹페이지(한국어·글로벌 동일)는 입력 컬러 포맷을 YCbCr 4:2:2/4:4:4·RGB 4:4:4 8/10/12bit, 출력을 YCbCr 4:2:2 10bit로 표기한다. 사용자 매뉴얼 9장 제품 사양은 입력을 SDI: YCbCr 4:2:2 10bit, HDMI: RGB 4:4:4 8bit / YCbCr 4:2:2 10bit로, 출력을 SDI: YCbCr 4:2:2 10bit, HDMI: RGB 4:4:4 8bit / YCbCr 4:2:2 10bit로 표기한다. 사양표에는 웹 사양 값을 기록하고 두 출처를 보존했다. 제조사 확인 필요."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "USB Type-C 전원 입력 여부",
+      "detail": "제품소개 페이지(입력 포트: USB Type-C 펌웨어 업데이트·전원, 특징: 5~14V DC-Jack 및 USB Type-C 전원 입력 지원)와 매뉴얼 특징 목록은 USB Type-C 전원 입력을 지원한다고 기재한다. 시스템사양(웹·매뉴얼)의 Power Input Connector는 DC Jack만 표기하고 USB Type-C는 펌웨어 업데이트 & ez-Control 용도로만 표기한다. USB 전원 사용 조건(전류 등)은 공식 사양에 없다."
+    },
+    {
+      "code": "R3",
+      "status": "INFO",
+      "title": "크기 기준",
+      "detail": "시스템사양 크기 137×104×30mm는 커넥터·브라켓 제외 값이다. 시스템사양 페이지 치수도에는 브라켓 포함 폭 153.2mm, 깊이 136.4mm, 높이 33.6mm 등이 표기되어 있다. 무게 450g은 브라켓 포함 값이다."
+    },
+    {
+      "code": "R4",
+      "status": "INFO",
+      "title": "이미지 역할",
+      "detail": "단자가 좌·우 측면에 나뉘어 있어 별도 후면(Rear) 이미지는 없다. 상단 패널 이미지를 Front로, 좌·우 측면 단자면과 하단 라벨면을 Other로 사용했다. Front·Other는 웹 게시 이미지(최대 1200px)보다 해상도가 높은 사용자 매뉴얼 PDF 내장 이미지를 추출해 사용했다. Main은 제품 페이지의 2000px 원본(한국·글로벌 사이트 동일 파일)이다. 3D 각도 사진(Perspective)은 공식 자료에서 찾지 못했다. 제조사 이미지 재사용 권리는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Lumantek ez-UMD+ 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

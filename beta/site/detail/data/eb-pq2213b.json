@@ -27,6 +27,20 @@
       "originalSize": "690x460",
       "resolution": "690x460",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "eb-pq2213b-rear.webp",
+      "alt": "엡손 EB-PQ2213B 후면 입출력 단자 패널(EB-PQ2213/PQ2216/PQ2220 공용 이미지) 이 사진은 PQ2213B·PQ2216B·PQ2220B 3개 모델이 공유하는 동일 파일이다(파일명에 세 모델이 함께 표기됨).",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-PQ2213B",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=65f42c107010c6c762d40af8b6727aa10d2d320e&vid=65f42c107010c6c762d40af8b6727aa10d2d320e&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "960x640",
+      "resolution": "922x351",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2213B/p/V11HB03851"
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=65f42c107010c6c762d40af8b6727aa10d2d320e&vid=65f42c107010c6c762d40af8b6727aa10d2d320e&prid=original&clid=SAPDAM&prclid=productpictures"
     },
     {
       "role": "Perspective",
@@ -505,6 +519,12 @@
       "status": "INFO",
       "title": "기본 해상도 공식 자료 간 불일치",
       "detail": "한국 페이지는 '기본 해상도: 4K', 글로벌 브로셔는 'Native Resolution 1080p with 4K Crystal Motion, Resolution on Screen 4K UHD'로 표기한다. 한쪽으로 확정하지 않음. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
+    },
+    {
+      "code": "R-IO",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진과 I/O 표 불일치",
+      "detail": "제조사 한국어 페이지의 후면 사진은 PU 시리즈 사진(Computer VGA·DVI-D 포함)이 잘못 게재된 것으로 보인다(PQ의 I/O와 불일치, 확인용 SDI·HDMI·HDBaseT 구성과 다름). 이 사진 대신 EB-PQ2220B 페이지에 게재된 PQ 공용 후면 사진을 썼다. Remote 미니잭이 사진에 있으나 I/O 표에 없다."
     }
   ],
   "presentation": {

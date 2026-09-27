@@ -27,6 +27,20 @@
       "originalSize": "690x460",
       "resolution": "690x460",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "eb-pu2216b-rear.webp",
+      "alt": "엡손 EB-PU2216B 후면 입출력 단자 패널(EB-PU2213B/PU2216B/PU2220B 공용 이미지) 이 사진은 PU2213B·PU2216B(및 PU2220B) 모델이 공유하는 동일 파일이다(파일명에 여러 모델이 함께 표기됨).",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-PU2216B",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=630b58506855403d67e64caa01a517c756c8ab2b&vid=630b58506855403d67e64caa01a517c756c8ab2b&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "690x460",
+      "resolution": "546x213",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2216B/p/V11HA67851"
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=630b58506855403d67e64caa01a517c756c8ab2b&vid=630b58506855403d67e64caa01a517c756c8ab2b&prid=original&clid=SAPDAM&prclid=productpictures"
     },
     {
       "role": "Perspective",
@@ -517,6 +531,12 @@
       "status": "RESOLVED",
       "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
       "detail": "카탈로그의 https://www.epson.co.kr/EB-PU2216B 단축 URL도 사양표를 포함하고 있었으나, 검색으로 찾은 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PU2216B/p/V11HA67851)가 더 상세한 특징 설명과 옵션 렌즈 목록을 포함해 이를 기준으로 정리했다. [운영자 결정(2026-09-27): 카탈로그 official_links를 상세페이지가 사용하는 공식 제품 페이지로 교체, 종결.]"
+    },
+    {
+      "code": "R-IO",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진과 I/O 표 불일치",
+      "detail": "후면 사진 확인: USB-A 2개는 I/O 표와 일치한다. I/O 표의 'USB Type-A(WiFi)'는 후면에서 보이지 않는다(내부 슬롯 추정, 미확인). RS-232C와 유선 리모컨(Remote) 미니잭도 사진에 있으나 I/O 표에 없다."
     }
   ],
   "presentation": {

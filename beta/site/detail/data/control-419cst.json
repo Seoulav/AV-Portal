@@ -27,6 +27,20 @@
       "originalSize": "2141x1605",
       "resolution": "2141x1605",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "control-419cst-rear.webp",
+      "alt": "JBL Control 419CS/T 천장 스피커 후면(백캔 상단)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 419CS/T",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12912/product_attachment/x_large_2x-152708b194dcef0f6e0eb6b85ab4b217.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2141x1605",
+      "resolution": "1130x1130",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://jblpro.com/en-US/products/control-419cs-t"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12912/product_attachment/x_large_2x-152708b194dcef0f6e0eb6b85ab4b217.webp"
     },
     {
       "role": "Perspective",

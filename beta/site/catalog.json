@@ -4008,5 +4008,21 @@
     "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
     "slug": "rally-mic-pod",
     "card_image": "logitech-rally-mic-pod-perspective.webp"
+  },
+  {
+    "brand": "Lumantek",
+    "product": "ez-UMD+",
+    "categories": [
+      "영상",
+      "Video",
+      "Converter"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://lumantek.co.kr/index/product_intro/75"
+    ],
+    "manual_link": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+    "slug": "ez-umd-plus",
+    "card_image": "ez-umd-plus-main.webp"
   }
 ]

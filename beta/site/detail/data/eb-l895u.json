@@ -27,6 +27,20 @@
       "originalSize": "960x640",
       "resolution": "960x640",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "eb-l895u-rear.webp",
+      "alt": "엡손 EB-L895U 후면 입출력 단자 패널(L 시리즈 블랙 공용 이미지 · EB-L895E 자산 고해상도판) 이 사진은 L895E 페이지의 사진과 동일 파일을 공유한다(L695SE·L795SE·L895E도 같은 파일).",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-L895U",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&vid=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1380x920",
+      "resolution": "1199x380",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L895U/p/V11HB27151"
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&vid=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&prid=original&clid=SAPDAM&prclid=productpictures"
     },
     {
       "role": "Perspective",
@@ -478,6 +492,12 @@
       "status": "REVIEW REQUIRED",
       "title": "렌즈 시프트 단위 확인 필요",
       "detail": "렌즈 시프트 단위 '°'는 한국 공식 페이지 표기를 그대로 옮긴 것이다. 같은 섀시 L530U 카탈로그는 '%'로 적어 공식 오기 가능성이 크지만, 모델별 공식 % 표기를 확인하기 전까지 원문대로 둔다."
+    },
+    {
+      "code": "R-IO",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진과 I/O 표 불일치",
+      "detail": "후면 사진과 사용자 가이드(Interface Ports)에서 확인: RS-232C가 있으나 I/O 표에 없다."
     }
   ],
   "presentation": {
