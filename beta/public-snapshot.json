@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 246,
-    "sha256": "96C34D760EE966E9DEC2A7DDD0D471B34E05A4C2871FE711A20F5E09ADC9DE99",
+    "count": 245,
+    "sha256": "CF1195B3B611E45921DA7F99D619FDA435BD4F8C3D87AD82B93B120EB5806ECB",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -732,12 +732,6 @@
       "features": 8,
       "specifications": 16,
       "io": 11
-    },
-    "kq75lsf03wfxkr": {
-      "sha256": "AB520E2CA33FBA0DE7BF7DC5D08069CDC4E8E74609A3F56937AD280172881089",
-      "features": 6,
-      "specifications": 29,
-      "io": 5
     },
     "led-780h": {
       "sha256": "87EAF5031CF0FF039703CE11B6F0D1C6F38D07CDE1A82E04B9315880D2C640F2",
