@@ -19,15 +19,15 @@
     {
       "role": "Front",
       "file": "a900w-r-gm-front.webp",
-      "alt": "A900W-R-GM 키트 구성품 (흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이)",
+      "alt": "A900W-R-GM 키트 구성품 — 흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이(변형 전용 사진으로 교체: 기존 사진은 검정 커버(A900B-R-GM)였음)",
       "note": "Front · 제조사 공식 이미지",
       "provider": "Shure",
       "model": "A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)",
-      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/902/02b/95-/original/e52db7762240a04554eea3dea3fd4ad3.webp",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/fcc/37f/17-/original/8b6484716b5b1952cfaabe8d8771930e.webp",
       "officialSource": true,
-      "verificationStatus": "FOUND",
+      "verificationStatus": "VERIFIED",
       "originalSize": "3000x3000",
-      "resolution": "1500x1500",
+      "resolution": "2000x1281",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
@@ -210,6 +210,12 @@
       "status": "RESOLVED",
       "title": "잘못 생성된 I/O 행 삭제",
       "detail": "I/O 표에 'Microphone audio output(phantom powered) 8개' 행이 있었으나, 이 제품은 오디오 단자가 없는 기계식 마운트 키트다(2026-09-26 단자 규격 점검에서 확인). 행을 삭제했다."
+    },
+    {
+      "code": "R-REAR",
+      "status": "INFO",
+      "title": "Rear 이미지 부재 사유",
+      "detail": "A900W-R-GM은 기계식 마운트 키트로 전기 단자가 없다(io[] 비어 있음과 일치). 공식 사진에서도 후면에 해당하는 단자면을 확인할 수 없어 Rear 이미지가 존재하지 않는다."
     }
   ],
   "presentation": {

@@ -27,6 +27,20 @@
       "originalSize": "1742x1605",
       "resolution": "1742x1605",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "control-426lp-rear.webp",
+      "alt": "JBL Control 426LP 천장 스피커 후면(백캔 상단)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 426LP",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12933/product_attachment/x_large_2x-59026bdc9e862be3db62ce05fd6f7747.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2141x1605",
+      "resolution": "870x870",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://jblpro.com/en-US/products/control-426lp"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12933/product_attachment/x_large_2x-59026bdc9e862be3db62ce05fd6f7747.webp"
     },
     {
       "role": "Perspective",

@@ -27,6 +27,20 @@
       "originalSize": "690x460",
       "resolution": "690x460",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "eb-pu2010w-b-rear.webp",
+      "alt": "엡손 EB-PU2010B 후면 입출력 단자 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-PU2010B",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=f7a9c2b605cb27520b5454bae328a60290eac0a1&vid=f7a9c2b605cb27520b5454bae328a60290eac0a1&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "690x460",
+      "resolution": "604x218",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2010B/p/V11HA52840"
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=f7a9c2b605cb27520b5454bae328a60290eac0a1&vid=f7a9c2b605cb27520b5454bae328a60290eac0a1&prid=original&clid=SAPDAM&prclid=productpictures"
     },
     {
       "role": "Perspective",
@@ -505,6 +519,12 @@
       "status": "RESOLVED",
       "title": "카탈로그 모델명과 제품 페이지 모델명 표기 차이",
       "detail": "카탈로그에는 EB-PU2010W/B로 등록되어 있으나, 제조사 공식 제품 페이지와 사양표는 EB-PU2010B로 표기되어 있다. 화이트(W)/블랙(B) 색상 구분 표기로 추정되며, 사양 자체는 페이지에 게시된 EB-PU2010B 기준으로 수집했다. [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
+    },
+    {
+      "code": "R-IO",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진과 I/O 표 불일치",
+      "detail": "후면 사진 확인: I/O 표는 USB Type-A 2개인데 사진에는 1개만 보인다(나머지 1개는 내부 무선랜 모듈 슬롯일 가능성, 미확인). RS-232C와 유선 리모컨(Remote) 미니잭도 사진에 있으나 I/O 표에 없다."
     }
   ],
   "presentation": {
