@@ -2852,6 +2852,21 @@
   },
   {
     "brand": "BSS Audio",
+    "product": "BLU-50v2",
+    "categories": [
+      "오디오",
+      "Audio",
+      "Audio Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://bssaudio.com/ko/products/blu-50v2"
+    ],
+    "slug": "blu-50v2",
+    "card_image": "blu-50v2-main.webp"
+  },
+  {
+    "brand": "BSS Audio",
     "product": "BLU-100",
     "categories": [
       "오디오",

@@ -4980,6 +4980,29 @@
         "reason": "사용자 지시: 단종 SLXD1(SLX-D) 삭제 후 후속 SLX-D+ 모델로 교체 등재. 원본 워크북 행 없음(row=null).",
         "work_id": "W-20260926-020"
       }
+    },
+    {
+      "row": null,
+      "manufacturer": "BSS Audio",
+      "model": "BLU-50v2",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Processor"
+      ],
+      "official_urls": [
+        "https://bssaudio.com/ko/products/blu-50v2"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-27",
+        "reason": "사용자 지시: 단종 BLU-50 삭제 후 후속 BLU-50v2 등재. 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260927-002"
+      }
     }
   ],
   "link_scope": {

@@ -21,6 +21,11 @@ const image = imageWith(publicationStatus);
 const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
+  'blu-50v2': [
+    image('Main', 'blu-50v2-main.webp', 'BSS Audio BLU-50v2 신호처리기 전면부(v2 표기)', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp', '4096x1878', '2000x595', 'VERIFIED'),
+    image('Rear', 'blu-50v2-rear.webp', 'BSS Audio BLU-50v2 신호처리기 후면부', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11573_1728954901/BSS_BLU-50_V2_Rear_%281%29_x_large_2x.webp', '4096x1354', '2000x394', 'FOUND'),
+    image('Perspective', 'blu-50v2-perspective.webp', 'BSS Audio BLU-50v2 신호처리기 랙 이어 장착 사선 이미지', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11574_1728954882/BSS_BLU-50_V2_WithEars_Angle_%281%29_x_large_2x.webp', '4096x1821', '2000x612', 'VERIFIED')
+  ],
   'srg-x40uh': [
     image('Main', 'srg-x40uh-main.webp', 'Sony SRG-X40UH 블랙 본체를 비스듬히 본 메인 이미지. 전면 SONY 로고와 POWER·STANDBY 표시등이 보인다', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/10dcbda61364021579978a436d10e29f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1812x2000', 'VERIFIED'),
     image('Front', 'srg-x40uh-front.webp', 'Sony SRG-X40UH 블랙 본체 정면 이미지', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/01f294822eabc58f4dc38dcec152c4f3?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1704x2000', 'VERIFIED'),
@@ -845,6 +850,7 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  'blu-50v2': 'blu-50v2-main.webp',
   'srg-x40uh': 'srg-x40uh-main.webp',
   'srg-a40': 'srg-a40-main.webp',
   'rm-ip10': 'rm-ip10-main.webp',
