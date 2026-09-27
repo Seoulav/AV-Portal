@@ -21,6 +21,12 @@ const image = imageWith(publicationStatus);
 const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
+  gs728tppv3: [
+    image('Main', 'gs728tppv3-main.webp', 'NETGEAR GS728TPPv3를 전면 포트 쪽 오른편에서 비스듬히 본 모습. 좌측 NETGEAR 로고와 Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번)와 SFP 4개(25~28번), 우측 상단 \'GS728TPP\' 인쇄와 우측면 통풍구가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image', '2000x1596', '1653x354', 'VERIFIED'),
+    image('Front', 'gs728tppv3-front.webp', 'NETGEAR GS728TPPv3 전면 패널. Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번, \'PoE+ 30 Watt/Port max.\' 표기)와 SFP 4개(25~28번), 우측 상단 \'GS728TPP\' 인쇄가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image', '2000x1596', '1608x283', 'VERIFIED'),
+    image('Rear', 'gs728tppv3-rear.webp', 'NETGEAR GS728TPPv3 후면 패널. 켄싱턴 잠금 슬롯, \'NOT FOR CUSTOMER USE\' 표기 포트, AC 전원 리셉터클과 \'100-240V~ 50/60Hz, 8A Max\' 표기가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/8aaa0c78-2401-4fcc-8e6d-f2841cb81f8a/GS728TPPv3-Product-Image', '2000x1596', '1562x277', 'VERIFIED'),
+    image('Perspective', 'gs728tppv3-perspective.webp', 'NETGEAR GS728TPPv3를 전면 왼편에서 비스듬히 본 모습. 전면 포트 패널과 좌측면 팬 2개가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/4d731331-4d68-4c55-b9cf-fc2057598973/GS728TPPv3-Product-Image', '2000x1596', '1622x351', 'VERIFIED')
+  ],
   'blu-50v2': [
     image('Main', 'blu-50v2-main.webp', 'BSS Audio BLU-50v2 신호처리기 전면부(v2 표기)', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp', '4096x1878', '2000x595', 'VERIFIED'),
     image('Rear', 'blu-50v2-rear.webp', 'BSS Audio BLU-50v2 신호처리기 후면부', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11573_1728954901/BSS_BLU-50_V2_Rear_%281%29_x_large_2x.webp', '4096x1354', '2000x394', 'FOUND'),
@@ -847,6 +853,7 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  gs728tppv3: 'gs728tppv3-main.webp',
   'blu-50v2': 'blu-50v2-main.webp',
   'srg-x40uh': 'srg-x40uh-main.webp',
   'srg-a40': 'srg-a40-main.webp',

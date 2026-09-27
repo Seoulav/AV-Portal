@@ -2189,6 +2189,22 @@
   },
   {
     "brand": "NETGEAR",
+    "product": "GS728TPPv3",
+    "categories": [
+      "제어",
+      "Network",
+      "Network Switch"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.netgear.com/kr/business/wired/switches/smart-cloud/gs728tppv3/"
+    ],
+    "manual_link": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_UM_EN.pdf",
+    "slug": "gs728tppv3",
+    "card_image": "gs728tppv3-main.webp"
+  },
+  {
+    "brand": "NETGEAR",
     "product": "GSM4230P",
     "categories": [
       "제어",
