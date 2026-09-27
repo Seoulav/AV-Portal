@@ -857,7 +857,7 @@ export const group1Images = {
     image('Front', 'ua874xa-front.webp', 'Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)', 'Shure', 'UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp', '3000x3000', '1500x1500')
   ],
   'a900w-r-gm': [
-    image('Front', 'a900w-r-gm-front.webp', 'A900W-R-GM 키트 구성품 (흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이)', 'Shure', 'A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/902/02b/95-/original/e52db7762240a04554eea3dea3fd4ad3.webp', '3000x3000', '1500x1500')
+    image('Front', 'a900w-r-gm-front.webp', 'A900W-R-GM 키트 구성품 — 흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이(변형 전용 사진으로 교체: 기존 사진은 검정 커버(A900B-R-GM)였음)', 'Shure', 'A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/fcc/37f/17-/original/8b6484716b5b1952cfaabe8d8771930e.webp', '3000x3000', '2000x1281', 'VERIFIED')
   ],
   mx395: [
     image('Front', 'mx395-front.webp', 'MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지', 'Shure', 'MX395 Microflex Low Profile Boundary Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp', '2397x2397', '1500x1500')
@@ -867,7 +867,7 @@ export const group1Images = {
     image('Rear', 'ua844swb-rear.webp', 'UA844+SWB 후면 패널 (Antenna A/B, RF Output A/B, Cascade, Power In/Out 커넥터)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_images/files/64a/850/63-/original/de2d6cc3ee3e23eccb299dffdc5a22c9.webp', '3000x3000', '1500x1500')
   ],
   'mx418d-c': [
-    image('Front', 'mx418dc-front.webp', 'MX400 시리즈 구스넥 마이크 패밀리 (좌측 데스크탑 베이스 부착형이 MX418D/C 해당)', 'Shure', 'MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18", Cardioid, with Desktop Base', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/95c/0be/80-/original/7a0d43b8f52361576df757e5dc85dc75.png', '3000x3000', '1500x1500')
+    image('Front', 'mx418dc-front.webp', 'MX418D/C 전용 정면 이미지(18인치 구스넥, 데스크탑 베이스, XLR 커넥터)', 'Shure', 'MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18", Cardioid, with Desktop Base', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/0dd/25f/e7-/original/98ba7f2494e6332fb99aa9e1eaf1b9c1.webp', '2664x2664', '1164x2000', 'VERIFIED')
   ],
   'mxcwapt-w': [
     image('Front', 'mxcwaptw-front.webp', 'MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp', '3000x3000', '1500x1500'),
@@ -878,7 +878,7 @@ export const group1Images = {
     image('Front', 'mxc420c-front.webp', 'MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부', 'Shure', 'MXC420/C — MXC Gooseneck Microphone, 20", Single-flex, Cardioid', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp', '2562x2562', '1500x1500')
   ],
   'mxa925w-r': [
-    image('Front', 'mxa925wr-front.webp', 'MXA925 색상/폼팩터 4종 패밀리샷 (화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형) — MXA925W-R은 우측에서 세 번째(화이트 원형)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/420/286/fd-/original/a679930bcdb71c96a20196bd0b19d15d.webp', '3000x3000', '1500x1500'),
+    image('Front', 'mxa925wr-front.webp', 'MXA925W-R 전용 정면 이미지(화이트, 원형 천장형 어레이 마이크)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/548/ca2/36-/original/a1c86b593204942f18177b7be9a91bb6.webp', '3000x3000', '1999x1999', 'VERIFIED'),
     image('Rear', 'mxa925w-r-rear.webp', 'MXA925W-R 후면 (천장 장착면, 모델 라벨 \'MXA925W-R Microflex Advance Ceiling Array Microphone\', 네트워크 단자 수납부 커버)', 'Shure', 'MXA925W-R', 'https://products.shureweb.eu/shure_product_db/product_images/files/f15/407/81-/original/a455fc40213212d66f2339ed85483901.webp', '3000x3000', '1997x2000', 'VERIFIED')
   ],
   ua864a: [
