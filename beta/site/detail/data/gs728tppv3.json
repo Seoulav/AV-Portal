@@ -1,0 +1,750 @@
+{
+  "manufacturer": "NETGEAR",
+  "productName": "GS728TPPv3",
+  "model": "GS728TPPv3",
+  "series": "NETGEAR Smart Cloud Switches (Gigabit PoE+ Smart Switches with Remote/Cloud Management)",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Network",
+    "Network Switch"
+  ],
+  "english": "NETGEAR GS728TPPv3 24-port Gigabit PoE+ Smart Switch with 4 dedicated 1G SFP ports, 380W PoE+ budget (up to 30W per port), rack-mount form factor and optional NETGEAR Insight remote/cloud management with a 1-year Insight subscription included.",
+  "korean": "24개 기가비트 PoE+ 포트(포트당 최대 30W, 총 380W)와 4개 전용 1G SFP 포트를 갖춘 랙마운트형 스마트 스위치로, 웹 GUI 관리와 NETGEAR Insight 원격/클라우드 관리(1년 Insight 구독 포함)를 선택해 사용할 수 있다.",
+  "verificationSummary": "NETGEAR 한국어·글로벌 공식 제품 페이지(제목 'GS728TPPv3', 모델 설명 '(GS728TPPv3)')와 GS728TPv3/GS728TPPv3/GS752TPv3/GS752TPPv3 공용 데이터시트의 GS728TPPv3 열, 공용 하드웨어 설치 가이드·설치 가이드·사용 설명서에서 GS728TPPv3 해당 값만 확인했다. 제품 이미지는 글로벌 공식 페이지 갤러리의 GS728TPPv3 이미지에서 확보했다(공식 고해상도 ZIP은 다른 모델명 'GS724TPP' 렌더링이라 제외). 단종된 GS728TPP(v1)와 GS728TPPv2 페이지의 값은 옮기지 않았다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "GS728TPPv3는 NETGEAR 스마트 클라우드 스위치 제품군의 24포트 기가비트 PoE+ 스마트 스위치로, 선택적 원격/클라우드 관리와 4개의 전용 1G SFP 포트를 갖춘 랙마운트형 모델이다. 10/100/1000BASE-T RJ45 24개 포트 모두 IEEE 802.3at PoE+(포트당 최대 30W, 총 380W 예산)를 지원하며, 56Gbps 논블로킹 스위칭 용량과 41.67Mpps 포워딩 성능, 16K MAC 테이블, 1.5MB 패킷 버퍼를 갖추었다.\n\n모든 RJ45·SFP 포트와 USB 2.0 포트, Reset·Factory Defaults·LED Mode 버튼은 전면에, 켄싱턴 잠금 슬롯과 AC 전원 리셉터클은 후면에 배치된다(후면 콘솔 포트는 고객 사용 불가). 내장 고정형 PSU와 팬 2개를 탑재하고 온도·부하 기반 팬 속도 제어로 25℃에서 33.30dBA로 동작한다. 크기는 440 x 257 x 43.2mm, 무게는 4.11kg이며 19인치 랙 장착 키트와 탁상용 고무 풋이 포함된다.\n\n웹 GUI로 로컬 관리하거나 NETGEAR Insight 앱·Insight Cloud 포털로 원격 관리할 수 있다(1년 Insight 구독 포함). IPv4/IPv6 정적 라우팅(각 32개), 256 VLAN, 100개 공유 ACL, IGMP/MLD 스누핑과 MVR, Auto-VoIP·Auto-Video VLAN, 포트별 PoE 제어·스케줄링을 지원한다. 최대 소비 전력은 PoE 최대 부하 시 427W, PoE 미사용 시 26W이며, NETGEAR 제한적 평생 하드웨어 보증이 적용된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "gs728tppv3-main.webp",
+      "alt": "NETGEAR GS728TPPv3를 전면 포트 쪽 오른편에서 비스듬히 본 모습. 좌측 NETGEAR 로고와 Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번)와 SFP 4개(25~28번), 우측 상단 'GS728TPP' 인쇄와 우측면 통풍구가 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GS728TPPv3",
+      "sourceUrl": "https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000x1596",
+      "resolution": "1653x354",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Front",
+      "file": "gs728tppv3-front.webp",
+      "alt": "NETGEAR GS728TPPv3 전면 패널. Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번, 'PoE+ 30 Watt/Port max.' 표기)와 SFP 4개(25~28번), 우측 상단 'GS728TPP' 인쇄가 보인다",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GS728TPPv3",
+      "sourceUrl": "https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000x1596",
+      "resolution": "1608x283",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "gs728tppv3-rear.webp",
+      "alt": "NETGEAR GS728TPPv3 후면 패널. 켄싱턴 잠금 슬롯, 'NOT FOR CUSTOMER USE' 표기 포트, AC 전원 리셉터클과 '100-240V~ 50/60Hz, 8A Max' 표기가 보인다",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GS728TPPv3",
+      "sourceUrl": "https://assets.netgear.com/transform/8aaa0c78-2401-4fcc-8e6d-f2841cb81f8a/GS728TPPv3-Product-Image",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000x1596",
+      "resolution": "1562x277",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "gs728tppv3-perspective.webp",
+      "alt": "NETGEAR GS728TPPv3를 전면 왼편에서 비스듬히 본 모습. 전면 포트 패널과 좌측면 팬 2개가 보인다",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "NETGEAR",
+      "model": "GS728TPPv3",
+      "sourceUrl": "https://assets.netgear.com/transform/4d731331-4d68-4c55-b9cf-fc2057598973/GS728TPPv3-Product-Image",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2000x1596",
+      "resolution": "1622x351",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/8aaa0c78-2401-4fcc-8e6d-f2841cb81f8a/GS728TPPv3-Product-Image"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/4d731331-4d68-4c55-b9cf-fc2057598973/GS728TPPv3-Product-Image"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "sourceUrl": "https://www.netgear.com/business/wired/switches/smart-cloud/gs728tppv3/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "24-Port and 48-Port Gigabit Ethernet Smart Switches with 4 SFP Ports or 4 10G SFP+ Ports and Optional Remote/Cloud Management User Manual (202-12853-02)",
+      "language": "en",
+      "note": "GS728TPv3/GS728TPPv3 등 v3 10개 모델 공용 사용 설명서(2025년 12월판, 628쪽). 공식 제품 페이지 '사용 설명서' 링크",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_UM_EN.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": "GS728TPPv3 단독 사양서는 확인되지 않음. 4개 모델 공용 데이터시트만 제공"
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Data Sheet | GS728TPv3, GS728TPPv3, GS752TPv3, GS752TPPv3 (Gigabit PoE+ Smart Switches with Remote/Cloud Management)",
+      "language": "en",
+      "note": "4개 모델 공용 데이터시트(15쪽, DS-GS728TP/GS728TPP/GS752TP/GS752TPP-25Mar26). GS728TPPv3 열만 사용. 공식 제품 페이지 '데이터시트' 링크",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_DS.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "24-Port and 48-Port Gigabit Ethernet Smart Switches with 4 SFP Ports or 4 10G SFP+ Ports Hardware Installation Guide (202-12854-02)",
+      "language": "en",
+      "note": "v3 10개 모델 공용 하드웨어 설치 가이드(2026년 2월판, 43쪽). 제품 페이지에는 직접 링크되지 않고 같은 공식 다운로드 폴더에서 확인. 제품 페이지 '설치 가이드'(GS728TPv3/GS728TPPv3 공용, 2024년 8월): https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_IG_EN.pdf",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_HIG_EN.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "스마트 클라우드 스위치 - GS728TPPv3 | NETGEAR",
+      "language": "ko",
+      "note": "한국어 공식 페이지. 글로벌(영문): https://www.netgear.com/business/wired/switches/smart-cloud/gs728tppv3/",
+      "url": "https://www.netgear.com/kr/business/wired/switches/smart-cloud/gs728tppv3/"
+    }
+  ],
+  "features": [
+    {
+      "text": "10/100/1000BASE-T RJ45 24개 포트 모두 IEEE 802.3at PoE+를 지원해 포트당 최대 30W를 공급하며, 총 PoE 예산은 380W다.",
+      "source": "P, D, IG"
+    },
+    {
+      "text": "4개의 전용 1G SFP 포트로 네트워크 코어 광 업링크와 링크 집계·페일오버 기반 이중화를 구성할 수 있다.",
+      "source": "P, D"
+    },
+    {
+      "text": "웹 GUI로 로컬 관리하거나 NETGEAR Insight 앱·Insight Cloud 포털로 원격/클라우드 관리할 수 있으며, 두 방식의 설정은 서로 동기화된다(1년 Insight 구독 포함).",
+      "source": "P, D, IG"
+    },
+    {
+      "text": "IPv4/IPv6 정적 라우팅(각 32개)과 VLAN 라우팅으로 VLAN 간 로컬 라우팅을 제공한다.",
+      "source": "P, D"
+    },
+    {
+      "text": "IGMP 스누핑(v1/v2/v3)·쿼리어·Fast Leave, MLD 스누핑, MVR로 멀티캐스트 트래픽을 최적화한다.",
+      "source": "P, D"
+    },
+    {
+      "text": "Auto-VoIP, Auto-Voice VLAN, Auto-Video VLAN으로 IP 전화와 IP 감시 카메라 배치를 간소화한다.",
+      "source": "P, D"
+    },
+    {
+      "text": "포트별 PoE 제어와 PoE 스케줄링, 원격 PoE 전원 재인가를 지원한다.",
+      "source": "D"
+    },
+    {
+      "text": "온도·부하 기반 팬 속도 제어로 25℃에서 33.30dBA의 소음으로 동작한다.",
+      "source": "P, D"
+    },
+    {
+      "text": "이중 펌웨어 이미지, 케이블 테스트, 포트 미러링, Energy Efficient Ethernet(IEEE 802.3az)을 지원한다.",
+      "source": "P, D"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "General",
+      "name": "모델 설명",
+      "value": "선택적 원격/클라우드 관리 및 4개의 SFP 포트가 있는 24포트 기가비트 PoE+ 스마트 스위치",
+      "unit": "",
+      "condition": "모델 번호 GS728TPPv3",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "주문 코드",
+      "value": "GS728TPP-300AUS / GS728TPP-300EUS / GS728TPP-300INS / GS728TPP-300JPS / GS728TPP-300KOS / GS728TPP-300NAS / GS728TPP-300PES / GS728TPP-300PRS / GS728TPP-300TWS / GS728TPP-300UKS",
+      "unit": "",
+      "condition": "호주 / 유럽(영국 포함) / 인도 / 일본 / 한국 / 북미·중남미 / 중동 / 중국 / 대만 / 홍콩. v3 공용 데이터시트 Ordering Information의 'GS728TPP' 항목(표기에 v3 없음)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "폼팩터",
+      "value": "랙마운트",
+      "unit": "",
+      "condition": "19인치 랙 장착 브래킷·나사 포함, 탁상 설치용 고무 풋 포함",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포트 수",
+      "value": "28",
+      "unit": "포트",
+      "condition": "10/100/1000BASE-T RJ45 24개(전 포트 PoE+), 1G SFP 4개(전용)",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "기본 포트 속도",
+      "value": "1",
+      "unit": "Gigabit",
+      "condition": "",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "PoE 포트/예산",
+      "value": "PoE+(802.3at) 24개, 포트당 최대 30W",
+      "unit": "",
+      "condition": "총 380W 예산. 1번 포트부터 오름차순 우선 배분. 포트별 전력 한도 3.0~30.0W 지정 가능",
+      "source": "P, D, IG, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "PoE 표준",
+      "value": "IEEE 802.3af / 802.3at",
+      "unit": "",
+      "condition": "802.3bt는 GS728TPPv3에 기재 없음(공용 설치 가이드의 PoE++ 기재는 GS728TXUPv3·GS752TXUPv3 해당)",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "스위칭 용량",
+      "value": "56",
+      "unit": "Gbps",
+      "condition": "전이중 논블로킹, 라인레이트",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포워딩 속도",
+      "value": "41.67",
+      "unit": "Mpps",
+      "condition": "64바이트 패킷",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "지연 시간(1G 구리)",
+      "value": "4.008~4.701",
+      "unit": "µs",
+      "condition": "64/1518/9216바이트 프레임 각 4.008/4.398/4.701µs. 데이터시트 요약표(Performance at a Glance)는 '<3.35µs'",
+      "source": "D",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Network",
+      "name": "지연 시간(1G 광)",
+      "value": "4.075~4.575",
+      "unit": "µs",
+      "condition": "64/1518/9216바이트 프레임 각 4.075/4.254/4.575µs. 데이터시트 요약표는 '<2.5µs'",
+      "source": "D",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Network",
+      "name": "지연 시간(100M 구리)",
+      "value": "8.379~8.871",
+      "unit": "µs",
+      "condition": "64/1518/9216바이트 프레임 각 8.379/8.658/8.871µs",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "MAC 주소 테이블",
+      "value": "16K",
+      "unit": "",
+      "condition": "ARP 캐시 512",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "패킷 버퍼",
+      "value": "1.5",
+      "unit": "MB",
+      "condition": "사용 중인 포트 간 동적 공유",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "포워딩 방식",
+      "value": "Store-and-forward",
+      "unit": "",
+      "condition": "",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "VLAN",
+      "value": "256",
+      "unit": "개",
+      "condition": "802.1Q, IP·MAC·프로토콜 기반, Voice VLAN, Auto-Video VLAN, Private VLAN. 라우팅 VLAN 인터페이스 15개",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "IGMP 지원",
+      "value": "IGMP 스누핑 v1/v2/v3, IGMP 쿼리어(v2), MLD 스누핑 v1/v2, MLD 쿼리어(v1), Fast Leave, MVR",
+      "unit": "",
+      "condition": "멀티캐스트 그룹 512",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "점보 프레임 지원",
+      "value": "예",
+      "unit": "",
+      "condition": "최대 10K 패킷",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "LAG",
+      "value": "16그룹, 그룹당 최대 8포트",
+      "unit": "",
+      "condition": "802.3ad LACP 및 수동 LAG",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "정적 라우팅",
+      "value": "IPv4 32 / IPv6 32",
+      "unit": "",
+      "condition": "VLAN 라우팅 지원, Host ARP 512",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "ACL",
+      "value": "100",
+      "unit": "",
+      "condition": "MAC·IPv4·IPv6 공유(ingress), L2/L3/L4",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "QoS",
+      "value": "우선순위 큐 8개, WRR·Strict Priority, 802.1p·DSCP·DiffServ(ingress), 포트 기반 ingress/egress 속도 제한",
+      "unit": "",
+      "condition": "",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "관리 방식",
+      "value": "웹 GUI(HTTP/HTTPS, TLS v1.2·v1.3), NETGEAR Insight 앱·Insight Cloud 포털(원격/클라우드), Lite CLI(Telnet/SSH), SNMP v1/v2c/v3, RMON 1·2·3·9",
+      "unit": "",
+      "condition": "1년 Insight 구독 포함(제품 페이지). 4개 모델 공통 기재. 데이터시트는 CLI의 직접 시리얼 접속도 기재하나 설치 가이드는 후면 콘솔 포트를 고객 사용 불가로 명시",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "기본 IP 주소",
+      "value": "192.168.0.239",
+      "unit": "",
+      "condition": "DHCP 서버가 있으면 자동 할당. 기본 관리자 암호 password",
+      "source": "IG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "관리 포트",
+      "value": "USB 2.0 포트 1개(전면)",
+      "unit": "",
+      "condition": "펌웨어 업그레이드·설정 백업·메모리 덤프용. FAT32/VFAT, 약 1Mbps. 후면 콘솔 포트는 고객 사용 불가(제조사 명시)",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "CPU/메모리",
+      "value": "800MHz ARM A55 Single Core / 512MB DDR RAM / 64MB Flash",
+      "unit": "",
+      "condition": "4개 모델 공통 기재",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Management",
+      "name": "버튼",
+      "value": "Reset(재시작), Factory Defaults(공장 초기화), LED Mode(Select)",
+      "unit": "",
+      "condition": "전면. 하드웨어 설치 가이드: Reset 1초 초과 시 재시작(단일 기능), Factory Defaults 1~10초 시 등록 상태 유지·10초 초과 시 등록 상태까지 초기화. 사용 설명서는 Reset 버튼을 5초 미만 재시작·5초 초과 공장 초기화의 다기능 버튼으로 기술",
+      "source": "HIG, UM",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Management",
+      "name": "LED",
+      "value": "포트별: 속도·링크·활동 또는 PoE / 장치: Power, Fan, PoE Max, LED Mode",
+      "unit": "",
+      "condition": "LED Mode 버튼으로 포트 LED 표시 모드 전환. SFP 포트 LED는 링크·활동 겸용. 데이터시트의 장치 LED 목록은 Power, Fan, PoE Max",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "내장 PSU 1개(고정형)",
+      "unit": "",
+      "condition": "제품 페이지: 100-240VAC 50-60Hz. 사용 설명서: 100–240V~ 47-63Hz, 6A. 제품 이미지 후면 표기: 100-240V~ 50/60Hz, 8A Max. 전원 스위치 없음(전원 코드 연결로 제어)",
+      "source": "P, D, UM, HIG",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 최대 부하)",
+      "value": "427",
+      "unit": "W",
+      "condition": "모든 포트 사용, 라인레이트 트래픽, 최대 PoE. 1,460.34 BTU/hr",
+      "source": "P, D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(PoE 미사용)",
+      "value": "26",
+      "unit": "W",
+      "condition": "모든 포트 사용, 라인레이트 트래픽",
+      "source": "D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비(포트 미연결 대기)",
+      "value": "14",
+      "unit": "W",
+      "condition": "데이터시트 기준. 사용 설명서는 20.5W",
+      "source": "D, UM",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "name": "EEE(IEEE 802.3az)",
+      "value": "지원",
+      "unit": "",
+      "condition": "기본값 비활성화",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "냉각",
+      "value": "내장 팬 2개(고정형), 온도·부하 기반 팬 속도 제어",
+      "unit": "",
+      "condition": "",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "소음",
+      "value": "33.30",
+      "unit": "dBA",
+      "condition": "25℃, ANSI-S10.12. 하드웨어 설치 가이드는 '33.3dBA 이하'로 표기",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0~50",
+      "unit": "℃",
+      "condition": "습도 90% 이하(비응축), 고도 3,000m 이하",
+      "source": "P, D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20~70",
+      "unit": "℃",
+      "condition": "습도 95% 이하(비응축), 고도 3,000m 이하",
+      "source": "D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "MTBF",
+      "value": "1,252,990",
+      "unit": "시간",
+      "condition": "25℃ 기준(제품 페이지 표기 143.0년)",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W x D x H)",
+      "value": "440 x 257 x 43.2",
+      "unit": "mm",
+      "condition": "17.3 x 10.1 x 1.7in. 사용 설명서는 440 x 257 x 43mm",
+      "source": "P, D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "4.11",
+      "unit": "kg",
+      "condition": "9.05 lb(제품 페이지·데이터시트). 사용 설명서는 3.68kg(8.11 lb)",
+      "source": "P, D, UM",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Physical",
+      "name": "마운팅",
+      "value": "19인치 랙 장착 브래킷·나사, 탁상용 고무 풋 4개",
+      "unit": "",
+      "condition": "후면 켄싱턴 잠금 슬롯",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC 인증",
+      "value": "CE, FCC Class A, RCM, ICES Class A, VCCI, KC, BSMI, UKCA",
+      "unit": "",
+      "condition": "데이터시트 4개 모델·사용 설명서 공통 기재",
+      "source": "D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 인증",
+      "value": "CB, CE, CSA, RCM, KC, BSMI",
+      "unit": "",
+      "condition": "데이터시트 4개 모델·사용 설명서 공통 기재",
+      "source": "D, UM",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Support",
+      "name": "보증",
+      "value": "Limited Lifetime",
+      "unit": "",
+      "condition": "한국어 페이지: NETGEAR ProSAFE 제한된 평생 하드웨어 보증, 평생 익일 영업일 하드웨어 교체. 데이터시트: NETGEAR Enterprise Limited Lifetime Warranty(공인 대리점 구입, 90일 내 등록 조건, 실내용)",
+      "source": "P, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Support",
+      "name": "기술 지원",
+      "value": "구입 후 90일 ProSUPPORT 연중무휴 전화 기술 지원, 평생 연중무휴 채팅 지원",
+      "unit": "",
+      "condition": "한국어 페이지 기준. ProSupport CAT 1(1·3·5년 계약으로 연장). 글로벌 페이지·데이터시트는 Sprint/Overdrive 지원 옵션 안내(SPR-GS728TPP-12/36/60, DRV-GS728TPP-12/36/60)",
+      "source": "P, P-EN, D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "General",
+      "name": "구성품",
+      "value": "본체, C13 커넥터 AC 전원 코드(지역별), 랙 장착 브래킷·나사, 고무 풋패드, SFP 소켓 보호 캡(장착 상태), 설치 가이드",
+      "unit": "",
+      "condition": "",
+      "source": "D, IG, HIG",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "10/100/1000M Ethernet",
+      "direction": "IN/OUT",
+      "quantity": "24",
+      "protocol": "PoE+ (802.3af/at)",
+      "availability": "포트 1~24, 포트당 최대 30W",
+      "condition": "총 PoE 예산 380W, 전면 배치. Auto Uplink(자동 MDI/MDIX)",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "SFP",
+      "signal": "1000BASE-X",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "포트 25~28, 전용 SFP 포트",
+      "condition": "전면 배치. 1000BASE-SX/LX 광 또는 1000BASE-T 구리 SFP 모듈(별매) 사용",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Storage",
+      "connector": "USB",
+      "signal": "USB 2.0 Storage",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "펌웨어·설정 파일·메모리 덤프용",
+      "condition": "전면 배치. 커넥터 형태는 문서에 명시되지 않음",
+      "source": "D, HIG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Console",
+      "connector": "정보 없음",
+      "signal": "Console",
+      "direction": "정보 없음",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "고객 사용 불가(NOT FOR CUSTOMER USE)",
+      "condition": "후면 배치. 제조사 문서에 '고객 사용용이 아님'으로 명시. 커넥터 규격은 문서에 명시되지 않음",
+      "source": "HIG, IMG",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "AC 전원 리셉터클",
+      "signal": "AC 100-240V",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "내장 PSU, 전원 스위치 없음",
+      "condition": "후면 배치. C13 커넥터 전원 코드 동봉(데이터시트)",
+      "source": "P, D, HIG",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://www.netgear.com/kr/business/wired/switches/smart-cloud/gs728tppv3/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "P-EN",
+      "name": "제조사 공식 제품 페이지(글로벌)",
+      "url": "https://www.netgear.com/business/wired/switches/smart-cloud/gs728tppv3/",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 Data Sheet(GS728TPv3/GS728TPPv3/GS752TPv3/GS752TPPv3 공용, 2026-03-25판)",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_DS.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "HIG",
+      "name": "제조사 공식 하드웨어 설치 가이드(v3 10개 모델 공용)",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_HIG_EN.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IG",
+      "name": "제조사 공식 설치 가이드(GS728TPv3/GS728TPPv3 공용)",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_IG_EN.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "UM",
+      "name": "제조사 공식 사용 설명서(v3 10개 모델 공용)",
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_UM_EN.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 공식 제품 페이지 갤러리 이미지(글로벌 페이지, assets.netgear.com)",
+      "url": "https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 확인(2026-09-27): GS728TPP 후속으로 GS728TPPv3 등재(한국어 공식 페이지 존재)"
+    }
+  ],
+  "issues": [
+    {
+      "code": "I1",
+      "status": "INFO",
+      "title": "GS728TPP(v1) 후속 모델로 운영자 지시에 따라 추가",
+      "detail": "2026-09-27 운영자 지시로, 단종되어 삭제된 GS728TPP(v1)의 후속 모델로 GS728TPPv3 페이지를 새로 추가했다. v2가 아닌 v3를 선택한 이유는 v3만 한국어 공식 제품 페이지가 있고, 일부 지역에서는 v2 페이지가 v3 페이지로 리다이렉트되기 때문이다. v1·v2 페이지의 값은 옮기지 않았고 모든 값은 GS728TPPv3 공식 자료에서 다시 확인했다. 확인한 공식 자료에는 이전 버전 대비 변경점이 명시되어 있지 않아 차이 목록은 싣지 않았다(공식 페이지에는 'GS728TPPv1/v2를 찾고 계십니까?' 링크만 있음)."
+    },
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 이미지 출처 및 v3 확인 근거",
+      "detail": "제품 페이지의 '고해상도 이미지' ZIP(GS728TPPv3_High_Res.zip, 3840x3064 14장)은 파일명이 'GS724TPPv3_*_15Sept22'이고 전면 인쇄가 'GS724TPP', 후면에 'NOT FOR CUSTOMER USE' 포트가 없어 하드웨어 설치 가이드의 GS728TPPv3 그림과 일치하지 않으므로 사용하지 않았다. 대신 글로벌 공식 페이지 갤러리(assets.netgear.com, 'GS728TPPv3-Product-Image', 2000x1596)를 사용했다. 전면 인쇄는 'GS728TPP'로 v3 표기가 없으며, 하드웨어 설치 가이드는 '전면 패널에는 v3 모델 표기가 없다'고 명시한다. 게시 위치와 패널 구성(PoE+ RJ45 24 + SFP 4, 전면 Reset·Select·Factory Defaults·USB, 후면 켄싱턴 슬롯·고객 사용 불가 포트·AC 리셉터클)이 설치 가이드의 GS728TPPv3 그림과 일치해 VERIFIED로 표시했다. 한국어 페이지 갤러리는 GS728TPPv2 이미지 5장과 v3 후면 이미지 1장으로 구성되어 있어 v2 이미지는 사용하지 않았다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "공식 자료 간 수치 불일치",
+      "detail": "무게: 제품 페이지·데이터시트 4.11kg(9.05 lb) / 사용 설명서 3.68kg(8.11 lb). 대기 전력: 데이터시트 14W / 사용 설명서 20.5W. AC 입력: 제품 페이지 100-240VAC 50-60Hz / 사용 설명서 100–240V~ 47-63Hz, 6A / 제품 이미지 후면 표기 50/60Hz, 8A Max. 지연 시간: 데이터시트 요약표 1G 구리 <3.35µs·1G 광 <2.5µs / 상세표 1G 구리 4.008~4.701µs·1G 광 4.075~4.575µs(상세표 값을 사양에 기재). 높이: 데이터시트 43.2mm / 사용 설명서 43mm. Reset 버튼: 하드웨어 설치 가이드 단일 기능(재시작) / 사용 설명서 5초 초과 시 공장 초기화되는 다기능 버튼."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "주문 코드·공용 문서 표기 및 콘솔 포트",
+      "detail": "공용 데이터시트는 Hardware at a Glance와 Ordering Information에서 모델명을 'GS728TPP'처럼 v3 없이 표기하며, 주문 코드 GS728TPP-300xxS(한국 GS728TPP-300KOS 포함)는 이 항목에 실려 있다. 같은 문서의 Technical Specifications 열 제목은 GS728TPPv3로 표기한다. 데이터시트는 Lite CLI를 직접 시리얼 접속으로도 사용할 수 있다고 기재하지만, 하드웨어 설치 가이드는 후면 콘솔 포트를 '고객 사용 불가'로 명시한다. 콘솔·USB 포트의 커넥터 규격은 문서에 명시되지 않아 정보 없음으로 두었다. 관리 기능·CPU/메모리·인증 목록은 4개(사용 설명서는 10개) 모델 공통 기재이며 GS728TPPv3 단독 확인 자료는 없다. 한국어 페이지의 '특징' 목록은 스마트 스위치 제품군 공통 목록으로 다른 모델명이 섞여 있어 사양 근거로는 제품 사양 표와 데이터시트를 우선했다."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "보증·기술 지원 조건 페이지별 상이",
+      "detail": "한국어 페이지는 'NETGEAR ProSAFE 제한된 평생 하드웨어 보증, 평생 익일 영업일 교체'와 구입 후 90일 ProSUPPORT 전화 지원·평생 채팅 지원(ProSupport CAT 1 계약으로 연장)을 안내한다. 글로벌 페이지와 데이터시트는 'NETGEAR (Enterprise) Limited Lifetime Warranty'와 Sprint/Overdrive 지원 옵션을 안내하며, 데이터시트의 서비스 팩 표는 Overdrive 대신 'Drive'(DRV-GS728TPP-12/36/60)로 표기한다. 국내 적용 조건 확인이 필요하다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "NETGEAR GS728TPPv3 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}
