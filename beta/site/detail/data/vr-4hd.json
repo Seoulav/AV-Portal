@@ -9,7 +9,7 @@
     "Signal Switcher"
   ],
   "english": "All-in-one HD AV Mixer with built-in USB 3.0 for web streaming and recording.",
-  "korean": "웹 스트리밍·녹화용 USB 3.0을 내장한 올인원 HD AV 믹서.",
+  "korean": "[단종] 웹 스트리밍·녹화용 USB 3.0을 내장한 올인원 HD AV 믹서.",
   "verificationSummary": "제조사 공식 제품 페이지(proav.roland.com)에서 개요·사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "VR-4HD는 여러 개의 개별 AV 장비를 하나로 대체하는 올인원 HD 스튜디오형 AV 믹서다. 1인 운영을 염두에 두고 설계되어, 하드웨어 페이더·버튼과 터치스크린 인터페이스를 통해 오디오·비디오 신호를 동시에 스위칭·믹싱할 수 있다. 디지털 오디오 믹서, 비디오 스위처, 멀티뷰어 터치스크린, USB 비디오/오디오 스트리밍 인터페이스를 하나의 본체에 통합했으며 학교, 교회, 시의회, 기업 행사, 스포츠, 트레이닝 세션 등 다양한 라이브 이벤트에 적합하다.\n\n6입력 4채널 비디오 스위처 구성으로 HDMI 3계통, RGB/컴포넌트 겸용 스케일러가 내장된 4번째 입력(HDMI/RGB·컴포넌트/컴포지트 겸용)을 제공한다. XLR/TRS 콤보 4채널, RCA 2채널, 1/8인치 스테레오 입력에 HDMI 임베디드 오디오까지 더해 18채널 디지털 오디오 믹서로 통합 처리하며, 오토 믹싱과 에코 캔슬 기능으로 화상회의용 웹 컨퍼런싱 도구로도 활용할 수 있다.\n\nUSB 3.0을 통해 최대 1080/30p 무압축 영상+오디오를 PC/Mac으로 출력해 녹화·스트리밍이 가능하며, 무료 VR Video Capture 애플리케이션이 제공된다. DSK, PinP, Split, Quad 합성 이펙트를 지원하고, RS-232 및 Tally/GPIO(D-sub 15핀)를 통한 외부 제어도 가능하다. 현재 홈페이지에는 'Discontinued' 표기가 있다.",
@@ -520,9 +520,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "제조사 단종(Discontinued) 표기",
-      "detail": "제조사 홈페이지에 'Discontinued(단종)' 표기가 있다."
+      "detail": "제조사 홈페이지에 'Discontinued(단종)' 표기가 있다. [운영자 결정(2026-09-27): 단종 표시를 달고 카탈로그에 유지(후속 모델이 카탈로그에 있으면 상세 머리말에 안내).]"
     }
   ],
   "presentation": {
@@ -534,5 +534,6 @@
     "footerNote": "Roland VR-4HD 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "seriesNote": "단종"
 }

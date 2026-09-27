@@ -305,9 +305,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "ULXD2/KSM9HS(하이퍼카디오이드/서브카디오이드 버전…",
-      "detail": "ULXD2/KSM9HS(하이퍼카디오이드/서브카디오이드 버전 KSM9HS 캡슐)라는 별도 SKU도 존재하므로 혼동 주의 — 본 항목은 표준 KSM9(카디오이드/슈퍼카디오이드) 기준이다."
+      "detail": "ULXD2/KSM9HS(하이퍼카디오이드/서브카디오이드 버전 KSM9HS 캡슐)라는 별도 SKU도 존재하므로 혼동 주의 — 본 항목은 표준 KSM9(카디오이드/슈퍼카디오이드) 기준이다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

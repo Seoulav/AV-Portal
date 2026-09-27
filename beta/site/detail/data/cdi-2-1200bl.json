@@ -427,9 +427,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "\"BL\" 접미사는 전력/전압 variant가 아니라 BLU…",
-      "detail": "\"BL\" 접미사는 전력/전압 variant가 아니라 BLU link 옵션 추가 모델임(요청 설명과 상이)."
+      "detail": "\"BL\" 접미사는 전력/전압 variant가 아니라 BLU link 옵션 추가 모델임(요청 설명과 상이). [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명에 \"BLU link 디지털 오디오 버스 추가 모델\"로 반영.]"
     }
   ],
   "presentation": {

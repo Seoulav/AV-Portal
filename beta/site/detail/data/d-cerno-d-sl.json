@@ -9,7 +9,7 @@
     "Conference System"
   ],
   "english": "D-Cerno D SL is a delegate discussion unit with a removable screw-lock microphone connector, digital signal processing, a shielded mobile-phone-interference-immune microphone, and loop-through daisy-chain cabling; part of the legacy/discontinued D-Cerno SL range.",
-  "korean": "D-Cerno D SL은 스크류락(screw-lock) 방식의 탈착식 마이크 커넥터를 갖춘 델리게이트 디스커션 유닛으로, 디지털 신호처리와 휴대폰 전파 간섭에 강한 실드 마이크, 루프스루 데이지체인 배선을 지원하는 단종된(legacy) D-Cerno SL 제품군의 일부이다.",
+  "korean": "[단종] D-Cerno D SL은 스크류락(screw-lock) 방식의 탈착식 마이크 커넥터를 갖춘 델리게이트 디스커션 유닛으로, 디지털 신호처리와 휴대폰 전파 간섭에 강한 실드 마이크, 루프스루 데이지체인 배선을 지원하는 단종된(legacy) D-Cerno SL 제품군의 일부이다.",
   "verificationSummary": "제조사 공식 지식베이스(conference.televic.digital, 단종 제품 D-Cerno 페이지)와 71.98.0306 데이터시트(PDF, Version 1.7, 2026년)에서 사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "D-Cerno D SL은 델리게이트(참석자)용 디스커션 유닛으로, 슬림하고 낮은 프로파일의 디자인이 특징이다. 디지털 신호처리 기반으로 명료한 음질을 제공하며, 실드 마이크가 휴대폰 등 이동통신 전파 간섭을 차단한다. 2개의 디지털 버스 커넥터(IN/OUT 상호 교환 가능)를 통해 실드 CAT5 케이블로 유닛 간 데이지체인 연결하며, 배선 방향을 자동 감지해 배선 오류 가능성을 없앴다.\n\n스크류락 소켓을 통해 D-MIC 30/40/50/60/70 SL 및 70 FF 등 다양한 길이의 탈착식 마이크를 장착할 수 있어 운송·보관 시 마이크를 분리해 부피를 줄일 수 있다. 마이크 On/Off 또는 발언 요청(Request-to-speak) 버튼과 2개의 상태 LED, 이색(bi-color) 바 인디케이터를 갖추고 있으며, 고품질 내장 스피커와 헤드폰 출력(볼륨 조절 가능)을 제공한다. 하부 셸이 무게 중심을 잡아 안정성을 높였고, 패턴화된 이중화(fail-safe redundancy) 기능으로 루프 배선 시 장애에 강하다.\n\n본 제품은 단종(legacy) 제품이며, 후속 제품은 D-Cerno DISCUSS D(71.98.0396)이다.",
@@ -337,9 +337,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "단종(discontinued) 제품",
-      "detail": "D-Cerno D SL(71.98.0306)은 제조사가 단종을 공지한 레거시 제품이며, 후속 제품은 D-Cerno DISCUSS D(71.98.0396)이다."
+      "detail": "D-Cerno D SL(71.98.0306)은 제조사가 단종을 공지한 레거시 제품이며, 후속 제품은 D-Cerno DISCUSS D(71.98.0396)이다. [운영자 결정(2026-09-27): 단종 표시를 달고 카탈로그에 유지(후속 모델이 카탈로그에 있으면 상세 머리말에 안내).]"
     }
   ],
   "presentation": {
@@ -351,5 +351,6 @@
     "footerNote": "Televic D-Cerno D SL 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "seriesNote": "단종"
 }

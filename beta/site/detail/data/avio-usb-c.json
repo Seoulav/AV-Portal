@@ -271,9 +271,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "공식 페이지 성격",
-      "detail": "getdante.com의 AVIO USB-C 페이지는 개별 제품 페이지가 아니라 카테고리성 아카이브 페이지다. 대표 이미지는 WordPress 미디어에서 별도로 확보했다."
+      "detail": "getdante.com의 AVIO USB-C 페이지는 개별 제품 페이지가 아니라 카테고리성 아카이브 페이지다. 대표 이미지는 WordPress 미디어에서 별도로 확보했다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "M1",

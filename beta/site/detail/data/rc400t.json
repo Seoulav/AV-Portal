@@ -270,15 +270,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 호스팅 위치 차이",
-      "detail": "다른 5개 제품과 달리 RC400T의 공식 이미지는 dwn01.analogway.com의 'High Resolution Pictures' 폴더가 아니라 analogway.com 웹사이트 자체(Webflow CDN, cdn.prod.website-files.com)에서 제공된다. 제조사 공식 웹사이트에 직접 임베드된 자산이므로 manufacturer-hosts.mjs에 해당 CDN 도메인을 허용 목록으로 추가했다."
+      "detail": "다른 5개 제품과 달리 RC400T의 공식 이미지는 dwn01.analogway.com의 'High Resolution Pictures' 폴더가 아니라 analogway.com 웹사이트 자체(Webflow CDN, cdn.prod.website-files.com)에서 제공된다. 제조사 공식 웹사이트에 직접 임베드된 자산이므로 manufacturer-hosts.mjs에 해당 CDN 도메인을 허용 목록으로 추가했다. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: Webflow CDN 도메인을 허용 목록에 추가해 처리됨(이슈 본문).]"
     }
   ],
   "presentation": {

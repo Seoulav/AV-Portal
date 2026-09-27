@@ -309,15 +309,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인…",
-      "detail": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인 'Ultra Wide Band'가 아니라, Shure 제품 표기 관례상 넓은 주파수 대역(광대역, VHF~UHF 5개 밴드 커버)을 지원한다는 의미의 자체 모델 코드로 확인됨. 공식 매뉴얼에서도 'UWB'의 철자 풀이는 별도로 제공하지 않으며, 'amplified, VHF and UHF Antenna Distribution System'으로만 설명하고 있어 이를 기준으로 기재함."
+      "detail": "작업 브리핑에서 예상한 대로 'UWB'는 무선통신 표준인 'Ultra Wide Band'가 아니라, Shure 제품 표기 관례상 넓은 주파수 대역(광대역, VHF~UHF 5개 밴드 커버)을 지원한다는 의미의 자체 모델 코드로 확인됨. 공식 매뉴얼에서도 'UWB'의 철자 풀이는 별도로 제공하지 않으며, 'amplified, VHF and UHF Antenna Distribution System'으로만 설명하고 있어 이를 기준으로 기재함. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명이 공식 표현(안테나 분배 시스템)으로 작성됨.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "UA844+SWB와 달리 UA845UWB는 AC…",
-      "detail": "UA844+SWB와 달리 UA845UWB는 AC 전원(100-240V)을 직접 사용하는 내장 전원공급 방식이며, 랙마운트 외장 전원공급장치(PS60)를 별도로 사용하는 UA844+ 계열과 전원 구조가 다름."
+      "detail": "UA844+SWB와 달리 UA845UWB는 AC 전원(100-240V)을 직접 사용하는 내장 전원공급 방식이며, 랙마운트 외장 전원공급장치(PS60)를 별도로 사용하는 UA844+ 계열과 전원 구조가 다름. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

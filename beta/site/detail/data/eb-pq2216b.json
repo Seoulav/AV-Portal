@@ -490,21 +490,21 @@
   "issues": [
     {
       "code": "LINK-FALLBACK",
-      "status": "INFO",
+      "status": "RESOLVED",
       "title": "카탈로그 official_link이 리다이렉트 단축 URL이었음",
-      "detail": "카탈로그의 https://www.epson.co.kr/EB-PQ2216B 단축 URL은 마케팅 랜딩 페이지로 연결되나 사양표 섹션은 로드되어 있었다. 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PQ2216B/p/V11HB04851)를 추가로 확인해 더 풍부한 특징 목록과 사양을 함께 반영했다."
+      "detail": "카탈로그의 https://www.epson.co.kr/EB-PQ2216B 단축 URL은 마케팅 랜딩 페이지로 연결되나 사양표 섹션은 로드되어 있었다. 검색을 통해 실제 제품 상세 페이지(/비즈니스용-제품/.../EB-PQ2216B/p/V11HB04851)를 추가로 확인해 더 풍부한 특징 목록과 사양을 함께 반영했다. [운영자 결정(2026-09-27): 카탈로그 official_links를 상세페이지가 사용하는 공식 제품 페이지로 교체, 종결.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "입출력 단자 한국·글로벌 자료 차이",
-      "detail": "한국 제품 페이지는 HDMI 입력 2·출력 1만 적지만, Epson 글로벌 브로셔는 HDBaseT ×1, 12G-SDI 입·출력, RS-232C ×1을 추가로 명시한다. 글로벌 브로셔 기준으로 단자를 보완했다."
+      "detail": "한국 제품 페이지는 HDMI 입력 2·출력 1만 적지만, Epson 글로벌 브로셔는 HDBaseT ×1, 12G-SDI 입·출력, RS-232C ×1을 추가로 명시한다. 글로벌 브로셔 기준으로 단자를 보완했다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "기본 해상도 공식 자료 간 불일치",
-      "detail": "한국 페이지는 '기본 해상도: 4K', 글로벌 브로셔는 'Native Resolution 1080p with 4K Crystal Motion, Resolution on Screen 4K UHD'로 표기한다. 한쪽으로 확정하지 않음."
+      "detail": "한국 페이지는 '기본 해상도: 4K', 글로벌 브로셔는 'Native Resolution 1080p with 4K Crystal Motion, Resolution on Screen 4K UHD'로 표기한다. 한쪽으로 확정하지 않음. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

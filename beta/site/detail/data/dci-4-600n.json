@@ -430,9 +430,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "중요: 'N' 접미사는 Dante가 아니라 HARMAN…",
-      "detail": "중요: 'N' 접미사는 Dante가 아니라 HARMAN BLU-Link 기반 'Network Series'임. Dante 스펙은 이 모델에 해당하지 않음."
+      "detail": "중요: 'N' 접미사는 Dante가 아니라 HARMAN BLU-Link 기반 'Network Series'임. Dante 스펙은 이 모델에 해당하지 않음. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명에 \"HARMAN BLU-Link 기반\"으로 반영(Dante 아님).]"
     }
   ],
   "presentation": {

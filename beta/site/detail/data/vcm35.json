@@ -262,9 +262,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "픽업 반경 공식 자료 간 불일치",
-      "detail": "데이터시트는 '20ft (6m) radius', 현행 제품 페이지는 '360° 5m omnidirectional pickup'으로 표기한다. 데이터시트 값을 쓰고 병기함."
+      "detail": "데이터시트는 '20ft (6m) radius', 현행 제품 페이지는 '360° 5m omnidirectional pickup'으로 표기한다. 데이터시트 값을 쓰고 병기함. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

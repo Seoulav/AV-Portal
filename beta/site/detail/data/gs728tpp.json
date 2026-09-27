@@ -10,7 +10,7 @@
     "Network Switch"
   ],
   "english": "GS728TPP 24-port Gigabit PoE+ Smart Managed Switch with 4 dedicated SFP ports, 384W PoE budget (up to 720W with EPS).",
-  "korean": "GS728TPP는 24개 기가비트 PoE+ 포트와 4개 전용 SFP 포트를 갖춘 스마트 관리형 스위치로, 내장 전원으로 384W, 외부 전원(EPS) 연결 시 최대 720W의 PoE 예산을 제공한다.",
+  "korean": "[단종] GS728TPP는 24개 기가비트 PoE+ 포트와 4개 전용 SFP 포트를 갖춘 스마트 관리형 스위치로, 내장 전원으로 384W, 외부 전원(EPS) 연결 시 최대 720W의 PoE 예산을 제공한다.",
   "verificationSummary": "NETGEAR 공식 데이터시트와 하드웨어 설치 가이드(downloads.netgear.com)로 사양·이미지를 확인했다. 데이터시트에 없는 값은 싣지 않았다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "GS728TPP는 NETGEAR ProSAFE 기가비트 PoE/PoE+ 스마트 관리형 스위치 계열의 24포트 모델이다. 24개 포트 모두 IEEE 802.3at PoE+를 지원해 포트당 최대 30W를 공급하며, 내장 전원 기준 384W의 PoE 예산을 제공한다. 후면의 EPS 커넥터에 외부/이중화 전원 RPS4000을 연결하면 PoE 예산을 최대 720W까지 늘릴 수 있다.\n\n4개의 전용 SFP 광 포트, Web GUI와 Smart Control Center 관리, Auto-VoIP·Voice VLAN, IGMP/MLD Snooping, LLDP-MED 등 AV·IP 전화·감시 카메라가 섞인 중소규모 네트워크에 필요한 기능을 갖췄다.",
@@ -484,15 +484,15 @@
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "설치 가이드 그림 캡션 오류",
-      "detail": "설치 가이드 12쪽 GS728TP 절의 Figure 5 캡션이 'GS728TPP back panel'로 잘못 적혀 있다(그림에는 RPS 커넥터 없음). 후면 이미지는 GS728TPP 절 13쪽 Figure 7(RPS 커넥터 표기)을 사용했고, 데이터시트의 'EPS 커넥터 1개' 표기와 일치한다."
+      "detail": "설치 가이드 12쪽 GS728TP 절의 Figure 5 캡션이 'GS728TPP back panel'로 잘못 적혀 있다(그림에는 RPS 커넥터 없음). 후면 이미지는 GS728TPP 절 13쪽 Figure 7(RPS 커넥터 표기)을 사용했고, 데이터시트의 'EPS 커넥터 1개' 표기와 일치한다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "v1/v2 구분",
-      "detail": "이 페이지는 초기 모델 GS728TPP 기준이다. 후속 GS728TPPv2는 별도 SKU이며 이미지·사양을 섞지 않았다. 단종 여부는 공식 자료로 확인하지 못했다."
+      "detail": "이 페이지는 초기 모델 GS728TPP 기준이다. 후속 GS728TPPv2는 별도 SKU이며 이미지·사양을 섞지 않았다. 단종 여부는 공식 자료로 확인하지 못했다. [운영자 결정(2026-09-27): 단종 표시를 달고 카탈로그에 유지(후속 모델이 카탈로그에 있으면 상세 머리말에 안내).]"
     }
   ],
   "presentation": {
@@ -504,5 +504,6 @@
     "footerNote": "NETGEAR GS728TPP 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "seriesNote": "단종"
 }

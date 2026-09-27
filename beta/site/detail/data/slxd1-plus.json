@@ -535,39 +535,39 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "한국어 shure.com 페이지 없음: ko-KR 경로는…",
-      "detail": "한국어 shure.com 페이지 없음: ko-KR 경로는 en-ASIA로 리다이렉트되고 SLX-D+ 제품 경로는 404. en-US 페이지 사용"
+      "detail": "한국어 shure.com 페이지 없음: ko-KR 경로는 en-ASIA로 리다이렉트되고 SLX-D+ 제품 경로는 404. en-US 페이지 사용 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "스펙시트 URL은 shure.widen.net 뷰어(HTML)…",
-      "detail": "스펙시트 URL은 shure.widen.net 뷰어(HTML) 링크. PDF 직접 링크는 서명·만료형 preview URL이라 저장하지 않음"
+      "detail": "스펙시트 URL은 shure.widen.net 뷰어(HTML) 링크. PDF 직접 링크는 서명·만료형 preview URL이라 저장하지 않음 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "shure.com 제품 페이지 __NEXT_DATA__의 사양…",
-      "detail": "shure.com 제품 페이지 __NEXT_DATA__의 사양 필드(rf_sensitivity, power_requirements 등)는 비어 있음 → 사양은 공식 스펙시트(SLX-D+ Spec Sheet)와 사용자 가이드(SLXD4+, SLXD4D+, PDF 2026-09-16 생성본)에서 수집"
+      "detail": "shure.com 제품 페이지 __NEXT_DATA__의 사양 필드(rf_sensitivity, power_requirements 등)는 비어 있음 → 사양은 공식 스펙시트(SLX-D+ Spec Sheet)와 사용자 가이드(SLXD4+, SLXD4D+, PDF 2026-09-16 생성본)에서 수집 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R4",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "shure.com DB의…",
-      "detail": "shure.com DB의 weight/transmitter_weight 필드는 0(미입력) — 무게는 스펙시트·가이드의 89 g 사용"
+      "detail": "shure.com DB의 weight/transmitter_weight 필드는 0(미입력) — 무게는 스펙시트·가이드의 89 g 사용 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R5",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "한국 지역 전용 SKU 접미사는 없음. 대역 변형…",
-      "detail": "한국 지역 전용 SKU 접미사는 없음. 대역 변형 SLXD1+=-G64, SLXD1+=-X51 존재"
+      "detail": "한국 지역 전용 SKU 접미사는 없음. 대역 변형 SLXD1+=-G64, SLXD1+=-X51 존재 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R6",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+…",
-      "detail": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+ 시스템 공통 사양"
+      "detail": "광대역 튜닝·동시 운용 수·레이턴시 등 시스템 사양은 SLX-D+ 시스템 공통 사양 [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

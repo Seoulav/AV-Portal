@@ -212,15 +212,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품 자체 라벨 미확인",
-      "detail": "제품 이미지에 모델명 텍스트가 인쇄되어 있지 않아, 제조사 페이지 귀속만으로 FOUND 등급을 부여했다(VERIFIED 아님)."
+      "detail": "제품 이미지에 모델명 텍스트가 인쇄되어 있지 않아, 제조사 페이지 귀속만으로 FOUND 등급을 부여했다(VERIFIED 아님). [운영자 결정(2026-09-27): 제조사 제품 페이지 게재 근거로 FOUND 등급 유지(VERIFIED 아님), 종결.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {
