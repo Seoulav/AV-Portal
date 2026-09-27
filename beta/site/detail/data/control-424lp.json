@@ -27,6 +27,20 @@
       "originalSize": "1450x1605",
       "resolution": "1450x1605",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "control-424lp-rear.webp",
+      "alt": "JBL Control 424LP 천장 스피커 후면(백캔 상단)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 424LP",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12926/product_attachment/x_large_2x-62b0ce0cad9c03fc2857252ba3dec871.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2141x1605",
+      "resolution": "869x868",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://jblpro.com/en-US/products/control-424lp"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/12926/product_attachment/x_large_2x-62b0ce0cad9c03fc2857252ba3dec871.webp"
     },
     {
       "role": "Perspective",

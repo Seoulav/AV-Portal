@@ -29,6 +29,20 @@
       "originalSize": "3000×3000",
       "resolution": "1573×675",
       "publicationStatus": "사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용"
+    },
+    {
+      "role": "Rear",
+      "file": "mxcw640-rear.webp",
+      "alt": "MXCW640 하단면 (충전 접점 단자, 벽/설치용 키홀, 배터리 커버)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "MXCW640",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/5af/135/58-/original/b41c61ed2649f7069987054eca828065.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "2000x1167",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/5af/135/58-/original/b41c61ed2649f7069987054eca828065.webp"
     },
     {
       "role": "Perspective",

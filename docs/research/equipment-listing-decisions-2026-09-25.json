@@ -5031,6 +5031,29 @@
         "reason": "사용자 지시: 단종 GS728TPP(v1) 삭제 후 후속 모델로 GS728TPPv3 등재(한국어 공식 페이지 존재로 v2 대신 v3 선택). 원본 워크북 행 없음(row=null).",
         "work_id": "W-20260927-005"
       }
+    },
+    {
+      "row": null,
+      "manufacturer": "Lumantek",
+      "model": "ez-UMD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "official_urls": [
+        "https://lumantek.co.kr/index/product_intro/75"
+      ],
+      "verification": [
+        "EXACT_OFFICIAL_MODEL_RESULT"
+      ],
+      "grade": "A",
+      "link_scope": "model",
+      "user_added": {
+        "added_at": "2026-09-27",
+        "reason": "사용자 지시: 브랜드별 후면 단자 사진 보완 작업 중 신규 카탈로그 항목으로 추가(4K UMD/스케일러/컨버터). 원본 워크북 행 없음(row=null).",
+        "work_id": "W-20260927-007"
+      }
     }
   ],
   "link_scope": {

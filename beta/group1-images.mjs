@@ -20,6 +20,26 @@ const image = imageWith(publicationStatus);
 // Group 2 카드 대표 사진 조사 기록(Work/기록/W-20260925-012-사진조사.md)에서 넘어온 8개 제품 전용.
 const group2Image = imageWith(group2PublicationStatus);
 
+// 제조사 공식 사이트에서 사진을 찾지 못한 경우에 한해, 운영자 지시(2026-09-27)로 출처가 불명확한
+// 사이트(커뮤니티·블로그·SNS 캡처 등)의 사진도 게시할 수 있다. 제품 일치는 운영자가 사진으로 직접 확인한다.
+// officialSource: false로 표시해 beta/verify-pages.mjs의 제조사 호스트 검사를 이 항목에 한해 건너뛴다.
+// note·publicationStatus에 출처 불명 사실을 그대로 남겨 화면에서도 구분되게 한다.
+const unverifiedPublicationStatus = '사용자 게시 승인 · 출처 불명(제품 일치만 확인) · 재사용 권리 미확인';
+const unverifiedImage = (role, file, alt, provider, model, sourceUrl, originalSize, resolution, verificationStatus = 'REVIEW REQUIRED') => ({
+  role,
+  file,
+  alt,
+  note: `${role} · 출처 불명 사진(제품 일치 확인)`,
+  provider,
+  model,
+  sourceUrl,
+  officialSource: false,
+  verificationStatus,
+  originalSize,
+  resolution,
+  publicationStatus: unverifiedPublicationStatus
+});
+
 export const group1Images = {
   gs728tppv3: [
     image('Main', 'gs728tppv3-main.webp', 'NETGEAR GS728TPPv3를 전면 포트 쪽 오른편에서 비스듬히 본 모습. 좌측 NETGEAR 로고와 Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번)와 SFP 4개(25~28번), 우측 상단 \'GS728TPP\' 인쇄와 우측면 통풍구가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image', '2000x1596', '1653x354', 'VERIFIED'),
@@ -112,13 +132,15 @@ export const group1Images = {
     group2Image('Perspective', 'uvc-01-perspective.webp', 'Roland UVC-01 우측 45도 원근 이미지', 'Roland', 'UVC-01', 'https://static.roland.com/assets/media/zip/uvc-01_hr_img.zip', '3840×2714', '1210×929')
   ],
   'eb-l530u': [
-    group2Image('Main', 'eb-l530u-main.webp', 'Epson EB-L530U 프로젝터 정면 렌즈 방향 대표 이미지', 'Epson', 'EB-L530U (V11HA27040)', 'https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040', '690×460', '686×294')
+    group2Image('Main', 'eb-l530u-main.webp', 'Epson EB-L530U 프로젝터 정면 렌즈 방향 대표 이미지', 'Epson', 'EB-L530U (V11HA27040)', 'https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040', '690×460', '686×294'),
+    image('Rear', 'eb-l530u-rear.webp', '엡손 EB-L530U 후면 입출력 단자 패널', 'Epson', 'EB-L530U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=1691776a2f5d963c276732b7299a4beff3cdb739&vid=1691776a2f5d963c276732b7299a4beff3cdb739&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '650x213', 'VERIFIED')
   ],
   'avio-usb-c': [
     group2Image('Main', 'avio-usb-c-main.webp', 'Audinate Dante AVIO USB-C 어댑터 RJ45·USB-C 케이블 이미지', 'Audinate', 'Dante AVIO USB-C (ADP-USBC-AU-2X2)', 'https://www.getdante.com/wp-content/uploads/2024/01/AVIO-2CH-USB-C-showConnectors-trans-layers-long-cable.png', '2448×1665', '1561×1071')
   ],
   mxcw640: [
-    group2Image('Main', 'mxcw640-main.webp', 'Shure MXCW640 회의 단말 정면 이미지', 'Shure', 'MXCW640', 'https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640', '3000×3000', '1573×675')
+    group2Image('Main', 'mxcw640-main.webp', 'Shure MXCW640 회의 단말 정면 이미지', 'Shure', 'MXCW640', 'https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640', '3000×3000', '1573×675'),
+    image('Rear', 'mxcw640-rear.webp', 'MXCW640 하단면 (충전 접점 단자, 벽/설치용 키홀, 배터리 커버)', 'Shure', 'MXCW640', 'https://products.shureweb.eu/shure_product_db/product_images/files/5af/135/58-/original/b41c61ed2649f7069987054eca828065.webp', '3000x3000', '2000x1167', 'VERIFIED')
   ],
   gsm4248px: [
     group2Image('Rear', 'gsm4248px-rear.webp', 'NETGEAR GSM4248PX 후면 포트면 원근 이미지', 'NETGEAR', 'GSM4248PX', 'https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32', '779×536', '730×236')
@@ -207,6 +229,13 @@ export const group1Images = {
   ],
   'ez-hsv-plus': [
     image('Front', 'lumantek-ez-hsv-main.webp', 'Lumantek ez-HSV+ 전면 디스플레이·단자 이미지', 'Lumantek', 'ez-HSV+', 'https://lumantek.co.kr/uploads/product/a3d341a2299241436357289f2b6fdddd.png', '1063×500', '569×500', 'VERIFIED')
+  ],
+  'ez-umd-plus': [
+    image('Main', 'ez-umd-plus-main.webp', 'Lumantek ez-UMD+ 상단 패널과 하단면을 겹쳐 보여주는 제품 대표 이미지(평면 합성 렌더링)', 'Lumantek', 'ez-UMD+', 'https://lumantek.co.kr/boardUpFile/5d7c8244b8acdffb35216686c214fb0d.png', '2000×1258', '1951×1257', 'VERIFIED'),
+    image('Front', 'ez-umd-plus-front.webp', 'Lumantek ez-UMD+ 상단 패널(LCD·4키·단자 라벨) 이미지. 실제 단자는 좌·우 측면에 위치. 사용자 매뉴얼 PDF 5쪽 내장 이미지에서 추출', 'Lumantek', 'ez-UMD+', 'https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf', '3326×2955', '2000×1777', 'VERIFIED'),
+    image('Other', 'ez-umd-plus-other-left.webp', 'Lumantek ez-UMD+ 좌측면 단자(AUDIO D-SUB 9핀, HDMI IN, HDMI OUT). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출', 'Lumantek', 'ez-UMD+', 'https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf', '1920×2048', '497×1933', 'VERIFIED'),
+    image('Other', 'ez-umd-plus-other-right.webp', 'Lumantek ez-UMD+ 우측면 단자(DC Jack, USB Type-C, BNC 4개: REF IN·SDI IN·SDI LOOP·SDI OUT). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출', 'Lumantek', 'ez-UMD+', 'https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf', '1920×2048', '504×1954', 'VERIFIED'),
+    image('Other', 'ez-umd-plus-other-bottom.webp', 'Lumantek ez-UMD+ 하단면(모델명 ez-UMD+ 라벨·인증 마크·흡기구). 사용자 매뉴얼 PDF 6쪽 내장 이미지에서 추출', 'Lumantek', 'ez-UMD+', 'https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf', '2048×1694', '1534×1367', 'VERIFIED')
   ],
   'rally-mic-pod-hub': [
     image('Perspective', 'logitech-rally-mic-pod-hub-perspective.webp', 'Logitech Rally Mic Pod Hub 상단 원근 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-2.png', '1600×1374', '1528×814', 'FOUND'),
@@ -449,49 +478,64 @@ export const group1Images = {
     image('Main', 'h-800w-psu-main.webp', 'H_800W 전원 공급 모듈 실물 사진', 'NovaStar', 'H_800W Power', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '550x466', '550x466', 'VERIFIED')
   ],
   'eb-pq2220b': [
-    image('Main', 'eb-pq2220b-main.webp', '엡손 EB-PQ2220B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2220B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pq2220b-main.webp', '엡손 EB-PQ2220B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2220B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pq2220b-rear.webp', '엡손 EB-PQ2220B 후면 입출력 단자 패널(EB-PQ2213/PQ2216/PQ2220 공용 이미지)', 'Epson', 'EB-PQ2220B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=65f42c107010c6c762d40af8b6727aa10d2d320e&vid=65f42c107010c6c762d40af8b6727aa10d2d320e&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '922x351', 'VERIFIED')
   ],
   'eb-l790su': [
-    image('Main', 'eb-l790su-main.webp', '엡손 EB-L790SU 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L790SU', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l790su-main.webp', '엡손 EB-L790SU 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L790SU', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l790su-rear.webp', '엡손 EB-L790SU 후면 입출력 단자 패널(L 시리즈 화이트 공용 이미지 · EB-L790U 자산 고해상도판) 이 사진은 L790U 페이지의 사진과 동일 파일을 공유한다.', 'Epson', 'EB-L790SU', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=4722e85a56bf59da34a4e7a5aa0d612dca19856a&vid=4722e85a56bf59da34a4e7a5aa0d612dca19856a&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l690u': [
-    image('Main', 'eb-l690u-main.webp', '엡손 EB-L690U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L690U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l690u-main.webp', '엡손 EB-L690U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L690U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l690u-rear.webp', '엡손 EB-L690U 후면 입출력 단자 패널', 'Epson', 'EB-L690U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=3f15e28237222408a65257863ad5b3b735b1beaa&vid=3f15e28237222408a65257863ad5b3b735b1beaa&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l895e': [
-    image('Main', 'eb-l895e-main.webp', '엡손 EB-L895E 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895E', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l895e-main.webp', '엡손 EB-L895E 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895E', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l895e-rear.webp', '엡손 EB-L895E 후면 입출력 단자 패널', 'Epson', 'EB-L895E', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&vid=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l795se': [
-    image('Main', 'eb-l795se-main.webp', '엡손 EB-L795SE 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L795SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&vid=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l795se-main.webp', '엡손 EB-L795SE 레이저 단초점 프로젝터 정면 이미지', 'Epson', 'EB-L795SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&vid=e276bbfd71ebd5f00577b0bc31da2c897fe06da5&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l795se-rear.webp', '엡손 EB-L795SE 후면 입출력 단자 패널 이 사진은 L695SE·L795SE·L895E·L895U 4개 모델이 공유하는 동일 파일이다(에솝슨이 각 모델명으로 개별 게재하나 픽셀 단위로 동일).', 'Epson', 'EB-L795SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2062a980b7ce745d9c82f2437763ea482b1e1794&vid=2062a980b7ce745d9c82f2437763ea482b1e1794&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l695se': [
-    image('Main', 'eb-l695se-main.webp', '엡손 EB-L695SE 레이저 초단초점 프로젝터 정면 이미지', 'Epson', 'EB-L695SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&vid=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l695se-main.webp', '엡손 EB-L695SE 레이저 초단초점 프로젝터 정면 이미지', 'Epson', 'EB-L695SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&vid=ab01b655f796f97edf8d9c4312f82aba8ff8a8fb&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l695se-rear.webp', '엡손 EB-L695SE 후면 입출력 단자 패널 이 사진은 L695SE·L795SE·L895E·L895U 4개 모델이 공유하는 동일 파일이다(에솝슨이 각 모델명으로 개별 게재하나 픽셀 단위로 동일).', 'Epson', 'EB-L695SE', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=33d159b19b1720af79acd1269bb76dbf33c4121e&vid=33d159b19b1720af79acd1269bb76dbf33c4121e&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l895u': [
-    image('Main', 'eb-l895u-main.webp', '엡손 EB-L895U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l895u-main.webp', '엡손 EB-L895U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L895U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=2d8022984a69610ae51ed946f7f0a9c561ba5e09&vid=2d8022984a69610ae51ed946f7f0a9c561ba5e09&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l895u-rear.webp', '엡손 EB-L895U 후면 입출력 단자 패널(L 시리즈 블랙 공용 이미지 · EB-L895E 자산 고해상도판) 이 사진은 L895E 페이지의 사진과 동일 파일을 공유한다(L695SE·L795SE·L895E도 같은 파일).', 'Epson', 'EB-L895U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&vid=82c5edec24ee4ea805bb2ca8ba85a0edc6a5b7ba&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-l790u': [
-    image('Main', 'eb-l790u-main.webp', '엡손 EB-L790U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L790U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND')
+    image('Main', 'eb-l790u-main.webp', '엡손 EB-L790U 레이저 프로젝터 정면 이미지', 'Epson', 'EB-L790U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=13edff527ccb65177f277e80b54796ba53dc8693&vid=13edff527ccb65177f277e80b54796ba53dc8693&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '960x640', 'FOUND'),
+    image('Rear', 'eb-l790u-rear.webp', '엡손 EB-L790U 후면 입출력 단자 패널', 'Epson', 'EB-L790U', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=4722e85a56bf59da34a4e7a5aa0d612dca19856a&vid=4722e85a56bf59da34a4e7a5aa0d612dca19856a&prid=original&clid=SAPDAM&prclid=productpictures', '1380x920', '1199x380', 'VERIFIED')
   ],
   'eb-pq2216b': [
-    image('Main', 'eb-pq2216b-main.webp', '엡손 EB-PQ2216B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pq2216b-main.webp', '엡손 EB-PQ2216B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pq2216b-rear.webp', '엡손 EB-PQ2216B 후면 입출력 단자 패널(EB-PQ2213/PQ2216/PQ2220 공용 이미지) 이 사진은 PQ2213B·PQ2216B·PQ2220B 3개 모델이 공유하는 동일 파일이다(파일명에 세 모델이 함께 표기됨).', 'Epson', 'EB-PQ2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=65f42c107010c6c762d40af8b6727aa10d2d320e&vid=65f42c107010c6c762d40af8b6727aa10d2d320e&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '922x351', 'VERIFIED')
   ],
   'eb-pq2213b': [
-    image('Main', 'eb-pq2213b-main.webp', '엡손 EB-PQ2213B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pq2213b-main.webp', '엡손 EB-PQ2213B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pq2213b-rear.webp', '엡손 EB-PQ2213B 후면 입출력 단자 패널(EB-PQ2213/PQ2216/PQ2220 공용 이미지) 이 사진은 PQ2213B·PQ2216B·PQ2220B 3개 모델이 공유하는 동일 파일이다(파일명에 세 모델이 함께 표기됨).', 'Epson', 'EB-PQ2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=65f42c107010c6c762d40af8b6727aa10d2d320e&vid=65f42c107010c6c762d40af8b6727aa10d2d320e&prid=original&clid=SAPDAM&prclid=productpictures', '960x640', '922x351', 'VERIFIED')
   ],
   'eb-pu2216b': [
-    image('Main', 'eb-pu2216b-main.webp', '엡손 EB-PU2216B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pu2216b-main.webp', '엡손 EB-PU2216B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pu2216b-rear.webp', '엡손 EB-PU2216B 후면 입출력 단자 패널(EB-PU2213B/PU2216B/PU2220B 공용 이미지) 이 사진은 PU2213B·PU2216B(및 PU2220B) 모델이 공유하는 동일 파일이다(파일명에 여러 모델이 함께 표기됨).', 'Epson', 'EB-PU2216B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=630b58506855403d67e64caa01a517c756c8ab2b&vid=630b58506855403d67e64caa01a517c756c8ab2b&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '546x213', 'VERIFIED')
   ],
   'eb-pu2213b': [
-    image('Main', 'eb-pu2213b-main.webp', '엡손 EB-PU2213B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pu2213b-main.webp', '엡손 EB-PU2213B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=5c300259e29d23528007ddfcefc33645ff4fbe45&vid=5c300259e29d23528007ddfcefc33645ff4fbe45&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pu2213b-rear.webp', '엡손 EB-PU2213B 후면 입출력 단자 패널(EB-PU2213B/PU2216B/PU2220B 공용 이미지) 이 사진은 PU2213B·PU2216B(및 PU2220B) 모델이 공유하는 동일 파일이다(파일명에 여러 모델이 함께 표기됨).', 'Epson', 'EB-PU2213B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=743a6739a62be6b3fdead90c219d94918c2de722&vid=743a6739a62be6b3fdead90c219d94918c2de722&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '546x213', 'VERIFIED')
   ],
   'eb-pu2010w-b': [
-    image('Main', 'eb-pu2010w-b-main.webp', '엡손 EB-PU2010B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2010B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=022c18ef0c0846e91456d68312067cdbba072569&vid=022c18ef0c0846e91456d68312067cdbba072569&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pu2010w-b-main.webp', '엡손 EB-PU2010B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU2010B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=022c18ef0c0846e91456d68312067cdbba072569&vid=022c18ef0c0846e91456d68312067cdbba072569&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pu2010w-b-rear.webp', '엡손 EB-PU2010B 후면 입출력 단자 패널', 'Epson', 'EB-PU2010B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=f7a9c2b605cb27520b5454bae328a60290eac0a1&vid=f7a9c2b605cb27520b5454bae328a60290eac0a1&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '604x218', 'VERIFIED')
   ],
   'eb-pu1008b': [
-    image('Main', 'eb-pu1008b-main.webp', '엡손 EB-PU1008B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU1008B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&vid=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-pu1008b-main.webp', '엡손 EB-PU1008B 고광량 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PU1008B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&vid=f1f69abc72c312d7d27ca9b83cbfc1a603ec8159&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-pu1008b-rear.webp', '엡손 EB-PU1008B 후면 입출력 단자 패널', 'Epson', 'EB-PU1008B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=83cc2171555779abf66411aca923487c48d0dcd6&vid=83cc2171555779abf66411aca923487c48d0dcd6&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '604x218', 'VERIFIED')
   ],
   'eb-l260f': [
-    image('Main', 'eb-l260f-main.webp', '엡손 EB-L260F 레이저 비즈니스 프로젝터 정면 이미지', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=170c32f51f2061c5ccee14b400fe17a5107c0c17&vid=170c32f51f2061c5ccee14b400fe17a5107c0c17&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND')
+    image('Main', 'eb-l260f-main.webp', '엡손 EB-L260F 레이저 비즈니스 프로젝터 정면 이미지', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=170c32f51f2061c5ccee14b400fe17a5107c0c17&vid=170c32f51f2061c5ccee14b400fe17a5107c0c17&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
+    image('Rear', 'eb-l260f-rear.webp', '엡손 EB-L260F 후면 입출력 단자 패널', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&vid=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '486x173', 'VERIFIED')
   ],
   hg43u800fnfxkr: [
     image('Main', 'hg43u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG43U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
@@ -539,13 +583,16 @@ export const group1Images = {
     image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
   'control-23-1': [
-    image('Main', 'control-23-1-main.webp', 'JBL Control 23-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp', '1500x986', '1500x986', 'VERIFIED')
+    image('Main', 'control-23-1-main.webp', 'JBL Control 23-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp', '1500x986', '1500x986', 'VERIFIED'),
+    image('Rear', 'control-23-1-rear.webp', 'JBL Control 23-1 후면 입력 단자부 및 트랜스포머 탭 셀렉터', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/product_attachments/product_attachments/7361_1728984347/cc23-1_back_z_original.jpg', '1500x986', '572x869', 'VERIFIED')
   ],
   'control-25-1': [
-    image('Main', 'control-25-1-main.webp', 'JBL Control 25-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 25-1', 'https://adn.harmanpro.com/productattachment/7362/product_attachment/x_large_2x-b1bdb34cf58fa0730a34c8f41b7dacb2.webp', '1500x986', '1500x986', 'VERIFIED')
+    image('Main', 'control-25-1-main.webp', 'JBL Control 25-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 25-1', 'https://adn.harmanpro.com/productattachment/7362/product_attachment/x_large_2x-b1bdb34cf58fa0730a34c8f41b7dacb2.webp', '1500x986', '1500x986', 'VERIFIED'),
+    image('Rear', 'control-25-1-rear.webp', 'JBL Control 25-1 후면 입력 단자부 및 트랜스포머 탭 셀렉터', 'JBL', 'Control 25-1', 'https://adn.harmanpro.com/product_attachments/product_attachments/7364_1728984322/cc25-1_back_z_original.jpg', '1500x986', '625x878', 'VERIFIED')
   ],
   'control-28-1': [
-    image('Main', 'control-28-1-main.webp', 'JBL Control 28-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 28-1', 'https://adn.harmanpro.com/productattachment/7370/product_attachment/x_large_2x-a18e6b1172950f3ff0186c68d31ba836.webp', '1500x986', '1500x986', 'VERIFIED')
+    image('Main', 'control-28-1-main.webp', 'JBL Control 28-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 28-1', 'https://adn.harmanpro.com/productattachment/7370/product_attachment/x_large_2x-a18e6b1172950f3ff0186c68d31ba836.webp', '1500x986', '1500x986', 'VERIFIED'),
+    image('Rear', 'control-28-1-rear.webp', 'JBL Control 28-1 후면 입력 단자부 및 트랜스포머 탭 셀렉터', 'JBL', 'Control 28-1', 'https://adn.harmanpro.com/product_attachments/product_attachments/7373_1728984248/cc28-1_back_z_original.jpg', '1500x986', '579x900', 'VERIFIED')
   ],
   'ac18-95': [
     image('Main', 'ac18-95-main.webp', 'JBL AC18/95 8인치 2-way 스피커', 'JBL', 'AC18/95', 'https://adn.harmanpro.com/productattachment/9529/product_attachment/x_large_2x-3b7b974f27f7f842357828dac7f13d64.webp', '1500x986', '1500x986', 'VERIFIED')
@@ -554,37 +601,48 @@ export const group1Images = {
     image('Main', 'ac18-26-main.webp', 'JBL AC18/26 8인치 2-way 스피커', 'JBL', 'AC18/26', 'https://adn.harmanpro.com/productattachment/7472/product_attachment/x_large_2x-205a1ef14cc0712cfec4de4daefd511d.webp', '1500x986', '1500x986', 'VERIFIED')
   ],
   'control-412ct': [
-    image('Main', 'control-412ct-main.webp', 'JBL Control 412C/T 천장매입형 스피커', 'JBL', 'Control 412C/T', 'https://adn.harmanpro.com/productattachment/13468/product_attachment/x_large_2x-eb54e55ceb8e8543644466108eb1d651.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-412ct-main.webp', 'JBL Control 412C/T 천장매입형 스피커', 'JBL', 'Control 412C/T', 'https://adn.harmanpro.com/productattachment/13468/product_attachment/x_large_2x-eb54e55ceb8e8543644466108eb1d651.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-412ct-rear.webp', 'JBL Control 412C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 412C/T', 'https://adn.harmanpro.com/productattachment/13472/product_attachment/x_large_2x-5e84f2afc0e2444f15df68c3dc94c870.webp', '1605x1605', '1187x1187', 'VERIFIED')
   ],
   'control-414ct': [
-    image('Main', 'control-414ct-main.webp', 'JBL Control 414C/T 천장매입형 스피커', 'JBL', 'Control 414C/T', 'https://adn.harmanpro.com/productattachment/13476/product_attachment/x_large_2x-4ef25d1dd6f33efb57eceed876f42403.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-414ct-main.webp', 'JBL Control 414C/T 천장매입형 스피커', 'JBL', 'Control 414C/T', 'https://adn.harmanpro.com/productattachment/13476/product_attachment/x_large_2x-4ef25d1dd6f33efb57eceed876f42403.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-414ct-rear.webp', 'JBL Control 414C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 414C/T', 'https://adn.harmanpro.com/productattachment/13480/product_attachment/x_large_2x-8cb62ec718ba75d17d122d0faf41494c.webp', '1605x1605', '1188x1188', 'VERIFIED')
   ],
   'control-416ct': [
-    image('Main', 'control-416ct-main.webp', 'JBL Control 416C/T 천장매입형 스피커', 'JBL', 'Control 416C/T', 'https://adn.harmanpro.com/productattachment/13515/product_attachment/x_large_2x-01950787c3c7601434d8d3aeb2fddec3.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-416ct-main.webp', 'JBL Control 416C/T 천장매입형 스피커', 'JBL', 'Control 416C/T', 'https://adn.harmanpro.com/productattachment/13515/product_attachment/x_large_2x-01950787c3c7601434d8d3aeb2fddec3.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-416ct-rear.webp', 'JBL Control 416C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 416C/T', 'https://adn.harmanpro.com/productattachment/13519/product_attachment/x_large_2x-1e759480fac12481d50bbc26a51db92b.webp', '1605x1605', '1199x1199', 'VERIFIED')
   ],
   'control-418ct': [
-    image('Main', 'control-418ct-main.webp', 'JBL Control 418C/T 천장매입형 스피커', 'JBL', 'Control 418C/T', 'https://adn.harmanpro.com/productattachment/13483/product_attachment/x_large_2x-8f3d95bd428a0d479700ee038dd4d60b.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-418ct-main.webp', 'JBL Control 418C/T 천장매입형 스피커', 'JBL', 'Control 418C/T', 'https://adn.harmanpro.com/productattachment/13483/product_attachment/x_large_2x-8f3d95bd428a0d479700ee038dd4d60b.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-418ct-rear.webp', 'JBL Control 418C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 418C/T', 'https://adn.harmanpro.com/productattachment/13487/product_attachment/x_large_2x-ebc61c780172432795723b5fb45f316c.webp', '1605x1605', '1308x1293', 'VERIFIED')
   ],
   'control-447ct': [
-    image('Main', 'control-447ct-main.webp', 'JBL Control 447C/T 천장매입형 스피커', 'JBL', 'Control 447C/T', 'https://adn.harmanpro.com/productattachment/13555/product_attachment/x_large_2x-19f26a5cf1122a0608d8f17f1283304e.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-447ct-main.webp', 'JBL Control 447C/T 천장매입형 스피커', 'JBL', 'Control 447C/T', 'https://adn.harmanpro.com/productattachment/13555/product_attachment/x_large_2x-19f26a5cf1122a0608d8f17f1283304e.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-447ct-rear.webp', 'JBL Control 447C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 447C/T', 'https://adn.harmanpro.com/productattachment/13559/product_attachment/x_large_2x-f6e1998c43a7a70b5f6d8a4132657527.webp', '1605x1605', '1219x1194', 'VERIFIED')
   ],
   'control-419cst': [
-    image('Main', 'control-419cst-main.webp', 'JBL Control 419CS/T 천장매입형 서브우퍼', 'JBL', 'Control 419CS/T', 'https://adn.harmanpro.com/productattachment/12906/product_attachment/x_large_2x-8cf339e050a6c8ee4275c8d3a9aa2982.webp', '2141x1605', '2141x1605', 'VERIFIED')
+    image('Main', 'control-419cst-main.webp', 'JBL Control 419CS/T 천장매입형 서브우퍼', 'JBL', 'Control 419CS/T', 'https://adn.harmanpro.com/productattachment/12906/product_attachment/x_large_2x-8cf339e050a6c8ee4275c8d3a9aa2982.webp', '2141x1605', '2141x1605', 'VERIFIED'),
+    image('Rear', 'control-419cst-rear.webp', 'JBL Control 419CS/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 419CS/T', 'https://adn.harmanpro.com/productattachment/12912/product_attachment/x_large_2x-152708b194dcef0f6e0eb6b85ab4b217.webp', '2141x1605', '1130x1130', 'VERIFIED')
   ],
   'control-440cst': [
-    image('Main', 'control-440cst-main.webp', 'JBL Control 440CS/T 천장매입형 서브우퍼', 'JBL', 'Control 440CS/T', 'https://adn.harmanpro.com/productattachment/13578/product_attachment/x_large_2x-c38ea84849e7cce026f6513fadb9f69f.webp', '1605x1605', '1605x1605', 'VERIFIED')
+    image('Main', 'control-440cst-main.webp', 'JBL Control 440CS/T 천장매입형 서브우퍼', 'JBL', 'Control 440CS/T', 'https://adn.harmanpro.com/productattachment/13578/product_attachment/x_large_2x-c38ea84849e7cce026f6513fadb9f69f.webp', '1605x1605', '1605x1605', 'VERIFIED'),
+    image('Rear', 'control-440cst-rear.webp', 'JBL Control 440CS/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 440CS/T', 'https://adn.harmanpro.com/productattachment/13582/product_attachment/x_large_2x-3b1d9db48bfdb5fc3810cc78c491d82d.webp', '1605x1605', '1388x1348', 'VERIFIED')
   ],
   'control-424ct': [
-    image('Main', 'control-424ct-main.webp', 'JBL Control 424C/T 천장매입형 스피커', 'JBL', 'Control 424C/T', 'https://adn.harmanpro.com/productattachment/13053/product_attachment/x_large_2x-f224719ed4ed63273c83322fa623c2d8.webp', '1450x1605', '1450x1605', 'VERIFIED')
+    image('Main', 'control-424ct-main.webp', 'JBL Control 424C/T 천장매입형 스피커', 'JBL', 'Control 424C/T', 'https://adn.harmanpro.com/productattachment/13053/product_attachment/x_large_2x-f224719ed4ed63273c83322fa623c2d8.webp', '1450x1605', '1450x1605', 'VERIFIED'),
+    image('Rear', 'control-424ct-rear.webp', 'JBL Control 424C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 424C/T', 'https://adn.harmanpro.com/productattachment/12939/product_attachment/x_large_2x-5dc58518be03a085bb4a1327e8afe6b2.webp', '1640x1605', '1004x1004', 'VERIFIED')
   ],
   'control-424lp': [
-    image('Main', 'control-424lp-main.webp', 'JBL Control 424LP 저심도 천장매입형 스피커', 'JBL', 'Control 424LP', 'https://adn.harmanpro.com/productattachment/12920/product_attachment/x_large_2x-e359522ec10c157e439ead17a7acfd42.webp', '1450x1605', '1450x1605', 'VERIFIED')
+    image('Main', 'control-424lp-main.webp', 'JBL Control 424LP 저심도 천장매입형 스피커', 'JBL', 'Control 424LP', 'https://adn.harmanpro.com/productattachment/12920/product_attachment/x_large_2x-e359522ec10c157e439ead17a7acfd42.webp', '1450x1605', '1450x1605', 'VERIFIED'),
+    image('Rear', 'control-424lp-rear.webp', 'JBL Control 424LP 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 424LP', 'https://adn.harmanpro.com/productattachment/12926/product_attachment/x_large_2x-62b0ce0cad9c03fc2857252ba3dec871.webp', '2141x1605', '869x868', 'VERIFIED')
   ],
   'control-426ct': [
-    image('Main', 'control-426ct-main.webp', 'JBL Control 426C/T 천장매입형 스피커', 'JBL', 'Control 426C/T', 'https://adn.harmanpro.com/productattachment/12941/product_attachment/x_large_2x-8239b57ad60d042c03bfd413d7bbc86c.webp', '1424x1605', '1424x1605', 'VERIFIED')
+    image('Main', 'control-426ct-main.webp', 'JBL Control 426C/T 천장매입형 스피커', 'JBL', 'Control 426C/T', 'https://adn.harmanpro.com/productattachment/12941/product_attachment/x_large_2x-8239b57ad60d042c03bfd413d7bbc86c.webp', '1424x1605', '1424x1605', 'VERIFIED'),
+    image('Rear', 'control-426ct-rear.webp', 'JBL Control 426C/T 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 426C/T', 'https://adn.harmanpro.com/productattachment/12947/product_attachment/x_large_2x-9bbfb94d4bd905a1ad93defbe93d0ae0.webp', '2141x1605', '850x831', 'VERIFIED')
   ],
   'control-426lp': [
-    image('Main', 'control-426lp-main.webp', 'JBL Control 426LP 저심도 천장매입형 스피커', 'JBL', 'Control 426LP', 'https://adn.harmanpro.com/productattachment/12927/product_attachment/x_large_2x-340066799085d22ff8cd6a76e28cfaa9.webp', '1742x1605', '1742x1605', 'VERIFIED')
+    image('Main', 'control-426lp-main.webp', 'JBL Control 426LP 저심도 천장매입형 스피커', 'JBL', 'Control 426LP', 'https://adn.harmanpro.com/productattachment/12927/product_attachment/x_large_2x-340066799085d22ff8cd6a76e28cfaa9.webp', '1742x1605', '1742x1605', 'VERIFIED'),
+    image('Rear', 'control-426lp-rear.webp', 'JBL Control 426LP 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 426LP', 'https://adn.harmanpro.com/productattachment/12933/product_attachment/x_large_2x-59026bdc9e862be3db62ce05fd6f7747.webp', '2141x1605', '870x870', 'VERIFIED')
   ],
   'quattrocanali-2404-dspd': [
     image('Front', 'quattrocanali-2404-dspd-front.webp', 'Powersoft Quattrocanali 2404 DSP+D 전면부', 'Powersoft', 'Quattrocanali 2404 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-2.png', '1024x500', '1007x131')
@@ -813,13 +871,15 @@ export const group1Images = {
   ],
   'mxcwapt-w': [
     image('Front', 'mxcwaptw-front.webp', 'MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp', '3000x3000', '1500x1500'),
-    image('Other', 'mxcwaptw-detail.webp', 'MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp', '3000x3000', '1500x1500')
+    image('Other', 'mxcwaptw-detail.webp', 'MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp', '3000x3000', '1500x1500'),
+    image('Rear', 'mxcwapt-w-rear.webp', 'MXCWAPT 단자부 (커버 분리 상태, \'Analog in\' XLR 암 · gnd lift 스위치 · \'Analog out\' XLR 수)', 'Shure', 'MXCWAPT (제품 공통 이미지; 페이지 variant=MXCWAPT-W)', 'https://products.shureweb.eu/shure_product_db/product_images/files/91a/796/b8-/original/0fef5ec0a86b3b86b4778ac786e5b37d.webp', '3000x3000', '2000x1182', 'VERIFIED')
   ],
   'mxc420-c': [
     image('Front', 'mxc420c-front.webp', 'MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부', 'Shure', 'MXC420/C — MXC Gooseneck Microphone, 20", Single-flex, Cardioid', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp', '2562x2562', '1500x1500')
   ],
   'mxa925w-r': [
-    image('Front', 'mxa925wr-front.webp', 'MXA925 색상/폼팩터 4종 패밀리샷 (화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형) — MXA925W-R은 우측에서 세 번째(화이트 원형)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/420/286/fd-/original/a679930bcdb71c96a20196bd0b19d15d.webp', '3000x3000', '1500x1500')
+    image('Front', 'mxa925wr-front.webp', 'MXA925 색상/폼팩터 4종 패밀리샷 (화이트 사각, 블랙 사각, 화이트 원형, 블랙 원형) — MXA925W-R은 우측에서 세 번째(화이트 원형)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/420/286/fd-/original/a679930bcdb71c96a20196bd0b19d15d.webp', '3000x3000', '1500x1500'),
+    image('Rear', 'mxa925w-r-rear.webp', 'MXA925W-R 후면 (천장 장착면, 모델 라벨 \'MXA925W-R Microflex Advance Ceiling Array Microphone\', 네트워크 단자 수납부 커버)', 'Shure', 'MXA925W-R', 'https://products.shureweb.eu/shure_product_db/product_images/files/f15/407/81-/original/a455fc40213212d66f2339ed85483901.webp', '3000x3000', '1997x2000', 'VERIFIED')
   ],
   ua864a: [
     image('Front', 'ua864a-front.webp', 'UA864 벽면형 광대역 안테나 (화이트 하우징, 전면 게인 스위치/LED)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/265/152/2a-/original/360efcae2b1c88e5f044c28fd536eedc.webp', '3000x3000', '1500x1500'),
@@ -901,6 +961,7 @@ export const cardImages = {
   vs5: 'lumantek-vs5-main.webp',
   vs10: 'lumantek-vs10-main.webp',
   'ez-md-plus': 'lumantek-ez-md-main.webp',
+  'ez-umd-plus': 'ez-umd-plus-main.webp',
   'ez-shv-plus': 'lumantek-ez-shv-main.webp',
   'ez-hsv-plus': 'lumantek-ez-hsv-main.webp',
   'rally-mic-pod-hub': 'logitech-rally-mic-pod-hub-perspective.webp',

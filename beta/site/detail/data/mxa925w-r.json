@@ -29,6 +29,20 @@
       "originalSize": "3000x3000",
       "resolution": "1500x1500",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "mxa925w-r-rear.webp",
+      "alt": "MXA925W-R 후면 (천장 장착면, 모델 라벨 'MXA925W-R Microflex Advance Ceiling Array Microphone', 네트워크 단자 수납부 커버)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "MXA925W-R",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/f15/407/81-/original/a455fc40213212d66f2339ed85483901.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "1997x2000",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.shure.com/en-US/products/microphones/mxa925?variant=MXA925W-R"
+      "status": "FOUND",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/f15/407/81-/original/a455fc40213212d66f2339ed85483901.webp"
     },
     {
       "role": "Perspective",

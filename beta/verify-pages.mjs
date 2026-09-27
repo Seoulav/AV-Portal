@@ -177,13 +177,19 @@ const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.
 function verifyOfficialUrls(value, slug, hosts) {
   if (Array.isArray(value)) return value.forEach(item => verifyOfficialUrls(item, slug, hosts));
   if (!value || typeof value !== 'object') return;
+  // 이미지 항목(images[])에 한해 officialSource가 명시적으로 false이면, 그 항목의 sourceUrl은
+  // 제조사 호스트 목록 검사를 건너뛴다(2026-09-27 운영자 지시: 제품 일치만 확인되면 출처 불명 사진도 게시).
+  // 프로토콜·자격정보·비공개 경로 검사는 그대로 적용한다. url·sourceUrl 외 다른 필드나 documents/sources는 영향받지 않는다.
+  const isUnverifiedImage = value.officialSource === false && typeof value.sourceUrl === 'string';
   for (const [key, entry] of Object.entries(value)) {
     if ((key === 'url' || key === 'sourceUrl') && entry) {
       const url = new URL(entry);
       assert.equal(url.protocol, 'https:');
       assert.equal(url.username, '');
       assert.equal(url.password, '');
-      assert.ok(isAllowedHost(url.hostname, hosts), `${slug}: non-manufacturer URL`);
+      if (!(key === 'sourceUrl' && isUnverifiedImage)) {
+        assert.ok(isAllowedHost(url.hostname, hosts), `${slug}: non-manufacturer URL`);
+      }
       assert.ok(!/C:[\\/]|Users[\\/]|hkkim[\\/]|outputs[\\/]/i.test(url.href), `${slug}: private URL path`);
     } else verifyOfficialUrls(entry, slug, hosts);
   }
