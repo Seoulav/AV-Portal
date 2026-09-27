@@ -4486,7 +4486,15 @@
         "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
       ],
       "grade": "B",
-      "link_scope": "series"
+      "link_scope": "series",
+      "url_corrected": {
+        "corrected_at": "2026-09-27",
+        "previous_urls": [
+          "https://www.powersoft.com/en/products/install-amps/duecanali-804"
+        ],
+        "reason": "기존 URL은 기본 Duecanali 804 페이지(제목 DUECANALI 804)였다. 상세페이지의 documents[4]와 sources[0]이 이미 사용하는 Duecanali 804 DSP+D 정확 변형 페이지로 공개 카탈로그 링크를 교체했다.",
+        "work_id": "W-20260927-009"
+      }
     },
     {
       "row": "오디오|101",
