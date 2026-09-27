@@ -193,6 +193,249 @@
       "condition": "모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "IPS",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "1,920 x 1,080",
+      "unit": "픽셀",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.63x0.63",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "1,100:1",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "8",
+      "unit": "ms",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색재현율",
+      "value": "72 %",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "57.3kHz ~ 70kHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "78MHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "47Hz ~ 63Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "동적 명암비",
+      "value": "140,000:1",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "미지원(사양표 \"No\")",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC100-240V 50/60Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(On 모드)",
+      "value": "250",
+      "unit": "W",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(대기/Sleep 모드)",
+      "value": "0.5",
+      "unit": "W",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(가로x높이x깊이)",
+      "value": "1211.0 x 681.7 x 69.9",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "포장 크기(가로x높이x깊이)",
+      "value": "1414.0 x 844.0 x 257.0",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량",
+      "value": "16.8",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(포장 포함)",
+      "value": "25.1",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0℃~ 40℃",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 표기: 0 ~ 40 ℃",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "10 ~ 90%",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "600 x 400",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "0.44 (4면 균일)",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치; 개별 베젤 폭(한쪽). 국내 페이지의 0.88mm는 베젤투베젤(두 대 맞붙인 합산) 값",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Black",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Glossy",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "있음",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "미지원(사양표 \"No\")",
+      "unit": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 캐나다(LH55VHCRBGBXZA, S3) 값 일치",
+      "source": "S2",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -201,11 +444,11 @@
       "connector": "DisplayPort",
       "signal": "비디오 입력/데이지체인",
       "direction": "IN/OUT",
-      "quantity": "",
+      "quantity": "1 (입력)",
       "protocol": "DisplayPort 1.2",
       "availability": "데이지 체인 지원",
       "condition": "",
-      "source": "P",
+      "source": "P, S2",
       "verification": "FOUND"
     },
     {
@@ -213,11 +456,131 @@
       "connector": "HDMI",
       "signal": "비디오 입력/데이지체인",
       "direction": "IN/OUT",
-      "quantity": "",
+      "quantity": "2 (입력)",
       "protocol": "HDMI",
       "availability": "데이지 체인 지원",
       "condition": "",
-      "source": "P",
+      "source": "P, S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "DVI",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DVI",
+      "availability": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "비디오 출력",
+      "signal": "비디오 출력(루프아웃/데이지체인)",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(단자 종류·수량 미기재)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "USB",
+      "availability": "",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "IR 입력",
+      "signal": "IR 수신/외부 IR",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "IR",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 입력",
+      "signal": "아날로그 오디오 입력",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 출력",
+      "signal": "아날로그 오디오 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "있음(스테레오 미니 잭)",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 입력",
+      "signal": "외부 제어",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 출력",
+      "signal": "외부 제어(루프아웃)",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "RS-232C",
+      "availability": "있음(사양표 표기: Stereo Mini Jack)",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45(LAN)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "Ethernet",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH55VHCRBGBXEN 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "전원 출력(Power Out)",
+      "signal": "전원 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "미지원(사양표 \"No\")",
+      "condition": "캐나다 판매 모델 LH55VHCRBGBXZA 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 영국 페이지(S2)는 같은 위치 항목명이 \"Video Out\"으로 중복 표기되어 S3 기준으로 기록",
+      "source": "S3",
       "verification": "FOUND"
     }
   ],
@@ -227,14 +590,44 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S2",
+      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55VHCRBGBXEN)",
+      "url": "https://www.samsung.com/uk/business/smart-signage/video-wall/vhc-r-razor-narrow-bezel-video-wall-fhd-1080p-700nit-ip5x-088mm-lh55vhcrbgbxen/",
+      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
+    },
+    {
+      "code": "S3",
+      "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VHCRBGBXZA)",
+      "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vhc-r-razor-narrow-bezel-video-wall-fhd-1080p-700nit-ip5x-088mm-lh55vhcrbgbxza/",
+      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
     }
   ],
   "issues": [
     {
       "code": "SPEC-AJAX",
-      "status": "OPEN",
+      "status": "RESOLVED",
       "title": "정확한 베젤투베젤 실측치·해상도·무게·입출력 단자 수 미확인",
-      "detail": "0.88mm은 페이지 마케팅 문구에 명시된 베젤 폭 수치이나, 실측 '베젤-투-베젤 갭'을 별도로 규정한 스펙 표는 로그인 세션 기반 AJAX(/sec/business/xhr/goods/goodsSpec)로 로드되어 확인하지 못했다. 해상도, 명암비, 무게, HDMI/DP 단자 개수·버전, RS-232C 등 물리 커넥터 표도 동일한 이유로 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+      "detail": "0.88mm은 페이지 마케팅 문구에 명시된 베젤 폭 수치이나, 실측 '베젤-투-베젤 갭'을 별도로 규정한 스펙 표는 로그인 세션 기반 AJAX(/sec/business/xhr/goods/goodsSpec)로 로드되어 확인하지 못했다. 해상도, 명암비, 무게, HDMI/DP 단자 개수·버전, RS-232C 등 물리 커넥터 표도 동일한 이유로 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+    },
+    {
+      "code": "SPEC-REGION",
+      "status": "REVIEW REQUIRED",
+      "title": "정량 사양은 해외 지역 모델(LH55VHCRBGBXEN) 공식 사양표 기준",
+      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국·캐나다 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+    },
+    {
+      "code": "POWER-CHECK",
+      "status": "REVIEW REQUIRED",
+      "title": "소비전력: VHC-R(700nit) 250W < VMC-R(500nit) 270W",
+      "detail": "영국·캐나다 공식 사양표 모두 고휘도 VHC-R의 On 모드 소비전력을 250W, VMC-R을 270W로 표기한다. 두 지역 값이 일치하므로 그대로 기록했으나 직관과 반대이므로 국내 사양서로 재확인이 권장된다."
+    },
+    {
+      "code": "RS232-OUT",
+      "status": "REVIEW REQUIRED",
+      "title": "RS-232C 출력 단자 형태 표기",
+      "detail": "공식 사양표는 \"RS232 Out: Stereo Mini Jack\", \"Audio Out: Stereo Mini Jack\"으로 표기한다. 단자 형태 해석(3.5mm 잭 RS-232C 여부)은 매뉴얼 후면 단자도 확인이 필요하다."
     }
   ],
   "presentation": {

@@ -686,22 +686,22 @@
       "io": 3
     },
     "hg43u800fnfxkr": {
-      "sha256": "97C8276A4525F488EA4EE52CDDC374A9DB462E385B4288B9075999B64D454BFD",
+      "sha256": "1A288A53AA1BACE045DFCFBE65700E88A0B9FAD4D216CB351072E6904DD3583D",
       "features": 7,
-      "specifications": 7,
-      "io": 2
+      "specifications": 37,
+      "io": 9
     },
     "hg50u800fnfxkr": {
-      "sha256": "753A157F954ABA1DBCF6A3C393450D468DD9C912334A6690E8A4EF3B163B1A9D",
+      "sha256": "9EEB63B5AD7A5C9D557D6ECE76D32DC07961A47FC19752885E9139C2C3803FF0",
       "features": 6,
-      "specifications": 6,
-      "io": 2
+      "specifications": 36,
+      "io": 9
     },
     "hg65u800fnfxkr": {
-      "sha256": "AA469F20C5973E50055A758153C09098C0D674BF711F58788A6D8E85C568C26D",
+      "sha256": "C47DA94CE987AB025345980AB0C31D1AB297CFDE735B68F17ED975E04B5B6B65",
       "features": 6,
-      "specifications": 6,
-      "io": 2
+      "specifications": 36,
+      "io": 9
     },
     "hyperdeck-studio-hd-mini": {
       "sha256": "70EADE7CA5C936F8347E4F97AF791E774DD7DFEACD402095F6A9BCBE9C8A0A47",
@@ -746,76 +746,76 @@
       "io": 6
     },
     "lh115qhfebgxkr": {
-      "sha256": "38538CFCCFB38E0336FC7332280995E8BACD3B51411E9CFB0454F6BFB821AB6C",
+      "sha256": "22BAFFBB63803D477EC549B1838E2B5134610AA53A1E5099D19BFAEEEDB66BC2",
       "features": 7,
-      "specifications": 12,
-      "io": 1
+      "specifications": 47,
+      "io": 10
     },
     "lh32qmcebgcxkr": {
-      "sha256": "AAB348646BB861D0D68B756CD1CA46352933D18A91A69F59056F502362E5CB6C",
+      "sha256": "73E8A8D4A95EAF860BF4876FF0E990C7A9553BBA185C42B9ACF7B7E6A2D11231",
       "features": 4,
-      "specifications": 4,
-      "io": 0
+      "specifications": 38,
+      "io": 9
     },
     "lh43qhcebgcxkr": {
-      "sha256": "1FD1B1BD75C161204F099A25A0AF625D9C0B98DF35E2548E92EF225391B65A1C",
+      "sha256": "996F39DBA524C09A8D6CF248A466039C7C0EF0BD51F04E0FD85A06E146AB8F50",
       "features": 6,
-      "specifications": 9,
-      "io": 0
+      "specifications": 43,
+      "io": 9
     },
     "lh43qmcebgcxkr": {
-      "sha256": "6019B46E38B1F099DFC9109CAD9946B10CC0C512A045CA09DACD3EBF40B54166",
+      "sha256": "8986AD09CC8BD23C8A5040587DEA8DC323D8CD711CA24F664CA55595C895D811",
       "features": 7,
-      "specifications": 8,
-      "io": 0
+      "specifications": 43,
+      "io": 9
     },
     "lh55vhcrbgbxkr": {
-      "sha256": "301BDC3EA583121DD34442826DE0603BD0809AF03C06F893D2EADE7D6EBB8811",
+      "sha256": "1A6CF80539E76F413A6CA4D44D3CE50EC3119C83E58B9224A3A024D7CAB004C1",
       "features": 6,
-      "specifications": 8,
-      "io": 2
+      "specifications": 35,
+      "io": 12
     },
     "lh55vmcrbgbxkr": {
-      "sha256": "65E34831D2181EE59426A91FD669D120249DE49E35C579BFA199A057A2C60638",
+      "sha256": "776E3C146E8848F6E334C53DEA54B4E6541917549281113CD4C3EACD9FE8DDCD",
       "features": 6,
-      "specifications": 8,
-      "io": 2
+      "specifications": 35,
+      "io": 12
     },
     "lh55wmfwbgcxkr": {
-      "sha256": "269D211360AF3A9BDFB9994E22498B0DA58149BAE57CCEF3E01BFDAC41D96800",
+      "sha256": "2B328A2375C89A2DC15C4330F9784FF3FBB96183CBEE0DD4BB10C1C0250710D6",
       "features": 7,
-      "specifications": 9,
-      "io": 2
+      "specifications": 41,
+      "io": 7
     },
     "lh75qhcebgcxkr": {
-      "sha256": "13E1655931B7DC20FE8C1056DCBE8568EDF7B64BD4293C60162E5A89DC437EFD",
+      "sha256": "A36D27C70A1529A9F1E6C0BD17F4743E1BAD05FC3666DF12EE8DD4494A99E62B",
       "features": 6,
-      "specifications": 9,
-      "io": 0
+      "specifications": 43,
+      "io": 9
     },
     "lh75wmfwlgcxkr": {
-      "sha256": "1CDF8292178BA3C8A98A75EA901E97D08C6673BD2C9EFC1BC75336280A6C3D87",
+      "sha256": "E0324D060A0F244D40C3D61D4992C916A900DF7144DF86EB44B53F50848EF9C8",
       "features": 7,
-      "specifications": 9,
-      "io": 2
+      "specifications": 40,
+      "io": 7
     },
     "lh85qmcebgcxkr": {
-      "sha256": "DAFCD1ECF3ACC2F5F537E3119897B841384702B2C520C7B12AA8235787F2AB21",
+      "sha256": "2FE2883C73F2E5A234A3F4A3FFC0CCA09B044F0261DC6D75D390DAD523BFCA22",
       "features": 7,
-      "specifications": 8,
-      "io": 0
+      "specifications": 43,
+      "io": 9
     },
     "lh98qecedgcxkr": {
-      "sha256": "DAD59D683A22FCAC7A85C07E7C5DC646466A5A6D0FBD9C03592FC8A98D5733A3",
+      "sha256": "B60C3AC1D05272CAFBD2AEC912380047589C4083AF1EAF776E7525CBB64C42DE",
       "features": 3,
-      "specifications": 3,
-      "io": 0
+      "specifications": 37,
+      "io": 7
     },
     "lh98qmcebgcxkr": {
-      "sha256": "E7D0B45347B99F850A35BDD3AAD34A47C6376B6674A7DC22C0A850FD12FCAEB2",
+      "sha256": "1E1046839CACAF8A561568F16D0701F4CBB180E2E464016E93F5E37E7DF334E1",
       "features": 6,
-      "specifications": 9,
-      "io": 0
+      "specifications": 42,
+      "io": 9
     },
     "mezzo-322-a": {
       "sha256": "F9C37A4F619FBE4E83A150BEA53F15397F62A6338F74D03A6879D60F7E764B99",

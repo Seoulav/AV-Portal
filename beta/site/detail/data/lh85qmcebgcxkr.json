@@ -197,15 +197,445 @@
       "condition": "별도 구매 필요, VXT는 국내 추후 출시 예정",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "VA",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.487x0.487",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "밝기(Typ)",
+      "value": "500",
+      "unit": "nit",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "4,000:1",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "10",
+      "unit": "ms",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색재현율",
+      "value": "72% (NTSC)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "동적 명암비",
+      "value": "Mega",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "운영 시간",
+      "value": "24/7 (일 시간/주 일수)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC220-240V 50/60Hz",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이); 영국 모델 표기(AC220-240V), 다른 QMC 크기는 AC100-240V로 표기되어 지역 의존 가능",
+      "source": "S2",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(On 모드)",
+      "value": "330",
+      "unit": "W",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(대기/Sleep 모드)",
+      "value": "0.5",
+      "unit": "W",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(가로x높이x깊이)",
+      "value": "1904.3 x 1085.3 x 28.5",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "포장 크기(가로x높이x깊이)",
+      "value": "2077 x 1222 x 210",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량",
+      "value": "41.9",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(포장 포함)",
+      "value": "53.9",
+      "unit": "kg",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0℃~ 40℃",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "10 ~ 80% (결로 없음)",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "600 x 400",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "13.9 (4면 균일)",
+      "unit": "mm",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Charcoal Black",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Non-Glossy",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-B50SC",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L6585C",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제 버전",
+      "value": "Tizen 7.0",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "내장 플래시 메모리",
+      "value": "16GB",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
     }
   ],
-  "io": [],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "비디오/오디오 입력",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "HDMI",
+      "availability": "HDMI 버전 표기 2, HDCP 2.2",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "DisplayPort",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DisplayPort",
+      "availability": "DP 버전 1.2",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "USB",
+      "availability": "",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "IR 입력",
+      "signal": "IR 수신/외부 IR",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "IR",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 입력",
+      "signal": "아날로그 오디오 입력",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "미지원(사양표 \"No\")",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 출력",
+      "signal": "아날로그 오디오 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "있음(스테레오 미니 잭)",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 입력",
+      "signal": "외부 제어",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 출력",
+      "signal": "외부 제어(루프아웃)",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45(LAN)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "Ethernet",
+      "availability": "있음",
+      "condition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
+      "source": "S2",
+      "verification": "FOUND"
+    }
+  ],
   "sources": [
     {
       "code": "P",
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH85QMCEBGCXKR/",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S2",
+      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH85QMCEBGCXEN)",
+      "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh85qmcebgcxen/",
+      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
     }
   ],
   "issues": [
@@ -217,9 +647,15 @@
     },
     {
       "code": "SPEC-AJAX",
-      "status": "OPEN",
+      "status": "RESOLVED",
       "title": "상세 스펙 표 미확인",
-      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+    },
+    {
+      "code": "SPEC-REGION",
+      "status": "REVIEW REQUIRED",
+      "title": "정량 사양은 해외 지역 모델(LH85QMCEBGCXEN) 공식 사양표 기준",
+      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
     }
   ],
   "presentation": {

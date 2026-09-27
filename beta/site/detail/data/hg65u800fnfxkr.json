@@ -175,6 +175,276 @@
       "condition": "2015년 이후 출시된 Tizen 기반 삼성 TV 적용",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "백라이트",
+      "value": "LED",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "4K (3,840 x 2,160)",
+      "unit": "픽셀",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "영상 처리 엔진(사양표)",
+      "value": "Quantum Processor Lite",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); 같은 페이지 기능 소개 문구는 \"Crystal Processor 4K\"로 표기되어 사양표와 불일치(이슈 참조)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "HDR10+",
+      "value": "지원",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "HLG",
+      "value": "지원",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "돌비 디코더",
+      "value": "MS12 2CH",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "OTS(Object Tracking Sound)",
+      "value": "OTS Lite",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커 출력(RMS)",
+      "value": "20",
+      "unit": "W",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커 구성",
+      "value": "2CH",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "400 x 300",
+      "unit": "mm",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 나사 규격",
+      "value": "M8",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 나사 체결 깊이",
+      "value": "11-13",
+      "unit": "mm",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "IP 컨트롤",
+      "value": "있음",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음 (Wi-Fi 5)",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음 (Bluetooth 5.2)",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "전면 색상",
+      "value": "BLACK",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "스탠드 형태",
+      "value": "FLAT LIFT",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 형태",
+      "value": "3 Bezel-less",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC110-120V~ 50/60Hz",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); 북미·중남미 전원 사양이며 국내(AC220V) 판매 모델 값 아님",
+      "source": "S2",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(최대)",
+      "value": "205",
+      "unit": "W",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); AC110-120V 지역 모델 값, 국내 AC220V 모델 값 미확인",
+      "source": "S2",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(대기)",
+      "value": "0.5",
+      "unit": "W",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); AC110-120V 지역 모델 값, 국내 AC220V 모델 값 미확인",
+      "source": "S2",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(일반/Typical)",
+      "value": "127",
+      "unit": "W",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); AC110-120V 지역 모델 값, 국내 AC220V 모델 값 미확인",
+      "source": "S2",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(스탠드 제외, 가로x높이x깊이)",
+      "value": "1450.9 x 831.8 x 25.7",
+      "unit": "mm",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(스탠드 포함, 가로x높이x깊이)",
+      "value": "1450.9 x 890.0 x 270.4",
+      "unit": "mm",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "포장 크기(가로x높이x깊이)",
+      "value": "1597 x 933 x 148",
+      "unit": "mm",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(스탠드 제외)",
+      "value": "20.7",
+      "unit": "kg",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(스탠드 포함)",
+      "value": "21.2",
+      "unit": "kg",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(포장 포함)",
+      "value": "28.2",
+      "unit": "kg",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "리모컨 모델",
+      "value": "TM2240A",
+      "unit": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); 지역별 번들 리모컨이 다를 수 있음",
+      "source": "S2",
+      "verification": "PARTIAL"
     }
   ],
   "io": [
@@ -201,6 +471,90 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "2 x USB-A",
+      "protocol": "USB",
+      "availability": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Ethernet(LAN)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Ethernet",
+      "availability": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "Ethernet 브리지(LAN-Out)",
+      "signal": "유선 네트워크 브리지 출력",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "Ethernet",
+      "availability": "있음",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "connector": "옵티컬(광출력)",
+      "signal": "디지털 오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "S/PDIF Optical",
+      "availability": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "RF 입력",
+      "signal": "안테나/케이블 입력",
+      "direction": "IN",
+      "quantity": "1/1(Common Use for Terrestrial)/0",
+      "protocol": "RF",
+      "availability": "사양표 표기: 지상파/케이블/위성 = 1/1(지상파와 공용)/0",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이); 북미·중남미 모델 튜너(ATSC/Clear QAM) 기준, 국내 방송 규격 튜너 사양은 미확인",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "Ex-Link",
+      "signal": "외부 제어(RS-232C 젠더 지원)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "RS-232C",
+      "availability": "",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ12",
+      "signal": "호텔 시스템 연동/IR 패스스루",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "RJ12",
+      "availability": "있음",
+      "condition": "카리브(latin_en) 판매 모델 HG65U800FNFXZA 공식 사양표 기준(국내 HG65U800FNFXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "source": "S2",
+      "verification": "FOUND"
     }
   ],
   "sources": [
@@ -209,14 +563,44 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "S2",
+      "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (HG65U800FNFXZA)",
+      "url": "https://www.samsung.com/latin_en/business/commercial-tvs/hotel-tv/65-hotel-tv-hu8000f-uhd-4k-hg65u800fnfxza/",
+      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
     }
   ],
   "issues": [
     {
       "code": "SPEC-AJAX",
-      "status": "OPEN",
+      "status": "RESOLVED",
       "title": "상세 스펙 표 미확인",
-      "detail": "43/50인치 모델과 동일하게 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 정량 스펙(해상도·무게·소비전력 등)을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다."
+      "detail": "43/50인치 모델과 동일하게 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 정량 스펙(해상도·무게·소비전력 등)을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+    },
+    {
+      "code": "SPEC-REGION",
+      "status": "REVIEW REQUIRED",
+      "title": "정량 사양은 해외 지역 모델(HG65U800FNFXZA) 공식 사양표 기준",
+      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 카리브(latin_en) 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XZA)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+    },
+    {
+      "code": "HDMI-COUNT",
+      "status": "REVIEW REQUIRED",
+      "title": "HDMI 입력 단자 수·버전 정보 없음",
+      "detail": "HG65U800FNFXZA 공식 사양표(Input & Output)에는 USB·LAN·옵티컬·RF·Ex-Link·RJ12만 있고 HDMI 행이 없다(Anynet+ HDMI-CEC 지원만 표기). 삼성 뉴스룸은 \"multiple HDMI and USB ports\"라고만 언급한다. HDMI 단자 수·버전은 정보 없음으로 유지하며, 국내 사양서 PDF 또는 실물 확인이 필요하다."
+    },
+    {
+      "code": "ENGINE-CONFLICT",
+      "status": "REVIEW REQUIRED",
+      "title": "영상 처리 엔진 표기 불일치(Crystal Processor 4K vs Quantum Processor Lite)",
+      "detail": "국내 제품 페이지(P)와 해외 페이지 기능 소개 문구는 \"크리스탈 프로세서 4K(Crystal Processor 4K)\"이나, 해외 페이지 사양표(Picture Engine)는 \"Quantum Processor Lite\"로 표기한다. 공식 출처 간 충돌이므로 기존 값을 덮어쓰지 않고 사양표 값을 별도 행(영상 처리 엔진(사양표))으로 기록했다."
+    },
+    {
+      "code": "TUNER-REGION",
+      "status": "REVIEW REQUIRED",
+      "title": "방송 튜너 사양은 지역 의존으로 미기재",
+      "detail": "해외 사양표의 ATSC/Clear QAM 디지털 방송·아날로그 튜너, OSD 언어는 북미·중남미 규격이라 국내 모델 값으로 추가하지 않았다."
     }
   ],
   "presentation": {
