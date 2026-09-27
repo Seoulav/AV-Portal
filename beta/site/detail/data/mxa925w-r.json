@@ -392,14 +392,14 @@
   "io": [
     {
       "group": "Audio",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ-45(듀얼)",
       "signal": "Microphone audio output (phantom powered)",
       "direction": "OUT",
       "quantity": "",
       "protocol": "",
       "availability": "",
       "condition": "Cat5e 이상 (실드 케이블 권장)",
-      "source": "P",
+      "source": "P, D",
       "verification": "PARTIAL"
     },
     {

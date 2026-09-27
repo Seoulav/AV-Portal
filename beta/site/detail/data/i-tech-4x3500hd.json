@@ -404,14 +404,14 @@
     },
     {
       "group": "Audio",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "XLR-3F(아날로그·AES3 입력), etherCON/RJ-45(CobraNet·VDrive)",
       "signal": "Audio input (Analog, AES3, CobraNet, VDrive)",
       "direction": "IN",
       "quantity": "4채널",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
+      "source": "P, M",
       "verification": "PARTIAL"
     },
     {

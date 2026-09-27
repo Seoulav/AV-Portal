@@ -342,14 +342,14 @@
   "io": [
     {
       "group": "Audio",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "커넥터 없음(3.7 m 무단말 케이블 직결)",
       "signal": "Microphone audio output (phantom powered)",
       "direction": "OUT",
       "quantity": "",
       "protocol": "",
       "availability": "",
       "condition": "3.5m(12ft) 부착형, 실드 오디오 페어 + 로직 3선(비종단)",
-      "source": "P",
+      "source": "P, D",
       "verification": "PARTIAL"
     },
     {
