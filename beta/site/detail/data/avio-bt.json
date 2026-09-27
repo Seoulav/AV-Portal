@@ -1,7 +1,7 @@
 {
   "manufacturer": "Audinate",
-  "productName": "AVIO BT",
-  "model": "Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)",
+  "productName": "Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)",
+  "model": "AVIO BT",
   "series": "Dante AVIO Series",
   "seriesNote": "AVIO 어댑터 중 Bluetooth 무선 연결 모델. USB/Analog 등 다른 AVIO 어댑터와 채널·전원 사양이 다르다.",
   "itemType": "PRODUCT",

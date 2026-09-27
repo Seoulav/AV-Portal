@@ -1,7 +1,7 @@
 {
   "manufacturer": "BSS Audio",
-  "productName": "BLU-DAN",
-  "model": "BLU-DA (formerly BLU-DAN)",
+  "productName": "BLU-DA (formerly BLU-DAN)",
+  "model": "BLU-DAN",
   "itemType": "PRODUCT",
   "categories": [
     "오디오",
@@ -249,9 +249,9 @@
   "issues": [
     {
       "code": "R7",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품명 변경(BLU-DAN → BLU-DA)",
-      "detail": "제조사 공식 페이지 제목은 'BLU-DA (BLU-DAN)'이며 본문에 'Formerly known as BLU-DAN'이라고 명시되어 있어, 현재 공식 판매명은 BLU-DA이고 BLU-DAN은 구 명칭임을 확인했다. 카탈로그에는 'BLU-DAN'으로 등록되어 있어 동일 제품이 맞는지, 모델명을 BLU-DA로 갱신할지 검토가 필요하다. 정확한 입출력 채널 커넥터의 상세 핀아웃(터미널 블록 규격 등)은 데이터시트에 명시되지 않아 추가 확인이 필요하다."
+      "detail": "제조사 공식 페이지 제목은 'BLU-DA (BLU-DAN)'이며 본문에 'Formerly known as BLU-DAN'이라고 명시되어 있어, 현재 공식 판매명은 BLU-DA이고 BLU-DAN은 구 명칭임을 확인했다. 카탈로그에는 'BLU-DAN'으로 등록되어 있어 동일 제품이 맞는지, 모델명을 BLU-DA로 갱신할지 검토가 필요하다. 정확한 입출력 채널 커넥터의 상세 핀아웃(터미널 블록 규격 등)은 데이터시트에 명시되지 않아 추가 확인이 필요하다. [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     }
   ],
   "presentation": {

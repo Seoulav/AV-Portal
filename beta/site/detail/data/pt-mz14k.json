@@ -1,7 +1,7 @@
 {
   "manufacturer": "Panasonic",
-  "productName": "PT-MZ14K",
-  "model": "PT-MZ14KL",
+  "productName": "PT-MZ14KL",
+  "model": "PT-MZ14K",
   "series": "PT-MZ20K Series",
   "seriesNote": "제조사 공식 사이트에는 'PT-MZ14K'가 아닌 'PT-MZ14KL'(렌즈 별매)만 존재를 확인했다(PT-MZ20KL/MZ17KL/MZ14KL/MZ11KL 4개 모델 시리즈). 카탈로그 표기(PT-MZ14K, L 접미사 없음)와 공식 모델명 표기 차이를 이슈로 남긴다.",
   "itemType": "PRODUCT",
@@ -372,9 +372,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "모델명 표기 차이(PT-MZ14K vs PT-MZ14KL)",
-      "detail": "제조사 공식 사이트에는 'PT-MZ14K'(L 없음) 단독 페이지가 없고(404), 시리즈 페이지에는 'PT-MZ14KL'만 등재되어 있다. 카탈로그 항목명과 공식 모델명 표기가 다르므로 Work 확인이 필요하다(임의로 카탈로그를 수정하지 않음)."
+      "detail": "제조사 공식 사이트에는 'PT-MZ14K'(L 없음) 단독 페이지가 없고(404), 시리즈 페이지에는 'PT-MZ14KL'만 등재되어 있다. 카탈로그 항목명과 공식 모델명 표기가 다르므로 Work 확인이 필요하다(임의로 카탈로그를 수정하지 않음). [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     },
     {
       "code": "R2",

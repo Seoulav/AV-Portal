@@ -305,9 +305,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품 목록의 표기 'ULXD2/BETA87'은 Shure 공식…",
-      "detail": "제품 목록의 표기 'ULXD2/BETA87'은 Shure 공식 SKU 표기 'ULXD2/B87A'(BETA 87A 캡슐)에 해당한다. 'BETA 87C'(카디오이드 버전) 조합의 별도 SKU(ULXD2/B87C)도 존재하므로 혼동 주의."
+      "detail": "제품 목록의 표기 'ULXD2/BETA87'은 Shure 공식 SKU 표기 'ULXD2/B87A'(BETA 87A 캡슐)에 해당한다. 'BETA 87C'(카디오이드 버전) 조합의 별도 SKU(ULXD2/B87C)도 존재하므로 혼동 주의. [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     }
   ],
   "presentation": {

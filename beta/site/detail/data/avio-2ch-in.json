@@ -1,7 +1,7 @@
 {
   "manufacturer": "Audinate",
-  "productName": "AVIO 2CH IN",
-  "model": "Dante AVIO Analog Input Adapter, 2ch (ADP-DAI-AU-2x0)",
+  "productName": "Dante AVIO Analog Input Adapter, 2ch (ADP-DAI-AU-2x0)",
+  "model": "AVIO 2CH IN",
   "series": "Dante AVIO Series",
   "seriesNote": "Analog 어댑터는 입력/출력, 1채널/2채널 버전으로 나뉜다. 이 항목은 2채널 입력(ADP-DAI-AU-2x0) 전용.",
   "itemType": "PRODUCT",
