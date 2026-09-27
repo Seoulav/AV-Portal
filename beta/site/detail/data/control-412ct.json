@@ -27,6 +27,20 @@
       "originalSize": "1605x1605",
       "resolution": "1605x1605",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "control-412ct-rear.webp",
+      "alt": "JBL Control 412C/T 천장 스피커 후면(백캔 상단)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 412C/T",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/13472/product_attachment/x_large_2x-5e84f2afc0e2444f15df68c3dc94c870.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1605x1605",
+      "resolution": "1187x1187",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://jblpro.com/en-US/products/control-412c-t"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/productattachment/13472/product_attachment/x_large_2x-5e84f2afc0e2444f15df68c3dc94c870.webp"
     },
     {
       "role": "Perspective",
