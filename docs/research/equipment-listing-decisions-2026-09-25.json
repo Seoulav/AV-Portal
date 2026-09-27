@@ -79,11 +79,11 @@
   "grade_rule": "한 행에 여러 레코드가 있으면 A값이 하나라도 있으면 A, 전부 C면 C, 그 밖은 B.",
   "counts": {
     "graded_rows": 268,
-    "A": 177,
-    "B": 79,
+    "A": 178,
+    "B": 78,
     "C": 12,
-    "A_classified": 177,
-    "B_classified": 79
+    "A_classified": 178,
+    "B_classified": 78
   },
   "url_rule": "공식 URL이 여러 개인 행은 제조사 한국 도메인을 우선한다. 없으면 목록의 첫 번째를 쓴다. 카탈로그에는 항목당 한 개만 넣는다.",
   "excluded": {
@@ -2876,13 +2876,21 @@
         "Projector"
       ],
       "official_urls": [
-        "https://www.epson.co.kr/EB-PU1008B"
+        "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PU1008B/p/V11HA33840"
       ],
       "verification": [
-        "VERIFIED_EXACT_MODEL_EPSON_KOREA_SHORT_URL"
+        "VERIFIED_EXACT_MODEL_EPSON_KOREA"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "url_corrected": {
+        "corrected_at": "2026-09-27",
+        "previous_urls": [
+          "https://www.epson.co.kr/EB-PU1008B"
+        ],
+        "reason": "이전 단축 URL은 404였다. 한국엡손 공식 페이지 제목과 본문에서 EB-PU1008B를 확인한 제품 상세 URL로 교체했다.",
+        "work_id": "W-20260927-008"
+      }
     },
     {
       "row": "프로젝터|20",
@@ -4480,20 +4488,20 @@
         "Amplifier"
       ],
       "official_urls": [
-        "https://www.powersoft.com/en/products/install-amps/duecanali-804"
+        "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
       ],
       "verification": [
-        "FAMILY_OFFICIAL_EXACT_PAGE_NOT_VERIFIED"
+        "VERIFIED_EXACT_MODEL"
       ],
-      "grade": "B",
-      "link_scope": "series",
+      "grade": "A",
+      "link_scope": "model",
       "url_corrected": {
         "corrected_at": "2026-09-27",
         "previous_urls": [
           "https://www.powersoft.com/en/products/install-amps/duecanali-804"
         ],
         "reason": "기존 URL은 기본 Duecanali 804 페이지(제목 DUECANALI 804)였다. 상세페이지의 documents[4]와 sources[0]이 이미 사용하는 Duecanali 804 DSP+D 정확 변형 페이지로 공개 카탈로그 링크를 교체했다.",
-        "work_id": "W-20260927-009"
+        "work_id": "W-20260927-008"
       }
     },
     {
