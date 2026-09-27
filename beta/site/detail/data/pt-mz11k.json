@@ -1,7 +1,7 @@
 {
   "manufacturer": "Panasonic",
-  "productName": "PT-MZ11K",
-  "model": "PT-MZ11KL",
+  "productName": "PT-MZ11KL",
+  "model": "PT-MZ11K",
   "series": "PT-MZ20K Series",
   "seriesNote": "제조사 공식 사이트에는 'PT-MZ11K'가 아닌 'PT-MZ11KL'(렌즈 별매)만 존재를 확인했다(PT-MZ20KL/MZ17KL/MZ14KL/MZ11KL 4개 모델 시리즈). 카탈로그 표기(PT-MZ11K, L 접미사 없음)와 공식 모델명 표기 차이를 이슈로 남긴다.",
   "itemType": "PRODUCT",
@@ -368,21 +368,21 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "모델명 표기 차이(PT-MZ11K vs PT-MZ11KL)",
-      "detail": "제조사 공식 사이트에는 'PT-MZ11K'(L 없음) 단독 페이지가 없고(404), 시리즈 페이지에는 'PT-MZ11KL'만 등재되어 있다. 카탈로그 항목명과 공식 모델명 표기가 다르므로 Work 확인이 필요하다(임의로 카탈로그를 수정하지 않음)."
+      "detail": "제조사 공식 사이트에는 'PT-MZ11K'(L 없음) 단독 페이지가 없고(404), 시리즈 페이지에는 'PT-MZ11KL'만 등재되어 있다. 카탈로그 항목명과 공식 모델명 표기가 다르므로 Work 확인이 필요하다(임의로 카탈로그를 수정하지 않음). [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "시리즈 공용 이미지",
-      "detail": "이미지는 PT-MZ20K 시리즈 대표 이미지(흑백 투톤)로, PT-MZ11KL 단독 사진은 확인하지 못했다."
+      "detail": "이미지는 PT-MZ20K 시리즈 대표 이미지(흑백 투톤)로, PT-MZ11KL 단독 사진은 확인하지 못했다. [운영자 결정(2026-09-27): 제조사 공식 공용 이미지를 대표 이미지로 사용, 공용 사진 설명 유지 조건으로 종결.]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {

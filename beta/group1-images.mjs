@@ -21,6 +21,11 @@ const image = imageWith(publicationStatus);
 const group2Image = imageWith(group2PublicationStatus);
 
 export const group1Images = {
+  'blu-50v2': [
+    image('Main', 'blu-50v2-main.webp', 'BSS Audio BLU-50v2 신호처리기 전면부(v2 표기)', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp', '4096x1878', '2000x595', 'VERIFIED'),
+    image('Rear', 'blu-50v2-rear.webp', 'BSS Audio BLU-50v2 신호처리기 후면부', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11573_1728954901/BSS_BLU-50_V2_Rear_%281%29_x_large_2x.webp', '4096x1354', '2000x394', 'FOUND'),
+    image('Perspective', 'blu-50v2-perspective.webp', 'BSS Audio BLU-50v2 신호처리기 랙 이어 장착 사선 이미지', 'BSS Audio', 'BLU-50v2', 'https://adn.harmanpro.com/product_attachments/product_attachments/11574_1728954882/BSS_BLU-50_V2_WithEars_Angle_%281%29_x_large_2x.webp', '4096x1821', '2000x612', 'VERIFIED')
+  ],
   'srg-x40uh': [
     image('Main', 'srg-x40uh-main.webp', 'Sony SRG-X40UH 블랙 본체를 비스듬히 본 메인 이미지. 전면 SONY 로고와 POWER·STANDBY 표시등이 보인다', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/10dcbda61364021579978a436d10e29f?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1812x2000', 'VERIFIED'),
     image('Front', 'srg-x40uh-front.webp', 'Sony SRG-X40UH 블랙 본체 정면 이미지', 'Sony', 'SRG-X40UH', 'https://www.sony.com/image/01f294822eabc58f4dc38dcec152c4f3?fmt=png-alpha&wid=3000&hei=3000', '3000x3000', '1704x2000', 'VERIFIED'),
@@ -171,13 +176,6 @@ export const group1Images = {
     image('Front', 'rio3224-d3-front.webp', 'Yamaha Rio3224-D3 전면 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-front01_tcm144-2339162.jpg', '1200×1200', '1086×569', 'VERIFIED'),
     image('Rear', 'rio3224-d3-rear.webp', 'Yamaha Rio3224-D3 후면 단자 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-rear05_tcm144-2339157.jpg', '1200×1200', '1084×515', 'VERIFIED')
   ],
-  tr535n: [
-    image('Front', 'tr535n-front.webp', 'AVer TR535N 전면 이미지', 'AVer', 'TR535N', 'https://www.averusa.com/images-aver/products/tr535n/ptz-front.png', '1200×1200', '360×417', 'FOUND'),
-    image('Rear', 'tr535n-rear.webp', 'AVer TR535N 후면 단자 이미지', 'AVer', 'TR535N', 'https://www.averusa.com/images-aver/products/tr535n/ptz-back.png', '1200×1200', '351×392', 'FOUND')
-  ],
-  tr535: [
-    image('Front', 'tr535-front.webp', 'AVer TR535 전면 이미지', 'AVer', 'TR535', 'https://kr.presentation.aver.com/Upload/Model/3259/LargeImg.png', '640×390', '296×385', 'FOUND')
-  ],
   tr335: [
     image('Front', 'tr335-front.webp', 'AVer TR335 전면 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png', '474×458', '338×381', 'FOUND'),
     image('Rear', 'tr335-rear.webp', 'AVer TR335 후면 단자 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png', '474×458', '308×411', 'FOUND')
@@ -296,33 +294,20 @@ export const group1Images = {
   gsm4248p: [
     image('Main', 'gsm4248p-main.webp', 'NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32', '779x536', '779x536', 'FOUND')
   ],
-  gs728tpp: [
-    image('Front', 'gs728tpp-front.webp', 'NETGEAR GS728TPP 전면 패널. RJ45 24포트와 SFP 4포트, 우측 상단 \'ProSafe GS728TPP\' 인쇄', 'NETGEAR', 'GS728TPP', 'https://www.downloads.netgear.com/files/GDC/datasheet/en/GS516TP-GS728TP-GS728TPP-GS752TP.pdf', '893x96', '893x96', 'VERIFIED'),
-    image('Rear', 'gs728tpp-rear.webp', 'NETGEAR GS728TPP 후면 패널. RPS 커넥터와 AC 전원 커넥터', 'NETGEAR', 'GS728TPP', 'https://www.downloads.netgear.com/files/GDC/GS728TP/GS728TP_TPP_752TP_HIG_18Dec2012.pdf', '837x123', '837x123', 'VERIFIED')
-  ],
   gs116pp: [
     image('Main', 'gs116pp-main.webp', "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image', '779x536', '779x536', 'VERIFIED')
   ],
   gs108pp: [
     image('Main', 'gs108pp-main.webp', "NETGEAR GS108PP 비관리형 PoE+ 스위치 정면 사시도, 8개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 측면 라벨의 'GS108PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS108PP', 'https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32', '779x536', '779x536', 'VERIFIED')
   ],
-  'v-02hd': [
-    image('Main', 'v-02hd-main.webp', 'Roland V-02HD 멀티포맷 비디오 믹서 컨트롤 패널', 'Roland', 'V-02HD', 'https://static.roland.com/assets/images/products/gallery/v-02hd_top_front_gal.jpg', '1500x815', '1500x815', 'VERIFIED')
-  ],
   'v-1hd-plus': [
     image('Main', 'v-1hd-plus-main.webp', 'Roland V-1HD+ 비디오 스위처 컨트롤 패널', 'Roland', 'V-1HD+', 'https://static.roland.com/assets/images/products/gallery/v-1hd_plus_front30_B_main_gal.jpg', '1680x500', '1680x500', 'VERIFIED')
-  ],
-  'vr-4hd': [
-    image('Main', 'vr-4hd-main.webp', 'Roland VR-4HD AV 믹서 컨트롤 패널 정면', 'Roland', 'VR-4HD', 'https://static.roland.com/assets/images/products/gallery/vr4hd_top_main_gal.jpg', '1665x1050', '1665x1050', 'VERIFIED')
   ],
   'vr-6hd': [
     image('Main', 'vr-6hd-main.webp', 'Roland VR-6HD 다이렉트 스트리밍 AV 믹서 컨트롤 패널', 'Roland', 'VR-6HD', 'https://static.roland.com/assets/images/products/gallery/vr-6hd_front30_gal.jpg', '1680x765', '1680x765', 'VERIFIED')
   ],
   'v-8hd': [
     image('Main', 'v-8hd-main.webp', 'Roland V-8HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-8HD', 'https://static.roland.com/assets/images/products/gallery/v-8hd_top_front_2_gal.jpg', '1680x656', '1680x656', 'VERIFIED')
-  ],
-  'v-60hd': [
-    image('Main', 'v-60hd-main.webp', 'Roland V-60HD 비디오 스위처 컨트롤 패널', 'Roland', 'V-60HD', 'https://static.roland.com/assets/images/products/gallery/v-60hd_main_gal.jpg', '1500x609', '1500x609', 'VERIFIED')
   ],
   'v-80hd': [
     image('Main', 'v-80hd-main.webp', 'Roland V-80HD 다이렉트 스트리밍 비디오 스위처 컨트롤 패널', 'Roland', 'V-80HD', 'https://static.roland.com/assets/images/products/gallery/v-80hd_front30.jpg', '1680x700', '1680x700', 'VERIFIED')
@@ -366,9 +351,6 @@ export const group1Images = {
   'blu-160': [
     image('Main', 'blu-160-main.webp', 'BSS Audio BLU-160 신호처리기 전면부(카드 슬롯 4개)', 'BSS Audio', 'BLU-160', 'https://adn.harmanpro.com/product_attachments/product_attachments/1344_1728944378/BLU-160_Front_x_large_2x.webp', '4096x438', '4096x438', 'VERIFIED')
   ],
-  'blu-50': [
-    image('Main', 'blu-50-main.webp', 'BSS Audio BLU-50 하프랙 신호처리기 전면부', 'BSS Audio', 'BLU-50', 'https://adn.harmanpro.com/product_attachments/product_attachments/1580_1728152802/BLU-50_Front_x_large_2x.webp', '4096x438', '4096x438', 'VERIFIED')
-  ],
   'blu-aec-in': [
     image('Main', 'blu-aec-in-main.webp', 'BSS Audio AEC 입력 카드(AEC Card) 실물 사진', 'BSS Audio', 'AEC Card', 'https://adn.harmanpro.com/productattachment/1466/product_attachment/x_large_2x-c7d50aa6f6a82a84d90db9a75d3a0d2c.webp', '1845x3072', '1845x3072', 'VERIFIED')
   ],
@@ -381,14 +363,8 @@ export const group1Images = {
   'blu-dan': [
     image('Main', 'blu-dan-main.webp', 'BSS Audio BLU-DA(구 BLU-DAN) Dante/AES67-BLU link 브리지 전면부', 'BSS Audio', 'BLU-DA', 'https://adn.harmanpro.com/product_attachments/product_attachments/5192_1728940298/BSS_BLU-DA_x_large_2x.webp', '4096x819', '4096x819', 'VERIFIED')
   ],
-  'd-cerno-cu': [
-    image('Main', 'd-cerno-cu-main.webp', 'D-Cerno CU 중앙 제어 장치', 'Televic', 'D-Cerno CU', 'https://documents.televic.digital/conference/index.php/s/RHjqJcY7dz4sGWT', '1902x1123', '1902x1123', 'VERIFIED')
-  ],
   'd-cerno-ae': [
     image('Main', 'd-cerno-ae-main.webp', 'D-Cerno AE 랙형 중앙 엔진', 'Televic', 'D-Cerno AE', 'https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7', '2038x786', '2038x786', 'VERIFIED')
-  ],
-  'd-cerno-d-sl': [
-    image('Main', 'd-cerno-d-sl-main.webp', 'D-Cerno D SL 델리게이트 디스커션 유닛(탈착식 마이크 장착)', 'Televic', 'D-Cerno D SL', 'https://documents.televic.digital/conference/index.php/s/nWriiJSnfAs4Yjt', '1902x1123', '1902x1123', 'VERIFIED')
   ],
   'd-mic-50-sl': [
     image('Main', 'd-mic-50-sl-main.webp', 'D-Mic 50 SL 구스넥 마이크(50cm)', 'Televic', 'D-Mic 50 SL', 'https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF', '2000x496', '2000x496', 'VERIFIED')
@@ -874,6 +850,7 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  'blu-50v2': 'blu-50v2-main.webp',
   'srg-x40uh': 'srg-x40uh-main.webp',
   'srg-a40': 'srg-a40-main.webp',
   'rm-ip10': 'rm-ip10-main.webp',
@@ -914,8 +891,6 @@ export const cardImages = {
   dm3: 'dm3-front.webp',
   'rio1608-d3': 'rio1608-d3-front.webp',
   'rio3224-d3': 'rio3224-d3-front.webp',
-  tr535n: 'tr535n-front.webp',
-  tr535: 'tr535-front.webp',
   tr335: 'tr335-front.webp',
   tr315: 'tr315-perspective.webp',
   cl01: 'cl01-front.webp',
@@ -953,15 +928,11 @@ export const cardImages = {
   gsm4230p: 'gsm4230p-main.webp',
   gsm4230px: 'gsm4230px-main.webp',
   gsm4248p: 'gsm4248p-main.webp',
-  gs728tpp: 'gs728tpp-front.webp',
   gs116pp: 'gs116pp-main.webp',
   gs108pp: 'gs108pp-main.webp',
-  'v-02hd': 'v-02hd-main.webp',
   'v-1hd-plus': 'v-1hd-plus-main.webp',
-  'vr-4hd': 'vr-4hd-main.webp',
   'vr-6hd': 'vr-6hd-main.webp',
   'v-8hd': 'v-8hd-main.webp',
-  'v-60hd': 'v-60hd-main.webp',
   'v-80hd': 'v-80hd-main.webp',
   'v-160hd': 'v-160hd-main.webp',
   smartvision40: 'smartvision40-main.webp',
@@ -976,14 +947,11 @@ export const cardImages = {
   'blu-101': 'blu-101-main.webp',
   'blu-100': 'blu-100-main.webp',
   'blu-160': 'blu-160-main.webp',
-  'blu-50': 'blu-50-main.webp',
   'blu-aec-in': 'blu-aec-in-main.webp',
   'blucard-in': 'blucard-in-main.webp',
   'blucard-out': 'blucard-out-main.webp',
   'blu-dan': 'blu-dan-main.webp',
-  'd-cerno-cu': 'd-cerno-cu-main.webp',
   'd-cerno-ae': 'd-cerno-ae-main.webp',
-  'd-cerno-d-sl': 'd-cerno-d-sl-main.webp',
   'd-mic-50-sl': 'd-mic-50-sl-main.webp',
   'plixus-ae-r-dante': 'plixus-ae-r-dante-main.webp',
   'plixus-ae-r-ps': 'plixus-ae-r-ps-main.webp',

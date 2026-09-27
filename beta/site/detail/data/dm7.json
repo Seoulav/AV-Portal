@@ -508,9 +508,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 역할·권한",
-      "detail": "Main·Front·Perspective 방향과 이미지 재사용 권한을 확인해야 합니다."
+      "detail": "Main·Front·Perspective 방향과 이미지 재사용 권한을 확인해야 합니다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     },
     {
       "code": "R2",

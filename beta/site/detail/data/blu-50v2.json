@@ -1,0 +1,553 @@
+{
+  "manufacturer": "BSS Audio",
+  "productName": "BLU-50v2",
+  "model": "BLU-50v2",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Audio Processor (DSP)"
+  ],
+  "english": "Soundweb London BLU-50v2 is a half-rack 4x4 fixed-configuration signal processor with BLU link, the redesigned successor to the BLU-50.",
+  "korean": "BSS Soundweb London BLU-50v2는 4입력/4출력을 갖춘 하프랙 크기의 고정 구성 신호처리기로, BLU link를 지원하며 BLU-50을 재설계한 후속 모델이다.",
+  "verificationSummary": "제조사 공식 한국어 제품 페이지와 영문(en-US) 제품 페이지, 공식 데이터시트(BLU-50v2 Data Sheet, 2023-11 업데이트)에서 사양을 확인했다. 1순위 출처인 테크데이타 PS 자료(techdata-ps.com)는 JavaScript 쿠키 확인 절차로 접근하지 못해 제조사 자료를 사용했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "BLU-50v2는 BSS Audio Soundweb London 제품군의 하프랙(half-rack) 폭 고정 구성 신호처리기로, 4개의 아날로그 입력과 4개의 아날로그 출력, 구성 가능한 신호처리·로직 처리와 BLU link를 제공한다. 제조사는 공급망 제약으로 BLU-50을 재설계해 BLU-50v2로 명명했으며, 전면 패널의 \"v2\" 표기 외에는 두 장치의 외형이 동일하다고 밝히고 있다.\n\n재설계 과정에서 BLU link 성능 향상을 위한 회로 기판 레이아웃 변경, BLU-10x 시리즈와 성능을 맞춘 ADC/DAC 업그레이드, PoE+(Type 2)·PoE++(Type 3/Type 4) 호환성을 높인 새 PoE 전원부, 허용 전압 범위를 개선한 12VDC 전원 회로, 높은 주변 온도 환경을 위한 열 관리 강화가 적용되었다. HiQnet Audio Architect 2.55.1 이상과 HiQnet London Architect 6.02 이상에서 공식 지원되며, 두 소프트웨어 모두 BLU-50에서 BLU-50v2로의 마이그레이션을 지원한다.\n\n동봉된 12VDC 전원 어댑터 외에 터미널 블록 DC 입력 또는 이더넷 포트를 통한 PoE 급전이 가능해 단일 Cat 5e 케이블로 전원·구성·제어·모니터링을 처리할 수 있다. 아날로그 입력은 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하며, 48채널 BLU link 디지털 오디오 버스는 Cat 5e로 장치 간 최대 100m를 지원한다. 12개의 제어 입력, 6개의 로직 출력과 RS-232 포트로 GPIO 및 서드파티 제어 시스템과 연동된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "blu-50v2-main.webp",
+      "alt": "BSS Audio BLU-50v2 신호처리기 전면부(v2 표기)",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-50v2",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x1878",
+      "resolution": "2000x595",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "blu-50v2-rear.webp",
+      "alt": "BSS Audio BLU-50v2 신호처리기 후면부",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-50v2",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11573_1728954901/BSS_BLU-50_V2_Rear_%281%29_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x1354",
+      "resolution": "2000x394",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Perspective",
+      "file": "blu-50v2-perspective.webp",
+      "alt": "BSS Audio BLU-50v2 신호처리기 랙 이어 장착 사선 이미지",
+      "note": "Perspective · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-50v2",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11574_1728954882/BSS_BLU-50_V2_WithEars_Angle_%281%29_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x1821",
+      "resolution": "2000x612",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11572_1728922383/BSS_BLU-50_V2_Front_x_large_2x.webp"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11573_1728954901/BSS_BLU-50_V2_Rear_%281%29_x_large_2x.webp"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11574_1728954882/BSS_BLU-50_V2_WithEars_Angle_%281%29_x_large_2x.webp"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://bssaudio.com/ko/products/blu-50v2"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": "공식 제품 페이지 다운로드 목록에 매뉴얼 없음(구성품에 설치 가이드 포함으로만 표기)"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Data Sheet- BLU-50v2",
+      "language": "en",
+      "note": "제조사 공식 사양 확인(2023-11 업데이트, adn.harmanpro.com PDF로 연결)",
+      "url": "https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "ko",
+      "note": "영문 페이지: https://bssaudio.com/en-US/products/blu-50v2",
+      "url": "https://bssaudio.com/ko/products/blu-50v2"
+    }
+  ],
+  "features": [
+    {
+      "text": "4개 아날로그 입력(채널별 48V 팬텀 파워)과 4개 아날로그 출력을 갖춘 하프랙 고정 구성 신호처리기",
+      "source": "D"
+    },
+    {
+      "text": "BLU-50 재설계 모델: BLU link 성능 향상 기판 레이아웃, BLU-10x 시리즈와 맞춘 ADC/DAC, 열 관리 강화",
+      "source": "P"
+    },
+    {
+      "text": "12-48VDC 터미널 입력 또는 PoE+(Type 2)·PoE++(Type 3/4) 급전 지원(12VDC 전원 어댑터 동봉)",
+      "source": "D"
+    },
+    {
+      "text": "48채널 저지연·고내결함성 BLU link 디지털 오디오 버스로 Soundweb London 제품군과 연동",
+      "source": "P"
+    },
+    {
+      "text": "HiQnet Audio Architect 2.55.1 이상·London Architect 6.02 이상 지원, BLU-50 설정 마이그레이션 지원",
+      "source": "P"
+    },
+    {
+      "text": "12개 제어 입력, 6개 로직 출력, RS-232 포트로 GPIO 및 서드파티 제어 시스템과 연동",
+      "source": "P"
+    },
+    {
+      "text": "랙 마운트(랙 이어 동봉)·언더테이블·벽면 설치 지원",
+      "source": "D"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Chassis",
+      "name": "섀시",
+      "value": "하프랙(1단, 반폭)",
+      "unit": "",
+      "condition": "고정 구성(카드 슬롯 없음), 1U 랙 이어 동봉",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 입력",
+      "value": "4",
+      "unit": "채널",
+      "condition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스, 48V 팬텀 파워 채널별 선택",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "아날로그 출력",
+      "value": "4",
+      "unit": "채널",
+      "condition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "디지털 입력/출력",
+      "value": "0 / 0",
+      "unit": "채널",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "I/O",
+      "name": "전화 연결",
+      "value": "0",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "AEC 입력",
+      "value": "0",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "DSP",
+      "name": "신호처리 성능",
+      "value": "400",
+      "unit": "MHz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "BLU link 디지털 오디오 버스",
+      "value": "48",
+      "unit": "채널",
+      "condition": "Cat 5e, 장치 간 최대 100m, 노드 최대 60개",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "Dante 지원",
+      "value": "없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "CobraNet / AVB 지원",
+      "value": "없음 / 없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "제어 입출력",
+      "value": "제어 입력 12개, 로직 출력 6개",
+      "unit": "",
+      "condition": "GPIO, 워치독 출력 별도",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "RS-232",
+      "value": "지원",
+      "unit": "",
+      "condition": "로직 프로세싱용",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "name": "LCD 디스플레이",
+      "value": "없음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답",
+      "value": "20Hz-20kHz (±1.0dB)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "다이내믹 레인지",
+      "value": "110 A-weighted / 107 unweighted",
+      "unit": "dB 초과(>)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "THD",
+      "value": "<0.005",
+      "unit": "% (typical)",
+      "condition": "+4dBu, 1kHz, 입력 게인 0dB",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "최대 입력 레벨",
+      "value": "+20",
+      "unit": "dBu",
+      "condition": "입력 게인 0dB(게인 12dB 시 +8dBu)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "최대 출력 레벨",
+      "value": "+20",
+      "unit": "dBu",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "A/D · D/A 지연",
+      "value": "0.77 / 0.60",
+      "unit": "ms",
+      "condition": "48kHz 기준(37/Fs, 29/Fs)",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 입력",
+      "value": "12-48VDC, PoE+ [Type 2], PoE++ [Type 3 & Type 4]",
+      "unit": "",
+      "condition": "동봉 어댑터: 100-240VAC 50/60Hz 입력, 12VDC 출력. 제품 페이지의 11.5-48VDC 표기와 불일치(이슈 R2)",
+      "source": "D",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력",
+      "value": "16",
+      "unit": "W",
+      "condition": "<188 BTU/hr",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0-45",
+      "unit": "°C (32-113°F)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "외형 치수(H x W x D)",
+      "value": "41 x 219 x 197",
+      "unit": "mm (1.625\" x 8.63\" x 7.75\")",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "1.28 (2.82)",
+      "unit": "kg (lbs)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "지원 소프트웨어",
+      "value": "HiQnet Audio Architect 2.55.1 이상, HiQnet London Architect 6.02 이상",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Audio In",
+      "connector": "Phoenix Mini Combicon 스크류 단자",
+      "signal": "Mic/Line 아날로그 입력",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "48V 팬텀 파워 채널별 선택, +48dB까지 6dB 단위 게인",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio Out",
+      "connector": "Phoenix Mini Combicon 스크류 단자",
+      "signal": "라인 레벨 아날로그 출력",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "BLU link 디지털 오디오 버스",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "BLU link",
+      "availability": "표준",
+      "condition": "Cat 5e, 최대 100m",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45",
+      "signal": "Ethernet 제어망(PoE 급전 겸용)",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "HiQnet",
+      "availability": "표준",
+      "condition": "Cat 5, 스위치까지 최대 100m. PoE+ [Type 2], PoE++ [Type 3 & 4]",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "connector": "터미널 블록(커넥터 규격 정보 없음)",
+      "signal": "DC 전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "12-48VDC(데이터시트) / 11.5-48VDC(제품 페이지, 이슈 R2). 구성품 목록에 2핀 오렌지 유로 커넥터 1x2x5.08mm 1개가 있으나 포트 대응은 명시되지 않음",
+      "source": "D",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Control",
+      "connector": "커넥터 규격 정보 없음",
+      "signal": "제어 입력/로직 출력(GPIO)",
+      "direction": "IN/OUT",
+      "quantity": "12 입력 / 6 출력",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "데이터시트에 제어 포트 커넥터 형태 미기재. 제품 페이지 구성품 목록에 12핀 오렌지 유로 커넥터 3.5mm 2개가 있으나 포트 대응은 명시되지 않음",
+      "source": "D",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Control",
+      "connector": "Phoenix/Combicon",
+      "signal": "워치독 출력",
+      "direction": "OUT",
+      "quantity": "정보 없음",
+      "protocol": "",
+      "availability": "표준",
+      "condition": "페일세이프 제어용",
+      "source": "D",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Control",
+      "connector": "커넥터 규격 정보 없음",
+      "signal": "RS-232",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "RS-232",
+      "availability": "표준",
+      "condition": "공식 자료는 RS-232 포트 존재만 명시(후면 인쇄 'RS232'), 커넥터 형태 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://bssaudio.com/ko/products/blu-50v2",
+      "scope": "제조사 공식 출처(영문 페이지 https://bssaudio.com/en-US/products/blu-50v2 와 내용 동일 확인)"
+    },
+    {
+      "code": "D",
+      "name": "제조사 공식 데이터시트(Data Sheet- BLU-50v2, 2023-11)",
+      "url": "https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 확인 정보",
+      "scope": "사용자 제공(2026-09-27): BLU-50 후속 모델 BLU-50v2 출시"
+    }
+  ],
+  "issues": [
+    {
+      "code": "I1",
+      "status": "INFO",
+      "title": "운영사 지시로 후속 모델 추가",
+      "detail": "2026-09-27 운영사 지시(\"BLU-50 후속으로 BLU-50v2가 나왔어\")에 따라 단종으로 삭제된 BLU-50의 후속 모델로 추가했다. 제조사 공식 페이지는 공급망 제약으로 BLU-50을 재설계해 BLU-50v2로 명명했으며, 전면 패널 \"v2\" 표기 외에는 외형이 동일하다고 명시한다. 제조사가 밝힌 BLU-50 대비 변경점: ① BLU link 성능 향상을 위한 회로 기판 레이아웃 변경 ② BLU-10x 시리즈와 성능을 맞춘 ADC/DAC 업그레이드 ③ PoE+(Type 2)·PoE++(Type 3)·PoE++(Type 4) 호환성을 높인 새 PoE 전원부 ④ 허용 전압 범위를 11.5-48VDC로 개선한 재설계 12VDC 전원 회로 ⑤ 높은 주변 온도 환경을 위한 열 관리 강화. 지원 소프트웨어는 HiQnet Audio Architect 2.55.1 이상, HiQnet London Architect 6.02 이상이며 두 소프트웨어 모두 BLU-50→BLU-50v2 마이그레이션을 지원한다."
+    },
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "광 연장 거리 공식 자료 간 불일치",
+      "detail": "광 미디어 컨버터 사용 시 장치 간 연장 거리가 데이터시트는 'over 40km', 제품 페이지(한국어·영문)는 'over 10km (6.2 miles) using single mode fiber'로 서로 다르다. 한쪽으로 확정하지 않음."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "DC 입력 전압 범위 공식 자료 간 불일치",
+      "detail": "제품 페이지 변경점 목록은 '허용 전압 범위가 11.5~48VDC로 개선'이라고 하나, 같은 페이지 본문과 데이터시트는 '12-48VDC'로 표기한다(후면 인쇄도 '12-48VDC'). 한쪽으로 확정하지 않음."
+    },
+    {
+      "code": "R3",
+      "status": "REVIEW REQUIRED",
+      "title": "PoE 급전 표준 표기 차이",
+      "detail": "제품 페이지 본문은 'PoE+로 급전 가능'으로만 적고, 변경점 목록과 데이터시트는 PoE+ [Type 2], PoE++ [Type 3 & Type 4]를 명시한다. 후면 인쇄는 'PoE+'. 데이터시트 값을 사양에 기재하되 표기 차이를 보존함."
+    },
+    {
+      "code": "R4",
+      "status": "REVIEW REQUIRED",
+      "title": "구성 소프트웨어 표기 차이",
+      "detail": "데이터시트 본문은 HiQnet London Architect로 구성한다고 적고, 제품 페이지는 HiQnet Audio Architect로 구성·제어·모니터링한다고 적으면서 두 소프트웨어(Audio Architect 2.55.1 이상, London Architect 6.02 이상)를 모두 공식 지원한다고 명시한다. 데이터시트 본문이 구 BLU-50 문안을 유지한 것으로 보이나 확정하지 않음."
+    },
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 이미지 모델 표기 미확인",
+      "detail": "후면 이미지는 BLU-50v2 제품 페이지의 공식 첨부(파일명 BSS_BLU-50_V2_Rear)이지만 후면에 모델명 인쇄가 없어 BLU-50v2임을 이미지만으로 확인할 수 없다(제조사는 두 장치의 외형이 v2 표기 외 동일하다고 명시). 전면·사선 이미지는 전면 패널의 'BLU-50' 아래 'v2' 표기를 육안 확인했으며, 패널에 'BLU-50v2'가 한 줄로 인쇄된 것은 아니다."
+    },
+    {
+      "code": "R6",
+      "status": "REVIEW REQUIRED",
+      "title": "매뉴얼 미확인",
+      "detail": "공식 제품 페이지 다운로드 목록에 사용자 매뉴얼이 없다(구성품에 설치 가이드 포함으로만 표기). 1순위 테크데이타 PS 자료는 접근 차단으로 확인하지 못함."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
+    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "BSS Audio BLU-50v2 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

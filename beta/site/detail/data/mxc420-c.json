@@ -273,15 +273,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "브리핑에서 'Microflex Advance 계열'로 추정했으나,…",
-      "detail": "브리핑에서 'Microflex Advance 계열'로 추정했으나, MXC420/C는 정확히는 MXA(어레이) 계열이 아니라 'Microflex Complete/Complete Wireless(MXC/MXCW) 컨퍼런스 시스템'용 구스넥 마이크임. Microflex Advance(MXA)는 천장형 빔포밍 어레이 마이크(MXA910/920/925 등) 브랜드명으로, MXC 시리즈와는 별개의 제품 라인이므로 혼동하지 않도록 정정함."
+      "detail": "브리핑에서 'Microflex Advance 계열'로 추정했으나, MXC420/C는 정확히는 MXA(어레이) 계열이 아니라 'Microflex Complete/Complete Wireless(MXC/MXCW) 컨퍼런스 시스템'용 구스넥 마이크임. Microflex Advance(MXA)는 천장형 빔포밍 어레이 마이크(MXA910/920/925 등) 브랜드명으로, MXC 시리즈와는 별개의 제품 라인이므로 혼동하지 않도록 정정함. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명이 \"Microflex Complete(MXC/MXCW)용 구스넥 마이크\"로 반영.]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "대표 이미지는 MXC416/420/425 패밀리 3종을 함께…",
-      "detail": "대표 이미지는 MXC416/420/425 패밀리 3종을 함께 보여주는 이미지이며 20인치 단일 제품 사진은 별도로 제공되지 않음."
+      "detail": "대표 이미지는 MXC416/420/425 패밀리 3종을 함께 보여주는 이미지이며 20인치 단일 제품 사진은 별도로 제공되지 않음. [운영자 결정(2026-09-27): 제조사 공식 공용 이미지를 대표 이미지로 사용, 공용 사진 설명 유지 조건으로 종결.]"
     }
   ],
   "presentation": {

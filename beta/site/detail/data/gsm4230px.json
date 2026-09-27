@@ -1,7 +1,7 @@
 {
   "manufacturer": "NETGEAR",
-  "productName": "GSM4230PX",
-  "model": "M4250-26G4XF-PoE+ (GSM4230PX)",
+  "productName": "M4250-26G4XF-PoE+ (GSM4230PX)",
+  "model": "GSM4230PX",
   "itemType": "PRODUCT",
   "categories": [
     "제어",
@@ -321,9 +321,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품 사진 모델명 미판독",
-      "detail": "다운로드한 제품 이미지에는 NETGEAR 로고와 일부 작은 텍스트가 보이나 GSM4230PX/M4250-26G4XF-PoE+ 모델명이 육안으로 확실히 판독되지 않아 verificationStatus를 FOUND로 표시함."
+      "detail": "다운로드한 제품 이미지에는 NETGEAR 로고와 일부 작은 텍스트가 보이나 GSM4230PX/M4250-26G4XF-PoE+ 모델명이 육안으로 확실히 판독되지 않아 verificationStatus를 FOUND로 표시함. [운영자 결정(2026-09-27): 제조사 제품 페이지 게재 근거로 FOUND 등급 유지(VERIFIED 아님), 종결.]"
     }
   ],
   "presentation": {

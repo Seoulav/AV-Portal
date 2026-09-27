@@ -1,7 +1,7 @@
 {
   "manufacturer": "NETGEAR",
-  "productName": "XSM4216F",
-  "model": "M4250-16XF (XSM4216F)",
+  "productName": "M4250-16XF (XSM4216F)",
+  "model": "XSM4216F",
   "itemType": "PRODUCT",
   "categories": [
     "제어",
@@ -294,15 +294,15 @@
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품 사진에 모델명 미표시",
-      "detail": "다운로드한 제품 이미지에는 NETGEAR 로고만 보이고 XSM4216F/M4250-16XF 모델명이 육안으로 식별되지 않아 verificationStatus를 FOUND로 표시함(VERIFIED 아님)."
+      "detail": "다운로드한 제품 이미지에는 NETGEAR 로고만 보이고 XSM4216F/M4250-16XF 모델명이 육안으로 식별되지 않아 verificationStatus를 FOUND로 표시함(VERIFIED 아님). [운영자 결정(2026-09-27): 제조사 제품 페이지 게재 근거로 FOUND 등급 유지(VERIFIED 아님), 종결.]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "무게 공식 자료 간 불일치",
-      "detail": "무게가 제품 페이지 2.80kg, M4250 데이터시트 1.74kg로 서로 다르다. 한쪽으로 확정하지 않음."
+      "detail": "무게가 제품 페이지 2.80kg, M4250 데이터시트 1.74kg로 서로 다르다. 한쪽으로 확정하지 않음. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

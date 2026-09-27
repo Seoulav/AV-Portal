@@ -1,7 +1,7 @@
 {
   "manufacturer": "NovaStar",
-  "productName": "H5",
-  "model": "H Series H5",
+  "productName": "H Series H5",
+  "model": "H5",
   "itemType": "PRODUCT",
   "categories": [
     "영상",
@@ -504,9 +504,9 @@
     },
     {
       "code": "I2",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "냉각/팬 사양 미기재",
-      "detail": "H5 데이터시트에 팬 개수·풍량 등 냉각 방식이 명시적으로 기재되어 있지 않아 값을 채우지 못했다."
+      "detail": "H5 데이터시트에 팬 개수·풍량 등 냉각 방식이 명시적으로 기재되어 있지 않아 값을 채우지 못했다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

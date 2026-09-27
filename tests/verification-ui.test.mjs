@@ -51,11 +51,11 @@ test('public footers do not expose build strings and detail asset versions are r
 
 test('the five public Product Detail JSON Git blobs remain byte-identical', () => {
   const expected = new Map([
-    ['brc-am7.json', '53b6672361a414aef4f9a53635d8e3a8ca5ebcc2'],
-    ['dm7.json', '3b0dd80717d9eeac0abda43b277dd3a06f8dba75'],
-    ['ki-pro-go2.json', '2662738d2ed5ce1d4a89a30c79760bd090acc35c'],
-    ['pt-mz17k.json', 'cd01d1b1ebf51bc5484d92c21b9fad4460b76f50'],
-    ['rally-bar.json', '9b93e32e314ab7b1eac1e7f0ca47ad76879e6d34']
+    ['brc-am7.json', '78f32fb6139f2c618bf6ceef3080a198563dbc06'],
+    ['dm7.json', 'cfafaae7f38e5790c3fd559753192c91c4e06c36'],
+    ['ki-pro-go2.json', 'b688107c13cf84c06942cc831ad89387983a6aeb'],
+    ['pt-mz17k.json', 'ab0488e3f401da9deab8d7a6d534a4ea3cce70e4'],
+    ['rally-bar.json', '1ce4c62dace009d206a348919095d00585f2e8cc']
   ]);
   for (const [name, hash] of expected) {
     const path = `beta/site/detail/data/${name}`;

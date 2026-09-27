@@ -1,7 +1,7 @@
 {
   "manufacturer": "NETGEAR",
-  "productName": "GSM4230P",
-  "model": "M4250-26G4F-PoE+ (GSM4230P)",
+  "productName": "M4250-26G4F-PoE+ (GSM4230P)",
+  "model": "GSM4230P",
   "itemType": "PRODUCT",
   "categories": [
     "제어",
@@ -321,9 +321,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "제품 사진 모델명 표기 판독 어려움",
-      "detail": "다운로드한 제품 이미지 하단 좌측에 'M4250-...-PoE+ | 30W' 형태의 작은 글씨가 보이나 해상도상 정확한 전체 모델 코드를 완전히 판독하기 어려워 verificationStatus를 FOUND로 표시함."
+      "detail": "다운로드한 제품 이미지 하단 좌측에 'M4250-...-PoE+ | 30W' 형태의 작은 글씨가 보이나 해상도상 정확한 전체 모델 코드를 완전히 판독하기 어려워 verificationStatus를 FOUND로 표시함. [운영자 결정(2026-09-27): 제조사 제품 페이지 게재 근거로 FOUND 등급 유지(VERIFIED 아님), 종결.]"
     }
   ],
   "presentation": {

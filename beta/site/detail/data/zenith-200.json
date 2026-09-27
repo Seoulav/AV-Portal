@@ -1,7 +1,7 @@
 {
   "manufacturer": "Analog Way",
-  "productName": "Zenith 200",
-  "model": "ZEN200",
+  "productName": "ZEN200",
+  "model": "Zenith 200",
   "series": "Alta 4K",
   "seriesNote": "Alta 4K 플랫폼 기반. Zenith 100(13입력·4출력)의 상위 모델(16입력·6출력).",
   "itemType": "PRODUCT",
@@ -379,9 +379,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다."
+      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {

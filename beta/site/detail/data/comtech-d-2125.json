@@ -1,7 +1,7 @@
 {
   "manufacturer": "Crown",
   "productName": "Crown CTD-2125",
-  "model": "Crown CTD-2125",
+  "model": "ComTech D 2125",
   "series": "ComTech D Series",
   "seriesNote": "ComTech D 계열 공용 사용설명서·데이터시트 기준(모델별 표는 페이지에서 개별 확인).",
   "itemType": "PRODUCT",
@@ -399,9 +399,9 @@
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "모델명은 공식 표기로 CTD-2125/4125/8125이며…",
-      "detail": "모델명은 공식 표기로 CTD-2125/4125/8125이며 시리즈명은 ComTech D Series다. 카탈로그 표시명 'ComTech D xxxx'는 유지함."
+      "detail": "모델명은 공식 표기로 CTD-2125/4125/8125이며 시리즈명은 ComTech D Series다. 카탈로그 표시명 'ComTech D xxxx'는 유지함. [운영자 결정(2026-09-27): 카탈로그·페이지 제목은 원본 엑셀 목록의 제품명을 유지하고, 공식 모델명은 제목 아래 부제로 표시한다.]"
     }
   ],
   "presentation": {

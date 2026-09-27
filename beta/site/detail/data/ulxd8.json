@@ -229,9 +229,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "작업 목록에는 ULXD8이 'ULX-D Digital…",
-      "detail": "작업 목록에는 ULXD8이 'ULX-D Digital Wireless Boundary Microphone Transmitter'로 기재되어 있으나 이는 부정확하다. Shure 공식 자료(ULX-D Dual and Quad Wireless Microphone System 매뉴얼, Optional Accessories 표, pubs.shure.com/guide/ULXD-DQ) 기준으로 ULXD8은 '구즈넥 베이스 트랜스미터(Gooseneck Base Transmitter)'이며, '바운더리 트랜스미터(Boundary Transmitter)'는 별도 모델 ULXD6이다. ULXD8은 실존하는 정식 Shure SKU(SKU 예시: ULXD8W=-J50A 등)가 맞으므로 카탈로그에서 제외하지 않되, 제품 설명을 '구즈넥 베이스'로 정정해서 등록해야 한다. 카탈로그 원 설명대로 '바운더리 마이크 트랜스미터'로 표기하면 사실과 다르다."
+      "detail": "작업 목록에는 ULXD8이 'ULX-D Digital Wireless Boundary Microphone Transmitter'로 기재되어 있으나 이는 부정확하다. Shure 공식 자료(ULX-D Dual and Quad Wireless Microphone System 매뉴얼, Optional Accessories 표, pubs.shure.com/guide/ULXD-DQ) 기준으로 ULXD8은 '구즈넥 베이스 트랜스미터(Gooseneck Base Transmitter)'이며, '바운더리 트랜스미터(Boundary Transmitter)'는 별도 모델 ULXD6이다. ULXD8은 실존하는 정식 Shure SKU(SKU 예시: ULXD8W=-J50A 등)가 맞으므로 카탈로그에서 제외하지 않되, 제품 설명을 '구즈넥 베이스'로 정정해서 등록해야 한다. 카탈로그 원 설명대로 '바운더리 마이크 트랜스미터'로 표기하면 사실과 다르다. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 페이지 설명이 \"구즈넥 마이크용 데스크/테이블 베이스 송신기\"로 반영.]"
     },
     {
       "code": "R2",

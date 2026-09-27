@@ -276,9 +276,9 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "팬 유무 공식 자료 간 불일치",
-      "detail": "제품 페이지 문구는 'QUIET FANS'지만 데이터시트는 'Fanless', 'Acoustic noise 0 (fanless)'로 적는다. 데이터시트 기준으로 팬리스로 표기했다."
+      "detail": "제품 페이지 문구는 'QUIET FANS'지만 데이터시트는 'Fanless', 'Acoustic noise 0 (fanless)'로 적는다. 데이터시트 기준으로 팬리스로 표기했다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {

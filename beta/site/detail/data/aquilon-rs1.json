@@ -1,7 +1,7 @@
 {
   "manufacturer": "Analog Way",
-  "productName": "Aquilon RS1",
-  "model": "Aquilon RS1 (AQL-RS1)",
+  "productName": "Aquilon RS1 (AQL-RS1)",
+  "model": "Aquilon RS1",
   "series": "Aquilon (LivePremier) Series",
   "seriesNote": "브로슈어·드라이버 등 일부 문서는 Aquilon 시리즈 전체 공용이다. 기술 데이터시트(Technical Datasheet)는 RS1 전용.",
   "itemType": "PRODUCT",
@@ -327,15 +327,15 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "I/O 카드 구성",
-      "detail": "입력 16·출력 8은 필드 교체형 카드 조합에 따른 총합이며, 실제 커넥터 타입별 개수는 발주 구성에 따라 달라진다."
+      "detail": "입력 16·출력 8은 필드 교체형 카드 조합에 따른 총합이며, 실제 커넥터 타입별 개수는 발주 구성에 따라 달라진다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "이미지 권한",
-      "detail": "전면 이미지의 제조사 재사용 권리는 확인되지 않았다."
+      "detail": "전면 이미지의 제조사 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {

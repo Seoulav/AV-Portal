@@ -742,21 +742,21 @@
   "issues": [
     {
       "code": "R1",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근…",
-      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함."
+      "detail": "다산SR(dasansr.com)은 봇 차단(캡차)으로 자동 접근 불가 - Powersoft 공식 자료로 대체함. [운영자 결정(2026-09-27): 다산SR 자료 확인 없이 기존에 조사한 Powersoft 공식 자료를 그대로 사용하고 종결(AGENTS.md: 다산SR에 자료가 없으면 기존 제조사 자료 사용).]"
     },
     {
       "code": "R2",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가…",
-      "detail": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가 Mezzo A(4채널 604 A) 페이지에서 공용으로 사용하는 후면 대표 이미지임."
+      "detail": "후면 이미지는 322 A 전용 촬영본이 아니라 Powersoft가 Mezzo A(4채널 604 A) 페이지에서 공용으로 사용하는 후면 대표 이미지임. [운영자 결정(2026-09-27): 제조사 공식 공용 이미지를 대표 이미지로 사용, 공용 사진 설명 유지 조건으로 종결.]"
     },
     {
       "code": "R3",
-      "status": "REVIEW REQUIRED",
+      "status": "INFO",
       "title": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와…",
-      "detail": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와 시리즈 데이터시트(14 W)에서 다르다. 두 값을 병기함."
+      "detail": "대기전력이 제품 페이지(115V 11 W / 230V 12 W)와 시리즈 데이터시트(14 W)에서 다르다. 두 값을 병기함. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
     }
   ],
   "presentation": {
