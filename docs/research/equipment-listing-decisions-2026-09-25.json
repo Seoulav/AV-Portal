@@ -344,7 +344,12 @@
         "EXACT_OFFICIAL_MODEL_RESULT"
       ],
       "grade": "A",
-      "link_scope": "model"
+      "link_scope": "model",
+      "removed": {
+        "removed_at": "2026-09-27",
+        "reason": "사용자 지시로 공개 목록·상세페이지에서 삭제(원래 행 기록은 보존)",
+        "work_id": "W-20260927-004"
+      }
     },
     {
       "row": "TV|46",

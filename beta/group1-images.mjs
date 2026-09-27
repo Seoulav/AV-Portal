@@ -526,9 +526,6 @@ export const group1Images = {
   lh55vhcrbgbxkr: [
     image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
-  kq75lsf03wfxkr: [
-    image('Main', 'kq75lsf03wfxkr-main.webp', '2025 The Frame Pro 189cm 정면', 'Samsung', 'KQ75LSF03WFXKR', 'https://images.samsung.com/kdp/goods/2025/03/05/a852d262-818e-4fca-bee4-f4d77eb2c7af.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
-  ],
   lh55wmfwbgcxkr: [
     image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
@@ -1004,7 +1001,6 @@ export const cardImages = {
   lh115qhfebgxkr: 'lh115qhfebgxkr-main.webp',
   lh55vmcrbgbxkr: 'lh55vmcrbgbxkr-main.webp',
   lh55vhcrbgbxkr: 'lh55vhcrbgbxkr-main.webp',
-  kq75lsf03wfxkr: 'kq75lsf03wfxkr-main.webp',
   lh55wmfwbgcxkr: 'lh55wmfwbgcxkr-main.webp',
   lh75wmfwlgcxkr: 'lh75wmfwlgcxkr-main.webp',
   'control-23-1': 'control-23-1-main.webp',
