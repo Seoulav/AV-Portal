@@ -1,5 +1,5 @@
 import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20260929-002';
-import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible } from './pdf-documents.mjs';
+import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 
 const $ = selector => document.querySelector(selector);
@@ -117,27 +117,29 @@ if (!productKey) {
     ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type })),
     ...uploadedDocuments
   ];
-  function appendDocumentActions(container, item) {
+  function appendDocumentActions(container, item, header = false) {
     const action = item.action ?? resolveDocumentAction(item, documentManifest);
     if (!action) return;
+    const labels = documentActionLabels(item, action, header);
     if (action.kind === 'external') {
-      container.append(safeLink(action.url, '제조사에서 열기 ↗', 'pg-btn'));
+      container.append(safeLink(action.url, labels.primary, 'pg-btn'));
       return;
     }
-    const open = element('button', 'pg-btn', '보기');
+    const open = element('button', 'pg-btn', labels.primary);
     open.type = 'button';
     open.dataset.pdfOpen = 'true';
     open.addEventListener('click', () => pdfViewer.open({
       file: action.file, title: item.title ?? item.label, sourceUrl: action.sourceUrl, trigger: open
     }));
-    const download = element('a', 'pg-btn', '↓ 내려받기');
+    const download = element('a', 'pg-btn', labels.download);
     download.href = action.file;
     download.download = action.file.split('/').at(-1);
+    if (header) download.setAttribute('aria-label', labels.downloadAria);
     container.append(open, download);
   }
   for (const document of openDocuments.slice(0, 3)) {
     const pill = element('span', 'pg-doc');
-    appendDocumentActions(pill, document);
+    appendDocumentActions(pill, document, true);
     $('#header-docs').append(pill);
   }
   for (const document of openDocuments) {
