@@ -1,4 +1,5 @@
 import { applySearchIndex, detailSearchEntry, previewCardImage } from './shared/search-index.mjs';
+import { adaptRtcomDetail, combinePublicCatalog, combinedCatalogSource } from './shared/rtcom-adapter.mjs';
 export { publicDetailSearchTerms, publicCardSummary, previewCardImage } from './shared/search-index.mjs';
 
 const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
@@ -79,20 +80,21 @@ async function loadDetailSearchTerms(items) {
     if (preview) item.cardImage = preview;
     if (!item.slug) return;
     try {
-      const response = await fetch(`./detail/data/${item.slug}.json`);
+      const response = await fetch(item.rtcomId ? `./rtcom/raw/products/${item.rtcomId}.json` : `./detail/data/${item.slug}.json`);
       if (!response.ok) return;
-      const detail = await response.json();
+      const rawDetail = await response.json();
+      const detail = item.rtcomId ? adaptRtcomDetail(rawDetail) : rawDetail;
       Object.assign(item, detailSearchEntry(item, detail));
     } catch { /* Public Library remains usable if one optional detail index fails. */ }
   }));
 }
 
-async function loadSearchIndex(items, catalogRaw) {
+async function loadSearchIndex(items, catalogSetRaw) {
   try {
     const response = await fetch('./search-index.json');
     if (!response.ok) throw new Error('검색 인덱스 없음');
     const index = await response.json();
-    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(catalogRaw.replaceAll('\r\n', '\n')));
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(catalogSetRaw));
     const catalogHash = [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, '0')).join('');
     applySearchIndex(items, index, catalogHash);
   } catch { await loadDetailSearchTerms(items); }
@@ -229,7 +231,13 @@ if (typeof document !== 'undefined') {
   try {
     const response = await fetch('./catalog.json'); if (!response.ok) throw new Error('선별 목록을 읽을 수 없습니다.');
     const catalogRaw = await response.text(); const data = JSON.parse(catalogRaw); if (!Array.isArray(data)) throw new Error('선별 목록 형식이 올바르지 않습니다.');
-    products = data.filter(item => item.kind === 'equipment'); await loadSearchIndex(products, catalogRaw);
+    let rtcomRaw = '', rtcomIndex = null;
+    try {
+      const rtcomResponse = await fetch('./rtcom/raw/index.json');
+      if (rtcomResponse.ok) { rtcomRaw = await rtcomResponse.text(); rtcomIndex = JSON.parse(rtcomRaw); }
+    } catch { /* The AV catalog stays available if the optional synchronized source is unavailable. */ }
+    products = combinePublicCatalog(data.filter(item => item.kind === 'equipment'), rtcomIndex);
+    await loadSearchIndex(products, combinedCatalogSource(catalogRaw, rtcomRaw));
     $('#equipment-total').textContent = products.length.toLocaleString('ko-KR'); $('#brand-total').textContent = `${new Set(products.map(item => item.brand)).size}개 제조사`;
     renderDiscovery(); setFacets(); render(); if (hasExploration()) restoreScroll();
   } catch (error) { ui.error.hidden = false; ui.error.textContent = error.message; ui.workspace.hidden = false; ui.resultCount.textContent = '목록을 불러오지 못했습니다.'; }

@@ -4,15 +4,18 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { createPreviewServer } from '../beta/serve.mjs';
 import { escapeHtml } from '../beta/build-readable-catalog.mjs';
+import { adaptRtcomCatalog } from '../beta/site/shared/rtcom-adapter.mjs';
 
 const site = new URL('../beta/site/', import.meta.url);
 const catalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8'));
+const rtcom = adaptRtcomCatalog(JSON.parse(await readFile(new URL('rtcom/raw/index.json', site), 'utf8')));
+const publicCatalog = [...catalog, ...rtcom];
 
 test('static catalog exposes every public product without JavaScript', async () => {
   const html = await readFile(new URL('catalog.html', site), 'utf8');
   assert.doesNotMatch(html, /<script\b/i);
-  assert.equal((html.match(/<article class="catalog-product"/g) ?? []).length, catalog.length);
-  for (const item of catalog) {
+  assert.equal((html.match(/<article class="catalog-product"/g) ?? []).length, publicCatalog.length);
+  for (const item of publicCatalog) {
     assert.match(html, new RegExp(`>${item.product.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}<`));
     for (const link of item.official_links) assert.ok(html.includes(`href="${escapeHtml(link)}"`));
   }
@@ -21,10 +24,10 @@ test('static catalog exposes every public product without JavaScript', async () 
 test('llms text lists the public catalog and every detail URL', async () => {
   const content = await readFile(new URL('llms.txt', site), 'utf8');
   assert.match(content, /^# AV Portal$/m);
-  assert.match(content, new RegExp(`공개 장비: ${catalog.length}개`));
-  assert.equal((content.match(/^- 제품: /gm) ?? []).length, catalog.length);
-  for (const item of catalog) assert.match(content, new RegExp(`^- 제품: ${item.brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} ${item.product.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'm'));
-  assert.equal((content.match(/^  상세: https:\/\/seoulav\.github\.io\/AV-Portal\/detail\/\?product=/gm) ?? []).length, catalog.filter(item => item.slug).length);
+  assert.match(content, new RegExp(`공개 장비: ${publicCatalog.length}개`));
+  assert.equal((content.match(/^- 제품: /gm) ?? []).length, publicCatalog.length);
+  for (const item of publicCatalog) assert.match(content, new RegExp(`^- 제품: ${item.brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} ${item.product.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'm'));
+  assert.equal((content.match(/^  상세: https:\/\/seoulav\.github\.io\/AV-Portal\/detail\/\?product=/gm) ?? []).length, publicCatalog.filter(item => item.slug).length);
 });
 
 test('home advertises downloadable static catalog files', async () => {

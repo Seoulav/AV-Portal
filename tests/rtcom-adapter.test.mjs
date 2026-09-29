@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {
   adaptRtcomCatalog,
   adaptRtcomDetail,
+  combinePublicCatalog,
+  combinedCatalogSource,
   rtcomSlug,
   validateRtcomIndex
 } from '../beta/site/shared/rtcom-adapter.mjs';
@@ -56,6 +58,13 @@ test('RTCOM index rejects schema errors, duplicate IDs and existing slug collisi
   assert.throws(() => validateRtcomIndex({ ...index, schema: 'wrong' }), /schema/);
   assert.throws(() => validateRtcomIndex({ ...index, products: [index.products[0], index.products[0]] }), /중복/);
   assert.throws(() => validateRtcomIndex(index, { existingSlugs: ['rtcom-xdm'] }), /충돌/);
+});
+
+test('combined catalog keeps AV rows first and hashes LF/CRLF source bytes identically', () => {
+  const av = [{ brand: 'Sony', product: 'BRC-AM7', categories: ['카메라'], kind: 'equipment', official_links: [], slug: 'brc-am7' }];
+  const combined = combinePublicCatalog(av, index);
+  assert.deepEqual(combined.map(item => item.slug), ['brc-am7', 'rtcom-xdm']);
+  assert.equal(combinedCatalogSource('[\r\n]\r\n', '{\r\n}'), combinedCatalogSource('[\n]\n', '{\n}'));
 });
 
 test('RTCOM detail maps images, documents, source link and related products without mutating raw data', () => {

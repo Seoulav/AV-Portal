@@ -3,6 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { detailSearchEntry } from './site/shared/search-index.mjs';
+import { adaptRtcomCatalog, adaptRtcomDetail, combinePublicCatalog, combinedCatalogSource } from './site/shared/rtcom-adapter.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const sha256 = value => createHash('sha256').update(value).digest('hex');
@@ -10,7 +11,7 @@ const normalizeNewlines = value => value.replaceAll('\r\n', '\n');
 
 export const searchIndexBytesMatch = (stored, expected) => normalizeNewlines(stored) === normalizeNewlines(expected);
 
-export function buildSearchIndex(catalog, details, catalogRaw = JSON.stringify(catalog), detailRaw = new Map()) {
+export function buildSearchIndex(catalog, details, catalogRaw = JSON.stringify(catalog), detailRaw = new Map(), catalogSetRaw = catalogRaw) {
   const items = catalog.filter(item => item.kind === 'equipment' && item.slug).map(item => {
     const detail = details.get(item.slug);
     if (!detail) throw new Error(`상세 JSON 없음: ${item.slug}`);
@@ -18,20 +19,28 @@ export function buildSearchIndex(catalog, details, catalogRaw = JSON.stringify(c
   });
   const normalizedCatalog = normalizeNewlines(catalogRaw);
   const source = [normalizedCatalog, ...items.map(item => normalizeNewlines(detailRaw.get(item.slug) ?? JSON.stringify(details.get(item.slug))))].join('\0');
-  return { schema: 'avportal.search-index.v1', catalogSha256: sha256(normalizedCatalog), sourceSha256: sha256(source), items };
+  return { schema: 'avportal.search-index.v1', catalogSha256: sha256(normalizedCatalog), catalogSetSha256: sha256(normalizeNewlines(catalogSetRaw)), sourceSha256: sha256(source), items };
 }
 
 export async function expectedSearchIndex() {
   const catalogRaw = await readFile(new URL('catalog.json', site), 'utf8');
-  const catalog = JSON.parse(catalogRaw);
+  const avCatalog = JSON.parse(catalogRaw);
+  const rtcomRaw = await readFile(new URL('rtcom/raw/index.json', site), 'utf8');
+  const rtcomIndex = JSON.parse(rtcomRaw);
+  const catalog = combinePublicCatalog(avCatalog, rtcomIndex);
   const details = new Map();
   const detailRaw = new Map();
-  for (const item of catalog.filter(item => item.kind === 'equipment' && item.slug)) {
+  for (const item of avCatalog.filter(item => item.kind === 'equipment' && item.slug)) {
     const raw = await readFile(new URL(`detail/data/${item.slug}.json`, site), 'utf8');
     detailRaw.set(item.slug, raw);
     details.set(item.slug, JSON.parse(raw));
   }
-  return JSON.stringify(buildSearchIndex(catalog, details, catalogRaw, detailRaw)) + '\n';
+  for (const item of adaptRtcomCatalog(rtcomIndex, { existingSlugs: avCatalog.map(value => value.slug).filter(Boolean) })) {
+    const raw = await readFile(new URL(`rtcom/raw/products/${item.rtcomId}.json`, site), 'utf8');
+    detailRaw.set(item.slug, raw);
+    details.set(item.slug, adaptRtcomDetail(JSON.parse(raw)));
+  }
+  return JSON.stringify(buildSearchIndex(catalog, details, catalogRaw, detailRaw, combinedCatalogSource(catalogRaw, rtcomRaw))) + '\n';
 }
 
 async function main() {

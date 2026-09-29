@@ -32,7 +32,7 @@ export function detailSearchEntry(item, detail) {
 
 export function applySearchIndex(items, index, catalogHash) {
   if (index?.schema !== 'avportal.search-index.v1' || !Array.isArray(index.items)) throw new Error('검색 인덱스 형식 오류');
-  if (catalogHash && index.catalogSha256 !== catalogHash) throw new Error('검색 인덱스가 카탈로그와 다름');
+  if (catalogHash && (index.catalogSetSha256 ?? index.catalogSha256) !== catalogHash) throw new Error('검색 인덱스가 카탈로그와 다름');
   const expected = new Set(items.filter(item => item.slug).map(item => item.slug));
   if (index.items.length !== expected.size) throw new Error('검색 인덱스 제품 수 불일치');
   const found = new Map();

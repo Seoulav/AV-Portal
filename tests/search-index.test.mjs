@@ -1,9 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildSearchIndex, searchIndexBytesMatch } from '../beta/build-search-index.mjs';
+import { buildSearchIndex, expectedSearchIndex, searchIndexBytesMatch } from '../beta/build-search-index.mjs';
 import { applySearchIndex, detailSearchEntry } from '../beta/site/shared/search-index.mjs';
 import { buildSuggestions, filterCatalog } from '../beta/site/app.js';
+import { adaptRtcomCatalog, adaptRtcomDetail, combinePublicCatalog, combinedCatalogSource } from '../beta/site/shared/rtcom-adapter.mjs';
 
 const site = new URL('../beta/site/', import.meta.url);
 const catalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8'));
@@ -76,4 +77,33 @@ test('missing or damaged index entries are rejected for fallback', () => {
   for (const damaged of [{ ...base, schema: 'wrong' }, { ...base, items: base.items.slice(1) }, { ...base, items: [{ ...base.items[0], searchTerms: 'wrong' }, ...base.items.slice(1)] }]) {
     assert.throws(() => applySearchIndex(structuredClone(catalog), damaged));
   }
+});
+
+test('published search index includes RTCOM while preserving every existing AV result', async () => {
+  const rtcomRaw = await readFile(new URL('rtcom/raw/index.json', site), 'utf8');
+  const rtcomIndex = JSON.parse(rtcomRaw);
+  const rtcomCatalog = adaptRtcomCatalog(rtcomIndex);
+  const combined = combinePublicCatalog(catalog, rtcomIndex);
+  const combinedDetails = new Map(details);
+  const combinedRaw = new Map();
+  for (const item of rtcomCatalog) {
+    const raw = await readFile(new URL(`rtcom/raw/products/${item.rtcomId}.json`, site), 'utf8');
+    combinedRaw.set(item.slug, raw);
+    combinedDetails.set(item.slug, adaptRtcomDetail(JSON.parse(raw)));
+  }
+  const built = buildSearchIndex(combined, combinedDetails, JSON.stringify(catalog), combinedRaw, combinedCatalogSource(JSON.stringify(catalog), rtcomRaw));
+  assert.equal(built.items.length, catalog.filter(item => item.slug).length + rtcomCatalog.length);
+  assert.match(built.catalogSetSha256, /^[a-f0-9]{64}$/);
+  const indexed = structuredClone(combined);
+  applySearchIndex(indexed, built, built.catalogSetSha256);
+  const existingIndexed = structuredClone(catalog);
+  const existingBuilt = buildSearchIndex(catalog, details);
+  applySearchIndex(existingIndexed, existingBuilt, existingBuilt.catalogSetSha256);
+  for (const query of terms) {
+    const original = filterCatalog(existingIndexed, { query }).map(item => item.slug).filter(Boolean);
+    const after = filterCatalog(indexed, { query }).filter(item => item.brand !== 'RTCOM').map(item => item.slug).filter(Boolean);
+    assert.deepEqual(after, original, query);
+  }
+  const stored = JSON.parse(await expectedSearchIndex());
+  assert.equal(stored.items.filter(item => item.slug.startsWith('rtcom-')).length, rtcomCatalog.length);
 });

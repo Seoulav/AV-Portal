@@ -6,6 +6,7 @@ export const RTCOM_EXCLUDED_MODELS = Object.freeze(['HS-88M-U', 'HS-88MX', 'HD-D
 const excludedModels = new Set(RTCOM_EXCLUDED_MODELS.map(value => value.toUpperCase()));
 const validId = value => typeof value === 'string' && /^[a-z0-9-]+$/.test(value);
 const plainText = value => String(value ?? '').replaceAll('**', '').trim();
+const normalizeNewlines = value => String(value ?? '').replaceAll('\r\n', '\n');
 const productIdentity = product => [product.model, product.productName, product.id].filter(Boolean).map(value => String(value).trim().toUpperCase());
 
 export function rtcomSlug(id) {
@@ -67,6 +68,15 @@ export function adaptRtcomCatalog(index, options) {
     };
     return item;
   });
+}
+
+export function combinePublicCatalog(avCatalog, rtcomIndex) {
+  const existingSlugs = avCatalog.map(item => item.slug).filter(Boolean);
+  return rtcomIndex ? [...avCatalog, ...adaptRtcomCatalog(rtcomIndex, { existingSlugs })] : [...avCatalog];
+}
+
+export function combinedCatalogSource(avCatalogRaw, rtcomIndexRaw = '') {
+  return `${normalizeNewlines(avCatalogRaw)}\0${normalizeNewlines(rtcomIndexRaw)}`;
 }
 
 const mapDocumentType = type => type === 'Manual' ? 'User Manual' : type;

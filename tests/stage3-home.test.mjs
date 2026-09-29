@@ -25,6 +25,16 @@ test('stage 3 home keeps the search-first structure and shared design shell', as
   assert.match(html, /llms\.txt/);
 });
 
+test('home loads the stored RTCOM feed and exposes the configurator as the third design tool', async () => {
+  const html = await read('../beta/site/index.html');
+  const app = await read('../beta/site/app.js');
+  assert.match(html, /RTCOM Matrix Configurator/);
+  assert.match(html, /https:\/\/seoulav\.github\.io\/rtcom-configurator\/#matrix-configurator/);
+  assert.match(app, /fetch\('\.\/catalog\.json'\)/);
+  assert.match(app, /fetch\('\.\/rtcom\/raw\/index\.json'\)/);
+  assert.match(app, /fetch\('\.\/search-index\.json'\)/);
+});
+
 test('stage 3 card style uses four responsive columns and no status badge', async () => {
   const css = await read('../beta/site/styles.css');
   const app = await read('../beta/site/app.js');
