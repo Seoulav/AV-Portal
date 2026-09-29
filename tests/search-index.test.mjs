@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildSearchIndex } from '../beta/build-search-index.mjs';
+import { buildSearchIndex, searchIndexBytesMatch } from '../beta/build-search-index.mjs';
 import { applySearchIndex, detailSearchEntry } from '../beta/site/shared/search-index.mjs';
 import { buildSuggestions, filterCatalog } from '../beta/site/app.js';
 
@@ -29,6 +29,17 @@ test('index build is deterministic and covers exactly catalog detail slugs', () 
   const slug = first.items[0].slug;
   changed.set(slug, { ...changed.get(slug), korean: '수정된 설명' });
   assert.notEqual(buildSearchIndex(catalog, changed).sourceSha256, first.sourceSha256);
+});
+
+test('source hashes are identical for Git LF and Windows CRLF checkouts', () => {
+  const catalogLf = JSON.stringify(catalog, null, 2) + '\n';
+  const rawDetails = new Map([...details].map(([slug, detail]) => [slug, JSON.stringify(detail, null, 2) + '\n']));
+  const lf = buildSearchIndex(catalog, details, catalogLf, rawDetails);
+  const crlf = buildSearchIndex(catalog, details, catalogLf.replaceAll('\n', '\r\n'), new Map([...rawDetails].map(([slug, raw]) => [slug, raw.replaceAll('\n', '\r\n')])));
+  assert.equal(crlf.catalogSha256, lf.catalogSha256);
+  assert.equal(crlf.sourceSha256, lf.sourceSha256);
+  assert.equal(searchIndexBytesMatch(JSON.stringify(lf) + '\r\n', JSON.stringify(lf) + '\n'), true);
+  assert.equal(searchIndexBytesMatch(JSON.stringify(lf) + '\r\n', JSON.stringify(crlf) + 'changed\n'), false);
 });
 
 test('index enrichment matches old loader for 20 searches, suggestions, filters and no-detail items', () => {
