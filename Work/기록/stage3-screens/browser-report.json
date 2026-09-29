@@ -1,0 +1,185 @@
+{
+  "failures": [],
+  "errors": [],
+  "scenarios": {
+    "home-1280": {
+      "active": false,
+      "columns": 3,
+      "count": 0,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 0,
+      "noImage": 0,
+      "summaries": 0,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 82,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 82,
+      "noImage": 0,
+      "summaries": 82,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": "HDMI",
+      "search": "HDMI"
+    },
+    "Shure-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 30,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 30,
+      "noImage": 0,
+      "summaries": 30,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "video-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 62,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 62,
+      "noImage": 6,
+      "summaries": 56,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "home-390": {
+      "active": false,
+      "columns": 1,
+      "count": 0,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 0,
+      "noImage": 0,
+      "summaries": 0,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-390": {
+      "active": true,
+      "columns": 1,
+      "count": 82,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 82,
+      "noImage": 0,
+      "summaries": 82,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": "HDMI",
+      "search": "HDMI"
+    },
+    "Shure-390": {
+      "active": true,
+      "columns": 1,
+      "count": 30,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 30,
+      "noImage": 0,
+      "summaries": 30,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "video-390": {
+      "active": true,
+      "columns": 1,
+      "count": 62,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 62,
+      "noImage": 6,
+      "summaries": 56,
+      "links": [
+        "./catalog.html",
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-900": {
+      "columns": 3,
+      "overflow": false
+    },
+    "HDMI-650": {
+      "columns": 2,
+      "overflow": false
+    }
+  },
+  "noSummary": {
+    "summary": false,
+    "placeholder": true
+  },
+  "empty": {
+    "visible": true,
+    "reset": true,
+    "count": 0
+  },
+  "reset": {
+    "workspaceHidden": true,
+    "query": ""
+  },
+  "brandBefore": {
+    "brand": "Shure",
+    "count": 30
+  },
+  "brandAfter": {
+    "brand": "Shure",
+    "selected": "true",
+    "count": 30
+  },
+  "longFact": {
+    "text": "100-240 V~, 50/60Hz, 10A~5A",
+    "fontSize": "14px",
+    "fontWeight": "700"
+  }
+}
