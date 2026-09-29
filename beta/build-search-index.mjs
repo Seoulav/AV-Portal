@@ -6,6 +6,9 @@ import { detailSearchEntry } from './site/shared/search-index.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const sha256 = value => createHash('sha256').update(value).digest('hex');
+const normalizeNewlines = value => value.replaceAll('\r\n', '\n');
+
+export const searchIndexBytesMatch = (stored, expected) => normalizeNewlines(stored) === normalizeNewlines(expected);
 
 export function buildSearchIndex(catalog, details, catalogRaw = JSON.stringify(catalog), detailRaw = new Map()) {
   const items = catalog.filter(item => item.kind === 'equipment' && item.slug).map(item => {
@@ -13,8 +16,9 @@ export function buildSearchIndex(catalog, details, catalogRaw = JSON.stringify(c
     if (!detail) throw new Error(`상세 JSON 없음: ${item.slug}`);
     return detailSearchEntry(item, detail);
   });
-  const source = [catalogRaw, ...items.map(item => detailRaw.get(item.slug) ?? JSON.stringify(details.get(item.slug)))].join('\0');
-  return { schema: 'avportal.search-index.v1', catalogSha256: sha256(catalogRaw), sourceSha256: sha256(source), items };
+  const normalizedCatalog = normalizeNewlines(catalogRaw);
+  const source = [normalizedCatalog, ...items.map(item => normalizeNewlines(detailRaw.get(item.slug) ?? JSON.stringify(details.get(item.slug))))].join('\0');
+  return { schema: 'avportal.search-index.v1', catalogSha256: sha256(normalizedCatalog), sourceSha256: sha256(source), items };
 }
 
 export async function expectedSearchIndex() {
@@ -35,7 +39,7 @@ async function main() {
   const expected = await expectedSearchIndex();
   if (process.argv.includes('--check')) {
     const stored = await readFile(target, 'utf8').catch(() => '');
-    if (stored !== expected) throw new Error('search-index.json이 현재 공개 데이터와 다릅니다. node beta/build-search-index.mjs를 실행하세요.');
+    if (!searchIndexBytesMatch(stored, expected)) throw new Error('search-index.json이 현재 공개 데이터와 다릅니다. node beta/build-search-index.mjs를 실행하세요.');
     console.log(`search-index.json check OK (${Buffer.byteLength(expected)} bytes)`);
   } else {
     await writeFile(target, expected, 'utf8');

@@ -92,7 +92,7 @@ async function loadSearchIndex(items, catalogRaw) {
     const response = await fetch('./search-index.json');
     if (!response.ok) throw new Error('검색 인덱스 없음');
     const index = await response.json();
-    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(catalogRaw));
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(catalogRaw.replaceAll('\r\n', '\n')));
     const catalogHash = [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, '0')).join('');
     applySearchIndex(items, index, catalogHash);
   } catch { await loadDetailSearchTerms(items); }
