@@ -59,8 +59,8 @@ export function createGroup1PreviewServer() {
           record.images = localImages;
           record.presentation ??= {};
           record.presentation.visualVariant = 'official-local';
-          record.presentation.galleryRightsBadge = '로컬 검토 · 재게시 권한 미확인';
-          record.presentation.galleryRights = '제조사 공식 사진을 이 PC의 로컬 검토 화면에서만 표시합니다. 공개 재게시·핫링크 권한은 확인되지 않았습니다.';
+          record.presentation.galleryRightsBadge = '로컬 검토 · 출처 확인 필요';
+          record.presentation.galleryRights = '제조사 공식 사진을 로컬 검토 화면에서 표시합니다. 출처와 모델 일치를 확인해 주세요.';
         }
         body = Buffer.from(JSON.stringify(record));
       }

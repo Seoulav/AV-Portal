@@ -23,7 +23,7 @@ export function transformDetailHtml(source) {
     .replaceAll('LOCAL PREVIEW', 'PUBLIC BETA')
     .replaceAll('공개 Library', 'Library')
     .replaceAll('로컬 이미지가 없습니다', '게시된 이미지가 없습니다')
-    .replaceAll('로컬 시안 이미지', '공식 제품 이미지')
+    .replaceAll('로컬 시안 이미지', '제품 이미지')
     .replaceAll('AV PORTAL · PRODUCT DETAIL LOCAL STUDY', 'AV PORTAL · PRODUCT DETAIL BETA');
 }
 

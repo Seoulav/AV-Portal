@@ -18,14 +18,14 @@ test('Group 1 product pages publish only the reviewed official image roles', asy
     assert.deepEqual(product.images.map(image => image.role), roles, `${slug}: image roles`);
     assert.equal(product.presentation.visualVariant, 'official-product-images');
     assert.match(product.presentation.galleryRightsBadge, /사용자 게시 승인/);
-    assert.match(product.presentation.galleryRights, /제조사 재사용 권리.*미확인/);
+    assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
 
     for (const image of product.images) {
       assert.match(image.file, new RegExp(`^${slug}-(?:main|front|rear|perspective)\\.webp$`));
       assert.equal(image.officialSource, true);
       assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
       assert.match(image.publicationStatus, /사용자 게시 승인/);
-      assert.match(image.publicationStatus, /제조사 재사용 권리 미확인/);
+      assert.match(image.publicationStatus, /공식 출처 기록/);
       assert.match(image.sourceUrl, /^https:\/\//);
       const file = new URL(`images/${image.file}`, site);
       const bytes = await readFile(file);

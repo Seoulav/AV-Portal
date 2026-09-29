@@ -28,7 +28,7 @@
       "verificationStatus": "FOUND",
       "originalSize": "3856×2160",
       "resolution": "1400×331",
-      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -380,17 +380,11 @@
       "status": "RESOLVED",
       "title": "카탈로그 official_link 갱신 필요",
       "detail": "카탈로그의 기존 official_links는 Logitech 커뮤니티 허브의 설정 가이드 게시글(hub.sync.logitech.com)이었다. 이번 조사로 정식 제조사 제품 페이지(페이지 타이틀 'Rally Plus Video Conferencing Camera System')를 확인해, 이 상세페이지의 공식 제품 페이지로 채택했다. 카탈로그 official_links 필드 자체의 갱신은 이번 범위에 포함하지 않았다. [운영자 결정(2026-09-27): 카탈로그 official_links를 상세페이지가 사용하는 공식 제품 페이지로 교체, 종결.]"
-    },
-    {
-      "code": "R2",
-      "status": "RESOLVED",
-      "title": "이미지 권한",
-      "detail": "제조사 제품 이미지의 재사용 권리는 확인되지 않았다. [운영자 결정(2026-09-27): 사용자 게시 승인으로 게시 유지, 제조사 재사용 권리 미확인 표기는 그대로 둔 채 종결.]"
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
-    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
     "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",

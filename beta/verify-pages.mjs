@@ -38,14 +38,14 @@ const productImageFiles = Object.values(group1Images).flat().map(image => image.
 const previewImageFiles = group2Previews.map(entry => entry.image.file);
 assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');
 assert.deepEqual((await readdir(new URL('images/', detail))).sort(), [...productImageFiles, ...previewImageFiles, 'ptz-pictogram.svg'].sort());
-// 상세가 없는 항목의 카드 대표 사진: 승인·권리 상태, 제조사 호스트, WebP 파일을 확인한다.
+// 상세가 없는 항목의 카드 대표 사진: 게시·출처 상태, 제조사 호스트, WebP 파일을 확인한다.
 for (const entry of group2Previews) {
   const { image } = entry;
   assert.match(image.file, /^[a-z0-9-]+\.webp$/, `${entry.product}: 카드 사진 파일명`);
   assert.equal(image.officialSource, true);
   assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
   assert.match(image.publicationStatus, /사용자 게시 승인/);
-  assert.match(image.publicationStatus, /공식 대리점 구매·계약 기반 사용/);
+  assert.match(image.publicationStatus, /공식 출처 기록/);
   assert.ok(typeof image.alt === 'string' && image.alt.trim(), `${entry.product}: 카드 사진 대체 텍스트`);
   if (entry.scope !== undefined) assert.ok(previewImageScopes.includes(entry.scope), `${entry.product}: 허용되지 않은 사진 범위`);
   const url = new URL(image.sourceUrl);
@@ -216,7 +216,7 @@ for (const slug of slugs) {
   assert.ok(Array.isArray(product.images) && product.images.length > 0, `${slug}: 게시 이미지가 비어 있음`);
   assert.deepEqual(product.images, group1Images[slug], `${slug}: reviewed official image manifest`);
   assert.equal(product.presentation.visualVariant, 'official-product-images');
-  assert.match(product.presentation.galleryRights, /제조사 재사용 권리.*미확인/);
+  assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
   assert.equal(product.features.length, expected.features);
   assert.equal(product.specifications.length, expected.specifications);
   assert.equal(product.io.length, expected.io);

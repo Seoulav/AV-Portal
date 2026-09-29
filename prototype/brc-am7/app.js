@@ -182,7 +182,7 @@ function selectImage(index) {
   const sourceLink = $('#image-source-link');
   sourceLink.hidden = !item.sourceUrl;
   if (item.sourceUrl) sourceLink.href = officialLink(item.sourceUrl, '').href;
-  $('#image-provenance').textContent = [item.provider, item.model, item.role && `역할 ${item.role}`, item.verification && `검증 ${item.verification}`, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.resolution && `해상도 ${item.resolution}`, item.publicationStatus && `공개 권한 ${item.publicationStatus}`].filter(Boolean).join(' · ');
+  $('#image-provenance').textContent = [item.provider, item.model, item.role && `역할 ${item.role}`, item.verification && `검증 ${item.verification}`, item.galleryPosition && `갤러리 ${item.galleryPosition}`, item.requestedSize && `표시 요청 ${item.requestedSize}`, item.originalSize && `원본 크기 ${item.originalSize}`, item.resolution && `해상도 ${item.resolution}`, item.publicationStatus && `게시 상태 ${item.publicationStatus}`].filter(Boolean).join(' · ');
   for (const [position, button] of [...$('#thumbnails').children].entries()) {
     button.setAttribute('aria-pressed', String(position === index));
   }
@@ -295,7 +295,7 @@ if (!data.images.length) {
   const statusCount = (data.imageStatuses ?? []).length;
   $('#gallery-title').textContent = '제품 이미지 준비 중';
   $('#gallery-empty-summary').textContent = foundImages
-    ? `제품 이미지 · 공식 출처 ${foundImages}건 확인 · 재게시 권한 미확인`
+    ? `제품 이미지 · 공식 출처 ${foundImages}건 확인`
     : statusCount ? '제품 이미지 · 이미지 역할·사용 조건 검토 중 · 게시 이미지 없음' : '제품 이미지 · 확보된 사진 없음';
   $('#gallery-empty-summary').hidden = false;
   const rightsBadge = $('#gallery-rights-badge');

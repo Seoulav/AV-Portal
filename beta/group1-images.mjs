@@ -1,6 +1,6 @@
-export const publicationStatus = '사용자 게시 승인 · 제조사 재사용 권리 미확인';
-// Group 2에서 넘어온 사진은 조사 당시 확인된 권리 문구(공식 대리점 구매·계약 기반 사용)를 그대로 유지한다.
-const group2PublicationStatus = '사용자 게시 승인 · 공식 대리점 구매·계약 기반 사용';
+export const publicationStatus = '사용자 게시 승인 · 공식 출처 기록';
+// Group 2에서 넘어온 사진도 확인된 공식 출처를 표시한다.
+const group2PublicationStatus = '사용자 게시 승인 · 공식 출처 기록';
 
 const imageWith = (rights) => (role, file, alt, provider, model, sourceUrl, originalSize, resolution, verificationStatus = 'FOUND') => ({
   role,
@@ -24,7 +24,7 @@ const group2Image = imageWith(group2PublicationStatus);
 // 사이트(커뮤니티·블로그·SNS 캡처 등)의 사진도 게시할 수 있다. 제품 일치는 운영자가 사진으로 직접 확인한다.
 // officialSource: false로 표시해 beta/verify-pages.mjs의 제조사 호스트 검사를 이 항목에 한해 건너뛴다.
 // note·publicationStatus에 출처 불명 사실을 그대로 남겨 화면에서도 구분되게 한다.
-const unverifiedPublicationStatus = '사용자 게시 승인 · 출처 불명(제품 일치만 확인) · 재사용 권리 미확인';
+const unverifiedPublicationStatus = '사용자 게시 승인 · 출처 불명(제품 일치 확인)';
 const unverifiedImage = (role, file, alt, provider, model, sourceUrl, originalSize, resolution, verificationStatus = 'REVIEW REQUIRED') => ({
   role,
   file,
@@ -906,9 +906,9 @@ export function applyPublishedImages(product, slug) {
   });
   Object.assign(product.presentation, {
     visualVariant: 'official-product-images',
-    galleryRightsBadge: '사용자 게시 승인 · 권리 확인 필요',
+    galleryRightsBadge: '사용자 게시 승인 · 출처 기록',
     galleryFootNote: '제조사 공식 제품 이미지',
-    galleryRights: '사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.'
+    galleryRights: '이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.'
   });
   return product;
 }
