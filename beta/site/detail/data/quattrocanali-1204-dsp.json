@@ -226,7 +226,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 감도 @ 8Ω, 26dB 게인",
       "value": "2.48",
       "unit": "Vrms",
@@ -235,7 +235,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 감도 @ 8Ω, 29dB 게인",
       "value": "1.76",
       "unit": "Vrms",
@@ -244,7 +244,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 감도 @ 8Ω, 32dB 게인",
       "value": "1.24",
       "unit": "Vrms",
@@ -253,7 +253,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 감도 @ 8Ω, 35dB 게인",
       "value": "0.88",
       "unit": "Vrms",
@@ -262,7 +262,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "SNR (20Hz-20kHz @ 8Ω)",
       "value": ">104",
       "unit": "dB(A)",
@@ -271,7 +271,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 입력 레벨",
       "value": "20",
       "unit": "dBu",
@@ -280,7 +280,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답",
       "value": "20Hz - 20kHz ±0.5dB, 1W @ 8Ω",
       "unit": "",
@@ -289,7 +289,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "크로스토크 (1kHz)",
       "value": "-70",
       "unit": "dB",
@@ -298,7 +298,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 임피던스",
       "value": "20",
       "unit": "kΩ",
@@ -307,7 +307,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "THD+N (0.1W~Full Power)",
       "value": "<0.1 (typ <0.05)",
       "unit": "%",
@@ -316,7 +316,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "DIM (0.1W~Full Power)",
       "value": "<0.05",
       "unit": "%",
@@ -325,7 +325,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "슬루 레이트",
       "value": ">50",
       "unit": "V/µs",
@@ -334,7 +334,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "댐핑 팩터",
       "value": ">1000",
       "unit": "",
@@ -343,7 +343,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "표준 준수",
       "value": "auto-sensing Fast Ethernet (IEEE 802.3u, 100 Mbit/s)",
       "unit": "",
@@ -352,7 +352,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "지원 토폴로지",
       "value": "Star",
       "unit": "",
@@ -361,7 +361,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "원격 제어 인터페이스",
       "value": "ArmoníaPlus",
       "unit": "",
@@ -370,7 +370,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "전원 공급 방식",
       "value": "Universal regulated switch mode with PFC, SRM",
       "unit": "",
@@ -379,7 +379,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "정격 전압",
       "value": "100-240",
       "unit": "VAC ±10%",
@@ -388,7 +388,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "동작 전압 범위",
       "value": "60-264",
       "unit": "VAC",
@@ -397,7 +397,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "AC 메인 커넥터",
       "value": "IEC C20 inlet (20A max)",
       "unit": "",
@@ -406,7 +406,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "대기(Idle) 전력 @115V",
       "value": "31.0",
       "unit": "W",
@@ -415,7 +415,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "1/8 파워 소비 @115V, 4Ω",
       "value": "227",
       "unit": "W",
@@ -424,7 +424,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "대기(Idle) 전력 @230V",
       "value": "31.8",
       "unit": "W",
@@ -433,7 +433,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "1/8 파워 소비 @230V, 4Ω",
       "value": "251",
       "unit": "W",
@@ -478,7 +478,7 @@
       "verification": "MISSING"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CE",
       "value": "EMC + LVD 적합성 확인서 보유",
       "unit": "",
@@ -487,7 +487,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "FCC",
       "value": "Supplier's Declaration of Conformity",
       "unit": "",
@@ -496,7 +496,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CCC",
       "value": "중국",
       "unit": "",
@@ -505,7 +505,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CSA",
       "value": "캐나다",
       "unit": "",
@@ -514,7 +514,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CB",
       "value": "국제",
       "unit": "",
@@ -523,7 +523,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "RoHS",
       "value": "EU 및 중국 적합",
       "unit": "",
@@ -532,7 +532,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "REACH",
       "value": "적합",
       "unit": "",
@@ -541,7 +541,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "EPA",
       "value": "적합성 선언",
       "unit": "",
@@ -550,7 +550,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "UK DoC",
       "value": "영국 적합성 선언",
       "unit": "",

@@ -241,7 +241,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "치수",
       "value": "47.8 x 242.5 x 241.8",
       "unit": "mm (H x W x D)",
@@ -250,7 +250,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "무게",
       "value": "1.15",
       "unit": "kg",
@@ -259,7 +259,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "하우징",
       "value": "성형 플라스틱 + 다이캐스트 알루미늄",
       "unit": "",
@@ -268,7 +268,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "설치 방식",
       "value": "천장/벽면 브래킷 또는 탁상 거치",
       "unit": "",
@@ -322,7 +322,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

@@ -5,11 +5,11 @@ const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
 
 export const TOP_CATEGORIES = [
   { id: 'audio', label: '음향', icon: '◖', terms: ['오디오', 'audio', 'mixer', 'amplifier', 'wireless microphone system', 'antenna', 'audio interface'] },
-  { id: 'video', label: '영상', icon: '▣', terms: ['영상', 'video', 'signal switcher', 'video processor', 'video capture', 'license'] },
+  { id: 'video', label: '영상', icon: '▣', terms: ['영상', 'video', 'signal switcher', 'video processor', 'video processor card', 'video capture', 'license'] },
   { id: 'camera-conference', label: '카메라·회의', icon: '◉', terms: ['camera', 'conferencing', 'conferencing endpoint', 'video bar', '화상회의'] },
   { id: 'display-projection', label: '디스플레이·프로젝션', icon: '▱', terms: ['프로젝터', 'display', 'projector'] },
   { id: 'network-control', label: '네트워크·제어', icon: '⌘', terms: ['제어', 'control', 'control interface', 'network', 'network switch'] },
-  { id: 'power-infrastructure', label: '전원·인프라', icon: 'ϟ', terms: ['power', '전원', 'infrastructure', 'rack', 'ups', 'power supply', 'power protection'] }
+  { id: 'power-infrastructure', label: '전원·인프라', icon: 'ϟ', terms: ['power', '전원', 'infrastructure', 'rack', 'ups', 'power supply', 'power protection', 'power conditioner'] }
 ];
 
 const categoryFor = item => TOP_CATEGORIES.filter(group => item.categories.some(category => group.terms.includes(fold(category))));

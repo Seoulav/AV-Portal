@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "액세서리"
+    "Accessory"
   ],
   "english": "UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)",
   "korean": "UA844+SWB는 한 쌍의 안테나 신호를 최대 5대의 무선 수신기(QLX-D, ULX, ULX-D, SLX, BLX4R 등)로 분배하는 능동형(앰프 내장) 안테나/전원 분배 시스템이다.",
@@ -123,7 +123,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "모델 구성",
       "value": "UA844+SWB (470-960MHz)",
       "unit": "",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "RF 입력 커넥터",
       "value": "BNC",
       "unit": "",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "RF 출력 커넥터",
       "value": "BNC",
       "unit": "",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "임피던스",
       "value": "50",
       "unit": "Ω",
@@ -267,7 +267,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

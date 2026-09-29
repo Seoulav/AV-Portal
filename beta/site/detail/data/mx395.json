@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "마이크로폰"
+    "Microphone"
   ],
   "english": "MX395 Microflex Low Profile Boundary Microphone",
   "korean": "MX395는 회의실, 이사회실 등 미관이 중요한 공간에 설치하는 초저프로파일 바운더리 마이크로폰이다. 직경 2.5cm, 설치 시 표면 위로 약 2cm만 돌출되는 작은 크기에도 넓은 다이내믹 레인지와 매끄러운 주파수 응답을 제공하며, 휴대폰·태블릿 등 무선기기의 RF 간섭을 줄여주는 CommShield 기술이 내장되어 있다.",
@@ -114,7 +114,7 @@
   ],
   "specifications": [
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "카트리지 타입",
       "value": "일렉트렛 콘덴서",
       "unit": "",
@@ -123,7 +123,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답",
       "value": "50-17000",
       "unit": "Hz",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "폴라 패턴",
       "value": "Cardioid(/C) / Omnidirectional(/O) / Bidirectional(/BI)",
       "unit": "",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 임피던스",
       "value": "170",
       "unit": "Ω",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 구성",
       "value": "Active Balanced",
       "unit": "",
@@ -159,7 +159,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "감도 (1kHz, open circuit, 1Pa=94dBSPL)",
       "value": "Cardioid -35dBV/Pa(18mV), Omni -28dBV/Pa(42mV), Bi -37dBV/Pa(14mV)",
       "unit": "",
@@ -168,7 +168,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 SPL (1kHz, 1% THD, 1kΩ 부하)",
       "value": "Cardioid 121dB, Omni 114dB, Bi 123dB",
       "unit": "",
@@ -177,7 +177,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "등가 출력 노이즈 (A-weighted)",
       "value": "Cardioid 28dB SPL, Omni 21dB SPL, Bi 29dB SPL",
       "unit": "",
@@ -186,7 +186,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "신호대잡음비 (94dB SPL@1kHz 기준)",
       "value": "Cardioid 66dB, Omni 73dB, Bi 65dB",
       "unit": "",
@@ -195,7 +195,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "다이내믹 레인지 (1kΩ 부하 @1kHz)",
       "value": "Cardioid 93dB, Omni 93dB, Bi 94dB",
       "unit": "",
@@ -204,7 +204,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "공통 모드 제거비",
       "value": "45",
       "unit": "dB (최소)",
@@ -213,7 +213,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "프리앰프 출력 클리핑 레벨",
       "value": "-8dBV(0.4V)",
       "unit": "",
@@ -330,7 +330,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

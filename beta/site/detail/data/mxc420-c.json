@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "마이크로폰"
+    "Microphone"
   ],
   "english": "MXC420/C — MXC Gooseneck Microphone, 20\", Single-flex, Cardioid",
   "korean": "MXC420/C는 Shure의 디지털 컨퍼런스 시스템 Microflex Complete(MXC) 및 무선 버전 Microflex Complete Wireless(MXCW) 컨퍼런스/통역 유닛에 연결해 사용하는 20인치(50cm) 구스넥 마이크로폰이다.",
@@ -114,7 +114,7 @@
   ],
   "specifications": [
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답",
       "value": "50-17000",
       "unit": "Hz",
@@ -123,7 +123,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "폴라 패턴",
       "value": "Cardioid",
       "unit": "",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 SPL (1kHz, 1%THD, 1kΩ부하)",
       "value": "121",
       "unit": "dB",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "신호대잡음비 (94dB SPL@1kHz 기준)",
       "value": "66",
       "unit": "dB",
@@ -177,7 +177,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "길이",
       "value": "20",
       "unit": "in. (50cm)",
@@ -186,7 +186,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "색상",
       "value": "Black",
       "unit": "",
@@ -195,7 +195,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "온도 범위",
       "value": "5°C ~ 40°C",
       "unit": "",
@@ -204,7 +204,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "포함 액세서리",
       "value": "스냅핏 폼 윈드스크린",
       "unit": "",
@@ -213,7 +213,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "동일 시리즈 다른 길이",
       "value": "MXC416(16in/40cm), MXC425(25in/63cm)",
       "unit": "",
@@ -222,7 +222,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

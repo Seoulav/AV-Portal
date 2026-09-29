@@ -272,7 +272,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "0 ~ 40°C(안전 기준), 40 ~ 70°C 구간은 70°C에서 부하 50%까지 선형 감소",
       "unit": "",
@@ -281,7 +281,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "보관 온도",
       "value": "20 ~ +80",
       "unit": "°C",
@@ -290,7 +290,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "습도(동작/보관)",
       "value": "20~80% / 10~90%",
       "unit": "",
@@ -299,7 +299,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Regulatory",
+      "group": "Certification",
       "name": "인증",
       "value": "CE(유럽), FCC(미국), CCC(중국), CB/TUV/UL(글로벌)",
       "unit": "",

@@ -124,7 +124,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "커버리지 방식",
       "value": "다중 구역 자동(Multi-Zone Automatic) 또는 수동 조향(Steerable)",
       "unit": "",
@@ -133,7 +133,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "전원",
       "value": "Power over Ethernet (PoE), Class 0",
       "unit": "",
@@ -142,7 +142,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "소비전력",
       "value": "12.5",
       "unit": "W (최대)",
@@ -151,7 +151,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "제어 소프트웨어",
       "value": "Designer 또는 웹 애플리케이션",
       "unit": "",
@@ -160,7 +160,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "케이블 요구사항",
       "value": "Cat5e 이상 (실드 케이블 권장)",
       "unit": "",
@@ -169,7 +169,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "커넥터 타입",
       "value": "RJ45 x 2",
       "unit": "",
@@ -178,7 +178,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "방진 등급",
       "value": "IEC 60529 IP5X",
       "unit": "",
@@ -187,7 +187,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "플레넘 등재",
       "value": "MXA925-S: UL2043(공기 순환 공간 사용 가능) / MXA925-R: 미등재",
       "unit": "",
@@ -196,7 +196,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "동작 온도 범위",
       "value": "-6.7°C ~ 40°C",
       "unit": "",
@@ -205,7 +205,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "보관 온도 범위",
       "value": "-29°C ~ 74°C",
       "unit": "",
@@ -349,7 +349,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "무게 (MXA925-S)",
       "value": "5.4",
       "unit": "kg (11.8 lb.)",
@@ -358,7 +358,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "무게 (MXA925-R)",
       "value": "5.8",
       "unit": "kg (12.7 lb.)",
@@ -367,7 +367,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "색상/폼팩터",
       "value": "White/Black x Square/Round (60cm 옵션 포함)",
       "unit": "",
@@ -376,7 +376,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "마감",
       "value": "도장 가능(paintable) 표면",
       "unit": "",
@@ -385,7 +385,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "설치 액세서리",
       "value": "A900-CM 천장마운트, A900W/B-R-GM(라운드 Gripple 서스펜션), A900-S-GM(사각 Gripple), A900-PM 계열(폴마운트) 등",
       "unit": "",
@@ -394,7 +394,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

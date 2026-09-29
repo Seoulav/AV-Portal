@@ -5,7 +5,7 @@
   "itemType": "PRODUCT",
   "categories": [
     "오디오",
-    "Audio Processor (DSP)"
+    "Audio Processor"
   ],
   "english": "Soundweb London BLU-100 is a 12x8 fixed-configuration signal processor with BLU link digital audio bus.",
   "korean": "BSS Soundweb London BLU-100은 12개 입력과 8개 출력을 갖춘 고정 구성 신호처리기로, BLU link 디지털 오디오 버스를 지원한다.",
@@ -246,7 +246,7 @@
   ],
   "io": [
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Phoenix/Combicon 스크류 단자",
       "signal": "Mic/Line 아날로그 입력",
       "direction": "IN",
@@ -258,7 +258,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Phoenix/Combicon 스크류 단자",
       "signal": "라인 레벨 아날로그 출력",
       "direction": "OUT",

@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "SLXD1+ Wireless Bodypack Transmitter",
   "korean": "SLXD1+는 SLX-D+ 시스템용 바디팩 송신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 수신기와 동기화 상태를 유지하며 간섭 관리·채널 스캔·자동 업데이트를 지원하고 페어링된 모바일 기기로 모니터링·설정할 수 있습니다.",
@@ -142,7 +142,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "모델",
       "value": "SLXD1+",
       "unit": "",
@@ -151,7 +151,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "폼팩터",
       "value": "바디팩 송신기",
       "unit": "",
@@ -160,7 +160,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "치수(H×W×D)",
       "value": "98 × 68 × 25.5 (3.86 × 2.68 × 1.0 in)",
       "unit": "mm",
@@ -169,7 +169,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "무게",
       "value": "89 (3.1 oz)",
       "unit": "g",
@@ -178,7 +178,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "하우징",
       "value": "PC/ABS",
       "unit": "",
@@ -286,7 +286,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "레이턴시",
       "value": "2.8",
       "unit": "ms",
@@ -295,7 +295,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 다이내믹 레인지",
       "value": "118",
       "unit": "dB",
@@ -304,7 +304,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "전고조파 왜곡(THD)",
       "value": "< 0.02",
       "unit": "%",
@@ -313,7 +313,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "디지털 오디오",
       "value": "24-bit",
       "unit": "",
@@ -322,7 +322,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "하이패스 필터",
       "value": "160 Hz, −12 dB/octave",
       "unit": "",
@@ -331,7 +331,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "마이크 오프셋 범위",
       "value": "0 ~ 21 (3 dB 단위)",
       "unit": "dB",
@@ -340,7 +340,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 커넥터",
       "value": "TA4M (4핀 수 미니 커넥터)",
       "unit": "",
@@ -349,7 +349,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 구성",
       "value": "언밸런스",
       "unit": "",
@@ -358,7 +358,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 임피던스",
       "value": "1",
       "unit": "MΩ",
@@ -367,7 +367,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 입력 레벨",
       "value": "8.2 dBV (2.57 Vrms, 7.27 Vpp)",
       "unit": "",
@@ -376,7 +376,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "프리앰프 EIN",
       "value": "−118",
       "unit": "dBV",
@@ -385,7 +385,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "TA4M 핀 배치",
       "value": "1: GND / 2: 바이어스 전압 / 3: 오디오 입력 / 4: 액티브 로드",
       "unit": "",
@@ -421,7 +421,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "보안",
+      "group": "Security",
       "name": "암호화",
       "value": "AES-256",
       "unit": "",
@@ -466,7 +466,7 @@
       "verification": "MISSING"
     },
     {
-      "group": "환경",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "−18 ~ 50 (0 °F ~ 122 °F)",
       "unit": "°C",
@@ -475,7 +475,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "환경",
+      "group": "Environment",
       "name": "보관 온도",
       "value": "−29 ~ 74 (−20 °F ~ 165 °F)",
       "unit": "°C",
@@ -484,7 +484,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

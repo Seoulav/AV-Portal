@@ -216,7 +216,7 @@
   ],
   "io": [
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Line Combicon (커넥터 1)",
       "signal": "아날로그 출력 채널 1-2",
       "direction": "OUT",
@@ -228,7 +228,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Line Combicon (커넥터 2)",
       "signal": "아날로그 출력 채널 3-4",
       "direction": "OUT",

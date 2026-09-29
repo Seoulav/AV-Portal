@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "ULXD8 Wireless Gooseneck Base Transmitter",
   "korean": "ULX-D 구즈넥 마이크용 데스크/테이블 베이스 송신기. Shure Microflex MX405, MX410, MX415 구즈넥 마이크 및 MX410DF/MX415DF Dualflex 구즈넥 마이크(모두 별매)와 결합해 사용한다.",
@@ -110,7 +110,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "제품 유형",
       "value": "구즈넥 마이크 베이스 송신기(Gooseneck Base Transmitter)",
       "unit": "",
@@ -119,7 +119,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "호환 마이크",
       "value": "Shure Microflex MX405 / MX410 / MX415, MX410DF / MX415DF(Dualflex)",
       "unit": "",
@@ -128,7 +128,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "On/Off 스위치 옵션",
       "value": "있음/없음 선택 가능(스위치 유무 옵션 SKU 구분)",
       "unit": "",
@@ -191,7 +191,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

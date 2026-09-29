@@ -126,7 +126,7 @@
   ],
   "specifications": [
     {
-      "group": "Inputs",
+      "group": "Input",
       "name": "구성",
       "value": "4x HDMI 2.0, 2x DisplayPort 1.2, 2x 12G/6G/3G-SDI(Level A&B), 2x HDMI 1.4 또는 3G-SDI(사용자 선택)",
       "unit": "",
@@ -135,7 +135,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Outputs",
+      "group": "Output",
       "name": "PGM 출력",
       "value": "2x HDMI 2.0 + 2x 미러링 12G/6G/3G-SDI(Level A&B)",
       "unit": "",
@@ -144,7 +144,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Outputs",
+      "group": "Output",
       "name": "멀티뷰어 출력",
       "value": "1x HDMI 1.4 + 1x 미러링 3G-SDI",
       "unit": "",

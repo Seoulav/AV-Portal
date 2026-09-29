@@ -223,7 +223,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도 범위",
       "value": "0 ~ 40 (32 ~ 104)",
       "unit": "°C (°F)",
@@ -232,7 +232,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "습도(비응축)",
       "value": "< 95",
       "unit": "%",

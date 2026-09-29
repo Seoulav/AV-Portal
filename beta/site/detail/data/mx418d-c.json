@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "마이크로폰"
+    "Microphone"
   ],
   "english": "MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18\", Cardioid, with Desktop Base",
   "korean": "MX418D/C는 18인치 길이의 카디오이드 구스넥 콘덴서 마이크로폰으로, 탁상용 데스크탑 베이스와 10피트(3m) XLR 케이블이 부착되어 임시 회의나 다목적 공간에서 빠르게 설치·철거할 수 있도록 설계되었다.",
@@ -114,7 +114,7 @@
   ],
   "specifications": [
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "타입",
       "value": "콘덴서 (일렉트렛 바이어스)",
       "unit": "",
@@ -123,7 +123,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답",
       "value": "50-17000",
       "unit": "Hz",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "폴라 패턴 (MX418D/C)",
       "value": "Cardioid",
       "unit": "",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 임피던스",
       "value": "150",
       "unit": "Ω (EIA 정격, 실제 180Ω)",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 구성",
       "value": "Active balanced (transformerless)",
       "unit": "",
@@ -159,7 +159,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "감도 (1kHz, open circuit, Cardioid)",
       "value": "-34",
       "unit": "dBV/Pa (21mV)",
@@ -168,7 +168,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 SPL (1kHz, 1%THD, 1kΩ부하, Cardioid)",
       "value": "123",
       "unit": "dB",
@@ -177,7 +177,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "등가 출력 노이즈 (A-weighted, Cardioid)",
       "value": "29",
       "unit": "dB SPL",
@@ -186,7 +186,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "신호대잡음비 (Cardioid, 94dB SPL@1kHz 기준)",
       "value": "65",
       "unit": "dB",
@@ -195,7 +195,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "다이내믹 레인지 (1kΩ부하@1kHz)",
       "value": "94",
       "unit": "dB",
@@ -204,7 +204,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "공통 모드 제거비",
       "value": "45",
       "unit": "dB (최소)",
@@ -213,7 +213,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "프리앰프 출력 클리핑 레벨 (1%THD)",
       "value": "-6dBV(0.5V)",
       "unit": "",
@@ -339,7 +339,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

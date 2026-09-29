@@ -325,7 +325,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "게인 범위",
       "value": "17~47",
       "unit": "dB",
@@ -334,7 +334,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "SNR (20Hz-20kHz @ 8Ω, 아날로그 입력)",
       "value": ">105",
       "unit": "dB(A)",
@@ -343,7 +343,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 감도",
       "value": "4 dBu(balanced) / -10 dBV(unbalanced)",
       "unit": "",
@@ -352,7 +352,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 입력 레벨",
       "value": "18 dBu / 6.16",
       "unit": "Vrms",
@@ -361,7 +361,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답 @ 8Ω",
       "value": "20Hz - 20kHz ±0.5dB",
       "unit": "",
@@ -370,7 +370,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "크로스토크 (1kHz)",
       "value": "-60",
       "unit": "dB",
@@ -379,7 +379,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "입력 임피던스",
       "value": "10kΩ(대 GND) / 20kΩ(balanced)",
       "unit": "",
@@ -388,7 +388,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "CMRR",
       "value": "60",
       "unit": "dB",
@@ -496,7 +496,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "네트워크 포트",
       "value": "2 x RJ45 Fast Ethernet",
       "unit": "",
@@ -505,7 +505,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "네트워크 모드",
       "value": "Switched(양 포트 기가비트 스위치 연동) 또는 Split(1포트 제어/모니터링, 1포트 오디오)",
       "unit": "",
@@ -514,7 +514,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "전원 공급 방식",
       "value": "Universal regulated switch mode with PFC, SRM",
       "unit": "",
@@ -523,7 +523,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "정격 전압",
       "value": "100-240",
       "unit": "VAC ±10%",
@@ -532,7 +532,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "동작 전압 범위",
       "value": "90-264",
       "unit": "VAC",
@@ -541,7 +541,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "AC 메인 커넥터",
       "value": "IEC 10A",
       "unit": "",
@@ -550,7 +550,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "대기(Idle) 전력",
       "value": "12",
       "unit": "W",
@@ -559,7 +559,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "냉각",
+      "group": "Cooling",
       "name": "냉각 방식",
       "value": "강제 공랭(전면→후면)",
       "unit": "",
@@ -568,7 +568,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "냉각",
+      "group": "Cooling",
       "name": "무팬 상태 평균 출력 용량",
       "value": "4",
       "unit": "W",
@@ -577,7 +577,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "냉각",
+      "group": "Cooling",
       "name": "Whisper 모드 소음",
       "value": "8 W 출력 시 26",
       "unit": "dBA",
@@ -586,7 +586,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "냉각",
+      "group": "Cooling",
       "name": "최대 소음",
       "value": "41",
       "unit": "dBA",
@@ -622,7 +622,7 @@
       "verification": "MISSING"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CE",
       "value": "EMC + LVD 적합성 확인서 보유",
       "unit": "",
@@ -631,7 +631,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "FCC",
       "value": "Supplier's Declaration of Conformity",
       "unit": "",
@@ -640,7 +640,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CCC",
       "value": "중국",
       "unit": "",
@@ -649,7 +649,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CSA",
       "value": "캐나다",
       "unit": "",
@@ -658,7 +658,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "CB",
       "value": "국제",
       "unit": "",
@@ -667,7 +667,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "RoHS",
       "value": "EU 및 중국 적합",
       "unit": "",
@@ -676,7 +676,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "REACH",
       "value": "적합",
       "unit": "",
@@ -685,7 +685,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "EPA",
       "value": "적합성 선언",
       "unit": "",
@@ -694,7 +694,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "UK DoC",
       "value": "영국 적합성 선언",
       "unit": "",

@@ -250,7 +250,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "채널수",
       "value": "4",
       "unit": "채널",
@@ -259,7 +259,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "크기(W×H×D)",
       "value": "483 x 89 x 362",
       "unit": "mm",
@@ -268,7 +268,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "무게",
       "value": "9.12",
       "unit": "kg",
@@ -277,7 +277,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "랙 유닛",
       "value": "2U",
       "unit": "",
@@ -286,7 +286,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "입력 전압",
       "value": "100-240",
       "unit": "V AC",
@@ -295,7 +295,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "전원 방식",
       "value": "PFC(역률보정) 유니버설 전원",
       "unit": "",

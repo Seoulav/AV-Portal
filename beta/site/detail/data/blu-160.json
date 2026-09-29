@@ -5,7 +5,7 @@
   "itemType": "PRODUCT",
   "categories": [
     "오디오",
-    "Audio Processor (DSP)"
+    "Audio Processor"
   ],
   "english": "Soundweb London BLU-160 is a configurable I/O signal processor with four card slots, a 256-channel BLU link digital audio bus, and EN 54-16 compliance for life safety applications.",
   "korean": "BSS Soundweb London BLU-160은 4개의 I/O 카드 슬롯을 갖춘 구성형 신호처리기로, 256채널 BLU link 디지털 오디오 버스를 지원하며 생명안전(EN 54-16) 규격을 준수한다.",
@@ -257,7 +257,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Compliance",
+      "group": "Certification",
       "name": "인증",
       "value": "EN 54-16",
       "unit": "",
@@ -295,7 +295,7 @@
   ],
   "io": [
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Phoenix/Combicon (Analog Input Card)",
       "signal": "Mic/Line 아날로그 입력",
       "direction": "IN",
@@ -307,7 +307,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Phoenix/Combicon (Analog Output Card)",
       "signal": "라인 레벨 아날로그 출력",
       "direction": "OUT",
@@ -319,7 +319,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Phoenix/Combicon (Digital Input Card)",
       "signal": "AES/EBU, S/PDIF 디지털 입력",
       "direction": "IN",
@@ -331,7 +331,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Phoenix/Combicon (Digital Output Card)",
       "signal": "AES/EBU, S/PDIF 디지털 출력",
       "direction": "OUT",
@@ -343,7 +343,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Phoenix/Combicon (AEC Input Card)",
       "signal": "AEC 마이크 입력",
       "direction": "IN",

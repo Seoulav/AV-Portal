@@ -299,7 +299,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "입출력",
+      "group": "I/O",
       "name": "입력",
       "value": "Analog, AES3, CobraNet, VDrive",
       "unit": "",
@@ -308,7 +308,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "입출력",
+      "group": "I/O",
       "name": "출력 커넥터",
       "value": "Speakon 또는 Binding Post 옵션",
       "unit": "",
@@ -317,7 +317,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "입출력",
+      "group": "I/O",
       "name": "기타 포트",
       "value": "전면 USB, Ethernet 백본",
       "unit": "",
@@ -326,7 +326,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "입출력",
+      "group": "I/O",
       "name": "채널수",
       "value": "4입력/4출력",
       "unit": "",
@@ -335,7 +335,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "크기(W×H×D)",
       "value": "483 x 89 x 431",
       "unit": "mm",
@@ -344,7 +344,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "무게",
       "value": "13.2",
       "unit": "kg",
@@ -353,7 +353,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "랙 유닛",
       "value": "2U",
       "unit": "",
@@ -362,7 +362,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "입력 전압",
       "value": "100-240",
       "unit": "V AC",
@@ -371,7 +371,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "전원 커넥터",
       "value": "32A PowerCON",
       "unit": "",

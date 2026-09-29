@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "QLXD1 Bodypack Transmitter",
   "korean": "QLX-D 디지털 무선 바디팩(벨트팩) 송신기. TA4M 커넥터로 라발리에/헤드셋/악기용 케이블과 연결한다.",
@@ -298,7 +298,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "보안",
+      "group": "Security",
       "name": "암호화",
       "value": "AES-256",
       "unit": "",
@@ -307,7 +307,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

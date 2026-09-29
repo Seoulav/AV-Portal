@@ -272,7 +272,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "5 ~ 45",
       "unit": "°C",
@@ -281,7 +281,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "습도",
       "value": "< 95%, > 5%",
       "unit": "",
@@ -290,7 +290,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Regulatory",
+      "group": "Certification",
       "name": "인증",
       "value": "CE",
       "unit": "",
