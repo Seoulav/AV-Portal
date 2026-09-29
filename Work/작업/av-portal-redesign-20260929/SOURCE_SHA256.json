@@ -1,0 +1,66 @@
+[
+  {
+    "path": "00_MASTER_PLAN.md",
+    "sha256": "1f05c73da122661ec939d869ea1e28dac366f80f89a5dc93cc890a67e82ea291"
+  },
+  {
+    "path": "01_DESIGN_FOUNDATION.md",
+    "sha256": "fa408de2599012486bcc7c6906ecd8f303fb236ca136cfbce3a17481c525263e"
+  },
+  {
+    "path": "02_DETAIL_PAGE.md",
+    "sha256": "fe708f8411f9dd79313c83b1c834d0eb57499bd13e331b20d9a726cd379aefbd"
+  },
+  {
+    "path": "03_HOME_LIBRARY.md",
+    "sha256": "2e274fe69f3d7d8265c4650dfbb2552ca6ca9fa46ed7346cd4cbc53eec39ebe3"
+  },
+  {
+    "path": "04_SEARCH_INDEX.md",
+    "sha256": "5df5b0d15a27a7824865f3eaaa4deed31f4ec98b32809ab02b7844918f69e16c"
+  },
+  {
+    "path": "05_DATA_CLEANUP.md",
+    "sha256": "4dddf3b8b9fa42371be1d5f42ae9b56af3e8d5bbb35f3f534f193c39d830b87c"
+  },
+  {
+    "path": "06_RTCOM_INTEGRATION.md",
+    "sha256": "b1a7ff4d0cb3f9485f9982851f5e9e09a953a7101d007123a3873c43283c3474"
+  },
+  {
+    "path": "PROMPTS.md",
+    "sha256": "3aa57d1c836c22bcdf2ba13f2971e38f33256fb84eee778a0bd1c5d2f22f77c3"
+  },
+  {
+    "path": "REF_ANALYSIS_2026-09-29.md",
+    "sha256": "30fd59f7091fcca3cb51e41a2c9777c5c25fba8b441989c82556f8447c387978"
+  },
+  {
+    "path": "ref/rtcom-rt-pg-styles.css",
+    "sha256": "796eff25b1bc3cd5cb00b271bd47c362030dc3034d5886227be2903aa7f877de"
+  },
+  {
+    "path": "ref/screens/goal-rtcom-hd-210u.png",
+    "sha256": "b1cfc2842f0b33165169ba784f0e4e99d21df816b6545e2473134edca162458c"
+  },
+  {
+    "path": "ref/screens/goal-rtcom-xdm.png",
+    "sha256": "9143de9968007e2089237ffb36788c7fd8500fdb2ba087aae4c2b379eb92be8e"
+  },
+  {
+    "path": "ref/screens/now-avportal-home.png",
+    "sha256": "e44cdbed4b648e7af712a37ac2ea79049c2879398b7938fc5870a49493170e22"
+  },
+  {
+    "path": "ref/screens/now-avportal-novastar-h5-io.png",
+    "sha256": "b9192238ccc12d04452680262912c0d650679dd9c17bc4e5a1f4e90a5d9b10b3"
+  },
+  {
+    "path": "ref/screens/now-avportal-tr315-mobile.png",
+    "sha256": "5a8b9f571395e6466bc24fe6e911823cc44ba8543255bf2234f38e6b7aba57f9"
+  },
+  {
+    "path": "ref/screens/now-avportal-tr315.png",
+    "sha256": "70116da65a0775ac8ca7b18ab1ff4110d6c9a9b8dc3baaf78eeae39ade874fae"
+  }
+]
