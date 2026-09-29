@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 import { MAX_PDF_BYTES } from './mirror-docs.mjs';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
@@ -8,14 +9,17 @@ import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, i
 import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
+import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
+import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
+import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
 assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
-assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'search-index.mjs']);
+assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'rtcom-adapter.mjs', 'search-index.mjs']);
 const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
 assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
 assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);
@@ -90,6 +94,25 @@ assert.ok(String(version.revision).length > 0);
 assert.equal(hashText(raw), snapshot.catalog.sha256);
 
 const catalog = JSON.parse(raw);
+// RTCOM은 원본 바이트와 SHA를 보존한 마지막 정상본 전체를 먼저 검증한 뒤 표시용 어댑터로 읽는다.
+{
+  const rtcomRoot = new URL('rtcom/', site);
+  const existingSlugs = catalog.map(item => item.slug).filter(Boolean);
+  const verified = await verifyRtcomSnapshot(fileURLToPath(rtcomRoot), { existingSlugs });
+  const rtcomRawIndex = await readFile(new URL('rtcom/raw/index.json', site));
+  assert.equal(createHash('sha256').update(rtcomRawIndex).digest('hex'), verified.manifest.source.index.sha256, 'RTCOM 원본 index SHA 불일치');
+  const forbidden = new Set(RTCOM_EXCLUDED_MODELS.map(value => value.toUpperCase()));
+  assert.ok(verified.products.every(product => !forbidden.has(String(product.model).toUpperCase())), 'RTCOM 제외 모델이 공개 정상본에 포함됨');
+  for (const item of verified.products) {
+    const source = JSON.parse(await readFile(new URL(`rtcom/raw/products/${item.id}.json`, site), 'utf8'));
+    const product = prepareProductDetail(adaptRtcomDetail(source));
+    assert.equal(product.manufacturer, 'RTCOM');
+    assert.equal(product.presentation.sourceId, item.id);
+    assert.equal(product.presentation.imageBase, '../rtcom/images/');
+    assert.equal(product.presentation.sourceProductLabel, '알티컴 제품정보에서 자세히 보기 ↗');
+    assert.ok(product.officialPage?.url.endsWith(`#products/${item.id}`), `${item.id}: RTCOM 원문 링크 누락`);
+  }
+}
 // 공개 PDF 대응표는 상세 JSON을 수정하지 않고 독립 파일로 게시한다. 파일 내용·해시·폴더를 전수 대조한다.
 {
   const docsDir = new URL('docs/', site);
@@ -245,7 +268,7 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'shared', 'vendor'].includes(name))) {
+for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'rtcom', 'shared', 'vendor'].includes(name))) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {

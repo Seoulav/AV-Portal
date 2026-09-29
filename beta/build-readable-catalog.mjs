@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { combinePublicCatalog } from './site/shared/rtcom-adapter.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const publicBase = 'https://seoulav.github.io/AV-Portal/';
@@ -32,7 +33,7 @@ export function buildCatalogHtml(catalog) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AV Portal 공개 장비 27개를 JavaScript 없이 읽을 수 있는 정적 카탈로그입니다.">
+  <meta name="description" content="AV Portal 공개 장비 ${catalog.length}개를 JavaScript 없이 읽을 수 있는 정적 카탈로그입니다.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="${publicBase}catalog.html">
   <title>AV Portal 정적 제품 카탈로그</title>
@@ -90,7 +91,9 @@ ${products}
 }
 
 export async function writeReadableCatalog() {
-  const catalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8'));
+  const avCatalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8'));
+  const rtcomIndex = JSON.parse(await readFile(new URL('rtcom/raw/index.json', site), 'utf8'));
+  const catalog = combinePublicCatalog(avCatalog, rtcomIndex);
   await Promise.all([
     writeFile(new URL('catalog.html', site), buildCatalogHtml(catalog), 'utf8'),
     writeFile(new URL('llms.txt', site), buildLlmsText(catalog), 'utf8')

@@ -29,3 +29,13 @@ test('public app has no prototype content fallback', async () => {
   assert.doesNotMatch(generated, /content\.json/);
   assert.match(generated, /location\.replace\('\.\.\/'\)/);
 });
+
+test('public detail loads RTCOM raw data through the display adapter', async () => {
+  const source = await file('prototype/brc-am7/app.js');
+  const generated = transformDetailAsset(source, 'app');
+  assert.match(source, /adaptRtcomDetail/);
+  assert.match(generated, /\.\.\/rtcom\/raw\/products\/\$\{rtcomId\}\.json/);
+  assert.match(generated, /data\.presentation\.imageBase/);
+  assert.match(generated, /sourceProductLabel/);
+  assert.doesNotMatch(generated, /Port Map|Signal Flow|EDID|딥 스위치/);
+});

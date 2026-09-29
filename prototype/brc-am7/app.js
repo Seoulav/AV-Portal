@@ -1,6 +1,7 @@
 import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20260929-002';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
+import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -35,9 +36,13 @@ if (!productKey && !allowContentFallback) {
 } else {
   try {
     if (productKey && !/^[a-z0-9-]+$/.test(productKey)) throw new Error('제품 주소 형식이 올바르지 않습니다.');
-    const response = await fetch(productKey ? `./data/${productKey}.json` : './content.json');
+    const rtcomId = productKey?.startsWith('rtcom-') ? productKey.slice('rtcom-'.length) : null;
+    const productDataPath = productKey ? `./data/${productKey}.json` : './content.json';
+    const rtcomDataPath = `../../beta/site/rtcom/raw/products/${rtcomId}.json`;
+    const response = await fetch(rtcomId ? rtcomDataPath : productDataPath);
     if (!response.ok) throw new Error('시안 콘텐츠를 읽을 수 없습니다.');
-    data = prepareProductDetail(await response.json());
+    const rawData = await response.json();
+    data = prepareProductDetail(rtcomId ? adaptRtcomDetail(rawData) : rawData);
   } catch (error) {
     const notice = element('div', 'load-failure', error.message);
     notice.setAttribute('role', 'alert');
@@ -100,8 +105,9 @@ if (!productKey && !allowContentFallback) {
 
   const official = data.officialPage;
   if (official?.url) {
-    $('#header-official').append(safeLink(official.url, '공식 제품 페이지 ↗', 'pg-btn'));
-    $('#footer-official-link').append(safeLink(official.url, '제조사 공식 홈페이지 ↗', 'pg-btn'));
+    const sourceLabel = data.presentation.sourceProductLabel ?? '공식 제품 페이지 ↗';
+    $('#header-official').append(safeLink(official.url, sourceLabel, 'pg-btn'));
+    $('#footer-official-link').append(safeLink(official.url, sourceLabel, 'pg-btn'));
     $('#dialog-product-link').href = official.url;
   } else $('#dialog-product-link').hidden = true;
 
@@ -170,13 +176,14 @@ if (!productKey && !allowContentFallback) {
 
   let selectedImage = 0;
   let zoomOpener = null;
+  const imageBase = data.presentation.imageBase ?? './images/';
   const featured = $('#featured-image');
   const dialog = $('#image-dialog');
   function selectImage(index) {
     const image = data.images[index];
     if (!image) return;
     selectedImage = index;
-    featured.src = './images/' + image.file;
+    featured.src = imageBase + image.file;
     featured.alt = image.alt || `${data.manufacturer} ${data.model} ${image.role} 이미지`;
     featured.hidden = false;
     $('#image-missing').hidden = true;
@@ -234,7 +241,7 @@ if (!productKey && !allowContentFallback) {
   const rear = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
   if (rear) {
     $('#rear-connector-panel').hidden = false;
-    $('#rear-connector-image').src = './images/' + rear.file;
+    $('#rear-connector-image').src = imageBase + rear.file;
     $('#rear-connector-image').alt = `${data.manufacturer} ${data.model} 후면 연결 단자 이미지`;
     $('#rear-connector-image').addEventListener('error', () => { $('#rear-connector-panel').hidden = true; });
     if (rear.sourceUrl) $('#rear-connector-source').href = safeLink(rear.sourceUrl, '').href;

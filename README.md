@@ -25,7 +25,7 @@ npm start
 3. 자료대장 기록은 출처 유형, 언어, 개정, 확인일, 확인 수준과 제품 적용 범위를 각각 표시합니다. 명시된 한국어 자료를 같은 종류 안에서 우선 표시합니다. 원문을 열지 못했거나 파일명·검색 결과만 일치한 후보는 확인 완료로 표시하지 않습니다. 자료 ID 하나가 여러 제품에 연결될 수 있습니다.
 4. 헤더의 AV System Builder와 LED Configurator는 각 외부 서비스로 연결됩니다.
 
-웹 링크는 허용된 HTTPS URL만 열 수 있습니다. 직접 제공 자료의 로컬 파일은 열거나 다운로드할 수 없으며, `folder`·`local_reference` 같은 개인 경로는 자료 API·화면에 노출하지 않습니다. URL의 현재 유효성, 정확 모델 적용 여부, 제품의 정식 공개 준비를 새로 판정하지 않습니다. RTCOM 웹 조사는 수행하지 않습니다.
+웹 링크는 허용된 HTTPS URL만 열 수 있습니다. 직접 제공 자료의 로컬 파일은 열거나 다운로드할 수 없으며, `folder`·`local_reference` 같은 개인 경로는 자료 API·화면에 노출하지 않습니다. URL의 현재 유효성, 정확 모델 적용 여부, 제품의 정식 공개 준비를 새로 판정하지 않습니다. RTCOM 제품정보는 `rtcom-configurator`의 공개 데이터만 읽으며 AV Portal에서 원본 값을 고치지 않습니다.
 
 `/api/catalog`은 기본 장비 보기이고 `/api/catalog?view=services`는 서비스 보기입니다. 응답의 `counts.catalog_entries`는 해당 보기의 항목 수, `counts.total_entries`는 전체 보관 수입니다. 비공개 과거 메모와 내부 공급처는 이 API와 화면에 제공하지 않습니다.
 
@@ -38,6 +38,8 @@ W-007 대응과 W-008 제안표가 이 PC에 있을 때, `scripts/build-private-
 ## 검증
 
 공개 Library의 `beta/site/catalog.json` 또는 `beta/site/detail/data/*.json`을 변경했다면 `node beta/build-search-index.mjs`로 검색 인덱스를 재생성하고, `node beta/build-search-index.mjs --check`로 일치를 확인합니다. Pages 배포에서도 `--check`가 실행됩니다. 인덱스가 없거나 손상되면 공개 홈은 기존 상세 JSON 로더로 복구합니다. 이 절차는 제품 데이터 변경 승인과 별개입니다.
+
+RTCOM 공개 정상본은 `node beta/sync-rtcom.mjs`로 갱신하고 `node beta/sync-rtcom.mjs --check`로 목록·상세·이미지의 SHA와 바이트를 전수 확인합니다. 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행해야 합니다. 예약 워크플로도 같은 순서로 검증하며, 원본에 변화가 없으면 PR을 만들지 않습니다.
 
 ```powershell
 npm test

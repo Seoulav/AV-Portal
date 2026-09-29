@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 247개
-- Product Detail: 240개
+- 공개 장비: 279개
+- Product Detail: 272개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1717,3 +1717,195 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://lumantek.co.kr/index/product_intro/75
   매뉴얼: https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=ez-umd-plus
+
+- 제품: RTCOM XDM Series
+  분류: 영상 | Video | Modular Matrix
+  종류: 장비
+  제품군 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm
+
+- 제품: RTCOM SPX Series
+  분류: 영상 | Video | Modular Matrix
+  종류: 장비
+  제품군 링크: https://seoulav.github.io/rtcom-configurator/#products/spx
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-spx
+
+- 제품: RTCOM VDM Series
+  분류: 영상 | Video | Modular Matrix
+  종류: 장비
+  제품군 링크: https://seoulav.github.io/rtcom-configurator/#products/vdm
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-vdm
+
+- 제품: RTCOM QMS-44UX
+  분류: 영상 | Video | Matrix Switcher
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/qms-44ux
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-qms-44ux
+
+- 제품: RTCOM QMS-88UX
+  분류: 영상 | Video | Matrix Switcher
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/qms-88ux
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-qms-88ux
+
+- 제품: RTCOM HD-D102U
+  분류: 영상 | Video | Splitter
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-d102u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-d102u
+
+- 제품: RTCOM HD-D102U Rack마운트
+  분류: 영상 | Video | Splitter | Rack Mount
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-d102u-rack
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-d102u-rack
+
+- 제품: RTCOM HD-13U
+  분류: 영상 | Video | Splitter
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-13u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-13u
+
+- 제품: RTCOM HD-104U (HD-14U)
+  분류: 영상 | Video | Splitter
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-104u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-104u
+
+- 제품: RTCOM HD-108U (HD-18U)
+  분류: 영상 | Video | Splitter
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-108u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-108u
+
+- 제품: RTCOM HD-210U
+  분류: 영상 | Video | Splitter
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hd-210u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hd-210u
+
+- 제품: RTCOM HDS-21U
+  분류: 영상 | Video | Switcher
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hds-21u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hds-21u
+
+- 제품: RTCOM HDS-42MU
+  분류: 영상 | Video | Switcher
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hds-42mu
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hds-42mu
+
+- 제품: RTCOM CT101-U / CR101-U
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ct101-u-cr101-u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct101-u-cr101-u
+
+- 제품: RTCOM CT103-U-H / CR103-U
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ct103-u-h-cr103-u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct103-u-h-cr103-u
+
+- 제품: RTCOM CT104-U / CR104-U
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ct104-u-cr104-u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct104-u-cr104-u
+
+- 제품: RTCOM FT101-U / FR101-U
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ft101-u-fr101-u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ft101-u-fr101-u
+
+- 제품: RTCOM FT103-U-H / FR103-U
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ft103-u-h-fr103-u
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ft103-u-h-fr103-u
+
+- 제품: RTCOM MR-4S
+  분류: 영상 | Video | Extension Frame
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/mr-4s
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-mr-4s
+
+- 제품: RTCOM OBHD-2C
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/obhd-2c
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-obhd-2c
+
+- 제품: RTCOM OBUX-1C
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/obux-1c
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-obux-1c
+
+- 제품: RTCOM SPX-R6
+  분류: 영상 | Video | Extender | Rack Mount
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/spx-r6
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-spx-r6
+
+- 제품: RTCOM SPX-TX / SPX-RX
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/spx-rx-tx
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-spx-rx-tx
+
+- 제품: RTCOM XDM-CT103 / XDM-CR103
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-ct103-cr103
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ct103-cr103
+
+- 제품: RTCOM XDM-CTR100
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-ctr100
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ctr100
+
+- 제품: RTCOM XDM-CTR100 PSE
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-ctr100-pse
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ctr100-pse
+
+- 제품: RTCOM XDM-FT101 / XDM-FR101
+  분류: 영상 | Video | Extender
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-ft101-fr101
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ft101-fr101
+
+- 제품: RTCOM XDM-PSU
+  분류: 영상 | Video | Extender | Power
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-psu
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-psu
+
+- 제품: RTCOM AHOC
+  분류: 영상 | Video | Active Optical Cable
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/ahoc
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ahoc
+
+- 제품: RTCOM HOC-UX
+  분류: 영상 | Video | Active Optical Cable
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/hoc-ux
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-hoc-ux
+
+- 제품: RTCOM LHOC
+  분류: 영상 | Video | Active Optical Cable
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/lhoc
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-lhoc
+
+- 제품: RTCOM UMC
+  분류: 영상 | Video | HDMI Cable
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/umc
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-umc

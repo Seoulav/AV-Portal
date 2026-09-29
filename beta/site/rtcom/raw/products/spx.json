@@ -1,0 +1,406 @@
+{
+  "id": "spx",
+  "group": "series",
+  "manufacturer": "RTCOM",
+  "productName": "SPX Series",
+  "model": "SPX Series",
+  "series": "Signal Processing eXpert",
+  "seriesNote": "메인프레임 5종과 8포트 입력·10~12포트 출력 보드, SPX-RX/TX 전송기로 구성한다.",
+  "itemType": "SERIES",
+  "categories": [
+    "영상",
+    "Video",
+    "Modular Matrix"
+  ],
+  "english": "Signal Processing eXpert — 4K60 4:4:4 18Gbps HDMI/CATx modular matrix with independent per-output scaling, video wall and quad view.",
+  "korean": "8포트 입력 보드와 10~12포트 출력 보드로 4K60Hz 4:4:4 신호를 분배하고 출력별 독립 스케일링을 지원하는 모듈형 매트릭스 스위처다.",
+  "subtitle": "Signal Processing eXpert · 출력별 독립 스케일링 매트릭스",
+  "lead": "8포트 입력 보드와 10~12포트 출력 보드로 **출력마다 독립 스케일링**을 하는 4K60 분배형 매트릭스입니다. 입력보다 출력이 많은 스포츠 바·레스토랑·회의실·통제실에 맞춰 설계됐습니다.",
+  "catalogPages": "13–16",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 13~16쪽의 제품 구상도·소개·LINE-UP·주요기능·I/O 보드 공통 기능·제품사양·보드 및 전송기 사양에서 확인했다. SPX-M2472·M24120 깊이는 사용자 결정(2026-09-29)에 따라 SPX 국문 사용자 매뉴얼(250805) 7~9쪽과 SPX 카탈로그(2023) 값 443.7mm로 바로잡았다(종합 카탈로그 2026 표기 433.7mm).",
+  "packageStatus": "VERIFIED",
+  "overview": "SPX(Signal Processing eXpert) 매트릭스 시리즈는 4K 60Hz 4:4:4 18Gbps 고해상도 신호를 분배하거나 다양한 해상도를 선택할 수 있는 매트릭스 스위처다. 8포트 입력 카드와 10~12포트 출력 카드를 갖추고, 심리스 스위칭과 비디오월 기능을 적용했으며, 5가지로 세분화한 메인프레임으로 Sports Bar, 레스토랑, 회의실, 보안 통제실 등 다양한 현장에 대응한다.\n\n전면 터치패널, 웹 UI, RS-232, LAN 등 제어 방식을 환경에 맞게 선택할 수 있다. 디스플레이마다 독립적인 Scaling 출력과 CEC 컨트롤 기능을 제공하고, Hot-swap 기능으로 전원을 끄지 않고 슬롯 카드를 장착·교체할 수 있다.\n\n카탈로그는 SPX 시리즈를 심플하지만 강력한 미디어 분산 솔루션으로 소개한다. 13쪽 제품 구상도는 SPX-M810(HDMI SLOT)에 셋톱박스 최대 8대와 4개 존의 비디오·오디오를 연결하는 예를 보여 준다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "spx-main.webp",
+      "alt": "RTCOM SPX-M3236 정면(흰 배경 실물 사진)",
+      "note": "Main · 사용자 제공 실물 사진(2026-09-28, SPX-M3236 모델 기준)",
+      "provider": "RTCOM",
+      "model": "SPX-M3236",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1129×732"
+    },
+    {
+      "role": "Front",
+      "file": "spx-front.webp",
+      "alt": "RTCOM SPX-M810 전면",
+      "note": "Front · SPX-M810 전면 사진",
+      "provider": "RTCOM",
+      "model": "SPX-M810",
+      "source": "R",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "715×161"
+    },
+    {
+      "role": "Diagram",
+      "file": "spx-diagram.webp",
+      "alt": "RTCOM SPX-M810 시스템 구성도(Zone별 오디오·비디오, LAN Cable, Control)",
+      "note": "Diagram · 카탈로그 46쪽판 13쪽 제조사 제공 시스템 구성도(SPX-M810 모델 기준)",
+      "provider": "RTCOM",
+      "model": "SPX Series",
+      "source": "C2",
+      "officialSource": true,
+      "verificationStatus": "FOUND"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    },
+    {
+      "role": "Diagram",
+      "status": "FOUND"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 13~16쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "spx-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "spx-catalog-p1.webp",
+        "spx-catalog-p2.webp",
+        "spx-catalog-p3.webp",
+        "spx-catalog-p4.webp"
+      ]
+    },
+    {
+      "type": "Diagram",
+      "status": "FOUND",
+      "title": "제조사 시스템 구성도(SPX-M810)",
+      "language": "en/ko",
+      "note": "카탈로그 46쪽판 13쪽"
+    },
+    {
+      "type": "Manual",
+      "status": "FOUND",
+      "title": "SPX 시리즈 사용자 매뉴얼(250805, 국문)",
+      "language": "ko",
+      "note": "사용자 제공 매뉴얼 공개본(2026-09-29, 사용자 결정 — SPX 공통 매뉴얼 공개)",
+      "file": "spx-manual.pdf",
+      "preview": "pdfjs"
+    }
+  ],
+  "features": [
+    {
+      "text": "모든 출력 포트 독립 스케일링 지원",
+      "source": "C"
+    },
+    {
+      "text": "최대 12개의 디스플레이로 구현 가능한 비디오월 기능(2x2, 3x3, 3x4) 지원",
+      "source": "C"
+    },
+    {
+      "text": "멀티 뷰(쿼드 뷰) 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "CEC 디스플레이 제어 지원",
+      "source": "C"
+    },
+    {
+      "text": "RS-232, TCP/IP, Web UI 제어 지원",
+      "source": "C"
+    },
+    {
+      "text": "Hot-Swap 지원(슬롯·FAN 모듈 교체)",
+      "source": "C"
+    },
+    {
+      "text": "전면 Touch Screen으로 쉽게 제어",
+      "source": "C"
+    },
+    {
+      "text": "POC(Power Over CAT) 지원(메인프레임에서 SPX-RX 전원 공급)",
+      "source": "C"
+    },
+    {
+      "text": "EDID, HDCP 2.2 지원",
+      "source": "C"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "디지털 비디오 대역폭",
+      "value": "18",
+      "unit": "Gbps",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "최대 해상도",
+      "value": "4096×2160@60Hz, 3840×2160@60Hz",
+      "unit": "",
+      "condition": "4:4:4 (최대 4K60Hz)",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "입·출력 구성",
+      "value": "8x10, 16x20, 32x36, 24x72, 24x120",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "입력 신호",
+      "value": "HDMI",
+      "unit": "",
+      "condition": "입력 보드는 SPX-HIS8(HDMI)",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "출력 신호",
+      "value": "HDMI, CATx",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100~220",
+      "unit": "VAC",
+      "condition": "50/60Hz, 800W",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "내구성(MTBF)",
+      "value": "50,000",
+      "unit": "hours",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "가용 온도",
+      "value": "0~40",
+      "unit": "°C",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "가용 습도",
+      "value": "80% 이하",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "슬롯당 포트",
+      "value": "8~12",
+      "unit": "포트",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 인터페이스 보드 규격",
+      "value": "HDMI 2.0b",
+      "unit": "",
+      "condition": "I/O 보드 공통 기능",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Transmission",
+      "name": "데이터 전송 속도",
+      "value": "18",
+      "unit": "Gbps",
+      "condition": "최대 · I/O 보드 공통 기능",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDCP",
+      "value": "HDCP 2.2 지원",
+      "unit": "",
+      "condition": "I/O 보드 공통 기능",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Transmission",
+      "name": "CATx 보드 전송 거리",
+      "value": "50",
+      "unit": "m",
+      "condition": "CAT 6 기준 4K 60Hz",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Transmission",
+      "name": "CATx 보드 전송 거리",
+      "value": "60",
+      "unit": "m",
+      "condition": "CAT 6 기준 1080p",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [],
+  "lineup": [
+    {
+      "model": "SPX-M810",
+      "kind": "메인프레임",
+      "summary": "8x10까지의 I/O · 4.3\" Touch Screen · 483×355×88.1mm(2U)",
+      "rackUnits": 2
+    },
+    {
+      "model": "SPX-M1620",
+      "kind": "메인프레임",
+      "summary": "8x10~16x20 I/O · 7\" Touch Screen · 483×355×177mm(4U)",
+      "rackUnits": 4
+    },
+    {
+      "model": "SPX-M3236",
+      "kind": "메인프레임",
+      "summary": "8x10~32x36 I/O · 7\" Touch Screen · 483×355×310.3mm(7U)",
+      "rackUnits": 7
+    },
+    {
+      "model": "SPX-M2472",
+      "kind": "메인프레임",
+      "summary": "8x10~24x72 I/O · 7\" Touch Screen · 483×443.7×365mm(8U)",
+      "rackUnits": 8
+    },
+    {
+      "model": "SPX-M24120",
+      "kind": "메인프레임",
+      "summary": "8x10~24x120 I/O · 7\" Touch Screen · 483×443.7×365mm(8U)",
+      "rackUnits": 8
+    },
+    {
+      "model": "SPX-HIS8",
+      "kind": "입력 보드",
+      "summary": "HDMI 2.0b 입력 8포트 · 3840×2160@60Hz · 스테레오 오디오 출력(추출) 8"
+    },
+    {
+      "model": "SPX-HOS10",
+      "kind": "출력 보드",
+      "summary": "HDMI 2.0b 출력 10포트 · 3-pin phoenix 오디오 2포트 · 3840×2160@60Hz"
+    },
+    {
+      "model": "SPX-HOS12",
+      "kind": "출력 보드",
+      "summary": "HDMI 2.0b 출력 12포트 · 3840×2160@60Hz"
+    },
+    {
+      "model": "SPX-COS12",
+      "kind": "출력 보드",
+      "summary": "CATx 출력 12포트 · SPX-RX와 사용 · 3840×2160@60Hz"
+    },
+    {
+      "model": "SPX-RX/TX",
+      "kind": "전송기",
+      "summary": "CATx(RJ45)/HDMI 입력, HDMI 2.0/CATx(RJ45) 출력 · 4K60Hz 4:4:4 · 18Gbps · HDCP 2.2"
+    }
+  ],
+  "related": [
+    {
+      "relation": "WORKS_WITH",
+      "target": "spx-rx-tx",
+      "note": "SPX-COS12(CATx 출력 보드) ↔ SPX-RX, 전송기 SPX-TX/RX"
+    }
+  ],
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "13–16",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "R",
+      "name": "저장소 기존 제품 사진(output/design/assets)",
+      "page": "",
+      "scope": "구성기 화면에서 사용 중인 RTCOM 제품 사진"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "13–16",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    },
+    {
+      "code": "J",
+      "name": "서울영상테크 SI사업본부 검토 판단",
+      "page": "",
+      "scope": "사용자 위임(2026-09-27) — 카탈로그 내부 충돌·오기 정리"
+    },
+    {
+      "code": "P1",
+      "name": "서울영상테크 SI사업본부 제공 실물 사진",
+      "page": "",
+      "scope": "사용자 업로드 고해상도 제품 사진(2026-09-28, 흰 배경 촬영본)"
+    },
+    {
+      "code": "M1",
+      "name": "SPX 시리즈 국문 사용자 매뉴얼(250805)",
+      "page": "3, 7–9",
+      "scope": "제조사 공식 출처 — 사용자 제공 PDF(2026-09-29 재제공), 제품 상세 매뉴얼 버튼으로 공개(spx-manual.pdf). 7~9쪽 프레임 크기(W×D×H): M2472·M24120 483×443.7×365mm"
+    },
+    {
+      "code": "C3",
+      "name": "SPX 시리즈 카탈로그(국문, 2023)",
+      "page": "2",
+      "scope": "제조사 자료 — 사용자 제공 PDF(2026-09-29, 배포 제외). SPX-M2472·M24120 깊이 443.7mm로 매뉴얼과 같음"
+    },
+    {
+      "code": "U2",
+      "name": "서울영상테크 SI사업본부 확인",
+      "page": "",
+      "scope": "사용자 결정(2026-09-29) — SPX-M2472·M24120 깊이는 종합 카탈로그 2026(433.7mm) 대신 매뉴얼·2023 카탈로그 값 443.7mm로 표기"
+    }
+  ],
+  "issues": []
+}

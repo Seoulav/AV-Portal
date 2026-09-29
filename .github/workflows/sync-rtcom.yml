@@ -1,0 +1,65 @@
+name: Synchronize RTCOM public products
+
+on:
+  schedule:
+    - cron: '17 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: rtcom-public-sync
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Synchronize complete RTCOM snapshot
+        run: node beta/sync-rtcom.mjs
+      - name: Rebuild derived public files
+        run: |
+          node beta/build-search-index.mjs
+          node beta/build-readable-catalog.mjs
+      - name: Detect a real source change
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet -- beta/site/rtcom beta/site/search-index.json beta/site/catalog.html beta/site/llms.txt; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Validate synchronized snapshot
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          node beta/sync-rtcom.mjs --check
+          node beta/build-search-index.mjs --check
+          node beta/verify-pages.mjs
+          npm test
+      - name: Open and merge validated change
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SYNC_BRANCH: automation/rtcom-sync-${{ github.run_id }}-${{ github.run_attempt }}
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$SYNC_BRANCH"
+          git add beta/site/rtcom beta/site/search-index.json beta/site/catalog.html beta/site/llms.txt
+          git commit -m "data: synchronize RTCOM public products"
+          git push --set-upstream origin "$SYNC_BRANCH"
+          pr_url=$(gh pr create --base main --head "$SYNC_BRANCH" --title "data: synchronize RTCOM public products" --body "Daily RTCOM public-data synchronization. The complete snapshot, search index, readable catalog, Pages artifact, and test suite were validated before this PR was opened.")
+          gh pr merge "$pr_url" --squash --delete-branch
+          gh workflow run pages.yml --ref main

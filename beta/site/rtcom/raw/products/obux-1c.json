@@ -1,0 +1,577 @@
+{
+  "id": "obux-1c",
+  "group": "extender",
+  "manufacturer": "RTCOM",
+  "productName": "OBUX-1C",
+  "model": "OBUX-1C",
+  "series": "Optical Extender",
+  "seriesNote": "송신기(Tx)와 수신기(Rx)로 구성된다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Extender"
+  ],
+  "english": "4K60 4:4:4 HDMI fiber optic extender over OM3 multi-mode SC fiber up to 300m, with analog audio embedding and de-embedding.",
+  "korean": "4K60Hz 4:4:4 HDMI 신호를 OM3 멀티모드(SC) 광케이블로 최대 300m 전송하고, 아날로그 오디오 병합·추출을 지원하는 광 송·수신기다.",
+  "subtitle": "Optical Extender · 4K60 4:4:4 광 송·수신기",
+  "lead": "4K60Hz 4:4:4 HDMI 신호를 **OM3 멀티모드 광케이블로 최대 300m** 전송하고, 아날로그 오디오 병합·추출을 지원합니다.",
+  "catalogPages": "40",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 42쪽의 OBUX-1C 소개·주요기능·크기 및 무게·제품사양에서 확인했다. OBUX-1C 사용자 매뉴얼 Ver.2.2(4~10쪽)로 Tx 전면 Mode 딥 스위치(오디오·EDID), 지원 사양(HDMI 2.0b·HDR·Dolby Atmos·HDCP 1.x/2.2), S/P 단자를 보완했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "OBUX-1C는 최대 4K 60Hz(4:4:4) 해상도를 지원하는 광 송·수신기로, 멀티모드(SC Type, OM3) 전용 광케이블을 통해 영상 신호를 최대 300m까지 전송한다. 아날로그 오디오 신호의 병합(Embedded)과 추출(De-embedded) 기능을 갖추었다.\n\n압축 없이 원본 영상 신호를 그대로 전송하며, 컬러 딥(Color Depth)과 선명한 화질이 필요한 방송·전시·회의실·컨트롤룸 환경을 대상으로 한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "obux-1c-main.webp",
+      "alt": "RTCOM OBUX-1C 송신기(TX) 상판과 양쪽 단자면",
+      "note": "Main · TX 카탈로그 42쪽 사진",
+      "provider": "RTCOM",
+      "model": "OBUX-1C",
+      "source": "C",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1080×368"
+    },
+    {
+      "role": "Front",
+      "file": "obux-1c-tx-front.webp",
+      "alt": "RTCOM OBUX-1C 송신기(Tx) 전면",
+      "note": "Front · Tx 사용자 제공 고해상도 실물 사진(2026-09-28)",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Tx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1013×343"
+    },
+    {
+      "role": "Rear",
+      "file": "obux-1c-tx-rear.webp",
+      "alt": "RTCOM OBUX-1C 송신기(Tx) 후면",
+      "note": "Rear · Tx 사용자 제공 고해상도 실물 사진(2026-09-28)",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Tx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1015×344"
+    },
+    {
+      "role": "Other",
+      "file": "obux-1c-tx-front-rear.webp",
+      "alt": "RTCOM OBUX-1C 송신기(Tx) 전면(위)·후면(아래) 합성 사진",
+      "note": "Other · Tx 사용자 제공 고해상도 실물 사진(2026-09-28) 위아래 합성",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Tx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1015×767"
+    },
+    {
+      "role": "Other",
+      "file": "obux-1c-perspective.webp",
+      "alt": "RTCOM OBUX-1C 수신기(RX) 후면 단자면(흰 배경 실물 사진)",
+      "note": "Other · 사용자 제공 실물 사진(2026-09-28, RX 후면)",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Rx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1026×328"
+    },
+    {
+      "role": "Front",
+      "file": "obux-1c-rx-front.webp",
+      "alt": "RTCOM OBUX-1C 수신기(RX) 정면(흰 배경 실물 사진)",
+      "note": "Front · 사용자 제공 실물 사진(2026-09-28, RX 정면)",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Rx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1034×320"
+    },
+    {
+      "role": "Other",
+      "file": "obux-1c-rx-front-rear.webp",
+      "alt": "RTCOM OBUX-1C 수신기(RX) 정면(위)·후면(아래) 합성 사진",
+      "note": "Other · 사용자 제공 실물 사진(2026-09-28, RX 정면·후면 위아래 합성)",
+      "provider": "RTCOM",
+      "model": "OBUX-1C Rx",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1034×728"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    },
+    {
+      "role": "Other",
+      "status": "FOUND"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 40쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "obux-1c-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "obux-1c-catalog-p1.webp"
+      ]
+    },
+    {
+      "type": "Manual",
+      "status": "FOUND",
+      "title": "OBUX-1C 사용자 매뉴얼 Ver.2.2",
+      "language": "ko",
+      "note": "사용자 제공 매뉴얼 공개본(2026-09-28, 사용자 결정 \"1번\" — 매뉴얼 전부 공개)",
+      "file": "obux-1c-manual.pdf",
+      "preview": "pdfjs"
+    }
+  ],
+  "features": [
+    {
+      "text": "4K@60Hz(4:4:4) 고해상도 영상 전송 지원",
+      "source": "C"
+    },
+    {
+      "text": "멀티모드 광케이블(OM3) 전용",
+      "source": "C"
+    },
+    {
+      "text": "최대 300m 전송거리 지원",
+      "source": "C"
+    },
+    {
+      "text": "HDCP 지원",
+      "source": "C"
+    },
+    {
+      "text": "HDR(Static·Dynamic), Dolby Atmos 지원",
+      "source": "M1"
+    },
+    {
+      "text": "내장 EDID 지원(Tx Mode 딥 스위치)",
+      "source": "M1"
+    },
+    {
+      "text": "Plug & Play로 쉽게 설치",
+      "source": "C"
+    },
+    {
+      "text": "아날로그 오디오 병합·추출 지원",
+      "source": "C"
+    },
+    {
+      "text": "무압축 원본 영상 신호 전송",
+      "source": "C"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "최대 해상도",
+      "value": "4K@60Hz",
+      "unit": "",
+      "condition": "4:4:4",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Transmission",
+      "name": "최대 전송거리",
+      "value": "300",
+      "unit": "m",
+      "condition": "Multi Mode (OM3, SC Type) 전용",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDCP",
+      "value": "HDCP 1.x, 2.2 지원",
+      "unit": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "지원 사양",
+      "value": "HDMI 2.0b, HDR(Static·Dynamic: HDR+·Dolby Vision 등), Dolby Atmos Audio",
+      "unit": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "DC 12V 1.0A",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "120×73.8×30",
+      "unit": "mm",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "0.28",
+      "unit": "kg",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "TX · Video",
+      "connector": "HDMI (female)",
+      "signal": "HDMI",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "TX",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "TX · Audio",
+      "connector": "Analog Stereo Audio",
+      "signal": "Analog Stereo Audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "TX · 오디오 병합",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "TX · Transmission",
+      "connector": "SC connector (female)",
+      "signal": "Fiber (OM3 Multi Mode)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "TX · Fiber OUT",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "TX · Control",
+      "connector": "Mini USB(S/P)",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "TX · 펌웨어 업데이트",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RX · Transmission",
+      "connector": "SC connector (female)",
+      "signal": "Fiber (OM3 Multi Mode)",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "RX · Fiber IN",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RX · Video",
+      "connector": "HDMI (female)",
+      "signal": "HDMI",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "RX",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RX · Audio",
+      "connector": "Analog Stereo Audio",
+      "signal": "Analog Stereo Audio",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "RX · 오디오 추출",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "RX · Control",
+      "connector": "Mini USB(S/P)",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "RX · 펌웨어 업데이트",
+      "source": "M1",
+      "verification": "VERIFIED"
+    }
+  ],
+  "related": [],
+  "portMap": [
+    {
+      "image": "Other",
+      "file": "obux-1c-tx-front-rear.webp",
+      "title": "송신기 OBUX-1C Tx · 전면 / 뒷면",
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI IN",
+          "desc": "소스 연결",
+          "x1": 568,
+          "x2": 684,
+          "side": "top",
+          "y": 465
+        },
+        {
+          "n": 2,
+          "label": "Audio IN",
+          "desc": "3핀 터미널(L·접지·R) · 아날로그 오디오 병합",
+          "x1": 430,
+          "x2": 523,
+          "side": "top",
+          "y": 465
+        },
+        {
+          "n": 3,
+          "label": "Fiber OUT",
+          "desc": "SC 광 단자 · 멀티모드(OM3) 광케이블로 수신기와 연결",
+          "x1": 792,
+          "x2": 896,
+          "side": "top",
+          "y": 465
+        },
+        {
+          "n": 4,
+          "label": "Mode",
+          "desc": "전면 4핀 딥 스위치(1번 오디오, 2·3·4번 EDID). 설정 방법은 '06 딥 스위치 설정' 참고",
+          "x1": 680,
+          "x2": 765,
+          "side": "top",
+          "y": 43
+        },
+        {
+          "n": 5,
+          "label": "S/P",
+          "desc": "Mini USB · 펌웨어 업데이트",
+          "x1": 355,
+          "x2": 425,
+          "side": "top",
+          "y": 43
+        },
+        {
+          "n": 6,
+          "label": "+12V",
+          "desc": "전원 어댑터 12V 1A",
+          "x1": 178,
+          "x2": 248,
+          "side": "top",
+          "y": 465
+        }
+      ]
+    },
+    {
+      "image": "Other",
+      "file": "obux-1c-rx-front-rear.webp",
+      "title": "수신기 OBUX-1C Rx · 전면 / 뒷면",
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI OUT",
+          "desc": "디스플레이 연결",
+          "x1": 580,
+          "x2": 705,
+          "side": "top",
+          "y": 428
+        },
+        {
+          "n": 2,
+          "label": "Audio OUT",
+          "desc": "3핀 터미널(L·접지·R) · 아날로그 오디오 추출",
+          "x1": 434,
+          "x2": 532,
+          "side": "top",
+          "y": 428
+        },
+        {
+          "n": 3,
+          "label": "Fiber IN",
+          "desc": "SC 광 단자 · 송신기와 연결",
+          "x1": 814,
+          "x2": 928,
+          "side": "top",
+          "y": 428
+        },
+        {
+          "n": 4,
+          "label": "S/P",
+          "desc": "Mini USB · 펌웨어 업데이트",
+          "x1": 355,
+          "x2": 425,
+          "side": "top",
+          "y": 25
+        },
+        {
+          "n": 5,
+          "label": "+12V",
+          "desc": "전원 어댑터 12V 1A",
+          "x1": 170,
+          "x2": 250,
+          "side": "top",
+          "y": 428
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "42",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "40",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    },
+    {
+      "code": "J",
+      "name": "서울영상테크 SI사업본부 검토 판단",
+      "page": "",
+      "scope": "사용자 위임(2026-09-27) — 카탈로그 내부 충돌·오기 정리"
+    },
+    {
+      "code": "M1",
+      "name": "OBUX-1C 사용자 매뉴얼 Ver.2.2",
+      "page": "4–10",
+      "scope": "제조사 공식 출처(사용자 제공 2026-09-27, .source-materials/RTcom_Manual_OBUX-1C_Ver2.2.pdf)"
+    },
+    {
+      "code": "P1",
+      "name": "서울영상테크 SI사업본부 제공 실물 사진",
+      "page": "",
+      "scope": "사용자 업로드 고해상도 제품 사진(2026-09-28, 흰 배경 촬영본, OBUX-1C Tx·Rx 정면·후면)"
+    }
+  ],
+  "issues": [],
+  "dipSwitch": {
+    "place": "전면",
+    "label": "Mode 딥 스위치(Tx)",
+    "count": 4,
+    "onUp": false,
+    "color": "black",
+    "source": "M1",
+    "rows": [
+      {
+        "n": 1,
+        "title": "오디오 모드",
+        "off": {
+          "name": "HDMI Source",
+          "text": "HDMI에 실린 원래 소리를 보낸다(기본값)."
+        },
+        "on": {
+          "name": "Analog",
+          "text": "후면 Audio IN(L·⏚·R) 소리를 HDMI에 병합한다. 병합한 소리는 Rx HDMI 출력과 Audio OUT으로 나간다."
+        }
+      }
+    ],
+    "combos": [
+      {
+        "title": "EDID 설정",
+        "switches": [
+          2,
+          3,
+          4
+        ],
+        "items": [
+          {
+            "set": [
+              "off",
+              "off",
+              "off"
+            ],
+            "name": "Through-pass",
+            "text": "디스플레이 EDID를 그대로 쓴다.",
+            "default": true
+          },
+          {
+            "set": [
+              "on",
+              "off",
+              "off"
+            ],
+            "name": "1920x1080p @60Hz",
+            "text": "내장 EDID"
+          },
+          {
+            "set": [
+              "off",
+              "on",
+              "off"
+            ],
+            "name": "3840x2160p @30Hz",
+            "text": "내장 EDID"
+          },
+          {
+            "set": [
+              "on",
+              "on",
+              "off"
+            ],
+            "name": "3840x2160p @60Hz",
+            "text": "내장 EDID"
+          },
+          {
+            "set": [
+              "on",
+              "on",
+              "on"
+            ],
+            "name": "Through-pass EDID Fix",
+            "text": "Through-pass로 읽은 디스플레이 EDID를 고정한다."
+          }
+        ]
+      }
+    ],
+    "note": "Through-pass EDID Fix: 2·3·4번을 모두 OFF(Through-pass)로 두고 디스플레이 EDID를 Tx에 읽힌 뒤, PC가 연결되어 있으면 그래픽 카드 설정에서 디스플레이 정보를 확인하고(연결되어 있지 않으면 약 5초 뒤) Tx 전원을 끄고 2·3·4번을 모두 ON으로 바꿔 전원을 켜면 그 EDID로 고정된다. 스위치 몸체 아래쪽에 ON 표시가 있어 레버를 아래로 내리면 ON이다(출고 시 모두 OFF, 레버가 위)."
+  }
+}

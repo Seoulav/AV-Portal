@@ -1,0 +1,225 @@
+{
+  "id": "umc",
+  "group": "cable",
+  "manufacturer": "RTCOM",
+  "productName": "UMC",
+  "model": "UMC",
+  "series": "UMC Locking Cable",
+  "seriesNote": "UMC(Ultimate Locking Cable). 길이별 모델 UMC-001·002·003·005·010으로 구성된다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "HDMI Cable"
+  ],
+  "english": "Ultimate Locking HDMI cable with 360-degree locking switch, 1m to 10m",
+  "korean": "어느 방향에서도 고정·해제할 수 있는 360도 잠금 스위치를 갖춘 일체형 잠금 HDMI 케이블이다.",
+  "subtitle": "UMC Locking Cable · 360도 잠금 스위치",
+  "lead": "어느 방향에서도 **고정·해제할 수 있는 360도 잠금 스위치**를 갖춘 HDMI 케이블입니다. 1m부터 10m까지 5가지 길이로 구성됩니다.",
+  "catalogPages": "44–45",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 46–47쪽의 소개·주요기능·제품사양·제품구성·제품 이미지에서 확인했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "UMC(Ultimate Locking Cable)는 HDMI를 가장 혁신적인 방식으로 안전하게 고정할 수 있는 케이블이다. 모든 기기의 HDMI 단자와 호환되며, 어떠한 방향에서도 케이블을 고정하거나 풀 수 있다.\n\nUMC는 2K/4K 해상도의 HDMI 2.0 버전을 지원하며 세계 최초로 HDMI에서 운영하는 시험소에서 공인받았다. 케이블을 HDMI 단자에 연결한 뒤 슬라이딩 잠금장치를 위로 올리면 잠금기능이 활성화된다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "umc-main.webp",
+      "alt": "RTCOM UMC 제품 사진",
+      "note": "Main · 카탈로그 제품 사진",
+      "provider": "RTCOM",
+      "model": "UMC",
+      "source": "C",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "628×494"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 44~45쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "umc-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "umc-catalog-p1.webp",
+        "umc-catalog-p2.webp"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "text": "세계 최초 ATC 인증 일체형 잠금 HDMI",
+      "source": "C"
+    },
+    {
+      "text": "모든 소켓 구성에 쓰는 360도 스위치",
+      "source": "C"
+    },
+    {
+      "text": "기존 HDMI 소켓에서 사용",
+      "source": "C"
+    },
+    {
+      "text": "상·하위 호환 지원",
+      "source": "C"
+    },
+    {
+      "text": "특허 Wave Soldering·잠금 기술 적용",
+      "source": "C"
+    },
+    {
+      "text": "비압축 디지털 인터페이스",
+      "source": "C"
+    },
+    {
+      "text": "단일 고속 링크로 디지털 AV 전송",
+      "source": "C"
+    },
+    {
+      "text": "3D 지원",
+      "source": "C"
+    },
+    {
+      "text": "4K/2K 지원",
+      "source": "C"
+    },
+    {
+      "text": "선명한 AV와 빠른 게이밍을 위한 대용량 대역폭",
+      "source": "C"
+    },
+    {
+      "text": "새로운 기술에 대비한 미래형 케이블",
+      "source": "C"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Physical",
+      "name": "케이블",
+      "value": "마일라, AI 차폐 기능이 있는 30 AWG 케이블",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "인증",
+      "value": "ISO 9001 / 14001, IECQ, ETL, UL, SONY GP 인증",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "시험",
+      "value": "네트워크 분석기 및 IDR로 테스트 완료",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "시험",
+      "value": "XRF, ICP & AA Lab에서 테스트 완료",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "잠금 강도",
+      "value": "6",
+      "unit": "kg",
+      "condition": "최대 6KG(60뉴턴)까지 잠금 가능",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "제품구성 UMC-001",
+      "value": "UMC HDMI with Locking 1m",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "제품구성 UMC-002",
+      "value": "UMC HDMI with Locking 2m",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "제품구성 UMC-003",
+      "value": "UMC HDMI with Locking 3m",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "제품구성 UMC-005",
+      "value": "UMC HDMI with Locking 5m",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "제품구성 UMC-010",
+      "value": "UMC HDMI with Locking 10m (HDMI 1.4)",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [],
+  "related": [],
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "46–47",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "44–45",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    }
+  ],
+  "issues": []
+}

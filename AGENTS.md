@@ -64,6 +64,8 @@ Work는 READY 명세의 실제 main 병합·승인·선행 조건을 모두 확�
 
 공개 `beta/site/catalog.json` 또는 `beta/site/detail/data/*.json`을 변경하는 작업은 `node beta/build-search-index.mjs`로 `beta/site/search-index.json`을 다시 생성한다. PR 검증과 Pages 배포 전에 `node beta/build-search-index.mjs --check`를 실행해 원본과 인덱스의 일치를 확인한다. 이 절차는 제품 데이터 변경을 승인하는 규칙이 아니며 기존 승인 범위를 따른다.
 
+RTCOM 공개 제품정보의 단일 원본은 `https://seoulav.github.io/rtcom-configurator/data/products/index.json`이다. `node beta/sync-rtcom.mjs`는 목록·상세·이미지를 모두 검증한 후보만 `beta/site/rtcom/`의 마지막 정상본으로 교체한다. 이 원본은 AV Portal에서 직접 고치지 않는다. RTCOM 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행하고 `node beta/sync-rtcom.mjs --check`, 검색 인덱스 `--check`, Pages 검증을 모두 통과시킨다.
+
 동기화 전 자신의 변경을 커밋한다. `git fetch origin` 후 작업 브랜치에서 `git merge origin/main`으로 통합한다. 충돌 시 양쪽 작업 의도를 비교하며 진행 체크를 기계적으로 덮어쓰지 않는다. 의미 충돌이 해소되지 않으면 해당 항목을 BLOCKED로 남긴다. `reset --hard`, 타인 변경 삭제, 승인 없는 강제 push로 해결하지 않는다.
 
 PR은 `git diff --check origin/main...HEAD`로 커밋된 전체 PR 변경을 검사하고 변경 범위에 맞는 검증을 수행한다. 커밋 전에는 `git diff --check`와 `git diff --cached --check`도 확인한다. 문서 변경은 링크·원문 보존·작업 규칙의 일관성을 확인한다. 앱 변경은 루트 README의 실제 실행·테스트 명령과 변경 범위에 맞는 검증을 수행하고 결과를 지시서에 기록한다. 수행하지 않은 테스트를 통과했다고 쓰지 않는다.

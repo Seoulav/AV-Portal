@@ -41,10 +41,12 @@ export function transformDetailApp(source) {
     "if (productKey && !/^[a-z0-9-]+$/.test(productKey))",
     "if (!/^[a-z0-9-]+$/.test(productKey))");
   output = replaceRequired(output,
-    "fetch(productKey ? `./data/${productKey}.json` : './content.json')",
-    'fetch(`./data/${productKey}.json`)');
+    "const productDataPath = productKey ? `./data/${productKey}.json` : './content.json';",
+    "const productDataPath = `./data/${productKey}.json`;");
   return output
     .replace("from '../../beta/site/shared/pdf-viewer.mjs'", "from '../shared/pdf-viewer.mjs'")
+    .replace("from '../../beta/site/shared/rtcom-adapter.mjs'", "from '../shared/rtcom-adapter.mjs'")
+    .replace("`../../beta/site/rtcom/raw/products/${rtcomId}.json`", "`../rtcom/raw/products/${rtcomId}.json`")
     .replace("const manifestPath = '../../beta/site/docs/manifest.json';", "const manifestPath = '../docs/manifest.json';")
     .replace('Product Detail 시안', 'Product Detail')
     .replace('시안 콘텐츠를 읽을 수 없습니다.', '제품 상세 데이터를 읽을 수 없습니다.')

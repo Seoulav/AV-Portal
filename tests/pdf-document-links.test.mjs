@@ -21,6 +21,19 @@ test('document without a PDF copy retains manufacturer new-tab link', () => {
   assert.equal(resolveDocumentAction({ status: 'MISSING' }, manifest), null);
 });
 
+test('RTCOM public PDFs use the local viewer without creating a mirrored copy', () => {
+  const url = 'https://seoulav.github.io/rtcom-configurator/output/design/assets/docs/xdm-manual.pdf';
+  assert.deepEqual(resolveDocumentAction({ url }, manifest), {
+    kind: 'remote-pdf', file: url, sourceUrl: url
+  });
+  assert.deepEqual(resolveDocumentAction({
+    url: 'https://seoulav.github.io/rtcom-configurator/output/design/assets/products/xdm.jpg'
+  }, manifest), {
+    kind: 'external',
+    url: 'https://seoulav.github.io/rtcom-configurator/output/design/assets/products/xdm.jpg'
+  });
+});
+
 test('user-uploaded PDFs become same-viewer documents for their exact slug', () => {
   assert.deepEqual(uploadedDocumentsFor('camera', manifest), [{
     title: '사용자 매뉴얼', label: '매뉴얼', status: 'FOUND',
