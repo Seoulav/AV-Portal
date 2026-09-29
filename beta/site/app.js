@@ -1,3 +1,6 @@
+import { applySearchIndex, detailSearchEntry, previewCardImage } from './shared/search-index.mjs';
+export { publicDetailSearchTerms, publicCardSummary, previewCardImage } from './shared/search-index.mjs';
+
 const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
 
 export const TOP_CATEGORIES = [
@@ -46,17 +49,6 @@ export function buildSuggestions(items, query) {
   return [...products, ...manufacturers, ...categories];
 }
 
-const SEARCHABLE_VERIFICATIONS = new Set(['VERIFIED', 'FOUND', 'READY']);
-const isConfirmedSearchEntry = entry => !entry.verification || SEARCHABLE_VERIFICATIONS.has(entry.verification);
-
-export function publicDetailSearchTerms(detail) {
-  return [
-    ...(detail.features ?? []).map(value => value.text),
-    ...(detail.specifications ?? []).filter(isConfirmedSearchEntry).flatMap(value => [value.name, value.value, value.group]),
-    ...(detail.io ?? []).filter(isConfirmedSearchEntry).flatMap(value => [value.connector, value.signal, value.protocol, value.group])
-  ].filter(Boolean);
-}
-
 export function stateForSuggestion(current, suggestion) {
   if (suggestion.type === '제조사') return { query: '', topCategory: '', brand: suggestion.value, categories: [], resource: '', sort: 'brand' };
   if (suggestion.type === '카테고리') return { query: '', topCategory: '', brand: '', categories: [suggestion.value], resource: '', sort: 'relevance' };
@@ -79,16 +71,6 @@ export function serializeExploreState(state) {
   return params;
 }
 
-// 상세페이지가 아직 없는 항목의 카드 대표 사진. 상세가 있는 항목은 상세 갤러리의 card_image를 쓴다.
-export function previewCardImage(item) {
-  if (item.slug || !item.preview_image) return null;
-  return { src: `./detail/images/${item.preview_image}`, alt: item.preview_image_alt, note: item.preview_image_scope === 'series' ? '제조사 공식 이미지 · 계열 공용' : '제조사 공식 이미지' };
-}
-
-export function publicCardSummary(detail) {
-  return typeof detail?.korean === 'string' ? detail.korean.trim() : '';
-}
-
 async function loadDetailSearchTerms(items) {
   await Promise.all(items.map(async item => {
     item.slug = item.slug ?? null;
@@ -100,14 +82,20 @@ async function loadDetailSearchTerms(items) {
       const response = await fetch(`./detail/data/${item.slug}.json`);
       if (!response.ok) return;
       const detail = await response.json();
-      item.aliases = [detail.model, detail.productName, detail.series].filter(Boolean);
-      item.searchTerms = publicDetailSearchTerms(detail);
-      item.cardSummary = publicCardSummary(detail);
-      item.verificationState = detail.packageStatus ?? '';
-      const card = detail.images?.find(image => image.file === item.card_image);
-      if (card) item.cardImage = { src: `./detail/images/${card.file}`, alt: card.alt, note: '제조사 공식 이미지' };
+      Object.assign(item, detailSearchEntry(item, detail));
     } catch { /* Public Library remains usable if one optional detail index fails. */ }
   }));
+}
+
+async function loadSearchIndex(items, catalogRaw) {
+  try {
+    const response = await fetch('./search-index.json');
+    if (!response.ok) throw new Error('검색 인덱스 없음');
+    const index = await response.json();
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(catalogRaw));
+    const catalogHash = [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, '0')).join('');
+    applySearchIndex(items, index, catalogHash);
+  } catch { await loadDetailSearchTerms(items); }
 }
 
 if (typeof document !== 'undefined') {
@@ -240,8 +228,8 @@ if (typeof document !== 'undefined') {
 
   try {
     const response = await fetch('./catalog.json'); if (!response.ok) throw new Error('선별 목록을 읽을 수 없습니다.');
-    const data = await response.json(); if (!Array.isArray(data)) throw new Error('선별 목록 형식이 올바르지 않습니다.');
-    products = data.filter(item => item.kind === 'equipment'); await loadDetailSearchTerms(products);
+    const catalogRaw = await response.text(); const data = JSON.parse(catalogRaw); if (!Array.isArray(data)) throw new Error('선별 목록 형식이 올바르지 않습니다.');
+    products = data.filter(item => item.kind === 'equipment'); await loadSearchIndex(products, catalogRaw);
     $('#equipment-total').textContent = products.length.toLocaleString('ko-KR'); $('#brand-total').textContent = `${new Set(products.map(item => item.brand)).size}개 제조사`;
     renderDiscovery(); setFacets(); render(); if (hasExploration()) restoreScroll();
   } catch (error) { ui.error.hidden = false; ui.error.textContent = error.message; ui.workspace.hidden = false; ui.resultCount.textContent = '목록을 불러오지 못했습니다.'; }
