@@ -18,14 +18,14 @@ test('design foundation includes the exact font, license, and scoped shared styl
   assert.match(css, /repeat\(auto-fill,\s*minmax\(180px,\s*1fr\)\)/);
 });
 
-test('stage 2 opts detail into the shared style while home remains unchanged', async () => {
+test('stage 3 opts home and detail into the shared style', async () => {
   const home = await read('beta/site/index.html');
   const details = [await read('prototype/brc-am7/index.html'), await read('beta/site/detail/index.html')];
   for (const page of [home, ...details]) {
     assert.match(page, /pg\.css/);
     assert.match(page, /PretendardVariable\.woff2/);
   }
-  assert.doesNotMatch(home, /<body[^>]*class="pg-page"/);
+  assert.match(home, /<body[^>]*class="pg-page"/);
   for (const page of details) assert.match(page, /<body[^>]*class="pg-page"/);
 });
 

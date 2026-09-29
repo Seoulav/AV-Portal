@@ -85,6 +85,10 @@ export function previewCardImage(item) {
   return { src: `./detail/images/${item.preview_image}`, alt: item.preview_image_alt, note: item.preview_image_scope === 'series' ? '제조사 공식 이미지 · 계열 공용' : '제조사 공식 이미지' };
 }
 
+export function publicCardSummary(detail) {
+  return typeof detail?.korean === 'string' ? detail.korean.trim() : '';
+}
+
 async function loadDetailSearchTerms(items) {
   await Promise.all(items.map(async item => {
     item.slug = item.slug ?? null;
@@ -98,6 +102,7 @@ async function loadDetailSearchTerms(items) {
       const detail = await response.json();
       item.aliases = [detail.model, detail.productName, detail.series].filter(Boolean);
       item.searchTerms = publicDetailSearchTerms(detail);
+      item.cardSummary = publicCardSummary(detail);
       item.verificationState = detail.packageStatus ?? '';
       const card = detail.images?.find(image => image.file === item.card_image);
       if (card) item.cardImage = { src: `./detail/images/${card.file}`, alt: card.alt, note: '제조사 공식 이미지' };
@@ -144,18 +149,20 @@ if (typeof document !== 'undefined') {
   function createCard(item) {
     const card = element('article', 'card');
     const image = item.cardImage;
-    card.classList.toggle('has-media', Boolean(image));
-    if (image) { const media = element(item.slug ? 'a' : 'div', 'card-media'); if (item.slug) media.href = `./detail/?product=${item.slug}`; const img = element('img'); img.src = image.src; img.alt = image.alt; img.loading = 'lazy'; media.append(img, element('span', 'card-media-note', image.note)); card.append(media); }
-    card.append(element('span', 'card-brand', item.brand), element('h3', '', item.product));
-    const tags = element('div', 'tags'); item.categories.slice(0, 3).forEach(category => tags.append(element('span', 'tag', category))); card.append(tags);
-    const status = item.verificationState === 'REVIEW REQUIRED' ? '검토 중' : item.slug ? '상세 정보 있음' : item.official_links?.length ? '공식 링크 확인' : '자료 미확인';
-    card.append(element('span', 'card-status', status));
+    const media = element(item.slug ? 'a' : 'div', 'card-media');
+    if (item.slug) { media.href = `./detail/?product=${item.slug}`; media.addEventListener('click', saveScroll); }
+    if (image) { const img = element('img'); img.src = image.src; img.alt = image.alt; img.loading = 'lazy'; media.append(img, element('span', 'card-media-note', image.note)); }
+    else media.append(element('span', 'media-placeholder', '제품 사진 없음'));
+    card.append(media);
+    const body = element('div', 'card-body');
+    body.append(element('span', 'card-category', item.categories[0] ?? '분류 미확인'), element('h3', '', item.product), element('span', 'card-brand', item.brand));
+    if (item.cardSummary) body.append(element('p', 'card-summary', item.cardSummary));
     const actions = element('div', 'card-actions');
     if (item.slug) { const detail = element('a', 'detail-link', '제품 상세 보기'); detail.href = `./detail/?product=${item.slug}`; detail.addEventListener('click', saveScroll); actions.append(detail); }
     const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', item.link_scope === 'series' ? '제조사 제품군 페이지 ↗' : '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     if (item.manual_link) { const link = element('a', 'manual-link', '제조사 매뉴얼 ↗'); link.href = item.manual_link; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     if (item.reference_link) { item.reference_link.forEach((url, index) => { const link = element('a', 'reference-link', `참고자료${item.reference_link.length > 1 ? ` ${index + 1}` : ''} ↗`); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }); }
-    card.append(actions); return card;
+    body.append(actions); card.append(body); return card;
   }
 
   function contextCopy(filtered) {
@@ -169,7 +176,7 @@ if (typeof document !== 'undefined') {
 
   function render(push = false) {
     ui.search.value = state.query; ui.globalSearch.value = state.query; ui.resultSearch.value = state.query; ui.resource.value = state.resource; ui.sort.value = state.sort;
-    const active = hasExploration(); ui.workspace.hidden = !active;
+    const active = hasExploration(); ui.workspace.hidden = !active; document.body.classList.toggle('is-exploring', active);
     ui.headerSearch.hidden = !active;
     ui.heroSearch.hidden = active;
     ui.heroNote.hidden = active;
@@ -185,7 +192,7 @@ if (typeof document !== 'undefined') {
     $('#result-context-title').textContent = contextCopy(filtered);
     $('#result-context-copy').textContent = `${filtered.length.toLocaleString('ko-KR')}개 제품 · 현재 조건에 맞는 공개 항목`;
     ui.resultCount.textContent = `${filtered.length.toLocaleString('ko-KR')}개 제품`;
-    ui.empty.hidden = filtered.length !== 0; ui.empty.textContent = '검색 결과가 없습니다. 검색어나 필터를 조정해 보세요.';
+    ui.empty.hidden = filtered.length !== 0;
     ui.cards.replaceChildren(...filtered.map(createCard)); saveUrl(push);
     if (push) ui.workspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -208,7 +215,7 @@ if (typeof document !== 'undefined') {
   }
 
   function renderDiscovery() {
-    $('#top-categories').replaceChildren(...mapTopCategories(products).map(group => { const button = element('button', 'category-card'); button.type = 'button'; button.dataset.topCategory = group.id; button.setAttribute('aria-pressed', 'false'); button.disabled = group.count === 0; button.append(element('span', 'category-icon', group.icon), element('strong', '', group.label), element('small', '', `${group.count}개 제품`), element('b', '', '→')); button.addEventListener('click', () => { state = { query: '', topCategory: group.id, brand: '', categories: [], resource: '', sort: 'relevance' }; render(true); }); return button; }));
+    $('#top-categories').replaceChildren(...mapTopCategories(products).map(group => { const button = element('button', 'category-card'); button.type = 'button'; button.dataset.topCategory = group.id; button.setAttribute('aria-pressed', 'false'); button.disabled = group.count === 0; button.append(element('span', 'pg-swatch', group.icon), element('strong', '', group.label), element('small', '', `${group.count}개 제품`), element('b', '', '→')); button.addEventListener('click', () => { state = { query: '', topCategory: group.id, brand: '', categories: [], resource: '', sort: 'relevance' }; render(true); }); return button; }));
     const counts = new Map(); products.forEach(item => counts.set(item.brand, (counts.get(item.brand) ?? 0) + 1));
     $('#manufacturer-browser').replaceChildren(...[...counts].sort(([a], [b]) => a.localeCompare(b, 'ko')).map(([brand, count]) => { const button = element('button', 'manufacturer-chip'); button.type = 'button'; button.dataset.manufacturer = brand; button.setAttribute('aria-pressed', 'false'); button.append(element('strong', '', brand), element('span', '', count)); button.addEventListener('click', () => { state = { query: '', topCategory: '', brand, categories: [], resource: '', sort: 'brand' }; render(true); }); return button; }));
   }
@@ -227,6 +234,7 @@ if (typeof document !== 'undefined') {
   ui.sort.addEventListener('change', () => { state.sort = ui.sort.value; render(); });
   $('#filter-clear').addEventListener('click', () => { state = { ...state, brand: '', categories: [], resource: '', sort: 'relevance' }; render(); });
   $('#clear').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
+  $('#empty-reset').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
   addEventListener('popstate', () => { state = parseExploreState(location.search); setFacets(); render(); restoreScroll(); });
   addEventListener('pagehide', saveScroll);
 

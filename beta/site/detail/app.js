@@ -128,7 +128,8 @@ if (!productKey) {
   for (const value of data.categories) $('#categories').append(element('span', 'pg-pill', value));
   for (const specification of data.keySpecifications.slice(0, 4)) {
     const cell = element('div');
-    cell.append(element('dt', '', specification.name), element('dd', '', [specification.value, specification.unit].filter(Boolean).join(' ')));
+    const displayValue = [specification.value, specification.unit].filter(Boolean).join(' ');
+    cell.append(element('dt', '', specification.name), element('dd', displayValue.length > 20 ? 'long-key-value' : '', displayValue));
     $('#key-specs').append(cell);
   }
   $('#key-specs').hidden = !$('#key-specs').children.length;
