@@ -197,7 +197,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Interfaces",
+      "group": "Interface",
       "name": "출력",
       "value": "9.6 ft (2.95 m) 12핀 캡티브 케이블",
       "unit": "",
@@ -206,7 +206,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Interfaces",
+      "group": "Interface",
       "name": "입력",
       "value": "12핀 인터페이스",
       "unit": "",

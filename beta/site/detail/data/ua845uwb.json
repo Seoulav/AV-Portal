@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "액세서리"
+    "Accessory"
   ],
   "english": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
   "korean": "UA845UWB는 한 쌍의 안테나 신호를 최대 4~5대의 Shure Axient Digital, UHF-R, ULX-D, BLX4R, SLX4 등 수신기로 분배하는 내장 전원공급 방식의 능동형 광대역(VHF/UHF) 안테나 분배 시스템이다.",
@@ -123,7 +123,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "지원 주파수 대역 (5개 밴드 스위치 선택)",
       "value": "Band1 174-216MHz / Band2 470-960MHz / Band3 1240-1260MHz / Band4 1492-1525MHz / Band5 1785-1805MHz",
       "unit": "",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "커넥터 타입",
       "value": "BNC",
       "unit": "",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "임피던스",
       "value": "50",
       "unit": "Ω",
@@ -222,7 +222,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "치수",
       "value": "44.5 x 482.6 x 295.3",
       "unit": "mm (H x W x D)",
@@ -231,7 +231,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "기구",
+      "group": "Mechanical",
       "name": "무게",
       "value": "3.32",
       "unit": "kg (7.3 lbs)",
@@ -240,7 +240,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

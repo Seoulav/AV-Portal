@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "ULXD4D Dual-Channel Digital Wireless Receiver",
   "korean": "ULX-D 디지털 무선 시스템의 2채널 랙마운트 수신기. 1RU 섀시에 독립된 2개 수신 채널을 탑재했으며, ULXD4Q와 마찬가지로 Dante 디지털 오디오 네트워킹과 AES-256 암호화를 지원한다.",
@@ -132,7 +132,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "채널 수",
       "value": "2",
       "unit": "채널",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "폼팩터",
       "value": "1RU 랙마운트, 올메탈 섀시",
       "unit": "",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "하우징 재질",
       "value": "steel; Extruded Aluminum",
       "unit": "",
@@ -159,7 +159,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "치수 (H x W x D)",
       "value": "44 x 482 x 274",
       "unit": "mm",
@@ -168,7 +168,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "무게",
       "value": "3.36 (7.4)",
       "unit": "kg (lb)",
@@ -249,7 +249,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "레이턴시",
       "value": "<2.9",
       "unit": "ms",
@@ -258,7 +258,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 다이내믹 레인지 (XLR 아날로그 출력)",
       "value": ">120",
       "unit": "dB",
@@ -267,7 +267,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 다이내믹 레인지 (Dante 디지털 출력)",
       "value": "130",
       "unit": "dB",
@@ -276,7 +276,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "전고조파왜율(THD)",
       "value": "<0.1",
       "unit": "%",
@@ -285,7 +285,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "게인 조정 범위",
       "value": "-18 ~ +42 (1 dB 스텝, Mute 포함)",
       "unit": "dB",
@@ -294,7 +294,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 출력 커넥터",
       "value": "XLR (채널당 1개)",
       "unit": "",
@@ -303,7 +303,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "XLR 출력 임피던스",
       "value": "100",
       "unit": "Ω",
@@ -312,7 +312,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "풀스케일 출력",
       "value": "LINE +18 dBV / MIC -12 dBV",
       "unit": "",
@@ -357,7 +357,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "보안",
+      "group": "Security",
       "name": "암호화",
       "value": "AES-256",
       "unit": "",
@@ -393,7 +393,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

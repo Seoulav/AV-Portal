@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "마이크로폰"
+    "Microphone"
   ],
   "english": "MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)",
   "korean": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다.",
@@ -114,7 +114,7 @@
   ],
   "specifications": [
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "타입",
       "value": "일렉트렛 콘덴서 (내장 프리앰프)",
       "unit": "",
@@ -123,7 +123,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "주파수 응답",
       "value": "50-17000",
       "unit": "Hz",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "폴라 패턴 (MX392/C)",
       "value": "Cardioid",
       "unit": "",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 임피던스",
       "value": "180",
       "unit": "Ω",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "출력 구성",
       "value": "Active Balanced",
       "unit": "",
@@ -159,7 +159,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "감도 (1kHz, open circuit, Cardioid)",
       "value": "-30",
       "unit": "dBV/Pa",
@@ -168,7 +168,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "최대 SPL (1kHz, 1%THD, 1kΩ부하, Cardioid)",
       "value": "119",
       "unit": "dB",
@@ -177,7 +177,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "자기잡음 (A-weighted, Cardioid)",
       "value": "23",
       "unit": "dB SPL",
@@ -186,7 +186,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "신호대잡음비 (Cardioid, 94dB SPL@1kHz 기준)",
       "value": "71",
       "unit": "dB",
@@ -195,7 +195,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "다이내믹 레인지 (1kΩ부하@1kHz)",
       "value": "96",
       "unit": "dB",
@@ -204,7 +204,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "공통 모드 제거비",
       "value": "45",
       "unit": "dB (최소)",
@@ -213,7 +213,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "클리핑 레벨 (1%THD)",
       "value": "-6dBV(0.5V)",
       "unit": "",
@@ -222,7 +222,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "뮤트 스위치 감쇠 (50-20000Hz)",
       "value": "-50",
       "unit": "dB (최소)",
@@ -330,7 +330,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

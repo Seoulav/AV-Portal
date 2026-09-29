@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "안테나"
+    "Antenna"
   ],
   "english": "UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)",
   "korean": "UA864는 벽면이나 천장, 금속 표면에 낮은 프로파일로 설치할 수 있는 능동형 지향성 광대역 안테나로, 최대 100도(중심 주파수 기준, 지역별 상이)의 커버리지 패턴을 제공한다.",
@@ -123,7 +123,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "커넥터 타입",
       "value": "BNC (Female)",
       "unit": "",
@@ -132,7 +132,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "임피던스",
       "value": "50",
       "unit": "Ω",
@@ -141,7 +141,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "전원 요구사항",
       "value": "10~15V DC 바이어스 (동축 커넥터를 통해 공급), 75mA",
       "unit": "",
@@ -150,7 +150,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "RF 주파수 대역 (UA864A)",
       "value": "650-952",
       "unit": "MHz",
@@ -240,7 +240,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

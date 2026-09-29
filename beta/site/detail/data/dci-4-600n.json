@@ -258,7 +258,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "디지털 오디오 전송",
       "value": "HARMAN BLU-Link (Dante 아님)",
       "unit": "",
@@ -267,7 +267,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "네트워크 제어",
       "value": "HiQnet(TCP/IP)",
       "unit": "",
@@ -276,7 +276,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "채널수",
       "value": "4",
       "unit": "채널",
@@ -285,7 +285,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "크기(W×H×D)",
       "value": "483 x 89 x 362",
       "unit": "mm",
@@ -294,7 +294,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "무게",
       "value": "9.12",
       "unit": "kg",
@@ -303,7 +303,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "랙 유닛",
       "value": "2U",
       "unit": "",
@@ -312,7 +312,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "냉각 방식",
       "value": "가변속 강제공랭(전면->후면)",
       "unit": "",
@@ -321,7 +321,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "최대 팬 소음",
       "value": "45",
       "unit": "dBA SPL@1m",
@@ -330,7 +330,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "입력 전압",
       "value": "100-240",
       "unit": "V AC",
@@ -339,7 +339,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "전원",
+      "group": "Power",
       "name": "전원 커넥터",
       "value": "15A IEC",
       "unit": "",
@@ -348,7 +348,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "EN 54-16",
       "value": "적합(생명안전 용도)",
       "unit": "",

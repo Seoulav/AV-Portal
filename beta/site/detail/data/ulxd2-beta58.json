@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "ULXD2/B58 Digital Handheld Transmitter with BETA 58A Capsule",
   "korean": "ULX-D 핸드헬드 송신기 본체에 Shure BETA 58A(슈퍼카디오이드 다이내믹 보컬 카트리지)를 결합한 정식 카탈로그 SKU.",
@@ -276,7 +276,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

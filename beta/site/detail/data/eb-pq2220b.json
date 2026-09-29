@@ -236,7 +236,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "광원 방식",
       "value": "Laser Diode",
       "unit": "",
@@ -245,7 +245,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "광원 수명",
       "value": "Normal 20,000 / Quiet 20,000 / Extended 30,000",
       "unit": "시간",
@@ -254,7 +254,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "초점 거리",
       "value": "36.0 - 57.3",
       "unit": "mm",
@@ -263,7 +263,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "줌 비율",
       "value": "1 - 1.61",
       "unit": "",
@@ -272,7 +272,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "렌즈 시프트 범위",
       "value": "H: -16%~+16%, V: -58%~+58%",
       "unit": "",
@@ -281,7 +281,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "투사 렌즈 타입",
       "value": "Power zoom, Power focus",
       "unit": "",
@@ -290,7 +290,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "화면 크기(투사 거리)",
       "value": "60\"~1000\" (1.98m~34.19m Wide, 3.24m~55.28m Tele)",
       "unit": "",

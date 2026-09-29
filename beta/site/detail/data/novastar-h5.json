@@ -272,7 +272,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "0 ~ 45",
       "unit": "°C",
@@ -281,7 +281,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 습도",
       "value": "0 ~ 80",
       "unit": "%RH",
@@ -290,7 +290,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "보관 온도",
       "value": "-10 ~ 60",
       "unit": "°C",
@@ -299,7 +299,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "보관 습도",
       "value": "0 ~ 95",
       "unit": "%RH",

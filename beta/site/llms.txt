@@ -458,49 +458,49 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   상세: https://seoulav.github.io/AV-Portal/detail/?product=novastar-h2
 
 - 제품: NovaStar H_2xRJ45+1xHDMI1.3 preview card
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-preview-card-2xrj45-1xhdmi13
 
 - 제품: NovaStar H_4xHDMI input card
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-4xhdmi
 
 - 제품: NovaStar H_1xHDMI2.0+1xDP1.2 input card(4K)
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-hdmi20-dp12-4k
 
 - 제품: NovaStar H_1xHDMI2.0 input card(4K)
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-hdmi20-4k
 
 - 제품: NovaStar H_1xDP1.2 input card(4K)
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-dp12-4k
 
 - 제품: NovaStar H_2xHDMI2.0+2xDP1.2 input card
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-2xhdmi20-2xdp12
 
 - 제품: NovaStar H_1x12G SDI input card
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
@@ -936,7 +936,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   상세: https://seoulav.github.io/AV-Portal/detail/?product=varia-sl50
 
 - 제품: SurgeX SX-1216-RTi
-  분류: 제어 | Control | Power Protection
+  분류: 제어 | Control | Power Conditioner
   종류: 장비
   공식 링크: https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page
   매뉴얼: https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44
@@ -1153,7 +1153,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   상세: https://seoulav.github.io/AV-Portal/detail/?product=cm20
 
 - 제품: Yealink CS10
-  분류: 화상회의 | Conferencing | Speaker
+  분류: 화상회의 | Conferencing | Loudspeaker
   종류: 장비
   공식 링크: https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d
   매뉴얼: https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d
@@ -1181,21 +1181,21 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   상세: https://seoulav.github.io/AV-Portal/detail/?product=cpe40
 
 - 제품: NovaStar H_4x3 SDI input card
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-input-card-4x3g-sdi
 
 - 제품: NovaStar H_4xHDMI output card (HDMI 1.4 - Dual Link)
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-output-card-4xhdmi-dl
 
 - 제품: NovaStar H_1xHDMI2.0 output card(4K)
-  분류: 영상 | Video | Processor Card
+  분류: 영상 | Video | Video Processor Card
   종류: 장비
   제품군 링크: https://www.novastar.tech/product/detail.html?catid=3&id=39
   매뉴얼: https://oss.novastar.tech/uploads/2022/07/H-Series-Quick-Start-Guide.pdf

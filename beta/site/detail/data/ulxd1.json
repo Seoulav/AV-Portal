@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "ULXD1 Bodypack Transmitter",
   "korean": "ULX-D 디지털 무선 바디팩(벨트팩) 송신기. TA4M(4핀 미니 커넥터)를 통해 라발리에/헤드셋/기타 인스트루먼트 케이블 등 다양한 유선 마이크/악기를 연결해 무선화한다.",
@@ -332,7 +332,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

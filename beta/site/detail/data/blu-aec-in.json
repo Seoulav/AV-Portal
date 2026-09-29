@@ -215,7 +215,7 @@
   ],
   "io": [
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Mic/Line Combicon (커넥터 1)",
       "signal": "AEC 마이크 입력 채널 1-2",
       "direction": "IN",
@@ -227,7 +227,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Mic/Line Combicon (커넥터 2)",
       "signal": "AEC 마이크 입력 채널 3-4",
       "direction": "IN",

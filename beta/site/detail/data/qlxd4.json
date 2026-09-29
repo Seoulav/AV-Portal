@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "QLXD4 Digital Wireless Receiver",
   "korean": "QLX-D 디지털 무선 시스템의 단일 채널 랙마운트 수신기. ULX-D 대비 간소화된 네트워킹(단일 포트 이더넷, Dante 미지원)을 갖춘 중급형 라인업이며, SLX-D보다는 상위 라인업이다.",
@@ -127,7 +127,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "채널 수",
       "value": "1",
       "unit": "채널",
@@ -136,7 +136,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "치수 (H x W x D)",
       "value": "41 x 197 x 151",
       "unit": "mm",
@@ -145,7 +145,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "무게",
       "value": "0.777 (1.71)",
       "unit": "kg (lb)",
@@ -154,7 +154,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "하우징 재질",
       "value": "steel",
       "unit": "",
@@ -235,7 +235,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "레이턴시",
       "value": "<2.9",
       "unit": "ms",
@@ -244,7 +244,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 다이내믹 레인지",
       "value": ">120",
       "unit": "dB",
@@ -253,7 +253,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "전고조파왜율(THD)",
       "value": "<0.1",
       "unit": "%",
@@ -262,7 +262,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "게인 조정 범위",
       "value": "-18 ~ +42",
       "unit": "dB",
@@ -271,7 +271,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "오디오 출력 커넥터",
       "value": "1/4\" (6.35 mm) 및 XLR",
       "unit": "",
@@ -280,7 +280,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "1/4\" 출력 임피던스",
       "value": "100 Ω (unbalanced 50 Ω)",
       "unit": "",
@@ -289,7 +289,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "XLR 출력 임피던스",
       "value": "100",
       "unit": "Ω",
@@ -298,7 +298,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "풀스케일 출력 (1/4\")",
       "value": "+12",
       "unit": "dBV",
@@ -307,7 +307,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "풀스케일 출력 (XLR)",
       "value": "LINE +18 dBV / MIC -12 dBV",
       "unit": "",
@@ -316,7 +316,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "오디오",
+      "group": "Audio",
       "name": "팬텀 전원 보호",
       "value": "지원(1/4\", XLR 모두)",
       "unit": "",
@@ -325,7 +325,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "네트워크 인터페이스",
       "value": "단일 포트 이더넷 10/100 Mbps",
       "unit": "",
@@ -334,7 +334,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "네트워크 주소 지정",
       "value": "DHCP 또는 수동 IP",
       "unit": "",
@@ -343,7 +343,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "네트워킹",
+      "group": "Network",
       "name": "최대 케이블 길이",
       "value": "100 (328)",
       "unit": "m (ft)",
@@ -379,7 +379,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "보안",
+      "group": "Security",
       "name": "암호화",
       "value": "AES-256",
       "unit": "",
@@ -388,7 +388,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

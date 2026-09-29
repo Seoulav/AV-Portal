@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "안테나"
+    "Antenna"
   ],
   "english": "UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)",
   "korean": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
@@ -109,7 +109,7 @@
   ],
   "specifications": [
     {
-      "group": "일반",
+      "group": "General",
       "name": "커넥터 타입",
       "value": "BNC (Female)",
       "unit": "",
@@ -118,7 +118,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "임피던스",
       "value": "50",
       "unit": "Ω",
@@ -127,7 +127,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "전원 요구사항",
       "value": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75",
       "unit": "mA",
@@ -136,7 +136,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "일반",
+      "group": "General",
       "name": "RF 주파수 대역 (UA874XA)",
       "value": "902-960",
       "unit": "MHz",
@@ -235,7 +235,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

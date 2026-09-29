@@ -348,7 +348,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "채널수",
       "value": "4",
       "unit": "채널",
@@ -357,7 +357,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "크기(W×H×D)",
       "value": "483 x 89 x 362",
       "unit": "mm",
@@ -366,7 +366,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "무게",
       "value": "9.12",
       "unit": "kg",
@@ -375,7 +375,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "랙 유닛",
       "value": "2U",
       "unit": "",

@@ -339,7 +339,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "5 ~ 45",
       "unit": "°C",
@@ -348,7 +348,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Regulatory",
+      "group": "Certification",
       "name": "인증",
       "value": "CE",
       "unit": "",
@@ -404,7 +404,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Input",
+      "group": "Audio",
       "connector": "XLR",
       "signal": "발란스 오디오 입력(후면)",
       "direction": "IN",
@@ -416,7 +416,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Output",
+      "group": "Audio",
       "connector": "XLR",
       "signal": "발란스 오디오 출력(후면)",
       "direction": "OUT",
@@ -428,7 +428,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Input",
+      "group": "Audio",
       "connector": "3.5mm 잭",
       "signal": "Line 레벨 입력(전면)",
       "direction": "IN",
@@ -440,7 +440,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Output",
+      "group": "Audio",
       "connector": "3.5mm 잭",
       "signal": "Line 레벨 출력(전면)",
       "direction": "OUT",

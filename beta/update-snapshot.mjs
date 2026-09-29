@@ -2,6 +2,8 @@
 // 공개 데이터를 의도적으로 바꾼 뒤에만 실행하고, 결과 차이를 PR에서 확인한다.
 import { createHash } from 'node:crypto';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 
 const site = new URL('./site/', import.meta.url);
@@ -40,7 +42,7 @@ export async function readSnapshot() {
   return JSON.parse(await readFile(snapshotPath, 'utf8'));
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
   const snapshot = await computeSnapshot();
   await writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
   process.stdout.write(`public-snapshot.json 갱신: 카탈로그 ${snapshot.catalog.count}건, 상세 ${Object.keys(snapshot.details).length}건\n`);

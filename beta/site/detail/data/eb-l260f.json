@@ -236,7 +236,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "광원 방식",
       "value": "Laser Diode",
       "unit": "",
@@ -245,7 +245,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "광원 수명",
       "value": "Normal 20,000 / Extended 30,000",
       "unit": "시간",
@@ -254,7 +254,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "초점 거리",
       "value": "18.2 - 29.2",
       "unit": "mm",
@@ -263,7 +263,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "줌 비율",
       "value": "1 - 1.62",
       "unit": "",
@@ -272,7 +272,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Optics",
+      "group": "Optical",
       "name": "화면 크기(투사 거리)",
       "value": "31\"~310\" (88cm~906cm, Zoom: Wide)",
       "unit": "",

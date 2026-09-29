@@ -366,7 +366,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "0 ~ 45",
       "unit": "°C",
@@ -375,7 +375,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "보관 온도",
       "value": "-20 ~ 60",
       "unit": "°C",
@@ -384,7 +384,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Regulatory",
+      "group": "Certification",
       "name": "인증",
       "value": "CE",
       "unit": "",
@@ -407,7 +407,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Output",
+      "group": "Audio",
       "connector": "3.5mm 스테레오 잭",
       "signal": "헤드폰 출력",
       "direction": "OUT",

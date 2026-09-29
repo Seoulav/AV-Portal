@@ -126,7 +126,7 @@
   ],
   "specifications": [
     {
-      "group": "Inputs",
+      "group": "Input",
       "name": "구성",
       "value": "16x 4K60p (필드 교체형 입력 카드 4개)",
       "unit": "",
@@ -135,7 +135,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Inputs",
+      "group": "Input",
       "name": "HDMI 2.0 카드",
       "value": "최대 4K60p 8bit 4:4:4 또는 12bit 4:2:2, 최대 4K30p 12bit 4:4:4",
       "unit": "",
@@ -144,7 +144,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Inputs",
+      "group": "Input",
       "name": "DisplayPort 카드",
       "value": "DP1.4 모드 최대 5K60p 10bit 4:4:4, 최대 7680x4320RB 30Hz",
       "unit": "",
@@ -153,7 +153,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Inputs",
+      "group": "Input",
       "name": "12G-SDI 카드",
       "value": "최대 4K60p 10bit 4:2:2, 3G/6G-SDI 호환",
       "unit": "",
@@ -162,7 +162,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Outputs",
+      "group": "Output",
       "name": "구성",
       "value": "12x 4K60p (필드 교체형 출력 카드 3개)",
       "unit": "",
@@ -171,7 +171,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Outputs",
+      "group": "Output",
       "name": "멀티뷰어 출력",
       "value": "2x HDMI 2.0",
       "unit": "",

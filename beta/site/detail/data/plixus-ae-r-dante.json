@@ -348,7 +348,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Environmental",
+      "group": "Environment",
       "name": "동작 온도",
       "value": "5 ~ 45",
       "unit": "°C",
@@ -357,7 +357,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Regulatory",
+      "group": "Certification",
       "name": "인증",
       "value": "CE",
       "unit": "",
@@ -416,7 +416,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Input",
+      "group": "Audio",
       "connector": "XLR",
       "signal": "AUX IN",
       "direction": "IN",
@@ -428,7 +428,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Output",
+      "group": "Audio",
       "connector": "XLR",
       "signal": "AUX OUT",
       "direction": "OUT",
@@ -440,7 +440,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Input",
+      "group": "Audio",
       "connector": "RCA (Cinch)",
       "signal": "AUX IN",
       "direction": "IN",
@@ -452,7 +452,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Output",
+      "group": "Audio",
       "connector": "RCA (Cinch)",
       "signal": "AUX OUT",
       "direction": "OUT",

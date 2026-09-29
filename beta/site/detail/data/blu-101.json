@@ -5,7 +5,7 @@
   "itemType": "PRODUCT",
   "categories": [
     "오디오",
-    "Audio Processor (DSP)"
+    "Audio Processor"
   ],
   "english": "Soundweb London BLU-101 is a conferencing processor offering 12 analog inputs, 8 analog outputs, configurable signal processing, and dedicated AEC processing.",
   "korean": "BSS Soundweb London BLU-101은 12개의 아날로그 입력과 8개의 아날로그 출력, 구성 가능한 신호처리, 전용 AEC(음향반향제거) 처리 기능을 갖춘 컨퍼런싱 프로세서다.",
@@ -286,7 +286,7 @@
   ],
   "io": [
     {
-      "group": "Audio In",
+      "group": "Audio",
       "connector": "Phoenix/Combicon 스크류 단자",
       "signal": "Mic/Line 아날로그 입력",
       "direction": "IN",
@@ -298,7 +298,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Audio Out",
+      "group": "Audio",
       "connector": "Phoenix/Combicon 스크류 단자",
       "signal": "라인 레벨 아날로그 출력",
       "direction": "OUT",

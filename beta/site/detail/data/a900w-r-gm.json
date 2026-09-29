@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "액세서리"
+    "Accessory"
   ],
   "english": "A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)",
   "korean": "A900W-R-GM은 마이크로폰이 아니라, Shure MXA920 / MXA925 시리즈의 '라운드(원형)' 천장형 어레이 마이크로폰을 천장에 매달아 설치할 때 사용하는 Gripple 와이어 조이너 방식의 서스펜션 마운트 키트(흰색 커버 버전)이다.",
@@ -145,7 +145,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "호환성",
+      "group": "Compatibility",
       "name": "호환 마이크로폰",
       "value": "MXA920 시리즈 전 모델 (라운드형)",
       "unit": "",
@@ -154,7 +154,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "호환성",
+      "group": "Compatibility",
       "name": "미포함 사항",
       "value": "천장 고정용 하드웨어, 이더넷 케이블",
       "unit": "",
@@ -163,7 +163,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

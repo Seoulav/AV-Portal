@@ -8,7 +8,7 @@
   "categories": [
     "오디오",
     "Audio",
-    "무선 시스템"
+    "Wireless Microphone System"
   ],
   "english": "ULXD2/KSM9 Digital Handheld Transmitter with KSM9 Capsule",
   "korean": "ULX-D 핸드헬드 송신기 본체에 Shure KSM9(카디오이드/슈퍼카디오이드 전환형 컨덴서 보컬 마이크) 캡슐을 결합한 정식 카탈로그 SKU.",
@@ -267,7 +267,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "인증",
+      "group": "Certification",
       "name": "국내 인증",
       "value": "인증 완료",
       "unit": "",

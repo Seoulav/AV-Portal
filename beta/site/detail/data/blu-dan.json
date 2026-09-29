@@ -5,7 +5,7 @@
   "itemType": "PRODUCT",
   "categories": [
     "오디오",
-    "Audio Processor (DSP)",
+    "Audio Processor",
     "Network Bridge"
   ],
   "english": "Soundweb London BLU-DA (formerly known as BLU-DAN) is a Dante/AES67 to BLU link bridge supporting up to 64x64 channels, EN 54-16 compliant for life safety applications.",
@@ -173,7 +173,7 @@
       "verification": "FOUND"
     },
     {
-      "group": "Compliance",
+      "group": "Certification",
       "name": "인증",
       "value": "EN 54-16, AES67 호환",
       "unit": "",

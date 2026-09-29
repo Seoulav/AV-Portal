@@ -128,7 +128,7 @@
   ],
   "specifications": [
     {
-      "group": "출력",
+      "group": "Output",
       "name": "전 채널 구동시 채널당 출력(Lo-Z/Hi-Z)",
       "value": "125",
       "unit": "W",
@@ -137,7 +137,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "출력",
+      "group": "Output",
       "name": "파워쉐어링 최대 총 출력(단일 채널 강조시)",
       "value": "500",
       "unit": "W",
@@ -218,7 +218,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "채널수",
       "value": "4",
       "unit": "채널",
@@ -227,7 +227,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "폼팩터",
       "value": "1U, 하프랙 폭",
       "unit": "",
@@ -236,7 +236,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "크기(D×W×H)",
       "value": "358 x 220 x 43",
       "unit": "mm",
@@ -245,7 +245,7 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "물리 사양",
+      "group": "Physical",
       "name": "무게",
       "value": "3.2",
       "unit": "kg",
