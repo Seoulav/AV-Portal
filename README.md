@@ -37,6 +37,8 @@ W-007 대응과 W-008 제안표가 이 PC에 있을 때, `scripts/build-private-
 
 ## 검증
 
+공개 Library의 `beta/site/catalog.json` 또는 `beta/site/detail/data/*.json`을 변경했다면 `node beta/build-search-index.mjs`로 검색 인덱스를 재생성하고, `node beta/build-search-index.mjs --check`로 일치를 확인합니다. Pages 배포에서도 `--check`가 실행됩니다. 인덱스가 없거나 손상되면 공개 홈은 기존 상세 JSON 로더로 복구합니다. 이 절차는 제품 데이터 변경 승인과 별개입니다.
+
 ```powershell
 npm test
 npm run verify:local

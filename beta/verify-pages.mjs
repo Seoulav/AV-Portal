@@ -11,11 +11,11 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
 assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
-assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css']);
+assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'search-index.mjs']);
 const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
 assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
 assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);

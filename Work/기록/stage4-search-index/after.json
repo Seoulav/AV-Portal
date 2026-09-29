@@ -1,0 +1,102 @@
+{
+  "phase": "after",
+  "cases": [
+    {
+      "name": "home",
+      "width": 1280,
+      "data": {
+        "count": 2,
+        "bytes": 702941
+      },
+      "images": {
+        "count": 1,
+        "bytes": 237
+      },
+      "total": {
+        "count": 9,
+        "bytes": 2815079
+      },
+      "loadMs": 691,
+      "state": {
+        "items": "247",
+        "cards": 0,
+        "overflow": false,
+        "broken": []
+      },
+      "errors": []
+    },
+    {
+      "name": "HDMI",
+      "width": 1280,
+      "data": {
+        "count": 2,
+        "bytes": 702941
+      },
+      "images": {
+        "count": 13,
+        "bytes": 450185
+      },
+      "total": {
+        "count": 21,
+        "bytes": 3265027
+      },
+      "loadMs": 795,
+      "state": {
+        "items": "247",
+        "cards": 82,
+        "overflow": false,
+        "broken": []
+      },
+      "errors": []
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "data": {
+        "count": 2,
+        "bytes": 702941
+      },
+      "images": {
+        "count": 1,
+        "bytes": 237
+      },
+      "total": {
+        "count": 9,
+        "bytes": 2815079
+      },
+      "loadMs": 648,
+      "state": {
+        "items": "247",
+        "cards": 0,
+        "overflow": false,
+        "broken": []
+      },
+      "errors": []
+    },
+    {
+      "name": "HDMI",
+      "width": 390,
+      "data": {
+        "count": 2,
+        "bytes": 702941
+      },
+      "images": {
+        "count": 1,
+        "bytes": 237
+      },
+      "total": {
+        "count": 9,
+        "bytes": 2815079
+      },
+      "loadMs": 711,
+      "state": {
+        "items": "247",
+        "cards": 82,
+        "overflow": false,
+        "broken": []
+      },
+      "errors": []
+    }
+  ],
+  "failures": []
+}

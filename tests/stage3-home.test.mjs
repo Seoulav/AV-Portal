@@ -33,7 +33,8 @@ test('stage 3 card style uses four responsive columns and no status badge', asyn
   assert.match(css, /@media\s*\(max-width:\s*720px\)/);
   assert.match(css, /@media\s*\(max-width:\s*420px\)/);
   assert.doesNotMatch(app, /card-status/);
-  assert.match(app, /item\.cardSummary = publicCardSummary\(detail\)/);
+  assert.match(app, /detailSearchEntry\(item, detail\)/);
+  assert.match(await read('../beta/site/shared/search-index.mjs'), /cardSummary: publicCardSummary\(detail\)/);
   assert.match(app, /if \(item\.cardSummary\)/);
 });
 
