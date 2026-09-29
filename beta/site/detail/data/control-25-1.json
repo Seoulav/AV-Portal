@@ -27,6 +27,20 @@
       "originalSize": "1500x986",
       "resolution": "1500x986",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "control-25-1-rear.webp",
+      "alt": "JBL Control 25-1 후면 입력 단자부 및 트랜스포머 탭 셀렉터",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "JBL",
+      "model": "Control 25-1",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/7364_1728984322/cc25-1_back_z_original.jpg",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1500x986",
+      "resolution": "625x878",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://jblpro.com/en-US/products/control-25-1"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/7364_1728984322/cc25-1_back_z_original.jpg"
     },
     {
       "role": "Perspective",

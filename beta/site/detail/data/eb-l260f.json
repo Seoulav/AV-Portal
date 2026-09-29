@@ -27,6 +27,20 @@
       "originalSize": "690x460",
       "resolution": "690x460",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "eb-l260f-rear.webp",
+      "alt": "엡손 EB-L260F 후면 입출력 단자 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Epson",
+      "model": "EB-L260F",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&vid=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&prid=original&clid=SAPDAM&prclid=productpictures",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "690x460",
+      "resolution": "486x173",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L260F/p/V11HA69051"
+      "status": "FOUND",
+      "sourceUrl": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&vid=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&prid=original&clid=SAPDAM&prclid=productpictures"
     },
     {
       "role": "Perspective",
@@ -502,7 +516,14 @@
       "scope": "제조사 공식 출처"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "code": "R-IO",
+      "status": "REVIEW REQUIRED",
+      "title": "후면 사진과 I/O 표 불일치",
+      "detail": "후면 사진에서 확인: RS-232C와 마이크(미니잭) 입력이 있으나 I/O 표에 없다. D-Sub 15핀 물리 포트는 2개(Computer1, Computer2/Monitor Out 겸용)로, I/O 표의 입력 2·출력 1(합 3)과 겸용 포트 이중 집계 여부는 확인이 더 필요하다."
+    }
+  ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
     "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
