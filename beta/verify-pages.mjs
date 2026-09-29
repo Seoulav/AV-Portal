@@ -9,7 +9,16 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'index.html', 'llms.txt', 'manuals', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
+assert.deepEqual(await readdir(new URL('shared/', site)), ['pg.css']);
+const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
+assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
+assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);
+const commonStyle = await readFile(new URL('shared/pg.css', site), 'utf8');
+assert.match(commonStyle, /\.pg-page\s*\{/);
+assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
+
 // 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
 // 한 파일을 여러 카탈로그 항목이 공유할 수 있으므로(예: 여러 모델을 함께 다루는 시리즈 매뉴얼·브라켓 핸드북)
 // 파일명 자체의 중복은 허용하고, 대신 각 목록 안에서 같은 (brand, product)가 두 번 나오지 않는지만 확인한다.
@@ -195,7 +204,7 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => name !== 'detail' && name !== 'manuals')) {
+for (const filename of files.filter(name => name !== 'detail' && name !== 'manuals' && name !== 'fonts' && name !== 'shared')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
