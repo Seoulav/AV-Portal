@@ -20,7 +20,7 @@ test('local Group 1 preview preserves the published reviewed images and product 
       assert.deepEqual(preview.imageStatuses, publicData.imageStatuses);
       assert.ok(preview.images.every(item => !item.file.includes('/')));
       assert.ok(preview.images.every(item => item.publicationStatus.includes('사용자 게시 승인')));
-      assert.ok(preview.images.every(item => item.publicationStatus.includes('제조사 재사용 권리 미확인')));
+      assert.ok(preview.images.every(item => item.publicationStatus.includes('공식 출처 기록')));
     }
     assert.equal((await fetch(`${origin}/detail/images/unknown.jpg`)).status, 404);
   } finally {

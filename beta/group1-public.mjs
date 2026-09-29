@@ -68,8 +68,8 @@ export function projectPublicDetail(input, { summary, issues, series, seriesNote
     specifications, io, sources,
     issues: issues.map(issue => ({ code: text(issue.code), status: state(issue.status), title: text(issue.title), detail: text(issue.detail) })),
     presentation: {
-      galleryRightsBadge: '이미지 권한 검토 중',
-      galleryRights: '이미지 게시·재사용 권한은 확인되지 않았습니다. 제조사 공식 출처에서 확인해 주세요.',
+      galleryRightsBadge: '이미지 출처 검토 중',
+      galleryRights: '이미지 출처와 모델 일치 여부를 확인해 주세요.',
       specIntro: '값·조건·검증 상태를 함께 표시합니다.',
       ioIntro: '확인된 단자와 미확인 항목을 구분합니다.',
       supplementalNote: '제조사 공식 출처와 검토 상태를 구분해 표시합니다.',

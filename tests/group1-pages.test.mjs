@@ -22,7 +22,7 @@ test('public detail projection removes private workflow and image binaries but p
     issues: [{ code: 'R1', status: 'REVIEW REQUIRED', title: '검토', detail: '내부 메모' }],
     presentation: { galleryRights: 'local path' }
   };
-  const result = projectPublicDetail(source, { summary: '공식 근거 검토 중', issues: [{ code: 'R1', status: 'REVIEW REQUIRED', title: '이미지', detail: '게시 권한 미확인' }] });
+  const result = projectPublicDetail(source, { summary: '공식 근거 검토 중', issues: [{ code: 'R1', status: 'REVIEW REQUIRED', title: '이미지', detail: '이미지 역할 확인 필요' }] });
   assert.equal(result.packageStatus, 'REVIEW REQUIRED');
   assert.deepEqual(result.images, []);
   assert.equal(result.imageStatuses[0].sourceUrl, 'https://example.com/product');
