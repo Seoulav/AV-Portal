@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 246개
-- Product Detail: 239개
+- 공개 장비: 247개
+- Product Detail: 240개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1541,7 +1541,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 제품: Powersoft Duecanali 804 DSP+D
   분류: 오디오 | Audio | Amplifier
   종류: 장비
-  제품군 링크: https://www.powersoft.com/en/products/install-amps/duecanali-804
+  공식 링크: https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd
   매뉴얼: https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq
   상세: https://seoulav.github.io/AV-Portal/detail/?product=duecanali-804-dspd
 
@@ -1710,3 +1710,10 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html
   매뉴얼: https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=rally-mic-pod
+
+- 제품: Lumantek ez-UMD+
+  분류: 영상 | Video | Converter
+  종류: 장비
+  공식 링크: https://lumantek.co.kr/index/product_intro/75
+  매뉴얼: https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ez-umd-plus

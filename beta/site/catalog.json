@@ -3611,9 +3611,8 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.powersoft.com/en/products/install-amps/duecanali-804"
+      "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
     ],
-    "link_scope": "series",
     "manual_link": "https://www.powersoft.com/api/media/file/PS_duecanaliquattrocanali_UG.pdf?v=ms9fk7gq",
     "slug": "duecanali-804-dspd",
     "card_image": "duecanali-804-dspd-front.webp"
@@ -4009,5 +4008,21 @@
     "manual_link": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-accessories-datasheet.pdf",
     "slug": "rally-mic-pod",
     "card_image": "logitech-rally-mic-pod-perspective.webp"
+  },
+  {
+    "brand": "Lumantek",
+    "product": "ez-UMD+",
+    "categories": [
+      "영상",
+      "Video",
+      "Converter"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://lumantek.co.kr/index/product_intro/75"
+    ],
+    "manual_link": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+    "slug": "ez-umd-plus",
+    "card_image": "ez-umd-plus-main.webp"
   }
 ]
