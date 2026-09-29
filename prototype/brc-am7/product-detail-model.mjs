@@ -136,6 +136,34 @@ export function summarizeQuickDocuments(quickDocuments = []) {
   return summary;
 }
 
+export function visibleDetailCards(data = {}) {
+  const related = data.relatedProducts ?? data.related ?? [];
+  const openable = document => Boolean(document?.url && ['FOUND', 'VERIFIED', 'READY'].includes(document.status));
+  return [
+    ['overview', Boolean(data.overview || data.korean || data.english)],
+    ['gallery', Boolean(data.images?.length)],
+    ['io', Boolean(data.io?.length)],
+    ['specifications', Boolean(data.specifications?.length)],
+    ['features', Boolean(data.features?.length)],
+    ['related-products', Boolean(related.length)],
+    ['documents', Boolean(data.quickDocuments?.some(item => item.available || openable(item.resource)) || data.additionalDocuments?.some(openable))]
+  ].filter(([, visible]) => visible).map(([id]) => id);
+}
+
+export function connectorSignalTone(item = {}) {
+  const explicit = `${item.signal ?? ''} ${item.protocol ?? ''}`.toLowerCase();
+  if (/hdmi/.test(explicit)) return 'hdmi';
+  if (/displayport|\bdisplay port\b|\bdp\b/.test(explicit)) return 'dp';
+  if (/\bsdi\b/.test(explicit)) return 'sdi';
+  if (/fiber|fibre|optical|광/.test(explicit)) return 'fiber';
+  if (/dante|aes\/ebu|aes67|audio|mic|line|speaker|음향|오디오/.test(explicit)) return 'audio';
+  if (/ethernet|network|hdbaset|lan|tcp\/ip|poe/.test(explicit)) return 'cat';
+  if (/rs.?232|rs.?422|usb|gpio|control|serial|제어/.test(explicit)) return 'control';
+  if (/word clock|timecode|genlock|sync|동기/.test(explicit)) return 'sync';
+  if (/power|\bac\b|\bdc\b|전원/.test(explicit)) return 'power';
+  return 'neutral';
+}
+
 const VERIFICATION_STATUS_ORDER = ['VERIFIED', 'FOUND', 'READY', 'PARTIAL', 'REVIEW REQUIRED', 'CONFLICTED', 'MISSING'];
 const VERIFICATION_STATUS_LABELS = {
   VERIFIED: '검증',
