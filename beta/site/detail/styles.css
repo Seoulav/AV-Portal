@@ -12,6 +12,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .site-header a { text-decoration: none; }
 .site-header .pg-swatch { width: 36px; height: 36px; border-radius: 10px; font-size: 14px; }
 .header-actions, .detail-search, .header-docs { display: flex; align-items: center; gap: 8px; }
+.header-docs { flex-wrap: wrap; min-width: 0; max-width: 100%; }
 .detail-search { min-width: min(280px, 40vw); padding: 3px 4px 3px 13px; border-radius: var(--pg-r-pill); background: var(--pg-field-fill); }
 .detail-search input { min-width: 0; width: 100%; border: 0; outline: none; background: none; color: var(--pg-ink); font-size: 12px; }
 .detail-search-toggle { display: none; }
@@ -120,6 +121,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
   .pg-wrap { padding: 12px 16px 38px; }
   .site-header { top: 6px; }
   .product-hero .pg-actions { justify-content: flex-start; }
+  .header-docs { width: 100%; }
   .document-row { flex-wrap: wrap; }
   .document-row > div { flex-basis: 100%; }
   .manufacturer-footer { flex-wrap: wrap; }

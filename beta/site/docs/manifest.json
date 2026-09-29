@@ -1,0 +1,924 @@
+{
+  "mirrors": [
+    {
+      "url": "https://ap.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_en.pdf",
+      "file": "pt-mz17k-user-manual-c6d36160eac2.pdf",
+      "sha256": "4d4d9a14054912f2ee89a1bf46ce4f7a7eacea9878674da7ac5bd06e86d5bf4f",
+      "bytes": 39382644,
+      "fetchedAt": "2026-09-29T05:13:09.939Z",
+      "sourceHost": "ap.connect.panasonic.com"
+    },
+    {
+      "url": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-RX90_AE_Specification.pdf",
+      "file": "hdmi20-optj-rx90-specification-f07ae295f062.pdf",
+      "sha256": "6d56ce0e7c08cb12740943725e02008e1f039eb85cd96086426616ba8b051daa",
+      "bytes": 143885,
+      "fetchedAt": "2026-09-29T05:12:55.163Z",
+      "sourceHost": "assets.prod.pim.lightware.com"
+    },
+    {
+      "url": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Technical-Documents/A%26E-Specifications/HDMI20-OPTJ-TX90_AE_Specification.pdf",
+      "file": "hdmi20-optj-tx90-specification-7849d8812eb8.pdf",
+      "sha256": "7fba5fae1affa312f3d22bef81fb09aafe2b54d6f401d65399fc4aae69d1d70e",
+      "bytes": 142499,
+      "fetchedAt": "2026-09-29T05:12:55.515Z",
+      "sourceHost": "assets.prod.pim.lightware.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/aecinputcarddatasheetpdf",
+      "file": "blu-aec-in-specification-56865d8c7ce4.pdf",
+      "sha256": "3cca16454a35e31966b5e908142797ed22f99ceaaeb661ad96ee0be0d4758443",
+      "bytes": 564998,
+      "fetchedAt": "2026-09-29T05:12:40.403Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/blu-dan_datasheet_060315-pdf",
+      "file": "blu-dan-specification-3f509b9e0584.pdf",
+      "sha256": "bf5ba9f422b83b2f59a492e3116e27fb2e5683aed9e96106d172fae4380e656a",
+      "bytes": 159313,
+      "fetchedAt": "2026-09-29T05:12:40.638Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/blu100_datasheetpdf",
+      "file": "blu-100-specification-ae9404e53afb.pdf",
+      "sha256": "bfe3b1cfb738ded591e160f1b5384b1a8785221603c92ee7ae3434a8398c7b95",
+      "bytes": 726530,
+      "fetchedAt": "2026-09-29T05:12:38.124Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf",
+      "file": "blu-101-specification-161fa2f1efd8.pdf",
+      "sha256": "0fdc138eb2557d8aba73b0bd8ed26543b2e6eee23a22b8950269d0e1c9469e02",
+      "bytes": 292318,
+      "fetchedAt": "2026-09-29T05:12:38.751Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf",
+      "file": "blu-160-specification-9673f831a4f3.pdf",
+      "sha256": "462303223cf4492aa6d07a3d9e0dc1d2e7d910dc59393c2da442b016e5cf22f1",
+      "bytes": 251219,
+      "fetchedAt": "2026-09-29T05:12:38.774Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf",
+      "file": "blucard-in-specification-a3c71135eb2b.pdf",
+      "sha256": "b54b50b582085f4458bd1b5cd51d5b4943680fb30cc9901865f9f21b5a8ab7ab",
+      "bytes": 68164,
+      "fetchedAt": "2026-09-29T05:12:41.040Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf--2",
+      "file": "blucard-out-specification-268a735d7bae.pdf",
+      "sha256": "b54b50b582085f4458bd1b5cd51d5b4943680fb30cc9901865f9f21b5a8ab7ab",
+      "bytes": 68164,
+      "fetchedAt": "2026-09-29T05:12:40.362Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/en-US/product_documents/contriocontrollers_ec-4bv_web_datasheet_060215-pdf",
+      "file": "ec-4bv-specification-aa4113473c67.pdf",
+      "sha256": "52512fad661ceeb02caf0c191e2ce3d799e55ed277e966d0c36e1b4c9935a2aa",
+      "bytes": 307096,
+      "fetchedAt": "2026-09-29T05:44:05.149Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2",
+      "file": "blu-50v2-specification-3e1186118d55.pdf",
+      "sha256": "7dd19d841589511e0a4b321d786496bdfdf24a0be5c15ed65c61c0405012106b",
+      "bytes": 673753,
+      "fetchedAt": "2026-09-29T05:12:39.916Z",
+      "sourceHost": "bssaudio.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/MX392/Microflex_Wired_2019_Letter_EN.pdf",
+      "file": "mx392-c-specification-6b0126cd615e.pdf",
+      "sha256": "d7349c7711de7ec52c6e1d52f70a95605b3fee026341d0ca6d463b79bc74ff89",
+      "bytes": 2625035,
+      "fetchedAt": "2026-09-29T05:13:01.562Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/MX412/mx412d.pdf",
+      "file": "mx418d-c-specification-1e0c3894485f.pdf",
+      "sha256": "3dd013b9f6f72fa691c1a3e7424527c6d394554f4305a53f5234d9a7e4160a53",
+      "bytes": 90195,
+      "fetchedAt": "2026-09-29T05:13:00.813Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/mxc416-mxc420-mxc425/mxc416-mxc420-mxc425-gooseneck-spec-sheet-letter-en.pdf",
+      "file": "mxc420-c-specification-36fdcfd19a7c.pdf",
+      "sha256": "4179c72ace2e9a5e64c82963076dfbf914c055ff41b54cad1ccf57f4373ee60e",
+      "bytes": 1718618,
+      "fetchedAt": "2026-09-29T05:13:02.990Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/MXCWNCS/MXCW_Datasheet_Systempage_EN_letter_1809.pdf",
+      "file": "mxcw640-specification-6dc79da0ed0b.pdf",
+      "sha256": "81dffd1f5c325d382e4e17d264f5056dc6ef3017a180122e20a5037a4cde53aa",
+      "bytes": 1569339,
+      "fetchedAt": "2026-09-29T05:13:03.597Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/sb930/mxcw-brochure-shure.pdf",
+      "file": "mxcw640-technical-document-0cf4cf185e49.pdf",
+      "sha256": "e55f699b2b7fc3fd6e2f31bbcf7dfea3f79435a1e402f7c4aa94c8dde5f73e04",
+      "bytes": 6340343,
+      "fetchedAt": "2026-09-29T05:13:02.214Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://content-files.shure.com/Pubs/ulx/ulx-d-brochure.pdf",
+      "file": "ulxd1-specification-30a99b044dde.pdf",
+      "sha256": "106d5bbeb17f82d62b5ec2991865fdbac700e207ea9e17bb6951d3d0a8640030",
+      "bytes": 11740906,
+      "fetchedAt": "2026-09-29T05:13:20.805Z",
+      "sourceHost": "content-files.shure.com"
+    },
+    {
+      "url": "https://data.yamaha.com/files/download/other_assets/4/2344704/Rio3224-D3_owners_manual_Ko_A1.pdf",
+      "file": "rio1608-d3-user-manual-d3e75e833519.pdf",
+      "sha256": "501876b39f9cf6a5539223f35d2d01ffc481fbc02cc84844beafb787f8746bdf",
+      "bytes": 2065289,
+      "fetchedAt": "2026-09-29T05:13:07.801Z",
+      "sourceHost": "data.yamaha.com"
+    },
+    {
+      "url": "https://data.yamaha.com/files/download/other_assets/6/1628076/tio1608d2_en_om_b0.pdf",
+      "file": "tio1608-d2-user-manual-ff58cca1644a.pdf",
+      "sha256": "a81882c5cbbb24c93daa6e9f88ba104056caf9191bc6bde0a3a7d4aeb8b9e204",
+      "bytes": 2454694,
+      "fetchedAt": "2026-09-29T05:13:11.482Z",
+      "sourceHost": "data.yamaha.com"
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector//feature_guide/docs/Feature_comparison_chart.pdf",
+      "file": "pt-mz17k-technical-document-0e68410415d8.pdf",
+      "sha256": "e40ac49f554b2dbf3ed5a6051e00635ae308d963bfdbb09644dfde640b81abaa",
+      "bytes": 466057,
+      "fetchedAt": "2026-09-29T05:13:04.778Z",
+      "sourceHost": "docs.connect.panasonic.com"
+    },
+    {
+      "url": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+      "file": "ultripower-ps-specification-6a964120b98e.pdf",
+      "sha256": "db4dc9576d924c9dc8d4a5ec5c9ffa693951f025f40d42da7ef96e1fb25b879c",
+      "bytes": 537634,
+      "fetchedAt": "2026-09-29T05:13:18.121Z",
+      "sourceHost": "documentation.rossvideo.com"
+    },
+    {
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultritouch/Ultritouch%20User%20Guide%20(2201DR-304).pdf",
+      "file": "ultritouch-2-hr-specification-2da8623b2ea2.pdf",
+      "sha256": "fe24656aabbf23972cf47e92dce548cfcd0ec2e6f22591356001e323f7bbbfb8",
+      "bytes": 5184025,
+      "fetchedAt": "2026-09-29T05:13:18.966Z",
+      "sourceHost": "documentation.rossvideo.com"
+    },
+    {
+      "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+      "file": "ultrix-hdx-io-specification-b94380b4adff.pdf",
+      "sha256": "cd6b11c79725fba02d04659e955377beaaedee908b7d89cd7859b3f60ab10f59",
+      "bytes": 22747489,
+      "fetchedAt": "2026-09-29T05:13:26.464Z",
+      "sourceHost": "documentation.rossvideo.com"
+    },
+    {
+      "url": "https://documents.blackmagicdesign.com/kr/UserManuals/HyperDeckHDManual.pdf?_v=1771574410000",
+      "file": "hyperdeck-studio-hd-mini-user-manual-f8f31aedc255.pdf",
+      "sha256": "2ff04e3e82fdb221cea6c5cdbd8a9b37745c549ad5572ee9b41cca019d562419",
+      "bytes": 33744232,
+      "fetchedAt": "2026-09-29T05:12:55.611Z",
+      "sourceHost": "documents.blackmagicdesign.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Technical+Datasheet/rc400t-datasheet-en.pdf",
+      "file": "rc400t-specification-5a9483620bcc.pdf",
+      "sha256": "7d3c6cd9abe79e33118722a4b5f0cd3e8eb7ded5e9a68fe881a2877d6c361dfa",
+      "bytes": 352469,
+      "fetchedAt": "2026-09-29T05:13:08.617Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+      "file": "zenith-100-user-manual-062fe937eb3e.pdf",
+      "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+      "bytes": 8122177,
+      "fetchedAt": "2026-09-29T05:13:26.328Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+      "file": "zenith-100-specification-4c5f316eb498.pdf",
+      "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+      "bytes": 1167680,
+      "fetchedAt": "2026-09-29T05:13:25.607Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+      "file": "zenith-200-specification-90d556f4c49c.pdf",
+      "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+      "bytes": 1122104,
+      "fetchedAt": "2026-09-29T05:13:25.672Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf",
+      "file": "aquilon-rs1-technical-document-2623151a666a.pdf",
+      "sha256": "124c2fb363afec992027d02e7db14c7612666ad38ce69bbdab2fc276701f75ff",
+      "bytes": 5271507,
+      "fetchedAt": "2026-09-29T05:12:37.699Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "file": "aquilon-rs2-user-manual-622d1d11e5d4.pdf",
+      "sha256": "7578752f65ce92616a8d430245cebeed924e683e97f8406c16a5d403967f3779",
+      "bytes": 24010132,
+      "fetchedAt": "2026-09-29T05:12:38.731Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf",
+      "file": "aquilon-rs1-user-manual-763541fa361a.pdf",
+      "sha256": "a66164c6d9c1ed0f2861ea0c62d6b465c631817c1a5a09bff550eb8d174f516b",
+      "bytes": 2271610,
+      "fetchedAt": "2026-09-29T05:12:37.171Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf",
+      "file": "aquilon-rs1-specification-69f9f2e914b4.pdf",
+      "sha256": "90c4e94be564050b6ad46607185d649d488a1638493f8cda4b9b8b8598de1a81",
+      "bytes": 1233816,
+      "fetchedAt": "2026-09-29T05:12:36.928Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf",
+      "file": "aquilon-rs2-specification-c59ccd453d51.pdf",
+      "sha256": "8c521eedee54dd9deb2fafe84ac83cf61d7825d98b0f488ddb71ba0f62551936",
+      "bytes": 1242947,
+      "fetchedAt": "2026-09-29T05:12:36.932Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+      "file": "eikos-4k-user-manual-34563287cf50.pdf",
+      "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+      "bytes": 8234647,
+      "fetchedAt": "2026-09-29T05:12:54.212Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+      "file": "eikos-4k-specification-79a762641b70.pdf",
+      "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+      "bytes": 1173288,
+      "fetchedAt": "2026-09-29T05:12:52.150Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+      "file": "pulse-4k-specification-634348d0e7c0.pdf",
+      "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+      "bytes": 992749,
+      "fetchedAt": "2026-09-29T05:13:06.903Z",
+      "sourceHost": "dwn01.analogway.com"
+    },
+    {
+      "url": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
+      "file": "h-800w-psu-specification-3b9ed2157389.pdf",
+      "sha256": "57f4e9f3309ebeced9226d62e32a10a9d9ad65ae0781e36eea76f9c37bdc92f1",
+      "bytes": 2139140,
+      "fetchedAt": "2026-09-29T05:12:55.591Z",
+      "sourceHost": "en-website001.oss-us-east-1.aliyuncs.com"
+    },
+    {
+      "url": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H5%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
+      "file": "novastar-h5-specification-89119003fed1.pdf",
+      "sha256": "d60fecedd78fa7a885c14a35804d3ea8af100c05bc1684a642ed97b48d249639",
+      "bytes": 2300542,
+      "fetchedAt": "2026-09-29T05:13:04.399Z",
+      "sourceHost": "en-website001.oss-us-east-1.aliyuncs.com"
+    },
+    {
+      "url": "https://lumantek.co.kr/index.php/dataFunction/fileDown?location=uploads/download/7e7863c8499572e43198c0aafbed54aa.pdf&name=VS5_USER_MANUAL.pdf",
+      "file": "vs5-user-manual-225fc5daaa4f.pdf",
+      "sha256": "b8f369d996ee8b40aa064438cc384819ce98b51df79e46ab499c5ab1cf82eba6",
+      "bytes": 4292416,
+      "fetchedAt": "2026-09-29T05:13:23.180Z",
+      "sourceHost": "lumantek.co.kr"
+    },
+    {
+      "url": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
+      "file": "ez-umd-plus-user-manual-68bfa34b93b1.pdf",
+      "sha256": "1241bbdf49c277a6d72fe534d9cdaa5e8240d9177a98df3c5b5814d7109ff4eb",
+      "bytes": 26144906,
+      "fetchedAt": "2026-09-29T05:12:52.100Z",
+      "sourceHost": "lumantek.co.kr"
+    },
+    {
+      "url": "https://my.epson.co.kr/upfiles/Catalog/thumb/EB-L530U.pdf",
+      "file": "eb-l530u-specification-585abcfaa217.pdf",
+      "sha256": "56c6e0b124c1cfaf28f7ab95a9db32f43df72474a0ae84ba59acfe6c048d7a8d",
+      "bytes": 6346995,
+      "fetchedAt": "2026-09-29T05:12:50.013Z",
+      "sourceHost": "my.epson.co.kr"
+    },
+    {
+      "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+      "file": "duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+      "sha256": "ad7c6bd752961e777afec5868da23e858702f53dbba3903307e8c96088127ce5",
+      "bytes": 10812695,
+      "fetchedAt": "2026-09-29T05:12:53.172Z",
+      "sourceHost": "powersoft.com"
+    },
+    {
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip10",
+      "file": "rm-ip10-specification-a8cb8cf36d2b.pdf",
+      "sha256": "65ddea1174a04660ea79cc4ef98fa7dcafb1f802c4200cec9b4e7d4ad0e050e5",
+      "bytes": 1290623,
+      "fetchedAt": "2026-09-29T05:13:08.521Z",
+      "sourceHost": "pro.sony"
+    },
+    {
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip500",
+      "file": "rm-ip500-specification-cde083243a77.pdf",
+      "sha256": "dee512febc1a663c1b343b55486970ba768f00c7d8e2c7ec8c4c8f1c186de101",
+      "bytes": 1703099,
+      "fetchedAt": "2026-09-29T05:13:26.260Z",
+      "sourceHost": "pro.sony"
+    },
+    {
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/srg-a40",
+      "file": "srg-a40-specification-f0e9114f3f66.pdf",
+      "sha256": "5bfac0970e8698fe912cef9dec210d8a8966c1f5d71a79b27bb0b625185b4f79",
+      "bytes": 6177299,
+      "fetchedAt": "2026-09-29T05:13:23.513Z",
+      "sourceHost": "pro.sony"
+    },
+    {
+      "url": "https://pro.sony/ko_KR/pdf/products/ptz-network-cameras/srg-x40uh",
+      "file": "srg-x40uh-specification-e3f2321aae4a.pdf",
+      "sha256": "ad722a60d96d9deb744c92c04650f8237489273f5c4ac4e3889c9b2590282a70",
+      "bytes": 1725967,
+      "fetchedAt": "2026-09-29T05:13:17.251Z",
+      "sourceHost": "pro.sony"
+    },
+    {
+      "url": "https://pubs.shure.com/file/259948",
+      "file": "mx395-specification-215fb02f09c4.pdf",
+      "sha256": "bceeef5c7fa1d4818b407842df4c1b52864dfffaa4e00bb630c8c18e02223f08",
+      "bytes": 242596,
+      "fetchedAt": "2026-09-29T05:13:01.830Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/guide/UA864/en-US",
+      "file": "ua864a-user-manual-7df63e0cdcfe.pdf",
+      "sha256": "db499069934dc0624a01b15506bacd90f52d0ff40ecfb8b38ce9315ab0eede4b",
+      "bytes": 885117,
+      "fetchedAt": "2026-09-29T05:13:17.472Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/guide/UA874/en-US",
+      "file": "ua874xa-user-manual-13f1febab8c9.pdf",
+      "sha256": "1628a102b23a260c8fb6f81ef04a6862a9d1cf0cfd799adcd8a8b25144f7fd2d",
+      "bytes": 470348,
+      "fetchedAt": "2026-09-29T05:13:18.951Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/view/guide/QLXD/en-US.pdf",
+      "file": "qlxd1-user-manual-5da69eb59f1f.pdf",
+      "sha256": "4d0613db1b21017b0780a31ee56f255f07169d34a0d5346f7533d8140a6a5269",
+      "bytes": 2292130,
+      "fetchedAt": "2026-09-29T05:13:06.861Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
+      "file": "slxd1-plus-user-manual-39e1cd4e1748.pdf",
+      "sha256": "bfe0782c9440c06ffb3e5e3c66ba742e1924f741e57ad2be11df9d5bf095a303",
+      "bytes": 2243035,
+      "fetchedAt": "2026-09-29T05:13:09.444Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
+      "file": "ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+      "sha256": "4c740a8f2a98b3ac383a61ecfa89718fc3f1d33f05aedb434f010464a7cff94f",
+      "bytes": 3448963,
+      "fetchedAt": "2026-09-29T05:13:19.927Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://pubs.shure.com/view/guide/ULXD/en-US.pdf",
+      "file": "ulxd1-user-manual-023f8fbfa028.pdf",
+      "sha256": "5df004c1bf323b6a6072e390adf8fc06bc13f4bf7c51d53cc4592ba7c2827f03",
+      "bytes": 2075053,
+      "fetchedAt": "2026-09-29T05:13:18.714Z",
+      "sourceHost": "pubs.shure.com"
+    },
+    {
+      "url": "https://static.roland.com/assets/media/pdf/V-160HD_Reference_eng09_W.pdf",
+      "file": "v-160hd-specification-f435e72baacb.pdf",
+      "sha256": "16a26572a9fb39e3019b440f9395df326bc2fe2ee8d3b7172d5e77323c1cc2c7",
+      "bytes": 15595275,
+      "fetchedAt": "2026-09-29T05:13:20.658Z",
+      "sourceHost": "static.roland.com"
+    },
+    {
+      "url": "https://static.roland.com/assets/media/pdf/V-1HD_plus_reference_eng02_W.pdf",
+      "file": "v-1hd-plus-specification-52fe437bd4ac.pdf",
+      "sha256": "079a8616bfe231f55a85f081f13e2956132be5b3e29c262fb3aa9c5c15367fcf",
+      "bytes": 12906395,
+      "fetchedAt": "2026-09-29T05:13:21.603Z",
+      "sourceHost": "static.roland.com"
+    },
+    {
+      "url": "https://static.roland.com/assets/media/pdf/V-80HD_Reference_eng03_W.pdf",
+      "file": "v-80hd-specification-ed115e782e62.pdf",
+      "sha256": "f7bfc883e31d2d0bd5ee75d5b8dc00437be393fe940a86a82851dabca3b926d3",
+      "bytes": 20982865,
+      "fetchedAt": "2026-09-29T05:13:22.072Z",
+      "sourceHost": "static.roland.com"
+    },
+    {
+      "url": "https://static.roland.com/assets/media/pdf/V-8HD_reference_v3_eng01_W.pdf",
+      "file": "v-8hd-specification-f1d73b790c24.pdf",
+      "sha256": "3017d887cd0e40c6b7ea0b40dd2c3479f23fc1717cea77121bea78dd9473b4ac",
+      "bytes": 11245219,
+      "fetchedAt": "2026-09-29T05:13:22.287Z",
+      "sourceHost": "static.roland.com"
+    },
+    {
+      "url": "https://static.roland.com/assets/media/pdf/VR-6HD_Reference_eng05_W.pdf",
+      "file": "vr-6hd-specification-570cafa3edf2.pdf",
+      "sha256": "ac7a01209ab5bf7cbd5c188037ca36f4888ea4a35e811e18ddadf0c7d4d5eb2a",
+      "bytes": 17418233,
+      "fetchedAt": "2026-09-29T05:13:24.237Z",
+      "sourceHost": "static.roland.com"
+    },
+    {
+      "url": "https://usa.yamaha.com/files/download/other_assets/7/2235257/DM7_RM_Ko_D0.pdf",
+      "file": "dm7-user-manual-0b1045e2664d.pdf",
+      "sha256": "e4db669ad55b036c1b22883756989d19edc352ae2b0aa0b46131460e19cb15a9",
+      "bytes": 14646434,
+      "fetchedAt": "2026-09-29T05:12:48.830Z",
+      "sourceHost": "usa.yamaha.com"
+    },
+    {
+      "url": "https://www.aja.com/assets/support/files/9951/en/AJA_Ki_Pro_GO2_Manual_v5.0r1.pdf",
+      "file": "ki-pro-go2-user-manual-cea7d208d1f9.pdf",
+      "sha256": "e6b11ec04f2ee7bdcc39ad9991fbc777553891a715d4325edd82680555526d73",
+      "bytes": 10188301,
+      "fetchedAt": "2026-09-29T05:12:58.282Z",
+      "sourceHost": "www.aja.com"
+    },
+    {
+      "url": "https://www.ametekesp.com/-/media/ametekesp/downloads/product-sheets/surgex-ametek_product-sheet_remote-turn-on_intl.pdf?la=en&revision=3f8ff999-b51d-4091-a8ac-f20b05792e44",
+      "file": "sx-1216-rti-specification-f348ed63c922.pdf",
+      "sha256": "5a17b55f0f3cf2fbe5d1ccbc1deed58cfbe1b1093c14630ad0e16ace176d331e",
+      "bytes": 324292,
+      "fetchedAt": "2026-09-29T05:13:12.080Z",
+      "sourceHost": "www.ametekesp.com"
+    },
+    {
+      "url": "https://www.amx.com/en-US/product_documents/nx-1200-datasheet-pdf",
+      "file": "nx-1200-specification-2db559cb2af7.pdf",
+      "sha256": "9a81a767e36f56157a3515e71905e530cce1db96cb10416b059f8758897c8807",
+      "bytes": 387808,
+      "fetchedAt": "2026-09-29T05:13:05.182Z",
+      "sourceHost": "www.amx.com"
+    },
+    {
+      "url": "https://www.amx.com/en-US/product_documents/nx-2200-datasheet-pdf",
+      "file": "nx-2200-specification-c9e9d91a9011.pdf",
+      "sha256": "abea29a6ebeb57d4f6e91293ba250f2a8b71942fbb00eec135d4a4134c7370a7",
+      "bytes": 381413,
+      "fetchedAt": "2026-09-29T05:13:05.048Z",
+      "sourceHost": "www.amx.com"
+    },
+    {
+      "url": "https://www.amx.com/en-US/product_documents/nx-3200-datasheet-pdf",
+      "file": "nx-3200-specification-dc388219af9b.pdf",
+      "sha256": "04e6ba8cd24ce134a389000daf60a0c9ef2a442ea17fb836c76bc9ef81e971af",
+      "bytes": 392821,
+      "fetchedAt": "2026-09-29T05:13:05.160Z",
+      "sourceHost": "www.amx.com"
+    },
+    {
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/cl01-datasheet.pdf",
+      "file": "cl01-specification-711b02e874f5.pdf",
+      "sha256": "86304e79b35de6c6b6b8f76374e1d06f31fb7ae836145c272f0e4e2968ce0058",
+      "bytes": 841096,
+      "fetchedAt": "2026-09-29T05:12:44.905Z",
+      "sourceHost": "www.averusa.com"
+    },
+    {
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr315-datasheet.pdf",
+      "file": "tr315-specification-ad6ff353edb2.pdf",
+      "sha256": "7241448467058f06981813e11a6fe6fb88837280baa2b78270a16c531a2b2bf1",
+      "bytes": 643345,
+      "fetchedAt": "2026-09-29T05:13:13.708Z",
+      "sourceHost": "www.averusa.com"
+    },
+    {
+      "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr335-datasheet.pdf",
+      "file": "tr335-specification-88e469e22863.pdf",
+      "sha256": "c084aa594ada8035951706e67966ea34dcf3252a3eccc488c55479daf72da2f8",
+      "bytes": 606872,
+      "fetchedAt": "2026-09-29T05:13:14.668Z",
+      "sourceHost": "www.averusa.com"
+    },
+    {
+      "url": "https://www.averusa.com/pro-av/downloads/user-manual/camera-controller-cl01-manual-EN_2019.11.25.pdf",
+      "file": "cl01-user-manual-c8971d09a27c.pdf",
+      "sha256": "82e33dda2abcbc55816bd1bae79f62343f5c0f30d26f04d6a64278774baf4235",
+      "bytes": 1184323,
+      "fetchedAt": "2026-09-29T05:12:44.627Z",
+      "sourceHost": "www.averusa.com"
+    },
+    {
+      "url": "https://www.averusa.com/pro-av/downloads/user-manual/V3_Tracking_Camera_UM_EN_2023.09.27_Annie+(Whole+series).pdf",
+      "file": "tr315-user-manual-f5191fd75452.pdf",
+      "sha256": "1e404d309eec76cbf54572016fae48c4efdf782d68b00003be28b6d8c5354b11",
+      "bytes": 5139499,
+      "fetchedAt": "2026-09-29T05:13:15.025Z",
+      "sourceHost": "www.averusa.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/product_documents/crown_cdi_drivecore_series_cutsheet-pdf",
+      "file": "cdi-2-1200-specification-549449d8d43c.pdf",
+      "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9",
+      "bytes": 2752762,
+      "fetchedAt": "2026-09-29T05:12:43.008Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/product_documents/crown_cdi_drivecore_series_cutsheet-pdf-1d476061-1181-4385-8560-d5fe5fe9ec85",
+      "file": "cdi-2-300bl-specification-82837aa1e00f.pdf",
+      "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9",
+      "bytes": 2752762,
+      "fetchedAt": "2026-09-29T05:12:43.525Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "file": "cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "sha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "bytes": 9620875,
+      "fetchedAt": "2026-09-29T05:12:41.637Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/data-sheet-comtech-d-series",
+      "file": "comtech-d-2125-specification-7aa144fec7d1.pdf",
+      "sha256": "9527676ce19898059d37662afbc5fdea23dcb1a40f2de23ea77df19b8815bd3c",
+      "bytes": 2774334,
+      "fetchedAt": "2026-09-29T05:12:44.546Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-manual-english",
+      "file": "dci-2-300-user-manual-ca77fee5f7e4.pdf",
+      "sha256": "26235169c3ba8657e7bdb6e324b4c379e6d1bdc3911671c00fb117835d3b7358",
+      "bytes": 5052751,
+      "fetchedAt": "2026-09-29T05:12:49.387Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/i-tech-4x3500hd-datasheet",
+      "file": "i-tech-4x3500hd-specification-5ac628f678a6.pdf",
+      "sha256": "26fb1f26092cdd1c88f4b94bc2b40611a183104c6fa88e3af1db343ce8ee6398",
+      "bytes": 1453067,
+      "fetchedAt": "2026-09-29T05:44:07.318Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/i-tech-4x3500hd-manual-english",
+      "file": "i-tech-4x3500hd-user-manual-f2665f3dd739.pdf",
+      "sha256": "5e24e45798f1929c68cd0b0f7b9cbb0f4a5c33175cecf7986c1889c093d05163",
+      "bytes": 16768567,
+      "fetchedAt": "2026-09-29T05:44:06.869Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series",
+      "file": "comtech-d-2125-user-manual-9f79add6bbae.pdf",
+      "sha256": "ed862bcd6c65c972279d1c96b28d1109d7ea91a6038ccfc736bccef8e0f0a663",
+      "bytes": 8010287,
+      "fetchedAt": "2026-09-29T05:12:44.550Z",
+      "sourceHost": "www.crownaudio.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_DS.pdf",
+      "file": "gs728tppv3-specification-6895a66a4280.pdf",
+      "sha256": "001823b720ea8535febd46b9557922e6f8448370d9263a520a61553dae8e79b7",
+      "bytes": 416700,
+      "fetchedAt": "2026-09-29T05:12:53.164Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_HIG_EN.pdf",
+      "file": "gs728tppv3-technical-document-eff0c42a981c.pdf",
+      "sha256": "4719c247aa0255dfc93665cea9e6fe9c19238ababd2a28493b7c1bef43825c3d",
+      "bytes": 7326249,
+      "fetchedAt": "2026-09-29T05:13:07.446Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/GS728TPPv3/GS728TPv3_GS728TPPv3_GS752TPv3_GS752TPPv3_UM_EN.pdf",
+      "file": "gs728tppv3-user-manual-9c326717fe03.pdf",
+      "sha256": "333e2a8c57a450c00276e87fa50650322ac82d1e2d9db4979a4847323792a260",
+      "bytes": 3605620,
+      "fetchedAt": "2026-09-29T05:12:51.885Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_AV_UM_EN.pdf",
+      "file": "gsm4212p-user-manual-ecb29b6aed5c.pdf",
+      "sha256": "1150c12bcefbbcf56a7e7b4559bf1f74a610cbcada13f6b1c3eaf7455b57d615",
+      "bytes": 546859,
+      "fetchedAt": "2026-09-29T05:12:52.581Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_Datasheet.pdf",
+      "file": "gsm4212p-specification-61e668dc8454.pdf",
+      "sha256": "e6d2c13806c9b6b835116b27416ebc4611908a9d69780f86768a64fb722e1de3",
+      "bytes": 7137065,
+      "fetchedAt": "2026-09-29T05:12:52.285Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_IG_EN.pdf",
+      "file": "gsm4212p-technical-document-e8dcec183e0f.pdf",
+      "sha256": "a4c86e1880990eb26c4669a8a0ad1e6fec1d0ddefacfd602120f9e9de7e019c7",
+      "bytes": 193496,
+      "fetchedAt": "2026-09-29T05:12:52.227Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/M4250/M4250_ProductBrief.pdf",
+      "file": "gsm4248px-technical-document-336b3fce760c.pdf",
+      "sha256": "b3361b6b7f661f5f9bd97b6d451133e0f0f175748206106df08f4184cfb0a1a5",
+      "bytes": 1670524,
+      "fetchedAt": "2026-09-29T05:12:54.412Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/Unmanaged_Switches/GS105Pv3_GS105PPv3_GS108LP_GS108PP_GS116LP_GS116PP_DS.pdf",
+      "file": "gs108pp-specification-5640a05d770b.pdf",
+      "sha256": "6d04a281e052287479ee8dffd4d3f522ff572a2803aa8066751bfab9c9c9ce50",
+      "bytes": 1308442,
+      "fetchedAt": "2026-09-29T05:12:52.712Z",
+      "sourceHost": "www.downloads.netgear.com"
+    },
+    {
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-bluetooth_0224-en.pdf",
+      "file": "avio-bt-specification-7def584a28c4.pdf",
+      "sha256": "511dbdae73b5a5ca07adbc9deeb705e8c815c3dce28fbe20853909ff50c0175a",
+      "bytes": 720841,
+      "fetchedAt": "2026-09-29T05:12:37.656Z",
+      "sourceHost": "www.getdante.com"
+    },
+    {
+      "url": "https://www.getdante.com/wp-content/uploads/2024/02/dante_avio-usb-c_0224-en.pdf",
+      "file": "avio-usb-c-specification-c6a4c9758eaa.pdf",
+      "sha256": "845d8baac9aaaa61cfce675e3bb0bb5b9898bc5474a90164b77022cc547c8045",
+      "bytes": 536652,
+      "fetchedAt": "2026-09-29T05:12:38.941Z",
+      "sourceHost": "www.getdante.com"
+    },
+    {
+      "url": "https://www.getdante.com/wp-content/uploads/2025/06/dante_avio-analog-20250604.pdf",
+      "file": "avio-2ch-in-specification-77cde01c8e3d.pdf",
+      "sha256": "476729f88121226853ff8102e9fafb7f3760c8c16edfb9be3b2b16ac01a28f5b",
+      "bytes": 362614,
+      "fetchedAt": "2026-09-29T05:12:37.476Z",
+      "sourceHost": "www.getdante.com"
+    },
+    {
+      "url": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
+      "file": "rally-mic-pod-hub-specification-3e204e458092.pdf",
+      "sha256": "f4f4489dda51770063199eaae9194a046e52a5332caa0eb958e3619ab5fa0d67",
+      "bytes": 1791882,
+      "fetchedAt": "2026-09-29T05:13:08.231Z",
+      "sourceHost": "www.logitech.com"
+    },
+    {
+      "url": "https://www.logitech.com/content/dam/logitech/ko_kr/video-collaboration/pdf/rallybar.pdf",
+      "file": "rally-bar-specification-f6e749e8b90e.pdf",
+      "sha256": "41b92ca9309a2fc2dae70e97f327811e1c8c762ca8b7e8c9f666f2d8a4d966f8",
+      "bytes": 1101620,
+      "fetchedAt": "2026-09-29T05:13:06.970Z",
+      "sourceHost": "www.logitech.com"
+    },
+    {
+      "url": "https://www.lumantek.com/index.php/dataFunction/fileDown?location=uploads/download/6f0cb729e616d0c294f183cd48aa6b5f.pdf&name=VS10_MANUAL_ENG_211228.pdf",
+      "file": "vs10-user-manual-a88173bdcc44.pdf",
+      "sha256": "53d038df88370a5a607d8b704bbac99e893c834072609e01a0857157e63e80dc",
+      "bytes": 2991937,
+      "fetchedAt": "2026-09-29T05:13:22.958Z",
+      "sourceHost": "www.lumantek.com"
+    },
+    {
+      "url": "https://www.lumantek.com/index.php/dataFunction/fileDown?location=uploads/download/ae422cc69ee561b1250091f2dfb856fb.pdf&name=211221_catalog.pdf",
+      "file": "vs10-specification-ce7cfb629f00.pdf",
+      "sha256": "93dbc11b015ffeb13ecd1622f0ea275606209db190233f44db1e7468d46c4676",
+      "bytes": 11630465,
+      "fetchedAt": "2026-09-29T05:13:23.515Z",
+      "sourceHost": "www.lumantek.com"
+    },
+    {
+      "url": "https://www.powersoft.com/api/media/file/PS_MEZZO_UG.pdf?v=ms9fk7xw",
+      "file": "mezzo-322-ad-user-manual-bc2337667ba3.pdf",
+      "sha256": "934e95f78a40d1cbe27d9ad77031815abd3c91ace1173d6d8d67e0bd86461745",
+      "bytes": 3863221,
+      "fetchedAt": "2026-09-29T05:12:59.973Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/files/2019/11/powersoft_TDCD_MEZZO.pdf",
+      "file": "mezzo-322-ad-technical-document-c7b66fff4c0e.pdf",
+      "sha256": "e3708964e8a27ff1a2b3073002ced71976602dc4d612f8911a6c088953bed997",
+      "bytes": 479003,
+      "fetchedAt": "2026-09-29T05:12:59.472Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Duecanali_DS_EN_WEB.pdf",
+      "file": "duecanali-1604-dsp-specification-de0def9506ab.pdf",
+      "sha256": "28f505e8c80f22fe97272bda9a2d922ce10a2d81796aac93c131c6d2660f2e8b",
+      "bytes": 746433,
+      "fetchedAt": "2026-09-29T05:12:51.219Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Quattrocanali-DSP_DS_EN.pdf",
+      "file": "quattrocanali-1204-dspd-specification-a9dd0e626740.pdf",
+      "sha256": "a5ff5398790913f0a81f420c40f32547a24b9f78b9aa519cdc25d9b496677ab8",
+      "bytes": 642831,
+      "fetchedAt": "2026-09-29T05:13:08.856Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/2018/08/powersoft_Quattrocanali_DS_EN_WEB.pdf",
+      "file": "quattrocanali-1204-dsp-specification-8c5f8bdcb377.pdf",
+      "sha256": "0ccf72df021daadb97469e3df6aede0aa411a82d72e0d3043f5cd1dc5ca570b2",
+      "bytes": 678885,
+      "fetchedAt": "2026-09-29T05:13:08.616Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/2020/06/powersoft_Duecanali-DSP_DS_EN.pdf",
+      "file": "duecanali-1604-dspd-specification-158335e4ac01.pdf",
+      "sha256": "ec912ede8f499b8ceab59934048fd1e6a12205c62e534e4f0f1e57af780e513c",
+      "bytes": 703040,
+      "fetchedAt": "2026-09-29T05:12:51.547Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf",
+      "file": "mezzo-322-a-specification-9b694c15bcff.pdf",
+      "sha256": "d112824ea31c0b9e36079dda63b7bd5d3c83924d0c1d1e36200987c66652d40b",
+      "bytes": 1336309,
+      "fetchedAt": "2026-09-29T05:12:59.791Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf",
+      "file": "mezzo-322-a-user-manual-68ad5a823917.pdf",
+      "sha256": "934e95f78a40d1cbe27d9ad77031815abd3c91ace1173d6d8d67e0bd86461745",
+      "bytes": 3863221,
+      "fetchedAt": "2026-09-29T05:13:01.553Z",
+      "sourceHost": "www.powersoft.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/4450/4fc89a84fb7852abab2f68826fd98148/44509971M.pdf",
+      "file": "rm-ip10-user-manual-81ccce34c0f3.pdf",
+      "sha256": "4b12eb63c92333aa49db69a9ddc80b13cfd590f745ad24e88906c886ade35ea7",
+      "bytes": 3081345,
+      "fetchedAt": "2026-09-29T05:13:08.724Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/4696/c0e8f25a2e17f02ff8d68f5d11fc5489/46962571M.pdf",
+      "file": "rm-ip500-user-manual-0379c4097af5.pdf",
+      "sha256": "a7eca9fcf3730d222a69302841d938cf150087e9f5def7411fc5a96db9b2bd22",
+      "bytes": 5035804,
+      "fetchedAt": "2026-09-29T05:13:09.528Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5045/91c0657815a5ea3c6b7c19f6d7f7f580/50452781M.pdf",
+      "file": "srg-x40uh-user-manual-e44dc81b3c93.pdf",
+      "sha256": "297d5d919bdf75e3fc63aa25bf998b64cb20f7515cfac910fa03aabcccc0c0ca",
+      "bytes": 3854127,
+      "fetchedAt": "2026-09-29T05:13:10.561Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5046/91d09d554cfc9e06372abbe82a55c18e/50462901M.pdf",
+      "file": "srg-x40uh-technical-document-0961490a73ec.pdf",
+      "sha256": "70305c68d58b8a686d3cb7c0e4c0b91a967c28b69f21f317abd4161816a4e158",
+      "bytes": 577301,
+      "fetchedAt": "2026-09-29T05:13:10.416Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/7964e8723a6c3c92e14125ad162509e6/50531541M.pdf",
+      "file": "srg-a40-user-manual-174b829eadf5.pdf",
+      "sha256": "03aad059cfe4e4d4bd9ca27bd84bc1a3294acfee67559b382e4ec840af9a49db",
+      "bytes": 6627453,
+      "fetchedAt": "2026-09-29T05:13:09.983Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/f48354480e724f0aef3d45d2e1eeab63/50531551M.pdf",
+      "file": "srg-a40-technical-document-004c339079b1.pdf",
+      "sha256": "53078e979486c5890afcde9d135d7c34c08d14c923d9d8df0f26fee044e2fc9c",
+      "bytes": 1817385,
+      "fetchedAt": "2026-09-29T05:13:11.038Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5072/7ae48f4b6b6dee5ee8a619ce6070c9f4/50728311M.pdf",
+      "file": "rm-ip10-technical-document-a7082d425274.pdf",
+      "sha256": "535cb8e684dff6ee7e4e4f4894940ebc106f738533696f2652c6b959e0a6411b",
+      "bytes": 497667,
+      "fetchedAt": "2026-09-29T05:13:08.705Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20220531/202205310820275390dc0ee534494bed7c6ff176ec010.pdf",
+      "file": "avhub-specification-d83981829248.pdf",
+      "sha256": "e7b49cbb2bf4b9002009f55862ffa826b3e9908e8d07868b673dda250881ba5f",
+      "bytes": 3804557,
+      "fetchedAt": "2026-09-29T05:12:35.756Z",
+      "sourceHost": "www.yealink.com"
+    },
+    {
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20230516/20230516102035377a7970e624703a53a98a498010531.pdf",
+      "file": "vcm35-specification-fdde14b6ee8a.pdf",
+      "sha256": "f5f278d4cd233a6383539c4223bfdbea11325f9d30f244903bd3a58372191333",
+      "bytes": 503311,
+      "fetchedAt": "2026-09-29T05:13:22.329Z",
+      "sourceHost": "www.yealink.com"
+    },
+    {
+      "url": "https://www.yealink.com/website-service/attachment/product_resource/documents/20231109/202311090136162567f08f91f430b84befb73cfee991f.pdf",
+      "file": "uvc86-specification-78f8fa8af06f.pdf",
+      "sha256": "648b12cfb0b174e5a6eb36ed0dc6061791ad923dc9ea58cb79b2e8a8657c1a19",
+      "bytes": 65017,
+      "fetchedAt": "2026-09-29T05:13:19.518Z",
+      "sourceHost": "www.yealink.com"
+    }
+  ],
+  "uploads": [
+    {
+      "slug": "ac18-26",
+      "file": "manuals/jbl-ae-series-u-bracket-handbook.pdf",
+      "kind": "reference",
+      "title": "사용자 업로드 참고자료"
+    },
+    {
+      "slug": "ac18-95",
+      "file": "manuals/jbl-ae-series-u-bracket-handbook.pdf",
+      "kind": "reference",
+      "title": "사용자 업로드 참고자료"
+    },
+    {
+      "slug": "dci-4-300da",
+      "file": "manuals/crown-dci-install-da-series-manual.pdf",
+      "kind": "manual",
+      "title": "사용자 업로드 매뉴얼"
+    },
+    {
+      "slug": "dci-4-600da",
+      "file": "manuals/crown-dci-install-da-series-manual.pdf",
+      "kind": "manual",
+      "title": "사용자 업로드 매뉴얼"
+    },
+    {
+      "slug": "led-780h",
+      "file": "manuals/magnimage-led-780h-user-manual.pdf",
+      "kind": "manual",
+      "title": "사용자 업로드 매뉴얼"
+    }
+  ]
+}
