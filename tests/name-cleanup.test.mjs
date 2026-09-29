@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyCatalogNames, applyDetailNames } from '../beta/name-cleanup.mjs';
 import { filterCatalog, mapTopCategories } from '../beta/site/app.js';
-import { execFileSync } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
 
 test('renames approved catalog categories in place and leaves other fields untouched', () => {
   const input = {
@@ -71,13 +71,17 @@ test('normalizes the approved BSS EC-4BV Network/Control label only', async () =
 });
 
 test('renamed catalog categories preserve home top-category counts and filter membership', async () => {
-  const base = '671a74726a3cd14c72ac3809a9004d26165fbc87';
-  const original = JSON.parse(execFileSync('git', ['show', `${base}:beta/site/catalog.json`], { encoding: 'utf8' }));
-  const before = original.map(item => ({ ...item, categories: [...item.categories] }));
-  const mapped = structuredClone(before).map(applyCatalogNames);
-  assert.deepEqual(mapTopCategories(mapped).map(({ id, count }) => [id, count]), mapTopCategories(before).map(({ id, count }) => [id, count]));
-  assert.deepEqual(filterCatalog(mapped, { topCategory: 'power-infrastructure' }).map(item => item.product), filterCatalog(before, { topCategory: 'power-infrastructure' }).map(item => item.product));
-  assert.deepEqual(filterCatalog(mapped, { topCategory: 'video' }).map(item => item.product), filterCatalog(before, { topCategory: 'video' }).map(item => item.product));
-  assert.ok(filterCatalog(mapped, { categories: ['Power Conditioner'] }).some(item => item.product === 'SX-1216-RTi'));
-  assert.ok(filterCatalog(mapped, { categories: ['Video Processor Card'] }).length > 0);
+  const catalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
+  assert.deepEqual(mapTopCategories(catalog).map(({ id, count }) => [id, count]), [
+    ['audio', 116],
+    ['video', 62],
+    ['camera-conference', 30],
+    ['display-projection', 38],
+    ['network-control', 18],
+    ['power-infrastructure', 4]
+  ]);
+  assert.equal(filterCatalog(catalog, { topCategory: 'power-infrastructure' }).length, 4);
+  assert.equal(filterCatalog(catalog, { topCategory: 'video' }).length, 62);
+  assert.ok(filterCatalog(catalog, { categories: ['Power Conditioner'] }).some(item => item.product === 'SX-1216-RTi'));
+  assert.equal(filterCatalog(catalog, { categories: ['Video Processor Card'] }).length, 10);
 });
