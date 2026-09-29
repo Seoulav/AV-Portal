@@ -8,7 +8,7 @@ const file = path => readFile(new URL(path, root), 'utf8');
 
 test('prototype source retains public detail deep-link and failure protections', async () => {
   const source = await file('prototype/brc-am7/app.js');
-  assert.match(source, /restoreInitialHash/);
+  assert.match(source, /revealHash/);
   assert.match(source, /Library로 돌아가기/);
   assert.match(source, /scrollRestoration = 'manual'/);
 });

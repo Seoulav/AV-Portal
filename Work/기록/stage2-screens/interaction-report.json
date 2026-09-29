@@ -1,0 +1,67 @@
+{
+  "checked": 0,
+  "failures": [],
+  "representatives": [
+    "tr315",
+    "novastar-h5",
+    "a900w-r-gm",
+    "aquilon-rs1"
+  ],
+  "hashChecks": {
+    "overview": {
+      "hash": "#overview",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "features": {
+      "hash": "#features",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "specifications": {
+      "hash": "#specifications",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "io": {
+      "hash": "#io",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "related-products": {
+      "hash": "#overview",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "documents": {
+      "hash": "#documents",
+      "sourceOpen": false,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    },
+    "sources": {
+      "hash": "#sources",
+      "sourceOpen": true,
+      "title": "Aquilon RS1 (AQL-RS1)"
+    }
+  },
+  "intermediate": {
+    "overflow": false,
+    "oneColumn": true,
+    "ordered": true
+  },
+  "zoomOpen": true,
+  "searchQuery": "DM7",
+  "returnedTitle": "Aquilon RS1 (AQL-RS1)",
+  "beforePrint": {
+    "sources": false,
+    "hiddenSpecs": 1
+  },
+  "duringPrint": {
+    "sources": true,
+    "hiddenSpecs": 0
+  },
+  "afterPrint": {
+    "sources": false,
+    "hiddenSpecs": 1
+  }
+}

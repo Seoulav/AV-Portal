@@ -15,57 +15,47 @@
   <link rel="canonical" href="https://seoulav.github.io/AV-Portal/">
   <link rel="alternate" type="text/plain" href="./llms.txt" title="LLM-readable AV Portal catalog">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=w003-tabs-contrast-1">
-  <script type="module" src="./app.js?v=w010-link-scope-1"></script>
+  <link rel="preload" href="./fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./shared/pg.css">
+  <link rel="stylesheet" href="./styles.css?v=w-20260929-003">
+  <script type="module" src="./app.js?v=w-20260929-003"></script>
 </head>
-<body>
+<body class="pg-page">
+  <div class="pg-orbs" aria-hidden="true"></div>
   <a class="skip-link" href="#main">본문으로 이동</a>
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="AV Portal 홈"><span class="brand-icon">AV<span>·</span></span><span><strong>AV PORTAL</strong><small>Audio · Visual · Smarter Together</small></span></a>
-    <form id="header-search-form" class="header-search" role="search" hidden><label class="sr-only" for="global-search">제품 통합 검색</label><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="제품명, 모델명, 제조사를 검색하세요" autocomplete="off"><button type="submit">검색</button></form>
-    <nav aria-label="주요 메뉴"><a href="#discovery">제품</a><a href="#manufacturer-section">제조사</a><span aria-disabled="true">자료실</span><span aria-disabled="true">프로젝트</span><span aria-disabled="true">지원</span></nav>
-  </header>
-  <main id="main">
-    <section class="hero" id="discovery">
-      <div class="hero-copy">
-        <p class="kicker"><span class="line"></span> AV EQUIPMENT DISCOVERY</p>
-        <h1>찾고, 비교하고,<br><em>바로 확인하세요.</em></h1>
-        <p class="lead">제품명부터 HDMI·SDI·Dante 같은 연결 규격까지 한 번에 검색합니다.</p>
-        <form id="hero-search-form" class="hero-search" role="search"><label class="sr-only" for="search">장비 통합 검색</label><span class="search-icon" aria-hidden="true">⌕</span><input type="search" id="search" placeholder="제조사, 제품, 카테고리, 주요 기능 검색" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-suggestions" aria-autocomplete="list"><button type="submit">제품 검색</button><div id="search-suggestions" class="suggestions" role="listbox" hidden></div></form>
+  <div class="pg-wrap home-wrap">
+    <header class="pg-topbar site-header">
+      <a class="pg-brand" href="./" aria-label="AV Portal 홈"><span class="pg-swatch site-mark" aria-hidden="true">AV</span><span><strong>AV PORTAL</strong><small>Audio · Visual · Smarter Together</small></span></a>
+      <form id="header-search-form" class="header-search" role="search" hidden><label class="sr-only" for="global-search">제품 통합 검색</label><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="다른 제품 검색" autocomplete="off"><button type="submit" class="pg-btn pg-primary">검색</button></form>
+      <nav class="site-menu" aria-label="주요 메뉴"><a class="pg-btn" href="#discovery">제품</a><a class="pg-btn" href="#manufacturer-section">제조사</a><a class="pg-btn" href="https://seoul-visual-tech.github.io/av-system-builder/" target="_blank" rel="noopener noreferrer">AV System Builder ↗</a><a class="pg-btn" href="https://hkkim0454.github.io/svt-led-calculator/src/index.html" target="_blank" rel="noopener noreferrer">LED Configurator ↗</a></nav>
+    </header>
+    <main id="main">
+      <section class="home-hero" id="discovery" aria-labelledby="home-title">
+        <div class="pg-title home-title"><span class="pg-swatch home-mark" aria-hidden="true">AV</span><div><p class="eyebrow">AV EQUIPMENT LIBRARY</p><h1 id="home-title">AV 장비 라이브러리</h1><p class="home-count"><strong id="equipment-total">—</strong>개 장비 · <strong id="brand-total">—</strong></p></div></div>
+        <p class="home-lead">찾고, 비교하고, 바로 확인하세요. HDMI·SDI·Dante 같은 연결 규격까지 한 번에 검색합니다.</p>
+        <form id="hero-search-form" class="hero-search" role="search"><label class="sr-only" for="search">장비 통합 검색</label><span class="search-icon" aria-hidden="true">⌕</span><input type="search" id="search" placeholder="제조사, 제품, 카테고리, 주요 기능 검색" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-suggestions" aria-autocomplete="list"><button type="submit" class="pg-btn pg-primary">제품 검색</button><div id="search-suggestions" class="suggestions" role="listbox" hidden></div></form>
         <p class="hero-note">검색하거나 아래 카테고리·제조사를 선택하면 제품 목록이 열립니다.</p>
-      </div>
-      <aside class="tool-panel" aria-label="AV 설계 도구">
-        <p>WORK WITH AV PORTAL</p><h2>설계 도구 바로가기</h2>
-        <a href="https://seoul-visual-tech.github.io/av-system-builder/" target="_blank" rel="noopener noreferrer"><span>AV</span><div><strong>AV System Builder</strong><small>시스템 구성 도구</small></div><b>↗</b></a>
-        <a href="https://hkkim0454.github.io/svt-led-calculator/src/index.html" target="_blank" rel="noopener noreferrer"><span>LED</span><div><strong>LED Configurator</strong><small>LED 디스플레이 계산</small></div><b>↗</b></a>
-        <div class="catalog-metric"><strong id="equipment-total">—</strong><span>현재 공개 장비</span><b id="brand-total">—개 제조사</b></div>
-      </aside>
-    </section>
-    <section class="browse-section" aria-labelledby="category-title">
-      <div class="section-heading"><div><p>FIND BY CATEGORY</p><h2 id="category-title">카테고리로 찾기</h2></div><span>제품은 여러 카테고리에 포함될 수 있습니다.</span></div>
-      <div id="top-categories" class="top-categories"></div>
-    </section>
-    <section id="manufacturer-section" class="browse-section manufacturer-section" aria-labelledby="manufacturer-title">
-      <div class="section-heading"><div><p>FIND BY MANUFACTURER</p><h2 id="manufacturer-title">제조사로 찾기</h2></div><span>공개 목록에 포함된 제조사만 표시합니다.</span></div>
-      <div id="manufacturer-browser" class="manufacturer-browser"></div>
-    </section>
-    <section id="results-workspace" class="workspace" aria-label="제품 검색 결과" hidden>
-      <div class="result-context"><div><p>PRODUCT RESULTS</p><h2 id="result-context-title">제품 탐색 결과</h2><span id="result-context-copy"></span></div><button type="button" id="clear" class="clear-button">탐색 초기화</button></div>
-      <div class="filters">
-        <label class="field search-field" for="result-search"><span>검색어</span><input type="search" id="result-search" placeholder="결과 내 검색" autocomplete="off"></label>
-        <label class="field brand-field" for="brand-filter"><span>제조사</span><select id="brand-filter"><option value="">모든 제조사</option></select></label>
-        <details class="category-filter"><summary>하위 카테고리 <b id="category-count">0</b><span aria-hidden="true">⌄</span></summary><div id="categories" class="category-options"></div></details>
-        <label class="field resource-field" for="resource-filter"><span>자료·검증</span><select id="resource-filter"><option value="">전체 상태</option><option value="detail">상세 정보 있음</option><option value="official">공식 링크 있음</option></select></label>
-        <label class="field sort-field" for="sort-filter"><span>정렬</span><select id="sort-filter"><option value="relevance">관련도순</option><option value="brand">제조사순</option><option value="product">제품명순</option></select></label>
-      </div>
-      <div class="results-head"><h3 id="result-count" aria-live="polite">결과를 계산하는 중입니다.</h3><button type="button" id="filter-clear" class="text-button">필터만 초기화</button></div>
-      <div id="load-error" class="notice" role="alert" hidden></div><div id="empty-state" class="notice" hidden></div><div id="cards" class="cards"></div>
-    </section>
-    <section class="readable-catalog" aria-labelledby="readable-catalog-title">
-      <div><p>TEXT CATALOG</p><h2 id="readable-catalog-title">GPT·텍스트 도구용 공개 목록</h2><span>JavaScript 없이 읽거나 파일로 내려받을 수 있습니다.</span></div>
-      <div><a href="./catalog.html" download>catalog.html 다운로드</a><a href="./llms.txt" download>llms.txt 다운로드</a></div>
-    </section>
-  </main>
-  <footer><strong>AV PORTAL</strong><span>제품의 세부 사양과 적용 조건은 제조사 공식 원문에서 확인해 주세요.</span></footer>
+      </section>
+      <section class="pg-card discovery-card" aria-labelledby="category-title"><div class="section-heading"><h2 id="category-title"><span class="pg-idx">01</span> 카테고리로 찾기</h2><p>제품은 여러 카테고리에 포함될 수 있습니다.</p></div><div id="top-categories" class="top-categories"></div></section>
+      <section id="manufacturer-section" class="pg-card discovery-card" aria-labelledby="manufacturer-title"><div class="section-heading"><h2 id="manufacturer-title"><span class="pg-idx">02</span> 제조사로 찾기</h2><p>공개 목록에 포함된 제조사만 표시합니다.</p></div><div id="manufacturer-browser" class="manufacturer-browser"></div></section>
+      <section id="results-workspace" class="pg-card workspace" aria-label="제품 검색 결과" hidden>
+        <div class="result-context"><div><p class="eyebrow">PRODUCT RESULTS</p><h2 id="result-context-title">제품 탐색 결과</h2><span id="result-context-copy"></span></div><button type="button" id="clear" class="pg-btn">탐색 초기화</button></div>
+        <div class="filters">
+          <label class="field search-field" for="result-search"><span>검색어</span><input type="search" id="result-search" placeholder="결과 내 검색" autocomplete="off"></label>
+          <label class="field brand-field" for="brand-filter"><span>제조사</span><select id="brand-filter"><option value="">모든 제조사</option></select></label>
+          <details class="category-filter"><summary>하위 카테고리 <b id="category-count">0</b><span aria-hidden="true">⌄</span></summary><div id="categories" class="category-options"></div></details>
+          <label class="field resource-field" for="resource-filter"><span>자료·검증</span><select id="resource-filter"><option value="">전체 상태</option><option value="detail">상세 정보 있음</option><option value="official">공식 링크 있음</option></select></label>
+          <label class="field sort-field" for="sort-filter"><span>정렬</span><select id="sort-filter"><option value="relevance">관련도순</option><option value="brand">제조사순</option><option value="product">제품명순</option></select></label>
+        </div>
+        <div class="results-head"><h3 id="result-count" aria-live="polite">결과를 계산하는 중입니다.</h3><button type="button" id="filter-clear" class="pg-btn">필터만 초기화</button></div>
+        <div id="load-error" class="notice" role="alert" hidden></div>
+        <div id="empty-state" class="notice" hidden><strong>검색 결과가 없습니다.</strong><p>검색어나 필터를 조정해 보세요.</p><button type="button" id="empty-reset" class="pg-btn pg-primary">검색 초기화</button></div>
+        <div id="cards" class="cards"></div>
+      </section>
+      <section class="pg-card utility-card" aria-labelledby="tools-title"><div class="section-heading"><h2 id="tools-title"><span class="pg-idx">03</span> 설계 도구</h2></div><div class="tool-links"><a href="https://seoul-visual-tech.github.io/av-system-builder/" target="_blank" rel="noopener noreferrer"><span class="pg-swatch" aria-hidden="true">AV</span><span><strong>AV System Builder</strong><small>시스템 구성 도구</small></span><b>↗</b></a><a href="https://hkkim0454.github.io/svt-led-calculator/src/index.html" target="_blank" rel="noopener noreferrer"><span class="pg-swatch" aria-hidden="true">LED</span><span><strong>LED Configurator</strong><small>LED 디스플레이 계산</small></span><b>↗</b></a></div></section>
+      <section class="pg-card utility-card readable-catalog" aria-labelledby="readable-catalog-title"><div class="section-heading"><h2 id="readable-catalog-title"><span class="pg-idx">04</span> 텍스트 목록</h2><p>JavaScript 없이 읽거나 파일로 내려받을 수 있습니다.</p></div><div class="download-links"><a class="pg-btn" href="./catalog.html" download>catalog.html 다운로드</a><a class="pg-btn" href="./llms.txt" download>llms.txt 다운로드</a></div></section>
+    </main>
+    <footer><strong>AV PORTAL</strong><span>제품의 세부 사양과 적용 조건은 제조사 공식 원문에서 확인해 주세요.</span></footer>
+  </div>
 </body>
 </html>
