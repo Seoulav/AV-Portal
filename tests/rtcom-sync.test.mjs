@@ -18,6 +18,13 @@ const detail = Buffer.from(JSON.stringify({
 const image = Buffer.from('RIFF-fixture-webp');
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
+test('Git preserves synchronized RTCOM raw JSON and images as exact bytes', async () => {
+  const attributes = await readFile(new URL('../.gitattributes', import.meta.url), 'utf8');
+  assert.match(attributes, /^beta\/site\/rtcom\/raw\/\*\.json -text -diff$/m);
+  assert.match(attributes, /^beta\/site\/rtcom\/raw\/products\/\*\.json -text -diff$/m);
+  assert.match(attributes, /^beta\/site\/rtcom\/images\/\* -text -diff$/m);
+});
+
 function fixtureFetch(overrides = {}) {
   const files = new Map([
     [indexUrl, exactIndex],

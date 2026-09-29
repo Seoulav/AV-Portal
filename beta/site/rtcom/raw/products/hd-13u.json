@@ -1,0 +1,523 @@
+{
+  "id": "hd-13u",
+  "group": "distribution",
+  "manufacturer": "RTCOM",
+  "productName": "HD-13U",
+  "model": "HD-13U",
+  "series": "1x3 HDMI 18Gbps Splitter",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Splitter"
+  ],
+  "english": "1x3 HDMI 2.0 18Gbps splitter supporting 4K60 4:4:4 with EDID minder",
+  "korean": "4K 60Hz 4:4:4와 EDID 마인더를 지원하는 1입력 3출력 HDMI 2.0 18Gbps 분배기다.",
+  "subtitle": "1×3 HDMI 2.0 Splitter · EDID 마인더",
+  "lead": "하나의 HDMI 입력을 **손실 없이 3개의 동일한 출력**으로 분배합니다. 4K 60Hz 4:4:4를 지원합니다.",
+  "catalogPages": "34",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 36쪽의 소개·주요기능·제품사양·크기 및 무게·제품 이미지에서 확인했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "HD-13U는 HDMI 신호용 고성능 분배기다. True HDMI 2.0 3840x2160p 60Hz 크로마샘플링 4:4:4 해상도를 지원한다.\n\n하나의 HDMI 입력신호를 신호의 손실 없이 3개의 동일한 출력으로 분배한다. HDCP(고대역 디지털 콘텐츠 보호)와 EDID(디스플레이 식별 정보)를 완벽 지원하여 호환 이슈 없이 사용할 수 있으며, 아날로그 오디오 병합 및 추출 기능을 지원한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "hd-13u-front.webp",
+      "alt": "RTCOM HD-13U 전면",
+      "note": "Front · 카탈로그 제품 이미지(고해상도 교체, 2026-09-28)",
+      "provider": "RTCOM",
+      "model": "HD-13U",
+      "source": "C",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1045×218"
+    },
+    {
+      "role": "Rear",
+      "file": "hd-13u-rear.webp",
+      "alt": "RTCOM HD-13U 후면",
+      "note": "Rear · 카탈로그 제품 이미지(고해상도 교체, 2026-09-28)",
+      "provider": "RTCOM",
+      "model": "HD-13U",
+      "source": "C",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1147×244"
+    },
+    {
+      "role": "Other",
+      "file": "hd-13u-front-rear.webp",
+      "alt": "RTCOM HD-13U 앞면(위)과 뒷면(아래)",
+      "note": "Other · 정면·후면 사진을 위아래로 합성(단자 지도용, 고해상도 교체 2026-09-28)",
+      "provider": "RTCOM",
+      "model": "HD-13U",
+      "source": "C",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1147×590"
+    },
+    {
+      "role": "Diagram",
+      "file": "hd-13u-diagram.webp",
+      "alt": "RTCOM HD-13U 연결 다이어그램(제조사 제공)",
+      "note": "Diagram · 카탈로그 46쪽판 34쪽 제조사 제공 연결 다이어그램",
+      "provider": "RTCOM",
+      "model": "HD-13U",
+      "source": "C2",
+      "officialSource": true,
+      "verificationStatus": "FOUND"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    },
+    {
+      "role": "Diagram",
+      "status": "FOUND"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 34쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "hd-13u-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "hd-13u-catalog-p1.webp"
+      ]
+    },
+    {
+      "type": "Diagram",
+      "status": "FOUND",
+      "title": "제조사 연결 다이어그램",
+      "language": "en/ko",
+      "note": "카탈로그 46쪽판 34쪽"
+    },
+    {
+      "type": "ProductSheet",
+      "status": "FOUND",
+      "title": "HD-13U 제품 안내서",
+      "language": "ko",
+      "note": "1–2쪽 · 사용자 제공, 배포 제외"
+    },
+    {
+      "type": "Manual",
+      "status": "FOUND",
+      "title": "HD-13U 사용자 매뉴얼 Ver.1.2",
+      "language": "ko",
+      "note": "사용자 제공 매뉴얼 공개본(2026-09-28, 사용자 결정 \"1번\" — 매뉴얼 전부 공개)",
+      "file": "hd-13u-manual.pdf",
+      "preview": "pdfjs"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 2.0, HDCP 2.2 지원",
+      "source": "C"
+    },
+    {
+      "text": "오디오 병합·추출 선택 지원(둘 중 하나만 사용)",
+      "source": "U"
+    },
+    {
+      "text": "EDID 마인더 기능 지원(외부 EDID 저장, 내장 EDID 선택)",
+      "source": "C"
+    },
+    {
+      "text": "다단 증폭(캐스케이드 연결) 최대 3단 지원",
+      "source": "U"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "비디오 대역폭",
+      "value": "18",
+      "unit": "Gbps",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "비디오 해상도",
+      "value": "최대 3840x2160p@60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "입력포트",
+      "value": "1 HDMI Input",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "출력포트",
+      "value": "3 HDMI Output",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "DC 5V, 2A",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "152×77.6×28",
+      "unit": "mm",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "0.34",
+      "unit": "kg",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "HDMI",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "HDMI",
+      "direction": "OUT",
+      "quantity": "3",
+      "protocol": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm Stereo",
+      "signal": "Analog Stereo Audio",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "병합(MUX) 선택 시 HDMI OUTPUT 1번에 믹스(전면 로터리 0 + SET으로 Stereo Audio)",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "3.5mm Stereo",
+      "signal": "Analog Stereo Audio",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "추출(DEMUX) 선택 시 입력된 HDMI 오디오 출력",
+      "source": "M1",
+      "verification": "VERIFIED"
+    }
+  ],
+  "related": [],
+  "portMap": {
+    "image": "Other",
+    "title": "전면 / 뒷면",
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI IN",
+        "desc": "소스 연결, 3개 출력으로 동일하게 분배",
+        "x1": 222,
+        "x2": 326,
+        "side": "top",
+        "y": 346
+      },
+      {
+        "n": 3,
+        "label": "AUDIO IN",
+        "desc": "3.5mm 아날로그 오디오 병합(MUX 선택 시 OUT 1번)",
+        "x1": 859,
+        "x2": 899,
+        "side": "top",
+        "y": 346
+      },
+      {
+        "n": 2,
+        "label": "HDMI OUT 1–3",
+        "desc": "3개 모두 같은 영상",
+        "x1": 381,
+        "x2": 806,
+        "side": "top",
+        "y": 346
+      },
+      {
+        "n": 4,
+        "label": "AUDIO OUT",
+        "desc": "3.5mm 아날로그 오디오 추출(DEMUX 선택 시)",
+        "x1": 926,
+        "x2": 966,
+        "side": "top",
+        "y": 346
+      },
+      {
+        "n": 7,
+        "label": "DC 5V",
+        "desc": "전원 어댑터 5V 2A",
+        "x1": 95,
+        "x2": 167,
+        "side": "top",
+        "y": 346
+      },
+      {
+        "label": "MODE",
+        "desc": "전면 파란색 MODE 로터리 스위치. EDID 선택은 '06 EDID 설정', 오디오 병합·추출 선택은 '07 오디오 설정' 참고",
+        "x1": 299,
+        "x2": 383,
+        "side": "top",
+        "y": 0,
+        "n": 5
+      },
+      {
+        "label": "SET",
+        "desc": "외부 EDID 저장·오디오 병합/추출 선택 때 누르는 버튼('06 EDID 설정'·'07 오디오 설정' 참고)",
+        "x1": 521,
+        "x2": 573,
+        "side": "top",
+        "y": 0,
+        "n": 6
+      }
+    ]
+  },
+  "edidSwitch": {
+    "image": "Front",
+    "x1": 248,
+    "y1": 74,
+    "x2": 332,
+    "y2": 150,
+    "label": "MODE 로터리 스위치",
+    "desc": "전면 파란색 로터리 스위치로 EDID를 선택한다. SET 버튼과 함께 쓰면 OUTPUT 1에 연결된 디스플레이의 EDID를 FLASH에 저장할 수도 있다(EDID 마인더).",
+    "default": "0 = FLASH에 저장된 외부 EDID(기본값 3840x2160p@60 PCM 2CH)",
+    "steps": [
+      {
+        "title": "외부 EDID 저장(External EDID Setting)",
+        "items": [
+          "EDID를 저장할 디스플레이를 OUTPUT 1에 연결한다.",
+          "로터리 스위치를 'F(Store External EDID)'에 맞추고 SET 버튼을 누르면 OUTPUT 1의 EDID를 읽어 FLASH에 저장한다.",
+          "로터리 스위치를 '0'번으로 돌린 뒤 전원 케이블을 1회 탈착한다."
+        ]
+      },
+      {
+        "title": "내부 EDID 지정(Internal EDID Setting)",
+        "items": [
+          "EDID를 적용할 디스플레이를 OUTPUT에 연결한다.",
+          "로터리 스위치를 원하는 EDID 번호에 맞춘다.",
+          "연결된 디스플레이가 깜빡이며 해당 EDID로 출력된다. 완전한 적용을 위해 전원 케이블을 1회 탈착한다."
+        ]
+      }
+    ],
+    "table": [
+      {
+        "code": "0",
+        "function": "FLASH에 저장된 외부 EDID(기본값)"
+      },
+      {
+        "code": "1",
+        "function": "3840x2160p@60 PCM 2CH",
+        "highlight": true
+      },
+      {
+        "code": "2",
+        "function": "3840x2160p@60 Multi"
+      },
+      {
+        "code": "3",
+        "function": "3840x2160p@60 Dolby"
+      },
+      {
+        "code": "4",
+        "function": "3840x2160p@30 PCM 2CH"
+      },
+      {
+        "code": "5",
+        "function": "3840x2160p@30 Multi"
+      },
+      {
+        "code": "6",
+        "function": "3840x2160p@30 Dolby"
+      },
+      {
+        "code": "7",
+        "function": "1920x1080p@60 PCM 2CH",
+        "highlight": true
+      },
+      {
+        "code": "8",
+        "function": "1920x1080p@60 Multi"
+      },
+      {
+        "code": "9",
+        "function": "1920x1080p@60 Dolby"
+      },
+      {
+        "code": "A",
+        "function": "1920x1080p@60 DVI"
+      },
+      {
+        "code": "B",
+        "function": "1920x1200@60 DVI"
+      },
+      {
+        "code": "C",
+        "function": "미사용(Nothing)"
+      },
+      {
+        "code": "D",
+        "function": "Firmware Download Mode"
+      },
+      {
+        "code": "E",
+        "function": "미사용(Nothing)"
+      },
+      {
+        "code": "F",
+        "function": "외부 EDID를 FLASH에 저장(Store External EDID, OUTPUT 1번 연결 확인)"
+      }
+    ],
+    "source": "M1"
+  },
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "36",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "34",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    },
+    {
+      "code": "M1",
+      "name": "HD-13U 사용자 매뉴얼 Ver.1.2",
+      "page": "7-8",
+      "scope": "제조사 공식 출처 — 사용자 제공 PDF(.source-materials/RTcom_Manual_HD-13U_Ver1.2.pdf, 배포 제외)"
+    },
+    {
+      "code": "S1",
+      "name": "HD-13U 제품 안내서(Product Sheet)",
+      "page": "1–2",
+      "scope": "제조사 공식 출처 — 사용자 제공 PDF(.source-materials/RTcom_ProductSheet_HD-13U.pdf, 배포 제외)"
+    },
+    {
+      "code": "U",
+      "name": "서울영상테크 SI사업본부 확인",
+      "page": "",
+      "scope": "사용자 확인(2026-09-27) — 오디오 병합(MUX)·추출(DEMUX)은 선택해서 쓰는 방식 · 3~10분배기(HD-13U·HD-104U·HD-108U·HD-210U) 다단 증폭 최대 3단 지원"
+    }
+  ],
+  "audioMux": {
+    "mode": "select",
+    "source": "U",
+    "caption": "오디오 병합(OUT 1) 또는 추출 중 선택",
+    "howTo": "전면 파란색 로터리 스위치를 '0'에 맞추고 SET 버튼을 누를 때마다 병합과 추출이 번갈아 바뀐다. 두 가지를 동시에 쓸 수는 없다.",
+    "panel": {
+      "rotary": {
+        "label": "MODE",
+        "value": "0"
+      },
+      "button": "SET",
+      "leds": [
+        "Status",
+        "IN",
+        "OUT 1",
+        "2",
+        "3"
+      ],
+      "target": "OUT 1"
+    },
+    "modes": [
+      {
+        "name": "MUX",
+        "title": "병합",
+        "setting": "Stereo Audio",
+        "flow": [
+          "AUDIO IN",
+          "HDMI OUT 1"
+        ],
+        "rows": [
+          {
+            "label": "소리가 나오는 곳",
+            "text": "3.5mm AUDIO IN에 넣은 소리가 HDMI OUT 1번(디스플레이)으로만 나온다."
+          },
+          {
+            "label": "확인 방법",
+            "text": "전면 OUTPUT 1번 LED가 깜빡인다."
+          }
+        ],
+        "led": "blink"
+      },
+      {
+        "name": "DEMUX",
+        "title": "추출",
+        "setting": "HDMI Audio",
+        "flow": [
+          "HDMI IN",
+          "AUDIO OUT"
+        ],
+        "rows": [
+          {
+            "label": "소리가 나오는 곳",
+            "text": "HDMI 원래 소리가 OUT 1–3으로 그대로 가고, 3.5mm AUDIO OUT으로도 나온다."
+          },
+          {
+            "label": "확인 방법",
+            "text": "전면 OUTPUT 1번 LED가 깜빡이지 않는다."
+          }
+        ],
+        "led": "steady"
+      }
+    ],
+    "note": "AUDIO IN에 넣은 소리는 AUDIO OUT으로 그대로 나오지 않는다(바로 통과하지 않음)."
+  },
+  "issues": []
+}

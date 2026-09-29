@@ -1,0 +1,438 @@
+{
+  "id": "qms-88ux",
+  "group": "integrated",
+  "manufacturer": "RTCOM",
+  "productName": "QMS-88UX",
+  "model": "QMS-88UX",
+  "series": "HDMI Matrix Switcher",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Matrix Switcher"
+  ],
+  "english": "True-4K 8x8 HDMI 2.0 scaling matrix switcher with 8-channel multi-view, video wall and dual mode",
+  "korean": "8CH 멀티뷰·비디오 월·듀얼 모드를 지원하는 True-4K 8x8 HDMI 2.0 매트릭스 스위처다.",
+  "subtitle": "8×8 HDMI 2.0 Matrix Switcher · 8CH 멀티뷰",
+  "lead": "8개의 HDMI 입력을 **임의의 출력 포트로 자유롭게 전환**하는 True-4K 매트릭스입니다. 8CH 멀티뷰·비디오 월·듀얼 모드를 지원합니다.",
+  "catalogPages": "28",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 30쪽의 소개·주요기능·제품사양·크기 및 무게·제품 이미지에서 확인했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "QMS-88UX는 HDMI Ver. 2.0을 지원하는 True-4K HDMI 8x8 고성능 매트릭스 스위처다. 최대 3840x2160p 60Hz 4:4:4 해상도를 지원하며 Seamless Switching, 8CH Multi-view, Video Wall, Dual 모드 등 다양한 용도로 사용할 수 있다. 서로 다른 임의의 HDMI 입력을 서로 다른 임의의 HDMI 출력 포트로 출력하거나 분배할 수 있다.\n\n전면 LCD 터치 패널, RS-232, LAN(이더넷·웹 브라우저)의 3가지 제어방식으로 동작한다. 출력 9번과 10번은 쿼드 뷰 모드로, 한 화면에 최대 8개의 분할 화면을 구성할 수 있다. HDCP v2.2를 지원한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "qms-88ux-front.webp",
+      "alt": "RTCOM QMS-88UX 전면(흰 배경 실물 사진)",
+      "note": "Front · 사용자 제공 실물 사진(2026-09-28)",
+      "provider": "RTCOM",
+      "model": "QMS-88UX",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1200×275"
+    },
+    {
+      "role": "Rear",
+      "file": "qms-88ux-rear.webp",
+      "alt": "RTCOM QMS-88UX 후면(흰 배경 실물 사진)",
+      "note": "Rear · 사용자 제공 실물 사진(2026-09-28)",
+      "provider": "RTCOM",
+      "model": "QMS-88UX",
+      "source": "P1",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "resolution": "1394×319"
+    },
+    {
+      "role": "Diagram",
+      "file": "qms-88ux-diagram.webp",
+      "alt": "RTCOM QMS-88UX 연결 다이어그램(제조사 제공)",
+      "note": "Diagram · 카탈로그 46쪽판 28쪽 제조사 제공 연결 다이어그램",
+      "diagramMismatch": "제조사 원본 그림은 후면 라벨이 HDMI IN/OUT 1~8·DC+12V로, 실제 제품(출력 10포트[9·10번 쿼드뷰]·100-200 VAC)과 다른 섀시 그림으로 보입니다 — 포트 수·전원 표기는 제품사양 표 기준으로 확인하세요.",
+      "provider": "RTCOM",
+      "model": "QMS-88UX",
+      "source": "C2",
+      "officialSource": true,
+      "verificationStatus": "FOUND"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    },
+    {
+      "role": "Diagram",
+      "status": "FOUND"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 28쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "qms-88ux-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "qms-88ux-catalog-p1.webp"
+      ]
+    },
+    {
+      "type": "Diagram",
+      "status": "FOUND",
+      "title": "제조사 연결 다이어그램",
+      "language": "en/ko",
+      "note": "카탈로그 46쪽판 28쪽"
+    },
+    {
+      "type": "Manual",
+      "status": "FOUND",
+      "title": "QMS-88UX 사용자 매뉴얼 KV.04",
+      "language": "ko",
+      "note": "사용자 제공 매뉴얼 공개본(2026-09-28, 사용자 결정 \"1번\" — 매뉴얼 전부 공개)",
+      "file": "qms-88ux-manual.pdf",
+      "preview": "pdfjs"
+    }
+  ],
+  "features": [
+    {
+      "text": "HDMI 신호의 스위칭과 스케일링 지원",
+      "source": "C"
+    },
+    {
+      "text": "신속한 화면 전환이 가능한 심리스 스위칭 지원",
+      "source": "C"
+    },
+    {
+      "text": "HDMI 입력 8개 포트와 스케일링이 가능한 HDMI 출력 8개 포트 지원",
+      "source": "C"
+    },
+    {
+      "text": "HDMI v2.0, HDCP 2.2 지원",
+      "source": "C"
+    },
+    {
+      "text": "매트릭스, 최대 3X3 비디오 월, 쿼드 뷰, 듀얼 모드의 4가지 모드 지원",
+      "source": "C"
+    },
+    {
+      "text": "멀티뷰 전용 출력 지원(출력 9·10번, 06 화면 구성 모드 참고)",
+      "source": "M1"
+    },
+    {
+      "text": "오디오 추출 출력 2개 지원(QD1: 입력 1~4번, QD2: 입력 5~8번 중 선택, 전면 [Function]→[QD Audio])",
+      "source": "M1"
+    },
+    {
+      "text": "Bezel 조정 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "Subtitle 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "전면 LCD 터치 패널, RS-232, LAN(이더넷·웹 브라우저) 제어방식 지원",
+      "source": "U2"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "입력 신호",
+      "value": "HDMI 8 Ports",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "출력 신호",
+      "value": "HDMI 10 Ports(매트릭스 8 + 9·10번 쿼드뷰 전용)",
+      "unit": "",
+      "condition": "",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "해상도",
+      "value": "최대 4K 60Hz(3840x2160@60Hz)",
+      "unit": "",
+      "condition": "",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "General",
+      "name": "연결 단자",
+      "value": "RS-232, LAN(RJ45), 3.5mm stereo, 3-pin phoenix, HDMI 19-Pin Female",
+      "unit": "",
+      "condition": "",
+      "source": "U2",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 규격",
+      "value": "HDMI 2.0",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDCP",
+      "value": "HDCP 2.2 지원",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어",
+      "value": "전면 패널, RS-232, LAN(이더넷·웹 브라우저)",
+      "unit": "",
+      "condition": "",
+      "source": "U2",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 공급",
+      "value": "100-200",
+      "unit": "VAC",
+      "condition": "",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "446[482.6]×357.4×88.1",
+      "unit": "mm",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "4.3",
+      "unit": "kg",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI 19-Pin Female",
+      "signal": "HDMI",
+      "direction": "IN",
+      "quantity": "8",
+      "protocol": "HDMI 2.0",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI 19-Pin Female",
+      "signal": "HDMI",
+      "direction": "OUT",
+      "quantity": "10",
+      "protocol": "HDMI 2.0",
+      "condition": "매트릭스 출력 1~8 + 9·10번 Quad-view(멀티뷰)",
+      "source": "J",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "3-pin Phoenix (female)",
+      "signal": "Analog Stereo Audio",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "condition": "후면 초록 3핀 Phoenix 단자 2개(QD1·QD2, 멀티뷰 출력 9·10번과 짝). 단자 1(QD1)은 입력 1~4번 중, 단자 2(QD2)는 입력 5~8번 중 원하는 포트 하나를 골라 그 오디오를 추출한다 — 전면 터치 패널의 [Function] → [QD Audio] 메뉴나 RS-232 IS 명령으로 선택",
+      "source": "M1",
+      "verification": "VERIFIED"
+    }
+  ],
+  "related": [],
+  "videoModes": {
+    "source": "C2",
+    "modes": [
+      {
+        "name": "MATRIX",
+        "summary": "입력 8 → 출력 8 임의 스위칭·분배, 심리스 스위칭"
+      },
+      {
+        "name": "WALL",
+        "summary": "2×2 월 최대 2개, 또는 월 1개 최대 3×3·2×5, 베젤 조정",
+        "detail": "(출력 9·10번도 월에 사용 가능)",
+        "page": "19",
+        "layouts": ["2×2","2×2 + 2×2","3×3","2×5"]
+      },
+      {
+        "name": "QUAD",
+        "summary": "출력 9·10번 전용, 한 화면 최대 8분할(8CH Multi-view)",
+        "detail": "Q1(입력 1~4)·Q2(입력 5~8) 그룹별 4분할, 합쳐서 8분할(비율무시·16:9)도 가능",
+        "page": "22–23",
+        "layouts": ["QUAD","3-BOTTOM","3-SIDE RIGHT","3-SIDE LEFT","Horizontal PBP","Vertical PBP","Quad PBP, PIP","Single Select a port","3CH-MODE2","USER MODE 1","USER MODE 2","Default Single","8분할(비율무시)","8분할(16:9 비율)"]
+      },
+      {
+        "name": "DUAL",
+        "summary": "출력 9·10번 멀티뷰 설정의 2분할(PBP)·PIP 레이아웃",
+        "detail": "멀티뷰 설정에서 그룹(Q1·Q2)별로 2분할 레이아웃 선택",
+        "page": "20–21",
+        "layouts": ["Horizontal PBP","Vertical PBP","Quad PBP, PIP"]
+      }
+    ]
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI INPUT 1–8",
+        "desc": "윗줄 · HDMI 소스 8대 연결",
+        "x1": 150,
+        "x2": 1035
+      },
+      {
+        "n": 2,
+        "label": "HDMI OUTPUT 1–8",
+        "desc": "아랫줄 · 매트릭스 출력(임의 입력 선택·분배, 출력별 스케일링)",
+        "x1": 150,
+        "x2": 740,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "HDMI OUTPUT 9·10",
+        "desc": "멀티뷰(쿼드 뷰) 전용 출력 · 한 화면에 최대 8분할",
+        "x1": 745,
+        "x2": 830,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "AUDIO OUT ×2(QD1·QD2)",
+        "desc": "초록 3핀 Phoenix · 단자 1(QD1)=입력 1~4번, 단자 2(QD2)=입력 5~8번 중 원하는 포트 하나를 골라 추출",
+        "x1": 845,
+        "x2": 940,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "LAN",
+        "desc": "RJ45 · 이더넷 제어(Telnet)·웹 브라우저 제어",
+        "x1": 960,
+        "x2": 1010,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "RS-232",
+        "desc": "D-sub 9핀 · 외부 제어",
+        "x1": 1055,
+        "x2": 1110,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "Mini USB",
+        "desc": "USB 시리얼 · 연결 단자 표의 Mini USB-serial",
+        "x1": 1145,
+        "x2": 1175,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "AC 인렛",
+        "desc": "전원 100-200 VAC",
+        "x1": 1210,
+        "x2": 1320,
+        "side": "bottom"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "30",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "28",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    },
+    {
+      "code": "M1",
+      "name": "QMS-88UX 사용자 매뉴얼 KV.03",
+      "page": "20-23, 25-26, 43",
+      "scope": "제조사 공식 출처 — 사용자 제공 PDF(.source-materials/RTcom_Manual_QMS-88UX_KV.03.pdf, 배포 제외)"
+    },
+    {
+      "code": "J",
+      "name": "서울영상테크 SI사업본부 검토 판단",
+      "page": "",
+      "scope": "사용자 위임(2026-09-27) — 카탈로그 내부 충돌·오기 정리"
+    },
+    {
+      "code": "U",
+      "name": "서울영상테크 SI사업본부 확인",
+      "page": "",
+      "scope": "사용자 확인(2026-09-27) — 카탈로그 사진으로 읽을 수 없는 단자 방향"
+    },
+    {
+      "code": "P1",
+      "name": "서울영상테크 SI사업본부 제공 실물 사진",
+      "page": "",
+      "scope": "사용자 업로드 고해상도 제품 사진(2026-09-28, 흰 배경 촬영본)"
+    },
+    {
+      "code": "U2",
+      "name": "서울영상테크 SI사업본부 확인",
+      "page": "",
+      "scope": "사용자 확인(2026-09-28) — 후면 LAN(RJ45) 단자로 이더넷 제어·웹 브라우저 제어가 가능함을 확인. 0.51.0에서 뺐던 LAN 표기를 이 확인 근거로 복원"
+    }
+  ],
+  "issues": [
+    {
+      "code": "I1",
+      "status": "INFO",
+      "title": "QD1·QD2 오디오 출력 선택 기능 추가",
+      "detail": "사용자 제공 매뉴얼(QMS-88UX KV.03) 25~26·43쪽 근거로 3핀 Phoenix 오디오 출력 2개가 각각 QD1(입력 1~4 중 선택)·QD2(입력 5~8 중 선택)로 고정 추출이 아니라 선택 가능한 출력임을 입출력 표·단자 지도에 반영했다(사용자 요청 \"오디오 출력 관련 내용참고해서 수정해\")."
+    },
+    {
+      "code": "I2",
+      "status": "INFO",
+      "title": "QD1·QD2 오디오 설명을 쉬운 말로 정리 + 주요 기능에 추가",
+      "detail": "사용자가 정리해 준 쉬운 설명(\"단자 1번: 1~4번 입력 중 원하는 하나의 소리를 추출, 단자 2번: 5~8번 입력 중 원하는 하나의 소리를 추출\", 전면 터치 화면 [Function] → [QD Audio] 메뉴 경로)에 맞춰 입출력 표·단자 지도 문구를 다듬고, 그동안 빠져 있던 \"주요 기능\" 항목을 새로 추가했다."
+    }
+  ]
+}

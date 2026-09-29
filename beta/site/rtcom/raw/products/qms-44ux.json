@@ -1,0 +1,413 @@
+{
+  "id": "qms-44ux",
+  "group": "integrated",
+  "manufacturer": "RTCOM",
+  "productName": "QMS-44UX",
+  "model": "QMS-44UX",
+  "series": "HDMI Matrix Switcher",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Matrix Switcher"
+  ],
+  "english": "4x4 4K60 HDMI matrix switcher with seamless switching, video wall, quad view and PIP",
+  "korean": "심리스 스위칭·2x2 비디오 월·쿼드 뷰·PIP 기능을 갖춘 4K 60Hz 4x4 HDMI 매트릭스 스위처다.",
+  "subtitle": "4×4 HDMI Matrix Switcher · 심리스 스위칭",
+  "lead": "4개의 HDMI 입력을 **어떤 출력으로도 자유롭게 전환**하는 4K 60Hz 매트릭스입니다. 2×2 비디오 월·쿼드 뷰·PIP 기능을 지원합니다.",
+  "catalogPages": "27",
+  "verificationSummary": "알티컴 종합 카탈로그(2026-03) 29쪽의 소개·주요기능·제품사양·크기 및 무게·제품 이미지에서 확인했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "QMS-44UX는 다재다능한 4K 60Hz Matrix Switcher다. 4x4 HDMI Matrix로서 Seamless Switching, 2x2 Video Wall, 2x2 Quad Viewer, PIP 기능을 갖추고 있다.\n\nRS-232C, LAN(TCP/IP), 전면 버튼으로 제어할 수 있다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "qms-44ux-front.webp",
+      "alt": "RTCOM QMS-44UX 전면",
+      "note": "Front · 실물 직접 촬영 사진(카탈로그 사진보다 고화질)",
+      "provider": "RTCOM",
+      "model": "QMS-44UX",
+      "source": "P1",
+      "officialSource": false,
+      "verificationStatus": "FOUND",
+      "resolution": "2000×273"
+    },
+    {
+      "role": "Rear",
+      "file": "qms-44ux-rear.webp",
+      "alt": "RTCOM QMS-44UX 후면",
+      "note": "Rear · 실물 직접 촬영 사진(카탈로그 사진보다 고화질, DOWNLOAD 포트 추가 확인)",
+      "provider": "RTCOM",
+      "model": "QMS-44UX",
+      "source": "P1",
+      "officialSource": false,
+      "verificationStatus": "FOUND",
+      "resolution": "2000×220"
+    },
+    {
+      "role": "Diagram",
+      "file": "qms-44ux-diagram.webp",
+      "alt": "RTCOM QMS-44UX 연결 다이어그램(제조사 제공)",
+      "note": "Diagram · 카탈로그 46쪽판 27쪽 제조사 제공 연결 다이어그램",
+      "provider": "RTCOM",
+      "model": "QMS-44UX",
+      "source": "C2",
+      "officialSource": true,
+      "verificationStatus": "FOUND"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING"
+    },
+    {
+      "role": "Diagram",
+      "status": "FOUND"
+    }
+  ],
+  "documents": [
+    {
+      "type": "Catalog",
+      "status": "FOUND",
+      "title": "알티컴 종합 카탈로그 2026 (국문)",
+      "language": "ko",
+      "note": "카탈로그 46쪽판 27쪽 발췌 · 제품별 공개본(2026-09-28 사용자 결정 \"제품별로 잘라 공개\")",
+      "file": "qms-44ux-catalog.pdf",
+      "preview": "image",
+      "previewImages": [
+        "qms-44ux-catalog-p1.webp"
+      ]
+    },
+    {
+      "type": "Diagram",
+      "status": "FOUND",
+      "title": "제조사 연결 다이어그램",
+      "language": "en/ko",
+      "note": "카탈로그 46쪽판 27쪽"
+    },
+    {
+      "type": "Manual",
+      "status": "FOUND",
+      "title": "QMS-44UX 사용자 매뉴얼 KV.04",
+      "language": "ko",
+      "note": "사용자 제공 매뉴얼 공개본(2026-09-28, 사용자 결정 \"1번\" — 매뉴얼 전부 공개)",
+      "file": "qms-44ux-manual.pdf",
+      "preview": "pdfjs"
+    }
+  ],
+  "features": [
+    {
+      "text": "각 포트별 스케일 업다운 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "매트릭스, 비디오 월, 듀얼 디스플레이, 쿼드 디스플레이 모드 선택",
+      "source": "C"
+    },
+    {
+      "text": "심리스 스위칭 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "베젤 보정 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "각 포트별 HDCP 2.2 EDID 기능 지원",
+      "source": "C"
+    },
+    {
+      "text": "전면 패널, LAN, RS-232로 제어",
+      "source": "C"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "입력",
+      "value": "4채널 HDMI 입력",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "출력",
+      "value": "4채널 HDMI 출력",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 규격",
+      "value": "HDMI 2.0",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDCP",
+      "value": "HDCP 2.2 지원",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "스케일링",
+      "value": "Up scaling and Down scaling",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "스케일링 해상도",
+      "value": "3840x2160p 60Hz, 3840x2160p 30Hz, 1920x1080p 60Hz, 1920x1080p 59.94Hz, 1920x1200p 60Hz, 1280x1024p 60Hz, 1280x720p 60Hz, 1280x720p 59.94Hz, 720x480p 60Hz, 1366x768p 60Hz, 1024x768p 60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어",
+      "value": "전면 패널, LAN(TCP/IP), RS-232C",
+      "unit": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원공급",
+      "value": "DC 12V 5A",
+      "unit": "",
+      "condition": "",
+      "source": "M-Q44",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×D×H)",
+      "value": "445×200×43",
+      "unit": "mm",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "2.3",
+      "unit": "kg",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "HDMI",
+      "direction": "IN",
+      "quantity": "4",
+      "protocol": "HDMI 2.0",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "HDMI",
+      "direction": "OUT",
+      "quantity": "4",
+      "protocol": "HDMI 2.0",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C",
+      "signal": "RS-232C",
+      "direction": "BIDIR",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "LAN",
+      "signal": "TCP/IP",
+      "direction": "BIDIR",
+      "quantity": "1",
+      "protocol": "",
+      "condition": "",
+      "source": "C",
+      "verification": "VERIFIED"
+    }
+  ],
+  "related": [],
+  "videoModes": {
+    "source": "M-Q44",
+    "modes": [
+      {
+        "name": "MATRIX",
+        "summary": "입력 4 → 출력 4 임의 스위칭·분배, 심리스 스위칭",
+        "detail": "1 TO 1(같은 번호끼리)·ALL(한 입력을 모든 출력으로) 버튼",
+        "page": "20"
+      },
+      {
+        "name": "QUAD",
+        "summary": "입력 4개를 4분할해 모든 출력에 표시",
+        "detail": "분할 화면 하나를 ZOOM-IN으로 확대 가능",
+        "layouts": [
+          "QUAD",
+          "3-BOTTOM",
+          "3-SIDE RIGHT",
+          "3-SIDE LEFT",
+          "CASCADE1",
+          "4CH-POP",
+          "2CH-SIDE",
+          "3CH-MODE1",
+          "3CH-MODE2",
+          "USER MODE 1",
+          "USER MODE 2",
+          "USER MODE 3"
+        ],
+        "page": "21–23"
+      },
+      {
+        "name": "WALL",
+        "summary": "2×2 비디오월, 1프레임 단위 베젤 보정",
+        "layouts": [
+          "2×2",
+          "2×1",
+          "1×2",
+          "3×1",
+          "1×3",
+          "4×1",
+          "1×4",
+          "Full"
+        ],
+        "page": "23–24"
+      },
+      {
+        "name": "DUAL",
+        "summary": "한 화면 2분할(출력 1·2, 3·4 쌍별 레이아웃)",
+        "layouts": [
+          "PBP",
+          "PBP-Full",
+          "PIP",
+          "User Mode"
+        ],
+        "page": "24"
+      }
+    ]
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "INPUT 1–4",
+        "desc": "HDMI 소스 4대 연결",
+        "x1": 640,
+        "x2": 1200
+      },
+      {
+        "n": 2,
+        "label": "OUTPUT 1–4",
+        "desc": "임의의 입력을 매트릭스로 전환해 출력",
+        "x1": 1285,
+        "x2": 1805
+      },
+      {
+        "n": 3,
+        "label": "RS-232C",
+        "desc": "외부 제어",
+        "x1": 270,
+        "x2": 390
+      },
+      {
+        "n": 4,
+        "label": "LAN",
+        "desc": "TCP/IP 제어",
+        "x1": 445,
+        "x2": 540
+      },
+      {
+        "n": 5,
+        "label": "DOWNLOAD",
+        "desc": "Mini-USB 포트(실물 촬영으로 확인, 매뉴얼 대조 전)",
+        "x1": 160,
+        "x2": 215
+      },
+      {
+        "n": 6,
+        "label": "DC 12V",
+        "desc": "전원 어댑터 12V 5A",
+        "x1": 50,
+        "x2": 150
+      }
+    ]
+  },
+  "sources": [
+    {
+      "code": "C",
+      "name": "알티컴 종합 카탈로그 2026 (국문)",
+      "page": "29",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "C2",
+      "name": "알티컴 종합 카탈로그 2026 (국문 46쪽, 개정판)",
+      "page": "27",
+      "scope": "제조사 공식 출처 — docs/RTcom_catalogue_2026_46p.pdf"
+    },
+    {
+      "code": "M-Q44",
+      "name": "알티컴 QMS-44UX 사용자 매뉴얼 KV.04",
+      "page": "3, 6, 11",
+      "scope": "사용자 제공(2026-09-27) — PDF는 저장소에 넣지 않음, 요약은 docs/evidence/QMS_VIDEO_MODES.md"
+    },
+    {
+      "code": "J",
+      "name": "서울영상테크 SI사업본부 검토 판단",
+      "page": "",
+      "scope": "사용자 위임(2026-09-27) — 카탈로그 내부 충돌·오기 정리"
+    },
+    {
+      "code": "P1",
+      "name": "실물 직접 촬영 사진(전면·후면)",
+      "page": "",
+      "scope": "사용자 제공(2026-09-28) — 카탈로그 사진 대체, 고화질"
+    }
+  ],
+  "issues": []
+}
