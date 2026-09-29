@@ -233,7 +233,7 @@
   ],
   "io": [
     {
-      "group": "Network/Control",
+      "group": "Network / Control",
       "connector": "RJ-45",
       "signal": "Ethernet (제어/구성/모니터링/PoE 전원)",
       "direction": "IN",

@@ -48,7 +48,7 @@ test('renames only approved spec and I/O group labels while preserving all row v
   const before = structuredClone(input);
   const result = applyDetailNames(input);
   assert.deepEqual(result.specifications.map(row => row.group), ['Optical', 'Certification', 'Certification', 'Connections']);
-  assert.deepEqual(result.io.map(row => row.group), ['Audio', 'Audio', 'Input', 'Audio(옵션)', 'Network/Control']);
+  assert.deepEqual(result.io.map(row => row.group), ['Audio', 'Audio', 'Input', 'Audio(옵션)', 'Network / Control']);
   assert.deepEqual(result.specifications.map(({ group, ...row }) => row), before.specifications.map(({ group, ...row }) => row));
   assert.deepEqual(result.io.map(({ group, ...row }) => row), before.io.map(({ group, ...row }) => row));
   assert.deepEqual({ ...result, specifications: before.specifications, io: before.io }, before);
@@ -57,6 +57,17 @@ test('renames only approved spec and I/O group labels while preserving all row v
 test('refuses to infer I/O direction while consolidating explicit Audio In/Out groups', () => {
   assert.throws(() => applyDetailNames({ model: 'Bad fixture', io: [{ group: 'Audio In', direction: 'OUT' }] }), /direction must already be IN/);
   assert.throws(() => applyDetailNames({ model: 'Bad fixture', io: [{ group: 'Audio Output', direction: 'IN' }] }), /direction must already be OUT/);
+});
+
+test('normalizes the approved BSS EC-4BV Network/Control label only', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const detail = JSON.parse(await readFile(new URL('../beta/site/detail/data/ec-4bv.json', import.meta.url), 'utf8'));
+  const matching = detail.io.filter(row => row.group === 'Network / Control');
+  assert.equal(matching.length, 1);
+  assert.equal(detail.io.some(row => row.group === 'Network/Control'), false);
+  assert.equal(matching[0].connector, 'RJ-45');
+  assert.equal(matching[0].direction, 'IN');
+  assert.equal(matching[0].quantity, '1');
 });
 
 test('renamed catalog categories preserve home top-category counts and filter membership', async () => {

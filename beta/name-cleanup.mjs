@@ -53,7 +53,8 @@ export const ioGroupNames = Object.freeze({
   'Audio In': 'Audio',
   'Audio Input': 'Audio',
   'Audio Out': 'Audio',
-  'Audio Output': 'Audio'
+  'Audio Output': 'Audio',
+  'Network/Control': 'Network / Control'
 });
 
 function renameArrayValues(values, mapping) {
