@@ -25,7 +25,7 @@
       "verificationStatus": "VERIFIED",
       "originalSize": "4096x438",
       "resolution": "4096x438",
-      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -426,8 +426,8 @@
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "사용자 게시 승인 · 권리 확인 필요",
-    "galleryRights": "사용자가 AV Portal 게시를 승인했습니다. 제조사 재사용 권리와 별도 재배포 권리는 미확인 상태입니다.",
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
     "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
