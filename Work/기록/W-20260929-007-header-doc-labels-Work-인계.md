@@ -3,7 +3,7 @@
 - 사용자 승인: 2026-09-29 PR #121 결과의 `#header-docs` 문서 종류 누락 신고와 수정·검증 지시
 - 기준 main: `0f673778974e9a3cb16ff28d8b184604f545f90d`
 - 구현 브랜치: `codex/W-20260929-007-header-doc-labels`
-- 구현 PR·상태: PR 생성 후 `Work/지시서.md`에 기록
+- 구현 PR·상태: [PR #123](https://github.com/Seoulav/AV-Portal/pull/123) main 병합 완료 (`f8a11e633fef06b707576f6abcb7aafa07015922`)
 - 자료 접근: 공개 상세 데이터만 읽었고 로컬 전용 `hkkim/` 자료는 반영·업로드하지 않았다.
 
 ## 실제 변경·검증
@@ -14,4 +14,4 @@
 
 ## 남은 일
 
-구현 PR의 main 병합과 Pages 배포 상태를 확인한다. 4단계 검색 속도는 이번 수정 범위가 아니다. 다음 계획은 최신 main과 병합 PR을 근거로 별도 명세에서 다룬다.
+[Pages 배포 실행](https://github.com/Seoulav/AV-Portal/actions/runs/36534768780) 성공. 공개 상세 페이지에서 Aquilon RS1의 `매뉴얼 보기`·`사양서 보기`·`기술문서 보기`, AC18/26의 `사양서 ↗`·`참고자료 보기`, LH115QHFEBGXKR의 `사양서 ↗` 표시를 확인했다. 4단계 검색 속도는 이번 수정 범위가 아니다.
