@@ -1,0 +1,82 @@
+{
+  "captures": [
+    "xdm-1280.png",
+    "xdm-390.png",
+    "hd-210u-1280.png",
+    "hd-210u-390.png",
+    "xdm-ctr100-1280.png",
+    "xdm-ctr100-390.png",
+    "hoc-ux-1280.png",
+    "hoc-ux-390.png",
+    "home-hdmi-1280.png",
+    "home-hdmi-390.png",
+    "home-rtcom-1280.png",
+    "home-rtcom-390.png"
+  ],
+  "sourceLinks": 32,
+  "pdfPopup": true,
+  "toolLink": true,
+  "overflow": [
+    {
+      "name": "xdm",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "xdm",
+      "width": 390,
+      "pixels": 0
+    },
+    {
+      "name": "hd-210u",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "hd-210u",
+      "width": 390,
+      "pixels": 0
+    },
+    {
+      "name": "xdm-ctr100",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "xdm-ctr100",
+      "width": 390,
+      "pixels": 0
+    },
+    {
+      "name": "hoc-ux",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "hoc-ux",
+      "width": 390,
+      "pixels": 0
+    },
+    {
+      "name": "home-hdmi",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "home-hdmi",
+      "width": 390,
+      "pixels": 0
+    },
+    {
+      "name": "home-rtcom",
+      "width": 1280,
+      "pixels": 0
+    },
+    {
+      "name": "home-rtcom",
+      "width": 390,
+      "pixels": 0
+    }
+  ],
+  "consoleErrors": []
+}

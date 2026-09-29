@@ -93,7 +93,7 @@ test('RTCOM detail maps images, documents, source link and related products with
     ['Official Product Page', 'https://seoulav.github.io/rtcom-configurator/#products/xdm'],
     ['User Manual', 'https://seoulav.github.io/rtcom-configurator/output/design/assets/docs/xdm-manual.pdf']
   ]);
-  assert.equal(detail.related[0].url, '../detail/?product=rtcom-xdm-ctr100');
+  assert.equal(detail.related[0].url, 'https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ctr100');
   assert.equal(detail.related[0].productName, 'xdm-ctr100');
   for (const field of ['portMap', 'signalFlow', 'edid', 'dipSwitch']) assert.equal(detail[field], undefined);
 });

@@ -1,4 +1,5 @@
 export const RTCOM_PUBLIC_BASE = 'https://seoulav.github.io/rtcom-configurator/';
+export const AV_PORTAL_DETAIL_BASE = 'https://seoulav.github.io/AV-Portal/detail/';
 export const RTCOM_DOCUMENT_BASE = `${RTCOM_PUBLIC_BASE}output/design/assets/docs/`;
 export const RTCOM_IMAGE_BASE = `${RTCOM_PUBLIC_BASE}output/design/assets/products/`;
 export const RTCOM_EXCLUDED_MODELS = Object.freeze(['HS-88M-U', 'HS-88MX', 'HD-D104U', 'HD-D108U']);
@@ -100,7 +101,7 @@ export function adaptRtcomDetail(raw) {
   const related = (raw.related ?? []).map(item => ({
     ...item,
     productName: item.productName ?? item.target,
-    url: item.target && validId(item.target) ? `../detail/?product=${rtcomSlug(item.target)}` : undefined
+    url: item.target && validId(item.target) ? `${AV_PORTAL_DETAIL_BASE}?product=${rtcomSlug(item.target)}` : undefined
   }));
   const presentation = {
     ...(raw.presentation ?? {}),
