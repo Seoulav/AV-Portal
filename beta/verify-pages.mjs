@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
+import { MAX_PDF_BYTES } from './mirror-docs.mjs';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
 import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, identity } from './user-manuals.mjs';
@@ -9,9 +11,11 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
+assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
-assert.deepEqual(await readdir(new URL('shared/', site)), ['pg.css']);
+assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css']);
 const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
 assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
 assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);
@@ -42,7 +46,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   }
 }
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'product-detail-model.mjs', 'styles.css'].sort());
+assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'pdf-documents.mjs', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
 const previewImageFiles = group2Previews.map(entry => entry.image.file);
 assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');
@@ -86,6 +90,43 @@ assert.ok(String(version.revision).length > 0);
 assert.equal(hashText(raw), snapshot.catalog.sha256);
 
 const catalog = JSON.parse(raw);
+// 공개 PDF 대응표는 상세 JSON을 수정하지 않고 독립 파일로 게시한다. 파일 내용·해시·폴더를 전수 대조한다.
+{
+  const docsDir = new URL('docs/', site);
+  const manifest = JSON.parse(await readFile(new URL('manifest.json', docsDir), 'utf8'));
+  assert.deepEqual(Object.keys(manifest).sort(), ['mirrors', 'uploads']);
+  const listed = manifest.mirrors.map(entry => entry.file);
+  assert.equal(new Set(listed).size, listed.length, '서로 다른 URL에 중복 PDF 파일명');
+  assert.equal(new Set(manifest.mirrors.map(entry => entry.url)).size, manifest.mirrors.length, 'PDF 원본 URL 중복');
+  assert.deepEqual((await readdir(docsDir)).sort(), [...listed, 'manifest.json'].sort(), 'PDF 대응표·폴더 불일치');
+  const detailUrls = new Set();
+  for (const file of (await readdir(new URL('detail/data/', site))).filter(name => name.endsWith('.json'))) {
+    const item = JSON.parse(await readFile(new URL(`detail/data/${file}`, site), 'utf8'));
+    for (const document of item.documents ?? []) if (document.url && ['FOUND', 'VERIFIED', 'READY'].includes(document.status)) detailUrls.add(document.url);
+  }
+  for (const entry of manifest.mirrors) {
+    assert.ok(detailUrls.has(entry.url), `${entry.file}: 상세 문서 원본 URL 없음`);
+    const source = new URL(entry.url);
+    assert.equal(source.protocol, 'https:');
+    assert.equal(source.hostname, entry.sourceHost);
+    assert.match(entry.file, /^[a-z0-9-]+\.pdf$/);
+    assert.match(entry.sha256, /^[a-f0-9]{64}$/);
+    assert.ok(!Number.isNaN(Date.parse(entry.fetchedAt)), `${entry.file}: 수집일`);
+    const bytes = await readFile(new URL(entry.file, docsDir));
+    assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${entry.file}: PDF 매직 불일치`);
+    assert.ok(bytes.length > 0 && bytes.length <= MAX_PDF_BYTES, `${entry.file}: 용량 초과`);
+    assert.equal(bytes.length, entry.bytes, `${entry.file}: 용량 기록 불일치`);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.sha256, `${entry.file}: SHA 불일치`);
+  }
+  const uploaded = new Set();
+  for (const item of catalog) {
+    if (!item.slug) continue;
+    for (const [kind, url] of [['manual', item.manual_link], ...((item.reference_link ?? []).map(link => ['reference', link]))]) {
+      if (typeof url === 'string' && /^\.\/manuals\/[a-z0-9-]+\.pdf$/.test(url)) uploaded.add(`${item.slug}|manuals/${url.split('/').at(-1)}|${kind}`);
+    }
+  }
+  assert.deepEqual(new Set(manifest.uploads.map(entry => `${entry.slug}|${entry.file}|${entry.kind}`)), uploaded, '사용자 업로드 PDF 대응표 불일치');
+}
 assert.equal(catalog.length, snapshot.catalog.count);
 // 기준 25개는 파생 필드를 뺀 형태로 처음 공개 시점과 같아야 한다.
 assert.equal(hashText(JSON.stringify(catalog.slice(0, snapshot.catalog.baselineCount).map(stripDerivedCatalogFields))), snapshot.catalog.baselineSha256);
@@ -204,7 +245,7 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => name !== 'detail' && name !== 'manuals' && name !== 'fonts' && name !== 'shared')) {
+for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'shared', 'vendor'].includes(name))) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {

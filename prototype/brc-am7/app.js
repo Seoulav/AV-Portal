@@ -1,4 +1,6 @@
 import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20260929-002';
+import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible } from './pdf-documents.mjs';
+import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -103,13 +105,40 @@ if (!productKey && !allowContentFallback) {
     $('#dialog-product-link').href = official.url;
   } else $('#dialog-product-link').hidden = true;
 
+  const manifestPath = '../../beta/site/docs/manifest.json';
+  let documentManifest = { mirrors: [], uploads: [] };
+  try {
+    const manifestResponse = await fetch(manifestPath);
+    if (manifestResponse.ok) documentManifest = await manifestResponse.json();
+  } catch { /* External document links remain available. */ }
+  const pdfViewer = createPdfViewer();
+  const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest);
   const openDocuments = [
     ...data.quickDocuments.filter(item => item.available).map(item => ({ ...item.resource, label: item.label })),
-    ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type }))
+    ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type })),
+    ...uploadedDocuments
   ];
+  function appendDocumentActions(container, item) {
+    const action = item.action ?? resolveDocumentAction(item, documentManifest);
+    if (!action) return;
+    if (action.kind === 'external') {
+      container.append(safeLink(action.url, '제조사에서 열기 ↗', 'pg-btn'));
+      return;
+    }
+    const open = element('button', 'pg-btn', '보기');
+    open.type = 'button';
+    open.dataset.pdfOpen = 'true';
+    open.addEventListener('click', () => pdfViewer.open({
+      file: action.file, title: item.title ?? item.label, sourceUrl: action.sourceUrl, trigger: open
+    }));
+    const download = element('a', 'pg-btn', '↓ 내려받기');
+    download.href = action.file;
+    download.download = action.file.split('/').at(-1);
+    container.append(open, download);
+  }
   for (const document of openDocuments.slice(0, 3)) {
     const pill = element('span', 'pg-doc');
-    pill.append(safeLink(document.url, document.label + ' ↗'));
+    appendDocumentActions(pill, document);
     $('#header-docs').append(pill);
   }
   for (const document of openDocuments) {
@@ -118,7 +147,9 @@ if (!productKey && !allowContentFallback) {
     main.append(element('small', 'document-type', document.label ?? document.type),
       element('strong', '', document.title ?? document.label),
       element('small', '', [document.language, document.revision, document.note].filter(Boolean).join(' · ')));
-    row.append(main, badge(document.status), safeLink(document.url, '열기 ↗', 'pg-btn'));
+    const actions = element('span', 'document-actions');
+    appendDocumentActions(actions, document);
+    row.append(main, badge(document.status), actions);
     $('#documents-list').append(row);
   }
 
@@ -286,6 +317,7 @@ if (!productKey && !allowContentFallback) {
   }
 
   const visible = new Set(visibleDetailCards(data));
+  if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const card of $('.detail-cards').querySelectorAll('[data-card]')) card.hidden = !visible.has(card.id);
   const cardGrid = $('.detail-cards');
   const leftCardIds = ['overview', 'specifications', 'features'];

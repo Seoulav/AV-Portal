@@ -1,0 +1,1543 @@
+{
+  "checked": 367,
+  "copied": 111,
+  "bytes": 505437961,
+  "exclusions": [
+    {
+      "url": "https://pubs.shure.com/guide/A900-GM/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/accessories/a900gm?variant=A900W-R-GM",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/ac18-26",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/ac18-95.html",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/aquilon-rs1",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/aquilon-rs2",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/room-system-avhub",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/blu-100",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/blu-101",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/blu-160",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/ko/products/blu-50v2",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/aec-card",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/blu-da",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/analog-input-card",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/analog-output-card",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/brc-am7",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-1200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-1200bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-300",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-300bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-600",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-2-600bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-1200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-1200bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-300",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-300bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-600",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/cdi-4-600bl",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.averusa.com/products/ptz-controller/cl01",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-resource/accessories-cm20",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-cm20",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/ctd-2125",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/ctd-4125",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/ctd-8125",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://conference.televic.digital/knowledgebase/products/confidea-flex/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/jbl-professional-control-23-1",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-25-1",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-28-1/1000",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-412c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-414c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-416c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-418c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-419cs-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-424c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-424lp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-426c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-426lp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-440cs-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://jblpro.com/en-US/products/control-447c-t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-detail/cpe40",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-resource/accessories-cs10-cs10-d",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-cs10-cs10-d",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/9xABEyWNK9emno7",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://conference.televic.digital/knowledgebase/products/d-cerno/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/WG4bzxmaNPkRg9a",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://conference.televic.digital/knowledgebase/products/microphones/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/kqq9baF5qpq7rNF",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-datasheet",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-2-300",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-network-manual-english",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-network-series-data-sheet",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-2-300n",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-2-600",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-2-600n",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-300",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-da-dante-manual-english",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/site_elements/dci-dante-data-sheet",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-300da",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-300n",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/DCi-4-600",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-600da",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/dci-4-600n",
+      "reason": "error",
+      "detail": "HTTP 429",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/specs.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm7/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dspd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L260F/p/V11HA69051",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EC%A4%91%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-L530U/p/V11HA27040",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L690U/p/V11HB29051",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L695SE/p/V11HB36151",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790SU/p/V11HB30051",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L790U/p/V11HB28051",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L795SE/p/V11HB26151",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L895E/p/V11HB24151",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L895U/p/V11HB27151",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2213B/p/V11HB03851",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2216B/p/V11HB04851",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PQ2220B/p/V11HB05851",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU1008B/p/V11HA33840",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2010B/p/V11HA52840",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2213B/p/V11HA68851",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/대형-강당-미팅룸-프로젝터/EB-PU2216B/p/V11HA67851",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://bssaudio.com/en-US/products/EC-4BV",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/eikos-4k",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_view/66",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_intro/66",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_view/44",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_intro/44",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_view/60",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_intro/60",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_view/75",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_intro/75",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/kr/business/wired/switches/smart-cloud/gs728tppv3/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.novastar.tech/product/detail.html?catid=3&id=39",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-rx90",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.lightware.com/en/products/Extenders/hdmi20-optj-tx90",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio/techspecs",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/kr/products/hyperdeckstudio",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.crownaudio.com/en-US/products/i-tech-4x3500hd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.aja.com/products/ki-pro-go2",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.magnimage.com/article/ddddeffeefe",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH43QHCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH85QMCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-ad",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-ad",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MX39x/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/microphones/mx392?variant=MX392%2FC",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MX395/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/microphones/mx395",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MX400D/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/microphones/mx418?variant=MX418D%2FC",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MXA925/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://shure.widen.net/s/cpktdxcnxm/mxa925_specsheet_en",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/microphones/mxa925?variant=MXA925W-R",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MXC/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxc416_mxc420_mxc425?variant=MXC420%2FC",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/docs/guide/MXCW",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/MXCW/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcwapt?variant=MXCWAPT-W",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/nx-1200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/nx-2200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/nx-3200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/HZP74JS8zLxzaPC",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://conference.televic.digital/knowledgebase/products/plixus/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://documents.televic.digital/conference/index.php/s/W9kbS3grpBJJncP",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/mz20k/spec/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/mz882/spec/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/mz882/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/vmz71/spec/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://docs.connect.panasonic.com/projector/products/vmz71/",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/pulse-4k",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd1",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd2_beta58a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd2_beta87a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/qlx-d_digital_wireless/qlxd4",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dspd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804dspd",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/rally-mic-pod-extension-cable.952-000047.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/rc400t",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/specs.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/r-series-adda-3/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip500",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://shure.widen.net/s/k9pv6nlskw/slxd_plus_specsheet_en",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd1plus",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-58",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b58",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd2plus-b87a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4plus",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/slxd-plus/slxd4dplus",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-resource/smartvision40",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/smartvision40",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-a40",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pro.sony/ko_KR/products/ptz-network-cameras/srg-x40uh",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.ametekesp.com/surgex/remote-turn-on/remote-turn-on-220-240v/sx-1216-rti-page",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/specs.html",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://kr.yamaha.com/ko/business/audio/products/interfaces/tio1608-d2/",
+      "reason": "webpage",
+      "detail": "text/html;charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr315",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://www.averusa.com/products/auto-tracking-camera/tr335",
+      "reason": "webpage",
+      "detail": "text/html",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/UA844SWBplus/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/accessories/ua844p?variant=UA844+SWB",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://pubs.shure.com/guide/UA845UWB/en-US",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/accessories/ua845uwb",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/accessories/ua864?variant=UA864A",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/accessories/ua874?variant=UA874XA",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.rossvideo.com/products/routing-systems/ultritouch/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd1",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_beta58a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_beta_87a",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd2_ksm9",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4d",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4q",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd8",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/support/by_product/uvc-01/owners_manuals/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/uvc-01/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-detail/uvc85-byod",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/uvc85-byod",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-detail/compatible-camera-uvc86",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/support/by_product/v-02hd_mk_ii/owners_manuals/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/v-02hd_mk_ii/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/v-160hd/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/v-1hd_plus/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/v-80hd/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/v-8hd/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/varia-100",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/varia-80",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/varia-sl50",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.amx.com/en-US/products/varia-sl80",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.yealink.com/en/product-tech-specs/accessories-vcm35",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://proav.roland.com/global/products/vr-6hd/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.lumantek.com/index/product_intro/37",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://lumantek.co.kr/index/product_intro/74",
+      "reason": "webpage",
+      "detail": "text/html; charset=UTF-8",
+      "retained": false
+    },
+    {
+      "url": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+      "reason": "error",
+      "detail": "HTTP 403",
+      "retained": false
+    },
+    {
+      "url": "https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf",
+      "reason": "error",
+      "detail": "HTTP 403",
+      "retained": false
+    },
+    {
+      "url": "https://support.colorlightinside.com/uploads/X100Pro-7USpecificationV2.0_1785395463.pdf",
+      "reason": "error",
+      "detail": "HTTP 403",
+      "retained": false
+    },
+    {
+      "url": "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/zenith-100",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    },
+    {
+      "url": "https://www.analogway.com/products/zenith-200",
+      "reason": "webpage",
+      "detail": "text/html; charset=utf-8",
+      "retained": false
+    }
+  ]
+}

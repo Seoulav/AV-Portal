@@ -4,6 +4,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
   ['prototype/brc-am7/product-detail-model.mjs', 'beta/site/detail/product-detail-model.mjs', 'copy'],
+  ['prototype/brc-am7/pdf-documents.mjs', 'beta/site/detail/pdf-documents.mjs', 'copy'],
   ['prototype/brc-am7/favicon.svg', 'beta/site/favicon.svg', 'copy']
 ];
 
@@ -19,6 +20,7 @@ export function transformDetailHtml(source) {
     .replace('href="./favicon.svg"', 'href="../favicon.svg"')
     .replace('href="../../beta/site/fonts/PretendardVariable.woff2"', 'href="../fonts/PretendardVariable.woff2"')
     .replace('href="../../beta/site/shared/pg.css"', 'href="../shared/pg.css"')
+    .replace('href="../../beta/site/shared/pdf-viewer.css"', 'href="../shared/pdf-viewer.css"')
     .replace('href="../../beta/site/system-version.css"', 'href="../system-version.css"')
     .replace('src="../../beta/site/system-version.js"', 'src="../system-version.js"')
     .replaceAll('PRODUCT DETAIL LAB', 'PRODUCT DETAIL')
@@ -42,6 +44,8 @@ export function transformDetailApp(source) {
     "fetch(productKey ? `./data/${productKey}.json` : './content.json')",
     'fetch(`./data/${productKey}.json`)');
   return output
+    .replace("from '../../beta/site/shared/pdf-viewer.mjs'", "from '../shared/pdf-viewer.mjs'")
+    .replace("const manifestPath = '../../beta/site/docs/manifest.json';", "const manifestPath = '../docs/manifest.json';")
     .replace('Product Detail 시안', 'Product Detail')
     .replace('시안 콘텐츠를 읽을 수 없습니다.', '제품 상세 데이터를 읽을 수 없습니다.')
     .replace('제품의 로컬 검토본입니다. 공개 사이트와 별도로 검토합니다.', '제품의 공개 Beta 상세페이지입니다. 검토 중인 항목은 상태를 확인해 주세요.')
