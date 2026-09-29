@@ -34,8 +34,8 @@ test('the pictogram preview replaces only local images with an original SVG', as
   const previewBase = `http://127.0.0.1:${preview.address().port}`;
   try {
     const html = await (await fetch(previewBase)).text();
-    assert.match(html, /class="pictogram-preview"/);
-    assert.match(html, /id="gallery-title">제품 시각화/);
+    assert.match(html, /class="pg-page pictogram-preview"/);
+    assert.match(html, /id="gallery-title"><span class="pg-idx">02<\/span>제품 시각화/);
     const content = await (await fetch(`${previewBase}/content.json`)).json();
     assert.equal(content.images.length, 1);
     assert.equal(content.images[0].file, 'ptz-pictogram.svg');

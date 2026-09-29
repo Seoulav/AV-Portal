@@ -9,6 +9,9 @@ const routes = new Map([
   ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
+  ['/beta/site/shared/pg.css', ['../../beta/site/shared/pg.css', 'text/css; charset=utf-8']],
+  ['/beta/site/fonts/PretendardVariable.woff2', ['../../beta/site/fonts/PretendardVariable.woff2', 'font/woff2']],
+  ['/favicon.svg', ['favicon.svg', 'image/svg+xml']],
   ['/local-visual.css', ['local-visual.css', 'text/css; charset=utf-8']],
   ['/images/ptz-pictogram.svg', ['ptz-pictogram.svg', 'image/svg+xml']],
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
@@ -40,8 +43,8 @@ export function createPreviewServer({ pictogram = false } = {}) {
           .replace('<meta name="color-scheme" content="dark">', '<meta name="color-scheme" content="light">')
           .replace('</head>', '  <link rel="stylesheet" href="./local-visual.css">\n</head>')
           .replace('PRODUCT DETAIL LAB', 'LOCAL VISUAL STUDY')
-          .replace('<body>', pictogram ? '<body class="pictogram-preview">' : '<body>')
-          .replace('id="gallery-title">제품 이미지', pictogram ? 'id="gallery-title">제품 시각화' : 'id="gallery-title">제품 이미지')
+          .replace('<body class="pg-page">', pictogram ? '<body class="pg-page pictogram-preview">' : '<body class="pg-page">')
+          .replace('<span class="pg-idx">02</span>제품 사진', pictogram ? '<span class="pg-idx">02</span>제품 시각화' : '<span class="pg-idx">02</span>제품 사진')
           .replace('제조사 공식 출처', pictogram ? '제품 공식 페이지' : '제조사 공식 출처')
           .replace('로컬 시안 이미지 · 재게시 권한 미확인', pictogram ? '자체 제작 픽토그램 · 실물 사진 아님' : '로컬 시안 이미지 · 재게시 권한 미확인'));
       }

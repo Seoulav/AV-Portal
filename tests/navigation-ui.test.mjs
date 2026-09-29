@@ -83,26 +83,16 @@ test('home and detail templates expose the approved navigation structure', async
   assert.match(home, /id="manufacturer-browser"/);
   assert.match(home, /id="results-workspace"[^>]+hidden/);
   for (const id of ['overview', 'features', 'specifications', 'io', 'related-products', 'documents', 'sources']) {
-    assert.match(detail, new RegExp(`role="tab"[^>]+aria-controls="${id}"`));
-    assert.match(detail, new RegExp(`id="${id}"[^>]+role="tabpanel"`));
+    assert.match(detail, new RegExp(`id="${id}"`));
   }
-  assert.match(detail, /role="tablist"/);
+  assert.doesNotMatch(detail, /role="tablist"|role="tabpanel"/);
   assert.match(detail, /id="detail-search-toggle"[^>]+aria-expanded="false"/);
-  assert.match(detail, /id="quick-state-summary"/);
-  assert.ok(detail.indexOf('id="product-name"') < detail.indexOf('id="featured-image"'));
-  assert.ok(detail.indexOf('id="featured-image"') < detail.indexOf('id="english-description"'));
-  assert.match(detail, /<th>포트 수<\/th><th>채널·신호<\/th><th>규격·조건<\/th>/);
-  assert.match(detail, /id="connector-mobile-groups"/);
-  assert.match(detailApp, /mobileHeading\.setAttribute\('aria-expanded', String\(mobileGroup\.open\)\)/);
-  assert.match(detailApp, /mobileGroup\.addEventListener\('toggle'/);
-  assert.match(detailApp, /function revealActiveTab/);
-  assert.match(detailApp, /tabs\.scrollTo\(\{ left: targetLeft/);
-  assert.doesNotMatch(detailApp, /tab\.scrollIntoView/);
-  assert.doesNotMatch(detailApp, /\$\('\.gallery'\)\.remove\(\)/);
-  assert.match(detail, /id="gallery-empty-summary"/);
-  assert.match(detailApp, /확보 \$\{documentSummary\.secured\} · 검토 \$\{documentSummary\.review\} · 없음 \$\{documentSummary\.missing\}/);
-  assert.match(detailStyles, /\.connector-mobile-group\[open\]>\.connector-group-heading::after\{content:'−'\}/);
-  assert.match(detailStyles, /\.io-summary\{[^}]*flex-wrap:wrap/);
+  assert.ok(detail.indexOf('id="product-name"') < detail.indexOf('id="overview"'));
+  assert.match(detail, /<th>포트 수<\/th><th>채널·신호<\/th><th>규격·조건·출처<\/th>/);
+  assert.match(detailApp, /function revealHash/);
+  assert.match(detailApp, /location\.hash/);
+  assert.match(detailStyles, /grid-template-columns: 360px minmax\(0,1fr\)/);
+  assert.match(detailStyles, /grid-template-columns: repeat\(auto-fill, minmax\(180px, 1fr\)\)/);
 });
 
 test('public pages include share metadata and an explicit favicon', async () => {

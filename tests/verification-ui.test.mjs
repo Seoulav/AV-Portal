@@ -26,17 +26,13 @@ test('verification summary is computed from product data and omits empty states'
   assert.equal(summary.entries.some(item => item.status === 'CONFLICTED'), false);
 });
 
-test('verification tab hides source listings and retains the sources panel id', async () => {
+test('verification records move below cards and keep the sources hash', async () => {
   const html = await file('prototype/brc-am7/index.html');
   const app = await file('prototype/brc-am7/app.js');
-  assert.match(html, /aria-controls="sources"[^>]*>검증 상태<\/button>/);
-  assert.match(html, /id="sources"[^>]+role="tabpanel"/);
-  assert.match(html, /id="verification-summary-groups"/);
-  assert.match(html, /검토 중인 항목/);
+  assert.match(html, /<details id="sources"/);
+  assert.match(html, /id="source-list"/);
   assert.match(html, /검증 상태 설명/);
-  for (const hiddenText of ['Manufacturer Official', 'Supplemental / Domestic', '특징별 근거 보기']) assert.doesNotMatch(html, new RegExp(`>\\s*${hiddenText}\\s*<`, 'i'));
-  assert.doesNotMatch(html, /id="source-list"|id="verification-documents"|id="feature-evidence-list"/);
-  assert.doesNotMatch(app, /href = '#source-'|sourceReference\(|data\.sources\)|['"] SOURCES['"]/);
+  assert.match(app, /for \(const source of data\.sources\)/);
   assert.match(app, /legacySourceHash/);
 });
 
@@ -45,8 +41,8 @@ test('public footers do not expose build strings and detail asset versions are r
   const detail = await file('prototype/brc-am7/index.html');
   assert.doesNotMatch(home, /data-system-version|SYSTEM v0\.1\.0|build local/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
-  assert.match(detail, /styles\.css\?v=w007-verification-1/);
-  assert.match(detail, /app\.js\?v=w007-verification-1/);
+  assert.match(detail, /styles\.css\?v=w20260929-002/);
+  assert.match(detail, /app\.js\?v=w20260929-002/);
 });
 
 test('the five public Product Detail JSON Git blobs remain byte-identical', () => {
