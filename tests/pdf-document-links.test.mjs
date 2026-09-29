@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible } from '../prototype/brc-am7/pdf-documents.mjs';
+import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from '../prototype/brc-am7/pdf-documents.mjs';
 
 const source = 'https://example.com/manual.pdf';
 const manifest = {
@@ -29,4 +29,24 @@ test('user-uploaded PDFs become same-viewer documents for their exact slug', () 
   assert.deepEqual(uploadedDocumentsFor('other', manifest), []);
   assert.equal(documentCardVisible([], uploadedDocumentsFor('camera', manifest)), true);
   assert.equal(documentCardVisible([], []), false);
+});
+
+test('header actions name each document while detail card actions retain their existing text', () => {
+  const local = { kind: 'local', file: '../docs/manual.pdf' };
+  const external = { kind: 'external', url: 'https://example.com/specification' };
+  assert.deepEqual(documentActionLabels({ label: '매뉴얼' }, local, true), {
+    primary: '매뉴얼 보기', download: '↓', downloadAria: '매뉴얼 내려받기'
+  });
+  assert.deepEqual(documentActionLabels({ label: '참고자료' }, local, true), {
+    primary: '참고자료 보기', download: '↓', downloadAria: '참고자료 내려받기'
+  });
+  assert.deepEqual(documentActionLabels({ label: '사양서' }, external, true), {
+    primary: '사양서 ↗'
+  });
+  assert.deepEqual(documentActionLabels({ label: '매뉴얼' }, local, false), {
+    primary: '보기', download: '↓ 내려받기', downloadAria: '매뉴얼 내려받기'
+  });
+  assert.deepEqual(documentActionLabels({ label: '사양서' }, external, false), {
+    primary: '제조사에서 열기 ↗'
+  });
 });

@@ -24,3 +24,15 @@ export function uploadedDocumentsFor(slug, manifest) {
 export function documentCardVisible(existingDocuments, uploadedDocuments) {
   return existingDocuments.length > 0 || uploadedDocuments.length > 0;
 }
+
+export function documentActionLabels(item, action, header = false) {
+  const label = String(item.label || item.type || '문서').trim();
+  if (action.kind === 'external') {
+    return { primary: header ? `${label} ↗` : '제조사에서 열기 ↗' };
+  }
+  return {
+    primary: header ? `${label} 보기` : '보기',
+    download: header ? '↓' : '↓ 내려받기',
+    downloadAria: `${label} 내려받기`
+  };
+}
