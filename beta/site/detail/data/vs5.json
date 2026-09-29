@@ -29,6 +29,20 @@
       "originalSize": "860×550",
       "resolution": "743×550",
       "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
+    },
+    {
+      "role": "Rear",
+      "file": "lumantek-vs5-rear.webp",
+      "alt": "Lumantek ez-Pro VS5 후면 단자부 이미지(전원, USB Host, 1Gbps Ethernet, UVC USB3.0, Multiview HDMI, Program HDMI/SDI 출력, SDI/HDMI 입력 5계통, Audio In/Out D-sub9, 라벨 표기 포함)",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Lumantek",
+      "model": "VS5",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1200×512",
+      "resolution": "1162×422",
+      "publicationStatus": "사용자 게시 승인 · 제조사 재사용 권리 미확인"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+      "status": "FOUND",
+      "sourceUrl": "https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png"
     },
     {
       "role": "Perspective",
