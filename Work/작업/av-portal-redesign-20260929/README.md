@@ -13,7 +13,7 @@
 | 5 | [W-20260929-005](../W-20260929-005.md) | 데이터 이름 정리 | DRAFT |
 | 6 | [W-20260929-006](../W-20260929-006.md) | RTCOM 읽기 연동 | DRAFT |
 
-기준 main: a63c451586bfaeb682bfa8dd9dde22604d7cb74d. 문서 기획 PR은 미생성. 아직 구현·main 병합·배포하지 않았다.
+기준 main: a63c451586bfaeb682bfa8dd9dde22604d7cb74d. 문서 기획 PR: [#111](https://github.com/Seoulav/AV-Portal/pull/111) · DRAFT (2026-09-29 확인). 아직 구현·main 병합·배포하지 않았다.
 
 ## 참조 화면
 
@@ -25,4 +25,4 @@
 
 ## 검증 기록
 
-[SOURCE_SHA256.json](SOURCE_SHA256.json)은 첨부 원본 16개 entry의 보존 검사용 해시 목록이다. ZIP entry와의 직접 대조·로컬 문서 링크·변경 범위·diff 공백 검사 결과는 문서 PR 본문에 기록한다. npm test/브라우저/성능 검사는 구현하지 않은 이번 작업 범위 밖이다.
+[SOURCE_SHA256.json](SOURCE_SHA256.json)은 첨부 원본 16개 entry의 보존 검사용 해시 목록이다. 검증 완료: ZIP entry 16/16 SHA 일치, staged Git blob 16/16 SHA 일치, 로컬 Markdown 링크 61개 오류 없음, 변경 범위 Work/만, git diff --check 통과. npm test/브라우저/성능 검사는 구현하지 않은 이번 작업 범위 밖이다.
