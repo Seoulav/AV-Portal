@@ -456,23 +456,23 @@
       "bytes": 6821
     },
     "raw/products/ct101-u-cr101-u.json": {
-      "sha256": "019d387527ae0c166e21979f74c42a76f14ed8d5119892924f1228ad37ae5da6",
+      "sha256": "99dce404d92dfdbc3b6f7ddc5c3f0e396db67baa90ccf9c69bfd05a58d4d5599",
       "bytes": 12901
     },
     "raw/products/ct103-u-h-cr103-u.json": {
-      "sha256": "254698ddf8767424537ddacffc5ee721ebcbcf7da6e9759da0b169f702a4041f",
+      "sha256": "1d93a407342959db478d89464265738e183c69302feffa4f3e778bd75f78758e",
       "bytes": 13000
     },
     "raw/products/ct104-u-cr104-u.json": {
-      "sha256": "61abd57bc8a7fb90711964e2f2ee6edab592dfb996f806455d16e373547253c0",
+      "sha256": "9c4f44e562113cd8ab49e051fa397f1d29a9469921b94c176fe7d39095adf5da",
       "bytes": 11179
     },
     "raw/products/ft101-u-fr101-u.json": {
-      "sha256": "32ce95a3e3850d35cc393921672dff1e6622b504edee55dc54ca0c4f51489f8b",
+      "sha256": "bfcf88056603b8b951a049a28148a32857c6bd7ec281f37acbd5dd61cc2ac389",
       "bytes": 13837
     },
     "raw/products/ft103-u-h-fr103-u.json": {
-      "sha256": "2e70f1c23202b44f16f6c39a4f2641239fbf763f5f17ae8df7187af7a3977e96",
+      "sha256": "782f6293cec6cf0d8f2e2264a47e6723ec9ce2d38c016f7453aa76700657107f",
       "bytes": 17365
     },
     "raw/products/hd-104u.json": {
@@ -544,28 +544,28 @@
       "bytes": 17453
     },
     "raw/products/spx.json": {
-      "sha256": "3ad020e776994fb7377abdfde5dbcf50fd1e7466b9501f1555c0b99efd6244c0",
-      "bytes": 13036
+      "sha256": "cc4812c29b3b5a62f1d592bb5085d28d371b1003090b62cc2e2f06f485a9f36f",
+      "bytes": 13000
     },
     "raw/products/umc.json": {
       "sha256": "ad453fee6aebcf24dd3ac5c0db4351ea7187b1c7a556c47ce879f1eeffc55352",
       "bytes": 6301
     },
     "raw/products/vdm.json": {
-      "sha256": "c8042dc2725fcb6e849eb1b5984d9b93e667e7eddbc60b1ebb651a00d83050f5",
-      "bytes": 14193
+      "sha256": "179bf5e26bc1aaee00f6c7651adc757bba1a762cf49c6278f063c96244fef639",
+      "bytes": 14145
     },
     "raw/products/xdm-ct103-cr103.json": {
-      "sha256": "0a53f157fb49d2dbc08df96532dd9c072f61706d7d55a1612f15252b6dc30338",
-      "bytes": 17858
+      "sha256": "0616c0dee698a504a7876f4a1c4c32a46f03f5c312e16d35c13350ccf8add2d8",
+      "bytes": 17987
     },
     "raw/products/xdm-ctr100-pse.json": {
-      "sha256": "2ae3ecda695c8df202e4408fd08854e384f49dde8a4e4128aeb307c9d046fc1d",
-      "bytes": 15951
+      "sha256": "152ca572ef20fa55837cfe4db20b0cfed57cfd6689d728f6e4286dc9fed2062f",
+      "bytes": 15386
     },
     "raw/products/xdm-ctr100.json": {
-      "sha256": "10bbdd5fa1cb22682a5f2089104b2a27675eafdd7a03f9a86730d9763e17574f",
-      "bytes": 15496
+      "sha256": "43500bd177b3c11b931d2fc56cf9ea2ddd156de1a7fc6d3eb20bea99c284a6bd",
+      "bytes": 15145
     },
     "raw/products/xdm-ft101-fr101.json": {
       "sha256": "b9611a53be86e8c8667d5b517f54a563b0fae127f5de04df0905d0aa0569a6f1",
@@ -576,8 +576,8 @@
       "bytes": 10364
     },
     "raw/products/xdm.json": {
-      "sha256": "f76e43dfd2f34afaac1c851cf6736210b3172f5263b042750009b61014418da6",
-      "bytes": 15968
+      "sha256": "5a3fb6b74ddb167f2ab9b2e2242fb053f2a2324a230c54e4e8b96cd0db3e803f",
+      "bytes": 15951
     }
   }
 }
