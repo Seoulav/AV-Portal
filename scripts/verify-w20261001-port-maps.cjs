@@ -6,7 +6,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '../beta/site');
 const out = path.resolve(__dirname, '../Work/기록/W-20261001-001-port-map-screens');
-const baseline = '84a68357e28d582f6224b0825c564a500ec078df';
+const baseline = '1264feb';
 const pilots = ['novastar-h5', 'ulxd4d', 'dci-4-600da', 'eb-pq2220b', 'aquilon-rs1'];
 const representatives = ['brc-am7', 'dm7', 'ua874xa'];
 const mime = {'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.webp':'image/webp','.svg':'image/svg+xml','.pdf':'application/pdf','.woff2':'font/woff2'};
