@@ -45,3 +45,15 @@ test('public detail loads RTCOM raw data through the display adapter', async () 
   assert.equal(adapted.enhancements.signalFlow, null);
   assert.deepEqual(adapted.enhancements.settings, []);
 });
+
+test('detail template exposes distributor links in the header and manufacturer area', async () => {
+  const [html, app] = await Promise.all([
+    file('prototype/brc-am7/index.html'),
+    file('prototype/brc-am7/app.js')
+  ]);
+  assert.match(html, /id="header-distributor"/);
+  assert.match(html, /id="footer-distributor-link"/);
+  assert.match(app, /국내 총판 테크데이타 ↗/);
+  assert.match(app, /국내 총판 · 테크데이타피에스 ↗/);
+  assert.match(app, /distributorLinkFor/);
+});

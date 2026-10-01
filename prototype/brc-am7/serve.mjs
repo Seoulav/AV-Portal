@@ -11,6 +11,7 @@ const routes = new Map([
   ['/pdf-documents.mjs', ['pdf-documents.mjs', 'text/javascript; charset=utf-8']],
   ['/beta/site/shared/pdf-viewer.mjs', ['../../beta/site/shared/pdf-viewer.mjs', 'text/javascript; charset=utf-8']],
   ['/beta/site/shared/rtcom-adapter.mjs', ['../../beta/site/shared/rtcom-adapter.mjs', 'text/javascript; charset=utf-8']],
+  ['/beta/distributor-links.mjs', ['../../beta/distributor-links.mjs', 'text/javascript; charset=utf-8']],
   ['/beta/site/shared/pdf-viewer.css', ['../../beta/site/shared/pdf-viewer.css', 'text/css; charset=utf-8']],
   ['/beta/site/docs/manifest.json', ['../../beta/site/docs/manifest.json', 'application/json; charset=utf-8']],
   ['/beta/site/vendor/pdfjs/pdf.min.mjs', ['../../beta/site/vendor/pdfjs/pdf.min.mjs', 'text/javascript; charset=utf-8']],

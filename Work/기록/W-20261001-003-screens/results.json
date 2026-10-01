@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "blu-50v2",
+    "width": 1280,
+    "links": [],
+    "overflow": 0,
+    "errors": [],
+    "file": "blu-50v2-1280.png"
+  },
+  {
+    "slug": "blu-50v2",
+    "width": 390,
+    "links": [],
+    "overflow": 0,
+    "errors": [],
+    "file": "blu-50v2-390.png"
+  },
+  {
+    "slug": "dci-4-600",
+    "width": 1280,
+    "links": [
+      {
+        "text": "국내 총판 테크데이타 ↗",
+        "href": "https://techdata-ps.com/m21_view.php?idx=75",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "text": "국내 총판 · 테크데이타피에스 ↗",
+        "href": "https://techdata-ps.com/m21_view.php?idx=75",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ],
+    "overflow": 0,
+    "errors": [],
+    "file": "dci-4-600-1280.png"
+  },
+  {
+    "slug": "dci-4-600",
+    "width": 390,
+    "links": [
+      {
+        "text": "국내 총판 테크데이타 ↗",
+        "href": "https://techdata-ps.com/m21_view.php?idx=75",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "text": "국내 총판 · 테크데이타피에스 ↗",
+        "href": "https://techdata-ps.com/m21_view.php?idx=75",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ],
+    "overflow": 0,
+    "errors": [],
+    "file": "dci-4-600-390.png"
+  }
+]

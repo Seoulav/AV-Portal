@@ -7,6 +7,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
   ['prototype/brc-am7/product-detail-model.mjs', 'beta/site/detail/product-detail-model.mjs', 'copy'],
   ['prototype/brc-am7/pdf-documents.mjs', 'beta/site/detail/pdf-documents.mjs', 'copy'],
+  ['beta/distributor-links.mjs', 'beta/site/shared/distributor-links.mjs', 'copy'],
   ['prototype/brc-am7/favicon.svg', 'beta/site/favicon.svg', 'copy']
 ];
 
@@ -48,6 +49,7 @@ export function transformDetailApp(source) {
   return output
     .replace("from '../../beta/site/shared/pdf-viewer.mjs'", "from '../shared/pdf-viewer.mjs'")
     .replace("from '../../beta/site/shared/rtcom-adapter.mjs'", "from '../shared/rtcom-adapter.mjs'")
+    .replace("from '../../beta/distributor-links.mjs'", "from '../shared/distributor-links.mjs'")
     .replace("`../../beta/site/rtcom/raw/products/${rtcomId}.json`", "`../rtcom/raw/products/${rtcomId}.json`")
     .replace("const manifestPath = '../../beta/site/docs/manifest.json';", "const manifestPath = '../docs/manifest.json';")
     .replace('Product Detail 시안', 'Product Detail')

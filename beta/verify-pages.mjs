@@ -13,6 +13,7 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
 import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
 import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
+import { distributorLinks, isHarmanManufacturer } from './distributor-links.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
@@ -22,7 +23,7 @@ assert.deepEqual((await readdir(new URL('samples/h5-layers/', site))).sort(), ['
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
 assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
-assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'rtcom-adapter.mjs', 'search-index.mjs']);
+assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['distributor-links.mjs', 'pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'rtcom-adapter.mjs', 'search-index.mjs']);
 const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
 assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
 assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);
@@ -250,6 +251,19 @@ const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitl
 const detailAllowedKeys = new Set([...detailRequiredKeys, ...detailOptionalKeys]);
 
 const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.slug, item.brand]));
+{
+  const seenDistributorSlugs = new Set();
+  for (const distributor of distributorLinks) {
+    assert.ok(!seenDistributorSlugs.has(distributor.slug), `${distributor.slug}: 국내 총판 대응표 중복`);
+    seenDistributorSlugs.add(distributor.slug);
+    const manufacturer = brandBySlug.get(distributor.slug);
+    assert.ok(manufacturer, `${distributor.slug}: 국내 총판 대응표의 제품이 없음`);
+    assert.ok(isHarmanManufacturer(manufacturer), `${distributor.slug}: Harman 계열 제조사가 아님`);
+    assert.match(distributor.url, /^https:\/\/techdata-ps\.com\/m21_view\.php\?idx=\d+$/, `${distributor.slug}: 테크데이타 주소 형식`);
+    const product = JSON.parse(await readFile(new URL(`detail/data/${distributor.slug}.json`, site), 'utf8'));
+    assert.equal(distributor.model, product.model, `${distributor.slug}: 국내 총판 대응표 모델 불일치`);
+  }
+}
 function verifyOfficialUrls(value, slug, hosts) {
   if (Array.isArray(value)) return value.forEach(item => verifyOfficialUrls(item, slug, hosts));
   if (!value || typeof value !== 'object') return;
