@@ -1,6 +1,6 @@
 # W-20261001-001 Signal Flow → Work
 
-상태 REVIEW / Draft PR 작성 단계, main 병합·배포 보류.
+상태 REVIEW / [PR #140](https://github.com/Seoulav/AV-Portal/pull/140) OPEN / DRAFT, main 병합·배포 보류.
 
 PR139는 사용자 승인으로 병합(main3c6fc04) 및 Pages 성공. 그 뒤 별도 codex/W-20261001-001-signal-flow 브랜치에서 23유형 공통 흐름 구조, 근거 참조 검증, 가로 스크롤 그림, Port Map 제목 회귀를 구현했다.
 
