@@ -385,5 +385,91 @@
     "footerNote": "Crown Crown DCi 2|600 · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "dci-2-600-rear.webp",
+      "width": 2000,
+      "height": 590
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 1·2",
+        "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+        "x1": 1737,
+        "x2": 1835,
+        "y": 145,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "스피커 출력 1·2",
+        "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+        "x1": 1572,
+        "x2": 1792,
+        "y": 438,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "AUX",
+        "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+        "x1": 471,
+        "x2": 547,
+        "y": 436,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "전체 설정 DIP",
+        "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+        "x1": 688,
+        "x2": 720,
+        "y": 148,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "채널 1·2 DIP",
+        "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+        "x1": 1185,
+        "x2": 1218,
+        "y": 150,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "입력 감쇠 1·2",
+        "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+        "x1": 1230,
+        "x2": 1321,
+        "y": 216,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "전원 퓨즈",
+        "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+        "x1": 245,
+        "x2": 306,
+        "y": 284,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "AC 전원 입력",
+        "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+        "x1": 214,
+        "x2": 337,
+        "y": 414,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 60,
+      "bottom": 60
+    }
   }
 }

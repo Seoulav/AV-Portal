@@ -385,5 +385,127 @@
     "footerNote": "Crown Crown DCi 4|300 · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "dci-4-300-rear.webp",
+      "width": 2000,
+      "height": 616
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 1·2",
+        "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+        "x1": 1778,
+        "x2": 1880,
+        "y": 157,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 3·4",
+        "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+        "x1": 1630,
+        "x2": 1738,
+        "y": 157,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "스피커 출력 1·2",
+        "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+        "x1": 1600,
+        "x2": 1843,
+        "y": 474,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "스피커 출력 3·4",
+        "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+        "x1": 1335,
+        "x2": 1580,
+        "y": 474,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "AUX",
+        "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+        "x1": 425,
+        "x2": 500,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "전체 설정 DIP",
+        "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+        "x1": 652,
+        "x2": 688,
+        "y": 171,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "채널 1·2 DIP",
+        "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+        "x1": 1180,
+        "x2": 1220,
+        "y": 166,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "입력 감쇠 1·2",
+        "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+        "x1": 1230,
+        "x2": 1330,
+        "y": 224,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "채널 3·4 DIP",
+        "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+        "x1": 1024,
+        "x2": 1063,
+        "y": 166,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "입력 감쇠 3·4",
+        "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+        "x1": 1073,
+        "x2": 1170,
+        "y": 224,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "전원 퓨즈",
+        "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+        "x1": 178,
+        "x2": 239,
+        "y": 304,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "AC 전원 입력",
+        "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+        "x1": 144,
+        "x2": 277,
+        "y": 446,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 60,
+      "bottom": 60
+    }
   }
 }

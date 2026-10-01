@@ -432,5 +432,100 @@
     "footerNote": "Crown Crown CDi 4|1200BL · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "cdi-4-1200bl-rear.webp",
+      "width": 2000,
+      "height": 692
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 1·2",
+        "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+        "x1": 1716,
+        "x2": 1810,
+        "y": 477,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 3·4",
+        "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+        "x1": 1578,
+        "x2": 1678,
+        "y": 477,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "스피커 출력 1·2",
+        "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+        "x1": 1220,
+        "x2": 1445,
+        "y": 484,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "스피커 출력 3·4",
+        "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+        "x1": 940,
+        "x2": 1164,
+        "y": 484,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "BLU link IN",
+        "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+        "x1": 1253,
+        "x2": 1321,
+        "y": 202,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "BLU link OUT",
+        "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+        "x1": 1341,
+        "x2": 1406,
+        "y": 202,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+        "x1": 1685,
+        "x2": 1752,
+        "y": 203,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "GPIO/AUX",
+        "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+        "x1": 1478,
+        "x2": 1608,
+        "y": 228,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "AC 전원 입력",
+        "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+        "x1": 242,
+        "x2": 378,
+        "y": 460,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 120,
+      "bottom": 100
+    }
   }
 }
