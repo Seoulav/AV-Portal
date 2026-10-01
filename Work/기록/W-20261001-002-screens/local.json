@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-01T12:22:04.181Z",
+  "results": [
+    {
+      "width": 1280,
+      "height": 1648,
+      "overflow": 0,
+      "threeModes": true,
+      "keyboard": true,
+      "pdf": true,
+      "reload": true,
+      "url": "http://127.0.0.1:56791/samples/h5-layers/"
+    },
+    {
+      "width": 390,
+      "height": 1704,
+      "overflow": 0,
+      "threeModes": true,
+      "keyboard": true,
+      "pdf": true,
+      "reload": true,
+      "url": "http://127.0.0.1:56791/samples/h5-layers/"
+    }
+  ],
+  "errors": []
+}
