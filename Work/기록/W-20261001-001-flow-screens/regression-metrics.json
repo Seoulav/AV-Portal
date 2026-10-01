@@ -1,0 +1,267 @@
+{
+  "sha": "3c6fc047888cc2f7528e078a9b7b99633a5e3be5",
+  "products": [],
+  "fixtures": [
+    {
+      "name": "rtcom-no-auto-adoption",
+      "width": 1280
+    },
+    {
+      "name": "distribution",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "matrix",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "switcher",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "extender",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "Library search/category/brand/back",
+      "width": 1280
+    },
+    {
+      "name": "rtcom-no-auto-adoption",
+      "width": 390
+    },
+    {
+      "name": "distribution",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "matrix",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "switcher",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "extender",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "Library search/category/brand/back",
+      "width": 390
+    }
+  ],
+  "hashes": [
+    {
+      "hash": "overview",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "overview",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "gallery",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "gallery",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "io",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "io",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "specifications",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "specifications",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "features",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "features",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "documents",
+      "width": 1280,
+      "reload": false,
+      "top": 445.390625
+    },
+    {
+      "hash": "documents",
+      "width": 1280,
+      "reload": true,
+      "top": 445.390625
+    },
+    {
+      "hash": "sources",
+      "width": 1280,
+      "reload": false,
+      "top": 105.3125
+    },
+    {
+      "hash": "sources",
+      "width": 1280,
+      "reload": true,
+      "top": 105.3125
+    },
+    {
+      "hash": "source-TD",
+      "width": 1280,
+      "reload": false,
+      "top": 105.3125
+    },
+    {
+      "hash": "source-TD",
+      "width": 1280,
+      "reload": true,
+      "top": 105.3125
+    },
+    {
+      "hash": "overview",
+      "width": 390,
+      "reload": false,
+      "top": 104.9375
+    },
+    {
+      "hash": "overview",
+      "width": 390,
+      "reload": true,
+      "top": 104.9375
+    },
+    {
+      "hash": "gallery",
+      "width": 390,
+      "reload": false,
+      "top": 105.453125
+    },
+    {
+      "hash": "gallery",
+      "width": 390,
+      "reload": true,
+      "top": 105.453125
+    },
+    {
+      "hash": "io",
+      "width": 390,
+      "reload": false,
+      "top": 105.140625
+    },
+    {
+      "hash": "io",
+      "width": 390,
+      "reload": true,
+      "top": 105.140625
+    },
+    {
+      "hash": "specifications",
+      "width": 390,
+      "reload": false,
+      "top": 104.875
+    },
+    {
+      "hash": "specifications",
+      "width": 390,
+      "reload": true,
+      "top": 104.875
+    },
+    {
+      "hash": "features",
+      "width": 390,
+      "reload": false,
+      "top": 104.859375
+    },
+    {
+      "hash": "features",
+      "width": 390,
+      "reload": true,
+      "top": 104.859375
+    },
+    {
+      "hash": "documents",
+      "width": 390,
+      "reload": false,
+      "top": 381.6875
+    },
+    {
+      "hash": "documents",
+      "width": 390,
+      "reload": true,
+      "top": 381.6875
+    },
+    {
+      "hash": "sources",
+      "width": 390,
+      "reload": false,
+      "top": 104.65625
+    },
+    {
+      "hash": "sources",
+      "width": 390,
+      "reload": true,
+      "top": 104.65625
+    },
+    {
+      "hash": "source-TD",
+      "width": 390,
+      "reload": false,
+      "top": 104.65625
+    },
+    {
+      "hash": "source-TD",
+      "width": 390,
+      "reload": true,
+      "top": 104.65625
+    }
+  ],
+  "errors": []
+}

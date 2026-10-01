@@ -6,11 +6,12 @@ const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 const phase='regression';
 const root = resolve(__dirname, '../beta/site');
-const out = resolve(__dirname, '../Work/기록/W-20261001-001-screens');
+const out = resolve(__dirname, '../Work/기록/W-20261001-001-flow-screens');
 fs.mkdirSync(out, { recursive:true });
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.css':'text/css','.pdf':'application/pdf','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const server=createServer((req,res)=>{try {const p=decodeURIComponent(new URL(req.url,'http://localhost').pathname);const f=resolve(root,'.'+(p.endsWith('/')?p+'index.html':p));if(!f.startsWith(root+sep))throw Error('path');const bytes=fs.readFileSync(f);res.writeHead(200,{'Content-Type':mime[extname(f)]||'application/octet-stream','Cache-Control':'no-store'});res.end(bytes);} catch {res.writeHead(404);res.end();}});
 (async()=>{
+ const {fixtureProduct}=await import('../tests/fixtures/signal-flow.mjs');
  await new Promise(done=>server.listen(0,'127.0.0.1',done));
  const base=`http://127.0.0.1:${server.address().port}`;
  const browser=await chromium.launch({executablePath:process.env.AV_PORTAL_BROWSER_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
@@ -51,8 +52,8 @@ const server=createServer((req,res)=>{try {const p=decodeURIComponent(new URL(re
   await page.waitForURL('**#overview');
   assert.equal(new URL(page.url()).hash,'#overview','hidden related section keeps previous fallback');
   const raw=JSON.parse(fs.readFileSync(join(root,'detail/data/dm7.json')));
-  for(const type of ['distribution','matrix','switcher','extender','amplifier-channel','projector-display-input']){
-   const fixture={...raw,images:raw.images.map(i=>({...i,originalSize:i.resolution})),lead:'<img src=x onerror=alert(1)> **강조** 문장. **두 번째**',subtitle:'선택 자료 테스트',keyFacts:[{label:'입력',value:4,unit:'개'},{label:'출력',value:2,unit:'개'}],portMap:{image:'Rear',items:[{n:1,label:'테스트 단자',desc:'좌표 계산 시험용 (실제품 근거 아님)',x1:20,x2:60}]},signalFlow:{type,inputs:['입력 A','입력 B'],outputs:['출력 A','출력 B'],notes:['테스트 전용']},settings:[{kind:'modes',title:'모드 테스트',items:[{name:'모드1',summary:'설명',detail:'상세 설명'}]},{kind:'edid',title:'표 테스트',columns:['모드','값'],rows:[['1','자동']]}]};
+  for(const type of ['distribution','matrix','switcher','extender','amplifier-channel']){
+   const fixture={...raw,images:raw.images.map(i=>({...i,originalSize:i.resolution})),lead:'<img src=x onerror=alert(1)> **강조** 문장. **두 번째**',subtitle:'선택 자료 테스트',keyFacts:[{label:'입력',value:4,unit:'개'},{label:'출력',value:2,unit:'개'}],portMap:{image:'Rear',items:[{n:1,label:'테스트 단자',desc:'좌표 계산 시험용 (실제품 근거 아님)',x1:20,x2:60}]},signalFlow:fixtureProduct(type).signalFlow,settings:[{kind:'modes',title:'모드 테스트',items:[{name:'모드1',summary:'설명',detail:'상세 설명'}]},{kind:'edid',title:'표 테스트',columns:['모드','값'],rows:[['1','자동']]}]};
    await page.route('**/detail/data/dm7.json',route=>route.fulfill({json:fixture}));await ready('dm7');
    assert.equal(await page.locator('#overview-summary img').count(),0);assert.equal(await page.locator('#overview-summary strong').count(),1);
    assert.equal(await page.locator('#key-specs .fact-unit').count(),2);assert.equal(await page.locator('.setting-card').count(),2);assert.equal(await page.locator('.signal-flow').count(),1);
@@ -60,7 +61,7 @@ const server=createServer((req,res)=>{try {const p=decodeURIComponent(new URL(re
    await page.getByRole('button',{name:'Rear',exact:true}).click();await page.locator('#featured-image').evaluate(i=>i.decode());await page.waitForTimeout(60);
    assert.equal(await page.locator('.port-map-marker').count(),1);
    const marker=await page.locator('.port-map-marker').evaluate(x=>parseFloat(x.style.left));const natural=await page.locator('#featured-image').evaluate(x=>x.naturalWidth);assert.ok(Math.abs(marker-40/natural*100)<0.001);
-   await page.getByRole('button',{name:'Front',exact:true}).click();assert.equal(await page.locator('.port-map-marker').count(),0);
+   await page.getByRole('button',{name:'Front',exact:true}).click();await page.locator('#featured-image').evaluate(i=>i.decode());await page.waitForTimeout(80);assert.equal(await page.locator('.port-map-marker').count(),0);assert.match(await page.locator('#gallery-title').textContent(),/제품 사진/);
    await page.locator('#setting-6 summary').click();assert.equal(await page.locator('#setting-6 details').evaluate(x=>x.open),true);
    assert.equal(await page.locator('#sources #connector-table-body tr').count(),raw.io.length);
    await page.waitForTimeout(150);assert.equal((await geometry()).overflow,0);assert.equal((await geometry()).overlap,false);

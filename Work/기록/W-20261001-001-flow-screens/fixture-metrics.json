@@ -1,0 +1,390 @@
+{
+  "products": [],
+  "fixtures": [
+    {
+      "name": "matrix",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "매트릭스 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "matrix",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "매트릭스 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "switcher",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "스위처 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "switcher",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "스위처 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "distribution",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "분배기 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "distribution",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "분배기 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "extender",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "익스텐더 TX/RX · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "extender",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "익스텐더 TX/RX · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "converter",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "컨버터 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "converter",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "컨버터 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "video-processor",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "영상 프로세서·멀티뷰 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "video-processor",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "영상 프로세서·멀티뷰 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "processor-card",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "프레임 장착 카드 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "processor-card",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "프레임 장착 카드 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "recorder",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "레코더·캡처 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "recorder",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "레코더·캡처 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "camera",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "카메라 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "camera",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "카메라 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "camera-controller",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "카메라 컨트롤러 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "camera-controller",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "카메라 컨트롤러 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "채널 앰프 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "채널 앰프 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "audio-dsp",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "오디오 DSP · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "audio-dsp",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "오디오 DSP · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "mixer",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "믹서 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "mixer",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "믹서 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "audio-interface",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "오디오 인터페이스 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "audio-interface",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "오디오 인터페이스 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "network-bridge",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "네트워크 오디오 브리지 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "network-bridge",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "네트워크 오디오 브리지 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "wireless-microphone",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "무선 마이크 시스템 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "wireless-microphone",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "무선 마이크 시스템 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "rf-distribution",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "안테나·RF 분배 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "rf-distribution",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "안테나·RF 분배 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "loudspeaker",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "스피커·서브우퍼 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "loudspeaker",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "스피커·서브우퍼 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "microphone",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "마이크 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "microphone",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "마이크 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "conferencing",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "화상회의 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "conferencing",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "화상회의 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "network-switch",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "네트워크 스위치 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "network-switch",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "네트워크 스위치 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "control",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "제어 프로세서·터치 패널 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "control",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "제어 프로세서·터치 패널 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "power",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "전원 장치·컨디셔너 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "power",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "전원 장치·컨디셔너 · 검증용 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "qms-88ux",
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 704,
+      "clientWidth": 704,
+      "label": "QMS-88UX 신호 흐름 그림 · 좌우 방향키로 이동"
+    },
+    {
+      "name": "qms-88ux",
+      "width": 390,
+      "overflow": 0,
+      "scrollWidth": 800,
+      "clientWidth": 332,
+      "label": "QMS-88UX 신호 흐름 그림 · 좌우 방향키로 이동"
+    }
+  ],
+  "errors": []
+}

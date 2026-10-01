@@ -1,6 +1,6 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001';
-import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001';
+import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-flow';
+import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001-flow';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-flow';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -199,10 +199,12 @@ if (!productKey) {
     $('#image-role').textContent = image.role ?? '';
     $('#image-caption').textContent = image.note || image.alt || '';
     for (const [position, button] of [...$('#thumbnails').children].entries()) button.setAttribute('aria-pressed', String(position === index));
+    updatePortMap();
   }
   function updatePortMap() {
     const map = enhancements.portMap;
     const layer = $('#port-map-layer');
+    $('#gallery-title').lastChild.textContent = '제품 사진';
     layer.replaceChildren();
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
@@ -223,10 +225,10 @@ if (!productKey) {
     }
     $('#port-map-list').hidden = false;
   }
-  if (enhancements.portMap) $('#gallery-title').lastChild.textContent = 'Port Map';
   featured.addEventListener('load', updatePortMap);
   new ResizeObserver(updatePortMap).observe(featured);
   featured.addEventListener('error', () => {
+    $('#gallery-title').lastChild.textContent = '제품 사진';
     $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;
     featured.hidden = true;
     $('#image-missing').hidden = false;

@@ -1,0 +1,5748 @@
+{
+  "basis": "3c6fc047888cc2f7528e078a9b7b99633a5e3be5",
+  "total": 240,
+  "nonDisplay": 202,
+  "display": 38,
+  "types": {
+    "no-flow-candidate": 3,
+    "loudspeaker": 17,
+    "video-processor": 10,
+    "conferencing": 12,
+    "audio-interface": 7,
+    "audio-dsp": 4,
+    "processor-card": 14,
+    "network-bridge": 2,
+    "camera": 5,
+    "amplifier-channel": 44,
+    "camera-controller": 4,
+    "microphone": 10,
+    "mixer": 2,
+    "control": 9,
+    "switcher": 10,
+    "converter": 4,
+    "network-switch": 9,
+    "power": 5,
+    "extender": 2,
+    "recorder": 5,
+    "wireless-microphone": 19,
+    "rf-distribution": 4,
+    "matrix": 1
+  },
+  "feasibility": {
+    "자료 부족": 3,
+    "일부": 131,
+    "가능": 68
+  },
+  "withPDF": 151,
+  "noFlowCandidates": [
+    "a900w-r-gm",
+    "rally-mic-pod-extension-cable",
+    "strong-usb-cable"
+  ],
+  "rows": [
+    {
+      "slug": "a900w-r-gm",
+      "manufacturer": "Shure",
+      "model": "A900W-R-GM",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Accessory"
+      ],
+      "type": "no-flow-candidate",
+      "reason": "장착 액세서리 · 신호 처리 없음 후보, 제외 승인 대기",
+      "pdfs": [],
+      "feasibility": "자료 부족",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 7,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "사용자 제외 결정 필요. 현재 기능·표시 유지"
+    },
+    {
+      "slug": "ac18-26",
+      "manufacturer": "JBL",
+      "model": "AC18/26",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [
+        "manuals/jbl-ae-series-u-bracket-handbook.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 17,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ac18-95",
+      "manufacturer": "JBL",
+      "model": "AC18/95",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [
+        "manuals/jbl-ae-series-u-bracket-handbook.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 16,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "aquilon-rs1",
+      "manufacturer": "Analog Way",
+      "model": "Aquilon RS1",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "docs/aquilon-rs1-technical-document-2623151a666a.pdf",
+        "docs/aquilon-rs1-user-manual-763541fa361a.pdf",
+        "docs/aquilon-rs1-specification-69f9f2e914b4.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 5,
+      "verifiedSpecs": 13,
+      "inputRows": 1,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[3]: 최대 믹싱 레이어 = 4×4K 또는 8×DL/2K",
+        "specifications[4]: 처리 스루풋 = 40"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "aquilon-rs2",
+      "manufacturer": "Analog Way",
+      "model": "Aquilon RS2",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Wall Controller"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Wall Controller",
+      "pdfs": [
+        "docs/aquilon-rs2-user-manual-622d1d11e5d4.pdf",
+        "docs/aquilon-rs2-specification-c59ccd453d51.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 16,
+      "inputRows": 4,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[6]: 처리 엔진 = Analog Way 5세대 스케일링 엔진, 초저지연(적정 구성 시 1프레임)",
+        "specifications[7]: 레이어 = 최대 8x 4K 또는 16x DL/2K 믹싱 레이어(분할 레이어는 2배)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "avhub",
+      "manufacturer": "Yealink",
+      "model": "AVHub",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Hub"
+      ],
+      "type": "conferencing",
+      "reason": "category: Hub",
+      "pdfs": [
+        "docs/avhub-specification-d83981829248.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 8,
+      "inputRows": 3,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[3]: 서드파티 DSP = 폭넓게 호환"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "avio-2ch-in",
+      "manufacturer": "Audinate",
+      "model": "AVIO 2CH IN",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/avio-2ch-in-specification-77cde01c8e3d.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 9,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[7]: 전원 = Class 1 802.3af PoE"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "avio-2ch-out",
+      "manufacturer": "Audinate",
+      "model": "AVIO 2CH OUT",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/avio-2ch-in-specification-77cde01c8e3d.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 9,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[7]: 전원 = Class 1 802.3af PoE"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "avio-bt",
+      "manufacturer": "Audinate",
+      "model": "AVIO BT",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/avio-bt-specification-7def584a28c4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 8,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[5]: 전원 = Class 1 802.3af PoE"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "avio-usb-c",
+      "manufacturer": "Audinate",
+      "model": "AVIO USB C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/avio-usb-c-specification-c6a4c9758eaa.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 10,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[5]: 전원 = Class 1 802.3af PoE 또는 USB"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "blu-100",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-100",
+      "categories": [
+        "오디오",
+        "Audio Processor"
+      ],
+      "type": "audio-dsp",
+      "reason": "category: Audio Processor",
+      "pdfs": [
+        "docs/blu-100-specification-ae9404e53afb.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 6,
+      "verifiedSpecs": 14,
+      "inputRows": 4,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[4]: 신호처리 성능 = 400"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "blu-101",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-101",
+      "categories": [
+        "오디오",
+        "Audio Processor"
+      ],
+      "type": "audio-dsp",
+      "reason": "category: Audio Processor",
+      "pdfs": [
+        "docs/blu-101-specification-161fa2f1efd8.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 6,
+      "verifiedSpecs": 18,
+      "inputRows": 4,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[3]: AEC 처리 채널 = 12",
+        "specifications[4]: AEC 처리 지연(오리지널 8k 알고리즘) = 49.69",
+        "specifications[5]: AEC 처리 지연(풀밴드 알고리즘) = 33.52",
+        "specifications[7]: 신호처리 성능 = 400"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "blu-160",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-160",
+      "categories": [
+        "오디오",
+        "Audio Processor"
+      ],
+      "type": "audio-dsp",
+      "reason": "category: Audio Processor",
+      "pdfs": [
+        "docs/blu-160-specification-9673f831a4f3.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 9,
+      "verifiedSpecs": 19,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[9]: 신호처리 성능 = 800"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "blu-50v2",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-50v2",
+      "categories": [
+        "오디오",
+        "Audio Processor"
+      ],
+      "type": "audio-dsp",
+      "reason": "category: Audio Processor",
+      "pdfs": [
+        "docs/blu-50v2-specification-3e1186118d55.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 8,
+      "verifiedSpecs": 24,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[6]: 신호처리 성능 = 400"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "blu-aec-in",
+      "manufacturer": "BSS Audio",
+      "model": "BLU AEC-IN",
+      "categories": [
+        "오디오",
+        "Audio Processor",
+        "Input/Output Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Input/Output Card",
+      "pdfs": [
+        "docs/blu-aec-in-specification-56865d8c7ce4.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[5]: AEC 처리 = 4채널 독립 알고리즘",
+        "specifications[6]: AEC 처리 지연(오리지널 8k 알고리즘) = 49.68",
+        "specifications[7]: AEC 처리 지연(풀밴드 알고리즘) = 33.52"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "blu-dan",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-DAN",
+      "categories": [
+        "오디오",
+        "Audio Processor",
+        "Network Bridge"
+      ],
+      "type": "network-bridge",
+      "reason": "category: Network Bridge",
+      "pdfs": [
+        "docs/blu-dan-specification-3f509b9e0584.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 4,
+      "verifiedSpecs": 7,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "blucard-in",
+      "manufacturer": "BSS Audio",
+      "model": "BLUCARD-IN",
+      "categories": [
+        "오디오",
+        "Audio Processor",
+        "Input/Output Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Input/Output Card",
+      "pdfs": [
+        "docs/blucard-in-specification-a3c71135eb2b.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "blucard-out",
+      "manufacturer": "BSS Audio",
+      "model": "BLUCARD-OUT",
+      "categories": [
+        "오디오",
+        "Audio Processor",
+        "Input/Output Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Input/Output Card",
+      "pdfs": [
+        "docs/blucard-out-specification-268a735d7bae.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 11,
+      "inputRows": 1,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "brc-am7",
+      "manufacturer": "SONY",
+      "model": "BRC-AM7",
+      "categories": [
+        "영상",
+        "PTZ/원격 카메라",
+        "Camera"
+      ],
+      "type": "camera",
+      "reason": "category: Camera",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 14,
+      "totalIO": 14,
+      "verifiedSpecs": 26,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[21]: PoE++ = IEEE 802.3bt Type 4 Class 8",
+        "specifications[23]: 최대 소비 전력, PoE++ = 71.3"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "cdi-2-1200",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|1200",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-2-1200bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|1200BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-2-300",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 4,
+      "verifiedSpecs": 30,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-2-300bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|300BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-300bl-specification-82837aa1e00f.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 6,
+      "verifiedSpecs": 29,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-2-600",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 24,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-2-600bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|600BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 4,
+      "verifiedSpecs": 27,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-1200",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|1200",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-1200bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|1200BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-300",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-300bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|300BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-600",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cdi-4-600bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|600BL",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cl01",
+      "manufacturer": "AVer",
+      "model": "CL01",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera Controller"
+      ],
+      "type": "camera-controller",
+      "reason": "category: Camera Controller",
+      "pdfs": [
+        "docs/cl01-specification-711b02e874f5.pdf",
+        "docs/cl01-user-manual-c8971d09a27c.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 11,
+      "inputRows": 5,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "cm20",
+      "manufacturer": "Yealink",
+      "model": "CM20",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 14,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "comtech-d-2125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 2125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 20,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[7]: DSP = 룸/스피커 튜닝용 내장 DSP"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "comtech-d-4125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 4125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 19,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[6]: DSP = 룸/스피커 튜닝용 내장 DSP"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "comtech-d-8125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 8125",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 19,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[7]: DSP = 룸/스피커 튜닝용 내장 DSP"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "confidea-flex",
+      "manufacturer": "Televic",
+      "model": "Confidea FLEX",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Conference System",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 30,
+      "inputRows": 3,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-23-1",
+      "manufacturer": "JBL",
+      "model": "Control 23-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[15]: 인클로저 재질 = 고내충격성 폴리스티렌(HIPS), 화이트(-WH) 버전은 UV 저항 도장 처리"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-25-1",
+      "manufacturer": "JBL",
+      "model": "Control 25-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[15]: 인클로저 재질 = 고내충격성 폴리스티렌(HIPS), 화이트(-WH) 버전은 UV 저항 도장 처리"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-28-1",
+      "manufacturer": "JBL",
+      "model": "Control 28-1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[15]: 인클로저 재질 = 10% 글래스 충전 고내충격성 폴리스티렌(HIPS), 화이트(-WH) 버전은 UV 저항 도장 처리"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-412ct",
+      "manufacturer": "JBL",
+      "model": "Control 412C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 15,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-414ct",
+      "manufacturer": "JBL",
+      "model": "Control 414C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-416ct",
+      "manufacturer": "JBL",
+      "model": "Control 416C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-418ct",
+      "manufacturer": "JBL",
+      "model": "Control 418C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-419cst",
+      "manufacturer": "JBL",
+      "model": "Control 419CS/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Subwoofer"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Subwoofer",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 15,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-424ct",
+      "manufacturer": "JBL",
+      "model": "Control 424C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-424lp",
+      "manufacturer": "JBL",
+      "model": "Control 424LP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-426ct",
+      "manufacturer": "JBL",
+      "model": "Control 426C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-426lp",
+      "manufacturer": "JBL",
+      "model": "Control 426LP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-440cst",
+      "manufacturer": "JBL",
+      "model": "Control 440CS/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Subwoofer"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Subwoofer",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 14,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "control-447ct",
+      "manufacturer": "JBL",
+      "model": "Control 447C/T",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 16,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "cpe40",
+      "manufacturer": "Yealink",
+      "model": "CPE40",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Speakerphone"
+      ],
+      "type": "conferencing",
+      "reason": "category: Speakerphone",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 7,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[2]: 오디오 처리 = 2세대 Yealink 오디오 알고리즘 기반 소음/에코/잔향 제거, 자동 음성 게인 조정, 풀 듀플렉스"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "cs10",
+      "manufacturer": "Yealink",
+      "model": "CS10",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Loudspeaker"
+      ],
+      "type": "loudspeaker",
+      "reason": "category: Loudspeaker",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 12,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[10]: 전원 방식 = PoE(Power over Ethernet) 지원 액티브 스피커"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "d-cerno-ae",
+      "manufacturer": "Televic",
+      "model": "D-Cerno AE",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Conference System",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "d-mic-40-sl",
+      "manufacturer": "Televic",
+      "model": "D-Mic 40 SL",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 20,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[7]: 변환 방식 = Back electret (condenser)"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "d-mic-50-sl",
+      "manufacturer": "Televic",
+      "model": "D-Mic 50 SL",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 20,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[7]: 변환 방식 = Back electret (condenser)"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "dci-2-300",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 24,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-2-300n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|300N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 5,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "dci-2-600",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 22,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-2-600n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|600N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 4,
+      "verifiedSpecs": 24,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "dci-4-300",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 22,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-4-300da",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300DA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 34,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-4-300n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 5,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "dci-4-600",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 1,
+      "verifiedSpecs": 20,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-4-600da",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600DA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 33,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "dci-4-600n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600N",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 4,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "dm3",
+      "manufacturer": "Yamaha",
+      "model": "DM3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Mixer"
+      ],
+      "type": "mixer",
+      "reason": "category: Mixer",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 15,
+      "inputRows": 6,
+      "outputRows": 6,
+      "processingEvidence": [
+        "specifications[1]: 믹스버스 = 6",
+        "specifications[2]: 매트릭스 = 2",
+        "specifications[6]: 다이내믹 레인지 = 110(DA Converter) / 106(INPUT-OMNI OUT, Gain Min)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "dm7",
+      "manufacturer": "Yamaha",
+      "model": "DM7",
+      "categories": [
+        "오디오",
+        "디지털 믹싱 콘솔"
+      ],
+      "type": "mixer",
+      "reason": "category: 디지털 믹싱 콘솔",
+      "pdfs": [
+        "docs/dm7-user-manual-0b1045e2664d.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 15,
+      "totalIO": 15,
+      "verifiedSpecs": 16,
+      "inputRows": 6,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[0]: 입력 믹싱 채널 = 120 mono",
+        "specifications[1]: Mix 버스 = 48",
+        "specifications[2]: Matrix 버스 = 12"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "duecanali-1604-dsp",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 1604 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/duecanali-1604-dsp-specification-de0def9506ab.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 47,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[27]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "duecanali-1604-dspd",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 1604 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/duecanali-1604-dspd-specification-158335e4ac01.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 66,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[44]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "duecanali-804-dsp",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 804 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/duecanali-1604-dsp-specification-de0def9506ab.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 47,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[27]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "duecanali-804-dspd",
+      "manufacturer": "Powersoft",
+      "model": "Duecanali 804 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/duecanali-1604-dspd-specification-158335e4ac01.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 66,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[44]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "eb-l260f",
+      "manufacturer": "Epson",
+      "model": "EB-L260F",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 25,
+      "inputRows": 8,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l530u",
+      "manufacturer": "Epson",
+      "model": "EB-L530U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [
+        "docs/eb-l530u-specification-585abcfaa217.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 12,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l690u",
+      "manufacturer": "Epson",
+      "model": "EB-L690U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l695se",
+      "manufacturer": "Epson",
+      "model": "EB-L695SE",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 26,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l790su",
+      "manufacturer": "Epson",
+      "model": "EB-L790SU",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l790u",
+      "manufacturer": "Epson",
+      "model": "EB-L790U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l795se",
+      "manufacturer": "Epson",
+      "model": "EB-L795SE",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l895e",
+      "manufacturer": "Epson",
+      "model": "EB-L895E",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 28,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-l895u",
+      "manufacturer": "Epson",
+      "model": "EB-L895U",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 27,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pq2213b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2213B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 10,
+      "totalIO": 11,
+      "verifiedSpecs": 24,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pq2216b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2216B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 10,
+      "totalIO": 11,
+      "verifiedSpecs": 24,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pq2220b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2220B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 10,
+      "totalIO": 11,
+      "verifiedSpecs": 25,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pu1008b",
+      "manufacturer": "Epson",
+      "model": "EB-PU1008B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 26,
+      "inputRows": 7,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pu2010w-b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2010W/B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 11,
+      "totalIO": 11,
+      "verifiedSpecs": 26,
+      "inputRows": 8,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pu2213b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2213B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 26,
+      "inputRows": 9,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "eb-pu2216b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2216B",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 26,
+      "inputRows": 9,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "ec-4bv",
+      "manufacturer": "BSS Audio",
+      "model": "EC-4BV",
+      "categories": [
+        "오디오",
+        "Control",
+        "Control Interface"
+      ],
+      "type": "control",
+      "reason": "category: Control Interface",
+      "pdfs": [
+        "docs/ec-4bv-specification-aa4113473c67.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[8]: 전원 방식 = PoE(Power over Ethernet)"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "eikos-4k",
+      "manufacturer": "Analog Way",
+      "model": "Eikos 4K",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/eikos-4k-user-manual-34563287cf50.pdf",
+        "docs/eikos-4k-specification-79a762641b70.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 10,
+      "totalIO": 10,
+      "verifiedSpecs": 15,
+      "inputRows": 8,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[3]: 동작 모드 = Hard/Soft Edge, Matrix(2 PGM), Mixer(1 PGM+1 AUX)",
+        "specifications[4]: 처리 엔진 = Analog Way 5세대 스케일링 엔진 기반, 초저지연 16ms@60Hz"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ez-hsv-plus",
+      "manufacturer": "Lumantek",
+      "model": "ez-HSV+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "type": "converter",
+      "reason": "category: Converter",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 12,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "ez-md-plus",
+      "manufacturer": "Lumantek",
+      "model": "ez-MD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "type": "converter",
+      "reason": "category: Converter",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 17,
+      "inputRows": 6,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "ez-shv-plus",
+      "manufacturer": "Lumantek",
+      "model": "ez-SHV+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "type": "converter",
+      "reason": "category: Converter",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 13,
+      "inputRows": 2,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "ez-umd-plus",
+      "manufacturer": "Lumantek",
+      "model": "ez-UMD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Converter"
+      ],
+      "type": "converter",
+      "reason": "category: Converter",
+      "pdfs": [
+        "docs/ez-umd-plus-user-manual-68bfa34b93b1.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 10,
+      "totalIO": 11,
+      "verifiedSpecs": 33,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[17]: 내부 처리 포맷 = YCbCr 4:2:2 10bit",
+        "specifications[18]: 컬러 스페이스 변환 = RGB to YCbCr, bypass YCbCr"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gs108pp",
+      "manufacturer": "NETGEAR",
+      "model": "GS108PP",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gs108pp-specification-5640a05d770b.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 14,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = GS108PP 8포트 고전력 PoE+ 기가비트 이더넷 비관리형 스위치(총 123W 전력 예산)",
+        "specifications[3]: PoE 포트/최대 출력 = PoE+ 8개",
+        "specifications[4]: PoE 예산 = 123 (기본), FlexPoE로 83 또는 60 선택 가능",
+        "specifications[9]: PoE 자동 밸런스 = 예"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gs116pp",
+      "manufacturer": "NETGEAR",
+      "model": "GS116PP",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gs108pp-specification-5640a05d770b.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 19,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = GS116PP 16포트 PoE+ 기가비트 이더넷 비관리형 스위치, 총 전력 예산 183W",
+        "specifications[3]: PoE+ 포트 수 = 16",
+        "specifications[4]: PoE 예산 = 183 (기본), FlexPoE로 155 또는 76 선택 가능"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gs728tppv3",
+      "manufacturer": "NETGEAR",
+      "model": "GS728TPPv3",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gs728tppv3-specification-6895a66a4280.pdf",
+        "docs/gs728tppv3-technical-document-eff0c42a981c.pdf",
+        "docs/gs728tppv3-user-manual-9c326717fe03.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 40,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = 선택적 원격/클라우드 관리 및 4개의 SFP 포트가 있는 24포트 기가비트 PoE+ 스마트 스위치",
+        "specifications[5]: PoE 포트/예산 = PoE+(802.3at) 24개, 포트당 최대 30W",
+        "specifications[6]: PoE 표준 = IEEE 802.3af / 802.3at",
+        "specifications[7]: 스위칭 용량 = 56",
+        "specifications[19]: 정적 라우팅 = IPv4 32 / IPv6 32",
+        "specifications[27]: LED = 포트별: 속도·링크·활동 또는 PoE / 장치: Power, Fan, PoE Max, LED Mode",
+        "specifications[29]: 전력 소비(PoE 최대 부하) = 427",
+        "specifications[30]: 전력 소비(PoE 미사용) = 26"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gsm4212p",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4212P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-user-manual-ecb29b6aed5c.pdf",
+        "docs/gsm4212p-specification-61e668dc8454.pdf",
+        "docs/gsm4212p-technical-document-e8dcec183e0f.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 9,
+      "verifiedSpecs": 43,
+      "inputRows": 8,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = AV Line 8x1G PoE+ 125W 2x1G 및 2xSFP 관리형 스위치(M4250-10G2F-PoE+)",
+        "specifications[5]: PoE 포트/예산 = PoE+(802.3at) 8개, 포트당 최대 30W",
+        "specifications[6]: 스위칭 용량 = 24",
+        "specifications[24]: 전력 소비(PoE 최대 부하) = 163.9",
+        "specifications[25]: 전력 소비(PoE 미사용) = 17.32"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gsm4230p",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4230P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-specification-61e668dc8454.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 15,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = 24x 1G PoE+, 2x 1G, 4x SFP 완전관리형 스위치(M4250-26G4F-PoE+)",
+        "specifications[3]: PoE 포트/예산 = PoE+ 24개(포트당 30W)",
+        "specifications[7]: 전력 소비(PoE 사용 시) = 401",
+        "specifications[8]: 전력 소비(PoE 미사용) = 35.8"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gsm4230px",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4230PX",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-specification-61e668dc8454.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 15,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = 24x 1G PoE+, 2x 1G, 4x SFP+ 완전관리형 스위치(M4250-26G4XF-PoE+)",
+        "specifications[3]: PoE 포트/예산 = PoE+ 24개(포트당 30W)",
+        "specifications[7]: 전력 소비(PoE 사용 시) = 614",
+        "specifications[8]: 전력 소비(PoE 미사용) = 46.8"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gsm4248p",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4248P",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-specification-61e668dc8454.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 15,
+      "inputRows": 3,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[0]: 모델 설명 = 40x 1G PoE+, 8x SFP 완전관리형 스위치(M4250-40G8F-PoE+)",
+        "specifications[3]: PoE 포트/예산 = PoE+ 40개(포트당 30W)",
+        "specifications[7]: 전력 소비(PoE 사용 시) = 624.8",
+        "specifications[8]: 전력 소비(PoE 미사용) = 59.5"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "gsm4248px",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4248PX",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-user-manual-ecb29b6aed5c.pdf",
+        "docs/gsm4212p-specification-61e668dc8454.pdf",
+        "docs/gsm4248px-technical-document-336b3fce760c.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 10,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[0]: 포트 구성 = 40x 1G PoE+ RJ45 + 8x SFP+",
+        "specifications[1]: PoE 전력 예산 = 960",
+        "specifications[2]: 포트당 PoE+ = 30",
+        "specifications[8]: 소비전력(풀로드, PoE 포함) = 1197"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-800w-psu",
+      "manufacturer": "NovaStar",
+      "model": "H_800W",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply Module"
+      ],
+      "type": "power",
+      "reason": "category: Power Supply Module",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 5,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-12g-sdi",
+      "manufacturer": "NovaStar",
+      "model": "H_1x12G SDI Input Card",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 6,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-2xhdmi20-2xdp12",
+      "manufacturer": "NovaStar",
+      "model": "H_2xHDMI2.0+2xDP1.2 Input Card",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 6,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-4x3g-sdi",
+      "manufacturer": "NovaStar",
+      "model": "H_4x3 SDI input card",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 5,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-4xhdmi",
+      "manufacturer": "NovaStar",
+      "model": "H_4xHDMI Input Card",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 6,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-dp12-4k",
+      "manufacturer": "NovaStar",
+      "model": "H_1xDP1.2 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 6,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-hdmi20-4k",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 6,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-input-card-hdmi20-dp12-4k",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0+1xDP1.2 input card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 7,
+      "inputRows": 2,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-output-card-4xhdmi-dl",
+      "manufacturer": "NovaStar",
+      "model": "H_4xHDMI output card (HDMI 1.4 - Dual Link)",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 7,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-output-card-hdmi20-4k",
+      "manufacturer": "NovaStar",
+      "model": "H_1xHDMI2.0 output card(4K)",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 6,
+      "inputRows": 0,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "h-preview-card-2xrj45-1xhdmi13",
+      "manufacturer": "NovaStar",
+      "model": "H_2xRJ45+1xHDMI1.3 Preview Card",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor Card"
+      ],
+      "type": "processor-card",
+      "reason": "category: Video Processor Card",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 4,
+      "inputRows": 0,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "hdmi20-optj-rx90",
+      "manufacturer": "Lightware",
+      "model": "HDMI20-OPTJ-RX90",
+      "categories": [
+        "영상",
+        "Video",
+        "Extender"
+      ],
+      "type": "extender",
+      "reason": "category: Extender",
+      "pdfs": [
+        "docs/hdmi20-optj-rx90-specification-f07ae295f062.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "hdmi20-optj-tx90",
+      "manufacturer": "Lightware",
+      "model": "HDMI20-OPTJ-TX90",
+      "categories": [
+        "영상",
+        "Video",
+        "Extender"
+      ],
+      "type": "extender",
+      "reason": "category: Extender",
+      "pdfs": [
+        "docs/hdmi20-optj-tx90-specification-7849d8812eb8.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "manufacturer": "Samsung",
+      "model": "HG43U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 32,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 크리스탈 프로세서 4K (Crystal Processor 4K)",
+        "specifications[9]: 영상 처리 엔진(사양표) = Quantum Processor Lite"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "manufacturer": "Samsung",
+      "model": "HG50U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 31,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 크리스탈 프로세서 4K (Crystal Processor 4K)",
+        "specifications[8]: 영상 처리 엔진(사양표) = Quantum Processor Lite"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "manufacturer": "Samsung",
+      "model": "HG65U800FNFXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Hospitality TV"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 31,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 크리스탈 프로세서 4K (Crystal Processor 4K)",
+        "specifications[8]: 영상 처리 엔진(사양표) = Quantum Processor Lite"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "hyperdeck-studio-hd-mini",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Mini",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "type": "recorder",
+      "reason": "category: Recorder",
+      "pdfs": [
+        "docs/hyperdeck-studio-hd-mini-user-manual-f8f31aedc255.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 7,
+      "inputRows": 2,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "hyperdeck-studio-hd-plus",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Plus",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "type": "recorder",
+      "reason": "category: Recorder",
+      "pdfs": [
+        "docs/hyperdeck-studio-hd-mini-user-manual-f8f31aedc255.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 7,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "hyperdeck-studio-hd-pro",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Pro",
+      "categories": [
+        "영상",
+        "Video",
+        "Recorder"
+      ],
+      "type": "recorder",
+      "reason": "category: Recorder",
+      "pdfs": [
+        "docs/hyperdeck-studio-hd-mini-user-manual-f8f31aedc255.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 7,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "manufacturer": "Crown",
+      "model": "Crown I-Tech 4x3500HD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/i-tech-4x3500hd-specification-5ac628f678a6.pdf",
+        "docs/i-tech-4x3500hd-user-manual-f2665f3dd739.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 3,
+      "verifiedSpecs": 29,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[28]: 신호 처리 = BSS OMNIDRIVEHD DSP (IIR 필터 및 선형위상 FIR 필터)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ki-pro-go2",
+      "manufacturer": "AJA",
+      "model": "Ki Pro GO2",
+      "categories": [
+        "영상",
+        "멀티채널 레코더/플레이어"
+      ],
+      "type": "recorder",
+      "reason": "category: 멀티채널 레코더/플레이어",
+      "pdfs": [
+        "docs/ki-pro-go2-user-manual-cea7d208d1f9.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 11,
+      "totalIO": 11,
+      "verifiedSpecs": 16,
+      "inputRows": 6,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[5]: 입력 변환 = Deinterlace, PsF→Progressive"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "led-780h",
+      "manufacturer": "Magnimage",
+      "model": "LED-780H",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "manuals/magnimage-led-780h-user-manual.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 6,
+      "verifiedSpecs": 11,
+      "inputRows": 4,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "manufacturer": "Samsung",
+      "model": "LH115QHFEBGXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 10,
+      "totalIO": 10,
+      "verifiedSpecs": 47,
+      "inputRows": 8,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 Mini LED 프로 + 퀀텀 매트릭스 테크놀로지 프로",
+        "specifications[3]: 화질 처리 = 슈퍼 픽처 인핸서, 4K AI 업스케일링 Pro"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH32QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 38,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH43QHCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 43,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH43QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 43,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "manufacturer": "Samsung",
+      "model": "LH55VHCRBGBXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Video Wall"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 35,
+      "inputRows": 8,
+      "outputRows": 6,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "manufacturer": "Samsung",
+      "model": "LH55VMCRBGBXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Video Wall"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 35,
+      "inputRows": 8,
+      "outputRows": 6,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH55WMFWBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Interactive Display"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 41,
+      "inputRows": 5,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH75QHCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 43,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH75WMFWLGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Interactive Display"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 40,
+      "inputRows": 5,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH85QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 42,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH98QECEDGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 37,
+      "inputRows": 7,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 4K (Quantum Processor 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "manufacturer": "Samsung",
+      "model": "LH98QMCEBGCXKR",
+      "categories": [
+        "사이니지",
+        "Display",
+        "Digital Signage"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 42,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 영상 처리 엔진 = 퀀텀 프로세서 Lite 4K (Quantum Processor Lite 4K)"
+      ],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "mezzo-322-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 322 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 56,
+      "inputRows": 3,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[36]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-322-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 322 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-ad-user-manual-bc2337667ba3.pdf",
+        "docs/mezzo-322-ad-technical-document-c7b66fff4c0e.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 5,
+      "verifiedSpecs": 10,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mezzo-324-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 55,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[35]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-324-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 58,
+      "inputRows": 4,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[37]: 네트워크 모드 = Switched(양 포트 기가비트 스위치 연동) 또는 Split(1포트 제어/모니터링, 1포트 오디오)",
+        "specifications[38]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-602-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 59,
+      "inputRows": 3,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[39]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-602-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 62,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[41]: 네트워크 모드 = Switched(양 포트 기가비트 스위치 연동) 또는 Split(1포트 제어/모니터링, 1포트 오디오)",
+        "specifications[42]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-604-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 58,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[38]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mezzo-604-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 AD",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 61,
+      "inputRows": 4,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[40]: 네트워크 모드 = Switched 또는 Split",
+        "specifications[41]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "mx392-c",
+      "manufacturer": "Shure",
+      "model": "MX392/C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [
+        "docs/mx392-c-specification-6b0126cd615e.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 2,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mx395",
+      "manufacturer": "Shure",
+      "model": "MX395",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [
+        "docs/mx395-specification-215fb02f09c4.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 25,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mx418d-c",
+      "manufacturer": "Shure",
+      "model": "MX418D/C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [
+        "docs/mx418d-c-specification-1e0c3894485f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 26,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mxa925w-r",
+      "manufacturer": "Shure",
+      "model": "MXA925W-R",
+      "categories": [
+        "오디오",
+        "Audio",
+        "네트워크 마이크로폰"
+      ],
+      "type": "microphone",
+      "reason": "category: 네트워크 마이크로폰",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 3,
+      "verifiedSpecs": 31,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 전원 = Power over Ethernet (PoE), Class 0",
+        "specifications[13]: Dante/AES67 채널 (자동 커버리지 Off) = 10채널 (8 독립 송신 + 1 automix + 1 AEC reference)",
+        "specifications[20]: DSP 기능 = 자동 믹싱, AI AEC, 노이즈 저감, AI 디노이저, AGC, 컴프레서, 딜레이, AI 디버브, 4밴드 파라메트릭 EQ, 뮤트, 게인(140dB 범위)",
+        "specifications[22]: 레이턴시 (Automix, AI AEC On) = 47",
+        "specifications[23]: 레이턴시 (Automix, AI 디버브 On) = 90",
+        "specifications[24]: 레이턴시 (Automix, AI 디노이저 On) = 93"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "mxc420-c",
+      "manufacturer": "Shure",
+      "model": "MXC420/C",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [
+        "docs/mxc420-c-specification-36fdcfd19a7c.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 13,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mxcw640",
+      "manufacturer": "Shure",
+      "model": "MXCW640",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conferencing Endpoint"
+      ],
+      "type": "conferencing",
+      "reason": "category: Conferencing Endpoint",
+      "pdfs": [
+        "docs/mxcw640-specification-6dc79da0ed0b.pdf",
+        "docs/mxcw640-technical-document-0cf4cf185e49.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 11,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "mxcwapt-w",
+      "manufacturer": "Shure",
+      "model": "MXCWAPT-W",
+      "categories": [
+        "오디오",
+        "Audio",
+        "네트워크 기기"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: 네트워크 기기",
+      "pdfs": [
+        "docs/mxcw640-specification-6dc79da0ed0b.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 21,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[3]: 전원 = Power over Ethernet (PoE)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "novastar-h2",
+      "manufacturer": "NovaStar",
+      "model": "H2",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 25,
+      "inputRows": 6,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[7]: 최대 로딩 용량(H_20xRJ45 송신카드) = 26,000,000",
+        "specifications[8]: 최대 로딩 용량(H_4xfiber 송신카드) = 41,600,000",
+        "specifications[9]: 최대 로딩 용량(H_4xfiber 송신카드 Enhanced) = 52,000,000"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "novastar-h5",
+      "manufacturer": "NovaStar",
+      "model": "H5",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "docs/novastar-h5-specification-89119003fed1.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 8,
+      "verifiedSpecs": 25,
+      "inputRows": 6,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[7]: 최대 로딩 용량(H_20xRJ45 송신카드) = 39,000,000",
+        "specifications[8]: 최대 로딩 용량(H_4xfiber 송신카드) = 62,400,000",
+        "specifications[9]: 최대 로딩 용량(H_4xfiber 송신카드 Enhanced) = 78,000,000"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "nx-1200",
+      "manufacturer": "AMX",
+      "model": "NX-1200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "type": "control",
+      "reason": "category: Control Processor",
+      "pdfs": [
+        "docs/nx-1200-specification-2db559cb2af7.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 19,
+      "inputRows": 6,
+      "outputRows": 6,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "nx-2200",
+      "manufacturer": "AMX",
+      "model": "NX-2200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "type": "control",
+      "reason": "category: Control Processor",
+      "pdfs": [
+        "docs/nx-2200-specification-c9e9d91a9011.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 19,
+      "inputRows": 6,
+      "outputRows": 8,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "nx-3200",
+      "manufacturer": "AMX",
+      "model": "NX-3200",
+      "categories": [
+        "제어",
+        "Control",
+        "Control Processor"
+      ],
+      "type": "control",
+      "reason": "category: Control Processor",
+      "pdfs": [
+        "docs/nx-3200-specification-dc388219af9b.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 19,
+      "inputRows": 6,
+      "outputRows": 8,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "plixus-ae-r-dante",
+      "manufacturer": "Televic",
+      "model": "Plixus AE-R Dante",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Conference System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Conference System",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 27,
+      "inputRows": 7,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "plixus-ae-r-ps",
+      "manufacturer": "Televic",
+      "model": "Plixus AE-R PS",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Power Supply"
+      ],
+      "type": "power",
+      "reason": "category: Power Supply",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 21,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "plixus-next",
+      "manufacturer": "Televic",
+      "model": "Plixus NEXT",
+      "categories": [
+        "오디오",
+        "Conferencing",
+        "Network Extender"
+      ],
+      "type": "network-bridge",
+      "reason": "category: Network Extender",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 12,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "pt-mz11k",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ11K",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 14,
+      "inputRows": 8,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-mz14k",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ14K",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 14,
+      "inputRows": 8,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-mz17k",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ17K",
+      "categories": [
+        "프로젝터",
+        "대형 공간용 레이저 프로젝터"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [
+        "docs/pt-mz17k-user-manual-c6d36160eac2.pdf",
+        "docs/pt-mz17k-technical-document-0e68410415d8.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 4,
+      "verifiedSpecs": 9,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-mz882",
+      "manufacturer": "Panasonic",
+      "model": "PT-MZ882",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 10,
+      "totalIO": 10,
+      "verifiedSpecs": 14,
+      "inputRows": 8,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-vmz51",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ51",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 15,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-vmz61",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ61",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 15,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pt-vmz71",
+      "manufacturer": "Panasonic",
+      "model": "PT-VMZ71",
+      "categories": [
+        "프로젝터",
+        "Display",
+        "Projector"
+      ],
+      "type": "display",
+      "reason": "디스플레이 category · 03 연결 단자 유지",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 15,
+      "inputRows": 7,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "Signal Flow 제외 · 연결 단자 유지"
+    },
+    {
+      "slug": "pulse-4k",
+      "manufacturer": "Analog Way",
+      "model": "Pulse 4K",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/eikos-4k-user-manual-34563287cf50.pdf",
+        "docs/pulse-4k-specification-634348d0e7c0.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 10,
+      "totalIO": 10,
+      "verifiedSpecs": 14,
+      "inputRows": 8,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[3]: 처리 엔진 = Analog Way 5세대 스케일링 엔진 기반, 초저지연 16ms@60Hz"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "qlxd1",
+      "manufacturer": "Shure",
+      "model": "QLXD1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/qlxd1-user-manual-5da69eb59f1f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 21,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "qlxd2-beta58",
+      "manufacturer": "Shure",
+      "model": "QLXD2/BETA58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/qlxd1-user-manual-5da69eb59f1f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 17,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "qlxd2-beta87a",
+      "manufacturer": "Shure",
+      "model": "QLXD2/BETA87A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/qlxd1-user-manual-5da69eb59f1f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 18,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "qlxd4",
+      "manufacturer": "Shure",
+      "model": "QLXD4",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/qlxd1-user-manual-5da69eb59f1f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 4,
+      "verifiedSpecs": 30,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "quattrocanali-1204-dsp",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 1204 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dsp-specification-8c5f8bdcb377.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 48,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[28]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "quattrocanali-1204-dspd",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 1204 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dspd-specification-a9dd0e626740.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 66,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[44]: 전원 공급 방식 = Universal, regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "quattrocanali-2404-dsp",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 2404 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dsp-specification-8c5f8bdcb377.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 48,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[28]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "quattrocanali-2404-dspd",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 2404 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dspd-specification-a9dd0e626740.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 66,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[44]: 전원 공급 방식 = Universal, regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "quattrocanali-4804-dsp",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 4804 DSP",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dsp-specification-8c5f8bdcb377.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 48,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[28]: 전원 공급 방식 = Universal regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "quattrocanali-4804-dspd",
+      "manufacturer": "Powersoft",
+      "model": "Quattrocanali 4804 DSP+D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Amplifier"
+      ],
+      "type": "amplifier-channel",
+      "reason": "category: Amplifier",
+      "pdfs": [
+        "docs/duecanali-1604-dsp-user-manual-487dd3844f27.pdf",
+        "docs/quattrocanali-1204-dspd-specification-a9dd0e626740.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 66,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[44]: 전원 공급 방식 = Universal, regulated switch mode with PFC, SRM"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "rally-bar",
+      "manufacturer": "Logitech",
+      "model": "Rally Bar",
+      "categories": [
+        "화상회의",
+        "올인원 비디오 바"
+      ],
+      "type": "conferencing",
+      "reason": "category: 올인원 비디오 바",
+      "pdfs": [
+        "docs/rally-bar-specification-f6e749e8b90e.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 9,
+      "verifiedSpecs": 13,
+      "inputRows": 3,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rally-mic-pod-extension-cable",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod Extension Cable",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Cable"
+      ],
+      "type": "no-flow-candidate",
+      "reason": "케이블 · 능동 처리 유무 확인 및 제외 승인 대기",
+      "pdfs": [],
+      "feasibility": "자료 부족",
+      "verifiedIO": 0,
+      "totalIO": 1,
+      "verifiedSpecs": 4,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "사용자 제외 결정 필요. 현재 기능·표시 유지"
+    },
+    {
+      "slug": "rally-mic-pod-hub",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod Hub",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Hub"
+      ],
+      "type": "conferencing",
+      "reason": "category: Hub",
+      "pdfs": [
+        "docs/rally-mic-pod-hub-specification-3e204e458092.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 5,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rally-mic-pod",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 13,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[5]: 오디오 처리 = AEC(음향 에코 제거), VAD(음성 활동 감지)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "rally-plus",
+      "manufacturer": "Logitech",
+      "model": "Rally Plus",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Video Conferencing System",
+      "pdfs": [
+        "docs/rally-mic-pod-hub-specification-3e204e458092.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 15,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rc400t",
+      "manufacturer": "Analog Way",
+      "model": "RC400T",
+      "categories": [
+        "영상",
+        "Video",
+        "Control Console"
+      ],
+      "type": "camera-controller",
+      "reason": "category: Control Console",
+      "pdfs": [
+        "docs/rc400t-specification-5a9483620bcc.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 2,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rio1608-d3",
+      "manufacturer": "Yamaha",
+      "model": "Rio1608-D3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/rio1608-d3-user-manual-d3e75e833519.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 12,
+      "inputRows": 3,
+      "outputRows": 4,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rio3224-d3",
+      "manufacturer": "Yamaha",
+      "model": "Rio3224-D3",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/rio1608-d3-user-manual-d3e75e833519.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 12,
+      "inputRows": 3,
+      "outputRows": 5,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rm-ip10",
+      "manufacturer": "SONY",
+      "model": "RM-IP10",
+      "categories": [
+        "영상",
+        "PTZ/원격 카메라",
+        "Camera Controller"
+      ],
+      "type": "camera-controller",
+      "reason": "category: Camera Controller",
+      "pdfs": [
+        "docs/rm-ip10-specification-a8cb8cf36d2b.pdf",
+        "docs/rm-ip10-user-manual-81ccce34c0f3.pdf",
+        "docs/rm-ip10-technical-document-a7082d425274.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 5,
+      "totalIO": 5,
+      "verifiedSpecs": 20,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "rm-ip500",
+      "manufacturer": "SONY",
+      "model": "RM-IP500",
+      "categories": [
+        "영상",
+        "PTZ/원격 카메라",
+        "Camera Controller"
+      ],
+      "type": "camera-controller",
+      "reason": "category: Camera Controller",
+      "pdfs": [
+        "docs/rm-ip500-specification-cde083243a77.pdf",
+        "docs/rm-ip500-user-manual-0379c4097af5.pdf",
+        "docs/rm-ip10-technical-document-a7082d425274.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 22,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "slxd1-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD1+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 38,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 폼팩터 = 바디팩 송신기",
+        "specifications[28]: ShowLink Ease = 수신기에서 주파수 변경·출력 조정·컨트롤 잠금·펌웨어 업데이트 원격 수행"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "slxd2-plus-58",
+      "manufacturer": "Shure",
+      "model": "SLXD2+/58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 37,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 폼팩터 = 핸드헬드 송신기",
+        "specifications[28]: ShowLink Ease = 수신기에서 주파수 변경·출력 조정·컨트롤 잠금·펌웨어 업데이트 원격 수행"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "slxd2-plus-b58",
+      "manufacturer": "Shure",
+      "model": "SLXD2+/B58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 37,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 폼팩터 = 핸드헬드 송신기",
+        "specifications[28]: ShowLink Ease = 수신기에서 주파수 변경·출력 조정·컨트롤 잠금·펌웨어 업데이트 원격 수행"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "slxd2-plus-b87a",
+      "manufacturer": "Shure",
+      "model": "SLXD2+/B87A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 37,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[1]: 폼팩터 = 핸드헬드 송신기",
+        "specifications[28]: ShowLink Ease = 수신기에서 주파수 변경·출력 조정·컨트롤 잠금·펌웨어 업데이트 원격 수행"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "slxd4-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD4+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 48,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[2]: 폼팩터 = 하프랙 수신기(랙 마운트 하드웨어 동봉)",
+        "specifications[41]: ShowLink Ease = 수신기에서 송신기 주파수·게인/출력·잠금·펌웨어 원격 제어"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "slxd4d-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD4D+",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 48,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[2]: 폼팩터 = 하프랙 수신기(랙 마운트 하드웨어 동봉)",
+        "specifications[41]: ShowLink Ease = 수신기에서 송신기 주파수·게인/출력·잠금·펌웨어 원격 제어"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "smartvision40",
+      "manufacturer": "Yealink",
+      "model": "SmartVision40",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Video Conferencing System",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 10,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "srg-a40",
+      "manufacturer": "SONY",
+      "model": "SRG-A40",
+      "categories": [
+        "영상",
+        "PTZ/원격 카메라",
+        "Camera"
+      ],
+      "type": "camera",
+      "reason": "category: Camera",
+      "pdfs": [
+        "docs/srg-a40-specification-f0e9114f3f66.pdf",
+        "docs/srg-a40-user-manual-174b829eadf5.pdf",
+        "docs/srg-a40-technical-document-004c339079b1.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 51,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[12]: 망원 변환 모드 = 2.0",
+        "specifications[45]: PoE = PoE++ (IEEE 802.3bt Type 4 Class 8)",
+        "specifications[46]: 소비 전력 = DC 19.5V: 80 이하 / PoE++: 71.3 이하"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "srg-x40uh",
+      "manufacturer": "SONY",
+      "model": "SRG-X40UH",
+      "categories": [
+        "영상",
+        "PTZ/원격 카메라",
+        "Camera"
+      ],
+      "type": "camera",
+      "reason": "category: Camera",
+      "pdfs": [
+        "docs/srg-x40uh-specification-e3f2321aae4a.pdf",
+        "docs/srg-x40uh-user-manual-e44dc81b3c93.pdf",
+        "docs/srg-x40uh-technical-document-0961490a73ec.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 42,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[36]: PoE = PoE+ (IEEE802.3at)",
+        "specifications[37]: 소비 전력 = DC 12V: 23.8 / PoE+: 25.5"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "strong-usb-cable",
+      "manufacturer": "Logitech",
+      "model": "Strong USB-A to USB-C Cable 10m",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Cable"
+      ],
+      "type": "no-flow-candidate",
+      "reason": "케이블 · 능동 처리 유무 확인 및 제외 승인 대기",
+      "pdfs": [],
+      "feasibility": "자료 부족",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 4,
+      "inputRows": 2,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[1]: 타입 = 액티브(신호 증폭) USB 케이블"
+      ],
+      "remaining": "사용자 제외 결정 필요. 현재 기능·표시 유지"
+    },
+    {
+      "slug": "sx-1216-rti",
+      "manufacturer": "SurgeX",
+      "model": "SX-1216-RTi",
+      "categories": [
+        "전원",
+        "Power",
+        "Power Conditioner"
+      ],
+      "type": "power",
+      "reason": "category: Power Conditioner",
+      "pdfs": [
+        "docs/sx-1216-rti-specification-f348ed63c922.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 3,
+      "verifiedSpecs": 8,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "tio1608-d2",
+      "manufacturer": "Yamaha",
+      "model": "Tio1608-D2",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Audio Interface"
+      ],
+      "type": "audio-interface",
+      "reason": "category: Audio Interface",
+      "pdfs": [
+        "docs/tio1608-d2-user-manual-ff58cca1644a.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 12,
+      "inputRows": 2,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "tr315",
+      "manufacturer": "AVer",
+      "model": "TR315",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "type": "camera",
+      "reason": "category: Camera",
+      "pdfs": [
+        "docs/tr315-specification-ad6ff353edb2.pdf",
+        "docs/tr315-user-manual-f5191fd75452.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 12,
+      "inputRows": 2,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[8]: PoE = PoE+ (IEEE802.3at)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "tr335",
+      "manufacturer": "AVer",
+      "model": "TR335",
+      "categories": [
+        "영상",
+        "Video",
+        "Camera"
+      ],
+      "type": "camera",
+      "reason": "category: Camera",
+      "pdfs": [
+        "docs/tr335-specification-88e469e22863.pdf",
+        "docs/tr315-user-manual-f5191fd75452.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 12,
+      "inputRows": 2,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[7]: PoE = PoE+ (IEEE802.3at)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ua844-swb",
+      "manufacturer": "Shure",
+      "model": "UA844+SWB",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Accessory"
+      ],
+      "type": "rf-distribution",
+      "reason": "Accessory이나 기존 영문 설명에 Antenna Distribution 명시",
+      "pdfs": [],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 4,
+      "verifiedSpecs": 17,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[5]: DC 출력 (수신기 전원 공급용) = 14~18V DC x 4채널",
+        "specifications[15]: 구성품 = 전면 마운트 안테나 하드웨어, 랙마운트 하드웨어, 외장 전원공급장치(PS60), BNC 케이블(6ft x2, 22in x10), 수신기용 DC 전원 케이블"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ua845uwb",
+      "manufacturer": "Shure",
+      "model": "UA845UWB",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Accessory"
+      ],
+      "type": "rf-distribution",
+      "reason": "Accessory이나 기존 영문 설명에 Antenna Distribution 명시",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 3,
+      "verifiedSpecs": 14,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[3]: 입출력 AC 전원 = 100-240V AC, 50/60Hz (스위칭)",
+        "specifications[4]: DC 출력 (수신기 전원 공급용) = 15V DC x 4 커넥터",
+        "specifications[6]: 전력 소비 (본체, 안테나/수신기 미연결 기준) = 14.1",
+        "specifications[7]: 분배 출력 레벨 (게인) = 0dB typical (수신기 안테나 입력-출력 포트1~4: -2~+2dB, 캐스케이드 출력: -1~+1dB)"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "ua864a",
+      "manufacturer": "Shure",
+      "model": "UA864A",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna"
+      ],
+      "type": "rf-distribution",
+      "reason": "category: Antenna",
+      "pdfs": [
+        "docs/ua864a-user-manual-7df63e0cdcfe.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 14,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[4]: 수신 패턴 (3dB 빔폭, 중심주파수 기준, UA864A) = 90"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ua874xa",
+      "manufacturer": "Shure",
+      "model": "UA874XA",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Antenna"
+      ],
+      "type": "rf-distribution",
+      "reason": "category: Antenna",
+      "pdfs": [
+        "docs/ua874xa-user-manual-13f1febab8c9.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 15,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[4]: 수신 패턴 (3dB 빔폭) = 70"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ultripower-ps",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIPOWER-PS",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply"
+      ],
+      "type": "power",
+      "reason": "category: Power Supply",
+      "pdfs": [
+        "docs/ultripower-ps-specification-6a964120b98e.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 3,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ultripower",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIPOWER",
+      "categories": [
+        "영상",
+        "Video",
+        "Power Supply"
+      ],
+      "type": "power",
+      "reason": "category: Power Supply",
+      "pdfs": [
+        "docs/ultripower-ps-specification-6a964120b98e.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 10,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ultritouch-2-hr",
+      "manufacturer": "Ross Video",
+      "model": "ULTRITOUCH-2-HR",
+      "categories": [
+        "영상",
+        "Video",
+        "Control Panel"
+      ],
+      "type": "control",
+      "reason": "category: Control Panel",
+      "pdfs": [
+        "docs/ultritouch-2-hr-specification-2da8623b2ea2.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 12,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ultrix-hdx-io",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIX-HDX-IO",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Module"
+      ],
+      "type": "processor-card",
+      "reason": "category: Router Module",
+      "pdfs": [
+        "docs/ultrix-hdx-io-specification-b94380b4adff.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 4,
+      "totalIO": 4,
+      "verifiedSpecs": 15,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[11]: 표준 처리 기능 = Ultriclean (Clean/Quiet 스위칭)",
+        "specifications[12]: 라이선스 가능 기능 = UltriSRC, Ultrisync, Ultriscape, Ultriformat, Ultriproc, Ultriproc-3DLUT, Ultristream, Ultrimix-Dante"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ultrix-ns-fr2",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIX-NS-FR2",
+      "categories": [
+        "영상",
+        "Video",
+        "Router Frame"
+      ],
+      "type": "matrix",
+      "reason": "category: Router Frame",
+      "pdfs": [
+        "docs/ultrix-hdx-io-specification-b94380b4adff.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 28,
+      "inputRows": 5,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[4]: 최대 비디오 매트릭스 크기 = 72×72",
+        "specifications[7]: I/O·처리 카드 슬롯 수 = 3",
+        "specifications[8]: 최대 오디오 매트릭스 크기 = 1536×1536",
+        "specifications[15]: 최대 Ultrimix-MXR 오디오 믹서 크기 = 128×64",
+        "specifications[26]: USB 포트 = USB-시리얼 변환기 연결용"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ulxd1",
+      "manufacturer": "Shure",
+      "model": "ULXD1",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd1-user-manual-023f8fbfa028.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 21,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd2-beta58",
+      "manufacturer": "Shure",
+      "model": "ULXD2/BETA58",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 19,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd2-beta87",
+      "manufacturer": "Shure",
+      "model": "ULXD2/BETA87",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 18,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd2-ksm9",
+      "manufacturer": "Shure",
+      "model": "ULXD2/KSM9",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 18,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd4",
+      "manufacturer": "Shure",
+      "model": "ULXD4",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd1-user-manual-023f8fbfa028.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 28,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd4d",
+      "manufacturer": "Shure",
+      "model": "ULXD4D",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 5,
+      "verifiedSpecs": 30,
+      "inputRows": 1,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "ulxd4q",
+      "manufacturer": "Shure",
+      "model": "ULXD4Q",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 3,
+      "totalIO": 5,
+      "verifiedSpecs": 34,
+      "inputRows": 1,
+      "outputRows": 2,
+      "processingEvidence": [
+        "specifications[28]: 케스케이드 출력 = BNC, 동일 대역 수신기 1대 추가 연결용, Unbalanced/Passive, 50 Ω, 삽입손실 0 dB",
+        "specifications[29]: 암호화 = AES-256 (수신기 메뉴에서 ON/OFF 설정. 항상 켜짐은 ULXD-GV 등 일부 보안용 변형에 해당)"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "ulxd8",
+      "manufacturer": "Shure",
+      "model": "ULXD8",
+      "categories": [
+        "오디오",
+        "Audio",
+        "Wireless Microphone System"
+      ],
+      "type": "wireless-microphone",
+      "reason": "category: Wireless Microphone System",
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 0,
+      "totalIO": 0,
+      "verifiedSpecs": 10,
+      "inputRows": 0,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[0]: 제품 유형 = 구즈넥 마이크 베이스 송신기(Gooseneck Base Transmitter)"
+      ],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "uvc-01",
+      "manufacturer": "Roland",
+      "model": "UVC-01",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Capture"
+      ],
+      "type": "recorder",
+      "reason": "category: Video Capture",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 3,
+      "totalIO": 3,
+      "verifiedSpecs": 10,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "uvc85-byod",
+      "manufacturer": "Yealink",
+      "model": "UVC85-BYOD",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Video Conferencing System",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 11,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[6]: 오디오 처리 = 2세대 오디오 알고리즘 기반 소음/에코/잔향 제거, 자동 게인 컨트롤, 풀 듀플렉스"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "uvc86",
+      "manufacturer": "Yealink",
+      "model": "UVC86",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Video Conferencing System"
+      ],
+      "type": "conferencing",
+      "reason": "category: Video Conferencing System",
+      "pdfs": [
+        "docs/uvc86-specification-78f8fa8af06f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 16,
+      "inputRows": 2,
+      "outputRows": 2,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "v-02hd-mk-ii",
+      "manufacturer": "Roland",
+      "model": "V-02HD MK II",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 6,
+      "totalIO": 6,
+      "verifiedSpecs": 10,
+      "inputRows": 3,
+      "outputRows": 3,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "v-160hd",
+      "manufacturer": "Roland",
+      "model": "V-160HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/v-160hd-specification-f435e72baacb.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 18,
+      "totalIO": 18,
+      "verifiedSpecs": 18,
+      "inputRows": 8,
+      "outputRows": 6,
+      "processingEvidence": [
+        "specifications[0]: 비디오 처리 = 4:2:2 (Y/Pb/Pr), 8-bit",
+        "specifications[7]: 오디오 처리 = 24bit/48kHz",
+        "specifications[9]: 오디오 이펙트 = 채널: HPF, Echo canceller, Anti-feedback, Noise gate, De-esser, Compressor, 3밴드 EQ, Voice changer, Delay, Auto mixing / 마스터: Reverb, Loudness AGC, Adaptive Noise Reduction, Limiter 등"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "v-1hd-plus",
+      "manufacturer": "Roland",
+      "model": "V-1HD+",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/v-1hd-plus-specification-52fe437bd4ac.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 12,
+      "totalIO": 12,
+      "verifiedSpecs": 17,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[0]: 비디오 처리 = 4:2:2 (Y/Pb/Pr), 8-bit",
+        "specifications[4]: 트랜지션 = CUT, MIX(DISSOLVE/FAM/NAM), WIPE 8종",
+        "specifications[7]: 오디오 처리 = 24bit/48kHz, Linear PCM 2ch",
+        "specifications[11]: 기타 기능 = 프리셋 메모리 8종, 패널 잠금, EDID 에뮬레이터, 오토 스위칭, 오토 입력 감지"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "v-80hd",
+      "manufacturer": "Roland",
+      "model": "V-80HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/v-80hd-specification-ed115e782e62.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 15,
+      "totalIO": 15,
+      "verifiedSpecs": 21,
+      "inputRows": 5,
+      "outputRows": 6,
+      "processingEvidence": [
+        "specifications[0]: 비디오 처리 = 4:2:2 (Y/Pb/Pr), 8-bit",
+        "specifications[8]: 오디오 처리 = 24bit/48kHz",
+        "specifications[11]: 오디오 이펙트 = HPF, Echo canceller, Anti-feedback, Noise gate, De-esser, Compressor, 4밴드 EQ, Voice changer, Delay, Auto mixing"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "v-8hd",
+      "manufacturer": "Roland",
+      "model": "V-8HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/v-8hd-specification-f1d73b790c24.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 9,
+      "totalIO": 9,
+      "verifiedSpecs": 18,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[0]: 비디오 처리 = 4:2:2 (Y/Pb/Pr), 8-bit",
+        "specifications[6]: 트랜지션 = CUT, MIX(DISSOLVE/FAM/NAM), WIPE 8종, SPLIT 2종",
+        "specifications[8]: 오디오 처리 = 24bit/48kHz",
+        "specifications[11]: 기타 기능 = 프리셋 메모리 24종, 매크로 100종, 시퀀서 1000스텝, EDID 에뮬레이터, 오토 스위칭, 오토 입력 감지"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "varia-100",
+      "manufacturer": "AMX",
+      "model": "VARIA-100",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "type": "control",
+      "reason": "category: Touch Panel",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[9]: 전원 = RJ-45, PoE 802.3af"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "varia-80",
+      "manufacturer": "AMX",
+      "model": "VARIA-80",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "type": "control",
+      "reason": "category: Touch Panel",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[9]: 전원 = RJ-45, PoE 802.3af"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "varia-sl50",
+      "manufacturer": "AMX",
+      "model": "VARIA-SL50",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "type": "control",
+      "reason": "category: Touch Panel",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[9]: 전원 = RJ-45, PoE 802.3af"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "varia-sl80",
+      "manufacturer": "AMX",
+      "model": "VARIA-SL80",
+      "categories": [
+        "제어",
+        "Control",
+        "Touch Panel"
+      ],
+      "type": "control",
+      "reason": "category: Touch Panel",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 1,
+      "outputRows": 0,
+      "processingEvidence": [
+        "specifications[9]: 전원 = RJ-45, PoE 802.3af"
+      ],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "vcm35",
+      "manufacturer": "Yealink",
+      "model": "VCM35",
+      "categories": [
+        "화상회의",
+        "Conferencing",
+        "Microphone"
+      ],
+      "type": "microphone",
+      "reason": "category: Microphone",
+      "pdfs": [
+        "docs/vcm35-specification-fdde14b6ee8a.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 1,
+      "totalIO": 1,
+      "verifiedSpecs": 12,
+      "inputRows": 0,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "vr-6hd",
+      "manufacturer": "Roland",
+      "model": "VR-6HD",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/vr-6hd-specification-570cafa3edf2.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 13,
+      "totalIO": 13,
+      "verifiedSpecs": 23,
+      "inputRows": 4,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[0]: 비디오 처리 = 4:2:2 (Y/Pb/Pr), 8-bit",
+        "specifications[10]: 오디오 처리 = 24bit/48kHz",
+        "specifications[13]: 오디오 이펙트 = HPF, Echo canceller, Anti-feedback, Noise gate, De-Esser, Compressor, 4밴드 EQ, Voice changer, Delay, Auto mixing"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "vs10",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS10",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/vs10-user-manual-a88173bdcc44.pdf",
+        "docs/vs10-specification-ce7cfb629f00.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 14,
+      "inputRows": 6,
+      "outputRows": 5,
+      "processingEvidence": [
+        "specifications[6]: 구성 = Mix&Effect 1, PIP 2, KEY(LUMA/CHROMA) 1, DSK(FILL/KEY) 1, 패턴제너레이터 2, 미디어 2, 멀티뷰(10/13/16view) 1"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "vs5",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS5",
+      "categories": [
+        "영상",
+        "Video",
+        "Signal Switcher"
+      ],
+      "type": "switcher",
+      "reason": "category: Signal Switcher",
+      "pdfs": [
+        "docs/vs5-user-manual-225fc5daaa4f.pdf"
+      ],
+      "feasibility": "일부",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 13,
+      "inputRows": 3,
+      "outputRows": 6,
+      "processingEvidence": [],
+      "remaining": "PDF 사본 있음. 처리 단계·정확한 모델 적용·쪽 번호 독해 필요"
+    },
+    {
+      "slug": "x100pro-2u",
+      "manufacturer": "Colorlight",
+      "model": "X100 Pro-2U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 11,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "x100pro-4u",
+      "manufacturer": "Colorlight",
+      "model": "X100 Pro-4U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 11,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "x100pro-7u",
+      "manufacturer": "Colorlight",
+      "model": "X100 Pro-7U",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [],
+      "feasibility": "일부",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 13,
+      "inputRows": 1,
+      "outputRows": 1,
+      "processingEvidence": [],
+      "remaining": "기존 검증값 일부 사용 가능. 처리·분기 근거 또는 PDF 사본 부족"
+    },
+    {
+      "slug": "xsm4216f",
+      "manufacturer": "NETGEAR",
+      "model": "XSM4216F",
+      "categories": [
+        "제어",
+        "Network",
+        "Network Switch"
+      ],
+      "type": "network-switch",
+      "reason": "category: Network Switch",
+      "pdfs": [
+        "docs/gsm4212p-specification-61e668dc8454.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 2,
+      "totalIO": 2,
+      "verifiedSpecs": 14,
+      "inputRows": 2,
+      "outputRows": 1,
+      "processingEvidence": [
+        "specifications[3]: PoE 포트/예산 = 없음"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "zenith-100",
+      "manufacturer": "Analog Way",
+      "model": "Zenith 100",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "docs/zenith-100-user-manual-062fe937eb3e.pdf",
+        "docs/zenith-100-specification-4c5f316eb498.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 8,
+      "totalIO": 8,
+      "verifiedSpecs": 14,
+      "inputRows": 5,
+      "outputRows": 4,
+      "processingEvidence": [
+        "specifications[4]: 처리 엔진 = Analog Way 5세대 스케일링 엔진, 네이티브 4K60 10bit 4:4:4 초저지연"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    },
+    {
+      "slug": "zenith-200",
+      "manufacturer": "Analog Way",
+      "model": "Zenith 200",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "type": "video-processor",
+      "reason": "category: Video Processor",
+      "pdfs": [
+        "docs/zenith-100-user-manual-062fe937eb3e.pdf",
+        "docs/zenith-200-specification-90d556f4c49c.pdf"
+      ],
+      "feasibility": "가능",
+      "verifiedIO": 7,
+      "totalIO": 7,
+      "verifiedSpecs": 16,
+      "inputRows": 4,
+      "outputRows": 3,
+      "processingEvidence": [
+        "specifications[6]: 처리 엔진 = Analog Way 5세대 스케일링 엔진, 네이티브 4K60 10bit 4:4:4 초저지연"
+      ],
+      "remaining": "기존 검증값으로 기본 흐름 작성 가능. 처리/분기별 근거 대조와 PDF 쪽 번호 검토는 데이터 PR에서 수행"
+    }
+  ]
+}

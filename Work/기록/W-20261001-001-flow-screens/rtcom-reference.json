@@ -1,0 +1,28 @@
+{
+  "url": "https://seoulav.github.io/rtcom-configurator/#products/qms-88ux",
+  "capturedAt": "2026-10-01T03:23:34.787Z",
+  "screens": [
+    {
+      "width": 1280,
+      "box": {
+        "x": 454,
+        "y": 380.625,
+        "width": 754,
+        "height": 469.46875
+      },
+      "svg": "0 0 851 442",
+      "text": "03\nSIGNAL FLOW\nHDMI IN 1\nHDMI IN 2\nHDMI IN 3\nHDMI IN 4\nHDMI IN 5\nHDMI IN 6\nHDMI IN 7\nHDMI IN 8\n1\n2\n3\n4\n5\n6\n7\n8\n매트릭스\n● 선택 예시\n4K/60 @ 4:4:4\nHDMI 2.0 · HDCP 2.2 · 오디오 추출\n1\n2\n3\n4\n5\n6\n7\n8\nOUT 1–8 · 출력마다 입력 선택\n9\n10\n9·10번 각 4분할 또는 8분할\nAUDIO OUT\n추출"
+    },
+    {
+      "width": 390,
+      "box": {
+        "x": 30,
+        "y": 216.265625,
+        "width": 330,
+        "height": 416.53125
+      },
+      "svg": "0 0 851 442",
+      "text": "03\nSIGNAL FLOW\nHDMI IN 1\nHDMI IN 2\nHDMI IN 3\nHDMI IN 4\nHDMI IN 5\nHDMI IN 6\nHDMI IN 7\nHDMI IN 8\n1\n2\n3\n4\n5\n6\n7\n8\n매트릭스\n● 선택 예시\n4K/60 @ 4:4:4\nHDMI 2.0 · HDCP 2.2 · 오디오 추출\n1\n2\n3\n4\n5\n6\n7\n8\nOUT 1–8 · 출력마다 입력 선택\n9\n10\n9·10번 각 4분할 또는 8분할\nAUDIO OUT\n추출\n\n좌우로 밀어서 볼 수 있습니다."
+    }
+  ]
+}
