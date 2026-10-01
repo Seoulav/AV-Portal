@@ -5,10 +5,12 @@ import * as detailModel from '../prototype/brc-am7/product-detail-model.mjs';
 
 const source = path => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 
-test('detail template uses seven ordered cards without tab panels', async () => {
+test('detail template reserves 06/07 for optional settings and keeps unnumbered documents', async () => {
   const html = await source('prototype/brc-am7/index.html');
   const order = [...html.matchAll(/data-card="(0[1-7])"/g)].map(match => match[1]);
-  assert.deepEqual(order, ['01', '02', '03', '04', '05', '06', '07']);
+  assert.deepEqual(order, ['01', '02', '03', '04', '05']);
+  assert.match(html, /id="documents"[^>]*data-supplemental/);
+  assert.match(html, /id="documents-title">문서<\/h2>/);
   assert.doesNotMatch(html, /role="tablist"|role="tabpanel"/);
   assert.match(html, /id="sources"/);
 });

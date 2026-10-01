@@ -37,5 +37,11 @@ test('public detail loads RTCOM raw data through the display adapter', async () 
   assert.match(generated, /\.\.\/rtcom\/raw\/products\/\$\{rtcomId\}\.json/);
   assert.match(generated, /data\.presentation\.imageBase/);
   assert.match(generated, /sourceProductLabel/);
-  assert.doesNotMatch(generated, /Port Map|Signal Flow|EDID|딥 스위치/);
+  const { adaptRtcomDetail } = await import('../beta/site/shared/rtcom-adapter.mjs');
+  const { prepareProductDetail } = await import('../prototype/brc-am7/product-detail-model.mjs');
+  const raw = JSON.parse(await file('beta/site/rtcom/raw/products/qms-88ux.json'));
+  const adapted = prepareProductDetail(adaptRtcomDetail(raw));
+  assert.equal(adapted.enhancements.portMap, null);
+  assert.equal(adapted.enhancements.signalFlow, null);
+  assert.deepEqual(adapted.enhancements.settings, []);
 });

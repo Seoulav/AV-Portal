@@ -1,3 +1,4 @@
+import { enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
@@ -50,7 +51,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   }
 }
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'images', 'index.html', 'pdf-documents.mjs', 'product-detail-model.mjs', 'styles.css'].sort());
+assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'detail-enhancements.mjs', 'detail-enhancement-view.mjs', 'images', 'index.html', 'pdf-documents.mjs', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
 const previewImageFiles = group2Previews.map(entry => entry.image.file);
 assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');
@@ -243,7 +244,7 @@ assert.deepEqual(Object.keys(snapshot.details).sort(), slugs);
 
 // 상세 JSON에 허용되는 최상위 키. 새 키는 공개 경계를 다시 검토한 뒤에만 추가한다.
 const detailRequiredKeys = ['categories', 'documents', 'english', 'features', 'imageStatuses', 'images', 'io', 'issues', 'korean', 'manufacturer', 'model', 'overview', 'packageStatus', 'presentation', 'productName', 'sources', 'specifications', 'verificationSummary'];
-const detailOptionalKeys = ['itemType', 'series', 'seriesNote'];
+const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitle', 'keyFacts', 'portMap', 'signalFlow', 'settings'];
 const detailAllowedKeys = new Set([...detailRequiredKeys, ...detailOptionalKeys]);
 
 const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.slug, item.brand]));
@@ -280,6 +281,7 @@ for (const slug of slugs) {
   assert.equal(hashText(content), expected.sha256, `${slug} public detail snapshot`);
   assert.ok(!privateMarkers.test(content), `${slug} private marker`);
   const product = JSON.parse(content);
+  assert.deepEqual(enhancementErrors(product), [], `${slug}: optional detail structure`);
   const keys = Object.keys(product);
   for (const key of keys) assert.ok(detailAllowedKeys.has(key), `${slug}: 허용되지 않은 상세 키 ${key}`);
   for (const key of detailRequiredKeys) assert.ok(keys.includes(key), `${slug}: 필수 상세 키 누락 ${key}`);

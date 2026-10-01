@@ -41,8 +41,8 @@ test('public footers do not expose build strings and detail asset versions are r
   const detail = await file('prototype/brc-am7/index.html');
   assert.doesNotMatch(home, /data-system-version|SYSTEM v0\.1\.0|build local/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
-  assert.match(detail, /styles\.css\?v=w20260929-002/);
-  assert.match(detail, /app\.js\?v=w20260929-002/);
+  assert.match(detail, /styles\.css\?v=w20261001-001/);
+  assert.match(detail, /app\.js\?v=w20261001-001/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

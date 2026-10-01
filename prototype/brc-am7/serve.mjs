@@ -6,6 +6,15 @@ import { resolve } from 'node:path';
 const siteDir = fileURLToPath(new URL('./', import.meta.url));
 const imageDir = fileURLToPath(new URL('../../outputs/brc-am7-detail/images/', import.meta.url));
 const routes = new Map([
+  ['/detail-enhancements.mjs', ['detail-enhancements.mjs', 'text/javascript; charset=utf-8']],
+  ['/detail-enhancement-view.mjs', ['detail-enhancement-view.mjs', 'text/javascript; charset=utf-8']],
+  ['/pdf-documents.mjs', ['pdf-documents.mjs', 'text/javascript; charset=utf-8']],
+  ['/beta/site/shared/pdf-viewer.mjs', ['../../beta/site/shared/pdf-viewer.mjs', 'text/javascript; charset=utf-8']],
+  ['/beta/site/shared/rtcom-adapter.mjs', ['../../beta/site/shared/rtcom-adapter.mjs', 'text/javascript; charset=utf-8']],
+  ['/beta/site/shared/pdf-viewer.css', ['../../beta/site/shared/pdf-viewer.css', 'text/css; charset=utf-8']],
+  ['/beta/site/docs/manifest.json', ['../../beta/site/docs/manifest.json', 'application/json; charset=utf-8']],
+  ['/beta/site/vendor/pdfjs/pdf.min.mjs', ['../../beta/site/vendor/pdfjs/pdf.min.mjs', 'text/javascript; charset=utf-8']],
+  ['/beta/site/vendor/pdfjs/pdf.worker.min.mjs', ['../../beta/site/vendor/pdfjs/pdf.worker.min.mjs', 'text/javascript; charset=utf-8']],
   ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
@@ -29,7 +38,8 @@ export function createPreviewServer({ pictogram = false } = {}) {
     const pathname = new URL(request.url, 'http://127.0.0.1').pathname;
     const imageMatch = /^\/images\/([a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp))$/.exec(pathname);
     const imageType = imageMatch?.[1].split('.').at(-1).toLowerCase();
-    const route = routes.get(pathname) ?? (imageMatch ? [imageMatch[1], imageType === 'png' ? 'image/png' : imageType === 'webp' ? 'image/webp' : 'image/jpeg', true] : null);
+    const publicPdf = /^\/(docs|manuals)\/([a-z0-9-]+\.pdf)$/.exec(pathname);
+    const route = routes.get(pathname) ?? (publicPdf ? [`../../beta/site/${publicPdf[1]}/${publicPdf[2]}`, 'application/pdf'] : null) ?? (imageMatch ? [imageMatch[1], imageType === 'png' ? 'image/png' : imageType === 'webp' ? 'image/webp' : 'image/jpeg', true] : null);
     if (request.method !== 'GET' || !route) {
       response.writeHead(route ? 405 : 404, headers);
       response.end();

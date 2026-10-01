@@ -1,4 +1,6 @@
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20260929-002';
+import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001';
+import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
@@ -53,6 +55,7 @@ if (!productKey && !allowContentFallback) {
     throw error;
   }
 
+  const enhancements = data.enhancements;
   document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail 시안`;
   for (const [selector, value] of [
     ['meta[name="description"]', data.english],
@@ -89,7 +92,7 @@ if (!productKey && !allowContentFallback) {
   $('#breadcrumb-brand').textContent = data.manufacturer;
   $('#breadcrumb-model').textContent = data.model;
   $('#product-name').textContent = data.productName || data.model;
-  $('#product-subtitle').textContent = [data.manufacturer, data.english].filter(Boolean).join(' · ');
+  $('#product-subtitle').textContent = [data.manufacturer, enhancements.subtitle || data.english].filter(Boolean).join(' · ');
   $('#footer-product').textContent = `${data.manufacturer} ${data.model}`;
   $('#footer-manufacturer').textContent = data.manufacturer;
   $('#dialog-product').textContent = `${data.manufacturer} ${data.model}`;
@@ -162,6 +165,7 @@ if (!productKey && !allowContentFallback) {
   }
 
   $('#overview-summary').textContent = data.korean || data.overview || data.english || '';
+  if (enhancements.lead) $('#overview-summary').replaceChildren(renderLead(enhancements.lead));
   const fullOverview = data.overview || data.korean || '';
   $('#overview-copy').textContent = fullOverview;
   $('#overview-more').hidden = !fullOverview || fullOverview.trim() === $('#overview-summary').textContent.trim();
@@ -171,6 +175,9 @@ if (!productKey && !allowContentFallback) {
     const displayValue = [specification.value, specification.unit].filter(Boolean).join(' ');
     cell.append(element('dt', '', specification.name), element('dd', displayValue.length > 20 ? 'long-key-value' : '', displayValue));
     $('#key-specs').append(cell);
+  }
+  if (enhancements.keyFacts.length) {
+    const facts = renderKeyFacts(enhancements.keyFacts); facts.id = 'key-specs'; $('#key-specs').replaceWith(facts);
   }
   $('#key-specs').hidden = !$('#key-specs').children.length;
 
@@ -183,6 +190,8 @@ if (!productKey && !allowContentFallback) {
     const image = data.images[index];
     if (!image) return;
     selectedImage = index;
+    $('#port-map-layer').replaceChildren();
+    $('#port-map-list').hidden = true;
     featured.src = imageBase + image.file;
     featured.alt = image.alt || `${data.manufacturer} ${data.model} ${image.role} 이미지`;
     featured.hidden = false;
@@ -192,7 +201,34 @@ if (!productKey && !allowContentFallback) {
     $('#image-caption').textContent = image.note || image.alt || '';
     for (const [position, button] of [...$('#thumbnails').children].entries()) button.setAttribute('aria-pressed', String(position === index));
   }
+  function updatePortMap() {
+    const map = enhancements.portMap;
+    const layer = $('#port-map-layer');
+    layer.replaceChildren();
+    $('#port-map-list').replaceChildren();
+    $('#port-map-list').hidden = true;
+    if (!map || data.images[selectedImage]?.role !== map.image || !featured.complete || !featured.naturalWidth || featured.hidden) return;
+    if (!portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight)) {
+      $('#gallery-title').lastChild.textContent = '제품 사진';
+      return;
+    }
+    const valid = map.items.filter(item => item.x2 <= featured.naturalWidth);
+    $('#gallery-title').lastChild.textContent = valid.length ? 'Port Map' : '제품 사진';
+    if (!valid.length) return;
+    const imageBox = featured.getBoundingClientRect(), stage = featured.parentElement.getBoundingClientRect();
+    Object.assign(layer.style, { left: (imageBox.left - stage.left) + 'px', top: (imageBox.top - stage.top) + 'px', width: imageBox.width + 'px', height: imageBox.height + 'px' });
+    layer.append(renderPortMap(valid, featured));
+    for (const item of valid) {
+      const row = element('p'); row.append(element('strong', '', item.n + ' · ' + item.label), element('span', '', item.desc));
+      $('#port-map-list').append(row);
+    }
+    $('#port-map-list').hidden = false;
+  }
+  if (enhancements.portMap) $('#gallery-title').lastChild.textContent = 'Port Map';
+  featured.addEventListener('load', updatePortMap);
+  new ResizeObserver(updatePortMap).observe(featured);
   featured.addEventListener('error', () => {
+    $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;
     featured.hidden = true;
     $('#image-missing').hidden = false;
     $('#zoom-button').disabled = true;
@@ -270,6 +306,16 @@ if (!productKey && !allowContentFallback) {
     $('#connector-table-body').append(row);
   }
 
+  if (enhancements.signalFlow) {
+    $('#io-title').replaceChildren(element('span', 'pg-idx', '03'), document.createTextNode('Signal Flow'));
+    $('#rear-connector-panel').hidden = true;
+    $('#port-grid').hidden = true;
+    $('#io').append(renderSignalFlow(enhancements.signalFlow, data.model));
+    $('#io-records').append($('#io-table-details'));
+    $('#io-table-details').hidden = !data.io.length;
+  }
+  for (const [index, setting] of enhancements.settings.entries()) $('.detail-cards').append(renderSetting(setting, index + 6));
+
   const specificationRows = [];
   if (data.series) specificationRows.push(['시리즈', data.series]);
   if (data.itemType) specificationRows.push(['종류', data.itemType]);
@@ -280,18 +326,22 @@ if (!productKey && !allowContentFallback) {
   }
   let specNumber = 0;
   for (const group of data.specificationGroups) {
-    const header = element('tr', 'spec-group-row');
-    const cell = element('th', '', group.name);
-    cell.colSpan = 2;
-    header.append(cell);
-    $('#spec-table-body').append(header);
     for (const spec of group.entries) {
       const row = element('tr', 'spec-data-row');
       row.dataset.specIndex = String(specNumber++);
       const value = element('td', '', [spec.value, spec.unit].filter(Boolean).join(' '));
       if (spec.verification && !['VERIFIED', 'FOUND'].includes(spec.verification)) value.append(badge(spec.verification));
-      for (const detail of [spec.condition && `조건: ${spec.condition}`, spec.source && `출처: ${spec.source}`]) if (detail) value.append(element('small', '', detail));
-      row.append(element('td', '', spec.name), value);
+      for (const detail of [spec.condition && `조건: ${spec.condition}`]) if (detail) value.append(element('small', '', detail));
+      const name = element('td');
+      const dot = element('span', 'spec-category-dot'); dot.setAttribute('aria-hidden', 'true');
+      dot.style.setProperty('--category-color', ['#3478d4', '#7c5ab8', '#16806a', '#b86e14', '#bf5272', '#526a8c'][data.specificationGroups.indexOf(group) % 6]);
+      name.append(dot, element('span', 'sr-only', group.name + ' · '), document.createTextNode(spec.name));
+      row.append(name, value);
+      if (spec.source) {
+        const record = element('div', 'source-row spec-source-record');
+        record.append(element('strong', '', group.name + ' · ' + spec.name), element('span', '', '출처: ' + spec.source));
+        $('#spec-source-records').append(record);
+      }
       $('#spec-table-body').append(row);
     }
   }
@@ -300,11 +350,7 @@ if (!productKey && !allowContentFallback) {
     $('#spec-toggle').hidden = specNumber <= 12;
     $('#spec-toggle').textContent = expanded ? '사양 접기' : `사양 ${specNumber - 12}개 더 보기`;
     $('#spec-toggle').setAttribute('aria-expanded', String(expanded));
-    for (const header of $('#spec-table-body').querySelectorAll('.spec-group-row')) {
-      let next = header.nextElementSibling, shown = false;
-      while (next && !next.classList.contains('spec-group-row')) { if (!next.hidden) shown = true; next = next.nextElementSibling; }
-      header.hidden = !shown;
-    }
+
   }
   renderSpecs();
   $('#spec-toggle').addEventListener('click', () => renderSpecs($('#spec-toggle').getAttribute('aria-expanded') !== 'true'));
@@ -327,10 +373,11 @@ if (!productKey && !allowContentFallback) {
 
   const visible = new Set(visibleDetailCards(data));
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
-  for (const card of $('.detail-cards').querySelectorAll('[data-card]')) card.hidden = !visible.has(card.id);
+  for (const [index] of enhancements.settings.entries()) visible.add('setting-' + (index + 6));
+  for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);
   const cardGrid = $('.detail-cards');
-  const leftCardIds = ['overview', 'specifications', 'features'];
-  const rightCardIds = ['gallery', 'io', 'related-products', 'documents'];
+  const leftCardIds = ['overview', 'specifications', 'features', ...enhancements.settings.map((_, index) => 'setting-' + (index + 6))];
+  const rightCardIds = ['gallery', 'io'];
   let packingQueued = false;
   function packCards() {
     packingQueued = false;
@@ -415,6 +462,7 @@ if (!productKey && !allowContentFallback) {
     const row = element('div', 'source-row');
     row.id = `source-${String(source.code ?? '').toLowerCase().replace(/[^a-z0-9-]/g, '-')}`;
     row.append(element('strong', '', [source.code, source.name].filter(Boolean).join(' · ')));
+    if (source.page) row.append(element('small', '', '쪽: ' + source.page));
     if (source.scope) row.append(element('small', '', source.scope));
     if (source.url) row.append(safeLink(source.url, '출처 열기 ↗'));
     $('#source-list').append(row);
@@ -432,10 +480,10 @@ if (!productKey && !allowContentFallback) {
   }
   function revealHash(initial = false) {
     const target = hashTarget();
-    const destination = target?.closest('[data-card]')?.hidden
+    const destination = target?.closest('[data-card], [data-supplemental]')?.hidden
       ? $('#overview') : target ?? (legacySourceHash() ? $('#sources') : null);
     if (!destination) { history.scrollRestoration = 'auto'; return; }
-    if (destination === $('#overview') && target?.closest('[data-card]')?.hidden) history.replaceState(null, '', '#overview');
+    if (destination === $('#overview') && target?.closest('[data-card], [data-supplemental]')?.hidden) history.replaceState(null, '', '#overview');
     if (destination === $('#sources') || destination.closest('#sources')) $('#sources').open = true;
     const innerDisclosure = destination.closest('details');
     if (innerDisclosure) innerDisclosure.open = true;

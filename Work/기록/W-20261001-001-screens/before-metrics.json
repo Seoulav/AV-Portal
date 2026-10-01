@@ -1,0 +1,529 @@
+{
+  "phase": "before",
+  "sha": "73c19fee261bed1f33ac48469a96c19fdede86f9",
+  "screens": [
+    {
+      "slug": "brc-am7",
+      "width": 1280,
+      "overflow": 0,
+      "height": 2487,
+      "roles": [
+        "Main",
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "ioRows": [
+        "영상SDI OUT1 BNC출력1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상SDI OUT2 BNC출력1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트구성: Fixed출처: HS, HCVERIFIED",
+        "영상HDMI Type A출력1VideoHDMI · 조건: 형식·프레임 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상OPTICAL SFP+모듈 필요출력1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호구성: Optional module출처: HS, HCVERIFIED",
+        "네트워크·제어LAN RJ-45양방향1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요구성: Fixed출처: HS, HCVERIFIED",
+        "네트워크·제어VISCA IN RJ-45입력1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어VISCA OUT RJ-45출력1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어OPTION RJ-45양방향1TallyRed/green tally · 조건: 구성·배선 확인구성: Fixed connector출처: HS, HCVERIFIED",
+        "오디오XLR 3핀입력2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인구성: Fixed출처: HS, HCVERIFIED",
+        "오디오3.5mm stereo입력1AudioPlug-in power 호환 · 조건: XLR과 별도 입력구성: Fixed출처: HS, HCVERIFIED",
+        "동기GENLOCK IN BNC입력1Sync1.0Vp-p, 75Ω · 조건: 외부 동기구성: Fixed출처: HS, HCVERIFIED",
+        "동기TC IN BNC입력1TimecodeTC · 조건: 출력 아님구성: Fixed출처: HS, HCVERIFIED",
+        "전원DC IN XLR 4핀입력1Power11–17V DC · 조건: 공칭 12V구성: Fixed출처: HS, HCVERIFIED",
+        "저장·미디어CFexpress Type A/SD slots양방향2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인구성: Fixed출처: HS, HCVERIFIED"
+      ],
+      "ports": [
+        "SDI OUT1 BNC출력 · 포트 1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별",
+        "SDI OUT2 BNC출력 · 포트 1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트",
+        "HDMI Type A출력 · 포트 1VideoHDMI · 조건: 형식·프레임 설정별",
+        "OPTICAL SFP+출력 · 포트 1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호모듈 필요",
+        "LAN RJ-45양방향 · 포트 1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요",
+        "VISCA IN RJ-45입력 · 포트 1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요",
+        "VISCA OUT RJ-45출력 · 포트 1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인",
+        "OPTION RJ-45양방향 · 포트 1TallyRed/green tally · 조건: 구성·배선 확인",
+        "XLR 3핀입력 · 포트 2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인",
+        "3.5mm stereo입력 · 포트 1AudioPlug-in power 호환 · 조건: XLR과 별도 입력",
+        "GENLOCK IN BNC입력 · 포트 1Sync1.0Vp-p, 75Ω · 조건: 외부 동기",
+        "TC IN BNC입력 · 포트 1TimecodeTC · 조건: 출력 아님",
+        "DC IN XLR 4핀입력 · 포트 1Power11–17V DC · 조건: 공칭 12V",
+        "CFexpress Type A/SD slots양방향 · 포트 2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인"
+      ],
+      "specs": [
+        "센서Exmor RS CMOS, 1.0형출처: HS",
+        "최대 유효 화소약 14.0 MP조건: 촬영 모드·설정에 따라 달라짐출처: HS",
+        "AF위상차+콘트라스트조건: 촬영 설정에 따라 동작출처: HS",
+        "ND 필터1/4–1/128 ND조건: 선형 가변 범위출처: HS",
+        "SDI OUT1 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정출처: PP",
+        "HDMI 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정출처: PP",
+        "내부 기록 형식XAVC HS/S, XAVC Long/Intra조건: 코덱·컨테이너·매체별 제약 있음출처: HS",
+        "광학 줌20 ×출처: HS, PP",
+        "초점 거리24–480 mm조건: 35mm 환산출처: HS",
+        "최대 개방 조리개F2.8–F4.5 F조건: 줌 위치에 따라 변경출처: HS",
+        "수평 화각약 75 degree조건: 광각출처: HS",
+        "팬 범위−175–+175 degree출처: HS",
+        "틸트 범위−30–210 degree출처: HS",
+        "팬/틸트 속도0.004–180 degree/s조건: 설정에 따라 달라짐출처: HS",
+        "프리셋최대 100 count조건: 리모컨/웹 앱별 이용 가능 수 다름출처: HS",
+        "LAN1000BASE-T조건: RJ-45출처: HS",
+        "IP 스트리밍RTP/RTCP, RTSP, RTMP/RTMPS, SRT, NDI|HXREVIEW REQUIRED조건: 서비스·펌웨어·구성 조건 재확인출처: PP",
+        "제어VISCA RS-422, VISCA over IP조건: 관리자·네트워크 설정 필요출처: HC, PP",
+        "오디오 입력XLR 3핀 ×2, 3.5mm MIC ×1조건: LINE/MIC/+48V 선택은 XLR출처: HS",
+        "기록 오디오LPCM 24-bit/48kHz/4ch조건: 기록 형식에 따라출처: HS",
+        "DC 전원12 V조건: 허용 입력 11–17V출처: HS, HC",
+        "PoE++IEEE 802.3bt Type 4 Class 8조건: 스위치 전력 예산 확인출처: HS",
+        "최대 소비 전력, DC132 W조건: DC IN 공급출처: HS",
+        "최대 소비 전력, PoE++71.3 W조건: PoE++ 공급출처: HS",
+        "질량약 3.5 kg출처: HS, PP",
+        "크기약 168.7×225.2×192.3 mm조건: W×H×D출처: PP",
+        "작동 온도0–40 °C출처: HS"
+      ],
+      "features": [
+        "1.0형 Exmor RS CMOS 센서로 최대 4K 59.94/50p 영상을 출력한다.",
+        "광학 20배 줌과 24–480mm 35mm 환산 범위를 제공한다.",
+        "AI 분석 기반 자동 프레이밍으로 사람을 따라 구도를 조정할 수 있다.",
+        "팬 ±175°, 틸트 −30°~210° 범위에서 PTZ 제어를 지원한다.",
+        "12G-SDI, 3G-SDI, HDMI와 선택형 SFP+ 광 출력을 구분해 제공한다.",
+        "LAN을 통한 IP 제어와 RTSP·SRT 등 네트워크 스트림을 지원한다.",
+        "12V DC 또는 IEEE 802.3bt Type 4 Class 8 PoE++ 전원을 사용한다.",
+        "XLR 오디오 입력 2개와 3.5mm 마이크 입력 1개를 제공한다."
+      ],
+      "documents": [
+        "매뉴얼BRC-AM7 도움말 안내koFOUND제조사에서 열기 ↗",
+        "사양서BRC-AM7 사양koFOUND제조사에서 열기 ↗"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+          "download": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+          "download": null
+        }
+      ],
+      "imageSwitches": [
+        "./images/brc-am7-main.webp",
+        "./images/brc-am7-front.webp",
+        "./images/brc-am7-rear.webp",
+        "./images/brc-am7-perspective.webp"
+      ],
+      "pdfs": [],
+      "downloads": []
+    },
+    {
+      "slug": "brc-am7",
+      "width": 390,
+      "overflow": 0,
+      "height": 5401,
+      "roles": [
+        "Main",
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "ioRows": [
+        "영상SDI OUT1 BNC출력1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상SDI OUT2 BNC출력1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트구성: Fixed출처: HS, HCVERIFIED",
+        "영상HDMI Type A출력1VideoHDMI · 조건: 형식·프레임 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상OPTICAL SFP+모듈 필요출력1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호구성: Optional module출처: HS, HCVERIFIED",
+        "네트워크·제어LAN RJ-45양방향1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요구성: Fixed출처: HS, HCVERIFIED",
+        "네트워크·제어VISCA IN RJ-45입력1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어VISCA OUT RJ-45출력1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어OPTION RJ-45양방향1TallyRed/green tally · 조건: 구성·배선 확인구성: Fixed connector출처: HS, HCVERIFIED",
+        "오디오XLR 3핀입력2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인구성: Fixed출처: HS, HCVERIFIED",
+        "오디오3.5mm stereo입력1AudioPlug-in power 호환 · 조건: XLR과 별도 입력구성: Fixed출처: HS, HCVERIFIED",
+        "동기GENLOCK IN BNC입력1Sync1.0Vp-p, 75Ω · 조건: 외부 동기구성: Fixed출처: HS, HCVERIFIED",
+        "동기TC IN BNC입력1TimecodeTC · 조건: 출력 아님구성: Fixed출처: HS, HCVERIFIED",
+        "전원DC IN XLR 4핀입력1Power11–17V DC · 조건: 공칭 12V구성: Fixed출처: HS, HCVERIFIED",
+        "저장·미디어CFexpress Type A/SD slots양방향2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인구성: Fixed출처: HS, HCVERIFIED"
+      ],
+      "ports": [
+        "SDI OUT1 BNC출력 · 포트 1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별",
+        "SDI OUT2 BNC출력 · 포트 1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트",
+        "HDMI Type A출력 · 포트 1VideoHDMI · 조건: 형식·프레임 설정별",
+        "OPTICAL SFP+출력 · 포트 1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호모듈 필요",
+        "LAN RJ-45양방향 · 포트 1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요",
+        "VISCA IN RJ-45입력 · 포트 1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요",
+        "VISCA OUT RJ-45출력 · 포트 1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인",
+        "OPTION RJ-45양방향 · 포트 1TallyRed/green tally · 조건: 구성·배선 확인",
+        "XLR 3핀입력 · 포트 2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인",
+        "3.5mm stereo입력 · 포트 1AudioPlug-in power 호환 · 조건: XLR과 별도 입력",
+        "GENLOCK IN BNC입력 · 포트 1Sync1.0Vp-p, 75Ω · 조건: 외부 동기",
+        "TC IN BNC입력 · 포트 1TimecodeTC · 조건: 출력 아님",
+        "DC IN XLR 4핀입력 · 포트 1Power11–17V DC · 조건: 공칭 12V",
+        "CFexpress Type A/SD slots양방향 · 포트 2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인"
+      ],
+      "specs": [
+        "센서Exmor RS CMOS, 1.0형출처: HS",
+        "최대 유효 화소약 14.0 MP조건: 촬영 모드·설정에 따라 달라짐출처: HS",
+        "AF위상차+콘트라스트조건: 촬영 설정에 따라 동작출처: HS",
+        "ND 필터1/4–1/128 ND조건: 선형 가변 범위출처: HS",
+        "SDI OUT1 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정출처: PP",
+        "HDMI 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정출처: PP",
+        "내부 기록 형식XAVC HS/S, XAVC Long/Intra조건: 코덱·컨테이너·매체별 제약 있음출처: HS",
+        "광학 줌20 ×출처: HS, PP",
+        "초점 거리24–480 mm조건: 35mm 환산출처: HS",
+        "최대 개방 조리개F2.8–F4.5 F조건: 줌 위치에 따라 변경출처: HS",
+        "수평 화각약 75 degree조건: 광각출처: HS",
+        "팬 범위−175–+175 degree출처: HS",
+        "틸트 범위−30–210 degree출처: HS",
+        "팬/틸트 속도0.004–180 degree/s조건: 설정에 따라 달라짐출처: HS",
+        "프리셋최대 100 count조건: 리모컨/웹 앱별 이용 가능 수 다름출처: HS",
+        "LAN1000BASE-T조건: RJ-45출처: HS",
+        "IP 스트리밍RTP/RTCP, RTSP, RTMP/RTMPS, SRT, NDI|HXREVIEW REQUIRED조건: 서비스·펌웨어·구성 조건 재확인출처: PP",
+        "제어VISCA RS-422, VISCA over IP조건: 관리자·네트워크 설정 필요출처: HC, PP",
+        "오디오 입력XLR 3핀 ×2, 3.5mm MIC ×1조건: LINE/MIC/+48V 선택은 XLR출처: HS",
+        "기록 오디오LPCM 24-bit/48kHz/4ch조건: 기록 형식에 따라출처: HS",
+        "DC 전원12 V조건: 허용 입력 11–17V출처: HS, HC",
+        "PoE++IEEE 802.3bt Type 4 Class 8조건: 스위치 전력 예산 확인출처: HS",
+        "최대 소비 전력, DC132 W조건: DC IN 공급출처: HS",
+        "최대 소비 전력, PoE++71.3 W조건: PoE++ 공급출처: HS",
+        "질량약 3.5 kg출처: HS, PP",
+        "크기약 168.7×225.2×192.3 mm조건: W×H×D출처: PP",
+        "작동 온도0–40 °C출처: HS"
+      ],
+      "features": [
+        "1.0형 Exmor RS CMOS 센서로 최대 4K 59.94/50p 영상을 출력한다.",
+        "광학 20배 줌과 24–480mm 35mm 환산 범위를 제공한다.",
+        "AI 분석 기반 자동 프레이밍으로 사람을 따라 구도를 조정할 수 있다.",
+        "팬 ±175°, 틸트 −30°~210° 범위에서 PTZ 제어를 지원한다.",
+        "12G-SDI, 3G-SDI, HDMI와 선택형 SFP+ 광 출력을 구분해 제공한다.",
+        "LAN을 통한 IP 제어와 RTSP·SRT 등 네트워크 스트림을 지원한다.",
+        "12V DC 또는 IEEE 802.3bt Type 4 Class 8 PoE++ 전원을 사용한다.",
+        "XLR 오디오 입력 2개와 3.5mm 마이크 입력 1개를 제공한다."
+      ],
+      "documents": [
+        "매뉴얼BRC-AM7 도움말 안내koFOUND제조사에서 열기 ↗",
+        "사양서BRC-AM7 사양koFOUND제조사에서 열기 ↗"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+          "download": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+          "download": null
+        }
+      ],
+      "imageSwitches": [
+        "./images/brc-am7-main.webp",
+        "./images/brc-am7-front.webp",
+        "./images/brc-am7-rear.webp",
+        "./images/brc-am7-perspective.webp"
+      ],
+      "pdfs": [],
+      "downloads": []
+    },
+    {
+      "slug": "dm7",
+      "width": 1280,
+      "overflow": 0,
+      "height": 2512,
+      "roles": [
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "ioRows": [
+        "오디오XLR 3핀 입력입력32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 3핀 출력출력16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 디지털 오디오입력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "오디오XLR 디지털 오디오출력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "네트워크·제어etherCON RJ-45양방향2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어D-sub 15핀양방향1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어RJ-45양방향1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-C양방향1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-A양방향2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A구성: Fixed출처: TDVERIFIED",
+        "동기BNC입력1Word clock75Ω termination구성: Fixed출처: TD, RMVERIFIED",
+        "동기BNC출력1Word clockTTL/75Ω구성: Fixed출처: TDVERIFIED",
+        "동기XLR 3핀 입력입력1TimecodeSMPTE구성: Fixed출처: TD, RMVERIFIED",
+        "확장PY slot카드 필요양방향1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리구성: Optional card출처: TD, RMVERIFIED",
+        "전원V-Lock AC inlet입력2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원구성: Fixed출처: TDVERIFIED",
+        "전원XLR 4핀 입력옵션입력1Backup DC power24V DC · 조건: PA-700 등 권장 전원구성: Optional supply출처: RMVERIFIED"
+      ],
+      "ports": [
+        "XLR 3핀 입력입력 · 포트 32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32",
+        "XLR 3핀 출력출력 · 포트 16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16",
+        "XLR 디지털 오디오입력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "XLR 디지털 오디오출력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "etherCON RJ-45양방향 · 포트 2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장",
+        "D-sub 15핀양방향 · 포트 1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조",
+        "RJ-45양방향 · 포트 1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상",
+        "USB-C양방향 · 포트 1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건",
+        "USB-A양방향 · 포트 2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A",
+        "BNC입력 · 포트 1Word clock75Ω termination",
+        "BNC출력 · 포트 1Word clockTTL/75Ω",
+        "XLR 3핀 입력입력 · 포트 1TimecodeSMPTE",
+        "PY slot양방향 · 포트 1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리카드 필요",
+        "V-Lock AC inlet입력 · 포트 2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원",
+        "XLR 4핀 입력입력 · 포트 1Backup DC power24V DC · 조건: PA-700 등 권장 전원옵션"
+      ],
+      "specs": [
+        "입력 믹싱 채널120 mono channel출처: TD, RM",
+        "Mix 버스48 bus출처: TD",
+        "Matrix 버스12 bus조건: Input-to-Matrix 지원출처: TD",
+        "Stereo / Mono 버스2 Stereo / 1 Mono bus조건: Stereo B를 Mono로 변경 가능출처: TD",
+        "샘플링 주파수48 / 96 kHz조건: 내·외부 클록출처: TD",
+        "신호 지연1.5 미만 ms조건: INPUT→OMNI OUT, Fs=96kHz출처: TD",
+        "USB 오디오18 in / 18 out channel조건: USB-C, USB 2.0출처: TD",
+        "Dante I/O144 in / 144 out channel조건: 24/32-bit, 1000BASE-T출처: TD",
+        "Scene memory500 scene출처: TD",
+        "GPI5 in / 5 out channel조건: D-sub 15핀출처: TD",
+        "Displays12.1인치 ×2, 7인치 ×1 display조건: 멀티터치출처: TD",
+        "Faders28 fader조건: 100mm, 터치 감지 모터식출처: TD",
+        "AC 입력100–240, 50/60 V, Hz조건: 이중 잠금형 AC inlet출처: TD",
+        "소비 전력240 W출처: TD",
+        "크기793×324×564 mm조건: W×H×D, 고무발 포함출처: TD",
+        "무게23.5 kg출처: TD"
+      ],
+      "features": [
+        "120개 모노 입력 채널과 48 Mix·12 Matrix·2 Stereo 버스를 처리한다.",
+        "Dante 네트워크에서 144채널 입력과 144채널 출력을 지원한다.",
+        "12.1인치 화면 두 개와 7인치 화면 한 개로 콘솔을 조작한다.",
+        "28개의 100mm 터치 감지 모터 페이더를 제공한다.",
+        "로컬 XLR 아날로그 입력 32개와 OMNI OUT 16개를 제공한다.",
+        "USB-C 연결로 최대 18입력/18출력 오디오 인터페이스로 동작한다.",
+        "PY 카드 슬롯을 통해 선택형 I/O를 확장할 수 있다.",
+        "잠금형 AC 입력 두 개를 사용하는 내장 이중 전원 구조를 제공한다."
+      ],
+      "documents": [
+        "매뉴얼DM7 Reference ManualkoFOUND보기↓ 내려받기"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/dm7-user-manual-0b1045e2664d.pdf",
+          "download": "dm7-user-manual-0b1045e2664d.pdf"
+        }
+      ],
+      "imageSwitches": [
+        "./images/dm7-front.webp",
+        "./images/dm7-rear.webp",
+        "./images/dm7-perspective.webp"
+      ],
+      "pdfs": [
+        "보기"
+      ],
+      "downloads": [
+        "dm7-user-manual-0b1045e2664d.pdf"
+      ]
+    },
+    {
+      "slug": "dm7",
+      "width": 390,
+      "overflow": 0,
+      "height": 5710,
+      "roles": [
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "ioRows": [
+        "오디오XLR 3핀 입력입력32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 3핀 출력출력16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 디지털 오디오입력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "오디오XLR 디지털 오디오출력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "네트워크·제어etherCON RJ-45양방향2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어D-sub 15핀양방향1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어RJ-45양방향1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-C양방향1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-A양방향2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A구성: Fixed출처: TDVERIFIED",
+        "동기BNC입력1Word clock75Ω termination구성: Fixed출처: TD, RMVERIFIED",
+        "동기BNC출력1Word clockTTL/75Ω구성: Fixed출처: TDVERIFIED",
+        "동기XLR 3핀 입력입력1TimecodeSMPTE구성: Fixed출처: TD, RMVERIFIED",
+        "확장PY slot카드 필요양방향1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리구성: Optional card출처: TD, RMVERIFIED",
+        "전원V-Lock AC inlet입력2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원구성: Fixed출처: TDVERIFIED",
+        "전원XLR 4핀 입력옵션입력1Backup DC power24V DC · 조건: PA-700 등 권장 전원구성: Optional supply출처: RMVERIFIED"
+      ],
+      "ports": [
+        "XLR 3핀 입력입력 · 포트 32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32",
+        "XLR 3핀 출력출력 · 포트 16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16",
+        "XLR 디지털 오디오입력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "XLR 디지털 오디오출력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "etherCON RJ-45양방향 · 포트 2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장",
+        "D-sub 15핀양방향 · 포트 1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조",
+        "RJ-45양방향 · 포트 1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상",
+        "USB-C양방향 · 포트 1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건",
+        "USB-A양방향 · 포트 2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A",
+        "BNC입력 · 포트 1Word clock75Ω termination",
+        "BNC출력 · 포트 1Word clockTTL/75Ω",
+        "XLR 3핀 입력입력 · 포트 1TimecodeSMPTE",
+        "PY slot양방향 · 포트 1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리카드 필요",
+        "V-Lock AC inlet입력 · 포트 2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원",
+        "XLR 4핀 입력입력 · 포트 1Backup DC power24V DC · 조건: PA-700 등 권장 전원옵션"
+      ],
+      "specs": [
+        "입력 믹싱 채널120 mono channel출처: TD, RM",
+        "Mix 버스48 bus출처: TD",
+        "Matrix 버스12 bus조건: Input-to-Matrix 지원출처: TD",
+        "Stereo / Mono 버스2 Stereo / 1 Mono bus조건: Stereo B를 Mono로 변경 가능출처: TD",
+        "샘플링 주파수48 / 96 kHz조건: 내·외부 클록출처: TD",
+        "신호 지연1.5 미만 ms조건: INPUT→OMNI OUT, Fs=96kHz출처: TD",
+        "USB 오디오18 in / 18 out channel조건: USB-C, USB 2.0출처: TD",
+        "Dante I/O144 in / 144 out channel조건: 24/32-bit, 1000BASE-T출처: TD",
+        "Scene memory500 scene출처: TD",
+        "GPI5 in / 5 out channel조건: D-sub 15핀출처: TD",
+        "Displays12.1인치 ×2, 7인치 ×1 display조건: 멀티터치출처: TD",
+        "Faders28 fader조건: 100mm, 터치 감지 모터식출처: TD",
+        "AC 입력100–240, 50/60 V, Hz조건: 이중 잠금형 AC inlet출처: TD",
+        "소비 전력240 W출처: TD",
+        "크기793×324×564 mm조건: W×H×D, 고무발 포함출처: TD",
+        "무게23.5 kg출처: TD"
+      ],
+      "features": [
+        "120개 모노 입력 채널과 48 Mix·12 Matrix·2 Stereo 버스를 처리한다.",
+        "Dante 네트워크에서 144채널 입력과 144채널 출력을 지원한다.",
+        "12.1인치 화면 두 개와 7인치 화면 한 개로 콘솔을 조작한다.",
+        "28개의 100mm 터치 감지 모터 페이더를 제공한다.",
+        "로컬 XLR 아날로그 입력 32개와 OMNI OUT 16개를 제공한다.",
+        "USB-C 연결로 최대 18입력/18출력 오디오 인터페이스로 동작한다.",
+        "PY 카드 슬롯을 통해 선택형 I/O를 확장할 수 있다.",
+        "잠금형 AC 입력 두 개를 사용하는 내장 이중 전원 구조를 제공한다."
+      ],
+      "documents": [
+        "매뉴얼DM7 Reference ManualkoFOUND보기↓ 내려받기"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/dm7-user-manual-0b1045e2664d.pdf",
+          "download": "dm7-user-manual-0b1045e2664d.pdf"
+        }
+      ],
+      "imageSwitches": [
+        "./images/dm7-front.webp",
+        "./images/dm7-rear.webp",
+        "./images/dm7-perspective.webp"
+      ],
+      "pdfs": [
+        "보기"
+      ],
+      "downloads": [
+        "dm7-user-manual-0b1045e2664d.pdf"
+      ]
+    },
+    {
+      "slug": "ua874xa",
+      "width": 1280,
+      "overflow": 0,
+      "height": 2388,
+      "roles": [
+        "Front"
+      ],
+      "ioRows": [
+        "RFBNC (Female)출력미확인RF output to receiver—출처: PFOUND",
+        "전원BNC (동축 바이어스 공급)입력1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))출처: PFOUND"
+      ],
+      "ports": [
+        "BNC (Female)출력 · 포트 수 미확인RF output to receiver",
+        "BNC (동축 바이어스 공급)입력 · 포트 1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))"
+      ],
+      "specs": [
+        "커넥터 타입BNC (Female)출처: P",
+        "임피던스50 Ω출처: P",
+        "전원 요구사항10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA조건: 바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함)출처: P",
+        "RF 주파수 대역 (UA874XA)902-960 MHz조건: 다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)출처: P",
+        "수신 패턴 (3dB 빔폭)70 도(degrees)출처: P",
+        "3차 상호변조 차단점 (OIP3)>30 dBm출처: P",
+        "안테나 게인 (On-Axis)7.5 dBi조건: 0dB 게인 설정, 중심 주파수 기준 (UA874XA)출처: P",
+        "신호 게인 (스위치 선택)+12 / +6 / 0 / -6 dB조건: ±1 dB, 4단 스위치 전환출처: P",
+        "RF 과부하 LED 임계값-5 dBm조건: 패시브 게인(0dB, -6dB) 설정에서는 RF 과부하 LED 미작동출처: P",
+        "치수 (UA874XA)224 x 234 x 36 mm (H x W x D)출처: P",
+        "무게 (UA874XA)213 g출처: P",
+        "동작 온도 범위-18°C ~ 63°C출처: P",
+        "보관 온도 범위-29°C ~ 74°C출처: P",
+        "설치 방식마이크 스탠드 마운트, 천장 서스펜션, 벽면 마운트(스위블 브래킷 내장)출처: P",
+        "국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재출처: U"
+      ],
+      "features": [
+        "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+        "내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다."
+      ],
+      "documents": [
+        "매뉴얼Shure UA800 Series / Wireless Antennas User GuideenFOUND보기↓ 내려받기"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ua874xa-user-manual-13f1febab8c9.pdf",
+          "download": "ua874xa-user-manual-13f1febab8c9.pdf"
+        }
+      ],
+      "imageSwitches": [
+        "./images/ua874xa-front.webp"
+      ],
+      "pdfs": [
+        "보기"
+      ],
+      "downloads": [
+        "ua874xa-user-manual-13f1febab8c9.pdf"
+      ]
+    },
+    {
+      "slug": "ua874xa",
+      "width": 390,
+      "overflow": 0,
+      "height": 3597,
+      "roles": [
+        "Front"
+      ],
+      "ioRows": [
+        "RFBNC (Female)출력미확인RF output to receiver—출처: PFOUND",
+        "전원BNC (동축 바이어스 공급)입력1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))출처: PFOUND"
+      ],
+      "ports": [
+        "BNC (Female)출력 · 포트 수 미확인RF output to receiver",
+        "BNC (동축 바이어스 공급)입력 · 포트 1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))"
+      ],
+      "specs": [
+        "커넥터 타입BNC (Female)출처: P",
+        "임피던스50 Ω출처: P",
+        "전원 요구사항10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA조건: 바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함)출처: P",
+        "RF 주파수 대역 (UA874XA)902-960 MHz조건: 다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)출처: P",
+        "수신 패턴 (3dB 빔폭)70 도(degrees)출처: P",
+        "3차 상호변조 차단점 (OIP3)>30 dBm출처: P",
+        "안테나 게인 (On-Axis)7.5 dBi조건: 0dB 게인 설정, 중심 주파수 기준 (UA874XA)출처: P",
+        "신호 게인 (스위치 선택)+12 / +6 / 0 / -6 dB조건: ±1 dB, 4단 스위치 전환출처: P",
+        "RF 과부하 LED 임계값-5 dBm조건: 패시브 게인(0dB, -6dB) 설정에서는 RF 과부하 LED 미작동출처: P",
+        "치수 (UA874XA)224 x 234 x 36 mm (H x W x D)출처: P",
+        "무게 (UA874XA)213 g출처: P",
+        "동작 온도 범위-18°C ~ 63°C출처: P",
+        "보관 온도 범위-29°C ~ 74°C출처: P",
+        "설치 방식마이크 스탠드 마운트, 천장 서스펜션, 벽면 마운트(스위블 브래킷 내장)출처: P",
+        "국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재출처: U"
+      ],
+      "features": [
+        "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+        "내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다."
+      ],
+      "documents": [
+        "매뉴얼Shure UA800 Series / Wireless Antennas User GuideenFOUND보기↓ 내려받기"
+      ],
+      "docTitle": "07문서",
+      "docActions": [
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ua874xa-user-manual-13f1febab8c9.pdf",
+          "download": "ua874xa-user-manual-13f1febab8c9.pdf"
+        }
+      ],
+      "imageSwitches": [
+        "./images/ua874xa-front.webp"
+      ],
+      "pdfs": [
+        "보기"
+      ],
+      "downloads": [
+        "ua874xa-user-manual-13f1febab8c9.pdf"
+      ]
+    }
+  ],
+  "errors": []
+}

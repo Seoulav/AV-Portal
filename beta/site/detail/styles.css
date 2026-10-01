@@ -149,3 +149,28 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
   .spec-data-row[hidden] { display: table-row !important; }
   .pg-checks li[hidden] { display: flex !important; }
 }
+
+/* Optional manufacturer detail cards; original photo and connector paths remain. */
+.supplemental-cards { display: grid; gap: 22px; margin-top: 22px; }
+.supplemental-cards:has(> :not([hidden])) { display: grid; }
+.supplemental-cards:not(:has(> :not([hidden]))) { display: none; }
+.spec-category-dot { display: inline-block; width: 8px; height: 8px; margin-right: 7px; border-radius: 50%; background: var(--category-color); vertical-align: 1px; }
+.enhancement-facts .fact-unit { font-size: 13px; font-weight: 500; margin-left: 5px; }
+.port-photo-stage { position: relative; width: 100%; margin: auto; display: grid; place-items: center; }
+.port-photo-stage > img { display: block; max-width: 100%; }
+#port-map-layer { position: absolute; pointer-events: none; }
+.port-map-overlay { position: relative; width: 100%; height: 100%; }
+.port-map-marker { position: absolute; bottom: 0; transform: translateX(-50%); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: white; background: #2459b0; border: 2px solid white; font-size: 12px; font-weight: 800; box-shadow: 0 1px 5px #0003; }
+.port-map-marker[data-side="top"] { bottom: auto; top: 0; }
+.port-map-list p { display: flex; flex-wrap: wrap; gap: 5px 12px; padding: 8px 0; border-bottom: 1px solid var(--pg-line); margin: 0; font-size: 13px; overflow-wrap: anywhere; }
+.signal-flow { width: 100%; min-width: 0; }
+.signal-flow svg { display: block; width: 100%; height: auto; }
+.flow-node { fill: #f2f6fc; stroke: #c8d6e9; }
+.flow-process { fill: #e5edff; stroke: #7297d2; }
+.flow-line { fill: none; stroke: #5879a7; stroke-width: 1.5; }
+.flow-text { fill: #20354f; font: 13px sans-serif; }
+.flow-note { font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.setting-table { max-width: 100%; overflow-x: auto; }
+.setting-table th, .setting-table td { min-width: 100px; overflow-wrap: anywhere; }
+.setting-card { min-width: 0; }
+@media (max-width:1000px) { .setting-card { grid-area: auto; } }

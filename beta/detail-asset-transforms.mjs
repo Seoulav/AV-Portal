@@ -1,5 +1,7 @@
 // Shared by the Group 1 builder and the source/generated-asset regression test.
 export const detailAssetPairs = [
+  ['prototype/brc-am7/detail-enhancements.mjs', 'beta/site/detail/detail-enhancements.mjs', 'copy'],
+  ['prototype/brc-am7/detail-enhancement-view.mjs', 'beta/site/detail/detail-enhancement-view.mjs', 'copy'],
   ['prototype/brc-am7/index.html', 'beta/site/detail/index.html', 'html'],
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
