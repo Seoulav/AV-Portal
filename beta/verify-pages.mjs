@@ -16,7 +16,9 @@ import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-ada
 
 const site = new URL('./site/', import.meta.url);
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'samples', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(await readdir(new URL('samples/', site)), ['h5-layers']);
+assert.deepEqual((await readdir(new URL('samples/h5-layers/', site))).sort(), ['app.js', 'index.html', 'model.mjs', 'styles.css']);
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
 assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
@@ -269,8 +271,11 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'rtcom', 'shared', 'vendor'].includes(name))) {
+for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'rtcom', 'samples', 'shared', 'vendor'].includes(name))) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
+}
+for (const filename of await readdir(new URL('samples/h5-layers/', site))) {
+  assert.ok(!privateMarkers.test(await readFile(new URL(`samples/h5-layers/${filename}`, site), 'utf8')), `H5 sample ${filename} private marker`);
 }
 for (const filename of (await readdir(detail)).filter(name => name !== 'data' && name !== 'images')) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, detail), 'utf8')), `detail/${filename} private marker`);
