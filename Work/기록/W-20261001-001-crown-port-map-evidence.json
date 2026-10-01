@@ -1,0 +1,2940 @@
+{
+  "baseline": "b00046eb50e819575d81f29b425d79d0853ea2ea",
+  "approved": "2026-10-02 user stage2 Crown22, A first",
+  "excluded": [
+    "dci-2-300n",
+    "dci-2-600n",
+    "dci-4-300n",
+    "dci-4-600n"
+  ],
+  "products": {
+    "cdi-2-1200": {
+      "coreSha256": "d4b41d6797a98c81a157d458d6f9f2b1a51ee40af5fdd3c0baf94c974467cc0d",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|1200",
+      "image": {
+        "file": "cdi-2-1200-rear.webp",
+        "width": 2000,
+        "height": 691,
+        "sha256": "ec2b177bc940d1781b7dd04e80221e35e39ccb79bbbc424ec67176bd88f30a37"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1700,
+          "x2": 1798,
+          "y": 481,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1210,
+          "x2": 1438,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1667,
+          "x2": 1737,
+          "y": 213,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1464,
+          "x2": 1594,
+          "y": 238,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 279,
+          "x2": 394,
+          "y": 470,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-2-1200bl": {
+      "coreSha256": "915beb2059cea2a3b5127ab923610397e00b6795019b039ad17f81c09aae58a5",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|1200BL",
+      "image": {
+        "file": "cdi-2-1200bl-rear.webp",
+        "width": 2000,
+        "height": 677,
+        "sha256": "6918c63f08ab78c3f9010574438d33e2d138a126888e7acc522bef83b09f29a1"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1710,
+          "x2": 1810,
+          "y": 481,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1210,
+          "x2": 1445,
+          "y": 491,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1247,
+          "x2": 1318,
+          "y": 203,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1337,
+          "x2": 1402,
+          "y": 203,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1680,
+          "x2": 1746,
+          "y": 204,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1475,
+          "x2": 1604,
+          "y": 232,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 258,
+          "x2": 376,
+          "y": 464,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-2-300": {
+      "coreSha256": "3eea8f95bfef622a93303fc644f2db18e552c901448a0ccd050e2a664a82765d",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|300",
+      "image": {
+        "file": "cdi-2-300-rear.webp",
+        "width": 2000,
+        "height": 667,
+        "sha256": "d6bb082fc8b414a74bf40fe48d1df1bba5068b09f2cb8bf95d385d004919c606"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1695,
+          "x2": 1786,
+          "y": 475,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1210,
+          "x2": 1430,
+          "y": 481,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1667,
+          "x2": 1734,
+          "y": 205,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1464,
+          "x2": 1592,
+          "y": 232,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 280,
+          "x2": 399,
+          "y": 460,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-2-300bl": {
+      "coreSha256": "88f79ce242b1098f1138c766ac1ce8faa922fda74b991cb8293e97ac7e074a6e",
+      "pdfs": [
+        "docs/cdi-2-300bl-specification-82837aa1e00f.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|300BL",
+      "image": {
+        "file": "cdi-2-300bl-rear.webp",
+        "width": 2000,
+        "height": 672,
+        "sha256": "bf8c5c936b0b6925b7150f22ae4f37fd1ba61517ea2844a96872304c153906d4"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1694,
+          "x2": 1785,
+          "y": 477,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1213,
+          "x2": 1434,
+          "y": 483,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1250,
+          "x2": 1317,
+          "y": 207,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1335,
+          "x2": 1399,
+          "y": 207,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1667,
+          "x2": 1732,
+          "y": 207,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1467,
+          "x2": 1592,
+          "y": 233,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 296,
+          "x2": 412,
+          "y": 460,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-300bl-specification-82837aa1e00f.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-2-600": {
+      "coreSha256": "fa484d2b6c8ce1652e62cc73a4974365a34225f1c9f964e4f86f6ffbbed81c29",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|600",
+      "image": {
+        "file": "cdi-2-600-rear.webp",
+        "width": 2000,
+        "height": 667,
+        "sha256": "0e12787353e7beec996ddf7f6c0c5b7767a28f91c86c5354276c5f2549f78375"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1695,
+          "x2": 1786,
+          "y": 467,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1215,
+          "x2": 1433,
+          "y": 475,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1669,
+          "x2": 1734,
+          "y": 204,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1468,
+          "x2": 1595,
+          "y": 227,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 303,
+          "x2": 422,
+          "y": 450,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-2-600bl": {
+      "coreSha256": "8358a88686e626e19cdbccf5a241f42256c851a235581bc02b6532b569bdd5d4",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 2|600BL",
+      "image": {
+        "file": "cdi-2-600bl-rear.webp",
+        "width": 2000,
+        "height": 701,
+        "sha256": "8a364367c72334dc85008c93acd7e9376c9a2ba46e64b55a4c9ecf824ac0abc1"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1715,
+          "x2": 1810,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1217,
+          "x2": 1445,
+          "y": 491,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1256,
+          "x2": 1320,
+          "y": 208,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1345,
+          "x2": 1409,
+          "y": 208,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1687,
+          "x2": 1754,
+          "y": 208,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1484,
+          "x2": 1610,
+          "y": 237,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 266,
+          "x2": 388,
+          "y": 473,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-1200": {
+      "coreSha256": "9e548e36d07688a2157341eeb74e3e092d66168e0028edc64abc5b0b5da2d5fb",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|1200",
+      "image": {
+        "file": "cdi-4-1200-rear.webp",
+        "width": 2000,
+        "height": 701,
+        "sha256": "0135aff8a4e056149821b112110512b3053513b6d4adc9589c2949843b4020ab"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1740,
+          "x2": 1836,
+          "y": 499,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1601,
+          "x2": 1704,
+          "y": 499,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1230,
+          "x2": 1455,
+          "y": 506,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 940,
+          "x2": 1165,
+          "y": 506,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1706,
+          "x2": 1777,
+          "y": 214,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1495,
+          "x2": 1627,
+          "y": 235,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 211,
+          "x2": 351,
+          "y": 485,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-1200bl": {
+      "coreSha256": "4f3ea5d51ba5987fc2e67fe2f9ee9cf03acb7a16af04800cde114d196ef11703",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|1200BL",
+      "image": {
+        "file": "cdi-4-1200bl-rear.webp",
+        "width": 2000,
+        "height": 692,
+        "sha256": "1f21f00d1bfd78cfa22dcf45478819e9912447bb281d1c2b5aa38f0ad119cb14"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1716,
+          "x2": 1810,
+          "y": 477,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1578,
+          "x2": 1678,
+          "y": 477,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1220,
+          "x2": 1445,
+          "y": 484,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 940,
+          "x2": 1164,
+          "y": 484,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1253,
+          "x2": 1321,
+          "y": 202,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1341,
+          "x2": 1406,
+          "y": 202,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1685,
+          "x2": 1752,
+          "y": 203,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 8,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1478,
+          "x2": 1608,
+          "y": 228,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 9,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 242,
+          "x2": 378,
+          "y": 460,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-300": {
+      "coreSha256": "d2ef17761e2c140ee18a4f00f95d1f59564a20ec030f736c20c4a4c2b7bfd726",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|300",
+      "image": {
+        "file": "cdi-4-300-rear.webp",
+        "width": 2000,
+        "height": 682,
+        "sha256": "0f86bedc53ce70899bf047c59c069c8565d914dfe4b81b003140970f707d0fb6"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1688,
+          "x2": 1782,
+          "y": 480,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1555,
+          "x2": 1655,
+          "y": 480,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1205,
+          "x2": 1430,
+          "y": 487,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 940,
+          "x2": 1155,
+          "y": 487,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1663,
+          "x2": 1728,
+          "y": 213,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1466,
+          "x2": 1589,
+          "y": 236,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 294,
+          "x2": 407,
+          "y": 465,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-300bl": {
+      "coreSha256": "8083f3145d82747872f932d13b117a30ef329668f1a8c4b815d3a5f6b0e6e9e1",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|300BL",
+      "image": {
+        "file": "cdi-4-300bl-rear.webp",
+        "width": 2000,
+        "height": 681,
+        "sha256": "cfd6dfacd3c44834157a0ebbad855cfa9f5aa8fcb127a302f1e0441f22cac718"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1718,
+          "x2": 1818,
+          "y": 482,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1584,
+          "x2": 1680,
+          "y": 482,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1219,
+          "x2": 1444,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 939,
+          "x2": 1163,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1254,
+          "x2": 1320,
+          "y": 205,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1347,
+          "x2": 1411,
+          "y": 205,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1693,
+          "x2": 1758,
+          "y": 207,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 8,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1483,
+          "x2": 1617,
+          "y": 234,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 9,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 262,
+          "x2": 384,
+          "y": 470,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-600": {
+      "coreSha256": "ad9f99a89df658f67956d76ca8c24c27c745873443989d749855e0bbfdd11a64",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|600",
+      "image": {
+        "file": "cdi-4-600-rear.webp",
+        "width": 2000,
+        "height": 693,
+        "sha256": "e564e23863a1219caf7d0316382e57ab33ea50ceea1a0e59c71581a046a262a5"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1698,
+          "x2": 1794,
+          "y": 482,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1564,
+          "x2": 1665,
+          "y": 482,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1210,
+          "x2": 1438,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 942,
+          "x2": 1157,
+          "y": 490,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1672,
+          "x2": 1738,
+          "y": 215,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1468,
+          "x2": 1595,
+          "y": 240,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 276,
+          "x2": 394,
+          "y": 470,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "cdi-4-600bl": {
+      "coreSha256": "33dd75d1a6f43a1e0f6f5494ab12660f686e686dcc311b8af4744b5c8058f525",
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "model": "Crown CDi 4|600BL",
+      "image": {
+        "file": "cdi-4-600bl-rear.webp",
+        "width": 2000,
+        "height": 683,
+        "sha256": "cf4c4b55c692dd35d85e427ad26d77e8b82463b17abf9485c49b0afce54cc338"
+      },
+      "pdf": "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf",
+      "pdfSha256": "b41a02e556dc99b2214a0896dc0f5e9d2af1b385c26d711267953bc1c902a22f",
+      "pageCount": 109,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "매뉴얼 PDF 1쪽 표지에 해당 모델 포함; 6쪽(인쇄 4쪽) 공통 단자 설명. 각 모델 사양서 PDF 2–3쪽 모델 표 대조; 사진별 채널 쌍과 BL 단자 유무 실측. 4|1200 전원 형상 차이를 보존하고 공통 15A 문구는 사용하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1710,
+          "x2": 1805,
+          "y": 480,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 오디오 소스의 두 채널을 연결합니다.",
+          "x1": 1575,
+          "x2": 1675,
+          "y": 480,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 1228,
+          "x2": 1450,
+          "y": 486,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍 연결 · 최대 10 AWG 배선.",
+          "x1": 960,
+          "x2": 1178,
+          "y": 486,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 5,
+          "label": "BLU link IN",
+          "desc": "RJ-45 · BLU link 장비와 직접 연결 · Ethernet 스위치/라우터 경유 불가.",
+          "x1": 1268,
+          "x2": 1338,
+          "y": 204,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link OUT",
+          "desc": "RJ-45 · 다음 BLU link 장비로 연결 · BL 모델 전용.",
+          "x1": 1348,
+          "x2": 1415,
+          "y": 204,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 전용 · BLU link 오디오 전송 불가.",
+          "x1": 1687,
+          "x2": 1750,
+          "y": 204,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 8,
+          "label": "GPIO/AUX",
+          "desc": "8핀 · GPIO 입력 2개·출력 2개, Sleep 및 앰프 상태 감시.",
+          "x1": 1486,
+          "x2": 1610,
+          "y": 232,
+          "side": "top",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "n": 9,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 306,
+          "x2": 421,
+          "y": 461,
+          "side": "bottom",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/cdi-drivecore-owner-s-manual-english",
+      "specModelTable": {
+        "file": "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "sha256": "011da45f2f6527a21736ce06be65154d279545e9ca973854f8791991300e58e9"
+      }
+    },
+    "comtech-d-2125": {
+      "coreSha256": "93650ed66069c5008e2a2afbe6618c84026f9d37538f297e22d3888d6da24cae",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "model": "ComTech D 2125",
+      "image": {
+        "file": "ctd-2125-rear.webp",
+        "width": 1312,
+        "height": 295,
+        "sha256": "974cd26c03b0ee409aa0d3d99a20fc756810b0722e4e85f411851669de6f6a3a"
+      },
+      "pdf": "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf",
+      "pdfSha256": "ed862bcd6c65c972279d1c96b28d1109d7ea91a6038ccfc736bccef8e0f0a663",
+      "pageCount": 58,
+      "modelPages": [
+        1,
+        8
+      ],
+      "modelApplicability": "PDF 1쪽 CTD-2125/4125/8125 포함; 8–9쪽 공통 단자 설명과 모델별 사진의 2/4/8채널 대조. 네트워크 기본 Split Mode는 Port A 제어/Port B Dante; 사진 명칭은 물리 식별용이며 설정에 따라 역할이 달라짐.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 819,
+          "x2": 950,
+          "y": 237,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 373,
+          "x2": 552,
+          "y": 234,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 3,
+          "label": "Dante/AES67 Primary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 994,
+          "x2": 1088,
+          "y": 66,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 4,
+          "label": "HControl Secondary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 1103,
+          "x2": 1199,
+          "y": 66,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 5,
+          "label": "GPI 1–4",
+          "desc": "6핀 블록 · 외부 제어 입력 4개.",
+          "x1": 973,
+          "x2": 1105,
+          "y": 237,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 6,
+          "label": "FAULT",
+          "desc": "3핀 GPO · 장애 상태 출력 · Sleep 상태도 Fault로 보고.",
+          "x1": 1127,
+          "x2": 1198,
+          "y": 237,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 7,
+          "label": "RESET",
+          "desc": "5초: 네트워크 초기화 · 10초: 공장 초기화.",
+          "x1": 778,
+          "x2": 799,
+          "y": 218,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 143,
+          "x2": 320,
+          "y": 220,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series"
+    },
+    "comtech-d-4125": {
+      "coreSha256": "c5c4fe25a2e9e9d9c892aa7370895d607441659fba9addb409ac76330af15ecd",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "model": "ComTech D 4125",
+      "image": {
+        "file": "ctd-4125-rear.webp",
+        "width": 1310,
+        "height": 292,
+        "sha256": "6e1eebfeba5d6e9b5f85a5dc85d2ef8c2b7006ba9ce0f349362e7e5f4c706665"
+      },
+      "pdf": "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf",
+      "pdfSha256": "ed862bcd6c65c972279d1c96b28d1109d7ea91a6038ccfc736bccef8e0f0a663",
+      "pageCount": 58,
+      "modelPages": [
+        1,
+        8
+      ],
+      "modelApplicability": "PDF 1쪽 CTD-2125/4125/8125 포함; 8–9쪽 공통 단자 설명과 모델별 사진의 2/4/8채널 대조. 네트워크 기본 Split Mode는 Port A 제어/Port B Dante; 사진 명칭은 물리 식별용이며 설정에 따라 역할이 달라짐.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 819,
+          "x2": 950,
+          "y": 89,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 819,
+          "x2": 950,
+          "y": 234,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 374,
+          "x2": 553,
+          "y": 232,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 575,
+          "x2": 754,
+          "y": 232,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Dante/AES67 Primary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 993,
+          "x2": 1086,
+          "y": 63,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HControl Secondary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 1101,
+          "x2": 1196,
+          "y": 63,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 7,
+          "label": "GPI 1–4",
+          "desc": "6핀 블록 · 외부 제어 입력 4개.",
+          "x1": 972,
+          "x2": 1103,
+          "y": 237,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 8,
+          "label": "FAULT",
+          "desc": "3핀 GPO · 장애 상태 출력 · Sleep 상태도 Fault로 보고.",
+          "x1": 1125,
+          "x2": 1196,
+          "y": 237,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RESET",
+          "desc": "5초: 네트워크 초기화 · 10초: 공장 초기화.",
+          "x1": 776,
+          "x2": 797,
+          "y": 215,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 145,
+          "x2": 322,
+          "y": 219,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series"
+    },
+    "comtech-d-8125": {
+      "coreSha256": "513f1f72f0e877c1ac49cab5fb51d73a75cd9e5464a017df07cf54ba5f275b71",
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "model": "ComTech D 8125",
+      "image": {
+        "file": "ctd-8125-rear.webp",
+        "width": 1519,
+        "height": 188,
+        "sha256": "97413c17176d5d23f3cc76a967219e6592370311b0c976f10e10809279359e6b"
+      },
+      "pdf": "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf",
+      "pdfSha256": "ed862bcd6c65c972279d1c96b28d1109d7ea91a6038ccfc736bccef8e0f0a663",
+      "pageCount": 58,
+      "modelPages": [
+        1,
+        8
+      ],
+      "modelApplicability": "PDF 1쪽 CTD-2125/4125/8125 포함; 8–9쪽 공통 단자 설명과 모델별 사진의 2/4/8채널 대조. 네트워크 기본 Split Mode는 Port A 제어/Port B Dante; 사진 명칭은 물리 식별용이며 설정에 따라 역할이 달라짐.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 1019,
+          "x2": 1095,
+          "y": 54,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 1110,
+          "x2": 1184,
+          "y": 54,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 5·6",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 1019,
+          "x2": 1095,
+          "y": 146,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 4,
+          "label": "아날로그 입력 7·8",
+          "desc": "밸런스 6핀 · 오디오 소스의 채널 쌍을 연결합니다.",
+          "x1": 1110,
+          "x2": 1184,
+          "y": 146,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 5,
+          "label": "스피커 출력 1·2",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 354,
+          "x2": 460,
+          "y": 149,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 6,
+          "label": "스피커 출력 3·4",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 471,
+          "x2": 577,
+          "y": 149,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 7,
+          "label": "스피커 출력 5·6",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 623,
+          "x2": 728,
+          "y": 149,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 8,
+          "label": "스피커 출력 7·8",
+          "desc": "4핀 Phoenix · 채널 쌍 연결 · 최대 12 AWG 배선.",
+          "x1": 742,
+          "x2": 846,
+          "y": 149,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 9,
+          "label": "Dante/AES67 Primary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 1328,
+          "x2": 1383,
+          "y": 45,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 10,
+          "label": "HControl Secondary",
+          "desc": "RJ-45 · 사진의 포트 명칭 · 오디오/제어 역할은 네트워크 모드 설정에 따릅니다.",
+          "x1": 1390,
+          "x2": 1446,
+          "y": 45,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 11,
+          "label": "GPI 1–4",
+          "desc": "6핀 블록 · 외부 제어 입력 4개.",
+          "x1": 1225,
+          "x2": 1301,
+          "y": 147,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 12,
+          "label": "GPI 5–8",
+          "desc": "6핀 블록 · 외부 제어 입력 4개.",
+          "x1": 1313,
+          "x2": 1391,
+          "y": 147,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 13,
+          "label": "FAULT",
+          "desc": "3핀 GPO · 장애 상태 출력 · Sleep 상태도 Fault로 보고.",
+          "x1": 1400,
+          "x2": 1445,
+          "y": 147,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 14,
+          "label": "RESET",
+          "desc": "5초: 네트워크 초기화 · 10초: 공장 초기화.",
+          "x1": 974,
+          "x2": 993,
+          "y": 136,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 15,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 95,
+          "x2": 194,
+          "y": 135,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/user-manual-comtech-d-series"
+    },
+    "dci-2-300": {
+      "coreSha256": "ce496cdeffe3133e2d80a286d1c0d89a69e1da98acf09497d8b6e2e4964fa9bd",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "model": "Crown DCi 2|300",
+      "image": {
+        "file": "dci-2-300-rear.webp",
+        "width": 2000,
+        "height": 590,
+        "sha256": "17d76c88213f718b454ca05add11c13952344bf4f8efcfd31f744575def1404b"
+      },
+      "pdf": "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf",
+      "pdfSha256": "26235169c3ba8657e7bdb6e324b4c379e6d1bdc3911671c00fb117835d3b7358",
+      "pageCount": 32,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "표지의 2|300·2|600·4|300·4|600 포함 확인; PDF 12쪽은 8채널 예시지만 채널 쌍별 구성은 2/4채널 동일하다고 명시. 각 사진에서 채널 수 확인. 8|600/4|1250 전용 차단기는 추가하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 145,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 438,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 3,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 471,
+          "x2": 547,
+          "y": 436,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 4,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 688,
+          "x2": 720,
+          "y": 148,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 5,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 150,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 6,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 216,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 7,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 245,
+          "x2": 306,
+          "y": 284,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 214,
+          "x2": 337,
+          "y": 414,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-manual-english"
+    },
+    "dci-2-600": {
+      "coreSha256": "e9ab104f6ec90fdca5b5327bfc462a8e6bee2f5d93856226a8fad93f98fa6b97",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "model": "Crown DCi 2|600",
+      "image": {
+        "file": "dci-2-600-rear.webp",
+        "width": 2000,
+        "height": 590,
+        "sha256": "17d76c88213f718b454ca05add11c13952344bf4f8efcfd31f744575def1404b"
+      },
+      "pdf": "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf",
+      "pdfSha256": "26235169c3ba8657e7bdb6e324b4c379e6d1bdc3911671c00fb117835d3b7358",
+      "pageCount": 32,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "표지의 2|300·2|600·4|300·4|600 포함 확인; PDF 12쪽은 8채널 예시지만 채널 쌍별 구성은 2/4채널 동일하다고 명시. 각 사진에서 채널 수 확인. 8|600/4|1250 전용 차단기는 추가하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 145,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 438,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 3,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 471,
+          "x2": 547,
+          "y": 436,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 4,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 688,
+          "x2": 720,
+          "y": 148,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 5,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 150,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 6,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 216,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 7,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 245,
+          "x2": 306,
+          "y": 284,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 214,
+          "x2": 337,
+          "y": 414,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-manual-english"
+    },
+    "dci-4-300": {
+      "coreSha256": "15331c27e326d09bd4fb8d2a9c980cb9e0ad447bee07f687c28e3c43c03e557e",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "model": "Crown DCi 4|300",
+      "image": {
+        "file": "dci-4-300-rear.webp",
+        "width": 2000,
+        "height": 616,
+        "sha256": "7c8cbb5bc7d49e07aba9c92655c0fe3bc3664d1f3bef7ba3afef763e11d65213"
+      },
+      "pdf": "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf",
+      "pdfSha256": "26235169c3ba8657e7bdb6e324b4c379e6d1bdc3911671c00fb117835d3b7358",
+      "pageCount": 32,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "표지의 2|300·2|600·4|300·4|600 포함 확인; PDF 12쪽은 8채널 예시지만 채널 쌍별 구성은 2/4채널 동일하다고 명시. 각 사진에서 채널 수 확인. 8|600/4|1250 전용 차단기는 추가하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 157,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 157,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 474,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 474,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 425,
+          "x2": 500,
+          "y": 469,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 6,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 652,
+          "x2": 688,
+          "y": 171,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 7,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 166,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 8,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 224,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 9,
+          "label": "채널 3·4 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 166,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 10,
+          "label": "입력 감쇠 3·4",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 224,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 178,
+          "x2": 239,
+          "y": 304,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 144,
+          "x2": 277,
+          "y": 446,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-manual-english"
+    },
+    "dci-4-300da": {
+      "coreSha256": "55200f56e0d5f87b0dcd7a61715e90578b9c8aa9d7eab5086ca75967c270fa8a",
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "model": "Crown DCi 4|300DA",
+      "image": {
+        "file": "dci-4-300da-rear.webp",
+        "width": 2000,
+        "height": 1333,
+        "sha256": "638edffbcfeec6d7f9b6b263bfa10ada45846b0ca6a181dc7355d98b7f612a8f"
+      },
+      "pdf": "manuals/crown-dci-install-da-series-manual.pdf",
+      "pdfSha256": "522cea4ed40509e574ee68c48f6141a0ad8b75de20a3625181fc5869de63b453",
+      "pageCount": 68,
+      "modelPages": [
+        1,
+        7
+      ],
+      "modelApplicability": "PDF 표지에 4|300DA 포함. 7쪽은 8|300DA 사진이며 4채널은 입출력 절반이라는 주석과 해당 4채널 원본 사진을 대조. 4|1250DA/8|600DA 전용 차단기는 추가하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1735,
+          "x2": 1835,
+          "y": 548,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1598,
+          "x2": 1696,
+          "y": 548,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1568,
+          "x2": 1800,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1310,
+          "x2": 1543,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오망 · CAT5e 이상, 건물 내부망 연결.",
+          "x1": 875,
+          "x2": 944,
+          "y": 648,
+          "side": "bottom",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "n": 6,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 오디오 이중화용 두 번째 네트워크 연결.",
+          "x1": 970,
+          "x2": 1040,
+          "y": 575,
+          "side": "top",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 제어 · Dante 포트와 구별합니다.",
+          "x1": 766,
+          "x2": 840,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 8,
+          "label": "GPIO",
+          "desc": "RJ-11 · 외부 제어용 아날로그 입력 2개와 디지털 출력 2개.",
+          "x1": 697,
+          "x2": 754,
+          "y": 620,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 9,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 441,
+          "x2": 510,
+          "y": 847,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 183,
+          "x2": 297,
+          "y": 817,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "pdfOriginalUrl": null
+    },
+    "dci-4-600": {
+      "coreSha256": "3a21ea1cc2d0f3071bec9ead5cdf3255a52eccb25585b3f1e42c43739280efb7",
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "model": "Crown DCi 4|600",
+      "image": {
+        "file": "dci-4-600-rear.webp",
+        "width": 2000,
+        "height": 616,
+        "sha256": "7c8cbb5bc7d49e07aba9c92655c0fe3bc3664d1f3bef7ba3afef763e11d65213"
+      },
+      "pdf": "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf",
+      "pdfSha256": "26235169c3ba8657e7bdb6e324b4c379e6d1bdc3911671c00fb117835d3b7358",
+      "pageCount": 32,
+      "modelPages": [
+        1
+      ],
+      "modelApplicability": "표지의 2|300·2|600·4|300·4|600 포함 확인; PDF 12쪽은 8채널 예시지만 채널 쌍별 구성은 2/4채널 동일하다고 명시. 각 사진에서 채널 수 확인. 8|600/4|1250 전용 차단기는 추가하지 않음.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 157,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍을 연결합니다.",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 157,
+          "side": "top",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 474,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 474,
+          "side": "bottom",
+          "pages": [
+            6,
+            12
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 425,
+          "x2": 500,
+          "y": 469,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 6,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 652,
+          "x2": 688,
+          "y": 171,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 7,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 166,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 8,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 224,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 9,
+          "label": "채널 3·4 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 166,
+          "side": "top",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 10,
+          "label": "입력 감쇠 3·4",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 224,
+          "side": "bottom",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 178,
+          "x2": 239,
+          "y": 304,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 144,
+          "x2": 277,
+          "y": 446,
+          "side": "bottom",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-analog-manual-english"
+    },
+    "dci-4-600da": {
+      "coreSha256": "3b659e2ddf3375dda25c891c60ae5e4f2ae3c9ab400ca1bd3a5a0a760f74b42b",
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "model": "Crown DCi 4|600DA",
+      "image": {
+        "file": "dci-4-600da-rear.webp",
+        "width": 2000,
+        "height": 1333,
+        "sha256": "638edffbcfeec6d7f9b6b263bfa10ada45846b0ca6a181dc7355d98b7f612a8f"
+      },
+      "pdf": "manuals/crown-dci-install-da-series-manual.pdf",
+      "pdfSha256": "522cea4ed40509e574ee68c48f6141a0ad8b75de20a3625181fc5869de63b453",
+      "pageCount": 68,
+      "modelPages": [
+        1,
+        7
+      ],
+      "modelApplicability": "기존 승인된 10개 지도와 crop 그대로 보존. PDF 7–8쪽 및 기존 시범 근거표 재사용.",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1705,
+          "x2": 1806,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1569,
+          "x2": 1668,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+          "x1": 1515,
+          "x2": 1768,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+          "x1": 1245,
+          "x2": 1495,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오망 연결; 기가비트는 CAT5e 이상, 건물 내부망만 사용.",
+          "x1": 875,
+          "x2": 944,
+          "y": 645,
+          "side": "bottom",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "n": 6,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 오디오 이중화용 두 번째 네트워크에 연결합니다.",
+          "x1": 971,
+          "x2": 1040,
+          "y": 570,
+          "side": "top",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 모니터링/제어용; Dante 포트와 구별합니다.",
+          "x1": 770,
+          "x2": 845,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 8,
+          "label": "GPIO",
+          "desc": "RJ-11 · 외부 제어용 아날로그 입력 2개와 디지털 출력 2개.",
+          "x1": 695,
+          "x2": 746,
+          "y": 620,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 9,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시(꺼짐/Sleep/고장 상태 제외).",
+          "x1": 430,
+          "x2": 510,
+          "y": 842,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC, 50/60Hz 전원을 연결합니다.",
+          "x1": 176,
+          "x2": 295,
+          "y": 824,
+          "side": "bottom",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "pdfOriginalUrl": null
+    },
+    "i-tech-4x3500hd": {
+      "coreSha256": "0b8bec98d6a6bbefbd7928decdec5ed76f439b068065fe6a7c614c2fa381f927",
+      "pdfs": [
+        "docs/i-tech-4x3500hd-specification-5ac628f678a6.pdf",
+        "docs/i-tech-4x3500hd-user-manual-f2665f3dd739.pdf"
+      ],
+      "model": "Crown I-Tech 4x3500HD",
+      "image": {
+        "file": "itech-4x3500hd-rear.webp",
+        "width": 2000,
+        "height": 1333,
+        "sha256": "b63ba7c5716d3733ae34d3c54b3cada99460da81dcd2bad809b58415c448a20d"
+      },
+      "pdf": "docs/i-tech-4x3500hd-user-manual-f2665f3dd739.pdf",
+      "pdfSha256": "5e24e45798f1929c68cd0b0f7b9cbb0f4a5c33175cecf7986c1889c093d05163",
+      "pageCount": 36,
+      "modelPages": [
+        1,
+        9
+      ],
+      "modelApplicability": "PDF 9쪽(인쇄 16–17쪽) 후면 2종 중 해당 사진의 Speakon형만 적용; Binding Post형은 제외. 원본 하단 거울 반사상은 단자로 세지 않고 표시 crop으로 크게 줄임(확대 원본에는 반사상 그대로 보존).",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1",
+          "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+          "x1": 683,
+          "x2": 781,
+          "y": 490,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 2",
+          "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+          "x1": 792,
+          "x2": 892,
+          "y": 490,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3",
+          "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+          "x1": 948,
+          "x2": 1050,
+          "y": 490,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 4,
+          "label": "아날로그 입력 4",
+          "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+          "x1": 1056,
+          "x2": 1156,
+          "y": 490,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 5,
+          "label": "AES3 입력 1·2",
+          "desc": "3핀 XLR Female · AES/EBU 디지털 오디오 입력.",
+          "x1": 684,
+          "x2": 784,
+          "y": 784,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 6,
+          "label": "AES3 입력 3·4",
+          "desc": "3핀 XLR Female · AES/EBU 디지털 오디오 입력.",
+          "x1": 792,
+          "x2": 891,
+          "y": 784,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Speakon 출력 1·2",
+          "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+          "x1": 1565,
+          "x2": 1718,
+          "y": 481,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 8,
+          "label": "Speakon 출력 3·4",
+          "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+          "x1": 1748,
+          "x2": 1885,
+          "y": 481,
+          "side": "top",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 9,
+          "label": "Speakon 출력 1–4",
+          "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+          "x1": 1642,
+          "x2": 1795,
+          "y": 780,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 10,
+          "label": "네트워크",
+          "desc": "EtherCon · CobraNet/네트워크 제어 · 건물 내부망만 연결.",
+          "x1": 948,
+          "x2": 1045,
+          "y": 787,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 11,
+          "label": "회로 차단기",
+          "desc": "과전류 시 AC 전원 차단 · 스위치로 회로 차단기를 재설정합니다.",
+          "x1": 380,
+          "x2": 516,
+          "y": 799,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "32A PowerCon · 본체 표시 전압에 맞는 AC 전원을 연결합니다.",
+          "x1": 133,
+          "x2": 261,
+          "y": 765,
+          "side": "bottom",
+          "pages": [
+            9
+          ]
+        }
+      ],
+      "pdfOriginalUrl": "https://www.crownaudio.com/en-US/site_elements/i-tech-4x3500hd-manual-english"
+    }
+  }
+}

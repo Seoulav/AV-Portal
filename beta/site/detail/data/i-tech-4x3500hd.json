@@ -476,5 +476,127 @@
     "footerNote": "Crown Crown I-Tech 4x3500HD · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "itech-4x3500hd-rear.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 1",
+        "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+        "x1": 683,
+        "x2": 781,
+        "y": 490,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 2",
+        "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+        "x1": 792,
+        "x2": 892,
+        "y": 490,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "아날로그 입력 3",
+        "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+        "x1": 948,
+        "x2": 1050,
+        "y": 490,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "아날로그 입력 4",
+        "desc": "3핀 XLR Female · 채널별 밸런스 오디오 입력.",
+        "x1": 1056,
+        "x2": 1156,
+        "y": 490,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "AES3 입력 1·2",
+        "desc": "3핀 XLR Female · AES/EBU 디지털 오디오 입력.",
+        "x1": 684,
+        "x2": 784,
+        "y": 784,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "AES3 입력 3·4",
+        "desc": "3핀 XLR Female · AES/EBU 디지털 오디오 입력.",
+        "x1": 792,
+        "x2": 891,
+        "y": 784,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "Speakon 출력 1·2",
+        "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+        "x1": 1565,
+        "x2": 1718,
+        "y": 481,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "Speakon 출력 3·4",
+        "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+        "x1": 1748,
+        "x2": 1885,
+        "y": 481,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "Speakon 출력 1–4",
+        "desc": "스피커 연결 · 위쪽 NL4는 채널 쌍, 아래쪽 NLT8은 4채널용.",
+        "x1": 1642,
+        "x2": 1795,
+        "y": 780,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "네트워크",
+        "desc": "EtherCon · CobraNet/네트워크 제어 · 건물 내부망만 연결.",
+        "x1": 948,
+        "x2": 1045,
+        "y": 787,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "회로 차단기",
+        "desc": "과전류 시 AC 전원 차단 · 스위치로 회로 차단기를 재설정합니다.",
+        "x1": 380,
+        "x2": 516,
+        "y": 799,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "AC 전원 입력",
+        "desc": "32A PowerCon · 본체 표시 전압에 맞는 AC 전원을 연결합니다.",
+        "x1": 133,
+        "x2": 261,
+        "y": 765,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 405,
+      "bottom": 516
+    }
   }
 }
