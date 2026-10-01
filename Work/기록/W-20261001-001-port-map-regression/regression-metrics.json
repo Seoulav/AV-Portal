@@ -1,0 +1,2668 @@
+{
+  "sha": "a837b1d2dea1b5418472ad568215c68bb28ef765",
+  "products": [
+    {
+      "slug": "a900w-r-gm",
+      "io": 0,
+      "specs": 7,
+      "features": 2,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ac18-26",
+      "io": 2,
+      "specs": 17,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ac18-95",
+      "io": 2,
+      "specs": 16,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "aquilon-rs1",
+      "io": 5,
+      "specs": 13,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "aquilon-rs2",
+      "io": 6,
+      "specs": 16,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "avhub",
+      "io": 8,
+      "specs": 8,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "avio-2ch-in",
+      "io": 2,
+      "specs": 10,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "avio-2ch-out",
+      "io": 2,
+      "specs": 10,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "avio-bt",
+      "io": 2,
+      "specs": 9,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "avio-usb-c",
+      "io": 2,
+      "specs": 11,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-100",
+      "io": 6,
+      "specs": 14,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-101",
+      "io": 6,
+      "specs": 18,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-160",
+      "io": 9,
+      "specs": 19,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-50v2",
+      "io": 8,
+      "specs": 25,
+      "features": 7,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-aec-in",
+      "io": 3,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blu-dan",
+      "io": 4,
+      "specs": 7,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blucard-in",
+      "io": 3,
+      "specs": 10,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "blucard-out",
+      "io": 3,
+      "specs": 11,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "brc-am7",
+      "io": 14,
+      "specs": 27,
+      "features": 8,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-1200",
+      "io": 2,
+      "specs": 25,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-1200bl",
+      "io": 3,
+      "specs": 26,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-300",
+      "io": 4,
+      "specs": 30,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-300bl",
+      "io": 6,
+      "specs": 29,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-600",
+      "io": 2,
+      "specs": 24,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-2-600bl",
+      "io": 4,
+      "specs": 27,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-1200",
+      "io": 2,
+      "specs": 25,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-1200bl",
+      "io": 3,
+      "specs": 25,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-300",
+      "io": 3,
+      "specs": 26,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-300bl",
+      "io": 3,
+      "specs": 26,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-600",
+      "io": 2,
+      "specs": 25,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cdi-4-600bl",
+      "io": 3,
+      "specs": 26,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cl01",
+      "io": 5,
+      "specs": 11,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cm20",
+      "io": 0,
+      "specs": 14,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "comtech-d-2125",
+      "io": 5,
+      "specs": 20,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "comtech-d-4125",
+      "io": 5,
+      "specs": 20,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "comtech-d-8125",
+      "io": 5,
+      "specs": 19,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "confidea-flex",
+      "io": 4,
+      "specs": 30,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-23-1",
+      "io": 1,
+      "specs": 25,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-25-1",
+      "io": 1,
+      "specs": 25,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-28-1",
+      "io": 1,
+      "specs": 25,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-412ct",
+      "io": 1,
+      "specs": 15,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-414ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-416ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-418ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-419cst",
+      "io": 1,
+      "specs": 15,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-424ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-424lp",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-426ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-426lp",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-440cst",
+      "io": 1,
+      "specs": 15,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "control-447ct",
+      "io": 1,
+      "specs": 16,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cpe40",
+      "io": 1,
+      "specs": 7,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "cs10",
+      "io": 0,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "d-cerno-ae",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "d-mic-40-sl",
+      "io": 1,
+      "specs": 20,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "d-mic-50-sl",
+      "io": 1,
+      "specs": 20,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-2-300",
+      "io": 2,
+      "specs": 24,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-2-300n",
+      "io": 5,
+      "specs": 25,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-2-600",
+      "io": 2,
+      "specs": 22,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-2-600n",
+      "io": 4,
+      "specs": 24,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-300",
+      "io": 2,
+      "specs": 22,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-300da",
+      "io": 3,
+      "specs": 34,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-300n",
+      "io": 5,
+      "specs": 26,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-600",
+      "io": 1,
+      "specs": 20,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-600da",
+      "io": 3,
+      "specs": 33,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dci-4-600n",
+      "io": 4,
+      "specs": 25,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dm3",
+      "io": 8,
+      "specs": 15,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "dm7",
+      "io": 15,
+      "specs": 16,
+      "features": 8,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "duecanali-1604-dsp",
+      "io": 3,
+      "specs": 48,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "duecanali-1604-dspd",
+      "io": 4,
+      "specs": 67,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "duecanali-804-dsp",
+      "io": 3,
+      "specs": 48,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "duecanali-804-dspd",
+      "io": 4,
+      "specs": 67,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l260f",
+      "io": 12,
+      "specs": 25,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l530u",
+      "io": 12,
+      "specs": 12,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l690u",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l695se",
+      "io": 8,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l790su",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l790u",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l795se",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l895e",
+      "io": 8,
+      "specs": 28,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-l895u",
+      "io": 8,
+      "specs": 27,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pq2213b",
+      "io": 11,
+      "specs": 24,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pq2216b",
+      "io": 11,
+      "specs": 24,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pq2220b",
+      "io": 11,
+      "specs": 25,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pu1008b",
+      "io": 9,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pu2010w-b",
+      "io": 11,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pu2213b",
+      "io": 12,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eb-pu2216b",
+      "io": 12,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ec-4bv",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "eikos-4k",
+      "io": 10,
+      "specs": 15,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ez-hsv-plus",
+      "io": 4,
+      "specs": 12,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ez-md-plus",
+      "io": 8,
+      "specs": 17,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ez-shv-plus",
+      "io": 5,
+      "specs": 13,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ez-umd-plus",
+      "io": 11,
+      "specs": 36,
+      "features": 8,
+      "images": 5,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gs108pp",
+      "io": 1,
+      "specs": 14,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gs116pp",
+      "io": 1,
+      "specs": 19,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gs728tppv3",
+      "io": 5,
+      "specs": 46,
+      "features": 9,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gsm4212p",
+      "io": 9,
+      "specs": 43,
+      "features": 7,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gsm4230p",
+      "io": 4,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gsm4230px",
+      "io": 4,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gsm4248p",
+      "io": 3,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "gsm4248px",
+      "io": 2,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-800w-psu",
+      "io": 1,
+      "specs": 5,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-12g-sdi",
+      "io": 2,
+      "specs": 6,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-2xhdmi20-2xdp12",
+      "io": 2,
+      "specs": 6,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-4x3g-sdi",
+      "io": 1,
+      "specs": 5,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-4xhdmi",
+      "io": 2,
+      "specs": 6,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-dp12-4k",
+      "io": 1,
+      "specs": 6,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-hdmi20-4k",
+      "io": 1,
+      "specs": 6,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-input-card-hdmi20-dp12-4k",
+      "io": 2,
+      "specs": 7,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-output-card-4xhdmi-dl",
+      "io": 1,
+      "specs": 7,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-output-card-hdmi20-4k",
+      "io": 2,
+      "specs": 6,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "h-preview-card-2xrj45-1xhdmi13",
+      "io": 2,
+      "specs": 4,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hdmi20-optj-rx90",
+      "io": 3,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hdmi20-optj-tx90",
+      "io": 3,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "io": 9,
+      "specs": 37,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "io": 9,
+      "specs": 36,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "io": 9,
+      "specs": 36,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hyperdeck-studio-hd-mini",
+      "io": 6,
+      "specs": 8,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hyperdeck-studio-hd-plus",
+      "io": 6,
+      "specs": 8,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "hyperdeck-studio-hd-pro",
+      "io": 6,
+      "specs": 8,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "io": 3,
+      "specs": 29,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ki-pro-go2",
+      "io": 11,
+      "specs": 16,
+      "features": 8,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "led-780h",
+      "io": 6,
+      "specs": 11,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "io": 10,
+      "specs": 47,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "io": 9,
+      "specs": 38,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "io": 9,
+      "specs": 43,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "io": 9,
+      "specs": 43,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "io": 12,
+      "specs": 35,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "io": 12,
+      "specs": 35,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "io": 7,
+      "specs": 41,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "io": 9,
+      "specs": 43,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "io": 7,
+      "specs": 40,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "io": 9,
+      "specs": 43,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "io": 7,
+      "specs": 37,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "io": 9,
+      "specs": 42,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-322-a",
+      "io": 6,
+      "specs": 57,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-322-ad",
+      "io": 5,
+      "specs": 11,
+      "features": 7,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-324-a",
+      "io": 5,
+      "specs": 56,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-324-ad",
+      "io": 7,
+      "specs": 59,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-602-a",
+      "io": 6,
+      "specs": 60,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-602-ad",
+      "io": 8,
+      "specs": 63,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-604-a",
+      "io": 5,
+      "specs": 59,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mezzo-604-ad",
+      "io": 7,
+      "specs": 62,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mx392-c",
+      "io": 2,
+      "specs": 25,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mx395",
+      "io": 2,
+      "specs": 25,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mx418d-c",
+      "io": 2,
+      "specs": 26,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mxa925w-r",
+      "io": 3,
+      "specs": 31,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mxc420-c",
+      "io": 1,
+      "specs": 13,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mxcw640",
+      "io": 4,
+      "specs": 11,
+      "features": 7,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "mxcwapt-w",
+      "io": 3,
+      "specs": 21,
+      "features": 3,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "novastar-h2",
+      "io": 7,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "novastar-h5",
+      "io": 8,
+      "specs": 26,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "nx-1200",
+      "io": 7,
+      "specs": 19,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "nx-2200",
+      "io": 8,
+      "specs": 19,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "nx-3200",
+      "io": 8,
+      "specs": 19,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "plixus-ae-r-dante",
+      "io": 9,
+      "specs": 27,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "plixus-ae-r-ps",
+      "io": 2,
+      "specs": 21,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "plixus-next",
+      "io": 3,
+      "specs": 12,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-mz11k",
+      "io": 8,
+      "specs": 14,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-mz14k",
+      "io": 8,
+      "specs": 14,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-mz17k",
+      "io": 4,
+      "specs": 13,
+      "features": 7,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-mz882",
+      "io": 10,
+      "specs": 14,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-vmz51",
+      "io": 7,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-vmz61",
+      "io": 7,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pt-vmz71",
+      "io": 7,
+      "specs": 15,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "pulse-4k",
+      "io": 10,
+      "specs": 14,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "qlxd1",
+      "io": 2,
+      "specs": 21,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "qlxd2-beta58",
+      "io": 0,
+      "specs": 17,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "qlxd2-beta87a",
+      "io": 0,
+      "specs": 18,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "qlxd4",
+      "io": 4,
+      "specs": 30,
+      "features": 3,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-1204-dsp",
+      "io": 3,
+      "specs": 49,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-1204-dspd",
+      "io": 4,
+      "specs": 67,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-2404-dsp",
+      "io": 3,
+      "specs": 49,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-2404-dspd",
+      "io": 4,
+      "specs": 67,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-4804-dsp",
+      "io": 3,
+      "specs": 49,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "quattrocanali-4804-dspd",
+      "io": 4,
+      "specs": 67,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rally-bar",
+      "io": 9,
+      "specs": 16,
+      "features": 8,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rally-mic-pod-extension-cable",
+      "io": 1,
+      "specs": 5,
+      "features": 4,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rally-mic-pod-hub",
+      "io": 1,
+      "specs": 5,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rally-mic-pod",
+      "io": 2,
+      "specs": 13,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rally-plus",
+      "io": 8,
+      "specs": 15,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rc400t",
+      "io": 3,
+      "specs": 10,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rio1608-d3",
+      "io": 5,
+      "specs": 12,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rio3224-d3",
+      "io": 6,
+      "specs": 12,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rm-ip10",
+      "io": 5,
+      "specs": 21,
+      "features": 6,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "rm-ip500",
+      "io": 4,
+      "specs": 23,
+      "features": 7,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd1-plus",
+      "io": 1,
+      "specs": 39,
+      "features": 3,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd2-plus-58",
+      "io": 0,
+      "specs": 39,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd2-plus-b58",
+      "io": 0,
+      "specs": 39,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd2-plus-b87a",
+      "io": 0,
+      "specs": 39,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd4-plus",
+      "io": 4,
+      "specs": 50,
+      "features": 3,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "slxd4d-plus",
+      "io": 4,
+      "specs": 50,
+      "features": 3,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "smartvision40",
+      "io": 0,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "srg-a40",
+      "io": 8,
+      "specs": 54,
+      "features": 8,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "srg-x40uh",
+      "io": 7,
+      "specs": 46,
+      "features": 8,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "strong-usb-cable",
+      "io": 2,
+      "specs": 4,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "sx-1216-rti",
+      "io": 3,
+      "specs": 9,
+      "features": 7,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "tio1608-d2",
+      "io": 3,
+      "specs": 12,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "tr315",
+      "io": 4,
+      "specs": 12,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "tr335",
+      "io": 4,
+      "specs": 12,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ua844-swb",
+      "io": 4,
+      "specs": 17,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ua845uwb",
+      "io": 3,
+      "specs": 14,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ua864a",
+      "io": 2,
+      "specs": 14,
+      "features": 2,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ua874xa",
+      "io": 2,
+      "specs": 15,
+      "features": 2,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ultripower-ps",
+      "io": 0,
+      "specs": 3,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ultripower",
+      "io": 2,
+      "specs": 10,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ultritouch-2-hr",
+      "io": 4,
+      "specs": 12,
+      "features": 5,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ultrix-hdx-io",
+      "io": 4,
+      "specs": 15,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ultrix-ns-fr2",
+      "io": 6,
+      "specs": 28,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd1",
+      "io": 2,
+      "specs": 21,
+      "features": 2,
+      "images": 4,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd2-beta58",
+      "io": 0,
+      "specs": 19,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd2-beta87",
+      "io": 0,
+      "specs": 18,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd2-ksm9",
+      "io": 0,
+      "specs": 18,
+      "features": 3,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd4",
+      "io": 3,
+      "specs": 28,
+      "features": 3,
+      "images": 3,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd4d",
+      "io": 5,
+      "specs": 30,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd4q",
+      "io": 5,
+      "specs": 34,
+      "features": 4,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "ulxd8",
+      "io": 0,
+      "specs": 10,
+      "features": 2,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "uvc-01",
+      "io": 3,
+      "specs": 10,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "uvc85-byod",
+      "io": 2,
+      "specs": 11,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "uvc86",
+      "io": 8,
+      "specs": 16,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "v-02hd-mk-ii",
+      "io": 6,
+      "specs": 10,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "v-160hd",
+      "io": 18,
+      "specs": 18,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "v-1hd-plus",
+      "io": 12,
+      "specs": 17,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "v-80hd",
+      "io": 15,
+      "specs": 21,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "v-8hd",
+      "io": 9,
+      "specs": 18,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "varia-100",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "varia-80",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "varia-sl50",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "varia-sl80",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "vcm35",
+      "io": 1,
+      "specs": 12,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "vr-6hd",
+      "io": 13,
+      "specs": 23,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "vs10",
+      "io": 8,
+      "specs": 14,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "vs5",
+      "io": 8,
+      "specs": 13,
+      "features": 6,
+      "images": 2,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "x100pro-2u",
+      "io": 2,
+      "specs": 11,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "x100pro-4u",
+      "io": 2,
+      "specs": 11,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "x100pro-7u",
+      "io": 2,
+      "specs": 13,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "xsm4216f",
+      "io": 2,
+      "specs": 14,
+      "features": 5,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "zenith-100",
+      "io": 8,
+      "specs": 14,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    },
+    {
+      "slug": "zenith-200",
+      "io": 7,
+      "specs": 16,
+      "features": 6,
+      "images": 1,
+      "overflow": 0,
+      "broken": [],
+      "overlap": false
+    }
+  ],
+  "fixtures": [
+    {
+      "name": "rtcom-no-auto-adoption",
+      "width": 1280
+    },
+    {
+      "name": "distribution",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "matrix",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "switcher",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "extender",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 1280,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "Library search/category/brand/back",
+      "width": 1280
+    },
+    {
+      "name": "rtcom-no-auto-adoption",
+      "width": 390
+    },
+    {
+      "name": "distribution",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "matrix",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "switcher",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "extender",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "amplifier-channel",
+      "width": 390,
+      "markerPercent": 2.22222
+    },
+    {
+      "name": "Library search/category/brand/back",
+      "width": 390
+    }
+  ],
+  "hashes": [
+    {
+      "hash": "overview",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "overview",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "gallery",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "gallery",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "io",
+      "width": 1280,
+      "reload": false,
+      "top": 172.390625
+    },
+    {
+      "hash": "io",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "specifications",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "specifications",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "features",
+      "width": 1280,
+      "reload": false,
+      "top": 105.390625
+    },
+    {
+      "hash": "features",
+      "width": 1280,
+      "reload": true,
+      "top": 105.390625
+    },
+    {
+      "hash": "documents",
+      "width": 1280,
+      "reload": false,
+      "top": 445.390625
+    },
+    {
+      "hash": "documents",
+      "width": 1280,
+      "reload": true,
+      "top": 445.390625
+    },
+    {
+      "hash": "sources",
+      "width": 1280,
+      "reload": false,
+      "top": 175.3125
+    },
+    {
+      "hash": "sources",
+      "width": 1280,
+      "reload": true,
+      "top": 105.3125
+    },
+    {
+      "hash": "source-TD",
+      "width": 1280,
+      "reload": false,
+      "top": 105.3125
+    },
+    {
+      "hash": "source-TD",
+      "width": 1280,
+      "reload": true,
+      "top": 105.3125
+    },
+    {
+      "hash": "overview",
+      "width": 390,
+      "reload": false,
+      "top": 104.9375
+    },
+    {
+      "hash": "overview",
+      "width": 390,
+      "reload": true,
+      "top": 104.9375
+    },
+    {
+      "hash": "gallery",
+      "width": 390,
+      "reload": false,
+      "top": 171.453125
+    },
+    {
+      "hash": "gallery",
+      "width": 390,
+      "reload": true,
+      "top": 105.453125
+    },
+    {
+      "hash": "io",
+      "width": 390,
+      "reload": false,
+      "top": 105.140625
+    },
+    {
+      "hash": "io",
+      "width": 390,
+      "reload": true,
+      "top": 105.140625
+    },
+    {
+      "hash": "specifications",
+      "width": 390,
+      "reload": false,
+      "top": 188.875
+    },
+    {
+      "hash": "specifications",
+      "width": 390,
+      "reload": true,
+      "top": 104.875
+    },
+    {
+      "hash": "features",
+      "width": 390,
+      "reload": false,
+      "top": 104.859375
+    },
+    {
+      "hash": "features",
+      "width": 390,
+      "reload": true,
+      "top": 104.859375
+    },
+    {
+      "hash": "documents",
+      "width": 390,
+      "reload": false,
+      "top": 381.6875
+    },
+    {
+      "hash": "documents",
+      "width": 390,
+      "reload": true,
+      "top": 381.6875
+    },
+    {
+      "hash": "sources",
+      "width": 390,
+      "reload": false,
+      "top": 195.65625
+    },
+    {
+      "hash": "sources",
+      "width": 390,
+      "reload": true,
+      "top": 104.65625
+    },
+    {
+      "hash": "source-TD",
+      "width": 390,
+      "reload": false,
+      "top": 104.65625
+    },
+    {
+      "hash": "source-TD",
+      "width": 390,
+      "reload": true,
+      "top": 104.65625
+    }
+  ],
+  "errors": []
+}
