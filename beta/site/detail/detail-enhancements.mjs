@@ -7,9 +7,19 @@ const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
 const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'side']) && Number.isInteger(i.n) && i.n > 0 && text(i.label) && typeof i.desc === 'string' && Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 && (i.side === undefined || ['top', 'bottom'].includes(i.side));
 function validMap(map, product) {
+  const image = product.images?.find(i => i.role === map?.image && text(i.file));
+  const size = dimensions(image?.resolution);
   return record(map) && keys(map, ['image', 'items']) && ['Front', 'Rear'].includes(map.image) &&
-    product.images?.some(i => i.role === map.image && text(i.file)) && Array.isArray(map.items) && map.items.length > 0 &&
-    map.items.every(validMarker) && new Set(map.items.map(i => i.n)).size === map.items.length;
+    size && portMapImageMatches(image, ...size) && Array.isArray(map.items) && map.items.length > 0 &&
+    map.items.every(i => validMarker(i) && i.x2 <= size[0]) && new Set(map.items.map(i => i.n)).size === map.items.length;
+}
+const dimensions = value => {
+  const match = typeof value === 'string' && /^(\d+)\s*[x×]\s*(\d+)$/i.exec(value.trim());
+  return match && Number(match[1]) > 0 && Number(match[2]) > 0 ? [Number(match[1]), Number(match[2])] : null;
+};
+export function portMapImageMatches(image, width, height) {
+  const original = dimensions(image?.originalSize), published = dimensions(image?.resolution);
+  return Boolean(original && published && original[0] === width && original[1] === height && published[0] === width && published[1] === height);
 }
 function validFlow(flow) {
   return record(flow) && keys(flow, ['type', 'inputs', 'outputs', 'notes']) && flowTypes.has(flow.type) &&

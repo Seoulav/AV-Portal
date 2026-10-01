@@ -1,3 +1,4 @@
+import * as enhancementModel from '../prototype/brc-am7/detail-enhancements.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { prepareEnhancements, selectCardModes, portMarkerPercent, enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
@@ -8,7 +9,18 @@ test('legacy prototype content without imageStatuses retains safe record default
   assert.deepEqual(data.imageStatuses, []);
 });
 
-const base = { images: [{ role: 'Rear', file: 'rear.webp' }], io: [{ connector: 'XLR' }] };
+const base = { images: [{ role: 'Rear', file: 'rear.webp', originalSize: '200×100', resolution: '200×100' }], io: [{ connector: 'XLR' }] };
+test('unverified original-to-published pixel conversion cannot create a port map', () => {
+  const image = { role: 'Rear', file: 'rear.webp', originalSize: '2000×2000', resolution: '1800×1800' };
+  const p = { ...base, images: [image], portMap: { image: 'Rear', items: [{ n: 1, label: 'XLR', desc: '', x1: 900, x2: 1100 }] } };
+  assert.equal(prepareEnhancements(p).portMap, null);
+  assert.ok(enhancementErrors(p).length);
+  assert.equal(enhancementModel.portMapImageMatches(image, 1800, 1800), false);
+  assert.equal(enhancementModel.portMapImageMatches(base.images[0], 200, 100), true);
+  assert.equal(enhancementModel.portMapImageMatches(base.images[0], 180, 100), false);
+  assert.equal(enhancementModel.portMapImageMatches(base.images[0], 200, 90), false);
+  assert.equal(enhancementModel.portMapImageMatches({ role: 'Rear' }, 200, 100), false);
+});
 test('optional cards fall back without changing original data', () => {
   const original = structuredClone(base);
   assert.deepEqual(selectCardModes(base, prepareEnhancements(base)), { gallery: 'gallery', io: 'io' });

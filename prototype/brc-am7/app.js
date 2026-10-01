@@ -1,4 +1,5 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001';
+import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001';
 import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
@@ -207,6 +208,10 @@ if (!productKey && !allowContentFallback) {
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
     if (!map || data.images[selectedImage]?.role !== map.image || !featured.complete || !featured.naturalWidth || featured.hidden) return;
+    if (!portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight)) {
+      $('#gallery-title').lastChild.textContent = '제품 사진';
+      return;
+    }
     const valid = map.items.filter(item => item.x2 <= featured.naturalWidth);
     $('#gallery-title').lastChild.textContent = valid.length ? 'Port Map' : '제품 사진';
     if (!valid.length) return;
