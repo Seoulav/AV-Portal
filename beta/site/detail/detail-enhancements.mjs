@@ -12,8 +12,8 @@ const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2',
 function validMap(map, product) {
   const image = product.images?.find(i => i.role === map?.image && text(i.file));
   const size = dimensions(image?.resolution);
-  return record(map) && keys(map, ['image', 'items', 'measuredImage']) && ['Front', 'Rear'].includes(map.image) &&
-    size && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
+  return record(map) && keys(map, ['image', 'items', 'measuredImage', 'crop']) && ['Front', 'Rear'].includes(map.image) &&
+    size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
     map.items.every(i => validMarker(i) && i.x2 <= size[0] && (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0 && i.y <= size[1]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
 }
 const dimensions = value => {
@@ -114,7 +114,8 @@ export function portMarkerPercent(item, naturalWidth) {
 
 // Keep the measured coordinates fixed; enlarge only the scrollable display until
 // numbered circles are separated. Bracket anchors use the same scale as the photo.
-export function portMapDisplayWidth(map, naturalWidth, naturalHeight) {
+export function portMapDisplayWidth(map, naturalWidth, naturalHeight, viewportWidth = 390, cardWidth = 0) {
+  if (viewportWidth > 720 && cardWidth > 0) return cardWidth;
   const separated = width => {
     const scale = width / naturalWidth;
     const points = map.items.map(i => ({x: (i.x1 + i.x2) / 2 * scale,

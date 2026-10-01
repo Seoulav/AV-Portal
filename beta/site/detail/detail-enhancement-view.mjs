@@ -1,4 +1,4 @@
-import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-ulxd4d-followup';
+import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-map-review';
 const el = (tag, cls = '', text) => {
   const node = document.createElement(tag);
   node.className = cls;
@@ -27,6 +27,7 @@ export function renderPortMap(items, image) {
   const overlay = el('div', 'port-map-overlay');
   overlay.setAttribute('aria-hidden', 'true');
   if (!image.complete || !image.naturalWidth || image.hidden) return overlay;
+  const placed = [];
   for (const item of items) {
     const span = portMarkerPercent(item, image.naturalWidth);
     if (!span) continue;
@@ -34,11 +35,14 @@ export function renderPortMap(items, image) {
     const top = item.side === 'top', sign = top ? -1 : 1;
     const y = (item.y ?? (top ? 0 : image.naturalHeight)) * scale;
     const x1 = item.x1 * scale, x2 = item.x2 * scale, cx = (x1+x2)/2;
+    let markerY = y + sign*28;
+    while (placed.some(p => Math.abs(p.x-cx) < 28 && Math.abs(p.y-markerY) < 28)) markerY += sign*30;
+    placed.push({x:cx,y:markerY});
     const bracket = svgNode('svg', {class:'port-map-bracket', width:box.width, height:box.height, 'aria-hidden':'true'});
-    bracket.append(svgNode('path', {d:`M${x1} ${y-sign*4}V${y+sign*8}H${x2}V${y-sign*4}M${cx} ${y+sign*8}V${y+sign*16}`, fill:'none', stroke:'#2459b0', 'stroke-width':1.5}));
+    bracket.append(svgNode('path', {d:`M${x1} ${y-sign*4}V${y+sign*8}H${x2}V${y-sign*4}M${cx} ${y+sign*8}V${markerY-sign*12}`, fill:'none', stroke:'#2459b0', 'stroke-width':1.5}));
     const marker = el('span', 'port-map-marker', item.n);
     marker.style.left = `${span.left + span.width / 2}%`;
-    marker.style.top = `${y + sign*28}px`;
+    marker.style.top = `${markerY}px`;
     marker.dataset.side = item.side ?? 'bottom';
     overlay.append(bracket, marker);
   }
