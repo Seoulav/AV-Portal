@@ -1,0 +1,1455 @@
+{
+  "time": "2026-10-01T14:01:31.180Z",
+  "baseline": "1264feb",
+  "sha": "a837b1d2dea1b5418472ad568215c68bb28ef765",
+  "publicRun": false,
+  "products": [
+    {
+      "slug": "novastar-h5",
+      "width": 1280,
+      "url": "http://127.0.0.1:54675/detail/?product=novastar-h5",
+      "height": 2959,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "General · 랙 유닛5U",
+        "General · 최대 입력 카드 수10 매",
+        "General · 최대 입력 채널 수40 채널",
+        "General · 최대 출력 카드 수3 매",
+        "General · 최대 출력 채널 수12 채널",
+        "General · 최대 레이어 수48 레이어조건: 장치(섀시) 기준 상한",
+        "General · 출력 카드당 레이어 자원2K 16 / 듀얼링크(DL) 8 / 4K 4 레이어조건: 출력 카드 1매 기준 자원 모델(전역 합산 아님)",
+        "General · 최대 로딩 용량(H_20xRJ45 송신카드)39,000,000 화소",
+        "General · 최대 로딩 용량(H_4xfiber 송신카드)62,400,000 화소",
+        "General · 최대 로딩 용량(H_4xfiber 송신카드 Enhanced)78,000,000 화소",
+        "General · 이중화(예비) 전원 지원옵션 지원조건: 기본은 단일 전원, 이중화 전원 모듈(H_800W) 추가 가능",
+        "General · 입/출력 모니터링(프리뷰)지원(H_2xRJ45+1xHDMI1.3 프리뷰 카드 장착 시)",
+        "General · 중앙 제어TCP/IP, RS-232",
+        "General · 냉각 방식정보 없음UNCONFIRMED조건: 데이터시트에 팬 사양이 명시되지 않음",
+        "General · 인증CCC, CE, FCC, IC, KC, RCM, UKCA, UL, CB, CMIM, PSE조건: H2와 동일 인증 목록(H Series 공통, 개별 모델 인증서 별도 확인 권장)",
+        "Electrical · 정격 전원100-240 V~, 50/60Hz, 10A~5A",
+        "Electrical · 소비 전력400 W",
+        "Environment · 동작 온도0 ~ 45 °C",
+        "Environment · 동작 습도0 ~ 80 %RH조건: 비응결",
+        "Environment · 보관 온도-10 ~ 60 °C",
+        "Environment · 보관 습도0 ~ 95 %RH조건: 비응결",
+        "Physical · 외형 치수(W x D x H)482.6 x 532.8 x 228.2 mm조건: 섀시 기준",
+        "Physical · 순중량17 kg조건: 섀시 기준",
+        "Physical · 총중량(포장 포함)21.3 kg조건: 섀시 기준",
+        "Physical · 소음 수준< 45 dB(A)조건: 25°C 기준",
+        "Physical · 전면 디스플레이터치스크린 LCD조건: 메뉴/상태/모니터링 조작용"
+      ],
+      "io": [
+        "네트워크·제어RJ-45양방향1Ethernet(제어카드)TCP/IP, Web 제어/NovaLCT · 조건: H_Control Card 고정 포트출처: DFOUND",
+        "네트워크·제어RJ-45(RS-232 배선)양방향1COM (RS-232)RS-232, 568A 결선 · 조건: 중앙 제어 시스템 연동용출처: DFOUND",
+        "네트워크·제어USB Type-A입력2USB 2.0USB 2.0 · 조건: 펌웨어 업데이트/설정 백업, 전원 공급 불가출처: DFOUND",
+        "네트워크·제어BNC양방향2Genlock IN/LOOPBi-Level, Tri-Level · 조건: 제어카드 고정 포트출처: DFOUND",
+        "전원IEC C14입력1AC 전원 입력조건: 100-240V~, 50/60Hz (이중화 옵션 시 2개)출처: DFOUND",
+        "Slot카드 슬롯입력10입력 카드 슬롯조건: 옵션 입력 카드 장착용출처: DFOUND",
+        "Slot카드 슬롯출력3출력 카드 슬롯조건: 옵션 출력 카드 장착용출처: DFOUND",
+        "Slot카드 슬롯확인 필요입력미확인MVR 슬롯(프리뷰 카드 전용)조건: 데이터시트: 'dedicated to the preview card only'. 슬롯 수는 데이터시트 텍스트에 없음출처: DPARTIAL"
+      ],
+      "ports": [
+        "RJ-45양방향 · 포트 1Ethernet(제어카드)TCP/IP, Web 제어/NovaLCT · 조건: H_Control Card 고정 포트",
+        "RJ-45(RS-232 배선)양방향 · 포트 1COM (RS-232)RS-232, 568A 결선 · 조건: 중앙 제어 시스템 연동용",
+        "USB Type-A입력 · 포트 2USB 2.0USB 2.0 · 조건: 펌웨어 업데이트/설정 백업, 전원 공급 불가",
+        "BNC양방향 · 포트 2Genlock IN/LOOPBi-Level, Tri-Level · 조건: 제어카드 고정 포트",
+        "IEC C14입력 · 포트 1AC 전원 입력조건: 100-240V~, 50/60Hz (이중화 옵션 시 2개)",
+        "카드 슬롯입력 · 포트 10입력 카드 슬롯조건: 옵션 입력 카드 장착용",
+        "카드 슬롯출력 · 포트 3출력 카드 슬롯조건: 옵션 출력 카드 장착용",
+        "카드 슬롯입력 · 포트 수 미확인MVR 슬롯(프리뷰 카드 전용)조건: 데이터시트: 'dedicated to the preview card only'. 슬롯 수는 데이터시트 텍스트에 없음확인 필요"
+      ],
+      "features": [
+        "5U 섀시에 입력 카드 최대 10매, 출력 카드 최대 3매를 모듈형으로 구성",
+        "전면 터치스크린 LCD로 메뉴·상태·모니터링 정보를 직접 확인 및 조작",
+        "이중화(예비) 전원 모듈(H_800W)을 옵션으로 추가해 전원 이중화 구성 가능",
+        "무결절 스위칭과 페이드 트랜지션, 불규칙 모자이크, 매트릭스 모드 지원",
+        "HDMI, DVI, DP, VGA, CVBS, SDI, IP 등 다양한 업계 표준 입력 커넥터와 10비트/4K 입출력 지원",
+        "온라인 상태 모니터링과 핫스왑 가능한 입출력 카드로 유지보수 편의성 확보"
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/novastar-h5-specification-89119003fed1.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 13,
+        "brackets": 13,
+        "overlaps": [],
+        "width": 738,
+        "scrollWidth": 800
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "ulxd4d",
+      "width": 1280,
+      "url": "http://127.0.0.1:54675/detail/?product=ulxd4d",
+      "height": 2848,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "General · 채널 수2 채널",
+        "General · 폼팩터1RU 랙마운트, 올메탈 섀시",
+        "General · 하우징 재질steel; Extruded Aluminum",
+        "General · 치수 (H x W x D)44 x 482 x 274 mm조건: 안테나 제외",
+        "General · 무게3.36 (7.4) kg (lb)조건: 안테나 제외",
+        "RF · RF 반송 주파수 범위470–932 MHz조건: 지역에 따라 다름",
+        "RF · 작동 거리(Working Range)100 (330) m (ft)",
+        "RF · RF 튜닝 스텝25 kHz조건: 지역에 따라 다름",
+        "RF · 이미지 리젝션>70 dB조건: typical",
+        "RF · RF 감도(Sensitivity)-98 dBm조건: 10^-5 BER 기준",
+        "RF · 스퓨리어스 리젝션(RF 입력)>80 dB조건: typical",
+        "RF · RF 입력 커넥터BNC",
+        "RF · RF 입력 임피던스50 Ω",
+        "Audio · 레이턴시<2.9 ms",
+        "Audio · 오디오 다이내믹 레인지 (XLR 아날로그 출력)>120 dB조건: A-weighted, typical",
+        "Audio · 오디오 다이내믹 레인지 (Dante 디지털 출력)130 dB조건: A-weighted, typical",
+        "Audio · 전고조파왜율(THD)<0.1 %",
+        "Audio · 게인 조정 범위-18 ~ +42 (1 dB 스텝, Mute 포함) dB",
+        "Audio · 오디오 출력 커넥터XLR (채널당 1개)",
+        "Audio · XLR 출력 임피던스100 Ω",
+        "Audio · 풀스케일 출력LINE +18 dBV / MIC -12 dBV",
+        "네트워킹/제어 · 네트워크 인터페이스듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오조건: 내장",
+        "네트워킹/제어 · 네트워크 주소 지정DHCP 또는 수동 IP",
+        "네트워킹/제어 · 최대 케이블 길이100 (328) m (ft)",
+        "네트워킹/제어 · 케스케이드 출력BNC, Unbalanced/Passive, 50 Ω",
+        "Security · 암호화AES-256조건: IR sync로 송신기와 키 공유",
+        "전원/환경 · 전원 요구사항100–240 V AC, 50–60 Hz, 최대 0.26 A",
+        "전원/환경 · 동작 온도 범위-18 ~ 50 (0 ~ 122) °C (°F)",
+        "전원/환경 · 보관 온도 범위-29 ~ 74 (-20 ~ 165) °C (°F)",
+        "Certification · 국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재"
+      ],
+      "io": [
+        "RFBNC입력2RF antenna input—출처: PFOUND",
+        "RFBNC출력1Cascade RF output조건: BNC, Unbalanced/Passive, 50 Ω출처: PFOUND",
+        "오디오XLR (채널당 1개)출력2Audio output—출처: PFOUND",
+        "네트워크·제어RJ-45확인 필요양방향2Network / Dante audioDante · 조건: 듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)출처: P, MPARTIAL",
+        "전원IEC 전원 인렛(100–240V AC)확인 필요입력1Power input조건: 100–240 V AC, 50–60 Hz, 최대 0.26 A출처: P, MPARTIAL"
+      ],
+      "ports": [
+        "BNC입력 · 포트 2RF antenna input",
+        "BNC출력 · 포트 1Cascade RF output조건: BNC, Unbalanced/Passive, 50 Ω",
+        "XLR (채널당 1개)출력 · 포트 2Audio output",
+        "RJ-45양방향 · 포트 2Network / Dante audioDante · 조건: 듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)확인 필요",
+        "IEC 전원 인렛(100–240V AC)입력 · 포트 1Power input조건: 100–240 V AC, 50–60 Hz, 최대 0.26 A확인 필요"
+      ],
+      "features": [
+        "2채널 수신기다.",
+        "RF 반송 주파수 범위는 470–932MHz이다(지역에 따라 다름).",
+        "AES-256 암호화를 지원한다.",
+        "Dante 디지털 오디오 네트워킹을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ulxd1-specification-30a99b044dde.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 11,
+        "brackets": 11,
+        "overlaps": [],
+        "width": 738,
+        "scrollWidth": 738
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "dci-4-600da",
+      "width": 1280,
+      "url": "http://127.0.0.1:54675/detail/?product=dci-4-600da",
+      "height": 2811,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 2Ω300 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 4Ω600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 8Ω600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 16Ω300 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 70Vrms600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 100Vrms600 W",
+        "출력(Bridge Mono, 전 채널 구동) · 4Ω600 W",
+        "출력(Bridge Mono, 전 채널 구동) · 8Ω1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 16Ω1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 140Vrms1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 200Vrms1200 W",
+        "오디오 성능 · THD0.35 %조건: 정격출력, 20Hz-20kHz",
+        "오디오 성능 · 주파수 응답±0.25 dB조건: 8Ω, 20Hz-20kHz",
+        "오디오 성능 · 댐핑 팩터>1000조건: 20Hz-100Hz",
+        "네트워킹(Dante/AES67) · 네트워크 오디오Dante / AES67조건: 이중화 Primary/Secondary 포트",
+        "네트워킹(Dante/AES67) · 샘플레이트48kHz 또는 96kHz",
+        "네트워킹(Dante/AES67) · Dante Domain Manager호환",
+        "네트워킹(Dante/AES67) · 업링크(아날로그->네트워크)지원조건: 프로세싱 전/후 선택 가능, 48kHz",
+        "DSP · 프리셋20 개",
+        "DSP · 입력 라우터우선순위 기반",
+        "DSP · 입력 딜레이최대 2 초",
+        "DSP · 출력 딜레이최대 100 ms",
+        "DSP · 리미터LevelMAX™",
+        "DSP · 부하 모니터링파일럿톤 + 연속 스윕 모드",
+        "Physical · 채널수4 채널",
+        "Physical · 크기(W×H×D)483 x 89 x 362 mm조건: 19\" x 3.5\" x 14.25\"",
+        "Physical · 무게9.12 kg조건: 20.1 lbs",
+        "Physical · 랙 유닛2U조건: 3.5\" 높이",
+        "전원/냉각 · 입력 전압100-240 V AC조건: 50/60Hz, ±10%",
+        "전원/냉각 · 전원 커넥터15A IEC",
+        "전원/냉각 · 전원 방식PFC 유니버설 전원",
+        "전원/냉각 · 냉각 방식가변속 강제공랭(전면->후면)",
+        "전원/냉각 · 최대 팬 소음45 dBA SPL@1m"
+      ],
+      "io": [
+        "OutputBarrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)확인 필요출력미확인4채널 · Speaker output확인 필요출처: P, MPARTIAL",
+        "네트워크·제어RJ-45확인 필요양방향2Dante/AES67 audioDante, AES67 · 조건: 네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)구성: DA/ComTech D 모델출처: P, MPARTIAL",
+        "전원15A IEC입력1Mains power—출처: PFOUND"
+      ],
+      "ports": [
+        "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)출력 · 포트 수 미확인4채널 · Speaker output확인 필요확인 필요",
+        "RJ-45양방향 · 포트 2Dante/AES67 audioDante, AES67 · 조건: 네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)확인 필요",
+        "15A IEC입력 · 포트 1Mains power"
+      ],
+      "features": [
+        "4채널 구성이며, 8Ω 부하 기준 채널당 600W를 출력한다.",
+        "온보드 DSP를 내장해 스피커 튜닝과 신호 처리를 앰프 자체에서 수행한다.",
+        "Dante/AES67 네트워크 오디오를 지원한다.",
+        "100-240V AC(50/60Hz, ±10%) 전원 입력 범위를 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-da-dante-manual-english",
+          "pdf": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.crownaudio.com/en-US/site_elements/dci-dante-data-sheet",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../manuals/crown-dci-install-da-series-manual.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 10,
+        "brackets": 10,
+        "overlaps": [],
+        "width": 738,
+        "scrollWidth": 738
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "eb-pq2220b",
+      "width": 1280,
+      "url": "http://127.0.0.1:54675/detail/?product=eb-pq2220b",
+      "height": 2371,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Main",
+        "Rear"
+      ],
+      "specs": [
+        "Display · 백색 밝기20,000 lm조건: Normal mode, ISO 21118:2020 기준",
+        "Display · 컬러 밝기20,000 lm조건: Normal mode, IDMS 15.4 기준",
+        "Display · 명암비Over 5,000,000:1조건: Dynamic Contrast : On",
+        "Display · 기본 해상도4K",
+        "Display · LCD 크기1.04 인치(2.64cm)조건: C2fine",
+        "Display · 광출력 균일도85 %",
+        "Display · 투사 시스템RGB 액정 셔터 크리스탈 프로젝션 시스템",
+        "Display · 투사 방식360° free",
+        "Display · 엣지 블렌딩지원",
+        "Display · 화면 분할지원",
+        "Display · 키스톤 보정V: -45°~+45°, H: -30°~+30°",
+        "Optical · 광원 방식Laser Diode",
+        "Optical · 광원 수명Normal 20,000 / Quiet 20,000 / Extended 30,000 시간",
+        "Optical · 초점 거리36.0 - 57.3 mm",
+        "Optical · 줌 비율1 - 1.61",
+        "Optical · 렌즈 시프트 범위H: -16%~+16%, V: -58%~+58%",
+        "Optical · 투사 렌즈 타입Power zoom, Power focus",
+        "Optical · 화면 크기(투사 거리)60\"~1000\" (1.98m~34.19m Wide, 3.24m~55.28m Tele)",
+        "Physical · 크기(최대)586 x 218 x 492 mm조건: W x H x D",
+        "Physical · 크기(최소)586 x 185 x 492 mm조건: W x H x D",
+        "Physical · 무게약 29.2 kg",
+        "Physical · 팬소음Normal 48 / ECO 39 dB",
+        "Power · 전원공급100-240V AC +/-10% 50/60Hz 8.2A, 200-240V AC +/-10% 50/60Hz 6.6A",
+        "Power · 정격 전력 소비량1431 / 975 W조건: Normal,Custom mode / Quiet,Extended mode",
+        "Software · Epson iProjection버전 4.01(Windows 이상)"
+      ],
+      "io": [
+        "영상HDMI입력2디지털 비디오 입력HDMI Type A, Deep Color, CEC출처: PFOUND",
+        "영상HDMI출력1디지털 비디오 출력HDMI Type A, Deep Color, CEC출처: PFOUND",
+        "영상RJ45 (HDBaseT)입력1HDBaseT 입력HDBaseT · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "영상BNC입력112G-SDI 입력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "영상BNC출력112G-SDI 출력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "오디오Stereo mini출력1오디오 출력—출처: PFOUND",
+        "USBUSB Type-A양방향2USB—구성: ELPEC01, SMF1, 펌웨어 업데이트, OSD 설정 복사 또는 5V/2A 전원 공급, 콘텐츠 재생출처: PFOUND",
+        "USBUSB Type-B입력1USB—구성: 펌웨어 업데이트, OSD 설정 복사출처: PFOUND",
+        "네트워크·제어RJ45양방향1유선 LAN—출처: PFOUND",
+        "네트워크·제어Wireless LAN미확인1무선 LANType A구성: 옵션 ELPAP11출처: PFOUND",
+        "네트워크·제어RS-232C확인 필요양방향1시리얼 제어RS-232C · 조건: 글로벌 브로셔 기준(한국 페이지 미기재), 커넥터 형태 미기재출처: GPARTIAL"
+      ],
+      "ports": [
+        "HDMI입력 · 포트 2디지털 비디오 입력HDMI Type A, Deep Color, CEC",
+        "HDMI출력 · 포트 1디지털 비디오 출력HDMI Type A, Deep Color, CEC",
+        "RJ45 (HDBaseT)입력 · 포트 1HDBaseT 입력HDBaseT · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "BNC입력 · 포트 112G-SDI 입력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "BNC출력 · 포트 112G-SDI 출력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "Stereo mini출력 · 포트 1오디오 출력",
+        "USB Type-A양방향 · 포트 2USB",
+        "USB Type-B입력 · 포트 1USB",
+        "RJ45양방향 · 포트 1유선 LAN",
+        "Wireless LAN미확인 · 포트 1무선 LANType A",
+        "RS-232C양방향 · 포트 1시리얼 제어RS-232C · 조건: 글로벌 브로셔 기준(한국 페이지 미기재), 커넥터 형태 미기재확인 필요"
+      ],
+      "features": [
+        "세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+        "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+        "20,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+        "높은 명암비(Over 5,000,000:1, Dynamic Contrast On)와 33x33 그리드 포인트 보정 지원",
+        "광범위한 렌즈 라인업과 초단초점(UST) 렌즈(투사율 0.34, 제로 오프셋) 지원",
+        "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원"
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false,
+      "portMap": {
+        "items": 13,
+        "brackets": 13,
+        "overlaps": [],
+        "width": 738,
+        "scrollWidth": 820
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "aquilon-rs1",
+      "width": 1280,
+      "url": "http://127.0.0.1:54675/detail/?product=aquilon-rs1",
+      "height": 3086,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front"
+      ],
+      "specs": [
+        "I/O · 4K60p 입력16조건: 필드 교체형 I/O 카드(HDMI 2.0·DP 1.2/1.4·12G-SDI 등)",
+        "I/O · 4K60p 출력8",
+        "I/O · 멀티뷰어 출력2조건: 전용",
+        "Processing · 최대 믹싱 레이어4×4K 또는 8×DL/2K",
+        "Processing · 처리 스루풋40 메가픽셀조건: 10bit 4:4:4 @60Hz 기준",
+        "Audio · Dante 채널64x64 @48kHz 또는 32x32 @96kHz",
+        "Physical · 크기(랙귀 제외)439.8×177×700 mm조건: W×H×D",
+        "Physical · 크기(핸들 포함)482.4×221.2×701 mm조건: W×H×D",
+        "Physical · 무게26.1 kg조건: 부속품 미포함",
+        "Physical · 운송 무게45.1 kg조건: 부속품 포함",
+        "Physical · 랙 유닛4 RU",
+        "Power · 전원 입력100-240VAC, 12-7A, 50/60Hz조건: 1+1 이중화 교체형",
+        "Power · 최대 소비전력540 W"
+      ],
+      "io": [
+        "영상HDMI 2.0 / DisplayPort 1.2·1.4 / 12G-SDI 카드입력미확인16(카드 구성에 따라 배분) · 4K60p input조건: 카드 조합에 따라 입력 채널 배분이 달라짐구성: 필드 교체형출처: SVERIFIED",
+        "영상출력 카드(HDMI 2.0 등)출력84K60p output—구성: 필드 교체형출처: SVERIFIED",
+        "영상멀티뷰어 출력출력2Multiviewer outputHDMI 2.0 또는 DisplayPort 1.2 · 조건: 전용출처: SVERIFIED",
+        "네트워크·제어온보드 Dante 카드양방향1Dante audio networkingDante · 조건: 이중화출처: SVERIFIED",
+        "LinkOPT-RSX-LINK(옵션)확인 필요양방향1System link40GbE QSFP+ 또는 DAC · 조건: 최대 3대 연결구성: 옵션 하드웨어 업그레이드출처: SPARTIAL"
+      ],
+      "ports": [
+        "HDMI 2.0 / DisplayPort 1.2·1.4 / 12G-SDI 카드입력 · 포트 수 미확인16(카드 구성에 따라 배분) · 4K60p input조건: 카드 조합에 따라 입력 채널 배분이 달라짐",
+        "출력 카드(HDMI 2.0 등)출력 · 포트 84K60p output",
+        "멀티뷰어 출력출력 · 포트 2Multiviewer outputHDMI 2.0 또는 DisplayPort 1.2 · 조건: 전용",
+        "온보드 Dante 카드양방향 · 포트 1Dante audio networkingDante · 조건: 이중화",
+        "OPT-RSX-LINK(옵션)양방향 · 포트 1System link40GbE QSFP+ 또는 DAC · 조건: 최대 3대 연결확인 필요"
+      ],
+      "features": [
+        "16개의 4K60p 입력(HDMI 2.0·DisplayPort 1.2/1.4·12G-SDI 카드 조합)과 8개의 4K60p 출력, 2개의 전용 멀티뷰어 출력을 제공한다.",
+        "최대 4×4K 또는 8×DL/2K 믹싱 레이어와 10-12bit 4:4:4 영상 처리를 지원한다.",
+        "HTML5 기반 Web RCS로 실시간 소스 축소판을 보며 제어할 수 있다.",
+        "IP(TCP/IP 소켓) 제어와 Q-SYS·AMX·Crestron 드라이버, AW VideoCompositor 연동을 지원한다.",
+        "온보드 Dante 카드로 48kHz 기준 64x64, 96kHz 기준 32x32 채널 오디오 네트워킹을 지원한다.",
+        "OPT-RSX-LINK 하드웨어 업그레이드로 최대 3대의 다른 Aquilon 시스템과 연결할 수 있다.",
+        "1+1 이중화 교체형 전원 공급 장치와 스마트 열 관리로 상시 가동을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-user-manual-763541fa361a.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-technical-document-2623151a666a.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "novastar-h5",
+      "width": 390,
+      "url": "http://127.0.0.1:54675/detail/?product=novastar-h5",
+      "height": 5530,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "General · 랙 유닛5U",
+        "General · 최대 입력 카드 수10 매",
+        "General · 최대 입력 채널 수40 채널",
+        "General · 최대 출력 카드 수3 매",
+        "General · 최대 출력 채널 수12 채널",
+        "General · 최대 레이어 수48 레이어조건: 장치(섀시) 기준 상한",
+        "General · 출력 카드당 레이어 자원2K 16 / 듀얼링크(DL) 8 / 4K 4 레이어조건: 출력 카드 1매 기준 자원 모델(전역 합산 아님)",
+        "General · 최대 로딩 용량(H_20xRJ45 송신카드)39,000,000 화소",
+        "General · 최대 로딩 용량(H_4xfiber 송신카드)62,400,000 화소",
+        "General · 최대 로딩 용량(H_4xfiber 송신카드 Enhanced)78,000,000 화소",
+        "General · 이중화(예비) 전원 지원옵션 지원조건: 기본은 단일 전원, 이중화 전원 모듈(H_800W) 추가 가능",
+        "General · 입/출력 모니터링(프리뷰)지원(H_2xRJ45+1xHDMI1.3 프리뷰 카드 장착 시)",
+        "General · 중앙 제어TCP/IP, RS-232",
+        "General · 냉각 방식정보 없음UNCONFIRMED조건: 데이터시트에 팬 사양이 명시되지 않음",
+        "General · 인증CCC, CE, FCC, IC, KC, RCM, UKCA, UL, CB, CMIM, PSE조건: H2와 동일 인증 목록(H Series 공통, 개별 모델 인증서 별도 확인 권장)",
+        "Electrical · 정격 전원100-240 V~, 50/60Hz, 10A~5A",
+        "Electrical · 소비 전력400 W",
+        "Environment · 동작 온도0 ~ 45 °C",
+        "Environment · 동작 습도0 ~ 80 %RH조건: 비응결",
+        "Environment · 보관 온도-10 ~ 60 °C",
+        "Environment · 보관 습도0 ~ 95 %RH조건: 비응결",
+        "Physical · 외형 치수(W x D x H)482.6 x 532.8 x 228.2 mm조건: 섀시 기준",
+        "Physical · 순중량17 kg조건: 섀시 기준",
+        "Physical · 총중량(포장 포함)21.3 kg조건: 섀시 기준",
+        "Physical · 소음 수준< 45 dB(A)조건: 25°C 기준",
+        "Physical · 전면 디스플레이터치스크린 LCD조건: 메뉴/상태/모니터링 조작용"
+      ],
+      "io": [
+        "네트워크·제어RJ-45양방향1Ethernet(제어카드)TCP/IP, Web 제어/NovaLCT · 조건: H_Control Card 고정 포트출처: DFOUND",
+        "네트워크·제어RJ-45(RS-232 배선)양방향1COM (RS-232)RS-232, 568A 결선 · 조건: 중앙 제어 시스템 연동용출처: DFOUND",
+        "네트워크·제어USB Type-A입력2USB 2.0USB 2.0 · 조건: 펌웨어 업데이트/설정 백업, 전원 공급 불가출처: DFOUND",
+        "네트워크·제어BNC양방향2Genlock IN/LOOPBi-Level, Tri-Level · 조건: 제어카드 고정 포트출처: DFOUND",
+        "전원IEC C14입력1AC 전원 입력조건: 100-240V~, 50/60Hz (이중화 옵션 시 2개)출처: DFOUND",
+        "Slot카드 슬롯입력10입력 카드 슬롯조건: 옵션 입력 카드 장착용출처: DFOUND",
+        "Slot카드 슬롯출력3출력 카드 슬롯조건: 옵션 출력 카드 장착용출처: DFOUND",
+        "Slot카드 슬롯확인 필요입력미확인MVR 슬롯(프리뷰 카드 전용)조건: 데이터시트: 'dedicated to the preview card only'. 슬롯 수는 데이터시트 텍스트에 없음출처: DPARTIAL"
+      ],
+      "ports": [
+        "RJ-45양방향 · 포트 1Ethernet(제어카드)TCP/IP, Web 제어/NovaLCT · 조건: H_Control Card 고정 포트",
+        "RJ-45(RS-232 배선)양방향 · 포트 1COM (RS-232)RS-232, 568A 결선 · 조건: 중앙 제어 시스템 연동용",
+        "USB Type-A입력 · 포트 2USB 2.0USB 2.0 · 조건: 펌웨어 업데이트/설정 백업, 전원 공급 불가",
+        "BNC양방향 · 포트 2Genlock IN/LOOPBi-Level, Tri-Level · 조건: 제어카드 고정 포트",
+        "IEC C14입력 · 포트 1AC 전원 입력조건: 100-240V~, 50/60Hz (이중화 옵션 시 2개)",
+        "카드 슬롯입력 · 포트 10입력 카드 슬롯조건: 옵션 입력 카드 장착용",
+        "카드 슬롯출력 · 포트 3출력 카드 슬롯조건: 옵션 출력 카드 장착용",
+        "카드 슬롯입력 · 포트 수 미확인MVR 슬롯(프리뷰 카드 전용)조건: 데이터시트: 'dedicated to the preview card only'. 슬롯 수는 데이터시트 텍스트에 없음확인 필요"
+      ],
+      "features": [
+        "5U 섀시에 입력 카드 최대 10매, 출력 카드 최대 3매를 모듈형으로 구성",
+        "전면 터치스크린 LCD로 메뉴·상태·모니터링 정보를 직접 확인 및 조작",
+        "이중화(예비) 전원 모듈(H_800W)을 옵션으로 추가해 전원 이중화 구성 가능",
+        "무결절 스위칭과 페이드 트랜지션, 불규칙 모자이크, 매트릭스 모드 지원",
+        "HDMI, DVI, DP, VGA, CVBS, SDI, IP 등 다양한 업계 표준 입력 커넥터와 10비트/4K 입출력 지원",
+        "온라인 상태 모니터링과 핫스왑 가능한 입출력 카드로 유지보수 편의성 확보"
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/novastar-h5-specification-89119003fed1.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 13,
+        "brackets": 13,
+        "overlaps": [],
+        "width": 290,
+        "scrollWidth": 800
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "ulxd4d",
+      "width": 390,
+      "url": "http://127.0.0.1:54675/detail/?product=ulxd4d",
+      "height": 5000,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "General · 채널 수2 채널",
+        "General · 폼팩터1RU 랙마운트, 올메탈 섀시",
+        "General · 하우징 재질steel; Extruded Aluminum",
+        "General · 치수 (H x W x D)44 x 482 x 274 mm조건: 안테나 제외",
+        "General · 무게3.36 (7.4) kg (lb)조건: 안테나 제외",
+        "RF · RF 반송 주파수 범위470–932 MHz조건: 지역에 따라 다름",
+        "RF · 작동 거리(Working Range)100 (330) m (ft)",
+        "RF · RF 튜닝 스텝25 kHz조건: 지역에 따라 다름",
+        "RF · 이미지 리젝션>70 dB조건: typical",
+        "RF · RF 감도(Sensitivity)-98 dBm조건: 10^-5 BER 기준",
+        "RF · 스퓨리어스 리젝션(RF 입력)>80 dB조건: typical",
+        "RF · RF 입력 커넥터BNC",
+        "RF · RF 입력 임피던스50 Ω",
+        "Audio · 레이턴시<2.9 ms",
+        "Audio · 오디오 다이내믹 레인지 (XLR 아날로그 출력)>120 dB조건: A-weighted, typical",
+        "Audio · 오디오 다이내믹 레인지 (Dante 디지털 출력)130 dB조건: A-weighted, typical",
+        "Audio · 전고조파왜율(THD)<0.1 %",
+        "Audio · 게인 조정 범위-18 ~ +42 (1 dB 스텝, Mute 포함) dB",
+        "Audio · 오디오 출력 커넥터XLR (채널당 1개)",
+        "Audio · XLR 출력 임피던스100 Ω",
+        "Audio · 풀스케일 출력LINE +18 dBV / MIC -12 dBV",
+        "네트워킹/제어 · 네트워크 인터페이스듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오조건: 내장",
+        "네트워킹/제어 · 네트워크 주소 지정DHCP 또는 수동 IP",
+        "네트워킹/제어 · 최대 케이블 길이100 (328) m (ft)",
+        "네트워킹/제어 · 케스케이드 출력BNC, Unbalanced/Passive, 50 Ω",
+        "Security · 암호화AES-256조건: IR sync로 송신기와 키 공유",
+        "전원/환경 · 전원 요구사항100–240 V AC, 50–60 Hz, 최대 0.26 A",
+        "전원/환경 · 동작 온도 범위-18 ~ 50 (0 ~ 122) °C (°F)",
+        "전원/환경 · 보관 온도 범위-29 ~ 74 (-20 ~ 165) °C (°F)",
+        "Certification · 국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재"
+      ],
+      "io": [
+        "RFBNC입력2RF antenna input—출처: PFOUND",
+        "RFBNC출력1Cascade RF output조건: BNC, Unbalanced/Passive, 50 Ω출처: PFOUND",
+        "오디오XLR (채널당 1개)출력2Audio output—출처: PFOUND",
+        "네트워크·제어RJ-45확인 필요양방향2Network / Dante audioDante · 조건: 듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)출처: P, MPARTIAL",
+        "전원IEC 전원 인렛(100–240V AC)확인 필요입력1Power input조건: 100–240 V AC, 50–60 Hz, 최대 0.26 A출처: P, MPARTIAL"
+      ],
+      "ports": [
+        "BNC입력 · 포트 2RF antenna input",
+        "BNC출력 · 포트 1Cascade RF output조건: BNC, Unbalanced/Passive, 50 Ω",
+        "XLR (채널당 1개)출력 · 포트 2Audio output",
+        "RJ-45양방향 · 포트 2Network / Dante audioDante · 조건: 듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)확인 필요",
+        "IEC 전원 인렛(100–240V AC)입력 · 포트 1Power input조건: 100–240 V AC, 50–60 Hz, 최대 0.26 A확인 필요"
+      ],
+      "features": [
+        "2채널 수신기다.",
+        "RF 반송 주파수 범위는 470–932MHz이다(지역에 따라 다름).",
+        "AES-256 암호화를 지원한다.",
+        "Dante 디지털 오디오 네트워킹을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ulxd1-specification-30a99b044dde.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 11,
+        "brackets": 11,
+        "overlaps": [],
+        "width": 290,
+        "scrollWidth": 560
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "dci-4-600da",
+      "width": 390,
+      "url": "http://127.0.0.1:54675/detail/?product=dci-4-600da",
+      "height": 5325,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear"
+      ],
+      "specs": [
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 2Ω300 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 4Ω600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 8Ω600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 16Ω300 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 70Vrms600 W",
+        "출력(4ch, Dual/Stereo Mode, 전 채널 구동) · 100Vrms600 W",
+        "출력(Bridge Mono, 전 채널 구동) · 4Ω600 W",
+        "출력(Bridge Mono, 전 채널 구동) · 8Ω1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 16Ω1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 140Vrms1200 W",
+        "출력(Bridge Mono, 전 채널 구동) · 200Vrms1200 W",
+        "오디오 성능 · THD0.35 %조건: 정격출력, 20Hz-20kHz",
+        "오디오 성능 · 주파수 응답±0.25 dB조건: 8Ω, 20Hz-20kHz",
+        "오디오 성능 · 댐핑 팩터>1000조건: 20Hz-100Hz",
+        "네트워킹(Dante/AES67) · 네트워크 오디오Dante / AES67조건: 이중화 Primary/Secondary 포트",
+        "네트워킹(Dante/AES67) · 샘플레이트48kHz 또는 96kHz",
+        "네트워킹(Dante/AES67) · Dante Domain Manager호환",
+        "네트워킹(Dante/AES67) · 업링크(아날로그->네트워크)지원조건: 프로세싱 전/후 선택 가능, 48kHz",
+        "DSP · 프리셋20 개",
+        "DSP · 입력 라우터우선순위 기반",
+        "DSP · 입력 딜레이최대 2 초",
+        "DSP · 출력 딜레이최대 100 ms",
+        "DSP · 리미터LevelMAX™",
+        "DSP · 부하 모니터링파일럿톤 + 연속 스윕 모드",
+        "Physical · 채널수4 채널",
+        "Physical · 크기(W×H×D)483 x 89 x 362 mm조건: 19\" x 3.5\" x 14.25\"",
+        "Physical · 무게9.12 kg조건: 20.1 lbs",
+        "Physical · 랙 유닛2U조건: 3.5\" 높이",
+        "전원/냉각 · 입력 전압100-240 V AC조건: 50/60Hz, ±10%",
+        "전원/냉각 · 전원 커넥터15A IEC",
+        "전원/냉각 · 전원 방식PFC 유니버설 전원",
+        "전원/냉각 · 냉각 방식가변속 강제공랭(전면->후면)",
+        "전원/냉각 · 최대 팬 소음45 dBA SPL@1m"
+      ],
+      "io": [
+        "OutputBarrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)확인 필요출력미확인4채널 · Speaker output확인 필요출처: P, MPARTIAL",
+        "네트워크·제어RJ-45확인 필요양방향2Dante/AES67 audioDante, AES67 · 조건: 네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)구성: DA/ComTech D 모델출처: P, MPARTIAL",
+        "전원15A IEC입력1Mains power—출처: PFOUND"
+      ],
+      "ports": [
+        "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)출력 · 포트 수 미확인4채널 · Speaker output확인 필요확인 필요",
+        "RJ-45양방향 · 포트 2Dante/AES67 audioDante, AES67 · 조건: 네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)확인 필요",
+        "15A IEC입력 · 포트 1Mains power"
+      ],
+      "features": [
+        "4채널 구성이며, 8Ω 부하 기준 채널당 600W를 출력한다.",
+        "온보드 DSP를 내장해 스피커 튜닝과 신호 처리를 앰프 자체에서 수행한다.",
+        "Dante/AES67 네트워크 오디오를 지원한다.",
+        "100-240V AC(50/60Hz, ±10%) 전원 입력 범위를 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-da-dante-manual-english",
+          "pdf": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.crownaudio.com/en-US/site_elements/dci-dante-data-sheet",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../manuals/crown-dci-install-da-series-manual.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "portMap": {
+        "items": 10,
+        "brackets": 10,
+        "overlaps": [],
+        "width": 290,
+        "scrollWidth": 560
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "eb-pq2220b",
+      "width": 390,
+      "url": "http://127.0.0.1:54675/detail/?product=eb-pq2220b",
+      "height": 5202,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Main",
+        "Rear"
+      ],
+      "specs": [
+        "Display · 백색 밝기20,000 lm조건: Normal mode, ISO 21118:2020 기준",
+        "Display · 컬러 밝기20,000 lm조건: Normal mode, IDMS 15.4 기준",
+        "Display · 명암비Over 5,000,000:1조건: Dynamic Contrast : On",
+        "Display · 기본 해상도4K",
+        "Display · LCD 크기1.04 인치(2.64cm)조건: C2fine",
+        "Display · 광출력 균일도85 %",
+        "Display · 투사 시스템RGB 액정 셔터 크리스탈 프로젝션 시스템",
+        "Display · 투사 방식360° free",
+        "Display · 엣지 블렌딩지원",
+        "Display · 화면 분할지원",
+        "Display · 키스톤 보정V: -45°~+45°, H: -30°~+30°",
+        "Optical · 광원 방식Laser Diode",
+        "Optical · 광원 수명Normal 20,000 / Quiet 20,000 / Extended 30,000 시간",
+        "Optical · 초점 거리36.0 - 57.3 mm",
+        "Optical · 줌 비율1 - 1.61",
+        "Optical · 렌즈 시프트 범위H: -16%~+16%, V: -58%~+58%",
+        "Optical · 투사 렌즈 타입Power zoom, Power focus",
+        "Optical · 화면 크기(투사 거리)60\"~1000\" (1.98m~34.19m Wide, 3.24m~55.28m Tele)",
+        "Physical · 크기(최대)586 x 218 x 492 mm조건: W x H x D",
+        "Physical · 크기(최소)586 x 185 x 492 mm조건: W x H x D",
+        "Physical · 무게약 29.2 kg",
+        "Physical · 팬소음Normal 48 / ECO 39 dB",
+        "Power · 전원공급100-240V AC +/-10% 50/60Hz 8.2A, 200-240V AC +/-10% 50/60Hz 6.6A",
+        "Power · 정격 전력 소비량1431 / 975 W조건: Normal,Custom mode / Quiet,Extended mode",
+        "Software · Epson iProjection버전 4.01(Windows 이상)"
+      ],
+      "io": [
+        "영상HDMI입력2디지털 비디오 입력HDMI Type A, Deep Color, CEC출처: PFOUND",
+        "영상HDMI출력1디지털 비디오 출력HDMI Type A, Deep Color, CEC출처: PFOUND",
+        "영상RJ45 (HDBaseT)입력1HDBaseT 입력HDBaseT · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "영상BNC입력112G-SDI 입력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "영상BNC출력112G-SDI 출력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)출처: GFOUND",
+        "오디오Stereo mini출력1오디오 출력—출처: PFOUND",
+        "USBUSB Type-A양방향2USB—구성: ELPEC01, SMF1, 펌웨어 업데이트, OSD 설정 복사 또는 5V/2A 전원 공급, 콘텐츠 재생출처: PFOUND",
+        "USBUSB Type-B입력1USB—구성: 펌웨어 업데이트, OSD 설정 복사출처: PFOUND",
+        "네트워크·제어RJ45양방향1유선 LAN—출처: PFOUND",
+        "네트워크·제어Wireless LAN미확인1무선 LANType A구성: 옵션 ELPAP11출처: PFOUND",
+        "네트워크·제어RS-232C확인 필요양방향1시리얼 제어RS-232C · 조건: 글로벌 브로셔 기준(한국 페이지 미기재), 커넥터 형태 미기재출처: GPARTIAL"
+      ],
+      "ports": [
+        "HDMI입력 · 포트 2디지털 비디오 입력HDMI Type A, Deep Color, CEC",
+        "HDMI출력 · 포트 1디지털 비디오 출력HDMI Type A, Deep Color, CEC",
+        "RJ45 (HDBaseT)입력 · 포트 1HDBaseT 입력HDBaseT · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "BNC입력 · 포트 112G-SDI 입력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "BNC출력 · 포트 112G-SDI 출력12G-SDI · 조건: 글로벌 브로셔 기준(한국 페이지 미기재)",
+        "Stereo mini출력 · 포트 1오디오 출력",
+        "USB Type-A양방향 · 포트 2USB",
+        "USB Type-B입력 · 포트 1USB",
+        "RJ45양방향 · 포트 1유선 LAN",
+        "Wireless LAN미확인 · 포트 1무선 LANType A",
+        "RS-232C양방향 · 포트 1시리얼 제어RS-232C · 조건: 글로벌 브로셔 기준(한국 페이지 미기재), 커넥터 형태 미기재확인 필요"
+      ],
+      "features": [
+        "세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+        "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+        "20,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+        "높은 명암비(Over 5,000,000:1, Dynamic Contrast On)와 33x33 그리드 포인트 보정 지원",
+        "광범위한 렌즈 라인업과 초단초점(UST) 렌즈(투사율 0.34, 제로 오프셋) 지원",
+        "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원"
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://www.epson.co.kr/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4%EC%9A%A9-%EC%A0%9C%ED%92%88/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/%EB%8C%80%ED%98%95-%EA%B0%95%EB%8B%B9-%EB%AF%B8%ED%8C%85%EB%A3%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0/EB-PQ2220B/p/V11HB05851",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false,
+      "portMap": {
+        "items": 13,
+        "brackets": 13,
+        "overlaps": [],
+        "width": 290,
+        "scrollWidth": 820
+      },
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    },
+    {
+      "slug": "aquilon-rs1",
+      "width": 390,
+      "url": "http://127.0.0.1:54675/detail/?product=aquilon-rs1",
+      "height": 4419,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front"
+      ],
+      "specs": [
+        "I/O · 4K60p 입력16조건: 필드 교체형 I/O 카드(HDMI 2.0·DP 1.2/1.4·12G-SDI 등)",
+        "I/O · 4K60p 출력8",
+        "I/O · 멀티뷰어 출력2조건: 전용",
+        "Processing · 최대 믹싱 레이어4×4K 또는 8×DL/2K",
+        "Processing · 처리 스루풋40 메가픽셀조건: 10bit 4:4:4 @60Hz 기준",
+        "Audio · Dante 채널64x64 @48kHz 또는 32x32 @96kHz",
+        "Physical · 크기(랙귀 제외)439.8×177×700 mm조건: W×H×D",
+        "Physical · 크기(핸들 포함)482.4×221.2×701 mm조건: W×H×D",
+        "Physical · 무게26.1 kg조건: 부속품 미포함",
+        "Physical · 운송 무게45.1 kg조건: 부속품 포함",
+        "Physical · 랙 유닛4 RU",
+        "Power · 전원 입력100-240VAC, 12-7A, 50/60Hz조건: 1+1 이중화 교체형",
+        "Power · 최대 소비전력540 W"
+      ],
+      "io": [
+        "영상HDMI 2.0 / DisplayPort 1.2·1.4 / 12G-SDI 카드입력미확인16(카드 구성에 따라 배분) · 4K60p input조건: 카드 조합에 따라 입력 채널 배분이 달라짐구성: 필드 교체형출처: SVERIFIED",
+        "영상출력 카드(HDMI 2.0 등)출력84K60p output—구성: 필드 교체형출처: SVERIFIED",
+        "영상멀티뷰어 출력출력2Multiviewer outputHDMI 2.0 또는 DisplayPort 1.2 · 조건: 전용출처: SVERIFIED",
+        "네트워크·제어온보드 Dante 카드양방향1Dante audio networkingDante · 조건: 이중화출처: SVERIFIED",
+        "LinkOPT-RSX-LINK(옵션)확인 필요양방향1System link40GbE QSFP+ 또는 DAC · 조건: 최대 3대 연결구성: 옵션 하드웨어 업그레이드출처: SPARTIAL"
+      ],
+      "ports": [
+        "HDMI 2.0 / DisplayPort 1.2·1.4 / 12G-SDI 카드입력 · 포트 수 미확인16(카드 구성에 따라 배분) · 4K60p input조건: 카드 조합에 따라 입력 채널 배분이 달라짐",
+        "출력 카드(HDMI 2.0 등)출력 · 포트 84K60p output",
+        "멀티뷰어 출력출력 · 포트 2Multiviewer outputHDMI 2.0 또는 DisplayPort 1.2 · 조건: 전용",
+        "온보드 Dante 카드양방향 · 포트 1Dante audio networkingDante · 조건: 이중화",
+        "OPT-RSX-LINK(옵션)양방향 · 포트 1System link40GbE QSFP+ 또는 DAC · 조건: 최대 3대 연결확인 필요"
+      ],
+      "features": [
+        "16개의 4K60p 입력(HDMI 2.0·DisplayPort 1.2/1.4·12G-SDI 카드 조합)과 8개의 4K60p 출력, 2개의 전용 멀티뷰어 출력을 제공한다.",
+        "최대 4×4K 또는 8×DL/2K 믹싱 레이어와 10-12bit 4:4:4 영상 처리를 지원한다.",
+        "HTML5 기반 Web RCS로 실시간 소스 축소판을 보며 제어할 수 있다.",
+        "IP(TCP/IP 소켓) 제어와 Q-SYS·AMX·Crestron 드라이버, AW VideoCompositor 연동을 지원한다.",
+        "온보드 Dante 카드로 48kHz 기준 64x64, 96kHz 기준 32x32 채널 오디오 네트워킹을 지원한다.",
+        "OPT-RSX-LINK 하드웨어 업그레이드로 최대 3대의 다른 Aquilon 시스템과 연결할 수 있다.",
+        "1+1 이중화 교체형 전원 공급 장치와 스마트 열 관리로 상시 가동을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-user-manual-763541fa361a.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+          "pdf": null
+        },
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/aquilon-rs1-technical-document-2623151a666a.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 1,
+      "settings": 2,
+      "overlap": false,
+      "gallery": true,
+      "zoom": true,
+      "fullIo": true,
+      "reloadHashes": true
+    }
+  ],
+  "representatives": [
+    {
+      "slug": "brc-am7",
+      "width": 1280,
+      "identicalToBaseline": true,
+      "height": 2417,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Main",
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "specs": [
+        "Camera · 센서Exmor RS CMOS, 1.0형",
+        "Camera · 최대 유효 화소약 14.0 MP조건: 촬영 모드·설정에 따라 달라짐",
+        "Camera · AF위상차+콘트라스트조건: 촬영 설정에 따라 동작",
+        "Camera · ND 필터1/4–1/128 ND조건: 선형 가변 범위",
+        "Video · SDI OUT1 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정",
+        "Video · HDMI 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정",
+        "Video · 내부 기록 형식XAVC HS/S, XAVC Long/Intra조건: 코덱·컨테이너·매체별 제약 있음",
+        "Lens · 광학 줌20 ×",
+        "Lens · 초점 거리24–480 mm조건: 35mm 환산",
+        "Lens · 최대 개방 조리개F2.8–F4.5 F조건: 줌 위치에 따라 변경",
+        "Lens · 수평 화각약 75 degree조건: 광각",
+        "PTZ · 팬 범위−175–+175 degree",
+        "PTZ · 틸트 범위−30–210 degree",
+        "PTZ · 팬/틸트 속도0.004–180 degree/s조건: 설정에 따라 달라짐",
+        "PTZ · 프리셋최대 100 count조건: 리모컨/웹 앱별 이용 가능 수 다름",
+        "Network · LAN1000BASE-T조건: RJ-45",
+        "Streaming / Protocol · IP 스트리밍RTP/RTCP, RTSP, RTMP/RTMPS, SRT, NDI|HXREVIEW REQUIRED조건: 서비스·펌웨어·구성 조건 재확인",
+        "Control · 제어VISCA RS-422, VISCA over IP조건: 관리자·네트워크 설정 필요",
+        "Audio · 오디오 입력XLR 3핀 ×2, 3.5mm MIC ×1조건: LINE/MIC/+48V 선택은 XLR",
+        "Audio · 기록 오디오LPCM 24-bit/48kHz/4ch조건: 기록 형식에 따라",
+        "Power · DC 전원12 V조건: 허용 입력 11–17V",
+        "Power · PoE++IEEE 802.3bt Type 4 Class 8조건: 스위치 전력 예산 확인",
+        "Power · 최대 소비 전력, DC132 W조건: DC IN 공급",
+        "Power · 최대 소비 전력, PoE++71.3 W조건: PoE++ 공급",
+        "Physical · 질량약 3.5 kg",
+        "Physical · 크기약 168.7×225.2×192.3 mm조건: W×H×D",
+        "Environment · 작동 온도0–40 °C"
+      ],
+      "io": [
+        "영상SDI OUT1 BNC출력1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상SDI OUT2 BNC출력1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트구성: Fixed출처: HS, HCVERIFIED",
+        "영상HDMI Type A출력1VideoHDMI · 조건: 형식·프레임 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상OPTICAL SFP+모듈 필요출력1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호구성: Optional module출처: HS, HCVERIFIED",
+        "네트워크·제어LAN RJ-45양방향1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요구성: Fixed출처: HS, HCVERIFIED",
+        "네트워크·제어VISCA IN RJ-45입력1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어VISCA OUT RJ-45출력1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어OPTION RJ-45양방향1TallyRed/green tally · 조건: 구성·배선 확인구성: Fixed connector출처: HS, HCVERIFIED",
+        "오디오XLR 3핀입력2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인구성: Fixed출처: HS, HCVERIFIED",
+        "오디오3.5mm stereo입력1AudioPlug-in power 호환 · 조건: XLR과 별도 입력구성: Fixed출처: HS, HCVERIFIED",
+        "동기GENLOCK IN BNC입력1Sync1.0Vp-p, 75Ω · 조건: 외부 동기구성: Fixed출처: HS, HCVERIFIED",
+        "동기TC IN BNC입력1TimecodeTC · 조건: 출력 아님구성: Fixed출처: HS, HCVERIFIED",
+        "전원DC IN XLR 4핀입력1Power11–17V DC · 조건: 공칭 12V구성: Fixed출처: HS, HCVERIFIED",
+        "저장·미디어CFexpress Type A/SD slots양방향2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인구성: Fixed출처: HS, HCVERIFIED"
+      ],
+      "ports": [
+        "SDI OUT1 BNC출력 · 포트 1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별",
+        "SDI OUT2 BNC출력 · 포트 1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트",
+        "HDMI Type A출력 · 포트 1VideoHDMI · 조건: 형식·프레임 설정별",
+        "OPTICAL SFP+출력 · 포트 1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호모듈 필요",
+        "LAN RJ-45양방향 · 포트 1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요",
+        "VISCA IN RJ-45입력 · 포트 1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요",
+        "VISCA OUT RJ-45출력 · 포트 1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인",
+        "OPTION RJ-45양방향 · 포트 1TallyRed/green tally · 조건: 구성·배선 확인",
+        "XLR 3핀입력 · 포트 2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인",
+        "3.5mm stereo입력 · 포트 1AudioPlug-in power 호환 · 조건: XLR과 별도 입력",
+        "GENLOCK IN BNC입력 · 포트 1Sync1.0Vp-p, 75Ω · 조건: 외부 동기",
+        "TC IN BNC입력 · 포트 1TimecodeTC · 조건: 출력 아님",
+        "DC IN XLR 4핀입력 · 포트 1Power11–17V DC · 조건: 공칭 12V",
+        "CFexpress Type A/SD slots양방향 · 포트 2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인"
+      ],
+      "features": [
+        "1.0형 Exmor RS CMOS 센서로 최대 4K 59.94/50p 영상을 출력한다.",
+        "광학 20배 줌과 24–480mm 35mm 환산 범위를 제공한다.",
+        "AI 분석 기반 자동 프레이밍으로 사람을 따라 구도를 조정할 수 있다.",
+        "팬 ±175°, 틸트 −30°~210° 범위에서 PTZ 제어를 지원한다.",
+        "12G-SDI, 3G-SDI, HDMI와 선택형 SFP+ 광 출력을 구분해 제공한다.",
+        "LAN을 통한 IP 제어와 RTSP·SRT 등 네트워크 스트림을 지원한다.",
+        "12V DC 또는 IEEE 802.3bt Type 4 Class 8 PoE++ 전원을 사용한다.",
+        "XLR 오디오 입력 2개와 3.5mm 마이크 입력 1개를 제공한다."
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+          "pdf": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    },
+    {
+      "slug": "dm7",
+      "width": 1280,
+      "identicalToBaseline": true,
+      "height": 2349,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "specs": [
+        "Mixing · 입력 믹싱 채널120 mono channel",
+        "Mixing · Mix 버스48 bus",
+        "Mixing · Matrix 버스12 bus조건: Input-to-Matrix 지원",
+        "Mixing · Stereo / Mono 버스2 Stereo / 1 Mono bus조건: Stereo B를 Mono로 변경 가능",
+        "Audio · 샘플링 주파수48 / 96 kHz조건: 내·외부 클록",
+        "Audio · 신호 지연1.5 미만 ms조건: INPUT→OMNI OUT, Fs=96kHz",
+        "Audio · USB 오디오18 in / 18 out channel조건: USB-C, USB 2.0",
+        "Network · Dante I/O144 in / 144 out channel조건: 24/32-bit, 1000BASE-T",
+        "Control · Scene memory500 scene",
+        "Control · GPI5 in / 5 out channel조건: D-sub 15핀",
+        "Interface · Displays12.1인치 ×2, 7인치 ×1 display조건: 멀티터치",
+        "Interface · Faders28 fader조건: 100mm, 터치 감지 모터식",
+        "Power · AC 입력100–240, 50/60 V, Hz조건: 이중 잠금형 AC inlet",
+        "Power · 소비 전력240 W",
+        "Physical · 크기793×324×564 mm조건: W×H×D, 고무발 포함",
+        "Physical · 무게23.5 kg"
+      ],
+      "io": [
+        "오디오XLR 3핀 입력입력32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 3핀 출력출력16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 디지털 오디오입력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "오디오XLR 디지털 오디오출력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "네트워크·제어etherCON RJ-45양방향2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어D-sub 15핀양방향1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어RJ-45양방향1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-C양방향1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-A양방향2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A구성: Fixed출처: TDVERIFIED",
+        "동기BNC입력1Word clock75Ω termination구성: Fixed출처: TD, RMVERIFIED",
+        "동기BNC출력1Word clockTTL/75Ω구성: Fixed출처: TDVERIFIED",
+        "동기XLR 3핀 입력입력1TimecodeSMPTE구성: Fixed출처: TD, RMVERIFIED",
+        "확장PY slot카드 필요양방향1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리구성: Optional card출처: TD, RMVERIFIED",
+        "전원V-Lock AC inlet입력2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원구성: Fixed출처: TDVERIFIED",
+        "전원XLR 4핀 입력옵션입력1Backup DC power24V DC · 조건: PA-700 등 권장 전원구성: Optional supply출처: RMVERIFIED"
+      ],
+      "ports": [
+        "XLR 3핀 입력입력 · 포트 32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32",
+        "XLR 3핀 출력출력 · 포트 16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16",
+        "XLR 디지털 오디오입력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "XLR 디지털 오디오출력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "etherCON RJ-45양방향 · 포트 2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장",
+        "D-sub 15핀양방향 · 포트 1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조",
+        "RJ-45양방향 · 포트 1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상",
+        "USB-C양방향 · 포트 1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건",
+        "USB-A양방향 · 포트 2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A",
+        "BNC입력 · 포트 1Word clock75Ω termination",
+        "BNC출력 · 포트 1Word clockTTL/75Ω",
+        "XLR 3핀 입력입력 · 포트 1TimecodeSMPTE",
+        "PY slot양방향 · 포트 1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리카드 필요",
+        "V-Lock AC inlet입력 · 포트 2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원",
+        "XLR 4핀 입력입력 · 포트 1Backup DC power24V DC · 조건: PA-700 등 권장 전원옵션"
+      ],
+      "features": [
+        "120개 모노 입력 채널과 48 Mix·12 Matrix·2 Stereo 버스를 처리한다.",
+        "Dante 네트워크에서 144채널 입력과 144채널 출력을 지원한다.",
+        "12.1인치 화면 두 개와 7인치 화면 한 개로 콘솔을 조작한다.",
+        "28개의 100mm 터치 감지 모터 페이더를 제공한다.",
+        "로컬 XLR 아날로그 입력 32개와 OMNI OUT 16개를 제공한다.",
+        "USB-C 연결로 최대 18입력/18출력 오디오 인터페이스로 동작한다.",
+        "PY 카드 슬롯을 통해 선택형 I/O를 확장할 수 있다.",
+        "잠금형 AC 입력 두 개를 사용하는 내장 이중 전원 구조를 제공한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/dm7-user-manual-0b1045e2664d.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    },
+    {
+      "slug": "ua874xa",
+      "width": 1280,
+      "identicalToBaseline": true,
+      "height": 2338,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front"
+      ],
+      "specs": [
+        "General · 커넥터 타입BNC (Female)",
+        "General · 임피던스50 Ω",
+        "General · 전원 요구사항10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA조건: 바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함)",
+        "General · RF 주파수 대역 (UA874XA)902-960 MHz조건: 다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)",
+        "RF 성능 · 수신 패턴 (3dB 빔폭)70 도(degrees)",
+        "RF 성능 · 3차 상호변조 차단점 (OIP3)>30 dBm",
+        "RF 성능 · 안테나 게인 (On-Axis)7.5 dBi조건: 0dB 게인 설정, 중심 주파수 기준 (UA874XA)",
+        "RF 성능 · 신호 게인 (스위치 선택)+12 / +6 / 0 / -6 dB조건: ±1 dB, 4단 스위치 전환",
+        "RF 성능 · RF 과부하 LED 임계값-5 dBm조건: 패시브 게인(0dB, -6dB) 설정에서는 RF 과부하 LED 미작동",
+        "기구/환경 · 치수 (UA874XA)224 x 234 x 36 mm (H x W x D)",
+        "기구/환경 · 무게 (UA874XA)213 g",
+        "기구/환경 · 동작 온도 범위-18°C ~ 63°C",
+        "기구/환경 · 보관 온도 범위-29°C ~ 74°C",
+        "기구/환경 · 설치 방식마이크 스탠드 마운트, 천장 서스펜션, 벽면 마운트(스위블 브래킷 내장)",
+        "Certification · 국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재"
+      ],
+      "io": [
+        "RFBNC (Female)출력미확인RF output to receiver—출처: PFOUND",
+        "전원BNC (동축 바이어스 공급)입력1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))출처: PFOUND"
+      ],
+      "ports": [
+        "BNC (Female)출력 · 포트 수 미확인RF output to receiver",
+        "BNC (동축 바이어스 공급)입력 · 포트 1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))"
+      ],
+      "features": [
+        "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+        "내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ua874xa-user-manual-13f1febab8c9.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    },
+    {
+      "slug": "brc-am7",
+      "width": 390,
+      "identicalToBaseline": true,
+      "height": 5081,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Main",
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "specs": [
+        "Camera · 센서Exmor RS CMOS, 1.0형",
+        "Camera · 최대 유효 화소약 14.0 MP조건: 촬영 모드·설정에 따라 달라짐",
+        "Camera · AF위상차+콘트라스트조건: 촬영 설정에 따라 동작",
+        "Camera · ND 필터1/4–1/128 ND조건: 선형 가변 범위",
+        "Video · SDI OUT1 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정",
+        "Video · HDMI 최대 출력3840×2160/59.94p pixel/fps조건: 출력 형식·주파수 설정",
+        "Video · 내부 기록 형식XAVC HS/S, XAVC Long/Intra조건: 코덱·컨테이너·매체별 제약 있음",
+        "Lens · 광학 줌20 ×",
+        "Lens · 초점 거리24–480 mm조건: 35mm 환산",
+        "Lens · 최대 개방 조리개F2.8–F4.5 F조건: 줌 위치에 따라 변경",
+        "Lens · 수평 화각약 75 degree조건: 광각",
+        "PTZ · 팬 범위−175–+175 degree",
+        "PTZ · 틸트 범위−30–210 degree",
+        "PTZ · 팬/틸트 속도0.004–180 degree/s조건: 설정에 따라 달라짐",
+        "PTZ · 프리셋최대 100 count조건: 리모컨/웹 앱별 이용 가능 수 다름",
+        "Network · LAN1000BASE-T조건: RJ-45",
+        "Streaming / Protocol · IP 스트리밍RTP/RTCP, RTSP, RTMP/RTMPS, SRT, NDI|HXREVIEW REQUIRED조건: 서비스·펌웨어·구성 조건 재확인",
+        "Control · 제어VISCA RS-422, VISCA over IP조건: 관리자·네트워크 설정 필요",
+        "Audio · 오디오 입력XLR 3핀 ×2, 3.5mm MIC ×1조건: LINE/MIC/+48V 선택은 XLR",
+        "Audio · 기록 오디오LPCM 24-bit/48kHz/4ch조건: 기록 형식에 따라",
+        "Power · DC 전원12 V조건: 허용 입력 11–17V",
+        "Power · PoE++IEEE 802.3bt Type 4 Class 8조건: 스위치 전력 예산 확인",
+        "Power · 최대 소비 전력, DC132 W조건: DC IN 공급",
+        "Power · 최대 소비 전력, PoE++71.3 W조건: PoE++ 공급",
+        "Physical · 질량약 3.5 kg",
+        "Physical · 크기약 168.7×225.2×192.3 mm조건: W×H×D",
+        "Environment · 작동 온도0–40 °C"
+      ],
+      "io": [
+        "영상SDI OUT1 BNC출력1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상SDI OUT2 BNC출력1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트구성: Fixed출처: HS, HCVERIFIED",
+        "영상HDMI Type A출력1VideoHDMI · 조건: 형식·프레임 설정별구성: Fixed출처: HS, HCVERIFIED",
+        "영상OPTICAL SFP+모듈 필요출력1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호구성: Optional module출처: HS, HCVERIFIED",
+        "네트워크·제어LAN RJ-45양방향1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요구성: Fixed출처: HS, HCVERIFIED",
+        "네트워크·제어VISCA IN RJ-45입력1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어VISCA OUT RJ-45출력1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인구성: Fixed출처: HCVERIFIED",
+        "네트워크·제어OPTION RJ-45양방향1TallyRed/green tally · 조건: 구성·배선 확인구성: Fixed connector출처: HS, HCVERIFIED",
+        "오디오XLR 3핀입력2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인구성: Fixed출처: HS, HCVERIFIED",
+        "오디오3.5mm stereo입력1AudioPlug-in power 호환 · 조건: XLR과 별도 입력구성: Fixed출처: HS, HCVERIFIED",
+        "동기GENLOCK IN BNC입력1Sync1.0Vp-p, 75Ω · 조건: 외부 동기구성: Fixed출처: HS, HCVERIFIED",
+        "동기TC IN BNC입력1TimecodeTC · 조건: 출력 아님구성: Fixed출처: HS, HCVERIFIED",
+        "전원DC IN XLR 4핀입력1Power11–17V DC · 조건: 공칭 12V구성: Fixed출처: HS, HCVERIFIED",
+        "저장·미디어CFexpress Type A/SD slots양방향2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인구성: Fixed출처: HS, HCVERIFIED"
+      ],
+      "ports": [
+        "SDI OUT1 BNC출력 · 포트 1Video12G/6G/3G/HD-SDI · 조건: 출력 설정별",
+        "SDI OUT2 BNC출력 · 포트 1Video3G-SDI Level A/HD-SDI · 조건: SDI1과 별도 포트",
+        "HDMI Type A출력 · 포트 1VideoHDMI · 조건: 형식·프레임 설정별",
+        "OPTICAL SFP+출력 · 포트 1VideoSDI 광 변환 · 조건: SFP+ 모듈 필요; SDI OUT1과 동일 신호모듈 필요",
+        "LAN RJ-45양방향 · 포트 1Network/PoE1000BASE-T, PoE++ · 조건: 적합 PoE++ 스위치 필요",
+        "VISCA IN RJ-45입력 · 포트 1PTZ controlVISCA RS-422 · 조건: 관리자 설정 필요",
+        "VISCA OUT RJ-45출력 · 포트 1PTZ controlVISCA RS-422 · 조건: 데이지체인 구성 확인",
+        "OPTION RJ-45양방향 · 포트 1TallyRed/green tally · 조건: 구성·배선 확인",
+        "XLR 3핀입력 · 포트 2AudioLINE/MIC/MIC+48V · 조건: 입력별 설정 확인",
+        "3.5mm stereo입력 · 포트 1AudioPlug-in power 호환 · 조건: XLR과 별도 입력",
+        "GENLOCK IN BNC입력 · 포트 1Sync1.0Vp-p, 75Ω · 조건: 외부 동기",
+        "TC IN BNC입력 · 포트 1TimecodeTC · 조건: 출력 아님",
+        "DC IN XLR 4핀입력 · 포트 1Power11–17V DC · 조건: 공칭 12V",
+        "CFexpress Type A/SD slots양방향 · 포트 2MediaCFexpress A 또는 SD · 조건: 카드 미포함, 지원 조합 확인"
+      ],
+      "features": [
+        "1.0형 Exmor RS CMOS 센서로 최대 4K 59.94/50p 영상을 출력한다.",
+        "광학 20배 줌과 24–480mm 35mm 환산 범위를 제공한다.",
+        "AI 분석 기반 자동 프레이밍으로 사람을 따라 구도를 조정할 수 있다.",
+        "팬 ±175°, 틸트 −30°~210° 범위에서 PTZ 제어를 지원한다.",
+        "12G-SDI, 3G-SDI, HDMI와 선택형 SFP+ 광 출력을 구분해 제공한다.",
+        "LAN을 통한 IP 제어와 RTSP·SRT 등 네트워크 스트림을 지원한다.",
+        "12V DC 또는 IEEE 802.3bt Type 4 Class 8 PoE++ 전원을 사용한다.",
+        "XLR 오디오 입력 2개와 3.5mm 마이크 입력 1개를 제공한다."
+      ],
+      "documents": [
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/index.html",
+          "pdf": null
+        },
+        {
+          "text": "제조사에서 열기 ↗",
+          "href": "https://helpguide.sony.net/rc/brc-am7/v1/ko/contents/specifications.html",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    },
+    {
+      "slug": "dm7",
+      "width": 390,
+      "identicalToBaseline": true,
+      "height": 5369,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front",
+        "Rear",
+        "Perspective"
+      ],
+      "specs": [
+        "Mixing · 입력 믹싱 채널120 mono channel",
+        "Mixing · Mix 버스48 bus",
+        "Mixing · Matrix 버스12 bus조건: Input-to-Matrix 지원",
+        "Mixing · Stereo / Mono 버스2 Stereo / 1 Mono bus조건: Stereo B를 Mono로 변경 가능",
+        "Audio · 샘플링 주파수48 / 96 kHz조건: 내·외부 클록",
+        "Audio · 신호 지연1.5 미만 ms조건: INPUT→OMNI OUT, Fs=96kHz",
+        "Audio · USB 오디오18 in / 18 out channel조건: USB-C, USB 2.0",
+        "Network · Dante I/O144 in / 144 out channel조건: 24/32-bit, 1000BASE-T",
+        "Control · Scene memory500 scene",
+        "Control · GPI5 in / 5 out channel조건: D-sub 15핀",
+        "Interface · Displays12.1인치 ×2, 7인치 ×1 display조건: 멀티터치",
+        "Interface · Faders28 fader조건: 100mm, 터치 감지 모터식",
+        "Power · AC 입력100–240, 50/60 V, Hz조건: 이중 잠금형 AC inlet",
+        "Power · 소비 전력240 W",
+        "Physical · 크기793×324×564 mm조건: W×H×D, 고무발 포함",
+        "Physical · 무게23.5 kg"
+      ],
+      "io": [
+        "오디오XLR 3핀 입력입력32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 3핀 출력출력16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16구성: Fixed출처: TD, RMVERIFIED",
+        "오디오XLR 디지털 오디오입력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "오디오XLR 디지털 오디오출력미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체구성: Fixed출처: TDVERIFIED",
+        "네트워크·제어etherCON RJ-45양방향2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어D-sub 15핀양방향1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조구성: Fixed출처: TD, RMVERIFIED",
+        "네트워크·제어RJ-45양방향1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-C양방향1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건구성: Fixed출처: TD, RMVERIFIED",
+        "USBUSB-A양방향2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A구성: Fixed출처: TDVERIFIED",
+        "동기BNC입력1Word clock75Ω termination구성: Fixed출처: TD, RMVERIFIED",
+        "동기BNC출력1Word clockTTL/75Ω구성: Fixed출처: TDVERIFIED",
+        "동기XLR 3핀 입력입력1TimecodeSMPTE구성: Fixed출처: TD, RMVERIFIED",
+        "확장PY slot카드 필요양방향1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리구성: Optional card출처: TD, RMVERIFIED",
+        "전원V-Lock AC inlet입력2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원구성: Fixed출처: TDVERIFIED",
+        "전원XLR 4핀 입력옵션입력1Backup DC power24V DC · 조건: PA-700 등 권장 전원구성: Optional supply출처: RMVERIFIED"
+      ],
+      "ports": [
+        "XLR 3핀 입력입력 · 포트 32Analog mic/lineBalanced, +48V selectable · 조건: INPUT 1–32",
+        "XLR 3핀 출력출력 · 포트 16Analog audioBalanced OMNI OUT · 조건: OMNI OUT 1–16",
+        "XLR 디지털 오디오입력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "XLR 디지털 오디오출력 · 포트 수 미확인2 stereo pairs / 4ch · AES/EBUAES/EBU, SRC · 조건: DM7 본체",
+        "etherCON RJ-45양방향 · 포트 2Dante audioPrimary / Secondary, 1000BASE-T · 조건: CAT5e 이상, STP 권장",
+        "D-sub 15핀양방향 · 포트 1GPI5 in / 5 out · 조건: 전압·전류 조건은 TD 참조",
+        "RJ-45양방향 · 포트 1Ethernet control10BASE-T/100BASE-TX · 조건: CAT5 이상",
+        "USB-C양방향 · 포트 1Audio / MIDI / DAW controlUSB 2.0, 18×18 · 조건: Yamaha driver 조건",
+        "USB-A양방향 · 포트 2Storage / 2-track record-playUSB 2.0/1.1 · 조건: 포트당 최대 1A",
+        "BNC입력 · 포트 1Word clock75Ω termination",
+        "BNC출력 · 포트 1Word clockTTL/75Ω",
+        "XLR 3핀 입력입력 · 포트 1TimecodeSMPTE",
+        "PY slot양방향 · 포트 1Audio / control expansionPY card dependent · 조건: 카드별 사양 분리카드 필요",
+        "V-Lock AC inlet입력 · 포트 2AC power100–240V, 50/60Hz · 조건: 내장 이중 전원",
+        "XLR 4핀 입력입력 · 포트 1Backup DC power24V DC · 조건: PA-700 등 권장 전원옵션"
+      ],
+      "features": [
+        "120개 모노 입력 채널과 48 Mix·12 Matrix·2 Stereo 버스를 처리한다.",
+        "Dante 네트워크에서 144채널 입력과 144채널 출력을 지원한다.",
+        "12.1인치 화면 두 개와 7인치 화면 한 개로 콘솔을 조작한다.",
+        "28개의 100mm 터치 감지 모터 페이더를 제공한다.",
+        "로컬 XLR 아날로그 입력 32개와 OMNI OUT 16개를 제공한다.",
+        "USB-C 연결로 최대 18입력/18출력 오디오 인터페이스로 동작한다.",
+        "PY 카드 슬롯을 통해 선택형 I/O를 확장할 수 있다.",
+        "잠금형 AC 입력 두 개를 사용하는 내장 이중 전원 구조를 제공한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/dm7-user-manual-0b1045e2664d.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    },
+    {
+      "slug": "ua874xa",
+      "width": 390,
+      "identicalToBaseline": true,
+      "height": 3370,
+      "overflow": 0,
+      "broken": [],
+      "images": [
+        "Front"
+      ],
+      "specs": [
+        "General · 커넥터 타입BNC (Female)",
+        "General · 임피던스50 Ω",
+        "General · 전원 요구사항10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA조건: 바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함)",
+        "General · RF 주파수 대역 (UA874XA)902-960 MHz조건: 다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)",
+        "RF 성능 · 수신 패턴 (3dB 빔폭)70 도(degrees)",
+        "RF 성능 · 3차 상호변조 차단점 (OIP3)>30 dBm",
+        "RF 성능 · 안테나 게인 (On-Axis)7.5 dBi조건: 0dB 게인 설정, 중심 주파수 기준 (UA874XA)",
+        "RF 성능 · 신호 게인 (스위치 선택)+12 / +6 / 0 / -6 dB조건: ±1 dB, 4단 스위치 전환",
+        "RF 성능 · RF 과부하 LED 임계값-5 dBm조건: 패시브 게인(0dB, -6dB) 설정에서는 RF 과부하 LED 미작동",
+        "기구/환경 · 치수 (UA874XA)224 x 234 x 36 mm (H x W x D)",
+        "기구/환경 · 무게 (UA874XA)213 g",
+        "기구/환경 · 동작 온도 범위-18°C ~ 63°C",
+        "기구/환경 · 보관 온도 범위-29°C ~ 74°C",
+        "기구/환경 · 설치 방식마이크 스탠드 마운트, 천장 서스펜션, 벽면 마운트(스위블 브래킷 내장)",
+        "Certification · 국내 인증인증 완료조건: 운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재"
+      ],
+      "io": [
+        "RFBNC (Female)출력미확인RF output to receiver—출처: PFOUND",
+        "전원BNC (동축 바이어스 공급)입력1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))출처: PFOUND"
+      ],
+      "ports": [
+        "BNC (Female)출력 · 포트 수 미확인RF output to receiver",
+        "BNC (동축 바이어스 공급)입력 · 포트 1Power input조건: 10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))"
+      ],
+      "features": [
+        "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다.",
+        "내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다."
+      ],
+      "documents": [
+        {
+          "text": "보기",
+          "href": null,
+          "pdf": "true"
+        },
+        {
+          "text": "↓ 내려받기",
+          "href": "../docs/ua874xa-user-manual-13f1febab8c9.pdf",
+          "pdf": null
+        }
+      ],
+      "flow": 0,
+      "settings": 0,
+      "overlap": false
+    }
+  ],
+  "errors": [],
+  "referenceErrors": [
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failedResponses": []
+}

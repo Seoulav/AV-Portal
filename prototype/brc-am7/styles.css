@@ -160,8 +160,18 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .port-photo-stage > img { display: block; max-width: 100%; }
 #port-map-layer { position: absolute; pointer-events: none; }
 .port-map-overlay { position: relative; width: 100%; height: 100%; }
-.port-map-marker { position: absolute; bottom: 0; transform: translateX(-50%); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: white; background: #2459b0; border: 2px solid white; font-size: 12px; font-weight: 800; box-shadow: 0 1px 5px #0003; }
-.port-map-marker[data-side="top"] { bottom: auto; top: 0; }
+.port-map-marker { position: absolute; transform: translate(-50%, -50%); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: white; background: #2459b0; border: 2px solid white; font-size: 12px; font-weight: 800; box-shadow: 0 1px 5px #0003; }
+/* Only the diagram scrolls, never the page. Photo files/metadata are unchanged. */
+.port-photo-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.port-photo-scroll:focus-visible { outline: 2px solid var(--pg-blue); outline-offset: 2px; }
+.port-photo-stage.map-active { padding: 40px 0; }
+.port-photo-stage.map-active > img { width: 100%; height: auto; max-height: none; }
+.detail-photo:has(.map-active) { min-height: 0; }
+.detail-photo:has(.map-active) .zoom-button { position: static; align-self: flex-end; margin-top: 6px; }
+.port-map-bracket { position: absolute; inset: 0; overflow: visible; }
+.port-map-scroll-hint { font-size: 13px; color: #405678; margin: 8px 0 0; }
+.port-map-list strong { color: #2459b0; }
+
 .port-map-list p { display: flex; flex-wrap: wrap; gap: 5px 12px; padding: 8px 0; border-bottom: 1px solid var(--pg-line); margin: 0; font-size: 13px; overflow-wrap: anywhere; }
 .signal-flow { width: 100%; min-width: 0; }
 .signal-flow svg { display: block; width: 100%; height: auto; }

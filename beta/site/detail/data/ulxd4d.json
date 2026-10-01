@@ -408,7 +408,7 @@
       "connector": "BNC",
       "signal": "RF antenna input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
       "condition": "",
@@ -432,7 +432,7 @@
       "connector": "XLR (채널당 1개)",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
       "condition": "",
@@ -444,7 +444,7 @@
       "connector": "RJ-45",
       "signal": "Network / Dante audio",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "Dante",
       "availability": "",
       "condition": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (내장)",
@@ -476,7 +476,7 @@
       "name": "제조사 사용 안내",
       "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
       "scope": "제조사 공식 출처",
-      "page": "PDF/인쇄 4·8·9·46쪽 · ULXD4D/ULXD4Q 공용 중 2채널 모델 적용"
+      "page": "PDF/인쇄 4·8·9·43·44·46·64쪽 · 2채널 ULXD4D 적용; 공용 후면 그림은 ULXD4Q"
     },
     {
       "code": "D",
@@ -766,5 +766,114 @@
         }
       ]
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ulxd4d-rear.webp",
+      "width": 2000,
+      "height": 291
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 입력 A",
+        "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+        "x1": 1800,
+        "x2": 1878,
+        "y": 57,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 입력 B",
+        "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+        "x1": 421,
+        "x2": 499,
+        "y": 57,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력 1",
+        "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+        "x1": 1560,
+        "x2": 1675,
+        "y": 87,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "오디오 출력 2",
+        "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+        "x1": 1362,
+        "x2": 1476,
+        "y": 87,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "캐스케이드 출력 A",
+        "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 A 신호를 전달합니다.",
+        "x1": 1704,
+        "x2": 1777,
+        "y": 214,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "캐스케이드 출력 B",
+        "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 B 신호를 전달합니다.",
+        "x1": 512,
+        "x2": 591,
+        "y": 214,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "출력 1 MIC/LINE",
+        "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠합니다.",
+        "x1": 1524,
+        "x2": 1546,
+        "y": 204,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "출력 2 MIC/LINE",
+        "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠합니다.",
+        "x1": 1324,
+        "x2": 1346,
+        "y": 204,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "Dante Primary",
+        "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어를 연결합니다.",
+        "x1": 1153,
+        "x2": 1238,
+        "y": 103,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "Dante Secondary",
+        "desc": "RJ-45 · 네트워크 모드에 맞춰 연결합니다(이중화/스위치/분리).",
+        "x1": 1050,
+        "x2": 1135,
+        "y": 187,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "AC 전원 입력",
+        "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+        "x1": 107,
+        "x2": 217,
+        "y": 223,
+        "side": "bottom"
+      }
+    ]
+  }
 }

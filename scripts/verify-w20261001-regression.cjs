@@ -59,7 +59,8 @@ const server=createServer((req,res)=>{try {const p=decodeURIComponent(new URL(re
    await page.route('**/detail/data/dm7.json',route=>route.fulfill({json:fixture}));await ready('dm7');
    assert.equal(await page.locator('#overview-summary img').count(),0);assert.equal(await page.locator('#overview-summary strong').count(),1);
    assert.equal(await page.locator('#key-specs .fact-unit').count(),2);assert.equal(await page.locator('.setting-card').count(),2);assert.equal(await page.locator('.signal-flow').count(),1);
-   assert.equal(await page.locator('#port-map-layer .port-map-marker').count(),0);
+   assert.equal(await page.locator('#port-map-layer .port-map-marker').count(),1); // Valid maps start on their measured rear photo.
+   assert.equal(await page.locator('#image-role').textContent(),'Rear');
    await page.getByRole('button',{name:'Rear',exact:true}).click();await page.locator('#featured-image').evaluate(i=>i.decode());await page.waitForTimeout(60);
    assert.equal(await page.locator('.port-map-marker').count(),1);
    const marker=await page.locator('.port-map-marker').evaluate(x=>parseFloat(x.style.left));const natural=await page.locator('#featured-image').evaluate(x=>x.naturalWidth);assert.ok(Math.abs(marker-40/natural*100)<0.001);

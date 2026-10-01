@@ -563,5 +563,132 @@
       "value": "360",
       "unit": "°"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "eb-pq2220b-rear.webp",
+      "width": 922,
+      "height": 351
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 1 입력",
+        "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+        "x1": 437,
+        "x2": 465,
+        "y": 57,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 2 입력",
+        "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+        "x1": 483,
+        "x2": 511,
+        "y": 79,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "HDBaseT 입력",
+        "desc": "RJ-45 · HDBaseT 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+        "x1": 548,
+        "x2": 578,
+        "y": 91,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "12G-SDI 입력",
+        "desc": "BNC · 12G-SDI 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+        "x1": 492,
+        "x2": 520,
+        "y": 28,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 출력",
+        "desc": "HDMI Type A · 디지털 영상 출력(Deep Color/CEC).",
+        "x1": 392,
+        "x2": 421,
+        "y": 74,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "12G-SDI 출력",
+        "desc": "BNC · 12G-SDI 영상 출력; 기존 글로벌 브로셔 기록 기준.",
+        "x1": 539,
+        "x2": 565,
+        "y": 28,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "Audio Out",
+        "desc": "스테레오 미니 · 외부 오디오 장비로 출력합니다.",
+        "x1": 421,
+        "x2": 437,
+        "y": 151,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "LAN",
+        "desc": "RJ-45 · 유선 네트워크 연결.",
+        "x1": 590,
+        "x2": 620,
+        "y": 61,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "USB-A · 왼쪽",
+        "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+        "x1": 632,
+        "x2": 650,
+        "y": 61,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "USB-A · 오른쪽",
+        "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+        "x1": 653,
+        "x2": 672,
+        "y": 97,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "Service USB",
+        "desc": "USB 서비스 연결 · 펌웨어 업데이트/OSD 설정 복사.",
+        "x1": 676,
+        "x2": 693,
+        "y": 61,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "RS-232C",
+        "desc": "시리얼 제어 · 세부 배선/커넥터 사양은 확인 필요.",
+        "x1": 496,
+        "x2": 550,
+        "y": 158,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "AC 전원 입력",
+        "desc": "전원 케이블 연결 · 전압별 전원 조건은 제품 사양을 확인하세요.",
+        "x1": 679,
+        "x2": 729,
+        "y": 270,
+        "side": "bottom"
+      }
+    ]
+  }
 }

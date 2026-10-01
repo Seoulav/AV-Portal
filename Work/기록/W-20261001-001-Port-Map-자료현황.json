@@ -1,0 +1,1921 @@
+{
+  "baseline": "84a68357e28d582f6224b0825c564a500ec078df",
+  "totalRearProducts": 102,
+  "totalRearImages": 102,
+  "under1000Products": 31,
+  "under1000Images": 31,
+  "counts": {
+    "가능": 47,
+    "근거 PDF 없음": 38,
+    "해상도 부족": 17
+  },
+  "rows": [
+    {
+      "slug": "blu-50v2",
+      "manufacturer": "BSS Audio",
+      "model": "BLU-50v2",
+      "images": [
+        {
+          "file": "blu-50v2-rear.webp",
+          "width": 2000,
+          "height": 394,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/blu-50v2-specification-3e1186118d55.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "brc-am7",
+      "manufacturer": "SONY",
+      "model": "BRC-AM7",
+      "images": [
+        {
+          "file": "brc-am7-rear.webp",
+          "width": 1200,
+          "height": 720,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "cdi-2-1200",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|1200",
+      "images": [
+        {
+          "file": "cdi-2-1200-rear.webp",
+          "width": 2000,
+          "height": 691,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-2-1200bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|1200BL",
+      "images": [
+        {
+          "file": "cdi-2-1200bl-rear.webp",
+          "width": 2000,
+          "height": 677,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-2-300",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|300",
+      "images": [
+        {
+          "file": "cdi-2-300-rear.webp",
+          "width": 2000,
+          "height": 667,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-2-300bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|300BL",
+      "images": [
+        {
+          "file": "cdi-2-300bl-rear.webp",
+          "width": 2000,
+          "height": 672,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-300bl-specification-82837aa1e00f.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-2-600",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|600",
+      "images": [
+        {
+          "file": "cdi-2-600-rear.webp",
+          "width": 2000,
+          "height": 667,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-2-600bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 2|600BL",
+      "images": [
+        {
+          "file": "cdi-2-600bl-rear.webp",
+          "width": 2000,
+          "height": 701,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-1200",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|1200",
+      "images": [
+        {
+          "file": "cdi-4-1200-rear.webp",
+          "width": 2000,
+          "height": 701,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-1200bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|1200BL",
+      "images": [
+        {
+          "file": "cdi-4-1200bl-rear.webp",
+          "width": 2000,
+          "height": 692,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-300",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|300",
+      "images": [
+        {
+          "file": "cdi-4-300-rear.webp",
+          "width": 2000,
+          "height": 682,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-300bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|300BL",
+      "images": [
+        {
+          "file": "cdi-4-300bl-rear.webp",
+          "width": 2000,
+          "height": 681,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-600",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|600",
+      "images": [
+        {
+          "file": "cdi-4-600-rear.webp",
+          "width": 2000,
+          "height": 693,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cdi-4-600bl",
+      "manufacturer": "Crown",
+      "model": "Crown CDi 4|600BL",
+      "images": [
+        {
+          "file": "cdi-4-600bl-rear.webp",
+          "width": 2000,
+          "height": 683,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/cdi-2-1200-specification-549449d8d43c.pdf",
+        "docs/cdi-2-1200-user-manual-8ec74f403f88.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "cl01",
+      "manufacturer": "AVer",
+      "model": "CL01",
+      "images": [
+        {
+          "file": "cl01-rear.webp",
+          "width": 515,
+          "height": 264,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/cl01-specification-711b02e874f5.pdf",
+        "docs/cl01-user-manual-c8971d09a27c.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "comtech-d-2125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 2125",
+      "images": [
+        {
+          "file": "ctd-2125-rear.webp",
+          "width": 1312,
+          "height": 295,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "comtech-d-4125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 4125",
+      "images": [
+        {
+          "file": "ctd-4125-rear.webp",
+          "width": 1310,
+          "height": 292,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "comtech-d-8125",
+      "manufacturer": "Crown",
+      "model": "ComTech D 8125",
+      "images": [
+        {
+          "file": "ctd-8125-rear.webp",
+          "width": 1519,
+          "height": 188,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/comtech-d-2125-specification-7aa144fec7d1.pdf",
+        "docs/comtech-d-2125-user-manual-9f79add6bbae.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "control-23-1",
+      "manufacturer": "JBL",
+      "model": "Control 23-1",
+      "images": [
+        {
+          "file": "control-23-1-rear.webp",
+          "width": 572,
+          "height": 869,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-25-1",
+      "manufacturer": "JBL",
+      "model": "Control 25-1",
+      "images": [
+        {
+          "file": "control-25-1-rear.webp",
+          "width": 625,
+          "height": 878,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-28-1",
+      "manufacturer": "JBL",
+      "model": "Control 28-1",
+      "images": [
+        {
+          "file": "control-28-1-rear.webp",
+          "width": 579,
+          "height": 900,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-412ct",
+      "manufacturer": "JBL",
+      "model": "Control 412C/T",
+      "images": [
+        {
+          "file": "control-412ct-rear.webp",
+          "width": 1187,
+          "height": 1187,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-414ct",
+      "manufacturer": "JBL",
+      "model": "Control 414C/T",
+      "images": [
+        {
+          "file": "control-414ct-rear.webp",
+          "width": 1188,
+          "height": 1188,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-416ct",
+      "manufacturer": "JBL",
+      "model": "Control 416C/T",
+      "images": [
+        {
+          "file": "control-416ct-rear.webp",
+          "width": 1199,
+          "height": 1199,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-418ct",
+      "manufacturer": "JBL",
+      "model": "Control 418C/T",
+      "images": [
+        {
+          "file": "control-418ct-rear.webp",
+          "width": 1308,
+          "height": 1293,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-419cst",
+      "manufacturer": "JBL",
+      "model": "Control 419CS/T",
+      "images": [
+        {
+          "file": "control-419cst-rear.webp",
+          "width": 1130,
+          "height": 1130,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-424ct",
+      "manufacturer": "JBL",
+      "model": "Control 424C/T",
+      "images": [
+        {
+          "file": "control-424ct-rear.webp",
+          "width": 1004,
+          "height": 1004,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-424lp",
+      "manufacturer": "JBL",
+      "model": "Control 424LP",
+      "images": [
+        {
+          "file": "control-424lp-rear.webp",
+          "width": 869,
+          "height": 868,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-426ct",
+      "manufacturer": "JBL",
+      "model": "Control 426C/T",
+      "images": [
+        {
+          "file": "control-426ct-rear.webp",
+          "width": 850,
+          "height": 831,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-426lp",
+      "manufacturer": "JBL",
+      "model": "Control 426LP",
+      "images": [
+        {
+          "file": "control-426lp-rear.webp",
+          "width": 870,
+          "height": 870,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-440cst",
+      "manufacturer": "JBL",
+      "model": "Control 440CS/T",
+      "images": [
+        {
+          "file": "control-440cst-rear.webp",
+          "width": 1388,
+          "height": 1348,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "control-447ct",
+      "manufacturer": "JBL",
+      "model": "Control 447C/T",
+      "images": [
+        {
+          "file": "control-447ct-rear.webp",
+          "width": 1219,
+          "height": 1194,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dci-2-300",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|300",
+      "images": [
+        {
+          "file": "dci-2-300-rear.webp",
+          "width": 2000,
+          "height": 590,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-2-300n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|300N",
+      "images": [
+        {
+          "file": "dci-2-300n-rear.webp",
+          "width": 2000,
+          "height": 546,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dci-2-600",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|600",
+      "images": [
+        {
+          "file": "dci-2-600-rear.webp",
+          "width": 2000,
+          "height": 590,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-2-600n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 2|600N",
+      "images": [
+        {
+          "file": "dci-2-600n-rear.webp",
+          "width": 2000,
+          "height": 546,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dci-4-300",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300",
+      "images": [
+        {
+          "file": "dci-4-300-rear.webp",
+          "width": 2000,
+          "height": 616,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-4-300da",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300DA",
+      "images": [
+        {
+          "file": "dci-4-300da-rear.webp",
+          "width": 2000,
+          "height": 1333,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-4-300n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|300N",
+      "images": [
+        {
+          "file": "dci-4-300n-rear.webp",
+          "width": 2000,
+          "height": 544,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dci-4-600",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600",
+      "images": [
+        {
+          "file": "dci-4-600-rear.webp",
+          "width": 2000,
+          "height": 616,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/dci-2-300-user-manual-ca77fee5f7e4.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-4-600da",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600DA",
+      "images": [
+        {
+          "file": "dci-4-600da-rear.webp",
+          "width": 2000,
+          "height": 1333,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "manuals/crown-dci-install-da-series-manual.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "dci-4-600n",
+      "manufacturer": "Crown",
+      "model": "Crown DCi 4|600N",
+      "images": [
+        {
+          "file": "dci-4-600n-rear.webp",
+          "width": 2000,
+          "height": 544,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dm3",
+      "manufacturer": "Yamaha",
+      "model": "DM3",
+      "images": [
+        {
+          "file": "dm3-rear.webp",
+          "width": 1082,
+          "height": 476,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "dm7",
+      "manufacturer": "Yamaha",
+      "model": "DM7",
+      "images": [
+        {
+          "file": "dm7-rear.webp",
+          "width": 1800,
+          "height": 1800,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/dm7-user-manual-0b1045e2664d.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "eb-l260f",
+      "manufacturer": "Epson",
+      "model": "EB-L260F",
+      "images": [
+        {
+          "file": "eb-l260f-rear.webp",
+          "width": 486,
+          "height": 173,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l530u",
+      "manufacturer": "Epson",
+      "model": "EB-L530U",
+      "images": [
+        {
+          "file": "eb-l530u-rear.webp",
+          "width": 650,
+          "height": 213,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/eb-l530u-specification-585abcfaa217.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "eb-l690u",
+      "manufacturer": "Epson",
+      "model": "EB-L690U",
+      "images": [
+        {
+          "file": "eb-l690u-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l695se",
+      "manufacturer": "Epson",
+      "model": "EB-L695SE",
+      "images": [
+        {
+          "file": "eb-l695se-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l790su",
+      "manufacturer": "Epson",
+      "model": "EB-L790SU",
+      "images": [
+        {
+          "file": "eb-l790su-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l790u",
+      "manufacturer": "Epson",
+      "model": "EB-L790U",
+      "images": [
+        {
+          "file": "eb-l790u-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l795se",
+      "manufacturer": "Epson",
+      "model": "EB-L795SE",
+      "images": [
+        {
+          "file": "eb-l795se-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l895e",
+      "manufacturer": "Epson",
+      "model": "EB-L895E",
+      "images": [
+        {
+          "file": "eb-l895e-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-l895u",
+      "manufacturer": "Epson",
+      "model": "EB-L895U",
+      "images": [
+        {
+          "file": "eb-l895u-rear.webp",
+          "width": 1199,
+          "height": 380,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pq2213b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2213B",
+      "images": [
+        {
+          "file": "eb-pq2213b-rear.webp",
+          "width": 922,
+          "height": 351,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pq2216b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2216B",
+      "images": [
+        {
+          "file": "eb-pq2216b-rear.webp",
+          "width": 922,
+          "height": 351,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pq2220b",
+      "manufacturer": "Epson",
+      "model": "EB-PQ2220B",
+      "images": [
+        {
+          "file": "eb-pq2220b-rear.webp",
+          "width": 922,
+          "height": 351,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pu1008b",
+      "manufacturer": "Epson",
+      "model": "EB-PU1008B",
+      "images": [
+        {
+          "file": "eb-pu1008b-rear.webp",
+          "width": 604,
+          "height": 218,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pu2010w-b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2010W/B",
+      "images": [
+        {
+          "file": "eb-pu2010w-b-rear.webp",
+          "width": 604,
+          "height": 218,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pu2213b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2213B",
+      "images": [
+        {
+          "file": "eb-pu2213b-rear.webp",
+          "width": 546,
+          "height": 213,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "eb-pu2216b",
+      "manufacturer": "Epson",
+      "model": "EB-PU2216B",
+      "images": [
+        {
+          "file": "eb-pu2216b-rear.webp",
+          "width": 546,
+          "height": 213,
+          "under1000": true
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": true,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "gs728tppv3",
+      "manufacturer": "NETGEAR",
+      "model": "GS728TPPv3",
+      "images": [
+        {
+          "file": "gs728tppv3-rear.webp",
+          "width": 1562,
+          "height": 277,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/gs728tppv3-specification-6895a66a4280.pdf",
+        "docs/gs728tppv3-technical-document-eff0c42a981c.pdf",
+        "docs/gs728tppv3-user-manual-9c326717fe03.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "gsm4212p",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4212P",
+      "images": [
+        {
+          "file": "gsm4212p-rear.webp",
+          "width": 2400,
+          "height": 393,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/gsm4212p-user-manual-ecb29b6aed5c.pdf",
+        "docs/gsm4212p-specification-61e668dc8454.pdf",
+        "docs/gsm4212p-technical-document-e8dcec183e0f.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "gsm4248px",
+      "manufacturer": "NETGEAR",
+      "model": "GSM4248PX",
+      "images": [
+        {
+          "file": "gsm4248px-rear.webp",
+          "width": 730,
+          "height": 236,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/gsm4212p-user-manual-ecb29b6aed5c.pdf",
+        "docs/gsm4212p-specification-61e668dc8454.pdf",
+        "docs/gsm4248px-technical-document-336b3fce760c.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "manufacturer": "Crown",
+      "model": "Crown I-Tech 4x3500HD",
+      "images": [
+        {
+          "file": "itech-4x3500hd-rear.webp",
+          "width": 2000,
+          "height": 1333,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/i-tech-4x3500hd-specification-5ac628f678a6.pdf",
+        "docs/i-tech-4x3500hd-user-manual-f2665f3dd739.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ki-pro-go2",
+      "manufacturer": "AJA",
+      "model": "Ki Pro GO2",
+      "images": [
+        {
+          "file": "ki-pro-go2-rear.webp",
+          "width": 1140,
+          "height": 450,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ki-pro-go2-user-manual-cea7d208d1f9.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "mezzo-322-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 322 A",
+      "images": [
+        {
+          "file": "mezzo-322-a-rear.webp",
+          "width": 530,
+          "height": 137,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-324-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 A",
+      "images": [
+        {
+          "file": "mezzo-324-a-rear.webp",
+          "width": 530,
+          "height": 137,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-324-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 324 AD",
+      "images": [
+        {
+          "file": "mezzo-324-ad-rear.webp",
+          "width": 528,
+          "height": 133,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-602-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 A",
+      "images": [
+        {
+          "file": "mezzo-602-a-rear.webp",
+          "width": 530,
+          "height": 137,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-602-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 602 AD",
+      "images": [
+        {
+          "file": "mezzo-602-ad-rear.webp",
+          "width": 528,
+          "height": 133,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-604-a",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 A",
+      "images": [
+        {
+          "file": "mezzo-604-a-rear.webp",
+          "width": 530,
+          "height": 137,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mezzo-604-ad",
+      "manufacturer": "Powersoft",
+      "model": "Mezzo 604 AD",
+      "images": [
+        {
+          "file": "mezzo-604-ad-rear.webp",
+          "width": 528,
+          "height": 133,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/mezzo-322-a-specification-9b694c15bcff.pdf",
+        "docs/mezzo-322-a-user-manual-68ad5a823917.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "mxa925w-r",
+      "manufacturer": "Shure",
+      "model": "MXA925W-R",
+      "images": [
+        {
+          "file": "mxa925w-r-rear.webp",
+          "width": 1997,
+          "height": 2000,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "mxcw640",
+      "manufacturer": "Shure",
+      "model": "MXCW640",
+      "images": [
+        {
+          "file": "mxcw640-rear.webp",
+          "width": 2000,
+          "height": 1167,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/mxcw640-specification-6dc79da0ed0b.pdf",
+        "docs/mxcw640-technical-document-0cf4cf185e49.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "mxcwapt-w",
+      "manufacturer": "Shure",
+      "model": "MXCWAPT-W",
+      "images": [
+        {
+          "file": "mxcwapt-w-rear.webp",
+          "width": 2000,
+          "height": 1182,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/mxcw640-specification-6dc79da0ed0b.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "novastar-h2",
+      "manufacturer": "NovaStar",
+      "model": "H2",
+      "images": [
+        {
+          "file": "h2-rear.webp",
+          "width": 2400,
+          "height": 534,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/h-800w-psu-specification-3b9ed2157389.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "novastar-h5",
+      "manufacturer": "NovaStar",
+      "model": "H5",
+      "images": [
+        {
+          "file": "h5-rear.webp",
+          "width": 2400,
+          "height": 1175,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/novastar-h5-specification-89119003fed1.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "qlxd4",
+      "manufacturer": "Shure",
+      "model": "QLXD4",
+      "images": [
+        {
+          "file": "qlxd4-rear.webp",
+          "width": 2000,
+          "height": 517,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/qlxd1-user-manual-5da69eb59f1f.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "rally-mic-pod-hub",
+      "manufacturer": "Logitech",
+      "model": "Rally Mic Pod Hub",
+      "images": [
+        {
+          "file": "logitech-rally-mic-pod-hub-front.webp",
+          "width": 1559,
+          "height": 816,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/rally-mic-pod-hub-specification-3e204e458092.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "rio1608-d3",
+      "manufacturer": "Yamaha",
+      "model": "Rio1608-D3",
+      "images": [
+        {
+          "file": "rio1608-d3-rear.webp",
+          "width": 1087,
+          "height": 308,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/rio1608-d3-user-manual-d3e75e833519.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "rio3224-d3",
+      "manufacturer": "Yamaha",
+      "model": "Rio3224-D3",
+      "images": [
+        {
+          "file": "rio3224-d3-rear.webp",
+          "width": 1084,
+          "height": 515,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/rio1608-d3-user-manual-d3e75e833519.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "rm-ip10",
+      "manufacturer": "SONY",
+      "model": "RM-IP10",
+      "images": [
+        {
+          "file": "rm-ip10-rear.webp",
+          "width": 982,
+          "height": 428,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/rm-ip10-specification-a8cb8cf36d2b.pdf",
+        "docs/rm-ip10-user-manual-81ccce34c0f3.pdf",
+        "docs/rm-ip10-technical-document-a7082d425274.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "rm-ip500",
+      "manufacturer": "SONY",
+      "model": "RM-IP500",
+      "images": [
+        {
+          "file": "rm-ip500-rear.webp",
+          "width": 888,
+          "height": 442,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/rm-ip500-specification-cde083243a77.pdf",
+        "docs/rm-ip500-user-manual-0379c4097af5.pdf",
+        "docs/rm-ip10-technical-document-a7082d425274.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "slxd1-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD1+",
+      "images": [
+        {
+          "file": "slxd1-plus-rear.webp",
+          "width": 679,
+          "height": 2000,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "slxd4-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD4+",
+      "images": [
+        {
+          "file": "slxd4-plus-rear.webp",
+          "width": 2000,
+          "height": 1340,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "slxd4d-plus",
+      "manufacturer": "Shure",
+      "model": "SLXD4D+",
+      "images": [
+        {
+          "file": "slxd4d-plus-rear.webp",
+          "width": 2000,
+          "height": 1324,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/slxd1-plus-user-manual-39e1cd4e1748.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "srg-a40",
+      "manufacturer": "SONY",
+      "model": "SRG-A40",
+      "images": [
+        {
+          "file": "srg-a40-rear.webp",
+          "width": 814,
+          "height": 907,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/srg-a40-specification-f0e9114f3f66.pdf",
+        "docs/srg-a40-user-manual-174b829eadf5.pdf",
+        "docs/srg-a40-technical-document-004c339079b1.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "srg-x40uh",
+      "manufacturer": "SONY",
+      "model": "SRG-X40UH",
+      "images": [
+        {
+          "file": "srg-x40uh-rear.webp",
+          "width": 1888,
+          "height": 2000,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/srg-x40uh-specification-e3f2321aae4a.pdf",
+        "docs/srg-x40uh-user-manual-e44dc81b3c93.pdf",
+        "docs/srg-x40uh-technical-document-0961490a73ec.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "sx-1216-rti",
+      "manufacturer": "SurgeX",
+      "model": "SX-1216-RTi",
+      "images": [
+        {
+          "file": "sx-1216-rti-rear.webp",
+          "width": 740,
+          "height": 120,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/sx-1216-rti-specification-f348ed63c922.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "tio1608-d2",
+      "manufacturer": "Yamaha",
+      "model": "Tio1608-D2",
+      "images": [
+        {
+          "file": "tio1608-d2-rear.webp",
+          "width": 1086,
+          "height": 222,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/tio1608-d2-user-manual-ff58cca1644a.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "tr335",
+      "manufacturer": "AVer",
+      "model": "TR335",
+      "images": [
+        {
+          "file": "tr335-rear.webp",
+          "width": 308,
+          "height": 411,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/tr335-specification-88e469e22863.pdf",
+        "docs/tr315-user-manual-f5191fd75452.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "ua844-swb",
+      "manufacturer": "Shure",
+      "model": "UA844+SWB",
+      "images": [
+        {
+          "file": "ua844swb-rear.webp",
+          "width": 1500,
+          "height": 1500,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "ua845uwb",
+      "manufacturer": "Shure",
+      "model": "UA845UWB",
+      "images": [
+        {
+          "file": "ua845uwb-rear.webp",
+          "width": 1500,
+          "height": 1500,
+          "under1000": false
+        }
+      ],
+      "pdfs": [],
+      "status": "근거 PDF 없음",
+      "under1000": false,
+      "note": "PDF 확보 전 새 수량/기술 조건 확정 불가; 기존 I/O 대응만 부분 작성 가능."
+    },
+    {
+      "slug": "ua864a",
+      "manufacturer": "Shure",
+      "model": "UA864A",
+      "images": [
+        {
+          "file": "ua864a-rear.webp",
+          "width": 1500,
+          "height": 1500,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ua864a-user-manual-7df63e0cdcfe.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ultripower",
+      "manufacturer": "Ross Video",
+      "model": "ULTRIPOWER",
+      "images": [
+        {
+          "file": "ultripower-rear.webp",
+          "width": 1225,
+          "height": 200,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ultripower-ps-specification-6a964120b98e.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ultritouch-2-hr",
+      "manufacturer": "Ross Video",
+      "model": "ULTRITOUCH-2-HR",
+      "images": [
+        {
+          "file": "ultritouch-2-hr-rear.webp",
+          "width": 1600,
+          "height": 800,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ultritouch-2-hr-specification-2da8623b2ea2.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ulxd1",
+      "manufacturer": "Shure",
+      "model": "ULXD1",
+      "images": [
+        {
+          "file": "ulxd1-rear.webp",
+          "width": 753,
+          "height": 2211,
+          "under1000": true
+        }
+      ],
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd1-user-manual-023f8fbfa028.pdf"
+      ],
+      "status": "해상도 부족",
+      "under1000": true,
+      "note": "1000px 미만은 단자별 판독 확인 또는 고해상도 사진 필요."
+    },
+    {
+      "slug": "ulxd4",
+      "manufacturer": "Shure",
+      "model": "ULXD4",
+      "images": [
+        {
+          "file": "ulxd4-rear.webp",
+          "width": 2000,
+          "height": 490,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd1-user-manual-023f8fbfa028.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ulxd4d",
+      "manufacturer": "Shure",
+      "model": "ULXD4D",
+      "images": [
+        {
+          "file": "ulxd4d-rear.webp",
+          "width": 2000,
+          "height": 291,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "ulxd4q",
+      "manufacturer": "Shure",
+      "model": "ULXD4Q",
+      "images": [
+        {
+          "file": "ulxd4q-rear.webp",
+          "width": 2000,
+          "height": 264,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/ulxd1-specification-30a99b044dde.pdf",
+        "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "vs10",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS10",
+      "images": [
+        {
+          "file": "lumantek-vs10-rear.webp",
+          "width": 2000,
+          "height": 905,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/vs10-user-manual-a88173bdcc44.pdf",
+        "docs/vs10-specification-ce7cfb629f00.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    },
+    {
+      "slug": "vs5",
+      "manufacturer": "Lumantek",
+      "model": "ez-Pro VS5",
+      "images": [
+        {
+          "file": "lumantek-vs5-rear.webp",
+          "width": 1162,
+          "height": 422,
+          "under1000": false
+        }
+      ],
+      "pdfs": [
+        "docs/vs5-user-manual-225fc5daaa4f.pdf"
+      ],
+      "status": "가능",
+      "under1000": false,
+      "note": "PDF 본문 모델·단자 적용과 쪽 대조는 후속 확인. 가능은 착수 후보이며 검증 완료가 아님."
+    }
+  ]
+}

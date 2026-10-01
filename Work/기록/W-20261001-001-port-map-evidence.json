@@ -1,0 +1,782 @@
+{
+  "baseline": "84a68357e28d582f6224b0825c564a500ec078df",
+  "coordinateBasis": "Exact published image pixels; originalSize and image bytes unchanged",
+  "products": {
+    "ulxd4d": {
+      "image": {
+        "file": "ulxd4d-rear.webp",
+        "width": 2000,
+        "height": 291,
+        "sha256": "a0ba3c2a22dbf0e93fa3808879dd2f0ce7bb8db891dd7c8474560bba167da81a"
+      },
+      "markers": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 1800,
+          "x2": 1878,
+          "y": 57,
+          "side": "top",
+          "pages": [
+            8,
+            9,
+            44,
+            64
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 421,
+          "x2": 499,
+          "y": 57,
+          "side": "top",
+          "pages": [
+            8,
+            9,
+            44,
+            64
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+          "x1": 1560,
+          "x2": 1675,
+          "y": 87,
+          "side": "top",
+          "pages": [
+            9
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 2",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+          "x1": 1362,
+          "x2": 1476,
+          "y": 87,
+          "side": "top",
+          "pages": [
+            9
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 5,
+          "label": "캐스케이드 출력 A",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 A 신호를 전달합니다.",
+          "x1": 1704,
+          "x2": 1777,
+          "y": 214,
+          "side": "bottom",
+          "pages": [
+            9,
+            43,
+            64
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 6,
+          "label": "캐스케이드 출력 B",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 B 신호를 전달합니다.",
+          "x1": 512,
+          "x2": 591,
+          "y": 214,
+          "side": "bottom",
+          "pages": [
+            9,
+            43,
+            64
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 7,
+          "label": "출력 1 MIC/LINE",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠합니다.",
+          "x1": 1524,
+          "x2": 1546,
+          "y": 204,
+          "side": "bottom",
+          "pages": [
+            9
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 8,
+          "label": "출력 2 MIC/LINE",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠합니다.",
+          "x1": 1324,
+          "x2": 1346,
+          "y": 204,
+          "side": "bottom",
+          "pages": [
+            9
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 9,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어를 연결합니다.",
+          "x1": 1153,
+          "x2": 1238,
+          "y": 103,
+          "side": "top",
+          "pages": [
+            9,
+            44
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 10,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 네트워크 모드에 맞춰 연결합니다(이중화/스위치/분리).",
+          "x1": 1050,
+          "x2": 1135,
+          "y": 187,
+          "side": "bottom",
+          "pages": [
+            9,
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 11,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원을 연결합니다.",
+          "x1": 107,
+          "x2": 217,
+          "y": 223,
+          "side": "bottom",
+          "pages": [
+            8
+          ],
+          "existingRefs": []
+        }
+      ],
+      "pdf": {
+        "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+        "source": "M",
+        "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
+        "sha256": "4c740a8f2a98b3ac383a61ecfa89718fc3f1d33f05aedb434f010464a7cff94f"
+      }
+    },
+    "novastar-h5": {
+      "image": {
+        "file": "h5-rear.webp",
+        "width": 2400,
+        "height": 1175,
+        "sha256": "837d24d1812ddb56f19875405d8d4f93a9de420f42d12735e7f43a21a15c54c6"
+      },
+      "markers": [
+        {
+          "n": 1,
+          "label": "입력 카드 영역 · I-1~I-10",
+          "desc": "최대 10매 · 사진의 장착 카드는 구성 예시이며 기본 구성을 뜻하지 않습니다.",
+          "x1": 325,
+          "x2": 1180,
+          "y": 75,
+          "side": "top",
+          "pages": [
+            7,
+            10
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 2,
+          "label": "Genlock IN",
+          "desc": "BNC · Bi-Level/Tri-Level 동기 신호를 입력합니다.",
+          "x1": 1305,
+          "x2": 1405,
+          "y": 745,
+          "side": "top",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 3,
+          "label": "출력 카드 영역 · O-11~O-13",
+          "desc": "최대 3매 · 단자 종류와 출력 구성은 장착 카드에 따라 달라집니다.",
+          "x1": 1330,
+          "x2": 2040,
+          "y": 70,
+          "side": "top",
+          "pages": [
+            7,
+            10
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 4,
+          "label": "Genlock LOOP",
+          "desc": "BNC · 입력된 동기 신호를 다음 장비에 전달합니다.",
+          "x1": 1415,
+          "x2": 1496,
+          "y": 819,
+          "side": "bottom",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 5,
+          "label": "MVR 카드 영역",
+          "desc": "프리뷰 카드 전용 슬롯 · 사진의 단자는 장착 카드 구성 예시입니다.",
+          "x1": 1432,
+          "x2": 1915,
+          "y": 648,
+          "side": "top",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 6,
+          "label": "Ethernet",
+          "desc": "기가비트 · 제어 PC/라우터에 연결하여 Web 제어·NovaLCT 설정에 사용합니다.",
+          "x1": 1515,
+          "x2": 1607,
+          "y": 745,
+          "side": "top",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 7,
+          "label": "USB 1",
+          "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
+          "x1": 1626,
+          "x2": 1654,
+          "y": 819,
+          "side": "bottom",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 8,
+          "label": "USB 2",
+          "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
+          "x1": 1683,
+          "x2": 1712,
+          "y": 745,
+          "side": "top",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 9,
+          "label": "COM IN",
+          "desc": "RJ-45 형태의 RS-232 · 중앙 제어 명령 입력; Ethernet 포트가 아닙니다.",
+          "x1": 1735,
+          "x2": 1807,
+          "y": 819,
+          "side": "bottom",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 10,
+          "label": "COM OUT",
+          "desc": "RS-232 · 외부 장비에 사용자 명령 출력; 장비 캐스케이드 제어 불가.",
+          "x1": 1808,
+          "x2": 1880,
+          "y": 745,
+          "side": "top",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 11,
+          "label": "전원 스위치",
+          "desc": "−/ON 켜기 · O/OFF 끄기.",
+          "x1": 1910,
+          "x2": 2070,
+          "y": 817,
+          "side": "bottom",
+          "pages": [
+            46
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 모듈 · 사진 왼쪽",
+          "desc": "100–240V AC, 50/60Hz · 기본 단일 전원, 이중화 전원은 옵션입니다.",
+          "x1": 1495,
+          "x2": 1675,
+          "y": 1020,
+          "side": "bottom",
+          "pages": [
+            10,
+            47
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 13,
+          "label": "AC 전원 모듈 · 사진 오른쪽",
+          "desc": "사진은 전원 2매 구성 예시 · 기본 장착 수량으로 해석하지 않습니다.",
+          "x1": 1875,
+          "x2": 2055,
+          "y": 1020,
+          "side": "bottom",
+          "pages": [
+            7,
+            10,
+            47
+          ],
+          "existingRefs": []
+        }
+      ],
+      "pdf": {
+        "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+        "source": "D",
+        "url": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H5%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
+        "sha256": "d60fecedd78fa7a885c14a35804d3ea8af100c05bc1684a642ed97b48d249639"
+      }
+    },
+    "dci-4-600da": {
+      "image": {
+        "file": "dci-4-600da-rear.webp",
+        "width": 2000,
+        "height": 1333,
+        "sha256": "638edffbcfeec6d7f9b6b263bfa10ada45846b0ca6a181dc7355d98b7f612a8f"
+      },
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1705,
+          "x2": 1806,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7,
+            8
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+          "x1": 1569,
+          "x2": 1668,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7,
+            8
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+          "x1": 1515,
+          "x2": 1768,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+          "x1": 1245,
+          "x2": 1495,
+          "y": 850,
+          "side": "bottom",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 5,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오망 연결; 기가비트는 CAT5e 이상, 건물 내부망만 사용.",
+          "x1": 875,
+          "x2": 944,
+          "y": 645,
+          "side": "bottom",
+          "pages": [
+            7,
+            8
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 6,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 오디오 이중화용 두 번째 네트워크에 연결합니다.",
+          "x1": 971,
+          "x2": 1040,
+          "y": 570,
+          "side": "top",
+          "pages": [
+            7,
+            8
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · Audio Architect 모니터링/제어용; Dante 포트와 구별합니다.",
+          "x1": 770,
+          "x2": 845,
+          "y": 550,
+          "side": "top",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 8,
+          "label": "GPIO",
+          "desc": "RJ-11 · 외부 제어용 아날로그 입력 2개와 디지털 출력 2개.",
+          "x1": 695,
+          "x2": 746,
+          "y": 620,
+          "side": "bottom",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 9,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시(꺼짐/Sleep/고장 상태 제외).",
+          "x1": 430,
+          "x2": 510,
+          "y": 842,
+          "side": "bottom",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC, 50/60Hz 전원을 연결합니다.",
+          "x1": 176,
+          "x2": 295,
+          "y": 824,
+          "side": "bottom",
+          "pages": [
+            7
+          ],
+          "existingRefs": []
+        }
+      ],
+      "pdf": {
+        "file": "manuals/crown-dci-install-da-series-manual.pdf",
+        "source": "M",
+        "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-da-dante-manual-english",
+        "sha256": "522cea4ed40509e574ee68c48f6141a0ad8b75de20a3625181fc5869de63b453"
+      }
+    },
+    "eb-pq2220b": {
+      "image": {
+        "file": "eb-pq2220b-rear.webp",
+        "width": 922,
+        "height": 351,
+        "sha256": "02f14fd8c156cb5c4bd9ce298130e38c1a23f5ece4eb92f7f0b8a3089feada79"
+      },
+      "markers": [
+        {
+          "n": 1,
+          "label": "HDMI 1 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 437,
+          "x2": 465,
+          "y": 57,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:0"
+          ]
+        },
+        {
+          "n": 2,
+          "label": "HDMI 2 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 483,
+          "x2": 511,
+          "y": 79,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:0"
+          ]
+        },
+        {
+          "n": 3,
+          "label": "HDBaseT 입력",
+          "desc": "RJ-45 · HDBaseT 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 548,
+          "x2": 578,
+          "y": 91,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:7"
+          ]
+        },
+        {
+          "n": 4,
+          "label": "12G-SDI 입력",
+          "desc": "BNC · 12G-SDI 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 492,
+          "x2": 520,
+          "y": 28,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:8"
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 출력",
+          "desc": "HDMI Type A · 디지털 영상 출력(Deep Color/CEC).",
+          "x1": 392,
+          "x2": 421,
+          "y": 74,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:1"
+          ]
+        },
+        {
+          "n": 6,
+          "label": "12G-SDI 출력",
+          "desc": "BNC · 12G-SDI 영상 출력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 539,
+          "x2": 565,
+          "y": 28,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:9"
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Audio Out",
+          "desc": "스테레오 미니 · 외부 오디오 장비로 출력합니다.",
+          "x1": 421,
+          "x2": 437,
+          "y": 151,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:2"
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크 연결.",
+          "x1": 590,
+          "x2": 620,
+          "y": 61,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:5"
+          ]
+        },
+        {
+          "n": 9,
+          "label": "USB-A · 왼쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 632,
+          "x2": 650,
+          "y": 61,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:3"
+          ]
+        },
+        {
+          "n": 10,
+          "label": "USB-A · 오른쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 653,
+          "x2": 672,
+          "y": 97,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:3"
+          ]
+        },
+        {
+          "n": 11,
+          "label": "Service USB",
+          "desc": "USB 서비스 연결 · 펌웨어 업데이트/OSD 설정 복사.",
+          "x1": 676,
+          "x2": 693,
+          "y": 61,
+          "side": "top",
+          "pages": [],
+          "existingRefs": [
+            "io:4"
+          ]
+        },
+        {
+          "n": 12,
+          "label": "RS-232C",
+          "desc": "시리얼 제어 · 세부 배선/커넥터 사양은 확인 필요.",
+          "x1": 496,
+          "x2": 550,
+          "y": 158,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "io:10"
+          ]
+        },
+        {
+          "n": 13,
+          "label": "AC 전원 입력",
+          "desc": "전원 케이블 연결 · 전압별 전원 조건은 제품 사양을 확인하세요.",
+          "x1": 679,
+          "x2": 729,
+          "y": 270,
+          "side": "bottom",
+          "pages": [],
+          "existingRefs": [
+            "spec:22"
+          ]
+        }
+      ],
+      "limitation": "PDF 사본 없음. 기존 I/O·사양의 근거 P/G와 정확 모델 게시 사진의 표기를 대조한 부분 지도. 새 기술 값·수량·설정 미추가. Remote 단자는 기존 근거가 없어 제외. 폭922px(1000 미만)."
+    }
+  },
+  "quantityChanges": [
+    {
+      "product": "ulxd4d",
+      "ioIndex": 0,
+      "connector": "BNC",
+      "signal": "RF antenna input",
+      "previous": "",
+      "next": "2",
+      "pdf": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+      "source": "M",
+      "pages": [
+        8,
+        9
+      ],
+      "note": "기존 검증 상태와 다른 값은 유지"
+    },
+    {
+      "product": "ulxd4d",
+      "ioIndex": 2,
+      "connector": "XLR (채널당 1개)",
+      "signal": "Audio output",
+      "previous": "",
+      "next": "2",
+      "pdf": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+      "source": "M",
+      "pages": [
+        4,
+        9
+      ],
+      "note": "기존 검증 상태와 다른 값은 유지"
+    },
+    {
+      "product": "ulxd4d",
+      "ioIndex": 3,
+      "connector": "RJ-45",
+      "signal": "Network / Dante audio",
+      "previous": "",
+      "next": "2",
+      "pdf": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+      "source": "M",
+      "pages": [
+        9,
+        44,
+        64
+      ],
+      "note": "기존 검증 상태와 다른 값은 유지"
+    },
+    {
+      "product": "dci-4-600da",
+      "ioIndex": 1,
+      "connector": "RJ-45",
+      "signal": "Dante/AES67 audio",
+      "previous": "",
+      "next": "2",
+      "pdf": "manuals/crown-dci-install-da-series-manual.pdf",
+      "source": "M",
+      "pages": [
+        7,
+        8
+      ],
+      "note": "기존 검증 상태와 다른 값은 유지"
+    }
+  ],
+  "unfilled": [
+    {
+      "product": "novastar-h5",
+      "field": "io[7].quantity",
+      "reason": "MVR 슬롯 수가 PDF 텍스트에 명시되지 않음. 사진 수량 계산 금지."
+    },
+    {
+      "product": "ulxd4d",
+      "field": "io[1].quantity",
+      "reason": "기존1은 매뉴얼9/43쪽의 RF cascade2와 다름. 기존 비어 있지 않은 값이므로 보존, 후속 승인 필요."
+    },
+    {
+      "product": "aquilon-rs1",
+      "field": "portMap",
+      "reason": "Rear 사진 없음. 기존 데이터 전체 유지."
+    },
+    {
+      "product": "eb-pq2220b",
+      "field": "settings / PDF-dependent values",
+      "reason": "정확 모델 PDF 사본 없음. 기존 근거의 단자 위치만 연결, 새 수량과 설정은 비움."
+    }
+  ]
+}

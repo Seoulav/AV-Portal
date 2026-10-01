@@ -53,3 +53,28 @@ test('settings and key facts reject malformed public data but safely omit in UI'
   for (const bad of [{ settings: [table, table, table] }, { settings: [{ ...table, rows: [] }] }, { settings: [{ ...table, rows: [['x']] }] }, { settings: [{ ...modes, items: [{ name: 'a' }] }] }, { keyFacts: Array(5).fill(p.keyFacts[0]) }]) assert.ok(enhancementErrors(bad).length);
   assert.equal(prepareEnhancements({ settings: [{ ...table, rows: [] }] }).settings.length, 0);
 });
+
+
+test('explicit published-image measurements preserve original metadata and reject mismatches', () => {
+  const image = { role: 'Rear', file: 'rear.webp', originalSize: '3000x3000', resolution: '2000x291' };
+  const measuredImage = { file: 'rear.webp', width: 2000, height: 291 };
+  const p = { images: [image], portMap: { image: 'Rear', measuredImage, items: [{ n: 1, label: 'A', desc: 'Input', x1: 1800, x2: 1880, y: 60, side: 'top' }] } };
+  assert.deepEqual(enhancementErrors(p), []);
+  assert.ok(prepareEnhancements(p).portMap);
+  assert.equal(enhancementModel.portMapImageMatches(image, 2000, 291, p.portMap), true);
+  assert.equal(enhancementModel.portMapImageMatches(image, 1999, 291, p.portMap), false);
+  for (const bad of [{ ...measuredImage, file: 'other.webp' }, { ...measuredImage, width: 3000 }, { ...measuredImage, height: 0 }, { ...measuredImage, extra: true }]) {
+    assert.equal(prepareEnhancements({ ...p, portMap: { ...p.portMap, measuredImage: bad } }).portMap, null);
+  }
+  for (const y of [-1, 292, NaN, '60']) {
+    assert.equal(prepareEnhancements({ ...p, portMap: { ...p.portMap, items: [{ ...p.portMap.items[0], y }] } }).portMap, null);
+  }
+  assert.equal(image.originalSize, '3000x3000');
+});
+
+test('map display width separates close marker numbers without changing pixel coordinates', () => {
+  const map = {items: [{x1: 990, x2: 1000, side: 'top'}, {x1: 1050, x2: 1060, side: 'top'}]};
+  const width = enhancementModel.portMapDisplayWidth(map, 2000, 291);
+  assert.ok(width >= 1000 && width <= 2000);
+  assert.equal(map.items[0].x1, 990);
+});

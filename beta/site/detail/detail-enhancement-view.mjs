@@ -1,4 +1,4 @@
-import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-flow';
+import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-portmap';
 const el = (tag, cls = '', text) => {
   const node = document.createElement(tag);
   node.className = cls;
@@ -30,10 +30,17 @@ export function renderPortMap(items, image) {
   for (const item of items) {
     const span = portMarkerPercent(item, image.naturalWidth);
     if (!span) continue;
+    const box = image.getBoundingClientRect(), scale = box.width / image.naturalWidth;
+    const top = item.side === 'top', sign = top ? -1 : 1;
+    const y = (item.y ?? (top ? 0 : image.naturalHeight)) * scale;
+    const x1 = item.x1 * scale, x2 = item.x2 * scale, cx = (x1+x2)/2;
+    const bracket = svgNode('svg', {class:'port-map-bracket', width:box.width, height:box.height, 'aria-hidden':'true'});
+    bracket.append(svgNode('path', {d:`M${x1} ${y-sign*4}V${y+sign*8}H${x2}V${y-sign*4}M${cx} ${y+sign*8}V${y+sign*16}`, fill:'none', stroke:'#2459b0', 'stroke-width':1.5}));
     const marker = el('span', 'port-map-marker', item.n);
     marker.style.left = `${span.left + span.width / 2}%`;
+    marker.style.top = `${y + sign*28}px`;
     marker.dataset.side = item.side ?? 'bottom';
-    overlay.append(marker);
+    overlay.append(bracket, marker);
   }
   return overlay;
 }

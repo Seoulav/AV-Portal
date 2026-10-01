@@ -447,7 +447,7 @@
       "connector": "RJ-45",
       "signal": "Dante/AES67 audio",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "Dante, AES67",
       "availability": "DA/ComTech D 모델",
       "condition": "네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)",
@@ -812,5 +812,105 @@
         ]
       ]
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "dci-4-600da-rear.webp",
+      "width": 2000,
+      "height": 1333
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 1·2",
+        "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+        "x1": 1705,
+        "x2": 1806,
+        "y": 550,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 3·4",
+        "desc": "밸런스 6핀 플러그인 · 믹서/DSP의 두 입력 채널을 연결합니다.",
+        "x1": 1569,
+        "x2": 1668,
+        "y": 550,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "스피커 출력 1·2",
+        "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+        "x1": 1515,
+        "x2": 1768,
+        "y": 850,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "스피커 출력 3·4",
+        "desc": "4극 터치 방지 단자대 · 채널 쌍당 1개; 최대 6mm²/10 AWG 배선.",
+        "x1": 1245,
+        "x2": 1495,
+        "y": 850,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "Dante Primary",
+        "desc": "RJ-45 · Dante 오디오망 연결; 기가비트는 CAT5e 이상, 건물 내부망만 사용.",
+        "x1": 875,
+        "x2": 944,
+        "y": 645,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "Dante Secondary",
+        "desc": "RJ-45 · 오디오 이중화용 두 번째 네트워크에 연결합니다.",
+        "x1": 971,
+        "x2": 1040,
+        "y": 570,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · Audio Architect 모니터링/제어용; Dante 포트와 구별합니다.",
+        "x1": 770,
+        "x2": 845,
+        "y": 550,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "GPIO",
+        "desc": "RJ-11 · 외부 제어용 아날로그 입력 2개와 디지털 출력 2개.",
+        "x1": 695,
+        "x2": 746,
+        "y": 620,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "AUX",
+        "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시(꺼짐/Sleep/고장 상태 제외).",
+        "x1": 430,
+        "x2": 510,
+        "y": 842,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "AC 전원 입력",
+        "desc": "15A IEC · 100–240V AC, 50/60Hz 전원을 연결합니다.",
+        "x1": 176,
+        "x2": 295,
+        "y": 824,
+        "side": "bottom"
+      }
+    ]
+  }
 }
