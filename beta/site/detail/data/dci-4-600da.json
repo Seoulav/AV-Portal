@@ -478,7 +478,8 @@
       "code": "M",
       "name": "제조사 사용 안내",
       "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-da-dante-manual-english",
-      "scope": "제조사 공식 출처"
+      "scope": "제조사 공식 출처",
+      "page": "PDF 7·32·35·43·58쪽 / 인쇄 3·28·31·39·54쪽 · DCi 4|600DA 전용 정격 행"
     },
     {
       "code": "D",
@@ -504,5 +505,312 @@
     "footerNote": "Crown Crown DCi 4|600DA · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**4채널 × 600W(4Ω·8Ω, Dual 모드)** 설치형 앰프입니다. 아날로그 또는 Dante 입력을 선택하고 채널별 DSP·보호 처리를 거쳐 스피커를 구동합니다.",
+  "subtitle": "DriveCore Install DA · Dante/AES67 네트워크 앰프",
+  "keyFacts": [
+    {
+      "label": "출력",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "4Ω·8Ω Dual / 채널",
+      "value": "600",
+      "unit": "W"
+    },
+    {
+      "label": "Dante 입력",
+      "value": "8",
+      "unit": "채널"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2",
+      "unit": "U"
+    }
+  ],
+  "signalFlow": {
+    "type": "amplifier-channel",
+    "description": "아날로그·Dante 입력을 채널별로 선택하고 DSP와 증폭을 거쳐 4채널 스피커 출력으로 보내는 개념도입니다.",
+    "inputs": [
+      {
+        "id": "analog",
+        "label": "밸런스 아날로그 입력",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 7
+          }
+        ],
+        "caption": "4채널 모델 · 입력 채널별"
+      },
+      {
+        "id": "dante",
+        "label": "Dante · 8 입력 채널",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 35
+          }
+        ],
+        "caption": "물리 출력은 4채널"
+      },
+      {
+        "id": "control",
+        "label": "HiQnet Ethernet",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 7
+          }
+        ],
+        "caption": "Audio Architect에서 DSP 설정"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "speakers",
+        "label": "스피커 CH 1–4",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 58
+          }
+        ],
+        "caption": "부하·Dual/Bridge 설정에 따라 출력 정격 구별"
+      }
+    ],
+    "processes": [
+      {
+        "id": "router",
+        "kind": "select",
+        "label": "입력 선택 · 우선순위",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 35
+          }
+        ],
+        "caption": "Analog / Network / Backup"
+      },
+      {
+        "id": "dsp",
+        "kind": "dsp",
+        "label": "채널별 DSP",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 32
+          }
+        ],
+        "caption": "EQ · 필터 · 지연 · 리미터"
+      },
+      {
+        "id": "amp",
+        "kind": "amplify",
+        "label": "4채널 증폭",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 58
+          }
+        ],
+        "caption": "4Ω·8Ω Dual 모드: 600W/채널"
+      }
+    ],
+    "connections": [
+      {
+        "from": "analog",
+        "to": "router",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 35
+          }
+        ]
+      },
+      {
+        "from": "dante",
+        "to": "router",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 35
+          }
+        ]
+      },
+      {
+        "from": "router",
+        "to": "dsp",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 35
+          }
+        ]
+      },
+      {
+        "from": "dsp",
+        "to": "amp",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 32
+          }
+        ]
+      },
+      {
+        "from": "amp",
+        "to": "speakers",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 58
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "control",
+        "to": "dsp",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/crown-dci-install-da-series-manual.pdf",
+            "page": 32
+          }
+        ],
+        "label": "DSP 설정"
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "audio",
+        "label": "오디오"
+      },
+      {
+        "signal": "network",
+        "label": "Dante"
+      },
+      {
+        "signal": "control",
+        "label": "설정·제어"
+      }
+    ],
+    "notes": [
+      "600W는 모든 부하에서 동일한 값이 아닙니다. 2Ω·16Ω·Bridge 및 정전압 정격은 제품 사양 표를 확인합니다.",
+      "Dante의 8 입력 채널과 앰프의 물리 출력 4채널을 구분합니다."
+    ],
+    "band": {
+      "label": "4 × 600W",
+      "detail": "4Ω·8Ω / Dual / 모든 채널 구동",
+      "evidence": [
+        {
+          "kind": "pdf",
+          "source": "M",
+          "file": "manuals/crown-dci-install-da-series-manual.pdf",
+          "page": 58
+        }
+      ]
+    }
+  },
+  "settings": [
+    {
+      "kind": "modes",
+      "title": "입력 라우팅 모드",
+      "items": [
+        {
+          "name": "Analog Only",
+          "summary": "아날로그 입력을 채널 소스로 선택합니다."
+        },
+        {
+          "name": "Network Only",
+          "summary": "Dante 입력을 채널 소스로 선택합니다."
+        },
+        {
+          "name": "Network with Analog Backup",
+          "summary": "네트워크 클록을 잃으면 선택한 아날로그 소스로 전환하며 복구 시 네트워크로 돌아옵니다."
+        },
+        {
+          "name": "Analog Overrides Network",
+          "summary": "아날로그 레벨이 설정 임계값을 넘으면 네트워크 대신 아날로그를 사용합니다.",
+          "detail": "임계값과 유지 시간은 사용자 설정이며 고정값으로 제시하지 않습니다."
+        }
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "DCi 4|600DA 부하별 정격",
+      "columns": [
+        "동작",
+        "부하",
+        "최소 보장 출력"
+      ],
+      "rows": [
+        [
+          "Dual · 채널별",
+          "2Ω / 16Ω",
+          "300W"
+        ],
+        [
+          "Dual · 채널별",
+          "4Ω / 8Ω",
+          "600W"
+        ],
+        [
+          "Dual · 채널별",
+          "70V / 100V",
+          "600W"
+        ],
+        [
+          "Bridge Mono · 쌍별",
+          "4Ω",
+          "600W"
+        ],
+        [
+          "Bridge Mono · 쌍별",
+          "8Ω / 16Ω / 140V / 200V",
+          "1200W"
+        ]
+      ]
+    }
+  ]
 }

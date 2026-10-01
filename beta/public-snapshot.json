@@ -26,7 +26,7 @@
       "io": 2
     },
     "aquilon-rs1": {
-      "sha256": "5938E7658CC5222F7898008B37808A5D429FBB94186CA848F65DCACDAD81C3CB",
+      "sha256": "6EA7416ADF49B4A7ACC42E0EAF1813D2B0C3797F545301D93579251E2B013158",
       "features": 7,
       "specifications": 13,
       "io": 5
@@ -392,7 +392,7 @@
       "io": 1
     },
     "dci-4-600da": {
-      "sha256": "0F2C6B40B2CB43AF8A853983E053BE79E56C2686622E821B0F76B6AA00F5C3B4",
+      "sha256": "D48BAEF769C8DEAA55CFE1732F35661E7D571C52A6BCFEE347B58E6FA89E8E07",
       "features": 4,
       "specifications": 33,
       "io": 3
@@ -506,7 +506,7 @@
       "io": 11
     },
     "eb-pq2220b": {
-      "sha256": "C65835507BAF7381E95453510D96041E9DA6AC70161C66E3D70D72844FD40C59",
+      "sha256": "EBF3CF0954ECAEB9AEA0DCA5F5722280C6A98271ABAD5253F445421D1B3840FE",
       "features": 6,
       "specifications": 25,
       "io": 11
@@ -920,7 +920,7 @@
       "io": 7
     },
     "novastar-h5": {
-      "sha256": "7E83BC9C7A470EE038512CBFA328620062D04839E9761D7C0EF953217176B95F",
+      "sha256": "E9F066D557C04F0595DB0A58D24B2E5B0F45EB5E2FF207AC4D992238D88794EF",
       "features": 6,
       "specifications": 26,
       "io": 8
@@ -1298,7 +1298,7 @@
       "io": 3
     },
     "ulxd4d": {
-      "sha256": "D9C8C087D40DC7591037850FDAA2A1B1BC28C74EC23BD6AF5D974A1A2FF62B1A",
+      "sha256": "4625B83AEFBA4E9DD2EE1417FE2488183C70F3169C08AA5D2E1D9E1C20E65694",
       "features": 4,
       "specifications": 30,
       "io": 5

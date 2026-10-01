@@ -475,7 +475,8 @@
       "code": "M",
       "name": "제조사 사용 안내",
       "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf",
-      "scope": "제조사 공식 출처"
+      "scope": "제조사 공식 출처",
+      "page": "PDF/인쇄 4·8·9·46쪽 · ULXD4D/ULXD4Q 공용 중 2채널 모델 적용"
     },
     {
       "code": "D",
@@ -506,5 +507,264 @@
     "footerNote": "Shure ULXD4D Dual-Channel Digital Wireless Receiver · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**독립 2채널 무선 수신**을 1RU에 담은 ULX-D 수신기입니다. 수신 오디오는 채널별 XLR 또는 Dante 네트워크로 전달하며 네트워크 모드에 따라 오디오와 제어 경로가 달라집니다.",
+  "subtitle": "ULX-D 디지털 무선 · 2채널 랙 수신기",
+  "keyFacts": [
+    {
+      "label": "독립 수신",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "랙 높이",
+      "value": "1",
+      "unit": "RU"
+    },
+    {
+      "label": "채널별 아날로그 출력",
+      "value": "XLR",
+      "unit": ""
+    },
+    {
+      "label": "네트워크 모드",
+      "value": "3",
+      "unit": "종"
+    }
+  ],
+  "signalFlow": {
+    "type": "wireless-microphone",
+    "description": "호환 ULX-D 송신기의 RF를 2채널로 수신한 뒤 XLR과 Dante로 오디오를 전달하는 개념도입니다.",
+    "inputs": [
+      {
+        "id": "rf-in",
+        "label": "ULX-D 송신기 RF",
+        "signal": "rf",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          }
+        ],
+        "caption": "호환 주파수 대역·지역 모델 확인"
+      },
+      {
+        "id": "control-in",
+        "label": "Wireless Workbench",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ],
+        "caption": "Ethernet 장비 제어"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "xlr",
+        "label": "XLR · 채널별 출력",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ],
+        "caption": "마이크/라인 입력에 연결"
+      },
+      {
+        "id": "dante",
+        "label": "Dante 네트워크",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 46
+          }
+        ],
+        "caption": "Primary / Secondary · 설정 모드에 따름"
+      }
+    ],
+    "processes": [
+      {
+        "id": "receive",
+        "kind": "rf",
+        "label": "디지털 무선 수신",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          }
+        ],
+        "caption": "ULXD4D · 독립 2채널"
+      },
+      {
+        "id": "audio",
+        "kind": "dsp",
+        "label": "채널별 오디오",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ],
+        "caption": "XLR Mic/Line 선택 · Dante 전송"
+      }
+    ],
+    "connections": [
+      {
+        "from": "rf-in",
+        "to": "receive",
+        "signal": "rf",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          }
+        ]
+      },
+      {
+        "from": "receive",
+        "to": "audio",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "from": "audio",
+        "to": "xlr",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "audio",
+        "to": "dante",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 46
+          }
+        ],
+        "label": "네트워크 오디오"
+      },
+      {
+        "from": "control-in",
+        "to": "receive",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ],
+        "label": "제어"
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "rf",
+        "label": "무선 RF"
+      },
+      {
+        "signal": "audio",
+        "label": "수신 오디오"
+      },
+      {
+        "signal": "network",
+        "label": "Dante"
+      },
+      {
+        "signal": "control",
+        "label": "장비 제어"
+      }
+    ],
+    "notes": [
+      "주파수 Band·Region을 확정하지 않습니다. 송신기와 수신기의 호환 대역을 확인해야 합니다.",
+      "RF cascade 단자 수는 기존 등록값과 매뉴얼의 차이가 있어 이번 그림에서는 수량을 확정하지 않습니다."
+    ]
+  },
+  "settings": [
+    {
+      "kind": "table",
+      "title": "Dante 네트워크 모드",
+      "columns": [
+        "모드",
+        "Primary",
+        "Secondary"
+      ],
+      "rows": [
+        [
+          "Switched",
+          "Shure 제어 + Dante 오디오/제어",
+          "Shure 제어 + Dante 오디오/제어"
+        ],
+        [
+          "Redundant Audio",
+          "Shure 제어 + Dante 오디오/제어",
+          "Dante 이중화 오디오 · 별도 네트워크"
+        ],
+        [
+          "Split",
+          "Shure 제어",
+          "Dante 오디오/제어 · 별도 네트워크"
+        ]
+      ]
+    },
+    {
+      "kind": "modes",
+      "title": "네트워크 모드 변경 순서",
+      "items": [
+        {
+          "name": "연결 분리",
+          "summary": "변경 전에 수신기의 네트워크 연결을 분리합니다."
+        },
+        {
+          "name": "메뉴에서 선택",
+          "summary": "DEVICE UTILITIES → NETWORK → CONFIGURATION에서 모드를 선택하고 ENTER로 저장합니다."
+        },
+        {
+          "name": "재시작",
+          "summary": "수신기를 껐다 켜야 변경이 적용됩니다.",
+          "detail": "사용하는 모든 수신기를 같은 모드로 설정하라는 매뉴얼 지침을 확인합니다."
+        }
+      ]
+    }
+  ]
 }

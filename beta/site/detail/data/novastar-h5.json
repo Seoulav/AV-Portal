@@ -480,7 +480,8 @@
       "code": "D",
       "name": "제조사 공식 H5 Video Wall Splicer Specifications V1.17.0",
       "url": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H5%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
-      "scope": "제조사 공식 출처"
+      "scope": "제조사 공식 출처",
+      "page": "PDF 3·4·7·8·10·46쪽 (후면: 인쇄 5쪽, 제한: 6쪽, H5 사양: 8쪽, 제어: 44쪽)"
     },
     {
       "code": "M",
@@ -518,5 +519,288 @@
     "footerNote": "NovaStar H5 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**출력 카드당 최대 16개의 2K 레이어**를 합성하는 모듈형 비디오월 프로세서입니다. H5 섀시의 최대 48레이어와 카드별 자원 한도를 구분해 설계해야 합니다.",
+  "subtitle": "모듈형 비디오월 프로세서 · 출력 카드별 레이어 자원",
+  "keyFacts": [
+    {
+      "label": "출력 카드당 · 2K 최대",
+      "value": "16",
+      "unit": "레이어"
+    },
+    {
+      "label": "H5 섀시 · 최대",
+      "value": "48",
+      "unit": "레이어"
+    },
+    {
+      "label": "입력 카드 · 최대",
+      "value": "10",
+      "unit": "매"
+    },
+    {
+      "label": "출력 카드 · 최대",
+      "value": "3",
+      "unit": "매"
+    }
+  ],
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "입력 카드 영역 · I-1~I-10",
+        "desc": "최대 10매의 입력 카드 슬롯. 사진의 장착 카드·단자는 구성 예시이며 기본 제공 구성을 뜻하지 않습니다.",
+        "x1": 325,
+        "x2": 1180,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "출력 카드 영역 · O-11~O-13",
+        "desc": "최대 3매의 출력 카드 슬롯. 위쪽 3개 슬롯이며 아래 MVR·제어·전원 영역과 구별합니다.",
+        "x1": 1330,
+        "x2": 2040,
+        "side": "top"
+      }
+    ]
+  },
+  "signalFlow": {
+    "type": "video-processor",
+    "description": "입력 카드에서 받은 영상을 레이어로 합성하고 출력 카드별 화면으로 구성하는 H5의 기능 개념도입니다.",
+    "inputs": [
+      {
+        "id": "input",
+        "label": "입력 카드 · 최대 10매",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 10
+          }
+        ],
+        "caption": "최대 40 입력 채널 · 장착 카드에 따름"
+      },
+      {
+        "id": "remote",
+        "label": "TCP/IP · RS-232",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 46
+          },
+          {
+            "kind": "spec",
+            "index": 12
+          }
+        ],
+        "caption": "장비 제어"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "output",
+        "label": "출력 카드 · 최대 3매",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 10
+          }
+        ],
+        "caption": "최대 12 출력 채널 · 카드별 포트 수 구별"
+      }
+    ],
+    "processes": [
+      {
+        "id": "layers",
+        "kind": "mix",
+        "label": "레이어 합성",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 4
+          }
+        ],
+        "caption": "출력 카드당 2K 16 / DL 8 / 4K 4"
+      },
+      {
+        "id": "screen",
+        "kind": "scale",
+        "label": "화면 배치 · 스플라이싱",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 4
+          }
+        ],
+        "caption": "화면별 출력 해상도와 배치 설정"
+      }
+    ],
+    "connections": [
+      {
+        "from": "input",
+        "to": "layers",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 4
+          }
+        ]
+      },
+      {
+        "from": "layers",
+        "to": "screen",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 4
+          }
+        ]
+      },
+      {
+        "from": "screen",
+        "to": "output",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 4
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "remote",
+        "to": "screen",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "D",
+            "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+            "page": 46
+          },
+          {
+            "kind": "spec",
+            "index": 12
+          }
+        ],
+        "label": "제어"
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 처리"
+      },
+      {
+        "signal": "control",
+        "label": "보조 제어 경로"
+      }
+    ],
+    "notes": [
+      "설치 배선도가 아닌 기능 개념도입니다. 카드가 장착된 실제 구성에 따라 단자·채널 수가 달라집니다.",
+      "16×2K·8×DL·4×4K는 출력 카드별 한도이며 서로 더하는 값이 아닙니다.",
+      "동일 카드 OUT 경계에서 자원을 나눠 쓰는 사용자 설명 예시는 별도 H5 샘플에 표시합니다. 공식 PDF의 cross-connector 문구와 적용 조건은 추가 대조가 필요합니다."
+    ],
+    "band": {
+      "label": "2K ×16 / 카드",
+      "detail": "H5 최대 48레이어 · 입력 커넥터 용량·모드 조건 적용",
+      "evidence": [
+        {
+          "kind": "pdf",
+          "source": "D",
+          "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+          "page": 4
+        },
+        {
+          "kind": "pdf",
+          "source": "D",
+          "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+          "page": 8
+        },
+        {
+          "kind": "pdf",
+          "source": "D",
+          "file": "docs/novastar-h5-specification-89119003fed1.pdf",
+          "page": 10
+        }
+      ]
+    }
+  },
+  "settings": [
+    {
+      "kind": "table",
+      "title": "출력 카드별 레이어 한도",
+      "columns": [
+        "입력 용량 기준",
+        "카드당 최대",
+        "적용 조건"
+      ],
+      "rows": [
+        [
+          "2K",
+          "16 레이어",
+          "입력 커넥터 용량 기준"
+        ],
+        [
+          "Dual Link",
+          "8 레이어",
+          "2K 한도와 합산하지 않음"
+        ],
+        [
+          "4K",
+          "4 레이어",
+          "커넥터 모드·해상도 설정 확인"
+        ],
+        [
+          "8K",
+          "2 레이어",
+          "해당 입력 카드 구성 확인"
+        ]
+      ]
+    },
+    {
+      "kind": "modes",
+      "title": "화면 구성 시 확인",
+      "items": [
+        {
+          "name": "스플라이싱",
+          "summary": "화면별 출력 해상도·화면 배치를 설정합니다.",
+          "detail": "출력 카드와 화면 구성을 확인한 뒤 레이어 자원을 배분합니다."
+        },
+        {
+          "name": "매트릭스 모드",
+          "summary": "입력과 출력의 스위칭 구성을 사용합니다."
+        },
+        {
+          "name": "전환 효과",
+          "summary": "카드별 레이어 한도를 초과하는 프리셋에서는 페이드 대신 Cut이 적용될 수 있습니다.",
+          "detail": "PDF 8쪽의 SL/DL/4K/8K 수량 및 입력 커넥터 용량 조건을 확인합니다."
+        }
+      ]
+    }
+  ]
 }
