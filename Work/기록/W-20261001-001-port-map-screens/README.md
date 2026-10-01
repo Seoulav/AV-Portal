@@ -12,3 +12,16 @@
 [PC RTCOM 비교](comparison-ulxd4d-rtcom-1280.png) · [모바일 RTCOM 비교](comparison-ulxd4d-rtcom-390.png)
 
 `before-*`/`after-*`는 BRC-AM7·DM7·UA874XA 보존 대조다. `local-제품-폭.png`는 시범 전체 화면이며 Aquilon은 사진 fallback 유지다.
+
+## 실제 공개 캡처
+
+PR149 병합본 Pages 성공 후 실제 공개 주소에서 다시 검증했다. `public.json`은10개 시범 화면·6개 대표 화면의 실측이다.
+
+| 제품 | 1280px | 390px |
+|---|---|---|
+| ULXD4D | [공개 PC](public-ulxd4d-1280-port-map.png) | [공개 모바일](public-ulxd4d-390-port-map.png) |
+| H5 | [공개 PC](public-novastar-h5-1280-port-map.png) | [공개 모바일](public-novastar-h5-390-port-map.png) |
+| Crown DCi 4\|600DA | [공개 PC](public-dci-4-600da-1280-port-map.png) | [공개 모바일](public-dci-4-600da-390-port-map.png) |
+| Epson 부분 지도 | [공개 PC](public-eb-pq2220b-1280-port-map.png) | [공개 모바일](public-eb-pq2220b-390-port-map.png) |
+
+모바일은 `public-제품-390-port-map-right.png`에 사진 오른쪽 끝도 남겼다. Aquilon은 `public-aquilon-rs1-폭.png`에서 기존 사진 fallback을 확인한다.
