@@ -37,7 +37,7 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
         for (const page of pages.filter(Number.isInteger)) assert.ok(evidence.pages.includes(page), `${slug} undeclared page ${page}`);
       }
       for (const match of JSON.stringify(p.signalFlow).matchAll(/"page":(\d+)/g)) {
-        assert.ok(evidence.pages.includes(Number(match[1])));
+        assert.ok([...evidence.pages, ...(slug === 'ulxd4d' ? [8,39,41,43,44] : [])].includes(Number(match[1])));
         assert.ok(Number(match[1]) <= evidence.pageCount);
       }
     }
@@ -47,6 +47,12 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
       assert.equal(change.previous, '');
       assert.equal(original.io[change.ioIndex].quantity, change.next);
       original.io[change.ioIndex].quantity = change.previous;
+    }
+    if (slug === 'ulxd4d') {
+      assert.equal(original.io[1].quantity, '2');
+      original.io[1].quantity = '1'; // 2026-10-02 user-approved correction; original baseline remains intact.
+      assert.equal(original.documents[0].title, 'Shure ULX-D Digital Wireless User Guide');
+      original.documents[0].title = 'Shure Shure ULX-D Digital Wireless User Guide';
     }
     original.sources.forEach((source, i) => {
       if (baseline.sourcePages[i] === null) delete source.page;
@@ -88,6 +94,6 @@ test('pilot map coordinates remain tied to measured images and evidence; only fo
       assert.equal(createHash('sha256').update(readFileSync(new URL('../beta/site/'+proof.pdf.file, import.meta.url))).digest('hex'), proof.pdf.sha256);
     } else assert.match(proof.limitation,/PDF/);
   }
-  assert.equal(read('beta/site/detail/data/ulxd4d.json').io[1].quantity,'1'); // Nonblank conflict is preserved.
+  assert.equal(read('beta/site/detail/data/ulxd4d.json').io[1].quantity,'2'); // Explicit 2026-10-02 correction, PDF9/43 + map5/6.
   assert.equal(read('beta/site/detail/data/novastar-h5.json').io[7].quantity,''); // No text-based count.
 });

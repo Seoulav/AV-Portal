@@ -1,6 +1,6 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-portmap';
-import { portMapImageMatches, portMapDisplayWidth } from './detail-enhancements.mjs?v=w20261001-001-portmap';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-portmap';
+import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-ulxd4d-followup';
+import { portMapImageMatches, portMapDisplayWidth } from './detail-enhancements.mjs?v=w20261001-001-ulxd4d-followup';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-ulxd4d-followup';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';

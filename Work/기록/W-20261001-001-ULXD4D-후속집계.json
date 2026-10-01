@@ -1,0 +1,2463 @@
+{
+  "baseline": "a97c204efc441a4cb00fb9ac910e3b3a2918da3c",
+  "totalProducts": 240,
+  "duplicateProducts": 12,
+  "duplicateTitles": 12,
+  "remainingDuplicateProducts": 11,
+  "dualUnitProducts": 130,
+  "dualUnitRows": 227,
+  "countsByKind": {
+    "mass": 63,
+    "length": 164
+  },
+  "duplicates": [
+    {
+      "product": "qlxd1",
+      "model": "QLXD1",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd2-beta58",
+      "model": "QLXD2/BETA58",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd2-beta87a",
+      "model": "QLXD2/BETA87A",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd1",
+      "model": "ULXD1",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-beta58",
+      "model": "ULXD2/BETA58",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-beta87",
+      "model": "ULXD2/BETA87",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-ksm9",
+      "model": "ULXD2/KSM9",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd4d",
+      "model": "ULXD4D",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": true
+    },
+    {
+      "product": "ulxd4q",
+      "model": "ULXD4Q",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd8",
+      "model": "ULXD8",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    }
+  ],
+  "rows": [
+    {
+      "product": "a900w-r-gm",
+      "model": "A900W-R-GM",
+      "index": 1,
+      "name": "스틸 서스펜션 케이블",
+      "value": "3m(10피트) x 3개",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ac18-26",
+      "model": "AC18/26",
+      "index": 11,
+      "name": "LF 드라이버",
+      "value": "JBL 228H, 205mm(8 in) SFG 드라이버, 64mm(2.5 in) 에지 와운드 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ac18-26",
+      "model": "AC18/26",
+      "index": 13,
+      "name": "HF 드라이버",
+      "value": "2408H-1, 25mm(1 in) 익시트 컴프레션 드라이버, 38mm(1.5 in) 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ac18-95",
+      "model": "AC18/95",
+      "index": 10,
+      "name": "LF 드라이버",
+      "value": "JBL 228H, 205mm(8 in) SFG 드라이버, 64mm(2.5 in) 에지 와운드 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ac18-95",
+      "model": "AC18/95",
+      "index": 12,
+      "name": "HF 드라이버",
+      "value": "2408H-1, 25mm(1 in) 익시트 컴프레션 드라이버, 38mm(1.5 in) 보이스코일 x 1",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "blu-100",
+      "model": "BLU-100",
+      "index": 12,
+      "name": "외형 치수(H x W x D)",
+      "value": "45 x 483 x 229",
+      "unit": "mm (1.75\" x 19\" x 9.0\")",
+      "condition": "1U",
+      "kind": "length"
+    },
+    {
+      "product": "blu-100",
+      "model": "BLU-100",
+      "index": 13,
+      "name": "무게",
+      "value": "2.9 (6.4)",
+      "unit": "kg (lbs)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "blu-101",
+      "model": "BLU-101",
+      "index": 16,
+      "name": "외형 치수(H x W x D)",
+      "value": "45 x 483 x 318",
+      "unit": "mm (1.75\" x 19\" x 12.5\")",
+      "condition": "1U",
+      "kind": "length"
+    },
+    {
+      "product": "blu-101",
+      "model": "BLU-101",
+      "index": 17,
+      "name": "무게",
+      "value": "4.1 (9.1)",
+      "unit": "kg (lbs)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "blu-160",
+      "model": "BLU-160",
+      "index": 17,
+      "name": "외형 치수(H x W x D)",
+      "value": "45 x 483 x 318",
+      "unit": "mm (1.75\" x 19\" x 12.5\")",
+      "condition": "1U",
+      "kind": "length"
+    },
+    {
+      "product": "blu-160",
+      "model": "BLU-160",
+      "index": 18,
+      "name": "무게",
+      "value": "약 4.1 (9)",
+      "unit": "kg (lbs), 추정치",
+      "condition": "제조사 자료에 estimated로 표기",
+      "kind": "mass"
+    },
+    {
+      "product": "blu-50v2",
+      "model": "BLU-50v2",
+      "index": 22,
+      "name": "외형 치수(H x W x D)",
+      "value": "41 x 219 x 197",
+      "unit": "mm (1.625\" x 8.63\" x 7.75\")",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "blu-50v2",
+      "model": "BLU-50v2",
+      "index": 23,
+      "name": "무게",
+      "value": "1.28 (2.82)",
+      "unit": "kg (lbs)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-1200",
+      "model": "Crown CDi 2|1200",
+      "index": 20,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 374",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.71\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-1200",
+      "model": "Crown CDi 2|1200",
+      "index": 21,
+      "name": "무게",
+      "value": "7.8",
+      "unit": "kg",
+      "condition": "17.2 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-1200bl",
+      "model": "Crown CDi 2|1200BL",
+      "index": 21,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 374",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.71\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-1200bl",
+      "model": "Crown CDi 2|1200BL",
+      "index": 22,
+      "name": "무게",
+      "value": "7.8",
+      "unit": "kg",
+      "condition": "17.2 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-300",
+      "model": "Crown CDi 2|300",
+      "index": 25,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\" (전면 돌출 1.3\" 제외)",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-300",
+      "model": "Crown CDi 2|300",
+      "index": 26,
+      "name": "무게",
+      "value": "6.6",
+      "unit": "kg",
+      "condition": "14.56 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-300bl",
+      "model": "Crown CDi 2|300BL",
+      "index": 24,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\" (전면 패널 돌출 1.3\" 제외)",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-300bl",
+      "model": "Crown CDi 2|300BL",
+      "index": 25,
+      "name": "무게",
+      "value": "6.6",
+      "unit": "kg",
+      "condition": "14.56 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-600",
+      "model": "Crown CDi 2|600",
+      "index": 19,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-600",
+      "model": "Crown CDi 2|600",
+      "index": 20,
+      "name": "무게",
+      "value": "6.6",
+      "unit": "kg",
+      "condition": "14.56 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-2-600bl",
+      "model": "Crown CDi 2|600BL",
+      "index": 22,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-2-600bl",
+      "model": "Crown CDi 2|600BL",
+      "index": 23,
+      "name": "무게",
+      "value": "6.6",
+      "unit": "kg",
+      "condition": "14.56 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-1200",
+      "model": "Crown CDi 4|1200",
+      "index": 20,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 374",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.71\" (전면 돌출 1.3\" 제외)",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-1200",
+      "model": "Crown CDi 4|1200",
+      "index": 21,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-1200bl",
+      "model": "Crown CDi 4|1200BL",
+      "index": 21,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 374",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.71\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-1200bl",
+      "model": "Crown CDi 4|1200BL",
+      "index": 22,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-300",
+      "model": "Crown CDi 4|300",
+      "index": 21,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-300",
+      "model": "Crown CDi 4|300",
+      "index": 22,
+      "name": "무게",
+      "value": "7.31",
+      "unit": "kg",
+      "condition": "16.13 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-300bl",
+      "model": "Crown CDi 4|300BL",
+      "index": 21,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-300bl",
+      "model": "Crown CDi 4|300BL",
+      "index": 22,
+      "name": "무게",
+      "value": "7.31",
+      "unit": "kg",
+      "condition": "16.13 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-600",
+      "model": "Crown CDi 4|600",
+      "index": 20,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-600",
+      "model": "Crown CDi 4|600",
+      "index": 21,
+      "name": "무게",
+      "value": "7.39",
+      "unit": "kg",
+      "condition": "16.3 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "cdi-4-600bl",
+      "model": "Crown CDi 4|600BL",
+      "index": 21,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 311",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 12.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "cdi-4-600bl",
+      "model": "Crown CDi 4|600BL",
+      "index": 22,
+      "name": "무게",
+      "value": "7.39",
+      "unit": "kg",
+      "condition": "16.3 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "comtech-d-2125",
+      "model": "ComTech D 2125",
+      "index": 14,
+      "name": "무게",
+      "value": "2.9",
+      "unit": "kg",
+      "condition": "6.4 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "comtech-d-4125",
+      "model": "ComTech D 4125",
+      "index": 13,
+      "name": "무게",
+      "value": "3.2",
+      "unit": "kg",
+      "condition": "7.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "comtech-d-8125",
+      "model": "ComTech D 8125",
+      "index": 13,
+      "name": "무게",
+      "value": "5.9",
+      "unit": "kg",
+      "condition": "13 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "control-23-1",
+      "model": "Control 23-1",
+      "index": 13,
+      "name": "LF 드라이버",
+      "value": "76 mm(3.0 in), 우븐 파이버글라스 콘, 순수 부틸고무 서라운드, Weather-Edge 프레임, 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-23-1",
+      "model": "Control 23-1",
+      "index": 14,
+      "name": "HF 드라이버",
+      "value": "13 mm(0.5 in) PEI 다이어프램, 저점도 자성유체 냉각, 경량 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-25-1",
+      "model": "Control 25-1",
+      "index": 13,
+      "name": "LF 드라이버",
+      "value": "135 mm(5.25 in), 우븐 파이버글라스 콘, 순수 부틸고무 서라운드, Weather-Edge 프레임, 고내열 파이버글라스 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-25-1",
+      "model": "Control 25-1",
+      "index": 14,
+      "name": "HF 드라이버",
+      "value": "19 mm(0.75 in) PEI 다이어프램, 저점도 자성유체 냉각, 경량 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-28-1",
+      "model": "Control 28-1",
+      "index": 13,
+      "name": "LF 드라이버",
+      "value": "200 mm(8 in), 우븐 파이버글라스 콘, 순수 부틸고무 서라운드, Weather-Edge 프레임, 고내열 파이버글라스 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-28-1",
+      "model": "Control 28-1",
+      "index": 14,
+      "name": "HF 드라이버",
+      "value": "25 mm(1 in) PEI 다이어프램, 저점도 자성유체 냉각, 경량 캡톤 보이스코일 포머",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-412ct",
+      "model": "Control 412C/T",
+      "index": 7,
+      "name": "드라이버",
+      "value": "76mm(3 in) 풀레인지 드라이버, 페이퍼 콘, SBR 서라운드",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-414ct",
+      "model": "Control 414C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "100mm(4.0 in), 페이퍼 콘, SBR 서라운드",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-414ct",
+      "model": "Control 414C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "20mm(0.75 in) 소프트돔",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-416ct",
+      "model": "Control 416C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "165mm(6.5 in), 페이퍼 콘, SBR 서라운드",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-416ct",
+      "model": "Control 416C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "20mm(0.75 in) 소프트돔",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-418ct",
+      "model": "Control 418C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "200mm(8 in), 페이퍼 콘, SBR 서라운드",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-418ct",
+      "model": "Control 418C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "25mm(1 in) 소프트돔",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-419cst",
+      "model": "Control 419CS/T",
+      "index": 7,
+      "name": "드라이버",
+      "value": "200mm(8 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-424ct",
+      "model": "Control 424C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "100mm(4 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-424ct",
+      "model": "Control 424C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "19mm(0.75 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-424lp",
+      "model": "Control 424LP",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "100mm(4 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-424lp",
+      "model": "Control 424LP",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "19mm(0.75 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-426ct",
+      "model": "Control 426C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "165mm(6.5 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-426ct",
+      "model": "Control 426C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "25mm(1.0 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-426lp",
+      "model": "Control 426LP",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "165mm(6.5 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-426lp",
+      "model": "Control 426LP",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "25mm(1.0 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-440cst",
+      "model": "Control 440CS/T",
+      "index": 7,
+      "name": "드라이버",
+      "value": "200mm(8 in), 트리트먼트 페이퍼 콘, SBR 서라운드, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-447ct",
+      "model": "Control 447C/T",
+      "index": 7,
+      "name": "LF 드라이버",
+      "value": "165mm(6.5 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "control-447ct",
+      "model": "Control 447C/T",
+      "index": 8,
+      "name": "HF 드라이버",
+      "value": "25mm(1 in) 소프트돔, 네오디뮴 마그넷",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "cs10",
+      "model": "CS10",
+      "index": 3,
+      "name": "저역 드라이버(우퍼)",
+      "value": "5.7인치 (145mm)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "cs10",
+      "model": "CS10",
+      "index": 4,
+      "name": "고역 드라이버(트위터)",
+      "value": "1.1인치 (28mm)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "dci-2-300",
+      "model": "Crown DCi 2|300",
+      "index": 17,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-2-300",
+      "model": "Crown DCi 2|300",
+      "index": 18,
+      "name": "무게",
+      "value": "8.53",
+      "unit": "kg",
+      "condition": "18.8 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-2-300n",
+      "model": "Crown DCi 2|300N",
+      "index": 18,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-2-300n",
+      "model": "Crown DCi 2|300N",
+      "index": 19,
+      "name": "무게",
+      "value": "8.53",
+      "unit": "kg",
+      "condition": "18.8 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-2-600",
+      "model": "Crown DCi 2|600",
+      "index": 15,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-2-600",
+      "model": "Crown DCi 2|600",
+      "index": 16,
+      "name": "무게",
+      "value": "8.53",
+      "unit": "kg",
+      "condition": "18.8 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-2-600n",
+      "model": "Crown DCi 2|600N",
+      "index": 17,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-2-600n",
+      "model": "Crown DCi 2|600N",
+      "index": 18,
+      "name": "무게",
+      "value": "8.53",
+      "unit": "kg",
+      "condition": "18.8 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-300",
+      "model": "Crown DCi 4|300",
+      "index": 15,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-300",
+      "model": "Crown DCi 4|300",
+      "index": 16,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-300da",
+      "model": "Crown DCi 4|300DA",
+      "index": 27,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-300da",
+      "model": "Crown DCi 4|300DA",
+      "index": 28,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-300n",
+      "model": "Crown DCi 4|300N",
+      "index": 18,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-300n",
+      "model": "Crown DCi 4|300N",
+      "index": 19,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-600",
+      "model": "Crown DCi 4|600",
+      "index": 15,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-600",
+      "model": "Crown DCi 4|600",
+      "index": 16,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-600da",
+      "model": "Crown DCi 4|600DA",
+      "index": 25,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-600da",
+      "model": "Crown DCi 4|600DA",
+      "index": 26,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "dci-4-600n",
+      "model": "Crown DCi 4|600N",
+      "index": 17,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 362",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 14.25\"",
+      "kind": "length"
+    },
+    {
+      "product": "dci-4-600n",
+      "model": "Crown DCi 4|600N",
+      "index": 18,
+      "name": "무게",
+      "value": "9.12",
+      "unit": "kg",
+      "condition": "20.1 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "duecanali-1604-dsp",
+      "model": "Duecanali 1604 DSP",
+      "index": 35,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "duecanali-1604-dsp",
+      "model": "Duecanali 1604 DSP",
+      "index": 36,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15.4 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "duecanali-1604-dspd",
+      "model": "Duecanali 1604 DSP+D",
+      "index": 52,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "duecanali-1604-dspd",
+      "model": "Duecanali 1604 DSP+D",
+      "index": 53,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "duecanali-804-dsp",
+      "model": "Duecanali 804 DSP",
+      "index": 35,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "duecanali-804-dsp",
+      "model": "Duecanali 804 DSP",
+      "index": 36,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15.4 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "duecanali-804-dspd",
+      "model": "Duecanali 804 DSP+D",
+      "index": 52,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "duecanali-804-dspd",
+      "model": "Duecanali 804 DSP+D",
+      "index": 53,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "eb-l690u",
+      "model": "EB-L690U",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l695se",
+      "model": "EB-L695SE",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l790su",
+      "model": "EB-L790SU",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l790u",
+      "model": "EB-L790U",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l795se",
+      "model": "EB-L795SE",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l895e",
+      "model": "EB-L895E",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-l895u",
+      "model": "EB-L895U",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.67",
+      "unit": "인치(1.70cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pq2213b",
+      "model": "EB-PQ2213B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.04",
+      "unit": "인치(2.64cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pq2216b",
+      "model": "EB-PQ2216B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.04",
+      "unit": "인치(2.64cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pq2220b",
+      "model": "EB-PQ2220B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.04",
+      "unit": "인치(2.64cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pu1008b",
+      "model": "EB-PU1008B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "0.76",
+      "unit": "인치(1.93cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pu2010w-b",
+      "model": "EB-PU2010W/B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.0",
+      "unit": "인치(2.54cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pu2213b",
+      "model": "EB-PU2213B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.0",
+      "unit": "인치(2.54cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "eb-pu2216b",
+      "model": "EB-PU2216B",
+      "index": 4,
+      "name": "LCD 크기",
+      "value": "1.0",
+      "unit": "인치(2.54cm)",
+      "condition": "C2fine",
+      "kind": "length"
+    },
+    {
+      "product": "ec-4bv",
+      "model": "EC-4BV",
+      "index": 7,
+      "name": "최대 케이블 길이",
+      "value": "328 (100)",
+      "unit": "피트(미터)",
+      "condition": "PoE 사용 시",
+      "kind": "length"
+    },
+    {
+      "product": "gs108pp",
+      "model": "GS108PP",
+      "index": 10,
+      "name": "크기(W x D x H)",
+      "value": "236 x 102 x 27",
+      "unit": "mm",
+      "condition": "9.29 x 4.02 x 1.06 in",
+      "kind": "length"
+    },
+    {
+      "product": "gs116pp",
+      "model": "GS116PP",
+      "index": 15,
+      "name": "크기(W x D x H)",
+      "value": "286 x 102 x 27",
+      "unit": "mm",
+      "condition": "11.26 x 4.02 x 1.06 in",
+      "kind": "length"
+    },
+    {
+      "product": "gs728tppv3",
+      "model": "GS728TPPv3",
+      "index": 38,
+      "name": "크기(W x D x H)",
+      "value": "440 x 257 x 43.2",
+      "unit": "mm",
+      "condition": "17.3 x 10.1 x 1.7in. 사용 설명서는 440 x 257 x 43mm",
+      "kind": "length"
+    },
+    {
+      "product": "gs728tppv3",
+      "model": "GS728TPPv3",
+      "index": 39,
+      "name": "무게",
+      "value": "4.11",
+      "unit": "kg",
+      "condition": "9.05 lb(제품 페이지·데이터시트). 사용 설명서는 3.68kg(8.11 lb)",
+      "kind": "mass"
+    },
+    {
+      "product": "gsm4212p",
+      "model": "GSM4212P",
+      "index": 36,
+      "name": "무게",
+      "value": "2.85",
+      "unit": "kg",
+      "condition": "6.28 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "gsm4230p",
+      "model": "GSM4230P",
+      "index": 12,
+      "name": "무게",
+      "value": "4.3",
+      "unit": "kg",
+      "condition": "9.47 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "gsm4230px",
+      "model": "GSM4230PX",
+      "index": 12,
+      "name": "무게",
+      "value": "5.45",
+      "unit": "kg",
+      "condition": "12.02 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "gsm4248p",
+      "model": "GSM4248P",
+      "index": 12,
+      "name": "무게",
+      "value": "5.85",
+      "unit": "kg",
+      "condition": "12.9 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "i-tech-4x3500hd",
+      "model": "Crown I-Tech 4x3500HD",
+      "index": 23,
+      "name": "크기(W×H×D)",
+      "value": "483 x 89 x 431",
+      "unit": "mm",
+      "condition": "19\" x 3.5\" x 16.9\"",
+      "kind": "length"
+    },
+    {
+      "product": "i-tech-4x3500hd",
+      "model": "Crown I-Tech 4x3500HD",
+      "index": 24,
+      "name": "무게",
+      "value": "13.2",
+      "unit": "kg",
+      "condition": "29 lbs",
+      "kind": "mass"
+    },
+    {
+      "product": "lh115qhfebgxkr",
+      "model": "LH115QHFEBGXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "115 (290.7)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh32qmcebgcxkr",
+      "model": "LH32QMCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "32 (80.1)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh43qhcebgcxkr",
+      "model": "LH43QHCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "43 (107.9)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh43qmcebgcxkr",
+      "model": "LH43QMCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "43 (107.9)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh75qhcebgcxkr",
+      "model": "LH75QHCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "75 (189.3)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh85qmcebgcxkr",
+      "model": "LH85QMCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "85 (214.7)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "lh98qmcebgcxkr",
+      "model": "LH98QMCEBGCXKR",
+      "index": 0,
+      "name": "화면 크기",
+      "value": "98 (247.7)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "mx395",
+      "model": "MX395",
+      "index": 17,
+      "name": "직경",
+      "value": "2.5",
+      "unit": "cm (1 in.)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "mx418d-c",
+      "model": "MX418D/C",
+      "index": 17,
+      "name": "길이",
+      "value": "18",
+      "unit": "in. (약 46cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "mx418d-c",
+      "model": "MX418D/C",
+      "index": 18,
+      "name": "순중량 (MX418D)",
+      "value": "0.82",
+      "unit": "kg (1.82 lbs)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "mxa925w-r",
+      "model": "MXA925W-R",
+      "index": 25,
+      "name": "무게 (MXA925-S)",
+      "value": "5.4",
+      "unit": "kg (11.8 lb.)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "mxa925w-r",
+      "model": "MXA925W-R",
+      "index": 26,
+      "name": "무게 (MXA925-R)",
+      "value": "5.8",
+      "unit": "kg (12.7 lb.)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "mxc420-c",
+      "model": "MXC420/C",
+      "index": 7,
+      "name": "길이",
+      "value": "20",
+      "unit": "in. (50cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "mxc420-c",
+      "model": "MXC420/C",
+      "index": 11,
+      "name": "동일 시리즈 다른 길이",
+      "value": "MXC416(16in/40cm), MXC425(25in/63cm)",
+      "unit": "",
+      "condition": "듀얼플렉스 버전은 MXC416DF/420DF/425DF",
+      "kind": "length"
+    },
+    {
+      "product": "nx-1200",
+      "model": "NX-1200",
+      "index": 1,
+      "name": "크기(H×W×D)",
+      "value": "42.16 × 147.32 × 130.81",
+      "unit": "mm",
+      "condition": "1 11/16\" × 5 13/16\" × 5 1/8\"",
+      "kind": "length"
+    },
+    {
+      "product": "nx-1200",
+      "model": "NX-1200",
+      "index": 2,
+      "name": "무게",
+      "value": "0.726",
+      "unit": "kg",
+      "condition": "1.6 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "nx-2200",
+      "model": "NX-2200",
+      "index": 1,
+      "name": "크기(H×W×D)",
+      "value": "45.15 × 431.80 × 231.64",
+      "unit": "mm",
+      "condition": "1 4/5\" × 17\" × 9 1/8\"",
+      "kind": "length"
+    },
+    {
+      "product": "nx-2200",
+      "model": "NX-2200",
+      "index": 2,
+      "name": "무게",
+      "value": "2.758",
+      "unit": "kg",
+      "condition": "6.08 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "nx-3200",
+      "model": "NX-3200",
+      "index": 1,
+      "name": "크기(H×W×D)",
+      "value": "45.15 × 431.80 × 231.64",
+      "unit": "mm",
+      "condition": "1 4/5\" × 17\" × 9 1/8\"",
+      "kind": "length"
+    },
+    {
+      "product": "nx-3200",
+      "model": "NX-3200",
+      "index": 2,
+      "name": "무게",
+      "value": "2.758",
+      "unit": "kg",
+      "condition": "6.08 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "pt-mz11k",
+      "model": "PT-MZ11K",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "2.03–15.24 m (80–600 in)",
+      "unit": "",
+      "condition": "16:10, 옵션 렌즈에 따라 상이",
+      "kind": "length"
+    },
+    {
+      "product": "pt-mz14k",
+      "model": "PT-MZ14K",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "2.03–15.24 m (80–600 in)",
+      "unit": "",
+      "condition": "16:10, 옵션 렌즈에 따라 상이",
+      "kind": "length"
+    },
+    {
+      "product": "pt-mz882",
+      "model": "PT-MZ882",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "1.02–10.16 m (40–400 in)",
+      "unit": "",
+      "condition": "16:10, ET-ELS20 기준, 옵션 렌즈에 따라 상이",
+      "kind": "length"
+    },
+    {
+      "product": "pt-vmz51",
+      "model": "PT-VMZ51",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "0.76–7.62 m (30–300 in)",
+      "unit": "",
+      "condition": "16:10",
+      "kind": "length"
+    },
+    {
+      "product": "pt-vmz61",
+      "model": "PT-VMZ61",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "0.76–7.62 m (30–300 in)",
+      "unit": "",
+      "condition": "16:10",
+      "kind": "length"
+    },
+    {
+      "product": "pt-vmz71",
+      "model": "PT-VMZ71",
+      "index": 7,
+      "name": "화면 크기",
+      "value": "0.76–7.62 m (30–300 in)",
+      "unit": "",
+      "condition": "16:10",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd1",
+      "model": "QLXD1",
+      "index": 7,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd1",
+      "model": "QLXD1",
+      "index": 16,
+      "name": "치수 (H x W x D)",
+      "value": "86 x 65 x 23",
+      "unit": "mm",
+      "condition": "3.38 x 2.57 x 0.92 in, 안테나 제외",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd2-beta58",
+      "model": "QLXD2/BETA58",
+      "index": 9,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd2-beta58",
+      "model": "QLXD2/BETA58",
+      "index": 12,
+      "name": "치수 (L x Dia.)",
+      "value": "269",
+      "unit": "mm",
+      "condition": "10.6 in x 2.0 in",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd2-beta87a",
+      "model": "QLXD2/BETA87A",
+      "index": 9,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd2-beta87a",
+      "model": "QLXD2/BETA87A",
+      "index": 13,
+      "name": "치수 (L x Dia.)",
+      "value": "269",
+      "unit": "mm",
+      "condition": "10.6 in x 2.0 in",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 1,
+      "name": "치수 (H x W x D)",
+      "value": "41 x 197 x 151",
+      "unit": "mm",
+      "condition": "1.63 x 7.75 x 5.94 in",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 2,
+      "name": "무게",
+      "value": "0.777 (1.71)",
+      "unit": "kg (lb)",
+      "condition": "안테나 제외",
+      "kind": "mass"
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 5,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 16,
+      "name": "오디오 출력 커넥터",
+      "value": "1/4\" (6.35 mm) 및 XLR",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 24,
+      "name": "최대 케이블 길이",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-1204-dsp",
+      "model": "Quattrocanali 1204 DSP",
+      "index": 36,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-1204-dsp",
+      "model": "Quattrocanali 1204 DSP",
+      "index": 37,
+      "name": "무게",
+      "value": "6.8",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "quattrocanali-1204-dspd",
+      "model": "Quattrocanali 1204 DSP+D",
+      "index": 52,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-1204-dspd",
+      "model": "Quattrocanali 1204 DSP+D",
+      "index": 53,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "quattrocanali-2404-dsp",
+      "model": "Quattrocanali 2404 DSP",
+      "index": 36,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-2404-dsp",
+      "model": "Quattrocanali 2404 DSP",
+      "index": 37,
+      "name": "무게",
+      "value": "6.8",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "quattrocanali-2404-dspd",
+      "model": "Quattrocanali 2404 DSP+D",
+      "index": 52,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-2404-dspd",
+      "model": "Quattrocanali 2404 DSP+D",
+      "index": 53,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "quattrocanali-4804-dsp",
+      "model": "Quattrocanali 4804 DSP",
+      "index": 36,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-4804-dsp",
+      "model": "Quattrocanali 4804 DSP",
+      "index": 37,
+      "name": "무게",
+      "value": "6.8",
+      "unit": "kg",
+      "condition": "15 lb · 데이터시트 기준. 제품 페이지 Features는 7 kg(15.4 lbs)로 표기",
+      "kind": "mass"
+    },
+    {
+      "product": "quattrocanali-4804-dspd",
+      "model": "Quattrocanali 4804 DSP+D",
+      "index": 52,
+      "name": "크기 (W x H x D)",
+      "value": "483 x 44.5 x 358",
+      "unit": "mm",
+      "condition": "19.0 x 1.75 x 14.1 in",
+      "kind": "length"
+    },
+    {
+      "product": "quattrocanali-4804-dspd",
+      "model": "Quattrocanali 4804 DSP+D",
+      "index": 53,
+      "name": "무게",
+      "value": "7",
+      "unit": "kg",
+      "condition": "15 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "rally-mic-pod-extension-cable",
+      "model": "Rally Mic Pod Extension Cable",
+      "index": 0,
+      "name": "길이",
+      "value": "10",
+      "unit": "m (32.8 ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "rally-mic-pod-hub",
+      "model": "Rally Mic Pod Hub",
+      "index": 1,
+      "name": "허브 연결 케이블",
+      "value": "9.6 ft (2.95 m)",
+      "unit": "",
+      "condition": "12핀 캡티브 케이블",
+      "kind": "length"
+    },
+    {
+      "product": "rally-mic-pod",
+      "model": "Rally Mic Pod",
+      "index": 3,
+      "name": "픽업 범위",
+      "value": "15 ft / 4.5m",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "rally-mic-pod",
+      "model": "Rally Mic Pod",
+      "index": 7,
+      "name": "출력",
+      "value": "9.6 ft (2.95 m) 12핀 캡티브 케이블",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "rally-plus",
+      "model": "Rally Plus",
+      "index": 5,
+      "name": "드라이버",
+      "value": "3인치(76mm) 고성능 드라이버",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "rally-plus",
+      "model": "Rally Plus",
+      "index": 8,
+      "name": "픽업 범위",
+      "value": "15 ft / 4.5m 지름",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd1-plus",
+      "model": "SLXD1+",
+      "index": 2,
+      "name": "치수(H×W×D)",
+      "value": "98 × 68 × 25.5 (3.86 × 2.68 × 1.0 in)",
+      "unit": "mm",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd1-plus",
+      "model": "SLXD1+",
+      "index": 9,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-58",
+      "model": "SLXD2+/58",
+      "index": 2,
+      "name": "치수(지름×길이)",
+      "value": "37.1 × 176 (1.46 × 6.93 in)",
+      "unit": "mm",
+      "condition": "SLXD2+ 공통",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-58",
+      "model": "SLXD2+/58",
+      "index": 9,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-b58",
+      "model": "SLXD2+/B58",
+      "index": 2,
+      "name": "치수(지름×길이)",
+      "value": "37.1 × 176 (1.46 × 6.93 in)",
+      "unit": "mm",
+      "condition": "SLXD2+ 공통",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-b58",
+      "model": "SLXD2+/B58",
+      "index": 9,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-b87a",
+      "model": "SLXD2+/B87A",
+      "index": 2,
+      "name": "치수(지름×길이)",
+      "value": "37.1 × 176 (1.46 × 6.93 in)",
+      "unit": "mm",
+      "condition": "SLXD2+ 공통",
+      "kind": "length"
+    },
+    {
+      "product": "slxd2-plus-b87a",
+      "model": "SLXD2+/B87A",
+      "index": 9,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4-plus",
+      "model": "SLXD4+",
+      "index": 3,
+      "name": "치수(H×W×D)",
+      "value": "42 × 197 × 152 (1.65 × 7.76 × 5.98 in)",
+      "unit": "mm",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4-plus",
+      "model": "SLXD4+",
+      "index": 11,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4-plus",
+      "model": "SLXD4+",
+      "index": 28,
+      "name": "출력 구성",
+      "value": "XLR: 밸런스(1=GND, 2=+, 3=−) / 1/4\"(6.35 mm): 임피던스 밸런스(T=+, R=−, S=GND)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4-plus",
+      "model": "SLXD4+",
+      "index": 34,
+      "name": "출력 커넥터",
+      "value": "XLR ×1, 1/4\"(6.35 mm) ×1 (inst/aux)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4-plus",
+      "model": "SLXD4+",
+      "index": 37,
+      "name": "최대 케이블 길이",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4d-plus",
+      "model": "SLXD4D+",
+      "index": 3,
+      "name": "치수(H×W×D)",
+      "value": "42 × 197 × 152 (1.65 × 7.76 × 5.98 in)",
+      "unit": "mm",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4d-plus",
+      "model": "SLXD4D+",
+      "index": 11,
+      "name": "작동 거리",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "실제 거리는 RF 신호 흡수·반사·간섭에 따라 다름",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4d-plus",
+      "model": "SLXD4D+",
+      "index": 28,
+      "name": "출력 구성",
+      "value": "XLR: 밸런스(1=GND, 2=+, 3=−) / 1/4\"(6.35 mm): 임피던스 밸런스(T=+, R=−, S=GND)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4d-plus",
+      "model": "SLXD4D+",
+      "index": 34,
+      "name": "출력 커넥터",
+      "value": "XLR ×2, 1/4\"(6.35 mm) ×2 (채널별 XLR + inst/aux)",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "slxd4d-plus",
+      "model": "SLXD4D+",
+      "index": 37,
+      "name": "최대 케이블 길이",
+      "value": "100 (328 ft)",
+      "unit": "m",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ua845uwb",
+      "model": "UA845UWB",
+      "index": 12,
+      "name": "무게",
+      "value": "3.32",
+      "unit": "kg (7.3 lbs)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "ultritouch-2-hr",
+      "model": "ULTRITOUCH-2-HR",
+      "index": 2,
+      "name": "너비",
+      "value": "19 (48)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ultritouch-2-hr",
+      "model": "ULTRITOUCH-2-HR",
+      "index": 3,
+      "name": "깊이",
+      "value": "2.5 (6)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ultritouch-2-hr",
+      "model": "ULTRITOUCH-2-HR",
+      "index": 4,
+      "name": "높이",
+      "value": "3.5 (9)",
+      "unit": "inch (cm)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ultritouch-2-hr",
+      "model": "ULTRITOUCH-2-HR",
+      "index": 5,
+      "name": "무게(근사치)",
+      "value": "2.40 (5.25)",
+      "unit": "kg (lb)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "ultrix-ns-fr2",
+      "model": "ULTRIX-NS-FR2",
+      "index": 3,
+      "name": "프레임 무게(I/O 카드 미장착, 근사치)",
+      "value": "5.44 (12)",
+      "unit": "kg (lb)",
+      "condition": "",
+      "kind": "mass"
+    },
+    {
+      "product": "ulxd1",
+      "model": "ULXD1",
+      "index": 7,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd1",
+      "model": "ULXD1",
+      "index": 17,
+      "name": "치수 (H x W x D)",
+      "value": "86 x 66 x 23",
+      "unit": "mm",
+      "condition": "3.4 x 2.6 x 0.9 in",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-beta58",
+      "model": "ULXD2/BETA58",
+      "index": 9,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-beta58",
+      "model": "ULXD2/BETA58",
+      "index": 15,
+      "name": "치수 (L x Dia.)",
+      "value": "256",
+      "unit": "mm",
+      "condition": "10.1 in x 2.0 in, VHF(V50/V51) 대역 제외 기준",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-beta87",
+      "model": "ULXD2/BETA87",
+      "index": 9,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-beta87",
+      "model": "ULXD2/BETA87",
+      "index": 14,
+      "name": "치수 (L x Dia.)",
+      "value": "256",
+      "unit": "mm",
+      "condition": "10.1 in x 2.0 in, VHF 대역 제외 기준",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-ksm9",
+      "model": "ULXD2/KSM9",
+      "index": 9,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd2-ksm9",
+      "model": "ULXD2/KSM9",
+      "index": 14,
+      "name": "치수 (L x Dia.)",
+      "value": "256",
+      "unit": "mm",
+      "condition": "10.1 in x 2.0 in, VHF 대역 제외 기준",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 1,
+      "name": "치수 (H x W x D)",
+      "value": "42 x 197 x 171",
+      "unit": "mm",
+      "condition": "1.65 x 7.75 x 6.75 in",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 2,
+      "name": "무게",
+      "value": "0.913 (2.0)",
+      "unit": "kg (lb)",
+      "condition": "안테나 제외",
+      "kind": "mass"
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 5,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 17,
+      "name": "오디오 출력 커넥터",
+      "value": "1/4\" (6.35 mm) TRS 및 XLR",
+      "unit": "",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4d",
+      "model": "ULXD4D",
+      "index": 4,
+      "name": "무게",
+      "value": "3.36 (7.4)",
+      "unit": "kg (lb)",
+      "condition": "안테나 제외",
+      "kind": "mass"
+    },
+    {
+      "product": "ulxd4d",
+      "model": "ULXD4D",
+      "index": 6,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4d",
+      "model": "ULXD4D",
+      "index": 23,
+      "name": "최대 케이블 길이",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4q",
+      "model": "ULXD4Q",
+      "index": 4,
+      "name": "무게",
+      "value": "3.45 (7.6)",
+      "unit": "kg (lb)",
+      "condition": "안테나 제외",
+      "kind": "mass"
+    },
+    {
+      "product": "ulxd4q",
+      "model": "ULXD4Q",
+      "index": 6,
+      "name": "작동 거리(Working Range)",
+      "value": "100 (330)",
+      "unit": "m (ft)",
+      "condition": "RF 신호 흡수/반사/간섭에 따라 실제 거리는 달라질 수 있음",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd4q",
+      "model": "ULXD4Q",
+      "index": 26,
+      "name": "최대 케이블 길이",
+      "value": "100 (328)",
+      "unit": "m (ft)",
+      "condition": "",
+      "kind": "length"
+    },
+    {
+      "product": "ulxd8",
+      "model": "ULXD8",
+      "index": 3,
+      "name": "전송 거리",
+      "value": "최대 300 ft (약 100 m)",
+      "unit": "",
+      "condition": "대형 회의/컨벤션 환경 기준 typical",
+      "kind": "length"
+    },
+    {
+      "product": "varia-100",
+      "model": "VARIA-100",
+      "index": 10,
+      "name": "크기(H×W×D)",
+      "value": "173.9 × 242.88 × 20.5",
+      "unit": "mm",
+      "condition": "6 7/8\" × 9 9/16\" × 13/16\"",
+      "kind": "length"
+    },
+    {
+      "product": "varia-100",
+      "model": "VARIA-100",
+      "index": 11,
+      "name": "무게",
+      "value": "0.567",
+      "unit": "kg",
+      "condition": "1.25 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "varia-80",
+      "model": "VARIA-80",
+      "index": 10,
+      "name": "크기(H×W×D)",
+      "value": "148.9 × 201.2 × 21.7",
+      "unit": "mm",
+      "condition": "5 7/8\" × 7 15/16\" × 7/8\"",
+      "kind": "length"
+    },
+    {
+      "product": "varia-80",
+      "model": "VARIA-80",
+      "index": 11,
+      "name": "무게",
+      "value": "0.532",
+      "unit": "kg",
+      "condition": "1.17 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "varia-sl50",
+      "model": "VARIA-SL50",
+      "index": 10,
+      "name": "크기(H×W×D)",
+      "value": "143.4 × 80.8 × 24.3",
+      "unit": "mm",
+      "condition": "5 11/16\" × 3 3/16\" × 1\"",
+      "kind": "length"
+    },
+    {
+      "product": "varia-sl50",
+      "model": "VARIA-SL50",
+      "index": 11,
+      "name": "무게",
+      "value": "0.173",
+      "unit": "kg",
+      "condition": "0.38 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "varia-sl80",
+      "model": "VARIA-SL80",
+      "index": 10,
+      "name": "크기(H×W×D)",
+      "value": "127.64 × 213.22 × 26.65",
+      "unit": "mm",
+      "condition": "5 1/16\" × 8 7/16\" × 11/16\"",
+      "kind": "length"
+    },
+    {
+      "product": "varia-sl80",
+      "model": "VARIA-SL80",
+      "index": 11,
+      "name": "무게",
+      "value": "0.482",
+      "unit": "kg",
+      "condition": "1.06 lb",
+      "kind": "mass"
+    },
+    {
+      "product": "xsm4216f",
+      "model": "XSM4216F",
+      "index": 11,
+      "name": "무게",
+      "value": "2.80",
+      "unit": "kg",
+      "condition": "6.17 lb",
+      "kind": "mass"
+    }
+  ],
+  "excluded": [
+    {
+      "product": "lh75qhcebgcxkr",
+      "index": 4,
+      "reason": "mm 두께와 비교 모델의 인치 화면 크기는 서로 다른 물리량"
+    },
+    {
+      "product": "lh85qmcebgcxkr",
+      "index": 3,
+      "reason": "mm 두께와 비교 모델의 인치 화면 크기는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l260f",
+      "index": 15,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l690u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l695se",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l790su",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l790u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l795se",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l895e",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l895u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2213b",
+      "index": 16,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2216b",
+      "index": 16,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2220b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu1008b",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2010w-b",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2213b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2216b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "ez-hsv-plus",
+      "index": 6,
+      "reason": "레벨미터는 길이 단위 미터가 아님"
+    }
+  ]
+}
