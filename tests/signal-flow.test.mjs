@@ -56,6 +56,18 @@ test('matrix axis captions use explicit tags rather than invented port numbers',
   p.signalFlow.outputs[0].tag='this tag is much too long';
   assert.ok(enhancementErrors(p).length);
 });
+test('matrix axes exactly cover primary endpoints and overlapping matrix combinations fall back', () => {
+  for (const side of ['inputs','outputs']) {
+    const p=fixtureProduct('matrix');p.signalFlow.processes[0].crosspoints[side].pop();p.signalFlow.processes[0].crosspoints.examples=[];
+    assert.equal(prepareEnhancements(p).signalFlow,null,side+' omitted axis');
+  }
+});
+test('unsupported multiple matrices fall back while ordinary stages remain supported',()=>{
+  const p=fixtureProduct('matrix'),duplicate=structuredClone(p.signalFlow.processes[0]);duplicate.id='another-matrix';p.signalFlow.processes.push(duplicate);
+  p.signalFlow.connections.push(...p.signalFlow.connections.map(e=>({...e,from:e.from==='p-0'?duplicate.id:e.from,to:e.to==='p-0'?duplicate.id:e.to})));
+  assert.equal(prepareEnhancements(p).signalFlow,null,'two matrix blocks must not overlap');
+  assert.ok(prepareEnhancements(fixtureProduct('extender')).signalFlow,'ordinary multiple stages remain supported');
+});
 test('display products retain connectors even if a valid flow is accidentally added', () => {
   for (const categories of [['Display','Projector'], ['프로젝터','대형 공간용 레이저 프로젝터'], ['Display','Interactive Display']]) {
     const p = { ...sample(), categories };
@@ -80,3 +92,5 @@ test('every approved type has a valid semantic fixture and QMS keeps its explici
   assert.equal(qms.signalFlow.processes[0].crosspoints.outputs.length,8);
   assert.deepEqual(qms.signalFlow.auxiliary.map(e=>e.to),['out-9','out-10','audio']);
 });
+
+test('backward processing stages cannot silently draw forward arrows',()=>{const p=fixtureProduct('extender');const e=p.signalFlow.connections.find(e=>e.from==='p-0'&&e.to==='p-1');e.from='p-1';e.to='p-0';assert.equal(prepareEnhancements(p).signalFlow,null);});

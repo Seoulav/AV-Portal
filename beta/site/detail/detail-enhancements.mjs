@@ -53,12 +53,18 @@ export function validFlow(flow, product) {
   const edges = [...flow.connections, ...flow.auxiliary];
   const inputs = new Set(flow.inputs.map(n => n.id)), outputs = new Set(flow.outputs.map(n => n.id));
   if (edges.some(e => outputs.has(e.from) || inputs.has(e.to))) return false;
+  const stage = id => inputs.has(id) ? -1 : outputs.has(id) ? flow.processes.length : flow.processes.findIndex(p => p.id === id);
+  if (edges.some(e => stage(e.from) >= stage(e.to))) return false;
   if (nodes.some(n => !edges.some(e => e.from === n.id || e.to === n.id))) return false;
+  // A crosspoint layout owns the central lane. Mixed/multiple matrices need a
+  // future layout contract; reject them rather than hiding overlapping blocks.
+  if (flow.processes.some(p => p.kind === 'matrix') && flow.processes.length !== 1) return false;
   for (const p of flow.processes) {
     if (p.kind !== 'matrix') { if (p.crosspoints !== undefined) return false; continue; }
     const c = p.crosspoints;
     if (!record(c) || !keys(c, ['inputs', 'outputs', 'examples']) || !list(c.inputs, 16, id => inputs.has(id), 1) || !list(c.outputs, 16, id => outputs.has(id), 1) || new Set(c.inputs).size !== c.inputs.length || new Set(c.outputs).size !== c.outputs.length) return false;
     if (!c.inputs.every(id => flow.connections.some(e => e.from === id && e.to === p.id)) || !c.outputs.every(id => flow.connections.some(e => e.from === p.id && e.to === id))) return false;
+    if (flow.connections.some(e => e.to === p.id && !c.inputs.includes(e.from) || e.from === p.id && !c.outputs.includes(e.to))) return false;
     if (!list(c.examples, 16, x => record(x) && keys(x, ['input', 'output']) && c.inputs.includes(x.input) && c.outputs.includes(x.output)) || new Set(c.examples.map(x => x.output)).size !== c.examples.length) return false;
   }
   if (flow.band !== undefined && (!record(flow.band) || !keys(flow.band, ['label', 'detail', 'evidence']) || !shortText(flow.band.label) || !optionalText(flow.band.detail) || !evidence(flow.band.evidence))) return false;

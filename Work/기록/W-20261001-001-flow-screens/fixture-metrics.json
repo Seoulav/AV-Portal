@@ -2,6 +2,14 @@
   "products": [],
   "fixtures": [
     {
+      "name": "long-primary-and-aux-labels",
+      "width": 1280
+    },
+    {
+      "name": "long-primary-and-aux-labels",
+      "width": 390
+    },
+    {
       "name": "matrix",
       "width": 1280,
       "overflow": 0,

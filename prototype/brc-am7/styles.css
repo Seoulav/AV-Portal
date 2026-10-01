@@ -205,6 +205,8 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .flow-legend-item { display: inline-flex; align-items: center; gap: 6px; }
 .flow-legend-item i { width: 17px; height: 3px; border-radius: 3px; }
 .flow-description { margin-top: 6px; }
+.flow-route-notes { padding: 10px 0 10px 18px; margin: 0; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.flow-route-notes li { margin-bottom: 6px; }
 .flow-description p { font-size: 13px; line-height: 1.65; }
 @media (prefers-reduced-motion: reduce) { .flow-scroll { scroll-behavior: auto; } }
 .setting-table { max-width: 100%; overflow-x: auto; }

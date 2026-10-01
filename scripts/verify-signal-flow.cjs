@@ -33,6 +33,18 @@ const server=createServer((req,res)=>{try{
   }
  }
  if(!before){
+  for(const width of [1280,390]){
+    fixture=fixtureProduct('control');const long='제어'.repeat(100);
+    fixture.signalFlow.auxiliary[0].label=long;fixture.signalFlow.connections[0].label=long;
+    await page.setViewportSize({width,height:850});await page.goto(base+'/fixture');await page.waitForFunction(()=>window.fixtureReady);
+    const clipped=await page.locator('svg').evaluate(svg=>{const box=svg.getBoundingClientRect();return [...svg.querySelectorAll('.flow-edge-label')].some(n=>{const r=n.getBoundingClientRect();return r.left<box.left||r.right>box.right});});
+    assert.equal(clipped,false,'long route label must not be clipped inside SVG');
+    assert.equal(await page.locator('.flow-route-notes li').count(),2);
+    assert.ok((await page.locator('.flow-route-notes').textContent()).includes(long));
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),0);
+    report.fixtures.push({name:'long-primary-and-aux-labels',width});
+  }
+
   if(!onlyFixtures){const baseline=JSON.parse(fs.readFileSync(path.join(out,'baseline.json')));assert.deepEqual(report.products,baseline.products,'240 products must retain text, counts and page heights at both widths');}
   for(const [name,p] of [...Object.keys(scenarios).map(t=>[t,fixtureProduct(t)]),['qms-88ux',qmsFixture()]])for(const width of [1280,390]){
    fixture=p;await page.setViewportSize({width,height:850});await page.goto(base+'/fixture');await page.waitForFunction(()=>window.fixtureReady);await page.evaluate(()=>document.fonts.ready);

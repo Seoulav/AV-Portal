@@ -143,7 +143,8 @@ export function renderSignalFlow(flow, model) {
     lineLayer.append(svgNode('path',{d,class:`flow-edge${aux?' flow-auxiliary':''}`,stroke:color,'data-from':e.from,'data-to':e.to}));
     arrows(x2,y2,a.side==='process'&&b.side==='process'?90:0,color);
     if(e.direction==='both')arrows(x1,y1,a.side==='process'&&b.side==='process'?-90:180,color);
-    if(e.label){const tx=aux?505:(x1+x2)/2,ty=aux?y2-12:(y1+y2)/2-10;const label=svgNode('text',{x:tx,y:ty,'text-anchor':'middle',class:'flow-edge-label'},e.label);lineLayer.append(label);}
+    // Route descriptions live in a reserved wrapping list below the canvas.
+    // Long text must never overlay a node, band or another branch.
   };
   flow.connections.forEach((e,i)=>drawEdge(e,false,i));flow.auxiliary.forEach((e,i)=>drawEdge(e,true,i));
   const H=Math.max(leftBottom,rightBottom,processY)+12;
@@ -158,6 +159,12 @@ export function renderSignalFlow(flow, model) {
   const update=()=>{const max=scroll.scrollWidth-scroll.clientWidth;host.dataset.scrollable=String(max>2);host.dataset.atStart=String(scroll.scrollLeft<2);host.dataset.atEnd=String(scroll.scrollLeft>=max-2);};
   scroll.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(scroll);
   scroll.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();scroll.scrollLeft=event.key==='Home'?0:event.key==='End'?scroll.scrollWidth:scroll.scrollLeft+(event.key==='ArrowLeft'?-120:120);});
+  const labeled=[...flow.connections,...flow.auxiliary].filter(e=>e.label);
+  if(labeled.length){
+    const notes=el('ul','flow-route-notes');notes.setAttribute('aria-label','경로별 설명');
+    for(const edge of labeled){const row=el('li');row.append(el('strong','',positions.get(edge.from).node.label+' '+(edge.direction==='both'?'↔':'→')+' '+positions.get(edge.to).node.label),document.createTextNode(' · '+edge.label));notes.append(row);}
+    host.append(notes);
+  }
   const legend=el('div','flow-legend');
   for(const l of flow.legend){const entry=el('span','flow-legend-item');const swatch=el('i');swatch.style.background=signalColors[l.signal];swatch.setAttribute('aria-hidden','true');entry.append(swatch,document.createTextNode(l.label));legend.append(entry);}
   if(flow.auxiliary.length)legend.append(el('span','flow-legend-dashed','┄ 보조 경로'));

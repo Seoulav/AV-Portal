@@ -56,7 +56,7 @@ export function qmsFixture() {
     type:'matrix',description:'HDMI 입력 1–8을 출력 1–8에 독립 선택합니다. 9·10번은 멀티뷰 분기, AUDIO OUT은 오디오 추출입니다. 격자의 점은 선택 예시이며 현재 설정이 아닙니다.',inputs,outputs,
     processes:[{id:'matrix',kind:'matrix',label:'매트릭스',caption:'출력마다 입력 선택',evidence:spec(1),crosspoints:{inputs:inputs.map(n=>n.id),outputs:outputs.slice(0,8).map(n=>n.id),examples:outputs.slice(0,8).map((n,i)=>({input:`in-${i===7?2:(i*5+1)%8+1}`,output:n.id}))}}],
     connections:[...inputs.map(n=>({from:n.id,to:'matrix',signal:'video',evidence:e(0)})),...outputs.slice(0,8).map(n=>({from:'matrix',to:n.id,signal:'video',evidence:e(1)}))],
-    auxiliary:[...[9,10].map(i=>({from:'matrix',to:`out-${i}`,signal:'video',label:'멀티뷰',evidence:e(1)})),{from:'matrix',to:'audio',signal:'audio',label:'추출',evidence:e(2)}],
+    auxiliary:[...[9,10].map(i=>({from:'matrix',to:`out-${i}`,signal:'video',evidence:e(1)})),{from:'matrix',to:'audio',signal:'audio',evidence:e(2)}],
     groups:[{id:'matrix-out',label:'OUT 1–8',caption:'출력마다 입력 선택',evidence:spec(1)},{id:'multiview',label:'멀티뷰 9·10',caption:'각 4분할 또는 8분할',evidence:e(1)},{id:'audio-out',label:'오디오 추출',caption:'QD1: IN 1–4 / QD2: IN 5–8 중 선택',evidence:e(2)}],
     band:{label:'4K/60 @ 4:4:4',detail:'HDMI 2.0 · HDCP 2.2',evidence:[...spec(2),...spec(4),...spec(5)]},
     legend:[{signal:'video',label:'영상'},{signal:'audio',label:'오디오 추출'}],notes:['기존 RTCOM 원본·매뉴얼 기록의 비교 fixture. 공개 데이터나 어댑터에는 연결하지 않습니다.']
