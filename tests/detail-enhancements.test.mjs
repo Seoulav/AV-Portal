@@ -1,6 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { prepareEnhancements, selectCardModes, portMarkerPercent, enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
+import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
+
+test('legacy prototype content without imageStatuses retains safe record defaults', () => {
+  const data = prepareProductDetail({ manufacturer: 'TEST', model: 'TEST' });
+  assert.deepEqual(data.imageStatuses, []);
+});
 
 const base = { images: [{ role: 'Rear', file: 'rear.webp' }], io: [{ connector: 'XLR' }] };
 test('optional cards fall back without changing original data', () => {

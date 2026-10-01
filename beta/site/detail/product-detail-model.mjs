@@ -1,3 +1,4 @@
+import { prepareEnhancements, selectCardModes } from './detail-enhancements.mjs?v=w20261001-001';
 const QUICK_DOCUMENTS = [
   ['매뉴얼', 'User Manual', '매뉴얼 미확인'],
   ['시방서', 'Independent Specification', '공식 독립 시방서 미확인'],
@@ -137,12 +138,14 @@ export function summarizeQuickDocuments(quickDocuments = []) {
 }
 
 export function visibleDetailCards(data = {}) {
+  const enhancements = data.enhancements ?? prepareEnhancements(data);
+  const modes = selectCardModes(data, enhancements);
   const related = data.relatedProducts ?? data.related ?? [];
   const openable = document => Boolean(document?.url && ['FOUND', 'VERIFIED', 'READY'].includes(document.status));
   return [
-    ['overview', Boolean(data.overview || data.korean || data.english)],
-    ['gallery', Boolean(data.images?.length)],
-    ['io', Boolean(data.io?.length)],
+    ['overview', Boolean(enhancements.lead || data.overview || data.korean || data.english)],
+    ['gallery', Boolean(modes.gallery)],
+    ['io', Boolean(modes.io)],
     ['specifications', Boolean(data.specifications?.length)],
     ['features', Boolean(data.features?.length)],
     ['related-products', Boolean(related.length)],
@@ -215,7 +218,9 @@ export function prepareProductDetail(input) {
   const specificationGroups = group(specifications, item => item.group);
   return {
     ...input,
+    enhancements: prepareEnhancements(input),
     images,
+    imageStatuses: input.imageStatuses ?? [],
     features: input.features ?? [],
     specifications,
     io,
