@@ -162,7 +162,7 @@ assert.deepEqual(after.ioRows, before.ioRows);
 - [ ] 240개 제조사 상세의 기본 로드·사진 오류·사양/I/O/features 수를 검사하고 RTCOM 대표 QMS-88UX의 기존 경로도 확인한다. RTCOM raw SHA 불변을 확인한다.
 - [ ] Library 검색·카테고리·제조사·뒤로 가기, 직접 URL/새로고침, 모든 기존 주요 해시, 키보드 기능을 검사한다.
 - [ ] `npm test`, `node beta/verify-pages.mjs`, `node beta/build-search-index.mjs --check`, `git diff --check origin/main...HEAD` 통과와 240개 JSON Git blob 불변을 확인한다.
-- [ ] 진행 기록과 Work 인계를 포함해 PR을 만들고, 최신 main 통합·리뷰·필수 검사 통과 뒤 병합한다.
+- [ ] 진행 기록과 Work 인계를 포함해 Draft PR을 만들고, 최신 main 통합·리뷰·필수 검사를 확인한다. 대표 3종 전후 캡처와 문서 보기·내려받기 동작을 사용자에게 제시하고 병합하지 않고 멈춘다. 사용자 별도 병합 지시 뒤 Task 5를 시작한다.
 
 ## Task 5: 시범 5종 근거 대조·선택 데이터 작성
 
@@ -228,3 +228,7 @@ assert.deepEqual(comparison, baseline);
 - 06/07과 기존 문서·관련 제품 번호 충돌, 생성물이 제품 JSON을 덮는 위험을 각각 Task 3에 명시했다.
 - 신규 optional 구조는 화면용이며 최종 Product Schema 확정이 아니다.
 - 이 문서는 계획이며 제품 구현·화면 검증이 이미 끝났다는 의미가 아니다.
+
+## 2026-10-01 실행 승인과 병합 단계
+
+사용자는 이 계획을 승인했다. 계획 문서와 검증을 통과한 PDF.js 선행 PR은 main에 병합한다. 템플릿 PR은 BRC-AM7·DM7·UA874XA의 1280px·390px 전후 캡처, 정보 보존, 기존 07 문서의 번호 없는 자료 영역 전환 및 보기·내려받기 검증 결과를 보여준 뒤 사용자 병합 지시를 기다린다. Task 5·6은 템플릿 병합 뒤 시작한다. 시범 5종은 유지하며 Aquilon RS1 후면 지도와 EB-PQ2220B의 PDF 근거가 없는 값은 자료 부족으로 남긴다. 2단계는 제안만 한다.
