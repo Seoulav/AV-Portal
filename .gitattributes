@@ -2,3 +2,8 @@ beta/site/docs/*.pdf -text -diff
 beta/site/rtcom/raw/*.json -text -diff
 beta/site/rtcom/raw/products/*.json -text -diff
 beta/site/rtcom/images/* -text -diff
+# Preserve upstream PDF.js bytes across Windows and Linux checkouts.
+beta/site/vendor/pdfjs/LICENSE -text
+beta/site/vendor/pdfjs/VERSION.txt -text
+beta/site/vendor/pdfjs/pdf.min.mjs -text
+beta/site/vendor/pdfjs/pdf.worker.min.mjs -text
