@@ -4,6 +4,7 @@ import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from '.
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
+import { distributorLinkFor } from '../shared/distributor-links.mjs';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -112,6 +113,12 @@ if (!productKey) {
     $('#footer-official-link').append(safeLink(official.url, sourceLabel, 'pg-btn'));
     $('#dialog-product-link').href = official.url;
   } else $('#dialog-product-link').hidden = true;
+
+  const distributorLink = distributorLinkFor(productKey, data.manufacturer);
+  if (distributorLink) {
+    $('#header-distributor').append(safeLink(distributorLink.url, '국내 총판 테크데이타 ↗', 'pg-btn'));
+    $('#footer-distributor-link').append(safeLink(distributorLink.url, '국내 총판 · 테크데이타피에스 ↗', 'pg-btn'));
+  }
 
   const manifestPath = '../docs/manifest.json';
   let documentManifest = { mirrors: [], uploads: [] };
