@@ -1,0 +1,192 @@
+{
+  "baseline": "a97c204efc441a4cb00fb9ac910e3b3a2918da3c",
+  "totalProducts": 240,
+  "duplicateProducts": 12,
+  "duplicateTitles": 12,
+  "remainingDuplicateProducts": 11,
+  "dualUnitProducts": 130,
+  "dualUnitRows": 227,
+  "countsByKind": {
+    "mass": 63,
+    "length": 164
+  },
+  "duplicates": [
+    {
+      "product": "qlxd1",
+      "model": "QLXD1",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd2-beta58",
+      "model": "QLXD2/BETA58",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd2-beta87a",
+      "model": "QLXD2/BETA87A",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "qlxd4",
+      "model": "QLXD4",
+      "index": 0,
+      "title": "Shure Shure QLX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd1",
+      "model": "ULXD1",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-beta58",
+      "model": "ULXD2/BETA58",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-beta87",
+      "model": "ULXD2/BETA87",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd2-ksm9",
+      "model": "ULXD2/KSM9",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd4",
+      "model": "ULXD4",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd4d",
+      "model": "ULXD4D",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": true
+    },
+    {
+      "product": "ulxd4q",
+      "model": "ULXD4Q",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    },
+    {
+      "product": "ulxd8",
+      "model": "ULXD8",
+      "index": 0,
+      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "fixed": false
+    }
+  ],
+  "excluded": [
+    {
+      "product": "lh75qhcebgcxkr",
+      "index": 4,
+      "reason": "mm 두께와 비교 모델의 인치 화면 크기는 서로 다른 물리량"
+    },
+    {
+      "product": "lh85qmcebgcxkr",
+      "index": 3,
+      "reason": "mm 두께와 비교 모델의 인치 화면 크기는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l260f",
+      "index": 15,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l690u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l695se",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l790su",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l790u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l795se",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l895e",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-l895u",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2213b",
+      "index": 16,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2216b",
+      "index": 16,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pq2220b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu1008b",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2010w-b",
+      "index": 18,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2213b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "eb-pu2216b",
+      "index": 17,
+      "reason": "인치 화면 대각선과 m/cm 투사 거리는 서로 다른 물리량"
+    },
+    {
+      "product": "ez-hsv-plus",
+      "index": 6,
+      "reason": "레벨미터는 길이 단위 미터가 아님"
+    }
+  ],
+  "method": "240종 specifications의 value/unit/condition에서 동일 물리량의 미터법·영미 단위 병기를 집계. 한 사양 행=1건. 인치만 있는 행 및 서로 다른 물리량은 제외. 원자료 변경 없음."
+}

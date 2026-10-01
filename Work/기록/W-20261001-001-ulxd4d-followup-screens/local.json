@@ -1,0 +1,77 @@
+{
+  "time": "2026-10-01T22:04:55.455Z",
+  "base": "http://127.0.0.1:56404/",
+  "products": [
+    {
+      "id": "ulxd4d",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "novastar-h5",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "dci-4-600da",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "aquilon-rs1",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "brc-am7",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 0
+    },
+    {
+      "id": "ulxd4d",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "novastar-h5",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "dci-4-600da",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "aquilon-rs1",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 1
+    },
+    {
+      "id": "brc-am7",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "flow": 0
+    }
+  ],
+  "errors": []
+}

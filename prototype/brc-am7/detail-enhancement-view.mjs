@@ -1,4 +1,4 @@
-import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-portmap';
+import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-ulxd4d-followup';
 const el = (tag, cls = '', text) => {
   const node = document.createElement(tag);
   node.className = cls;
@@ -53,10 +53,20 @@ const svgNode = (tag, attrs = {}, text) => {
 const signalColors = { video:'#2470ce', audio:'#87603e', network:'#167767', control:'#686580', rf:'#a75071', power:'#997013', usb:'#267486', optical:'#7a5ab6', acoustic:'#3d7861' };
 let diagramSequence = 0;
 // Display-only line wrapping; technical strings are never parsed into inferred ports or routes.
-const wrapText = (text, width) => {
-  const lines=[];let line='',size=0;
-  for(const char of String(text||'')) { const next=/[\u0000-\u00ff]/.test(char)?7:13;if(size+next>width&&line){lines.push(line);line='';size=0;}line+=char;size+=next; }
-  if(line)lines.push(line);return lines;
+export const wrapFlowText = (text, width) => {
+  const measure = value => Array.from(value).reduce((sum, char) => sum + (/[\u0000-\u00ff]/.test(char) ? 7 : 13), 0);
+  const lines = []; let line = '';
+  for (const word of String(text || '').trim().split(/\s+/).filter(Boolean)) {
+    if (line && measure(line + ' ' + word) <= width) { line += ' ' + word; continue; }
+    if (line) { lines.push(line); line = ''; }
+    // Only a token wider than the entire box needs emergency character wrapping.
+    for (const char of word) {
+      if (line && measure(line + char) > width) { lines.push(line); line = ''; }
+      line += char;
+    }
+  }
+  if (line) lines.push(line);
+  return lines;
 };
 export function renderSignalFlow(flow, model) {
   const host=el('div','signal-flow');host.dataset.flowType=flow.type;
@@ -70,7 +80,7 @@ export function renderSignalFlow(flow, model) {
   const lineLayer=svgNode('g'),nodeLayer=svgNode('g');svg.append(lineLayer,nodeLayer);
   const positions=new Map(), W=800;
   function text(layer,label,x,y,width,cls='flow-label',anchor='middle') {
-    const lines=wrapText(label,width);lines.forEach((line,i)=>layer.append(svgNode('text',{x,y:y+i*18,'text-anchor':anchor,class:cls},line)));return lines.length*18;
+    const lines=wrapFlowText(label,width);lines.forEach((line,i)=>layer.append(svgNode('text',{x,y:y+i*18,'text-anchor':anchor,class:cls},line)));return lines.length*18;
   }
   function endpoints(items,x,width,side) {
     let y=54;
@@ -80,7 +90,7 @@ export function renderSignalFlow(flow, model) {
       const start=y;const compact=side==='out'&&ns.length>1&&ns.every(n=>n.label.length<=12&&!n.caption),cols=compact?Math.min(3,ns.length,Math.max(1,Math.floor((width+10)/(Math.max(...ns.map(n=>Array.from(n.label).reduce((sum,c)=>sum+(/[\u0000-\u00ff]/.test(c)?7:13),0)))+24)))):1,cell=(width-(cols-1)*10)/cols;
       if(group)y+=text(nodeLayer,group.label,x+width/2,y+15,width,'flow-group-label')+10;
       for(let i=0;i<ns.length;i+=cols){
-        const row=ns.slice(i,i+cols),heights=row.map(n=>Math.max(34,wrapText(n.label,cell-12).length*18+16)+(n.caption?wrapText(n.caption,cell-16).length*18+4:0)),h=Math.max(...heights);
+        const row=ns.slice(i,i+cols),heights=row.map(n=>Math.max(34,wrapFlowText(n.label,cell-12).length*18+16)+(n.caption?wrapFlowText(n.caption,cell-16).length*18+4:0)),h=Math.max(...heights);
         row.forEach((n,j)=>{
           const xx=x+j*(cell+10),box={x:xx,y,w:cell,h,side,node:n};positions.set(n.id,box);
           nodeLayer.append(svgNode('rect',{x:xx,y,width:cell,height:h,rx:10,class:`flow-endpoint flow-${side}`,'data-node':n.id}));
@@ -98,7 +108,7 @@ export function renderSignalFlow(flow, model) {
   let processY=70;
   const processX=198,processW=220;
   for(const p of flow.processes){
-    const labelH=wrapText(p.label,processW-24).length*18,captionH=wrapText(p.caption,processW-24).length*18;
+    const labelH=wrapFlowText(p.label,processW-24).length*18,captionH=wrapFlowText(p.caption,processW-24).length*18;
     const matrix=p.kind==='matrix',gridH=matrix?Math.max(100,p.crosspoints.inputs.length*34):72;
     const h=matrix ? Math.max(...p.crosspoints.inputs.map(id=>positions.get(id).y+positions.get(id).h))+captionH+40-54 : labelH+captionH+gridH+48;
     if(matrix)processY=54;
@@ -139,14 +149,20 @@ export function renderSignalFlow(flow, model) {
   }
   // Every line is an explicit edge. No inferred all-to-all connections.
   const arrows=(x,y,angle,color,both=false)=>{const a=svgNode('path',{d:'M-7 -4L0 0L-7 4',fill:'none',stroke:color,'stroke-width':2,transform:`translate(${x} ${y}) rotate(${angle})`});lineLayer.append(a);};
+  let auxiliaryBottom = 0;
   const drawEdge=(e,aux,index)=>{
     const a=positions.get(e.from),b=positions.get(e.to),color=!aux&&b.side==='out'?'#9658b4':signalColors[e.signal];
     let x1=a.x+a.w,y1=a.y+a.h/2,x2=b.x,y2=b.y+b.h/2,d;
     if(b.node.kind==='matrix'&&b.node.crosspoints.inputs.includes(e.from))y2=y1;
-    if(a.side==='process'&&b.side==='process'){
+    if(aux && a.side==='in' && b.side==='out') {
+      // Antenna/control/power bypasses travel outside processing blocks, never behind them.
+      const lane = Math.max(leftBottom, rightBottom, processY) + 18 + index * 16;
+      auxiliaryBottom = Math.max(auxiliaryBottom, lane);
+      d=`M${x1} ${y1}H${x1+10+index*5}V${lane}H${588-index*5}V${y2}H${x2}`;
+    }else if(a.side==='process'&&b.side==='process'){
       x1=a.x+a.w/2;y1=a.y+a.h;x2=b.x+b.w/2;y2=b.y;d=`M${x1} ${y1}L${x2} ${y2}`;
     }else if(flow.band&&a.side==='process'&&b.side==='out'){d=`M${x1} ${y1}H586C596 ${y1} 596 ${y2} ${x2} ${y2}`;
-    }else{const rail=aux?550+index%4*8:(x1+x2)/2;d=`M${x1} ${y1}C${rail} ${y1} ${rail} ${y2} ${x2} ${y2}`;}
+    }else{const rail=aux&&a.side!=='in'?550+index%4*8:(x1+x2)/2;d=`M${x1} ${y1}C${rail} ${y1} ${rail} ${y2} ${x2} ${y2}`;}
     lineLayer.append(svgNode('path',{d,class:`flow-edge${aux?' flow-auxiliary':''}`,stroke:color,'data-from':e.from,'data-to':e.to}));
     arrows(x2,y2,a.side==='process'&&b.side==='process'?90:0,color);
     if(e.direction==='both')arrows(x1,y1,a.side==='process'&&b.side==='process'?-90:180,color);
@@ -154,11 +170,11 @@ export function renderSignalFlow(flow, model) {
     // Long text must never overlay a node, band or another branch.
   };
   flow.connections.forEach((e,i)=>drawEdge(e,false,i));flow.auxiliary.forEach((e,i)=>drawEdge(e,true,i));
-  const H=Math.max(leftBottom,rightBottom,processY)+12;
+  const H=Math.max(leftBottom,rightBottom,processY,auxiliaryBottom)+12;
   if(flow.band){
     const first=positions.get(flow.processes[0].id);const y=first.y+first.h/2-5, x=438, w=148;
     nodeLayer.append(svgNode('rect',{x,y,width:w,height:10,rx:5,fill:`url(#${uid}-band)`}));
-    const labelLines=wrapText(flow.band.label,w).length;text(nodeLayer,flow.band.label,x+w/2,y-12-(labelLines-1)*18,w,'flow-band-label');
+    const labelLines=wrapFlowText(flow.band.label,w).length;text(nodeLayer,flow.band.label,x+w/2,y-12-(labelLines-1)*18,w,'flow-band-label');
     if(flow.band.detail)text(nodeLayer,flow.band.detail,x+w/2,y+28,w,'flow-caption');
   }
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);scroll.append(svg);frame.append(scroll,el('span','flow-fade flow-fade-left'),el('span','flow-fade flow-fade-right'));host.append(frame);

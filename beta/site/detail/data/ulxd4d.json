@@ -76,7 +76,7 @@
     {
       "type": "User Manual",
       "status": "FOUND",
-      "title": "Shure Shure ULX-D Digital Wireless User Guide",
+      "title": "Shure ULX-D Digital Wireless User Guide",
       "language": "en",
       "note": "",
       "url": "https://pubs.shure.com/view/guide/ULXD-DQ/en-US.pdf"
@@ -420,7 +420,7 @@
       "connector": "BNC",
       "signal": "Cascade RF output",
       "direction": "OUT",
-      "quantity": "1",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
       "condition": "BNC, Unbalanced/Passive, 50 Ω",
@@ -534,101 +534,291 @@
   ],
   "signalFlow": {
     "type": "wireless-microphone",
-    "description": "호환 ULX-D 송신기의 RF를 2채널로 수신한 뒤 XLR과 Dante로 오디오를 전달하는 개념도입니다.",
+    "description": "안테나 A·B 다이버시티로 독립 2채널을 수신하여 각 채널의 XLR과 Dante로 보냅니다. RF 캐스케이드 A·B는 같은 대역의 추가 수신기 1대로 전달합니다.",
     "inputs": [
       {
-        "id": "rf-in",
-        "label": "ULX-D 송신기 RF",
+        "id": "ant-a",
+        "label": "안테나 입력 A",
         "signal": "rf",
+        "group": "antennas",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "id": "ant-b",
+        "label": "안테나 입력 B",
+        "signal": "rf",
+        "group": "antennas",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "id": "control-in",
+        "label": "Wireless Workbench",
+        "signal": "control",
+        "caption": "Ethernet 장비 제어",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "xlr-ch1",
+        "label": "XLR 출력 1",
+        "signal": "audio",
+        "group": "ch1",
+        "caption": "MIC / LINE 선택",
         "evidence": [
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 4
-          }
-        ],
-        "caption": "호환 주파수 대역·지역 모델 확인"
-      },
-      {
-        "id": "control-in",
-        "label": "Wireless Workbench",
-        "signal": "control",
-        "evidence": [
+          },
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 9
           }
-        ],
-        "caption": "Ethernet 장비 제어"
-      }
-    ],
-    "outputs": [
-      {
-        "id": "xlr",
-        "label": "XLR · 채널별 출력",
-        "signal": "audio",
-        "evidence": [
-          {
-            "kind": "pdf",
-            "source": "M",
-            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
-            "page": 9
-          }
-        ],
-        "caption": "마이크/라인 입력에 연결"
+        ]
       },
       {
-        "id": "dante",
-        "label": "Dante 네트워크",
+        "id": "dante-ch1",
+        "label": "Dante CH1",
         "signal": "network",
+        "group": "ch1",
+        "caption": "네트워크 오디오 전송",
         "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          },
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 46
           }
-        ],
-        "caption": "Primary / Secondary · 설정 모드에 따름"
-      }
-    ],
-    "processes": [
+        ]
+      },
       {
-        "id": "receive",
-        "kind": "rf",
-        "label": "디지털 무선 수신",
+        "id": "xlr-ch2",
+        "label": "XLR 출력 2",
+        "signal": "audio",
+        "group": "ch2",
+        "caption": "MIC / LINE 선택",
         "evidence": [
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 4
-          }
-        ],
-        "caption": "ULXD4D · 독립 2채널"
-      },
-      {
-        "id": "audio",
-        "kind": "dsp",
-        "label": "채널별 오디오",
-        "evidence": [
+          },
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 9
           }
-        ],
-        "caption": "XLR Mic/Line 선택 · Dante 전송"
+        ]
+      },
+      {
+        "id": "dante-ch2",
+        "label": "Dante CH2",
+        "signal": "network",
+        "group": "ch2",
+        "caption": "네트워크 오디오 전송",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 46
+          }
+        ]
+      },
+      {
+        "id": "cascade-a",
+        "label": "캐스케이드 A",
+        "signal": "rf",
+        "group": "cascade",
+        "caption": "BNC → 안테나 입력 A",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 43
+          }
+        ]
+      },
+      {
+        "id": "cascade-b",
+        "label": "캐스케이드 B",
+        "signal": "rf",
+        "group": "cascade",
+        "caption": "BNC → 안테나 입력 B",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 43
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "id": "ch1",
+        "kind": "rf",
+        "label": "채널 1 수신",
+        "caption": "A·B 다이버시티 수신 · 채널별 오디오",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
+      },
+      {
+        "id": "ch2",
+        "kind": "rf",
+        "label": "채널 2 수신",
+        "caption": "A·B 다이버시티 수신 · 채널별 오디오",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
       }
     ],
     "connections": [
       {
-        "from": "rf-in",
-        "to": "receive",
+        "from": "ant-a",
+        "to": "ch1",
         "signal": "rf",
         "evidence": [
           {
@@ -636,14 +826,13 @@
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 4
-          }
-        ]
-      },
-      {
-        "from": "receive",
-        "to": "audio",
-        "signal": "audio",
-        "evidence": [
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
           {
             "kind": "pdf",
             "source": "M",
@@ -653,62 +842,375 @@
         ]
       },
       {
-        "from": "audio",
-        "to": "xlr",
+        "from": "ant-b",
+        "to": "ch1",
+        "signal": "rf",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "from": "ch1",
+        "to": "xlr-ch1",
         "signal": "audio",
         "evidence": [
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
+      },
+      {
+        "from": "ch1",
+        "to": "dante-ch1",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 46
+          }
+        ]
+      },
+      {
+        "from": "ant-a",
+        "to": "ch2",
+        "signal": "rf",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "from": "ant-b",
+        "to": "ch2",
+        "signal": "rf",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "from": "ch2",
+        "to": "xlr-ch2",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
+      },
+      {
+        "from": "ch2",
+        "to": "dante-ch2",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 46
           }
         ]
       }
     ],
     "auxiliary": [
       {
-        "from": "audio",
-        "to": "dante",
-        "signal": "network",
-        "evidence": [
-          {
-            "kind": "pdf",
-            "source": "M",
-            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
-            "page": 46
-          }
-        ],
-        "label": "네트워크 오디오"
-      },
-      {
         "from": "control-in",
-        "to": "receive",
+        "to": "ch1",
         "signal": "control",
+        "label": "채널 1 원격 제어",
         "evidence": [
           {
             "kind": "pdf",
             "source": "M",
             "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
             "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
           }
-        ],
-        "label": "제어"
+        ]
+      },
+      {
+        "from": "control-in",
+        "to": "ch2",
+        "signal": "control",
+        "label": "채널 2 원격 제어",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 44
+          }
+        ]
+      },
+      {
+        "from": "ant-a",
+        "to": "cascade-a",
+        "signal": "rf",
+        "label": "안테나 A → 추가 수신기",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 43
+          }
+        ]
+      },
+      {
+        "from": "ant-b",
+        "to": "cascade-b",
+        "signal": "rf",
+        "label": "안테나 B → 추가 수신기",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 43
+          }
+        ]
       }
     ],
-    "groups": [],
+    "groups": [
+      {
+        "id": "antennas",
+        "label": "안테나 다이버시티",
+        "caption": "A·B 두 RF 입력",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 8
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "id": "ch1",
+        "label": "채널 1 출력",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
+      },
+      {
+        "id": "ch2",
+        "label": "채널 2 출력",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 4
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 39
+          }
+        ]
+      },
+      {
+        "id": "cascade",
+        "label": "추가 수신기로 RF 전달",
+        "caption": "동일 대역의 수신기 1대",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 9
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "docs/ulxd2-beta58-user-manual-0f7e3d579e93.pdf",
+            "page": 43
+          }
+        ]
+      }
+    ],
     "legend": [
       {
         "signal": "rf",
-        "label": "무선 RF"
+        "label": "안테나 RF / 캐스케이드"
       },
       {
         "signal": "audio",
-        "label": "수신 오디오"
+        "label": "채널별 오디오"
       },
       {
         "signal": "network",
-        "label": "Dante"
+        "label": "Dante 오디오"
       },
       {
         "signal": "control",
@@ -716,8 +1218,10 @@
       }
     ],
     "notes": [
-      "주파수 Band·Region을 확정하지 않습니다. 송신기와 수신기의 호환 대역을 확인해야 합니다.",
-      "RF cascade 단자 수는 기존 등록값과 매뉴얼의 차이가 있어 이번 그림에서는 수량을 확정하지 않습니다."
+      "독립 2채널 출력 예시입니다. Audio Summing 또는 Frequency Diversity 설정에 따라 출력 라우팅이 달라집니다(매뉴얼 39·41쪽).",
+      "안테나 A·B 다이버시티와 Frequency Diversity는 별도 기능입니다(8·9·41쪽).",
+      "Dante CH1·CH2는 오디오 채널이며 물리 LAN 포트 번호가 아닙니다. Primary/Secondary 역할은 네트워크 모드에 따릅니다(46쪽).",
+      "RF 캐스케이드는 같은 주파수 대역의 추가 수신기 1대로 연결합니다. Band·Region은 여기서 확정하지 않습니다(43쪽)."
     ]
   },
   "settings": [
