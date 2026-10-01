@@ -41,6 +41,8 @@ const server=createServer((req,res)=>{try {const p=decodeURIComponent(new URL(re
    for(let reload=0;reload<2;reload++){
     if(reload)await page.reload({waitUntil:'networkidle'});
     const target=hash.startsWith('source-')?'#sources':'#'+hash;
+    // Same-document hash navigation uses smooth scroll: networkidle is not a scroll-completion event.
+    await page.waitForFunction(selector=>{const top=document.querySelector(selector).getBoundingClientRect().top;return top>=0&&(top<200||(Math.abs(scrollY+innerHeight-document.documentElement.scrollHeight)<2&&top<850));},target,{timeout:3000});
     const top=await page.locator(target).evaluate(x=>x.getBoundingClientRect().top);
     const atBottom=await page.evaluate(()=>Math.abs(scrollY+innerHeight-document.documentElement.scrollHeight)<2);
     assert.ok(top>=0&&(top<200||(atBottom&&top<850)),`${hash} ${width} ${top}`);

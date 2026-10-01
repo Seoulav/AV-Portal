@@ -539,5 +539,29 @@
     "footerNote": "Epson EB-PQ2220B 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**백색·컬러 밝기 각각 20,000lm(일반 모드)**의 3LCD 레이저 프로젝터입니다. 4K 크리스탈 모션 기술과 360° 설치를 지원하며 기존 사진·연결 단자 정보에서 구성을 확인할 수 있습니다.",
+  "subtitle": "대형 설치용 3LCD 레이저 프로젝터 · 4K 표시",
+  "keyFacts": [
+    {
+      "label": "백색 밝기 · 일반 모드",
+      "value": "20,000",
+      "unit": "lm"
+    },
+    {
+      "label": "컬러 밝기 · 일반 모드",
+      "value": "20,000",
+      "unit": "lm"
+    },
+    {
+      "label": "표시 해상도",
+      "value": "4K",
+      "unit": ""
+    },
+    {
+      "label": "설치 방향",
+      "value": "360",
+      "unit": "°"
+    }
+  ]
 }

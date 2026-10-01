@@ -321,7 +321,8 @@
       "code": "S",
       "name": "제조사 사양 자료",
       "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf",
-      "scope": "제조사 공식 출처"
+      "scope": "제조사 공식 출처",
+      "page": "PDF 1·3·5쪽 (페이지 인쇄 번호 없음) · Aquilon RS1 · 2026-07-03 파일"
     }
   ],
   "issues": [
@@ -341,5 +342,264 @@
     "footerNote": "Analog Way Aquilon RS1 (AQL-RS1) · 공식 출처 기반",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**최대 4개의 4K 또는 8개의 Dual/2K 믹싱 레이어**를 구성하는 멀티스크린 프로세서입니다. 레이어 수는 시스템 전체 기준이며 8개 물리 출력과 독립 프로그램 화면 수를 구분해야 합니다.",
+  "subtitle": "LivePremier · 시스템 전체 레이어 자원 · 화면 설정에 따름",
+  "keyFacts": [
+    {
+      "label": "시스템 전체 · 4K Mix 최대",
+      "value": "4",
+      "unit": "레이어"
+    },
+    {
+      "label": "시스템 전체 · Dual/2K Mix 최대",
+      "value": "8",
+      "unit": "레이어"
+    },
+    {
+      "label": "4K60p 입력 · 최대",
+      "value": "16",
+      "unit": "채널"
+    },
+    {
+      "label": "물리 출력",
+      "value": "8",
+      "unit": "개"
+    }
+  ],
+  "signalFlow": {
+    "type": "video-processor",
+    "description": "최대 16개 입력을 화면별 레이어로 합성하고 프로그램 출력과 전용 멀티뷰 출력을 구성하는 RS1의 기능 개념도입니다.",
+    "inputs": [
+      {
+        "id": "video",
+        "label": "4K60p 입력 · 최대 16",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 1
+          }
+        ],
+        "caption": "HDMI / DP / SDI · 카드 구성에 따름"
+      },
+      {
+        "id": "control",
+        "label": "Web RCS · IP 제어",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ],
+        "caption": "화면·레이어 구성"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "program",
+        "label": "물리 출력 8개",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ],
+        "caption": "PGM: 최대 4×4K60p 또는 8×Dual/2K60p"
+      },
+      {
+        "id": "preview",
+        "label": "전용 멀티뷰 출력 2개",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 3
+          }
+        ],
+        "caption": "메인 출력과 별도 · 모니터링"
+      }
+    ],
+    "processes": [
+      {
+        "id": "mix",
+        "kind": "mix",
+        "label": "레이어 합성",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ],
+        "caption": "시스템 전체 Mix: 4×4K 또는 8×Dual/2K"
+      },
+      {
+        "id": "screen",
+        "kind": "scale",
+        "label": "화면 배치 · 출력 구성",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ],
+        "caption": "화면 설정에 따라 자원 배분"
+      }
+    ],
+    "connections": [
+      {
+        "from": "video",
+        "to": "mix",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "from": "mix",
+        "to": "screen",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "from": "screen",
+        "to": "program",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "video",
+        "to": "preview",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 3
+          }
+        ],
+        "label": "멀티뷰 모니터링"
+      },
+      {
+        "from": "control",
+        "to": "screen",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "S",
+            "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+            "page": 5
+          }
+        ],
+        "label": "제어"
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 · 점선은 모니터링"
+      },
+      {
+        "signal": "control",
+        "label": "화면 제어"
+      }
+    ],
+    "notes": [
+      "레이어 수는 출력 카드당 수치가 아닌 시스템 전체 최대치입니다. 화면 설정에 따라 달라지며 4K와 Dual/2K 수치를 합산하지 않습니다.",
+      "물리 출력 8개가 독립 4K 프로그램 화면 8개를 의미하지 않습니다. 남는 출력은 복제 또는 Scaled AUX로 구성할 수 있습니다.",
+      "Rear 사진이 없어 단자 위치 지도는 제공하지 않습니다."
+    ],
+    "band": {
+      "label": "4K60p · 4:4:4",
+      "detail": "Mix / Split 레이어와 화면 자원 구별",
+      "evidence": [
+        {
+          "kind": "pdf",
+          "source": "S",
+          "file": "docs/aquilon-rs1-specification-69f9f2e914b4.pdf",
+          "page": 1
+        }
+      ]
+    }
+  },
+  "settings": [
+    {
+      "kind": "table",
+      "title": "레이어 전환 모드",
+      "columns": [
+        "모드",
+        "전환",
+        "시스템 전체 레이어 한도"
+      ],
+      "rows": [
+        [
+          "Mix",
+          "True seamless",
+          "최대 2×5K / 4×4K / 8×Dual/2K"
+        ],
+        [
+          "Split",
+          "Cut 또는 Fade To Black",
+          "Mix 수량의 2배 · 화면 설정에 따름"
+        ]
+      ]
+    },
+    {
+      "kind": "modes",
+      "title": "출력 구성 구별",
+      "items": [
+        {
+          "name": "프로그램 화면",
+          "summary": "최대 4×4K60p 또는 8×Dual/2K60p 프로그램 출력을 구성합니다."
+        },
+        {
+          "name": "출력 복제",
+          "summary": "프로그램 출력을 사용하지 않은 출력으로 복제할 수 있습니다."
+        },
+        {
+          "name": "Scaled AUX",
+          "summary": "사용하지 않은 출력을 Scaled AUX로 구성할 수 있습니다.",
+          "detail": "프로그램 화면·레이어와 다른 자원 조건이 있으므로 단순 합산하지 않습니다."
+        }
+      ]
+    }
+  ]
 }
