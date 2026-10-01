@@ -1,6 +1,6 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-flow';
-import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001-flow';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-flow';
+import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-portmap';
+import { portMapImageMatches, portMapDisplayWidth } from './detail-enhancements.mjs?v=w20261001-001-portmap';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-portmap';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -208,8 +208,15 @@ if (!productKey) {
     layer.replaceChildren();
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
+    const scroll = $('.port-photo-scroll'), photoStage = featured.parentElement;
+    const matches = map && data.images[selectedImage]?.role === map.image && featured.complete && featured.naturalWidth && !featured.hidden && portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map);
+    photoStage.classList.toggle('map-active', Boolean(matches));
+    photoStage.style.minWidth = matches ? portMapDisplayWidth(map, featured.naturalWidth, featured.naturalHeight) + 'px' : '';
+    scroll.tabIndex = matches ? 0 : -1;
+    scroll.setAttribute('aria-label', '제품 단자 지도 · 좌우 방향키로 이동');
+    $('#port-map-scroll-hint').hidden = !matches || scroll.scrollWidth <= scroll.clientWidth;
     if (!map || data.images[selectedImage]?.role !== map.image || !featured.complete || !featured.naturalWidth || featured.hidden) return;
-    if (!portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight)) {
+    if (!portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map)) {
       $('#gallery-title').lastChild.textContent = '제품 사진';
       return;
     }
@@ -225,6 +232,12 @@ if (!productKey) {
     }
     $('#port-map-list').hidden = false;
   }
+  $('.port-photo-scroll').addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    const scroll = event.currentTarget; if (scroll.scrollWidth <= scroll.clientWidth) return;
+    event.preventDefault();
+    scroll.scrollLeft = event.key === 'Home' ? 0 : event.key === 'End' ? scroll.scrollWidth : scroll.scrollLeft + (event.key === 'ArrowRight' ? 160 : -160);
+  });
   featured.addEventListener('load', updatePortMap);
   new ResizeObserver(updatePortMap).observe(featured);
   featured.addEventListener('error', () => {
@@ -242,7 +255,7 @@ if (!productKey) {
     $('#thumbnails').append(button);
   }
   $('#thumbnails').hidden = data.images.length < 2;
-  if (data.images.length) selectImage(0);
+  if (data.images.length) selectImage(enhancements.portMap ? data.images.findIndex(i => i.role === enhancements.portMap.image) : 0);
   $('#zoom-button').addEventListener('click', () => {
     if (!featured.complete || !featured.naturalWidth) return;
     zoomOpener = $('#zoom-button');
@@ -278,7 +291,12 @@ if (!productKey) {
   const rear = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
   if (rear) {
     $('#rear-connector-panel').hidden = false;
-    $('#rear-connector-image').src = imageBase + rear.file;
+    const rearImage = $('#rear-connector-image');
+    rearImage.addEventListener('load', () => {
+      const mapped = enhancements.portMap?.image === 'Rear' && portMapImageMatches(rear, rearImage.naturalWidth, rearImage.naturalHeight, enhancements.portMap);
+      $('#rear-connector-panel').hidden = Boolean(mapped || enhancements.signalFlow);
+    });
+    rearImage.src = imageBase + rear.file;
     $('#rear-connector-image').alt = `${data.manufacturer} ${data.model} 후면 연결 단자 이미지`;
     $('#rear-connector-image').addEventListener('error', () => { $('#rear-connector-panel').hidden = true; });
     if (rear.sourceUrl) $('#rear-connector-source').href = safeLink(rear.sourceUrl, '').href;

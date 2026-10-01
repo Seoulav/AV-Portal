@@ -8,20 +8,26 @@ export const signalKinds = Object.freeze(['video', 'audio', 'network', 'control'
 export const isDisplayProduct = product => product.categories?.some(c => /^(Display|Projector|Digital Signage|Hospitality TV|Video Wall|Interactive Display|프로젝터|사이니지)$/i.test(c)) ?? false;
 const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(key));
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
-const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'side']) && Number.isInteger(i.n) && i.n > 0 && text(i.label) && typeof i.desc === 'string' && Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 && (i.side === undefined || ['top', 'bottom'].includes(i.side));
+const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'side']) && Number.isInteger(i.n) && i.n > 0 && text(i.label) && typeof i.desc === 'string' && Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 && (i.side === undefined || ['top', 'bottom'].includes(i.side));
 function validMap(map, product) {
   const image = product.images?.find(i => i.role === map?.image && text(i.file));
   const size = dimensions(image?.resolution);
-  return record(map) && keys(map, ['image', 'items']) && ['Front', 'Rear'].includes(map.image) &&
-    size && portMapImageMatches(image, ...size) && Array.isArray(map.items) && map.items.length > 0 &&
-    map.items.every(i => validMarker(i) && i.x2 <= size[0]) && new Set(map.items.map(i => i.n)).size === map.items.length;
+  return record(map) && keys(map, ['image', 'items', 'measuredImage']) && ['Front', 'Rear'].includes(map.image) &&
+    size && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
+    map.items.every(i => validMarker(i) && i.x2 <= size[0] && (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0 && i.y <= size[1]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
 }
 const dimensions = value => {
   const match = typeof value === 'string' && /^(\d+)\s*[x×]\s*(\d+)$/i.exec(value.trim());
   return match && Number(match[1]) > 0 && Number(match[2]) > 0 ? [Number(match[1]), Number(match[2])] : null;
 };
-export function portMapImageMatches(image, width, height) {
+export function portMapImageMatches(image, width, height, map) {
   const original = dimensions(image?.originalSize), published = dimensions(image?.resolution);
+  if (map?.measuredImage !== undefined) {
+    const m = map.measuredImage;
+    return Boolean(record(m) && keys(m, ['file', 'width', 'height']) && m.file === image?.file &&
+      Number.isInteger(m.width) && Number.isInteger(m.height) && m.width > 0 && m.height > 0 &&
+      m.width === width && m.height === height && published && published[0] === width && published[1] === height);
+  }
   return Boolean(original && published && original[0] === width && original[1] === height && published[0] === width && published[1] === height);
 }
 const identifier = s => typeof s === 'string' && /^[a-z][a-z0-9-]{0,47}$/.test(s);
@@ -104,4 +110,17 @@ export function selectCardModes(product, enhancements) {
 export function portMarkerPercent(item, naturalWidth) {
   if (!Number.isFinite(naturalWidth) || naturalWidth <= 0 || !Number.isFinite(item.x1) || !Number.isFinite(item.x2) || item.x1 < 0 || item.x2 <= item.x1 || item.x2 > naturalWidth) return null;
   return { left: item.x1 / naturalWidth * 100, width: (item.x2 - item.x1) / naturalWidth * 100 };
+}
+
+// Keep the measured coordinates fixed; enlarge only the scrollable display until
+// numbered circles are separated. Bracket anchors use the same scale as the photo.
+export function portMapDisplayWidth(map, naturalWidth, naturalHeight) {
+  const separated = width => {
+    const scale = width / naturalWidth;
+    const points = map.items.map(i => ({x: (i.x1 + i.x2) / 2 * scale,
+      y: (i.y ?? (i.side === 'top' ? 0 : naturalHeight)) * scale + (i.side === 'top' ? -28 : 28)}));
+    return points.every((p, i) => points.slice(i + 1).every(q => Math.abs(p.x-q.x) >= 32 || Math.abs(p.y-q.y) >= 32));
+  };
+  for (let width = 560; width <= 4000; width += 20) if (separated(width)) return width;
+  return 4000;
 }
