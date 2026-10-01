@@ -1,0 +1,41 @@
+{
+  "time": "2026-10-01T13:25:39.593Z",
+  "merge": "58eb99ffff9f45bbe5512f352c39c0089b73bcfb",
+  "products": [
+    {
+      "slug": "novastar-h5",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/novastar-h5.json",
+      "status": 200,
+      "publicMatchesMerged": true,
+      "sha256": "3742d8f5486d085cfc3201b1f556a1e040294e241232cc6d92ce02920d418d05"
+    },
+    {
+      "slug": "ulxd4d",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/ulxd4d.json",
+      "status": 200,
+      "publicMatchesMerged": true,
+      "sha256": "a4a95b6eb0fa83c4bcea677cfad3415046462d811192aa988d1817005ac3c27e"
+    },
+    {
+      "slug": "dci-4-600da",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/dci-4-600da.json",
+      "status": 200,
+      "publicMatchesMerged": true,
+      "sha256": "2e800ae6f6133850384b9e7e3d9bedd91c953a39ffa3f68cf4c424027ca9e07a"
+    },
+    {
+      "slug": "eb-pq2220b",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/eb-pq2220b.json",
+      "status": 200,
+      "publicMatchesMerged": true,
+      "sha256": "5310ff7891f49b385eae452c047039b129a0f9738799b0eb6b91209e8cf7f198"
+    },
+    {
+      "slug": "aquilon-rs1",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/aquilon-rs1.json",
+      "status": 200,
+      "publicMatchesMerged": true,
+      "sha256": "512b96e48fb46407e4ea958b5f4521f2d47c8f5021dd1f1a1129147acf4a2ad6"
+    }
+  ]
+}
