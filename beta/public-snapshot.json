@@ -392,7 +392,7 @@
       "io": 1
     },
     "dci-4-600da": {
-      "sha256": "E7C92F7569A05F53048277448962BE48FF44FEDE818880AF1AD56DE7F9A27FC2",
+      "sha256": "D4800FD17D95922F21C56A665E5E16AAEE649C440A9CDA36E2375C851FE86477",
       "features": 4,
       "specifications": 33,
       "io": 3
@@ -506,7 +506,7 @@
       "io": 11
     },
     "eb-pq2220b": {
-      "sha256": "332A7F965325C81509587883F179AFBB581F8F295B63BBC229C80264B186D754",
+      "sha256": "CA65FC6F8D587AAA6D2825D01F4E06E580700F6CC4AB5E93DF8DD84F768D39B7",
       "features": 6,
       "specifications": 25,
       "io": 11
@@ -920,7 +920,7 @@
       "io": 7
     },
     "novastar-h5": {
-      "sha256": "D1A282B1CDE6E0D22A18EEC37211BE511301CFACE1F3EA8649853E7D3BAFC515",
+      "sha256": "144A466171DFED4125C1D0B7275696CF549B1521FD7C43915524279C0689337F",
       "features": 6,
       "specifications": 26,
       "io": 8

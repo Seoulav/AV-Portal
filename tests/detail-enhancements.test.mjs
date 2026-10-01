@@ -78,3 +78,16 @@ test('map display width separates close marker numbers without changing pixel co
   assert.ok(width >= 1000 && width <= 2000);
   assert.equal(map.items[0].x1, 990);
 });
+
+
+test('map desktop width stays within the card while mobile keeps readable scrolling', () => {
+ const map={items:[{x1:990,x2:1000,side:'top'},{x1:1050,x2:1060,side:'top'}]};
+ assert.equal(enhancementModel.portMapDisplayWidth(map,2000,291,1280,738),738);
+ assert.ok(enhancementModel.portMapDisplayWidth(map,2000,291,390,310)>310);
+});
+test('map optional vertical whitespace crop rejects invalid bounds and preserves coordinate frame', () => {
+ const image={role:'Rear',file:'rear.webp',resolution:'2000x1333',originalSize:'2000x1333'};
+ const p={images:[image],portMap:{image:'Rear',crop:{top:400,bottom:360},items:[{n:1,label:'A',desc:'Input',x1:10,x2:30,y:550,side:'top'}]}};
+ assert.ok(prepareEnhancements(p).portMap);
+ for(const crop of [{top:-1,bottom:0},{top:1000,bottom:400},{top:600,bottom:0}])assert.equal(prepareEnhancements({...p,portMap:{...p.portMap,crop}}).portMap,null);
+});
