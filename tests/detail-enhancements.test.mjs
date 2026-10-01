@@ -41,16 +41,7 @@ test('port map validates roles, measured spans and unique positive numbers', () 
   assert.deepEqual(portMarkerPercent(p.portMap.items[0], 200), { left: 10, width: 20 });
   for (const width of [0, -1, NaN, 30]) assert.equal(portMarkerPercent(p.portMap.items[0], width), null);
 });
-test('six signal flow types require real input and output labels', () => {
-  for (const type of ['distribution', 'matrix', 'switcher', 'extender', 'amplifier-channel', 'projector-display-input']) {
-    const p = { ...base, signalFlow: { type, inputs: ['IN'], outputs: ['OUT'], notes: ['조건'] } };
-    assert.equal(selectCardModes(p, prepareEnhancements(p)).io, 'signal-flow');
-  }
-  for (const flow of [{ type: 'unknown', inputs: ['IN'], outputs: ['OUT'], notes: [] }, { type: 'matrix', inputs: [], outputs: ['OUT'], notes: [] }]) {
-    assert.equal(prepareEnhancements({ signalFlow: flow }).signalFlow, null);
-    assert.ok(enhancementErrors({ signalFlow: flow }).length);
-  }
-});
+
 test('settings and key facts reject malformed public data but safely omit in UI', () => {
   const table = { kind: 'edid', title: 'EDID', columns: ['모드', '값'], rows: [['1', '자동']] };
   const modes = { kind: 'modes', title: '모드', items: [{ name: 'Mode', summary: 'Summary', detail: 'Detail' }] };

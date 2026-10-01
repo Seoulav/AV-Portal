@@ -2,7 +2,10 @@
 const text = value => typeof value === 'string' && value.trim().length > 0;
 const record = value => value && typeof value === 'object' && !Array.isArray(value);
 const texts = value => Array.isArray(value) && value.every(text);
-const flowTypes = new Set(['distribution', 'matrix', 'switcher', 'extender', 'amplifier-channel', 'projector-display-input']);
+export const flowTypes = Object.freeze(['matrix', 'switcher', 'distribution', 'extender', 'converter', 'video-processor', 'processor-card', 'recorder', 'camera', 'camera-controller', 'amplifier-channel', 'audio-dsp', 'mixer', 'audio-interface', 'network-bridge', 'wireless-microphone', 'rf-distribution', 'loudspeaker', 'microphone', 'conferencing', 'network-switch', 'control', 'power']);
+export const processKinds = Object.freeze(['matrix', 'select', 'split', 'convert', 'scale', 'encode', 'decode', 'record', 'capture', 'sense', 'control', 'amplify', 'dsp', 'mix', 'bridge', 'rf', 'transduce', 'conference', 'switch', 'power', 'module']);
+export const signalKinds = Object.freeze(['video', 'audio', 'network', 'control', 'rf', 'power', 'usb', 'optical', 'acoustic']);
+export const isDisplayProduct = product => product.categories?.some(c => /^(Display|Projector|Digital Signage|Hospitality TV|Video Wall|Interactive Display|프로젝터|사이니지)$/i.test(c)) ?? false;
 const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(key));
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
 const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'side']) && Number.isInteger(i.n) && i.n > 0 && text(i.label) && typeof i.desc === 'string' && Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 && (i.side === undefined || ['top', 'bottom'].includes(i.side));
@@ -21,9 +24,51 @@ export function portMapImageMatches(image, width, height) {
   const original = dimensions(image?.originalSize), published = dimensions(image?.resolution);
   return Boolean(original && published && original[0] === width && original[1] === height && published[0] === width && published[1] === height);
 }
-function validFlow(flow) {
-  return record(flow) && keys(flow, ['type', 'inputs', 'outputs', 'notes']) && flowTypes.has(flow.type) &&
-    texts(flow.inputs) && flow.inputs.length > 0 && texts(flow.outputs) && flow.outputs.length > 0 && texts(flow.notes);
+const identifier = s => typeof s === 'string' && /^[a-z][a-z0-9-]{0,47}$/.test(s);
+const shortText = s => text(s) && s.length <= 160;
+const optionalText = s => s === undefined || (typeof s === 'string' && s.length <= 240);
+const list = (items, max, test, min = 0) => Array.isArray(items) && items.length >= min && items.length <= max && items.every(test);
+function validEvidence(refs, product) {
+  return list(refs, 12, r => {
+    if (!record(r)) return false;
+    if (r.kind === 'spec' || r.kind === 'io') {
+      const row = (r.kind === 'io' ? product.io : product.specifications)?.[r.index];
+      return keys(r, ['kind', 'index']) && Number.isInteger(r.index) && r.index >= 0 && row && ['VERIFIED', 'FOUND'].includes(row.verification);
+    }
+    // Files and PDF signatures are checked by verify-pages; browser validation never reads the filesystem.
+    return r.kind === 'pdf' && keys(r, ['kind', 'source', 'file', 'page']) &&
+      product.sources?.some(s => s.code === r.source) && /^(docs|manuals)\/[a-z0-9-]+\.pdf$/.test(r.file ?? '') && Number.isInteger(r.page) && r.page > 0;
+  }, 1);
+}
+export function validFlow(flow, product) {
+  if (isDisplayProduct(product) || !record(flow) || !keys(flow, ['type', 'description', 'inputs', 'outputs', 'processes', 'connections', 'auxiliary', 'groups', 'band', 'legend', 'notes']) || !flowTypes.includes(flow.type) || !shortText(flow.description)) return false;
+  const evidence = value => validEvidence(value, product);
+  const endpoint = n => record(n) && keys(n, ['id', 'label', 'signal', 'group', 'caption', 'tag', 'evidence']) && identifier(n.id) && shortText(n.label) && signalKinds.includes(n.signal) && optionalText(n.caption) && (n.tag === undefined || (shortText(n.tag) && n.tag.length <= 8)) && evidence(n.evidence);
+  if (!list(flow.inputs, 32, endpoint, 1) || !list(flow.outputs, 32, endpoint, 1) || !list(flow.processes, 6, n => record(n) && keys(n, ['id', 'kind', 'label', 'caption', 'crosspoints', 'evidence']) && identifier(n.id) && processKinds.includes(n.kind) && shortText(n.label) && optionalText(n.caption) && evidence(n.evidence), 1)) return false;
+  if (!list(flow.groups, 16, g => record(g) && keys(g, ['id', 'label', 'caption', 'evidence']) && identifier(g.id) && shortText(g.label) && optionalText(g.caption) && evidence(g.evidence))) return false;
+  const nodes = [...flow.inputs, ...flow.processes, ...flow.outputs], ids = new Set(nodes.map(n => n.id)), groups = new Set(flow.groups.map(g => g.id));
+  if (ids.size !== nodes.length || groups.size !== flow.groups.length || [...flow.inputs, ...flow.outputs].some(n => n.group !== undefined && !groups.has(n.group))) return false;
+  const edge = e => record(e) && keys(e, ['from', 'to', 'signal', 'label', 'direction', 'evidence']) && ids.has(e.from) && ids.has(e.to) && e.from !== e.to && signalKinds.includes(e.signal) && optionalText(e.label) && (e.direction === undefined || e.direction === 'forward' || e.direction === 'both') && evidence(e.evidence);
+  if (!list(flow.connections, 96, edge, 1) || !list(flow.auxiliary, 32, edge)) return false;
+  const edges = [...flow.connections, ...flow.auxiliary];
+  const inputs = new Set(flow.inputs.map(n => n.id)), outputs = new Set(flow.outputs.map(n => n.id));
+  if (edges.some(e => outputs.has(e.from) || inputs.has(e.to))) return false;
+  const stage = id => inputs.has(id) ? -1 : outputs.has(id) ? flow.processes.length : flow.processes.findIndex(p => p.id === id);
+  if (edges.some(e => stage(e.from) >= stage(e.to))) return false;
+  if (nodes.some(n => !edges.some(e => e.from === n.id || e.to === n.id))) return false;
+  // A crosspoint layout owns the central lane. Mixed/multiple matrices need a
+  // future layout contract; reject them rather than hiding overlapping blocks.
+  if (flow.processes.some(p => p.kind === 'matrix') && flow.processes.length !== 1) return false;
+  for (const p of flow.processes) {
+    if (p.kind !== 'matrix') { if (p.crosspoints !== undefined) return false; continue; }
+    const c = p.crosspoints;
+    if (!record(c) || !keys(c, ['inputs', 'outputs', 'examples']) || !list(c.inputs, 16, id => inputs.has(id), 1) || !list(c.outputs, 16, id => outputs.has(id), 1) || new Set(c.inputs).size !== c.inputs.length || new Set(c.outputs).size !== c.outputs.length) return false;
+    if (!c.inputs.every(id => flow.connections.some(e => e.from === id && e.to === p.id)) || !c.outputs.every(id => flow.connections.some(e => e.from === p.id && e.to === id))) return false;
+    if (flow.connections.some(e => e.to === p.id && !c.inputs.includes(e.from) || e.from === p.id && !c.outputs.includes(e.to))) return false;
+    if (!list(c.examples, 16, x => record(x) && keys(x, ['input', 'output']) && c.inputs.includes(x.input) && c.outputs.includes(x.output)) || new Set(c.examples.map(x => x.output)).size !== c.examples.length) return false;
+  }
+  if (flow.band !== undefined && (!record(flow.band) || !keys(flow.band, ['label', 'detail', 'evidence']) || !shortText(flow.band.label) || !optionalText(flow.band.detail) || !evidence(flow.band.evidence))) return false;
+  return list(flow.legend, 9, l => record(l) && keys(l, ['signal', 'label']) && signalKinds.includes(l.signal) && shortText(l.label)) && list(flow.notes, 12, shortText);
 }
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
@@ -34,7 +79,7 @@ function validity(product) {
   return {
     lead: typeof product.lead === 'string', subtitle: typeof product.subtitle === 'string',
     keyFacts: Array.isArray(product.keyFacts) && product.keyFacts.length <= 4 && product.keyFacts.every(validFact),
-    portMap: validMap(product.portMap, product), signalFlow: validFlow(product.signalFlow),
+    portMap: validMap(product.portMap, product), signalFlow: validFlow(product.signalFlow, product),
     settings: Array.isArray(product.settings) && product.settings.length <= 2 && product.settings.every(validSetting)
   };
 }

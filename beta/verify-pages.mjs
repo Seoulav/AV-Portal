@@ -287,6 +287,15 @@ for (const slug of slugs) {
   assert.ok(!privateMarkers.test(content), `${slug} private marker`);
   const product = JSON.parse(content);
   assert.deepEqual(enhancementErrors(product), [], `${slug}: optional detail structure`);
+  if (product.signalFlow) {
+    const flow = product.signalFlow;
+    const evidenceOwners = [...flow.inputs, ...flow.outputs, ...flow.processes, ...flow.connections, ...flow.auxiliary, ...flow.groups, ...(flow.band ? [flow.band] : [])];
+    const pdfRefs = evidenceOwners.flatMap(item => item.evidence).filter(ref => ref.kind === 'pdf');
+    for (const file of new Set(pdfRefs.map(ref => ref.file))) {
+      const bytes = await readFile(new URL(file, site));
+      assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${slug}: Signal Flow evidence PDF ${file}`);
+    }
+  }
   const keys = Object.keys(product);
   for (const key of keys) assert.ok(detailAllowedKeys.has(key), `${slug}: 허용되지 않은 상세 키 ${key}`);
   for (const key of detailRequiredKeys) assert.ok(keys.includes(key), `${slug}: 필수 상세 키 누락 ${key}`);
