@@ -11,4 +11,4 @@ node Work/기록/W-20261002-001-shure-port-map-screens/verify.cjs
 node Work/기록/W-20261002-001-shure-port-map-screens/verify.cjs https://seoulav.github.io/AV-Portal/
 ```
 
-공개 검증은 배포 성공 후 실행하며 11종 × 1280/390 = 22화면과 해당 공개 JSON을 실행 시 HEAD의 Git blob에 대조한다. `public.json`·`public-*.png`는 실제 실행 후 종료 기록에 추가한다. 병합 전 문서에서 공개 검증을 미리 통과 처리하지 않는다.
+공개 검증은 배포 성공 후 실행했으며 11종 × 1280/390 = 22화면과 해당 공개 JSON을 실행 시 HEAD(`ab60bb3941b82aa108fa642ca5f688305d3b4c95`)의 Git blob에 대조해 모두 통과했다. `public.json`·`public-*.png` 22개 및 UA864A End 추가 캡처는 실제 실행 후 종료 기록에 추가했다. 병합 전 문서에서 공개 검증을 미리 통과 처리하지 않았다.
