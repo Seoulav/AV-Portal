@@ -522,10 +522,10 @@
       "direction": "IN",
       "quantity": "3",
       "protocol": "HDMI",
-      "availability": "HDMI 버전 표기 2, HDCP 2.2",
+      "availability": "HDMI 버전 표기 2, HDCP 2.2 · HDMI IN 3은 ARC 지원",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
@@ -536,8 +536,8 @@
       "protocol": "DisplayPort",
       "availability": "DP 버전 1.2",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Data",
@@ -546,10 +546,10 @@
       "direction": "IN",
       "quantity": "2",
       "protocol": "USB",
-      "availability": "",
+      "availability": "USB 2: 최대 1.0 A · USB 1: 최대 0.5 A",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -560,8 +560,8 @@
       "protocol": "IR",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
@@ -572,20 +572,20 @@
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "오디오 출력",
       "signal": "아날로그 오디오 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -596,8 +596,8 @@
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -608,8 +608,8 @@
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
@@ -618,10 +618,10 @@
       "direction": "IN",
       "quantity": "1",
       "protocol": "Ethernet",
-      "availability": "있음",
+      "availability": "있음 · 10/100 Mbps · CAT 7(STP) 케이블 권장",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -640,6 +640,11 @@
       "code": "S4",
       "name": "(주)윈스타비투비 QMC 제품 규격서 (사용자 제공)",
       "scope": "국내 모델 LH85QMCEBGCXKR 일치 · 8쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-24537G-14 (사용자 제공)",
+      "scope": "적용 모델 QH43C·QM43C·QH75C·QM85C·QM98C · 단자 설명 20쪽 · SHA-256 b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3 · 원본은 게시하지 않음"
     }
   ],
   "issues": [

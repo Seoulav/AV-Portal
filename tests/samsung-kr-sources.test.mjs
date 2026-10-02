@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
 import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
+import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -15,7 +16,7 @@ test('Samsung Korean business spec audit covers the 14 still-published models', 
   // Keep W-005's original 15-model evidence unchanged.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(read(`beta/site/detail/data/${slug}.json`), slug), slug);
+    const p = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug), slug), slug);
     const e = evidence.products[slug];
     const source = p.sources.find(s => s.code === 'P');
     assert.equal(source.url, e.koreanUrl);
@@ -56,7 +57,7 @@ test('regional TV power and RF input values follow the Korean model spec tab', (
     ['hg50u800fnfxkr','AC220-240V~ 50/60Hz','155','57.4'],
     ['hg65u800fnfxkr','AC 220-240 V ~ 50/60Hz','240','73.8']
   ]) {
-    const p = beforeSamsungForeignPurge(read(`beta/site/detail/data/${slug}.json`), slug);
+    const p = beforeSamsungForeignPurge(beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug), slug);
     const spec = name => p.specifications.find(r => r.name === name);
     assert.equal(spec('전원 사양').value, power);
     assert.equal(spec('소비전력(최대)').value, max);
@@ -73,7 +74,7 @@ test('regional TV power and RF input values follow the Korean model spec tab', (
 test('provenance notices leave condition fields and remain in named sources and audit', () => {
   const later = read('Work/기록/W-20261002-008-evidence.json');
   for (const slug of targets) {
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
     const e = evidence.products[slug];
     assert.ok(e.conditionChanges.length > 0, slug);
     for (const row of [...p.specifications,...p.io]) {

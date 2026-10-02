@@ -613,24 +613,24 @@
       "connector": "HDMI",
       "signal": "비디오/오디오 입력",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "3",
       "protocol": "HDMI",
-      "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "HDMI IN 3은 ARC 지원",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
       "connector": "DisplayPort",
       "signal": "비디오 입력",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "DisplayPort",
-      "availability": "DP 버전 1.4",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Data",
@@ -639,22 +639,22 @@
       "direction": "IN",
       "quantity": "2 x USB-A",
       "protocol": "USB",
-      "availability": "",
+      "availability": "USB 2: 최대 1.0 A · USB 1: 최대 0.5 A",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "IR 입력",
       "signal": "IR 수신/외부 IR",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "IR",
       "availability": "있음",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
@@ -664,57 +664,57 @@
       "quantity": "",
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "오디오 출력",
       "signal": "아날로그 오디오 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
-      "availability": "있음(스테레오 미니 잭)",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "있음",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 입력",
       "signal": "외부 제어",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 출력",
-      "signal": "외부 제어(루프아웃)",
+      "signal": "MDC 제어",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
       "connector": "RJ45(LAN)",
       "signal": "유선 네트워크",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
-      "availability": "있음",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "있음 · 10/100 Mbps · CAT 7(STP) 케이블 권장",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -738,6 +738,11 @@
       "code": "S5",
       "name": "삼성전자 스마트 LCD 사이니지 115QHF 제품 사양서 (사용자 제공)",
       "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 1 제품 특징, 슬라이드 2 사양표. 원본 사본은 게시하지 않음; SHA-256 b8062a55a9cc7693af424e9510a92995f12dee1c817ad2645d05506c66e16b42"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-26720E-04 (사용자 제공)",
+      "scope": "적용 모델 QH115FX · 단자 설명 15쪽 · SHA-256 0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc · 원본은 게시하지 않음"
     }
   ],
   "issues": [

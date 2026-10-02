@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mjs';
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
 import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
+import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -16,7 +17,7 @@ test('A: 9 published Samsung connector rows remain FOUND; historical evidence st
   let count = 0;
   for (const [slug, product] of Object.entries(prior.products)) {
     if (slug === 'lh98qecedgcxkr') continue;
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
     for (const conflict of product.conflicts) {
       const row = p.io[conflict.index];
       assert.equal(row.connector, conflict.connector);
@@ -64,7 +65,7 @@ test('C: quantity changes come only from model-specific supplied documents', () 
   let filled = 0;
   for (const [slug, e] of Object.entries(evidence.products)) {
     if (slug === 'lh98qecedgcxkr') continue;
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
     for (const change of e.quantityChanges) {
       const row = p.io[change.index];
       assert.equal(row.connector, change.connector);
