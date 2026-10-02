@@ -311,5 +311,33 @@
     "footerNote": "Shure UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ua864a-rear.webp",
+      "width": 1500,
+      "height": 1500
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "RF 출력 · 바이어스 전원",
+        "desc": "BNC · 같은 주파수 대역의 수신기/분배기에 연결하며 동축으로 바이어스 전원을 받습니다.",
+        "x1": 922,
+        "x2": 978,
+        "y": 282,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "게인 선택",
+        "desc": "수신 환경에 맞춰 RF 신호의 감쇠·기본·증폭 설정을 선택합니다.",
+        "x1": 878,
+        "x2": 928,
+        "y": 1220,
+        "side": "bottom"
+      }
+    ]
   }
 }

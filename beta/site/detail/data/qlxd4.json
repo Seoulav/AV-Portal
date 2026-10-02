@@ -489,5 +489,87 @@
     "footerNote": "Shure QLXD4 Digital Wireless Receiver · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "qlxd4-rear.webp",
+      "width": 2000,
+      "height": 517
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 입력 A",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 1680,
+        "x2": 1820,
+        "y": 290,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 입력 B",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 638,
+        "x2": 785,
+        "y": 290,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력 1",
+        "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+        "x1": 1100,
+        "x2": 1330,
+        "y": 185,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "오디오 출력 1 · TRS",
+        "desc": "6.35mm TRS · 악기/보조 입력에 연결하는 임피던스 밸런스 출력입니다.",
+        "x1": 1380,
+        "x2": 1505,
+        "y": 418,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "출력 1 MIC/LINE",
+        "desc": "XLR 출력 레벨을 마이크 또는 라인으로 선택합니다.",
+        "x1": 960,
+        "x2": 1058,
+        "y": 390,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · 수신기 네트워크 제어에 연결합니다.",
+        "x1": 340,
+        "x2": 508,
+        "y": 275,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "수신기 초기화",
+        "desc": "Reset · 수신기를 기본 설정으로 복원합니다.",
+        "x1": 550,
+        "x2": 570,
+        "y": 390,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "DC 전원 입력",
+        "desc": "DC · 제공된 외부 전원공급장치를 연결합니다.",
+        "x1": 226,
+        "x2": 290,
+        "y": 405,
+        "side": "bottom"
+      }
+    ]
   }
 }

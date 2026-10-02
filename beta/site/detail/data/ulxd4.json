@@ -480,5 +480,78 @@
     "footerNote": "Shure ULXD4 Digital Wireless Receiver · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ulxd4-rear.webp",
+      "width": 2000,
+      "height": 490
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 입력 A",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 1710,
+        "x2": 1850,
+        "y": 187,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 입력 B",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 148,
+        "x2": 290,
+        "y": 190,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력 1",
+        "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+        "x1": 1125,
+        "x2": 1340,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "오디오 출력 1 · TRS",
+        "desc": "6.35mm TRS · 믹서 등의 마이크/라인 입력에 연결하는 밸런스 출력입니다.",
+        "x1": 1410,
+        "x2": 1535,
+        "y": 390,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "출력 1 MIC/LINE",
+        "desc": "XLR 출력 레벨 선택 · MIC 위치에서 30dB 감쇠합니다.",
+        "x1": 1020,
+        "x2": 1065,
+        "y": 385,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · 수신기 네트워크 제어에 연결합니다.",
+        "x1": 545,
+        "x2": 715,
+        "y": 245,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "DC 전원 입력",
+        "desc": "DC · 제공된 외부 전원공급장치를 연결합니다.",
+        "x1": 401,
+        "x2": 497,
+        "y": 365,
+        "side": "bottom"
+      }
+    ]
   }
 }
