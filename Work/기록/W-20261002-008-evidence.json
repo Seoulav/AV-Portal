@@ -1,0 +1,478 @@
+{
+  "taskId": "W-20261002-008",
+  "readCommit": "9aadb1b5bf077870d7a9ef81de5af20053fbed68",
+  "products": {
+    "lh115qhfebgxkr": {
+      "baselineSha256": "00255b1bff269e0b4452c8301bd91478fc44aca3b35eac439060c3b2ef15bc48",
+      "verificationReverts": [],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S3",
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 4,
+        "exactModelMatch": "LH115QHFEBGXKR"
+      }
+    },
+    "lh32qmcebgcxkr": {
+      "baselineSha256": "7b9f8d885315c5de5bad013f6f1bb14b60199dfa6bdc5ecc339709f781952282",
+      "verificationReverts": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S3"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 10,
+        "exactModelMatch": "LH32QMCEBGCXKR"
+      }
+    },
+    "lh43qmcebgcxkr": {
+      "baselineSha256": "d146de5004521e81055fe562721a9852fa4d9aeb94c9955bcc7837387c758066",
+      "verificationReverts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 3,
+          "tableLabel": "인터페이스 그림 · IR 입력 표시 1개",
+          "exactModelMatch": "LH43QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 3,
+          "tableLabel": "인터페이스 그림 · RS-232C 입력 표시 1개",
+          "exactModelMatch": "LH43QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 3,
+          "tableLabel": "인터페이스 그림 · RS-232C 출력 표시 1개",
+          "exactModelMatch": "LH43QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 3,
+          "tableLabel": "인터페이스 그림 · RJ45(LAN) 표시 1개",
+          "exactModelMatch": "LH43QMCEBGCXKR",
+          "sourceCode": "S4"
+        }
+      ],
+      "addedSourceCodes": [
+        "S3",
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 10,
+        "exactModelMatch": "LH43QMCEBGCXKR"
+      }
+    },
+    "lh85qmcebgcxkr": {
+      "baselineSha256": "8d4b60892899d3547fad78a083dc27015c862e99da36d3399a93cd3872d98ad9",
+      "verificationReverts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 8,
+          "tableLabel": "인터페이스 그림 · IR 입력 표시 1개",
+          "exactModelMatch": "LH85QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 8,
+          "tableLabel": "인터페이스 그림 · RS-232C 입력 표시 1개",
+          "exactModelMatch": "LH85QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 8,
+          "tableLabel": "인터페이스 그림 · RS-232C 출력 표시 1개",
+          "exactModelMatch": "LH85QMCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "document": "4.단독형_QMC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 8,
+          "tableLabel": "인터페이스 그림 · RJ45(LAN) 표시 1개",
+          "exactModelMatch": "LH85QMCEBGCXKR",
+          "sourceCode": "S4"
+        }
+      ],
+      "addedSourceCodes": [
+        "S3",
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 10,
+        "exactModelMatch": "LH85QMCEBGCXKR"
+      }
+    },
+    "lh98qmcebgcxkr": {
+      "baselineSha256": "bbbefc9c4168fafef15bf0a8fff70d10f1bb2c433ac5308e9e68edd0b4b06e3e",
+      "verificationReverts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S3"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 10,
+        "exactModelMatch": "LH98QMCEBGCXKR"
+      }
+    },
+    "lh43qhcebgcxkr": {
+      "baselineSha256": "4b6aefbaad6526116db3f77ba7c5d16d4185d70d59bc06cf6efcec6272447155",
+      "verificationReverts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 2,
+          "tableLabel": "인터페이스 그림 · IR 입력 표시 1개",
+          "exactModelMatch": "LH43QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 2,
+          "tableLabel": "인터페이스 그림 · RS-232C 입력 표시 1개",
+          "exactModelMatch": "LH43QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 2,
+          "tableLabel": "인터페이스 그림 · RS-232C 출력 표시 1개",
+          "exactModelMatch": "LH43QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 2,
+          "tableLabel": "인터페이스 그림 · RJ45(LAN) 표시 1개",
+          "exactModelMatch": "LH43QHCEBGCXKR",
+          "sourceCode": "S4"
+        }
+      ],
+      "addedSourceCodes": [
+        "S3",
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 12,
+        "exactModelMatch": "LH43QHCEBGCXKR"
+      }
+    },
+    "lh75qhcebgcxkr": {
+      "baselineSha256": "c21360ebb21ae20a962b3d8d81a4c0e7c51c320c8bf495266eb4d6cf28c3e873",
+      "verificationReverts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 6,
+          "tableLabel": "인터페이스 그림 · IR 입력 표시 1개",
+          "exactModelMatch": "LH75QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 6,
+          "tableLabel": "인터페이스 그림 · RS-232C 입력 표시 1개",
+          "exactModelMatch": "LH75QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 6,
+          "tableLabel": "인터페이스 그림 · RS-232C 출력 표시 1개",
+          "exactModelMatch": "LH75QHCEBGCXKR",
+          "sourceCode": "S4"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "document": "5.단독형_QHC.pdf",
+          "publisher": "(주)윈스타비투비",
+          "pageOrSlide": 6,
+          "tableLabel": "인터페이스 그림 · RJ45(LAN) 표시 1개",
+          "exactModelMatch": "LH75QHCEBGCXKR",
+          "sourceCode": "S4"
+        }
+      ],
+      "addedSourceCodes": [
+        "S3",
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 12,
+        "exactModelMatch": "LH75QHCEBGCXKR"
+      }
+    },
+    "lh98qecedgcxkr": {
+      "baselineSha256": "8f2c63c7633df9e0fa66d8e1c4cb03896a6159d700735135d1ee45ca1b04a1dc",
+      "verificationReverts": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        },
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 14,
+        "exactModelMatch": "LH98QECEDGCXKR"
+      }
+    },
+    "lh55vhcrbgbxkr": {
+      "baselineSha256": "b9d32dfa172ef7a15c5a16dbda9463bf5f23e4c86e9077190b3d080846960f22",
+      "verificationReverts": [
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 29,
+        "exactModelMatch": "LH55VHCRBGBXKR"
+      }
+    },
+    "lh55vmcrbgbxkr": {
+      "baselineSha256": "9e38d02939488bca1e90468fee34005f6b7dd61731385cf78940126415761d47",
+      "verificationReverts": [
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "before": "CONFLICTED",
+          "after": "FOUND",
+          "availability": "미지원(사양표 \"No\")",
+          "previousOverseasAvailability": "미지원(사양표 \"No\")"
+        }
+      ],
+      "quantityChanges": [],
+      "addedSourceCodes": [
+        "S4"
+      ],
+      "guide": {
+        "document": "samsungGuide",
+        "slide": 29,
+        "exactModelMatch": "LH55VMCRBGBXKR"
+      }
+    }
+  },
+  "documents": {
+    "samsungGuide": {
+      "publisher": "삼성전자",
+      "name": "[사이니지] 스마트 LCD 사이니지 제품가이드.pptx",
+      "sha256": "347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    "samsung115": {
+      "publisher": "삼성전자",
+      "name": "[사이니지] 스마트 LCD 사이니지_115QHF.pdf",
+      "sha256": "4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962"
+    },
+    "winstarQmc": {
+      "publisher": "(주)윈스타비투비",
+      "name": "4.단독형_QMC.pdf",
+      "sha256": "663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c"
+    },
+    "winstarQhc": {
+      "publisher": "(주)윈스타비투비",
+      "name": "5.단독형_QHC.pdf",
+      "sha256": "67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397"
+    }
+  },
+  "review": {
+    "samsungGuideNumericQuantities": "Slide 4 USB 2 x USB-A; slides 10 and 12 HDMI 입력 3, DP 입력 1 (LH32QMC is -), USB 2; slide 14 HDMI 입력 4, USB 2. All already matched published quantities. Slide 29 omits connectivity.",
+    "differentExistingQuantities": [],
+    "samsung115": "Page 2 USB 2 x USB-A corroborates existing value; no blank quantity.",
+    "winstar": "Four exact-model interface illustrations supply IR input, RS-232C input, RS-232C output and RJ45 one each. Distributor attribution retained.",
+    "excludedModels": [
+      "hg43u800fnfxkr",
+      "hg50u800fnfxkr",
+      "hg65u800fnfxkr",
+      "lh55wmfwbgcxkr",
+      "lh75wmfwlgcxkr"
+    ],
+    "excludedReason": "No exact HG or WMF model in supplied guide; do not transfer WMB/WAF or unrelated MPF data."
+  }
+}

@@ -684,6 +684,16 @@
       "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
       "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
       "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+    },
+    {
+      "code": "S3",
+      "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+      "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 4의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    {
+      "code": "S4",
+      "name": "삼성전자 115QHF 제품 자료 (사용자 제공)",
+      "scope": "국내 모델 LH115QHFEBGXKR 일치 · 2쪽 연결성 USB 2 x USB-A. 원본 사본은 게시하지 않음; SHA-256 4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962"
     }
   ],
   "issues": [
