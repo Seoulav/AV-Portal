@@ -43,6 +43,22 @@ test('G1–G5-qualified maps render with exact PDF pages, model images and origi
   assert.ok(proof.products.vs10.markers.findIndex(m => m.label==='오디오 입력 2') < proof.products.vs10.markers.findIndex(m => m.label==='AUX 출력 1'));
 });
 
+test('DM7 groups repeated XLRs by the three separate rear-panel blocks', () => {
+  const product = read('beta/site/detail/data/dm7.json');
+  const items = product.portMap.items;
+  assert.equal(items.length, 18);
+  assert.deepEqual(items.slice(0, 2).map(({label, desc, x1, x2}) => ({label, desc, x1, x2})), [
+    {label:'아날로그 입력 1–16', desc:'밸런스 XLR 16개 · 1–16번 마이크 또는 라인 레벨 소스를 연결합니다.', x1:1219, x2:1566},
+    {label:'아날로그 입력 17–32', desc:'밸런스 XLR 16개 · 17–32번 마이크 또는 라인 레벨 소스를 연결합니다.', x1:814, x2:1161}
+  ]);
+  assert.equal(items[5].label, '워드 클록 입력');
+  assert.deepEqual(items[6].label, 'OMNI OUT 1–16');
+  assert.deepEqual([items[6].x1, items[6].x2], [421,768]);
+  assert.equal(items[6].desc, '밸런스 XLR 16개 · 아날로그 오디오를 출력합니다.');
+  assert.equal(new Set(items.map(item => item.desc)).size, 18);
+  assert.deepEqual(items.map(item => item.n), Array.from({length:18}, (_, index) => index + 1));
+});
+
 test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs remain unchanged', () => {
   assert.deepEqual(proof.excluded,excluded);
   for (const slug of excluded){const product=read(`beta/site/detail/data/${slug}.json`);assert.equal(product.portMap,undefined);assert.equal(prepareEnhancements(product).portMap,null);}
