@@ -467,7 +467,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Data",
@@ -491,7 +491,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Audio",
@@ -503,7 +503,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Control",
@@ -585,5 +585,29 @@
     "footerNote": "Samsung LH98QECEDGCXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "subtitle": "QEC · UHD 디지털 사이니지",
+  "lead": "**98인치 UHD 사이니지** LH98QECEDGCXKR은 QEC 시리즈의 단독형 디스플레이다. 퀀텀 프로세서 4K의 UHD 업스케일링을 지원한다.",
+  "keyFacts": [
+    {
+      "label": "밝기 · Typ",
+      "value": "450",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "98",
+      "unit": "인치"
+    },
+    {
+      "label": "명암비 · 정적",
+      "value": "5,000:1",
+      "unit": ""
+    }
+  ]
 }

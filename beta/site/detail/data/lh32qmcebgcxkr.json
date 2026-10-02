@@ -480,7 +480,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Data",
@@ -516,7 +516,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Audio",
@@ -610,5 +610,29 @@
     "footerNote": "Samsung LH32QMCEBGCXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "subtitle": "QMC · 디지털 사이니지",
+  "lead": "**32인치 디지털 사이니지** LH32QMCEBGCXKR은 QMC 시리즈의 단독형 디스플레이다. 균일한 베젤로 가로형과 세로형 설치에 대응한다.",
+  "keyFacts": [
+    {
+      "label": "밝기 · Typ",
+      "value": "400",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "1,920 x 1,080",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "32 (80.1)",
+      "unit": "인치(cm)"
+    },
+    {
+      "label": "명암비 · 정적",
+      "value": "4,000:1",
+      "unit": ""
+    }
+  ]
 }

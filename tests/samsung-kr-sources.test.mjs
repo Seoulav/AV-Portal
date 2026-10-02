@@ -23,6 +23,10 @@ test('Samsung Korean business spec audit covers exactly the 15 approved models',
     delete fixed.sources;
     delete fixed.issues;
     delete fixed.verificationSummary;
+    // W-007 adds overview-only fields after this source audit was recorded.
+    delete fixed.lead;
+    delete fixed.subtitle;
+    delete fixed.keyFacts;
     assert.equal(sha(fixed), e.fixedSha256, `${slug}: unrelated product fields`);
     for (const decision of e.rows) {
       const row = p[decision.kind][decision.index];

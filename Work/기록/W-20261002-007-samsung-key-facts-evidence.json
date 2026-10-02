@@ -1,0 +1,909 @@
+{
+  "taskId": "W-20261002-007",
+  "readCommit": "7cdeb5417ff1113c0ab4429b8a88c265b654c7c0",
+  "products": {
+    "hg43u800fnfxkr": {
+      "coreSha256": "0b58b6d78d9f5dfc466e2a0e3db5f0aaa2fd47289e9f71fe0a3afac7d01b36ae",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 8,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "43",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 3,
+          "rowName": "리모컨 종류",
+          "condition": "",
+          "label": "객실 리모컨 · 추가 구매",
+          "value": "멀티 코드 IR 리모컨",
+          "unit": ""
+        },
+        {
+          "kind": "spec",
+          "index": 4,
+          "rowName": "원격 관리 솔루션",
+          "condition": "",
+          "label": "원격 관리 · 별도 구매",
+          "value": "Link Cloud(링크 클라우드)",
+          "unit": ""
+        }
+      ],
+      "conflicts": []
+    },
+    "hg50u800fnfxkr": {
+      "coreSha256": "3b80027592b0a0b61094981a6e5c4d8e16088e25b0412e706d6f64bddc98c5d6",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 7,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "50",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 3,
+          "rowName": "리모컨 종류",
+          "condition": "",
+          "label": "객실 리모컨 · 추가 구매",
+          "value": "멀티 코드 IR 리모컨",
+          "unit": ""
+        },
+        {
+          "kind": "spec",
+          "index": 4,
+          "rowName": "원격 관리 솔루션",
+          "condition": "",
+          "label": "원격 관리 · 별도 구매",
+          "value": "Link Cloud(링크 클라우드)",
+          "unit": ""
+        }
+      ],
+      "conflicts": []
+    },
+    "hg65u800fnfxkr": {
+      "coreSha256": "84e4812769b57ac15f78c8c0147e3b5a349d00f2b5ef436a1a93f8d1b158191d",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 7,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "65",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 3,
+          "rowName": "리모컨 종류",
+          "condition": "",
+          "label": "객실 리모컨 · 추가 구매",
+          "value": "멀티 코드 IR 리모컨",
+          "unit": ""
+        },
+        {
+          "kind": "spec",
+          "index": 4,
+          "rowName": "원격 관리 솔루션",
+          "condition": "",
+          "label": "원격 관리 · 별도 구매",
+          "value": "Link Cloud(링크 클라우드)",
+          "unit": ""
+        }
+      ],
+      "conflicts": []
+    },
+    "lh115qhfebgxkr": {
+      "coreSha256": "b3812b0000d9b48a4488501f6739bf15889a2deb0fb5a6f85aa7ad254ba0f26f",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 15,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "1000",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 13,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "115 (290.7)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 16,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "5,500:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": []
+    },
+    "lh32qmcebgcxkr": {
+      "coreSha256": "a33faf99eb06dc5417e1075b84223fc1b19642c35a26febfa065c13e7b96099f",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 7,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "400",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 5,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "1,920 x 1,080",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "32 (80.1)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 8,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "4,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "DP 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH32QMCEBGCXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh32qmcebgcxza/",
+            "priorCondition": "캐나다 판매 모델 LH32QMCEBGCXZA 공식 사양표 기준(국내 LH32QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH32QMCEBGCXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh32qmcebgcxza/",
+            "priorCondition": "캐나다 판매 모델 LH32QMCEBGCXZA 공식 사양표 기준(국내 LH32QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh43qhcebgcxkr": {
+      "coreSha256": "a1ec0efdbe518e945fb2a3db8254829de579386452513f0ffabaccb3fc533803",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 12,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "700",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 10,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "43 (107.9)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 13,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "4,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH43QHCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH43QHCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qhc-lh43qhcebgcxen/",
+            "priorCondition": "영국 판매 모델 LH43QHCEBGCXEN 공식 사양표 기준(국내 LH43QHCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh43qmcebgcxkr": {
+      "coreSha256": "5d2d52039354f73dcd0a10d36eec7c676fe3a49b91734c4c429f4636090a8418",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 11,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "500",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 9,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "43 (107.9)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 12,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "4,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (LH43QMCEBGCXGO)",
+            "url": "https://www.samsung.com/latin_en/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh43qmcebgcxgo/",
+            "priorCondition": "카리브(latin_en) 판매 모델 LH43QMCEBGCXGO 공식 사양표 기준(국내 LH43QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh75qhcebgcxkr": {
+      "coreSha256": "37e22df113dc67133da5b71a23898b9b663f34ec402ab7d83b2bce610b6e6190",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 12,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "700",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 10,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "75 (189.3)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 13,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "4,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH75QHCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qhc-lh75qhcebgcxen/",
+            "priorCondition": "영국 판매 모델 LH75QHCEBGCXEN 공식 사양표 기준(국내 LH75QHCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh85qmcebgcxkr": {
+      "coreSha256": "3296a6e604ce1e6a0809cf03009af1837b99f975c4e73a50d3ea35b02c584ee3",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 11,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "500",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 9,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "85 (214.7)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 12,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "4,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH85QMCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH85QMCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh85qmcebgcxen/",
+            "priorCondition": "영국 판매 모델 LH85QMCEBGCXEN 공식 사양표 기준(국내 LH85QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh98qecedgcxkr": {
+      "coreSha256": "8e479909d753f8607b84107541f69f0b90a0a4409a74b863a31eb70a8c9e214d",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 6,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "450",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 4,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "98",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 7,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "5,000:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "DP 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 뉴질랜드 비즈니스 제품 페이지 사양표 (LH98QECEDGCXXY)",
+            "url": "https://www.samsung.com/nz/business/smart-signage/uhd-4k-signage/98-inch-uhd-signage-qe98c-lh98qecedgcxxy/",
+            "priorCondition": "뉴질랜드 판매 모델 LH98QECEDGCXXY 공식 사양표 기준(국내 LH98QECEDGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        },
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "IR 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 뉴질랜드 비즈니스 제품 페이지 사양표 (LH98QECEDGCXXY)",
+            "url": "https://www.samsung.com/nz/business/smart-signage/uhd-4k-signage/98-inch-uhd-signage-qe98c-lh98qecedgcxxy/",
+            "priorCondition": "뉴질랜드 판매 모델 LH98QECEDGCXXY 공식 사양표 기준(국내 LH98QECEDGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 뉴질랜드 비즈니스 제품 페이지 사양표 (LH98QECEDGCXXY)",
+            "url": "https://www.samsung.com/nz/business/smart-signage/uhd-4k-signage/98-inch-uhd-signage-qe98c-lh98qecedgcxxy/",
+            "priorCondition": "뉴질랜드 판매 모델 LH98QECEDGCXXY 공식 사양표 기준(국내 LH98QECEDGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh98qmcebgcxkr": {
+      "coreSha256": "e42a4e998c852cc20ff63f900b91ffad496338c7c9a48457a288e2af497484f9",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 12,
+          "rowName": "밝기(Typ)",
+          "condition": "",
+          "label": "밝기 · Typ",
+          "value": "500",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 10,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "98 (247.7)",
+          "unit": "인치(cm)"
+        },
+        {
+          "kind": "spec",
+          "index": 13,
+          "rowName": "명암비(정적)",
+          "condition": "",
+          "label": "명암비 · 정적",
+          "value": "5,500:1",
+          "unit": ""
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "오디오 입력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/"
+          },
+          "overseas": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH98QMCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/98inch-uhd-signage-qm98c-lh98qmcebgcxen/",
+            "priorCondition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh55vhcrbgbxkr": {
+      "coreSha256": "760758ad3e7d9175fc7743f9a84997f340182498feb5caedd833af1096b89959",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 2,
+          "rowName": "밝기",
+          "condition": "자사 실험치",
+          "label": "밝기 · 자사 실험치",
+          "value": "최대 700",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 9,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "1,920 x 1,080",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "55",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 1,
+          "rowName": "베젤 폭(베젤투베젤)",
+          "condition": "",
+          "label": "베젤 폭 · 베젤투베젤",
+          "value": "0.88",
+          "unit": "mm"
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "전원 출력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+          },
+          "overseas": {
+            "code": "S3",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VHCRBGBXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vhc-r-razor-narrow-bezel-video-wall-fhd-1080p-700nit-ip5x-088mm-lh55vhcrbgbxza/",
+            "priorCondition": "캐나다 판매 모델 LH55VHCRBGBXZA 공식 사양표 기준(국내 LH55VHCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 영국 페이지(S2)는 같은 위치 항목명이 \"Video Out\"으로 중복 표기되어 S3 기준으로 기록",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh55vmcrbgbxkr": {
+      "coreSha256": "9208e2e26683b7813cecb0d78dc0adc4fb200a4ce6ba12a69f41b41d66985728",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 2,
+          "rowName": "밝기",
+          "condition": "자사 실험치",
+          "label": "밝기 · 자사 실험치",
+          "value": "최대 500",
+          "unit": "nit"
+        },
+        {
+          "kind": "spec",
+          "index": 9,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "1,920 x 1,080",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "55",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 1,
+          "rowName": "베젤 폭(베젤투베젤)",
+          "condition": "",
+          "label": "베젤 폭 · 베젤투베젤",
+          "value": "0.88",
+          "unit": "mm"
+        }
+      ],
+      "conflicts": [
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "beforeVerification": "FOUND",
+          "afterVerification": "CONFLICTED",
+          "existingSource": "P",
+          "quantity": "",
+          "korean": {
+            "label": "전원 출력",
+            "value": "없음",
+            "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+          },
+          "overseas": {
+            "code": "S3",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VMCRBGBXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vmc-r-razor-narrow-bezel-video-wall-fhd-1080p-500nit-ip5x-088mm-lh55vmcrbgbxza/",
+            "priorCondition": "캐나다 판매 모델 LH55VMCRBGBXZA 공식 사양표 기준(국내 LH55VMCRBGBXKR와 기본 모델 동일, 지역 코드만 상이); 영국 페이지(S2)는 같은 위치 항목명이 \"Video Out\"으로 중복 표기되어 S3 기준으로 기록",
+            "priorAvailability": "미지원(사양표 \"No\")",
+            "priorQuantity": ""
+          },
+          "interpretation": "과거 해외 출처를 단 행과 한국 공식 행 모두 미지원/없음이다. 지역 간 있음/없음 충돌은 미확인이다. CONFLICTED는 미지원 단자 행이 공개 연결 단자 목록에 남아 있는 표현상 불일치를 드러내며, 삭제 여부는 사용자 판단 대기다."
+        }
+      ]
+    },
+    "lh55wmfwbgcxkr": {
+      "coreSha256": "72239bc5cec46a1d6023c6fd93de6e4322505f35aa8f928aa3a5b423888f8a2f",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 10,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "55",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 39,
+          "rowName": "터치 방식",
+          "condition": "",
+          "label": "터치 방식",
+          "value": "IR",
+          "unit": ""
+        },
+        {
+          "kind": "spec",
+          "index": 2,
+          "rowName": "펜 반응 속도",
+          "condition": "",
+          "label": "펜 반응 속도",
+          "value": "26",
+          "unit": "ms"
+        }
+      ],
+      "conflicts": []
+    },
+    "lh75wmfwlgcxkr": {
+      "coreSha256": "54cd10c9932b073f9e23f709c8c0f20339e452bd5457b0f93c4efff1d8cea165",
+      "facts": [
+        {
+          "kind": "spec",
+          "index": 10,
+          "rowName": "해상도",
+          "condition": "",
+          "label": "해상도",
+          "value": "3,840 x 2,160",
+          "unit": "픽셀"
+        },
+        {
+          "kind": "spec",
+          "index": 0,
+          "rowName": "화면 크기",
+          "condition": "",
+          "label": "화면 크기",
+          "value": "75",
+          "unit": "인치"
+        },
+        {
+          "kind": "spec",
+          "index": 38,
+          "rowName": "터치 방식",
+          "condition": "",
+          "label": "터치 방식",
+          "value": "IR",
+          "unit": ""
+        },
+        {
+          "kind": "spec",
+          "index": 2,
+          "rowName": "펜 반응 속도",
+          "condition": "",
+          "label": "펜 반응 속도",
+          "value": "26",
+          "unit": "ms"
+        }
+      ],
+      "conflicts": []
+    }
+  }
+}

@@ -1,0 +1,450 @@
+[
+  {
+    "slug": "lh32qmcebgcxkr",
+    "width": 1280,
+    "title": "Samsung LH32QMCEBGCXKR · AV Portal Product Detail",
+    "labels": [
+      {
+        "text": "밝기 · Typ",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 69.5,
+          "y": 389.078125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 389.078125,
+          "right": 198.5,
+          "bottom": 405.015625,
+          "left": 69.5
+        },
+        "parent": {
+          "x": 57.5,
+          "y": 379.078125,
+          "width": 153,
+          "height": 57.125,
+          "top": 379.078125,
+          "right": 210.5,
+          "bottom": 436.203125,
+          "left": 57.5
+        }
+      },
+      {
+        "text": "해상도",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 230.5,
+          "y": 389.078125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 389.078125,
+          "right": 359.5,
+          "bottom": 405.015625,
+          "left": 230.5
+        },
+        "parent": {
+          "x": 218.5,
+          "y": 379.078125,
+          "width": 153,
+          "height": 57.125,
+          "top": 379.078125,
+          "right": 371.5,
+          "bottom": 436.203125,
+          "left": 218.5
+        }
+      },
+      {
+        "text": "화면 크기",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 69.5,
+          "y": 454.203125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 454.203125,
+          "right": 198.5,
+          "bottom": 470.140625,
+          "left": 69.5
+        },
+        "parent": {
+          "x": 57.5,
+          "y": 444.203125,
+          "width": 153,
+          "height": 76.3125,
+          "top": 444.203125,
+          "right": 210.5,
+          "bottom": 520.515625,
+          "left": 57.5
+        }
+      },
+      {
+        "text": "명암비 · 정적",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 230.5,
+          "y": 454.203125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 454.203125,
+          "right": 359.5,
+          "bottom": 470.140625,
+          "left": 230.5
+        },
+        "parent": {
+          "x": 218.5,
+          "y": 444.203125,
+          "width": 153,
+          "height": 76.3125,
+          "top": 444.203125,
+          "right": 371.5,
+          "bottom": 520.515625,
+          "left": 218.5
+        }
+      }
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "conflictCards": 2,
+    "cardVisible": true,
+    "jsErrors": []
+  },
+  {
+    "slug": "lh32qmcebgcxkr",
+    "width": 390,
+    "title": "Samsung LH32QMCEBGCXKR · AV Portal Product Detail",
+    "labels": [
+      {
+        "text": "밝기 · Typ",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 47,
+          "y": 373.078125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 373.078125,
+          "right": 179,
+          "bottom": 389.015625,
+          "left": 47
+        },
+        "parent": {
+          "x": 35,
+          "y": 363.078125,
+          "width": 156,
+          "height": 57.125,
+          "top": 363.078125,
+          "right": 191,
+          "bottom": 420.203125,
+          "left": 35
+        }
+      },
+      {
+        "text": "해상도",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 211,
+          "y": 373.078125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 373.078125,
+          "right": 343,
+          "bottom": 389.015625,
+          "left": 211
+        },
+        "parent": {
+          "x": 199,
+          "y": 363.078125,
+          "width": 156,
+          "height": 57.125,
+          "top": 363.078125,
+          "right": 355,
+          "bottom": 420.203125,
+          "left": 199
+        }
+      },
+      {
+        "text": "화면 크기",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 47,
+          "y": 438.203125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 438.203125,
+          "right": 179,
+          "bottom": 454.140625,
+          "left": 47
+        },
+        "parent": {
+          "x": 35,
+          "y": 428.203125,
+          "width": 156,
+          "height": 57.125,
+          "top": 428.203125,
+          "right": 191,
+          "bottom": 485.328125,
+          "left": 35
+        }
+      },
+      {
+        "text": "명암비 · 정적",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 211,
+          "y": 438.203125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 438.203125,
+          "right": 343,
+          "bottom": 454.140625,
+          "left": 211
+        },
+        "parent": {
+          "x": 199,
+          "y": 428.203125,
+          "width": 156,
+          "height": 57.125,
+          "top": 428.203125,
+          "right": 355,
+          "bottom": 485.328125,
+          "left": 199
+        }
+      }
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "conflictCards": 2,
+    "cardVisible": true,
+    "jsErrors": []
+  },
+  {
+    "slug": "lh98qecedgcxkr",
+    "width": 1280,
+    "title": "Samsung LH98QECEDGCXKR · AV Portal Product Detail",
+    "labels": [
+      {
+        "text": "밝기 · Typ",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 69.5,
+          "y": 399.078125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 399.078125,
+          "right": 198.5,
+          "bottom": 415.015625,
+          "left": 69.5
+        },
+        "parent": {
+          "x": 57.5,
+          "y": 389.078125,
+          "width": 153,
+          "height": 57.125,
+          "top": 389.078125,
+          "right": 210.5,
+          "bottom": 446.203125,
+          "left": 57.5
+        }
+      },
+      {
+        "text": "해상도",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 230.5,
+          "y": 399.078125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 399.078125,
+          "right": 359.5,
+          "bottom": 415.015625,
+          "left": 230.5
+        },
+        "parent": {
+          "x": 218.5,
+          "y": 389.078125,
+          "width": 153,
+          "height": 57.125,
+          "top": 389.078125,
+          "right": 371.5,
+          "bottom": 446.203125,
+          "left": 218.5
+        }
+      },
+      {
+        "text": "화면 크기",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 69.5,
+          "y": 464.203125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 464.203125,
+          "right": 198.5,
+          "bottom": 480.140625,
+          "left": 69.5
+        },
+        "parent": {
+          "x": 57.5,
+          "y": 454.203125,
+          "width": 153,
+          "height": 57.125,
+          "top": 454.203125,
+          "right": 210.5,
+          "bottom": 511.328125,
+          "left": 57.5
+        }
+      },
+      {
+        "text": "명암비 · 정적",
+        "client": 129,
+        "scroll": 129,
+        "rect": {
+          "x": 230.5,
+          "y": 464.203125,
+          "width": 129,
+          "height": 15.9375,
+          "top": 464.203125,
+          "right": 359.5,
+          "bottom": 480.140625,
+          "left": 230.5
+        },
+        "parent": {
+          "x": 218.5,
+          "y": 454.203125,
+          "width": 153,
+          "height": 57.125,
+          "top": 454.203125,
+          "right": 371.5,
+          "bottom": 511.328125,
+          "left": 218.5
+        }
+      }
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "conflictCards": 3,
+    "cardVisible": true,
+    "jsErrors": []
+  },
+  {
+    "slug": "lh98qecedgcxkr",
+    "width": 390,
+    "title": "Samsung LH98QECEDGCXKR · AV Portal Product Detail",
+    "labels": [
+      {
+        "text": "밝기 · Typ",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 47,
+          "y": 395.078125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 395.078125,
+          "right": 179,
+          "bottom": 411.015625,
+          "left": 47
+        },
+        "parent": {
+          "x": 35,
+          "y": 385.078125,
+          "width": 156,
+          "height": 57.125,
+          "top": 385.078125,
+          "right": 191,
+          "bottom": 442.203125,
+          "left": 35
+        }
+      },
+      {
+        "text": "해상도",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 211,
+          "y": 395.078125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 395.078125,
+          "right": 343,
+          "bottom": 411.015625,
+          "left": 211
+        },
+        "parent": {
+          "x": 199,
+          "y": 385.078125,
+          "width": 156,
+          "height": 57.125,
+          "top": 385.078125,
+          "right": 355,
+          "bottom": 442.203125,
+          "left": 199
+        }
+      },
+      {
+        "text": "화면 크기",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 47,
+          "y": 460.203125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 460.203125,
+          "right": 179,
+          "bottom": 476.140625,
+          "left": 47
+        },
+        "parent": {
+          "x": 35,
+          "y": 450.203125,
+          "width": 156,
+          "height": 57.125,
+          "top": 450.203125,
+          "right": 191,
+          "bottom": 507.328125,
+          "left": 35
+        }
+      },
+      {
+        "text": "명암비 · 정적",
+        "client": 132,
+        "scroll": 132,
+        "rect": {
+          "x": 211,
+          "y": 460.203125,
+          "width": 132,
+          "height": 15.9375,
+          "top": 460.203125,
+          "right": 343,
+          "bottom": 476.140625,
+          "left": 211
+        },
+        "parent": {
+          "x": 199,
+          "y": 450.203125,
+          "width": 156,
+          "height": 57.125,
+          "top": 450.203125,
+          "right": 355,
+          "bottom": 507.328125,
+          "left": 199
+        }
+      }
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": [],
+    "conflictCards": 3,
+    "cardVisible": true,
+    "jsErrors": []
+  }
+]

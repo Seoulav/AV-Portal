@@ -23,6 +23,7 @@ test('connector cards show direction alone when port count is unknown, while the
 
 test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported counts blank', () => {
   const evidence = read('Work/기록/W-20261002-006-io-port-counts-evidence.json');
+  const laterAudit = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
   assert.deepEqual(Object.keys(evidence.products), targets);
   let unknown = 0;
   let filled = 0;
@@ -31,8 +32,15 @@ test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported c
     const e = evidence.products[slug];
     assert.equal(e.url, p.sources.find(source => source.code === 'P').url);
     assert.match(e.url, /^https:\/\/www\.samsung\.com\/sec\/business\//);
-    assert.equal(sha(p), e.baselineSha256, `${slug}: product data must be unchanged when no count is proven`);
-    const withoutQuantity = {...p, io: p.io.map(({quantity, ...row}) => row)};
+    // W-007 adds overview fields and flags 12 connector-existence conflicts.
+    // Reconstruct the W-006 snapshot so its original quantity audit remains locked.
+    const snapshot = structuredClone(p);
+    delete snapshot.lead;
+    delete snapshot.subtitle;
+    delete snapshot.keyFacts;
+    for (const conflict of laterAudit.products[slug].conflicts) snapshot.io[conflict.index].verification = conflict.beforeVerification;
+    assert.equal(sha(snapshot), e.baselineSha256, `${slug}: W-006 product snapshot`);
+    const withoutQuantity = {...snapshot, io: snapshot.io.map(({quantity, ...row}) => row)};
     assert.equal(sha(withoutQuantity), e.coreSha256, `${slug}: fields outside io quantity`);
     const blankRows = p.io.flatMap((row, index) => row.quantity ? [] : [index]);
     assert.deepEqual(e.rows.map(row => row.index), blankRows);

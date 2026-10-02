@@ -581,7 +581,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     }
   ],
   "sources": [
@@ -639,5 +639,29 @@
     "footerNote": "Samsung LH55VHCRBGBXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**55인치 비디오월 모듈** LH55VHCRBGBXKR은 VHC-R 시리즈 제품이다. 균일 베젤과 데이지 체인으로 다중 화면을 구성한다.",
+  "subtitle": "VHC-R · 비디오월",
+  "keyFacts": [
+    {
+      "label": "밝기 · 자사 실험치",
+      "value": "최대 700",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "1,920 x 1,080",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "55",
+      "unit": "인치"
+    },
+    {
+      "label": "베젤 폭 · 베젤투베젤",
+      "value": "0.88",
+      "unit": "mm"
+    }
+  ]
 }
