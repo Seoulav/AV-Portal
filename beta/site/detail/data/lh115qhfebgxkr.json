@@ -10,7 +10,7 @@
   ],
   "english": "Samsung standalone large-format signage (QHFX), 115-inch, 34.1mm ultra-slim with Quantum Mini LED Pro, 4.2.2ch 60W built-in speakers and 24/7 operation.",
   "korean": "삼성 단독형 대형 사이니지(QHFX) 115인치 모델로, 두께 34.1mm에 퀀텀 Mini LED 프로와 4.2.2채널 60W 내장 스피커, 24시간 연속 운영을 지원한다.",
-  "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH115QHFEBGXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 9개를 국내 공식 출처로 재확인했다. 한국 페이지에 해당 값이 없는 35개 행은 해외 지역 사양표 출처를 유지하고 대조표에 근거를 기록했다.",
+  "verificationSummary": "2026-10-02 삼성전자 국내 공식 제품 페이지와 사용자 제공 국내 사양서 3건을 확인했다. 해외 지역 출처는 삭제했다. 국내 자료로 확인되지 않은 기존 사양 27행과 단자 8행은 값을 보존하고 REVIEW REQUIRED로 표시한다. 미확인 단자 수량은 비웠다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "LH115QHFEBGXKR(QHFX)은 삼성전자의 단독형 초대형 사이니지 115인치(290.7cm) 모델로, 하이엔드 매장, 대형 컨퍼런스룸, 영화관, 실내 경기장 등 다양한 상업 공간을 위한 압도적인 비주얼 경험을 목표로 설계됐다. 가로형·세로형 설치를 모두 지원하며, 24시간 365일 안정적으로 운영되도록 설계됐다.\n\n290.7cm 초대형 화면임에도 두께 34.1mm의 초슬림 디자인을 구현했으며, 삼성의 퀀텀 Mini LED 프로(기존 LED 대비 1/50 크기의 초소형 LED, 퀀텀 매트릭스 테크놀로지 프로로 정밀 제어)로 디테일과 명암비를 정교하게 표현한다. 슈퍼 픽처 인핸서와 4K AI 업스케일링 Pro로 초대형 화면에 최적화된 화질을 제공하며, 안티글레어 패널로 밝은 환경에서도 반사를 최소화한다.\n\n4.2.2채널 60W의 강력한 내장 스피커로 별도 스피커 없이도 풍부한 오디오를 구현하고, 디렉터 모드·DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드, 커스텀 홈(회의실 설정 고정), 스마트 캘리브레이션(갤럭시 특정 모델 지원), Tizen 엔터프라이즈 플랫폼, 삼성 Knox 보안을 갖췄다.",
   "images": [
@@ -239,8 +239,8 @@
       "name": "패널 종류",
       "value": "VA",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -248,8 +248,8 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -257,8 +257,8 @@
       "name": "픽셀 피치(HxV)",
       "value": "0.630 x 0.630",
       "unit": "mm",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -266,8 +266,8 @@
       "name": "밝기(Typ)",
       "value": "1000",
       "unit": "nit",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -275,8 +275,8 @@
       "name": "명암비(정적)",
       "value": "5,500:1",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -284,8 +284,8 @@
       "name": "시야각(H/V)",
       "value": "178/178",
       "unit": "°",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -293,8 +293,8 @@
       "name": "응답 속도",
       "value": "6.5",
       "unit": "ms",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -302,8 +302,8 @@
       "name": "색재현율",
       "value": "93% (DCI-P3)",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -311,8 +311,8 @@
       "name": "패널 헤이즈(Haze)",
       "value": "25",
       "unit": "%",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -320,8 +320,8 @@
       "name": "수평 주사 주파수",
       "value": "15 - 135 kHz",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -329,8 +329,8 @@
       "name": "최대 픽셀 주파수",
       "value": "1.188 GHz",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -338,8 +338,8 @@
       "name": "수직 주사 주파수",
       "value": "24 - 120 Hz",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -347,8 +347,8 @@
       "name": "동적 명암비",
       "value": "Mega",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -356,8 +356,8 @@
       "name": "Wi-Fi",
       "value": "있음",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -365,8 +365,8 @@
       "name": "블루투스",
       "value": "있음",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -374,8 +374,8 @@
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -392,8 +392,8 @@
       "name": "소비전력(대기/Sleep 모드)",
       "value": "0.5",
       "unit": "W",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -446,8 +446,8 @@
       "name": "동작 습도",
       "value": "20 - 95% (Operating)",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -455,8 +455,8 @@
       "name": "VESA 규격",
       "value": "1000 x 600",
       "unit": "mm",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -464,8 +464,8 @@
       "name": "베젤 폭(사양표)",
       "value": "3 Bezel-less",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -473,8 +473,8 @@
       "name": "베젤 색상",
       "value": "TITAN BLACK",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -482,8 +482,8 @@
       "name": "프레임 재질",
       "value": "Non-Glossy(Metal)",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -491,8 +491,8 @@
       "name": "옵션 벽걸이 마운트",
       "value": "Slim Fit Wall-mount (기본 동봉)",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -500,8 +500,8 @@
       "name": "옵션 스탠드",
       "value": "Yes(기본 동봉)",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -509,8 +509,8 @@
       "name": "운영체제 버전",
       "value": "Tizen 8.0",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -518,8 +518,8 @@
       "name": "내장 플래시 메모리",
       "value": "16GB",
       "unit": "",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -545,9 +545,54 @@
       "name": "대각 크기(사양표 실측)",
       "value": "114.4818",
       "unit": "인치",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Display",
+      "name": "밝기(최대)",
+      "value": "1000",
+      "unit": "nit",
+      "condition": "자사 실험치 기준 · 실사용 환경에 따라 차이",
+      "source": "S5",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "디스플레이 기술",
+      "value": "Neo QLED",
+      "unit": "",
+      "condition": "",
+      "source": "S5",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "SmartThings",
+      "value": "Thing",
+      "unit": "",
+      "condition": "",
+      "source": "S5",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player Support",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "S5",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "방수/방진",
+      "value": "IP 5X",
+      "unit": "",
+      "condition": "",
+      "source": "S5",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -568,11 +613,11 @@
       "connector": "HDMI",
       "signal": "비디오/오디오 입력",
       "direction": "IN",
-      "quantity": "3",
+      "quantity": "",
       "protocol": "HDMI",
       "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -580,11 +625,11 @@
       "connector": "DisplayPort",
       "signal": "비디오 입력",
       "direction": "IN",
-      "quantity": "1",
+      "quantity": "",
       "protocol": "DisplayPort",
       "availability": "DP 버전 1.4",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -607,8 +652,8 @@
       "quantity": "",
       "protocol": "IR",
       "availability": "있음",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -619,8 +664,8 @@
       "quantity": "",
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -631,8 +676,8 @@
       "quantity": "",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -643,8 +688,8 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -655,8 +700,8 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     },
     {
@@ -667,8 +712,8 @@
       "quantity": "",
       "protocol": "Ethernet",
       "availability": "있음",
-      "condition": "",
-      "source": "S2",
+      "condition": "국내 자료 미확보",
+      "source": "",
       "verification": "REVIEW REQUIRED"
     }
   ],
@@ -680,12 +725,6 @@
       "scope": "국내 모델 LH115QHFEBGXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교) / 화질 처리: PC 연결·게임 모드에는 적용되지 않을 수 있음 / 전문가 모드: 프로페셔널 모드 내장 / 화면 보정: 특정 모바일 기기에서만 지원"
     },
     {
-      "code": "S2",
-      "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
-      "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
-      "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
-    },
-    {
       "code": "S3",
       "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
       "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 4의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
@@ -694,6 +733,11 @@
       "code": "S4",
       "name": "삼성전자 115QHF 제품 자료 (사용자 제공)",
       "scope": "국내 모델 LH115QHFEBGXKR 일치 · 2쪽 연결성 USB 2 x USB-A. 원본 사본은 게시하지 않음; SHA-256 4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962"
+    },
+    {
+      "code": "S5",
+      "name": "삼성전자 스마트 LCD 사이니지 115QHF 제품 사양서 (사용자 제공)",
+      "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 1 제품 특징, 슬라이드 2 사양표. 원본 사본은 게시하지 않음; SHA-256 b8062a55a9cc7693af424e9510a92995f12dee1c817ad2645d05506c66e16b42"
     }
   ],
   "issues": [
@@ -706,8 +750,8 @@
     {
       "code": "SPEC-REGION",
       "status": "REVIEW REQUIRED",
-      "title": "정량 사양은 해외 지역 모델(LH115QHFEBGXEN) 공식 사양표 기준",
-      "detail": "2026-10-02 국내 상세 스펙 탭을 확인해 일치하는 행은 P로 재지정했다. 국내 페이지에 없는 35개 행은 해외 지역 출처를 유지했고, 행별 내역은 W-20261002-005 대조표 참조."
+      "title": "국내 자료 미확보 사양·단자 검토 필요",
+      "detail": "해외 지역 페이지 출처를 삭제했다. 국내 자료로 확인되지 않은 기존 사양 27행과 단자 8행의 값은 보존하되 REVIEW REQUIRED로 표시하고 단자 수량은 비웠다. 국내 사용자 제공 자료로 확인한 별도 항목은 국내 출처로 기록했다."
     }
   ],
   "presentation": {
@@ -723,6 +767,11 @@
   "subtitle": "QHFX · UHD 디지털 사이니지",
   "lead": "**115인치 초대형 사이니지** LH115QHFEBGXKR은 QHFX 시리즈의 단독형 디스플레이다. 가로형과 세로형 설치 및 연속 운영을 지원한다.",
   "keyFacts": [
+    {
+      "label": "밝기 · 최대",
+      "value": "1000",
+      "unit": "nit"
+    },
     {
       "label": "화면 크기",
       "value": "115 (290.7)",

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
+import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -14,7 +15,7 @@ test('Samsung Korean business spec audit covers the 14 still-published models', 
   // Keep W-005's original 15-model evidence unchanged.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = beforeSamsungSourceCleanup(read(`beta/site/detail/data/${slug}.json`), slug);
+    const p = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(read(`beta/site/detail/data/${slug}.json`), slug), slug);
     const e = evidence.products[slug];
     const source = p.sources.find(s => s.code === 'P');
     assert.equal(source.url, e.koreanUrl);
@@ -55,7 +56,7 @@ test('regional TV power and RF input values follow the Korean model spec tab', (
     ['hg50u800fnfxkr','AC220-240V~ 50/60Hz','155','57.4'],
     ['hg65u800fnfxkr','AC 220-240 V ~ 50/60Hz','240','73.8']
   ]) {
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungForeignPurge(read(`beta/site/detail/data/${slug}.json`), slug);
     const spec = name => p.specifications.find(r => r.name === name);
     assert.equal(spec('전원 사양').value, power);
     assert.equal(spec('소비전력(최대)').value, max);
@@ -79,7 +80,7 @@ test('provenance notices leave condition fields and remain in named sources and 
       assert.doesNotMatch(row.condition || '', /판매 모델.*공식 사양표 기준|지역 코드만 상이|운영사 확인/);
     }
     // W-008 adds exact-model local documents; this W-005 check covers only its overseas-source notices.
-    for (const source of p.sources.filter(s => s.code !== 'P' && !(later.products[slug]?.addedSourceCodes ?? []).includes(s.code))) {
+    for (const source of p.sources.filter(s => s.code !== 'P' && s.code !== 'S5' && !(later.products[slug]?.addedSourceCodes ?? []).includes(s.code))) {
       assert.match(source.name + ' ' + source.scope, /해외|영국|캐나다|카리브|뉴질랜드|홍콩/);
       assert.match(source.scope, /한국 페이지 미기재/);
     }

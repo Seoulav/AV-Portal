@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
+import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 
 const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
@@ -38,7 +39,7 @@ test('Samsung quantity audit covers 82 active unknown rows and preserves the 87-
     assert.match(e.url, /^https:\/\/www\.samsung\.com\/sec\/business\//);
     // W-007 adds overview fields and flags 12 connector-existence conflicts.
     // Reconstruct the W-006 snapshot so its original quantity audit remains locked.
-    const snapshot = beforeSamsungSourceCleanup(p, slug);
+    const snapshot = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(p, slug), slug);
     delete snapshot.lead;
     delete snapshot.subtitle;
     delete snapshot.keyFacts;
