@@ -315,5 +315,42 @@
     "footerNote": "Ross Video ULTRITOUCH-2-HR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ultritouch-2-hr-rear.webp",
+      "width": 1600,
+      "height": 800
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "ENET1",
+        "desc": "RJ-45 · 제어 네트워크를 연결합니다.",
+        "x1": 1034,
+        "x2": 1077,
+        "y": 459,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "AC 어댑터 입력 PWR1",
+        "desc": "DC · 첫 번째 전원 공급장치를 연결합니다.",
+        "x1": 1044,
+        "x2": 1087,
+        "y": 308,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "AC 어댑터 입력 PWR2",
+        "desc": "DC · 두 번째 전원 공급장치를 연결합니다.",
+        "x1": 1044,
+        "x2": 1087,
+        "y": 352,
+        "side": "bottom"
+      }
+    ]
   }
 }

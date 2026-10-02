@@ -348,5 +348,60 @@
     "footerNote": "Yamaha Rio3224-D3 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "rio3224-d3-rear.webp",
+      "width": 1084,
+      "height": 515
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "Dante PRIMARY",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결입니다.",
+        "x1": 127,
+        "x2": 168,
+        "y": 80,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "Dante SECONDARY",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결입니다.",
+        "x1": 189,
+        "x2": 230,
+        "y": 80,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "NETWORK",
+        "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결합니다.",
+        "x1": 266,
+        "x2": 308,
+        "y": 81,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "AC 전원 입력 A",
+        "desc": "IEC · 전원 코드 A를 연결합니다.",
+        "x1": 175,
+        "x2": 233,
+        "y": 385,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "AC 전원 입력 B",
+        "desc": "IEC · 전원 코드 B를 연결합니다.",
+        "x1": 289,
+        "x2": 347,
+        "y": 385,
+        "side": "top"
+      }
+    ]
   }
 }
