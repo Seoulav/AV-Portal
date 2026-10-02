@@ -24,6 +24,7 @@ test('connector cards show direction alone when port count is unknown, while the
 test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported counts blank', () => {
   const evidence = read('Work/기록/W-20261002-006-io-port-counts-evidence.json');
   const laterAudit = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
+  const currentAudit = read('Work/기록/W-20261002-008-evidence.json');
   assert.deepEqual(Object.keys(evidence.products), targets);
   let unknown = 0;
   let filled = 0;
@@ -38,15 +39,17 @@ test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported c
     delete snapshot.lead;
     delete snapshot.subtitle;
     delete snapshot.keyFacts;
+    for (const change of currentAudit.products[slug]?.quantityChanges ?? []) snapshot.io[change.index].quantity = change.before;
+    snapshot.sources = snapshot.sources.filter(source => !(currentAudit.products[slug]?.addedSourceCodes ?? []).includes(source.code));
     for (const conflict of laterAudit.products[slug].conflicts) snapshot.io[conflict.index].verification = conflict.beforeVerification;
     assert.equal(sha(snapshot), e.baselineSha256, `${slug}: W-006 product snapshot`);
     const withoutQuantity = {...snapshot, io: snapshot.io.map(({quantity, ...row}) => row)};
     assert.equal(sha(withoutQuantity), e.coreSha256, `${slug}: fields outside io quantity`);
-    const blankRows = p.io.flatMap((row, index) => row.quantity ? [] : [index]);
+    const blankRows = snapshot.io.flatMap((row, index) => row.quantity ? [] : [index]);
     assert.deepEqual(e.rows.map(row => row.index), blankRows);
     for (const row of e.rows) {
-      assert.equal(p.io[row.index].connector, row.connector);
-      assert.equal(p.io[row.index].quantity, row.after);
+      assert.equal(snapshot.io[row.index].connector, row.connector);
+      assert.equal(snapshot.io[row.index].quantity, row.after);
       assert.equal(row.before, '');
       assert.ok(['NOT_STATED','PRESENT_NO_COUNT','NOT_PHYSICAL','SAYS_NONE','OTHER_CONNECTOR_ONLY'].includes(row.decision));
       if (row.decision === 'SAYS_NONE') assert.equal(row.officialValue, '없음');
