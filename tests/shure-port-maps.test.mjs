@@ -1,0 +1,60 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {prepareEnhancements, portMapImageMatches} from '../prototype/brc-am7/detail-enhancements.mjs';
+
+const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
+const read = path => JSON.parse(bytes(path));
+const sha = value => createHash('sha256').update(value).digest('hex');
+const proof = read('Work/기록/W-20261002-001-shure-port-map-evidence.json');
+const target = ['mxcw640', 'mxcwapt-w', 'qlxd4', 'slxd4-plus', 'slxd4d-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
+const approved = ['qlxd4', 'slxd4-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
+
+// Missing maps, unsupported keys, or wrong measured dimensions must not silently become fallback.
+test('six evidence-qualified Shure models render maps tied to PDF pages and measured Rear images', () => {
+  assert.deepEqual(Object.keys(proof.products), approved);
+  for (const [slug, e] of Object.entries(proof.products)) {
+    const product = read(`beta/site/detail/data/${slug}.json`);
+    const map = prepareEnhancements(product).portMap;
+    assert.ok(map, `${slug}: required map must survive renderer validation`);
+    assert.equal(sha(bytes('beta/site/' + e.pdf)), e.pdfSha256, slug + ' PDF');
+    assert.deepEqual(map.items, e.markers.map(({pages, ...item}) => item));
+    assert.deepEqual(map.items.map(item => item.n), map.items.map((_, index) => index + 1));
+    const image = product.images.find(image => image.role === 'Rear');
+    assert.equal(image.file, e.image.file);
+    assert.equal(sha(bytes('beta/site/detail/images/' + image.file)), e.image.sha256);
+    assert.deepEqual(map.measuredImage, {file: image.file, width: e.image.width, height: e.image.height});
+    assert.ok(portMapImageMatches(image, e.image.width, e.image.height, map), slug + ' image match');
+    for (const item of e.markers) {
+      assert.ok(item.pages.length && item.pages.every(page => Number.isInteger(page) && page > 0 && page <= e.pageCount));
+      assert.ok(item.x1 >= 0 && item.x2 > item.x1 && item.x2 <= e.image.width);
+      assert.ok(Number.isFinite(item.y) && item.y >= 0 && item.y <= e.image.height);
+    }
+    delete product.portMap;
+    assert.equal(sha(JSON.stringify(product)), e.coreSha256, slug + ' original values');
+  }
+  assert.equal(proof.products.ulxd4d.markers.length, 11);
+  assert.equal(proof.products.ua864a.markers.filter(item => item.label.startsWith('RF 출력')).length, 1);
+  assert.equal(proof.products.ulxd4q.markers.filter(item => item.label.startsWith('오디오 출력')).length, 4);
+});
+
+test('Shure models that lack sufficient evidence keep photo fallback and all 235 protected JSON files remain unchanged', () => {
+  assert.deepEqual(proof.excluded, ['slxd1-plus', 'ulxd1', 'mxa925w-r', 'ua844-swb', 'ua845uwb', 'mxcw640', 'mxcwapt-w', 'slxd4d-plus']);
+  for (const slug of proof.excluded) {
+    const product = read(`beta/site/detail/data/${slug}.json`);
+    assert.equal(product.portMap, undefined, slug);
+    assert.equal(prepareEnhancements(product).portMap, null, slug + ' fallback');
+  }
+  assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length, 6);
+  assert.equal(Object.keys(proof.preservedProducts).length, 235);
+  for (const [file, hash] of Object.entries(proof.preservedProducts)) {
+    assert.equal(sha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected bytes');
+  }
+});
+
+test('Shure mapping preserves published source images, PDFs and catalog bytes', () => {
+  for (const [path, hash] of Object.entries(proof.assets)) {
+    assert.equal(sha(bytes('beta/site/' + path)), hash, path);
+  }
+});

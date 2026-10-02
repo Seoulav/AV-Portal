@@ -720,5 +720,69 @@
     "footerNote": "Shure SLXD4+ Digital Wireless Receiver · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "slxd4-plus-rear.webp",
+      "width": 2000,
+      "height": 1340
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 입력 A",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 1720,
+        "x2": 1860,
+        "y": 1230,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "안테나 입력 B",
+        "desc": "BNC · 수신용 안테나를 연결합니다.",
+        "x1": 123,
+        "x2": 267,
+        "y": 1230,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력 1",
+        "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결합니다.",
+        "x1": 1210,
+        "x2": 1390,
+        "y": 1010,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "오디오 출력 1 · TRS",
+        "desc": "6.35mm TRS · 악기/보조 입력에 연결하는 임피던스 밸런스 출력입니다.",
+        "x1": 1503,
+        "x2": 1595,
+        "y": 1205,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · 수신기 네트워크 제어에 연결합니다.",
+        "x1": 554,
+        "x2": 701,
+        "y": 1090,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "DC 전원 입력",
+        "desc": "DC · 제공된 외부 전원공급장치를 연결합니다.",
+        "x1": 385,
+        "x2": 475,
+        "y": 1190,
+        "side": "bottom"
+      }
+    ]
   }
 }
