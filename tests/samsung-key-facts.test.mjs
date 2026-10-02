@@ -9,6 +9,7 @@ const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebg
 
 test('15 Samsung overview cards use verified product rows and preserve all existing fields', () => {
   const evidence = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
+  const later = read('Work/기록/W-20261002-008-evidence.json');
   assert.deepEqual(Object.keys(evidence.products), targets);
   for (const slug of targets) {
     const p = read(`beta/site/detail/data/${slug}.json`);
@@ -33,7 +34,10 @@ test('15 Samsung overview cards use verified product rows and preserve all exist
       assert.equal(row.name, proof.rowName);
       assert.equal(row.condition || '', proof.condition);
     }
-    const original = {...p};
+    const original = structuredClone(p);
+    // Reconstruct the W-007 snapshot before W-008 restored verification and added document-backed quantities/sources.
+    for (const change of later.products[slug]?.quantityChanges ?? []) original.io[change.index].quantity = change.before;
+    original.sources = original.sources.filter(source => !(later.products[slug]?.addedSourceCodes ?? []).includes(source.code));
     delete original.lead;
     delete original.subtitle;
     delete original.keyFacts;
@@ -42,7 +46,7 @@ test('15 Samsung overview cards use verified product rows and preserve all exist
   }
 });
 
-test('12 Korean none connector rows retain their provenance and display conflict badges', () => {
+test('12 Korean none connector rows retain their provenance after W-008 corrects the mistaken conflict state', () => {
   const evidence = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
   let count = 0;
   for (const [slug, e] of Object.entries(evidence.products)) {
@@ -50,7 +54,7 @@ test('12 Korean none connector rows retain their provenance and display conflict
     for (const c of e.conflicts) {
       const row = p.io[c.index];
       assert.equal(row.connector, c.connector);
-      assert.equal(row.verification, 'CONFLICTED');
+      assert.equal(row.verification, 'FOUND');
       assert.notEqual(row.quantity, '0');
       assert.equal(c.korean.value, '없음');
       assert.match(c.korean.url, /^https:\/\/www\.samsung\.com\/sec\/business\//);

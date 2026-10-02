@@ -480,7 +480,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "CONFLICTED"
+      "verification": "FOUND"
     },
     {
       "group": "Data",
@@ -516,7 +516,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "CONFLICTED"
+      "verification": "FOUND"
     },
     {
       "group": "Audio",
@@ -579,6 +579,11 @@
       "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH32QMCEBGCXZA)",
       "url": "https://www.samsung.com/ca/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh32qmcebgcxza/",
       "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+    },
+    {
+      "code": "S3",
+      "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+      "scope": "국내 모델 LH32QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
     }
   ],
   "issues": [

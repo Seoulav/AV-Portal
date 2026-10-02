@@ -7,6 +7,7 @@ const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.u
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qecedgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 const evidence = read('Work/기록/W-20261002-005-samsung-sources-evidence.json');
+const documentAudit = read('Work/기록/W-20261002-008-evidence.json');
 
 test('Samsung Korean business spec audit covers exactly the 15 approved models', () => {
   assert.deepEqual(Object.keys(evidence.products), targets);
@@ -29,7 +30,12 @@ test('Samsung Korean business spec audit covers exactly the 15 approved models',
     delete fixed.keyFacts;
     assert.equal(sha(fixed), e.fixedSha256, `${slug}: unrelated product fields`);
     for (const decision of e.rows) {
-      const row = p[decision.kind][decision.index];
+      const row = {...p[decision.kind][decision.index]};
+      // Compare W-005's historical quantity against its state before W-008 document evidence.
+      if (decision.kind === 'io') {
+        const later = documentAudit.products[slug]?.quantityChanges.find(change => change.index === decision.index);
+        if (later) row.quantity = later.before;
+      }
       assert.equal(row.source, decision.after.source, `${slug}: ${decision.kind}[${decision.index}] source`);
       assert.equal(row[decision.field], decision.after.value, `${slug}: ${decision.kind}[${decision.index}] value`);
       assert.equal(row.condition, decision.after.condition, `${slug}: ${decision.kind}[${decision.index}] condition`);
@@ -62,6 +68,7 @@ test('regional TV power and RF input values follow the Korean model spec tab', (
 });
 
 test('provenance notices leave condition fields and remain in named sources and audit', () => {
+  const later = read('Work/기록/W-20261002-008-evidence.json');
   for (const slug of targets) {
     const p = read(`beta/site/detail/data/${slug}.json`);
     const e = evidence.products[slug];
@@ -69,7 +76,8 @@ test('provenance notices leave condition fields and remain in named sources and 
     for (const row of [...p.specifications,...p.io]) {
       assert.doesNotMatch(row.condition || '', /판매 모델.*공식 사양표 기준|지역 코드만 상이|운영사 확인/);
     }
-    for (const source of p.sources.filter(s => s.code !== 'P')) {
+    // W-008 adds exact-model local documents; this W-005 check covers only its overseas-source notices.
+    for (const source of p.sources.filter(s => s.code !== 'P' && !(later.products[slug]?.addedSourceCodes ?? []).includes(s.code))) {
       assert.match(source.name + ' ' + source.scope, /해외|영국|캐나다|카리브|뉴질랜드|홍콩/);
       assert.match(source.scope, /한국 페이지 미기재/);
     }

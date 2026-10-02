@@ -1,6 +1,6 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-map-review';
 import { portMapImageMatches, portMapDisplayWidth } from './detail-enhancements.mjs?v=w20261001-001-map-review';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone } from './product-detail-model.mjs?v=w20261001-001-map-review';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone, connectorPresentation, isAbsentConnector } from './product-detail-model.mjs?v=w20261001-001-map-review';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -320,18 +320,20 @@ if (!productKey) {
     if (rear.sourceUrl) $('#rear-connector-source').href = safeLink(rear.sourceUrl, '').href;
     else $('#rear-connector-source').hidden = true;
   }
-  $('#io-count').textContent = `${data.io.length}개 연결 항목`;
+  $('#io-count').textContent = `${data.io.length - data.absentConnectors.length}개 연결 항목`;
   for (const group of data.connectorGroups) for (const item of group.entries) {
-    const port = element('div', 'pg-port');
-    port.dataset.signal = connectorSignalTone(item);
-    port.append(element('strong', '', item.displayConnector));
-    port.append(element('span', 'port-direction', item.portCount === '미확인' ? item.directionLabel : [item.directionLabel, `포트 ${item.portCount}`].join(' · ')));
-    port.append(element('small', '', item.channelSignal));
-    const condition = element('small', 'port-condition', item.specificationCondition === '—' ? '' : item.specificationCondition);
-    if (condition.textContent) port.append(condition);
-    for (const flag of item.flags) port.append(element('small', 'port-flag', flag));
-    if (item.verification === 'CONFLICTED') port.append(badge(item.verification));
-    $('#port-grid').append(port);
+    if (!isAbsentConnector(item)) {
+      const port = element('div', 'pg-port');
+      port.dataset.signal = connectorSignalTone(item);
+      port.append(element('strong', '', item.displayConnector));
+      port.append(element('span', 'port-direction', item.portCount === '미확인' ? item.directionLabel : [item.directionLabel, `포트 ${item.portCount}`].join(' · ')));
+      port.append(element('small', '', item.channelSignal));
+      const condition = element('small', 'port-condition', item.specificationCondition === '—' ? '' : item.specificationCondition);
+      if (condition.textContent) port.append(condition);
+      for (const flag of item.flags) port.append(element('small', 'port-flag', flag));
+      if (item.verification === 'CONFLICTED') port.append(badge(item.verification));
+      $('#port-grid').append(port);
+    }
 
     const row = element('tr');
     const name = element('td', '', item.displayConnector);
@@ -341,6 +343,15 @@ if (!productKey) {
     conditions.append(badge(item.verification ?? 'REVIEW REQUIRED'));
     row.append(element('td', '', group.label), name, element('td', '', item.directionLabel), element('td', '', item.portCount), element('td', '', item.channelSignal), conditions);
     $('#connector-table-body').append(row);
+  }
+  if (data.absentConnectors.length) {
+    const notice = element('div', 'source-row');
+    notice.append(
+      element('strong', '', '이 모델에 없는 단자'),
+      element('span', '', data.absentConnectors.map(item => connectorPresentation(item).displayConnector).join(' · ')),
+      element('p', '', '제조사 사양표 기준')
+    );
+    $('#io-table-details').before(notice);
   }
 
   if (enhancements.signalFlow) {
