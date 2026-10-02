@@ -1,0 +1,114 @@
+[
+  {
+    "path": "catalog.json",
+    "status": 200,
+    "localSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+    "publicSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+    "byteEqual": true
+  },
+  {
+    "path": "search-index.json",
+    "status": 200,
+    "localSha256": "4b373e1071dacad2cce917ddb2369886a3b83048966607c99a08b56ccf4f3baf",
+    "publicSha256": "4b373e1071dacad2cce917ddb2369886a3b83048966607c99a08b56ccf4f3baf",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/hg43u800fnfxkr.json",
+    "status": 200,
+    "localSha256": "217f3810dbffc315d40b5056307bd438af97b3d04c7da6c2773518f55945e4eb",
+    "publicSha256": "217f3810dbffc315d40b5056307bd438af97b3d04c7da6c2773518f55945e4eb",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/hg50u800fnfxkr.json",
+    "status": 200,
+    "localSha256": "c70f235e90b6e4f73f5963eed7a8cd81e5e24c9f8427987eb3ebbbccf808a32a",
+    "publicSha256": "c70f235e90b6e4f73f5963eed7a8cd81e5e24c9f8427987eb3ebbbccf808a32a",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/hg65u800fnfxkr.json",
+    "status": 200,
+    "localSha256": "6575c9259772da1f0c4b3a221659b2f185b04bb72d25a23c7687b897015d8116",
+    "publicSha256": "6575c9259772da1f0c4b3a221659b2f185b04bb72d25a23c7687b897015d8116",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh115qhfebgxkr.json",
+    "status": 200,
+    "localSha256": "de4b666c7dc90938851a883556a99405d9163198453ff62910da676f8fdad9d8",
+    "publicSha256": "de4b666c7dc90938851a883556a99405d9163198453ff62910da676f8fdad9d8",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh32qmcebgcxkr.json",
+    "status": 200,
+    "localSha256": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+    "publicSha256": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh43qhcebgcxkr.json",
+    "status": 200,
+    "localSha256": "86f3445599cea5aac252f6b81e685935d2329ebcb9a3582593a1d259328fec66",
+    "publicSha256": "86f3445599cea5aac252f6b81e685935d2329ebcb9a3582593a1d259328fec66",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh43qmcebgcxkr.json",
+    "status": 200,
+    "localSha256": "5eb5f58c84a533b73f1bf272b56601b4c46c7ff01984b03215c316d821dbbc31",
+    "publicSha256": "5eb5f58c84a533b73f1bf272b56601b4c46c7ff01984b03215c316d821dbbc31",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh55vhcrbgbxkr.json",
+    "status": 200,
+    "localSha256": "22a678c3be4102ac1044907249038fd85238e2d0ff499223f7875cb2ec1ecc1c",
+    "publicSha256": "22a678c3be4102ac1044907249038fd85238e2d0ff499223f7875cb2ec1ecc1c",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh55vmcrbgbxkr.json",
+    "status": 200,
+    "localSha256": "4e4b9a630e1a4ab96d2d8d49298fbeec3a846dda8876a3c6f33ae3f237d4f9fd",
+    "publicSha256": "4e4b9a630e1a4ab96d2d8d49298fbeec3a846dda8876a3c6f33ae3f237d4f9fd",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh55wmfwbgcxkr.json",
+    "status": 200,
+    "localSha256": "5d4ee0ed3ee404c03ed42675c32cf2438a8929921036716e294ce5547e981702",
+    "publicSha256": "5d4ee0ed3ee404c03ed42675c32cf2438a8929921036716e294ce5547e981702",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh75qhcebgcxkr.json",
+    "status": 200,
+    "localSha256": "cf9519784c6d71621d87b151c3faeb51d98f27878e2df0f6aed6406f766561cc",
+    "publicSha256": "cf9519784c6d71621d87b151c3faeb51d98f27878e2df0f6aed6406f766561cc",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh75wmfwlgcxkr.json",
+    "status": 200,
+    "localSha256": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+    "publicSha256": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh85qmcebgcxkr.json",
+    "status": 200,
+    "localSha256": "d110c8c5a60000c257ec7f7c01dbe10cc40a8f12e15f72f1f0dcc1e899b9bdcc",
+    "publicSha256": "d110c8c5a60000c257ec7f7c01dbe10cc40a8f12e15f72f1f0dcc1e899b9bdcc",
+    "byteEqual": true
+  },
+  {
+    "path": "detail/data/lh98qmcebgcxkr.json",
+    "status": 200,
+    "localSha256": "90c941a8e200e535ce44c755c181a119af67a911cc084bb63aff972ce99bcec5",
+    "publicSha256": "90c941a8e200e535ce44c755c181a119af67a911cc084bb63aff972ce99bcec5",
+    "byteEqual": true
+  }
+]
