@@ -1,0 +1,415 @@
+{
+  "mergeSha": "2f6ade2c41532eb344254312c9f60b250ecc59f6",
+  "base": "https://seoulav.github.io/AV-Portal/",
+  "products": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "jsonBytes": 21749,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "jsonBytes": 20605,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "jsonBytes": 20611,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "jsonBytes": 21888,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "jsonBytes": 18541,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "jsonBytes": 20436,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "jsonBytes": 20574,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "jsonBytes": 20092,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "jsonBytes": 20539,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "jsonBytes": 18290,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "jsonBytes": 19408,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "jsonBytes": 21281,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "jsonBytes": 21037,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "jsonBytes": 20314,
+      "jsonMatchesMerge": true
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "jsonBytes": 20348,
+      "jsonMatchesMerge": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg43u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 38
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg43u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 38
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg50u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 37
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg50u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 37
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg65u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 37
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=hg65u800fnfxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 37
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh115qhfebgxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 48
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh115qhfebgxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 48
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh32qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 39
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh32qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 39
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qhcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qhcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75qhcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75qhcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh85qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh85qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 44
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh98qecedgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 38
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh98qecedgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 38
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh98qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 43
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh98qmcebgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 43
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55vhcrbgbxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 36
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55vhcrbgbxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 36
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55vmcrbgbxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 36
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55vmcrbgbxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 36
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 42
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 0,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 42
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 41
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr&merge=2f6ade2c41532eb344254312c9f60b250ecc59f6#specifications",
+      "conditions": 1,
+      "foreignNotices": 0,
+      "koreanSource": true,
+      "overflow": 0,
+      "brokenImages": 0,
+      "rows": 41
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}
