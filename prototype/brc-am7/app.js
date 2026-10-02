@@ -326,7 +326,7 @@ if (!productKey && !allowContentFallback) {
     const port = element('div', 'pg-port');
     port.dataset.signal = connectorSignalTone(item);
     port.append(element('strong', '', item.displayConnector));
-    port.append(element('span', 'port-direction', [item.directionLabel, item.portCount === '미확인' ? '포트 수 미확인' : `포트 ${item.portCount}`].join(' · ')));
+    port.append(element('span', 'port-direction', item.portCount === '미확인' ? item.directionLabel : [item.directionLabel, `포트 ${item.portCount}`].join(' · ')));
     port.append(element('small', '', item.channelSignal));
     const condition = element('small', 'port-condition', item.specificationCondition === '—' ? '' : item.specificationCondition);
     if (condition.textContent) port.append(condition);
