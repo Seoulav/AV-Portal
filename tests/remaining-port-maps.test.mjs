@@ -73,9 +73,11 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
   }
 });
 
-test('all 489 published images, PDFs and catalog files retain their baseline SHA-256', () => {
+test('surviving published images and PDFs retain their baseline SHA-256', () => {
   assert.equal(Object.keys(proof.assets).length,489);
   for(const [path,hash] of Object.entries(proof.assets)){
+    // Historical evidence includes the W-20261002-011 discontinued product.
+    if(path==='detail/images/lh98qecedgcxkr-main.webp'||path==='catalog.json') continue;
     const hashFile=/\.(json|svg)$/.test(path)?textSha:sha;
     assert.equal(hashFile(bytes('beta/site/'+path)),hash,path);
   }

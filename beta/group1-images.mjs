@@ -557,9 +557,6 @@ export const group1Images = {
   lh85qmcebgcxkr: [
     image('Main', 'lh85qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 정면', 'Samsung', 'LH85QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/9124bf3b-fa36-43fc-b25b-460d045ba5e7.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
-  lh98qecedgcxkr: [
-    image('Main', 'lh98qecedgcxkr-main.webp', '단독형 UHD E 시리즈 98인치 정면', 'Samsung', 'LH98QECEDGCXKR', 'https://images.samsung.com/kdp/goods/2024/08/26/619b8046-e8f2-4617-a3b7-65559d31ea30.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
-  ],
   lh98qmcebgcxkr: [
     image('Main', 'lh98qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 첫번째 이미지', 'Samsung', 'LH98QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2024/10/14/eb43a1c6-2c2d-4277-99c3-af1da01b2272.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
@@ -1064,7 +1061,6 @@ export const cardImages = {
   lh32qmcebgcxkr: 'lh32qmcebgcxkr-main.webp',
   lh43qmcebgcxkr: 'lh43qmcebgcxkr-main.webp',
   lh85qmcebgcxkr: 'lh85qmcebgcxkr-main.webp',
-  lh98qecedgcxkr: 'lh98qecedgcxkr-main.webp',
   lh98qmcebgcxkr: 'lh98qmcebgcxkr-main.webp',
   lh43qhcebgcxkr: 'lh43qhcebgcxkr-main.webp',
   lh75qhcebgcxkr: 'lh75qhcebgcxkr-main.webp',

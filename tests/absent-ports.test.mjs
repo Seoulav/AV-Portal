@@ -8,10 +8,12 @@ const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.u
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const absentValue = value => ['미지원(사양표 "No")','Not available'].includes(String(value || '').trim());
 
-test('A: 12 unsupported Samsung connector rows return to FOUND without changing availability', () => {
+test('A: 9 published Samsung connector rows remain FOUND; historical evidence stays intact', () => {
   const prior = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
+  assert.equal(Object.values(prior.products).reduce((total, product) => total + product.conflicts.length, 0), 12);
   let count = 0;
   for (const [slug, product] of Object.entries(prior.products)) {
+    if (slug === 'lh98qecedgcxkr') continue;
     const p = read(`beta/site/detail/data/${slug}.json`);
     for (const conflict of product.conflicts) {
       const row = p.io[conflict.index];
@@ -23,7 +25,7 @@ test('A: 12 unsupported Samsung connector rows return to FOUND without changing 
       count++;
     }
   }
-  assert.equal(count, 12);
+  assert.equal(count, 9);
 });
 
 test('B: only availability-absent ports leave cards; functional limits remain', async () => {
@@ -43,7 +45,8 @@ test('B: only availability-absent ports leave cards; functional limits remain', 
       else if (/미지원/i.test(`${row.availability || ''} ${row.condition || ''}`)) functional++;
     }
   }
-  assert.equal(absent, 14);
+  assert.equal(absent, 11);
+  // Eight condition notes plus one GSM4212P availability note limit a real port.
   assert.equal(functional, 9);
   const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
   assert.match(app, /data\.io\.length - data\.absentConnectors\.length/);
@@ -58,6 +61,7 @@ test('C: quantity changes come only from model-specific supplied documents', () 
   assert.equal(Object.keys(evidence.products).length, 10);
   let filled = 0;
   for (const [slug, e] of Object.entries(evidence.products)) {
+    if (slug === 'lh98qecedgcxkr') continue;
     const p = read(`beta/site/detail/data/${slug}.json`);
     for (const change of e.quantityChanges) {
       const row = p.io[change.index];

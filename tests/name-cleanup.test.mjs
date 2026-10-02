@@ -76,7 +76,7 @@ test('renamed catalog categories preserve home top-category counts and filter me
     ['audio', 116],
     ['video', 62],
     ['camera-conference', 30],
-    ['display-projection', 38],
+    ['display-projection', 37], // W-20261002-011 excluded discontinued LH98QEC.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);
