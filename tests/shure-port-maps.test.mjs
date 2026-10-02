@@ -11,6 +11,7 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
 const proof = read('Work/기록/W-20261002-001-shure-port-map-evidence.json');
 const remaining = read('Work/기록/W-20261002-002-port-map-evidence.json');
+const samsung = read('Work/기록/W-20261002-005-samsung-sources-evidence.json');
 const target = ['mxcw640', 'mxcwapt-w', 'qlxd4', 'slxd4-plus', 'slxd4d-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 const approved = ['qlxd4', 'slxd4-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 
@@ -53,7 +54,11 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
   assert.equal(Object.keys(proof.preservedProducts).length, 235);
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {
     const later = remaining.products[file.slice(0,-5)];
-    if (later) {
+    const samsungLater = samsung.products[file.slice(0,-5)];
+    if (samsungLater) {
+      // W-20261002-005 audit verifies the revised Samsung rows independently.
+      assert.equal(samsungLater.previousFileSha256,hash,file+' prior approved Git bytes');
+    } else if (later) {
       assert.equal(later.previousFileSha256,hash,file+' prior approved Git bytes');
       const product = read('beta/site/detail/data/' + file);
       delete product.portMap;
