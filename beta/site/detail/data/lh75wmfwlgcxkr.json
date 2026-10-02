@@ -10,7 +10,7 @@
   ],
   "english": "Samsung Flip Pro interactive whiteboard display, 75-inch, with 26ms/2048-level pressure pen, 450 nits, 43.5mm slim depth, SmartView+ and Knox security.",
   "korean": "삼성 Flip Pro 전자칠판 75인치 모델로, 반응속도 26ms·2,048단계 필압 펜, 450니트 밝기, 43.5mm 슬림 두께, 스마트뷰+, Knox 보안을 지원한다.",
-  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) Flip Pro 제품 페이지에서 마케팅 사양을 확인했다(55인치 모델과 동일 마케팅 템플릿, 두께 수치는 75인치 모델 고유). 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH75WMFWLGCXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 37개를 국내 공식 출처로 재확인했다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "LH75WMFWLGCXKR은 삼성전자의 전자칠판(인터랙티브 디스플레이) Flip Pro 75인치 모델이다. 반응 속도 26ms, 2,048단계 압력 감지 펜으로 실제 잉크에 가까운 자연스러운 필기 경험을 제공하며, 손가락과 손바닥으로 바로 지울 수 있는 지우개 기능을 지원한다. 향상된 성능의 화이트보드 앱에서는 AI 필기 도구로 손글씨 텍스트 검색과 손그림 도형의 자동 정리 기능을 제공한다.\n\nFlip Home에서 화이트보드, Note On, 워크스페이스, 화면 공유 등 자주 쓰는 앱을 배치해 빠르게 실행할 수 있고, 멀티 윈도우 모드로 여러 창을 동시에 표시할 수 있다. 최대 9대 기기까지 케이블 없이 연결하는 스마트뷰+와 에어플레이 2로 무선 화면 공유가 가능하며, Knox 기반 보안 워크스페이스로 원격 PC·네트워크 드라이브 접속과 Office 365 등 클라우드 앱 실행을 지원한다.\n\n450니트 밝기와 눈부심 방지 코팅으로 밝은 회의실에서도 선명한 화면을 유지하며, 43.5mm의 슬림한 두께로 대형 모델임에도 공간 활용도를 높였다. USB-C 허브와 HDMI 출력으로 외부 기기·대형 화면과의 연결도 간편하다.",
   "images": [
@@ -140,8 +140,8 @@
       "name": "밝기",
       "value": "450",
       "unit": "nit",
-      "condition": "유리 미장착 기준(영국 판매 모델 공식 사양표 S2 \"450 (w/o glass)\")",
-      "source": "P, S2",
+      "condition": "유리 미장착",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -185,7 +185,7 @@
       "name": "무선 화면 공유",
       "value": "스마트뷰+ (최대 9대 기기)",
       "unit": "",
-      "condition": "Windows, Android, iOS 지원",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -203,7 +203,7 @@
       "name": "보안",
       "value": "삼성 Knox (Knox 기반 워크스페이스)",
       "unit": "",
-      "condition": "원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요)",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -212,8 +212,8 @@
       "name": "패널 종류",
       "value": "VA",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -221,8 +221,8 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -230,8 +230,8 @@
       "name": "픽셀 피치(HxV)",
       "value": "0.430 x 0.430",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -239,8 +239,8 @@
       "name": "명암비(정적)",
       "value": "4,000:1 (유리 미장착)",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -248,8 +248,8 @@
       "name": "시야각(H/V)",
       "value": "178/178",
       "unit": "°",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -257,8 +257,8 @@
       "name": "응답 속도",
       "value": "8",
       "unit": "ms",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -266,8 +266,8 @@
       "name": "색재현율",
       "value": "72% (NTSC)",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -275,8 +275,8 @@
       "name": "패널 헤이즈(Haze)",
       "value": "2 (유리 미장착)",
       "unit": "%",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -284,8 +284,8 @@
       "name": "수평 주사 주파수",
       "value": "30 - 81 kHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -293,8 +293,8 @@
       "name": "최대 픽셀 주파수",
       "value": "148.5 MHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -302,8 +302,8 @@
       "name": "수직 주사 주파수",
       "value": "48 - 75 Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -311,8 +311,8 @@
       "name": "운영 시간",
       "value": "12/7 (일 시간/주 일수)",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -320,8 +320,8 @@
       "name": "Wi-Fi",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -329,8 +329,8 @@
       "name": "블루투스",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -338,8 +338,8 @@
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -347,8 +347,8 @@
       "name": "소비전력(On 모드)",
       "value": "385",
       "unit": "W",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -356,8 +356,8 @@
       "name": "크기(가로x높이x깊이)",
       "value": "1735.4 x 1038.5 x 83.7",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이); 국내 페이지(P) \"제품 두께 43.5mm\"와 깊이 값 불일치(이슈 참조)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -365,8 +365,8 @@
       "name": "포장 크기(가로x높이x깊이)",
       "value": "1885 x 1171 x 210",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -374,8 +374,8 @@
       "name": "중량",
       "value": "53.6",
       "unit": "kg",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -383,8 +383,8 @@
       "name": "중량(포장 포함)",
       "value": "64.5",
       "unit": "kg",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -392,8 +392,8 @@
       "name": "동작 온도",
       "value": "0 - 40 ℃",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -401,8 +401,8 @@
       "name": "동작 습도",
       "value": "10 - 80% (결로 없음)",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -410,8 +410,8 @@
       "name": "VESA 규격",
       "value": "400 x 400",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -419,8 +419,8 @@
       "name": "베젤 폭(사양표)",
       "value": "23.5",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -428,8 +428,8 @@
       "name": "베젤 색상",
       "value": "Gray White",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -437,8 +437,8 @@
       "name": "프레임 재질",
       "value": "Non-Glossy(Plastic)",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -446,8 +446,8 @@
       "name": "옵션 벽걸이 마운트",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -455,8 +455,8 @@
       "name": "운영체제 버전",
       "value": "Tizen 9.0",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -464,8 +464,8 @@
       "name": "내장 플래시 메모리",
       "value": "64GB",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -473,8 +473,8 @@
       "name": "터치 방식",
       "value": "IR",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -482,8 +482,8 @@
       "name": "EMC 등급",
       "value": "Class A",
       "unit": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     }
   ],
@@ -496,7 +496,7 @@
       "quantity": "",
       "protocol": "USB-C",
       "availability": "",
-      "condition": "카메라, 문서 리더기 등 연결",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -508,7 +508,7 @@
       "quantity": "",
       "protocol": "HDMI",
       "availability": "",
-      "condition": "대형 디스플레이·프로젝터로 미러링",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -520,8 +520,8 @@
       "quantity": "2",
       "protocol": "HDMI",
       "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -532,8 +532,8 @@
       "quantity": "2 (전면 1, 후면 1)",
       "protocol": "USB",
       "availability": "",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -544,8 +544,8 @@
       "quantity": "",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -556,8 +556,8 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -568,23 +568,23 @@
       "quantity": "",
       "protocol": "Ethernet",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH75WMFWLGCXEN 공식 사양표 기준(국내 LH75WMFWLGCXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     }
   ],
   "sources": [
     {
       "code": "P",
-      "name": "제조사 공식 제품 페이지",
+      "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/",
-      "scope": "제조사 공식 출처"
+      "scope": "국내 모델 LH75WMFWLGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 무선 화면 공유: Windows, Android, iOS 지원 / 보안: 원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요) / USB-C 허브: 카메라, 문서 리더기 등 연결 / HDMI 출력: 대형 디스플레이·프로젝터로 미러링"
     },
     {
       "code": "S2",
       "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH75WMFWLGCXEN)",
       "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-75-inch-wmfx-lh75wmfwlgcxen/",
-      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
+      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     }
   ],
   "issues": [
@@ -592,7 +592,7 @@
       "code": "SPEC-AJAX",
       "status": "RESOLVED",
       "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
-      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
     },
     {
       "code": "ROTATE-NOTE",
@@ -602,9 +602,9 @@
     },
     {
       "code": "SPEC-REGION",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "정량 사양은 해외 지역 모델(LH75WMFWLGCXEN) 공식 사양표 기준",
-      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+      "detail": "2026-10-02 국내 상세 스펙 탭에서 기존 해외 출처 행을 모두 재확인하고 국내 출처(P)로 재지정했다. 지역별 값 차이는 W-20261002-005 대조표에 기록했다."
     },
     {
       "code": "DEPTH-CONFLICT",

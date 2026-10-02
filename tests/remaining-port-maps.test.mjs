@@ -9,6 +9,7 @@ const read = path => JSON.parse(bytes(path));
 const sha = value => createHash('sha256').update(value).digest('hex');
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
 const proof = read('Work/기록/W-20261002-002-port-map-evidence.json');
+const samsung = read('Work/기록/W-20261002-005-samsung-sources-evidence.json');
 const target = ['dm7','rio1608-d3','rio3224-d3','tio1608-d2','gs728tppv3','gsm4212p','vs10','vs5','ultripower','ultritouch-2-hr','ki-pro-go2','blu-50v2','rally-mic-pod-hub','novastar-h2','srg-x40uh'];
 const excluded = ['rio1608-d3','rally-mic-pod-hub'];
 const approved = target.filter(slug => !excluded.includes(slug));
@@ -64,7 +65,12 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
   for (const slug of excluded){const product=read(`beta/site/detail/data/${slug}.json`);assert.equal(product.portMap,undefined);assert.equal(prepareEnhancements(product).portMap,null);}
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length,13);
   assert.equal(Object.keys(proof.preservedProducts).length,227);
-  for(const [file,hash] of Object.entries(proof.preservedProducts))assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
+  for(const [file,hash] of Object.entries(proof.preservedProducts)){
+    // W-20261002-005 updates only Samsung provenance; its new audit locks the current rows.
+    const later = samsung.products[file.slice(0,-5)];
+    if (later) assert.equal(later.previousFileSha256,hash,file+' prior approved Git bytes');
+    else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
+  }
 });
 
 test('all 489 published images, PDFs and catalog files retain their baseline SHA-256', () => {

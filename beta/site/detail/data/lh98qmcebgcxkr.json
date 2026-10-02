@@ -10,7 +10,7 @@
   ],
   "english": "Samsung standalone UHD M-series digital signage (QM98C), 98-inch, 48.1mm thin / 56.3kg with side-mounted connectors and Tizen OS.",
   "korean": "삼성 단독형 UHD M 시리즈(QM98C) 디지털 사이니지 98인치 모델로, 두께 48.1mm·무게 56.3kg의 슬림한 사양과 측면 단자 설계를 갖췄다.",
-  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) QMC 98인치 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH98QMCEBGCXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 42개를 국내 공식 출처로 재확인했다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "LH98QMCEBGCXKR(QM98C)은 삼성전자의 단독형 UHD M 시리즈 디지털 사이니지 98인치 초대형 모델이다. 247.7cm 대화면으로 베젤을 최소화해 몰입도 높은 콘텐츠 경험을 제공하며, 두께 48.1mm·무게 56.3kg의 슬림하고 콤팩트한 사양에 측면 단자 디자인을 적용해 벽면 밀착 설치로 공간 효율을 높였다. 4면에 동일한 베젤 사이즈를 적용해 가로·세로 모드에서도 일관된 화질을 유지한다.\n\n퀀텀 프로세서 Lite 4K와 논글레어 패널로 다양한 조명 환경에서도 뛰어난 가시성을 제공하며, 10억 가지 색상의 다이내믹 크리스탈 컬러로 생생한 화질을 구현한다. 삼성 Tizen OS 기반으로 안정성·보안 체계를 갖췄고, 업그레이드된 홈 UI, 무선 화면 공유 스마트 뷰+, 모바일 앱 기반 스마트 캘리브레이션 등 운영 편의 기능을 제공한다.",
   "images": [
@@ -163,7 +163,7 @@
       "name": "제품 무게",
       "value": "56.3",
       "unit": "kg",
-      "condition": "스탠드/포장 제외 기준 명시 없음",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -172,7 +172,7 @@
       "name": "단자 배치",
       "value": "측면 단자 디자인",
       "unit": "",
-      "condition": "벽면 밀착 설치를 위한 설계",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -208,8 +208,8 @@
       "name": "패널 종류",
       "value": "VA(Direct)",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -217,8 +217,8 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -226,8 +226,8 @@
       "name": "픽셀 피치(HxV)",
       "value": "0.562x0.562",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -235,8 +235,8 @@
       "name": "밝기(Typ)",
       "value": "500",
       "unit": "nit",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -244,8 +244,8 @@
       "name": "명암비(정적)",
       "value": "5,500:1",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -253,8 +253,8 @@
       "name": "시야각(H/V)",
       "value": "178/178",
       "unit": "°",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -262,8 +262,8 @@
       "name": "응답 속도",
       "value": "8",
       "unit": "ms",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -271,8 +271,8 @@
       "name": "색재현율",
       "value": "NTSC 72%",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -280,8 +280,8 @@
       "name": "패널 헤이즈(Haze)",
       "value": "25",
       "unit": "%",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -289,8 +289,8 @@
       "name": "수평 주사 주파수",
       "value": "30~81kHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -298,8 +298,8 @@
       "name": "최대 픽셀 주파수",
       "value": "594MHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -307,8 +307,8 @@
       "name": "수직 주사 주파수",
       "value": "48~75Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -316,8 +316,8 @@
       "name": "동적 명암비",
       "value": "Mega",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -325,8 +325,8 @@
       "name": "운영 시간",
       "value": "24/7 (일 시간/주 일수)",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -334,8 +334,8 @@
       "name": "Wi-Fi",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -343,8 +343,8 @@
       "name": "블루투스",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -352,8 +352,8 @@
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -361,8 +361,8 @@
       "name": "소비전력(On 모드)",
       "value": "363",
       "unit": "W",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -370,8 +370,8 @@
       "name": "소비전력(대기/Sleep 모드)",
       "value": "0.5",
       "unit": "W",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -379,8 +379,8 @@
       "name": "크기(가로x높이x깊이)",
       "value": "2193.2 x 1248.8 x 48.1",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -388,8 +388,8 @@
       "name": "포장 크기(가로x높이x깊이)",
       "value": "2370 x 1395 x 230",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -397,8 +397,8 @@
       "name": "중량(포장 포함)",
       "value": "77.2",
       "unit": "kg",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -406,8 +406,8 @@
       "name": "동작 온도",
       "value": "0 ~ 40 ℃",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -415,8 +415,8 @@
       "name": "동작 습도",
       "value": "10 ~ 80% (결로 없음)",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -424,8 +424,8 @@
       "name": "VESA 규격",
       "value": "600 x 400",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -433,8 +433,8 @@
       "name": "베젤 폭(사양표)",
       "value": "14.8 (4면 균일)",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -442,8 +442,8 @@
       "name": "베젤 색상",
       "value": "Slate Black",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -451,8 +451,8 @@
       "name": "프레임 재질",
       "value": "Non-Glossy(Metal)",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -460,8 +460,8 @@
       "name": "옵션 벽걸이 마운트",
       "value": "WMN-8200SC",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -469,8 +469,8 @@
       "name": "운영체제 버전",
       "value": "Tizen 7.0",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -478,8 +478,8 @@
       "name": "내장 플래시 메모리",
       "value": "16 GB",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -487,8 +487,8 @@
       "name": "EMC 등급",
       "value": "Class A",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -496,8 +496,8 @@
       "name": "안전 규격",
       "value": "60950-1, 62368-1",
       "unit": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     }
   ],
@@ -510,8 +510,8 @@
       "quantity": "3",
       "protocol": "HDMI",
       "availability": "HDMI 버전 표기 2, HDCP 2.2",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -522,8 +522,8 @@
       "quantity": "1",
       "protocol": "DisplayPort",
       "availability": "DP 버전 1.2",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -534,8 +534,8 @@
       "quantity": "2",
       "protocol": "USB",
       "availability": "",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -546,8 +546,8 @@
       "quantity": "",
       "protocol": "IR",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -558,8 +558,8 @@
       "quantity": "",
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -570,8 +570,8 @@
       "quantity": "",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -582,8 +582,8 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -594,8 +594,8 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -606,23 +606,23 @@
       "quantity": "",
       "protocol": "Ethernet",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH98QMCEBGCXEN 공식 사양표 기준(국내 LH98QMCEBGCXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     }
   ],
   "sources": [
     {
       "code": "P",
-      "name": "제조사 공식 제품 페이지",
+      "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/",
-      "scope": "제조사 공식 출처"
+      "scope": "국내 모델 LH98QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 제품 무게: 스탠드/포장 제외 기준 명시 없음 / 단자 배치: 벽면 밀착 설치를 위한 설계"
     },
     {
       "code": "S2",
       "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH98QMCEBGCXEN)",
       "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/98inch-uhd-signage-qm98c-lh98qmcebgcxen/",
-      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
+      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     }
   ],
   "issues": [
@@ -630,13 +630,13 @@
       "code": "SPEC-AJAX",
       "status": "RESOLVED",
       "title": "상세 스펙 표 미확인",
-      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기·명암비·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
     },
     {
       "code": "SPEC-REGION",
-      "status": "REVIEW REQUIRED",
+      "status": "RESOLVED",
       "title": "정량 사양은 해외 지역 모델(LH98QMCEBGCXEN) 공식 사양표 기준",
-      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+      "detail": "2026-10-02 국내 상세 스펙 탭에서 기존 해외 출처 행을 모두 재확인하고 국내 출처(P)로 재지정했다. 지역별 값 차이는 W-20261002-005 대조표에 기록했다."
     }
   ],
   "presentation": {

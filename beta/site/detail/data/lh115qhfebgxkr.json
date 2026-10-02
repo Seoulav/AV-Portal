@@ -10,7 +10,7 @@
   ],
   "english": "Samsung standalone large-format signage (QHFX), 115-inch, 34.1mm ultra-slim with Quantum Mini LED Pro, 4.2.2ch 60W built-in speakers and 24/7 operation.",
   "korean": "삼성 단독형 대형 사이니지(QHFX) 115인치 모델로, 두께 34.1mm에 퀀텀 Mini LED 프로와 4.2.2채널 60W 내장 스피커, 24시간 연속 운영을 지원한다.",
-  "verificationSummary": "제조사 공식 사이트(samsung.com/sec) 단독형 UHD H 시리즈(QHFX) 제품 페이지에서 마케팅 사양을 확인했다. 상세 스펙 표는 로그인 세션 기반 AJAX로 로드되어 정적 요청으로는 확인하지 못했다.",
+  "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH115QHFEBGXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 9개를 국내 공식 출처로 재확인했다. 한국 페이지에 해당 값이 없는 35개 행은 해외 지역 사양표 출처를 유지하고 대조표에 근거를 기록했다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "LH115QHFEBGXKR(QHFX)은 삼성전자의 단독형 초대형 사이니지 115인치(290.7cm) 모델로, 하이엔드 매장, 대형 컨퍼런스룸, 영화관, 실내 경기장 등 다양한 상업 공간을 위한 압도적인 비주얼 경험을 목표로 설계됐다. 가로형·세로형 설치를 모두 지원하며, 24시간 365일 안정적으로 운영되도록 설계됐다.\n\n290.7cm 초대형 화면임에도 두께 34.1mm의 초슬림 디자인을 구현했으며, 삼성의 퀀텀 Mini LED 프로(기존 LED 대비 1/50 크기의 초소형 LED, 퀀텀 매트릭스 테크놀로지 프로로 정밀 제어)로 디테일과 명암비를 정교하게 표현한다. 슈퍼 픽처 인핸서와 4K AI 업스케일링 Pro로 초대형 화면에 최적화된 화질을 제공하며, 안티글레어 패널로 밝은 환경에서도 반사를 최소화한다.\n\n4.2.2채널 60W의 강력한 내장 스피커로 별도 스피커 없이도 풍부한 오디오를 구현하고, 디렉터 모드·DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드, 커스텀 홈(회의실 설정 고정), 스마트 캘리브레이션(갤럭시 특정 모델 지원), Tizen 엔터프라이즈 플랫폼, 삼성 Knox 보안을 갖췄다.",
   "images": [
@@ -140,7 +140,7 @@
       "name": "영상 처리 엔진",
       "value": "퀀텀 Mini LED 프로 + 퀀텀 매트릭스 테크놀로지 프로",
       "unit": "",
-      "condition": "기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교)",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -158,7 +158,7 @@
       "name": "화질 처리",
       "value": "슈퍼 픽처 인핸서, 4K AI 업스케일링 Pro",
       "unit": "",
-      "condition": "PC 연결·게임 모드에는 적용되지 않을 수 있음",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -167,7 +167,7 @@
       "name": "전문가 모드",
       "value": "Director Mode, DICOM Simulation Mode",
       "unit": "",
-      "condition": "프로페셔널 모드 내장",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -230,7 +230,7 @@
       "name": "화면 보정",
       "value": "스마트 캘리브레이션",
       "unit": "",
-      "condition": "특정 모바일 기기에서만 지원",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -239,7 +239,7 @@
       "name": "패널 종류",
       "value": "VA",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이); 국내 페이지 마케팅 문구는 \"퀀텀 Mini LED 프로\" 백라이트로 소개(패널 방식과 백라이트는 별개 항목)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -248,7 +248,7 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -257,7 +257,7 @@
       "name": "픽셀 피치(HxV)",
       "value": "0.630 x 0.630",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -266,7 +266,7 @@
       "name": "밝기(Typ)",
       "value": "1000",
       "unit": "nit",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -275,7 +275,7 @@
       "name": "명암비(정적)",
       "value": "5,500:1",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -284,7 +284,7 @@
       "name": "시야각(H/V)",
       "value": "178/178",
       "unit": "°",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -293,7 +293,7 @@
       "name": "응답 속도",
       "value": "6.5",
       "unit": "ms",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -302,7 +302,7 @@
       "name": "색재현율",
       "value": "93% (DCI-P3)",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -311,7 +311,7 @@
       "name": "패널 헤이즈(Haze)",
       "value": "25",
       "unit": "%",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -320,7 +320,7 @@
       "name": "수평 주사 주파수",
       "value": "15 - 135 kHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -329,7 +329,7 @@
       "name": "최대 픽셀 주파수",
       "value": "1.188 GHz",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -338,7 +338,7 @@
       "name": "수직 주사 주파수",
       "value": "24 - 120 Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -347,7 +347,7 @@
       "name": "동적 명암비",
       "value": "Mega",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -356,7 +356,7 @@
       "name": "Wi-Fi",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -365,7 +365,7 @@
       "name": "블루투스",
       "value": "있음",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -374,7 +374,7 @@
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -383,8 +383,8 @@
       "name": "소비전력(On 모드)",
       "value": "836",
       "unit": "W",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -392,7 +392,7 @@
       "name": "소비전력(대기/Sleep 모드)",
       "value": "0.5",
       "unit": "W",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -401,8 +401,8 @@
       "name": "크기(가로x높이x깊이)",
       "value": "2565.2 x 1467.6 x 34.1",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -410,8 +410,8 @@
       "name": "포장 크기(가로x높이x깊이)",
       "value": "2765.0 x 1652.0 x 250.0",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -419,8 +419,8 @@
       "name": "중량",
       "value": "83.7",
       "unit": "kg",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -428,8 +428,8 @@
       "name": "중량(포장 포함)",
       "value": "133.6",
       "unit": "kg",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -437,8 +437,8 @@
       "name": "동작 온도",
       "value": "0 - 40 ℃",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -446,7 +446,7 @@
       "name": "동작 습도",
       "value": "20 - 95% (Operating)",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -455,7 +455,7 @@
       "name": "VESA 규격",
       "value": "1000 x 600",
       "unit": "mm",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -464,7 +464,7 @@
       "name": "베젤 폭(사양표)",
       "value": "3 Bezel-less",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -473,7 +473,7 @@
       "name": "베젤 색상",
       "value": "TITAN BLACK",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -482,7 +482,7 @@
       "name": "프레임 재질",
       "value": "Non-Glossy(Metal)",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -491,7 +491,7 @@
       "name": "옵션 벽걸이 마운트",
       "value": "Slim Fit Wall-mount (기본 동봉)",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -500,7 +500,7 @@
       "name": "옵션 스탠드",
       "value": "Yes(기본 동봉)",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -509,7 +509,7 @@
       "name": "운영체제 버전",
       "value": "Tizen 8.0",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -518,7 +518,7 @@
       "name": "내장 플래시 메모리",
       "value": "16GB",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -527,8 +527,8 @@
       "name": "EMC 등급",
       "value": "Class A",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -536,8 +536,8 @@
       "name": "안전 규격",
       "value": "60950-1, 62368-1",
       "unit": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -545,7 +545,7 @@
       "name": "대각 크기(사양표 실측)",
       "value": "114.4818",
       "unit": "인치",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 Diagonal Size 표기(국내 페이지 명칭 115인치와 별개로 기록)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     }
@@ -571,7 +571,7 @@
       "quantity": "3",
       "protocol": "HDMI",
       "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -583,7 +583,7 @@
       "quantity": "1",
       "protocol": "DisplayPort",
       "availability": "DP 버전 1.4",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -595,8 +595,8 @@
       "quantity": "2 x USB-A",
       "protocol": "USB",
       "availability": "",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
-      "source": "S2",
+      "condition": "",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -607,7 +607,7 @@
       "quantity": "",
       "protocol": "IR",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -619,7 +619,7 @@
       "quantity": "",
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -631,7 +631,7 @@
       "quantity": "",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -643,7 +643,7 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -655,7 +655,7 @@
       "quantity": "",
       "protocol": "RS-232C",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     },
@@ -667,7 +667,7 @@
       "quantity": "",
       "protocol": "Ethernet",
       "availability": "있음",
-      "condition": "영국 판매 모델 LH115QHFEBGXEN 공식 사양표 기준(국내 LH115QHFEBGXKR와 기본 모델 동일, 지역 코드만 상이); 사양표는 유무만 표기(수량 미기재)",
+      "condition": "",
       "source": "S2",
       "verification": "FOUND"
     }
@@ -675,15 +675,15 @@
   "sources": [
     {
       "code": "P",
-      "name": "제조사 공식 제품 페이지",
+      "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
-      "scope": "제조사 공식 출처"
+      "scope": "국내 모델 LH115QHFEBGXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교) / 화질 처리: PC 연결·게임 모드에는 적용되지 않을 수 있음 / 전문가 모드: 프로페셔널 모드 내장 / 화면 보정: 특정 모바일 기기에서만 지원"
     },
     {
       "code": "S2",
       "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
       "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
-      "scope": "제조사 공식 출처(삼성전자 해외 지역 판매 페이지, 동일 기본 모델 코드·지역 접미사만 상이)"
+      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     }
   ],
   "issues": [
@@ -691,13 +691,13 @@
       "code": "SPEC-AJAX",
       "status": "RESOLVED",
       "title": "상세 스펙 표 미확인",
-      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기(니트)·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.]"
+      "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기(니트)·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
     },
     {
       "code": "SPEC-REGION",
       "status": "REVIEW REQUIRED",
       "title": "정량 사양은 해외 지역 모델(LH115QHFEBGXEN) 공식 사양표 기준",
-      "detail": "국내 samsung.com/sec 스펙 탭은 로그인 세션 AJAX로 로드되어 확인하지 못했다. 동일 기본 모델 코드의 삼성전자 공식 영국 페이지 사양표를 사용했으며, 지역 접미사(XKR vs XEN)만 다르다. 전원 사양·소비전력·인증·번들 액세서리 등 지역 의존 항목은 국내 판매 모델과 다를 수 있어 국내 사양서(또는 제품 라벨) 확인이 필요하다."
+      "detail": "2026-10-02 국내 상세 스펙 탭을 확인해 일치하는 행은 P로 재지정했다. 국내 페이지에 없는 35개 행은 해외 지역 출처를 유지했고, 행별 내역은 W-20261002-005 대조표 참조."
     }
   ],
   "presentation": {
