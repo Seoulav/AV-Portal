@@ -1,0 +1,30 @@
+{
+  "mergeSha": "cf66463cc87607a95859bc771602f3494e0f2b4f",
+  "url": "https://seoulav.github.io/AV-Portal/detail/?product=dm7#gallery",
+  "jsonBytes": 20467,
+  "jsonMatchesMerge": true,
+  "screens": [
+    {
+      "width": 1280,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "featuredWidth": 1800
+    },
+    {
+      "width": 390,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "featuredWidth": 1800
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}
