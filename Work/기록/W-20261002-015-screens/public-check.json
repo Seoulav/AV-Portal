@@ -1,0 +1,303 @@
+{
+  "base": "https://seoulav.github.io/AV-Portal/",
+  "mergeCommit": "236da4ffe3f3356401eead1fc7df54c8a4fbb174",
+  "pagesRun": 37077506947,
+  "bytes": [
+    {
+      "path": "catalog.json",
+      "status": 200,
+      "localSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "publicSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "byteEqual": true
+    },
+    {
+      "path": "search-index.json",
+      "status": 200,
+      "localSha256": "6d5202d2c9e66957a47860f974c1636d6740f6011e4af5b4dfa1f2f27b675c2f",
+      "publicSha256": "6d5202d2c9e66957a47860f974c1636d6740f6011e4af5b4dfa1f2f27b675c2f",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh43qhcebgcxkr.json",
+      "status": 200,
+      "localSha256": "ad3aef7d71c1cc56ccca86b95f48eebf59d9b8096b7c547f865969fe4fffc21c",
+      "publicSha256": "ad3aef7d71c1cc56ccca86b95f48eebf59d9b8096b7c547f865969fe4fffc21c",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh43qmcebgcxkr.json",
+      "status": 200,
+      "localSha256": "21fd91ccb187f2de6c91f6ec8ed13515a9ac51b857ead1e49adfee3f087f640c",
+      "publicSha256": "21fd91ccb187f2de6c91f6ec8ed13515a9ac51b857ead1e49adfee3f087f640c",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh75qhcebgcxkr.json",
+      "status": 200,
+      "localSha256": "c781e9ead04e3ef2cc19442d647918e7e8394bec96ded40d74281d1981dc1307",
+      "publicSha256": "c781e9ead04e3ef2cc19442d647918e7e8394bec96ded40d74281d1981dc1307",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh85qmcebgcxkr.json",
+      "status": 200,
+      "localSha256": "901181b6a825a7e8e7998249afa32a508578b3473b7ca18f37e12cd6e80d7e03",
+      "publicSha256": "901181b6a825a7e8e7998249afa32a508578b3473b7ca18f37e12cd6e80d7e03",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh98qmcebgcxkr.json",
+      "status": 200,
+      "localSha256": "a3b551439cd0f106f3394848499fe023c99af4829d6ac19d06495ff2387b2611",
+      "publicSha256": "a3b551439cd0f106f3394848499fe023c99af4829d6ac19d06495ff2387b2611",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh115qhfebgxkr.json",
+      "status": 200,
+      "localSha256": "397d4cfc470d7b3667f8e74526ae02e75290f5d635f95d640657fb21f545c232",
+      "publicSha256": "397d4cfc470d7b3667f8e74526ae02e75290f5d635f95d640657fb21f545c232",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh55vhcrbgbxkr.json",
+      "status": 200,
+      "localSha256": "c609dcf5593511e47827a235a1b146e1e6fa71df1e4a178a47876f7432ceb61c",
+      "publicSha256": "c609dcf5593511e47827a235a1b146e1e6fa71df1e4a178a47876f7432ceb61c",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh55vmcrbgbxkr.json",
+      "status": 200,
+      "localSha256": "fb553977605ea388253da5553c874a47f0c5041e80da92176032bba3fa561f80",
+      "publicSha256": "fb553977605ea388253da5553c874a47f0c5041e80da92176032bba3fa561f80",
+      "byteEqual": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH43QHCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH43QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH75QHCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH85QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH98QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH115QHFEBGXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "9개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH55VHCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "12개 연결 항목",
+      "service": true,
+      "irOut": true,
+      "errors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH55VMCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "brokenImages": [],
+      "alert": "",
+      "count": "12개 연결 항목",
+      "service": true,
+      "irOut": true,
+      "errors": []
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH43QHCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH43QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH75QHCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH85QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH98QMCEBGCXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "8개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH115QHFEBGXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "9개 연결 항목",
+      "service": false,
+      "irOut": false,
+      "errors": []
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH55VHCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "12개 연결 항목",
+      "service": true,
+      "irOut": true,
+      "errors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH55VMCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "brokenImages": [],
+      "alert": "",
+      "count": "12개 연결 항목",
+      "service": true,
+      "irOut": true,
+      "errors": []
+    }
+  ]
+}
