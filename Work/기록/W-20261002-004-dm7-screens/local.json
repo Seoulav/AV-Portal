@@ -1,0 +1,157 @@
+{
+  "baseline": "f124bf0f20d677cf8e1893b2fd43936bf6e31bb9",
+  "screens": [
+    {
+      "phase": "before",
+      "width": 1280,
+      "markers": 63,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 880.9451219512196
+        },
+        {
+          "n": "2",
+          "bottomNatural": 1017.5304878048781
+        },
+        {
+          "n": "7",
+          "bottomNatural": 880.9451219512196
+        }
+      ],
+      "duplicateDescriptions": 46,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    },
+    {
+      "phase": "after",
+      "width": 1280,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 825.9527439024391
+        },
+        {
+          "n": "2",
+          "bottomNatural": 825.9527439024391
+        },
+        {
+          "n": "7",
+          "bottomNatural": 825.9527439024391
+        }
+      ],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    },
+    {
+      "phase": "before",
+      "width": 390,
+      "markers": 63,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 906.786123853211
+        },
+        {
+          "n": "2",
+          "bottomNatural": 953.0246559633028
+        },
+        {
+          "n": "7",
+          "bottomNatural": 906.786123853211
+        }
+      ],
+      "duplicateDescriptions": 46,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    },
+    {
+      "phase": "after",
+      "width": 390,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 845.5363175675676
+        },
+        {
+          "n": "2",
+          "bottomNatural": 845.5363175675676
+        },
+        {
+          "n": "7",
+          "bottomNatural": 845.5363175675676
+        }
+      ],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    },
+    {
+      "phase": "after",
+      "width": 1024,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 809.8060344827587
+        },
+        {
+          "n": "2",
+          "bottomNatural": 809.8060344827587
+        },
+        {
+          "n": "7",
+          "bottomNatural": 809.8060344827587
+        }
+      ],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    },
+    {
+      "phase": "after",
+      "width": 721,
+      "markers": 18,
+      "overlap": [],
+      "clipped": [],
+      "groupCoverage": [
+        {
+          "n": "1",
+          "bottomNatural": 817.0757071547421
+        },
+        {
+          "n": "2",
+          "bottomNatural": 817.0757071547421
+        },
+        {
+          "n": "7",
+          "bottomNatural": 817.0757071547421
+        }
+      ],
+      "duplicateDescriptions": 0,
+      "horizontalOverflow": 0,
+      "brokenImages": 0,
+      "title": "02Port Map"
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}
