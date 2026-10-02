@@ -4008,5 +4008,47 @@
     "manual_link": "https://lumantek.co.kr/uploads/download/19858974678733ed95ecab304cac059e.pdf",
     "slug": "ez-umd-plus",
     "card_image": "ez-umd-plus-main.webp"
+  },
+  {
+    "brand": "Samsung",
+    "product": "MP008F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "slug": "mp008f"
+  },
+  {
+    "brand": "Samsung",
+    "product": "MP012F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "slug": "mp012f"
+  },
+  {
+    "brand": "Samsung",
+    "product": "MP016F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "slug": "mp016f"
   }
 ]

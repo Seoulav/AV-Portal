@@ -76,7 +76,7 @@ test('renamed catalog categories preserve home top-category counts and filter me
     ['audio', 116],
     ['video', 62],
     ['camera-conference', 30],
-    ['display-projection', 37], // W-20261002-011 excluded discontinued LH98QEC.
+    ['display-projection', 40], // W-20261002-011 excluded LH98QEC; W-20261002-012 added three MPF cabinets.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);

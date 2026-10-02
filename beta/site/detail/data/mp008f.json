@@ -1,0 +1,313 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "MP008F",
+  "model": "MP008F",
+  "series": "The Wall MPF",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "LED Signage"
+  ],
+  "english": "MP008F is a The Wall MPF LED cabinet module. Color-temperature adjustment and 8K playback depend on the connected S-Box model.",
+  "korean": "MP008F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 색온도 설정과 8K 콘텐츠 재생은 연결된 S-Box를 전제로 하며, S-Box 모델에 따라 일부 기능은 지원되지 않을 수 있다.",
+  "verificationSummary": "삼성전자 발행 MPF 시리즈 제품가이드 슬라이드 17에서 MP008F의 사양 20항목을 확인했다. 제품 이미지는 미확보이고 연결 단자 정보는 가이드에 없어 기록하지 않았다.",
+  "packageStatus": "PARTIAL",
+  "overview": "MP008F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 제품가이드 슬라이드 17의 모델별 사양은 픽셀 피치 0.84 mm, 밝기 피크1,800 nit / 최대1,000 nit, 명암비 29,000 : 1, 최대 전력 소비량 334 (W/m²) / 122 (W/Cabinet)다.\n\n색온도 설정은 S-Box 사용 조건이며, 가이드는 하나의 S-Box로 8K 콘텐츠를 재생할 수 있다고 안내한다. 연결된 S-Box 모델에 따라 해당 기능이 지원되지 않을 수 있다. 제품 이미지와 단자 구성은 제공된 자료에서 확인되지 않았다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "PARTIAL",
+      "title": "삼성전자 스마트 LED 사이니지 시리즈 목록 (개별 모델 페이지 미확인)",
+      "language": "ko",
+      "note": "시리즈 목록 페이지",
+      "url": "https://www.samsung.com/sec/business/led-signage/"
+    }
+  ],
+  "features": [
+    {
+      "text": "The Wall MPF 시리즈의 LED 캐비닛(모듈)이다.",
+      "source": "S1"
+    },
+    {
+      "text": "S-Box 연결 시 8K 콘텐츠 재생을 안내하며 연결된 S-Box 모델에 따라 지원되지 않을 수 있다.",
+      "source": "S1"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Physical",
+      "name": "픽셀 피치",
+      "value": "0.84 mm",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "LED 구성(Pixel Configuration)",
+      "value": "1 red, 1 green, 1 blue",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "다이오드 유형",
+      "value": "Flip-chip RGB LED",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "9.2 (kg/Cabinet) / 25.2 (kg/m²)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "밝기",
+      "value": "피크1,800 nit / 최대1,000 nit",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "29,000 : 1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "HDR 호환성",
+      "value": "LED HDR / HDR10 / HDR10+ support / AI Picture",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각",
+      "value": "수평170 ±5˚ / 수직155° ±5˚",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "비트 뎁스",
+      "value": "16 bit (Internal processing 20bit)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도 (기본값)",
+      "value": "6,500K ± 500K",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도 (설정값)",
+      "value": "2,800K ~ 10,000K (using S-Box)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "Video Rate",
+      "value": "100 / 120 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비량 (최대)",
+      "value": "334 (W/m²) / 122 (W/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도 / 습도",
+      "value": "0℃~+40℃ / 10%~80%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도 / 습도",
+      "value": "-20℃~+45℃ / 5%~95%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "IP 등급",
+      "value": "IP40 (Front) / IP20 (Rear)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC",
+      "value": "Class B",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "박스 크기(mm, W x H x D)",
+      "value": "908 x 178 x 545 mm",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "포장 무게",
+      "value": "12.6 kg",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "S1",
+      "name": "삼성전자 발행 [사이니지] 스마트 LED 사이니지 (MPF 시리즈) 제품가이드.pptx",
+      "scope": "슬라이드 2·7·10·17. 사양 20항목은 슬라이드 17에서 MP008F 열을 직접 확인. 원본 재배포 금지로 미게시. SHA-256 8E18CA5F1FE155356A9780857A6AEC12E4BBC4A96FD1E5E2C5EDD9A70956898B"
+    },
+    {
+      "code": "P",
+      "name": "삼성전자 대한민국 비즈니스 스마트 LED 사이니지",
+      "url": "https://www.samsung.com/sec/business/led-signage/",
+      "scope": "시리즈 목록 페이지 · 개별 모델 페이지 미확인. 사양 행의 근거로 사용하지 않음"
+    }
+  ],
+  "issues": [
+    {
+      "code": "IMAGE-MISSING",
+      "status": "MISSING",
+      "title": "제품 이미지 미확보",
+      "detail": "대상 모델의 게시 가능한 제품 사진이 없어 images를 비워 둔다."
+    },
+    {
+      "code": "IO-MISSING",
+      "status": "MISSING",
+      "title": "연결 단자 정보 미기재",
+      "detail": "제공된 제품가이드에 캐비닛 연결 단자 구성이 없어 io를 비워 둔다."
+    }
+  ],
+  "presentation": {
+    "sourceProductLabel": "삼성 LED 사이니지 시리즈 목록 ↗",
+    "galleryRightsBadge": "MISSING",
+    "galleryRights": "대상 모델의 게시 제품 이미지는 아직 확보되지 않았다.",
+    "specIntro": "삼성전자 발행 제품가이드 17쪽의 모델별 사양을 표기합니다.",
+    "ioIntro": "제공된 제품가이드에 연결 단자 정보가 없습니다.",
+    "supplementalNote": "제품가이드의 모델별 열과 공통 항목을 구분했습니다.",
+    "footerNote": "Samsung The Wall MPF MP008F 제품가이드 기준",
+    "visualVariant": "missing-product-images"
+  }
+}

@@ -221,7 +221,8 @@ for (const item of catalog) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');
     assert.ok(group1Images[item.slug], `${item.slug}: 검토된 이미지 매니페스트 없음`);
     assert.equal(item.card_image, cardImages[item.slug], `${item.slug}: 카드 이미지가 매니페스트와 다름`);
-    assert.ok(group1Images[item.slug].some(image => image.file === item.card_image), `${item.slug}: 카드 이미지가 게시 이미지에 없음`);
+    if (group1Images[item.slug].length) assert.ok(group1Images[item.slug].some(image => image.file === item.card_image), `${item.slug}: 카드 이미지가 게시 이미지에 없음`);
+    else assert.equal(item.card_image, undefined, `${item.slug}: 이미지가 없는 제품은 카드 이미지를 두지 않음`);
     catalogSlugs.push(item.slug);
     for (const field of ['preview_image', 'preview_image_alt', 'preview_image_scope']) assert.equal(item[field], undefined, `${item.slug}: 상세가 있으면 상세 갤러리의 card_image를 쓴다`);
   } else {
@@ -242,7 +243,7 @@ const slugs = catalogSlugs.slice().sort();
 assert.deepEqual(new Set(catalogSlugs).size, catalogSlugs.length, 'Duplicate detail slug');
 assert.deepEqual((await readdir(new URL('data/', detail))).sort(), slugs.map(slug => `${slug}.json`).sort());
 assert.deepEqual(Object.keys(group1Images).sort(), slugs);
-assert.deepEqual(Object.keys(cardImages).sort(), slugs);
+assert.deepEqual(Object.keys(cardImages).sort(), slugs.filter(slug => group1Images[slug].length));
 assert.deepEqual(Object.keys(snapshot.details).sort(), slugs);
 
 // 상세 JSON에 허용되는 최상위 키. 새 키는 공개 경계를 다시 검토한 뒤에만 추가한다.
@@ -316,10 +317,15 @@ for (const slug of slugs) {
   // 상세 화면은 개요·영문·한글 설명을 문자열로 다룬다(배열이면 개요 이후 렌더링이 멈춘다).
   for (const key of ['english', 'korean', 'overview']) assert.equal(typeof product[key], 'string', `${slug}: ${key}는 문자열이어야 합니다`);
   verifyOfficialUrls(product, slug, allowedHostsFor(brandBySlug.get(slug)));
-  assert.ok(Array.isArray(product.images) && product.images.length > 0, `${slug}: 게시 이미지가 비어 있음`);
+  assert.ok(Array.isArray(product.images), `${slug}: images 배열 누락`);
   assert.deepEqual(product.images, group1Images[slug], `${slug}: reviewed official image manifest`);
-  assert.equal(product.presentation.visualVariant, 'official-product-images');
-  assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
+  if (product.images.length) {
+    assert.equal(product.presentation.visualVariant, 'official-product-images');
+    assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
+  } else {
+    assert.equal(product.presentation.visualVariant, 'missing-product-images');
+    assert.ok(product.imageStatuses.some(image => image.role === 'Main' && image.status === 'MISSING' && image.reason), `${slug}: 이미지 미확보 사유 누락`);
+  }
   assert.equal(product.features.length, expected.features);
   assert.equal(product.specifications.length, expected.specifications);
   assert.equal(product.io.length, expected.io);

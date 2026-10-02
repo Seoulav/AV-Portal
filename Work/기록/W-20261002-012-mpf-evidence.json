@@ -1,0 +1,352 @@
+{
+  "workId": "W-20261002-012",
+  "guide": {
+    "name": "[사이니지] 스마트 LED 사이니지 (MPF 시리즈) 제품가이드.pptx",
+    "publisher": "삼성전자",
+    "slide": 17,
+    "sha256": "8E18CA5F1FE155356A9780857A6AEC12E4BBC4A96FD1E5E2C5EDD9A70956898B",
+    "originalPublished": false
+  },
+  "countCorrection": {
+    "specificationCountInWork": 17,
+    "actualTableItems": 20,
+    "confirmedByUser": "2026-10-02"
+  },
+  "groupMapping": {
+    "물리적 지표": "Physical",
+    "시각적 지표": "Display",
+    "전기적 지표": "Power",
+    "동작 조건": "Environment",
+    "인증정보": "Certification",
+    "패키지": "Package"
+  },
+  "models": {
+    "mp008f": {
+      "model": "MP008F",
+      "guideSlide": 17,
+      "exactModelMatch": true,
+      "commonItems": 16,
+      "differingItems": 4,
+      "specifications": [
+        {
+          "group": "Physical",
+          "name": "픽셀 피치",
+          "value": "0.84 mm"
+        },
+        {
+          "group": "Physical",
+          "name": "LED 구성(Pixel Configuration)",
+          "value": "1 red, 1 green, 1 blue"
+        },
+        {
+          "group": "Physical",
+          "name": "다이오드 유형",
+          "value": "Flip-chip RGB LED"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "9.2 (kg/Cabinet) / 25.2 (kg/m²)"
+        },
+        {
+          "group": "Display",
+          "name": "밝기",
+          "value": "피크1,800 nit / 최대1,000 nit"
+        },
+        {
+          "group": "Display",
+          "name": "명암비",
+          "value": "29,000 : 1"
+        },
+        {
+          "group": "Display",
+          "name": "HDR 호환성",
+          "value": "LED HDR / HDR10 / HDR10+ support / AI Picture"
+        },
+        {
+          "group": "Display",
+          "name": "시야각",
+          "value": "수평170 ±5˚ / 수직155° ±5˚"
+        },
+        {
+          "group": "Display",
+          "name": "비트 뎁스",
+          "value": "16 bit (Internal processing 20bit)"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (기본값)",
+          "value": "6,500K ± 500K"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (설정값)",
+          "value": "2,800K ~ 10,000K (using S-Box)"
+        },
+        {
+          "group": "Power",
+          "name": "Video Rate",
+          "value": "100 / 120 Hz"
+        },
+        {
+          "group": "Power",
+          "name": "전력 소비량 (최대)",
+          "value": "334 (W/m²) / 122 (W/Cabinet)"
+        },
+        {
+          "group": "Environment",
+          "name": "동작 온도 / 습도",
+          "value": "0℃~+40℃ / 10%~80%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "보관 온도 / 습도",
+          "value": "-20℃~+45℃ / 5%~95%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "IP 등급",
+          "value": "IP40 (Front) / IP20 (Rear)"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 규격",
+          "value": "62368-1, 60950-1"
+        },
+        {
+          "group": "Certification",
+          "name": "EMC",
+          "value": "Class B"
+        },
+        {
+          "group": "Package",
+          "name": "박스 크기(mm, W x H x D)",
+          "value": "908 x 178 x 545 mm"
+        },
+        {
+          "group": "Package",
+          "name": "포장 무게",
+          "value": "12.6 kg"
+        }
+      ]
+    },
+    "mp012f": {
+      "model": "MP012F",
+      "guideSlide": 17,
+      "exactModelMatch": true,
+      "commonItems": 16,
+      "differingItems": 4,
+      "specifications": [
+        {
+          "group": "Physical",
+          "name": "픽셀 피치",
+          "value": "1.26 mm"
+        },
+        {
+          "group": "Physical",
+          "name": "LED 구성(Pixel Configuration)",
+          "value": "1 red, 1 green, 1 blue"
+        },
+        {
+          "group": "Physical",
+          "name": "다이오드 유형",
+          "value": "Flip-chip RGB LED"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "9.2 (kg/Cabinet) / 25.2 (kg/m²)"
+        },
+        {
+          "group": "Display",
+          "name": "밝기",
+          "value": "피크1,800 nit / 최대1,000 nit"
+        },
+        {
+          "group": "Display",
+          "name": "명암비",
+          "value": "41,000 : 1"
+        },
+        {
+          "group": "Display",
+          "name": "HDR 호환성",
+          "value": "LED HDR / HDR10 / HDR10+ support / AI Picture"
+        },
+        {
+          "group": "Display",
+          "name": "시야각",
+          "value": "수평170 ±5˚ / 수직155° ±5˚"
+        },
+        {
+          "group": "Display",
+          "name": "비트 뎁스",
+          "value": "16 bit (Internal processing 20bit)"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (기본값)",
+          "value": "6,500K ± 500K"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (설정값)",
+          "value": "2,800K ~ 10,000K (using S-Box)"
+        },
+        {
+          "group": "Power",
+          "name": "Video Rate",
+          "value": "100 / 120 Hz"
+        },
+        {
+          "group": "Power",
+          "name": "전력 소비량 (최대)",
+          "value": "399 (W/m²) / 146 (W/Cabinet)"
+        },
+        {
+          "group": "Environment",
+          "name": "동작 온도 / 습도",
+          "value": "0℃~+40℃ / 10%~80%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "보관 온도 / 습도",
+          "value": "-20℃~+45℃ / 5%~95%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "IP 등급",
+          "value": "IP40 (Front) / IP20 (Rear)"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 규격",
+          "value": "62368-1, 60950-1"
+        },
+        {
+          "group": "Certification",
+          "name": "EMC",
+          "value": "Class B"
+        },
+        {
+          "group": "Package",
+          "name": "박스 크기(mm, W x H x D)",
+          "value": "908 x 178 x 545 mm"
+        },
+        {
+          "group": "Package",
+          "name": "포장 무게",
+          "value": "12.6 kg"
+        }
+      ]
+    },
+    "mp016f": {
+      "model": "MP016F",
+      "guideSlide": 17,
+      "exactModelMatch": true,
+      "commonItems": 16,
+      "differingItems": 4,
+      "specifications": [
+        {
+          "group": "Physical",
+          "name": "픽셀 피치",
+          "value": "1.68 mm"
+        },
+        {
+          "group": "Physical",
+          "name": "LED 구성(Pixel Configuration)",
+          "value": "1 red, 1 green, 1 blue"
+        },
+        {
+          "group": "Physical",
+          "name": "다이오드 유형",
+          "value": "Flip-chip RGB LED"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "9.2 (kg/Cabinet) / 25.2 (kg/m²)"
+        },
+        {
+          "group": "Display",
+          "name": "밝기",
+          "value": "피크1,600 nit / 최대1,200 nit"
+        },
+        {
+          "group": "Display",
+          "name": "명암비",
+          "value": "43,000 : 1"
+        },
+        {
+          "group": "Display",
+          "name": "HDR 호환성",
+          "value": "LED HDR / HDR10 / HDR10+ support / AI Picture"
+        },
+        {
+          "group": "Display",
+          "name": "시야각",
+          "value": "수평170 ±5˚ / 수직155° ±5˚"
+        },
+        {
+          "group": "Display",
+          "name": "비트 뎁스",
+          "value": "16 bit (Internal processing 20bit)"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (기본값)",
+          "value": "6,500K ± 500K"
+        },
+        {
+          "group": "Display",
+          "name": "색온도 (설정값)",
+          "value": "2,800K ~ 10,000K (using S-Box)"
+        },
+        {
+          "group": "Power",
+          "name": "Video Rate",
+          "value": "100 / 120 Hz"
+        },
+        {
+          "group": "Power",
+          "name": "전력 소비량 (최대)",
+          "value": "440 (W/m²) / 161 (W/Cabinet)"
+        },
+        {
+          "group": "Environment",
+          "name": "동작 온도 / 습도",
+          "value": "0℃~+40℃ / 10%~80%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "보관 온도 / 습도",
+          "value": "-20℃~+45℃ / 5%~95%RH"
+        },
+        {
+          "group": "Environment",
+          "name": "IP 등급",
+          "value": "IP40 (Front) / IP20 (Rear)"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 규격",
+          "value": "62368-1, 60950-1"
+        },
+        {
+          "group": "Certification",
+          "name": "EMC",
+          "value": "Class B"
+        },
+        {
+          "group": "Package",
+          "name": "박스 크기(mm, W x H x D)",
+          "value": "908 x 178 x 545 mm"
+        },
+        {
+          "group": "Package",
+          "name": "포장 무게",
+          "value": "12.6 kg"
+        }
+      ]
+    }
+  }
+}

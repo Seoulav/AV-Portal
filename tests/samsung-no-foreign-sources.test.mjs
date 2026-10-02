@@ -52,6 +52,7 @@ test('unused overseas Samsung page entries are removed from active sources', () 
 test('the recorded source cleanup reconstructs every pre-change Samsung JSON exactly', () => {
   const evidence = read('Work/기록/W-20261002-010-evidence.json');
   for (const item of read('beta/site/catalog.json').filter(product => product.brand === 'Samsung')) {
+    if (!evidence.products[item.slug]) continue; // W-010 predates the three W-012 MPF entries.
     const detail = read(`beta/site/detail/data/${item.slug}.json`);
     const before = beforeSamsungSourceCleanup(detail, item.slug);
     const digest = createHash('sha256').update(JSON.stringify(before, null, 2) + '\n').digest('hex');
