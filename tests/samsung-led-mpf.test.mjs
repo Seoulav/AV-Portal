@@ -24,6 +24,7 @@ test('three MPF cabinets use all 20 model-matched guide fields without images or
     assert.equal(card.product, models[index]);
     assert.deepEqual(card.categories, ['사이니지', 'Display', 'LED Signage']);
     assert.deepEqual(card.official_links, [officialList]);
+    assert.equal(card.link_scope, 'series', '카드가 목록 링크를 개별 제품 페이지로 표시하지 않음');
     assert.equal(card.card_image, undefined);
     assert.equal(detail.model, models[index]);
     assert.equal(detail.specifications.length, 20);
