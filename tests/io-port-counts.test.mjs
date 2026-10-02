@@ -7,7 +7,7 @@ import { connectorPresentation } from '../prototype/brc-am7/product-detail-model
 const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qecedgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
+const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 
 test('connector cards show direction alone when port count is unknown, while the full table retains it', () => {
   const badge = app.match(/port\.append\(element\('span', 'port-direction', (.+)\)\);/);
@@ -21,11 +21,13 @@ test('connector cards show direction alone when port count is unknown, while the
   assert.equal(connectorPresentation({ connector: 'RS-232C 입력', quantity: '' }).portCount, '미확인');
 });
 
-test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported counts blank', () => {
+test('Samsung quantity audit covers 82 active unknown rows and preserves the 87-row historical record', () => {
   const evidence = read('Work/기록/W-20261002-006-io-port-counts-evidence.json');
   const laterAudit = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
   const currentAudit = read('Work/기록/W-20261002-008-evidence.json');
-  assert.deepEqual(Object.keys(evidence.products), targets);
+  assert.equal(Object.values(evidence.products).reduce((sum, product) => sum + product.rows.length, 0), 87);
+  // The W-006 evidence keeps the historical 15th model; audit the 14 still published.
+  assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   let unknown = 0;
   let filled = 0;
   for (const slug of targets) {
@@ -58,6 +60,6 @@ test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported c
       if (row.after) filled++;
     }
   }
-  assert.equal(unknown, 87);
+  assert.equal(unknown, 82);
   assert.equal(filled, 0);
 });

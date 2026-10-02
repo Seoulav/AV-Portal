@@ -5,12 +5,13 @@ import {createHash} from 'node:crypto';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qecedgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
+const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 const evidence = read('Work/기록/W-20261002-005-samsung-sources-evidence.json');
 const documentAudit = read('Work/기록/W-20261002-008-evidence.json');
 
-test('Samsung Korean business spec audit covers exactly the 15 approved models', () => {
-  assert.deepEqual(Object.keys(evidence.products), targets);
+test('Samsung Korean business spec audit covers the 14 still-published models', () => {
+  // Keep W-005's original 15-model evidence unchanged.
+  assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
     const p = read(`beta/site/detail/data/${slug}.json`);
     const e = evidence.products[slug];
@@ -84,6 +85,4 @@ test('provenance notices leave condition fields and remain in named sources and 
   }
   const color = read('beta/site/detail/data/lh32qmcebgcxkr.json').specifications.find(row => row.name === '색재현율');
   assert.equal(color.source, 'P, S2', 'Korean 72% has no NTSC basis; overseas qualifier remains attributed');
-  const response = read('beta/site/detail/data/lh98qecedgcxkr.json').specifications.find(row => row.name === '응답 속도');
-  assert.equal(response.condition, 'GTG', 'short measurement condition from Korean specification remains');
 });
