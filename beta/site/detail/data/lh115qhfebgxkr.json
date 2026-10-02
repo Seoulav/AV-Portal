@@ -241,7 +241,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -250,7 +250,7 @@
       "unit": "픽셀",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -259,7 +259,7 @@
       "unit": "mm",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -268,7 +268,7 @@
       "unit": "nit",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -277,7 +277,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -286,7 +286,7 @@
       "unit": "°",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -295,7 +295,7 @@
       "unit": "ms",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -304,7 +304,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -313,7 +313,7 @@
       "unit": "%",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -322,7 +322,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -331,7 +331,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -340,7 +340,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -349,7 +349,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Connectivity",
@@ -358,7 +358,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Connectivity",
@@ -367,7 +367,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Power",
@@ -376,7 +376,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Power",
@@ -394,7 +394,7 @@
       "unit": "W",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -448,7 +448,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -457,7 +457,7 @@
       "unit": "mm",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -466,7 +466,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -475,7 +475,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -484,7 +484,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Accessory",
@@ -493,7 +493,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Accessory",
@@ -502,7 +502,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Smart Platform",
@@ -511,7 +511,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Smart Platform",
@@ -520,7 +520,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Certification",
@@ -547,7 +547,7 @@
       "unit": "인치",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     }
   ],
   "io": [
@@ -573,7 +573,7 @@
       "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Video",
@@ -585,7 +585,7 @@
       "availability": "DP 버전 1.4",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Data",
@@ -609,7 +609,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Audio",
@@ -621,7 +621,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Audio",
@@ -633,7 +633,7 @@
       "availability": "있음(스테레오 미니 잭)",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Control",
@@ -645,7 +645,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Control",
@@ -657,7 +657,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Network",
@@ -669,7 +669,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     }
   ],
   "sources": [
@@ -681,9 +681,9 @@
     },
     {
       "code": "S2",
-      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
+      "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
       "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+      "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     },
     {
       "code": "S3",
@@ -724,23 +724,13 @@
   "lead": "**115인치 초대형 사이니지** LH115QHFEBGXKR은 QHFX 시리즈의 단독형 디스플레이다. 가로형과 세로형 설치 및 연속 운영을 지원한다.",
   "keyFacts": [
     {
-      "label": "밝기 · Typ",
-      "value": "1000",
-      "unit": "nit"
-    },
-    {
-      "label": "해상도",
-      "value": "3,840 x 2,160",
-      "unit": "픽셀"
-    },
-    {
       "label": "화면 크기",
       "value": "115 (290.7)",
       "unit": "인치(cm)"
     },
     {
-      "label": "명암비 · 정적",
-      "value": "5,500:1",
+      "label": "설치 방향",
+      "value": "가로형/세로형 설치 지원",
       "unit": ""
     }
   ]

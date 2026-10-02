@@ -563,12 +563,6 @@
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/",
       "scope": "국내 모델 HG50U800FNFXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 리모컨 종류: 멀티 코드 IR 기능 사용 시 추가 리모컨 별도 구매 필요 / 원격 관리 솔루션: 별도 구매 필요, 호텔 플랫폼에 따라 UI 상이 / 보안: 2015년 이후 출시된 Tizen 기반 삼성 TV 적용"
-    },
-    {
-      "code": "S2",
-      "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (HG50U800FNFXZA)",
-      "url": "https://www.samsung.com/latin_en/business/commercial-tvs/hotel-tv/50-hotel-tv-hu8000f-uhd-4k-hg50u800fnfxza/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     }
   ],
   "issues": [

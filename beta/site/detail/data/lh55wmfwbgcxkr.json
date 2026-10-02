@@ -142,7 +142,7 @@
       "unit": "nit",
       "condition": "",
       "source": "P, S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Touch/Pen",
@@ -214,7 +214,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -223,7 +223,7 @@
       "unit": "픽셀",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -232,7 +232,7 @@
       "unit": "mm",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -241,7 +241,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -250,7 +250,7 @@
       "unit": "°",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -259,7 +259,7 @@
       "unit": "ms",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -268,7 +268,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -277,7 +277,7 @@
       "unit": "%",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -286,7 +286,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -295,7 +295,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -304,7 +304,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Display",
@@ -322,7 +322,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Connectivity",
@@ -331,7 +331,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Power",
@@ -340,7 +340,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Power",
@@ -403,7 +403,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -412,7 +412,7 @@
       "unit": "mm",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -421,7 +421,7 @@
       "unit": "mm",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -430,7 +430,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -439,7 +439,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Accessory",
@@ -448,7 +448,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Accessory",
@@ -457,7 +457,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Smart Platform",
@@ -466,7 +466,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Smart Platform",
@@ -475,7 +475,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Touch/Pen",
@@ -484,7 +484,7 @@
       "unit": "",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Certification",
@@ -531,7 +531,7 @@
       "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Data",
@@ -555,7 +555,7 @@
       "availability": "있음(스테레오 미니 잭)",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Control",
@@ -567,7 +567,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Network",
@@ -579,7 +579,7 @@
       "availability": "있음",
       "condition": "",
       "source": "S2",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     }
   ],
   "sources": [
@@ -591,9 +591,9 @@
     },
     {
       "code": "S2",
-      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+      "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
       "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-55-inch-wmfx-lh55wmfwbgcxen/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+      "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     }
   ],
   "issues": [
@@ -630,24 +630,14 @@
   "subtitle": "Flip Pro · 전자칠판",
   "keyFacts": [
     {
-      "label": "해상도",
-      "value": "3,840 x 2,160",
-      "unit": "픽셀"
-    },
-    {
       "label": "화면 크기",
       "value": "55",
       "unit": "인치"
     },
     {
-      "label": "터치 방식",
-      "value": "IR",
+      "label": "설치 방향",
+      "value": "회전형(가로/세로 모드 전환)",
       "unit": ""
-    },
-    {
-      "label": "펜 반응 속도",
-      "value": "26",
-      "unit": "ms"
     }
   ]
 }
