@@ -1,0 +1,175 @@
+{
+  "pagesRun": 37013019082,
+  "mergeSha": "e79bbaf8d7f289eb6fb275552b82b4d10ff16814",
+  "assets": [
+    {
+      "path": "catalog.json",
+      "status": 200,
+      "sha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "matchesMergedFile": true
+    },
+    {
+      "path": "search-index.json",
+      "status": 200,
+      "sha256": "5334a0f1decfd1243d8c12115854bca553c641c254a8cb42a2fc3167057cb5e9",
+      "matchesMergedFile": true
+    },
+    {
+      "path": "detail/data/mp008f.json",
+      "status": 200,
+      "sha256": "9a02eee97746d7698b63a59dbd7e01aa391a3fc8ebe896a69b260569fa938888",
+      "matchesMergedFile": true
+    },
+    {
+      "path": "detail/data/mp012f.json",
+      "status": 200,
+      "sha256": "823ceafe963642b4d5b27d2c3c2a24a0f2d0d29461c4ba93ea28dae582de894e",
+      "matchesMergedFile": true
+    },
+    {
+      "path": "detail/data/mp016f.json",
+      "status": 200,
+      "sha256": "749972090a7228a5df9b2cc9e3b52d81d269fd14f3b4c118264061ffe6762856",
+      "matchesMergedFile": true
+    }
+  ],
+  "screens": [
+    {
+      "page": "detail",
+      "slug": "mp008f",
+      "width": 1280,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP008F · AV Portal Product Detail"
+    },
+    {
+      "page": "detail",
+      "slug": "mp012f",
+      "width": 1280,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP012F · AV Portal Product Detail"
+    },
+    {
+      "page": "detail",
+      "slug": "mp016f",
+      "width": 1280,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP016F · AV Portal Product Detail"
+    },
+    {
+      "page": "led-category",
+      "width": 1280,
+      "status": 200,
+      "jsErrors": [],
+      "labels": [
+        "제조사 제품군 페이지 ↗",
+        "제조사 제품군 페이지 ↗",
+        "제조사 제품군 페이지 ↗"
+      ],
+      "models": [
+        "MP008F",
+        "MP012F",
+        "MP016F"
+      ],
+      "brokenImages": 0,
+      "overflow": false,
+      "placeholders": 3
+    },
+    {
+      "page": "detail",
+      "slug": "mp008f",
+      "width": 390,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP008F · AV Portal Product Detail"
+    },
+    {
+      "page": "detail",
+      "slug": "mp012f",
+      "width": 390,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP012F · AV Portal Product Detail"
+    },
+    {
+      "page": "detail",
+      "slug": "mp016f",
+      "width": 390,
+      "status": 200,
+      "jsErrors": [],
+      "brokenImages": [],
+      "overflow": false,
+      "hasFailure": false,
+      "title": "Samsung MP016F · AV Portal Product Detail"
+    },
+    {
+      "page": "led-category",
+      "width": 390,
+      "status": 200,
+      "jsErrors": [],
+      "labels": [
+        "제조사 제품군 페이지 ↗",
+        "제조사 제품군 페이지 ↗",
+        "제조사 제품군 페이지 ↗"
+      ],
+      "models": [
+        "MP008F",
+        "MP012F",
+        "MP016F"
+      ],
+      "brokenImages": 0,
+      "overflow": false,
+      "placeholders": 3
+    }
+  ],
+  "search": [
+    {
+      "query": "MP008F",
+      "status": 200,
+      "resultCount": "1개 제품",
+      "models": [
+        "MP008F"
+      ],
+      "jsErrors": []
+    },
+    {
+      "query": "MPF",
+      "status": 200,
+      "resultCount": "3개 제품",
+      "models": [
+        "MP008F",
+        "MP012F",
+        "MP016F"
+      ],
+      "jsErrors": []
+    },
+    {
+      "query": "LED",
+      "status": 200,
+      "resultCount": "35개 제품",
+      "models": [
+        "MP008F",
+        "MP012F",
+        "MP016F"
+      ],
+      "jsErrors": []
+    }
+  ]
+}
