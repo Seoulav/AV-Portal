@@ -99,6 +99,11 @@ export function prepareConnectorGroups(ioGroups = []) {
   return [...grouped.values()];
 }
 
+export function isAbsentConnector(item = {}) {
+  const availability = String(item.availability ?? '').trim();
+  return availability === '미지원(사양표 "No")' || availability === 'Not available';
+}
+
 export function selectKeyConnectors(connectorGroups = [], limit = 6) {
   if (limit <= 0) return [];
   const eligibleGroups = connectorGroups.map(group => ({
@@ -200,6 +205,7 @@ export function prepareProductDetail(input) {
   const images = input.images ?? [];
   const specifications = input.specifications ?? [];
   const io = input.io ?? [];
+  const absentConnectors = io.filter(isAbsentConnector);
   const presentation = input.presentation ?? {};
   const coreTypes = new Set(['Official Product Page', ...QUICK_DOCUMENTS.map(([, type]) => type)]);
   const group = (items, key) => {
@@ -224,6 +230,7 @@ export function prepareProductDetail(input) {
     features: input.features ?? [],
     specifications,
     io,
+    absentConnectors,
     sources: input.sources ?? [],
     issues: input.issues ?? [],
     missingDocuments: input.missingDocuments ?? [],
