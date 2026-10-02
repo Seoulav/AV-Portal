@@ -1,0 +1,931 @@
+{
+  "taskId": "W-20261002-006",
+  "checkedOn": "2026-10-02",
+  "method": "Samsung 대한민국 비즈니스 각 국내 모델 제품 페이지의 동적 스펙 탭을 Chromium에서 직접 열어 연결성/Input & Output 행을 대조",
+  "summary": {
+    "models": 15,
+    "unknownBefore": 87,
+    "filled": 0,
+    "unknownAfter": 87
+  },
+  "products": {
+    "hg43u800fnfxkr": {
+      "model": "HG43U800FNFXKR",
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/",
+      "baselineSha256": "0b58b6d78d9f5dfc466e2a0e3db5f0aaa2fd47289e9f71fe0a3afac7d01b36ae",
+      "coreSha256": "3f8706d963f9ed86c267562ef135a0f3f9bbb14709780ebb19bfeaf7265a639e",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 1,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 4,
+          "connector": "Ethernet 브리지(LAN-Out)",
+          "before": "",
+          "after": "",
+          "officialLabel": "Ethernet Bridge (LAN-Out)",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ12",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ12",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "hg50u800fnfxkr": {
+      "model": "HG50U800FNFXKR",
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/",
+      "baselineSha256": "3b80027592b0a0b61094981a6e5c4d8e16088e25b0412e706d6f64bddc98c5d6",
+      "coreSha256": "3391e472d83c267bc9d72849bbd10b7b53cd7065917ca36cb87d303a3188365e",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 1,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 4,
+          "connector": "Ethernet 브리지(LAN-Out)",
+          "before": "",
+          "after": "",
+          "officialLabel": "Ethernet Bridge (LAN-Out)",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ12",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ12",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "hg65u800fnfxkr": {
+      "model": "HG65U800FNFXKR",
+      "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/",
+      "baselineSha256": "84e4812769b57ac15f78c8c0147e3b5a349d00f2b5ef436a1a93f8d1b158191d",
+      "coreSha256": "1cf602a3c69fcbc651911b4d0fb151b6d994d7bd4289610b7d24b9819d8b5f4d",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 1,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 4,
+          "connector": "Ethernet 브리지(LAN-Out)",
+          "before": "",
+          "after": "",
+          "officialLabel": "Ethernet Bridge (LAN-Out)",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ12",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ12",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh115qhfebgxkr": {
+      "model": "LH115QHFEBGXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+      "baselineSha256": "b3812b0000d9b48a4488501f6739bf15889a2deb0fb5a6f85aa7ad254ba0f26f",
+      "coreSha256": "dbdeed8d4825bf7ce922783713938e8600d0219dafb78cc84145263e0cc5a24f",
+      "ioCount": 10,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "무선(물리 단자 없음)",
+          "before": "",
+          "after": "",
+          "officialLabel": null,
+          "officialValue": null,
+          "decision": "NOT_PHYSICAL"
+        },
+        {
+          "index": 4,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 6,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 8,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 9,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        }
+      ]
+    },
+    "lh32qmcebgcxkr": {
+      "model": "LH32QMCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
+      "baselineSha256": "a33faf99eb06dc5417e1075b84223fc1b19642c35a26febfa065c13e7b96099f",
+      "coreSha256": "101f76cbdf6cf754337c3d2d247138d927f70fc0756ddce767fc11491ed16b2a",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "before": "",
+          "after": "",
+          "officialLabel": "DP 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh43qhcebgcxkr": {
+      "model": "LH43QHCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH43QHCEBGCXKR/",
+      "baselineSha256": "a1ec0efdbe518e945fb2a3db8254829de579386452513f0ffabaccb3fc533803",
+      "coreSha256": "2be75776f4596a56a16d88e28dce75293e757f5f19f24f147224abb2aeb4dd84",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh43qmcebgcxkr": {
+      "model": "LH43QMCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/",
+      "baselineSha256": "5d2d52039354f73dcd0a10d36eec7c676fe3a49b91734c4c429f4636090a8418",
+      "coreSha256": "132c486646d65d65de10f19d1a7930acbf23ab739bc99992a101d8d561d70b8d",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh75qhcebgcxkr": {
+      "model": "LH75QHCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/",
+      "baselineSha256": "37e22df113dc67133da5b71a23898b9b663f34ec402ab7d83b2bce610b6e6190",
+      "coreSha256": "322f9e6aadbf07a49128ebe6602110f674f53b807a9b4bead6adedd0ae777088",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh85qmcebgcxkr": {
+      "model": "LH85QMCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH85QMCEBGCXKR/",
+      "baselineSha256": "3296a6e604ce1e6a0809cf03009af1837b99f975c4e73a50d3ea35b02c584ee3",
+      "coreSha256": "ff6d3b4705c4ed46251027040f4663b49eb8ff6e6244b31d18aeee62c5b6de0f",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh98qecedgcxkr": {
+      "model": "LH98QECEDGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qec-series-d/LH98QECEDGCXKR/",
+      "baselineSha256": "8e479909d753f8607b84107541f69f0b90a0a4409a74b863a31eb70a8c9e214d",
+      "coreSha256": "11f136344a93c06f447a8d125ba26f724be73b6066c99ff7e5dda4ff4d0fbd00",
+      "ioCount": 7,
+      "rows": [
+        {
+          "index": 1,
+          "connector": "DisplayPort",
+          "before": "",
+          "after": "",
+          "officialLabel": "DP 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh98qmcebgcxkr": {
+      "model": "LH98QMCEBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/",
+      "baselineSha256": "e42a4e998c852cc20ff63f900b91ffad496338c7c9a48457a288e2af497484f9",
+      "coreSha256": "aaf311b202d9d2571c4dea256f88445605183c491610a285f4220ae54994e7e3",
+      "ioCount": 9,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        },
+        {
+          "index": 5,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    },
+    "lh55vhcrbgbxkr": {
+      "model": "LH55VHCRBGBXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/",
+      "baselineSha256": "760758ad3e7d9175fc7743f9a84997f340182498feb5caedd833af1096b89959",
+      "coreSha256": "3d55fb5a9494d1769ab2f4d5544c27d362815062dd5dbf55dc8c617c0de4b4d7",
+      "ioCount": 12,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "비디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "비디오출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 5,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 9,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 10,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "before": "",
+          "after": "",
+          "officialLabel": "전원 출력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        }
+      ]
+    },
+    "lh55vmcrbgbxkr": {
+      "model": "LH55VMCRBGBXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/",
+      "baselineSha256": "9208e2e26683b7813cecb0d78dc0adc4fb200a4ce6ba12a69f41b41d66985728",
+      "coreSha256": "eb2d21895b88801ea6bee21f3204001cfdc299563e5dfadaed7022ac89ae65ae",
+      "ioCount": 12,
+      "rows": [
+        {
+          "index": 3,
+          "connector": "비디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "비디오출력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 5,
+          "connector": "IR 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "IR 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 7,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 8,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 9,
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 10,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 11,
+          "connector": "전원 출력(Power Out)",
+          "before": "",
+          "after": "",
+          "officialLabel": "전원 출력",
+          "officialValue": "없음",
+          "decision": "SAYS_NONE"
+        }
+      ]
+    },
+    "lh55wmfwbgcxkr": {
+      "model": "LH55WMFWBGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
+      "baselineSha256": "72239bc5cec46a1d6023c6fd93de6e4322505f35aa8f928aa3a5b423888f8a2f",
+      "coreSha256": "cc744544df05c2bc237e3f161e6c5d13d7b8a716f46039300dd81ecdf1373b9c",
+      "ioCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "USB-C 허브",
+          "before": "",
+          "after": "",
+          "officialLabel": "USB",
+          "officialValue": "1 (Rear), 1 (with optional tray)",
+          "decision": "OTHER_CONNECTOR_ONLY"
+        },
+        {
+          "index": 1,
+          "connector": "HDMI 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "HDMI 출력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 5,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        },
+        {
+          "index": 6,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": null,
+          "decision": "NOT_STATED"
+        }
+      ]
+    },
+    "lh75wmfwlgcxkr": {
+      "model": "LH75WMFWLGCXKR",
+      "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/",
+      "baselineSha256": "54cd10c9932b073f9e23f709c8c0f20339e452bd5457b0f93c4efff1d8cea165",
+      "coreSha256": "ebfe2185033246ab7be565abf45aaeb019c6884afe0945f85773c8f541a5e9b7",
+      "ioCount": 7,
+      "rows": [
+        {
+          "index": 0,
+          "connector": "USB-C 허브",
+          "before": "",
+          "after": "",
+          "officialLabel": "USB",
+          "officialValue": "2 (Front 1, Rear 1)",
+          "decision": "OTHER_CONNECTOR_ONLY"
+        },
+        {
+          "index": 1,
+          "connector": "HDMI 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "비디오출력",
+          "officialValue": "있음",
+          "decision": "OTHER_CONNECTOR_ONLY"
+        },
+        {
+          "index": 4,
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "",
+          "officialLabel": "오디오출력",
+          "officialValue": "Stereo Mini Jack",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 5,
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "",
+          "officialLabel": "RS232 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        },
+        {
+          "index": 6,
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "",
+          "officialLabel": "RJ45 입력",
+          "officialValue": "있음",
+          "decision": "PRESENT_NO_COUNT"
+        }
+      ]
+    }
+  }
+}

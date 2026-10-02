@@ -1,0 +1,52 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
+
+const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
+const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
+const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qecedgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
+
+test('connector cards show direction alone when port count is unknown, while the full table retains it', () => {
+  const badge = app.match(/port\.append\(element\('span', 'port-direction', (.+)\)\);/);
+  assert.ok(badge, 'the card badge expression must exist');
+  const render = new Function('item', `return (${badge[1]});`);
+  for (const directionLabel of ['입력', '출력', '양방향']) {
+    assert.equal(render({ directionLabel, portCount: '미확인' }), directionLabel);
+  }
+  assert.equal(render({ directionLabel: '입력', portCount: '3' }), '입력 · 포트 3');
+  assert.match(app, /element\('td', '', item\.portCount\)/);
+  assert.equal(connectorPresentation({ connector: 'RS-232C 입력', quantity: '' }).portCount, '미확인');
+});
+
+test('Samsung quantity audit covers all 87 unknown rows and leaves unsupported counts blank', () => {
+  const evidence = read('Work/기록/W-20261002-006-io-port-counts-evidence.json');
+  assert.deepEqual(Object.keys(evidence.products), targets);
+  let unknown = 0;
+  let filled = 0;
+  for (const slug of targets) {
+    const p = read(`beta/site/detail/data/${slug}.json`);
+    const e = evidence.products[slug];
+    assert.equal(e.url, p.sources.find(source => source.code === 'P').url);
+    assert.match(e.url, /^https:\/\/www\.samsung\.com\/sec\/business\//);
+    assert.equal(sha(p), e.baselineSha256, `${slug}: product data must be unchanged when no count is proven`);
+    const withoutQuantity = {...p, io: p.io.map(({quantity, ...row}) => row)};
+    assert.equal(sha(withoutQuantity), e.coreSha256, `${slug}: fields outside io quantity`);
+    const blankRows = p.io.flatMap((row, index) => row.quantity ? [] : [index]);
+    assert.deepEqual(e.rows.map(row => row.index), blankRows);
+    for (const row of e.rows) {
+      assert.equal(p.io[row.index].connector, row.connector);
+      assert.equal(p.io[row.index].quantity, row.after);
+      assert.equal(row.before, '');
+      assert.ok(['NOT_STATED','PRESENT_NO_COUNT','NOT_PHYSICAL','SAYS_NONE','OTHER_CONNECTOR_ONLY'].includes(row.decision));
+      if (row.decision === 'SAYS_NONE') assert.equal(row.officialValue, '없음');
+      if (row.decision === 'NOT_STATED') assert.equal(row.officialValue, null);
+      unknown++;
+      if (row.after) filled++;
+    }
+  }
+  assert.equal(unknown, 87);
+  assert.equal(filled, 0);
+});
