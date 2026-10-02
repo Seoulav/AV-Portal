@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -13,7 +14,7 @@ test('Samsung Korean business spec audit covers the 14 still-published models', 
   // Keep W-005's original 15-model evidence unchanged.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungSourceCleanup(read(`beta/site/detail/data/${slug}.json`), slug);
     const e = evidence.products[slug];
     const source = p.sources.find(s => s.code === 'P');
     assert.equal(source.url, e.koreanUrl);
@@ -84,5 +85,6 @@ test('provenance notices leave condition fields and remain in named sources and 
     }
   }
   const color = read('beta/site/detail/data/lh32qmcebgcxkr.json').specifications.find(row => row.name === '색재현율');
-  assert.equal(color.source, 'P, S2', 'Korean 72% has no NTSC basis; overseas qualifier remains attributed');
+  assert.equal(color.source, 'P', 'W-010 keeps only the Korean 72% value and its domestic source');
+  assert.equal(color.value, '72 %');
 });

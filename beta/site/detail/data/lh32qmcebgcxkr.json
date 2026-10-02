@@ -216,10 +216,10 @@
     {
       "group": "Display",
       "name": "색재현율",
-      "value": "72% (NTSC)",
+      "value": "72 %",
       "unit": "",
       "condition": "",
-      "source": "P, S2",
+      "source": "P",
       "verification": "FOUND"
     },
     {
@@ -573,12 +573,6 @@
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
       "scope": "국내 모델 LH32QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 제품 두께: QMC 시리즈 공통 슬림 디자인 수치 / 베젤 구조: 기존 32인치 삼성 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
-    },
-    {
-      "code": "S2",
-      "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH32QMCEBGCXZA)",
-      "url": "https://www.samsung.com/ca/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh32qmcebgcxza/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
     },
     {
       "code": "S3",

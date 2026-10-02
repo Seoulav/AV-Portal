@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeSamsungSourceCleanup, currentKeyFactAnchors} from './samsung-w010-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -23,9 +24,14 @@ test('14 published Samsung overview cards use verified product rows and preserve
       assert.match(p.keyFacts[2].label, /추가 구매/);
       assert.match(p.keyFacts[3].label, /별도 구매/);
     }
-    assert.equal(p.keyFacts.length, e.facts.length);
+    const changedFacts = currentKeyFactAnchors(slug);
+    assert.equal(p.keyFacts.length, changedFacts?.after.length ?? e.facts.length);
     for (const [i, fact] of p.keyFacts.entries()) {
-      const proof = e.facts[i];
+      const proof = changedFacts ? {
+        kind:'spec', index:changedFacts.anchors[i].index,
+        label:changedFacts.after[i].label, value:changedFacts.after[i].value,
+        unit:changedFacts.after[i].unit, rowName:changedFacts.anchors[i].name, condition:''
+      } : e.facts[i];
       assert.deepEqual(Object.keys(fact).sort(), ['label','unit','value']);
       assert.deepEqual(fact, {label:proof.label, value:proof.value, unit:proof.unit});
       const row = p[proof.kind === 'spec' ? 'specifications' : 'io'][proof.index];
@@ -35,7 +41,7 @@ test('14 published Samsung overview cards use verified product rows and preserve
       assert.equal(row.name, proof.rowName);
       assert.equal(row.condition || '', proof.condition);
     }
-    const original = structuredClone(p);
+    const original = beforeSamsungSourceCleanup(p, slug);
     // Reconstruct the W-007 snapshot before W-008 restored verification and added document-backed quantities/sources.
     for (const change of later.products[slug]?.quantityChanges ?? []) original.io[change.index].quantity = change.before;
     original.sources = original.sources.filter(source => !(later.products[slug]?.addedSourceCodes ?? []).includes(source.code));

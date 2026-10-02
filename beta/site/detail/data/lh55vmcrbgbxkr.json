@@ -592,18 +592,6 @@
       "scope": "국내 모델 LH55VMCRBGBXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 베젤 폭(베젤투베젤): Razor 베젤, 4면 균일 적용 / 밝기: 자사 실험치 기준, 실사용 환경에 따라 차이 가능 / 패널 헤이즈(Haze): 눈부심 방지 패널 / 데이지 체인 최대 구성: DisplayPort 1.2 또는 HDMI 사용, 외장 그래픽카드·UHD 분배기 불필요 / 캘리브레이션 소프트웨어: 모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정"
     },
     {
-      "code": "S2",
-      "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55VMCRBGBXEN)",
-      "url": "https://www.samsung.com/uk/business/smart-signage/video-wall/vmc-r-razor-narrow-bezel-video-wall-fhd-1080p-500nit-ip5x-088mm-lh55vmcrbgbxen/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
-    },
-    {
-      "code": "S3",
-      "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VMCRBGBXZA)",
-      "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vmc-r-razor-narrow-bezel-video-wall-fhd-1080p-500nit-ip5x-088mm-lh55vmcrbgbxza/",
-      "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
-    },
-    {
       "code": "S4",
       "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
       "scope": "국내 모델 LH55VMCRBGBXKR 일치 · 슬라이드 29의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"

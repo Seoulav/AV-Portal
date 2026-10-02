@@ -1,0 +1,1831 @@
+{
+  "taskId": "W-20261002-010",
+  "baseCommit": "bc7633d6866489b5d939ed18a62e1528c54ad942",
+  "rule": "Only domestic evidence can support FOUND or VERIFIED Samsung specification/I-O rows; preserve unsupported legacy values with REVIEW REQUIRED.",
+  "domesticDocuments": [
+    {
+      "name": "[사이니지] 스마트 LCD 사이니지_115QHF.pdf",
+      "publisher": "Samsung Electronics",
+      "sha256": "4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962",
+      "pages": [
+        1,
+        2
+      ],
+      "model": "LH115QHFEBGXKR"
+    },
+    {
+      "name": "[사이니지] 스마트 LCD 사이니지 제품가이드.pptx",
+      "publisher": "Samsung Electronics",
+      "sha256": "347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4",
+      "slides": [
+        4
+      ],
+      "model": "LH115QHFEBGXKR"
+    }
+  ],
+  "documentsDecision": "The exact-model slide 4 and PDF page 2 repeat the already domestic-sourced USB, size, weight, power-on, operating-hours and certification rows; neither supplies the 35 S2-only metrics. PDF page 1 says maximum 1000 nit, while the legacy row claims brightness Typ, so they are not equivalent.",
+  "products": {
+    "hg43u800fnfxkr": {
+      "previousFileSha256": "69c4529d0498b4af712c10d32aefb2fbbb0036bd55e3d2925540ae6981d7ee06",
+      "coreSha256": "53a29e7a03398f0d6688f41f61bd385f1d09a49e17e9fa29080ef6b860eef687",
+      "rowCount": 46,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (HG43U800FNFXZA)",
+            "url": "https://www.samsung.com/ca/business/commercial-tvs/hotel-tv/hu8000f-uhd-4k-hg43u800fnfxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        },
+        {
+          "index": 2,
+          "source": {
+            "code": "S3",
+            "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (HG43U800FNFXZA)",
+            "url": "https://www.samsung.com/latin_en/business/commercial-tvs/hotel-tv/43-hotel-tv-hu8000f-uhd-4k-hg43u800fnfxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "hg50u800fnfxkr": {
+      "previousFileSha256": "ba1129d54b4195e194bf04303a191e9dffa9b1cff7008ada144dabdded0dbb6d",
+      "coreSha256": "8671eff4e79c266f2e03de4c1744cfdb7601793c79d356553267f8e23689594f",
+      "rowCount": 45,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (HG50U800FNFXZA)",
+            "url": "https://www.samsung.com/latin_en/business/commercial-tvs/hotel-tv/50-hotel-tv-hu8000f-uhd-4k-hg50u800fnfxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "hg65u800fnfxkr": {
+      "previousFileSha256": "101c050ea85e94fad5493a2966b034862790fd1222a6d2b8c640ec045fa01cb3",
+      "coreSha256": "4b9284ea8a0aa0e7b0ba29177e8465713667d5ecee89b034e85cf98b11a9ff7d",
+      "rowCount": 45,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (HG65U800FNFXZA)",
+            "url": "https://www.samsung.com/latin_en/business/commercial-tvs/hotel-tv/65-hotel-tv-hu8000f-uhd-4k-hg65u800fnfxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh32qmcebgcxkr": {
+      "previousFileSha256": "61e3443928d28cd8e598149d6c951c7453c12c6ad4baf676c9ce10d23cbf5b69",
+      "coreSha256": "8f3a7aff9aecce536c357bb1866998480ab25761eda7a589897c5b1da866b8e5",
+      "rowCount": 47,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 1,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH32QMCEBGCXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh32qmcebgcxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ],
+      "domesticReplacements": [
+        {
+          "kind": "specifications",
+          "index": 11,
+          "name": "색재현율",
+          "before": {
+            "source": "P, S2",
+            "verification": "FOUND",
+            "value": "72% (NTSC)",
+            "quantity": null
+          },
+          "after": {
+            "source": "P",
+            "verification": "FOUND",
+            "value": "72 %",
+            "quantity": null
+          },
+          "koreanEvidence": "Samsung Korean business spec tab, 색재현성(Color Gamut): 72 %. Korean page has no NTSC qualifier; W-20261002-005 evidence captures both."
+        }
+      ]
+    },
+    "lh43qmcebgcxkr": {
+      "previousFileSha256": "adc42e44f15ac57ef7da951f34816ef7eb6a535e0b7c046ff543f9413d5b4988",
+      "coreSha256": "c4de9c6090ffa67325b34369f34e63a3a8c3d7d55ee612184f37f7e74623fb39",
+      "rowCount": 52,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (LH43QMCEBGCXGO)",
+            "url": "https://www.samsung.com/latin_en/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh43qmcebgcxgo/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh85qmcebgcxkr": {
+      "previousFileSha256": "dcb790ed6a23c283498242acd5e639ec049fd824f098793010e59306fc5bb243",
+      "coreSha256": "4db67715d6b55770061bd4303e8e4495979973a554c44aac758e40d814f9437c",
+      "rowCount": 52,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH85QMCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh85qmcebgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh98qmcebgcxkr": {
+      "previousFileSha256": "166194e4d251bdf2b4fe2b07658a4d30141517794ce72c4a40543d7cdbfa96a6",
+      "coreSha256": "cf3718cc2c8092bddb877e273e9bfe0c8c0cf26e635ea99ead50da5e4f4ddcc7",
+      "rowCount": 51,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH98QMCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/98inch-uhd-signage-qm98c-lh98qmcebgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh43qhcebgcxkr": {
+      "previousFileSha256": "6e89fe1f3d1b0796e39cc1fec066f0eb13a530710e5c75dac579250591d9e433",
+      "coreSha256": "3bc3260528ba6686aac761e91b75a7f23da04d1c50e9d8f9bf6921c297557721",
+      "rowCount": 52,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH43QHCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qhc-lh43qhcebgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh75qhcebgcxkr": {
+      "previousFileSha256": "852cf34642c3ee51e78d9a72fed5345243274b3a969b913739320973cfd78d94",
+      "coreSha256": "3f1e92591a164cf8b2cab7c1f8461d186613cd43d6d0089d26a88b10ee79dd2c",
+      "rowCount": 52,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH75QHCEBGCXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qhc-lh75qhcebgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh115qhfebgxkr": {
+      "previousFileSha256": "fa4af4b81131c1d52a55745a02669d80bef76e0353093524c579a19805dd60eb",
+      "coreSha256": "1bc3622beb163f1ed282ae7e396c882508fc784dc475cb101822ffb383aea080",
+      "rowCount": 57,
+      "foreignOnlyBefore": 35,
+      "mixedBefore": 0,
+      "downgraded": [
+        {
+          "kind": "specifications",
+          "index": 12,
+          "name": "패널 종류",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "VA",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "VA",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 13,
+          "name": "해상도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "3,840 x 2,160",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "3,840 x 2,160",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 14,
+          "name": "픽셀 피치(HxV)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "0.630 x 0.630",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "0.630 x 0.630",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 15,
+          "name": "밝기(Typ)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "1000",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "1000",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 16,
+          "name": "명암비(정적)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "5,500:1",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "5,500:1",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 17,
+          "name": "시야각(H/V)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "178/178",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "178/178",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 18,
+          "name": "응답 속도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "6.5",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "6.5",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 19,
+          "name": "색재현율",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "93% (DCI-P3)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "93% (DCI-P3)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 20,
+          "name": "패널 헤이즈(Haze)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "25",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "25",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 21,
+          "name": "수평 주사 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "15 - 135 kHz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "15 - 135 kHz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 22,
+          "name": "최대 픽셀 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "1.188 GHz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "1.188 GHz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 23,
+          "name": "수직 주사 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "24 - 120 Hz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "24 - 120 Hz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 24,
+          "name": "동적 명암비",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Mega",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Mega",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 25,
+          "name": "Wi-Fi",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "있음",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "있음",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 26,
+          "name": "블루투스",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "있음",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "있음",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 27,
+          "name": "전원 사양",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "AC100-240V 50/60Hz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "AC100-240V 50/60Hz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 29,
+          "name": "소비전력(대기/Sleep 모드)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "0.5",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "0.5",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 35,
+          "name": "동작 습도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "20 - 95% (Operating)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "20 - 95% (Operating)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 36,
+          "name": "VESA 규격",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "1000 x 600",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "1000 x 600",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 37,
+          "name": "베젤 폭(사양표)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "3 Bezel-less",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "3 Bezel-less",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 38,
+          "name": "베젤 색상",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "TITAN BLACK",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "TITAN BLACK",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 39,
+          "name": "프레임 재질",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Non-Glossy(Metal)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Non-Glossy(Metal)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 40,
+          "name": "옵션 벽걸이 마운트",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Slim Fit Wall-mount (기본 동봉)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Slim Fit Wall-mount (기본 동봉)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 41,
+          "name": "옵션 스탠드",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Yes(기본 동봉)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Yes(기본 동봉)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 42,
+          "name": "운영체제 버전",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Tizen 8.0",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Tizen 8.0",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 43,
+          "name": "내장 플래시 메모리",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "16GB",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "16GB",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 46,
+          "name": "대각 크기(사양표 실측)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "114.4818",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "114.4818",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 1,
+          "name": "HDMI",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": "3"
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": "3"
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 2,
+          "name": "DisplayPort",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": "1"
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": "1"
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 4,
+          "name": "IR 입력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 5,
+          "name": "오디오 입력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 6,
+          "name": "오디오 출력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 7,
+          "name": "RS-232C 입력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 8,
+          "name": "RS-232C 출력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 9,
+          "name": "RJ45(LAN)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        }
+      ],
+      "changedSources": [
+        {
+          "index": 1,
+          "before": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          },
+          "after": {
+            "code": "S2",
+            "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
+            "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ],
+      "removedSources": [],
+      "keyFactChange": {
+        "before": [
+          {
+            "label": "밝기 · Typ",
+            "value": "1000",
+            "unit": "nit"
+          },
+          {
+            "label": "해상도",
+            "value": "3,840 x 2,160",
+            "unit": "픽셀"
+          },
+          {
+            "label": "화면 크기",
+            "value": "115 (290.7)",
+            "unit": "인치(cm)"
+          },
+          {
+            "label": "명암비 · 정적",
+            "value": "5,500:1",
+            "unit": ""
+          }
+        ],
+        "after": [
+          {
+            "label": "화면 크기",
+            "value": "115 (290.7)",
+            "unit": "인치(cm)"
+          },
+          {
+            "label": "설치 방향",
+            "value": "가로형/세로형 설치 지원",
+            "unit": ""
+          }
+        ],
+        "anchors": [
+          {
+            "kind": "specifications",
+            "index": 0,
+            "name": "화면 크기",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "kind": "specifications",
+            "index": 7,
+            "name": "설치 방향",
+            "source": "P",
+            "verification": "FOUND"
+          }
+        ]
+      }
+    },
+    "lh55vmcrbgbxkr": {
+      "previousFileSha256": "696fed852c756e4c8a274bef678db2e90d9c417f5168ea080f80d333c1d3205a",
+      "coreSha256": "3e6c72db4ed3f74f89a9ecd5006c5ede30ae931598b746318983921ed90c42ae",
+      "rowCount": 47,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55VMCRBGBXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/video-wall/vmc-r-razor-narrow-bezel-video-wall-fhd-1080p-500nit-ip5x-088mm-lh55vmcrbgbxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        },
+        {
+          "index": 2,
+          "source": {
+            "code": "S3",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VMCRBGBXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vmc-r-razor-narrow-bezel-video-wall-fhd-1080p-500nit-ip5x-088mm-lh55vmcrbgbxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh55vhcrbgbxkr": {
+      "previousFileSha256": "b6ae758c6fa3058c1b61e22087d10ae59426b692192a134fc0d8786dcbf5ad83",
+      "coreSha256": "4745fd4a79c3725375d9fba4b2cfd55d59f57efd38093a280e6cb0c14d6f3480",
+      "rowCount": 47,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55VHCRBGBXEN)",
+            "url": "https://www.samsung.com/uk/business/smart-signage/video-wall/vhc-r-razor-narrow-bezel-video-wall-fhd-1080p-700nit-ip5x-088mm-lh55vhcrbgbxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        },
+        {
+          "index": 2,
+          "source": {
+            "code": "S3",
+            "name": "삼성전자 공식 캐나다 비즈니스 제품 페이지 사양표 (LH55VHCRBGBXZA)",
+            "url": "https://www.samsung.com/ca/business/smart-signage/video-wall/vhc-r-razor-narrow-bezel-video-wall-fhd-1080p-700nit-ip5x-088mm-lh55vhcrbgbxza/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    },
+    "lh55wmfwbgcxkr": {
+      "previousFileSha256": "c3e4266f8af9cdfa06bb1dd0d5539440dac730414f8a41990380a6e2b56177cc",
+      "coreSha256": "01e87cb384f50778eef96d6c382f79c95a1f51763bf7cc2e79ec81aa2975e287",
+      "rowCount": 48,
+      "foreignOnlyBefore": 28,
+      "mixedBefore": 1,
+      "downgraded": [
+        {
+          "kind": "specifications",
+          "index": 1,
+          "name": "밝기",
+          "before": {
+            "source": "P, S2",
+            "verification": "FOUND",
+            "value": "450 (유리 미장착) / 300 (유리 장착)",
+            "quantity": null
+          },
+          "after": {
+            "source": "P, S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "450 (유리 미장착) / 300 (유리 장착)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 9,
+          "name": "패널 종류",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "VA",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "VA",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 10,
+          "name": "해상도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "3,840 x 2,160",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "3,840 x 2,160",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 11,
+          "name": "픽셀 피치(HxV)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "0.315 x 0.315",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "0.315 x 0.315",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 12,
+          "name": "명암비(정적)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "4,000:1 (유리 미장착)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "4,000:1 (유리 미장착)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 13,
+          "name": "시야각(H/V)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "178/178",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "178/178",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 14,
+          "name": "응답 속도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "9.5",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "9.5",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 15,
+          "name": "색재현율",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "72% (NTSC)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "72% (NTSC)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 16,
+          "name": "패널 헤이즈(Haze)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "2 (유리 미장착)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "2 (유리 미장착)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 17,
+          "name": "수평 주사 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "30 - 81 kHz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "30 - 81 kHz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 18,
+          "name": "최대 픽셀 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "148.5 MHz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "148.5 MHz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 19,
+          "name": "수직 주사 주파수",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "48 - 75 Hz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "48 - 75 Hz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 21,
+          "name": "Wi-Fi",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "있음",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "있음",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 22,
+          "name": "블루투스",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "있음",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "있음",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 23,
+          "name": "전원 사양",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "AC100-240V 50/60Hz",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "AC100-240V 50/60Hz",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 30,
+          "name": "동작 습도",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "10 - 80% (결로 없음)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "10 - 80% (결로 없음)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 31,
+          "name": "VESA 규격",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "400 x 400",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "400 x 400",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 32,
+          "name": "베젤 폭(사양표)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "26.2(4면 균일)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "26.2(4면 균일)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 33,
+          "name": "베젤 색상",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Gray White",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Gray White",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 34,
+          "name": "프레임 재질",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Non-Glossy(Plastic)",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Non-Glossy(Plastic)",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 35,
+          "name": "옵션 벽걸이 마운트",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "WMN-4277SF",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "WMN-4277SF",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 36,
+          "name": "옵션 스탠드",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "STN-WM55R",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "STN-WM55R",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 37,
+          "name": "운영체제 버전",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "Tizen 9.0",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "Tizen 9.0",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 38,
+          "name": "내장 플래시 메모리",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "64GB",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "64GB",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "specifications",
+          "index": 39,
+          "name": "터치 방식",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": "IR",
+            "quantity": null
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": "IR",
+            "quantity": null
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 2,
+          "name": "HDMI",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": "2 (본체 1, 옵션 트레이 1)"
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": "2 (본체 1, 옵션 트레이 1)"
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 4,
+          "name": "오디오 출력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 5,
+          "name": "RS-232C 입력",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        },
+        {
+          "kind": "io",
+          "index": 6,
+          "name": "RJ45(LAN)",
+          "before": {
+            "source": "S2",
+            "verification": "FOUND",
+            "value": null,
+            "quantity": ""
+          },
+          "after": {
+            "source": "S2",
+            "verification": "REVIEW REQUIRED",
+            "value": null,
+            "quantity": ""
+          },
+          "foreignCodes": [
+            "S2"
+          ],
+          "domesticDecision": "No exact same field and measurement condition in available Korean materials; preserve legacy value as unverified."
+        }
+      ],
+      "changedSources": [
+        {
+          "index": 1,
+          "before": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+            "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-55-inch-wmfx-lh55wmfwbgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          },
+          "after": {
+            "code": "S2",
+            "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+            "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-55-inch-wmfx-lh55wmfwbgcxen/",
+            "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ],
+      "removedSources": [],
+      "keyFactChange": {
+        "before": [
+          {
+            "label": "해상도",
+            "value": "3,840 x 2,160",
+            "unit": "픽셀"
+          },
+          {
+            "label": "화면 크기",
+            "value": "55",
+            "unit": "인치"
+          },
+          {
+            "label": "터치 방식",
+            "value": "IR",
+            "unit": ""
+          },
+          {
+            "label": "펜 반응 속도",
+            "value": "26",
+            "unit": "ms"
+          }
+        ],
+        "after": [
+          {
+            "label": "화면 크기",
+            "value": "55",
+            "unit": "인치"
+          },
+          {
+            "label": "설치 방향",
+            "value": "회전형(가로/세로 모드 전환)",
+            "unit": ""
+          }
+        ],
+        "anchors": [
+          {
+            "kind": "specifications",
+            "index": 0,
+            "name": "화면 크기",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "kind": "specifications",
+            "index": 4,
+            "name": "디자인",
+            "source": "P",
+            "verification": "FOUND"
+          }
+        ]
+      }
+    },
+    "lh75wmfwlgcxkr": {
+      "previousFileSha256": "6f16bfe2736b9cce1d322da1b80f8f23035caae9c5db223ed14bdb6bce4c1747",
+      "coreSha256": "662599edd32c4b112568a268454b3f127b5d1b95fa969d61834bc99bea096c90",
+      "rowCount": 47,
+      "foreignOnlyBefore": 0,
+      "mixedBefore": 0,
+      "downgraded": [],
+      "changedSources": [],
+      "removedSources": [
+        {
+          "index": 1,
+          "source": {
+            "code": "S2",
+            "name": "삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH75WMFWLGCXEN)",
+            "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-75-inch-wmfx-lh75wmfwlgcxen/",
+            "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "products": 14,
+    "totalRows": 688,
+    "foreignOnlyBefore": 63,
+    "mixedBefore": 2,
+    "foreignReferencesBefore": 65,
+    "domesticReplacements": 1,
+    "valueChanges": 1,
+    "reviewRequiredChanges": 64,
+    "removedForeignSourceEntries": 15,
+    "foreignReferencesAfter": 64,
+    "verifiedForeignReferencesAfter": 0
+  }
+}
