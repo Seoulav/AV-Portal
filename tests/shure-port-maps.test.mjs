@@ -7,6 +7,8 @@ import {prepareEnhancements, portMapImageMatches} from '../prototype/brc-am7/det
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
 const sha = value => createHash('sha256').update(value).digest('hex');
+// Git stores text with LF; compare repository bytes across Windows/Linux checkouts.
+const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
 const proof = read('Work/기록/W-20261002-001-shure-port-map-evidence.json');
 const target = ['mxcw640', 'mxcwapt-w', 'qlxd4', 'slxd4-plus', 'slxd4d-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 const approved = ['qlxd4', 'slxd4-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
@@ -49,12 +51,13 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length, 6);
   assert.equal(Object.keys(proof.preservedProducts).length, 235);
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {
-    assert.equal(sha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected bytes');
+    assert.equal(textSha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected Git bytes');
   }
 });
 
 test('Shure mapping preserves published source images, PDFs and catalog bytes', () => {
   for (const [path, hash] of Object.entries(proof.assets)) {
-    assert.equal(sha(bytes('beta/site/' + path)), hash, path);
+    const hashFile = /\.(json|svg)$/.test(path) ? textSha : sha;
+    assert.equal(hashFile(bytes('beta/site/' + path)), hash, path);
   }
 });
