@@ -625,5 +625,29 @@
     "footerNote": "Samsung LH55WMFWBGCXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**55인치 전자칠판** LH55WMFWBGCXKR은 Flip Pro 시리즈 제품이다. 펜 입력과 지우개 기능으로 화면에 필기하고 수정할 수 있다.",
+  "subtitle": "Flip Pro · 전자칠판",
+  "keyFacts": [
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "55",
+      "unit": "인치"
+    },
+    {
+      "label": "터치 방식",
+      "value": "IR",
+      "unit": ""
+    },
+    {
+      "label": "펜 반응 속도",
+      "value": "26",
+      "unit": "ms"
+    }
+  ]
 }

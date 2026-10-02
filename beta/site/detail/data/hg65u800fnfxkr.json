@@ -612,5 +612,29 @@
     "footerNote": "Samsung HG65U800FNFXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**65인치 호텔용 TV** HG65U800FNFXKR은 HU8000F 시리즈 모델이다. 구글 캐스트와 애플 에어플레이로 모바일 콘텐츠를 TV에 미러링할 수 있다.",
+  "subtitle": "HU8000F · 호텔용 TV",
+  "keyFacts": [
+    {
+      "label": "해상도",
+      "value": "4K (3,840 x 2,160)",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "65",
+      "unit": "인치"
+    },
+    {
+      "label": "객실 리모컨 · 추가 구매",
+      "value": "멀티 코드 IR 리모컨",
+      "unit": ""
+    },
+    {
+      "label": "원격 관리 · 별도 구매",
+      "value": "Link Cloud(링크 클라우드)",
+      "unit": ""
+    }
+  ]
 }

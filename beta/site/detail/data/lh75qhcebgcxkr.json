@@ -569,7 +569,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Audio",
@@ -657,5 +657,29 @@
     "footerNote": "Samsung LH75QHCEBGCXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "subtitle": "QHC · UHD 디지털 사이니지",
+  "lead": "**75인치 UHD 사이니지** LH75QHCEBGCXKR은 QHC 시리즈의 단독형 디스플레이다. 디렉터 모드와 DICOM 시뮬레이션 모드를 포함한 프로페셔널 모드를 지원한다.",
+  "keyFacts": [
+    {
+      "label": "밝기 · Typ",
+      "value": "700",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "75 (189.3)",
+      "unit": "인치(cm)"
+    },
+    {
+      "label": "명암비 · 정적",
+      "value": "4,000:1",
+      "unit": ""
+    }
+  ]
 }

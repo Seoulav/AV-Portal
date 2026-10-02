@@ -709,5 +709,29 @@
     "footerNote": "Samsung LH115QHFEBGXKR 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "subtitle": "QHFX · UHD 디지털 사이니지",
+  "lead": "**115인치 초대형 사이니지** LH115QHFEBGXKR은 QHFX 시리즈의 단독형 디스플레이다. 가로형과 세로형 설치 및 연속 운영을 지원한다.",
+  "keyFacts": [
+    {
+      "label": "밝기 · Typ",
+      "value": "1000",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "115 (290.7)",
+      "unit": "인치(cm)"
+    },
+    {
+      "label": "명암비 · 정적",
+      "value": "5,500:1",
+      "unit": ""
+    }
+  ]
 }
