@@ -5,12 +5,13 @@ import {createHash} from 'node:crypto';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qecedgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
+const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 
-test('15 Samsung overview cards use verified product rows and preserve all existing fields', () => {
+test('14 published Samsung overview cards use verified product rows and preserve all existing fields', () => {
   const evidence = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
   const later = read('Work/기록/W-20261002-008-evidence.json');
-  assert.deepEqual(Object.keys(evidence.products), targets);
+  // W-007 evidence preserves the discontinued model's historical review.
+  assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
     const p = read(`beta/site/detail/data/${slug}.json`);
     const e = evidence.products[slug];
@@ -46,10 +47,11 @@ test('15 Samsung overview cards use verified product rows and preserve all exist
   }
 });
 
-test('12 Korean none connector rows retain their provenance after W-008 corrects the mistaken conflict state', () => {
+test('9 published Korean none connector rows retain their provenance after W-008', () => {
   const evidence = read('Work/기록/W-20261002-007-samsung-key-facts-evidence.json');
   let count = 0;
   for (const [slug, e] of Object.entries(evidence.products)) {
+    if (slug === 'lh98qecedgcxkr') continue;
     const p = read(`beta/site/detail/data/${slug}.json`);
     for (const c of e.conflicts) {
       const row = p.io[c.index];
@@ -67,5 +69,5 @@ test('12 Korean none connector rows retain their provenance after W-008 corrects
       count++;
     }
   }
-  assert.equal(count, 12);
+  assert.equal(count, 9);
 });
