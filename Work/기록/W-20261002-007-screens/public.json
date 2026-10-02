@@ -1,0 +1,982 @@
+{
+  "mergeSha": "8d1f528469510dc066071f40369781114f44458c",
+  "jsonBlobs": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "same": true,
+      "bytes": 22445
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "same": true,
+      "bytes": 21301
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "same": true,
+      "bytes": 21307
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "same": true,
+      "bytes": 22521
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "same": true,
+      "bytes": 19176
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "same": true,
+      "bytes": 21100
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "same": true,
+      "bytes": 21209
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "same": true,
+      "bytes": 20756
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "same": true,
+      "bytes": 21174
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "same": true,
+      "bytes": 18913
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "same": true,
+      "bytes": 20043
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "same": true,
+      "bytes": 21905
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "same": true,
+      "bytes": 21661
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "same": true,
+      "bytes": 20905
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "same": true,
+      "bytes": 20939
+    }
+  ],
+  "screens": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "객실 리모컨 · 추가 구매",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "원격 관리 · 별도 구매",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 2,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 2,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 3,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh98qecedgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 3,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · Typ",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "명암비 · 정적",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · 자사 실험치",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "베젤 폭 · 베젤투베젤",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · 자사 실험치",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "베젤 폭 · 베젤투베젤",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "밝기 · 자사 실험치",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "베젤 폭 · 베젤투베젤",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "밝기 · 자사 실험치",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "베젤 폭 · 베젤투베젤",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 1,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "터치 방식",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "펜 반응 속도",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "터치 방식",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "펜 반응 속도",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "화면 크기",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "터치 방식",
+          "client": 129,
+          "scroll": 129
+        },
+        {
+          "text": "펜 반응 속도",
+          "client": 129,
+          "scroll": 129
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 390,
+      "labels": [
+        {
+          "text": "해상도",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "화면 크기",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "터치 방식",
+          "client": 132,
+          "scroll": 132
+        },
+        {
+          "text": "펜 반응 속도",
+          "client": 132,
+          "scroll": 132
+        }
+      ],
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "conflictCards": 0,
+      "jsErrors": []
+    }
+  ]
+}
