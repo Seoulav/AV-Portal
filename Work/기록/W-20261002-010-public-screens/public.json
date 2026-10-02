@@ -1,0 +1,259 @@
+{
+  "mergeSha": "2e157c68ba7314d385d16b4d2f6246acb9f5781b",
+  "files": [
+    {
+      "path": "catalog.json",
+      "status": 200,
+      "bytes": 118726,
+      "sha256": "ee835b4db7944376e8e4c83afe6494ce39e57ac8b4778da2e41dfdc7f86af800",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "search-index.json",
+      "status": 200,
+      "bytes": 616581,
+      "sha256": "53925895d1b2f7e38fd16bdf048bf24db5d770e8c02bcd4cfb4bfff902a72a82",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/hg43u800fnfxkr.json",
+      "status": 200,
+      "bytes": 21415,
+      "sha256": "217f3810dbffc315d40b5056307bd438af97b3d04c7da6c2773518f55945e4eb",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/hg50u800fnfxkr.json",
+      "status": 200,
+      "bytes": 20772,
+      "sha256": "c70f235e90b6e4f73f5963eed7a8cd81e5e24c9f8427987eb3ebbbccf808a32a",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/hg65u800fnfxkr.json",
+      "status": 200,
+      "bytes": 20778,
+      "sha256": "6575c9259772da1f0c4b3a221659b2f185b04bb72d25a23c7687b897015d8116",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh32qmcebgcxkr.json",
+      "status": 200,
+      "bytes": 18977,
+      "sha256": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh43qmcebgcxkr.json",
+      "status": 200,
+      "bytes": 21427,
+      "sha256": "5eb5f58c84a533b73f1bf272b56601b4c46c7ff01984b03215c316d821dbbc31",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh85qmcebgcxkr.json",
+      "status": 200,
+      "bytes": 21411,
+      "sha256": "d110c8c5a60000c257ec7f7c01dbe10cc40a8f12e15f72f1f0dcc1e899b9bdcc",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh98qmcebgcxkr.json",
+      "status": 200,
+      "bytes": 19861,
+      "sha256": "90c941a8e200e535ce44c755c181a119af67a911cc084bb63aff972ce99bcec5",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh43qhcebgcxkr.json",
+      "status": 200,
+      "bytes": 21337,
+      "sha256": "86f3445599cea5aac252f6b81e685935d2329ebcb9a3582593a1d259328fec66",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh75qhcebgcxkr.json",
+      "status": 200,
+      "bytes": 20993,
+      "sha256": "cf9519784c6d71621d87b151c3faeb51d98f27878e2df0f6aed6406f766561cc",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh115qhfebgxkr.json",
+      "status": 200,
+      "bytes": 23580,
+      "sha256": "34f0db917390b3da90395512d7a0625e5e6819ecae0cdfe031f76b5cdf6eaa97",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh55vmcrbgbxkr.json",
+      "status": 200,
+      "bytes": 20893,
+      "sha256": "4e4b9a630e1a4ab96d2d8d49298fbeec3a846dda8876a3c6f33ae3f237d4f9fd",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh55vhcrbgbxkr.json",
+      "status": 200,
+      "bytes": 21137,
+      "sha256": "22a678c3be4102ac1044907249038fd85238e2d0ff499223f7875cb2ec1ecc1c",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh55wmfwbgcxkr.json",
+      "status": 200,
+      "bytes": 21284,
+      "sha256": "1ef09d452b10ea6f869d0236b952d76f5bc845731b7488a462f7ef83023436ab",
+      "matchesMergeBlob": true
+    },
+    {
+      "path": "detail/data/lh75wmfwlgcxkr.json",
+      "status": 200,
+      "bytes": 20435,
+      "sha256": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+      "matchesMergeBlob": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung HG43U800FNFXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung HG50U800FNFXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung HG65U800FNFXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung LH32QMCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 3,
+      "brokenImages": 0,
+      "title": "Samsung LH43QMCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 2,
+      "brokenImages": 0,
+      "title": "Samsung LH85QMCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 2,
+      "brokenImages": 0,
+      "title": "Samsung LH98QMCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 2,
+      "brokenImages": 0,
+      "title": "Samsung LH43QHCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 2,
+      "brokenImages": 0,
+      "title": "Samsung LH75QHCEBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 2,
+      "foreignNotice": true,
+      "reviewBadges": 38,
+      "brokenImages": 0,
+      "title": "Samsung LH115QHFEBGXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung LH55VMCRBGBXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 4,
+      "brokenImages": 0,
+      "title": "Samsung LH55VHCRBGBXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 2,
+      "foreignNotice": true,
+      "reviewBadges": 33,
+      "brokenImages": 0,
+      "title": "Samsung LH55WMFWBGCXKR · AV Portal Product Detail"
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "status": 200,
+      "jsErrors": [],
+      "factItems": 4,
+      "foreignNotice": false,
+      "reviewBadges": 3,
+      "brokenImages": 0,
+      "title": "Samsung LH75WMFWLGCXKR · AV Portal Product Detail"
+    }
+  ]
+}
