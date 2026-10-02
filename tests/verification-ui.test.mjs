@@ -46,10 +46,12 @@ test('public footers do not expose build strings and detail asset versions are r
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {
+  // DM7 and Ki Pro GO2 gained only the approved W-20261002-002 portMap;
+  // remaining-port-maps.test.mjs separately locks their original core fields.
   const expected = new Map([
     ['brc-am7.json', '673b3dcfaf167f171f9cf25a36ea891e3f02e597'],
-    ['dm7.json', 'f3e3bd6b866deacdbe13980e359134958dfd3ec3'],
-    ['ki-pro-go2.json', '0fc7f7da5ee3e843063a8157d1c34524fea4695c'],
+    ['dm7.json', 'b09c6be0fc4b7dc821ac683dd938da5195799a2c'],
+    ['ki-pro-go2.json', 'b8cdcf3772de5aed7318197975bd0a674c28c85f'],
     ['pt-mz17k.json', '53ea915a730d0b52b54ae5433e0fe86ed2b0a68c'],
     ['rally-bar.json', '00f0f993e6183ff6edd632888569a3835fce2009']
   ]);
