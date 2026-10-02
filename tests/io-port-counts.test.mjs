@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
 import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
+import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 
 const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
@@ -33,7 +34,7 @@ test('Samsung quantity audit covers 82 active unknown rows and preserves the 87-
   let unknown = 0;
   let filled = 0;
   for (const slug of targets) {
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
     const e = evidence.products[slug];
     assert.equal(e.url, p.sources.find(source => source.code === 'P').url);
     assert.match(e.url, /^https:\/\/www\.samsung\.com\/sec\/business\//);

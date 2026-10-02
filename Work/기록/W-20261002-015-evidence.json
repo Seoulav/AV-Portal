@@ -1,0 +1,1428 @@
+{
+  "workId": "W-20261002-015",
+  "baselineSha": "661aeb098bd24283bdf99caaff744b6219382653",
+  "manuals": {
+    "BN81-24537G-14": {
+      "page": 20,
+      "sha256": "B82E05F4CF163CA62FF19FA9A1F9B9BB465560EB5776280D903358508AFE56E3",
+      "models": [
+        "QH43C",
+        "QM43C",
+        "QH75C",
+        "QM85C",
+        "QM98C"
+      ]
+    },
+    "BN81-26720E-04": {
+      "page": 15,
+      "sha256": "0E7037F32DF5B1A2E2783903EFFA799CFA817FE17E0DD8F7FD08BD91894080FC",
+      "models": [
+        "QH115FX"
+      ]
+    },
+    "BN81-25348H-02": {
+      "page": 14,
+      "sha256": "7DD00FF63CC5F2FFDD068C603ECCF8C4F533CAD7E7DE9B25B6FDB547D3621188",
+      "models": [
+        "VH55C-R",
+        "VM55C-R"
+      ]
+    }
+  },
+  "products": {
+    "lh43qhcebgcxkr": {
+      "previousFileSha256": "86f3445599cea5aac252f6b81e685935d2329ebcb9a3582593a1d259328fec66",
+      "coreSha256": "a8d828b584c7cdd9cc5c32366c60124edd0f4fbe68246fa4b413bc2718cbef75",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2, HDCP 2.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH43QHCEBGCXKR/",
+          "scope": "국내 모델 LH43QHCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 전문가 모드: 프로페셔널 모드 내장 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형 / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH43QHCEBGCXKR 일치 · 슬라이드 12의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        },
+        {
+          "code": "S4",
+          "name": "(주)윈스타비투비 QHC 제품 규격서 (사용자 제공)",
+          "scope": "국내 모델 LH43QHCEBGCXKR 일치 · 2쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397"
+        }
+      ],
+      "afterIoCount": 9,
+      "filledQuantity": 1,
+      "quantityChanges": [
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh43qmcebgcxkr": {
+      "previousFileSha256": "5eb5f58c84a533b73f1bf272b56601b4c46c7ff01984b03215c316d821dbbc31",
+      "coreSha256": "da268e67273de7c920817533fe964664eba6796f4b866a782ecb750c3cff19fd",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2, HDCP 2.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/",
+          "scope": "국내 모델 LH43QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형 / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH43QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        },
+        {
+          "code": "S4",
+          "name": "(주)윈스타비투비 QMC 제품 규격서 (사용자 제공)",
+          "scope": "국내 모델 LH43QMCEBGCXKR 일치 · 3쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c"
+        }
+      ],
+      "afterIoCount": 9,
+      "filledQuantity": 1,
+      "quantityChanges": [
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh75qhcebgcxkr": {
+      "previousFileSha256": "cf9519784c6d71621d87b151c3faeb51d98f27878e2df0f6aed6406f766561cc",
+      "coreSha256": "6632507a4ed4189df8ff2c32521c0ccdcf2abcd44ad61123ae697ddd785f5683",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2, HDCP 2.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH75QHCEBGCXKR/",
+          "scope": "국내 모델 LH75QHCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 전문가 모드: 프로페셔널 모드 내장 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형(43/75인치 QHC 공통 마케팅 수치) / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH75QHCEBGCXKR 일치 · 슬라이드 12의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        },
+        {
+          "code": "S4",
+          "name": "(주)윈스타비투비 QHC 제품 규격서 (사용자 제공)",
+          "scope": "국내 모델 LH75QHCEBGCXKR 일치 · 6쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397"
+        }
+      ],
+      "afterIoCount": 9,
+      "filledQuantity": 1,
+      "quantityChanges": [
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh85qmcebgcxkr": {
+      "previousFileSha256": "d110c8c5a60000c257ec7f7c01dbe10cc40a8f12e15f72f1f0dcc1e899b9bdcc",
+      "coreSha256": "658bba3c367888f715efb84ee81559d166490316dbadc7db1c5cf5ec139423a7",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2, HDCP 2.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH85QMCEBGCXKR/",
+          "scope": "국내 모델 LH85QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형(43/85인치 QMC 공통 마케팅 수치) / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH85QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        },
+        {
+          "code": "S4",
+          "name": "(주)윈스타비투비 QMC 제품 규격서 (사용자 제공)",
+          "scope": "국내 모델 LH85QMCEBGCXKR 일치 · 8쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c"
+        }
+      ],
+      "afterIoCount": 9,
+      "filledQuantity": 1,
+      "quantityChanges": [
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh98qmcebgcxkr": {
+      "previousFileSha256": "90c941a8e200e535ce44c755c181a119af67a911cc084bb63aff972ce99bcec5",
+      "coreSha256": "ca06a2b63c812370493f5c3802be0fad51edf12279835b979b90c316f948910b",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2, HDCP 2.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.2",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/",
+          "scope": "국내 모델 LH98QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 제품 무게: 스탠드/포장 제외 기준 명시 없음 / 단자 배치: 벽면 밀착 설치를 위한 설계"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH98QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        }
+      ],
+      "afterIoCount": 9,
+      "filledQuantity": 5,
+      "quantityChanges": [
+        {
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh115qhfebgxkr": {
+      "previousFileSha256": "de4b666c7dc90938851a883556a99405d9163198453ff62910da676f8fdad9d8",
+      "coreSha256": "bf765639c4d1051075859a272be37f046679be61eae95cca945bce7acbefe262",
+      "previousIo": [
+        {
+          "group": "Wireless",
+          "connector": "무선(물리 단자 없음)",
+          "signal": "무선 화면 공유(스마트 뷰+)",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "SmartView+",
+          "availability": "Windows, Android, iOS 지원",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오/오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "HDMI",
+          "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "DisplayPort",
+          "availability": "DP 버전 1.4",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "2 x USB-A",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "국내 자료 미확보",
+          "source": "",
+          "verification": "REVIEW REQUIRED"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+          "scope": "국내 모델 LH115QHFEBGXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교) / 화질 처리: PC 연결·게임 모드에는 적용되지 않을 수 있음 / 전문가 모드: 프로페셔널 모드 내장 / 화면 보정: 특정 모바일 기기에서만 지원"
+        },
+        {
+          "code": "S3",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 4의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        },
+        {
+          "code": "S4",
+          "name": "삼성전자 115QHF 제품 자료 (사용자 제공)",
+          "scope": "국내 모델 LH115QHFEBGXKR 일치 · 2쪽 연결성 USB 2 x USB-A. 원본 사본은 게시하지 않음; SHA-256 4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962"
+        },
+        {
+          "code": "S5",
+          "name": "삼성전자 스마트 LCD 사이니지 115QHF 제품 사양서 (사용자 제공)",
+          "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 1 제품 특징, 슬라이드 2 사양표. 원본 사본은 게시하지 않음; SHA-256 b8062a55a9cc7693af424e9510a92995f12dee1c817ad2645d05506c66e16b42"
+        }
+      ],
+      "afterIoCount": 10,
+      "filledQuantity": 7,
+      "quantityChanges": [
+        {
+          "connector": "HDMI",
+          "before": "",
+          "after": "3",
+          "kind": "filled"
+        },
+        {
+          "connector": "DisplayPort",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 0
+    },
+    "lh55vhcrbgbxkr": {
+      "previousFileSha256": "22a678c3be4102ac1044907249038fd85238e2d0ff499223f7875cb2ec1ecc1c",
+      "coreSha256": "9ab6fd1859ce187d55aa2dde9603d4619ba2a597612041c77823f63c3995c150",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력/데이지체인",
+          "direction": "IN/OUT",
+          "quantity": "1 (입력)",
+          "protocol": "DisplayPort 1.2",
+          "availability": "데이지 체인 지원",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오 입력/데이지체인",
+          "direction": "IN/OUT",
+          "quantity": "2 (입력)",
+          "protocol": "HDMI",
+          "availability": "데이지 체인 지원",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DVI",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DVI",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "비디오 출력",
+          "signal": "비디오 출력(루프아웃/데이지체인)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음(사양표 표기: Stereo Mini Jack)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "전원 출력(Power Out)",
+          "signal": "전원 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/",
+          "scope": "국내 모델 LH55VHCRBGBXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 베젤 폭(베젤투베젤): Razor 베젤, 4면 균일 적용 / 밝기: 자사 실험치 기준, 실사용 환경에 따라 차이 가능 / 패널 헤이즈(Haze): 눈부심 방지 패널 / 데이지 체인 최대 구성: DisplayPort 1.2 또는 HDMI 사용, 외장 그래픽카드·UHD 분배기 불필요 / 캘리브레이션 소프트웨어: 모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정"
+        },
+        {
+          "code": "S4",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH55VHCRBGBXKR 일치 · 슬라이드 29의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        }
+      ],
+      "afterIoCount": 13,
+      "filledQuantity": 7,
+      "quantityChanges": [
+        {
+          "connector": "DisplayPort",
+          "before": "1 (입력)",
+          "after": "1",
+          "kind": "corrected"
+        },
+        {
+          "connector": "HDMI",
+          "before": "2 (입력)",
+          "after": "2",
+          "kind": "corrected"
+        },
+        {
+          "connector": "DisplayPort 출력(LOOPOUT)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "IR 출력",
+          "before": null,
+          "after": "1",
+          "kind": "new row"
+        },
+        {
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 1
+    },
+    "lh55vmcrbgbxkr": {
+      "previousFileSha256": "4e4b9a630e1a4ab96d2d8d49298fbeec3a846dda8876a3c6f33ae3f237d4f9fd",
+      "coreSha256": "3b9160ee446a6966b3e415b58ac0b5aeffac4dcf4c22074b0e1f5631dc5f96bf",
+      "previousIo": [
+        {
+          "group": "Video",
+          "connector": "DisplayPort",
+          "signal": "비디오 입력/데이지체인",
+          "direction": "IN/OUT",
+          "quantity": "1 (입력)",
+          "protocol": "DisplayPort 1.2",
+          "availability": "데이지 체인 지원",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "비디오 입력/데이지체인",
+          "direction": "IN/OUT",
+          "quantity": "2 (입력)",
+          "protocol": "HDMI",
+          "availability": "데이지 체인 지원",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "DVI",
+          "signal": "비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DVI",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "비디오 출력",
+          "signal": "비디오 출력(루프아웃/데이지체인)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Data",
+          "connector": "USB",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "USB",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "IR 입력",
+          "signal": "IR 수신/외부 IR",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "IR",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 입력",
+          "signal": "아날로그 오디오 입력",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "오디오 출력",
+          "signal": "아날로그 오디오 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "있음(스테레오 미니 잭)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 입력",
+          "signal": "외부 제어",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232C 출력",
+          "signal": "외부 제어(루프아웃)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "RS-232C",
+          "availability": "있음(사양표 표기: Stereo Mini Jack)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45(LAN)",
+          "signal": "유선 네트워크",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "Ethernet",
+          "availability": "있음",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "전원 출력(Power Out)",
+          "signal": "전원 출력",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "미지원(사양표 \"No\")",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "previousSources": [
+        {
+          "code": "P",
+          "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+          "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/",
+          "scope": "국내 모델 LH55VMCRBGBXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 베젤 폭(베젤투베젤): Razor 베젤, 4면 균일 적용 / 밝기: 자사 실험치 기준, 실사용 환경에 따라 차이 가능 / 패널 헤이즈(Haze): 눈부심 방지 패널 / 데이지 체인 최대 구성: DisplayPort 1.2 또는 HDMI 사용, 외장 그래픽카드·UHD 분배기 불필요 / 캘리브레이션 소프트웨어: 모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정"
+        },
+        {
+          "code": "S4",
+          "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+          "scope": "국내 모델 LH55VMCRBGBXKR 일치 · 슬라이드 29의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+        }
+      ],
+      "afterIoCount": 13,
+      "filledQuantity": 7,
+      "quantityChanges": [
+        {
+          "connector": "DisplayPort",
+          "before": "1 (입력)",
+          "after": "1",
+          "kind": "corrected"
+        },
+        {
+          "connector": "HDMI",
+          "before": "2 (입력)",
+          "after": "2",
+          "kind": "corrected"
+        },
+        {
+          "connector": "DisplayPort 출력(LOOPOUT)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "IR 출력",
+          "before": null,
+          "after": "1",
+          "kind": "new row"
+        },
+        {
+          "connector": "IR 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "오디오 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 입력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RS-232C 출력",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        },
+        {
+          "connector": "RJ45(LAN)",
+          "before": "",
+          "after": "1",
+          "kind": "filled"
+        }
+      ],
+      "addedIoRows": 1
+    }
+  },
+  "excludedFileSha256": {
+    "lh32qmcebgcxkr": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+    "lh55wmfwbgcxkr": "5d4ee0ed3ee404c03ed42675c32cf2438a8929921036716e294ce5547e981702",
+    "lh75wmfwlgcxkr": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+    "hg43u800fnfxkr": "217f3810dbffc315d40b5056307bd438af97b3d04c7da6c2773518f55945e4eb",
+    "hg50u800fnfxkr": "c70f235e90b6e4f73f5963eed7a8cd81e5e24c9f8427987eb3ebbbccf808a32a",
+    "hg65u800fnfxkr": "6575c9259772da1f0c4b3a221659b2f185b04bb72d25a23c7687b897015d8116"
+  }
+}

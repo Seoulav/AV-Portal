@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeSamsungSourceCleanup, currentKeyFactAnchors} from './samsung-w010-history.mjs';
 import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
+import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -15,7 +16,7 @@ test('14 published Samsung overview cards use verified product rows and preserve
   // W-007 evidence preserves the discontinued model's historical review.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = beforeSamsungForeignPurge(read(`beta/site/detail/data/${slug}.json`), slug);
+    const p = beforeSamsungForeignPurge(beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug), slug);
     const e = evidence.products[slug];
     assert.match(p.lead, /^.+[.!?] .+[.!?]$/u, `${slug}: two lead sentences`);
     assert.equal((p.lead.match(/\*\*/g) || []).length, 2, `${slug}: one bold span`);
@@ -59,7 +60,7 @@ test('9 published Korean none connector rows retain their provenance after W-008
   let count = 0;
   for (const [slug, e] of Object.entries(evidence.products)) {
     if (slug === 'lh98qecedgcxkr') continue;
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
     for (const c of e.conflicts) {
       const row = p.io[c.index];
       assert.equal(row.connector, c.connector);
@@ -73,7 +74,7 @@ test('9 published Korean none connector rows retain their provenance after W-008
       assert.match(c.overseas.priorAvailability, /미지원/);
       assert.match(c.interpretation, /지역 간 있음\/없음 충돌은 미확인/);
       // The W-007 citation is historical; W-014 removes its foreign source code.
-      assert.equal(c.existingSource, beforeSamsungForeignPurge(p, slug).io[c.index].source);
+      assert.equal(c.existingSource, beforeSamsungForeignPurge(beforeSamsungManualIo(p,slug), slug).io[c.index].source);
       count++;
     }
   }

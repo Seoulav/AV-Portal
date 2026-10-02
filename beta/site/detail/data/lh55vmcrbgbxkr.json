@@ -442,26 +442,26 @@
     {
       "group": "Video",
       "connector": "DisplayPort",
-      "signal": "비디오 입력/데이지체인",
-      "direction": "IN/OUT",
-      "quantity": "1 (입력)",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
       "protocol": "DisplayPort 1.2",
-      "availability": "데이지 체인 지원",
+      "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
       "connector": "HDMI",
-      "signal": "비디오 입력/데이지체인",
-      "direction": "IN/OUT",
-      "quantity": "2 (입력)",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "2",
       "protocol": "HDMI",
-      "availability": "데이지 체인 지원",
+      "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
@@ -472,104 +472,116 @@
       "protocol": "DVI",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
-      "connector": "비디오 출력",
-      "signal": "비디오 출력(루프아웃/데이지체인)",
+      "connector": "DisplayPort 출력(LOOPOUT)",
+      "signal": "DP 영상 루프아웃",
       "direction": "OUT",
-      "quantity": "",
-      "protocol": "",
-      "availability": "있음",
+      "quantity": "1",
+      "protocol": "DisplayPort",
+      "availability": "LOOPOUT. 같은 모델 간 연결 권장. UHD/FHD Loopout 세트 간 비호환",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
-      "group": "Data",
-      "connector": "USB",
-      "signal": "USB",
-      "direction": "IN",
+      "group": "Control",
+      "connector": "SERVICE(서비스 전용)",
+      "signal": "서비스 전용",
+      "direction": "",
       "quantity": "1",
-      "protocol": "USB",
-      "availability": "",
+      "protocol": "",
+      "availability": "서비스 전용. 사용자 USB 저장장치 연결 단자가 아님",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "IR 출력",
+      "signal": "IR 루프아웃",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "IR",
+      "availability": "외장 센서 보드 입력신호 Loopout",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "IR 입력",
-      "signal": "IR 수신/외부 IR",
+      "signal": "외장 센서 보드 전원 공급/조도 센서 신호 입력",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "IR",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "오디오 입력",
       "signal": "아날로그 오디오 입력",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "오디오 출력",
       "signal": "아날로그 오디오 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
-      "availability": "있음(스테레오 미니 잭)",
+      "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 입력",
       "signal": "외부 제어",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 출력",
       "signal": "외부 제어(루프아웃)",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
-      "availability": "있음(사양표 표기: Stereo Mini Jack)",
+      "availability": "Serial cable 별매",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
       "connector": "RJ45(LAN)",
       "signal": "유선 네트워크",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
-      "availability": "있음",
+      "availability": "10/100 Mbps",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",
@@ -580,8 +592,8 @@
       "protocol": "",
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -589,12 +601,17 @@
       "code": "P",
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/",
-      "scope": "국내 모델 LH55VMCRBGBXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 베젤 폭(베젤투베젤): Razor 베젤, 4면 균일 적용 / 밝기: 자사 실험치 기준, 실사용 환경에 따라 차이 가능 / 패널 헤이즈(Haze): 눈부심 방지 패널 / 데이지 체인 최대 구성: DisplayPort 1.2 또는 HDMI 사용, 외장 그래픽카드·UHD 분배기 불필요 / 캘리브레이션 소프트웨어: 모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정"
+      "scope": "국내 모델 LH55VMCRBGBXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 베젤 폭(베젤투베젤): Razor 베젤, 4면 균일 적용 / 밝기: 자사 실험치 기준, 실사용 환경에 따라 차이 가능 / 패널 헤이즈(Haze): 눈부심 방지 패널 / 데이지 체인 최대 구성: 웹 소개의 DisplayPort 1.2 또는 HDMI 사용 표기는 입력 신호를 포함한 구성 설명이며, 한글 매뉴얼 14쪽 기준 물리 루프아웃은 DP OUT(LOOPOUT) 전용·HDMI는 입력 전용. 외장 그래픽카드·UHD 분배기 불필요 / 캘리브레이션 소프트웨어: 모바일은 스마트폰 카메라로 화이트 밸런스 3x3 조정"
     },
     {
       "code": "S4",
       "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
       "scope": "국내 모델 LH55VMCRBGBXKR 일치 · 슬라이드 29의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-25348H-02 (사용자 제공)",
+      "scope": "적용 모델 VH55C-R·VM55C-R · 단자 설명 14쪽 · SHA-256 7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188 · 원본은 게시하지 않음"
     }
   ],
   "issues": [
