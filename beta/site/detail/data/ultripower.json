@@ -288,5 +288,78 @@
     "footerNote": "Ross Video ULTRIPOWER 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ultripower-rear.webp",
+      "width": 1225,
+      "height": 200
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "DC 출력 1",
+        "desc": "전원 출력 · ULTRIX 장비에 DC 전원을 공급합니다.",
+        "x1": 165,
+        "x2": 201,
+        "y": 132,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "DC 출력 2",
+        "desc": "전원 출력 · ULTRIX 장비에 DC 전원을 공급합니다.",
+        "x1": 231,
+        "x2": 267,
+        "y": 132,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "DC 출력 3",
+        "desc": "전원 출력 · ULTRIX 장비에 DC 전원을 공급합니다.",
+        "x1": 696,
+        "x2": 732,
+        "y": 132,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "DC 출력 4",
+        "desc": "전원 출력 · ULTRIX 장비에 DC 전원을 공급합니다.",
+        "x1": 759,
+        "x2": 795,
+        "y": 132,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "Ethernet",
+        "desc": "RJ-45 · Dashboard 제어·모니터링 네트워크에 연결합니다.",
+        "x1": 571,
+        "x2": 623,
+        "y": 124,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "AC 전원 입력 A",
+        "desc": "IEC · 전원 모듈 A에 AC 전원을 연결합니다.",
+        "x1": 349,
+        "x2": 436,
+        "y": 118,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "AC 전원 입력 B",
+        "desc": "IEC · 전원 모듈 B에 AC 전원을 연결합니다.",
+        "x1": 893,
+        "x2": 980,
+        "y": 118,
+        "side": "bottom"
+      }
+    ]
   }
 }

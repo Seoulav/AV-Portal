@@ -10,6 +10,7 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 // Git stores text with LF; compare repository bytes across Windows/Linux checkouts.
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
 const proof = read('Work/기록/W-20261002-001-shure-port-map-evidence.json');
+const remaining = read('Work/기록/W-20261002-002-port-map-evidence.json');
 const target = ['mxcw640', 'mxcwapt-w', 'qlxd4', 'slxd4-plus', 'slxd4d-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 const approved = ['qlxd4', 'slxd4-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 
@@ -51,7 +52,13 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length, 6);
   assert.equal(Object.keys(proof.preservedProducts).length, 235);
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {
-    assert.equal(textSha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected Git bytes');
+    const later = remaining.products[file.slice(0,-5)];
+    if (later) {
+      assert.equal(later.previousFileSha256,hash,file+' prior approved Git bytes');
+      const product = read('beta/site/detail/data/' + file);
+      delete product.portMap;
+      assert.equal(sha(JSON.stringify(product)),later.coreSha256,file+' original values after later map');
+    } else assert.equal(textSha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected Git bytes');
   }
 });
 

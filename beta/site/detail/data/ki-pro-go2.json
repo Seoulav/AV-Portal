@@ -470,5 +470,231 @@
     "footerNote": "AJA Ki Pro GO2 · 공식 출처 기반",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ki-pro-go2-rear.webp",
+      "width": 1140,
+      "height": 450
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "SDI 입력 1",
+        "desc": "BNC · 기록할 SDI 영상 소스를 연결합니다.",
+        "x1": 125,
+        "x2": 177,
+        "y": 176,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "SDI 입력 2",
+        "desc": "BNC · 기록할 SDI 영상 소스를 연결합니다.",
+        "x1": 203,
+        "x2": 255,
+        "y": 176,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "SDI 입력 3",
+        "desc": "BNC · 기록할 SDI 영상 소스를 연결합니다.",
+        "x1": 125,
+        "x2": 177,
+        "y": 345,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "SDI 입력 4",
+        "desc": "BNC · 기록할 SDI 영상 소스를 연결합니다.",
+        "x1": 203,
+        "x2": 255,
+        "y": 345,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI · 기록할 HDMI 영상 소스를 연결합니다.",
+        "x1": 282,
+        "x2": 362,
+        "y": 238,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI · 기록할 HDMI 영상 소스를 연결합니다.",
+        "x1": 397,
+        "x2": 477,
+        "y": 238,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "HDMI 입력 3",
+        "desc": "HDMI · 기록할 HDMI 영상 소스를 연결합니다.",
+        "x1": 282,
+        "x2": 362,
+        "y": 345,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "HDMI 입력 4",
+        "desc": "HDMI · 기록할 HDMI 영상 소스를 연결합니다.",
+        "x1": 397,
+        "x2": 477,
+        "y": 345,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "아날로그 오디오 입력 L",
+        "desc": "밸런스 XLR · 아날로그 오디오 왼쪽 채널을 입력합니다.",
+        "x1": 363,
+        "x2": 447,
+        "y": 141,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "아날로그 오디오 입력 R / LTC",
+        "desc": "밸런스 XLR · 설정에 따라 오른쪽 오디오 또는 LTC 시간 코드를 입력합니다.",
+        "x1": 531,
+        "x2": 615,
+        "y": 141,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "REF LOOP 입력",
+        "desc": "BNC · 외부 동기 신호를 입력합니다.",
+        "x1": 125,
+        "x2": 177,
+        "y": 108,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "REF LOOP 출력",
+        "desc": "BNC · 동기 신호를 다음 장치로 전달합니다.",
+        "x1": 199,
+        "x2": 251,
+        "y": 108,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "SDI 출력 1",
+        "desc": "BNC · 해당 채널의 SDI 영상을 출력합니다.",
+        "x1": 542,
+        "x2": 595,
+        "y": 238,
+        "side": "top"
+      },
+      {
+        "n": 14,
+        "label": "SDI 출력 2",
+        "desc": "BNC · 해당 채널의 SDI 영상을 출력합니다.",
+        "x1": 619,
+        "x2": 672,
+        "y": 238,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "SDI 출력 3",
+        "desc": "BNC · 해당 채널의 SDI 영상을 출력합니다.",
+        "x1": 542,
+        "x2": 595,
+        "y": 345,
+        "side": "top"
+      },
+      {
+        "n": 16,
+        "label": "SDI 출력 4",
+        "desc": "BNC · 해당 채널의 SDI 영상을 출력합니다.",
+        "x1": 619,
+        "x2": 672,
+        "y": 345,
+        "side": "bottom"
+      },
+      {
+        "n": 17,
+        "label": "HDMI 모니터 출력",
+        "desc": "HDMI · 모니터 영상을 출력합니다.",
+        "x1": 692,
+        "x2": 775,
+        "y": 276,
+        "side": "top"
+      },
+      {
+        "n": 18,
+        "label": "SDI 모니터 출력",
+        "desc": "BNC · 모니터 영상을 출력합니다.",
+        "x1": 706,
+        "x2": 761,
+        "y": 345,
+        "side": "bottom"
+      },
+      {
+        "n": 19,
+        "label": "아날로그 모니터 L",
+        "desc": "RCA · 왼쪽 모니터 오디오를 출력합니다.",
+        "x1": 673,
+        "x2": 712,
+        "y": 151,
+        "side": "top"
+      },
+      {
+        "n": 20,
+        "label": "아날로그 모니터 R",
+        "desc": "RCA · 오른쪽 모니터 오디오를 출력합니다.",
+        "x1": 747,
+        "x2": 786,
+        "y": 151,
+        "side": "bottom"
+      },
+      {
+        "n": 21,
+        "label": "USB 5",
+        "desc": "USB-A · 다섯 번째 기록 매체를 연결합니다.",
+        "x1": 792,
+        "x2": 850,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 22,
+        "label": "LAN",
+        "desc": "RJ-45 · 네트워크에 연결합니다.",
+        "x1": 810,
+        "x2": 885,
+        "y": 296,
+        "side": "bottom"
+      },
+      {
+        "n": 23,
+        "label": "DC 전원 입력 1",
+        "desc": "XLR · 첫 번째 외부 DC 공급장치를 연결합니다.",
+        "x1": 952,
+        "x2": 1034,
+        "y": 134,
+        "side": "top"
+      },
+      {
+        "n": 24,
+        "label": "DC 전원 입력 2",
+        "desc": "XLR · 두 번째 외부 DC 공급장치를 연결합니다.",
+        "x1": 952,
+        "x2": 1034,
+        "y": 295,
+        "side": "bottom"
+      }
+    ]
   }
 }

@@ -388,5 +388,249 @@
     "footerNote": "Lumantek ez-Pro VS10 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "lumantek-vs10-rear.webp",
+      "width": 2000,
+      "height": 905
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "SDI 입력 1",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 768,
+        "x2": 812,
+        "y": 640,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "SDI 입력 2",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 855,
+        "x2": 899,
+        "y": 640,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "SDI 입력 3",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 942,
+        "x2": 986,
+        "y": 640,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "SDI 입력 4",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 1029,
+        "x2": 1073,
+        "y": 640,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "SDI 입력 5",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 1116,
+        "x2": 1160,
+        "y": 640,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "SDI 입력 6",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 1203,
+        "x2": 1247,
+        "y": 640,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "SDI 입력 7",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 768,
+        "x2": 812,
+        "y": 499,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "SDI 입력 8",
+        "desc": "BNC · 3G-SDI 영상 소스를 연결합니다.",
+        "x1": 908,
+        "x2": 952,
+        "y": 499,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 입력 9",
+        "desc": "HDMI · 영상 소스를 연결합니다.",
+        "x1": 1026,
+        "x2": 1084,
+        "y": 499,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "HDMI 입력 10",
+        "desc": "HDMI · 영상 소스를 연결합니다.",
+        "x1": 1170,
+        "x2": 1228,
+        "y": 499,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "오디오 입력 1",
+        "desc": "XLR · 외부 아날로그 오디오를 입력합니다.",
+        "x1": 1469,
+        "x2": 1552,
+        "y": 565,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "오디오 입력 2",
+        "desc": "XLR · 외부 아날로그 오디오를 입력합니다.",
+        "x1": 1584,
+        "x2": 1667,
+        "y": 565,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "AUX 출력 1",
+        "desc": "BNC · 선택한 영상 소스를 SDI로 출력합니다.",
+        "x1": 291,
+        "x2": 337,
+        "y": 498,
+        "side": "top"
+      },
+      {
+        "n": 14,
+        "label": "AUX 출력 2",
+        "desc": "BNC · 선택한 영상 소스를 SDI로 출력합니다.",
+        "x1": 375,
+        "x2": 421,
+        "y": 498,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "AUX 출력 3",
+        "desc": "BNC · 선택한 영상 소스를 SDI로 출력합니다.",
+        "x1": 459,
+        "x2": 505,
+        "y": 498,
+        "side": "top"
+      },
+      {
+        "n": 16,
+        "label": "AUX 출력 4",
+        "desc": "BNC · 선택한 영상 소스를 SDI로 출력합니다.",
+        "x1": 543,
+        "x2": 589,
+        "y": 498,
+        "side": "bottom"
+      },
+      {
+        "n": 17,
+        "label": "PGM SDI 출력 1",
+        "desc": "BNC · 프로그램 영상을 SDI로 출력합니다.",
+        "x1": 626,
+        "x2": 672,
+        "y": 499,
+        "side": "top"
+      },
+      {
+        "n": 18,
+        "label": "PGM SDI 출력 2",
+        "desc": "BNC · 프로그램 영상을 SDI로 출력합니다.",
+        "x1": 713,
+        "x2": 759,
+        "y": 499,
+        "side": "bottom"
+      },
+      {
+        "n": 19,
+        "label": "PGM HDMI 출력",
+        "desc": "HDMI · 프로그램 영상을 출력합니다.",
+        "x1": 364,
+        "x2": 426,
+        "y": 638,
+        "side": "bottom"
+      },
+      {
+        "n": 20,
+        "label": "Multiview HDMI 출력",
+        "desc": "HDMI · 멀티뷰 영상을 출력합니다.",
+        "x1": 481,
+        "x2": 543,
+        "y": 638,
+        "side": "top"
+      },
+      {
+        "n": 21,
+        "label": "오디오 출력 1",
+        "desc": "XLR · 아날로그 오디오를 출력합니다.",
+        "x1": 1710,
+        "x2": 1793,
+        "y": 565,
+        "side": "top"
+      },
+      {
+        "n": 22,
+        "label": "오디오 출력 2",
+        "desc": "XLR · 아날로그 오디오를 출력합니다.",
+        "x1": 1823,
+        "x2": 1906,
+        "y": 565,
+        "side": "bottom"
+      },
+      {
+        "n": 23,
+        "label": "REF 입력",
+        "desc": "BNC · 외부 동기 신호를 입력합니다.",
+        "x1": 248,
+        "x2": 292,
+        "y": 639,
+        "side": "top"
+      },
+      {
+        "n": 24,
+        "label": "REMOTE",
+        "desc": "D-sub · 원격 제어 장치를 연결합니다.",
+        "x1": 605,
+        "x2": 681,
+        "y": 639,
+        "side": "bottom"
+      },
+      {
+        "n": 25,
+        "label": "USB",
+        "desc": "USB · 저장 장치를 연결합니다.",
+        "x1": 1321,
+        "x2": 1387,
+        "y": 640,
+        "side": "bottom"
+      },
+      {
+        "n": 26,
+        "label": "DC 전원 입력",
+        "desc": "DC · 제공된 전원 공급장치를 연결합니다.",
+        "x1": 111,
+        "x2": 201,
+        "y": 567,
+        "side": "bottom"
+      }
+    ]
   }
 }

@@ -314,5 +314,42 @@
     "footerNote": "Yamaha Tio1608-D2 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "tio1608-d2-rear.webp",
+      "width": 1086,
+      "height": 222
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "Dante PRIMARY",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결입니다.",
+        "x1": 744,
+        "x2": 793,
+        "y": 147,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "Dante SECONDARY",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결입니다.",
+        "x1": 811,
+        "x2": 860,
+        "y": 147,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "AC 전원 입력",
+        "desc": "IEC · 전원 코드를 연결합니다.",
+        "x1": 56,
+        "x2": 111,
+        "y": 147,
+        "side": "bottom"
+      }
+    ]
   }
 }

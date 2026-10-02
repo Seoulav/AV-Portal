@@ -763,5 +763,73 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지",
     "footerNote": "SONY SRG-X40UH · 공식 출처 기반"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "srg-x40uh-rear.webp",
+      "width": 1888,
+      "height": 2000
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "VISCA RS-422 입력",
+        "desc": "RJ-45 · 외부 카메라 제어 신호를 입력합니다.",
+        "x1": 256,
+        "x2": 371,
+        "y": 1650,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "VISCA RS-422 출력",
+        "desc": "RJ-45 · 다음 카메라로 제어 신호를 전달합니다.",
+        "x1": 509,
+        "x2": 624,
+        "y": 1650,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "VIDEO OUT",
+        "desc": "USB-C · UVC 영상 출력을 연결합니다.",
+        "x1": 824,
+        "x2": 914,
+        "y": 1678,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 출력",
+        "desc": "HDMI · 영상 모니터나 스위처에 연결합니다.",
+        "x1": 1045,
+        "x2": 1160,
+        "y": 1678,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "LAN",
+        "desc": "RJ-45 · 네트워크 제어 및 PoE+ 전원을 연결합니다.",
+        "x1": 1358,
+        "x2": 1478,
+        "y": 1662,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "DC 전원 입력",
+        "desc": "DC · 외부 전원 공급장치를 연결합니다.",
+        "x1": 1600,
+        "x2": 1670,
+        "y": 1646,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 930,
+      "bottom": 0
+    }
   }
 }

@@ -742,5 +742,159 @@
     "footerNote": "NETGEAR GSM4212P 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "gsm4212p-rear.webp",
+      "width": 2400,
+      "height": 393
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "PoE+ RJ45 1",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 489,
+        "x2": 544,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "PoE+ RJ45 2",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 566,
+        "x2": 621,
+        "y": 210,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "PoE+ RJ45 3",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 643,
+        "x2": 698,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "PoE+ RJ45 4",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 720,
+        "x2": 775,
+        "y": 210,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "PoE+ RJ45 5",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 797,
+        "x2": 852,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "PoE+ RJ45 6",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 874,
+        "x2": 929,
+        "y": 210,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "PoE+ RJ45 7",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 951,
+        "x2": 1006,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "PoE+ RJ45 8",
+        "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+        "x1": 1028,
+        "x2": 1083,
+        "y": 210,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "RJ45 9",
+        "desc": "1GbE RJ-45 · 네트워크 장치를 연결합니다.",
+        "x1": 1165,
+        "x2": 1221,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "RJ45 10",
+        "desc": "1GbE RJ-45 · 네트워크 장치를 연결합니다.",
+        "x1": 1244,
+        "x2": 1300,
+        "y": 210,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "SFP 11",
+        "desc": "1GbE SFP · 호환 광 모듈을 연결합니다.",
+        "x1": 1342,
+        "x2": 1398,
+        "y": 230,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "SFP 12",
+        "desc": "1GbE SFP · 호환 광 모듈을 연결합니다.",
+        "x1": 1422,
+        "x2": 1478,
+        "y": 230,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "OOB 관리",
+        "desc": "RJ-45 · 대역 외 관리 네트워크를 연결합니다.",
+        "x1": 209,
+        "x2": 274,
+        "y": 220,
+        "side": "top"
+      },
+      {
+        "n": 14,
+        "label": "콘솔",
+        "desc": "RJ-45 · 직렬 콘솔로 장치를 관리합니다.",
+        "x1": 302,
+        "x2": 362,
+        "y": 220,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "USB-C",
+        "desc": "USB-C · 장치 관리용 USB 포트입니다.",
+        "x1": 389,
+        "x2": 431,
+        "y": 246,
+        "side": "top"
+      },
+      {
+        "n": 16,
+        "label": "AC 전원 입력",
+        "desc": "IEC · 내장 전원 공급장치에 AC 전원을 연결합니다.",
+        "x1": 2108,
+        "x2": 2273,
+        "y": 214,
+        "side": "bottom"
+      }
+    ]
   }
 }

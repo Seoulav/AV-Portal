@@ -746,5 +746,24 @@
     "footerNote": "NETGEAR GS728TPPv3 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "gs728tppv3-rear.webp",
+      "width": 1562,
+      "height": 277
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "AC 전원 입력",
+        "desc": "IEC · 내장 전원 공급장치에 AC 전원을 연결합니다.",
+        "x1": 1353,
+        "x2": 1447,
+        "y": 198,
+        "side": "bottom"
+      }
+    ]
   }
 }
