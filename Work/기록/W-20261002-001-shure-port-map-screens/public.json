@@ -1,0 +1,1604 @@
+{
+  "time": "2026-10-02T02:34:32.923Z",
+  "baseline": "dd2efbfe694fe8a4b71a3798aa83b3fab68b23ae",
+  "head": "ab60bb3941b82aa108fa642ca5f688305d3b4c95",
+  "phase": "public",
+  "screens": [
+    {
+      "slug": "qlxd4",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 1095.75,
+          "y": 331.140625,
+          "width": 24,
+          "height": 24,
+          "left": 1095.75,
+          "right": 1119.75,
+          "top": 331.140625,
+          "bottom": 355.140625
+        },
+        {
+          "n": "2",
+          "x": 712.53125,
+          "y": 331.140625,
+          "width": 24,
+          "height": 24,
+          "left": 712.53125,
+          "right": 736.53125,
+          "top": 331.140625,
+          "bottom": 355.140625
+        },
+        {
+          "n": "3",
+          "x": 898.328125,
+          "y": 292.390625,
+          "width": 24,
+          "height": 24,
+          "left": 898.328125,
+          "right": 922.328125,
+          "top": 292.390625,
+          "bottom": 316.390625
+        },
+        {
+          "n": "4",
+          "x": 982.28125,
+          "y": 434.375,
+          "width": 24,
+          "height": 24,
+          "left": 982.28125,
+          "right": 1006.28125,
+          "top": 434.375,
+          "bottom": 458.375
+        },
+        {
+          "n": "5",
+          "x": 822.3125,
+          "y": 424.046875,
+          "width": 24,
+          "height": 24,
+          "left": 822.3125,
+          "right": 846.3125,
+          "top": 424.046875,
+          "bottom": 448.046875
+        },
+        {
+          "n": "6",
+          "x": 606.453125,
+          "y": 325.609375,
+          "width": 24,
+          "height": 24,
+          "left": 606.453125,
+          "right": 630.453125,
+          "top": 325.609375,
+          "bottom": 349.609375
+        },
+        {
+          "n": "7",
+          "x": 656.625,
+          "y": 424.046875,
+          "width": 24,
+          "height": 24,
+          "left": 656.625,
+          "right": 680.625,
+          "top": 424.046875,
+          "bottom": 448.046875
+        },
+        {
+          "n": "8",
+          "x": 545.1875,
+          "y": 429.578125,
+          "width": 24,
+          "height": 24,
+          "left": 545.1875,
+          "right": 569.1875,
+          "top": 429.578125,
+          "bottom": 453.578125
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 517
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd4-plus",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 1110.5,
+          "y": 734,
+          "width": 24,
+          "height": 24,
+          "left": 1110.5,
+          "right": 1134.5,
+          "top": 734,
+          "bottom": 758
+        },
+        {
+          "n": "2",
+          "x": 521.953125,
+          "y": 734,
+          "width": 24,
+          "height": 24,
+          "left": 521.953125,
+          "right": 545.953125,
+          "top": 734,
+          "bottom": 758
+        },
+        {
+          "n": "3",
+          "x": 929.6875,
+          "y": 596.828125,
+          "width": 24,
+          "height": 24,
+          "left": 929.6875,
+          "right": 953.6875,
+          "top": 596.828125,
+          "bottom": 620.828125
+        },
+        {
+          "n": "4",
+          "x": 1021.578125,
+          "y": 724.78125,
+          "width": 24,
+          "height": 24,
+          "left": 1021.578125,
+          "right": 1045.578125,
+          "top": 724.78125,
+          "bottom": 748.78125
+        },
+        {
+          "n": "5",
+          "x": 681.546875,
+          "y": 626.34375,
+          "width": 24,
+          "height": 24,
+          "left": 681.546875,
+          "right": 705.546875,
+          "top": 626.34375,
+          "bottom": 650.34375
+        },
+        {
+          "n": "6",
+          "x": 608.65625,
+          "y": 719.25,
+          "width": 24,
+          "height": 24,
+          "left": 608.65625,
+          "right": 632.65625,
+          "top": 719.25,
+          "bottom": 743.25
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 1340
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ua864a",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 917.390625,
+          "y": 362.640625,
+          "width": 24,
+          "height": 24,
+          "left": 917.390625,
+          "right": 941.390625,
+          "top": 362.640625,
+          "bottom": 386.640625
+        },
+        {
+          "n": "2",
+          "x": 894.265625,
+          "y": 880.140625,
+          "width": 24,
+          "height": 24,
+          "left": 894.265625,
+          "right": 918.265625,
+          "top": 880.140625,
+          "bottom": 904.140625
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1500,
+        "height": 1500
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 1106.8125,
+          "y": 293.140625,
+          "width": 24,
+          "height": 24,
+          "left": 1106.8125,
+          "right": 1130.8125,
+          "top": 293.140625,
+          "bottom": 317.140625
+        },
+        {
+          "n": "2",
+          "x": 530.796875,
+          "y": 294.25,
+          "width": 24,
+          "height": 24,
+          "left": 530.796875,
+          "right": 554.796875,
+          "top": 294.25,
+          "bottom": 318.25
+        },
+        {
+          "n": "3",
+          "x": 904.78125,
+          "y": 281.328125,
+          "width": 24,
+          "height": 24,
+          "left": 904.78125,
+          "right": 928.78125,
+          "top": 281.328125,
+          "bottom": 305.328125
+        },
+        {
+          "n": "4",
+          "x": 993.34375,
+          "y": 424.046875,
+          "width": 24,
+          "height": 24,
+          "left": 993.34375,
+          "right": 1017.34375,
+          "top": 424.046875,
+          "bottom": 448.046875
+        },
+        {
+          "n": "5",
+          "x": 834.671875,
+          "y": 422.203125,
+          "width": 24,
+          "height": 24,
+          "left": 834.671875,
+          "right": 858.671875,
+          "top": 422.203125,
+          "bottom": 446.203125
+        },
+        {
+          "n": "6",
+          "x": 682.46875,
+          "y": 314.53125,
+          "width": 24,
+          "height": 24,
+          "left": 682.46875,
+          "right": 706.46875,
+          "top": 314.53125,
+          "bottom": 338.53125
+        },
+        {
+          "n": "7",
+          "x": 615.671875,
+          "y": 414.8125,
+          "width": 24,
+          "height": 24,
+          "left": 615.671875,
+          "right": 639.671875,
+          "top": 414.8125,
+          "bottom": 438.8125
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 490
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4q",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 1128.21875,
+          "y": 247.03125,
+          "width": 24,
+          "height": 24,
+          "left": 1128.21875,
+          "right": 1152.21875,
+          "top": 247.03125,
+          "bottom": 271.03125
+        },
+        {
+          "n": "2",
+          "x": 621.03125,
+          "y": 248.140625,
+          "width": 24,
+          "height": 24,
+          "left": 621.03125,
+          "right": 645.03125,
+          "top": 248.140625,
+          "bottom": 272.140625
+        },
+        {
+          "n": "3",
+          "x": 1046.484375,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 1046.484375,
+          "right": 1070.484375,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "4",
+          "x": 974.15625,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 974.15625,
+          "right": 998.15625,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "5",
+          "x": 797.40625,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 797.40625,
+          "right": 821.40625,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "6",
+          "x": 726,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 726,
+          "right": 750,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "7",
+          "x": 1093.34375,
+          "y": 359.46875,
+          "width": 24,
+          "height": 24,
+          "left": 1093.34375,
+          "right": 1117.34375,
+          "top": 359.46875,
+          "bottom": 383.46875
+        },
+        {
+          "n": "8",
+          "x": 655.15625,
+          "y": 359.46875,
+          "width": 24,
+          "height": 24,
+          "left": 655.15625,
+          "right": 679.15625,
+          "top": 359.46875,
+          "bottom": 383.46875
+        },
+        {
+          "n": "9",
+          "x": 1017.140625,
+          "y": 354.296875,
+          "width": 24,
+          "height": 24,
+          "left": 1017.140625,
+          "right": 1041.140625,
+          "top": 354.296875,
+          "bottom": 378.296875
+        },
+        {
+          "n": "10",
+          "x": 944.453125,
+          "y": 354.296875,
+          "width": 24,
+          "height": 24,
+          "left": 944.453125,
+          "right": 968.453125,
+          "top": 354.296875,
+          "bottom": 378.296875
+        },
+        {
+          "n": "11",
+          "x": 768.0625,
+          "y": 354.296875,
+          "width": 24,
+          "height": 24,
+          "left": 768.0625,
+          "right": 792.0625,
+          "top": 354.296875,
+          "bottom": 378.296875
+        },
+        {
+          "n": "12",
+          "x": 695.75,
+          "y": 354.296875,
+          "width": 24,
+          "height": 24,
+          "left": 695.75,
+          "right": 719.75,
+          "top": 354.296875,
+          "bottom": 378.296875
+        },
+        {
+          "n": "13",
+          "x": 892.796875,
+          "y": 265.09375,
+          "width": 24,
+          "height": 24,
+          "left": 892.796875,
+          "right": 916.796875,
+          "top": 265.09375,
+          "bottom": 289.09375
+        },
+        {
+          "n": "14",
+          "x": 855.515625,
+          "y": 350.25,
+          "width": 24,
+          "height": 24,
+          "left": 855.515625,
+          "right": 879.515625,
+          "top": 350.25,
+          "bottom": 374.25
+        },
+        {
+          "n": "15",
+          "x": 511.4375,
+          "y": 357.625,
+          "width": 24,
+          "height": 24,
+          "left": 511.4375,
+          "right": 535.4375,
+          "top": 357.625,
+          "bottom": 381.625
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 264
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4d",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 1128.578125,
+          "y": 245.1875,
+          "width": 24,
+          "height": 24,
+          "left": 1128.578125,
+          "right": 1152.578125,
+          "top": 245.1875,
+          "bottom": 269.1875
+        },
+        {
+          "n": "2",
+          "x": 619.734375,
+          "y": 245.1875,
+          "width": 24,
+          "height": 24,
+          "left": 619.734375,
+          "right": 643.734375,
+          "top": 245.1875,
+          "bottom": 269.1875
+        },
+        {
+          "n": "3",
+          "x": 1046.84375,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 1046.84375,
+          "right": 1070.84375,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "4",
+          "x": 973.609375,
+          "y": 256.234375,
+          "width": 24,
+          "height": 24,
+          "left": 973.609375,
+          "right": 997.609375,
+          "top": 256.234375,
+          "bottom": 280.234375
+        },
+        {
+          "n": "5",
+          "x": 1092.234375,
+          "y": 359.09375,
+          "width": 24,
+          "height": 24,
+          "left": 1092.234375,
+          "right": 1116.234375,
+          "top": 359.09375,
+          "bottom": 383.09375
+        },
+        {
+          "n": "6",
+          "x": 653.5,
+          "y": 359.09375,
+          "width": 24,
+          "height": 24,
+          "left": 653.5,
+          "right": 677.5,
+          "top": 359.09375,
+          "bottom": 383.09375
+        },
+        {
+          "n": "7",
+          "x": 1016.40625,
+          "y": 355.40625,
+          "width": 24,
+          "height": 24,
+          "left": 1016.40625,
+          "right": 1040.40625,
+          "top": 355.40625,
+          "bottom": 379.40625
+        },
+        {
+          "n": "8",
+          "x": 942.609375,
+          "y": 355.40625,
+          "width": 24,
+          "height": 24,
+          "left": 942.609375,
+          "right": 966.609375,
+          "top": 355.40625,
+          "bottom": 379.40625
+        },
+        {
+          "n": "9",
+          "x": 891.125,
+          "y": 262.140625,
+          "width": 24,
+          "height": 24,
+          "left": 891.125,
+          "right": 915.125,
+          "top": 262.140625,
+          "bottom": 286.140625
+        },
+        {
+          "n": "10",
+          "x": 853.125,
+          "y": 349.140625,
+          "width": 24,
+          "height": 24,
+          "left": 853.125,
+          "right": 877.125,
+          "top": 349.140625,
+          "bottom": 373.140625
+        },
+        {
+          "n": "11",
+          "x": 509.765625,
+          "y": 362.421875,
+          "width": 24,
+          "height": 24,
+          "left": 509.765625,
+          "right": 533.765625,
+          "top": 362.421875,
+          "bottom": 386.421875
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 291
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxcw640",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1573,
+        "height": 675
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxcwapt-w",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1500,
+        "height": 1500
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd4d-plus",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 469
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd1-plus",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 679,
+        "height": 2000
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxa925w-r",
+      "width": 1280,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1999,
+        "height": 1999
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "qlxd4",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 528,
+          "y": 301.15625,
+          "width": 24,
+          "height": 24,
+          "left": 528,
+          "right": 552,
+          "top": 301.15625,
+          "bottom": 325.15625
+        },
+        {
+          "n": "2",
+          "x": 237.21875,
+          "y": 301.15625,
+          "width": 24,
+          "height": 24,
+          "left": 237.21875,
+          "right": 261.21875,
+          "top": 301.15625,
+          "bottom": 325.15625
+        },
+        {
+          "n": "3",
+          "x": 378.1875,
+          "y": 271.765625,
+          "width": 24,
+          "height": 24,
+          "left": 378.1875,
+          "right": 402.1875,
+          "top": 271.765625,
+          "bottom": 295.765625
+        },
+        {
+          "n": "4",
+          "x": 441.890625,
+          "y": 393,
+          "width": 24,
+          "height": 24,
+          "left": 441.890625,
+          "right": 465.890625,
+          "top": 393,
+          "bottom": 417
+        },
+        {
+          "n": "5",
+          "x": 320.515625,
+          "y": 385.15625,
+          "width": 24,
+          "height": 24,
+          "left": 320.515625,
+          "right": 344.515625,
+          "top": 385.15625,
+          "bottom": 409.15625
+        },
+        {
+          "n": "6",
+          "x": 156.71875,
+          "y": 296.96875,
+          "width": 24,
+          "height": 24,
+          "left": 156.71875,
+          "right": 180.71875,
+          "top": 296.96875,
+          "bottom": 320.96875
+        },
+        {
+          "n": "7",
+          "x": 194.796875,
+          "y": 385.15625,
+          "width": 24,
+          "height": 24,
+          "left": 194.796875,
+          "right": 218.796875,
+          "top": 385.15625,
+          "bottom": 409.15625
+        },
+        {
+          "n": "8",
+          "x": 110.234375,
+          "y": 389.359375,
+          "width": 24,
+          "height": 24,
+          "left": 110.234375,
+          "right": 134.234375,
+          "top": 389.359375,
+          "bottom": 413.359375
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 517
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd4-plus",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 539.1875,
+          "y": 620.625,
+          "width": 24,
+          "height": 24,
+          "left": 539.1875,
+          "right": 563.1875,
+          "top": 620.625,
+          "bottom": 644.625
+        },
+        {
+          "n": "2",
+          "x": 92.59375,
+          "y": 620.625,
+          "width": 24,
+          "height": 24,
+          "left": 92.59375,
+          "right": 116.59375,
+          "top": 620.625,
+          "bottom": 644.625
+        },
+        {
+          "n": "3",
+          "x": 402,
+          "y": 503.03125,
+          "width": 24,
+          "height": 24,
+          "left": 402,
+          "right": 426,
+          "top": 503.03125,
+          "bottom": 527.03125
+        },
+        {
+          "n": "4",
+          "x": 471.71875,
+          "y": 613.625,
+          "width": 24,
+          "height": 24,
+          "left": 471.71875,
+          "right": 495.71875,
+          "top": 613.625,
+          "bottom": 637.625
+        },
+        {
+          "n": "5",
+          "x": 213.6875,
+          "y": 525.421875,
+          "width": 24,
+          "height": 24,
+          "left": 213.6875,
+          "right": 237.6875,
+          "top": 525.421875,
+          "bottom": 549.421875
+        },
+        {
+          "n": "6",
+          "x": 158.390625,
+          "y": 609.421875,
+          "width": 24,
+          "height": 24,
+          "left": 158.390625,
+          "right": 182.390625,
+          "top": 609.421875,
+          "bottom": 633.421875
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 1340
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ua864a",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 392.65625,
+          "y": 325.203125,
+          "width": 24,
+          "height": 24,
+          "left": 392.65625,
+          "right": 416.65625,
+          "top": 325.203125,
+          "bottom": 349.203125
+        },
+        {
+          "n": "2",
+          "x": 375.109375,
+          "y": 731.390625,
+          "width": 24,
+          "height": 24,
+          "left": 375.109375,
+          "right": 399.109375,
+          "top": 731.390625,
+          "bottom": 755.390625
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1500,
+        "height": 1500
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 536.390625,
+          "y": 272.328125,
+          "width": 24,
+          "height": 24,
+          "left": 536.390625,
+          "right": 560.390625,
+          "top": 272.328125,
+          "bottom": 296.328125
+        },
+        {
+          "n": "2",
+          "x": 99.3125,
+          "y": 273.15625,
+          "width": 24,
+          "height": 24,
+          "left": 99.3125,
+          "right": 123.3125,
+          "top": 273.15625,
+          "bottom": 297.15625
+        },
+        {
+          "n": "3",
+          "x": 383.09375,
+          "y": 263.359375,
+          "width": 24,
+          "height": 24,
+          "left": 383.09375,
+          "right": 407.09375,
+          "top": 263.359375,
+          "bottom": 287.359375
+        },
+        {
+          "n": "4",
+          "x": 450.296875,
+          "y": 385.15625,
+          "width": 24,
+          "height": 24,
+          "left": 450.296875,
+          "right": 474.296875,
+          "top": 385.15625,
+          "bottom": 409.15625
+        },
+        {
+          "n": "5",
+          "x": 329.890625,
+          "y": 383.765625,
+          "width": 24,
+          "height": 24,
+          "left": 329.890625,
+          "right": 353.890625,
+          "top": 383.765625,
+          "bottom": 407.765625
+        },
+        {
+          "n": "6",
+          "x": 214.390625,
+          "y": 288.5625,
+          "width": 24,
+          "height": 24,
+          "left": 214.390625,
+          "right": 238.390625,
+          "top": 288.5625,
+          "bottom": 312.5625
+        },
+        {
+          "n": "7",
+          "x": 163.71875,
+          "y": 378.15625,
+          "width": 24,
+          "height": 24,
+          "left": 163.71875,
+          "right": 187.71875,
+          "top": 378.15625,
+          "bottom": 402.15625
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 490
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4q",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 589.390625,
+          "y": 238.65625,
+          "width": 24,
+          "height": 24,
+          "left": 589.390625,
+          "right": 613.390625,
+          "top": 238.65625,
+          "bottom": 262.65625
+        },
+        {
+          "n": "2",
+          "x": 177.046875,
+          "y": 239.546875,
+          "width": 24,
+          "height": 24,
+          "left": 177.046875,
+          "right": 201.046875,
+          "top": 239.546875,
+          "bottom": 263.546875
+        },
+        {
+          "n": "3",
+          "x": 522.9375,
+          "y": 246.15625,
+          "width": 24,
+          "height": 24,
+          "left": 522.9375,
+          "right": 546.9375,
+          "top": 246.15625,
+          "bottom": 270.15625
+        },
+        {
+          "n": "4",
+          "x": 464.140625,
+          "y": 246.15625,
+          "width": 24,
+          "height": 24,
+          "left": 464.140625,
+          "right": 488.140625,
+          "top": 246.15625,
+          "bottom": 270.15625
+        },
+        {
+          "n": "5",
+          "x": 320.4375,
+          "y": 246.15625,
+          "width": 24,
+          "height": 24,
+          "left": 320.4375,
+          "right": 344.4375,
+          "top": 246.15625,
+          "bottom": 270.15625
+        },
+        {
+          "n": "6",
+          "x": 262.390625,
+          "y": 246.15625,
+          "width": 24,
+          "height": 24,
+          "left": 262.390625,
+          "right": 286.390625,
+          "top": 246.15625,
+          "bottom": 270.15625
+        },
+        {
+          "n": "7",
+          "x": 561.046875,
+          "y": 340.546875,
+          "width": 24,
+          "height": 24,
+          "left": 561.046875,
+          "right": 585.046875,
+          "top": 340.546875,
+          "bottom": 364.546875
+        },
+        {
+          "n": "8",
+          "x": 204.796875,
+          "y": 340.546875,
+          "width": 24,
+          "height": 24,
+          "left": 204.796875,
+          "right": 228.796875,
+          "top": 340.546875,
+          "bottom": 364.546875
+        },
+        {
+          "n": "9",
+          "x": 499.09375,
+          "y": 336.34375,
+          "width": 24,
+          "height": 24,
+          "left": 499.09375,
+          "right": 523.09375,
+          "top": 336.34375,
+          "bottom": 360.34375
+        },
+        {
+          "n": "10",
+          "x": 440,
+          "y": 336.34375,
+          "width": 24,
+          "height": 24,
+          "left": 440,
+          "right": 464,
+          "top": 336.34375,
+          "bottom": 360.34375
+        },
+        {
+          "n": "11",
+          "x": 296.59375,
+          "y": 336.34375,
+          "width": 24,
+          "height": 24,
+          "left": 296.59375,
+          "right": 320.59375,
+          "top": 336.34375,
+          "bottom": 360.34375
+        },
+        {
+          "n": "12",
+          "x": 237.796875,
+          "y": 336.34375,
+          "width": 24,
+          "height": 24,
+          "left": 237.796875,
+          "right": 261.796875,
+          "top": 336.34375,
+          "bottom": 360.34375
+        },
+        {
+          "n": "13",
+          "x": 398,
+          "y": 253.34375,
+          "width": 24,
+          "height": 24,
+          "left": 398,
+          "right": 422,
+          "top": 253.34375,
+          "bottom": 277.34375
+        },
+        {
+          "n": "14",
+          "x": 367.6875,
+          "y": 333.046875,
+          "width": 24,
+          "height": 24,
+          "left": 367.6875,
+          "right": 391.6875,
+          "top": 333.046875,
+          "bottom": 357.046875
+        },
+        {
+          "n": "15",
+          "x": 87.9375,
+          "y": 339.046875,
+          "width": 24,
+          "height": 24,
+          "left": 87.9375,
+          "right": 111.9375,
+          "top": 339.046875,
+          "bottom": 363.046875
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 264
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "ulxd4d",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [
+        {
+          "n": "1",
+          "x": 552.90625,
+          "y": 235.890625,
+          "width": 24,
+          "height": 24,
+          "left": 552.90625,
+          "right": 576.90625,
+          "top": 235.890625,
+          "bottom": 259.890625
+        },
+        {
+          "n": "2",
+          "x": 166.796875,
+          "y": 235.890625,
+          "width": 24,
+          "height": 24,
+          "left": 166.796875,
+          "right": 190.796875,
+          "top": 235.890625,
+          "bottom": 259.890625
+        },
+        {
+          "n": "3",
+          "x": 490.890625,
+          "y": 244.296875,
+          "width": 24,
+          "height": 24,
+          "left": 490.890625,
+          "right": 514.890625,
+          "top": 244.296875,
+          "bottom": 268.296875
+        },
+        {
+          "n": "4",
+          "x": 435.3125,
+          "y": 244.296875,
+          "width": 24,
+          "height": 24,
+          "left": 435.3125,
+          "right": 459.3125,
+          "top": 244.296875,
+          "bottom": 268.296875
+        },
+        {
+          "n": "5",
+          "x": 525.328125,
+          "y": 335.828125,
+          "width": 24,
+          "height": 24,
+          "left": 525.328125,
+          "right": 549.328125,
+          "top": 335.828125,
+          "bottom": 359.828125
+        },
+        {
+          "n": "6",
+          "x": 192.40625,
+          "y": 335.828125,
+          "width": 24,
+          "height": 24,
+          "left": 192.40625,
+          "right": 216.40625,
+          "top": 335.828125,
+          "bottom": 359.828125
+        },
+        {
+          "n": "7",
+          "x": 467.796875,
+          "y": 333.03125,
+          "width": 24,
+          "height": 24,
+          "left": 467.796875,
+          "right": 491.796875,
+          "top": 333.03125,
+          "bottom": 357.03125
+        },
+        {
+          "n": "8",
+          "x": 411.796875,
+          "y": 333.03125,
+          "width": 24,
+          "height": 24,
+          "left": 411.796875,
+          "right": 435.796875,
+          "top": 333.03125,
+          "bottom": 357.03125
+        },
+        {
+          "n": "9",
+          "x": 372.734375,
+          "y": 248.75,
+          "width": 24,
+          "height": 24,
+          "left": 372.734375,
+          "right": 396.734375,
+          "top": 248.75,
+          "bottom": 272.75
+        },
+        {
+          "n": "10",
+          "x": 343.890625,
+          "y": 328.28125,
+          "width": 24,
+          "height": 24,
+          "left": 343.890625,
+          "right": 367.890625,
+          "top": 328.28125,
+          "bottom": 352.28125
+        },
+        {
+          "n": "11",
+          "x": 83.359375,
+          "y": 338.359375,
+          "width": 24,
+          "height": 24,
+          "left": 83.359375,
+          "right": 107.359375,
+          "top": 338.359375,
+          "bottom": 362.359375
+        }
+      ],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 291
+      },
+      "title": "02Port Map",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "mobile Home/End",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxcw640",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1573,
+        "height": 675
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxcwapt-w",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1500,
+        "height": 1500
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd4d-plus",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 2000,
+        "height": 469
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "slxd1-plus",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 679,
+        "height": 2000
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    },
+    {
+      "slug": "mxa925w-r",
+      "width": 390,
+      "overflow": 0,
+      "broken": 0,
+      "markers": [],
+      "overlap": [],
+      "clipped": [],
+      "hintOverlap": false,
+      "featured": {
+        "width": 1999,
+        "height": 1999
+      },
+      "title": "02제품 사진",
+      "preservedContent": null,
+      "checks": [
+        "role/title switches",
+        "zoom/Escape",
+        "full I/O table",
+        "five direct hashes/reload"
+      ]
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "jsonComparison": [
+    "qlxd4",
+    "slxd4-plus",
+    "ua864a",
+    "ulxd4",
+    "ulxd4q",
+    "ulxd4d",
+    "mxcw640",
+    "mxcwapt-w",
+    "slxd4d-plus",
+    "slxd1-plus",
+    "mxa925w-r"
+  ],
+  "success": true
+}

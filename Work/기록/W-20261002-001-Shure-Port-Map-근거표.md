@@ -41,3 +41,5 @@ G5 판정은 2026-10-02 사용자 후속 지시로 확정했다. SLX-D+ PDF 16�
 전용 검사 RED 1 pass/2 fail → GREEN 3 pass/0 fail. 전체 183 pass/0 fail/기존 skip 1, Pages 247장비·240상세 유지. 기존 235종 JSON과 489개 공개 자산/catalog, 신규 5종 coreSha256 불변을 검사했다. 검색 인덱스는 sourceSha256만 변경했다. 로컬 화면 44건(11종 × 1280/390/1024/721)에서 번호 겹침·잘림·가로 넘침·깨진 이미지·JS 오류 0. 독립 리뷰 Critical/Important 0.
 
 검증 명령·오류 처리·남은 공개 검증은 [Work 인계](W-20261002-001-Work-인계.md), 실측과 캡처는 [화면 기록](W-20261002-001-shure-port-map-screens/README.md)에 기록한다.
+
+병합 후 완료: [PR156](https://github.com/Seoulav/AV-Portal/pull/156) / `ab60bb3941b82aa108fa642ca5f688305d3b4c95`, [Pages36956125704](https://github.com/Seoulav/AV-Portal/actions/runs/36956125704) success. 공개22화면 오류0, 공개JSON11종 병합본 바이트 일치. 종료 기록과 실제 public 캡처를 사후 추가했다.
