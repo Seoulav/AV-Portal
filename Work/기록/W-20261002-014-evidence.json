@@ -1,0 +1,1199 @@
+{
+  "workId": "W-20261002-014",
+  "baselineSha": "4e0b75529445bbf1806d7fef4f26320c9a303416",
+  "products": {
+    "lh115qhfebgxkr": {
+      "previousFileSha256": "34f0db917390b3da90395512d7a0625e5e6819ecae0cdfe031f76b5cdf6eaa97",
+      "previousSources": [
+        {
+          "code": "S2",
+          "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
+          "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+        }
+      ],
+      "affected": {
+        "specifications": [
+          {
+            "index": 12,
+            "name": "패널 종류",
+            "previousSource": "S2",
+            "previousValue": "VA",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "패널 종류",
+              "value": "VA",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 13,
+            "name": "해상도",
+            "previousSource": "S2",
+            "previousValue": "3,840 x 2,160",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "해상도",
+              "value": "3,840 x 2,160",
+              "unit": "픽셀",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 14,
+            "name": "픽셀 피치(HxV)",
+            "previousSource": "S2",
+            "previousValue": "0.630 x 0.630",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "픽셀 피치(HxV)",
+              "value": "0.630 x 0.630",
+              "unit": "mm",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 15,
+            "name": "밝기(Typ)",
+            "previousSource": "S2",
+            "previousValue": "1000",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "밝기(Typ)",
+              "value": "1000",
+              "unit": "nit",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 16,
+            "name": "명암비(정적)",
+            "previousSource": "S2",
+            "previousValue": "5,500:1",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "명암비(정적)",
+              "value": "5,500:1",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 17,
+            "name": "시야각(H/V)",
+            "previousSource": "S2",
+            "previousValue": "178/178",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "시야각(H/V)",
+              "value": "178/178",
+              "unit": "°",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 18,
+            "name": "응답 속도",
+            "previousSource": "S2",
+            "previousValue": "6.5",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "응답 속도",
+              "value": "6.5",
+              "unit": "ms",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 19,
+            "name": "색재현율",
+            "previousSource": "S2",
+            "previousValue": "93% (DCI-P3)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "색재현율",
+              "value": "93% (DCI-P3)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 20,
+            "name": "패널 헤이즈(Haze)",
+            "previousSource": "S2",
+            "previousValue": "25",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "패널 헤이즈(Haze)",
+              "value": "25",
+              "unit": "%",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 21,
+            "name": "수평 주사 주파수",
+            "previousSource": "S2",
+            "previousValue": "15 - 135 kHz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "수평 주사 주파수",
+              "value": "15 - 135 kHz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 22,
+            "name": "최대 픽셀 주파수",
+            "previousSource": "S2",
+            "previousValue": "1.188 GHz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "최대 픽셀 주파수",
+              "value": "1.188 GHz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 23,
+            "name": "수직 주사 주파수",
+            "previousSource": "S2",
+            "previousValue": "24 - 120 Hz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "수직 주사 주파수",
+              "value": "24 - 120 Hz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 24,
+            "name": "동적 명암비",
+            "previousSource": "S2",
+            "previousValue": "Mega",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "동적 명암비",
+              "value": "Mega",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 25,
+            "name": "Wi-Fi",
+            "previousSource": "S2",
+            "previousValue": "있음",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Connectivity",
+              "name": "Wi-Fi",
+              "value": "있음",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 26,
+            "name": "블루투스",
+            "previousSource": "S2",
+            "previousValue": "있음",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Connectivity",
+              "name": "블루투스",
+              "value": "있음",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 27,
+            "name": "전원 사양",
+            "previousSource": "S2",
+            "previousValue": "AC100-240V 50/60Hz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Power",
+              "name": "전원 사양",
+              "value": "AC100-240V 50/60Hz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 29,
+            "name": "소비전력(대기/Sleep 모드)",
+            "previousSource": "S2",
+            "previousValue": "0.5",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Power",
+              "name": "소비전력(대기/Sleep 모드)",
+              "value": "0.5",
+              "unit": "W",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 35,
+            "name": "동작 습도",
+            "previousSource": "S2",
+            "previousValue": "20 - 95% (Operating)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Environment",
+              "name": "동작 습도",
+              "value": "20 - 95% (Operating)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 36,
+            "name": "VESA 규격",
+            "previousSource": "S2",
+            "previousValue": "1000 x 600",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "VESA 규격",
+              "value": "1000 x 600",
+              "unit": "mm",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 37,
+            "name": "베젤 폭(사양표)",
+            "previousSource": "S2",
+            "previousValue": "3 Bezel-less",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "베젤 폭(사양표)",
+              "value": "3 Bezel-less",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 38,
+            "name": "베젤 색상",
+            "previousSource": "S2",
+            "previousValue": "TITAN BLACK",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "베젤 색상",
+              "value": "TITAN BLACK",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 39,
+            "name": "프레임 재질",
+            "previousSource": "S2",
+            "previousValue": "Non-Glossy(Metal)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "프레임 재질",
+              "value": "Non-Glossy(Metal)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 40,
+            "name": "옵션 벽걸이 마운트",
+            "previousSource": "S2",
+            "previousValue": "Slim Fit Wall-mount (기본 동봉)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Accessory",
+              "name": "옵션 벽걸이 마운트",
+              "value": "Slim Fit Wall-mount (기본 동봉)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 41,
+            "name": "옵션 스탠드",
+            "previousSource": "S2",
+            "previousValue": "Yes(기본 동봉)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Accessory",
+              "name": "옵션 스탠드",
+              "value": "Yes(기본 동봉)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 42,
+            "name": "운영체제 버전",
+            "previousSource": "S2",
+            "previousValue": "Tizen 8.0",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Smart Platform",
+              "name": "운영체제 버전",
+              "value": "Tizen 8.0",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 43,
+            "name": "내장 플래시 메모리",
+            "previousSource": "S2",
+            "previousValue": "16GB",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Smart Platform",
+              "name": "내장 플래시 메모리",
+              "value": "16GB",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 46,
+            "name": "대각 크기(사양표 실측)",
+            "previousSource": "S2",
+            "previousValue": "114.4818",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "대각 크기(사양표 실측)",
+              "value": "114.4818",
+              "unit": "인치",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          }
+        ],
+        "io": [
+          {
+            "index": 1,
+            "name": "HDMI",
+            "previousSource": "S2",
+            "previousQuantity": "3",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력",
+              "direction": "IN",
+              "quantity": "3",
+              "protocol": "HDMI",
+              "availability": "HDMI 버전 표기 2.1, HDCP 2.2",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 2,
+            "name": "DisplayPort",
+            "previousSource": "S2",
+            "previousQuantity": "1",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Video",
+              "connector": "DisplayPort",
+              "signal": "비디오 입력",
+              "direction": "IN",
+              "quantity": "1",
+              "protocol": "DisplayPort",
+              "availability": "DP 버전 1.4",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 4,
+            "name": "IR 입력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Control",
+              "connector": "IR 입력",
+              "signal": "IR 수신/외부 IR",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "IR",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 5,
+            "name": "오디오 입력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Audio",
+              "connector": "오디오 입력",
+              "signal": "아날로그 오디오 입력",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "",
+              "availability": "미지원(사양표 \"No\")",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 6,
+            "name": "오디오 출력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Audio",
+              "connector": "오디오 출력",
+              "signal": "아날로그 오디오 출력",
+              "direction": "OUT",
+              "quantity": "",
+              "protocol": "",
+              "availability": "있음(스테레오 미니 잭)",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 7,
+            "name": "RS-232C 입력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Control",
+              "connector": "RS-232C 입력",
+              "signal": "외부 제어",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "RS-232C",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 8,
+            "name": "RS-232C 출력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Control",
+              "connector": "RS-232C 출력",
+              "signal": "외부 제어(루프아웃)",
+              "direction": "OUT",
+              "quantity": "",
+              "protocol": "RS-232C",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 9,
+            "name": "RJ45(LAN)",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Network",
+              "connector": "RJ45(LAN)",
+              "signal": "유선 네트워크",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "Ethernet",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          }
+        ]
+      },
+      "actual": {
+        "specifications": 52,
+        "io": 10,
+        "keyFacts": 3
+      },
+      "previousSourceEntry": {
+        "code": "S2",
+        "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH115QHFEBGXEN)",
+        "url": "https://www.samsung.com/uk/business/smart-signage/uhd-4k-signage/professional-smart-signage-qhfx-115-inch-lh115qhfebgxen/",
+        "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+      },
+      "previousVerificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH115QHFEBGXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 9개를 국내 공식 출처로 재확인했다. 한국 페이지에 해당 값이 없는 35개 행은 해외 지역 사양표 출처를 유지하고 대조표에 근거를 기록했다.",
+      "previousIssues": [
+        {
+          "code": "SPEC-AJAX",
+          "status": "RESOLVED",
+          "title": "상세 스펙 표 미확인",
+          "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 해상도·밝기(니트)·명암비·무게·입출력 단자 수 등 정량 스펙을 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
+        },
+        {
+          "code": "SPEC-REGION",
+          "status": "REVIEW REQUIRED",
+          "title": "정량 사양은 해외 지역 모델(LH115QHFEBGXEN) 공식 사양표 기준",
+          "detail": "2026-10-02 국내 상세 스펙 탭을 확인해 일치하는 행은 P로 재지정했다. 국내 페이지에 없는 35개 행은 해외 지역 출처를 유지했고, 행별 내역은 W-20261002-005 대조표 참조."
+        }
+      ],
+      "previousKeyFacts": [
+        {
+          "label": "화면 크기",
+          "value": "115 (290.7)",
+          "unit": "인치(cm)"
+        },
+        {
+          "label": "설치 방향",
+          "value": "가로형/세로형 설치 지원",
+          "unit": ""
+        }
+      ],
+      "previousSpecificationsLength": 47
+    },
+    "lh55wmfwbgcxkr": {
+      "previousFileSha256": "1ef09d452b10ea6f869d0236b952d76f5bc845731b7488a462f7ef83023436ab",
+      "previousSources": [
+        {
+          "code": "S2",
+          "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+          "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+        }
+      ],
+      "affected": {
+        "specifications": [
+          {
+            "index": 1,
+            "name": "밝기",
+            "previousSource": "P, S2",
+            "previousValue": "450 (유리 미장착) / 300 (유리 장착)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "밝기",
+              "value": "450 (유리 미장착) / 300 (유리 장착)",
+              "unit": "nit",
+              "condition": "",
+              "source": "P, S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 9,
+            "name": "패널 종류",
+            "previousSource": "S2",
+            "previousValue": "VA",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "패널 종류",
+              "value": "VA",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 10,
+            "name": "해상도",
+            "previousSource": "S2",
+            "previousValue": "3,840 x 2,160",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "해상도",
+              "value": "3,840 x 2,160",
+              "unit": "픽셀",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 11,
+            "name": "픽셀 피치(HxV)",
+            "previousSource": "S2",
+            "previousValue": "0.315 x 0.315",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "픽셀 피치(HxV)",
+              "value": "0.315 x 0.315",
+              "unit": "mm",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 12,
+            "name": "명암비(정적)",
+            "previousSource": "S2",
+            "previousValue": "4,000:1 (유리 미장착)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "명암비(정적)",
+              "value": "4,000:1 (유리 미장착)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 13,
+            "name": "시야각(H/V)",
+            "previousSource": "S2",
+            "previousValue": "178/178",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "시야각(H/V)",
+              "value": "178/178",
+              "unit": "°",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 14,
+            "name": "응답 속도",
+            "previousSource": "S2",
+            "previousValue": "9.5",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "응답 속도",
+              "value": "9.5",
+              "unit": "ms",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 15,
+            "name": "색재현율",
+            "previousSource": "S2",
+            "previousValue": "72% (NTSC)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "색재현율",
+              "value": "72% (NTSC)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 16,
+            "name": "패널 헤이즈(Haze)",
+            "previousSource": "S2",
+            "previousValue": "2 (유리 미장착)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "패널 헤이즈(Haze)",
+              "value": "2 (유리 미장착)",
+              "unit": "%",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 17,
+            "name": "수평 주사 주파수",
+            "previousSource": "S2",
+            "previousValue": "30 - 81 kHz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "수평 주사 주파수",
+              "value": "30 - 81 kHz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 18,
+            "name": "최대 픽셀 주파수",
+            "previousSource": "S2",
+            "previousValue": "148.5 MHz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "최대 픽셀 주파수",
+              "value": "148.5 MHz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 19,
+            "name": "수직 주사 주파수",
+            "previousSource": "S2",
+            "previousValue": "48 - 75 Hz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Display",
+              "name": "수직 주사 주파수",
+              "value": "48 - 75 Hz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 21,
+            "name": "Wi-Fi",
+            "previousSource": "S2",
+            "previousValue": "있음",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Connectivity",
+              "name": "Wi-Fi",
+              "value": "있음",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 22,
+            "name": "블루투스",
+            "previousSource": "S2",
+            "previousValue": "있음",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Connectivity",
+              "name": "블루투스",
+              "value": "있음",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 23,
+            "name": "전원 사양",
+            "previousSource": "S2",
+            "previousValue": "AC100-240V 50/60Hz",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Power",
+              "name": "전원 사양",
+              "value": "AC100-240V 50/60Hz",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 30,
+            "name": "동작 습도",
+            "previousSource": "S2",
+            "previousValue": "10 - 80% (결로 없음)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Environment",
+              "name": "동작 습도",
+              "value": "10 - 80% (결로 없음)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 31,
+            "name": "VESA 규격",
+            "previousSource": "S2",
+            "previousValue": "400 x 400",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "VESA 규격",
+              "value": "400 x 400",
+              "unit": "mm",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 32,
+            "name": "베젤 폭(사양표)",
+            "previousSource": "S2",
+            "previousValue": "26.2(4면 균일)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "베젤 폭(사양표)",
+              "value": "26.2(4면 균일)",
+              "unit": "mm",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 33,
+            "name": "베젤 색상",
+            "previousSource": "S2",
+            "previousValue": "Gray White",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "베젤 색상",
+              "value": "Gray White",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 34,
+            "name": "프레임 재질",
+            "previousSource": "S2",
+            "previousValue": "Non-Glossy(Plastic)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Physical",
+              "name": "프레임 재질",
+              "value": "Non-Glossy(Plastic)",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 35,
+            "name": "옵션 벽걸이 마운트",
+            "previousSource": "S2",
+            "previousValue": "WMN-4277SF",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Accessory",
+              "name": "옵션 벽걸이 마운트",
+              "value": "WMN-4277SF",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 36,
+            "name": "옵션 스탠드",
+            "previousSource": "S2",
+            "previousValue": "STN-WM55R",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Accessory",
+              "name": "옵션 스탠드",
+              "value": "STN-WM55R",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 37,
+            "name": "운영체제 버전",
+            "previousSource": "S2",
+            "previousValue": "Tizen 9.0",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Smart Platform",
+              "name": "운영체제 버전",
+              "value": "Tizen 9.0",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 38,
+            "name": "내장 플래시 메모리",
+            "previousSource": "S2",
+            "previousValue": "64GB",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Smart Platform",
+              "name": "내장 플래시 메모리",
+              "value": "64GB",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 39,
+            "name": "터치 방식",
+            "previousSource": "S2",
+            "previousValue": "IR",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Touch/Pen",
+              "name": "터치 방식",
+              "value": "IR",
+              "unit": "",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          }
+        ],
+        "io": [
+          {
+            "index": 2,
+            "name": "HDMI",
+            "previousSource": "S2",
+            "previousQuantity": "2 (본체 1, 옵션 트레이 1)",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력",
+              "direction": "IN",
+              "quantity": "2 (본체 1, 옵션 트레이 1)",
+              "protocol": "HDMI",
+              "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 4,
+            "name": "오디오 출력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Audio",
+              "connector": "오디오 출력",
+              "signal": "아날로그 오디오 출력",
+              "direction": "OUT",
+              "quantity": "",
+              "protocol": "",
+              "availability": "있음(스테레오 미니 잭)",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 5,
+            "name": "RS-232C 입력",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Control",
+              "connector": "RS-232C 입력",
+              "signal": "외부 제어",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "RS-232C",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          },
+          {
+            "index": 6,
+            "name": "RJ45(LAN)",
+            "previousSource": "S2",
+            "previousQuantity": "",
+            "previousVerification": "REVIEW REQUIRED",
+            "previousRow": {
+              "group": "Network",
+              "connector": "RJ45(LAN)",
+              "signal": "유선 네트워크",
+              "direction": "IN",
+              "quantity": "",
+              "protocol": "Ethernet",
+              "availability": "있음",
+              "condition": "",
+              "source": "S2",
+              "verification": "REVIEW REQUIRED"
+            }
+          }
+        ]
+      },
+      "actual": {
+        "specifications": 41,
+        "io": 7,
+        "keyFacts": 2
+      },
+      "previousSourceEntry": {
+        "code": "S2",
+        "name": "국내 자료 미확보 · 해외 지역 페이지 기록 — 삼성전자 공식 영국 비즈니스 제품 페이지 사양표 (LH55WMFWBGCXEN)",
+        "url": "https://www.samsung.com/uk/smart-signage/digital-flipchart/the-flip-55-inch-wmfx-lh55wmfwbgcxen/",
+        "scope": "국내 자료 미확보 · 해외 지역 페이지 기록. 한국 페이지 미기재인 기존 해외 지역 모델 값이며 국내 제품의 검증 근거로 쓰지 않음. 제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+      },
+      "previousVerificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH55WMFWBGCXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 9개를 국내 공식 출처로 재확인했다. 한국 페이지에 해당 값이 없는 29개 행은 해외 지역 사양표 출처를 유지하고 대조표에 근거를 기록했다.",
+      "previousIssues": [
+        {
+          "code": "SPEC-AJAX",
+          "status": "RESOLVED",
+          "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+          "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
+        },
+        {
+          "code": "SPEC-REGION",
+          "status": "REVIEW REQUIRED",
+          "title": "정량 사양은 해외 지역 모델(LH55WMFWBGCXEN) 공식 사양표 기준",
+          "detail": "2026-10-02 국내 상세 스펙 탭을 확인해 일치하는 행은 P로 재지정했다. 국내 페이지에 없는 29개 행은 해외 지역 출처를 유지했고, 행별 내역은 W-20261002-005 대조표 참조."
+        },
+        {
+          "code": "RESPONSE-TIME",
+          "status": "REVIEW REQUIRED",
+          "title": "응답 속도 9.5ms(패널)와 펜 반응 속도 26ms는 별개 항목",
+          "detail": "공식 사양표 Response Time 9.5ms는 패널 응답 속도이며, 기존 26ms는 펜 필기 지연 값이다. 두 값을 혼동하지 않도록 별도 행으로 기록했다."
+        }
+      ],
+      "previousKeyFacts": [
+        {
+          "label": "화면 크기",
+          "value": "55",
+          "unit": "인치"
+        },
+        {
+          "label": "설치 방향",
+          "value": "회전형(가로/세로 모드 전환)",
+          "unit": ""
+        }
+      ],
+      "previousSpecificationsLength": 41
+    }
+  },
+  "untouchedProductSha256": {
+    "hg43u800fnfxkr": "217f3810dbffc315d40b5056307bd438af97b3d04c7da6c2773518f55945e4eb",
+    "hg50u800fnfxkr": "c70f235e90b6e4f73f5963eed7a8cd81e5e24c9f8427987eb3ebbbccf808a32a",
+    "hg65u800fnfxkr": "6575c9259772da1f0c4b3a221659b2f185b04bb72d25a23c7687b897015d8116",
+    "lh32qmcebgcxkr": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+    "lh43qmcebgcxkr": "5eb5f58c84a533b73f1bf272b56601b4c46c7ff01984b03215c316d821dbbc31",
+    "lh85qmcebgcxkr": "d110c8c5a60000c257ec7f7c01dbe10cc40a8f12e15f72f1f0dcc1e899b9bdcc",
+    "lh98qmcebgcxkr": "90c941a8e200e535ce44c755c181a119af67a911cc084bb63aff972ce99bcec5",
+    "lh43qhcebgcxkr": "86f3445599cea5aac252f6b81e685935d2329ebcb9a3582593a1d259328fec66",
+    "lh75qhcebgcxkr": "cf9519784c6d71621d87b151c3faeb51d98f27878e2df0f6aed6406f766561cc",
+    "lh55vmcrbgbxkr": "4e4b9a630e1a4ab96d2d8d49298fbeec3a846dda8876a3c6f33ae3f237d4f9fd",
+    "lh55vhcrbgbxkr": "22a678c3be4102ac1044907249038fd85238e2d0ff499223f7875cb2ec1ecc1c",
+    "lh75wmfwlgcxkr": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+    "mp008f": "9a02eee97746d7698b63a59dbd7e01aa391a3fc8ebe896a69b260569fa938888",
+    "mp012f": "823ceafe963642b4d5b27d2c3c2a24a0f2d0d29461c4ba93ea28dae582de894e",
+    "mp016f": "749972090a7228a5df9b2cc9e3b52d81d269fd14f3b4c118264061ffe6762856"
+  }
+}

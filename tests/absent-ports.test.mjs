@@ -4,6 +4,7 @@ import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mjs';
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
+import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -74,7 +75,7 @@ test('C: quantity changes come only from model-specific supplied documents', () 
       assert.ok(change.exactModelMatch);
       filled++;
     }
-    const restored = beforeSamsungSourceCleanup(p, slug);
+    const restored = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(p, slug), slug);
     for (const change of e.quantityChanges) restored.io[change.index].quantity = change.before;
     for (const revert of e.verificationReverts) restored.io[revert.index].verification = revert.before;
     restored.sources = restored.sources.filter(source => !e.addedSourceCodes.includes(source.code));
