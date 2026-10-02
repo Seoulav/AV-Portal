@@ -556,7 +556,7 @@
       "connector": "IR 입력",
       "signal": "IR 수신/외부 IR",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "IR",
       "availability": "있음",
       "condition": "",
@@ -573,7 +573,7 @@
       "availability": "미지원(사양표 \"No\")",
       "condition": "",
       "source": "P",
-      "verification": "CONFLICTED"
+      "verification": "FOUND"
     },
     {
       "group": "Audio",
@@ -592,7 +592,7 @@
       "connector": "RS-232C 입력",
       "signal": "외부 제어",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
@@ -604,7 +604,7 @@
       "connector": "RS-232C 출력",
       "signal": "외부 제어(루프아웃)",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
@@ -616,7 +616,7 @@
       "connector": "RJ45(LAN)",
       "signal": "유선 네트워크",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
       "availability": "있음",
       "condition": "",
@@ -636,6 +636,16 @@
       "name": "삼성전자 공식 카리브(latin_en) 비즈니스 제품 페이지 사양표 (LH43QMCEBGCXGO)",
       "url": "https://www.samsung.com/latin_en/business/smart-signage/uhd-4k-signage/crystal-uhd-signage-qmc-lh43qmcebgcxgo/",
       "scope": "제조사 공식 출처. 기존 해외 지역 모델 조사 출처; 한국 페이지 미기재인 행에 한해 해외 지역 페이지 값 유지. 행별 원문과 처리 내역은 W-20261002-005 삼성출처대조표·근거 JSON 참조."
+    },
+    {
+      "code": "S3",
+      "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+      "scope": "국내 모델 LH43QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    {
+      "code": "S4",
+      "name": "(주)윈스타비투비 QMC 제품 규격서 (사용자 제공)",
+      "scope": "국내 모델 LH43QMCEBGCXKR 일치 · 3쪽 인터페이스 그림의 IR 입력, RS-232C 입력·출력, RJ45 단자. 삼성전자 가이드에는 해당 개수 미기재. 원본 사본은 게시하지 않음; SHA-256 663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c"
     }
   ],
   "issues": [
