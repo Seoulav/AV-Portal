@@ -16,10 +16,11 @@ test('상세 slug는 카탈로그가 단일 근거이고 데이터·이미지 �
   assert.deepEqual([...new Set(slugs)], slugs, '중복 slug');
   assert.deepEqual((await readdir(new URL('detail/data/', site))).sort(), slugs.map(slug => `${slug}.json`).sort());
   assert.deepEqual(Object.keys(group1Images).sort(), slugs);
-  assert.deepEqual(Object.keys(cardImages).sort(), slugs);
+  assert.deepEqual(Object.keys(cardImages).sort(), slugs.filter(slug => group1Images[slug].length));
   for (const item of withDetail) {
     assert.equal(item.card_image, cardImages[item.slug]);
-    assert.ok(group1Images[item.slug].some(image => image.file === item.card_image), `${item.slug}: 카드 이미지 없음`);
+    if (group1Images[item.slug].length) assert.ok(group1Images[item.slug].some(image => image.file === item.card_image), `${item.slug}: 카드 이미지 없음`);
+    else assert.equal(item.card_image, undefined, `${item.slug}: 이미지 미확보 제품의 카드 이미지`);
     assert.ok(manufacturerHosts[item.brand], `${item.brand}: 허용 호스트 미정의`);
   }
 });
@@ -78,6 +79,8 @@ test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일
   const scopeOf = new Map(decisions.entries.filter(entry => entry.manufacturer).map(entry => [`${norm(entry.manufacturer)}\0${norm(entry.model)}`, entry.link_scope]));
   // 기준 27개는 결정표 이전에 개별 검토된 항목이라 대상이 아니다.
   for (const item of catalog.slice(27)) {
+    // W-20261002-012 MPF 3종은 별도 삼성 제품가이드·국내 목록 근거로 등록했다.
+    if (['mp008f', 'mp012f', 'mp016f'].includes(item.slug)) continue;
     const scope = scopeOf.get(`${norm(item.brand)}\0${norm(item.product)}`);
     assert.ok(scope, `${item.brand} ${item.product}: 결정표에 없음`);
     assert.equal(item.link_scope ?? 'model', scope, `${item.brand} ${item.product}`);
