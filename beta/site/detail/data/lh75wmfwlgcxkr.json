@@ -542,7 +542,7 @@
     {
       "group": "Video",
       "connector": "HDMI",
-      "signal": "비디오/오디오 입력",
+      "signal": "후면 비디오/오디오 입력",
       "direction": "IN",
       "quantity": "1",
       "protocol": "HDMI",

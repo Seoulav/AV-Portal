@@ -62,6 +62,7 @@ test('rear HDMI, LAN, audio, USB, SERVICE and TOUCH follow the exact WMFX drawin
       assert.ok(hasManual(item), `${slug}: ${connector} manual source`);
     }
     assert.match(row(current.io, 'connector', 'RJ45(LAN)').availability, /10\/100 Mbps.*CAT 7\(STP\)/);
+    assert.match(row(current.io, 'connector', 'HDMI').signal, /^후면 /, `${slug}: card count scoped to rear`);
     assert.match(row(current.io, 'connector', 'USB').availability, /후면.*1\.0 A/);
     assert.equal(row(current.io, 'connector', 'USB').quantity, row(before.io, 'connector', 'USB').quantity, `${slug}: existing front/option count preserved`);
     for (const connector of ['USB-C 허브', 'RS-232C 입력']) {
@@ -77,6 +78,10 @@ test('rear HDMI, LAN, audio, USB, SERVICE and TOUCH follow the exact WMFX drawin
   assert.equal(row(evidence.products[slugs[1]].before.io, 'connector', 'HDMI').quantity, '2');
   assert.equal(row(current75.io, 'connector', 'HDMI').quantity, '1');
   assert.ok(current75.issues.some(issue => issue.code === 'HDMI-REAR-COUNT' && issue.status === 'REVIEW REQUIRED' && /2.*1/.test(issue.detail)));
+  const current55 = product(slugs[0]);
+  assert.doesNotMatch(row(current55.io, 'connector', 'HDMI').availability, /2\.0|HDCP 2\.2/);
+  assert.doesNotMatch(row(current55.io, 'connector', '오디오 출력').availability, /스테레오 미니 잭/);
+  assert.ok(current55.issues.some(issue => issue.code === 'WMFX-IO-DETAILS' && issue.status === 'REVIEW REQUIRED' && /HDMI.*2\.0.*HDCP 2\.2.*스테레오 미니 잭/.test(issue.detail)));
 });
 
 test('55-inch facts use verified display axes; unrelated product fields and 75-inch facts stay fixed', () => {

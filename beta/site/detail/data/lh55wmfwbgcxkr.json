@@ -551,11 +551,11 @@
     {
       "group": "Video",
       "connector": "HDMI",
-      "signal": "비디오/오디오 입력",
+      "signal": "후면 비디오/오디오 입력",
       "direction": "IN",
       "quantity": "1",
       "protocol": "HDMI",
-      "availability": "HDMI 버전 표기 2.0, HDCP 2.2 · HDMI 버전·HDCP 표기는 매뉴얼 미기재(별도 확인 필요)",
+      "availability": "후면 HDMI 입력 1개 확인 · HDMI 버전·HDCP 세부 표기 별도 확인 필요",
       "condition": "",
       "source": "M1",
       "verification": "VERIFIED"
@@ -579,7 +579,7 @@
       "direction": "OUT",
       "quantity": "1",
       "protocol": "",
-      "availability": "있음(스테레오 미니 잭) · 스테레오 미니 잭 형상은 매뉴얼 미기재(별도 확인 필요)",
+      "availability": "후면 오디오 출력 1개 확인 · 커넥터 형상 별도 확인 필요",
       "condition": "",
       "source": "M1",
       "verification": "VERIFIED"
@@ -664,6 +664,12 @@
       "status": "REVIEW REQUIRED",
       "title": "응답 속도 9.5ms(패널)와 펜 반응 속도 26ms는 별개 항목",
       "detail": "기존 기록의 9.5ms는 패널 응답 속도이고 26ms는 펜 필기 지연 값이다. 국내 자료로 9.5ms를 확인하지 못해 해당 사양은 REVIEW REQUIRED로 유지한다."
+    },
+    {
+      "code": "WMFX-IO-DETAILS",
+      "status": "REVIEW REQUIRED",
+      "title": "HDMI 버전·HDCP와 오디오 커넥터 형상 국내 근거 미확보",
+      "detail": "기존 HDMI 행 availability에는 HDMI 버전 표기 2.0, HDCP 2.2가, 오디오 출력 행에는 스테레오 미니 잭 형상이 적혀 있었다. BN81-28453F-02 13쪽 후면 단자표는 HDMI 입력 1개와 오디오 출력 1개만 확인하며 이러한 세부 표기를 확인하지 않는다. 기존 기록은 이 이슈에 보존하고 세부 규격은 REVIEW REQUIRED로 남긴다."
     }
   ],
   "presentation": {
