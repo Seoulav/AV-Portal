@@ -1,0 +1,62 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+const root = new URL('../', import.meta.url);
+const slugs = ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr'];
+const evidence = JSON.parse(readFileSync(new URL('Work/기록/W-20261003-004-evidence.json', root), 'utf8'));
+const sha = data => createHash('sha256').update(data).digest('hex');
+const load = slug => JSON.parse(readFileSync(new URL(`beta/site/detail/data/${slug}.json`, root), 'utf8'));
+const row = (product, connector) => {
+  const rows = product.io.filter(item => item.connector === connector);
+  assert.equal(rows.length, 1, `${product.model}: ${connector}`);
+  return rows[0];
+};
+
+test('three U800F hotel TVs have the manual HDMI, physical ports and unchanged protected fields', () => {
+  const reference = load(slugs[0]).io;
+  for (const slug of slugs) {
+    const product = load(slug);
+    assert.equal(product.io.length, 13, `${slug}: 9 existing + 4 U800F rows`);
+    assert.deepEqual(product.io, reference, `${slug}: shared series I/O`);
+    const { io, sources, issues, ...core } = product;
+    assert.equal(sha(JSON.stringify(core)), evidence.products[slug].coreSha256, `${slug}: protected fields`);
+    assert.equal(sha(JSON.stringify(product.specifications)), evidence.products[slug].specificationsSha256, `${slug}: specifications`);
+    assert.equal(issues.filter(item => item.code === 'HDMI-COUNT').length, 1);
+    assert.equal(issues.find(item => item.code === 'HDMI-COUNT').status, 'RESOLVED');
+    assert.equal(sha(JSON.stringify(issues.filter(item => item.code !== 'HDMI-COUNT'))), evidence.products[slug].previousOtherIssuesSha256, `${slug}: other issues`);
+    const hdmi = row(product, 'HDMI 입력');
+    assert.equal(hdmi.quantity, '3');
+    assert.equal(hdmi.direction, 'IN');
+    assert.match(hdmi.availability, /HDMI 3.*eARC/);
+    for (const connector of ['HDMI 입력', 'DATA', 'VOL-CTRL', 'VARIABLE']) {
+      const item = row(product, connector);
+      assert.equal(item.verification, 'VERIFIED', `${slug}: ${connector}`);
+      assert.equal(item.source, 'M1', `${slug}: ${connector} manual`);
+    }
+    for (const u700fOnly of ['HP-ID', 'HEADPHONE JACK', 'SERVICE']) {
+      assert.equal(product.io.some(item => item.connector === u700fOnly), false, `${slug}: ${u700fOnly} is U700F-only`);
+    }
+    assert.equal(row(product, 'RF 입력').quantity, '2');
+    assert.match(row(product, 'RF 입력').availability, /위성.*미지원/);
+    assert.equal(row(product, 'Ethernet 브리지(LAN-Out)').quantity, '1');
+    assert.match(row(product, 'USB').availability, /5V 0\.5A.*5V 1A/);
+    assert.equal(product.io.filter(item => item.connector === '무선(물리 단자 없음)').length, 2);
+    assert.equal(row(product, 'RJ12').verification, 'REVIEW REQUIRED');
+    assert.match(row(product, 'RJ12').availability, /DATA.*동일 여부 미확인/);
+    const manual = product.sources.find(source => source.code === 'M1');
+    assert.ok(manual);
+    assert.match(manual.name, /BN81-28062C-00/);
+    assert.match(manual.scope, /11.*12.*13/);
+  }
+});
+
+test('all other detail JSON files remain byte-identical to the pre-change catalog', () => {
+  const dir = new URL('beta/site/detail/data/', root);
+  const hash = createHash('sha256');
+  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+    hash.update(file).update('\0').update(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'));
+  }
+  assert.equal(hash.digest('hex'), evidence.otherDetailJsonSha256);
+});

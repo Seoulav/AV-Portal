@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeVideowallProse} from './videowall-w03001-history.mjs';
+import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -31,7 +32,10 @@ test('only eight exact-model Samsung products change, and specifications remain 
       before.previousIo.filter(x=>x.connector==='오디오 입력'&&x.availability.includes('미지원')).map(x=>x.quantity));
   }
   for(const [slug,expected] of Object.entries(evidence.excludedFileSha256)){
-    assert.equal(sha(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root))),expected,`${slug}: excluded JSON bytes`);
+    const current=load(slug);
+    const prior=beforeHotelTvIo(current,slug);
+    const bytes=slug.startsWith('hg') ? Buffer.from(JSON.stringify(prior,null,2)+'\n') : readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
+    assert.equal(sha(bytes),expected,`${slug}: excluded JSON bytes`);
   }
 });
 
