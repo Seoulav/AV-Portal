@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-10-03T08:36:18.844Z",
+  "merge": "f680c51ba6e80dbc8f86301d6f0137eae758b5e8",
+  "rows": [
+    {
+      "path": "detail/data/cdi-2-1200.json",
+      "status": 200,
+      "publicSha256": "f538e5764826ba881052954c6123da73bcfa5146caf4d926caf82d6cf7443de6",
+      "mergeSha256": "f538e5764826ba881052954c6123da73bcfa5146caf4d926caf82d6cf7443de6",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-2-1200bl.json",
+      "status": 200,
+      "publicSha256": "70d2ec7b06717f31f366624c03403ed4790d173cf8354a7bd3d2855f4ac1e436",
+      "mergeSha256": "70d2ec7b06717f31f366624c03403ed4790d173cf8354a7bd3d2855f4ac1e436",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-2-300.json",
+      "status": 200,
+      "publicSha256": "ac5a42d172926c25f6000ed1d2a05ec13ecc7b2a4ef23b4615e61218610403f5",
+      "mergeSha256": "ac5a42d172926c25f6000ed1d2a05ec13ecc7b2a4ef23b4615e61218610403f5",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-2-300bl.json",
+      "status": 200,
+      "publicSha256": "2e17bace350ffe4dbf421060867dc66c218250f64b02f22bd57d55181e79db61",
+      "mergeSha256": "2e17bace350ffe4dbf421060867dc66c218250f64b02f22bd57d55181e79db61",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-2-600.json",
+      "status": 200,
+      "publicSha256": "e6cf29a10110123abf467533f81f376e9f852d75e24c76392d0f1ad0e457e644",
+      "mergeSha256": "e6cf29a10110123abf467533f81f376e9f852d75e24c76392d0f1ad0e457e644",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-2-600bl.json",
+      "status": 200,
+      "publicSha256": "2154bdaba2b46e6abc1e536173dfd6d072e385886d23ecb9d573a17e53bbe270",
+      "mergeSha256": "2154bdaba2b46e6abc1e536173dfd6d072e385886d23ecb9d573a17e53bbe270",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-1200.json",
+      "status": 200,
+      "publicSha256": "c29409094925a09b11485b2568d92f9b8283b83def81b64d9942c0ded2241df5",
+      "mergeSha256": "c29409094925a09b11485b2568d92f9b8283b83def81b64d9942c0ded2241df5",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-1200bl.json",
+      "status": 200,
+      "publicSha256": "937a4070e02f05bdeec355f3004734ba90cf2476814a13cea03af94d26ce70ec",
+      "mergeSha256": "937a4070e02f05bdeec355f3004734ba90cf2476814a13cea03af94d26ce70ec",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-300.json",
+      "status": 200,
+      "publicSha256": "934e0f19b69864abe95181cb187ed9c892f0373aae77fc811879e1f7f7096645",
+      "mergeSha256": "934e0f19b69864abe95181cb187ed9c892f0373aae77fc811879e1f7f7096645",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-300bl.json",
+      "status": 200,
+      "publicSha256": "16367175b35e84f22f64dabfd91b3c2600d0c63311c22c24db546797ef628396",
+      "mergeSha256": "16367175b35e84f22f64dabfd91b3c2600d0c63311c22c24db546797ef628396",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-600.json",
+      "status": 200,
+      "publicSha256": "ebae0e935aea89984e862a34688b3e777266f0d1bc20fce0f67ac1166feb4591",
+      "mergeSha256": "ebae0e935aea89984e862a34688b3e777266f0d1bc20fce0f67ac1166feb4591",
+      "match": true
+    },
+    {
+      "path": "detail/data/cdi-4-600bl.json",
+      "status": 200,
+      "publicSha256": "411cc630942edf7541ae769f685315d86460a4b99269c842cfba5f1b15385342",
+      "mergeSha256": "411cc630942edf7541ae769f685315d86460a4b99269c842cfba5f1b15385342",
+      "match": true
+    },
+    {
+      "path": "detail/data/comtech-d-2125.json",
+      "status": 200,
+      "publicSha256": "4353cfe4ff958656b09077dfca2c1130cb04795a62a8d46a559c543ad05a8875",
+      "mergeSha256": "4353cfe4ff958656b09077dfca2c1130cb04795a62a8d46a559c543ad05a8875",
+      "match": true
+    },
+    {
+      "path": "detail/data/comtech-d-4125.json",
+      "status": 200,
+      "publicSha256": "e059f206902505e4708d617b400b845015ac80f2f35888c4259379f1c2a0feab",
+      "mergeSha256": "e059f206902505e4708d617b400b845015ac80f2f35888c4259379f1c2a0feab",
+      "match": true
+    },
+    {
+      "path": "detail/data/comtech-d-8125.json",
+      "status": 200,
+      "publicSha256": "cf2df109f18c12889858db8fbbe914c36c51ee21b6ef898aae97237ef6594b3e",
+      "mergeSha256": "cf2df109f18c12889858db8fbbe914c36c51ee21b6ef898aae97237ef6594b3e",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-2-300.json",
+      "status": 200,
+      "publicSha256": "1d581dc4c602aa1617bcca260caaaa5686604dffd8ddb86cf2b6375f117479e2",
+      "mergeSha256": "1d581dc4c602aa1617bcca260caaaa5686604dffd8ddb86cf2b6375f117479e2",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-2-300n.json",
+      "status": 200,
+      "publicSha256": "47843f32625c53bf92cdc3daf20fae113e2f4d6e1c72e0d2ded2018001d2690e",
+      "mergeSha256": "47843f32625c53bf92cdc3daf20fae113e2f4d6e1c72e0d2ded2018001d2690e",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-2-600.json",
+      "status": 200,
+      "publicSha256": "d80d35c8f07647ad7c22d13efe65e4368ba7a805ae2e5daaffa8a278ecbe9afe",
+      "mergeSha256": "d80d35c8f07647ad7c22d13efe65e4368ba7a805ae2e5daaffa8a278ecbe9afe",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-2-600n.json",
+      "status": 200,
+      "publicSha256": "338d759f7f88fa767ab4801f740b1e45b4799f05a97d12a560b195ff78fdc2b0",
+      "mergeSha256": "338d759f7f88fa767ab4801f740b1e45b4799f05a97d12a560b195ff78fdc2b0",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-4-300.json",
+      "status": 200,
+      "publicSha256": "2182923f49797ff6bc2dfc110486db9c975a624f52eb24cdec164610be11730e",
+      "mergeSha256": "2182923f49797ff6bc2dfc110486db9c975a624f52eb24cdec164610be11730e",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-4-300da.json",
+      "status": 200,
+      "publicSha256": "007ecf415203a24ac372e97b42c38c6aab5cca0663195258e9d6f814c43709c6",
+      "mergeSha256": "007ecf415203a24ac372e97b42c38c6aab5cca0663195258e9d6f814c43709c6",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-4-300n.json",
+      "status": 200,
+      "publicSha256": "54637dc081e4b3012a6786dce1a0dc0983d19045b5b6a518944b88b6ca4a5c3e",
+      "mergeSha256": "54637dc081e4b3012a6786dce1a0dc0983d19045b5b6a518944b88b6ca4a5c3e",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-4-600.json",
+      "status": 200,
+      "publicSha256": "2ecc291b76053408a2d1288bd8da5374265eb84ea9a7a6a2de89cb8359c0601f",
+      "mergeSha256": "2ecc291b76053408a2d1288bd8da5374265eb84ea9a7a6a2de89cb8359c0601f",
+      "match": true
+    },
+    {
+      "path": "detail/data/dci-4-600n.json",
+      "status": 200,
+      "publicSha256": "b37edf0fea1448724a26979930f24a157e08d6940c20aab260c866cf48f58e9d",
+      "mergeSha256": "b37edf0fea1448724a26979930f24a157e08d6940c20aab260c866cf48f58e9d",
+      "match": true
+    },
+    {
+      "path": "detail/data/i-tech-4x3500hd.json",
+      "status": 200,
+      "publicSha256": "3bc7a8781771b0a958417fef670bce94b8c4a2be42ce040fc483f2e4b9b2c9f6",
+      "mergeSha256": "3bc7a8781771b0a958417fef670bce94b8c4a2be42ce040fc483f2e4b9b2c9f6",
+      "match": true
+    },
+    {
+      "path": "search-index.json",
+      "status": 200,
+      "publicSha256": "0b574ad35a4ca367670b048c2ef287767ba16e081fb77372873fb684b0c4f868",
+      "mergeSha256": "0b574ad35a4ca367670b048c2ef287767ba16e081fb77372873fb684b0c4f868",
+      "match": true
+    }
+  ],
+  "matched": 26
+}
