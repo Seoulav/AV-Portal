@@ -268,5 +268,24 @@
     "footerNote": "BSS Audio BLU-DAN 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "BSS **BLU-DAN**은 Dante/AES67 네트워크 오디오와 BLU link 버스를 연결하는 브리지입니다. Primary·Secondary 포트로 네트워크 이중화를 지원합니다.",
+  "subtitle": "Soundweb London · 네트워크 오디오 브리지",
+  "keyFacts": [
+    {
+      "label": "Dante/AES67",
+      "value": "지원",
+      "unit": ""
+    },
+    {
+      "label": "BLU link 버스",
+      "value": "256",
+      "unit": "채널"
+    },
+    {
+      "label": "Dante 펌웨어",
+      "value": "Dante 4.0",
+      "unit": ""
+    }
+  ]
 }

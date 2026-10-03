@@ -401,5 +401,24 @@
     "footerNote": "JBL Control 23-1 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "JBL **Control 23-1**은 실내외 겸용 2-way 스피커입니다. 70V/100V 멀티탭 트랜스포머를 내장해 분산 음향 시스템에 사용할 수 있습니다.",
+  "subtitle": "실내외 겸용 스피커",
+  "keyFacts": [
+    {
+      "label": "감도 · 평균 100Hz–10kHz",
+      "value": "86",
+      "unit": "dB, 1W/1m"
+    },
+    {
+      "label": "커버리지 각도",
+      "value": "100°H x 100°V",
+      "unit": ""
+    },
+    {
+      "label": "주파수 범위 · -10dB",
+      "value": "70 Hz – 20 kHz",
+      "unit": ""
+    }
+  ]
 }

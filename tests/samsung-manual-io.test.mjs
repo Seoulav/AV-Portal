@@ -39,7 +39,8 @@ test('only eight exact-model Samsung products change, and specifications remain 
     const bytes=slug.startsWith('hg') || ['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)
       ? Buffer.from(JSON.stringify(prior,null,2)+'\n')
       : readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
-    assert.equal(sha(bytes),expected,`${slug}: excluded JSON bytes`);
+    // Historical Git blobs use LF; Windows checkouts may materialize CRLF.
+    assert.equal(sha(bytes.toString('utf8').replace(/\r\n/g,'\n')),expected,`${slug}: excluded JSON bytes`);
   }
 });
 

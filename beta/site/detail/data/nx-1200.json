@@ -430,5 +430,29 @@
     "footerNote": "AMX NX-1200 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "AMX **NX-1200**은 AV 및 빌딩 기술을 제어하는 네트워크 컨트롤러입니다. RS-232/422/485, IR/Serial, 디지털 I/O 인터페이스를 갖췄습니다.",
+  "subtitle": "프로그래머블 네트워크 컨트롤러",
+  "keyFacts": [
+    {
+      "label": "RS-232/422/485",
+      "value": "1",
+      "unit": "포트"
+    },
+    {
+      "label": "IR/Serial 출력",
+      "value": "2",
+      "unit": "포트"
+    },
+    {
+      "label": "디지털 I/O",
+      "value": "4",
+      "unit": "포트"
+    },
+    {
+      "label": "입력 전압",
+      "value": "12",
+      "unit": "VDC"
+    }
+  ]
 }

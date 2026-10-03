@@ -286,5 +286,24 @@
     "footerNote": "AMX VARIA-100 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "AMX **VARIA-100**은 전문가급 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+  "subtitle": "Varia Series · 터치 패널",
+  "keyFacts": [
+    {
+      "label": "화면 크기 · 대각선",
+      "value": "10.1 (대각선)",
+      "unit": "in"
+    },
+    {
+      "label": "해상도",
+      "value": "1920 × 1200",
+      "unit": ""
+    },
+    {
+      "label": "전원 방식",
+      "value": "RJ-45, PoE 802.3af (15.4 W)",
+      "unit": ""
+    }
+  ]
 }

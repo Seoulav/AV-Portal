@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -31,8 +32,8 @@ test('only the two approved JSON files can change, and their protected fields st
     for(const [index,feature] of features.entries())if(index!==3)assert.deepEqual(feature,before.features[index],`${slug}: other features`);
   }
   for(const [slug,expected] of Object.entries(evidence.otherProductSha256)){
-    const historical=beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHotelTvIo(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(product(slug),slug),slug),slug),slug),slug),slug),slug),slug);
-    const bytes=slug.startsWith('hg')||slug==='lh115qhfebgxkr'||['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug)||jblW03010Slug(slug)||bssW03011Slug(slug) ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
+    const historical=beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHotelTvIo(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(beforeHarmanW03014(product(slug),slug),slug),slug),slug),slug),slug),slug),slug),slug);
+    const bytes=slug.startsWith('hg')||slug==='lh115qhfebgxkr'||['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug)||jblW03010Slug(slug)||bssW03011Slug(slug)||harmanW03014Slug(slug) ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
     assert.equal(sha(gitJsonBytes(bytes)),expected,`${slug}: unrelated Git JSON blob bytes`);
   }
 });

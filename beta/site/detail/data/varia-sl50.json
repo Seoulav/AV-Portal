@@ -286,5 +286,24 @@
     "footerNote": "AMX VARIA-SL50 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "AMX **VARIA-SL50**은 세로형 벽면 매립 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+  "subtitle": "Varia Series · 터치 패널",
+  "keyFacts": [
+    {
+      "label": "화면 크기 · 대각선",
+      "value": "5.5 (대각선)",
+      "unit": "in"
+    },
+    {
+      "label": "해상도",
+      "value": "720 × 1280",
+      "unit": ""
+    },
+    {
+      "label": "전원 방식",
+      "value": "RJ-45, PoE 802.3af (15.4 W)",
+      "unit": ""
+    }
+  ]
 }

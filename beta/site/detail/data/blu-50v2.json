@@ -694,5 +694,24 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "BSS **BLU-50v2**는 Soundweb London 고정 구성 신호처리기입니다. 4개 아날로그 입력과 4개 아날로그 출력을 제공합니다.",
+  "subtitle": "Soundweb London · 신호처리기",
+  "keyFacts": [
+    {
+      "label": "아날로그 입력",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "아날로그 출력",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "BLU link 버스",
+      "value": "48",
+      "unit": "채널"
+    }
+  ]
 }

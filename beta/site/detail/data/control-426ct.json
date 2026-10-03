@@ -320,5 +320,24 @@
     "footerNote": "JBL Control 426C/T 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "JBL **Control 426C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+  "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커",
+  "keyFacts": [
+    {
+      "label": "감도 · 1m/1W",
+      "value": "89",
+      "unit": "dB"
+    },
+    {
+      "label": "커버리지 각도",
+      "value": "110°(원추형, CRBI 적용)",
+      "unit": ""
+    },
+    {
+      "label": "주파수 범위 · -10dB",
+      "value": "72 Hz – 19 kHz",
+      "unit": ""
+    }
+  ]
 }

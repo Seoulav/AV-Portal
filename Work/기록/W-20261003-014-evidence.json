@@ -1,0 +1,1672 @@
+{
+  "taskId": "W-20261003-014",
+  "readCommit": "0044b14bf90887a5c35f23b902cb090a4a7fcbc0",
+  "otherDetailJsonSha256": "38e29e3708a60a997aac5117fbecd42788ff3f5b4aa8edab15e396e74f951311",
+  "otherDetailRawSha256": "a3f30c27d83e6e6fed406c4e418a02b08d9c685bee0fd86c340b8c3c90461097",
+  "products": {
+    "ac18-26": {
+      "brand": "JBL",
+      "coreSha256": "27e54d58ed5be4f88f5e4a9e6784c3eb21ade90f9094a553e184ead8d60ca86c",
+      "overview": "JBL AC18/26은 업계를 선도하는 AE(Application Engineered) 시리즈의 확장 라인인 AE Compact 제품군에 속하는 8인치 2-way 스피커로, 1인치 익시트 컴프레션 드라이버와 JBL 고유의 Progressive Transition(PT) 회전형 웨이브가이드를 채택해 120° x 60°의 넓은 커버리지를 제공한다.\n\n동일 캐비닛의 AC18/95(90° x 50°)보다 넓은 커버리지 각도로 설계되어 넓은 청중 구역을 소수의 스피커로 커버해야 하는 공연장, 극장, 예배당, 라이브 클럽, 스포츠 시설 등에 적합하다. 12mm/15mm 외장등급 다층 합판 인클로저를 사용하며, FIR 튜닝을 통해 주파수 및 위상 응답, 커버리지 일관성을 최적화했다.\n\nNeutrik NL4 커넥터 2조와 스크류 터미널을 병행 지원하며, 다양한 서스펜션 포인트(M8 6개소, M6 4개소)를 통해 OmniMount, MultiMount 등 제3자 브래킷과도 호환된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "시스템 전력 정격(AES)",
+          "rowGroup": "Power",
+          "rowCondition": "AES 규격",
+          "rowVerification": "FOUND",
+          "label": "시스템 전력 · AES",
+          "value": "375",
+          "unit": "W"
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "시스템 감도(1W@1m)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1W/1m",
+          "value": "92",
+          "unit": "dB SPL"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "커버리지 패턴",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "120° x 60°",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "52 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **AC18/26**는 AE Compact 제품군의 8인치 2-way 스피커입니다. 회전형 PT 웨이브가이드로 120° x 60° 커버리지를 제공합니다.",
+      "subtitle": "AE Compact · 2-way 스피커"
+    },
+    "ac18-95": {
+      "brand": "JBL",
+      "coreSha256": "e4c572208d88fdafc066dcc46d89cce9519c7e851e0eddf5cc0a2df5eb652486",
+      "overview": "JBL AC18/95는 업계를 선도하는 AE(Application Engineered) 시리즈의 확장 라인인 AE Compact 제품군에 속하는 8인치 2-way 스피커로, 1인치 익시트 컴프레션 드라이버와 JBL 고유의 Progressive Transition(PT) 회전형 웨이브가이드를 채택해 90° x 50° 커버리지를 제공한다.\n\n동일 캐비닛의 AC18/26(120° x 60°)과 달리 좁은 커버리지 각도로 설계되어 공연장, 극장, 예배당, 라이브 클럽, 스포츠 시설 등 정밀한 커버리지 제어가 필요한 설치 환경에 적합하다. 12mm/15mm 외장등급 다층 합판 인클로저를 사용하며, FIR 튜닝을 통해 주파수 및 위상 응답, 커버리지 일관성을 최적화했다.\n\nNeutrik NL4 커넥터 2조와 스크류 터미널을 병행 지원하며, 다양한 서스펜션 포인트(M8 6개소, M6 4개소)를 통해 OmniMount, MultiMount 등 제3자 브래킷과도 호환된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 9,
+          "rowName": "시스템 감도(1W@1m)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1W/1m",
+          "value": "93",
+          "unit": "dB SPL"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "커버리지 패턴",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "90° x 50°",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "52 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **AC18/95**는 AE Compact 제품군의 8인치 2-way 스피커입니다. 회전형 PT 웨이브가이드로 90° x 50° 커버리지를 제공합니다.",
+      "subtitle": "AE Compact · 2-way 스피커"
+    },
+    "blu-100": {
+      "brand": "BSS Audio",
+      "coreSha256": "95dce1ca573a99f80d5ab9e21ee3deec54134eab5d34b66b4de802fc02163b09",
+      "overview": "BLU-100은 BSS Audio Soundweb London 제품군의 기본형 고정 구성 신호처리기로, 12개의 아날로그 입력과 8개의 아날로그 출력을 제공한다. AEC 처리 기능은 없는 대신(해당 기능은 BLU-101에서 제공), 구성 가능한 신호처리와 로직 오브젝트를 HiQnet Audio Architect에서 드래그 앤 드롭 방식으로 설계할 수 있다.\n\n표준 Cat 5e 케이블로 최대 100m 거리의 48채널 BLU link 디지털 오디오 버스를 지원하며, 광컨버터 사용 시 40km 이상까지 확장 가능하다. BLU-800, BLU-320, BLU-160, BLU-120, BLU-BOB 등 Soundweb London 전 제품군과 호환되며, 해당 48채널은 256채널 버스의 1~48번 채널로 통합된다.\n\n아날로그 입력은 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절이 가능하고 팬텀 파워를 채널별로 선택할 수 있으며, 전면 LED로 신호 유무·클립·팬텀 파워 상태를 확인할 수 있다. 12개의 제어 입력과 6개의 로직 출력으로 GPIO 및 서드파티 제어 시스템과 연동된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "아날로그 입력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "아날로그 입력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix/Combicon 착탈식 스크류 커넥터, 48V 팬텀 파워 채널별 선택",
+          "rowVerification": "FOUND",
+          "label": "아날로그 입력",
+          "value": "12",
+          "unit": "채널"
+        },
+        {
+          "axis": "아날로그 출력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "아날로그 출력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix/Combicon 착탈식 스크류 커넥터",
+          "rowVerification": "FOUND",
+          "label": "아날로그 출력",
+          "value": "8",
+          "unit": "채널"
+        },
+        {
+          "axis": "네트워크 오디오",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "BLU link 디지털 오디오 버스",
+          "rowGroup": "Network",
+          "rowCondition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "rowVerification": "FOUND",
+          "label": "BLU link 버스",
+          "value": "48",
+          "unit": "채널"
+        }
+      ],
+      "lead": "BSS **BLU-100**는 Soundweb London 고정 구성 신호처리기입니다. 12개 아날로그 입력과 8개 아날로그 출력을 제공합니다.",
+      "subtitle": "Soundweb London · 신호처리기"
+    },
+    "blu-101": {
+      "brand": "BSS Audio",
+      "coreSha256": "689e9917f479dcaa70216843288df1505f415acb5d0dc1d1210ed357fb2dea89",
+      "overview": "BLU-101은 BSS Audio Soundweb London 제품군의 고정 구성(fixed configuration) 프로세서로, 12개의 아날로그 입력과 8개의 아날로그 출력을 제공하며 최대 12채널의 독립적인 AEC(Acoustic Echo Cancellation) 알고리즘을 내장한다. 각 AEC 채널에는 자동 게인 제어(AGC)와 노이즈 캔슬레이션(NC)이 함께 제공되어, 다중 회의 공간에서 마이크 레벨을 최적으로 유지하고 프로젝터 팬이나 공조기 소음 같은 정상상태 잡음을 제거한다.\n\nHiQnet Audio Architect(구 London Architect)로 완전히 구성 가능한 개방형 아키텍처를 가지며, 표준 Cat 5e 케이블로 최대 100m 거리의 48채널 BLU link 디지털 오디오 버스를 지원한다(광컨버터 사용 시 40km 이상 확장 가능). BLU-800, BLU-320, BLU-160 등 상위 섀시와 연동 시 256채널 버스의 1~48번 채널로 통합된다.\n\n아날로그 입력은 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절이 가능하고 팬텀 파워를 채널별로 선택할 수 있다. 전면 LED로 신호 유무, 클립, 팬텀 파워 상태를 PC 없이 확인할 수 있으며, 12개의 제어 입력과 6개의 로직 출력을 통해 서드파티 제어 시스템과 GPIO 연동이 가능하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "아날로그 입력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "아날로그 입력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix/Combicon 착탈식 스크류 커넥터, 48V 팬텀 파워 채널별 선택",
+          "rowVerification": "FOUND",
+          "label": "아날로그 입력",
+          "value": "12",
+          "unit": "채널"
+        },
+        {
+          "axis": "아날로그 출력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "아날로그 출력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix/Combicon 착탈식 스크류 커넥터",
+          "rowVerification": "FOUND",
+          "label": "아날로그 출력",
+          "value": "8",
+          "unit": "채널"
+        },
+        {
+          "axis": "네트워크 오디오",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "BLU link 디지털 오디오 버스",
+          "rowGroup": "Network",
+          "rowCondition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "rowVerification": "FOUND",
+          "label": "BLU link 버스",
+          "value": "48",
+          "unit": "채널"
+        },
+        {
+          "axis": "AEC",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "AEC 처리 채널",
+          "rowGroup": "DSP",
+          "rowCondition": "AGC, 노이즈 캔슬레이션 포함",
+          "rowVerification": "FOUND",
+          "label": "AEC 처리 채널",
+          "value": "12",
+          "unit": "채널(독립 알고리즘)"
+        }
+      ],
+      "lead": "BSS **BLU-101**는 Soundweb London 고정 구성 신호처리기입니다. 12개 아날로그 입력과 8개 아날로그 출력을 제공합니다.",
+      "subtitle": "Soundweb London · 신호처리기"
+    },
+    "blu-160": {
+      "brand": "BSS Audio",
+      "coreSha256": "485b1022878daa9183c4e2448535fa0c7ba33c4a511386b7f5e61895d728fc2c",
+      "overview": "BLU-160은 BSS Audio Soundweb London 제품군의 카드 기반 구성형 섀시로, 4개의 I/O 카드 슬롯을 제공한다. 각 슬롯에는 Analog Input Card, Analog Output Card, Digital Input Card, Digital Output Card, AEC Input Card, Telephone Hybrid Card 등 6종의 카드 중 하나를 자유롭게 조합해 장착할 수 있으며(카드당 4채널), 최대 16채널까지 입출력을 구성할 수 있다.\n\n아날로그 입력 카드는 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하며, 디지털 입출력 카드는 AES/EBU 및 S/PDIF를 지원하고 다양한 클럭·싱크 옵션을 제공한다. 전면 LCD 디스플레이를 통해 장치명, 장치 유형, 펌웨어 버전, 시간, IP 주소, 서브넷 마스크 등의 정보를 PC 없이 확인할 수 있다.\n\n표준 Cat 5e 케이블로 최대 100m 거리의 256채널 BLU link 디지털 오디오 버스를 지원하며(광컨버터 사용 시 40km 이상 확장 가능), 12개의 제어 입력과 6개의 로직 출력으로 GPIO 및 서드파티 제어 시스템과 연동된다. 본 제품은 생명안전 응용을 위한 EN 54-16 인증을 받았다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "아날로그 입력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "아날로그 입력(최대)",
+          "rowGroup": "I/O",
+          "rowCondition": "Analog Input Card 4장 장착 시",
+          "rowVerification": "FOUND",
+          "label": "아날로그 입력 · 입력 카드 4장",
+          "value": "최대 16",
+          "unit": "채널"
+        },
+        {
+          "axis": "아날로그 출력",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "아날로그 출력(최대)",
+          "rowGroup": "I/O",
+          "rowCondition": "Analog Output Card 4장 장착 시",
+          "rowVerification": "FOUND",
+          "label": "아날로그 출력 · 출력 카드 4장",
+          "value": "최대 16",
+          "unit": "채널"
+        },
+        {
+          "axis": "네트워크 오디오",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "BLU link 디지털 오디오 버스",
+          "rowGroup": "Network",
+          "rowCondition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "rowVerification": "FOUND",
+          "label": "BLU link 버스",
+          "value": "256",
+          "unit": "채널"
+        },
+        {
+          "axis": "확장",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "카드 슬롯",
+          "rowGroup": "I/O",
+          "rowCondition": "슬롯당 4채널 카드 장착, 카드 종류: Analog In/Out, Digital In/Out, AEC In, Telephone Hybrid",
+          "rowVerification": "FOUND",
+          "label": "카드 슬롯",
+          "value": "4",
+          "unit": "슬롯"
+        }
+      ],
+      "lead": "BSS **BLU-160**은 I/O 카드를 조합하는 Soundweb London 신호처리기입니다. 4개 카드 슬롯으로 입출력을 구성합니다.",
+      "subtitle": "Soundweb London · 신호처리기"
+    },
+    "blu-50v2": {
+      "brand": "BSS Audio",
+      "coreSha256": "372f6cc5d774d23e5d0f6920996f55e93a3116c8edab1593dcc5fed1ad535495",
+      "overview": "BLU-50v2는 BSS Audio Soundweb London 제품군의 하프랙(half-rack) 폭 고정 구성 신호처리기로, 4개의 아날로그 입력과 4개의 아날로그 출력, 구성 가능한 신호처리·로직 처리와 BLU link를 제공한다. 제조사는 공급망 제약으로 BLU-50을 재설계해 BLU-50v2로 명명했으며, 전면 패널의 \"v2\" 표기 외에는 두 장치의 외형이 동일하다고 밝히고 있다.\n\n재설계 과정에서 BLU link 성능 향상을 위한 회로 기판 레이아웃 변경, BLU-10x 시리즈와 성능을 맞춘 ADC/DAC 업그레이드, PoE+(Type 2)·PoE++(Type 3/Type 4) 호환성을 높인 새 PoE 전원부, 허용 전압 범위를 개선한 12VDC 전원 회로, 높은 주변 온도 환경을 위한 열 관리 강화가 적용되었다. HiQnet Audio Architect 2.55.1 이상과 HiQnet London Architect 6.02 이상에서 공식 지원되며, 두 소프트웨어 모두 BLU-50에서 BLU-50v2로의 마이그레이션을 지원한다.\n\n동봉된 12VDC 전원 어댑터 외에 터미널 블록 DC 입력 또는 이더넷 포트를 통한 PoE 급전이 가능해 단일 Cat 5e 케이블로 전원·구성·제어·모니터링을 처리할 수 있다. 아날로그 입력은 채널별 6dB 단위로 최대 +48dB까지 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하며, 48채널 BLU link 디지털 오디오 버스는 Cat 5e로 장치 간 최대 100m를 지원한다. 12개의 제어 입력, 6개의 로직 출력과 RS-232 포트로 GPIO 및 서드파티 제어 시스템과 연동된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "아날로그 입력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "아날로그 입력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스, 48V 팬텀 파워 채널별 선택",
+          "rowVerification": "FOUND",
+          "label": "아날로그 입력",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "아날로그 출력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "아날로그 출력",
+          "rowGroup": "I/O",
+          "rowCondition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스",
+          "rowVerification": "FOUND",
+          "label": "아날로그 출력",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "네트워크 오디오",
+          "kind": "spec",
+          "index": 7,
+          "rowName": "BLU link 디지털 오디오 버스",
+          "rowGroup": "Network",
+          "rowCondition": "Cat 5e, 장치 간 최대 100m, 노드 최대 60개",
+          "rowVerification": "FOUND",
+          "label": "BLU link 버스",
+          "value": "48",
+          "unit": "채널"
+        }
+      ],
+      "lead": "BSS **BLU-50v2**는 Soundweb London 고정 구성 신호처리기입니다. 4개 아날로그 입력과 4개 아날로그 출력을 제공합니다.",
+      "subtitle": "Soundweb London · 신호처리기"
+    },
+    "blu-aec-in": {
+      "brand": "BSS Audio",
+      "coreSha256": "96d431a6185b9fd2c5052354faf2c04e3e7ed65a4eaded7f076ab7192da35edc",
+      "overview": "AEC Card(AEC 입력 카드)는 BSS Soundweb London 제품군의 카드형 I/O 확장 모듈로, BLU-800/805/806, BLU-320/325/326, BLU-160, BLU-120 등 4개의 카드 슬롯을 가진 섀시에 장착되어 회의 공간의 음향반향제거(AEC) 기능을 제공한다. 하나의 카드는 4개의 독립적인 AEC 채널을 제공하며, 채널마다 별도의 AEC 레퍼런스를 지정할 수 있어 단일 섀시로 여러 회의 공간을 동시에 처리할 수 있다.\n\n일반 Analog Input Card와 동일하게 채널별로 6dB 단위 최대 +48dB 게인 조절과 팬텀 파워 선택을 지원하며, 자동 게인 제어(AGC)로 마이크 입력 레벨을 최적화하고 노이즈 캔슬레이션(NC)으로 프로젝터 팬이나 공조기 소음 같은 정상상태 잡음을 제거한다. 비선형 처리(NLP, Non-Linear Processing)로 과소/과대 제거로 인한 잔향 아티팩트를 최소화하며, 로컬 음향 보강을 위한 직접 마이크 피드(다이렉트 마이크 신호) 기능도 제공한다.\n\n두 개의 Combicon 커넥터를 통해 4채널의 Mic/Line 입력을 받으며(커넥터 1: 채널 1-2, 커넥터 2: 채널 3-4), 카드 자체는 별도 네트워크 포트를 갖지 않고 섀시의 슬롯을 통해 시스템에 통합된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "AEC 입력",
+          "rowGroup": "I/O",
+          "rowCondition": "카드 1장 기준",
+          "rowVerification": "FOUND",
+          "label": "AEC 입력 · 카드 1장",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "커넥터",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "커넥터",
+          "rowGroup": "I/O",
+          "rowCondition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "rowVerification": "FOUND",
+          "label": "커넥터 형식",
+          "value": "Mic/Line Combicon x 2",
+          "unit": ""
+        },
+        {
+          "axis": "AEC 처리",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "AEC 테일 길이",
+          "rowGroup": "DSP",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "AEC 테일 길이",
+          "value": "200",
+          "unit": "ms"
+        }
+      ],
+      "lead": "BSS **BLU AEC-IN**는 Soundweb London 섀시에 장착하는 AEC 입력 카드입니다. 카드 1장에 4개의 입력 채널과 2개의 Combicon 커넥터가 있습니다.",
+      "subtitle": "Soundweb London · 입출력 카드"
+    },
+    "blu-dan": {
+      "brand": "BSS Audio",
+      "coreSha256": "c4d9160d394ab35ee3960e80442afd0a67b3b521432cf47e7ac09d203788725a",
+      "overview": "BLU-DA(구 BLU-DAN)는 BSS Soundweb London 제품군에서 Dante/AES67 네트워크 오디오를 BLU link 디지털 오디오 버스에 연결하는 하프랙 크기의 브리지 장치다. 하나 이상의 BLU link 장비에 Dante/AES67 오디오를 '추가'하는 역할을 하며, 최대 64채널을 동시에 송수신(64x64)할 수 있다. Primary/Secondary 이중 포트로 네트워크 이중화(장애 대응)를 지원하며, 별도의 이더넷 포트를 통해 제어가 이루어진다. Dante 4.0 펌웨어를 지원해 Dante Domain Manager와 연동할 수 있다.\n\nBLU link 측에서는 표준 Cat 5e 케이블로 최대 100m 거리의 256채널 디지털 오디오 버스를 지원하며, 광컨버터 사용 시 40km 이상까지 확장 가능하다. HiQnet Audio Architect에서 드래그 앤 드롭 방식으로 구성하며, 양방향 로케이트 기능으로 시스템 내 장비를 손쉽게 식별할 수 있다.\n\n본 제품은 AES67 호환이며, 생명안전 응용을 위한 EN 54-16 인증을 받았다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "네트워크 연결",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "Dante/AES67",
+          "rowGroup": "Network",
+          "rowCondition": "최대 64x64채널 동시 송수신, Primary/Secondary 이중화 포트",
+          "rowVerification": "FOUND",
+          "label": "Dante/AES67",
+          "value": "지원",
+          "unit": ""
+        },
+        {
+          "axis": "네트워크 오디오",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "BLU link 디지털 오디오 버스",
+          "rowGroup": "Network",
+          "rowCondition": "Cat 5e, 최대 100m",
+          "rowVerification": "FOUND",
+          "label": "BLU link 버스",
+          "value": "256",
+          "unit": "채널"
+        },
+        {
+          "axis": "프로토콜",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "Dante 펌웨어",
+          "rowGroup": "Network",
+          "rowCondition": "Dante Domain Manager 지원",
+          "rowVerification": "FOUND",
+          "label": "Dante 펌웨어",
+          "value": "Dante 4.0",
+          "unit": ""
+        }
+      ],
+      "lead": "BSS **BLU-DAN**은 Dante/AES67 네트워크 오디오와 BLU link 버스를 연결하는 브리지입니다. Primary·Secondary 포트로 네트워크 이중화를 지원합니다.",
+      "subtitle": "Soundweb London · 네트워크 오디오 브리지"
+    },
+    "blucard-in": {
+      "brand": "BSS Audio",
+      "coreSha256": "1ece4950e1cf70d1590e7220e085f24505dda966bed9dd0b4db2bfdd0e0ca543",
+      "overview": "Analog Input Card는 BSS Soundweb London 제품군의 카드형 I/O 확장 모듈로, BLU-800/805/806, BLU-320/325/326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16 등 4개의 카드 슬롯을 가진 섀시에 장착되어 마이크/라인 레벨 아날로그 신호를 받아들인다. 카드 1장당 4개의 독립 입력 채널을 제공하며, 채널별로 6dB 단위 최대 +48dB 소프트웨어 게인 조절과 팬텀 파워 선택이 가능하다.\n\n2개의 Combicon 커넥터를 통해 4채널을 입력받으며(커넥터 1: 채널 1-2, 커넥터 2: 채널 3-4), 각 커넥터는 밸런스/언밸런스 오디오 신호를 모두 수용한다. 카드 리비전은 Rev. A와 Rev. B가 존재하며, A/D 레이턴시가 서로 다르다(Rev. A: 0.85ms@48k, Rev. B: 0.25ms@48k). Rev. A는 현재 단종되어 더 이상 출하되지 않는다.\n\n이 카드는 독립형 제품이 아니라 BLU-160, BLU-800 등 섀시 본체에 장착해야 동작하는 액세서리 카드이다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "아날로그 입력",
+          "rowGroup": "I/O",
+          "rowCondition": "카드 1장 기준",
+          "rowVerification": "FOUND",
+          "label": "아날로그 입력 · 카드 1장",
+          "value": "4",
+          "unit": "채널(Mic/Line)"
+        },
+        {
+          "axis": "커넥터",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "커넥터",
+          "rowGroup": "I/O",
+          "rowCondition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "rowVerification": "FOUND",
+          "label": "커넥터 형식",
+          "value": "Mic/Line Combicon x 2",
+          "unit": ""
+        },
+        {
+          "axis": "입력 기능",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "팬텀 파워",
+          "rowGroup": "I/O",
+          "rowCondition": "채널별 선택",
+          "rowVerification": "FOUND",
+          "label": "팬텀 파워",
+          "value": "48V (nominal)",
+          "unit": ""
+        }
+      ],
+      "lead": "BSS **BLUCARD-IN**는 Soundweb London 섀시에 장착하는 아날로그 입력 카드입니다. 카드 1장에 4개의 입력 채널과 2개의 Combicon 커넥터가 있습니다.",
+      "subtitle": "Soundweb London · 입출력 카드"
+    },
+    "blucard-out": {
+      "brand": "BSS Audio",
+      "coreSha256": "9c4b42d41a2e64c37dcddd9199546175f93e731ea5d2c4aea4ac1dd7a5de1693",
+      "overview": "Analog Output Card는 BSS Soundweb London 제품군의 카드형 I/O 확장 모듈로, BLU-800/805/806, BLU-320/325/326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16 등 4개의 카드 슬롯을 가진 섀시에 장착되어 라인 레벨 아날로그 신호를 출력한다. 카드 1장당 4개의 독립 출력 채널을 제공한다.\n\n2개의 Combicon 커넥터를 통해 4채널을 출력하며(커넥터 1: 채널 1-2, 커넥터 2: 채널 3-4), 각 커넥터는 밸런스/언밸런스 오디오 신호를 모두 지원한다. 최대 출력 레벨은 +19dBu이며, 출력 임피던스는 밸런스 40Ω / 언밸런스 20Ω이다.\n\n이 카드는 독립형 제품이 아니라 BLU-160, BLU-800 등 섀시 본체에 장착해야 동작하는 액세서리 카드이다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "아날로그 출력",
+          "rowGroup": "I/O",
+          "rowCondition": "카드 1장 기준",
+          "rowVerification": "FOUND",
+          "label": "아날로그 출력 · 카드 1장",
+          "value": "4",
+          "unit": "채널(라인)"
+        },
+        {
+          "axis": "커넥터",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "커넥터",
+          "rowGroup": "I/O",
+          "rowCondition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "rowVerification": "FOUND",
+          "label": "커넥터 형식",
+          "value": "Line Combicon x 2",
+          "unit": ""
+        },
+        {
+          "axis": "출력 성능",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "최대 출력 레벨",
+          "rowGroup": "I/O",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "최대 출력 레벨",
+          "value": "+19",
+          "unit": "dBu"
+        }
+      ],
+      "lead": "BSS **BLUCARD-OUT**는 Soundweb London 섀시에 장착하는 아날로그 출력 카드입니다. 카드 1장에 4개의 출력 채널과 2개의 Combicon 커넥터가 있습니다.",
+      "subtitle": "Soundweb London · 입출력 카드"
+    },
+    "control-23-1": {
+      "brand": "JBL",
+      "coreSha256": "a260172974d6f8db83a1a01d1c764441ab5c2cc612692e947b563be6bf661015",
+      "overview": "JBL Control 23-1은 3인치 우퍼와 0.5인치 PEI 트위터를 탑재한 초소형 2-way 실내외 겸용 스피커로, 매장, 레스토랑, 헬스클럽, 테마파크, 교육시설, 호스피탈리티 등 배경/전경 음악 및 방송용으로 설계되었다.\n\n100° x 100°의 넓은 커버리지와 우수한 지향 특성을 제공하며, 내후성 인클로저와 트랜스듀서를 채택해 실외 설치도 가능하다. 8Ω 다이렉트 구동 시 최대 100W 프로그램 전력을 처리하며, 70V/100V 멀티탭 트랜스포머(15W)를 내장해 분산 음향 시스템에도 사용할 수 있다.\n\nInvisiBall 벽면 마운팅 시스템이 기본 제공되어 별도의 브래킷 없이도 각도 조절이 가능하며, 선택 사양으로 U-브래킷과 WeatherMax 그릴을 장착하면 IP-55 등급까지 방수 성능을 높일 수 있다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "감도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "평균 100 Hz–10 kHz",
+          "rowVerification": "FOUND",
+          "label": "감도 · 평균 100Hz–10kHz",
+          "value": "86",
+          "unit": "dB, 1W/1m"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "100°H x 100°V",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "70 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 23-1**은 실내외 겸용 2-way 스피커입니다. 70V/100V 멀티탭 트랜스포머를 내장해 분산 음향 시스템에 사용할 수 있습니다.",
+      "subtitle": "실내외 겸용 스피커"
+    },
+    "control-25-1": {
+      "brand": "JBL",
+      "coreSha256": "36470469a4978c44f265c87a295679db1243ae11d5cafc16a5be188fcb19484f",
+      "overview": "JBL Control 25-1은 5.25인치 우퍼와 0.75인치 PEI 트위터를 탑재한 2-way 실내외 겸용 스피커로, 매장, 레스토랑, 헬스클럽, 테마파크, 교육시설, 호스피탈리티 등 고출력 배경/전경 음악 및 방송용으로 설계되었다.\n\n100° x 100°의 넓은 커버리지를 제공하며, 내후성 인클로저와 트랜스듀서를 채택해 실외 설치도 가능하다. 8Ω 다이렉트 구동 시 최대 200W 프로그램 전력을 처리하며, 70V/100V 멀티탭 트랜스포머(30W)를 내장해 분산 음향 시스템에도 사용할 수 있다.\n\nInvisiBall 벽면 마운팅 시스템이 기본 제공되며, 선택 사양으로 U-브래킷과 WeatherMax 그릴을 장착하면 IP-55 등급까지 방수 성능을 높일 수 있다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "감도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "평균 100 Hz–10 kHz",
+          "rowVerification": "FOUND",
+          "label": "감도 · 평균 100Hz–10kHz",
+          "value": "90",
+          "unit": "dB, 1W/1m"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "100°H x 100°V",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "60 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 25-1**은 실내외 겸용 2-way 스피커입니다. 70V/100V 멀티탭 트랜스포머를 내장해 분산 음향 시스템에 사용할 수 있습니다.",
+      "subtitle": "실내외 겸용 스피커"
+    },
+    "control-28-1": {
+      "brand": "JBL",
+      "coreSha256": "c58c3244272537de8eb0c0b60789709f6b0cca559ea42718e38dfec4343dda47",
+      "overview": "JBL Control 28-1은 8인치 우퍼와 1인치 PEI 트위터를 탑재한 2-way 실내외 겸용 스피커로, 매장, 레스토랑, 헬스클럽, 테마파크, 교육시설, 호스피탈리티 등 고출력 배경/전경 음악 및 방송용으로 설계되었다.\n\n100° x 100°의 넓은 커버리지를 제공하며, 내후성 인클로저와 트랜스듀서를 채택해 실외 설치도 가능하다. 8Ω 다이렉트 구동 시 최대 240W 프로그램 전력을 처리하며, 70V/100V 멀티탭 트랜스포머(60W)를 내장해 분산 음향 시스템에도 사용할 수 있다.\n\nInvisiBall 벽면 마운팅 시스템이 기본 제공되며, 선택 사양으로 U-브래킷과 WeatherMax 그릴을 장착하면 IP-55 등급까지 방수 성능을 높일 수 있다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "감도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "평균 100 Hz–10 kHz",
+          "rowVerification": "FOUND",
+          "label": "감도 · 평균 100Hz–10kHz",
+          "value": "91",
+          "unit": "dB, 1W/1m"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "100°H x 100°V",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "45 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 28-1**은 실내외 겸용 2-way 스피커입니다. 70V/100V 멀티탭 트랜스포머를 내장해 분산 음향 시스템에 사용할 수 있습니다.",
+      "subtitle": "실내외 겸용 스피커"
+    },
+    "control-412ct": {
+      "brand": "JBL",
+      "coreSha256": "de12eea7bbff02d6f943d77da4bc86600531bde43c78298b6754614d050d8592",
+      "overview": "JBL Control 412C/T는 Control 400 Standard Coverage 시리즈에 속하는 3인치 풀레인지 천장매입형 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다.\n\n상단/측면 케이블 인입이 모두 가능한 터미널 커버와 다양한 천장 두께에 대응하는 캡티브 도그이어 설계를 채택해 설치 안전성과 효율성을 높였다. 풀페이스 마그네틱 그릴은 도장이 가능해 인테리어에 맞게 커스터마이즈할 수 있으며, 블랙 원형·화이트 사각형 그릴을 옵션으로 선택할 수 있다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "60 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "84",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "160°(원추형)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "68 Hz – 17 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 412C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Standard Coverage · 천장매입 스피커"
+    },
+    "control-414ct": {
+      "brand": "JBL",
+      "coreSha256": "3cbacd2aedf0347b3156a05b9af7d34872a82b4b959a6908fb77b7f2c6ec5301",
+      "overview": "JBL Control 414C/T는 Control 400 Standard Coverage 시리즈에 속하는 4인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다.\n\n상단/측면 케이블 인입이 모두 가능한 터미널 커버와 다양한 천장 두께에 대응하는 캡티브 도그이어 설계를 채택해 설치 안전성과 효율성을 높였다. 풀페이스 마그네틱 그릴은 도장이 가능해 인테리어에 맞게 커스터마이즈할 수 있으며, 블랙 원형·화이트 사각형 그릴을 옵션으로 선택할 수 있다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "90 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "86",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "130°(원추형)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "65 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 414C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Standard Coverage · 천장매입 스피커"
+    },
+    "control-416ct": {
+      "brand": "JBL",
+      "coreSha256": "3e679a3104254183516884c62f5ae33005e8dbb73ca806e86330809e16e70b33",
+      "overview": "JBL Control 416C/T는 Control 400 Standard Coverage 시리즈에 속하는 6.5인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다.\n\n상단/측면 케이블 인입이 모두 가능한 터미널 커버와 다양한 천장 두께에 대응하는 캡티브 도그이어 설계를 채택해 설치 안전성과 효율성을 높였다. 풀페이스 마그네틱 그릴은 도장이 가능해 인테리어에 맞게 커스터마이즈할 수 있으며, 블랙 원형·화이트 사각형 그릴을 옵션으로 선택할 수 있다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "150 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "89",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "120°(원추형)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "61 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 416C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Standard Coverage · 천장매입 스피커"
+    },
+    "control-418ct": {
+      "brand": "JBL",
+      "coreSha256": "181d50748db6c4db69a4ed6e33b7538a3a6c61ff129b4519ba74439864b54b93",
+      "overview": "JBL Control 418C/T는 Control 400 Standard Coverage 시리즈에 속하는 8인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다.\n\n상단/측면 케이블 인입이 모두 가능한 터미널 커버와 다양한 천장 두께에 대응하는 캡티브 도그이어 설계를 채택해 설치 안전성과 효율성을 높였다. 풀페이스 마그네틱 그릴은 도장이 가능해 인테리어에 맞게 커스터마이즈할 수 있으며, 블랙 원형·화이트 사각형 그릴을 옵션으로 선택할 수 있다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "270 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "92",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "100°(원추형)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "57 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 418C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Standard Coverage · 천장매입 스피커"
+    },
+    "control-419cst": {
+      "brand": "JBL",
+      "coreSha256": "374c23f8e224e38e1e7070c32bd65165e9bd9fb42e50a21980fe242f26624a93",
+      "overview": "JBL Control 419CS/T는 8인치 우퍼와 일체형 인클로저를 갖춘 천장매입형 서브우퍼로, 대부분의 천장 플레넘 공간에 설치할 수 있다. Control 400 시리즈 풀레인지 모델과 결합해 저역 출력을 크게 확장하는 용도로 설계되었다.\n\n두 개의 대형 테이퍼드 포트를 통해 따뜻하고 부드러운 저역 응답을 구현하며, 풀레인지 스피커와의 간편한 연동을 위해 패시브 로우패스 필터를 내장했다. 재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 새로운 도그이어 설계는 다양한 천장 두께에 대응한다.\n\n70V/100V 서브우퍼 대역 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원해 분산 음향 및 로우 임피던스 시스템 어디에도 적용 가능하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "320 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "90",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "180°(원추형)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "47 Hz – 320 Hz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 419CS/T**은 Control 400 제품군의 천장매입형 서브우퍼입니다. 70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Enhanced Coverage · 천장매입 서브우퍼"
+    },
+    "control-424ct": {
+      "brand": "JBL",
+      "coreSha256": "1d89eccf792a6fad4a0b75e671274d74dce83693e48cc71de9df74ff315f0e84",
+      "overview": "JBL Control 424C/T는 4인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다. 내장된 Coplanar RBI(CRBI) 기술이 130°의 일관되고 풍부한 사운드를 청취 영역 전반에 제공한다.\n\nCRBI 기술은 온-액시스 핫스팟과 오프-액시스 콜드스팟을 줄여 사용자가 공간을 이동해도 일관된 청취 경험을 제공하며, 이를 통해 더 적은 스피커와 앰프 채널로도 넓은 공간을 커버할 수 있어 프로젝트 비용을 절감한다.\n\n재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 다양한 천장 두께에 대응하는 새로운 도그이어 설계를 채택했다. 70V/100V 멀티탭 트랜스포머와 16Ω 다이렉트 입력을 지원한다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "120 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "85",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "130°(원추형, CRBI 적용)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "75 Hz – 18 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 424C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커"
+    },
+    "control-424lp": {
+      "brand": "JBL",
+      "coreSha256": "87e90291fd89288bae1141fd98132bbf4e713a08c153d2cb252de1467d6c001f",
+      "overview": "JBL Control 424LP는 4인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 천장 플레넘 공간이 제한된 환경에 적합한 저심도(100mm 미만) 인클로저를 채택했다. 내장된 Coplanar RBI(CRBI) 기술이 Control 424C/T와 유사한 130°의 일관되고 풍부한 사운드를 제공한다.\n\nCRBI 기술은 온-액시스 핫스팟과 오프-액시스 콜드스팟을 줄여 사용자가 공간을 이동해도 일관된 청취 경험을 제공하며, 이를 통해 더 적은 스피커와 앰프 채널로도 넓은 공간을 커버할 수 있어 프로젝트 비용을 절감한다.\n\n재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 다양한 천장 두께에 대응하는 새로운 도그이어 설계를 채택했다. 70V/100V 멀티탭 트랜스포머와 16Ω 다이렉트 입력을 지원한다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "120 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "85",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "130°(원추형, CRBI 적용)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "75 Hz – 18 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 424LP**은 Control 400 제품군의 저심도 천장매입형입니다. 천장 플레넘 공간이 제한된 설치 환경에 맞춘 저심도 인클로저를 채택했습니다.",
+      "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커"
+    },
+    "control-426ct": {
+      "brand": "JBL",
+      "coreSha256": "40588dde94c07f7accdf4b0f2fd848f1325139344c4f4fdccd6baf1e723f20fa",
+      "overview": "JBL Control 426C/T는 6.5인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 대부분의 천장 플레넘 공간에 설치할 수 있는 일체형 인클로저를 갖췄다. 내장된 Coplanar RBI(CRBI) 기술이 110°의 일관되고 풍부한 사운드를 청취 영역 전반에 제공한다.\n\nCRBI 기술은 온-액시스 핫스팟과 오프-액시스 콜드스팟을 줄여 사용자가 공간을 이동해도 일관된 청취 경험을 제공하며, 이를 통해 더 적은 스피커와 앰프 채널로도 넓은 공간을 커버할 수 있어 프로젝트 비용을 절감한다.\n\n재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 다양한 천장 두께에 대응하는 새로운 도그이어 설계를 채택했다. 70V/100V 멀티탭 트랜스포머와 12Ω 다이렉트 입력을 지원한다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "89",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "110°(원추형, CRBI 적용)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "72 Hz – 19 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 426C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커"
+    },
+    "control-426lp": {
+      "brand": "JBL",
+      "coreSha256": "55be78922f89c9f057e6efc4509b81b33f68731928208e3b8dd52fbbb9a9a5dd",
+      "overview": "JBL Control 426LP는 6.5인치 우퍼 기반 2-way 동축형 천장매입 스피커로, 천장 플레넘 공간이 제한된 환경에 적합한 저심도(100mm 미만) 인클로저를 채택했다. 내장된 Coplanar RBI(CRBI) 기술이 Control 426C/T와 유사한 110°의 일관되고 풍부한 사운드를 제공한다.\n\nCRBI 기술은 온-액시스 핫스팟과 오프-액시스 콜드스팟을 줄여 사용자가 공간을 이동해도 일관된 청취 경험을 제공하며, 이를 통해 더 적은 스피커와 앰프 채널로도 넓은 공간을 커버할 수 있어 프로젝트 비용을 절감한다.\n\n재설계된 터미널 커버는 상단/측면 케이블 인입을 지원하고 캡티브 핸드스크류로 공구 없이 고정할 수 있으며, 다양한 천장 두께에 대응하는 새로운 도그이어 설계를 채택했다. 70V/100V 멀티탭 트랜스포머와 12Ω 다이렉트 입력을 지원한다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "220 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "89",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "110°(원추형, CRBI 적용)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "95 Hz – 19 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 426LP**은 Control 400 제품군의 저심도 천장매입형입니다. 천장 플레넘 공간이 제한된 설치 환경에 맞춘 저심도 인클로저를 채택했습니다.",
+      "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커"
+    },
+    "control-440cst": {
+      "brand": "JBL",
+      "coreSha256": "f57beaebb3b413f8db1cdb9418d66ef55930cfd055e4a18bfb593bef9ebf8fb4",
+      "overview": "JBL Control 440CS/T는 Control 400 시리즈의 플래그십 라인인 Premium Coverage Series에 속하는 8인치 천장매입형 서브우퍼로, 패시브 크로스오버와 강화된 내구성 인클로저를 갖춰 고출력·저왜율 특성을 구현한다.\n\n대형 테이퍼드 듀얼 포트로 따뜻하고 부드러운 저역 응답을 제공하며, 내장 패시브 크로스오버 네트워크를 통해 서브우퍼-새틀라이트 시스템의 일부로 손쉽게 구성할 수 있다. Control 400 시리즈 공통의 상단/측면 케이블 인입 터미널 커버와 캡티브 도그이어 설계를 채택했다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "300 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "천장 코너 근접 설치(π/2 로딩)",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W · 천장 코너 근접 설치(π/2 로딩)",
+          "value": "95",
+          "unit": "dB"
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "32 Hz – 300 Hz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 440CS/T**은 Control 400 제품군의 천장매입형 서브우퍼입니다. 70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Premium Coverage · 천장매입 서브우퍼"
+    },
+    "control-447ct": {
+      "brand": "JBL",
+      "coreSha256": "96f8adc4a60cb6c568988d6a010a99b641f5516211d31cae25209b58145b4fb2",
+      "overview": "JBL Control 447C/T는 Control 400 시리즈의 플래그십 라인인 Premium Coverage Series에 속하는 6.5인치 우퍼 기반 2-way 동축형 천장매입 스피커로, JBL 고유의 원추형 Radiation Boundary Integrator(RBI) 기술을 적용해 넓은 청취 영역에서도 매우 균일하고 부드러운 음색과 일관된 커버리지를 구현한다.\n\nControl 400 시리즈 공통의 상단/측면 케이블 인입 터미널 커버와 다양한 천장 두께에 대응하는 캡티브 도그이어 설계를 채택했다. 풀페이스 마그네틱 그릴은 도장이 가능하며 블랙/사각형 그릴을 옵션으로 선택할 수 있다.\n\n70V/100V 멀티탭 트랜스포머와 8Ω 다이렉트 입력을 모두 지원하며, IP33 등급으로 일반 실내 환경에 적합하다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "정격 입력",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "연속 프로그램 전력(2시간)",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "연속 프로그램 전력 · 2시간",
+          "value": "224 W",
+          "unit": ""
+        },
+        {
+          "axis": "감도",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "감도(1m/1W)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "감도 · 1m/1W",
+          "value": "91",
+          "unit": "dB"
+        },
+        {
+          "axis": "지향각",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "커버리지 각도",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "커버리지 각도",
+          "value": "120°(원추형, RBI 적용)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 범위",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 범위(-10dB)",
+          "rowGroup": "Acoustic",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "주파수 범위 · -10dB",
+          "value": "55 Hz – 20 kHz",
+          "unit": ""
+        }
+      ],
+      "lead": "JBL **Control 447C/T**은 Control 400 제품군의 천장매입형 스피커입니다. 70V/100V 멀티탭 트랜스포머와 다이렉트 입력을 지원합니다.",
+      "subtitle": "Control 400 Premium Coverage · 천장매입 스피커"
+    },
+    "ec-4bv": {
+      "brand": "BSS Audio",
+      "coreSha256": "92f5d04d8de0c9efd3a5b9f406f7660abd3eb2e8cb54285845b6563da5267205",
+      "overview": "EC-4BV는 BSS Audio의 Soundweb Contrio 시리즈에 속하는 이더넷 벽면 컨트롤러로, Soundweb London 및 Crown DCi 앰프 등 HARMAN HiQnet 기반 장비를 제어·모니터링하는 데 사용된다. 1개의 푸시/로터리 인코더, 인코더 링, 4개의 버튼, 1개의 LCD 화면으로 구성되며, 버튼과 인코더 링, LCD는 8가지 색상으로 멀티컬러 백라이트 표시가 가능하다.\n\n단일 이더넷 포트를 통해 PoE(Power over Ethernet)로 전원 공급, 제어, 모니터링, 구성이 모두 이루어지며, HiQnet Audio Architect 소프트웨어에서 드래그 앤 드롭 방식으로 간단히 구성할 수 있다. 미국 Decora 1구(단일 갱) 또는 유럽형 단일 갱 벽스위치 박스에 설치 가능하며, 블랙 또는 화이트 색상으로 제공된다.\n\n무입력 상태가 일정 시간 지속되면 모든 LED를 끄는 슬립(Sleep) 기능, 4자리 PIN을 통한 로컬 잠금/해제 및 원격 잠금 기능을 지원하며, 1존/4존/하이브리드 모드 등 다중 운용 모드를 제공해 다양한 회의실·공용 공간의 존 볼륨/뮤트 제어에 활용된다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "제어 수단",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "버튼",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "버튼",
+          "value": "4",
+          "unit": "개(멀티컬러)"
+        },
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "LCD 해상도",
+          "rowGroup": "Display",
+          "rowCondition": "멀티컬러, 사용자 지정 텍스트/그래픽 표시 가능",
+          "rowVerification": "FOUND",
+          "label": "LCD 해상도",
+          "value": "64 x 128",
+          "unit": "픽셀"
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "전원 방식",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "전원 방식",
+          "value": "PoE(Power over Ethernet)",
+          "unit": ""
+        }
+      ],
+      "lead": "BSS **EC-4BV**는 Soundweb Contrio 시리즈의 이더넷 벽면 컨트롤러입니다. 버튼과 로터리 인코더로 HiQnet 장비를 제어·모니터링합니다.",
+      "subtitle": "Soundweb Contrio · 벽면 컨트롤러"
+    },
+    "nx-1200": {
+      "brand": "AMX",
+      "coreSha256": "a397c08ac252f4ca50e14f1ac0b471d65b7ed84790c9b8635e0a88f83e7a06a9",
+      "overview": "NX-1200은 다양한 아날로그·디지털 포맷을 사용해 AV 및 빌딩 기술을 제어하도록 설계된 프로그래머블 네트워크 어플라이언스로, 소규모 교실·허들 스페이스·소회의실 등 단일 공간이나 유선 장치 수가 적은 멀티존 시스템에 적합하다.\n\n제조사 공식 데이터시트에 따르면 1600 MIPS 프로세서, 512MB 온보드 RAM, 1MB 비휘발성 메모리, 4GB SDHC 플래시 메모리를 탑재했으며, 1RU x 1/3 랙 공간을 차지한다. AxLink 인터페이스 1개, 10/100 LAN 인터페이스 1개, 디지털 I/O 포트 4개, RS-232/422/485 포트 1개, RS-232 전용 포트 1개, IR/Serial 출력 포트 2개, IR 수신 포트 1개를 갖췄다.\n\n크기는 1 11/16\" x 5 13/16\" x 5 1/8\"(42.16 x 147.32 x 130.81mm), 무게는 1.6 lb(0.726kg)이다. 전원은 12VDC(9-18VDC 범위), 소비전력 3W이며, 동작 온도는 0~50°C다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 2,
+          "rowName": "RS-232/422/485",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "RS-232/422/485",
+          "value": "1",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 4,
+          "rowName": "IR/Serial(1-way) 송신",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "IR/Serial 출력",
+          "value": "2",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 6,
+          "rowName": "디지털 I/O(접점 폐쇄, 전압 감지 가능)",
+          "rowGroup": "Control",
+          "rowCondition": "6핀 터미널 1개에 4채널 통합",
+          "rowVerification": "FOUND",
+          "label": "디지털 I/O",
+          "value": "4",
+          "unit": "포트"
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "입력 전압",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "입력 전압",
+          "value": "12",
+          "unit": "VDC"
+        }
+      ],
+      "lead": "AMX **NX-1200**은 AV 및 빌딩 기술을 제어하는 네트워크 컨트롤러입니다. RS-232/422/485, IR/Serial, 디지털 I/O 인터페이스를 갖췄습니다.",
+      "subtitle": "프로그래머블 네트워크 컨트롤러"
+    },
+    "nx-2200": {
+      "brand": "AMX",
+      "coreSha256": "329a97ba4d4e9dffdf99d119059e8fdf08dc27d19bafe9da471895cbc6395aa0",
+      "overview": "NX-2200은 다양한 아날로그·디지털 포맷을 사용해 AV 및 빌딩 기술을 제어하도록 설계된 프로그래머블 네트워크 어플라이언스로, NX-1200보다 많은 포트와 보안 기능을 제공해 중형 회의실·강의실·홈시어터·호텔 객실·빌딩 환경 시스템 제어에 적합하다.\n\n제조사 공식 데이터시트에 따르면 1600 MIPS 프로세서, 512MB 온보드 RAM, 1MB 비휘발성 메모리, 8GB SDHC 플래시 메모리를 탑재했으며, 1RU 랙 공간을 차지한다. AxLink 인터페이스 1개, 10/100 LAN 인터페이스 1개, 10/100 ICSLan 인터페이스 1개(Dual NIC), 디지털 I/O 포트 4개, RS-232/422/485 포트 1개, RS-232 전용 포트 3개, IR/Serial 출력 포트 4개, 릴레이 포트 4개를 갖췄다.\n\n크기는 1 4/5\" x 17\" x 9 1/8\"(45.15 x 431.80 x 231.64mm), 무게는 6.08 lb(2.758kg)이다. 전원은 12VDC(9-18VDC 범위), 소비전력 4.2W이며, 동작 온도는 0~50°C다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 3,
+          "rowName": "RS-232/422/485",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "RS-232/422/485",
+          "value": "1",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 5,
+          "rowName": "IR/Serial(1-way) 송신",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "IR/Serial 출력",
+          "value": "4",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 6,
+          "rowName": "디지털 I/O(접점 폐쇄, 전압 감지 가능)",
+          "rowGroup": "Control",
+          "rowCondition": "6핀 터미널 1개에 4채널 통합",
+          "rowVerification": "FOUND",
+          "label": "디지털 I/O",
+          "value": "4",
+          "unit": "포트"
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "입력 전압",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "입력 전압",
+          "value": "12",
+          "unit": "VDC"
+        }
+      ],
+      "lead": "AMX **NX-2200**은 AV 및 빌딩 기술을 제어하는 네트워크 컨트롤러입니다. RS-232/422/485, IR/Serial, 디지털 I/O 인터페이스를 갖췄습니다.",
+      "subtitle": "프로그래머블 네트워크 컨트롤러"
+    },
+    "nx-3200": {
+      "brand": "AMX",
+      "coreSha256": "5792afd01f96be52ae75c20a9a0d37b463d9ae6fcb655d8992cf65bfb59f364a",
+      "overview": "NX-3200은 NX-2200 대비 포트 수를 확장(Serial·Relay·IR·Digital I/O 각 8포트, NX-2200의 4포트 대비 2배)한 모델로, 대형 강의실·이사회실·미디어룸 및 통합 홈 등 더 많은 장치를 제어해야 하는 환경에 적합하다. 오디오/비디오 컨퍼런싱, 프로젝터, DVD/Blu-ray 플레이어, 조명, 온도조절기 등 다양한 전자 장비를 제어한다.\n\n제조사 공식 데이터시트에 따르면 1600 MIPS 프로세서, 512MB 온보드 RAM, 1MB 비휘발성 메모리, 8GB SDHC 플래시 메모리를 탑재했으며, 1RU 랙 공간을 차지한다. AxLink 인터페이스 2개, 10/100 LAN 인터페이스 1개, 10/100 ICSLan 인터페이스 1개(Dual NIC), 디지털 I/O 포트 8개, RS-232/422/485 포트 2개, RS-232 전용 포트 6개, IR/Serial 출력 포트 8개, 릴레이 포트 8개를 갖췄다.\n\n크기는 NX-2200과 동일한 1 4/5\" x 17\" x 9 1/8\"(45.15 x 431.80 x 231.64mm), 무게는 6.08 lb(2.758kg)이다. 전원은 12VDC(9-18VDC 범위), 소비전력 6.6W이며, 동작 온도는 0~50°C다.",
+      "series": null,
+      "facts": [
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 3,
+          "rowName": "RS-232/422/485",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "RS-232/422/485",
+          "value": "2",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 5,
+          "rowName": "IR/Serial(1-way) 송신",
+          "rowGroup": "Control",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "IR/Serial 출력",
+          "value": "8",
+          "unit": "포트"
+        },
+        {
+          "axis": "제어 포트",
+          "kind": "io",
+          "index": 6,
+          "rowName": "디지털 I/O(접점 폐쇄, 전압 감지 가능)",
+          "rowGroup": "Control",
+          "rowCondition": "10핀 터미널 1개에 8채널 통합",
+          "rowVerification": "FOUND",
+          "label": "디지털 I/O",
+          "value": "8",
+          "unit": "포트"
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "입력 전압",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "입력 전압",
+          "value": "12",
+          "unit": "VDC"
+        }
+      ],
+      "lead": "AMX **NX-3200**은 AV 및 빌딩 기술을 제어하는 네트워크 컨트롤러입니다. RS-232/422/485, IR/Serial, 디지털 I/O 인터페이스를 갖췄습니다.",
+      "subtitle": "프로그래머블 네트워크 컨트롤러"
+    },
+    "varia-100": {
+      "brand": "AMX",
+      "coreSha256": "8fa915c1108d62d1db5bdbc4bedeb5557b9618f72f1a00f61bb98a01bcbb19e3",
+      "overview": "VARIA-100은 10.1인치 전문가급 터치 패널로, 사전 탑재된 페르소나 앱(Any-App, Web Kiosk, Zoom Rooms Controller, AMX Book Scheduling, AMX G5 Control)을 선택해 패널 전체 경험을 용도에 맞게 전환할 수 있다.\n\n제조사 공식 사양에 따르면 해상도는 1920x1200(16:10 landscape), 스피커 2 x 2W, 듀얼 마이크, 5MP 전면 카메라(고정 초점)를 갖췄다. NFC 읽기/쓰기, 주변광 센서(적응형 밝기), 근접 센서(다가가면 깨어남)를 지원한다.\n\n전원은 RJ-45를 통한 PoE(802.3af, 15.4W)이며, 크기는 6 7/8\" x 9 9/16\" x 13/16\"(173.9 x 242.88 x 20.5mm), 무게는 1.25 lb(567g)다. 벽면·유리·VESA 마운트를 지원하는 범용 마운트가 포함되며, 테이블탑 마운트 액세서리(VARIA-ACS-100F, VARIA-ACS-810A)를 옵션으로 제공한다.",
+      "series": "Varia Series",
+      "facts": [
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "디스플레이 크기",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "화면 크기 · 대각선",
+          "value": "10.1 (대각선)",
+          "unit": "in"
+        },
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "해상도",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "해상도",
+          "value": "1920 × 1200",
+          "unit": ""
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "전원",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "전원 방식",
+          "value": "RJ-45, PoE 802.3af (15.4 W)",
+          "unit": ""
+        }
+      ],
+      "lead": "AMX **VARIA-100**은 전문가급 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+      "subtitle": "Varia Series · 터치 패널"
+    },
+    "varia-80": {
+      "brand": "AMX",
+      "coreSha256": "d64955b51bf660b0bb84356460041bb3440d924883ef813d9d13c0020ea987ba",
+      "overview": "VARIA-80은 8인치 전문가급 터치 패널로, VARIA-100과 동일하게 사전 탑재된 페르소나 앱을 선택해 패널 전체 경험을 용도에 맞게 전환할 수 있다.\n\n제조사 공식 사양에 따르면 해상도는 1280x800(16:10 landscape), 스피커 2 x 2W, 듀얼 마이크, 5MP 전면 카메라(고정 초점)를 갖췄다. NFC 읽기/쓰기, 주변광 센서(적응형 밝기), 근접 센서(다가가면 깨어남)를 지원한다.\n\n전원은 RJ-45를 통한 PoE(802.3af, 15.4W)이며, 크기는 5 7/8\" x 7 15/16\" x 7/8\"(148.9 x 201.2 x 21.7mm), 무게는 1.17 lb(532g)다. 벽면·유리·VESA 마운트를 지원하는 범용 마운트가 포함되며, 테이블탑 마운트 액세서리(VARIA-ACS-80F, VARIA-ACS-810A)를 옵션으로 제공한다.",
+      "series": "Varia Series",
+      "facts": [
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "디스플레이 크기",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "화면 크기 · 대각선",
+          "value": "8 (대각선)",
+          "unit": "in"
+        },
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "해상도",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "해상도",
+          "value": "1280 × 800",
+          "unit": ""
+        },
+        {
+          "axis": "터치",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "터치 방식",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "터치 방식",
+          "value": "정전식(Capacitive)",
+          "unit": ""
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "전원",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "전원 방식",
+          "value": "RJ-45, PoE 802.3af (15.4 W)",
+          "unit": ""
+        }
+      ],
+      "lead": "AMX **VARIA-80**은 전문가급 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+      "subtitle": "Varia Series · 터치 패널"
+    },
+    "varia-sl50": {
+      "brand": "AMX",
+      "coreSha256": "05ca3ba55aa0495d6ef200058d5a91aed0382838c5b2665eaedb2ef9ff52ca2a",
+      "overview": "VARIA-SL50은 표준 싱글갱 전기 박스에 설치할 수 있도록 최적화된 초슬림 디자인의 5.5인치 세로형(portrait) 벽면 매립형 터치 패널로, 카메라와 NFC가 없는 대신 소형 폼팩터에 특화됐다.\n\n제조사 공식 사양에 따르면 해상도는 720x1280(9:16 portrait), 스피커 1 x 1W, 듀얼 마이크를 갖췄다. 카메라와 NFC는 지원하지 않으며(N/A), 주변광 센서(적응형 밝기)와 근접 센서(다가가면 깨어남)는 지원한다.\n\n전원은 RJ-45를 통한 PoE(802.3af, 15.4W)이며, 크기는 5 11/16\" x 3 3/16\" x 1\"(143.4 x 80.8 x 24.3mm), 무게는 0.38 lb(173g)로 Varia 시리즈 중 가장 작고 가볍다.",
+      "series": "Varia Series",
+      "facts": [
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "디스플레이 크기",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "화면 크기 · 대각선",
+          "value": "5.5 (대각선)",
+          "unit": "in"
+        },
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "해상도",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "해상도",
+          "value": "720 × 1280",
+          "unit": ""
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "전원",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "전원 방식",
+          "value": "RJ-45, PoE 802.3af (15.4 W)",
+          "unit": ""
+        }
+      ],
+      "lead": "AMX **VARIA-SL50**은 세로형 벽면 매립 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+      "subtitle": "Varia Series · 터치 패널"
+    },
+    "varia-sl80": {
+      "brand": "AMX",
+      "coreSha256": "2401a7ceb1ccb84e6e1892a11fcce72c4dc174156ddfac88b61830f3616055b8",
+      "overview": "VARIA-SL80은 표준 싱글갱 전기 박스에 설치할 수 있도록 최적화된 초슬림 디자인의 8인치 벽면 매립형 터치 패널로, VARIA-80/100과 마찬가지로 사전 탑재된 페르소나 앱을 선택해 패널 전체 경험을 전환할 수 있다.\n\n제조사 공식 사양에 따르면 해상도는 1280x800(16:10 landscape), 스피커 2 x 1W, 듀얼 마이크, 5MP 전면 카메라(고정 초점)를 갖췄다. NFC 읽기/쓰기, 주변광 센서(적응형 밝기), 근접 센서(다가가면 깨어남)를 지원한다.\n\n전원은 RJ-45를 통한 PoE(802.3af, 15.4W)이며, 크기는 5 1/16\" x 8 7/16\" x 11/16\"(127.64 x 213.22 x 26.65mm), 무게는 1.06 lb(482g)다.",
+      "series": "Varia Series",
+      "facts": [
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "디스플레이 크기",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "화면 크기 · 대각선",
+          "value": "8 (대각선)",
+          "unit": "in"
+        },
+        {
+          "axis": "화면",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "해상도",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "해상도",
+          "value": "1280 × 800",
+          "unit": ""
+        },
+        {
+          "axis": "전원",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "전원",
+          "rowGroup": "Power",
+          "rowCondition": "",
+          "rowVerification": "FOUND",
+          "label": "전원 방식",
+          "value": "RJ-45, PoE 802.3af (15.4 W)",
+          "unit": ""
+        }
+      ],
+      "lead": "AMX **VARIA-SL80**은 전문가급 터치 패널입니다. RJ-45를 통한 PoE 전원을 사용합니다.",
+      "subtitle": "Varia Series · 터치 패널"
+    }
+  }
+}

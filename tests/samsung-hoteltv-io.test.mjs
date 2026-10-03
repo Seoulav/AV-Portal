@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -64,8 +65,8 @@ test('all other detail JSON files retain their pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = file.slice(0, -5);
-    const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(JSON.parse(readFileSync(new URL(file, dir), 'utf8')), slug), slug),slug),slug),slug),slug),slug);
-    const bytes = slug === 'lh115qhfebgxkr' || ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug)
+    const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(readFileSync(new URL(file, dir), 'utf8')),slug), slug), slug),slug),slug),slug),slug),slug);
+    const bytes = slug === 'lh115qhfebgxkr' || ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug)
       ? JSON.stringify(historical, null, 2) + '\n'
       : readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n');
     hash.update(file).update('\0').update(bytes);

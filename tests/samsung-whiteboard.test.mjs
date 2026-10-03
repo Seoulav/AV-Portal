@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -130,7 +131,7 @@ test('every other detail JSON retains its pre-change Git LF bytes', () => {
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
     const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
-    const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(JSON.parse(raw),slug),slug),slug),slug),slug),null,2)+'\n' : raw;
+    const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),null,2)+'\n' : raw;
     hash.update(name).update('\0').update(historical);
   }
   assert.equal(hash.digest('hex'), evidence.otherDetailJsonSha256);
