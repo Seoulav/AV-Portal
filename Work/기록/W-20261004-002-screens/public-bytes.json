@@ -1,0 +1,117 @@
+{
+  "merge": "b11ab262b02c5d046cf53c4a917b1b01321fd115",
+  "rows": [
+    {
+      "path": "beta/site/index.html",
+      "status": 200,
+      "expectedSha256": "6867bb966661f3306d529b557f9468b7d2fc7acefb825ab23f75ee8ef4dc1305",
+      "publicSha256": "6867bb966661f3306d529b557f9468b7d2fc7acefb825ab23f75ee8ef4dc1305",
+      "equal": true
+    },
+    {
+      "path": "beta/site/catalog.html",
+      "status": 200,
+      "expectedSha256": "fd9cd2be19f342619a66405f7c2ec9fbbd6c80f0dc129a387c4181423f96d970",
+      "publicSha256": "fd9cd2be19f342619a66405f7c2ec9fbbd6c80f0dc129a387c4181423f96d970",
+      "equal": true
+    },
+    {
+      "path": "beta/site/system-version.css",
+      "status": 200,
+      "expectedSha256": "3c520e64236c8642e9a19471234e577e8e9ef949672ee849cd1a6c6e4687ad60",
+      "publicSha256": "3c520e64236c8642e9a19471234e577e8e9ef949672ee849cd1a6c6e4687ad60",
+      "equal": true
+    },
+    {
+      "path": "beta/site/system-version.js",
+      "status": 200,
+      "expectedSha256": "b3858fe5f8508ad05c4a8beb5a1fff0e9a623e1f964e88bd46bba37d422dd9e7",
+      "publicSha256": "b3858fe5f8508ad05c4a8beb5a1fff0e9a623e1f964e88bd46bba37d422dd9e7",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/index.html",
+      "status": 200,
+      "expectedSha256": "e47ebd34ec64a0ada9c0a12b30fa2c29364d690fb3094570e0694205216cadf9",
+      "publicSha256": "e47ebd34ec64a0ada9c0a12b30fa2c29364d690fb3094570e0694205216cadf9",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/app.js",
+      "status": 200,
+      "expectedSha256": "fa8f04738b658b99db3ebc8d5313a4183515bf34d4521aa52d874e9bc53b75a9",
+      "publicSha256": "fa8f04738b658b99db3ebc8d5313a4183515bf34d4521aa52d874e9bc53b75a9",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/product-detail-model.mjs",
+      "status": 200,
+      "expectedSha256": "896592944fa3d7a12355d7515bf1a24a679b826164cb54e7fd2e2c3d0e353f7b",
+      "publicSha256": "896592944fa3d7a12355d7515bf1a24a679b826164cb54e7fd2e2c3d0e353f7b",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/styles.css",
+      "status": 200,
+      "expectedSha256": "5ad5e859b1fde5342377753d2a945315706438fc709c03992f8f8021ae63bf8d",
+      "publicSha256": "5ad5e859b1fde5342377753d2a945315706438fc709c03992f8f8021ae63bf8d",
+      "equal": true
+    },
+    {
+      "path": "beta/site/search-index.json",
+      "status": 200,
+      "expectedSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+      "publicSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/vs10.json",
+      "status": 200,
+      "expectedSha256": "5f65cc5b4c41dfc44c5fed7ce97d124bd33ab85368c38a29348959604bc91bed",
+      "publicSha256": "5f65cc5b4c41dfc44c5fed7ce97d124bd33ab85368c38a29348959604bc91bed",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/gs728tppv3.json",
+      "status": 200,
+      "expectedSha256": "0160ad439f0ddcc1a7458cd3db7129ead5a58eaa37433bc7f6af4b94500f99b3",
+      "publicSha256": "0160ad439f0ddcc1a7458cd3db7129ead5a58eaa37433bc7f6af4b94500f99b3",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/ua845uwb.json",
+      "status": 200,
+      "expectedSha256": "4365e08c7e98b92680f1b5b799b2db42dfbaf0c3fa8e832241e5142eac3eb72a",
+      "publicSha256": "4365e08c7e98b92680f1b5b799b2db42dfbaf0c3fa8e832241e5142eac3eb72a",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/eikos-4k.json",
+      "status": 200,
+      "expectedSha256": "36ef449534a1cfb2ece1d68319a2c018d9dfa40e0b708c77f58c8381bf249e8f",
+      "publicSha256": "36ef449534a1cfb2ece1d68319a2c018d9dfa40e0b708c77f58c8381bf249e8f",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/lh43qhcebgcxkr.json",
+      "status": 200,
+      "expectedSha256": "ad3aef7d71c1cc56ccca86b95f48eebf59d9b8096b7c547f865969fe4fffc21c",
+      "publicSha256": "ad3aef7d71c1cc56ccca86b95f48eebf59d9b8096b7c547f865969fe4fffc21c",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/dci-4-600da.json",
+      "status": 200,
+      "expectedSha256": "7660b854897a4583e2bf236fb89069b3a2851850c694ed817f8e0fd0f0a3067f",
+      "publicSha256": "7660b854897a4583e2bf236fb89069b3a2851850c694ed817f8e0fd0f0a3067f",
+      "equal": true
+    },
+    {
+      "path": "beta/site/detail/data/varia-80.json",
+      "status": 200,
+      "expectedSha256": "61e360d68fc1fc3957f4cc8ec23c4becb979682c808891c988e30612f43e1c77",
+      "publicSha256": "61e360d68fc1fc3957f4cc8ec23c4becb979682c808891c988e30612f43e1c77",
+      "equal": true
+    }
+  ]
+}
