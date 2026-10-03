@@ -1,0 +1,194 @@
+{
+  "merge": "5e786098e2e51a83d86238174b5fcb7f0579344e",
+  "pagesRunId": 37101951297,
+  "testedAt": "2026-10-03T06:09:36.761Z",
+  "results": {
+    "detail/data/control-412ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "7a0b176758e867a3442d98989f2affb8cf12f91d00eeb8bf96c2439569647292",
+      "size": 11296
+    },
+    "detail/data/control-414ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "493517233c17518911f3b1ea56222e1b4b176dce0f2557a3a95ae9ff05f81e27",
+      "size": 12066
+    },
+    "detail/data/control-416ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "c9f8ddaf6ebf57c653762cee9aa73be28797233b3694dc34bd5bf78da6b790f2",
+      "size": 11558
+    },
+    "detail/data/control-418ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "20a4519231ee04da5d56b77487d316157318f33f0a810b0d9532b120202612b6",
+      "size": 11524
+    },
+    "detail/data/control-419cst.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "0e8cf5027ec717860461e93f927bebc886e9c9e17f9e127e5b72c6d9a063b73a",
+      "size": 10905
+    },
+    "detail/data/control-424ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "51fc2bcaea35e1895fb81cfa983fb2265654198437a4faf36cab989211b7ae5d",
+      "size": 11566
+    },
+    "detail/data/control-424lp.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "c45c5b309fbbeeaab6fcd486b51128d840678ee72607f1859227c4f784bc1b43",
+      "size": 11637
+    },
+    "detail/data/control-426lp.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "1de04b76934f867bddb5b398df7a22258554ad0aba328b65da56ee74b9ec5253",
+      "size": 11647
+    },
+    "detail/data/control-440cst.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "a247a39093acc93e0c528ac72a99ea4db4144e7e1013de96da03cfbd6219b4e2",
+      "size": 12067
+    },
+    "detail/data/control-447ct.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "120464ee48427c3607608d4c2811c09fe0e65fc31c38260a596c3b1a55055a54",
+      "size": 11538
+    },
+    "docs/manifest.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "66e3fbe440ddc270dbcf259657599fb8ed68df2a723f9ea92187272201c3f898",
+      "size": 62177
+    },
+    "search-index.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "865cc240a33868d9b0f4af0a0418dc66d10f39a40c4c606882356ef24c7df7b5",
+      "size": 629579
+    },
+    "manuals/jbl-control-400-standard-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "343df381d288ab743beab2adf369a7d76378c895fae2bd9d199fd60973da7c09",
+      "size": 7142776
+    },
+    "manuals/jbl-control-400-enhanced-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "427e76dad5f03aadcd6a8832c844a3692ade3fc01792451bb08b1c5fafa666ed",
+      "size": 10476319
+    },
+    "manuals/jbl-control-400-premium-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "21d7a8d29ce08bffd3c1419ea6031a63a3dfdaf2bacbcc5e867aea90e5c3b9ce",
+      "size": 19894190
+    },
+    "manuals/jbl-control-412ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "4e33e007d5e2c8d004d4399d1eff3eadcb9322d718c426be0a0e494aec78a41d",
+      "size": 793432
+    },
+    "manuals/jbl-control-414ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "4c691077c8f0a6fe34ca20c52c52b310e938fc2f6bd833776096a52676a6f3a3",
+      "size": 1088951
+    },
+    "manuals/jbl-control-418ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "ef34aded974295ff392d7010770e75209109bfd4bf04195b62a6e67e24e7088a",
+      "size": 779879
+    },
+    "manuals/jbl-control-419cst-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "c67d4a794c5981f4538b27af1f6b648bb93da0c8f6c76a16d2e255f41b5823f2",
+      "size": 714271
+    },
+    "manuals/jbl-control-424ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "3d86454e727ada1172eb6521fd47b086fe586f699b2a413ad17a370a490a4cc7",
+      "size": 665636
+    },
+    "manuals/jbl-control-424lp-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "6246ebcdb1e77b4b6c180f72a6d27a59c2fdb0b54d2e440b1ce798b9dc92ac45",
+      "size": 678885
+    },
+    "manuals/jbl-control-426lp-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "a5f2a38aee18ba737401e33421c63a78fd84d23ac9f4aec801847d48b56d0a19",
+      "size": 642454
+    },
+    "manuals/jbl-control-440cst-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "0c8eefe4f7a4efa9972a00ba14f9fa2841de84a988d7ecc857f73626c523715a",
+      "size": 904313
+    },
+    "manuals/jbl-control-416ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "36358f3eaec7894d10a5cbfbafa4446cb20cb9397e38fb5ea98a16d1c3b5e20d",
+      "size": 731472
+    },
+    "manuals/jbl-control-447ct-spec.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "e4373fe400f4d9b56ba588c46804eacae7be968429fecd21dfe6467a94ba9a6d",
+      "size": 734092
+    },
+    "manuals/jbl-control-416ct-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "cabea5ab20966ca1cfdb753504a960e513d48d1cf0b0a0681d3b22902b042596",
+      "size": 1857073
+    },
+    "manuals/jbl-control-447ct-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "c2bb946810038ccb37d59403423cab989e2882ee401db1d088ff486108a4418b",
+      "size": 2625983
+    },
+    "manuals/jbl-control-416ct-drawing-2d.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "e01e2931ec4a2ed5a1498d7c0832d38dbc068a1fde623878227f9c1bb80d5781",
+      "size": 417372
+    },
+    "manuals/jbl-control-447ct-drawing-2d.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "47202a039d37e70fe1cbb1ca92d9d935650da68c6099f56a86cfec274265acec",
+      "size": 379138
+    },
+    "manuals/jbl-control-contractor-mtc-ub-bracket-guide.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "e412eb09a6a137ec1f4d805a5c98bd1492972789e0cd4f1446fbd03dfa38a9d3",
+      "size": 69276
+    },
+    "manuals/jbl-ac18-26-95-drawing.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "81ea2fb5ba54cf11b3bb4aeb219f26cb0782a1d98acd35c96a356fb5130c8305",
+      "size": 57395
+    }
+  },
+  "failures": []
+}
