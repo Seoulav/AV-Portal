@@ -519,5 +519,19 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "CTD-4125는 **4채널 125W**(Lo-Z/Hi-Z 겸용) 파워쉐어링 앰프로, Dante 입출력과 내장 DSP(룸 튜닝), 팩토리 JBL 스피커 튜닝을 제공한다. 비대칭 파워쉐어링을 통해 4개 채널이 총 500W를 자유로운 비율로 나눠 쓸 수 있으며, 별도 소프트웨어 없이 웹 UI로 설정 가능하고 GPIO 및 HControl 프로토콜(BSS/AMX 연동)을 지원한다.",
+  "subtitle": "ComTech D Series · 파워쉐어링 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+      "value": "125",
+      "unit": "W"
+    }
+  ]
 }

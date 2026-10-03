@@ -598,5 +598,24 @@
       "top": 405,
       "bottom": 516
     }
-  }
+  },
+  "lead": "I-Tech 4x3500HD는 아날로그, AES3, CobraNet 입력을 4개 출력 중 어디로든 라우팅할 수 있는 **4채널** 고출력 투어링 앰프다. 각 채널에 OMNIDRIVE HD 프로세싱(LevelMAX 리미터 스위트, JBL V5 스피커 튜닝용 선형위상 FIR 필터 지원)을 탑재했으며, Crown 특허 Class-I 기술로 4채널 모두 동시 고출력을 안정적으로 낸다.",
+  "subtitle": "I-Tech HD Series · 투어링 앰프",
+  "keyFacts": [
+    {
+      "label": "입·출력 채널 구성",
+      "value": "4입력/4출력",
+      "unit": ""
+    },
+    {
+      "label": "채널당 연속 출력 · 4Ω·20Hz–20kHz·0.35% THD·전 채널 구동",
+      "value": "2400",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

@@ -593,5 +593,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 2|300BL은 DriveCore 기술을 탑재한 **2채널** 상업용 설치형 파워앰프로, 아날로그 밸런스 입력에 더해 HARMAN 독자 규격인 BLU link(256채널 디지털 오디오 버스) 연결을 지원한다. 온보드 DSP와 HiQnet 제어를 제공하며 70V/100V 정전압 부하를 트랜스포머 없이 구동한다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U (3.5\" 높이)",
+      "unit": ""
+    }
+  ]
 }

@@ -544,5 +544,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 2|300은 DriveCore 기술과 온보드 DSP, 전면 LCD 인터페이스를 갖춘 **2채널** 소형-중형 설치용 파워앰프다. 2/4/8/16Ω 부하와 70V/100V 정전압 출력을 지원하며 HiQnet 네트워크 제어가 가능하다.",
+  "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

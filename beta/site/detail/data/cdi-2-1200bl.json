@@ -518,5 +518,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 2|1200BL은 CDi 2|1200에 **BLU link 디지털 오디오 버스**를 추가한 모델로, 대형 설치 현장에서 디지털 오디오 배선과 네트워크 제어를 동시에 활용할 수 있다. 전력 스펙은 CDi 2|1200과 동일하다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "1200",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

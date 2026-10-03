@@ -1,0 +1,1147 @@
+{
+  "taskId": "W-20261003-013",
+  "readCommit": "a25b0b9b9d156b853371385479ccd2040f350b70",
+  "otherDetailJsonSha256": "b1cff76ee4c425549efeb7d9cdbfa9f92eed03b3a760ce7d39ab741c51b3f729",
+  "products": {
+    "cdi-2-1200": {
+      "coreSha256": "e4fba72ed875c17bccfdfbceffaae438efebb66ae6d536e2d4673e562d660dc0",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|1200은 CDi DriveCore 아날로그 라인업 중 2채널 최고출력 모델로 채널당 4Ω 1200W를 낸다. 시네마, 종교시설, 호텔, 크루즈 등 대형 설치 현장을 겨냥했으며 트랜스포머 없이 100Vrms 스피커 부하를 직접 구동하고 JBL 스피커 튜닝이 프리로드되어 있다. BLU link는 미지원(BL 모델에서 제공).",
+      "lead": "CDi 2|1200은 CDi DriveCore 아날로그 라인업 중 **2채널** 최고출력 모델로 채널당 4Ω 1200W를 낸다. 100Vrms 스피커 부하를 트랜스포머 없이 직접 구동하고 JBL 스피커 튜닝이 프리로드되어 있으며 BLU link는 지원하지 않는다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 19,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "1200",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 22,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U (3.5\" 높이)",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 22,
+        "value": "2U (3.5\" 높이)"
+      }
+    },
+    "cdi-2-1200bl": {
+      "coreSha256": "36728524b2cca9b96e5da287e3331762c30d74be475ac432e524299326f5d17a",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|1200BL은 CDi 2|1200에 BLU link 디지털 오디오 버스를 추가한 모델로, 대형 설치 현장에서 디지털 오디오 배선과 네트워크 제어를 동시에 활용할 수 있다. 전력 스펙은 CDi 2|1200과 동일하다.",
+      "lead": "CDi 2|1200BL은 CDi 2|1200에 **BLU link 디지털 오디오 버스**를 추가한 모델로, 대형 설치 현장에서 디지털 오디오 배선과 네트워크 제어를 동시에 활용할 수 있다. 전력 스펙은 CDi 2|1200과 동일하다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 20,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "1200",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 23,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 23,
+        "value": "2U"
+      }
+    },
+    "cdi-2-300": {
+      "coreSha256": "bc28f5a674e3d10cb36d53acb90e31093c00021dbca3c50a6e2c597176b76c16",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|300은 DriveCore 기술과 온보드 DSP, 전면 LCD 인터페이스를 갖춘 2채널 소형-중형 설치용 파워앰프다. 레스토랑, 리테일 매장 등에 적합하도록 설계되었으며 2/4/8/16Ω 부하와 70V/100V 정전압 출력을 지원한다. BLU link 디지털 오디오는 지원하지 않으며(해당 기능은 BL 모델에서 제공), HiQnet을 통한 네트워크 제어가 가능하다.",
+      "lead": "CDi 2|300은 DriveCore 기술과 온보드 DSP, 전면 LCD 인터페이스를 갖춘 **2채널** 소형-중형 설치용 파워앰프다. 2/4/8/16Ω 부하와 70V/100V 정전압 출력을 지원하며 HiQnet 네트워크 제어가 가능하다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 24,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 27,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 27,
+        "value": "2U"
+      }
+    },
+    "cdi-2-300bl": {
+      "coreSha256": "6ec8be6f04d9f51d9c818d520cc2bbe6e8634fa5b1fe13c9187b5d7be0277b1d",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|300BL은 DriveCore 기술을 탑재한 2채널 상업용 설치형 파워앰프로, 아날로그 밸런스 입력에 더해 HARMAN 독자 규격인 BLU link(256채널 디지털 오디오 버스) 연결을 지원한다. 온보드 DSP(8밴드 파라메트릭 EQ, 크로스오버, 딜레이, LevelMAX 리미터)와 HiQnet을 통한 네트워크 제어/모니터링을 제공하며, 트랜스포머 없이 70V/100V 정전압 출력을 직접 낼 수 있어 매장·레스토랑 등 중소규모 설치 현장에 적합하다.",
+      "lead": "CDi 2|300BL은 DriveCore 기술을 탑재한 **2채널** 상업용 설치형 파워앰프로, 아날로그 밸런스 입력에 더해 HARMAN 독자 규격인 BLU link(256채널 디지털 오디오 버스) 연결을 지원한다. 온보드 DSP와 HiQnet 제어를 제공하며 70V/100V 정전압 부하를 트랜스포머 없이 구동한다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 23,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 26,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U (3.5\" 높이)",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 26,
+        "value": "2U (3.5\" 높이)"
+      }
+    },
+    "cdi-2-600": {
+      "coreSha256": "3e0095142d4aaac8b1487ece69b3638c230cd55591c5d8af3dd480d55a4cdf69",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|600은 CDi 2|300과 동일한 폼팩터에 2배 출력(채널당 4Ω 600W)을 내는 2채널 설치용 파워앰프다. 온보드 DSP, 전면 LCD, HiQnet 네트워크 제어, 70V/100V 직접 구동을 지원하며 JBL 스피커 튜닝이 프리로드되어 있다.",
+      "lead": "CDi 2|600은 CDi 2|300과 동일한 폼팩터에 2배 출력(채널당 4Ω 600W)을 내는 **2채널** 설치용 파워앰프다. 온보드 DSP, 전면 LCD, HiQnet 네트워크 제어, 70V/100V 직접 구동을 지원하며 JBL 스피커 튜닝이 프리로드되어 있다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 18,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 21,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 21,
+        "value": "2U"
+      }
+    },
+    "cdi-2-600bl": {
+      "coreSha256": "3e3c8d8332535b1bc5a88346be9a562c68737b06507bd6fae2736279804c977c",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 2|600BL은 CDi 2|300BL 대비 2배의 출력(채널당 4Ω 600W)을 내는 2채널 설치용 파워앰프로, 동일하게 BLU link 디지털 오디오 버스와 HiQnet 네트워크 제어, 온보드 DSP를 지원한다. 70V/100V 정전압 출력을 트랜스포머 없이 직접 구동할 수 있어 중대형 매장·강당 등에 적합하다.",
+      "lead": "CDi 2|600BL은 CDi 2|300BL 대비 2배의 출력(채널당 4Ω 600W)을 내는 **2채널** 설치용 파워앰프로, 동일하게 BLU link 디지털 오디오 버스와 HiQnet 네트워크 제어, 온보드 DSP를 지원한다. BLU link·HiQnet·온보드 DSP를 지원하고 70V/100V 정전압 부하를 트랜스포머 없이 구동한다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 21,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 24,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 24,
+        "value": "2U"
+      }
+    },
+    "cdi-4-1200": {
+      "coreSha256": "3f7abb726a0b43f098a47b6c6d265ab216793a4f4853f25b5718ab9d66f9e30d",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|1200은 CDi DriveCore 아날로그 라인업 중 4채널 최고출력 모델로 채널당 4Ω 1200W를 낸다. 20A IEC 전원 커넥터를 사용하며 100Vrms 부하를 트랜스포머 없이 직접 구동, JBL 스피커 튜닝 프리로드로 신속한 설치가 가능하다.",
+      "lead": "CDi 4|1200은 CDi DriveCore 아날로그 라인업 중 **4채널** 최고출력 모델로 채널당 4Ω 1200W를 낸다. 20A IEC 전원 커넥터를 사용하고 100Vrms 부하를 트랜스포머 없이 직접 구동한다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 19,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "1200",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 22,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 22,
+        "value": "2U"
+      }
+    },
+    "cdi-4-1200bl": {
+      "coreSha256": "e6d2b7b95f3d046de674ca67101ec8512677a8feea7b3cad9da439f8c807dabf",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|1200BL은 CDi 4|1200에 BLU link 디지털 오디오 버스를 추가한 모델로, CDi DriveCore 아날로그 라인업 중 최고출력(4Ω 채널당 1200W)에 디지털 오디오 네트워킹을 결합했다.",
+      "lead": "CDi 4|1200BL은 **BLU link 디지털 오디오 버스**를 추가한 모델이다. 4Ω 채널당 1200W 출력에 디지털 오디오 네트워킹을 결합했다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 20,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "1200",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "cdi-4-300": {
+      "coreSha256": "422cdc5d57e4d43a357905013626c58a199eb69bdc5bc25368dbeed8733b2b12",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|300은 채널당 4Ω 300W, 4채널 구성의 아날로그 설치용 파워앰프다. DriveCore 기술과 온보드 DSP(파라메트릭 EQ, 크로스오버, 라우팅, LevelMAX 리미터), HiQnet 네트워크 제어를 지원하며 GPIO/AUX 포트를 통한 프리셋 호출·채널 뮤트·장애 모니터링이 가능하다.",
+      "lead": "CDi 4|300은 채널당 4Ω 300W, **4채널** 구성의 아날로그 설치용 파워앰프다. DriveCore 기술과 온보드 DSP(파라메트릭 EQ, 크로스오버, 라우팅, LevelMAX 리미터), HiQnet 네트워크 제어를 지원하며 GPIO/AUX 포트를 통한 프리셋 호출·채널 뮤트·장애 모니터링이 가능하다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 20,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 23,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 23,
+        "value": "2U"
+      }
+    },
+    "cdi-4-300bl": {
+      "coreSha256": "fca187463757919cc189ca7fa6721065fafcf415407d3728169d6de295ad708e",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|300BL은 CDi 4|300에 BLU link(256채널 디지털 오디오 버스)를 추가한 모델로, 전력 스펙은 non-BL 모델과 동일하며 디지털 오디오 네트워크 연결성을 더한 것이 차이점이다.",
+      "lead": "CDi 4|300BL은 CDi 4|300에 **BLU link**를 추가한 모델이다. 전력 스펙은 non-BL 모델과 동일하며 디지털 오디오 네트워크 연결성을 제공한다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 20,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 23,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U (3.5\" 높이)",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 23,
+        "value": "2U (3.5\" 높이)"
+      }
+    },
+    "cdi-4-600": {
+      "coreSha256": "b333cb5cbd69197bbeb20cfa47a9e103743c2bea6199bd34254d3b67f7ab84dd",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|600은 채널당 4Ω 600W, 4채널 구성의 아날로그 설치용 파워앰프로 CDi 4|300과 동일 폼팩터를 사용한다. 네트워크 제어/모니터링, DSP, 전면 인터페이스를 지원하며 JBL 스피커 튜닝이 프리로드되어 빠른 시스템 구축이 가능하다. BLU link는 미지원.",
+      "lead": "CDi 4|600은 채널당 4Ω 600W, **4채널** 구성의 아날로그 설치용 파워앰프로 CDi 4|300과 동일 폼팩터를 사용한다. 네트워크 제어/모니터링, DSP, 전면 인터페이스를 지원하며 JBL 스피커 튜닝이 프리로드되어 있다.",
+      "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 19,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 22,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U (3.5\" 높이)",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 22,
+        "value": "2U (3.5\" 높이)"
+      }
+    },
+    "cdi-4-600bl": {
+      "coreSha256": "6de6a631e46b12ac13f388c7770ebb84062093da192d65ad652f543d57bb4be8",
+      "series": "CDi DriveCore Series",
+      "overview": "CDi 4|600BL은 CDi 4|600에 BLU link를 추가한 모델로 전력 스펙은 non-BL과 동일하다. 네트워크 제어/모니터링, 온보드 DSP, JBL 스피커 튜닝을 지원하며 시네마, 종교시설 등 중형 설치 현장에 적합하다.",
+      "lead": "CDi 4|600BL은 CDi 4|600에 **BLU link**를 추가한 모델로 전력 스펙은 non-BL과 동일하다. BLU link·네트워크 제어/모니터링·온보드 DSP와 JBL 스피커 튜닝을 지원한다.",
+      "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 20,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 23,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 23,
+        "value": "2U"
+      }
+    },
+    "comtech-d-2125": {
+      "coreSha256": "12b01b2b2e3923a09e302a0a0005daef193906819d14e21f8503b6576dba6be7",
+      "series": "ComTech D Series",
+      "overview": "CTD-2125는 2채널 125W(Lo-Z/Hi-Z 겸용) 파워쉐어링 앰프로, 두 채널이 총 250W를 자유로운 비율로 나눠 사용하는 비대칭 파워쉐어링을 지원한다. Dante 입출력, 내장 DSP, 팩토리 JBL 스피커 튜닝, 소스 우선순위 전환, GPIO, HControl 프로토콜을 제공하며 1U 하프랙 폭의 컴팩트한 폼팩터를 갖췄다.",
+      "lead": "CTD-2125는 **2채널 125W**(Lo-Z/Hi-Z 겸용) 파워쉐어링 앰프로, 두 채널이 총 250W를 자유로운 비율로 나눠 사용하는 비대칭 파워쉐어링을 지원한다. Dante 입출력, 내장 DSP, 팩토리 JBL 스피커 튜닝, 소스 우선순위 전환, GPIO, HControl 프로토콜을 제공하며 1U 하프랙 폭의 컴팩트한 폼팩터를 갖췄다.",
+      "subtitle": "ComTech D Series · 파워쉐어링 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 11,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "전 채널 구동시 채널당 출력(Lo-Z/Hi-Z)",
+          "rowGroup": "Output",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+          "value": "125",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "comtech-d-4125": {
+      "coreSha256": "4c916c503253a1a28c5f148246cafaf88f2120935af48d782326c5d994c728f7",
+      "series": "ComTech D Series",
+      "overview": "CTD-4125는 4채널 125W(Lo-Z/Hi-Z 겸용) 파워쉐어링 앰프로, Dante 입출력과 내장 DSP(룸 튜닝), 팩토리 JBL 스피커 튜닝을 제공한다. 비대칭 파워쉐어링을 통해 4개 채널이 총 500W를 자유로운 비율로 나눠 쓸 수 있으며, 별도 소프트웨어 없이 웹 UI로 설정 가능하고 GPIO 및 HControl 프로토콜(BSS/AMX 연동)을 지원한다.",
+      "lead": "CTD-4125는 **4채널 125W**(Lo-Z/Hi-Z 겸용) 파워쉐어링 앰프로, Dante 입출력과 내장 DSP(룸 튜닝), 팩토리 JBL 스피커 튜닝을 제공한다. 비대칭 파워쉐어링을 통해 4개 채널이 총 500W를 자유로운 비율로 나눠 쓸 수 있으며, 별도 소프트웨어 없이 웹 UI로 설정 가능하고 GPIO 및 HControl 프로토콜(BSS/AMX 연동)을 지원한다.",
+      "subtitle": "ComTech D Series · 파워쉐어링 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "전 채널 구동시 채널당 출력(Lo-Z/Hi-Z)",
+          "rowGroup": "Output",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+          "value": "125",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "comtech-d-8125": {
+      "coreSha256": "a1cff1252491e23be4628ae2e43dd8289a2582833e849c42e6f9075a4f74449e",
+      "series": "ComTech D Series",
+      "overview": "CTD-8125는 8채널 125W(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다. Dante 네트워크 오디오와 내장 DSP, 팩토리 JBL 스피커 튜닝, 웹 UI 설정, GPIO, HControl 프로토콜을 지원하며 1U 컴팩트 폼팩터에 다채널을 집약한 것이 특징이다.",
+      "lead": "CTD-8125는 **8채널 125W**(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다. Dante 네트워크 오디오와 내장 DSP, 팩토리 JBL 스피커 튜닝, 웹 UI 설정, GPIO, HControl 프로토콜을 지원하며 1U 컴팩트 폼팩터에 다채널을 집약한 것이 특징이다.",
+      "subtitle": "ComTech D Series · 파워쉐어링 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "8",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "전 채널 구동시 채널당 출력(Lo-Z/Hi-Z)",
+          "rowGroup": "Output",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+          "value": "125",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "dci-2-300": {
+      "coreSha256": "e994eaa70c98429594be0d2c5e8fb88e5b74e621c5c16af0e886fa711439bd2b",
+      "series": "DCi Install Series",
+      "overview": "DCi 2|300은 DriveCore 기술 기반의 2채널 상업용 설치 앰프로, 2/4/8/16Ω 및 70V/100V 정전압 부하를 트랜스포머 없이 직접 구동할 수 있다. 개별 채널 Hi-Z/Lo-Z 전환과 브리지 모드를 지원하며, 20A 이하의 낮은 전류로도 동작하는 PFC 유니버설 전원부와 가변속 팬 냉각을 채택해 설치 현장에서의 신뢰성과 효율을 높였다.",
+      "lead": "DCi 2|300은 DriveCore 기술 기반의 **2채널** 상업용 설치 앰프로, 2/4/8/16Ω 및 70V/100V 정전압 부하를 트랜스포머 없이 직접 구동할 수 있다. 개별 채널 Hi-Z/Lo-Z 전환과 브리지 모드를 지원하며 PFC 유니버설 전원부와 가변속 팬 냉각을 채택했다.",
+      "subtitle": "DCi Install Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 19,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 19,
+        "value": "2U"
+      }
+    },
+    "dci-2-300n": {
+      "coreSha256": "fdf4fa20e8567162ff6140e4ae427fea5cb8d62d3856b3fb80d690f7f469695a",
+      "series": "DCi Install Series",
+      "overview": "DCi 2|300N은 DCi 2|300의 네트워크 강화 모델로, 밸런스 아날로그 입력과 함께 HARMAN 독자 규격인 BLU-Link 디지털 오디오 전송을 지원한다. HiQnet 기반 TCP/IP 네트워크 모니터링/제어, 프로그래머블 GPIO, 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 탑재했으며 EN 54-16(생명안전 음성경보 시스템) 인증을 받았다.",
+      "lead": "DCi 2|300N은 DCi 2|300의 **네트워크 강화 모델**로, 밸런스 아날로그 입력과 함께 HARMAN 독자 규격인 BLU-Link 디지털 오디오 전송을 지원한다. HiQnet 기반 TCP/IP 네트워크 모니터링/제어, 프로그래머블 GPIO, 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 탑재했으며 EN 54-16(생명안전 음성경보 시스템) 인증을 받았다.",
+      "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "dci-2-600": {
+      "coreSha256": "c9969b4dc39b7164e133caa0ae6aa7830df32ba483ed76880e6ae44cb8958e3c",
+      "series": "DCi Install Series",
+      "overview": "DCi 2|600은 DCi 2|300 대비 2배 출력(채널당 4Ω 600W)의 2채널 아날로그 설치용 앰프다. 동일한 폼팩터에 브리지 모노 모드, Hi-Z/Lo-Z 전환, 70V/100V 정전압 직접 구동을 지원하며 PFC 유니버설 전원과 가변속 냉각팬을 채택했다.",
+      "lead": "DCi 2|600은 DCi 2|300 대비 2배 출력(채널당 4Ω 600W)의 **2채널** 아날로그 설치용 앰프다. 동일한 폼팩터에 브리지 모노 모드, Hi-Z/Lo-Z 전환, 70V/100V 정전압 직접 구동을 지원하며 PFC 유니버설 전원과 가변속 냉각팬을 채택했다.",
+      "subtitle": "DCi Install Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 14,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 17,
+        "value": "2U"
+      }
+    },
+    "dci-2-600n": {
+      "coreSha256": "1bbcaf828d1243eb251dce1d5b443760deffd33ca7148f21521a9491c6dfde5b",
+      "series": "DCi Install Series",
+      "overview": "DCi 2|600N은 DCi 2|600의 네트워크 강화 모델로, HARMAN 독자 BLU-Link 디지털 오디오 전송과 HiQnet 기반 TCP/IP 네트워크 제어/모니터링을 지원한다. EN 54-16 인증을 받아 생명안전 음성경보 용도로도 사용 가능하며 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 내장했다.",
+      "lead": "DCi 2|600N은 DCi 2|600의 **네트워크 강화 모델**로, HARMAN 독자 BLU-Link 디지털 오디오 전송과 HiQnet 기반 TCP/IP 네트워크 제어/모니터링을 지원한다. EN 54-16 인증을 받아 생명안전 음성경보 용도로도 사용 가능하며 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 내장했다.",
+      "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "2",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(2ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": null
+    },
+    "dci-4-300": {
+      "coreSha256": "e93ff39ea638e1ba6075b8c6409e0ebce55ffd05a75ed7be8af541a7469f184f",
+      "series": "DCi Install Series",
+      "overview": "DCi 4|300은 4채널, 채널당 4Ω 300W 출력의 아날로그 설치용 앰프로 동일 시리즈 2채널 모델과 같은 DriveCore 설계를 공유한다. 2Ω-16Ω 부하 및 70V/100V 정전압 직접 구동, 브리지 모노 지원, 15A IEC 전원, 가변속 냉각팬을 갖췄다.",
+      "lead": "DCi 4|300은 **4채널**, 채널당 4Ω 300W 출력의 아날로그 설치용 앰프로 동일 시리즈 2채널 모델과 같은 DriveCore 설계를 공유한다. 2Ω-16Ω 부하 및 70V/100V 정전압 직접 구동, 브리지 모노 지원, 15A IEC 전원, 가변속 냉각팬을 갖췄다.",
+      "subtitle": "DCi Install Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 14,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 17,
+        "value": "2U"
+      }
+    },
+    "dci-4-300da": {
+      "coreSha256": "ee477a4d99a0c10ca48f68f1d1f6058af441a78adfd86e2dc0f166b20bcc07a1",
+      "series": "DCi Install Series",
+      "overview": "DCi 4|300DA는 Dante/AES67 네트워크 오디오를 지원하는 4채널 설치용 앰프로, 이중화된 독립 Primary/Secondary Dante 포트를 갖춰 48kHz 또는 96kHz로 동작한다. 아날로그 입력 신호를 프로세싱 전/후 상태로 Dante/AES67 망에 송출할 수 있으며, Dante Domain Manager와 호환된다. 20개 DSP 프리셋, JBL 스피커 튜닝, 파일럿톤 기반 부하 모니터링을 지원한다.",
+      "lead": "DCi 4|300DA는 **Dante/AES67 네트워크 오디오**를 지원하는 4채널 설치용 앰프로, 이중화된 독립 Primary/Secondary Dante 포트를 갖춰 48kHz 또는 96kHz로 동작한다. 아날로그 입력 신호를 프로세싱 전/후 상태로 Dante/AES67 망에 송출할 수 있으며, Dante Domain Manager와 호환된다.",
+      "subtitle": "DCi Install Series · Dante/AES67 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 26,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 29,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U (3.5\" 높이)",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 29,
+        "value": "2U (3.5\" 높이)"
+      }
+    },
+    "dci-4-300n": {
+      "coreSha256": "5c8300da4efd95fb0983f0d78cd5aeb0012367644668d6cd465425aad4538239",
+      "series": "DCi Install Series",
+      "overview": "DCi 4|300N은 4채널 300W(4Ω 기준) 아날로그 앰프에 HARMAN BLU-Link 디지털 오디오와 HiQnet 네트워크 제어를 더한 모델이다. 프로그래머블 GPIO, EN 54-16 인증, Q-SYS 플러그인 등 설치 현장 통합을 위한 소프트웨어 생태계를 제공한다.",
+      "lead": "DCi 4|300N은 **4채널 300W**(4Ω 기준) 아날로그 앰프에 HARMAN BLU-Link 디지털 오디오와 HiQnet 네트워크 제어를 더한 모델이다. 프로그래머블 GPIO와 Q-SYS 플러그인을 지원하며 EN 54-16 인증을 받았다.",
+      "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "300",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 20,
+        "value": "2U (제품 페이지 텍스트는 '3.5U'로 표기되었으나 3.5\"=2U가 표준 랙 규격이므로 정정 표기)"
+      },
+      "rackOmittedReason": "390px 실측에서 사양 값의 웹 페이지 정정 메모가 5줄 이상으로 줄바꿈되어 2×2 요약 카드보다 커짐. 원문 불변 규칙에 따라 축을 제외"
+    },
+    "dci-4-600": {
+      "coreSha256": "5fa24b343be9250871cc0f2390ce1f813d1dd408a4bff060978f32a6b1015b53",
+      "series": "DCi Install Series",
+      "overview": "DCi 4|600은 4채널, 채널당 4Ω 600W 출력의 아날로그 설치용 앰프로 DCi 4|300과 동일 폼팩터를 사용하며 PFC 유니버설 전원부를 탑재했다. 2Ω-16Ω 부하 및 70V/100V/140V/200V 정전압을 직접 구동할 수 있다.",
+      "lead": "DCi 4|600은 **4채널**, 채널당 4Ω 600W 출력의 아날로그 설치용 앰프로 DCi 4|300과 동일 폼팩터를 사용하며 PFC 유니버설 전원부를 탑재했다. 2Ω-16Ω 부하 및 70V/100V/140V/200V 정전압을 직접 구동할 수 있다.",
+      "subtitle": "DCi Install Series · 아날로그 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 14,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 17,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 17,
+        "value": "2U"
+      }
+    },
+    "dci-4-600n": {
+      "coreSha256": "e0867cd7660cd6feef7ba2bb67300e4a5a794d86ab048ce4b1e43f859cf42626",
+      "series": "DCi Install Series",
+      "overview": "DCi 4|600N은 4채널 600W(4Ω 기준) 아날로그 앰프에 HARMAN BLU-Link 디지털 오디오와 HiQnet 네트워크 제어를 더한 모델이다. DCi 4|300N과 동일 폼팩터에 2배 출력을 내며 EN 54-16 인증을 받았다.",
+      "lead": "DCi 4|600N은 **4채널 600W**(4Ω 기준) 아날로그 앰프에 HARMAN BLU-Link 디지털 오디오와 HiQnet 네트워크 제어를 더한 모델이다. DCi 4|300N과 동일 폼팩터에 2배 출력을 내며 EN 54-16 인증을 받았다.",
+      "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 16,
+          "rowName": "채널수",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 채널 수",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "4Ω",
+          "rowGroup": "출력(4ch, Dual/Stereo Mode, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 출력 · 4Ω Dual",
+          "value": "600",
+          "unit": "W"
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 19,
+        "value": "2U (제품 페이지 텍스트는 '3.5RU'로 표기되었으나 3.5\"=2U가 표준 랙 규격이므로 정정 표기)"
+      },
+      "rackOmittedReason": "390px 실측에서 사양 값의 웹 페이지 정정 메모가 5줄 이상으로 줄바꿈되어 2×2 요약 카드보다 커짐. 원문 불변 규칙에 따라 축을 제외"
+    },
+    "i-tech-4x3500hd": {
+      "coreSha256": "95282937327604430201bf048de2db847e6ecfbb3826b9f0b4136b26a42a08dc",
+      "series": "I-Tech HD Series",
+      "overview": "I-Tech 4x3500HD는 아날로그, AES3, CobraNet 입력을 4개 출력 중 어디로든 라우팅할 수 있는 4채널 고출력 투어링 앰프다. 각 채널에 OMNIDRIVE HD 프로세싱(LevelMAX 리미터 스위트, JBL V5 스피커 튜닝용 선형위상 FIR 필터 지원)을 탑재했으며, Crown 특허 Class-I 기술로 4채널 모두 동시 고출력을 안정적으로 낸다. 설치형·투어사운드 양쪽에 모두 권장되는 플래그십 모델이다.",
+      "lead": "I-Tech 4x3500HD는 아날로그, AES3, CobraNet 입력을 4개 출력 중 어디로든 라우팅할 수 있는 **4채널** 고출력 투어링 앰프다. 각 채널에 OMNIDRIVE HD 프로세싱(LevelMAX 리미터 스위트, JBL V5 스피커 튜닝용 선형위상 FIR 필터 지원)을 탑재했으며, Crown 특허 Class-I 기술로 4채널 모두 동시 고출력을 안정적으로 낸다.",
+      "subtitle": "I-Tech HD Series · 투어링 앰프",
+      "facts": [
+        {
+          "axis": "출력 채널 수",
+          "kind": "spec",
+          "index": 22,
+          "rowName": "채널수",
+          "rowGroup": "I/O",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "입·출력 채널 구성",
+          "value": "4입력/4출력",
+          "unit": ""
+        },
+        {
+          "axis": "채널당 정격 출력",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "4Ω",
+          "rowGroup": "출력(채널당 연속, 20Hz–20kHz, 0.35% THD, 전 채널 구동)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "채널당 연속 출력 · 4Ω·20Hz–20kHz·0.35% THD·전 채널 구동",
+          "value": "2400",
+          "unit": "W"
+        },
+        {
+          "axis": "랙 높이",
+          "kind": "spec",
+          "index": 25,
+          "rowName": "랙 유닛",
+          "rowGroup": "Physical",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "랙 높이",
+          "value": "2U",
+          "unit": ""
+        }
+      ],
+      "omittedNetwork": "네트워크 오디오 입력 채널 수가 VERIFIED/FOUND 행에 별도로 명시되지 않음",
+      "rackCandidate": {
+        "index": 25,
+        "value": "2U"
+      }
+    }
+  },
+  "pilotSha256": "82bb2b18780eddd4e7d08dde0c643fce93953620d2bca1449dbb16cf3c6d4cef",
+  "otherDetailRawSha256": "74aa45baf2d79826c87f8bc6c62fb1750c19d25a9b04990a0f33288242fed0a3"
+}

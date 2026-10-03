@@ -607,5 +607,19 @@
       "top": 55,
       "bottom": 55
     }
-  }
+  },
+  "lead": "DCi 4|600N은 **4채널 600W**(4Ω 기준) 아날로그 앰프에 HARMAN BLU-Link 디지털 오디오와 HiQnet 네트워크 제어를 더한 모델이다. DCi 4|300N과 동일 폼팩터에 2배 출력을 내며 EN 54-16 인증을 받았다.",
+  "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "600",
+      "unit": "W"
+    }
+  ]
 }

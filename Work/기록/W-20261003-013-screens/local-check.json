@@ -1,0 +1,6722 @@
+{
+  "testedAt": "2026-10-03T08:12:11.234Z",
+  "base": "http://127.0.0.1:4181",
+  "results": [
+    {
+      "slug": "cdi-2-1200",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|1200 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-1200",
+      "width": 390,
+      "title": "Crown Crown CDi 2|1200 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 171.5,
+              "bottom": 645.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 171.5,
+              "bottom": 666.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 183.5,
+            "bottom": 676.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 328,
+              "bottom": 645.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 328,
+              "bottom": 666.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 340,
+            "bottom": 676.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 694.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 694.671875,
+              "right": 171.5,
+              "bottom": 710.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 712.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 712.609375,
+              "right": 171.5,
+              "bottom": 731.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 684.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 684.671875,
+            "right": 183.5,
+            "bottom": 741.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-1200bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|1200BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 198.5,
+              "bottom": 472.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 198.5,
+              "bottom": 493.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 210.5,
+            "bottom": 503.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 359.5,
+              "bottom": 472.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 359.5,
+              "bottom": 493.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 371.5,
+            "bottom": 503.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 521.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 521.203125,
+              "right": 198.5,
+              "bottom": 537.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 539.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 539.140625,
+              "right": 198.5,
+              "bottom": 558.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 511.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 511.203125,
+            "right": 210.5,
+            "bottom": 568.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-1200bl",
+      "width": 390,
+      "title": "Crown Crown CDi 2|1200BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 635.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 635.234375,
+              "right": 171.5,
+              "bottom": 651.171875,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 653.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 653.171875,
+              "right": 171.5,
+              "bottom": 672.359375,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 625.234375,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 625.234375,
+            "right": 183.5,
+            "bottom": 682.359375,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 635.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 635.234375,
+              "right": 328,
+              "bottom": 651.171875,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 653.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 653.171875,
+              "right": 328,
+              "bottom": 672.359375,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 625.234375,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 625.234375,
+            "right": 340,
+            "bottom": 682.359375,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 700.359375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 700.359375,
+              "right": 171.5,
+              "bottom": 716.296875,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 718.296875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 718.296875,
+              "right": 171.5,
+              "bottom": 737.484375,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 690.359375,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 690.359375,
+            "right": 183.5,
+            "bottom": 747.484375,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-300",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 198.5,
+              "bottom": 472.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 198.5,
+              "bottom": 493.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 210.5,
+            "bottom": 503.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 359.5,
+              "bottom": 472.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 359.5,
+              "bottom": 493.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 371.5,
+            "bottom": 503.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 521.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 521.203125,
+              "right": 198.5,
+              "bottom": 537.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 539.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 539.140625,
+              "right": 198.5,
+              "bottom": 558.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 511.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 511.203125,
+            "right": 210.5,
+            "bottom": 568.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-300",
+      "width": 390,
+      "title": "Crown Crown CDi 2|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 171.5,
+              "bottom": 621.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 171.5,
+              "bottom": 642.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 183.5,
+            "bottom": 652.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 328,
+              "bottom": 621.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 328,
+              "bottom": 642.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 340,
+            "bottom": 652.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 670.671875,
+              "right": 171.5,
+              "bottom": 686.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 688.609375,
+              "right": 171.5,
+              "bottom": 707.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 660.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 660.671875,
+            "right": 183.5,
+            "bottom": 717.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-300bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|300BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 551.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 520.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 359.5,
+              "bottom": 541.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 551.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 569.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 569.203125,
+              "right": 198.5,
+              "bottom": 585.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 587.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 587.140625,
+              "right": 198.5,
+              "bottom": 606.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 559.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 559.203125,
+            "right": 210.5,
+            "bottom": 616.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-300bl",
+      "width": 390,
+      "title": "Crown Crown CDi 2|300BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 171.5,
+              "bottom": 669.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 171.5,
+              "bottom": 690.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 183.5,
+            "bottom": 700.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 328,
+              "bottom": 669.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 328,
+              "bottom": 690.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 340,
+            "bottom": 700.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 718.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 718.671875,
+              "right": 171.5,
+              "bottom": 734.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 736.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 736.609375,
+              "right": 171.5,
+              "bottom": 755.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 708.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 708.671875,
+            "right": 183.5,
+            "bottom": 765.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-600",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-600",
+      "width": 390,
+      "title": "Crown Crown CDi 2|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 171.5,
+              "bottom": 645.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 171.5,
+              "bottom": 666.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 183.5,
+            "bottom": 676.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 328,
+              "bottom": 645.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 328,
+              "bottom": 666.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 340,
+            "bottom": 676.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 694.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 694.671875,
+              "right": 171.5,
+              "bottom": 710.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 712.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 712.609375,
+              "right": 171.5,
+              "bottom": 731.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 684.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 684.671875,
+            "right": 183.5,
+            "bottom": 741.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-600bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 2|600BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 551.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 520.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 359.5,
+              "bottom": 541.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 551.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 569.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 569.203125,
+              "right": 198.5,
+              "bottom": 585.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 587.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 587.140625,
+              "right": 198.5,
+              "bottom": 606.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 559.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 559.203125,
+            "right": 210.5,
+            "bottom": 616.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-2-600bl",
+      "width": 390,
+      "title": "Crown Crown CDi 2|600BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 677.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 677.546875,
+              "right": 171.5,
+              "bottom": 693.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 695.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.484375,
+              "right": 171.5,
+              "bottom": 714.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 667.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 667.546875,
+            "right": 183.5,
+            "bottom": 724.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 677.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 677.546875,
+              "right": 328,
+              "bottom": 693.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 695.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.484375,
+              "right": 328,
+              "bottom": 714.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 667.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 667.546875,
+            "right": 340,
+            "bottom": 724.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 742.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 742.671875,
+              "right": 171.5,
+              "bottom": 758.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 760.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 760.609375,
+              "right": 171.5,
+              "bottom": 779.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 732.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 732.671875,
+            "right": 183.5,
+            "bottom": 789.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-1200",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|1200 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 198.5,
+              "bottom": 472.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 198.5,
+              "bottom": 493.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 210.5,
+            "bottom": 503.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 359.5,
+              "bottom": 472.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 359.5,
+              "bottom": 493.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 371.5,
+            "bottom": 503.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 521.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 521.203125,
+              "right": 198.5,
+              "bottom": 537.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 539.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 539.140625,
+              "right": 198.5,
+              "bottom": 558.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 511.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 511.203125,
+            "right": 210.5,
+            "bottom": 568.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-1200",
+      "width": 390,
+      "title": "Crown Crown CDi 4|1200 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 171.5,
+              "bottom": 621.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 171.5,
+              "bottom": 642.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 183.5,
+            "bottom": 652.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 328,
+              "bottom": 621.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 328,
+              "bottom": 642.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 340,
+            "bottom": 652.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 670.671875,
+              "right": 171.5,
+              "bottom": 686.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 688.609375,
+              "right": 171.5,
+              "bottom": 707.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 660.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 660.671875,
+            "right": 183.5,
+            "bottom": 717.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-1200bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|1200BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 432.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 432.078125,
+              "right": 198.5,
+              "bottom": 448.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 450.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 450.015625,
+              "right": 198.5,
+              "bottom": 469.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 422.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 422.078125,
+            "right": 210.5,
+            "bottom": 479.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 432.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 432.078125,
+              "right": 359.5,
+              "bottom": 448.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 450.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 450.015625,
+              "right": 359.5,
+              "bottom": 469.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 422.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 422.078125,
+            "right": 371.5,
+            "bottom": 479.203125,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-1200bl",
+      "width": 390,
+      "title": "Crown Crown CDi 4|1200BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 611.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 611.234375,
+              "right": 171.5,
+              "bottom": 627.171875,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 629.171875,
+              "right": 171.5,
+              "bottom": 648.359375,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 601.234375,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 601.234375,
+            "right": 183.5,
+            "bottom": 658.359375,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 611.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 611.234375,
+              "right": 328,
+              "bottom": 627.171875,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "1200W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 629.171875,
+              "right": 328,
+              "bottom": 648.359375,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 601.234375,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 601.234375,
+            "right": 340,
+            "bottom": 658.359375,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-300",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 551.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 520.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 359.5,
+              "bottom": 541.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 551.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 569.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 569.203125,
+              "right": 198.5,
+              "bottom": 585.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 587.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 587.140625,
+              "right": 198.5,
+              "bottom": 606.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 559.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 559.203125,
+            "right": 210.5,
+            "bottom": 616.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-300",
+      "width": 390,
+      "title": "Crown Crown CDi 4|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 171.5,
+              "bottom": 669.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 171.5,
+              "bottom": 690.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 183.5,
+            "bottom": 700.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 328,
+              "bottom": 669.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 328,
+              "bottom": 690.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 340,
+            "bottom": 700.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 718.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 718.671875,
+              "right": 171.5,
+              "bottom": 734.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 736.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 736.609375,
+              "right": 171.5,
+              "bottom": 755.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 708.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 708.671875,
+            "right": 183.5,
+            "bottom": 765.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-300bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|300BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 432.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 432.078125,
+              "right": 198.5,
+              "bottom": 448.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 450.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 450.015625,
+              "right": 198.5,
+              "bottom": 469.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 422.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 422.078125,
+            "right": 210.5,
+            "bottom": 479.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 432.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 432.078125,
+              "right": 359.5,
+              "bottom": 448.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 450.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 450.015625,
+              "right": 359.5,
+              "bottom": 469.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 422.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 422.078125,
+            "right": 371.5,
+            "bottom": 479.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 497.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 497.203125,
+              "right": 198.5,
+              "bottom": 513.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 515.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 515.140625,
+              "right": 198.5,
+              "bottom": 534.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 487.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 487.203125,
+            "right": 210.5,
+            "bottom": 544.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-300bl",
+      "width": 390,
+      "title": "Crown Crown CDi 4|300BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 581.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 581.546875,
+              "right": 171.5,
+              "bottom": 597.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 599.484375,
+              "right": 171.5,
+              "bottom": 618.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 571.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 571.546875,
+            "right": 183.5,
+            "bottom": 628.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 581.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 581.546875,
+              "right": 328,
+              "bottom": 597.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 599.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 599.484375,
+              "right": 328,
+              "bottom": 618.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 571.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 571.546875,
+            "right": 340,
+            "bottom": 628.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 646.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 646.671875,
+              "right": 171.5,
+              "bottom": 662.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 664.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 664.609375,
+              "right": 171.5,
+              "bottom": 683.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 636.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 636.671875,
+            "right": 183.5,
+            "bottom": 693.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-600",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-600",
+      "width": 390,
+      "title": "Crown Crown CDi 4|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 171.5,
+              "bottom": 645.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 171.5,
+              "bottom": 666.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 183.5,
+            "bottom": 676.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 328,
+              "bottom": 645.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 328,
+              "bottom": 666.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 340,
+            "bottom": 676.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 694.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 694.671875,
+              "right": 171.5,
+              "bottom": 710.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 712.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 712.609375,
+              "right": 171.5,
+              "bottom": 731.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 684.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 684.671875,
+            "right": 183.5,
+            "bottom": 741.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-600bl",
+      "width": 1280,
+      "title": "Crown Crown CDi 4|600BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 198.5,
+              "bottom": 472.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 198.5,
+              "bottom": 493.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 210.5,
+            "bottom": 503.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 359.5,
+              "bottom": 472.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 359.5,
+              "bottom": 493.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 371.5,
+            "bottom": 503.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 521.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 521.203125,
+              "right": 198.5,
+              "bottom": 537.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 539.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 539.140625,
+              "right": 198.5,
+              "bottom": 558.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 511.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 511.203125,
+            "right": 210.5,
+            "bottom": 568.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "cdi-4-600bl",
+      "width": 390,
+      "title": "Crown Crown CDi 4|600BL · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 171.5,
+              "bottom": 621.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 171.5,
+              "bottom": 642.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 183.5,
+            "bottom": 652.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 605.546875,
+              "right": 328,
+              "bottom": 621.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 623.484375,
+              "right": 328,
+              "bottom": 642.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 595.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 595.546875,
+            "right": 340,
+            "bottom": 652.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 670.671875,
+              "right": 171.5,
+              "bottom": 686.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 688.609375,
+              "right": 171.5,
+              "bottom": 707.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 660.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 660.671875,
+            "right": 183.5,
+            "bottom": 717.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-2125",
+      "width": 1280,
+      "title": "Crown ComTech D 2125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 567.140625,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 31.875,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 535.953125,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 537.953125,
+              "width": 129,
+              "height": 19.1875,
+              "top": 537.953125,
+              "right": 359.5,
+              "bottom": 557.140625,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 567.140625,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-2125",
+      "width": 390,
+      "title": "Crown ComTech D 2125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 662.078125,
+              "right": 171.5,
+              "bottom": 678.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 680.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 680.015625,
+              "right": 171.5,
+              "bottom": 699.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 183.5,
+            "bottom": 725.140625,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "top": 662.078125,
+              "right": 328,
+              "bottom": 693.953125,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 695.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.953125,
+              "right": 328,
+              "bottom": 715.140625,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 340,
+            "bottom": 725.140625,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-4125",
+      "width": 1280,
+      "title": "Crown ComTech D 4125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 528.078125,
+              "right": 198.5,
+              "bottom": 544.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 546.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 546.015625,
+              "right": 198.5,
+              "bottom": 565.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 518.078125,
+            "right": 210.5,
+            "bottom": 591.140625,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 31.875,
+              "top": 528.078125,
+              "right": 359.5,
+              "bottom": 559.953125,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 561.953125,
+              "width": 129,
+              "height": 19.1875,
+              "top": 561.953125,
+              "right": 359.5,
+              "bottom": 581.140625,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 518.078125,
+            "right": 371.5,
+            "bottom": 591.140625,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-4125",
+      "width": 390,
+      "title": "Crown ComTech D 4125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 662.078125,
+              "right": 171.5,
+              "bottom": 678.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 680.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 680.015625,
+              "right": 171.5,
+              "bottom": 699.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 183.5,
+            "bottom": 725.140625,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "top": 662.078125,
+              "right": 328,
+              "bottom": 693.953125,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 695.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.953125,
+              "right": 328,
+              "bottom": 715.140625,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 340,
+            "bottom": 725.140625,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-8125",
+      "width": 1280,
+      "title": "Crown ComTech D 8125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 528.078125,
+              "right": 198.5,
+              "bottom": 544.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "8채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 546.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 546.015625,
+              "right": 198.5,
+              "bottom": 565.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 518.078125,
+            "right": 210.5,
+            "bottom": 591.140625,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 31.875,
+              "top": 528.078125,
+              "right": 359.5,
+              "bottom": 559.953125,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 561.953125,
+              "width": 129,
+              "height": 19.1875,
+              "top": 561.953125,
+              "right": 359.5,
+              "bottom": 581.140625,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 73.0625,
+            "top": 518.078125,
+            "right": 371.5,
+            "bottom": 591.140625,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "comtech-d-8125",
+      "width": 390,
+      "title": "Crown ComTech D 8125 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 662.078125,
+              "right": 171.5,
+              "bottom": 678.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "8채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 680.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 680.015625,
+              "right": 171.5,
+              "bottom": 699.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 183.5,
+            "bottom": 725.140625,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+            "chars": 23,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 662.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "top": 662.078125,
+              "right": 328,
+              "bottom": 693.953125,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "125W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 695.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.953125,
+              "right": 328,
+              "bottom": 715.140625,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 652.078125,
+            "width": 148.5,
+            "height": 73.0625,
+            "top": 652.078125,
+            "right": 340,
+            "bottom": 725.140625,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-300",
+      "width": 1280,
+      "title": "Crown Crown DCi 2|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-300",
+      "width": 390,
+      "title": "Crown Crown DCi 2|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 171.5,
+              "bottom": 630.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 171.5,
+              "bottom": 651.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 183.5,
+            "bottom": 661.203125,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 328,
+              "bottom": 630.015625,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 328,
+              "bottom": 651.203125,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 340,
+            "bottom": 661.203125,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 679.203125,
+              "right": 171.5,
+              "bottom": 695.140625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 697.140625,
+              "right": 171.5,
+              "bottom": 716.328125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 669.203125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 669.203125,
+            "right": 183.5,
+            "bottom": 726.328125,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-300n",
+      "width": 1280,
+      "title": "Crown Crown DCi 2|300N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 528.078125,
+              "right": 198.5,
+              "bottom": 544.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 546.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 546.015625,
+              "right": 198.5,
+              "bottom": 565.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 518.078125,
+            "right": 210.5,
+            "bottom": 575.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 528.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 528.078125,
+              "right": 359.5,
+              "bottom": 544.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 546.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 546.015625,
+              "right": 359.5,
+              "bottom": 565.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 518.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 518.078125,
+            "right": 371.5,
+            "bottom": 575.203125,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-300n",
+      "width": 390,
+      "title": "Crown Crown DCi 2|300N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 677.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 677.546875,
+              "right": 171.5,
+              "bottom": 693.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 695.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.484375,
+              "right": 171.5,
+              "bottom": 714.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 667.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 667.546875,
+            "right": 183.5,
+            "bottom": 724.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 677.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 677.546875,
+              "right": 328,
+              "bottom": 693.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 695.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 695.484375,
+              "right": 328,
+              "bottom": 714.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 667.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 667.546875,
+            "right": 340,
+            "bottom": 724.671875,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-600",
+      "width": 1280,
+      "title": "Crown Crown DCi 2|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-600",
+      "width": 390,
+      "title": "Crown Crown DCi 2|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 171.5,
+              "bottom": 630.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 171.5,
+              "bottom": 651.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 183.5,
+            "bottom": 661.203125,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 328,
+              "bottom": 630.015625,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 328,
+              "bottom": 651.203125,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 340,
+            "bottom": 661.203125,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 679.203125,
+              "right": 171.5,
+              "bottom": 695.140625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 697.140625,
+              "right": 171.5,
+              "bottom": 716.328125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 669.203125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 669.203125,
+            "right": 183.5,
+            "bottom": 726.328125,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-600n",
+      "width": 1280,
+      "title": "Crown Crown DCi 2|600N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 551.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 520.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 359.5,
+              "bottom": 541.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 551.203125,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-2-600n",
+      "width": 390,
+      "title": "Crown Crown DCi 2|600N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 171.5,
+              "bottom": 669.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 171.5,
+              "bottom": 690.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 183.5,
+            "bottom": 700.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 653.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 653.546875,
+              "right": 328,
+              "bottom": 669.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 671.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 671.484375,
+              "right": 328,
+              "bottom": 690.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 643.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 643.546875,
+            "right": 340,
+            "bottom": 700.671875,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300",
+      "width": 1280,
+      "title": "Crown Crown DCi 4|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300",
+      "width": 390,
+      "title": "Crown Crown DCi 4|300 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 171.5,
+              "bottom": 630.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 171.5,
+              "bottom": 651.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 183.5,
+            "bottom": 661.203125,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 328,
+              "bottom": 630.015625,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 328,
+              "bottom": 651.203125,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 340,
+            "bottom": 661.203125,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 679.203125,
+              "right": 171.5,
+              "bottom": 695.140625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 697.140625,
+              "right": 171.5,
+              "bottom": 716.328125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 669.203125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 669.203125,
+            "right": 183.5,
+            "bottom": 726.328125,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300da",
+      "width": 1280,
+      "title": "Crown Crown DCi 4|300DA · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 198.5,
+              "bottom": 520.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 198.5,
+              "bottom": 541.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 210.5,
+            "bottom": 551.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 504.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 504.078125,
+              "right": 359.5,
+              "bottom": 520.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 522.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 522.015625,
+              "right": 359.5,
+              "bottom": 541.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 494.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 494.078125,
+            "right": 371.5,
+            "bottom": 551.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 569.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 569.203125,
+              "right": 198.5,
+              "bottom": 585.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 587.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 587.140625,
+              "right": 198.5,
+              "bottom": 606.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 559.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 559.203125,
+            "right": 210.5,
+            "bottom": 616.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300da",
+      "width": 390,
+      "title": "Crown Crown DCi 4|300DA · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.546875,
+              "right": 171.5,
+              "bottom": 630.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.484375,
+              "right": 171.5,
+              "bottom": 651.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 604.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.546875,
+            "right": 183.5,
+            "bottom": 661.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.546875,
+              "right": 328,
+              "bottom": 630.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.484375,
+              "right": 328,
+              "bottom": 651.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 604.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.546875,
+            "right": 340,
+            "bottom": 661.671875,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 679.671875,
+              "right": 171.5,
+              "bottom": 695.609375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U (3.5\" 높이)",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 697.609375,
+              "right": 171.5,
+              "bottom": 716.796875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 669.671875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 669.671875,
+            "right": 183.5,
+            "bottom": 726.796875,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300n",
+      "width": 1280,
+      "title": "Crown Crown DCi 4|300N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-300n",
+      "width": 390,
+      "title": "Crown Crown DCi 4|300N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 171.5,
+              "bottom": 645.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 171.5,
+              "bottom": 666.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 183.5,
+            "bottom": 676.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 328,
+              "bottom": 645.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "300W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 328,
+              "bottom": 666.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 340,
+            "bottom": 676.671875,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-600",
+      "width": 1280,
+      "title": "Crown Crown DCi 4|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 198.5,
+              "bottom": 496.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 198.5,
+              "bottom": 517.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 210.5,
+            "bottom": 527.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 480.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 480.078125,
+              "right": 359.5,
+              "bottom": 496.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 498.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 498.015625,
+              "right": 359.5,
+              "bottom": 517.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 470.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 470.078125,
+            "right": 371.5,
+            "bottom": 527.203125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 545.203125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 545.203125,
+              "right": 198.5,
+              "bottom": 561.140625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 563.140625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 563.140625,
+              "right": 198.5,
+              "bottom": 582.328125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 535.203125,
+            "width": 153,
+            "height": 57.125,
+            "top": 535.203125,
+            "right": 210.5,
+            "bottom": 592.328125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-600",
+      "width": 390,
+      "title": "Crown Crown DCi 4|600 · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 171.5,
+              "bottom": 630.015625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 171.5,
+              "bottom": 651.203125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 183.5,
+            "bottom": 661.203125,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 614.078125,
+              "right": 328,
+              "bottom": 630.015625,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 632.015625,
+              "right": 328,
+              "bottom": 651.203125,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 604.078125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 604.078125,
+            "right": 340,
+            "bottom": 661.203125,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 679.203125,
+              "right": 171.5,
+              "bottom": 695.140625,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 697.140625,
+              "right": 171.5,
+              "bottom": 716.328125,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 669.203125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 669.203125,
+            "right": 183.5,
+            "bottom": 726.328125,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-600n",
+      "width": 1280,
+      "title": "Crown Crown DCi 4|600N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 198.5,
+              "bottom": 472.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 198.5,
+              "bottom": 493.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 210.5,
+            "bottom": 503.203125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 456.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 456.078125,
+              "right": 359.5,
+              "bottom": 472.015625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 474.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 474.015625,
+              "right": 359.5,
+              "bottom": 493.203125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 446.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 446.078125,
+            "right": 371.5,
+            "bottom": 503.203125,
+            "left": 218.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "dci-4-600n",
+      "width": 390,
+      "title": "Crown Crown DCi 4|600N · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "출력 채널 수",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 171.5,
+              "bottom": 645.484375,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 171.5,
+              "bottom": 666.671875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 183.5,
+            "bottom": 676.671875,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 출력 · 4Ω Dual",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 629.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 629.546875,
+              "right": 328,
+              "bottom": 645.484375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "600W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 647.484375,
+              "right": 328,
+              "bottom": 666.671875,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 619.546875,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 619.546875,
+            "right": 340,
+            "bottom": 676.671875,
+            "left": 191.5
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "width": 1280,
+      "title": "Crown Crown I-Tech 4x3500HD · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "입·출력 채널 구성",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 574.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 574.078125,
+              "right": 198.5,
+              "bottom": 590.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "4입력/4출력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 592.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 592.015625,
+              "right": 198.5,
+              "bottom": 611.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 564.078125,
+            "width": 153,
+            "height": 89,
+            "top": 564.078125,
+            "right": 210.5,
+            "bottom": 653.078125,
+            "left": 57.5
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 연속 출력 · 4Ω·20Hz–20kHz·0.35% THD·전 채널 구동",
+            "chars": 43,
+            "lines": 3,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 574.078125,
+              "width": 129,
+              "height": 47.8125,
+              "top": 574.078125,
+              "right": 359.5,
+              "bottom": 621.890625,
+              "left": 230.5
+            }
+          },
+          "value": {
+            "text": "2400W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 230.5,
+              "y": 623.890625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 623.890625,
+              "right": 359.5,
+              "bottom": 643.078125,
+              "left": 230.5
+            }
+          },
+          "pair": {
+            "x": 218.5,
+            "y": 564.078125,
+            "width": 153,
+            "height": 89,
+            "top": 564.078125,
+            "right": 371.5,
+            "bottom": 653.078125,
+            "left": 218.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 671.078125,
+              "width": 129,
+              "height": 15.9375,
+              "top": 671.078125,
+              "right": 198.5,
+              "bottom": 687.015625,
+              "left": 69.5
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 129,
+            "client": 129,
+            "rect": {
+              "x": 69.5,
+              "y": 689.015625,
+              "width": 129,
+              "height": 19.1875,
+              "top": 689.015625,
+              "right": 198.5,
+              "bottom": 708.203125,
+              "left": 69.5
+            }
+          },
+          "pair": {
+            "x": 57.5,
+            "y": 661.078125,
+            "width": 153,
+            "height": 57.125,
+            "top": 661.078125,
+            "right": 210.5,
+            "bottom": 718.203125,
+            "left": 57.5
+          }
+        }
+      ],
+      "viewport": 1280,
+      "jsErrors": []
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "width": 390,
+      "title": "Crown Crown I-Tech 4x3500HD · AV Portal Product Detail",
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "입·출력 채널 구성",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 728.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 728.84375,
+              "right": 171.5,
+              "bottom": 744.78125,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "4입력/4출력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 746.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 746.78125,
+              "right": 171.5,
+              "bottom": 765.96875,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 718.84375,
+            "width": 148.5,
+            "height": 104.9375,
+            "top": 718.84375,
+            "right": 183.5,
+            "bottom": 823.78125,
+            "left": 35
+          }
+        },
+        {
+          "label": {
+            "text": "채널당 연속 출력 · 4Ω·20Hz–20kHz·0.35% THD·전 채널 구동",
+            "chars": 43,
+            "lines": 4,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 728.84375,
+              "width": 124.5,
+              "height": 63.75,
+              "top": 728.84375,
+              "right": 328,
+              "bottom": 792.59375,
+              "left": 203.5
+            }
+          },
+          "value": {
+            "text": "2400W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 794.59375,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 794.59375,
+              "right": 328,
+              "bottom": 813.78125,
+              "left": 203.5
+            }
+          },
+          "pair": {
+            "x": 191.5,
+            "y": 718.84375,
+            "width": 148.5,
+            "height": 104.9375,
+            "top": 718.84375,
+            "right": 340,
+            "bottom": 823.78125,
+            "left": 191.5
+          }
+        },
+        {
+          "label": {
+            "text": "랙 높이",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 841.78125,
+              "width": 124.5,
+              "height": 15.9375,
+              "top": 841.78125,
+              "right": 171.5,
+              "bottom": 857.71875,
+              "left": 47
+            }
+          },
+          "value": {
+            "text": "2U",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 859.71875,
+              "width": 124.5,
+              "height": 19.1875,
+              "top": 859.71875,
+              "right": 171.5,
+              "bottom": 878.90625,
+              "left": 47
+            }
+          },
+          "pair": {
+            "x": 35,
+            "y": 831.78125,
+            "width": 148.5,
+            "height": 57.125,
+            "top": 831.78125,
+            "right": 183.5,
+            "bottom": 888.90625,
+            "left": 35
+          }
+        }
+      ],
+      "viewport": 390,
+      "jsErrors": []
+    }
+  ],
+  "recheckedAt": "2026-10-03T08:13:44.631Z",
+  "reviewRecapturedAt": "2026-10-03T08:23:54.120Z"
+}

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
 import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 
@@ -108,6 +109,9 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
     }
   }
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json')&&!slugs.includes(name.slice(0,-5))).sort();
-  const digest=sha(names.map(name=>`${name}\0${bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n')}`).join(''));
+  const digest=sha(names.map(name=>{
+    const slug=name.slice(0,-5),raw=bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n');
+    return `${name}\0${crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(JSON.parse(raw),slug),null,2)+'\n':raw}`;
+  }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'non-BSS product JSON changed');
 });

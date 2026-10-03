@@ -536,5 +536,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 4|600BL은 CDi 4|600에 **BLU link**를 추가한 모델로 전력 스펙은 non-BL과 동일하다. BLU link·네트워크 제어/모니터링·온보드 DSP와 JBL 스피커 튜닝을 지원한다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "600",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

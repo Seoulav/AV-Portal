@@ -580,5 +580,19 @@
       "top": 55,
       "bottom": 55
     }
-  }
+  },
+  "lead": "DCi 2|600N은 DCi 2|600의 **네트워크 강화 모델**로, HARMAN 독자 BLU-Link 디지털 오디오 전송과 HiQnet 기반 TCP/IP 네트워크 제어/모니터링을 지원한다. EN 54-16 인증을 받아 생명안전 음성경보 용도로도 사용 가능하며 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 내장했다.",
+  "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "600",
+      "unit": "W"
+    }
+  ]
 }

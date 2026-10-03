@@ -475,5 +475,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 2|1200은 CDi DriveCore 아날로그 라인업 중 **2채널** 최고출력 모델로 채널당 4Ω 1200W를 낸다. 100Vrms 스피커 부하를 트랜스포머 없이 직접 구동하고 JBL 스피커 튜닝이 프리로드되어 있으며 BLU link는 지원하지 않는다.",
+  "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "1200",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U (3.5\" 높이)",
+      "unit": ""
+    }
+  ]
 }

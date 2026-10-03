@@ -549,5 +549,19 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "CTD-8125는 **8채널 125W**(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다. Dante 네트워크 오디오와 내장 DSP, 팩토리 JBL 스피커 튜닝, 웹 UI 설정, GPIO, HControl 프로토콜을 지원하며 1U 컴팩트 폼팩터에 다채널을 집약한 것이 특징이다.",
+  "subtitle": "ComTech D Series · 파워쉐어링 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "8",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 전 채널 Lo-Z/Hi-Z",
+      "value": "125",
+      "unit": "W"
+    }
+  ]
 }

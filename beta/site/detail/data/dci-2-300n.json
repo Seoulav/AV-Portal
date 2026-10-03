@@ -595,5 +595,19 @@
       "top": 55,
       "bottom": 55
     }
-  }
+  },
+  "lead": "DCi 2|300N은 DCi 2|300의 **네트워크 강화 모델**로, 밸런스 아날로그 입력과 함께 HARMAN 독자 규격인 BLU-Link 디지털 오디오 전송을 지원한다. HiQnet 기반 TCP/IP 네트워크 모니터링/제어, 프로그래머블 GPIO, 리미터/EQ/크로스오버/딜레이/매트릭스 믹서 DSP를 탑재했으며 EN 54-16(생명안전 음성경보 시스템) 인증을 받았다.",
+  "subtitle": "DCi Install Series · BLU-Link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    }
+  ]
 }

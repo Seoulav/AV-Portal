@@ -6,6 +6,7 @@ import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mj
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
+import { beforeCrownW03013, crownW03013Slug } from './crown-w03013-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -99,7 +100,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
       assert.match(product.issues[0].detail,/Dante/);
     } else assert.deepEqual(product.io,prior.beforeIo,`${slug}: I/O unchanged`);
     assert.deepEqual(product.issues,prior.beforeIssues,`${slug}: issues retained`);
-    const core = structuredClone(product);
+    const core = beforeCrownW03013(structuredClone(product),slug);
     delete core.specifications;delete core.io;delete core.issues;delete core.portMap;
     if (prior.beforeSources) core.sources = prior.beforeSources;
     assert.equal(sha(JSON.stringify(core)),prior.nonSpecificationsSha256,slug);

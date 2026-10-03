@@ -8,6 +8,7 @@ import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
+import { beforeCrownW03013 } from './crown-w03013-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const slugs = ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr'];
@@ -63,7 +64,7 @@ test('all other detail JSON files retain their pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = file.slice(0, -5);
-    const historical = beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(JSON.parse(readFileSync(new URL(file, dir), 'utf8')), slug), slug),slug),slug),slug),slug);
+    const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(JSON.parse(readFileSync(new URL(file, dir), 'utf8')), slug), slug),slug),slug),slug),slug),slug);
     const bytes = slug === 'lh115qhfebgxkr' || ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug)
       ? JSON.stringify(historical, null, 2) + '\n'
       : readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n');
