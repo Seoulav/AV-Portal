@@ -1,0 +1,173 @@
+{
+  "merge": "b5ff06ef7b2f8846eb95aebb68e8a879e24be150",
+  "pagesRunId": 37098938700,
+  "artifacts": {
+    "detail/data/dci-2-300n.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "24581086bf74dd104442d29561a4f3ee508180ee215ae7662ffbe6cd56f063b3",
+      "size": 18155
+    },
+    "detail/data/dci-2-600n.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "7d85e23ba7ab1db9cc47dd595be4df53f6e990e8524fdb327394074b72ba457c",
+      "size": 17218
+    },
+    "detail/data/dci-4-300n.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "ca29e8da0e6be558ac2c986b196bbb38f28c6262b7df0a6f1db03198a4cf0bc0",
+      "size": 18014
+    },
+    "detail/data/dci-4-600n.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "6a7769d2ad371a901691a380e6a4de9241525b11b63dc675c9195d4bda5f9f2f",
+      "size": 17766
+    },
+    "docs/manifest.json": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "9660986af1b37c3ba1083101dc9f1c668510527b7dcab4e66ab9708ae5a3851f",
+      "size": 56624
+    },
+    "manuals/crown-dci-network-series-manual-ko.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "7795eb2db600ef2fedaf08065fdb6a42c4abc1d3ea6f54704c20334aff6b41d8",
+      "size": 6320132
+    },
+    "manuals/crown-comtech-d-series-operation-manual.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "ed862bcd6c65c972279d1c96b28d1109d7ea91a6038ccfc736bccef8e0f0a663",
+      "size": 8010287
+    },
+    "manuals/crown-comtech-d-2125-data-sheet.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "755ed5fd5fc4725c452bb59f214a40e452c8a936a4ddd511244b9ad8ec728997",
+      "size": 2752710
+    },
+    "manuals/crown-comtech-d-4125-8125-data-sheet.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "9527676ce19898059d37662afbc5fdea23dcb1a40f2de23ea77df19b8815bd3c",
+      "size": 2774334
+    },
+    "manuals/crown-i-tech-4x3500hd-manual-ko.pdf": {
+      "status": 200,
+      "bytesEqual": true,
+      "sha256": "274154b97f3d572f4306d85f65f9d5a224b03c511198c91d6f79ece01cf49604",
+      "size": 20860799
+    }
+  },
+  "screens": [
+    {
+      "slug": "dci-2-300n",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "markerCount": 10,
+      "listCount": 10,
+      "listHidden": false,
+      "bodyScrollWidth": 1280,
+      "viewport": 1280,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-2-300n",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "markerCount": 10,
+      "listCount": 10,
+      "listHidden": false,
+      "bodyScrollWidth": 390,
+      "viewport": 390,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-2-600n",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "markerCount": 10,
+      "listCount": 10,
+      "listHidden": false,
+      "bodyScrollWidth": 1280,
+      "viewport": 1280,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-2-600n",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "markerCount": 10,
+      "listCount": 10,
+      "listHidden": false,
+      "bodyScrollWidth": 390,
+      "viewport": 390,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-4-300n",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "markerCount": 12,
+      "listCount": 12,
+      "listHidden": false,
+      "bodyScrollWidth": 1280,
+      "viewport": 1280,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-4-300n",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "markerCount": 12,
+      "listCount": 12,
+      "listHidden": false,
+      "bodyScrollWidth": 390,
+      "viewport": 390,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-4-600n",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "markerCount": 12,
+      "listCount": 12,
+      "listHidden": false,
+      "bodyScrollWidth": 1280,
+      "viewport": 1280,
+      "overlap": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "dci-4-600n",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "markerCount": 12,
+      "listCount": 12,
+      "listHidden": false,
+      "bodyScrollWidth": 390,
+      "viewport": 390,
+      "overlap": [],
+      "brokenImages": []
+    }
+  ],
+  "failures": []
+}
