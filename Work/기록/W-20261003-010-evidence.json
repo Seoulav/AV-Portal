@@ -1,0 +1,1880 @@
+{
+  "workId": "W-20261003-010",
+  "baseline": "2eaed4e9b13cbe5f7c2dac5893aed39c91352b70",
+  "manifest": {
+    "uploadCount": 75,
+    "uploadsSha256": "2dc3e7b619989ff983edec23e911aba689b6d6418f3cd5821c65388b0e31b0b8",
+    "mirrorsSha256": "ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef"
+  },
+  "otherDetailJsonSha256": "87b681aa708954d63599aa70b4e77e6a9be338f31cda89d9fad1b63d27b8418a",
+  "products": {
+    "ac18-26": {
+      "fileSha256": "09313c0b64a4200867d050b804016f67259e51fcbb830e1ae353dac16e443681",
+      "coreSha256": "000626d21b6a5bffa0d5a48a926de1f6fa4fabae51af3d278386b43abb14dd85",
+      "ioSha256": "39dc8221092f0c787a4f5cdcf36ac715d1a68d0b826872d9b6aadd0503fe9313",
+      "specificationsSha256": "c99fa45cf97fbf890a5380dea75a5f955556c667e458faf69ef7c4fdda380132",
+      "sourcesSha256": "59c4e553d0e4e73a5bad704d5095cb317bb84e2a544b156d49c811fef5ffef3c",
+      "specificationCount": 17,
+      "sourceCount": 1
+    },
+    "ac18-95": {
+      "fileSha256": "9bf39e7b2533721b5770cc48930a550f6765647126601001f4a261c4f337672c",
+      "coreSha256": "0ac918865e2373815b550354f81f60e9c71f622d0e01cb190ca5f0dc130f5800",
+      "ioSha256": "39dc8221092f0c787a4f5cdcf36ac715d1a68d0b826872d9b6aadd0503fe9313",
+      "specificationsSha256": "9e53929ad3f2b9b2f4a2080a76147f7b7bcd6cc12432aaf9936de86aa2812374",
+      "sourcesSha256": "bbcaac269ab1d8783559bc422903457c8540be782c946e56f7cfc6fb54dbf06b",
+      "specificationCount": 16,
+      "sourceCount": 1
+    },
+    "control-23-1": {
+      "fileSha256": "b15e0781de310449920829766979058c793249e455d3f053c8e91c0453397972",
+      "coreSha256": "f8d87bfbc5440471c583529dca104e0555fbc74f8ab2836368561ccb512c5d27",
+      "ioSha256": "c3c38cba4020fe0b74b3a181a6def70fe0d7bc95eaf059dbe7a9386048f5fe5d",
+      "specificationsSha256": "6f8e381c9535a7aeab253af771a8d1a1e55c1bc936d5579c7d09ea9e02288b0f",
+      "sourcesSha256": "f7fdc235645a72ba56867160e1f6684a3a601572f74b7a913baee614c6847619",
+      "specificationCount": 25,
+      "sourceCount": 1
+    },
+    "control-25-1": {
+      "fileSha256": "829b6de0ea482d939a11ab1410731d97ba8bdd9a5eb12f528a700b3ede0d01f1",
+      "coreSha256": "8b036e4789aae3e3cb5079bcffcec71a1d095b9f98aee93e2cd581d81871497e",
+      "ioSha256": "85accc5ed93f91dc7fbd4151ab1651d036a543c54a6bc9e473f22cc0a02f6548",
+      "specificationsSha256": "e82ad053082ef901b9b0a25b7ab2f9ea41ce70ac7dca30b831659e411331a813",
+      "sourcesSha256": "7f91f671fb151c7cfc337f407e564d35e407b667c464d180c9738838c9ca77e8",
+      "specificationCount": 25,
+      "sourceCount": 1
+    },
+    "control-28-1": {
+      "fileSha256": "fed9dc989126736c7b020a9f25d20246c1a4604ff1312026aeb991390099d329",
+      "coreSha256": "1223f49cec2e8b615052eb459acbcd7e14e996706213e69320566b54a0a9cdf3",
+      "ioSha256": "9ab1f8070aade6c4814eef7cbe39d5bd8b1d75c014caa9d597c985f4125d4bbb",
+      "specificationsSha256": "063de26d76b2896e748d8fbdaf453ab6661ec1b6fab2810062bbf212c5f51084",
+      "sourcesSha256": "07c77a3b66e7019a6adb401d56ed007c644e7aabe22d6c0e5b90728b6cffe4b6",
+      "specificationCount": 25,
+      "sourceCount": 1
+    },
+    "control-412ct": {
+      "fileSha256": "535520325e4a59f631a7693eeb387335db3d404d9662ea16207beba48939a5a7",
+      "coreSha256": "3c76ec98520b51b9a9737fcd0fe38c0f04511037a0c59538c5b2ebbbb6f9d8b7",
+      "ioSha256": "caf36be0b830822a875609e21aa33b4fb35c23cee89461ca0bf423d0f0263629",
+      "specificationsSha256": "8e0e1ef1fd23d40e49374c7fe350635dd56c3cb92ffc22a3eaa79d51e2e57173",
+      "sourcesSha256": "476a19c4bb9f414806f6396b6ee83b5e06c7a053765c3a954cc56681311d5be4",
+      "specificationCount": 15,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "68 Hz – 17 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "30W(피크 120W) 컨티뉴어스 핑크노이즈(2시간) / 20W(피크 80W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "84",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "160°(원추형)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "99 dB(컨티뉴어스 핑크노이즈) / 105 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 15W, 7.5W, 3.8W, 1.9W / 100V: 15W, 7.5W, 3.8W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "드라이버",
+          "value": "76mm(3 in) 풀레인지 드라이버, 페이퍼 콘, SBR 서라운드",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "168",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 143mm x 지름 203mm, 천장 타일 하단부터 백캔 상단까지 134mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "1.75",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "7.92",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-412c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-414ct": {
+      "fileSha256": "044b5ede6f32ef025e613b3e7b0c9279873220f2381b6380344607c3a77b3f10",
+      "coreSha256": "182a17abf32364806a60a5712d8103489859800bad259fe9a5eef22c6dcd11be",
+      "ioSha256": "b4731b9ff3bc28a7b4f886f82c02e9416d5b148f6b677be0dd6968b12e2ca3ae",
+      "specificationsSha256": "bc80f18f019c184d7324bc2967f136346d4fca1766421371e3208e4f9ba469f3",
+      "sourcesSha256": "e845084fd9d10e3ab090ca42be3fb9cd1f74b3e051498aa18fd0be226a67cb74",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "65 Hz – 20 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "45W(피크 180W) 컨티뉴어스 핑크노이즈(2시간) / 30W(피크 120W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "86",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "130°(원추형)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "103 dB(컨티뉴어스 핑크노이즈) / 109 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 25W, 12.5W, 6.3W, 3.2W / 100V: 25W, 12.5W, 6.3W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "100mm(4.0 in), 페이퍼 콘, SBR 서라운드",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "20mm(0.75 in) 소프트돔",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "168",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 186mm x 지름 203mm, 천장 타일 하단부터 백캔 상단까지 177mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "2.50",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "9.52",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-414c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-416ct": {
+      "fileSha256": "7b37aa8f135e31cd1de959688ed6030df4691e03e01466f08f38d22fe97f21e6",
+      "coreSha256": "58d3b04ed68d332391fe6fadd1cd004ee54f10ab9edebcf85a04722070a353c8",
+      "ioSha256": "c8f3f7f346cc125585830b07ef841350368e0d0c4985aa03e0e09ac4ab095e33",
+      "specificationsSha256": "2ceb7b99d143c788d72417303e0b384a3081ef64044b83aea0d51aab40ad43e9",
+      "sourcesSha256": "8151c4192246b71f9099a077b9b124da0824903cf33eb7b0b4d2d944c5fe6ca3",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "61 Hz – 20 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "75W(피크 300W) 컨티뉴어스 핑크노이즈(2시간) / 50W(피크 200W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "89",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "120°(원추형)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "108 dB(컨티뉴어스 핑크노이즈) / 114 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 30W, 15W, 7.5W, 3.8W / 100V: 30W, 15W, 7.5W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "165mm(6.5 in), 페이퍼 콘, SBR 서라운드",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "20mm(0.75 in) 소프트돔",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "223",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 233mm x 지름 261mm, 천장 타일 하단부터 백캔 상단까지 222mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "3.75",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "12.64",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-416c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-418ct": {
+      "fileSha256": "98165e4a466729f20c0b5fb500116b6d4d1ccee3619714e8be22091239e8340c",
+      "coreSha256": "f3709680045355474712da35eccaf2a301c3c24a10a492aead9859bce15395b3",
+      "ioSha256": "aa435fd85d74a56d2754d4eea46bd199e6ab7810be2bd63b03b44657fcab9a16",
+      "specificationsSha256": "ce4128cc6883e587ff8b7117b2b45ef0e20f7c9e422cf03e1abcd62f208e9527",
+      "sourcesSha256": "c0851c8d3fcae5d813b5ea3e3138bf8777d90ab4202ce01fd41e7581a4f66fed",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "57 Hz – 20 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "135W(피크 540W) 컨티뉴어스 핑크노이즈(2시간) / 90W(피크 360W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "92",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "100°(원추형)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "113 dB(컨티뉴어스 핑크노이즈) / 119 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 60W, 30W, 15W, 7.5W / 100V: 60W, 30W, 15W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "200mm(8 in), 페이퍼 콘, SBR 서라운드",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "25mm(1 in) 소프트돔",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "282",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 283mm x 지름 315mm, 천장 타일 하단부터 백캔 상단까지 271mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "5.8",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "17.72",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-418c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-419cst": {
+      "fileSha256": "b312273f6f559f3967df3cfba2147ca04acc93e595c1569916997906dea9d2c4",
+      "coreSha256": "ca342eebab2d2a5477bbef1d99af8f4b2e40f4c9974e45dd1f8d71a607a3f54f",
+      "ioSha256": "4d923367c3bf2aa600de852fa76a9c95f255018c483b1761771a7001f1ad9c37",
+      "specificationsSha256": "9bf258d8fda80eae5e441caaf87098dc433903239d523dc4ef878ed32508264e",
+      "sourcesSha256": "4d7271c8a9398db2c5194e3c9375ff899fa20b0f26db4355563b0dcb0ec0e5ac",
+      "specificationCount": 15,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "47 Hz – 320 Hz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "160W(피크 640W) 컨티뉴어스 IEC 핑크노이즈(2시간) / 80W(피크 320W) 컨티뉴어스 IEC 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "90",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "180°(원추형)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "112 dB(컨티뉴어스 핑크노이즈) / 118 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 60W, 30W, 15W, 7.5W / 100V: 60W, 30W, 15W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "드라이버",
+          "value": "200mm(8 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "308",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 289mm x 지름 346mm, 천장 타일 하단부터 백캔 상단까지 280mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL2043, NFPA 90A/70, CSA C22.2 no. 205 및 S7232/UL1480A 등재",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "8.8",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "25.27",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-419cs-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-424ct": {
+      "fileSha256": "c9e2df8276b385ecbffa9a17523432e8b8ab6dc6dc324b31badb8678a149dfb8",
+      "coreSha256": "36fc852949d78ec3464cd8359c5d6b8bca499a1a79cd58cfe60977895ea444dc",
+      "ioSha256": "5a712b7fa595d8d50ddafbca10d61c2edd29e2e82697192e88c7ddbcb3920338",
+      "specificationsSha256": "96e33827f7ed22536a1bb1b78da4eb3a17a4bf68b13ee0d9815169053f325432",
+      "sourcesSha256": "5d1c0d0638fbc68ea6decebde5176b8400185da3110f3c0691f2ba46cc80506e",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "75 Hz – 18 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "60W(피크 240W) 컨티뉴어스 핑크노이즈(2시간) / 40W(피크 160W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "85",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "130°(원추형, CRBI 적용)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "103 dB(컨티뉴어스 핑크노이즈) / 109 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "16",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 30W, 15W, 7.5W, 3.7W / 100V: 30W, 15W, 7.5W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "100mm(4 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "19mm(0.75 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "168",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 182mm x 지름 196mm, 천장 타일 하단부터 백캔 상단까지 173mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL2043, NFPA 90A/70, CSA C22.2 no. 205 및 S7232/UL1480A 등재",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "2.8",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "10.57",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-424c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-424lp": {
+      "fileSha256": "1b13cb0a647ed0eb7f5444bfbd5184ed43df295b12fb6f0fecf2a13116112e73",
+      "coreSha256": "ce0d09a8b426f351ae07b1d96922111da453953837454b243650a9f491b45a02",
+      "ioSha256": "5a712b7fa595d8d50ddafbca10d61c2edd29e2e82697192e88c7ddbcb3920338",
+      "specificationsSha256": "235d7b2a2e3c83dcb7e0d7e4aab433e4b0f45fd4b7fed4aaab4f11d9e7863e6c",
+      "sourcesSha256": "e471cf31c5efbb925a5ca4a172fc7bd2f50e38c37a67509b7ebbc96881640233",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "75 Hz – 18 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "60W(피크 240W) 컨티뉴어스 핑크노이즈(2시간) / 40W(피크 160W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "85",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "130°(원추형, CRBI 적용)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "103 dB(컨티뉴어스 핑크노이즈) / 109 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "16",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 30W, 15W, 7.5W, 3.7W / 100V: 30W, 15W, 7.5W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "100mm(4 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "19mm(0.75 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "224",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 107mm x 지름 253mm(저심도), 천장 타일 하단부터 백캔 상단까지 98mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL2043, NFPA 90A/70, CSA C22.2 no. 205 및 S7232/UL1480A 등재",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "3.0",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "10.88",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-424lp",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-426ct": {
+      "fileSha256": "8c624770631c6970c7eaf24382c0ade97be72fbb7a27aefe4551004b8f73c906",
+      "coreSha256": "e21ecd40d593dfff380aa5c1781c4e98535344abdccc9947febbdac3a7866b9b",
+      "ioSha256": "28b1580ba2c14882cd69f857b10780656c6daf99edb0dbb580ac2da72bde7aac",
+      "specificationsSha256": "00847546e0e704110fa31d9a2937d147e15e10eaccc4f93b7e1c71498e928f19",
+      "sourcesSha256": "59089afe63675b1521b54e53d47069720ace6513b8471b7512b1baf2f305f24d",
+      "specificationCount": 16,
+      "sourceCount": 1
+    },
+    "control-426lp": {
+      "fileSha256": "7d7776fa7eedabb2bd04cbdf703bbbca0eb9e46ad33e3ae50353624992762e11",
+      "coreSha256": "7935cb1e4c2aca857adfad24082cf59ee9cda7a507a1b91fad0fd1e1ab4b39d8",
+      "ioSha256": "28b1580ba2c14882cd69f857b10780656c6daf99edb0dbb580ac2da72bde7aac",
+      "specificationsSha256": "df96a050f18ff9525d0e82db069bd59d4fda7a1b6fa6a86cca9a68812322c436",
+      "sourcesSha256": "2d568f2bc17aa0c0b5cf4828e3083ce13d7d21f31e9ced5418ab79b97923ba6a",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "95 Hz – 19 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "110W(피크 440W) 컨티뉴어스 핑크노이즈(2시간) / 75W(피크 300W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "89",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "110°(원추형, CRBI 적용)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "109 dB(컨티뉴어스 핑크노이즈) / 115 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "12",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 60W, 30W, 15W, 7.5W / 100V: 60W, 30W, 15W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "165mm(6.5 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "25mm(1.0 in) 텍스타일 소프트돔, 네오디뮴 마그넷 어셈블리",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "223",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 107mm x 지름 253mm(저심도), 천장 타일 하단부터 백캔 상단까지 98mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL2043, NFPA 90A/70, CSA C22.2 no. 205 및 S7232/UL1480A 등재",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "3.9",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "12.58",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-426lp",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-440cst": {
+      "fileSha256": "414bf8a31164c530653cb06f51172e8ac13ccf0076fde4a621cac2138bcc733b",
+      "coreSha256": "dc2dc3dd7cefa9e2069268bed4065e21f3c4d2813630fc40f1daac743fd4880e",
+      "ioSha256": "0f0e556120ddeeb53536235d89da80cee2d05930b794a1fc20b957f7cf811fe6",
+      "specificationsSha256": "f46a559af6f3921c3a9e1eb99da2a587c96a809dcb308c4387083fd6ebd6cab7",
+      "sourcesSha256": "93ade423685a9a2c6918efdf9e4a56f37092f182d5189965557820ac110f59fc",
+      "specificationCount": 15,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "32 Hz – 300 Hz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "150W(피크 600W) 컨티뉴어스 핑크노이즈(2시간) / 100W(피크 400W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "95",
+          "unit": "dB",
+          "condition": "천장 코너 근접 설치(π/2 로딩)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "공식 사양표 표기 없음(\"-\")",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "NOT_FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "117 dB(컨티뉴어스 핑크노이즈) / 123 dB(피크)",
+          "unit": "",
+          "condition": "π/2 로딩",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 80W, 40W, 20W, 10W / 100V: 80W, 40W, 20W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "드라이버",
+          "value": "200mm(8 in), 트리트먼트 페이퍼 콘, SBR 서라운드, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "307",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 351mm x 지름 342mm, 천장 타일 하단부터 백캔 상단까지 337mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "8.72",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "25.02",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-440cs-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "control-447ct": {
+      "fileSha256": "5ff4b0429b0496fb74a81bb954bf5b6ca467e660d09fc1888669595feaad88a3",
+      "coreSha256": "5b1e4cbf6df04d0f696d536cfa135dc509982ec621d2544fdaf9952db3de9667",
+      "ioSha256": "aa435fd85d74a56d2754d4eea46bd199e6ab7810be2bd63b03b44657fcab9a16",
+      "specificationsSha256": "7a5500e5e203cb5b42ffc0fce017fdbc3f0ce06ac16e08714fbd2db301a524c9",
+      "sourcesSha256": "94c3cc98d44314d523875aa668fe16be4f40bf1b81cc2a4f5b4f33d9d6fdf7b8",
+      "specificationCount": 16,
+      "sourceCount": 1,
+      "beforeSpecifications": [
+        {
+          "group": "Acoustic",
+          "name": "주파수 범위(-10dB)",
+          "value": "55 Hz – 20 kHz",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전력 용량",
+          "value": "112W(피크 448W) 컨티뉴어스 핑크노이즈(2시간) / 75W(피크 300W) 컨티뉴어스 핑크노이즈(100시간)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "감도(1m/1W)",
+          "value": "91",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "커버리지 각도",
+          "value": "120°(원추형, RBI 적용)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Acoustic",
+          "name": "최대 SPL(1m)",
+          "value": "111.5 dB(컨티뉴어스 핑크노이즈) / 117.5 dB(피크)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "공칭 임피던스",
+          "value": "8",
+          "unit": "ohm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "트랜스포머 탭",
+          "value": "70V: 60W, 30W, 15W, 7.5W / 100V: 60W, 30W, 15W",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "LF 드라이버",
+          "value": "165mm(6.5 in), 트리트먼트 페이퍼 콘, 고성능 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Driver",
+          "name": "HF 드라이버",
+          "value": "25mm(1 in) 소프트돔, 네오디뮴 마그넷",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "천장 컷아웃 지름",
+          "value": "282",
+          "unit": "mm",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "치수",
+          "value": "높이 264mm x 지름 316mm, 천장 타일 하단부터 백캔 상단까지 252mm",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "안전 인증",
+          "value": "UL 2043, NFPA 90A/70, CSA C22.2 no. 205 준수 에어핸들링 공간용, UL 1480A 등재, 트랜스포머 UL 등록",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "환경 등급",
+          "value": "IP33(EN/IEC 60529), 동작온도 0°C~45°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Enclosure",
+          "name": "색상",
+          "value": "기본 화이트(RAL9003) 그릴, 도장 가능",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "순중량(개당)",
+          "value": "5.68",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "출하 중량(2조)",
+          "value": "17.27",
+          "unit": "kg",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://jblpro.com/en-US/products/control-447c-t",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    }
+  },
+  "inventory": {
+    "documents": [
+      {
+        "file": "manuals/jbl-control-400-standard-manual.pdf",
+        "products": [
+          "control-412ct",
+          "control-414ct",
+          "control-418ct"
+        ],
+        "kind": "manual",
+        "title": "JBL Control 400 Standard Coverage 사용설명서 · 412/414/418C/T",
+        "sha256": "343df381d288ab743beab2adf369a7d76378c895fae2bd9d199fd60973da7c09",
+        "bytes": 7142776
+      },
+      {
+        "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+        "products": [
+          "control-419cst",
+          "control-424ct",
+          "control-424lp",
+          "control-426ct",
+          "control-426lp"
+        ],
+        "kind": "manual",
+        "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈",
+        "sha256": "427e76dad5f03aadcd6a8832c844a3692ade3fc01792451bb08b1c5fafa666ed",
+        "bytes": 10476319
+      },
+      {
+        "file": "manuals/jbl-control-400-premium-manual.pdf",
+        "products": [
+          "control-440cst"
+        ],
+        "kind": "manual",
+        "title": "JBL Control 400 Premium Coverage 사용설명서 · 440CS/T",
+        "sha256": "21d7a8d29ce08bffd3c1419ea6031a63a3dfdaf2bacbcc5e867aea90e5c3b9ce",
+        "bytes": 19894190
+      },
+      {
+        "file": "manuals/jbl-control-412ct-spec.pdf",
+        "products": [
+          "control-412ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 412CT 공식 사양서",
+        "sha256": "4e33e007d5e2c8d004d4399d1eff3eadcb9322d718c426be0a0e494aec78a41d",
+        "bytes": 793432
+      },
+      {
+        "file": "manuals/jbl-control-414ct-spec.pdf",
+        "products": [
+          "control-414ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 414CT 공식 사양서",
+        "sha256": "4c691077c8f0a6fe34ca20c52c52b310e938fc2f6bd833776096a52676a6f3a3",
+        "bytes": 1088951
+      },
+      {
+        "file": "manuals/jbl-control-418ct-spec.pdf",
+        "products": [
+          "control-418ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 418CT 공식 사양서",
+        "sha256": "ef34aded974295ff392d7010770e75209109bfd4bf04195b62a6e67e24e7088a",
+        "bytes": 779879
+      },
+      {
+        "file": "manuals/jbl-control-419cst-spec.pdf",
+        "products": [
+          "control-419cst"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 419CST 공식 사양서",
+        "sha256": "c67d4a794c5981f4538b27af1f6b648bb93da0c8f6c76a16d2e255f41b5823f2",
+        "bytes": 714271
+      },
+      {
+        "file": "manuals/jbl-control-424ct-spec.pdf",
+        "products": [
+          "control-424ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 424CT 공식 사양서",
+        "sha256": "3d86454e727ada1172eb6521fd47b086fe586f699b2a413ad17a370a490a4cc7",
+        "bytes": 665636
+      },
+      {
+        "file": "manuals/jbl-control-424lp-spec.pdf",
+        "products": [
+          "control-424lp"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 424LP 공식 사양서",
+        "sha256": "6246ebcdb1e77b4b6c180f72a6d27a59c2fdb0b54d2e440b1ce798b9dc92ac45",
+        "bytes": 678885
+      },
+      {
+        "file": "manuals/jbl-control-426lp-spec.pdf",
+        "products": [
+          "control-426lp"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 426LP 공식 사양서",
+        "sha256": "a5f2a38aee18ba737401e33421c63a78fd84d23ac9f4aec801847d48b56d0a19",
+        "bytes": 642454
+      },
+      {
+        "file": "manuals/jbl-control-440cst-spec.pdf",
+        "products": [
+          "control-440cst"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 440CST 공식 사양서",
+        "sha256": "0c8eefe4f7a4efa9972a00ba14f9fa2841de84a988d7ecc857f73626c523715a",
+        "bytes": 904313
+      },
+      {
+        "file": "manuals/jbl-control-416ct-spec.pdf",
+        "products": [
+          "control-416ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 416C/T 사양서 · 테크데이타 제공",
+        "sha256": "36358f3eaec7894d10a5cbfbafa4446cb20cb9397e38fb5ea98a16d1c3b5e20d",
+        "bytes": 731472
+      },
+      {
+        "file": "manuals/jbl-control-447ct-spec.pdf",
+        "products": [
+          "control-447ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 447C/T 사양서 · 테크데이타 제공",
+        "sha256": "e4373fe400f4d9b56ba588c46804eacae7be968429fecd21dfe6467a94ba9a6d",
+        "bytes": 734092
+      },
+      {
+        "file": "manuals/jbl-control-416ct-manual.pdf",
+        "products": [
+          "control-416ct"
+        ],
+        "kind": "manual",
+        "title": "JBL Control 400 Standard Coverage 한글 사용설명서 · 416C/T 포함",
+        "sha256": "cabea5ab20966ca1cfdb753504a960e513d48d1cf0b0a0681d3b22902b042596",
+        "bytes": 1857073
+      },
+      {
+        "file": "manuals/jbl-control-447ct-manual.pdf",
+        "products": [
+          "control-447ct"
+        ],
+        "kind": "manual",
+        "title": "JBL Control 400 Premium Coverage 사용설명서 · 447C/T 포함",
+        "sha256": "c2bb946810038ccb37d59403423cab989e2882ee401db1d088ff486108a4418b",
+        "bytes": 2625983
+      },
+      {
+        "file": "manuals/jbl-control-416ct-drawing-2d.pdf",
+        "products": [
+          "control-416ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 416C/T 2D 도면 · 테크데이타 제공",
+        "sha256": "e01e2931ec4a2ed5a1498d7c0832d38dbc068a1fde623878227f9c1bb80d5781",
+        "bytes": 417372
+      },
+      {
+        "file": "manuals/jbl-control-447ct-drawing-2d.pdf",
+        "products": [
+          "control-447ct"
+        ],
+        "kind": "reference",
+        "title": "JBL Control 447C/T 2D 도면 · 테크데이타 제공",
+        "sha256": "47202a039d37e70fe1cbb1ca92d9d935650da68c6099f56a86cfec274265acec",
+        "bytes": 379138
+      },
+      {
+        "file": "manuals/jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+        "products": [
+          "control-23-1",
+          "control-25-1",
+          "control-28-1"
+        ],
+        "kind": "reference",
+        "title": "JBL MTC-23UB-1/25UB-1/28UB-1 브래킷 설치 지침",
+        "sha256": "e412eb09a6a137ec1f4d805a5c98bd1492972789e0cd4f1446fbd03dfa38a9d3",
+        "bytes": 69276
+      },
+      {
+        "file": "manuals/jbl-ac18-26-95-drawing.pdf",
+        "products": [
+          "ac18-26",
+          "ac18-95"
+        ],
+        "kind": "reference",
+        "title": "JBL AC18/26·AC18/95 공용 2D 도면",
+        "sha256": "81ea2fb5ba54cf11b3bb4aeb219f26cb0782a1d98acd35c96a356fb5130c8305",
+        "bytes": 57395
+      }
+    ],
+    "ac18DrawingModelMark": "AC18/95, AC18/26",
+    "excludedDrawings": [
+      "AC15",
+      "AC16",
+      "AC25",
+      "AC26",
+      "AC28"
+    ]
+  }
+}

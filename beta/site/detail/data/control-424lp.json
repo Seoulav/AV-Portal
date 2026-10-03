@@ -279,6 +279,24 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "88 Hz – 17 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "연속 프로그램 전력(2시간)",
+      "value": "120 W",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -301,6 +319,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://jblpro.com/en-US/products/control-424lp",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D1",
+      "name": "JBL Pro Control 424LP 공식 사양서",
+      "scope": "2쪽 SYSTEM 표. 게시 파일 manuals/jbl-control-424lp-spec.pdf, SHA-256 6246ebcdb1e77b4b6c180f72a6d27a59c2fdb0b54d2e440b1ce798b9dc92ac45"
     }
   ],
   "issues": [

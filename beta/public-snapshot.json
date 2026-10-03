@@ -248,45 +248,45 @@
       "io": 1
     },
     "control-412ct": {
-      "sha256": "535520325E4A59F631A7693EEB387335DB3D404D9662EA16207BEBA48939A5A7",
+      "sha256": "7A0B176758E867A3442D98989F2AFFB8CF12F91D00EEB8BF96C2439569647292",
       "features": 6,
-      "specifications": 15,
+      "specifications": 17,
       "io": 1
     },
     "control-414ct": {
-      "sha256": "044B5EDE6F32EF025E613B3E7B0C9279873220F2381B6380344607C3A77B3F10",
+      "sha256": "493517233C17518911F3B1EA56222E1B4B176DCE0F2557A3A95AE9FF05F81E27",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-416ct": {
-      "sha256": "7B37AA8F135E31CD1DE959688ED6030DF4691E03E01466F08F38D22FE97F21E6",
+      "sha256": "C9F8DDAF6EBF57C653762CEE9AA73BE28797233B3694DC34BD5BF78DA6B790F2",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-418ct": {
-      "sha256": "98165E4A466729F20C0B5FB500116B6D4D1CCEE3619714E8BE22091239E8340C",
+      "sha256": "20A4519231EE04DA5D56B77487D316157318F33F0A810B0D9532B120202612B6",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-419cst": {
-      "sha256": "B312273F6F559F3967DF3CFBA2147CA04ACC93E595C1569916997906DEA9D2C4",
+      "sha256": "0E8CF5027EC717860461E93F927BEBC886E9C9E17F9E127E5B72C6D9A063B73A",
       "features": 6,
-      "specifications": 15,
+      "specifications": 17,
       "io": 1
     },
     "control-424ct": {
-      "sha256": "C9E2DF8276B385ECBFFA9A17523432E8B8AB6DC6DC324B31BADB8678A149DFB8",
+      "sha256": "51FC2BCAEA35E1895FB81CFA983FB2265654198437A4FAF36CAB989211B7AE5D",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-424lp": {
-      "sha256": "1B13CB0A647ED0EB7F5444BFBD5184ED43DF295B12FB6F0FECF2A13116112E73",
+      "sha256": "C45C5B309FBBEEAAB6FCD486B51128D840678EE72607F1859227C4F784BC1B43",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-426ct": {
@@ -296,21 +296,21 @@
       "io": 1
     },
     "control-426lp": {
-      "sha256": "7D7776FA7EEDABB2BD04CBDF703BBBCA0EB9E46AD33E3AE50353624992762E11",
+      "sha256": "1DE04B76934F867BDDB5B398DF7A22258554AD0ABA328B65DA56EE74B9EC5253",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "control-440cst": {
-      "sha256": "414BF8A31164C530653CB06F51172E8AC13CCF0076FDE4A621CAC2138BCC733B",
+      "sha256": "A247A39093ACC93E0C528AC72A99EA4DB4144E7E1013DE96DA03CFBD6219B4E2",
       "features": 6,
-      "specifications": 15,
+      "specifications": 17,
       "io": 1
     },
     "control-447ct": {
-      "sha256": "5FF4B0429B0496FB74A81BB954BF5B6CA467E660D09FC1888669595FEAAD88A3",
+      "sha256": "120464EE48427C3607608D4C2811C09FE0E65FC31C38260A596C3B1A55055A54",
       "features": 6,
-      "specifications": 16,
+      "specifications": 18,
       "io": 1
     },
     "cpe40": {

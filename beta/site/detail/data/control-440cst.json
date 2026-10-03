@@ -270,6 +270,24 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "42 Hz – 180 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "연속 프로그램 전력(2시간)",
+      "value": "300 W",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -292,6 +310,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://jblpro.com/en-US/products/control-440cs-t",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D1",
+      "name": "JBL Pro Control 440CS/T 공식 사양서",
+      "scope": "2쪽 SYSTEM 표. 게시 파일 manuals/jbl-control-440cst-spec.pdf, SHA-256 0c8eefe4f7a4efa9972a00ba14f9fa2841de84a988d7ecc857f73626c523715a"
     }
   ],
   "issues": [

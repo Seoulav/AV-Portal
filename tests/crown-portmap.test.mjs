@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -44,7 +45,8 @@ test('all Crown products have uploaded documents and retain measurement conditio
 
 test('five distinct PDFs serve exact models in eleven new upload links', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(manifest.uploads.length, evidence.manifest.uploadCount + 11);
+  // This audit locks the W-009 upload segment; later JBL uploads are checked separately.
+  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 11);
   assert.equal(sha(JSON.stringify(manifest.uploads.slice(0,evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
   for (const doc of evidence.documents) {
@@ -103,6 +105,10 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   }
   const dir = new URL('beta/site/detail/data/',root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) hash.update(name).update('\0').update(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'));
+  for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) {
+    const slug=name.slice(0,-5);
+    const raw=readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n');
+    hash.update(name).update('\0').update(jblW03010Slug(slug)?JSON.stringify(beforeJblW03010(JSON.parse(raw),slug),null,2)+'\n':raw);
+  }
   assert.equal(hash.digest('hex'),evidence.otherDetailJsonSha256);
 });

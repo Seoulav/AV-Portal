@@ -279,6 +279,24 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "84 Hz – 19 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "연속 프로그램 전력(2시간)",
+      "value": "150 W",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -301,6 +319,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://jblpro.com/en-US/products/control-416c-t",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D1",
+      "name": "JBL Control 416C/T 사양서 · 테크데이타 제공",
+      "scope": "2쪽 SYSTEM 표. 게시 파일 manuals/jbl-control-416ct-spec.pdf, SHA-256 36358f3eaec7894d10a5cbfbafa4446cb20cb9397e38fb5ea98a16d1c3b5e20d"
     }
   ],
   "issues": [
