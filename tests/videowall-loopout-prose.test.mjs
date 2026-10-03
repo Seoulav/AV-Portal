@@ -6,6 +6,7 @@ import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 import {beforeAmxW03008,amxW03008Slug} from './amx-w03008-history.mjs';
+import {beforeCrownW03009,crownW03009Slug} from './crown-w03009-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-001-evidence.json',root),'utf8'));
@@ -27,8 +28,8 @@ test('only the two approved JSON files can change, and their protected fields st
     for(const [index,feature] of features.entries())if(index!==3)assert.deepEqual(feature,before.features[index],`${slug}: other features`);
   }
   for(const [slug,expected] of Object.entries(evidence.otherProductSha256)){
-    const historical=beforeAmxW03008(beforeHotelTvIo(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(product(slug),slug),slug),slug),slug);
-    const bytes=slug.startsWith('hg')||slug==='lh115qhfebgxkr'||['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug) ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
+    const historical=beforeCrownW03009(beforeAmxW03008(beforeHotelTvIo(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(product(slug),slug),slug),slug),slug),slug);
+    const bytes=slug.startsWith('hg')||slug==='lh115qhfebgxkr'||['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug) ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
     assert.equal(sha(gitJsonBytes(bytes)),expected,`${slug}: unrelated Git JSON blob bytes`);
   }
 });

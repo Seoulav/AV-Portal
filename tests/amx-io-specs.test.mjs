@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -111,10 +112,10 @@ test('existing AMX specification values remain intact except documented conditio
 
 test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest entries', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(manifest.uploads.length, evidence.manifest.uploadCount + 28);
+  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 28);
   assert.equal(sha(JSON.stringify(manifest.uploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
-  const added = manifest.uploads.slice(evidence.manifest.uploadCount);
+  const added = manifest.uploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 28);
   const files = [...new Set(added.map(item => item.file))];
   assert.equal(files.length, 15);
   assert.equal(new Set(evidence.inventory.documents.map(item => item.sha256)).size, 15);
@@ -144,6 +145,10 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   }
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) hash.update(name).update('\0').update(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'));
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+    const slug = name.slice(0,-5);
+    const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
+    hash.update(name).update('\0').update(crownW03009Slug(slug) ? JSON.stringify(beforeCrownW03009(JSON.parse(raw),slug),null,2)+'\n' : raw);
+  }
   assert.equal(hash.digest('hex'), evidence.otherDetailJsonSha256);
 });

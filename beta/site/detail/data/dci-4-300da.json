@@ -377,36 +377,36 @@
     {
       "group": "Physical",
       "name": "크기(W×H×D)",
-      "value": "483 x 89 x 362",
-      "unit": "mm",
-      "condition": "19\" x 3.5\" x 14.25\"",
+      "value": "483 x 89 x 362 mm (19\" x 3.5\" x 14.25\")",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "9.12",
-      "unit": "kg",
-      "condition": "20.1 lbs",
+      "value": "9.12 kg (20.1 lbs)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "랙 유닛",
-      "value": "2U",
+      "value": "2U (3.5\" 높이)",
       "unit": "",
-      "condition": "3.5\" 높이",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "전원/냉각",
       "name": "입력 전압",
-      "value": "100-240",
-      "unit": "V AC",
-      "condition": "50/60Hz, ±10%",
+      "value": "100-240 V AC (50/60Hz, ±10%)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },

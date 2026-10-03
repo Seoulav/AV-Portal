@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { enhancementErrors, prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
+import { beforeCrownW03009 } from './crown-w03009-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const proof = read('Work/기록/W-20261001-001-pilot-evidence.json');
@@ -41,7 +42,7 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
         assert.ok(Number(match[1]) <= evidence.pageCount);
       }
     }
-    const original = structuredClone(p);
+    const original = beforeCrownW03009(p, slug);
     optional.forEach(key => delete original[key]);
     for (const change of portProof.quantityChanges.filter(c => c.product === slug)) {
       assert.equal(change.previous, '');
