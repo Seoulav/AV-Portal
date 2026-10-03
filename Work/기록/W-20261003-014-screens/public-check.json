@@ -1,0 +1,5654 @@
+{
+  "testedAt": "2026-10-03T09:21:58.990Z",
+  "base": "https://seoulav.github.io/AV-Portal",
+  "results": [
+    {
+      "slug": "ac18-26",
+      "width": 390,
+      "title": "JBL AC18/26 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "시스템 전력 · AES",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "375W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "시스템 전력 · AES375W",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1W/1m",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "92dB SPL",
+            "chars": 8,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "감도 · 1W/1m92dB SPL",
+            "chars": 18,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 686.140625
+            }
+          },
+          "value": {
+            "text": "120° x 60°",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 707.328125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도120° x 60°",
+            "chars": 17,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 660.203125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 717.328125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 670.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 686.140625
+            }
+          },
+          "value": {
+            "text": "52 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 688.140625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 704.9375
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB52 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 660.203125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 717.328125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "ac18-95",
+      "width": 390,
+      "title": "JBL AC18/95 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "감도 · 1W/1m",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "93dB SPL",
+            "chars": 8,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "감도 · 1W/1m93dB SPL",
+            "chars": 18,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "90° x 50°",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도90° x 50°",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 686.140625
+            }
+          },
+          "value": {
+            "text": "52 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.140625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 704.9375
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB52 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 660.203125,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 714.9375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-100",
+      "width": 390,
+      "title": "BSS Audio BLU-100 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 입력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "12채널",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 603.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 입력12채널",
+            "chars": 11,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 613.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "아날로그 출력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "8채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 603.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 출력8채널",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 613.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "BLU link 버스",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 631.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 647.140625
+            }
+          },
+          "value": {
+            "text": "48채널",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 649.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 668.328125
+            }
+          },
+          "pair": {
+            "text": "BLU link 버스48채널",
+            "chars": 15,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 621.203125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 678.328125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-101",
+      "width": 390,
+      "title": "BSS Audio BLU-101 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 입력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "12채널",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 입력12채널",
+            "chars": 11,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "아날로그 출력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 605.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 621.015625
+            }
+          },
+          "value": {
+            "text": "8채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 623.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 642.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 출력8채널",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 595.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 652.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "BLU link 버스",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 670.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 686.140625
+            }
+          },
+          "value": {
+            "text": "48채널",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 688.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 707.328125
+            }
+          },
+          "pair": {
+            "text": "BLU link 버스48채널",
+            "chars": 15,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 660.203125,
+              "width": 148.5,
+              "height": 76.3125,
+              "right": 183.5,
+              "bottom": 736.515625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "AEC 처리 채널",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 670.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 686.140625
+            }
+          },
+          "value": {
+            "text": "12채널(독립 알고리즘)",
+            "chars": 13,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 688.140625,
+              "width": 124.5,
+              "height": 38.375,
+              "right": 328,
+              "bottom": 726.515625
+            }
+          },
+          "pair": {
+            "text": "AEC 처리 채널12채널(독립 알고리즘)",
+            "chars": 22,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 660.203125,
+              "width": 148.5,
+              "height": 76.3125,
+              "right": 340,
+              "bottom": 736.515625
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-160",
+      "width": 390,
+      "title": "BSS Audio BLU-160 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 입력 · 입력 카드 4장",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 171.5,
+              "bottom": 597.953125
+            }
+          },
+          "value": {
+            "text": "최대 16채널",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 619.140625
+            }
+          },
+          "pair": {
+            "text": "아날로그 입력 · 입력 카드 4장최대 16채널",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 183.5,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "아날로그 출력 · 출력 카드 4장",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 328,
+              "bottom": 597.953125
+            }
+          },
+          "value": {
+            "text": "최대 16채널",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 599.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 619.140625
+            }
+          },
+          "pair": {
+            "text": "아날로그 출력 · 출력 카드 4장최대 16채널",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 340,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "BLU link 버스",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.140625,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 663.078125
+            }
+          },
+          "value": {
+            "text": "256채널",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 665.078125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 684.265625
+            }
+          },
+          "pair": {
+            "text": "BLU link 버스256채널",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 637.140625,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 694.265625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "카드 슬롯",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 647.140625,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 663.078125
+            }
+          },
+          "value": {
+            "text": "4슬롯",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 665.078125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 684.265625
+            }
+          },
+          "pair": {
+            "text": "카드 슬롯4슬롯",
+            "chars": 8,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 637.140625,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 694.265625
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-50v2",
+      "width": 390,
+      "title": "BSS Audio BLU-50v2 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 입력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 527.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 543.015625
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 545.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 564.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 입력4채널",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 517.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 574.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "아날로그 출력",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 527.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 543.015625
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 545.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 564.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 출력4채널",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 517.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 574.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "BLU link 버스",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 592.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 608.140625
+            }
+          },
+          "value": {
+            "text": "48채널",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 610.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 629.328125
+            }
+          },
+          "pair": {
+            "text": "BLU link 버스48채널",
+            "chars": 15,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 582.203125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 639.328125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-aec-in",
+      "width": 390,
+      "title": "BSS Audio BLU AEC-IN · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "AEC 입력 · 카드 1장",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 554.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 570.78125
+            }
+          },
+          "value": {
+            "text": "4채널",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 572.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 591.96875
+            }
+          },
+          "pair": {
+            "text": "AEC 입력 · 카드 1장4채널",
+            "chars": 17,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 544.84375,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 616.375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커넥터 형식",
+            "chars": 6,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 554.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 570.78125
+            }
+          },
+          "value": {
+            "text": "Mic/Line Combicon x 2",
+            "chars": 21,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 572.78125,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 328,
+              "bottom": 606.375
+            }
+          },
+          "pair": {
+            "text": "커넥터 형식Mic/Line Combicon x 2",
+            "chars": 27,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 544.84375,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 616.375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "AEC 테일 길이",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 634.375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 650.3125
+            }
+          },
+          "value": {
+            "text": "200ms",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 652.3125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 671.5
+            }
+          },
+          "pair": {
+            "text": "AEC 테일 길이200ms",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 624.375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 681.5
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-dan",
+      "width": 390,
+      "title": "BSS Audio BLU-DAN · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "Dante/AES67",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 596.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 612.171875
+            }
+          },
+          "value": {
+            "text": "지원",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 614.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 633.359375
+            }
+          },
+          "pair": {
+            "text": "Dante/AES67지원",
+            "chars": 13,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 586.234375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 643.359375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "BLU link 버스",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 596.234375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 612.171875
+            }
+          },
+          "value": {
+            "text": "256채널",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 614.171875,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 633.359375
+            }
+          },
+          "pair": {
+            "text": "BLU link 버스256채널",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 586.234375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 643.359375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "Dante 펌웨어",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 661.359375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 677.296875
+            }
+          },
+          "value": {
+            "text": "Dante 4.0",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.296875,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 698.484375
+            }
+          },
+          "pair": {
+            "text": "Dante 펌웨어Dante 4.0",
+            "chars": 18,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 651.359375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 708.484375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blucard-in",
+      "width": 390,
+      "title": "BSS Audio BLUCARD-IN · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 입력 · 카드 1장",
+            "chars": 15,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 551.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 567.015625
+            }
+          },
+          "value": {
+            "text": "4채널(Mic/Line)",
+            "chars": 13,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 569.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 588.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 입력 · 카드 1장4채널(Mic/Line)",
+            "chars": 28,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 541.078125,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 612.609375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커넥터 형식",
+            "chars": 6,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 551.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 567.015625
+            }
+          },
+          "value": {
+            "text": "Mic/Line Combicon x 2",
+            "chars": 21,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 569.015625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 328,
+              "bottom": 602.609375
+            }
+          },
+          "pair": {
+            "text": "커넥터 형식Mic/Line Combicon x 2",
+            "chars": 27,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 541.078125,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 612.609375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "팬텀 파워",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 630.609375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 646.546875
+            }
+          },
+          "value": {
+            "text": "48V (nominal)",
+            "chars": 13,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 648.546875,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 665.34375
+            }
+          },
+          "pair": {
+            "text": "팬텀 파워48V (nominal)",
+            "chars": 18,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 620.609375,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 675.34375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "blucard-out",
+      "width": 390,
+      "title": "BSS Audio BLUCARD-OUT · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "아날로그 출력 · 카드 1장",
+            "chars": 15,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 551.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 567.015625
+            }
+          },
+          "value": {
+            "text": "4채널(라인)",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 569.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 588.203125
+            }
+          },
+          "pair": {
+            "text": "아날로그 출력 · 카드 1장4채널(라인)",
+            "chars": 22,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 541.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 598.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커넥터 형식",
+            "chars": 6,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 551.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 567.015625
+            }
+          },
+          "value": {
+            "text": "Line Combicon x 2",
+            "chars": 17,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 569.015625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 585.8125
+            }
+          },
+          "pair": {
+            "text": "커넥터 형식Line Combicon x 2",
+            "chars": 23,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 541.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 598.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "최대 출력 레벨",
+            "chars": 8,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 616.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 632.140625
+            }
+          },
+          "value": {
+            "text": "+19dBu",
+            "chars": 6,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 634.140625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 653.328125
+            }
+          },
+          "pair": {
+            "text": "최대 출력 레벨+19dBu",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 606.203125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 663.328125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-23-1",
+      "width": 390,
+      "title": "JBL Control 23-1 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "감도 · 평균 100Hz–10kHz",
+            "chars": 19,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 171.5,
+              "bottom": 597.953125
+            }
+          },
+          "value": {
+            "text": "86dB, 1W/1m",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 619.140625
+            }
+          },
+          "pair": {
+            "text": "감도 · 평균 100Hz–10kHz86dB, 1W/1m",
+            "chars": 30,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 183.5,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "100°H x 100°V",
+            "chars": 13,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 600.8125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도100°H x 100°V",
+            "chars": 20,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 340,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.140625,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 663.078125
+            }
+          },
+          "value": {
+            "text": "70 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 665.078125,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 681.875
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB70 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 637.140625,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 691.875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-25-1",
+      "width": 390,
+      "title": "JBL Control 25-1 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "감도 · 평균 100Hz–10kHz",
+            "chars": 19,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 171.5,
+              "bottom": 597.953125
+            }
+          },
+          "value": {
+            "text": "90dB, 1W/1m",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 619.140625
+            }
+          },
+          "pair": {
+            "text": "감도 · 평균 100Hz–10kHz90dB, 1W/1m",
+            "chars": 30,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 183.5,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "100°H x 100°V",
+            "chars": 13,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 600.8125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도100°H x 100°V",
+            "chars": 20,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 340,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.140625,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 663.078125
+            }
+          },
+          "value": {
+            "text": "60 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 665.078125,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 681.875
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB60 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 637.140625,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 691.875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-28-1",
+      "width": 390,
+      "title": "JBL Control 28-1 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "감도 · 평균 100Hz–10kHz",
+            "chars": 19,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 171.5,
+              "bottom": 597.953125
+            }
+          },
+          "value": {
+            "text": "91dB, 1W/1m",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.953125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 619.140625
+            }
+          },
+          "pair": {
+            "text": "감도 · 평균 100Hz–10kHz91dB, 1W/1m",
+            "chars": 30,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 183.5,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "100°H x 100°V",
+            "chars": 13,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 600.8125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도100°H x 100°V",
+            "chars": 20,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 340,
+              "bottom": 629.140625
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 647.140625,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 663.078125
+            }
+          },
+          "value": {
+            "text": "45 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 665.078125,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 681.875
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB45 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 637.140625,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 691.875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-412ct",
+      "width": 390,
+      "title": "JBL Control 412C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "60 W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간60 W",
+            "chars": 20,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "84dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W84dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "160°(원추형)",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 722.796875
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도160°(원추형)",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 732.796875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "68 Hz – 17 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB68 Hz – 17 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 732.796875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-414ct",
+      "width": 390,
+      "title": "JBL Control 414C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "90 W",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간90 W",
+            "chars": 20,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "86dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W86dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "130°(원추형)",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 722.796875
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도130°(원추형)",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 732.796875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "65 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB65 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 732.796875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-416ct",
+      "width": 390,
+      "title": "JBL Control 416C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "150 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간150 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "89dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W89dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "120°(원추형)",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 722.796875
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도120°(원추형)",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 732.796875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "61 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB61 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 732.796875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-418ct",
+      "width": 390,
+      "title": "JBL Control 418C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "270 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간270 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "92dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W92dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "100°(원추형)",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 722.796875
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도100°(원추형)",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 732.796875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "57 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB57 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 732.796875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-419cst",
+      "width": 390,
+      "title": "JBL Control 419CS/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "320 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간320 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "90dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W90dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "180°(원추형)",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 722.796875
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도180°(원추형)",
+            "chars": 16,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 732.796875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "47 Hz – 320 Hz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB47 Hz – 320 Hz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 732.796875
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-424ct",
+      "width": 390,
+      "title": "JBL Control 424C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "120 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간120 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "85dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W85dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "130°(원추형, CRBI 적용)",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 737.203125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도130°(원추형, CRBI 적용)",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 747.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "75 Hz – 18 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB75 Hz – 18 kHz",
+            "chars": 28,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 747.203125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-424lp",
+      "width": 390,
+      "title": "JBL Control 424LP · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "120 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간120 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "85dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W85dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "130°(원추형, CRBI 적용)",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 737.203125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도130°(원추형, CRBI 적용)",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 747.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "75 Hz – 18 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB75 Hz – 18 kHz",
+            "chars": 28,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 747.203125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-426ct",
+      "width": 390,
+      "title": "JBL Control 426C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 581.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 597.484375
+            }
+          },
+          "value": {
+            "text": "89dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 599.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 618.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W89dB",
+            "chars": 14,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 571.546875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 643.078125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 581.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 597.484375
+            }
+          },
+          "value": {
+            "text": "110°(원추형, CRBI 적용)",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 599.484375,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 328,
+              "bottom": 633.078125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도110°(원추형, CRBI 적용)",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 571.546875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 643.078125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 661.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 677.015625
+            }
+          },
+          "value": {
+            "text": "72 Hz – 19 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 679.015625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 695.8125
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB72 Hz – 19 kHz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 651.078125,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 705.8125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-426lp",
+      "width": 390,
+      "title": "JBL Control 426LP · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "220 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간220 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "89dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W89dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "110°(원추형, CRBI 적용)",
+            "chars": 18,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 737.203125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도110°(원추형, CRBI 적용)",
+            "chars": 25,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 747.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "95 Hz – 19 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB95 Hz – 19 kHz",
+            "chars": 28,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 747.203125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-440cst",
+      "width": 390,
+      "title": "JBL Control 440CS/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "300 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간300 W",
+            "chars": 21,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 183.5,
+              "bottom": 683.609375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W · 천장 코너 근접 설치(π/2 로딩)",
+            "chars": 32,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 31.875,
+              "right": 328,
+              "bottom": 652.421875
+            }
+          },
+          "value": {
+            "text": "95dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 654.421875,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 673.609375
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W · 천장 코너 근접 설치(π/2 로딩)95dB",
+            "chars": 36,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 73.0625,
+              "right": 340,
+              "bottom": 683.609375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 701.609375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 717.546875
+            }
+          },
+          "value": {
+            "text": "32 Hz – 300 Hz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 719.546875,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 736.34375
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB32 Hz – 300 Hz",
+            "chars": 28,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 691.609375,
+              "width": 148.5,
+              "height": 54.734375,
+              "right": 183.5,
+              "bottom": 746.34375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-447ct",
+      "width": 390,
+      "title": "JBL Control 447C/T · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "연속 프로그램 전력 · 2시간",
+            "chars": 16,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "224 W",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "연속 프로그램 전력 · 2시간224 W",
+            "chars": 21,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "감도 · 1m/1W",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 620.546875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 636.484375
+            }
+          },
+          "value": {
+            "text": "91dB",
+            "chars": 4,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 638.484375,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 657.671875
+            }
+          },
+          "pair": {
+            "text": "감도 · 1m/1W91dB",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 610.546875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 667.671875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "커버리지 각도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "120°(원추형, RBI 적용)",
+            "chars": 17,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 737.203125
+            }
+          },
+          "pair": {
+            "text": "커버리지 각도120°(원추형, RBI 적용)",
+            "chars": 24,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 747.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "주파수 범위 · -10dB",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 685.671875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 701.609375
+            }
+          },
+          "value": {
+            "text": "55 Hz – 20 kHz",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 703.609375,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 328,
+              "bottom": 720.40625
+            }
+          },
+          "pair": {
+            "text": "주파수 범위 · -10dB55 Hz – 20 kHz",
+            "chars": 28,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 675.671875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 747.203125
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "ec-4bv",
+      "width": 390,
+      "title": "BSS Audio EC-4BV · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "버튼",
+            "chars": 2,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "4개(멀티컬러)",
+            "chars": 8,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 603.203125
+            }
+          },
+          "pair": {
+            "text": "버튼4개(멀티컬러)",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 613.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "LCD 해상도",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 566.078125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 582.015625
+            }
+          },
+          "value": {
+            "text": "64 x 128픽셀",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 584.015625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 603.203125
+            }
+          },
+          "pair": {
+            "text": "LCD 해상도64 x 128픽셀",
+            "chars": 17,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 556.078125,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 613.203125
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "전원 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 631.203125,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 647.140625
+            }
+          },
+          "value": {
+            "text": "PoE(Power over Ethernet)",
+            "chars": 24,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 649.140625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 682.734375
+            }
+          },
+          "pair": {
+            "text": "전원 방식PoE(Power over Ethernet)",
+            "chars": 29,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 621.203125,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 692.734375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "nx-1200",
+      "width": 390,
+      "title": "AMX NX-1200 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "RS-232/422/485",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "1포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "RS-232/422/4851포트",
+            "chars": 17,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "IR/Serial 출력",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "2포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "IR/Serial 출력2포트",
+            "chars": 15,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "디지털 I/O",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "4포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "디지털 I/O4포트",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 745.09375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "입력 전압",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "12VDC",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "입력 전압12VDC",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 745.09375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "nx-2200",
+      "width": 390,
+      "title": "AMX NX-2200 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "RS-232/422/485",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "1포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "RS-232/422/4851포트",
+            "chars": 17,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "IR/Serial 출력",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "4포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "IR/Serial 출력4포트",
+            "chars": 15,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "디지털 I/O",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "4포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "디지털 I/O4포트",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 745.09375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "입력 전압",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "12VDC",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "입력 전압12VDC",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 745.09375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "nx-3200",
+      "width": 390,
+      "title": "AMX NX-3200 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "RS-232/422/485",
+            "chars": 14,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "2포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "RS-232/422/4852포트",
+            "chars": 17,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "IR/Serial 출력",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 632.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 648.78125
+            }
+          },
+          "value": {
+            "text": "8포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 650.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 669.96875
+            }
+          },
+          "pair": {
+            "text": "IR/Serial 출력8포트",
+            "chars": 15,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 622.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 679.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "디지털 I/O",
+            "chars": 7,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "8포트",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "디지털 I/O8포트",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 745.09375
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "입력 전압",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 697.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 713.90625
+            }
+          },
+          "value": {
+            "text": "12VDC",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 715.90625,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 735.09375
+            }
+          },
+          "pair": {
+            "text": "입력 전압12VDC",
+            "chars": 10,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 687.96875,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 745.09375
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "varia-100",
+      "width": 390,
+      "title": "AMX VARIA-100 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "화면 크기 · 대각선",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "10.1 (대각선)in",
+            "chars": 12,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "화면 크기 · 대각선10.1 (대각선)in",
+            "chars": 23,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "해상도",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "1920 × 1200",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "해상도1920 × 1200",
+            "chars": 14,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "전원 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 673.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 689.90625
+            }
+          },
+          "value": {
+            "text": "RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 27,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 691.90625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 725.5
+            }
+          },
+          "pair": {
+            "text": "전원 방식RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 32,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 663.96875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 735.5
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "varia-80",
+      "width": 390,
+      "title": "AMX VARIA-80 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "화면 크기 · 대각선",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "8 (대각선)in",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "화면 크기 · 대각선8 (대각선)in",
+            "chars": 20,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "해상도",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "1280 × 800",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "해상도1280 × 800",
+            "chars": 13,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "터치 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 673.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 689.90625
+            }
+          },
+          "value": {
+            "text": "정전식(Capacitive)",
+            "chars": 15,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 691.90625,
+              "width": 124.5,
+              "height": 16.796875,
+              "right": 171.5,
+              "bottom": 708.703125
+            }
+          },
+          "pair": {
+            "text": "터치 방식정전식(Capacitive)",
+            "chars": 20,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 663.96875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 735.5
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "전원 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 673.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 689.90625
+            }
+          },
+          "value": {
+            "text": "RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 27,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 691.90625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 328,
+              "bottom": 725.5
+            }
+          },
+          "pair": {
+            "text": "전원 방식RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 32,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 663.96875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 340,
+              "bottom": 735.5
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "varia-sl50",
+      "width": 390,
+      "title": "AMX VARIA-SL50 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "화면 크기 · 대각선",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "5.5 (대각선)in",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "화면 크기 · 대각선5.5 (대각선)in",
+            "chars": 22,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "해상도",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 608.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 624.78125
+            }
+          },
+          "value": {
+            "text": "720 × 1280",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 626.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 645.96875
+            }
+          },
+          "pair": {
+            "text": "해상도720 × 1280",
+            "chars": 13,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 598.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 655.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "전원 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 673.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 689.90625
+            }
+          },
+          "value": {
+            "text": "RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 27,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 691.90625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 725.5
+            }
+          },
+          "pair": {
+            "text": "전원 방식RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 32,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 663.96875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 735.5
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    },
+    {
+      "slug": "varia-sl80",
+      "width": 390,
+      "title": "AMX VARIA-SL80 · AV Portal Product Detail",
+      "viewport": 390,
+      "overflow": false,
+      "brokenImages": [],
+      "facts": [
+        {
+          "label": {
+            "text": "화면 크기 · 대각선",
+            "chars": 11,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 569.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 585.78125
+            }
+          },
+          "value": {
+            "text": "8 (대각선)in",
+            "chars": 9,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 587.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 171.5,
+              "bottom": 606.96875
+            }
+          },
+          "pair": {
+            "text": "화면 크기 · 대각선8 (대각선)in",
+            "chars": 20,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 559.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 183.5,
+              "bottom": 616.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "해상도",
+            "chars": 3,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 569.84375,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 328,
+              "bottom": 585.78125
+            }
+          },
+          "value": {
+            "text": "1280 × 800",
+            "chars": 10,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 203.5,
+              "y": 587.78125,
+              "width": 124.5,
+              "height": 19.1875,
+              "right": 328,
+              "bottom": 606.96875
+            }
+          },
+          "pair": {
+            "text": "해상도1280 × 800",
+            "chars": 13,
+            "lines": 3,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 191.5,
+              "y": 559.84375,
+              "width": 148.5,
+              "height": 57.125,
+              "right": 340,
+              "bottom": 616.96875
+            }
+          }
+        },
+        {
+          "label": {
+            "text": "전원 방식",
+            "chars": 5,
+            "lines": 1,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 634.96875,
+              "width": 124.5,
+              "height": 15.9375,
+              "right": 171.5,
+              "bottom": 650.90625
+            }
+          },
+          "value": {
+            "text": "RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 27,
+            "lines": 2,
+            "scroll": 125,
+            "client": 125,
+            "rect": {
+              "x": 47,
+              "y": 652.90625,
+              "width": 124.5,
+              "height": 33.59375,
+              "right": 171.5,
+              "bottom": 686.5
+            }
+          },
+          "pair": {
+            "text": "전원 방식RJ-45, PoE 802.3af (15.4 W)",
+            "chars": 32,
+            "lines": 4,
+            "scroll": 149,
+            "client": 149,
+            "rect": {
+              "x": 35,
+              "y": 624.96875,
+              "width": 148.5,
+              "height": 71.53125,
+              "right": 183.5,
+              "bottom": 696.5
+            }
+          }
+        }
+      ],
+      "loadFailure": false,
+      "jsErrors": []
+    }
+  ]
+}

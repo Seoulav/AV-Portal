@@ -1,0 +1,270 @@
+{
+  "checkedAt": "2026-10-03T09:21:01.046Z",
+  "mergeSha": "0ef2d92d4313f1050dddfb7f5186c91553c1b882",
+  "records": [
+    {
+      "path": "detail/data/ac18-26.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/ac18-26.json",
+      "status": 200,
+      "localSha256": "f3291287edf673baf6d5cd8db5ccd8b552c8496b0af95d041b9f47ea1cc93b80",
+      "publicSha256": "f3291287edf673baf6d5cd8db5ccd8b552c8496b0af95d041b9f47ea1cc93b80",
+      "match": true
+    },
+    {
+      "path": "detail/data/ac18-95.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/ac18-95.json",
+      "status": 200,
+      "localSha256": "51fd3104f359813d4d629c8a488dfbbd59652c97d80e31ae0079e5f29e6920f1",
+      "publicSha256": "51fd3104f359813d4d629c8a488dfbbd59652c97d80e31ae0079e5f29e6920f1",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-100.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-100.json",
+      "status": 200,
+      "localSha256": "818f7777e0d963bd813134abd92ffc82a909f49c7d45439b66da666c5a819245",
+      "publicSha256": "818f7777e0d963bd813134abd92ffc82a909f49c7d45439b66da666c5a819245",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-101.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-101.json",
+      "status": 200,
+      "localSha256": "28e05b60796a96202a080c2830717bdb06071392198dde1082cd2742346357f5",
+      "publicSha256": "28e05b60796a96202a080c2830717bdb06071392198dde1082cd2742346357f5",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-160.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-160.json",
+      "status": 200,
+      "localSha256": "cb4c4521120741d1a9d41ef32cf088e3bb86ca09b674e4de6d0688060ab2771d",
+      "publicSha256": "cb4c4521120741d1a9d41ef32cf088e3bb86ca09b674e4de6d0688060ab2771d",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-50v2.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-50v2.json",
+      "status": 200,
+      "localSha256": "444a0cb4ef81fc9f693c55e1391d612db3b63028e192d5bc7e5c606f76fddbc3",
+      "publicSha256": "444a0cb4ef81fc9f693c55e1391d612db3b63028e192d5bc7e5c606f76fddbc3",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-aec-in.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-aec-in.json",
+      "status": 200,
+      "localSha256": "fe73438a7ef72285ad22ad5e477d98a1128424e71321340bed0081e218805d00",
+      "publicSha256": "fe73438a7ef72285ad22ad5e477d98a1128424e71321340bed0081e218805d00",
+      "match": true
+    },
+    {
+      "path": "detail/data/blu-dan.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blu-dan.json",
+      "status": 200,
+      "localSha256": "6574870f30c7fc38b7edfef50c00ee173db68686e63294ef25206eedaddfc644",
+      "publicSha256": "6574870f30c7fc38b7edfef50c00ee173db68686e63294ef25206eedaddfc644",
+      "match": true
+    },
+    {
+      "path": "detail/data/blucard-in.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blucard-in.json",
+      "status": 200,
+      "localSha256": "fea26ff22aa42840a7395ca94dd3a6408e4c6cf1655b35f01b1b149f5c2246d1",
+      "publicSha256": "fea26ff22aa42840a7395ca94dd3a6408e4c6cf1655b35f01b1b149f5c2246d1",
+      "match": true
+    },
+    {
+      "path": "detail/data/blucard-out.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/blucard-out.json",
+      "status": 200,
+      "localSha256": "9b45bbb098e2737699e9985aac408c7b253c5fcc101a5c83c42d8b9d9988027d",
+      "publicSha256": "9b45bbb098e2737699e9985aac408c7b253c5fcc101a5c83c42d8b9d9988027d",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-23-1.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-23-1.json",
+      "status": 200,
+      "localSha256": "894191d11805141860ad63b6c8f83beb51255aba82bd5b6e6765915aa158573f",
+      "publicSha256": "894191d11805141860ad63b6c8f83beb51255aba82bd5b6e6765915aa158573f",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-25-1.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-25-1.json",
+      "status": 200,
+      "localSha256": "881888d29677b86e0b975f1b93286f2764715ab530f5b40cb3e309b2b6787514",
+      "publicSha256": "881888d29677b86e0b975f1b93286f2764715ab530f5b40cb3e309b2b6787514",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-28-1.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-28-1.json",
+      "status": 200,
+      "localSha256": "89fa8ce75a6f7ad6ed00758e4faf310d7fe369a3016ed4dd718ddc553e9e6c7d",
+      "publicSha256": "89fa8ce75a6f7ad6ed00758e4faf310d7fe369a3016ed4dd718ddc553e9e6c7d",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-412ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-412ct.json",
+      "status": 200,
+      "localSha256": "e1fb289550c678dd92485658c4029aa0b489f5b39c33e4ef7acf593055eb0440",
+      "publicSha256": "e1fb289550c678dd92485658c4029aa0b489f5b39c33e4ef7acf593055eb0440",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-414ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-414ct.json",
+      "status": 200,
+      "localSha256": "0df3f748b33991bde468b428c5ed241899569d2d62b96c4da0b3673afaebc711",
+      "publicSha256": "0df3f748b33991bde468b428c5ed241899569d2d62b96c4da0b3673afaebc711",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-416ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-416ct.json",
+      "status": 200,
+      "localSha256": "7ff8195794cf3b4a2c4517eda8cae7b562b8c70c1d37d5dbc505c17a84085b12",
+      "publicSha256": "7ff8195794cf3b4a2c4517eda8cae7b562b8c70c1d37d5dbc505c17a84085b12",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-418ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-418ct.json",
+      "status": 200,
+      "localSha256": "f2d45315119a630a7a781e7a7dd789fe9311c75c1ad2f07c9f180d0cb7d87758",
+      "publicSha256": "f2d45315119a630a7a781e7a7dd789fe9311c75c1ad2f07c9f180d0cb7d87758",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-419cst.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-419cst.json",
+      "status": 200,
+      "localSha256": "abe2c39720ee7a5ca08f12086a858005ad89aefda5088436c385ccc0051dcce8",
+      "publicSha256": "abe2c39720ee7a5ca08f12086a858005ad89aefda5088436c385ccc0051dcce8",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-424ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-424ct.json",
+      "status": 200,
+      "localSha256": "786faf62780ecd2ce132ae16de5698b977411e518249d313c41f8cc37de7664a",
+      "publicSha256": "786faf62780ecd2ce132ae16de5698b977411e518249d313c41f8cc37de7664a",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-424lp.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-424lp.json",
+      "status": 200,
+      "localSha256": "a111feba7b52715a54b57daeba2892c905db7d03da56575f9fcc833d554bdd19",
+      "publicSha256": "a111feba7b52715a54b57daeba2892c905db7d03da56575f9fcc833d554bdd19",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-426ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-426ct.json",
+      "status": 200,
+      "localSha256": "8cfd85f54b6de8407c080f56c42c1c324137fb813951f71c371b01a7ed8a0ce3",
+      "publicSha256": "8cfd85f54b6de8407c080f56c42c1c324137fb813951f71c371b01a7ed8a0ce3",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-426lp.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-426lp.json",
+      "status": 200,
+      "localSha256": "bdc159172a4043aae6a5b71fcf855061e6caf9a7e6821643cb450a0fdffea322",
+      "publicSha256": "bdc159172a4043aae6a5b71fcf855061e6caf9a7e6821643cb450a0fdffea322",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-440cst.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-440cst.json",
+      "status": 200,
+      "localSha256": "f0e4b27c0f30e9165ae7db9049fc9865795fc04142cda4ad55c91a7d84d73512",
+      "publicSha256": "f0e4b27c0f30e9165ae7db9049fc9865795fc04142cda4ad55c91a7d84d73512",
+      "match": true
+    },
+    {
+      "path": "detail/data/control-447ct.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/control-447ct.json",
+      "status": 200,
+      "localSha256": "c7310888b35bc3b7ced937b6c963ce25d5785d4f1b43ac48f8fc88b76c4e6cd4",
+      "publicSha256": "c7310888b35bc3b7ced937b6c963ce25d5785d4f1b43ac48f8fc88b76c4e6cd4",
+      "match": true
+    },
+    {
+      "path": "detail/data/ec-4bv.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/ec-4bv.json",
+      "status": 200,
+      "localSha256": "9a2f39fa5c31c62a32754b6c00070a5f2956cc4091e473617648815912915b1b",
+      "publicSha256": "9a2f39fa5c31c62a32754b6c00070a5f2956cc4091e473617648815912915b1b",
+      "match": true
+    },
+    {
+      "path": "detail/data/nx-1200.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/nx-1200.json",
+      "status": 200,
+      "localSha256": "ea8ed36fb628c73bbc7e7f94c6273ff18ed2ef353280124cb49236359621bbf0",
+      "publicSha256": "ea8ed36fb628c73bbc7e7f94c6273ff18ed2ef353280124cb49236359621bbf0",
+      "match": true
+    },
+    {
+      "path": "detail/data/nx-2200.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/nx-2200.json",
+      "status": 200,
+      "localSha256": "d2dd9d3fc58fdb355e99e6525b5b219c4258961b04078e715f4afc41af74a968",
+      "publicSha256": "d2dd9d3fc58fdb355e99e6525b5b219c4258961b04078e715f4afc41af74a968",
+      "match": true
+    },
+    {
+      "path": "detail/data/nx-3200.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/nx-3200.json",
+      "status": 200,
+      "localSha256": "78ea2581a93bf5248364032441c2ea5404b40bcac24cce212c2933b16ca88e37",
+      "publicSha256": "78ea2581a93bf5248364032441c2ea5404b40bcac24cce212c2933b16ca88e37",
+      "match": true
+    },
+    {
+      "path": "detail/data/varia-100.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/varia-100.json",
+      "status": 200,
+      "localSha256": "a88cb00cd858946595f01dbc1c37bfe7934398bfedb1357e9e47d1d4bf5d99e1",
+      "publicSha256": "a88cb00cd858946595f01dbc1c37bfe7934398bfedb1357e9e47d1d4bf5d99e1",
+      "match": true
+    },
+    {
+      "path": "detail/data/varia-80.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/varia-80.json",
+      "status": 200,
+      "localSha256": "61e360d68fc1fc3957f4cc8ec23c4becb979682c808891c988e30612f43e1c77",
+      "publicSha256": "61e360d68fc1fc3957f4cc8ec23c4becb979682c808891c988e30612f43e1c77",
+      "match": true
+    },
+    {
+      "path": "detail/data/varia-sl50.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/varia-sl50.json",
+      "status": 200,
+      "localSha256": "08fd069de53b01e5e199367b7e594f51a8f2867fc0536fbf8cc886c3fa4bf2c7",
+      "publicSha256": "08fd069de53b01e5e199367b7e594f51a8f2867fc0536fbf8cc886c3fa4bf2c7",
+      "match": true
+    },
+    {
+      "path": "detail/data/varia-sl80.json",
+      "url": "https://seoulav.github.io/AV-Portal/detail/data/varia-sl80.json",
+      "status": 200,
+      "localSha256": "aa5fe803f45ec46b664edf955d4a26c1763b3fc728ab72c794e88244f1571f99",
+      "publicSha256": "aa5fe803f45ec46b664edf955d4a26c1763b3fc728ab72c794e88244f1571f99",
+      "match": true
+    },
+    {
+      "path": "search-index.json",
+      "url": "https://seoulav.github.io/AV-Portal/search-index.json",
+      "status": 200,
+      "localSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+      "publicSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+      "match": true
+    }
+  ]
+}
