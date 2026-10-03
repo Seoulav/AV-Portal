@@ -1,0 +1,552 @@
+{
+  "base": "https://seoulav.github.io/AV-Portal/",
+  "mergeCommit": "ef8b3bc0ee278964e52720cda252b5c4c5cc8a43",
+  "pagesRun": 37083532965,
+  "bytes": [
+    {
+      "path": "docs/manifest.json",
+      "status": 200,
+      "publicSha256": "6a37b0f41c2903ec9ccdba50c9edc2477b5095cc97459acc78746f84f7a0faf5",
+      "localSha256": "cc2f7658396a8261565db3a59ac8864287258ea7eb9ef35ce77dbf919c2f039d",
+      "equal": false,
+      "gitBlobSha256": "6a37b0f41c2903ec9ccdba50c9edc2477b5095cc97459acc78746f84f7a0faf5",
+      "equalToGitBlob": true,
+      "equalAfterLineEndingNormalization": true,
+      "difference": "Windows checkout CRLF vs Git/Pages LF; parsed JSON and Git blob are identical"
+    },
+    {
+      "path": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "status": 200,
+      "publicSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "localSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "equal": true
+    },
+    {
+      "path": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+      "status": 200,
+      "publicSha256": "67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397",
+      "localSha256": "67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397",
+      "equal": true
+    },
+    {
+      "path": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+      "status": 200,
+      "publicSha256": "663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c",
+      "localSha256": "663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c",
+      "equal": true
+    },
+    {
+      "path": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+      "status": 200,
+      "publicSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+      "localSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+      "equal": true
+    },
+    {
+      "path": "manuals/samsung-115qhf-spec-ko.pdf",
+      "status": 200,
+      "publicSha256": "4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962",
+      "localSha256": "4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962",
+      "equal": true
+    },
+    {
+      "path": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+      "status": 200,
+      "publicSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "localSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "equal": true
+    },
+    {
+      "path": "manuals/winstar-videowall-spec-ko.pdf",
+      "status": 200,
+      "publicSha256": "f8d4a12db1649faf970ba3eca823ead410e06844ceae7e617ddf6279790d2fe8",
+      "localSha256": "f8d4a12db1649faf970ba3eca823ead410e06844ceae7e617ddf6279790d2fe8",
+      "equal": true
+    },
+    {
+      "path": "manuals/samsung-videowall-product-guide-ko.pdf",
+      "status": 200,
+      "publicSha256": "3f5751cbcc8e8ffb8bff77513d889b9d17735ef46c48e0e329601af9d47bd73d",
+      "localSha256": "3f5751cbcc8e8ffb8bff77513d889b9d17735ef46c48e0e329601af9d47bd73d",
+      "equal": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qpdx5k-qhfx-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-115qhf-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-115qhf-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 112",
+        "canvas": true
+      },
+      "downloadName": "samsung-qpdx5k-qhfx-manual-ko.pdf",
+      "downloadSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+      "expectedSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc"
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-videowall-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-videowall-spec-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 75",
+        "canvas": true
+      },
+      "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+      "downloadSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "expectedSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188"
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-videowall-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-videowall-spec-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 75",
+        "canvas": true
+      },
+      "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+      "downloadSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "expectedSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188"
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 130",
+        "canvas": true
+      },
+      "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+      "downloadSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+      "expectedSha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-qpdx5k-qhfx-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-115qhf-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-115qhf-spec-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 112",
+        "canvas": true
+      },
+      "downloadName": "samsung-qpdx5k-qhfx-manual-ko.pdf",
+      "downloadSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+      "expectedSha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc"
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-videowall-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-videowall-spec-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 75",
+        "canvas": true
+      },
+      "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+      "downloadSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "expectedSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188"
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "matched": [
+        {
+          "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+        },
+        {
+          "file": "manuals/winstar-videowall-spec-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/winstar-videowall-spec-ko.pdf"
+        },
+        {
+          "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+          "rows": 1,
+          "open": 1,
+          "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+        }
+      ],
+      "viewer": {
+        "open": true,
+        "total": "/ 75",
+        "canvas": true
+      },
+      "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+      "downloadSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+      "expectedSha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188"
+    }
+  ]
+}
