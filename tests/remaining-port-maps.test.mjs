@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {prepareEnhancements, portMapImageMatches} from '../prototype/brc-am7/detail-enhancements.mjs';
+import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
@@ -69,7 +70,10 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
     // W-20261002-005 updates only Samsung provenance; its new audit locks the current rows.
     const later = samsung.products[file.slice(0,-5)];
     if (later) assert.equal(later.previousFileSha256,hash,file+' prior approved Git bytes');
-    else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
+    else if (amxW03008Slug(file.slice(0,-5))) {
+      const previous = beforeAmxW03008(read('beta/site/detail/data/'+file),file.slice(0,-5));
+      assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-008 Git bytes');
+    } else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
   }
 });
 

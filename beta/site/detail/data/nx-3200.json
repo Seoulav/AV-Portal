@@ -134,18 +134,18 @@
     {
       "group": "General",
       "name": "크기(H×W×D)",
-      "value": "45.15 × 431.80 × 231.64",
-      "unit": "mm",
-      "condition": "1 4/5\" × 17\" × 9 1/8\"",
+      "value": "45.15 × 431.80 × 231.64 mm (1 4/5\" × 17\" × 9 1/8\")",
+      "unit": "",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
     {
       "group": "General",
       "name": "무게",
-      "value": "2.758",
-      "unit": "kg",
-      "condition": "6.08 lb",
+      "value": "2.758 kg (6.08 lb)",
+      "unit": "",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
@@ -163,7 +163,16 @@
       "name": "입력 전압",
       "value": "12",
       "unit": "VDC",
-      "condition": "허용 범위 9-18VDC(typical)",
+      "condition": "",
+      "source": "D",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전압 범위",
+      "value": "9-18VDC (typical)",
+      "unit": "",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
@@ -188,27 +197,27 @@
     {
       "group": "Power",
       "name": "전원 커넥터",
-      "value": "3.5mm Phoenix",
+      "value": "3.5mm Phoenix (리테이닝 스크류 포함)",
       "unit": "",
-      "condition": "리테이닝 스크류 포함",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
     {
       "group": "Environment",
       "name": "동작 온도",
-      "value": "0 ~ 50",
-      "unit": "°C",
-      "condition": "32°F ~ 122°F",
+      "value": "0 ~ 50 °C (32°F ~ 122°F)",
+      "unit": "",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
     {
       "group": "Environment",
       "name": "보관 온도",
-      "value": "-10 ~ 60",
-      "unit": "°C",
-      "condition": "14°F ~ 140°F",
+      "value": "-10 ~ 60 °C (14°F ~ 140°F)",
+      "unit": "",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
@@ -242,18 +251,18 @@
     {
       "group": "Control",
       "name": "프로그램 포트",
-      "value": "USB Standard B",
+      "value": "USB Standard B (1개)",
       "unit": "",
-      "condition": "1개",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
     {
       "group": "Control",
       "name": "USB Host 포트",
-      "value": "USB Standard A",
+      "value": "USB Standard A (2개(전면 1, 후면 1))",
       "unit": "",
-      "condition": "2개(전면 1, 후면 1)",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
@@ -269,9 +278,9 @@
     {
       "group": "Memory",
       "name": "메모리 카드",
-      "value": "8",
+      "value": "8 (SD)",
       "unit": "GB",
-      "condition": "SD",
+      "condition": "",
       "source": "D",
       "verification": "FOUND"
     },
@@ -390,6 +399,18 @@
       "condition": "8핀 터미널 2개에 8채널 분산",
       "source": "D",
       "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB 2.0 호스트",
+      "signal": "USB 호스트",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "USB 2.0",
+      "availability": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -404,6 +425,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.amx.com/en-US/products/nx-3200",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "AMX NX-Series Controllers Hardware Reference Manual",
+      "scope": "표지 NX-1200·NX-2200·NX-3200 적용, 10쪽 모델별 기능표 USB 2.0 host 2개. 사용자 제공 NX-SeriesControllers.HardwareReferenceManual.pdf; SHA-256 3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3"
     }
   ],
   "issues": [],

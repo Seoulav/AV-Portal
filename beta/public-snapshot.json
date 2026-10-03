@@ -938,22 +938,22 @@
       "io": 8
     },
     "nx-1200": {
-      "sha256": "C691A4DD9430F844E9649711A794B21EBAFB388368748548E59F5E32DA397B5F",
+      "sha256": "D93CF0985C491021E39AD186FDA35E471542F5A63D75A874589C9B02C01933BA",
       "features": 6,
-      "specifications": 19,
-      "io": 7
+      "specifications": 20,
+      "io": 8
     },
     "nx-2200": {
-      "sha256": "4BE3912A687D7C83ED23F574C52721930B367BEE869B54AAD85234C1C9918172",
+      "sha256": "CABDF838AA47BFA1251BA76DE8ED97EB6747C2F7D73EA8EC50057FBA88B87C4B",
       "features": 6,
-      "specifications": 19,
-      "io": 8
+      "specifications": 20,
+      "io": 9
     },
     "nx-3200": {
-      "sha256": "155828E7F972E18E0FD04B815C7D7ECD8703CD6586AAF73E6538483167D3841B",
+      "sha256": "64D19E03FF1D80A73ECA94942B6E02FC20173D9A98DDDE08FB68AB3EC9912973",
       "features": 6,
-      "specifications": 19,
-      "io": 8
+      "specifications": 20,
+      "io": 9
     },
     "plixus-ae-r-dante": {
       "sha256": "A9D559427FD2EB7776E8B0C644366DA0EDB093AA2229F8EDF034D23B3083B521",
@@ -1376,27 +1376,27 @@
       "io": 9
     },
     "varia-100": {
-      "sha256": "289589CF548798CD502B20088F85E035A5B746F976234A05BAF8BD45C92D340F",
+      "sha256": "F37B18A47146BEEC56B08B83B88E8DFA19894240B5D1951CBC71655F7EE8A9A2",
       "features": 6,
-      "specifications": 12,
+      "specifications": 13,
       "io": 1
     },
     "varia-80": {
-      "sha256": "27FBF8D769942B7718653E81674DFB6FCE6E949035426AF6EC7EF12F24F41BC5",
+      "sha256": "5777142F33A672B4F39C9DB8F5EFB804953C2BF312C285741F5117BF521B8C33",
       "features": 6,
-      "specifications": 12,
-      "io": 1
+      "specifications": 24,
+      "io": 2
     },
     "varia-sl50": {
-      "sha256": "97B537ADE04641CB4AB33003B28B9F8EE7F3CB66F5E29E19F6B28A8B39B84DA6",
+      "sha256": "E1F4AAD5E713A5C29F7152DE5FA007A86C83B43D2E0EFCB700ED25137B33582A",
       "features": 6,
-      "specifications": 12,
+      "specifications": 13,
       "io": 1
     },
     "varia-sl80": {
-      "sha256": "6AFED3791A2847CDD374A16C145C7B26137935C2F5E88B4B3BF009E4B2FD200C",
+      "sha256": "B523229631200613751B2312E437540E4611C839A75B3F0740C9B07C4FA6EA80",
       "features": 6,
-      "specifications": 12,
+      "specifications": 14,
       "io": 1
     },
     "vcm35": {

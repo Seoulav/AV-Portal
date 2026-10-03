@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const evidence = JSON.parse(readFileSync(new URL('Work/기록/W-20261003-006-evidence.json', root), 'utf8'));
@@ -102,10 +103,10 @@ test('55-inch facts use verified display axes; unrelated product fields and 75-i
 
 test('one intact 70-page Korean manual is uploaded for only the two whiteboards', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(manifest.uploads.length, evidence.manifest.uploadCount + 2);
+  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 2);
   assert.equal(sha(JSON.stringify(manifest.uploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
-  const added = manifest.uploads.slice(evidence.manifest.uploadCount);
+  const added = manifest.uploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 2);
   assert.deepEqual(added.map(entry => entry.slug).sort(), slugs);
   for (const entry of added) {
     assert.equal(entry.file, evidence.manual.published);
@@ -123,7 +124,10 @@ test('every other detail JSON retains its pre-change Git LF bytes', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
-    hash.update(name).update('\0').update(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'));
+    const slug = name.slice(0,-5);
+    const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
+    const historical = amxW03008Slug(slug) ? JSON.stringify(beforeAmxW03008(JSON.parse(raw),slug),null,2)+'\n' : raw;
+    hash.update(name).update('\0').update(historical);
   }
   assert.equal(hash.digest('hex'), evidence.otherDetailJsonSha256);
 });

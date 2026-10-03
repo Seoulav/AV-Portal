@@ -4,6 +4,7 @@ import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
+import {beforeAmxW03008,amxW03008Slug} from './amx-w03008-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
@@ -136,8 +137,8 @@ test('W-005 published PDFs match supplied bytes and all earlier uploads/products
   for (const name of names) {
     const slug = name.slice(0, -5);
     const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
-    const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug)
-      ? JSON.stringify(beforeSamsungWhiteboard(JSON.parse(raw), slug), null, 2) + '\n'
+    const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug)
+      ? JSON.stringify(beforeAmxW03008(beforeSamsungWhiteboard(JSON.parse(raw), slug),slug), null, 2) + '\n'
       : raw;
     hash.update(name).update('\0').update(historical);
   }
