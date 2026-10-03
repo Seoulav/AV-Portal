@@ -553,5 +553,19 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "Shure **ULXD4**는 ULX-D 단일 채널 랙 수신기입니다. 내장 Dante 없이 이더넷은 제어와 펌웨어 업데이트에 사용합니다.",
+  "subtitle": "Shure ULX-D Digital Wireless · 단일 채널 수신기",
+  "keyFacts": [
+    {
+      "label": "독립 수신 채널",
+      "value": "1",
+      "unit": "채널"
+    },
+    {
+      "label": "RF 반송 대역 · 지역별",
+      "value": "470–932",
+      "unit": "MHz"
+    }
+  ]
 }

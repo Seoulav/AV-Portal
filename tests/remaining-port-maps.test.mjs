@@ -9,6 +9,7 @@ import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013 } from './crown-w03013-history.mjs';
+import {beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
@@ -90,6 +91,9 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
     } else if (harmanW03014Slug(file.slice(0,-5))) {
       const prior=beforeHarmanW03014Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-014 Git bytes');
+    } else if(shureW04003Slug(file.slice(0,-5))) {
+      const prior=beforeShureW04003Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
+      assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-003 Git bytes');
     } else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
   }
 });

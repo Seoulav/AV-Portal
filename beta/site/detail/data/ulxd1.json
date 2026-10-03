@@ -402,5 +402,24 @@
     "footerNote": "Shure ULXD1 Bodypack Transmitter · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **ULXD1**은 ULX-D 바디팩 무선 송신기입니다. TA4M 입력에 유선 마이크나 악기 케이블을 연결해 무선으로 전송합니다.",
+  "subtitle": "Shure ULX-D Digital Wireless · 바디팩 송신기",
+  "keyFacts": [
+    {
+      "label": "RF 출력 파워 · 지역별",
+      "value": "1 mW / 10 mW / 20 mW",
+      "unit": ""
+    },
+    {
+      "label": "마이크·악기 입력",
+      "value": "4핀 male mini connector (TA4M)",
+      "unit": ""
+    },
+    {
+      "label": "RF 반송 대역 · 지역별",
+      "value": "470–932",
+      "unit": "MHz"
+    }
+  ]
 }

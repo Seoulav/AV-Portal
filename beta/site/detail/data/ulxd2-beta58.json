@@ -321,5 +321,24 @@
     "footerNote": "Shure ULXD2/B58 Digital Handheld Transmitter with BETA 58A Capsule · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **ULXD2/B58**은 BETA 58A 캡슐을 결합한 ULX-D 핸드헬드 송신기입니다. 내장 헬리컬 안테나로 수음 신호를 무선 전송합니다.",
+  "subtitle": "Shure ULX-D Digital Wireless · 핸드헬드 송신기",
+  "keyFacts": [
+    {
+      "label": "마이크 캡슐",
+      "value": "BETA 58A",
+      "unit": ""
+    },
+    {
+      "label": "지향 패턴",
+      "value": "슈퍼카디오이드(Supercardioid)",
+      "unit": ""
+    },
+    {
+      "label": "RF 출력 파워 · 지역별",
+      "value": "1 mW / 10 mW / 20 mW (선택형)",
+      "unit": ""
+    }
+  ]
 }

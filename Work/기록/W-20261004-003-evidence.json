@@ -1,0 +1,1306 @@
+{
+  "taskId": "W-20261004-003",
+  "readCommit": "8e76301c1db479d2f8362465f758d2448167e34b",
+  "otherDetailRawSha256": "ebf3c0581a566ddac15d9823360fb0a9e197ee96ceb195317e4c472d5f63d524",
+  "otherDetailJsonSha256": "a174b6ed8b45463c0f7a91e0b0247aaac14e38e7efde1297697f8947ceac8403",
+  "products": {
+    "a900w-r-gm": {
+      "family": "단독 · 설치 액세서리",
+      "coreSha256": "5cf00afe6f1351d4618a0cc7cf6a261153ed667e37622613a9d7812b16f63389",
+      "overview": "A900W-R-GM은 마이크로폰이 아니라, Shure MXA920 / MXA925 시리즈의 '라운드(원형)' 천장형 어레이 마이크로폰을 천장에 매달아 설치할 때 사용하는 Gripple 와이어 조이너 방식의 서스펜션 마운트 키트(흰색 커버 버전)이다. 케이블 길이를 손으로 눌러 간편하게 조절할 수 있는 Gripple 커넥터와 스틸 서스펜션 케이블, 흰색 백커버(뒷면 마감판), 케이블 타이가 포함되며, 천장에 케이블을 고정하는 하드웨어와 이더넷 케이블은 포함되지 않는다. A900 시리즈는 Shure의 랙마운트 액세서리가 아니라 MXA920/925 천장 마이크 전용 마운팅 하드웨어 제품군이다.",
+      "series": "A900 Series Mounting Accessories (MXA920 / MXA925 계열 액세서리)",
+      "facts": [
+        {
+          "axis": "호환 대상",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "호환 마이크로폰",
+          "rowGroup": "Compatibility",
+          "rowCondition": "Shure 공식 문서 기준 MXA920 시리즈로 명시되어 있으며, MXA925(후속 라운드 모델)의 액세서리 목록에도 A900W-R-GM이 동일하게 등재됨",
+          "rowVerification": "VERIFIED",
+          "label": "호환 마이크 · 원형",
+          "value": "MXA920 시리즈 전 모델 (라운드형)",
+          "unit": ""
+        },
+        {
+          "axis": "커넥터 구성",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "Gripple Angel Side Hook 커넥터",
+          "rowGroup": "제품 구성 (A900-R-GM 계열, 라운드용)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "서스펜션 커넥터",
+          "value": "3개",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **A900W-R-GM**은 원형 천장 배열 마이크용 서스펜션 마운트 키트입니다. Gripple 조이너와 스틸 케이블로 매달아 설치하며 천장 고정 하드웨어는 별도입니다.",
+      "subtitle": "A900 Series Mounting Accessories · 서스펜션 키트"
+    },
+    "mx392-c": {
+      "family": "유선 마이크",
+      "coreSha256": "f4c58ac9ff2052f8cde322e7215347fe85249d89a3e2079221c8e5613254afad",
+      "overview": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다. 무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 로고 입력·출력(logic I/O)도 지원한다. 저프로파일 디자인에 커스텀 색상 도장을 위한 페인트 마스크가 제공된다.",
+      "series": "Microflex Wired Boundary Microphones",
+      "facts": [
+        {
+          "axis": "주파수 응답",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "주파수 응답",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "주파수 응답",
+          "value": "50-17000",
+          "unit": "Hz"
+        },
+        {
+          "axis": "폴라 패턴",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "폴라 패턴 (MX392/C)",
+          "rowGroup": "Audio",
+          "rowCondition": "MX392/S=Supercardioid, MX392/O=Omnidirectional",
+          "rowVerification": "VERIFIED",
+          "label": "폴라 패턴 · MX392/C",
+          "value": "Cardioid",
+          "unit": ""
+        },
+        {
+          "axis": "출력 임피던스",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "출력 임피던스",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 임피던스",
+          "value": "180",
+          "unit": "Ω"
+        }
+      ],
+      "lead": "Shure **MX392/C**는 카디오이드 카트리지를 쓰는 유선 경계면 마이크입니다. 무소음 멤브레인 스위치를 발언·뮤트 동작에 맞게 설정할 수 있습니다.",
+      "subtitle": "Microflex Wired Boundary Microphones · 경계면 마이크"
+    },
+    "mx395": {
+      "family": "유선 마이크",
+      "coreSha256": "389af96ceea09c9f54a30bf2d9dd448b07ff1d652754e5e69dcdb4e2bf093852",
+      "overview": "MX395는 회의실, 이사회실 등 미관이 중요한 공간에 설치하는 초저프로파일 바운더리 마이크로폰이다. 직경 2.5cm, 설치 시 표면 위로 약 2cm만 돌출되는 작은 크기에도 넓은 다이내믹 레인지와 매끄러운 주파수 응답을 제공하며, 휴대폰·태블릿 등 무선기기의 RF 간섭을 줄여주는 CommShield 기술이 내장되어 있다. 카디오이드/무지향성/양지향성 3가지 폴라 패턴과 블랙/화이트/알루미늄 3가지 색상, LED 유무를 조합해 다양한 SKU로 제공된다.",
+      "series": "Microflex Wired Boundary Microphones",
+      "facts": [
+        {
+          "axis": "주파수 응답",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "주파수 응답",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "주파수 응답",
+          "value": "50-17000",
+          "unit": "Hz"
+        },
+        {
+          "axis": "출력 임피던스",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "출력 임피던스",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 임피던스",
+          "value": "170",
+          "unit": "Ω"
+        },
+        {
+          "axis": "설치 치수",
+          "kind": "spec",
+          "index": 18,
+          "rowName": "설치면 위 돌출 높이",
+          "rowGroup": "기구/환경",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "설치면 돌출 높이",
+          "value": "약 2",
+          "unit": "cm"
+        }
+      ],
+      "lead": "Shure **MX395**는 설치면 위로 작게 돌출되는 유선 경계면 마이크입니다. 폴라 패턴과 LED 유무에 따라 제품 변형을 선택합니다.",
+      "subtitle": "Microflex Wired Boundary Microphones · 저프로파일 마이크"
+    },
+    "mx418d-c": {
+      "family": "유선 마이크",
+      "coreSha256": "f4d85e3c6f9d314aecf67f795b35d63e9f7e05dcd9c9810642332071bb8deb51",
+      "overview": "MX418D/C는 18인치 길이의 카디오이드 구스넥 콘덴서 마이크로폰으로, 탁상용 데스크탑 베이스와 10피트(3m) XLR 케이블이 부착되어 임시 회의나 다목적 공간에서 빠르게 설치·철거할 수 있도록 설계되었다. 교체형 Microflex 카트리지를 사용해 필요 시 다른 폴라 패턴으로 교체 가능하며, 고감도와 평형·트랜스포머리스 출력으로 장거리 케이블 배선에서도 험/RF 간섭에 강하다.",
+      "series": "Microflex Standard Gooseneck Microphones (MX400D Desktop Series)",
+      "facts": [
+        {
+          "axis": "주파수 응답",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "주파수 응답",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "주파수 응답",
+          "value": "50-17000",
+          "unit": "Hz"
+        },
+        {
+          "axis": "폴라 패턴",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "폴라 패턴 (MX418D/C)",
+          "rowGroup": "Audio",
+          "rowCondition": "MX418D/S는 Supercardioid",
+          "rowVerification": "VERIFIED",
+          "label": "폴라 패턴 · MX418D/C",
+          "value": "Cardioid",
+          "unit": ""
+        },
+        {
+          "axis": "최대 SPL",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "최대 SPL (1kHz, 1%THD, 1kΩ부하, Cardioid)",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "최대 SPL · 카디오이드/1kHz/1%THD/1kΩ",
+          "value": "123",
+          "unit": "dB"
+        }
+      ],
+      "lead": "Shure **MX418D/C**는 데스크톱 베이스를 갖춘 카디오이드 구즈넥 마이크입니다. 부착된 XLR 케이블로 회의 공간에 연결해 사용합니다.",
+      "subtitle": "Microflex Standard Gooseneck Microphones · 탁상형"
+    },
+    "mxa925w-r": {
+      "family": "단독 · 천장 배열 마이크",
+      "coreSha256": "f3224251d3a0c075795cc0ba2ba71fecc3b71b563017902878ffe2555dea5efd",
+      "overview": "MXA925는 MXA920의 후속 모델로, 113개 MEMS 마이크 소자로 구성된 어레이를 통해 회의실을 자동으로 커버하는 'Automatic Coverage' 기능을 제공한다. 기본 9m x 9m 범위를 자동 픽업하며 최대 8개의 커버리지 영역을 세부 설정할 수 있다. 온보드 IntelliMix DSP가 AI 기반 음향 반향 제거(AI AEC), AI 노이즈 제거, AI 디버브를 수행해 원격 참가자에게 더 자연스러운 음성을 전달한다. 듀얼 RJ45 포트로 오디오와 제어를 분리할 수 있어 보안이 중요한 설치 환경에도 적합하며, 도장 가능한 마감으로 천장 인테리어에 맞춰 커스터마이징할 수 있다. MXA925W-R은 화이트 색상의 원형(Round) 폼팩터 버전이다.",
+      "series": "Microflex Advance Ceiling Array Microphones",
+      "facts": [
+        {
+          "axis": "소자 수",
+          "kind": "spec",
+          "index": 10,
+          "rowName": "마이크 소자 구성",
+          "rowGroup": "오디오/네트워크",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 소자",
+          "value": "113개 MEMS",
+          "unit": ""
+        },
+        {
+          "axis": "네트워크 연결",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "커넥터 타입",
+          "rowGroup": "General",
+          "rowCondition": "1번 포트만 PoE 전달",
+          "rowVerification": "VERIFIED",
+          "label": "RJ45 · 1번만 PoE",
+          "value": "RJ45 x 2",
+          "unit": ""
+        },
+        {
+          "axis": "전원 공급",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "전원",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "전원 방식",
+          "value": "Power over Ethernet (PoE), Class 0",
+          "unit": ""
+        },
+        {
+          "axis": "설치 등급",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "방진 등급",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "방진 등급",
+          "value": "IEC 60529 IP5X",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **MXA925W-R**은 흰색 원형의 천장 배열 마이크입니다. 자동 커버리지와 내장 DSP로 회의실 음성을 처리하고 두 RJ45 포트로 오디오·제어를 분리합니다.",
+      "subtitle": "Microflex Advance Ceiling Array Microphones · 원형 배열 마이크"
+    },
+    "mxc420-c": {
+      "family": "유선 마이크",
+      "coreSha256": "e9965360e1b9a2e0324ab1610fd433d5e4cea6821a990695ea2aa11220a711f5",
+      "overview": "MXC420/C는 Shure의 디지털 컨퍼런스 시스템 Microflex Complete(MXC) 및 무선 버전 Microflex Complete Wireless(MXCW) 컨퍼런스/통역 유닛에 연결해 사용하는 20인치(50cm) 구스넥 마이크로폰이다. 하단부가 유연하게 구부러지는 구스넥 설계로 발화자별 정밀한 위치 조정이 가능하며, 카디오이드 Microflex 카트리지가 장착되어 있고(다른 패턴 카트리지 호환 가능), 발언 상태를 표시하는 2색 LED 링과 CommShield RF 노이즈 내성 기술을 내장하고 있다. 10핀 모듈러 커넥터로 컨퍼런스 유닛과 탈부착되며, 핵스키로 잠금 고정도 가능하다.",
+      "series": "Microflex Complete (MXC) / Microflex Complete Wireless (MXCW) Gooseneck Microphones",
+      "facts": [
+        {
+          "axis": "주파수 응답",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "주파수 응답",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "주파수 응답",
+          "value": "50-17000",
+          "unit": "Hz"
+        },
+        {
+          "axis": "폴라 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "폴라 패턴",
+          "rowGroup": "Audio",
+          "rowCondition": "다른 Microflex 카트리지로 교체 가능",
+          "rowVerification": "VERIFIED",
+          "label": "폴라 패턴",
+          "value": "Cardioid",
+          "unit": ""
+        },
+        {
+          "axis": "커넥터 형식",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "컨퍼런스 유닛 연결 커넥터",
+          "rowGroup": "커넥터/전기",
+          "rowCondition": "탈부착식, 핵스키로 잠금 가능",
+          "rowVerification": "VERIFIED",
+          "label": "회의 유닛 커넥터",
+          "value": "10-pin modular plug",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **MXC420/C**는 회의·통역 유닛에 연결하는 카디오이드 구즈넥 마이크입니다. 10핀 모듈러 커넥터로 컨퍼런스 유닛에 탈부착합니다.",
+      "subtitle": "Microflex Complete · 구즈넥 마이크"
+    },
+    "mxcw640": {
+      "family": "단독 · 무선 회의 단말",
+      "coreSha256": "200cc2c4f0e8ba40584829ced303438bcbe0f156308620300cef6cbc6df86e98",
+      "overview": "MXCW640은 마이크(10핀 모듈형, MXC 시리즈 구즈넥 마이크 연결), 스피커, 4.3인치 컬러 터치스크린, 이중 3.5mm 헤드폰 잭을 통합한 무선 회의 단말이다. SB930 리튬이온 배터리(동봉)로 11시간 이상 동작하며, MXCWNCS 충전 스테이션이나 본체 Micro-USB로 충전한다.\n\nMXCWAPT 액세스 포인트와 2.4GHz/5GHz(UNII 대역 포함, DFS 채널 지원) 대역에서 통신하며, 거리에 따라 8m(Low)~45m(Maximum)의 RF 작동 범위를 제공한다. Chairman·Delegate·Listener·Ambient 등 여러 동작 모드를 지원하고 NFC 카드 슬롯으로 참석자를 식별할 수 있다.\n\n공식 제품 페이지에는 RF 대역·크기·무게가 나와 있지 않아, 시스템 데이터시트(Systempage)를 근거로 이 값들을 보충했다. 마이크로폰 카트리지의 정확한 극성 패턴은 제품 페이지·데이터시트 모두에서 확정하지 못해 검토 중으로 남긴다.",
+      "series": "Microflex Complete Wireless (MXCW)",
+      "facts": [
+        {
+          "axis": "디스플레이",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "디스플레이",
+          "rowGroup": "Display",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "터치 디스플레이",
+          "value": "4.3인치 컬러 TFT 정전식 터치스크린",
+          "unit": ""
+        },
+        {
+          "axis": "RF 주파수 대역",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "RF 주파수 대역",
+          "rowGroup": "RF",
+          "rowCondition": "IEEE 802.11a,g 기반",
+          "rowVerification": "VERIFIED",
+          "label": "무선 대역",
+          "value": "2.4GHz ISM / 5GHz UNII",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **MXCW640**은 터치스크린·스피커·마이크 연결부를 통합한 무선 회의 단말입니다. SB930 배터리로 동작하며 MXCWAPT 액세스 포인트와 무선으로 통신합니다.",
+      "subtitle": "Microflex Complete Wireless (MXCW) · 회의 단말"
+    },
+    "mxcwapt-w": {
+      "family": "단독 · 회의 액세스 포인트",
+      "coreSha256": "4822afa3085eded1ab098cabe3bce24c9d676f15969040b54104aa72ccb8ade3",
+      "overview": "MXCWAPT는 Shure Microflex Complete Wireless(MXCW) 회의 시스템의 중앙 허브 역할을 하는 액세스 포인트 트랜시버로, 최대 125대의 무선 회의 유닛(MXCW640 등)에 대한 오디오 라우팅, 주파수 조정, 시스템 제어를 담당한다. 2.4GHz/5GHz 대역에서 가장 깨끗한 채널을 자동 스캔해 사용하며 AES-128 암호화로 무선 구간을 보호한다. Dante 네트워크 오디오(10입력/10출력)와 아날로그 XLR 입출력을 모두 제공하고, PoE로 전원을 공급받아 벽면·천장 브래킷 또는 탁상에 설치할 수 있다. '-W'는 색상이 아니라 지역 코드로, 미국(-A)·캐나다/멕시코(-B)·일본(-JP)·이스라엘(-IL)과 구분되는 '전세계(Worldwide)용' 주파수 대역/인증 변형을 의미한다.",
+      "series": "Microflex Complete Wireless (MXCW)",
+      "facts": [
+        {
+          "axis": "네트워크 오디오 용량",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "Dante 채널",
+          "rowGroup": "네트워크/오디오",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "Dante 오디오 채널",
+          "value": "10 입력 / 10 출력",
+          "unit": ""
+        },
+        {
+          "axis": "RF 주파수 대역",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "주파수 대역",
+          "rowGroup": "RF (무선 회의 유닛과의 통신)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "무선 대역",
+          "value": "2.4GHz ISM, 5GHz UNII (DFS 대역 포함)",
+          "unit": ""
+        },
+        {
+          "axis": "전원 공급",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "전원",
+          "rowGroup": "네트워크/오디오",
+          "rowCondition": "37-57V DC 공급전압",
+          "rowVerification": "VERIFIED",
+          "label": "전원 방식",
+          "value": "Power over Ethernet (PoE)",
+          "unit": ""
+        },
+        {
+          "axis": "보안",
+          "kind": "spec",
+          "index": 9,
+          "rowName": "보안",
+          "rowGroup": "RF (무선 회의 유닛과의 통신)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "무선 암호화",
+          "value": "AES-128 암호화",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **MXCWAPT-W**는 MXCW 회의 시스템의 액세스 포인트 트랜시버입니다. 무선 회의 유닛의 오디오·주파수·제어를 관리하고 Dante와 XLR 오디오를 연결합니다.",
+      "subtitle": "Microflex Complete Wireless (MXCW) · 액세스 포인트"
+    },
+    "qlxd1": {
+      "family": "바디팩 송신기",
+      "coreSha256": "22420ce16644412f391c50d170e412eee9d9df4658f646babfc7a7a448e5a671",
+      "overview": "QLX-D 디지털 무선 바디팩(벨트팩) 송신기. TA4M 커넥터로 라발리에/헤드셋/악기용 케이블과 연결한다.",
+      "series": "Shure QLX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 표에 따름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 mW 또는 10 mW",
+          "unit": ""
+        },
+        {
+          "axis": "입력 커넥터",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "입력 커넥터",
+          "rowGroup": "오디오 입력",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크·악기 입력",
+          "value": "4핀 male mini connector (TA4M)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "RF 반송 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역에 따라 다름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–937.5",
+          "unit": "MHz"
+        }
+      ],
+      "lead": "Shure **QLXD1**은 QLX-D 바디팩 무선 송신기입니다. TA4M 입력에 라발리에·헤드셋 또는 악기 케이블을 연결합니다.",
+      "subtitle": "Shure QLX-D Digital Wireless · 바디팩 송신기"
+    },
+    "qlxd2-beta58": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "f24173a779498410c7df90162c2aa6ef82786dbd258bfe7c57c57eb4cd19cee0",
+      "overview": "QLX-D 핸드헬드 송신기 본체에 Shure BETA 58A(슈퍼카디오이드 다이내믹) 캡슐을 결합한 정식 카탈로그 SKU.",
+      "series": "Shure QLX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "캡슐 모델",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "BETA 58A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "지향 패턴",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(Supercardioid)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워",
+          "value": "1 mW 또는 10 mW",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **QLXD2/B58A**는 BETA 58A 캡슐을 결합한 QLX-D 핸드헬드 송신기입니다. 슈퍼카디오이드 다이내믹 캡슐로 음성을 수음해 무선 전송합니다.",
+      "subtitle": "Shure QLX-D Digital Wireless · 핸드헬드 송신기"
+    },
+    "qlxd2-beta87a": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "d0ee5f4fb75078af7a6e9f4bb1a5cab817f632dd393f0daedf7a7f710147d019",
+      "overview": "QLX-D 핸드헬드 송신기 본체에 Shure BETA 87A(슈퍼카디오이드 컨덴서) 캡슐을 결합한 정식 카탈로그 SKU.",
+      "series": "Shure QLX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "캡슐 모델",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "BETA 87A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "지향 패턴",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(Supercardioid)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워",
+          "value": "1 mW 또는 10 mW",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **QLXD2/B87A**는 BETA 87A 캡슐을 결합한 QLX-D 핸드헬드 송신기입니다. 슈퍼카디오이드 컨덴서 캡슐로 음성을 수음해 무선 전송합니다.",
+      "subtitle": "Shure QLX-D Digital Wireless · 핸드헬드 송신기"
+    },
+    "qlxd4": {
+      "family": "무선 수신기",
+      "coreSha256": "9941b3c882ad9734e2dd679d995ba6d193f01fe4930ab432fa0470dd2dcdf7d7",
+      "overview": "QLX-D 디지털 무선 시스템의 단일 채널 랙마운트 수신기. ULX-D 대비 간소화된 네트워킹(단일 포트 이더넷, Dante 미지원)을 갖춘 중급형 라인업이며, SLX-D보다는 상위 라인업이다.",
+      "series": "Shure QLX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "독립 수신 채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "채널 수",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "독립 수신 채널",
+          "value": "1",
+          "unit": "채널"
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "RF 반송 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역에 따라 다름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–937.5",
+          "unit": "MHz"
+        }
+      ],
+      "lead": "Shure **QLXD4**는 QLX-D 단일 채널 디지털 무선 수신기입니다. 이더넷은 제어·펌웨어용이며 Dante 오디오는 지원하지 않습니다.",
+      "subtitle": "Shure QLX-D Digital Wireless · 단일 채널 수신기"
+    },
+    "slxd1-plus": {
+      "family": "바디팩 송신기",
+      "coreSha256": "cd8676c012013277d4d05adda58bf8bc49a5b7667a0835fa77db4e98cb8536ee",
+      "overview": "SLXD1+는 SLX-D+ 시스템용 바디팩 송신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 수신기와 동기화 상태를 유지하며 간섭 관리·채널 스캔·자동 업데이트를 지원하고 페어링된 모바일 기기로 모니터링·설정할 수 있습니다. 24-bit/>118 dB 다이내믹 레인지, AES-256 암호화, AA 2개 또는 SB903 충전지로 최대 8시간 사용, 인체공학적이고 견고한 플라스틱 구조가 특징입니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 13,
+          "rowName": "RF 출력",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조). 30 mW는 SLXD3/SLXD3+ 전용",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 / 10",
+          "unit": "mW"
+        },
+        {
+          "axis": "입력 커넥터",
+          "kind": "spec",
+          "index": 22,
+          "rowName": "입력 커넥터",
+          "rowGroup": "Audio",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크·악기 입력",
+          "value": "TA4M (4핀 수 미니 커넥터)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 반송파 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–937.5",
+          "unit": "MHz"
+        }
+      ],
+      "lead": "**SLXD1+**는 SLX-D+ 시스템용 바디팩 송신기입니다. ShowLink Ease 링크로 주파수와 출력을 수신기에서 원격 조정합니다.",
+      "subtitle": "SLX-D+ · 바디팩 송신기"
+    },
+    "slxd2-plus-58": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "f2ba4bdac5ade7e0a43b1c9548653cce9fc5de194ed8772a7472fa6fddb7bf2f",
+      "overview": "SLXD2+/58은 전설적인 SM58® 카디오이드 다이내믹 마이크를 탑재한 SLX-D+ 핸드헬드 송신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 수신기와 동기화 상태를 유지하며 간섭 관리·채널 스캔·자동 업데이트, 모바일 기기 모니터링·설정을 지원합니다. AES-256 암호화, AA 2개 또는 SB903 충전지로 최대 8시간 사용, 견고한 금속 구조가 특징입니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 24,
+          "rowName": "마이크 캡슐",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "SM58",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 25,
+          "rowName": "지향 특성",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "카디오이드(다이내믹)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 13,
+          "rowName": "RF 출력",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조). 30 mW는 SLXD3/SLXD3+ 전용",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 / 10",
+          "unit": "mW"
+        }
+      ],
+      "lead": "**SLXD2+/58**은 SM58 캡슐을 탑재한 SLX-D+ 핸드헬드 송신기입니다. ShowLink Ease 링크로 수신기에서 주파수와 출력을 원격 조정합니다.",
+      "subtitle": "SLX-D+ · 핸드헬드 송신기"
+    },
+    "slxd2-plus-b58": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "bfa0808abc5c5a6e8eec23a50d031341e02f429a0a2799e3731cf94ee2c7bb8a",
+      "overview": "SLXD2+/B58은 Beta® 58A 슈퍼카디오이드 다이내믹 마이크를 탑재한 SLX-D+ 핸드헬드 송신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 수신기와 동기화 상태를 유지하며 간섭 관리·채널 스캔·자동 업데이트, 모바일 기기 모니터링·설정을 지원합니다. AES-256 암호화, AA 2개 또는 SB903 충전지로 최대 8시간 사용, 견고한 금속 구조가 특징입니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 24,
+          "rowName": "마이크 캡슐",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "Beta 58A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 25,
+          "rowName": "지향 특성",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(다이내믹)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 13,
+          "rowName": "RF 출력",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조). 30 mW는 SLXD3/SLXD3+ 전용",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 / 10",
+          "unit": "mW"
+        }
+      ],
+      "lead": "**SLXD2+/B58**은 Beta 58A 캡슐을 탑재한 SLX-D+ 핸드헬드 송신기입니다. ShowLink Ease 링크로 수신기에서 주파수와 출력을 원격 조정합니다.",
+      "subtitle": "SLX-D+ · 핸드헬드 송신기"
+    },
+    "slxd2-plus-b87a": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "bf0a32fff007a922c9686f06029cebe30c8aff0499122d66bcd42a48394c6d54",
+      "overview": "SLXD2+/B87A는 Beta® 87A 슈퍼카디오이드 콘덴서 마이크를 탑재한 SLX-D+ 핸드헬드 송신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 수신기와 동기화 상태를 유지하며 간섭 관리·채널 스캔·자동 업데이트, 모바일 기기 모니터링·설정을 지원합니다. AES-256 암호화, AA 2개 또는 SB903 충전지로 최대 8시간 사용, 견고한 금속 구조가 특징입니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 24,
+          "rowName": "마이크 캡슐",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "Beta 87A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 25,
+          "rowName": "지향 특성",
+          "rowGroup": "캡슐",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(콘덴서)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 13,
+          "rowName": "RF 출력",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조). 30 mW는 SLXD3/SLXD3+ 전용",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 / 10",
+          "unit": "mW"
+        }
+      ],
+      "lead": "**SLXD2+/B87A**는 Beta 87A 캡슐을 탑재한 SLX-D+ 핸드헬드 송신기입니다. ShowLink Ease 링크로 수신기에서 주파수와 출력을 원격 조정합니다.",
+      "subtitle": "SLX-D+ · 핸드헬드 송신기"
+    },
+    "slxd4-plus": {
+      "family": "무선 수신기",
+      "coreSha256": "129e59cff8b202cb15f92dbd65a4671b9fdb2a0bc042ddd8c422a5fab63fd08d",
+      "overview": "SLXD4+는 하프랙 크기의 싱글 채널 디지털 무선 수신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 송신기와 수신기가 동기화된 상태를 유지합니다. 간섭 관리, 새 채널 스캔, 자동 업데이트를 지원하며 페어링된 모바일 기기로 모니터링·설정할 수 있습니다. 24-bit/>118 dB 다이내믹 레인지, 특허 디지털 피드백 리듀서, AES-256 암호화를 제공합니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "독립 수신 채널 수",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "채널 수",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "독립 수신 채널",
+          "value": "1",
+          "unit": "ch"
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 7,
+          "rowName": "RF 반송파 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–937.5",
+          "unit": "MHz"
+        },
+        {
+          "axis": "랙 형태",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "폼팩터",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신기 폼팩터",
+          "value": "하프랙 수신기(랙 마운트 하드웨어 동봉)",
+          "unit": ""
+        }
+      ],
+      "lead": "**SLXD4+**는 하프랙 크기의 단일 채널 무선 수신기입니다. ShowLink Ease 링크로 송신기 설정과 채널 스캔을 원격 관리합니다.",
+      "subtitle": "SLX-D+ · 단일 채널 수신기"
+    },
+    "slxd4d-plus": {
+      "family": "무선 수신기",
+      "coreSha256": "c8affb769a24c9a744ad2bcc38890995a51ed8375fe8e583684a7dee4091f322",
+      "overview": "SLXD4D+는 하프랙 크기의 2채널 디지털 무선 수신기로, 전용 ShowLink® Ease 제어 링크를 통해 광대역 SLX-D+ 송신기와 수신기가 동기화된 상태를 유지합니다. 간섭 관리, 새 채널 스캔, 깨끗한 전송을 위한 자동 업데이트를 지원하며 페어링된 모바일 기기로 모니터링·설정할 수 있습니다. 24-bit/>118 dB 다이내믹 레인지, 특허 디지털 피드백 리듀서, AES-256 암호화, 2채널 오디오 서밍을 제공합니다. SLX-D 대비(공식 스펙시트 문구): 138 MHz 광대역 튜닝(지역별), 특허 디지털 피드백 리듀서 DSP, AES-256 암호화, ShowLink Ease 원격 제어 링크 추가. 수신기는 레거시 SLX-D 송신기와도 호환(이때 44 MHz)",
+      "series": "SLX-D+",
+      "facts": [
+        {
+          "axis": "독립 수신 채널 수",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "채널 수",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "독립 수신 채널",
+          "value": "2",
+          "unit": "ch"
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 7,
+          "rowName": "RF 반송파 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 상이(대역표 참조)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–937.5",
+          "unit": "MHz"
+        },
+        {
+          "axis": "랙 형태",
+          "kind": "spec",
+          "index": 2,
+          "rowName": "폼팩터",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신기 폼팩터",
+          "value": "하프랙 수신기(랙 마운트 하드웨어 동봉)",
+          "unit": ""
+        }
+      ],
+      "lead": "**SLXD4D+**는 하프랙 크기의 2채널 무선 수신기입니다. ShowLink Ease 링크로 송신기를 원격 관리하고 두 채널의 오디오를 합산할 수 있습니다.",
+      "subtitle": "SLX-D+ · 2채널 수신기"
+    },
+    "ua844-swb": {
+      "family": "안테나 분배",
+      "coreSha256": "b176812e573a03811c8a763197eb2f95aad32351019a6025d4764d0c470737e0",
+      "overview": "UA844+SWB는 한 쌍의 안테나 신호를 최대 5대의 무선 수신기(QLX-D, ULX, ULX-D, SLX, BLX4R 등)로 분배하는 능동형(앰프 내장) 안테나/전원 분배 시스템이다. 신호 분배로 발생하는 삽입 손실을 자체 RF 증폭으로 보상하며, 1대의 유닛으로 5개 수신기를 지원하고 캐스케이드 포트를 통해 최대 5대까지 2단으로 연결해 확장할 수 있다. 전면에 안테나 장착용 하드웨어, 랙마운트 하드웨어, 외장 전원공급장치(PS60)가 포함되어 제공된다.",
+      "series": "UA800 Series Antenna Distribution",
+      "facts": [
+        {
+          "axis": "DC 전원 분배",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "DC 출력 (수신기 전원 공급용)",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신기 DC 출력",
+          "value": "14~18V DC x 4채널",
+          "unit": ""
+        },
+        {
+          "axis": "RF 출력 격리도",
+          "kind": "spec",
+          "index": 11,
+          "rowName": "출력 커넥터 격리도",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 격리도",
+          "value": "30",
+          "unit": "dB (typical)"
+        },
+        {
+          "axis": "전원 요구사항",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "전원 요구사항 (본체)",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "본체 전원",
+          "value": "14 ~ 18",
+          "unit": "V DC"
+        }
+      ],
+      "lead": "Shure **UA844+SWB**는 안테나 신호와 전원을 수신기로 분배하는 장비입니다. RF 증폭으로 분배 손실을 보상하고 캐스케이드 포트로 확장합니다.",
+      "subtitle": "UA800 Series Antenna Distribution · 분배기"
+    },
+    "ua845uwb": {
+      "family": "안테나 분배",
+      "coreSha256": "fc46a4f169bb5c57249e06a790a4db060a26d305952733f031f0d7d482fc2d89",
+      "overview": "UA845UWB는 한 쌍의 안테나 신호를 최대 4~5대의 Shure Axient Digital, UHF-R, ULX-D, BLX4R, SLX4 등 수신기로 분배하는 내장 전원공급 방식의 능동형 광대역(VHF/UHF) 안테나 분배 시스템이다. 신호 분배로 인한 삽입 손실을 RF 증폭으로 보상하며, 캐스케이드 포트를 통해 5번째 수신기 또는 추가 UA845UWB 유닛을 연결해 확장할 수 있다. 최대 5대의 U4/UR4 수신기를 데이지체인으로 연결해 단일 전원에서 전원을 공급하는 기능도 지원한다(ULX/ULX-D 수신기는 해당 없음).",
+      "series": "UA800 Series Antenna Distribution",
+      "facts": [
+        {
+          "axis": "DC 전원 분배",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "DC 출력 (수신기 전원 공급용)",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신기 DC 출력",
+          "value": "15V DC x 4 커넥터",
+          "unit": ""
+        },
+        {
+          "axis": "RF 출력 격리도",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "출력 커넥터 격리도",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "출력 격리도",
+          "value": ">25",
+          "unit": "dB (typical)"
+        },
+        {
+          "axis": "전원 요구사항",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "입출력 AC 전원",
+          "rowGroup": "전원/RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "본체 전원",
+          "value": "100-240V AC, 50/60Hz (스위칭)",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **UA845UWB**는 VHF/UHF 안테나 신호와 수신기 전원을 분배하는 장비입니다. RF 증폭으로 분배 손실을 보상하고 캐스케이드 포트로 연결을 확장합니다.",
+      "subtitle": "UA800 Series Antenna Distribution · 분배기"
+    },
+    "ua864a": {
+      "family": "안테나",
+      "coreSha256": "a733f2a7a1f389c6cdcb1aec8620834fe67e38deae3a242600130a869cf23991",
+      "overview": "UA864는 벽면이나 천장, 금속 표면에 낮은 프로파일로 설치할 수 있는 능동형 지향성 광대역 안테나로, 최대 100도(중심 주파수 기준, 지역별 상이)의 커버리지 패턴을 제공한다. 4단 게인/패드 스위치(-20, -10, 0, +10dB)로 케이블 손실을 보정하며, 부착형 BNC 케이블로 표면 노출 또는 벽 관통 배선이 가능하다. 도장 가능한 중립적인 화이트 하우징으로 사무실·강의실 등 인테리어에 자연스럽게 어우러진다. UA864A는 650-952MHz 대역용 변형이다.",
+      "series": "UA800 Series / Wireless Antennas",
+      "facts": [
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "RF 주파수 대역 (UA864A)",
+          "rowGroup": "General",
+          "rowCondition": "다른 변형: UA864US/LO 470-698, UA864HI 530-790, UA864Z16/17/18(1240-1805MHz대)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 대역 · UA864A",
+          "value": "650-952",
+          "unit": "MHz"
+        },
+        {
+          "axis": "안테나 게인",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "안테나 게인 (On-Axis, 0dB 설정, UA864A)",
+          "rowGroup": "RF 성능",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "안테나 게인 · On-Axis/0dB",
+          "value": "5.5",
+          "unit": "dBi"
+        },
+        {
+          "axis": "수신 패턴",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "수신 패턴 (3dB 빔폭, 중심주파수 기준, UA864A)",
+          "rowGroup": "RF 성능",
+          "rowCondition": "타 모델은 70~100도",
+          "rowVerification": "VERIFIED",
+          "label": "수신 빔폭 · 중심주파수/3dB",
+          "value": "90",
+          "unit": "도(degrees)"
+        }
+      ],
+      "lead": "Shure **UA864A**는 벽면·천장에 부착하는 능동형 광대역 안테나입니다. 게인·패드 스위치로 동축 케이블 손실을 보정합니다.",
+      "subtitle": "UA800 Series · 능동형 안테나"
+    },
+    "ua874xa": {
+      "family": "안테나",
+      "coreSha256": "c2cf19b634dfe17178b2f18bdbb80ef0b77162d35a928d43cecf68ab007401f0",
+      "overview": "UA874는 로그 주기 다이폴 배열(log periodic dipole array) 방식을 사용하는 능동형 지향성 안테나로, 원하는 수신 방향으로 카디오이드 패턴을 형성하여 전방향 안테나 대비 불필요한 RF 신호 유입을 줄여준다. 내장 증폭기와 4단계 게인 스위치로 동축 케이블 손실을 보정할 수 있으며, 마이크 스탠드 거치, 천장 서스펜션, 벽면 거치(스위블 브래킷) 등 다양한 설치 방식을 지원한다. UA874XA는 902-960 MHz 대역용 변형 모델이며, ULX-D/QLX-D/SLX-D 등 10-15V DC 바이어스를 공급하는 Shure 수신기·안테나 분배 시스템과 함께 사용한다.",
+      "series": "UA800 Series / Wireless Antennas",
+      "facts": [
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 3,
+          "rowName": "RF 주파수 대역 (UA874XA)",
+          "rowGroup": "General",
+          "rowCondition": "다른 지역 변형: UA874US 470-698, UA874E 470-790, UA874WB 470-900, UA874Z16/17/18 (1240-1805 MHz대)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 대역 · UA874XA",
+          "value": "902-960",
+          "unit": "MHz"
+        },
+        {
+          "axis": "안테나 게인",
+          "kind": "spec",
+          "index": 6,
+          "rowName": "안테나 게인 (On-Axis)",
+          "rowGroup": "RF 성능",
+          "rowCondition": "0dB 게인 설정, 중심 주파수 기준 (UA874XA)",
+          "rowVerification": "VERIFIED",
+          "label": "안테나 게인 · On-Axis/0dB/중심주파수",
+          "value": "7.5",
+          "unit": "dBi"
+        },
+        {
+          "axis": "수신 패턴",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "수신 패턴 (3dB 빔폭)",
+          "rowGroup": "RF 성능",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신 패턴 · 3dB 빔폭",
+          "value": "70",
+          "unit": "도(degrees)"
+        }
+      ],
+      "lead": "Shure **UA874XA**는 수신 방향을 좁혀 RF 신호를 받는 능동형 지향성 안테나입니다. 게인 스위치로 동축 케이블 손실을 보정하며 DC 바이어스를 공급받아 동작합니다.",
+      "subtitle": "UA800 Series · 능동형 안테나"
+    },
+    "ulxd1": {
+      "family": "바디팩 송신기",
+      "coreSha256": "fc7c3941ac8448302cd656a8c10fbce62fb1d05db5a99b0dca8400b6ca62902f",
+      "overview": "ULX-D 디지털 무선 바디팩(벨트팩) 송신기. TA4M(4핀 미니 커넥터)를 통해 라발리에/헤드셋/기타 인스트루먼트 케이블 등 다양한 유선 마이크/악기를 연결해 무선화한다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 표에 따름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 mW / 10 mW / 20 mW",
+          "unit": ""
+        },
+        {
+          "axis": "입력 커넥터",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "입력 커넥터",
+          "rowGroup": "오디오 입력",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "마이크·악기 입력",
+          "value": "4핀 male mini connector (TA4M)",
+          "unit": ""
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "RF 반송 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역에 따라 다름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–932",
+          "unit": "MHz"
+        }
+      ],
+      "lead": "Shure **ULXD1**은 ULX-D 바디팩 무선 송신기입니다. TA4M 입력에 유선 마이크나 악기 케이블을 연결해 무선으로 전송합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 바디팩 송신기"
+    },
+    "ulxd2-beta58": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "4c6018b8e9ec0f8d6c3eab3fb88e27313555e9864e94093ca78193cfd62998a0",
+      "overview": "ULX-D 핸드헬드 송신기 본체에 Shure BETA 58A(슈퍼카디오이드 다이내믹 보컬 카트리지)를 결합한 정식 카탈로그 SKU. 올메탈(가공 알루미늄) 바디, 내장 헬리컬 안테나, AES-256 암호화, 충전식 리튬이온 배터리 옵션을 지원한다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "캡슐 모델",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "교체형 카트리지",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "BETA 58A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "지향 패턴",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "BETA 58A 공식 사양",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(Supercardioid)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 Frequency Range and Output Power 표에 따름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 mW / 10 mW / 20 mW (선택형)",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **ULXD2/B58**은 BETA 58A 캡슐을 결합한 ULX-D 핸드헬드 송신기입니다. 내장 헬리컬 안테나로 수음 신호를 무선 전송합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 핸드헬드 송신기"
+    },
+    "ulxd2-beta87": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "f4e48ff8f9d550c39d10d1858d2b07eb4db1bdca051a1c6a48ffa8959e268d36",
+      "overview": "ULX-D 핸드헬드 송신기 본체에 Shure BETA 87A(슈퍼카디오이드 컨덴서 보컬 카트리지)를 결합한 정식 카탈로그 SKU.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "캡슐 모델",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "교체형 카트리지",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "BETA 87A",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "지향 패턴",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "BETA 87A 공식 사양",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "슈퍼카디오이드(Supercardioid)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 mW / 10 mW / 20 mW (선택형)",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **ULXD2/B87A**는 BETA 87A 캡슐을 결합한 ULX-D 핸드헬드 송신기입니다. 슈퍼카디오이드 컨덴서 캡슐로 수음 신호를 무선 전송합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 핸드헬드 송신기"
+    },
+    "ulxd2-ksm9": {
+      "family": "핸드헬드 송신기",
+      "coreSha256": "18a2101d503f1913090a9a0e583da31498c7c50400a37cf781d5dc242faa7bcb",
+      "overview": "ULX-D 핸드헬드 송신기 본체에 Shure KSM9(카디오이드/슈퍼카디오이드 전환형 컨덴서 보컬 마이크) 캡슐을 결합한 정식 카탈로그 SKU. 라이브 공연에서 보컬의 미세한 뉘앙스를 정교하게 포착하기 위한 상위 캡슐 조합이다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "캡슐 모델",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "캡슐 모델",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "듀얼 다이어프램 컨덴서",
+          "rowVerification": "VERIFIED",
+          "label": "마이크 캡슐",
+          "value": "KSM9",
+          "unit": ""
+        },
+        {
+          "axis": "지향 패턴",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "지향 패턴",
+          "rowGroup": "캡슐(마이크 헤드)",
+          "rowCondition": "KSM9 공식 사양",
+          "rowVerification": "VERIFIED",
+          "label": "지향 패턴",
+          "value": "카디오이드/슈퍼카디오이드 전환형(스위치 선택)",
+          "unit": ""
+        },
+        {
+          "axis": "송신 RF 출력",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 출력 파워",
+          "rowGroup": "RF",
+          "rowCondition": "지역별 표에 따름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 출력 파워 · 지역별",
+          "value": "1 mW / 10 mW / 20 mW (선택형)",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **ULXD2/KSM9**은 KSM9 캡슐을 결합한 ULX-D 핸드헬드 송신기입니다. 캡슐의 카디오이드·슈퍼카디오이드 지향 패턴을 전환할 수 있습니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 핸드헬드 송신기"
+    },
+    "ulxd4": {
+      "family": "무선 수신기",
+      "coreSha256": "c3c03c5bbb2ee6ac2f042fcd0d88a6a9984f446a3da3f283cce52c01ae92f70a",
+      "overview": "ULX-D 디지털 무선 시스템의 단일 채널 랙마운트 수신기. ULXD4D/ULXD4Q와 달리 단일 채널 모델이며, 공식 사양상 Dante 네트워킹 포트가 없다(단일 포트 이더넷은 제어/펌웨어 용도).",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "독립 수신 채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "채널 수",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "독립 수신 채널",
+          "value": "1",
+          "unit": "채널"
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "RF 반송 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역에 따라 다름",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–932",
+          "unit": "MHz"
+        }
+      ],
+      "lead": "Shure **ULXD4**는 ULX-D 단일 채널 랙 수신기입니다. 내장 Dante 없이 이더넷은 제어와 펌웨어 업데이트에 사용합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 단일 채널 수신기"
+    },
+    "ulxd4q": {
+      "family": "무선 수신기",
+      "coreSha256": "64ca4c29201bbfa8ee697ad864b247ab03b826f2f62c137050fcfb5514eb5bca",
+      "overview": "ULX-D 디지털 무선 시스템의 4채널 랙마운트 수신기. 1RU 올메탈 섀시에 독립된 4개의 수신 채널(개별 오디오/RF 미터, 게인 컨트롤, XLR 출력)을 탑재했으며, AES-256 암호화(수신기에서 켜고 끌 수 있음)와 Dante 디지털 오디오 네트워킹(듀얼 포트 이더넷)을 지원한다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "독립 수신 채널 수",
+          "kind": "spec",
+          "index": 0,
+          "rowName": "채널 수",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "독립 수신 채널",
+          "value": "4",
+          "unit": "채널"
+        },
+        {
+          "axis": "주파수 대역",
+          "kind": "spec",
+          "index": 5,
+          "rowName": "RF 반송 주파수 범위",
+          "rowGroup": "RF",
+          "rowCondition": "지역에 따라 다름(확장 튜닝 시 최대 166 MHz 대역폭, 지역 의존)",
+          "rowVerification": "VERIFIED",
+          "label": "RF 반송 대역 · 지역별",
+          "value": "470–932",
+          "unit": "MHz"
+        },
+        {
+          "axis": "랙 형태",
+          "kind": "spec",
+          "index": 1,
+          "rowName": "폼팩터",
+          "rowGroup": "General",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "수신기 폼팩터",
+          "value": "1RU 랙마운트, 올메탈 섀시",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **ULXD4Q**는 독립된 4채널을 갖춘 ULX-D 랙 수신기입니다. 채널별 XLR 출력과 Dante 네트워크 오디오를 제공합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 4채널 수신기"
+    },
+    "ulxd8": {
+      "family": "단독 · 구즈넥 베이스 송신기",
+      "coreSha256": "2a859ffe63568bb8635f83f599153ea6d26d4573b20865afe9fd9be236fcce9c",
+      "overview": "ULX-D 구즈넥 마이크용 데스크/테이블 베이스 송신기. Shure Microflex MX405, MX410, MX415 구즈넥 마이크 및 MX410DF/MX415DF Dualflex 구즈넥 마이크(모두 별매)와 결합해 사용한다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "facts": [
+        {
+          "axis": "암호화",
+          "kind": "spec",
+          "index": 4,
+          "rowName": "암호화",
+          "rowGroup": "RF/보안",
+          "rowCondition": "사용마다 랜덤 키 생성",
+          "rowVerification": "VERIFIED",
+          "label": "무선 암호화",
+          "value": "AES-256",
+          "unit": ""
+        },
+        {
+          "axis": "배터리 사용 시간",
+          "kind": "spec",
+          "index": 8,
+          "rowName": "배터리 런타임(옵션 SB900C 충전식)",
+          "rowGroup": "배터리",
+          "rowCondition": "",
+          "rowVerification": "VERIFIED",
+          "label": "SB900C · 사용 시간",
+          "value": "최대 12시간",
+          "unit": ""
+        }
+      ],
+      "lead": "Shure **ULXD8**은 구즈넥 마이크용 테이블 베이스 송신기입니다. Microflex MX405·MX410·MX415 계열 구즈넥 마이크를 별도로 결합합니다.",
+      "subtitle": "Shure ULX-D Digital Wireless · 구즈넥 베이스 송신기"
+    }
+  }
+}

@@ -546,5 +546,24 @@
     "footerNote": "Shure SLXD2+/58 Wireless Handheld Transmitter with SM58® Microphone · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**SLXD2+/58**은 SM58 캡슐을 탑재한 SLX-D+ 핸드헬드 송신기입니다. ShowLink Ease 링크로 수신기에서 주파수와 출력을 원격 조정합니다.",
+  "subtitle": "SLX-D+ · 핸드헬드 송신기",
+  "keyFacts": [
+    {
+      "label": "마이크 캡슐",
+      "value": "SM58",
+      "unit": ""
+    },
+    {
+      "label": "지향 패턴",
+      "value": "카디오이드(다이내믹)",
+      "unit": ""
+    },
+    {
+      "label": "RF 출력 파워 · 지역별",
+      "value": "1 / 10",
+      "unit": "mW"
+    }
+  ]
 }

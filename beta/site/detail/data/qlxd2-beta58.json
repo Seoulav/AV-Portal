@@ -300,5 +300,24 @@
     "footerNote": "Shure QLXD2/B58A Handheld Transmitter with BETA 58A Capsule · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **QLXD2/B58A**는 BETA 58A 캡슐을 결합한 QLX-D 핸드헬드 송신기입니다. 슈퍼카디오이드 다이내믹 캡슐로 음성을 수음해 무선 전송합니다.",
+  "subtitle": "Shure QLX-D Digital Wireless · 핸드헬드 송신기",
+  "keyFacts": [
+    {
+      "label": "마이크 캡슐",
+      "value": "BETA 58A",
+      "unit": ""
+    },
+    {
+      "label": "지향 패턴",
+      "value": "슈퍼카디오이드(Supercardioid)",
+      "unit": ""
+    },
+    {
+      "label": "RF 출력 파워",
+      "value": "1 mW 또는 10 mW",
+      "unit": ""
+    }
+  ]
 }

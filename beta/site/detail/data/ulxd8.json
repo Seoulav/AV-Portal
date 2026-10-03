@@ -249,5 +249,19 @@
     "footerNote": "Shure ULXD8 Wireless Gooseneck Base Transmitter · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **ULXD8**은 구즈넥 마이크용 테이블 베이스 송신기입니다. Microflex MX405·MX410·MX415 계열 구즈넥 마이크를 별도로 결합합니다.",
+  "subtitle": "Shure ULX-D Digital Wireless · 구즈넥 베이스 송신기",
+  "keyFacts": [
+    {
+      "label": "무선 암호화",
+      "value": "AES-256",
+      "unit": ""
+    },
+    {
+      "label": "SB900C · 사용 시간",
+      "value": "최대 12시간",
+      "unit": ""
+    }
+  ]
 }

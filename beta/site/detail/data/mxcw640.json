@@ -330,5 +330,19 @@
     "footerNote": "Shure MXCW640 · 공식 출처 기반",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MXCW640**은 터치스크린·스피커·마이크 연결부를 통합한 무선 회의 단말입니다. SB930 배터리로 동작하며 MXCWAPT 액세스 포인트와 무선으로 통신합니다.",
+  "subtitle": "Microflex Complete Wireless (MXCW) · 회의 단말",
+  "keyFacts": [
+    {
+      "label": "터치 디스플레이",
+      "value": "4.3인치 컬러 TFT 정전식 터치스크린",
+      "unit": ""
+    },
+    {
+      "label": "무선 대역",
+      "value": "2.4GHz ISM / 5GHz UNII",
+      "unit": ""
+    }
+  ]
 }

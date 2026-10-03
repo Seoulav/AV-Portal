@@ -423,5 +423,29 @@
     "footerNote": "Shure MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MXCWAPT-W**는 MXCW 회의 시스템의 액세스 포인트 트랜시버입니다. 무선 회의 유닛의 오디오·주파수·제어를 관리하고 Dante와 XLR 오디오를 연결합니다.",
+  "subtitle": "Microflex Complete Wireless (MXCW) · 액세스 포인트",
+  "keyFacts": [
+    {
+      "label": "Dante 오디오 채널",
+      "value": "10 입력 / 10 출력",
+      "unit": ""
+    },
+    {
+      "label": "무선 대역",
+      "value": "2.4GHz ISM, 5GHz UNII (DFS 대역 포함)",
+      "unit": ""
+    },
+    {
+      "label": "전원 방식",
+      "value": "Power over Ethernet (PoE)",
+      "unit": ""
+    },
+    {
+      "label": "무선 암호화",
+      "value": "AES-128 암호화",
+      "unit": ""
+    }
+  ]
 }

@@ -571,5 +571,19 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "Shure **QLXD4**는 QLX-D 단일 채널 디지털 무선 수신기입니다. 이더넷은 제어·펌웨어용이며 Dante 오디오는 지원하지 않습니다.",
+  "subtitle": "Shure QLX-D Digital Wireless · 단일 채널 수신기",
+  "keyFacts": [
+    {
+      "label": "독립 수신 채널",
+      "value": "1",
+      "unit": "채널"
+    },
+    {
+      "label": "RF 반송 대역 · 지역별",
+      "value": "470–937.5",
+      "unit": "MHz"
+    }
+  ]
 }

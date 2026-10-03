@@ -422,5 +422,24 @@
     "footerNote": "Shure MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18\", Cardioid, with Desktop Base · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MX418D/C**는 데스크톱 베이스를 갖춘 카디오이드 구즈넥 마이크입니다. 부착된 XLR 케이블로 회의 공간에 연결해 사용합니다.",
+  "subtitle": "Microflex Standard Gooseneck Microphones · 탁상형",
+  "keyFacts": [
+    {
+      "label": "주파수 응답",
+      "value": "50-17000",
+      "unit": "Hz"
+    },
+    {
+      "label": "폴라 패턴 · MX418D/C",
+      "value": "Cardioid",
+      "unit": ""
+    },
+    {
+      "label": "최대 SPL · 카디오이드/1kHz/1%THD/1kΩ",
+      "value": "123",
+      "unit": "dB"
+    }
+  ]
 }
