@@ -52,7 +52,7 @@ test('three U800F hotel TVs have the manual HDMI, physical ports and unchanged p
   }
 });
 
-test('all other detail JSON files remain byte-identical to the pre-change catalog', () => {
+test('all other detail JSON files retain their pre-change Git LF bytes', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
