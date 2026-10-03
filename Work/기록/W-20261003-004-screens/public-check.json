@@ -1,0 +1,109 @@
+{
+  "mergeSha": "2decf4456c14c0d352d14df79127610539b4b93e",
+  "pagesRun": 37086294290,
+  "assets": [
+    {
+      "file": "catalog.json",
+      "http": 200,
+      "publicSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "mergedSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "match": true
+    },
+    {
+      "file": "search-index.json",
+      "http": 200,
+      "publicSha256": "c19803a5de751701ea26eaaca1ea56bca509e947b73c812ae45f27fea10a4a10",
+      "mergedSha256": "c19803a5de751701ea26eaaca1ea56bca509e947b73c812ae45f27fea10a4a10",
+      "match": true
+    },
+    {
+      "file": "detail/data/hg43u800fnfxkr.json",
+      "http": 200,
+      "publicSha256": "32c50e46b4cefa209fdfa66b636045453fda751fc8dfb488a3087949c80c4557",
+      "mergedSha256": "32c50e46b4cefa209fdfa66b636045453fda751fc8dfb488a3087949c80c4557",
+      "match": true
+    },
+    {
+      "file": "detail/data/hg50u800fnfxkr.json",
+      "http": 200,
+      "publicSha256": "e6d038b593971b65e9e1be07cf5695e0821005c0a76b8c3cc8b9b1c1a1e889e5",
+      "mergedSha256": "e6d038b593971b65e9e1be07cf5695e0821005c0a76b8c3cc8b9b1c1a1e889e5",
+      "match": true
+    },
+    {
+      "file": "detail/data/hg65u800fnfxkr.json",
+      "http": 200,
+      "publicSha256": "e71c6925bc4851aedd7e43709e9a95ccdc9eb454eec3542092071c9301140563",
+      "mergedSha256": "e71c6925bc4851aedd7e43709e9a95ccdc9eb454eec3542092071c9301140563",
+      "match": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 1280,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "width": 390,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 1280,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "width": 390,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 1280,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "width": 390,
+      "http": 200,
+      "cards": 13,
+      "heading": "13개 연결 항목",
+      "hdmi": true,
+      "overflow": false,
+      "brokenImages": [],
+      "errors": []
+    }
+  ]
+}
