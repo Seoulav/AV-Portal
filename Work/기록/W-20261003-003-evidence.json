@@ -1,0 +1,532 @@
+{
+  "workId": "W-20261003-003",
+  "baselineCommit": "8d59f238c2b5ff22c052c43f3b38d85ab5781157",
+  "slug": "lh115qhfebgxkr",
+  "manual": {
+    "file": "BN81-26720E-04_WUG_QPDX-5K QHFX_KR_KOR_260916.0.pdf",
+    "sha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+    "appliedModel": "QH115FX",
+    "page": 105,
+    "footnotes": [
+      "제품 뒷면 라벨 참조",
+      "함체 설치 시 내부 온도 40℃ 이하",
+      "포장 박스 개봉 전 상태 기준"
+    ]
+  },
+  "before": {
+    "fileSha256": "397d4cfc470d7b3667f8e74526ae02e75290f5d635f95d640657fb21f545c232",
+    "coreSha256": "9fd541bad6adba07ef9c3eab586f01bc2e9cbbd724ebe2be00e72031f5935b35",
+    "specifications": [
+      {
+        "group": "Display",
+        "name": "화면 크기",
+        "value": "115 (290.7)",
+        "unit": "인치(cm)",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "영상 처리 엔진",
+        "value": "퀀텀 Mini LED 프로 + 퀀텀 매트릭스 테크놀로지 프로",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "패널 특성",
+        "value": "안티글레어 패널(최적화된 헤이즈 설계)",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "화질 처리",
+        "value": "슈퍼 픽처 인핸서, 4K AI 업스케일링 Pro",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "전문가 모드",
+        "value": "Director Mode, DICOM Simulation Mode",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "운영 시간",
+        "value": "24시간 365일 연속 운영",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Physical",
+        "name": "제품 두께",
+        "value": "34.1",
+        "unit": "mm",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Physical",
+        "name": "설치 방향",
+        "value": "가로형/세로형 설치 지원",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "name": "내장 스피커",
+        "value": "4.2.2채널, 60",
+        "unit": "W",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Smart Platform",
+        "name": "운영체제/플랫폼",
+        "value": "Tizen 엔터프라이즈 플랫폼(TEP)",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Security",
+        "name": "보안",
+        "value": "삼성 Knox",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Software",
+        "name": "화면 보정",
+        "value": "스마트 캘리브레이션",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "패널 종류",
+        "value": "VA",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "해상도",
+        "value": "3,840 x 2,160",
+        "unit": "픽셀",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "픽셀 피치(HxV)",
+        "value": "0.630 x 0.630",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "밝기(Typ)",
+        "value": "1000",
+        "unit": "nit",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "명암비(정적)",
+        "value": "5,500:1",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "시야각(H/V)",
+        "value": "178/178",
+        "unit": "°",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "응답 속도",
+        "value": "6.5",
+        "unit": "ms",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "색재현율",
+        "value": "93% (DCI-P3)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "15 - 135 kHz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "1.188 GHz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "24 - 120 Hz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "동적 명암비",
+        "value": "Mega",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Connectivity",
+        "name": "Wi-Fi",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Connectivity",
+        "name": "블루투스",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Power",
+        "name": "전원 사양",
+        "value": "AC100-240V 50/60Hz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Power",
+        "name": "소비전력(On 모드)",
+        "value": "836",
+        "unit": "W",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "name": "소비전력(대기/Sleep 모드)",
+        "value": "0.5",
+        "unit": "W",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Physical",
+        "name": "크기(가로x높이x깊이)",
+        "value": "2565.2 x 1467.6 x 34.1",
+        "unit": "mm",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Physical",
+        "name": "포장 크기(가로x높이x깊이)",
+        "value": "2765.0 x 1652.0 x 250.0",
+        "unit": "mm",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Physical",
+        "name": "중량",
+        "value": "83.7",
+        "unit": "kg",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Physical",
+        "name": "중량(포장 포함)",
+        "value": "133.6",
+        "unit": "kg",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Environment",
+        "name": "동작 온도",
+        "value": "0 - 40 ℃",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Environment",
+        "name": "동작 습도",
+        "value": "20 - 95% (Operating)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Physical",
+        "name": "VESA 규격",
+        "value": "1000 x 600",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Physical",
+        "name": "베젤 폭(사양표)",
+        "value": "3 Bezel-less",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "TITAN BLACK",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Physical",
+        "name": "프레임 재질",
+        "value": "Non-Glossy(Metal)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "Slim Fit Wall-mount (기본 동봉)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "Yes(기본 동봉)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Smart Platform",
+        "name": "운영체제 버전",
+        "value": "Tizen 8.0",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Smart Platform",
+        "name": "내장 플래시 메모리",
+        "value": "16GB",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "대각 크기(사양표 실측)",
+        "value": "114.4818",
+        "unit": "인치",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      },
+      {
+        "group": "Display",
+        "name": "밝기(최대)",
+        "value": "1000",
+        "unit": "nit",
+        "condition": "자사 실험치 기준 · 실사용 환경에 따라 차이",
+        "source": "S5",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Display",
+        "name": "디스플레이 기술",
+        "value": "Neo QLED",
+        "unit": "",
+        "condition": "",
+        "source": "S5",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Smart Platform",
+        "name": "SmartThings",
+        "value": "Thing",
+        "unit": "",
+        "condition": "",
+        "source": "S5",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Software",
+        "name": "VXT Player Support",
+        "value": "있음",
+        "unit": "",
+        "condition": "",
+        "source": "S5",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Environment",
+        "name": "방수/방진",
+        "value": "IP 5X",
+        "unit": "",
+        "condition": "",
+        "source": "S5",
+        "verification": "FOUND"
+      }
+    ],
+    "sources": [
+      {
+        "code": "P",
+        "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+        "url": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+        "scope": "국내 모델 LH115QHFEBGXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 기존 LED 대비 1/50 크기 LED 적용(삼성 Q8F TV 모델 LED 기준 비교) / 화질 처리: PC 연결·게임 모드에는 적용되지 않을 수 있음 / 전문가 모드: 프로페셔널 모드 내장 / 화면 보정: 특정 모바일 기기에서만 지원"
+      },
+      {
+        "code": "S3",
+        "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
+        "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 4의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+      },
+      {
+        "code": "S4",
+        "name": "삼성전자 115QHF 제품 자료 (사용자 제공)",
+        "scope": "국내 모델 LH115QHFEBGXKR 일치 · 2쪽 연결성 USB 2 x USB-A. 원본 사본은 게시하지 않음; SHA-256 4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962"
+      },
+      {
+        "code": "S5",
+        "name": "삼성전자 스마트 LCD 사이니지 115QHF 제품 사양서 (사용자 제공)",
+        "scope": "국내 모델 LH115QHFEBGXKR 일치 · 슬라이드 1 제품 특징, 슬라이드 2 사양표. 원본 사본은 게시하지 않음; SHA-256 b8062a55a9cc7693af424e9510a92995f12dee1c817ad2645d05506c66e16b42"
+      },
+      {
+        "code": "M1",
+        "name": "삼성전자 한글 사용설명서 BN81-26720E-04 (사용자 제공)",
+        "scope": "적용 모델 QH115FX · 단자 설명 15쪽 · SHA-256 0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc · 원본은 게시하지 않음"
+      }
+    ],
+    "reviewRequired": 27
+  },
+  "otherDetailJsonSha256": "74768838c3df46bdcfb71f667effdd9338d1ec3b46752dbc79ddbbea575e5903",
+  "otherManuals": [
+    {
+      "document": "BN81-24537G-14",
+      "productSpecsPage": 122,
+      "printedLastPage": 130
+    },
+    {
+      "document": "BN81-25348H-02",
+      "productSpecsPage": 70,
+      "printedLastPage": 75
+    }
+  ]
+}
