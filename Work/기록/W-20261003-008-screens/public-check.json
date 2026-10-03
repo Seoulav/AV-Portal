@@ -1,0 +1,423 @@
+{
+  "merge": "d3100baac79f603533c4198a88e6096e9f4a5597",
+  "pagesRunId": 37096135847,
+  "artifacts": {
+    "beta/site/detail/data/nx-1200.json": {
+      "httpStatus": 200,
+      "expectedSha256": "d93cf0985c491021e39ad186fda35e471542f5a63d75a874589c9b02c01933ba",
+      "publishedSha256": "d93cf0985c491021e39ad186fda35e471542f5a63d75a874589c9b02c01933ba",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/nx-2200.json": {
+      "httpStatus": 200,
+      "expectedSha256": "cabdf838aa47bfa1251ba76de8ed97eb6747c2f7d73ea8ec50057fba88b87c4b",
+      "publishedSha256": "cabdf838aa47bfa1251ba76de8ed97eb6747c2f7d73ea8ec50057fba88b87c4b",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/nx-3200.json": {
+      "httpStatus": 200,
+      "expectedSha256": "64d19e03ff1d80a73eca94942b6e02fc20173d9a98ddde08fb68ab3ec9912973",
+      "publishedSha256": "64d19e03ff1d80a73eca94942b6e02fc20173d9a98ddde08fb68ab3ec9912973",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/varia-100.json": {
+      "httpStatus": 200,
+      "expectedSha256": "f37b18a47146beec56b08b83b88e8dfa19894240b5d1951cbc71655f7ee8a9a2",
+      "publishedSha256": "f37b18a47146beec56b08b83b88e8dfa19894240b5d1951cbc71655f7ee8a9a2",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/varia-80.json": {
+      "httpStatus": 200,
+      "expectedSha256": "5777142f33a672b4f39c9db8f5efb804953c2bf312c285741f5117bf521b8c33",
+      "publishedSha256": "5777142f33a672b4f39c9db8f5efb804953c2bf312c285741f5117bf521b8c33",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/varia-sl50.json": {
+      "httpStatus": 200,
+      "expectedSha256": "e1f4aad5e713a5c29f7152de5fa007a86c83b43d2e0efcb700ed25137b33582a",
+      "publishedSha256": "e1f4aad5e713a5c29f7152de5fa007a86c83b43d2e0efcb700ed25137b33582a",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/varia-sl80.json": {
+      "httpStatus": 200,
+      "expectedSha256": "b523229631200613751b2312e437540e4611c839a75b3f0740c9b07c4fa6ea80",
+      "publishedSha256": "b523229631200613751b2312e437540e4611c839a75b3f0740c9b07c4fa6ea80",
+      "bytesEqual": true
+    },
+    "beta/site/docs/manifest.json": {
+      "httpStatus": 200,
+      "expectedSha256": "b80b42257eafac840bfb732b224b9acf2e2a9f9f5e5b6f7297e8eed3816af256",
+      "publishedSha256": "b80b42257eafac840bfb732b224b9acf2e2a9f9f5e5b6f7297e8eed3816af256",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-series-hardware-reference.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+      "publishedSha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-netlinx-language-reference.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "aefb1d9677e03b6140862c925f11e84e15e2b876583b2985907bb823142db9df",
+      "publishedSha256": "aefb1d9677e03b6140862c925f11e84e15e2b876583b2985907bb823142db9df",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-series-web-console-programming.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "b0409e503f2ac498f806b519820fa5382299a106cd0c6f789f1a6e418c5f02f7",
+      "publishedSha256": "b0409e503f2ac498f806b519820fa5382299a106cd0c6f789f1a6e418c5f02f7",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-series-safety-instructions.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "d6d43d9580a4a6884b039a3dff9b5d7bac7dd1f0ed769af43bf044c789d18e1c",
+      "publishedSha256": "d6d43d9580a4a6884b039a3dff9b5d7bac7dd1f0ed769af43bf044c789d18e1c",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-series-whats-new.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "d306c9abd5169a29fb99fa0c568916fd38def2dc61166bd6fbc3411bf380e382",
+      "publishedSha256": "d306c9abd5169a29fb99fa0c568916fd38def2dc61166bd6fbc3411bf380e382",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-1200-quick-start.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "a292d5f35fdafb3f7d791913aeba786d97eadbd19d8100cbab1e30823d339ad9",
+      "publishedSha256": "a292d5f35fdafb3f7d791913aeba786d97eadbd19d8100cbab1e30823d339ad9",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-1200-pictorial-drawing.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "76f006b6622ff0c9a7904d6a90d627d7e4f019618cea30c178a924b42e2b9d1a",
+      "publishedSha256": "76f006b6622ff0c9a7904d6a90d627d7e4f019618cea30c178a924b42e2b9d1a",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-2200-quick-start.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "b62ea3b8028d4e05507d772ad441fa7457e186b8dde4b3401d7a9b49931b5e72",
+      "publishedSha256": "b62ea3b8028d4e05507d772ad441fa7457e186b8dde4b3401d7a9b49931b5e72",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-2200-pictorial-drawing.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "6b7e570e3ff095241588df8e1a55bc4d92d2c34a5f0df299533f90bc73d85b90",
+      "publishedSha256": "6b7e570e3ff095241588df8e1a55bc4d92d2c34a5f0df299533f90bc73d85b90",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-3200-quick-start.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "201be06feed8e50ad360010b0b757099fcbc9355d0439dcc5f912f51f9556142",
+      "publishedSha256": "201be06feed8e50ad360010b0b757099fcbc9355d0439dcc5f912f51f9556142",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-nx-3200-pictorial-drawing.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "2976bd6936bd4b8e9df0a137ce28d14a808ea61a13b3a146570a2d24f72a9323",
+      "publishedSha256": "2976bd6936bd4b8e9df0a137ce28d14a808ea61a13b3a146570a2d24f72a9323",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-varia-touch-panels-programming-manual.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+      "publishedSha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-varia-80-data-sheet.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "20756894218044c703afd418b2a6c8a5b2f99741352fdfa57f331ebfc3b69a0f",
+      "publishedSha256": "20756894218044c703afd418b2a6c8a5b2f99741352fdfa57f331ebfc3b69a0f",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-varia-100-pictorial-drawing.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "58fc5bd7902bc579e3eb50bc26e0d75e831f31bebefd87d19b85fa46e314212d",
+      "publishedSha256": "58fc5bd7902bc579e3eb50bc26e0d75e831f31bebefd87d19b85fa46e314212d",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/amx-varia-sl50-pictorial-drawing.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "419477791c0ff8dbc248c67068481c0c07ed1b1851f6184e556f7030cfcf9f91",
+      "publishedSha256": "419477791c0ff8dbc248c67068481c0c07ed1b1851f6184e556f7030cfcf9f91",
+      "bytesEqual": true
+    }
+  },
+  "screens": [
+    {
+      "slug": "nx-1200",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-1200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-1200",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-1200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "nx-2200",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-2200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-2200",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-2200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "nx-3200",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-3200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-3200",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=nx-3200&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 7,
+      "expectedDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-100",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-100&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-100",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-100&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-80",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-80&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-80",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-80&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-sl50",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-sl50&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-sl50",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-sl50&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 2,
+      "expectedDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-sl80",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-sl80&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "expectedDocs": 1,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-sl80",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=varia-sl80&verify=d3100baa",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "expectedDocs": 1,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    }
+  ],
+  "failures": {
+    "artifacts": [],
+    "screens": []
+  }
+}
