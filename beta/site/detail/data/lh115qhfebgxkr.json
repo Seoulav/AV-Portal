@@ -248,9 +248,27 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "최대 주사율",
+      "value": "120",
+      "unit": "Hz",
+      "condition": "HDMI·DisplayPort",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "디스플레이 면적",
+      "value": "2534.4 x 1425.6",
+      "unit": "mm",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Display",
@@ -374,9 +392,9 @@
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
       "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",
@@ -438,17 +456,35 @@
       "value": "0 - 40 ℃",
       "unit": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Environment",
       "name": "동작 습도",
-      "value": "20 - 95% (Operating)",
+      "value": "10 - 80%",
       "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "비액화",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20 - 45",
+      "unit": "℃",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 습도",
+      "value": "5 - 95",
+      "unit": "%",
+      "condition": "비액화",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Physical",
@@ -742,7 +778,7 @@
     {
       "code": "M1",
       "name": "삼성전자 한글 사용설명서 BN81-26720E-04 (사용자 제공)",
-      "scope": "적용 모델 QH115FX · 단자 설명 15쪽 · SHA-256 0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc · 원본은 게시하지 않음"
+      "scope": "적용 모델 QH115FX · 단자 설명 15쪽 · SHA-256 0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc · 원본은 게시하지 않음 · 제품규격 105쪽(QH115FX 열)"
     }
   ],
   "issues": [

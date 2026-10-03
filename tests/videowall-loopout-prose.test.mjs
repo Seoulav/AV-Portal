@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
+import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-001-evidence.json',root),'utf8'));
@@ -24,8 +25,8 @@ test('only the two approved JSON files can change, and their protected fields st
     for(const [index,feature] of features.entries())if(index!==3)assert.deepEqual(feature,before.features[index],`${slug}: other features`);
   }
   for(const [slug,expected] of Object.entries(evidence.otherProductSha256)){
-    const historical=beforeHotelTvIo(product(slug),slug);
-    const bytes=slug.startsWith('hg') ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
+    const historical=beforeHotelTvIo(beforeSamsung115ManualSpecs(product(slug),slug),slug);
+    const bytes=slug.startsWith('hg')||slug==='lh115qhfebgxkr' ? Buffer.from(JSON.stringify(historical,null,2)+'\n') : file(slug);
     assert.equal(sha(gitJsonBytes(bytes)),expected,`${slug}: unrelated Git JSON blob bytes`);
   }
 });

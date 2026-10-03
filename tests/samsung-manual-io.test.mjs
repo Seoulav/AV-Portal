@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeVideowallProse} from './videowall-w03001-history.mjs';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
+import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -25,7 +26,7 @@ const manualCode=item=>String(item.source).split(',').map(x=>x.trim()).includes(
 test('only eight exact-model Samsung products change, and specifications remain byte-equivalent',()=>{
   assert.equal(Object.keys(evidence.products).length,8);
   for(const [slug,before] of Object.entries(evidence.products)){
-    const p=beforeVideowallProse(load(slug),slug);
+    const p=beforeVideowallProse(beforeSamsung115ManualSpecs(load(slug),slug),slug);
     const {io,sources,...other}=p;
     assert.equal(sha(JSON.stringify(other)),before.coreSha256,`${slug}: outside io/sources`);
     assert.deepEqual(p.io.filter(x=>x.connector==='오디오 입력'&&x.availability.includes('미지원')).map(x=>x.quantity),
