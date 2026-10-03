@@ -36,14 +36,16 @@ test('verification records move below cards and keep the sources hash', async ()
   assert.match(app, /legacySourceHash/);
 });
 
-test('public footers do not expose build strings and detail asset versions are refreshed', async () => {
+test('public pages display a version badge while detail assets retain their refreshed versions', async () => {
   const home = await file('beta/site/index.html');
   const detail = await file('prototype/brc-am7/index.html');
-  assert.doesNotMatch(home, /data-system-version|SYSTEM v0\.1\.0|build local/);
+  const publicDetail = await file('beta/site/detail/index.html');
+  assert.match(home, /data-system-version/);
+  assert.match(publicDetail, /data-system-version/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
-  // Port Map's SVG renderer and styles must ship with a fresh asset version.
-  assert.match(detail, /styles\.css\?v=w20261004-001-rtcom/);
-  assert.match(detail, /app\.js\?v=w20261004-001-rtcom/);
+  // The overview fallback changes both code and styles; the prototype assets must refresh.
+  assert.match(detail, /styles\.css\?v=w20261004-002-overview/);
+  assert.match(detail, /app\.js\?v=w20261004-002-overview/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

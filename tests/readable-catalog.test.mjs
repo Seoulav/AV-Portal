@@ -11,9 +11,11 @@ const catalog = JSON.parse(await readFile(new URL('catalog.json', site), 'utf8')
 const rtcom = adaptRtcomCatalog(JSON.parse(await readFile(new URL('rtcom/raw/index.json', site), 'utf8')));
 const publicCatalog = [...catalog, ...rtcom];
 
-test('static catalog exposes every public product without JavaScript', async () => {
+test('static catalog exposes every public product without requiring JavaScript', async () => {
   const html = await readFile(new URL('catalog.html', site), 'utf8');
-  assert.doesNotMatch(html, /<script\b/i);
+  assert.deepEqual(html.match(/<script\b[^>]*><\/script>/gi), [
+    '<script type="module" src="./system-version.js?v=w20261004-002"></script>'
+  ]);
   assert.equal((html.match(/<article class="catalog-product"/g) ?? []).length, publicCatalog.length);
   for (const item of publicCatalog) {
     assert.match(html, new RegExp(`>${item.product.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}<`));

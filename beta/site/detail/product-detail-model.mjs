@@ -120,12 +120,18 @@ export function selectKeyConnectors(connectorGroups = [], limit = 6) {
   return selected;
 }
 
-export function selectKeySpecifications(specificationGroups = [], limit = 10) {
+export function selectKeySpecifications(specificationGroups = [], limit = 10, compactFallback = true) {
+  if (limit <= 0) return [];
+  const candidates = specificationGroups.flatMap(group => group.entries.slice(0, 2))
+    .filter(item => !['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(item.verification));
+  if (!compactFallback) return candidates.slice(0, limit);
   const selected = [];
-  for (const group of specificationGroups) {
-    for (const item of group.entries.slice(0, 2)) {
+  // At 390px the two-line facts cell clipped even a 23-character Korean value.
+  for (const maxLength of [16, 20]) {
+    for (const item of candidates) {
       if (selected.length >= limit) return selected;
-      if (!['REVIEW REQUIRED', 'CONFLICTED', 'MISSING'].includes(item.verification)) selected.push(item);
+      const displayValue = [item.value, item.unit].filter(Boolean).join(' ');
+      if (displayValue && displayValue.length <= maxLength && !selected.includes(item)) selected.push(item);
     }
   }
   return selected;
@@ -199,7 +205,7 @@ export function summarizeVerificationStatuses(items = []) {
   };
 }
 
-export function prepareProductDetail(input) {
+export function prepareProductDetail(input, { compactFallback = true } = {}) {
   if (!input || !input.manufacturer || !input.model) throw new Error('제품 식별 정보가 필요합니다.');
   const documents = input.documents ?? [];
   const images = input.images ?? [];
@@ -242,7 +248,7 @@ export function prepareProductDetail(input) {
     }),
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups,
-    keySpecifications: selectKeySpecifications(specificationGroups),
+    keySpecifications: selectKeySpecifications(specificationGroups, 10, compactFallback),
     ioGroups,
     connectorGroups,
     keyConnectors: selectKeyConnectors(connectorGroups),

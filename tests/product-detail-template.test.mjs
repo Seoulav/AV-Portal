@@ -130,15 +130,15 @@ test('key connector selection excludes missing placeholders but full groups reta
 test('key specification selection limits verified values while preserving group order', () => {
   const groups = [
     { name: 'Audio', entries: [
-      { name: 'Inputs', verification: 'VERIFIED' },
-      { name: 'Mix buses', verification: 'VERIFIED' },
-      { name: 'Hidden third', verification: 'VERIFIED' }
+      { name: 'Inputs', value: '8', verification: 'VERIFIED' },
+      { name: 'Mix buses', value: '4', verification: 'VERIFIED' },
+      { name: 'Hidden third', value: '2', verification: 'VERIFIED' }
     ] },
     { name: 'Network', entries: [
-      { name: 'Dante', verification: 'VERIFIED' },
-      { name: 'Review value', verification: 'REVIEW REQUIRED' }
+      { name: 'Dante', value: '64', verification: 'VERIFIED' },
+      { name: 'Review value', value: 'pending', verification: 'REVIEW REQUIRED' }
     ] },
-    { name: 'Power', entries: [{ name: 'AC', verification: 'VERIFIED' }] }
+    { name: 'Power', entries: [{ name: 'AC', value: '100 W', verification: 'VERIFIED' }] }
   ];
 
   assert.deepEqual(selectKeySpecifications(groups, 4).map(item => item.name), ['Inputs', 'Mix buses', 'Dante', 'AC']);

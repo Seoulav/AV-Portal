@@ -40,6 +40,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .pg-facts[hidden] { display: none; }
 .pg-facts dd { font-size: 16px; }
 .pg-facts dd.long-key-value { font-size: 14px; font-weight: 700; }
+#key-specs.av-fallback-facts dd.long-key-value { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 .pg-inline-more { margin-top: 16px; border-top: 1px solid var(--pg-line); padding-top: 12px; }
 .pg-inline-more > summary { color: var(--pg-accent-2); font-size: 12px; font-weight: 700; cursor: pointer; }
 .pg-inline-more > p { margin: 12px 0 0; color: var(--pg-ink-2); line-height: 1.65; white-space: pre-line; }

@@ -89,10 +89,14 @@ assert.deepEqual(await computeSnapshot(), snapshot, 'public-snapshot.json이 현
 
 const raw = await readFile(new URL('catalog.json', site), 'utf8');
 const homeHtml = await readFile(new URL('index.html', site), 'utf8');
+const catalogHtml = await readFile(new URL('catalog.html', site), 'utf8');
 const detailHtml = await readFile(new URL('index.html', detail), 'utf8');
 const version = JSON.parse(await readFile(new URL('version.json', site), 'utf8'));
-assert.doesNotMatch(homeHtml, /data-system-version|SYSTEM v\d|build local|system-version\.(?:css|js)/);
-assert.doesNotMatch(detailHtml, /data-system-version|SYSTEM v\d|build local|system-version\.(?:css|js)/);
+for (const html of [homeHtml, catalogHtml, detailHtml]) {
+  assert.match(html, /data-system-version/);
+  assert.match(html, /system-version\.css/);
+  assert.match(html, /system-version\.js/);
+}
 assert.match(version.version, /^\d+\.\d+\.\d+$/);
 assert.ok(String(version.build).length > 0);
 assert.ok(String(version.revision).length > 0);

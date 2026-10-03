@@ -1,0 +1,4488 @@
+[
+  {
+    "slug": "a900w-r-gm",
+    "values": [
+      {
+        "name": "Gripple Angel Side Hook 커넥터",
+        "value": "3개",
+        "clipped": false
+      },
+      {
+        "name": "스틸 서스펜션 케이블",
+        "value": "3m(10피트) x 3개",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      },
+      {
+        "name": "미포함 사항",
+        "value": "천장 고정용 하드웨어, 이더넷 케이블",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "aquilon-rs2",
+    "values": [
+      {
+        "name": "멀티뷰어 출력",
+        "value": "2x HDMI 2.0",
+        "clipped": false
+      },
+      {
+        "name": "크기(RU)",
+        "value": "4RU",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "700 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "avhub",
+    "values": [
+      {
+        "name": "서드파티 DSP",
+        "value": "폭넓게 호환",
+        "clipped": false
+      },
+      {
+        "name": "지원 카메라",
+        "value": "최대 9대 UVC84/UVC86",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "avio-2ch-in",
+    "values": [
+      {
+        "name": "소비전력",
+        "value": "2 미만 W",
+        "clipped": false
+      },
+      {
+        "name": "주파수 응답",
+        "value": "20Hz-20kHz ±0.5dB",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "Class 1 802.3af PoE",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "avio-2ch-out",
+    "values": [
+      {
+        "name": "소비전력",
+        "value": "2 미만 W",
+        "clipped": false
+      },
+      {
+        "name": "주파수 응답",
+        "value": "20Hz-20kHz ±0.5dB",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "Class 1 802.3af PoE",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "avio-bt",
+    "values": [
+      {
+        "name": "채널",
+        "value": "2 in, 1 out",
+        "clipped": false
+      },
+      {
+        "name": "샘플레이트",
+        "value": "48 kHz",
+        "clipped": false
+      },
+      {
+        "name": "지연시간",
+        "value": "1, 2, 5 ms(선택)",
+        "clipped": false
+      },
+      {
+        "name": "규격",
+        "value": "5.0",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "avio-usb-c",
+    "values": [
+      {
+        "name": "채널",
+        "value": "2 in, 2 out",
+        "clipped": false
+      },
+      {
+        "name": "샘플레이트",
+        "value": "48 kHz",
+        "clipped": false
+      },
+      {
+        "name": "지연시간",
+        "value": "1, 2, 5 ms",
+        "clipped": false
+      },
+      {
+        "name": "동작/보관 온도",
+        "value": "-10~+50 / -25~+70 ℃",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "brc-am7",
+    "values": [
+      {
+        "name": "최대 유효 화소",
+        "value": "약 14.0 MP",
+        "clipped": false
+      },
+      {
+        "name": "광학 줌",
+        "value": "20 ×",
+        "clipped": false
+      },
+      {
+        "name": "초점 거리",
+        "value": "24–480 mm",
+        "clipped": false
+      },
+      {
+        "name": "팬 범위",
+        "value": "−175–+175 degree",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "cl01",
+    "values": [
+      {
+        "name": "최대 제어 카메라 수",
+        "value": "255 대",
+        "clipped": false
+      },
+      {
+        "name": "디스플레이",
+        "value": "OLED",
+        "clipped": false
+      },
+      {
+        "name": "회전 노브 / 조이스틱",
+        "value": "3 / 1",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "24 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "cm20",
+    "values": [],
+    "hidden": true,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "confidea-flex",
+    "values": [
+      {
+        "name": "재질",
+        "value": "PC/ABS & Zamak",
+        "clipped": false
+      },
+      {
+        "name": "색상",
+        "value": "Black",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "48 VDC",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "6 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "cpe40",
+    "values": [
+      {
+        "name": "픽업 범위",
+        "value": "6 m, 360도",
+        "clipped": false
+      },
+      {
+        "name": "데이지체인",
+        "value": "최대 8 대",
+        "clipped": false
+      },
+      {
+        "name": "마이크로폰 구성",
+        "value": "8-엘리먼트 전방향 마이크로폰 어레이",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "cs10",
+    "values": [
+      {
+        "name": "주파수 응답(-6dB)",
+        "value": "100-20000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "최대 SPL(연속)",
+        "value": "99 dB",
+        "clipped": false
+      },
+      {
+        "name": "크기(커버 메쉬 포함)",
+        "value": "φ294 x H125.8 mm",
+        "clipped": false
+      },
+      {
+        "name": "크기(커버 메쉬 미포함)",
+        "value": "φ287.2 x H125 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "d-cerno-ae",
+    "values": [
+      {
+        "name": "크기(W x D x H)",
+        "value": "48 x 17 x 4.5 cm",
+        "clipped": false
+      },
+      {
+        "name": "중앙 유닛 전원 공급",
+        "value": "48 VDC, 4.4 A",
+        "clipped": false
+      },
+      {
+        "name": "내부 저장 용량",
+        "value": "3 GB",
+        "clipped": false
+      },
+      {
+        "name": "제어 가능 델리게이트 유닛 수",
+        "value": "최대 250대",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "d-mic-40-sl",
+    "values": [
+      {
+        "name": "재질",
+        "value": "Brass",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "5 ~ 45 °C",
+        "clipped": false
+      },
+      {
+        "name": "습도",
+        "value": "< 95%, > 5%",
+        "clipped": false
+      },
+      {
+        "name": "인증",
+        "value": "CE",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "d-mic-50-sl",
+    "values": [
+      {
+        "name": "재질",
+        "value": "Brass",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "5 ~ 45 °C",
+        "clipped": false
+      },
+      {
+        "name": "습도",
+        "value": "< 95%, > 5%",
+        "clipped": false
+      },
+      {
+        "name": "인증",
+        "value": "CE",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "dm3",
+    "values": [
+      {
+        "name": "믹스버스",
+        "value": "6",
+        "clipped": false
+      },
+      {
+        "name": "샘플링 주파수",
+        "value": "96 / 48 kHz",
+        "clipped": false
+      },
+      {
+        "name": "신호 지연",
+        "value": "1.3 ms 미만",
+        "clipped": false
+      },
+      {
+        "name": "PC/Mac 레코딩·플레이백",
+        "value": "18 트랙",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "dm7",
+    "values": [
+      {
+        "name": "입력 믹싱 채널",
+        "value": "120 mono channel",
+        "clipped": false
+      },
+      {
+        "name": "Mix 버스",
+        "value": "48 bus",
+        "clipped": false
+      },
+      {
+        "name": "샘플링 주파수",
+        "value": "48 / 96 kHz",
+        "clipped": false
+      },
+      {
+        "name": "신호 지연",
+        "value": "1.5 미만 ms",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "duecanali-1604-dsp",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω",
+        "value": "800 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω",
+        "value": "800 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "duecanali-1604-dspd",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω (대칭)",
+        "value": "800 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω (대칭)",
+        "value": "800 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "duecanali-804-dsp",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω",
+        "value": "400 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω",
+        "value": "400 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "duecanali-804-dspd",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω (대칭)",
+        "value": "400 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω (대칭)",
+        "value": "400 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l260f",
+    "values": [
+      {
+        "name": "백색 밝기",
+        "value": "4,600 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "4,600 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "크기(최대)",
+        "value": "325 x 105 x 299 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l530u",
+    "values": [
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "밝기(백색/컬러)",
+        "value": "5,200 lm",
+        "clipped": false
+      },
+      {
+        "name": "해상도",
+        "value": "1920×1200, WUXGA",
+        "clipped": false
+      },
+      {
+        "name": "크기(최대, W×H×D)",
+        "value": "440×136×339 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l690u",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "6,500 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "6,500 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "무선 LAN 사양",
+        "value": "Wi-Fi 6E",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l695se",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "6,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "6,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "415 / 303 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l790su",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "7,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "7,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "470 / 341 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l790u",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "7,300 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "7,300 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "415 / 305 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l795se",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "7,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "7,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "450 / 330 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l895e",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "8,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "8,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "450 / 330 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-l895u",
+    "values": [
+      {
+        "name": "컬러 밝기",
+        "value": "8,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "백색 밝기",
+        "value": "8,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "470 / 341 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pq2213b",
+    "values": [
+      {
+        "name": "백색 밝기",
+        "value": "13,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "13,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "925 / 666 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pq2216b",
+    "values": [
+      {
+        "name": "백색 밝기",
+        "value": "16,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "16,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "1114 / 784 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pu1008b",
+    "values": [
+      {
+        "name": "밝기",
+        "value": "8,500 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "8,500 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "535 / 452 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pu2010w-b",
+    "values": [
+      {
+        "name": "밝기",
+        "value": "10,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "10,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "535 / 452 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pu2213b",
+    "values": [
+      {
+        "name": "백색 밝기",
+        "value": "13,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "13,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "864 / 633 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eb-pu2216b",
+    "values": [
+      {
+        "name": "백색 밝기",
+        "value": "16,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "컬러 밝기",
+        "value": "16,000 lm",
+        "clipped": false
+      },
+      {
+        "name": "광원 방식",
+        "value": "Laser Diode",
+        "clipped": false
+      },
+      {
+        "name": "정격 전력 소비량",
+        "value": "1083 / 773 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "eikos-4k",
+    "values": [
+      {
+        "name": "크기(RU)",
+        "value": "2RU",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "95 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "크기(핸들 포함)",
+        "value": "482.5 × 88 × 474 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ez-hsv-plus",
+    "values": [
+      {
+        "name": "아날로그 오디오 입력",
+        "value": "Stereo Jack x1",
+        "clipped": false
+      },
+      {
+        "name": "DIP 스위치",
+        "value": "6극 x1",
+        "clipped": false
+      },
+      {
+        "name": "MODE 스위치",
+        "value": "푸시 스위치 x1",
+        "clipped": false
+      },
+      {
+        "name": "화면",
+        "value": "2.7인치 TFT LCD",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ez-md-plus",
+    "values": [
+      {
+        "name": "DIP 스위치",
+        "value": "10극 x1",
+        "clipped": false
+      },
+      {
+        "name": "로터리 스위치",
+        "value": "10단 x1",
+        "clipped": false
+      },
+      {
+        "name": "전원 입력",
+        "value": "DC +11V ~ +13V",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "8 W (max.)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ez-shv-plus",
+    "values": [
+      {
+        "name": "오디오 출력",
+        "value": "Stereo Jack x1",
+        "clipped": false
+      },
+      {
+        "name": "DIP 스위치",
+        "value": "6극 x1",
+        "clipped": false
+      },
+      {
+        "name": "MODE 스위치",
+        "value": "푸시 스위치 x1",
+        "clipped": false
+      },
+      {
+        "name": "화면",
+        "value": "2.7인치 TFT LCD",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ez-umd-plus",
+    "values": [
+      {
+        "name": "LCD",
+        "value": "2.7인치 컬러 TFT x1",
+        "clipped": false
+      },
+      {
+        "name": "입력 전압",
+        "value": "DC +5 ~ +14V",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "보관 온도",
+        "value": "-10 ~ 50 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gs108pp",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "8 포트",
+        "clipped": false
+      },
+      {
+        "name": "속도",
+        "value": "기가비트",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "0.6 kg",
+        "clipped": false
+      },
+      {
+        "name": "보증",
+        "value": "Lifetime",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gs116pp",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "16 포트",
+        "clipped": false
+      },
+      {
+        "name": "속도",
+        "value": "기가비트",
+        "clipped": false
+      },
+      {
+        "name": "최대 전력 소비",
+        "value": "200 W",
+        "clipped": false
+      },
+      {
+        "name": "팬",
+        "value": "0 개",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gs728tppv3",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "28 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "기본 IP 주소",
+        "value": "192.168.0.239",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 최대 부하)",
+        "value": "427 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gsm4212p",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "12 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 최대 부하)",
+        "value": "163.9 W",
+        "clipped": false
+      },
+      {
+        "name": "소음(Fan Off 모드)",
+        "value": "0 dBA",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gsm4230p",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "30 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 사용 시)",
+        "value": "401 W",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 미사용)",
+        "value": "35.8 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gsm4230px",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "30 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 사용 시)",
+        "value": "614 W",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 미사용)",
+        "value": "46.8 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gsm4248p",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "48 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 사용 시)",
+        "value": "624.8 W",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 미사용)",
+        "value": "59.5 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "gsm4248px",
+    "values": [
+      {
+        "name": "PoE 전력 예산",
+        "value": "960 W",
+        "clipped": false
+      },
+      {
+        "name": "포트당 PoE+",
+        "value": "30 W",
+        "clipped": false
+      },
+      {
+        "name": "점보 프레임",
+        "value": "12 KB",
+        "clipped": false
+      },
+      {
+        "name": "AVB",
+        "value": "지원(전자 라이선스 필요)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-800w-psu",
+    "values": [
+      {
+        "name": "정격 전류",
+        "value": "10 ~ 5 A",
+        "clipped": false
+      },
+      {
+        "name": "입력 전압",
+        "value": "100-240 V~, 50/60Hz",
+        "clipped": false
+      },
+      {
+        "name": "모듈 치수(W x D x H)",
+        "value": "185 x 73.5 x 39 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-12g-sdi",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "12 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도",
+        "value": "4096x2160@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-2xhdmi20-2xdp12",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "9.8 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도(HDMI 2.0)",
+        "value": "4096x2160@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-4x3g-sdi",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "12.6 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도",
+        "value": "1920x1080@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-4xhdmi",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "9.3 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도(HDMI 1.3)",
+        "value": "2048x1152@60Hz",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도(HDMI 1.4)",
+        "value": "3840x1080@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-dp12-4k",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "9.4 W",
+        "clipped": false
+      },
+      {
+        "name": "HDCP",
+        "value": "HDCP 2.2",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-hdmi20-4k",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "9.3 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도",
+        "value": "4096x2160@60Hz",
+        "clipped": false
+      },
+      {
+        "name": "HDCP",
+        "value": "HDCP 2.2",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-input-card-hdmi20-dp12-4k",
+    "values": [
+      {
+        "name": "무게",
+        "value": "550 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "9.6 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 해상도(HDMI 2.0)",
+        "value": "4096x2160@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-output-card-4xhdmi-dl",
+    "values": [
+      {
+        "name": "무게",
+        "value": "500 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "22.1 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 출력 해상도(싱글링크)",
+        "value": "2048x1152@60Hz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-output-card-hdmi20-4k",
+    "values": [
+      {
+        "name": "무게",
+        "value": "500 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "21 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "h-preview-card-2xrj45-1xhdmi13",
+    "values": [
+      {
+        "name": "무게",
+        "value": "500 g",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "19.5 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "hdmi20-optj-rx90",
+    "values": [
+      {
+        "name": "광 케이블",
+        "value": "SC 심플렉스 멀티모드",
+        "clipped": false
+      },
+      {
+        "name": "최대 전송거리(OM4)",
+        "value": "1100 m",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "145 g",
+        "clipped": false
+      },
+      {
+        "name": "인클로저",
+        "value": "알루미늄, 무팬 수동냉각",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "hdmi20-optj-tx90",
+    "values": [
+      {
+        "name": "광 케이블",
+        "value": "SC 심플렉스 멀티모드",
+        "clipped": false
+      },
+      {
+        "name": "최대 전송거리(OM4)",
+        "value": "1100 m",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "145 g",
+        "clipped": false
+      },
+      {
+        "name": "인클로저",
+        "value": "알루미늄, 무팬 수동냉각",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "hyperdeck-studio-hd-mini",
+    "values": [
+      {
+        "name": "저장매체",
+        "value": "SD카드 x2 (내장)",
+        "clipped": false
+      },
+      {
+        "name": "HDMI",
+        "value": "HDMI 2.0 출력 1",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "최대 50 W",
+        "clipped": false
+      },
+      {
+        "name": "SDI",
+        "value": "3G-SDI 입력 1, 출력 1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "hyperdeck-studio-hd-plus",
+    "values": [
+      {
+        "name": "저장매체",
+        "value": "SD카드 x2 (내장)",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "최대 100 W",
+        "clipped": false
+      },
+      {
+        "name": "HDMI",
+        "value": "HDMI 2.0 입력 1, 출력 1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "hyperdeck-studio-hd-pro",
+    "values": [
+      {
+        "name": "소비전력",
+        "value": "최대 100 W",
+        "clipped": false
+      },
+      {
+        "name": "HDMI",
+        "value": "HDMI 2.0 입력 1, 출력 1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ki-pro-go2",
+    "values": [
+      {
+        "name": "동시 기록 채널",
+        "value": "최대 4 channel",
+        "clipped": false
+      },
+      {
+        "name": "최대 기록 형식",
+        "value": "1080p 60 fps",
+        "clipped": false
+      },
+      {
+        "name": "채널당 오디오",
+        "value": "2 channel",
+        "clipped": false
+      },
+      {
+        "name": "오디오 코덱",
+        "value": "MPEG-4 AAC-LC",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "led-780h",
+    "values": [
+      {
+        "name": "DVI 입력",
+        "value": "2 포트",
+        "clipped": false
+      },
+      {
+        "name": "HDMI 입력",
+        "value": "2 포트",
+        "clipped": false
+      },
+      {
+        "name": "DVI 출력",
+        "value": "8 포트, 4그룹",
+        "clipped": false
+      },
+      {
+        "name": "DP/SDI 루프",
+        "value": "각 1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-322-a",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "320 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "160 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-322-ad",
+    "values": [
+      {
+        "name": "채널당 정격 출력(2Ω)",
+        "value": "160 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 정격 출력(4Ω)",
+        "value": "160 W",
+        "clipped": false
+      },
+      {
+        "name": "최대 출력 전압",
+        "value": "142 Vpeak",
+        "clipped": false
+      },
+      {
+        "name": "최대 출력 전류",
+        "value": "15.6 Apeak",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-324-a",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "320 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "80 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-324-ad",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "320 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "80 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-602-a",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "250 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-602-ad",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "2 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력(Commercial total rated power)",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "250 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-604-a",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "125 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mezzo-604-ad",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 밸런스 입력",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "상용 정격 출력",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 출력 @ 100V (대칭)",
+        "value": "125 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mp008f",
+    "values": [
+      {
+        "name": "픽셀 피치",
+        "value": "0.84 mm",
+        "clipped": false
+      },
+      {
+        "name": "명암비",
+        "value": "29,000 : 1",
+        "clipped": false
+      },
+      {
+        "name": "Video Rate",
+        "value": "100 / 120 Hz",
+        "clipped": false
+      },
+      {
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mp012f",
+    "values": [
+      {
+        "name": "픽셀 피치",
+        "value": "1.26 mm",
+        "clipped": false
+      },
+      {
+        "name": "명암비",
+        "value": "41,000 : 1",
+        "clipped": false
+      },
+      {
+        "name": "Video Rate",
+        "value": "100 / 120 Hz",
+        "clipped": false
+      },
+      {
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mp016f",
+    "values": [
+      {
+        "name": "픽셀 피치",
+        "value": "1.68 mm",
+        "clipped": false
+      },
+      {
+        "name": "명암비",
+        "value": "43,000 : 1",
+        "clipped": false
+      },
+      {
+        "name": "Video Rate",
+        "value": "100 / 120 Hz",
+        "clipped": false
+      },
+      {
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mx392-c",
+    "values": [
+      {
+        "name": "주파수 응답",
+        "value": "50-17000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "전원 요구사항",
+        "value": "11-52V DC, 2.0mA",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "172 g",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "-18°C ~ 57°C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mx395",
+    "values": [
+      {
+        "name": "카트리지 타입",
+        "value": "일렉트렛 콘덴서",
+        "clipped": false
+      },
+      {
+        "name": "주파수 응답",
+        "value": "50-17000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "전원 요구사항 (MX395)",
+        "value": "11-52V DC, 2.0mA",
+        "clipped": false
+      },
+      {
+        "name": "전원 요구사항 (MX395-LED)",
+        "value": "48-52V DC, 8.0mA",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mx418d-c",
+    "values": [
+      {
+        "name": "타입",
+        "value": "콘덴서 (일렉트렛 바이어스)",
+        "clipped": false
+      },
+      {
+        "name": "주파수 응답",
+        "value": "50-17000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "길이",
+        "value": "18 in. (약 46cm)",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mxa925w-r",
+    "values": [
+      {
+        "name": "마이크 소자 구성",
+        "value": "113개 MEMS",
+        "clipped": false
+      },
+      {
+        "name": "주파수 응답",
+        "value": "125Hz ~ 20kHz",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      },
+      {
+        "name": "무게 (MXA925-S)",
+        "value": "5.4 kg (11.8 lb.)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mxc420-c",
+    "values": [
+      {
+        "name": "주파수 응답",
+        "value": "50-17000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "폴라 패턴",
+        "value": "Cardioid",
+        "clipped": false
+      },
+      {
+        "name": "길이",
+        "value": "20 in. (50cm)",
+        "clipped": false
+      },
+      {
+        "name": "색상",
+        "value": "Black",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mxcw640",
+    "values": [
+      {
+        "name": "마이크 연결",
+        "value": "10핀 모듈형 잠금 커넥터",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      },
+      {
+        "name": "배터리",
+        "value": "SB930 리튬이온(탈착식, 동봉)",
+        "clipped": false
+      },
+      {
+        "name": "크기(W×D×H)",
+        "value": "148×257.5×70.2 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "mxcwapt-w",
+    "values": [
+      {
+        "name": "Dante 채널",
+        "value": "10 입력 / 10 출력",
+        "clipped": false
+      },
+      {
+        "name": "WLAN 표준",
+        "value": "IEEE 802.11 a, g",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "1.15 kg",
+        "clipped": false
+      },
+      {
+        "name": "MXCWAPT-B",
+        "value": "캐나다/멕시코",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "novastar-h2",
+    "values": [
+      {
+        "name": "랙 유닛",
+        "value": "2U",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 카드 수",
+        "value": "4 매",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "210 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "plixus-ae-r-dante",
+    "values": [
+      {
+        "name": "재질",
+        "value": "Steel",
+        "clipped": false
+      },
+      {
+        "name": "색상",
+        "value": "Black, RAL9011",
+        "clipped": false
+      },
+      {
+        "name": "소비 전력",
+        "value": "최대 445 W",
+        "clipped": false
+      },
+      {
+        "name": "전압/연속 출력 전류",
+        "value": "48 VDC / 2A",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "plixus-ae-r-ps",
+    "values": [
+      {
+        "name": "재질",
+        "value": "ABS",
+        "clipped": false
+      },
+      {
+        "name": "색상",
+        "value": "Black",
+        "clipped": false
+      },
+      {
+        "name": "정격 입력 전압",
+        "value": "100 ~ 240 Vac",
+        "clipped": false
+      },
+      {
+        "name": "입력 전압 범위",
+        "value": "90 ~ 264 Vac",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "plixus-next",
+    "values": [
+      {
+        "name": "재질",
+        "value": "Steel",
+        "clipped": false
+      },
+      {
+        "name": "색상",
+        "value": "Tiger Carbon 01",
+        "clipped": false
+      },
+      {
+        "name": "네트워크 전원 커넥터 전압",
+        "value": "48 VDC",
+        "clipped": false
+      },
+      {
+        "name": "전류 소비",
+        "value": "최대 8 A",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-mz11k",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "615 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 22.5 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-mz14k",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "800 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 22.5 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-mz17k",
+    "values": [
+      {
+        "name": "투사 방식",
+        "value": "3LCD",
+        "clipped": false
+      },
+      {
+        "name": "광출력",
+        "value": "16,500 lm",
+        "clipped": false
+      },
+      {
+        "name": "투사 렌즈",
+        "value": "별매",
+        "clipped": false
+      },
+      {
+        "name": "Manual applicability",
+        "value": "Firmware 1.23 이상",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-mz882",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "465 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 18.6 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-vmz51",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "305 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 6.5 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-vmz61",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "370 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 6.9 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pt-vmz71",
+    "values": [
+      {
+        "name": "광원",
+        "value": "레이저 다이오드",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "420 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 7.0 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 45 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "pulse-4k",
+    "values": [
+      {
+        "name": "크기(RU)",
+        "value": "2RU",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "95 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "크기(핸들 포함)",
+        "value": "482.5 × 88 × 474 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "qlxd1",
+    "values": [
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "RF 출력 파워",
+        "value": "1 mW 또는 10 mW",
+        "clipped": false
+      },
+      {
+        "name": "입력 구성",
+        "value": "Unbalanced",
+        "clipped": false
+      },
+      {
+        "name": "배터리 런타임(470–865 MHz, SB900C)",
+        "value": ">11 시간",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "qlxd2-beta58",
+    "values": [
+      {
+        "name": "캡슐 모델",
+        "value": "BETA 58A",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "RF 출력 파워",
+        "value": "1 mW 또는 10 mW",
+        "clipped": false
+      },
+      {
+        "name": "치수 (L x Dia.)",
+        "value": "269 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "qlxd2-beta87a",
+    "values": [
+      {
+        "name": "캡슐 모델",
+        "value": "BETA 87A",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "RF 출력 파워",
+        "value": "1 mW 또는 10 mW",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 레벨(1 kHz, 1% THD)",
+        "value": "145 dB SPL",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "qlxd4",
+    "values": [
+      {
+        "name": "채널 수",
+        "value": "1 채널",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "작동 거리(Working Range)",
+        "value": "100 (328) m (ft)",
+        "clipped": false
+      },
+      {
+        "name": "레이턴시",
+        "value": "<2.9 ms",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-1204-dsp",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω",
+        "value": "300 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω",
+        "value": "300 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-1204-dspd",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω (대칭)",
+        "value": "300 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω (대칭)",
+        "value": "300 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-2404-dsp",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω",
+        "value": "600 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-2404-dspd",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω (대칭)",
+        "value": "600 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω (대칭)",
+        "value": "600 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-4804-dsp",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω",
+        "value": "1200 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω",
+        "value": "1200 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "quattrocanali-4804-dspd",
+    "values": [
+      {
+        "name": "출력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 입력 채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 8Ω (대칭)",
+        "value": "1200 W",
+        "clipped": false
+      },
+      {
+        "name": "채널당 최대 출력 @ 4Ω (대칭)",
+        "value": "1200 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rally-bar",
+    "values": [
+      {
+        "name": "결합 줌",
+        "value": "최대 15 ×",
+        "clipped": false
+      },
+      {
+        "name": "마이크 주파수 응답",
+        "value": "90–16,000 Hz",
+        "clipped": false
+      },
+      {
+        "name": "운용 모드",
+        "value": "USB / Appliance",
+        "clipped": false
+      },
+      {
+        "name": "크기",
+        "value": "910×164×130.5 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rally-mic-pod-extension-cable",
+    "values": [
+      {
+        "name": "길이",
+        "value": "10 m (32.8 ft)",
+        "clipped": false
+      },
+      {
+        "name": "최대 확장 길이",
+        "value": "20 m",
+        "clipped": false
+      },
+      {
+        "name": "품질보증",
+        "value": "2년 제한 하드웨어 보증",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rally-mic-pod-hub",
+    "values": [
+      {
+        "name": "마이크 팟 커넥터",
+        "value": "3 12핀",
+        "clipped": false
+      },
+      {
+        "name": "허브 연결 케이블",
+        "value": "9.6 ft (2.95 m)",
+        "clipped": false
+      },
+      {
+        "name": "품질보증",
+        "value": "2년 제한 하드웨어 보증",
+        "clipped": false
+      },
+      {
+        "name": "마운팅",
+        "value": "테이블 하부 마운팅 하드웨어 포함",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rally-mic-pod",
+    "values": [
+      {
+        "name": "주파수 응답",
+        "value": "90Hz ~ 16kHz",
+        "clipped": false
+      },
+      {
+        "name": "입력",
+        "value": "12핀 인터페이스",
+        "clipped": false
+      },
+      {
+        "name": "플랫폼",
+        "value": "Logitech Sync",
+        "clipped": false
+      },
+      {
+        "name": "부품번호(그래파이트)",
+        "value": "989-000430",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rally-plus",
+    "values": [
+      {
+        "name": "줌",
+        "value": "15배 HD",
+        "clipped": false
+      },
+      {
+        "name": "픽업 범위",
+        "value": "15 ft / 4.5m 지름",
+        "clipped": false
+      },
+      {
+        "name": "부품번호",
+        "value": "960-001225",
+        "clipped": false
+      },
+      {
+        "name": "품질보증",
+        "value": "2년 제한 하드웨어 보증",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rc400t",
+    "values": [
+      {
+        "name": "최대 소비전력",
+        "value": "25 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "약 8 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "버튼",
+        "value": "56개 사용자 프로그래밍 가능 버튼",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rio1608-d3",
+    "values": [
+      {
+        "name": "아날로그 입력",
+        "value": "16 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 출력",
+        "value": "8 채널",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "60 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "9.4 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rio3224-d3",
+    "values": [
+      {
+        "name": "아날로그 입력",
+        "value": "32 채널",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 출력",
+        "value": "16 채널",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "100 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "13.2 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rm-ip10",
+    "values": [
+      {
+        "name": "최대 IP 연결 카메라",
+        "value": "112 count",
+        "clipped": false
+      },
+      {
+        "name": "최대 직렬 연결 카메라",
+        "value": "7 count",
+        "clipped": false
+      },
+      {
+        "name": "디스플레이",
+        "value": "미지원",
+        "clipped": false
+      },
+      {
+        "name": "속도 조절 다이얼·줌 시소 레버",
+        "value": "미지원",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "rm-ip500",
+    "values": [
+      {
+        "name": "최대 IP 연결 카메라",
+        "value": "100 count",
+        "clipped": false
+      },
+      {
+        "name": "최대 직렬 연결 카메라",
+        "value": "7 count",
+        "clipped": false
+      },
+      {
+        "name": "디스플레이",
+        "value": "지원(LCD)",
+        "clipped": false
+      },
+      {
+        "name": "입력 전압",
+        "value": "12 V DC",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd1-plus",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD1+",
+        "clipped": false
+      },
+      {
+        "name": "폼팩터",
+        "value": "바디팩 송신기",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd2-plus-58",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD2+/58",
+        "clipped": false
+      },
+      {
+        "name": "폼팩터",
+        "value": "핸드헬드 송신기",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd2-plus-b58",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD2+/B58",
+        "clipped": false
+      },
+      {
+        "name": "폼팩터",
+        "value": "핸드헬드 송신기",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd2-plus-b87a",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD2+/B87A",
+        "clipped": false
+      },
+      {
+        "name": "폼팩터",
+        "value": "핸드헬드 송신기",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd4-plus",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD4+",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "1 ch",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "slxd4d-plus",
+    "values": [
+      {
+        "name": "모델",
+        "value": "SLXD4D+",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "2 ch",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송파 주파수 범위",
+        "value": "470–937.5 MHz",
+        "clipped": false
+      },
+      {
+        "name": "광대역 튜닝 폭",
+        "value": "138 MHz",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "smartvision40",
+    "values": [
+      {
+        "name": "시야각(DFOV)",
+        "value": "120 도",
+        "clipped": false
+      },
+      {
+        "name": "음성 픽업 범위",
+        "value": "6 m",
+        "clipped": false
+      },
+      {
+        "name": "마이크로폰 어레이",
+        "value": "8 MEMS 마이크로폰 어레이 내장",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "srg-a40",
+    "values": [
+      {
+        "name": "유효 화소",
+        "value": "약 8.5 MP",
+        "clipped": false
+      },
+      {
+        "name": "광학 줌",
+        "value": "20 ×",
+        "clipped": false
+      },
+      {
+        "name": "팬 범위",
+        "value": "−170–+170 degree",
+        "clipped": false
+      },
+      {
+        "name": "틸트 범위",
+        "value": "−20–+90 degree",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "srg-x40uh",
+    "values": [
+      {
+        "name": "유효 화소",
+        "value": "약 8.5 MP",
+        "clipped": false
+      },
+      {
+        "name": "광학 줌",
+        "value": "20 ×",
+        "clipped": false
+      },
+      {
+        "name": "팬 범위",
+        "value": "−170–+170 degree",
+        "clipped": false
+      },
+      {
+        "name": "틸트 범위",
+        "value": "−20–+90 degree",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "strong-usb-cable",
+    "values": [
+      {
+        "name": "길이",
+        "value": "10 m",
+        "clipped": false
+      },
+      {
+        "name": "커넥터",
+        "value": "USB-C ↔ USB-A",
+        "clipped": false
+      },
+      {
+        "name": "타입",
+        "value": "액티브(신호 증폭) USB 케이블",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "sx-1216-rti",
+    "values": [
+      {
+        "name": "정격 입력",
+        "value": "16 A / 240V",
+        "clipped": false
+      },
+      {
+        "name": "메인 플러그",
+        "value": "CEE7/7",
+        "clipped": false
+      },
+      {
+        "name": "출력 커넥터",
+        "value": "IEC C13 x 11",
+        "clipped": false
+      },
+      {
+        "name": "과전류 보호",
+        "value": "열 회로 차단기",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "tio1608-d2",
+    "values": [
+      {
+        "name": "입력",
+        "value": "16 채널, mic/line",
+        "clipped": false
+      },
+      {
+        "name": "출력",
+        "value": "8 채널, line",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "50 W",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "5.7 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "tr315",
+    "values": [
+      {
+        "name": "센서 크기",
+        "value": "1/2.8인치 CMOS",
+        "clipped": false
+      },
+      {
+        "name": "광학줌/디지털줌/총줌",
+        "value": "12X / 12X / 12X",
+        "clipped": false
+      },
+      {
+        "name": "최대 해상도",
+        "value": "4K 60fps",
+        "clipped": false
+      },
+      {
+        "name": "NDI",
+        "value": "NDI|HX3",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "tr335",
+    "values": [
+      {
+        "name": "센서 크기",
+        "value": "1/2.8인치 CMOS",
+        "clipped": false
+      },
+      {
+        "name": "광학줌/디지털줌/총줌",
+        "value": "30X / 12X / 360X",
+        "clipped": false
+      },
+      {
+        "name": "최대 해상도",
+        "value": "4K 60fps",
+        "clipped": false
+      },
+      {
+        "name": "NDI",
+        "value": "NDI|HX3",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ua844-swb",
+    "values": [
+      {
+        "name": "RF 입력 커넥터",
+        "value": "BNC",
+        "clipped": false
+      },
+      {
+        "name": "전원 요구사항 (본체)",
+        "value": "14 ~ 18 V DC",
+        "clipped": false
+      },
+      {
+        "name": "DC 출력 (수신기 전원 공급용)",
+        "value": "14~18V DC x 4채널",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "1.62 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ua845uwb",
+    "values": [
+      {
+        "name": "커넥터 타입",
+        "value": "BNC",
+        "clipped": false
+      },
+      {
+        "name": "DC 출력 (수신기 전원 공급용)",
+        "value": "15V DC x 4 커넥터",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "3.32 kg (7.3 lbs)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ua864a",
+    "values": [
+      {
+        "name": "커넥터 타입",
+        "value": "BNC (Female)",
+        "clipped": false
+      },
+      {
+        "name": "임피던스",
+        "value": "50 Ω",
+        "clipped": false
+      },
+      {
+        "name": "수신 패턴 (3dB 빔폭, 중심주파수 기준, UA864A)",
+        "value": "90 도(degrees)",
+        "clipped": false
+      },
+      {
+        "name": "3차 상호변조 차단점 (OIP3)",
+        "value": ">30 dBm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ua874xa",
+    "values": [
+      {
+        "name": "커넥터 타입",
+        "value": "BNC (Female)",
+        "clipped": false
+      },
+      {
+        "name": "임피던스",
+        "value": "50 Ω",
+        "clipped": false
+      },
+      {
+        "name": "수신 패턴 (3dB 빔폭)",
+        "value": "70 도(degrees)",
+        "clipped": false
+      },
+      {
+        "name": "3차 상호변조 차단점 (OIP3)",
+        "value": ">30 dBm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ultripower-ps",
+    "values": [],
+    "hidden": true,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ultripower",
+    "values": [
+      {
+        "name": "랙 유닛",
+        "value": "1 RU",
+        "clipped": false
+      },
+      {
+        "name": "출력 전압/전류",
+        "value": "15VDC @ 20A",
+        "clipped": false
+      },
+      {
+        "name": "지원 여부 (FR1/FR2)",
+        "value": "Optional",
+        "clipped": false
+      },
+      {
+        "name": "지원 여부 (FR5/FR12)",
+        "value": "Standard (필수)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ultritouch-2-hr",
+    "values": [
+      {
+        "name": "해상도",
+        "value": "1920 x 285 px",
+        "clipped": false
+      },
+      {
+        "name": "랙 유닛",
+        "value": "2 RU",
+        "clipped": false
+      },
+      {
+        "name": "이더넷 포트 수",
+        "value": "2 (실사용 1) 포트",
+        "clipped": false
+      },
+      {
+        "name": "전원 커넥터 수",
+        "value": "2 포트",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ultrix-hdx-io",
+    "values": [
+      {
+        "name": "포트 수량",
+        "value": "16 포트",
+        "clipped": false
+      },
+      {
+        "name": "임피던스",
+        "value": "75 Ohm",
+        "clipped": false
+      },
+      {
+        "name": "출력 진폭",
+        "value": "800mV ±10%",
+        "clipped": false
+      },
+      {
+        "name": "I/O당 오디오 채널 수",
+        "value": "16 채널",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ultrix-ns-fr2",
+    "values": [
+      {
+        "name": "너비",
+        "value": "17.5 inch",
+        "clipped": false
+      },
+      {
+        "name": "깊이",
+        "value": "7.9 inch",
+        "clipped": false
+      },
+      {
+        "name": "최대 비디오 매트릭스 크기",
+        "value": "72×72",
+        "clipped": false
+      },
+      {
+        "name": "내장 SDI I/O",
+        "value": "16×16",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd1",
+    "values": [
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "입력 구성",
+        "value": "Unbalanced",
+        "clipped": false
+      },
+      {
+        "name": "배터리 런타임(SB900C, 10mW)",
+        "value": ">11 시간",
+        "clipped": false
+      },
+      {
+        "name": "치수 (H x W x D)",
+        "value": "86 x 66 x 23 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd2-beta58",
+    "values": [
+      {
+        "name": "캡슐 모델",
+        "value": "BETA 58A",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "최대 입력 레벨(1 kHz, 1% THD)",
+        "value": "145 dB SPL",
+        "clipped": false
+      },
+      {
+        "name": "치수 (L x Dia.)",
+        "value": "256 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd2-beta87",
+    "values": [
+      {
+        "name": "캡슐 모델",
+        "value": "BETA 87A",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "치수 (L x Dia.)",
+        "value": "256 mm",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd2-ksm9",
+    "values": [
+      {
+        "name": "캡슐 모델",
+        "value": "KSM9",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "치수 (L x Dia.)",
+        "value": "256 mm",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd4",
+    "values": [
+      {
+        "name": "채널 수",
+        "value": "1 채널",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "작동 거리(Working Range)",
+        "value": "100 (330) m (ft)",
+        "clipped": false
+      },
+      {
+        "name": "레이턴시",
+        "value": "<2.9 ms",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd4q",
+    "values": [
+      {
+        "name": "채널 수",
+        "value": "4 채널",
+        "clipped": false
+      },
+      {
+        "name": "폼팩터",
+        "value": "1RU 랙마운트, 올메탈 섀시",
+        "clipped": false
+      },
+      {
+        "name": "RF 반송 주파수 범위",
+        "value": "470–932 MHz",
+        "clipped": false
+      },
+      {
+        "name": "작동 거리(Working Range)",
+        "value": "100 (330) m (ft)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "ulxd8",
+    "values": [
+      {
+        "name": "암호화",
+        "value": "AES-256",
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "clipped": false
+      },
+      {
+        "name": "전송 거리",
+        "value": "최대 300 ft (약 100 m)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "uvc-01",
+    "values": [
+      {
+        "name": "HDMI 입력",
+        "value": "HDMI Type A",
+        "clipped": false
+      },
+      {
+        "name": "USB 출력",
+        "value": "USB 3.0 Type B",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "USB 버스 파워 500mA",
+        "clipped": false
+      },
+      {
+        "name": "크기(W×D×H)",
+        "value": "90×37×23 mm",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "uvc85-byod",
+    "values": [
+      {
+        "name": "영상 해상도",
+        "value": "4K Ultra HD",
+        "clipped": false
+      },
+      {
+        "name": "픽업 범위",
+        "value": "6 m, 360도",
+        "clipped": false
+      },
+      {
+        "name": "CPE40 데이지체인",
+        "value": "최대 7 대",
+        "clipped": false
+      },
+      {
+        "name": "줌",
+        "value": "12배 광학줌 + 3배 디지털줌",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "uvc86",
+    "values": [
+      {
+        "name": "센서",
+        "value": "8MP Sony Sensor",
+        "clipped": false
+      },
+      {
+        "name": "센서",
+        "value": "8MP Sony Sensor",
+        "clipped": false
+      },
+      {
+        "name": "영상 스트림",
+        "value": "4K",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "v-02hd-mk-ii",
+    "values": [
+      {
+        "name": "비디오 입력",
+        "value": "HDMI Type A x2",
+        "clipped": false
+      },
+      {
+        "name": "PGM/PREVIEW 출력",
+        "value": "HDMI Type A",
+        "clipped": false
+      },
+      {
+        "name": "아날로그 오디오 입력",
+        "value": "3.5mm 스테레오 x2",
+        "clipped": false
+      },
+      {
+        "name": "풋스위치/페달 입력",
+        "value": "1/4\" TRS",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "v-160hd",
+    "values": [
+      {
+        "name": "비디오 채널 수",
+        "value": "16채널",
+        "clipped": false
+      },
+      {
+        "name": "오디오 처리",
+        "value": "24bit/48kHz",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "40채널 디지털 오디오 믹서",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "AC 어댑터",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "v-1hd-plus",
+    "values": [
+      {
+        "name": "채널 수",
+        "value": "14채널 오디오 믹서",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "AC 어댑터",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "25.2 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0~40 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "v-80hd",
+    "values": [
+      {
+        "name": "비디오 채널 수",
+        "value": "8채널",
+        "clipped": false
+      },
+      {
+        "name": "오디오 처리",
+        "value": "24bit/48kHz",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "28채널 디지털 오디오 믹서",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "AC 어댑터",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "v-8hd",
+    "values": [
+      {
+        "name": "비디오 채널 수",
+        "value": "8채널",
+        "clipped": false
+      },
+      {
+        "name": "오디오 처리",
+        "value": "24bit/48kHz",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "18채널 디지털 오디오 믹서",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "AC 어댑터",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "vcm35",
+    "values": [
+      {
+        "name": "마이크로폰 구성",
+        "value": "3-마이크로폰 어레이",
+        "clipped": false
+      },
+      {
+        "name": "음성 픽업 범위",
+        "value": "6 m (반경, 360도)",
+        "clipped": false
+      },
+      {
+        "name": "치수",
+        "value": "φ100 x T17 mm",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "199 g",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "vr-6hd",
+    "values": [
+      {
+        "name": "비디오 채널 수",
+        "value": "6채널",
+        "clipped": false
+      },
+      {
+        "name": "오디오 처리",
+        "value": "24bit/48kHz",
+        "clipped": false
+      },
+      {
+        "name": "채널 수",
+        "value": "28채널 디지털 오디오 믹서",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "AC 어댑터",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "vs10",
+    "values": [
+      {
+        "name": "HDMI 입력",
+        "value": "2 스케일러 내장",
+        "clipped": false
+      },
+      {
+        "name": "구성",
+        "value": "10 스테레오 입력 믹서 1",
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "DC 12V",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "40 W (max.)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "vs5",
+    "values": [
+      {
+        "name": "전원",
+        "value": "DC +7V ~ +14V",
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "30 W (max.)",
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "1.7 kg",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "x100pro-2u",
+    "values": [
+      {
+        "name": "최대 입력 보드",
+        "value": "2 개",
+        "clipped": false
+      },
+      {
+        "name": "최대 로드(1G 이더넷)",
+        "value": "26,000,000 픽셀",
+        "clipped": false
+      },
+      {
+        "name": "최대 레이어",
+        "value": "32",
+        "clipped": false
+      },
+      {
+        "name": "순중량",
+        "value": "8.00 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "x100pro-4u",
+    "values": [
+      {
+        "name": "최대 입력 보드",
+        "value": "4 개",
+        "clipped": false
+      },
+      {
+        "name": "최대 로드(1G 이더넷)",
+        "value": "26,000,000 픽셀",
+        "clipped": false
+      },
+      {
+        "name": "최대 레이어",
+        "value": "32",
+        "clipped": false
+      },
+      {
+        "name": "순중량",
+        "value": "11.55 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "x100pro-7u",
+    "values": [
+      {
+        "name": "최대 입력 보드",
+        "value": "8 개",
+        "clipped": false
+      },
+      {
+        "name": "최대 로드(1G 이더넷)",
+        "value": "52,000,000 픽셀",
+        "clipped": false
+      },
+      {
+        "name": "최대 레이어",
+        "value": "64",
+        "clipped": false
+      },
+      {
+        "name": "순중량",
+        "value": "15.6 kg",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "xsm4216f",
+    "values": [
+      {
+        "name": "포트 수",
+        "value": "16 포트",
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(시스템 풀로드)",
+        "value": "47.84 W",
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(포트 미연결 대기)",
+        "value": "19.269 W",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "zenith-100",
+    "values": [
+      {
+        "name": "크기(RU)",
+        "value": "3RU",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "170 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "품질보증",
+        "value": "3년(부품·공임, 공장 반송 기준)",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  },
+  {
+    "slug": "zenith-200",
+    "values": [
+      {
+        "name": "크기(RU)",
+        "value": "3RU",
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "250 W",
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "clipped": false
+      },
+      {
+        "name": "커스텀 포맷",
+        "value": "최대 8192 width/height",
+        "clipped": false
+      }
+    ],
+    "hidden": false,
+    "pageOverflow": false,
+    "errors": []
+  }
+]
