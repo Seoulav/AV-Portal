@@ -26,13 +26,17 @@ test('deployment script recognizes direct execution on Windows and Linux', () =>
   assert.equal(isMainModule('file:///home/runner/repo/beta/system-version.mjs', '/home/runner/repo/tests/importer.mjs'), false);
 });
 
-test('deployment metadata stays internal and public pages omit the build badge', async () => {
+test('deployment metadata badge appears on the three public pages', async () => {
   const home = await readFile(new URL('../beta/site/index.html', import.meta.url), 'utf8');
-  const detail = await readFile(new URL('../prototype/brc-am7/index.html', import.meta.url), 'utf8');
+  const catalog = await readFile(new URL('../beta/site/catalog.html', import.meta.url), 'utf8');
   const publicDetail = await readFile(new URL('../beta/site/detail/index.html', import.meta.url), 'utf8');
+  const prototype = await readFile(new URL('../prototype/brc-am7/index.html', import.meta.url), 'utf8');
 
-  for (const html of [home, detail, publicDetail]) {
-    assert.doesNotMatch(html, /data-system-version|SYSTEM v0\.1\.0|build local/);
-    assert.doesNotMatch(html, /system-version\.(?:css|js)/);
+  for (const html of [home, catalog, publicDetail]) {
+    assert.match(html, /data-system-version/);
+    assert.match(html, /system-version\.css/);
+    assert.match(html, /system-version\.js/);
   }
+  // The prototype remains outside the public Pages deployment.
+  assert.doesNotMatch(prototype, /data-system-version/);
 });

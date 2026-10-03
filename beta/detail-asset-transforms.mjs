@@ -17,7 +17,7 @@ function replaceRequired(source, before, after) {
 }
 
 export function transformDetailHtml(source) {
-  return source
+  const html = source
     .replaceAll('Product Detail 시안', 'Product Detail Beta')
     .replaceAll('https://seoulav.github.io/AV-Portal/', '../')
     .replace('href="./favicon.svg"', 'href="../favicon.svg"')
@@ -32,6 +32,11 @@ export function transformDetailHtml(source) {
     .replaceAll('로컬 이미지가 없습니다', '게시된 이미지가 없습니다')
     .replaceAll('로컬 시안 이미지', '제품 이미지')
     .replaceAll('AV PORTAL · PRODUCT DETAIL LOCAL STUDY', 'AV PORTAL · PRODUCT DETAIL BETA');
+  return replaceRequired(
+    replaceRequired(html, '</head>', '  <link rel="stylesheet" href="../system-version.css?v=w20261004-002">\n  <script type="module" src="../system-version.js?v=w20261004-002"></script>\n</head>'),
+    '<body class="pg-page">',
+    '<body class="pg-page">\n  <div class="system-version" data-system-version aria-label="시스템 버전"></div>'
+  );
 }
 
 export function transformDetailApp(source) {

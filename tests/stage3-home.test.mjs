@@ -52,8 +52,8 @@ test('long detail key facts get the smaller type treatment', async () => {
   const prototype = await read('../prototype/brc-am7/app.js');
   const generated = await read('../beta/site/detail/app.js');
   const styles = await read('../prototype/brc-am7/styles.css');
-  assert.match(prototype, /displayValue\.length\s*>\s*20/);
+  assert.match(prototype, /displayValue\.length\s*>\s*\(isRtcomProduct \? 20 : 16\)/);
   assert.match(prototype, /long-key-value/);
-  assert.match(generated, /displayValue\.length\s*>\s*20/);
+  assert.match(generated, /displayValue\.length\s*>\s*\(isRtcomProduct \? 20 : 16\)/);
   assert.match(styles, /\.long-key-value\s*\{[^}]*font-size:\s*14px;[^}]*font-weight:\s*700/s);
 });

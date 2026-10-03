@@ -1,6 +1,6 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-001-rtcom';
 import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001-map-review';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone, connectorPresentation, isAbsentConnector } from './product-detail-model.mjs?v=w20261001-001-map-review';
+import { prepareProductDetail, visibleDetailCards, connectorSignalTone, connectorPresentation, isAbsentConnector } from './product-detail-model.mjs?v=w20261004-002-overview';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -30,6 +30,7 @@ function safeLink(url, label, className = '') {
   return link;
 }
 const productKey = new URLSearchParams(location.search).get('product');
+const isRtcomProduct = productKey?.startsWith('rtcom-');
 let data;
 const isHistoryTraversal = performance.getEntriesByType('navigation')[0]?.type === 'back_forward';
 if (location.hash && !isHistoryTraversal) history.scrollRestoration = 'manual';
@@ -38,13 +39,13 @@ if (!productKey) {
 } else {
   try {
     if (!/^[a-z0-9-]+$/.test(productKey)) throw new Error('제품 주소 형식이 올바르지 않습니다.');
-    const rtcomId = productKey?.startsWith('rtcom-') ? productKey.slice('rtcom-'.length) : null;
+    const rtcomId = isRtcomProduct ? productKey.slice('rtcom-'.length) : null;
     const productDataPath = `./data/${productKey}.json`;
     const rtcomDataPath = `../rtcom/raw/products/${rtcomId}.json`;
     const response = await fetch(rtcomId ? rtcomDataPath : productDataPath);
     if (!response.ok) throw new Error('제품 상세 데이터를 읽을 수 없습니다.');
     const rawData = await response.json();
-    data = prepareProductDetail(rtcomId ? adaptRtcomDetail(rawData) : rawData);
+    data = prepareProductDetail(rtcomId ? adaptRtcomDetail(rawData) : rawData, { compactFallback: !rtcomId });
   } catch (error) {
     const notice = element('div', 'load-failure', error.message);
     notice.setAttribute('role', 'alert');
@@ -176,10 +177,12 @@ if (!productKey) {
   $('#overview-copy').textContent = fullOverview;
   $('#overview-more').hidden = !fullOverview || fullOverview.trim() === $('#overview-summary').textContent.trim();
   for (const value of data.categories) $('#categories').append(element('span', 'pg-pill', value));
-  for (const specification of data.keySpecifications.slice(0, 4)) {
+  if (!isRtcomProduct) $('#key-specs').classList.add('av-fallback-facts');
+  const fallbackSpecs = data.keySpecifications.slice(0, 4);
+  if (isRtcomProduct || fallbackSpecs.length >= 2) for (const specification of fallbackSpecs) {
     const cell = element('div');
     const displayValue = [specification.value, specification.unit].filter(Boolean).join(' ');
-    cell.append(element('dt', '', specification.name), element('dd', displayValue.length > 20 ? 'long-key-value' : '', displayValue));
+    cell.append(element('dt', '', specification.name), element('dd', displayValue.length > (isRtcomProduct ? 20 : 16) ? 'long-key-value' : '', displayValue));
     $('#key-specs').append(cell);
   }
   if (enhancements.keyFacts.length) {

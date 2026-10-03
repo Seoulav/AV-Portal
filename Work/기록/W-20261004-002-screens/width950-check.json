@@ -1,0 +1,532 @@
+[
+  {
+    "key": "vs10",
+    "width": 950,
+    "title": "Lumantek ez-Pro VS10 · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 286.390625,
+      "width": 891,
+      "height": 325.328125,
+      "right": 913,
+      "bottom": 611.71875
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "HDMI 입력",
+        "value": "2 스케일러 내장",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "구성",
+        "value": "10 스테레오 입력 믹서 1",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "전원",
+        "value": "DC 12V",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "소비전력",
+        "value": "40 W (max.)",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "gs728tppv3",
+    "width": 950,
+    "title": "NETGEAR GS728TPPv3 · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 319.25,
+      "width": 891,
+      "height": 349.328125,
+      "right": 913,
+      "bottom": 668.578125
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "포트 수",
+        "value": "28 포트",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "기본 포트 속도",
+        "value": "1 Gigabit",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "기본 IP 주소",
+        "value": "192.168.0.239",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "전력 소비(PoE 최대 부하)",
+        "value": "427 W",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "ua845uwb",
+    "width": 950,
+    "title": "Shure UA845UWB · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 361.234375,
+      "width": 891,
+      "height": 349.328125,
+      "right": 913,
+      "bottom": 710.5625
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "커넥터 타입",
+        "value": "BNC",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "DC 출력 (수신기 전원 공급용)",
+        "value": "15V DC x 4 커넥터",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "국내 인증",
+        "value": "인증 완료",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "무게",
+        "value": "3.32 kg (7.3 lbs)",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "eikos-4k",
+    "width": 950,
+    "title": "Analog Way Eikos 4K · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 301.859375,
+      "width": 891,
+      "height": 349.328125,
+      "right": 913,
+      "bottom": 651.1875
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "크기(RU)",
+        "value": "2RU",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "최대 소비전력",
+        "value": "95 W",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "동작 온도",
+        "value": "0 ~ 40 °C",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "크기(핸들 포함)",
+        "value": "482.5 × 88 × 474 mm",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "lh43qhcebgcxkr",
+    "width": 950,
+    "title": "Samsung LH43QHCEBGCXKR · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 286.390625,
+      "width": 891,
+      "height": 349.328125,
+      "right": 913,
+      "bottom": 635.71875
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "밝기 · Typ",
+        "value": "700nit",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "해상도",
+        "value": "3,840 x 2,160픽셀",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "화면 크기",
+        "value": "43 (107.9)인치(cm)",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "명암비 · 정적",
+        "value": "4,000:1",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "dci-4-600da",
+    "width": 950,
+    "title": "Crown Crown DCi 4|600DA · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 286.390625,
+      "width": 891,
+      "height": 349.328125,
+      "right": 913,
+      "bottom": 635.71875
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "출력",
+        "value": "4채널",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "4Ω·8Ω Dual / 채널",
+        "value": "600W",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "Dante 입력",
+        "value": "8채널",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "랙 높이",
+        "value": "2U",
+        "height": 57.125,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "varia-80",
+    "width": 950,
+    "title": "AMX VARIA-80 · AV Portal Product Detail",
+    "overview": {
+      "x": 22,
+      "y": 286.390625,
+      "width": 891,
+      "height": 322.9375,
+      "right": 913,
+      "bottom": 609.328125
+    },
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 69,
+      "right": 913,
+      "bottom": 99
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 112,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 138
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "112px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [
+      {
+        "name": "화면 크기 · 대각선",
+        "value": "8 (대각선)in",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "해상도",
+        "value": "1280 × 800",
+        "height": 57.125,
+        "clipped": false
+      },
+      {
+        "name": "터치 방식",
+        "value": "정전식(Capacitive)",
+        "height": 54.734375,
+        "clipped": false
+      },
+      {
+        "name": "전원 방식",
+        "value": "RJ-45, PoE 802.3af (15.4 W)",
+        "height": 54.734375,
+        "clipped": false
+      }
+    ],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "home",
+    "width": 950,
+    "title": "AV Portal · 제품 탐색",
+    "overview": null,
+    "header": {
+      "x": 22,
+      "y": 30,
+      "width": 891,
+      "height": 111.328125,
+      "right": 913,
+      "bottom": 141.328125
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 155,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 181
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "155px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": false,
+    "facts": [],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  },
+  {
+    "key": "catalog",
+    "width": 950,
+    "title": "AV Portal 정적 제품 카탈로그",
+    "overview": null,
+    "header": {
+      "x": 16,
+      "y": 0,
+      "width": 903,
+      "height": 326.375,
+      "right": 919,
+      "bottom": 326.375
+    },
+    "badge": {
+      "x": 671.078125,
+      "y": 12,
+      "width": 249.921875,
+      "height": 26,
+      "right": 921,
+      "bottom": 38
+    },
+    "badgeText": "SYSTEM v0.1.0 · build local · unreleased",
+    "badgeStyle": {
+      "top": "12px",
+      "right": "14px",
+      "position": "fixed"
+    },
+    "badgeHeaderOverlap": true,
+    "facts": [],
+    "factsHidden": false,
+    "pageWidth": 935,
+    "viewport": 950,
+    "errors": []
+  }
+]
