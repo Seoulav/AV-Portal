@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
+import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 
 const root = new URL('../',import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path,root),'utf8'));
 const bytes = path => readFileSync(new URL(path,root));
 const hash = value => createHash('sha256').update(value).digest('hex');
 const evidence = read('Work/기록/W-20261003-010-evidence.json');
+const bssEvidence = read('Work/기록/W-20261003-011-evidence.json');
 const manifest = read('beta/site/docs/manifest.json');
 const slugs = Object.keys(evidence.products);
 const product = slug => read(`beta/site/detail/data/${slug}.json`);
@@ -29,7 +31,8 @@ const specFacts = {
 test('all 16 JBL products have correctly scoped documents and exactly 19 unique published PDFs',()=>{
   assert.equal(hash(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
   assert.equal(hash(JSON.stringify(manifest.uploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
-  const added=manifest.uploads.slice(evidence.manifest.uploadCount);
+  // Keep this audit on the W-010 segment; W-011 BSS uploads are checked separately.
+  const added=manifest.uploads.slice(evidence.manifest.uploadCount,bssEvidence.manifest.uploadCount);
   assert.equal(added.length,28);
   const files=[...new Set(added.map(item=>item.file))];
   assert.equal(files.length,19);
@@ -93,6 +96,10 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
     }
   }
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json')&&!slugs.includes(x.slice(0,-5))).sort();
-  const digest=hash(names.map(name=>`${name}\0${readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n')}`).join(''));
+  const digest=hash(names.map(name=>{
+    const slug=name.slice(0,-5);
+    const raw=readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n');
+    return `${name}\0${bssW03011Slug(slug)?JSON.stringify(beforeBssW03011(JSON.parse(raw),slug),null,2)+'\n':raw}`;
+  }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'JBL之外 JSON changed');
 });

@@ -225,16 +225,14 @@
       "name": "제어 입출력",
       "value": "제어 입력 12개, 로직 출력 6개",
       "unit": "",
-      "condition": "GPIO",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Control",
       "name": "RS-232",
-      "value": "지원",
+      "value": "지원 (로직 프로세싱용)",
       "unit": "",
-      "condition": "로직 프로세싱용",
       "source": "P",
       "verification": "FOUND"
     },
@@ -270,7 +268,6 @@
       "name": "외형 치수(H x W x D)",
       "value": "45 x 483 x 318",
       "unit": "mm (1.75\" x 19\" x 12.5\")",
-      "condition": "1U",
       "source": "D",
       "verification": "FOUND"
     },
@@ -370,6 +367,16 @@
       "name": "제조사 공식 데이터시트(18-0818-B)",
       "url": "https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "BSS BLU-101 Installation Guide 5033747-B · 테크데이타 제공",
+      "scope": "영문 PDF 12쪽 · 게시 파일 manuals/bss-blu-101-installation-en.pdf · SHA-256 2bbc658f23979f34dac29a548bd28cd16e811f4b87f133d3d0c8f02cb21e9b06"
+    },
+    {
+      "code": "R1",
+      "name": "BSS BLU-101 국문 시방서 · 테크데이타 제공",
+      "scope": "국문 PDF 1쪽 · 게시 파일 manuals/bss-blu-101-specification-ko.pdf · SHA-256 cc108acd1a5091f266697092b2b6103fd9c7c7a37fe834a9fcf2ffdd7dd16ce3"
     }
   ],
   "issues": [],

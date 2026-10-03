@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
+import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -108,7 +109,9 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
     const raw=readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n');
-    hash.update(name).update('\0').update(jblW03010Slug(slug)?JSON.stringify(beforeJblW03010(JSON.parse(raw),slug),null,2)+'\n':raw);
+    const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)
+      : bssW03011Slug(slug)?beforeBssW03011(JSON.parse(raw),slug):null;
+    hash.update(name).update('\0').update(historical?JSON.stringify(historical,null,2)+'\n':raw);
   }
   assert.equal(hash.digest('hex'),evidence.otherDetailJsonSha256);
 });

@@ -243,7 +243,6 @@
       "name": "제어 입출력",
       "value": "제어 입력 12개, 로직 출력 6개",
       "unit": "",
-      "condition": "GPIO",
       "source": "P",
       "verification": "FOUND"
     },
@@ -279,16 +278,14 @@
       "name": "외형 치수(H x W x D)",
       "value": "45 x 483 x 318",
       "unit": "mm (1.75\" x 19\" x 12.5\")",
-      "condition": "1U",
       "source": "D",
       "verification": "FOUND"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "약 4.1 (9)",
-      "unit": "kg (lbs), 추정치",
-      "condition": "제조사 자료에 estimated로 표기",
+      "value": "4.1",
+      "unit": "kg",
       "source": "D",
       "verification": "FOUND"
     }
@@ -414,7 +411,12 @@
       "code": "D",
       "name": "제조사 공식 데이터시트(18-0650-B)",
       "url": "https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf",
-      "scope": "제조사 공식 출처"
+      "scope": "제조사 공식 출처 · 무게 4.1 kg은 원문 estimated(추정치) 표기"
+    },
+    {
+      "code": "M1",
+      "name": "BSS BLU-160 포함 Soundweb London 설치 가이드 18-0553-E · 테크데이타 제공",
+      "scope": "국문 PDF 14쪽 · 게시 파일 manuals/bss-blu-160-series-installation-ko.pdf · SHA-256 48989a4877a35b2bfc821817b74c9e507a7f724433387d72923d0c8b6bc1430a"
     }
   ],
   "issues": [

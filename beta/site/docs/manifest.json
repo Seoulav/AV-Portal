@@ -1507,6 +1507,42 @@
       "file": "manuals/jbl-ac18-26-95-drawing.pdf",
       "kind": "reference",
       "title": "JBL AC18/26·AC18/95 공용 2D 도면"
+    },
+    {
+      "slug": "blu-100",
+      "file": "manuals/bss-blu-100-installation-ko.pdf",
+      "kind": "manual",
+      "title": "BSS Soundweb London BLU-100 설치 가이드 · 테크데이타 제공"
+    },
+    {
+      "slug": "blu-101",
+      "file": "manuals/bss-blu-101-installation-en.pdf",
+      "kind": "manual",
+      "title": "BSS BLU-101 Installation Guide 5033747-B · 테크데이타 제공"
+    },
+    {
+      "slug": "blu-101",
+      "file": "manuals/bss-blu-101-specification-ko.pdf",
+      "kind": "reference",
+      "title": "BSS BLU-101 국문 시방서 · 테크데이타 제공"
+    },
+    {
+      "slug": "blu-160",
+      "file": "manuals/bss-blu-160-series-installation-ko.pdf",
+      "kind": "manual",
+      "title": "BSS BLU-160 포함 Soundweb London 설치 가이드 18-0553-E · 테크데이타 제공"
+    },
+    {
+      "slug": "blu-dan",
+      "file": "manuals/bss-blu-dan-blu-da-installation-en.pdf",
+      "kind": "manual",
+      "title": "BSS BLU-DAN/BLU-DA Installation Guide 5099141-00-A · 테크데이타 제공"
+    },
+    {
+      "slug": "ec-4bv",
+      "file": "manuals/bss-ec-4bv-wall-controllers-installation-en.pdf",
+      "kind": "manual",
+      "title": "BSS EC-4BV 포함 Ethernet Wall Controllers Installation Guide · 테크데이타 제공"
     }
   ]
 }
