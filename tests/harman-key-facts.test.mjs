@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync,readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeShureW04003,beforeShureW04003Raw} from './shure-w04003-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -56,9 +57,9 @@ test('Crown 26 and all other 210 product JSON files remain unchanged',()=>{
   const names=readdirSync(dir).filter(name=>name.endsWith('.json')).sort();
   const otherNames=names.filter(name=>!targets.includes(name.slice(0,-5)));
   assert.equal(otherNames.length,210);
-  const other=otherNames.map(name=>[name,read(`beta/site/detail/data/${name}`)]);
+  const other=otherNames.map(name=>[name,beforeShureW04003(read(`beta/site/detail/data/${name}`),name.slice(0,-5))]);
   assert.equal(sha(JSON.stringify(other)),evidence.otherDetailJsonSha256);
-  const raw=otherNames.map(name=>`${name}\0${readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n')}`).join('');
+  const raw=otherNames.map(name=>`${name}\0${beforeShureW04003Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),name.slice(0,-5))}`).join('');
   assert.equal(sha(raw),evidence.otherDetailRawSha256);
   assert.equal(other.filter(([,p])=>p.manufacturer==='Crown').length,26);
 });

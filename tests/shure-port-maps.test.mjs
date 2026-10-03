@@ -9,6 +9,7 @@ import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013 } from './crown-w03013-history.mjs';
+import {beforeShureW04003,beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
@@ -42,7 +43,8 @@ test('six evidence-qualified Shure models render maps tied to PDF pages and meas
       assert.ok(Number.isFinite(item.y) && item.y >= 0 && item.y <= e.image.height);
     }
     delete product.portMap;
-    assert.equal(sha(JSON.stringify(product)), e.coreSha256, slug + ' original values');
+    const prior=beforeShureW04003(product,slug);
+    assert.equal(sha(JSON.stringify(prior)), e.coreSha256, slug + ' original values');
   }
   assert.equal(proof.products.ulxd4d.markers.length, 11);
   assert.equal(proof.products.ua864a.markers.filter(item => item.label.startsWith('RF 출력')).length, 1);
@@ -84,6 +86,9 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
     } else if (harmanW03014Slug(file.slice(0,-5))) {
       const prior=beforeHarmanW03014Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-014 Git bytes');
+    } else if(shureW04003Slug(file.slice(0,-5))) {
+      const prior=beforeShureW04003Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
+      assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-003 Git bytes');
     } else assert.equal(textSha(bytes('beta/site/detail/data/' + file)), hash, file + ' protected Git bytes');
   }
 });

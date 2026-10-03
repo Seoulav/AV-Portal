@@ -579,5 +579,24 @@
     "footerNote": "Shure SLXD1+ Wireless Bodypack Transmitter · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**SLXD1+**는 SLX-D+ 시스템용 바디팩 송신기입니다. ShowLink Ease 링크로 주파수와 출력을 수신기에서 원격 조정합니다.",
+  "subtitle": "SLX-D+ · 바디팩 송신기",
+  "keyFacts": [
+    {
+      "label": "RF 출력 파워 · 지역별",
+      "value": "1 / 10",
+      "unit": "mW"
+    },
+    {
+      "label": "마이크·악기 입력",
+      "value": "TA4M (4핀 수 미니 커넥터)",
+      "unit": ""
+    },
+    {
+      "label": "RF 반송 대역 · 지역별",
+      "value": "470–937.5",
+      "unit": "MHz"
+    }
+  ]
 }

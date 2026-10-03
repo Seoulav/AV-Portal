@@ -339,5 +339,24 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "lead": "Shure **UA864A**는 벽면·천장에 부착하는 능동형 광대역 안테나입니다. 게인·패드 스위치로 동축 케이블 손실을 보정합니다.",
+  "subtitle": "UA800 Series · 능동형 안테나",
+  "keyFacts": [
+    {
+      "label": "RF 대역 · UA864A",
+      "value": "650-952",
+      "unit": "MHz"
+    },
+    {
+      "label": "안테나 게인 · On-Axis/0dB",
+      "value": "5.5",
+      "unit": "dBi"
+    },
+    {
+      "label": "수신 빔폭 · 중심주파수/3dB",
+      "value": "90",
+      "unit": "도(degrees)"
+    }
+  ]
 }

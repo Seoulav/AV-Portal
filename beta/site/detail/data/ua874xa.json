@@ -318,5 +318,24 @@
     "footerNote": "Shure UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **UA874XA**는 수신 방향을 좁혀 RF 신호를 받는 능동형 지향성 안테나입니다. 게인 스위치로 동축 케이블 손실을 보정하며 DC 바이어스를 공급받아 동작합니다.",
+  "subtitle": "UA800 Series · 능동형 안테나",
+  "keyFacts": [
+    {
+      "label": "RF 대역 · UA874XA",
+      "value": "902-960",
+      "unit": "MHz"
+    },
+    {
+      "label": "안테나 게인 · On-Axis/0dB/중심주파수",
+      "value": "7.5",
+      "unit": "dBi"
+    },
+    {
+      "label": "수신 패턴 · 3dB 빔폭",
+      "value": "70",
+      "unit": "도(degrees)"
+    }
+  ]
 }

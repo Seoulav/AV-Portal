@@ -413,5 +413,24 @@
     "footerNote": "Shure MX395 Microflex Low Profile Boundary Microphone · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MX395**는 설치면 위로 작게 돌출되는 유선 경계면 마이크입니다. 폴라 패턴과 LED 유무에 따라 제품 변형을 선택합니다.",
+  "subtitle": "Microflex Wired Boundary Microphones · 저프로파일 마이크",
+  "keyFacts": [
+    {
+      "label": "주파수 응답",
+      "value": "50-17000",
+      "unit": "Hz"
+    },
+    {
+      "label": "출력 임피던스",
+      "value": "170",
+      "unit": "Ω"
+    },
+    {
+      "label": "설치면 돌출 높이",
+      "value": "약 2",
+      "unit": "cm"
+    }
+  ]
 }

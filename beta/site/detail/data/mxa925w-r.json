@@ -495,5 +495,29 @@
     "footerNote": "Shure MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MXA925W-R**은 흰색 원형의 천장 배열 마이크입니다. 자동 커버리지와 내장 DSP로 회의실 음성을 처리하고 두 RJ45 포트로 오디오·제어를 분리합니다.",
+  "subtitle": "Microflex Advance Ceiling Array Microphones · 원형 배열 마이크",
+  "keyFacts": [
+    {
+      "label": "마이크 소자",
+      "value": "113개 MEMS",
+      "unit": ""
+    },
+    {
+      "label": "RJ45 · 1번만 PoE",
+      "value": "RJ45 x 2",
+      "unit": ""
+    },
+    {
+      "label": "전원 방식",
+      "value": "Power over Ethernet (PoE), Class 0",
+      "unit": ""
+    },
+    {
+      "label": "방진 등급",
+      "value": "IEC 60529 IP5X",
+      "unit": ""
+    }
+  ]
 }

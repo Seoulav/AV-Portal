@@ -227,5 +227,19 @@
     "footerNote": "Shure A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **A900W-R-GM**은 원형 천장 배열 마이크용 서스펜션 마운트 키트입니다. Gripple 조이너와 스틸 케이블로 매달아 설치하며 천장 고정 하드웨어는 별도입니다.",
+  "subtitle": "A900 Series Mounting Accessories · 서스펜션 키트",
+  "keyFacts": [
+    {
+      "label": "호환 마이크 · 원형",
+      "value": "MXA920 시리즈 전 모델 (라운드형)",
+      "unit": ""
+    },
+    {
+      "label": "서스펜션 커넥터",
+      "value": "3개",
+      "unit": ""
+    }
+  ]
 }

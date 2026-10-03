@@ -329,5 +329,24 @@
     "footerNote": "Shure UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **UA845UWB**는 VHF/UHF 안테나 신호와 수신기 전원을 분배하는 장비입니다. RF 증폭으로 분배 손실을 보상하고 캐스케이드 포트로 연결을 확장합니다.",
+  "subtitle": "UA800 Series Antenna Distribution · 분배기",
+  "keyFacts": [
+    {
+      "label": "수신기 DC 출력",
+      "value": "15V DC x 4 커넥터",
+      "unit": ""
+    },
+    {
+      "label": "출력 격리도",
+      "value": ">25",
+      "unit": "dB (typical)"
+    },
+    {
+      "label": "본체 전원",
+      "value": "100-240V AC, 50/60Hz (스위칭)",
+      "unit": ""
+    }
+  ]
 }

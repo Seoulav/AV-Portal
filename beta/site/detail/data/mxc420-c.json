@@ -293,5 +293,24 @@
     "footerNote": "Shure MXC420/C — MXC Gooseneck Microphone, 20\", Single-flex, Cardioid · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **MXC420/C**는 회의·통역 유닛에 연결하는 카디오이드 구즈넥 마이크입니다. 10핀 모듈러 커넥터로 컨퍼런스 유닛에 탈부착합니다.",
+  "subtitle": "Microflex Complete · 구즈넥 마이크",
+  "keyFacts": [
+    {
+      "label": "주파수 응답",
+      "value": "50-17000",
+      "unit": "Hz"
+    },
+    {
+      "label": "폴라 패턴",
+      "value": "Cardioid",
+      "unit": ""
+    },
+    {
+      "label": "회의 유닛 커넥터",
+      "value": "10-pin modular plug",
+      "unit": ""
+    }
+  ]
 }

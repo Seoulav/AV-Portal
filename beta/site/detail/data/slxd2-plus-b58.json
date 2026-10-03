@@ -552,5 +552,24 @@
     "footerNote": "Shure SLXD2+/B58 Wireless Handheld Transmitter with Beta® 58A Microphone · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**SLXD2+/B58**은 Beta 58A 캡슐을 탑재한 SLX-D+ 핸드헬드 송신기입니다. ShowLink Ease 링크로 수신기에서 주파수와 출력을 원격 조정합니다.",
+  "subtitle": "SLX-D+ · 핸드헬드 송신기",
+  "keyFacts": [
+    {
+      "label": "마이크 캡슐",
+      "value": "Beta 58A",
+      "unit": ""
+    },
+    {
+      "label": "지향 패턴",
+      "value": "슈퍼카디오이드(다이내믹)",
+      "unit": ""
+    },
+    {
+      "label": "RF 출력 파워 · 지역별",
+      "value": "1 / 10",
+      "unit": "mW"
+    }
+  ]
 }

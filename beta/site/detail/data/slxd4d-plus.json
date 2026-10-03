@@ -720,5 +720,24 @@
     "footerNote": "Shure SLXD4D+ Dual Channel Wireless Receiver · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "**SLXD4D+**는 하프랙 크기의 2채널 무선 수신기입니다. ShowLink Ease 링크로 송신기를 원격 관리하고 두 채널의 오디오를 합산할 수 있습니다.",
+  "subtitle": "SLX-D+ · 2채널 수신기",
+  "keyFacts": [
+    {
+      "label": "독립 수신 채널",
+      "value": "2",
+      "unit": "ch"
+    },
+    {
+      "label": "RF 반송 대역 · 지역별",
+      "value": "470–937.5",
+      "unit": "MHz"
+    },
+    {
+      "label": "수신기 폼팩터",
+      "value": "하프랙 수신기(랙 마운트 하드웨어 동봉)",
+      "unit": ""
+    }
+  ]
 }

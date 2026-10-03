@@ -362,5 +362,24 @@
     "footerNote": "Shure UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution) · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "Shure **UA844+SWB**는 안테나 신호와 전원을 수신기로 분배하는 장비입니다. RF 증폭으로 분배 손실을 보상하고 캐스케이드 포트로 확장합니다.",
+  "subtitle": "UA800 Series Antenna Distribution · 분배기",
+  "keyFacts": [
+    {
+      "label": "수신기 DC 출력",
+      "value": "14~18V DC x 4채널",
+      "unit": ""
+    },
+    {
+      "label": "출력 격리도",
+      "value": "30",
+      "unit": "dB (typical)"
+    },
+    {
+      "label": "본체 전원",
+      "value": "14 ~ 18",
+      "unit": "V DC"
+    }
+  ]
 }
