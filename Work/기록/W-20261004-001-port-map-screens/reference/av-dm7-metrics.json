@@ -1,0 +1,23 @@
+{
+  "circle": {
+    "r": "10",
+    "fill": "rgb(0, 122, 255)",
+    "diameter": 19.630859375
+  },
+  "number": {
+    "size": "11",
+    "weight": "700",
+    "fill": "rgb(255, 255, 255)",
+    "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif"
+  },
+  "line": {
+    "stroke": "rgb(0, 122, 255)",
+    "width": "1.5"
+  },
+  "card": {
+    "width": "18px",
+    "fontSize": "10.5px",
+    "fontWeight": "700"
+  },
+  "columns": 4
+}

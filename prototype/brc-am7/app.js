@@ -1,5 +1,5 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261001-001-map-review';
-import { portMapImageMatches, portMapDisplayWidth } from './detail-enhancements.mjs?v=w20261001-001-map-review';
+import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-001-rtcom';
+import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001-map-review';
 import { prepareProductDetail, visibleDetailCards, connectorSignalTone, connectorPresentation, isAbsentConnector } from './product-detail-model.mjs?v=w20261001-001-map-review';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
@@ -219,35 +219,20 @@ if (!productKey && !allowContentFallback) {
     const scroll = $('.port-photo-scroll'), photoStage = featured.parentElement;
     const matches = map && data.images[selectedImage]?.role === map.image && featured.complete && featured.naturalWidth && !featured.hidden && portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map);
     photoStage.classList.toggle('map-active', Boolean(matches));
-    photoStage.style.paddingTop = ''; photoStage.style.paddingBottom = '';
-    photoStage.style.minWidth = matches ? portMapDisplayWidth(map, featured.naturalWidth, featured.naturalHeight, window.innerWidth, scroll.clientWidth) + 'px' : '';
-    const cropScale = featured.getBoundingClientRect().width / (featured.naturalWidth || 1);
-    featured.style.marginTop = matches && map.crop ? -map.crop.top * cropScale + 'px' : '';
-    featured.style.marginBottom = matches && map.crop ? -map.crop.bottom * cropScale + 'px' : '';
-    scroll.tabIndex = matches && scroll.scrollWidth > scroll.clientWidth ? 0 : -1;
-    scroll.setAttribute('aria-label', scroll.tabIndex === 0 ? '제품 단자 지도 · 좌우 방향키로 이동' : '제품 단자 지도');
-    $('#port-map-scroll-hint').hidden = !matches || scroll.scrollWidth <= scroll.clientWidth;
-    if (!map || data.images[selectedImage]?.role !== map.image || !featured.complete || !featured.naturalWidth || featured.hidden) return;
-    if (!portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map)) {
-      $('#gallery-title').lastChild.textContent = '제품 사진';
+    if (!matches) {
+      scroll.tabIndex = -1;
+      $('#port-map-scroll-hint').hidden = true;
       return;
     }
-    const valid = map.items.filter(item => item.x2 <= featured.naturalWidth);
-    $('#gallery-title').lastChild.textContent = valid.length ? 'Port Map' : '제품 사진';
+    const valid = map.items.filter(item => item.side === 'left' || item.side === 'right' || item.x2 <= featured.naturalWidth);
     if (!valid.length) return;
-    const imageBox = featured.getBoundingClientRect(), stage = featured.parentElement.getBoundingClientRect();
-    Object.assign(layer.style, { left: (imageBox.left - stage.left) + 'px', top: (imageBox.top - stage.top) + 'px', width: imageBox.width + 'px', height: imageBox.height + 'px' });
-    layer.append(renderPortMap(valid, featured));
-    const markerY = [...layer.querySelectorAll('.port-map-marker')].map(m => parseFloat(m.style.top));
-    const topCrop = (map.crop?.top || 0) * cropScale, bottomCrop = (map.crop?.bottom || 0) * cropScale;
-    photoStage.style.paddingTop = Math.max(40, 12 - Math.min(...markerY) + topCrop) + 'px';
-    photoStage.style.paddingBottom = Math.max(40, Math.max(...markerY) + 12 - imageBox.height + bottomCrop) + 'px';
-    layer.style.top = featured.getBoundingClientRect().top - photoStage.getBoundingClientRect().top + 'px';
-    for (const item of valid) {
-      const row = element('p'); row.append(element('strong', '', item.n + ' · ' + item.label), element('span', '', item.desc));
-      $('#port-map-list').append(row);
-    }
+    layer.append(renderPortMap({ ...map, items: valid }, featured, data.model));
+    $('#port-map-list').append(renderPortMapCards(valid));
     $('#port-map-list').hidden = false;
+    $('#gallery-title').lastChild.textContent = 'Port Map';
+    scroll.tabIndex = scroll.scrollWidth > scroll.clientWidth ? 0 : -1;
+    scroll.setAttribute('aria-label', scroll.tabIndex === 0 ? '제품 단자 지도 · 좌우 방향키로 이동' : '제품 단자 지도');
+    $('#port-map-scroll-hint').hidden = scroll.tabIndex !== 0;
   }
   $('.port-photo-scroll').addEventListener('keydown', event => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
@@ -256,9 +241,7 @@ if (!productKey && !allowContentFallback) {
     scroll.scrollLeft = event.key === 'Home' ? 0 : event.key === 'End' ? scroll.scrollWidth : scroll.scrollLeft + (event.key === 'ArrowRight' ? 160 : -160);
   });
   featured.addEventListener('load', updatePortMap);
-  const mapResizeObserver = new ResizeObserver(updatePortMap);
-  mapResizeObserver.observe(featured);
-  mapResizeObserver.observe($('.port-photo-scroll'));
+  window.addEventListener('resize', updatePortMap);
   featured.addEventListener('error', () => {
     $('#gallery-title').lastChild.textContent = '제품 사진';
     $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;

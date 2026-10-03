@@ -1,0 +1,24 @@
+{
+  "x": 469.5,
+  "y": 332.09375,
+  "width": 708,
+  "height": 621.96875,
+  "circle": {
+    "r": "10",
+    "fill": "#007AFF"
+  },
+  "number": {
+    "size": "11",
+    "weight": "700"
+  },
+  "line": {
+    "stroke": "#007AFF",
+    "width": "1.5"
+  },
+  "card": {
+    "width": "18px",
+    "fontSize": "10.5px",
+    "fontWeight": "700"
+  },
+  "columns": 4
+}
