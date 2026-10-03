@@ -1,0 +1,121 @@
+{
+  "testedAt": "2026-10-03T06:50:04.417Z",
+  "base": "https://seoulav.github.io/AV-Portal",
+  "viewport": 390,
+  "results": [
+    {
+      "slug": "blu-100",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [
+        {
+          "file": "manuals/bss-blu-100-installation-ko.pdf",
+          "visible": true,
+          "canvasCount": 2,
+          "downloadShaMatches": true
+        }
+      ],
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-101",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [
+        {
+          "file": "manuals/bss-blu-101-installation-en.pdf",
+          "visible": true,
+          "canvasCount": 2,
+          "downloadShaMatches": true
+        },
+        {
+          "file": "manuals/bss-blu-101-specification-ko.pdf",
+          "visible": true,
+          "canvasCount": 1,
+          "downloadShaMatches": true
+        }
+      ],
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-160",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [
+        {
+          "file": "manuals/bss-blu-160-series-installation-ko.pdf",
+          "visible": true,
+          "canvasCount": 2,
+          "downloadShaMatches": true
+        }
+      ],
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-50v2",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [],
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-aec-in",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [],
+      "jsErrors": []
+    },
+    {
+      "slug": "blu-dan",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [
+        {
+          "file": "manuals/bss-blu-dan-blu-da-installation-en.pdf",
+          "visible": true,
+          "canvasCount": 2,
+          "downloadShaMatches": true
+        }
+      ],
+      "jsErrors": []
+    },
+    {
+      "slug": "blucard-in",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [],
+      "jsErrors": []
+    },
+    {
+      "slug": "blucard-out",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [],
+      "jsErrors": []
+    },
+    {
+      "slug": "ec-4bv",
+      "status": 200,
+      "overflow": false,
+      "brokenImages": [],
+      "docs": [
+        {
+          "file": "manuals/bss-ec-4bv-wall-controllers-installation-en.pdf",
+          "visible": true,
+          "canvasCount": 3,
+          "downloadShaMatches": true
+        }
+      ],
+      "jsErrors": []
+    }
+  ],
+  "failures": []
+}

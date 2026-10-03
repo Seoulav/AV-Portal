@@ -1,0 +1,99 @@
+{
+  "testedAt": "2026-10-03T06:49:49.541Z",
+  "base": "https://seoulav.github.io/AV-Portal",
+  "results": [
+    {
+      "file": "detail/data/blu-100.json",
+      "status": 200,
+      "bytes": 11413,
+      "sha256": "b072a23c2446f263086b3e9ed9aa1110abd40d1756f1c9dcd75559246e51ca80",
+      "matches": true
+    },
+    {
+      "file": "detail/data/blu-101.json",
+      "status": 200,
+      "bytes": 13051,
+      "sha256": "d09a6d08f2a3050fa4bb48e801f6af102054ffee6853b25b01b705fbccc2d8ae",
+      "matches": true
+    },
+    {
+      "file": "detail/data/blu-160.json",
+      "status": 200,
+      "bytes": 14920,
+      "sha256": "b98680df27449ed8e1a558a6e0e671027929095d2a08968a0188c9c418acbaee",
+      "matches": true
+    },
+    {
+      "file": "detail/data/blu-dan.json",
+      "status": 200,
+      "bytes": 10373,
+      "sha256": "7a68dec97e48f90ce509836e11b168e180df50eca5cfa8b24d706271c21afd61",
+      "matches": true
+    },
+    {
+      "file": "detail/data/ec-4bv.json",
+      "status": 200,
+      "bytes": 10288,
+      "sha256": "439356b00f5c16ad4e3a3da85fce7a6f4e9a1e62ebf209236ecf616010f60ab5",
+      "matches": true
+    },
+    {
+      "file": "docs/manifest.json",
+      "status": 200,
+      "bytes": 63473,
+      "sha256": "a005b83bf6e72f0d3cb548bb11d04d21f9a2994f48305fe3dad491ff4d8d573e",
+      "matches": true
+    },
+    {
+      "file": "search-index.json",
+      "status": 200,
+      "bytes": 629621,
+      "sha256": "8fe68eed8e28c73d8f81769cb1d9866e6e6a9d13a1f39acebce5fb5774accf38",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-blu-100-installation-ko.pdf",
+      "status": 200,
+      "bytes": 1222650,
+      "sha256": "0ab4b4141c5c2ef23d2f95f846166df9621e2ac3adaf4a3288497bb0492d5e5d",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-blu-101-installation-en.pdf",
+      "status": 200,
+      "bytes": 1011809,
+      "sha256": "2bbc658f23979f34dac29a548bd28cd16e811f4b87f133d3d0c8f02cb21e9b06",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-blu-101-specification-ko.pdf",
+      "status": 200,
+      "bytes": 26576,
+      "sha256": "cc108acd1a5091f266697092b2b6103fd9c7c7a37fe834a9fcf2ffdd7dd16ce3",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-blu-160-series-installation-ko.pdf",
+      "status": 200,
+      "bytes": 3086580,
+      "sha256": "48989a4877a35b2bfc821817b74c9e507a7f724433387d72923d0c8b6bc1430a",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-blu-dan-blu-da-installation-en.pdf",
+      "status": 200,
+      "bytes": 863749,
+      "sha256": "f81196e78491cdf120b68a67857d47126abca912497b4fb29c65b7cb216c47bf",
+      "matches": true
+    },
+    {
+      "file": "manuals/bss-ec-4bv-wall-controllers-installation-en.pdf",
+      "status": 200,
+      "bytes": 1367776,
+      "sha256": "5c5788cc8304efb4222eb8d0949a98657c27b02c00a72d282eb1bf680a976016",
+      "matches": true
+    }
+  ],
+  "matched": 13,
+  "total": 13
+}
