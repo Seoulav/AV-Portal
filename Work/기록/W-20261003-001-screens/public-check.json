@@ -1,0 +1,89 @@
+{
+  "base": "https://seoulav.github.io/AV-Portal/",
+  "mergeCommit": "9f4a2de1d4bccb209c36ae4b9ecd27cddad3f827",
+  "pagesRun": 37081157744,
+  "bytes": [
+    {
+      "path": "catalog.json",
+      "status": 200,
+      "localSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "publicSha256": "14cb2e61cba7cceee48ad381a5246f03240425fb3dca05ee804e8c71773d53c8",
+      "byteEqual": true
+    },
+    {
+      "path": "search-index.json",
+      "status": 200,
+      "localSha256": "ecbf2694fada21d176519cb399e045ce1f1000c994101411456167f21f4a4950",
+      "publicSha256": "ecbf2694fada21d176519cb399e045ce1f1000c994101411456167f21f4a4950",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh55vhcrbgbxkr.json",
+      "status": 200,
+      "localSha256": "676723c45c0ea05cdc8d3873b01fe8f460813e53d92a888fe9a927a8bbc7ed04",
+      "publicSha256": "676723c45c0ea05cdc8d3873b01fe8f460813e53d92a888fe9a927a8bbc7ed04",
+      "byteEqual": true
+    },
+    {
+      "path": "detail/data/lh55vmcrbgbxkr.json",
+      "status": 200,
+      "localSha256": "b549cbd77bb8173399bd04429a2b7ec8935c20bb517ba5a9086338ee9339fa81",
+      "publicSha256": "b549cbd77bb8173399bd04429a2b7ec8935c20bb517ba5a9086338ee9339fa81",
+      "byteEqual": true
+    }
+  ],
+  "screens": [
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH55VHCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "alert": "",
+      "brokenImages": [],
+      "overview": "55인치 비디오월 모듈 LH55VHCRBGBXKR은 VHC-R 시리즈 제품이다. 균일 베젤과 DisplayPort 루프아웃으로 다중 화면을 구성한다.",
+      "features": "0.88mm의 매우 얇은 균일 베젤로 여러 대의 화면을 이어 붙여도 하나의 콘텐츠처럼 자연스럽게 재생한다.최대 700니트의 높은 밝기로 외부광이 강한 환경에서도 24시간 선명한 이미지를 재생한다(동 시리즈 VMC-R 500니트 대비 고휘도).두께 70mm 미만의 슬림 디자인과 Haze 28% 패널로 24시간x7일(24/7) 연속 재생을 지원한다.DisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.화질 향상 모드와 블랙 이퀄라이저 모드로 어두운 장면의 디테일까지 표현한다.Color Expert Pro(PC/모바일) 소프트웨어로 디스플레이 간 밝기·화이트 밸런스를 정밀 캘리브레이션할 수 있다.",
+      "errors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 1280,
+      "status": 200,
+      "title": "Samsung LH55VMCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 1280,
+      "viewportWidth": 1280,
+      "alert": "",
+      "brokenImages": [],
+      "overview": "55인치 비디오월 모듈 LH55VMCRBGBXKR은 VMC-R 시리즈 제품이다. 균일 베젤과 DisplayPort 루프아웃으로 다중 화면을 구성한다.",
+      "features": "0.88mm의 매우 얇은 균일 베젤로 여러 대의 화면을 이어 붙여도 하나의 콘텐츠처럼 자연스럽게 재생한다.두께 70mm 미만의 슬림 디자인으로 설치 공간의 미학적 완성도를 높인다.최대 500니트 밝기와 Haze 28% 패널로 24시간x7일(24/7) 연속 재생을 지원한다.DisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.화질 향상 모드와 블랙 이퀄라이저 모드로 어두운 장면의 디테일까지 표현한다.Color Expert Pro(PC/모바일) 소프트웨어로 디스플레이 간 밝기·화이트 밸런스를 정밀 캘리브레이션할 수 있다.",
+      "errors": []
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH55VHCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "alert": "",
+      "brokenImages": [],
+      "overview": "55인치 비디오월 모듈 LH55VHCRBGBXKR은 VHC-R 시리즈 제품이다. 균일 베젤과 DisplayPort 루프아웃으로 다중 화면을 구성한다.",
+      "features": "0.88mm의 매우 얇은 균일 베젤로 여러 대의 화면을 이어 붙여도 하나의 콘텐츠처럼 자연스럽게 재생한다.최대 700니트의 높은 밝기로 외부광이 강한 환경에서도 24시간 선명한 이미지를 재생한다(동 시리즈 VMC-R 500니트 대비 고휘도).두께 70mm 미만의 슬림 디자인과 Haze 28% 패널로 24시간x7일(24/7) 연속 재생을 지원한다.DisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.화질 향상 모드와 블랙 이퀄라이저 모드로 어두운 장면의 디테일까지 표현한다.Color Expert Pro(PC/모바일) 소프트웨어로 디스플레이 간 밝기·화이트 밸런스를 정밀 캘리브레이션할 수 있다.",
+      "errors": []
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "width": 390,
+      "status": 200,
+      "title": "Samsung LH55VMCRBGBXKR · AV Portal Product Detail",
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "alert": "",
+      "brokenImages": [],
+      "overview": "55인치 비디오월 모듈 LH55VMCRBGBXKR은 VMC-R 시리즈 제품이다. 균일 베젤과 DisplayPort 루프아웃으로 다중 화면을 구성한다.",
+      "features": "0.88mm의 매우 얇은 균일 베젤로 여러 대의 화면을 이어 붙여도 하나의 콘텐츠처럼 자연스럽게 재생한다.두께 70mm 미만의 슬림 디자인으로 설치 공간의 미학적 완성도를 높인다.최대 500니트 밝기와 Haze 28% 패널로 24시간x7일(24/7) 연속 재생을 지원한다.DisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.화질 향상 모드와 블랙 이퀄라이저 모드로 어두운 장면의 디테일까지 표현한다.Color Expert Pro(PC/모바일) 소프트웨어로 디스플레이 간 밝기·화이트 밸런스를 정밀 캘리브레이션할 수 있다.",
+      "errors": []
+    }
+  ]
+}
