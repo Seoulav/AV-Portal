@@ -9,6 +9,8 @@ const target=Object.keys(evidence.target);
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const file=slug=>readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
 const product=slug=>JSON.parse(file(slug));
+// Git stores these JSON blobs with LF, while Windows may check them out with CRLF.
+const gitJsonBytes=bytes=>Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));
 const sentences=text=>text.replace(/(\d)\.(\d)/g,'$1∶$2').split(/(?<=[.!?])\s+|\n+/).filter(Boolean);
 
 test('only the two approved JSON files can change, and their protected fields stay identical',()=>{
@@ -20,7 +22,7 @@ test('only the two approved JSON files can change, and their protected fields st
     assert.equal(features.length,before.features.length);
     for(const [index,feature] of features.entries())if(index!==3)assert.deepEqual(feature,before.features[index],`${slug}: other features`);
   }
-  for(const [slug,expected] of Object.entries(evidence.otherProductSha256))assert.equal(sha(file(slug)),expected,`${slug}: unrelated product bytes`);
+  for(const [slug,expected] of Object.entries(evidence.otherProductSha256))assert.equal(sha(gitJsonBytes(file(slug))),expected,`${slug}: unrelated Git JSON blob bytes`);
 });
 
 test('both videowalls describe only DisplayPort loopout in all four prose locations',()=>{
