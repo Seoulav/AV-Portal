@@ -270,6 +270,24 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "55 Hz – 150 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "연속 프로그램 전력(2시간)",
+      "value": "320 W",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -292,6 +310,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://jblpro.com/en-US/products/control-419cs-t",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D1",
+      "name": "JBL Pro Control 419CS/T 공식 사양서",
+      "scope": "2쪽 SYSTEM 표. 게시 파일 manuals/jbl-control-419cst-spec.pdf, SHA-256 c67d4a794c5981f4538b27af1f6b648bb93da0c8f6c76a16d2e255f41b5823f2"
     }
   ],
   "issues": [],

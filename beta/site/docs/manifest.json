@@ -1339,6 +1339,174 @@
       "file": "manuals/crown-i-tech-4x3500hd-manual-ko.pdf",
       "kind": "manual",
       "title": "Crown I-Tech 4x3500HD 한글 사용설명서 · TechData 5059136"
+    },
+    {
+      "slug": "control-412ct",
+      "file": "manuals/jbl-control-400-standard-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Standard Coverage 사용설명서 · 412/414/418C/T"
+    },
+    {
+      "slug": "control-414ct",
+      "file": "manuals/jbl-control-400-standard-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Standard Coverage 사용설명서 · 412/414/418C/T"
+    },
+    {
+      "slug": "control-418ct",
+      "file": "manuals/jbl-control-400-standard-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Standard Coverage 사용설명서 · 412/414/418C/T"
+    },
+    {
+      "slug": "control-419cst",
+      "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈"
+    },
+    {
+      "slug": "control-424ct",
+      "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈"
+    },
+    {
+      "slug": "control-424lp",
+      "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈"
+    },
+    {
+      "slug": "control-426ct",
+      "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈"
+    },
+    {
+      "slug": "control-426lp",
+      "file": "manuals/jbl-control-400-enhanced-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Enhanced Coverage 사용설명서 · 419/424/426 시리즈"
+    },
+    {
+      "slug": "control-440cst",
+      "file": "manuals/jbl-control-400-premium-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Premium Coverage 사용설명서 · 440CS/T"
+    },
+    {
+      "slug": "control-412ct",
+      "file": "manuals/jbl-control-412ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 412CT 공식 사양서"
+    },
+    {
+      "slug": "control-414ct",
+      "file": "manuals/jbl-control-414ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 414CT 공식 사양서"
+    },
+    {
+      "slug": "control-418ct",
+      "file": "manuals/jbl-control-418ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 418CT 공식 사양서"
+    },
+    {
+      "slug": "control-419cst",
+      "file": "manuals/jbl-control-419cst-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 419CST 공식 사양서"
+    },
+    {
+      "slug": "control-424ct",
+      "file": "manuals/jbl-control-424ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 424CT 공식 사양서"
+    },
+    {
+      "slug": "control-424lp",
+      "file": "manuals/jbl-control-424lp-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 424LP 공식 사양서"
+    },
+    {
+      "slug": "control-426lp",
+      "file": "manuals/jbl-control-426lp-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 426LP 공식 사양서"
+    },
+    {
+      "slug": "control-440cst",
+      "file": "manuals/jbl-control-440cst-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 440CST 공식 사양서"
+    },
+    {
+      "slug": "control-416ct",
+      "file": "manuals/jbl-control-416ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 416C/T 사양서 · 테크데이타 제공"
+    },
+    {
+      "slug": "control-447ct",
+      "file": "manuals/jbl-control-447ct-spec.pdf",
+      "kind": "reference",
+      "title": "JBL Control 447C/T 사양서 · 테크데이타 제공"
+    },
+    {
+      "slug": "control-416ct",
+      "file": "manuals/jbl-control-416ct-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Standard Coverage 한글 사용설명서 · 416C/T 포함"
+    },
+    {
+      "slug": "control-447ct",
+      "file": "manuals/jbl-control-447ct-manual.pdf",
+      "kind": "manual",
+      "title": "JBL Control 400 Premium Coverage 사용설명서 · 447C/T 포함"
+    },
+    {
+      "slug": "control-416ct",
+      "file": "manuals/jbl-control-416ct-drawing-2d.pdf",
+      "kind": "reference",
+      "title": "JBL Control 416C/T 2D 도면 · 테크데이타 제공"
+    },
+    {
+      "slug": "control-447ct",
+      "file": "manuals/jbl-control-447ct-drawing-2d.pdf",
+      "kind": "reference",
+      "title": "JBL Control 447C/T 2D 도면 · 테크데이타 제공"
+    },
+    {
+      "slug": "control-23-1",
+      "file": "manuals/jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "kind": "reference",
+      "title": "JBL MTC-23UB-1/25UB-1/28UB-1 브래킷 설치 지침"
+    },
+    {
+      "slug": "control-25-1",
+      "file": "manuals/jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "kind": "reference",
+      "title": "JBL MTC-23UB-1/25UB-1/28UB-1 브래킷 설치 지침"
+    },
+    {
+      "slug": "control-28-1",
+      "file": "manuals/jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "kind": "reference",
+      "title": "JBL MTC-23UB-1/25UB-1/28UB-1 브래킷 설치 지침"
+    },
+    {
+      "slug": "ac18-26",
+      "file": "manuals/jbl-ac18-26-95-drawing.pdf",
+      "kind": "reference",
+      "title": "JBL AC18/26·AC18/95 공용 2D 도면"
+    },
+    {
+      "slug": "ac18-95",
+      "file": "manuals/jbl-ac18-26-95-drawing.pdf",
+      "kind": "reference",
+      "title": "JBL AC18/26·AC18/95 공용 2D 도면"
     }
   ]
 }

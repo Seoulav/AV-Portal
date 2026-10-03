@@ -1,4 +1,5 @@
 beta/site/docs/*.pdf -text -diff
+beta/site/manuals/*.pdf -text -diff
 beta/site/rtcom/raw/*.json -text -diff
 beta/site/rtcom/raw/products/*.json -text -diff
 beta/site/rtcom/images/* -text -diff

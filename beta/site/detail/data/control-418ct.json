@@ -279,6 +279,24 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Acoustic",
+      "name": "주파수 응답(±3dB)",
+      "value": "74 Hz – 19 kHz",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "연속 프로그램 전력(2시간)",
+      "value": "270 W",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -301,6 +319,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://jblpro.com/en-US/products/control-418c-t",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "D1",
+      "name": "JBL Pro Control 418C/T 공식 사양서",
+      "scope": "2쪽 SYSTEM 표. 게시 파일 manuals/jbl-control-418ct-spec.pdf, SHA-256 ef34aded974295ff392d7010770e75209109bfd4bf04195b62a6e67e24e7088a"
     }
   ],
   "issues": [

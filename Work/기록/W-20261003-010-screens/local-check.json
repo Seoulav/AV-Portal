@@ -1,0 +1,183 @@
+{
+  "testedAt": "2026-10-03T05:57:47.621Z",
+  "viewport": 390,
+  "results": [
+    {
+      "slug": "ac18-26",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-ac18-26-95-drawing.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "ac18-95",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-ac18-26-95-drawing.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-23-1",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-25-1",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-28-1",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-contractor-mtc-ub-bracket-guide.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-412ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 3,
+      "downloadFile": "jbl-control-400-standard-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-414ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 3,
+      "downloadFile": "jbl-control-400-standard-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-416ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 3,
+      "downloadFile": "jbl-control-416ct-spec.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-418ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-400-standard-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-419cst",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 2,
+      "downloadFile": "jbl-control-400-enhanced-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-424ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-400-enhanced-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-424lp",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-400-enhanced-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-426ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-400-enhanced-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-426lp",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 2,
+      "downloadFile": "jbl-control-400-enhanced-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-440cst",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 1,
+      "downloadFile": "jbl-control-400-premium-manual.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    },
+    {
+      "slug": "control-447ct",
+      "status": 200,
+      "titleVisible": true,
+      "overflow": false,
+      "brokenImages": [],
+      "canvasCount": 3,
+      "downloadFile": "jbl-control-447ct-spec.pdf",
+      "downloadShaMatches": true,
+      "jsErrors": []
+    }
+  ],
+  "failures": []
+}
