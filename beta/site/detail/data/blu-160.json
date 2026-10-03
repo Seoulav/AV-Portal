@@ -26,6 +26,20 @@
       "originalSize": "4096x438",
       "resolution": "4096x438",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "blu-160-rear.webp",
+      "alt": "BSS Audio BLU-160 후면 단자 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-160",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1345_1729004062/BLU-160_Rear_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x586",
+      "resolution": "4096x586",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -41,8 +55,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://bssaudio.com/en-US/products/blu-160"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1345_1729004062/BLU-160_Rear_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -460,5 +474,105 @@
       "value": "4",
       "unit": "슬롯"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "blu-160-rear.webp",
+      "width": 4096,
+      "height": 586
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "옵션 I/O 카드 A",
+        "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+        "x1": 3300,
+        "x2": 3870,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "옵션 I/O 카드 B",
+        "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+        "x1": 2470,
+        "x2": 3100,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "옵션 I/O 카드 C",
+        "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+        "x1": 3300,
+        "x2": 3870,
+        "y": 410,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "옵션 I/O 카드 D",
+        "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+        "x1": 2470,
+        "x2": 3100,
+        "y": 410,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "BLU link 입력",
+        "desc": "RJ-45 · BLU link 오디오 버스 입력",
+        "x1": 1660,
+        "x2": 1820,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "BLU link 출력",
+        "desc": "RJ-45 · BLU link 오디오 버스 출력",
+        "x1": 1660,
+        "x2": 1820,
+        "y": 410,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · HiQnet 제어 네트워크",
+        "x1": 1390,
+        "x2": 1550,
+        "y": 410,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "RS-232",
+        "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+        "x1": 1120,
+        "x2": 1320,
+        "y": 410,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "CONTROL 입력",
+        "desc": "Phoenix/Combicon · 제어 입력 12개",
+        "x1": 2000,
+        "x2": 2390,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "LOGIC 출력",
+        "desc": "Phoenix/Combicon · 로직 출력 6개",
+        "x1": 2000,
+        "x2": 2390,
+        "y": 410,
+        "side": "bottom"
+      }
+    ]
+  }
 }

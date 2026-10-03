@@ -27,6 +27,20 @@
       "originalSize": "4096x819",
       "resolution": "4096x819",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "blu-dan-rear.webp",
+      "alt": "BSS Audio BLU-DA 후면 단자 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-DA",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1994_1729004520/BLU-DAN_Rear_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x776",
+      "resolution": "4096x776",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://bssaudio.com/en-US/products/blu-da"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1994_1729004520/BLU-DAN_Rear_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -287,5 +301,69 @@
       "value": "Dante 4.0",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "blu-dan-rear.webp",
+      "width": 4096,
+      "height": 776
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "Dante Primary",
+        "desc": "RJ-45 · Dante/AES67 기본 오디오망",
+        "x1": 1760,
+        "x2": 2070,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "Dante Secondary",
+        "desc": "RJ-45 · Dante/AES67 보조 오디오망",
+        "x1": 2170,
+        "x2": 2490,
+        "y": 250,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "BLU link 입력",
+        "desc": "RJ-45 · BLU link 오디오 버스 입력",
+        "x1": 3180,
+        "x2": 3470,
+        "y": 300,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "BLU link 출력",
+        "desc": "RJ-45 · BLU link 오디오 버스 출력",
+        "x1": 3180,
+        "x2": 3470,
+        "y": 580,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · HiQnet 제어 네트워크",
+        "x1": 2630,
+        "x2": 2920,
+        "y": 550,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "RS-232",
+        "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+        "x1": 2110,
+        "x2": 2480,
+        "y": 550,
+        "side": "bottom"
+      }
+    ]
+  }
 }

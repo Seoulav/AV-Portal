@@ -1,4 +1,5 @@
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
+import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -12,7 +13,10 @@ import { beforeCrownW03013 } from './crown-w03013-history.mjs';
 import {beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
-const read = path => JSON.parse(bytes(path));
+const read = path => {
+  const product=JSON.parse(bytes(path));
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(product,path.split('/').at(-1).slice(0,-5)):product;
+};
 const sha = value => createHash('sha256').update(value).digest('hex');
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
 const proof = read('Work/기록/W-20261002-002-port-map-evidence.json');
@@ -94,6 +98,8 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
     } else if(shureW04003Slug(file.slice(0,-5))) {
       const prior=beforeShureW04003Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-003 Git bytes');
+    } else if(bssW04004Slugs.has(file.slice(0,-5))) {
+      assert.equal(textSha(Buffer.from(beforeBssW04004Raw(bytes('beta/site/detail/data/'+file).toString('utf8'),file.slice(0,-5)))),hash,file+' pre-W-004 Git bytes');
     } else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
   }
 });

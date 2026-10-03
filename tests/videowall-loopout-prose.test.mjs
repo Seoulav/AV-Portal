@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeBssW04004} from './bss-w04004-history.mjs';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
@@ -18,7 +19,7 @@ const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-001-evide
 const target=Object.keys(evidence.target);
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const file=slug=>readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
-const product=slug=>JSON.parse(file(slug));
+const product=slug=>beforeBssW04004(JSON.parse(file(slug)),slug);
 // Git stores these JSON blobs with LF, while Windows may check them out with CRLF.
 const gitJsonBytes=bytes=>Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));
 const sentences=text=>text.replace(/(\d)\.(\d)/g,'$1∶$2').split(/(?<=[.!?])\s+|\n+/).filter(Boolean);
