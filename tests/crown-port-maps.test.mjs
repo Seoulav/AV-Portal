@@ -21,6 +21,7 @@ test('22 approved Crown models have evidence-tied maps without modifying technic
   p.specifications=later.products[slug].beforeSpecifications;
   p.io=later.products[slug].beforeIo;
   p.issues=later.products[slug].beforeIssues;
+  if(slug!=='dci-4-600da') { delete p.lead;delete p.subtitle;delete p.keyFacts; } // Approved pilot predates W-013.
   delete p.portMap;assert.equal(createHash('sha256').update(JSON.stringify(p)).digest('hex'),e.coreSha256,slug+' original values');
   if(slug.startsWith('cdi-')){assert.equal(map.items.filter(x=>x.label.startsWith('BLU link')).length,slug.endsWith('bl')?2:0);assert.ok(!JSON.stringify(map).includes('Dante'));}
  }

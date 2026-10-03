@@ -495,5 +495,24 @@
       "top": 60,
       "bottom": 60
     }
-  }
+  },
+  "lead": "DCi 2|300은 DriveCore 기술 기반의 **2채널** 상업용 설치 앰프로, 2/4/8/16Ω 및 70V/100V 정전압 부하를 트랜스포머 없이 직접 구동할 수 있다. 개별 채널 Hi-Z/Lo-Z 전환과 브리지 모드를 지원하며 PFC 유니버설 전원부와 가변속 팬 냉각을 채택했다.",
+  "subtitle": "DCi Install Series · 아날로그 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

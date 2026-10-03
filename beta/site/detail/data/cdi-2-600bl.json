@@ -539,5 +539,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 2|600BL은 CDi 2|300BL 대비 2배의 출력(채널당 4Ω 600W)을 내는 **2채널** 설치용 파워앰프로, 동일하게 BLU link 디지털 오디오 버스와 HiQnet 네트워크 제어, 온보드 DSP를 지원한다. BLU link·HiQnet·온보드 DSP를 지원하고 70V/100V 정전압 부하를 트랜스포머 없이 구동한다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "2",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "600",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

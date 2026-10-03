@@ -514,5 +514,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 4|300은 채널당 4Ω 300W, **4채널** 구성의 아날로그 설치용 파워앰프다. DriveCore 기술과 온보드 DSP(파라메트릭 EQ, 크로스오버, 라우팅, LevelMAX 리미터), HiQnet 네트워크 제어를 지원하며 GPIO/AUX 포트를 통한 프리셋 호출·채널 뮤트·장애 모니터링이 가능하다.",
+  "subtitle": "CDi DriveCore Series · 아날로그 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U",
+      "unit": ""
+    }
+  ]
 }

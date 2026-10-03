@@ -8,6 +8,7 @@ import {beforeAmxW03008,amxW03008Slug} from './amx-w03008-history.mjs';
 import {beforeCrownW03009,crownW03009Slug} from './crown-w03009-history.mjs';
 import {beforeJblW03010,jblW03010Slug} from './jbl-w03010-history.mjs';
 import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
+import {beforeCrownW03013} from './crown-w03013-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
@@ -141,7 +142,7 @@ test('W-005 published PDFs match supplied bytes and all earlier uploads/products
     const slug = name.slice(0, -5);
     const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
     const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug)
-      ? JSON.stringify(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(JSON.parse(raw), slug),slug),slug),slug),slug), null, 2) + '\n'
+      ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(JSON.parse(raw), slug),slug),slug),slug),slug),slug), null, 2) + '\n'
       : raw;
     hash.update(name).update('\0').update(historical);
   }

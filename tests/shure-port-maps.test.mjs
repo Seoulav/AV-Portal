@@ -7,6 +7,7 @@ import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
+import { beforeCrownW03013 } from './crown-w03013-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
@@ -68,7 +69,7 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
       delete product.portMap;
       assert.equal(sha(JSON.stringify(product)),later.coreSha256,file+' original values after later map');
     } else if (crownW03009Slug(file.slice(0,-5))) {
-      const previous = beforeCrownW03009(read('beta/site/detail/data/' + file),file.slice(0,-5));
+      const previous = beforeCrownW03009(beforeCrownW03013(read('beta/site/detail/data/' + file),file.slice(0,-5)),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-009 Git bytes');
     } else if (jblW03010Slug(file.slice(0,-5))) {
       const previous = beforeJblW03010(read('beta/site/detail/data/' + file),file.slice(0,-5));

@@ -536,5 +536,24 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 4|300BL은 CDi 4|300에 **BLU link**를 추가한 모델이다. 전력 스펙은 non-BL 모델과 동일하며 디지털 오디오 네트워크 연결성을 제공한다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "300",
+      "unit": "W"
+    },
+    {
+      "label": "랙 높이",
+      "value": "2U (3.5\" 높이)",
+      "unit": ""
+    }
+  ]
 }

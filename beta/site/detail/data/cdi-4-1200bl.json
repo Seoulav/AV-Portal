@@ -527,5 +527,19 @@
       "top": 120,
       "bottom": 100
     }
-  }
+  },
+  "lead": "CDi 4|1200BL은 **BLU link 디지털 오디오 버스**를 추가한 모델이다. 4Ω 채널당 1200W 출력에 디지털 오디오 네트워킹을 결합했다.",
+  "subtitle": "CDi DriveCore Series · BLU link 설치형 앰프",
+  "keyFacts": [
+    {
+      "label": "출력 채널 수",
+      "value": "4",
+      "unit": "채널"
+    },
+    {
+      "label": "채널당 출력 · 4Ω Dual",
+      "value": "1200",
+      "unit": "W"
+    }
+  ]
 }
