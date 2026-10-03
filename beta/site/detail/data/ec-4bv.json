@@ -257,6 +257,11 @@
       "name": "제조사 공식 데이터시트(Cut Sheet)",
       "url": "https://bssaudio.com/en-US/product_documents/contriocontrollers_ec-4bv_web_datasheet_060215-pdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "BSS EC-4BV 포함 Ethernet Wall Controllers Installation Guide · 테크데이타 제공",
+      "scope": "영문 PDF 20쪽 · 게시 파일 manuals/bss-ec-4bv-wall-controllers-installation-en.pdf · SHA-256 5c5788cc8304efb4222eb8d0949a98657c27b02c00a72d282eb1bf680a976016"
     }
   ],
   "issues": [

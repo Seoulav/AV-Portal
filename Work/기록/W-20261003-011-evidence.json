@@ -1,0 +1,1449 @@
+{
+  "workId": "W-20261003-011",
+  "baseline": "27483deedb0dee789c9bb9ebb3094518fcab3f86",
+  "manifest": {
+    "uploadCount": 103,
+    "uploadsSha256": "5b0f4c29c7e66453683e57483f42bf9cebe75a3c05d73cb4f607cfbf7f188824",
+    "mirrorsSha256": "ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef"
+  },
+  "products": {
+    "blu-100": {
+      "fileSha256": "7aa358df4a345e703286f4fdf9767a94ed2a1de2dcc1ec50153bb71cc5785c7c",
+      "coreSha256": "e59f3cd4c6680061bff745e798c453deef4e2fcab7009f1f575aa55bee908036",
+      "ioSha256": "10c7daa80dfc177942e229a3a21c35a89ec55923056dc00e83083a6e52b6a227",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "6cfbd57811fe2b8c861436589790a8f46e73d2cf9ace1bd4aaf96b14f324af3c",
+      "sourcesSha256": "31934ea7a22071321854f43853fde62a5d18688cbac1120e017a04d4b6fb6ec5",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "섀시",
+          "value": "19인치 랙, 1U",
+          "unit": "",
+          "condition": "고정 구성(카드 슬롯 없음)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 입력",
+          "value": "12",
+          "unit": "채널",
+          "condition": "Phoenix/Combicon 착탈식 스크류 커넥터, 48V 팬텀 파워 채널별 선택",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 출력",
+          "value": "8",
+          "unit": "채널",
+          "condition": "Phoenix/Combicon 착탈식 스크류 커넥터",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "AEC는 BLU-101 참조",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "신호처리 성능",
+          "value": "400",
+          "unit": "MHz",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "BLU link 디지털 오디오 버스",
+          "value": "48",
+          "unit": "채널",
+          "condition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "제어 입출력",
+          "value": "제어 입력 12개, 로직 출력 6개",
+          "unit": "",
+          "condition": "GPIO",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "RS-232",
+          "value": "지원",
+          "unit": "",
+          "condition": "로직 프로세싱용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "주파수 응답",
+          "value": "20Hz-20kHz (+0.5dB/-1dB)",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "다이내믹 레인지",
+          "value": "108",
+          "unit": "dB (typical, 22Hz-22kHz unweighted)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원",
+          "value": "100-240V AC, 50/60Hz",
+          "unit": "",
+          "condition": "소비전력 55VA 미만",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "외형 치수(H x W x D)",
+          "value": "45 x 483 x 229",
+          "unit": "mm (1.75\" x 19\" x 9.0\")",
+          "condition": "1U",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "2.9 (6.4)",
+          "unit": "kg (lbs)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/blu-100",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0717-B)",
+          "url": "https://bssaudio.com/en-US/product_documents/blu100_datasheetpdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blu-101": {
+      "fileSha256": "4a43778b63fc323f5c7c5397b489a62344a442d77dc475f205671c429336af8b",
+      "coreSha256": "7d6532fde58bdc2b71b54ab026b78b3b23bd65dcdede69843719e51b5e13901c",
+      "ioSha256": "10c7daa80dfc177942e229a3a21c35a89ec55923056dc00e83083a6e52b6a227",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "d31a05bf5ccc1491b66342398506d5db9614d5ec4421cd264e88a157b20f4ae4",
+      "sourcesSha256": "38b08e0d37123127a6af08dc63237d1c9bc94ac6c474fe05cbdae2129dc4b47a",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "섀시",
+          "value": "19인치 랙, 1U",
+          "unit": "",
+          "condition": "고정 구성(카드 슬롯 없음)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 입력",
+          "value": "12",
+          "unit": "채널",
+          "condition": "Phoenix/Combicon 착탈식 스크류 커넥터, 48V 팬텀 파워 채널별 선택",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 출력",
+          "value": "8",
+          "unit": "채널",
+          "condition": "Phoenix/Combicon 착탈식 스크류 커넥터",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리 채널",
+          "value": "12",
+          "unit": "채널(독립 알고리즘)",
+          "condition": "AGC, 노이즈 캔슬레이션 포함",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리 지연(오리지널 8k 알고리즘)",
+          "value": "49.69",
+          "unit": "ms @48kHz",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리 지연(풀밴드 알고리즘)",
+          "value": "33.52",
+          "unit": "ms @48kHz",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 테일 길이",
+          "value": "200",
+          "unit": "ms",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "신호처리 성능",
+          "value": "400",
+          "unit": "MHz",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "BLU link 디지털 오디오 버스",
+          "value": "48",
+          "unit": "채널",
+          "condition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "AVB/CobraNet 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "제어 입출력",
+          "value": "제어 입력 12개, 로직 출력 6개",
+          "unit": "",
+          "condition": "GPIO",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "RS-232",
+          "value": "지원",
+          "unit": "",
+          "condition": "로직 프로세싱용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "주파수 응답",
+          "value": "20Hz-20kHz (+0.5dB/-1dB)",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "다이내믹 레인지",
+          "value": "108",
+          "unit": "dB (typical, 22Hz-22kHz unweighted)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원",
+          "value": "100-240V AC, 50/60Hz",
+          "unit": "",
+          "condition": "소비전력 55VA 미만",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "외형 치수(H x W x D)",
+          "value": "45 x 483 x 318",
+          "unit": "mm (1.75\" x 19\" x 12.5\")",
+          "condition": "1U",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "4.1 (9.1)",
+          "unit": "kg (lbs)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/blu-101",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0818-B)",
+          "url": "https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blu-160": {
+      "fileSha256": "b3aee88bd2143734ede9b588a31581a038176d6cf99d53f6ffe06d8ec5021719",
+      "coreSha256": "43b4faa4c40458c20bc6f92c6d1dcba73b34c0dbb762da092c73c39b02aac36a",
+      "ioSha256": "96e416aea31a63afe4658f0a52599af6c5923f1dc9db3f0539b8e865ba764c66",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "507d97f69570c967aedf92fd074f9b12107b04344b0aa55a6ba7b7b843a69072",
+      "sourcesSha256": "1681fefee7c5053cc247d79a3805ec865c2fbed454150a2fcf19d3b0b07df7a6",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "섀시",
+          "value": "19인치 랙, 1U",
+          "unit": "",
+          "condition": "카드 기반 구성형 I/O(4슬롯)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "카드 슬롯",
+          "value": "4",
+          "unit": "슬롯",
+          "condition": "슬롯당 4채널 카드 장착, 카드 종류: Analog In/Out, Digital In/Out, AEC In, Telephone Hybrid",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 입력(최대)",
+          "value": "최대 16",
+          "unit": "채널",
+          "condition": "Analog Input Card 4장 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 출력(최대)",
+          "value": "최대 16",
+          "unit": "채널",
+          "condition": "Analog Output Card 4장 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "디지털 입력(최대)",
+          "value": "최대 16",
+          "unit": "채널",
+          "condition": "AES/EBU 또는 S/PDIF, Digital Input Card 4장 장착 시",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "디지털 출력(최대)",
+          "value": "최대 16",
+          "unit": "채널",
+          "condition": "AES/EBU 또는 S/PDIF, Digital Output Card 4장 장착 시",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "AEC 입력(최대)",
+          "value": "최대 16",
+          "unit": "채널",
+          "condition": "AEC Input Card 4장 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "전화 접속(최대)",
+          "value": "최대 4",
+          "unit": "회선",
+          "condition": "Telephone Hybrid Card 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Digital I/O",
+          "name": "디지털 입출력 샘플레이트",
+          "value": "48 또는 96",
+          "unit": "kHz",
+          "condition": "샘플레이트 컨버전 범위 8kHz-96kHz",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "신호처리 성능",
+          "value": "800",
+          "unit": "MHz",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "BLU link 디지털 오디오 버스",
+          "value": "256",
+          "unit": "채널",
+          "condition": "Cat 5e, 최대 100m, 노드 최대 60개",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Display",
+          "name": "전면 디스플레이",
+          "value": "있음",
+          "unit": "",
+          "condition": "장치명/IP/서브넷/펌웨어 버전 등 표시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "제어 입출력",
+          "value": "제어 입력 12개, 로직 출력 6개",
+          "unit": "",
+          "condition": "GPIO",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "RS-232",
+          "value": "지원",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "인증",
+          "value": "EN 54-16",
+          "unit": "",
+          "condition": "생명안전 응용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원",
+          "value": "100-240V AC, 50/60Hz",
+          "unit": "",
+          "condition": "소비전력 35VA 미만",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "외형 치수(H x W x D)",
+          "value": "45 x 483 x 318",
+          "unit": "mm (1.75\" x 19\" x 12.5\")",
+          "condition": "1U",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "약 4.1 (9)",
+          "unit": "kg (lbs), 추정치",
+          "condition": "제조사 자료에 estimated로 표기",
+          "source": "D",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/blu-160",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0650-B)",
+          "url": "https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blu-50v2": {
+      "fileSha256": "9bd7f2580c0d042f7c6c2e282185a6e08e82a47fe41cafe6e252cc990e453ffe",
+      "coreSha256": "5b875d4debf4bbf0a19ffab7fd1ead126c2c03e6e59ec250112c3d25401e20ad",
+      "ioSha256": "042e91b0a0a2726288eef574ec7e62d89acbb3573890211bdffe431d8c83610d",
+      "portMapSha256": "c884d2a39af6755f63cd12767e26a40a649794b6460a42622af08859e9643d72",
+      "specificationsSha256": "a21306bd3fdbb75c8d0c47e7917aa5b313934924bd51e50eed10bbda392e5741",
+      "sourcesSha256": "800f78ae7921943f35beb1799b328f8a1d941591c5536ee6bdde5a713546f60d",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "섀시",
+          "value": "하프랙(1단, 반폭)",
+          "unit": "",
+          "condition": "고정 구성(카드 슬롯 없음), 1U 랙 이어 동봉",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 입력",
+          "value": "4",
+          "unit": "채널",
+          "condition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스, 48V 팬텀 파워 채널별 선택",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "아날로그 출력",
+          "value": "4",
+          "unit": "채널",
+          "condition": "Phoenix Mini Combicon 착탈식 스크류 커넥터, 전자식 밸런스",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "디지털 입력/출력",
+          "value": "0 / 0",
+          "unit": "채널",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "전화 연결",
+          "value": "0",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 입력",
+          "value": "0",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "신호처리 성능",
+          "value": "400",
+          "unit": "MHz",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "BLU link 디지털 오디오 버스",
+          "value": "48",
+          "unit": "채널",
+          "condition": "Cat 5e, 장치 간 최대 100m, 노드 최대 60개",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante 지원",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "CobraNet / AVB 지원",
+          "value": "없음 / 없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "제어 입출력",
+          "value": "제어 입력 12개, 로직 출력 6개",
+          "unit": "",
+          "condition": "GPIO, 워치독 출력 별도",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "RS-232",
+          "value": "지원",
+          "unit": "",
+          "condition": "로직 프로세싱용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "LCD 디스플레이",
+          "value": "없음",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "주파수 응답",
+          "value": "20Hz-20kHz (±1.0dB)",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "다이내믹 레인지",
+          "value": "110 A-weighted / 107 unweighted",
+          "unit": "dB 초과(>)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "THD",
+          "value": "<0.005",
+          "unit": "% (typical)",
+          "condition": "+4dBu, 1kHz, 입력 게인 0dB",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "최대 입력 레벨",
+          "value": "+20",
+          "unit": "dBu",
+          "condition": "입력 게인 0dB(게인 12dB 시 +8dBu)",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "최대 출력 레벨",
+          "value": "+20",
+          "unit": "dBu",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "A/D · D/A 지연",
+          "value": "0.77 / 0.60",
+          "unit": "ms",
+          "condition": "48kHz 기준(37/Fs, 29/Fs)",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원 입력",
+          "value": "12-48VDC, PoE+ [Type 2], PoE++ [Type 3 & Type 4]",
+          "unit": "",
+          "condition": "동봉 어댑터: 100-240VAC 50/60Hz 입력, 12VDC 출력. 제품 페이지의 11.5-48VDC 표기와 불일치(이슈 R2)",
+          "source": "D",
+          "verification": "REVIEW REQUIRED"
+        },
+        {
+          "group": "Power",
+          "name": "소비전력",
+          "value": "16",
+          "unit": "W",
+          "condition": "<188 BTU/hr",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Environment",
+          "name": "동작 온도",
+          "value": "0-45",
+          "unit": "°C (32-113°F)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "외형 치수(H x W x D)",
+          "value": "41 x 219 x 197",
+          "unit": "mm (1.625\" x 8.63\" x 7.75\")",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "무게",
+          "value": "1.28 (2.82)",
+          "unit": "kg (lbs)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Software",
+          "name": "지원 소프트웨어",
+          "value": "HiQnet Audio Architect 2.55.1 이상, HiQnet London Architect 6.02 이상",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(한국어)",
+          "url": "https://bssaudio.com/ko/products/blu-50v2",
+          "scope": "제조사 공식 출처(영문 페이지 https://bssaudio.com/en-US/products/blu-50v2 와 내용 동일 확인)"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(Data Sheet- BLU-50v2, 2023-11)",
+          "url": "https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "U",
+          "name": "운영사 확인 정보",
+          "scope": "사용자 제공(2026-09-27): BLU-50 후속 모델 BLU-50v2 출시"
+        }
+      ]
+    },
+    "blu-aec-in": {
+      "fileSha256": "00b9fa398781cf07723810527b574d28e2629ae6249d0daf6512d8636b58b1b2",
+      "coreSha256": "ca21b66d169aa0d7afdde5284eaf017396e362dc8326d179cb25378768cfb3a6",
+      "ioSha256": "bf008dae30644c3223828569ee3de3febac48ebc34b731da7dcf75cfa4ab40d9",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "aab56a4718f7966ef54de42e9d6017d75545d145cd5b87240ec454b941fe1fe4",
+      "sourcesSha256": "9efdd1938baa5e5802c8c156b83d0913b021fe51c4fd0d86cb229c5c959fc7b9",
+      "beforeSpecifications": [
+        {
+          "group": "I/O",
+          "name": "AEC 입력",
+          "value": "4",
+          "unit": "채널",
+          "condition": "카드 1장 기준",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "커넥터",
+          "value": "Mic/Line Combicon x 2",
+          "unit": "",
+          "condition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "입력 임피던스",
+          "value": "3.5",
+          "unit": "kΩ",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "게인 범위",
+          "value": "0 ~ 48",
+          "unit": "dB (6dB 단위)",
+          "condition": "소프트웨어 제어",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "팬텀 파워",
+          "value": "48V",
+          "unit": "",
+          "condition": "채널별 선택",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리",
+          "value": "4채널 독립 알고리즘",
+          "unit": "",
+          "condition": "AGC, NC, NLP 포함",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리 지연(오리지널 8k 알고리즘)",
+          "value": "49.68",
+          "unit": "ms @48kHz",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 처리 지연(풀밴드 알고리즘)",
+          "value": "33.52",
+          "unit": "ms @48kHz",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "DSP",
+          "name": "AEC 테일 길이",
+          "value": "200",
+          "unit": "ms",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Compatibility",
+          "name": "호환 섀시",
+          "value": "BLU-800, BLU-805, BLU-806, BLU-320, BLU-325, BLU-326, BLU-160, BLU-120",
+          "unit": "",
+          "condition": "제품 페이지 기준(최신). 데이터시트(18-0705)에는 BLU-800/320/160/120만 명시",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/aec-card",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0705)",
+          "url": "https://bssaudio.com/en-US/product_documents/aecinputcarddatasheetpdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blu-dan": {
+      "fileSha256": "79fd139717882298557e930fa4a6da05d30f72ad388c4569135c6a4cf1c46529",
+      "coreSha256": "97133b01458d84a2c5ef9e4f9d04d767d00576b3825f67a8e51cfb247e40878a",
+      "ioSha256": "0379621be00ef08c8f1d82bba1efd3c44fbb359db59b8faca5d38d8ec5650f6c",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "961d50f20697b506a2a3da0f7f54fbb1557016f2c6a23f6a89525ab8efff5174",
+      "sourcesSha256": "53bd3571fd42f2380612153a5f8e4d7cb7a4be1cc226dc65bb0eb4b226cda2db",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "섀시",
+          "value": "19인치 랙, 1U 하프랙(반폭)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante/AES67",
+          "value": "지원",
+          "unit": "",
+          "condition": "최대 64x64채널 동시 송수신, Primary/Secondary 이중화 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "BLU link 디지털 오디오 버스",
+          "value": "256",
+          "unit": "채널",
+          "condition": "Cat 5e, 최대 100m",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "제어 포트",
+          "value": "별도 이더넷 포트",
+          "unit": "",
+          "condition": "Dante 오디오 포트와 분리",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "Dante 펌웨어",
+          "value": "Dante 4.0",
+          "unit": "",
+          "condition": "Dante Domain Manager 지원",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "RS-232",
+          "value": "지원",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Certification",
+          "name": "인증",
+          "value": "EN 54-16, AES67 호환",
+          "unit": "",
+          "condition": "생명안전 응용",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/blu-da",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(060315)",
+          "url": "https://bssaudio.com/en-US/product_documents/blu-dan_datasheet_060315-pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blucard-in": {
+      "fileSha256": "60ce47252d615b643f1e45d0cce55a986f2ef4d7805bbf29726d005f33478647",
+      "coreSha256": "e322d76b3301fd7c7f122ce2f6e95ec99f014aa571a4e7201318064b9145597c",
+      "ioSha256": "55071e08edef576c1a923aea7c8cb5b652ae76731b9c06f68ff574e4357cec18",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "3627729c3b2073f25537dbb5d3a2fdeb18ccd628f2de19ccdddbc77478b2ae7f",
+      "sourcesSha256": "cc24434bd6eef37869131ee2b99e8bf775c8afc2d96f6fe435cdc963fbe7db13",
+      "beforeSpecifications": [
+        {
+          "group": "I/O",
+          "name": "아날로그 입력",
+          "value": "4",
+          "unit": "채널(Mic/Line)",
+          "condition": "카드 1장 기준",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "입력 타입",
+          "value": "밸런스/언밸런스",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "커넥터",
+          "value": "Mic/Line Combicon x 2",
+          "unit": "",
+          "condition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "입력 임피던스",
+          "value": "3.5",
+          "unit": "kΩ",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "게인 범위",
+          "value": "0 ~ 48",
+          "unit": "dB (6dB 단위)",
+          "condition": "소프트웨어 제어",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "팬텀 파워",
+          "value": "48V (nominal)",
+          "unit": "",
+          "condition": "채널별 선택",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "최대 입력 레벨",
+          "value": "+20 (0dB 게인) / +8 (12dB 게인)",
+          "unit": "dBu",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "A/D 레이턴시(Rev. A)",
+          "value": "0.85 (@48k) / 0.43 (@96k)",
+          "unit": "ms",
+          "condition": "Rev. A는 단종, 더 이상 출하되지 않음",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "A/D 레이턴시(Rev. B)",
+          "value": "0.25 (@48k) / 0.13 (@96k)",
+          "unit": "ms",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Compatibility",
+          "name": "호환 섀시",
+          "value": "BLU-800, BLU-805, BLU-806, BLU-320, BLU-325, BLU-326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/analog-input-card",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0579-B, Analog Input/Output Cards 공용)",
+          "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "blucard-out": {
+      "fileSha256": "f829a290353b49bb655bb097b898ae4a292c005d2aafb0f0d4af2b32241c4287",
+      "coreSha256": "ff0b68d2204307a1bec0c105d0cd52270022c86e1bbd8426aca93659878d9a64",
+      "ioSha256": "dcc2a9abbcb62a3345811344aaf06a1dbc6d4093169d3061a7c8bde197b28b33",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "9509c0c0e2657d6f6aac1d27119712dbfbbfaaac767051fdbbb829b3e5289ae9",
+      "sourcesSha256": "09ebc812cd1a68d0f4c81c3f3b3b082669a45fe5dceb141af32c4b8d1de67c3c",
+      "beforeSpecifications": [
+        {
+          "group": "I/O",
+          "name": "아날로그 출력",
+          "value": "4",
+          "unit": "채널(라인)",
+          "condition": "카드 1장 기준",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "출력 타입",
+          "value": "밸런스/언밸런스",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "커넥터",
+          "value": "Line Combicon x 2",
+          "unit": "",
+          "condition": "각 커넥터당 2채널(연결 1: CH1-2, 연결 2: CH3-4)",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "최대 출력 레벨",
+          "value": "+19",
+          "unit": "dBu",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "출력 임피던스",
+          "value": "40 (밸런스) / 20 (언밸런스)",
+          "unit": "Ω",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "주파수 응답",
+          "value": "20Hz-20kHz (+0.5dB/-1dB)",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "THD",
+          "value": "0.01% 미만",
+          "unit": "",
+          "condition": "20Hz-20kHz, +10dBu 출력 기준",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "다이내믹 레인지",
+          "value": "108",
+          "unit": "dB (typical, 22Hz-22kHz unweighted)",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "크로스토크",
+          "value": "-75dB 미만",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "D/A 레이턴시",
+          "value": "0.58 (@48k) / 0.29 (@96k)",
+          "unit": "ms",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Compatibility",
+          "name": "호환 섀시",
+          "value": "BLU-800, BLU-805, BLU-806, BLU-320, BLU-325, BLU-326, BLU-160, BLU-120, BLU-80, BLU-32, BLU-16",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/analog-output-card",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(18-0579-B, Analog Input/Output Cards 공용)",
+          "url": "https://bssaudio.com/en-US/product_documents/bss-anlg-in-out-carddatasheetpdf--2",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "ec-4bv": {
+      "fileSha256": "f978a680926f68991be34f3251e8b7d11a00612f7e537e4e89bcd33d1fd6a269",
+      "coreSha256": "7c35b3670866c1cc664fc6e33c67ca3e3b025a3f0471918ff38aeb3ecf9250c8",
+      "ioSha256": "4fb08ab0389131a5fc0b6ea49ba1796fcab2a3f03de3d9dbc4094a5e12a7abee",
+      "portMapSha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "specificationsSha256": "8fe8feea0c7117b8ce941792a52ae95cde44f695acacdf76243a91411ecd1e82",
+      "sourcesSha256": "7d699f955573f87e6a814c8108e2db902e53c26741e4fa0868f768ddd85cf233",
+      "beforeSpecifications": [
+        {
+          "group": "Chassis",
+          "name": "폼팩터",
+          "value": "단일 갱(Single-Gang), US Decora 또는 EU 사각/원형 박스형",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Chassis",
+          "name": "색상",
+          "value": "블랙 또는 화이트",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "인코더",
+          "value": "푸시/로터리 인코더 1개, 인코더 링 1개(멀티컬러)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "버튼",
+          "value": "4",
+          "unit": "개(멀티컬러)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Display",
+          "name": "LCD 해상도",
+          "value": "64 x 128",
+          "unit": "픽셀",
+          "condition": "멀티컬러, 사용자 지정 텍스트/그래픽 표시 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "제어 프로토콜",
+          "value": "HiQnet",
+          "unit": "",
+          "condition": "HiQnet Audio Architect로 드래그 앤 드롭 구성",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "네트워크 포트",
+          "value": "1",
+          "unit": "포트 (Ethernet, RJ-45)",
+          "condition": "구성/제어/모니터링/전원(PoE) 겸용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "name": "최대 케이블 길이",
+          "value": "328 (100)",
+          "unit": "피트(미터)",
+          "condition": "PoE 사용 시",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원 방식",
+          "value": "PoE(Power over Ethernet)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "소비전력",
+          "value": "300",
+          "unit": "mA (48VDC 기준, 최대)",
+          "condition": "최대 300mA @ 48VDC(약 14.4W). 권장 이더넷 케이블 배선: VW-1 등급, 48VDC, 13W",
+          "source": "D",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Feature",
+          "name": "보안 기능",
+          "value": "원격 잠금/해제, 4자리 PIN 로컬 잠금",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Feature",
+          "name": "동작 모드",
+          "value": "1존 모드, 4존 모드, 하이브리드 모드",
+          "unit": "",
+          "condition": "",
+          "source": "D",
+          "verification": "FOUND"
+        }
+      ],
+      "beforeSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://bssaudio.com/en-US/products/EC-4BV",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(Cut Sheet)",
+          "url": "https://bssaudio.com/en-US/product_documents/contriocontrollers_ec-4bv_web_datasheet_060215-pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    }
+  },
+  "inventory": {
+    "documents": [
+      {
+        "slug": "blu-100",
+        "file": "manuals/bss-blu-100-installation-ko.pdf",
+        "kind": "manual",
+        "title": "BSS Soundweb London BLU-100 설치 가이드 · 테크데이타 제공",
+        "language": "ko",
+        "pages": 14,
+        "sha256": "0ab4b4141c5c2ef23d2f95f846166df9621e2ac3adaf4a3288497bb0492d5e5d",
+        "bytes": 1222650,
+        "sourceName": "매뉴얼_BLU-100.pdf"
+      },
+      {
+        "slug": "blu-101",
+        "file": "manuals/bss-blu-101-installation-en.pdf",
+        "kind": "manual",
+        "title": "BSS BLU-101 Installation Guide 5033747-B · 테크데이타 제공",
+        "language": "en",
+        "pages": 12,
+        "sha256": "2bbc658f23979f34dac29a548bd28cd16e811f4b87f133d3d0c8f02cb21e9b06",
+        "bytes": 1011809,
+        "sourceName": "BLU-101_IG_5033747-B_original.pdf"
+      },
+      {
+        "slug": "blu-101",
+        "file": "manuals/bss-blu-101-specification-ko.pdf",
+        "kind": "reference",
+        "title": "BSS BLU-101 국문 시방서 · 테크데이타 제공",
+        "language": "ko",
+        "pages": 1,
+        "sha256": "cc108acd1a5091f266697092b2b6103fd9c7c7a37fe834a9fcf2ffdd7dd16ce3",
+        "bytes": 26576,
+        "sourceName": "시방서_BLU-101.pdf"
+      },
+      {
+        "slug": "blu-160",
+        "file": "manuals/bss-blu-160-series-installation-ko.pdf",
+        "kind": "manual",
+        "title": "BSS BLU-160 포함 Soundweb London 설치 가이드 18-0553-E · 테크데이타 제공",
+        "language": "ko",
+        "pages": 14,
+        "sha256": "48989a4877a35b2bfc821817b74c9e507a7f724433387d72923d0c8b6bc1430a",
+        "bytes": 3086580,
+        "sourceName": "매뉴얼_BLU-160.pdf"
+      },
+      {
+        "slug": "blu-dan",
+        "file": "manuals/bss-blu-dan-blu-da-installation-en.pdf",
+        "kind": "manual",
+        "title": "BSS BLU-DAN/BLU-DA Installation Guide 5099141-00-A · 테크데이타 제공",
+        "language": "en",
+        "pages": 8,
+        "sha256": "f81196e78491cdf120b68a67857d47126abca912497b4fb29c65b7cb216c47bf",
+        "bytes": 863749,
+        "sourceName": "매뉴얼_BLU-DAN.pdf"
+      },
+      {
+        "slug": "ec-4bv",
+        "file": "manuals/bss-ec-4bv-wall-controllers-installation-en.pdf",
+        "kind": "manual",
+        "title": "BSS EC-4BV 포함 Ethernet Wall Controllers Installation Guide · 테크데이타 제공",
+        "language": "en",
+        "pages": 20,
+        "sha256": "5c5788cc8304efb4222eb8d0949a98657c27b02c00a72d282eb1bf680a976016",
+        "bytes": 1367776,
+        "sourceName": "매뉴얼_EC-4BV.pdf"
+      }
+    ],
+    "bl50": {
+      "sourceName": "매뉴얼_BLU-50.pdf",
+      "sha256": "f83d0b4113767855ecbedea8e3cbe532ec9504c0da2ef6771ae5ddb6d0feab01",
+      "pages": 20,
+      "cover": "Soundweb London BLU-50 Installation Guide 5040341-C",
+      "version2Matches": 0,
+      "blankPages": [
+        2,
+        19
+      ],
+      "decision": "BLU-50v2 적용 모델 표기가 없어 등록 제외"
+    }
+  },
+  "otherDetailJsonSha256": "a175822b7330945848ba09a79288d06d2d028a2c2d06a7595bad012469d93410"
+}

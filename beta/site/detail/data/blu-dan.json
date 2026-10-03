@@ -244,6 +244,11 @@
       "name": "제조사 공식 데이터시트(060315)",
       "url": "https://bssaudio.com/en-US/product_documents/blu-dan_datasheet_060315-pdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "BSS BLU-DAN/BLU-DA Installation Guide 5099141-00-A · 테크데이타 제공",
+      "scope": "영문 PDF 8쪽 · 게시 파일 manuals/bss-blu-dan-blu-da-installation-en.pdf · SHA-256 f81196e78491cdf120b68a67857d47126abca912497b4fb29c65b7cb216c47bf"
     }
   ],
   "issues": [

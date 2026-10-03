@@ -6,6 +6,7 @@ import {prepareEnhancements, portMapImageMatches} from '../prototype/brc-am7/det
 import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
+import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => JSON.parse(bytes(path));
@@ -78,6 +79,9 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
     } else if (jblW03010Slug(file.slice(0,-5))) {
       const previous = beforeJblW03010(read('beta/site/detail/data/'+file),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-010 Git bytes');
+    } else if (bssW03011Slug(file.slice(0,-5))) {
+      const previous = beforeBssW03011(read('beta/site/detail/data/'+file),file.slice(0,-5));
+      assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-011 Git bytes');
     } else if (amxW03008Slug(file.slice(0,-5))) {
       const previous = beforeAmxW03008(read('beta/site/detail/data/'+file),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-008 Git bytes');

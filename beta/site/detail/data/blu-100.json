@@ -185,16 +185,14 @@
       "name": "제어 입출력",
       "value": "제어 입력 12개, 로직 출력 6개",
       "unit": "",
-      "condition": "GPIO",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Control",
       "name": "RS-232",
-      "value": "지원",
+      "value": "지원 (로직 프로세싱용)",
       "unit": "",
-      "condition": "로직 프로세싱용",
       "source": "P",
       "verification": "FOUND"
     },
@@ -230,7 +228,6 @@
       "name": "외형 치수(H x W x D)",
       "value": "45 x 483 x 229",
       "unit": "mm (1.75\" x 19\" x 9.0\")",
-      "condition": "1U",
       "source": "D",
       "verification": "FOUND"
     },
@@ -330,6 +327,11 @@
       "name": "제조사 공식 데이터시트(18-0717-B)",
       "url": "https://bssaudio.com/en-US/product_documents/blu100_datasheetpdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "BSS Soundweb London BLU-100 설치 가이드 · 테크데이타 제공",
+      "scope": "국문 PDF 14쪽 · 게시 파일 manuals/bss-blu-100-installation-ko.pdf · SHA-256 0ab4b4141c5c2ef23d2f95f846166df9621e2ac3adaf4a3288497bb0492d5e5d"
     }
   ],
   "issues": [],
