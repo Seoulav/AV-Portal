@@ -1,0 +1,604 @@
+[
+  {
+    "slug": "lh43qhcebgcxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 5. 단독형 QHC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      },
+      {
+        "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "윈스타비투비 제품 규격서 5. 단독형 QHC",
+          "total": "/ 6",
+          "canvas": true
+        },
+        "downloadName": "winstar-qhc-standalone-spec-ko.pdf",
+        "sha256": "67ad244b91da603dea75b322af3098719a27f97a2c6a6c276b36a4cadf625397",
+        "bytes": 706843
+      }
+    ]
+  },
+  {
+    "slug": "lh75qhcebgcxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 5. 단독형 QHC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": []
+  },
+  {
+    "slug": "lh43qmcebgcxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 4. 단독형 QMC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "윈스타비투비 제품 규격서 4. 단독형 QMC",
+          "total": "/ 9",
+          "canvas": true
+        },
+        "downloadName": "winstar-qmc-standalone-spec-ko.pdf",
+        "sha256": "663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c",
+        "bytes": 1078152
+      }
+    ]
+  },
+  {
+    "slug": "lh85qmcebgcxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 4. 단독형 QMC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": []
+  },
+  {
+    "slug": "lh98qmcebgcxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      }
+    ],
+    "actions": []
+  },
+  {
+    "slug": "lh115qhfebgxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-26720E-04 (QPDX-5K·QHFX)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qpdx5k-qhfx-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-115qhf-spec-ko.pdf",
+        "title": "삼성전자 제품 사양서 115QHF (QHFX 시리즈)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-115qhf-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-26720E-04 (QPDX-5K·QHFX)",
+          "total": "/ 112",
+          "canvas": true
+        },
+        "downloadName": "samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "sha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+        "bytes": 2648255
+      },
+      {
+        "file": "manuals/samsung-115qhf-spec-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 제품 사양서 115QHF (QHFX 시리즈)",
+          "total": "/ 2",
+          "canvas": true
+        },
+        "downloadName": "samsung-115qhf-spec-ko.pdf",
+        "sha256": "4be5f424f5d7bce2c716f4375b1dfc31f126e71f3e7db739b389289331486962",
+        "bytes": 322761
+      }
+    ]
+  },
+  {
+    "slug": "lh55vhcrbgbxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-videowall-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 6. 비디오월",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-videowall-spec-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+        "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+          "total": "/ 75",
+          "canvas": true
+        },
+        "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "sha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+        "bytes": 2347236
+      },
+      {
+        "file": "manuals/winstar-videowall-spec-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "윈스타비투비 제품 규격서 6. 비디오월",
+          "total": "/ 7",
+          "canvas": true
+        },
+        "downloadName": "winstar-videowall-spec-ko.pdf",
+        "sha256": "f8d4a12db1649faf970ba3eca823ead410e06844ceae7e617ddf6279790d2fe8",
+        "bytes": 1444428
+      },
+      {
+        "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)",
+          "total": "/ 18",
+          "canvas": true
+        },
+        "downloadName": "samsung-videowall-product-guide-ko.pdf",
+        "sha256": "3f5751cbcc8e8ffb8bff77513d889b9d17735ef46c48e0e329601af9d47bd73d",
+        "bytes": 2387519
+      }
+    ]
+  },
+  {
+    "slug": "lh55vmcrbgbxkr",
+    "width": 1280,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-videowall-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 6. 비디오월",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-videowall-spec-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+        "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+      }
+    ],
+    "actions": []
+  },
+  {
+    "slug": "lh43qhcebgcxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 5. 단독형 QHC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      }
+    ]
+  },
+  {
+    "slug": "lh75qhcebgcxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 5. 단독형 QHC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qhc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      }
+    ]
+  },
+  {
+    "slug": "lh43qmcebgcxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 4. 단독형 QMC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      }
+    ]
+  },
+  {
+    "slug": "lh85qmcebgcxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 4. 단독형 QMC",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-qmc-standalone-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      }
+    ]
+  },
+  {
+    "slug": "lh98qmcebgcxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)",
+          "total": "/ 130",
+          "canvas": true
+        },
+        "downloadName": "samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+        "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+        "bytes": 3263725
+      }
+    ]
+  },
+  {
+    "slug": "lh115qhfebgxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-26720E-04 (QPDX-5K·QHFX)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-qpdx5k-qhfx-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-115qhf-spec-ko.pdf",
+        "title": "삼성전자 제품 사양서 115QHF (QHFX 시리즈)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-115qhf-spec-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-26720E-04 (QPDX-5K·QHFX)",
+          "total": "/ 112",
+          "canvas": true
+        },
+        "downloadName": "samsung-qpdx5k-qhfx-manual-ko.pdf",
+        "sha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc",
+        "bytes": 2648255
+      }
+    ]
+  },
+  {
+    "slug": "lh55vhcrbgbxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-videowall-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 6. 비디오월",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-videowall-spec-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+        "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+          "total": "/ 75",
+          "canvas": true
+        },
+        "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "sha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+        "bytes": 2347236
+      }
+    ]
+  },
+  {
+    "slug": "lh55vmcrbgbxkr",
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "errors": [],
+    "rowChecks": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf"
+      },
+      {
+        "file": "manuals/winstar-videowall-spec-ko.pdf",
+        "title": "윈스타비투비 제품 규격서 6. 비디오월",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/winstar-videowall-spec-ko.pdf"
+      },
+      {
+        "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+        "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)",
+        "count": 1,
+        "button": 1,
+        "download": "../manuals/samsung-videowall-product-guide-ko.pdf"
+      }
+    ],
+    "actions": [
+      {
+        "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "viewer": {
+          "open": true,
+          "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)",
+          "total": "/ 75",
+          "canvas": true
+        },
+        "downloadName": "samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
+        "sha256": "7dd00ff63cc5f2ffdd068c603eccf8c4f533cad7e7de9b25b6fdb547d3621188",
+        "bytes": 2347236
+      }
+    ]
+  }
+]
