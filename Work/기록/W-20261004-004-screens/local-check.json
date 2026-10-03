@@ -1,0 +1,141 @@
+[
+  {
+    "name": "blu-100-1280",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "svg": true,
+    "markers": 11,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-100-390",
+    "width": 390,
+    "scrollWidth": 390,
+    "svg": true,
+    "markers": 11,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-101-1280",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "svg": true,
+    "markers": 11,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-101-390",
+    "width": 390,
+    "scrollWidth": 390,
+    "svg": true,
+    "markers": 11,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-160-1280",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "svg": true,
+    "markers": 10,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-160-390",
+    "width": 390,
+    "scrollWidth": 390,
+    "svg": true,
+    "markers": 10,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-dan-1280",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "svg": true,
+    "markers": 6,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "blu-dan-390",
+    "width": 390,
+    "scrollWidth": 390,
+    "svg": true,
+    "markers": 6,
+    "broken": [
+      {
+        "src": "",
+        "visible": false
+      }
+    ],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  },
+  {
+    "name": "comparison-blu-101-vs-qms-88ux",
+    "width": 2560,
+    "scrollWidth": 2560,
+    "svg": false,
+    "markers": 0,
+    "broken": [],
+    "alert": "",
+    "jsErrors": [],
+    "failedRequests": []
+  }
+]

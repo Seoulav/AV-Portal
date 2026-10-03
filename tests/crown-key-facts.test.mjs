@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync, readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -58,10 +59,10 @@ test('the approved DCi 4|600DA pilot remains untouched', () => {
 test('217 other product JSON objects retain their pre-task content', () => {
   const names = readdirSync(dataDir).filter(name => name.endsWith('.json')).sort();
   const otherNames = names.filter(name => !targets.includes(name.slice(0,-5)));
-  const other = otherNames.map(name => [name,beforeHarmanW03014(read(`beta/site/detail/data/${name}`),name.slice(0,-5))]);
+  const other = otherNames.map(name => [name,beforeHarmanW03014(beforeBssW04004(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(otherNames.length, 217);
   assert.equal(sha(other), evidence.otherDetailJsonSha256);
-  const normalizedBytes = otherNames.map(name => `${name}\0${beforeHarmanW03014Raw(readFileSync(new URL(`beta/site/detail/data/${name}`, root), 'utf8').replace(/\r\n/g, '\n'),name.slice(0,-5))}`).join('');
+  const normalizedBytes = otherNames.map(name => `${name}\0${beforeHarmanW03014Raw(beforeBssW04004Raw(readFileSync(new URL(`beta/site/detail/data/${name}`, root), 'utf8').replace(/\r\n/g, '\n'),name.slice(0,-5)),name.slice(0,-5))}`).join('');
   assert.equal(createHash('sha256').update(normalizedBytes).digest('hex'), evidence.otherDetailRawSha256,
     'all 217 non-target JSON files retain their exact Git blob content (normalizing checkout line endings)');
 });

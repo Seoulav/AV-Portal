@@ -26,6 +26,20 @@
       "originalSize": "4096x438",
       "resolution": "4096x438",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "blu-100-rear.webp",
+      "alt": "BSS Audio BLU-100 후면 단자 패널",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "BSS Audio",
+      "model": "BLU-100",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1329_1729004086/BLU-100rear_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x575",
+      "resolution": "4096x575",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -41,8 +55,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://bssaudio.com/en-US/products/blu-100"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1329_1729004086/BLU-100rear_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -363,5 +377,114 @@
       "value": "48",
       "unit": "채널"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "blu-100-rear.webp",
+      "width": 4096,
+      "height": 575
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 A · 1–4",
+        "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+        "x1": 3610,
+        "x2": 3950,
+        "y": 414,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 B · 1–4",
+        "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+        "x1": 3180,
+        "x2": 3530,
+        "y": 414,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "아날로그 입력 C · 1–4",
+        "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+        "x1": 2750,
+        "x2": 3110,
+        "y": 414,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "아날로그 출력 D · 1–4",
+        "desc": "Phoenix/Combicon · 라인 출력 4채널",
+        "x1": 2320,
+        "x2": 2690,
+        "y": 414,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "아날로그 출력 E · 1–4",
+        "desc": "Phoenix/Combicon · 라인 출력 4채널",
+        "x1": 1910,
+        "x2": 2280,
+        "y": 414,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "BLU link 입력",
+        "desc": "RJ-45 · BLU link 오디오 버스 입력",
+        "x1": 1190,
+        "x2": 1360,
+        "y": 247,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "BLU link 출력",
+        "desc": "RJ-45 · BLU link 오디오 버스 출력",
+        "x1": 1190,
+        "x2": 1360,
+        "y": 414,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "Ethernet 제어",
+        "desc": "RJ-45 · HiQnet 제어 네트워크",
+        "x1": 940,
+        "x2": 1110,
+        "y": 414,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "RS-232",
+        "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+        "x1": 690,
+        "x2": 900,
+        "y": 414,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "CONTROL 입력",
+        "desc": "Phoenix/Combicon · 제어 입력 12개",
+        "x1": 1420,
+        "x2": 1810,
+        "y": 247,
+        "side": "top"
+      },
+      {
+        "n": 11,
+        "label": "LOGIC 출력",
+        "desc": "Phoenix/Combicon · 로직 출력 6개",
+        "x1": 1420,
+        "x2": 1810,
+        "y": 414,
+        "side": "bottom"
+      }
+    ]
+  }
 }

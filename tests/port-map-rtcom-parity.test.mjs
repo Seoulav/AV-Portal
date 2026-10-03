@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
+import { bssW04004Slugs } from './bss-w04004-history.mjs';
 import * as view from '../prototype/brc-am7/detail-enhancement-view.mjs';
 
 const fixture = {
@@ -61,7 +62,7 @@ test('all published maps retain supported crop and side placement without produc
   const digest = createHash('sha256');
   for (const file of files) {
     const product = JSON.parse(await readFile(join('beta/site/detail/data', file)));
-    if (product.portMap) {
+    if (product.portMap && !bssW04004Slugs.has(file.slice(0,-5))) {
       maps.push(product.portMap);
       digest.update(file + '\n' + JSON.stringify(product.portMap) + '\n');
     }

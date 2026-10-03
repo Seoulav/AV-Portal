@@ -1,0 +1,549 @@
+{
+  "workId": "W-20261004-004",
+  "baselineMain": "6e7f8ff918422e1c055aebe8ec16a2948067706b",
+  "modelIdentification": "제조사 제품별 페이지의 첨부 링크 ID와 파일명으로 연결; 사진에는 인쇄 모델명 없음. FOUND 등급.",
+  "products": {
+    "blu-100": {
+      "productPage": "https://bssaudio.com/en-US/products/blu-100",
+      "attachmentUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1329_1729004086/BLU-100rear_x_large_2x.webp",
+      "attachmentId": "1329",
+      "image": {
+        "file": "blu-100-rear.webp",
+        "width": 4096,
+        "height": 575,
+        "sha256": "6f9e5d1bfe98f1ec5b846af1657b58d987a09c01e057b8d27617f7480a2353c3",
+        "verificationStatus": "FOUND"
+      },
+      "coreSha256": "ac8c935caeb0556c4a6ba15f857964c192a41fdffa6d35ed6cea5c33c0d63a89",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3610,
+          "x2": 3950,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3180,
+          "x2": 3530,
+          "y": 414,
+          "side": "top",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 2750,
+          "x2": 3110,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 2320,
+          "x2": 2690,
+          "y": 414,
+          "side": "top",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 1910,
+          "x2": 2280,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 247,
+          "side": "top",
+          "ioRows": [
+            2
+          ]
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            2
+          ]
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 940,
+          "x2": 1110,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            3
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 690,
+          "x2": 900,
+          "y": 414,
+          "side": "top",
+          "ioRows": [
+            4
+          ]
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 247,
+          "side": "top",
+          "ioRows": [
+            5
+          ]
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 414,
+          "side": "bottom",
+          "ioRows": [
+            5
+          ]
+        }
+      ],
+      "unmatchedIoRows": []
+    },
+    "blu-101": {
+      "productPage": "https://bssaudio.com/en-US/products/blu-101",
+      "attachmentUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1331_1729004096/BLU-101_Rear_x_large_2x.webp",
+      "attachmentId": "1331",
+      "image": {
+        "file": "blu-101-rear.webp",
+        "width": 4096,
+        "height": 410,
+        "sha256": "dddec58e5888c11f15598cc3b12b3f6ba960c0bb40342b5918f9dc1505ebf31a",
+        "verificationStatus": "FOUND"
+      },
+      "coreSha256": "390554b86a4891efac7924d4b01196d2a1f0efb0fb5f5b1957e1a1820c2dbd73",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3610,
+          "x2": 3950,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3180,
+          "x2": 3530,
+          "y": 295,
+          "side": "top",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 2750,
+          "x2": 3110,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 2320,
+          "x2": 2690,
+          "y": 295,
+          "side": "top",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 1910,
+          "x2": 2280,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 176,
+          "side": "top",
+          "ioRows": [
+            2
+          ]
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            2
+          ]
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 940,
+          "x2": 1110,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            3
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 690,
+          "x2": 900,
+          "y": 295,
+          "side": "top",
+          "ioRows": [
+            4
+          ]
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 176,
+          "side": "top",
+          "ioRows": [
+            5
+          ]
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 295,
+          "side": "bottom",
+          "ioRows": [
+            5
+          ]
+        }
+      ],
+      "unmatchedIoRows": []
+    },
+    "blu-160": {
+      "productPage": "https://bssaudio.com/en-US/products/blu-160",
+      "attachmentUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1345_1729004062/BLU-160_Rear_x_large_2x.webp",
+      "attachmentId": "1345",
+      "image": {
+        "file": "blu-160-rear.webp",
+        "width": 4096,
+        "height": 586,
+        "sha256": "3c8afc9cedab6c55797437dc07937bcdd0ed8bdab9707c8ec79887241b9f3122",
+        "verificationStatus": "FOUND"
+      },
+      "coreSha256": "f200bdf64d5a7a22b2392cdaeff94275a6016539ef25aefdbb42db9112043d76",
+      "markers": [
+        {
+          "n": 1,
+          "label": "옵션 I/O 카드 A",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+          "x1": 3300,
+          "x2": 3870,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 2,
+          "label": "옵션 I/O 카드 B",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+          "x1": 2470,
+          "x2": 3100,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 3,
+          "label": "옵션 I/O 카드 C",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+          "x1": 3300,
+          "x2": 3870,
+          "y": 410,
+          "side": "bottom",
+          "ioRows": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 4,
+          "label": "옵션 I/O 카드 D",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류가 달라집니다.",
+          "x1": 2470,
+          "x2": 3100,
+          "y": 410,
+          "side": "bottom",
+          "ioRows": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 5,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1660,
+          "x2": 1820,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            5
+          ]
+        },
+        {
+          "n": 6,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1660,
+          "x2": 1820,
+          "y": 410,
+          "side": "bottom",
+          "ioRows": [
+            5
+          ]
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 1390,
+          "x2": 1550,
+          "y": 410,
+          "side": "bottom",
+          "ioRows": [
+            6
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 1120,
+          "x2": 1320,
+          "y": 410,
+          "side": "top",
+          "ioRows": [
+            7
+          ]
+        },
+        {
+          "n": 9,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 2000,
+          "x2": 2390,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            8
+          ]
+        },
+        {
+          "n": 10,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 2000,
+          "x2": 2390,
+          "y": 410,
+          "side": "bottom",
+          "ioRows": [
+            8
+          ]
+        }
+      ],
+      "unmatchedIoRows": []
+    },
+    "blu-dan": {
+      "productPage": "https://bssaudio.com/en-US/products/blu-da",
+      "attachmentUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/1994_1729004520/BLU-DAN_Rear_x_large_2x.webp",
+      "attachmentId": "1994",
+      "image": {
+        "file": "blu-dan-rear.webp",
+        "width": 4096,
+        "height": 776,
+        "sha256": "d37b07e1e3633e1cd5d54cedf5a54fab2e1dca2c591984e80e7b186b9bd73748",
+        "verificationStatus": "FOUND"
+      },
+      "coreSha256": "9bae40a8279606219dc730c5ac7c69365af8182950ae5eedb8e634e72ba392d2",
+      "markers": [
+        {
+          "n": 1,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante/AES67 기본 오디오망",
+          "x1": 1760,
+          "x2": 2070,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 2,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · Dante/AES67 보조 오디오망",
+          "x1": 2170,
+          "x2": 2490,
+          "y": 250,
+          "side": "top",
+          "ioRows": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 3180,
+          "x2": 3470,
+          "y": 300,
+          "side": "top",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 4,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 3180,
+          "x2": 3470,
+          "y": 580,
+          "side": "bottom",
+          "ioRows": [
+            1
+          ]
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 2630,
+          "x2": 2920,
+          "y": 550,
+          "side": "bottom",
+          "ioRows": [
+            2
+          ]
+        },
+        {
+          "n": 6,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 2110,
+          "x2": 2480,
+          "y": 550,
+          "side": "bottom",
+          "ioRows": [
+            3
+          ]
+        }
+      ],
+      "unmatchedIoRows": []
+    }
+  },
+  "shureCorrection": {
+    "slug": "mxa925w-r",
+    "from": "RJ45 · 1번만 PoE",
+    "to": "커넥터 타입 · 1번만 PoE",
+    "value": "RJ45 x 2"
+  }
+}
