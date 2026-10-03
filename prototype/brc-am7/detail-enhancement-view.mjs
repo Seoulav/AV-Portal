@@ -1,4 +1,3 @@
-import { portMarkerPercent } from './detail-enhancements.mjs?v=w20261001-001-map-review';
 const el = (tag, cls = '', text) => {
   const node = document.createElement(tag);
   node.className = cls;
@@ -23,30 +22,101 @@ export function renderKeyFacts(facts) {
   }
   return list;
 }
-export function renderPortMap(items, image) {
-  const overlay = el('div', 'port-map-overlay');
-  overlay.setAttribute('aria-hidden', 'true');
-  if (!image.complete || !image.naturalWidth || image.hidden) return overlay;
-  const placed = [];
-  for (const item of items) {
-    const span = portMarkerPercent(item, image.naturalWidth);
-    if (!span) continue;
-    const box = image.getBoundingClientRect(), scale = box.width / image.naturalWidth;
-    const top = item.side === 'top', sign = top ? -1 : 1;
-    const y = (item.y ?? (top ? 0 : image.naturalHeight)) * scale;
-    const x1 = item.x1 * scale, x2 = item.x2 * scale, cx = (x1+x2)/2;
-    let markerY = y + sign*28;
-    while (placed.some(p => Math.abs(p.x-cx) < 28 && Math.abs(p.y-markerY) < 28)) markerY += sign*30;
-    placed.push({x:cx,y:markerY});
-    const bracket = svgNode('svg', {class:'port-map-bracket', width:box.width, height:box.height, 'aria-hidden':'true'});
-    bracket.append(svgNode('path', {d:`M${x1} ${y-sign*4}V${y+sign*8}H${x2}V${y-sign*4}M${cx} ${y+sign*8}V${markerY-sign*12}`, fill:'none', stroke:'#2459b0', 'stroke-width':1.5}));
-    const marker = el('span', 'port-map-marker', item.n);
-    marker.style.left = `${span.left + span.width / 2}%`;
-    marker.style.top = `${markerY}px`;
-    marker.dataset.side = item.side ?? 'bottom';
-    overlay.append(bracket, marker);
+export function portMapGeometry(map, naturalWidth, naturalHeight) {
+  const X0 = 40, W = map.displayWidth ? map.displayWidth - 80 : 680;
+  const scale = W / naturalWidth;
+  const cropTop = map.crop?.top || 0, cropBottom = map.crop?.bottom || 0;
+  const photoHeight = (naturalHeight - cropTop - cropBottom) * scale;
+  const markers = map.items.map(item => {
+    if (item.side === 'left' || item.side === 'right') {
+      const direction = item.side === 'left' ? -1 : 1;
+      const edgeX = X0 + (typeof item.x === 'number' ? item.x : direction < 0 ? 0 : naturalWidth) * scale;
+      return { item, side: item.side, direction, edgeX, cx: edgeX + direction * 24,
+        sourceY1: item.y1, sourceY2: item.y2 };
+    }
+    const side = item.side === 'top' ? 'top' : 'bottom';
+    const x1 = X0 + item.x1 * scale, x2 = X0 + item.x2 * scale;
+    return { item, side, x1, x2, cx: (x1 + x2) / 2, sourceY: item.y };
+  });
+  const laneCounts = {};
+  for (const side of ['top', 'bottom']) {
+    const lastX = [];
+    for (const marker of markers.filter(entry => entry.side === side).sort((a, b) => a.cx - b.cx || a.item.n - b.item.n)) {
+      let lane = lastX.findIndex(x => marker.cx - x >= 22);
+      if (lane < 0) lane = lastX.length;
+      lastX[lane] = marker.cx;
+      marker.lane = lane;
+    }
+    laneCounts[side] = lastX.length;
   }
-  return overlay;
+  const topMargin = Math.max(40, 34 + 24 * (laneCounts.top - 1));
+  const bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));
+  const photoTop = topMargin, photoBottom = photoTop + photoHeight;
+  for (const marker of markers) {
+    if (marker.side === 'left' || marker.side === 'right') {
+      marker.y1 = photoTop + (marker.sourceY1 - cropTop) * scale;
+      marker.y2 = photoTop + (marker.sourceY2 - cropTop) * scale;
+      marker.cy = (marker.y1 + marker.y2) / 2;
+    } else {
+      marker.anchorY = typeof marker.sourceY === 'number'
+        ? photoTop + (marker.sourceY - cropTop) * scale
+        : marker.side === 'top' ? photoTop : photoBottom;
+      marker.cy = marker.side === 'top'
+        ? photoTop - 24 - marker.lane * 24
+        : photoBottom + 24 + marker.lane * 24;
+    }
+  }
+  return { width: W + X0 * 2, height: photoBottom + bottomMargin, scale,
+    image: { x: X0, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },
+    photoTop, photoBottom, topMargin, bottomMargin, markers };
+}
+
+export function renderPortMap(map, image, model = '') {
+  const geometry = portMapGeometry(map, image.naturalWidth, image.naturalHeight);
+  const svg = svgNode('svg', { class: 'port-map-svg', viewBox: `0 0 ${geometry.width} ${geometry.height}`,
+    role: 'img', 'aria-label': `${model} 단자 지도`, 'aria-describedby': 'port-map-photo-desc' });
+  svg.append(svgNode('desc', { id: 'port-map-photo-desc' }, image.alt || `${model} 제품 사진`));
+  if (map.displayWidth) svg.style.maxWidth = `${map.displayWidth}px`;
+  const clipId = 'port-map-photo-clip';
+  const clip = svgNode('clipPath', { id: clipId });
+  clip.append(svgNode('rect', { x: geometry.image.x, y: geometry.photoTop,
+    width: geometry.image.width, height: geometry.photoBottom - geometry.photoTop }));
+  const defs = svgNode('defs'); defs.append(clip); svg.append(defs);
+  svg.append(svgNode('image', { href: image.currentSrc || image.src, ...geometry.image, 'clip-path': `url(#${clipId})` }));
+  for (const marker of geometry.markers) {
+    const { side, cx, cy } = marker;
+    let bracket, leader;
+    if (side === 'left' || side === 'right') {
+      const { edgeX: E, direction: dir, y1, y2 } = marker;
+      bracket = `M${E - dir * 8} ${y1}H${E + dir * 6}V${y2}H${E - dir * 8}`;
+      leader = `M${E + dir * 6} ${cy}H${E + dir * 14}`;
+    } else if (side === 'bottom') {
+      const { x1, x2, anchorY: B } = marker;
+      bracket = `M${x1} ${B - 8}V${B + 6}H${x2}V${B - 8}`;
+      leader = `M${cx} ${B + 6}V${cy - 10}`;
+    } else {
+      const { x1, x2, anchorY: B } = marker;
+      bracket = `M${x1} ${B + 8}V${B - 6}H${x2}V${B + 8}`;
+      leader = `M${cx} ${B - 6}V${cy + 10}`;
+    }
+    for (const d of [bracket, leader]) svg.append(svgNode('path', { d, fill: 'none', stroke: 'var(--pg-accent)', 'stroke-width': 1.5 }));
+    svg.append(svgNode('circle', { cx, cy, r: 10, fill: 'var(--pg-accent)' }));
+    svg.append(svgNode('text', { x: cx, y: cy + 4, 'text-anchor': 'middle', 'font-size': 11,
+      'font-weight': 700, fill: '#fff' }, marker.item.n));
+  }
+  return svg;
+}
+
+export function renderPortMapCards(items) {
+  const cards = el('div', 'port-map-ports');
+  for (const item of [...items].sort((a, b) => a.n - b.n)) {
+    const card = el('div', 'port-map-port');
+    const heading = el('b');
+    heading.append(el('span', 'port-map-n', item.n), document.createTextNode(item.label));
+    card.append(heading, document.createTextNode(item.desc));
+    cards.append(card);
+  }
+  return cards;
 }
 const svgNode = (tag, attrs = {}, text) => {
   const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
