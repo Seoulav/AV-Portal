@@ -16,6 +16,7 @@ import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-ada
 import { distributorLinks, isHarmanManufacturer } from './distributor-links.mjs';
 
 const site = new URL('./site/', import.meta.url);
+const uploadManifest = JSON.parse(await readFile(new URL('docs/manifest.json', site), 'utf8'));
 const files = (await readdir(site)).sort();
 assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'samples', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
 assert.deepEqual(await readdir(new URL('samples/', site)), ['h5-layers']);
@@ -41,7 +42,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   assert.equal(new Set(userReferences.map(entry => identity(entry.brand, entry.product))).size, userReferences.length, '사용자 업로드 참고자료에 같은 제품이 중복 등록됨');
   const manualsDir = new URL('manuals/', site);
   const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
-  const expectedFiles = [...new Set([...manualFiles, ...referenceFiles])];
+  const expectedFiles = [...new Set([...manualFiles, ...referenceFiles, ...uploadManifest.uploads.map(entry => entry.file.replace(/^manuals\//, ''))])];
   assert.deepEqual(onDisk.sort(), expectedFiles.sort(), '업로드 매뉴얼·참고자료 폴더와 목록이 다름');
   for (const entry of [...userManuals, ...userReferences]) {
     assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 파일명`);
@@ -120,7 +121,7 @@ const catalog = JSON.parse(raw);
 // 공개 PDF 대응표는 상세 JSON을 수정하지 않고 독립 파일로 게시한다. 파일 내용·해시·폴더를 전수 대조한다.
 {
   const docsDir = new URL('docs/', site);
-  const manifest = JSON.parse(await readFile(new URL('manifest.json', docsDir), 'utf8'));
+  const manifest = uploadManifest;
   assert.deepEqual(Object.keys(manifest).sort(), ['mirrors', 'uploads']);
   const listed = manifest.mirrors.map(entry => entry.file);
   assert.equal(new Set(listed).size, listed.length, '서로 다른 URL에 중복 PDF 파일명');
@@ -152,7 +153,15 @@ const catalog = JSON.parse(raw);
       if (typeof url === 'string' && /^\.\/manuals\/[a-z0-9-]+\.pdf$/.test(url)) uploaded.add(`${item.slug}|manuals/${url.split('/').at(-1)}|${kind}`);
     }
   }
-  assert.deepEqual(new Set(manifest.uploads.map(entry => `${entry.slug}|${entry.file}|${entry.kind}`)), uploaded, '사용자 업로드 PDF 대응표 불일치');
+  const uploadKeys = manifest.uploads.map(entry => `${entry.slug}|${entry.file}|${entry.kind}`);
+  assert.equal(new Set(uploadKeys).size, uploadKeys.length, '사용자 업로드 PDF 중복 등록');
+  assert.deepEqual(new Set(uploadKeys.filter(key => uploaded.has(key))), uploaded, '기존 사용자 업로드 PDF 대응표 불일치');
+  for (const entry of manifest.uploads) {
+    assert.ok(catalog.some(item => item.slug === entry.slug), `${entry.slug}: 공개 상세 제품 없음`);
+    assert.match(entry.file, /^manuals\/[a-z0-9-]+\.pdf$/, `${entry.slug}: 업로드 경로`);
+    assert.ok(['manual', 'reference'].includes(entry.kind), `${entry.slug}: 업로드 종류`);
+    assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.slug}: 업로드 제목`);
+  }
 }
 assert.equal(catalog.length, snapshot.catalog.count);
 // 기준 25개는 파생 필드를 뺀 형태로 처음 공개 시점과 같아야 한다.
@@ -334,4 +343,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, ${userManuals.length + userReferences.length} user-uploaded PDF entries.`);
+console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, ${uploadManifest.uploads.length} user-uploaded PDF entries.`);

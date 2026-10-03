@@ -70,7 +70,9 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
 test('Shure mapping preserves published source images, PDFs and catalog bytes', () => {
   for (const [path, hash] of Object.entries(proof.assets)) {
     // Historical evidence includes the W-20261002-011 discontinued product.
-    if (path === 'detail/images/lh98qecedgcxkr-main.webp' || path === 'catalog.json') continue;
+    // W-20261003-002 adds approved uploads to the manifest. Its dedicated test
+    // locks the original mirrors and five uploads while checking the new PDFs.
+    if (path === 'detail/images/lh98qecedgcxkr-main.webp' || path === 'catalog.json' || path === 'docs/manifest.json') continue;
     const hashFile = /\.(json|svg)$/.test(path) ? textSha : sha;
     assert.equal(hashFile(bytes('beta/site/' + path)), hash, path);
   }
