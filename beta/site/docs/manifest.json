@@ -1105,6 +1105,174 @@
       "file": "manuals/samsung-flip-pro-wmfx-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 한글 사용설명서 BN81-28453F-02 (Flip Pro WM55FX·WM65FX·WM75FX·WM85FX)"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-series-hardware-reference.pdf",
+      "kind": "manual",
+      "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-series-hardware-reference.pdf",
+      "kind": "manual",
+      "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-series-hardware-reference.pdf",
+      "kind": "manual",
+      "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-netlinx-language-reference.pdf",
+      "kind": "reference",
+      "title": "AMX NetLinx 언어 레퍼런스"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-netlinx-language-reference.pdf",
+      "kind": "reference",
+      "title": "AMX NetLinx 언어 레퍼런스"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-netlinx-language-reference.pdf",
+      "kind": "reference",
+      "title": "AMX NetLinx 언어 레퍼런스"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-series-web-console-programming.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 Web Console 프로그래밍 가이드"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-series-web-console-programming.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 Web Console 프로그래밍 가이드"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-series-web-console-programming.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 Web Console 프로그래밍 가이드"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-series-safety-instructions.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 안전 지침"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-series-safety-instructions.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 안전 지침"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-series-safety-instructions.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 안전 지침"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-series-whats-new.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 변경점 발췌"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-series-whats-new.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 변경점 발췌"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-series-whats-new.pdf",
+      "kind": "reference",
+      "title": "AMX NX 시리즈 변경점 발췌"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-1200-quick-start.pdf",
+      "kind": "reference",
+      "title": "AMX NX-1200 빠른 시작 가이드"
+    },
+    {
+      "slug": "nx-1200",
+      "file": "manuals/amx-nx-1200-pictorial-drawing.pdf",
+      "kind": "reference",
+      "title": "AMX NX-1200 도면 95-2106-01"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-2200-quick-start.pdf",
+      "kind": "reference",
+      "title": "AMX NX-2200 빠른 시작 가이드"
+    },
+    {
+      "slug": "nx-2200",
+      "file": "manuals/amx-nx-2200-pictorial-drawing.pdf",
+      "kind": "reference",
+      "title": "AMX NX-2200 도면 95-2106-02"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-3200-quick-start.pdf",
+      "kind": "reference",
+      "title": "AMX NX-3200 빠른 시작 가이드"
+    },
+    {
+      "slug": "nx-3200",
+      "file": "manuals/amx-nx-3200-pictorial-drawing.pdf",
+      "kind": "reference",
+      "title": "AMX NX-3200 도면 95-2106-03"
+    },
+    {
+      "slug": "varia-100",
+      "file": "manuals/amx-varia-touch-panels-programming-manual.pdf",
+      "kind": "manual",
+      "title": "AMX VARIA 터치패널 Configuration & Programming Manual"
+    },
+    {
+      "slug": "varia-80",
+      "file": "manuals/amx-varia-touch-panels-programming-manual.pdf",
+      "kind": "manual",
+      "title": "AMX VARIA 터치패널 Configuration & Programming Manual"
+    },
+    {
+      "slug": "varia-sl50",
+      "file": "manuals/amx-varia-touch-panels-programming-manual.pdf",
+      "kind": "manual",
+      "title": "AMX VARIA 터치패널 Configuration & Programming Manual"
+    },
+    {
+      "slug": "varia-sl80",
+      "file": "manuals/amx-varia-touch-panels-programming-manual.pdf",
+      "kind": "manual",
+      "title": "AMX VARIA 터치패널 Configuration & Programming Manual"
+    },
+    {
+      "slug": "varia-80",
+      "file": "manuals/amx-varia-80-data-sheet.pdf",
+      "kind": "reference",
+      "title": "AMX VARIA-80 Data Sheet"
+    },
+    {
+      "slug": "varia-100",
+      "file": "manuals/amx-varia-100-pictorial-drawing.pdf",
+      "kind": "reference",
+      "title": "AMX VARIA-100 도면"
+    },
+    {
+      "slug": "varia-sl50",
+      "file": "manuals/amx-varia-sl50-pictorial-drawing.pdf",
+      "kind": "reference",
+      "title": "AMX VARIA-SL50 도면"
     }
   ]
 }

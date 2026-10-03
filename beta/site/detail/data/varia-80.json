@@ -136,9 +136,9 @@
     {
       "group": "Display",
       "name": "디스플레이 크기",
-      "value": "8",
+      "value": "8 (대각선)",
       "unit": "in",
-      "condition": "대각선",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -147,7 +147,16 @@
       "name": "해상도",
       "value": "1280 × 800",
       "unit": "",
-      "condition": "16:10 landscape",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면비",
+      "value": "16:10 landscape",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -181,56 +190,155 @@
     {
       "group": "Sensor",
       "name": "NFC",
-      "value": "지원",
+      "value": "지원 (읽기/쓰기)",
       "unit": "",
-      "condition": "읽기/쓰기",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Sensor",
       "name": "주변광 센서",
-      "value": "지원",
+      "value": "지원 (적응형 밝기)",
       "unit": "",
-      "condition": "적응형 밝기",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Sensor",
       "name": "근접 센서",
-      "value": "지원",
+      "value": "지원 (다가가면 깨어남(Wake on Approach))",
       "unit": "",
-      "condition": "다가가면 깨어남(Wake on Approach)",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Power",
       "name": "전원",
-      "value": "RJ-45, PoE 802.3af",
-      "unit": "W",
-      "condition": "15.4W",
+      "value": "RJ-45, PoE 802.3af (15.4 W)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Physical",
       "name": "크기(H×W×D)",
-      "value": "148.9 × 201.2 × 21.7",
-      "unit": "mm",
-      "condition": "5 7/8\" × 7 15/16\" × 7/8\"",
+      "value": "148.9 × 201.2 × 21.7 mm (5 7/8\" × 7 15/16\" × 7/8\")",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "0.532",
-      "unit": "kg",
-      "condition": "1.17 lb",
+      "value": "0.532 kg (1.17 lb)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "TFT-LCD, IPS",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "밝기",
+      "value": "350",
+      "unit": "nits",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": ">800:1",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "시야각",
+      "value": ">80°/80°/80°/80°",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "터치 방식",
+      "value": "정전식(Capacitive)",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "동시 터치점",
+      "value": ">5",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "터치 특성",
+      "value": "팜 리젝션 · 젖은 손가락 조작 · 지문 방지 · 항균 코팅",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "백라이트",
+      "value": "LED",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Memory",
+      "name": "RAM",
+      "value": "4 GB LPDDR4",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Memory",
+      "name": "저장 용량",
+      "value": "16 GB eMMC",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "DC 입력",
+      "value": "N/A",
+      "unit": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "io": [
@@ -245,6 +353,18 @@
       "condition": "15.4W 급전",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Data",
+      "connector": "USB Type-C",
+      "signal": "USB OTG",
+      "direction": "IN/OUT",
+      "quantity": "",
+      "protocol": "USB 2.0",
+      "availability": "",
+      "condition": "",
+      "source": "D1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -253,6 +373,16 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.amx.com/en-US/products/varia-80",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "AMX VARIA Touch Panels Configuration & Programming Manual",
+      "scope": "표지·12쪽 적용 목록에 VARIA-100·VARIA-80·VARIA-SL50·VARIA-SL80 모두 명시. 57쪽은 USB 저장소 설정만 설명하며 모델별 물리 단자 형상·수량은 명시하지 않음. 사용자 제공 매뉴얼_VARIA-100.pdf; SHA-256 8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175"
+    },
+    {
+      "code": "D1",
+      "name": "AMX VARIA-80 Data Sheet",
+      "scope": "표지 VARIA-80(AMX-UTP0811), 2쪽 Specifications/CONNECTIONS. 사용자 제공 사양서_VARIA80.pdf; SHA-256 20756894218044c703afd418b2a6c8a5b2f99741352fdfa57f331ebfc3b69a0f"
     }
   ],
   "issues": [

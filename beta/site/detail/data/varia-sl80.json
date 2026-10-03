@@ -136,9 +136,9 @@
     {
       "group": "Display",
       "name": "디스플레이 크기",
-      "value": "8",
+      "value": "8 (대각선)",
       "unit": "in",
-      "condition": "대각선",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -147,7 +147,16 @@
       "name": "해상도",
       "value": "1280 × 800",
       "unit": "",
-      "condition": "16:10 landscape",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "화면비",
+      "value": "16:10 landscape",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -181,36 +190,36 @@
     {
       "group": "Sensor",
       "name": "NFC",
-      "value": "지원",
+      "value": "지원 (읽기/쓰기)",
       "unit": "",
-      "condition": "읽기/쓰기",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Sensor",
       "name": "주변광 센서",
-      "value": "지원",
+      "value": "지원 (적응형 밝기)",
       "unit": "",
-      "condition": "적응형 밝기",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Sensor",
       "name": "근접 센서",
-      "value": "지원",
+      "value": "지원 (다가가면 깨어남(Wake on Approach))",
       "unit": "",
-      "condition": "다가가면 깨어남(Wake on Approach)",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
     {
       "group": "Power",
       "name": "전원",
-      "value": "RJ-45, PoE 802.3af",
-      "unit": "W",
-      "condition": "15.4W",
+      "value": "RJ-45, PoE 802.3af (15.4 W)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     },
@@ -219,16 +228,25 @@
       "name": "크기(H×W×D)",
       "value": "127.64 × 213.22 × 26.65",
       "unit": "mm",
-      "condition": "5 1/16\" × 8 7/16\" × 11/16\"",
+      "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(H×W×D) · 인치 표기",
+      "value": "5 1/16\" × 8 7/16\" × 11/16\"",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "CONFLICTED"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "0.482",
-      "unit": "kg",
-      "condition": "1.06 lb",
+      "value": "0.482 kg (1.06 lb)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "FOUND"
     }
@@ -253,6 +271,11 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.amx.com/en-US/products/varia-sl80",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "AMX VARIA Touch Panels Configuration & Programming Manual",
+      "scope": "표지·12쪽 적용 목록에 VARIA-100·VARIA-80·VARIA-SL50·VARIA-SL80 모두 명시. 57쪽은 USB 저장소 설정만 설명하며 모델별 물리 단자 형상·수량은 명시하지 않음. 사용자 제공 매뉴얼_VARIA-100.pdf; SHA-256 8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175"
     }
   ],
   "issues": [

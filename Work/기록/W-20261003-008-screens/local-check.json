@@ -1,0 +1,277 @@
+{
+  "results": [
+    {
+      "slug": "nx-1200",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-1200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-1200",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-1200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "nx-2200",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-2200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-2200",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-2200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "nx-3200",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-3200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "nx-3200",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=nx-3200",
+      "status": 200,
+      "expectedDocs": 7,
+      "actualDocs": 7,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX NX 시리즈 하드웨어 레퍼런스 (NX-1200·2200·3200)",
+        "pages": "/ 43",
+        "file": "manuals/amx-nx-series-hardware-reference.pdf"
+      },
+      "downloaded": {
+        "name": "amx-nx-series-hardware-reference.pdf",
+        "bytes": 1078894,
+        "sha256": "3adcb5992889af357819e520baf955033a1d70018a4ac78c14a50ab9863176c3",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-100",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-100",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-100",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-100",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-80",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-80",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-80",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-80",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-sl50",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-sl50",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-sl50",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-sl50",
+      "status": 200,
+      "expectedDocs": 2,
+      "actualDocs": 2,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    },
+    {
+      "slug": "varia-sl80",
+      "width": 1280,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-sl80",
+      "status": 200,
+      "expectedDocs": 1,
+      "actualDocs": 1,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "varia-sl80",
+      "width": 390,
+      "url": "http://127.0.0.1:64676/beta/site/detail/?product=varia-sl80",
+      "status": 200,
+      "expectedDocs": 1,
+      "actualDocs": 1,
+      "keyFactCount": 4,
+      "hasUsb": 0,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "AMX VARIA 터치패널 Configuration & Programming Manual",
+        "pages": "/ 161",
+        "file": "manuals/amx-varia-touch-panels-programming-manual.pdf"
+      },
+      "downloaded": {
+        "name": "amx-varia-touch-panels-programming-manual.pdf",
+        "bytes": 7941975,
+        "sha256": "8eb4c17151838fff71d04148ad6913c1d5155b1b85a9b4474d7a3fe1fe196175",
+        "matchesSource": true
+      }
+    }
+  ]
+}
