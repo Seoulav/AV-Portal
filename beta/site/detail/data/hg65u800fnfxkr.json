@@ -449,6 +449,18 @@
   ],
   "io": [
     {
+      "group": "Video",
+      "connector": "HDMI 입력",
+      "signal": "영상 입력",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "HDMI",
+      "availability": "HDMI 3은 eARC 지원",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
       "group": "Wireless",
       "connector": "무선(물리 단자 없음)",
       "signal": "무선 미러링(Google Cast)",
@@ -479,10 +491,10 @@
       "direction": "IN",
       "quantity": "2 x USB-A",
       "protocol": "USB",
-      "availability": "",
+      "availability": "USB 1: 5V 0.5A · USB 2: HDD 5V 1A",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
@@ -493,20 +505,20 @@
       "protocol": "Ethernet",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
       "connector": "Ethernet 브리지(LAN-Out)",
       "signal": "유선 네트워크 브리지 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
@@ -517,20 +529,20 @@
       "protocol": "S/PDIF Optical",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
       "connector": "RF 입력",
       "signal": "안테나/케이블 입력",
       "direction": "IN",
-      "quantity": "1/1/0",
+      "quantity": "2",
       "protocol": "RF",
-      "availability": "지상파/케이블/위성 = 1/1/0",
+      "availability": "지상파/케이블 입력 1개 · 지상파 UHD 입력 1개 · 위성 미지원",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -541,8 +553,44 @@
       "protocol": "RS-232C",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "DATA",
+      "signal": "호텔 시스템 데이터 연결",
+      "direction": "",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "U800F 후면 DATA 단자",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VOL-CTRL",
+      "signal": "욕실 스피커 음량 조절 박스 연결",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "U800F 후면 VOL-CTRL 단자",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "VARIABLE",
+      "signal": "가변 오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "U800F 후면 VARIABLE AUDIO OUT 단자",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -551,10 +599,10 @@
       "direction": "IN",
       "quantity": "",
       "protocol": "RJ12",
-      "availability": "있음",
+      "availability": "매뉴얼 11쪽은 DATA 케이블(RJ12)을 설명함 · 별도 RJ12 단자인지 DATA와 동일 여부 미확인",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     }
   ],
   "sources": [
@@ -563,6 +611,11 @@
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/",
       "scope": "국내 모델 HG65U800FNFXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 리모컨 종류: 멀티 코드 IR 기능 사용 시 추가 리모컨 별도 구매 필요 / 원격 관리 솔루션: 별도 구매 필요, 호텔 플랫폼에 따라 UI 상이 / 보안: 2015년 이후 출시된 Tizen 기반 삼성 TV 적용"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-28062C-00 — HU8000F/HU7000F",
+      "scope": "표지 HG43U800F*·HG50U800F*·HG65U800F* 적용 확인. 11쪽 DATA 케이블(RJ12), 12쪽 U800F 전용 후면 도면, 13쪽 연결 단자 목록. 원본 SHA-256 b61ea1be4f423fb59c7912b79c2c9076fd8b9fd9d9ce188bb1525db056bec1ee. 로컬 사용자 제공 자료이며 이 배치에서는 파일을 게시하지 않음."
     }
   ],
   "issues": [
@@ -580,9 +633,9 @@
     },
     {
       "code": "HDMI-COUNT",
-      "status": "REVIEW REQUIRED",
-      "title": "HDMI 입력 단자 수·버전 정보 없음",
-      "detail": "HG65U800FNFXZA 공식 사양표(Input & Output)에는 USB·LAN·옵티컬·RF·Ex-Link·RJ12만 있고 HDMI 행이 없다(Anynet+ HDMI-CEC 지원만 표기). 삼성 뉴스룸은 \"multiple HDMI and USB ports\"라고만 언급한다. HDMI 단자 수·버전은 정보 없음으로 유지하며, 국내 사양서 PDF 또는 실물 확인이 필요하다."
+      "status": "RESOLVED",
+      "title": "HDMI 입력 단자 수 확인",
+      "detail": "삼성전자 한글 사용설명서 BN81-28062C-00 12쪽 U800F 후면 도면과 13쪽 연결 단자 목록에서 HDMI 입력 1·2·3을 확인했다. HDMI 3은 eARC를 지원한다. 기존 HDMI 누락·수량 미확인 기록은 해소됐다. HDMI 버전은 이 매뉴얼에 없어 정보 없음으로 남긴다."
     },
     {
       "code": "ENGINE-CONFLICT",

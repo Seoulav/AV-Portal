@@ -49,8 +49,8 @@ test('B: only availability-absent ports leave cards; functional limits remain', 
     }
   }
   assert.equal(absent, 11);
-  // Eight condition notes plus one GSM4212P availability note limit a real port.
-  assert.equal(functional, 9);
+  // Eight condition notes, one GSM4212P note, and three U800F satellite limits.
+  assert.equal(functional, 12);
   const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
   assert.match(app, /data\.io\.length - data\.absentConnectors\.length/);
   assert.match(app, /if \(!isAbsentConnector\(item\)\)/);
