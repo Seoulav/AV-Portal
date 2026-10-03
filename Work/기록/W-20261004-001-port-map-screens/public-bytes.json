@@ -1,0 +1,37 @@
+[
+  {
+    "file": "detail/app.js",
+    "status": 200,
+    "localSha256": "4ef7d962b0951807f05c1e295b6f9d4e545c31c13d8394d3d59f5ba0de3833f9",
+    "publicSha256": "4ef7d962b0951807f05c1e295b6f9d4e545c31c13d8394d3d59f5ba0de3833f9",
+    "equal": true
+  },
+  {
+    "file": "detail/detail-enhancement-view.mjs",
+    "status": 200,
+    "localSha256": "e746fd59ab85bbcf6ee9c979243846dfbafd0fc2f787dd3ca4e16444f2bb708e",
+    "publicSha256": "e746fd59ab85bbcf6ee9c979243846dfbafd0fc2f787dd3ca4e16444f2bb708e",
+    "equal": true
+  },
+  {
+    "file": "detail/index.html",
+    "status": 200,
+    "localSha256": "86a8bc0b329c3c2fbedb92310fbc80315b63d89026a8c8c20227b30098b2f32d",
+    "publicSha256": "86a8bc0b329c3c2fbedb92310fbc80315b63d89026a8c8c20227b30098b2f32d",
+    "equal": true
+  },
+  {
+    "file": "detail/styles.css",
+    "status": 200,
+    "localSha256": "4b4d01771a16a929ff5673d13738eb324c9e7ced79aa0a64ff9abf18621fec0b",
+    "publicSha256": "4b4d01771a16a929ff5673d13738eb324c9e7ced79aa0a64ff9abf18621fec0b",
+    "equal": true
+  },
+  {
+    "file": "search-index.json",
+    "status": 200,
+    "localSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+    "publicSha256": "47a88ca43a4ac75e397db7386a8ba1ff635a4b9a4bf574abe15e2c4492f2902c",
+    "equal": true
+  }
+]
