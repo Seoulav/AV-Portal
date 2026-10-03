@@ -9,10 +9,10 @@
     "Video Wall"
   ],
   "english": "Samsung VMC-R video wall module, 55-inch, 0.88mm ultra-thin bezel, up to 500 nits, sub-70mm depth, DisplayPort/HDMI daisy-chain up to 5x5 UHD.",
-  "korean": "삼성 비디오월 VMC-R 55인치 모듈로, 0.88mm 초박형 베젤과 최대 500니트 밝기, 70mm 미만 두께, DisplayPort/HDMI 데이지 체인(최대 5x5 UHD)을 지원한다.",
+  "korean": "삼성 비디오월 VMC-R 55인치 모듈로, 0.88mm 초박형 베젤과 최대 500니트 밝기, 70mm 미만 두께, DisplayPort 데이지 체인(최대 5x5 UHD)을 지원한다.",
   "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH55VMCRBGBXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 39개를 국내 공식 출처로 재확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "LH55VMCRBGBXKR(VMC-R)은 삼성전자의 비디오월 전용 모듈로, 0.88mm에 불과한 매우 얇은 베젤과 넓은 시야각으로 다중 화면을 하나의 매끄러운 콘텐츠로 재생한다. 베젤 두께와 면적이 4면 모두 균일해 여러 대를 조합해도 이미지 왜곡 없이 몰입감 있는 시청 경험을 제공한다.\n\n두께 70mm 미만의 슬림한 디자인으로 공간을 미학적으로 연출할 수 있으며, 최대 500니트 밝기로 24시간 내내 선명한 이미지를 재생한다. 눈부심 없는 패널(Haze 28%)과 뛰어난 내구성으로 24시간x7일(24/7) 장기간 연속 재생을 지원한다.\n\nDisplayPort 1.2 또는 HDMI를 사용하는 데이지 체인 기술로 외장 그래픽 카드나 UHD 분배기 없이도 다중 화면에서 최대 5x5 구성의 UHD 콘텐츠를 송출할 수 있다. 화질 향상 모드(감마 곡선 조정)와 블랙 이퀄라이저 모드로 콘텐츠 가시성을 높이며, 무료 소프트웨어 Color Expert Pro(PC용)와 Color Expert Pro 모바일로 디스플레이 간 밝기·색상을 정밀하게 캘리브레이션할 수 있다.",
+  "overview": "LH55VMCRBGBXKR(VMC-R)은 삼성전자의 비디오월 전용 모듈로, 0.88mm에 불과한 매우 얇은 베젤과 넓은 시야각으로 다중 화면을 하나의 매끄러운 콘텐츠로 재생한다. 베젤 두께와 면적이 4면 모두 균일해 여러 대를 조합해도 이미지 왜곡 없이 몰입감 있는 시청 경험을 제공한다.\n\n두께 70mm 미만의 슬림한 디자인으로 공간을 미학적으로 연출할 수 있으며, 최대 500니트 밝기로 24시간 내내 선명한 이미지를 재생한다. 눈부심 없는 패널(Haze 28%)과 뛰어난 내구성으로 24시간x7일(24/7) 장기간 연속 재생을 지원한다.\n\nDisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽 카드나 UHD 분배기 없이도 다중 화면에서 최대 5x5 구성의 UHD 콘텐츠를 송출할 수 있다. 화질 향상 모드(감마 곡선 조정)와 블랙 이퀄라이저 모드로 콘텐츠 가시성을 높이며, 무료 소프트웨어 Color Expert Pro(PC용)와 Color Expert Pro 모바일로 디스플레이 간 밝기·색상을 정밀하게 캘리브레이션할 수 있다.",
   "images": [
     {
       "role": "Main",
@@ -109,8 +109,8 @@
       "source": "P"
     },
     {
-      "text": "DisplayPort 1.2/HDMI 데이지 체인 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.",
-      "source": "P"
+      "text": "DisplayPort 1.2 루프아웃(데이지 체인) 기술로 외장 그래픽카드나 UHD 분배기 없이 최대 5x5 구성의 UHD 콘텐츠를 송출한다.",
+      "source": "P, M1"
     },
     {
       "text": "화질 향상 모드와 블랙 이퀄라이저 모드로 어두운 장면의 디테일까지 표현한다.",
@@ -638,6 +638,12 @@
       "status": "REVIEW REQUIRED",
       "title": "RS-232C 출력 단자 형태 표기",
       "detail": "공식 사양표는 \"RS232 Out: Stereo Mini Jack\"으로 표기한다. 매뉴얼 후면 단자도 확인이 필요하다."
+    },
+    {
+      "code": "HDMI-LOOPOUT-CONFLICT",
+      "status": "CONFLICTED",
+      "title": "국내 제품 페이지의 HDMI 데이지 체인 문구와 한글 사용설명서 단자 방향 불일치",
+      "detail": "삼성전자 한국 공식 제품 페이지(P) 원문: \"DisplayPort 1.2 또는 HDMI를 사용하는 데이지 체인 기술로 외장 그래픽 카드나 UHD 분배기 없이도 다중 화면에서 최대 5x5의 UHD 콘텐츠를 송출할 수 있습니다.\" 한글 사용설명서 BN81-25348H-02 14쪽(M1)의 후면 단자 표기는 \"HDMI IN 1\", \"HDMI IN 2\", \"DP OUT (LOOPOUT)\"이며 HDMI 출력 단자는 없다. AGENTS.md의 제조사 한글 사용설명서 우선 규칙과 2026-10-03 사용자 판정(\"메뉴얼 중심으로 판단하고 비디오월에 영상루프는 DP가 맞아\")에 따라 본문에는 DP 루프아웃만 적는다. 제품 페이지 문구와 최대 5x5 기록은 원문 그대로 보존하며, HDMI와 DP 사이 신호 경로는 추론하지 않는다."
     }
   ],
   "presentation": {
@@ -650,7 +656,7 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
   },
-  "lead": "**55인치 비디오월 모듈** LH55VMCRBGBXKR은 VMC-R 시리즈 제품이다. 균일 베젤과 데이지 체인으로 다중 화면을 구성한다.",
+  "lead": "**55인치 비디오월 모듈** LH55VMCRBGBXKR은 VMC-R 시리즈 제품이다. 균일 베젤과 DisplayPort 루프아웃으로 다중 화면을 구성한다.",
   "subtitle": "VMC-R · 비디오월",
   "keyFacts": [
     {
