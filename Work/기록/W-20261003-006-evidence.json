@@ -1,0 +1,1046 @@
+{
+  "baseSha": "ccbb839d5f44f5460a801992ba22165ad0c4e08f",
+  "manual": {
+    "file": "BN81-28453F-02_WUG_WMFX_KR_KOR_260806.1.pdf",
+    "published": "manuals/samsung-flip-pro-wmfx-manual-ko.pdf",
+    "sha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+    "pages": {
+      "cover": 1,
+      "wm55fxPorts": 13,
+      "wm75fxPorts": 14,
+      "specifications": 66
+    },
+    "rowEvidence": {
+      "specificationsPage66": ["해상도", "수평 주사 주파수", "수직 주사 주파수", "동작 습도", "디스플레이 면적", "보관 온도", "보관 습도"],
+      "rearPortsPage13And14": ["HDMI 출력", "RJ45(LAN)", "SERVICE", "HDMI", "오디오 출력", "USB", "TOUCH"],
+      "notEstablishedByRearPortTable": ["USB-C 허브", "RS-232C 입력"],
+      "notEstablishedBySpecificationsPage66": ["전원 사양", "최대 픽셀 주파수"]
+    },
+    "notes": [
+      "13~14쪽 단자표는 후면 단자만 다룬다.",
+      "66쪽 전원전압은 제품 뒷면 라벨 참조이며 수치가 없다.",
+      "66쪽 작동 온도 각주는 함체 설치 시 내부 온도 40℃ 이하, 저장 조건 각주는 포장 상자 개봉 전 기준이다."
+    ]
+  },
+  "products": {
+    "lh55wmfwbgcxkr": {
+      "previousFileSha256": "5d4ee0ed3ee404c03ed42675c32cf2438a8929921036716e294ce5547e981702",
+      "coreSha256": "f9f567192c954f242afb9608dce6ca77f50b28b7cc148caebf5c6dbe7a7c98e2",
+      "before": {
+        "specifications": [
+          {
+            "group": "Display",
+            "name": "화면 크기",
+            "value": "55",
+            "unit": "인치",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "밝기",
+            "value": "450 (유리 미장착) / 300 (유리 장착)",
+            "unit": "nit",
+            "condition": "",
+            "source": "P",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "펜 반응 속도",
+            "value": "26",
+            "unit": "ms",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "펜 압력 감지 단계",
+            "value": "2048",
+            "unit": "단계",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "디자인",
+            "value": "회전형(가로/세로 모드 전환)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Software",
+            "name": "협업 앱",
+            "value": "화이트보드, Note On, 워크스페이스, Flip Home, 멀티 윈도우",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "무선 화면 공유",
+            "value": "스마트뷰+ (최대 9대 기기)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "Apple 연결",
+            "value": "AirPlay 2",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Security",
+            "name": "보안",
+            "value": "삼성 Knox (Knox 기반 워크스페이스)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "패널 종류",
+            "value": "VA",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "해상도",
+            "value": "3,840 x 2,160",
+            "unit": "픽셀",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "픽셀 피치(HxV)",
+            "value": "0.315 x 0.315",
+            "unit": "mm",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "명암비(정적)",
+            "value": "4,000:1 (유리 미장착)",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "시야각(H/V)",
+            "value": "178/178",
+            "unit": "°",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "응답 속도",
+            "value": "9.5",
+            "unit": "ms",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "색재현율",
+            "value": "72% (NTSC)",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "패널 헤이즈(Haze)",
+            "value": "2 (유리 미장착)",
+            "unit": "%",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "수평 주사 주파수",
+            "value": "30 - 81 kHz",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "최대 픽셀 주파수",
+            "value": "148.5 MHz",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "수직 주사 주파수",
+            "value": "48 - 75 Hz",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Display",
+            "name": "운영 시간",
+            "value": "12/7 (일 시간/주 일수)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "Wi-Fi",
+            "value": "있음",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Connectivity",
+            "name": "블루투스",
+            "value": "있음",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Power",
+            "name": "전원 사양",
+            "value": "AC100-240V 50/60Hz",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Power",
+            "name": "소비전력(On 모드)",
+            "value": "154",
+            "unit": "W",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "크기(가로x높이x깊이)",
+            "value": "1297.4 x 768.2 x 59.9",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "포장 크기(가로x높이x깊이)",
+            "value": "1464 x 915 x 190",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "중량",
+            "value": "28.6",
+            "unit": "kg",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "중량(포장 포함)",
+            "value": "35.9",
+            "unit": "kg",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Environment",
+            "name": "동작 온도",
+            "value": "0 - 40 ℃",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Environment",
+            "name": "동작 습도",
+            "value": "10 - 80% (결로 없음)",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Physical",
+            "name": "VESA 규격",
+            "value": "400 x 400",
+            "unit": "mm",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Physical",
+            "name": "베젤 폭(사양표)",
+            "value": "26.2(4면 균일)",
+            "unit": "mm",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Physical",
+            "name": "베젤 색상",
+            "value": "Gray White",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Physical",
+            "name": "프레임 재질",
+            "value": "Non-Glossy(Plastic)",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Accessory",
+            "name": "옵션 벽걸이 마운트",
+            "value": "WMN-4277SF",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Accessory",
+            "name": "옵션 스탠드",
+            "value": "STN-WM55R",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Smart Platform",
+            "name": "운영체제 버전",
+            "value": "Tizen 9.0",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Smart Platform",
+            "name": "내장 플래시 메모리",
+            "value": "64GB",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "터치 방식",
+            "value": "IR",
+            "unit": "",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Certification",
+            "name": "EMC 등급",
+            "value": "Class A",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          }
+        ],
+        "io": [
+          {
+            "group": "Data",
+            "connector": "USB-C 허브",
+            "signal": "외부기기 연결/PC 공유",
+            "direction": "IN/OUT",
+            "quantity": "",
+            "protocol": "USB-C",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Video",
+            "connector": "HDMI 출력",
+            "signal": "화면 미러링 출력",
+            "direction": "OUT",
+            "quantity": "",
+            "protocol": "HDMI",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력",
+            "direction": "IN",
+            "quantity": "",
+            "protocol": "HDMI",
+            "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB",
+            "direction": "IN",
+            "quantity": "1(후면), 1 (옵션 트레이 장착 시)",
+            "protocol": "USB",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Audio",
+            "connector": "오디오 출력",
+            "signal": "아날로그 오디오 출력",
+            "direction": "OUT",
+            "quantity": "",
+            "protocol": "",
+            "availability": "있음(스테레오 미니 잭)",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Control",
+            "connector": "RS-232C 입력",
+            "signal": "외부 제어",
+            "direction": "IN",
+            "quantity": "",
+            "protocol": "RS-232C",
+            "availability": "있음",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          },
+          {
+            "group": "Network",
+            "connector": "RJ45(LAN)",
+            "signal": "유선 네트워크",
+            "direction": "IN",
+            "quantity": "",
+            "protocol": "Ethernet",
+            "availability": "있음",
+            "condition": "국내 자료 미확보",
+            "source": "",
+            "verification": "REVIEW REQUIRED"
+          }
+        ],
+        "sources": [
+          {
+            "code": "P",
+            "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+            "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
+            "scope": "국내 모델 LH55WMFWBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 디자인: LH55WMFWBGCXKR, LH65WMFWBGCXKR 모델에 한해 적용 / 무선 화면 공유: Windows, Android, iOS 지원 / 보안: 원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요) / USB-C 허브: 카메라, 문서 리더기 등 연결 / HDMI 출력: 대형 디스플레이·프로젝터로 미러링"
+          }
+        ],
+        "issues": [
+          {
+            "code": "SPEC-AJAX",
+            "status": "RESOLVED",
+            "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+            "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
+          },
+          {
+            "code": "SPEC-REGION",
+            "status": "REVIEW REQUIRED",
+            "title": "국내 자료 미확보 사양·단자 검토 필요",
+            "detail": "해외 지역 페이지 출처를 삭제했다. 국내 자료로 확인되지 않은 기존 사양 25행과 단자 4행의 값은 보존하되 REVIEW REQUIRED로 표시하고 단자 수량은 비웠다. 밝기 행의 국내 P 출처는 유지했다."
+          },
+          {
+            "code": "RESPONSE-TIME",
+            "status": "REVIEW REQUIRED",
+            "title": "응답 속도 9.5ms(패널)와 펜 반응 속도 26ms는 별개 항목",
+            "detail": "기존 기록의 9.5ms는 패널 응답 속도이고 26ms는 펜 필기 지연 값이다. 국내 자료로 9.5ms를 확인하지 못해 해당 사양은 REVIEW REQUIRED로 유지한다."
+          }
+        ],
+        "keyFacts": [
+          {
+            "label": "화면 크기",
+            "value": "55",
+            "unit": "인치"
+          },
+          {
+            "label": "설치 방향",
+            "value": "회전형(가로/세로 모드 전환)",
+            "unit": ""
+          }
+        ]
+      }
+    },
+    "lh75wmfwlgcxkr": {
+      "previousFileSha256": "9ae7207843b87fab54216216de05090528f2fc6cda82e170eafa721b125460eb",
+      "coreSha256": "a1703da8a970680861077a08206f6f7f6a6fadb5b7a8ea55e07f9dd678e9c396",
+      "before": {
+        "specifications": [
+          {
+            "group": "Display",
+            "name": "화면 크기",
+            "value": "75",
+            "unit": "인치",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "밝기",
+            "value": "450",
+            "unit": "nit",
+            "condition": "유리 미장착",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "펜 반응 속도",
+            "value": "26",
+            "unit": "ms",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "펜 압력 감지 단계",
+            "value": "2048",
+            "unit": "단계",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "제품 두께",
+            "value": "43.5",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Software",
+            "name": "협업 앱",
+            "value": "화이트보드, Note On, 워크스페이스, Flip Home, 멀티 윈도우",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "무선 화면 공유",
+            "value": "스마트뷰+ (최대 9대 기기)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "Apple 연결",
+            "value": "AirPlay 2",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Security",
+            "name": "보안",
+            "value": "삼성 Knox (Knox 기반 워크스페이스)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "패널 종류",
+            "value": "VA",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "해상도",
+            "value": "3,840 x 2,160",
+            "unit": "픽셀",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "픽셀 피치(HxV)",
+            "value": "0.430 x 0.430",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "명암비(정적)",
+            "value": "4,000:1 (유리 미장착)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "시야각(H/V)",
+            "value": "178/178",
+            "unit": "°",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "응답 속도",
+            "value": "8",
+            "unit": "ms",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "색재현율",
+            "value": "72% (NTSC)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "패널 헤이즈(Haze)",
+            "value": "2 (유리 미장착)",
+            "unit": "%",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "수평 주사 주파수",
+            "value": "30 - 81 kHz",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "최대 픽셀 주파수",
+            "value": "148.5 MHz",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "수직 주사 주파수",
+            "value": "48 - 75 Hz",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Display",
+            "name": "운영 시간",
+            "value": "12/7 (일 시간/주 일수)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "Wi-Fi",
+            "value": "있음",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Connectivity",
+            "name": "블루투스",
+            "value": "있음",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Power",
+            "name": "전원 사양",
+            "value": "AC100-240V 50/60Hz",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Power",
+            "name": "소비전력(On 모드)",
+            "value": "385",
+            "unit": "W",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "크기(가로x높이x깊이)",
+            "value": "1735.4 x 1038.5 x 83.7",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "포장 크기(가로x높이x깊이)",
+            "value": "1885 x 1171 x 210",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "중량",
+            "value": "53.6",
+            "unit": "kg",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "중량(포장 포함)",
+            "value": "64.5",
+            "unit": "kg",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Environment",
+            "name": "동작 온도",
+            "value": "0 - 40 ℃",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Environment",
+            "name": "동작 습도",
+            "value": "10 - 80% (결로 없음)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "VESA 규격",
+            "value": "400 x 400",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "베젤 폭(사양표)",
+            "value": "23.5",
+            "unit": "mm",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "베젤 색상",
+            "value": "Gray White",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Physical",
+            "name": "프레임 재질",
+            "value": "Non-Glossy(Plastic)",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Accessory",
+            "name": "옵션 벽걸이 마운트",
+            "value": "있음",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Smart Platform",
+            "name": "운영체제 버전",
+            "value": "Tizen 9.0",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Smart Platform",
+            "name": "내장 플래시 메모리",
+            "value": "64GB",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Touch/Pen",
+            "name": "터치 방식",
+            "value": "IR",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Certification",
+            "name": "EMC 등급",
+            "value": "Class A",
+            "unit": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          }
+        ],
+        "io": [
+          {
+            "group": "Data",
+            "connector": "USB-C 허브",
+            "signal": "외부기기 연결/PC 공유",
+            "direction": "IN/OUT",
+            "quantity": "",
+            "protocol": "USB-C",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Video",
+            "connector": "HDMI 출력",
+            "signal": "화면 미러링 출력",
+            "direction": "OUT",
+            "quantity": "",
+            "protocol": "HDMI",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력",
+            "direction": "IN",
+            "quantity": "2",
+            "protocol": "HDMI",
+            "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB",
+            "direction": "IN",
+            "quantity": "2 (전면 1, 후면 1)",
+            "protocol": "USB",
+            "availability": "",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Audio",
+            "connector": "오디오 출력",
+            "signal": "아날로그 오디오 출력",
+            "direction": "OUT",
+            "quantity": "",
+            "protocol": "",
+            "availability": "있음(스테레오 미니 잭)",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Control",
+            "connector": "RS-232C 입력",
+            "signal": "외부 제어",
+            "direction": "IN",
+            "quantity": "",
+            "protocol": "RS-232C",
+            "availability": "있음",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          },
+          {
+            "group": "Network",
+            "connector": "RJ45(LAN)",
+            "signal": "유선 네트워크",
+            "direction": "IN",
+            "quantity": "",
+            "protocol": "Ethernet",
+            "availability": "있음",
+            "condition": "",
+            "source": "P",
+            "verification": "FOUND"
+          }
+        ],
+        "sources": [
+          {
+            "code": "P",
+            "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+            "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/",
+            "scope": "국내 모델 LH75WMFWLGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 무선 화면 공유: Windows, Android, iOS 지원 / 보안: 원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요) / USB-C 허브: 카메라, 문서 리더기 등 연결 / HDMI 출력: 대형 디스플레이·프로젝터로 미러링"
+          }
+        ],
+        "issues": [
+          {
+            "code": "SPEC-AJAX",
+            "status": "RESOLVED",
+            "title": "해상도·터치 인식점·무게·전체 입출력 단자 표 미확인",
+            "detail": "제품 페이지의 '스펙' 탭이 로그인 세션 기반 AJAX로 로드되어 패널 해상도(4K UHD 여부), 터치 포인트 수, 무게, HDMI 입력 개수·버전, LAN, RS-232 등 전체 물리 커넥터 표를 확인하지 못했다. samsungsvc.co.kr 다운로드 페이지도 콘텐츠가 없었다. [2026-09-27: 동일 기본 모델의 삼성전자 공식 해외 지역 사양표로 정량 사양을 보완해 종결. 국내 판매 모델과의 차이 확인은 SPEC-REGION 이슈에서 관리한다.] [2026-10-02: 국내 공식 제품 페이지 스펙 탭을 Chromium에서 열어 상세 사양을 직접 확인함.]"
+          },
+          {
+            "code": "ROTATE-NOTE",
+            "status": "RESOLVED",
+            "title": "회전형 디자인 미적용 확인",
+            "detail": "55인치 모델 페이지에는 '회전형 디자인은 LH55WMFWBGCXKR, LH65WMFWBGCXKR 모델에 한해 적용됩니다'라는 각주가 있어, 75인치 모델(LH75WMFWLGCXKR)은 회전형 디자인이 적용되지 않는 것으로 보인다. 이에 따라 회전형 디자인 기능/스펙 항목을 75인치 모델에는 포함하지 않았다. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 75인치 페이지에 회전형 디자인 항목 없음(각주대로 제외).]"
+          },
+          {
+            "code": "SPEC-REGION",
+            "status": "RESOLVED",
+            "title": "정량 사양은 해외 지역 모델(LH75WMFWLGCXEN) 공식 사양표 기준",
+            "detail": "2026-10-02 국내 상세 스펙 탭에서 기존 해외 출처 행을 모두 재확인하고 국내 출처(P)로 재지정했다. 지역별 값 차이는 W-20261002-005 대조표에 기록했다."
+          },
+          {
+            "code": "DEPTH-CONFLICT",
+            "status": "REVIEW REQUIRED",
+            "title": "제품 두께 43.5mm(국내 페이지) vs 깊이 83.7mm(해외 사양표)",
+            "detail": "국내 제품 페이지(P)는 \"두께 43.5mm\", 영국 공식 사양표(S2)는 Set Dimension 1735.4 x 1038.5 x 83.7mm로 표기한다. 측정 기준(패널부 vs 최대 돌출부)이 다를 가능성이 있으나 확인되지 않아 두 값을 모두 보존했다. 기존 값은 덮어쓰지 않았다."
+          }
+        ],
+        "keyFacts": [
+          {
+            "label": "해상도",
+            "value": "3,840 x 2,160",
+            "unit": "픽셀"
+          },
+          {
+            "label": "화면 크기",
+            "value": "75",
+            "unit": "인치"
+          },
+          {
+            "label": "터치 방식",
+            "value": "IR",
+            "unit": ""
+          },
+          {
+            "label": "펜 반응 속도",
+            "value": "26",
+            "unit": "ms"
+          }
+        ]
+      }
+    }
+  },
+  "manifest": {
+    "uploadCount": 34,
+    "uploadsSha256": "9d4946f1d015482563840cf58420bf121a2a6824eccd4a00107352a0ed2315d1",
+    "mirrorsSha256": "ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef"
+  },
+  "otherDetailJsonSha256": "ac4c5387baec72537e31bc113827e355b5da7228e5a71a92aec1f26fe703b892"
+}

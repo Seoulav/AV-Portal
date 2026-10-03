@@ -137,6 +137,15 @@
     },
     {
       "group": "Display",
+      "name": "디스플레이 면적",
+      "value": "1209.6 x 680.4",
+      "unit": "mm",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
       "name": "밝기",
       "value": "450 (유리 미장착) / 300 (유리 장착)",
       "unit": "nit",
@@ -221,9 +230,9 @@
       "name": "해상도",
       "value": "3,840 x 2,160",
       "unit": "픽셀",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Display",
@@ -284,9 +293,9 @@
       "name": "수평 주사 주파수",
       "value": "30 - 81 kHz",
       "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Display",
@@ -302,9 +311,9 @@
       "name": "수직 주사 주파수",
       "value": "48 - 75 Hz",
       "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Display",
@@ -401,9 +410,27 @@
       "name": "동작 습도",
       "value": "10 - 80% (결로 없음)",
       "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20 - 45",
+      "unit": "℃",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 습도",
+      "value": "5 - 95",
+      "unit": "%",
+      "condition": "비액화",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Physical",
@@ -504,34 +531,34 @@
       "direction": "IN/OUT",
       "quantity": "",
       "protocol": "USB-C",
-      "availability": "",
+      "availability": "매뉴얼 후면 단자표에 없음 · 전면/옵션 트레이 여부 미확인",
       "condition": "",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Video",
       "connector": "HDMI 출력",
       "signal": "화면 미러링 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "HDMI",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Video",
       "connector": "HDMI",
       "signal": "비디오/오디오 입력",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "HDMI",
-      "availability": "HDMI 버전 표기 2.0, HDCP 2.2",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "HDMI 버전 표기 2.0, HDCP 2.2 · HDMI 버전·HDCP 표기는 매뉴얼 미기재(별도 확인 필요)",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Data",
@@ -540,22 +567,22 @@
       "direction": "IN",
       "quantity": "1(후면), 1 (옵션 트레이 장착 시)",
       "protocol": "USB",
-      "availability": "",
+      "availability": "후면 USB 허용 전류 최대 1.0 A",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "오디오 출력",
       "signal": "아날로그 오디오 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
-      "availability": "있음(스테레오 미니 잭)",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "있음(스테레오 미니 잭) · 스테레오 미니 잭 형상은 매뉴얼 미기재(별도 확인 필요)",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
@@ -564,7 +591,7 @@
       "direction": "IN",
       "quantity": "",
       "protocol": "RS-232C",
-      "availability": "있음",
+      "availability": "있음 · 매뉴얼 후면 단자표에 없음 · 전면/옵션 트레이 여부 미확인",
       "condition": "국내 자료 미확보",
       "source": "",
       "verification": "REVIEW REQUIRED"
@@ -574,12 +601,36 @@
       "connector": "RJ45(LAN)",
       "signal": "유선 네트워크",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
-      "availability": "있음",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
+      "availability": "있음 · 10/100 Mbps · CAT 7(STP) 케이블 권장",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "SERVICE",
+      "signal": "서비스 전용",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "별도 기능 없음 · 연결하지 않도록 주의",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data",
+      "connector": "TOUCH",
+      "signal": "PC 터치 제어",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "USB",
+      "availability": "HDMI 또는 DP로 입력되는 PC 화면을 터치 컨트롤할 때 후면 TOUCH와 PC를 USB 케이블로 연결",
+      "condition": "",
+      "source": "M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -588,6 +639,11 @@
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
       "scope": "국내 모델 LH55WMFWBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 디자인: LH55WMFWBGCXKR, LH65WMFWBGCXKR 모델에 한해 적용 / 무선 화면 공유: Windows, Android, iOS 지원 / 보안: 원격 PC/네트워크 드라이브 접속, Office 365 등 클라우드 앱 지원(서비스 가입 필요) / USB-C 허브: 카메라, 문서 리더기 등 연결 / HDMI 출력: 대형 디스플레이·프로젝터로 미러링"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-28453F-02 — Flip Pro WMFX",
+      "scope": "표지 WM55FX 적용 확인. 13쪽 후면 단자 도면·표, 66쪽 제품 사양 WM55FX 열. BN81-28453F-02_WUG_WMFX_KR_KOR_260806.1.pdf, SHA-256 2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a. 후면 단자표에 없는 전면/옵션 트레이 단자의 존재 여부는 판정하지 않음."
     }
   ],
   "issues": [
@@ -601,7 +657,7 @@
       "code": "SPEC-REGION",
       "status": "REVIEW REQUIRED",
       "title": "국내 자료 미확보 사양·단자 검토 필요",
-      "detail": "해외 지역 페이지 출처를 삭제했다. 국내 자료로 확인되지 않은 기존 사양 25행과 단자 4행의 값은 보존하되 REVIEW REQUIRED로 표시하고 단자 수량은 비웠다. 밝기 행의 국내 P 출처는 유지했다."
+      "detail": "해외 지역 페이지 출처를 삭제했다. 국내 한글 매뉴얼(M1) 66쪽으로 기존 사양 4행을 확인하고 신규 3행을 추가했다. 그 외 국내 자료가 없는 기존 사양 21행과 후면 단자표가 다루지 않는 USB-C 허브·RS-232C 입력의 존재·위치는 REVIEW REQUIRED로 유지한다."
     },
     {
       "code": "RESPONSE-TIME",
@@ -623,6 +679,11 @@
   "lead": "**55인치 전자칠판** LH55WMFWBGCXKR은 Flip Pro 시리즈 제품이다. 펜 입력과 지우개 기능으로 화면에 필기하고 수정할 수 있다.",
   "subtitle": "Flip Pro · 전자칠판",
   "keyFacts": [
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
     {
       "label": "화면 크기",
       "value": "55",

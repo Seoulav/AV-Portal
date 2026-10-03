@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
+import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
@@ -97,8 +98,8 @@ const secondExpected = {
 };
 
 test('W-005 adds exactly twelve model-matched PDF uploads, including four previously uncovered products', () => {
-  const added = manifest.uploads.slice(22);
-  assert.equal(manifest.uploads.length, 34);
+  const added = manifest.uploads.slice(22, 34);
+  assert.equal(manifest.uploads.length >= 34, true);
   assert.equal(added.length, 12);
   assert.deepEqual(Object.keys(secondExpected).sort(), added.map(item => item.slug).sort());
   for (const [slug, file] of Object.entries(secondExpected)) {
@@ -132,6 +133,13 @@ test('W-005 published PDFs match supplied bytes and all earlier uploads/products
   const hash = createHash('sha256');
   const names = readdirSync(dir).filter(name => name.endsWith('.json')).sort();
   assert.equal(names.length, 242);
-  for (const name of names) hash.update(name).update('\0').update(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'));
+  for (const name of names) {
+    const slug = name.slice(0, -5);
+    const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
+    const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug)
+      ? JSON.stringify(beforeSamsungWhiteboard(JSON.parse(raw), slug), null, 2) + '\n'
+      : raw;
+    hash.update(name).update('\0').update(historical);
+  }
   assert.equal(hash.digest('hex'), 'c51a13044da74cb0847f89f5fb6cca501b7081f7ed1cd7afcc1415c69670b662');
 });

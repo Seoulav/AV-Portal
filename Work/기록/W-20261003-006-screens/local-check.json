@@ -1,0 +1,81 @@
+{
+  "pdfSha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+  "results": [
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 1280,
+      "url": "http://127.0.0.1:49404/beta/site/detail/?product=lh55wmfwbgcxkr",
+      "status": 200,
+      "documentCount": 1,
+      "keyFactCount": 3,
+      "hasService": 2,
+      "hasTouch": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 390,
+      "url": "http://127.0.0.1:49404/beta/site/detail/?product=lh55wmfwbgcxkr",
+      "status": 200,
+      "documentCount": 1,
+      "keyFactCount": 3,
+      "hasService": 2,
+      "hasTouch": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "삼성전자 한글 사용설명서 BN81-28453F-02 (Flip Pro WM55FX·WM65FX·WM75FX·WM85FX)",
+        "pages": "/ 70"
+      },
+      "downloaded": {
+        "name": "samsung-flip-pro-wmfx-manual-ko.pdf",
+        "bytes": 11867333,
+        "sha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+        "matchesPublished": true
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 1280,
+      "url": "http://127.0.0.1:49404/beta/site/detail/?product=lh75wmfwlgcxkr",
+      "status": 200,
+      "documentCount": 1,
+      "keyFactCount": 4,
+      "hasService": 2,
+      "hasTouch": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 390,
+      "url": "http://127.0.0.1:49404/beta/site/detail/?product=lh75wmfwlgcxkr",
+      "status": 200,
+      "documentCount": 1,
+      "keyFactCount": 4,
+      "hasService": 2,
+      "hasTouch": 2,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "삼성전자 한글 사용설명서 BN81-28453F-02 (Flip Pro WM55FX·WM65FX·WM75FX·WM85FX)",
+        "pages": "/ 70"
+      },
+      "downloaded": {
+        "name": "samsung-flip-pro-wmfx-manual-ko.pdf",
+        "bytes": 11867333,
+        "sha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+        "matchesPublished": true
+      }
+    }
+  ]
+}
