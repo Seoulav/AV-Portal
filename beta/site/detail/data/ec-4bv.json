@@ -281,5 +281,24 @@
     "footerNote": "BSS Audio EC-4BV 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "BSS **EC-4BV**는 Soundweb Contrio 시리즈의 이더넷 벽면 컨트롤러입니다. 버튼과 로터리 인코더로 HiQnet 장비를 제어·모니터링합니다.",
+  "subtitle": "Soundweb Contrio · 벽면 컨트롤러",
+  "keyFacts": [
+    {
+      "label": "버튼",
+      "value": "4",
+      "unit": "개(멀티컬러)"
+    },
+    {
+      "label": "LCD 해상도",
+      "value": "64 x 128",
+      "unit": "픽셀"
+    },
+    {
+      "label": "전원 방식",
+      "value": "PoE(Power over Ethernet)",
+      "unit": ""
+    }
+  ]
 }

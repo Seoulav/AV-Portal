@@ -327,5 +327,29 @@
     "footerNote": "JBL AC18/26 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "JBL **AC18/26**는 AE Compact 제품군의 8인치 2-way 스피커입니다. 회전형 PT 웨이브가이드로 120° x 60° 커버리지를 제공합니다.",
+  "subtitle": "AE Compact · 2-way 스피커",
+  "keyFacts": [
+    {
+      "label": "시스템 전력 · AES",
+      "value": "375",
+      "unit": "W"
+    },
+    {
+      "label": "감도 · 1W/1m",
+      "value": "92",
+      "unit": "dB SPL"
+    },
+    {
+      "label": "커버리지 각도",
+      "value": "120° x 60°",
+      "unit": ""
+    },
+    {
+      "label": "주파수 범위 · -10dB",
+      "value": "52 Hz – 20 kHz",
+      "unit": ""
+    }
+  ]
 }

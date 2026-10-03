@@ -289,5 +289,24 @@
     "footerNote": "BSS Audio BLUCARD-OUT 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "BSS **BLUCARD-OUT**는 Soundweb London 섀시에 장착하는 아날로그 출력 카드입니다. 카드 1장에 4개의 출력 채널과 2개의 Combicon 커넥터가 있습니다.",
+  "subtitle": "Soundweb London · 입출력 카드",
+  "keyFacts": [
+    {
+      "label": "아날로그 출력 · 카드 1장",
+      "value": "4",
+      "unit": "채널(라인)"
+    },
+    {
+      "label": "커넥터 형식",
+      "value": "Line Combicon x 2",
+      "unit": ""
+    },
+    {
+      "label": "최대 출력 레벨",
+      "value": "+19",
+      "unit": "dBu"
+    }
+  ]
 }

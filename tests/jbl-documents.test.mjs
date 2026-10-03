@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -75,7 +76,7 @@ test('only the drawing labeled AC18/95 and AC18/26 is attached; other cabinet dr
 
 test('JBL I/O, presentation and all other products remain unchanged; only ten spec-sheet products gain source-backed facts',()=>{
   for(const slug of slugs){
-    const p=product(slug),before=evidence.products[slug];
+    const p=beforeHarmanW03014(product(slug),slug),before=evidence.products[slug];
     const {specifications,sources,...core}=p;
     assert.equal(hash(JSON.stringify(core)),before.coreSha256,`${slug}: protected fields including I/O`);
     assert.equal(hash(JSON.stringify(p.io)),before.ioSha256,`${slug}: I/O changed`);
@@ -93,13 +94,13 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
     }else{
       assert.equal(hash(JSON.stringify(specifications)),before.specificationsSha256,`${slug}: no model-specific spec sheet`);
       assert.equal(hash(JSON.stringify(sources)),before.sourcesSha256,`${slug}: source should stay unchanged`);
-      assert.equal(hash(Buffer.from(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
+      assert.equal(hash(Buffer.from(beforeHarmanW03014Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
     }
   }
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json')&&!slugs.includes(x.slice(0,-5))).sort();
   const digest=hash(names.map(name=>{
     const slug=name.slice(0,-5);
-    const raw=readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n');
+    const raw=beforeHarmanW03014Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),slug);
     return `${name}\0${bssW03011Slug(slug)||crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(beforeBssW03011(JSON.parse(raw),slug),slug),null,2)+'\n':raw}`;
   }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'JBL之外 JSON changed');

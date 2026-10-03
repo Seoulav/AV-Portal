@@ -280,5 +280,24 @@
     "footerNote": "BSS Audio BLUCARD-IN 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "BSS **BLUCARD-IN**는 Soundweb London 섀시에 장착하는 아날로그 입력 카드입니다. 카드 1장에 4개의 입력 채널과 2개의 Combicon 커넥터가 있습니다.",
+  "subtitle": "Soundweb London · 입출력 카드",
+  "keyFacts": [
+    {
+      "label": "아날로그 입력 · 카드 1장",
+      "value": "4",
+      "unit": "채널(Mic/Line)"
+    },
+    {
+      "label": "커넥터 형식",
+      "value": "Mic/Line Combicon x 2",
+      "unit": ""
+    },
+    {
+      "label": "팬텀 파워",
+      "value": "48V (nominal)",
+      "unit": ""
+    }
+  ]
 }

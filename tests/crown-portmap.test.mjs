@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -109,7 +110,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
-    const raw=readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n');
+    const raw=beforeHarmanW03014Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug)?beforeBssW03011(JSON.parse(raw),slug):null;
     hash.update(name).update('\0').update(historical?JSON.stringify(historical,null,2)+'\n':raw);

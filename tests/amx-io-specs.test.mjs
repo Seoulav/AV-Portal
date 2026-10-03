@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -141,7 +142,7 @@ test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest
 
 test('AMX presentation fields and every other product JSON remain fixed', () => {
   for (const slug of slugs) {
-    const current = product(slug);
+    const current = beforeHarmanW03014(product(slug),slug);
     const { specifications, io, sources, ...core } = current;
     assert.equal(sha(JSON.stringify(core)), evidence.products[slug].coreSha256, slug);
     assert.equal(current.keyFacts?.length ?? 0, 0, `${slug}: keyFacts deferred`);
@@ -150,7 +151,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
+    const raw = beforeHarmanW03014Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)
       : jblW03010Slug(slug) ? beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug) ? beforeBssW03011(JSON.parse(raw),slug) : null;

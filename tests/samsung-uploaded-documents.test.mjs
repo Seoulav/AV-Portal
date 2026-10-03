@@ -1,3 +1,4 @@
+import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
@@ -141,8 +142,8 @@ test('W-005 published PDFs match supplied bytes and all earlier uploads/products
   for (const name of names) {
     const slug = name.slice(0, -5);
     const raw = readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n');
-    const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug)
-      ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(JSON.parse(raw), slug),slug),slug),slug),slug),slug), null, 2) + '\n'
+    const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug)
+      ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(raw),slug), slug),slug),slug),slug),slug),slug), null, 2) + '\n'
       : raw;
     hash.update(name).update('\0').update(historical);
   }

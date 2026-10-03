@@ -343,5 +343,29 @@
     "footerNote": "JBL Control 424LP 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
-  }
+  },
+  "lead": "JBL **Control 424LP**은 Control 400 제품군의 저심도 천장매입형입니다. 천장 플레넘 공간이 제한된 설치 환경에 맞춘 저심도 인클로저를 채택했습니다.",
+  "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커",
+  "keyFacts": [
+    {
+      "label": "연속 프로그램 전력 · 2시간",
+      "value": "120 W",
+      "unit": ""
+    },
+    {
+      "label": "감도 · 1m/1W",
+      "value": "85",
+      "unit": "dB"
+    },
+    {
+      "label": "커버리지 각도",
+      "value": "130°(원추형, CRBI 적용)",
+      "unit": ""
+    },
+    {
+      "label": "주파수 범위 · -10dB",
+      "value": "75 Hz – 18 kHz",
+      "unit": ""
+    }
+  ]
 }
