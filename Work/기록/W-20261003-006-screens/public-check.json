@@ -1,0 +1,112 @@
+{
+  "merge": "2c1325bc49ecc3782034d61b726c91323272cf66",
+  "pagesRunId": 37092533637,
+  "artifacts": {
+    "beta/site/detail/data/lh55wmfwbgcxkr.json": {
+      "httpStatus": 200,
+      "expectedSha256": "acbc82aec9794d57141271fa82bc4695af7461a77aabeb42d6032799a9aa7782",
+      "publishedSha256": "acbc82aec9794d57141271fa82bc4695af7461a77aabeb42d6032799a9aa7782",
+      "bytesEqual": true
+    },
+    "beta/site/detail/data/lh75wmfwlgcxkr.json": {
+      "httpStatus": 200,
+      "expectedSha256": "f376f19eb6f836d176d6e64c686a5c1d9bc7e9ef045795888cdcce2cf6233997",
+      "publishedSha256": "f376f19eb6f836d176d6e64c686a5c1d9bc7e9ef045795888cdcce2cf6233997",
+      "bytesEqual": true
+    },
+    "beta/site/docs/manifest.json": {
+      "httpStatus": 200,
+      "expectedSha256": "f8d688f0e9c28f1c172dc4e35d87c0eb0744ca2ce782d61db15658973dc6e9c2",
+      "publishedSha256": "f8d688f0e9c28f1c172dc4e35d87c0eb0744ca2ce782d61db15658973dc6e9c2",
+      "bytesEqual": true
+    },
+    "beta/site/manuals/samsung-flip-pro-wmfx-manual-ko.pdf": {
+      "httpStatus": 200,
+      "expectedSha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+      "publishedSha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+      "bytesEqual": true
+    }
+  },
+  "screens": [
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr&verify=2c1325bc",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "keyFactCount": 3,
+      "hasService": 2,
+      "hasTouch": 2,
+      "rearHdmiScope": true,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh55wmfwbgcxkr&verify=2c1325bc",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "keyFactCount": 3,
+      "hasService": 2,
+      "hasTouch": 2,
+      "rearHdmiScope": true,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "삼성전자 한글 사용설명서 BN81-28453F-02 (Flip Pro WM55FX·WM65FX·WM75FX·WM85FX)",
+        "pages": "/ 70"
+      },
+      "downloaded": {
+        "name": "samsung-flip-pro-wmfx-manual-ko.pdf",
+        "bytes": 11867333,
+        "sha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+        "matchesMerge": true
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 1280,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr&verify=2c1325bc",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "keyFactCount": 4,
+      "hasService": 2,
+      "hasTouch": 2,
+      "rearHdmiScope": true,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": null,
+      "downloaded": null
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "width": 390,
+      "url": "https://seoulav.github.io/AV-Portal/detail/?product=lh75wmfwlgcxkr&verify=2c1325bc",
+      "httpStatus": 200,
+      "documentCount": 1,
+      "keyFactCount": 4,
+      "hasService": 2,
+      "hasTouch": 2,
+      "rearHdmiScope": true,
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "jsErrors": [],
+      "viewer": {
+        "title": "삼성전자 한글 사용설명서 BN81-28453F-02 (Flip Pro WM55FX·WM65FX·WM75FX·WM85FX)",
+        "pages": "/ 70"
+      },
+      "downloaded": {
+        "name": "samsung-flip-pro-wmfx-manual-ko.pdf",
+        "bytes": 11867333,
+        "sha256": "2352fb9ead673818c08138552fb83aac18c57b4576ea343a6ed3171985c7a35a",
+        "matchesMerge": true
+      }
+    }
+  ]
+}
