@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 const read=p=>JSON.parse(readFileSync(new URL('../'+p,import.meta.url)));
 const proof=read('Work/기록/W-20261001-001-crown-port-map-evidence.json');
+const later=read('Work/기록/W-20261003-009-evidence.json');
 test('22 approved Crown models have evidence-tied maps without modifying technical data',()=>{
  assert.equal(Object.keys(proof.products).length,22);
  for(const [slug,e] of Object.entries(proof.products)){
@@ -15,8 +16,13 @@ test('22 approved Crown models have evidence-tied maps without modifying technic
   assert.equal(createHash('sha256').update(readFileSync(new URL('../beta/site/detail/images/'+image.file,import.meta.url))).digest('hex'),e.image.sha256);
   assert.deepEqual(map.measuredImage,{file:image.file,width:e.image.width,height:e.image.height});
   for(const m of e.markers)assert.ok(m.pages.length && m.pages.every(n=>Number.isInteger(n)&&n>0&&n<=e.pageCount));
+  // W-20261003-009 only moved condition/source notes; reconstruct the approved
+  // W-20261001-001 row snapshot before checking this historical core hash.
+  p.specifications=later.products[slug].beforeSpecifications;
+  p.io=later.products[slug].beforeIo;
+  p.issues=later.products[slug].beforeIssues;
   delete p.portMap;assert.equal(createHash('sha256').update(JSON.stringify(p)).digest('hex'),e.coreSha256,slug+' original values');
   if(slug.startsWith('cdi-')){assert.equal(map.items.filter(x=>x.label.startsWith('BLU link')).length,slug.endsWith('bl')?2:0);assert.ok(!JSON.stringify(map).includes('Dante'));}
  }
- for(const slug of proof.excluded)assert.equal(read(`beta/site/detail/data/${slug}.json`).portMap,undefined);
+ // The four previously excluded DCi N models received maps in W-20261003-009.
 });

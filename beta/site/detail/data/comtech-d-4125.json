@@ -247,9 +247,9 @@
     {
       "group": "Physical",
       "name": "무게",
-      "value": "3.2",
-      "unit": "kg",
-      "condition": "7.1 lbs",
+      "value": "3.2 kg (7.1 lbs)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -267,7 +267,7 @@
       "name": "출력 커넥터",
       "value": "4핀 유로블록 x2 (2채널당 1개)",
       "unit": "",
-      "condition": "공식 후면 사진 판독",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -276,7 +276,7 @@
       "name": "입력 커넥터",
       "value": "6핀 유로블록 x2 (S/+/−, 2채널당 1개)",
       "unit": "",
-      "condition": "공식 후면 사진 판독",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -285,7 +285,7 @@
       "name": "GPI",
       "value": "6핀 유로블록 (1-4, 5V)",
       "unit": "",
-      "condition": "공식 후면 사진 판독",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -294,16 +294,16 @@
       "name": "FAULT 릴레이",
       "value": "3핀 (NO/COM/NC)",
       "unit": "",
-      "condition": "공식 후면 사진 판독",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "커넥터(후면)",
       "name": "전원 커넥터",
-      "value": "IEC 인렛",
+      "value": "IEC 인렛 ('100-240VAC 50/60Hz')",
       "unit": "",
-      "condition": "공식 후면 사진 판독, 후면 표기 '100-240VAC 50/60Hz'",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     }

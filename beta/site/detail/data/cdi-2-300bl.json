@@ -350,27 +350,27 @@
     {
       "group": "Physical",
       "name": "크기(W×H×D)",
-      "value": "483 x 89 x 311",
-      "unit": "mm",
-      "condition": "19\" x 3.5\" x 12.25\" (전면 패널 돌출 1.3\" 제외)",
+      "value": "483 x 89 x 311 mm (19\" x 3.5\" x 12.25\" (전면 패널 돌출 1.3\" 제외))",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "6.6",
-      "unit": "kg",
-      "condition": "14.56 lbs",
+      "value": "6.6 kg (14.56 lbs)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "랙 유닛",
-      "value": "2U",
+      "value": "2U (3.5\" 높이)",
       "unit": "",
-      "condition": "3.5\" 높이",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -386,9 +386,9 @@
     {
       "group": "Power",
       "name": "입력 전압",
-      "value": "100-240",
-      "unit": "V AC",
-      "condition": "50/60Hz",
+      "value": "100-240 V AC (50/60Hz)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     }

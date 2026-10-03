@@ -262,7 +262,7 @@
       "name": "디지털 오디오 전송",
       "value": "HARMAN BLU-Link (Dante 아님)",
       "unit": "",
-      "condition": "이슈 참고",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -296,27 +296,27 @@
     {
       "group": "Physical",
       "name": "크기(W×H×D)",
-      "value": "483 x 89 x 362",
-      "unit": "mm",
-      "condition": "19\" x 3.5\" x 14.25\"",
+      "value": "483 x 89 x 362 mm (19\" x 3.5\" x 14.25\")",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "9.12",
-      "unit": "kg",
-      "condition": "20.1 lbs",
+      "value": "9.12 kg (20.1 lbs)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "랙 유닛",
-      "value": "2U",
+      "value": "2U (제품 페이지 텍스트는 '3.5U'로 표기되었으나 3.5\"=2U가 표준 랙 규격이므로 정정 표기)",
       "unit": "",
-      "condition": "제품 페이지 텍스트는 '3.5U'로 표기되었으나 3.5\"=2U가 표준 랙 규격이므로 정정 표기",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -341,9 +341,9 @@
     {
       "group": "Power",
       "name": "입력 전압",
-      "value": "100-240",
-      "unit": "V AC",
-      "condition": "50/60Hz, ±10%",
+      "value": "100-240 V AC (50/60Hz, ±10%)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -368,6 +368,18 @@
   ],
   "io": [
     {
+      "group": "Input",
+      "connector": "6핀 터미널 블록",
+      "signal": "Analog audio input",
+      "direction": "IN",
+      "quantity": "4채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "FOUND"
+    },
+    {
       "group": "Output",
       "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
       "signal": "Speaker output",
@@ -381,39 +393,51 @@
     },
     {
       "group": "Audio Network",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ45 (IN·OUT)",
       "signal": "HARMAN BLU link digital audio bus",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "BLU link",
       "availability": "BL/N 모델",
-      "condition": "디지털 오디오 전송: HARMAN BLU-Link (Dante 아님) (이슈 참고)",
-      "source": "P",
-      "verification": "PARTIAL"
+      "condition": "HARMAN BLU-Link 디지털 오디오 전송 (Dante 아님)",
+      "source": "P, M1",
+      "verification": "FOUND"
     },
     {
       "group": "Control",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ45",
       "signal": "HiQnet 제어/모니터링 네트워크",
       "direction": "I/O",
       "quantity": "",
       "protocol": "HiQnet(TCP/IP)",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "PARTIAL"
+      "source": "P, M1",
+      "verification": "FOUND"
     },
     {
       "group": "Control",
       "connector": "RJ-11(6포지션)",
-      "signal": "GPIO/AUX 제어 입출력",
+      "signal": "GPIO 제어 입출력",
       "direction": "I/O",
       "quantity": "",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P, M",
-      "verification": "PARTIAL"
+      "source": "M1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "3핀 터미널 블록",
+      "signal": "AUX 원격 Sleep·상태 감시",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "M1",
+      "verification": "FOUND"
     },
     {
       "group": "Power",
@@ -446,6 +470,11 @@
       "name": "제조사 데이터시트",
       "url": "https://www.crownaudio.com/en-US/site_elements/drivecore-install-network-series-data-sheet",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "Crown DCi Network Series 한글 사용설명서 · 테크데이타",
+      "scope": "사용자 제공 65쪽 PDF, 표지 대상 4종·6~8쪽 후면 단자·52~53쪽 모델별 사양. SHA-256 7795eb2db600ef2fedaf08065fdb6a42c4abc1d3ea6f54704c20334aff6b41d8"
     }
   ],
   "issues": [
@@ -465,5 +494,127 @@
     "footerNote": "Crown Crown DCi 4|300N · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "dci-4-300n-rear.webp",
+      "width": 2000,
+      "height": 544
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 입력 3·4",
+        "desc": "밸런스 6핀 · 채널 3·4 오디오 입력.",
+        "x1": 1610,
+        "x2": 1725,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "아날로그 입력 1·2",
+        "desc": "밸런스 6핀 · 채널 1·2 오디오 입력.",
+        "x1": 1760,
+        "x2": 1835,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "스피커 출력 3·4",
+        "desc": "4극 단자대 · 채널당 300 W(4Ω) · 최대 10 AWG.",
+        "x1": 1345,
+        "x2": 1550,
+        "y": 380,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "스피커 출력 1·2",
+        "desc": "4극 단자대 · 채널당 300 W(4Ω) · 최대 10 AWG.",
+        "x1": 1600,
+        "x2": 1810,
+        "y": 380,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "GPIO",
+        "desc": "RJ-11 · 일반 목적 입출력.",
+        "x1": 710,
+        "x2": 770,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "Ethernet 제어",
+        "desc": "HiQnet 제어·모니터링 · CAT5e.",
+        "x1": 790,
+        "x2": 850,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "BLU link IN",
+        "desc": "디지털 오디오 링 입력 · CAT5e · Dante 아님.",
+        "x1": 890,
+        "x2": 950,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "BLU link OUT",
+        "desc": "디지털 오디오 링 출력 · CAT5e · Dante 아님.",
+        "x1": 970,
+        "x2": 1030,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "입력 감쇠 1–4",
+        "desc": "채널별 21단계 감쇠 노브 4개.",
+        "x1": 1080,
+        "x2": 1265,
+        "y": 165,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "AUX",
+        "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+        "x1": 460,
+        "x2": 540,
+        "y": 385,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "전원 퓨즈",
+        "desc": "F20AH 250V · 동일 규격으로 교체.",
+        "x1": 230,
+        "x2": 295,
+        "y": 225,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "AC 전원 입력",
+        "desc": "15A IEC · 100–240V AC.",
+        "x1": 210,
+        "x2": 335,
+        "y": 350,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 55,
+      "bottom": 55
+    }
   }
 }

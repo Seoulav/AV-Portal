@@ -323,18 +323,18 @@
     {
       "group": "Physical",
       "name": "크기(W×H×D)",
-      "value": "483 x 89 x 374",
-      "unit": "mm",
-      "condition": "19\" x 3.5\" x 14.71\"",
+      "value": "483 x 89 x 374 mm (19\" x 3.5\" x 14.71\")",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },
     {
       "group": "Physical",
       "name": "무게",
-      "value": "7.8",
-      "unit": "kg",
-      "condition": "17.2 lbs",
+      "value": "7.8 kg (17.2 lbs)",
+      "unit": "",
+      "condition": "",
       "source": "P",
       "verification": "VERIFIED"
     },

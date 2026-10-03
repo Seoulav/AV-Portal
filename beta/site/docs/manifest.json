@@ -1273,6 +1273,72 @@
       "file": "manuals/amx-varia-sl50-pictorial-drawing.pdf",
       "kind": "reference",
       "title": "AMX VARIA-SL50 도면"
+    },
+    {
+      "slug": "dci-2-300n",
+      "file": "manuals/crown-dci-network-series-manual-ko.pdf",
+      "kind": "manual",
+      "title": "Crown DCi Network Series 한글 사용설명서 · TechData"
+    },
+    {
+      "slug": "dci-2-600n",
+      "file": "manuals/crown-dci-network-series-manual-ko.pdf",
+      "kind": "manual",
+      "title": "Crown DCi Network Series 한글 사용설명서 · TechData"
+    },
+    {
+      "slug": "dci-4-300n",
+      "file": "manuals/crown-dci-network-series-manual-ko.pdf",
+      "kind": "manual",
+      "title": "Crown DCi Network Series 한글 사용설명서 · TechData"
+    },
+    {
+      "slug": "dci-4-600n",
+      "file": "manuals/crown-dci-network-series-manual-ko.pdf",
+      "kind": "manual",
+      "title": "Crown DCi Network Series 한글 사용설명서 · TechData"
+    },
+    {
+      "slug": "comtech-d-2125",
+      "file": "manuals/crown-comtech-d-series-operation-manual.pdf",
+      "kind": "manual",
+      "title": "Crown ComTech D Series Operation Manual"
+    },
+    {
+      "slug": "comtech-d-4125",
+      "file": "manuals/crown-comtech-d-series-operation-manual.pdf",
+      "kind": "manual",
+      "title": "Crown ComTech D Series Operation Manual"
+    },
+    {
+      "slug": "comtech-d-8125",
+      "file": "manuals/crown-comtech-d-series-operation-manual.pdf",
+      "kind": "manual",
+      "title": "Crown ComTech D Series Operation Manual"
+    },
+    {
+      "slug": "comtech-d-2125",
+      "file": "manuals/crown-comtech-d-2125-data-sheet.pdf",
+      "kind": "reference",
+      "title": "Crown ComTech D 2125 Data Sheet"
+    },
+    {
+      "slug": "comtech-d-4125",
+      "file": "manuals/crown-comtech-d-4125-8125-data-sheet.pdf",
+      "kind": "reference",
+      "title": "Crown ComTech D 4125·8125 Data Sheet"
+    },
+    {
+      "slug": "comtech-d-8125",
+      "file": "manuals/crown-comtech-d-4125-8125-data-sheet.pdf",
+      "kind": "reference",
+      "title": "Crown ComTech D 4125·8125 Data Sheet"
+    },
+    {
+      "slug": "i-tech-4x3500hd",
+      "file": "manuals/crown-i-tech-4x3500hd-manual-ko.pdf",
+      "kind": "manual",
+      "title": "Crown I-Tech 4x3500HD 한글 사용설명서 · TechData 5059136"
     }
   ]
 }
