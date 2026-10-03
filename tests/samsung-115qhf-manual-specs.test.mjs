@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-003-evidence.json',root),'utf8'));
@@ -68,7 +69,12 @@ test('every other product detail JSON retains its pre-change Git LF bytes',()=>{
   const dir=new URL('beta/site/detail/data/',root);
   const hash=createHash('sha256');
   for(const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&name!==`${evidence.slug}.json`).sort()){
-    hash.update(name).update('\0').update(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'));
+    const slug=name.slice(0,-5);
+    const raw=readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n');
+    const historical=['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)
+      ? JSON.stringify(beforeSamsungWhiteboard(JSON.parse(raw),slug),null,2)+'\n'
+      : raw;
+    hash.update(name).update('\0').update(historical);
   }
   assert.equal(hash.digest('hex'),evidence.otherDetailJsonSha256);
 });

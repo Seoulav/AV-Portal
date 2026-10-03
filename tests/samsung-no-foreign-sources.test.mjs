@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
 import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
+import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -28,11 +29,11 @@ test('W-014 preserves prior values and connector rows while withdrawing overseas
   const evidence = read('Work/기록/W-20261002-014-evidence.json');
   const sha = raw => createHash('sha256').update(raw).digest('hex');
   for (const [slug, expected] of Object.entries(evidence.untouchedProductSha256)) {
-    const restored=beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`),slug);
+    const restored=beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`),slug),slug);
     assert.equal(sha(JSON.stringify(restored,null,2)+'\n'), expected, `${slug}: outside W-014`);
   }
   for (const [slug, e] of Object.entries(evidence.products)) {
-    const current = beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug);
+    const current = beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`), slug), slug);
     const previous = beforeSamsungForeignPurge(current, slug);
     assert.equal(sha(JSON.stringify(previous, null, 2) + '\n'), e.previousFileSha256, `${slug}: previous JSON reconstruction`);
     assert.equal(current.io.length, previous.io.length, `${slug}: connector rows retained`);
@@ -84,7 +85,7 @@ test('115QHF has separate domestic maximum brightness and three evidence-backed 
     assert.equal(fact.unit, anchors[index].unit);
     assert.ok(['FOUND', 'VERIFIED'].includes(anchors[index].verification));
   });
-  assert.equal(read('beta/site/detail/data/lh55wmfwbgcxkr.json').keyFacts.length, 2);
+  assert.equal(beforeSamsungWhiteboard(read('beta/site/detail/data/lh55wmfwbgcxkr.json'), 'lh55wmfwbgcxkr').keyFacts.length, 2);
 });
 
 test('published Samsung specification and I/O rows do not verify overseas page values', () => {
@@ -127,7 +128,7 @@ test('the recorded source cleanup reconstructs every pre-change Samsung JSON exa
   const evidence = read('Work/기록/W-20261002-010-evidence.json');
   for (const item of read('beta/site/catalog.json').filter(product => product.brand === 'Samsung')) {
     if (!evidence.products[item.slug]) continue; // W-010 predates the three W-012 MPF entries.
-    const detail = read(`beta/site/detail/data/${item.slug}.json`);
+    const detail = beforeSamsungWhiteboard(read(`beta/site/detail/data/${item.slug}.json`), item.slug);
     const before = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(beforeSamsungManualIo(detail,item.slug), item.slug), item.slug);
     const digest = createHash('sha256').update(JSON.stringify(before, null, 2) + '\n').digest('hex');
     assert.equal(digest, evidence.products[item.slug].previousFileSha256, item.slug);

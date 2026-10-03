@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {beforeVideowallProse} from './videowall-w03001-history.mjs';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
+import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -33,9 +34,11 @@ test('only eight exact-model Samsung products change, and specifications remain 
       before.previousIo.filter(x=>x.connector==='오디오 입력'&&x.availability.includes('미지원')).map(x=>x.quantity));
   }
   for(const [slug,expected] of Object.entries(evidence.excludedFileSha256)){
-    const current=load(slug);
+    const current=beforeSamsungWhiteboard(load(slug),slug);
     const prior=beforeHotelTvIo(current,slug);
-    const bytes=slug.startsWith('hg') ? Buffer.from(JSON.stringify(prior,null,2)+'\n') : readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
+    const bytes=slug.startsWith('hg') || ['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)
+      ? Buffer.from(JSON.stringify(prior,null,2)+'\n')
+      : readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
     assert.equal(sha(bytes),expected,`${slug}: excluded JSON bytes`);
   }
 });

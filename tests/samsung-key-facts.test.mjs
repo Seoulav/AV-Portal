@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {beforeSamsungSourceCleanup, currentKeyFactAnchors} from './samsung-w010-history.mjs';
 import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
 import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
+import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -16,7 +17,7 @@ test('14 published Samsung overview cards use verified product rows and preserve
   // W-007 evidence preserves the discontinued model's historical review.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = beforeSamsungForeignPurge(beforeSamsungManualIo(read(`beta/site/detail/data/${slug}.json`), slug), slug);
+    const p = beforeSamsungForeignPurge(beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`), slug), slug), slug);
     const e = evidence.products[slug];
     assert.match(p.lead, /^.+[.!?] .+[.!?]$/u, `${slug}: two lead sentences`);
     assert.equal((p.lead.match(/\*\*/g) || []).length, 2, `${slug}: one bold span`);
