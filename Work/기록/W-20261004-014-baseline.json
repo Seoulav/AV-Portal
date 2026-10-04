@@ -1,0 +1,257 @@
+{
+  "blu-100": {
+    "geometrySha256": "ea404fb4a3d2f114ca6c015f51391449316ea6df4c25c78958a96fb1a523505d",
+    "width": 760,
+    "height": 175.458984375
+  },
+  "blu-101": {
+    "geometrySha256": "76b41e019d17c40a8fab4444f3c10b74aeb0ca378f7bface84950c349d543524",
+    "width": 760,
+    "height": 148.06640625
+  },
+  "blu-160": {
+    "geometrySha256": "5f740c5a882d675855fb14e61db5d6aee286390aa77992f4733f05ac91afe333",
+    "width": 760,
+    "height": 177.28515625
+  },
+  "blu-50v2": {
+    "geometrySha256": "fa52cbd7f55a6803442c2db095fa1b07566f051c06c8aa4fffe0010c7cfbb57f",
+    "width": 760,
+    "height": 213.96
+  },
+  "blu-dan": {
+    "geometrySha256": "5a6701446375b5b2b331ece8d8218feb1d4c2bdc9a7c60d5ea431d48ce0da689",
+    "width": 760,
+    "height": 208.828125
+  },
+  "cdi-2-1200": {
+    "geometrySha256": "88207b1f659f27f9dfd18034ada8111037385e274061f55531f8a5369795943d",
+    "width": 760,
+    "height": 240.14000000000001
+  },
+  "cdi-2-1200bl": {
+    "geometrySha256": "813150a426e684150bac2264cd12bbc1fa9ae9e7c8f19095f248243bffeb579b",
+    "width": 760,
+    "height": 235.38000000000002
+  },
+  "cdi-2-300": {
+    "geometrySha256": "dec26c3281b04006645ce811289b4e4a7d0f297af3339773a1461a1336763fa7",
+    "width": 760,
+    "height": 231.98000000000002
+  },
+  "cdi-2-300bl": {
+    "geometrySha256": "5e1cc783bfb2e0c1a669dcd28c26f7900da2aac13c9ee2eda926837d9d8ee034",
+    "width": 760,
+    "height": 233.68
+  },
+  "cdi-2-600": {
+    "geometrySha256": "d84fbcd388d893d4c0992ae26c0b54562b3ee3d2a1b245fdc30f64be0a71b90c",
+    "width": 760,
+    "height": 231.98000000000002
+  },
+  "cdi-2-600bl": {
+    "geometrySha256": "6d1f049bba60ce061a85880f4df13a4cc5ff6dd49e800d524cf6ca1153e6a627",
+    "width": 760,
+    "height": 243.54000000000002
+  },
+  "cdi-4-1200": {
+    "geometrySha256": "e1c0047643f360aee416e40e1e727d1c389543280b0105596552853013b77b28",
+    "width": 760,
+    "height": 243.54000000000002
+  },
+  "cdi-4-1200bl": {
+    "geometrySha256": "888a8122ea9bd6eecf61196222d321f9989b84b9c084d90c45e69234665a6ab8",
+    "width": 760,
+    "height": 240.48000000000002
+  },
+  "cdi-4-300": {
+    "geometrySha256": "3fcd7ba967091b97b5be693d4e5f63ff5cd63f051b741dcf62e3e3f0ae3be14a",
+    "width": 760,
+    "height": 237.08
+  },
+  "cdi-4-300bl": {
+    "geometrySha256": "c79f414d8d8ff3a573aef16ab125aa2f353a290a3a9efc0b281ea596b33bfbe9",
+    "width": 760,
+    "height": 236.74
+  },
+  "cdi-4-600": {
+    "geometrySha256": "1db791a80f818c30b1a86d3074ff8eff56da3a1ffe81c6b1756957cff8405405",
+    "width": 760,
+    "height": 240.82000000000002
+  },
+  "cdi-4-600bl": {
+    "geometrySha256": "097474ef734894468f704efc0e051e93f99b8c927204fb6e3caa82f09583dda9",
+    "width": 760,
+    "height": 237.42000000000002
+  },
+  "comtech-d-2125": {
+    "geometrySha256": "7eed239659cef911e62962a312c01032756df11e40a4d03d4ecd601e5349de4d",
+    "width": 760,
+    "height": 232.89634146341464
+  },
+  "comtech-d-4125": {
+    "geometrySha256": "7c9f98be3e72c926b7999f6061ba505a5c3100ae3694c867a22e9fd0444e9b01",
+    "width": 760,
+    "height": 231.57251908396947
+  },
+  "comtech-d-8125": {
+    "geometrySha256": "e64bd63d87cba1f6d39d6ad882e49be1764a585ffe7ace4c9a54ba61df60bc74",
+    "width": 760,
+    "height": 164.16063199473336
+  },
+  "dci-2-300": {
+    "geometrySha256": "b70d807f49a29714189f1e0d46f40d17de0034b9524306371e1bbefef45080a8",
+    "width": 760,
+    "height": 257.8
+  },
+  "dci-2-300n": {
+    "geometrySha256": "8ec538d96f2e59f78c583ef67b718d9ae763f5c609a2f5e9a23f4400368ee6a6",
+    "width": 760,
+    "height": 246.24
+  },
+  "dci-2-600": {
+    "geometrySha256": "b70d807f49a29714189f1e0d46f40d17de0034b9524306371e1bbefef45080a8",
+    "width": 760,
+    "height": 257.8
+  },
+  "dci-2-600n": {
+    "geometrySha256": "84583a462428eb5765dc566a185fadb928ff22361d237eead684304215b3c3ba",
+    "width": 760,
+    "height": 246.24
+  },
+  "dci-4-300": {
+    "geometrySha256": "9a9daa9025830f60792356a06ea17c17622ae00e9439d67a94c05ffa7a63176e",
+    "width": 760,
+    "height": 266.64
+  },
+  "dci-4-300da": {
+    "geometrySha256": "d0caca5e20a0b9086eecdd28390f595a4e8eb46541776fac418c33730caf17af",
+    "width": 760,
+    "height": 274.82000000000005
+  },
+  "dci-4-300n": {
+    "geometrySha256": "201039be98eccb22d393a6b5f3e8fa5b3d71e5aacfefdc6299f7b99718dbd9b9",
+    "width": 760,
+    "height": 245.56
+  },
+  "dci-4-600": {
+    "geometrySha256": "9a9daa9025830f60792356a06ea17c17622ae00e9439d67a94c05ffa7a63176e",
+    "width": 760,
+    "height": 266.64
+  },
+  "dci-4-600da": {
+    "geometrySha256": "615f8178bca29d8bf57839da60b7d8e1481e5df008c74362d90bcc345760311f",
+    "width": 760,
+    "height": 274.82000000000005
+  },
+  "dci-4-600n": {
+    "geometrySha256": "7856a48132472dd6a3862b86f7f5e89defe6606e9424e12f5e0ec09cca2e1db7",
+    "width": 760,
+    "height": 245.56
+  },
+  "dm7": {
+    "geometrySha256": "73bae8818fd22e212895714d86f15d43edcec25a7b04e5e360a9e4dc1975c263",
+    "width": 760,
+    "height": 408.22222222222223
+  },
+  "eb-pq2220b": {
+    "geometrySha256": "d86c015b417c03a926a260c39e134e09c3dd0a7e414a46ff662471ccb8e4ef64",
+    "width": 760,
+    "height": 356.87201735357917
+  },
+  "gs728tppv3": {
+    "geometrySha256": "c39566c5725eeb1290b580a442668cb9794c134435f0be98f375e4ba2b663d1c",
+    "width": 760,
+    "height": 200.5889884763124
+  },
+  "gsm4212p": {
+    "geometrySha256": "a70c2b5057450702918829b38bd7ae98246380089073b8aae45feb8f5cf086f6",
+    "width": 760,
+    "height": 191.35
+  },
+  "i-tech-4x3500hd": {
+    "geometrySha256": "f58ea1afa30fde5e4d9a29e5b196aafb2cb72e2a40d5ad0d510c6b5a8f56bade",
+    "width": 760,
+    "height": 220.08
+  },
+  "ki-pro-go2": {
+    "geometrySha256": "910264a79876a84ac978a8034e02bb6a38e3af7a4f20c0b4dd66d15bb6525746",
+    "width": 760,
+    "height": 432.42105263157896
+  },
+  "novastar-h2": {
+    "geometrySha256": "33ce903c035c82527488535fdaaa681560afc0b1dc7bf7652e2ac54f1772a860",
+    "width": 760,
+    "height": 231.29999999999998
+  },
+  "novastar-h5": {
+    "geometrySha256": "c56b5b66371891073de1a65cc917fab56eca35794347951c5c712d50d1383adb",
+    "width": 760,
+    "height": 448.9166666666667
+  },
+  "qlxd4": {
+    "geometrySha256": "9fd99178118362b354b1b6b687f2bfef33dcf17780c196bed66087e81afe3993",
+    "width": 760,
+    "height": 255.78
+  },
+  "rio3224-d3": {
+    "geometrySha256": "c9319ba5b7275a3e64b5fa2d06f2dfeb46e47122fb9b4a527846d235cf9a93b5",
+    "width": 760,
+    "height": 439.0627306273063
+  },
+  "slxd4-plus": {
+    "geometrySha256": "dca173f5246ec65bf98a11354f1d1db1558a407e0f9df19e3ac3b983c30d0c43",
+    "width": 760,
+    "height": 535.6
+  },
+  "srg-x40uh": {
+    "geometrySha256": "c85924e596c203c13b4a616b5f73b1af239ac9475e9e4a560d8d60b1ac74f46b",
+    "width": 760,
+    "height": 465.38135593220335
+  },
+  "tio1608-d2": {
+    "geometrySha256": "c196400d29ed7930a825c646da26deeeabad1713d86ae25cf689babc341981cc",
+    "width": 760,
+    "height": 219.00552486187846
+  },
+  "ua864a": {
+    "geometrySha256": "213b0cadffc3803f1679455bfda02076422ea9e7b60527d1a3f4928100172c5d",
+    "width": 760,
+    "height": 760
+  },
+  "ultripower": {
+    "geometrySha256": "86e1556064cca480886d79daf2aec132951342ec87924457acce93a0c1e7790f",
+    "width": 760,
+    "height": 191.0204081632653
+  },
+  "ultritouch-2-hr": {
+    "geometrySha256": "5e48adcf52f7b9270ee9927dac87e4764b4977b61f9172a7a00f95c44a76d14b",
+    "width": 760,
+    "height": 438
+  },
+  "ulxd4": {
+    "geometrySha256": "ca8899c767beedc9436164d98f1f7c4c360adab2ba8af541e58ce7eb0eccfbd2",
+    "width": 760,
+    "height": 246.60000000000002
+  },
+  "ulxd4d": {
+    "geometrySha256": "84ab1d59d9d86bfb311efe80e196d1b80b89a68ce6a73977f994fc32d335c4aa",
+    "width": 760,
+    "height": 178.94
+  },
+  "ulxd4q": {
+    "geometrySha256": "3e076e2bc1e836cbabcc59eb94afc5e04454988941d57f5889e1a1bfe81c975c",
+    "width": 760,
+    "height": 169.76
+  },
+  "vs10": {
+    "geometrySha256": "e46ccf1c66e32947fa4c9782c9abe39f0dde41a114a363d39ce7f8ca27ed8c34",
+    "width": 760,
+    "height": 423.70000000000005
+  },
+  "vs5": {
+    "geometrySha256": "4bb8fed4392f8c91e2b1075fcdb3a6f9cbdbf8abff1819e708a7ec2d8d2f2eb7",
+    "width": 760,
+    "height": 326.9535283993115
+  }
+}

@@ -1,4 +1,4 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-009-port-merge';
+import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-010-samsung-115-rear';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries } from './product-detail-model.mjs?v=w20261004-009-port-merge';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
