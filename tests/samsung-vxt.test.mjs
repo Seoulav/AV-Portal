@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
+import { beforeSamsungW04017 } from './samsung-w04017-history.mjs';
 
 const directory = new URL('../beta/site/detail/data/', import.meta.url);
 const supported = [
@@ -54,7 +55,7 @@ test('the other 233 products, protected target fields and prior source/specifica
   const coreHash = createHash('sha256');
   const priorEditableHash = createHash('sha256');
   for (const slug of targets) {
-    const { specifications, sources, ...protectedFields } = read(slug);
+    const { specifications, sources, ...protectedFields } = beforeSamsungW04017(read(slug), slug);
     // LH32QMC also carried the obsolete launch claim in its public overview.
     if (slug === 'lh32qmcebgcxkr')
       protectedFields.overview = protectedFields.overview.replace('VXT를 지원한다', 'VXT(국내 추후 출시 예정)를 지원한다');

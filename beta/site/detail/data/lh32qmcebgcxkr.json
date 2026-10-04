@@ -27,6 +27,20 @@
       "originalSize": "1920x1280",
       "resolution": "1920x1280",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "lh32qmcebgcxkr-diagram.webp",
+      "alt": "LH32QMCEBGCXKR 삼성전자 한글 사용설명서 24쪽 후면 단자 도면",
+      "note": "Diagram · 삼성전자 사용설명서 BN81-24537G-14 24쪽",
+      "provider": "Samsung",
+      "model": "LH32QMCEBGCXKR",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "290x1480",
+      "resolution": "290x1480",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -53,6 +67,11 @@
     {
       "role": "Other",
       "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
       "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/"
     }
   ],
@@ -575,5 +594,95 @@
       "value": "4,000:1",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "lh32qmcebgcxkr-diagram.webp",
+      "width": 290,
+      "height": 1480
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB 2 (1.0A)",
+        "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 1.0A입니다.",
+        "y1": 106,
+        "y2": 176,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "USB 1 (0.5A)",
+        "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 0.5A입니다.",
+        "y1": 254,
+        "y2": 324,
+        "side": "left"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력",
+        "desc": "음향 케이블을 이용하여 소리를 내보낼 때 사용합니다.",
+        "y1": 382,
+        "y2": 405,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "RS-232C 입력",
+        "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+        "y1": 477,
+        "y2": 500,
+        "side": "left"
+      },
+      {
+        "n": 5,
+        "label": "RS-232C 출력",
+        "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+        "y1": 568,
+        "y2": 591,
+        "side": "left"
+      },
+      {
+        "n": 6,
+        "label": "HDMI 입력 3 (ARC)",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 646,
+        "y2": 728,
+        "side": "left"
+      },
+      {
+        "n": 7,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 784,
+        "y2": 867,
+        "side": "left"
+      },
+      {
+        "n": 8,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 920,
+        "y2": 1008,
+        "side": "left"
+      },
+      {
+        "n": 9,
+        "label": "RJ45 (LAN)",
+        "desc": "LAN 케이블을 이용하여 MDC와 인터넷을 연결할 때 사용합니다(10/100 Mbps).",
+        "y1": 1133,
+        "y2": 1207,
+        "side": "left"
+      },
+      {
+        "n": 10,
+        "label": "IR 입력",
+        "desc": "리모컨의 신호를 받는 외장 IR 케이블을 연결합니다.",
+        "y1": 1283,
+        "y2": 1319,
+        "side": "left"
+      }
+    ]
+  }
 }

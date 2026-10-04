@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { GlobalWorkerOptions, PasswordResponses, getDocument } from '../beta/site/vendor/pdfjs/pdf.min.mjs';
+import { beforeSamsungW04017Raw } from './samsung-w04017-history.mjs';
 
 GlobalWorkerOptions.workerSrc = new URL('../beta/site/vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const root = new URL('../beta/site/', import.meta.url);
@@ -61,7 +62,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)
-    productHash.update(name).update(Buffer.from([0])).update(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'));
+    productHash.update(name).update(Buffer.from([0])).update(beforeSamsungW04017Raw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   assert.equal(sha(readFileSync(new URL('docs/manifest.json', root))), '4c64584eb766ad94f2c5fac66f02d687bb81e4b2fce60d71a6149155cac1ddbb');
 });

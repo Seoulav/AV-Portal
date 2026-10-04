@@ -40,8 +40,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).channelSignal), raw.model);
     }
   }
-  // W-20261004-010 moves the 115QHF from io-only to a photographed map.
-  assert.deepEqual(counts, { mapIo: 52, ioOnly: 173, neither: 17 });
+  // W-010 adds one photographed map; W-017 adds six manual Diagram maps.
+  assert.deepEqual(counts, { mapIo: 58, ioOnly: 167, neither: 17 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {
