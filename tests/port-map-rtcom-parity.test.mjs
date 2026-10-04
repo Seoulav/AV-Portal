@@ -4,6 +4,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { bssW04004Slugs } from './bss-w04004-history.mjs';
+import { beforeBssAlignment } from './bss-alignment-history.mjs';
 import * as view from '../prototype/brc-am7/detail-enhancement-view.mjs';
 
 const fixture = {
@@ -65,7 +66,7 @@ test('all published maps retain supported crop and side placement without produc
     // This historical W-001 digest predates the W-010 vertical Samsung map.
     if (product.portMap && product.portMap.image !== 'Diagram' && !bssW04004Slugs.has(file.slice(0,-5)) && file !== 'lh115qhfebgxkr.json') {
       maps.push(product.portMap);
-      digest.update(file + '\n' + JSON.stringify(product.portMap) + '\n');
+      digest.update(file + '\n' + JSON.stringify(beforeBssAlignment(product,file.slice(0,-5)).portMap) + '\n');
     }
   }
   assert.equal(maps.length, 47);

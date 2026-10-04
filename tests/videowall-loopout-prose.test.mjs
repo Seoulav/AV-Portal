@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeBssW04004} from './bss-w04004-history.mjs';
+import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
@@ -20,7 +21,7 @@ const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-001-evidence.json',root),'utf8'));
 const target=Object.keys(evidence.target);
 const sha=x=>createHash('sha256').update(x).digest('hex');
-const file=slug=>Buffer.from(beforeDisplayW04013Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug));
+const file=slug=>Buffer.from(beforeDisplayW04013Raw(beforeBssAlignmentRaw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug));
 const product=slug=>beforeBssW04004(beforeSamsungW04010(JSON.parse(file(slug)),slug),slug);
 // Git stores these JSON blobs with LF, while Windows may check them out with CRLF.
 const gitJsonBytes=bytes=>Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));

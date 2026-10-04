@@ -1,5 +1,6 @@
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
+import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -98,7 +99,7 @@ test('only documented BSS condition moves and BLU-160 weight normalization chang
 
 test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain unchanged',()=>{
   for(const slug of slugs){
-    const current=beforeHarmanW03014(beforeBssW04004(product(slug),slug),slug),before=evidence.products[slug];
+    const current=beforeHarmanW03014(beforeBssW04004(beforeBssAlignment(product(slug),slug),slug),slug),before=evidence.products[slug];
     const {specifications,sources,...core}=current;
     assert.equal(sha(JSON.stringify(core)),before.coreSha256,`${slug}: protected fields`);
     assert.equal(sha(JSON.stringify(current.io)),before.ioSha256,`${slug}: I/O`);
@@ -107,7 +108,7 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
     if(!changed.includes(slug)){
       assert.equal(sha(JSON.stringify(specifications)),before.specificationsSha256,`${slug}: specs unchanged`);
       assert.equal(sha(JSON.stringify(sources)),before.sourcesSha256,`${slug}: sources unchanged`);
-      assert.equal(sha(beforeHarmanW03014Raw(beforeBssW04004Raw(bytes(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug)),before.fileSha256,`${slug}: full JSON bytes`);
+      assert.equal(sha(beforeHarmanW03014Raw(beforeBssW04004Raw(beforeBssAlignmentRaw(bytes(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug)),before.fileSha256,`${slug}: full JSON bytes`);
     }else{
       assert.equal(specifications.length,before.beforeSpecifications.length,`${slug}: spec row count`);
       assert.equal(sources.length,before.beforeSources.length+evidence.inventory.documents.filter(doc=>doc.slug===slug).length,`${slug}: sources`);

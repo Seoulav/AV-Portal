@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {existsSync, readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
+import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 import {beforeAmxW03008,amxW03008Slug} from './amx-w03008-history.mjs';
@@ -156,7 +157,7 @@ test('W-005 published PDFs match supplied bytes and earlier upload history and p
   assert.equal(names.length, 242);
   for (const name of names) {
     const slug = name.slice(0, -5);
-    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug);
+    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug);
     const historical = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug)
       ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(raw),slug), slug),slug),slug),slug),slug),slug), null, 2) + '\n'
       : raw;

@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
+import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
@@ -114,7 +115,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
-    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug);
+    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug)?beforeBssW03011(JSON.parse(raw),slug):null;
     hash.update(name).update('\0').update(historical?JSON.stringify(historical,null,2)+'\n':raw);
