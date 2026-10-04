@@ -1,5 +1,6 @@
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
+import {beforeBssAlignment} from './bss-alignment-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -15,7 +16,7 @@ import {beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
   const product=JSON.parse(bytes(path));
-  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(product,path.split('/').at(-1).slice(0,-5)):product;
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeBssAlignment(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));

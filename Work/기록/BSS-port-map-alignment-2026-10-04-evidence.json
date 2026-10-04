@@ -1,0 +1,725 @@
+{
+  "basis": "origin/main before this BSS coordinate-only correction",
+  "method": "Rear WebP natural pixels: orange/green Phoenix bank color bounds and card-slot boundaries, corroborated against 1280px/390px screenshots",
+  "products": [
+    {
+      "slug": "blu-100",
+      "imageSha256": "6f9e5d1bfe98f1ec5b846af1657b58d987a09c01e057b8d27617f7480a2353c3",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "before": [
+            3610,
+            3950
+          ],
+          "after": [
+            3559,
+            3947
+          ],
+          "changed": true
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "before": [
+            3180,
+            3530
+          ],
+          "after": [
+            3150,
+            3540
+          ],
+          "changed": true
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "before": [
+            2750,
+            3110
+          ],
+          "after": [
+            2740,
+            3131
+          ],
+          "changed": true
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "before": [
+            2320,
+            2690
+          ],
+          "after": [
+            2306,
+            2699
+          ],
+          "changed": true
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "before": [
+            1910,
+            2280
+          ],
+          "after": [
+            1896,
+            2288
+          ],
+          "changed": true
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "before": [
+            1190,
+            1360
+          ],
+          "after": [
+            1190,
+            1360
+          ],
+          "changed": false
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "before": [
+            1190,
+            1360
+          ],
+          "after": [
+            1190,
+            1360
+          ],
+          "changed": false
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "before": [
+            940,
+            1110
+          ],
+          "after": [
+            940,
+            1110
+          ],
+          "changed": false
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "before": [
+            690,
+            900
+          ],
+          "after": [
+            690,
+            900
+          ],
+          "changed": false
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "before": [
+            1420,
+            1810
+          ],
+          "after": [
+            1420,
+            1810
+          ],
+          "changed": false
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "before": [
+            1420,
+            1810
+          ],
+          "after": [
+            1420,
+            1810
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "slug": "blu-101",
+      "imageSha256": "dddec58e5888c11f15598cc3b12b3f6ba960c0bb40342b5918f9dc1505ebf31a",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "before": [
+            3610,
+            3950
+          ],
+          "after": [
+            3638,
+            4050
+          ],
+          "changed": true
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "before": [
+            3180,
+            3530
+          ],
+          "after": [
+            3207,
+            3618
+          ],
+          "changed": true
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "before": [
+            2750,
+            3110
+          ],
+          "after": [
+            2778,
+            3187
+          ],
+          "changed": true
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "before": [
+            2320,
+            2690
+          ],
+          "after": [
+            2327,
+            2737
+          ],
+          "changed": true
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "before": [
+            1910,
+            2280
+          ],
+          "after": [
+            1897,
+            2306
+          ],
+          "changed": true
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "before": [
+            1190,
+            1360
+          ],
+          "after": [
+            1190,
+            1360
+          ],
+          "changed": false
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "before": [
+            1190,
+            1360
+          ],
+          "after": [
+            1190,
+            1360
+          ],
+          "changed": false
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "before": [
+            940,
+            1110
+          ],
+          "after": [
+            940,
+            1110
+          ],
+          "changed": false
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "before": [
+            690,
+            900
+          ],
+          "after": [
+            690,
+            900
+          ],
+          "changed": false
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "before": [
+            1420,
+            1810
+          ],
+          "after": [
+            1420,
+            1810
+          ],
+          "changed": false
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "before": [
+            1420,
+            1810
+          ],
+          "after": [
+            1420,
+            1810
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "slug": "blu-160",
+      "imageSha256": "3c8afc9cedab6c55797437dc07937bcdd0ed8bdab9707c8ec79887241b9f3122",
+      "markers": [
+        {
+          "n": 1,
+          "label": "옵션 I/O 카드 A",
+          "before": [
+            3300,
+            3870
+          ],
+          "after": [
+            3259,
+            3916
+          ],
+          "changed": true
+        },
+        {
+          "n": 2,
+          "label": "옵션 I/O 카드 B",
+          "before": [
+            2470,
+            3100
+          ],
+          "after": [
+            2463,
+            3119
+          ],
+          "changed": true
+        },
+        {
+          "n": 3,
+          "label": "옵션 I/O 카드 C",
+          "before": [
+            3300,
+            3870
+          ],
+          "after": [
+            3259,
+            3917
+          ],
+          "changed": true
+        },
+        {
+          "n": 4,
+          "label": "옵션 I/O 카드 D",
+          "before": [
+            2470,
+            3100
+          ],
+          "after": [
+            2462,
+            3119
+          ],
+          "changed": true
+        },
+        {
+          "n": 5,
+          "label": "BLU link 입력",
+          "before": [
+            1660,
+            1820
+          ],
+          "after": [
+            1660,
+            1820
+          ],
+          "changed": false
+        },
+        {
+          "n": 6,
+          "label": "BLU link 출력",
+          "before": [
+            1660,
+            1820
+          ],
+          "after": [
+            1660,
+            1820
+          ],
+          "changed": false
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "before": [
+            1390,
+            1550
+          ],
+          "after": [
+            1390,
+            1550
+          ],
+          "changed": false
+        },
+        {
+          "n": 8,
+          "label": "RS-232",
+          "before": [
+            1120,
+            1320
+          ],
+          "after": [
+            1120,
+            1320
+          ],
+          "changed": false
+        },
+        {
+          "n": 9,
+          "label": "CONTROL 입력",
+          "before": [
+            2000,
+            2390
+          ],
+          "after": [
+            2000,
+            2390
+          ],
+          "changed": false
+        },
+        {
+          "n": 10,
+          "label": "LOGIC 출력",
+          "before": [
+            2000,
+            2390
+          ],
+          "after": [
+            2000,
+            2390
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "slug": "blu-50v2",
+      "imageSha256": "a7a02e2a291c7ad4122e987969c875802bdcc2cb5d67274fec7718b6272a21bd",
+      "markers": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1",
+          "before": [
+            1746,
+            1794
+          ],
+          "after": [
+            1842,
+            1941
+          ],
+          "changed": true
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 2",
+          "before": [
+            1680,
+            1728
+          ],
+          "after": [
+            1743,
+            1841
+          ],
+          "changed": true
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3",
+          "before": [
+            1614,
+            1662
+          ],
+          "after": [
+            1644,
+            1742
+          ],
+          "changed": true
+        },
+        {
+          "n": 4,
+          "label": "아날로그 입력 4",
+          "before": [
+            1548,
+            1596
+          ],
+          "after": [
+            1545,
+            1643
+          ],
+          "changed": true
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 1",
+          "before": [
+            1443,
+            1491
+          ],
+          "after": [
+            1420,
+            1518
+          ],
+          "changed": true
+        },
+        {
+          "n": 6,
+          "label": "아날로그 출력 2",
+          "before": [
+            1358,
+            1406
+          ],
+          "after": [
+            1321,
+            1419
+          ],
+          "changed": true
+        },
+        {
+          "n": 7,
+          "label": "아날로그 출력 3",
+          "before": [
+            1273,
+            1321
+          ],
+          "after": [
+            1221,
+            1320
+          ],
+          "changed": true
+        },
+        {
+          "n": 8,
+          "label": "아날로그 출력 4",
+          "before": [
+            1188,
+            1236
+          ],
+          "after": [
+            1120,
+            1220
+          ],
+          "changed": true
+        },
+        {
+          "n": 9,
+          "label": "BLU link 입력",
+          "before": [
+            524,
+            599
+          ],
+          "after": [
+            524,
+            599
+          ],
+          "changed": false
+        },
+        {
+          "n": 10,
+          "label": "BLU link 출력",
+          "before": [
+            524,
+            599
+          ],
+          "after": [
+            524,
+            599
+          ],
+          "changed": false
+        },
+        {
+          "n": 11,
+          "label": "CONTROL 입력",
+          "before": [
+            745,
+            895
+          ],
+          "after": [
+            745,
+            895
+          ],
+          "changed": false
+        },
+        {
+          "n": 12,
+          "label": "LOGIC 출력",
+          "before": [
+            745,
+            895
+          ],
+          "after": [
+            745,
+            895
+          ],
+          "changed": false
+        },
+        {
+          "n": 13,
+          "label": "RS-232",
+          "before": [
+            294,
+            384
+          ],
+          "after": [
+            294,
+            384
+          ],
+          "changed": false
+        },
+        {
+          "n": 14,
+          "label": "Ethernet·PoE+",
+          "before": [
+            86,
+            181
+          ],
+          "after": [
+            86,
+            181
+          ],
+          "changed": false
+        },
+        {
+          "n": 15,
+          "label": "DC 전원 입력",
+          "before": [
+            242,
+            337
+          ],
+          "after": [
+            242,
+            337
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "slug": "blu-dan",
+      "imageSha256": "d37b07e1e3633e1cd5d54cedf5a54fab2e1dca2c591984e80e7b186b9bd73748",
+      "markers": [
+        {
+          "n": 1,
+          "label": "Dante Primary",
+          "before": [
+            1760,
+            2070
+          ],
+          "after": [
+            1760,
+            2070
+          ],
+          "changed": false
+        },
+        {
+          "n": 2,
+          "label": "Dante Secondary",
+          "before": [
+            2170,
+            2490
+          ],
+          "after": [
+            2170,
+            2490
+          ],
+          "changed": false
+        },
+        {
+          "n": 3,
+          "label": "BLU link 입력",
+          "before": [
+            3180,
+            3470
+          ],
+          "after": [
+            3180,
+            3470
+          ],
+          "changed": false
+        },
+        {
+          "n": 4,
+          "label": "BLU link 출력",
+          "before": [
+            3180,
+            3470
+          ],
+          "after": [
+            3180,
+            3470
+          ],
+          "changed": false
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "before": [
+            2630,
+            2920
+          ],
+          "after": [
+            2630,
+            2920
+          ],
+          "changed": false
+        },
+        {
+          "n": 6,
+          "label": "RS-232",
+          "before": [
+            2110,
+            2480
+          ],
+          "after": [
+            2110,
+            2480
+          ],
+          "changed": false
+        }
+      ]
+    }
+  ]
+}

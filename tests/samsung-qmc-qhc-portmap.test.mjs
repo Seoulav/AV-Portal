@@ -5,6 +5,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { prepareEnhancements as publicPrepare } from '../beta/site/detail/detail-enhancements.mjs';
 import { prepareEnhancements as prototypePrepare } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { portMapGeometry } from '../prototype/brc-am7/detail-enhancement-view.mjs';
+import { beforeBssAlignment, beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const dataDir = new URL('beta/site/detail/data/', root);
@@ -71,12 +72,12 @@ test('other 235 product JSON and all 51 unchanged maps keep their baseline conte
   const mapHash = createHash('sha256');
   let maps = 0;
   for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json')).sort()) {
-    const source = readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n');
+    const source = beforeBssAlignmentRaw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'),file.slice(0,-5));
     const current = JSON.parse(source);
     if (!selected.has(file.slice(0, -5))) otherHash.update(file).update('\0').update(source);
     if (current.portMap && !selected.has(file.slice(0, -5))) {
       maps++;
-      mapHash.update(file).update('\0').update(JSON.stringify(current.portMap));
+      mapHash.update(file).update('\0').update(JSON.stringify(beforeBssAlignment(current,file.slice(0,-5)).portMap));
       assert.ok(publicPrepare(current).portMap && prototypePrepare(current).portMap, file);
     }
   }
