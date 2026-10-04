@@ -14,6 +14,7 @@ import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.
 import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
 import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
 import { distributorLinks, isHarmanManufacturer } from './distributor-links.mjs';
+import { verifyPdfLock } from './pdf-lock.mjs';
 
 const site = new URL('./site/', import.meta.url);
 const uploadManifest = JSON.parse(await readFile(new URL('docs/manifest.json', site), 'utf8'));
@@ -44,6 +45,13 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
   const expectedFiles = [...new Set([...manualFiles, ...referenceFiles, ...uploadManifest.uploads.map(entry => entry.file.replace(/^manuals\//, ''))])];
   assert.deepEqual(onDisk.sort(), expectedFiles.sort(), '업로드 매뉴얼·참고자료 폴더와 목록이 다름');
+  const lockLabels = new Map();
+  for (const entry of uploadManifest.uploads) {
+    assert.ok(entry.locked === undefined || entry.locked === true, `${entry.file}: locked는 true 또는 생략만 허용`);
+    const file = entry.file.replace(/^manuals\//, '');
+    if (lockLabels.has(file)) assert.equal(lockLabels.get(file), entry.locked === true, `${file}: 제품별 locked 표시 불일치`);
+    lockLabels.set(file, entry.locked === true);
+  }
   for (const entry of [...userManuals, ...userReferences]) {
     assert.match(entry.file, /^[a-z0-9-]+\.pdf$/, `${entry.product}: 업로드 파일명`);
     assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.product}: 업로드 자료 제목`);
@@ -52,6 +60,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
     const bytes = await readFile(new URL(file, manualsDir));
     assert.ok(bytes.length > 1_000, `${file}: 업로드 파일이 비정상적으로 작음`);
     assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', `${file}: PDF 형식 아님`);
+    await verifyPdfLock(file, lockLabels.get(file), bytes);
   }
 }
 const detail = new URL('detail/', site);

@@ -6,6 +6,8 @@
 .pdf-tools { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
 .pdf-tools button, .pdf-link { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; border: 0; border-radius: 18px; background: #f0f4fa; color: #35506f; font-family: inherit; font-size: 12px; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; padding: 0 10px; }
 .pdf-tools button:disabled { opacity: .4; cursor: default; }
+.pdf-link[aria-disabled="true"] { opacity: .4; cursor: default; }
+.pdf-link[hidden] { display: none; }
 .pdf-tools button:focus-visible, .pdf-link:focus-visible, .pdf-page-input:focus-visible { outline: 2px solid #007aff; outline-offset: 2px; }
 .pdf-page-input { width: 48px; min-height: 34px; border: 1px solid #dce4ee; border-radius: 9px; text-align: center; font-size: 12px; }
 .pdf-page-total, .pdf-zoom-level { font-size: 12px; min-width: 32px; text-align: center; }

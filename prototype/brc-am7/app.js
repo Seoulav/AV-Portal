@@ -144,15 +144,23 @@ if (!productKey && !allowContentFallback) {
       container.append(safeLink(action.url, labels.primary, 'pg-btn'));
       return;
     }
+    const showDocument = trigger => pdfViewer.open({
+      file: action.file, title: item.title ?? item.label, sourceUrl: action.sourceUrl,
+      locked: action.locked === true, trigger
+    });
     const open = element('button', 'pg-btn', labels.primary);
     open.type = 'button';
     open.dataset.pdfOpen = 'true';
-    open.addEventListener('click', () => pdfViewer.open({
-      file: action.file, title: item.title ?? item.label, sourceUrl: action.sourceUrl, trigger: open
-    }));
-    const download = element('a', 'pg-btn', labels.download);
-    download.href = action.file;
-    download.download = action.file.split('/').at(-1);
+    open.addEventListener('click', () => showDocument(open));
+    const download = element(action.locked ? 'button' : 'a', 'pg-btn', labels.download);
+    if (action.locked) {
+      download.type = 'button';
+      download.title = '비밀번호로 문서를 연 뒤 내려받을 수 있습니다.';
+      download.addEventListener('click', () => showDocument(download));
+    } else {
+      download.href = action.file;
+      download.download = action.file.split('/').at(-1);
+    }
     if (header) download.setAttribute('aria-label', labels.downloadAria);
     container.append(open, download);
   }
