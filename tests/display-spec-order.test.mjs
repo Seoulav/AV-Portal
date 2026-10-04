@@ -3,12 +3,13 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import * as model from '../prototype/brc-am7/product-detail-model.mjs';
+import {beforeSamsungW04011} from './samsung-w04011-history.mjs';
 import {beforeBssW04015Raw} from './bss-w04015-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const folder=new URL('beta/site/detail/data/',root);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-013-evidence.json',root),'utf8'));
-const read=slug=>JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8'));
+const read=slug=>beforeSamsungW04011(JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug);
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const normalized=text=>text.replace(/\r\n/g,'\n');
 const physicalSize=name=>/^크기\([^)]*가로x높이x깊이\)$/.test(name);

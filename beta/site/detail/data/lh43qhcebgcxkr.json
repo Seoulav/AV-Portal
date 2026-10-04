@@ -436,6 +436,15 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player 지원",
+      "value": "있음",
+      "unit": "",
+      "condition": "별도 구매 서비스",
+      "source": "U1",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -553,7 +562,7 @@
       "code": "P",
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH43QHCEBGCXKR/",
-      "scope": "국내 모델 LH43QHCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 전문가 모드: 프로페셔널 모드 내장 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형 / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+      "scope": "국내 모델 LH43QHCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 영상 처리 엔진: 지능형 UHD 업스케일링 지원 / 전문가 모드: 프로페셔널 모드 내장 / 제품 두께: 삼성 UHD 사이니지 시리즈 중 최박형 / VESA 마운트: 세로 모드 안전 장착을 위한 중앙 하중 분산 설계 / 베젤 구조: 삼성 기존 UHD 사이니지 모델과의 비교 기준"
     },
     {
       "code": "S3",
@@ -569,6 +578,11 @@
       "code": "M1",
       "name": "삼성전자 한글 사용설명서 BN81-24537G-14 (사용자 제공)",
       "scope": "적용 모델 QH43C·QM43C·QH75C·QM85C·QM98C · 단자 설명 20쪽 · SHA-256 b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3 · 원본은 게시하지 않음"
+    },
+    {
+      "code": "U1",
+      "name": "사용자 현장 확인(2026-10-04) — VXT Player 지원 여부",
+      "scope": "사용자 현장 확인(2026-10-04): lh32qmcebgcxkr, lh43qmcebgcxkr, lh85qmcebgcxkr, lh98qmcebgcxkr, lh43qhcebgcxkr, lh75qhcebgcxkr, lh115qhfebgxkr의 VXT Player 지원 있음(별도 구매 서비스), lh55vhcrbgbxkr, lh55vmcrbgbxkr의 직접 지원 없음(별도 셋탑박스 필요). 삼성 한글 매뉴얼 두 권 총 242쪽에는 VXT 언급 없음. 제조사 매뉴얼 검증이 아닌 사용자 현장 확인으로 FOUND."
     }
   ],
   "issues": [
