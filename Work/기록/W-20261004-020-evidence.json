@@ -1,0 +1,1314 @@
+{
+  "workId": "W-20261004-020",
+  "baseSha": "ae358d1be890240f2baeaf546ea184bf011921ea",
+  "measurement": {
+    "method": "Chromium canvas grayscale scan of published WebP, icon x 35..114, luminance <140, discard isolated runs under 4px and short outer border bands, tolerance 8px"
+  },
+  "manual": {
+    "file": "beta/site/manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+    "page": 15,
+    "model": "QH115FX",
+    "sha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc"
+  },
+  "crop": {
+    "sourcePage": 15,
+    "renderScale": 4.5,
+    "x": 166,
+    "y": 495,
+    "width": 318,
+    "height": 1375,
+    "webpQuality": 0.95,
+    "file": "beta/site/detail/images/lh115qhfebgxkr-diagram.webp",
+    "sha256": "f7e81af74ec54e29262cff3c38ffe214d613ad3903f30e5cf226c7efe10072e8"
+  },
+  "sharedDiagramSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+  "labelDescSha256": "6efdeff673bef36f69c6859ea400b7f02eb77d06f6fd00ebdccfd28f4068b6cd",
+  "products": {
+    "lh43qmcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            83,
+            157
+          ],
+          "after": [
+            79,
+            154
+          ],
+          "measured": [
+            79,
+            154
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            226,
+            303
+          ],
+          "after": [
+            228,
+            300
+          ],
+          "measured": [
+            228,
+            300
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            360,
+            384
+          ],
+          "after": [
+            360,
+            381
+          ],
+          "measured": [
+            360,
+            381
+          ]
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "before": [
+            409,
+            486
+          ],
+          "after": [
+            434,
+            520
+          ],
+          "measured": [
+            434,
+            520
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            533,
+            620
+          ],
+          "after": [
+            568,
+            652
+          ],
+          "measured": [
+            568,
+            652
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "before": [
+            672,
+            759
+          ],
+          "after": [
+            706,
+            790
+          ],
+          "measured": [
+            706,
+            790
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "before": [
+            810,
+            898
+          ],
+          "after": [
+            845,
+            929
+          ],
+          "measured": [
+            845,
+            929
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            963,
+            1045
+          ],
+          "after": [
+            991,
+            1051
+          ],
+          "measured": [
+            991,
+            1051
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            1086,
+            1115
+          ],
+          "after": [
+            1120,
+            1141
+          ],
+          "measured": [
+            1120,
+            1141
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            1173,
+            1203
+          ],
+          "after": [
+            1212,
+            1233
+          ],
+          "measured": [
+            1212,
+            1233
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            1267,
+            1304
+          ],
+          "after": [
+            1303,
+            1324
+          ],
+          "measured": [
+            1303,
+            1324
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1420
+      ]
+    },
+    "lh85qmcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            83,
+            157
+          ],
+          "after": [
+            79,
+            154
+          ],
+          "measured": [
+            79,
+            154
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            226,
+            303
+          ],
+          "after": [
+            228,
+            300
+          ],
+          "measured": [
+            228,
+            300
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            360,
+            384
+          ],
+          "after": [
+            360,
+            381
+          ],
+          "measured": [
+            360,
+            381
+          ]
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "before": [
+            409,
+            486
+          ],
+          "after": [
+            434,
+            520
+          ],
+          "measured": [
+            434,
+            520
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            533,
+            620
+          ],
+          "after": [
+            568,
+            652
+          ],
+          "measured": [
+            568,
+            652
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "before": [
+            672,
+            759
+          ],
+          "after": [
+            706,
+            790
+          ],
+          "measured": [
+            706,
+            790
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "before": [
+            810,
+            898
+          ],
+          "after": [
+            845,
+            929
+          ],
+          "measured": [
+            845,
+            929
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            963,
+            1045
+          ],
+          "after": [
+            991,
+            1051
+          ],
+          "measured": [
+            991,
+            1051
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            1086,
+            1115
+          ],
+          "after": [
+            1120,
+            1141
+          ],
+          "measured": [
+            1120,
+            1141
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            1173,
+            1203
+          ],
+          "after": [
+            1212,
+            1233
+          ],
+          "measured": [
+            1212,
+            1233
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            1267,
+            1304
+          ],
+          "after": [
+            1303,
+            1324
+          ],
+          "measured": [
+            1303,
+            1324
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1420
+      ]
+    },
+    "lh98qmcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            83,
+            157
+          ],
+          "after": [
+            79,
+            154
+          ],
+          "measured": [
+            79,
+            154
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            226,
+            303
+          ],
+          "after": [
+            228,
+            300
+          ],
+          "measured": [
+            228,
+            300
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            360,
+            384
+          ],
+          "after": [
+            360,
+            381
+          ],
+          "measured": [
+            360,
+            381
+          ]
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "before": [
+            409,
+            486
+          ],
+          "after": [
+            434,
+            520
+          ],
+          "measured": [
+            434,
+            520
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            533,
+            620
+          ],
+          "after": [
+            568,
+            652
+          ],
+          "measured": [
+            568,
+            652
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "before": [
+            672,
+            759
+          ],
+          "after": [
+            706,
+            790
+          ],
+          "measured": [
+            706,
+            790
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "before": [
+            810,
+            898
+          ],
+          "after": [
+            845,
+            929
+          ],
+          "measured": [
+            845,
+            929
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            963,
+            1045
+          ],
+          "after": [
+            991,
+            1051
+          ],
+          "measured": [
+            991,
+            1051
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            1086,
+            1115
+          ],
+          "after": [
+            1120,
+            1141
+          ],
+          "measured": [
+            1120,
+            1141
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            1173,
+            1203
+          ],
+          "after": [
+            1212,
+            1233
+          ],
+          "measured": [
+            1212,
+            1233
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            1267,
+            1304
+          ],
+          "after": [
+            1303,
+            1324
+          ],
+          "measured": [
+            1303,
+            1324
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1420
+      ]
+    },
+    "lh43qhcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            83,
+            157
+          ],
+          "after": [
+            79,
+            154
+          ],
+          "measured": [
+            79,
+            154
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            226,
+            303
+          ],
+          "after": [
+            228,
+            300
+          ],
+          "measured": [
+            228,
+            300
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            360,
+            384
+          ],
+          "after": [
+            360,
+            381
+          ],
+          "measured": [
+            360,
+            381
+          ]
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "before": [
+            409,
+            486
+          ],
+          "after": [
+            434,
+            520
+          ],
+          "measured": [
+            434,
+            520
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            533,
+            620
+          ],
+          "after": [
+            568,
+            652
+          ],
+          "measured": [
+            568,
+            652
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "before": [
+            672,
+            759
+          ],
+          "after": [
+            706,
+            790
+          ],
+          "measured": [
+            706,
+            790
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "before": [
+            810,
+            898
+          ],
+          "after": [
+            845,
+            929
+          ],
+          "measured": [
+            845,
+            929
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            963,
+            1045
+          ],
+          "after": [
+            991,
+            1051
+          ],
+          "measured": [
+            991,
+            1051
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            1086,
+            1115
+          ],
+          "after": [
+            1120,
+            1141
+          ],
+          "measured": [
+            1120,
+            1141
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            1173,
+            1203
+          ],
+          "after": [
+            1212,
+            1233
+          ],
+          "measured": [
+            1212,
+            1233
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            1267,
+            1304
+          ],
+          "after": [
+            1303,
+            1324
+          ],
+          "measured": [
+            1303,
+            1324
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1420
+      ]
+    },
+    "lh75qhcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            83,
+            157
+          ],
+          "after": [
+            79,
+            154
+          ],
+          "measured": [
+            79,
+            154
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            226,
+            303
+          ],
+          "after": [
+            228,
+            300
+          ],
+          "measured": [
+            228,
+            300
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            360,
+            384
+          ],
+          "after": [
+            360,
+            381
+          ],
+          "measured": [
+            360,
+            381
+          ]
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "before": [
+            409,
+            486
+          ],
+          "after": [
+            434,
+            520
+          ],
+          "measured": [
+            434,
+            520
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            533,
+            620
+          ],
+          "after": [
+            568,
+            652
+          ],
+          "measured": [
+            568,
+            652
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "before": [
+            672,
+            759
+          ],
+          "after": [
+            706,
+            790
+          ],
+          "measured": [
+            706,
+            790
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "before": [
+            810,
+            898
+          ],
+          "after": [
+            845,
+            929
+          ],
+          "measured": [
+            845,
+            929
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            963,
+            1045
+          ],
+          "after": [
+            991,
+            1051
+          ],
+          "measured": [
+            991,
+            1051
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            1086,
+            1115
+          ],
+          "after": [
+            1120,
+            1141
+          ],
+          "measured": [
+            1120,
+            1141
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            1173,
+            1203
+          ],
+          "after": [
+            1212,
+            1233
+          ],
+          "measured": [
+            1212,
+            1233
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            1267,
+            1304
+          ],
+          "after": [
+            1303,
+            1324
+          ],
+          "measured": [
+            1303,
+            1324
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1420
+      ]
+    },
+    "lh32qmcebgcxkr": {
+      "beforeImage": "Diagram",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            106,
+            176
+          ],
+          "after": [
+            106,
+            176
+          ],
+          "measured": [
+            104,
+            179
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            254,
+            324
+          ],
+          "after": [
+            254,
+            324
+          ],
+          "measured": [
+            253,
+            327
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            382,
+            405
+          ],
+          "after": [
+            382,
+            405
+          ],
+          "measured": [
+            384,
+            405
+          ]
+        },
+        {
+          "n": 4,
+          "label": "RS-232C 입력",
+          "before": [
+            477,
+            500
+          ],
+          "after": [
+            477,
+            500
+          ],
+          "measured": [
+            478,
+            498
+          ]
+        },
+        {
+          "n": 5,
+          "label": "RS-232C 출력",
+          "before": [
+            568,
+            591
+          ],
+          "after": [
+            568,
+            591
+          ],
+          "measured": [
+            570,
+            591
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            646,
+            728
+          ],
+          "after": [
+            646,
+            728
+          ],
+          "measured": [
+            643,
+            727
+          ]
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 2",
+          "before": [
+            784,
+            867
+          ],
+          "after": [
+            784,
+            867
+          ],
+          "measured": [
+            780,
+            864
+          ]
+        },
+        {
+          "n": 8,
+          "label": "HDMI 입력 1",
+          "before": [
+            920,
+            1008
+          ],
+          "after": [
+            920,
+            1008
+          ],
+          "measured": [
+            919,
+            1003
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RJ45 (LAN)",
+          "before": [
+            1133,
+            1207
+          ],
+          "after": [
+            1128,
+            1188
+          ],
+          "measured": [
+            1128,
+            1188
+          ]
+        },
+        {
+          "n": 10,
+          "label": "IR 입력",
+          "before": [
+            1283,
+            1319
+          ],
+          "after": [
+            1286,
+            1306
+          ],
+          "measured": [
+            1286,
+            1306
+          ]
+        }
+      ],
+      "measuredImage": [
+        290,
+        1480
+      ]
+    },
+    "lh115qhfebgxkr": {
+      "beforeImage": "Rear",
+      "afterImage": "Diagram",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "before": [
+            65,
+            112
+          ],
+          "after": [
+            60,
+            141
+          ],
+          "measured": [
+            60,
+            141
+          ]
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "before": [
+            148,
+            193
+          ],
+          "after": [
+            176,
+            257
+          ],
+          "measured": [
+            176,
+            257
+          ]
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "before": [
+            214,
+            244
+          ],
+          "after": [
+            306,
+            328
+          ],
+          "measured": [
+            306,
+            328
+          ]
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 3 (ARC)",
+          "before": [
+            269,
+            316
+          ],
+          "after": [
+            401,
+            492
+          ],
+          "measured": [
+            401,
+            492
+          ]
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "before": [
+            351,
+            400
+          ],
+          "after": [
+            535,
+            626
+          ],
+          "measured": [
+            535,
+            626
+          ]
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 1",
+          "before": [
+            453,
+            499
+          ],
+          "after": [
+            670,
+            760
+          ],
+          "measured": [
+            670,
+            760
+          ]
+        },
+        {
+          "n": 7,
+          "label": "DisplayPort 입력",
+          "before": [
+            533,
+            584
+          ],
+          "after": [
+            839,
+            932
+          ],
+          "measured": [
+            839,
+            932
+          ]
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "before": [
+            595,
+            648
+          ],
+          "after": [
+            973,
+            1038
+          ],
+          "measured": [
+            973,
+            1038
+          ]
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "before": [
+            660,
+            690
+          ],
+          "after": [
+            1121,
+            1144
+          ],
+          "measured": [
+            1121,
+            1144
+          ]
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "before": [
+            706,
+            735
+          ],
+          "after": [
+            1200,
+            1222
+          ],
+          "measured": [
+            1200,
+            1222
+          ]
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "before": [
+            749,
+            780
+          ],
+          "after": [
+            1278,
+            1301
+          ],
+          "measured": [
+            1278,
+            1301
+          ]
+        }
+      ],
+      "measuredImage": [
+        318,
+        1375
+      ]
+    }
+  }
+}

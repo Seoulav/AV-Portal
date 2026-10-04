@@ -1,11 +1,13 @@
 // Earlier batch tests compare their own immutable product snapshots. Undo only
 // the six W-20261004-017 Diagram images and maps before reconstructing them.
+import {beforeSamsungW04020, beforeSamsungW04020Raw} from './samsung-w04020-history.mjs';
 const slugs = new Set([
   'lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh85qmcebgcxkr',
   'lh98qmcebgcxkr', 'lh43qhcebgcxkr', 'lh75qhcebgcxkr',
 ]);
 
 export function beforeSamsungW04017(product, slug) {
+  product = beforeSamsungW04020(product, slug);
   if (!slugs.has(slug) || product.portMap?.image !== 'Diagram') return product;
   const earlier = structuredClone(product);
   earlier.images = earlier.images.filter(image => image.role !== 'Diagram');
@@ -15,6 +17,7 @@ export function beforeSamsungW04017(product, slug) {
 }
 
 export function beforeSamsungW04017Raw(raw, slug) {
+  raw = beforeSamsungW04020Raw(raw, slug);
   if (!slugs.has(slug)) return raw;
   const product = JSON.parse(raw);
   if (product.portMap?.image !== 'Diagram') return raw;

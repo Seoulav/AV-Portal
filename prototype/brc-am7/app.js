@@ -313,11 +313,13 @@ if (!productKey && !allowContentFallback) {
     for (const type of ['pointerleave', 'pointerup', 'pointercancel']) wrap.addEventListener(type, () => { loupe.hidden = true; });
   }
   attachLoupe($('#dialog-image-wrap'), $('#dialog-loupe'), () => {
+    if (data.images[selectedImage]?.role === 'Diagram') return null;
     const image = $('#dialog-image');
     return image.complete && image.naturalWidth ? {rect: image.getBoundingClientRect(), src: image.src} : null;
   });
   dialog.addEventListener('close', () => { $('#dialog-loupe').hidden = true; });
   attachLoupe(featured.parentElement, $('#port-map-loupe'), () => {
+    if (data.images[selectedImage]?.role === 'Diagram') return null;
     if (!featured.parentElement.classList.contains('map-active') || !featured.complete || !featured.naturalWidth) return null;
     const svg = $('#port-map-layer svg');
     const image = $('#port-map-layer svg image');
