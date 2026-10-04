@@ -35,6 +35,8 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .detail-cards.is-packed > .pg-card { position: absolute; }
 .detail-cards .pg-card { min-width: 0; }
 .detail-cards .pg-card h2 { margin-bottom: 16px; }
+#gallery-title { flex-wrap: wrap; }
+#gallery-basis { white-space: nowrap; }
 .overview-summary { color: var(--pg-ink-2); font-size: 15px; line-height: 1.6; white-space: pre-line; }
 .category-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
 .pg-facts[hidden] { display: none; }
@@ -177,6 +179,10 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .port-map-ports { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
 .port-map-port { background: var(--pg-field-fill); border-radius: 13px; padding: 10px 12px; font-size: 12px; color: var(--pg-ink-2); line-height: 1.45; overflow-wrap: anywhere; }
 .port-map-port b { display: flex; gap: 7px; align-items: center; font-size: 13px; color: var(--pg-ink); margin-bottom: 3px; }
+.port-map-port small { display: block; margin-top: 4px; font-size: 11px; overflow-wrap: anywhere; }
+.port-map-port .port-direction { color: var(--pg-accent-2); font-weight: 700; }
+.port-map-port .port-flag { color: #805000; }
+.port-map-port .state { display: inline-block; margin-top: 6px; }
 .port-map-n { flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--pg-accent); color: #fff; font-size: 10.5px; font-weight: 700; display: grid; place-items: center; }
 @media (max-width: 720px) { .port-map-ports { grid-template-columns: 1fr 1fr; } }
 .signal-flow { width: 100%; min-width: 0; }

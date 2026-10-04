@@ -47,7 +47,8 @@ test('invalid flow references, missing evidence and invalid crosspoints fall bac
     const p = sample(); mutate(p);
     assert.ok(enhancementErrors(p).includes('Invalid optional detail field: signalFlow'), mutate.toString());
     assert.equal(prepareEnhancements(p).signalFlow, null);
-    assert.equal(selectCardModes(p, prepareEnhancements(p)).io, 'io');
+    assert.equal(selectCardModes(p, prepareEnhancements(p)).io, null);
+    assert.equal(selectCardModes(p, prepareEnhancements(p)).gallery, 'io-fallback');
   }
 });
 test('matrix axis captions use explicit tags rather than invented port numbers', () => {

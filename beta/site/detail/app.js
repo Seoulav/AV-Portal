@@ -1,6 +1,6 @@
-import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-001-rtcom';
-import { portMapImageMatches } from './detail-enhancements.mjs?v=w20261001-001-map-review';
-import { prepareProductDetail, visibleDetailCards, connectorSignalTone, connectorPresentation, isAbsentConnector } from './product-detail-model.mjs?v=w20261004-002-overview';
+import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-009-port-merge';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-009-port-merge';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries } from './product-detail-model.mjs?v=w20261004-009-port-merge';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -57,6 +57,7 @@ if (!productKey) {
   }
 
   const enhancements = data.enhancements;
+  const section03Content = selectSection03Content(enhancements);
   document.title = `${data.manufacturer} ${data.model} · AV Portal Product Detail`;
   for (const [selector, value] of [
     ['meta[name="description"]', data.english],
@@ -195,6 +196,11 @@ if (!productKey) {
   const imageBase = data.presentation.imageBase ?? './images/';
   const featured = $('#featured-image');
   const dialog = $('#image-dialog');
+  const galleryBasis = $('#gallery-basis');
+  if (!enhancements.portMap && data.io.length) {
+    galleryBasis.textContent = '— 입출력 표 기준';
+    galleryBasis.hidden = false;
+  }
   function selectImage(index) {
     const image = data.images[index];
     if (!image) return;
@@ -214,7 +220,6 @@ if (!productKey) {
   function updatePortMap() {
     const map = enhancements.portMap;
     const layer = $('#port-map-layer');
-    $('#gallery-title').lastChild.textContent = '제품 사진';
     layer.replaceChildren();
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
@@ -222,6 +227,7 @@ if (!productKey) {
     const matches = map && data.images[selectedImage]?.role === map.image && featured.complete && featured.naturalWidth && !featured.hidden && portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map);
     photoStage.classList.toggle('map-active', Boolean(matches));
     if (!matches) {
+      if (map) galleryBasis.hidden = true;
       scroll.tabIndex = -1;
       $('#port-map-scroll-hint').hidden = true;
       return;
@@ -231,7 +237,8 @@ if (!productKey) {
     layer.append(renderPortMap({ ...map, items: valid }, featured, data.model));
     $('#port-map-list').append(renderPortMapCards(valid));
     $('#port-map-list').hidden = false;
-    $('#gallery-title').lastChild.textContent = 'Port Map';
+    galleryBasis.textContent = '— 실제 제품 사진 기준';
+    galleryBasis.hidden = false;
     scroll.tabIndex = scroll.scrollWidth > scroll.clientWidth ? 0 : -1;
     scroll.setAttribute('aria-label', scroll.tabIndex === 0 ? '제품 단자 지도 · 좌우 방향키로 이동' : '제품 단자 지도');
     $('#port-map-scroll-hint').hidden = scroll.tabIndex !== 0;
@@ -245,7 +252,7 @@ if (!productKey) {
   featured.addEventListener('load', updatePortMap);
   window.addEventListener('resize', updatePortMap);
   featured.addEventListener('error', () => {
-    $('#gallery-title').lastChild.textContent = '제품 사진';
+    if (enhancements.portMap) galleryBasis.hidden = true;
     $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;
     featured.hidden = true;
     $('#image-missing').hidden = false;
@@ -260,6 +267,7 @@ if (!productKey) {
   }
   $('#thumbnails').hidden = data.images.length < 2;
   if (data.images.length) selectImage(enhancements.portMap ? data.images.findIndex(i => i.role === enhancements.portMap.image) : 0);
+  else { $('#image-missing').hidden = false; $('#zoom-button').disabled = true; }
   $('#zoom-button').addEventListener('click', () => {
     if (!featured.complete || !featured.naturalWidth) return;
     zoomOpener = $('#zoom-button');
@@ -292,35 +300,13 @@ if (!productKey) {
   for (const type of ['pointerleave', 'pointerup', 'pointercancel']) loupeWrap.addEventListener(type, () => { loupe.hidden = true; });
   dialog.addEventListener('close', () => { loupe.hidden = true; });
 
-  const rear = data.rearIndex >= 0 ? data.images[data.rearIndex] : null;
-  if (rear) {
-    $('#rear-connector-panel').hidden = false;
-    const rearImage = $('#rear-connector-image');
-    rearImage.addEventListener('load', () => {
-      const mapped = enhancements.portMap?.image === 'Rear' && portMapImageMatches(rear, rearImage.naturalWidth, rearImage.naturalHeight, enhancements.portMap);
-      $('#rear-connector-panel').hidden = Boolean(mapped || enhancements.signalFlow);
-    });
-    rearImage.src = imageBase + rear.file;
-    $('#rear-connector-image').alt = `${data.manufacturer} ${data.model} 후면 연결 단자 이미지`;
-    $('#rear-connector-image').addEventListener('error', () => { $('#rear-connector-panel').hidden = true; });
-    if (rear.sourceUrl) $('#rear-connector-source').href = safeLink(rear.sourceUrl, '').href;
-    else $('#rear-connector-source').hidden = true;
+  const presentConnectors = prepareIoFallbackEntries(data.io);
+  if (!enhancements.portMap && data.io.length) {
+    $('#io-fallback').append(renderIoFallbackCards(presentConnectors));
+    $('#io-fallback').hidden = false;
+    galleryBasis.textContent = `— 입출력 표 기준 · ${presentConnectors.length}개 연결 항목`;
   }
-  $('#io-count').textContent = `${data.io.length - data.absentConnectors.length}개 연결 항목`;
   for (const group of data.connectorGroups) for (const item of group.entries) {
-    if (!isAbsentConnector(item)) {
-      const port = element('div', 'pg-port');
-      port.dataset.signal = connectorSignalTone(item);
-      port.append(element('strong', '', item.displayConnector));
-      port.append(element('span', 'port-direction', item.portCount === '미확인' ? item.directionLabel : [item.directionLabel, `포트 ${item.portCount}`].join(' · ')));
-      port.append(element('small', '', item.channelSignal));
-      const condition = element('small', 'port-condition', item.specificationCondition === '—' ? '' : item.specificationCondition);
-      if (condition.textContent) port.append(condition);
-      for (const flag of item.flags) port.append(element('small', 'port-flag', flag));
-      if (item.verification === 'CONFLICTED') port.append(badge(item.verification));
-      $('#port-grid').append(port);
-    }
-
     const row = element('tr');
     const name = element('td', '', item.displayConnector);
     for (const flag of item.flags) name.append(element('small', 'port-flag', flag));
@@ -337,16 +323,13 @@ if (!productKey) {
       element('span', '', data.absentConnectors.map(item => connectorPresentation(item).displayConnector).join(' · ')),
       element('p', '', '제조사 사양표 기준')
     );
-    $('#io-table-details').before(notice);
+    $('#io-records').append(notice);
   }
 
-  if (enhancements.signalFlow) {
-    $('#io-title').replaceChildren(element('span', 'pg-idx', '03'), document.createTextNode('Signal Flow'));
-    $('#rear-connector-panel').hidden = true;
-    $('#port-grid').hidden = true;
-    $('#io').append(renderSignalFlow(enhancements.signalFlow, data.model));
-    $('#io-records').append($('#io-table-details'));
-    $('#io-table-details').hidden = !data.io.length;
+  $('#io-records').append($('#io-table-details'));
+  $('#io-table-details').hidden = !data.io.length;
+  if (section03Content?.type === 'signal-flow') {
+    $('#io').append(renderSignalFlow(section03Content.flow, data.model));
   }
   for (const [index, setting] of enhancements.settings.entries()) $('.detail-cards').append(renderSetting(setting, index + 6));
 

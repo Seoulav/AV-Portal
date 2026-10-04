@@ -103,9 +103,17 @@ export function prepareEnhancements(product) {
     settings: valid.settings ? product.settings : []
   };
 }
+// Section 03 can gain another content type (for example, a manual diagram)
+// without tying card visibility to the presence of signalFlow itself.
+export function selectSection03Content(enhancements = {}) {
+  return enhancements.signalFlow ? { type: 'signal-flow', flow: enhancements.signalFlow } : null;
+}
 export function selectCardModes(product, enhancements) {
-  return { gallery: enhancements.portMap ? 'port-map' : product.images?.length ? 'gallery' : null,
-    io: enhancements.signalFlow ? 'signal-flow' : product.io?.length ? 'io' : null };
+  const section03 = selectSection03Content(enhancements);
+  return {
+    gallery: enhancements.portMap ? 'port-map' : product.io?.length ? 'io-fallback' : product.images?.length ? 'gallery' : null,
+    io: section03?.type ?? null
+  };
 }
 export function portMarkerPercent(item, naturalWidth) {
   if (!Number.isFinite(naturalWidth) || naturalWidth <= 0 || !Number.isFinite(item.x1) || !Number.isFinite(item.x2) || item.x1 < 0 || item.x2 <= item.x1 || item.x2 > naturalWidth) return null;

@@ -23,7 +23,7 @@ test('unverified original-to-published pixel conversion cannot create a port map
 });
 test('optional cards fall back without changing original data', () => {
   const original = structuredClone(base);
-  assert.deepEqual(selectCardModes(base, prepareEnhancements(base)), { gallery: 'gallery', io: 'io' });
+  assert.deepEqual(selectCardModes(base, prepareEnhancements(base)), { gallery: 'io-fallback', io: null });
   assert.deepEqual(selectCardModes({}, prepareEnhancements({})), { gallery: null, io: null });
   assert.deepEqual(prepareEnhancements({ keyFacts: [{ label: 'A', value: '2', unit: '개' }] }).keyFacts, []);
   assert.deepEqual(base, original);

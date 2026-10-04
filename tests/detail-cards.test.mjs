@@ -18,7 +18,7 @@ test('detail template reserves 06/07 for optional settings and keeps unnumbered 
 test('visible cards follow actual content and preserve their fixed numbers', () => {
   const minimal = { korean: '설명', overview: '', images: [], io: [], specifications: [], features: [], relatedProducts: [], quickDocuments: [], additionalDocuments: [] };
   assert.deepEqual(detailModel.visibleDetailCards(minimal), ['overview']);
-  assert.deepEqual(detailModel.visibleDetailCards({ ...minimal, images: [{ role: 'Front' }], io: [{ connector: 'HDMI' }], features: [{ text: '기능' }] }), ['overview', 'gallery', 'io', 'features']);
+  assert.deepEqual(detailModel.visibleDetailCards({ ...minimal, images: [{ role: 'Front' }], io: [{ connector: 'HDMI' }], features: [{ text: '기능' }] }), ['overview', 'gallery', 'features']);
 });
 
 test('connector tone uses explicit signal or protocol, never connector shape', () => {

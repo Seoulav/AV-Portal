@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
+import { renderIoFallbackCards } from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
 import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
@@ -14,13 +15,20 @@ const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('
 const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 
 test('connector cards show direction alone when port count is unknown, while the full table retains it', () => {
-  const badge = app.match(/port\.append\(element\('span', 'port-direction', (.+)\)\);/);
-  assert.ok(badge, 'the card badge expression must exist');
-  const render = new Function('item', `return (${badge[1]});`);
-  for (const directionLabel of ['입력', '출력', '양방향']) {
-    assert.equal(render({ directionLabel, portCount: '미확인' }), directionLabel);
-  }
-  assert.equal(render({ directionLabel: '입력', portCount: '3' }), '입력 · 포트 3');
+  assert.match(app, /renderIoFallbackCards\(presentConnectors\)/);
+  const originalDocument = globalThis.document;
+  globalThis.document = {
+    createElement: () => ({ className: '', children: [], append(...nodes) { this.children.push(...nodes); }, textContent: '' }),
+    createTextNode: text => ({ textContent: text })
+  };
+  try {
+    const render = (directionLabel, portCount) => renderIoFallbackCards([{
+      displayConnector: 'HDMI', directionLabel, portCount, channelSignal: '영상',
+      specificationCondition: '—', flags: []
+    }]).children[0].children[1].textContent;
+    for (const directionLabel of ['입력', '출력', '양방향']) assert.equal(render(directionLabel, '미확인'), directionLabel);
+    assert.equal(render('입력', '3'), '입력 · 포트 3');
+  } finally { globalThis.document = originalDocument; }
   assert.match(app, /element\('td', '', item\.portCount\)/);
   assert.equal(connectorPresentation({ connector: 'RS-232C 입력', quantity: '' }).portCount, '미확인');
 });

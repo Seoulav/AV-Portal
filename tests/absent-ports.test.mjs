@@ -52,8 +52,8 @@ test('B: only availability-absent ports leave cards; functional limits remain', 
   // Eight condition notes, one GSM4212P note, and three U800F satellite limits.
   assert.equal(functional, 12);
   const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
-  assert.match(app, /data\.io\.length - data\.absentConnectors\.length/);
-  assert.match(app, /if \(!isAbsentConnector\(item\)\)/);
+  assert.match(app, /prepareIoFallbackEntries\(data\.io\)/);
+  assert.match(app, /presentConnectors\.length/);
   assert.match(app, /이 모델에 없는 단자/);
   assert.match(app, /제조사 사양표 기준/);
   assert.match(app, /connector-table-body/);
