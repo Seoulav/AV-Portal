@@ -16,12 +16,12 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
     ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
     ['Video Wall', ['lh55vhcrbgbxkr', 'lh55vmcrbgbxkr']],
     ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr']],
-    ['Business TV', []],
+    ['Business TV', ['lh43behhlbfxkr']],
     ['Whiteboard', ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr']],
     ['LED Signage', ['mp008f', 'mp012f', 'mp016f']]
   ];
   const samsung = catalog.filter(item => item.brand === 'Samsung');
-  assert.equal(samsung.length, 17);
+  assert.equal(samsung.length, 18);
   assert.deepEqual(slugs(filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' })), expected.flatMap(([, group]) => group));
   for (const [index, [group, names]] of expected.entries()) {
     for (const slug of names) {
@@ -33,7 +33,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
   }
   const future = { ...samsung[0], slug: 'future-business-tv', product: 'FUTURE BUSINESS TV', brandSort: { group: 'Business TV', order: 6, size: 65 } };
   const withFuture = slugs(filterCatalog([...catalog, future], { brand: 'Samsung', sort: 'brand' }));
-  assert.equal(withFuture.indexOf('future-business-tv'), withFuture.indexOf('hg65u800fnfxkr') + 1);
+  assert.equal(withFuture.indexOf('future-business-tv'), withFuture.indexOf('lh43behhlbfxkr') + 1);
   assert.equal(withFuture[withFuture.indexOf('future-business-tv') + 1], 'lh55wmfwbgcxkr');
 });
 

@@ -38,7 +38,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   for(const [slug,expected] of Object.entries(evidence.untouched)){
     assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
-  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json')).length,242);
+  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json').length,242);
 });
 
 test('all 54 published Samsung key facts keep a sourced FOUND or VERIFIED row',()=>{
@@ -93,7 +93,7 @@ test('04 specification table omits the uniform PRODUCT type while all 242 record
     assert.doesNotMatch(source,/specificationRows\.push\(\['종류',\s*data\.itemType\]\)/,`${path} renders type`);
     assert.match(source,/specificationRows\.push\(\['시리즈',\s*data\.series\]\)/,`${path} keeps series`);
   }
-  for(const file of readdirSync(folder).filter(file=>file.endsWith('.json'))){
+  for(const file of readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json')){
     assert.equal(JSON.parse(readFileSync(new URL(file,folder),'utf8')).itemType,'PRODUCT',`${file} keeps itemType`);
   }
 });

@@ -9,7 +9,7 @@ import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const dir=new URL('../beta/site/detail/data/',import.meta.url);
-const products=readdirSync(dir).filter(name=>name.endsWith('.json')).map(name=>[name.slice(0,-5),JSON.parse(readFileSync(new URL(name,dir),'utf8'))]);
+const products=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').map(name=>[name.slice(0,-5),JSON.parse(readFileSync(new URL(name,dir),'utf8'))]);
 const targets=products.filter(([,product])=>product.manufacturer==='Shure'&&product.model!=='ULXD4D');
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-003-evidence.json',root),'utf8'));
 const sha=value=>createHash('sha256').update(value).digest('hex');
@@ -49,7 +49,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
 });
 
 test('ULXD4D pilot and the other 212 products retain original JSON bytes',()=>{
-  const names=readdirSync(dir).filter(name=>name.endsWith('.json')).sort();
+  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
   const targetsSet=new Set(targets.map(([slug])=>slug));
   const otherNames=names.filter(name=>!targetsSet.has(name.slice(0,-5)));
   assert.equal(otherNames.length,213);
