@@ -14,7 +14,7 @@ const publicCatalog = [...catalog, ...rtcom];
 test('static catalog exposes every public product without requiring JavaScript', async () => {
   const html = await readFile(new URL('catalog.html', site), 'utf8');
   assert.deepEqual(html.match(/<script\b[^>]*><\/script>/gi), [
-    '<script type="module" src="./system-version.js?v=w20261004-002"></script>'
+    '<script type="module" src="./system-version.js?v=w20261004-008"></script>'
   ]);
   assert.equal((html.match(/<article class="catalog-product"/g) ?? []).length, publicCatalog.length);
   for (const item of publicCatalog) {
