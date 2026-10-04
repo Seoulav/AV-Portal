@@ -118,6 +118,23 @@ export function renderPortMapCards(items) {
   }
   return cards;
 }
+export function renderIoFallbackCards(entries) {
+  const cards = el('div', 'port-map-ports');
+  for (const [index, item] of entries.entries()) {
+    const card = el('div', 'port-map-port');
+    const heading = el('b');
+    heading.append(el('span', 'port-map-n', index + 1), document.createTextNode(item.displayConnector));
+    card.append(heading);
+    card.append(el('small', 'port-direction', item.portCount === '미확인'
+      ? item.directionLabel : `${item.directionLabel} · 포트 ${item.portCount}`));
+    card.append(el('small', '', item.channelSignal));
+    if (item.specificationCondition !== '—') card.append(el('small', 'port-condition', item.specificationCondition));
+    for (const flag of item.flags) card.append(el('small', 'port-flag', flag));
+    if (item.verification === 'CONFLICTED') card.append(el('span', 'state state-conflict', item.verification));
+    cards.append(card);
+  }
+  return cards;
+}
 const svgNode = (tag, attrs = {}, text) => {
   const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
   for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));

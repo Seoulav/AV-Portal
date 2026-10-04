@@ -55,7 +55,7 @@ export function createPreviewServer({ pictogram = false } = {}) {
           .replace('</head>', '  <link rel="stylesheet" href="./local-visual.css">\n</head>')
           .replace('PRODUCT DETAIL LAB', 'LOCAL VISUAL STUDY')
           .replace('<body class="pg-page">', pictogram ? '<body class="pg-page pictogram-preview">' : '<body class="pg-page">')
-          .replace('<span class="pg-idx">02</span>제품 사진', pictogram ? '<span class="pg-idx">02</span>제품 시각화' : '<span class="pg-idx">02</span>제품 사진')
+          .replace('<span class="pg-idx">02</span>제품사진(Port Map)', pictogram ? '<span class="pg-idx">02</span>제품 시각화' : '<span class="pg-idx">02</span>제품사진(Port Map)')
           .replace('제조사 공식 출처', pictogram ? '제품 공식 페이지' : '제조사 공식 출처')
           .replace('로컬 시안 이미지 · 재게시 권한 미확인', pictogram ? '자체 제작 픽토그램 · 실물 사진 아님' : '로컬 시안 이미지 · 재게시 권한 미확인'));
       }

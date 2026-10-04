@@ -44,8 +44,8 @@ test('public pages display a version badge while detail assets retain their refr
   assert.match(publicDetail, /data-system-version/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
   // The overview fallback changes both code and styles; the prototype assets must refresh.
-  assert.match(detail, /styles\.css\?v=w20261004-002-overview/);
-  assert.match(detail, /app\.js\?v=w20261004-002-overview/);
+  assert.match(detail, /styles\.css\?v=w20261004-009-port-merge/);
+  assert.match(detail, /app\.js\?v=w20261004-009-port-merge/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

@@ -1,4 +1,4 @@
-import { prepareEnhancements, selectCardModes } from './detail-enhancements.mjs?v=w20261001-001-map-review';
+import { prepareEnhancements, selectCardModes } from './detail-enhancements.mjs?v=w20261004-009-port-merge';
 const QUICK_DOCUMENTS = [
   ['매뉴얼', 'User Manual', '매뉴얼 미확인'],
   ['시방서', 'Independent Specification', '공식 독립 시방서 미확인'],
@@ -102,6 +102,16 @@ export function prepareConnectorGroups(ioGroups = []) {
 export function isAbsentConnector(item = {}) {
   const availability = String(item.availability ?? '').trim();
   return availability === '미지원(사양표 "No")' || availability === 'Not available';
+}
+
+export function prepareIoFallbackEntries(io = []) {
+  // Number cards in source row order. Connector groups are for the full table
+  // and can reorder rows when a group name appears again later in the source.
+  return io.filter(item => !isAbsentConnector(item)).map(item => ({
+    ...item,
+    directionLabel: directionLabel(item.direction),
+    ...connectorPresentation(item)
+  }));
 }
 
 export function selectKeyConnectors(connectorGroups = [], limit = 6) {
