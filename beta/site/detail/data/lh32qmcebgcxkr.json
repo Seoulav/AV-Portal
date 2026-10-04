@@ -12,7 +12,7 @@
   "korean": "삼성 단독형 UHD M 시리즈(QM32C) 디지털 사이니지 32인치 모델로, 28.5mm 초슬림 두께와 4면 균일 베젤을 갖췄다.",
   "verificationSummary": "2026-10-02 삼성전자 대한민국 비즈니스 공식 페이지의 국내 모델 LH32QMCEBGCXKR 상세 스펙 탭을 Chromium으로 직접 확인했다. 기존 해외 출처 행 중 42개를 국내 공식 출처로 재확인했다. 색재현율 72%의 NTSC 기준은 한국 탭에 없어 P와 해외 S2를 함께 표시했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "LH32QMCEBGCXKR(QM32C)은 삼성전자의 단독형 UHD M 시리즈 디지털 사이니지 32인치 모델이다. 28.5mm의 초슬림 두께로 설치 공간을 최소화하며, 상하좌우 4면의 베젤 두께가 동일해 가로·세로 모드 전환 시에도 시각적 이질감이 없다.\n\n업그레이드된 홈 화면 UI로 기능·소스·설정 등 자주 쓰는 카테고리를 한 화면에서 사용할 수 있고, 즐겨찾기 폴더로 빠른 접근이 가능하다. 콘텐츠 관리·원격 장치 관리를 위한 CMS 솔루션으로 MagicINFO와 VXT(국내 추후 출시 예정)를 지원한다(모두 별도 구매 필요).",
+  "overview": "LH32QMCEBGCXKR(QM32C)은 삼성전자의 단독형 UHD M 시리즈 디지털 사이니지 32인치 모델이다. 28.5mm의 초슬림 두께로 설치 공간을 최소화하며, 상하좌우 4면의 베젤 두께가 동일해 가로·세로 모드 전환 시에도 시각적 이질감이 없다.\n\n업그레이드된 홈 화면 UI로 기능·소스·설정 등 자주 쓰는 카테고리를 한 화면에서 사용할 수 있고, 즐겨찾기 폴더로 빠른 접근이 가능하다. 콘텐츠 관리·원격 장치 관리를 위한 CMS 솔루션으로 MagicINFO와 VXT를 지원한다(모두 별도 구매 필요).",
   "images": [
     {
       "role": "Main",
@@ -383,6 +383,15 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player 지원",
+      "value": "있음",
+      "unit": "",
+      "condition": "별도 구매 서비스",
+      "source": "U1",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -500,12 +509,17 @@
       "code": "P",
       "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
       "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/",
-      "scope": "국내 모델 LH32QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 제품 두께: QMC 시리즈 공통 슬림 디자인 수치 / 베젤 구조: 기존 32인치 삼성 사이니지 모델과의 비교 기준 / CMS 솔루션: 별도 구매 필요, VXT는 국내 추후 출시 예정"
+      "scope": "국내 모델 LH32QMCEBGCXKR의 공식 제품 소개·상세 스펙 탭(2026-10-02 Chromium 화면 확인). 기존 기록의 적용·운영 메모(현행 여부 별도 확인): 제품 두께: QMC 시리즈 공통 슬림 디자인 수치 / 베젤 구조: 기존 32인치 삼성 사이니지 모델과의 비교 기준"
     },
     {
       "code": "S3",
       "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
       "scope": "국내 모델 LH32QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    {
+      "code": "U1",
+      "name": "사용자 현장 확인(2026-10-04) — VXT Player 지원 여부",
+      "scope": "사용자 현장 확인(2026-10-04): lh32qmcebgcxkr, lh43qmcebgcxkr, lh85qmcebgcxkr, lh98qmcebgcxkr, lh43qhcebgcxkr, lh75qhcebgcxkr, lh115qhfebgxkr의 VXT Player 지원 있음(별도 구매 서비스), lh55vhcrbgbxkr, lh55vmcrbgbxkr의 직접 지원 없음(별도 셋탑박스 필요). 삼성 한글 매뉴얼 두 권 총 242쪽에는 VXT 언급 없음. 제조사 매뉴얼 검증이 아닌 사용자 현장 확인으로 FOUND."
     }
   ],
   "issues": [

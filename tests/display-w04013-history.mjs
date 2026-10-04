@@ -3,6 +3,7 @@
 // requirements and the exact approved deletion are checked in display-spec-order.test.mjs.
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeSamsungW04011} from './samsung-w04011-history.mjs';
 
 const evidence=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-013-evidence.json',import.meta.url),'utf8'));
 const hash=raw=>createHash('sha256').update(raw.replace(/\r\n/g,'\n')).digest('hex');
@@ -13,6 +14,7 @@ for(const entry of evidence.deletedRows){
 }
 
 export function beforeDisplayW04013(product,slug){
+  product = beforeSamsungW04011(product,slug);
   const deleted=deletedBySlug.get(slug);
   if(!deleted)return product;
   if(product.specifications.length===evidence.products[slug].before)return product;
