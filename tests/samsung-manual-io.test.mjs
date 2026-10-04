@@ -6,9 +6,10 @@ import {beforeVideowallProse} from './videowall-w03001-history.mjs';
 import {beforeHotelTvIo} from './hoteltv-w03004-history.mjs';
 import {beforeSamsung115ManualSpecs} from './samsung-w03003-history.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
+import {beforeSamsungW04010Path} from './samsung-w04010-history.mjs';
 
 const root=new URL('../',import.meta.url);
-const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
+const read=path=>beforeSamsungW04010Path(path,JSON.parse(readFileSync(new URL(path,root),'utf8')));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261002-015-evidence.json');
 const groups={

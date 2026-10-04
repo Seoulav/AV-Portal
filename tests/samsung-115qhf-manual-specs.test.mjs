@@ -11,10 +11,11 @@ import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013 } from './crown-w03013-history.mjs';
+import { beforeSamsungW04010 } from './samsung-w04010-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-003-evidence.json',root),'utf8'));
-const product=JSON.parse(readFileSync(new URL(`beta/site/detail/data/${evidence.slug}.json`,root),'utf8'));
+const product=beforeSamsungW04010(JSON.parse(readFileSync(new URL(`beta/site/detail/data/${evidence.slug}.json`,root),'utf8')),evidence.slug);
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const row=name=>{
   const matches=product.specifications.filter(item=>item.name===name);

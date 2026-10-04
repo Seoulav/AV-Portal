@@ -6,9 +6,10 @@ import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
 import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
+import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
 
 const root = new URL('../', import.meta.url);
-const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
+const read = path => beforeSamsungW04010Path(path, JSON.parse(readFileSync(new URL(path, root), 'utf8')));
 const sourceCodes = value => String(value ?? '').split(',').map(code => code.trim()).filter(Boolean);
 const isForeignSamsung = source => {
   if (!source.url) return false;

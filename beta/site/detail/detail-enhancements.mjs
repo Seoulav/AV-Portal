@@ -8,13 +8,29 @@ export const signalKinds = Object.freeze(['video', 'audio', 'network', 'control'
 export const isDisplayProduct = product => product.categories?.some(c => /^(Display|Projector|Digital Signage|Hospitality TV|Video Wall|Interactive Display|프로젝터|사이니지)$/i.test(c)) ?? false;
 const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(key));
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
-const validMarker = i => record(i) && keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'side']) && Number.isInteger(i.n) && i.n > 0 && text(i.label) && typeof i.desc === 'string' && Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 && (i.side === undefined || ['top', 'bottom'].includes(i.side));
+const validMarker = i => {
+  if (!record(i) || !keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'y1', 'y2', 'x', 'side']) ||
+      !Number.isInteger(i.n) || i.n <= 0 || !text(i.label) || typeof i.desc !== 'string') return false;
+  if (i.side === 'left' || i.side === 'right') {
+    return i.x1 === undefined && i.x2 === undefined && i.y === undefined &&
+      Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= 0 && i.y2 > i.y1 &&
+      (i.x === undefined || (Number.isFinite(i.x) && i.x >= 0));
+  }
+  return (i.side === undefined || i.side === 'top' || i.side === 'bottom') &&
+    i.y1 === undefined && i.y2 === undefined && i.x === undefined &&
+    Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 &&
+    (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0));
+};
 function validMap(map, product) {
   const image = product.images?.find(i => i.role === map?.image && text(i.file));
   const size = dimensions(image?.resolution);
   return record(map) && keys(map, ['image', 'items', 'measuredImage', 'crop']) && ['Front', 'Rear'].includes(map.image) &&
-    size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
-    map.items.every(i => validMarker(i) && i.x2 <= size[0] && (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0 && i.y <= size[1]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
+    size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'
+      ? Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= map.crop.top && i.y2 <= size[1] - map.crop.bottom
+      : Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
+    map.items.every(i => validMarker(i) && (i.side === 'left' || i.side === 'right'
+      ? i.y2 <= size[1] && (i.x === undefined || i.x <= size[0])
+      : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
 }
 const dimensions = value => {
   const match = typeof value === 'string' && /^(\d+)\s*[x×]\s*(\d+)$/i.exec(value.trim());

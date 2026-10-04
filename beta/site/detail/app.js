@@ -1,5 +1,5 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-009-port-merge';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-009-port-merge';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-010-samsung-115-rear';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries } from './product-detail-model.mjs?v=w20261004-009-port-merge';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
@@ -220,6 +220,7 @@ if (!productKey) {
   function updatePortMap() {
     const map = enhancements.portMap;
     const layer = $('#port-map-layer');
+    $('#port-map-loupe').hidden = true;
     layer.replaceChildren();
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
@@ -253,6 +254,7 @@ if (!productKey) {
   window.addEventListener('resize', updatePortMap);
   featured.addEventListener('error', () => {
     if (enhancements.portMap) galleryBasis.hidden = true;
+    $('#port-map-loupe').hidden = true;
     $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;
     featured.hidden = true;
     $('#image-missing').hidden = false;
@@ -280,25 +282,56 @@ if (!productKey) {
   $('#dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => zoomOpener?.focus());
-  const loupeWrap = $('#dialog-image-wrap');
-  const loupe = $('#dialog-loupe');
   const LOUPE_SIZE = 180, LOUPE_ZOOM = 3;
-  loupeWrap.addEventListener('pointermove', event => {
-    if (event.pointerType !== 'mouse') return;
+  function attachLoupe(wrap, loupe, currentImage) {
+    wrap.addEventListener('pointermove', event => {
+      if (event.pointerType !== 'mouse') { loupe.hidden = true; return; }
+      const image = currentImage();
+      if (!image) { loupe.hidden = true; return; }
+      const {rect, visible = rect, src, keepInside = false, zoom = LOUPE_ZOOM} = image;
+      if (event.clientX < visible.left || event.clientX > visible.right ||
+          event.clientY < visible.top || event.clientY > visible.bottom) { loupe.hidden = true; return; }
+      const wrapRect = wrap.getBoundingClientRect();
+      let centerX = event.clientX, centerY = event.clientY;
+      if (keepInside) {
+        const scrollRect = $('.port-photo-scroll').getBoundingClientRect();
+        const left = Math.max(visible.left, scrollRect.left), right = Math.min(visible.right, scrollRect.right);
+        const top = Math.max(visible.top, scrollRect.top), bottom = Math.min(visible.bottom, scrollRect.bottom);
+        if (right - left < LOUPE_SIZE || bottom - top < LOUPE_SIZE) { loupe.hidden = true; return; }
+        // The lens stays inside the photograph, leaving the outside-number rail visible.
+        centerX = Math.max(left + LOUPE_SIZE / 2, Math.min(right - LOUPE_SIZE / 2, centerX));
+        centerY = Math.max(top + LOUPE_SIZE / 2, Math.min(bottom - LOUPE_SIZE / 2, centerY));
+      }
+      loupe.hidden = false;
+      loupe.style.left = centerX - wrapRect.left - LOUPE_SIZE / 2 + 'px';
+      loupe.style.top = centerY - wrapRect.top - LOUPE_SIZE / 2 + 'px';
+      loupe.style.backgroundImage = `url("${src}")`;
+      loupe.style.backgroundSize = rect.width * zoom + 'px ' + rect.height * zoom + 'px';
+      loupe.style.backgroundPosition = `${LOUPE_SIZE / 2 - (event.clientX - rect.left) * zoom}px ${LOUPE_SIZE / 2 - (event.clientY - rect.top) * zoom}px`;
+    });
+    for (const type of ['pointerleave', 'pointerup', 'pointercancel']) wrap.addEventListener(type, () => { loupe.hidden = true; });
+  }
+  attachLoupe($('#dialog-image-wrap'), $('#dialog-loupe'), () => {
     const image = $('#dialog-image');
-    if (!image.complete || !image.naturalWidth) return;
-    const rect = image.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) { loupe.hidden = true; return; }
-    const wrap = loupeWrap.getBoundingClientRect();
-    loupe.hidden = false;
-    loupe.style.left = event.clientX - wrap.left - LOUPE_SIZE / 2 + 'px';
-    loupe.style.top = event.clientY - wrap.top - LOUPE_SIZE / 2 + 'px';
-    loupe.style.backgroundImage = `url("${image.src}")`;
-    loupe.style.backgroundSize = rect.width * LOUPE_ZOOM + 'px ' + rect.height * LOUPE_ZOOM + 'px';
-    loupe.style.backgroundPosition = `${LOUPE_SIZE / 2 - (event.clientX - rect.left) * LOUPE_ZOOM}px ${LOUPE_SIZE / 2 - (event.clientY - rect.top) * LOUPE_ZOOM}px`;
+    return image.complete && image.naturalWidth ? {rect: image.getBoundingClientRect(), src: image.src} : null;
   });
-  for (const type of ['pointerleave', 'pointerup', 'pointercancel']) loupeWrap.addEventListener(type, () => { loupe.hidden = true; });
-  dialog.addEventListener('close', () => { loupe.hidden = true; });
+  dialog.addEventListener('close', () => { $('#dialog-loupe').hidden = true; });
+  attachLoupe(featured.parentElement, $('#port-map-loupe'), () => {
+    if (!featured.parentElement.classList.contains('map-active') || !featured.complete || !featured.naturalWidth) return null;
+    const svg = $('#port-map-layer svg');
+    const image = $('#port-map-layer svg image');
+    const clip = $('#port-map-layer svg clipPath rect');
+    if (!image || !clip) return null;
+    // clipPath children have no layout box; convert their SVG coordinates to viewport coordinates.
+    const transform = svg.getScreenCTM();
+    if (!transform) return null;
+    const x = Number(clip.getAttribute('x')), y = Number(clip.getAttribute('y'));
+    const width = Number(clip.getAttribute('width')), height = Number(clip.getAttribute('height'));
+    const a = new DOMPoint(x, y).matrixTransform(transform);
+    const b = new DOMPoint(x + width, y + height).matrixTransform(transform);
+    return {rect: image.getBoundingClientRect(), visible: {left: a.x, top: a.y, right: b.x, bottom: b.y},
+      src: featured.currentSrc || featured.src, keepInside: true, zoom: 1.2};
+  });
 
   const presentConnectors = prepareIoFallbackEntries(data.io);
   if (!enhancements.portMap && data.io.length) {

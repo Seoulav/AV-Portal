@@ -6,8 +6,9 @@ import {prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mj
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
 import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
 import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
+import {beforeSamsungW04010Path} from './samsung-w04010-history.mjs';
 
-const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
+const read = path => beforeSamsungW04010Path(path, JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8')));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const absentValue = value => ['미지원(사양표 "No")','Not available'].includes(String(value || '').trim());
 

@@ -9,6 +9,7 @@ import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013, crownW03013Slug } from './crown-w03013-history.mjs';
+import { beforeSamsungW04010Raw } from './samsung-w04010-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -111,7 +112,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
-    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug),slug);
+    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug)?beforeBssW03011(JSON.parse(raw),slug):null;
     hash.update(name).update('\0').update(historical?JSON.stringify(historical,null,2)+'\n':raw);
