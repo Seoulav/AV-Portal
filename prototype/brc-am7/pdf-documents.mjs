@@ -30,7 +30,7 @@ export function uploadedDocumentsFor(slug, manifest) {
         title: entry.title,
         label: entry.kind === 'manual' ? '매뉴얼' : '참고자료',
         status: 'FOUND',
-        action: { kind: 'local', file, sourceUrl: file }
+        action: { kind: 'local', file, sourceUrl: file, ...(entry.locked === true ? { locked: true } : {}) }
       };
     });
 }

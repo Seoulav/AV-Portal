@@ -126,6 +126,9 @@ export function createPdfViewer() {
   function clearCurrent() {
     const old = state;
     state = null;
+    download.removeAttribute('href');
+    download.removeAttribute('download');
+    download.setAttribute('aria-disabled', 'true');
     passwordInput.value = '';
     passwordForm.hidden = true;
     old?.observer?.disconnect();
@@ -214,23 +217,25 @@ export function createPdfViewer() {
     current.slots.forEach(slot => current.observer.observe(slot));
     updateTools();
   }
-  async function open({ file, title: documentTitle, sourceUrl, trigger: sourceButton }) {
+  async function open({ file, title: documentTitle, sourceUrl, locked = false, trigger: sourceButton }) {
     if (dialog.open) dialog.close();
     if (state) clearCurrent();
     trigger = sourceButton ?? document.activeElement;
     const current = { zoom: 0, ready: false, visible: new Set(), generation: 0, busy: false };
     state = current;
     title.textContent = documentTitle || 'PDF 문서';
-    download.href = file;
-    download.download = file.split('/').at(-1);
+    download.removeAttribute('href');
+    download.removeAttribute('download');
+    download.setAttribute('aria-disabled', 'true');
     source.href = sourceUrl || file;
+    source.hidden = locked;
     pageInput.value = '1';
     pageTotal.textContent = '/ –';
     pages.replaceChildren();
     passwordInput.value = '';
     passwordForm.hidden = true;
     status.hidden = false;
-    status.textContent = '문서를 불러오는 중입니다…';
+    status.textContent = '문서를 불러오는 중입니다… 문서를 연 뒤 내려받을 수 있습니다.';
     applyWidth(readWidth());
     updateTools();
     dialog.showModal();
@@ -246,8 +251,8 @@ export function createPdfViewer() {
         passwordInput.value = '';
         passwordForm.hidden = false;
         status.textContent = reason === lib.PasswordResponses.INCORRECT_PASSWORD
-          ? '비밀번호가 맞지 않습니다. 다시 입력해 주세요.'
-          : '이 문서를 열려면 비밀번호를 입력해 주세요.';
+          ? '비밀번호가 맞지 않습니다. 다시 입력해 주세요. 문서를 열기 전에는 내려받을 수 없습니다.'
+          : '이 문서를 열려면 비밀번호를 입력해 주세요. 문서를 연 뒤 내려받을 수 있습니다.';
         passwordInput.focus();
       };
       const pdf = await task.promise;
@@ -255,6 +260,11 @@ export function createPdfViewer() {
       passwordForm.hidden = true;
       passwordInput.value = '';
       current.pdf = pdf;
+      download.href = file;
+      download.download = file.split('/').at(-1);
+      download.removeAttribute('aria-disabled');
+      source.hidden = false;
+      status.textContent = '문서 쪽을 표시하는 중입니다…';
       const firstPage = await pdf.getPage(1);
       const firstViewport = firstPage.getViewport({ scale: 1 });
       const fallbackSize = { width: firstViewport.width, height: firstViewport.height };
@@ -273,7 +283,9 @@ export function createPdfViewer() {
       current.ready = true;
       layout(current);
     } catch {
-      if (state === current && dialog.open) status.textContent = '미리보기를 불러오지 못했습니다. 원문 링크를 이용해 주세요.';
+      if (state === current && dialog.open) status.textContent = locked
+        ? '문서를 열지 못해 내려받기를 사용할 수 없습니다.'
+        : '미리보기를 불러오지 못했습니다. 원문 링크를 이용해 주세요.';
     }
   }
   passwordForm.addEventListener('submit', event => {
@@ -287,6 +299,14 @@ export function createPdfViewer() {
     passwordForm.hidden = true;
     status.textContent = '비밀번호를 확인하는 중입니다…';
     updatePassword(password);
+  });
+  download.addEventListener('click', event => {
+    if (download.getAttribute('aria-disabled') !== 'true') return;
+    event.preventDefault();
+    if (dialog.open && passwordForm.hidden) {
+      status.hidden = false;
+      status.textContent = '문서를 연 뒤 내려받을 수 있습니다.';
+    }
   });
   function goToPage(value) {
     if (!state?.ready) return;

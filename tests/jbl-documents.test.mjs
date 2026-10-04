@@ -7,6 +7,7 @@ import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
+import {beforeW04021Uploads} from './document-lock-history.mjs';
 import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
@@ -36,7 +37,7 @@ const specFacts = {
 
 test('all 16 JBL products have correctly scoped documents and exactly 19 unique published PDFs',()=>{
   assert.equal(hash(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
-  const historicalUploads=beforeWinstarW04016Uploads(manifest.uploads);
+  const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
   assert.equal(hash(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
   // Keep this audit on the W-010 segment; W-011 BSS uploads are checked separately.
   const added=historicalUploads.slice(evidence.manifest.uploadCount,bssEvidence.manifest.uploadCount);

@@ -959,6 +959,7 @@
     {
       "slug": "lh115qhfebgxkr",
       "file": "manuals/samsung-115qhf-spec-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 제품 사양서 115QHF (QHFX 시리즈)"
     },
@@ -971,6 +972,7 @@
     {
       "slug": "lh55vhcrbgbxkr",
       "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)"
     },
@@ -983,60 +985,70 @@
     {
       "slug": "lh55vmcrbgbxkr",
       "file": "manuals/samsung-videowall-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)"
     },
     {
       "slug": "lh115qhfebgxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh32qmcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh43qmcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh85qmcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh98qmcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh43qhcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh75qhcebgcxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh55vhcrbgbxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },
     {
       "slug": "lh55vmcrbgbxkr",
       "file": "manuals/samsung-lcd-signage-product-guide-ko.pdf",
+      "locked": true,
       "kind": "reference",
       "title": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)"
     },

@@ -15,10 +15,11 @@ import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013} from './crown-w03013-history.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
+import {beforeW04021Uploads} from './document-lock-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
-const historicalUploads = beforeWinstarW04016Uploads(manifest.uploads);
+const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
 const historicalManifest = {...manifest, uploads: historicalUploads.slice(0, 22)};
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const files = {
