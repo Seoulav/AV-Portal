@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { prepareProductDetail, visibleDetailCards } from '../prototype/brc-am7/product-detail-model.mjs';
 import { detailSearchEntry } from '../beta/site/shared/search-index.mjs';
+import {beforeDisplayW04013} from './display-w04013-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -20,7 +21,7 @@ test('three MPF cabinets use all 20 model-matched guide fields without images or
   const catalog = read('beta/site/catalog.json');
   const products = slugs.map((slug, index) => {
     const card = catalog.find(item => item.slug === slug);
-    const detail = read(`beta/site/detail/data/${slug}.json`);
+    const detail = beforeDisplayW04013(read(`beta/site/detail/data/${slug}.json`),slug);
     assert.equal(card.product, models[index]);
     assert.deepEqual(card.categories, ['사이니지', 'Display', 'LED Signage']);
     assert.deepEqual(card.official_links, [officialList]);

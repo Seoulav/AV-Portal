@@ -1,8 +1,10 @@
 // Historical tests compare earlier batches with their own immutable evidence.
 // Remove only the approved W-20261004-010 Rear photograph and map before
 // reconstructing those earlier product snapshots.
+import {beforeDisplayW04013, beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 export const samsungW04010Slug = slug => slug === 'lh115qhfebgxkr';
 export function beforeSamsungW04010(product, slug) {
+  product = beforeDisplayW04013(product, slug);
   if (!samsungW04010Slug(slug)) return product;
   const earlier = structuredClone(product);
   earlier.images = earlier.images.filter(image => image.role !== 'Rear');
@@ -15,9 +17,11 @@ export function beforeSamsungW04010(product, slug) {
   return earlier;
 }
 export function beforeSamsungW04010Raw(raw, slug) {
-  if (!samsungW04010Slug(slug)) return raw;
-  return `${JSON.stringify(beforeSamsungW04010(JSON.parse(raw), slug), null, 2)}\n`;
+  const beforeDisplay = beforeDisplayW04013Raw(raw, slug);
+  if (!samsungW04010Slug(slug)) return beforeDisplay;
+  return `${JSON.stringify(beforeSamsungW04010(JSON.parse(beforeDisplay), slug), null, 2)}\n`;
 }
 export function beforeSamsungW04010Path(path, product) {
-  return beforeSamsungW04010(product, /(?:^|\/)lh115qhfebgxkr\.json$/.test(path) ? 'lh115qhfebgxkr' : '');
+  const slug=/(?:^|\/)lh115qhfebgxkr\.json$/.test(path) ? 'lh115qhfebgxkr' : /(?:^|\/)([^/]+)\.json$/.exec(path)?.[1] ?? '';
+  return beforeSamsungW04010(product, slug);
 }

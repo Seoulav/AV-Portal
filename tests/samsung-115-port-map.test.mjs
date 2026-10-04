@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeDisplayW04013} from './display-w04013-history.mjs';
 import {prepareEnhancements as prototypePrepare} from '../prototype/brc-am7/detail-enhancements.mjs';
 import {prepareEnhancements as publicPrepare} from '../beta/site/detail/detail-enhancements.mjs';
 import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
@@ -72,7 +73,7 @@ test('QH115FX maps eleven visible physical ports on its own Rear photograph', ()
   assert.deepEqual([...new Set(evidence.markers.map(item => item.ioIndex))].sort((a, b) => a - b), [1, 2, 3, 4, 6, 7, 8, 9]);
   assert.equal(sha256(readFileSync(new URL(evidence.publishedImage.file, root))), evidence.publishedImage.sha256);
   assert.equal(sha256(readFileSync(new URL(evidence.manual.file, root))), evidence.manual.sha256);
-  const core = structuredClone(product);
+  const core = structuredClone(beforeDisplayW04013(product, 'lh115qhfebgxkr'));
   delete core.images; delete core.imageStatuses; delete core.portMap;
   assert.equal(sha256(JSON.stringify(core)), evidence.coreSha256);
 });

@@ -70,6 +70,6 @@ test('02 owns the fallback; 03 keeps only content and full io records remain in 
   assert.doesNotMatch(html, /id="port-grid"|id="rear-connector-panel"/);
   assert.match(app, /\$\('#io-records'\)\.append\(\$\('#io-table-details'\)\)/);
   assert.match(app, /selectSection03Content\(enhancements\)/);
-  assert.match(app, /product-detail-model\.mjs\?v=w20261004-009-port-merge/);
+  assert.match(app, /product-detail-model\.mjs\?v=w20261004-013-spec-order/);
   assert.match(model, /detail-enhancements\.mjs\?v=w20261004-009-port-merge/);
 });

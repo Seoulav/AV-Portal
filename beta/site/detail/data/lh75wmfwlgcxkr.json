@@ -281,42 +281,6 @@
     },
     {
       "group": "Display",
-      "name": "패널 헤이즈(Haze)",
-      "value": "2 (유리 미장착)",
-      "unit": "%",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수평 주사 주파수",
-      "value": "30 - 81 kHz",
-      "unit": "",
-      "condition": "",
-      "source": "P, M1",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Display",
-      "name": "최대 픽셀 주파수",
-      "value": "148.5 MHz",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수직 주사 주파수",
-      "value": "48 - 75 Hz",
-      "unit": "",
-      "condition": "",
-      "source": "P, M1",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Display",
       "name": "운영 시간",
       "value": "12/7 (일 시간/주 일수)",
       "unit": "",
@@ -415,24 +379,6 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Environment",
-      "name": "보관 온도",
-      "value": "-20 - 45",
-      "unit": "℃",
-      "condition": "",
-      "source": "M1",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Environment",
-      "name": "보관 습도",
-      "value": "5 - 95",
-      "unit": "%",
-      "condition": "비액화",
-      "source": "M1",
-      "verification": "VERIFIED"
-    },
-    {
       "group": "Physical",
       "name": "VESA 규격",
       "value": "400 x 400",
@@ -452,26 +398,8 @@
     },
     {
       "group": "Physical",
-      "name": "베젤 색상",
-      "value": "Gray White",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Physical",
       "name": "프레임 재질",
       "value": "Non-Glossy(Plastic)",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 벽걸이 마운트",
-      "value": "있음",
       "unit": "",
       "condition": "",
       "source": "P",
@@ -499,15 +427,6 @@
       "group": "Touch/Pen",
       "name": "터치 방식",
       "value": "IR",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Certification",
-      "name": "EMC 등급",
-      "value": "Class A",
       "unit": "",
       "condition": "",
       "source": "P",

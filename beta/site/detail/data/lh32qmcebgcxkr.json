@@ -224,42 +224,6 @@
     },
     {
       "group": "Display",
-      "name": "패널 헤이즈(Haze)",
-      "value": "2",
-      "unit": "%",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수평 주사 주파수",
-      "value": "30 ~ 81kHZ",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "최대 픽셀 주파수",
-      "value": "148.5MHz",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수직 주사 주파수",
-      "value": "48 ~ 75HZ",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
       "name": "동적 명암비",
       "value": "Mega",
       "unit": "",
@@ -395,26 +359,8 @@
     },
     {
       "group": "Physical",
-      "name": "베젤 색상",
-      "value": "Charcoal Black",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Physical",
       "name": "프레임 재질",
       "value": "Non-Glossy",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 스탠드",
-      "value": "STN-L3200C",
       "unit": "",
       "condition": "",
       "source": "P",
@@ -433,24 +379,6 @@
       "group": "Smart Platform",
       "name": "내장 플래시 메모리",
       "value": "8GB",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Certification",
-      "name": "EMC 등급",
-      "value": "Class B",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Certification",
-      "name": "안전 규격",
-      "value": "60950-1, 62368-1",
       "unit": "",
       "condition": "",
       "source": "P",

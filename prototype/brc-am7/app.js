@@ -1,6 +1,6 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-010-samsung-115-rear';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries } from './product-detail-model.mjs?v=w20261004-009-port-merge';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows } from './product-detail-model.mjs?v=w20261004-013-spec-order';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
@@ -369,15 +369,13 @@ if (!productKey && !allowContentFallback) {
 
   const specificationRows = [];
   if (data.series) specificationRows.push(['시리즈', data.series]);
-  if (data.itemType) specificationRows.push(['종류', data.itemType]);
   for (const [name, value] of specificationRows) {
     const row = element('tr');
     row.append(element('td', '', name), element('td', '', value));
     $('#spec-table-body').append(row);
   }
   let specNumber = 0;
-  for (const group of data.specificationGroups) {
-    for (const spec of group.entries) {
+  for (const { group, groupIndex, spec } of orderSpecificationRows(data)) {
       const row = element('tr', 'spec-data-row');
       row.dataset.specIndex = String(specNumber++);
       const value = element('td', '', [spec.value, spec.unit].filter(Boolean).join(' '));
@@ -385,7 +383,7 @@ if (!productKey && !allowContentFallback) {
       for (const detail of [spec.condition && `조건: ${spec.condition}`]) if (detail) value.append(element('small', '', detail));
       const name = element('td');
       const dot = element('span', 'spec-category-dot'); dot.setAttribute('aria-hidden', 'true');
-      dot.style.setProperty('--category-color', ['#3478d4', '#7c5ab8', '#16806a', '#b86e14', '#bf5272', '#526a8c'][data.specificationGroups.indexOf(group) % 6]);
+      dot.style.setProperty('--category-color', ['#3478d4', '#7c5ab8', '#16806a', '#b86e14', '#bf5272', '#526a8c'][groupIndex % 6]);
       name.append(dot, element('span', 'sr-only', group.name + ' · '), document.createTextNode(spec.name));
       row.append(name, value);
       if (spec.source) {
@@ -394,7 +392,6 @@ if (!productKey && !allowContentFallback) {
         $('#spec-source-records').append(record);
       }
       $('#spec-table-body').append(row);
-    }
   }
   function renderSpecs(expanded = false) {
     for (const row of $('#spec-table-body').querySelectorAll('.spec-data-row')) row.hidden = !expanded && Number(row.dataset.specIndex) >= 12;

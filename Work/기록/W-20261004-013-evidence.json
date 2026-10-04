@@ -1,0 +1,4001 @@
+{
+  "taskId": "W-20261004-013",
+  "readCommit": "394cc8db76b42f6362264012c7b9e19071748610",
+  "deletedRows": [
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 11,
+      "reason": "사용자 지정 13계열",
+      "group": "Software",
+      "name": "화면 보정",
+      "value": "스마트 캘리브레이션",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Software",
+        "name": "화면 보정",
+        "value": "스마트 캘리브레이션",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 12,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "VA",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "패널 종류",
+        "value": "VA",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 16,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.630 x 0.630",
+      "unit": "mm",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "픽셀 피치(HxV)",
+        "value": "0.630 x 0.630",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 17,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "밝기(Typ)",
+      "value": "1000",
+      "unit": "nit",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "밝기(Typ)",
+        "value": "1000",
+        "unit": "nit",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 18,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "5,500:1",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "명암비(정적)",
+        "value": "5,500:1",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 19,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "시야각(H/V)",
+        "value": "178/178",
+        "unit": "°",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 20,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "6.5",
+      "unit": "ms",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "응답 속도",
+        "value": "6.5",
+        "unit": "ms",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 21,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "색재현율",
+      "value": "93% (DCI-P3)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "색재현율",
+        "value": "93% (DCI-P3)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 22,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 23,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "15 - 135 kHz",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "15 - 135 kHz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 24,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "1.188 GHz",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "1.188 GHz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 25,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "24 - 120 Hz",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "24 - 120 Hz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 26,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "동적 명암비",
+      "value": "Mega",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "동적 명암비",
+        "value": "Mega",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 27,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Connectivity",
+        "name": "Wi-Fi",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 28,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Connectivity",
+        "name": "블루투스",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 31,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Power",
+      "name": "소비전력(대기/Sleep 모드)",
+      "value": "0.5",
+      "unit": "W",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Power",
+        "name": "소비전력(대기/Sleep 모드)",
+        "value": "0.5",
+        "unit": "W",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20 - 45",
+      "unit": "℃",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 온도",
+        "value": "-20 - 45",
+        "unit": "℃",
+        "condition": "",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 39,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 습도",
+      "value": "5 - 95",
+      "unit": "%",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 습도",
+        "value": "5 - 95",
+        "unit": "%",
+        "condition": "비액화",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 40,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "1000 x 600",
+      "unit": "mm",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "VESA 규격",
+        "value": "1000 x 600",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 41,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "3 Bezel-less",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 폭(사양표)",
+        "value": "3 Bezel-less",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "TITAN BLACK",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "TITAN BLACK",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 43,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Non-Glossy(Metal)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "프레임 재질",
+        "value": "Non-Glossy(Metal)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 44,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "Slim Fit Wall-mount (기본 동봉)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "Slim Fit Wall-mount (기본 동봉)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 45,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "Yes(기본 동봉)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "Yes(기본 동봉)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 46,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Smart Platform",
+      "name": "운영체제 버전",
+      "value": "Tizen 8.0",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Smart Platform",
+        "name": "운영체제 버전",
+        "value": "Tizen 8.0",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 47,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Smart Platform",
+      "name": "내장 플래시 메모리",
+      "value": "16GB",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Smart Platform",
+        "name": "내장 플래시 메모리",
+        "value": "16GB",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 48,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 49,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 50,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "대각 크기(사양표 실측)",
+      "value": "114.4818",
+      "unit": "인치",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "대각 크기(사양표 실측)",
+        "value": "114.4818",
+        "unit": "인치",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "index": 55,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "방수/방진",
+      "value": "IP 5X",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "S5",
+      "row": {
+        "group": "Environment",
+        "name": "방수/방진",
+        "value": "IP 5X",
+        "unit": "",
+        "condition": "",
+        "source": "S5",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 12,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "2",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "2",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 13,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30 ~ 81kHZ",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30 ~ 81kHZ",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 14,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "148.5MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "148.5MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 15,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48 ~ 75HZ",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48 ~ 75HZ",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 31,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Charcoal Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Charcoal Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 33,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L3200C",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-L3200C",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 36,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class B",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class B",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30~81kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "594MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 20,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48~75Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-B50SC",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-B50SC",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L4355C",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-L4355C",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 41,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class B",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class B",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30~81kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "594MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48~75Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 35,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Charcoal Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Charcoal Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-B50SC",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-B50SC",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L4355C",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-L4355C",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 41,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class B",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class B",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 3,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "28",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "28",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 15,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "57.3kHz ~ 70kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "57.3kHz ~ 70kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "78MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "78MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "47Hz ~ 63Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "47Hz ~ 63Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 31,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 33,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "있음",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "있음",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "index": 34,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "미지원(사양표 \"No\")",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "미지원(사양표 \"No\")",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 3,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "28",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "28",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 15,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "57.3kHz ~ 70kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "57.3kHz ~ 70kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "78MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "78MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "47Hz ~ 63Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "47Hz ~ 63Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 31,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 33,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "있음",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "있음",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "index": 34,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "미지원(사양표 \"No\")",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "미지원(사양표 \"No\")",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 10,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "VA",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "패널 종류",
+        "value": "VA",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 12,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.315 x 0.315",
+      "unit": "mm",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "픽셀 피치(HxV)",
+        "value": "0.315 x 0.315",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 13,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "4,000:1 (유리 미장착)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "명암비(정적)",
+        "value": "4,000:1 (유리 미장착)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 14,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "시야각(H/V)",
+        "value": "178/178",
+        "unit": "°",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 15,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "9.5",
+      "unit": "ms",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "응답 속도",
+        "value": "9.5",
+        "unit": "ms",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 16,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Display",
+      "name": "색재현율",
+      "value": "72% (NTSC)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "색재현율",
+        "value": "72% (NTSC)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "2 (유리 미장착)",
+      "unit": "%",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "2 (유리 미장착)",
+        "unit": "%",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30 - 81 kHz",
+      "unit": "",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30 - 81 kHz",
+        "unit": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "148.5 MHz",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "148.5 MHz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 20,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48 - 75 Hz",
+      "unit": "",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48 - 75 Hz",
+        "unit": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 22,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Connectivity",
+        "name": "Wi-Fi",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 23,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Connectivity",
+        "name": "블루투스",
+        "value": "있음",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 24,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC100-240V 50/60Hz",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Power",
+        "name": "전원 사양",
+        "value": "AC100-240V 50/60Hz",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 32,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20 - 45",
+      "unit": "℃",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 온도",
+        "value": "-20 - 45",
+        "unit": "℃",
+        "condition": "",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 33,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 습도",
+      "value": "5 - 95",
+      "unit": "%",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 습도",
+        "value": "5 - 95",
+        "unit": "%",
+        "condition": "비액화",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 34,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "400 x 400",
+      "unit": "mm",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "VESA 규격",
+        "value": "400 x 400",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 35,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "26.2(4면 균일)",
+      "unit": "mm",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 폭(사양표)",
+        "value": "26.2(4면 균일)",
+        "unit": "mm",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 36,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Gray White",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Gray White",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 37,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Non-Glossy(Plastic)",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Physical",
+        "name": "프레임 재질",
+        "value": "Non-Glossy(Plastic)",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-4277SF",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-4277SF",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 39,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-WM55R",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-WM55R",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 40,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Smart Platform",
+      "name": "운영체제 버전",
+      "value": "Tizen 9.0",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Smart Platform",
+        "name": "운영체제 버전",
+        "value": "Tizen 9.0",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 41,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Smart Platform",
+      "name": "내장 플래시 메모리",
+      "value": "64GB",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Smart Platform",
+        "name": "내장 플래시 메모리",
+        "value": "64GB",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 42,
+      "reason": "출처 없는 REVIEW REQUIRED",
+      "group": "Touch/Pen",
+      "name": "터치 방식",
+      "value": "IR",
+      "unit": "",
+      "verification": "REVIEW REQUIRED",
+      "source": "",
+      "row": {
+        "group": "Touch/Pen",
+        "name": "터치 방식",
+        "value": "IR",
+        "unit": "",
+        "condition": "국내 자료 미확보",
+        "source": "",
+        "verification": "REVIEW REQUIRED"
+      }
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "index": 43,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30~81kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "594MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 20,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48~75Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-B50SC",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-B50SC",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L6585C",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-L6585C",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 41,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class B",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class B",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "2 (유리 미장착)",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "2 (유리 미장착)",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30 - 81 kHz",
+      "unit": "",
+      "verification": "VERIFIED",
+      "source": "P, M1",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30 - 81 kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "148.5 MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "148.5 MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 20,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48 - 75 Hz",
+      "unit": "",
+      "verification": "VERIFIED",
+      "source": "P, M1",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48 - 75 Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 32,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "-20 - 45",
+      "unit": "℃",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 온도",
+        "value": "-20 - 45",
+        "unit": "℃",
+        "condition": "",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 33,
+      "reason": "사용자 지정 13계열",
+      "group": "Environment",
+      "name": "보관 습도",
+      "value": "5 - 95",
+      "unit": "%",
+      "verification": "VERIFIED",
+      "source": "M1",
+      "row": {
+        "group": "Environment",
+        "name": "보관 습도",
+        "value": "5 - 95",
+        "unit": "%",
+        "condition": "비액화",
+        "source": "M1",
+        "verification": "VERIFIED"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 36,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Gray White",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Gray White",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "있음",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "있음",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30~81kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "594MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48~75Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 35,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Charcoal Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Charcoal Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-B50SC",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-B50SC",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 38,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 스탠드",
+      "value": "STN-L6585C",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 스탠드",
+        "value": "STN-L6585C",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 41,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "index": 42,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 17,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "패널 헤이즈(Haze)",
+      "value": "25",
+      "unit": "%",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "패널 헤이즈(Haze)",
+        "value": "25",
+        "unit": "%",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 18,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수평 주사 주파수",
+      "value": "30~81kHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수평 주사 주파수",
+        "value": "30~81kHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 19,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "최대 픽셀 주파수",
+      "value": "594MHz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "최대 픽셀 주파수",
+        "value": "594MHz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 20,
+      "reason": "사용자 지정 13계열",
+      "group": "Display",
+      "name": "수직 주사 주파수",
+      "value": "48~75Hz",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Display",
+        "name": "수직 주사 주파수",
+        "value": "48~75Hz",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 35,
+      "reason": "사용자 지정 13계열",
+      "group": "Physical",
+      "name": "베젤 색상",
+      "value": "Slate Black",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Physical",
+        "name": "베젤 색상",
+        "value": "Slate Black",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 37,
+      "reason": "사용자 지정 13계열",
+      "group": "Accessory",
+      "name": "옵션 벽걸이 마운트",
+      "value": "WMN-8200SC",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Accessory",
+        "name": "옵션 벽걸이 마운트",
+        "value": "WMN-8200SC",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 40,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "EMC 등급",
+      "value": "Class A",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "EMC 등급",
+        "value": "Class A",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "index": 41,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "60950-1, 62368-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "P",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "60950-1, 62368-1",
+        "unit": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "mp008f",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "S1",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "unit": "",
+        "condition": "",
+        "source": "S1",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "mp012f",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "S1",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "unit": "",
+        "condition": "",
+        "source": "S1",
+        "verification": "FOUND"
+      }
+    },
+    {
+      "slug": "mp016f",
+      "index": 16,
+      "reason": "사용자 지정 13계열",
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "verification": "FOUND",
+      "source": "S1",
+      "row": {
+        "group": "Certification",
+        "name": "안전 규격",
+        "value": "62368-1, 60950-1",
+        "unit": "",
+        "condition": "",
+        "source": "S1",
+        "verification": "FOUND"
+      }
+    }
+  ],
+  "products": {
+    "hg43u800fnfxkr": {
+      "before": 37,
+      "after": 37,
+      "originalSha256": "32c50e46b4cefa209fdfa66b636045453fda751fc8dfb488a3087949c80c4557",
+      "coreSha256": "bfc2d44a98ff73419f63c414f4bb5c2f880933bcb4d9a7ddaf66724008135e13",
+      "sourcesSha256": "8a0561087c8b347f79731dc6a824da341adc21a98877eea54fcc119db346fc30",
+      "retainedSpecificationsSha256": "a4e7592f026b0216f8aefb2852927ce4629c335a4630182295d7b4a5e85e5014",
+      "removedIndexes": []
+    },
+    "hg50u800fnfxkr": {
+      "before": 36,
+      "after": 36,
+      "originalSha256": "e6d038b593971b65e9e1be07cf5695e0821005c0a76b8c3cc8b9b1c1a1e889e5",
+      "coreSha256": "a14a8d67e7a038d8f06843aa5750d21ece01079a4f700167a07c6d10338ebc6b",
+      "sourcesSha256": "94e403104cee4f4f9f722770a10139ec030be5b37dbba06b2f1d53a764dc234f",
+      "retainedSpecificationsSha256": "c449907b52be4108ab04634cdd64fcabc6666ff79171b14db64878701616a74d",
+      "removedIndexes": []
+    },
+    "hg65u800fnfxkr": {
+      "before": 36,
+      "after": 36,
+      "originalSha256": "e71c6925bc4851aedd7e43709e9a95ccdc9eb454eec3542092071c9301140563",
+      "coreSha256": "6761e4f3c3c385d4375066bac8c20d89771e051015d773e551867cd96f483156",
+      "sourcesSha256": "e8adde97f65c05d932791174b001b8b7a06e6323a116aa7df9d16974d3548352",
+      "retainedSpecificationsSha256": "401b37ef920cb3925b625dc4bf583963839b7b818497978c793f5a6191a1898d",
+      "removedIndexes": []
+    },
+    "lh115qhfebgxkr": {
+      "before": 56,
+      "after": 26,
+      "originalSha256": "0bb5133745e2aaaa2349de6bd13e63428d520b49d97c7ec54c74b3ea3f053510",
+      "coreSha256": "c417065e8b056341b90da1aebb5fcf9fe1b50a66f5564f7aec9f2115305eed27",
+      "sourcesSha256": "45e2d837b80e0fcea0f659b01dcdb09a47b0f56ee8545165a282d4eadcaaa0c9",
+      "retainedSpecificationsSha256": "15112e16179e0ea666a664413f4c0a47dce690f58b7f9b39049b15f67f30d906",
+      "removedIndexes": [
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        55
+      ]
+    },
+    "lh32qmcebgcxkr": {
+      "before": 38,
+      "after": 30,
+      "originalSha256": "d7297d7af3fe8f7c413691250129e663361099358dc838a963447c0d1278122e",
+      "coreSha256": "76a15d6d08b03799e7d33fa187a27d6a0078f17aa0cf7cffecc8a5e97905f7d6",
+      "sourcesSha256": "044617c8e34e689d2c3a3a0d0bb989f84052ae9539de6ce4f0f664bf6c93d203",
+      "retainedSpecificationsSha256": "69f3c39a0a60eec03a5c6eab1438126b9ebf08a137c5efaf20c7189e1531da2a",
+      "removedIndexes": [
+        12,
+        13,
+        14,
+        15,
+        31,
+        33,
+        36,
+        37
+      ]
+    },
+    "lh43qhcebgcxkr": {
+      "before": 43,
+      "after": 35,
+      "originalSha256": "ad3aef7d71c1cc56ccca86b95f48eebf59d9b8096b7c547f865969fe4fffc21c",
+      "coreSha256": "9fb63bed43ee7018c6c7c46dc42185807a38c371634c8df213a611fb028c214d",
+      "sourcesSha256": "fb36b31b60bb6b10dbd5af37c418aa0525ac697022853be48140588f000aeb5e",
+      "retainedSpecificationsSha256": "abe928e00304412eb9f0c2bbb18fa263eaed256d0ecd0e474b7ba7d1a25798ea",
+      "removedIndexes": [
+        17,
+        18,
+        19,
+        20,
+        37,
+        38,
+        41,
+        42
+      ]
+    },
+    "lh43qmcebgcxkr": {
+      "before": 43,
+      "after": 34,
+      "originalSha256": "21fd91ccb187f2de6c91f6ec8ed13515a9ac51b857ead1e49adfee3f087f640c",
+      "coreSha256": "d8010af6ca78455cae4e3fb57f2a21994dabbee00777ed13dec9852ff69ca2a7",
+      "sourcesSha256": "69dabf9ff30321bb192a68182893c1a53bd11ecb97ebdcccf31cad9b1d313ac4",
+      "retainedSpecificationsSha256": "2d138b208da959792a9d03bf024abc88db1c3e74b4957e0be959c58e48918fab",
+      "removedIndexes": [
+        16,
+        17,
+        18,
+        19,
+        35,
+        37,
+        38,
+        41,
+        42
+      ]
+    },
+    "lh55vhcrbgbxkr": {
+      "before": 35,
+      "after": 28,
+      "originalSha256": "676723c45c0ea05cdc8d3873b01fe8f460813e53d92a888fe9a927a8bbc7ed04",
+      "coreSha256": "96f4b46f46fb0efd63c2b72c1cee120889fb035b780fd5c7b43d5c9c97f6c16a",
+      "sourcesSha256": "e1355b45dc9332c8413a311388bedfee7a078a0ea0af6c6f0f7541d6288d512b",
+      "retainedSpecificationsSha256": "e844eb77f86728a0303d6863dccd0ebf951d9d3934e967be85c3f13c17bbbe97",
+      "removedIndexes": [
+        3,
+        15,
+        16,
+        17,
+        31,
+        33,
+        34
+      ]
+    },
+    "lh55vmcrbgbxkr": {
+      "before": 35,
+      "after": 28,
+      "originalSha256": "b549cbd77bb8173399bd04429a2b7ec8935c20bb517ba5a9086338ee9339fa81",
+      "coreSha256": "1fb77e2843924fa4598e8758216af9f0e77a2b2c403a0c9a10daface6a918eed",
+      "sourcesSha256": "641f020db17c51cac0ac60126f0c81fe310e1fa3a2531e1c469b4dc034cd8ea1",
+      "retainedSpecificationsSha256": "7bed8e4dd64dedc0217df4a29ab7b6e9c01a717afbabd93e7c0944de236f0c5e",
+      "removedIndexes": [
+        3,
+        15,
+        16,
+        17,
+        31,
+        33,
+        34
+      ]
+    },
+    "lh55wmfwbgcxkr": {
+      "before": 44,
+      "after": 19,
+      "originalSha256": "acbc82aec9794d57141271fa82bc4695af7461a77aabeb42d6032799a9aa7782",
+      "coreSha256": "caaa1cec4d33fa45a442ab3aad36dc8d8e08fb789d7ea19d246620306c4ee881",
+      "sourcesSha256": "b67766d326e155a13d1213d149124a50a9a58b5052204e5e34d5aedf0619eef9",
+      "retainedSpecificationsSha256": "b4eef2c7acdf65fababbdb8cbc991aca40bcb177df3c5ed6f353983df1bc38dd",
+      "removedIndexes": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "lh75qhcebgcxkr": {
+      "before": 43,
+      "after": 35,
+      "originalSha256": "c781e9ead04e3ef2cc19442d647918e7e8394bec96ded40d74281d1981dc1307",
+      "coreSha256": "3492a04e1dd29477a734aac9a8f8b4732a43a39a14d5f2c887f82f61e7e97708",
+      "sourcesSha256": "922d440cf4a59a183ea4e1b625274c1a87dbe8f64503276def9ee86172875ebc",
+      "retainedSpecificationsSha256": "6a6ea101fee20fa24e2b3132951a23406cde625913fe2f548683e7c59b7481b8",
+      "removedIndexes": [
+        17,
+        18,
+        19,
+        20,
+        37,
+        38,
+        41,
+        42
+      ]
+    },
+    "lh75wmfwlgcxkr": {
+      "before": 43,
+      "after": 34,
+      "originalSha256": "f376f19eb6f836d176d6e64c686a5c1d9bc7e9ef045795888cdcce2cf6233997",
+      "coreSha256": "d0b542632447acd5cc0520bdac4a3e0ab4b67559dd05f9bc9f93cf56638e7dc3",
+      "sourcesSha256": "de29c2ac7e2296ee0c30d14114e5f6fae4b10a235486dc922be3d0e83f968545",
+      "retainedSpecificationsSha256": "3cb65515856342b5302002e4fd7c2717539532c039815a29e62c7ccdbc46ccb5",
+      "removedIndexes": [
+        17,
+        18,
+        19,
+        20,
+        32,
+        33,
+        36,
+        38,
+        42
+      ]
+    },
+    "lh85qmcebgcxkr": {
+      "before": 43,
+      "after": 34,
+      "originalSha256": "901181b6a825a7e8e7998249afa32a508578b3473b7ca18f37e12cd6e80d7e03",
+      "coreSha256": "35ba3fbc4e8f7625a688cb963b886f9e62ccae88d728bd067eea4c723598a1e6",
+      "sourcesSha256": "f90562ce235c605bf669a550a37cdc7c0d429eaf3648ce7a89ef8cc23307dae2",
+      "retainedSpecificationsSha256": "dc05dfa886f7d834c4f4d06934dd9b47fffda15635c79c364c60621d9822c287",
+      "removedIndexes": [
+        16,
+        17,
+        18,
+        19,
+        35,
+        37,
+        38,
+        41,
+        42
+      ]
+    },
+    "lh98qmcebgcxkr": {
+      "before": 42,
+      "after": 34,
+      "originalSha256": "a3b551439cd0f106f3394848499fe023c99af4829d6ac19d06495ff2387b2611",
+      "coreSha256": "210798cbbe3efdb80a7f367b6dee7dbe3b9ada14ff3e6f33176df03a60342020",
+      "sourcesSha256": "907b02ff2a00e24df817e32ed52eeaa104936ba0af208fb19b928d3b5cb4da1a",
+      "retainedSpecificationsSha256": "36740654a723a5fc219f6195be49d3ccd6c18854f3d0419cc77964e46a3a0efb",
+      "removedIndexes": [
+        17,
+        18,
+        19,
+        20,
+        35,
+        37,
+        40,
+        41
+      ]
+    },
+    "mp008f": {
+      "before": 20,
+      "after": 19,
+      "originalSha256": "9a02eee97746d7698b63a59dbd7e01aa391a3fc8ebe896a69b260569fa938888",
+      "coreSha256": "eb7e0020c35cbd56726aec47494af9f3196e64245ef5657dc0d71c665ad36cb5",
+      "sourcesSha256": "d76a2cb41270c5a46a11d8e00fc52ee2282aead3ca324877479c261682642700",
+      "retainedSpecificationsSha256": "9098285b979428b2631856ed3a0bd861cf6f7948c6e9f8fc59038edcf1ce4828",
+      "removedIndexes": [
+        16
+      ]
+    },
+    "mp012f": {
+      "before": 20,
+      "after": 19,
+      "originalSha256": "823ceafe963642b4d5b27d2c3c2a24a0f2d0d29461c4ba93ea28dae582de894e",
+      "coreSha256": "3820257b64cc79263f3f6ba011ad07915ed6aa31425d3194182d55a44b45daa8",
+      "sourcesSha256": "b36c0afc84c05fe3dd0e6b871aaca8fd1e23d49296ae62926d064d93380a2fca",
+      "retainedSpecificationsSha256": "c5e59f986c768d7700c975048629b54c28b0846968deab0e959b514f0984ffa0",
+      "removedIndexes": [
+        16
+      ]
+    },
+    "mp016f": {
+      "before": 20,
+      "after": 19,
+      "originalSha256": "749972090a7228a5df9b2cc9e3b52d81d269fd14f3b4c118264061ffe6762856",
+      "coreSha256": "2d5ae01823da8fa4703a784552ad78a993edf1aaba41108b0b4d9dad7bbc20e0",
+      "sourcesSha256": "d5f92b690cf3c27d79173ca7b2e0b0fdbb39a3b44318439985391c45a534be0d",
+      "retainedSpecificationsSha256": "561ef70c584a100fc10d828ea0e167898ceb0c2793a64f3175ac47a0264483ee",
+      "removedIndexes": [
+        16
+      ]
+    }
+  },
+  "untouched": {
+    "a900w-r-gm": "ca07c5be6cc42096ffbad5d2d7fb74dab075ad3f0145473b444966732c965190",
+    "ac18-26": "f3291287edf673baf6d5cd8db5ccd8b552c8496b0af95d041b9f47ea1cc93b80",
+    "ac18-95": "51fd3104f359813d4d629c8a488dfbbd59652c97d80e31ae0079e5f29e6920f1",
+    "aquilon-rs1": "6ea7416adf49b4a7acc42e0eaf1813d2b0c3797f545301d93579251e2b013158",
+    "aquilon-rs2": "812ac9fed94ba20d185d83561aaba3e4e3e7631ccc64244c34fb37f966dd0499",
+    "avhub": "7efb5783728c52335eeb6bd001955bb728b9453a85a8071af19b8095c91d7a69",
+    "avio-2ch-in": "00dd91929a1f69e7b4b280a447b8e1ca7d581edc196e6ac095a6baa2652ba951",
+    "avio-2ch-out": "1fe74ceaf8c369e3d0f4175fdd81d2bab9e208c57684ae31081b6861cb8b378f",
+    "avio-bt": "63987c34871125cc8fb77c0f1900626375826a1fc29d82b2db30599d33b4179b",
+    "avio-usb-c": "d304bb8ada267c3accd1065fcf26bb6f319101d4ec048e9ee3edb55df01514c2",
+    "blu-100": "0b6955dc20539092e6c5770f5760a7efe315501834be07849d9cf047fd57ff81",
+    "blu-101": "0eaf388ddbb8544f2074a11753a726edaabe0e4ad9b03ba1141b02991d7133ed",
+    "blu-160": "53e429a324a4d7f7cdf6010feb97ecabdaa1f4a8e35ff7ecc090593abedff477",
+    "blu-50v2": "444a0cb4ef81fc9f693c55e1391d612db3b63028e192d5bc7e5c606f76fddbc3",
+    "blu-aec-in": "fe73438a7ef72285ad22ad5e477d98a1128424e71321340bed0081e218805d00",
+    "blu-dan": "e1b0c23282f016c0b763b33799d844ca1e86c5ea1a41a965ba94d54c905c9456",
+    "blucard-in": "fea26ff22aa42840a7395ca94dd3a6408e4c6cf1655b35f01b1b149f5c2246d1",
+    "blucard-out": "9b45bbb098e2737699e9985aac408c7b253c5fcc101a5c83c42d8b9d9988027d",
+    "brc-am7": "b9feb980caa3a6043ac32d93750c003eac7efe25cd351c43452aaa6586bef6f3",
+    "cdi-2-1200": "f538e5764826ba881052954c6123da73bcfa5146caf4d926caf82d6cf7443de6",
+    "cdi-2-1200bl": "70d2ec7b06717f31f366624c03403ed4790d173cf8354a7bd3d2855f4ac1e436",
+    "cdi-2-300": "ac5a42d172926c25f6000ed1d2a05ec13ecc7b2a4ef23b4615e61218610403f5",
+    "cdi-2-300bl": "2e17bace350ffe4dbf421060867dc66c218250f64b02f22bd57d55181e79db61",
+    "cdi-2-600": "e6cf29a10110123abf467533f81f376e9f852d75e24c76392d0f1ad0e457e644",
+    "cdi-2-600bl": "2154bdaba2b46e6abc1e536173dfd6d072e385886d23ecb9d573a17e53bbe270",
+    "cdi-4-1200": "c29409094925a09b11485b2568d92f9b8283b83def81b64d9942c0ded2241df5",
+    "cdi-4-1200bl": "937a4070e02f05bdeec355f3004734ba90cf2476814a13cea03af94d26ce70ec",
+    "cdi-4-300": "934e0f19b69864abe95181cb187ed9c892f0373aae77fc811879e1f7f7096645",
+    "cdi-4-300bl": "16367175b35e84f22f64dabfd91b3c2600d0c63311c22c24db546797ef628396",
+    "cdi-4-600": "ebae0e935aea89984e862a34688b3e777266f0d1bc20fce0f67ac1166feb4591",
+    "cdi-4-600bl": "411cc630942edf7541ae769f685315d86460a4b99269c842cfba5f1b15385342",
+    "cl01": "8640ad9e0b6cd2074d8d54c7598735f1f54e3386335f146788a5de40ca95520c",
+    "cm20": "23dcef3d6bc81a937369bf79df0ac974c5a9b402de0e6bc080c33f05bb4d33ee",
+    "comtech-d-2125": "4353cfe4ff958656b09077dfca2c1130cb04795a62a8d46a559c543ad05a8875",
+    "comtech-d-4125": "e059f206902505e4708d617b400b845015ac80f2f35888c4259379f1c2a0feab",
+    "comtech-d-8125": "cf2df109f18c12889858db8fbbe914c36c51ee21b6ef898aae97237ef6594b3e",
+    "confidea-flex": "797679065a5c582d92c709d85f1e4c80051b35c639d0e55ff42886990a7144af",
+    "control-23-1": "894191d11805141860ad63b6c8f83beb51255aba82bd5b6e6765915aa158573f",
+    "control-25-1": "881888d29677b86e0b975f1b93286f2764715ab530f5b40cb3e309b2b6787514",
+    "control-28-1": "89fa8ce75a6f7ad6ed00758e4faf310d7fe369a3016ed4dd718ddc553e9e6c7d",
+    "control-412ct": "e1fb289550c678dd92485658c4029aa0b489f5b39c33e4ef7acf593055eb0440",
+    "control-414ct": "0df3f748b33991bde468b428c5ed241899569d2d62b96c4da0b3673afaebc711",
+    "control-416ct": "7ff8195794cf3b4a2c4517eda8cae7b562b8c70c1d37d5dbc505c17a84085b12",
+    "control-418ct": "f2d45315119a630a7a781e7a7dd789fe9311c75c1ad2f07c9f180d0cb7d87758",
+    "control-419cst": "abe2c39720ee7a5ca08f12086a858005ad89aefda5088436c385ccc0051dcce8",
+    "control-424ct": "786faf62780ecd2ce132ae16de5698b977411e518249d313c41f8cc37de7664a",
+    "control-424lp": "a111feba7b52715a54b57daeba2892c905db7d03da56575f9fcc833d554bdd19",
+    "control-426ct": "8cfd85f54b6de8407c080f56c42c1c324137fb813951f71c371b01a7ed8a0ce3",
+    "control-426lp": "bdc159172a4043aae6a5b71fcf855061e6caf9a7e6821643cb450a0fdffea322",
+    "control-440cst": "f0e4b27c0f30e9165ae7db9049fc9865795fc04142cda4ad55c91a7d84d73512",
+    "control-447ct": "c7310888b35bc3b7ced937b6c963ce25d5785d4f1b43ac48f8fc88b76c4e6cd4",
+    "cpe40": "fdae92088826c688243abef9f621a30a26a5c23203d2f5452982b4891e7d871f",
+    "cs10": "0e1635a3e23197f642bf15e43d6dd5181d13ed458e105f09344fc618b38ae4e8",
+    "d-cerno-ae": "4bf48d715e4d77932663c885c983674064186cf9e4cb46672b4be67352cf3467",
+    "d-mic-40-sl": "24c830742ee2c88b5ef3a6cfef88d3d5ad5e7cdf575f2aef1938d18b1fccb936",
+    "d-mic-50-sl": "3aed60d01257429a7075401d6d3a686d5701651b6ae65292e3894d7e6a12de6b",
+    "dci-2-300": "1d581dc4c602aa1617bcca260caaaa5686604dffd8ddb86cf2b6375f117479e2",
+    "dci-2-300n": "47843f32625c53bf92cdc3daf20fae113e2f4d6e1c72e0d2ded2018001d2690e",
+    "dci-2-600": "d80d35c8f07647ad7c22d13efe65e4368ba7a805ae2e5daaffa8a278ecbe9afe",
+    "dci-2-600n": "338d759f7f88fa767ab4801f740b1e45b4799f05a97d12a560b195ff78fdc2b0",
+    "dci-4-300": "2182923f49797ff6bc2dfc110486db9c975a624f52eb24cdec164610be11730e",
+    "dci-4-300da": "007ecf415203a24ac372e97b42c38c6aab5cca0663195258e9d6f814c43709c6",
+    "dci-4-300n": "54637dc081e4b3012a6786dce1a0dc0983d19045b5b6a518944b88b6ca4a5c3e",
+    "dci-4-600": "2ecc291b76053408a2d1288bd8da5374265eb84ea9a7a6a2de89cb8359c0601f",
+    "dci-4-600da": "7660b854897a4583e2bf236fb89069b3a2851850c694ed817f8e0fd0f0a3067f",
+    "dci-4-600n": "b37edf0fea1448724a26979930f24a157e08d6940c20aab260c866cf48f58e9d",
+    "dm3": "d4022e64c3655028a27f99c3f26a3bd1f7c80ce0f2a36152e34c61ba92ea5008",
+    "dm7": "b03937fccd3d503b1a142d2e23ee2e71ce99810392742788bf2f3cb6e599e7d3",
+    "duecanali-1604-dsp": "5c658eb8eb1d6f2ced5387b1722a9fc8335270d05d0618223a8ece59abc04310",
+    "duecanali-1604-dspd": "a590945d6d3d23c243390b979cd45ddf3243c9ffd338c46b4584be48402a06e3",
+    "duecanali-804-dsp": "ac303019c4be8680bae947e1b4c309fffcf11b71c91a7c6b3a31fcbc255f86f4",
+    "duecanali-804-dspd": "db9a2b0ddf50303af2986b225f88f9a776279773a90a896e170b2285b79b47b9",
+    "eb-l260f": "c62c66638c6f929c7b05ad0783c23819ae6c2660790b1e51aa29ebd94cde8408",
+    "eb-l530u": "300ae21e2fd1e3d3d89f788508b08aa92e63766bca6320b7a06dbc89fea3146e",
+    "eb-l690u": "889b2cad542c8914672a63a89fd0fe66aec1ef37434b99dd7ac39cdff3ac3620",
+    "eb-l695se": "2bcf1546b898c05712ff04e2893ac34fadd811ebdb657e77cd97fef8e7703d4f",
+    "eb-l790su": "30050aeb90825bee1befbb0453c56104dfd78f73bda0deef049e65b74be5d941",
+    "eb-l790u": "60101eaa2bd09c5971fba91c91117d3161b0c579e55b977377ad0050b22210c6",
+    "eb-l795se": "23f51df9786ee7f3ecf0c1c728e9b2d25240bdf7a7d8323f1cab46619d40b78a",
+    "eb-l895e": "b02a8f57c939c662d00f0a59ba0a221a16c12c1483b15296c9b0ccd40d8cc837",
+    "eb-l895u": "a757e59731b24b50d56be7012ff0558669454d050e4fa70c62bb67866bf1b6e7",
+    "eb-pq2213b": "6190845e33f6936d9539f0ebeb794d9398bdd1df23010c02a06eb41bf089399f",
+    "eb-pq2216b": "2a73ac28b0c171b3429c25f02e50e784079d27c2a138d5afc7cfdb3c9725f853",
+    "eb-pq2220b": "ca65fc6f8d587aaa6d2825d01f4e06e580700f6cc4ab5e93df8dd84f768d39b7",
+    "eb-pu1008b": "fd941d2b33635407c487bd58bedccba9344456d4faa85427ea2c5f2cd46ce2a7",
+    "eb-pu2010w-b": "4df67b507fe72397654dd7d3451af67843f072207af4207258e99031ac0250fc",
+    "eb-pu2213b": "a6bca508163832436a9ab311bab98a492e3d2f44ee6e81a2b13f104a2145d338",
+    "eb-pu2216b": "cc517e12b74375ad560a9ce72ef0b58c85f703ce6ed6114d0823e402fcd36b33",
+    "ec-4bv": "9a2f39fa5c31c62a32754b6c00070a5f2956cc4091e473617648815912915b1b",
+    "eikos-4k": "36ef449534a1cfb2ece1d68319a2c018d9dfa40e0b708c77f58c8381bf249e8f",
+    "ez-hsv-plus": "bb0d5736278b3a71ceaa8003fa09083b906d96a657325bf0cc25381824a8b4d2",
+    "ez-md-plus": "47eca0283461da7dff206272ca9d3ad5097c34739e14beeb5b51316d9a4e0a71",
+    "ez-shv-plus": "f85b75c6189e5dc2d23373d1f6f77e81de77c52f2fc7256c89a341fbc34c7df4",
+    "ez-umd-plus": "cbc7eb3996d0729e721709f0501aec8f4296aa5698df51f2122a15134971af4c",
+    "gs108pp": "dada581542055c503560aa1f127414877cdc6a87a477accd2d11370261fae1fb",
+    "gs116pp": "b7a2afb1c8261395823da2a72ea08c5839c374fdb3f67de09da1edabd6ea1d75",
+    "gs728tppv3": "0160ad439f0ddcc1a7458cd3db7129ead5a58eaa37433bc7f6af4b94500f99b3",
+    "gsm4212p": "afa1f34bbff9039e6035fc48a884ff95650418e69f0568ba95fb8694863c57c3",
+    "gsm4230p": "789c066f1421c66b22e1ac1e21834dcf71d295761b887b3d1d889775332eae4c",
+    "gsm4230px": "a07e6d653b6258a4c6104cf37d680f78b003080072d310d7e2584d5b3e0064ab",
+    "gsm4248p": "30c9fce294a22e1ccc20a7f49d0b7b0189fb7473a78065a214fdd3122e125971",
+    "gsm4248px": "dfaee5129673d9296916efd05d60151e0bdddb8974dfc9aa81b864a43459b80f",
+    "h-800w-psu": "af251bf272e46e601c69aadcbaf51b1d26dd46566774983f345c408dcb8f084f",
+    "h-input-card-12g-sdi": "25387544c726de70ea81cd9a29bbd17f4b764ed0d88d6173fab8b9836395c0ac",
+    "h-input-card-2xhdmi20-2xdp12": "3d07157bd8977aee2e70e22eb20ec708be2ea9cf8cee108598b780387aa5c93d",
+    "h-input-card-4x3g-sdi": "d9dcc04069d21eb8460e964c573fc69adcea9d3d4bdf3c3fb7930c12fcc286cb",
+    "h-input-card-4xhdmi": "fe6950121b673d5b433a80cc438ca6b1a82ea840729d09b6888b397584bebee1",
+    "h-input-card-dp12-4k": "e71987b14de61fe55d7ae5d5891c1fd20a265e49d081e1f39c317c81641101e2",
+    "h-input-card-hdmi20-4k": "79ce0b6a3ff3f64bd977350c9ff58c83a0b2fd795dfdf355add940ba92758dee",
+    "h-input-card-hdmi20-dp12-4k": "22ff894b2e5697e821f3862e150d074922c49a6dff91e13ac976ee59ed28d6bc",
+    "h-output-card-4xhdmi-dl": "3541b8c06284f07fcbff388e45f90c8883dc07b48d6097e368253aca4b361439",
+    "h-output-card-hdmi20-4k": "7bd1f5d8cfffca615e71ad629a9f9962a5498cc182348a41e898f89c5c8e48d2",
+    "h-preview-card-2xrj45-1xhdmi13": "7016f7b8779cb33cd9af8a9d120ac63e08624d4b1a9e324b736f8fbd882955c7",
+    "hdmi20-optj-rx90": "9713cd9a5d6e4d680036d7e56ccf6e20e74093926412c7c50f6f6f543be2ebf9",
+    "hdmi20-optj-tx90": "25ac529593d2645861353952a0ab6e83679fc6a089839635dfed4052f398cbdd",
+    "hyperdeck-studio-hd-mini": "6c78dafaab938c41d11e85cc5e298a2f1b5a881d1330d2ce80e38127bab967a0",
+    "hyperdeck-studio-hd-plus": "fd42ad5564848e66d8da1221bfbe1ca8648d632f91419f6b0f42fc7897c10762",
+    "hyperdeck-studio-hd-pro": "5797a0a45ad845da7d685cc9a165fb3382b33b6654934f7c56bf2d90d04c59ab",
+    "i-tech-4x3500hd": "3bc7a8781771b0a958417fef670bce94b8c4a2be42ce040fc483f2e4b9b2c9f6",
+    "ki-pro-go2": "587de10150ec31b48564861b4f2cec33f2e4f675fa3f19214bf63b593d51cd59",
+    "led-780h": "33a1d2879df49610e2a6516fb18e525debe22f05267ef3418ef75b915d13edbf",
+    "mezzo-322-a": "da406b0568f4c910ba2d136ff7131a7b30be6b12025b588664f123bae9658d86",
+    "mezzo-322-ad": "3358e2ca0f8604b0fd81b412e2b418bfcaeedc6cb6dc0230a9de3bbd7b072036",
+    "mezzo-324-a": "cc30d5ceba1be9aa5813f7c6eeb33db4c680aed8159fc08644da3f4a18070aba",
+    "mezzo-324-ad": "7601ecb0048a6c0f87005b00f7cc18529b52e65c433e0a2a68d1ed97939193e3",
+    "mezzo-602-a": "15bb8022b4b12903e91a71997fa480b32819cf875e9c5fe5dd70e12460f6c53e",
+    "mezzo-602-ad": "9868156ee2cdcab119dbebb799fe1414b04ff20f4bebb993d5db9d9e4075ae5c",
+    "mezzo-604-a": "ec01b735fef2aa6fec331a7775507fcf5dae1238cf4836eca22cc2190a574325",
+    "mezzo-604-ad": "7a6cd28bf3682ebae055552de46c5c4a970df4b8c7798303cc49c10e4aeff03f",
+    "mx392-c": "748d23c98dced0f5d046b7e4923037ae799d339a368a4fa516868d92687a9882",
+    "mx395": "b70164c069c923ac84c39de0586b3ed7c2d57927cc2ab7f267d4a90de27f61b5",
+    "mx418d-c": "ca0dc84f97810cfde1ed23305eac5e2919d4a4dc04d731b0725f746111d31c7b",
+    "mxa925w-r": "246486554b7e4eab6b201adccb021139f928e71b0bcaaa74f8aa1dd44b3dac86",
+    "mxc420-c": "378decd7ec30dca8a0a3ce5d93909f19e6229d990851c70f8ba8f13b9274733e",
+    "mxcw640": "ba95f6584d021bdb354462c8b76f33a1251c4ecaeea97b53ebb1ce0470009d33",
+    "mxcwapt-w": "2cd129e6c6d7959dd7fc5c31c087369314e419e8524efba8a463b965f2e40280",
+    "novastar-h2": "3da205a9c4026ab18e0960f74b38b3d58803448b0b9735f74a91836e993461f1",
+    "novastar-h5": "144a466171dfed4125c1d0b7275696cf549b1521fd7c43915524279c0689337f",
+    "nx-1200": "ea8ed36fb628c73bbc7e7f94c6273ff18ed2ef353280124cb49236359621bbf0",
+    "nx-2200": "d2dd9d3fc58fdb355e99e6525b5b219c4258961b04078e715f4afc41af74a968",
+    "nx-3200": "78ea2581a93bf5248364032441c2ea5404b40bcac24cce212c2933b16ca88e37",
+    "plixus-ae-r-dante": "a9d559427fd2eb7776e8b0c644366da0edb093aa2229f8edf034d23b3083b521",
+    "plixus-ae-r-ps": "91c18a6bbb693507fe460d8b933e23397a79575eb34e2af01f55d4e1e167ae72",
+    "plixus-next": "1c97e24701d6ea07ef8be3b19a5ddc0db3de3bb0fc12afdd128889ec074beb39",
+    "pt-mz11k": "b4619c9bab3b04b45795fc9bae6cbcbabc71b48478f420a6335b1226a1fd588f",
+    "pt-mz14k": "b3946febd07a1628dec889749e5cd77400c042061d01e70d507dc1c1feb43f89",
+    "pt-mz17k": "6b94a5e164212191a8547d534f9649d1b5c0014c580e13599dadf4c877db30f2",
+    "pt-mz882": "c14c005a739d32a26ad01c5b57de44e3d6b446a47e60d47df398057d5c8f2931",
+    "pt-vmz51": "075f994bd3c386fa32aef3b746a7a930003295486b6badfcc1089c63ad8aecf8",
+    "pt-vmz61": "cf2bcace1e5e3f36dc6b9cfcbbc490a5b144c1f7b3b28d195ae2d8b1e772cd7d",
+    "pt-vmz71": "6ea09f6b8def7bbdcef4a5a2ff066ba485fa826dd784d5da4d9f3785b35b4a69",
+    "pulse-4k": "fe7990eef1d8197cfcfd3407db48ea646b2b0dfa2b9c2e7e030c21061a6cb7db",
+    "qlxd1": "dd3f48d173a352e259ea21eda45b71fe53cd701f620501b649659d27f757313c",
+    "qlxd2-beta58": "4057c5c641cfdaa0fd3e1ebe3751e0ef2804c1322ebdbabd55355e50f07b03e0",
+    "qlxd2-beta87a": "a931ae6a80d99086559d88cf5c46d769e3bfdeaf1e39ffbc9b8346ac93966517",
+    "qlxd4": "719cdb96026cddbd3ca4743675a11fc59f7786d6b557ac5cca6c6891165fa32f",
+    "quattrocanali-1204-dsp": "089ddb4415152bd7d377dd59ecd929907c57072ccfe6c75a2bb8fd935d37f6b7",
+    "quattrocanali-1204-dspd": "15f2b08c7b2d3602fb3017b4a20ad9ec8f4c1519984938d0dae6ad0d0a528886",
+    "quattrocanali-2404-dsp": "b814cb474735b3b6d51af43abd22edf9344598f5719c5532683efede07b13e74",
+    "quattrocanali-2404-dspd": "691b879be9e34b8bc2366bdae204c7f87880bccc901d9e8387746420e7e4c477",
+    "quattrocanali-4804-dsp": "d493cb1eb5de983627f54244d4ca5e36b0654a7ca57ef97087038c0f6a438382",
+    "quattrocanali-4804-dspd": "c54e7a6efb3d605f96e034446b7d41b5b4ff846097e07541d15a6a927a1c3031",
+    "rally-bar": "555e1af8ae93bc2598a79f3dcdf8687d7403cb53549d19ca4290b05cb38963ca",
+    "rally-mic-pod-extension-cable": "c3050b62d9cfc96cdfb4e8438aebdc99953279d66f53dcd8b570004eb6ec0097",
+    "rally-mic-pod-hub": "d3a32503e674e5c31bfdafec4a521cc1f12b7021f5ba3ec68f77e8552f16b20c",
+    "rally-mic-pod": "cc2ed0f71d85e962f44e2582617eaefd80784aca258ea45330e67acfc16da9bb",
+    "rally-plus": "fe58a278605192c327435b1cbb4d2b35bd5107343b4a32c5492276f7863e5606",
+    "rc400t": "9663f4ef854dddcd00f8e44c3ebd6d621e39d4992378e2c0a0c0d01c8e3a98c6",
+    "rio1608-d3": "33072d8d5d5699bcde4709fa330c83b3dc985fbc800250dfd95df7d5134a48df",
+    "rio3224-d3": "9b094af0a1c405a78ce97e2d61c0d2e8b6b96dcb8263b5c2603865ff7b570ddb",
+    "rm-ip10": "cb7dce2af46d9dff89ee9920f68e7826c8ecdc3ad36fbfd596cfa5c039bc043e",
+    "rm-ip500": "299737342135d33d2e9e611c46e52713594d5f1bab09da54d7519358f28035ef",
+    "slxd1-plus": "ffec6afb37d1b49919f364276e5e750d69368476088190dd8a8a1c6ef68f603f",
+    "slxd2-plus-58": "976301fcf0f55ff2febbfea2a6069a1a67bc3f36d0397b3fb7f07766edc3afc8",
+    "slxd2-plus-b58": "3b7b5edcf9f684e92f59a1bf18b16e1d11fda85a2547622a43b04b725fab6cd0",
+    "slxd2-plus-b87a": "67d4c9cb0dac5871adc48461f9aea2560565105b1bf86f2c163d203fc6149660",
+    "slxd4-plus": "1ee8a2f5b09325c13e7bda4935b5e9a43a2f6321be9c4c7b1d1cbcf752eff796",
+    "slxd4d-plus": "0d8963a3d4d119513abea64c450e2f706c3adfc63a2aeebec19da4ac4c47593c",
+    "smartvision40": "949e9812f41390375ec74742447114ab0cad3cca24bbcb3e9f1f192953c1350a",
+    "srg-a40": "dc332273ec9d30696dc32f79e6212b12fc917c17f0e83ce76ae3d8fd34b040f0",
+    "srg-x40uh": "e81dd4f92c4dc806e20d2234796f63d0ef2691b553e5a76ef317c233ba3a90ea",
+    "strong-usb-cable": "dfda8cbc93466dd1de649935adba7c9fc5e0766af8dc9805a44997964a0df0be",
+    "sx-1216-rti": "8f001d57561729ddf49427e9d5095ae0fc70cc069f6821f2263f6d365f659b74",
+    "tio1608-d2": "983fd581a4f1ae942e190f0370ac9fb3a904f3d3050ab5950a556f91b566ee6e",
+    "tr315": "6d703cfd3e67fa7ca8e2db6c66fd7738d824d28184e66f1f26fd7b50f0abe7b1",
+    "tr335": "2a40dc0b3aeb7e1cd976d27e638e48b0158b6ad05e93ce019fe51b0e3b4a6461",
+    "ua844-swb": "a18021dfb4eaa94e430404424c073d0d87d03a6790ec0a5c40f3fdeb533fcedc",
+    "ua845uwb": "c9c7542f2b7216d1a493e77dd0b0c5758cd2d4a055ba0a82ca01794ad63e7d4b",
+    "ua864a": "24b5336aa740b780edf0341f7316fffc6fb8f43199c769dc8a7d23129c392861",
+    "ua874xa": "63561eb2c105c769d21d00c61757f48f65508318439ada83ac2752ce00834ca7",
+    "ultripower-ps": "5b3c9e0409d80c95a92b5a465a2bcd7ca387e95549c99ca9e14ef7c59f30eed4",
+    "ultripower": "a117f1a3ece81f81745972cfb74f158f01c55e2d93e843bf0df7e7029f1bf3ed",
+    "ultritouch-2-hr": "eb4723ed9047b2b8a1293dfb5027536a07d7f4cc480a6996968d4147f6dcc691",
+    "ultrix-hdx-io": "5d2cb5226fc5effc1eb8c4464430945ec5ac7e4f44c432e634607320f2c4cdef",
+    "ultrix-ns-fr2": "7d73ce2bad2107ce75821aeb1062b8a9d846824f75600ac287e1329addb04d7e",
+    "ulxd1": "f24b3cc6c228c325cc370c564eb7000d41d60e310d98cc67042f19fd725965ec",
+    "ulxd2-beta58": "23dbb95d5ffdd8f50ce9c2cd02bacdf177daee81c950817cc61718c16ec41f61",
+    "ulxd2-beta87": "aba6f1d661af60ac27a357111ed0604d158f9ba2a80e9ebc5993dc04179551f1",
+    "ulxd2-ksm9": "c7b48a24fd8ad6741dda77697e2a2d35e52a05c05345f02b683372e06cadd6f6",
+    "ulxd4": "3992c0414b581da7193b9238309db252ec6854e3b9f6dc43892159878ee234f9",
+    "ulxd4d": "c2b164564d47bc40c20f329ebd6c3e0f203305a9034fa571cec25b734266c0fc",
+    "ulxd4q": "5ba88d27475f367714367ca8eeff546b6406d394882d4cbcb68f8d3c505821b6",
+    "ulxd8": "3da2211de99c06cd906bc88c801c019783f7b9ab59797aeb193160a3339e8897",
+    "uvc-01": "4a286704ed8e8a146ac300bf0f0ab576e90cf45ec03007b7ecec7b34cd8ca4f6",
+    "uvc85-byod": "fd84694c25c88b12cd60abaad9b99f77b616cbaf7d497334de05250fe0882b29",
+    "uvc86": "035a6be1856eec62bb7c0edd3ff1e966ec928663f4bd996a8cc377930e394bfc",
+    "v-02hd-mk-ii": "cfe242cc0f77648e8ad3e5f8a3284a70062170fa1dbbf2b602ca42018b465ab2",
+    "v-160hd": "012cffa7697b08b208672c04698b773bd1ec8861b6ce26f6d89adcbf7a83e22e",
+    "v-1hd-plus": "3f15d1042e7082c152f800659361c091eec0f0f1daaee95588fe5fc224e65657",
+    "v-80hd": "48597dbc08bb7d11ada1dd59b888d70e7b5dafa1873e65046960ac8edd0a42ae",
+    "v-8hd": "e0a5be4b506188ff7dc899fe048ec23393a16d28c93f9c926f5f065f22378747",
+    "varia-100": "a88cb00cd858946595f01dbc1c37bfe7934398bfedb1357e9e47d1d4bf5d99e1",
+    "varia-80": "61e360d68fc1fc3957f4cc8ec23c4becb979682c808891c988e30612f43e1c77",
+    "varia-sl50": "08fd069de53b01e5e199367b7e594f51a8f2867fc0536fbf8cc886c3fa4bf2c7",
+    "varia-sl80": "aa5fe803f45ec46b664edf955d4a26c1763b3fc728ab72c794e88244f1571f99",
+    "vcm35": "99d2568388951a4169fc2a84876be5d0ccf753f72e5a07d7784bc31d4caca3bf",
+    "vr-6hd": "e2ad6a693e0f1c1d6894cfeaf7638d0236a9b7889b2096881af3305bb2bcfba8",
+    "vs10": "5f65cc5b4c41dfc44c5fed7ce97d124bd33ab85368c38a29348959604bc91bed",
+    "vs5": "bbb366843ef6bddefb8fe8f68d1bce221425fa9708e92ba916fd18d46511bbd9",
+    "x100pro-2u": "9c8ac9ebffcad7436907ea00ef053681d5974bf2e24063207382122556e2e846",
+    "x100pro-4u": "25a33c626286ba6b74cb6ecf5ee569568710c450d84eba6711c866334813a3f4",
+    "x100pro-7u": "6c3f261d72ab5485e1e54163e4bcaee6633da7e44f4aa3ca112de9e1e9227331",
+    "xsm4216f": "ab076ea170b5e8c7adbcf9832b19d8fcc957e3607c82b18ec89e58cd10e80c6c",
+    "zenith-100": "b5a882aea1411d5cb9bab339f8bbed8dbe356ff4e54a45dd2c42235198ba83cf",
+    "zenith-200": "53cfed27d466b85c94903d351ad49ef2f6ffd9974b75ddfc3695bfb52bc3f778"
+  },
+  "keyFactSupport": [
+    {
+      "slug": "hg43u800fnfxkr",
+      "factLabel": "해상도",
+      "factValue": "4K (3,840 x 2,160)",
+      "sourceRows": [
+        {
+          "index": 8,
+          "name": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "factLabel": "화면 크기",
+      "factValue": "43",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "43",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "factLabel": "객실 리모컨 · 추가 구매",
+      "factValue": "멀티 코드 IR 리모컨",
+      "sourceRows": [
+        {
+          "index": 3,
+          "name": "리모컨 종류",
+          "value": "멀티 코드 IR 리모컨",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg43u800fnfxkr",
+      "factLabel": "원격 관리 · 별도 구매",
+      "factValue": "Link Cloud(링크 클라우드)",
+      "sourceRows": [
+        {
+          "index": 4,
+          "name": "원격 관리 솔루션",
+          "value": "Link Cloud(링크 클라우드)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "factLabel": "해상도",
+      "factValue": "4K (3,840 x 2,160)",
+      "sourceRows": [
+        {
+          "index": 7,
+          "name": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "factLabel": "화면 크기",
+      "factValue": "50",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "50",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "factLabel": "객실 리모컨 · 추가 구매",
+      "factValue": "멀티 코드 IR 리모컨",
+      "sourceRows": [
+        {
+          "index": 3,
+          "name": "리모컨 종류",
+          "value": "멀티 코드 IR 리모컨",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg50u800fnfxkr",
+      "factLabel": "원격 관리 · 별도 구매",
+      "factValue": "Link Cloud(링크 클라우드)",
+      "sourceRows": [
+        {
+          "index": 4,
+          "name": "원격 관리 솔루션",
+          "value": "Link Cloud(링크 클라우드)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "factLabel": "해상도",
+      "factValue": "4K (3,840 x 2,160)",
+      "sourceRows": [
+        {
+          "index": 7,
+          "name": "해상도",
+          "value": "4K (3,840 x 2,160)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "factLabel": "화면 크기",
+      "factValue": "65",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "65",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "factLabel": "객실 리모컨 · 추가 구매",
+      "factValue": "멀티 코드 IR 리모컨",
+      "sourceRows": [
+        {
+          "index": 3,
+          "name": "리모컨 종류",
+          "value": "멀티 코드 IR 리모컨",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "hg65u800fnfxkr",
+      "factLabel": "원격 관리 · 별도 구매",
+      "factValue": "Link Cloud(링크 클라우드)",
+      "sourceRows": [
+        {
+          "index": 4,
+          "name": "원격 관리 솔루션",
+          "value": "Link Cloud(링크 클라우드)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "factLabel": "밝기 · 최대",
+      "factValue": "1000",
+      "sourceRows": [
+        {
+          "index": 51,
+          "name": "밝기(최대)",
+          "value": "1000",
+          "verification": "FOUND",
+          "source": "S5"
+        }
+      ]
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "factLabel": "화면 크기",
+      "factValue": "115 (290.7)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "115 (290.7)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "factLabel": "설치 방향",
+      "factValue": "가로형/세로형 설치 지원",
+      "sourceRows": [
+        {
+          "index": 7,
+          "name": "설치 방향",
+          "value": "가로형/세로형 설치 지원",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "400",
+      "sourceRows": [
+        {
+          "index": 7,
+          "name": "밝기(Typ)",
+          "value": "400",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "1,920 x 1,080",
+      "sourceRows": [
+        {
+          "index": 5,
+          "name": "해상도",
+          "value": "1,920 x 1,080",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "32 (80.1)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "32 (80.1)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "4,000:1",
+      "sourceRows": [
+        {
+          "index": 8,
+          "name": "명암비(정적)",
+          "value": "4,000:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "700",
+      "sourceRows": [
+        {
+          "index": 12,
+          "name": "밝기(Typ)",
+          "value": "700",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 10,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "43 (107.9)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "43 (107.9)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "4,000:1",
+      "sourceRows": [
+        {
+          "index": 13,
+          "name": "명암비(정적)",
+          "value": "4,000:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "500",
+      "sourceRows": [
+        {
+          "index": 11,
+          "name": "밝기(Typ)",
+          "value": "500",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 9,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "43 (107.9)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "43 (107.9)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "4,000:1",
+      "sourceRows": [
+        {
+          "index": 12,
+          "name": "명암비(정적)",
+          "value": "4,000:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "factLabel": "밝기 · 자사 실험치",
+      "factValue": "최대 700",
+      "sourceRows": [
+        {
+          "index": 2,
+          "name": "밝기",
+          "value": "최대 700",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "factLabel": "해상도",
+      "factValue": "1,920 x 1,080",
+      "sourceRows": [
+        {
+          "index": 9,
+          "name": "해상도",
+          "value": "1,920 x 1,080",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "factLabel": "화면 크기",
+      "factValue": "55",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "55",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "factLabel": "베젤 폭 · 베젤투베젤",
+      "factValue": "0.88",
+      "sourceRows": [
+        {
+          "index": 1,
+          "name": "베젤 폭(베젤투베젤)",
+          "value": "0.88",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "factLabel": "밝기 · 자사 실험치",
+      "factValue": "최대 500",
+      "sourceRows": [
+        {
+          "index": 2,
+          "name": "밝기",
+          "value": "최대 500",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "factLabel": "해상도",
+      "factValue": "1,920 x 1,080",
+      "sourceRows": [
+        {
+          "index": 9,
+          "name": "해상도",
+          "value": "1,920 x 1,080",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "factLabel": "화면 크기",
+      "factValue": "55",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "55",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "factLabel": "베젤 폭 · 베젤투베젤",
+      "factValue": "0.88",
+      "sourceRows": [
+        {
+          "index": 1,
+          "name": "베젤 폭(베젤투베젤)",
+          "value": "0.88",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 11,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "VERIFIED",
+          "source": "M1"
+        }
+      ]
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "55",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "55",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "factLabel": "설치 방향",
+      "factValue": "회전형(가로/세로 모드 전환)",
+      "sourceRows": [
+        {
+          "index": 5,
+          "name": "디자인",
+          "value": "회전형(가로/세로 모드 전환)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "700",
+      "sourceRows": [
+        {
+          "index": 12,
+          "name": "밝기(Typ)",
+          "value": "700",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 10,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "75 (189.3)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "75 (189.3)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "4,000:1",
+      "sourceRows": [
+        {
+          "index": 13,
+          "name": "명암비(정적)",
+          "value": "4,000:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 11,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "VERIFIED",
+          "source": "P, M1"
+        }
+      ]
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "75",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "75",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "factLabel": "터치 방식",
+      "factValue": "IR",
+      "sourceRows": [
+        {
+          "index": 41,
+          "name": "터치 방식",
+          "value": "IR",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "factLabel": "펜 반응 속도",
+      "factValue": "26",
+      "sourceRows": [
+        {
+          "index": 3,
+          "name": "펜 반응 속도",
+          "value": "26",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "500",
+      "sourceRows": [
+        {
+          "index": 11,
+          "name": "밝기(Typ)",
+          "value": "500",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 9,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "85 (214.7)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "85 (214.7)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "4,000:1",
+      "sourceRows": [
+        {
+          "index": 12,
+          "name": "명암비(정적)",
+          "value": "4,000:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "factLabel": "밝기 · Typ",
+      "factValue": "500",
+      "sourceRows": [
+        {
+          "index": 12,
+          "name": "밝기(Typ)",
+          "value": "500",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "factLabel": "해상도",
+      "factValue": "3,840 x 2,160",
+      "sourceRows": [
+        {
+          "index": 10,
+          "name": "해상도",
+          "value": "3,840 x 2,160",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "factLabel": "화면 크기",
+      "factValue": "98 (247.7)",
+      "sourceRows": [
+        {
+          "index": 0,
+          "name": "화면 크기",
+          "value": "98 (247.7)",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "factLabel": "명암비 · 정적",
+      "factValue": "5,500:1",
+      "sourceRows": [
+        {
+          "index": 13,
+          "name": "명암비(정적)",
+          "value": "5,500:1",
+          "verification": "FOUND",
+          "source": "P"
+        }
+      ]
+    }
+  ],
+  "lostGroups": [
+    {
+      "slug": "lh115qhfebgxkr",
+      "group": "Connectivity"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh115qhfebgxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh32qmcebgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh43qhcebgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh43qmcebgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh55vhcrbgbxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh55vmcrbgbxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "group": "Smart Platform"
+    },
+    {
+      "slug": "lh55wmfwbgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh75qhcebgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh75wmfwlgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh85qmcebgcxkr",
+      "group": "Certification"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "group": "Accessory"
+    },
+    {
+      "slug": "lh98qmcebgcxkr",
+      "group": "Certification"
+    }
+  ]
+}

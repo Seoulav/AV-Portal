@@ -14,12 +14,13 @@ import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013} from './crown-w03013-history.mjs';
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import {beforeSamsungW04010} from './samsung-w04010-history.mjs';
+import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-001-evidence.json',root),'utf8'));
 const target=Object.keys(evidence.target);
 const sha=x=>createHash('sha256').update(x).digest('hex');
-const file=slug=>readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
+const file=slug=>Buffer.from(beforeDisplayW04013Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug));
 const product=slug=>beforeBssW04004(beforeSamsungW04010(JSON.parse(file(slug)),slug),slug);
 // Git stores these JSON blobs with LF, while Windows may check them out with CRLF.
 const gitJsonBytes=bytes=>Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'));
