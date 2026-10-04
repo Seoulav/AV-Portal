@@ -22,8 +22,12 @@ export function renderKeyFacts(facts) {
   }
   return list;
 }
-export function portMapGeometry(map, naturalWidth, naturalHeight) {
-  const X0 = 40, W = map.displayWidth ? map.displayWidth - 80 : 680;
+export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit = Infinity) {
+  const X0 = 40;
+  const defaultPhotoWidth = 680;
+  const maxHeight = 900;
+  const W = map.displayWidth ? map.displayWidth - X0 * 2
+    : Math.min(defaultPhotoWidth, (maxHeight - X0 * 2) * naturalWidth / naturalHeight, autoWidthLimit);
   const scale = W / naturalWidth;
   const cropTop = map.crop?.top || 0, cropBottom = map.crop?.bottom || 0;
   const photoHeight = (naturalHeight - cropTop - cropBottom) * scale;
@@ -51,6 +55,12 @@ export function portMapGeometry(map, naturalWidth, naturalHeight) {
   }
   const topMargin = Math.max(40, 34 + 24 * (laneCounts.top - 1));
   const bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));
+  if (!map.displayWidth && photoHeight + topMargin + bottomMargin > maxHeight + 1e-8) {
+    const availableHeight = maxHeight - topMargin - bottomMargin;
+    if (availableHeight <= 0) throw new RangeError('Port Map marker lanes exceed the height limit');
+    return portMapGeometry(map, naturalWidth, naturalHeight,
+      Math.min(W, availableHeight * naturalWidth / (naturalHeight - cropTop - cropBottom)));
+  }
   const photoTop = topMargin, photoBottom = photoTop + photoHeight;
   for (const marker of markers) {
     if (marker.side === 'left' || marker.side === 'right') {
@@ -77,6 +87,10 @@ export function renderPortMap(map, image, model = '') {
     role: 'img', 'aria-label': `${model} 단자 지도`, 'aria-describedby': 'port-map-photo-desc' });
   svg.append(svgNode('desc', { id: 'port-map-photo-desc' }, image.alt || `${model} 제품 사진`));
   if (map.displayWidth) svg.style.maxWidth = `${map.displayWidth}px`;
+  else if (geometry.width < 760) {
+    svg.style.minWidth = '0px';
+    svg.style.maxWidth = `${geometry.width}px`;
+  }
   const clipId = 'port-map-photo-clip';
   const clip = svgNode('clipPath', { id: clipId });
   clip.append(svgNode('rect', { x: geometry.image.x, y: geometry.photoTop,
