@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
+import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
 import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
@@ -34,9 +35,10 @@ const specFacts = {
 
 test('all 16 JBL products have correctly scoped documents and exactly 19 unique published PDFs',()=>{
   assert.equal(hash(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
-  assert.equal(hash(JSON.stringify(manifest.uploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
+  const historicalUploads=beforeWinstarW04016Uploads(manifest.uploads);
+  assert.equal(hash(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
   // Keep this audit on the W-010 segment; W-011 BSS uploads are checked separately.
-  const added=manifest.uploads.slice(evidence.manifest.uploadCount,bssEvidence.manifest.uploadCount);
+  const added=historicalUploads.slice(evidence.manifest.uploadCount,bssEvidence.manifest.uploadCount);
   assert.equal(added.length,28);
   const files=[...new Set(added.map(item=>item.file))];
   assert.equal(files.length,19);

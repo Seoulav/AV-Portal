@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013, crownW03013Slug } from './crown-w03013-history.mjs';
@@ -50,9 +51,10 @@ test('all Crown products have uploaded documents and retain measurement conditio
 
 test('five distinct PDFs serve exact models in eleven new upload links', () => {
   const manifest = read('beta/site/docs/manifest.json');
+  const historicalUploads = beforeWinstarW04016Uploads(manifest.uploads);
   // This audit locks the W-009 upload segment; later JBL uploads are checked separately.
-  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 11);
-  assert.equal(sha(JSON.stringify(manifest.uploads.slice(0,evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
+  assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 11);
+  assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
   for (const doc of evidence.documents) {
     assert.deepEqual(manifest.uploads.filter(item => item.file === doc.file).map(item => item.slug), doc.slugs);

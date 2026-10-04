@@ -7,6 +7,7 @@ import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
 import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
+import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -14,14 +15,15 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
+const historicalUploads=beforeWinstarW04016Uploads(manifest.uploads);
 const slugs=Object.keys(evidence.products);
 const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];
 
 test('six model-gated supplied PDFs serve only five BSS products without replacing existing mirrors',()=>{
   assert.equal(sha(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
-  assert.equal(sha(JSON.stringify(manifest.uploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
-  const added=manifest.uploads.slice(evidence.manifest.uploadCount);
+  assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
+  const added=historicalUploads.slice(evidence.manifest.uploadCount);
   assert.equal(added.length,6);
   assert.deepEqual(added.map(({slug,file,kind,title})=>({slug,file,kind,title})),
     evidence.inventory.documents.map(({slug,file,kind,title})=>({slug,file,kind,title})));

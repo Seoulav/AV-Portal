@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
@@ -118,10 +119,11 @@ test('existing AMX specification values remain intact except documented conditio
 
 test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest entries', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 28);
-  assert.equal(sha(JSON.stringify(manifest.uploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
+  const historicalUploads = beforeWinstarW04016Uploads(manifest.uploads);
+  assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 28);
+  assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
-  const added = manifest.uploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 28);
+  const added = historicalUploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 28);
   const files = [...new Set(added.map(item => item.file))];
   assert.equal(files.length, 15);
   assert.equal(new Set(evidence.inventory.documents.map(item => item.sha256)).size, 15);
