@@ -365,5 +365,153 @@
         "side": "bottom"
       }
     ]
+  },
+  "signalFlow": {
+    "type": "network-bridge",
+    "description": "Dante/AES67과 BLU link 사이의 양방향 오디오 네트워크 브리지입니다. 두 방향을 별도 경로로 나타냈으며 동종 포트끼리 연결하지 않습니다.",
+    "inputs": [
+      {
+        "id": "dante-in",
+        "label": "Dante/AES67 수신",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "caption": "Primary/Secondary · 물리 포트 2개"
+      },
+      {
+        "id": "blu-in",
+        "label": "BLU link 수신",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "물리 포트 2개"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "blu-out",
+        "label": "BLU link 송신",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "수신과 같은 포트 2개"
+      },
+      {
+        "id": "dante-out",
+        "label": "Dante/AES67 송신",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "caption": "수신과 같은 포트 2개"
+      }
+    ],
+    "processes": [
+      {
+        "id": "dante-to-blu",
+        "kind": "bridge",
+        "label": "Dante → BLU link",
+        "caption": "오디오 프로토콜 브리지",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": "blu-to-dante",
+        "kind": "bridge",
+        "label": "BLU link → Dante",
+        "caption": "반대 방향 오디오 브리지",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "dante-in",
+        "to": "dante-to-blu",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "dante-to-blu",
+        "to": "blu-out",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "blu-in",
+        "to": "blu-to-dante",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "blu-to-dante",
+        "to": "dante-out",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "auxiliary": [],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "network",
+        "label": "오디오 네트워크"
+      }
+    ],
+    "notes": [
+      "Dante·BLU link의 포트 수 2는 물리 커넥터 수이지 오디오 채널 수가 아닙니다. 수신/송신 상자는 같은 물리 포트를 방향별로 보여 줍니다.",
+      "Ethernet 제어망과 RS-232는 오디오 신호 경로에서 제외했습니다."
+    ]
   }
 }

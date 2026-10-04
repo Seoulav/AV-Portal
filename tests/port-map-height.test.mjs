@@ -4,6 +4,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {portMapGeometry,renderPortMap} from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
+import {beforeBssW04015Raw} from './bss-w04015-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const baseline=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-014-baseline.json',root),'utf8'));
@@ -27,7 +28,7 @@ test('only tall maps receive an automatic 900px geometry and no product data cha
   const inventory=createHash('sha256');
   for(const file of products){
     const slug=file.slice(0,-5);
-    inventory.update(file).update('\0').update(beforeDisplayW04013Raw(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'),slug));
+    inventory.update(file).update('\0').update(beforeDisplayW04013Raw(beforeBssW04015Raw(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'),slug),slug));
   }
   assert.equal(products.length,242);
   assert.equal(inventory.digest('hex'),'43ff5a44d72b1f5683cfb92960906e7250c80d8c4fdc21d39115e6c450cb0b2b');

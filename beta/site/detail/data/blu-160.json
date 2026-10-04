@@ -574,5 +574,104 @@
         "side": "bottom"
       }
     ]
+  },
+  "signalFlow": {
+    "type": "audio-dsp",
+    "description": "입출력 카드 구성에 따라 경로가 달라집니다. 4슬롯을 공유하며 카드 유형별 최대 16채널은 동시 장착 수가 아닙니다. BLU link 내부 경로는 표시하지 않습니다.",
+    "inputs": [
+      {
+        "id": "card-input",
+        "label": "선택형 입력 카드",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ],
+        "caption": "아날로그·디지털·AEC 중 장착 구성"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "card-output",
+        "label": "선택형 출력 카드",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ],
+        "caption": "아날로그·디지털 중 장착 구성"
+      }
+    ],
+    "processes": [
+      {
+        "id": "configurable-dsp",
+        "kind": "dsp",
+        "label": "카드 구성별 DSP",
+        "caption": "4슬롯 공유 · 카드당 4채널",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "card-input",
+        "to": "configurable-dsp",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "configurable-dsp",
+        "to": "card-output",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "audio",
+        "label": "구성별 오디오"
+      }
+    ],
+    "notes": [
+      "Analog·Digital·AEC 입력 카드는 선택 사항입니다. 표시된 카드 종류가 모두 동시에 장착된다는 뜻이 아닙니다.",
+      "입력·출력 최대 16채널은 카드별 상한이며 설치된 실제 채널 수는 카드 구성 확인이 필요합니다.",
+      "BLU link 물리 포트 2개는 기존 I/O 표에 있습니다. 카드·DSP와의 내부 경로 근거가 없어 그림에는 넣지 않았습니다."
+    ]
   }
 }
