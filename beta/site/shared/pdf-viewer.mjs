@@ -70,9 +70,23 @@ export function createPdfViewer() {
   const status = document.createElement('p');
   status.className = 'pdf-status';
   status.setAttribute('role', 'status');
+  const passwordForm = document.createElement('form');
+  passwordForm.className = 'pdf-password';
+  passwordForm.hidden = true;
+  const passwordLabel = document.createElement('label');
+  passwordLabel.textContent = '문서 비밀번호';
+  const passwordInput = document.createElement('input');
+  passwordInput.type = 'password';
+  passwordInput.autocomplete = 'off';
+  passwordInput.setAttribute('aria-label', '문서 비밀번호');
+  const passwordSubmit = document.createElement('button');
+  passwordSubmit.type = 'submit';
+  passwordSubmit.textContent = '열기';
+  passwordLabel.append(passwordInput);
+  passwordForm.append(passwordLabel, passwordSubmit);
   const pages = document.createElement('div');
   pages.className = 'pdf-pages';
-  scroller.append(status, pages);
+  scroller.append(status, passwordForm, pages);
   const left = document.createElement('div');
   left.className = 'pdf-resize';
   left.dataset.pdfResize = 'left';
@@ -112,6 +126,8 @@ export function createPdfViewer() {
   function clearCurrent() {
     const old = state;
     state = null;
+    passwordInput.value = '';
+    passwordForm.hidden = true;
     old?.observer?.disconnect();
     old?.slots?.forEach(release);
     old?.task?.destroy();
@@ -211,6 +227,8 @@ export function createPdfViewer() {
     pageInput.value = '1';
     pageTotal.textContent = '/ –';
     pages.replaceChildren();
+    passwordInput.value = '';
+    passwordForm.hidden = true;
     status.hidden = false;
     status.textContent = '문서를 불러오는 중입니다…';
     applyWidth(readWidth());
@@ -219,10 +237,23 @@ export function createPdfViewer() {
     close.focus();
     try {
       const lib = await library();
+      if (state !== current || !dialog.open) return;
       const task = lib.getDocument({ url: file, isEvalSupported: false });
       current.task = task;
+      task.onPassword = (updatePassword, reason) => {
+        if (state !== current || !dialog.open) return;
+        current.passwordUpdate = updatePassword;
+        passwordInput.value = '';
+        passwordForm.hidden = false;
+        status.textContent = reason === lib.PasswordResponses.INCORRECT_PASSWORD
+          ? '비밀번호가 맞지 않습니다. 다시 입력해 주세요.'
+          : '이 문서를 열려면 비밀번호를 입력해 주세요.';
+        passwordInput.focus();
+      };
       const pdf = await task.promise;
       if (state !== current || !dialog.open) { await pdf.destroy(); return; }
+      passwordForm.hidden = true;
+      passwordInput.value = '';
       current.pdf = pdf;
       const firstPage = await pdf.getPage(1);
       const firstViewport = firstPage.getViewport({ scale: 1 });
@@ -245,6 +276,18 @@ export function createPdfViewer() {
       if (state === current && dialog.open) status.textContent = '미리보기를 불러오지 못했습니다. 원문 링크를 이용해 주세요.';
     }
   }
+  passwordForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!state?.passwordUpdate || !dialog.open) return;
+    const password = passwordInput.value;
+    passwordInput.value = '';
+    if (!password) { status.textContent = '비밀번호를 입력해 주세요.'; passwordInput.focus(); return; }
+    const updatePassword = state.passwordUpdate;
+    state.passwordUpdate = null;
+    passwordForm.hidden = true;
+    status.textContent = '비밀번호를 확인하는 중입니다…';
+    updatePassword(password);
+  });
   function goToPage(value) {
     if (!state?.ready) return;
     const number = Math.max(1, Math.min(state.slots.length, Number(value) || 1));

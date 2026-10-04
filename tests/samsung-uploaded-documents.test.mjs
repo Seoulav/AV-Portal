@@ -30,6 +30,12 @@ const files = {
   'winstar-qmc-standalone-spec-ko.pdf': '663b0bd387bcaf7a950002c9138b6afe916b23aec575c849028171bc55c0a10c',
   'winstar-videowall-spec-ko.pdf': 'f8d4a12db1649faf970ba3eca823ead410e06844ceae7e617ddf6279790d2fe8',
 };
+// W-20261004-012 encrypts only these posted copies; the hashes above retain the original upload history.
+const encryptedPublished = {
+  'samsung-115qhf-spec-ko.pdf': 'b1773b9b39ccbabe5d3dffc408b09f219c775ea762ae66777d6ad540b1a26b5f',
+  'samsung-lcd-signage-product-guide-ko.pdf': '0a01151782576d87a4873e4968255884639b0656e1ccf1b794ab76f1d9249e72',
+  'samsung-videowall-product-guide-ko.pdf': 'da24b9fa9c1b42d531b09ff584d539c8487d3780885c0683b12c9a0cc5c11dda',
+};
 const manualQmc = 'samsung-qbc-qhc-qmc-shc-manual-ko.pdf';
 const manualQhf = 'samsung-qpdx5k-qhfx-manual-ko.pdf';
 const manualWall = 'samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf';
@@ -79,7 +85,7 @@ test('W-002 historical links remain auditable while the deleted Winstar PDFs sta
     }
     const bytes = readFileSync(new URL(`beta/site/manuals/${name}`, root));
     assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', name);
-    assert.equal(sha(bytes), hash, name);
+    assert.equal(sha(bytes), encryptedPublished[name] ?? hash, name);
   }
   for (const entry of uploaded) {
     assert.match(entry.file, /^manuals\/[a-z0-9-]+\.pdf$/);
@@ -140,7 +146,7 @@ test('W-005 published PDFs match supplied bytes and earlier upload history and p
   for (const [name, expectedSha] of Object.entries(newFiles)) {
     const bytes = readFileSync(new URL(`beta/site/manuals/${name}`, root));
     assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', name);
-    assert.equal(sha(bytes), expectedSha, name);
+    assert.equal(sha(bytes), encryptedPublished[name] ?? expectedSha, name);
   }
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, 22))), '98b1d73f66f68e5248e5cf77331166f8d3d7c384b19fc131b28af1a7d6e98557');
   assert.equal(sha(JSON.stringify(manifest.mirrors)), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
