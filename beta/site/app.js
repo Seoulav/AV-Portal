@@ -34,7 +34,16 @@ export function filterCatalog(items, state = {}) {
   const sort = state.sort ?? 'relevance';
   return [...filtered].sort((a, b) => {
     if (sort === 'product') return a.product.localeCompare(b.product, 'ko');
-    if (sort === 'brand') return a.brand.localeCompare(b.brand, 'ko') || a.product.localeCompare(b.product, 'ko');
+    if (sort === 'brand') {
+      const brand = a.brand.localeCompare(b.brand, 'ko');
+      if (brand) return brand;
+      const group = (a.brandSort?.order ?? Infinity) - (b.brandSort?.order ?? Infinity);
+      if (Number.isFinite(group) && group) return group;
+      if (a.brandSort && !b.brandSort) return -1;
+      if (!a.brandSort && b.brandSort) return 1;
+      const size = (a.brandSort?.size ?? 0) - (b.brandSort?.size ?? 0);
+      return size || a.product.localeCompare(b.product, 'ko');
+    }
     const aStarts = query && fold(`${a.brand} ${a.product}`).startsWith(query) ? 0 : 1;
     const bStarts = query && fold(`${b.brand} ${b.product}`).startsWith(query) ? 0 : 1;
     return aStarts - bStarts || a.brand.localeCompare(b.brand, 'ko') || a.product.localeCompare(b.product, 'ko');

@@ -187,6 +187,12 @@ for (const item of catalog) {
   const keys = Object.keys(item).sort();
   assert.deepEqual(keys.filter(key => !derivedCatalogFields.includes(key) && !optionalCatalogFields.includes(key)), required);
   assert.ok(keys.every(key => required.includes(key) || derivedCatalogFields.includes(key) || optionalCatalogFields.includes(key)), '카탈로그에 허용되지 않은 필드');
+  if (item.brandSort !== undefined) {
+    assert.deepEqual(Object.keys(item.brandSort).sort(), ['group', 'order', 'size'], `${item.product}: 정렬 필드`);
+    assert.ok(typeof item.brandSort.group === 'string' && item.brandSort.group.trim(), `${item.product}: 정렬 제품군`);
+    assert.ok(Number.isInteger(item.brandSort.order) && item.brandSort.order > 0, `${item.product}: 정렬 순위`);
+    assert.ok(Number.isFinite(item.brandSort.size) && item.brandSort.size > 0, `${item.product}: 정렬 크기`);
+  }
   if (item.link_scope !== undefined) {
     assert.ok(linkScopes.includes(item.link_scope), `${item.product}: 허용되지 않은 link_scope`);
     assert.equal(item.official_links.length, 1, `${item.product}: 제품군 링크는 정확히 1개`);
