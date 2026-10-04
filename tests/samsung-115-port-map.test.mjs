@@ -52,7 +52,7 @@ test('all 51 approved horizontal maps remain valid with their original fields', 
   assert.equal(cropped, 25);
 });
 
-test('QH115FX maps eleven visible physical ports on its own Rear photograph', () => {
+test('QH115FX preserves its Rear photograph and maps eleven ports on its own manual Diagram', () => {
   const rear = product.images.find(image => image.role === 'Rear');
   assert.ok(rear);
   assert.equal(rear.file, 'lh115qhfebgxkr-rear.webp');
@@ -60,13 +60,15 @@ test('QH115FX maps eleven visible physical ports on its own Rear photograph', ()
   assert.equal(rear.originalSize, '1920x1280');
   const selected = publicPrepare(product).portMap;
   assert.ok(selected, 'map is not silently discarded');
-  assert.equal(selected.image, 'Rear');
+  // W-20261004-020 replaces the map background; the previously approved photo remains in the gallery.
+  assert.equal(selected.image, 'Diagram');
+  assert.ok(product.images.some(image => image.role === 'Diagram' && image.file === 'lh115qhfebgxkr-diagram.webp'));
   assert.equal(selected.items.length, 11);
   assert.deepEqual(selected.items.map(item => item.n), Array.from({length: 11}, (_, index) => index + 1));
   assert.ok(selected.items.every(item => ['left', 'right'].includes(item.side)));
   assert.deepEqual(prototypePrepare(product).portMap, selected);
   assert.equal(publicPrepare(product).signalFlow, null);
-  const geometry = portMapGeometry(selected, 270, 850);
+  const geometry = portMapGeometry(selected, 255, 1250);
   assert.ok(geometry.markers.every(item => item.cx + 10 < geometry.image.x), 'number circles stay outside the photograph');
   assert.ok(geometry.markers.every(item => item.y1 < item.y2 && item.cy >= item.y1 && item.cy <= item.y2));
   assert.deepEqual(evidence.markers.map(item => item.n), selected.items.map(item => item.n));

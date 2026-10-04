@@ -11,7 +11,8 @@ const dataDir = new URL('beta/site/detail/data/', root);
 const imagesDir = new URL('beta/site/detail/images/', root);
 const a = ['lh43qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr', 'lh43qhcebgcxkr', 'lh75qhcebgcxkr'];
 const b = 'lh32qmcebgcxkr';
-const selected = new Set([...a, b]);
+// W-20261004-020 also changes QH115FX from Rear to its own Diagram.
+const selected = new Set([...a, b, 'lh115qhfebgxkr']);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const product = slug => JSON.parse(readFileSync(new URL(`${slug}.json`, dataDir), 'utf8'));
 const imageFile = slug => `${slug}-diagram.webp`;
@@ -65,7 +66,7 @@ test('five QMC/QHC products use identical diagram pixels and coordinates; QM32C 
   assert.ok(portMapGeometry(q32.portMap, 290, 1480).height <= 900);
 });
 
-test('other 236 product JSON and all 52 approved maps keep their baseline content', () => {
+test('other 235 product JSON and all 51 unchanged maps keep their baseline content', () => {
   const otherHash = createHash('sha256');
   const mapHash = createHash('sha256');
   let maps = 0;
@@ -79,7 +80,7 @@ test('other 236 product JSON and all 52 approved maps keep their baseline conten
       assert.ok(publicPrepare(current).portMap && prototypePrepare(current).portMap, file);
     }
   }
-  assert.equal(maps, 52);
-  assert.equal(otherHash.digest('hex'), '94a4d05f1aa868d83851536d0d098eb21f8c2c1561a7e49a6ac053a0795d63e2');
-  assert.equal(mapHash.digest('hex'), '9469713101ad4272ffd4a281b80883e51d54806fed7a6c215360cf4a10846856');
+  assert.equal(maps, 51);
+  assert.equal(otherHash.digest('hex'), 'dba2efb2d8ea8592461463830e347391f66cb576b5f7a27493247769fbda7d66');
+  assert.equal(mapHash.digest('hex'), '1f2ca43ea7cd67ce86f9096fefd4086ca9eaeecfd917d1e0c61266c1232fff29');
 });

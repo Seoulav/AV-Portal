@@ -582,7 +582,8 @@ export const group1Images = {
   ],
   lh115qhfebgxkr: [
     image('Main', 'lh115qhfebgxkr-main.webp', '단독형 UHD H 시리즈 290.7cm 세로형 정면', 'Samsung', 'LH115QHFEBGXKR', 'https://images.samsung.com/kdp/goods/2025/08/28/3a33df49-4b10-4ad7-8ede-93e5d4bf3f05.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
-    image('Rear', 'lh115qhfebgxkr-rear.webp', '삼성 LH115QHFEBGXKR 후면 단자부를 사선에서 촬영한 공식 갤러리 사진', 'Samsung', 'LH115QHFEBGXKR', 'https://images.samsung.com/kdp/goods/2025/08/28/aefa2e63-89b2-4624-8204-55ae70b97b95.png', '1920x1280', '270x850', 'FOUND')
+    image('Rear', 'lh115qhfebgxkr-rear.webp', '삼성 LH115QHFEBGXKR 후면 단자부를 사선에서 촬영한 공식 갤러리 사진', 'Samsung', 'LH115QHFEBGXKR', 'https://images.samsung.com/kdp/goods/2025/08/28/aefa2e63-89b2-4624-8204-55ae70b97b95.png', '1920x1280', '270x850', 'FOUND'),
+    image('Diagram', 'lh115qhfebgxkr-diagram.webp', 'LH115QHFEBGXKR 삼성전자 한글 사용설명서 15쪽 QH115FX 후면 단자 도면', 'Samsung', 'LH115QHFEBGXKR', 'https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/', '318x1375', '318x1375', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-26720E-04 15쪽')
   ],
   lh55vmcrbgbxkr: [
     image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
