@@ -37,19 +37,21 @@ export function buildCatalogHtml(catalog) {
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="${publicBase}catalog.html">
   <title>AV Portal 정적 제품 카탈로그</title>
-  <link rel="stylesheet" href="./system-version.css?v=w20261004-002">
-  <script type="module" src="./system-version.js?v=w20261004-002"></script>
+  <link rel="stylesheet" href="./system-version.css?v=w20261004-008">
+  <script type="module" src="./system-version.js?v=w20261004-008"></script>
   <style>
     :root{font-family:Arial,"Noto Sans KR",sans-serif;color:#17324f;background:#f5f7fb}*{box-sizing:border-box}body{margin:0}header,main,footer{width:min(1080px,calc(100% - 32px));margin:auto}header{padding:48px 0 24px}h1{font-size:clamp(30px,5vw,52px);margin:8px 0}.eyebrow,.brand{color:#2568bd;font-weight:800}.intro{max-width:720px;line-height:1.7}.downloads,.links{display:flex;flex-wrap:wrap;gap:10px}.downloads a,.links a{color:#185ba9;text-decoration:none;border:1px solid #cbd9ea;background:#fff;border-radius:10px;padding:9px 12px;font-weight:700}.catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.catalog-product{background:#fff;border:1px solid #dde6f1;border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(30,70,120,.06)}.catalog-product h2{margin:4px 0 12px}.catalog-product p{line-height:1.55;margin:8px 0}.brand{margin:0!important}footer{padding:32px 0 48px;color:#52657d}@media(max-width:680px){.catalog{grid-template-columns:1fr}header{padding-top:28px}}
   </style>
 </head>
 <body>
-  <div class="system-version" data-system-version aria-label="시스템 버전"></div>
-  <header>
+  <header class="catalog-header">
+    <div class="catalog-header-copy">
     <p class="eyebrow">AV PORTAL · STATIC CATALOG</p>
     <h1>공개 제품 카탈로그</h1>
     <p class="intro">JavaScript를 실행하지 않는 GPT·검색 도구와 일반 사용자가 읽을 수 있는 공개 장비 목록입니다. 제품 세부 사양과 적용 조건은 제조사 공식 원문에서 다시 확인하세요.</p>
     <div class="downloads"><a href="./">AV Portal 홈</a><a href="./catalog.html" download>catalog.html 다운로드</a><a href="./llms.txt" download>llms.txt 다운로드</a></div>
+    </div>
+    <div class="system-version" data-system-version aria-label="시스템 버전"></div>
   </header>
   <main><p><strong>공개 장비 ${catalog.length}개</strong> · 공개 허용된 제조사·제품명·분류·종류·공식 링크만 포함합니다.</p><section class="catalog" aria-label="공개 제품 목록">
 ${cards}

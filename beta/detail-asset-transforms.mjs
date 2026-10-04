@@ -33,9 +33,9 @@ export function transformDetailHtml(source) {
     .replaceAll('로컬 시안 이미지', '제품 이미지')
     .replaceAll('AV PORTAL · PRODUCT DETAIL LOCAL STUDY', 'AV PORTAL · PRODUCT DETAIL BETA');
   return replaceRequired(
-    replaceRequired(html, '</head>', '  <link rel="stylesheet" href="../system-version.css?v=w20261004-002">\n  <script type="module" src="../system-version.js?v=w20261004-002"></script>\n</head>'),
-    '<body class="pg-page">',
-    '<body class="pg-page">\n  <div class="system-version" data-system-version aria-label="시스템 버전"></div>'
+    replaceRequired(html, '</head>', '  <link rel="stylesheet" href="../system-version.css?v=w20261004-008">\n  <script type="module" src="../system-version.js?v=w20261004-008"></script>\n</head>'),
+    '    </header>',
+    '      <div class="system-version" data-system-version aria-label="시스템 버전"></div>\n    </header>'
   );
 }
 
