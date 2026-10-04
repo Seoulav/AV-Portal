@@ -2,8 +2,11 @@
 // evidence files are immutable; current tests apply this inverse before their
 // own earlier-work inverses.
 export const bssW04004Slugs=new Set(['blu-100','blu-101','blu-160','blu-dan']);
+// W-20261004-015 added flows later; older evidence must see the earlier shape.
+const bssW04015Slugs=new Set([...bssW04004Slugs,'blu-50v2']);
 
 export function beforeBssW04004(product,slug){
+  if(bssW04015Slugs.has(slug))delete product.signalFlow;
   if(bssW04004Slugs.has(slug)){
     product.images=product.images.filter(image=>image.role!=='Rear');
     const rear=product.imageStatuses.find(image=>image.role==='Rear');
@@ -19,6 +22,6 @@ export function beforeBssW04004(product,slug){
 }
 
 export function beforeBssW04004Raw(raw,slug){
-  if(!bssW04004Slugs.has(slug)&&slug!=='mxa925w-r')return raw;
+  if(!bssW04015Slugs.has(slug)&&slug!=='mxa925w-r')return raw;
   return JSON.stringify(beforeBssW04004(JSON.parse(raw),slug),null,2)+'\n';
 }

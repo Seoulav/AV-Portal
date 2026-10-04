@@ -56,7 +56,8 @@ test('03 visibility follows selected content; map numbers never use io indices',
     }
   }
   const withFlow = products.filter(({ raw }) => prepareProductDetail(raw).enhancements.signalFlow);
-  assert.equal(withFlow.length, 4);
+  // W-20261004-015 adds the five BSS pilot flows without changing 02 card selection.
+  assert.equal(withFlow.length, 9);
   assert.ok(withFlow.every(({ raw }) => selectSection03Content(prepareProductDetail(raw).enhancements)?.type === 'signal-flow'));
   assert.equal(selectSection03Content({}), null);
 });

@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
-import {beforeBssW04004} from './bss-w04004-history.mjs';
+import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -74,7 +74,7 @@ test('approved BLU-50v2 stays fixed and four unsupported BSS models gain no map'
   };
   for(const [slug,want] of Object.entries(fixed)){
     const bytes=readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
-    assert.equal(sha(bytes),want,`${slug}: existing JSON bytes`);
+    assert.equal(sha(slug==='blu-50v2'?beforeBssW04004Raw(bytes.toString('utf8').replace(/\r\n/g,'\n'),slug):bytes),want,`${slug}: existing pre-flow JSON bytes`);
     if(slug==='blu-50v2')continue;
     const product=JSON.parse(bytes);
     assert.equal(product.images.some(image=>image.role==='Rear'),false,slug);

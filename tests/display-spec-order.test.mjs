@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import * as model from '../prototype/brc-am7/product-detail-model.mjs';
+import {beforeBssW04015Raw} from './bss-w04015-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const folder=new URL('beta/site/detail/data/',root);
@@ -33,7 +34,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   const brightness=read('lh115qhfebgxkr').specifications.filter(row=>row.name.startsWith('밝기'));
   assert.deepEqual(brightness.map(row=>[row.name,row.value,row.verification,row.source]),[['밝기(최대)','1000','FOUND','S5']]);
   for(const [slug,expected] of Object.entries(evidence.untouched)){
-    assert.equal(hash(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8'))),expected,`${slug} untouched bytes`);
+    assert.equal(hash(beforeBssW04015Raw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
   assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json')).length,242);
 });

@@ -536,5 +536,579 @@
         "side": "bottom"
       }
     ]
+  },
+  "signalFlow": {
+    "type": "audio-dsp",
+    "description": "아날로그 입력 12개와 출력 8개를 12 × 8 매트릭스로 표시합니다. 선택 점은 동작 예시이며 고정 결선이 아닙니다. BLU link 내부 경로는 표시하지 않습니다.",
+    "inputs": [
+      {
+        "id": "analog-in-1",
+        "label": "IN 1",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-2",
+        "label": "IN 2",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-3",
+        "label": "IN 3",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-4",
+        "label": "IN 4",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-5",
+        "label": "IN 5",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-6",
+        "label": "IN 6",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-7",
+        "label": "IN 7",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-8",
+        "label": "IN 8",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-9",
+        "label": "IN 9",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-10",
+        "label": "IN 10",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-11",
+        "label": "IN 11",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      },
+      {
+        "id": "analog-in-12",
+        "label": "IN 12",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "group": "analog-in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "analog-out-1",
+        "label": "OUT 1",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "1",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-2",
+        "label": "OUT 2",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "2",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-3",
+        "label": "OUT 3",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "3",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-4",
+        "label": "OUT 4",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "4",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-5",
+        "label": "OUT 5",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "5",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-6",
+        "label": "OUT 6",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "6",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-7",
+        "label": "OUT 7",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "7",
+        "group": "analog-out"
+      },
+      {
+        "id": "analog-out-8",
+        "label": "OUT 8",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "tag": "8",
+        "group": "analog-out"
+      }
+    ],
+    "processes": [
+      {
+        "id": "matrix",
+        "kind": "matrix",
+        "label": "12 × 8 아날로그 매트릭스",
+        "caption": "입력-출력 선택 · DSP 설정은 별도",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "crosspoints": {
+          "inputs": [
+            "analog-in-1",
+            "analog-in-2",
+            "analog-in-3",
+            "analog-in-4",
+            "analog-in-5",
+            "analog-in-6",
+            "analog-in-7",
+            "analog-in-8",
+            "analog-in-9",
+            "analog-in-10",
+            "analog-in-11",
+            "analog-in-12"
+          ],
+          "outputs": [
+            "analog-out-1",
+            "analog-out-2",
+            "analog-out-3",
+            "analog-out-4",
+            "analog-out-5",
+            "analog-out-6",
+            "analog-out-7",
+            "analog-out-8"
+          ],
+          "examples": [
+            {
+              "input": "analog-in-1",
+              "output": "analog-out-1"
+            },
+            {
+              "input": "analog-in-2",
+              "output": "analog-out-2"
+            },
+            {
+              "input": "analog-in-3",
+              "output": "analog-out-3"
+            },
+            {
+              "input": "analog-in-4",
+              "output": "analog-out-4"
+            }
+          ]
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "analog-in-1",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-2",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-3",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-4",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-5",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-6",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-7",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-8",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-9",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-10",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-11",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "analog-in-12",
+        "to": "matrix",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-1",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-2",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-3",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-4",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-5",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-6",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-7",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "matrix",
+        "to": "analog-out-8",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [],
+    "groups": [
+      {
+        "id": "analog-in",
+        "label": "Mic/Line 입력 12",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "analog-out",
+        "label": "아날로그 출력 8",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "signal": "audio",
+        "label": "아날로그 오디오"
+      }
+    ],
+    "notes": [
+      "선택 점은 동작 예시이며 고정 결선이나 현재 설정을 뜻하지 않습니다.",
+      "BLU link 물리 포트 2개는 기존 I/O 표에 있습니다. 내부 매트릭스와의 연결 경로는 근거가 없어 이 그림에 그리지 않았습니다.",
+      "AEC 처리 채널 12는 사양에 있지만 I/O 행이 아닌 처리 기능이므로 이 단자 경로 그림에는 넣지 않았습니다."
+    ]
   }
 }
