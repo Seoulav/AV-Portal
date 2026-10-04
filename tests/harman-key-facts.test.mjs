@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeShureW04003,beforeShureW04003Raw} from './shure-w04003-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
+import {beforeSamsungW04010,beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -58,9 +59,9 @@ test('Crown 26 and all other 210 product JSON files remain unchanged',()=>{
   const names=readdirSync(dir).filter(name=>name.endsWith('.json')).sort();
   const otherNames=names.filter(name=>!targets.includes(name.slice(0,-5)));
   assert.equal(otherNames.length,210);
-  const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5))]);
+  const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(beforeSamsungW04010(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(sha(JSON.stringify(other)),evidence.otherDetailJsonSha256);
-  const raw=otherNames.map(name=>`${name}\0${beforeShureW04003Raw(beforeBssW04004Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),name.slice(0,-5)),name.slice(0,-5))}`).join('');
+  const raw=otherNames.map(name=>`${name}\0${beforeShureW04003Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))}`).join('');
   assert.equal(sha(raw),evidence.otherDetailRawSha256);
   assert.equal(other.filter(([,p])=>p.manufacturer==='Crown').length,26);
 });

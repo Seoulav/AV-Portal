@@ -11,6 +11,7 @@ import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013 } from './crown-w03013-history.mjs';
+import { beforeSamsungW04010Raw } from './samsung-w04010-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const evidence = JSON.parse(readFileSync(new URL('Work/기록/W-20261003-006-evidence.json', root), 'utf8'));
@@ -132,7 +133,7 @@ test('every other detail JSON retains its pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = beforeBssW04004Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug);
+    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug);
     const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),null,2)+'\n' : raw;
     hash.update(name).update('\0').update(historical);
   }

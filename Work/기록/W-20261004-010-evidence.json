@@ -1,0 +1,37 @@
+{
+  "workId": "W-20261004-010",
+  "model": "LH115QHFEBGXKR",
+  "sourcePage": "https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/",
+  "sourceImage": {
+    "galleryFile": "g5.png",
+    "url": "https://images.samsung.com/kdp/goods/2025/08/28/aefa2e63-89b2-4624-8204-55ae70b97b95.png",
+    "width": 1920,
+    "height": 1280,
+    "sha256": "16af1ce3c8e3114b039fa4b94d1598169009b959075845c595a5a4136215d329"
+  },
+  "publishedImage": {
+    "file": "beta/site/detail/images/lh115qhfebgxkr-rear.webp",
+    "crop": {"left": 1000, "top": 90, "width": 270, "height": 850},
+    "sha256": "5de50b92d037fcabd34b774131d61b7e577dc5db4edd3f8f907a292bd5decac7"
+  },
+  "manual": {
+    "file": "beta/site/manuals/samsung-qpdx5k-qhfx-manual-ko.pdf",
+    "page": 15,
+    "modelColumn": "QH115FX",
+    "sha256": "0e7037f32df5b1a2e2783903effa799cfa817fe17e0dd8f7fd08bd91894080fc"
+  },
+  "coreSha256": "21bca943c40c2d1038169c2f91b009a822a0006b4b83efb2bf660b29f3092f76",
+  "markers": [
+    {"n": 1, "photoLabel": "USB 2 (1.0A)", "ioIndex": 3, "manualPage": 15},
+    {"n": 2, "photoLabel": "USB 1 (0.5A)", "ioIndex": 3, "manualPage": 15},
+    {"n": 3, "photoLabel": "AUDIO OUT", "ioIndex": 6, "manualPage": 15},
+    {"n": 4, "photoLabel": "HDMI 3 (ARC)", "ioIndex": 1, "manualPage": 15},
+    {"n": 5, "photoLabel": "HDMI 2", "ioIndex": 1, "manualPage": 15},
+    {"n": 6, "photoLabel": "HDMI 1", "ioIndex": 1, "manualPage": 15},
+    {"n": 7, "photoLabel": "DP", "ioIndex": 2, "manualPage": 15},
+    {"n": 8, "photoLabel": "RJ45", "ioIndex": 9, "manualPage": 15},
+    {"n": 9, "photoLabel": "RS232C IN", "ioIndex": 7, "manualPage": 15},
+    {"n": 10, "photoLabel": "RS232C OUT", "ioIndex": 8, "manualPage": 15},
+    {"n": 11, "photoLabel": "IR IN", "ioIndex": 4, "manualPage": 15}
+  ]
+}

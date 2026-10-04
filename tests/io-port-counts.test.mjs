@@ -8,9 +8,10 @@ import { beforeSamsungSourceCleanup } from './samsung-w010-history.mjs';
 import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
+import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
 
 const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
-const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
+const read = path => beforeSamsungW04010Path(path, JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8')));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 

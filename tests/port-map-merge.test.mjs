@@ -21,7 +21,7 @@ globalThis.document = {
   createTextNode: text => new Node('#text', text)
 };
 
-test('174 io-only products retain every present connector in the 02 fallback', () => {
+test('remaining io-only products retain every present connector in the 02 fallback', () => {
   const counts = { mapIo: 0, ioOnly: 0, neither: 0 };
   for (const { raw } of products) {
     const data = prepareProductDetail(raw);
@@ -40,7 +40,8 @@ test('174 io-only products retain every present connector in the 02 fallback', (
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).channelSignal), raw.model);
     }
   }
-  assert.deepEqual(counts, { mapIo: 51, ioOnly: 174, neither: 17 });
+  // W-20261004-010 moves the 115QHF from io-only to a photographed map.
+  assert.deepEqual(counts, { mapIo: 52, ioOnly: 173, neither: 17 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

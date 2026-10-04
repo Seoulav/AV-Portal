@@ -7,6 +7,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
+import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 
 const root = new URL('../',import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -101,7 +102,7 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json')&&!slugs.includes(x.slice(0,-5))).sort();
   const digest=hash(names.map(name=>{
     const slug=name.slice(0,-5);
-    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug);
+    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug);
     return `${name}\0${bssW03011Slug(slug)||crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(beforeBssW03011(JSON.parse(raw),slug),slug),null,2)+'\n':raw}`;
   }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'JBL之外 JSON changed');
