@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
 import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
@@ -112,10 +113,11 @@ test('55-inch facts use verified display axes; unrelated product fields and 75-i
 
 test('one intact 70-page Korean manual is uploaded for only the two whiteboards', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  assert.ok(manifest.uploads.length >= evidence.manifest.uploadCount + 2);
-  assert.equal(sha(JSON.stringify(manifest.uploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
+  const historicalUploads = beforeWinstarW04016Uploads(manifest.uploads);
+  assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 2);
+  assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
-  const added = manifest.uploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 2);
+  const added = historicalUploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 2);
   assert.deepEqual(added.map(entry => entry.slug).sort(), slugs);
   for (const entry of added) {
     assert.equal(entry.file, evidence.manual.published);

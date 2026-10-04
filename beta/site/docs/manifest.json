@@ -927,22 +927,10 @@
       "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)"
     },
     {
-      "slug": "lh43qhcebgcxkr",
-      "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 5. 단독형 QHC"
-    },
-    {
       "slug": "lh75qhcebgcxkr",
       "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)"
-    },
-    {
-      "slug": "lh75qhcebgcxkr",
-      "file": "manuals/winstar-qhc-standalone-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 5. 단독형 QHC"
     },
     {
       "slug": "lh43qmcebgcxkr",
@@ -951,22 +939,10 @@
       "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)"
     },
     {
-      "slug": "lh43qmcebgcxkr",
-      "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 4. 단독형 QMC"
-    },
-    {
       "slug": "lh85qmcebgcxkr",
       "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)"
-    },
-    {
-      "slug": "lh85qmcebgcxkr",
-      "file": "manuals/winstar-qmc-standalone-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 4. 단독형 QMC"
     },
     {
       "slug": "lh98qmcebgcxkr",
@@ -994,12 +970,6 @@
     },
     {
       "slug": "lh55vhcrbgbxkr",
-      "file": "manuals/winstar-videowall-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 6. 비디오월"
-    },
-    {
-      "slug": "lh55vhcrbgbxkr",
       "file": "manuals/samsung-videowall-product-guide-ko.pdf",
       "kind": "reference",
       "title": "삼성전자 비디오월 제품가이드 15쪽 (VHC-R·VMC-R)"
@@ -1009,12 +979,6 @@
       "file": "manuals/samsung-vhcr-vmcr-vhce-vmce-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 한글 사용설명서 BN81-25348H-02 (VHC-R·VMC-R)"
-    },
-    {
-      "slug": "lh55vmcrbgbxkr",
-      "file": "manuals/winstar-videowall-spec-ko.pdf",
-      "kind": "reference",
-      "title": "윈스타비투비 제품 규격서 6. 비디오월"
     },
     {
       "slug": "lh55vmcrbgbxkr",

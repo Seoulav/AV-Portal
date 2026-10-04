@@ -2,7 +2,7 @@ import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harma
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync, readdirSync} from 'node:fs';
+import {existsSync, readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
@@ -13,10 +13,12 @@ import {beforeJblW03010,jblW03010Slug} from './jbl-w03010-history.mjs';
 import {beforeBssW03011,bssW03011Slug} from './bss-w03011-history.mjs';
 import {beforeCrownW03013} from './crown-w03013-history.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
+import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
-const historicalManifest = {...manifest, uploads: manifest.uploads.slice(0, 22)};
+const historicalUploads = beforeWinstarW04016Uploads(manifest.uploads);
+const historicalManifest = {...manifest, uploads: historicalUploads.slice(0, 22)};
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const files = {
   'samsung-qbc-qhc-qmc-shc-manual-ko.pdf': 'b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3',
@@ -46,9 +48,9 @@ const expected = {
   lh55vmcrbgbxkr: [manualWall, specWall, guideWall],
 };
 
-test('W-002 historical eight exact-model Samsung products retain their approved uploaded PDFs', () => {
+test('W-002 historical eight exact-model Samsung upload links remain reconstructable', () => {
   assert.equal(Object.keys(expected).length, 8);
-  const uploaded = manifest.uploads.slice(5, 22);
+  const uploaded = historicalUploads.slice(5, 22);
   assert.equal(uploaded.length, 17);
   for (const [slug, names] of Object.entries(expected)) {
     const entries = uploaded.filter(entry => entry.slug === slug);
@@ -67,10 +69,14 @@ test('W-002 historical eight exact-model Samsung products retain their approved 
   assert.equal(uploaded.some(entry => ['lh32qmcebgcxkr', 'lh98qmcebgcxkr'].includes(entry.slug) && entry.file.endsWith(specQmc)), false);
 });
 
-test('W-002 eight published files retain safe paths, readable PDF bytes, and source SHA-256', () => {
-  const uploaded = manifest.uploads.slice(5, 22);
+test('W-002 historical links remain auditable while the deleted Winstar PDFs stay absent', () => {
+  const uploaded = historicalUploads.slice(5, 22);
   assert.deepEqual([...new Set(uploaded.map(entry => entry.file))].sort(), Object.keys(files).map(name => `manuals/${name}`).sort());
   for (const [name, hash] of Object.entries(files)) {
+    if (name.startsWith('winstar-')) {
+      assert.equal(existsSync(new URL(`beta/site/manuals/${name}`, root)), false, name);
+      continue;
+    }
     const bytes = readFileSync(new URL(`beta/site/manuals/${name}`, root));
     assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', name);
     assert.equal(sha(bytes), hash, name);
@@ -107,8 +113,8 @@ const secondExpected = {
 };
 
 test('W-005 adds exactly twelve model-matched PDF uploads, including four previously uncovered products', () => {
-  const added = manifest.uploads.slice(22, 34);
-  assert.equal(manifest.uploads.length >= 34, true);
+  const added = historicalUploads.slice(22, 34);
+  assert.equal(historicalUploads.length >= 34, true);
   assert.equal(added.length, 12);
   assert.deepEqual(Object.keys(secondExpected).sort(), added.map(item => item.slug).sort());
   for (const [slug, file] of Object.entries(secondExpected)) {
@@ -126,7 +132,7 @@ test('W-005 adds exactly twelve model-matched PDF uploads, including four previo
   assert.equal(added.filter(item => item.file.endsWith(secondHotel)).length, 3);
 });
 
-test('W-005 published PDFs match supplied bytes and all earlier uploads/products stay unchanged', () => {
+test('W-005 published PDFs match supplied bytes and earlier upload history and products remain auditable', () => {
   const newFiles = {
     [secondGuide]: '2351a2b725d621d92b5b9737e24dcc18629aabfa88d60e1f577fa98a2098d177',
     [secondHotel]: 'b61ea1be4f423fb59c7912b79c2c9076fd8b9fd9d9ce188bb1525db056bec1ee',
@@ -136,7 +142,7 @@ test('W-005 published PDFs match supplied bytes and all earlier uploads/products
     assert.equal(bytes.subarray(0, 5).toString('ascii'), '%PDF-', name);
     assert.equal(sha(bytes), expectedSha, name);
   }
-  assert.equal(sha(JSON.stringify(manifest.uploads.slice(0, 22))), '98b1d73f66f68e5248e5cf77331166f8d3d7c384b19fc131b28af1a7d6e98557');
+  assert.equal(sha(JSON.stringify(historicalUploads.slice(0, 22))), '98b1d73f66f68e5248e5cf77331166f8d3d7c384b19fc131b28af1a7d6e98557');
   assert.equal(sha(JSON.stringify(manifest.mirrors)), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
