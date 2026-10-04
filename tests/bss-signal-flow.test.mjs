@@ -66,8 +66,11 @@ test('other 237 product JSON files and the four approved flows remain byte-for-b
   const digest = createHash('sha256');
   const files = readdirSync(directory).filter(name => name.endsWith('.json')).sort();
   assert.equal(files.length, 242);
-  for (const file of files) if (!targets.includes(file.slice(0, -5))) digest.update(file).update(readFileSync(new URL(file, directory)));
-  assert.equal(digest.digest('hex'), '639cfb432e3792ba76568520072fee4febeca3a43430833dd15c8e8e17328e47');
+  // Git stores LF; Windows checkouts may materialize CRLF. Compare the same
+  // published text on both platforms without weakening the content snapshot.
+  for (const file of files) if (!targets.includes(file.slice(0, -5)))
+    digest.update(file).update(readFileSync(new URL(file, directory), 'utf8').replace(/\r\n/g, '\n'));
+  assert.equal(digest.digest('hex'), '1df0881cc382b08fb1d031dbe5d925c4a44287a649598cd708003c6ac8348a33');
   const original = {
     'aquilon-rs1': 'da98ff1d4c6e1fbf2a18c807d5e27c7895d3e56d0482a4da77246908d6855e93',
     'dci-4-600da': 'f7c3b29f6d5228dba62eda698a7d01bceb77b96134827bce94693df2b5d8cd90',
