@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {portMapGeometry,renderPortMap} from '../prototype/brc-am7/detail-enhancement-view.mjs';
+import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const baseline=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-014-baseline.json',root),'utf8'));
@@ -24,7 +25,10 @@ test('published Port Map renderer is the exact generated copy',()=>{
 
 test('only tall maps receive an automatic 900px geometry and no product data changes',()=>{
   const inventory=createHash('sha256');
-  for(const file of products) inventory.update(file).update('\0').update(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'));
+  for(const file of products){
+    const slug=file.slice(0,-5);
+    inventory.update(file).update('\0').update(beforeDisplayW04013Raw(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'),slug));
+  }
   assert.equal(products.length,242);
   assert.equal(inventory.digest('hex'),'43ff5a44d72b1f5683cfb92960906e7250c80d8c4fdc21d39115e6c450cb0b2b');
   const product=read('lh115qhfebgxkr');

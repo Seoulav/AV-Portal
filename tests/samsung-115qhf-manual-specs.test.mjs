@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
+import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';
 import { beforeCrownW03009, crownW03009Slug } from './crown-w03009-history.mjs';
@@ -79,7 +80,7 @@ test('every other product detail JSON retains its pre-change Git LF bytes',()=>{
   const hash=createHash('sha256');
   for(const name of readdirSync(dir).filter(name=>name.endsWith('.json')&&name!==`${evidence.slug}.json`).sort()){
     const slug=name.slice(0,-5);
-    const raw=beforeBssW04004Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug);
+    const raw=beforeBssW04004Raw(beforeDisplayW04013Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'),slug),slug);
     const historical=['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug)||jblW03010Slug(slug)||bssW03011Slug(slug)||harmanW03014Slug(slug)||shureW04003Slug(slug)
       ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),slug),null,2)+'\n'
       : raw;

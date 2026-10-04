@@ -45,7 +45,7 @@ test('public pages display a version badge while detail assets retain their refr
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
   // W-009 refreshed styles; W-014 refreshes the app module to pick up the Port Map height cap.
   assert.match(detail, /styles\.css\?v=w20261004-009-port-merge/);
-  assert.match(detail, /app\.js\?v=w20261004-014-portmap-height/);
+  assert.match(detail, /app\.js\?v=w20261004-013-spec-order/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

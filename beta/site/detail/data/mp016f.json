@@ -237,15 +237,6 @@
     },
     {
       "group": "Certification",
-      "name": "안전 규격",
-      "value": "62368-1, 60950-1",
-      "unit": "",
-      "condition": "",
-      "source": "S1",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Certification",
       "name": "EMC",
       "value": "Class B",
       "unit": "",

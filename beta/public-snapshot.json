@@ -752,69 +752,69 @@
       "io": 6
     },
     "lh115qhfebgxkr": {
-      "sha256": "0BB5133745E2AAAA2349DE6BD13E63428D520B49D97C7EC54C74B3EA3F053510",
+      "sha256": "7A5E3FEE2F1F6C4D981A02EF06EE0B6B51E9F8CF54D957DA66C00E43CA47DDB1",
       "features": 7,
-      "specifications": 56,
+      "specifications": 26,
       "io": 10
     },
     "lh32qmcebgcxkr": {
-      "sha256": "D7297D7AF3FE8F7C413691250129E663361099358DC838A963447C0D1278122E",
+      "sha256": "E48D1CE38FD4238B583573FB5F4632EA1CBBC8A2C260B8BEFB9181B6B5357072",
       "features": 4,
-      "specifications": 38,
+      "specifications": 30,
       "io": 9
     },
     "lh43qhcebgcxkr": {
-      "sha256": "AD3AEF7D71C1CC56CCCA86B95F48EEBF59D9B8096B7C547F865969FE4FFFC21C",
+      "sha256": "8F70A1ED398C2F60682105D9B6A853C891E7380488E3B7C77D719D91F985026C",
       "features": 6,
-      "specifications": 43,
+      "specifications": 35,
       "io": 9
     },
     "lh43qmcebgcxkr": {
-      "sha256": "21FD91CCB187F2DE6C91F6EC8ED13515A9AC51B857EAD1E49ADFEE3F087F640C",
+      "sha256": "ABEA40F67045D5FA0F968DA0AAD53E56846C6E848D38990A2F0A0B8300F26FC5",
       "features": 7,
-      "specifications": 43,
+      "specifications": 34,
       "io": 9
     },
     "lh55vhcrbgbxkr": {
-      "sha256": "676723C45C0EA05CDC8D3873B01FE8F460813E53D92A888FE9A927A8BBC7ED04",
+      "sha256": "0B404D28D57EC9AFE53D4BEFDAB998510AE0ED5E157B041644DA168473E747F4",
       "features": 6,
-      "specifications": 35,
+      "specifications": 28,
       "io": 13
     },
     "lh55vmcrbgbxkr": {
-      "sha256": "B549CBD77BB8173399BD04429A2B7EC8935C20BB517BA5A9086338EE9339FA81",
+      "sha256": "B960D9620520C1A5AC051DE9F45F7EE41FD617BADCAE05DA039558E1E24BD856",
       "features": 6,
-      "specifications": 35,
+      "specifications": 28,
       "io": 13
     },
     "lh55wmfwbgcxkr": {
-      "sha256": "ACBC82AEC9794D57141271FA82BC4695AF7461A77AABEB42D6032799A9AA7782",
+      "sha256": "44B9BE4FDC3B2F918A37C167D89AAE0D9D43AD2F1E0524D44BDA7ACF4F159808",
       "features": 7,
-      "specifications": 44,
+      "specifications": 19,
       "io": 9
     },
     "lh75qhcebgcxkr": {
-      "sha256": "C781E9EAD04E3EF2CC19442D647918E7E8394BEC96DED40D74281D1981DC1307",
+      "sha256": "294C6308DCDA51B1EF2665ED787AD16D820EC86C99834281FF5ADFC6BCC1935F",
       "features": 6,
-      "specifications": 43,
+      "specifications": 35,
       "io": 9
     },
     "lh75wmfwlgcxkr": {
-      "sha256": "F376F19EB6F836D176D6E64C686A5C1D9BC7E9EF045795888CDCCE2CF6233997",
+      "sha256": "083809220E298D3902432F8BD4F54838D7D8E810BD5FFCE88371D1FB12F0D786",
       "features": 7,
-      "specifications": 43,
+      "specifications": 34,
       "io": 9
     },
     "lh85qmcebgcxkr": {
-      "sha256": "901181B6A825A7E8E7998249AFA32A508578B3473B7CA18F37E12CD6E80D7E03",
+      "sha256": "FCFB4FCAC6C001EB7A73A5947CEC89A59112C53A5769521D366F3C9A9A88B8E7",
       "features": 7,
-      "specifications": 43,
+      "specifications": 34,
       "io": 9
     },
     "lh98qmcebgcxkr": {
-      "sha256": "A3B551439CD0F106F3394848499FE023C99AF4829D6AC19D06495FF2387B2611",
+      "sha256": "FEEE4AD6B273DC180686ED0DF296331478B5022743EBBF7F9BFEB0D7A12401C3",
       "features": 6,
-      "specifications": 42,
+      "specifications": 34,
       "io": 9
     },
     "mezzo-322-a": {
@@ -866,21 +866,21 @@
       "io": 7
     },
     "mp008f": {
-      "sha256": "9A02EEE97746D7698B63A59DBD7E01AA391A3FC8EBE896A69B260569FA938888",
+      "sha256": "9ED0BB962EAA113ECF6D27A0360AB6D9A882EADC499D30347AC5941740082B0B",
       "features": 2,
-      "specifications": 20,
+      "specifications": 19,
       "io": 0
     },
     "mp012f": {
-      "sha256": "823CEAFE963642B4D5B27D2C3C2A24A0F2D0D29461C4BA93EA28DAE582DE894E",
+      "sha256": "0662C1281DFC69E9D700CEAD55A6328619E0A26314DF76F3108ECC2EE91A7FD4",
       "features": 2,
-      "specifications": 20,
+      "specifications": 19,
       "io": 0
     },
     "mp016f": {
-      "sha256": "749972090A7228A5DF9B2CC9E3B52D81D269FD14F3B4C118264061FFE6762856",
+      "sha256": "75D38DDEEE8BCBA760D53B6764B46FD308B4255B66DE52226A92A2F8F2270E6E",
       "features": 2,
-      "specifications": 20,
+      "specifications": 19,
       "io": 0
     },
     "mx392-c": {

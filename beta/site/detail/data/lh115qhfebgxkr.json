@@ -240,24 +240,6 @@
       "verification": "FOUND"
     },
     {
-      "group": "Software",
-      "name": "화면 보정",
-      "value": "스마트 캘리브레이션",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "패널 종류",
-      "value": "VA",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
       "group": "Display",
       "name": "해상도",
       "value": "3,840 x 2,160",
@@ -285,123 +267,6 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Display",
-      "name": "픽셀 피치(HxV)",
-      "value": "0.630 x 0.630",
-      "unit": "mm",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "밝기(Typ)",
-      "value": "1000",
-      "unit": "nit",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "명암비(정적)",
-      "value": "5,500:1",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "시야각(H/V)",
-      "value": "178/178",
-      "unit": "°",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "응답 속도",
-      "value": "6.5",
-      "unit": "ms",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "색재현율",
-      "value": "93% (DCI-P3)",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "패널 헤이즈(Haze)",
-      "value": "25",
-      "unit": "%",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "수평 주사 주파수",
-      "value": "15 - 135 kHz",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "최대 픽셀 주파수",
-      "value": "1.188 GHz",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "수직 주사 주파수",
-      "value": "24 - 120 Hz",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Display",
-      "name": "동적 명암비",
-      "value": "Mega",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Connectivity",
-      "name": "Wi-Fi",
-      "value": "있음",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Connectivity",
-      "name": "블루투스",
-      "value": "있음",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
       "group": "Power",
       "name": "전원 사양",
       "value": "AC100-240V 50/60Hz",
@@ -418,15 +283,6 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
-    },
-    {
-      "group": "Power",
-      "name": "소비전력(대기/Sleep 모드)",
-      "value": "0.5",
-      "unit": "W",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
     },
     {
       "group": "Physical",
@@ -483,123 +339,6 @@
       "verification": "VERIFIED"
     },
     {
-      "group": "Environment",
-      "name": "보관 온도",
-      "value": "-20 - 45",
-      "unit": "℃",
-      "condition": "",
-      "source": "M1",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Environment",
-      "name": "보관 습도",
-      "value": "5 - 95",
-      "unit": "%",
-      "condition": "비액화",
-      "source": "M1",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Physical",
-      "name": "VESA 규격",
-      "value": "1000 x 600",
-      "unit": "mm",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Physical",
-      "name": "베젤 폭(사양표)",
-      "value": "3 Bezel-less",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Physical",
-      "name": "베젤 색상",
-      "value": "TITAN BLACK",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Physical",
-      "name": "프레임 재질",
-      "value": "Non-Glossy(Metal)",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 벽걸이 마운트",
-      "value": "Slim Fit Wall-mount (기본 동봉)",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 스탠드",
-      "value": "Yes(기본 동봉)",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Smart Platform",
-      "name": "운영체제 버전",
-      "value": "Tizen 8.0",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Smart Platform",
-      "name": "내장 플래시 메모리",
-      "value": "16GB",
-      "unit": "",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
-      "group": "Certification",
-      "name": "EMC 등급",
-      "value": "Class A",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Certification",
-      "name": "안전 규격",
-      "value": "60950-1, 62368-1",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "대각 크기(사양표 실측)",
-      "value": "114.4818",
-      "unit": "인치",
-      "condition": "국내 자료 미확보",
-      "source": "",
-      "verification": "REVIEW REQUIRED"
-    },
-    {
       "group": "Display",
       "name": "밝기(최대)",
       "value": "1000",
@@ -630,15 +369,6 @@
       "group": "Software",
       "name": "VXT Player Support",
       "value": "있음",
-      "unit": "",
-      "condition": "",
-      "source": "S5",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Environment",
-      "name": "방수/방진",
-      "value": "IP 5X",
       "unit": "",
       "condition": "",
       "source": "S5",

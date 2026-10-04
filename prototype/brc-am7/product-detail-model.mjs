@@ -265,3 +265,19 @@ export function prepareProductDetail(input, { compactFallback = true } = {}) {
     rearIndex: images.findIndex(item => item.role?.toLowerCase() === 'rear')
   };
 }
+
+const samsungDisplaySpecRank = name => {
+  if (name === '화면 크기') return 0;
+  if (/^크기\([^)]*가로x높이x깊이\)$/.test(name)) return 1;
+  if (name === '디스플레이 면적') return 2;
+  if (/^(중량|무게|제품 무게)$/.test(name)) return 3;
+  if (/^(영상 처리 엔진(?:\(.*\))?|패널 특성|화질 처리|전문가 모드|운영 시간(?: 등급)?)$/.test(name)) return 5;
+  return 4;
+};
+
+export function orderSpecificationRows(detail) {
+  const rows = detail.specificationGroups.flatMap((group, groupIndex) =>
+    group.entries.map(spec => ({ group, groupIndex, spec })));
+  if (detail.manufacturer !== 'Samsung' || !detail.categories?.includes('Display')) return rows;
+  return rows.sort((a, b) => samsungDisplaySpecRank(a.spec.name) - samsungDisplaySpecRank(b.spec.name));
+}

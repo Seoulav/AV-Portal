@@ -12,13 +12,14 @@ import { beforeJblW03010, jblW03010Slug } from './jbl-w03010-history.mjs';
 import { beforeBssW03011, bssW03011Slug } from './bss-w03011-history.mjs';
 import { beforeCrownW03013 } from './crown-w03013-history.mjs';
 import { beforeSamsungW04010Raw } from './samsung-w04010-history.mjs';
+import {beforeDisplayW04013} from './display-w04013-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const evidence = JSON.parse(readFileSync(new URL('Work/기록/W-20261003-006-evidence.json', root), 'utf8'));
 const slugs = ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'];
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const sha = value => createHash('sha256').update(value).digest('hex');
-const product = slug => read(`beta/site/detail/data/${slug}.json`);
+const product = slug => beforeDisplayW04013(read(`beta/site/detail/data/${slug}.json`),slug);
 const row = (rows, field, name) => {
   const matches = rows.filter(item => item[field] === name);
   assert.equal(matches.length, 1, name);

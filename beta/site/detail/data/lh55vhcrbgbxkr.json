@@ -151,15 +151,6 @@
     },
     {
       "group": "Display",
-      "name": "패널 헤이즈(Haze)",
-      "value": "28",
-      "unit": "%",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
       "name": "운영 시간 등급",
       "value": "24시간x7일 (24/7)",
       "unit": "",
@@ -252,33 +243,6 @@
       "group": "Display",
       "name": "색재현율",
       "value": "72 %",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수평 주사 주파수",
-      "value": "57.3kHz ~ 70kHz",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "최대 픽셀 주파수",
-      "value": "78MHz",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Display",
-      "name": "수직 주사 주파수",
-      "value": "47Hz ~ 63Hz",
       "unit": "",
       "condition": "",
       "source": "P",
@@ -403,35 +367,8 @@
     },
     {
       "group": "Physical",
-      "name": "베젤 색상",
-      "value": "Black",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Physical",
       "name": "프레임 재질",
       "value": "Glossy",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 벽걸이 마운트",
-      "value": "있음",
-      "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Accessory",
-      "name": "옵션 스탠드",
-      "value": "미지원(사양표 \"No\")",
       "unit": "",
       "condition": "",
       "source": "P",
