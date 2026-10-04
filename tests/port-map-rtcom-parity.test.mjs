@@ -63,7 +63,7 @@ test('all published maps retain supported crop and side placement without produc
   for (const file of files) {
     const product = JSON.parse(await readFile(join('beta/site/detail/data', file)));
     // This historical W-001 digest predates the W-010 vertical Samsung map.
-    if (product.portMap && !bssW04004Slugs.has(file.slice(0,-5)) && file !== 'lh115qhfebgxkr.json') {
+    if (product.portMap && product.portMap.image !== 'Diagram' && !bssW04004Slugs.has(file.slice(0,-5)) && file !== 'lh115qhfebgxkr.json') {
       maps.push(product.portMap);
       digest.update(file + '\n' + JSON.stringify(product.portMap) + '\n');
     }

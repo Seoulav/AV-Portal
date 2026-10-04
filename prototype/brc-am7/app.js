@@ -239,7 +239,7 @@ if (!productKey && !allowContentFallback) {
     layer.append(renderPortMap({ ...map, items: valid }, featured, data.model));
     $('#port-map-list').append(renderPortMapCards(valid));
     $('#port-map-list').hidden = false;
-    galleryBasis.textContent = '— 실제 제품 사진 기준';
+    galleryBasis.textContent = map.image === 'Diagram' ? '— 제조사 사용설명서 도면 기준' : '— 실제 제품 사진 기준';
     galleryBasis.hidden = false;
     scroll.tabIndex = scroll.scrollWidth > scroll.clientWidth ? 0 : -1;
     scroll.setAttribute('aria-label', scroll.tabIndex === 0 ? '제품 단자 지도 · 좌우 방향키로 이동' : '제품 단자 지도');

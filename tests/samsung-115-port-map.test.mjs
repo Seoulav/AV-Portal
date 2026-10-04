@@ -41,7 +41,7 @@ test('all 51 approved horizontal maps remain valid with their original fields', 
   let count = 0, cropped = 0;
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh115qhfebgxkr.json')) {
     const p = JSON.parse(readFileSync(new URL(file, dir), 'utf8'));
-    if (!p.portMap) continue;
+    if (!p.portMap || p.portMap.image === 'Diagram') continue;
     count++;
     if (p.portMap.crop) cropped++;
     assert.ok(prototypePrepare(p).portMap, `${file} prototype`);

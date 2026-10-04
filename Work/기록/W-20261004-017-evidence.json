@@ -1,0 +1,232 @@
+{
+  "manual": {
+    "file": "beta/site/manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+    "sha256": "b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3",
+    "pages": [
+      20,
+      24
+    ]
+  },
+  "sourceCrops": [
+    {
+      "group": "A",
+      "originalFile": "samsung-qmc-qhc-connector-diagram.png",
+      "width": 290,
+      "height": 1420,
+      "sha256": "f80a65f931938a0d34cda59aa857c76bf5886e87990e60aab0cac23a7561f3e1",
+      "page": 20,
+      "extraction": "pdftoppm -r 300 -f 20 -l 20 -x 150 -y 850 -W 290 -H 1420"
+    },
+    {
+      "group": "B",
+      "originalFile": "samsung-qm32c-connector-diagram.png",
+      "width": 290,
+      "height": 1480,
+      "sha256": "9eda86c606634f987baa8958c65a3188ab9a59baae5d40035a624a137299630d",
+      "page": 24,
+      "extraction": "pdftoppm -r 300 -f 24 -l 24 -x 150 -y 380 -W 290 -H 1480"
+    }
+  ],
+  "groups": {
+    "A": {
+      "slugs": [
+        "lh43qmcebgcxkr",
+        "lh85qmcebgcxkr",
+        "lh98qmcebgcxkr",
+        "lh43qhcebgcxkr",
+        "lh75qhcebgcxkr"
+      ],
+      "page": 20,
+      "publishedSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 1.0A입니다.",
+          "y1": 83,
+          "y2": 157,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 0.5A입니다.",
+          "y1": 226,
+          "y2": 303,
+          "side": "left"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "desc": "음향 케이블을 이용하여 소리를 내보낼 때 사용합니다.",
+          "y1": 360,
+          "y2": 384,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "DisplayPort 입력",
+          "desc": "DP 케이블을 이용하여 PC를 연결할 때 사용합니다.",
+          "y1": 409,
+          "y2": 486,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 3 (ARC)",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 533,
+          "y2": 620,
+          "side": "left"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 672,
+          "y2": 759,
+          "side": "left"
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 810,
+          "y2": 898,
+          "side": "left"
+        },
+        {
+          "n": 8,
+          "label": "RJ45 (LAN)",
+          "desc": "LAN 케이블을 이용하여 MDC와 인터넷을 연결할 때 사용합니다(10/100 Mbps).",
+          "y1": 963,
+          "y2": 1045,
+          "side": "left"
+        },
+        {
+          "n": 9,
+          "label": "RS-232C 입력",
+          "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+          "y1": 1086,
+          "y2": 1115,
+          "side": "left"
+        },
+        {
+          "n": 10,
+          "label": "RS-232C 출력",
+          "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+          "y1": 1173,
+          "y2": 1203,
+          "side": "left"
+        },
+        {
+          "n": 11,
+          "label": "IR 입력",
+          "desc": "리모컨의 신호를 받는 외장 IR 케이블을 연결합니다.",
+          "y1": 1267,
+          "y2": 1304,
+          "side": "left"
+        }
+      ]
+    },
+    "B": {
+      "slugs": [
+        "lh32qmcebgcxkr"
+      ],
+      "page": 24,
+      "publishedSha256": "4465de2ca7cadab7372e239745264cc5ca9207f0349247a3a41ecf30a686fc57",
+      "markers": [
+        {
+          "n": 1,
+          "label": "USB 2 (1.0A)",
+          "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 1.0A입니다.",
+          "y1": 106,
+          "y2": 176,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "USB 1 (0.5A)",
+          "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 0.5A입니다.",
+          "y1": 254,
+          "y2": 324,
+          "side": "left"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력",
+          "desc": "음향 케이블을 이용하여 소리를 내보낼 때 사용합니다.",
+          "y1": 382,
+          "y2": 405,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "RS-232C 입력",
+          "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+          "y1": 477,
+          "y2": 500,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "RS-232C 출력",
+          "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+          "y1": 568,
+          "y2": 591,
+          "side": "left"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 3 (ARC)",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 646,
+          "y2": 728,
+          "side": "left"
+        },
+        {
+          "n": 7,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 784,
+          "y2": 867,
+          "side": "left"
+        },
+        {
+          "n": 8,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+          "y1": 920,
+          "y2": 1008,
+          "side": "left"
+        },
+        {
+          "n": 9,
+          "label": "RJ45 (LAN)",
+          "desc": "LAN 케이블을 이용하여 MDC와 인터넷을 연결할 때 사용합니다(10/100 Mbps).",
+          "y1": 1133,
+          "y2": 1207,
+          "side": "left"
+        },
+        {
+          "n": 10,
+          "label": "IR 입력",
+          "desc": "리모컨의 신호를 받는 외장 IR 케이블을 연결합니다.",
+          "y1": 1283,
+          "y2": 1319,
+          "side": "left"
+        }
+      ]
+    }
+  },
+  "coreSha256": {
+    "lh43qmcebgcxkr": "5de77967731902f499e8542675892f7090ab12e91e9be5d0f7ced269861e512f",
+    "lh85qmcebgcxkr": "ccf3713d1ea2fb0c8ddb6a2b8fdb2b7ed82ed61b9cf5270bf4d75efcf77da14c",
+    "lh98qmcebgcxkr": "8a8f95b3146c0afda034c95e33a30411de1dc17af6dc94c1fb2ecb003bccee74",
+    "lh43qhcebgcxkr": "3c7910516fa7b985d56d371d5a96f24e1bcd9b428ae10ad50e24b62c7f53610c",
+    "lh75qhcebgcxkr": "8478c3f9f362ea08f65b785be51ecabe6e523d473357ffebe891f1362856f34c",
+    "lh32qmcebgcxkr": "391454a7975c52582957f8a1fcc5ce2c7f248432bbcc47e8fec4fa64d771ecaf"
+  },
+  "other236Sha256": "94a4d05f1aa868d83851536d0d098eb21f8c2c1561a7e49a6ac053a0795d63e2",
+  "existing52MapsSha256": "9469713101ad4272ffd4a281b80883e51d54806fed7a6c215360cf4a10846856"
+}
