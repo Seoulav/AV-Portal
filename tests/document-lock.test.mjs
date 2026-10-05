@@ -61,7 +61,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(others.digest('hex'), '7d9e6ac1869ed1d4661a7e8232617894572f9953f60659888b98457cbca652a2');
 
   const details = new URL('detail/data/', root);
-  const names = readdirSync(details).filter(name => name.endsWith('.json')).sort();
+  const names = readdirSync(details).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)

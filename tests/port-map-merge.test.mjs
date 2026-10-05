@@ -41,7 +41,7 @@ test('remaining io-only products retain every present connector in the 02 fallba
     }
   }
   // W-010 adds one photographed map; W-017 adds six manual Diagram maps.
-  assert.deepEqual(counts, { mapIo: 58, ioOnly: 167, neither: 17 });
+  assert.deepEqual(counts, { mapIo: 58, ioOnly: 168, neither: 17 }); // W-023 uses the io-only fallback.
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

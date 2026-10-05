@@ -487,6 +487,26 @@
   },
   {
     "brand": "Samsung",
+    "product": "LH43BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH43BEHHLBFXKR/"
+    ],
+    "slug": "lh43behhlbfxkr",
+    "card_image": "lh43behhlbfxkr-main.webp",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 43
+    }
+  },
+  {
+    "brand": "Samsung",
     "product": "LH32QMCEBGCXKR",
     "categories": [
       "사이니지",

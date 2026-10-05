@@ -41,7 +41,7 @@ test('all six affected products retain Samsung documents and no Winstar viewer l
 
 test('all 242 published product JSON files and their source records remain fixed', () => {
   const directory = new URL('beta/site/detail/data/', root);
-  const names = readdirSync(directory).filter(name => name.endsWith('.json')).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
   for (const name of names) digest.update(name).update('\0').update(beforeSamsungW04011Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)));
