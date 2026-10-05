@@ -29,6 +29,62 @@
       "originalSize": "1136×1600",
       "resolution": "1136×1600",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "varia-sl50-other-left-front.webp",
+      "alt": "AMX VARIA-SL50 제품 단독 좌측 전면 각도",
+      "note": "Other · 좌측 전면 · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-SL50",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11297_1728956327/03._AMX_VARIA-SL50_FrontLeft_3-4_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1775x3072",
+      "resolution": "1775x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "varia-sl50-other-left.webp",
+      "alt": "AMX VARIA-SL50 제품 단독 좌측면",
+      "note": "Other · 좌측면 · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-SL50",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11339_1728956127/04._New_-_AMX_VARIA_SL50_LeftSide_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1231x3072",
+      "resolution": "1231x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "varia-sl50-other-right-front.webp",
+      "alt": "AMX VARIA-SL50 제품 단독 우측 전면 각도",
+      "note": "Other · 우측 전면 · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-SL50",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11296_1728956328/02._AMX_VARIA-SL50_FrontRight_3-4_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2231x3072",
+      "resolution": "2231x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "varia-sl50-rear.webp",
+      "alt": "AMX VARIA-SL50 제품 단독 후면",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-SL50",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11350_1728956072/AMX_VARIA_SL50_RearStraight_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2170x3072",
+      "resolution": "2170x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -44,8 +100,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11350_1728956072/AMX_VARIA_SL50_RearStraight_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -54,8 +110,8 @@
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11297_1728956327/03._AMX_VARIA-SL50_FrontLeft_3-4_x_large_2x.webp"
     }
   ],
   "documents": [

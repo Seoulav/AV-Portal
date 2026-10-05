@@ -27,6 +27,20 @@
       "originalSize": "900×177",
       "resolution": "900×177",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "nx-2200-rear.webp",
+      "alt": "AMX NX-2200 후면 단자 패널과 인쇄된 모델명",
+      "note": "Rear · 제조사 공식 이미지 · 도면 95-2106-02 대조",
+      "provider": "AMX",
+      "model": "NX-2200",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/4408_1729010256/NX-2200_Rear_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "4096x789",
+      "resolution": "4096x789",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+      "status": "VERIFIED",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/4408_1729010256/NX-2200_Rear_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -466,5 +480,96 @@
       "value": "12",
       "unit": "VDC"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "nx-2200-rear.webp",
+      "width": 4096,
+      "height": 789
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "RS-232 ×3",
+        "desc": "2핀 터미널 3개 · 양방향 직렬 제어 · NetLinx Port 2–4",
+        "x1": 173,
+        "x2": 731,
+        "y": 485,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "RS-232/422/485",
+        "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
+        "x1": 798,
+        "x2": 1194,
+        "y": 485,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "릴레이 ×4",
+        "desc": "8핀 터미널 1개 · SPST 릴레이 · NetLinx Port 21",
+        "x1": 1273,
+        "x2": 1581,
+        "y": 485,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "디지털 I/O ×4",
+        "desc": "6핀 터미널 1개 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+        "x1": 1661,
+        "x2": 1933,
+        "y": 485,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "IR/Serial 출력 ×4",
+        "desc": "2핀 터미널 4개 · 1-way IR/Serial 송신 · NetLinx Port 11–14",
+        "x1": 2023,
+        "x2": 2378,
+        "y": 485,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "AxLink",
+        "desc": "4핀 터미널 · 외부 AxLink 장치 데이터·전원 공급",
+        "x1": 2473,
+        "x2": 2681,
+        "y": 485,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "ICSLAN",
+        "desc": "RJ-45 · 10/100 Ethernet 격리 제어 네트워크",
+        "x1": 2797,
+        "x2": 2941,
+        "y": 454,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "USB 2.0 Host ×2",
+        "desc": "USB Type-A · 전면과 후면을 합친 USB 2.0 호스트 2개 중 후면 단자",
+        "x1": 3048,
+        "x2": 3177,
+        "y": 475,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "LAN 10/100",
+        "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+        "x1": 3383,
+        "x2": 3525,
+        "y": 454,
+        "side": "top"
+      }
+    ]
+  }
 }
