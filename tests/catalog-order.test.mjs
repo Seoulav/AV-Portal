@@ -12,8 +12,8 @@ const legacySort = (items, state) => [...items].filter(item =>
 test('Samsung brand order follows catalog groups and increasing size, with Business TV slot reserved', () => {
   const expected = [
     ['QHF', ['lh115qhfebgxkr']],
-    ['QHC', ['lh43qhcebgcxkr', 'lh75qhcebgcxkr']],
-    ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
+    ['QHC', ['lh43qhcebgcxkr', 'lh55qhcebgcxkr', 'lh65qhcebgcxkr', 'lh75qhcebgcxkr']],
+    ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
     ['Video Wall', ['lh55vhcrbgbxkr', 'lh55vmcrbgbxkr']],
     ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr']],
     ['Business TV', ['lh43behhlbfxkr']],
@@ -21,7 +21,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
     ['LED Signage', ['mp008f', 'mp012f', 'mp016f']]
   ];
   const samsung = catalog.filter(item => item.brand === 'Samsung');
-  assert.equal(samsung.length, 18);
+  assert.equal(samsung.length, 22);
   assert.deepEqual(slugs(filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' })), expected.flatMap(([, group]) => group));
   for (const [index, [group, names]] of expected.entries()) {
     for (const slug of names) {

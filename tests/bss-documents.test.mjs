@@ -1,3 +1,4 @@
+import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
@@ -17,7 +18,7 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
+const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(withoutW029Uploads(manifest.uploads)));
 const slugs=Object.keys(evidence.products);
 const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];
@@ -115,7 +116,7 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
       assert.equal(sources.length,before.beforeSources.length+evidence.inventory.documents.filter(doc=>doc.slug===slug).length,`${slug}: sources`);
     }
   }
-  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!slugs.includes(name.slice(0,-5))).sort();
+  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name)&&!slugs.includes(name.slice(0,-5))).sort();
   const digest=sha(names.map(name=>{
     const slug=name.slice(0,-5),raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug);
     return `${name}\0${crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(JSON.parse(raw),slug),null,2)+'\n':raw}`;

@@ -57,9 +57,9 @@ test('three MPF cabinets use all 20 model-matched guide fields without images or
 
 test('guide remains a private evidence source, while the public catalog gains exactly three LED entries', () => {
   const catalog = read('beta/site/catalog.json');
-  assert.equal(catalog.length, 250);
+  assert.equal(catalog.length, 254);
   assert.deepEqual(catalog.filter(item => item.categories.includes('LED Signage')).map(item => item.slug).sort(), slugs);
-  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 18);
+  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 22);
   const index = read('beta/site/search-index.json');
   for (const slug of slugs) assert.ok(index.items.some(item => item.slug === slug));
   assert.ok(!existsSync(new URL('beta/site/docs/mpf-series-guide.pptx', root)));

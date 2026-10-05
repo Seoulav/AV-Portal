@@ -4158,5 +4158,85 @@
       "order": 8,
       "size": 16
     }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH55QHCEBGCXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Digital Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH55QHCEBGCXKR/"
+    ],
+    "slug": "lh55qhcebgcxkr",
+    "card_image": "lh55qhcebgcxkr-main.webp",
+    "brandSort": {
+      "group": "QHC",
+      "order": 2,
+      "size": 55
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH65QHCEBGCXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Digital Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH65QHCEBGCXKR/"
+    ],
+    "slug": "lh65qhcebgcxkr",
+    "card_image": "lh65qhcebgcxkr-main.webp",
+    "brandSort": {
+      "group": "QHC",
+      "order": 2,
+      "size": 65
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH55QMCEBGCXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Digital Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH55QMCEBGCXKR/"
+    ],
+    "slug": "lh55qmcebgcxkr",
+    "card_image": "lh55qmcebgcxkr-main.webp",
+    "brandSort": {
+      "group": "QMC",
+      "order": 3,
+      "size": 55
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH65QMCEBGCXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Digital Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    ],
+    "slug": "lh65qmcebgcxkr",
+    "card_image": "lh65qmcebgcxkr-main.webp",
+    "brandSort": {
+      "group": "QMC",
+      "order": 3,
+      "size": 65
+    }
   }
 ]

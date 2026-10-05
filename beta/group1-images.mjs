@@ -563,6 +563,14 @@ export const group1Images = {
     image('Main', 'lh32qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 80.1cm 정면', 'Samsung', 'LH32QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
     image('Diagram', 'lh32qmcebgcxkr-diagram.webp', 'LH32QMCEBGCXKR 삼성전자 한글 사용설명서 24쪽 후면 단자 도면', 'Samsung', 'LH32QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/', '290x1480', '290x1480', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 24쪽')
   ],
+  lh55qmcebgcxkr: [
+    image('Main', 'lh55qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 55인치 정면', 'Samsung', 'LH55QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/cc897d99-d2e6-48e0-90eb-d4fb8c532e6e.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND'),
+    image('Diagram', 'lh55qmcebgcxkr-diagram.webp', 'LH55QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH55QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH55QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
+  lh65qmcebgcxkr: [
+    image('Main', 'lh65qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 65인치 정면', 'Samsung', 'LH65QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/b87eeb2b-8c6a-4c2c-bd18-c93d2548db0b.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND'),
+    image('Diagram', 'lh65qmcebgcxkr-diagram.webp', 'LH65QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH65QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
   lh43qmcebgcxkr: [
     image('Main', 'lh43qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 정면', 'Samsung', 'LH43QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/7912ee7f-7c9f-4202-9adb-62491be478c7.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
     image('Diagram', 'lh43qmcebgcxkr-diagram.webp', 'LH43QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH43QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
@@ -574,6 +582,14 @@ export const group1Images = {
   lh98qmcebgcxkr: [
     image('Main', 'lh98qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 첫번째 이미지', 'Samsung', 'LH98QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2024/10/14/eb43a1c6-2c2d-4277-99c3-af1da01b2272.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
     image('Diagram', 'lh98qmcebgcxkr-diagram.webp', 'LH98QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH98QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series-98/LH98QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
+  lh55qhcebgcxkr: [
+    image('Main', 'lh55qhcebgcxkr-main.webp', '단독형 UHD H 시리즈 55인치 정면', 'Samsung', 'LH55QHCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/09/04/1c72f75c-8c41-4285-ad33-9ec5229d4608.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND'),
+    image('Diagram', 'lh55qhcebgcxkr-diagram.webp', 'LH55QHCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH55QHCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qhc-series/LH55QHCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
+  lh65qhcebgcxkr: [
+    image('Main', 'lh65qhcebgcxkr-main.webp', '단독형 UHD H 시리즈 65인치 정면', 'Samsung', 'LH65QHCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/09/04/0a789843-4431-4262-a7dc-7b42bc123619.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND'),
+    image('Diagram', 'lh65qhcebgcxkr-diagram.webp', 'LH65QHCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH65QHCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qhc-series/LH65QHCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
   ],
   lh43qhcebgcxkr: [
     image('Main', 'lh43qhcebgcxkr-main.webp', '단독형 UHD H 시리즈 정면', 'Samsung', 'LH43QHCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/09/04/85db0f25-511c-449a-94cc-935bb8e4f18d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
@@ -1079,9 +1095,13 @@ export const cardImages = {
   hg65u800fnfxkr: 'hg65u800fnfxkr-main.webp',
   lh43behhlbfxkr: 'lh43behhlbfxkr-main.webp',
   lh32qmcebgcxkr: 'lh32qmcebgcxkr-main.webp',
+  lh55qmcebgcxkr: 'lh55qmcebgcxkr-main.webp',
+  lh65qmcebgcxkr: 'lh65qmcebgcxkr-main.webp',
   lh43qmcebgcxkr: 'lh43qmcebgcxkr-main.webp',
   lh85qmcebgcxkr: 'lh85qmcebgcxkr-main.webp',
   lh98qmcebgcxkr: 'lh98qmcebgcxkr-main.webp',
+  lh55qhcebgcxkr: 'lh55qhcebgcxkr-main.webp',
+  lh65qhcebgcxkr: 'lh65qhcebgcxkr-main.webp',
   lh43qhcebgcxkr: 'lh43qhcebgcxkr-main.webp',
   lh75qhcebgcxkr: 'lh75qhcebgcxkr-main.webp',
   lh115qhfebgxkr: 'lh115qhfebgxkr-main.webp',

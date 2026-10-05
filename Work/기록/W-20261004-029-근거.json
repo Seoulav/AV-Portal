@@ -1,0 +1,61 @@
+{
+  "workId": "W-20261004-029",
+  "readCommit": "a12ec35d75da3db6cbe29dc58b8c72951417b340",
+  "manual": {
+    "file": "beta/site/manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
+    "document": "BN81-24537G-14",
+    "page": 20,
+    "modelNames": [
+      "QH55C",
+      "QH65C",
+      "QM55C",
+      "QM65C"
+    ]
+  },
+  "models": {
+    "lh55qhcebgcxkr": {
+      "officialPage": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH55QHCEBGCXKR/",
+      "pageTitle": "단독형 UHD H 시리즈 138.7 cm | LH55QHCEBGCXKR | Samsung Business 대한민국",
+      "chromiumSpecificationText": "단독형 UHD H 시리즈\n디스플레이\n대각선 사이즈 (cm)\n\n138.7 cm\n\n \n패널 타입\n\nVA \n\n \n해상도\n\n3,840 x 2,160 \n\n \n픽셀 피치\n\n0.315 x 0.315 mm \n\n \n밝기 (Typ)\n\n700 nit\n\n \n명암비\n\n4,000:1 \n\n \n시야각(수평/수직)\n\n178/178 \n\n \n응답속도 (ms)\n\n8 \n\n \n색재현성(Color Gamut)\n\n72 (NTSC) %\n\n \n헤이즈(Haze)\n\n25 %\n\n \n수평 주파수\n\n30~81 kHz \n\n \n최대 픽셀 주파수\n\n594 MHz \n\n \n수직 주파수\n\n48~75 Hz \n\n \n동적 명암비\n\nMega \n\n \n제품 사용 시간\n\n24/7 \n\n연결성\nHDMI 입력\n\n3 \n\n \nDP 입력\n\n1 \n\n \nHDMI 버전\n\n2 \n\n \nDP 버전\n\n1.2 \n\n \nHDCP 버전\n\n2.2 \n\n \nUSB\n\n2 \n\n \nIR 입력\n\n있음 \n\n \n오디오 입력\n\n없음 \n\n \n오디오출력\n\nStereo Mini Jack \n\n \nRS232 입력\n\n있음 \n\n \nRS232 출력\n\n있음 \n\n \nRJ45 입력\n\n있음 \n\n \nWiFi\n\n있음 \n\n \nBluetooth\n\n있음 \n\n전원\n정격입력\n\nAC 100-240 V 50/60 Hz \n\n \n소비전력 (On Mode)\n\n187 W\n\n \n소비전력 (Sleep Mode)\n\n0.5 W\n\n크기\n제품(가로x높이x깊이)\n\n1237.9 x 708.8 x 28.5 mm\n\n \n포장(가로x높이x깊이)\n\n1403 x 835 x 148 mm\n\n무게\n제품 무게\n\n16.9 kg\n\n \n무게 (박스 포장)\n\n21.1 kg\n\n기구사양\nVESA 마운트\n\n200 x 200 mm\n\n \n베젤 두께\n\n11.5 mm (even) \n\n \n베젤 색상\n\nCharcoal Black \n\n \n프레임 재질\n\nNon-Glossy \n\n동작조건\n온도\n\n0 ~ 40 ℃\n\n \n습도\n\n10 ~ 80 (non-condensing) %\n\nSoC\n운영체제 버전\n\nTizen 7.0 \n\n \n플래시메모리 사이즈\n\n16 GB \n\n인증정보\n안전 규격\n\n60950-1, 62368-1 \n\n \nEMC\n\nClass B \n\n추가 기능\n마운트\n\nWMN-B50SC \n\n \n스탠드\n\nSTN-L4355C \n\n상품 기본정보\n제품명\n\n단독형 사이니지\n\n \n제조자/수입자\n\n삼성전자㈜\n\n \n제조국가\n\n베트남\n\n \nKC 인증 필 유무\n\nR-R-SEC-LH55QHCE\n\n \n동일모델의 출시년월\n\n2023년 8월\n\n \nA/S 책임자와 전화번호\n\n삼성전자서비스센터 / 1588-3366\n\n \n품질보증기준\n\n결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능\n\n \n에너지소비효율등급\n\n최저소비효율기준 만족",
+      "mainImageSource": "https://images.samsung.com/kdp/goods/2023/09/04/1c72f75c-8c41-4285-ad33-9ec5229d4608.png?$Q90_1920_1280_F_PNG$",
+      "mainWebpSha256": "955848d3f15275568b304d5163280f39327e693c167d11f794ff949647e6519e",
+      "diagramWebpSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+      "specificationRows": 28,
+      "ioRows": 9,
+      "portMapMarkers": 11
+    },
+    "lh65qhcebgcxkr": {
+      "officialPage": "https://www.samsung.com/sec/business/smart-signage/qhc-series/LH65QHCEBGCXKR/",
+      "pageTitle": "단독형 UHD H 시리즈 163.9 cm | LH65QHCEBGCXKR | Samsung Business 대한민국",
+      "chromiumSpecificationText": "단독형 UHD H 시리즈\n디스플레이\n대각선 사이즈 (cm)\n\n163.9 cm\n\n \n패널 타입\n\nVA \n\n \n해상도\n\n3,840 x 2,160 \n\n \n픽셀 피치\n\n0.372 x 0.372 mm \n\n \n밝기 (Typ)\n\n700 nit\n\n \n명암비\n\n4,000:1 \n\n \n시야각(수평/수직)\n\n178/178 \n\n \n응답속도 (ms)\n\n8 \n\n \n색재현성(Color Gamut)\n\n72 (NTSC) %\n\n \n헤이즈(Haze)\n\n25 %\n\n \n수평 주파수\n\n30~81 kHz \n\n \n최대 픽셀 주파수\n\n594 MHz \n\n \n수직 주파수\n\n48~75 Hz \n\n \n동적 명암비\n\nMega \n\n \n제품 사용 시간\n\n24/7 \n\n연결성\nHDMI 입력\n\n3 \n\n \nDP 입력\n\n1 \n\n \nHDMI 버전\n\n2 \n\n \nDP 버전\n\n1.2 \n\n \nHDCP 버전\n\n2.2 \n\n \nUSB\n\n2 \n\n \nIR 입력\n\n있음 \n\n \n오디오 입력\n\n없음 \n\n \n오디오출력\n\nStereo Mini Jack \n\n \nRS232 입력\n\n있음 \n\n \nRS232 출력\n\n있음 \n\n \nRJ45 입력\n\n있음 \n\n \nWiFi\n\n있음 \n\n \nBluetooth\n\n있음 \n\n전원\n정격입력\n\nAC 100-240 V 50/60 Hz \n\n \n소비전력 (On Mode)\n\n203.5 W\n\n \n소비전력 (Sleep Mode)\n\n0.5 W\n\n크기\n제품(가로x높이x깊이)\n\n1456.8 x 831.9 x 28.5 mm\n\n \n포장(가로x높이x깊이)\n\n1616 x 945 x 164 mm\n\n무게\n제품 무게\n\n22.7 kg\n\n \n무게 (박스 포장)\n\n28.10 kg\n\n기구사양\nVESA 마운트\n\n400 x 300 mm\n\n \n베젤 두께\n\n11.5 mm (even) \n\n \n베젤 색상\n\nCharcoal Black \n\n \n프레임 재질\n\nNon-Glossy \n\n동작조건\n온도\n\n0 ~ 40 ℃\n\n \n습도\n\n10 ~ 80 (non-condensing) %\n\nSoC\n운영체제 버전\n\nTizen 7.0 \n\n \n플래시메모리 사이즈\n\n16 GB \n\n인증정보\n안전 규격\n\n60950-1, 62368-1 \n\n \nEMC\n\nClass B \n\n추가 기능\n마운트\n\nWMN-B50SC \n\n \n스탠드\n\nSTN-L6585C \n\n상품 기본정보\n제품명\n\n단독형 사이니지\n\n \n제조자/수입자\n\n삼성전자㈜\n\n \n제조국가\n\n베트남\n\n \nKC 인증 필 유무\n\nR-R-SEC-LH65QHCE\n\n \n동일모델의 출시년월\n\n2023년 8월\n\n \nA/S 책임자와 전화번호\n\n삼성전자서비스센터 / 1588-3366\n\n \n품질보증기준\n\n결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능",
+      "mainImageSource": "https://images.samsung.com/kdp/goods/2023/09/04/0a789843-4431-4262-a7dc-7b42bc123619.png?$Q90_1920_1280_F_PNG$",
+      "mainWebpSha256": "955848d3f15275568b304d5163280f39327e693c167d11f794ff949647e6519e",
+      "diagramWebpSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+      "specificationRows": 28,
+      "ioRows": 9,
+      "portMapMarkers": 11
+    },
+    "lh55qmcebgcxkr": {
+      "officialPage": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH55QMCEBGCXKR/",
+      "pageTitle": "단독형 UHD M 시리즈 138.7 cm | LH55QMCEBGCXKR | Samsung Business 대한민국",
+      "chromiumSpecificationText": "단독형 UHD M 시리즈\n디스플레이\n대각선 사이즈 (cm)\n\n138.7 cm\n\n \n패널 타입\n\nVA \n\n \n해상도\n\n3,840 x 2,160 \n\n \n픽셀 피치\n\n0.315 x 0.315 mm \n\n \n밝기 (Typ)\n\n500 nit\n\n \n명암비\n\n4,000:1 \n\n \n시야각(수평/수직)\n\n178/178 \n\n \n응답속도 (ms)\n\n8 \n\n \n색재현성(Color Gamut)\n\n72 (NTSC) %\n\n \n헤이즈(Haze)\n\n25 %\n\n \n수평 주파수\n\n30~81 kHz \n\n \n최대 픽셀 주파수\n\n594 MHz \n\n \n수직 주파수\n\n48~75 Hz \n\n \n동적 명암비\n\nMega \n\n \n제품 사용 시간\n\n24/7 \n\n연결성\nHDMI 입력\n\n3 \n\n \nDP 입력\n\n1 \n\n \nHDMI 버전\n\n2 \n\n \nDP 버전\n\n1.2 \n\n \nHDCP 버전\n\n2.2 \n\n \nUSB\n\n2 \n\n \nIR 입력\n\n있음 \n\n \n오디오 입력\n\n없음 \n\n \n오디오출력\n\nStereo Mini Jack \n\n \nRS232 입력\n\n있음 \n\n \nRS232 출력\n\n있음 \n\n \nRJ45 입력\n\n있음 \n\n \nWiFi\n\n있음 \n\n \nBluetooth\n\n있음 \n\n전원\n정격입력\n\nAC 100-240 V 50/60 Hz \n\n \n소비전력 (On Mode)\n\n154 W\n\n \n소비전력 (Sleep Mode)\n\n0.5 W\n\n크기\n제품(가로x높이x깊이)\n\n1237.9 x 708.8 x 28.5 mm\n\n \n포장(가로x높이x깊이)\n\n1403 x 835 x 148 mm\n\n무게\n제품 무게\n\n15.7 kg\n\n \n무게 (박스 포장)\n\n19.9 kg\n\n기구사양\nVESA 마운트\n\n200 x 200 mm\n\n \n베젤 두께\n\n11.5 mm (even) \n\n \n베젤 색상\n\nCharcoal Black \n\n \n프레임 재질\n\nNon-Glossy \n\n동작조건\n온도\n\n0 ~ 40 ℃\n\n \n습도\n\n10 ~ 80 (non-condensing) %\n\nSoC\n운영체제 버전\n\nTizen 7.0 \n\n \n플래시메모리 사이즈\n\n16 GB \n\n인증정보\n안전 규격\n\n60950-1, 62368-1 \n\n \nEMC\n\nClass B \n\n추가 기능\n마운트\n\nWMN-B50SC \n\n \n스탠드\n\nSTN-L4355C \n\n상품 기본정보\n제품명\n\n단독형 사이니지\n\n \n제조자/수입자\n\n삼성전자㈜\n\n \n제조국가\n\n베트남\n\n \nKC 인증 필 유무\n\nR-R-SEC-LH55QMCE\n\n \n동일모델의 출시년월\n\n2024년 9월\n\n \nA/S 책임자와 전화번호\n\n삼성전자서비스센터 / 1588-3366\n\n \n품질보증기준\n\n결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능\n\n \n에너지소비효율등급\n\n최저소비효율기준 만족",
+      "mainImageSource": "https://images.samsung.com/kdp/goods/2023/08/29/cc897d99-d2e6-48e0-90eb-d4fb8c532e6e.png?$Q90_1920_1280_F_PNG$",
+      "mainWebpSha256": "8d0f4831b7086d16a92266c1bcf3f533126b7d353953c35b60b99b35a2468622",
+      "diagramWebpSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+      "specificationRows": 28,
+      "ioRows": 9,
+      "portMapMarkers": 11
+    },
+    "lh65qmcebgcxkr": {
+      "officialPage": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/",
+      "pageTitle": "단독형 UHD M 시리즈 163.9 cm | LH65QMCEBGCXKR | Samsung Business 대한민국",
+      "chromiumSpecificationText": "단독형 UHD M 시리즈\n디스플레이\n대각선 사이즈 (cm)\n\n163.9 cm\n\n \n패널 타입\n\nVA \n\n \n해상도\n\n3,840 x 2,160 \n\n \n픽셀 피치\n\n0.372 x 0.372 mm \n\n \n밝기 (Typ)\n\n500 nit\n\n \n명암비\n\n4,000:1 \n\n \n시야각(수평/수직)\n\n178/178 \n\n \n응답속도 (ms)\n\n8 ms\n\n \n색재현성(Color Gamut)\n\n72 %\n\n \n헤이즈(Haze)\n\n25 %\n\n \n수평 주파수\n\n30~81kHz \n\n \n최대 픽셀 주파수\n\n594 MHz \n\n \n수직 주파수\n\n48~75 Hz \n\n \n동적 명암비\n\nMega \n\n \n제품 사용 시간\n\n24/7 \n\n연결성\nHDMI 입력\n\n3 \n\n \nDP 입력\n\n1 \n\n \nHDMI 버전\n\n2 \n\n \nDP 버전\n\n1.2 \n\n \nHDCP 버전\n\n2.2 \n\n \nUSB\n\n2 \n\n \nIR 입력\n\n있음 \n\n \n오디오 입력\n\n없음 \n\n \n오디오출력\n\nStereo Mini Jack \n\n \nRS232 입력\n\n있음 \n\n \nRS232 출력\n\n있음 \n\n \nRJ45 입력\n\n있음 \n\n \nWiFi\n\n있음 \n\n \nBluetooth\n\n있음 \n\n전원\n정격입력\n\nAC 100-240 V 50/60 Hz \n\n \n소비전력 (On Mode)\n\n187 W\n\n \n소비전력 (Sleep Mode)\n\n0.5 W\n\n크기\n제품(가로x높이x깊이)\n\n1456.8 x 831.9 x 28.5 mm\n\n \n포장(가로x높이x깊이)\n\n1616 x 945 x 164 mm\n\n무게\n제품 무게\n\n21.5 kg\n\n \n무게 (박스 포장)\n\n28.0 kg\n\n기구사양\nVESA 마운트\n\n400 x 300 mm\n\n \n베젤 두께\n\n11.5mm (even) \n\n \n베젤 색상\n\nCharcoal Black \n\n \n프레임 재질\n\nNon-Glossy \n\n동작조건\n온도\n\n0 ~ 40 ℃\n\n \n습도\n\n10 ~ 80 (Non-Condensing) %\n\nSoC\n운영체제 버전\n\nTizen 7.0 \n\n \n플래시메모리 사이즈\n\n16 GB \n\n인증정보\n안전 규격\n\n60950-1, 62368-1 \n\n \nEMC\n\nClass B \n\n추가 기능\n마운트\n\nWMN-B50SC \n\n \n스탠드\n\nSTN-L6585C \n\n상품 기본정보\n제품명\n\n단독형 사이니지\n\n \n제조자/수입자\n\n삼성전자㈜\n\n \n제조국가\n\n베트남\n\n \nKC 인증 필 유무\n\nR-R-SEC-LH65QMCE\n\n \n동일모델의 출시년월\n\n2024년 9월\n\n \nA/S 책임자와 전화번호\n\n삼성전자서비스센터 / 1588-3366\n\n \n품질보증기준\n\n결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능",
+      "mainImageSource": "https://images.samsung.com/kdp/goods/2023/08/29/b87eeb2b-8c6a-4c2c-bd18-c93d2548db0b.png?$Q90_1920_1280_F_PNG$",
+      "mainWebpSha256": "8d0f4831b7086d16a92266c1bcf3f533126b7d353953c35b60b99b35a2468622",
+      "diagramWebpSha256": "43a0ce418f6779a153b1d43f565a37272b24f8ca4f3f1843615f33e2ef811a56",
+      "specificationRows": 28,
+      "ioRows": 9,
+      "portMapMarkers": 11
+    }
+  }
+}

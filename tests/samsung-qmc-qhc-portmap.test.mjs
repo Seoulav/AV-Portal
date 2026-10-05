@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -71,7 +72,7 @@ test('other 235 product JSON and all 51 unchanged maps keep their baseline conte
   const otherHash = createHash('sha256');
   const mapHash = createHash('sha256');
   let maps = 0;
-  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort()) {
+  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort()) {
     const source = beforeBssAlignmentRaw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'),file.slice(0,-5));
     const current = JSON.parse(source);
     if (!selected.has(file.slice(0, -5))) otherHash.update(file).update('\0').update(source);
