@@ -12,6 +12,7 @@ import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { verifyPdfLock } from '../beta/pdf-lock.mjs';
 import { beforeSamsungW04017Raw } from './samsung-w04017-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
+import { beforeW033Uploads, isW033Manual } from './w033-history.mjs';
 
 GlobalWorkerOptions.workerSrc = new URL('../beta/site/vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const root = new URL('../beta/site/', import.meta.url);
@@ -58,7 +59,7 @@ test('PDF.js requests a new password after an incorrect attempt', async () => {
 
 test('all other posted PDFs, product JSON, and document links keep their prior bytes', () => {
   const manuals = new URL('manuals/', root);
-  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf')).sort();
+  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && !isW033Manual(name)).sort();
   assert.equal(files.length, 56);
   const others = createHash('sha256');
   for (const name of files.filter(name => !targetSet.has(name)))
@@ -73,14 +74,14 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
     productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
-  const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(manifest.uploads) }, null, 2) + '\n';
+  const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(beforeW033Uploads(manifest.uploads)) }, null, 2) + '\n';
   const withoutLockLabels = manifestWithoutCurrentLockLabels.replace(/^      "locked": true,\r?\n/gm, '');
   assert.equal(sha(Buffer.from(withoutLockLabels)), '4c64584eb766ad94f2c5fac66f02d687bb81e4b2fce60d71a6149155cac1ddbb');
 });
 
 test('the twelve uploads of the three encrypted files are marked locked, without changing other uploads', () => {
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
-  assert.equal(manifest.uploads.length, 107);
+  assert.equal(beforeW033Uploads(manifest.uploads).length, 107);
   assert.equal(manifest.uploads.filter(entry => entry.locked === true).length, 12);
   for (const entry of manifest.uploads)
     assert.equal(entry.locked === true, targetSet.has(entry.file.replace(/^manuals\//, '')), `${entry.slug}: ${entry.file}`);

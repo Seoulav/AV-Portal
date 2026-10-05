@@ -11,6 +11,7 @@ import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeSamsungW04011Raw } from './samsung-w04011-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 import { beforeW04021Uploads } from './document-lock-history.mjs';
+import { beforeW033Uploads } from './w033-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -23,9 +24,9 @@ const removed = {
 };
 
 test('W-016 removes only the three requested PDF files and six upload links', () => {
-  assert.equal(manifest.uploads.length, 107);
+  assert.equal(beforeW033Uploads(manifest.uploads).length, 107);
   assert.equal(manifest.uploads.filter(item => /\/winstar-/.test(item.file)).length, 0);
-  assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(manifest.uploads)))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
+  assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(beforeW033Uploads(manifest.uploads))))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
   assert.equal(beforeW032Mirrors(manifest.mirrors).length, 111);
   assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   for (const file of Object.keys(removed))

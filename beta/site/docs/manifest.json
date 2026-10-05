@@ -1575,6 +1575,24 @@
       "file": "manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 한글 사용설명서 BN81-24537G-14 (QBC·QHC·QMC·SHC)"
+    },
+    {
+      "slug": "lh43behhlbfxkr",
+      "file": "manuals/samsung-behx-h-quick-guide-ko.pdf",
+      "kind": "manual",
+      "title": "삼성전자 BEHX-H 공용 간단 사용설명서 BN68-26617B-00"
+    },
+    {
+      "slug": "lh43behhlbfxkr",
+      "file": "manuals/samsung-behx-h-installation-guide-ko.pdf",
+      "kind": "manual",
+      "title": "삼성전자 BEHX-H 43~85인치 공용 설치가이드 BN68-26620A-01"
+    },
+    {
+      "slug": "lh43behhlbfxkr",
+      "file": "manuals/samsung-behx-h-common-manual-ko.pdf",
+      "kind": "manual",
+      "title": "삼성전자 BEHX-H 공용 통합 사용설명서 BN81-28760B-500 · 모델별 단자 배치 미확인"
     }
   ]
 }
