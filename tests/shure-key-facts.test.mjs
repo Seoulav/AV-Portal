@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync,readFileSync} from 'node:fs';
@@ -49,7 +50,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
 });
 
 test('ULXD4D pilot and the other 212 products retain original JSON bytes',()=>{
-  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
+  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort();
   const targetsSet=new Set(targets.map(([slug])=>slug));
   const otherNames=names.filter(name=>!targetsSet.has(name.slice(0,-5)));
   assert.equal(otherNames.length,213);

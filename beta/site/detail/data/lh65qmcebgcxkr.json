@@ -1,0 +1,651 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH65QMCEBGCXKR",
+  "model": "LH65QMCEBGCXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Digital Signage"
+  ],
+  "english": "Samsung QM65C standalone UHD digital signage, 65-inch, 3,840 x 2,160, 500 nit (typical).",
+  "korean": "삼성 QM65C 단독형 UHD 디지털 사이니지 65인치 모델로, 해상도는 3,840 x 2,160 픽셀이고 일반 밝기는 500 nit입니다.",
+  "verificationSummary": "2026-10-05 삼성전자 대한민국 비즈니스의 정확 모델 LH65QMCEBGCXKR 제품 페이지와 동적 상세 스펙 탭을 Chromium으로 직접 확인했다. 단자 구성은 삼성전자 한글 사용설명서 BN81-24537G-14 20쪽의 적용 모델 및 도면으로 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH65QMCEBGCXKR은 삼성 QM65C 단독형 UHD 디지털 사이니지입니다. 국내 공식 스펙 탭에 화면 크기 163.9 cm, 해상도 3,840 x 2,160 픽셀, 일반 밝기 500 nit, 제품 크기 1456.8 x 831.9 x 28.5 mm가 명시돼 있습니다. HDMI 입력 3개와 DisplayPort 입력 1개, USB 2개는 공식 스펙 탭과 한글 사용설명서의 단자 설명에 근거합니다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh65qmcebgcxkr-main.webp",
+      "alt": "단독형 UHD M 시리즈 65인치 정면",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Samsung",
+      "model": "LH65QMCEBGCXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/08/29/b87eeb2b-8c6a-4c2c-bd18-c93d2548db0b.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "lh65qmcebgcxkr-diagram.webp",
+      "alt": "LH65QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면",
+      "note": "Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽",
+      "provider": "Samsung",
+      "model": "LH65QMCEBGCXKR",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "290x1420",
+      "resolution": "290x1420",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2023/08/29/b87eeb2b-8c6a-4c2c-bd18-c93d2548db0b.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "VERIFIED",
+      "title": "LH65QMCEBGCXKR 공식 제품 페이지 사양",
+      "language": "ko",
+      "note": "제조사 공식 사양 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "삼성전자 대한민국 비즈니스 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "163.9 cm VA 화면에 3,840 x 2,160 픽셀 해상도와 일반 밝기 500 nit를 제공합니다.",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 입력 3개, DisplayPort 입력 1개, USB 2개를 제공합니다.",
+      "source": "P, M1"
+    },
+    {
+      "text": "삼성전자 공식 스펙 탭은 24/7 사용을 명시합니다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "65 (163.9)",
+      "unit": "인치(cm)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "패널 종류",
+      "value": "VA",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "픽셀 피치(HxV)",
+      "value": "0.372x0.372",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "밝기(Typ)",
+      "value": "500",
+      "unit": "nit",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "명암비(정적)",
+      "value": "4,000:1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(H/V)",
+      "value": "178/178",
+      "unit": "°",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "응답 속도",
+      "value": "8",
+      "unit": "ms",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "색재현율",
+      "value": "72%",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "동적 명암비",
+      "value": "Mega",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "운영 시간",
+      "value": "24/7",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connectivity",
+      "name": "Wi-Fi",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connectivity",
+      "name": "블루투스",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 사양",
+      "value": "AC 100-240 V 50/60 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(On 모드)",
+      "value": "187",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력(대기/Sleep 모드)",
+      "value": "0.5",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(가로x높이x깊이)",
+      "value": "1456.8 x 831.9 x 28.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "포장 크기(가로x높이x깊이)",
+      "value": "1616 x 945 x 164",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "중량",
+      "value": "21.5",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "중량(포장 포함)",
+      "value": "28.0",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "℃",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 습도",
+      "value": "10 ~ 80",
+      "unit": "%",
+      "condition": "결로 없음",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "VESA 규격",
+      "value": "400 x 300",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "베젤 폭(사양표)",
+      "value": "11.5mm (even)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "프레임 재질",
+      "value": "Non-Glossy",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제 버전",
+      "value": "Tizen 7.0",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "내장 플래시 메모리",
+      "value": "16 GB",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player 지원",
+      "value": "있음",
+      "unit": "",
+      "condition": "별도 구매 서비스",
+      "source": "U1",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "비디오/오디오 입력",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "HDMI",
+      "availability": "HDMI 버전 표기 2, HDCP 2.2 · HDMI IN 3은 ARC 지원",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "DisplayPort",
+      "signal": "비디오 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DisplayPort",
+      "availability": "DP 버전 1.2",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Data",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "USB",
+      "availability": "USB 2: 최대 1.0 A · USB 1: 최대 0.5 A",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "IR 입력",
+      "signal": "IR 수신/외부 IR",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "IR",
+      "availability": "있음",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 입력",
+      "signal": "아날로그 오디오 입력",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "미지원(사양표 \"No\")",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "오디오 출력",
+      "signal": "아날로그 오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "있음(스테레오 미니 잭)",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 입력",
+      "signal": "외부 제어",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232C 출력",
+      "signal": "외부 제어(루프아웃)",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "RS-232C",
+      "availability": "있음",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ45(LAN)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Ethernet",
+      "availability": "있음 · 10/100 Mbps · CAT 7(STP) 케이블 권장",
+      "condition": "",
+      "source": "P, M1",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+      "url": "https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/",
+      "scope": "국내 정확 모델 LH65QMCEBGCXKR 상세 스펙 탭을 2026-10-05 Chromium으로 확인. 제품 크기·전력·무게·화면 크기 등은 해당 모델 값. 디스플레이 면적은 미기재."
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-24537G-14",
+      "scope": "20쪽 적용 모델 목록에서 QM65C 확인. 같은 쪽 단자 설명과 도면. 공개 사본: manuals/samsung-qbc-qhc-qmc-shc-manual-ko.pdf."
+    },
+    {
+      "code": "U1",
+      "name": "사용자 확인(2026-10-04) — QMC/QHC/QHF VXT Player 지원",
+      "scope": "사용자가 QMC·QHC·QHF 전체 라인업의 VXT 지원을 확인함. 매뉴얼 검증이 아닌 사용자 확인이므로 FOUND."
+    },
+    {
+      "code": "U2",
+      "name": "사용자 확인(2026-10-04) — RS-232C 출력 용도",
+      "scope": "RS-232C 출력은 제어 명령을 다음 디스플레이로 전달하는 루프아웃. 매뉴얼의 입력·출력 공통 설명과 구분하여 Port Map 출력 설명에 적용."
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Samsung LH65QMCEBGCXKR 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "subtitle": "QMC · UHD 디지털 사이니지",
+  "lead": "**65인치 UHD 사이니지** LH65QMCEBGCXKR은 QMC 시리즈의 단독형 디스플레이다. 국내 공식 사양표의 일반 밝기는 500 nit이고 해상도는 3,840 x 2,160 픽셀이다.",
+  "keyFacts": [
+    {
+      "label": "밝기 · Typ",
+      "value": "500",
+      "unit": "nit"
+    },
+    {
+      "label": "해상도",
+      "value": "3,840 x 2,160",
+      "unit": "픽셀"
+    },
+    {
+      "label": "화면 크기",
+      "value": "65 (163.9)",
+      "unit": "인치(cm)"
+    },
+    {
+      "label": "명암비 · 정적",
+      "value": "4,000:1",
+      "unit": ""
+    }
+  ],
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "lh65qmcebgcxkr-diagram.webp",
+      "width": 290,
+      "height": 1420
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB 2 (1.0A)",
+        "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 1.0A입니다.",
+        "y1": 79,
+        "y2": 154,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "USB 1 (0.5A)",
+        "desc": "USB 장치를 연결할 때 사용합니다. 허용 전류는 최대 0.5A입니다.",
+        "y1": 228,
+        "y2": 300,
+        "side": "left"
+      },
+      {
+        "n": 3,
+        "label": "오디오 출력",
+        "desc": "음향 케이블을 이용하여 소리를 내보낼 때 사용합니다.",
+        "y1": 360,
+        "y2": 381,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "DisplayPort 입력",
+        "desc": "DP 케이블을 이용하여 PC를 연결할 때 사용합니다.",
+        "y1": 434,
+        "y2": 520,
+        "side": "left"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 3 (ARC)",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 568,
+        "y2": 652,
+        "side": "left"
+      },
+      {
+        "n": 6,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 706,
+        "y2": 790,
+        "side": "left"
+      },
+      {
+        "n": 7,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI 또는 HDMI-DVI 케이블을 이용하여 외부기기를 연결할 때 사용합니다.",
+        "y1": 845,
+        "y2": 929,
+        "side": "left"
+      },
+      {
+        "n": 8,
+        "label": "RJ45 (LAN)",
+        "desc": "LAN 케이블을 이용하여 MDC와 인터넷을 연결할 때 사용합니다(10/100 Mbps).",
+        "y1": 991,
+        "y2": 1051,
+        "side": "left"
+      },
+      {
+        "n": 9,
+        "label": "RS-232C 입력",
+        "desc": "RS232C 어댑터를 이용하여 MDC를 연결할 때 사용합니다.",
+        "y1": 1120,
+        "y2": 1141,
+        "side": "left"
+      },
+      {
+        "n": 10,
+        "label": "RS-232C 출력",
+        "desc": "다음 디스플레이로 RS-232C 제어 명령을 전달하는 루프아웃입니다.",
+        "y1": 1212,
+        "y2": 1233,
+        "side": "left"
+      },
+      {
+        "n": 11,
+        "label": "IR 입력",
+        "desc": "리모컨의 신호를 받는 외장 IR 케이블을 연결합니다.",
+        "y1": 1303,
+        "y2": 1324,
+        "side": "left"
+      }
+    ]
+  }
+}

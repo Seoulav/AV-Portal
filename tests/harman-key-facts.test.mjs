@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readdirSync,readFileSync} from 'node:fs';
@@ -57,7 +58,7 @@ test('32 JBL, BSS and AMX cards use exact verified product rows',()=>{
 });
 
 test('Crown 26 and all other 210 product JSON files remain unchanged',()=>{
-  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
+  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort();
   const otherNames=names.filter(name=>!targets.includes(name.slice(0,-5)));
   assert.equal(otherNames.length,210);
   const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);

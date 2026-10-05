@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import test from 'node:test';
@@ -136,7 +137,7 @@ test('one intact 70-page Korean manual is uploaded for only the two whiteboards'
 test('every other detail JSON retains its pre-change Git LF bytes', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
     const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug);
     const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),null,2)+'\n' : raw;

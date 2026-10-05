@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -59,7 +60,7 @@ test('the approved DCi 4|600DA pilot remains untouched', () => {
 });
 
 test('217 other product JSON objects retain their pre-task content', () => {
-  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
+  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort();
   const otherNames = names.filter(name => !targets.includes(name.slice(0,-5)));
   const other = otherNames.map(name => [name,beforeHarmanW03014(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(otherNames.length, 217);

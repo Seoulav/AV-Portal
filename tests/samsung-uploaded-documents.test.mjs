@@ -1,3 +1,4 @@
+import { isW029Name } from './w029-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import test from 'node:test';
@@ -154,7 +155,7 @@ test('W-005 published PDFs match supplied bytes and earlier upload history and p
   assert.equal(sha(JSON.stringify(manifest.mirrors)), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  const names = readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json').sort();
+  const names = readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort();
   assert.equal(names.length, 242);
   for (const name of names) {
     const slug = name.slice(0, -5);
