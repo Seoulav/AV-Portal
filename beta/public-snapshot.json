@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 254,
-    "sha256": "DEFEC5E4E20962E94D09C1722ADDCFA607792F8B9AAF5744CDE3F2666E596617",
+    "count": 257,
+    "sha256": "E611E835ADBB4D9A82F97E923E785590964C8026764A2FC9C2E99499EC520BA5",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -738,6 +738,24 @@
       "features": 3,
       "specifications": 29,
       "io": 3
+    },
+    "ie015a-e": {
+      "sha256": "915A756A823945E97822F5A70BC744472B2FEE923ECA0F301E41F02335DE2C72",
+      "features": 2,
+      "specifications": 41,
+      "io": 0
+    },
+    "ie020a-e": {
+      "sha256": "77E608BEF25025E99EFB7CBFCBDBCEF5F863DFB905E357890B4675858976139E",
+      "features": 2,
+      "specifications": 41,
+      "io": 0
+    },
+    "if015r-m": {
+      "sha256": "96ADF92E62DDB0C19138ECEB5CD5F2060C65C48EADDE976961E773A282B3F7D3",
+      "features": 2,
+      "specifications": 40,
+      "io": 0
     },
     "ki-pro-go2": {
       "sha256": "587DE10150EC31B48564861B4F2CEC33F2E4F675FA3F19214BF63B593D51CD59",

@@ -76,7 +76,7 @@ test('renamed catalog categories preserve home top-category counts and filter me
     ['audio', 116],
     ['video', 62],
     ['camera-conference', 30],
-    ['display-projection', 45], // W-20261002-011 excluded LH98QEC; W-20261002-012 added MPF; W-023 added Business TV.
+    ['display-projection', 48], // W-030 adds three LED cabinet products to the current catalog.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);
