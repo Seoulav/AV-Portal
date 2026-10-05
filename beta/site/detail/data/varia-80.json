@@ -29,6 +29,48 @@
       "originalSize": "1500×1124",
       "resolution": "1500×1124",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "varia-80-other-left-front.webp",
+      "alt": "AMX VARIA-80 제품 단독 좌측 전면 각도",
+      "note": "Other · 좌측 전면 · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-80",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11273_1728956373/03._AMX_VARIA-80_FrontLeft_3-4_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "3250x3072",
+      "resolution": "3250x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "varia-80-other-right-front.webp",
+      "alt": "AMX VARIA-80 제품 단독 우측 전면 각도",
+      "note": "Other · 우측 전면 · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-80",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11342_1728956093/03._New_AMX_VARIA80_FrontRight_3_4_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2923x3072",
+      "resolution": "2923x3072",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "varia-80-rear.webp",
+      "alt": "AMX VARIA-80 제품 단독 후면",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "AMX",
+      "model": "VARIA-80",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11347_1728956077/08._AMX_VARIA80_Rear_x_large_2x.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "4096x3071",
+      "resolution": "4096x3071",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -44,8 +86,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11347_1728956077/08._AMX_VARIA80_Rear_x_large_2x.webp"
     },
     {
       "role": "Perspective",
@@ -54,8 +96,8 @@
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+      "status": "FOUND",
+      "sourceUrl": "https://adn.harmanpro.com/product_attachments/product_attachments/11273_1728956373/03._AMX_VARIA-80_FrontLeft_3-4_x_large_2x.webp"
     }
   ],
   "documents": [

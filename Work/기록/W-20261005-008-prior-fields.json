@@ -1,0 +1,373 @@
+{
+  "nx-1200": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "nx1200-main.webp",
+          "alt": "AMX NX-1200 컨트롤러 이미지(전면·측면에 모델명 'NX-1200' 표기)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "NX-1200",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/3636/product_attachment/vert_medium_2x-2077089418107c053c25f6d7f573c47a.webp",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "900×298",
+          "resolution": "900×298",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/3636/product_attachment/vert_medium_2x-2077089418107c053c25f6d7f573c47a.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-1200"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-1200"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-1200"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-1200"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "6f9f58261e6023206c0b3cc82b70b000e4996d20d5a609abb78c74486f906199",
+      "imageStatuses": "42b4202a52097961592aed9624626f71add433ac5bb952ad82a47473d516b1e5",
+      "portMap": "7e8f8ca1fc98a92934e447e1c901d567666ec136ab54318890545c8ba14cad46"
+    }
+  },
+  "nx-2200": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "nx2200-main.webp",
+          "alt": "AMX NX-2200 컨트롤러 이미지(전면·측면에 모델명 'NX-2200' 표기)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "NX-2200",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "900×177",
+          "resolution": "900×177",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-2200"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "5097d8b790b28e8bd2345290cdc1e5a886771b119241fcdab6bb73362e6de919",
+      "imageStatuses": "92b467ac4dbca926c35ce466c28d13f6c21528ddd191fe62ef6c637b3dbc8667",
+      "portMap": "74706f4ba2b5f1dd03c8ebe200f13eef6ebc0324d9f8f8dd41a5ae1ae8f2c4ea"
+    }
+  },
+  "nx-3200": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "nx3200-main.webp",
+          "alt": "AMX NX-3200 컨트롤러 이미지(전면·측면에 모델명 'NX-3200' 표기)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "NX-3200",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/4413/product_attachment/vert_medium_2x-86148d69acc35fb5a6de8440292e50c8.webp",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "894×178",
+          "resolution": "894×178",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/4413/product_attachment/vert_medium_2x-86148d69acc35fb5a6de8440292e50c8.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-3200"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-3200"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-3200"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/nx-3200"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "1b678d064d03db82b0192729929e9893f3865162c84b6ae4f63207b2cd29a073",
+      "imageStatuses": "77eeb4da93928b601eed969c30c96aada8e85241b8774881ad70653dc146d6e1",
+      "portMap": "68958de8e561019137efd3346247748b83a558226c1f61b515205736bd09d29d"
+    }
+  },
+  "varia-100": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "varia100-main.webp",
+          "alt": "AMX VARIA-100 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "VARIA-100",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11307/product_attachment/vert_medium_2x-5ffd7c598db880c51902abd7ce7ed8ca.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1500×1124",
+          "resolution": "1500×1124",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11307/product_attachment/vert_medium_2x-5ffd7c598db880c51902abd7ce7ed8ca.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-100"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-100"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-100"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-100"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "c98095b5dc7270e9ce797549f06dba1b4ecbb24c29958808750b771643fb37c7",
+      "imageStatuses": "db8abef3bf2dd8326c8182a9176b08424909d31186c53634abc1bf258d380bd5",
+      "portMap": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    }
+  },
+  "varia-80": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "varia80-main.webp",
+          "alt": "AMX VARIA-80 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "VARIA-80",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11343/product_attachment/vert_medium_2x-750e4f76640b57bf2614b868d022c13b.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1500×1124",
+          "resolution": "1500×1124",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11343/product_attachment/vert_medium_2x-750e4f76640b57bf2614b868d022c13b.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-80"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "5e58b700b12834ba68fbb453d3531b56dd3b5dcf7783e070d6271068b1bb3294",
+      "imageStatuses": "830845252c3cacf2616288960f9122d284eef490484a02b57a3e2ac086163265",
+      "portMap": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    }
+  },
+  "varia-sl50": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "variasl50-main.webp",
+          "alt": "AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "VARIA-SL50",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1136×1600",
+          "resolution": "1136×1600",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl50"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "8e0239613038917cdab6df9ba5cad9120fdf23ede1df37e990ae3e41d4279c3b",
+      "imageStatuses": "309efc5d66bbae9381ee95b005f46091edefe044a97dc01ce9c7908c76bd3950",
+      "portMap": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    }
+  },
+  "varia-sl80": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "variasl80-main.webp",
+          "alt": "AMX VARIA-SL80 벽면 매립형 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "AMX",
+          "model": "VARIA-SL80",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11287/product_attachment/vert_medium_2x-100a351b0438a37795b807f7728193a9.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1500×1125",
+          "resolution": "1500×1125",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://adn.harmanpro.com/productattachment/11287/product_attachment/vert_medium_2x-100a351b0438a37795b807f7728193a9.webp"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl80"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl80"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl80"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.amx.com/en-US/products/varia-sl80"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "bbe3138f9b7b01f2484acd4b3e8641581c1152a68973b3b8eb09f9f27c33d422",
+      "imageStatuses": "9f7274af42fcfbe967802fd540d2f44cd8c5c7cdc93b59fa6631124adc492930",
+      "portMap": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    }
+  }
+}
