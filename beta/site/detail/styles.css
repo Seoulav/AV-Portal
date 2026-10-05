@@ -133,7 +133,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 @media (max-width:650px) {
   .detail-search-toggle { display: inline-flex; }
   .detail-search { position: absolute; top: 100%; right: 0; left: 0; margin-top: 8px; padding: 8px; background: white; box-shadow: var(--pg-shadow-card); }
-  .site-header { position: sticky; }
+  .site-header { position: relative; top: 0; }
   .site-header .header-actions > a { font-size: 11px; }
   .product-hero .pg-title h1 { font-size: 27px; }
   .detail-photo { min-height: 190px; }
