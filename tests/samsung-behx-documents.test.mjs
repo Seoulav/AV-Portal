@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
+import { beforeW005Product } from './w005-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -36,6 +37,9 @@ test('BEHX-H supplied PDFs are locally viewable and downloadable without invente
 });
 
 test('BEHX-H document registration leaves technical data and locked PDFs intact', () => {
+  // W-005 only added guide evidence to the existing RF row. Keep this W-033
+  // historical hash on the actual current I/O, reversing those two fields only.
+  const ioBeforeW005 = beforeW005Product(product, 'lh43behhlbfxkr').io;
   const hashes = {
     io: '67a333db4fd4c8ef27a6cf06a05d3360cd1c1aaf41a81d27a51463057270123a',
     specifications: 'efa7a77b62deb2a674a066da4a6a2b386542c14cd01a478d7f3e6ab299bdcfd2',
@@ -43,7 +47,7 @@ test('BEHX-H document registration leaves technical data and locked PDFs intact'
     keyFacts: '573adab65462cec3d5619355922e836a1890e2fbda83869983d7abb581e70447',
     portMap: '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
   };
-  for (const [key, hash] of Object.entries(hashes)) assert.equal(sha(JSON.stringify(product[key] ?? null)), hash, key);
+  for (const [key, hash] of Object.entries(hashes)) assert.equal(sha(JSON.stringify(key === 'io' ? ioBeforeW005 : product[key] ?? null)), hash, key);
   assert.equal(product.io.length, 6);
   assert.equal(product.specifications.length, 21);
   assert.equal(product.portMap, undefined);
