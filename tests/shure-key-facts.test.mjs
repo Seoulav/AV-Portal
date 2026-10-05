@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -54,7 +55,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
 });
 
 test('ULXD4D pilot and the other 212 products retain original JSON bytes',()=>{
-  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name)).sort();
+  const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name)).sort();
   const targetsSet=new Set(targets.map(([slug])=>slug));
   const otherNames=names.filter(name=>!targetsSet.has(name.slice(0,-5)));
   assert.equal(otherNames.length,213);

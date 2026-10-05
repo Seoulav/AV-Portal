@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -72,7 +73,7 @@ test('three U800F hotel TVs have the manual HDMI, physical ports and unchanged p
 test('all other detail JSON files retain their pre-change Git LF bytes', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = file.slice(0, -5);
     const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8'), slug), slug),slug),slug),slug)),slug), slug), slug),slug),slug),slug),slug),slug);
     const bytes = slug === 'lh115qhfebgxkr' || ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug)

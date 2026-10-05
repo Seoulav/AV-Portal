@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -160,7 +161,7 @@ test('W-005 published PDFs match supplied bytes and earlier upload history and p
   assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  const names = readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name)).sort();
+  const names = readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name)).sort();
   assert.equal(names.length, 242);
   for (const name of names) {
     const slug = name.slice(0, -5);

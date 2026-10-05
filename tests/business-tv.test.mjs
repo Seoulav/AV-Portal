@@ -1,3 +1,4 @@
+import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { isW006Name, withoutW006Catalog } from './w006-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -18,7 +19,7 @@ const slug = 'lh43behhlbfxkr';
 test('BEHX-H products occupy the business-TV sort slot', () => {
   const catalog = read('beta/site/catalog.json');
   const card = catalog.find(item => item.slug === slug);
-  assert.equal(catalog.length, 265);
+  assert.equal(catalog.length, 267);
   assert.deepEqual(catalog.filter(item => /^lh(?:43|50|55|65|75|85)behhlbfxkr$/.test(item.slug)).map(item => item.slug), [slug, 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']);
   assert.equal(card.product, 'LH43BEHHLBFXKR');
   assert.deepEqual(card.categories, ['사이니지', 'Display', 'Business TV']);
@@ -60,11 +61,11 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
 test('the existing 242 detail files and 249 catalog objects remain byte/value-identical', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file)).sort();
   assert.equal(files.length, 242);
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
   const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(detailDigests)), '8dc33b1204a5fad8487a4e87d511eeca9862ca3ad6aa33fdffa211be69a49789');
-  const originalCatalog = withoutW006Catalog(read('beta/site/catalog.json')).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
+  const originalCatalog = withoutW006Catalog(withoutW007Catalog(read('beta/site/catalog.json'))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(originalCatalog)), '3b8f31e02ec31ff94cd6b8192447a14549c2ed03188ea7d392ae51f9f262f6da');
 });

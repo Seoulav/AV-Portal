@@ -90,6 +90,16 @@ test('five QMC/QHC diagrams have identical pixels and markers match each visible
   }
 });
 
+test('new QM50C and QM75C diagrams match the published connector pixels', () => {
+  const slugs = ['lh50qmcebgcxkr', 'lh75qmcebgcxkr'];
+  const scans = pixelBands(slugs.map(slug => `${slug}-diagram.webp`));
+  const approved = sha(imageBytes('lh43qmcebgcxkr-diagram.webp'));
+  for (const [index, slug] of slugs.entries()) {
+    assert.equal(sha(imageBytes(`${slug}-diagram.webp`)), approved, slug);
+    matchesBands(slug, scans[index]);
+  }
+});
+
 test('QM32C diagram markers match ten physical connectors including RJ45 and IR', () => {
   matchesBands(b, pixelBands([`${b}-diagram.webp`])[0]);
 });

@@ -24,8 +24,8 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 
 test('six U800F and six BEHX-H products retain model-specific official values', async () => {
   const catalog = await read('beta/site/catalog.json');
-  assert.equal(catalog.length, 265);
-  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 33);
+  assert.equal(catalog.length, 267);
+  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   for (const [slug, [max, typical, size, weight]] of Object.entries(hotel)) {
     const data = await read(`beta/site/detail/data/${slug}.json`);
     const card = catalog.find(item => item.slug === slug);

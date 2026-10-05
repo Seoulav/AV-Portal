@@ -76,7 +76,7 @@ test('renamed catalog categories preserve home top-category counts and filter me
     ['audio', 116],
     ['video', 62],
     ['camera-conference', 30],
-    ['display-projection', 56], // W-006 adds eight television products.
+    ['display-projection', 58], // W-007 adds two QMC sizes.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);

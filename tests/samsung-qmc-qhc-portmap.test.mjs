@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -73,11 +74,23 @@ test('five QMC/QHC products use identical diagram pixels and coordinates; QM32C 
   assert.ok(portMapGeometry(q32.portMap, 290, 1480).height <= 900);
 });
 
+test('QM50C and QM75C use the same approved eleven-port diagram without changing established maps', () => {
+  const reference = product('lh43qmcebgcxkr').portMap;
+  for (const slug of ['lh50qmcebgcxkr', 'lh75qmcebgcxkr']) {
+    const current = product(slug);
+    assert.deepEqual(current.portMap.items, reference.items);
+    assert.equal(current.portMap.items.length, 11);
+    assert.equal(current.portMap.measuredImage.file, imageFile(slug));
+    assert.ok(publicPrepare(current).portMap && prototypePrepare(current).portMap);
+    assert.equal(sha(readFileSync(new URL(imageFile(slug), imagesDir))), sha(readFileSync(new URL(imageFile('lh43qmcebgcxkr'), imagesDir))));
+  }
+});
+
 test('other 235 product JSON and all 51 unchanged maps keep their baseline content', () => {
   const otherHash = createHash('sha256');
   const mapHash = createHash('sha256');
   let maps = 0;
-  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name)).sort()) {
+  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name)).sort()) {
     const source = beforeW024Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0,-5)), file.slice(0,-5)),file.slice(0,-5)),file.slice(0,-5));
     const current = JSON.parse(source);
     if (!selected.has(file.slice(0, -5))) otherHash.update(file).update('\0').update(source);

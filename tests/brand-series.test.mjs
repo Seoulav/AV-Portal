@@ -15,6 +15,7 @@ test('Samsung series choices cover the catalog once and preserve brand order', (
   assert.equal(seriesIdFor(catalog.find(item => item.slug === 'lh115qhfebgxkr')), 'qhc');
   assert.equal(seriesIdFor(catalog.find(item => item.slug === 'lh43qhcebgcxkr')), 'qhc');
   assert.equal(seriesIdFor(catalog.find(item => item.slug === 'lh55qmcebgcxkr')), 'qmc');
+  assert.deepEqual(samsung.filter(item => seriesIdFor(item) === 'qmc').map(item => item.brandSort.size).sort((a, b) => a - b), [32, 43, 50, 55, 65, 75, 85, 98]);
   const brandSorted = filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' });
   for (const group of groups) {
     const expected = brandSorted.filter(group.match).map(item => item.slug);

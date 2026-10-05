@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 265,
-    "sha256": "FF89F97B0D80541F33657883593C0CEB3AF5E4AD93DF8B102A663121CAE5EA93",
+    "count": 267,
+    "sha256": "4D2088195D448A7D279D01183ED79C768FE45236D2D28386CD10A45754C1A01C",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -823,6 +823,12 @@
       "specifications": 22,
       "io": 6
     },
+    "lh50qmcebgcxkr": {
+      "sha256": "53F5DBA09DBE6D6358D0E68844FD7B41FA3063BA870F51028F0FC2DCD154DF70",
+      "features": 3,
+      "specifications": 28,
+      "io": 9
+    },
     "lh55behhlbfxkr": {
       "sha256": "94A6FCC1DCA58852FBFA3458AD937E051119C6FC51B91FC120CDDE4CC8D923FA",
       "features": 4,
@@ -887,6 +893,12 @@
       "sha256": "193312A7661B167D78CED0190608DBC06C39D93BBADA81BFFD045D19B567EA14",
       "features": 6,
       "specifications": 36,
+      "io": 9
+    },
+    "lh75qmcebgcxkr": {
+      "sha256": "78D6060C95F5C32915F3290EAE1EFA36A6C77EAB065088F3BD84E995DC8954AC",
+      "features": 3,
+      "specifications": 28,
       "io": 9
     },
     "lh75wmfwlgcxkr": {

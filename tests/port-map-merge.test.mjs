@@ -42,7 +42,7 @@ test('remaining io-only products retain every present connector in the 02 fallba
     }
   }
   // W-006 adds eight TVs with I/O and no map; one has no verified photograph.
-  assert.deepEqual(counts, { mapIo: 69, ioOnly: 169, neither: 20 });
+  assert.deepEqual(counts, { mapIo: 71, ioOnly: 169, neither: 20 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

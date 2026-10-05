@@ -44,7 +44,7 @@ test('all published fallback display values stay within 20 characters without ch
     assert.ok(product.keySpecifications.every(item=>[item.value,item.unit].filter(Boolean).join(' ').length<=20),file);
   }
   // W-20261004-003 authors 29 Shure cards that previously used the fallback.
-  assert.equal(authored,121); // W-006 adds eight authored television cards.
+  assert.equal(authored,123); // W-007 adds two authored QMC cards.
   assert.equal(fallback,137);
 });
 
