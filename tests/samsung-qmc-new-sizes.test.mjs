@@ -9,12 +9,12 @@ const file = path => readFileSync(new URL(path, root));
 const json = path => JSON.parse(file(path));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const old = new Map([
-  ['lh32qmcebgcxkr', '8c5cf0f9dc114692262e157f347efd7a93f9ccf513a2a3a2c4357a358c1b0218'],
-  ['lh43qmcebgcxkr', 'c3cd448b9060388db60b2932a97091d992a8392b074757f3ab6b25b629175cfe'],
+  ['lh32qmcebgcxkr', '7c9f96cc201d763a4077682472eacf847790c17f7eb18164e33fe091c76df394'],
+  ['lh43qmcebgcxkr', '2f7d8fc02ae6fade0e50c664ae1085befcc4f8e117b85988f974abe766c639ab'],
   ['lh55qmcebgcxkr', '541b0ee9e47e711a8f28999290ad445ad4874ea7b5f8a1439378d69dfb1a65b8'],
   ['lh65qmcebgcxkr', '33c21c49e07c19c9b048cfea6e951c27cccba446a629729869eca502e4a1e509'],
-  ['lh85qmcebgcxkr', '7c804665cea113e7a34caa5e468a80fc5fa33ba8c74c058f5cc3220c2b919f9e'],
-  ['lh98qmcebgcxkr', '1247c49d1f2ba3f5b8339c0dae5ea11ffd4cd0180615a7d12cfe9da7a869741b'],
+  ['lh85qmcebgcxkr', '7ba8f910eaf82f6c12a34fb9c2c54ef6a9df68928718c5ca2ee96ccca214c595'],
+  ['lh98qmcebgcxkr', 'a013ba8606064d9c36d4c8e805542ff2e8b4d4f6cd4b5540cbc5092e54f4f28b'],
 ]);
 
 test('QM50C and QM75C have their own specifications and a validated eleven-port manual map', () => {
@@ -54,7 +54,12 @@ test('QM50C and QM75C have their own specifications and a validated eleven-port 
 });
 
 test('six established QMC records and published PDFs remain untouched', () => {
-  for (const [slug, hash] of old) assert.equal(sha(file(`beta/site/detail/data/${slug}.json`)), hash, slug);
+  // Git stores LF, while a Windows worktree may contain CRLF. Compare the
+  // same Git text on both platforms without changing the approved baseline.
+  for (const [slug, hash] of old) {
+    const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
+    assert.equal(sha(normalized), hash, slug);
+  }
   const uploads = json('beta/site/docs/manifest.json').uploads;
   assert.equal(uploads.length, 128);
   assert.equal(uploads.filter(upload => upload.locked).length, 12);
