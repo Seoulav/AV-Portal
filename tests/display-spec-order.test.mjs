@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -44,7 +45,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   for(const [slug,expected] of Object.entries(evidence.untouched)){
     assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW024Raw(normalized(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`${slug}.json`,folder),'utf8'), slug), slug)),slug),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
-  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file)).length,242);
+  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file)).length,242);
 });
 
 test('all 54 published Samsung key facts keep a sourced FOUND or VERIFIED row',()=>{

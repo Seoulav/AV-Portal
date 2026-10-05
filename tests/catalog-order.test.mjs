@@ -13,7 +13,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
   const expected = [
     ['QHF', ['lh115qhfebgxkr']],
     ['QHC', ['lh43qhcebgcxkr', 'lh55qhcebgcxkr', 'lh65qhcebgcxkr', 'lh75qhcebgcxkr']],
-    ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
+    ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh50qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh75qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
     ['Video Wall', ['lh55vhcrbgbxkr', 'lh55vmcrbgbxkr']],
     ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg55u800fnfxkr', 'hg65u800fnfxkr', 'hg75u800fnfxkr', 'hg85u800fnfxkr']],
     ['Business TV', ['lh43behhlbfxkr', 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']],
@@ -21,7 +21,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
     ['LED Signage', ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']]
   ];
   const samsung = catalog.filter(item => item.brand === 'Samsung');
-  assert.equal(samsung.length, 33);
+  assert.equal(samsung.length, 35);
   assert.deepEqual(slugs(filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' })), expected.flatMap(([, group]) => group));
   for (const [index, [group, names]] of expected.entries()) {
     for (const slug of names) {

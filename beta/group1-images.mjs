@@ -582,6 +582,14 @@ export const group1Images = {
     image('Main', 'lh32qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 80.1cm 정면', 'Samsung', 'LH32QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
     image('Diagram', 'lh32qmcebgcxkr-diagram.webp', 'LH32QMCEBGCXKR 삼성전자 한글 사용설명서 24쪽 후면 단자 도면', 'Samsung', 'LH32QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH32QMCEBGCXKR/', '290x1480', '290x1480', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 24쪽')
   ],
+  lh50qmcebgcxkr: [
+    image('Main', 'lh50qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 50인치 정면', 'Samsung', 'LH50QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/7c915de2-1e70-4544-96d1-77a501515ab2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 공식 제품 페이지의 제품군 공통 이미지'),
+    image('Diagram', 'lh50qmcebgcxkr-diagram.webp', 'LH50QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH50QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH50QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
+  lh75qmcebgcxkr: [
+    image('Main', 'lh75qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 75인치 정면', 'Samsung', 'LH75QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/8c1e0dcb-9e10-42b9-bdf1-0caf65436aab.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 공식 제품 페이지의 제품군 공통 이미지'),
+    image('Diagram', 'lh75qmcebgcxkr-diagram.webp', 'LH75QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH75QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH75QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
+  ],
   lh55qmcebgcxkr: [
     image('Main', 'lh55qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 55인치 정면', 'Samsung', 'LH55QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/08/29/cc897d99-d2e6-48e0-90eb-d4fb8c532e6e.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND'),
     image('Diagram', 'lh55qmcebgcxkr-diagram.webp', 'LH55QMCEBGCXKR 삼성전자 한글 사용설명서 20쪽 후면 단자 도면', 'Samsung', 'LH55QMCEBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/qmc-series/LH55QMCEBGCXKR/', '290x1420', '290x1420', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-24537G-14 20쪽')
@@ -1124,6 +1132,8 @@ export const cardImages = {
   hg65u800fnfxkr: 'hg65u800fnfxkr-main.webp',
   lh43behhlbfxkr: 'lh43behhlbfxkr-main.webp',
   lh32qmcebgcxkr: 'lh32qmcebgcxkr-main.webp',
+  lh50qmcebgcxkr: 'lh50qmcebgcxkr-main.webp',
+  lh75qmcebgcxkr: 'lh75qmcebgcxkr-main.webp',
   lh55qmcebgcxkr: 'lh55qmcebgcxkr-main.webp',
   lh65qmcebgcxkr: 'lh65qmcebgcxkr-main.webp',
   lh43qmcebgcxkr: 'lh43qmcebgcxkr-main.webp',

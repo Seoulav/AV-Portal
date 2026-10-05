@@ -1,3 +1,4 @@
+import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { isW006Name, beforeW006Raw, withoutW006Catalog } from './w006-history.mjs';
 import {beforeW005Raw} from './w005-history.mjs';
@@ -44,19 +45,19 @@ test('the four exact Korean models have their own specifications and the correct
 
 test('Samsung brand order expands within the existing QHC and QMC groups', () => {
   const catalog = read('beta/site/catalog.json');
-  assert.equal(catalog.length, 265);
+  assert.equal(catalog.length, 267);
   const samsung = filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' });
-  assert.equal(samsung.length, 33);
+  assert.equal(samsung.length, 35);
   assert.deepEqual(samsung.filter(item => item.brandSort.group === 'QHC').map(item => item.slug),
     ['lh43qhcebgcxkr', 'lh55qhcebgcxkr', 'lh65qhcebgcxkr', 'lh75qhcebgcxkr']);
   assert.deepEqual(samsung.filter(item => item.brandSort.group === 'QMC').map(item => item.slug),
-    ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']);
+    ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh50qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh75qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']);
 });
 
 test('all 243 pre-existing product JSON files and catalog entries remain unchanged', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5)) && !isW006Name(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file)).sort();
   assert.equal(files.length, 243);
   const digests = files.map(file => {
     const slug = file.slice(0, -5);
@@ -64,6 +65,6 @@ test('all 243 pre-existing product JSON files and catalog entries remain unchang
     return [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(raw, slug), slug), slug), slug))];
   });
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
-  const previous = withoutW006Catalog(read('beta/site/catalog.json')).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
+  const previous = withoutW006Catalog(withoutW007Catalog(read('beta/site/catalog.json'))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
 });

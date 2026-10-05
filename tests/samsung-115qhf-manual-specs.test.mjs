@@ -1,3 +1,4 @@
+import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
@@ -84,7 +85,7 @@ test('frequency ranges, remaining review rows and fields outside specifications/
 test('every other product detail JSON retains its pre-change Git LF bytes',()=>{
   const dir=new URL('beta/site/detail/data/',root);
   const hash=createHash('sha256');
-  for(const name of readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name)&&name!==`${evidence.slug}.json`).sort()){
+  for(const name of readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name)&&name!==`${evidence.slug}.json`).sort()){
     const slug=name.slice(0,-5);
     const raw=beforeBssW04004Raw(beforeDisplayW04013Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug);
     const historical=['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug)||jblW03010Slug(slug)||bssW03011Slug(slug)||harmanW03014Slug(slug)||shureW04003Slug(slug)

@@ -49,7 +49,7 @@ test('B: only availability-absent ports leave cards; functional limits remain', 
       else if (/미지원/i.test(`${row.availability || ''} ${row.condition || ''}`)) functional++;
     }
   }
-  assert.equal(absent, 15); // Four new QHC/QMC models each document an absent audio input.
+  assert.equal(absent, 17); // W-007 adds two QMC models with absent audio inputs.
   // New U800F sizes add three more satellite-limit notes.
   assert.equal(functional, 15);
   const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');

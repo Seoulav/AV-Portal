@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 297개
-- Product Detail: 290개
+- 공개 장비: 299개
+- Product Detail: 292개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -235,6 +235,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH43QMCEBGCXKR/
   매뉴얼: https://www.samsungsvc.co.kr/download/view?code=LH43QMCEBGCXKR
   상세: https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr
+
+- 제품: Samsung LH75QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH75QMCEBGCXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75qmcebgcxkr
 
 - 제품: Samsung LH85QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage
@@ -1746,6 +1752,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qhc-series/LH65QHCEBGCXKR/
   상세: https://seoulav.github.io/AV-Portal/detail/?product=lh65qhcebgcxkr
+
+- 제품: Samsung LH50QMCEBGCXKR
+  분류: 사이니지 | Display | Digital Signage
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH50QMCEBGCXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh50qmcebgcxkr
 
 - 제품: Samsung LH55QMCEBGCXKR
   분류: 사이니지 | Display | Digital Signage

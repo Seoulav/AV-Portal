@@ -12,17 +12,17 @@ test('discontinued LH98QEC is absent from every active Library artifact', () => 
   assert.equal(existsSync(new URL(`beta/site/detail/images/${slug}-main.webp`, root)), false);
 
   const catalog = read('beta/site/catalog.json');
-  assert.equal(catalog.length, 265);
-  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 33);
+  assert.equal(catalog.length, 267);
+  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.equal(catalog.some(item => item.slug === slug), false);
   assert.equal(Object.hasOwn(group1Images, slug), false);
   assert.equal(Object.hasOwn(cardImages, slug), false);
 
   const snapshot = read('beta/public-snapshot.json');
-  assert.equal(snapshot.catalog.count, 265);
-  assert.equal(Object.keys(snapshot.details).length, 258);
+  assert.equal(snapshot.catalog.count, 267);
+  assert.equal(Object.keys(snapshot.details).length, 260);
   assert.equal(Object.hasOwn(snapshot.details, slug), false);
-  assert.equal(readdirSync(new URL('beta/site/detail/data/', root)).filter(name => name.endsWith('.json')).length, 258);
+  assert.equal(readdirSync(new URL('beta/site/detail/data/', root)).filter(name => name.endsWith('.json')).length, 260);
 
   assert.equal(read('beta/site/search-index.json').items.some(item => item.slug === slug), false);
   assert.equal(readFileSync(new URL('beta/site/catalog.html', root), 'utf8').includes('LH98QECEDGCXKR'), false);
