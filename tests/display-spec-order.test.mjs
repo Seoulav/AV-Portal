@@ -1,6 +1,7 @@
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
+import { beforeW024Raw, beforeW024 } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -24,7 +25,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   assert.equal(Object.keys(evidence.untouched).length,225);
   let total=0;
   for(const [slug,record] of Object.entries(evidence.products)){
-    const product=read(slug);
+    const product=beforeW024(read(slug),slug);
     const {specifications,...core}=product;
     assert.equal(hash(JSON.stringify(core)),record.coreSha256,`${slug} non-specification fields`);
     assert.equal(hash(JSON.stringify(product.sources)),record.sourcesSha256,`${slug} sources`);
@@ -38,7 +39,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   const brightness=read('lh115qhfebgxkr').specifications.filter(row=>row.name.startsWith('밝기'));
   assert.deepEqual(brightness.map(row=>[row.name,row.value,row.verification,row.source]),[['밝기(최대)','1000','FOUND','S5']]);
   for(const [slug,expected] of Object.entries(evidence.untouched)){
-    assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
+    assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW024Raw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
   assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file)).length,242);
 });

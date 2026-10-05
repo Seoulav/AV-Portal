@@ -1,6 +1,7 @@
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
+import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -52,7 +53,7 @@ test('the other 233 products, protected target fields and prior source/specifica
   const others = names.filter(name => !targets.includes(name.slice(0, -5)));
   assert.equal(others.length, 233);
   const otherHash = createHash('sha256');
-  for (const name of others) otherHash.update(name).update('\0').update(beforeBssAlignmentRaw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'),name.slice(0,-5)));
+  for (const name of others) otherHash.update(name).update('\0').update(beforeW024Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'),name.slice(0,-5)),name.slice(0,-5)));
   assert.equal(otherHash.digest('hex'), '3e34c755b4f483841563008e9ee336c160ef8ca5a13d37bd118d26be77295b19');
 
   const coreHash = createHash('sha256');

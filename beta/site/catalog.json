@@ -4109,15 +4109,15 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.samsung.com/sec/business/led-signage/"
+      "https://www.samsung.com/us/business/led-signage/indoor-led/mpf-the-wall-premium-indoor-led-display-sku-lh008mpfaaa-go/"
     ],
-    "link_scope": "series",
     "slug": "mp008f",
     "brandSort": {
       "group": "LED Signage",
       "order": 8,
       "size": 8
-    }
+    },
+    "card_image": "mp008f-main.webp"
   },
   {
     "brand": "Samsung",
@@ -4129,15 +4129,15 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.samsung.com/sec/business/led-signage/"
+      "https://www.samsung.com/us/business/led-signage/indoor-led/mpf-the-wall-premium-indoor-led-display-sku-lh012mpfaaa-go/"
     ],
-    "link_scope": "series",
     "slug": "mp012f",
     "brandSort": {
       "group": "LED Signage",
       "order": 8,
       "size": 12
-    }
+    },
+    "card_image": "mp012f-main.webp"
   },
   {
     "brand": "Samsung",
@@ -4149,15 +4149,15 @@
     ],
     "kind": "equipment",
     "official_links": [
-      "https://www.samsung.com/sec/business/led-signage/"
+      "https://www.samsung.com/us/business/led-signage/indoor-led/mpf-the-wall-premium-indoor-led-display-sku-lh016mpfaaa-go/"
     ],
-    "link_scope": "series",
     "slug": "mp016f",
     "brandSort": {
       "group": "LED Signage",
       "order": 8,
       "size": 16
-    }
+    },
+    "card_image": "mp016f-main.webp"
   },
   {
     "brand": "Samsung",

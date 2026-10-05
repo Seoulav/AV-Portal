@@ -41,10 +41,10 @@ const unverifiedImage = (role, file, alt, provider, model, sourceUrl, originalSi
 });
 
 export const group1Images = {
-  // MPF cabinets have verified guide data but no publishable product photo yet.
-  mp008f: [],
-  mp012f: [],
-  mp016f: [],
+  // The US SKU galleries explicitly name these MPF models. MP012F and MP016F publish identical front-image bytes.
+  mp008f: [image('Main', 'mp008f-main.webp', '삼성 MP008F The Wall MPF LED 캐비닛 정면', 'Samsung', 'MP008F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh008mpfaaa-go/gallery/us-led-signage-lh008mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079002?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MP008F SKU 갤러리 정면 이미지. 국내 사양 근거로 사용하지 않음')],
+  mp012f: [image('Main', 'mp012f-main.webp', '삼성 The Wall MPF LED 캐비닛 정면. MP012F와 MP016F 갤러리에 공통으로 게시된 이미지', 'Samsung', 'MP012F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh012mpfaaa-go/gallery/us-mpf-571024-lh012mpfaaa-go-550063999?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MPF 제품군 공통 정면 이미지. MP016F 갤러리 원본과 동일하며 모델 전용 실물 사진으로 확정하지 않음')],
+  mp016f: [image('Main', 'mp016f-main.webp', '삼성 The Wall MPF LED 캐비닛 정면. MP012F와 MP016F 갤러리에 공통으로 게시된 이미지', 'Samsung', 'MP016F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh016mpfaaa-go/gallery/us-led-signage-lh016mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079043?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MPF 제품군 공통 정면 이미지. MP012F 갤러리 원본과 동일하며 모델 전용 실물 사진으로 확정하지 않음')],
   // W-030 cabinets: exact-model official images are not confirmed.
   'ie015a-e': [],
   'ie020a-e': [],
@@ -951,6 +951,9 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  mp008f: 'mp008f-main.webp',
+  mp012f: 'mp012f-main.webp',
+  mp016f: 'mp016f-main.webp',
   gs728tppv3: 'gs728tppv3-main.webp',
   'blu-50v2': 'blu-50v2-main.webp',
   'srg-x40uh': 'srg-x40uh-main.webp',

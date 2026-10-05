@@ -1,6 +1,7 @@
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
+import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -67,7 +68,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)
-    productHash.update(name).update(Buffer.from([0])).update(beforeSamsungW04017Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)));
+    productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
   const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, uploads: withoutW029Uploads(manifest.uploads) }, null, 2) + '\n';

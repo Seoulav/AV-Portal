@@ -7,9 +7,10 @@ import { beforeSamsungForeignPurge } from './samsung-w014-history.mjs';
 import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
+import { beforeW024 } from './mpf-images-history.mjs';
 
 const root = new URL('../', import.meta.url);
-const read = path => beforeSamsungW04010Path(path, JSON.parse(readFileSync(new URL(path, root), 'utf8')));
+const read = path => beforeSamsungW04010Path(path, beforeW024(JSON.parse(readFileSync(new URL(path, root), 'utf8')), /(?:^|\/)([^/]+)\.json$/.exec(path)?.[1]));
 const sourceCodes = value => String(value ?? '').split(',').map(code => code.trim()).filter(Boolean);
 const isForeignSamsung = source => {
   if (!source.url) return false;
@@ -22,7 +23,12 @@ test('active Samsung JSON contains no overseas regional page URL or source entry
     const raw = readFileSync(new URL(`beta/site/detail/data/${item.slug}.json`, root), 'utf8');
     assert.equal(/samsung\.com\/(?:uk|ca|latin_en|nz|hk_en)\//i.test(raw), false, `${item.slug}: 해외 지역 URL 잔존`);
     const detail = JSON.parse(raw);
-    assert.deepEqual(detail.sources.filter(isForeignSamsung), [], `${item.slug}: 해외 지역 source 잔존`);
+    // W-024 permits US MPF photo provenance only; specifications and I/O still cannot cite it.
+    const foreignDataSources = detail.sources.filter(source => isForeignSamsung(source) &&
+      !(source.code === 'G1' && ['mp008f', 'mp012f', 'mp016f'].includes(item.slug) && source.scope.startsWith('사진 출처 전용')));
+    assert.deepEqual(foreignDataSources, [], `${item.slug}: 해외 지역 사양·단자 source 잔존`);
+    if (['mp008f', 'mp012f', 'mp016f'].includes(item.slug))
+      assert.ok([...detail.specifications, ...detail.io].every(row => !String(row.source ?? '').split(/,\s*/).includes('G1')), `${item.slug}: 미국 사진 출처를 사양 근거로 사용`);
   }
 });
 

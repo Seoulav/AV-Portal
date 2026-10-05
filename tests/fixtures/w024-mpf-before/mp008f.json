@@ -1,7 +1,7 @@
 {
   "manufacturer": "Samsung",
-  "productName": "MP016F",
-  "model": "MP016F",
+  "productName": "MP008F",
+  "model": "MP008F",
   "series": "The Wall MPF",
   "itemType": "PRODUCT",
   "categories": [
@@ -9,32 +9,17 @@
     "Display",
     "LED Signage"
   ],
-  "english": "MP016F is a The Wall MPF LED cabinet module. Color-temperature adjustment and 8K playback depend on the connected S-Box model.",
-  "korean": "MP016F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 색온도 설정과 8K 콘텐츠 재생은 연결된 S-Box를 전제로 하며, S-Box 모델에 따라 일부 기능은 지원되지 않을 수 있다.",
-  "verificationSummary": "삼성전자 발행 MPF 시리즈 제품가이드 슬라이드 17에서 MP016F의 사양 20항목을 확인했다. 제품 사진은 삼성전자 미국의 해당 SKU 갤러리에서 FOUND로 확인했고 연결 단자 정보는 가이드에 없어 기록하지 않았다.",
+  "english": "MP008F is a The Wall MPF LED cabinet module. Color-temperature adjustment and 8K playback depend on the connected S-Box model.",
+  "korean": "MP008F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 색온도 설정과 8K 콘텐츠 재생은 연결된 S-Box를 전제로 하며, S-Box 모델에 따라 일부 기능은 지원되지 않을 수 있다.",
+  "verificationSummary": "삼성전자 발행 MPF 시리즈 제품가이드 슬라이드 17에서 MP008F의 사양 20항목을 확인했다. 제품 이미지는 미확보이고 연결 단자 정보는 가이드에 없어 기록하지 않았다.",
   "packageStatus": "PARTIAL",
-  "overview": "MP016F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 제품가이드 슬라이드 17의 모델별 사양은 픽셀 피치 1.68 mm, 밝기 피크1,600 nit / 최대1,200 nit, 명암비 43,000 : 1, 최대 전력 소비량 440 (W/m²) / 161 (W/Cabinet)다.\n\n색온도 설정은 S-Box 사용 조건이며, 가이드는 하나의 S-Box로 8K 콘텐츠를 재생할 수 있다고 안내한다. 연결된 S-Box 모델에 따라 해당 기능이 지원되지 않을 수 있다. 연결 단자 구성은 제공된 자료에서 확인되지 않았다.",
-  "images": [
-    {
-      "role": "Main",
-      "file": "mp016f-main.webp",
-      "alt": "삼성 The Wall MPF LED 캐비닛 정면. MP012F와 MP016F 갤러리에 공통으로 게시된 이미지",
-      "note": "Main · 삼성전자 미국 MPF 제품군 공통 정면 이미지. MP012F 갤러리 원본과 동일하며 모델 전용 실물 사진으로 확정하지 않음",
-      "provider": "Samsung",
-      "model": "MP016F",
-      "sourceUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/lh016mpfaaa-go/gallery/us-led-signage-lh016mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079043?$ORIGIN_PNG$",
-      "officialSource": true,
-      "verificationStatus": "FOUND",
-      "originalSize": "1920x1280",
-      "resolution": "1920x1280",
-      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
-    }
-  ],
+  "overview": "MP008F는 삼성 The Wall MPF 시리즈의 LED 캐비닛(모듈)이다. 제품가이드 슬라이드 17의 모델별 사양은 픽셀 피치 0.84 mm, 밝기 피크1,800 nit / 최대1,000 nit, 명암비 29,000 : 1, 최대 전력 소비량 334 (W/m²) / 122 (W/Cabinet)다.\n\n색온도 설정은 S-Box 사용 조건이며, 가이드는 하나의 S-Box로 8K 콘텐츠를 재생할 수 있다고 안내한다. 연결된 S-Box 모델에 따라 해당 기능이 지원되지 않을 수 있다. 제품 이미지와 단자 구성은 제공된 자료에서 확인되지 않았다.",
+  "images": [],
   "imageStatuses": [
     {
       "role": "Main",
-      "status": "FOUND",
-      "sourceUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/lh016mpfaaa-go/gallery/us-led-signage-lh016mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079043?$ORIGIN_PNG$"
+      "status": "MISSING",
+      "reason": "대상 모델 제품 이미지 미확보"
     },
     {
       "role": "Front",
@@ -109,7 +94,7 @@
     {
       "group": "Physical",
       "name": "픽셀 피치",
-      "value": "1.68 mm",
+      "value": "0.84 mm",
       "unit": "",
       "condition": "",
       "source": "S1",
@@ -145,7 +130,7 @@
     {
       "group": "Display",
       "name": "밝기",
-      "value": "피크1,600 nit / 최대1,200 nit",
+      "value": "피크1,800 nit / 최대1,000 nit",
       "unit": "",
       "condition": "",
       "source": "S1",
@@ -154,7 +139,7 @@
     {
       "group": "Display",
       "name": "명암비",
-      "value": "43,000 : 1",
+      "value": "29,000 : 1",
       "unit": "",
       "condition": "",
       "source": "S1",
@@ -217,7 +202,7 @@
     {
       "group": "Power",
       "name": "전력 소비량 (최대)",
-      "value": "440 (W/m²) / 161 (W/Cabinet)",
+      "value": "334 (W/m²) / 122 (W/Cabinet)",
       "unit": "",
       "condition": "",
       "source": "S1",
@@ -283,22 +268,22 @@
     {
       "code": "S1",
       "name": "삼성전자 발행 [사이니지] 스마트 LED 사이니지 (MPF 시리즈) 제품가이드.pptx",
-      "scope": "슬라이드 2·7·10·17. 사양 20항목은 슬라이드 17에서 MP016F 열을 직접 확인. 원본 재배포 금지로 미게시. SHA-256 8E18CA5F1FE155356A9780857A6AEC12E4BBC4A96FD1E5E2C5EDD9A70956898B"
+      "scope": "슬라이드 2·7·10·17. 사양 20항목은 슬라이드 17에서 MP008F 열을 직접 확인. 원본 재배포 금지로 미게시. SHA-256 8E18CA5F1FE155356A9780857A6AEC12E4BBC4A96FD1E5E2C5EDD9A70956898B"
     },
     {
       "code": "P",
       "name": "삼성전자 대한민국 비즈니스 스마트 LED 사이니지",
       "url": "https://www.samsung.com/sec/business/led-signage/",
       "scope": "시리즈 목록 페이지 · 개별 모델 페이지 미확인. 사양 행의 근거로 사용하지 않음"
-    },
-    {
-      "code": "G1",
-      "name": "삼성전자 미국 비즈니스 MPF The Wall Premium · MP016F / LH016MPFAAA/GO",
-      "url": "https://www.samsung.com/us/business/led-signage/indoor-led/mpf-the-wall-premium-indoor-led-display-sku-lh016mpfaaa-go/",
-      "scope": "사진 출처 전용 · 모델명과 판매 코드 직접 병기 · 픽셀 피치 1.68 mm 선택 모델 확인 · 정면 갤러리 원본 SHA-256 b9eecf09277c62113c0bfe4a270cc396f6c63e1ca9ac83f6c8127c5cd307dc30 · 국내 원본에 캐비닛 크기·해상도가 없어 미대조. MP012F·MP016F는 원본 이미지 바이트가 같은 제품군 공통 사진. 미국 사양은 국내 사양 행의 근거로 사용하지 않음"
     }
   ],
   "issues": [
+    {
+      "code": "IMAGE-MISSING",
+      "status": "MISSING",
+      "title": "제품 이미지 미확보",
+      "detail": "대상 모델의 게시 가능한 제품 사진이 없어 images를 비워 둔다."
+    },
     {
       "code": "IO-MISSING",
       "status": "MISSING",
@@ -308,13 +293,12 @@
   ],
   "presentation": {
     "sourceProductLabel": "삼성 LED 사이니지 시리즈 목록 ↗",
-    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
-    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다. 삼성전자 미국 MPF 제품군 공통 정면 이미지입니다. MP012F와 MP016F 갤러리에 동일한 사진이 게시돼 있습니다.",
+    "galleryRightsBadge": "MISSING",
+    "galleryRights": "대상 모델의 게시 제품 이미지는 아직 확보되지 않았다.",
     "specIntro": "삼성전자 발행 제품가이드 17쪽의 모델별 사양을 표기합니다.",
     "ioIntro": "제공된 제품가이드에 연결 단자 정보가 없습니다.",
     "supplementalNote": "제품가이드의 모델별 열과 공통 항목을 구분했습니다.",
-    "footerNote": "Samsung The Wall MPF MP016F 제품가이드 기준",
-    "visualVariant": "official-product-images",
-    "galleryFootNote": "삼성전자 미국 공식 제품 갤러리 · 사진만 출처 적용"
+    "footerNote": "Samsung The Wall MPF MP008F 제품가이드 기준",
+    "visualVariant": "missing-product-images"
   }
 }
