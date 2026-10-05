@@ -1,3 +1,4 @@
+import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
@@ -50,7 +51,7 @@ test('all 242 published product JSON files and their source records remain fixed
   const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name)).sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
-  for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
+  for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(digest.digest('hex'), '74cc23674b4a88c852145b0db991c99e0a9383af3affbae2414175ca78ec87fc');
   for (const slug of [...removed['winstar-qhc-standalone-spec-ko.pdf'], ...removed['winstar-qmc-standalone-spec-ko.pdf']]) {
     const product = read(`beta/site/detail/data/${slug}.json`);

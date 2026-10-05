@@ -151,7 +151,7 @@ export const group1Images = {
     image('Rear', 'mxcw640-rear.webp', 'MXCW640 하단면 (충전 접점 단자, 벽/설치용 키홀, 배터리 커버)', 'Shure', 'MXCW640', 'https://products.shureweb.eu/shure_product_db/product_images/files/5af/135/58-/original/b41c61ed2649f7069987054eca828065.webp', '3000x3000', '2000x1167', 'VERIFIED')
   ],
   gsm4248px: [
-    group2Image('Rear', 'gsm4248px-rear.webp', 'NETGEAR GSM4248PX 후면 포트면 원근 이미지', 'NETGEAR', 'GSM4248PX', 'https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32', '779×536', '730×236')
+    image('Rear', 'gsm4248px-rear.webp', 'NETGEAR GSM4248PX 후면 포트면. RJ45 40개와 SFP+ 8개가 보이는 제조사 공식 사진', 'NETGEAR', 'GSM4248PX', 'https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32', '779x536', '683x74', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   'aquilon-rs1': [
     group2Image('Front', 'aquilon-rs1-front.webp', 'Analog Way Aquilon RS1 전면 이미지', 'Analog Way', 'Aquilon RS1', 'https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg', '3175×1772', '1800×768')
@@ -322,7 +322,8 @@ export const group1Images = {
     image('Main', 'variasl50-main.webp', 'AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL50', 'https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp', '1136×1600', '1136×1600', 'FOUND')
   ],
   xsm4216f: [
-    image('Main', 'xsm4216f-main.webp', 'NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32', '779x536', '779x536', 'FOUND')
+    image('Main', 'xsm4216f-main.webp', 'NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32', '779x536', '779x536', 'FOUND'),
+    image('Rear', 'xsm4216f-rear.webp', 'NETGEAR XSM4216F 후면 포트면. SFP+ 16개가 보이는 제조사 공식 사진', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/ec5309f5-df7a-430c-995a-486d2e6f24de/xsm4216f_g2_779x536', '779x536', '555x62', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   gsm4212p: [
     image('Main', 'gsm4212p-main.webp', 'NETGEAR GSM4212P(M4250-10G2F-PoE+) 1U 랙마운트 스위치를 포트 패널 쪽에서 비스듬히 본 모습. OOB·콘솔·USB-C, 1G RJ45 10개와 SFP 2개, C14 전원 인렛과 전원 스위치가 보인다', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x708', 'VERIFIED'),
@@ -331,19 +332,24 @@ export const group1Images = {
     image('Perspective', 'gsm4212p-perspective.webp', 'NETGEAR GSM4212P를 전면 디스플레이 패널과 측면 팬 흡배기구가 보이도록 비스듬히 본 모습', 'NETGEAR', 'GSM4212P', 'https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip', '7680x5254', '2400x1124', 'VERIFIED')
   ],
   gsm4230p: [
-    image('Main', 'gsm4230p-main.webp', 'NETGEAR GSM4230P(M4250-26G4F-PoE+) 스위치 후면 근접 사시도, 24개의 PoE+ RJ45 포트, SFP 슬롯, 전원 커넥터가 보인다', 'NETGEAR', 'GSM4230P', 'https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32', '779x536', '779x536', 'FOUND')
+    image('Main', 'gsm4230p-main.webp', 'NETGEAR GSM4230P(M4250-26G4F-PoE+) 스위치 후면 근접 사시도, 24개의 PoE+ RJ45 포트, SFP 슬롯, 전원 커넥터가 보인다', 'NETGEAR', 'GSM4230P', 'https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32', '779x536', '779x536', 'FOUND'),
+    image('Rear', 'gsm4230p-rear.webp', 'NETGEAR GSM4230P 후면 포트면. 네트워크 포트 묶음이 보이는 제조사 공식 사진', 'NETGEAR', 'GSM4230P', 'https://assets.netgear.com/transform/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32', '779x536', '683x72', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   gsm4230px: [
-    image('Main', 'gsm4230px-main.webp', 'NETGEAR GSM4230PX(M4250-26G4XF-PoE+) 스위치 전면 및 측면 사시도, 24개의 PoE+ RJ45 포트와 SFP+ 슬롯, 냉각 통풍구가 보인다', 'NETGEAR', 'GSM4230PX', 'https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32', '779x536', '779x536', 'FOUND')
+    image('Main', 'gsm4230px-main.webp', 'NETGEAR GSM4230PX(M4250-26G4XF-PoE+) 스위치 전면 및 측면 사시도, 24개의 PoE+ RJ45 포트와 SFP+ 슬롯, 냉각 통풍구가 보인다', 'NETGEAR', 'GSM4230PX', 'https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32', '779x536', '779x536', 'FOUND'),
+    image('Rear', 'gsm4230px-rear.webp', 'NETGEAR GSM4230PX 후면 포트면. 네트워크 포트 묶음이 보이는 제조사 공식 사진', 'NETGEAR', 'GSM4230PX', 'https://assets.netgear.com/transform/e4db0ae5-e414-48f1-8f28-8815388611ba/gsm4230px_g2_779x536', '779x536', '555x62', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   gsm4248p: [
-    image('Main', 'gsm4248p-main.webp', 'NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32', '779x536', '779x536', 'FOUND')
+    image('Main', 'gsm4248p-main.webp', 'NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32', '779x536', '779x536', 'FOUND'),
+    image('Rear', 'gsm4248p-rear.webp', 'NETGEAR GSM4248P 후면 포트면. 네트워크 포트 묶음이 보이는 제조사 공식 사진', 'NETGEAR', 'GSM4248P', 'https://assets.netgear.com/transform/86b050d1-114c-4fbb-9a79-b5c871f812db/gsm4248p_g2_779x536', '779x536', '555x62', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   gs116pp: [
-    image('Main', 'gs116pp-main.webp', "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image', '779x536', '779x536', 'VERIFIED')
+    image('Main', 'gs116pp-main.webp', "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image', '779x536', '779x536', 'VERIFIED'),
+    image('Front', 'gs116pp-front.webp', 'NETGEAR GS116PP 전면 포트면. RJ-45 16개가 보이는 제조사 공식 사진', 'NETGEAR', 'GS116PP', 'https://assets.netgear.com/transform/3e08d3e5-f7e8-41cf-a116-bf1a1e2d54de/GS116pp_productcarousel_1', '779x536', '747x75', 'VERIFIED', 'Front · 제조사 공식 이미지의 포트면만 크롭')
   ],
   gs108pp: [
-    image('Main', 'gs108pp-main.webp', "NETGEAR GS108PP 비관리형 PoE+ 스위치 정면 사시도, 8개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 측면 라벨의 'GS108PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS108PP', 'https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32', '779x536', '779x536', 'VERIFIED')
+    image('Main', 'gs108pp-main.webp', "NETGEAR GS108PP 비관리형 PoE+ 스위치 정면 사시도, 8개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 측면 라벨의 'GS108PP' 모델명이 선명하게 보인다", 'NETGEAR', 'GS108PP', 'https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32', '779x536', '779x536', 'VERIFIED'),
+    image('Front', 'gs108pp-front.webp', 'NETGEAR GS108PP 전면 포트면. RJ-45 8개가 보이는 제조사 공식 사진', 'NETGEAR', 'GS108PP', 'https://assets.netgear.com/transform/c75a8a9b-e8e0-4eb3-ad38-dae5c00a2339/GS108pp_productcarousel_7', '779x536', '727x88', 'VERIFIED', 'Front · 제조사 공식 이미지의 포트면만 크롭')
   ],
   'v-1hd-plus': [
     image('Main', 'v-1hd-plus-main.webp', 'Roland V-1HD+ 비디오 스위처 컨트롤 패널', 'Roland', 'V-1HD+', 'https://static.roland.com/assets/images/products/gallery/v-1hd_plus_front30_B_main_gal.jpg', '1680x500', '1680x500', 'VERIFIED')

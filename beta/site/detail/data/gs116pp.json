@@ -27,6 +27,20 @@
       "originalSize": "779x536",
       "resolution": "779x536",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Front",
+      "file": "gs116pp-front.webp",
+      "alt": "NETGEAR GS116PP 전면 포트면. RJ-45 16개가 보이는 제조사 공식 사진",
+      "note": "Front · 제조사 공식 이미지의 포트면만 크롭",
+      "provider": "NETGEAR",
+      "model": "GS116PP",
+      "sourceUrl": "https://assets.netgear.com/transform/3e08d3e5-f7e8-41cf-a116-bf1a1e2d54de/GS116pp_productcarousel_1",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "779x536",
+      "resolution": "747x75",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -37,8 +51,8 @@
     },
     {
       "role": "Front",
-      "status": "MISSING",
-      "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/3e08d3e5-f7e8-41cf-a116-bf1a1e2d54de/GS116pp_productcarousel_1"
     },
     {
       "role": "Rear",
@@ -335,5 +349,24 @@
     "footerNote": "NETGEAR GS116PP 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Front",
+    "items": [
+      {
+        "n": 1,
+        "label": "RJ-45 1–16 · PoE+",
+        "desc": "1–16번 1GbE RJ-45 · 전 포트 PoE+ 연결.",
+        "x1": 61,
+        "x2": 728,
+        "y": 43,
+        "side": "top"
+      }
+    ],
+    "measuredImage": {
+      "file": "gs116pp-front.webp",
+      "width": 747,
+      "height": 75
+    }
   }
 }

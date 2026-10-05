@@ -748,22 +748,40 @@
     "galleryFootNote": "제조사 공식 제품 이미지"
   },
   "portMap": {
-    "image": "Rear",
-    "measuredImage": {
-      "file": "gs728tppv3-rear.webp",
-      "width": 1562,
-      "height": 277
-    },
+    "image": "Front",
     "items": [
       {
         "n": 1,
-        "label": "AC 전원 입력",
-        "desc": "IEC · 내장 전원 공급장치에 AC 전원을 연결합니다.",
-        "x1": 1353,
-        "x2": 1447,
-        "y": 198,
+        "label": "USB 저장장치",
+        "desc": "전면 USB 2.0 저장장치 연결.",
+        "x1": 161,
+        "x2": 185,
+        "y": 199,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "PoE+ RJ-45 1–24",
+        "desc": "1–24번 1GbE RJ-45 · 전면 PoE+ 포트.",
+        "x1": 800,
+        "x2": 1411,
+        "y": 199,
         "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "SFP 25–28",
+        "desc": "25–28번 전용 1G SFP 포트.",
+        "x1": 1419,
+        "x2": 1547,
+        "y": 199,
+        "side": "top"
       }
-    ]
+    ],
+    "measuredImage": {
+      "file": "gs728tppv3-front.webp",
+      "width": 1608,
+      "height": 283
+    }
   }
 }

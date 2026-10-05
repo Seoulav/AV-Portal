@@ -1,0 +1,671 @@
+{
+  "gs108pp": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gs108pp-main.webp",
+        "alt": "NETGEAR GS108PP 비관리형 PoE+ 스위치 정면 사시도, 8개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 측면 라벨의 'GS108PP' 모델명이 선명하게 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS108PP",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/70ec4bb6-147e-4cf6-bf97-f0e5e1b11572/B3_gs108pp_32"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+      }
+    ],
+    "portMap": null
+  },
+  "gs116pp": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gs116pp-main.webp",
+        "alt": "NETGEAR GS116PP 비관리형 PoE+ 스위치 정면 사시도, 16개의 RJ45 포트 아래 노란색 PoE 표시 라벨과 전면 라벨의 'GS116PP' 모델명이 선명하게 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS116PP",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f9a95193-2074-4399-879c-6032ced7051d/GS116pp_productcarousel_hero_image"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs116pp/"
+      }
+    ],
+    "portMap": null
+  },
+  "gs728tppv3": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gs728tppv3-main.webp",
+        "alt": "NETGEAR GS728TPPv3를 전면 포트 쪽 오른편에서 비스듬히 본 모습. 좌측 NETGEAR 로고와 Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번)와 SFP 4개(25~28번), 우측 상단 'GS728TPP' 인쇄와 우측면 통풍구가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS728TPPv3",
+        "sourceUrl": "https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2000x1596",
+        "resolution": "1653x354",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Front",
+        "file": "gs728tppv3-front.webp",
+        "alt": "NETGEAR GS728TPPv3 전면 패널. Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번, 'PoE+ 30 Watt/Port max.' 표기)와 SFP 4개(25~28번), 우측 상단 'GS728TPP' 인쇄가 보인다",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS728TPPv3",
+        "sourceUrl": "https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2000x1596",
+        "resolution": "1608x283",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "gs728tppv3-rear.webp",
+        "alt": "NETGEAR GS728TPPv3 후면 패널. 켄싱턴 잠금 슬롯, 'NOT FOR CUSTOMER USE' 표기 포트, AC 전원 리셉터클과 '100-240V~ 50/60Hz, 8A Max' 표기가 보인다",
+        "note": "Rear · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS728TPPv3",
+        "sourceUrl": "https://assets.netgear.com/transform/8aaa0c78-2401-4fcc-8e6d-f2841cb81f8a/GS728TPPv3-Product-Image",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2000x1596",
+        "resolution": "1562x277",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Perspective",
+        "file": "gs728tppv3-perspective.webp",
+        "alt": "NETGEAR GS728TPPv3를 전면 왼편에서 비스듬히 본 모습. 전면 포트 패널과 좌측면 팬 2개가 보인다",
+        "note": "Perspective · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GS728TPPv3",
+        "sourceUrl": "https://assets.netgear.com/transform/4d731331-4d68-4c55-b9cf-fc2057598973/GS728TPPv3-Product-Image",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2000x1596",
+        "resolution": "1622x351",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image"
+      },
+      {
+        "role": "Rear",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/8aaa0c78-2401-4fcc-8e6d-f2841cb81f8a/GS728TPPv3-Product-Image"
+      },
+      {
+        "role": "Perspective",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/4d731331-4d68-4c55-b9cf-fc2057598973/GS728TPPv3-Product-Image"
+      },
+      {
+        "role": "Other",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/smart-cloud/gs728tppv3/"
+      }
+    ],
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "gs728tppv3-rear.webp",
+        "width": 1562,
+        "height": 277
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 내장 전원 공급장치에 AC 전원을 연결합니다.",
+          "x1": 1353,
+          "x2": 1447,
+          "y": 198,
+          "side": "bottom"
+        }
+      ]
+    }
+  },
+  "gsm4212p": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gsm4212p-main.webp",
+        "alt": "NETGEAR GSM4212P(M4250-10G2F-PoE+) 1U 랙마운트 스위치를 포트 패널 쪽에서 비스듬히 본 모습. OOB·콘솔·USB-C, 1G RJ45 10개와 SFP 2개, C14 전원 인렛과 전원 스위치가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4212P",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "7680x5254",
+        "resolution": "2400x708",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Front",
+        "file": "gsm4212p-front.webp",
+        "alt": "NETGEAR GSM4212P 전면 디스플레이 패널. 'NETGEAR AV Line' 로고와 'M4250-10G2F-PoE+ | 30W' 라벨, USB-A 스토리지 포트, LED EXT USB-C 포트, M10 나사 구멍, 12개 포트 상태 LED와 Power/Fan/PoE LED가 보인다",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4212P",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "7680x5254",
+        "resolution": "2400x393",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "gsm4212p-rear.webp",
+        "alt": "NETGEAR GSM4212P 후면 포트 패널. OOB RJ45, 콘솔 RJ45, USB-C 콘솔, 1~8번 PoE+ RJ45, 9~10번 1G RJ45, 11~12번 SFP 포트와 C14 전원 인렛·전원 스위치가 보인다",
+        "note": "Rear · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4212P",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "7680x5254",
+        "resolution": "2400x393",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Perspective",
+        "file": "gsm4212p-perspective.webp",
+        "alt": "NETGEAR GSM4212P를 전면 디스플레이 패널과 측면 팬 흡배기구가 보이도록 비스듬히 본 모습",
+        "note": "Perspective · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4212P",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "7680x5254",
+        "resolution": "2400x1124",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+      },
+      {
+        "role": "Rear",
+        "status": "FOUND",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+      },
+      {
+        "role": "Perspective",
+        "status": "FOUND",
+        "sourceUrl": "https://www.downloads.netgear.com/files/netgear/images/M4250-10G2F-PoE%2B%20GSM4212P-high%20res.zip"
+      },
+      {
+        "role": "Other",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4212p/"
+      }
+    ],
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "gsm4212p-rear.webp",
+        "width": 2400,
+        "height": 393
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "PoE+ RJ45 1",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 489,
+          "x2": 544,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "PoE+ RJ45 2",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 566,
+          "x2": 621,
+          "y": 210,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "PoE+ RJ45 3",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 643,
+          "x2": 698,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "PoE+ RJ45 4",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 720,
+          "x2": 775,
+          "y": 210,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "PoE+ RJ45 5",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 797,
+          "x2": 852,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "PoE+ RJ45 6",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 874,
+          "x2": 929,
+          "y": 210,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "PoE+ RJ45 7",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 951,
+          "x2": 1006,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "PoE+ RJ45 8",
+          "desc": "1GbE RJ-45 · 네트워크 장치에 데이터와 PoE+를 연결합니다.",
+          "x1": 1028,
+          "x2": 1083,
+          "y": 210,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "RJ45 9",
+          "desc": "1GbE RJ-45 · 네트워크 장치를 연결합니다.",
+          "x1": 1165,
+          "x2": 1221,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "RJ45 10",
+          "desc": "1GbE RJ-45 · 네트워크 장치를 연결합니다.",
+          "x1": 1244,
+          "x2": 1300,
+          "y": 210,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "SFP 11",
+          "desc": "1GbE SFP · 호환 광 모듈을 연결합니다.",
+          "x1": 1342,
+          "x2": 1398,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "SFP 12",
+          "desc": "1GbE SFP · 호환 광 모듈을 연결합니다.",
+          "x1": 1422,
+          "x2": 1478,
+          "y": 230,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "OOB 관리",
+          "desc": "RJ-45 · 대역 외 관리 네트워크를 연결합니다.",
+          "x1": 209,
+          "x2": 274,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 14,
+          "label": "콘솔",
+          "desc": "RJ-45 · 직렬 콘솔로 장치를 관리합니다.",
+          "x1": 302,
+          "x2": 362,
+          "y": 220,
+          "side": "bottom"
+        },
+        {
+          "n": 15,
+          "label": "USB-C",
+          "desc": "USB-C · 장치 관리용 USB 포트입니다.",
+          "x1": 389,
+          "x2": 431,
+          "y": 246,
+          "side": "top"
+        },
+        {
+          "n": 16,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 내장 전원 공급장치에 AC 전원을 연결합니다.",
+          "x1": 2108,
+          "x2": 2273,
+          "y": 214,
+          "side": "bottom"
+        }
+      ]
+    }
+  },
+  "gsm4230p": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gsm4230p-main.webp",
+        "alt": "NETGEAR GSM4230P(M4250-26G4F-PoE+) 스위치 후면 근접 사시도, 24개의 PoE+ RJ45 포트, SFP 슬롯, 전원 커넥터가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4230P",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/7e74430a-799c-4bc1-af5d-7dfb29651616/B5_gsm4230p_32"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/business/wired/switches/fully-managed/gsm4230p/"
+      }
+    ],
+    "portMap": null
+  },
+  "gsm4230px": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gsm4230px-main.webp",
+        "alt": "NETGEAR GSM4230PX(M4250-26G4XF-PoE+) 스위치 전면 및 측면 사시도, 24개의 PoE+ RJ45 포트와 SFP+ 슬롯, 냉각 통풍구가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4230PX",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/f74ddb22-5019-4edf-8c04-607c72366d0c/B6_gsm4230px_32"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      }
+    ],
+    "portMap": null
+  },
+  "gsm4248p": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "gsm4248p-main.webp",
+        "alt": "NETGEAR GSM4248P(M4250-40G8F-PoE+) 스위치 정면 사진, 다수의 PoE+ RJ45 포트와 콘솔/USB 포트가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4248P",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/a23ad1f4-bb12-434c-8bb8-7e8dee6bb848/B6_gsm4248p_32"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      }
+    ],
+    "portMap": null
+  },
+  "gsm4248px": {
+    "images": [
+      {
+        "role": "Rear",
+        "file": "gsm4248px-rear.webp",
+        "alt": "NETGEAR GSM4248PX 후면 포트면 원근 이미지",
+        "note": "Rear · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "GSM4248PX",
+        "sourceUrl": "https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "779×536",
+        "resolution": "730×236",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+      },
+      {
+        "role": "Rear",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/uk/business/wired/switches/fully-managed/gsm4248px/"
+      }
+    ],
+    "portMap": null
+  },
+  "xsm4216f": {
+    "images": [
+      {
+        "role": "Main",
+        "file": "xsm4216f-main.webp",
+        "alt": "NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "NETGEAR",
+        "model": "XSM4216F",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "779x536",
+        "resolution": "779x536",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.netgear.com/at/business/wired/switches/fully-managed/xsm4216f/"
+      }
+    ],
+    "portMap": null
+  }
+}

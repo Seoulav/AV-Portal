@@ -27,6 +27,20 @@
       "originalSize": "779x536",
       "resolution": "779x536",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "gsm4230px-rear.webp",
+      "alt": "NETGEAR GSM4230PX 후면 포트면. 네트워크 포트 묶음이 보이는 제조사 공식 사진",
+      "note": "Rear · 제조사 공식 이미지의 포트면만 크롭",
+      "provider": "NETGEAR",
+      "model": "GSM4230PX",
+      "sourceUrl": "https://assets.netgear.com/transform/e4db0ae5-e414-48f1-8f28-8815388611ba/gsm4230px_g2_779x536",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "779x536",
+      "resolution": "555x62",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4230px/"
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/e4db0ae5-e414-48f1-8f28-8815388611ba/gsm4230px_g2_779x536"
     },
     {
       "role": "Perspective",
@@ -335,5 +349,60 @@
     "footerNote": "NETGEAR GSM4230PX 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "RJ-45 콘솔",
+        "desc": "RJ45-DB9 콘솔 케이블용 포트. 같은 I/O 행의 USB-C 콘솔과 별도 단자입니다.",
+        "x1": 58,
+        "x2": 84,
+        "y": 39,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "USB-C 콘솔",
+        "desc": "USB Type-C 콘솔 케이블용 포트. 같은 I/O 행의 RJ-45 콘솔과 별도 단자입니다.",
+        "x1": 86,
+        "x2": 98,
+        "y": 43,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "PoE+ RJ-45 ×24",
+        "desc": "1GbE PoE+ RJ-45 24개 묶음.",
+        "x1": 100,
+        "x2": 319,
+        "y": 40,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "RJ-45 ×2",
+        "desc": "PoE 미지원 1GbE 업링크 2개.",
+        "x1": 321,
+        "x2": 350,
+        "y": 40,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "SFP+ ×4",
+        "desc": "1G/10G 광 업링크 SFP+ 4개.",
+        "x1": 352,
+        "x2": 391,
+        "y": 40,
+        "side": "top"
+      }
+    ],
+    "measuredImage": {
+      "file": "gsm4230px-rear.webp",
+      "width": 555,
+      "height": 62
+    }
   }
 }

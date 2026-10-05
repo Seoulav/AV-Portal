@@ -1,3 +1,4 @@
+import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name, w029Slugs } from './w029-history.mjs';
 import { beforeW024Raw, beforeW024Catalog } from './mpf-images-history.mjs';
@@ -61,7 +62,7 @@ test('the existing 242 detail files and 249 catalog objects remain byte/value-id
   const files = readdirSync(dir).filter(file => file.endsWith('.json') && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5))).sort();
   assert.equal(files.length, 242);
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
-  const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
+  const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(detailDigests)), '8dc33b1204a5fad8487a4e87d511eeca9862ca3ad6aa33fdffa211be69a49789');
   const originalCatalog = read('beta/site/catalog.json').filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(originalCatalog)), '3b8f31e02ec31ff94cd6b8192447a14549c2ed03188ea7d392ae51f9f262f6da');

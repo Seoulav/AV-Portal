@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {beforeW026Product} from './w026-history.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -40,7 +41,7 @@ test('all 51 approved horizontal maps remain valid with their original fields', 
   const dir = new URL('beta/site/detail/data/', root);
   let count = 0, cropped = 0;
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh115qhfebgxkr.json')) {
-    const p = JSON.parse(readFileSync(new URL(file, dir), 'utf8'));
+    const p = beforeW026Product(JSON.parse(readFileSync(new URL(file, dir), 'utf8')),file.slice(0,-5));
     if (!p.portMap || p.portMap.image === 'Diagram') continue;
     count++;
     if (p.portMap.crop) cropped++;

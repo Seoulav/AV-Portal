@@ -1,4 +1,5 @@
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
+import {beforeW026Product,beforeW026Raw} from './w026-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import test from 'node:test';
@@ -65,8 +66,8 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
   }
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length, 6);
   assert.equal(Object.keys(proof.preservedProducts).length, 235);
-  const priorRead = path => beforeW032Product(read(path), path.split('/').at(-1).slice(0, -5));
-  const priorRaw = path => beforeW032Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5));
+  const priorRead = path => beforeW032Product(beforeW026Product(read(path), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
+  const priorRaw = path => beforeW032Raw(beforeW026Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {
     const later = remaining.products[file.slice(0,-5)];
     const samsungLater = samsung.products[file.slice(0,-5)];
@@ -109,6 +110,7 @@ test('Shure mapping preserves published source images, PDFs and catalog bytes', 
     // locks the original mirrors and five uploads while checking the new PDFs.
     if (path === 'detail/images/lh98qecedgcxkr-main.webp' || path === 'catalog.json' || path === 'docs/manifest.json') continue;
     const hashFile = /\.(json|svg)$/.test(path) ? textSha : sha;
+    if (path === 'detail/images/gsm4248px-rear.webp') continue; // W-026 replaces this one image.
     assert.equal(hashFile(bytes('beta/site/' + path)), hash, path);
   }
 });

@@ -2,6 +2,7 @@ import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import {beforeBssAlignment} from './bss-alignment-history.mjs';
+import {beforeW026Product,beforeW026Raw} from './w026-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -17,7 +18,7 @@ import {beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
   const product=JSON.parse(bytes(path));
-  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeBssAlignment(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeBssAlignment(beforeW026Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
 const textSha = value => sha(value.toString('utf8').replaceAll('\r\n', '\n'));
@@ -79,7 +80,7 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length,13);
   assert.equal(Object.keys(proof.preservedProducts).length,227);
   const priorRead = path => beforeW032Product(read(path), path.split('/').at(-1).slice(0, -5));
-  const priorRaw = path => beforeW032Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5));
+  const priorRaw = path => beforeW032Raw(beforeW026Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
   for(const [file,hash] of Object.entries(proof.preservedProducts)){
     // W-20261002-005 updates only Samsung provenance; its new audit locks the current rows.
     const later = samsung.products[file.slice(0,-5)];
@@ -113,7 +114,9 @@ test('surviving published images and PDFs retain their baseline SHA-256', () => 
   for(const [path,hash] of Object.entries(proof.assets)){
     // Historical evidence includes the W-20261002-011 discontinued product.
     // W-20261003-002 extends the manifest; its test preserves prior entries.
-    if(path==='detail/images/lh98qecedgcxkr-main.webp'||path==='catalog.json'||path==='docs/manifest.json') continue;
+    // W-026 explicitly recrops GSM4248PX's existing Rear asset; the new
+    // product-specific test locks its current bytes and dimensions.
+    if(path==='detail/images/lh98qecedgcxkr-main.webp'||path==='detail/images/gsm4248px-rear.webp'||path==='catalog.json'||path==='docs/manifest.json') continue;
     const hashFile=/\.(json|svg)$/.test(path)?textSha:sha;
     assert.equal(hashFile(bytes('beta/site/'+path)),hash,path);
   }
