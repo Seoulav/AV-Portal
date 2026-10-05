@@ -17,33 +17,37 @@ const expectedByModel = {
 };
 const differingNames = ['픽셀 피치', '밝기', '명암비', '전력 소비량 (최대)'];
 
-test('three MPF cabinets use all 20 model-matched guide fields without images or invented connectors', () => {
+test('three MPF cabinets retain all 20 model-matched guide fields without invented connectors', () => {
   const catalog = read('beta/site/catalog.json');
   const products = slugs.map((slug, index) => {
     const card = catalog.find(item => item.slug === slug);
-    const detail = beforeDisplayW04013(read(`beta/site/detail/data/${slug}.json`),slug);
+    const current = read(`beta/site/detail/data/${slug}.json`);
+    const detail = beforeDisplayW04013(current,slug);
     assert.equal(card.product, models[index]);
     assert.deepEqual(card.categories, ['사이니지', 'Display', 'LED Signage']);
-    assert.deepEqual(card.official_links, [officialList]);
-    assert.equal(card.link_scope, 'series', '카드가 목록 링크를 개별 제품 페이지로 표시하지 않음');
-    assert.equal(card.card_image, undefined);
+    // W-024: Samsung's US SKU gallery now supplies a Main image and a direct model page.
+    assert.equal(card.official_links.length, 1);
+    assert.match(card.official_links[0], new RegExp(`-sku-lh${['008', '012', '016'][index]}mpfaaa-go/$`));
+    assert.equal(card.link_scope, undefined);
+    assert.equal(card.card_image, `${slug}-main.webp`);
     assert.equal(detail.model, models[index]);
     assert.equal(detail.specifications.length, 20);
     assert.deepEqual(detail.specifications.map(row => row.name).filter(name => differingNames.includes(name)), differingNames);
     assert.deepEqual(differingNames.map(name => detail.specifications.find(row => row.name === name).value), expectedByModel[models[index]]);
     assert.ok(detail.specifications.every(row => row.source === 'S1' && row.verification === 'FOUND'));
-    assert.deepEqual(detail.images, []);
+    assert.equal(current.images.length, 1);
+    assert.equal(current.images[0].file, `${slug}-main.webp`);
     assert.deepEqual(detail.io, []);
-    assert.ok(detail.imageStatuses.some(row => row.role === 'Main' && row.status === 'MISSING' && row.reason));
+    assert.ok(current.imageStatuses.some(row => row.role === 'Main' && row.status === 'FOUND' && row.sourceUrl));
     assert.ok(detail.korean.includes('캐비닛') && detail.korean.includes('S-Box'));
     assert.ok(detail.overview.includes('S-Box'));
     assert.ok(detail.sources.some(source => source.code === 'S1' && source.name.includes('삼성전자') && source.scope.includes('17')));
     assert.ok(detail.sources.some(source => source.url === officialList && source.scope.includes('개별 모델 페이지 미확인')));
     assert.ok(detail.documents.every(document => !String(document.url ?? '').includes('.pptx')));
-    const prepared = prepareProductDetail(detail);
-    assert.ok(!visibleDetailCards(prepared).includes('gallery'));
+    const prepared = prepareProductDetail(current);
+    assert.ok(visibleDetailCards(prepared).includes('gallery'));
     assert.ok(!visibleDetailCards(prepared).includes('io'));
-    assert.equal(detailSearchEntry(card, detail).cardImage, undefined);
+    assert.equal(detailSearchEntry(card, current).cardImage.src, `./detail/images/${slug}-main.webp`);
     return detail;
   });
   const sharedNames = products[0].specifications.map(row => row.name).filter(name => !differingNames.includes(name));
@@ -52,7 +56,7 @@ test('three MPF cabinets use all 20 model-matched guide fields without images or
     const values = products.map(detail => detail.specifications.find(row => row.name === name).value);
     assert.ok(values.every(value => value === values[0]), `${name}: shared guide value differs`);
   }
-  assert.ok(!existsSync(new URL('beta/site/detail/images/mp008f-main.webp', root)));
+  assert.ok(existsSync(new URL('beta/site/detail/images/mp008f-main.webp', root)));
 });
 
 test('guide remains a private evidence source, while the public catalog gains exactly three LED entries', () => {

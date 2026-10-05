@@ -1,0 +1,62 @@
+{
+  "mp008f": {
+    "brand": "Samsung",
+    "product": "MP008F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "link_scope": "series",
+    "slug": "mp008f",
+    "brandSort": {
+      "group": "LED Signage",
+      "order": 8,
+      "size": 8
+    }
+  },
+  "mp012f": {
+    "brand": "Samsung",
+    "product": "MP012F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "link_scope": "series",
+    "slug": "mp012f",
+    "brandSort": {
+      "group": "LED Signage",
+      "order": 8,
+      "size": 12
+    }
+  },
+  "mp016f": {
+    "brand": "Samsung",
+    "product": "MP016F",
+    "categories": [
+      "사이니지",
+      "Display",
+      "LED Signage"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/led-signage/"
+    ],
+    "link_scope": "series",
+    "slug": "mp016f",
+    "brandSort": {
+      "group": "LED Signage",
+      "order": 8,
+      "size": 16
+    }
+  }
+}
