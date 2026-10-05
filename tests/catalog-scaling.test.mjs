@@ -1,4 +1,5 @@
 import { w029Slugs } from './w029-history.mjs';
+import { w006Slugs } from './w006-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
@@ -82,7 +83,7 @@ test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일
   for (const item of catalog.slice(27)) {
     // W-20261002-012 MPF 3종은 별도 삼성 제품가이드·국내 목록 근거로 등록했다.
     // W-023's new model is verified directly against its official Samsung Korea page.
-    if (['mp008f', 'mp012f', 'mp016f', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh43behhlbfxkr', ...w029Slugs].includes(item.slug)) continue;
+    if (['mp008f', 'mp012f', 'mp016f', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh43behhlbfxkr', ...w029Slugs, ...w006Slugs].includes(item.slug)) continue;
     const scope = scopeOf.get(`${norm(item.brand)}\0${norm(item.product)}`);
     assert.ok(scope, `${item.brand} ${item.product}: 결정표에 없음`);
     assert.equal(item.link_scope ?? 'model', scope, `${item.brand} ${item.product}`);

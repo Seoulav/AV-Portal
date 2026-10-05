@@ -50,8 +50,8 @@ test('B: only availability-absent ports leave cards; functional limits remain', 
     }
   }
   assert.equal(absent, 15); // Four new QHC/QMC models each document an absent audio input.
-  // Eight condition notes, one GSM4212P note, and three U800F satellite limits.
-  assert.equal(functional, 12);
+  // New U800F sizes add three more satellite-limit notes.
+  assert.equal(functional, 15);
   const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
   assert.match(app, /prepareIoFallbackEntries\(data\.io\)/);
   assert.match(app, /presentConnectors\.length/);

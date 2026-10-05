@@ -34,15 +34,15 @@ test('remaining io-only products retain every present connector in the 02 fallba
     const cards = renderIoFallbackCards(entries);
     assert.equal(cards.children.length, entries.length, raw.model);
     assert.equal(selectCardModes(data, data.enhancements).gallery, 'io-fallback', raw.model);
-    assert.ok(data.images.length, raw.model);
+    if (!data.images.length) assert.equal(raw.model, 'LH65BEHHLBFXKR', 'only the verified-photo gap may show I/O without a photograph');
     for (const [index, item] of data.io.filter(item => !isAbsentConnector(item)).entries()) {
       assert.equal(cards.children[index].children[0].children[0].textContent, String(index + 1), raw.model);
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).displayConnector), raw.model);
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).channelSignal), raw.model);
     }
   }
-  // W-026 adds seven photographed NETGEAR maps; three LED products still have neither map nor I/O.
-  assert.deepEqual(counts, { mapIo: 69, ioOnly: 161, neither: 20 });
+  // W-006 adds eight TVs with I/O and no map; one has no verified photograph.
+  assert.deepEqual(counts, { mapIo: 69, ioOnly: 169, neither: 20 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

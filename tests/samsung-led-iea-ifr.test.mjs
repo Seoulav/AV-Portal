@@ -1,4 +1,5 @@
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
+import { isW006Name, beforeW006Raw, withoutW006Catalog } from './w006-history.mjs';
 import {beforeW005Raw} from './w005-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import test from 'node:test';
@@ -68,16 +69,16 @@ test('three exact workbook models retain their own facts and omit unsupported co
 });
 
 test('LED cabinet addition changes only the three new products and keeps the private workbook offline', () => {
-  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5))).sort();
+  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file)).sort();
   assert.equal(files.length, 247);
-  const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
+  const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(beforeW006Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '02769b62612aacaee971e39f4a7783469415c2a8a4aa8280830b4e4e4f499083');
   const catalog = read('beta/site/catalog.json');
-  assert.equal(catalog.length, 257);
-  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 25);
+  assert.equal(catalog.length, 265);
+  assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 33);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),
     ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']);
-  const previous = catalog.filter(item => !newSlugs.has(item.slug)).map(beforeW024Catalog);
+  const previous = withoutW006Catalog(catalog).filter(item => !newSlugs.has(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '8af626c34c459c90001f5dae1698ea1bbbb5899ed1a132932c84c89c747a02c0');
   const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], {
     cwd: fileURLToPath(root), encoding: 'utf8'

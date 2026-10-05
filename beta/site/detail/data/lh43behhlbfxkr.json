@@ -48,6 +48,7 @@
   "specifications": [
     { "group": "Display", "name": "화면 크기", "value": "107.9", "unit": "cm", "condition": "", "source": "P", "verification": "VERIFIED" },
     { "group": "Physical", "name": "크기(제품, 가로x높이x깊이)", "value": "957.8 x 558.8 x 76.3", "unit": "mm", "condition": "", "source": "P", "verification": "VERIFIED" },
+    { "group": "Physical", "name": "벽걸이 규격(VESA)", "value": "200 x 200", "unit": "mm", "condition": "나사 M8", "source": "IG", "verification": "VERIFIED" },
     { "group": "Display", "name": "해상도", "value": "4K (3,840 x 2,160)", "unit": "", "condition": "", "source": "P", "verification": "VERIFIED" },
     { "group": "Display", "name": "제품 사용 시간", "value": "8/7", "unit": "", "condition": "", "source": "P", "verification": "VERIFIED" },
     { "group": "Video", "name": "화질엔진", "value": "Crystal Processor 4K", "unit": "", "condition": "", "source": "P", "verification": "VERIFIED" },

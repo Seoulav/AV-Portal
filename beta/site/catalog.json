@@ -4298,5 +4298,167 @@
       "order": 8,
       "size": 15
     }
+  },
+  {
+    "brand": "Samsung",
+    "product": "HG55U800FNFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Hospitality TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/"
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG55U800FNFXKR",
+    "slug": "hg55u800fnfxkr",
+    "card_image": "hg55u800fnfxkr-main.webp",
+    "brandSort": {
+      "group": "Hotel TV",
+      "order": 5,
+      "size": 55
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "HG75U800FNFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Hospitality TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/"
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG75U800FNFXKR",
+    "slug": "hg75u800fnfxkr",
+    "card_image": "hg75u800fnfxkr-main.webp",
+    "brandSort": {
+      "group": "Hotel TV",
+      "order": 5,
+      "size": 75
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "HG85U800FNFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Hospitality TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/"
+    ],
+    "manual_link": "https://www.samsungsvc.co.kr/download/view?code=HG85U800FNFXKR",
+    "slug": "hg85u800fnfxkr",
+    "card_image": "hg85u800fnfxkr-main.webp",
+    "brandSort": {
+      "group": "Hotel TV",
+      "order": 5,
+      "size": 85
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH50BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    ],
+    "slug": "lh50behhlbfxkr",
+    "card_image": "lh50behhlbfxkr-main.webp",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 50
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH55BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH55BEHHLBFXKR/"
+    ],
+    "slug": "lh55behhlbfxkr",
+    "card_image": "lh55behhlbfxkr-main.webp",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 55
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH65BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH65BEHHLBFXKR/"
+    ],
+    "slug": "lh65behhlbfxkr",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 65
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH75BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH75BEHHLBFXKR/"
+    ],
+    "slug": "lh75behhlbfxkr",
+    "card_image": "lh75behhlbfxkr-main.webp",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 75
+    }
+  },
+  {
+    "brand": "Samsung",
+    "product": "LH85BEHHLBFXKR",
+    "categories": [
+      "사이니지",
+      "Display",
+      "Business TV"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH85BEHHLBFXKR/"
+    ],
+    "slug": "lh85behhlbfxkr",
+    "card_image": "lh85behhlbfxkr-main.webp",
+    "brandSort": {
+      "group": "Business TV",
+      "order": 6,
+      "size": 85
+    }
   }
 ]

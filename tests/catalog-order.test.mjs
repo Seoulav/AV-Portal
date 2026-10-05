@@ -15,13 +15,13 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
     ['QHC', ['lh43qhcebgcxkr', 'lh55qhcebgcxkr', 'lh65qhcebgcxkr', 'lh75qhcebgcxkr']],
     ['QMC', ['lh32qmcebgcxkr', 'lh43qmcebgcxkr', 'lh55qmcebgcxkr', 'lh65qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr']],
     ['Video Wall', ['lh55vhcrbgbxkr', 'lh55vmcrbgbxkr']],
-    ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr']],
-    ['Business TV', ['lh43behhlbfxkr']],
+    ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg55u800fnfxkr', 'hg65u800fnfxkr', 'hg75u800fnfxkr', 'hg85u800fnfxkr']],
+    ['Business TV', ['lh43behhlbfxkr', 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']],
     ['Whiteboard', ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr']],
     ['LED Signage', ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']]
   ];
   const samsung = catalog.filter(item => item.brand === 'Samsung');
-  assert.equal(samsung.length, 25);
+  assert.equal(samsung.length, 33);
   assert.deepEqual(slugs(filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' })), expected.flatMap(([, group]) => group));
   for (const [index, [group, names]] of expected.entries()) {
     for (const slug of names) {
@@ -31,9 +31,9 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
       assert.ok(Number.isFinite(item.brandSort?.size));
     }
   }
-  const future = { ...samsung[0], slug: 'future-business-tv', product: 'FUTURE BUSINESS TV', brandSort: { group: 'Business TV', order: 6, size: 65 } };
+  const future = { ...samsung[0], slug: 'future-business-tv', product: 'FUTURE BUSINESS TV', brandSort: { group: 'Business TV', order: 6, size: 90 } };
   const withFuture = slugs(filterCatalog([...catalog, future], { brand: 'Samsung', sort: 'brand' }));
-  assert.equal(withFuture.indexOf('future-business-tv'), withFuture.indexOf('lh43behhlbfxkr') + 1);
+  assert.equal(withFuture.indexOf('future-business-tv'), withFuture.indexOf('lh85behhlbfxkr') + 1);
   assert.equal(withFuture[withFuture.indexOf('future-business-tv') + 1], 'lh55wmfwbgcxkr');
 });
 

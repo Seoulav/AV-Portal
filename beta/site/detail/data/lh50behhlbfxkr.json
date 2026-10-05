@@ -1,0 +1,451 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "LH50BEHHLBFXKR",
+  "model": "LH50BEHHLBFXKR",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "Business TV"
+  ],
+  "english": "Samsung BEHX-H 50-inch business TV with a 4K display, live television reception and content management through the Business TV app or VXT Player.",
+  "korean": "삼성 BEHX-H 비즈니스TV 50인치 모델이다. 4K 화면과 디지털 방송 수신을 제공하며, 삼성 비즈니스TV 앱과 VXT Player를 통한 콘텐츠 관리를 지원한다.",
+  "verificationSummary": "2026-10-05 삼성전자 대한민국 비즈니스 LH50BEHHLBFXKR 공식 제품 페이지의 스펙 탭을 Chromium에서 직접 확인했다. BEHX-H 공용 설치가이드 BN68-26620A-01 2쪽 50인치 치수표와 제품 크기·무게를 대조하고 VESA 규격을 추가했다. RF 물리 단자 수와 디스플레이 면적은 확인되지 않아 만들지 않았다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "LH50BEHHLBFXKR은 삼성전자 BEHX-H 비즈니스TV 50인치 모델이다. 공식 스펙 탭에서 4K 화면 해상도, ATSC 3.0 디지털 방송방식, HDMI 3개, 삼성 비즈니스TV 앱과 VXT Player 지원을 확인했다. 제품 크기는 1110.8 x 643.8 x 76.4 mm이며, 디스플레이 면적은 공식 페이지와 공용 설치가이드에 기재되지 않았다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "lh50behhlbfxkr-main.webp",
+      "alt": "삼성 BEHX-H 시리즈 공식 정면 이미지",
+      "note": "Main · LH50BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음",
+      "provider": "Samsung",
+      "model": "LH50BEHHLBFXKR",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2026/07/01/4b92c6d9-1498-4ac6-b7ec-6c0c4272686b.png?$Q90_1920_1280_F_PNG$",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1920x1280",
+      "resolution": "1920x1280",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://images.samsung.com/kdp/goods/2026/07/01/4b92c6d9-1498-4ac6-b7ec-6c0c4272686b.png?$Q90_1920_1280_F_PNG$"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    },
+    {
+      "role": "Diagram",
+      "status": "MISSING",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "LH50BEHHLBFXKR 적용 모델이 명시된 사용설명서 미확인",
+      "language": "언어 미확인",
+      "note": "제공된 BEHX-H 간단 사용 설명서에는 정확한 모델 목록과 사양·단자표가 없다."
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "VERIFIED",
+      "title": "LH50BEHHLBFXKR 공식 제품 페이지 스펙",
+      "language": "ko",
+      "note": "Chromium에서 국내 모델 상세 스펙 탭 확인",
+      "url": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "삼성전자 대한민국 비즈니스 제품 페이지",
+      "language": "ko",
+      "note": "",
+      "url": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/"
+    }
+  ],
+  "features": [
+    {
+      "text": "4K (3,840 x 2,160) 해상도와 Crystal Processor 4K 화질엔진을 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "삼성 비즈니스TV 앱에서 콘텐츠를 원격 관리·예약할 수 있다.",
+      "source": "P"
+    },
+    {
+      "text": "VXT Player를 지원하며, 삼성 VXT는 콘텐츠와 원격 디바이스 관리를 제공한다.",
+      "source": "P"
+    },
+    {
+      "text": "PIN 코드로 TV 조작을 잠그는 비밀번호 잠금 기능을 제공한다.",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Display",
+      "name": "화면 크기",
+      "value": "125.7",
+      "unit": "cm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(제품, 가로x높이x깊이)",
+      "value": "1110.8 x 643.8 x 76.4",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "벽걸이 규격(VESA)",
+      "value": "200 x 200",
+      "unit": "mm",
+      "condition": "나사 M8",
+      "source": "IG",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "해상도",
+      "value": "4K (3,840 x 2,160)",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "name": "제품 사용 시간",
+      "value": "8/7",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "화질엔진",
+      "value": "Crystal Processor 4K",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDR(High Dynamic Range)",
+      "value": "HDR",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "HDR10+",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "명암비",
+      "value": "Mega Contrast",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "디밍기술",
+      "value": "UHD Dimming",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "사운드출력 (RMS)",
+      "value": "20W",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커 종류",
+      "value": "2CH",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Smart Platform",
+      "name": "운영체제",
+      "value": "Tizen™ Smart TV",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력 (Typical)",
+      "value": "62.1",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력 (On Mode)",
+      "value": "120",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비전력 (Stand-by)",
+      "value": "0.5",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "제품 무게",
+      "value": "8.4",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Content",
+      "name": "VXT Player Support",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "에너지효율 등급",
+      "value": "1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "디지털 방송방식",
+      "value": "ATSC 3.0",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "아날로그 튜너",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Content",
+      "name": "Business TV App (Android, iOS)",
+      "value": "있음",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI 입력",
+      "signal": "영상 입력",
+      "direction": "IN",
+      "quantity": "3",
+      "protocol": "HDMI",
+      "availability": "HDMI ARC: eARC",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "connector": "USB-A",
+      "signal": "USB 연결",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "USB",
+      "availability": "공식 스펙: 1 x USB-A",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "Ethernet (LAN 단자)",
+      "signal": "유선 네트워크",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "Ethernet",
+      "availability": "",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "RF 입력",
+      "signal": "지상파·케이블 방송 입력",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "RF",
+      "availability": "공식 스펙: 지상파/케이블/위성 1/1/0 · 설치가이드 1쪽 단자 안내에 ANT 단자 표시 · 물리 단자 수는 미확인",
+      "condition": "",
+      "source": "P, IG",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Wireless",
+      "connector": "무선(물리 단자 없음)",
+      "signal": "Wi-Fi",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "Wi-Fi 5",
+      "availability": "공식 스펙: Yes (Wi-Fi 5)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Wireless",
+      "connector": "무선(물리 단자 없음)",
+      "signal": "Bluetooth",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "Bluetooth 5.3",
+      "availability": "공식 스펙: Yes(5.3)",
+      "condition": "",
+      "source": "P",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "삼성전자 대한민국 비즈니스 공식 제품 페이지(제품 소개·스펙)",
+      "url": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/",
+      "scope": "국내 모델 LH50BEHHLBFXKR의 공식 상세 스펙 탭을 2026-10-05 Chromium에서 직접 확인. 모델별 화면 크기·제품 크기·소비전력·무게와 VXT 지원을 개별 확인. 디스플레이 면적은 미기재."
+    },
+    {
+      "code": "IG",
+      "name": "삼성전자 BEHX-H 설치가이드 BN68-26620A-01 (사용자 제공)",
+      "scope": "삼성전자 BEHX-H 43~85인치 공용 설치가이드 BN68-26620A-01. 1쪽 단자 안내에 ANT 종류 표시(물리 수량·배치는 미확인), 2쪽 BE50HX-* 치수표에서 제품 크기·무게·VESA 200 x 200 mm·나사 M8 확인. 게시 사본: manuals/samsung-behx-h-installation-guide-ko.pdf."
+    }
+  ],
+  "issues": [
+    {
+      "code": "DISPLAY-AREA",
+      "status": "REVIEW REQUIRED",
+      "title": "디스플레이 면적 미기재",
+      "detail": "공식 제품 페이지 LH50BEHHLBFXKR 스펙 탭과 BEHX-H 공용 설치가이드에는 디스플레이 면적 값이 없다. 계산하지 않고 사양 행을 만들지 않았다."
+    },
+    {
+      "code": "RF-COUNT",
+      "status": "REVIEW REQUIRED",
+      "title": "RF 물리 단자 수 미확인",
+      "detail": "공식 제품 페이지의 1/1/0은 지상파/케이블/위성 방송별 지원 값이며 물리 단자 수가 아니다. 공용 설치가이드 1쪽 ANT 종류 표시는 존재를 확인하지만 수량과 개별 배치를 확정하지 못한다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "공식 스펙의 연결 항목을 표시하며, 물리 단자 수가 미확인인 항목은 비웁니다.",
+    "supplementalNote": "삼성전자 국내 공식 제품 페이지의 모델별 표기와 미기재 항목을 구분합니다.",
+    "footerNote": "Samsung LH50BEHHLBFXKR 공식 페이지 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "lead": "**50인치 비즈니스TV** LH50BEHHLBFXKR은 BEHX-H 시리즈 모델이다. 4K 화면과 방송 수신, 삼성 비즈니스TV 앱·VXT Player 지원을 공식 스펙에서 확인했다.",
+  "subtitle": "BEHX-H · 비즈니스TV",
+  "keyFacts": [
+    {
+      "label": "해상도",
+      "value": "4K (3,840 x 2,160)",
+      "unit": ""
+    },
+    {
+      "label": "화면 크기",
+      "value": "125.7",
+      "unit": "cm"
+    },
+    {
+      "label": "제품 사용 시간",
+      "value": "8/7",
+      "unit": ""
+    },
+    {
+      "label": "디지털 방송방식",
+      "value": "ATSC 3.0",
+      "unit": ""
+    }
+  ]
+}
