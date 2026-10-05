@@ -2,7 +2,7 @@ import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readdirSync,readFileSync} from 'node:fs';
+import {readdirSync,readFileSync} from './w032-history-fs.mjs';
 import {createHash} from 'node:crypto';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';

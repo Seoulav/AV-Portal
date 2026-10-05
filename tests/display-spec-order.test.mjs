@@ -3,7 +3,7 @@ import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw, beforeW024 } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
-import {readFileSync,readdirSync} from 'node:fs';
+import {readFileSync,readdirSync} from './w032-history-fs.mjs';
 import {createHash} from 'node:crypto';
 import * as model from '../prototype/brc-am7/product-detail-model.mjs';
 import {beforeSamsungW04011} from './samsung-w04011-history.mjs';

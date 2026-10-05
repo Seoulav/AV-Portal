@@ -1,3 +1,4 @@
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
@@ -6,7 +7,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeW04021Uploads } from './document-lock-history.mjs';
@@ -126,7 +127,7 @@ test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest
   const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 28);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
-  assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), evidence.manifest.mirrorsSha256);
   const added = historicalUploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 28);
   const files = [...new Set(added.map(item => item.file))];
   assert.equal(files.length, 15);

@@ -1,9 +1,10 @@
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
@@ -59,7 +60,7 @@ test('five distinct PDFs serve exact models in eleven new upload links', () => {
   // This audit locks the W-009 upload segment; later JBL uploads are checked separately.
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 11);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
-  assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), evidence.manifest.mirrorsSha256);
   for (const doc of evidence.documents) {
     assert.deepEqual(manifest.uploads.filter(item => item.file === doc.file).map(item => item.slug), doc.slugs);
     assert.match(doc.file, /^manuals\/[a-z0-9-]+\.pdf$/);

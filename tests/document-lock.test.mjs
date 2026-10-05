@@ -1,10 +1,11 @@
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { GlobalWorkerOptions, PasswordResponses, getDocument } from '../beta/site/vendor/pdfjs/pdf.min.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { verifyPdfLock } from '../beta/pdf-lock.mjs';
@@ -71,7 +72,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
     productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
-  const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, uploads: withoutW029Uploads(manifest.uploads) }, null, 2) + '\n';
+  const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(manifest.uploads) }, null, 2) + '\n';
   const withoutLockLabels = manifestWithoutCurrentLockLabels.replace(/^      "locked": true,\r?\n/gm, '');
   assert.equal(sha(Buffer.from(withoutLockLabels)), '4c64584eb766ad94f2c5fac66f02d687bb81e4b2fce60d71a6149155cac1ddbb');
 });

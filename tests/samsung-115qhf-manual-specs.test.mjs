@@ -4,7 +4,7 @@ import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harma
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { createHash } from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';

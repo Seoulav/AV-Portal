@@ -2,7 +2,7 @@ import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harma
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './w032-history-fs.mjs';
 import {createHash} from 'node:crypto';
 import {prepareEnhancements, portMapImageMatches} from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeAmxW03008, amxW03008Slug } from './amx-w03008-history.mjs';

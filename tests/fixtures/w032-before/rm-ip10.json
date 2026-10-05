@@ -1,0 +1,485 @@
+{
+  "manufacturer": "SONY",
+  "productName": "RM-IP10",
+  "model": "RM-IP10",
+  "series": "RM-IP",
+  "seriesNote": "모델 접두어이며 별도 판매 시리즈 명칭은 미확인입니다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "PTZ/원격 카메라",
+    "Camera Controller"
+  ],
+  "english": "Joystick IP remote control panel for Sony BRC/SRG PTZ cameras: up to 112 cameras over IP or 7 over VISCA serial.",
+  "korean": "RM-IP10은 IP 네트워크로 최대 112대, 기존 VISCA 직렬 연결로 최대 7대의 Sony PTZ 카메라를 제어하는 조이스틱 리모트 컨트롤 패널입니다. 한 네트워크에서 최대 5대의 패널이 제어를 공유할 수 있습니다.",
+  "verificationSummary": "Sony 한국어 공식 제품 페이지와 PDF 내보내기, 글로벌(미국) 제품 PDF, 다국어 사용 설명서에서 사양을 확인했습니다. 사용 설명서의 지원 카메라 목록이 구판이라 SRG-X40UH·SRG-A40 조합은 다른 Sony 자료와 비교해 검토 중입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "RM-IP10은 Sony BRC·SRG 시리즈 PTZ 카메라용 IP 리모트 컨트롤 패널이다. RJ-45(10BASE-T/100BASE-TX) LAN으로 연결해 VISCA over IP로 최대 112대의 카메라를 제어하고, VISCA RS-422 또는 RS-232C 직렬 연결에서는 최대 7대를 제어한다. 통신 방식은 IP, RS-232C, RS-422 중 하나를 선택하며 동시에 사용할 수 없다.\n\n한 네트워크에서 최대 5대의 RM-IP10이 제어를 공유할 수 있고, 제공 설정 소프트웨어(RM-IP Setup Tool)로 카메라와 컨트롤러의 IP 주소를 PC에서 설정한다. 조이스틱(줌 링 포함)으로 팬·틸트·줌을 조작하며, 카메라 설정 조합을 최대 16개 포지션으로 저장하고 제어 중인 모든 카메라를 동시에 프리셋 위치로 되돌릴 수 있다.\n\n디스플레이, 속도 다이얼, 줌 시소 레버는 없다. 전원은 12V DC(포함 AC 어댑터)이며 크기 391.3×165×145.9mm, 질량 약 950g이다. BRC-H900·BRC-Z330은 BRBK-IP10, BRC-Z700은 BRBK-IP7Z 옵션 보드가 있어야 IP로 제어할 수 있다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "rm-ip10-main.webp",
+      "alt": "Sony RM-IP10 IP 리모트 컨트롤러를 비스듬히 본 메인 이미지. 조이스틱과 GROUP/POSITION·CAMERA 버튼이 보인다",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP10",
+      "sourceUrl": "https://www.sony.com/image/125f430ba3f90a87a814c0f7411fad6e?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "984x487",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Front",
+      "file": "rm-ip10-front.webp",
+      "alt": "Sony RM-IP10 상판 조작부를 위에서 본 이미지. 'IP REMOTE CONTROLLER RM-IP10' 표기, POSITION 1–16 버튼, CAMERA 1–7 버튼, 조이스틱이 보인다",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP10",
+      "sourceUrl": "https://www.sony.com/image/18414847dd0bc8765c6c8368cf1d3f96?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "961x379",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "rm-ip10-rear.webp",
+      "alt": "Sony RM-IP10 후면 단자 이미지. LAN(RJ-45), 단자대 커넥터, DC 입력 등이 보인다",
+      "note": "Rear · 제조사 공식 이미지",
+      "provider": "Sony",
+      "model": "RM-IP10",
+      "sourceUrl": "https://www.sony.com/image/f52df0275a9192e307728d8e08e79997?fmt=png-alpha&wid=3000&hei=3000",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "3000x3000",
+      "resolution": "982x428",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/125f430ba3f90a87a814c0f7411fad6e?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/18414847dd0bc8765c6c8368cf1d3f96?fmt=png-alpha&wid=3000&hei=3000"
+    },
+    {
+      "role": "Rear",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.sony.com/image/f52df0275a9192e307728d8e08e79997?fmt=png-alpha&wid=3000&hei=3000"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "RM-IP10 Operating Instructions (Multilingual)",
+      "language": "en",
+      "note": "다국어 사용 설명서(영어 포함, 4-450-997). 한국어판은 확인되지 않음. IP Operation Guide: https://www.sony.com/electronics/support/res/manuals/4455/34719333701027aa686ceec885c47495/44551031M.pdf / 매뉴얼 목록: https://pro.sony/ue_US/support-resources/rm-ip10/manual",
+      "url": "https://www.sony.com/electronics/support/res/manuals/4450/4fc89a84fb7852abab2f68826fd98148/44509971M.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": "RM-IP10 단독 시방서는 Sony 공식 출처에서 확인되지 않음"
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "RM-IP10 제품 페이지 PDF 내보내기(사양 포함)",
+      "language": "ko",
+      "note": "Sony 한국어 제품 페이지의 PDF 내보내기(2026-09-26 생성). 글로벌(미국) PDF: https://pro.sony/ue_US/pdf/products/network-camera-accessories/rm-ip10",
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip10"
+    },
+    {
+      "type": "Technical Document",
+      "status": "FOUND",
+      "title": "RM-IP Setup Tool Guide",
+      "language": "en",
+      "note": "User's Guide - RM-IP Setup Tool Guide(5-072-831-11, 2025-10-14 게시, RM-IP500/RM-IP10 공용). Remote Camera System Guide: https://www.sony.com/electronics/support/res/manuals/C960/cd5d9b33286a9cc3afa54695e80a542a/C9601001M.pdf",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5072/7ae48f4b6b6dee5ee8a619ce6070c9f4/50728311M.pdf"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "RM-IP10 공식 제품 페이지",
+      "language": "ko",
+      "note": "한국어 공식 페이지. 글로벌(미국): https://pro.sony/ue_US/products/network-camera-accessories/rm-ip10",
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10"
+    }
+  ],
+  "features": [
+    {
+      "text": "IP 네트워크로 최대 112대, VISCA 직렬 연결로 최대 7대의 Sony PTZ 카메라를 제어한다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "한 네트워크에서 최대 5대의 RM-IP10이 제어를 공유해 다중 사용자 동시 제어가 가능하다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "VISCA over IP, VISCA RS-422, VISCA RS-232C 중 하나를 선택해 사용한다.",
+      "source": "PP, OI"
+    },
+    {
+      "text": "카메라 설정 조합(팬·틸트·줌 위치 등)을 최대 16개 포지션으로 저장하고 불러온다.",
+      "source": "OI"
+    },
+    {
+      "text": "제어 중인 모든 카메라를 동시에 프리셋 위치로 되돌릴 수 있다.",
+      "source": "PP"
+    },
+    {
+      "text": "RJ-45(10BASE-T/100BASE-TX 자동 감지) 연결과 PC용 설정 소프트웨어로 IP·카메라 수를 구성한다.",
+      "source": "PP, OI"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera Control",
+      "name": "최대 IP 연결 카메라",
+      "value": "112",
+      "unit": "count",
+      "condition": "스위칭 허브 사용",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "최대 직렬 연결 카메라",
+      "value": "7",
+      "unit": "count",
+      "condition": "VISCA RS-422/RS-232C",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "시스템당 최대 컨트롤러",
+      "value": "5",
+      "unit": "count",
+      "condition": "단일 네트워크 기준",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "제어 프로토콜",
+      "value": "VISCA over IP / VISCA RS-422 / VISCA RS-232C 전환",
+      "unit": "",
+      "condition": "동시 사용 불가",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "포지션(프리셋)",
+      "value": "16",
+      "unit": "count",
+      "condition": "카메라 메모리에 저장",
+      "source": "OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera Control",
+      "name": "지원 카메라",
+      "value": "사용 설명서 목록 참조(BRC·SRG 시리즈, 일부 모델은 옵션 보드 필요)",
+      "unit": "",
+      "condition": "SRG-X40UH·SRG-A40 표기는 자료별 상이(R1)",
+      "source": "OI, RG",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Control Signal",
+      "name": "통신 속도",
+      "value": "9,600 / 38,400",
+      "unit": "bps",
+      "condition": "RS-232C/RS-422, 8bit, stop bit 1",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "LAN",
+      "value": "10BASE-T/100BASE-TX 자동 감지",
+      "unit": "",
+      "condition": "RJ-45",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "디스플레이",
+      "value": "미지원",
+      "unit": "",
+      "condition": "공식 사양 '아니요'",
+      "source": "PP, PE",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "속도 조절 다이얼·줌 시소 레버",
+      "value": "미지원",
+      "unit": "",
+      "condition": "공식 사양 '아니요'",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "줌 제어",
+      "value": "조이스틱 링",
+      "unit": "",
+      "condition": "",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "ASSIGN 버튼",
+      "value": "0",
+      "unit": "count",
+      "condition": "",
+      "source": "PP, PE",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "켄싱턴 잠금 홀",
+      "value": "미지원",
+      "unit": "",
+      "condition": "공식 사양 '아니요'",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "User Interface",
+      "name": "직접 조정 기능",
+      "value": "백라이트 보정, R/B 게인, R/B 블랙, 조리개, 게인, 셔터 스피드",
+      "unit": "",
+      "condition": "여러 버튼/노브/DIP 스위치 조작 필요, 카메라 사양에 따라 다름",
+      "source": "PP",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전압",
+      "value": "12",
+      "unit": "V DC",
+      "condition": "10.8–13.2V DC",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "소비 전류",
+      "value": "최대 0.3A, 3.6W",
+      "unit": "",
+      "condition": "12V DC",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "391.3×165×145.9",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "질량",
+      "value": "약 950",
+      "unit": "g",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도",
+      "value": "−20–+60",
+      "unit": "°C",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Package",
+      "name": "포함 액세서리",
+      "value": "AC 전원 어댑터(Sony), AC 전원 코드, RS-422 커넥터 플러그 2개(장착), CD-ROM, 사용 설명서 등",
+      "unit": "",
+      "condition": "자료별 목록 차이 있음",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Network",
+      "connector": "LAN RJ-45",
+      "signal": "Network",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "10BASE-T/100BASE-TX 자동 감지, VISCA over IP",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA RS-422 9핀 단자",
+      "signal": "PTZ control",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "VISCA RS-422",
+      "availability": "Fixed",
+      "condition": "커넥터 플러그 장착 출하",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "VISCA RS-232C OUT Mini DIN 8핀",
+      "signal": "PTZ control",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "VISCA RS-232C",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "TALLY IN / CONTACT OUT 9핀",
+      "signal": "Tally/Contact",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "접점",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC IN 12V (JEITA type 4)",
+      "signal": "Power",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "12V DC",
+      "availability": "Fixed",
+      "condition": "포함 AC 어댑터",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지(한국어)",
+      "url": "https://pro.sony/ko_KR/products/network-camera-accessories/rm-ip10",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PP",
+      "name": "제조사 제품 페이지 PDF(한국어)",
+      "url": "https://pro.sony/ko_KR/pdf/products/network-camera-accessories/rm-ip10",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "PE",
+      "name": "제조사 제품 페이지 PDF(글로벌/미국)",
+      "url": "https://pro.sony/ue_US/pdf/products/network-camera-accessories/rm-ip10",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "OI",
+      "name": "제조사 다국어 사용 설명서(Operating Instructions)",
+      "url": "https://www.sony.com/electronics/support/res/manuals/4450/4fc89a84fb7852abab2f68826fd98148/44509971M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "ST",
+      "name": "제조사 RM-IP Setup Tool Guide",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5072/7ae48f4b6b6dee5ee8a619ce6070c9f4/50728311M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "RG",
+      "name": "제조사 Remote Camera System Guide",
+      "url": "https://www.sony.com/electronics/support/res/manuals/C960/cd5d9b33286a9cc3afa54695e80a542a/C9601001M.pdf",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 공식 이미지 서버(제품 페이지 갤러리)",
+      "url": "https://www.sony.com/image/125f430ba3f90a87a814c0f7411fad6e?fmt=png-alpha&wid=3000&hei=3000",
+      "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U",
+      "name": "운영사 제공 정리 자료",
+      "url": "",
+      "scope": "사용자 제공(2026-09-27, 서울영상테크 SI사업본부 정리): pro.sony·공식 유통사 스펙 기준, 제조사 원문 아님"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "SRG-X40UH·SRG-A40 조합 호환성",
+      "detail": "운영사 자료(U)는 'Sony 공식 호환 목록에 SRG-X40UH, SRG-A40 미기재'라고 경고한다. RM-IP10 사용 설명서(구판)의 지원 카메라 목록에는 두 모델이 없다. 그러나 Remote Camera System Guide(2023)는 RM-IP500·RM-IP10과 함께 쓰는 카메라 목록(IP 및 RS-422)에 SRG-A40과 SRG-X40UH를 포함하고, 두 카메라의 사용 설명서도 선택 액세서리로 RM-IP500/RM-IP10을 명시한다. 자료가 상충하므로 구성 전 소니코리아 확인이 필요하다."
+    },
+    {
+      "code": "R2",
+      "status": "INFO",
+      "title": "한국어 제품명 표기",
+      "detail": "한국어 페이지 제목은 'BRC 카메라용 IP 원격 컨트롤 패널'이지만 관련 자료는 SRG 시리즈 제어도 기술한다. 제품 범위 표기는 공식 자료를 그대로 유지했다. [운영자 결정(2026-09-27): 해소 불가 항목으로 기록 유지(결정 대기 목록에서 제외).]"
+    },
+    {
+      "code": "R3",
+      "status": "RESOLVED",
+      "title": "포지션 수 출처",
+      "detail": "최대 16개 포지션은 사용 설명서(POSITION 1–16 버튼, 'up to 16 combinations')에서 확인했으며 제품 페이지 사양표에는 항목이 없다. 운영사 자료(U) 값과 일치한다. [운영자 결정(2026-09-27): 이미 해소됨으로 종결. 근거: 16 포지션을 사용 설명서로 확인, 운영사 자료와 일치.]"
+    },
+    {
+      "code": "R5",
+      "status": "REVIEW REQUIRED",
+      "title": "한국어 자료 접근 한계",
+      "detail": "sony.co.kr 지원 페이지는 조사 시점에 연결이 재설정되어 확인하지 못했고, 한국어 사용 설명서는 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지",
+    "footerNote": "SONY RM-IP10 · 공식 출처 기반"
+  }
+}

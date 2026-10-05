@@ -3,7 +3,7 @@ import { beforeW024Raw, beforeW024Catalog } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { fileURLToPath } from 'node:url';
 import { filterCatalog } from '../beta/site/app.js';
 import { prepareProductDetail, visibleDetailCards } from '../prototype/brc-am7/product-detail-model.mjs';

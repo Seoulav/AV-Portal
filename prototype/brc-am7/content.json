@@ -354,7 +354,8 @@
       "protocol": "12G/6G/3G/HD-SDI",
       "availability": "Fixed",
       "condition": "출력 형식·설정별",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "SDI OUT2 BNC",
@@ -364,7 +365,8 @@
       "protocol": "3G-SDI Level A/HD-SDI",
       "availability": "Fixed",
       "condition": "SDI1과 별도 포트",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "HDMI Type A",
@@ -374,7 +376,8 @@
       "protocol": "HDMI",
       "availability": "Fixed",
       "condition": "형식·프레임 설정별",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "OPTICAL SFP+",
@@ -384,7 +387,8 @@
       "protocol": "SDI 광 변환",
       "availability": "Optional module",
       "condition": "SFP+ 모듈 필요; SDI OUT1과 동일 신호, 광 입력 아님",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "LAN RJ-45",
@@ -424,7 +428,8 @@
       "protocol": "LINE/MIC/MIC+48V",
       "availability": "Fixed",
       "condition": "두 입력의 개별 설정 확인",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "MIC 3.5mm stereo",
@@ -434,7 +439,8 @@
       "protocol": "Plug-in power 호환",
       "availability": "Fixed",
       "condition": "XLR과 별도 마이크 입력",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "GENLOCK IN BNC",
@@ -444,7 +450,8 @@
       "protocol": "1.0Vp-p, 75Ω",
       "availability": "Fixed",
       "condition": "외부 동기",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "TC IN BNC",
@@ -454,7 +461,8 @@
       "protocol": "TC",
       "availability": "Fixed",
       "condition": "출력 아님",
-      "source": "HS, HC"
+      "source": "HS, HC",
+      "verification": "VERIFIED"
     },
     {
       "connector": "DC IN XLR 4핀",
@@ -593,8 +601,8 @@
       "language": "한국어",
       "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/print.pdf",
       "source": "H",
-      "status": "REVIEW REQUIRED",
-      "note": "PDF 본문/개정 재검토 필요 · 제조사 사이트에서 열기",
+      "status": "FOUND",
+      "note": "공식 HelpGuide 한국어 인쇄용 PDF · 563쪽. 웹 HelpGuide 링크는 별도 유지",
       "quick": false
     },
     {
@@ -718,6 +726,258 @@
         "text": "PoE++ · LAN RJ-45 · PoE++ 공급은 적합 스위치 필요",
         "source": "HS, HC"
       }
+    ]
+  },
+  "signalFlow": {
+    "type": "camera",
+    "description": "촬영 신호와 외부 오디오·동기 입력을 구분하고, SDI OUT1과 OUT2의 지원 규격 차이를 표시합니다. 출력 조합은 설정에 따릅니다.",
+    "inputs": [
+      {
+        "id": "scene",
+        "label": "촬영 장면",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "xlr",
+        "label": "XLR 오디오 입력 ×2",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 7
+          }
+        ]
+      },
+      {
+        "id": "audio-mini",
+        "label": "3.5mm 오디오 입력",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "id": "genlock",
+        "label": "GENLOCK IN",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 9
+          }
+        ]
+      },
+      {
+        "id": "timecode",
+        "label": "TC IN",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 10
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "sdi-one",
+        "label": "SDI OUT1 · 12G/6G/3G/HD",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "sdi-two",
+        "label": "SDI OUT2 · 3G Level A/HD",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": "hdmi",
+        "label": "HDMI OUT",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "optical",
+        "label": "OPTICAL SFP+",
+        "signal": "optical",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ],
+        "caption": "별도 SFP+ 모듈 · SDI OUT1과 동일 신호"
+      }
+    ],
+    "processes": [
+      {
+        "id": "capture",
+        "kind": "capture",
+        "label": "영상 캡처·처리",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "scene",
+        "to": "capture",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "sdi-one",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "sdi-two",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "hdmi",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "xlr",
+        "to": "capture",
+        "signal": "audio",
+        "label": "XLR 오디오 입력 ×2",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 7
+          }
+        ]
+      },
+      {
+        "from": "audio-mini",
+        "to": "capture",
+        "signal": "audio",
+        "label": "3.5mm 오디오 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "from": "genlock",
+        "to": "capture",
+        "signal": "control",
+        "label": "외부 동기 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 9
+          }
+        ]
+      },
+      {
+        "from": "timecode",
+        "to": "capture",
+        "signal": "control",
+        "label": "타임코드 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 10
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "optical",
+        "signal": "optical",
+        "label": "별도 SFP+ 모듈 · SDI OUT1 동일 신호",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상"
+      },
+      {
+        "signal": "audio",
+        "label": "오디오 입력"
+      },
+      {
+        "signal": "control",
+        "label": "동기·타임코드 입력"
+      },
+      {
+        "signal": "optical",
+        "label": "옵션 광 출력"
+      }
+    ],
+    "notes": [
+      "SDI OUT1은 12G/6G/3G/HD-SDI, OUT2는 3G-SDI Level A/HD-SDI입니다.",
+      "HDMI와 SDI의 무조건 동시 출력 여부는 현재 근거로 확인되지 않았습니다."
     ]
   }
 }

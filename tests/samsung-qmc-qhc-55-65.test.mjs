@@ -2,7 +2,7 @@ import test from 'node:test';
 import { beforeW024Raw, beforeW024Catalog } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { filterCatalog } from '../beta/site/app.js';
 
 const root = new URL('../', import.meta.url);

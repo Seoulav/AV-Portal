@@ -4,11 +4,12 @@ import { readFile, readdir } from 'node:fs/promises';
 import { prepareProductDetail, isAbsentConnector, prepareIoFallbackEntries, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 import { selectCardModes, selectSection03Content } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { renderIoFallbackCards, renderPortMapCards } from '../prototype/brc-am7/detail-enhancement-view.mjs';
+import { beforeW032Product } from './w032-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = async path => readFile(new URL(path, root), 'utf8');
 const products = await Promise.all((await readdir(new URL('beta/site/detail/data/', root)))
-  .filter(name => name.endsWith('.json')).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
+  .filter(name => name.endsWith('.json')).map(async name => ({ name, raw: beforeW032Product(JSON.parse(await read(`beta/site/detail/data/${name}`)), name.slice(0, -5)) })));
 
 class Node {
   constructor(tag, text = '') { this.tag = tag; this.ownText = String(text); this.children = []; this.className = ''; }

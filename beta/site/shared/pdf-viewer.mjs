@@ -243,7 +243,13 @@ export function createPdfViewer() {
     try {
       const lib = await library();
       if (state !== current || !dialog.open) return;
-      const task = lib.getDocument({ url: file, isEvalSupported: false });
+      const task = lib.getDocument({
+        url: file,
+        isEvalSupported: false,
+        cMapUrl: new URL('../vendor/pdfjs/cmaps/', import.meta.url).href,
+        cMapPacked: true,
+        standardFontDataUrl: new URL('../vendor/pdfjs/standard_fonts/', import.meta.url).href
+      });
       current.task = task;
       task.onPassword = (updatePassword, reason) => {
         if (state !== current || !dialog.open) return;

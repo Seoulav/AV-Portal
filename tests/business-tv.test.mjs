@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { beforeMobileRs232Raw } from './mobile-rs232-history.mjs';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { prepareProductDetail, visibleDetailCards, prepareIoFallbackEntries, orderSpecificationRows } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const root = new URL('../', import.meta.url);

@@ -4,7 +4,7 @@ import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { prepareEnhancements as publicPrepare } from '../beta/site/detail/detail-enhancements.mjs';
 import { prepareEnhancements as prototypePrepare } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { portMapGeometry } from '../prototype/brc-am7/detail-enhancement-view.mjs';

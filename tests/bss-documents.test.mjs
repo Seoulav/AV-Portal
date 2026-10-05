@@ -1,3 +1,4 @@
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
@@ -7,7 +8,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {beforeCrownW03013,crownW03013Slug} from './crown-w03013-history.mjs';
-import {readFileSync,readdirSync} from 'node:fs';
+import {readFileSync,readdirSync} from './w032-history-fs.mjs';
 import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
@@ -25,7 +26,7 @@ const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];
 
 test('six model-gated supplied PDFs serve only five BSS products without replacing existing mirrors',()=>{
-  assert.equal(sha(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))),evidence.manifest.mirrorsSha256);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
   const added=historicalUploads.slice(evidence.manifest.uploadCount);
   assert.equal(added.length,6);

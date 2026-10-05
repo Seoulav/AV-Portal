@@ -6,7 +6,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
   ['prototype/brc-am7/product-detail-model.mjs', 'beta/site/detail/product-detail-model.mjs', 'copy'],
-  ['prototype/brc-am7/pdf-documents.mjs', 'beta/site/detail/pdf-documents.mjs', 'copy'],
+  ['prototype/brc-am7/pdf-documents.mjs', 'beta/site/detail/pdf-documents.mjs', 'pdf-documents'],
   ['beta/distributor-links.mjs', 'beta/site/shared/distributor-links.mjs', 'copy'],
   ['prototype/brc-am7/favicon.svg', 'beta/site/favicon.svg', 'copy']
 ];
@@ -70,5 +70,6 @@ export function transformDetailApp(source) {
 export function transformDetailAsset(source, kind) {
   if (kind === 'html') return transformDetailHtml(source);
   if (kind === 'app') return transformDetailApp(source);
+  if (kind === 'pdf-documents') return replaceRequired(source, '../../beta/site/docs/', '../docs/');
   return source;
 }

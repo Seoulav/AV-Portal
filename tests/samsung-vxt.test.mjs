@@ -4,7 +4,7 @@ import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { beforeSamsungW04017 } from './samsung-w04017-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 

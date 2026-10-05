@@ -3,7 +3,7 @@ import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readdirSync, readFileSync} from 'node:fs';
+import {readdirSync, readFileSync} from './w032-history-fs.mjs';
 import {createHash} from 'node:crypto';
 import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.mjs';

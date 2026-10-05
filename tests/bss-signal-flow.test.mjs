@@ -4,7 +4,7 @@ import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import {beforeBssAlignment} from './bss-alignment-history.mjs';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from './w032-history-fs.mjs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements, enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeSamsungW04011Raw } from './samsung-w04011-history.mjs';
