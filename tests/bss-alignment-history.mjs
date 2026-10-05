@@ -1,5 +1,6 @@
 // Earlier BSS batch tests compare immutable snapshots from before the
 // user-approved rear-map alignment correction. Reconstruct only x1/x2.
+import { beforeMobileRs232, beforeMobileRs232Raw } from './mobile-rs232-history.mjs';
 const original = {
   'blu-100': [[3610, 3950], [3180, 3530], [2750, 3110], [2320, 2690], [1910, 2280]],
   'blu-101': [[3610, 3950], [3180, 3530], [2750, 3110], [2320, 2690], [1910, 2280]],
@@ -9,6 +10,7 @@ const original = {
 };
 
 export function beforeBssAlignment(product, slug) {
+  product = beforeMobileRs232(product, slug);
   const positions = original[slug];
   if (!positions || !product.portMap) return product;
   const earlier = structuredClone(product);
@@ -20,6 +22,7 @@ export function beforeBssAlignment(product, slug) {
 }
 
 export function beforeBssAlignmentRaw(raw, slug) {
+  raw = beforeMobileRs232Raw(raw, slug);
   if (!original[slug]) return raw;
   return `${JSON.stringify(beforeBssAlignment(JSON.parse(raw), slug), null, 2)}\n`;
 }

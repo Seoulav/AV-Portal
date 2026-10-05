@@ -4,6 +4,7 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeSamsungW04011} from './samsung-w04011-history.mjs';
+import {beforeMobileRs232Raw} from './mobile-rs232-history.mjs';
 
 const evidence=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-013-evidence.json',import.meta.url),'utf8'));
 const hash=raw=>createHash('sha256').update(raw.replace(/\r\n/g,'\n')).digest('hex');
@@ -30,6 +31,7 @@ export function beforeDisplayW04013(product,slug){
   return earlier;
 }
 export function beforeDisplayW04013Raw(raw,slug){
+  raw=beforeMobileRs232Raw(raw,slug);
   if(!deletedBySlug.has(slug))return raw;
   const restored=`${JSON.stringify(beforeDisplayW04013(JSON.parse(raw),slug),null,2)}\n`;
   if(hash(restored)!==evidence.products[slug].originalSha256)throw Error(`${slug}: historical restore does not match origin/main`);
