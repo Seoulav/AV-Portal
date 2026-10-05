@@ -1,5 +1,6 @@
 import { applySearchIndex, detailSearchEntry, previewCardImage } from './shared/search-index.mjs';
 import { adaptRtcomDetail, combinePublicCatalog, combinedCatalogSource } from './shared/rtcom-adapter.mjs';
+import { normalizeSeriesFor, seriesBrandLabelFor, seriesGroupsFor, seriesIdFor } from './shared/brand-series.mjs';
 export { publicDetailSearchTerms, publicCardSummary, previewCardImage } from './shared/search-index.mjs';
 
 const fold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase();
@@ -25,6 +26,7 @@ export function filterCatalog(items, state = {}) {
   const filtered = items.filter(item =>
     item.kind === 'equipment' &&
     (!state.brand || item.brand === state.brand) &&
+    (!state.series || state.series === 'all' || seriesIdFor(item) === state.series) &&
     (!state.topCategory || categoryFor(item).some(group => group.id === state.topCategory)) &&
     (!chosen.size || item.categories.some(category => chosen.has(category))) &&
     (state.resource !== 'detail' || Boolean(item.slug)) &&
@@ -60,14 +62,14 @@ export function buildSuggestions(items, query) {
 }
 
 export function stateForSuggestion(current, suggestion) {
-  if (suggestion.type === '제조사') return { query: '', topCategory: '', brand: suggestion.value, categories: [], resource: '', sort: 'brand' };
-  if (suggestion.type === '카테고리') return { query: '', topCategory: '', brand: '', categories: [suggestion.value], resource: '', sort: 'relevance' };
-  return { ...current, query: suggestion.value, topCategory: '', brand: '', categories: [] };
+  if (suggestion.type === '제조사') return { query: '', topCategory: '', brand: suggestion.value, series: '', categories: [], resource: '', sort: 'brand' };
+  if (suggestion.type === '카테고리') return { query: '', topCategory: '', brand: '', series: '', categories: [suggestion.value], resource: '', sort: 'relevance' };
+  return { ...current, query: suggestion.value, topCategory: '', brand: '', series: '', categories: [] };
 }
 
 export function parseExploreState(params) {
   const input = params instanceof URLSearchParams ? params : new URLSearchParams(params);
-  return { query: input.get('q') ?? '', topCategory: input.get('top') ?? '', brand: input.get('brand') ?? '', categories: input.getAll('category'), resource: input.get('resource') ?? '', sort: input.get('sort') ?? 'relevance' };
+  return { query: input.get('q') ?? '', topCategory: input.get('top') ?? '', brand: input.get('brand') ?? '', series: input.get('series') ?? '', categories: input.getAll('category'), resource: input.get('resource') ?? '', sort: input.get('sort') ?? 'relevance' };
 }
 
 export function serializeExploreState(state) {
@@ -75,6 +77,7 @@ export function serializeExploreState(state) {
   if (state.query) params.set('q', state.query);
   if (state.topCategory) params.set('top', state.topCategory);
   if (state.brand) params.set('brand', state.brand);
+  if (state.series) params.set('series', state.series);
   for (const category of state.categories ?? []) params.append('category', category);
   if (state.resource) params.set('resource', state.resource);
   if (state.sort && state.sort !== 'relevance') params.set('sort', state.sort);
@@ -112,7 +115,7 @@ async function loadSearchIndex(items, catalogSetRaw) {
 if (typeof document !== 'undefined') {
   const $ = selector => document.querySelector(selector);
   const element = (tag, className, content) => { const item = document.createElement(tag); if (className) item.className = className; if (content !== undefined) item.textContent = content; return item; };
-  const ui = { search: $('#search'), heroSearch: $('#hero-search-form'), heroNote: $('.hero-note'), headerSearch: $('#header-search-form'), globalSearch: $('#global-search'), resultSearch: $('#result-search'), brand: $('#brand-filter'), categories: $('#categories'), categoryCount: $('#category-count'), resource: $('#resource-filter'), sort: $('#sort-filter'), cards: $('#cards'), resultCount: $('#result-count'), workspace: $('#results-workspace'), empty: $('#empty-state'), error: $('#load-error'), suggestions: $('#search-suggestions') };
+  const ui = { search: $('#search'), heroSearch: $('#hero-search-form'), heroNote: $('.hero-note'), headerSearch: $('#header-search-form'), globalSearch: $('#global-search'), resultSearch: $('#result-search'), brand: $('#brand-filter'), categories: $('#categories'), categoryCount: $('#category-count'), resource: $('#resource-filter'), sort: $('#sort-filter'), cards: $('#cards'), seriesBrowser: $('#series-browser'), filters: $('.filters'), resultsHead: $('.results-head'), resultCount: $('#result-count'), workspace: $('#results-workspace'), empty: $('#empty-state'), error: $('#load-error'), suggestions: $('#search-suggestions') };
   let products = [];
   let state = parseExploreState(location.search);
   let activeSuggestion = -1;
@@ -165,6 +168,13 @@ if (typeof document !== 'undefined') {
   }
 
   function contextCopy(filtered) {
+    const groups = seriesGroupsFor(state.brand, products);
+    if (groups) {
+      const brand = seriesBrandLabelFor(state.brand);
+      if (!state.series) return `${brand} · 시리즈를 선택하세요`;
+      if (state.series === 'all') return `${brand} · 전체 제품`;
+      return `${brand} · ${groups.find(group => group.id === state.series)?.label ?? ''}`;
+    }
     const top = TOP_CATEGORIES.find(group => group.id === state.topCategory)?.label;
     if (state.query) return `“${state.query}” 검색 결과`;
     if (top) return `${top} 카테고리`;
@@ -174,6 +184,8 @@ if (typeof document !== 'undefined') {
   }
 
   function render(push = false) {
+    setFacets();
+    state.series = normalizeSeriesFor(state.brand, state.series, products);
     ui.search.value = state.query; ui.globalSearch.value = state.query; ui.resultSearch.value = state.query; ui.resource.value = state.resource; ui.sort.value = state.sort;
     const active = hasExploration(); ui.workspace.hidden = !active; document.body.classList.toggle('is-exploring', active);
     ui.headerSearch.hidden = !active;
@@ -184,15 +196,38 @@ if (typeof document !== 'undefined') {
     ui.categories.querySelectorAll('input').forEach(input => { input.disabled = !active; });
     document.querySelectorAll('[data-top-category]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.topCategory === state.topCategory)));
     document.querySelectorAll('[data-manufacturer]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.manufacturer === state.brand)));
-    if (!active) { ui.cards.replaceChildren(); saveUrl(push); return; }
-    setFacets();
+    if (!active) { ui.cards.replaceChildren(); ui.seriesBrowser.hidden = true; saveUrl(push); return; }
     const filtered = filterCatalog(products, state);
+    const groups = seriesGroupsFor(state.brand, products);
+    ui.seriesBrowser.hidden = !groups;
+    ui.seriesBrowser.replaceChildren();
+    if (groups) {
+      const choices = [{ id: 'all', label: '전체 보기', count: products.filter(item => item.brand === state.brand).length }, ...groups];
+      ui.seriesBrowser.replaceChildren(...choices.map(choice => {
+        const button = element('button', 'manufacturer-chip');
+        button.type = 'button';
+        button.dataset.series = choice.id;
+        button.setAttribute('aria-pressed', String(state.series === choice.id));
+        button.append(element('strong', '', choice.label), element('span', '', String(choice.count)));
+        button.addEventListener('click', () => {
+          if (state.series === choice.id) return;
+          saveScroll();
+          state.series = choice.id;
+          render(true);
+        });
+        return button;
+      }));
+    }
+    const choosing = Boolean(groups && !state.series);
+    ui.filters.hidden = choosing;
+    ui.resultsHead.hidden = choosing;
+    ui.cards.hidden = choosing;
     ui.categoryCount.textContent = state.categories.length;
     $('#result-context-title').textContent = contextCopy(filtered);
     $('#result-context-copy').textContent = `${filtered.length.toLocaleString('ko-KR')}개 제품 · 현재 조건에 맞는 공개 항목`;
     ui.resultCount.textContent = `${filtered.length.toLocaleString('ko-KR')}개 제품`;
-    ui.empty.hidden = filtered.length !== 0;
-    ui.cards.replaceChildren(...filtered.map(createCard)); saveUrl(push);
+    ui.empty.hidden = choosing || filtered.length !== 0;
+    ui.cards.replaceChildren(...(choosing ? [] : filtered.map(createCard))); saveUrl(push);
     if (push) ui.workspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
@@ -214,12 +249,12 @@ if (typeof document !== 'undefined') {
   }
 
   function renderDiscovery() {
-    $('#top-categories').replaceChildren(...mapTopCategories(products).map(group => { const button = element('button', 'category-card'); button.type = 'button'; button.dataset.topCategory = group.id; button.setAttribute('aria-pressed', 'false'); button.disabled = group.count === 0; button.append(element('span', 'pg-swatch', group.icon), element('strong', '', group.label), element('small', '', `${group.count}개 제품`), element('b', '', '→')); button.addEventListener('click', () => { state = { query: '', topCategory: group.id, brand: '', categories: [], resource: '', sort: 'relevance' }; render(true); }); return button; }));
+    $('#top-categories').replaceChildren(...mapTopCategories(products).map(group => { const button = element('button', 'category-card'); button.type = 'button'; button.dataset.topCategory = group.id; button.setAttribute('aria-pressed', 'false'); button.disabled = group.count === 0; button.append(element('span', 'pg-swatch', group.icon), element('strong', '', group.label), element('small', '', `${group.count}개 제품`), element('b', '', '→')); button.addEventListener('click', () => { state = { query: '', topCategory: group.id, brand: '', series: '', categories: [], resource: '', sort: 'relevance' }; render(true); }); return button; }));
     const counts = new Map(); products.forEach(item => counts.set(item.brand, (counts.get(item.brand) ?? 0) + 1));
-    $('#manufacturer-browser').replaceChildren(...[...counts].sort(([a], [b]) => a.localeCompare(b, 'ko')).map(([brand, count]) => { const button = element('button', 'manufacturer-chip'); button.type = 'button'; button.dataset.manufacturer = brand; button.setAttribute('aria-pressed', 'false'); button.append(element('strong', '', brand), element('span', '', count)); button.addEventListener('click', () => { state = { query: '', topCategory: '', brand, categories: [], resource: '', sort: 'brand' }; render(true); }); return button; }));
+    $('#manufacturer-browser').replaceChildren(...[...counts].sort(([a], [b]) => a.localeCompare(b, 'ko')).map(([brand, count]) => { const button = element('button', 'manufacturer-chip'); button.type = 'button'; button.dataset.manufacturer = brand; button.setAttribute('aria-pressed', 'false'); button.append(element('strong', '', brand), element('span', '', count)); button.addEventListener('click', () => { state = { query: '', topCategory: '', brand, series: '', categories: [], resource: '', sort: 'brand' }; render(true); }); return button; }));
   }
 
-  const submitSearch = value => { state = { ...state, query: value.trim(), topCategory: '', brand: '', categories: [] }; ui.suggestions.hidden = true; render(true); };
+  const submitSearch = value => { state = { ...state, query: value.trim(), topCategory: '', brand: '', series: '', categories: [] }; ui.suggestions.hidden = true; render(true); };
   $('#hero-search-form').addEventListener('submit', event => { event.preventDefault(); submitSearch(ui.search.value); });
   $('#header-search-form').addEventListener('submit', event => { event.preventDefault(); submitSearch(ui.globalSearch.value); });
   ui.search.addEventListener('input', () => { ui.globalSearch.value = ui.search.value; renderSuggestions(); });
@@ -227,14 +262,14 @@ if (typeof document !== 'undefined') {
   ui.search.addEventListener('keydown', event => { const options = [...ui.suggestions.querySelectorAll('.suggestion')]; if (!options.length) return; if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); activeSuggestion = (activeSuggestion + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length; options.forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion))); options[activeSuggestion].focus(); } else if (event.key === 'Escape') { ui.suggestions.hidden = true; ui.search.setAttribute('aria-expanded', 'false'); } });
   ui.suggestions.addEventListener('keydown', event => { const options = [...ui.suggestions.querySelectorAll('.suggestion')]; const current = options.indexOf(document.activeElement); if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); const next = (current + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length; options[next].focus(); } else if (event.key === 'Escape') { ui.search.focus(); ui.suggestions.hidden = true; } });
   ui.resultSearch.addEventListener('input', () => { state.query = ui.resultSearch.value; render(); });
-  ui.brand.addEventListener('change', () => { state.brand = ui.brand.value; render(); });
+  ui.brand.addEventListener('change', () => { state.brand = ui.brand.value; state.series = ''; render(); });
   ui.categories.addEventListener('change', () => { state.categories = [...ui.categories.querySelectorAll('input:checked')].map(input => input.value); render(); });
   ui.resource.addEventListener('change', () => { state.resource = ui.resource.value; render(); });
   ui.sort.addEventListener('change', () => { state.sort = ui.sort.value; render(); });
-  $('#filter-clear').addEventListener('click', () => { state = { ...state, brand: '', categories: [], resource: '', sort: 'relevance' }; render(); });
-  $('#clear').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
-  $('#empty-reset').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
-  addEventListener('popstate', () => { state = parseExploreState(location.search); setFacets(); render(); restoreScroll(); });
+  $('#filter-clear').addEventListener('click', () => { state = { ...state, brand: '', series: '', categories: [], resource: '', sort: 'relevance' }; render(); });
+  $('#clear').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', series: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
+  $('#empty-reset').addEventListener('click', () => { state = { query: '', topCategory: '', brand: '', series: '', categories: [], resource: '', sort: 'relevance' }; render(); scrollTo({ top: 0, behavior: 'smooth' }); });
+  addEventListener('popstate', () => { state = parseExploreState(location.search); render(); restoreScroll(); });
   addEventListener('pagehide', saveScroll);
 
   try {
@@ -248,6 +283,6 @@ if (typeof document !== 'undefined') {
     products = combinePublicCatalog(data.filter(item => item.kind === 'equipment'), rtcomIndex);
     await loadSearchIndex(products, combinedCatalogSource(catalogRaw, rtcomRaw));
     $('#equipment-total').textContent = products.length.toLocaleString('ko-KR'); $('#brand-total').textContent = `${new Set(products.map(item => item.brand)).size}개 제조사`;
-    renderDiscovery(); setFacets(); render(); if (hasExploration()) restoreScroll();
+    renderDiscovery(); render(); if (hasExploration()) restoreScroll();
   } catch (error) { ui.error.hidden = false; ui.error.textContent = error.message; ui.workspace.hidden = false; ui.resultCount.textContent = '목록을 불러오지 못했습니다.'; }
 }

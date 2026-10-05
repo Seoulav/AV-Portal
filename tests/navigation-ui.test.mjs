@@ -57,17 +57,18 @@ test('detail search enrichment excludes unresolved specifications and connectors
 });
 
 test('manufacturer and category suggestions start a new compatible exploration', () => {
-  const current = { query: 'camera', topCategory: 'audio', brand: 'Yamaha', categories: ['Mixer'], resource: 'detail', sort: 'brand' };
+  const current = { query: 'camera', topCategory: 'audio', brand: 'Yamaha', series: 'qmc', categories: ['Mixer'], resource: 'detail', sort: 'brand' };
   assert.deepEqual(stateForSuggestion(current, { type: '제조사', value: 'Sony' }), {
-    query: '', topCategory: '', brand: 'Sony', categories: [], resource: '', sort: 'brand'
+    query: '', topCategory: '', brand: 'Sony', series: '', categories: [], resource: '', sort: 'brand'
   });
   assert.deepEqual(stateForSuggestion(current, { type: '카테고리', value: 'Camera' }), {
-    query: '', topCategory: '', brand: '', categories: ['Camera'], resource: '', sort: 'relevance'
+    query: '', topCategory: '', brand: '', series: '', categories: ['Camera'], resource: '', sort: 'relevance'
   });
+  assert.equal(stateForSuggestion(current, { type: '제품', value: 'BRC-AM7' }).series, '');
 });
 
 test('explore state round-trips through URL parameters', () => {
-  const state = { query: 'DM7', topCategory: 'audio', brand: 'Yamaha', categories: ['Audio', 'Mixer'], resource: 'detail', sort: 'brand' };
+  const state = { query: 'DM7', topCategory: 'audio', brand: 'Yamaha', series: '', categories: ['Audio', 'Mixer'], resource: 'detail', sort: 'brand' };
   const params = serializeExploreState(state);
   assert.deepEqual(parseExploreState(params), state);
 });

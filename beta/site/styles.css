@@ -54,6 +54,8 @@ section[id] { scroll-margin-top: 100px; }
 .manufacturer-chip strong { font-size: 12px; font-weight: 700; }
 .manufacturer-chip span { display: grid; place-items: center; min-width: 23px; min-height: 23px; padding: 0 4px; border-radius: var(--pg-r-pill); background: white; color: var(--pg-accent-2); font-size: 11px; font-weight: 700; }
 .manufacturer-chip:hover, .manufacturer-chip[aria-pressed="true"] { border-color: var(--pg-accent); background: var(--pg-accent); color: white; }
+.series-browser { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 17px; }
+.series-browser[hidden], .filters[hidden], .results-head[hidden], .cards[hidden] { display: none; }
 .workspace { margin-bottom: 20px; }
 .workspace[hidden] { display: none; }
 .result-context { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--pg-line); }

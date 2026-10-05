@@ -25,7 +25,7 @@ assert.deepEqual((await readdir(new URL('samples/h5-layers/', site))).sort(), ['
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
 assert.deepEqual((await readdir(new URL('vendor/pdfjs/', site))).sort(), ['LICENSE', 'VERSION.txt', 'pdf.min.mjs', 'pdf.worker.min.mjs']);
 assert.deepEqual((await readdir(new URL('fonts/', site))).sort(), ['OFL.txt', 'PretendardVariable.woff2']);
-assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['brand-links.mjs', 'distributor-links.mjs', 'pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'rtcom-adapter.mjs', 'search-index.mjs']);
+assert.deepEqual((await readdir(new URL('shared/', site))).sort(), ['brand-links.mjs', 'brand-series.mjs', 'distributor-links.mjs', 'pdf-viewer.css', 'pdf-viewer.mjs', 'pg.css', 'rtcom-adapter.mjs', 'search-index.mjs']);
 const fontBytes = await readFile(new URL('fonts/PretendardVariable.woff2', site));
 assert.equal(fontBytes.subarray(0, 4).toString('ascii'), 'wOF2');
 assert.match(await readFile(new URL('fonts/OFL.txt', site), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/);
