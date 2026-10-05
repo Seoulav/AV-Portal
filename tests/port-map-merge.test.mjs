@@ -9,7 +9,7 @@ import { beforeW032Product } from './w032-history.mjs';
 const root = new URL('../', import.meta.url);
 const read = async path => readFile(new URL(path, root), 'utf8');
 const products = await Promise.all((await readdir(new URL('beta/site/detail/data/', root)))
-  .filter(name => name.endsWith('.json')).map(async name => ({ name, raw: beforeW032Product(JSON.parse(await read(`beta/site/detail/data/${name}`)), name.slice(0, -5)) })));
+  .filter(name => name.endsWith('.json')).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
 
 class Node {
   constructor(tag, text = '') { this.tag = tag; this.ownText = String(text); this.children = []; this.className = ''; }
@@ -58,7 +58,8 @@ test('03 visibility follows selected content; map numbers never use io indices',
   }
   const withFlow = products.filter(({ raw }) => prepareProductDetail(raw).enhancements.signalFlow);
   // W-20261004-015 adds the five BSS pilot flows without changing 02 card selection.
-  assert.equal(withFlow.length, 9);
+  assert.equal(products.filter(({ name, raw }) => prepareProductDetail(beforeW032Product(raw, name.slice(0, -5))).enhancements.signalFlow).length, 9);
+  assert.equal(withFlow.length, 11);
   assert.ok(withFlow.every(({ raw }) => selectSection03Content(prepareProductDetail(raw).enhancements)?.type === 'signal-flow'));
   assert.equal(selectSection03Content({}), null);
 });

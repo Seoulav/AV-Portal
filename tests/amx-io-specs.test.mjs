@@ -1,3 +1,4 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
@@ -7,7 +8,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { beforeBssW04004Raw } from './bss-w04004-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
-import { readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeW04021Uploads } from './document-lock-history.mjs';
@@ -160,7 +161,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug),slug);
+    const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug),slug),slug),slug),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)
       : jblW03010Slug(slug) ? beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug) ? beforeBssW03011(JSON.parse(raw),slug) : null;

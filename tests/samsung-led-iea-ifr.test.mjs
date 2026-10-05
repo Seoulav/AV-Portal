@@ -1,9 +1,10 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw, beforeW024Catalog } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { filterCatalog } from '../beta/site/app.js';
 import { prepareProductDetail, visibleDetailCards } from '../prototype/brc-am7/product-detail-model.mjs';
@@ -59,7 +60,7 @@ test('three exact workbook models retain their own facts and omit unsupported co
 test('LED cabinet addition changes only the three new products and keeps the private workbook offline', () => {
   const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5))).sort();
   assert.equal(files.length, 247);
-  const digests = files.map(file => [file, sha(beforeW024Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)))]);
+  const digests = files.map(file => [file, sha(beforeW024Raw(beforeW032Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '02769b62612aacaee971e39f4a7783469415c2a8a4aa8280830b4e4e4f499083');
   const catalog = read('beta/site/catalog.json');
   assert.equal(catalog.length, 257);

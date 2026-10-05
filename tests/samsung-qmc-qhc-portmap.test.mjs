@@ -1,10 +1,11 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { prepareEnhancements as publicPrepare } from '../beta/site/detail/detail-enhancements.mjs';
 import { prepareEnhancements as prototypePrepare } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { portMapGeometry } from '../prototype/brc-am7/detail-enhancement-view.mjs';
@@ -75,7 +76,7 @@ test('other 235 product JSON and all 51 unchanged maps keep their baseline conte
   const mapHash = createHash('sha256');
   let maps = 0;
   for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name)).sort()) {
-    const source = beforeW024Raw(beforeBssAlignmentRaw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'),file.slice(0,-5)),file.slice(0,-5));
+    const source = beforeW024Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0,-5)),file.slice(0,-5)),file.slice(0,-5));
     const current = JSON.parse(source);
     if (!selected.has(file.slice(0, -5))) otherHash.update(file).update('\0').update(source);
     if (current.portMap && !selected.has(file.slice(0, -5))) {

@@ -1,9 +1,10 @@
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
-// Earlier work tests protect their then-current baseline. W-032 deliberately
-// changes only these camera JSON files and adds four PDF mirrors; compare the
-// preserved pre-W-032 bytes when replaying those historical assertions.
-const cameraSlugs = new Set(['brc-am7', 'srg-a40', 'srg-x40uh', 'rm-ip10', 'rm-ip500']);
+// Historical assertions retain their original hashes. Undo only the W-032
+// document edits and new flows at those assertions, using the actual current
+// product as input. Every other field must pass through to the old hash.
+const approved = JSON.parse(readFileSync(new URL('./fixtures/w032-approved.json', import.meta.url), 'utf8'));
 const mirrorFiles = new Set([
   'sony-brc-am7-helpguide-ko.pdf',
   'sony-srg-a40-a12-manual-ko.pdf',
@@ -11,14 +12,44 @@ const mirrorFiles = new Set([
   'sony-rm-ip500-manual-ko.pdf'
 ]);
 
-export function beforeW032Raw(raw, slug) {
-  return cameraSlugs.has(slug)
-    ? readFileSync(new URL(`./fixtures/w032-before/${slug}.json`, import.meta.url), 'utf8').replace(/\r\n/g, '\n')
-    : raw;
-}
+const hasOwn = (object, key) => Object.hasOwn(object, key);
+const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW032Product(product, slug) {
-  return cameraSlugs.has(slug) ? JSON.parse(beforeW032Raw('', slug)) : product;
+  const after = approved[slug];
+  if (!after) return structuredClone(product);
+  const before = JSON.parse(readFileSync(new URL(`./fixtures/w032-before/${slug}.json`, import.meta.url), 'utf8'));
+  const prior = structuredClone(product);
+  const added = after.addedDocumentSha256 ? 1 : 0;
+  if (prior.documents.length !== after.documentsLength) {
+    throw new Error(`${slug}: unexpected W-032 document count`);
+  }
+  if (added) {
+    if (sha(prior.documents[0]) !== after.addedDocumentSha256) throw new Error(`${slug}: added document changed`);
+    prior.documents.shift();
+  }
+  for (const { index, keys, sha256 } of after.changedDocuments) {
+    const oldRow = before.documents[index];
+    const currentRow = prior.documents[index];
+    if (sha(keys.map(key => [key, hasOwn(currentRow, key), currentRow[key] ?? null])) !== sha256) {
+      throw new Error(`${slug}: approved document ${index} fields changed`);
+    }
+    for (const key of keys) {
+      if (hasOwn(oldRow, key)) currentRow[key] = oldRow[key];
+      else delete currentRow[key];
+    }
+  }
+  if (hasOwn(after, 'signalFlowSha256')) {
+    if (sha(prior.signalFlow) !== after.signalFlowSha256) throw new Error(`${slug}: approved signalFlow changed`);
+    if (hasOwn(before, 'signalFlow')) prior.signalFlow = before.signalFlow;
+    else delete prior.signalFlow;
+  }
+  return prior;
+}
+
+export function beforeW032Raw(raw, slug) {
+  if (!approved[slug]) return raw;
+  return JSON.stringify(beforeW032Product(JSON.parse(raw), slug), null, 2) + (raw.endsWith('\n') ? '\n' : '');
 }
 
 export function beforeW032Mirrors(mirrors) {

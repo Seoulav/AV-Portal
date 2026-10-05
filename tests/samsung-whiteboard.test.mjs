@@ -1,3 +1,4 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
@@ -8,7 +9,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
-import { readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeWinstarW04016Uploads } from './winstar-w04016-history.mjs';
 import { beforeW04021Uploads } from './document-lock-history.mjs';
@@ -141,7 +142,7 @@ test('every other detail JSON retains its pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug);
+    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug),slug),slug),slug);
     const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),null,2)+'\n' : raw;
     hash.update(name).update('\0').update(historical);
   }

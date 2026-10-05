@@ -1,10 +1,11 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import {beforeBssAlignment} from './bss-alignment-history.mjs';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements, enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeSamsungW04011Raw } from './samsung-w04011-history.mjs';
@@ -74,7 +75,7 @@ test('other 237 product JSON files and the four approved flows remain byte-for-b
   // Git stores LF; Windows checkouts may materialize CRLF. Compare the same
   // published text on both platforms without weakening the content snapshot.
   for (const file of files) if (!targets.includes(file.slice(0, -5)))
-    digest.update(file).update(beforeW024Raw(beforeSamsungW04011Raw(readFileSync(new URL(file, directory), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)));
+    digest.update(file).update(beforeW024Raw(beforeSamsungW04011Raw(beforeW032Raw(readFileSync(new URL(file, directory), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)));
   assert.equal(digest.digest('hex'), '1df0881cc382b08fb1d031dbe5d925c4a44287a649598cd708003c6ac8348a33');
   const original = {
     'aquilon-rs1': 'da98ff1d4c6e1fbf2a18c807d5e27c7895d3e56d0482a4da77246908d6855e93',

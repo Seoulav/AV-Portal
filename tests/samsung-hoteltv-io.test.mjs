@@ -1,10 +1,11 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {shureW04003Slug} from './shure-w04003-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from './w032-history-fs.mjs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import {beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
@@ -71,10 +72,10 @@ test('all other detail JSON files retain their pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = file.slice(0, -5);
-    const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(file, dir), 'utf8'),slug),slug),slug)),slug), slug), slug),slug),slug),slug),slug),slug);
+    const historical = beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeSamsung115ManualSpecs(beforeSamsungWhiteboard(beforeHarmanW03014(JSON.parse(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(file, dir), 'utf8'), slug),slug),slug),slug)),slug), slug), slug),slug),slug),slug),slug),slug);
     const bytes = slug === 'lh115qhfebgxkr' || ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr'].includes(slug) || amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug)
       ? JSON.stringify(historical, null, 2) + '\n'
-      : beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug);
+      : beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), slug),slug),slug),slug);
     hash.update(file).update('\0').update(bytes);
   }
   assert.equal(hash.digest('hex'), evidence.otherDetailJsonSha256);
