@@ -1,0 +1,526 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "IE020A-E",
+  "model": "LH020IEAELS",
+  "series": "IEA-E",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "LED Signage"
+  ],
+  "english": "IE020A-E is a Samsung IEA-E indoor LED cabinet. The cabinet requires a separately selected controller for system operation.",
+  "korean": "IE020A-E은 삼성 IEA-E 실내용 LED 캐비닛이다. 표에는 캐비닛 사양과 컨트롤러 종류가 별도로 기재돼 있으며, 컨트롤러는 이 제품에 포함된 단자로 해석하지 않는다.",
+  "verificationSummary": "사용자 제공 운영라인업 표의 IEA 시트 K열에서 IE020A-E (LH020IEAELS) 사양을 직접 대조했다. 원본 영업 자료는 공개하지 않는다. 제품 사진과 캐비닛 단자 수량은 미확인이다.",
+  "packageStatus": "PARTIAL",
+  "overview": "IE020A-E은 IEA-E 시리즈의 실내용 LED 캐비닛이다. 픽셀 피치 2.0 ㎜, 캐비닛 해상도 480 x 270 pixels, 밝기 - / 600 nit, 캐비닛 크기 960 x 540 x 79.5 ㎜가 사용자 제공 운영라인업 표에 적혀 있다. 컨트롤러가 별도 항목으로 기재돼 있으므로 그 단자를 캐비닛 단자로 옮기지 않았다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미게시",
+      "language": "언어 미확인",
+      "note": "사용자 제공 영업 원본은 비공개로 보존"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "PARTIAL",
+      "title": "삼성전자 대한민국 비즈니스 LED 사이니지 목록",
+      "language": "ko",
+      "note": "개별 국내 모델 페이지 미확인",
+      "url": "https://www.samsung.com/sec/business/led-signage/"
+    }
+  ],
+  "features": [
+    {
+      "text": "IE020A-E은 IEA-E 실내용 LED 캐비닛이다.",
+      "source": "S1"
+    },
+    {
+      "text": "픽셀 피치 2.0 ㎜, 캐비닛 해상도 480 x 270 pixels이며 VXT 항목은 Yes로 기재돼 있다.",
+      "source": "S1"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Physical",
+      "name": "픽셀 피치",
+      "value": "2.0 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "LED 구성(Pixel Configuration)",
+      "value": "1 red, 1 green, 1 blue",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "캐비닛 해상도",
+      "value": "480 x 270 pixels",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "다이오드 유형",
+      "value": "SMD 3-in-1 1515 (GOB)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(캐비닛, 가로x높이x깊이)",
+      "value": "960 x 540 x 79.5 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "모듈 구성(가로x세로)",
+      "value": "4 x 3",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "12.4 (㎏/Cabinet) / 23.9 (kg/㎡)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "밝기(최대)",
+      "value": "600 nit",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "4,000:1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "HDR 호환성",
+      "value": "HDR10 / HDR10+ support / AI Picture",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(수평)",
+      "value": "150°",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(수직)",
+      "value": "150°",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "비트 뎁스",
+      "value": "16 bit (Internal processing 18bit)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도(기본값)",
+      "value": "6,500K ± 500K",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도(설정값)",
+      "value": "2,800 ~ 10,000K (use S-Box)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "Video Rate",
+      "value": "50/60 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전원 범위",
+      "value": "100~240 VAC, 50/60 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비량(최대)",
+      "value": "341 (W/㎡) / 177 (W/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비량(일반)",
+      "value": "228 (W/㎡) / 118 (W/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "발열량(최대)",
+      "value": "1,165 (BTU/㎡) / 604 (BTU/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "발열량(일반)",
+      "value": "777 (BTU/㎡) / 403 (BTU/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "리프레시 레이트",
+      "value": "3,840 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도 / 습도",
+      "value": "0°C~40°C / 10~80%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도 / 습도",
+      "value": "-20°C~45°C / 5~95%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "IP 등급",
+      "value": "IP20",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "LED 수명",
+      "value": "100,000 hours",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "컨트롤러",
+      "value": "CS4F",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "연결 방식",
+      "value": "Copper (CS4F)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC",
+      "value": "Class A",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "서비스 방향",
+      "value": "Front",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "운영체제",
+      "value": "Tizen",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "MagicINFO",
+      "value": "Yes",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player Support",
+      "value": "Yes",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "센서",
+      "value": "Temperature",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "부속품",
+      "value": "Frame kit",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "박스 크기(가로x높이x깊이)",
+      "value": "1,119 x 206 x 699 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "포장 무게",
+      "value": "18.1 kg",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Installation",
+      "name": "곡면 설치(오목 / 볼록)",
+      "value": "12000R",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Installation",
+      "name": "천장 / 경사 설치",
+      "value": "Up to Forward 90º (Ceiling)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Installation",
+      "name": "회전 설치",
+      "value": "Yes (90º clockwise)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "S1",
+      "name": "사용자 제공 LED 운영라인업 스펙정리_서울영상 송부.xlsx",
+      "scope": "IEA!K열: IE020A-E (LH020IEAELS), 사양 7~52행 및 각주 54~56행. 영업 원본 미게시. SHA-256 C6F1B0153EAE4911AF8F6AC2A28FB61A7FEAD24DB9F13C86B08D24B61B6D056E."
+    },
+    {
+      "code": "P",
+      "name": "삼성전자 대한민국 비즈니스 LED 사이니지 시리즈 목록",
+      "url": "https://www.samsung.com/sec/business/led-signage/",
+      "scope": "개별 국내 모델 페이지·모델 코드가 확인되는 사진 미확인. 사양 행의 근거로 사용하지 않음."
+    }
+  ],
+  "issues": [
+    {
+      "code": "IMAGE-MISSING",
+      "status": "MISSING",
+      "title": "제품 이미지 미확보",
+      "detail": "대상 모델 코드에 일치하는 공식 게시 사진을 확인하지 못했다."
+    },
+    {
+      "code": "IO-MISSING",
+      "status": "MISSING",
+      "title": "캐비닛 단자 수량 미기재",
+      "detail": "제공된 표는 별도 S-Box 컨트롤러 정보와 캐비닛 사양을 구분하지만, 캐비닛 연결 단자의 물리 개수는 적지 않았다."
+    }
+  ],
+  "presentation": {
+    "sourceProductLabel": "삼성 LED 사이니지 시리즈 목록 ↗",
+    "galleryRightsBadge": "MISSING",
+    "galleryRights": "대상 모델의 게시 제품 이미지는 아직 확보되지 않았다.",
+    "specIntro": "사용자 제공 운영라인업 표 IEA 시트 K열의 모델별 값을 표기합니다.",
+    "ioIntro": "캐비닛 단자 종류와 수량이 자료에 없어 비워 두었습니다.",
+    "supplementalNote": "원본 영업 자료는 게시하지 않았습니다. 별도 컨트롤러 단자를 캐비닛 단자로 추정하지 않았습니다.",
+    "footerNote": "Samsung IE020A-E · 사용자 제공 운영라인업 표 기준",
+    "visualVariant": "missing-product-images"
+  },
+  "subtitle": "IEA-E · 실내용 LED 캐비닛",
+  "lead": "**IE020A-E LED 캐비닛**은 IEA-E 시리즈의 2.0 ㎜ 모델이다. 사용자 제공 운영라인업 표에 캐비닛 크기 960 x 540 x 79.5 ㎜와 VXT 지원이 적혀 있다.",
+  "keyFacts": [
+    {
+      "label": "픽셀 피치",
+      "value": "2.0 ㎜",
+      "unit": ""
+    },
+    {
+      "label": "밝기 · 최대",
+      "value": "600 nit",
+      "unit": ""
+    },
+    {
+      "label": "명암비",
+      "value": "4,000:1",
+      "unit": ""
+    },
+    {
+      "label": "캐비닛 해상도",
+      "value": "480 x 270 pixels",
+      "unit": ""
+    }
+  ]
+}

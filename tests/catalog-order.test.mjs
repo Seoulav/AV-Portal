@@ -18,10 +18,10 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
     ['Hotel TV', ['hg43u800fnfxkr', 'hg50u800fnfxkr', 'hg65u800fnfxkr']],
     ['Business TV', ['lh43behhlbfxkr']],
     ['Whiteboard', ['lh55wmfwbgcxkr', 'lh75wmfwlgcxkr']],
-    ['LED Signage', ['mp008f', 'mp012f', 'mp016f']]
+    ['LED Signage', ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']]
   ];
   const samsung = catalog.filter(item => item.brand === 'Samsung');
-  assert.equal(samsung.length, 22);
+  assert.equal(samsung.length, 25);
   assert.deepEqual(slugs(filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' })), expected.flatMap(([, group]) => group));
   for (const [index, [group, names]] of expected.entries()) {
     for (const slug of names) {

@@ -1,0 +1,523 @@
+{
+  "manufacturer": "Samsung",
+  "productName": "IF015R-M",
+  "model": "LH015IFRILS",
+  "series": "IFR-M",
+  "itemType": "PRODUCT",
+  "categories": [
+    "사이니지",
+    "Display",
+    "LED Signage"
+  ],
+  "english": "IF015R-M is a Samsung IFR-M indoor LED cabinet. The cabinet requires a separately selected controller for system operation.",
+  "korean": "IF015R-M은 삼성 IFR-M 실내용 LED 캐비닛이다. 표에는 캐비닛 사양과 컨트롤러 종류가 별도로 기재돼 있으며, 컨트롤러는 이 제품에 포함된 단자로 해석하지 않는다.",
+  "verificationSummary": "사용자 제공 운영라인업 표의 IFR 시트 N열에서 IF015R-M (LH015IFRILS) 사양을 직접 대조했다. 원본 영업 자료는 공개하지 않는다. 제품 사진과 캐비닛 단자 수량은 미확인이다.",
+  "packageStatus": "PARTIAL",
+  "overview": "IF015R-M은 IFR-M 시리즈의 실내용 LED 캐비닛이다. 픽셀 피치 1.5 ㎜, 캐비닛 해상도 640 x 360 pixels, 밝기 1,700 nit / 1,000 nit, 캐비닛 크기 960 x 540 x 79.5 ㎜가 사용자 제공 운영라인업 표에 적혀 있다. 컨트롤러가 별도 항목으로 기재돼 있으므로 그 단자를 캐비닛 단자로 옮기지 않았다.",
+  "images": [],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "reason": "대상 모델 코드와 일치하는 삼성 공식 게시 사진 미확인"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "MISSING",
+      "title": "Specification 미게시",
+      "language": "언어 미확인",
+      "note": "사용자 제공 영업 원본은 비공개로 보존"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미게시",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "PARTIAL",
+      "title": "삼성전자 대한민국 비즈니스 LED 사이니지 목록",
+      "language": "ko",
+      "note": "개별 국내 모델 페이지 미확인",
+      "url": "https://www.samsung.com/sec/business/led-signage/"
+    }
+  ],
+  "features": [
+    {
+      "text": "IF015R-M은 IFR-M 실내용 LED 캐비닛이다.",
+      "source": "S1"
+    },
+    {
+      "text": "픽셀 피치 1.5 ㎜, 캐비닛 해상도 640 x 360 pixels이며 VXT 항목은 Yes로 기재돼 있다.",
+      "source": "S1"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Physical",
+      "name": "픽셀 피치",
+      "value": "1.5 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "LED 구성(Pixel Configuration)",
+      "value": "1 red, 1 green, 1 blue",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "캐비닛 해상도",
+      "value": "640 x 360 pixels",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "다이오드 유형",
+      "value": "MIP1010",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(캐비닛, 가로x높이x깊이)",
+      "value": "960 x 540 x 79.5 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "모듈 구성(가로x세로)",
+      "value": "4 x 3",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "11.8 (㎏/Cabinet) / 22.8 (kg/㎡)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "밝기(피크 / 최대)",
+      "value": "1,700 nit / 1,000 nit",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "명암비",
+      "value": "12,000:1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(수평)",
+      "value": "170°",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "시야각(수직)",
+      "value": "170°",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "비트 뎁스",
+      "value": "16 bit (Internal processing 18bit)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도(기본값)",
+      "value": "6,500K",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "색온도(설정값)",
+      "value": "2,800 ~ 10,000K (use S-Box)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "Video Rate",
+      "value": "50/60 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전원 범위",
+      "value": "100~240 VAC, 50/60 Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비량(최대)",
+      "value": "367 (W/㎡) / 190 (W/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전력 소비량(일반)",
+      "value": "203 (W/㎡) / 105 (W/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "발열량(최대)",
+      "value": "1,251 (BTU/㎡) / 648 (BTU/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "발열량(일반)",
+      "value": "691 (BTU/㎡) / 358 (BTU/Cabinet)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "리프레시 레이트",
+      "value": "3,840Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "비주얼 리프레시 레이트",
+      "value": "7,680Hz",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "전원 이중화",
+      "value": "Yes (Dual Power)",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도 / 습도",
+      "value": "0°C~40°C / 10~80%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "보관 온도 / 습도",
+      "value": "-20°C~45°C / 5~95%RH",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "IP 등급",
+      "value": "IP20",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "LED 수명",
+      "value": "100,000 hours",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Connectivity",
+      "name": "컨트롤러",
+      "value": "CS4B / CS4F",
+      "unit": "",
+      "condition": "CS4F: 자료 작성 당시 2026-07 호환 예정 · 이후 확보 미확인",
+      "source": "S1",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Connectivity",
+      "name": "연결 방식",
+      "value": "Optical (CS4B) / Copper (CS4F)",
+      "unit": "",
+      "condition": "CS4F: 자료 작성 당시 2026-07 호환 예정 · 이후 확보 미확인",
+      "source": "S1",
+      "verification": "REVIEW REQUIRED"
+    },
+    {
+      "group": "Certification",
+      "name": "안전 규격",
+      "value": "62368-1, 60950-1",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Certification",
+      "name": "EMC",
+      "value": "Class A",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "서비스 방향",
+      "value": "Front",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "운영체제",
+      "value": "Tizen",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "MagicINFO",
+      "value": "Yes",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "VXT Player Support",
+      "value": "Yes",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Software",
+      "name": "센서",
+      "value": "Temperature",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "박스 크기(가로x높이x깊이)",
+      "value": "1,119 x 206 x 699 ㎜",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Package",
+      "name": "포장 무게",
+      "value": "17.5 kg",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Installation",
+      "name": "곡면 설치(오목)",
+      "value": "12000R",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Installation",
+      "name": "천장 / 경사 설치",
+      "value": "Yes",
+      "unit": "",
+      "condition": "",
+      "source": "S1",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [],
+  "sources": [
+    {
+      "code": "S1",
+      "name": "사용자 제공 LED 운영라인업 스펙정리_서울영상 송부.xlsx",
+      "scope": "IFR!N열: IF015R-M (LH015IFRILS), 사양 8~52행 및 각주 54~57행. 영업 원본 미게시. SHA-256 C6F1B0153EAE4911AF8F6AC2A28FB61A7FEAD24DB9F13C86B08D24B61B6D056E. 컨트롤러·연결 방식 각주의 “CS4F 호환 2026-07 확보 예정”은 자료 작성 당시 계획이며 이후 실제 확보 여부를 확인한 국내 자료는 없음."
+    },
+    {
+      "code": "P",
+      "name": "삼성전자 대한민국 비즈니스 LED 사이니지 시리즈 목록",
+      "url": "https://www.samsung.com/sec/business/led-signage/",
+      "scope": "개별 국내 모델 페이지·모델 코드가 확인되는 사진 미확인. 사양 행의 근거로 사용하지 않음."
+    }
+  ],
+  "issues": [
+    {
+      "code": "IMAGE-MISSING",
+      "status": "MISSING",
+      "title": "제품 이미지 미확보",
+      "detail": "대상 모델 코드에 일치하는 공식 게시 사진을 확인하지 못했다."
+    },
+    {
+      "code": "IO-MISSING",
+      "status": "MISSING",
+      "title": "캐비닛 단자 수량 미기재",
+      "detail": "제공된 표는 별도 S-Box 컨트롤러 정보와 캐비닛 사양을 구분하지만, 캐비닛 연결 단자의 물리 개수는 적지 않았다."
+    },
+    {
+      "code": "CS4F-COMPATIBILITY",
+      "status": "REVIEW REQUIRED",
+      "title": "CS4F 호환 확보 여부 미확인",
+      "detail": "원본 표의 2026년 7월 확보 예정은 자료 작성 당시 계획이다. 그 이후 호환이 실제 확보됐는지는 국내 후속 자료로 확인되지 않았다."
+    }
+  ],
+  "presentation": {
+    "sourceProductLabel": "삼성 LED 사이니지 시리즈 목록 ↗",
+    "galleryRightsBadge": "MISSING",
+    "galleryRights": "대상 모델의 게시 제품 이미지는 아직 확보되지 않았다.",
+    "specIntro": "사용자 제공 운영라인업 표 IFR 시트 N열의 모델별 값을 표기합니다.",
+    "ioIntro": "캐비닛 단자 종류와 수량이 자료에 없어 비워 두었습니다.",
+    "supplementalNote": "원본 영업 자료는 게시하지 않았습니다. 별도 컨트롤러 단자를 캐비닛 단자로 추정하지 않았습니다.",
+    "footerNote": "Samsung IF015R-M · 사용자 제공 운영라인업 표 기준",
+    "visualVariant": "missing-product-images"
+  },
+  "subtitle": "IFR-M · 실내용 LED 캐비닛",
+  "lead": "**IF015R-M LED 캐비닛**은 IFR-M 시리즈의 1.5 ㎜ 모델이다. 사용자 제공 운영라인업 표에 캐비닛 크기 960 x 540 x 79.5 ㎜와 VXT 지원이 적혀 있다.",
+  "keyFacts": [
+    {
+      "label": "픽셀 피치",
+      "value": "1.5 ㎜",
+      "unit": ""
+    },
+    {
+      "label": "밝기 · 피크 / 최대",
+      "value": "1,700 nit / 1,000 nit",
+      "unit": ""
+    },
+    {
+      "label": "명암비",
+      "value": "12,000:1",
+      "unit": ""
+    },
+    {
+      "label": "전원 이중화",
+      "value": "Yes (Dual Power)",
+      "unit": ""
+    }
+  ]
+}

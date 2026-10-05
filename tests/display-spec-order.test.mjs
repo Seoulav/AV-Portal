@@ -1,4 +1,5 @@
 import { isW029Name } from './w029-history.mjs';
+import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
@@ -39,7 +40,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   for(const [slug,expected] of Object.entries(evidence.untouched)){
     assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
-  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file)).length,242);
+  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file)).length,242);
 });
 
 test('all 54 published Samsung key facts keep a sourced FOUND or VERIFIED row',()=>{

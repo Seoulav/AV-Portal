@@ -39,9 +39,9 @@ test('the four exact Korean models have their own specifications and the correct
 
 test('Samsung brand order expands within the existing QHC and QMC groups', () => {
   const catalog = read('beta/site/catalog.json');
-  assert.equal(catalog.length, 254);
+  assert.equal(catalog.length, 257);
   const samsung = filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' });
-  assert.equal(samsung.length, 22);
+  assert.equal(samsung.length, 25);
   assert.deepEqual(samsung.filter(item => item.brandSort.group === 'QHC').map(item => item.slug),
     ['lh43qhcebgcxkr', 'lh55qhcebgcxkr', 'lh65qhcebgcxkr', 'lh75qhcebgcxkr']);
   assert.deepEqual(samsung.filter(item => item.brandSort.group === 'QMC').map(item => item.slug),
@@ -50,10 +50,11 @@ test('Samsung brand order expands within the existing QHC and QMC groups', () =>
 
 test('all 243 pre-existing product JSON files and catalog entries remain unchanged', () => {
   const dir = new URL('beta/site/detail/data/', root);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5))).sort();
+  const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5))).sort();
   assert.equal(files.length, 243);
   const digests = files.map(file => [file, sha(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'))]);
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
-  const previous = read('beta/site/catalog.json').filter(item => !newSlugs.has(item.slug));
+  const previous = read('beta/site/catalog.json').filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug));
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
 });

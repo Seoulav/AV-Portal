@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 286개
-- Product Detail: 279개
+- 공개 장비: 289개
+- Product Detail: 282개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1758,6 +1758,24 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.samsung.com/sec/business/smart-signage/qmc-series/LH65QMCEBGCXKR/
   상세: https://seoulav.github.io/AV-Portal/detail/?product=lh65qmcebgcxkr
+
+- 제품: Samsung IE015A-E
+  분류: 사이니지 | Display | LED Signage
+  종류: 장비
+  제품군 링크: https://www.samsung.com/sec/business/led-signage/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ie015a-e
+
+- 제품: Samsung IE020A-E
+  분류: 사이니지 | Display | LED Signage
+  종류: 장비
+  제품군 링크: https://www.samsung.com/sec/business/led-signage/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ie020a-e
+
+- 제품: Samsung IF015R-M
+  분류: 사이니지 | Display | LED Signage
+  종류: 장비
+  제품군 링크: https://www.samsung.com/sec/business/led-signage/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=if015r-m
 
 - 제품: RTCOM XDM Series
   분류: 영상 | Video | Modular Matrix

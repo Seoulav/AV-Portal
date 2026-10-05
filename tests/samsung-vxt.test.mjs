@@ -1,4 +1,5 @@
 import { isW029Name } from './w029-history.mjs';
+import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -46,7 +47,7 @@ test('only the nine authorized Samsung products receive one consistent, source-b
 });
 
 test('the other 233 products, protected target fields and prior source/specification records remain unchanged', () => {
-  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name)).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name)).sort();
   assert.equal(names.length, 242);
   const others = names.filter(name => !targets.includes(name.slice(0, -5)));
   assert.equal(others.length, 233);

@@ -45,6 +45,10 @@ export const group1Images = {
   mp008f: [],
   mp012f: [],
   mp016f: [],
+  // W-030 cabinets: exact-model official images are not confirmed.
+  'ie015a-e': [],
+  'ie020a-e': [],
+  'if015r-m': [],
   gs728tppv3: [
     image('Main', 'gs728tppv3-main.webp', 'NETGEAR GS728TPPv3를 전면 포트 쪽 오른편에서 비스듬히 본 모습. 좌측 NETGEAR 로고와 Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번)와 SFP 4개(25~28번), 우측 상단 \'GS728TPP\' 인쇄와 우측면 통풍구가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/85d72c30-1043-423a-b850-389bc941cc20/GS728TPPv3-Product-Image', '2000x1596', '1653x354', 'VERIFIED'),
     image('Front', 'gs728tppv3-front.webp', 'NETGEAR GS728TPPv3 전면 패널. Power·Fan·PoE Max·LED Mode LED, Reset·Select·Factory Defaults 버튼, USB 포트, PoE+ RJ45 24개(1~24번, \'PoE+ 30 Watt/Port max.\' 표기)와 SFP 4개(25~28번), 우측 상단 \'GS728TPP\' 인쇄가 보인다', 'NETGEAR', 'GS728TPPv3', 'https://assets.netgear.com/transform/dafcb0bc-7cb6-4c2c-8953-e25da6588e9c/GS728TPPv3-Product-Image', '2000x1596', '1608x283', 'VERIFIED'),
