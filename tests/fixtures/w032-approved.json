@@ -1,0 +1,74 @@
+{
+  "brc-am7": {
+    "documentsLength": 9,
+    "changedDocuments": [
+      {
+        "index": 7,
+        "keys": [
+          "status",
+          "note"
+        ],
+        "sha256": "2931a825bd99c70c93e7404e637fea487a5169ed8889cb042486992e63c6a254"
+      }
+    ],
+    "signalFlowSha256": "113061805e2011355afe7a2675df2117618e795ec52a657d7c67c9f652abcd93"
+  },
+  "srg-a40": {
+    "documentsLength": 6,
+    "addedDocumentSha256": "8158141f31219d85bc34f7e04ef536305aeef3a779ad1a576705f5b9495acc3a",
+    "changedDocuments": [
+      {
+        "index": 0,
+        "keys": [
+          "type",
+          "title",
+          "note"
+        ],
+        "sha256": "d2ee9abb5ee4bb7b99fb4f9530a64fc6eb07eaf7a40d88141c423968386b562c"
+      }
+    ],
+    "signalFlowSha256": "b60916727f5420f0f375170ce8da48ecdd8b2c673c9774d3c2ef0e6e4143b6f9"
+  },
+  "srg-x40uh": {
+    "documentsLength": 6,
+    "addedDocumentSha256": "783c5ffab7f6db632fa3e731e3e4f416e92c01209c0e1a1352c2168bc7808b05",
+    "changedDocuments": [
+      {
+        "index": 0,
+        "keys": [
+          "type",
+          "title",
+          "note"
+        ],
+        "sha256": "e4a61dc1d410f44aa3d83a12cc17b5c328ad7af2ef39fa557a3c7a8527cbdccc"
+      }
+    ]
+  },
+  "rm-ip10": {
+    "documentsLength": 5,
+    "changedDocuments": [
+      {
+        "index": 0,
+        "keys": [
+          "note"
+        ],
+        "sha256": "b6b1f38a23fbcbf39046ff1c8d579cbc216d02dea93dc52c12af5c00b9f1f9e5"
+      }
+    ]
+  },
+  "rm-ip500": {
+    "documentsLength": 6,
+    "addedDocumentSha256": "cb78131eb828120c75734f22f1e9734a8cde8b02d6f2704e94fca2ff90e96167",
+    "changedDocuments": [
+      {
+        "index": 0,
+        "keys": [
+          "type",
+          "title",
+          "note"
+        ],
+        "sha256": "51693bf4bc5be21949e1589c7f10df8ea2f00abe9e421ef7e11a2659db6a5dfb"
+      }
+    ]
+  }
+}

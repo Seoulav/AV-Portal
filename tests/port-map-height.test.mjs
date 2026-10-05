@@ -1,3 +1,4 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
@@ -31,7 +32,7 @@ test('only tall maps receive an automatic 900px geometry and no product data cha
   const inventory=createHash('sha256');
   for(const file of products){
     const slug=file.slice(0,-5);
-    inventory.update(file).update('\0').update(beforeDisplayW04013Raw(beforeBssW04015Raw(beforeBssAlignmentRaw(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug));
+    inventory.update(file).update('\0').update(beforeDisplayW04013Raw(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(file,details),'utf8').replace(/\r\n/g,'\n'), slug),slug),slug),slug));
   }
   assert.equal(products.length,242);
   assert.equal(inventory.digest('hex'),'43ff5a44d72b1f5683cfb92960906e7250c80d8c4fdc21d39115e6c450cb0b2b');

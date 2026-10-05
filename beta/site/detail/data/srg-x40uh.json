@@ -99,9 +99,17 @@
     {
       "type": "User Manual",
       "status": "FOUND",
-      "title": "SRG-X40UH/H40UH Operating Instructions",
+      "title": "SRG-X40UH/H40UH 사용 설명서 (한국어)",
+      "language": "ko",
+      "note": "소니 공식 한국어 설명서 · 표지 적용 모델 확인",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5045/ebda64a5f9ccf3723c9d6b6ee8c54866/50452787M.pdf"
+    },
+    {
+      "type": "User Manual (English)",
+      "status": "FOUND",
+      "title": "SRG-X40UH/H40UH Operating Instructions (영문)",
       "language": "en",
-      "note": "영문 사용 설명서(2023-04-27 게시, 5-045-278-11). 한국어판은 확인되지 않음. 매뉴얼 목록: https://pro.sony/ue_US/support-resources/srg-x40uh/manual",
+      "note": "기존 영문 설명서 보존",
       "url": "https://www.sony.com/electronics/support/res/manuals/5045/91c0657815a5ea3c6b7c19f6d7f7f580/50452781M.pdf"
     },
     {

@@ -8,3 +8,9 @@ beta/site/vendor/pdfjs/LICENSE -text
 beta/site/vendor/pdfjs/VERSION.txt -text
 beta/site/vendor/pdfjs/pdf.min.mjs -text
 beta/site/vendor/pdfjs/pdf.worker.min.mjs -text
+beta/site/vendor/pdfjs/cmaps/*.bcmap -text -diff
+beta/site/vendor/pdfjs/standard_fonts/*.pfb -text -diff
+beta/site/vendor/pdfjs/standard_fonts/*.ttf -text -diff
+# Upstream licenses contain intentional trailing spaces and blank final lines.
+beta/site/vendor/pdfjs/cmaps/LICENSE -text whitespace=-trailing-space,-blank-at-eof
+beta/site/vendor/pdfjs/standard_fonts/LICENSE_* -text whitespace=-trailing-space,-blank-at-eof

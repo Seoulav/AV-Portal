@@ -1,3 +1,4 @@
+import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import {beforeBssAlignment} from './bss-alignment-history.mjs';
@@ -46,7 +47,7 @@ test('G1–G5-qualified maps render with exact PDF pages, model images and origi
       assert.ok(Number.isFinite(item.y) && item.y >= 0 && item.y <= e.image.height);
     }
     delete product.portMap;
-    assert.equal(sha(JSON.stringify(product)),e.coreSha256,slug+' original values');
+    assert.equal(sha(JSON.stringify(beforeW032Product(product, slug))),e.coreSha256,slug+' original values');
     assert.ok(/^[a-f0-9]{64}$/.test(e.previousFileSha256),slug+' pre-change Git bytes');
   }
   assert.equal(proof.products['rio3224-d3'].modelPages[0],5);
@@ -77,31 +78,33 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
   for (const slug of excluded){const product=read(`beta/site/detail/data/${slug}.json`);assert.equal(product.portMap,undefined);assert.equal(prepareEnhancements(product).portMap,null);}
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length,13);
   assert.equal(Object.keys(proof.preservedProducts).length,227);
+  const priorRead = path => beforeW032Product(read(path), path.split('/').at(-1).slice(0, -5));
+  const priorRaw = path => beforeW032Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5));
   for(const [file,hash] of Object.entries(proof.preservedProducts)){
     // W-20261002-005 updates only Samsung provenance; its new audit locks the current rows.
     const later = samsung.products[file.slice(0,-5)];
     if (later) assert.equal(later.previousFileSha256,hash,file+' prior approved Git bytes');
     else if (crownW03009Slug(file.slice(0,-5))) {
-      const previous = beforeCrownW03009(beforeCrownW03013(beforeHarmanW03014(read('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5)),file.slice(0,-5));
+      const previous = beforeCrownW03009(beforeCrownW03013(beforeHarmanW03014(priorRead('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5)),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-009 Git bytes');
     } else if (jblW03010Slug(file.slice(0,-5))) {
-      const previous = beforeJblW03010(beforeHarmanW03014(read('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
+      const previous = beforeJblW03010(beforeHarmanW03014(priorRead('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-010 Git bytes');
     } else if (bssW03011Slug(file.slice(0,-5))) {
-      const previous = beforeBssW03011(beforeHarmanW03014(read('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
+      const previous = beforeBssW03011(beforeHarmanW03014(priorRead('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-011 Git bytes');
     } else if (amxW03008Slug(file.slice(0,-5))) {
-      const previous = beforeAmxW03008(beforeHarmanW03014(read('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
+      const previous = beforeAmxW03008(beforeHarmanW03014(priorRead('beta/site/detail/data/'+file),file.slice(0,-5)),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(JSON.stringify(previous,null,2)+'\n')),hash,file+' pre-W-008 Git bytes');
     } else if (harmanW03014Slug(file.slice(0,-5))) {
-      const prior=beforeHarmanW03014Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
+      const prior=beforeHarmanW03014Raw(priorRaw('beta/site/detail/data/'+file),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-014 Git bytes');
     } else if(shureW04003Slug(file.slice(0,-5))) {
-      const prior=beforeShureW04003Raw(bytes('beta/site/detail/data/'+file).toString('utf8').replace(/\r\n/g,'\n'),file.slice(0,-5));
+      const prior=beforeShureW04003Raw(priorRaw('beta/site/detail/data/'+file),file.slice(0,-5));
       assert.equal(textSha(Buffer.from(prior)),hash,file+' pre-W-003 Git bytes');
     } else if(bssW04004Slugs.has(file.slice(0,-5))) {
-      assert.equal(textSha(Buffer.from(beforeBssW04004Raw(bytes('beta/site/detail/data/'+file).toString('utf8'),file.slice(0,-5)))),hash,file+' pre-W-004 Git bytes');
-    } else assert.equal(textSha(bytes('beta/site/detail/data/'+file)),hash,file+' protected Git bytes');
+      assert.equal(textSha(Buffer.from(beforeBssW04004Raw(priorRaw('beta/site/detail/data/'+file),file.slice(0,-5)))),hash,file+' pre-W-004 Git bytes');
+    } else assert.equal(textSha(Buffer.from(priorRaw('beta/site/detail/data/'+file))),hash,file+' protected Git bytes');
   }
 });
 

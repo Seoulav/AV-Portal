@@ -1,3 +1,5 @@
+import { beforeW032Raw } from './w032-history.mjs';
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
@@ -120,7 +122,7 @@ test('one intact 70-page Korean manual is uploaded for only the two whiteboards'
   const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 2);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
-  assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), evidence.manifest.mirrorsSha256);
   const added = historicalUploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 2);
   assert.deepEqual(added.map(entry => entry.slug).sort(), slugs);
   for (const entry of added) {
@@ -140,7 +142,7 @@ test('every other detail JSON retains its pre-change Git LF bytes', () => {
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug);
+    const raw = beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug),slug),slug),slug);
     const historical = amxW03008Slug(slug) || crownW03009Slug(slug) || jblW03010Slug(slug) || bssW03011Slug(slug) || harmanW03014Slug(slug) || shureW04003Slug(slug) ? JSON.stringify(beforeCrownW03013(beforeBssW03011(beforeJblW03010(beforeCrownW03009(beforeAmxW03008(beforeHarmanW03014(JSON.parse(raw),slug),slug),slug),slug),slug),slug),null,2)+'\n' : raw;
     hash.update(name).update('\0').update(historical);
   }

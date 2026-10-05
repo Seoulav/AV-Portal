@@ -887,6 +887,38 @@
       "bytes": 65017,
       "fetchedAt": "2026-09-29T05:13:19.518Z",
       "sourceHost": "www.yealink.com"
+    },
+    {
+      "url": "https://helpguide.sony.net/rc/brc-am7/v1/ko/print.pdf",
+      "file": "sony-brc-am7-helpguide-ko.pdf",
+      "sha256": "da4c6d70fb8e335465289b0bf77f0736538af7a80a1537886e6b066abb836f7c",
+      "bytes": 13348567,
+      "fetchedAt": "2026-10-05T05:31:06.627Z",
+      "sourceHost": "helpguide.sony.net"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/82d64740afd650735dcc4eddaceb7dd0/50531547M.pdf",
+      "file": "sony-srg-a40-a12-manual-ko.pdf",
+      "sha256": "275d1e5fb746ba32e64e08254c0a7ee8af79fbc910cb5cbd1c22ea9b5d1c28ad",
+      "bytes": 8237231,
+      "fetchedAt": "2026-10-05T05:31:06.640Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://www.sony.com/electronics/support/res/manuals/5045/ebda64a5f9ccf3723c9d6b6ee8c54866/50452787M.pdf",
+      "file": "sony-srg-x40uh-h40uh-manual-ko.pdf",
+      "sha256": "a9311f2f805d238f883d393eeff63dd3bcfd42ff57016328a03c403f44d49fb5",
+      "bytes": 3866435,
+      "fetchedAt": "2026-10-05T05:31:06.647Z",
+      "sourceHost": "www.sony.com"
+    },
+    {
+      "url": "https://pro.sony/support/res/manuals/4696/d632d46a37933e2a8373a2b69f7cd12e/46962577M.pdf",
+      "file": "sony-rm-ip500-manual-ko.pdf",
+      "sha256": "e05e28539b920845019dc7648b4f25734ca53fa6a60c29d845cf371c716d8508",
+      "bytes": 5073056,
+      "fetchedAt": "2026-10-05T05:31:06.661Z",
+      "sourceHost": "pro.sony"
     }
   ],
   "uploads": [

@@ -1,3 +1,4 @@
+import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import test from 'node:test';
@@ -39,7 +40,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   const brightness=read('lh115qhfebgxkr').specifications.filter(row=>row.name.startsWith('밝기'));
   assert.deepEqual(brightness.map(row=>[row.name,row.value,row.verification,row.source]),[['밝기(최대)','1000','FOUND','S5']]);
   for(const [slug,expected] of Object.entries(evidence.untouched)){
-    assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW024Raw(normalized(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
+    assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW024Raw(normalized(beforeW032Raw(readFileSync(new URL(`${slug}.json`,folder),'utf8'), slug)),slug),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
   assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file)).length,242);
 });

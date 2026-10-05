@@ -1,3 +1,5 @@
+import { beforeW032Raw } from './w032-history.mjs';
+import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
@@ -126,7 +128,7 @@ test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest
   const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 28);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
-  assert.equal(sha(JSON.stringify(manifest.mirrors)), evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), evidence.manifest.mirrorsSha256);
   const added = historicalUploads.slice(evidence.manifest.uploadCount, evidence.manifest.uploadCount + 28);
   const files = [...new Set(added.map(item => item.file))];
   assert.equal(files.length, 15);
@@ -159,7 +161,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   const hash = createHash('sha256');
   for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
-    const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'),slug),slug),slug),slug);
+    const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug),slug),slug),slug),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)
       : jblW03010Slug(slug) ? beforeJblW03010(JSON.parse(raw),slug)
       : bssW03011Slug(slug) ? beforeBssW03011(JSON.parse(raw),slug) : null;

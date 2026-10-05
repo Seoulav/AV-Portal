@@ -1,3 +1,4 @@
+import { beforeW032Mirrors, beforeW032Raw } from './w032-history.mjs';
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
@@ -25,7 +26,7 @@ const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];
 
 test('six model-gated supplied PDFs serve only five BSS products without replacing existing mirrors',()=>{
-  assert.equal(sha(JSON.stringify(manifest.mirrors)),evidence.manifest.mirrorsSha256);
+  assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))),evidence.manifest.mirrorsSha256);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))),evidence.manifest.uploadsSha256);
   const added=historicalUploads.slice(evidence.manifest.uploadCount);
   assert.equal(added.length,6);
@@ -119,7 +120,7 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
   }
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name)&&!slugs.includes(name.slice(0,-5))).sort();
   const digest=sha(names.map(name=>{
-    const slug=name.slice(0,-5),raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug);
+    const slug=name.slice(0,-5),raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeW032Raw(bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug);
     return `${name}\0${crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(JSON.parse(raw),slug),null,2)+'\n':raw}`;
   }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'non-BSS product JSON changed');

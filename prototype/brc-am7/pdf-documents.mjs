@@ -16,7 +16,7 @@ function trustedRtcomPdf(url) {
 export function resolveDocumentAction(document, manifest) {
   if (!document?.url) return null;
   const copy = (manifest?.mirrors ?? []).find(entry => entry.url === document.url && validName(entry.file));
-  if (copy) return { kind: 'local', file: `../docs/${copy.file}`, sourceUrl: document.url };
+  if (copy) return { kind: 'local', file: `../../beta/site/docs/${copy.file}`, sourceUrl: document.url };
   if (trustedRtcomPdf(document.url)) return { kind: 'remote-pdf', file: document.url, sourceUrl: document.url };
   return { kind: 'external', url: document.url };
 }

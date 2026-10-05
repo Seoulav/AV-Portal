@@ -99,9 +99,17 @@
     {
       "type": "User Manual",
       "status": "FOUND",
-      "title": "SRG-A40/A12 Operating Instructions",
+      "title": "SRG-A40/A12 사용 설명서 (한국어)",
+      "language": "ko",
+      "note": "소니 공식 한국어 설명서 · 표지 적용 모델 확인",
+      "url": "https://www.sony.com/electronics/support/res/manuals/5053/82d64740afd650735dcc4eddaceb7dd0/50531547M.pdf"
+    },
+    {
+      "type": "User Manual (English)",
+      "status": "FOUND",
+      "title": "SRG-A40/A12 Operating Instructions (영문)",
       "language": "en",
-      "note": "영문 사용 설명서(2026-04-13 게시, 114쪽). 한국어판은 확인되지 않음. 매뉴얼 목록: https://pro.sony/ue_US/support-resources/srg-a40/manual",
+      "note": "기존 영문 설명서 보존",
       "url": "https://www.sony.com/electronics/support/res/manuals/5053/7964e8723a6c3c92e14125ad162509e6/50531541M.pdf"
     },
     {
@@ -853,5 +861,135 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지",
     "footerNote": "SONY SRG-A40 · 공식 출처 기반"
+  },
+  "signalFlow": {
+    "type": "camera",
+    "description": "촬영 영상을 HDMI와 SDI로 출력합니다. HDMI는 최대 3840×2160/29.97p, SDI는 3G/HD이며 4K 출력을 지원하지 않습니다.",
+    "inputs": [
+      {
+        "id": "scene",
+        "label": "촬영 장면",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "mic",
+        "label": "MIC 3.5mm 입력",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 5
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "hdmi",
+        "label": "HDMI OUT · 최대 4K",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "SDI와 동시 출력"
+      },
+      {
+        "id": "sdi",
+        "label": "SDI OUT · 3G/HD",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "caption": "4K 출력 미지원"
+      }
+    ],
+    "processes": [
+      {
+        "id": "capture",
+        "kind": "capture",
+        "label": "영상 캡처·처리",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "scene",
+        "to": "capture",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "hdmi",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "sdi",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "mic",
+        "to": "capture",
+        "signal": "audio",
+        "label": "MIC 오디오 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 5
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상"
+      },
+      {
+        "signal": "audio",
+        "label": "오디오 입력"
+      }
+    ],
+    "notes": [
+      "HDMI와 SDI는 동시 출력 가능하나, SDI의 4K 출력은 미지원입니다."
+    ]
   }
 }

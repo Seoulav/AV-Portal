@@ -10,7 +10,7 @@ const manifest = {
 
 test('mirrored PDF resolves to local view/download while retaining original URL', () => {
   assert.deepEqual(resolveDocumentAction({ url: source }, manifest), {
-    kind: 'local', file: '../docs/camera-user-manual-aabbcc.pdf', sourceUrl: source
+    kind: 'local', file: '../../beta/site/docs/camera-user-manual-aabbcc.pdf', sourceUrl: source
   });
 });
 
