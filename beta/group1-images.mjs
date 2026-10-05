@@ -310,25 +310,43 @@ export const group1Images = {
     image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED'),
   ],
   'nx-1200': [
-    image('Main', 'nx1200-main.webp', "AMX NX-1200 컨트롤러 이미지(전면·측면에 모델명 'NX-1200' 표기)", 'AMX', 'NX-1200', 'https://adn.harmanpro.com/productattachment/3636/product_attachment/vert_medium_2x-2077089418107c053c25f6d7f573c47a.webp', '900×298', '900×298', 'VERIFIED')
+    image('Main', 'nx1200-main.webp', "AMX NX-1200 컨트롤러 이미지(전면·측면에 모델명 'NX-1200' 표기)", 'AMX', 'NX-1200', 'https://adn.harmanpro.com/productattachment/3636/product_attachment/vert_medium_2x-2077089418107c053c25f6d7f573c47a.webp', '900×298', '900×298', 'VERIFIED'),
+    image("Rear", "nx-1200-rear.webp", "AMX NX-1200 후면 단자 패널과 인쇄된 모델명", "AMX", "NX-1200", "https://adn.harmanpro.com/product_attachments/product_attachments/3640_1729008746/NX-1200_Rear_x_large_2x.webp", "4096x1306", "4096x1306", "VERIFIED", "Rear · 제조사 공식 이미지 · 도면 95-2106-01 대조"),
   ],
   'nx-2200': [
-    image('Main', 'nx2200-main.webp', "AMX NX-2200 컨트롤러 이미지(전면·측면에 모델명 'NX-2200' 표기)", 'AMX', 'NX-2200', 'https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp', '900×177', '900×177', 'VERIFIED')
+    image('Main', 'nx2200-main.webp', "AMX NX-2200 컨트롤러 이미지(전면·측면에 모델명 'NX-2200' 표기)", 'AMX', 'NX-2200', 'https://adn.harmanpro.com/productattachment/4404/product_attachment/vert_medium_2x-28f5fe41b1751e80410a41f001a184a4.webp', '900×177', '900×177', 'VERIFIED'),
+    image("Rear", "nx-2200-rear.webp", "AMX NX-2200 후면 단자 패널과 인쇄된 모델명", "AMX", "NX-2200", "https://adn.harmanpro.com/product_attachments/product_attachments/4408_1729010256/NX-2200_Rear_x_large_2x.webp", "4096x789", "4096x789", "VERIFIED", "Rear · 제조사 공식 이미지 · 도면 95-2106-02 대조"),
   ],
   'nx-3200': [
-    image('Main', 'nx3200-main.webp', "AMX NX-3200 컨트롤러 이미지(전면·측면에 모델명 'NX-3200' 표기)", 'AMX', 'NX-3200', 'https://adn.harmanpro.com/productattachment/4413/product_attachment/vert_medium_2x-86148d69acc35fb5a6de8440292e50c8.webp', '894×178', '894×178', 'VERIFIED')
+    image('Main', 'nx3200-main.webp', "AMX NX-3200 컨트롤러 이미지(전면·측면에 모델명 'NX-3200' 표기)", 'AMX', 'NX-3200', 'https://adn.harmanpro.com/productattachment/4413/product_attachment/vert_medium_2x-86148d69acc35fb5a6de8440292e50c8.webp', '894×178', '894×178', 'VERIFIED'),
+    image("Rear", "nx-3200-rear.webp", "AMX NX-3200 후면 단자 패널과 인쇄된 모델명", "AMX", "NX-3200", "https://adn.harmanpro.com/product_attachments/product_attachments/4417_1729010306/NX-3200_Rear_x_large_2x.webp", "4096x769", "4096x769", "VERIFIED", "Rear · 제조사 공식 이미지 · 도면 95-2106-03 대조"),
   ],
   'varia-100': [
-    image('Main', 'varia100-main.webp', 'AMX VARIA-100 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-100', 'https://adn.harmanpro.com/productattachment/11307/product_attachment/vert_medium_2x-5ffd7c598db880c51902abd7ce7ed8ca.webp', '1500×1124', '1500×1124', 'FOUND')
+    image('Main', 'varia100-main.webp', 'AMX VARIA-100 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-100', 'https://adn.harmanpro.com/productattachment/11307/product_attachment/vert_medium_2x-5ffd7c598db880c51902abd7ce7ed8ca.webp', '1500×1124', '1500×1124', 'FOUND'),
+    image("Other", "varia-100-other-left-front.webp", "AMX VARIA-100 제품 단독 좌측 전면 각도", "AMX", "VARIA-100", "https://adn.harmanpro.com/product_attachments/product_attachments/11308_1728956292/05._AMX_VARIA100_LeftFront_3_4_x_large_2x.webp", "3145x3072", "3145x3072", "FOUND", "Other · 좌측 전면 · 제조사 공식 이미지"),
+    image("Other", "varia-100-other-right-front.webp", "AMX VARIA-100 제품 단독 우측 전면 각도", "AMX", "VARIA-100", "https://adn.harmanpro.com/product_attachments/product_attachments/11309_1728956256/06._AMX_VARIA100_LeftRight_3_4_x_large_2x.webp", "3620x3072", "3620x3072", "FOUND", "Other · 우측 전면 · 제조사 공식 이미지"),
+    image("Rear", "varia-100-rear.webp", "AMX VARIA-100 제품 단독 후면", "AMX", "VARIA-100", "https://adn.harmanpro.com/product_attachments/product_attachments/11313_1728956225/10._AMX_VARIA100_Rear_%281%29_x_large_2x.webp", "4096x3070", "4096x3070", "FOUND", "Rear · 제조사 공식 이미지"),
   ],
   'varia-80': [
-    image('Main', 'varia80-main.webp', 'AMX VARIA-80 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-80', 'https://adn.harmanpro.com/productattachment/11343/product_attachment/vert_medium_2x-750e4f76640b57bf2614b868d022c13b.webp', '1500×1124', '1500×1124', 'FOUND')
+    image('Main', 'varia80-main.webp', 'AMX VARIA-80 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-80', 'https://adn.harmanpro.com/productattachment/11343/product_attachment/vert_medium_2x-750e4f76640b57bf2614b868d022c13b.webp', '1500×1124', '1500×1124', 'FOUND'),
+    image("Other", "varia-80-other-left-front.webp", "AMX VARIA-80 제품 단독 좌측 전면 각도", "AMX", "VARIA-80", "https://adn.harmanpro.com/product_attachments/product_attachments/11273_1728956373/03._AMX_VARIA-80_FrontLeft_3-4_x_large_2x.webp", "3250x3072", "3250x3072", "FOUND", "Other · 좌측 전면 · 제조사 공식 이미지"),
+    image("Other", "varia-80-other-right-front.webp", "AMX VARIA-80 제품 단독 우측 전면 각도", "AMX", "VARIA-80", "https://adn.harmanpro.com/product_attachments/product_attachments/11342_1728956093/03._New_AMX_VARIA80_FrontRight_3_4_x_large_2x.webp", "2923x3072", "2923x3072", "FOUND", "Other · 우측 전면 · 제조사 공식 이미지"),
+    image("Rear", "varia-80-rear.webp", "AMX VARIA-80 제품 단독 후면", "AMX", "VARIA-80", "https://adn.harmanpro.com/product_attachments/product_attachments/11347_1728956077/08._AMX_VARIA80_Rear_x_large_2x.webp", "4096x3071", "4096x3071", "FOUND", "Rear · 제조사 공식 이미지"),
   ],
   'varia-sl80': [
-    image('Main', 'variasl80-main.webp', 'AMX VARIA-SL80 벽면 매립형 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL80', 'https://adn.harmanpro.com/productattachment/11287/product_attachment/vert_medium_2x-100a351b0438a37795b807f7728193a9.webp', '1500×1125', '1500×1125', 'FOUND')
+    image('Main', 'variasl80-main.webp', 'AMX VARIA-SL80 벽면 매립형 터치 패널 이미지(전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL80', 'https://adn.harmanpro.com/productattachment/11287/product_attachment/vert_medium_2x-100a351b0438a37795b807f7728193a9.webp', '1500×1125', '1500×1125', 'FOUND'),
+    image("Other", "varia-sl80-other-left-front.webp", "AMX VARIA-SL80 제품 단독 좌측 전면 각도", "AMX", "VARIA-SL80", "https://adn.harmanpro.com/product_attachments/product_attachments/11289_1728956367/03._AMX_VARIA-SL80_FrontLeft_3-4_x_large_2x.webp", "3451x3072", "3451x3072", "FOUND", "Other · 좌측 전면 · 제조사 공식 이미지"),
+    image("Other", "varia-sl80-other-left.webp", "AMX VARIA-SL80 제품 단독 좌측면", "AMX", "VARIA-SL80", "https://adn.harmanpro.com/product_attachments/product_attachments/11290_1728956349/04._AMX_VARIA-SL80_LeftSide_x_large_2x.webp", "1630x3072", "1630x3072", "FOUND", "Other · 좌측면 · 제조사 공식 이미지"),
+    image("Other", "varia-sl80-other-right-front.webp", "AMX VARIA-SL80 제품 단독 우측 전면 각도", "AMX", "VARIA-SL80", "https://adn.harmanpro.com/product_attachments/product_attachments/11288_1728956367/02._AMX_VARIA-SL80_FrontRight_3-4_x_large_2x.webp", "3250x3072", "3250x3072", "FOUND", "Other · 우측 전면 · 제조사 공식 이미지"),
+    image("Other", "varia-sl80-other-right.webp", "AMX VARIA-SL80 제품 단독 우측면", "AMX", "VARIA-SL80", "https://adn.harmanpro.com/product_attachments/product_attachments/11303_1728956306/05._New_-_AMX_VARIA_SL80_RightSide_x_large_2x.webp", "2118x3072", "2118x3072", "FOUND", "Other · 우측면 · 제조사 공식 이미지"),
+    image("Rear", "varia-sl80-rear.webp", "AMX VARIA-SL80 제품 단독 후면", "AMX", "VARIA-SL80", "https://adn.harmanpro.com/product_attachments/product_attachments/11304_1728956296/06._New_-_AMX_VARIA_SL80_RearStraight_x_large_2x.webp", "4087x3072", "4087x3072", "FOUND", "Rear · 제조사 공식 이미지"),
   ],
   'varia-sl50': [
-    image('Main', 'variasl50-main.webp', 'AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL50', 'https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp', '1136×1600', '1136×1600', 'FOUND')
+    image('Main', 'variasl50-main.webp', 'AMX VARIA-SL50 벽면 매립형 터치 패널 이미지(세로형, 전면에 화면 표시, 측면 LED 라인 확인 가능)', 'AMX', 'VARIA-SL50', 'https://adn.harmanpro.com/productattachment/11295/product_attachment/vert_medium_2x-14f34124943df254442c6a9a7eec0275.webp', '1136×1600', '1136×1600', 'FOUND'),
+    image("Other", "varia-sl50-other-left-front.webp", "AMX VARIA-SL50 제품 단독 좌측 전면 각도", "AMX", "VARIA-SL50", "https://adn.harmanpro.com/product_attachments/product_attachments/11297_1728956327/03._AMX_VARIA-SL50_FrontLeft_3-4_x_large_2x.webp", "1775x3072", "1775x3072", "FOUND", "Other · 좌측 전면 · 제조사 공식 이미지"),
+    image("Other", "varia-sl50-other-left.webp", "AMX VARIA-SL50 제품 단독 좌측면", "AMX", "VARIA-SL50", "https://adn.harmanpro.com/product_attachments/product_attachments/11339_1728956127/04._New_-_AMX_VARIA_SL50_LeftSide_x_large_2x.webp", "1231x3072", "1231x3072", "FOUND", "Other · 좌측면 · 제조사 공식 이미지"),
+    image("Other", "varia-sl50-other-right-front.webp", "AMX VARIA-SL50 제품 단독 우측 전면 각도", "AMX", "VARIA-SL50", "https://adn.harmanpro.com/product_attachments/product_attachments/11296_1728956328/02._AMX_VARIA-SL50_FrontRight_3-4_x_large_2x.webp", "2231x3072", "2231x3072", "FOUND", "Other · 우측 전면 · 제조사 공식 이미지"),
+    image("Rear", "varia-sl50-rear.webp", "AMX VARIA-SL50 제품 단독 후면", "AMX", "VARIA-SL50", "https://adn.harmanpro.com/product_attachments/product_attachments/11350_1728956072/AMX_VARIA_SL50_RearStraight_x_large_2x.webp", "2170x3072", "2170x3072", "FOUND", "Rear · 제조사 공식 이미지"),
   ],
   xsm4216f: [
     image('Main', 'xsm4216f-main.webp', 'NETGEAR XSM4216F(M4250-16XF) 관리형 스위치 전면 및 측면 사시도, 16개의 SFP+ 포트와 NETGEAR 로고가 보인다', 'NETGEAR', 'XSM4216F', 'https://assets.netgear.com/transform/pdp-desktop/d5af8012-43f9-4ec0-81c8-cec3cdc37abb/B6_M4250_16XF_XSM4216F_32', '779x536', '779x536', 'FOUND'),

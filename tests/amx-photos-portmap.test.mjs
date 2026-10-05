@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
+import { beforeW008Product, beforeW008Raw } from './w008-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -123,5 +124,24 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
     delete current.imageStatuses;
     delete current.portMap;
     assert.equal(sha(JSON.stringify(current)), immutable[slug], `${slug}: specifications, I/O, documents and presentation fields`);
+  }
+});
+
+test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
+  for (const slug of Object.keys(productAssets)) {
+    const current = read(`beta/site/detail/data/${slug}.json`);
+    const baseline = beforeW008Raw(JSON.stringify(current, null, 2) + '\n', slug);
+    const altered = structuredClone(current);
+    altered.io = [];
+    assert.deepEqual(beforeW008Product(altered, slug).io, [], `${slug}: current I/O passes through`);
+    assert.notEqual(beforeW008Raw(JSON.stringify(altered, null, 2) + '\n', slug), baseline, `${slug}: old hash catches I/O regression`);
+    const changedImage = structuredClone(current);
+    changedImage.images.at(-1).alt += ' altered';
+    assert.throws(() => beforeW008Product(changedImage, slug), /unexpected W-008 images change/);
+    if (current.portMap) {
+      const changedMap = structuredClone(current);
+      changedMap.portMap.items[0].x1 += 1;
+      assert.throws(() => beforeW008Product(changedMap, slug), /unexpected W-008 portMap change/);
+    }
   }
 });
