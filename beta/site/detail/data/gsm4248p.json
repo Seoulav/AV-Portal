@@ -27,6 +27,20 @@
       "originalSize": "779x536",
       "resolution": "779x536",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "gsm4248p-rear.webp",
+      "alt": "NETGEAR GSM4248P 후면 포트면. 네트워크 포트 묶음이 보이는 제조사 공식 사진",
+      "note": "Rear · 제조사 공식 이미지의 포트면만 크롭",
+      "provider": "NETGEAR",
+      "model": "GSM4248P",
+      "sourceUrl": "https://assets.netgear.com/transform/86b050d1-114c-4fbb-9a79-b5c871f812db/gsm4248p_g2_779x536",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "779x536",
+      "resolution": "555x62",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -42,8 +56,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.netgear.com/kr/business/wired/switches/fully-managed/gsm4248p/"
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/86b050d1-114c-4fbb-9a79-b5c871f812db/gsm4248p_g2_779x536"
     },
     {
       "role": "Perspective",
@@ -329,5 +343,51 @@
     "footerNote": "NETGEAR GSM4248P 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "RJ-45 콘솔",
+        "desc": "RJ45-DB9 콘솔 케이블용 포트. 같은 I/O 행의 USB-C 콘솔과 별도 단자입니다.",
+        "x1": 27,
+        "x2": 51,
+        "y": 25,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "USB-C 콘솔",
+        "desc": "USB Type-C 콘솔 케이블용 포트. 같은 I/O 행의 RJ-45 콘솔과 별도 단자입니다.",
+        "x1": 5,
+        "x2": 18,
+        "y": 48,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "PoE+ RJ-45 ×40",
+        "desc": "1GbE PoE+ RJ-45 40개 묶음.",
+        "x1": 52,
+        "x2": 424,
+        "y": 40,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "SFP ×8",
+        "desc": "1G 광 업링크 SFP 8개.",
+        "x1": 427,
+        "x2": 499,
+        "y": 40,
+        "side": "bottom"
+      }
+    ],
+    "measuredImage": {
+      "file": "gsm4248p-rear.webp",
+      "width": 555,
+      "height": 62
+    }
   }
 }

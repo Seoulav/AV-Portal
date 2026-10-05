@@ -1,3 +1,4 @@
+import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Product } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -64,9 +65,9 @@ test('Crown 26 and all other 210 product JSON files remain unchanged',()=>{
   const names=readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name)).sort();
   const otherNames=names.filter(name=>!targets.includes(name.slice(0,-5)));
   assert.equal(otherNames.length,210);
-  const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(beforeW032Product(read(`beta/site/detail/data/${name}`),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
+  const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(beforeW032Product(beforeW026Product(read(`beta/site/detail/data/${name}`), name.slice(0,-5)), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(sha(JSON.stringify(other)),evidence.otherDetailJsonSha256);
-  const raw=otherNames.map(name=>`${name}\0${beforeShureW04003Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))}`).join('');
+  const raw=otherNames.map(name=>`${name}\0${beforeShureW04003Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), name.slice(0,-5)), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))}`).join('');
   assert.equal(sha(raw),evidence.otherDetailRawSha256);
   assert.equal(other.filter(([,p])=>p.manufacturer==='Crown').length,26);
 });

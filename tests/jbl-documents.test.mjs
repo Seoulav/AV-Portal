@@ -1,3 +1,4 @@
+import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -110,7 +111,7 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x)&&!slugs.includes(x.slice(0,-5))).sort();
   const digest=hash(names.map(name=>{
     const slug=name.slice(0,-5);
-    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), slug),slug),slug),slug),slug);
+    const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);
     return `${name}\0${bssW03011Slug(slug)||crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(beforeBssW03011(JSON.parse(raw),slug),slug),null,2)+'\n':raw}`;
   }).join(''));
   assert.equal(digest,evidence.otherDetailJsonSha256,'JBL之外 JSON changed');

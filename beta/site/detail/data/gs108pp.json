@@ -27,6 +27,20 @@
       "originalSize": "779x536",
       "resolution": "779x536",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Front",
+      "file": "gs108pp-front.webp",
+      "alt": "NETGEAR GS108PP 전면 포트면. RJ-45 8개가 보이는 제조사 공식 사진",
+      "note": "Front · 제조사 공식 이미지의 포트면만 크롭",
+      "provider": "NETGEAR",
+      "model": "GS108PP",
+      "sourceUrl": "https://assets.netgear.com/transform/c75a8a9b-e8e0-4eb3-ad38-dae5c00a2339/GS108pp_productcarousel_7",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "779x536",
+      "resolution": "727x88",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -37,8 +51,8 @@
     },
     {
       "role": "Front",
-      "status": "MISSING",
-      "sourceUrl": "https://www.netgear.com/business/wired/switches/unmanaged/gs108pp/"
+      "status": "FOUND",
+      "sourceUrl": "https://assets.netgear.com/transform/c75a8a9b-e8e0-4eb3-ad38-dae5c00a2339/GS108pp_productcarousel_7"
     },
     {
       "role": "Rear",
@@ -290,5 +304,33 @@
     "footerNote": "NETGEAR GS108PP 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Front",
+    "items": [
+      {
+        "n": 1,
+        "label": "RJ-45 1–4 · PoE+",
+        "desc": "1–4번 1GbE RJ-45 · 데이터 및 PoE+ 연결.",
+        "x1": 233,
+        "x2": 432,
+        "y": 47,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "RJ-45 5–8 · PoE+",
+        "desc": "5–8번 1GbE RJ-45 · 데이터 및 PoE+ 연결.",
+        "x1": 461,
+        "x2": 659,
+        "y": 47,
+        "side": "bottom"
+      }
+    ],
+    "measuredImage": {
+      "file": "gs108pp-front.webp",
+      "width": 727,
+      "height": 88
+    }
   }
 }

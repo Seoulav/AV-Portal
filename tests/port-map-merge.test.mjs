@@ -41,8 +41,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).channelSignal), raw.model);
     }
   }
-  // W-010 adds one photographed map; W-017 adds six manual Diagram maps.
-  assert.deepEqual(counts, { mapIo: 62, ioOnly: 168, neither: 20 }); // W-030 adds three LED products with neither map nor I/O.
+  // W-026 adds seven photographed NETGEAR maps; three LED products still have neither map nor I/O.
+  assert.deepEqual(counts, { mapIo: 69, ioOnly: 161, neither: 20 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {
