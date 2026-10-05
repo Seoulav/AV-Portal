@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 257,
-    "sha256": "357EF2CAF171EAF1D4F01C259C285B09F67C08A7927D903A9A0F3C3CAA8280AC",
+    "count": 265,
+    "sha256": "FF89F97B0D80541F33657883593C0CEB3AF5E4AD93DF8B102A663121CAE5EA93",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -709,8 +709,26 @@
       "specifications": 36,
       "io": 13
     },
+    "hg55u800fnfxkr": {
+      "sha256": "C35A1A31A9B58FB67592D34464BBA74F0767832E568A40B638A921E7B589D559",
+      "features": 6,
+      "specifications": 36,
+      "io": 13
+    },
     "hg65u800fnfxkr": {
       "sha256": "E71C6925BC4851AEDD7E43709E9A95CCDC9EB454EEC3542092071C9301140563",
+      "features": 6,
+      "specifications": 36,
+      "io": 13
+    },
+    "hg75u800fnfxkr": {
+      "sha256": "50786EE0969B5B630854B42FE17E6EF7408B786F23EDA7141EE65FA231BF3189",
+      "features": 6,
+      "specifications": 36,
+      "io": 13
+    },
+    "hg85u800fnfxkr": {
+      "sha256": "A8DF160DF5206F0D54E7E07F56214565A5033AD67E494729E0BB1893584DEE1D",
       "features": 6,
       "specifications": 36,
       "io": 13
@@ -782,9 +800,9 @@
       "io": 9
     },
     "lh43behhlbfxkr": {
-      "sha256": "E2F4AD55C9D90B78BCFDF69C6BE256EBBAB5DC89278938A92873DFF1CABA466B",
+      "sha256": "ECF20204BBB2D0713C92CECCAB38819DF36B16C5225A8FB99A36AF68F1075A98",
       "features": 4,
-      "specifications": 21,
+      "specifications": 22,
       "io": 6
     },
     "lh43qhcebgcxkr": {
@@ -798,6 +816,18 @@
       "features": 7,
       "specifications": 35,
       "io": 9
+    },
+    "lh50behhlbfxkr": {
+      "sha256": "470095E14179D6BD1423AFB11E16620E9AEFE9E201B597D3DFCA9E2DC628A231",
+      "features": 4,
+      "specifications": 22,
+      "io": 6
+    },
+    "lh55behhlbfxkr": {
+      "sha256": "94A6FCC1DCA58852FBFA3458AD937E051119C6FC51B91FC120CDDE4CC8D923FA",
+      "features": 4,
+      "specifications": 22,
+      "io": 6
     },
     "lh55qhcebgcxkr": {
       "sha256": "B2EDBB04DC30875E276F69F85BCB588AB9EDAB2A2CCE1F991145EC94E07164CF",
@@ -829,6 +859,12 @@
       "specifications": 19,
       "io": 9
     },
+    "lh65behhlbfxkr": {
+      "sha256": "B29536F6E34F4AA74EFD5DECD08204C0D1634416DE22FC7208BF85C8DC87101B",
+      "features": 4,
+      "specifications": 22,
+      "io": 6
+    },
     "lh65qhcebgcxkr": {
       "sha256": "598965D5D925E989718F632765B7D01C873F2D0964D681A4266AE5DC459E5E87",
       "features": 3,
@@ -841,6 +877,12 @@
       "specifications": 28,
       "io": 9
     },
+    "lh75behhlbfxkr": {
+      "sha256": "478EAAA43BF1E3C5FD7CA8D32BFEA72D4AC2C4175D029F177A8CE4C30188A402",
+      "features": 4,
+      "specifications": 22,
+      "io": 6
+    },
     "lh75qhcebgcxkr": {
       "sha256": "193312A7661B167D78CED0190608DBC06C39D93BBADA81BFFD045D19B567EA14",
       "features": 6,
@@ -852,6 +894,12 @@
       "features": 7,
       "specifications": 34,
       "io": 9
+    },
+    "lh85behhlbfxkr": {
+      "sha256": "D5A7D3064B8DA9918B6B648C2038BB94003088B5D7067C512261C7B90BA54D3A",
+      "features": 4,
+      "specifications": 22,
+      "io": 6
     },
     "lh85qmcebgcxkr": {
       "sha256": "7BA8F910EAF82F6C12A34FB9C2C54EF6A9DF68928718C5CA2EE96CCCA214C595",

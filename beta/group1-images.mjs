@@ -41,6 +41,15 @@ const unverifiedImage = (role, file, alt, provider, model, sourceUrl, originalSi
 });
 
 export const group1Images = {
+  // W-006: exact-model Samsung pages link these galleries; repeated bytes are identified as series-common imagery.
+  hg55u800fnfxkr: [image("Main", "hg55u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG55U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/21ff3212-558c-4484-b5b7-192f5e195e9b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG55U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  hg75u800fnfxkr: [image("Main", "hg75u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG75U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/d2dc20fb-af1c-4a3d-9300-2b42b057be2c.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG75U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  hg85u800fnfxkr: [image("Main", "hg85u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG85U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/0d396362-4a93-4606-8d6c-48bf0e944193.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG85U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  lh50behhlbfxkr: [image("Main", "lh50behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH50BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/4b92c6d9-1498-4ac6-b7ec-6c0c4272686b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH50BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  lh55behhlbfxkr: [image("Main", "lh55behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH55BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/47d7fea5-ec40-4880-8c64-c6134ab68533.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH55BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  lh65behhlbfxkr: [],
+  lh75behhlbfxkr: [image("Main", "lh75behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH75BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/fca92e0c-9f9a-4567-bf8a-e30be766f846.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH75BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  lh85behhlbfxkr: [image("Main", "lh85behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH85BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/3b2adce4-faa5-462b-a28d-cee9656b7e0b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH85BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
   // The US SKU galleries explicitly name these MPF models. MP012F and MP016F publish identical front-image bytes.
   mp008f: [image('Main', 'mp008f-main.webp', '삼성 MP008F The Wall MPF LED 캐비닛 정면', 'Samsung', 'MP008F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh008mpfaaa-go/gallery/us-led-signage-lh008mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079002?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MP008F SKU 갤러리 정면 이미지. 국내 사양 근거로 사용하지 않음')],
   mp012f: [image('Main', 'mp012f-main.webp', '삼성 The Wall MPF LED 캐비닛 정면. MP012F와 MP016F 갤러리에 공통으로 게시된 이미지', 'Samsung', 'MP012F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh012mpfaaa-go/gallery/us-mpf-571024-lh012mpfaaa-go-550063999?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MPF 제품군 공통 정면 이미지. MP016F 갤러리 원본과 동일하며 모델 전용 실물 사진으로 확정하지 않음')],
@@ -957,6 +966,13 @@ export function applyPublishedImages(product, slug) {
 
 // Library 카드에 쓰는 대표 이미지. group1Images의 파일명 중 하나여야 한다.
 export const cardImages = {
+  hg55u800fnfxkr: 'hg55u800fnfxkr-main.webp',
+  hg75u800fnfxkr: 'hg75u800fnfxkr-main.webp',
+  hg85u800fnfxkr: 'hg85u800fnfxkr-main.webp',
+  lh50behhlbfxkr: 'lh50behhlbfxkr-main.webp',
+  lh55behhlbfxkr: 'lh55behhlbfxkr-main.webp',
+  lh75behhlbfxkr: 'lh75behhlbfxkr-main.webp',
+  lh85behhlbfxkr: 'lh85behhlbfxkr-main.webp',
   mp008f: 'mp008f-main.webp',
   mp012f: 'mp012f-main.webp',
   mp016f: 'mp016f-main.webp',

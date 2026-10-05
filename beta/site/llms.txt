@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 289개
-- Product Detail: 282개
+- 공개 장비: 297개
+- Product Detail: 290개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1776,6 +1776,57 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   제품군 링크: https://www.samsung.com/sec/business/led-signage/
   상세: https://seoulav.github.io/AV-Portal/detail/?product=if015r-m
+
+- 제품: Samsung HG55U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/
+  매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG55U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg55u800fnfxkr
+
+- 제품: Samsung HG75U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/
+  매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG75U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg75u800fnfxkr
+
+- 제품: Samsung HG85U800FNFXKR
+  분류: 사이니지 | Display | Hospitality TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/
+  매뉴얼: https://www.samsungsvc.co.kr/download/view?code=HG85U800FNFXKR
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=hg85u800fnfxkr
+
+- 제품: Samsung LH50BEHHLBFXKR
+  분류: 사이니지 | Display | Business TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH50BEHHLBFXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh50behhlbfxkr
+
+- 제품: Samsung LH55BEHHLBFXKR
+  분류: 사이니지 | Display | Business TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH55BEHHLBFXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh55behhlbfxkr
+
+- 제품: Samsung LH65BEHHLBFXKR
+  분류: 사이니지 | Display | Business TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH65BEHHLBFXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh65behhlbfxkr
+
+- 제품: Samsung LH75BEHHLBFXKR
+  분류: 사이니지 | Display | Business TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH75BEHHLBFXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh75behhlbfxkr
+
+- 제품: Samsung LH85BEHHLBFXKR
+  분류: 사이니지 | Display | Business TV
+  종류: 장비
+  공식 링크: https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH85BEHHLBFXKR/
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=lh85behhlbfxkr
 
 - 제품: RTCOM XDM Series
   분류: 영상 | Video | Modular Matrix

@@ -76,7 +76,7 @@ test('renamed catalog categories preserve home top-category counts and filter me
     ['audio', 116],
     ['video', 62],
     ['camera-conference', 30],
-    ['display-projection', 48], // W-030 adds three LED cabinet products to the current catalog.
+    ['display-projection', 56], // W-006 adds eight television products.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);

@@ -49,5 +49,5 @@ test('MPF cabinets have model-linked official Main photos while unverified LED c
   const imageless = readdirSync(new URL('../beta/site/detail/data/', import.meta.url))
     .filter(file => file.endsWith('.json') && read(`beta/site/detail/data/${file}`).images.length === 0)
     .map(file => file.replace(/\.json$/, '')).sort();
-  assert.deepEqual(imageless, ['ie015a-e', 'ie020a-e', 'if015r-m']);
+  assert.deepEqual(imageless, ['ie015a-e', 'ie020a-e', 'if015r-m', 'lh65behhlbfxkr']);
 });

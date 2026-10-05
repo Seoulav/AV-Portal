@@ -1,3 +1,4 @@
+import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -50,7 +51,7 @@ test('only the nine authorized Samsung products receive one consistent, source-b
 });
 
 test('the other 233 products, protected target fields and prior source/specification records remain unchanged', () => {
-  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name)).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name)).sort();
   assert.equal(names.length, 242);
   const others = names.filter(name => !targets.includes(name.slice(0, -5)));
   assert.equal(others.length, 233);

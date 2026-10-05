@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { beforeW005Product } from './w005-history.mjs';
+import { beforeW006Product, withoutW006Uploads } from './w006-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -34,9 +35,9 @@ test('BEHX-H evidence update leaves other product data and uploaded documents in
     documents: '52b9daaf350c5f45dbe1199767d07315d19342bcfb8e8d4ad2e322a84de5912d',
     issues: 'f8352e13333d06ddbfa932281efe2b0659136b6d642487cb89e9c348b1ed92b1',
   };
-  for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(product[field]), expected, field);
+  for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(product, 'lh43behhlbfxkr')[field]), expected, field);
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(manifest.uploads.length, 110);
+  assert.equal(withoutW006Uploads(manifest.uploads).length, 110);
   assert.equal(manifest.uploads.filter(item => item.locked === true).length, 12);
 });
 
