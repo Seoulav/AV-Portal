@@ -557,7 +557,7 @@ export const group1Images = {
     image('Main', 'hg65u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG65U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
   ],
   lh43behhlbfxkr: [
-    image('Main', 'lh43behhlbfxkr-main.webp', '삼성 LH43BEHHLBFXKR 비즈니스TV 정면 이미지', 'Samsung', 'LH43BEHHLBFXKR', 'https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED', 'Main · 삼성전자 대한민국 비즈니스 공식 제품 페이지 갤러리')
+    image('Main', 'lh43behhlbfxkr-main.webp', '삼성 LH43BEHHLBFXKR 비즈니스TV 정면 이미지', 'Samsung', 'LH43BEHHLBFXKR', 'https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 대한민국 비즈니스 공식 제품 페이지 갤러리')
   ],
   lh32qmcebgcxkr: [
     image('Main', 'lh32qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 80.1cm 정면', 'Samsung', 'LH32QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),

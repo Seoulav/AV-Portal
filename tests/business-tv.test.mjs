@@ -40,6 +40,8 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
   assert.ok(!product.specifications.some(row => /베젤|전면 색상|스탠드 색상|면 보정/.test(row.name) || row.name === '종류'));
   assert.ok(product.keyFacts.length >= 2 && product.keyFacts.length <= 4);
   assert.ok(product.images.some(image => image.role === 'Main' && image.resolution === '1920x1280'));
+  assert.equal(product.images[0].verificationStatus, 'FOUND', 'gallery image has no printed model name');
+  assert.equal(product.imageStatuses.find(item => item.role === 'Main').status, 'FOUND');
   assert.equal(product.portMap, undefined);
   assert.equal(product.signalFlow, undefined);
   const prepared = prepareProductDetail(product);

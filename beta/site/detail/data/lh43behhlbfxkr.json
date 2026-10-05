@@ -19,14 +19,14 @@
       "model": "LH43BEHHLBFXKR",
       "sourceUrl": "https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$",
       "officialSource": true,
-      "verificationStatus": "VERIFIED",
+      "verificationStatus": "FOUND",
       "originalSize": "1920x1280",
       "resolution": "1920x1280",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
-    { "role": "Main", "status": "VERIFIED", "sourceUrl": "https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$" },
+    { "role": "Main", "status": "FOUND", "sourceUrl": "https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$" },
     { "role": "Front", "status": "MISSING", "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH43BEHHLBFXKR/" },
     { "role": "Rear", "status": "MISSING", "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH43BEHHLBFXKR/" },
     { "role": "Perspective", "status": "MISSING", "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH43BEHHLBFXKR/" },
