@@ -81,7 +81,7 @@ try {
   console.log('W001 browser: Page enabled');
   await send('Runtime.enable');
   console.log('W001 browser: Runtime enabled');
-  await send('Page.addScriptToEvaluateOnNewDocument', { source: "window.__pageShows=[]; addEventListener('pageshow',event=>window.__pageShows.push({persisted:event.persisted,url:location.href}));" });
+  await send('Page.addScriptToEvaluateOnNewDocument', { source: "window.__pageShows=[]; addEventListener('pageshow',event=>window.__pageShows.push({persisted:event.persisted,url:location.href,series:document.querySelector('#series-browser [aria-pressed=\"true\"]')?.dataset.series ?? '',cards:document.querySelectorAll('#cards .card').length,scroll:scrollY}));" });
   console.log('W001 browser: pageshow listener ready');
   await mkdir(output, { recursive: true });
   for (const width of [1280, 390]) {
@@ -181,7 +181,14 @@ try {
   await new Promise(done => setTimeout(done, 350));
   const afterDetail = await metrics();
   assert.ok(Math.abs(afterDetail.scroll - beforeDetail.scroll) < 80, `scroll restore ${beforeDetail.scroll} → ${afterDetail.scroll}`);
-  console.log(`detail back: series=qmc, ${qmcCount} cards, scroll ${beforeDetail.scroll}→${afterDetail.scroll}, bfcache persisted=${afterDetail.shows.some(show => show.persisted)}`);
+  const restoredShow = afterDetail.shows.find(show => show.persisted);
+  if (restoredShow) {
+    assert.ok(restoredShow.url.includes('series=qmc'), 'bfcache URL');
+    assert.equal(restoredShow.series, 'qmc', 'bfcache selected series');
+    assert.equal(restoredShow.cards, qmcCount, 'bfcache cards');
+    assert.ok(Math.abs(restoredShow.scroll - beforeDetail.scroll) < 80, 'bfcache scroll');
+  }
+  console.log(`detail back: series=qmc, ${qmcCount} cards, scroll ${beforeDetail.scroll}→${afterDetail.scroll}, bfcache persisted=${Boolean(restoredShow)}`);
   assert.deepEqual(errors, [], 'browser JS errors');
   console.log(`all reload: ${samsungCount} cards; BSS Audio unchanged: ${bssCount} cards; JS errors 0`);
 } finally {
