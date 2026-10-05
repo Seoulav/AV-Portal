@@ -18,6 +18,8 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .detail-search-toggle { display: none; }
 .breadcrumb { display: flex; gap: 8px; align-items: center; margin: 0 8px 14px; color: var(--pg-muted); font-size: 12px; }
 .breadcrumb a { text-decoration: none; }
+.breadcrumb #breadcrumb-brand, .product-hero .pg-sub .subtitle-brand, .manufacturer-footer #footer-manufacturer { color: var(--pg-accent); text-decoration: underline; text-underline-offset: 2px; }
+.breadcrumb #breadcrumb-brand:focus-visible, .product-hero .pg-sub .subtitle-brand:focus-visible, .manufacturer-footer #footer-manufacturer:focus-visible { outline: 2px solid var(--pg-accent); outline-offset: 3px; }
 .product-hero { align-items: flex-start; padding: 16px 8px 24px; }
 .product-hero .pg-title { max-width: 680px; }
 .product-hero .pg-title h1 { overflow-wrap: anywhere; }
@@ -95,7 +97,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .state-missing { background: var(--pg-field-fill); color: var(--pg-muted); }
 .manufacturer-footer { display: flex; align-items: center; gap: 12px; margin-top: 22px; padding: 15px 22px; }
 .manufacturer-footer > span { color: var(--pg-muted); font-size: 11px; font-weight: 700; }
-.manufacturer-footer > strong { font-size: 15px; }
+.manufacturer-footer > a { font-size: 15px; font-weight: 700; }
 .manufacturer-footer-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
 .sources-details { margin-top: 14px; }
 .sources-content { display: grid; gap: 8px; margin-top: 14px; }
@@ -114,7 +116,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .dialog-top button { margin-left: auto; border: 0; background: var(--pg-field-fill); border-radius: var(--pg-r-pill); padding: 8px 14px; cursor: pointer; }
 .dialog-image-wrap { position: relative; display: grid; place-items: center; margin-top: 12px; overflow: hidden; background: #fff; }
 .dialog-image-wrap > img { display: block; max-width: 100%; max-height: 72vh; object-fit: contain; }
-.image-loupe { position: absolute; width: 180px; height: 180px; border: 3px solid white; border-radius: 50%; pointer-events: none; box-shadow: 0 2px 14px rgba(0,0,0,.4); }
+.image-loupe { position: absolute; width: 216px; height: 216px; border: 3px solid white; border-radius: 50%; pointer-events: none; box-shadow: 0 2px 14px rgba(0,0,0,.4); }
 .image-dialog > p { font-size: 11px; }
 @media (max-width:1000px) {
   .detail-cards { grid-template-columns: minmax(0,1fr); grid-template-areas: none; }
