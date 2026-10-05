@@ -13,6 +13,7 @@ import {uploadedDocumentsFor} from '../beta/site/detail/pdf-documents.mjs';
 import {beforeSamsungW04010Raw} from './samsung-w04010-history.mjs';
 import {beforeWinstarW04016Uploads} from './winstar-w04016-history.mjs';
 import {beforeW04021Uploads} from './document-lock-history.mjs';
+import {beforeW033Uploads} from './w033-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -20,7 +21,7 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(withoutW029Uploads(manifest.uploads)));
+const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(withoutW029Uploads(beforeW033Uploads(manifest.uploads))));
 const slugs=Object.keys(evidence.products);
 const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];
