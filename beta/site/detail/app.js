@@ -5,6 +5,7 @@ import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, docum
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
 import { distributorLinkFor } from '../shared/distributor-links.mjs';
+import { brandForProduct, brandListingHref } from '../shared/brand-links.mjs';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -91,12 +92,24 @@ if (!productKey) {
   });
   setMobileSearch();
 
+  let catalog = [];
+  try {
+    const catalogResponse = await fetch('../catalog.json');
+    if (catalogResponse.ok) catalog = await catalogResponse.json();
+  } catch { /* Keep the detail page usable when the catalog is unavailable. */ }
+  const brand = brandForProduct(catalog, productKey, data.manufacturer);
+  const brandHref = brandListingHref(brand);
   $('#breadcrumb-brand').textContent = data.manufacturer;
+  $('#breadcrumb-brand').href = brandHref;
   $('#breadcrumb-model').textContent = data.model;
   $('#product-name').textContent = data.productName || data.model;
-  $('#product-subtitle').textContent = [data.manufacturer, enhancements.subtitle || data.english].filter(Boolean).join(' · ');
+  const subtitleBrand = element('a', 'subtitle-brand', data.manufacturer);
+  subtitleBrand.href = brandHref;
+  $('#product-subtitle').replaceChildren(subtitleBrand);
+  if (enhancements.subtitle || data.english) $('#product-subtitle').append(` · ${enhancements.subtitle || data.english}`);
   $('#footer-product').textContent = `${data.manufacturer} ${data.model}`;
   $('#footer-manufacturer').textContent = data.manufacturer;
+  $('#footer-manufacturer').href = brandHref;
   $('#dialog-product').textContent = `${data.manufacturer} ${data.model}`;
   const category = String(data.categories.at(-1) ?? '').toLowerCase();
   const pictograms = [
@@ -290,7 +303,7 @@ if (!productKey) {
   $('#dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => zoomOpener?.focus());
-  const LOUPE_SIZE = 180, LOUPE_ZOOM = 3;
+  const LOUPE_SIZE = 216, LOUPE_ZOOM = 3;
   function attachLoupe(wrap, loupe, currentImage) {
     wrap.addEventListener('pointermove', event => {
       if (event.pointerType !== 'mouse') { loupe.hidden = true; return; }

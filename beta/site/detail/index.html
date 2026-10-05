@@ -15,8 +15,8 @@
   <link rel="preload" href="../fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../shared/pg.css">
   <link rel="stylesheet" href="../shared/pdf-viewer.css">
-  <link rel="stylesheet" href="./styles.css?v=w20261004-009-port-merge">
-  <script type="module" src="./app.js?v=w20261004-013-spec-order"></script>
+  <link rel="stylesheet" href="./styles.css?v=w20261004-031-brand-link">
+  <script type="module" src="./app.js?v=w20261004-031-brand-link"></script>
   <link rel="stylesheet" href="../system-version.css?v=w20261004-008">
   <script type="module" src="../system-version.js?v=w20261004-008"></script>
 </head>
@@ -34,7 +34,7 @@
       <div class="system-version" data-system-version aria-label="시스템 버전"></div>
     </header>
     <main id="main">
-      <nav class="breadcrumb" aria-label="현재 위치"><a href="../">Equipment Library</a><span aria-hidden="true">/</span><span id="breadcrumb-brand"></span><span aria-hidden="true">/</span><strong id="breadcrumb-model"></strong></nav>
+      <nav class="breadcrumb" aria-label="현재 위치"><a href="../">Equipment Library</a><span aria-hidden="true">/</span><a id="breadcrumb-brand" href="../"></a><span aria-hidden="true">/</span><strong id="breadcrumb-model"></strong></nav>
       <div class="pg-hero product-hero">
         <div class="pg-title"><span id="category-swatch" class="pg-swatch" aria-hidden="true">AV</span><div><h1 id="product-name"></h1><p id="product-subtitle" class="pg-sub"></p></div></div>
         <div class="pg-actions"><a class="pg-btn" href="../">← 제품 탐색</a><div id="header-docs" class="header-docs"></div><div id="header-official"></div><div id="header-distributor"></div><button id="print-button" class="pg-btn" type="button">인쇄 / PDF</button></div>
@@ -50,7 +50,7 @@
         <section id="related-products" class="pg-card" data-supplemental aria-labelledby="related-products-title"><h2 id="related-products-title">관련 제품</h2><div id="related-list" class="related-list"></div></section>
         <section id="documents" class="pg-card" data-supplemental aria-labelledby="documents-title"><h2 id="documents-title">문서</h2><div id="documents-list" class="documents-list"></div></section>
       </div>
-      <div class="manufacturer-footer pg-card"><span>MANUFACTURER</span><strong id="footer-manufacturer"></strong><div class="manufacturer-footer-actions"><div id="footer-official-link"></div><div id="footer-distributor-link"></div></div></div>
+      <div class="manufacturer-footer pg-card"><span>MANUFACTURER</span><a id="footer-manufacturer" href="../"></a><div class="manufacturer-footer-actions"><div id="footer-official-link"></div><div id="footer-distributor-link"></div></div></div>
       <details id="sources" class="pg-details sources-details"><summary>자료 출처·검증 기록 (<span id="sources-count">0</span>건)</summary><div class="sources-content"><p><span id="package-status" class="state"></span> <span id="model-status" class="state"></span></p><p id="verification-summary"></p><p id="series-note"></p><p><span id="gallery-rights-badge" class="state"></span> <span id="gallery-rights"></span></p><div id="image-statuses"></div><div id="missing-documents"></div><div id="issue-list"></div><div id="spec-source-records"></div><div id="io-records"></div><div id="source-list"></div><div class="verification-legend"><strong>검증 상태 설명</strong><span>VERIFIED · 검증됨</span><span>FOUND · 자료 있음</span><span>READY · 준비됨</span><span>PARTIAL · 일부 확인</span><span>REVIEW REQUIRED · 검토 중</span><span>CONFLICTED · 충돌 있음</span><span>MISSING · 미확인</span></div></div></details>
     </main>
     <footer class="site-footer"><span>AV PORTAL · PRODUCT DETAIL BETA</span><span id="footer-product"></span></footer>
