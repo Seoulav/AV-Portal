@@ -8,7 +8,8 @@ import { extname, join, resolve, sep } from 'node:path';
 import { tmpdir } from 'node:os';
 
 const site = resolve('beta/site');
-const output = resolve('Work/기록/W-20261004-031-screens');
+const live = process.argv.includes('--public');
+const output = resolve(live ? 'Work/기록/W-20261004-031-public-screens' : 'Work/기록/W-20261004-031-screens');
 await mkdir(output, { recursive: true });
 const browser = process.env.CHROMIUM_BIN || [
   'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
@@ -61,7 +62,8 @@ try {
   const screenshot=async name=>{const {data}=await send('Page.captureScreenshot',{format:'png'});await writeFile(join(output,name),Buffer.from(data,'base64'));};
   const navigate=async slug=>{
     errors.length=0;
-    await send('Page.navigate',{url:`http://127.0.0.1:${server.address().port}/detail/?product=${slug}&v=${baseline?'before':'after'}-${Date.now()}`});
+    const base = live ? 'https://seoulav.github.io/AV-Portal' : `http://127.0.0.1:${server.address().port}`;
+    await send('Page.navigate',{url:`${base}/detail/?product=${slug}&v=${baseline?'before':'after'}-${Date.now()}`});
     for(let i=0;i<100;i++){
       if(await evaluate("document.querySelector('#breadcrumb-brand')?.textContent && document.querySelector('#featured-image')?.naturalWidth > 0")) return;
       await new Promise(done=>setTimeout(done,100));
@@ -71,7 +73,7 @@ try {
   await send('Page.enable');await send('Runtime.enable');await send('Network.enable');await send('Network.setCacheDisabled',{cacheDisabled:true});
   for(const width of [1280,390]){
     await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width===390});
-    for(const state of ['before','after']){
+    for(const state of live ? ['after'] : ['before','after']){
       baseline=state==='before';
       await navigate('blu-101');
       await screenshot(`${state}-blu-101-${width}.png`);
@@ -98,14 +100,14 @@ try {
       assert.equal(brand,expected,slug);
       await evaluate("document.querySelector('#breadcrumb-brand').click()");
       for(let i=0;i<100;i++){
-        if(await evaluate("location.pathname==='/' && document.querySelector('#cards')?.children.length>0"))break;
+        if(await evaluate("(location.pathname==='/' || location.pathname.endsWith('/AV-Portal/')) && document.querySelector('#cards')?.children.length>0"))break;
         await new Promise(done=>setTimeout(done,100));
       }
       const result=await evaluate("(() => ({brand:new URL(location.href).searchParams.get('brand'),sort:new URL(location.href).searchParams.get('sort'),cards:document.querySelector('#cards')?.children.length,count:document.querySelector('#result-count')?.textContent}))()");
       assert.equal(result.brand,expected);assert.equal(result.sort,'brand');assert.ok(result.cards>0,JSON.stringify(result));
       console.log(JSON.stringify({slug,width,result}));
     }
-    for (const state of ['before','after']) {
+    for (const state of live ? ['after'] : ['before','after']) {
       baseline=state==='before';
       await navigate('srg-x40uh');
       await evaluate("[...document.querySelectorAll('#thumbnails button')].find(button=>button.textContent.trim()==='Rear').click()");
