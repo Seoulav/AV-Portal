@@ -41,14 +41,22 @@ test('three exact workbook models retain their own facts and omit unsupported co
     assert.equal(spec('VXT Player Support').value, 'Yes');
     assert.equal(spec('전원 이중화')?.value, slug === 'if015r-m' ? 'Yes (Dual Power)' : undefined);
     if (slug === 'if015r-m') {
+      // W-20261005-004: the user confirmed CS4F support, so the two rows are no
+      // longer open. The workbook still only promises it, so they cite the
+      // separate confirmation alongside the workbook rather than instead of it.
       for (const name of ['컨트롤러', '연결 방식']) {
-        assert.equal(spec(name).verification, 'REVIEW REQUIRED');
-        assert.match(spec(name).condition, /자료 작성 당시 2026-07 호환 예정 · 이후 확보 미확인/);
+        assert.equal(spec(name).verification, 'FOUND');
+        assert.equal(spec(name).condition, '');
+        assert.equal(spec(name).source, 'S1, S2');
       }
       assert.equal(spec('컨트롤러').value, 'CS4B / CS4F');
       assert.equal(spec('연결 방식').value, 'Optical (CS4B) / Copper (CS4F)');
+      const confirmation = detail.sources.find(source => source.code === 'S2');
+      assert.match(confirmation.scope, /2026-10-05/);
+      assert.match(confirmation.scope, /제조사 원문 아님/);
+      assert.equal(detail.specifications.filter(row => row.verification === 'REVIEW REQUIRED').length, 0);
     }
-    assert.ok(detail.specifications.every(row => row.source === 'S1' && ['FOUND', 'REVIEW REQUIRED'].includes(row.verification)));
+    assert.ok(detail.specifications.every(row => ['S1', 'S1, S2'].includes(row.source) && ['FOUND', 'REVIEW REQUIRED'].includes(row.verification)));
     assert.ok(detail.sources.some(source => source.code === 'S1' && source.scope.includes('SHA-256') && source.scope.includes(slug === 'if015r-m' ? 'IFR!N' : slug === 'ie015a-e' ? 'IEA!J' : 'IEA!K')));
     assert.deepEqual(detail.images, []);
     assert.deepEqual(detail.io, []);

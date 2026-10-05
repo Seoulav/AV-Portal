@@ -339,18 +339,18 @@
       "name": "컨트롤러",
       "value": "CS4B / CS4F",
       "unit": "",
-      "condition": "CS4F: 자료 작성 당시 2026-07 호환 예정 · 이후 확보 미확인",
-      "source": "S1",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "S1, S2",
+      "verification": "FOUND"
     },
     {
       "group": "Connectivity",
       "name": "연결 방식",
       "value": "Optical (CS4B) / Copper (CS4F)",
       "unit": "",
-      "condition": "CS4F: 자료 작성 당시 2026-07 호환 예정 · 이후 확보 미확인",
-      "source": "S1",
-      "verification": "REVIEW REQUIRED"
+      "condition": "",
+      "source": "S1, S2",
+      "verification": "FOUND"
     },
     {
       "group": "Certification",
@@ -464,6 +464,11 @@
       "name": "삼성전자 대한민국 비즈니스 LED 사이니지 시리즈 목록",
       "url": "https://www.samsung.com/sec/business/led-signage/",
       "scope": "개별 국내 모델 페이지·모델 코드가 확인되는 사진 미확인. 사양 행의 근거로 사용하지 않음."
+    },
+    {
+      "code": "S2",
+      "name": "사용자 확인 (서울영상)",
+      "scope": "사용자 제공(2026-10-05, 서울영상 확인): IF015R-M의 CS4F 컨트롤러 호환 확정. 제조사 원문 아님."
     }
   ],
   "issues": [
