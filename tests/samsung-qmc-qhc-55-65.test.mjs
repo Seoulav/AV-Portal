@@ -1,4 +1,5 @@
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
+import {beforeW005Raw} from './w005-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import test from 'node:test';
 import { beforeW024Raw, beforeW024Catalog } from './mpf-images-history.mjs';
@@ -56,7 +57,7 @@ test('all 243 pre-existing product JSON files and catalog entries remain unchang
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
   const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5))).sort();
   assert.equal(files.length, 243);
-  const digests = files.map(file => [file, sha(beforeW024Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
+  const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
   const previous = read('beta/site/catalog.json').filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
