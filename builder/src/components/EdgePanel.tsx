@@ -9,16 +9,17 @@ export function EdgePanel() {
   const edgeId = useBuilder(state => state.selectedEdgeId);
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
-  const setCable = useBuilder(state => state.setCable);
-  const setLabel = useBuilder(state => state.setLabel);
+  const updateEdge = useBuilder(state => state.updateEdge);
+  const notify = useBuilder(state => state.notify);
   const deleteEdge = useBuilder(state => state.deleteEdge);
   const edge = diagram.edges.find(item => item.id === edgeId) ?? null;
   const [rows, setRows] = useState<BomRow[]>([]);
   const [label, setLabelText] = useState('');
+  // 다른 연결을 고르거나 저장·실행 취소로 이 연결의 값이 바뀌면 입력란을 다시 채운다
   useEffect(() => {
     setRows(edge?.data.bomRows ? structuredCloneSafe(edge.data.bomRows) : []);
     setLabelText(edge?.data.label ?? '');
-  }, [edge?.id]);
+  }, [edge?.id, edge?.data]);
   // 케이블 제품명 후보: Portal의 케이블 분류 제품
   const cableNames = useMemo(() => (library?.library.products ?? []).filter(product => !product.placeable && /Cable/.test(product.categories[2] ?? '')).map(product => `${product.brand} ${product.product}`), [library]);
   if (!edge) return null;
@@ -29,10 +30,17 @@ export function EdgePanel() {
     const port = data && parsed ? findPort(data, parsed.portId) : null;
     return `${data?.model ?? '?'} · ${port?.label ?? handle}`;
   };
-  const update = (index: number, patch: Partial<BomRow>) => setRows(rows.map((row, i) => (i === index ? normalizeRow({ ...row, ...patch }) : row)));
+  // 기성으로 바꾸면 수량 1부터 시작한다(제작으로 바꿀 때 수량은 지워진다)
+  const update = (index: number, patch: Partial<BomRow>) => setRows(rows.map((row, i) => {
+    if (i !== index) return row;
+    const refill = patch.cableType === 'ready-made' && row.quantity === undefined ? { quantity: 1 } : {};
+    return normalizeRow({ ...row, ...patch, ...refill });
+  }));
   const save = () => {
-    setCable(edge.id, rows.filter(row => row.productName.trim()).map(row => ({ ...row, productName: row.productName.trim() })));
-    if ((edge.data.label ?? '') !== label.trim()) setLabel(edge.id, label.trim());
+    const cleaned = rows.map(row => ({ ...row, productName: row.productName.trim() }));
+    const problem = cableProblem(cleaned);
+    if (problem) { notify({ text: problem, tone: 'warn' }); return; }
+    updateEdge(edge.id, { label: label.trim(), rows: cleaned });
   };
   return (
     <aside className="edge-panel">
@@ -66,6 +74,17 @@ export function EdgePanel() {
       <button type="button" className="danger" onClick={() => deleteEdge(edge.id)}>연결 삭제</button>
     </aside>
   );
+}
+
+// 견적 쪽이 받는 값이므로 저장 전에 막는다: 제품명 필수, 기성 수량은 1 이상 정수, 제작 길이는 0보다 큰 수
+export function cableProblem(rows: BomRow[]): string | null {
+  for (const [index, row] of rows.entries()) {
+    const where = `${index + 1}번째 케이블`;
+    if (!row.productName) return `${where}의 제품명을 넣어 주세요. 필요 없는 행은 ✕로 지웁니다.`;
+    if (row.cableType === 'manufactured' && !(typeof row.length === 'number' && Number.isFinite(row.length) && row.length > 0)) return `${where}(제작)의 길이는 0보다 큰 수여야 합니다.`;
+    if (row.cableType === 'ready-made' && !(Number.isInteger(row.quantity) && (row.quantity as number) >= 1)) return `${where}(기성)의 수량은 1 이상의 정수여야 합니다.`;
+  }
+  return null;
 }
 
 // 기성은 수량, 제작은 길이만 남긴다(1.1 의미 그대로)

@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_RULES, createIdFactory, createLibraryIndex, validateDiagram, type Equipment, type Library, type Port } from '../src/engine';
-import { AUTOSAVE_KEY, loadSaved, startAutosave, type StorageLike } from '../src/state/autosave';
+import { DEFAULT_RULES, createIdFactory, createLibraryIndex, validateDiagram, type BomRow, type Equipment, type Library, type Port } from '../src/engine';
+import { AUTOSAVE_KEY, REJECTED_KEY, loadSaved, startAutosave, type StorageLike } from '../src/state/autosave';
 import { HISTORY_LIMIT, PLACE_STEP, createBuilderStore, freePosition } from '../src/state/store';
+import { cableProblem } from '../src/components/EdgePanel';
 import { filterProducts, groupProducts } from '../src/components/LibraryPanel';
 
 // 합성 라이브러리(현재 Portal 데이터와 무관)
@@ -98,8 +99,7 @@ describe('store', () => {
     const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
     store.getState().connect({ source: cam, sourceHandle: 'out-hdmi-1', target: disp, targetHandle: 'in-hdmi-1' });
     const edgeId = store.getState().diagram.edges[0].id;
-    store.getState().setCable(edgeId, [{ cableType: 'ready-made', productName: 'HDMI 3m', lineTypeId: 'video', quantity: 1 }]);
-    store.getState().setLabel(edgeId, '메인 영상');
+    store.getState().updateEdge(edgeId, { label: '메인 영상', rows: [{ cableType: 'ready-made', productName: 'HDMI 3m', lineTypeId: 'video', quantity: 1 }] });
     store.getState().addShape({ x: -50, y: -50 });
     const text = store.getState().exportText();
     expect(validateDiagram(JSON.parse(text), { library: index }).errors).toEqual([]);
@@ -110,7 +110,27 @@ describe('store', () => {
     expect(other.getState().importText('not json').errors[0].code).toBe('json');
   });
 
-  it('edits note labels only, and removes selected edges with undo', () => {
+  it('saves label and cable as one step, and an unchanged save keeps redo', () => {
+    const { store, unit } = setup();
+    const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
+    store.getState().connect({ source: cam, sourceHandle: 'out-hdmi-1', target: disp, targetHandle: 'in-hdmi-1' });
+    const edgeId = store.getState().diagram.edges[0].id;
+    const before = store.getState().past.length;
+    const rows = [{ cableType: 'ready-made' as const, productName: 'HDMI 3m', lineTypeId: 'video', quantity: 2 }];
+    store.getState().updateEdge(edgeId, { label: '메인', rows });
+    expect(store.getState().past.length).toBe(before + 1);
+    expect(store.getState().diagram.edges[0].data).toMatchObject({ label: '메인', bomRows: rows });
+    store.getState().addAnnotation({ x: 0, y: 300 });
+    store.getState().undo();
+    expect(store.getState().future).toHaveLength(1);
+    store.getState().updateEdge(edgeId, { label: '메인', rows });
+    expect(store.getState().future).toHaveLength(1);
+    store.getState().undo();
+    expect(store.getState().diagram.edges[0].data.label).toBeUndefined();
+  });
+
+  it('edits note labels only, and keeps edge selection in one place', () => {
     const { store, unit } = setup();
     const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
     const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
@@ -124,7 +144,10 @@ describe('store', () => {
     const edgeId = store.getState().diagram.edges[0].id;
     store.getState().onEdgesChange([{ type: 'select', id: edgeId, selected: true }]);
     expect(store.getState().selectedEdgeId).toBe(edgeId);
+    // 지우기는 onDelete → removeElements로만 한다. React Flow가 먼저 보내는 remove 변경은 무시한다
     store.getState().onEdgesChange([{ type: 'remove', id: edgeId }]);
+    expect(store.getState().diagram.edges).toHaveLength(1);
+    store.getState().removeElements([], [edgeId]);
     expect(store.getState().diagram.edges).toHaveLength(0);
     expect(store.getState().selectedEdgeId).toBeNull();
     store.getState().undo();
@@ -137,16 +160,73 @@ describe('store', () => {
     expect(freePosition(nodes, { x: 100, y: 300 })).toEqual({ x: 100, y: 300 });
   });
 
-  it('removing a node removes its edges in one undo step', () => {
+  it('deleting a connected node is one undo step, like React Flow sends it', () => {
     const { store, unit } = setup();
     const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
     const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
     store.getState().connect({ source: cam, sourceHandle: 'out-hdmi-1', target: disp, targetHandle: 'in-hdmi-1' });
+    const edgeId = store.getState().diagram.edges[0].id;
+    const before = store.getState().past.length;
+    // React Flow deleteElements 순서: 엣지 remove → 노드 remove → onDelete
+    store.getState().onEdgesChange([{ type: 'remove', id: edgeId }]);
     store.getState().onNodesChange([{ type: 'remove', id: disp }]);
+    store.getState().removeElements([disp], [edgeId]);
+    expect(store.getState().past.length).toBe(before + 1);
+    expect(store.getState().diagram.nodes).toHaveLength(1);
     expect(store.getState().diagram.edges).toHaveLength(0);
     store.getState().undo();
     expect(store.getState().diagram.nodes).toHaveLength(2);
     expect(store.getState().diagram.edges).toHaveLength(1);
+  });
+
+  it('records arrow-key moves, not unmoved drag starts', () => {
+    const { store, unit } = setup();
+    const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const before = store.getState().past.length;
+    store.getState().onNodesChange([{ type: 'position', id: cam, position: { x: 0, y: 0 }, dragging: true }]);
+    store.getState().onNodesChange([{ type: 'position', id: cam, position: { x: 0, y: 0 }, dragging: false }]);
+    expect(store.getState().past.length).toBe(before);
+    store.getState().onNodesChange([{ type: 'position', id: cam, position: { x: 5, y: 0 }, dragging: false }]);
+    expect(store.getState().past.length).toBe(before + 1);
+    store.getState().undo();
+    expect(store.getState().diagram.nodes[0].position).toEqual({ x: 0, y: 0 });
+  });
+
+  it('undo of open restores the whole file, not just nodes and edges', () => {
+    const { store, unit } = setup();
+    store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const original = store.getState().exportText();
+    const imported = JSON.parse(original);
+    imported.generator.version = '9.9.9';
+    imported.lineTypes = imported.lineTypes.slice(0, 7);
+    expect(store.getState().importText(JSON.stringify(imported)).ok).toBe(true);
+    store.getState().undo();
+    expect(store.getState().exportText()).toBe(original);
+  });
+
+  it('explains why a dropped connection is blocked', () => {
+    const { store, unit } = setup();
+    const a = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const b = store.getState().addEquipment(unit('cam'), { x: 300, y: 0 });
+    store.getState().explainBlocked({ source: a, sourceHandle: 'out-hdmi-1', target: b, targetHandle: 'out-hdmi-1' });
+    expect(store.getState().notice?.text).toContain('같은 방향');
+    store.getState().notify(null);
+    store.getState().explainBlocked({ source: a, sourceHandle: 'source_both-ethernet-1', target: b, targetHandle: 'target_both-ethernet-1' });
+    expect(store.getState().notice).toBeNull();
+  });
+});
+
+describe('cable rows', () => {
+  it('rejects rows the quote side cannot use', () => {
+    const row = (patch: Partial<BomRow>): BomRow => ({ cableType: 'ready-made', productName: 'HDMI', lineTypeId: 'video', quantity: 1, ...patch });
+    expect(cableProblem([row({})])).toBeNull();
+    expect(cableProblem([row({ productName: '' })])).toContain('제품명');
+    expect(cableProblem([row({ quantity: 0 })])).toContain('수량');
+    expect(cableProblem([row({ quantity: 2.5 })])).toContain('수량');
+    expect(cableProblem([row({ quantity: undefined })])).toContain('수량');
+    expect(cableProblem([row({ cableType: 'manufactured', quantity: undefined, length: 12.5 })])).toBeNull();
+    expect(cableProblem([row({ cableType: 'manufactured', quantity: undefined })])).toContain('길이');
+    expect(cableProblem([row({ cableType: 'manufactured', quantity: undefined, length: -3 })])).toContain('길이');
   });
 });
 
@@ -160,10 +240,14 @@ describe('autosave', () => {
     stop();
     expect(storage.data.get(AUTOSAVE_KEY)).toContain('"version": "1.2"');
     expect(loadSaved(storage, index).diagram?.nodes).toHaveLength(1);
-    storage.setItem(AUTOSAVE_KEY, '{"version":"1.2","nodes":"x","edges":[],"lineTypes":[],"equipmentDB":[]}');
-    expect(loadSaved(storage, index).error).toContain('오류');
+    // 불러오지 못한 저장본은 다음 자동 저장에 덮이기 전에 따로 보관한다
+    const broken = '{"version":"1.2","nodes":"x","edges":[],"lineTypes":[],"equipmentDB":[]}';
+    storage.setItem(AUTOSAVE_KEY, broken);
+    expect(loadSaved(storage, index).error).toContain(REJECTED_KEY);
+    expect(storage.data.get(REJECTED_KEY)).toBe(broken);
     storage.setItem(AUTOSAVE_KEY, 'not json');
     expect(loadSaved(storage, index).error).toContain('JSON');
+    expect(storage.data.get(REJECTED_KEY)).toBe('not json');
     expect(loadSaved(memoryStorage(), index)).toEqual({});
   });
 });

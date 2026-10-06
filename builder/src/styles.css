@@ -85,6 +85,8 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }
 
 .annotation-node { display: flex; align-items: center; justify-content: center; padding: 6px 10px; white-space: pre-wrap; overflow: hidden; }
+/* 영역 안쪽은 클릭이 통과한다(기반명세 §9). React Flow가 노드 틀에 pointer-events: all을 inline으로 주므로 !important로 덮고, 제목 띠만 받는다 */
+.react-flow__node-shape { pointer-events: none !important; }
 .shape-node { border-radius: 10px; pointer-events: none; }
 .shape-title { pointer-events: all; cursor: move; padding: 4px 10px; font-weight: 600; }
 

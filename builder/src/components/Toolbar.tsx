@@ -57,21 +57,23 @@ export function Toolbar() {
     state.newDiagram();
   };
 
+  // 라이브러리와 자동 저장본을 읽기 전에는 편집을 막는다. 읽는 중에 만든 내용이 저장본에 덮이지 않게 한다
+  const ready = Boolean(state.library);
   const equipmentCount = state.diagram.nodes.filter(node => node.type === 'equipment').length;
   return (
     <header className="toolbar">
       <a className="brand" href="../">AV Portal</a>
       <span className="app-name">AV System Builder <span className="beta">베타</span></span>
       <div className="toolbar-actions">
-        <button type="button" onClick={confirmNew}>새 구성도</button>
-        <button type="button" onClick={() => fileInput.current?.click()}>열기</button>
-        <button type="button" className="primary" onClick={exportFile} disabled={!state.library}>내보내기</button>
+        <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
+        <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>
+        <button type="button" className="primary" onClick={exportFile} disabled={!ready}>내보내기</button>
         <span className="divider" />
         <button type="button" onClick={state.undo} disabled={!state.past.length} title="Ctrl+Z">실행 취소</button>
         <button type="button" onClick={state.redo} disabled={!state.future.length} title="Ctrl+Y">다시 실행</button>
         <span className="divider" />
-        <button type="button" onClick={() => state.addAnnotation(center())}>메모</button>
-        <button type="button" onClick={() => state.addShape(center())}>영역</button>
+        <button type="button" onClick={() => state.addAnnotation(center())} disabled={!ready}>메모</button>
+        <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
       </div>
       <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />
