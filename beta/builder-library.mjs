@@ -112,6 +112,17 @@ export function normalizeQuantity(row, connector) {
   return null;
 }
 
+// 개별 지정(IO_OVERRIDES) 항목 검사. 이 표는 Builder 작업 흐름만 고치므로 형식 오류는 코드 오류로 본다
+export function validateOverride(key, override) {
+  const fail = message => { throw new Error(`IO_OVERRIDES ${key}: ${message}`); };
+  if (!override.match || typeof override.match.connector !== 'string' || typeof override.match.signal !== 'string') fail('match.connector·match.signal(원문)이 필요하다');
+  if (!V.CONNECTORS.includes(override.connector)) fail(`알 수 없는 커넥터 ${override.connector}`);
+  if (!Array.isArray(override.signals) || !override.signals.length || !override.signals.every(id => V.SIGNAL_BY_ID.has(id))) fail('signals가 비었거나 알 수 없는 신호가 있다');
+  if (!['in', 'out', 'both'].includes(override.direction)) fail(`알 수 없는 방향 ${override.direction}`);
+  if (!Number.isInteger(override.quantity) || override.quantity < 1) fail('quantity는 1 이상의 정수다');
+  if (!text(override.note)) fail('note(근거)가 필요하다');
+}
+
 // 한 I/O 행의 판정. override는 IO_OVERRIDES 항목(부록 A 밖의 개별 지정)
 export function classifyIoRow(row, override = null) {
   if (override) {
@@ -140,39 +151,63 @@ export const signalKey = id => id.toLowerCase();
 const TX_PREFIX = /^TX · /;
 const RX_PREFIX = /^RX · /;
 const modelSlug = model => text(model).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const conditionHead = row => text(row.condition).split(' · ')[0];
 
+// TX/RX 판정(§6.1). 데이터 모양 문제는 예외 대신 status로 돌려준다.
+//   none: 나눌 대상 아님 · split: 나눔 · partial: 일부 행에만 접두어 · mismatch: condition 모델명이 맞지 않음
 export function txRxUnits(productId, model, io) {
-  if (!io.length || !io.every(row => TX_PREFIX.test(text(row.group)) || RX_PREFIX.test(text(row.group)))) return null;
-  if (!io.some(row => TX_PREFIX.test(text(row.group))) || !io.some(row => RX_PREFIX.test(text(row.group)))) return null;
+  const tagged = io.map((row, ioIndex) => ({ row, ioIndex, tx: TX_PREFIX.test(text(row.group)), rx: RX_PREFIX.test(text(row.group)) }));
+  const txRows = tagged.filter(item => item.tx);
+  const rxRows = tagged.filter(item => item.rx);
+  if (!txRows.length && !rxRows.length) return { status: 'none' };
+  if (!txRows.length || !rxRows.length || txRows.length + rxRows.length !== io.length) return { status: 'partial' };
   const parts = text(model).split(' / ').map(text).filter(Boolean);
-  let txModel, rxModel;
+  const heads = rows => [...new Set(rows.map(({ row }) => conditionHead(row)))];
+  const txHeads = heads(txRows);
+  const rxHeads = heads(rxRows);
+  let txModel;
+  let rxModel;
   if (parts.length === 2) {
-    const conditionModels = prefix => new Set(io.filter(row => prefix.test(text(row.group))).map(row => text(row.condition).split(' · ')[0]).filter(value => parts.includes(value)));
-    const txSeen = conditionModels(TX_PREFIX), rxSeen = conditionModels(RX_PREFIX);
-    [txModel, rxModel] = txSeen.has(parts[1]) || rxSeen.has(parts[0]) ? [parts[1], parts[0]] : parts;
-    for (const value of txSeen) if (value !== txModel) throw new Error(`${productId}: TX 행 condition의 모델명(${value})이 TX 단위(${txModel})와 다르다`);
-    for (const value of rxSeen) if (value !== rxModel) throw new Error(`${productId}: RX 행 condition의 모델명(${value})이 RX 단위(${rxModel})와 다르다`);
+    // 모든 TX 행의 condition 첫 조각이 같은 모델명이고, RX도 마찬가지이며, 두 이름이 model의 두 조각이어야 한다
+    if (txHeads.length !== 1 || rxHeads.length !== 1 || txHeads[0] === rxHeads[0] || !parts.includes(txHeads[0]) || !parts.includes(rxHeads[0])) return { status: 'mismatch' };
+    [txModel, rxModel] = [txHeads[0], rxHeads[0]];
   } else {
+    if (txHeads.some(value => value !== 'TX') || rxHeads.some(value => value !== 'RX')) return { status: 'mismatch' };
     txModel = `${text(model)} (TX)`;
     rxModel = `${text(model)} (RX)`;
   }
-  return [
-    { unit: 'tx', model: txModel, rows: io.map((row, ioIndex) => ({ row, ioIndex })).filter(({ row }) => TX_PREFIX.test(text(row.group))), strip: TX_PREFIX },
-    { unit: 'rx', model: rxModel, rows: io.map((row, ioIndex) => ({ row, ioIndex })).filter(({ row }) => RX_PREFIX.test(text(row.group))), strip: RX_PREFIX },
-  ];
+  return {
+    status: 'split',
+    units: [
+      { unit: 'tx', model: txModel, rows: txRows.map(({ row, ioIndex }) => ({ row, ioIndex })), strip: TX_PREFIX },
+      { unit: 'rx', model: rxModel, rows: rxRows.map(({ row, ioIndex }) => ({ row, ioIndex })), strip: RX_PREFIX },
+    ],
+  };
 }
 
+const unresolvedItem = (row, ioIndex, reasons) => ({ ioIndex, group: text(row.group), connector: text(row.connector), signal: text(row.signal), reason: reasons[0], reasons });
+
 // ── §3 단자 ──
-export function buildPorts(rows, { overrides = {}, productId, strip = null } = {}) {
+export function buildPorts(rows, { overrides = {}, productId, strip = null, issues = [] } = {}) {
   const ports = [];
   const unresolved = [];
   const nonPort = [];
   for (const { row, ioIndex } of rows) {
-    const result = classifyIoRow(row, overrides[`${productId}#${ioIndex}`] ?? null);
+    const key = `${productId}#${ioIndex}`;
+    let override = overrides[key] ?? null;
+    if (override) {
+      validateOverride(key, override);
+      // 원문이 바뀌었으면(행 이동·수정) 개별 지정을 적용하지 않고 알린다
+      if (override.match.connector !== text(row.connector) || override.match.signal !== text(row.signal)) {
+        issues.push({ code: 'override-stale', ioIndex });
+        override = null;
+      }
+    }
+    const result = classifyIoRow(row, override);
     if (result.kind === 'port') {
       for (let i = 0; i < result.count; i += 1) ports.push({ row, ioIndex, result, group: strip ? text(row.group).replace(strip, '') : text(row.group) });
     } else if (result.kind === 'review') {
-      unresolved.push({ ioIndex, group: text(row.group), connector: text(row.connector), signal: text(row.signal), reason: result.reasons[0], reasons: result.reasons });
+      unresolved.push(unresolvedItem(row, ioIndex, result.reasons));
     } else {
       nonPort.push({ ioIndex, kind: result.kind });
     }
@@ -199,7 +234,7 @@ export function buildPorts(rows, { overrides = {}, productId, strip = null } = {
   return { ports: built, unresolved, nonPort };
 }
 
-// ── §4·§8.2 장비 객체 ──
+// ── §4·§8.2 장비 객체. 노드 data에서 isReused를 뺀 모양이다(isReused는 Builder가 노드에 붙인다) ──
 export function equipmentObject({ unitId, category, name, model, manufacturer, description, series, ports, imageUrl, portal }) {
   const equipment = { id: unitId, category, name, model, manufacturer, description };
   if (series) equipment.series = series;
@@ -211,39 +246,59 @@ export function equipmentObject({ unitId, category, name, model, manufacturer, d
   return equipment;
 }
 
-export function categoryFields(categories, productId) {
+// 2단계 카테고리를 1.1 category로 옮길 수 없으면 1.1의 'etc'로 두고 제품 이슈로 남긴다(예외를 내지 않는다)
+export function categoryFields(categories) {
   const category = V.CATEGORY_BY_LEVEL2[categories[1]];
-  if (!category) throw new Error(`${productId}: 2단계 카테고리를 1.1 category로 옮길 수 없다(${categories[1]})`);
-  return { category, name: text(categories[2]) };
+  return { category: category ?? 'etc', name: text(categories[2]), mapped: Boolean(category) };
 }
 
 // 제품 하나 → 라이브러리 항목. input은 목록·상세에서 필요한 값만 모은 객체
 export function buildProduct(input, overrides = V.IO_OVERRIDES) {
   const { productId, source, brand, product, categories, detail, imageUrl } = input;
   const detailUrl = `${PORTAL_BASE}detail/?product=${productId}`;
-  const { category, name } = categoryFields(categories, productId);
+  const issues = [];
+  const { category, name, mapped } = categoryFields(categories);
+  if (!mapped) issues.push({ code: 'category-unmapped', detail: text(categories[1]) });
   const io = Array.isArray(detail.io) ? detail.io : [];
   const description = text(detail.korean) || text(input.korean) || text(detail.english) || text(input.english);
   const base = { category, name, manufacturer: brand, description, series: text(detail.series), imageUrl };
   const units = [];
   const unresolved = [];
   const nonPort = [];
-  const split = txRxUnits(productId, detail.model ?? input.model, io);
-  if (split) {
-    for (const part of split) {
-      const built = buildPorts(part.rows, { overrides, productId, strip: part.strip });
+  const indexed = io.map((row, ioIndex) => ({ row, ioIndex }));
+  // 시리즈 판정이 먼저다. 시리즈에 TX/RX 접두어 행이 있어도 시리즈로 다룬다
+  const split = detail.itemType === 'SERIES' ? { status: 'series' } : txRxUnits(productId, detail.model ?? input.model, io);
+  if (split.status === 'split') {
+    for (const part of split.units) {
+      const built = buildPorts(part.rows, { overrides, productId, strip: part.strip, issues });
       const unitId = `${productId}:${part.unit}`;
       units.push({ unitId, unit: part.unit, equipment: equipmentObject({ ...base, unitId, model: part.model, ports: built.ports, portal: { productId, source, unit: part.unit, detailUrl } }) });
       unresolved.push(...built.unresolved.map(item => ({ ...item, unit: part.unit })));
       nonPort.push(...built.nonPort.map(item => ({ ...item, unit: part.unit })));
     }
-  } else if (detail.itemType === 'SERIES') {
+  } else if (split.status === 'partial' || split.status === 'mismatch') {
+    // TX/RX로 나눠야 하는데 근거가 모자라면 한 노드에 섞지 않고 전 행을 확인 필요로 둔다(§6.1)
+    issues.push({ code: 'txrx-unresolved', detail: split.status });
+    units.push({ unitId: productId, equipment: equipmentObject({ ...base, unitId: productId, model: text(detail.model ?? input.model), ports: [], portal: { productId, source, detailUrl } }) });
+    unresolved.push(...indexed.map(({ row, ioIndex }) => unresolvedItem(row, ioIndex, ['txrx'])));
+  } else if (split.status === 'series') {
+    const seen = new Map();
     for (const entry of (detail.lineup ?? []).filter(item => item.kind === '메인프레임')) {
-      const unitId = `${productId}:${modelSlug(entry.model)}`;
+      let slug = modelSlug(entry.model);
+      const count = (seen.get(slug) ?? 0) + 1;
+      seen.set(slug, count);
+      if (count > 1) {
+        issues.push({ code: 'variant-slug-duplicate', detail: entry.model });
+        slug = `${slug}-${count}`;
+      }
+      const unitId = `${productId}:${slug}`;
+      // 시리즈 모델의 설명은 lineup의 모델별 요약을 쓰고, 없으면 시리즈 설명을 쓴다
       units.push({ unitId, variant: entry.model, equipment: equipmentObject({ ...base, unitId, model: entry.model, description: text(entry.summary) || description, ports: [], portal: { productId, source, variant: entry.model, detailUrl } }) });
     }
+    // 시리즈에 I/O 행이 생기면 어느 모델의 단자인지 알 수 없으므로 확인 필요로 둔다
+    unresolved.push(...indexed.map(({ row, ioIndex }) => unresolvedItem(row, ioIndex, ['series-io'])));
   } else {
-    const built = buildPorts(io.map((row, ioIndex) => ({ row, ioIndex })), { overrides, productId });
+    const built = buildPorts(indexed, { overrides, productId, issues });
     units.push({ unitId: productId, equipment: equipmentObject({ ...base, unitId: productId, model: text(detail.model ?? input.model), ports: built.ports, portal: { productId, source, detailUrl } }) });
     unresolved.push(...built.unresolved);
     nonPort.push(...built.nonPort);
@@ -255,6 +310,7 @@ export function buildProduct(input, overrides = V.IO_OVERRIDES) {
   entry.units = units;
   entry.unresolved = unresolved;
   entry.nonPort = nonPort;
+  entry.issues = issues;
   entry.readiness = { ioRows: io.length, ports, unresolvedRows: unresolved.length, nonPortRows: nonPort.length };
   return entry;
 }
@@ -288,6 +344,10 @@ export function buildBuilderLibrary({ catalogRaw, details, rtcomIndexRaw, rtcomP
     products.push(buildProduct({ productId: `rtcom-${id}`, source: 'rtcom', brand: 'RTCOM', product: indexItem.productName, categories: indexItem.categories, detail: JSON.parse(raw), korean: indexItem.korean, english: indexItem.english, model: indexItem.model, imageUrl: indexItem.cardImage ? `${PORTAL_BASE}rtcom/images/${indexItem.cardImage}` : undefined }, overrides));
   }
   products.sort((a, b) => (a.productId < b.productId ? -1 : a.productId > b.productId ? 1 : 0));
+  // source의 SHA-256. 모두 CRLF를 LF로 바꾼 뒤 계산한다.
+  //   catalogSha: catalog.json 원문
+  //   detailSetSha: 상세 slug 오름차순으로 (slug + NUL + 상세 원문의 SHA-256)을 줄바꿈으로 이은 값
+  //   rtcomSha: index.json 원문의 SHA-256 다음에 RTCOM id 오름차순으로 (id + NUL + 상세 원문의 SHA-256)을 줄바꿈으로 이은 값
   const detailSetSha = sha256([...details.keys()].sort().map(slug => `${slug}\0${sha256(details.get(slug))}`).join('\n'));
   const rtcomSha = sha256([sha256(rtcomIndexRaw), ...[...rtcomProducts.keys()].sort().map(id => `${id}\0${sha256(rtcomProducts.get(id))}`)].join('\n'));
   return {
@@ -307,6 +367,7 @@ export function libraryReport(library) {
   const rows = { port: 0, review: 0, wireless: 0, unsupported: 0, slot: 0, service: 0 };
   const reasons = Object.fromEntries(V.REVIEW_REASONS.map(reason => [reason, 0]));
   const brands = {};
+  const issues = {};
   let ports = 0, all = 0, partial = 0, noPort = 0, noIo = 0;
   for (const product of library.products) {
     const r = product.readiness;
@@ -315,11 +376,12 @@ export function libraryReport(library) {
     rows.review += r.unresolvedRows;
     rows.port += r.ioRows - r.unresolvedRows - r.nonPortRows;
     for (const item of product.unresolved) { reasons[item.reason] += 1; brands[product.brand] = (brands[product.brand] ?? 0) + 1; }
+    for (const issue of product.issues) issues[issue.code] = (issues[issue.code] ?? 0) + 1;
     if (r.ioRows === 0) noIo += 1;
     else if (r.ports === 0) noPort += 1;
     else if (r.unresolvedRows === 0) all += 1;
     else partial += 1;
   }
   const total = Object.values(rows).reduce((a, b) => a + b, 0);
-  return { products: library.products.length, ioRows: total, rows, ports, productsWithPorts: all + partial, productsAllResolved: all, productsPartial: partial, productsNoPort: noPort, productsNoIo: noIo, reviewByReason: reasons, reviewByBrand: Object.fromEntries(Object.entries(brands).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))) };
+  return { products: library.products.length, ioRows: total, rows, ports, productsWithPorts: all + partial, productsAllResolved: all, productsPartial: partial, productsNoPort: noPort, productsNoIo: noIo, reviewByReason: reasons, productIssues: issues, reviewByBrand: Object.fromEntries(Object.entries(brands).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))) };
 }

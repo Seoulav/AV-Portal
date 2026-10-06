@@ -207,12 +207,15 @@ export const QUANTITY_TIMES = /^([1-9]\d*)\s*[x×]\s*\S/;
 export const CONNECTOR_COUNT = /(?:\bx\s?|×\s?)([1-9]\d*)\b|^([1-9]\d*)\s?x\s/i;
 
 // ── A6. 확인 필요 사유 순서 ──
-export const REVIEW_REASONS = Object.freeze(['multi-connector', 'multi-signal', 'no-signal', 'direction', 'quantity']);
+// txrx: TX/RX로 나눠야 하는데 근거가 모자란 제품의 행(§6.1) · series-io: 시리즈 제품에 생긴 I/O 행(§6.3)
+export const REVIEW_REASONS = Object.freeze(['multi-connector', 'multi-signal', 'no-signal', 'direction', 'quantity', 'txrx', 'series-io']);
 
 // ── §4. 카테고리 ──
 export const CATEGORY_BY_LEVEL2 = Object.freeze({ Audio: 'audio', Video: 'video', Display: 'display', Conferencing: 'conferencing', Control: 'control', Network: 'network' });
 export const NOT_PLACEABLE_LEVEL3 = Object.freeze(['Cable', 'Active Optical Cable', 'HDMI Cable', 'License']);
 
-// ── 개별 지정(P6에서 채운다): '<제품ID>#<io 행 위치>' → { connector, signals, direction, quantity, note } ──
-// 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. note에 근거(제조사 자료 등)를 적는다.
+// ── 개별 지정(P6에서 채운다) ──
+// '<제품ID>#<io 행 위치>' → { match: { connector, signal }, connector, signals, direction, quantity, note }
+// 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. match에는 그 행의 connector·signal 원문을 그대로 적는다.
+// 원문이 바뀌면(행 이동·수정) 적용하지 않고 제품 이슈 override-stale로 알린다. note에 근거(제조사 자료 등)를 적는다.
 export const IO_OVERRIDES = Object.freeze({});
