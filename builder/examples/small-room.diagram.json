@@ -1,0 +1,1176 @@
+{
+  "version": "1.2",
+  "nodes": [
+    {
+      "id": "shape_01m49thv004rhmcpjy72cscwf3",
+      "type": "shape",
+      "position": {
+        "x": -40,
+        "y": -80
+      },
+      "style": {
+        "width": 960,
+        "height": 520
+      },
+      "data": {
+        "shapeType": "rectangle",
+        "label": "회의실 A (가상 예제)",
+        "fontSize": 14,
+        "fontColor": "#94a3b8",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.25,
+        "borderColor": "#475569",
+        "borderStyle": "solid",
+        "borderWidth": 2
+      },
+      "measured": {
+        "width": 960,
+        "height": 520
+      }
+    },
+    {
+      "id": "node_01m49thv011d06r81m1j1dvdqx",
+      "type": "equipment",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "id": "srg-x40uh",
+        "category": "video",
+        "name": "Camera",
+        "model": "SRG-X40UH",
+        "manufacturer": "Sony",
+        "description": "SRG-X40UH는 1/2.5형 Exmor R CMOS 센서와 광학 20배 줌을 갖춘 Sony의 표준 4K 30p PTZ 카메라입니다. HDMI 또는 USB(UVC)로 간단히 연결하고, PoE+와 VISCA/VISCA over IP로 LAN 케이블 하나에 전원과 제어를 통합할 수 있습니다.",
+        "series": "SRG",
+        "inputs": [
+          {
+            "id": "in-rs-422-1",
+            "label": "RS-422 In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "RJ45",
+            "signals": [
+              "RS-422"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "VISCA RS-422 IN RJ-45",
+              "signal": "PTZ control"
+            }
+          },
+          {
+            "id": "in-power-1",
+            "label": "Power In 1",
+            "type": "power",
+            "direction": "in",
+            "connector": "DC",
+            "signals": [
+              "POWER"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Power",
+              "connector": "DC IN 12V (JEITA RC-5320A TYPE 4)",
+              "signal": "Power"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-hdmi-1",
+            "label": "HDMI Out 1",
+            "type": "video",
+            "direction": "out",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI Type A",
+              "signal": "Video"
+            }
+          },
+          {
+            "id": "out-usb-1",
+            "label": "USB Out 1",
+            "type": "usb",
+            "direction": "out",
+            "connector": "USB-C",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "VIDEO OUT USB Type-C",
+              "signal": "Video (UVC)"
+            }
+          },
+          {
+            "id": "out-rs-422-1",
+            "label": "RS-422 Out 1",
+            "type": "control",
+            "direction": "out",
+            "connector": "RJ45",
+            "signals": [
+              "RS-422"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "VISCA RS-422 OUT RJ-45",
+              "signal": "PTZ control"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Network / Power",
+              "connector": "LAN RJ-45",
+              "signal": "Network/PoE"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/srg-x40uh-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "srg-x40uh",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=srg-x40uh"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 271
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv02m254g0m351yd4rar",
+      "type": "equipment",
+      "position": {
+        "x": 600,
+        "y": 0
+      },
+      "data": {
+        "id": "lh43qmcebgcxkr",
+        "category": "display",
+        "name": "Digital Signage",
+        "model": "LH43QMCEBGCXKR",
+        "manufacturer": "Samsung",
+        "description": "삼성 단독형 UHD M 시리즈(QM43C) 디지털 사이니지 43인치 모델로, 28.5mm 두께의 삼성 UHD 사이니지 중 가장 얇은 스크린이다.",
+        "inputs": [
+          {
+            "id": "in-hdmi-1",
+            "label": "HDMI In 1",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-hdmi-2",
+            "label": "HDMI In 2",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-hdmi-3",
+            "label": "HDMI In 3",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-dp-1",
+            "label": "DP In 1",
+            "type": "lt-1784014150344",
+            "direction": "in",
+            "connector": "DP",
+            "signals": [
+              "DP"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "DisplayPort",
+              "signal": "비디오 입력"
+            }
+          },
+          {
+            "id": "in-usb-1",
+            "label": "USB In 1",
+            "type": "usb",
+            "direction": "in",
+            "connector": "USB",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Data",
+              "connector": "USB",
+              "signal": "USB"
+            }
+          },
+          {
+            "id": "in-usb-2",
+            "label": "USB In 2",
+            "type": "usb",
+            "direction": "in",
+            "connector": "USB",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Data",
+              "connector": "USB",
+              "signal": "USB"
+            }
+          },
+          {
+            "id": "in-ir-1",
+            "label": "IR In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "UNKNOWN",
+            "signals": [
+              "IR"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "IR 입력",
+              "signal": "IR 수신/외부 IR"
+            }
+          },
+          {
+            "id": "in-rs-232-1",
+            "label": "RS-232 In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "UNKNOWN",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "RS-232C 입력",
+              "signal": "외부 제어"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-line-audio-1",
+            "label": "Line Audio Out 1",
+            "type": "audio",
+            "direction": "out",
+            "connector": "UNKNOWN",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "오디오 출력",
+              "signal": "아날로그 오디오 출력"
+            }
+          },
+          {
+            "id": "out-rs-232-1",
+            "label": "RS-232 Out 1",
+            "type": "control",
+            "direction": "out",
+            "connector": "UNKNOWN",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "RS-232C 출력",
+              "signal": "외부 제어(루프아웃)"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ45(LAN)",
+              "signal": "유선 네트워크"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/lh43qmcebgcxkr-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "lh43qmcebgcxkr",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 411
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv036fx48kydbr3tmjew",
+      "type": "equipment",
+      "position": {
+        "x": 300,
+        "y": 260
+      },
+      "data": {
+        "id": "gs108pp",
+        "category": "network",
+        "name": "Network Switch",
+        "model": "GS108PP",
+        "manufacturer": "NETGEAR",
+        "description": "총 123W의 PoE 전력 예산을 제공하는 8포트 기가비트 이더넷 고전력 PoE+ 비관리형 스위치로, NETGEAR FlexPoE 기능을 통해 별도 구매 전원 공급 모듈로 예산을 83W 또는 60W로 조정할 수 있다.",
+        "inputs": [],
+        "outputs": [],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-2",
+            "label": "Ethernet I/O 2",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-3",
+            "label": "Ethernet I/O 3",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-4",
+            "label": "Ethernet I/O 4",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-5",
+            "label": "Ethernet I/O 5",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-6",
+            "label": "Ethernet I/O 6",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-7",
+            "label": "Ethernet I/O 7",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-8",
+            "label": "Ethernet I/O 8",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/gs108pp-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "gs108pp",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=gs108pp"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 379
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "annotation_01m49thv07g9g2dpfjhfa8e16v",
+      "type": "annotation",
+      "position": {
+        "x": 0,
+        "y": 470
+      },
+      "style": {
+        "width": 420,
+        "height": 60
+      },
+      "data": {
+        "label": "사이니지 LAN은 케이블을 아직 정하지 않았다(cable-unspecified 예시)",
+        "fontSize": 14,
+        "fontColor": "#ffffff",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.8,
+        "borderColor": "#38bdf8",
+        "borderStyle": "dashed",
+        "borderRadius": 8,
+        "textAlign": "center"
+      },
+      "measured": {
+        "width": 420,
+        "height": 60
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-node_01m49thv011d06r81m1j1dvdqx-node_01m49thv02m254g0m351yd4rar-01m49thv04b75amm23r3qnj7kp",
+      "type": "smoothstep",
+      "source": "node_01m49thv011d06r81m1j1dvdqx",
+      "sourceHandle": "out-hdmi-1",
+      "target": "node_01m49thv02m254g0m351yd4rar",
+      "targetHandle": "in-hdmi-1",
+      "animated": false,
+      "style": {
+        "stroke": "#ef4444",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "video",
+        "signal": "HDMI",
+        "bomRows": [
+          {
+            "cableType": "ready-made",
+            "productName": "HDMI 케이블 5m",
+            "lineTypeId": "video",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv011d06r81m1j1dvdqx-node_01m49thv036fx48kydbr3tmjew-01m49thv05pt6wtmkh6bg5hyth",
+      "type": "smoothstep",
+      "source": "node_01m49thv011d06r81m1j1dvdqx",
+      "sourceHandle": "source_both-ethernet-1",
+      "target": "node_01m49thv036fx48kydbr3tmjew",
+      "targetHandle": "target_both-ethernet-1",
+      "animated": false,
+      "style": {
+        "stroke": "#22c55e",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "network",
+        "signal": "ETHERNET",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "UTP CAT6",
+            "lineTypeId": "network",
+            "length": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv02m254g0m351yd4rar-node_01m49thv036fx48kydbr3tmjew-01m49thv0655nz2cmf3v3wktdc",
+      "type": "smoothstep",
+      "source": "node_01m49thv02m254g0m351yd4rar",
+      "sourceHandle": "source_both-ethernet-1",
+      "target": "node_01m49thv036fx48kydbr3tmjew",
+      "targetHandle": "target_both-ethernet-2",
+      "animated": false,
+      "style": {
+        "stroke": "#22c55e",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "network",
+        "signal": "ETHERNET"
+      }
+    }
+  ],
+  "lineTypes": [
+    {
+      "id": "audio",
+      "name": "A.AUDIO",
+      "color": "#a855f7"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "lt-1784014150344",
+      "name": "DP",
+      "color": "#ff8585"
+    },
+    {
+      "id": "network",
+      "name": "LAN",
+      "color": "#22c55e"
+    },
+    {
+      "id": "power",
+      "name": "POWER",
+      "color": "#78716c"
+    },
+    {
+      "id": "sdi",
+      "name": "SDI",
+      "color": "#374151"
+    },
+    {
+      "id": "usb",
+      "name": "USB",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "video",
+      "name": "HDMI",
+      "color": "#ef4444"
+    }
+  ],
+  "equipmentDB": [
+    {
+      "id": "gs108pp",
+      "category": "network",
+      "name": "Network Switch",
+      "model": "GS108PP",
+      "manufacturer": "NETGEAR",
+      "description": "총 123W의 PoE 전력 예산을 제공하는 8포트 기가비트 이더넷 고전력 PoE+ 비관리형 스위치로, NETGEAR FlexPoE 기능을 통해 별도 구매 전원 공급 모듈로 예산을 83W 또는 60W로 조정할 수 있다.",
+      "inputs": [],
+      "outputs": [],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-2",
+          "label": "Ethernet I/O 2",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-3",
+          "label": "Ethernet I/O 3",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-4",
+          "label": "Ethernet I/O 4",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-5",
+          "label": "Ethernet I/O 5",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-6",
+          "label": "Ethernet I/O 6",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-7",
+          "label": "Ethernet I/O 7",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-8",
+          "label": "Ethernet I/O 8",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/gs108pp-main.webp",
+      "portal": {
+        "productId": "gs108pp",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=gs108pp"
+      }
+    },
+    {
+      "id": "lh43qmcebgcxkr",
+      "category": "display",
+      "name": "Digital Signage",
+      "model": "LH43QMCEBGCXKR",
+      "manufacturer": "Samsung",
+      "description": "삼성 단독형 UHD M 시리즈(QM43C) 디지털 사이니지 43인치 모델로, 28.5mm 두께의 삼성 UHD 사이니지 중 가장 얇은 스크린이다.",
+      "inputs": [
+        {
+          "id": "in-hdmi-1",
+          "label": "HDMI In 1",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-hdmi-2",
+          "label": "HDMI In 2",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-hdmi-3",
+          "label": "HDMI In 3",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-dp-1",
+          "label": "DP In 1",
+          "type": "lt-1784014150344",
+          "direction": "in",
+          "connector": "DP",
+          "signals": [
+            "DP"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "DisplayPort",
+            "signal": "비디오 입력"
+          }
+        },
+        {
+          "id": "in-usb-1",
+          "label": "USB In 1",
+          "type": "usb",
+          "direction": "in",
+          "connector": "USB",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB"
+          }
+        },
+        {
+          "id": "in-usb-2",
+          "label": "USB In 2",
+          "type": "usb",
+          "direction": "in",
+          "connector": "USB",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB"
+          }
+        },
+        {
+          "id": "in-ir-1",
+          "label": "IR In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "UNKNOWN",
+          "signals": [
+            "IR"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "IR 입력",
+            "signal": "IR 수신/외부 IR"
+          }
+        },
+        {
+          "id": "in-rs-232-1",
+          "label": "RS-232 In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "UNKNOWN",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "RS-232C 입력",
+            "signal": "외부 제어"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-line-audio-1",
+          "label": "Line Audio Out 1",
+          "type": "audio",
+          "direction": "out",
+          "connector": "UNKNOWN",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "오디오 출력",
+            "signal": "아날로그 오디오 출력"
+          }
+        },
+        {
+          "id": "out-rs-232-1",
+          "label": "RS-232 Out 1",
+          "type": "control",
+          "direction": "out",
+          "connector": "UNKNOWN",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "RS-232C 출력",
+            "signal": "외부 제어(루프아웃)"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ45(LAN)",
+            "signal": "유선 네트워크"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/lh43qmcebgcxkr-main.webp",
+      "portal": {
+        "productId": "lh43qmcebgcxkr",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr"
+      }
+    },
+    {
+      "id": "srg-x40uh",
+      "category": "video",
+      "name": "Camera",
+      "model": "SRG-X40UH",
+      "manufacturer": "Sony",
+      "description": "SRG-X40UH는 1/2.5형 Exmor R CMOS 센서와 광학 20배 줌을 갖춘 Sony의 표준 4K 30p PTZ 카메라입니다. HDMI 또는 USB(UVC)로 간단히 연결하고, PoE+와 VISCA/VISCA over IP로 LAN 케이블 하나에 전원과 제어를 통합할 수 있습니다.",
+      "series": "SRG",
+      "inputs": [
+        {
+          "id": "in-rs-422-1",
+          "label": "RS-422 In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "RJ45",
+          "signals": [
+            "RS-422"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "VISCA RS-422 IN RJ-45",
+            "signal": "PTZ control"
+          }
+        },
+        {
+          "id": "in-power-1",
+          "label": "Power In 1",
+          "type": "power",
+          "direction": "in",
+          "connector": "DC",
+          "signals": [
+            "POWER"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Power",
+            "connector": "DC IN 12V (JEITA RC-5320A TYPE 4)",
+            "signal": "Power"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-hdmi-1",
+          "label": "HDMI Out 1",
+          "type": "video",
+          "direction": "out",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI Type A",
+            "signal": "Video"
+          }
+        },
+        {
+          "id": "out-usb-1",
+          "label": "USB Out 1",
+          "type": "usb",
+          "direction": "out",
+          "connector": "USB-C",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "VIDEO OUT USB Type-C",
+            "signal": "Video (UVC)"
+          }
+        },
+        {
+          "id": "out-rs-422-1",
+          "label": "RS-422 Out 1",
+          "type": "control",
+          "direction": "out",
+          "connector": "RJ45",
+          "signals": [
+            "RS-422"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "VISCA RS-422 OUT RJ-45",
+            "signal": "PTZ control"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Network / Power",
+            "connector": "LAN RJ-45",
+            "signal": "Network/PoE"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/srg-x40uh-main.webp",
+      "portal": {
+        "productId": "srg-x40uh",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=srg-x40uh"
+      }
+    }
+  ],
+  "generator": {
+    "app": "av-portal-builder",
+    "version": "0.1.0"
+  },
+  "library": {
+    "schemaVersion": "1.0.0",
+    "source": {
+      "catalogSha": "4d2088195d448a7d279d01183ed79c768fe45236d2d28386cd10a45754c1a01c",
+      "detailSetSha": "6e80167514ccfb6469fca3ea33dd89776b5df6f2099972481d42dbbba05a1d30",
+      "rtcomSha": "b4a1a55a110c266e15e50d786a5da08522e57c764f7ac84eb195ac6b995209a7",
+      "vocabularyVersion": "1.0.0"
+    }
+  },
+  "issues": [
+    {
+      "code": "cable-unspecified",
+      "severity": "info",
+      "target": {
+        "edge": "e-node_01m49thv02m254g0m351yd4rar-node_01m49thv036fx48kydbr3tmjew-01m49thv0655nz2cmf3v3wktdc"
+      },
+      "detail": "network"
+    }
+  ]
+}

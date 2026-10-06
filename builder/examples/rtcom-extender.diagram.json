@@ -1,0 +1,1274 @@
+{
+  "version": "1.2",
+  "nodes": [
+    {
+      "id": "node_01m49thv00xsbgbmab5ejfnf7x",
+      "type": "equipment",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "id": "srg-x40uh",
+        "category": "video",
+        "name": "Camera",
+        "model": "SRG-X40UH",
+        "manufacturer": "Sony",
+        "description": "SRG-X40UH는 1/2.5형 Exmor R CMOS 센서와 광학 20배 줌을 갖춘 Sony의 표준 4K 30p PTZ 카메라입니다. HDMI 또는 USB(UVC)로 간단히 연결하고, PoE+와 VISCA/VISCA over IP로 LAN 케이블 하나에 전원과 제어를 통합할 수 있습니다.",
+        "series": "SRG",
+        "inputs": [
+          {
+            "id": "in-rs-422-1",
+            "label": "RS-422 In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "RJ45",
+            "signals": [
+              "RS-422"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "VISCA RS-422 IN RJ-45",
+              "signal": "PTZ control"
+            }
+          },
+          {
+            "id": "in-power-1",
+            "label": "Power In 1",
+            "type": "power",
+            "direction": "in",
+            "connector": "DC",
+            "signals": [
+              "POWER"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Power",
+              "connector": "DC IN 12V (JEITA RC-5320A TYPE 4)",
+              "signal": "Power"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-hdmi-1",
+            "label": "HDMI Out 1",
+            "type": "video",
+            "direction": "out",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI Type A",
+              "signal": "Video"
+            }
+          },
+          {
+            "id": "out-usb-1",
+            "label": "USB Out 1",
+            "type": "usb",
+            "direction": "out",
+            "connector": "USB-C",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "VIDEO OUT USB Type-C",
+              "signal": "Video (UVC)"
+            }
+          },
+          {
+            "id": "out-rs-422-1",
+            "label": "RS-422 Out 1",
+            "type": "control",
+            "direction": "out",
+            "connector": "RJ45",
+            "signals": [
+              "RS-422"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "VISCA RS-422 OUT RJ-45",
+              "signal": "PTZ control"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Network / Power",
+              "connector": "LAN RJ-45",
+              "signal": "Network/PoE"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/srg-x40uh-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "srg-x40uh",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=srg-x40uh"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 271
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv010hjecqey89qf11hp",
+      "type": "equipment",
+      "position": {
+        "x": 420,
+        "y": 0
+      },
+      "data": {
+        "id": "rtcom-ct101-u-cr101-u:tx",
+        "category": "video",
+        "name": "Extender",
+        "model": "CT101-U",
+        "manufacturer": "RTCOM",
+        "description": "HDBaseT 기술로 비디오·오디오·RS-232 신호를 CATx 케이블 한 가닥으로 최대 100m 전송하는 송·수신기다.",
+        "series": "VDM Series Extender",
+        "inputs": [
+          {
+            "id": "in-hdmi-1",
+            "label": "HDMI In 1",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI",
+              "DVI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "TX · Video",
+              "connector": "HDMI",
+              "signal": "DVI / HDMI (TMDS)"
+            }
+          },
+          {
+            "id": "in-line-audio-1",
+            "label": "Line Audio In 1",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TRS-3.5",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "TX · Audio",
+              "connector": "3.5mm stereo",
+              "signal": "Stereo Audio"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-hdbaset-1",
+            "label": "HDBaseT Out 1",
+            "type": "network",
+            "direction": "out",
+            "connector": "RJ45",
+            "signals": [
+              "HDBASET"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "TX · Transmission",
+              "connector": "RJ45 (CATx)",
+              "signal": "HDBaseT"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-rs-232-1",
+            "label": "RS-232 I/O 1",
+            "type": "control",
+            "direction": "both",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "TX · Control",
+              "connector": "Phoenix connector(녹색, 핀 수 미기재)",
+              "signal": "RS-232"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/ct101-u-cr101-u-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "rtcom-ct101-u-cr101-u",
+          "source": "rtcom",
+          "unit": "tx",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct101-u-cr101-u"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 243
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv02qzmc7fyw415wtexs",
+      "type": "equipment",
+      "position": {
+        "x": 840,
+        "y": 0
+      },
+      "data": {
+        "id": "rtcom-ct101-u-cr101-u:rx",
+        "category": "video",
+        "name": "Extender",
+        "model": "CR101-U",
+        "manufacturer": "RTCOM",
+        "description": "HDBaseT 기술로 비디오·오디오·RS-232 신호를 CATx 케이블 한 가닥으로 최대 100m 전송하는 송·수신기다.",
+        "series": "VDM Series Extender",
+        "inputs": [
+          {
+            "id": "in-hdbaset-1",
+            "label": "HDBaseT In 1",
+            "type": "network",
+            "direction": "in",
+            "connector": "RJ45",
+            "signals": [
+              "HDBASET"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "RX · Transmission",
+              "connector": "RJ45 (CATx)",
+              "signal": "HDBaseT"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-hdmi-1",
+            "label": "HDMI Out 1",
+            "type": "video",
+            "direction": "out",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI",
+              "DVI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "RX · Video",
+              "connector": "HDMI",
+              "signal": "DVI / HDMI (TMDS)"
+            }
+          },
+          {
+            "id": "out-line-audio-1",
+            "label": "Line Audio Out 1",
+            "type": "audio",
+            "direction": "out",
+            "connector": "TRS-3.5",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "RX · Audio",
+              "connector": "3.5mm stereo",
+              "signal": "Stereo Audio"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-rs-232-1",
+            "label": "RS-232 I/O 1",
+            "type": "control",
+            "direction": "both",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "RX · Control",
+              "connector": "Phoenix connector(녹색, 핀 수 미기재)",
+              "signal": "RS-232"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/ct101-u-cr101-u-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "rtcom-ct101-u-cr101-u",
+          "source": "rtcom",
+          "unit": "rx",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct101-u-cr101-u"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 243
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv03y2gbmqjmxjxz4mvh",
+      "type": "equipment",
+      "position": {
+        "x": 1260,
+        "y": 0
+      },
+      "data": {
+        "id": "lh43qmcebgcxkr",
+        "category": "display",
+        "name": "Digital Signage",
+        "model": "LH43QMCEBGCXKR",
+        "manufacturer": "Samsung",
+        "description": "삼성 단독형 UHD M 시리즈(QM43C) 디지털 사이니지 43인치 모델로, 28.5mm 두께의 삼성 UHD 사이니지 중 가장 얇은 스크린이다.",
+        "inputs": [
+          {
+            "id": "in-hdmi-1",
+            "label": "HDMI In 1",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-hdmi-2",
+            "label": "HDMI In 2",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-hdmi-3",
+            "label": "HDMI In 3",
+            "type": "video",
+            "direction": "in",
+            "connector": "HDMI",
+            "signals": [
+              "HDMI"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "HDMI",
+              "signal": "비디오/오디오 입력"
+            }
+          },
+          {
+            "id": "in-dp-1",
+            "label": "DP In 1",
+            "type": "lt-1784014150344",
+            "direction": "in",
+            "connector": "DP",
+            "signals": [
+              "DP"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Video",
+              "connector": "DisplayPort",
+              "signal": "비디오 입력"
+            }
+          },
+          {
+            "id": "in-usb-1",
+            "label": "USB In 1",
+            "type": "usb",
+            "direction": "in",
+            "connector": "USB",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Data",
+              "connector": "USB",
+              "signal": "USB"
+            }
+          },
+          {
+            "id": "in-usb-2",
+            "label": "USB In 2",
+            "type": "usb",
+            "direction": "in",
+            "connector": "USB",
+            "signals": [
+              "USB"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Data",
+              "connector": "USB",
+              "signal": "USB"
+            }
+          },
+          {
+            "id": "in-ir-1",
+            "label": "IR In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "UNKNOWN",
+            "signals": [
+              "IR"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "IR 입력",
+              "signal": "IR 수신/외부 IR"
+            }
+          },
+          {
+            "id": "in-rs-232-1",
+            "label": "RS-232 In 1",
+            "type": "control",
+            "direction": "in",
+            "connector": "UNKNOWN",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "RS-232C 입력",
+              "signal": "외부 제어"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-line-audio-1",
+            "label": "Line Audio Out 1",
+            "type": "audio",
+            "direction": "out",
+            "connector": "UNKNOWN",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "오디오 출력",
+              "signal": "아날로그 오디오 출력"
+            }
+          },
+          {
+            "id": "out-rs-232-1",
+            "label": "RS-232 Out 1",
+            "type": "control",
+            "direction": "out",
+            "connector": "UNKNOWN",
+            "signals": [
+              "RS-232"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Control",
+              "connector": "RS-232C 출력",
+              "signal": "외부 제어(루프아웃)"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET"
+            ],
+            "verification": "VERIFIED",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ45(LAN)",
+              "signal": "유선 네트워크"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/lh43qmcebgcxkr-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "lh43qmcebgcxkr",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 411
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv07ng3y1v3nwxrhkhdc",
+      "type": "equipment",
+      "position": {
+        "x": 420,
+        "y": 420
+      },
+      "data": {
+        "id": "rtcom-xdm:xdm-12",
+        "category": "video",
+        "name": "Modular Matrix",
+        "model": "XDM-12",
+        "manufacturer": "RTCOM",
+        "description": "12×12 · 482.6×369.5×177mm(W×D×H) · 10kg · 4U",
+        "series": "eXtreme Digital Matrix",
+        "inputs": [],
+        "outputs": [],
+        "bidirectional": [],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/xdm-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "rtcom-xdm",
+          "source": "rtcom",
+          "variant": "XDM-12",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 146
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "annotation_01m49thv08dsr5erpsr6d51h4m",
+      "type": "annotation",
+      "position": {
+        "x": 840,
+        "y": 420
+      },
+      "style": {
+        "width": 420,
+        "height": 60
+      },
+      "data": {
+        "label": "XDM-12는 카드 단위 단자 정보가 없어 단자 없이 놓인다(no-ports·series-config-pending 예시)",
+        "fontSize": 14,
+        "fontColor": "#ffffff",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.8,
+        "borderColor": "#38bdf8",
+        "borderStyle": "dashed",
+        "borderRadius": 8,
+        "textAlign": "center"
+      },
+      "measured": {
+        "width": 420,
+        "height": 60
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-node_01m49thv00xsbgbmab5ejfnf7x-node_01m49thv010hjecqey89qf11hp-01m49thv048sbrnw1yh2a5k0ry",
+      "type": "smoothstep",
+      "source": "node_01m49thv00xsbgbmab5ejfnf7x",
+      "sourceHandle": "out-hdmi-1",
+      "target": "node_01m49thv010hjecqey89qf11hp",
+      "targetHandle": "in-hdmi-1",
+      "animated": false,
+      "style": {
+        "stroke": "#ef4444",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "video",
+        "signal": "HDMI",
+        "bomRows": [
+          {
+            "cableType": "ready-made",
+            "productName": "HDMI 케이블 1m",
+            "lineTypeId": "video",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv010hjecqey89qf11hp-node_01m49thv02qzmc7fyw415wtexs-01m49thv05ccq8rwze27zgzg0p",
+      "type": "smoothstep",
+      "source": "node_01m49thv010hjecqey89qf11hp",
+      "sourceHandle": "out-hdbaset-1",
+      "target": "node_01m49thv02qzmc7fyw415wtexs",
+      "targetHandle": "in-hdbaset-1",
+      "animated": false,
+      "style": {
+        "stroke": "#22c55e",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "network",
+        "signal": "HDBASET",
+        "label": "HDBaseT 70m 구간",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "STP CAT6A",
+            "lineTypeId": "network",
+            "length": 70
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv02qzmc7fyw415wtexs-node_01m49thv03y2gbmqjmxjxz4mvh-01m49thv067288jrkbb8ba8afr",
+      "type": "smoothstep",
+      "source": "node_01m49thv02qzmc7fyw415wtexs",
+      "sourceHandle": "out-hdmi-1",
+      "target": "node_01m49thv03y2gbmqjmxjxz4mvh",
+      "targetHandle": "in-hdmi-1",
+      "animated": false,
+      "style": {
+        "stroke": "#ef4444",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "video",
+        "signal": "HDMI",
+        "bomRows": [
+          {
+            "cableType": "ready-made",
+            "productName": "HDMI 케이블 2m",
+            "lineTypeId": "video",
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "lineTypes": [
+    {
+      "id": "audio",
+      "name": "A.AUDIO",
+      "color": "#a855f7"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "lt-1784014150344",
+      "name": "DP",
+      "color": "#ff8585"
+    },
+    {
+      "id": "network",
+      "name": "LAN",
+      "color": "#22c55e"
+    },
+    {
+      "id": "power",
+      "name": "POWER",
+      "color": "#78716c"
+    },
+    {
+      "id": "sdi",
+      "name": "SDI",
+      "color": "#374151"
+    },
+    {
+      "id": "usb",
+      "name": "USB",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "video",
+      "name": "HDMI",
+      "color": "#ef4444"
+    }
+  ],
+  "equipmentDB": [
+    {
+      "id": "lh43qmcebgcxkr",
+      "category": "display",
+      "name": "Digital Signage",
+      "model": "LH43QMCEBGCXKR",
+      "manufacturer": "Samsung",
+      "description": "삼성 단독형 UHD M 시리즈(QM43C) 디지털 사이니지 43인치 모델로, 28.5mm 두께의 삼성 UHD 사이니지 중 가장 얇은 스크린이다.",
+      "inputs": [
+        {
+          "id": "in-hdmi-1",
+          "label": "HDMI In 1",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-hdmi-2",
+          "label": "HDMI In 2",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-hdmi-3",
+          "label": "HDMI In 3",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI",
+            "signal": "비디오/오디오 입력"
+          }
+        },
+        {
+          "id": "in-dp-1",
+          "label": "DP In 1",
+          "type": "lt-1784014150344",
+          "direction": "in",
+          "connector": "DP",
+          "signals": [
+            "DP"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "DisplayPort",
+            "signal": "비디오 입력"
+          }
+        },
+        {
+          "id": "in-usb-1",
+          "label": "USB In 1",
+          "type": "usb",
+          "direction": "in",
+          "connector": "USB",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB"
+          }
+        },
+        {
+          "id": "in-usb-2",
+          "label": "USB In 2",
+          "type": "usb",
+          "direction": "in",
+          "connector": "USB",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Data",
+            "connector": "USB",
+            "signal": "USB"
+          }
+        },
+        {
+          "id": "in-ir-1",
+          "label": "IR In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "UNKNOWN",
+          "signals": [
+            "IR"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "IR 입력",
+            "signal": "IR 수신/외부 IR"
+          }
+        },
+        {
+          "id": "in-rs-232-1",
+          "label": "RS-232 In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "UNKNOWN",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "RS-232C 입력",
+            "signal": "외부 제어"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-line-audio-1",
+          "label": "Line Audio Out 1",
+          "type": "audio",
+          "direction": "out",
+          "connector": "UNKNOWN",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "오디오 출력",
+            "signal": "아날로그 오디오 출력"
+          }
+        },
+        {
+          "id": "out-rs-232-1",
+          "label": "RS-232 Out 1",
+          "type": "control",
+          "direction": "out",
+          "connector": "UNKNOWN",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "RS-232C 출력",
+            "signal": "외부 제어(루프아웃)"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ45(LAN)",
+            "signal": "유선 네트워크"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/lh43qmcebgcxkr-main.webp",
+      "portal": {
+        "productId": "lh43qmcebgcxkr",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=lh43qmcebgcxkr"
+      }
+    },
+    {
+      "id": "rtcom-ct101-u-cr101-u:rx",
+      "category": "video",
+      "name": "Extender",
+      "model": "CR101-U",
+      "manufacturer": "RTCOM",
+      "description": "HDBaseT 기술로 비디오·오디오·RS-232 신호를 CATx 케이블 한 가닥으로 최대 100m 전송하는 송·수신기다.",
+      "series": "VDM Series Extender",
+      "inputs": [
+        {
+          "id": "in-hdbaset-1",
+          "label": "HDBaseT In 1",
+          "type": "network",
+          "direction": "in",
+          "connector": "RJ45",
+          "signals": [
+            "HDBASET"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "RX · Transmission",
+            "connector": "RJ45 (CATx)",
+            "signal": "HDBaseT"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-hdmi-1",
+          "label": "HDMI Out 1",
+          "type": "video",
+          "direction": "out",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI",
+            "DVI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "RX · Video",
+            "connector": "HDMI",
+            "signal": "DVI / HDMI (TMDS)"
+          }
+        },
+        {
+          "id": "out-line-audio-1",
+          "label": "Line Audio Out 1",
+          "type": "audio",
+          "direction": "out",
+          "connector": "TRS-3.5",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "RX · Audio",
+            "connector": "3.5mm stereo",
+            "signal": "Stereo Audio"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-rs-232-1",
+          "label": "RS-232 I/O 1",
+          "type": "control",
+          "direction": "both",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "RX · Control",
+            "connector": "Phoenix connector(녹색, 핀 수 미기재)",
+            "signal": "RS-232"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/ct101-u-cr101-u-main.webp",
+      "portal": {
+        "productId": "rtcom-ct101-u-cr101-u",
+        "source": "rtcom",
+        "unit": "rx",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct101-u-cr101-u"
+      }
+    },
+    {
+      "id": "rtcom-ct101-u-cr101-u:tx",
+      "category": "video",
+      "name": "Extender",
+      "model": "CT101-U",
+      "manufacturer": "RTCOM",
+      "description": "HDBaseT 기술로 비디오·오디오·RS-232 신호를 CATx 케이블 한 가닥으로 최대 100m 전송하는 송·수신기다.",
+      "series": "VDM Series Extender",
+      "inputs": [
+        {
+          "id": "in-hdmi-1",
+          "label": "HDMI In 1",
+          "type": "video",
+          "direction": "in",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI",
+            "DVI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "TX · Video",
+            "connector": "HDMI",
+            "signal": "DVI / HDMI (TMDS)"
+          }
+        },
+        {
+          "id": "in-line-audio-1",
+          "label": "Line Audio In 1",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TRS-3.5",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "TX · Audio",
+            "connector": "3.5mm stereo",
+            "signal": "Stereo Audio"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-hdbaset-1",
+          "label": "HDBaseT Out 1",
+          "type": "network",
+          "direction": "out",
+          "connector": "RJ45",
+          "signals": [
+            "HDBASET"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "TX · Transmission",
+            "connector": "RJ45 (CATx)",
+            "signal": "HDBaseT"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-rs-232-1",
+          "label": "RS-232 I/O 1",
+          "type": "control",
+          "direction": "both",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "RS-232"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "TX · Control",
+            "connector": "Phoenix connector(녹색, 핀 수 미기재)",
+            "signal": "RS-232"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/ct101-u-cr101-u-main.webp",
+      "portal": {
+        "productId": "rtcom-ct101-u-cr101-u",
+        "source": "rtcom",
+        "unit": "tx",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-ct101-u-cr101-u"
+      }
+    },
+    {
+      "id": "rtcom-xdm:xdm-12",
+      "category": "video",
+      "name": "Modular Matrix",
+      "model": "XDM-12",
+      "manufacturer": "RTCOM",
+      "description": "12×12 · 482.6×369.5×177mm(W×D×H) · 10kg · 4U",
+      "series": "eXtreme Digital Matrix",
+      "inputs": [],
+      "outputs": [],
+      "bidirectional": [],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/rtcom/images/xdm-main.webp",
+      "portal": {
+        "productId": "rtcom-xdm",
+        "source": "rtcom",
+        "variant": "XDM-12",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm"
+      }
+    },
+    {
+      "id": "srg-x40uh",
+      "category": "video",
+      "name": "Camera",
+      "model": "SRG-X40UH",
+      "manufacturer": "Sony",
+      "description": "SRG-X40UH는 1/2.5형 Exmor R CMOS 센서와 광학 20배 줌을 갖춘 Sony의 표준 4K 30p PTZ 카메라입니다. HDMI 또는 USB(UVC)로 간단히 연결하고, PoE+와 VISCA/VISCA over IP로 LAN 케이블 하나에 전원과 제어를 통합할 수 있습니다.",
+      "series": "SRG",
+      "inputs": [
+        {
+          "id": "in-rs-422-1",
+          "label": "RS-422 In 1",
+          "type": "control",
+          "direction": "in",
+          "connector": "RJ45",
+          "signals": [
+            "RS-422"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "VISCA RS-422 IN RJ-45",
+            "signal": "PTZ control"
+          }
+        },
+        {
+          "id": "in-power-1",
+          "label": "Power In 1",
+          "type": "power",
+          "direction": "in",
+          "connector": "DC",
+          "signals": [
+            "POWER"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Power",
+            "connector": "DC IN 12V (JEITA RC-5320A TYPE 4)",
+            "signal": "Power"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-hdmi-1",
+          "label": "HDMI Out 1",
+          "type": "video",
+          "direction": "out",
+          "connector": "HDMI",
+          "signals": [
+            "HDMI"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "HDMI Type A",
+            "signal": "Video"
+          }
+        },
+        {
+          "id": "out-usb-1",
+          "label": "USB Out 1",
+          "type": "usb",
+          "direction": "out",
+          "connector": "USB-C",
+          "signals": [
+            "USB"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Video",
+            "connector": "VIDEO OUT USB Type-C",
+            "signal": "Video (UVC)"
+          }
+        },
+        {
+          "id": "out-rs-422-1",
+          "label": "RS-422 Out 1",
+          "type": "control",
+          "direction": "out",
+          "connector": "RJ45",
+          "signals": [
+            "RS-422"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Control",
+            "connector": "VISCA RS-422 OUT RJ-45",
+            "signal": "PTZ control"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "VERIFIED",
+          "portalIo": {
+            "group": "Network / Power",
+            "connector": "LAN RJ-45",
+            "signal": "Network/PoE"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/srg-x40uh-main.webp",
+      "portal": {
+        "productId": "srg-x40uh",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=srg-x40uh"
+      }
+    }
+  ],
+  "generator": {
+    "app": "av-portal-builder",
+    "version": "0.1.0"
+  },
+  "library": {
+    "schemaVersion": "1.0.0",
+    "source": {
+      "catalogSha": "4d2088195d448a7d279d01183ed79c768fe45236d2d28386cd10a45754c1a01c",
+      "detailSetSha": "6e80167514ccfb6469fca3ea33dd89776b5df6f2099972481d42dbbba05a1d30",
+      "rtcomSha": "b4a1a55a110c266e15e50d786a5da08522e57c764f7ac84eb195ac6b995209a7",
+      "vocabularyVersion": "1.0.0"
+    }
+  },
+  "issues": [
+    {
+      "code": "no-ports",
+      "severity": "warning",
+      "target": {
+        "node": "node_01m49thv07ng3y1v3nwxrhkhdc"
+      },
+      "detail": "rtcom-xdm:xdm-12"
+    },
+    {
+      "code": "series-config-pending",
+      "severity": "warning",
+      "target": {
+        "node": "node_01m49thv07ng3y1v3nwxrhkhdc"
+      },
+      "detail": "XDM-12"
+    }
+  ]
+}

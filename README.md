@@ -41,6 +41,8 @@ W-007 대응과 W-008 제안표가 이 PC에 있을 때, `scripts/build-private-
 
 Builder 결선용 라이브러리(`builder-library.json`)는 Pages 배포 때 `node beta/build-builder-library.mjs --out beta/site/builder-library.json --report`로 만들고 저장소에는 커밋하지 않습니다. 로컬에서는 `node beta/build-builder-library.mjs --report`로 `beta/.generated/`에 만들어 준비도(단자가 된 행, 확인 필요 행)를 볼 수 있습니다. 규칙은 `beta/port-vocabulary.mjs`와 [기반 명세](Work/빌더/기반명세.md) 부록 A입니다. 제품 데이터를 바꾸는 PR이 이 파일을 따로 만들 필요는 없습니다. 로컬에서 `--out beta/site/builder-library.json`으로 만든 채 `node beta/verify-pages.mjs`를 돌리면 최상위 파일 목록 검사에서 실패하므로, 로컬 확인은 기본 위치(`beta/.generated/`)를 씁니다.
 
+Builder 구성도 JSON 1.2 파일은 `node builder/cli/validate.mjs <파일> [--library <경로|URL>]`로 검증합니다. 엔진은 `builder/engine/`, 형식 정의는 `builder/schema/diagram-1.2.schema.json`, 예제와 견적 담당자용 안내는 [builder/examples](builder/examples/README.md)에 있습니다.
+
 RTCOM 공개 정상본은 `node beta/sync-rtcom.mjs`로 갱신하고 `node beta/sync-rtcom.mjs --check`로 목록·상세·이미지의 SHA와 바이트를 전수 확인합니다. 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행해야 합니다. 예약 워크플로도 같은 순서로 검증하며, 원본에 변화가 없으면 PR을 만들지 않습니다.
 
 ```powershell

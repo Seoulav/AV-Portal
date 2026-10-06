@@ -1,0 +1,360 @@
+{
+  "version": "1.1",
+  "nodes": [
+    {
+      "id": "node_1780000000101",
+      "type": "equipment",
+      "position": {
+        "x": 50,
+        "y": 120
+      },
+      "data": {
+        "id": "eq-1780000000001",
+        "category": "video",
+        "name": "PTZ 카메라",
+        "model": "VCAM-PTZ100",
+        "manufacturer": "가상제조사A",
+        "description": "가상 장비 (예시)",
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "out-sdi-1",
+            "label": "SDI Out 1",
+            "type": "sdi",
+            "direction": "out"
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-lan-1",
+            "label": "LAN 1",
+            "type": "network",
+            "direction": "both"
+          }
+        ]
+      },
+      "measured": {
+        "width": 220,
+        "height": 216
+      },
+      "targetPosition": "left",
+      "sourcePosition": "right"
+    },
+    {
+      "id": "node_1780000000102",
+      "type": "equipment",
+      "position": {
+        "x": 550,
+        "y": 80
+      },
+      "data": {
+        "id": "eq-1780000000002",
+        "category": "video",
+        "name": "비디오 스위처",
+        "model": "VSW-200",
+        "manufacturer": "가상제조사B",
+        "description": "가상 장비 (예시)",
+        "series": "VSW 시리즈",
+        "inputs": [
+          {
+            "id": "in-sdi-1",
+            "label": "SDI In 1",
+            "type": "sdi",
+            "direction": "in"
+          },
+          {
+            "id": "in-sdi-2",
+            "label": "SDI In 2",
+            "type": "sdi",
+            "direction": "in"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-hdmi-1",
+            "label": "HDMI Out 1",
+            "type": "video",
+            "direction": "out"
+          },
+          {
+            "id": "opt-eqopt-1780000000010-0-opt-out-1780000000011",
+            "label": "HDMI Out (카드)",
+            "type": "video",
+            "direction": "out"
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-lan-1",
+            "label": "LAN 1",
+            "type": "network",
+            "direction": "both"
+          }
+        ],
+        "isReused": false,
+        "selectedOptionQuantities": {
+          "eqopt-1780000000010": 1
+        },
+        "optionPortIds": [
+          "opt-eqopt-1780000000010-0-opt-out-1780000000011"
+        ]
+      },
+      "measured": {
+        "width": 220,
+        "height": 300
+      },
+      "targetPosition": "left",
+      "sourcePosition": "right",
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "node_1780000000103",
+      "type": "equipment",
+      "position": {
+        "x": 1050,
+        "y": 140
+      },
+      "data": {
+        "id": "eq-1780000000003",
+        "category": "display",
+        "name": "모니터/디스플레이",
+        "model": "VDSP-55",
+        "manufacturer": "가상제조사C",
+        "inputs": [
+          {
+            "id": "in-hdmi-1",
+            "label": "HDMI In 1",
+            "type": "video",
+            "direction": "in"
+          }
+        ],
+        "outputs": [],
+        "bidirectional": []
+      },
+      "measured": {
+        "width": 220,
+        "height": 174
+      },
+      "targetPosition": "left",
+      "sourcePosition": "right"
+    },
+    {
+      "id": "annotation_1780000000201",
+      "type": "annotation",
+      "position": {
+        "x": 50,
+        "y": 20
+      },
+      "data": {
+        "label": "가상 메모: 카메라 신호는 SDI로 전송",
+        "fontSize": 14,
+        "fontColor": "#ffffff",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.8,
+        "borderColor": "#38bdf8",
+        "borderStyle": "dashed",
+        "borderRadius": 8,
+        "textAlign": "center"
+      },
+      "style": {
+        "width": 200,
+        "height": 60
+      },
+      "measured": {
+        "width": 200,
+        "height": 60
+      }
+    },
+    {
+      "id": "shape_1780000000202",
+      "type": "shape",
+      "position": {
+        "x": 500,
+        "y": 40
+      },
+      "data": {
+        "shapeType": "rectangle",
+        "label": "가상 구역 A (조정실)",
+        "fontSize": 14,
+        "fontColor": "#94a3b8",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.25,
+        "borderColor": "#475569",
+        "borderStyle": "solid",
+        "borderWidth": 2
+      },
+      "style": {
+        "width": 350,
+        "height": 250
+      },
+      "measured": {
+        "width": 350,
+        "height": 250
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_1780000000101",
+      "sourceHandle": "out-sdi-1",
+      "target": "node_1780000000102",
+      "targetHandle": "in-sdi-1",
+      "id": "e-node_1780000000101-node_1780000000102-1780000000301",
+      "type": "smoothstep",
+      "animated": false,
+      "style": {
+        "stroke": "#374151",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "sdi",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "가상 SDI 케이블 5C-FB",
+            "lineTypeId": "sdi",
+            "length": 15
+          }
+        ]
+      }
+    },
+    {
+      "source": "node_1780000000102",
+      "sourceHandle": "opt-eqopt-1780000000010-0-opt-out-1780000000011",
+      "target": "node_1780000000103",
+      "targetHandle": "in-hdmi-1",
+      "id": "e-node_1780000000102-node_1780000000103-1780000000302",
+      "type": "smoothstep",
+      "animated": false,
+      "style": {
+        "stroke": "#ef4444",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "video",
+        "label": "HDMI 10m"
+      }
+    }
+  ],
+  "lineTypes": [
+    {
+      "id": "audio",
+      "name": "A.AUDIO",
+      "color": "#a855f7"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "lt-1784014150344",
+      "name": "DP",
+      "color": "#ff8585"
+    },
+    {
+      "id": "network",
+      "name": "LAN",
+      "color": "#22c55e"
+    },
+    {
+      "id": "sdi",
+      "name": "SDI",
+      "color": "#374151"
+    },
+    {
+      "id": "usb",
+      "name": "USB",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "video",
+      "name": "HDMI",
+      "color": "#ef4444"
+    }
+  ],
+  "equipmentDB": [
+    {
+      "id": "eq-1780000000001",
+      "category": "video",
+      "name": "PTZ 카메라",
+      "model": "VCAM-PTZ100",
+      "manufacturer": "가상제조사A",
+      "description": "가상 장비 (예시)",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "out-sdi-1",
+          "label": "SDI Out 1",
+          "type": "sdi",
+          "direction": "out"
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-lan-1",
+          "label": "LAN 1",
+          "type": "network",
+          "direction": "both"
+        }
+      ]
+    },
+    {
+      "id": "eq-1780000000002",
+      "category": "video",
+      "name": "비디오 스위처",
+      "model": "VSW-200",
+      "manufacturer": "가상제조사B",
+      "description": "가상 장비 (예시)",
+      "series": "VSW 시리즈",
+      "inputs": [
+        {
+          "id": "in-sdi-1",
+          "label": "SDI In 1",
+          "type": "sdi",
+          "direction": "in"
+        },
+        {
+          "id": "in-sdi-2",
+          "label": "SDI In 2",
+          "type": "sdi",
+          "direction": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-hdmi-1",
+          "label": "HDMI Out 1",
+          "type": "video",
+          "direction": "out"
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-lan-1",
+          "label": "LAN 1",
+          "type": "network",
+          "direction": "both"
+        }
+      ]
+    },
+    {
+      "id": "eq-1780000000003",
+      "category": "display",
+      "name": "모니터/디스플레이",
+      "model": "VDSP-55",
+      "manufacturer": "가상제조사C",
+      "inputs": [
+        {
+          "id": "in-hdmi-1",
+          "label": "HDMI In 1",
+          "type": "video",
+          "direction": "in"
+        }
+      ],
+      "outputs": [],
+      "bidirectional": []
+    }
+  ]
+}
