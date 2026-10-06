@@ -63,6 +63,8 @@ Work는 READY 명세의 실제 main 병합·승인·선행 조건을 모두 확�
 이 승인은 GitHub 사용자·토큰 권한을 확대하거나 보호 설정을 약화하라는 뜻이 아니다.
 ## 충돌·중단·검증
 
+Builder 결선용 라이브러리 `builder-library.json`은 Pages 배포 때 생성하고 커밋하지 않는다. 제품 데이터 PR이 이 파일을 따로 만들 필요는 없다. 단자 변환 규칙(`beta/port-vocabulary.mjs`)은 Builder 작업 흐름으로만 고친다.
+
 공개 `beta/site/catalog.json` 또는 `beta/site/detail/data/*.json`을 변경하는 작업은 `node beta/build-search-index.mjs`로 `beta/site/search-index.json`을 다시 생성한다. PR 검증과 Pages 배포 전에 `node beta/build-search-index.mjs --check`를 실행해 원본과 인덱스의 일치를 확인한다. 이 절차는 제품 데이터 변경을 승인하는 규칙이 아니며 기존 승인 범위를 따른다.
 
 RTCOM 공개 제품정보의 단일 원본은 `https://seoulav.github.io/rtcom-configurator/data/products/index.json`이다. `node beta/sync-rtcom.mjs`는 목록·상세·이미지를 모두 검증한 후보만 `beta/site/rtcom/`의 마지막 정상본으로 교체한다. 이 원본은 AV Portal에서 직접 고치지 않는다. RTCOM 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행하고 `node beta/sync-rtcom.mjs --check`, 검색 인덱스 `--check`, Pages 검증을 모두 통과시킨다.
