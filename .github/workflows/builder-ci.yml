@@ -1,0 +1,41 @@
+name: Builder CI
+
+# Builder 화면·엔진·라이브러리 변경을 PR 단계에서 검사한다(B-20261006-04 결정 G-a).
+# Pages 배포가 Builder 빌드 실패로 막히기 전에 여기서 먼저 드러나게 한다.
+on:
+  pull_request:
+    paths:
+      - 'builder/**'
+      - 'beta/**'
+      - 'tests/builder-*.test.mjs'
+      - '.github/workflows/builder-ci.yml'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  builder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Builder library (generator + tests)
+        run: |
+          node beta/build-builder-library.mjs --report
+          node --test tests/builder-library.test.mjs tests/builder-engine.test.mjs
+      - run: npm ci
+        working-directory: builder
+      - run: npm run typecheck
+        working-directory: builder
+      - run: npm test
+        working-directory: builder
+      - run: npm run check:schema
+        working-directory: builder
+      - run: npm run build
+        working-directory: builder
+      - name: Validate the example diagrams
+        run: node builder/cli/validate.mjs builder/examples/small-room.diagram.json builder/examples/auditorium-audio.diagram.json builder/examples/rtcom-extender.diagram.json --library beta/.generated/builder-library.json

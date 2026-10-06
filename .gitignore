@@ -9,3 +9,7 @@
 # 실제 구성도 파일은 커밋하지 않는다. 가상 예제(builder/examples/)만 예외다(B-20261006-03).
 *.diagram.json
 !/builder/examples/*.diagram.json
+# Builder 앱(B-20261006-04). 의존성·빌드 결과·배포용 복사본은 커밋하지 않는다
+/builder/node_modules/
+/builder/dist/
+/beta/site/builder/

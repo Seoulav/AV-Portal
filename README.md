@@ -43,6 +43,8 @@ Builder 결선용 라이브러리(`builder-library.json`)는 Pages 배포 때 `n
 
 Builder 구성도 JSON 1.2 파일은 `node builder/cli/validate.mjs <파일> [--library <경로|URL>]`로 검증합니다. 엔진은 `builder/engine/`, 형식 정의는 `builder/schema/diagram-1.2.schema.json`, 예제와 견적 담당자용 안내는 [builder/examples](builder/examples/README.md)에 있습니다.
 
+새 Builder 화면은 `builder/`의 Vite 앱입니다. Pages 배포 때 빌드해 `/AV-Portal/builder/`로 함께 올리며, npm 의존성은 `builder/` 안에만 있습니다. 실행·테스트 명령은 [builder/README.md](builder/README.md)에 있습니다. Portal 메뉴의 AV System Builder 링크는 새 Builder가 구 Builder 수준이 될 때까지 기존 외부 서비스를 가리킵니다.
+
 RTCOM 공개 정상본은 `node beta/sync-rtcom.mjs`로 갱신하고 `node beta/sync-rtcom.mjs --check`로 목록·상세·이미지의 SHA와 바이트를 전수 확인합니다. 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행해야 합니다. 예약 워크플로도 같은 순서로 검증하며, 원본에 변화가 없으면 PR을 만들지 않습니다.
 
 ```powershell
