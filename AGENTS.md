@@ -72,7 +72,8 @@ PR은 `git diff --check origin/main...HEAD`로 커밋된 전체 PR 변경을 검
 
 ## 제품 기준과 현재 제한
 
-- 개발 대상은 AV Equipment Library / RTCOM Configurator 기반 AV Portal이다. AV System Builder와 LED Configurator는 외부 링크만 유지한다.
+- 개발 대상은 AV Equipment Library / RTCOM Configurator 기반 AV Portal이다. LED Configurator는 외부 링크만 유지한다.
+- **AV System Builder는 Portal 통합 재구축 대상이다 (2026-10-06 사용자 지시).** 사용자가 "av-portal 안의 장비 정보를 기준으로 av system builder를 만들어 통합된 장비라이브러리로 서비스를 만들고, 구성도 json으로 견적을 자동으로 만드는 것까지 이어가려고 해. 완전히 리팩토링 해도 된다"고 지시했다. 방향과 범위는 [AV System Builder 통합 재구축 기획](Work/기획/시스템빌더통합기획-2026-10-06.md)을 따른다. **단계별 W 명세가 READY가 되기 전에는 구현하지 않고 기존 외부 링크를 유지한다.** 가격·견적·고객·프로젝트 정보는 공개 저장소와 Pages에 두지 않는다. 구 Builder 저장소의 Git 이력은 가져오지 않는다.
 - 제품 구현 착수, 최종 Product Data Schema·DB·JSON Schema 확정, Migration, 기존 RTCOM Logic 변경 등 기존 인계 문서의 보류 항목은 별도 승인 전 진행하지 않는다. 이번 협업 문서 구성 승인은 제품 구현 승인이 아니다.
 - 제조사 사양을 추측하지 않는다. 정보 없음, 0, 미지원, 해당 없음을 구분한다. 자료 충돌과 미확정 상태를 보존한다.
 - RTCOM 자료는 사용자가 직접 제공한 제조사 자료를 우선한다. RTCOM 공식 홈페이지의 제품 소개·특징 같은 기본 정보는 조사할 수 있다. 두 출처를 구분하고 충돌 시 임의로 덮어쓰지 않는다. 홈페이지 설명만으로 미확인 사양·호환성을 확정하지 않는다. 자료 게시는 아래 정책을 따른다. 이 정책은 2026-09-23 사용자의 최신 정정부터 적용하며 과거 작업의 당시 조사 범위 기록은 보존한다.
