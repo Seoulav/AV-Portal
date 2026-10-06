@@ -406,6 +406,11 @@
   "subtitle": "실내외 겸용 스피커",
   "keyFacts": [
     {
+      "label": "공칭 임피던스 · 연속 프로그램 전력(2시간)",
+      "value": "8 Ω · 100 W",
+      "unit": ""
+    },
+    {
       "label": "감도 · 평균 100Hz–10kHz",
       "value": "86",
       "unit": "dB, 1W/1m"

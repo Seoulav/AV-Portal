@@ -1,0 +1,388 @@
+{
+  "ac18-26": {
+    "prior": [
+      {
+        "label": "시스템 전력 · AES",
+        "value": "375",
+        "unit": "W"
+      },
+      {
+        "label": "감도 · 1W/1m",
+        "value": "92",
+        "unit": "dB SPL"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "120° x 60°",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "52 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "1bd2b524e926510853a153b37d8420442b89a7f279d1beebfff03a29a5f8577e",
+    "protectedSha256": "ee8fbb6fb8c34db7de9c1bc86024ce3b0ffc1b8d460c01b6066177f15e9b463d"
+  },
+  "ac18-95": {
+    "prior": [
+      {
+        "label": "감도 · 1W/1m",
+        "value": "93",
+        "unit": "dB SPL"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "90° x 50°",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "52 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "649e029570afea4767020ebfa0eafa0ed617a68956cfa4dc6d118b275190b669",
+    "protectedSha256": "7d412e588be9fc041f96e32b4455309b9dd24279f7c693051c07d89e44f5c06b"
+  },
+  "control-23-1": {
+    "prior": [
+      {
+        "label": "감도 · 평균 100Hz–10kHz",
+        "value": "86",
+        "unit": "dB, 1W/1m"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "100°H x 100°V",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "70 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "e7c06a4bf70cf519d1a6fc527e249f15a08a9263ca073ccda7a1e2b33d151335",
+    "protectedSha256": "2c17450b013341c80b239fc2934c71c36d23a8eefd2a9478e349cadd6317657b"
+  },
+  "control-25-1": {
+    "prior": [
+      {
+        "label": "감도 · 평균 100Hz–10kHz",
+        "value": "90",
+        "unit": "dB, 1W/1m"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "100°H x 100°V",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "60 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "057639c7a8694d2bf6b529c886862309a2960c0528e7b14fe27b1fd5b0cb68cd",
+    "protectedSha256": "f16a357a4e7ca1ea206fb2dacbc0559bdfa82657e572b854d99fb4088de20ea1"
+  },
+  "control-28-1": {
+    "prior": [
+      {
+        "label": "감도 · 평균 100Hz–10kHz",
+        "value": "91",
+        "unit": "dB, 1W/1m"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "100°H x 100°V",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "45 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "8bcc5169b2515f3e4dad8283ed21bfeb8552b9c1d2db3ea2793a70855711635f",
+    "protectedSha256": "f5bb845a4817694ba2b16050cff8d39f2ade8c2094b412cb7917c7ff3a617f9c"
+  },
+  "control-412ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "60 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "84",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "160°(원추형)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "68 Hz – 17 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "db7268780a94f6c5bdc2e19dad612bf23b1e6544534aa0d5bac883521876d5a9",
+    "protectedSha256": "56ea302d8b18d2a24a8e68a78c588af764de5858b43044f79953c26d2d1b0734"
+  },
+  "control-414ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "90 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "86",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "130°(원추형)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "65 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "07a5de5f62496c68f39e7f643d27fa3592edfdbafa891a084ee48e90b2ceab9f",
+    "protectedSha256": "3da66710cbd47e1668fd1d89e60c37d7292d0c885c0dff35da73e3867d62bc46"
+  },
+  "control-416ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "150 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "89",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "120°(원추형)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "61 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "5915aa16d41c633c6cdffaf8c35f14bd6773411809ca4ba1d8b7d3f5cc63c493",
+    "protectedSha256": "61dcdb772bb65ed383b393521dea7df3915ace5ebd79c6c5289c2a61639a7837"
+  },
+  "control-418ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "270 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "92",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "100°(원추형)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "57 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "61a40fb10ace7e1d0ae91f96f438f154d1c41eaffc90220cef4e9cef2eca2174",
+    "protectedSha256": "ae06cbffa9f710ec28f723c037ca5de506b04fd817b3146832049b9f397c1ca8"
+  },
+  "control-419cst": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "320 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "90",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "180°(원추형)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "47 Hz – 320 Hz",
+        "unit": ""
+      }
+    ],
+    "approved": "05b06bcc224798db9e98449a275cefc55581f04eae2e6a90b0baf274ed8dc81d",
+    "protectedSha256": "55502ac53976692c1436e1d30ed0f7e2684845f614bc153c5d674afbc0f05018"
+  },
+  "control-424ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "120 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "85",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "130°(원추형, CRBI 적용)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "75 Hz – 18 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "2821a4432340eca0eba04316cc7cafcf21b29d94e54da24018cff2c9dd02b3fb",
+    "protectedSha256": "b99a2b7b101d9f0fb58a2bf69920f5491af90fc77e9d9dc4e0fe0070d00f2bdc"
+  },
+  "control-424lp": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "120 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "85",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "130°(원추형, CRBI 적용)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "75 Hz – 18 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "2821a4432340eca0eba04316cc7cafcf21b29d94e54da24018cff2c9dd02b3fb",
+    "protectedSha256": "e4e79ce95741a2bd8877f68b560c4bdf9f5b732cc8480069bb68af6ce95574d1"
+  },
+  "control-426ct": {
+    "prior": [
+      {
+        "label": "감도 · 1m/1W",
+        "value": "89",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "110°(원추형, CRBI 적용)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "72 Hz – 19 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "65457095a61b91010378fc5e74275ae85dce5decfcb329a08bb16beed14ab8f3",
+    "protectedSha256": "326012cb61df2fe7ee9b69c44b6a3e5e3b63a0fe1fba2b437c4bd3b507861bc0"
+  },
+  "control-426lp": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "220 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "89",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "110°(원추형, CRBI 적용)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "95 Hz – 19 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "0d23ed62bdf9529072493539dbb67141894dbb3641c8a0b0b0f1c3e264e556bc",
+    "protectedSha256": "0df2cffd9dfd333fe08c842f9806bd6502166677e1087003968587b6f38b1136"
+  },
+  "control-440cst": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "300 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W · 천장 코너 근접 설치(π/2 로딩)",
+        "value": "95",
+        "unit": "dB"
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "32 Hz – 300 Hz",
+        "unit": ""
+      }
+    ],
+    "approved": "67288e79b231997b47b95de4b0ab36b4c841a5b3e2a1a5b18e9a30f896564c98",
+    "protectedSha256": "b078ab6fb98bfbe0049efed7187be332a7fe38ce89da29fc919090655ed4b039"
+  },
+  "control-447ct": {
+    "prior": [
+      {
+        "label": "연속 프로그램 전력 · 2시간",
+        "value": "224 W",
+        "unit": ""
+      },
+      {
+        "label": "감도 · 1m/1W",
+        "value": "91",
+        "unit": "dB"
+      },
+      {
+        "label": "커버리지 각도",
+        "value": "120°(원추형, RBI 적용)",
+        "unit": ""
+      },
+      {
+        "label": "주파수 범위 · -10dB",
+        "value": "55 Hz – 20 kHz",
+        "unit": ""
+      }
+    ],
+    "approved": "081786d3ad355c1e5ac66ac36c9e615c647f3ca8f25be6ae1005d7797fe1f754",
+    "protectedSha256": "bef3ba8b4e1c5f085ff8d109de96d239b26926d562e2b13399141838e2da8d83"
+  }
+}

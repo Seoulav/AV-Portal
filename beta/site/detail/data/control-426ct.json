@@ -325,6 +325,11 @@
   "subtitle": "Control 400 Enhanced Coverage · 천장매입 스피커",
   "keyFacts": [
     {
+      "label": "공칭 임피던스 · 컨티뉴어스 핑크노이즈(2시간)",
+      "value": "12 Ω · 110 W",
+      "unit": ""
+    },
+    {
       "label": "감도 · 1m/1W",
       "value": "89",
       "unit": "dB"
