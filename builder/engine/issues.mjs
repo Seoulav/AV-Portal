@@ -1,6 +1,7 @@
 // 구성도 이슈(기반명세 §8.5). 저장할 때마다 다시 계산하는 값이다. 사람이 손으로 쓰지 않는다.
 import { DEFAULT_RULES } from './defaults.mjs';
 import { equipmentPorts, findPort } from './library.mjs';
+import { normalizeEquipmentData } from './normalize.mjs';
 import { connectionFindings, connectionSignal, parseHandle } from './rules.mjs';
 
 const compareText = (a = '', b = '') => (a < b ? -1 : a > b ? 1 : 0);
@@ -12,11 +13,8 @@ export function sortIssues(issues) {
     || compareText(x.detail, y.detail));
 }
 
-// 라이브러리와 비교할 때 쓰는 장비 정보: 노드 data에서 isReused를 뺀 것
-const withoutReused = data => {
-  const { isReused, ...rest } = data;
-  return rest;
-};
+// 라이브러리와 비교할 때 쓰는 장비 정보: 키 순서를 맞추고 isReused를 뺀 것
+const comparable = data => JSON.stringify(normalizeEquipmentData(data, { withReused: false }));
 
 // library: createLibraryIndex 결과(없으면 라이브러리 비교 이슈는 계산하지 않는다)
 export function computeIssues(diagram, { library = null, rules = DEFAULT_RULES } = {}) {
@@ -31,7 +29,7 @@ export function computeIssues(diagram, { library = null, rules = DEFAULT_RULES }
       const current = library.units.get(data.id);
       if (!current || !library.products.has(data.portal?.productId)) {
         issues.push({ code: 'product-removed', severity: 'warning', target: { node: node.id }, detail: data.id });
-      } else if (JSON.stringify(current.equipment) !== JSON.stringify(withoutReused(data))) {
+      } else if (comparable(current.equipment) !== comparable(data)) {
         issues.push({ code: 'library-drift', severity: 'info', target: { node: node.id }, detail: data.id });
       }
     }

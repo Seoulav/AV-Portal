@@ -48,15 +48,15 @@ test('§7.3 allowed cases', () => {
   let r = judge(port('out', 'HDMI', 'HDMI'), port('in', 'HDMI', 'HDMI'));
   assert.equal(r.allowed, true); assert.deepEqual(codes(r), []); assert.equal(r.lineTypeId, 'video');                       // A1
   r = judge(port('out', 'BNC', 'SDI'), port('in', 'BNC', 'SDI'));
-  assert.equal(r.allowed, true); assert.equal(r.lineTypeId, 'sdi');                                                        // A2
+  assert.equal(r.allowed, true); assert.equal(r.lineTypeId, 'sdi'); assert.deepEqual(codes(r), []);                         // A2
   r = judge(port('both', 'RJ45', 'DANTE,AES67,ETHERNET'), port('both', 'RJ45', 'DANTE,AES67,ETHERNET'));
-  assert.equal(r.allowed, true); assert.equal(r.signal, 'DANTE');                                                          // A3
+  assert.equal(r.allowed, true); assert.equal(r.signal, 'DANTE'); assert.deepEqual(codes(r), []);                           // A3
   r = judge(port('in', 'XLR', 'MIC-AUDIO'), port('out', 'XLR', 'MIC-AUDIO'));
   assert.equal(r.allowed, true); assert.equal(r.flipped, true); assert.equal(r.source.nodeId, 'B');                        // A4
   r = judge(port('both', 'RJ45', 'ETHERNET'), port('both', 'RJ45', 'ETHERNET'));
-  assert.equal(r.allowed, true);                                                                                          // A5
+  assert.equal(r.allowed, true); assert.deepEqual(codes(r), []);                                                           // A5
   r = judge(port('both', 'RJ45', 'DANTE,ETHERNET'), port('both', 'RJ45', 'ETHERNET,POE'));
-  assert.equal(r.allowed, true); assert.equal(r.signal, 'ETHERNET');                                                       // A6
+  assert.equal(r.allowed, true); assert.equal(r.signal, 'ETHERNET'); assert.deepEqual(codes(r), []);                        // A6
   r = judge(port('in', 'TERMINAL-BLOCK', 'RS-232'), port('both', 'UNKNOWN', 'RS-232'));
   assert.equal(r.allowed, true); assert.equal(r.flipped, true); assert.deepEqual(codes(r), ['connector-unknown']);          // A7
   r = judge(port('both', 'TERMINAL-BLOCK', 'RS-232'), port('out', 'DSUB-9', 'RS-232'));
@@ -78,8 +78,12 @@ test('§7.3 blocked cases', () => {
   assert.equal(judge(port('out', 'SPEAKON', 'SPEAKER'), port('in', 'HDMI', 'HDMI')).code, 'signal-mismatch');               // B2
   const b3 = port('out', 'HDMI', 'HDMI');
   assert.equal(judge(b3, port('in', 'HDMI', 'HDMI'), { occupied: [`A::${b3.id}`] }).code, 'port-occupied');               // B3
+  const b3t = port('in', 'HDMI', 'HDMI');
+  assert.equal(judge(port('out', 'HDMI', 'HDMI'), b3t, { occupied: [`B::${b3t.id}`] }).code, 'port-occupied');
   const b4 = port('both', 'RJ45', 'ETHERNET');
   assert.equal(judge(b4, port('both', 'RJ45', 'ETHERNET'), { occupied: [`A::${b4.id}`] }).code, 'port-occupied');         // B4
+  const b4t = port('both', 'RJ45', 'ETHERNET');
+  assert.equal(judge(port('both', 'RJ45', 'ETHERNET'), b4t, { occupied: [`B::${b4t.id}`] }).code, 'port-occupied');
   assert.equal(judge(port('out', 'IEC-C14', 'POWER'), port('in', 'IEC-C14', 'POWER')).code, 'power-disabled');             // B5
   assert.equal(judge(port('out', 'HDMI', 'HDMI'), port('in', 'HDMI', 'HDMI'), { sameNode: true }).code, 'self-loop');      // B6
   assert.equal(judge(port('in', 'RJ45', 'HDBASET'), port('in', 'RJ45', 'HDBASET')).code, 'direction');                     // B7
@@ -238,7 +242,7 @@ test('broken files fail with precise error codes', () => {
   d = base(); d.lineTypes = d.lineTypes.filter(lineType => lineType.id !== 'video');
   assert.ok(errorCodes(d).includes('linetype-missing'));
   d = base(); video(d).data.lineTypeId = 'sdi';
-  assert.deepEqual(errorCodes(d), ['edge-linetype']);
+  assert.deepEqual(errorCodes(d), ['edge-linetype', 'derived-mismatch']);
 });
 
 test('files still open when the library changes, and the change is reported', () => {
@@ -287,7 +291,121 @@ test('the validate CLI reports errors with its exit code', () => {
     const withLibrary = run('--library', libraryPath, fileURLToPath(new URL(EXAMPLES[0], root)));
     assert.equal(withLibrary.status, 0, withLibrary.stdout + withLibrary.stderr);
     assert.equal(run().status, 2);
+    assert.equal(run(`--library=${libraryPath}`, fileURLToPath(new URL(EXAMPLES[0], root))).status, 0);
+    assert.equal(run(...EXAMPLES.map(path => fileURLToPath(new URL(path, root)))).status, 0);
+    assert.equal(run(join(dir, 'missing.diagram.json')).status, 2);
+    assert.equal(run(fileURLToPath(new URL(EXAMPLES[0], root)), brokenPath).status, 1);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test('reversed drags swap handle prefixes and keep level-pair signals on the source', () => {
+  const library = createLibraryIndex(syntheticLibrary([
+    equipment('ctl', [p('both-rs-232-1', 'both', 'TERMINAL-BLOCK', ['RS-232'], 'control'), p('in-mic-audio-1', 'in', 'XLR', ['MIC-AUDIO'], 'audio')]),
+    equipment('dev', [p('out-rs-232-1', 'out', 'DSUB-9', ['RS-232'], 'control'), p('out-line-audio-1', 'out', 'XLR', ['LINE-AUDIO'], 'audio')]),
+  ]));
+  const ids = createIdFactory({ seed: 3, now: 0 });
+  const diagram = createDiagram({ library });
+  const ctl = addEquipmentNode(diagram, library.units.get('ctl').equipment, { ids });
+  const dev = addEquipmentNode(diagram, library.units.get('dev').equipment, { ids });
+  // A8: both에서 out으로 끌면 바뀌고, 양방향 단자는 target_ 접두어가 된다
+  const rs = connectPorts(diagram, { nodeId: ctl.id, portId: 'both-rs-232-1' }, { nodeId: dev.id, portId: 'out-rs-232-1' }, { ids, rules: library.rules });
+  assert.deepEqual([rs.edge.source, rs.edge.sourceHandle, rs.edge.target, rs.edge.targetHandle], [dev.id, 'out-rs-232-1', ctl.id, 'target_both-rs-232-1']);
+  // 레벨 차이 쌍 + 방향 바꾸기: 신호는 바꾼 뒤 source(라인 출력) 쪽
+  const audio = connectPorts(diagram, { nodeId: ctl.id, portId: 'in-mic-audio-1' }, { nodeId: dev.id, portId: 'out-line-audio-1' }, { ids, rules: library.rules });
+  assert.equal(audio.judgement.flipped, true);
+  assert.equal(audio.edge.data.signal, 'LINE-AUDIO');
+  assert.deepEqual(audio.judgement.findings.map(f => f.code), ['signal-level']);
+  assert.deepEqual(validateDiagram(normalizeDiagram(diagram, { library }), { library }).errors, []);
+});
+
+test('the remaining error codes are reported', () => {
+  const base = () => readJson('builder/examples/small-room.diagram.json');
+  const errorCodes = diagram => validateDiagram(diagram).errors.map(error => error.code);
+  const equipmentNodes = diagram => diagram.nodes.filter(node => node.type === 'equipment');
+  let d = base(); d.nodes.push(structuredClone(d.nodes[1]));
+  assert.ok(errorCodes(d).includes('duplicate-node-id'));
+  d = base(); d.edges.push(structuredClone(d.edges[0]));
+  assert.ok(errorCodes(d).includes('duplicate-edge-id'));
+  d = base(); { const data = equipmentNodes(d)[0].data; data.inputs.push(structuredClone(data.inputs[0])); }
+  assert.ok(errorCodes(d).includes('duplicate-port-id'));
+  d = base(); { const e = d.edges.find(edge => edge.data.lineTypeId === 'video'); e.target = e.source; e.targetHandle = 'in-rs-422-1'; }
+  assert.ok(errorCodes(d).length > 0);
+  d = base(); { const e = d.edges.find(edge => edge.data.lineTypeId === 'video'); e.data.signal = 'DVI'; }
+  assert.deepEqual(errorCodes(d), ['edge-signal']);
+  d = base(); { const e = d.edges.find(edge => edge.sourceHandle.startsWith('source_')); e.sourceHandle = e.sourceHandle.replace('source_', ''); }
+  assert.deepEqual(errorCodes(d), ['edge-handle-missing']);
+  // 출력 단자를 inputs 배열로 옮기면 1.1 화면에서 핸들이 사라진다
+  d = base(); { const data = equipmentNodes(d).find(node => node.data.outputs.length).data; data.inputs.push(data.outputs.shift()); }
+  assert.ok(errorCodes(d).includes('structure'));
+  d = base(); d.equipmentDB = [];
+  assert.deepEqual(errorCodes(d), ['derived-mismatch']);
+  d = base(); d.edges[0].style.stroke = '#000000';
+  assert.deepEqual(errorCodes(d), ['derived-mismatch']);
+  // 같은 노드끼리, 전원끼리
+  const library = createLibraryIndex(syntheticLibrary([
+    equipment('psu', [p('out-power-1', 'out', 'IEC-C14', ['POWER'], 'power'), p('in-power-1', 'in', 'IEC-C14', ['POWER'], 'power'), p('out-hdmi-1', 'out', 'HDMI', ['HDMI'], 'video'), p('in-hdmi-1', 'in', 'HDMI', ['HDMI'], 'video')]),
+  ]));
+  const diagram = createDiagram({ library });
+  const ids = createIdFactory({ seed: 9, now: 0 });
+  const a = addEquipmentNode(diagram, library.units.get('psu').equipment, { ids });
+  const b = addEquipmentNode(diagram, library.units.get('psu').equipment, { ids });
+  diagram.edges.push(
+    { id: 'e-self', type: 'smoothstep', source: a.id, sourceHandle: 'out-hdmi-1', target: a.id, targetHandle: 'in-hdmi-1', animated: false, style: { stroke: '#ef4444', strokeWidth: 2 }, data: { lineTypeId: 'video', signal: 'HDMI' } },
+    { id: 'e-power', type: 'smoothstep', source: a.id, sourceHandle: 'out-power-1', target: b.id, targetHandle: 'in-power-1', animated: false, style: { stroke: '#78716c', strokeWidth: 2 }, data: { lineTypeId: 'power', signal: 'POWER' } },
+  );
+  const codes = validateDiagram(normalizeDiagram(diagram, { library }), { library }).errors.map(error => error.code);
+  assert.deepEqual(codes.sort(), ['power-disabled', 'self-loop']);
+});
+
+test('the validator never throws on damaged input', () => {
+  const pristine = readJson('builder/examples/auditorium-audio.diagram.json');
+  const junk = [null, 0, 5, 'abc', {}, [], [null], { x: 1 }, true];
+  let seed = 20261007;
+  const random = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
+  const paths = [];
+  const walk = (value, path) => {
+    paths.push(path);
+    if (value && typeof value === 'object') for (const key of Object.keys(value)) walk(value[key], [...path, key]);
+  };
+  walk(pristine, []);
+  for (let i = 0; i < 400; i += 1) {
+    const diagram = structuredClone(pristine);
+    const path = paths[Math.floor(random() * paths.length)];
+    if (!path.length) continue;
+    let parent = diagram;
+    for (const key of path.slice(0, -1)) parent = parent[key];
+    parent[path.at(-1)] = junk[Math.floor(random() * junk.length)];
+    assert.doesNotThrow(() => validateDiagram(diagram), path.join('.'));
+  }
+  for (const bad of [null, 'x', [], { version: '1.2', nodes: 'x', edges: [], lineTypes: [], equipmentDB: [] }, { version: '1.2', nodes: [], edges: [], lineTypes: [null], equipmentDB: [] }]) {
+    assert.doesNotThrow(() => validateDiagram(bad));
+    assert.ok(validateDiagram(bad).errors.length > 0);
+  }
+});
+
+test('serialization rejects unknown node types and keeps locks', () => {
+  const { diagram, library } = buildSample();
+  diagram.nodes.find(node => node.type === 'shape').data.locked = true;
+  diagram.nodes.find(node => node.type === 'annotation').data.locked = true;
+  const out = normalizeDiagram(diagram, { library });
+  assert.equal(out.nodes.find(node => node.type === 'shape').data.locked, true);
+  assert.equal(out.nodes.find(node => node.type === 'annotation').data.locked, true);
+  diagram.nodes.push({ id: 'x', type: 'group', position: { x: 0, y: 0 }, data: {} });
+  assert.throws(() => normalizeDiagram(diagram, { library }), /알 수 없는 노드 type/);
+});
+
+test('every current library unit round-trips without a false library-drift', async () => {
+  // 현재 데이터의 수치가 아니라 "저장 직후에는 drift가 없다"는 성질만 본다
+  const { expectedBuilderLibrary } = await import('../beta/build-builder-library.mjs');
+  const library = createLibraryIndex(await expectedBuilderLibrary());
+  const ids = createIdFactory({ seed: 11, now: 0 });
+  const diagram = createDiagram({ library });
+  let x = 0;
+  for (const unitId of library.units.keys()) addEquipmentNode(diagram, library.units.get(unitId).equipment, { position: { x: (x += 1) * 10, y: 0 }, ids });
+  const saved = JSON.parse(serializeDiagram(diagram, { library }));
+  const { errors, issues } = validateDiagram(saved, { library });
+  assert.deepEqual(errors, []);
+  assert.deepEqual(issues.filter(issue => issue.code === 'library-drift' || issue.code === 'product-removed'), []);
 });

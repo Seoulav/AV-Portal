@@ -118,7 +118,7 @@ flowchart LR
 | Portal 상세·목록 JSON을 바꾼 경우 | 위에 더해 AGENTS.md의 snapshot·검색 인덱스·읽기용 목록 재생성 절차 |
 | 라이브러리 생성기 (P2 이후) | `node beta/build-builder-library.mjs --check` |
 | Builder 앱 (P4 이후) | `builder/`에서 `npm ci`, 타입 검사, 린트, 테스트, 빌드, 브라우저 시험 |
-| 구성도 JSON (P3 이후) | `node builder/cli/validate.mjs builder/examples/*.json` |
+| 구성도 JSON (P3 이후) | `node builder/cli/validate.mjs builder/examples/small-room.diagram.json builder/examples/auditorium-audio.diagram.json builder/examples/rtcom-extender.diagram.json` (PowerShell은 `*`를 펼치지 않으므로 파일을 나열한다) |
 
 - LF 복제본에서 검사하는 이유: 이 PC는 `core.autocrlf=true`다. 작업 폴더의 JSON이 CRLF로 바뀌어 바이트 SHA 테스트가 실패한다.
 - 복제 방법: `git clone --config core.autocrlf=false -b <브랜치> . <임시폴더>`. 검사 후 임시 폴더는 지운다.
@@ -177,4 +177,4 @@ flowchart LR
 |---|---|---|---|
 | [B-20261006-01](작업/B-20261006-01.md) | 기반 명세: 단자 표기 빈도 분석, 표준 어휘, 단자 ID·이름 규칙, 카테고리·선 종류 대응, TX/RX 분리, 연결 규칙, 1.2 호환 명세, 상호작용 수치 | P1 | 완료 |
 | [B-20261006-02](작업/B-20261006-02.md) | 결선용 라이브러리 생성기: 부록 A 규칙 구현, `builder-library.json` 생성·배포, 규칙·회귀 테스트 | P2 | 완료 |
-| [B-20261006-03](작업/B-20261006-03.md) | 구성도 JSON 1.2 엔진·스키마·검증 CLI: 노드·엣지 생성, 연결 규칙, 이슈, 결정적 직렬화, 예제 3종 | P3 | 진행 |
+| [B-20261006-03](작업/B-20261006-03.md) | 구성도 JSON 1.2 엔진·스키마·검증 CLI: 노드·엣지 생성, 연결 규칙, 이슈, 결정적 직렬화, 예제 3종 | P3 | 검토 |

@@ -1,6 +1,7 @@
 // 구성도 JSON 1.2 만들기(기반명세 §8). 노드·엣지 객체의 키 순서는 serialize.mjs가 최종으로 맞춘다.
 import { DEFAULT_RULES } from './defaults.mjs';
 import { findPort } from './library.mjs';
+import { clone } from './normalize.mjs';
 import { judgeConnection, parseHandle, sourceHandleOf, targetHandleOf } from './rules.mjs';
 
 export const DIAGRAM_VERSION = '1.2';
@@ -41,6 +42,9 @@ export function createIdFactory({ seed, now } = {}) {
   };
 }
 
+// ids를 넘기지 않으면 모듈 하나가 공유하는 생성기를 쓴다. 호출마다 새로 만들면 같은 밀리초 안에서 순서가 뒤집힌다
+const sharedIds = createIdFactory();
+
 export function createDiagram({ library = null, generatorVersion = '0.1.0' } = {}) {
   return {
     version: DIAGRAM_VERSION,
@@ -57,15 +61,15 @@ export function createDiagram({ library = null, generatorVersion = '0.1.0' } = {
 const findNode = (diagram, nodeId) => diagram.nodes.find(node => node.id === nodeId) ?? null;
 
 // 장비 노드. equipment는 라이브러리 units[].equipment(노드 data에서 isReused를 뺀 모양)
-export function addEquipmentNode(diagram, equipment, { position = { x: 0, y: 0 }, isReused = false, ids = createIdFactory() } = {}) {
-  const { portal, ...rest } = structuredClone(equipment);
+export function addEquipmentNode(diagram, equipment, { position = { x: 0, y: 0 }, isReused = false, ids = sharedIds } = {}) {
+  const { portal, ...rest } = clone(equipment);
   const node = { id: ids.node(), type: 'equipment', position: { x: position.x, y: position.y }, data: { ...rest, isReused, portal } };
   diagram.nodes.push(node);
   return node;
 }
 
 // 메모 노드: 구 Builder(App.tsx)의 기본값
-export function addAnnotationNode(diagram, { position = { x: 100, y: 100 }, label = 'New note (Double-click to edit)', width = 200, height = 60, style = {}, ids = createIdFactory() } = {}) {
+export function addAnnotationNode(diagram, { position = { x: 100, y: 100 }, label = 'New note (Double-click to edit)', width = 200, height = 60, style = {}, ids = sharedIds } = {}) {
   const node = {
     id: ids.annotation(),
     type: 'annotation',
@@ -78,7 +82,7 @@ export function addAnnotationNode(diagram, { position = { x: 100, y: 100 }, labe
 }
 
 // 영역 노드: 구 Builder(App.tsx)의 기본값
-export function addShapeNode(diagram, { position = { x: 100, y: 100 }, label = 'ZONE BOX', width = 350, height = 250, style = {}, ids = createIdFactory() } = {}) {
+export function addShapeNode(diagram, { position = { x: 100, y: 100 }, label = 'ZONE BOX', width = 350, height = 250, style = {}, ids = sharedIds } = {}) {
   const node = {
     id: ids.shape(),
     type: 'shape',
@@ -113,7 +117,7 @@ const portRef = (diagram, { nodeId, portId }) => {
 const colorOf = (rules, lineTypeId) => (rules.lineTypes.find(lineType => lineType.id === lineTypeId)?.color ?? '#64748b');
 
 // from·to: { nodeId, portId }. 판정을 통과하면 엣지를 넣고 { ok: true, edge, judgement }를 돌려준다
-export function connectPorts(diagram, from, to, { ids = createIdFactory(), powerEnabled = false, rules = DEFAULT_RULES } = {}) {
+export function connectPorts(diagram, from, to, { ids = sharedIds, powerEnabled = false, rules = DEFAULT_RULES } = {}) {
   const a = portRef(diagram, from);
   const b = portRef(diagram, to);
   if (!a || !b) return { ok: false, code: 'port-missing' };
@@ -145,7 +149,7 @@ const findEdge = (diagram, edgeId) => {
 // 케이블 정보(1.1 bomRows 형식 그대로). 빈 배열이면 키를 지운다
 export function setEdgeCable(diagram, edgeId, bomRows) {
   const edge = findEdge(diagram, edgeId);
-  if (bomRows?.length) edge.data.bomRows = structuredClone(bomRows);
+  if (bomRows?.length) edge.data.bomRows = clone(bomRows);
   else delete edge.data.bomRows;
   return edge;
 }

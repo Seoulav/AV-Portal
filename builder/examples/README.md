@@ -13,19 +13,20 @@
 | `legacy-1.1.example.json` | 구 Builder 1.1 키 구조의 가상 예시. 비교용이다 |
 | `small-room.diagram.json` | 소회의실 영상: 카메라 HDMI → 사이니지, LAN → 스위치 |
 | `auditorium-audio.diagram.json` | 중강당 오디오: 무선 수신기 → 앰프 → 천장 스피커 4대, Dante → 스위치 |
-| `rtcom-extender.diagram.json` | RTCOM 연장기: 카메라 → CT101-U(TX) → HDBaseT → CR101-U(RX) → 사이니지 |
+| `rtcom-extender.diagram.json` | RTCOM 연장기: 카메라 → CT101-U(TX) → HDBaseT → CR101-U(RX) → 사이니지. 단자 정보가 없는 XDM-12 매트릭스 노드도 함께 둔다(`no-ports`·`series-config-pending` 예시) |
 
 - 장비는 실제 Portal 제품이다. 현장명은 모두 가상이다.
 - 실제 고객 구성도는 저장소에 올리지 않는다.
+- **1.2 파일을 구 AV System Builder로 열지 않는다.** 구 Builder는 처음 보는 장비를 팀 공용 카탈로그(Firestore)에 바로 올린다(`store.ts:866-881`, `librarySync.ts:198`). 1.2 파일 하나만 열어도 Portal 장비가 구 카탈로그에 섞인다.
 
 ## 검증
 
 ```powershell
-node builder/cli/validate.mjs builder/examples/small-room.diagram.json
+node builder/cli/validate.mjs builder/examples/small-room.diagram.json builder/examples/auditorium-audio.diagram.json builder/examples/rtcom-extender.diagram.json
 node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Portal/builder-library.json
 ```
 
-- 오류(저장을 막는 문제)가 있으면 종료 코드 1이다.
+- 파일을 여러 개 줄 수 있다. 오류(저장을 막는 문제)가 있는 파일이 하나라도 있으면 종료 코드 1, 파일을 읽지 못하면 2다.
 - 이슈(경고·안내)는 종료 코드에 영향이 없다.
 - `--library`를 주면 파일을 만든 뒤 Portal 데이터가 바뀌었는지도 본다.
 
@@ -49,7 +50,8 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 | 노드 `data.id` | 구 Builder 카탈로그 ID(`eq-…`) | Portal 제품 ID. TX/RX·시리즈는 `:`가 붙는다 |
 | `equipmentDB` | 로컬 카탈로그 전체 | 이 구성도에 쓴 장비만 |
 | 노드 배열 순서 | 만든 순서 | 영역 → 장비 → 메모, 각 묶음 안에서 `id` 순 |
-| `lineTypes` | 운영 7종 | 기존 7종 + 쓰인 새 ID(`speaker`·`fiber`·`analog-video`·`rf`) |
+| `lineTypes` | 운영 7종 | 기존 7종 + 이 구성도의 단자·엣지에 쓰인 새 ID(`speaker`·`fiber`·`analog-video`·`rf`·`power`). `power`는 전원 단자가 있으면 들어간다. 전원선은 1단계에서 긋지 않는다 |
+| 노드 `data.name` | 사이드바 중분류(한글, 예: "PTZ 카메라") | Portal 3단계 카테고리 이름(영문, 예: `Camera`, `Amplifier`) |
 
 **추가된 키** (무시해도 된다):
 - 최상위: `generator`, `library`, `issues`
