@@ -13,7 +13,7 @@
 - [데이터 스키마 초안](기획/PRODUCT_DATA_SCHEMA_SKELETON.md)
 - [RTCOM 자료 준비](기획/RTCOM_DATA_PREPARATION.md)
 - [기존 인계와 보류 조건](기획/WORK_HANDOFF.md)
-- [AV System Builder 통합 재구축 기획](기획/시스템빌더통합기획-2026-10-06.md)
+- [AV System Builder 통합 재구축 기획](기획/시스템빌더통합기획-2026-10-06.md) — Portal 데이터 기반 재작성, 구성도 JSON v2
 - [기존 감사 기록 양식](기록/audit.md)
 
 기존 문서는 당시 상태의 기록이다. 그 안의 루트 파일명은 위 위치로 이동했다. `MODEL_ROUTING.md`는 저장소 루트에 있다. 첫 로컬 탐색 앱 소스와 실행 안내는 루트 `app/`과 `README.md`에 있다. `02_사양서.zip`과 최종 `PRODUCT_DATA_SCHEMA.md`는 GitHub 저장소에 없으며, 로컬 자료 수령과 최종 설계 승인은 구분한다.
