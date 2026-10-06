@@ -8,7 +8,7 @@ import { validateDiagram } from '../engine/validate.mjs';
 
 const args = process.argv.slice(2);
 const libraryAt = args.indexOf('--library');
-const file = args.find((arg, i) => !arg.startsWith('--') && i !== libraryAt + 1);
+const file = args.find((arg, i) => !arg.startsWith('--') && (libraryAt < 0 || i !== libraryAt + 1));
 if (!file || (libraryAt >= 0 && !args[libraryAt + 1])) {
   console.error('사용법: node builder/cli/validate.mjs <구성도.json> [--library <경로|URL>]');
   process.exit(2);

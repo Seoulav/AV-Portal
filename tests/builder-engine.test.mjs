@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import * as D from '../builder/engine/defaults.mjs';
 import { addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, setEdgeCable } from '../builder/engine/diagram.mjs';
 import { nodeHeight } from '../builder/engine/geometry.mjs';
@@ -261,4 +265,29 @@ test('issues are computed, sorted and typed', () => {
   assert.deepEqual(Object.keys(out.issues[0]), ['code', 'severity', 'target', 'detail']);
   const series = readJson('builder/examples/rtcom-extender.diagram.json');
   assert.deepEqual(validateDiagram(series).issues.map(issue => issue.code), ['no-ports', 'series-config-pending']);
+});
+
+test('the validate CLI reports errors with its exit code', () => {
+  const cli = fileURLToPath(new URL('builder/cli/validate.mjs', root));
+  const run = (...args) => spawnSync(process.execPath, [cli, ...args], { encoding: 'utf8' });
+  const ok = run(fileURLToPath(new URL(EXAMPLES[0], root)));
+  assert.equal(ok.status, 0, ok.stdout + ok.stderr);
+  assert.match(ok.stdout, /오류 0건/);
+  const dir = mkdtempSync(join(tmpdir(), 'builder-cli-'));
+  try {
+    const broken = readJson(EXAMPLES[0]);
+    broken.edges[0].source = 'node_missing';
+    const brokenPath = join(dir, 'broken.diagram.json');
+    writeFileSync(brokenPath, JSON.stringify(broken));
+    const failed = run(brokenPath);
+    assert.equal(failed.status, 1);
+    assert.match(failed.stdout, /edge-node-missing/);
+    const libraryPath = join(dir, 'library.json');
+    writeFileSync(libraryPath, JSON.stringify(syntheticLibrary(readJson(EXAMPLES[0]).equipmentDB)));
+    const withLibrary = run('--library', libraryPath, fileURLToPath(new URL(EXAMPLES[0], root)));
+    assert.equal(withLibrary.status, 0, withLibrary.stdout + withLibrary.stderr);
+    assert.equal(run().status, 2);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });
