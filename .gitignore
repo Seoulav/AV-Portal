@@ -3,3 +3,6 @@
 /outputs/
 /AGENTS.override.md
 /node_modules/
+# Builder 결선용 라이브러리는 Pages 배포 때 만든다(B-20261006-02). 저장소에 커밋하지 않는다.
+/beta/.generated/
+/beta/site/builder-library.json

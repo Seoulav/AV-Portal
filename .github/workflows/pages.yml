@@ -30,6 +30,7 @@ jobs:
       - run: node beta/build-search-index.mjs --check
       - run: node beta/verify-pages.mjs
       - run: npm test
+      - run: node beta/build-builder-library.mjs --out beta/site/builder-library.json --report
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

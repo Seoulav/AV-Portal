@@ -39,6 +39,8 @@ W-007 대응과 W-008 제안표가 이 PC에 있을 때, `scripts/build-private-
 
 공개 Library의 `beta/site/catalog.json` 또는 `beta/site/detail/data/*.json`을 변경했다면 `node beta/build-search-index.mjs`로 검색 인덱스를 재생성하고, `node beta/build-search-index.mjs --check`로 일치를 확인합니다. Pages 배포에서도 `--check`가 실행됩니다. 인덱스가 없거나 손상되면 공개 홈은 기존 상세 JSON 로더로 복구합니다. 이 절차는 제품 데이터 변경 승인과 별개입니다.
 
+Builder 결선용 라이브러리(`builder-library.json`)는 Pages 배포 때 `node beta/build-builder-library.mjs --out beta/site/builder-library.json --report`로 만들고 저장소에는 커밋하지 않습니다. 로컬에서는 `node beta/build-builder-library.mjs --report`로 `beta/.generated/`에 만들어 준비도(단자가 된 행, 확인 필요 행)를 볼 수 있습니다. 규칙은 `beta/port-vocabulary.mjs`와 [기반 명세](Work/빌더/기반명세.md) 부록 A입니다. 제품 데이터를 바꾸는 PR이 이 파일을 따로 만들 필요는 없습니다.
+
 RTCOM 공개 정상본은 `node beta/sync-rtcom.mjs`로 갱신하고 `node beta/sync-rtcom.mjs --check`로 목록·상세·이미지의 SHA와 바이트를 전수 확인합니다. 동기화 뒤에는 `node beta/build-search-index.mjs`와 `node beta/build-readable-catalog.mjs`를 실행해야 합니다. 예약 워크플로도 같은 순서로 검증하며, 원본에 변화가 없으면 PR을 만들지 않습니다.
 
 ```powershell
