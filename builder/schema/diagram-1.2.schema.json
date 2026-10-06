@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seoulav.github.io/AV-Portal/builder/schema/diagram-1.2.schema.json",
+  "title": "AV Portal Builder 구성도 JSON 1.2",
+  "description": "구 AV System Builder 1.1 형식과 호환되는 구성도 파일. 1.1의 키는 이름·위치·의미가 그대로이고 1.2는 키를 추가만 한다. 근거: Work/빌더/기반명세.md §8. 구조만 정의한다. 단자 연결 규칙·참조 무결성은 builder/cli/validate.mjs가 검사한다.",
+  "type": "object",
+  "required": ["version", "nodes", "edges", "lineTypes", "equipmentDB"],
+  "properties": {
+    "version": { "const": "1.2" },
+    "nodes": { "type": "array", "items": { "$ref": "#/$defs/node" } },
+    "edges": { "type": "array", "items": { "$ref": "#/$defs/edge" } },
+    "lineTypes": { "type": "array", "items": { "$ref": "#/$defs/lineType" } },
+    "equipmentDB": { "type": "array", "items": { "$ref": "#/$defs/equipment" } },
+    "generator": {
+      "type": "object",
+      "required": ["app", "version"],
+      "properties": { "app": { "type": "string" }, "version": { "type": "string" } }
+    },
+    "library": {
+      "description": "구성도를 만들 때 쓴 Portal 데이터(builder-library.json)",
+      "type": "object",
+      "required": ["schemaVersion", "source"],
+      "properties": {
+        "schemaVersion": { "type": "string" },
+        "source": {
+          "type": "object",
+          "properties": {
+            "catalogSha": { "type": "string" },
+            "detailSetSha": { "type": "string" },
+            "rtcomSha": { "type": "string" },
+            "vocabularyVersion": { "type": "string" }
+          }
+        }
+      }
+    },
+    "issues": { "type": "array", "items": { "$ref": "#/$defs/issue" } }
+  },
+  "$defs": {
+    "position": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } }
+    },
+    "size": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": { "width": { "type": "number" }, "height": { "type": "number" } }
+    },
+    "port": {
+      "type": "object",
+      "required": ["id", "label", "type", "direction"],
+      "properties": {
+        "id": { "type": "string", "description": "<direction>-<신호키>-<n>. 한 노드 안에서 유일" },
+        "label": { "type": "string" },
+        "type": { "type": "string", "description": "선 종류 ID(lineTypes[].id)" },
+        "direction": { "enum": ["in", "out", "both"] },
+        "connector": { "type": "string", "description": "표준 커넥터. UNKNOWN은 원문에 형상이 없다는 뜻" },
+        "signals": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "표준 신호. 첫 번째가 주 신호" },
+        "verification": { "type": "string", "description": "Portal I/O 행의 검증 상태(VERIFIED·FOUND·PARTIAL·REVIEW REQUIRED 등)" },
+        "portalIo": {
+          "type": "object",
+          "description": "원본 Portal I/O 행의 원문",
+          "properties": { "group": { "type": "string" }, "connector": { "type": "string" }, "signal": { "type": "string" } }
+        }
+      }
+    },
+    "portal": {
+      "type": "object",
+      "required": ["productId", "source"],
+      "properties": {
+        "productId": { "type": "string", "description": "Portal 제품 ID(slug 또는 rtcom-<id>)" },
+        "source": { "enum": ["portal", "rtcom"] },
+        "unit": { "enum": ["tx", "rx"] },
+        "variant": { "type": "string", "description": "시리즈에서 고른 모델명" },
+        "detailUrl": { "type": "string" }
+      }
+    },
+    "equipment": {
+      "type": "object",
+      "required": ["id", "category", "name", "model", "inputs", "outputs", "bidirectional"],
+      "properties": {
+        "id": { "type": "string", "description": "배치 단위 ID. Portal 제품 ID, 또는 <제품ID>:tx·:rx·:<모델 슬러그>" },
+        "category": { "enum": ["video", "display", "conferencing", "audio", "control", "network", "broadcast", "etc"] },
+        "name": { "type": "string", "description": "Portal 3단계 카테고리 이름" },
+        "model": { "type": "string" },
+        "manufacturer": { "type": "string" },
+        "description": { "type": "string" },
+        "series": { "type": "string" },
+        "inputs": { "type": "array", "items": { "$ref": "#/$defs/port" } },
+        "outputs": { "type": "array", "items": { "$ref": "#/$defs/port" } },
+        "bidirectional": { "type": "array", "items": { "$ref": "#/$defs/port" } },
+        "imageUrl": { "type": "string" },
+        "portal": { "$ref": "#/$defs/portal" }
+      }
+    },
+    "equipmentNode": {
+      "type": "object",
+      "required": ["id", "type", "position", "data"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "const": "equipment" },
+        "position": { "$ref": "#/$defs/position" },
+        "data": {
+          "allOf": [
+            { "$ref": "#/$defs/equipment" },
+            { "properties": { "isReused": { "type": "boolean", "description": "기존 장비 재사용. 견적에서 구매 대상이 아니다" } } }
+          ]
+        },
+        "measured": { "$ref": "#/$defs/size" },
+        "sourcePosition": { "type": "string" },
+        "targetPosition": { "type": "string" }
+      }
+    },
+    "annotationNode": {
+      "type": "object",
+      "required": ["id", "type", "position", "style", "data"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "const": "annotation" },
+        "position": { "$ref": "#/$defs/position" },
+        "style": { "$ref": "#/$defs/size" },
+        "data": { "type": "object", "properties": { "label": { "type": "string" } } },
+        "measured": { "$ref": "#/$defs/size" }
+      }
+    },
+    "shapeNode": {
+      "type": "object",
+      "required": ["id", "type", "position", "style", "data"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "const": "shape" },
+        "position": { "$ref": "#/$defs/position" },
+        "style": { "$ref": "#/$defs/size" },
+        "data": { "type": "object", "properties": { "shapeType": { "type": "string" }, "label": { "type": "string" } } },
+        "measured": { "$ref": "#/$defs/size" }
+      }
+    },
+    "node": {
+      "oneOf": [{ "$ref": "#/$defs/equipmentNode" }, { "$ref": "#/$defs/annotationNode" }, { "$ref": "#/$defs/shapeNode" }]
+    },
+    "bomRow": {
+      "type": "object",
+      "required": ["cableType", "productName"],
+      "properties": {
+        "cableType": { "enum": ["ready-made", "manufactured"], "description": "ready-made 기성(quantity) · manufactured 제작(length)" },
+        "productName": { "type": "string" },
+        "lineTypeId": { "type": "string" },
+        "length": { "type": "number", "description": "m" },
+        "quantity": { "type": "number" }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "type", "source", "sourceHandle", "target", "targetHandle", "style", "data"],
+      "description": "엣지 하나 = 단자 쌍 하나 = 케이블 한 가닥. source는 항상 신호를 내보내는 쪽",
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "source": { "type": "string" },
+        "sourceHandle": { "type": "string", "description": "단자 ID. 양방향 단자는 source_<단자ID>" },
+        "target": { "type": "string" },
+        "targetHandle": { "type": "string", "description": "단자 ID. 양방향 단자는 target_<단자ID>" },
+        "animated": { "type": "boolean" },
+        "style": { "type": "object", "properties": { "stroke": { "type": "string" }, "strokeWidth": { "type": "number" } } },
+        "data": {
+          "type": "object",
+          "required": ["lineTypeId"],
+          "properties": {
+            "lineTypeId": { "type": "string" },
+            "signal": { "type": "string", "description": "이 엣지가 나르는 표준 신호" },
+            "label": { "type": "string" },
+            "bomRows": { "type": "array", "items": { "$ref": "#/$defs/bomRow" } }
+          }
+        }
+      }
+    },
+    "lineType": {
+      "type": "object",
+      "required": ["id", "name", "color"],
+      "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "color": { "type": "string" } }
+    },
+    "issue": {
+      "type": "object",
+      "required": ["code", "severity", "target"],
+      "properties": {
+        "code": {
+          "enum": ["connector-adapter", "connector-unknown", "signal-level", "unverified-port", "cable-unspecified", "no-ports", "series-config-pending", "product-removed", "library-drift"]
+        },
+        "severity": { "enum": ["warning", "info"] },
+        "target": {
+          "type": "object",
+          "properties": { "node": { "type": "string" }, "edge": { "type": "string" }, "port": { "type": "string" } }
+        },
+        "detail": { "type": "string" }
+      }
+    }
+  }
+}

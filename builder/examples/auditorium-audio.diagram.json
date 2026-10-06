@@ -1,0 +1,1968 @@
+{
+  "version": "1.2",
+  "nodes": [
+    {
+      "id": "shape_01m49thv004y7fb9fb836nkp8g",
+      "type": "shape",
+      "position": {
+        "x": -40,
+        "y": -80
+      },
+      "style": {
+        "width": 1300,
+        "height": 1000
+      },
+      "data": {
+        "shapeType": "rectangle",
+        "label": "중강당 (가상 예제)",
+        "fontSize": 14,
+        "fontColor": "#94a3b8",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.25,
+        "borderColor": "#475569",
+        "borderStyle": "solid",
+        "borderWidth": 2
+      },
+      "measured": {
+        "width": 1300,
+        "height": 1000
+      }
+    },
+    {
+      "id": "node_01m49thv013yb6r3feq3wtmw5h",
+      "type": "equipment",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "id": "ulxd4d",
+        "category": "audio",
+        "name": "Wireless Microphone System",
+        "model": "ULXD4D",
+        "manufacturer": "Shure",
+        "description": "ULX-D 디지털 무선 시스템의 2채널 랙마운트 수신기. 1RU 섀시에 독립된 2개 수신 채널을 탑재했으며, ULXD4Q와 마찬가지로 Dante 디지털 오디오 네트워킹과 AES-256 암호화를 지원한다.",
+        "series": "Shure ULX-D Digital Wireless",
+        "inputs": [
+          {
+            "id": "in-rf-1",
+            "label": "RF In 1",
+            "type": "rf",
+            "direction": "in",
+            "connector": "BNC",
+            "signals": [
+              "RF"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "RF",
+              "connector": "BNC",
+              "signal": "RF antenna input"
+            }
+          },
+          {
+            "id": "in-rf-2",
+            "label": "RF In 2",
+            "type": "rf",
+            "direction": "in",
+            "connector": "BNC",
+            "signals": [
+              "RF"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "RF",
+              "connector": "BNC",
+              "signal": "RF antenna input"
+            }
+          },
+          {
+            "id": "in-power-1",
+            "label": "Power In 1",
+            "type": "power",
+            "direction": "in",
+            "connector": "IEC",
+            "signals": [
+              "POWER"
+            ],
+            "verification": "PARTIAL",
+            "portalIo": {
+              "group": "Power",
+              "connector": "IEC 전원 인렛(100–240V AC)",
+              "signal": "Power input"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-rf-1",
+            "label": "RF Out 1",
+            "type": "rf",
+            "direction": "out",
+            "connector": "BNC",
+            "signals": [
+              "RF"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "RF",
+              "connector": "BNC",
+              "signal": "Cascade RF output"
+            }
+          },
+          {
+            "id": "out-rf-2",
+            "label": "RF Out 2",
+            "type": "rf",
+            "direction": "out",
+            "connector": "BNC",
+            "signals": [
+              "RF"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "RF",
+              "connector": "BNC",
+              "signal": "Cascade RF output"
+            }
+          },
+          {
+            "id": "out-line-audio-1",
+            "label": "Line Audio Out 1",
+            "type": "audio",
+            "direction": "out",
+            "connector": "XLR",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "XLR (채널당 1개)",
+              "signal": "Audio output"
+            }
+          },
+          {
+            "id": "out-line-audio-2",
+            "label": "Line Audio Out 2",
+            "type": "audio",
+            "direction": "out",
+            "connector": "XLR",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "XLR (채널당 1개)",
+              "signal": "Audio output"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-dante-1",
+            "label": "Dante I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "DANTE",
+              "ETHERNET"
+            ],
+            "verification": "PARTIAL",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "Network / Dante audio"
+            }
+          },
+          {
+            "id": "both-dante-2",
+            "label": "Dante I/O 2",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "DANTE",
+              "ETHERNET"
+            ],
+            "verification": "PARTIAL",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "Network / Dante audio"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/ulxd4d-front.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "ulxd4d",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=ulxd4d"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 327
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv029z39bysmsg72nhyw",
+      "type": "equipment",
+      "position": {
+        "x": 420,
+        "y": 0
+      },
+      "data": {
+        "id": "comtech-d-8125",
+        "category": "audio",
+        "name": "Amplifier",
+        "model": "ComTech D 8125",
+        "manufacturer": "Crown",
+        "description": "CTD-8125는 8채널 125W(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다.",
+        "series": "ComTech D Series",
+        "inputs": [
+          {
+            "id": "in-line-audio-1",
+            "label": "Line Audio In 1",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-2",
+            "label": "Line Audio In 2",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-3",
+            "label": "Line Audio In 3",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-4",
+            "label": "Line Audio In 4",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-5",
+            "label": "Line Audio In 5",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-6",
+            "label": "Line Audio In 6",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-7",
+            "label": "Line Audio In 7",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-line-audio-8",
+            "label": "Line Audio In 8",
+            "type": "audio",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "LINE-AUDIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+              "signal": "Analog audio in"
+            }
+          },
+          {
+            "id": "in-power-1",
+            "label": "Power In 1",
+            "type": "power",
+            "direction": "in",
+            "connector": "IEC",
+            "signals": [
+              "POWER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Power",
+              "connector": "IEC 인렛",
+              "signal": "Mains power"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "id": "out-speaker-1",
+            "label": "Speaker Out 1",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-2",
+            "label": "Speaker Out 2",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-3",
+            "label": "Speaker Out 3",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-4",
+            "label": "Speaker Out 4",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-5",
+            "label": "Speaker Out 5",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-6",
+            "label": "Speaker Out 6",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-7",
+            "label": "Speaker Out 7",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          },
+          {
+            "id": "out-speaker-8",
+            "label": "Speaker Out 8",
+            "type": "speaker",
+            "direction": "out",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Output",
+              "connector": "4핀 유로블록 x4 (2채널당 1개)",
+              "signal": "Speaker output"
+            }
+          }
+        ],
+        "bidirectional": [
+          {
+            "id": "both-dante-1",
+            "label": "Dante I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "DANTE",
+              "AES67",
+              "ETHERNET"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio Network",
+              "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+              "signal": "Dante/AES67 audio"
+            }
+          },
+          {
+            "id": "both-dante-2",
+            "label": "Dante I/O 2",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "DANTE",
+              "AES67",
+              "ETHERNET"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio Network",
+              "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+              "signal": "Dante/AES67 audio"
+            }
+          },
+          {
+            "id": "both-gpio-1",
+            "label": "GPIO I/O 1",
+            "type": "control",
+            "direction": "both",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "GPIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Control",
+              "connector": "6핀 유로블록 x2 (GPI 1-4, GPI 5-8, 5V)",
+              "signal": "GPIO/AUX 제어 입출력"
+            }
+          },
+          {
+            "id": "both-gpio-2",
+            "label": "GPIO I/O 2",
+            "type": "control",
+            "direction": "both",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "GPIO"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Control",
+              "connector": "6핀 유로블록 x2 (GPI 1-4, GPI 5-8, 5V)",
+              "signal": "GPIO/AUX 제어 입출력"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/ctd-8125-front.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "comtech-d-8125",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-8125"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 523
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv034t1ykchxzrjacsev",
+      "type": "equipment",
+      "position": {
+        "x": 0,
+        "y": 560
+      },
+      "data": {
+        "id": "gs108pp",
+        "category": "network",
+        "name": "Network Switch",
+        "model": "GS108PP",
+        "manufacturer": "NETGEAR",
+        "description": "총 123W의 PoE 전력 예산을 제공하는 8포트 기가비트 이더넷 고전력 PoE+ 비관리형 스위치로, NETGEAR FlexPoE 기능을 통해 별도 구매 전원 공급 모듈로 예산을 83W 또는 60W로 조정할 수 있다.",
+        "inputs": [],
+        "outputs": [],
+        "bidirectional": [
+          {
+            "id": "both-ethernet-1",
+            "label": "Ethernet I/O 1",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-2",
+            "label": "Ethernet I/O 2",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-3",
+            "label": "Ethernet I/O 3",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-4",
+            "label": "Ethernet I/O 4",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-5",
+            "label": "Ethernet I/O 5",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-6",
+            "label": "Ethernet I/O 6",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-7",
+            "label": "Ethernet I/O 7",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          },
+          {
+            "id": "both-ethernet-8",
+            "label": "Ethernet I/O 8",
+            "type": "network",
+            "direction": "both",
+            "connector": "RJ45",
+            "signals": [
+              "ETHERNET",
+              "POE"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Network",
+              "connector": "RJ-45",
+              "signal": "10/100/1000M Ethernet"
+            }
+          }
+        ],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/gs108pp-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "gs108pp",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=gs108pp"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 379
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv07epe12j2695mdg7yj",
+      "type": "equipment",
+      "position": {
+        "x": 900,
+        "y": 0
+      },
+      "data": {
+        "id": "control-412ct",
+        "category": "audio",
+        "name": "Ceiling Speaker",
+        "model": "Control 412C/T",
+        "manufacturer": "JBL",
+        "description": "Control 412C/T는 JBL Control 400 Standard Coverage 시리즈의 3인치 풀레인지 천장매입형 스피커로, 일체형 인클로저와 70V/100V 트랜스포머를 내장했다.",
+        "inputs": [
+          {
+            "id": "in-speaker-1",
+            "label": "Speaker In 1",
+            "type": "speaker",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "Screw Terminal",
+              "signal": "스피커 입력"
+            }
+          }
+        ],
+        "outputs": [],
+        "bidirectional": [],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/control-412ct-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "control-412ct",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=control-412ct"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 170
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv09nc3bpgwzyzy1q1d5",
+      "type": "equipment",
+      "position": {
+        "x": 900,
+        "y": 220
+      },
+      "data": {
+        "id": "control-412ct",
+        "category": "audio",
+        "name": "Ceiling Speaker",
+        "model": "Control 412C/T",
+        "manufacturer": "JBL",
+        "description": "Control 412C/T는 JBL Control 400 Standard Coverage 시리즈의 3인치 풀레인지 천장매입형 스피커로, 일체형 인클로저와 70V/100V 트랜스포머를 내장했다.",
+        "inputs": [
+          {
+            "id": "in-speaker-1",
+            "label": "Speaker In 1",
+            "type": "speaker",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "Screw Terminal",
+              "signal": "스피커 입력"
+            }
+          }
+        ],
+        "outputs": [],
+        "bidirectional": [],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/control-412ct-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "control-412ct",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=control-412ct"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 170
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv0bgaasdmad4q1s3ztq",
+      "type": "equipment",
+      "position": {
+        "x": 900,
+        "y": 440
+      },
+      "data": {
+        "id": "control-412ct",
+        "category": "audio",
+        "name": "Ceiling Speaker",
+        "model": "Control 412C/T",
+        "manufacturer": "JBL",
+        "description": "Control 412C/T는 JBL Control 400 Standard Coverage 시리즈의 3인치 풀레인지 천장매입형 스피커로, 일체형 인클로저와 70V/100V 트랜스포머를 내장했다.",
+        "inputs": [
+          {
+            "id": "in-speaker-1",
+            "label": "Speaker In 1",
+            "type": "speaker",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "Screw Terminal",
+              "signal": "스피커 입력"
+            }
+          }
+        ],
+        "outputs": [],
+        "bidirectional": [],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/control-412ct-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "control-412ct",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=control-412ct"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 170
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "node_01m49thv0dbmdmhwg79q0zp868",
+      "type": "equipment",
+      "position": {
+        "x": 900,
+        "y": 660
+      },
+      "data": {
+        "id": "control-412ct",
+        "category": "audio",
+        "name": "Ceiling Speaker",
+        "model": "Control 412C/T",
+        "manufacturer": "JBL",
+        "description": "Control 412C/T는 JBL Control 400 Standard Coverage 시리즈의 3인치 풀레인지 천장매입형 스피커로, 일체형 인클로저와 70V/100V 트랜스포머를 내장했다.",
+        "inputs": [
+          {
+            "id": "in-speaker-1",
+            "label": "Speaker In 1",
+            "type": "speaker",
+            "direction": "in",
+            "connector": "TERMINAL-BLOCK",
+            "signals": [
+              "SPEAKER"
+            ],
+            "verification": "FOUND",
+            "portalIo": {
+              "group": "Audio",
+              "connector": "Screw Terminal",
+              "signal": "스피커 입력"
+            }
+          }
+        ],
+        "outputs": [],
+        "bidirectional": [],
+        "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/control-412ct-main.webp",
+        "isReused": false,
+        "portal": {
+          "productId": "control-412ct",
+          "source": "portal",
+          "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=control-412ct"
+        }
+      },
+      "measured": {
+        "width": 220,
+        "height": 170
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "annotation_01m49thv0fmnpae4qf8ffjj3r4",
+      "type": "annotation",
+      "position": {
+        "x": 420,
+        "y": 760
+      },
+      "style": {
+        "width": 420,
+        "height": 60
+      },
+      "data": {
+        "label": "스피커 4대는 노드 4개다(노드 1개 = 1대)",
+        "fontSize": 14,
+        "fontColor": "#ffffff",
+        "bgColor": "#1e293b",
+        "bgOpacity": 0.8,
+        "borderColor": "#38bdf8",
+        "borderStyle": "dashed",
+        "borderRadius": 8,
+        "textAlign": "center"
+      },
+      "measured": {
+        "width": 420,
+        "height": 60
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv04dwktrnvqn3gkwfz8",
+      "type": "smoothstep",
+      "source": "node_01m49thv013yb6r3feq3wtmw5h",
+      "sourceHandle": "out-line-audio-1",
+      "target": "node_01m49thv029z39bysmsg72nhyw",
+      "targetHandle": "in-line-audio-1",
+      "animated": false,
+      "style": {
+        "stroke": "#a855f7",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "audio",
+        "signal": "LINE-AUDIO",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "2C 실드 오디오 케이블",
+            "lineTypeId": "audio",
+            "length": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv05qyr8p1775dnx5kad",
+      "type": "smoothstep",
+      "source": "node_01m49thv013yb6r3feq3wtmw5h",
+      "sourceHandle": "out-line-audio-2",
+      "target": "node_01m49thv029z39bysmsg72nhyw",
+      "targetHandle": "in-line-audio-2",
+      "animated": false,
+      "style": {
+        "stroke": "#a855f7",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "audio",
+        "signal": "LINE-AUDIO",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "2C 실드 오디오 케이블",
+            "lineTypeId": "audio",
+            "length": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv034t1ykchxzrjacsev-01m49thv0606jnbqbg8j9fmb1v",
+      "type": "smoothstep",
+      "source": "node_01m49thv013yb6r3feq3wtmw5h",
+      "sourceHandle": "source_both-dante-1",
+      "target": "node_01m49thv034t1ykchxzrjacsev",
+      "targetHandle": "target_both-ethernet-1",
+      "animated": false,
+      "style": {
+        "stroke": "#22c55e",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "network",
+        "signal": "ETHERNET",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "UTP CAT6",
+            "lineTypeId": "network",
+            "length": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv029z39bysmsg72nhyw-node_01m49thv07epe12j2695mdg7yj-01m49thv08nhvvpj1jkk2hzxxb",
+      "type": "smoothstep",
+      "source": "node_01m49thv029z39bysmsg72nhyw",
+      "sourceHandle": "out-speaker-1",
+      "target": "node_01m49thv07epe12j2695mdg7yj",
+      "targetHandle": "in-speaker-1",
+      "animated": false,
+      "style": {
+        "stroke": "#0891b2",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "speaker",
+        "signal": "SPEAKER",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "스피커 케이블 2.5SQ",
+            "lineTypeId": "speaker",
+            "length": 30
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv029z39bysmsg72nhyw-node_01m49thv09nc3bpgwzyzy1q1d5-01m49thv0anh7q9bxmp1z55sqq",
+      "type": "smoothstep",
+      "source": "node_01m49thv029z39bysmsg72nhyw",
+      "sourceHandle": "out-speaker-2",
+      "target": "node_01m49thv09nc3bpgwzyzy1q1d5",
+      "targetHandle": "in-speaker-1",
+      "animated": false,
+      "style": {
+        "stroke": "#0891b2",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "speaker",
+        "signal": "SPEAKER",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "스피커 케이블 2.5SQ",
+            "lineTypeId": "speaker",
+            "length": 30
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv029z39bysmsg72nhyw-node_01m49thv0bgaasdmad4q1s3ztq-01m49thv0ce93jn6jnvsywxt7y",
+      "type": "smoothstep",
+      "source": "node_01m49thv029z39bysmsg72nhyw",
+      "sourceHandle": "out-speaker-3",
+      "target": "node_01m49thv0bgaasdmad4q1s3ztq",
+      "targetHandle": "in-speaker-1",
+      "animated": false,
+      "style": {
+        "stroke": "#0891b2",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "speaker",
+        "signal": "SPEAKER",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "스피커 케이블 2.5SQ",
+            "lineTypeId": "speaker",
+            "length": 30
+          }
+        ]
+      }
+    },
+    {
+      "id": "e-node_01m49thv029z39bysmsg72nhyw-node_01m49thv0dbmdmhwg79q0zp868-01m49thv0eqzz8c5561wqtq4ta",
+      "type": "smoothstep",
+      "source": "node_01m49thv029z39bysmsg72nhyw",
+      "sourceHandle": "out-speaker-4",
+      "target": "node_01m49thv0dbmdmhwg79q0zp868",
+      "targetHandle": "in-speaker-1",
+      "animated": false,
+      "style": {
+        "stroke": "#0891b2",
+        "strokeWidth": 2
+      },
+      "data": {
+        "lineTypeId": "speaker",
+        "signal": "SPEAKER",
+        "bomRows": [
+          {
+            "cableType": "manufactured",
+            "productName": "스피커 케이블 2.5SQ",
+            "lineTypeId": "speaker",
+            "length": 30
+          }
+        ]
+      }
+    }
+  ],
+  "lineTypes": [
+    {
+      "id": "audio",
+      "name": "A.AUDIO",
+      "color": "#a855f7"
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "lt-1784014150344",
+      "name": "DP",
+      "color": "#ff8585"
+    },
+    {
+      "id": "network",
+      "name": "LAN",
+      "color": "#22c55e"
+    },
+    {
+      "id": "power",
+      "name": "POWER",
+      "color": "#78716c"
+    },
+    {
+      "id": "rf",
+      "name": "RF",
+      "color": "#65a30d"
+    },
+    {
+      "id": "sdi",
+      "name": "SDI",
+      "color": "#374151"
+    },
+    {
+      "id": "speaker",
+      "name": "SPEAKER",
+      "color": "#0891b2"
+    },
+    {
+      "id": "usb",
+      "name": "USB",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "video",
+      "name": "HDMI",
+      "color": "#ef4444"
+    }
+  ],
+  "equipmentDB": [
+    {
+      "id": "comtech-d-8125",
+      "category": "audio",
+      "name": "Amplifier",
+      "model": "ComTech D 8125",
+      "manufacturer": "Crown",
+      "description": "CTD-8125는 8채널 125W(Lo-Z/Hi-Z) 파워쉐어링 앰프로, 1-4채널과 5-8채널 두 그룹으로 나뉘어 각각 500W를 채널간 자유 배분하는 방식이다.",
+      "series": "ComTech D Series",
+      "inputs": [
+        {
+          "id": "in-line-audio-1",
+          "label": "Line Audio In 1",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-2",
+          "label": "Line Audio In 2",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-3",
+          "label": "Line Audio In 3",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-4",
+          "label": "Line Audio In 4",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-5",
+          "label": "Line Audio In 5",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-6",
+          "label": "Line Audio In 6",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-7",
+          "label": "Line Audio In 7",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-line-audio-8",
+          "label": "Line Audio In 8",
+          "type": "audio",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "6핀 유로블록 x4 (S/+/−, 2채널당 1개)",
+            "signal": "Analog audio in"
+          }
+        },
+        {
+          "id": "in-power-1",
+          "label": "Power In 1",
+          "type": "power",
+          "direction": "in",
+          "connector": "IEC",
+          "signals": [
+            "POWER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Power",
+            "connector": "IEC 인렛",
+            "signal": "Mains power"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-speaker-1",
+          "label": "Speaker Out 1",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-2",
+          "label": "Speaker Out 2",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-3",
+          "label": "Speaker Out 3",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-4",
+          "label": "Speaker Out 4",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-5",
+          "label": "Speaker Out 5",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-6",
+          "label": "Speaker Out 6",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-7",
+          "label": "Speaker Out 7",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        },
+        {
+          "id": "out-speaker-8",
+          "label": "Speaker Out 8",
+          "type": "speaker",
+          "direction": "out",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Output",
+            "connector": "4핀 유로블록 x4 (2채널당 1개)",
+            "signal": "Speaker output"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-dante-1",
+          "label": "Dante I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "DANTE",
+            "AES67",
+            "ETHERNET"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio Network",
+            "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+            "signal": "Dante/AES67 audio"
+          }
+        },
+        {
+          "id": "both-dante-2",
+          "label": "Dante I/O 2",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "DANTE",
+            "AES67",
+            "ETHERNET"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio Network",
+            "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+            "signal": "Dante/AES67 audio"
+          }
+        },
+        {
+          "id": "both-gpio-1",
+          "label": "GPIO I/O 1",
+          "type": "control",
+          "direction": "both",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "GPIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Control",
+            "connector": "6핀 유로블록 x2 (GPI 1-4, GPI 5-8, 5V)",
+            "signal": "GPIO/AUX 제어 입출력"
+          }
+        },
+        {
+          "id": "both-gpio-2",
+          "label": "GPIO I/O 2",
+          "type": "control",
+          "direction": "both",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "GPIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Control",
+            "connector": "6핀 유로블록 x2 (GPI 1-4, GPI 5-8, 5V)",
+            "signal": "GPIO/AUX 제어 입출력"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/ctd-8125-front.webp",
+      "portal": {
+        "productId": "comtech-d-8125",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=comtech-d-8125"
+      }
+    },
+    {
+      "id": "control-412ct",
+      "category": "audio",
+      "name": "Ceiling Speaker",
+      "model": "Control 412C/T",
+      "manufacturer": "JBL",
+      "description": "Control 412C/T는 JBL Control 400 Standard Coverage 시리즈의 3인치 풀레인지 천장매입형 스피커로, 일체형 인클로저와 70V/100V 트랜스포머를 내장했다.",
+      "inputs": [
+        {
+          "id": "in-speaker-1",
+          "label": "Speaker In 1",
+          "type": "speaker",
+          "direction": "in",
+          "connector": "TERMINAL-BLOCK",
+          "signals": [
+            "SPEAKER"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "Screw Terminal",
+            "signal": "스피커 입력"
+          }
+        }
+      ],
+      "outputs": [],
+      "bidirectional": [],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/control-412ct-main.webp",
+      "portal": {
+        "productId": "control-412ct",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=control-412ct"
+      }
+    },
+    {
+      "id": "gs108pp",
+      "category": "network",
+      "name": "Network Switch",
+      "model": "GS108PP",
+      "manufacturer": "NETGEAR",
+      "description": "총 123W의 PoE 전력 예산을 제공하는 8포트 기가비트 이더넷 고전력 PoE+ 비관리형 스위치로, NETGEAR FlexPoE 기능을 통해 별도 구매 전원 공급 모듈로 예산을 83W 또는 60W로 조정할 수 있다.",
+      "inputs": [],
+      "outputs": [],
+      "bidirectional": [
+        {
+          "id": "both-ethernet-1",
+          "label": "Ethernet I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-2",
+          "label": "Ethernet I/O 2",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-3",
+          "label": "Ethernet I/O 3",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-4",
+          "label": "Ethernet I/O 4",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-5",
+          "label": "Ethernet I/O 5",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-6",
+          "label": "Ethernet I/O 6",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-7",
+          "label": "Ethernet I/O 7",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        },
+        {
+          "id": "both-ethernet-8",
+          "label": "Ethernet I/O 8",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "ETHERNET",
+            "POE"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "10/100/1000M Ethernet"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/gs108pp-main.webp",
+      "portal": {
+        "productId": "gs108pp",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=gs108pp"
+      }
+    },
+    {
+      "id": "ulxd4d",
+      "category": "audio",
+      "name": "Wireless Microphone System",
+      "model": "ULXD4D",
+      "manufacturer": "Shure",
+      "description": "ULX-D 디지털 무선 시스템의 2채널 랙마운트 수신기. 1RU 섀시에 독립된 2개 수신 채널을 탑재했으며, ULXD4Q와 마찬가지로 Dante 디지털 오디오 네트워킹과 AES-256 암호화를 지원한다.",
+      "series": "Shure ULX-D Digital Wireless",
+      "inputs": [
+        {
+          "id": "in-rf-1",
+          "label": "RF In 1",
+          "type": "rf",
+          "direction": "in",
+          "connector": "BNC",
+          "signals": [
+            "RF"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "RF",
+            "connector": "BNC",
+            "signal": "RF antenna input"
+          }
+        },
+        {
+          "id": "in-rf-2",
+          "label": "RF In 2",
+          "type": "rf",
+          "direction": "in",
+          "connector": "BNC",
+          "signals": [
+            "RF"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "RF",
+            "connector": "BNC",
+            "signal": "RF antenna input"
+          }
+        },
+        {
+          "id": "in-power-1",
+          "label": "Power In 1",
+          "type": "power",
+          "direction": "in",
+          "connector": "IEC",
+          "signals": [
+            "POWER"
+          ],
+          "verification": "PARTIAL",
+          "portalIo": {
+            "group": "Power",
+            "connector": "IEC 전원 인렛(100–240V AC)",
+            "signal": "Power input"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-rf-1",
+          "label": "RF Out 1",
+          "type": "rf",
+          "direction": "out",
+          "connector": "BNC",
+          "signals": [
+            "RF"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "RF",
+            "connector": "BNC",
+            "signal": "Cascade RF output"
+          }
+        },
+        {
+          "id": "out-rf-2",
+          "label": "RF Out 2",
+          "type": "rf",
+          "direction": "out",
+          "connector": "BNC",
+          "signals": [
+            "RF"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "RF",
+            "connector": "BNC",
+            "signal": "Cascade RF output"
+          }
+        },
+        {
+          "id": "out-line-audio-1",
+          "label": "Line Audio Out 1",
+          "type": "audio",
+          "direction": "out",
+          "connector": "XLR",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "XLR (채널당 1개)",
+            "signal": "Audio output"
+          }
+        },
+        {
+          "id": "out-line-audio-2",
+          "label": "Line Audio Out 2",
+          "type": "audio",
+          "direction": "out",
+          "connector": "XLR",
+          "signals": [
+            "LINE-AUDIO"
+          ],
+          "verification": "FOUND",
+          "portalIo": {
+            "group": "Audio",
+            "connector": "XLR (채널당 1개)",
+            "signal": "Audio output"
+          }
+        }
+      ],
+      "bidirectional": [
+        {
+          "id": "both-dante-1",
+          "label": "Dante I/O 1",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "DANTE",
+            "ETHERNET"
+          ],
+          "verification": "PARTIAL",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "Network / Dante audio"
+          }
+        },
+        {
+          "id": "both-dante-2",
+          "label": "Dante I/O 2",
+          "type": "network",
+          "direction": "both",
+          "connector": "RJ45",
+          "signals": [
+            "DANTE",
+            "ETHERNET"
+          ],
+          "verification": "PARTIAL",
+          "portalIo": {
+            "group": "Network",
+            "connector": "RJ-45",
+            "signal": "Network / Dante audio"
+          }
+        }
+      ],
+      "imageUrl": "https://seoulav.github.io/AV-Portal/detail/images/ulxd4d-front.webp",
+      "portal": {
+        "productId": "ulxd4d",
+        "source": "portal",
+        "detailUrl": "https://seoulav.github.io/AV-Portal/detail/?product=ulxd4d"
+      }
+    }
+  ],
+  "generator": {
+    "app": "av-portal-builder",
+    "version": "0.1.0"
+  },
+  "library": {
+    "schemaVersion": "1.0.0",
+    "source": {
+      "catalogSha": "4d2088195d448a7d279d01183ed79c768fe45236d2d28386cd10a45754c1a01c",
+      "detailSetSha": "6e80167514ccfb6469fca3ea33dd89776b5df6f2099972481d42dbbba05a1d30",
+      "rtcomSha": "b4a1a55a110c266e15e50d786a5da08522e57c764f7ac84eb195ac6b995209a7",
+      "vocabularyVersion": "1.0.0"
+    }
+  },
+  "issues": [
+    {
+      "code": "connector-adapter",
+      "severity": "warning",
+      "target": {
+        "edge": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv04dwktrnvqn3gkwfz8"
+      },
+      "detail": "XLR → TERMINAL-BLOCK"
+    },
+    {
+      "code": "connector-adapter",
+      "severity": "warning",
+      "target": {
+        "edge": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv05qyr8p1775dnx5kad"
+      },
+      "detail": "XLR → TERMINAL-BLOCK"
+    },
+    {
+      "code": "unverified-port",
+      "severity": "warning",
+      "target": {
+        "edge": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv034t1ykchxzrjacsev-01m49thv0606jnbqbg8j9fmb1v"
+      },
+      "detail": "both-dante-1 PARTIAL"
+    }
+  ]
+}
