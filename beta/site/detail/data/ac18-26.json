@@ -332,9 +332,9 @@
   "subtitle": "AE Compact · 2-way 스피커",
   "keyFacts": [
     {
-      "label": "시스템 전력 · AES",
-      "value": "375",
-      "unit": "W"
+      "label": "공칭 임피던스 · 시스템 전력 · AES",
+      "value": "8 Ω · 375 W",
+      "unit": ""
     },
     {
       "label": "감도 · 1W/1m",

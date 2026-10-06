@@ -323,6 +323,11 @@
   "subtitle": "AE Compact · 2-way 스피커",
   "keyFacts": [
     {
+      "label": "공칭 임피던스 · 시스템 전력 · 컨티뉴어스 핑크노이즈",
+      "value": "8 Ω · 250 W",
+      "unit": ""
+    },
+    {
       "label": "감도 · 1W/1m",
       "value": "93",
       "unit": "dB SPL"

@@ -345,8 +345,8 @@
   "subtitle": "Control 400 Premium Coverage · 천장매입 서브우퍼",
   "keyFacts": [
     {
-      "label": "연속 프로그램 전력 · 2시간",
-      "value": "300 W",
+      "label": "공칭 임피던스 · 연속 프로그램 전력 · 2시간",
+      "value": "8 Ω · 300 W",
       "unit": ""
     },
     {
