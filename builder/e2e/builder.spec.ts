@@ -10,18 +10,18 @@ const PLACEMENTS: [string, number, number][] = [['cam', 0, 0], ['disp', 500, 0],
 
 type Point = { x: number; y: number };
 
-async function openFixture(page: Page) {
+async function openFixture(page: Page, placements: [string, number, number][] = PLACEMENTS) {
   await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
   page.on('dialog', dialog => void dialog.accept());
   await page.goto('./');
-  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 4종');
-  const { text, nodeIds } = diagramText(PLACEMENTS);
+  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 6종');
+  const { text, nodeIds } = diagramText(placements);
   await page.locator('input[type=file]').setInputFiles({ name: 'fixture.diagram.json', mimeType: 'application/json', buffer: Buffer.from(text) });
-  await expect(page.locator('.react-flow__node-equipment')).toHaveCount(PLACEMENTS.length);
+  await expect(page.locator('.react-flow__node-equipment')).toHaveCount(placements.length);
   // 연 파일이 자동 저장될 때까지 기다린다(시험은 저장본으로 결과를 본다)
   await expect.poll(() => page.evaluate(key => localStorage.getItem(key) !== null, AUTOSAVE_KEY)).toBe(true);
   const [cam, disp, ctl, mon] = nodeIds;
-  return { cam, disp, ctl, mon };
+  return { cam, disp, ctl, mon, nodeIds };
 }
 
 const handle = (page: Page, nodeId: string, handleId: string) => page.locator(`.react-flow__node[data-id="${nodeId}"] .react-flow__handle[data-handleid="${handleId}"]`);
@@ -171,6 +171,11 @@ test('after a box selection, a port row still draws a line instead of moving the
   await expect(page.locator('.react-flow__node.selected')).toHaveCount(PLACEMENTS.length);
   const xs = async () => (await saved(page)).nodes.map((node: { position: { x: number } }) => node.position.x);
   const before = await xs();
+  // 범위 선택은 단자도 고른다(묶음 연결). 하나만 그으려면 Esc로 단자 선택을 푼다. 장비 선택은 그대로다
+  await expect(page.locator('.react-flow__handle.port-selected').first()).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(0);
+  await expect(page.locator('.react-flow__node.selected')).toHaveCount(PLACEMENTS.length);
   await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, disp, 'in-hdmi-1'), 'left'));
   await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
   expect(await xs()).toEqual(before);
@@ -234,4 +239,124 @@ test('drawn edges attach at the dots geometry computes', async ({ page }) => {
   // 단자 점(::after)은 핸들 상자의 바깥 끝에 있다
   const dotLeft = await handle(page, disp, 'in-hdmi-3').evaluate(element => getComputedStyle(element, '::after').left);
   expect(dotLeft).toBe('0px');
+});
+
+// ── 평행선 한꺼번에 긋기(B-20261006-06, 통합 기획 §7.4 P5 항목) ──
+const BUNDLE: [string, number, number][] = [['quad', 0, 0], ['wall', 500, 0]];
+
+// quad 출력 점 4개만 덮는 사각형을 빈 캔버스(점 오른쪽 바깥)에서부터 끈다
+async function boxSelectQuadOutputs(page: Page, quad: string) {
+  const first = await dot(handle(page, quad, 'out-hdmi-1'), 'right');
+  const last = await dot(handle(page, quad, 'out-hdmi-4'), 'right');
+  await drag(page, { x: first.x + 30, y: first.y - 20 }, { x: first.x - 10, y: last.y + 20 });
+}
+
+test('box-selected ports draw parallel lines downward from the dropped port; one undo removes them all', async ({ page }) => {
+  const { nodeIds: [quad, wall] } = await openFixture(page, BUNDLE);
+  await boxSelectQuadOutputs(page, quad);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(4);
+  await expect(page.locator('.react-flow__node.selected')).toHaveCount(0);
+
+  // 묶음의 둘째 단자에서 끌어 wall 입력 2에 놓는다: 1번(맨 위)이 입력 2, 나머지는 아래로
+  const start = await rowInside(handle(page, quad, 'out-hdmi-2'), 'right');
+  const target = await rowInside(handle(page, wall, 'in-hdmi-2'), 'left');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(target.x, target.y, { steps: 15 });
+  await expect(page.locator('.bundle-line.snapped')).toHaveCount(4);
+  await expect(page.locator('.bundle-badge')).toContainText('4/4');
+  await page.mouse.up();
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-2', 'out-hdmi-2>in-hdmi-3', 'out-hdmi-3>in-hdmi-4', 'out-hdmi-4>in-hdmi-5']);
+  await expect(page.locator('.notice')).toContainText('4개를 한꺼번에 연결했습니다');
+
+  // 평행선: 꺾이는 x가 선마다 다르다(같은 x에 겹치지 않는다)
+  const middles = await page.locator('.react-flow__edge path.react-flow__edge-path').evaluateAll(paths => paths.map(path => {
+    const numbers = (path.getAttribute('d') ?? '').match(/-?[\d.]+/g)!.map(Number);
+    const xs = numbers.filter((_, i) => i % 2 === 0).slice(1, -1).sort((a, b) => a - b);
+    return Math.round(xs[Math.floor(xs.length / 2)]);
+  }));
+  expect(new Set(middles).size).toBe(4);
+
+  await page.getByRole('button', { name: '실행 취소' }).click();
+  await expect.poll(() => savedEdges(page)).toEqual([]);
+});
+
+test('Shift+click builds a bundle; connected targets are skipped and a shortage is reported', async ({ page }) => {
+  const { nodeIds: [quad, wall] } = await openFixture(page, BUNDLE);
+  // 먼저 출력 4 → 입력 3을 하나만 잇는다
+  await drag(page, await rowInside(handle(page, quad, 'out-hdmi-4'), 'right'), await rowInside(handle(page, wall, 'in-hdmi-3'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-4>in-hdmi-3']);
+
+  // 출력 1·2·3을 누르고 Shift+누르기로 고른다. 다시 Shift+누르면 빠진다
+  const click = async (id: string, shift = false) => {
+    const point = await rowInside(handle(page, quad, id), 'right');
+    if (shift) await page.keyboard.down('Shift');
+    await page.mouse.click(point.x, point.y);
+    if (shift) await page.keyboard.up('Shift');
+  };
+  await click('out-hdmi-1');
+  await click('out-hdmi-2', true);
+  await click('out-hdmi-3', true);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+  await click('out-hdmi-3', true);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(2);
+  await click('out-hdmi-3', true);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+
+  // 입력 2에 놓으면 1 → 2, 2 → 4(3은 이미 연결), 3 → 5
+  await drag(page, await rowInside(handle(page, quad, 'out-hdmi-1'), 'right'), await rowInside(handle(page, wall, 'in-hdmi-2'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-2', 'out-hdmi-2>in-hdmi-4', 'out-hdmi-3>in-hdmi-5', 'out-hdmi-4>in-hdmi-3']);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(0);
+
+  // 모자람: 새로 열어 네 개를 고르고 입력 4에 놓으면 4 → 6까지 세 개만 잇는다
+  await page.getByRole('button', { name: '새 구성도' }).click();
+  const fresh = await openFixture(page, BUNDLE);
+  await boxSelectQuadOutputs(page, fresh.nodeIds[0]);
+  await drag(page, await rowInside(handle(page, fresh.nodeIds[0], 'out-hdmi-1'), 'right'), await rowInside(handle(page, fresh.nodeIds[1], 'in-hdmi-4'), 'left'));
+  await expect.poll(async () => (await savedEdges(page)).length).toBe(3);
+  await expect(page.locator('.notice')).toContainText('4개 중 3개 연결했습니다');
+  await expect(page.locator('.notice')).toContainText('대상 장비에 남은 단자 부족');
+});
+
+test('Esc and an empty-canvas click clear the port selection', async ({ page }) => {
+  const { nodeIds: [quad] } = await openFixture(page, BUNDLE);
+  await boxSelectQuadOutputs(page, quad);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(4);
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(0);
+  await boxSelectQuadOutputs(page, quad);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(4);
+  const { corner } = await emptyCorner(page);
+  await page.mouse.click(corner.x, corner.y);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(0);
+});
+
+test('Shift+click tolerates a small slip, and a drag cancelled on its own row keeps the bundle', async ({ page }) => {
+  const { nodeIds: [quad] } = await openFixture(page, BUNDLE);
+  const rowOf = (id: string) => rowInside(handle(page, quad, id), 'right');
+  // 누른 뒤 2px 미끄러져도 Shift+누르기다(React Flow가 범위 선택을 시작하지 않는다)
+  const slipClick = async (id: string) => {
+    const point = await rowOf(id);
+    await page.keyboard.down('Shift');
+    await page.mouse.move(point.x, point.y);
+    await page.mouse.down();
+    await page.mouse.move(point.x + 2, point.y + 1);
+    await page.mouse.up();
+    await page.keyboard.up('Shift');
+  };
+  await page.mouse.click((await rowOf('out-hdmi-1')).x, (await rowOf('out-hdmi-1')).y);
+  await slipClick('out-hdmi-2');
+  await slipClick('out-hdmi-3');
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+
+  // 묶음을 끌다가 같은 행으로 돌아와 놓으면 연결도 없고 선택도 그대로다
+  const start = await rowOf('out-hdmi-2');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(start.x - 80, start.y + 40, { steps: 8 });
+  await page.mouse.move(start.x, start.y, { steps: 8 });
+  await page.mouse.up();
+  await page.waitForTimeout(400);
+  expect(await savedEdges(page)).toEqual([]);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
 });

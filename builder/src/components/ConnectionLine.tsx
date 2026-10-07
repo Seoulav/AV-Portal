@@ -2,16 +2,90 @@
 // - 붙을 단자가 있으면 그 단자까지, 엣지가 실제로 붙을 점(양방향은 역할에 따른 쪽)에 고리를 그린다
 // - 붙을 곳이 없으면 포인터까지 점선, 가까운 단자가 모두 막혔으면 붉은 점선
 // - 캔버스 밖에 있으면 놓아도 취소라 포인터까지 점선만 그린다
+// - 묶음 끌기(B-20261006-06)면 묶음 단자마다 선을 그리고, 짝이 없는 단자는 붉은 점선, 커서 옆에 개수를 띄운다
 import { useMemo } from 'react';
 import { Position, getSmoothStepPath, useStore, type ConnectionLineComponentProps } from '@xyflow/react';
-import { findPort, type Equipment } from '../engine';
+import { findPort, type DiagramEdge, type DiagramNode, type Equipment } from '../engine';
+import { handleFor, parseKey } from '../bundle';
+import { resolveBundleDrop } from '../bundleDrop';
+import { pathSpacing, type PathSpacing } from '../edgeSpacing';
 import { anchorOf, findDropTarget, type Anchor } from '../proximity';
-import { useBuilder } from '../state/useBuilder';
+import { builderStore, useBuilder } from '../state/useBuilder';
 
 const BLOCKED = '#dc2626';
 const sideOf = (anchor: Anchor) => (anchor.side === 'left' ? Position.Left : Position.Right);
 
-export function ConnectionLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHandle, connectionStatus, pointer }: ConnectionLineComponentProps) {
+const pathBetween = (from: { x: number; y: number; position: Position }, end: { x: number; y: number; position: Position }, spacing?: PathSpacing) => getSmoothStepPath({
+  sourceX: from.x, sourceY: from.y, sourcePosition: from.position, targetX: end.x, targetY: end.y, targetPosition: end.position, ...spacing,
+})[0];
+const opposite = (position: Position) => (position === Position.Left ? Position.Right : Position.Left);
+
+export function ConnectionLine(props: ConnectionLineComponentProps) {
+  const bundle = useBuilder(state => state.bundle);
+  return bundle ? <BundleLines {...props} bundle={bundle} /> : <SingleLine {...props} />;
+}
+
+// 묶음 끌기 미리보기: 놓으면 생길 쌍을 모두 그린다(놓기와 같은 resolveBundleDrop)
+function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, pointer, bundle }: ConnectionLineComponentProps & { bundle: string[] }) {
+  const diagram = useBuilder(state => state.diagram);
+  const library = useBuilder(state => state.library);
+  const zoom = useStore(state => state.transform[2]);
+  const width = useStore(state => state.width);
+  const height = useStore(state => state.height);
+  const byId = new Map<string, DiagramNode>(diagram.nodes.map(node => [node.id, node]));
+  const inside = pointer.x >= 0 && pointer.y >= 0 && pointer.x <= width && pointer.y <= height;
+  const from = { nodeId: fromNode.id, handle: fromHandle.id ?? '', type: fromHandle.type };
+  const under = toNode && toHandle?.id ? { nodeId: toNode.id, handle: toHandle.id } : null;
+  const drop = inside ? resolveBundleDrop(builderStore.getState(), { bundle, from, under, point: { x: toX, y: toY }, zoom }) : null;
+  const role = fromHandle.id?.startsWith('target_') ? 'target' : fromHandle.id?.startsWith('source_') ? 'source' : null;
+  const colorOf = (node: DiagramNode | undefined, portId: string) => {
+    const type = node ? findPort(node.data as unknown as Equipment, portId)?.type : undefined;
+    return library?.rules.lineTypes.find(item => item.id === type)?.color ?? '#007aff';
+  };
+  const pairs = new Map((drop?.plan?.pairs ?? []).map(pair => [`${pair.from.nodeId}::${pair.from.portId}`, pair]));
+  // 놓으면 생길 엣지와 같은 평행 간격으로 미리 그린다(이미 있는 엣지와 함께 계산해야 저장 뒤 모양과 같다)
+  const previewEdges = [...pairs].map(([key, pair]) => ({ id: `preview:${key}`, source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle }) as unknown as DiagramEdge);
+  const spacing = pathSpacing(diagram.nodes, [...diagram.edges, ...previewEdges]);
+  const lines = bundle.map(key => {
+    const ref = parseKey(key);
+    const node = byId.get(ref.nodeId);
+    const port = node ? findPort(node.data as unknown as Equipment, ref.portId) : null;
+    const pair = pairs.get(key);
+    const start = port ? anchorOf(node, pair?.fromHandle ?? handleFor(port, role)) : null;
+    if (!start) return null;
+    const startAt = { x: start.ax, y: start.ay, position: start.side === 'left' ? Position.Left : Position.Right };
+    const end = pair ? anchorOf(byId.get(pair.to.nodeId), pair.toHandle) : null;
+    if (end) {
+      const endAt = { x: end.ax, y: end.ay, position: end.side === 'left' ? Position.Left : Position.Right };
+      const color = colorOf(node, ref.portId);
+      return (
+        <g key={key} className="bundle-line snapped">
+          <path d={pathBetween(startAt, endAt, spacing.get(`preview:${key}`))} fill="none" stroke={color} strokeWidth={2} />
+          <circle className="snap-ring" cx={end.ax} cy={end.ay} r={8} stroke={color} />
+        </g>
+      );
+    }
+    // 짝이 없다: 대상이 정해졌으면(모자람) 붉은 점선, 아직 대상이 없으면 포인터까지 점선
+    const missing = Boolean(drop?.plan) || Boolean(drop?.blockedCode);
+    return (
+      <path key={key} className={`bundle-line${missing ? ' blocked' : ''}`} d={pathBetween(startAt, { x: toX, y: toY, position: opposite(startAt.position) })}
+        fill="none" stroke={missing ? '#dc2626' : colorOf(node, ref.portId)} strokeWidth={2} strokeDasharray="6 4" />
+    );
+  });
+  // 개수 배지: 화면에서 같은 크기로 보이게 배율을 되돌린다
+  const label = drop?.plan ? `${drop.plan.pairs.length}/${bundle.length}` : String(bundle.length);
+  return (
+    <g className="connection-preview bundle-preview">
+      {lines}
+      <g className="bundle-badge" transform={`translate(${toX + 14 / zoom}, ${toY + 14 / zoom}) scale(${1 / zoom})`}>
+        <rect x={0} y={0} width={10 + label.length * 7} height={18} rx={9} />
+        <text x={5} y={13}>{label}</text>
+      </g>
+    </g>
+  );
+}
+
+function SingleLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHandle, connectionStatus, pointer }: ConnectionLineComponentProps) {
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
   const connectionJudge = useBuilder(state => state.connectionJudge);

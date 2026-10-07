@@ -3,6 +3,7 @@
 import { applyNodeChanges, type EdgeChange, type NodeChange, type Node } from '@xyflow/react';
 import { createStore } from 'zustand/vanilla';
 import { version as APP_VERSION } from '../../package.json';
+import { parseKey, portsInRect } from '../bundle';
 import {
   DEFAULT_RULES, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
   judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, validateDiagram,
@@ -48,6 +49,12 @@ export interface BuilderState {
   dragging: boolean;
   // 범위 선택 중. 그동안 영역(shape)은 고르지 않고, 끝날 때 사각형 안에 다 들어온 영역만 고른다
   boxSelecting: boolean;
+  // 고른 단자('노드ID::단자ID'). 화면 상태라 파일·자동 저장·실행 취소에 넣지 않는다(B-20261006-06)
+  selectedPorts: string[];
+  // 노드 ID → 고른 단자 ID들('\n'으로 이음). 노드마다 자기 단자만 바로 읽어, 다른 노드의 선택이 바뀌어도 다시 그리지 않는다
+  selectedPortsByNode: Record<string, string>;
+  // 지금 끌고 있는 묶음(정렬한 단자 키). 묶음 끌기가 아니면 null
+  bundle: string[] | null;
   setLibrary(library: LibraryIndex): void;
   addEquipment(equipment: Equipment, position: { x: number; y: number }): string;
   addAnnotation(position: { x: number; y: number }): void;
@@ -67,6 +74,10 @@ export interface BuilderState {
   focusTarget(target: { node?: string; edge?: string }): void;
   setBoxSelecting(on: boolean): void;
   finishBoxSelection(rect: { x: number; y: number; width: number; height: number }): void;
+  selectPorts(keys: string[]): void;
+  togglePort(key: string): void;
+  setBundle(keys: string[] | null): void;
+  connectMany(connections: ConnectionLike[]): { connected: number; failed: string[] };
   undo(): void;
   redo(): void;
   newDiagram(): void;
@@ -82,6 +93,16 @@ const snapshot = (diagram: Diagram) => JSON.stringify({
   nodes: diagram.nodes.map(({ selected: _s, dragging: _d, ...node }) => node),
   edges: diagram.edges.map(({ selected: _s, ...edge }) => edge),
 });
+// 단자 선택과 노드별 색인을 함께 만든다. 단자 선택을 바꾸는 곳은 모두 이 함수를 거친다
+const portsState = (keys: string[]) => {
+  const selectedPorts = [...new Set(keys)];
+  const selectedPortsByNode: Record<string, string> = {};
+  for (const key of selectedPorts) {
+    const { nodeId, portId } = parseKey(key);
+    selectedPortsByNode[nodeId] = selectedPortsByNode[nodeId] ? `${selectedPortsByNode[nodeId]}\n${portId}` : portId;
+  }
+  return { selectedPorts, selectedPortsByNode };
+};
 const copy = (diagram: Diagram): Diagram => ({ ...diagram, nodes: [...diagram.nodes], edges: [...diagram.edges] });
 const rulesOf = (library: LibraryIndex | null): Rules => library?.rules ?? DEFAULT_RULES;
 const portOf = (diagram: Diagram, nodeId: string | null, handle: string | null | undefined) => {
@@ -119,6 +140,8 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       notice: null,
       dragging: false,
       boxSelecting: false,
+      ...portsState([]),
+      bundle: null,
 
       setLibrary(library) {
         const { diagram } = get();
@@ -166,7 +189,9 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const dragEnd = applicable.some(change => change.type === 'position' && change.dragging === false);
         if (dragStart || keyMove) remember();
         const nodes = applyNodeChanges(applicable, diagram.nodes as unknown as Node[]) as unknown as Diagram['nodes'];
-        set({ diagram: { ...get().diagram, nodes }, dragging: dragStart ? true : dragEnd ? false : dragging });
+        // 장비를 끌기 시작하면 고른 단자를 푼다. 범위 선택으로 장비를 옮긴 뒤 남은 단자 선택이 묶음 연결로 번지지 않게 한다
+        const clearPorts = dragStart && get().selectedPorts.length ? portsState([]) : {};
+        set({ diagram: { ...get().diagram, nodes }, dragging: dragStart ? true : dragEnd ? false : dragging, ...clearPorts });
       },
 
       onEdgesChange(changes) {
@@ -189,7 +214,11 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (nextNodes.length === diagram.nodes.length && nextEdges.length === diagram.edges.length) return;
         remember();
         const remaining = new Set(nextEdges.map(edge => edge.id));
-        set({ diagram: { ...diagram, nodes: nextNodes, edges: nextEdges }, selectedEdgeIds: selectedEdgeIds.filter(id => remaining.has(id)) });
+        set({
+          diagram: { ...diagram, nodes: nextNodes, edges: nextEdges },
+          selectedEdgeIds: selectedEdgeIds.filter(id => remaining.has(id)),
+          ...portsState(get().selectedPorts.filter(key => !nodes.has(parseKey(key).nodeId))),
+        });
       },
 
       canConnect(connection) {
@@ -280,7 +309,8 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         set({ diagram: { ...diagram, nodes }, selectedEdgeIds: target.edge && diagram.edges.some(edge => edge.id === target.edge) ? [target.edge] : [] });
       },
 
-      setBoxSelecting(on) { set({ boxSelecting: on }); },
+      // 범위 선택을 시작하면 단자 선택도 새로 한다
+      setBoxSelecting(on) { set(on ? { boxSelecting: true, ...portsState([]) } : { boxSelecting: false }); },
       finishBoxSelection(rect) {
         const { diagram } = get();
         const inside = (node: Diagram['nodes'][number]) => {
@@ -289,24 +319,52 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
           return node.position.x >= rect.x && node.position.y >= rect.y && node.position.x + width <= rect.x + rect.width && node.position.y + height <= rect.y + rect.height;
         };
         const nodes = diagram.nodes.map(node => (node.type === 'shape' && inside(node) && !node.selected ? { ...node, selected: true } : node));
-        set({ diagram: { ...diagram, nodes }, boxSelecting: false });
+        // 단자는 점 중심이 사각형 안에 있으면 고른다(기반명세 §9)
+        set({ diagram: { ...diagram, nodes }, boxSelecting: false, ...portsState(portsInRect(diagram.nodes, rect)) });
+      },
+
+      selectPorts(keys) { set(portsState(keys)); },
+      togglePort(key) {
+        const { selectedPorts } = get();
+        set(portsState(selectedPorts.includes(key) ? selectedPorts.filter(item => item !== key) : [...selectedPorts, key]));
+      },
+      setBundle(keys) { set({ bundle: keys }); },
+
+      // 묶음 연결: 여러 쌍을 한 번의 실행 취소 단위로 잇는다. 막힌 쌍은 건너뛰고 코드를 돌려준다
+      connectMany(connections) {
+        const { diagram, library } = get();
+        const next = copy(diagram);
+        const failed: string[] = [];
+        let connected = 0;
+        for (const connection of connections) {
+          const from = parseHandle(connection.sourceHandle);
+          const to = parseHandle(connection.targetHandle);
+          if (!connection.source || !connection.target || !from || !to) { failed.push('port-missing'); continue; }
+          const result = connectPorts(next, { nodeId: connection.source, portId: from.portId }, { nodeId: connection.target, portId: to.portId }, { ids, rules: rulesOf(library) });
+          if (result.ok) connected += 1; else failed.push(result.code ?? 'unknown');
+        }
+        if (connected) {
+          remember();
+          set({ diagram: next });
+        }
+        return { connected, failed };
       },
 
       undo() {
         const { past, future, diagram } = get();
         if (!past.length) return;
-        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], dragging: false });
+        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
       },
       redo() {
         const { past, future, diagram } = get();
         if (!future.length) return;
-        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], dragging: false });
+        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
       },
 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], notice: null });
+        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null });
       },
 
       importText(text) {
@@ -319,7 +377,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { errors } = validateDiagram(parsed, { library: get().library });
         if (errors.length) return { ok: false, errors };
         remember();
-        set({ diagram: parsed as Diagram, selectedEdgeIds: [] });
+        set({ diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]) });
         return { ok: true, errors: [] };
       },
       exportText() {
