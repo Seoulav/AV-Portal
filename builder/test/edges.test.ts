@@ -100,6 +100,15 @@ describe('edge offsets (ported from the old Builder)', () => {
     expect(diagram.edges.map(edge => offsets.get(edge.id) ?? 0)).toEqual(expected);
   });
 
+  it('does not depend on edge order, so a file draws the same after a reload (export sorts edges by id)', () => {
+    for (const seed of [5, 23, 77, 101, 150]) {
+      const diagram = scene(seed);
+      const view = normalizeBidiEdges(diagram.edges, diagram.nodes);
+      const reversed = [...view].reverse();
+      expect(Object.fromEntries(edgeOffsets(reversed, diagram.nodes))).toEqual(Object.fromEntries(edgeOffsets(view, diagram.nodes)));
+    }
+  });
+
   it('fans 8 sources into one mixer without overlapping vertical runs', () => {
     const { store, place, link } = setup();
     const mix = place('b', 600, 200);

@@ -444,3 +444,39 @@ test('cable view labels every connection with its cable or a missing mark (old B
   await page.getByRole('button', { name: '케이블 보기' }).click();
   await expect(page.locator('.edge-label')).toHaveCount(0);
 });
+
+test('the single-line preview of a bidirectional link matches the line drawn after the drop', async ({ page }) => {
+  // disp(오른쪽)의 양방향 행 오른쪽 절반(source_)을 잡아 cam(왼쪽) 몸체에 놓는다.
+  // 저장되면 양방향끼리라 좌우에 맞게 뒤집혀 cam의 오른쪽 점에서 disp의 왼쪽 점으로 그려진다. 미리보기 고리도 cam의 오른쪽 점이어야 한다
+  const { nodeIds: [cam, disp] } = await openFixture(page, [['cam', 0, 0], ['disp', 600, 0]]);
+  const start = await rowInside(handle(page, disp, 'source_both-ethernet-1'), 'right');
+  const camHeader = await box(page.locator(`.react-flow__node[data-id="${cam}"] .node-header`));
+  const camRight = await dot(handle(page, cam, 'source_both-ethernet-1'), 'right');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(camHeader.x + camHeader.width / 2, camHeader.y + 20, { steps: 15 });
+  const ring = await box(page.locator('.connection-preview .snap-ring'));
+  expect(Math.abs(ring.x + ring.width / 2 - camRight.x)).toBeLessThan(6);
+  const preview = (await page.locator('.connection-preview path').getAttribute('d')) ?? '';
+  await page.mouse.up();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 미리보기 끝점은 화면 좌표에서 되돌린 값이라 소수점 아래가 조금 다르다. 명령과 좌표를 1px 안으로 견준다
+  const drawn = (await renderedPaths(page))[0];
+  const commands = (d: string) => d.replace(/[-\d.]+/g, '#');
+  const numbers = (d: string) => (d.match(/-?\d+(?:\.\d+)?/g) ?? []).map(Number);
+  expect(commands(drawn)).toBe(commands(preview));
+  numbers(drawn).forEach((value, index) => expect(Math.abs(value - numbers(preview)[index])).toBeLessThan(1));
+});
+
+test('hovered and selected connections get thicker strokes over the inline width', async ({ page }) => {
+  await openFixture(page, [['quad', 0, 0], ['wall', 600, 0]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1']]);
+  const path = page.locator('.react-flow__edge path.react-flow__edge-path').first();
+  const width = () => path.evaluate(element => getComputedStyle(element).strokeWidth);
+  expect(await width()).toBe('2px');
+  const line = await box(path);
+  await page.mouse.move(line.x + line.width / 2, line.y + line.height / 2);
+  await expect.poll(width).toBe('3px');
+  await page.mouse.down();
+  await page.mouse.up();
+  await expect.poll(width).toBe('4px');
+});

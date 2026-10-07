@@ -6,7 +6,7 @@
 //   평행 간격은 이미 있는 엣지와 함께 edgeOffsets로 계산해 놓은 뒤 모양과 같다
 import { useMemo } from 'react';
 import { useStore, type ConnectionLineComponentProps } from '@xyflow/react';
-import { findPort, type DiagramNode, type Equipment } from '../engine';
+import { findPort, type Diagram, type DiagramNode, type Equipment } from '../engine';
 import { handleFor, parseKey } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
 import { buildOrthogonalPath, getEdgePoints } from '../edges/edgeGeometry';
@@ -25,6 +25,24 @@ function linePath(a: End, b: End, splitOffset = 0): string {
 }
 // 포인터 끝: 출발 끝의 반대쪽에서 들어오는 것으로 본다
 const pointerEnd = (start: End, x: number, y: number): End => ({ x, y, side: start.side === 'right' ? 'left' : 'right' });
+
+// 놓으면 저장될 엣지를 만든다: 오른쪽(출력 쪽) 끝이 source. id는 실제 새 엣지처럼 같은 쌍의 기존 엣지 뒤에 정렬되게 '~'를 붙인다
+interface PreviewEnd { nodeId: string; handle: string; side: 'left' | 'right' }
+function previewEdge(key: string, a: PreviewEnd, b: PreviewEnd): EdgeLike {
+  const [source, target] = a.side === 'right' ? [a, b] : [b, a];
+  return { id: `e-${source.nodeId}-${target.nodeId}-~${key}`, source: source.nodeId, sourceHandle: source.handle, target: target.nodeId, targetHandle: target.handle };
+}
+// 미리보기 엣지를 이미 있는 엣지와 함께 Canvas와 같은 순서로 다룬다: 양방향 뒤집기 → 간격.
+// 포인터가 같은 단자 위에 머무는 동안은 다시 계산하지 않는다(엣지 600개에서 간격 계산이 10ms를 넘는다)
+function usePreviewLayout(diagram: Diagram, previews: EdgeLike[]) {
+  const key = previews.map(edge => `${edge.id}|${edge.sourceHandle}|${edge.targetHandle}`).join(';');
+  return useMemo(() => {
+    if (!previews.length) return { shown: new Map<string, EdgeLike>(), offsets: new Map<string, number>() };
+    const normalized = normalizeBidiEdges([...diagram.edges, ...previews], diagram.nodes);
+    const ids = new Set(previews.map(edge => edge.id));
+    return { shown: new Map(normalized.filter(edge => ids.has(edge.id)).map(edge => [edge.id, edge])), offsets: edgeOffsets(normalized, diagram.nodes) };
+  }, [diagram.edges, diagram.nodes, key]);
+}
 
 export function ConnectionLine(props: ConnectionLineComponentProps) {
   const bundle = useBuilder(state => state.bundle);
@@ -49,19 +67,18 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, pointer
     return library?.rules.lineTypes.find(item => item.id === type)?.color ?? '#007aff';
   };
   const pairs = new Map((drop?.plan?.pairs ?? []).map(pair => [`${pair.from.nodeId}::${pair.from.portId}`, pair]));
-  // 미리보기 쌍을 엣지처럼(출력 쪽 → 입력 쪽) 만들어 이미 있는 엣지와 함께 간격을 계산한다
+  // 미리보기 쌍을 저장될 엣지처럼 만들어 이미 있는 엣지와 함께 간격을 계산한다
   const previewEdges: EdgeLike[] = [];
+  const previewIdOf = new Map<string, string>();
   for (const [key, pair] of pairs) {
     const a = anchorOf(byId.get(pair.from.nodeId), pair.fromHandle);
-    const forward = a?.side === 'right';
-    previewEdges.push(forward
-      ? { id: `preview:${key}`, source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle }
-      : { id: `preview:${key}`, source: pair.to.nodeId, sourceHandle: pair.toHandle, target: pair.from.nodeId, targetHandle: pair.fromHandle });
+    const b = anchorOf(byId.get(pair.to.nodeId), pair.toHandle);
+    if (!a || !b) continue;
+    const edge = previewEdge(key, { nodeId: pair.from.nodeId, handle: pair.fromHandle, side: a.side }, { nodeId: pair.to.nodeId, handle: pair.toHandle, side: b.side });
+    previewEdges.push(edge);
+    previewIdOf.set(key, edge.id);
   }
-  // 놓은 뒤 화면처럼 양방향↔양방향은 좌우에 맞게 뒤집은 엣지로 그린다(Canvas와 같은 normalizeBidiEdges)
-  const normalized = previewEdges.length ? normalizeBidiEdges([...diagram.edges, ...previewEdges], diagram.nodes) : [];
-  const offsets = normalized.length ? edgeOffsets(normalized, diagram.nodes) : new Map<string, number>();
-  const shown = new Map(normalized.filter(edge => edge.id.startsWith('preview:')).map(edge => [edge.id, edge]));
+  const { shown, offsets } = usePreviewLayout(diagram, previewEdges);
   const lines = bundle.map(key => {
     const ref = parseKey(key);
     const node = byId.get(ref.nodeId);
@@ -69,7 +86,8 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, pointer
     const pair = pairs.get(key);
     const start = port ? anchorOf(node, pair?.fromHandle ?? handleFor(port, role)) : null;
     if (!start) return null;
-    const edge = pair ? shown.get(`preview:${key}`) : undefined;
+    const previewId = previewIdOf.get(key);
+    const edge = previewId ? shown.get(previewId) : undefined;
     const a = edge ? anchorOf(byId.get(edge.source), edge.sourceHandle) : null;
     const b = edge ? anchorOf(byId.get(edge.target), edge.targetHandle) : null;
     if (pair && a && b) {
@@ -78,7 +96,7 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, pointer
       const ring = a.nodeId === pair.to.nodeId ? a : b;
       return (
         <g key={key} className="bundle-line snapped">
-          <path d={linePath(endOf(a), endOf(b), offsets.get(`preview:${key}`))} fill="none" stroke={color} strokeWidth={2} />
+          <path d={linePath(endOf(a), endOf(b), offsets.get(previewId!))} fill="none" stroke={color} strokeWidth={2} />
           <circle className="snap-ring" cx={ring.ax} cy={ring.ay} r={8} stroke={color} />
         </g>
       );
@@ -134,14 +152,25 @@ function SingleLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHa
 
   const start = anchorOf(nodeById(fromNode.id), fromAttached);
   const startEnd: End = start ? endOf(start) : { x: fromX, y: fromY, side: 'right' };
-  const path = linePath(startEnd, snapped ? endOf(snapped) : pointerEnd(startEnd, toX, toY));
+  // 붙을 단자가 있으면 저장될 엣지를 Canvas처럼 뒤집고 간격을 매겨 그린다(놓은 뒤 모양과 같다)
+  const preview = start && snapped && fromAttached
+    ? [previewEdge('single', { nodeId: fromNode.id, handle: fromAttached, side: start.side }, { nodeId: snapped.nodeId, handle: snapped.handle, side: snapped.side })]
+    : [];
+  const { shown, offsets } = usePreviewLayout(diagram, preview);
+  const normalized = preview.length ? shown.get(preview[0].id) : undefined;
+  const a = normalized ? anchorOf(nodeById(normalized.source), normalized.sourceHandle) : null;
+  const b = normalized ? anchorOf(nodeById(normalized.target), normalized.targetHandle) : null;
+  const ring = a && b && snapped ? (a.nodeId === snapped.nodeId ? a : b) : snapped;
+  const path = a && b
+    ? linePath(endOf(a), endOf(b), offsets.get(preview[0].id))
+    : linePath(startEnd, snapped ? endOf(snapped) : pointerEnd(startEnd, toX, toY));
   const fromData = nodeById(fromNode.id)?.data as unknown as Equipment | undefined;
   const type = start && fromData ? findPort(fromData, start.portId)?.type : undefined;
   const color = blocked ? BLOCKED : library?.rules.lineTypes.find(item => item.id === type)?.color ?? '#007aff';
   return (
     <g className={`connection-preview${snapped ? ' snapped' : ''}${blocked ? ' blocked' : ''}`}>
       <path d={path} fill="none" stroke={color} strokeWidth={2} strokeDasharray={snapped ? undefined : '6 4'} />
-      {snapped && <circle className="snap-ring" cx={snapped.ax} cy={snapped.ay} r={8} stroke={color} />}
+      {ring && <circle className="snap-ring" cx={ring.ax} cy={ring.ay} r={8} stroke={color} />}
     </g>
   );
 }

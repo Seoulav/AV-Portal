@@ -120,7 +120,10 @@ export function normalizeBidiEdges<T extends EdgeLike>(edges: T[], nodes: Diagra
 // - Stage 2 퍼짐(같은 출발 → 여러 도착): 도착 y 순 → 채널 순서 최적화
 // - Stage 3 그 밖의 겹침: 충돌 그래프의 묶음마다 가운데 y 순
 // - Stage 4 전역 세로 통로: 다른 묶음의 세로선이 같은 x에 겹치면 옆으로 민다. 통로 제한을 먼저 적용한 뒤 민다
-export function edgeOffsets(edges: EdgeLike[], nodes: DiagramNode[]): Map<string, number> {
+export function edgeOffsets(input: EdgeLike[], nodes: DiagramNode[]): Map<string, number> {
+  // 같은 값끼리의 순서가 결과를 바꾼다(정렬이 안정적이고 Stage 3·4가 넣은 순서를 따른다). 저장·불러오기는 엣지를 id 순으로 쓰므로
+  // 여기서도 id 순으로 맞춰, 같은 파일이 새로고침 전후로 다르게 그려지지 않게 한다
+  const edges = [...input].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const nodeMap = new Map(nodes.map(node => [node.id, node]));
   const infoMap = new Map<string, EdgeEndpoints | null>();
   for (const edge of edges) infoMap.set(edge.id, getEdgeEndpoints(edge, nodeMap));

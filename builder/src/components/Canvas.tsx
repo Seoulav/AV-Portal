@@ -119,6 +119,8 @@ export function Canvas() {
         && previous.jumpKey === entry.jumpKey && previous.selected === entry.selected && previous.cableView === entry.cableView;
       const view = same ? previous.view : ({
         ...edge,
+        // 파일의 type이 무엇이든 이 앱의 엣지(직교 경로·점프)로 그린다. 간격·점프 계산과 그림이 같은 경로를 봐야 한다
+        type: 'smoothstep',
         selected: entry.selected,
         data: { ...edge.data, splitOffset: entry.offset, jumps: jumps.get(edge.id), cableView },
       } as unknown as Edge);

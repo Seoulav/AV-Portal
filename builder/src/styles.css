@@ -140,9 +140,11 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 }
 .edge-label.cable { white-space: pre; line-height: 1.5; text-align: center; }
 .edge-label.missing { color: var(--warn); background: #fffbeb; border-color: #fcd34d; }
-/* 선택·호버 표시는 무채색이다(케이블 색과 겹치지 않게, 구 Builder 규칙). 호버를 선택보다 먼저 둬야 선택이 이긴다 */
-.react-flow__edge:hover .react-flow__edge-path { stroke-width: 3; }
-.react-flow__edge.selected .react-flow__edge-path { stroke-width: 4; filter: drop-shadow(0 0 2px rgba(15, 23, 42, 0.55)); }
+/* 선택·호버 표시는 무채색이다(케이블 색과 겹치지 않게, 구 Builder 규칙). 호버를 선택보다 먼저 둬야 선택이 이긴다.
+   엔진이 엣지 style에 strokeWidth를 inline으로 쓰므로 !important로 덮는다(구 Builder App.css와 같다) */
+.react-flow__edge:hover .react-flow__edge-path { stroke-width: 3px !important; }
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge.selected:hover .react-flow__edge-path { stroke-width: 4px !important; filter: drop-shadow(0 0 2px rgba(15, 23, 42, 0.55)); }
 button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
 /* 이슈 패널 */
