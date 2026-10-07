@@ -330,3 +330,33 @@ test('Esc and an empty-canvas click clear the port selection', async ({ page }) 
   await page.mouse.click(corner.x, corner.y);
   await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(0);
 });
+
+test('Shift+click tolerates a small slip, and a drag cancelled on its own row keeps the bundle', async ({ page }) => {
+  const { nodeIds: [quad] } = await openFixture(page, BUNDLE);
+  const rowOf = (id: string) => rowInside(handle(page, quad, id), 'right');
+  // 누른 뒤 2px 미끄러져도 Shift+누르기다(React Flow가 범위 선택을 시작하지 않는다)
+  const slipClick = async (id: string) => {
+    const point = await rowOf(id);
+    await page.keyboard.down('Shift');
+    await page.mouse.move(point.x, point.y);
+    await page.mouse.down();
+    await page.mouse.move(point.x + 2, point.y + 1);
+    await page.mouse.up();
+    await page.keyboard.up('Shift');
+  };
+  await page.mouse.click((await rowOf('out-hdmi-1')).x, (await rowOf('out-hdmi-1')).y);
+  await slipClick('out-hdmi-2');
+  await slipClick('out-hdmi-3');
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+
+  // 묶음을 끌다가 같은 행으로 돌아와 놓으면 연결도 없고 선택도 그대로다
+  const start = await rowOf('out-hdmi-2');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(start.x - 80, start.y + 40, { steps: 8 });
+  await page.mouse.move(start.x, start.y, { steps: 8 });
+  await page.mouse.up();
+  await page.waitForTimeout(400);
+  expect(await savedEdges(page)).toEqual([]);
+  await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+});

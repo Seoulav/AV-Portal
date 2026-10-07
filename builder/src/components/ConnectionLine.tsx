@@ -8,15 +8,15 @@ import { Position, getSmoothStepPath, useStore, type ConnectionLineComponentProp
 import { findPort, type DiagramEdge, type DiagramNode, type Equipment } from '../engine';
 import { handleFor, parseKey } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
-import { stepPositions } from '../edgeSpacing';
+import { pathSpacing, type PathSpacing } from '../edgeSpacing';
 import { anchorOf, findDropTarget, type Anchor } from '../proximity';
 import { builderStore, useBuilder } from '../state/useBuilder';
 
 const BLOCKED = '#dc2626';
 const sideOf = (anchor: Anchor) => (anchor.side === 'left' ? Position.Left : Position.Right);
 
-const pathBetween = (from: { x: number; y: number; position: Position }, end: { x: number; y: number; position: Position }, stepPosition?: number) => getSmoothStepPath({
-  sourceX: from.x, sourceY: from.y, sourcePosition: from.position, targetX: end.x, targetY: end.y, targetPosition: end.position, stepPosition,
+const pathBetween = (from: { x: number; y: number; position: Position }, end: { x: number; y: number; position: Position }, spacing?: PathSpacing) => getSmoothStepPath({
+  sourceX: from.x, sourceY: from.y, sourcePosition: from.position, targetX: end.x, targetY: end.y, targetPosition: end.position, ...spacing,
 })[0];
 const opposite = (position: Position) => (position === Position.Left ? Position.Right : Position.Left);
 
@@ -26,7 +26,7 @@ export function ConnectionLine(props: ConnectionLineComponentProps) {
 }
 
 // 묶음 끌기 미리보기: 놓으면 생길 쌍을 모두 그린다(놓기와 같은 resolveBundleDrop)
-function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, connectionStatus, pointer, bundle }: ConnectionLineComponentProps & { bundle: string[] }) {
+function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, pointer, bundle }: ConnectionLineComponentProps & { bundle: string[] }) {
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
   const zoom = useStore(state => state.transform[2]);
@@ -35,7 +35,7 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, connect
   const byId = new Map<string, DiagramNode>(diagram.nodes.map(node => [node.id, node]));
   const inside = pointer.x >= 0 && pointer.y >= 0 && pointer.x <= width && pointer.y <= height;
   const from = { nodeId: fromNode.id, handle: fromHandle.id ?? '', type: fromHandle.type };
-  const under = connectionStatus === 'valid' && toNode && toHandle?.id ? { nodeId: toNode.id, handle: toHandle.id } : null;
+  const under = toNode && toHandle?.id ? { nodeId: toNode.id, handle: toHandle.id } : null;
   const drop = inside ? resolveBundleDrop(builderStore.getState(), { bundle, from, under, point: { x: toX, y: toY }, zoom }) : null;
   const role = fromHandle.id?.startsWith('target_') ? 'target' : fromHandle.id?.startsWith('source_') ? 'source' : null;
   const colorOf = (node: DiagramNode | undefined, portId: string) => {
@@ -43,8 +43,9 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, connect
     return library?.rules.lineTypes.find(item => item.id === type)?.color ?? '#007aff';
   };
   const pairs = new Map((drop?.plan?.pairs ?? []).map(pair => [`${pair.from.nodeId}::${pair.from.portId}`, pair]));
-  // 놓으면 생길 엣지와 같은 평행 간격으로 미리 그린다
-  const steps = stepPositions(diagram.nodes, [...pairs].map(([key, pair]) => ({ id: key, source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle }) as unknown as DiagramEdge));
+  // 놓으면 생길 엣지와 같은 평행 간격으로 미리 그린다(이미 있는 엣지와 함께 계산해야 저장 뒤 모양과 같다)
+  const previewEdges = [...pairs].map(([key, pair]) => ({ id: `preview:${key}`, source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle }) as unknown as DiagramEdge);
+  const spacing = pathSpacing(diagram.nodes, [...diagram.edges, ...previewEdges]);
   const lines = bundle.map(key => {
     const ref = parseKey(key);
     const node = byId.get(ref.nodeId);
@@ -59,7 +60,7 @@ function BundleLines({ fromNode, fromHandle, toX, toY, toNode, toHandle, connect
       const color = colorOf(node, ref.portId);
       return (
         <g key={key} className="bundle-line snapped">
-          <path d={pathBetween(startAt, endAt, steps.get(key))} fill="none" stroke={color} strokeWidth={2} />
+          <path d={pathBetween(startAt, endAt, spacing.get(`preview:${key}`))} fill="none" stroke={color} strokeWidth={2} />
           <circle className="snap-ring" cx={end.ax} cy={end.ay} r={8} stroke={color} />
         </g>
       );

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_RULES, createIdFactory, createLibraryIndex, geometry as G, type Equipment, type Library, type Port } from '../src/engine';
 import { bundleFor, parseKey, planBundle, portKey, portsInRect } from '../src/bundle';
 import { resolveBundleDrop } from '../src/bundleDrop';
-import { stepPositions } from '../src/edgeSpacing';
+import { pathSpacing } from '../src/edgeSpacing';
 import { createBuilderStore } from '../src/state/store';
 
 // 합성 라이브러리(현재 Portal 데이터와 무관). 사진이 없어 첫 단자 행 가운데는 12 + 54 + 12 = 78이다
@@ -17,6 +17,7 @@ const UNITS: [string, Port[]][] = [
   ['mic', [port('out-mic-audio-1', 'out', 'MIC-AUDIO', 'audio')]],
   ['mix', [...mics(6), port('out-line-audio-1', 'out', 'LINE-AUDIO', 'audio')]],
   ['quad', [port('in-mic-audio-1', 'in', 'MIC-AUDIO', 'audio'), ...[1, 2, 3, 4].map(i => port(`out-mic-audio-${i}`, 'out', 'MIC-AUDIO', 'audio'))]],
+  ['line', [port('out-line-audio-1', 'out', 'LINE-AUDIO', 'audio')]],
 ];
 const library = {
   schema: 'av-portal.builder-library', schemaVersion: '1.0.0',
@@ -40,7 +41,12 @@ const setup = () => {
     const ref = parseKey(from);
     return resolveBundleDrop(store.getState(), { bundle, from: { nodeId: ref.nodeId, handle: ref.portId, type: 'source' }, under: { nodeId: mix, handle: targetPort }, point: { x: 0, y: 0 }, zoom: 1 });
   };
-  return { store, place, micIds, mix, keys, drop };
+  // 단자 위가 아니라 장비 몸체(믹서 헤더)에 놓는다
+  const dropOnBody = (bundle: string[], from = keys[0]) => {
+    const ref = parseKey(from);
+    return resolveBundleDrop(store.getState(), { bundle, from: { nodeId: ref.nodeId, handle: ref.portId, type: 'source' }, under: null, point: { x: 600, y: 10 }, zoom: 1 });
+  };
+  return { store, place, micIds, mix, keys, drop, dropOnBody };
 };
 const pairsOf = (plan: ReturnType<typeof planBundle> | null | undefined) => (plan?.pairs ?? []).map(pair => `${pair.from.nodeId}>${pair.to.portId}`);
 
@@ -92,6 +98,38 @@ describe('port selection and bundles', () => {
     expect(pairsOf(plan)).toEqual([`${micIds[1]}>in-mic-audio-1`, `${micIds[2]}>in-mic-audio-2`, `${micIds[3]}>in-mic-audio-3`]);
   });
 
+  it('a member with a different signal does not use up the slots of the others', () => {
+    const { drop, place, micIds, keys } = setup();
+    const line = place('line', 0, 1000);
+    // 마이크 0, 라인 출력, 마이크 1·2. 라인은 마이크 입력과 맞지 않아(레벨 짝 없음) 빠지고 나머지는 차례로 잇는다
+    const bundle = [keys[0], portKey(line, 'out-line-audio-1'), keys[1], keys[2]];
+    const plan = drop(bundle, 'in-mic-audio-1').plan;
+    expect(pairsOf(plan)).toEqual([`${micIds[0]}>in-mic-audio-1`, `${micIds[1]}>in-mic-audio-2`, `${micIds[2]}>in-mic-audio-3`]);
+    expect(plan?.unmatched).toEqual([{ from: { nodeId: line, portId: 'out-line-audio-1' }, code: 'signal-mismatch' }]);
+  });
+
+  it('dragging an already connected member onto a device body still connects the rest', () => {
+    const { store, dropOnBody, micIds, mix, keys } = setup();
+    expect(store.getState().connect({ source: micIds[0], sourceHandle: 'out-mic-audio-1', target: mix, targetHandle: 'in-mic-audio-6' })).toBe(true);
+    const result = dropOnBody(keys, keys[0]);
+    expect(result.target).toEqual({ nodeId: mix, portId: 'in-mic-audio-1' });
+    expect(result.plan?.unmatched.map(item => item.code)).toEqual(['port-occupied']);
+    expect(pairsOf(result.plan)).toEqual([`${micIds[1]}>in-mic-audio-1`, `${micIds[2]}>in-mic-audio-2`, `${micIds[3]}>in-mic-audio-3`]);
+  });
+
+  it('an input-side bundle connects each input to the next output, stored output → input', () => {
+    const { store, place, mix } = setup();
+    const quad = place('quad', 1000, 0);
+    const inputs = [1, 2, 3].map(i => portKey(mix, `in-mic-audio-${i}`));
+    const from = { nodeId: mix, handle: 'in-mic-audio-1', type: 'target' as const };
+    const drop = resolveBundleDrop(store.getState(), { bundle: inputs, from, under: { nodeId: quad, handle: 'out-mic-audio-2' }, point: { x: 0, y: 0 }, zoom: 1 });
+    expect(pairsOf(drop.plan)).toEqual([`${mix}>out-mic-audio-2`, `${mix}>out-mic-audio-3`, `${mix}>out-mic-audio-4`]);
+    // Canvas와 같이 받는 쪽에서 시작했으면 대상을 source로 넘긴다
+    const result = store.getState().connectMany(drop.plan!.pairs.map(pair => ({ source: pair.to.nodeId, sourceHandle: pair.toHandle, target: pair.from.nodeId, targetHandle: pair.fromHandle })));
+    expect(result.connected).toBe(3);
+    expect(store.getState().diagram.edges.map(edge => `${edge.sourceHandle}>${edge.targetHandle}`).sort()).toEqual(['out-mic-audio-2>in-mic-audio-1', 'out-mic-audio-3>in-mic-audio-2', 'out-mic-audio-4>in-mic-audio-3']);
+  });
+
   it('connects a whole bundle in one undo step', () => {
     const { store, drop, keys } = setup();
     const plan = drop(keys, 'in-mic-audio-1').plan!;
@@ -114,6 +152,18 @@ describe('port selection and bundles', () => {
     expect(store.getState().exportText()).toBe(text);
     expect(store.getState().past.length).toBe(past);
   });
+
+  it('keeps a per-device index of picked ports and clears the picks when a device drag starts', () => {
+    const { store, micIds, mix, keys } = setup();
+    store.getState().selectPorts([keys[0], keys[1], portKey(mix, 'in-mic-audio-2'), portKey(mix, 'in-mic-audio-4')]);
+    expect(store.getState().selectedPortsByNode).toEqual({ [micIds[0]]: 'out-mic-audio-1', [micIds[1]]: 'out-mic-audio-1', [mix]: 'in-mic-audio-2\nin-mic-audio-4' });
+    store.getState().togglePort(portKey(mix, 'in-mic-audio-2'));
+    expect(store.getState().selectedPortsByNode[mix]).toBe('in-mic-audio-4');
+    // 장비를 끌기 시작하면(범위 선택 뒤 옮기기) 단자 선택을 푼다
+    store.getState().onNodesChange([{ type: 'position', id: mix, position: { x: 510, y: 0 }, dragging: true }]);
+    expect(store.getState().selectedPorts).toEqual([]);
+    expect(store.getState().selectedPortsByNode).toEqual({});
+  });
 });
 
 describe('parallel spacing', () => {
@@ -123,14 +173,26 @@ describe('parallel spacing', () => {
     const plan = drop(keys, 'in-mic-audio-1').plan!;
     store.getState().connectMany(plan.pairs.map(pair => ({ source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle })));
     // 서로 다른 장비 쌍(마이크마다 하나)은 묶이지 않는다
-    expect(stepPositions(store.getState().diagram.nodes, store.getState().diagram.edges).size).toBe(0);
+    expect(pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges).size).toBe(0);
     // 같은 장비 쌍: quad 출력 1·2 → 믹서 입력 5·6. 위로 올라가는 묶음은 아래 선이 도착 쪽에서 꺾인다
     store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-1', target: mix, targetHandle: 'in-mic-audio-5' });
     store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-2', target: mix, targetHandle: 'in-mic-audio-6' });
-    const steps = stepPositions(store.getState().diagram.nodes, store.getState().diagram.edges);
+    const steps = pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges);
     const quadEdges = store.getState().diagram.edges.filter(edge => edge.source === quad).sort((a, b) => (a.sourceHandle < b.sourceHandle ? -1 : 1));
-    const [upper, lower] = quadEdges.map(edge => steps.get(edge.id)!);
+    const [upper, lower] = quadEdges.map(edge => steps.get(edge.id)!.stepPosition!);
     expect(upper).toBeLessThan(0.5);
     expect(lower).toBeGreaterThan(0.5);
   });
+  it('spaces backward edges by offset, since smoothstep ignores stepPosition there', () => {
+    const { store, place, mix } = setup();
+    // 출력이 믹서보다 오른쪽에 있어 선이 뒤로(왼쪽으로) 간다
+    const quad = place('quad', 1000, 0);
+    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-1', target: mix, targetHandle: 'in-mic-audio-1' });
+    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-2', target: mix, targetHandle: 'in-mic-audio-2' });
+    const spacing = pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges);
+    const options = store.getState().diagram.edges.map(edge => spacing.get(edge.id)!);
+    expect(options.every(item => item.stepPosition === undefined && typeof item.offset === 'number')).toBe(true);
+    expect(new Set(options.map(item => item.offset)).size).toBe(2);
+  });
+
 });

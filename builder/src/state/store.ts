@@ -51,6 +51,8 @@ export interface BuilderState {
   boxSelecting: boolean;
   // 고른 단자('노드ID::단자ID'). 화면 상태라 파일·자동 저장·실행 취소에 넣지 않는다(B-20261006-06)
   selectedPorts: string[];
+  // 노드 ID → 고른 단자 ID들('\n'으로 이음). 노드마다 자기 단자만 바로 읽어, 다른 노드의 선택이 바뀌어도 다시 그리지 않는다
+  selectedPortsByNode: Record<string, string>;
   // 지금 끌고 있는 묶음(정렬한 단자 키). 묶음 끌기가 아니면 null
   bundle: string[] | null;
   setLibrary(library: LibraryIndex): void;
@@ -91,6 +93,16 @@ const snapshot = (diagram: Diagram) => JSON.stringify({
   nodes: diagram.nodes.map(({ selected: _s, dragging: _d, ...node }) => node),
   edges: diagram.edges.map(({ selected: _s, ...edge }) => edge),
 });
+// 단자 선택과 노드별 색인을 함께 만든다. 단자 선택을 바꾸는 곳은 모두 이 함수를 거친다
+const portsState = (keys: string[]) => {
+  const selectedPorts = [...new Set(keys)];
+  const selectedPortsByNode: Record<string, string> = {};
+  for (const key of selectedPorts) {
+    const { nodeId, portId } = parseKey(key);
+    selectedPortsByNode[nodeId] = selectedPortsByNode[nodeId] ? `${selectedPortsByNode[nodeId]}\n${portId}` : portId;
+  }
+  return { selectedPorts, selectedPortsByNode };
+};
 const copy = (diagram: Diagram): Diagram => ({ ...diagram, nodes: [...diagram.nodes], edges: [...diagram.edges] });
 const rulesOf = (library: LibraryIndex | null): Rules => library?.rules ?? DEFAULT_RULES;
 const portOf = (diagram: Diagram, nodeId: string | null, handle: string | null | undefined) => {
@@ -128,7 +140,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       notice: null,
       dragging: false,
       boxSelecting: false,
-      selectedPorts: [],
+      ...portsState([]),
       bundle: null,
 
       setLibrary(library) {
@@ -177,7 +189,9 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const dragEnd = applicable.some(change => change.type === 'position' && change.dragging === false);
         if (dragStart || keyMove) remember();
         const nodes = applyNodeChanges(applicable, diagram.nodes as unknown as Node[]) as unknown as Diagram['nodes'];
-        set({ diagram: { ...get().diagram, nodes }, dragging: dragStart ? true : dragEnd ? false : dragging });
+        // 장비를 끌기 시작하면 고른 단자를 푼다. 범위 선택으로 장비를 옮긴 뒤 남은 단자 선택이 묶음 연결로 번지지 않게 한다
+        const clearPorts = dragStart && get().selectedPorts.length ? portsState([]) : {};
+        set({ diagram: { ...get().diagram, nodes }, dragging: dragStart ? true : dragEnd ? false : dragging, ...clearPorts });
       },
 
       onEdgesChange(changes) {
@@ -203,7 +217,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         set({
           diagram: { ...diagram, nodes: nextNodes, edges: nextEdges },
           selectedEdgeIds: selectedEdgeIds.filter(id => remaining.has(id)),
-          selectedPorts: get().selectedPorts.filter(key => !nodes.has(parseKey(key).nodeId)),
+          ...portsState(get().selectedPorts.filter(key => !nodes.has(parseKey(key).nodeId))),
         });
       },
 
@@ -296,7 +310,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       },
 
       // 범위 선택을 시작하면 단자 선택도 새로 한다
-      setBoxSelecting(on) { set(on ? { boxSelecting: true, selectedPorts: [] } : { boxSelecting: false }); },
+      setBoxSelecting(on) { set(on ? { boxSelecting: true, ...portsState([]) } : { boxSelecting: false }); },
       finishBoxSelection(rect) {
         const { diagram } = get();
         const inside = (node: Diagram['nodes'][number]) => {
@@ -306,13 +320,13 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         };
         const nodes = diagram.nodes.map(node => (node.type === 'shape' && inside(node) && !node.selected ? { ...node, selected: true } : node));
         // 단자는 점 중심이 사각형 안에 있으면 고른다(기반명세 §9)
-        set({ diagram: { ...diagram, nodes }, boxSelecting: false, selectedPorts: portsInRect(diagram.nodes, rect) });
+        set({ diagram: { ...diagram, nodes }, boxSelecting: false, ...portsState(portsInRect(diagram.nodes, rect)) });
       },
 
-      selectPorts(keys) { set({ selectedPorts: [...new Set(keys)] }); },
+      selectPorts(keys) { set(portsState(keys)); },
       togglePort(key) {
         const { selectedPorts } = get();
-        set({ selectedPorts: selectedPorts.includes(key) ? selectedPorts.filter(item => item !== key) : [...selectedPorts, key] });
+        set(portsState(selectedPorts.includes(key) ? selectedPorts.filter(item => item !== key) : [...selectedPorts, key]));
       },
       setBundle(keys) { set({ bundle: keys }); },
 
@@ -339,18 +353,18 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       undo() {
         const { past, future, diagram } = get();
         if (!past.length) return;
-        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], selectedPorts: [], dragging: false });
+        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
       },
       redo() {
         const { past, future, diagram } = get();
         if (!future.length) return;
-        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], selectedPorts: [], dragging: false });
+        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
       },
 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], selectedPorts: [], notice: null });
+        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null });
       },
 
       importText(text) {
@@ -363,7 +377,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { errors } = validateDiagram(parsed, { library: get().library });
         if (errors.length) return { ok: false, errors };
         remember();
-        set({ diagram: parsed as Diagram, selectedEdgeIds: [], selectedPorts: [] });
+        set({ diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]) });
         return { ok: true, errors: [] };
       },
       exportText() {

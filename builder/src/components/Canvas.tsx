@@ -11,8 +11,9 @@ import {
 import { parseHandle } from '../engine';
 import { bundleFor } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
-import { stepPositions } from '../edgeSpacing';
+import { pathSpacing } from '../edgeSpacing';
 import { findDropTarget } from '../proximity';
+import { markConnectEnd } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
 import { ConnectionLine } from './ConnectionLine';
 import { EquipmentNode } from './EquipmentNode';
@@ -64,16 +65,16 @@ export function Canvas() {
   }), [diagram.nodes]);
   // 엣지 선택은 store.selectedEdgeIds에 둔다. React Flow가 강조·Delete·선택 해제를 하려면 selected가 엣지에 있어야 한다.
   // 같은 두 장비 사이 엣지는 꺾이는 위치를 띄워 평행하게 그린다(edgeSpacing.ts, 화면에만)
-  const steps = useMemo(() => stepPositions(diagram.nodes, diagram.edges), [diagram.nodes, diagram.edges]);
+  const spacing = useMemo(() => pathSpacing(diagram.nodes, diagram.edges), [diagram.nodes, diagram.edges]);
   const edges = useMemo(() => {
     const selected = new Set(selectedEdgeIds);
     return diagram.edges.map(edge => {
-      const view = { ...edge, label: edge.data.label, selected: selected.has(edge.id) } as unknown as Edge & { pathOptions?: { stepPosition: number } };
-      const step = steps.get(edge.id);
-      if (step !== undefined) view.pathOptions = { stepPosition: step };
+      const view = { ...edge, label: edge.data.label, selected: selected.has(edge.id) } as unknown as Edge & { pathOptions?: object };
+      const options = spacing.get(edge.id);
+      if (options) view.pathOptions = options;
       return view as Edge;
     });
-  }, [diagram.edges, selectedEdgeIds, steps]);
+  }, [diagram.edges, selectedEdgeIds, spacing]);
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
   // 고른 단자에서 끌기 시작하면 묶음 연결이다. 묶음은 끌기를 시작할 때 한 번 정한다
@@ -90,6 +91,7 @@ export function Canvas() {
   // 포인터 아래 단자가 맞으면 React Flow가 onConnect를 부른다. 아니면 근접 연결로 붙일 단자를 고르고,
   // 가까운 단자가 모두 막혔으면 막힌 이유를 알린다. 캔버스 밖(목록·패널 위)에서 놓으면 취소다
   const onConnectEnd = useCallback<OnConnectEnd>((event, state) => {
+    markConnectEnd();
     const store = builderStore.getState();
     const bundle = store.bundle;
     if (bundle) store.setBundle(null);
@@ -100,7 +102,8 @@ export function Canvas() {
     const from = { nodeId: state.fromHandle.nodeId, handle: state.fromHandle.id, type: state.fromHandle.type };
     const point = flow.screenToFlowPosition({ x: clientX, y: clientY });
     if (bundle) {
-      const under = state.isValid && state.toHandle?.id ? { nodeId: state.toHandle.nodeId, handle: state.toHandle.id } : null;
+      // 포인터 아래 단자는 끌고 있는 단자와 맞지 않아도 넘긴다(묶음의 다른 단자가 맞을 수 있다)
+      const under = state.toHandle?.id ? { nodeId: state.toHandle.nodeId, handle: state.toHandle.id } : null;
       const drop = resolveBundleDrop(store, { bundle, from, under, point, zoom: flow.getZoom() });
       if (!drop.plan) {
         if (drop.blockedCode) store.notifyBlocked(drop.blockedCode);

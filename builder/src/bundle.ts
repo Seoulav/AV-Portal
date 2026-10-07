@@ -73,7 +73,9 @@ export function planBundle({ nodes, bundle, target, role, judge, occupied }: {
   const plan: BundlePlan = { pairs: [], unmatched: [] };
   const column = targetNode && targetNode.type === 'equipment' ? LISTS.map(list => dataOf(targetNode)[list]).find(list => list.some(port => port.id === target.portId)) ?? [] : [];
   const slots = column.slice(Math.max(0, column.findIndex(port => port.id === target.portId)));
-  let next = 0;
+  // 짝이 정해진 대상 단자 바로 다음부터 본다(아래 방향으로 차례로). 한 묶음 단자에 안 맞는 단자는
+  // 그 단자에게만 건너뛰고, 다음 묶음 단자는 다시 볼 수 있다(한 쌍이 막혀도 나머지는 잇는다, §7.3)
+  let cursor = 0;
   for (const key of bundle) {
     const from = parseKey(key);
     const fromPort = findPortIn(byId.get(from.nodeId), from.portId);
@@ -82,20 +84,22 @@ export function planBundle({ nodes, bundle, target, role, judge, occupied }: {
     if (occupied(from)) { plan.unmatched.push({ from, code: 'port-occupied' }); continue; }
     if (from.nodeId === target.nodeId) { plan.unmatched.push({ from, code: 'self-loop' }); continue; }
     const fromHandle = handleFor(fromPort, role);
-    // 대상 단자는 차례로 한 번씩만 본다. 막힌 단자(이미 연결·규칙)는 건너뛰고 다시 보지 않는다
+    let reason: string | null = null;
     let matched = false;
-    while (next < slots.length) {
-      const slot = slots[next];
-      next += 1;
+    for (let index = cursor; index < slots.length; index += 1) {
+      const slot = slots[index];
       const verdict = judge({ nodeId: from.nodeId, handle: fromHandle }, { nodeId: target.nodeId, handle: slot.id });
       if (verdict.allowed) {
         plan.pairs.push({ from, fromHandle: verdict.fromHandle ?? fromHandle, to: { nodeId: target.nodeId, portId: slot.id }, toHandle: verdict.handle ?? slot.id, verdict });
+        cursor = index + 1;
         matched = true;
         break;
       }
+      // 이미 연결된 대상 단자는 누구에게나 막혀 있다. 그 밖의 이유(신호·방향 등)는 이 묶음 단자의 문제다
+      if (verdict.code && verdict.code !== 'port-occupied') reason ??= verdict.code;
     }
-    // 대상 열 끝까지 가도 짝이 없으면 단자가 모자란 것이다(C1)
-    if (!matched) plan.unmatched.push({ from, code: 'no-slot' });
+    // 이 단자에 맞는 단자가 남아 있지 않다: 맞지 않아서면 그 이유, 아니면 단자가 모자란 것이다(C1)
+    if (!matched) plan.unmatched.push({ from, code: reason ?? 'no-slot' });
   }
   return plan;
 }
