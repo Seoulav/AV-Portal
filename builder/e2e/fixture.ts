@@ -10,6 +10,8 @@ const UNITS: [string, string, ReturnType<typeof port>[]][] = [
   ['disp', 'Display', [port('in-hdmi-1', 'in', 'HDMI', 'video'), port('in-hdmi-2', 'in', 'HDMI', 'video'), port('in-hdmi-3', 'in', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
   ['ctl', 'Control', [port('in-rs-232-1', 'in', 'RS-232', 'control')]],
   ['mon', 'Display', [port('in-hdmi-1', 'in', 'HDMI', 'video')]],
+  ['quad', 'Video', [1, 2, 3, 4].map(i => port(`out-hdmi-${i}`, 'out', 'HDMI', 'video'))],
+  ['wall', 'Display', [1, 2, 3, 4, 5, 6].map(i => port(`in-hdmi-${i}`, 'in', 'HDMI', 'video'))],
 ];
 
 export const library = {

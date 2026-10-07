@@ -112,6 +112,12 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .react-flow__nodesselection-rect { display: none; }
 /* 근접 연결 미리보기 */
 .snap-ring { fill: none; stroke-width: 2.5; }
+/* 고른 단자(평행선 한꺼번에 긋기, 기반명세 §9): 점에 2px 강조 테두리, 이름은 강조색 */
+.port-handle.port-selected::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 3.5px var(--accent); }
+.port-row.port-selected .port-label { color: var(--accent); font-weight: 600; }
+/* 묶음 끌기 중 커서 옆 개수 배지 */
+.bundle-badge rect { fill: var(--accent); }
+.bundle-badge text { fill: #fff; font-size: 11px; font-weight: 700; }
 .bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }
 
 .annotation-node { display: flex; align-items: center; justify-content: center; padding: 6px 10px; white-space: pre-wrap; overflow: hidden; }

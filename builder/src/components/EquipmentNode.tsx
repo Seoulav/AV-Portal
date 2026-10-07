@@ -2,37 +2,50 @@
 // 근접 연결(기반명세 §9): 핸들이 단자 행 칸 전체를 덮어 행 어디서든 선을 끌고 놓을 수 있다.
 // 핸들 상자의 바깥 끝이 단자 점의 바깥 끝(테두리 밖 HANDLE_OUTSET)이라 선은 점에 붙는다. 점은 핸들의 ::after로 그린다.
 // 노드는 헤더와 사진 영역(.node-drag)으로만 옮긴다(E8). 단자 행은 선 긋기 영역이다.
-import { memo, type CSSProperties } from 'react';
+// 단자를 누르면 그 단자만 고르고, Shift+누르면 더하거나 뺀다(평행선 한꺼번에 긋기, B-20261006-06).
+import { memo, type CSSProperties, type MouseEvent } from 'react';
 import { Handle, Position, type NodeProps } from '@xyflow/react';
 import { geometry as G, type EquipmentData, type Port } from '../engine';
-import { useBuilder } from '../state/useBuilder';
+import { portKey } from '../bundle';
+import { builderStore, useBuilder } from '../state/useBuilder';
 
 const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 
-function PortRow({ port, side, color }: { port: Port; side: 'left' | 'right' | 'both'; color: string }) {
+function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
   const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}`;
   const review = !ACCEPTED.has(port.verification ?? '');
   const style = { '--port-color': color } as CSSProperties;
+  const selected = picked ? ' port-selected' : '';
+  // 노드 선택으로 번지지 않게 막는다. 끌어서 선을 그은 뒤에는 click이 생기지 않는다
+  const onClick = (event: MouseEvent) => {
+    event.stopPropagation();
+    const key = portKey(nodeId, port.id);
+    if (event.shiftKey) builderStore.getState().togglePort(key);
+    else builderStore.getState().selectPorts([key]);
+  };
   return (
-    <div className={`port-row port-${side}`} style={{ height: G.PORT_ROW_HEIGHT }}>
+    <div className={`port-row port-${side}${selected}`} style={{ height: G.PORT_ROW_HEIGHT }}>
       <span className="port-dot" style={{ background: color }} />
       <span className="port-label">{port.label}</span>
       {review && <span className="port-badge">확인</span>}
-      {side === 'left' && <Handle type="target" position={Position.Left} id={port.id} className="port-handle port-handle-in" style={style} title={title} />}
-      {side === 'right' && <Handle type="source" position={Position.Right} id={port.id} className="port-handle port-handle-out" style={style} title={title} />}
-      {side === 'both' && <Handle type="target" position={Position.Left} id={`target_${port.id}`} className="port-handle port-handle-in port-handle-half" style={style} title={title} />}
-      {side === 'both' && <Handle type="source" position={Position.Right} id={`source_${port.id}`} className="port-handle port-handle-out port-handle-half" style={style} title={title} />}
+      {side === 'left' && <Handle type="target" position={Position.Left} id={port.id} className={`port-handle port-handle-in${selected}`} style={style} title={title} onClick={onClick} />}
+      {side === 'right' && <Handle type="source" position={Position.Right} id={port.id} className={`port-handle port-handle-out${selected}`} style={style} title={title} onClick={onClick} />}
+      {side === 'both' && <Handle type="target" position={Position.Left} id={`target_${port.id}`} className={`port-handle port-handle-in port-handle-half${selected}`} style={style} title={title} onClick={onClick} />}
+      {side === 'both' && <Handle type="source" position={Position.Right} id={`source_${port.id}`} className={`port-handle port-handle-out port-handle-half${selected}`} style={style} title={title} onClick={onClick} />}
     </div>
   );
 }
 
-function EquipmentNodeView({ data, selected }: NodeProps) {
+function EquipmentNodeView({ id, data, selected }: NodeProps) {
   const equipment = data as unknown as EquipmentData;
   const colors = useBuilder(state => state.library?.rules.lineTypes ?? []);
+  // 이 노드의 고른 단자만 문자열로 받아, 다른 노드의 선택이 바뀔 때 다시 그리지 않는다
+  const pickedText = useBuilder(state => state.selectedPorts.filter(key => key.startsWith(`${id}::`)).join('\n'));
+  const picked = new Set(pickedText ? pickedText.split('\n').map(key => key.slice(id.length + 2)) : []);
   const colorOf = (type: string) => colors.find(item => item.id === type)?.color ?? '#64748b';
   const column = (ports: Port[], side: 'left' | 'right') => (
     <div className="port-column" style={{ gap: G.PORT_ROW_GAP }}>
-      {ports.map(port => <PortRow key={port.id} port={port} side={side} color={colorOf(port.type)} />)}
+      {ports.map(port => <PortRow key={port.id} nodeId={id} port={port} side={side} color={colorOf(port.type)} picked={picked.has(port.id)} />)}
     </div>
   );
   const hasIO = equipment.inputs.length > 0 || equipment.outputs.length > 0;
@@ -56,7 +69,7 @@ function EquipmentNodeView({ data, selected }: NodeProps) {
         <div style={{ marginTop: hasIO ? G.IO_BIDI_GAP : 0 }}>
           <div className="bidi-label node-drag" style={{ height: G.BIDI_LABEL_HEIGHT }}>양방향</div>
           <div className="port-column" style={{ gap: G.PORT_ROW_GAP }}>
-            {equipment.bidirectional.map(port => <PortRow key={port.id} port={port} side="both" color={colorOf(port.type)} />)}
+            {equipment.bidirectional.map(port => <PortRow key={port.id} nodeId={id} port={port} side="both" color={colorOf(port.type)} picked={picked.has(port.id)} />)}
           </div>
         </div>
       )}
