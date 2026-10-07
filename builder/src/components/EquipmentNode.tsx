@@ -4,6 +4,8 @@
 // 노드는 헤더와 사진 영역(.node-drag)으로만 옮긴다(E8). 단자 행은 선 긋기 영역이다.
 // 단자를 누르면 그 단자만 고르고, Shift+누르면 더하거나 뺀다(평행선 한꺼번에 긋기, B-20261006-06).
 // 핸들의 nokey: React Flow 선택 키(Shift)를 누른 채 단자를 눌러도 범위 선택이 시작되지 않게 한다.
+// LOD 덮개(구 Builder): 줌아웃하면 장비 위에 모델명을 크게 덮는다. 보이기·글자 크기는 Canvas의 LodLevel이 CSS로 정한다.
+// 덮개는 포인터를 받지 않아 단자 행의 핸들과 근접 연결은 그대로 동작한다.
 import { memo, type CSSProperties, type MouseEvent } from 'react';
 import { Handle, Position, type NodeProps } from '@xyflow/react';
 import { geometry as G, type EquipmentData, type Port } from '../engine';
@@ -77,6 +79,10 @@ function EquipmentNodeView({ id, data, selected }: NodeProps) {
         </div>
       )}
       {!hasIO && equipment.bidirectional.length === 0 && <div className="node-empty node-drag">Portal에 단자 정보가 없습니다</div>}
+      <div className="lod-overlay" aria-hidden="true">
+        <div className="lod-model">{equipment.model}</div>
+        <div className="lod-name">{equipment.name}</div>
+      </div>
     </div>
   );
 }

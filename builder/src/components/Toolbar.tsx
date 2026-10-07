@@ -1,5 +1,6 @@
-// 상단 막대: 새 구성도·열기·내보내기·실행 취소·메모·영역.
-import { useEffect, useRef } from 'react';
+// 상단 막대: 새 구성도·열기·내보내기·실행 취소·메모·영역·케이블 보기, 편집 도구(오토 레이아웃·잠금·격자·미니맵).
+// 단축키: Ctrl+Z·Y 실행 취소·다시 실행, Ctrl+C·V 복사·붙여넣기(앱 안 클립보드, 구 Builder와 같다).
+import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
 import { freePosition } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
@@ -23,10 +24,14 @@ export function Toolbar() {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
-      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      if (target && (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable)) return;
       if (!(event.ctrlKey || event.metaKey)) return;
-      if (event.key.toLowerCase() === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
-      if (event.key.toLowerCase() === 'y' || (event.key.toLowerCase() === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }
+      const key = event.key.toLowerCase();
+      if (key === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
+      if (key === 'y' || (key === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }
+      // 화면의 글을 골라 둔 채 누른 Ctrl+C는 브라우저 복사로 둔다
+      if (key === 'c' && !window.getSelection()?.toString() && state.copySelection()) event.preventDefault();
+      if (key === 'v' && state.clipboard) { event.preventDefault(); state.paste(); }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -50,6 +55,19 @@ export function Toolbar() {
       const [first] = result.errors;
       const more = result.errors.length > 1 ? ` 외 ${result.errors.length - 1}건` : '';
       state.notify({ text: `열 수 없습니다: ${first.detail ?? first.code}${first.path ? ` (${first.path})` : ''}${more}`, tone: 'error' });
+    }
+  };
+  // 오토 레이아웃: Dagre(dagre@0.8.5, 결정 K-a)는 누를 때 불러온다. 첫 화면 번들에 넣지 않는다
+  const [laying, setLaying] = useState(false);
+  const autoLayout = async () => {
+    setLaying(true);
+    try {
+      const { default: dagre } = await import('dagre');
+      if (state.applyLayout(dagre)) requestAnimationFrame(() => void flow.fitView({ ...FIT_VIEW, duration: 300 }));
+    } catch {
+      state.notify({ text: '오토 레이아웃을 불러오지 못했습니다. 네트워크를 확인하고 다시 눌러 주세요.', tone: 'error' });
+    } finally {
+      setLaying(false);
     }
   };
   const confirmNew = () => {
@@ -76,6 +94,11 @@ export function Toolbar() {
         <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
         <span className="divider" />
         <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
+        <span className="divider" />
+        <button type="button" onClick={() => void autoLayout()} disabled={!ready || laying || equipmentCount === 0} title="신호 흐름을 왼쪽에서 오른쪽으로 놓는다. 실행 취소로 되돌릴 수 있다">오토 레이아웃</button>
+        <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
+        <button type="button" className={state.snapToGrid ? 'active' : ''} aria-pressed={state.snapToGrid} onClick={state.toggleSnapToGrid} title="장비를 15px 격자에 맞춰 놓는다">격자</button>
+        <button type="button" className={state.showMiniMap ? 'active' : ''} aria-pressed={state.showMiniMap} onClick={state.toggleMiniMap} title="오른쪽 아래에 전체 도면을 작게 보인다">미니맵</button>
       </div>
       <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />

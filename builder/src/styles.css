@@ -60,7 +60,7 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .canvas-loading { display: grid; place-items: center; color: var(--muted); }
 
 /* 장비 노드: 폭 220, 위아래 여백 12, 헤더 54, 사진 68, 단자 행 24 + 간격 4, 양방향 앞 간격 8 + 머리 13 */
-.equipment-node { background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 4px 14px rgba(15, 23, 42, 0.06); font-size: 12px; }
+.equipment-node { position: relative; background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 4px 14px rgba(15, 23, 42, 0.06); font-size: 12px; }
 .equipment-node.selected { box-shadow: 0 0 0 2px var(--text), 0 4px 18px rgba(15, 23, 42, 0.18); }
 .equipment-node.reused { background: #fffbeb; }
 .node-header { padding: 0 12px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
@@ -160,3 +160,22 @@ button.active { border-color: var(--accent); color: var(--accent); background: v
 .notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: #0f172a; color: #fff; font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
 .notice-warn { background: #92400e; }
 .notice-error { background: var(--danger); }
+
+/* 편집 도구(B-20261006-08, 구 Builder App.css·index.css) */
+.canvas.locked { box-shadow: inset 0 0 24px rgba(239, 68, 68, 0.25); transition: box-shadow 0.3s ease; }
+button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.12); }
+.line-filter { display: flex; flex-wrap: wrap; gap: 6px; max-width: 70%; justify-content: center; }
+.filter-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12px; user-select: none;
+  background: color-mix(in srgb, var(--chip-color) 13%, #fff); border-color: color-mix(in srgb, var(--chip-color) 40%, #fff); }
+.filter-chip .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color); }
+.filter-chip.off { background: #fff; border-color: var(--line); color: var(--muted); opacity: 0.55; }
+.filter-chip.off .chip-dot { background: var(--muted); }
+.react-flow__minimap.minimap { width: 200px; height: 130px; border-radius: 12px; border: 1px solid var(--line); background: rgba(241, 245, 249, 0.85); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18); overflow: hidden; }
+.react-flow__minimap.minimap svg { width: 200px; height: 130px; }
+/* LOD 덮개: 바탕(.react-flow)에 data-lod가 있을 때만 보인다 */
+.lod-overlay { display: none; position: absolute; inset: 0; border-radius: 12px; background: rgba(255, 255, 255, 0.95); z-index: 2; pointer-events: none; overflow: hidden;
+  flex-direction: column; justify-content: center; padding: 8px 12px; gap: 4px; }
+.react-flow[data-lod] .lod-overlay { display: flex; }
+.lod-model { font-size: var(--lod-model-size, 13px); font-weight: 800; color: var(--text); line-height: 1.25; overflow-wrap: break-word; }
+.lod-name { font-size: var(--lod-name-size, 10px); color: rgba(15, 23, 42, 0.55); line-height: 1.2; overflow-wrap: break-word; }
+.react-flow[data-lod='compact'] .lod-name { display: none; }

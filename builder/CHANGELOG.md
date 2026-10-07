@@ -1,5 +1,24 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [v0.5.0] — 2026-10-07
+
+[B-20261006-08](../Work/빌더/작업/B-20261006-08.md). P5의 3차로 구 Builder 상단 막대의 편집 도구를 옮겼다(seoul-visual-tech/av-system-builder `2fd568e`의 `layout.ts`, `App.tsx`, `EquipmentNode.tsx` LOD).
+
+### Added
+- 오토 레이아웃(구 `getLayoutedElements`): Dagre로 신호 흐름 열을 정하고, 열마다 barycenter 교대 스윕 2회, 열 안 최소 간격 40px
+  - 무작위 장면 300개(장비 1,672대)에서 구 Builder와 좌표가 모두 같다. 표본 4개를 회귀 시험으로 둔다
+  - 노드·엣지를 id 순으로 맞춰 계산해, 다시 연 파일도 같은 배치가 나온다
+  - `dagre@0.8.5`(구 Builder와 같은 판)를 버튼을 누를 때 불러온다. 첫 화면 번들에 넣지 않는다(결정 K-a)
+- 복사·붙여넣기(Ctrl+C·V): 고른 장비·메모·영역과 그 사이 연결(라벨·케이블 포함). 연결은 엔진으로 다시 만든다. 붙일 때마다 40px씩 더 옮긴다(결정 K-b)
+- 잠금(장비 끌기 막기), 격자 맞춤 15px, 미니맵
+- 선 종류 필터: 도면에 쓰인 선 종류 칩(결정 K-c). 숨긴 연결과 보이는 연결이 없는 장비를 숨긴다(결정 K-d). 간격은 모든 연결로, 교차 점프는 보이는 연결로 계산한다(B-07 리뷰 7번)
+- LOD: 줌 0.55 미만에서 모델명 덮개, 0.3 미만에서는 모델명만. 줌마다 노드를 다시 그리지 않게 CSS 변수로 바꾼다
+- vitest 15건(오토 레이아웃 9: 구 Builder 표본 4·신호 흐름·barycenter·최소 간격·순서 무관·실행 취소, 복사·필터 6), Playwright 6건(오토 레이아웃·복사·잠금과 격자·미니맵·필터·LOD)
+
+### Changed
+- 장비 노드에 LOD 덮개를 더했다(포인터를 받지 않아 단자 행과 근접 연결은 그대로다)
+- 단축키 처리에서 contenteditable 안의 입력도 가로채지 않는다
+
 ## [v0.4.0] — 2026-10-07
 
 [B-20261006-07](../Work/빌더/작업/B-20261006-07.md). P5의 2차로 구 Builder의 선 그리기를 옮겼다(seoul-visual-tech/av-system-builder `2fd568e`의 `edgeProcessing`·`edgeGeometry`·`CustomSmoothstepEdge`).

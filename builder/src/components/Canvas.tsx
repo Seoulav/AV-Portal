@@ -3,16 +3,18 @@
 // 조작(기반명세 §9): 왼쪽 드래그 = 범위 선택, 가운데 버튼·Space+왼쪽 드래그 = 화면 이동, 장비는 헤더·사진으로 옮긴다.
 // 근접 연결: 포인터 아래 단자는 React Flow가 붙이고, 그 밖은 놓을 때 proximity.ts가 고른다(connectionRadius 0).
 // 묶음 연결(B-20261006-06): 고른 단자 하나에서 끌기 시작하면 같은 종류의 고른 단자를 한꺼번에 잇는다(bundle.ts).
-import { useCallback, useEffect, useMemo, useRef, type DragEvent, type MouseEvent as ReactMouseEvent } from 'react';
+// 편집 도구(B-20261006-08, 구 Builder App.tsx): 잠금(장비를 끌지 못함), 격자 맞춤 15px, 미니맵, 선 종류 필터, 줌아웃 LOD.
+import { useCallback, useEffect, useMemo, useRef, type CSSProperties, type DragEvent, type MouseEvent as ReactMouseEvent } from 'react';
 import {
-  Background, ConnectionMode, Controls, ReactFlow, SelectionMode, useReactFlow, useStoreApi,
+  Background, ConnectionMode, Controls, MiniMap, Panel, ReactFlow, SelectionMode, useReactFlow, useStore, useStoreApi,
   type Connection, type Edge, type IsValidConnection, type Node, type OnConnectEnd, type OnConnectStart, type OnDelete,
 } from '@xyflow/react';
-import { parseHandle } from '../engine';
+import { DEFAULT_RULES, parseHandle } from '../engine';
 import { bundleFor } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
 import { edgeJumps, getEdgePoints } from '../edges/edgeGeometry';
 import { edgeOffsets, normalizeBidiEdges } from '../edges/edgeProcessing';
+import { lineFilter, usedLineTypes } from '../lineFilter';
 import { anchorOf, findDropTarget } from '../proximity';
 import { markConnectEnd } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
@@ -43,6 +45,29 @@ const BUNDLE_REASONS: Record<string, string> = {
   'port-missing': '단자 없음',
 };
 const reasonOf = (code: string) => BUNDLE_REASONS[code] ?? code;
+// 격자 맞춤 간격(구 Builder snapGrid)
+const SNAP_GRID: [number, number] = [15, 15];
+// 줌아웃 LOD(구 Builder EquipmentNode): 0.55 미만이면 장비 위에 모델명을 덮고, 0.3 미만이면 모델명만 둔다
+export const LOD_ZOOM = 0.55;
+export const LOD_COMPACT_ZOOM = 0.3;
+// 미니맵 노드 색(구 Builder와 같다): 영역 초록, 메모 하늘, 장비 남색
+const miniMapColor = (node: Node) => (node.type === 'shape' ? '#10b981' : node.type === 'annotation' ? '#38bdf8' : '#6366f1');
+
+// 줌에 따라 React Flow 바탕에 data-lod와 글자 크기 변수를 단다. 노드가 줌마다 다시 그려지지 않게 CSS로만 바꾼다.
+// 글자는 화면에서 약 9px(모델명)·6.5px(장비 이름)로 보이게 줌의 역수로 키운다(구 Builder와 같은 식)
+function LodLevel() {
+  const zoom = useStore(state => state.transform[2]);
+  const domNode = useStore(state => state.domNode);
+  useEffect(() => {
+    if (!domNode) return;
+    if (zoom < LOD_COMPACT_ZOOM) domNode.dataset.lod = 'compact';
+    else if (zoom < LOD_ZOOM) domNode.dataset.lod = 'full';
+    else delete domNode.dataset.lod;
+    domNode.style.setProperty('--lod-model-size', `${Math.min(44, Math.max(13, Math.round(9 / zoom)))}px`);
+    domNode.style.setProperty('--lod-name-size', `${Math.min(26, Math.max(10, Math.round(6.5 / zoom)))}px`);
+  }, [zoom, domNode]);
+  return null;
+}
 
 export function Canvas() {
   const diagram = useBuilder(state => state.diagram);
@@ -57,6 +82,11 @@ export function Canvas() {
   const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
   const cableView = useBuilder(state => state.cableView);
   const dragging = useBuilder(state => state.dragging);
+  const locked = useBuilder(state => state.locked);
+  const snapToGrid = useBuilder(state => state.snapToGrid);
+  const showMiniMap = useBuilder(state => state.showMiniMap);
+  const hiddenLineTypes = useBuilder(state => state.hiddenLineTypes);
+  const toggleLineType = useBuilder(state => state.toggleLineType);
   const flow = useReactFlow();
   const flowStore = useStoreApi();
   const boxStart = useRef<{ x: number; y: number } | null>(null);
@@ -64,17 +94,28 @@ export function Canvas() {
   // 화면용 속성만 덧붙인다(저장할 때 엔진이 버린다). 영역은 장비 뒤에 깔고 제목 띠로만 끈다(안쪽 클릭 통과는 styles.css)
   // 바뀌지 않은 노드·엣지는 앞의 화면용 객체를 그대로 넘긴다. 끌기 중 매 순간 객체를 새로 만들면
   // React Flow가 장비 150대·엣지 600개를 모두 다시 그려 끌기가 끊긴다(측정: 한 번 움직일 때 140ms)
+  // 선 종류 필터: 숨긴 연결과, 필터가 켜졌을 때 보이는 연결이 없는 장비(구 Builder와 같다). 화면에서만 숨긴다
+  const filter = useMemo(() => lineFilter(diagram, hiddenLineTypes), [diagram, hiddenLineTypes]);
   const nodeViews = useRef(new WeakMap<object, Node>());
+  const hiddenViews = useRef(new WeakMap<object, Node>());
   const nodes = useMemo(() => diagram.nodes.map(node => {
-    const cached = nodeViews.current.get(node);
-    if (cached) return cached;
-    const view = { ...node } as unknown as Node;
-    if (node.type === 'equipment') view.dragHandle = '.node-drag';
-    if (node.type === 'shape') Object.assign(view, { zIndex: -1, dragHandle: '.shape-title', width: node.style?.width, height: node.style?.height });
-    if (node.type === 'annotation') Object.assign(view, { width: node.style?.width, height: node.style?.height });
-    nodeViews.current.set(node, view);
-    return view;
-  }), [diagram.nodes]);
+    let view = nodeViews.current.get(node);
+    if (!view) {
+      view = { ...node } as unknown as Node;
+      if (node.type === 'equipment') view.dragHandle = '.node-drag';
+      if (node.type === 'shape') Object.assign(view, { zIndex: -1, dragHandle: '.shape-title', width: node.style?.width, height: node.style?.height });
+      if (node.type === 'annotation') Object.assign(view, { width: node.style?.width, height: node.style?.height });
+      nodeViews.current.set(node, view);
+    }
+    if (!filter.hiddenNodes.has(node.id)) return view;
+    // 숨긴 장비는 고르거나 지울 수 없게 한다(Delete·복사에 딸려 가지 않게)
+    let hidden = hiddenViews.current.get(view);
+    if (!hidden) {
+      hidden = { ...view, hidden: true, selected: false, selectable: false };
+      hiddenViews.current.set(view, hidden);
+    }
+    return hidden;
+  }), [diagram.nodes, filter]);
   // 엣지 선택은 store.selectedEdgeIds에 둔다. React Flow가 강조·Delete·선택 해제를 하려면 selected가 엣지에 있어야 한다.
   // 선 모양은 화면에서만 계산한다(구 Builder와 같다, 파일에 남기지 않음):
   //   양방향↔양방향 엣지를 노드 좌우에 맞게 뒤집고(normalizeBidiEdges) → 평행선 간격·채널 순서(edgeOffsets)
@@ -89,22 +130,25 @@ export function Canvas() {
     return next;
   }, [viewEdges, diagram.nodes, dragging]);
   // 교차 점프: 모든 엣지 경로를 구성도 좌표(geometry.portAnchors)로 한 번에 만들어 세로 구간 색인으로 구한다.
-  // React Flow 내부 좌표를 앱에서 읽지 않으므로 구 Builder의 "한 프레임 지난 좌표" 문제가 없다
+  // React Flow 내부 좌표를 앱에서 읽지 않으므로 구 Builder의 "한 프레임 지난 좌표" 문제가 없다.
+  // 간격은 숨긴 연결까지 모두로 계산하고(숨겨도 다른 선이 움직이지 않는다) 점프는 보이는 연결로만 구한다(구 Builder와 같다)
   const jumps = useMemo(() => {
     const byId = new Map(diagram.nodes.map(node => [node.id, node]));
     const lines = viewEdges.flatMap(edge => {
+      if (filter.hiddenEdges.has(edge.id)) return [];
       const source = anchorOf(byId.get(edge.source), edge.sourceHandle);
       const target = anchorOf(byId.get(edge.target), edge.targetHandle);
       return source && target ? [{ id: edge.id, points: getEdgePoints({ sourceX: source.ax, sourceY: source.ay, targetX: target.ax, targetY: target.ay, splitOffset: offsets.get(edge.id) ?? 0 }) }] : [];
     });
     return edgeJumps(lines);
-  }, [viewEdges, offsets, diagram.nodes]);
+  }, [viewEdges, offsets, diagram.nodes, filter]);
   const lastEdges = useRef<Edge[] | null>(null);
   const edgeViews = useRef(new Map<string, { source: object; flipped: boolean; offset: number; jumpKey: string; selected: boolean; cableView: boolean; view: Edge }>());
   const edges = useMemo(() => {
     const selected = new Set(selectedEdgeIds);
     const next = new Map<string, typeof edgeViews.current extends Map<string, infer V> ? V : never>();
-    const list = viewEdges.map((edge, index) => {
+    const list = viewEdges.flatMap((edge, index) => {
+      if (filter.hiddenEdges.has(edge.id)) return [];
       const source = diagram.edges[index];
       const entry = {
         source,
@@ -125,7 +169,7 @@ export function Canvas() {
         data: { ...edge.data, splitOffset: entry.offset, jumps: jumps.get(edge.id), cableView },
       } as unknown as Edge);
       next.set(edge.id, { ...entry, view });
-      return view;
+      return [view];
     });
     edgeViews.current = next;
     // 하나도 바뀌지 않았으면 앞 배열을 그대로 넘겨 React Flow가 엣지 색인을 다시 만들지 않게 한다(장비만 옮긴 경우)
@@ -133,7 +177,9 @@ export function Canvas() {
     if (previous && previous.length === list.length && list.every((view, index) => view === previous[index])) return previous;
     lastEdges.current = list;
     return list;
-  }, [viewEdges, offsets, jumps, selectedEdgeIds, cableView, diagram.edges]);
+  }, [viewEdges, offsets, jumps, selectedEdgeIds, cableView, diagram.edges, filter]);
+  // 필터 칩은 지금 도면에 쓰인 선 종류만 보인다(결정 K-c)
+  const chips = useMemo(() => usedLineTypes(diagram, (library?.rules ?? DEFAULT_RULES).lineTypes), [diagram.edges, diagram.lineTypes, library]);
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
   // 고른 단자에서 끌기 시작하면 묶음 연결이다. 묶음은 끌기를 시작할 때 한 번 정한다
@@ -240,7 +286,7 @@ export function Canvas() {
 
   return (
     <div
-      className="canvas"
+      className={`canvas${locked ? ' locked' : ''}`}
       onDragOver={event => { event.preventDefault(); event.dataTransfer.dropEffect = 'copy'; }}
       onDrop={onDrop}
       // 가운데 버튼은 화면 이동이다. 브라우저의 자동 스크롤이 끼어들지 않게 막는다.
@@ -262,6 +308,9 @@ export function Canvas() {
         onNodeDoubleClick={onNodeDoubleClick}
         onSelectionStart={onSelectionStart}
         onSelectionEnd={onSelectionEnd}
+        nodesDraggable={!locked}
+        snapToGrid={snapToGrid}
+        snapGrid={SNAP_GRID}
         zoomOnDoubleClick={false}
         isValidConnection={isValidConnection}
         connectionMode={ConnectionMode.Loose}
@@ -283,6 +332,22 @@ export function Canvas() {
       >
         <Background gap={20} color="#e2e8f0" />
         <Controls showInteractive={false} />
+        <LodLevel />
+        {chips.length > 0 && (
+          <Panel position="top-center" className="line-filter">
+            {chips.map(lineType => {
+              const visible = !hiddenLineTypes.includes(lineType.id);
+              return (
+                <button key={lineType.id} type="button" className={`filter-chip${visible ? '' : ' off'}`} aria-pressed={visible}
+                  style={{ '--chip-color': lineType.color } as CSSProperties} onClick={() => toggleLineType(lineType.id)}
+                  title={visible ? `${lineType.name} 연결 숨기기` : `${lineType.name} 연결 보이기`}>
+                  <span className="chip-dot" />{lineType.name}
+                </button>
+              );
+            })}
+          </Panel>
+        )}
+        {showMiniMap && <MiniMap className="minimap" nodeColor={miniMapColor} maskColor="rgba(148, 163, 184, 0.35)" zoomable pannable />}
       </ReactFlow>
     </div>
   );

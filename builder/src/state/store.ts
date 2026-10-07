@@ -4,10 +4,12 @@ import { applyNodeChanges, type EdgeChange, type NodeChange, type Node } from '@
 import { createStore } from 'zustand/vanilla';
 import { version as APP_VERSION } from '../../package.json';
 import { parseKey, portsInRect } from '../bundle';
+import { layoutPositions, type DagreModule } from '../layout';
+import { lineFilter } from '../lineFilter';
 import {
   DEFAULT_RULES, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
   judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, validateDiagram,
-  type BomRow, type Diagram, type Equipment, type IdFactory, type LibraryIndex, type Rules, type ValidationError,
+  type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type IdFactory, type LibraryIndex, type Rules, type ValidationError,
 } from '../engine';
 
 export const HISTORY_LIMIT = 50;
@@ -37,6 +39,10 @@ export interface Notice { text: string; tone: 'info' | 'warn' | 'error' }
 // 근접 연결 판정. handle·fromHandle은 연결하면 엣지에 실제로 남을 핸들이다(양방향은 역할에 따라 source_/target_)
 export interface ConnectionVerdict { allowed: boolean; code?: string; handle?: string; fromHandle?: string }
 export interface ConnectionLike { source: string | null; sourceHandle?: string | null; target: string | null; targetHandle?: string | null }
+// 앱 안 클립보드(구 Builder와 같다, 시스템 클립보드는 쓰지 않는다). 고른 노드와 양 끝이 모두 고른 장비인 연결
+export interface Clipboard { nodes: DiagramNode[]; edges: DiagramEdge[] }
+// 붙여넣을 때마다 이만큼 더 오른쪽 아래로 놓는다(결정 K-b, 구 Builder는 매번 원본에서 40px)
+export const PASTE_STEP = 40;
 
 export interface BuilderState {
   library: LibraryIndex | null;
@@ -57,6 +63,13 @@ export interface BuilderState {
   bundle: string[] | null;
   // 케이블 보기(구 Builder BOM 모드): 엣지 라벨에 케이블 요약을 보인다. 화면 상태다
   cableView: boolean;
+  // 편집 도구(B-20261006-08). 모두 화면 상태다
+  clipboard: Clipboard | null;
+  pasteCount: number;
+  locked: boolean;
+  snapToGrid: boolean;
+  showMiniMap: boolean;
+  hiddenLineTypes: string[];
   setLibrary(library: LibraryIndex): void;
   addEquipment(equipment: Equipment, position: { x: number; y: number }): string;
   addAnnotation(position: { x: number; y: number }): void;
@@ -80,6 +93,13 @@ export interface BuilderState {
   togglePort(key: string): void;
   setBundle(keys: string[] | null): void;
   toggleCableView(): void;
+  applyLayout(dagre: DagreModule): boolean;
+  copySelection(): number;
+  paste(): number;
+  toggleLock(): void;
+  toggleSnapToGrid(): void;
+  toggleMiniMap(): void;
+  toggleLineType(lineTypeId: string): void;
   connectMany(connections: ConnectionLike[]): { connected: number; failed: string[] };
   undo(): void;
   redo(): void;
@@ -146,6 +166,12 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       ...portsState([]),
       bundle: null,
       cableView: false,
+      clipboard: null,
+      pasteCount: 0,
+      locked: false,
+      snapToGrid: false,
+      showMiniMap: false,
+      hiddenLineTypes: [],
 
       setLibrary(library) {
         const { diagram } = get();
@@ -335,6 +361,89 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       setBundle(keys) { set({ bundle: keys }); },
       toggleCableView() { set({ cableView: !get().cableView }); },
 
+      // 오토 레이아웃(구 Builder layout.ts). 장비만 옮기고 실행 취소 한 번으로 되돌린다. 옮긴 것이 없으면 기록하지 않는다
+      applyLayout(dagre) {
+        const { diagram } = get();
+        const positions = layoutPositions(diagram.nodes, diagram.edges, dagre);
+        const nodes = diagram.nodes.map(node => {
+          const position = positions.get(node.id);
+          return position && (position.x !== node.position.x || position.y !== node.position.y) ? { ...node, position } : node;
+        });
+        if (nodes.every((node, index) => node === diagram.nodes[index])) return false;
+        remember();
+        set({ diagram: { ...diagram, nodes } });
+        return true;
+      },
+
+      // 고른 장비·메모·영역과 그 사이의 연결(숨긴 선 종류 포함)을 담는다. 필터로 숨긴 장비는 고른 것으로 치지 않는다
+      copySelection() {
+        const { diagram, hiddenLineTypes } = get();
+        const hidden = lineFilter(diagram, hiddenLineTypes).hiddenNodes;
+        const nodes = diagram.nodes.filter(node => node.selected && !hidden.has(node.id));
+        if (!nodes.length) return 0;
+        const picked = new Set(nodes.map(node => node.id));
+        const edges = diagram.edges.filter(edge => picked.has(edge.source) && picked.has(edge.target));
+        const clipboard = JSON.parse(JSON.stringify({ nodes: nodes.map(({ selected: _s, dragging: _d, ...node }) => node), edges })) as Clipboard;
+        set({ clipboard, pasteCount: 0, notice: { text: `${nodes.length}개를 복사했습니다${edges.length ? `(연결 ${edges.length}개 포함)` : ''}.`, tone: 'info' } });
+        return nodes.length;
+      },
+
+      // 새 id로 복제해 오른쪽 아래에 놓고, 붙인 노드를 새 선택으로 한다. 연결은 엔진으로 다시 만들고 라벨·케이블을 옮긴다
+      paste() {
+        const { clipboard, diagram, library, pasteCount } = get();
+        if (!clipboard?.nodes.length) return 0;
+        const shift = PASTE_STEP * (pasteCount + 1);
+        const next = copy(diagram);
+        next.nodes = next.nodes.map(node => (node.selected ? { ...node, selected: false } : node));
+        const newIds = new Map<string, string>();
+        for (const node of clipboard.nodes) {
+          const id = node.type === 'equipment' ? ids.node() : node.type === 'shape' ? ids.shape() : ids.annotation();
+          newIds.set(node.id, id);
+          const cloned = JSON.parse(JSON.stringify(node)) as DiagramNode;
+          next.nodes.push({ ...cloned, id, position: { x: node.position.x + shift, y: node.position.y + shift }, selected: true });
+        }
+        let connected = 0;
+        for (const edge of clipboard.edges) {
+          const from = parseHandle(edge.sourceHandle);
+          const to = parseHandle(edge.targetHandle);
+          if (!from || !to) continue;
+          const result = connectPorts(next, { nodeId: newIds.get(edge.source)!, portId: from.portId }, { nodeId: newIds.get(edge.target)!, portId: to.portId }, { ids, rules: rulesOf(library) });
+          if (!result.ok || !result.edge) continue;
+          connected += 1;
+          if (edge.data.bomRows?.length) setEdgeCable(next, result.edge.id, edge.data.bomRows);
+          if (edge.data.label) setEdgeLabel(next, result.edge.id, edge.data.label);
+        }
+        remember();
+        const missed = clipboard.edges.length - connected;
+        set({
+          diagram: next,
+          pasteCount: pasteCount + 1,
+          selectedEdgeIds: [],
+          ...portsState([]),
+          notice: missed
+            ? { text: `붙여 넣었습니다. 연결 ${clipboard.edges.length}개 중 ${missed}개는 지금 규칙으로 이을 수 없어 뺐습니다.`, tone: 'warn' }
+            : { text: `${clipboard.nodes.length}개를 붙여 넣었습니다${connected ? `(연결 ${connected}개 포함)` : ''}.`, tone: 'info' },
+        });
+        return clipboard.nodes.length;
+      },
+
+      toggleLock() { set({ locked: !get().locked }); },
+      toggleSnapToGrid() { set({ snapToGrid: !get().snapToGrid }); },
+      toggleMiniMap() { set({ showMiniMap: !get().showMiniMap }); },
+      // 숨긴 연결·장비의 선택은 푼다. 보이지 않는 것이 Delete·복사에 딸려 가지 않게 한다
+      toggleLineType(lineTypeId) {
+        const { diagram, hiddenLineTypes, selectedEdgeIds, selectedPorts } = get();
+        const hidden = hiddenLineTypes.includes(lineTypeId) ? hiddenLineTypes.filter(id => id !== lineTypeId) : [...hiddenLineTypes, lineTypeId];
+        const filter = lineFilter(diagram, hidden);
+        const nodes = diagram.nodes.map(node => (node.selected && filter.hiddenNodes.has(node.id) ? { ...node, selected: false } : node));
+        set({
+          hiddenLineTypes: hidden,
+          diagram: nodes.some((node, index) => node !== diagram.nodes[index]) ? { ...diagram, nodes } : diagram,
+          selectedEdgeIds: selectedEdgeIds.filter(id => !filter.hiddenEdges.has(id)),
+          ...portsState(selectedPorts.filter(key => !filter.hiddenNodes.has(parseKey(key).nodeId))),
+        });
+      },
+
       // 묶음 연결: 여러 쌍을 한 번의 실행 취소 단위로 잇는다. 막힌 쌍은 건너뛰고 코드를 돌려준다
       connectMany(connections) {
         const { diagram, library } = get();
@@ -369,7 +478,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null });
+        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null, hiddenLineTypes: [] });
       },
 
       importText(text) {
@@ -382,7 +491,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { errors } = validateDiagram(parsed, { library: get().library });
         if (errors.length) return { ok: false, errors };
         remember();
-        set({ diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]) });
+        set({ diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]), hiddenLineTypes: [] });
         return { ok: true, errors: [] };
       },
       exportText() {
