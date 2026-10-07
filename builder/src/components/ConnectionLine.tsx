@@ -11,6 +11,7 @@ import { handleFor, parseKey } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
 import { buildOrthogonalPath, getEdgePoints } from '../edges/edgeGeometry';
 import { edgeOffsets, normalizeBidiEdges, type EdgeLike } from '../edges/edgeProcessing';
+import { lineFilter, visibleNodes } from '../lineFilter';
 import { anchorOf, findDropTarget, type Anchor } from '../proximity';
 import { builderStore, useBuilder } from '../state/useBuilder';
 
@@ -125,6 +126,7 @@ function SingleLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHa
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
   const connectionJudge = useBuilder(state => state.connectionJudge);
+  const hiddenLineTypes = useBuilder(state => state.hiddenLineTypes);
   const zoom = useStore(state => state.transform[2]);
   const width = useStore(state => state.width);
   const height = useStore(state => state.height);
@@ -134,6 +136,8 @@ function SingleLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHa
     () => connectionJudge({ nodeId: fromNode.id, handle: fromHandle.id ?? '', type: fromHandle.type }),
     [connectionJudge, fromNode.id, fromHandle.id, fromHandle.type, diagram],
   );
+  // 선 종류 필터로 숨긴 장비에는 붙지 않는다(놓기와 같다)
+  const reachable = useMemo(() => visibleNodes(diagram.nodes, lineFilter(diagram, hiddenLineTypes)), [diagram, hiddenLineTypes]);
 
   const inside = pointer.x >= 0 && pointer.y >= 0 && pointer.x <= width && pointer.y <= height;
   let snapped: Anchor | null = null;
@@ -145,7 +149,7 @@ function SingleLine({ fromNode, fromHandle, fromX, fromY, toX, toY, toNode, toHa
     snapped = anchorOf(nodeById(toNode.id), verdict.handle ?? toHandle.id);
     fromAttached = verdict.fromHandle ?? fromAttached;
   } else if (inside) {
-    const target = findDropTarget({ nodes: diagram.nodes, fromNodeId: fromNode.id, point: { x: toX, y: toY }, zoom, judge });
+    const target = findDropTarget({ nodes: reachable, fromNodeId: fromNode.id, point: { x: toX, y: toY }, zoom, judge });
     if (target?.kind === 'connect') { snapped = target.anchor; fromAttached = target.fromHandle ?? fromAttached; }
     blocked = target?.kind === 'blocked';
   }

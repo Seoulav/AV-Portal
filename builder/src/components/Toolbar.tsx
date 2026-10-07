@@ -1,9 +1,19 @@
-// 상단 막대: 새 구성도·열기·내보내기·실행 취소·메모·영역.
-import { useEffect, useRef } from 'react';
+// 상단 막대: 새 구성도·열기·내보내기·실행 취소·메모·영역·케이블 보기, 편집 도구(오토 레이아웃·잠금·격자·미니맵).
+// 단축키: Ctrl+Z·Y 실행 취소·다시 실행, Ctrl+C·V 복사·붙여넣기(앱 안 클립보드, 구 Builder와 같다).
+import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
 import { freePosition } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
-import { FIT_VIEW } from './Canvas';
+import { FIT_VIEW, keepFocus } from './Canvas';
+
+// 화면의 글을 캔버스 밖(이슈 패널 등)에서 골라 두었으면 Ctrl+C는 브라우저 복사로 둔다(리뷰 6)
+const textSelectedOutsideCanvas = () => {
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || !selection.toString()) return false;
+  const anchor = selection.anchorNode;
+  const element = anchor instanceof Element ? anchor : anchor?.parentElement;
+  return !element?.closest('.react-flow');
+};
 
 const stamp = () => {
   const now = new Date();
@@ -23,10 +33,13 @@ export function Toolbar() {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
-      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      if (target && (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable)) return;
       if (!(event.ctrlKey || event.metaKey)) return;
-      if (event.key.toLowerCase() === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
-      if (event.key.toLowerCase() === 'y' || (event.key.toLowerCase() === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }
+      const key = event.key.toLowerCase();
+      if (key === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
+      if (key === 'y' || (key === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }
+      if (key === 'c' && !textSelectedOutsideCanvas() && state.copySelection()) event.preventDefault();
+      if (key === 'v' && state.clipboard) { event.preventDefault(); state.paste(); }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -52,6 +65,25 @@ export function Toolbar() {
       state.notify({ text: `열 수 없습니다: ${first.detail ?? first.code}${first.path ? ` (${first.path})` : ''}${more}`, tone: 'error' });
     }
   };
+  // 오토 레이아웃: Dagre(dagre@0.8.5, 결정 K-a)는 누를 때 불러온다. 첫 화면 번들에 넣지 않는다
+  const [laying, setLaying] = useState(false);
+  const autoLayout = async () => {
+    setLaying(true);
+    let dagre;
+    try {
+      ({ default: dagre } = await import('dagre'));
+    } catch {
+      // 배포가 바뀐 뒤 열려 있던 화면은 예전 파일을 찾는다. 브라우저가 실패를 기억하므로 새로 고쳐야 한다(리뷰 8)
+      state.notify({ text: '오토 레이아웃을 불러오지 못했습니다. 페이지를 새로 고친 뒤 다시 눌러 주세요.', tone: 'error' });
+      setLaying(false);
+      return;
+    }
+    try {
+      if (state.applyLayout(dagre)) requestAnimationFrame(() => void flow.fitView({ ...FIT_VIEW, duration: 300 }));
+    } finally {
+      setLaying(false);
+    }
+  };
   const confirmNew = () => {
     if (state.diagram.nodes.length && !window.confirm('지금 구성도를 비우고 새로 시작할까요? 실행 취소로 되돌릴 수 있습니다.')) return;
     state.newDiagram();
@@ -61,7 +93,7 @@ export function Toolbar() {
   const ready = Boolean(state.library);
   const equipmentCount = state.diagram.nodes.filter(node => node.type === 'equipment').length;
   return (
-    <header className="toolbar">
+    <header className="toolbar" onMouseDown={keepFocus}>
       <a className="brand" href="../">AV Portal</a>
       <span className="app-name">AV System Builder <span className="beta">베타</span></span>
       <div className="toolbar-actions">
@@ -76,6 +108,11 @@ export function Toolbar() {
         <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
         <span className="divider" />
         <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
+        <span className="divider" />
+        <button type="button" onClick={() => void autoLayout()} disabled={!ready || laying || equipmentCount === 0} title="신호 흐름을 왼쪽에서 오른쪽으로 놓는다. 실행 취소로 되돌릴 수 있다">오토 레이아웃</button>
+        <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
+        <button type="button" className={state.snapToGrid ? 'active' : ''} aria-pressed={state.snapToGrid} onClick={state.toggleSnapToGrid} title="장비를 15px 격자에 맞춰 놓는다">격자</button>
+        <button type="button" className={state.showMiniMap ? 'active' : ''} aria-pressed={state.showMiniMap} onClick={state.toggleMiniMap} title="오른쪽 아래에 전체 도면을 작게 보인다">미니맵</button>
       </div>
       <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />

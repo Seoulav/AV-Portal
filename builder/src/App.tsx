@@ -8,6 +8,7 @@ import { EdgePanel } from './components/EdgePanel';
 import { IssuesPanel } from './components/IssuesPanel';
 import { LibraryPanel } from './components/LibraryPanel';
 import { Toolbar } from './components/Toolbar';
+import { lineFilter } from './lineFilter';
 
 // 배포에서는 /AV-Portal/builder/ 옆의 /AV-Portal/builder-library.json(Pages가 만든다)
 const LIBRARY_URL = new URL('../builder-library.json', document.baseURI).href;
@@ -24,9 +25,14 @@ function Notice() {
   return <div className={`notice notice-${notice.tone}`} role="status" onClick={() => notify(null)}>{notice.text}</div>;
 }
 
-// 오른쪽 패널: 연결을 하나만 골랐으면 연결 편집, 아니면 이슈 목록(결정 H-a)
+// 오른쪽 패널: 연결을 하나만 골랐으면 연결 편집, 아니면 이슈 목록(결정 H-a).
+// 선 종류 필터로 숨긴 장비의 선택은 세지 않는다(보이지 않는 선택이 패널을 막지 않게)
 function SidePanel() {
-  const edgeId = useBuilder(state => (state.selectedEdgeIds.length === 1 && !state.diagram.nodes.some(node => node.selected) ? state.selectedEdgeIds[0] : null));
+  const edgeId = useBuilder(state => {
+    if (state.selectedEdgeIds.length !== 1) return null;
+    const hidden = lineFilter(state.diagram, state.hiddenLineTypes).hiddenNodes;
+    return state.diagram.nodes.some(node => node.selected && !hidden.has(node.id)) ? null : state.selectedEdgeIds[0];
+  });
   return edgeId ? <EdgePanel edgeId={edgeId} /> : <IssuesPanel />;
 }
 

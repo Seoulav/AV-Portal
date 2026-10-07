@@ -480,3 +480,147 @@ test('hovered and selected connections get thicker strokes over the inline width
   await page.mouse.up();
   await expect.poll(width).toBe('4px');
 });
+
+// ── 편집 도구(B-20261006-08, 구 Builder App.tsx) ──
+const nodePosition = async (page: Page, id: string) => (await saved(page)).nodes.find((node: { id: string }) => node.id === id).position as Point;
+const headerOf = (page: Page, id: string) => page.locator(`.react-flow__node[data-id="${id}"] .node-header`);
+const zoomOf = async (page: Page) => {
+  const transform = await page.locator('.react-flow__viewport').evaluate(element => (element as HTMLElement).style.transform);
+  return Number(/scale\(([-\d.]+)\)/.exec(transform)?.[1] ?? 1);
+};
+async function zoomOutBelow(page: Page, limit: number) {
+  while (await zoomOf(page) >= limit) {
+    const before = await zoomOf(page);
+    await page.locator('.react-flow__controls-zoomout').click();
+    await expect.poll(() => zoomOf(page)).toBeLessThan(before);
+  }
+}
+
+test('auto layout loads Dagre on demand, lays the signal flow left to right, and one undo restores it', async ({ page }) => {
+  const dagreRequests: string[] = [];
+  page.on('request', request => { if (/\/dagre-[^/]*\.js$/.test(request.url())) dagreRequests.push(request.url()); });
+  const { nodeIds: [cam, disp] } = await openFixture(page, [['cam', 700, 300], ['disp', 0, 0]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1']]);
+  const before = [await nodePosition(page, cam), await nodePosition(page, disp)];
+  expect(dagreRequests).toEqual([]);
+  await page.getByRole('button', { name: '오토 레이아웃' }).click();
+  await expect.poll(async () => (await nodePosition(page, cam)).x).toBe(50);
+  expect((await nodePosition(page, disp)).x).toBe(50 + 220 + 280);
+  expect(dagreRequests).toHaveLength(1);
+  await page.keyboard.press('Control+z');
+  await expect.poll(async () => [await nodePosition(page, cam), await nodePosition(page, disp)]).toEqual(before);
+});
+
+test('Ctrl+C and Ctrl+V copy the selected devices with their links, each paste 40px further', async ({ page }) => {
+  await openFixture(page, [['cam', 0, 0], ['disp', 500, 0], ['mon', 0, 320]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [0, 'out-hdmi-2', 2, 'in-hdmi-1']]);
+  const { corner, pane } = await emptyCorner(page);
+  // cam·disp만 덮는 범위 선택(mon은 아래에 있다)
+  const monHeader = await box(page.locator('.react-flow__node-equipment').filter({ hasText: 'MON' }).locator('.node-header'));
+  await drag(page, corner, { x: pane.x + pane.width - 20, y: monHeader.y - 30 });
+  await expect(page.locator('.react-flow__node-equipment.selected')).toHaveCount(2);
+  await page.keyboard.press('Control+c');
+  await page.keyboard.press('Control+v');
+  await expect.poll(async () => (await saved(page)).nodes.length).toBe(5);
+  const nodes = (await saved(page)).nodes as { id: string; position: Point; data: { model: string } }[];
+  const cams = nodes.filter(node => node.data.model === 'CAM').map(node => node.position);
+  expect(cams).toContainEqual({ x: 40, y: 40 });
+  // cam→disp 연결만 복제되고 mon으로 가는 연결은 빠진다
+  expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1', 'out-hdmi-1>in-hdmi-1', 'out-hdmi-2>in-hdmi-1']);
+  await page.keyboard.press('Control+v');
+  await expect.poll(async () => (await saved(page)).nodes.filter((node: { data: { model: string } }) => node.data.model === 'CAM').map((node: { position: Point }) => node.position)).toContainEqual({ x: 80, y: 80 });
+  await page.keyboard.press('Control+z');
+  await expect.poll(async () => (await saved(page)).nodes.length).toBe(5);
+});
+
+test('lock stops dragging devices but still allows drawing links; grid snaps drops to 15px', async ({ page }) => {
+  const { cam, disp } = await openFixture(page, [['cam', 0, 0], ['disp', 500, 0]]);
+  await page.getByRole('button', { name: '잠금' }).click();
+  await expect(page.locator('.canvas.locked')).toHaveCount(1);
+  const start = await nodePosition(page, cam);
+  const header = await box(headerOf(page, cam));
+  await drag(page, { x: header.x + 40, y: header.y + 20 }, { x: header.x + 140, y: header.y + 90 });
+  await page.waitForTimeout(400);
+  expect(await nodePosition(page, cam)).toEqual(start);
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, disp, 'in-hdmi-1'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
+  await page.getByRole('button', { name: '잠금' }).click();
+  await page.getByRole('button', { name: '격자' }).click();
+  const moved = await box(headerOf(page, cam));
+  await drag(page, { x: moved.x + 40, y: moved.y + 20 }, { x: moved.x + 77, y: moved.y + 53 });
+  await expect.poll(async () => (await nodePosition(page, cam)).x).not.toBe(start.x);
+  const snapped = await nodePosition(page, cam);
+  expect([snapped.x % 15, snapped.y % 15]).toEqual([0, 0]);
+});
+
+test('the minimap shows every node and toggles off again', async ({ page }) => {
+  await openFixture(page);
+  await expect(page.locator('.react-flow__minimap')).toHaveCount(0);
+  await page.getByRole('button', { name: '미니맵' }).click();
+  await expect(page.locator('.react-flow__minimap .react-flow__minimap-node')).toHaveCount(4);
+  // 구 Builder와 같은 200×130. SVG도 같은 크기라 눌러 옮기는 거리가 맞다
+  const map = await box(page.locator('.react-flow__minimap'));
+  const svg = await box(page.locator('.react-flow__minimap svg'));
+  expect([Math.round(map.width), Math.round(map.height)]).toEqual([200, 130]);
+  expect([Math.round(svg.width), Math.round(svg.height)]).toEqual([200, 130]);
+  await page.getByRole('button', { name: '미니맵' }).click();
+  await expect(page.locator('.react-flow__minimap')).toHaveCount(0);
+});
+
+test('a line type chip hides its links without moving the others, and devices left without links', async ({ page }) => {
+  const { nodeIds: [cam, disp, mon] } = await openFixture(page, [['cam', 0, 0], ['disp', 500, 160], ['mon', 0, 400]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [0, 'both-ethernet-1', 1, 'both-ethernet-1']]);
+  const chip = (name: string) => page.locator('.line-filter .filter-chip', { hasText: name });
+  await expect(page.locator('.line-filter .filter-chip')).toHaveText(['LAN', 'HDMI']);
+  const lanPath = () => page.locator(`.react-flow__edge[data-id*="${cam}-${disp}"] path.react-flow__edge-path`).evaluateAll(paths => paths.map(path => path.getAttribute('d')));
+  const before = await renderedPaths(page);
+  const monBox = await box(page.locator(`.react-flow__node[data-id="${mon}"]`));
+  await chip('HDMI').click();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 숨은 mon이 있던 자리에 선을 놓아도 붙지 않는다(숨긴 장비는 근접 연결 대상이 아니다)
+  await drag(page, await dot(handle(page, cam, 'out-hdmi-2'), 'right'), { x: monBox.x + monBox.width / 2, y: monBox.y + 30 });
+  await page.waitForTimeout(400);
+  expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1', 'source_both-ethernet-1>target_both-ethernet-1']);
+  // 같은 쌍의 두 선은 서로 띄워 그린다. 하나를 숨겨도 남은 선은 그 자리에 있다(간격은 숨긴 선까지 계산)
+  expect(before).toContain((await lanPath())[0]);
+  // 연결이 없는 mon은 숨고, LAN이 남은 cam·disp는 보인다
+  await expect(page.locator(`.react-flow__node[data-id="${mon}"]`)).toHaveCount(0);
+  await expect(page.locator(`.react-flow__node[data-id="${cam}"]`)).toBeVisible();
+  await chip('LAN').click();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(0);
+  await expect(page.locator('.react-flow__node-equipment')).toHaveCount(0);
+  await chip('HDMI').click();
+  await chip('LAN').click();
+  await expect(page.locator('.react-flow__node-equipment')).toHaveCount(3);
+  expect(await renderedPaths(page)).toEqual(before);
+  // 파일에는 아무것도 남지 않는다
+  expect(JSON.stringify(await saved(page))).not.toContain('hidden');
+});
+
+test('zoomed out below 0.55 the model name covers the device, and a link can still be drawn', async ({ page }) => {
+  const { cam, disp } = await openFixture(page, [['cam', 0, 0], ['disp', 500, 0]]);
+  const overlay = page.locator(`.react-flow__node[data-id="${cam}"] .lod-overlay`);
+  await expect(overlay).toBeHidden();
+  await zoomOutBelow(page, 0.55);
+  expect(await zoomOf(page)).toBeGreaterThanOrEqual(0.3);
+  await expect(overlay).toBeVisible();
+  await expect(overlay.locator('.lod-model')).toHaveText('CAM');
+  await expect(overlay.locator('.lod-name')).toBeVisible();
+  // 모델명 글자는 줌의 역수로 커진다(화면에서 약 9px)
+  const size = Number((await overlay.locator('.lod-model').evaluate(element => getComputedStyle(element).fontSize)).replace('px', ''));
+  expect(size).toBe(Math.min(44, Math.max(13, Math.round(9 / await zoomOf(page)))));
+  // 덮개 위에서도 단자 행에서 끌어 장비 몸체에 놓으면 근접 연결이 된다(몸체 가운데에 가장 가까운 빈 입력 In 2)
+  const target = await box(page.locator(`.react-flow__node[data-id="${disp}"]`));
+  await drag(page, await dot(handle(page, cam, 'out-hdmi-1'), 'right'), { x: target.x + target.width / 2, y: target.y + target.height / 2 });
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-2']);
+  await zoomOutBelow(page, 0.3);
+  await expect(overlay.locator('.lod-name')).toBeHidden();
+});
+
+test('crossing jumps are drawn against visible links only', async ({ page }) => {
+  // HDMI는 곧은 가로선, LAN은 그 가로선을 세로로 지난다. 점프는 가로선(HDMI)에 그려진다
+  await openFixture(page, [['quad', 0, 0], ['wall', 900, 0], ['cam', 300, -320], ['disp', 700, 320]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [2, 'both-ethernet-1', 3, 'both-ethernet-1']]);
+  const arcs = async () => (await renderedPaths(page)).filter(d => / A 6 6 0 0 [01] /.test(d)).length;
+  await expect.poll(arcs).toBe(1);
+  await page.locator('.line-filter .filter-chip', { hasText: 'LAN' }).click();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 숨긴 LAN선과의 교차는 더 그리지 않는다
+  expect(await arcs()).toBe(0);
+});
