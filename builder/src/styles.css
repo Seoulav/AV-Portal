@@ -133,6 +133,18 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .cable-row { display: grid; grid-template-columns: 62px 1fr 72px auto; gap: 4px; }
 .panel-actions { display: flex; gap: 6px; justify-content: flex-end; }
 
+/* 엣지(구 Builder CustomSmoothstepEdge): 라벨은 줌아웃해도 읽히게 BuilderEdge가 역으로 키운다 */
+.edge-label {
+  position: absolute; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
+  background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); white-space: nowrap; pointer-events: none;
+}
+.edge-label.cable { white-space: pre; line-height: 1.5; text-align: center; }
+.edge-label.missing { color: var(--warn); background: #fffbeb; border-color: #fcd34d; }
+/* 선택·호버 표시는 무채색이다(케이블 색과 겹치지 않게, 구 Builder 규칙). 호버를 선택보다 먼저 둬야 선택이 이긴다 */
+.react-flow__edge:hover .react-flow__edge-path { stroke-width: 3; }
+.react-flow__edge.selected .react-flow__edge-path { stroke-width: 4; filter: drop-shadow(0 0 2px rgba(15, 23, 42, 0.55)); }
+button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
 /* 이슈 패널 */
 .issue-group { display: flex; flex-direction: column; gap: 4px; }
 .issue-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }

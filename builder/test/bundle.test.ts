@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_RULES, createIdFactory, createLibraryIndex, geometry as G, type Equipment, type Library, type Port } from '../src/engine';
 import { bundleFor, parseKey, planBundle, portKey, portsInRect } from '../src/bundle';
 import { resolveBundleDrop } from '../src/bundleDrop';
-import { pathSpacing } from '../src/edgeSpacing';
 import { createBuilderStore } from '../src/state/store';
 
 // 합성 라이브러리(현재 Portal 데이터와 무관). 사진이 없어 첫 단자 행 가운데는 12 + 54 + 12 = 78이다
@@ -175,35 +174,4 @@ describe('port selection and bundles', () => {
     expect(store.getState().selectedPorts).toEqual([]);
     expect(store.getState().selectedPortsByNode).toEqual({});
   });
-});
-
-describe('parallel spacing', () => {
-  it('staggers the step of edges between the same two devices so they do not overlap', () => {
-    const { store, drop, keys, mix } = setup();
-    const quad = store.getState().addEquipment(createLibraryIndex(library).units.get('quad')!.equipment, { x: 0, y: 700 });
-    const plan = drop(keys, 'in-mic-audio-1').plan!;
-    store.getState().connectMany(plan.pairs.map(pair => ({ source: pair.from.nodeId, sourceHandle: pair.fromHandle, target: pair.to.nodeId, targetHandle: pair.toHandle })));
-    // 서로 다른 장비 쌍(마이크마다 하나)은 묶이지 않는다
-    expect(pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges).size).toBe(0);
-    // 같은 장비 쌍: quad 출력 1·2 → 믹서 입력 5·6. 위로 올라가는 묶음은 아래 선이 도착 쪽에서 꺾인다
-    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-1', target: mix, targetHandle: 'in-mic-audio-5' });
-    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-2', target: mix, targetHandle: 'in-mic-audio-6' });
-    const steps = pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges);
-    const quadEdges = store.getState().diagram.edges.filter(edge => edge.source === quad).sort((a, b) => (a.sourceHandle < b.sourceHandle ? -1 : 1));
-    const [upper, lower] = quadEdges.map(edge => steps.get(edge.id)!.stepPosition!);
-    expect(upper).toBeLessThan(0.5);
-    expect(lower).toBeGreaterThan(0.5);
-  });
-  it('spaces backward edges by offset, since smoothstep ignores stepPosition there', () => {
-    const { store, place, mix } = setup();
-    // 출력이 믹서보다 오른쪽에 있어 선이 뒤로(왼쪽으로) 간다
-    const quad = place('quad', 1000, 0);
-    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-1', target: mix, targetHandle: 'in-mic-audio-1' });
-    store.getState().connect({ source: quad, sourceHandle: 'out-mic-audio-2', target: mix, targetHandle: 'in-mic-audio-2' });
-    const spacing = pathSpacing(store.getState().diagram.nodes, store.getState().diagram.edges);
-    const options = store.getState().diagram.edges.map(edge => spacing.get(edge.id)!);
-    expect(options.every(item => item.stepPosition === undefined && typeof item.offset === 'number')).toBe(true);
-    expect(new Set(options.map(item => item.offset)).size).toBe(2);
-  });
-
 });

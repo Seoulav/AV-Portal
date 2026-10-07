@@ -37,48 +37,54 @@ export function IssuesPanel() {
   const input = useIssueInput(diagram);
   const issues = useMemo(() => normalizeDiagram(input, { library }).issues ?? [], [input, library]);
 
-  const modelOf = (nodeId: string | undefined) => {
-    const node = diagram.nodes.find(item => item.id === nodeId);
-    return node ? (node.data as unknown as Equipment).model : '?';
-  };
-  const describe = (issue: Issue) => {
-    if (issue.target.edge) {
-      const edge = diagram.edges.find(item => item.id === issue.target.edge);
-      return edge ? `${modelOf(edge.source)} → ${modelOf(edge.target)}` : issue.target.edge;
-    }
-    return modelOf(issue.target.node);
-  };
-  const focus = (issue: Issue) => {
-    focusTarget(issue.target);
-    const edge = issue.target.edge ? diagram.edges.find(item => item.id === issue.target.edge) : null;
-    const ids = edge ? [edge.source, edge.target] : issue.target.node ? [issue.target.node] : [];
-    if (ids.length) void flow.fitView({ nodes: ids.map(id => ({ id })), duration: 300, maxZoom: 1, padding: 0.4 });
-  };
+  // 목록은 이슈와 장비 정보가 바뀔 때만 다시 만든다. 끌기 중 매 순간 다시 그리면 이슈 수백 개가 화면을 느리게 한다
+  const sections = useMemo(() => {
+    const nodes = new Map(input.nodes.map(node => [node.id, node]));
+    const edges = new Map(input.edges.map(edge => [edge.id, edge]));
+    const modelOf = (nodeId: string | undefined) => {
+      const node = nodeId ? nodes.get(nodeId) : undefined;
+      return node ? (node.data as unknown as Equipment).model : '?';
+    };
+    const describe = (issue: Issue) => {
+      if (issue.target.edge) {
+        const edge = edges.get(issue.target.edge);
+        return edge ? `${modelOf(edge.source)} → ${modelOf(edge.target)}` : issue.target.edge;
+      }
+      return modelOf(issue.target.node);
+    };
+    const focus = (issue: Issue) => {
+      focusTarget(issue.target);
+      const edge = issue.target.edge ? edges.get(issue.target.edge) : null;
+      const ids = edge ? [edge.source, edge.target] : issue.target.node ? [issue.target.node] : [];
+      if (ids.length) void flow.fitView({ nodes: ids.map(id => ({ id })), duration: 300, maxZoom: 1, padding: 0.4 });
+    };
+    return SEVERITIES.map(([severity, title]) => {
+      const list = issues.filter(issue => issue.severity === severity);
+      if (!list.length) return null;
+      return (
+        <section key={severity} className="issue-group">
+          <div className="panel-subtitle">{title} {list.length}</div>
+          <ul className="issue-list">
+            {list.map((issue, index) => (
+              <li key={`${issue.code}-${issue.target.node ?? ''}-${issue.target.edge ?? ''}-${issue.target.port ?? ''}-${index}`}>
+                <button type="button" className={`issue-item issue-${severity}`} onClick={() => focus(issue)} title={issue.detail}>
+                  <span className="issue-code">{ISSUE_LABELS[issue.code] ?? issue.code}</span>
+                  <span className="issue-target">{describe(issue)}</span>
+                  {issue.detail && <span className="issue-detail">{issue.detail}</span>}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    });
+  }, [issues, input, focusTarget, flow]);
 
   return (
     <aside className="side-panel issues-panel">
       <div className="panel-title">이슈 <span className="group-count">{issues.length}</span></div>
       {issues.length === 0 && <div className="panel-note">확인할 이슈가 없습니다.</div>}
-      {SEVERITIES.map(([severity, title]) => {
-        const list = issues.filter(issue => issue.severity === severity);
-        if (!list.length) return null;
-        return (
-          <section key={severity} className="issue-group">
-            <div className="panel-subtitle">{title} {list.length}</div>
-            <ul className="issue-list">
-              {list.map((issue, index) => (
-                <li key={`${issue.code}-${issue.target.node ?? ''}-${issue.target.edge ?? ''}-${issue.target.port ?? ''}-${index}`}>
-                  <button type="button" className={`issue-item issue-${severity}`} onClick={() => focus(issue)} title={issue.detail}>
-                    <span className="issue-code">{ISSUE_LABELS[issue.code] ?? issue.code}</span>
-                    <span className="issue-target">{describe(issue)}</span>
-                    {issue.detail && <span className="issue-detail">{issue.detail}</span>}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })}
+      {sections}
       <div className="panel-foot">이슈는 저장을 막지 않습니다. 내보낸 파일의 issues에 그대로 남습니다.</div>
     </aside>
   );

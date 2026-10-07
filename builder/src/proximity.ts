@@ -18,14 +18,29 @@ export type DropTarget = { kind: 'connect'; anchor: Anchor; fromHandle?: string 
 const isEquipment = (node: DiagramNode) => node.type === 'equipment';
 const dataOf = (node: DiagramNode) => node.data as unknown as Equipment;
 
+// 노드 왼쪽 위 기준 단자 끝점은 장비 정보(data)에만 달렸다. 같은 data면 다시 계산하지 않는다
+// (선 그리기가 끌기 중 매 순간 엣지마다 찾는다)
+const relativeCache = new WeakMap<object, { list: ReturnType<typeof G.portAnchors>; byHandle: Map<string, ReturnType<typeof G.portAnchors>[number]> }>();
+const relativeAnchors = (node: DiagramNode) => {
+  const data = node.data as object;
+  let entry = relativeCache.get(data);
+  if (!entry) {
+    const list = G.portAnchors(dataOf(node));
+    entry = { list, byHandle: new Map(list.map(anchor => [anchor.handle, anchor])) };
+    relativeCache.set(data, entry);
+  }
+  return entry;
+};
+
 export function nodeAnchors(node: DiagramNode): Anchor[] {
   if (!isEquipment(node)) return [];
-  return G.portAnchors(dataOf(node)).map(anchor => ({ ...anchor, nodeId: node.id, ax: node.position.x + anchor.x, ay: node.position.y + anchor.y }));
+  return relativeAnchors(node).list.map(anchor => ({ ...anchor, nodeId: node.id, ax: node.position.x + anchor.x, ay: node.position.y + anchor.y }));
 }
 
 export function anchorOf(node: DiagramNode | undefined, handle: string | null | undefined): Anchor | null {
-  if (!node || !handle) return null;
-  return nodeAnchors(node).find(anchor => anchor.handle === handle) ?? null;
+  if (!node || !handle || !isEquipment(node)) return null;
+  const anchor = relativeAnchors(node).byHandle.get(handle);
+  return anchor ? { ...anchor, nodeId: node.id, ax: node.position.x + anchor.x, ay: node.position.y + anchor.y } : null;
 }
 
 // 점 아래의 장비(위에 그려진 것 우선). 단자 점이 있는 바깥 20px은 몸체가 아니다

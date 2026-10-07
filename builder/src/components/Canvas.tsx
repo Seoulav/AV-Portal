@@ -11,16 +11,20 @@ import {
 import { parseHandle } from '../engine';
 import { bundleFor } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
-import { pathSpacing } from '../edgeSpacing';
-import { findDropTarget } from '../proximity';
+import { edgeJumps, getEdgePoints } from '../edges/edgeGeometry';
+import { edgeOffsets, normalizeBidiEdges } from '../edges/edgeProcessing';
+import { anchorOf, findDropTarget } from '../proximity';
 import { markConnectEnd } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
+import { BuilderEdge } from './BuilderEdge';
 import { ConnectionLine } from './ConnectionLine';
 import { EquipmentNode } from './EquipmentNode';
 import { AnnotationNode, ShapeNode } from './NoteNodes';
 import { UNIT_MIME } from './LibraryPanel';
 
 const nodeTypes = { equipment: EquipmentNode, annotation: AnnotationNode, shape: ShapeNode };
+// 파일의 엣지 type은 "smoothstep" 그대로다. 그 자리에 구 Builder식 직교 경로·교차 점프 엣지를 둔다
+const edgeTypes = { smoothstep: BuilderEdge };
 // 화면 맞춤은 실제 크기(1배)보다 키우지 않는다. 빈 캔버스나 장비 한두 대가 최대 배율로 열리지 않게 한다
 export const FIT_VIEW = { maxZoom: 1, padding: 0.2 };
 const PAN_BUTTONS = [1];
@@ -51,30 +55,83 @@ export function Canvas() {
   const setNodeLabel = useBuilder(state => state.setNodeLabel);
   const removeElements = useBuilder(state => state.removeElements);
   const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
+  const cableView = useBuilder(state => state.cableView);
+  const dragging = useBuilder(state => state.dragging);
   const flow = useReactFlow();
   const flowStore = useStoreApi();
   const boxStart = useRef<{ x: number; y: number } | null>(null);
 
   // 화면용 속성만 덧붙인다(저장할 때 엔진이 버린다). 영역은 장비 뒤에 깔고 제목 띠로만 끈다(안쪽 클릭 통과는 styles.css)
+  // 바뀌지 않은 노드·엣지는 앞의 화면용 객체를 그대로 넘긴다. 끌기 중 매 순간 객체를 새로 만들면
+  // React Flow가 장비 150대·엣지 600개를 모두 다시 그려 끌기가 끊긴다(측정: 한 번 움직일 때 140ms)
+  const nodeViews = useRef(new WeakMap<object, Node>());
   const nodes = useMemo(() => diagram.nodes.map(node => {
+    const cached = nodeViews.current.get(node);
+    if (cached) return cached;
     const view = { ...node } as unknown as Node;
     if (node.type === 'equipment') view.dragHandle = '.node-drag';
     if (node.type === 'shape') Object.assign(view, { zIndex: -1, dragHandle: '.shape-title', width: node.style?.width, height: node.style?.height });
     if (node.type === 'annotation') Object.assign(view, { width: node.style?.width, height: node.style?.height });
+    nodeViews.current.set(node, view);
     return view;
   }), [diagram.nodes]);
   // 엣지 선택은 store.selectedEdgeIds에 둔다. React Flow가 강조·Delete·선택 해제를 하려면 selected가 엣지에 있어야 한다.
-  // 같은 두 장비 사이 엣지는 꺾이는 위치를 띄워 평행하게 그린다(edgeSpacing.ts, 화면에만)
-  const spacing = useMemo(() => pathSpacing(diagram.nodes, diagram.edges), [diagram.nodes, diagram.edges]);
+  // 선 모양은 화면에서만 계산한다(구 Builder와 같다, 파일에 남기지 않음):
+  //   양방향↔양방향 엣지를 노드 좌우에 맞게 뒤집고(normalizeBidiEdges) → 평행선 간격·채널 순서(edgeOffsets)
+  const viewEdges = useMemo(() => normalizeBidiEdges(diagram.edges, diagram.nodes), [diagram.edges, diagram.nodes]);
+  // 장비를 끄는 동안에는 간격을 끌기 시작 때 값으로 두고, 놓으면 전체를 다시 계산한다(결정 J-c).
+  // 엣지 600개에서 매 순간 다시 계산하면 한 프레임 10ms가 넘는다. 끝점과 교차 점프는 매 순간 바뀐다
+  const frozenOffsets = useRef<Map<string, number> | null>(null);
+  const offsets = useMemo(() => {
+    if (dragging && frozenOffsets.current) return frozenOffsets.current;
+    const next = edgeOffsets(viewEdges, diagram.nodes);
+    frozenOffsets.current = next;
+    return next;
+  }, [viewEdges, diagram.nodes, dragging]);
+  // 교차 점프: 모든 엣지 경로를 구성도 좌표(geometry.portAnchors)로 한 번에 만들어 세로 구간 색인으로 구한다.
+  // React Flow 내부 좌표를 앱에서 읽지 않으므로 구 Builder의 "한 프레임 지난 좌표" 문제가 없다
+  const jumps = useMemo(() => {
+    const byId = new Map(diagram.nodes.map(node => [node.id, node]));
+    const lines = viewEdges.flatMap(edge => {
+      const source = anchorOf(byId.get(edge.source), edge.sourceHandle);
+      const target = anchorOf(byId.get(edge.target), edge.targetHandle);
+      return source && target ? [{ id: edge.id, points: getEdgePoints({ sourceX: source.ax, sourceY: source.ay, targetX: target.ax, targetY: target.ay, splitOffset: offsets.get(edge.id) ?? 0 }) }] : [];
+    });
+    return edgeJumps(lines);
+  }, [viewEdges, offsets, diagram.nodes]);
+  const lastEdges = useRef<Edge[] | null>(null);
+  const edgeViews = useRef(new Map<string, { source: object; flipped: boolean; offset: number; jumpKey: string; selected: boolean; cableView: boolean; view: Edge }>());
   const edges = useMemo(() => {
     const selected = new Set(selectedEdgeIds);
-    return diagram.edges.map(edge => {
-      const view = { ...edge, label: edge.data.label, selected: selected.has(edge.id) } as unknown as Edge & { pathOptions?: object };
-      const options = spacing.get(edge.id);
-      if (options) view.pathOptions = options;
-      return view as Edge;
+    const next = new Map<string, typeof edgeViews.current extends Map<string, infer V> ? V : never>();
+    const list = viewEdges.map((edge, index) => {
+      const source = diagram.edges[index];
+      const entry = {
+        source,
+        flipped: edge !== source,
+        offset: offsets.get(edge.id) ?? 0,
+        jumpKey: (jumps.get(edge.id) ?? []).map(point => `${point.x},${point.y}`).join(';'),
+        selected: selected.has(edge.id),
+        cableView,
+      };
+      const previous = edgeViews.current.get(edge.id);
+      const same = previous && previous.source === entry.source && previous.flipped === entry.flipped && previous.offset === entry.offset
+        && previous.jumpKey === entry.jumpKey && previous.selected === entry.selected && previous.cableView === entry.cableView;
+      const view = same ? previous.view : ({
+        ...edge,
+        selected: entry.selected,
+        data: { ...edge.data, splitOffset: entry.offset, jumps: jumps.get(edge.id), cableView },
+      } as unknown as Edge);
+      next.set(edge.id, { ...entry, view });
+      return view;
     });
-  }, [diagram.edges, selectedEdgeIds, spacing]);
+    edgeViews.current = next;
+    // 하나도 바뀌지 않았으면 앞 배열을 그대로 넘겨 React Flow가 엣지 색인을 다시 만들지 않게 한다(장비만 옮긴 경우)
+    const previous = lastEdges.current;
+    if (previous && previous.length === list.length && list.every((view, index) => view === previous[index])) return previous;
+    lastEdges.current = list;
+    return list;
+  }, [viewEdges, offsets, jumps, selectedEdgeIds, cableView, diagram.edges]);
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
   // 고른 단자에서 끌기 시작하면 묶음 연결이다. 묶음은 끌기를 시작할 때 한 번 정한다
@@ -192,6 +249,7 @@ export function Canvas() {
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}

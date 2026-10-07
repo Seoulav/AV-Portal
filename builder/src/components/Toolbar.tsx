@@ -74,6 +74,8 @@ export function Toolbar() {
         <span className="divider" />
         <button type="button" onClick={() => state.addAnnotation(center())} disabled={!ready}>메모</button>
         <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
+        <span className="divider" />
+        <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
       </div>
       <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />
