@@ -2,9 +2,10 @@
 // React 없이도 쓸 수 있게 zustand/vanilla로 만든다(시험에서 직접 쓴다).
 import { applyNodeChanges, type EdgeChange, type NodeChange, type Node } from '@xyflow/react';
 import { createStore } from 'zustand/vanilla';
+import { version as APP_VERSION } from '../../package.json';
 import {
   DEFAULT_RULES, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
-  judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, validateDiagram,
+  judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, validateDiagram,
   type BomRow, type Diagram, type Equipment, type IdFactory, type LibraryIndex, type Rules, type ValidationError,
 } from '../engine';
 
@@ -32,6 +33,8 @@ export function freePosition(nodes: { position: { x: number; y: number } }[], po
 }
 
 export interface Notice { text: string; tone: 'info' | 'warn' | 'error' }
+// 근접 연결 판정. handle·fromHandle은 연결하면 엣지에 실제로 남을 핸들이다(양방향은 역할에 따라 source_/target_)
+export interface ConnectionVerdict { allowed: boolean; code?: string; handle?: string; fromHandle?: string }
 export interface ConnectionLike { source: string | null; sourceHandle?: string | null; target: string | null; targetHandle?: string | null }
 
 export interface BuilderState {
@@ -55,7 +58,7 @@ export interface BuilderState {
   canConnect(connection: ConnectionLike): boolean;
   connect(connection: ConnectionLike): boolean;
   explainBlocked(connection: ConnectionLike): void;
-  connectionJudge(from: { nodeId: string; handle: string }): (to: { nodeId: string; handle: string }) => { allowed: boolean; code?: string };
+  connectionJudge(from: { nodeId: string; handle: string; type?: 'source' | 'target' }): (to: { nodeId: string; handle: string }) => ConnectionVerdict;
   notifyBlocked(code: string | undefined): void;
   setNodeLabel(nodeId: string, label: string): void;
   updateEdge(edgeId: string, patch: { label: string; rows: BomRow[] }): void;
@@ -109,7 +112,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
     };
     return {
       library: null,
-      diagram: initial ?? createDiagram(),
+      diagram: initial ?? createDiagram({ generatorVersion: APP_VERSION }),
       past: [],
       future: [],
       selectedEdgeIds: [],
@@ -219,7 +222,9 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (judgement && !judgement.allowed) set({ notice: { text: blockReason(judgement.code), tone: 'warn' } });
       },
 
-      // 근접 연결용: 출발 단자를 정해 두고 후보 단자마다 판정한다. 사용 중인 단자 목록은 한 번만 만든다
+      // 근접 연결용: 출발 단자를 정해 두고 후보 단자마다 판정한다. 사용 중인 단자 목록은 한 번만 만든다.
+      // 방향은 React Flow와 같게 정한다: 받는 쪽(target) 핸들에서 끌기 시작했으면 후보가 source다.
+      // 양방향끼리는 엔진이 순서를 바꾸지 않으므로 이 순서가 엣지 방향이 된다
       connectionJudge(from) {
         const { diagram, library } = get();
         const used = occupiedPorts(diagram);
@@ -228,8 +233,14 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         return to => {
           const toPort = portOf(diagram, to.nodeId, to.handle);
           if (!fromPort || !toPort) return { allowed: false, code: 'port-missing' };
-          const judgement = judgeConnection(fromPort, toPort, options);
-          return { allowed: judgement.allowed, code: judgement.code };
+          const judgement = from.type === 'target' ? judgeConnection(toPort, fromPort, options) : judgeConnection(fromPort, toPort, options);
+          const candidateIsSource = judgement.source === toPort;
+          return {
+            allowed: judgement.allowed,
+            code: judgement.code,
+            handle: candidateIsSource ? sourceHandleOf(toPort.port) : targetHandleOf(toPort.port),
+            fromHandle: candidateIsSource ? targetHandleOf(fromPort.port) : sourceHandleOf(fromPort.port),
+          };
         };
       },
       notifyBlocked(code) { set({ notice: { text: blockReason(code), tone: 'warn' } }); },
@@ -295,7 +306,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library }), selectedEdgeIds: [], notice: null });
+        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], notice: null });
       },
 
       importText(text) {

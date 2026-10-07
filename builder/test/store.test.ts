@@ -260,7 +260,9 @@ describe('selection', () => {
     const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
     const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
     const judge = store.getState().connectionJudge({ nodeId: cam, handle: 'out-hdmi-1' });
-    expect(judge({ nodeId: disp, handle: 'in-hdmi-1' })).toEqual({ allowed: true, code: undefined });
+    expect(judge({ nodeId: disp, handle: 'in-hdmi-1' })).toEqual({ allowed: true, code: undefined, handle: 'in-hdmi-1', fromHandle: 'out-hdmi-1' });
+    // 입력에서 시작해도(받는 쪽 핸들) 엣지에 남을 핸들은 같다
+    expect(store.getState().connectionJudge({ nodeId: disp, handle: 'in-hdmi-1', type: 'target' })({ nodeId: cam, handle: 'out-hdmi-1' })).toMatchObject({ allowed: true, handle: 'out-hdmi-1', fromHandle: 'in-hdmi-1' });
     expect(judge({ nodeId: disp, handle: 'target_both-ethernet-1' }).code).toBe('signal-mismatch');
     expect(judge({ nodeId: disp, handle: 'nope' }).code).toBe('port-missing');
   });

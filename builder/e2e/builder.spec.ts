@@ -5,8 +5,8 @@ import { validateDiagram } from '../src/engine';
 import { diagramText, library, libraryIndex } from './fixture';
 
 const AUTOSAVE_KEY = 'av-portal-builder:current';
-// cam(출력 2·양방향 1), disp(입력 3·양방향 1), ctl(RS-232 입력 1)
-const PLACEMENTS: [string, number, number][] = [['cam', 0, 0], ['disp', 500, 0], ['ctl', 500, 320]];
+// cam(출력 2·양방향 1), disp(입력 3·양방향 1), ctl(RS-232 입력 1), mon(HDMI 입력 1)
+const PLACEMENTS: [string, number, number][] = [['cam', 0, 0], ['disp', 500, 0], ['ctl', 500, 320], ['mon', 0, 320]];
 
 type Point = { x: number; y: number };
 
@@ -14,13 +14,14 @@ async function openFixture(page: Page) {
   await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
   page.on('dialog', dialog => void dialog.accept());
   await page.goto('./');
-  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 3종');
+  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 4종');
   const { text, nodeIds } = diagramText(PLACEMENTS);
   await page.locator('input[type=file]').setInputFiles({ name: 'fixture.diagram.json', mimeType: 'application/json', buffer: Buffer.from(text) });
   await expect(page.locator('.react-flow__node-equipment')).toHaveCount(PLACEMENTS.length);
-  await page.waitForTimeout(200);
-  const [cam, disp, ctl] = nodeIds;
-  return { cam, disp, ctl };
+  // 연 파일이 자동 저장될 때까지 기다린다(시험은 저장본으로 결과를 본다)
+  await expect.poll(() => page.evaluate(key => localStorage.getItem(key) !== null, AUTOSAVE_KEY)).toBe(true);
+  const [cam, disp, ctl, mon] = nodeIds;
+  return { cam, disp, ctl, mon };
 }
 
 const handle = (page: Page, nodeId: string, handleId: string) => page.locator(`.react-flow__node[data-id="${nodeId}"] .react-flow__handle[data-handleid="${handleId}"]`);
@@ -91,10 +92,51 @@ test('dropping on a device body picks its nearest connectable port', async ({ pa
   await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
 });
 
-test('a blocked drop says why', async ({ page }) => {
-  const { cam, ctl } = await openFixture(page);
+test('a blocked drop says why: signal, direction, occupied and the same device', async ({ page }) => {
+  const { cam, disp, ctl, mon } = await openFixture(page);
   await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, ctl, 'in-rs-232-1'), 'left'));
   await expect(page.locator('.notice')).toContainText('신호가 맞지 않습니다');
+  // 입력 → 입력
+  await drag(page, await rowInside(handle(page, disp, 'in-hdmi-1'), 'left'), await rowInside(handle(page, mon, 'in-hdmi-1'), 'left'));
+  await expect(page.locator('.notice')).toContainText('같은 방향');
+  expect(await savedEdges(page)).toEqual([]);
+  // 이미 쓴 단자만 있는 장비
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, mon, 'in-hdmi-1'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-2'), 'right'), await rowInside(handle(page, mon, 'in-hdmi-1'), 'left'));
+  await expect(page.locator('.notice')).toContainText('이미 연결된 단자');
+  // 출발 장비 자신의 단자 위
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-2'), 'right'), await rowInside(handle(page, cam, 'source_both-ethernet-1'), 'right'));
+  await expect(page.locator('.notice')).toContainText('같은 장비');
+  expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
+});
+
+test('a bidirectional line drawn right to left attaches where the preview ring was', async ({ page }) => {
+  const { cam, disp } = await openFixture(page);
+  // disp(오른쪽)의 양방향 행 왼쪽 절반에서 시작해 cam(왼쪽)의 오른쪽 점 근처에 놓는다
+  const start = await rowInside(handle(page, disp, 'target_both-ethernet-1'), 'left');
+  const camRight = await dot(handle(page, cam, 'source_both-ethernet-1'), 'right');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(camRight.x + 12, camRight.y, { steps: 15 });
+  const ring = page.locator('.connection-preview .snap-ring');
+  await expect(ring).toHaveCount(1);
+  const ringBox = await box(ring);
+  expect(Math.abs(ringBox.x + ringBox.width / 2 - camRight.x)).toBeLessThan(6);
+  await page.mouse.up();
+  await expect.poll(() => savedEdges(page)).toEqual(['source_both-ethernet-1>target_both-ethernet-1']);
+  const edge = (await saved(page)).edges[0];
+  expect([edge.source, edge.target]).toEqual([cam, disp]);
+});
+
+test('releasing a line outside the canvas cancels it', async ({ page }) => {
+  const { cam } = await openFixture(page);
+  const start = await rowInside(handle(page, cam, 'out-hdmi-1'), 'right');
+  const panel = await box(page.locator('.side-panel'));
+  await drag(page, start, { x: panel.x + 40, y: start.y });
+  const library = await box(page.locator('.library-panel'));
+  await drag(page, start, { x: library.x + 40, y: start.y });
+  await page.waitForTimeout(500);
   expect(await savedEdges(page)).toEqual([]);
 });
 
@@ -120,6 +162,18 @@ test('left drag on the canvas selects, middle drag and Space+left drag pan', asy
   const spaced = await viewport(page);
   expect(Math.round(spaced.x - after.x)).toBe(60);
   await expect(page.locator('.react-flow__node.selected')).toHaveCount(0);
+});
+
+test('after a box selection, a port row still draws a line instead of moving the group', async ({ page }) => {
+  const { cam, disp } = await openFixture(page);
+  const { pane, corner } = await emptyCorner(page);
+  await drag(page, corner, { x: pane.x + pane.width - 30, y: pane.y + pane.height - 30 });
+  await expect(page.locator('.react-flow__node.selected')).toHaveCount(PLACEMENTS.length);
+  const xs = async () => (await saved(page)).nodes.map((node: { position: { x: number } }) => node.position.x);
+  const before = await xs();
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, disp, 'in-hdmi-1'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1']);
+  expect(await xs()).toEqual(before);
 });
 
 test('devices move by the header, not by a port row', async ({ page }) => {
@@ -164,13 +218,20 @@ test('build, export, start over and reopen gives the same file; the issue panel 
   await expect.poll(() => page.evaluate(key => localStorage.getItem(key), AUTOSAVE_KEY)).toBe(exported);
 });
 
-test('the rendered port dots sit where geometry says lines attach', async ({ page }) => {
-  const { disp } = await openFixture(page);
-  // 같은 노드의 두 단자 점 간격이 행 간격(28) × 배율과 같아야 근접 연결 좌표가 그림과 맞는다
-  const zoom = await page.locator('.react-flow__viewport').evaluate(element => Number(/scale\(([\d.]+)\)/.exec((element as HTMLElement).style.transform)?.[1]));
-  const first = await dot(handle(page, disp, 'in-hdmi-1'), 'left');
-  const third = await dot(handle(page, disp, 'in-hdmi-3'), 'left');
-  expect(Math.abs((third.y - first.y) - 56 * zoom)).toBeLessThan(1);
-  const nodeBox = await box(page.locator(`.react-flow__node[data-id="${disp}"]`));
-  expect(Math.abs((nodeBox.x - (first.x - 4)) - 20 * zoom)).toBeLessThan(1);
+test('drawn edges attach at the dots geometry computes', async ({ page }) => {
+  const { cam, disp } = await openFixture(page);
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-2'), 'right'), await rowInside(handle(page, disp, 'in-hdmi-3'), 'left'));
+  await expect.poll(async () => (await savedEdges(page)).length).toBe(1);
+  const file = await saved(page);
+  const at = (id: string) => file.nodes.find((node: { id: string }) => node.id === id).position;
+  // 엣지 경로의 처음·끝 점(캔버스 좌표)과 geometry: 출력 x = 220 + 20, 입력 x = -20, y = 12 + 54 + 행 × 28 + 12
+  const d = await page.locator('.react-flow__edge path.react-flow__edge-path').first().getAttribute('d');
+  const numbers = (d ?? '').match(/-?[\d.]+/g)!.map(Number);
+  const [sx, sy] = numbers;
+  const [tx, ty] = numbers.slice(-2);
+  expect([sx, sy]).toEqual([at(cam).x + 240, at(cam).y + 12 + 54 + 28 + 12]);
+  expect([tx, ty]).toEqual([at(disp).x - 20, at(disp).y + 12 + 54 + 2 * 28 + 12]);
+  // 단자 점(::after)은 핸들 상자의 바깥 끝에 있다
+  const dotLeft = await handle(page, disp, 'in-hdmi-3').evaluate(element => getComputedStyle(element, '::after').left);
+  expect(dotLeft).toBe('0px');
 });

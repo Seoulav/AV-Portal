@@ -107,6 +107,9 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .port-handle.connectingto.valid { background: rgba(0, 122, 255, 0.1); }
 .port-handle.connectingto:not(.valid) { background: rgba(220, 38, 38, 0.1); }
 .port-handle.connectingto:not(.valid)::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 4px rgba(220, 38, 38, 0.35); }
+/* 범위 선택 뒤 React Flow가 고른 장비들을 덮는 사각형을 그린다. 그 위에서는 단자 행으로 선을 그을 수 없으므로 없앤다.
+   여러 장비는 고른 장비의 헤더를 끌어 함께 옮긴다 */
+.react-flow__nodesselection-rect { display: none; }
 /* 근접 연결 미리보기 */
 .snap-ring { fill: none; stroke-width: 2.5; }
 .bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }

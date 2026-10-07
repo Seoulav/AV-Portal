@@ -54,17 +54,29 @@ export function Canvas() {
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
   // 포인터 아래 단자가 맞으면 React Flow가 onConnect를 부른다. 아니면 근접 연결로 붙일 단자를 고르고,
-  // 가까운 단자가 모두 막혔으면 막힌 이유를 알린다
+  // 가까운 단자가 모두 막혔으면 막힌 이유를 알린다. 캔버스 밖(목록·패널 위)에서 놓으면 취소다
   const onConnectEnd = useCallback<OnConnectEnd>((event, state) => {
     if (state.isValid || !state.fromHandle?.id) return;
-    const from = { nodeId: state.fromHandle.nodeId, handle: state.fromHandle.id };
     const { clientX, clientY } = clientPoint(event);
+    const bounds = flowStore.getState().domNode?.getBoundingClientRect();
+    if (!bounds || clientX < bounds.left || clientX > bounds.right || clientY < bounds.top || clientY > bounds.bottom) return;
+    const from = { nodeId: state.fromHandle.nodeId, handle: state.fromHandle.id, type: state.fromHandle.type };
     const point = flow.screenToFlowPosition({ x: clientX, y: clientY });
     const store = builderStore.getState();
     const target = findDropTarget({ nodes: store.diagram.nodes, fromNodeId: from.nodeId, point, zoom: flow.getZoom(), judge: store.connectionJudge(from) });
-    if (target?.kind === 'connect') store.connect({ source: from.nodeId, sourceHandle: from.handle, target: target.anchor.nodeId, targetHandle: target.anchor.handle });
-    else if (target?.kind === 'blocked') store.notifyBlocked(target.code);
-  }, [flow]);
+    if (target?.kind === 'connect') {
+      // React Flow와 같은 방향으로 넘긴다: 받는 쪽 핸들에서 시작했으면 후보가 source다(양방향끼리는 이 순서가 엣지 방향)
+      const candidate = { node: target.anchor.nodeId, handle: target.anchor.handle };
+      store.connect(from.type === 'target'
+        ? { source: candidate.node, sourceHandle: candidate.handle, target: from.nodeId, targetHandle: from.handle }
+        : { source: from.nodeId, sourceHandle: from.handle, target: candidate.node, targetHandle: candidate.handle });
+    } else if (target?.kind === 'blocked') {
+      store.notifyBlocked(target.code);
+    } else if (state.toHandle?.id) {
+      // 출발 장비 자신의 단자 위에 놓은 경우 등: 그 단자가 막힌 이유를 알린다
+      store.explainBlocked({ source: from.nodeId, sourceHandle: from.handle, target: state.toHandle.nodeId, targetHandle: state.toHandle.id });
+    }
+  }, [flow, flowStore]);
   // Delete 키: React Flow는 엣지 삭제와 노드 삭제를 따로 보낸다. 한 번의 실행 취소 단위로 묶는다
   const onDelete = useCallback<OnDelete>(({ nodes: removedNodes, edges: removedEdges }) => {
     removeElements(removedNodes.map(node => node.id), removedEdges.map(edge => edge.id));
@@ -104,8 +116,9 @@ export function Canvas() {
       className="canvas"
       onDragOver={event => { event.preventDefault(); event.dataTransfer.dropEffect = 'copy'; }}
       onDrop={onDrop}
-      // 가운데 버튼은 화면 이동이다. 브라우저의 자동 스크롤이 끼어들지 않게 막는다
-      onMouseDown={event => { if (event.button === 1) event.preventDefault(); }}
+      // 가운데 버튼은 화면 이동이다. 브라우저의 자동 스크롤이 끼어들지 않게 막는다.
+      // d3-zoom이 가운데 버튼 누름의 전파를 멈추므로 캡처 단계에서 막는다
+      onMouseDownCapture={event => { if (event.button === 1) event.preventDefault(); }}
     >
       <ReactFlow
         nodes={nodes}

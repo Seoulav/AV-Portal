@@ -114,6 +114,8 @@ export const createLibraryIndex = L.createLibraryIndex as (library: Library) => 
 export const findPort = L.findPort as (data: Equipment, portId: string) => Port | null;
 export const equipmentPorts = L.equipmentPorts as (data: Equipment) => Port[];
 export const judgeConnection = R.judgeConnection as (from: PortRef, to: PortRef, options?: { occupied?: (nodeId: string, portId: string) => boolean; powerEnabled?: boolean; rules?: Rules }) => Judgement;
+export const sourceHandleOf = R.sourceHandleOf as (port: Port) => string;
+export const targetHandleOf = R.targetHandleOf as (port: Port) => string;
 export const parseHandle = R.parseHandle as (handle: string | null | undefined) => { portId: string; role: 'source' | 'target' | null } | null;
 export const serializeDiagram = S.serializeDiagram as (diagram: Diagram, options?: { library?: LibraryIndex | null }) => string;
 export const normalizeDiagram = S.normalizeDiagram as unknown as (diagram: Diagram, options?: { library?: LibraryIndex | null }) => Diagram;

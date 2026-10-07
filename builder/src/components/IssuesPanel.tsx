@@ -1,8 +1,8 @@
 // 이슈 패널(B-20261006-05 결정 H-a). 연결을 하나 고르지 않았을 때 오른쪽에 보인다.
 // 목록은 내보내기와 같은 normalizeDiagram으로 계산해 내보낸 파일의 issues와 같다. 누르면 대상 장비·연결을 고르고 화면을 옮긴다.
-import { useDeferredValue, useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { useReactFlow } from '@xyflow/react';
-import { normalizeDiagram, type Equipment, type Issue } from '../engine';
+import { normalizeDiagram, type Diagram, type Equipment, type Issue } from '../engine';
 import { useBuilder } from '../state/useBuilder';
 
 // 기반명세 §8.5의 이슈 코드
@@ -19,14 +19,23 @@ export const ISSUE_LABELS: Record<string, string> = {
 };
 const SEVERITIES: [Issue['severity'], string][] = [['warning', '주의'], ['info', '안내']];
 
+// 이슈는 장비 정보와 엣지에서만 나온다. 위치·선택만 바뀐 구성도(끌기 중 매 순간)는 앞의 구성도를 그대로 돌려줘 다시 계산하지 않는다
+function useIssueInput(diagram: Diagram): Diagram {
+  const last = useRef<Diagram | null>(null);
+  const previous = last.current;
+  const same = previous !== null && previous.edges === diagram.edges && previous.nodes.length === diagram.nodes.length
+    && previous.nodes.every((node, i) => node.id === diagram.nodes[i].id && node.type === diagram.nodes[i].type && node.data === diagram.nodes[i].data);
+  if (!same) last.current = diagram;
+  return last.current!;
+}
+
 export function IssuesPanel() {
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
   const focusTarget = useBuilder(state => state.focusTarget);
   const flow = useReactFlow();
-  // 끌기 중에는 매 순간 구성도가 바뀐다. 이슈 계산은 화면 갱신 뒤로 미룬다
-  const deferred = useDeferredValue(diagram);
-  const issues = useMemo(() => normalizeDiagram(deferred, { library }).issues ?? [], [deferred, library]);
+  const input = useIssueInput(diagram);
+  const issues = useMemo(() => normalizeDiagram(input, { library }).issues ?? [], [input, library]);
 
   const modelOf = (nodeId: string | undefined) => {
     const node = diagram.nodes.find(item => item.id === nodeId);

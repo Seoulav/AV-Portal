@@ -9,6 +9,7 @@ const UNITS: [string, string, ReturnType<typeof port>[]][] = [
   ['cam', 'Video', [port('out-hdmi-1', 'out', 'HDMI', 'video'), port('out-hdmi-2', 'out', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
   ['disp', 'Display', [port('in-hdmi-1', 'in', 'HDMI', 'video'), port('in-hdmi-2', 'in', 'HDMI', 'video'), port('in-hdmi-3', 'in', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
   ['ctl', 'Control', [port('in-rs-232-1', 'in', 'RS-232', 'control')]],
+  ['mon', 'Display', [port('in-hdmi-1', 'in', 'HDMI', 'video')]],
 ];
 
 export const library = {

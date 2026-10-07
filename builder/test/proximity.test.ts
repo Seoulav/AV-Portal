@@ -29,7 +29,7 @@ const setup = () => {
   const store = createBuilderStore({ ids: createIdFactory({ seed: 9, now: 0 }) });
   store.getState().setLibrary(index);
   const place = (id: string, x: number, y = 0) => store.getState().addEquipment(index.units.get(id)!.equipment, { x, y });
-  const drop = (from: { nodeId: string; handle: string }, point: { x: number; y: number }, zoom = 1) => {
+  const drop = (from: { nodeId: string; handle: string; type?: 'source' | 'target' }, point: { x: number; y: number }, zoom = 1) => {
     const state = store.getState();
     return findDropTarget({ nodes: state.diagram.nodes, fromNodeId: from.nodeId, point, zoom, judge: state.connectionJudge(from) });
   };
@@ -121,4 +121,31 @@ describe('drop target', () => {
     const edge = store.getState().diagram.edges[0];
     expect([edge.sourceHandle, edge.targetHandle]).toEqual(['source_both-ethernet-1', 'target_both-ethernet-1']);
   });
+
+  it('a bidirectional line drawn right to left attaches on the sides the edge will use', () => {
+    const { store, place, drop } = setup();
+    const sw = place('sw', 0);
+    const disp = place('disp', 500);
+    // disp의 양방향 행 왼쪽 절반(target_)에서 시작해 sw의 오른쪽 점 근처에 놓는다
+    const from = { nodeId: disp, handle: 'target_both-ethernet-1', type: 'target' as const };
+    const near = { x: G.NODE_WIDTH + G.HANDLE_OUTSET + 10, y: ROW1 + G.BIDI_LABEL_HEIGHT };
+    const target = drop(from, near);
+    expect(target).toMatchObject({ kind: 'connect', anchor: { nodeId: sw, handle: 'source_both-ethernet-1', side: 'right' }, fromHandle: 'target_both-ethernet-1' });
+    // Canvas처럼 받는 쪽에서 시작했으면 후보를 source로 넘긴다
+    if (target?.kind !== 'connect') return;
+    expect(store.getState().connect({ source: sw, sourceHandle: target.anchor.handle, target: disp, targetHandle: from.handle })).toBe(true);
+    const edge = store.getState().diagram.edges[0];
+    expect([edge.source, edge.sourceHandle, edge.target, edge.targetHandle]).toEqual([sw, 'source_both-ethernet-1', disp, 'target_both-ethernet-1']);
+  });
+
+  it('points the ring at the side the engine attaches to, even when the other dot is nearer', () => {
+    const { place, drop } = setup();
+    const disp = place('disp', 0);
+    const sw = place('sw', 500);
+    // disp의 오른쪽 절반(source_)에서 시작: sw는 target이 되어 왼쪽 점에 붙는다. 오른쪽 점 바로 옆에 놓아도 마찬가지다
+    const from = { nodeId: disp, handle: 'source_both-ethernet-1', type: 'source' as const };
+    const target = drop(from, { x: 500 + G.NODE_WIDTH + G.HANDLE_OUTSET + 5, y: ROW1 + G.BIDI_LABEL_HEIGHT });
+    expect(target).toMatchObject({ kind: 'connect', anchor: { nodeId: sw, handle: 'target_both-ethernet-1', side: 'left' } });
+  });
+
 });
