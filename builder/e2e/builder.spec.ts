@@ -10,12 +10,12 @@ const PLACEMENTS: [string, number, number][] = [['cam', 0, 0], ['disp', 500, 0],
 
 type Point = { x: number; y: number };
 
-async function openFixture(page: Page, placements: [string, number, number][] = PLACEMENTS) {
+async function openFixture(page: Page, placements: [string, number, number][] = PLACEMENTS, links: [number, string, number, string][] = []) {
   await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
   page.on('dialog', dialog => void dialog.accept());
   await page.goto('./');
   await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 6종');
-  const { text, nodeIds } = diagramText(placements);
+  const { text, nodeIds } = diagramText(placements, links);
   await page.locator('input[type=file]').setInputFiles({ name: 'fixture.diagram.json', mimeType: 'application/json', buffer: Buffer.from(text) });
   await expect(page.locator('.react-flow__node-equipment')).toHaveCount(placements.length);
   // 연 파일이 자동 저장될 때까지 기다린다(시험은 저장본으로 결과를 본다)
@@ -359,4 +359,124 @@ test('Shift+click tolerates a small slip, and a drag cancelled on its own row ke
   await page.waitForTimeout(400);
   expect(await savedEdges(page)).toEqual([]);
   await expect(page.locator('.react-flow__handle.port-selected')).toHaveCount(3);
+});
+
+// ── 선 그리기 이식(B-20261006-07, 구 Builder edgeProcessing·edgeGeometry) ──
+// 그려진 엣지 경로(캔버스 좌표)에서 세로 구간을 뽑는다. M·L·Q·A 명령만 쓴다
+type Segment = { edge: number; x: number; y1: number; y2: number };
+async function renderedPaths(page: Page) {
+  return page.locator('.react-flow__edge path.react-flow__edge-path').evaluateAll(paths => paths.map(path => path.getAttribute('d') ?? ''));
+}
+function verticalsOf(paths: string[]): Segment[] {
+  const segments: Segment[] = [];
+  paths.forEach((d, edge) => {
+    const tokens = d.match(/[MLQA]|-?[\d.]+/g) ?? [];
+    let cur = { x: 0, y: 0 };
+    for (let i = 0; i < tokens.length;) {
+      const command = tokens[i++];
+      const take = (n: number) => { const values = tokens.slice(i, i + n).map(Number); i += n; return values; };
+      if (command === 'M') { const [x, y] = take(2); cur = { x, y }; }
+      else if (command === 'L') {
+        const [x, y] = take(2);
+        if (Math.abs(x - cur.x) < 0.5 && Math.abs(y - cur.y) > 1) segments.push({ edge, x, y1: Math.min(y, cur.y), y2: Math.max(y, cur.y) });
+        cur = { x, y };
+      }
+      else if (command === 'Q') { const [, , x, y] = take(4); cur = { x, y }; }
+      else if (command === 'A') { const [, , , , , x, y] = take(7); cur = { x, y }; }
+    }
+  });
+  return segments;
+}
+const overlapping = (segments: Segment[]) => segments.filter((p, i) => segments.some((q, j) => j > i && q.edge !== p.edge && Math.abs(p.x - q.x) < 1 && Math.min(p.y2, q.y2) - Math.max(p.y1, q.y1) > 4)).length;
+
+test('fan-in and fan-out lines keep separate vertical runs (old Builder edgeProcessing)', async ({ page }) => {
+  // cam 4대 → wall 입력 1~4(모임), quad 출력 1~4 → mon 4대(퍼짐)
+  const placements: [string, number, number][] = [
+    ['cam', 0, 0], ['cam', 0, 230], ['cam', 0, 460], ['cam', 0, 690], ['wall', 600, 250],
+    ['quad', 1100, 300], ['mon', 1700, 0], ['mon', 1700, 200], ['mon', 1700, 400], ['mon', 1700, 600],
+  ];
+  const links: [number, string, number, string][] = [
+    [0, 'out-hdmi-1', 4, 'in-hdmi-1'], [1, 'out-hdmi-1', 4, 'in-hdmi-2'], [2, 'out-hdmi-1', 4, 'in-hdmi-3'], [3, 'out-hdmi-1', 4, 'in-hdmi-4'],
+    [5, 'out-hdmi-1', 6, 'in-hdmi-1'], [5, 'out-hdmi-2', 7, 'in-hdmi-1'], [5, 'out-hdmi-3', 8, 'in-hdmi-1'], [5, 'out-hdmi-4', 9, 'in-hdmi-1'],
+  ];
+  await openFixture(page, placements, links);
+  await expect(page.locator('.react-flow__edge')).toHaveCount(8);
+  const segments = verticalsOf(await renderedPaths(page));
+  expect(segments.length).toBeGreaterThanOrEqual(6);
+  expect(overlapping(segments)).toBe(0);
+});
+
+test('a crossing gets a jump arc on the horizontal line (old Builder edgeGeometry)', async ({ page }) => {
+  // 위 cam(출력 y 78) → 아래 mon(입력 y 678), 가운데 cam(출력 y 378) → 위 mon(입력 y -122).
+  // 아래로 가는 선의 가로 구간을 위로 가는 선의 세로 구간이 가로지른다
+  await openFixture(page, [['cam', 0, 0], ['cam', 0, 300], ['mon', 600, 600], ['mon', 600, -200]], [[0, 'out-hdmi-1', 2, 'in-hdmi-1'], [1, 'out-hdmi-1', 3, 'in-hdmi-1']]);
+  await expect(page.locator('.react-flow__edge')).toHaveCount(2);
+  const paths = await renderedPaths(page);
+  expect(paths.filter(d => / A 6 6 0 0 [01] /.test(d))).toHaveLength(1);
+});
+
+test('a bidirectional line is redrawn left to right after its devices swap sides', async ({ page }) => {
+  const { nodeIds: [cam, disp] } = await openFixture(page, [['cam', 0, 0], ['disp', 600, 0]], [[0, 'both-ethernet-1', 1, 'both-ethernet-1']]);
+  // React Flow가 잰 핸들 좌표라 소수점 끝이 조금 다르다. 정수로 맞춰 본다
+  const startX = async () => Math.round(Number((await renderedPaths(page))[0].match(/^M (-?[\d.]+)/)![1]));
+  const positionOf = async (id: string) => (await saved(page)).nodes.find((node: { id: string }) => node.id === id).position;
+  expect(await startX()).toBe((await positionOf(cam)).x + 240);
+  // cam을 disp 오른쪽으로 옮기면 선은 disp의 오른쪽에서 나와 cam의 왼쪽으로 들어간다. 저장된 source는 그대로 cam이다
+  const header = await box(page.locator(`.react-flow__node[data-id="${cam}"] .node-header`));
+  const target = await box(page.locator(`.react-flow__node[data-id="${disp}"] .node-header`));
+  await drag(page, { x: header.x + 40, y: header.y + 20 }, { x: target.x + target.width + 260, y: header.y + 20 });
+  await expect.poll(async () => (await positionOf(cam)).x).toBeGreaterThan((await positionOf(disp)).x + 220);
+  await expect.poll(startX).toBe((await positionOf(disp)).x + 240);
+  expect((await saved(page)).edges[0].source).toBe(cam);
+});
+
+test('cable view labels every connection with its cable or a missing mark (old Builder BOM mode)', async ({ page }) => {
+  await openFixture(page, [['quad', 0, 0], ['wall', 600, 0]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [0, 'out-hdmi-2', 1, 'in-hdmi-2']]);
+  await page.getByRole('button', { name: '케이블 보기' }).click();
+  await expect(page.locator('.edge-label.missing')).toHaveCount(2);
+  // 연결 하나를 골라 케이블을 넣는다
+  await page.locator('.react-flow__edge').first().click({ force: true });
+  await page.getByRole('button', { name: '케이블 추가' }).click();
+  await page.getByPlaceholder('제품명').fill('HDMI 3m');
+  await page.getByRole('button', { name: '저장' }).click();
+  await expect(page.locator('.edge-label.cable:not(.missing)')).toHaveText('HDMI 3m  ×1');
+  await expect(page.locator('.edge-label.missing')).toHaveCount(1);
+  await page.getByRole('button', { name: '케이블 보기' }).click();
+  await expect(page.locator('.edge-label')).toHaveCount(0);
+});
+
+test('the single-line preview of a bidirectional link matches the line drawn after the drop', async ({ page }) => {
+  // disp(오른쪽)의 양방향 행 오른쪽 절반(source_)을 잡아 cam(왼쪽) 몸체에 놓는다.
+  // 저장되면 양방향끼리라 좌우에 맞게 뒤집혀 cam의 오른쪽 점에서 disp의 왼쪽 점으로 그려진다. 미리보기 고리도 cam의 오른쪽 점이어야 한다
+  const { nodeIds: [cam, disp] } = await openFixture(page, [['cam', 0, 0], ['disp', 600, 0]]);
+  const start = await rowInside(handle(page, disp, 'source_both-ethernet-1'), 'right');
+  const camHeader = await box(page.locator(`.react-flow__node[data-id="${cam}"] .node-header`));
+  const camRight = await dot(handle(page, cam, 'source_both-ethernet-1'), 'right');
+  await page.mouse.move(start.x, start.y);
+  await page.mouse.down();
+  await page.mouse.move(camHeader.x + camHeader.width / 2, camHeader.y + 20, { steps: 15 });
+  const ring = await box(page.locator('.connection-preview .snap-ring'));
+  expect(Math.abs(ring.x + ring.width / 2 - camRight.x)).toBeLessThan(6);
+  const preview = (await page.locator('.connection-preview path').getAttribute('d')) ?? '';
+  await page.mouse.up();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 미리보기 끝점은 화면 좌표에서 되돌린 값이라 소수점 아래가 조금 다르다. 명령과 좌표를 1px 안으로 견준다
+  const drawn = (await renderedPaths(page))[0];
+  const commands = (d: string) => d.replace(/[-\d.]+/g, '#');
+  const numbers = (d: string) => (d.match(/-?\d+(?:\.\d+)?/g) ?? []).map(Number);
+  expect(commands(drawn)).toBe(commands(preview));
+  numbers(drawn).forEach((value, index) => expect(Math.abs(value - numbers(preview)[index])).toBeLessThan(1));
+});
+
+test('hovered and selected connections get thicker strokes over the inline width', async ({ page }) => {
+  await openFixture(page, [['quad', 0, 0], ['wall', 600, 0]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1']]);
+  const path = page.locator('.react-flow__edge path.react-flow__edge-path').first();
+  const width = () => path.evaluate(element => getComputedStyle(element).strokeWidth);
+  expect(await width()).toBe('2px');
+  const line = await box(path);
+  await page.mouse.move(line.x + line.width / 2, line.y + line.height / 2);
+  await expect.poll(width).toBe('3px');
+  await page.mouse.down();
+  await page.mouse.up();
+  await expect.poll(width).toBe('4px');
 });

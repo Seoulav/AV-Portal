@@ -1,5 +1,5 @@
 // 브라우저 시험용 합성 라이브러리와 구성도. 실제 Portal 데이터가 바뀌어도 시험이 흔들리지 않게 한다.
-import { DEFAULT_RULES, addEquipmentNode, createDiagram, createIdFactory, createLibraryIndex, serializeDiagram, type Library } from '../src/engine';
+import { DEFAULT_RULES, addEquipmentNode, connectPorts, createDiagram, createIdFactory, createLibraryIndex, serializeDiagram, type Library } from '../src/engine';
 
 type Direction = 'in' | 'out' | 'both';
 const port = (id: string, direction: Direction, signal: string, type: string) => ({
@@ -36,10 +36,15 @@ export const library = {
 
 export const libraryIndex = createLibraryIndex(library as unknown as Library);
 
-// 장비를 정한 자리에 놓은 1.2 파일. 노드 ID는 시드로 고정한다
-export function diagramText(placements: [string, number, number][]) {
+// 장비를 정한 자리에 놓은 1.2 파일. 노드 ID는 시드로 고정한다.
+// links: [출발 장비 번호, 출발 단자 ID, 도착 장비 번호, 도착 단자 ID] — 엔진 connectPorts로 미리 잇는다
+export function diagramText(placements: [string, number, number][], links: [number, string, number, string][] = []) {
   const diagram = createDiagram({ library: libraryIndex });
   const ids = createIdFactory({ seed: 3, now: 0 });
   const nodeIds = placements.map(([unit, x, y]) => addEquipmentNode(diagram, libraryIndex.units.get(unit)!.equipment, { position: { x, y }, ids }).id);
+  for (const [from, fromPort, to, toPort] of links) {
+    const result = connectPorts(diagram, { nodeId: nodeIds[from], portId: fromPort }, { nodeId: nodeIds[to], portId: toPort }, { ids, rules: libraryIndex.rules });
+    if (!result.ok) throw new Error(`픽스처 연결 실패: ${fromPort} → ${toPort} (${result.code})`);
+  }
   return { text: serializeDiagram(diagram, { library: libraryIndex }), nodeIds };
 }

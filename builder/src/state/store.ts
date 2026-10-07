@@ -55,6 +55,8 @@ export interface BuilderState {
   selectedPortsByNode: Record<string, string>;
   // 지금 끌고 있는 묶음(정렬한 단자 키). 묶음 끌기가 아니면 null
   bundle: string[] | null;
+  // 케이블 보기(구 Builder BOM 모드): 엣지 라벨에 케이블 요약을 보인다. 화면 상태다
+  cableView: boolean;
   setLibrary(library: LibraryIndex): void;
   addEquipment(equipment: Equipment, position: { x: number; y: number }): string;
   addAnnotation(position: { x: number; y: number }): void;
@@ -77,6 +79,7 @@ export interface BuilderState {
   selectPorts(keys: string[]): void;
   togglePort(key: string): void;
   setBundle(keys: string[] | null): void;
+  toggleCableView(): void;
   connectMany(connections: ConnectionLike[]): { connected: number; failed: string[] };
   undo(): void;
   redo(): void;
@@ -142,6 +145,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       boxSelecting: false,
       ...portsState([]),
       bundle: null,
+      cableView: false,
 
       setLibrary(library) {
         const { diagram } = get();
@@ -329,6 +333,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         set(portsState(selectedPorts.includes(key) ? selectedPorts.filter(item => item !== key) : [...selectedPorts, key]));
       },
       setBundle(keys) { set({ bundle: keys }); },
+      toggleCableView() { set({ cableView: !get().cableView }); },
 
       // 묶음 연결: 여러 쌍을 한 번의 실행 취소 단위로 잇는다. 막힌 쌍은 건너뛰고 코드를 돌려준다
       connectMany(connections) {
