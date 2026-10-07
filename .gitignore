@@ -12,4 +12,6 @@
 # Builder 앱(B-20261006-04). 의존성·빌드 결과·배포용 복사본은 커밋하지 않는다
 /builder/node_modules/
 /builder/dist/
+/builder/test-results/
+/builder/playwright-report/
 /beta/site/builder/

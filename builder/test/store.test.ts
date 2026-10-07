@@ -143,13 +143,13 @@ describe('store', () => {
     store.getState().connect({ source: cam, sourceHandle: 'out-hdmi-1', target: disp, targetHandle: 'in-hdmi-1' });
     const edgeId = store.getState().diagram.edges[0].id;
     store.getState().onEdgesChange([{ type: 'select', id: edgeId, selected: true }]);
-    expect(store.getState().selectedEdgeId).toBe(edgeId);
+    expect(store.getState().selectedEdgeIds).toEqual([edgeId]);
     // 지우기는 onDelete → removeElements로만 한다. React Flow가 먼저 보내는 remove 변경은 무시한다
     store.getState().onEdgesChange([{ type: 'remove', id: edgeId }]);
     expect(store.getState().diagram.edges).toHaveLength(1);
     store.getState().removeElements([], [edgeId]);
     expect(store.getState().diagram.edges).toHaveLength(0);
-    expect(store.getState().selectedEdgeId).toBeNull();
+    expect(store.getState().selectedEdgeIds).toEqual([]);
     store.getState().undo();
     expect(store.getState().diagram.edges).toHaveLength(1);
   });
@@ -213,6 +213,56 @@ describe('store', () => {
     store.getState().notify(null);
     store.getState().explainBlocked({ source: a, sourceHandle: 'source_both-ethernet-1', target: b, targetHandle: 'target_both-ethernet-1' });
     expect(store.getState().notice).toBeNull();
+  });
+});
+
+describe('selection', () => {
+  it('keeps several selected edges in diagram order, and focuses issue targets alone', () => {
+    const { store, unit } = setup();
+    const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
+    store.getState().connect({ source: cam, sourceHandle: 'out-hdmi-1', target: disp, targetHandle: 'in-hdmi-1' });
+    store.getState().connect({ source: cam, sourceHandle: 'source_both-ethernet-1', target: disp, targetHandle: 'target_both-ethernet-1' });
+    const [first, second] = store.getState().diagram.edges.map(edge => edge.id);
+    store.getState().onEdgesChange([{ type: 'select', id: second, selected: true }, { type: 'select', id: first, selected: true }]);
+    expect(store.getState().selectedEdgeIds).toEqual([first, second]);
+    store.getState().onEdgesChange([{ type: 'select', id: first, selected: false }]);
+    expect(store.getState().selectedEdgeIds).toEqual([second]);
+    store.getState().onNodesChange([{ type: 'select', id: cam, selected: true }]);
+    store.getState().focusTarget({ node: disp });
+    expect(store.getState().diagram.nodes.filter(node => node.selected).map(node => node.id)).toEqual([disp]);
+    expect(store.getState().selectedEdgeIds).toEqual([]);
+    store.getState().focusTarget({ edge: first });
+    expect(store.getState().diagram.nodes.some(node => node.selected)).toBe(false);
+    expect(store.getState().selectedEdgeIds).toEqual([first]);
+  });
+
+  it('box selection takes zones only when they are fully inside', () => {
+    const { store, unit } = setup();
+    const cam = store.getState().addEquipment(unit('cam'), { x: 100, y: 100 });
+    store.getState().addShape({ x: 0, y: 0 });
+    store.getState().addShape({ x: 1000, y: 1000 });
+    const [big, far] = store.getState().diagram.nodes.filter(node => node.type === 'shape').map(node => node.id);
+    store.getState().setBoxSelecting(true);
+    // React Flow는 걸치기만 해도(Partial) 고른다. 영역은 끝날 때 다시 판단한다
+    store.getState().onNodesChange([{ type: 'select', id: cam, selected: true }, { type: 'select', id: big, selected: true }]);
+    expect(store.getState().diagram.nodes.filter(node => node.selected).map(node => node.id)).toEqual([cam]);
+    store.getState().finishBoxSelection({ x: 50, y: 50, width: 300, height: 300 });
+    expect(store.getState().diagram.nodes.filter(node => node.selected).map(node => node.id)).toEqual([cam]);
+    store.getState().setBoxSelecting(true);
+    store.getState().finishBoxSelection({ x: -10, y: -10, width: 1400, height: 1400 });
+    expect(store.getState().diagram.nodes.filter(node => node.selected).map(node => node.id).sort()).toEqual([big, cam, far].sort());
+    expect(store.getState().boxSelecting).toBe(false);
+  });
+
+  it('judges candidate ports for proximity connect with one occupancy snapshot', () => {
+    const { store, unit } = setup();
+    const cam = store.getState().addEquipment(unit('cam'), { x: 0, y: 0 });
+    const disp = store.getState().addEquipment(unit('disp'), { x: 400, y: 0 });
+    const judge = store.getState().connectionJudge({ nodeId: cam, handle: 'out-hdmi-1' });
+    expect(judge({ nodeId: disp, handle: 'in-hdmi-1' })).toEqual({ allowed: true, code: undefined });
+    expect(judge({ nodeId: disp, handle: 'target_both-ethernet-1' }).code).toBe('signal-mismatch');
+    expect(judge({ nodeId: disp, handle: 'nope' }).code).toBe('port-missing');
   });
 });
 

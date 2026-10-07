@@ -5,6 +5,7 @@ import { loadSaved, startAutosave } from './state/autosave';
 import { builderStore, useBuilder } from './state/useBuilder';
 import { Canvas } from './components/Canvas';
 import { EdgePanel } from './components/EdgePanel';
+import { IssuesPanel } from './components/IssuesPanel';
 import { LibraryPanel } from './components/LibraryPanel';
 import { Toolbar } from './components/Toolbar';
 
@@ -21,6 +22,12 @@ function Notice() {
   }, [notice, notify]);
   if (!notice) return null;
   return <div className={`notice notice-${notice.tone}`} role="status" onClick={() => notify(null)}>{notice.text}</div>;
+}
+
+// 오른쪽 패널: 연결을 하나만 골랐으면 연결 편집, 아니면 이슈 목록(결정 H-a)
+function SidePanel() {
+  const edgeId = useBuilder(state => (state.selectedEdgeIds.length === 1 && !state.diagram.nodes.some(node => node.selected) ? state.selectedEdgeIds[0] : null));
+  return edgeId ? <EdgePanel edgeId={edgeId} /> : <IssuesPanel />;
 }
 
 export function App() {
@@ -53,7 +60,7 @@ export function App() {
         <div className="workspace">
           <LibraryPanel />
           {libraryReady ? <Canvas /> : <div className="canvas canvas-loading">장비 라이브러리를 불러오는 중입니다…</div>}
-          <EdgePanel />
+          <SidePanel />
         </div>
         <Notice />
       </div>

@@ -10,6 +10,17 @@ import { derivedParts } from './serialize.mjs';
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const isText = value => typeof value === 'string' && value.length > 0;
 
+// 케이블 행 하나를 검사한다. 견적 쪽이 이 값으로 수량을 세므로 0개·음수·빈 이름을 막는다(B-20261006-05 결정 H-d).
+// 화면(연결 편집 패널)도 이 함수로 저장 전에 검사한다. 문제가 없으면 null
+export function bomRowProblem(row) {
+  if (!isObject(row)) return { field: '', detail: '객체가 필요하다' };
+  if (row.cableType !== 'ready-made' && row.cableType !== 'manufactured') return { field: 'cableType', detail: "'ready-made'(기성)·'manufactured'(제작) 중 하나여야 한다" };
+  if (typeof row.productName !== 'string' || !row.productName.trim()) return { field: 'productName', detail: '제품명이 필요하다' };
+  if (row.cableType === 'ready-made' && !(Number.isInteger(row.quantity) && row.quantity >= 1)) return { field: 'quantity', detail: '기성 케이블의 수량은 1 이상의 정수여야 한다' };
+  if (row.cableType === 'manufactured' && !(Number.isFinite(row.length) && row.length > 0)) return { field: 'length', detail: '제작 케이블의 길이(m)는 0보다 큰 수여야 한다' };
+  return null;
+}
+
 // 1.1에서 항상 있던 키와 그 타입(기반명세 §8.6), 그리고 1.2에서 필요한 단자 필드
 function structureErrors(diagram) {
   const errors = [];
@@ -74,6 +85,10 @@ export function validateDiagram(diagram, { library = null, rules = library?.rule
   for (const node of diagram.nodes) if (node.type === 'equipment') for (const port of equipmentPorts(node.data)) {
     if (!lineTypes.has(port.type)) errors.push({ code: 'linetype-missing', target: { node: node.id, port: port.id }, detail: port.type });
   }
+  diagram.edges.forEach((edge, i) => (edge.data.bomRows ?? []).forEach((row, j) => {
+    const problem = bomRowProblem(row);
+    if (problem) errors.push({ code: 'bom-row-invalid', target: { edge: edge.id }, path: `edges[${i}].data.bomRows[${j}]${problem.field ? `.${problem.field}` : ''}`, detail: problem.detail });
+  }));
   const edgeIds = new Set();
   const usage = new Map();
   const resolved = [];

@@ -39,9 +39,12 @@ export interface BuilderState {
   diagram: Diagram;
   past: string[];
   future: string[];
-  selectedEdgeId: string | null;
+  // 선택된 엣지(범위 선택이면 여럿). 연결 편집 패널은 하나만 골랐을 때 연다
+  selectedEdgeIds: string[];
   notice: Notice | null;
   dragging: boolean;
+  // 범위 선택 중. 그동안 영역(shape)은 고르지 않고, 끝날 때 사각형 안에 다 들어온 영역만 고른다
+  boxSelecting: boolean;
   setLibrary(library: LibraryIndex): void;
   addEquipment(equipment: Equipment, position: { x: number; y: number }): string;
   addAnnotation(position: { x: number; y: number }): void;
@@ -52,10 +55,15 @@ export interface BuilderState {
   canConnect(connection: ConnectionLike): boolean;
   connect(connection: ConnectionLike): boolean;
   explainBlocked(connection: ConnectionLike): void;
+  connectionJudge(from: { nodeId: string; handle: string }): (to: { nodeId: string; handle: string }) => { allowed: boolean; code?: string };
+  notifyBlocked(code: string | undefined): void;
   setNodeLabel(nodeId: string, label: string): void;
   updateEdge(edgeId: string, patch: { label: string; rows: BomRow[] }): void;
   deleteEdge(edgeId: string): void;
-  selectEdge(edgeId: string | null): void;
+  selectEdges(edgeIds: string[]): void;
+  focusTarget(target: { node?: string; edge?: string }): void;
+  setBoxSelecting(on: boolean): void;
+  finishBoxSelection(rect: { x: number; y: number; width: number; height: number }): void;
   undo(): void;
   redo(): void;
   newDiagram(): void;
@@ -104,9 +112,10 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       diagram: initial ?? createDiagram(),
       past: [],
       future: [],
-      selectedEdgeId: null,
+      selectedEdgeIds: [],
       notice: null,
       dragging: false,
+      boxSelecting: false,
 
       setLibrary(library) {
         const { diagram } = get();
@@ -137,8 +146,10 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
 
       // 삭제는 여기서 하지 않는다. React Flow가 엣지·노드 삭제를 따로 보내므로 onDelete → removeElements로 한 번에 처리한다
       onNodesChange(changes) {
-        const { diagram, dragging } = get();
-        const applicable = changes.filter(change => change.type !== 'remove');
+        const { diagram, dragging, boxSelecting } = get();
+        const shapes = new Set(diagram.nodes.filter(node => node.type === 'shape').map(node => node.id));
+        const applicable = changes.filter(change => change.type !== 'remove'
+          && !(boxSelecting && change.type === 'select' && change.selected && shapes.has(change.id)));
         if (!applicable.length) return;
         const moved = (change: NodeChange) => {
           if (change.type !== 'position' || !change.position) return false;
@@ -156,22 +167,26 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       },
 
       onEdgesChange(changes) {
-        let selected = get().selectedEdgeId;
-        for (const change of changes) if (change.type === 'select') selected = change.selected ? change.id : selected === change.id ? null : selected;
-        if (selected !== get().selectedEdgeId) set({ selectedEdgeId: selected });
+        const selected = new Set(get().selectedEdgeIds);
+        for (const change of changes) {
+          if (change.type !== 'select') continue;
+          if (change.selected) selected.add(change.id); else selected.delete(change.id);
+        }
+        const next = get().diagram.edges.map(edge => edge.id).filter(id => selected.has(id));
+        if (next.join() !== get().selectedEdgeIds.join()) set({ selectedEdgeIds: next });
       },
 
       // 노드를 지우면 붙은 엣지도 함께 지운다. 실행 취소 한 번에 모두 돌아온다
       removeElements(nodeIds, edgeIds) {
-        const { diagram, selectedEdgeId } = get();
+        const { diagram, selectedEdgeIds } = get();
         const nodes = new Set(nodeIds);
         const edges = new Set(edgeIds);
         const nextNodes = diagram.nodes.filter(node => !nodes.has(node.id));
         const nextEdges = diagram.edges.filter(edge => !edges.has(edge.id) && !nodes.has(edge.source) && !nodes.has(edge.target));
         if (nextNodes.length === diagram.nodes.length && nextEdges.length === diagram.edges.length) return;
         remember();
-        const keepSelection = selectedEdgeId !== null && nextEdges.some(edge => edge.id === selectedEdgeId);
-        set({ diagram: { ...diagram, nodes: nextNodes, edges: nextEdges }, selectedEdgeId: keepSelection ? selectedEdgeId : null });
+        const remaining = new Set(nextEdges.map(edge => edge.id));
+        set({ diagram: { ...diagram, nodes: nextNodes, edges: nextEdges }, selectedEdgeIds: selectedEdgeIds.filter(id => remaining.has(id)) });
       },
 
       canConnect(connection) {
@@ -204,6 +219,21 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (judgement && !judgement.allowed) set({ notice: { text: blockReason(judgement.code), tone: 'warn' } });
       },
 
+      // 근접 연결용: 출발 단자를 정해 두고 후보 단자마다 판정한다. 사용 중인 단자 목록은 한 번만 만든다
+      connectionJudge(from) {
+        const { diagram, library } = get();
+        const used = occupiedPorts(diagram);
+        const fromPort = portOf(diagram, from.nodeId, from.handle);
+        const options = { occupied: (nodeId: string, portId: string) => used.has(`${nodeId}::${portId}`), rules: rulesOf(library) };
+        return to => {
+          const toPort = portOf(diagram, to.nodeId, to.handle);
+          if (!fromPort || !toPort) return { allowed: false, code: 'port-missing' };
+          const judgement = judgeConnection(fromPort, toPort, options);
+          return { allowed: judgement.allowed, code: judgement.code };
+        };
+      },
+      notifyBlocked(code) { set({ notice: { text: blockReason(code), tone: 'warn' } }); },
+
       // 메모·영역의 글만 바꾼다(서식 편집은 P5). 장비 노드는 Portal 데이터라 고치지 않는다
       setNodeLabel(nodeId, label) {
         const { diagram } = get();
@@ -227,23 +257,45 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         set({ diagram: next });
       },
       deleteEdge(edgeId) { get().removeElements([], [edgeId]); },
-      selectEdge(edgeId) { set({ selectedEdgeId: edgeId }); },
+      selectEdges(edgeIds) { set({ selectedEdgeIds: edgeIds }); },
+
+      // 이슈 패널에서 누른 대상만 고른다(다른 선택은 푼다)
+      focusTarget(target) {
+        const { diagram } = get();
+        const nodes = diagram.nodes.map(node => {
+          const selected = node.id === target.node;
+          return Boolean(node.selected) === selected ? node : { ...node, selected };
+        });
+        set({ diagram: { ...diagram, nodes }, selectedEdgeIds: target.edge && diagram.edges.some(edge => edge.id === target.edge) ? [target.edge] : [] });
+      },
+
+      setBoxSelecting(on) { set({ boxSelecting: on }); },
+      finishBoxSelection(rect) {
+        const { diagram } = get();
+        const inside = (node: Diagram['nodes'][number]) => {
+          const width = node.style?.width ?? 0;
+          const height = node.style?.height ?? 0;
+          return node.position.x >= rect.x && node.position.y >= rect.y && node.position.x + width <= rect.x + rect.width && node.position.y + height <= rect.y + rect.height;
+        };
+        const nodes = diagram.nodes.map(node => (node.type === 'shape' && inside(node) && !node.selected ? { ...node, selected: true } : node));
+        set({ diagram: { ...diagram, nodes }, boxSelecting: false });
+      },
 
       undo() {
         const { past, future, diagram } = get();
         if (!past.length) return;
-        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeId: null, dragging: false });
+        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], dragging: false });
       },
       redo() {
         const { past, future, diagram } = get();
         if (!future.length) return;
-        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeId: null, dragging: false });
+        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], dragging: false });
       },
 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library }), selectedEdgeId: null, notice: null });
+        set({ diagram: createDiagram({ library }), selectedEdgeIds: [], notice: null });
       },
 
       importText(text) {
@@ -256,7 +308,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { errors } = validateDiagram(parsed, { library: get().library });
         if (errors.length) return { ok: false, errors };
         remember();
-        set({ diagram: parsed as Diagram, selectedEdgeId: null });
+        set({ diagram: parsed as Diagram, selectedEdgeIds: [] });
         return { ok: true, errors: [] };
       },
       exportText() {

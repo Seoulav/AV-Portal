@@ -1,8 +1,15 @@
 // 캔버스. 연결 가능 여부·연결 생성은 엔진 규칙(store.canConnect·connect)으로 한다.
 // ConnectionMode.Loose: 입력 단자에서 끌기 시작해도 된다. 방향은 엔진이 바로잡는다(기반명세 §7.1 0번).
-import { useCallback, useMemo, type DragEvent } from 'react';
-import { Background, ConnectionMode, Controls, ReactFlow, useReactFlow, type Edge, type IsValidConnection, type Node, type OnConnectEnd, type OnDelete } from '@xyflow/react';
-import { useBuilder } from '../state/useBuilder';
+// 조작(기반명세 §9): 왼쪽 드래그 = 범위 선택, 가운데 버튼·Space+왼쪽 드래그 = 화면 이동, 장비는 헤더·사진으로 옮긴다.
+// 근접 연결: 포인터 아래 단자는 React Flow가 붙이고, 그 밖은 놓을 때 proximity.ts가 고른다(connectionRadius 0).
+import { useCallback, useMemo, useRef, type DragEvent, type MouseEvent as ReactMouseEvent } from 'react';
+import {
+  Background, ConnectionMode, Controls, ReactFlow, SelectionMode, useReactFlow, useStoreApi,
+  type Edge, type IsValidConnection, type Node, type OnConnectEnd, type OnDelete,
+} from '@xyflow/react';
+import { findDropTarget } from '../proximity';
+import { builderStore, useBuilder } from '../state/useBuilder';
+import { ConnectionLine } from './ConnectionLine';
 import { EquipmentNode } from './EquipmentNode';
 import { AnnotationNode, ShapeNode } from './NoteNodes';
 import { UNIT_MIME } from './LibraryPanel';
@@ -10,6 +17,11 @@ import { UNIT_MIME } from './LibraryPanel';
 const nodeTypes = { equipment: EquipmentNode, annotation: AnnotationNode, shape: ShapeNode };
 // 화면 맞춤은 실제 크기(1배)보다 키우지 않는다. 빈 캔버스나 장비 한두 대가 최대 배율로 열리지 않게 한다
 export const FIT_VIEW = { maxZoom: 1, padding: 0.2 };
+const PAN_BUTTONS = [1];
+// 이보다 덜 움직이고 놓으면 선 긋기가 아니라 클릭이다(기반명세 §9)
+const CONNECTION_DRAG_THRESHOLD = 4;
+
+const clientPoint = (event: MouseEvent | TouchEvent) => ('changedTouches' in event ? event.changedTouches[0] : event);
 
 export function Canvas() {
   const diagram = useBuilder(state => state.diagram);
@@ -20,31 +32,57 @@ export function Canvas() {
   const connect = useBuilder(state => state.connect);
   const addEquipment = useBuilder(state => state.addEquipment);
   const setNodeLabel = useBuilder(state => state.setNodeLabel);
-  const explainBlocked = useBuilder(state => state.explainBlocked);
   const removeElements = useBuilder(state => state.removeElements);
-  const selectedEdgeId = useBuilder(state => state.selectedEdgeId);
+  const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
   const flow = useReactFlow();
+  const flowStore = useStoreApi();
+  const boxStart = useRef<{ x: number; y: number } | null>(null);
 
   // 화면용 속성만 덧붙인다(저장할 때 엔진이 버린다). 영역은 장비 뒤에 깔고 제목 띠로만 끈다(안쪽 클릭 통과는 styles.css)
   const nodes = useMemo(() => diagram.nodes.map(node => {
     const view = { ...node } as unknown as Node;
+    if (node.type === 'equipment') view.dragHandle = '.node-drag';
     if (node.type === 'shape') Object.assign(view, { zIndex: -1, dragHandle: '.shape-title', width: node.style?.width, height: node.style?.height });
     if (node.type === 'annotation') Object.assign(view, { width: node.style?.width, height: node.style?.height });
     return view;
   }), [diagram.nodes]);
-  // 엣지 선택은 store의 selectedEdgeId 하나로 둔다. React Flow가 강조·Delete·선택 해제를 하려면 selected가 엣지에 있어야 한다
-  const edges = useMemo(() => diagram.edges.map(edge => ({ ...edge, label: edge.data.label, selected: edge.id === selectedEdgeId }) as unknown as Edge), [diagram.edges, selectedEdgeId]);
+  // 엣지 선택은 store.selectedEdgeIds에 둔다. React Flow가 강조·Delete·선택 해제를 하려면 selected가 엣지에 있어야 한다
+  const edges = useMemo(() => {
+    const selected = new Set(selectedEdgeIds);
+    return diagram.edges.map(edge => ({ ...edge, label: edge.data.label, selected: selected.has(edge.id) }) as unknown as Edge);
+  }, [diagram.edges, selectedEdgeIds]);
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
-  // 막힌 연결은 onConnect가 불리지 않는다. 단자 위에 놓았으면 이유를 알린다
-  const onConnectEnd = useCallback<OnConnectEnd>((_, state) => {
-    if (state.isValid || !state.fromHandle || !state.toHandle) return;
-    explainBlocked({ source: state.fromHandle.nodeId, sourceHandle: state.fromHandle.id, target: state.toHandle.nodeId, targetHandle: state.toHandle.id });
-  }, [explainBlocked]);
+  // 포인터 아래 단자가 맞으면 React Flow가 onConnect를 부른다. 아니면 근접 연결로 붙일 단자를 고르고,
+  // 가까운 단자가 모두 막혔으면 막힌 이유를 알린다
+  const onConnectEnd = useCallback<OnConnectEnd>((event, state) => {
+    if (state.isValid || !state.fromHandle?.id) return;
+    const from = { nodeId: state.fromHandle.nodeId, handle: state.fromHandle.id };
+    const { clientX, clientY } = clientPoint(event);
+    const point = flow.screenToFlowPosition({ x: clientX, y: clientY });
+    const store = builderStore.getState();
+    const target = findDropTarget({ nodes: store.diagram.nodes, fromNodeId: from.nodeId, point, zoom: flow.getZoom(), judge: store.connectionJudge(from) });
+    if (target?.kind === 'connect') store.connect({ source: from.nodeId, sourceHandle: from.handle, target: target.anchor.nodeId, targetHandle: target.anchor.handle });
+    else if (target?.kind === 'blocked') store.notifyBlocked(target.code);
+  }, [flow]);
   // Delete 키: React Flow는 엣지 삭제와 노드 삭제를 따로 보낸다. 한 번의 실행 취소 단위로 묶는다
   const onDelete = useCallback<OnDelete>(({ nodes: removedNodes, edges: removedEdges }) => {
     removeElements(removedNodes.map(node => node.id), removedEdges.map(edge => edge.id));
   }, [removeElements]);
+
+  // 범위 선택: 영역(shape)은 사각형 안에 다 들어온 것만 고른다. 걸치기만 해도 고르면 영역 안 장비를 고를 때 영역까지 딸려 온다
+  const onSelectionStart = useCallback(() => {
+    const rect = flowStore.getState().userSelectionRect;
+    boxStart.current = rect ? { x: rect.startX, y: rect.startY } : null;
+    builderStore.getState().setBoxSelecting(true);
+  }, [flowStore]);
+  const onSelectionEnd = useCallback((event: ReactMouseEvent) => {
+    const start = boxStart.current;
+    boxStart.current = null;
+    const end = flow.screenToFlowPosition({ x: event.clientX, y: event.clientY });
+    if (!start) { builderStore.getState().setBoxSelecting(false); return; }
+    builderStore.getState().finishBoxSelection({ x: Math.min(start.x, end.x), y: Math.min(start.y, end.y), width: Math.abs(end.x - start.x), height: Math.abs(end.y - start.y) });
+  }, [flow]);
 
   // 메모·영역은 두 번 눌러 글을 바꾼다(구 Builder 기본 문구가 이 동작을 안내한다)
   const onNodeDoubleClick = useCallback((_: unknown, node: Node) => {
@@ -62,7 +100,13 @@ export function Canvas() {
   }, [library, addEquipment, flow]);
 
   return (
-    <div className="canvas" onDragOver={event => { event.preventDefault(); event.dataTransfer.dropEffect = 'copy'; }} onDrop={onDrop}>
+    <div
+      className="canvas"
+      onDragOver={event => { event.preventDefault(); event.dataTransfer.dropEffect = 'copy'; }}
+      onDrop={onDrop}
+      // 가운데 버튼은 화면 이동이다. 브라우저의 자동 스크롤이 끼어들지 않게 막는다
+      onMouseDown={event => { if (event.button === 1) event.preventDefault(); }}
+    >
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -73,9 +117,19 @@ export function Canvas() {
         onConnectEnd={onConnectEnd}
         onDelete={onDelete}
         onNodeDoubleClick={onNodeDoubleClick}
+        onSelectionStart={onSelectionStart}
+        onSelectionEnd={onSelectionEnd}
         zoomOnDoubleClick={false}
         isValidConnection={isValidConnection}
         connectionMode={ConnectionMode.Loose}
+        connectionRadius={0}
+        connectionDragThreshold={CONNECTION_DRAG_THRESHOLD}
+        connectOnClick={false}
+        connectionLineComponent={ConnectionLine}
+        selectionOnDrag
+        selectionMode={SelectionMode.Partial}
+        panOnDrag={PAN_BUTTONS}
+        panActivationKeyCode="Space"
         defaultEdgeOptions={{ type: 'smoothstep' }}
         deleteKeyCode={['Delete', 'Backspace']}
         minZoom={0.05}

@@ -3,6 +3,7 @@
 import * as D from '../engine/defaults.mjs';
 import * as DG from '../engine/diagram.mjs';
 import * as G from '../engine/geometry.mjs';
+import * as I from '../engine/issues.mjs';
 import * as L from '../engine/library.mjs';
 import * as R from '../engine/rules.mjs';
 import * as S from '../engine/serialize.mjs';
@@ -95,6 +96,8 @@ export interface LibraryIndex {
 }
 export interface IdFactory { node(): string; annotation(): string; shape(): string; edge(source: string, target: string): string }
 export interface PortRef { nodeId: string; port: Port }
+// 단자에 선이 붙는 점(노드 왼쪽 위 기준). handle은 React Flow 핸들 ID(양방향은 source_/target_ 접두어)
+export interface PortAnchor { portId: string; handle: string; side: 'left' | 'right'; x: number; y: number }
 export interface Judgement { allowed: boolean; code?: string; source: PortRef; target: PortRef; flipped: boolean; signal?: string; lineTypeId?: string; findings?: Issue[] }
 
 export const DEFAULT_RULES = D.DEFAULT_RULES as unknown as Rules;
@@ -115,6 +118,8 @@ export const parseHandle = R.parseHandle as (handle: string | null | undefined) 
 export const serializeDiagram = S.serializeDiagram as (diagram: Diagram, options?: { library?: LibraryIndex | null }) => string;
 export const normalizeDiagram = S.normalizeDiagram as unknown as (diagram: Diagram, options?: { library?: LibraryIndex | null }) => Diagram;
 export const validateDiagram = VA.validateDiagram as (diagram: unknown, options?: { library?: LibraryIndex | null }) => { errors: ValidationError[]; issues: Issue[] };
+export const bomRowProblem = VA.bomRowProblem as (row: unknown) => { field: string; detail: string } | null;
+export const computeIssues = I.computeIssues as (diagram: Diagram, options?: { library?: LibraryIndex | null; rules?: Rules }) => Issue[];
 export const geometry = {
   NODE_WIDTH: G.NODE_WIDTH as number,
   NODE_HEADER_HEIGHT: G.NODE_HEADER_HEIGHT as number,
@@ -124,5 +129,8 @@ export const geometry = {
   PORT_ROW_GAP: G.PORT_ROW_GAP as number,
   IO_BIDI_GAP: G.IO_BIDI_GAP as number,
   BIDI_LABEL_HEIGHT: G.BIDI_LABEL_HEIGHT as number,
+  HANDLE_SIZE: G.HANDLE_SIZE as number,
+  HANDLE_OUTSET: G.HANDLE_OUTSET as number,
   nodeHeight: G.nodeHeight as (data: Equipment) => number,
+  portAnchors: G.portAnchors as (data: Equipment) => PortAnchor[],
 };
