@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { NodeChange } from '@xyflow/react';
 import { ANNOTATION_DATA_KEYS, SHAPE_DATA_KEYS, createIdFactory, validateDiagram } from '../src/engine';
-import { noteDraftToData } from '../src/components/NotePanel';
+import { noteDraftToData, notePatch } from '../src/components/NotePanel';
 import { createBuilderStore } from '../src/state/store';
 import { THEME_KEY, loadTheme, startTheme } from '../src/state/theme';
 
@@ -41,6 +41,26 @@ describe('note and zone formatting (old Builder EditAnnotationModal)', () => {
     expect(Object.keys(noteDraftToData('annotation', {})).every(key => ANNOTATION_DATA_KEYS.includes(key))).toBe(true);
   });
 
+  it('reads number fields as the inputs give them (strings): empty means the default, not the minimum', () => {
+    const draft = { fontSize: '', borderRadius: '', bgOpacity: '0.35' } as unknown as Parameters<typeof noteDraftToData>[1];
+    expect(noteDraftToData('annotation', draft)).toMatchObject({ fontSize: 14, borderRadius: 8, bgOpacity: 0.35 });
+    expect(noteDraftToData('shape', { borderWidth: '' } as unknown as Parameters<typeof noteDraftToData>[1])).toMatchObject({ borderWidth: 2 });
+    expect(noteDraftToData('annotation', { fontSize: '25' } as unknown as Parameters<typeof noteDraftToData>[1]).fontSize).toBe(25);
+  });
+
+  it('applying the panel without edits changes nothing, even on a note that lacks most format keys', () => {
+    const { store, note } = setup();
+    store.getState().updateNoteData(note, { fontSize: undefined, fontColor: undefined, bgColor: undefined, bgOpacity: undefined, borderColor: undefined, borderStyle: undefined, borderRadius: undefined, textAlign: undefined });
+    const data = store.getState().diagram.nodes.find(item => item.id === note)!.data;
+    expect(Object.keys(data)).toEqual(['label']);
+    // 패널은 기본값을 채워 보여 주지만, 손대지 않았으면 보낼 것이 없다
+    expect(notePatch('annotation', { ...data }, data)).toEqual({});
+    expect(notePatch('annotation', { ...data, fontSize: 20 }, data)).toEqual({ fontSize: 20 });
+    const past = store.getState().past.length;
+    expect(store.getState().updateNoteData(note, notePatch('annotation', { ...data }, data))).toBe(false);
+    expect(store.getState().past.length).toBe(past);
+  });
+
   it('a formatted and locked note exports cleanly and passes the validator', () => {
     const { store, note, zone } = setup();
     store.getState().updateNoteData(note, noteDraftToData('annotation', { label: '주의', fontSize: 18, locked: true }) as Record<string, unknown>);
@@ -76,6 +96,15 @@ describe('resizing notes and zones (NodeResizer)', () => {
     expect({ position: node(zone).position, style: node(zone).style }).toEqual(before);
   });
 
+  it('a click on a resize handle without dragging (end signal only) leaves the size alone', () => {
+    const { store, zone, node } = setup();
+    const before = node(zone).style;
+    const past = store.getState().past.length;
+    store.getState().onNodesChange([{ id: zone, type: 'dimensions', resizing: false, dimensions: { width: 351, height: 249 } }]);
+    expect(node(zone).style).toEqual(before);
+    expect(store.getState().past.length).toBe(past);
+  });
+
   it('measurement updates without a resize gesture are not recorded', () => {
     const { store, note } = setup();
     const past = store.getState().past.length;
@@ -91,6 +120,9 @@ describe('double-click and theme', () => {
     store.getState().editNote(note);
     expect(store.getState().diagram.nodes.filter(item => item.selected).map(item => item.id)).toEqual([note]);
     expect(store.getState().noteFocus?.nodeId).toBe(note);
+    // 패널이 초점을 옮기면 요청을 지운다. 남으면 나중에 한 번 눌러도 글 칸이 초점을 가져간다
+    store.getState().clearNoteFocus();
+    expect(store.getState().noteFocus).toBeNull();
   });
 
   it('keeps the theme in the browser only: not in the file, not in undo history', () => {

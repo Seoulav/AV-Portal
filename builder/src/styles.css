@@ -165,6 +165,8 @@ input, select, textarea { border: 1px solid var(--line); border-radius: 8px; pad
 .shape-title { position: relative; z-index: 1; pointer-events: all; cursor: move; padding: 12px; min-height: 24px; font-weight: 700; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; user-select: none; }
 /* 영역 안쪽은 클릭이 통과하지만 크기 손잡이는 받는다 */
 .shape-node .react-flow__resize-control { pointer-events: all; }
+/* 크기 손잡이는 메모 글·영역 이름 겹 위에 둔다 */
+.react-flow__resize-control { z-index: 2; }
 
 .edge-facts { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 12px; margin: 0; }
 .edge-facts dt { color: var(--muted); }
@@ -184,7 +186,7 @@ input, select, textarea { border: 1px solid var(--line); border-radius: 8px; pad
    엔진이 엣지 style에 strokeWidth를 inline으로 쓰므로 !important로 덮는다(구 Builder App.css와 같다) */
 .react-flow__edge:hover .react-flow__edge-path { stroke-width: 3px !important; }
 .react-flow__edge.selected .react-flow__edge-path,
-.react-flow__edge.selected:hover .react-flow__edge-path { stroke-width: 4px !important; filter: drop-shadow(0 0 2px rgba(15, 23, 42, 0.55)); }
+.react-flow__edge.selected:hover .react-flow__edge-path { stroke-width: 4px !important; filter: drop-shadow(0 0 2px color-mix(in srgb, var(--text) 60%, transparent)); }
 button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
 /* 이슈 패널 */
@@ -198,7 +200,8 @@ button.active { border-color: var(--accent); color: var(--accent); background: v
 .issue-detail { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
 
 .notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: var(--notice-bg); color: var(--notice-text); font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
-.notice-warn { background: #92400e; }
+/* 경고 알림은 두 테마 모두 짙은 바탕에 흰 글자다(어두운 테마의 짙은 알림 글자와 겹치지 않게) */
+.notice-warn { background: #92400e; color: #ffffff; }
 .notice-error { background: var(--danger); }
 
 /* 편집 도구(B-20261006-08, 구 Builder App.css·index.css) */

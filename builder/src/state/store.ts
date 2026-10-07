@@ -97,6 +97,7 @@ export interface BuilderState {
   setNodeLabel(nodeId: string, label: string): void;
   updateNoteData(nodeId: string, patch: Record<string, unknown>): boolean;
   editNote(nodeId: string): void;
+  clearNoteFocus(): void;
   updateEdge(edgeId: string, patch: { label: string; rows: BomRow[] }): void;
   deleteEdge(edgeId: string): void;
   selectEdges(edgeIds: string[]): void;
@@ -243,8 +244,9 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const dragEnd = applicable.some(change => change.type === 'position' && change.dragging === false);
         if (dragStart || keyMove || resizeStart) remember();
         let nodes = applyNodeChanges(applicable, diagram.nodes as unknown as Node[]) as unknown as Diagram['nodes'];
-        // 바뀐 크기는 파일의 style(1.1)에 둔다. React Flow가 붙인 width·height·resizing은 화면 값이라 지운다
-        if (resizes.length) {
+        // 바뀐 크기는 파일의 style(1.1)에 둔다. React Flow가 붙인 width·height·resizing은 화면 값이라 지운다.
+        // 크기 손잡이를 끌지 않고 누르기만 하면 끝 신호만 온다. 그때는 크기를 바꾸지 않는다(기록 없이 파일이 바뀌지 않게)
+        if (resizes.length && (resizing || resizeStart)) {
           const sizes = new Map(resizes.filter(change => change.dimensions).map(change => [change.id, change.dimensions!]));
           nodes = nodes.map(node => {
             const size = sizes.get(node.id);
@@ -381,6 +383,8 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         get().focusTarget({ node: nodeId });
         set({ noteFocus: { nodeId, at: Date.now() } });
       },
+      // 패널이 초점을 옮긴 뒤 요청을 지운다. 남아 있으면 나중에 그 메모를 한 번만 눌러도 글 칸이 초점을 가져가 Delete·단축키가 막힌다
+      clearNoteFocus() { if (get().noteFocus) set({ noteFocus: null }); },
 
       // 라벨·케이블을 한 단계로 바꾼다. 바뀐 것이 없으면 기록하지 않는다(다시 실행 목록도 그대로)
       updateEdge(edgeId, { label, rows }) {

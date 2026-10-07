@@ -652,6 +652,14 @@ test('a note is formatted from the side panel and one undo restores it', async (
   await expect(page.locator(`.react-flow__node[data-id="${note}"] .annotation-text`)).toHaveText('랙 뒤 전원');
   await page.keyboard.press('Control+z');
   await expect.poll(async () => (await savedNode(page, note)).data.label).toBe('New note (Double-click to edit)');
+  // 두 번 누른 뒤 다른 곳을 눌렀다가 다시 한 번 누르면 글 칸이 초점을 가져가지 않는다. Delete가 메모를 지운다
+  const { pane } = await emptyCorner(page);
+  await page.mouse.click(pane.x + 30, pane.y + pane.height - 30);
+  await page.locator(`.react-flow__node[data-id="${note}"]`).click();
+  await expect(page.locator('.note-panel')).toBeVisible();
+  await expect(page.locator('.note-panel textarea')).not.toBeFocused();
+  await page.keyboard.press('Delete');
+  await expect.poll(async () => (await saved(page)).nodes.some((node: { id: string }) => node.id === note)).toBe(false);
 });
 
 test('a zone becomes a circle, resizes by its handle in one undo step, and a locked note does not move', async ({ page }) => {
@@ -667,6 +675,15 @@ test('a zone becomes a circle, resizes by its handle in one undo step, and a loc
   await expect.poll(async () => (await savedNode(page, zone)).style.width).toBeGreaterThan(start.width + 40);
   await page.keyboard.press('Control+z');
   await expect.poll(async () => (await savedNode(page, zone)).style).toEqual(start);
+  // 안쪽으로 크게 끌어도 최소 80×80보다 작아지지 않는다(구 Builder와 같다)
+  // 실행 취소는 선택을 푼다. 다시 골라 손잡이를 띄운다
+  await page.locator(`.react-flow__node[data-id="${zone}"] .shape-title`).click();
+  const shrink = await box(page.locator(`.react-flow__node[data-id="${zone}"] .react-flow__resize-control.handle.bottom.right`));
+  await drag(page, { x: shrink.x + shrink.width / 2, y: shrink.y + shrink.height / 2 }, { x: shrink.x - 600, y: shrink.y - 600 });
+  await expect.poll(async () => (await savedNode(page, zone)).style.width).toBeLessThan(start.width);
+  const smallest = (await savedNode(page, zone)).style;
+  expect(smallest.width).toBeGreaterThanOrEqual(80);
+  expect(smallest.height).toBeGreaterThanOrEqual(80);
   // 고정한 메모는 끌리지 않고 크기 손잡이도 없다
   await page.locator(`.react-flow__node[data-id="${note}"]`).dblclick();
   await page.getByLabel('고정(끌기·크기 바꾸기 막기)').check();

@@ -21,8 +21,11 @@ const BORDER_STYLES = [['none', '없음'], ['solid', '실선'], ['dashed', '점�
 const ALIGNS = [['left', '왼쪽'], ['center', '가운데'], ['right', '오른쪽']] as const;
 const SHAPES = [['rectangle', '사각형'], ['rounded-rectangle', '둥근 사각형'], ['circle', '원']] as const;
 
-// 숫자 칸: 범위 밖이나 빈 값은 범위 안으로 맞춘다(파일에 NaN이 들어가지 않게)
-const clamp = (value: number, min: number, max: number, fallback: number) => (Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : fallback);
+// 숫자 칸: 빈 값은 기본값, 범위 밖은 범위 안으로 맞춘다(파일에 NaN·문자열이 들어가지 않게). 입력 칸 값은 문자열로 온다
+const clamp = (value: unknown, min: number, max: number, fallback: number) => {
+  const number = value === '' || value === undefined || value === null ? Number.NaN : Number(value);
+  return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback;
+};
 const isHex = (value: string) => /^#[0-9a-f]{6}$/i.test(value);
 
 // 패널에서 고친 값을 저장할 서식 값으로 바꾼다(메모·영역마다 쓰는 키만)
@@ -30,17 +33,25 @@ export function noteDraftToData(type: 'annotation' | 'shape', draft: NoteData): 
   const defaults = type === 'annotation' ? ANNOTATION_DEFAULTS : SHAPE_DEFAULTS;
   const common: Partial<NoteData> = {
     label: draft.label ?? '',
-    fontSize: clamp(Number(draft.fontSize), 10, 60, defaults.fontSize),
+    fontSize: clamp(draft.fontSize, 10, 60, defaults.fontSize),
     fontColor: draft.fontColor || defaults.fontColor,
     bgColor: draft.bgColor || defaults.bgColor,
-    bgOpacity: clamp(Number(draft.bgOpacity), 0, 1, defaults.bgOpacity),
+    bgOpacity: clamp(draft.bgOpacity, 0, 1, defaults.bgOpacity),
     borderColor: draft.borderColor || defaults.borderColor,
     borderStyle: draft.borderStyle || defaults.borderStyle,
     locked: draft.locked ? true : undefined,
   };
-  if (type === 'annotation') return { ...common, borderRadius: clamp(Number(draft.borderRadius), 0, 30, ANNOTATION_DEFAULTS.borderRadius), textAlign: draft.textAlign ?? ANNOTATION_DEFAULTS.textAlign };
-  return { ...common, shapeType: draft.shapeType ?? SHAPE_DEFAULTS.shapeType, borderWidth: clamp(Number(draft.borderWidth), 1, 10, SHAPE_DEFAULTS.borderWidth) };
+  if (type === 'annotation') return { ...common, borderRadius: clamp(draft.borderRadius, 0, 30, ANNOTATION_DEFAULTS.borderRadius), textAlign: draft.textAlign ?? ANNOTATION_DEFAULTS.textAlign };
+  return { ...common, shapeType: draft.shapeType ?? SHAPE_DEFAULTS.shapeType, borderWidth: clamp(draft.borderWidth, 1, 10, SHAPE_DEFAULTS.borderWidth) };
 }
+
+// 패널 값과 지금 값(기본값을 채운 것)을 견줘 바뀐 키만 돌려준다. 손대지 않고 적용하면 빈 객체라 기록하지 않는다
+export function notePatch(type: 'annotation' | 'shape', draft: NoteData, current: Record<string, unknown>): Record<string, unknown> {
+  const next = noteDraftToData(type, draft) as Record<string, unknown>;
+  const base = noteDraftToData(type, initialDraft(type, current)) as Record<string, unknown>;
+  return Object.fromEntries(Object.keys(next).filter(key => JSON.stringify(next[key]) !== JSON.stringify(base[key])).map(key => [key, next[key]]));
+}
+const initialDraft = (type: 'annotation' | 'shape', data: Record<string, unknown>): NoteData => ({ ...(type === 'annotation' ? ANNOTATION_DEFAULTS : SHAPE_DEFAULTS), ...(data as NoteData) });
 
 function ColorField({ label, value, presets, onChange }: { label: string; value: string; presets: readonly (readonly [string, string])[]; onChange: (value: string) => void }) {
   return (
@@ -66,23 +77,28 @@ export function NotePanel({ nodeId }: { nodeId: string }) {
   const notify = useBuilder(state => state.notify);
   const focusRequest = useBuilder(state => state.noteFocus);
   const focusTarget = useBuilder(state => state.focusTarget);
-  const [draft, setDraft] = useState<NoteData>({});
-  const text = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
+  const clearNoteFocus = useBuilder(state => state.clearNoteFocus);
   const type = node?.type === 'shape' ? 'shape' : 'annotation';
+  // 첫 그림부터 값을 채운다(빈 값으로 그렸다가 채우면 선택 칸이 비제어에서 제어로 바뀐다)
+  const [draft, setDraft] = useState<NoteData>(() => initialDraft(type, node?.data ?? {}));
+  const text = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
   // 다른 메모를 고르거나 적용·실행 취소로 값이 바뀌면 입력란을 다시 채운다
   useEffect(() => {
     if (!node) return;
-    setDraft({ ...(type === 'annotation' ? ANNOTATION_DEFAULTS : SHAPE_DEFAULTS), ...(node.data as NoteData) });
+    setDraft(initialDraft(type, node.data));
   }, [node?.id, node?.data, type]);
-  // 두 번 누르면 글 칸으로 초점을 옮긴다
+  // 두 번 누르면 글 칸으로 초점을 옮기고 요청을 지운다
   useEffect(() => {
-    if (focusRequest?.nodeId === nodeId) { text.current?.focus(); text.current?.select(); }
-  }, [focusRequest, nodeId]);
+    if (focusRequest?.nodeId !== nodeId) return;
+    text.current?.focus();
+    text.current?.select();
+    clearNoteFocus();
+  }, [focusRequest, nodeId, clearNoteFocus]);
   if (!node || node.type === 'equipment') return null;
   const set = (patch: Partial<NoteData>) => setDraft({ ...draft, ...patch });
   const value = (key: keyof NoteData) => (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => set({ [key]: event.target.value } as Partial<NoteData>);
   const apply = () => {
-    if (updateNoteData(node.id, noteDraftToData(type, draft) as Record<string, unknown>)) notify({ text: '서식을 적용했습니다.', tone: 'info' });
+    if (updateNoteData(node.id, notePatch(type, draft, node.data))) notify({ text: '서식을 적용했습니다.', tone: 'info' });
   };
   // 닫으면 선택을 풀어 이슈 목록으로 돌아간다
   const close = () => focusTarget({});

@@ -17,6 +17,12 @@ export const SHAPE_DEFAULTS = { shapeType: 'rectangle', fontSize: 14, fontColor:
 export const ANNOTATION_MIN = { width: 60, height: 30 };
 export const SHAPE_MIN = { width: 80, height: 80 };
 const SHAPE_RADIUS = { rectangle: '0px', 'rounded-rectangle': '12px', circle: '50%' } as const;
+// 크기 손잡이(구 Builder와 같다): 8px 사각형, 흰 테두리
+const handleStyle = (color: string): CSSProperties => ({ width: 8, height: 8, background: color, border: '1px solid #fff' });
+const NOTE_HANDLE = handleStyle('#38bdf8');
+const ZONE_HANDLE = handleStyle('#10b981');
+const NOTE_LINE = { borderColor: '#38bdf8' };
+const ZONE_LINE = { borderColor: '#10b981' };
 
 const layer = (bgColor: string, opacity: number, border: string, radius: string): CSSProperties => ({
   position: 'absolute', inset: 0, backgroundColor: bgColor, opacity, border, borderRadius: radius, boxSizing: 'border-box', pointerEvents: 'none',
@@ -31,7 +37,7 @@ function AnnotationView({ data, selected, width, height }: NodeProps) {
   return (
     <div className="annotation-node" style={{ width, height, borderRadius: radius }}>
       <div style={layer(note.bgColor ?? ANNOTATION_DEFAULTS.bgColor, note.bgOpacity ?? ANNOTATION_DEFAULTS.bgOpacity, border, radius)} />
-      <NodeResizer isVisible={Boolean(selected) && !note.locked && !allLocked} minWidth={ANNOTATION_MIN.width} minHeight={ANNOTATION_MIN.height} color="#38bdf8" />
+      <NodeResizer isVisible={Boolean(selected) && !note.locked && !allLocked} minWidth={ANNOTATION_MIN.width} minHeight={ANNOTATION_MIN.height} handleStyle={NOTE_HANDLE} lineStyle={NOTE_LINE} />
       <div className="annotation-text" style={{ color: note.fontColor ?? ANNOTATION_DEFAULTS.fontColor, fontSize: note.fontSize ?? ANNOTATION_DEFAULTS.fontSize, textAlign: note.textAlign ?? ANNOTATION_DEFAULTS.textAlign }}>
         {note.label || '두 번 눌러 메모 편집'}
       </div>
@@ -48,7 +54,7 @@ function ShapeView({ data, selected, width, height }: NodeProps) {
   return (
     <div className="shape-node" style={{ width, height, borderRadius: radius }}>
       <div style={layer(zone.bgColor ?? SHAPE_DEFAULTS.bgColor, zone.bgOpacity ?? SHAPE_DEFAULTS.bgOpacity, border, radius)} />
-      <NodeResizer isVisible={Boolean(selected) && !zone.locked && !allLocked} minWidth={SHAPE_MIN.width} minHeight={SHAPE_MIN.height} color="#10b981" />
+      <NodeResizer isVisible={Boolean(selected) && !zone.locked && !allLocked} minWidth={SHAPE_MIN.width} minHeight={SHAPE_MIN.height} handleStyle={ZONE_HANDLE} lineStyle={ZONE_LINE} />
       <div className="shape-title" style={{ fontSize: zone.fontSize ?? SHAPE_DEFAULTS.fontSize, color: zone.fontColor ?? SHAPE_DEFAULTS.fontColor }}>{zone.label}</div>
     </div>
   );
