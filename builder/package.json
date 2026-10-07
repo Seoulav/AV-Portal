@@ -1,7 +1,7 @@
 {
   "name": "av-portal-builder",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "description": "AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 Builder 화면",
   "scripts": {

@@ -113,6 +113,8 @@ export function Toolbar() {
         <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
         <button type="button" className={state.snapToGrid ? 'active' : ''} aria-pressed={state.snapToGrid} onClick={state.toggleSnapToGrid} title="장비를 15px 격자에 맞춰 놓는다">격자</button>
         <button type="button" className={state.showMiniMap ? 'active' : ''} aria-pressed={state.showMiniMap} onClick={state.toggleMiniMap} title="오른쪽 아래에 전체 도면을 작게 보인다">미니맵</button>
+        <span className="divider" />
+        <button type="button" className={state.theme === 'dark' ? 'active' : ''} aria-pressed={state.theme === 'dark'} onClick={state.toggleTheme} title="어두운 화면과 밝은 화면을 바꾼다. 이 브라우저에 남는다">어두운 테마</button>
       </div>
       <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />

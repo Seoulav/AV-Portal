@@ -81,11 +81,13 @@ export function Canvas() {
   const canConnect = useBuilder(state => state.canConnect);
   const connect = useBuilder(state => state.connect);
   const addEquipment = useBuilder(state => state.addEquipment);
-  const setNodeLabel = useBuilder(state => state.setNodeLabel);
+  const editNote = useBuilder(state => state.editNote);
+  const theme = useBuilder(state => state.theme);
   const removeElements = useBuilder(state => state.removeElements);
   const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
   const cableView = useBuilder(state => state.cableView);
   const dragging = useBuilder(state => state.dragging);
+  const resizing = useBuilder(state => state.resizing);
   const locked = useBuilder(state => state.locked);
   const snapToGrid = useBuilder(state => state.snapToGrid);
   const showMiniMap = useBuilder(state => state.showMiniMap);
@@ -109,6 +111,8 @@ export function Canvas() {
       if (node.type === 'equipment') view.dragHandle = '.node-drag';
       if (node.type === 'shape') Object.assign(view, { zIndex: -1, dragHandle: '.shape-title', width: node.style?.width, height: node.style?.height });
       if (node.type === 'annotation') Object.assign(view, { width: node.style?.width, height: node.style?.height });
+      // 고정한 메모·영역(1.1 data.locked)은 끌지 못한다(구 Builder store와 같다)
+      if (node.type !== 'equipment' && node.data.locked) view.draggable = false;
       nodeViews.current.set(node, view);
     }
     if (!filter.hiddenNodes.has(node.id)) return view;
@@ -128,11 +132,11 @@ export function Canvas() {
   // 엣지 600개에서 매 순간 다시 계산하면 한 프레임 10ms가 넘는다. 끝점과 교차 점프는 매 순간 바뀐다
   const frozenOffsets = useRef<Map<string, number> | null>(null);
   const offsets = useMemo(() => {
-    if (dragging && frozenOffsets.current) return frozenOffsets.current;
+    if ((dragging || resizing) && frozenOffsets.current) return frozenOffsets.current;
     const next = edgeOffsets(viewEdges, diagram.nodes);
     frozenOffsets.current = next;
     return next;
-  }, [viewEdges, diagram.nodes, dragging]);
+  }, [viewEdges, diagram.nodes, dragging, resizing]);
   // 교차 점프: 모든 엣지 경로를 구성도 좌표(geometry.portAnchors)로 한 번에 만들어 세로 구간 색인으로 구한다.
   // React Flow 내부 좌표를 앱에서 읽지 않으므로 구 Builder의 "한 프레임 지난 좌표" 문제가 없다.
   // 간격은 숨긴 연결까지 모두로 계산하고(숨겨도 다른 선이 움직이지 않는다) 점프는 보이는 연결로만 구한다(구 Builder와 같다)
@@ -275,12 +279,10 @@ export function Canvas() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  // 메모·영역은 두 번 눌러 글을 바꾼다(구 Builder 기본 문구가 이 동작을 안내한다)
+  // 메모·영역은 두 번 눌러 서식 패널의 글 칸으로 간다(구 Builder는 서식 창을 열었다)
   const onNodeDoubleClick = useCallback((_: unknown, node: Node) => {
-    if (node.type === 'equipment') return;
-    const label = window.prompt(node.type === 'shape' ? '영역 이름' : '메모 내용', String(node.data.label ?? ''));
-    if (label !== null) setNodeLabel(node.id, label);
-  }, [setNodeLabel]);
+    if (node.type !== 'equipment') editNote(node.id);
+  }, [editNote]);
 
   const onDrop = useCallback((event: DragEvent) => {
     event.preventDefault();
@@ -335,8 +337,9 @@ export function Canvas() {
         fitView
         fitViewOptions={FIT_VIEW}
         proOptions={{ hideAttribution: true }}
+        colorMode={theme}
       >
-        <Background gap={20} color="#e2e8f0" />
+        <Background gap={20} color={theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : '#e2e8f0'} />
         <Controls showInteractive={false} />
         <LodLevel />
         {chips.length > 0 && (
@@ -353,7 +356,7 @@ export function Canvas() {
             })}
           </Panel>
         )}
-        {showMiniMap && <MiniMap className="minimap" style={MINIMAP_SIZE} nodeColor={miniMapColor} maskColor="rgba(148, 163, 184, 0.35)" zoomable pannable />}
+        {showMiniMap && <MiniMap className="minimap" style={MINIMAP_SIZE} nodeColor={miniMapColor} maskColor={theme === 'dark' ? 'rgba(0, 0, 0, 0.4)' : 'rgba(148, 163, 184, 0.35)'} zoomable pannable />}
       </ReactFlow>
     </div>
   );

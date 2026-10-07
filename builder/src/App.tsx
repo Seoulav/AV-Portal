@@ -7,6 +7,7 @@ import { Canvas } from './components/Canvas';
 import { EdgePanel } from './components/EdgePanel';
 import { IssuesPanel } from './components/IssuesPanel';
 import { LibraryPanel } from './components/LibraryPanel';
+import { NotePanel } from './components/NotePanel';
 import { Toolbar } from './components/Toolbar';
 import { lineFilter } from './lineFilter';
 
@@ -33,7 +34,14 @@ function SidePanel() {
     const hidden = lineFilter(state.diagram, state.hiddenLineTypes).hiddenNodes;
     return state.diagram.nodes.some(node => node.selected && !hidden.has(node.id)) ? null : state.selectedEdgeIds[0];
   });
-  return edgeId ? <EdgePanel edgeId={edgeId} /> : <IssuesPanel />;
+  // 메모·영역 하나만 골랐으면 서식 편집(B-20261006-09, 결정 L-b)
+  const noteId = useBuilder(state => {
+    if (state.selectedEdgeIds.length) return null;
+    const selected = state.diagram.nodes.filter(node => node.selected);
+    return selected.length === 1 && selected[0].type !== 'equipment' ? selected[0].id : null;
+  });
+  if (edgeId) return <EdgePanel edgeId={edgeId} />;
+  return noteId ? <NotePanel key={noteId} nodeId={noteId} /> : <IssuesPanel />;
 }
 
 export function App() {

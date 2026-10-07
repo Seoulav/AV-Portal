@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <title>AV System Builder — AV Portal</title>
+    <!-- 고른 테마를 CSS가 그리기 전에 단다(밝은 화면이 잠깐 보이지 않게). 값은 src/state/theme.ts와 같다 -->
+    <script>try { if (localStorage.getItem('av-portal-builder:theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (error) { /* 저장소가 막혀도 밝은 화면으로 연다 */ }</script>
   </head>
   <body>
     <div id="root"></div>
