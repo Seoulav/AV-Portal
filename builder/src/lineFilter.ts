@@ -5,9 +5,10 @@ import type { Diagram, LineType } from './engine';
 export interface LineFilter { active: boolean; hiddenEdges: Set<string>; hiddenNodes: Set<string> }
 export const NO_FILTER: LineFilter = Object.freeze({ active: false, hiddenEdges: new Set<string>(), hiddenNodes: new Set<string>() });
 
-// 도면에 쓰인 선 종류만 칩으로 보인다(결정 K-c). 순서는 규칙의 선 종류 순서이고, 규칙에 없는 id는 뒤에 붙인다
-export function usedLineTypes(diagram: Pick<Diagram, 'edges' | 'lineTypes'>, lineTypes: LineType[]): LineType[] {
-  const used = new Set(diagram.edges.map(edge => edge.data.lineTypeId));
+// 도면에 쓰인 선 종류만 칩으로 보인다(결정 K-c). 순서는 규칙의 선 종류 순서이고, 규칙에 없는 id는 뒤에 붙인다.
+// 숨겨 둔 종류는 그 연결을 다 지운 뒤에도 칩을 남긴다. 칩이 없으면 숨김을 풀 방법이 없다(리뷰 2)
+export function usedLineTypes(diagram: Pick<Diagram, 'edges' | 'lineTypes'>, lineTypes: LineType[], hidden: string[] = []): LineType[] {
+  const used = new Set([...diagram.edges.map(edge => edge.data.lineTypeId), ...hidden]);
   const known = lineTypes.filter(lineType => used.has(lineType.id));
   const listed = new Set(known.map(lineType => lineType.id));
   const fromFile = new Map(diagram.lineTypes.map(lineType => [lineType.id, lineType]));
@@ -29,4 +30,9 @@ export function lineFilter(diagram: Pick<Diagram, 'nodes' | 'edges'>, hiddenLine
   }
   const hiddenNodes = new Set(diagram.nodes.filter(node => node.type === 'equipment' && !connected.has(node.id)).map(node => node.id));
   return { active: true, hiddenEdges, hiddenNodes };
+}
+
+// 근접 연결·묶음 놓기·범위 선택이 볼 장비. 숨긴 장비에 선이 붙거나 단자가 골라지지 않게 뺀다(리뷰 1)
+export function visibleNodes<T extends { id: string }>(nodes: T[], filter: LineFilter): T[] {
+  return filter.hiddenNodes.size ? nodes.filter(node => !filter.hiddenNodes.has(node.id)) : nodes;
 }

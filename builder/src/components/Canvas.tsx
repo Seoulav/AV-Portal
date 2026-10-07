@@ -14,7 +14,7 @@ import { bundleFor } from '../bundle';
 import { resolveBundleDrop } from '../bundleDrop';
 import { edgeJumps, getEdgePoints } from '../edges/edgeGeometry';
 import { edgeOffsets, normalizeBidiEdges } from '../edges/edgeProcessing';
-import { lineFilter, usedLineTypes } from '../lineFilter';
+import { lineFilter, usedLineTypes, visibleNodes } from '../lineFilter';
 import { anchorOf, findDropTarget } from '../proximity';
 import { markConnectEnd } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
@@ -51,6 +51,10 @@ const SNAP_GRID: [number, number] = [15, 15];
 export const LOD_ZOOM = 0.55;
 export const LOD_COMPACT_ZOOM = 0.3;
 // 미니맵 노드 색(구 Builder와 같다): 영역 초록, 메모 하늘, 장비 남색
+// 미니맵 크기(구 Builder와 같다). SVG 크기도 이 값으로 정해지므로 CSS로 줄이지 않는다
+const MINIMAP_SIZE = { width: 200, height: 130 };
+// 버튼을 누를 때 초점을 옮기지 않는다. 초점이 남으면 Space(화면 이동)를 놓을 때 그 버튼이 다시 눌린다(리뷰 5)
+export const keepFocus = (event: ReactMouseEvent) => { if ((event.target as HTMLElement).closest('button')) event.preventDefault(); };
 const miniMapColor = (node: Node) => (node.type === 'shape' ? '#10b981' : node.type === 'annotation' ? '#38bdf8' : '#6366f1');
 
 // 줌에 따라 React Flow 바탕에 data-lod와 글자 크기 변수를 단다. 노드가 줌마다 다시 그려지지 않게 CSS로만 바꾼다.
@@ -178,8 +182,8 @@ export function Canvas() {
     lastEdges.current = list;
     return list;
   }, [viewEdges, offsets, jumps, selectedEdgeIds, cableView, diagram.edges, filter]);
-  // 필터 칩은 지금 도면에 쓰인 선 종류만 보인다(결정 K-c)
-  const chips = useMemo(() => usedLineTypes(diagram, (library?.rules ?? DEFAULT_RULES).lineTypes), [diagram.edges, diagram.lineTypes, library]);
+  // 필터 칩은 지금 도면에 쓰인 선 종류와 숨겨 둔 종류를 보인다(결정 K-c)
+  const chips = useMemo(() => usedLineTypes(diagram, (library?.rules ?? DEFAULT_RULES).lineTypes, hiddenLineTypes), [diagram.edges, diagram.lineTypes, library, hiddenLineTypes]);
 
   const isValidConnection = useCallback<IsValidConnection>(connection => canConnect(connection), [canConnect]);
   // 고른 단자에서 끌기 시작하면 묶음 연결이다. 묶음은 끌기를 시작할 때 한 번 정한다
@@ -225,7 +229,9 @@ export function Canvas() {
       if (result.connected) store.selectPorts([]);
       return;
     }
-    const target = findDropTarget({ nodes: store.diagram.nodes, fromNodeId: from.nodeId, point, zoom: flow.getZoom(), judge: store.connectionJudge(from) });
+    // 선 종류 필터로 숨긴 장비에는 붙이지 않는다(리뷰 1)
+    const reachable = visibleNodes(store.diagram.nodes, lineFilter(store.diagram, store.hiddenLineTypes));
+    const target = findDropTarget({ nodes: reachable, fromNodeId: from.nodeId, point, zoom: flow.getZoom(), judge: store.connectionJudge(from) });
     if (target?.kind === 'connect') {
       // React Flow와 같은 방향으로 넘긴다: 받는 쪽 핸들에서 시작했으면 후보가 source다(양방향끼리는 이 순서가 엣지 방향)
       const candidate = { node: target.anchor.nodeId, handle: target.anchor.handle };
@@ -334,7 +340,7 @@ export function Canvas() {
         <Controls showInteractive={false} />
         <LodLevel />
         {chips.length > 0 && (
-          <Panel position="top-center" className="line-filter">
+          <Panel position="top-center" className="line-filter" onMouseDown={keepFocus}>
             {chips.map(lineType => {
               const visible = !hiddenLineTypes.includes(lineType.id);
               return (
@@ -347,7 +353,7 @@ export function Canvas() {
             })}
           </Panel>
         )}
-        {showMiniMap && <MiniMap className="minimap" nodeColor={miniMapColor} maskColor="rgba(148, 163, 184, 0.35)" zoomable pannable />}
+        {showMiniMap && <MiniMap className="minimap" style={MINIMAP_SIZE} nodeColor={miniMapColor} maskColor="rgba(148, 163, 184, 0.35)" zoomable pannable />}
       </ReactFlow>
     </div>
   );

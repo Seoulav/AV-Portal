@@ -4,7 +4,16 @@ import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
 import { freePosition } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
-import { FIT_VIEW } from './Canvas';
+import { FIT_VIEW, keepFocus } from './Canvas';
+
+// 화면의 글을 캔버스 밖(이슈 패널 등)에서 골라 두었으면 Ctrl+C는 브라우저 복사로 둔다(리뷰 6)
+const textSelectedOutsideCanvas = () => {
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || !selection.toString()) return false;
+  const anchor = selection.anchorNode;
+  const element = anchor instanceof Element ? anchor : anchor?.parentElement;
+  return !element?.closest('.react-flow');
+};
 
 const stamp = () => {
   const now = new Date();
@@ -29,8 +38,7 @@ export function Toolbar() {
       const key = event.key.toLowerCase();
       if (key === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
       if (key === 'y' || (key === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }
-      // 화면의 글을 골라 둔 채 누른 Ctrl+C는 브라우저 복사로 둔다
-      if (key === 'c' && !window.getSelection()?.toString() && state.copySelection()) event.preventDefault();
+      if (key === 'c' && !textSelectedOutsideCanvas() && state.copySelection()) event.preventDefault();
       if (key === 'v' && state.clipboard) { event.preventDefault(); state.paste(); }
     };
     window.addEventListener('keydown', onKey);
@@ -61,11 +69,17 @@ export function Toolbar() {
   const [laying, setLaying] = useState(false);
   const autoLayout = async () => {
     setLaying(true);
+    let dagre;
     try {
-      const { default: dagre } = await import('dagre');
-      if (state.applyLayout(dagre)) requestAnimationFrame(() => void flow.fitView({ ...FIT_VIEW, duration: 300 }));
+      ({ default: dagre } = await import('dagre'));
     } catch {
-      state.notify({ text: '오토 레이아웃을 불러오지 못했습니다. 네트워크를 확인하고 다시 눌러 주세요.', tone: 'error' });
+      // 배포가 바뀐 뒤 열려 있던 화면은 예전 파일을 찾는다. 브라우저가 실패를 기억하므로 새로 고쳐야 한다(리뷰 8)
+      state.notify({ text: '오토 레이아웃을 불러오지 못했습니다. 페이지를 새로 고친 뒤 다시 눌러 주세요.', tone: 'error' });
+      setLaying(false);
+      return;
+    }
+    try {
+      if (state.applyLayout(dagre)) requestAnimationFrame(() => void flow.fitView({ ...FIT_VIEW, duration: 300 }));
     } finally {
       setLaying(false);
     }
@@ -79,7 +93,7 @@ export function Toolbar() {
   const ready = Boolean(state.library);
   const equipmentCount = state.diagram.nodes.filter(node => node.type === 'equipment').length;
   return (
-    <header className="toolbar">
+    <header className="toolbar" onMouseDown={keepFocus}>
       <a className="brand" href="../">AV Portal</a>
       <span className="app-name">AV System Builder <span className="beta">베타</span></span>
       <div className="toolbar-actions">

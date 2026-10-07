@@ -556,6 +556,11 @@ test('the minimap shows every node and toggles off again', async ({ page }) => {
   await expect(page.locator('.react-flow__minimap')).toHaveCount(0);
   await page.getByRole('button', { name: '미니맵' }).click();
   await expect(page.locator('.react-flow__minimap .react-flow__minimap-node')).toHaveCount(4);
+  // 구 Builder와 같은 200×130. SVG도 같은 크기라 눌러 옮기는 거리가 맞다
+  const map = await box(page.locator('.react-flow__minimap'));
+  const svg = await box(page.locator('.react-flow__minimap svg'));
+  expect([Math.round(map.width), Math.round(map.height)]).toEqual([200, 130]);
+  expect([Math.round(svg.width), Math.round(svg.height)]).toEqual([200, 130]);
   await page.getByRole('button', { name: '미니맵' }).click();
   await expect(page.locator('.react-flow__minimap')).toHaveCount(0);
 });
@@ -566,8 +571,13 @@ test('a line type chip hides its links without moving the others, and devices le
   await expect(page.locator('.line-filter .filter-chip')).toHaveText(['LAN', 'HDMI']);
   const lanPath = () => page.locator(`.react-flow__edge[data-id*="${cam}-${disp}"] path.react-flow__edge-path`).evaluateAll(paths => paths.map(path => path.getAttribute('d')));
   const before = await renderedPaths(page);
+  const monBox = await box(page.locator(`.react-flow__node[data-id="${mon}"]`));
   await chip('HDMI').click();
   await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 숨은 mon이 있던 자리에 선을 놓아도 붙지 않는다(숨긴 장비는 근접 연결 대상이 아니다)
+  await drag(page, await dot(handle(page, cam, 'out-hdmi-2'), 'right'), { x: monBox.x + monBox.width / 2, y: monBox.y + 30 });
+  await page.waitForTimeout(400);
+  expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-1', 'source_both-ethernet-1>target_both-ethernet-1']);
   // 같은 쌍의 두 선은 서로 띄워 그린다. 하나를 숨겨도 남은 선은 그 자리에 있다(간격은 숨긴 선까지 계산)
   expect(before).toContain((await lanPath())[0]);
   // 연결이 없는 mon은 숨고, LAN이 남은 cam·disp는 보인다
@@ -602,4 +612,15 @@ test('zoomed out below 0.55 the model name covers the device, and a link can sti
   await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-2']);
   await zoomOutBelow(page, 0.3);
   await expect(overlay.locator('.lod-name')).toBeHidden();
+});
+
+test('crossing jumps are drawn against visible links only', async ({ page }) => {
+  // HDMI는 곧은 가로선, LAN은 그 가로선을 세로로 지난다. 점프는 가로선(HDMI)에 그려진다
+  await openFixture(page, [['quad', 0, 0], ['wall', 900, 0], ['cam', 300, -320], ['disp', 700, 320]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [2, 'both-ethernet-1', 3, 'both-ethernet-1']]);
+  const arcs = async () => (await renderedPaths(page)).filter(d => / A 6 6 0 0 [01] /.test(d)).length;
+  await expect.poll(arcs).toBe(1);
+  await page.locator('.line-filter .filter-chip', { hasText: 'LAN' }).click();
+  await expect.poll(async () => (await renderedPaths(page)).length).toBe(1);
+  // 숨긴 LAN선과의 교차는 더 그리지 않는다
+  expect(await arcs()).toBe(0);
 });

@@ -141,4 +141,3 @@ describe('auto layout (old Builder layout.ts, dagre 0.8.5)', () => {
     expect(byId.map(node => [positions.get(node.id)!.x, positions.get(node.id)!.y])).toEqual(OLD_BUILDER[seed]);
   });
 });
-

@@ -170,8 +170,7 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
 .filter-chip .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color); }
 .filter-chip.off { background: #fff; border-color: var(--line); color: var(--muted); opacity: 0.55; }
 .filter-chip.off .chip-dot { background: var(--muted); }
-.react-flow__minimap.minimap { width: 200px; height: 130px; border-radius: 12px; border: 1px solid var(--line); background: rgba(241, 245, 249, 0.85); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18); overflow: hidden; }
-.react-flow__minimap.minimap svg { width: 200px; height: 130px; }
+.react-flow__minimap.minimap { border-radius: 12px; border: 1px solid var(--line); background: rgba(241, 245, 249, 0.85); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18); overflow: hidden; }
 /* LOD 덮개: 바탕(.react-flow)에 data-lod가 있을 때만 보인다 */
 .lod-overlay { display: none; position: absolute; inset: 0; border-radius: 12px; background: rgba(255, 255, 255, 0.95); z-index: 2; pointer-events: none; overflow: hidden;
   flex-direction: column; justify-content: center; padding: 8px 12px; gap: 4px; }

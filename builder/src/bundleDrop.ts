@@ -5,6 +5,7 @@
 // - 그 밖이면: 근접 연결 규칙(proximity.ts)
 import { findPort, occupiedPorts, parseHandle, type Diagram, type Equipment } from './engine';
 import { handleFor, parseKey, planBundle, type BundlePlan, type PortRefKey } from './bundle';
+import { lineFilter, visibleNodes } from './lineFilter';
 import { findDropTarget, type Point, type Verdict } from './proximity';
 import type { BuilderState } from './state/store';
 
@@ -12,7 +13,7 @@ export interface DragFrom { nodeId: string; handle: string; type: 'source' | 'ta
 export interface BundleDrop { target: PortRefKey | null; plan: BundlePlan | null; blockedCode?: string }
 
 export function resolveBundleDrop(
-  state: Pick<BuilderState, 'diagram' | 'connectionJudge'>,
+  state: Pick<BuilderState, 'diagram' | 'connectionJudge' | 'hiddenLineTypes'>,
   { bundle, from, under, point, zoom }: { bundle: string[]; from: DragFrom; under: { nodeId: string; handle: string } | null; point: Point; zoom: number },
 ): BundleDrop {
   const diagram: Diagram = state.diagram;
@@ -41,7 +42,8 @@ export function resolveBundleDrop(
   if (under && underPort && judgeRepresentative({ nodeId: under.nodeId, handle: under.handle }).allowed) {
     target = { nodeId: under.nodeId, portId: underPort.portId };
   } else {
-    const drop = findDropTarget({ nodes: diagram.nodes, fromNodeId: from.nodeId, point, zoom, judge: judgeRepresentative });
+    // 선 종류 필터로 숨긴 장비는 놓을 곳에서 뺀다
+    const drop = findDropTarget({ nodes: visibleNodes(diagram.nodes, lineFilter(diagram, state.hiddenLineTypes)), fromNodeId: from.nodeId, point, zoom, judge: judgeRepresentative });
     if (drop?.kind === 'blocked') return { target: null, plan: null, blockedCode: drop.code };
     if (drop?.kind === 'connect') target = { nodeId: drop.anchor.nodeId, portId: drop.anchor.portId };
   }
