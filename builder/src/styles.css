@@ -1,0 +1,102 @@
+/* Portal의 밝은 스타일(UI_UX_SPEC: 흰·연회색 바탕, 파란 강조). 노드 치수는 엔진 geometry와 같아야 한다 */
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --line: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #007aff;
+  --accent-soft: #e8f1ff;
+  --warn: #b45309;
+  --danger: #dc2626;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+button, input, select { font: inherit; }
+button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: default; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button.primary:hover:not(:disabled) { color: #fff; filter: brightness(1.08); }
+button.danger { color: var(--danger); }
+.icon-button { padding: 0 6px; line-height: 20px; border-radius: 6px; }
+input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: #fff; min-width: 0; }
+
+.app { display: flex; flex-direction: column; height: 100%; }
+.toolbar { display: flex; align-items: center; gap: 12px; padding: 8px 14px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.brand { font-weight: 700; color: var(--accent); text-decoration: none; }
+.app-name { font-weight: 700; }
+.beta { font-size: 11px; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 1px 7px; margin-left: 4px; }
+.toolbar-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.divider { width: 1px; height: 20px; background: var(--line); margin: 0 4px; }
+.toolbar-status { margin-left: auto; color: var(--muted); font-size: 13px; }
+
+.workspace { flex: 1; display: flex; min-height: 0; }
+.library-panel, .edge-panel { width: 280px; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; padding: 12px; gap: 8px; overflow: hidden; }
+.edge-panel { border-right: 0; border-left: 1px solid var(--line); overflow-y: auto; }
+.panel-title { font-weight: 700; }
+.panel-subtitle { font-weight: 600; font-size: 13px; margin-top: 6px; }
+.panel-note { color: var(--muted); font-size: 13px; }
+.panel-foot { color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 6px; }
+.search { width: 100%; }
+.library-groups { overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.group-title { width: 100%; display: flex; justify-content: space-between; border: 0; background: var(--accent-soft); font-weight: 600; }
+.group-count { color: var(--muted); font-weight: 400; }
+.library-product { padding: 4px 2px 2px 8px; }
+.product-brand { font-size: 12px; color: var(--muted); }
+.product-kind { font-size: 11px; }
+.library-product ul { list-style: none; margin: 2px 0; padding: 0; }
+.unit-item { display: flex; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 6px; cursor: grab; font-size: 13px; }
+.unit-item:hover { background: var(--accent-soft); }
+.unit-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lib-badge { font-size: 10px; color: var(--warn); background: #fef3c7; border-radius: 999px; padding: 0 6px; white-space: nowrap; }
+.lib-badge.muted { color: var(--muted); background: #f1f5f9; }
+
+.canvas { flex: 1; position: relative; min-width: 0; }
+.canvas-loading { display: grid; place-items: center; color: var(--muted); }
+
+/* 장비 노드: 폭 220, 위아래 여백 12, 헤더 54, 사진 68, 단자 행 24 + 간격 4, 양방향 앞 간격 8 + 머리 13 */
+.equipment-node { background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 4px 14px rgba(15, 23, 42, 0.06); font-size: 12px; }
+.equipment-node.selected { box-shadow: 0 0 0 2px var(--text), 0 4px 18px rgba(15, 23, 42, 0.18); }
+.equipment-node.reused { background: #fffbeb; }
+.node-header { padding: 0 12px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.node-brand { color: var(--muted); font-size: 11px; display: flex; gap: 4px; align-items: center; white-space: nowrap; }
+.node-model { font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.node-name { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.node-tag { font-size: 10px; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 0 4px; }
+.node-tag.reused { color: var(--warn); background: #fef3c7; }
+.node-image { display: flex; align-items: center; justify-content: center; padding: 4px 12px; }
+.node-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.node-empty { color: var(--muted); font-size: 11px; padding: 4px 12px; }
+.port-columns { display: flex; justify-content: space-between; gap: 8px; }
+.port-column { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.port-row { position: relative; display: flex; align-items: center; gap: 4px; padding: 0 12px; min-width: 0; }
+.port-right { flex-direction: row-reverse; text-align: right; }
+.port-both { justify-content: center; }
+.port-dot { width: 5px; height: 5px; border-radius: 50%; flex: none; }
+.port-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.port-badge { font-size: 9px; color: var(--warn); background: #fef3c7; border-radius: 4px; padding: 0 3px; flex: none; }
+/* 선을 끄는 동안 놓을 단자가 맞는지 보여 준다(React Flow가 붙이는 connectingto·valid) */
+.react-flow__handle.connectingto.valid { box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.35); }
+.react-flow__handle.connectingto:not(.valid) { box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.35); }
+.bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }
+
+.annotation-node { display: flex; align-items: center; justify-content: center; padding: 6px 10px; white-space: pre-wrap; overflow: hidden; }
+/* 영역 안쪽은 클릭이 통과한다(기반명세 §9). React Flow가 노드 틀에 pointer-events: all을 inline으로 주므로 !important로 덮고, 제목 띠만 받는다 */
+.react-flow__node-shape { pointer-events: none !important; }
+.shape-node { border-radius: 10px; pointer-events: none; }
+.shape-title { pointer-events: all; cursor: move; padding: 4px 10px; font-weight: 600; }
+
+.edge-facts { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 12px; margin: 0; }
+.edge-facts dt { color: var(--muted); }
+.edge-facts dd { margin: 0; overflow-wrap: anywhere; }
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.cable-row { display: grid; grid-template-columns: 62px 1fr 72px auto; gap: 4px; }
+.panel-actions { display: flex; gap: 6px; justify-content: flex-end; }
+
+.notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: #0f172a; color: #fff; font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
+.notice-warn { background: #92400e; }
+.notice-error { background: var(--danger); }
