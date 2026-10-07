@@ -98,8 +98,15 @@ export function planBundle({ nodes, bundle, target, role, judge, occupied }: {
       // 이미 연결된 대상 단자는 누구에게나 막혀 있다. 그 밖의 이유(신호·방향 등)는 이 묶음 단자의 문제다
       if (verdict.code && verdict.code !== 'port-occupied') reason ??= verdict.code;
     }
-    // 이 단자에 맞는 단자가 남아 있지 않다: 맞지 않아서면 그 이유, 아니면 단자가 모자란 것이다(C1)
-    if (!matched) plan.unmatched.push({ from, code: reason ?? 'no-slot' });
+    // 이 단자에 맞는 단자가 남아 있지 않다. 이 열에 맞는 단자가 있었는데 앞 단자가 썼거나 이미 연결돼 있으면
+    // 단자가 모자란 것이고(C1), 열 전체가 이 단자와 맞지 않을 때만 그 이유(신호 불일치 등)를 알린다
+    if (!matched) {
+      const fits = slots.some(slot => {
+        const verdict = judge({ nodeId: from.nodeId, handle: fromHandle }, { nodeId: target.nodeId, handle: slot.id });
+        return verdict.allowed || verdict.code === 'port-occupied';
+      });
+      plan.unmatched.push({ from, code: fits ? 'no-slot' : reason ?? 'no-slot' });
+    }
   }
   return plan;
 }
