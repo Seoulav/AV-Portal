@@ -18,6 +18,8 @@ const UNITS: [string, Port[]][] = [
   ['mix', [...mics(6), port('out-line-audio-1', 'out', 'LINE-AUDIO', 'audio')]],
   ['quad', [port('in-mic-audio-1', 'in', 'MIC-AUDIO', 'audio'), ...[1, 2, 3, 4].map(i => port(`out-mic-audio-${i}`, 'out', 'MIC-AUDIO', 'audio'))]],
   ['line', [port('out-line-audio-1', 'out', 'LINE-AUDIO', 'audio')]],
+  // 마이크 입력 2개 아래에 다른 신호(라인) 입력이 있는 장비(공개 주소의 사이니지: HDMI 3개 아래 DP·USB와 같은 꼴)
+  ['desk', [...mics(2), port('in-line-audio-1', 'in', 'LINE-AUDIO', 'audio')]],
 ];
 const library = {
   schema: 'av-portal.builder-library', schemaVersion: '1.0.0',
@@ -96,6 +98,15 @@ describe('port selection and bundles', () => {
     // 마이크 0은 이미 연결돼 있어 빠지고 마이크 1이 1번 대상을 쓴다. 믹서 자신의 출력은 대상 장비 단자라 빠진다
     expect(plan?.unmatched.map(item => item.code)).toEqual(['port-occupied', 'self-loop']);
     expect(pairsOf(plan)).toEqual([`${micIds[1]}>in-mic-audio-1`, `${micIds[2]}>in-mic-audio-2`, `${micIds[3]}>in-mic-audio-3`]);
+  });
+
+  it('reports a shortage, not a signal mismatch, when the matching ports ran out above other-signal ports', () => {
+    const { store, place, micIds, keys } = setup();
+    const desk = place('desk', 500, 600);
+    const plan = resolveBundleDrop(store.getState(), { bundle: keys.slice(0, 3), from: { nodeId: micIds[0], handle: 'out-mic-audio-1', type: 'source' }, under: { nodeId: desk, handle: 'in-mic-audio-1' }, point: { x: 0, y: 0 }, zoom: 1 }).plan;
+    expect(pairsOf(plan)).toEqual([`${micIds[0]}>in-mic-audio-1`, `${micIds[1]}>in-mic-audio-2`]);
+    // 셋째 마이크 아래에는 라인 입력만 남았다. 이유는 신호 불일치가 아니라 남은 단자 부족이다
+    expect(plan?.unmatched.map(item => item.code)).toEqual(['no-slot']);
   });
 
   it('a member with a different signal does not use up the slots of the others', () => {
