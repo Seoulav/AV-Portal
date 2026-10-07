@@ -7,7 +7,7 @@ import { parseKey, portsInRect } from '../bundle';
 import { layoutPositions, type DagreModule } from '../layout';
 import { lineFilter, visibleNodes } from '../lineFilter';
 import {
-  DEFAULT_RULES, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
+  ANNOTATION_DATA_KEYS, DEFAULT_RULES, SHAPE_DATA_KEYS, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
   judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, validateDiagram,
   type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type IdFactory, type LibraryIndex, type Rules, type ValidationError,
 } from '../engine';
@@ -60,6 +60,10 @@ export interface BuilderState {
   selectedEdgeIds: string[];
   notice: Notice | null;
   dragging: boolean;
+  // 메모·영역 크기를 끌어 바꾸는 중(B-20261006-09). 한 번 끌기를 실행 취소 한 단위로 기록한다
+  resizing: boolean;
+  // 두 번 눌러 메모·영역 서식 패널의 글 칸으로 초점을 옮겨 달라는 요청(at은 같은 노드를 다시 눌러도 바뀌게)
+  noteFocus: { nodeId: string; at: number } | null;
   // 범위 선택 중. 그동안 영역(shape)은 고르지 않고, 끝날 때 사각형 안에 다 들어온 영역만 고른다
   boxSelecting: boolean;
   // 고른 단자('노드ID::단자ID'). 화면 상태라 파일·자동 저장·실행 취소에 넣지 않는다(B-20261006-06)
@@ -76,6 +80,8 @@ export interface BuilderState {
   snapToGrid: boolean;
   showMiniMap: boolean;
   hiddenLineTypes: string[];
+  // 화면 테마(B-20261006-09). 브라우저에만 남는다(theme.ts)
+  theme: 'light' | 'dark';
   setLibrary(library: LibraryIndex): void;
   addEquipment(equipment: Equipment, position: { x: number; y: number }): string;
   addAnnotation(position: { x: number; y: number }): void;
@@ -89,6 +95,8 @@ export interface BuilderState {
   connectionJudge(from: { nodeId: string; handle: string; type?: 'source' | 'target' }): (to: { nodeId: string; handle: string }) => ConnectionVerdict;
   notifyBlocked(code: string | undefined): void;
   setNodeLabel(nodeId: string, label: string): void;
+  updateNoteData(nodeId: string, patch: Record<string, unknown>): boolean;
+  editNote(nodeId: string): void;
   updateEdge(edgeId: string, patch: { label: string; rows: BomRow[] }): void;
   deleteEdge(edgeId: string): void;
   selectEdges(edgeIds: string[]): void;
@@ -106,6 +114,7 @@ export interface BuilderState {
   toggleSnapToGrid(): void;
   toggleMiniMap(): void;
   toggleLineType(lineTypeId: string): void;
+  toggleTheme(): void;
   connectMany(connections: ConnectionLike[]): { connected: number; failed: string[] };
   undo(): void;
   redo(): void;
@@ -119,7 +128,7 @@ export interface BuilderState {
 // 열기·새 구성도를 되돌리면 generator·library·lineTypes도 함께 돌아와야 한다
 const snapshot = (diagram: Diagram) => JSON.stringify({
   ...diagram,
-  nodes: diagram.nodes.map(({ selected: _s, dragging: _d, ...node }) => node),
+  nodes: diagram.nodes.map(({ selected: _s, dragging: _d, resizing: _r, ...node }) => node),
   edges: diagram.edges.map(({ selected: _s, ...edge }) => edge),
 });
 // 단자 선택과 노드별 색인을 함께 만든다. 단자 선택을 바꾸는 곳은 모두 이 함수를 거친다
@@ -168,6 +177,8 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       selectedEdgeIds: [],
       notice: null,
       dragging: false,
+      resizing: false,
+      noteFocus: null,
       boxSelecting: false,
       ...portsState([]),
       bundle: null,
@@ -177,6 +188,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       snapToGrid: false,
       showMiniMap: false,
       hiddenLineTypes: [],
+      theme: 'light',
 
       setLibrary(library) {
         const { diagram } = get();
@@ -220,15 +232,35 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
           return Boolean(node) && (node!.position.x !== change.position.x || node!.position.y !== change.position.y);
         };
         const moves = applicable.filter(moved) as Extract<NodeChange, { type: 'position' }>[];
-        // 끌기는 처음 움직일 때 한 번, 방향키 이동은 누를 때마다 한 번 기록한다
+        // 크기 바꾸기(NodeResizer): 크기 변화에 resizing이 붙는다. 왼쪽·위 테두리를 끌면 위치 변화도 함께 온다
+        const resizes = applicable.filter(change => change.type === 'dimensions' && typeof change.resizing === 'boolean') as Extract<NodeChange, { type: 'dimensions' }>[];
+        const { resizing } = get();
+        const resizeStart = !resizing && resizes.some(change => change.resizing);
+        const resizeEnd = resizes.some(change => change.resizing === false);
+        // 끌기는 처음 움직일 때 한 번, 방향키 이동은 누를 때마다 한 번, 크기 바꾸기는 시작할 때 한 번 기록한다
         const dragStart = !dragging && moves.some(change => change.dragging);
-        const keyMove = !dragging && moves.some(change => !change.dragging);
+        const keyMove = !dragging && !resizing && !resizes.length && moves.some(change => !change.dragging);
         const dragEnd = applicable.some(change => change.type === 'position' && change.dragging === false);
-        if (dragStart || keyMove) remember();
-        const nodes = applyNodeChanges(applicable, diagram.nodes as unknown as Node[]) as unknown as Diagram['nodes'];
+        if (dragStart || keyMove || resizeStart) remember();
+        let nodes = applyNodeChanges(applicable, diagram.nodes as unknown as Node[]) as unknown as Diagram['nodes'];
+        // 바뀐 크기는 파일의 style(1.1)에 둔다. React Flow가 붙인 width·height·resizing은 화면 값이라 지운다
+        if (resizes.length) {
+          const sizes = new Map(resizes.filter(change => change.dimensions).map(change => [change.id, change.dimensions!]));
+          nodes = nodes.map(node => {
+            const size = sizes.get(node.id);
+            if (!size || node.type === 'equipment') return node;
+            const { width: _w, height: _h, resizing: _r, ...rest } = node as Diagram['nodes'][number] & { width?: number; height?: number; resizing?: boolean };
+            return { ...rest, style: { ...node.style, width: size.width, height: size.height } } as Diagram['nodes'][number];
+          });
+        }
         // 장비를 끌기 시작하면 고른 단자를 푼다. 범위 선택으로 장비를 옮긴 뒤 남은 단자 선택이 묶음 연결로 번지지 않게 한다
         const clearPorts = dragStart && get().selectedPorts.length ? portsState([]) : {};
-        set({ diagram: { ...get().diagram, nodes }, dragging: dragStart ? true : dragEnd ? false : dragging, ...clearPorts });
+        set({
+          diagram: { ...get().diagram, nodes },
+          dragging: dragStart ? true : dragEnd ? false : dragging,
+          resizing: resizeStart ? true : resizeEnd ? false : resizing,
+          ...clearPorts,
+        });
       },
 
       onEdgesChange(changes) {
@@ -320,6 +352,34 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (!node || node.type === 'equipment' || node.data.label === label) return;
         remember();
         set({ diagram: { ...diagram, nodes: diagram.nodes.map(item => (item.id === nodeId ? { ...item, data: { ...item.data, label } } : item)) } });
+      },
+
+      // 메모·영역 서식(구 Builder EditAnnotationModal). 1.1 서식 키만 바꾸고, undefined는 키를 지운다.
+      // 한 번의 실행 취소 단위다. 바뀐 것이 없으면 기록하지 않는다
+      updateNoteData(nodeId, patch) {
+        const { diagram } = get();
+        const node = diagram.nodes.find(item => item.id === nodeId);
+        if (!node || node.type === 'equipment') return false;
+        const keys = node.type === 'annotation' ? ANNOTATION_DATA_KEYS : SHAPE_DATA_KEYS;
+        const data: Record<string, unknown> = { ...node.data };
+        for (const key of keys) {
+          if (!(key in patch)) continue;
+          if (patch[key] === undefined) delete data[key];
+          else data[key] = patch[key];
+        }
+        const same = keys.every(key => JSON.stringify(data[key]) === JSON.stringify(node.data[key]));
+        if (same) return false;
+        remember();
+        set({ diagram: { ...diagram, nodes: diagram.nodes.map(item => (item.id === nodeId ? { ...item, data } : item)) } });
+        return true;
+      },
+
+      // 메모·영역을 두 번 누르면 그것만 고르고 서식 패널의 글 칸으로 초점을 옮긴다(구 Builder는 서식 창을 열었다)
+      editNote(nodeId) {
+        const node = get().diagram.nodes.find(item => item.id === nodeId);
+        if (!node || node.type === 'equipment') return;
+        get().focusTarget({ node: nodeId });
+        set({ noteFocus: { nodeId, at: Date.now() } });
       },
 
       // 라벨·케이블을 한 단계로 바꾼다. 바뀐 것이 없으면 기록하지 않는다(다시 실행 목록도 그대로)
@@ -447,6 +507,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       },
 
       toggleLock() { set({ locked: !get().locked }); },
+      toggleTheme() { set({ theme: get().theme === 'dark' ? 'light' : 'dark' }); },
       toggleSnapToGrid() { set({ snapToGrid: !get().snapToGrid }); },
       toggleMiniMap() { set({ showMiniMap: !get().showMiniMap }); },
       // 숨긴 연결·장비의 선택은 푼다. 보이지 않는 것이 Delete·복사에 딸려 가지 않게 한다
@@ -487,12 +548,12 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       undo() {
         const { past, future, diagram } = get();
         if (!past.length) return;
-        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
+        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
       },
       redo() {
         const { past, future, diagram } = get();
         if (!future.length) return;
-        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false });
+        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
       },
 
       newDiagram() {

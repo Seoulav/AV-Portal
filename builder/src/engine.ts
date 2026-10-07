@@ -5,6 +5,7 @@ import * as DG from '../engine/diagram.mjs';
 import * as G from '../engine/geometry.mjs';
 import * as I from '../engine/issues.mjs';
 import * as L from '../engine/library.mjs';
+import * as N from '../engine/normalize.mjs';
 import * as R from '../engine/rules.mjs';
 import * as S from '../engine/serialize.mjs';
 import * as VA from '../engine/validate.mjs';
@@ -122,6 +123,9 @@ export const normalizeDiagram = S.normalizeDiagram as unknown as (diagram: Diagr
 export const validateDiagram = VA.validateDiagram as (diagram: unknown, options?: { library?: LibraryIndex | null }) => { errors: ValidationError[]; issues: Issue[] };
 export const bomRowProblem = VA.bomRowProblem as (row: unknown) => { field: string; detail: string } | null;
 export const computeIssues = I.computeIssues as (diagram: Diagram, options?: { library?: LibraryIndex | null; rules?: Rules }) => Issue[];
+// 메모·영역 data에 둘 수 있는 서식 키(1.1과 같다). 그 밖의 키는 저장할 때 버려진다
+export const ANNOTATION_DATA_KEYS = N.ANNOTATION_DATA_KEYS as readonly string[];
+export const SHAPE_DATA_KEYS = N.SHAPE_DATA_KEYS as readonly string[];
 export const geometry = {
   NODE_WIDTH: G.NODE_WIDTH as number,
   NODE_HEADER_HEIGHT: G.NODE_HEADER_HEIGHT as number,

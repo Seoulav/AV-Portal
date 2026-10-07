@@ -9,9 +9,45 @@
   --accent-soft: #e8f1ff;
   --warn: #b45309;
   --danger: #dc2626;
+  /* 테마마다 바뀌는 면·글자 색(B-20261006-09). 선 종류 색·장비 사진은 테마와 무관하다 */
+  --node-bg: #ffffff;
+  --surface-soft: #f1f5f9;
+  --warn-soft: #fef3c7;
+  --warn-bg: #fffbeb;
+  --warn-line: #fcd34d;
+  --label-bg: rgba(255, 255, 255, 0.94);
+  --minimap-bg: rgba(241, 245, 249, 0.85);
+  --lod-bg: rgba(255, 255, 255, 0.95);
+  --lod-dim: rgba(15, 23, 42, 0.55);
+  --notice-bg: #0f172a;
+  --notice-text: #ffffff;
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
+}
+/* 어두운 테마(구 Builder index.css의 다크 값을 바탕으로) */
+:root[data-theme='dark'] {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --line: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.18);
+  --warn: #fbbf24;
+  --danger: #f87171;
+  --node-bg: #1e293b;
+  --surface-soft: rgba(255, 255, 255, 0.06);
+  --warn-soft: rgba(251, 191, 36, 0.16);
+  --warn-bg: rgba(251, 191, 36, 0.1);
+  --warn-line: rgba(251, 191, 36, 0.5);
+  --label-bg: rgba(15, 23, 42, 0.92);
+  --minimap-bg: rgba(15, 23, 42, 0.6);
+  --lod-bg: rgba(8, 14, 28, 0.95);
+  --lod-dim: rgba(255, 255, 255, 0.5);
+  --notice-bg: #e2e8f0;
+  --notice-text: #0f172a;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; margin: 0; }
@@ -23,7 +59,7 @@ button.primary { background: var(--accent); border-color: var(--accent); color: 
 button.primary:hover:not(:disabled) { color: #fff; filter: brightness(1.08); }
 button.danger { color: var(--danger); }
 .icon-button { padding: 0 6px; line-height: 20px; border-radius: 6px; }
-input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: #fff; min-width: 0; }
+input, select, textarea { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: var(--panel); color: var(--text); min-width: 0; font: inherit; }
 
 .app { display: flex; flex-direction: column; height: 100%; }
 .toolbar { display: flex; align-items: center; gap: 12px; padding: 8px 14px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -53,22 +89,22 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .unit-item { display: flex; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 6px; cursor: grab; font-size: 13px; }
 .unit-item:hover { background: var(--accent-soft); }
 .unit-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.lib-badge { font-size: 10px; color: var(--warn); background: #fef3c7; border-radius: 999px; padding: 0 6px; white-space: nowrap; }
-.lib-badge.muted { color: var(--muted); background: #f1f5f9; }
+.lib-badge { font-size: 10px; color: var(--warn); background: var(--warn-soft); border-radius: 999px; padding: 0 6px; white-space: nowrap; }
+.lib-badge.muted { color: var(--muted); background: var(--surface-soft); }
 
 .canvas { flex: 1; position: relative; min-width: 0; }
 .canvas-loading { display: grid; place-items: center; color: var(--muted); }
 
 /* 장비 노드: 폭 220, 위아래 여백 12, 헤더 54, 사진 68, 단자 행 24 + 간격 4, 양방향 앞 간격 8 + 머리 13 */
-.equipment-node { position: relative; background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 4px 14px rgba(15, 23, 42, 0.06); font-size: 12px; }
+.equipment-node { position: relative; background: var(--node-bg); color: var(--text); border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 4px 14px rgba(15, 23, 42, 0.06); font-size: 12px; }
 .equipment-node.selected { box-shadow: 0 0 0 2px var(--text), 0 4px 18px rgba(15, 23, 42, 0.18); }
-.equipment-node.reused { background: #fffbeb; }
+.equipment-node.reused { background: var(--warn-bg); }
 .node-header { padding: 0 12px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 .node-brand { color: var(--muted); font-size: 11px; display: flex; gap: 4px; align-items: center; white-space: nowrap; }
 .node-model { font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .node-name { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .node-tag { font-size: 10px; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 0 4px; }
-.node-tag.reused { color: var(--warn); background: #fef3c7; }
+.node-tag.reused { color: var(--warn); background: var(--warn-soft); }
 .node-image { display: flex; align-items: center; justify-content: center; padding: 4px 12px; }
 .node-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .node-empty { color: var(--muted); font-size: 11px; padding: 4px 12px; }
@@ -79,7 +115,7 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .port-both { justify-content: center; }
 .port-dot { width: 5px; height: 5px; border-radius: 50%; flex: none; }
 .port-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.port-badge { font-size: 9px; color: var(--warn); background: #fef3c7; border-radius: 4px; padding: 0 3px; flex: none; }
+.port-badge { font-size: 9px; color: var(--warn); background: var(--warn-soft); border-radius: 4px; padding: 0 3px; flex: none; }
 /* 단자 핸들(기반명세 §9): 행 칸 전체 + 테두리 바깥 점까지 덮는다. 상자의 바깥 끝 = 점의 바깥 끝 = 선이 붙는 곳.
    React Flow 기본 핸들(작은 원, 가운데 정렬)을 덮어쓴다. 치수는 EquipmentNode가 넘기는 CSS 변수(geometry)다 */
 .react-flow__node .react-flow__handle.port-handle {
@@ -93,7 +129,7 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 /* 단자 점 */
 .port-handle::after {
   content: ''; position: absolute; top: 50%; width: var(--handle-size); height: var(--handle-size); margin-top: calc(var(--handle-size) / -2);
-  border-radius: 50%; background: var(--port-color); box-shadow: 0 0 0 1.5px #fff;
+  border-radius: 50%; background: var(--port-color); box-shadow: 0 0 0 1.5px var(--node-bg);
 }
 .port-handle-in::after { left: 0; }
 .port-handle-out::after { right: 0; }
@@ -102,29 +138,33 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .port-handle-in::before { left: -16px; }
 .port-handle-out::before { right: -16px; }
 .port-handle:hover { background: rgba(0, 122, 255, 0.06); }
-.port-handle:hover::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 4px rgba(0, 122, 255, 0.3); }
+.port-handle:hover::after { box-shadow: 0 0 0 1.5px var(--node-bg), 0 0 0 4px rgba(0, 122, 255, 0.3); }
 /* 선을 끄는 동안 포인터 아래 단자가 맞는지 보여 준다(React Flow가 붙이는 connectingto·valid) */
 .port-handle.connectingto.valid { background: rgba(0, 122, 255, 0.1); }
 .port-handle.connectingto:not(.valid) { background: rgba(220, 38, 38, 0.1); }
-.port-handle.connectingto:not(.valid)::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 4px rgba(220, 38, 38, 0.35); }
+.port-handle.connectingto:not(.valid)::after { box-shadow: 0 0 0 1.5px var(--node-bg), 0 0 0 4px rgba(220, 38, 38, 0.35); }
 /* 범위 선택 뒤 React Flow가 고른 장비들을 덮는 사각형을 그린다. 그 위에서는 단자 행으로 선을 그을 수 없으므로 없앤다.
    여러 장비는 고른 장비의 헤더를 끌어 함께 옮긴다 */
 .react-flow__nodesselection-rect { display: none; }
 /* 근접 연결 미리보기 */
 .snap-ring { fill: none; stroke-width: 2.5; }
 /* 고른 단자(평행선 한꺼번에 긋기, 기반명세 §9): 점에 2px 강조 테두리, 이름은 강조색 */
-.port-handle.port-selected::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 3.5px var(--accent); }
+.port-handle.port-selected::after { box-shadow: 0 0 0 1.5px var(--node-bg), 0 0 0 3.5px var(--accent); }
 .port-row.port-selected .port-label { color: var(--accent); font-weight: 600; }
 /* 묶음 끌기 중 커서 옆 개수 배지 */
 .bundle-badge rect { fill: var(--accent); }
 .bundle-badge text { fill: #fff; font-size: 11px; font-weight: 700; }
 .bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }
 
-.annotation-node { display: flex; align-items: center; justify-content: center; padding: 6px 10px; white-space: pre-wrap; overflow: hidden; }
+.annotation-node { position: relative; box-sizing: border-box; }
+.annotation-text { position: relative; z-index: 1; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 8px; box-sizing: border-box; white-space: pre-wrap; word-break: break-word; font-weight: 500; overflow: hidden; }
 /* 영역 안쪽은 클릭이 통과한다(기반명세 §9). React Flow가 노드 틀에 pointer-events: all을 inline으로 주므로 !important로 덮고, 제목 띠만 받는다 */
 .react-flow__node-shape { pointer-events: none !important; }
-.shape-node { border-radius: 10px; pointer-events: none; }
-.shape-title { pointer-events: all; cursor: move; padding: 4px 10px; font-weight: 600; }
+/* 잘라내지 않는다: 원 모양에서도 모서리의 크기 손잡이가 가려지지 않게(바탕 겹이 모양을 그린다) */
+.shape-node { position: relative; box-sizing: border-box; pointer-events: none; }
+.shape-title { position: relative; z-index: 1; pointer-events: all; cursor: move; padding: 12px; min-height: 24px; font-weight: 700; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; user-select: none; }
+/* 영역 안쪽은 클릭이 통과하지만 크기 손잡이는 받는다 */
+.shape-node .react-flow__resize-control { pointer-events: all; }
 
 .edge-facts { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 12px; margin: 0; }
 .edge-facts dt { color: var(--muted); }
@@ -136,10 +176,10 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 /* 엣지(구 Builder CustomSmoothstepEdge): 라벨은 줌아웃해도 읽히게 BuilderEdge가 역으로 키운다 */
 .edge-label {
   position: absolute; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
-  background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); white-space: nowrap; pointer-events: none;
+  background: var(--label-bg); color: var(--text); border: 1px solid var(--line); white-space: nowrap; pointer-events: none;
 }
 .edge-label.cable { white-space: pre; line-height: 1.5; text-align: center; }
-.edge-label.missing { color: var(--warn); background: #fffbeb; border-color: #fcd34d; }
+.edge-label.missing { color: var(--warn); background: var(--warn-bg); border-color: var(--warn-line); }
 /* 선택·호버 표시는 무채색이다(케이블 색과 겹치지 않게, 구 Builder 규칙). 호버를 선택보다 먼저 둬야 선택이 이긴다.
    엔진이 엣지 style에 strokeWidth를 inline으로 쓰므로 !important로 덮는다(구 Builder App.css와 같다) */
 .react-flow__edge:hover .react-flow__edge-path { stroke-width: 3px !important; }
@@ -157,7 +197,7 @@ button.active { border-color: var(--accent); color: var(--accent); background: v
 .issue-target { font-size: 12px; overflow-wrap: anywhere; }
 .issue-detail { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
 
-.notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: #0f172a; color: #fff; font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
+.notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: var(--notice-bg); color: var(--notice-text); font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
 .notice-warn { background: #92400e; }
 .notice-error { background: var(--danger); }
 
@@ -166,15 +206,33 @@ button.active { border-color: var(--accent); color: var(--accent); background: v
 button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.12); }
 .line-filter { display: flex; flex-wrap: wrap; gap: 6px; max-width: 70%; justify-content: center; }
 .filter-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12px; user-select: none;
-  background: color-mix(in srgb, var(--chip-color) 13%, #fff); border-color: color-mix(in srgb, var(--chip-color) 40%, #fff); }
+  background: color-mix(in srgb, var(--chip-color) 13%, var(--panel)); border-color: color-mix(in srgb, var(--chip-color) 40%, var(--panel)); color: var(--text); }
 .filter-chip .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color); }
-.filter-chip.off { background: #fff; border-color: var(--line); color: var(--muted); opacity: 0.55; }
+.filter-chip.off { background: var(--panel); border-color: var(--line); color: var(--muted); opacity: 0.55; }
 .filter-chip.off .chip-dot { background: var(--muted); }
-.react-flow__minimap.minimap { border-radius: 12px; border: 1px solid var(--line); background: rgba(241, 245, 249, 0.85); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18); overflow: hidden; }
+.react-flow__minimap.minimap { border-radius: 12px; border: 1px solid var(--line); background: var(--minimap-bg); box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18); overflow: hidden; }
 /* LOD 덮개: 바탕(.react-flow)에 data-lod가 있을 때만 보인다 */
-.lod-overlay { display: none; position: absolute; inset: 0; border-radius: 12px; background: rgba(255, 255, 255, 0.95); z-index: 2; pointer-events: none; overflow: hidden;
+.lod-overlay { display: none; position: absolute; inset: 0; border-radius: 12px; background: var(--lod-bg); z-index: 2; pointer-events: none; overflow: hidden;
   flex-direction: column; justify-content: center; padding: 8px 12px; gap: 4px; }
 .react-flow[data-lod] .lod-overlay { display: flex; }
 .lod-model { font-size: var(--lod-model-size, 13px); font-weight: 800; color: var(--text); line-height: 1.25; overflow-wrap: break-word; }
-.lod-name { font-size: var(--lod-name-size, 10px); color: rgba(15, 23, 42, 0.55); line-height: 1.2; overflow-wrap: break-word; }
+.lod-name { font-size: var(--lod-name-size, 10px); color: var(--lod-dim); line-height: 1.2; overflow-wrap: break-word; }
 .react-flow[data-lod='compact'] .lod-name { display: none; }
+
+/* React Flow 바탕도 테마 바탕색을 쓴다(colorMode dark의 기본 #141414 대신) */
+.react-flow { --xy-background-color: var(--bg); }
+
+/* 메모·영역 서식 패널(B-20261006-09) */
+.note-panel textarea { width: 100%; resize: vertical; }
+.field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.color-row { display: flex; gap: 6px; align-items: center; }
+.color-row input[type=color] { width: 34px; height: 28px; padding: 2px; flex: none; }
+.color-row input:not([type=color]) { flex: 1; width: 100%; min-width: 0; }
+.field-pair > .field { min-width: 0; }
+.field-pair input { width: 100%; }
+.swatches { display: flex; flex-wrap: wrap; gap: 5px; margin: 2px 0 4px; }
+.swatch { width: 22px; height: 22px; padding: 0; border-radius: 6px; border: 1px solid var(--line); }
+.swatch.on { box-shadow: 0 0 0 2px var(--accent); }
+.swatch.clear { background-image: linear-gradient(45deg, transparent 45%, var(--danger) 45%, var(--danger) 55%, transparent 55%) !important; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 5px; }
+.check { display: flex; align-items: center; gap: 6px; font-size: 13px; }

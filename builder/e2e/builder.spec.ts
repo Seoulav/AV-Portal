@@ -624,3 +624,72 @@ test('crossing jumps are drawn against visible links only', async ({ page }) => 
   // 숨긴 LAN선과의 교차는 더 그리지 않는다
   expect(await arcs()).toBe(0);
 });
+
+// ── 메모·영역 서식과 테마(B-20261006-09, 구 Builder EditAnnotationModal·NodeResizer·data-theme) ──
+async function addNoteAndZone(page: Page) {
+  await page.getByRole('button', { name: '메모' }).click();
+  await page.getByRole('button', { name: '영역' }).click();
+  await page.locator('.react-flow__controls-fitview').click();
+  await expect(page.locator('.react-flow__node-annotation')).toBeVisible();
+  const ids = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll('.react-flow__node-annotation, .react-flow__node-shape')].map(element => [element.classList.contains('react-flow__node-shape') ? 'zone' : 'note', element.getAttribute('data-id')!]))) as { note: string; zone: string };
+  // 자동 저장이 둘을 담을 때까지 기다린다(시험은 저장본으로 결과를 본다)
+  await expect.poll(async () => ((await saved(page))?.nodes ?? []).filter((node: { id: string }) => node.id === ids.note || node.id === ids.zone).length).toBe(2);
+  return ids;
+}
+const savedNode = async (page: Page, id: string) => ((await saved(page))?.nodes ?? []).find((node: { id: string }) => node.id === id) ?? {};
+
+test('a note is formatted from the side panel and one undo restores it', async ({ page }) => {
+  await openFixture(page, [['cam', 0, 0]]);
+  const { note } = await addNoteAndZone(page);
+  await page.locator(`.react-flow__node[data-id="${note}"]`).dblclick();
+  const text = page.locator('.note-panel textarea');
+  await expect(text).toBeFocused();
+  await text.fill('랙 뒤 전원');
+  await page.getByRole('button', { name: '📌 노란 메모' }).click();
+  await page.getByRole('button', { name: '오른쪽' }).click();
+  await page.getByRole('button', { name: '적용' }).click();
+  await expect.poll(async () => (await savedNode(page, note)).data).toMatchObject({ label: '랙 뒤 전원', fontColor: '#fef08a', bgColor: '#4d4615', textAlign: 'right' });
+  await expect(page.locator(`.react-flow__node[data-id="${note}"] .annotation-text`)).toHaveText('랙 뒤 전원');
+  await page.keyboard.press('Control+z');
+  await expect.poll(async () => (await savedNode(page, note)).data.label).toBe('New note (Double-click to edit)');
+});
+
+test('a zone becomes a circle, resizes by its handle in one undo step, and a locked note does not move', async ({ page }) => {
+  await openFixture(page, [['cam', 0, 0]]);
+  const { note, zone } = await addNoteAndZone(page);
+  await page.locator(`.react-flow__node[data-id="${zone}"] .shape-title`).click();
+  await page.locator('.note-panel select').first().selectOption('circle');
+  await page.getByRole('button', { name: '적용' }).click();
+  await expect(page.locator(`.react-flow__node[data-id="${zone}"] .shape-node`)).toHaveCSS('border-radius', '50%');
+  const start = (await savedNode(page, zone)).style;
+  const corner = await box(page.locator(`.react-flow__node[data-id="${zone}"] .react-flow__resize-control.handle.bottom.right`));
+  await drag(page, { x: corner.x + corner.width / 2, y: corner.y + corner.height / 2 }, { x: corner.x + 80, y: corner.y + 50 });
+  await expect.poll(async () => (await savedNode(page, zone)).style.width).toBeGreaterThan(start.width + 40);
+  await page.keyboard.press('Control+z');
+  await expect.poll(async () => (await savedNode(page, zone)).style).toEqual(start);
+  // 고정한 메모는 끌리지 않고 크기 손잡이도 없다
+  await page.locator(`.react-flow__node[data-id="${note}"]`).dblclick();
+  await page.getByLabel('고정(끌기·크기 바꾸기 막기)').check();
+  await page.getByRole('button', { name: '적용' }).click();
+  await expect.poll(async () => (await savedNode(page, note)).data.locked).toBe(true);
+  const position = (await savedNode(page, note)).position;
+  const body = await box(page.locator(`.react-flow__node[data-id="${note}"]`));
+  await drag(page, { x: body.x + body.width / 2, y: body.y + body.height / 2 }, { x: body.x + body.width / 2 + 120, y: body.y + 90 });
+  await page.waitForTimeout(400);
+  expect((await savedNode(page, note)).position).toEqual(position);
+  await expect(page.locator(`.react-flow__node[data-id="${note}"] .react-flow__resize-control`)).toHaveCount(0);
+});
+
+test('the dark theme switches the whole screen, survives a reload, and stays out of the file', async ({ page }) => {
+  await openFixture(page, [['cam', 0, 0]]);
+  const background = () => page.locator('.react-flow').evaluate(element => getComputedStyle(element).backgroundColor);
+  const light = await background();
+  await page.getByRole('button', { name: '어두운 테마' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect.poll(background).not.toBe(light);
+  await expect(page.locator('.react-flow')).toHaveClass(/dark/);
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.getByRole('button', { name: '어두운 테마' })).toHaveAttribute('aria-pressed', 'true');
+  expect(JSON.stringify(await saved(page))).not.toContain('dark');
+});
