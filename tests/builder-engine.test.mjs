@@ -7,11 +7,11 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as D from '../builder/engine/defaults.mjs';
 import { addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, setEdgeCable } from '../builder/engine/diagram.mjs';
-import { nodeHeight } from '../builder/engine/geometry.mjs';
+import { HANDLE_OUTSET, NODE_PADDING, NODE_WIDTH, PORT_ROW_HEIGHT, nodeHeight, portAnchors } from '../builder/engine/geometry.mjs';
 import { createLibraryIndex } from '../builder/engine/library.mjs';
 import { judgeConnection } from '../builder/engine/rules.mjs';
 import { normalizeDiagram, serializeDiagram } from '../builder/engine/serialize.mjs';
-import { validateDiagram } from '../builder/engine/validate.mjs';
+import { bomRowProblem, validateDiagram } from '../builder/engine/validate.mjs';
 import * as V from '../beta/port-vocabulary.mjs';
 
 // 예제 파일만으로 검사한다. 현재 Portal 데이터에 의존하지 않는다.
@@ -174,6 +174,27 @@ test('node height follows the old Builder formula', () => {
   assert.equal(nodeHeight({ inputs: [], outputs: [], bidirectional: [] }), 100);
   assert.equal(nodeHeight({ inputs: ports(2), outputs: ports(1), bidirectional: [], imageUrl: 'x' }), 12 + 54 + 68 + (2 * 28 - 4) + 12);
   assert.equal(nodeHeight({ inputs: ports(1), outputs: [], bidirectional: ports(2) }), Math.max(100, 12 + 54 + (28 - 4) + 8 + 13 + (2 * 28 - 4) + 12));
+});
+
+test('port anchors sit on the row centres the node height is made of', () => {
+  const ports = (prefix, n) => Array.from({ length: n }, (_, i) => ({ id: `${prefix}-x-${i + 1}` }));
+  const cases = [
+    { inputs: ports('in', 2), outputs: ports('out', 3), bidirectional: ports('both', 2), imageUrl: 'x' },
+    { inputs: ports('in', 1), outputs: [], bidirectional: [] },
+    { inputs: [], outputs: [], bidirectional: ports('both', 3) },
+  ];
+  for (const data of cases) {
+    const anchors = portAnchors(data);
+    assert.equal(anchors.length, data.inputs.length + data.outputs.length + 2 * data.bidirectional.length);
+    for (const anchor of anchors) assert.equal(anchor.x, anchor.side === 'left' ? -HANDLE_OUTSET : NODE_WIDTH + HANDLE_OUTSET);
+    // 맨 아래 행 가운데 + 행 반 + 아래 여백 = 노드 높이(최소 높이 100보다 클 때)
+    const lowest = Math.max(...anchors.map(anchor => anchor.y));
+    const total = lowest + PORT_ROW_HEIGHT / 2 + NODE_PADDING;
+    assert.equal(Math.max(100, total), nodeHeight(data));
+  }
+  const both = portAnchors(cases[0]).filter(anchor => anchor.portId === 'both-x-1');
+  assert.deepEqual(both.map(anchor => [anchor.handle, anchor.side]), [['target_both-x-1', 'left'], ['source_both-x-1', 'right']]);
+  assert.equal(portAnchors(cases[0])[0].y, 12 + 54 + 68 + 12);
 });
 
 test('ids are prefixed lowercase ULIDs and reproducible with a seed', () => {
@@ -408,4 +429,31 @@ test('every current library unit round-trips without a false library-drift', asy
   const { errors, issues } = validateDiagram(saved, { library });
   assert.deepEqual(errors, []);
   assert.deepEqual(issues.filter(issue => issue.code === 'library-drift' || issue.code === 'product-removed'), []);
+});
+
+test('cable rows the quote side cannot count are errors (bom-row-invalid)', () => {
+  const base = () => readJson('builder/examples/small-room.diagram.json');
+  const rowsOf = diagram => diagram.edges.find(edge => edge.data.bomRows?.length).data.bomRows;
+  const errors = diagram => validateDiagram(diagram).errors;
+  for (const [mutate, field] of [
+    [row => { row.quantity = 0; }, 'quantity'],
+    [row => { row.quantity = 1.5; }, 'quantity'],
+    [row => { delete row.quantity; }, 'quantity'],
+    [row => { row.productName = '  '; }, 'productName'],
+    [row => { row.cableType = 'manufactured'; delete row.quantity; }, 'length'],
+    [row => { row.cableType = 'manufactured'; row.length = -2; }, 'length'],
+  ]) {
+    const d = base();
+    const [row] = rowsOf(d);
+    if (row.cableType !== 'ready-made') { row.cableType = 'ready-made'; row.quantity = 1; delete row.length; }
+    mutate(row);
+    const found = errors(d);
+    assert.equal(found.length, 1, field);
+    assert.equal(found[0].code, 'bom-row-invalid');
+    assert.ok(found[0].path.endsWith(`.bomRows[0].${field}`), found[0].path);
+  }
+  assert.equal(bomRowProblem({ cableType: 'manufactured', productName: 'UTP', length: 0.5 }), null);
+  assert.equal(bomRowProblem({ cableType: 'ready-made', productName: 'HDMI', quantity: 2 }), null);
+  assert.equal(bomRowProblem(null).field, '');
+  assert.equal(bomRowProblem({ cableType: 'x', productName: 'a' }).field, 'cableType');
 });

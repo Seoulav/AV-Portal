@@ -1,17 +1,17 @@
 // 선택한 엣지의 라벨과 케이블(1.1 bomRows 형식) 편집.
 import { useEffect, useMemo, useState } from 'react';
-import { findPort, parseHandle, type BomRow, type Equipment } from '../engine';
+import { bomRowProblem, findPort, parseHandle, type BomRow, type Equipment } from '../engine';
 import { useBuilder } from '../state/useBuilder';
 
 const emptyRow = (lineTypeId: string): BomRow => ({ cableType: 'ready-made', productName: '', lineTypeId, quantity: 1 });
 
-export function EdgePanel() {
-  const edgeId = useBuilder(state => state.selectedEdgeId);
+export function EdgePanel({ edgeId }: { edgeId: string }) {
   const diagram = useBuilder(state => state.diagram);
   const library = useBuilder(state => state.library);
   const updateEdge = useBuilder(state => state.updateEdge);
   const notify = useBuilder(state => state.notify);
   const deleteEdge = useBuilder(state => state.deleteEdge);
+  const selectEdges = useBuilder(state => state.selectEdges);
   const edge = diagram.edges.find(item => item.id === edgeId) ?? null;
   const [rows, setRows] = useState<BomRow[]>([]);
   const [label, setLabelText] = useState('');
@@ -43,8 +43,11 @@ export function EdgePanel() {
     updateEdge(edge.id, { label: label.trim(), rows: cleaned });
   };
   return (
-    <aside className="edge-panel">
-      <div className="panel-title">연결</div>
+    <aside className="side-panel edge-panel">
+      <div className="panel-head">
+        <span className="panel-title">연결</span>
+        <button type="button" className="icon-button" onClick={() => selectEdges([])} aria-label="연결 편집 닫기" title="닫고 이슈 목록 보기">✕</button>
+      </div>
       <dl className="edge-facts">
         <dt>출발</dt><dd>{end(edge.source, edge.sourceHandle)}</dd>
         <dt>도착</dt><dd>{end(edge.target, edge.targetHandle)}</dd>
@@ -76,13 +79,13 @@ export function EdgePanel() {
   );
 }
 
-// 견적 쪽이 받는 값이므로 저장 전에 막는다: 제품명 필수, 기성 수량은 1 이상 정수, 제작 길이는 0보다 큰 수
+// 견적 쪽이 받는 값이므로 저장 전에 막는다. 규칙은 엔진 검증기와 같은 함수(bomRowProblem)다(결정 H-d)
 export function cableProblem(rows: BomRow[]): string | null {
   for (const [index, row] of rows.entries()) {
-    const where = `${index + 1}번째 케이블`;
-    if (!row.productName) return `${where}의 제품명을 넣어 주세요. 필요 없는 행은 ✕로 지웁니다.`;
-    if (row.cableType === 'manufactured' && !(typeof row.length === 'number' && Number.isFinite(row.length) && row.length > 0)) return `${where}(제작)의 길이는 0보다 큰 수여야 합니다.`;
-    if (row.cableType === 'ready-made' && !(Number.isInteger(row.quantity) && (row.quantity as number) >= 1)) return `${where}(기성)의 수량은 1 이상의 정수여야 합니다.`;
+    const problem = bomRowProblem(row);
+    if (!problem) continue;
+    const hint = problem.field === 'productName' ? ' 필요 없는 행은 ✕로 지웁니다.' : '';
+    return `${index + 1}번째 케이블: ${problem.detail}.${hint}`;
   }
   return null;
 }

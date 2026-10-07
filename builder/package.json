@@ -1,7 +1,7 @@
 {
   "name": "av-portal-builder",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 Builder 화면",
   "scripts": {
@@ -11,7 +11,8 @@
     "preview": "node ../beta/build-builder-library.mjs && vite preview",
     "typecheck": "tsc --noEmit -p .",
     "test": "vitest run",
-    "check:schema": "node scripts/check-schema.mjs"
+    "check:schema": "node scripts/check-schema.mjs",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@xyflow/react": "^12.12.0",
@@ -20,6 +21,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/node": "^24.19.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

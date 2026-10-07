@@ -1,6 +1,6 @@
 name: Builder CI
 
-# Builder 화면·엔진·라이브러리 변경을 PR 단계에서 검사한다(B-20261006-04 결정 G-a).
+# Builder 화면·엔진·라이브러리 변경을 PR 단계에서 검사한다(B-20261006-04 결정 G-a). 브라우저 시험도 여기서 돈다(B-20261006-05 결정 H-b).
 # Pages 배포가 Builder 빌드 실패로 막히기 전에 여기서 먼저 드러나게 한다.
 on:
   pull_request:
@@ -37,5 +37,14 @@ jobs:
         working-directory: builder
       - run: npm run build
         working-directory: builder
+      # 브라우저 시험(B-20261006-05 결정 H-b: PR에서만 돌린다). 실행기에 깔린 Chrome을 쓴다
+      - run: npm run e2e
+        working-directory: builder
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: builder-e2e-results
+          path: builder/test-results/
+          retention-days: 7
       - name: Validate the example diagrams
         run: node builder/cli/validate.mjs builder/examples/small-room.diagram.json builder/examples/auditorium-audio.diagram.json builder/examples/rtcom-extender.diagram.json --library beta/.generated/builder-library.json

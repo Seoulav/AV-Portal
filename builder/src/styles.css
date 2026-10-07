@@ -35,8 +35,9 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .toolbar-status { margin-left: auto; color: var(--muted); font-size: 13px; }
 
 .workspace { flex: 1; display: flex; min-height: 0; }
-.library-panel, .edge-panel { width: 280px; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; padding: 12px; gap: 8px; overflow: hidden; }
-.edge-panel { border-right: 0; border-left: 1px solid var(--line); overflow-y: auto; }
+.library-panel, .side-panel { width: 280px; flex: none; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; padding: 12px; gap: 8px; overflow: hidden; }
+.side-panel { border-right: 0; border-left: 1px solid var(--line); overflow-y: auto; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; }
 .panel-title { font-weight: 700; }
 .panel-subtitle { font-weight: 600; font-size: 13px; margin-top: 6px; }
 .panel-note { color: var(--muted); font-size: 13px; }
@@ -79,9 +80,38 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .port-dot { width: 5px; height: 5px; border-radius: 50%; flex: none; }
 .port-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .port-badge { font-size: 9px; color: var(--warn); background: #fef3c7; border-radius: 4px; padding: 0 3px; flex: none; }
-/* 선을 끄는 동안 놓을 단자가 맞는지 보여 준다(React Flow가 붙이는 connectingto·valid) */
-.react-flow__handle.connectingto.valid { box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.35); }
-.react-flow__handle.connectingto:not(.valid) { box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.35); }
+/* 단자 핸들(기반명세 §9): 행 칸 전체 + 테두리 바깥 점까지 덮는다. 상자의 바깥 끝 = 점의 바깥 끝 = 선이 붙는 곳.
+   React Flow 기본 핸들(작은 원, 가운데 정렬)을 덮어쓴다. 치수는 EquipmentNode가 넘기는 CSS 변수(geometry)다 */
+.react-flow__node .react-flow__handle.port-handle {
+  top: 0; bottom: 0; width: auto; height: auto; min-width: 0; min-height: 0;
+  transform: none; border: 0; border-radius: 4px; background: transparent;
+}
+.react-flow__node .react-flow__handle.port-handle-in { left: calc(-1 * var(--handle-outset)); right: 0; }
+.react-flow__node .react-flow__handle.port-handle-out { left: 0; right: calc(-1 * var(--handle-outset)); }
+.react-flow__node .react-flow__handle.port-handle-in.port-handle-half { right: 50%; }
+.react-flow__node .react-flow__handle.port-handle-out.port-handle-half { left: 50%; }
+/* 단자 점 */
+.port-handle::after {
+  content: ''; position: absolute; top: 50%; width: var(--handle-size); height: var(--handle-size); margin-top: calc(var(--handle-size) / -2);
+  border-radius: 50%; background: var(--port-color); box-shadow: 0 0 0 1.5px #fff;
+}
+.port-handle-in::after { left: 0; }
+.port-handle-out::after { right: 0; }
+/* 점 바깥 16px 여유. 행 높이를 넘지 않는다 */
+.port-handle::before { content: ''; position: absolute; top: 0; bottom: 0; width: 16px; }
+.port-handle-in::before { left: -16px; }
+.port-handle-out::before { right: -16px; }
+.port-handle:hover { background: rgba(0, 122, 255, 0.06); }
+.port-handle:hover::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 4px rgba(0, 122, 255, 0.3); }
+/* 선을 끄는 동안 포인터 아래 단자가 맞는지 보여 준다(React Flow가 붙이는 connectingto·valid) */
+.port-handle.connectingto.valid { background: rgba(0, 122, 255, 0.1); }
+.port-handle.connectingto:not(.valid) { background: rgba(220, 38, 38, 0.1); }
+.port-handle.connectingto:not(.valid)::after { box-shadow: 0 0 0 1.5px #fff, 0 0 0 4px rgba(220, 38, 38, 0.35); }
+/* 범위 선택 뒤 React Flow가 고른 장비들을 덮는 사각형을 그린다. 그 위에서는 단자 행으로 선을 그을 수 없으므로 없앤다.
+   여러 장비는 고른 장비의 헤더를 끌어 함께 옮긴다 */
+.react-flow__nodesselection-rect { display: none; }
+/* 근접 연결 미리보기 */
+.snap-ring { fill: none; stroke-width: 2.5; }
 .bidi-label { font-size: 10px; color: var(--muted); text-align: center; line-height: 13px; }
 
 .annotation-node { display: flex; align-items: center; justify-content: center; padding: 6px 10px; white-space: pre-wrap; overflow: hidden; }
@@ -96,6 +126,16 @@ input, select { border: 1px solid var(--line); border-radius: 8px; padding: 5px 
 .field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
 .cable-row { display: grid; grid-template-columns: 62px 1fr 72px auto; gap: 4px; }
 .panel-actions { display: flex; gap: 6px; justify-content: flex-end; }
+
+/* 이슈 패널 */
+.issue-group { display: flex; flex-direction: column; gap: 4px; }
+.issue-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.issue-item { width: 100%; text-align: left; display: grid; gap: 1px; padding: 6px 8px; border-left-width: 3px; }
+.issue-warning { border-left-color: var(--warn); }
+.issue-info { border-left-color: var(--accent); }
+.issue-code { font-weight: 600; font-size: 12px; }
+.issue-target { font-size: 12px; overflow-wrap: anywhere; }
+.issue-detail { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
 
 .notice { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 10px 16px; border-radius: 10px; background: #0f172a; color: #fff; font-size: 13px; max-width: 70vw; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25); cursor: pointer; z-index: 10; }
 .notice-warn { background: #92400e; }
