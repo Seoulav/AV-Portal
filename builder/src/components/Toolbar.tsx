@@ -63,14 +63,23 @@ export function Toolbar() {
     const date = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
     return diagramSvg(state.diagram, { lineTypes, stamp: { version: APP_VERSION, date } });
   };
-  const exportSvg = () => download(new Blob([drawing().svg], { type: 'image/svg+xml' }), `구성도-${stamp()}.svg`);
+  const exportSvg = () => {
+    try {
+      download(new Blob([drawing().svg], { type: 'image/svg+xml' }), `구성도-${stamp()}.svg`);
+    } catch (error) {
+      state.notify({ text: `SVG를 만들지 못했습니다: ${(error as Error).message}`, tone: 'error' });
+    }
+  };
   // PDF는 라이브러리·한글 글꼴을 누를 때 불러온다(결정 M-a·M-e)
   const [makingPdf, setMakingPdf] = useState(false);
   const exportPdf = async () => {
     setMakingPdf(true);
     try {
       const { diagramPdf } = await import('../export/diagramPdf');
-      download(await diagramPdf(drawing()), `구성도-${stamp()}.pdf`);
+      const { blob, missing } = await diagramPdf(drawing());
+      download(blob, `구성도-${stamp()}.pdf`);
+      // 글꼴에 없는 글자(한자·이모지 등)는 PDF에서 빠진다. 무엇이 빠졌는지 알린다
+      if (missing.length) state.notify({ text: `PDF를 만들었습니다. 글꼴에 없는 글자 ${missing.length}종은 빠졌습니다: ${missing.slice(0, 8).join(' ')}${missing.length > 8 ? ' …' : ''}`, tone: 'warn' });
     } catch (error) {
       state.notify({ text: `PDF를 만들지 못했습니다: ${(error as Error).message}. 페이지를 새로 고친 뒤 다시 눌러 주세요.`, tone: 'error' });
     } finally {

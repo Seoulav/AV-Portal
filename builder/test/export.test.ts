@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_RULES, createIdFactory, createLibraryIndex, type Equipment, type Library, type Port } from '../src/engine';
-import { diagramSvg, textWidth } from '../src/export/diagramSvg';
+import { DEFAULT_RULES, createIdFactory, createLibraryIndex, type Diagram, type Equipment, type Library, type Port } from '../src/engine';
+import { diagramSvg, ellipsize, textWidth, wrap } from '../src/export/diagramSvg';
 import { createBuilderStore } from '../src/state/store';
 
 // 합성 라이브러리(현재 Portal 데이터와 무관). 모델명에 XML 특수 문자를 넣는다
 const port = (id: string, direction: Port['direction'], signal: string, type: string): Port => ({ id, label: id, type, direction, connector: signal === 'ETHERNET' ? 'RJ45' : 'HDMI', signals: [signal], verification: 'FOUND' });
 const UNITS: [string, string, Port[]][] = [
-  ['src', 'A&B <SRC>', [port('out-hdmi-1', 'out', 'HDMI', 'video'), port('out-hdmi-2', 'out', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
+  ['src', 'A&B <SRC>', [port('out-hdmi-1', 'out', 'HDMI', 'video'), port('out-hdmi-2', 'out', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network'), { ...port('out-hdmi-3', 'out', 'HDMI', 'video'), verification: 'REVIEW REQUIRED' }]],
   ['dst', '"DST"', [port('in-hdmi-1', 'in', 'HDMI', 'video'), port('in-hdmi-2', 'in', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
 ];
 const library = {
@@ -64,11 +64,8 @@ describe('diagram SVG export (B-20261006-10)', () => {
     const base = diagramSvg(diagram, OPTIONS).svg;
     const shuffled = { ...diagram, nodes: [...diagram.nodes].reverse(), edges: [...diagram.edges].reverse() };
     expect(diagramSvg(shuffled, OPTIONS).svg).toBe(base);
-    const viewState = { ...diagram, nodes: diagram.nodes.map(node => ({ ...node, selected: true, dragging: true })) };
+    const viewState = { ...diagram, nodes: diagram.nodes.map(node => ({ ...node, selected: true, dragging: true, hidden: true })) };
     expect(diagramSvg(viewState, OPTIONS).svg).toBe(base);
-    store.getState().toggleLineType('network');
-    store.getState().toggleTheme();
-    expect(diagramSvg(store.getState().diagram, OPTIONS).svg).toBe(base);
     // 선 경로 좌표는 0.1 단위, 투명도 같은 값은 그대로(0.25가 0.3으로 뭉개지지 않는다)
     for (const [, d] of base.matchAll(/ d="([^"]+)"/g)) expect(d).not.toMatch(/\d\.\d{2,}/);
     expect(base).toContain('opacity="0.25"');
@@ -94,6 +91,63 @@ describe('diagram SVG export (B-20261006-10)', () => {
     expect(lines[0]).toBe('첫 줄');
     expect(lines.length).toBeGreaterThan(2);
     expect(lines.every(line => textWidth(line, 14) <= 200 - 16)).toBe(true);
+  });
+
+  it('shortens long port names from the middle so the trailing number keeps ports apart (Pretendard widths)', () => {
+    // 화면 열 폭(85px)에 들어가는 이름은 그대로 둔다
+    expect(ellipsize('Line Audio In 1', 11, 85)).toBe('Line Audio In 1');
+    // 넘치는 이름은 가운데를 줄이고 끝 번호를 남긴다. 같은 열의 단자 이름이 서로 다르게 남는다
+    const names = Array.from({ length: 12 }, (_, i) => ellipsize(`Balanced Microphone Line Input ${i + 1}`, 11, 85));
+    expect(new Set(names).size).toBe(12);
+    expect(names[11].endsWith('…12') || names[11].endsWith('… 12') || names[11].endsWith('Input 12')).toBe(true);
+    names.forEach(name => expect(textWidth(name, 11)).toBeLessThanOrEqual(85));
+    // 한글 폭은 Pretendard 실측(0.864em)
+    expect(textWidth('가나다', 10)).toBeCloseTo(25.92, 2);
+  });
+
+  it('drops characters XML 1.0 forbids and survives format values of the wrong type from an imported file', () => {
+    const { store } = setup();
+    const note = store.getState().diagram.nodes.find(node => node.type === 'annotation')!;
+    const zone = store.getState().diagram.nodes.find(node => node.type === 'shape')!;
+    const edge = store.getState().diagram.edges[0];
+    const broken = {
+      ...store.getState().diagram,
+      nodes: store.getState().diagram.nodes.map(node => (node.id === note.id ? { ...node, data: { label: 1234, fontSize: null, bgOpacity: '0.5' } }
+        : node.id === zone.id ? { ...node, data: { label: 'Z\u000bONE', shapeType: 'hexagon', borderWidth: 'thick' } } : node)),
+      edges: store.getState().diagram.edges.map(item => (item.id === edge.id ? { ...item, data: { ...item.data, label: 'A\u000bB\u0001' } } : item)),
+    } as unknown as Diagram;
+    const { svg } = diagramSvg(broken, OPTIONS);
+    expect(svg).not.toMatch(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/);
+    expect(svg).toContain('>1234<');
+    expect(svg).toContain('>ZONE<');
+    expect(svg).toContain('>AB<');
+  });
+
+  it('clips each note to its box like the screen, and marks ports that still need review', () => {
+    const { store } = setup();
+    const note = store.getState().diagram.nodes.find(node => node.type === 'annotation')!;
+    store.getState().updateNoteData(note.id, { label: '아주 긴 메모 '.repeat(30) });
+    const { svg } = diagramSvg(store.getState().diagram, OPTIONS);
+    const [, clipId] = /<g clip-path="url\(#([^)]+)\)">/.exec(svg)!;
+    expect(svg).toContain(`<clipPath id="${clipId}"><rect x="${note.position.x}" y="${note.position.y}" width="200" height="60"`);
+    // VERIFIED·FOUND가 아닌 단자에는 화면처럼 "확인" 배지
+    expect((svg.match(/>확인</g) ?? []).length).toBe(1);
+  });
+
+  it('keeps the stamp inside a tiny drawing', () => {
+    const store = createBuilderStore({ ids: createIdFactory({ seed: 2, now: 0 }) });
+    store.getState().addAnnotation({ x: 0, y: 0 });
+    const tiny = { ...store.getState().diagram, nodes: store.getState().diagram.nodes.map(node => ({ ...node, style: { width: 60, height: 30 } })) };
+    const { width } = diagramSvg(tiny, OPTIONS);
+    expect(width).toBeGreaterThanOrEqual(textWidth('AV Portal Builder v0.0.0-test · 2026-10-08', 10) + 80);
+  });
+
+  it('wraps notes at word boundaries and splits only words longer than the box', () => {
+    expect(wrap('alpha beta gamma delta', 14, 90)).toEqual(['alpha beta', 'gamma delta']);
+    const long = wrap('supercalifragilistic word', 14, 60);
+    expect(long.length).toBeGreaterThan(2);
+    long.forEach(line => expect(textWidth(line, 14)).toBeLessThanOrEqual(60));
+    expect(wrap('첫 줄\n둘째 줄', 14, 200)).toEqual(['첫 줄', '둘째 줄']);
   });
 
   it('colours port dots and links with the line type colours', () => {

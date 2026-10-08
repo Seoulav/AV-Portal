@@ -717,12 +717,15 @@ test('the dark theme switches the whole screen, survives a reload, and stays out
 const PDFJS = resolve('..', 'beta', 'site', 'vendor', 'pdfjs');
 async function exportFixture(page: Page) {
   await page.route('**/__pdfjs/**', route => route.fulfill({ path: join(PDFJS, route.request().url().split('/__pdfjs/')[1]), contentType: 'text/javascript' }));
-  const ids = await openFixture(page, [['cam', 0, 0], ['disp', 500, 160]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [0, 'both-ethernet-1', 1, 'both-ethernet-1']]);
+  // 앞으로 가는 선, 뒤집어 그리는 양방향 선(disp→cam으로 저장), 뒤로 가는 U자 선 둘(quad→wall)이 함께 있다
+  const ids = await openFixture(page, [['cam', 0, 0], ['disp', 500, 160], ['quad', 900, 420], ['wall', 300, 520]],
+    [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [1, 'both-ethernet-1', 0, 'both-ethernet-1'], [2, 'out-hdmi-1', 3, 'in-hdmi-1'], [2, 'out-hdmi-2', 3, 'in-hdmi-2']]);
   const { note } = await addNoteAndZone(page);
   await page.locator(`.react-flow__node[data-id="${note}"]`).dblclick();
-  await page.locator('.note-panel textarea').fill('랙 앞 전원 확인 & <점검>');
+  // 한자(確認)는 PDF 글꼴에 없다. PDF를 만들면 빠진다고 알려야 한다
+  await page.locator('.note-panel textarea').fill('랙 앞 전원 확인 & <점검> 確認');
   await page.getByRole('button', { name: '적용' }).click();
-  await expect.poll(async () => (await savedNode(page, note)).data.label).toBe('랙 앞 전원 확인 & <점검>');
+  await expect.poll(async () => (await savedNode(page, note)).data.label).toBe('랙 앞 전원 확인 & <점검> 確認');
   return ids;
 }
 // 경로를 명령과 숫자로 나눈다(숫자는 반올림 차이를 견주려고 수로 바꾼다)
@@ -738,11 +741,11 @@ test('SVG export draws the links exactly where the screen draws them and parses 
     return { error: doc.querySelector('parsererror')?.textContent ?? null, texts: [...doc.querySelectorAll('text')].map(node => node.textContent) };
   }, svg);
   expect(parsed.error).toBeNull();
-  expect(parsed.texts).toContain('랙 앞 전원 확인 & <점검>');
+  expect(parsed.texts).toContain('랙 앞 전원 확인 & <점검> 確認');
   // 화면의 선과 같은 경로다. SVG의 선은 구성도 좌표 그대로이고, 도면 원점 이동은 바깥 g의 translate가 한다
   expect(svg).toMatch(/<g transform="translate\([-\d.]+ [-\d.]+\)">/);
   const screen = await page.locator('.react-flow__edge').evaluateAll(edges => edges.map(edge => [edge.getAttribute('data-id'), edge.querySelector('path.react-flow__edge-path')?.getAttribute('d') ?? '']));
-  expect(screen.length).toBe(2);
+  expect(screen.length).toBe(4);
   for (const [id, d] of screen) {
     const exported = new RegExp(`<path data-edge="${id}" d="([^"]+)"`).exec(svg)![1];
     const theirs = pathTokens(d!);
@@ -762,6 +765,11 @@ test('PDF export loads its library and Korean font on demand and keeps text as t
   const [download] = await Promise.all([page.waitForEvent('download', { timeout: 60_000 }), page.getByRole('button', { name: 'PDF' }).click()]);
   expect(download.suggestedFilename()).toMatch(/^구성도-\d{8}-\d{4}\.pdf$/);
   expect(late.filter(url => url.endsWith('Pretendard-Regular.ttf'))).toHaveLength(1);
+  // PDF 라이브러리 파일도 누른 뒤에야 받는다(첫 화면 번들에 없다)
+  expect(late.some(url => /\/diagramPdf-[^/]+\.js$/.test(url))).toBe(true);
+  // 글꼴에 없는 한자는 빠진다고 알린다
+  await expect(page.locator('.notice')).toContainText('글꼴에 없는 글자');
+  await expect(page.locator('.notice')).toContainText('確');
   const pdf = readFileSync(await download.path());
   expect(pdf.subarray(0, 5).toString('latin1')).toBe('%PDF-');
   const read = await page.evaluate(async base64 => {
