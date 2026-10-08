@@ -1,7 +1,10 @@
-// 상단 막대: 새 구성도·열기·내보내기·실행 취소·메모·영역·케이블 보기, 편집 도구(오토 레이아웃·잠금·격자·미니맵).
+// 상단 막대: 새 구성도·열기·내보내기(JSON·SVG·PDF)·실행 취소·메모·영역·케이블 보기, 편집 도구(오토 레이아웃·잠금·격자·미니맵).
 // 단축키: Ctrl+Z·Y 실행 취소·다시 실행, Ctrl+C·V 복사·붙여넣기(앱 안 클립보드, 구 Builder와 같다).
 import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
+import { version as APP_VERSION } from '../../package.json';
+import { DEFAULT_RULES } from '../engine';
+import { diagramSvg } from '../export/diagramSvg';
 import { freePosition } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
 import { FIT_VIEW, keepFocus } from './Canvas';
@@ -45,13 +48,34 @@ export function Toolbar() {
     return () => window.removeEventListener('keydown', onKey);
   }, [state]);
 
-  const exportFile = () => {
-    const blob = new Blob([state.exportText()], { type: 'application/json' });
+  const download = (blob: Blob, name: string) => {
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = `구성도-${stamp()}.diagram.json`;
+    link.download = name;
     link.click();
     URL.revokeObjectURL(link.href);
+  };
+  const exportFile = () => download(new Blob([state.exportText()], { type: 'application/json' }), `구성도-${stamp()}.diagram.json`);
+  // 도면(B-20261006-10): 구성도 데이터로 그린 SVG. 화면 상태와 무관하다. 단자 색은 라이브러리 선 종류를 먼저 쓴다
+  const drawing = () => {
+    const lineTypes = [...state.diagram.lineTypes, ...(state.library?.rules ?? DEFAULT_RULES).lineTypes];
+    const today = new Date();
+    const date = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+    return diagramSvg(state.diagram, { lineTypes, stamp: { version: APP_VERSION, date } });
+  };
+  const exportSvg = () => download(new Blob([drawing().svg], { type: 'image/svg+xml' }), `구성도-${stamp()}.svg`);
+  // PDF는 라이브러리·한글 글꼴을 누를 때 불러온다(결정 M-a·M-e)
+  const [makingPdf, setMakingPdf] = useState(false);
+  const exportPdf = async () => {
+    setMakingPdf(true);
+    try {
+      const { diagramPdf } = await import('../export/diagramPdf');
+      download(await diagramPdf(drawing()), `구성도-${stamp()}.pdf`);
+    } catch (error) {
+      state.notify({ text: `PDF를 만들지 못했습니다: ${(error as Error).message}. 페이지를 새로 고친 뒤 다시 눌러 주세요.`, tone: 'error' });
+    } finally {
+      setMakingPdf(false);
+    }
   };
   const openFile = async (file: File | undefined) => {
     if (!file) return;
@@ -99,7 +123,9 @@ export function Toolbar() {
       <div className="toolbar-actions">
         <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
         <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>
-        <button type="button" className="primary" onClick={exportFile} disabled={!ready}>내보내기</button>
+        <button type="button" className="primary" onClick={exportFile} disabled={!ready} title="구성도 JSON(1.2) 파일">내보내기</button>
+        <button type="button" onClick={exportSvg} disabled={!ready || !state.diagram.nodes.length} title="도면을 벡터 SVG로 받는다">SVG</button>
+        <button type="button" onClick={() => void exportPdf()} disabled={!ready || !state.diagram.nodes.length || makingPdf} title="도면을 벡터 PDF로 받는다(한글 글꼴 포함)">{makingPdf ? 'PDF 만드는 중…' : 'PDF'}</button>
         <span className="divider" />
         <button type="button" onClick={state.undo} disabled={!state.past.length} title="Ctrl+Z">실행 취소</button>
         <button type="button" onClick={state.redo} disabled={!state.future.length} title="Ctrl+Y">다시 실행</button>

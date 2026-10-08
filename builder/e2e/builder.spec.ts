@@ -1,5 +1,6 @@
 // Builder 기본 조작 시험(통합 기획 §7.4 중 P4 항목, 기반명세 §9). 합성 라이브러리로 돌린다.
 import { readFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { expect, test, type Locator, type Page } from '@playwright/test';
 import { validateDiagram } from '../src/engine';
 import { diagramText, library, libraryIndex } from './fixture';
@@ -709,4 +710,72 @@ test('the dark theme switches the whole screen, survives a reload, and stays out
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(page.getByRole('button', { name: '어두운 테마' })).toHaveAttribute('aria-pressed', 'true');
   expect(JSON.stringify(await saved(page))).not.toContain('dark');
+});
+
+// ── 도면 내보내기(B-20261006-10): 구성도 데이터로 그린 SVG, SVG에서 만든 PDF ──
+// PDF 글자는 Portal이 이미 싣는 pdf.js 원본(beta/site/vendor/pdfjs)으로 읽는다
+const PDFJS = resolve('..', 'beta', 'site', 'vendor', 'pdfjs');
+async function exportFixture(page: Page) {
+  await page.route('**/__pdfjs/**', route => route.fulfill({ path: join(PDFJS, route.request().url().split('/__pdfjs/')[1]), contentType: 'text/javascript' }));
+  const ids = await openFixture(page, [['cam', 0, 0], ['disp', 500, 160]], [[0, 'out-hdmi-1', 1, 'in-hdmi-1'], [0, 'both-ethernet-1', 1, 'both-ethernet-1']]);
+  const { note } = await addNoteAndZone(page);
+  await page.locator(`.react-flow__node[data-id="${note}"]`).dblclick();
+  await page.locator('.note-panel textarea').fill('랙 앞 전원 확인 & <점검>');
+  await page.getByRole('button', { name: '적용' }).click();
+  await expect.poll(async () => (await savedNode(page, note)).data.label).toBe('랙 앞 전원 확인 & <점검>');
+  return ids;
+}
+// 경로를 명령과 숫자로 나눈다(숫자는 반올림 차이를 견주려고 수로 바꾼다)
+const pathTokens = (d: string) => (d.match(/[MLQA]|-?\d+(?:\.\d+)?/g) ?? []).map(token => (/[MLQA]/.test(token) ? token : Number(token)));
+
+test('SVG export draws the links exactly where the screen draws them and parses as XML', async ({ page }) => {
+  await exportFixture(page);
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'SVG' }).click()]);
+  expect(download.suggestedFilename()).toMatch(/^구성도-\d{8}-\d{4}\.svg$/);
+  const svg = readFileSync(await download.path(), 'utf8');
+  const parsed = await page.evaluate(text => {
+    const doc = new DOMParser().parseFromString(text, 'image/svg+xml');
+    return { error: doc.querySelector('parsererror')?.textContent ?? null, texts: [...doc.querySelectorAll('text')].map(node => node.textContent) };
+  }, svg);
+  expect(parsed.error).toBeNull();
+  expect(parsed.texts).toContain('랙 앞 전원 확인 & <점검>');
+  // 화면의 선과 같은 경로다. SVG의 선은 구성도 좌표 그대로이고, 도면 원점 이동은 바깥 g의 translate가 한다
+  expect(svg).toMatch(/<g transform="translate\([-\d.]+ [-\d.]+\)">/);
+  const screen = await page.locator('.react-flow__edge').evaluateAll(edges => edges.map(edge => [edge.getAttribute('data-id'), edge.querySelector('path.react-flow__edge-path')?.getAttribute('d') ?? '']));
+  expect(screen.length).toBe(2);
+  for (const [id, d] of screen) {
+    const exported = new RegExp(`<path data-edge="${id}" d="([^"]+)"`).exec(svg)![1];
+    const theirs = pathTokens(d!);
+    const ours = pathTokens(exported);
+    expect(ours.length).toBe(theirs.length);
+    ours.forEach((value, index) => (typeof value === 'string' ? expect(value).toBe(theirs[index]) : expect(Math.abs(value - Number(theirs[index]))).toBeLessThan(0.2)));
+  }
+});
+
+test('PDF export loads its library and Korean font on demand and keeps text as text', async ({ page }) => {
+  const late: string[] = [];
+  page.on('request', request => { if (/diagramPdf-|Pretendard-Regular\.ttf/.test(request.url())) late.push(request.url()); });
+  await exportFixture(page);
+  expect(late).toEqual([]);
+  const [svgDownload] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'SVG' }).click()]);
+  const [, width, height] = /<svg[^>]* width="([\d.]+)" height="([\d.]+)"/.exec(readFileSync(await svgDownload.path(), 'utf8'))!;
+  const [download] = await Promise.all([page.waitForEvent('download', { timeout: 60_000 }), page.getByRole('button', { name: 'PDF' }).click()]);
+  expect(download.suggestedFilename()).toMatch(/^구성도-\d{8}-\d{4}\.pdf$/);
+  expect(late.filter(url => url.endsWith('Pretendard-Regular.ttf'))).toHaveLength(1);
+  const pdf = readFileSync(await download.path());
+  expect(pdf.subarray(0, 5).toString('latin1')).toBe('%PDF-');
+  const read = await page.evaluate(async base64 => {
+    const pdfjs = await import(new URL('/__pdfjs/pdf.min.mjs', location.href).href);
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL('/__pdfjs/pdf.worker.min.mjs', location.href).href;
+    const doc = await pdfjs.getDocument({ data: Uint8Array.from(atob(base64), char => char.charCodeAt(0)) }).promise;
+    const first = await doc.getPage(1);
+    const { width: w, height: h } = first.getViewport({ scale: 1 });
+    const content = await first.getTextContent();
+    return { pages: doc.numPages, width: w, height: h, text: content.items.map((item: { str: string }) => item.str).join(' ') };
+  }, pdf.toString('base64'));
+  expect(read.pages).toBe(1);
+  // 결정 M-b: 도면 크기 그대로 한 쪽(1px = 1pt)
+  expect(Math.abs(read.width - Number(width))).toBeLessThan(1);
+  expect(Math.abs(read.height - Number(height))).toBeLessThan(1);
+  for (const word of ['CAM', 'DISP', 'in-hdmi-1', '양방향', '랙 앞 전원 확인 & <점검>', 'AV Portal Builder']) expect(read.text).toContain(word);
 });

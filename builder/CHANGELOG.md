@@ -1,5 +1,24 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [v0.7.0] — 2026-10-08
+
+[B-20261006-10](../Work/빌더/작업/B-20261006-10.md). P5의 5차로 도면 내보내기를 만들었다. 구 Builder는 화면을 PNG 한 장으로 찍어 PDF에 붙였다(`App.tsx:536-568`). 통합 기획 §8에 따라 벡터로 다시 만들었다.
+
+### Added
+- SVG 내보내기(`src/export/diagramSvg.ts`): 구성도 데이터(엔진 좌표)로 직접 그린다. 화면(DOM)을 읽지 않는다
+  - 장비(제조사·모델명·장비 이름·단자 이름과 점·양방향 구획), 연결(화면과 같은 경로·간격·교차 점프), 연결 라벨, 메모·영역(B-09 서식 그대로)
+  - 같은 구성도면 줌·선택·선 종류 필터·테마와 무관하게 같은 문자열이다. 늘 밝은 바탕이다(결정 M-f). 숨긴 연결도 모두 넣는다
+  - 사진은 넣지 않고 자리만 둔다(결정 M-c). 연결 라벨은 화면과 같고 케이블 요약은 넣지 않는다(결정 M-d)
+  - 오른쪽 아래에 "AV Portal Builder 버전 · 날짜"를 적는다(결정 M-b). 고객·현장 정보는 파일에 없어 넣지 않는다
+- PDF 내보내기(`src/export/diagramPdf.ts`): 같은 SVG를 `jspdf` + `svg2pdf.js`로 벡터 그대로 옮긴다(결정 M-a). 도면 크기 그대로 한 쪽(1px = 1pt, 14,400pt를 넘으면 비율을 지켜 줄임)
+  - 한글 글꼴은 Pretendard Regular 원본(SIL OFL 1.1, `public/fonts/OFL.txt`)을 고치지 않고 넣는다(결정 M-e). 굵은 글자는 같은 글꼴에 얇은 외곽선을 둔다
+  - 라이브러리와 글꼴은 PDF를 누를 때 불러온다. 첫 화면 파일에는 없다
+- 상단 막대 "SVG"·"PDF" 버튼. 파일 이름은 JSON과 같은 규칙(`구성도-YYYYMMDD-HHmm`)
+- vitest 6건(모든 요소, XML 특수 문자, 순서·화면 상태와 무관, 범위, 메모 줄 나눔, 선 종류 색), Playwright 2건(SVG 선이 화면 선과 같음·XML로 읽힘, PDF 글꼴을 누를 때 받음·쪽 크기·한글 글자 추출)
+
+### Changed
+- jsPDF의 선택 기능용 모듈(`html2canvas`·`dompurify`·`canvg`)은 빈 모듈로 바꿔 번들에서 뺐다(`vite.config.ts`). 도면 내보내기는 그 기능을 쓰지 않는다
+
 ## [v0.6.0] — 2026-10-07
 
 [B-20261006-09](../Work/빌더/작업/B-20261006-09.md). P5의 4차로 구 Builder의 메모·영역 서식 편집과 테마를 옮겼다(seoul-visual-tech/av-system-builder `2fd568e`의 `EditAnnotationModal.tsx`, `AnnotationNode.tsx`, `ShapeNode.tsx`, `index.css`).
