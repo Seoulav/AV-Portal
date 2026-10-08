@@ -14,3 +14,5 @@ beta/site/vendor/pdfjs/standard_fonts/*.ttf -text -diff
 # Upstream licenses contain intentional trailing spaces and blank final lines.
 beta/site/vendor/pdfjs/cmaps/LICENSE -text whitespace=-trailing-space,-blank-at-eof
 beta/site/vendor/pdfjs/standard_fonts/LICENSE_* -text whitespace=-trailing-space,-blank-at-eof
+# Builder PDF 글꼴(Pretendard 원본 그대로, B-20261006-10)
+builder/public/fonts/*.ttf -text -diff

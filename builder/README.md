@@ -20,9 +20,11 @@ AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 화면이다. 방�
 | `src/bundle.ts`, `src/bundleDrop.ts` | 평행선 한꺼번에 긋기: 단자 묶음 정렬과 대상 단자 짝짓기, 놓을 곳 정하기(미리보기·놓기 공용) |
 | `src/layout.ts` | 오토 레이아웃(구 Builder `layout.ts` 이식): Dagre로 신호 흐름 열을 정하고 barycenter로 순서를 다듬는다. Dagre는 누를 때 불러온다 |
 | `src/lineFilter.ts` | 선 종류 필터: 숨긴 연결과 보이는 연결이 없는 장비(화면에만) |
+| `src/export/` | 도면 내보내기: 구성도 데이터로 그리는 SVG(`diagramSvg.ts`), SVG를 벡터로 옮긴 PDF(`diagramPdf.ts`, 누를 때 불러옴) |
+| `public/fonts/` | PDF에 넣는 한글 글꼴 Pretendard Regular 원본과 라이선스(`OFL.txt`, SIL OFL 1.1) |
 | `src/edges/` | 선 그리기(구 Builder `edgeProcessing`·`edgeGeometry` 이식): 평행선 간격·채널 순서, 직교 경로·교차 점프, 양방향 선 뒤집기(화면에만) |
 | `src/components/` | 장비 목록, 캔버스·노드, 메모·영역 노드, 엣지(`BuilderEdge`, 구 `CustomSmoothstepEdge`), 연결 미리보기, 연결 편집 패널, 메모·영역 서식 패널, 이슈 패널, 상단 막대 |
-| `test/` | vitest(상태 저장소·자동 저장·근접 연결·묶음 연결·선 그리기·오토 레이아웃·복사·선 종류 필터·케이블 검사·목록 필터). 선 그리기와 오토 레이아웃은 구 Builder 결과를 표본으로 대조한다 |
+| `test/` | vitest(상태 저장소·자동 저장·근접 연결·묶음 연결·선 그리기·오토 레이아웃·복사·선 종류 필터·메모 서식·도면 내보내기·케이블 검사·목록 필터). 선 그리기와 오토 레이아웃은 구 Builder 결과를 표본으로 대조한다 |
 | `e2e/` | Playwright 브라우저 시험과 합성 라이브러리 픽스처 |
 | `scripts/check-schema.mjs` | ajv로 스키마를 컴파일하고 예제·깨진 사본을 검사한다 |
 
@@ -82,6 +84,7 @@ node cli/validate.mjs examples/small-room.diagram.json examples/auditorium-audio
 | 크기·고정 | 고른 메모·영역의 테두리 손잡이를 끌어 크기를 바꾼다(메모 최소 60×30, 영역 최소 80×80). 한 번 끌기가 실행 취소 한 단위다. 서식 패널에서 "고정"하면 끌거나 크기를 바꾸지 못한다(파일의 `data.locked`) |
 | 테마 | 상단 막대의 "어두운 테마"로 어두운 화면과 밝은 화면을 바꾼다. 처음은 밝은 화면이다. 고른 테마는 이 브라우저에 남고(`localStorage` 키 `av-portal-builder:theme`) 파일에는 들어가지 않는다 |
 | 삭제·되돌리기 | 장비나 연결을 고르고 Delete 또는 Backspace로 지운다. 장비를 지우면 붙은 연결도 함께 지워지고, 실행 취소 한 번에 모두 돌아온다. Ctrl+Z로 되돌리고 Ctrl+Y로 다시 한다. 끌기·방향키 이동·열기·새 구성도도 되돌릴 수 있고, 최근 50단계까지 남는다 |
+| 도면(SVG·PDF) | 상단 막대의 "SVG"·"PDF"로 도면을 받는다. 구성도 데이터로 직접 그려서 화면의 줌·선택·선 종류 필터·테마와 무관하게 늘 같은 도면이고, 선 모양은 화면과 같다. 숨긴 연결도 모두 들어간다. 바탕은 늘 밝다. PDF는 도면 크기 그대로 한 쪽이고 글자를 고르고 찾을 수 있다(한글 글꼴 Pretendard 포함). 장비 사진과 케이블 요약은 넣지 않는다. 오른쪽 아래에 Builder 버전과 내보낸 날짜를 적는다 |
 | 저장 | 브라우저에 자동 저장된다(`localStorage` 키 `av-portal-builder:current`). 파일은 내보내기로 받는다. 저장본이 검증에 걸려 불러오지 못하면 원문을 `av-portal-builder:rejected`에 옮겨 두고 알린다 |
 | 열기 | 1.2 파일만 연다. 검증 오류가 있으면 열지 않고 지금 구성도를 그대로 둔다 |
 
