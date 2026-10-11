@@ -1,0 +1,155 @@
+{
+  "x100pro-2u": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "x100pro-2u-front.webp",
+          "alt": "Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-2U",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2362×603(사양서 내장 이미지)",
+          "resolution": "1800×459",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        }
+      ]
+    },
+    "approved": {
+      "images": "bb405a88d0ee4e970d5e0b8f3c51998fc12807d803dc2e98eaaa8f83dfad2d2c",
+      "imageStatuses": "a483869c5667b82f45c804b9ae05aace385de38a65f88654d966e752aad92725"
+    }
+  },
+  "x100pro-4u": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "x100pro-4u-front.webp",
+          "alt": "Colorlight X100 Pro-4U 전면 이미지(전면 표시창에 모델명 표기)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-4U",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2001×740(사양서 내장 이미지)",
+          "resolution": "1800×665",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        }
+      ]
+    },
+    "approved": {
+      "images": "b82b60c26318f9e21387d1e9d6625281474e35c99abd3365e952db7581104c95",
+      "imageStatuses": "328b38aeab44fea6087eca168235d93cb77ed47390b5d5203754fdf637295298"
+    }
+  },
+  "x100pro-7u": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "x100pro-7u-front.webp",
+          "alt": "Colorlight X100 Pro-7U 전면 이미지(전면 표시창에 모델명 표기)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-7U",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-7U_1755598432.png",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2489×1886",
+          "resolution": "1800×1032",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-7U_1755598432.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        }
+      ]
+    },
+    "approved": {
+      "images": "ae7f8f82b50913b9457b96e27726543b4789d402a84ed68ccaa56a2cd3fece3b",
+      "imageStatuses": "abe04cca033d478461d836318b06d5ef2bca91787f58e3edbc6060822660249e"
+    }
+  }
+}

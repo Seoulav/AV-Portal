@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 267,
-    "sha256": "4D2088195D448A7D279D01183ED79C768FE45236D2D28386CD10A45754C1A01C",
+    "count": 272,
+    "sha256": "B8B1F1B0426B9BFD96CAC07188A877ED88CF019CD07CD3B0818486399AA50C0F",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -35,6 +35,36 @@
       "sha256": "812AC9FED94BA20D185D83561AABA3E4E3E7631CCC64244C34FB37F966DD0499",
       "features": 6,
       "specifications": 16,
+      "io": 6
+    },
+    "aquilon-rs3": {
+      "sha256": "C71A8A4FAB7C3C62623CDDDFB7101303E73A5ABFD395B6B05DF3325E156FCDBC",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
+    },
+    "aquilon-rs4": {
+      "sha256": "CB2AC27DC97FEABB39F10F8C9D3A529FA4F256497321594B3DD5434D1FD2D14B",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
+    },
+    "aquilon-rs5": {
+      "sha256": "F62DF57306B3CFEF0390E5A00D89A4526663172053545DC45426EEDC24B415E2",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
+    },
+    "aquilon-rs6": {
+      "sha256": "FEFBA66A19C05A83F5150900E09F4FFF6033D80AB351B6D981E63D52C92C57DB",
+      "features": 6,
+      "specifications": 16,
+      "io": 6
+    },
+    "aquilon-rsalpha": {
+      "sha256": "82EF435D53C2A30D1073EE71F700F9C5B47BCFF0D0A1F0B676449B217C39D8C9",
+      "features": 6,
+      "specifications": 14,
       "io": 6
     },
     "avhub": {
@@ -1532,19 +1562,19 @@
       "io": 8
     },
     "x100pro-2u": {
-      "sha256": "9C8AC9EBFFCAD7436907EA00EF053681D5974BF2E24063207382122556E2E846",
+      "sha256": "B86B4150E10BB829429A3D7A687A3A65C02CC54197AB66070B5375325AE5B34F",
       "features": 6,
       "specifications": 11,
       "io": 2
     },
     "x100pro-4u": {
-      "sha256": "25A33C626286BA6B74CB6ECF5EE569568710C450D84EBA6711C866334813A3F4",
+      "sha256": "22F77C747FC29F420E33BB095DA377F991EAC91CB0D8EE53A864A563540F07C3",
       "features": 6,
       "specifications": 11,
       "io": 2
     },
     "x100pro-7u": {
-      "sha256": "6C3F261D72AB5485E1E54163E4BCAEE6633DA7E44F4AA3CA112DE9E1E9227331",
+      "sha256": "708E43B5A130F276C7E8ED4C4DD4F19C88B5A8D69EB4BB85489964E8A5917FEC",
       "features": 6,
       "specifications": 13,
       "io": 2

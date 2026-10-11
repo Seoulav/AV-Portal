@@ -4500,5 +4500,85 @@
       "order": 6,
       "size": 85
     }
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS3",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Wall Controller"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs3"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS3/Technical+Datasheet/Aquilon-RS3-datasheet-en-20260703.pdf",
+    "slug": "aquilon-rs3",
+    "card_image": "aquilon-rs3-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS4",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Wall Controller"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs4"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS4/Technical+Datasheet/Aquilon-RS4-datasheet-en-20260703.pdf",
+    "slug": "aquilon-rs4",
+    "card_image": "aquilon-rs4-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS5",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Wall Controller"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs5"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS5/Technical+Datasheet/Aquilon-RS5-datasheet-en-20260703.pdf",
+    "slug": "aquilon-rs5",
+    "card_image": "aquilon-rs5-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS6",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Wall Controller"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs6"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS6/Technical+Datasheet/Aquilon-RS6-datasheet-en-20260703.pdf",
+    "slug": "aquilon-rs6",
+    "card_image": "aquilon-rs6-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon RS alpha",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Wall Controller"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-rs-alpha"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Technical+Datasheet/Aquilon-RS-alpha-datasheet-en-20260703.pdf",
+    "slug": "aquilon-rsalpha",
+    "card_image": "aquilon-rsalpha-front.webp"
   }
 ]

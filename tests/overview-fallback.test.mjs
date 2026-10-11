@@ -45,7 +45,7 @@ test('all published fallback display values stay within 20 characters without ch
   }
   // W-20261004-003 authors 29 Shure cards that previously used the fallback.
   assert.equal(authored,123); // W-007 adds two authored QMC cards.
-  assert.equal(fallback,137);
+  assert.equal(fallback,142);
 });
 
 test('RTCOM detail keeps its existing unfiltered fallback presentation',async()=>{

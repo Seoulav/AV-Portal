@@ -197,13 +197,16 @@ export const group1Images = {
     image('Main', 'hyperdeck-studio-hd-mini-main.webp', 'Blackmagic Design HyperDeck Studio HD Mini 이미지', 'Blackmagic Design', 'HyperDeck Studio HD Mini', 'https://images.blackmagicdesign.com/images/products/hyperdeckstudio/product-grid/hyperdeck-studio-hd-mini.jpg?_v=1627443057', '306×215', '203×70', 'FOUND')
   ],
   'x100pro-7u': [
-    image('Front', 'x100pro-7u-front.webp', 'Colorlight X100 Pro-7U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-7U', 'https://support.colorlightinside.com/uploads/X100Pro-7U_1755598432.png', '2489×1886', '1800×1032', 'VERIFIED')
+    image('Front', 'x100pro-7u-front.webp', 'Colorlight X100 Pro-7U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-7U', 'https://support.colorlightinside.com/uploads/X100Pro-7U_1755598432.png', '2489×1886', '1800×1032', 'VERIFIED'),
+    image('Rear', 'x100pro-7u-rear.webp', 'Colorlight X100 Pro-7U 후면 이미지', 'Colorlight', 'X100 Pro-7U', 'https://en.colorlightinside.com/product/download/111', '2305×1449', '1800×1132', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'x100pro-4u': [
-    image('Front', 'x100pro-4u-front.webp', 'Colorlight X100 Pro-4U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-4U', 'https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf', '2001×740(사양서 내장 이미지)', '1800×665', 'VERIFIED')
+    image('Front', 'x100pro-4u-front.webp', 'Colorlight X100 Pro-4U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-4U', 'https://support.colorlightinside.com/uploads/X100Pro-4USpecificationV2.0_1785395437.pdf', '2001×740(사양서 내장 이미지)', '1800×665', 'VERIFIED'),
+    image('Rear', 'x100pro-4u-rear.webp', 'Colorlight X100 Pro-4U 후면 이미지', 'Colorlight', 'X100 Pro-4U', 'https://en.colorlightinside.com/product/download/111', '2400×1014', '1800×761', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'x100pro-2u': [
-    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED')
+    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED'),
+    image('Rear', 'x100pro-2u-rear.webp', 'Colorlight X100 Pro-2U 후면 이미지', 'Colorlight', 'X100 Pro-2U', 'https://en.colorlightinside.com/product/download/111', '2400×697', '1800×523', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'tio1608-d2': [
     image('Front', 'tio1608-d2-front.webp', 'Yamaha Tio1608-D2 전면 이미지', 'Yamaha', 'Tio1608-D2', 'https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg', '1200×1200', '1086×202', 'VERIFIED'),
@@ -300,6 +303,19 @@ export const group1Images = {
   'aquilon-rs2': [
     image('Front', 'aquilonrs2-front.webp', "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)", 'Analog Way', 'Aquilon RS2', 'https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg', '3175×1772', '1800×686', 'VERIFIED')
   ],
+  ...Object.fromEntries([
+    ['rs3', 'Aquilon RS3', '2400×1209', '2400×1243', '1800×907', '1800×932'],
+    ['rs4', 'Aquilon RS4', '2400×1178', '2400×1219', '1800×884', '1800×914'],
+    ['rs5', 'Aquilon RS5', '2400×1339', '2400×1321', '1800×1004', '1800×991'],
+    ['rs6', 'Aquilon RS6', '2400×1073', '2400×1291', '1800×805', '1800×968'],
+    ['rsalpha', 'Aquilon RS alpha', '2400×961', '2400×954', '1800×721', '1800×716']
+  ].map(([slug, model, frontOriginal, rearOriginal, frontSize, rearSize]) => {
+    const url = `https://www.analogway.com/products/aquilon-${slug === 'rsalpha' ? 'rs-alpha' : slug}`;
+    return [`aquilon-${slug}`, [
+      image('Front', `aquilon-${slug}-front.webp`, `Analog Way ${model} 전면 이미지(전면 모델명 표기)`, 'Analog Way', model, url, frontOriginal, frontSize, 'VERIFIED', 'Front · 제조사 제품 이미지'),
+      image('Rear', `aquilon-${slug}-rear.webp`, `Analog Way ${model} 후면 이미지`, 'Analog Way', model, url, rearOriginal, rearSize, 'FOUND', 'Rear · 제조사 제품 이미지')
+    ]];
+  })),
   'zenith-100': [
     image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED')
   ],
@@ -1067,6 +1083,11 @@ export const cardImages = {
   'pulse-4k': 'pulse4k-front.webp',
   'eikos-4k': 'eikos4k-front.webp',
   'aquilon-rs2': 'aquilonrs2-front.webp',
+  'aquilon-rs3': 'aquilon-rs3-front.webp',
+  'aquilon-rs4': 'aquilon-rs4-front.webp',
+  'aquilon-rs5': 'aquilon-rs5-front.webp',
+  'aquilon-rs6': 'aquilon-rs6-front.webp',
+  'aquilon-rsalpha': 'aquilon-rsalpha-front.webp',
   'zenith-100': 'zenith100-front.webp',
   'zenith-200': 'zenith200-front.webp',
   rc400t: 'rc400t-front.webp',
