@@ -1,0 +1,392 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "AQL-RS3",
+  "model": "Aquilon RS3",
+  "series": "Aquilon",
+  "seriesNote": "Aquilon RS 시리즈의 24입력·12출력 모듈형 모델.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Wall Controller"
+  ],
+  "english": "Mission-critical multi-screen presentation system and videowall processor with 24x 4K60p inputs and 12x 4K60p outputs.",
+  "korean": "Aquilon RS3는 24개의 4K60p 입력과 12개의 4K60p 출력을 갖춘 멀티스크린 프레젠테이션·비디오월 프로세서다.",
+  "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 모델 전용 Technical Datasheet(dwn01.analogway.com)에서 개요·기능·전체 기술 사양·물리 사양을 확인했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Aquilon RS3는 필드 교체 가능한 입력 카드 6개(24×4K60p)와 출력 카드 3개(12×4K60p)를 갖춘 모듈형 프로세서다. 기본 구성은 12×HDMI 2.0, 8×DisplayPort, 4×12G-SDI 입력과 12×HDMI 2.0 출력이다. 옵션 카드로 다른 포맷을 구성할 수 있다.\n\n제조사 모델별 데이터시트 기준 최대 8×4K 믹싱 레이어, 프로그램 처리량 80메가픽셀(10비트 4:4:4 @60Hz), Dante 64×64채널 @48kHz 또는 32×32채널 @96kHz를 지원한다.\n\n5RU, 핸들 포함 482.4×221.2×701mm, 액세서리 제외 35.3kg이며 최대 소비전력은 850W다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "aquilon-rs3-front.webp",
+      "alt": "Analog Way Aquilon RS3 전면 이미지(전면 모델명 표기)",
+      "note": "Front · 제조사 제품 이미지",
+      "provider": "Analog Way",
+      "model": "Aquilon RS3",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×1209",
+      "resolution": "1800×907",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "aquilon-rs3-rear.webp",
+      "alt": "Analog Way Aquilon RS3 후면 이미지",
+      "note": "Rear · 제조사 제품 이미지",
+      "provider": "Analog Way",
+      "model": "Aquilon RS3",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2400×1243",
+      "resolution": "1800×932",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-rs3"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Aquilon User Manual v6.2",
+      "language": "en",
+      "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Aquilon RS3 Technical Datasheet (2026-07-03)",
+      "language": "en",
+      "note": "Technical Specifications, Product Specifications 전체 수록",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS3/Technical+Datasheet/Aquilon-RS3-datasheet-en-20260703.pdf"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "언어 미확인",
+      "note": "",
+      "url": "https://www.analogway.com/products/aquilon-rs3"
+    }
+  ],
+  "features": [
+    {
+      "text": "입력 카드 6개(24×4K60p)와 출력 카드 3개(12×4K60p)를 필드 교체할 수 있다.",
+      "source": ""
+    },
+    {
+      "text": "Analog Way 5세대 스케일링 엔진 기반 초저지연(적정 구성 시 1프레임) 10/12비트 4:4:4 영상 처리, 최대 144Hz 고프레임레이트를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 8×4K 또는 16×DL/2K 믹싱 레이어를 지원한다.",
+      "source": ""
+    },
+    {
+      "text": "64×64 Dante @48kHz 또는 32×32 Dante @96kHz 네트워킹을 내장한다.",
+      "source": ""
+    },
+    {
+      "text": "HTML5 기반 Web RCS로 실시간 소스 썸네일, 다중 운영자 협업(비밀번호 보호), 최대 3개의 가상 RC400T 컨트롤러를 GUI에서 제공한다.",
+      "source": ""
+    },
+    {
+      "text": "최대 3대의 추가 Aquilon 시스템과 링크 연결(OPT-RSX-LINK)해 확장할 수 있다.",
+      "source": ""
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Input",
+      "name": "구성",
+      "value": "24x 4K60p (필드 교체형 입력 카드 6개)",
+      "unit": "",
+      "condition": "기본 12x HDMI 2.0, 8x DP, 4x 12G-SDI; 옵션 카드로 변경 가능",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "HDMI 2.0 카드",
+      "value": "최대 4K60p 8bit 4:4:4 또는 12bit 4:2:2, 최대 4K30p 12bit 4:4:4",
+      "unit": "",
+      "condition": "2560x1440 144Hz 8bit 4:4:4도 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "DisplayPort 카드",
+      "value": "DP1.4 모드 최대 5K60p 10bit 4:4:4, 최대 7680x4320RB 30Hz",
+      "unit": "",
+      "condition": "스테레오스코픽 3D 지원(프레임 시퀀셜)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Input",
+      "name": "12G-SDI 카드",
+      "value": "최대 4K60p 10bit 4:2:2, 3G/6G-SDI 호환",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "구성",
+      "value": "12x 4K60p (필드 교체형 출력 카드 3개)",
+      "unit": "",
+      "condition": "기본 12x HDMI 2.0; 다른 출력 카드 옵션 가능",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "name": "멀티뷰어 출력",
+      "value": "2x HDMI 2.0",
+      "unit": "",
+      "condition": "최대 2x 4K30p 또는 1x 4K60p+1 복제, 64개 위젯",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 엔진",
+      "value": "Analog Way 5세대 스케일링 엔진, 초저지연(적정 구성 시 1프레임)",
+      "unit": "",
+      "condition": "80메가픽셀 처리량(10bit 4:4:4 @60Hz, Program 기준)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "레이어",
+      "value": "최대 8x 4K 또는 16x DL/2K 믹싱 레이어(분할 레이어는 2배)",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "Dante 네트워킹",
+      "value": "64x64 @48kHz 또는 32x32 @96kHz(내장)",
+      "unit": "",
+      "condition": "이중화 이더넷, AES67 지원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(RU)",
+      "value": "5RU",
+      "unit": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.4 × 221.2 × 701",
+      "unit": "mm",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "35.3",
+      "unit": "kg",
+      "condition": "액세서리 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "100-240 VAC, 12-7A, 50/60Hz",
+      "unit": "",
+      "condition": "2+1 이중화 스왑 가능 전원",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "850",
+      "unit": "W",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작 온도",
+      "value": "0 ~ 40",
+      "unit": "°C",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질보증",
+      "value": "3년(부품·공임, 공장 반송 기준)",
+      "unit": "",
+      "condition": "커넥터 손상은 보증 제외",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Input",
+      "connector": "HDMI 2.0 (기본 12개, 카드형)",
+      "signal": "4K60p video in",
+      "direction": "IN",
+      "quantity": "24",
+      "protocol": "",
+      "availability": "필드 교체형 입력 카드 6개로 구성",
+      "condition": "다른 카드로 교체 가능(DP, SDI, NDI+SDI, SFP+, Optical, SDVoE, ST2110 등)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0 (기본, 카드형)",
+      "signal": "4K60p video out",
+      "direction": "OUT",
+      "quantity": "12",
+      "protocol": "",
+      "availability": "필드 교체형 출력 카드 3개로 구성",
+      "condition": "다른 카드로 교체 가능(DP, 12G-SDI, SFP+, Optical, SDVoE, ST2110 등)",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Output",
+      "connector": "HDMI 2.0",
+      "signal": "멀티뷰어 out",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "최대 2x 4K30p 또는 1x 4K60p+복제",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Dante 오디오 네트워킹(이중화)",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "Dante, AES67",
+      "availability": "",
+      "condition": "64x64@48kHz 또는 32x32@96kHz",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB",
+      "signal": "펌웨어 업데이트/설정 백업",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Link",
+      "connector": "링크 포트",
+      "signal": "다중 Aquilon 시스템 연결",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "OPT-RSX-LINK 옵션 필요",
+      "condition": "최대 3대 추가 연결",
+      "source": "D",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "D",
+      "name": "제조사 공식 Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS3/Technical+Datasheet/Aquilon-RS3-datasheet-en-20260703.pdf",
+      "scope": "모델별 기술·물리 사양"
+    },
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/aquilon-rs3",
+      "scope": "제품명·제품군 확인"
+    },
+    {
+      "code": "IMG",
+      "name": "제조사 제품 이미지",
+      "url": "https://www.analogway.com/products/aquilon-rs3",
+      "scope": "제품별 전면·후면 사진"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
+    "ioIntro": "확인된 단자와 미확인 항목을 구분합니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Aquilon RS3 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

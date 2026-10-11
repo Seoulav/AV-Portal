@@ -1,3 +1,4 @@
+import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
@@ -90,7 +91,7 @@ test('other 235 product JSON and all 51 unchanged maps keep their baseline conte
   const otherHash = createHash('sha256');
   const mapHash = createHash('sha256');
   let maps = 0;
-  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name)).sort()) {
+  for (const file of readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name)).sort()) {
     const source = beforeW024Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dataDir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0,-5)), file.slice(0,-5)),file.slice(0,-5)),file.slice(0,-5));
     const current = JSON.parse(source);
     if (!selected.has(file.slice(0, -5))) otherHash.update(file).update('\0').update(source);

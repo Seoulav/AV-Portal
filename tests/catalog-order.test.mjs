@@ -39,7 +39,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
 
 test('all other catalog products keep their complete previous brand order', () => {
   const others = catalog.filter(item => item.brand !== 'Samsung');
-  assert.equal(others.length, 232);
+  assert.equal(others.length, 237);
   assert.ok(others.every(item => !item.brandSort));
   assert.deepEqual(slugs(filterCatalog(others, { sort: 'brand' })), slugs(legacySort(others, {})));
   for (const brand of new Set(others.map(item => item.brand))) {

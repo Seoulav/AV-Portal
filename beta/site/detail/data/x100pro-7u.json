@@ -29,6 +29,20 @@
       "originalSize": "2489×1886",
       "resolution": "1800×1032",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "x100pro-7u-rear.webp",
+      "alt": "Colorlight X100 Pro-7U 후면 이미지",
+      "note": "Rear · 제조사 제품 이미지",
+      "provider": "Colorlight",
+      "model": "X100 Pro-7U",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2305×1449",
+      "resolution": "1800×1132",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -44,7 +58,7 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
+      "status": "FOUND",
       "sourceUrl": "https://en.colorlightinside.com/product/download/111"
     },
     {
