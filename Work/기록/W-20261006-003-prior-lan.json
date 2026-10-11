@@ -1,0 +1,47 @@
+{
+  "brc-am7": {
+    "prior": {
+      "group": "Network / Power",
+      "connector": "LAN RJ-45",
+      "signal": "Network/PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "1000BASE-T, PoE++",
+      "availability": "Fixed",
+      "condition": "적합 PoE++ 스위치 필요",
+      "source": "HS, HC",
+      "verification": "VERIFIED"
+    },
+    "approvedHash": "b1f2f9a67d483077463165342e02a1b7f50f99ad4f43ad2127dd7555f97d1ff4"
+  },
+  "srg-a40": {
+    "prior": {
+      "group": "Network / Power",
+      "connector": "LAN RJ-45",
+      "signal": "Network/PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "1000BASE-T, PoE++ (IEEE 802.3bt Type 4 Class 8)",
+      "availability": "Fixed",
+      "condition": "IP 스트리밍·VISCA over IP·HTTP 제어",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    "approvedHash": "8deac9725b92a0c12c939caf584a573577bd0d147597d279f57dbb4f7554bb11"
+  },
+  "srg-x40uh": {
+    "prior": {
+      "group": "Network / Power",
+      "connector": "LAN RJ-45",
+      "signal": "Network/PoE",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "VISCA over IP, PoE+ (IEEE802.3at)",
+      "availability": "Fixed",
+      "condition": "LAN 속도 규격은 공식 사양에 명시 없음(정보 없음)",
+      "source": "PP, OI",
+      "verification": "VERIFIED"
+    },
+    "approvedHash": "079f7472498ffd93768b207ff698eb505e07367aef6ddd3ec81ab32ecd065c7b"
+  }
+}

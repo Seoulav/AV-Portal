@@ -496,12 +496,12 @@
     {
       "group": "Network / Power",
       "connector": "LAN RJ-45",
-      "signal": "Network/PoE",
+      "signal": "Network/PoE++",
       "direction": "I/O",
       "quantity": "1",
       "protocol": "1000BASE-T, PoE++",
       "availability": "Fixed",
-      "condition": "적합 PoE++ 스위치 필요",
+      "condition": "적합 PoE++ 스위치 필요 · IEEE 802.3bt Type 4 Class 8",
       "source": "HS, HC",
       "verification": "VERIFIED"
     },
