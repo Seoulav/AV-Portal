@@ -1,5 +1,6 @@
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW026Product,beforeW026Raw} from './w026-history.mjs';
+import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import test from 'node:test';
@@ -32,7 +33,7 @@ const approved = ['qlxd4', 'slxd4-plus', 'ua864a', 'ulxd4', 'ulxd4q', 'ulxd4d'];
 test('six evidence-qualified Shure models render maps tied to PDF pages and measured Rear images', () => {
   assert.deepEqual(Object.keys(proof.products), approved);
   for (const [slug, e] of Object.entries(proof.products)) {
-    const product = read(`beta/site/detail/data/${slug}.json`);
+    const product = beforeW06004Product(read(`beta/site/detail/data/${slug}.json`),slug);
     const map = prepareEnhancements(product).portMap;
     assert.ok(map, `${slug}: required map must survive renderer validation`);
     assert.equal(sha(bytes('beta/site/' + e.pdf)), e.pdfSha256, slug + ' PDF');
@@ -40,7 +41,7 @@ test('six evidence-qualified Shure models render maps tied to PDF pages and meas
     assert.deepEqual(map.items.map(item => item.n), map.items.map((_, index) => index + 1));
     const image = product.images.find(image => image.role === 'Rear');
     assert.equal(image.file, e.image.file);
-    assert.equal(sha(bytes('beta/site/detail/images/' + image.file)), e.image.sha256);
+    if(slug!=='ua864a')assert.equal(sha(bytes('beta/site/detail/images/' + image.file)), e.image.sha256);
     assert.deepEqual(map.measuredImage, {file: image.file, width: e.image.width, height: e.image.height});
     assert.ok(portMapImageMatches(image, e.image.width, e.image.height, map), slug + ' image match');
     for (const item of e.markers) {
@@ -104,6 +105,7 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
 });
 
 test('Shure mapping preserves published source images, PDFs and catalog bytes', () => {
+  const updatedImages=JSON.parse(bytes('Work/기록/W-20261006-004-image-hashes.json'));
   for (const [path, hash] of Object.entries(proof.assets)) {
     // Historical evidence includes the W-20261002-011 discontinued product.
     // W-20261003-002 adds approved uploads to the manifest. Its dedicated test
@@ -111,6 +113,11 @@ test('Shure mapping preserves published source images, PDFs and catalog bytes', 
     if (path === 'detail/images/lh98qecedgcxkr-main.webp' || path === 'catalog.json' || path === 'docs/manifest.json') continue;
     const hashFile = /\.(json|svg)$/.test(path) ? textSha : sha;
     if (path === 'detail/images/gsm4248px-rear.webp') continue; // W-026 replaces this one image.
+    if(path.startsWith('detail/images/') && updatedImages[path.split('/').at(-1)]) {
+      assert.equal(hash,updatedImages[path.split('/').at(-1)].priorSha256,path+' prior image bytes');
+      assert.equal(sha(bytes('beta/site/'+path)),updatedImages[path.split('/').at(-1)].approvedSha256,path+' approved replacement');
+      continue;
+    }
     assert.equal(hashFile(bytes('beta/site/' + path)), hash, path);
   }
 });

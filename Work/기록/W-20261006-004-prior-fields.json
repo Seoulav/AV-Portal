@@ -1,0 +1,211 @@
+{
+  "ua844-swb": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "ua844swb-front.webp",
+          "alt": "UA844+SWB 랙마운트 전면 패널 (전원 LED, 470-952MHz 표기)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6f8/07b/2a-/original/5dc9d3e64aaa92a9c959f1ef9bbed0a3.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "ua844swb-rear.webp",
+          "alt": "UA844+SWB 후면 패널 (Antenna A/B, RF Output A/B, Cascade, Power In/Out 커넥터)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/64a/850/63-/original/de2d6cc3ee3e23eccb299dffdc5a22c9.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ]
+    },
+    "approved": {
+      "images": "7e5d3eeca6a905c76c88ba99fd54ea827c373e677a47cd90ddc6c3975818a3f4"
+    }
+  },
+  "ua864a": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "ua864a-front.webp",
+          "alt": "UA864 벽면형 광대역 안테나 (화이트 하우징, 전면 게인 스위치/LED)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/265/152/2a-/original/360efcae2b1c88e5f044c28fd536eedc.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "ua864a-rear.webp",
+          "alt": "UA864 후면 마운팅 플레이트 (케이블 배선 채널, BNC 커넥터, 게인 스위치 라벨)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/a39/ea7/e1-/original/bbe7a66c6bc370a61bc0e5047fe0a083.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "portMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "ua864a-rear.webp",
+          "width": 1500,
+          "height": 1500
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "RF 출력 · 바이어스 전원",
+            "desc": "BNC · 같은 주파수 대역의 수신기/분배기에 연결하며 동축으로 바이어스 전원을 받습니다.",
+            "x1": 922,
+            "x2": 978,
+            "y": 282,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "게인 선택",
+            "desc": "수신 환경에 맞춰 RF 신호의 감쇠·기본·증폭 설정을 선택합니다.",
+            "x1": 878,
+            "x2": 928,
+            "y": 1220,
+            "side": "bottom"
+          }
+        ]
+      }
+    },
+    "approved": {
+      "images": "3f2071db926f8c05bfb7e17f1858be282b15eb525bde7559dda1d60de84449ac",
+      "portMap": "d2fd913da9f1648c58a8725199269761181c5258a542a226b5846a67cf8073ef"
+    }
+  },
+  "ua845uwb": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "ua845uwb-front.webp",
+          "alt": "UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3300x3300",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "ua845uwb-rear.webp",
+          "alt": "UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3300x3300",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ]
+    },
+    "approved": {
+      "images": "16cd9b0b40edcd37731b92b46f9e8bebc95fa9d37c5d5139a8761b0ebe36ae90"
+    }
+  },
+  "hdmi20-optj-rx90": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "hdmi20-optj-rx90-front.webp",
+          "alt": "Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Lightware",
+          "model": "HDMI20-OPTJ-RX90",
+          "sourceUrl": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-RX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1200×780",
+          "resolution": "905×177",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ]
+    },
+    "approved": {
+      "images": "9229e1903e3b8dfafd00f6d5e0029c4f21a8e145532d18706e8dd031ab47d505"
+    }
+  },
+  "hdmi20-optj-tx90": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "hdmi20-optj-tx90-front.webp",
+          "alt": "Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Lightware",
+          "model": "HDMI20-OPTJ-TX90",
+          "sourceUrl": "https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1200×780",
+          "resolution": "905×177",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ]
+    },
+    "approved": {
+      "images": "f435713a8e6a21b8bd0a3d69ab0a62a8ca4d1bdf95446eb7c53efb214bfff19a"
+    }
+  },
+  "led-780h": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "led-780h-front.webp",
+          "alt": "Magnimage LED-780H 전면 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Magnimage",
+          "model": "LED-780H",
+          "sourceUrl": "https://www.magnimage.com/article/ddddeffeefe",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "880×278(제조사 제품 목록 대표 이미지)",
+          "resolution": "880×159",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ]
+    },
+    "approved": {
+      "images": "1c9be780dd76d6e541c10a4addb075ae2cd05e51f5d2a214a3e7b12ab0b8b900"
+    }
+  }
+}

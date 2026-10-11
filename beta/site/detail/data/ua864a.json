@@ -27,7 +27,7 @@
       "officialSource": true,
       "verificationStatus": "FOUND",
       "originalSize": "3000x3000",
-      "resolution": "1500x1500",
+      "resolution": "2400x2140",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     {
@@ -41,7 +41,7 @@
       "officialSource": true,
       "verificationStatus": "FOUND",
       "originalSize": "3000x3000",
-      "resolution": "1500x1500",
+      "resolution": "2400x2140",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -316,26 +316,26 @@
     "image": "Rear",
     "measuredImage": {
       "file": "ua864a-rear.webp",
-      "width": 1500,
-      "height": 1500
+      "width": 2400,
+      "height": 2140
     },
     "items": [
       {
         "n": 1,
         "label": "RF 출력 · 바이어스 전원",
         "desc": "BNC · 같은 주파수 대역의 수신기/분배기에 연결하며 동축으로 바이어스 전원을 받습니다.",
-        "x1": 922,
-        "x2": 978,
-        "y": 282,
+        "x1": 1548,
+        "x2": 1662,
+        "y": 232,
         "side": "top"
       },
       {
         "n": 2,
         "label": "게인 선택",
         "desc": "수신 환경에 맞춰 RF 신호의 감쇠·기본·증폭 설정을 선택합니다.",
-        "x1": 878,
-        "x2": 928,
-        "y": 1220,
+        "x1": 1352,
+        "x2": 1510,
+        "y": 1958,
         "side": "bottom"
       }
     ]
