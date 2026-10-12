@@ -7,6 +7,7 @@ import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
 import { distributorLinkFor } from '../../beta/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-links.mjs';
+import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -542,6 +543,7 @@ if (!productKey && !allowContentFallback) {
   const cardGrid = $('.detail-cards');
   const leftCardIds = ['overview', 'specifications', 'features', ...enhancements.settings.map((_, index) => 'setting-' + (index + 6))];
   const rightCardIds = ['gallery', 'io'];
+  let rtcomEmbedded = false;
   let packingQueued = false;
   function packCards() {
     packingQueued = false;
@@ -569,7 +571,9 @@ if (!productKey && !allowContentFallback) {
       }
       return top ? top - 22 : 0;
     };
-    cardGrid.style.height = Math.max(place(leftCardIds, 0, 360), place(rightCardIds, 382, rightWidth)) + 'px';
+    cardGrid.style.height = rtcomEmbedded
+      ? place(['gallery'], 0, cardGrid.clientWidth) + 'px'
+      : Math.max(place(leftCardIds, 0, 360), place(rightCardIds, 382, rightWidth)) + 'px';
   }
   function requestPack() {
     if (packingQueued) return;
@@ -632,6 +636,22 @@ if (!productKey && !allowContentFallback) {
     $('#source-list').append(row);
   }
   $('#sources-count').textContent = String(data.issues.length + documentIssues.length + reviewImages);
+
+  if (isRtcomProduct) mountRtcomProductView(productKey.slice('rtcom-'.length), $('.product-hero'), () => {
+    const disclosure = element('details', 'rtcom-native-details');
+    const summary = element('summary', '', '포털 데이터 표 펼치기');
+    const cards = element('div', 'rtcom-native-cards');
+    for (const card of [...cardGrid.children]) if (card.id !== 'gallery') {
+      card.style.top = '';
+      card.style.left = '';
+      card.style.width = '';
+      cards.append(card);
+    }
+    disclosure.append(summary, cards);
+    cardGrid.after(disclosure);
+    rtcomEmbedded = true;
+    requestPack();
+  });
 
   function legacySourceHash() {
     try { return decodeURIComponent(location.hash.slice(1)).startsWith('source-'); }
