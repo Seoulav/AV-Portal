@@ -39,5 +39,6 @@ test('BSS GPIO overrides preserve source connector, direction, signal, and quant
     assert.equal(row.signal, '제어 입력/로직 출력(GPIO)', id);
     assert.equal(row.direction, 'IN/OUT', id);
     assert.equal(row.quantity, '12 입력 / 6 출력', id);
+    assert.equal(row.connector, id === 'blu-50v2' ? '\uCEE4\uB125\uD130 \uADDC\uACA9 \uC815\uBCF4 \uC5C6\uC74C' : 'Phoenix/Combicon', id);
   }
 });
