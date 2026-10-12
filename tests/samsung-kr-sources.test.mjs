@@ -8,6 +8,7 @@ import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
 import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 import {beforeSamsungW04010Path} from './samsung-w04010-history.mjs';
 import {beforeW12002Path} from './w12002-wording-history.mjs';
+import {beforeW013A2Product} from './w013-a2-history.mjs';
 
 const read = path => beforeSamsungW04010Path(path, beforeW12002Path(path,JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'))));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -19,7 +20,7 @@ test('Samsung Korean business spec audit covers the 14 still-published models', 
   // Keep W-005's original 15-model evidence unchanged.
   assert.deepEqual(Object.keys(evidence.products).filter(slug => slug !== 'lh98qecedgcxkr'), targets);
   for (const slug of targets) {
-    const p = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`), slug), slug), slug), slug);
+    const p = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(beforeSamsungManualIo(beforeSamsungWhiteboard(beforeW013A2Product(read(`beta/site/detail/data/${slug}.json`), slug), slug), slug), slug), slug);
     const e = evidence.products[slug];
     const source = p.sources.find(s => s.code === 'P');
     assert.equal(source.url, e.koreanUrl);
@@ -77,7 +78,7 @@ test('regional TV power and RF input values follow the Korean model spec tab', (
 test('provenance notices leave condition fields and remain in named sources and audit', () => {
   const later = read('Work/기록/W-20261002-008-evidence.json');
   for (const slug of targets) {
-    const p = beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`), slug), slug);
+    const p = beforeSamsungManualIo(beforeSamsungWhiteboard(beforeW013A2Product(read(`beta/site/detail/data/${slug}.json`), slug), slug), slug);
     const e = evidence.products[slug];
     assert.ok(e.conditionChanges.length > 0, slug);
     for (const row of [...p.specifications,...p.io]) {

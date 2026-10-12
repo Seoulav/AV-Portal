@@ -9,6 +9,7 @@ import {beforeSamsungWhiteboard} from './samsung-w03006-history.mjs';
 import {beforeSamsungW04010Path} from './samsung-w04010-history.mjs';
 import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 import {beforeW12002Path,beforeW12002Raw} from './w12002-wording-history.mjs';
+import {beforeW013A2Raw} from './w013-a2-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>beforeSamsungW04010Path(path,beforeW12002Path(path,JSON.parse(readFileSync(new URL(path,root),'utf8'))));
@@ -41,7 +42,7 @@ test('only eight exact-model Samsung products change, and specifications remain 
     const prior=beforeHotelTvIo(current,slug);
     const bytes=slug.startsWith('hg') || ['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)
       ? Buffer.from(JSON.stringify(prior,null,2)+'\n')
-      : Buffer.from(beforeDisplayW04013Raw(beforeW12002Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug));
+      : Buffer.from(beforeDisplayW04013Raw(beforeW12002Raw(beforeW013A2Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug),slug));
     // Historical Git blobs use LF; Windows checkouts may materialize CRLF.
     assert.equal(sha(bytes.toString('utf8').replace(/\r\n/g,'\n')),expected,`${slug}: excluded JSON bytes`);
   }

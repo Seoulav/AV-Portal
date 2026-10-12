@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { beforeW013A2Product } from './w013-a2-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
@@ -127,7 +128,7 @@ test('all seven products preserve the approved marker numbers, labels, and manua
 test('the seven product cores and photograph-only loupe rule remain scoped', () => {
   const hash = createHash('sha256');
   for (const slug of [...a, b, c]) {
-    const core = structuredClone(beforeMobileRs232(beforeW12002Product(product(slug),slug), slug));
+    const core = structuredClone(beforeMobileRs232(beforeW12002Product(beforeW013A2Product(product(slug),slug),slug), slug));
     delete core.portMap;
     core.images = core.images.filter(image => image.role !== 'Diagram');
     core.imageStatuses = core.imageStatuses.filter(image => image.role !== 'Diagram');
