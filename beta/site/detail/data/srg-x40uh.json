@@ -839,5 +839,183 @@
       "top": 930,
       "bottom": 0
     }
+  },
+  "signalFlow": {
+    "type": "camera",
+    "description": "촬영 영상을 HDMI와 USB-C UVC로 출력하고 VISCA 제어 입출력을 구분합니다. LAN은 제어·PoE+ 연결이며 IP 영상 출력은 확인되지 않았습니다.",
+    "inputs": [
+      {
+        "id": "scene",
+        "label": "촬영 장면",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "visca-in",
+        "label": "VISCA RS-422 IN",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "lan",
+        "label": "LAN · VISCA over IP / PoE+",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "hdmi",
+        "label": "HDMI OUT · 최대 4K",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ],
+        "caption": "SYSTEM SELECT 설정별"
+      },
+      {
+        "id": "uvc",
+        "label": "USB-C UVC OUT · 최대 1080p",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "4K·인터레이스 미출력"
+      },
+      {
+        "id": "visca-out",
+        "label": "VISCA RS-422 OUT",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ],
+        "caption": "데이지체인"
+      }
+    ],
+    "processes": [
+      {
+        "id": "capture",
+        "kind": "capture",
+        "label": "영상 캡처·처리",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "scene",
+        "to": "capture",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "hdmi",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "uvc",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "visca-in",
+        "to": "visca-out",
+        "signal": "control",
+        "label": "VISCA 제어 연장",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "lan",
+        "to": "capture",
+        "signal": "network",
+        "label": "VISCA over IP · PoE+",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상"
+      },
+      {
+        "signal": "usb",
+        "label": "USB 영상"
+      },
+      {
+        "signal": "control",
+        "label": "VISCA 제어"
+      },
+      {
+        "signal": "network",
+        "label": "LAN 제어·전원"
+      }
+    ],
+    "notes": [
+      "IP 스트리밍은 공식 사양에 정보가 없어 영상 경로에서 제외했습니다.",
+      "DC 12V와 IR 수신부는 기존 카메라 흐름의 표시 범위에 맞춰 생략했습니다."
+    ]
   }
 }

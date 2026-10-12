@@ -324,5 +324,148 @@
     "footerNote": "AVer TR335 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "signalFlow": {
+    "type": "camera",
+    "description": "촬영 영상을 3G-SDI·HDMI·IP·USB 네 매체로 동시 출력합니다. USB3.0 UVC 세부 행은 같은 출력 묶음의 별도 근거로 표시하며 물리 포트 수는 확정하지 않습니다.",
+    "inputs": [
+      {
+        "id": "scene",
+        "label": "촬영 장면",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "label": "RS-232/422 · CGI(IP) 제어",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "ethernet",
+        "label": "PoE+ · Ethernet",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "video-out",
+        "label": "3G-SDI · HDMI · IP · USB",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "4매체 동시 출력"
+      }
+    ],
+    "processes": [
+      {
+        "id": "capture",
+        "kind": "capture",
+        "label": "영상 캡처·처리",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "scene",
+        "to": "capture",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "capture",
+        "to": "video-out",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "control",
+        "to": "capture",
+        "signal": "control",
+        "label": "외부 카메라 제어",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "from": "ethernet",
+        "to": "capture",
+        "signal": "network",
+        "label": "PoE+ · Ethernet",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 출력"
+      },
+      {
+        "signal": "control",
+        "label": "카메라 제어"
+      },
+      {
+        "signal": "network",
+        "label": "네트워크·전원"
+      }
+    ],
+    "notes": [
+      "3G-SDI 출력은 1080p60까지만 지원합니다.",
+      "USB3.0 UVC 행은 MJPG 최대 2160p 정보를 제공합니다. io[0]의 USB와 물리적으로 같은 단자인지는 이 흐름에서 확정하지 않습니다."
+    ]
   }
 }
