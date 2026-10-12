@@ -1,0 +1,617 @@
+{
+  "manufacturer": "AVer",
+  "productName": "TR535",
+  "model": "TR535",
+  "series": "TR5xx series",
+  "seriesNote": "한국 공식 취급 모델 TR535. TR535N 자료는 적용하지 않음.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Camera"
+  ],
+  "english": "Dual-lens 4K AI auto tracking camera with a 30X optical zoom PTZ camera and a 4K wide-angle camera.",
+  "korean": "TR535는 30배 광학줌 PTZ 카메라와 4K 광각 카메라를 함께 탑재한 듀얼 렌즈 AI 자동 트래킹 카메라다.",
+  "verificationSummary": "AVer 한국 공식 TR535 제품 페이지와 그 페이지가 제공하는 TR535 전용 브로슈어를 확인했다. 두 자료의 디지털줌·전체줌 값은 상충하므로 함께 표시했다.",
+  "packageStatus": "CONFLICTED",
+  "overview": "TR535는 30배 광학줌 PTZ 카메라와 105° HFOV의 4K 광각 카메라를 결합한 듀얼 렌즈 AI 자동 트래킹 카메라다. Presenter·Zone·Hybrid·Segment 네 가지 트래킹 모드를 제공하며, 광각 카메라로 전체 장면을 파악하면서 PTZ 카메라가 발표자를 추적한다.\n\n한국 공식 제품 페이지는 3G-SDI·HDMI 2개·IP·USB 영상 출력을 명시하고, NDI High Bandwidth·NDI HX2와 Dante AV-H를 지원한다고 안내한다. 네트워크는 10/100/1000/2500 Base-T, 전원은 DC 12V/5A 또는 PoE++이며 소비전력은 29W다.\n\n줌 값은 한국 공식 웹 사양이 광학 30X·디지털 12X·전체 360X로, 같은 페이지에서 내려받는 2025년 12월 TR535 브로슈어가 광학 30X·디지털 1X·전체 30X로 적어 서로 다르다. 전체줌을 계산하거나 한쪽으로 확정하지 않고 충돌 상태로 병기한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "tr535-front.webp",
+      "alt": "AVer TR535 전면 이미지",
+      "note": "Front · 제조사 한국 공식 이미지",
+      "provider": "AVer",
+      "model": "TR535",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_3.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "545×425",
+      "resolution": "545×425",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "tr535-rear.webp",
+      "alt": "AVer TR535 후면 단자 이미지",
+      "note": "Rear · 제조사 한국 공식 이미지",
+      "provider": "AVer",
+      "model": "TR535",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_6.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "545×425",
+      "resolution": "545×425",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://kr.presentation.aver.com/model/tr535"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_3.png"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_6.png"
+    },
+    {
+      "role": "Perspective",
+      "status": "FOUND",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_2.png"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://kr.presentation.aver.com/model/tr535"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "TR535 전용 사용자 설명서 미확인",
+      "language": "언어 미확인",
+      "note": "TR535N 또는 다른 V 시리즈 공용 자료는 적용하지 않음"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "AVer TR535 Brochure",
+      "language": "en",
+      "note": "한국 공식 TR535 페이지 제공 · Product Specifications 포함 · 2025-12",
+      "url": "https://kr.presentation.aver.com/DownloadFile.ashx?n=3259&t=ModelBrochure"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "AVer Korea TR535 공식 제품 페이지",
+      "language": "ko",
+      "note": "한국 취급 모델 TR535 전용 페이지",
+      "url": "https://kr.presentation.aver.com/model/tr535"
+    }
+  ],
+  "features": [
+    {
+      "text": "30배 광학줌 4K PTZ 카메라와 105° HFOV 4K 광각 카메라의 듀얼 렌즈 구성",
+      "source": "P/B"
+    },
+    {
+      "text": "Presenter·Zone·Hybrid·Segment 네 가지 AI 자동 트래킹 모드 제공",
+      "source": "P/B"
+    },
+    {
+      "text": "3G-SDI·HDMI 2개·IP·USB 영상 및 오디오 출력",
+      "source": "P/B"
+    },
+    {
+      "text": "NDI High Bandwidth·NDI HX2·Dante AV-H 네트워크 영상 지원",
+      "source": "P/B"
+    },
+    {
+      "text": "2.5GbE 네트워크와 PoE++ 단일 케이블 전원 연결",
+      "source": "P/B"
+    },
+    {
+      "text": "RS-232·RS-422·IP·USB 제어와 VISCA·PELCO-D/P·CGI·ONVIF 프로토콜 지원",
+      "source": "P/B"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "PTZ 이미지 센서",
+      "value": "1/2.8인치 4K Sony Exmor CMOS",
+      "unit": "",
+      "condition": "8MP",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "광각 이미지 센서",
+      "value": "1/2.8인치 4K Sony Low Lux CMOS",
+      "unit": "",
+      "condition": "8MP",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "광학줌/디지털줌/전체줌",
+      "value": "웹 30X / 12X / 360X · 브로슈어 30X / 1X / 30X",
+      "unit": "",
+      "condition": "한국 공식 제품 페이지와 같은 페이지의 TR535 브로슈어가 상충",
+      "source": "P/B",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Camera",
+      "name": "PTZ 초점거리",
+      "value": "4.5 ~ 135",
+      "unit": "mm",
+      "condition": "F1.8(Wide) ~ F4.7(Tele)",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "PTZ 시야각(D/H/V)",
+      "value": "69.2°/62.3°/37.3° (Wide) ~ 2.8°/2.5°/1.4° (Tele)",
+      "unit": "",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "PTZ 팬/틸트 각도",
+      "value": "팬 ±170°, 틸트 +90°/-30°",
+      "unit": "",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Camera",
+      "name": "광각 시야각(D/H/V)",
+      "value": "113°/105°/71°",
+      "unit": "",
+      "condition": "4K/30",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "IP Streaming",
+      "name": "최대 해상도",
+      "value": "4K",
+      "unit": "60fps",
+      "condition": "H.264/H.265/MJPEG",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 인터페이스",
+      "value": "10/100/1000/2500 Base-T",
+      "unit": "",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "name": "네트워크 영상",
+      "value": "NDI High Bandwidth, NDI HX2, Dante AV-H",
+      "unit": "",
+      "condition": "NDI 모드 10스트림 / Dante AV-H 모드 8스트림",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원",
+      "value": "DC 12V/5A 또는 PoE++",
+      "unit": "",
+      "condition": "소비전력 29W",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "크기(W×H×D)",
+      "value": "202.5 × 250.7 × 218.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "System",
+      "name": "무게",
+      "value": "3.6 (±0.1)",
+      "unit": "kg",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "3G-SDI, HDMI ×2, IP, USB",
+      "signal": "Video/Audio out",
+      "direction": "OUT",
+      "quantity": "5",
+      "protocol": "NDI High Bandwidth/HX2, Dante AV-H, RTSP",
+      "availability": "다중 스트림 지원",
+      "condition": "4K: HDMI·IP·USB / 1080p: 3G-SDI",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "USB 3.2 Gen 1",
+      "signal": "UVC video / UAC audio out",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "UVC 1.1 / UAC 1.0",
+      "availability": "",
+      "condition": "MJPEG·YUY2, 최대 2160p",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RS-232, RS-422, IP, USB",
+      "signal": "Camera control",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "VISCA, PELCO-D/P, CGI, ONVIF",
+      "availability": "",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "IP video/control/network · power in",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "PoE++",
+      "availability": "10/100/1000/2500 Base-T",
+      "condition": "",
+      "source": "P/B",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "AVer Korea TR535 공식 제품 페이지",
+      "url": "https://kr.presentation.aver.com/model/tr535",
+      "scope": "제조사 한국 공식 출처 · TR535 전용"
+    },
+    {
+      "code": "B",
+      "name": "AVer TR535 Brochure",
+      "url": "https://kr.presentation.aver.com/DownloadFile.ashx?n=3259&t=ModelBrochure",
+      "scope": "한국 공식 제품 페이지 제공 TR535 전용 브로슈어 · 2025-12"
+    },
+    {
+      "code": "IMG",
+      "name": "AVer Korea TR535 공식 제품 이미지",
+      "url": "https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_3.png",
+      "scope": "제조사 한국 공식 제품 페이지의 TR535 전용 이미지 경로"
+    }
+  ],
+  "issues": [
+    {
+      "code": "Z1",
+      "status": "CONFLICTED",
+      "title": "TR535 디지털줌·전체줌 공식 자료 상충",
+      "detail": "한국 공식 웹 사양은 광학 30X·디지털 12X·전체 360X, 같은 페이지의 2025-12 TR535 브로슈어는 광학 30X·디지털 1X·전체 30X로 표기한다. 계산하거나 한쪽 값으로 확정하지 않는다."
+    },
+    {
+      "code": "V1",
+      "status": "RESOLVED",
+      "title": "TR535와 TR535N 변형 분리",
+      "detail": "등록 모델은 한국 공식 페이지의 TR535이며, TR535N·averusa 자료를 제품 값과 사진에 적용하지 않았다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "한국 공식 웹 사양과 TR535 브로슈어의 값·조건·충돌 상태를 함께 표시합니다.",
+    "ioIntro": "한국 공식 자료에서 확인된 출력·제어·네트워크 단자를 표시합니다.",
+    "supplementalNote": "TR535와 TR535N 자료를 구분하고 공식 자료 충돌을 보존합니다.",
+    "footerNote": "AVer Korea TR535 공식 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 한국 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "tr535-rear.webp",
+      "width": 545,
+      "height": 425
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "Kensington",
+        "desc": "도난 방지 케이블 슬롯",
+        "x1": 49,
+        "x2": 71,
+        "y": 242,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "RS-232",
+        "desc": "VISCA·PELCO-D/P 카메라 제어",
+        "x1": 145,
+        "x2": 185,
+        "y": 214,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "RS-422",
+        "desc": "VISCA·PELCO-D/P 카메라 제어",
+        "x1": 191,
+        "x2": 242,
+        "y": 214,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "MIC IN",
+        "desc": "마이크 입력",
+        "x1": 262,
+        "x2": 286,
+        "y": 220,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "LINE IN",
+        "desc": "라인 입력",
+        "x1": 306,
+        "x2": 332,
+        "y": 220,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "HDMI 1",
+        "desc": "HDMI 영상·오디오 출력 1",
+        "x1": 53,
+        "x2": 103,
+        "y": 319,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "3G-SDI",
+        "desc": "1080p 영상·오디오 출력",
+        "x1": 125,
+        "x2": 164,
+        "y": 314,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "HDMI 2",
+        "desc": "HDMI 영상·오디오 출력 2",
+        "x1": 192,
+        "x2": 243,
+        "y": 319,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "USB 3.0",
+        "desc": "USB 3.2 Gen 1 영상·오디오 출력",
+        "x1": 321,
+        "x2": 369,
+        "y": 314,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "PoE++",
+        "desc": "2.5GbE 네트워크·PoE++ 입력",
+        "x1": 378,
+        "x2": 429,
+        "y": 314,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "DC 12V",
+        "desc": "DC 12V 전원 입력",
+        "x1": 449,
+        "x2": 495,
+        "y": 316,
+        "side": "bottom"
+      }
+    ]
+  },
+  "signalFlow": {
+    "type": "camera",
+    "description": "듀얼 렌즈 촬영 영상을 3G-SDI·HDMI 2개·IP·USB로 출력하며, 외부 제어와 PoE++ 네트워크 연결을 함께 표시합니다.",
+    "inputs": [
+      {
+        "id": "scene",
+        "label": "촬영 장면",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          },
+          {
+            "kind": "spec",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": "control",
+        "label": "RS-232·RS-422·IP·USB 제어",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "network",
+        "label": "2.5GbE·PoE++",
+        "signal": "network",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "video-out",
+        "label": "3G-SDI·HDMI ×2·IP·USB",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ],
+        "caption": "다중 스트림 영상·오디오 출력"
+      }
+    ],
+    "processes": [
+      {
+        "id": "tracking",
+        "kind": "capture",
+        "label": "듀얼 렌즈 AI 트래킹",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          },
+          {
+            "kind": "spec",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "scene",
+        "to": "tracking",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          },
+          {
+            "kind": "spec",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "tracking",
+        "to": "video-out",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "control",
+        "to": "tracking",
+        "signal": "control",
+        "label": "외부 카메라 제어",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "from": "network",
+        "to": "tracking",
+        "signal": "network",
+        "label": "IP 영상·제어·PoE++",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 출력"
+      },
+      {
+        "signal": "control",
+        "label": "카메라 제어"
+      },
+      {
+        "signal": "network",
+        "label": "네트워크·전원"
+      }
+    ],
+    "notes": [
+      "3G-SDI는 1080p 출력으로 명시됩니다.",
+      "NDI 모드는 최대 10스트림, Dante AV-H 모드는 최대 8스트림으로 명시됩니다."
+    ]
+  }
+}

@@ -818,6 +818,21 @@
   },
   {
     "brand": "AVer",
+    "product": "TR535",
+    "categories": [
+      "영상",
+      "Video",
+      "Camera"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://kr.presentation.aver.com/model/tr535"
+    ],
+    "slug": "tr535",
+    "card_image": "tr535-front.webp"
+  },
+  {
+    "brand": "AVer",
     "product": "TR335",
     "categories": [
       "영상",

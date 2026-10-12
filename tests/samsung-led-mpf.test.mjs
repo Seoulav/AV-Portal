@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { prepareProductDetail, visibleDetailCards } from '../prototype/brc-am7/product-detail-model.mjs';
 import { detailSearchEntry } from '../beta/site/shared/search-index.mjs';
 import {beforeDisplayW04013} from './display-w04013-history.mjs';
+import { beforeW1010Catalog } from './w1010-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -60,7 +61,7 @@ test('three MPF cabinets retain all 20 model-matched guide fields without invent
 });
 
 test('guide remains a private evidence source, while the public catalog gains exactly three LED entries', () => {
-  const catalog = read('beta/site/catalog.json');
+  const catalog = beforeW1010Catalog(read('beta/site/catalog.json'));
   assert.equal(catalog.length, 272);
   assert.deepEqual(catalog.filter(item => item.categories.includes('LED Signage')).map(item => item.slug).sort(), [...slugs, 'ie015a-e', 'ie020a-e', 'if015r-m'].sort());
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);

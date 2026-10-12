@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { applyCatalogNames, applyDetailNames } from '../beta/name-cleanup.mjs';
 import { filterCatalog, mapTopCategories } from '../beta/site/app.js';
 import { readFile } from 'node:fs/promises';
+import { beforeW1010Catalog } from './w1010-history.mjs';
 
 test('renames approved catalog categories in place and leaves other fields untouched', () => {
   const input = {
@@ -71,7 +72,7 @@ test('normalizes the approved BSS EC-4BV Network/Control label only', async () =
 });
 
 test('renamed catalog categories preserve home top-category counts and filter membership', async () => {
-  const catalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
+  const catalog = beforeW1010Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8')));
   assert.deepEqual(mapTopCategories(catalog).map(({ id, count }) => [id, count]), [
     ['audio', 116],
     ['video', 67],
