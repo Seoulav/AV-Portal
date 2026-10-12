@@ -1,5 +1,6 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
+import { beforeMxc420PhotoProduct } from './mxc420-photo-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
 import { isW1012Name } from './w1012-history.mjs';
@@ -39,7 +40,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
   assert.deepEqual(Object.keys(evidence.products).sort(),targets.map(([slug])=>slug).sort());
   for(const [slug,product] of targets){
     const proof=evidence.products[slug];
-    const historical=beforeKiprogo2Mx395Product(product,slug);
+    const historical=beforeKiprogo2Mx395Product(beforeMxc420PhotoProduct(product,slug),slug);
     assert.ok(product.keyFacts?.length>=2&&product.keyFacts?.length<=4,slug);
     assert.equal(prepareEnhancements(product).keyFacts.length,product.keyFacts.length,`${slug}: visible`);
     assert.equal(product.keyFacts.length,proof.facts.length,slug);
