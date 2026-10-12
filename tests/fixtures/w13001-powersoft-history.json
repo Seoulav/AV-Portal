@@ -1,0 +1,2315 @@
+{
+  "duecanali-1604-dsp": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "duecanali-1604-dsp-front.webp",
+          "alt": "Powersoft Duecanali 1604 DSP 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Duecanali 1604 DSP",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-5.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "6d2fa12a074f88513954ef3b88f094c5886b3dd26de08a1a0e16d4c29f821528"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-5.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp"
+        }
+      ],
+      "approved": "a811e92d8d2f19e3e6a7304e3456863a0e37aee2aa963c9607d79a659c64020f"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62(기본형 데이터시트) / PC 5/4-STF1-7,62(사용자 가이드·DSP+D 데이터시트)",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81(기본형 데이터시트) / MC 1,5/6-ST-3,81(사용자 가이드·DSP+D 데이터시트)",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "ed17eda7eaeb5958e2c9d77ebb6819d37feda561604cda4a877de90c28816353"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dsp",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 데이터시트",
+          "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Duecanali_DS_EN_WEB.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approved": "19bd676a90cef3b17708a408d3145154452ec1c974a8c50d43adcc1570e0980d"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "67a66a4e582dc99971546e08bb2173861a28a40cb52110162b8ce5ec7ec4dfb3"
+    }
+  },
+  "duecanali-1604-dspd": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "duecanali-1604-dspd-front.webp",
+          "alt": "Powersoft Duecanali 1604 DSP+D 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Duecanali 1604 DSP+D",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-4.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "c31eb80d2631cfaeb20d1257f790ef20eae06ba77926f9d70da8e6679af53ba3"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dspd"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-4.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dspd"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dspd"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-1604-dspd"
+        }
+      ],
+      "approved": "575c72c2d4478dab28f8819be486bbfba5999caf907d03bd38a657b0da04b1eb"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/4-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/6-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "1 x RJ45",
+          "signal": "Dante/AES67 audio",
+          "direction": "I/O",
+          "quantity": "2채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "제어·모니터링 겸용 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "69aa1cee17b659729eff868a69b0dfdb15d0519be370f289051e209cb0b2d8a3"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "ee4f98d6e7b61007316e911c25dbc7aaaa3ecbb5b2a8c34e8585022425235ab9"
+    }
+  },
+  "duecanali-804-dsp": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "duecanali-804-dsp-front.webp",
+          "alt": "Powersoft Duecanali 804 DSP 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Duecanali 804 DSP",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "afeb2985cab80f373221a0dbb00b6daa56a3682ec4a1a306943f3dd4e4d59932"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp"
+        }
+      ],
+      "approved": "8de3522a564c7ee500cdb037daebbf318ef7da4f639355cfb44899bfc084fb7c"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62(기본형 데이터시트) / PC 5/4-STF1-7,62(사용자 가이드·DSP+D 데이터시트)",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81(기본형 데이터시트) / MC 1,5/6-ST-3,81(사용자 가이드·DSP+D 데이터시트)",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "ed17eda7eaeb5958e2c9d77ebb6819d37feda561604cda4a877de90c28816353"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dsp",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 데이터시트",
+          "url": "https://www.powersoft.com/wp-content/uploads/2018/04/powersoft_Duecanali_DS_EN_WEB.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approved": "ff6decc0077ec0e03e69cebcf4c590a5eee8a24be90f4c4ca9b6b584797a23fc"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "af7dbb2b1ae1de2e3642fdf78454973e3df3329ede96de5b0a8403caa4d3c548"
+    }
+  },
+  "duecanali-804-dspd": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "duecanali-804-dspd-front.webp",
+          "alt": "Powersoft Duecanali 804 DSP+D 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Duecanali 804 DSP+D",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-5.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "470249fdab30796ad368fa58d8cab58a081937936ae0d713bd46a50c63e2ae3f"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-5.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/duecanali-series/duecanali-804-dspd"
+        }
+      ],
+      "approved": "7ad8e2d5cb81a5ea77a66f4ef9bf1fb08dd65922f45faeafa748f67403939dd1"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/4-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/6-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "1 x RJ45",
+          "signal": "Dante/AES67 audio",
+          "direction": "I/O",
+          "quantity": "2채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "제어·모니터링 겸용 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "69aa1cee17b659729eff868a69b0dfdb15d0519be370f289051e209cb0b2d8a3"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "567ac7803cf3482789e291e25929e0f25104032fbd00e000d4206f351f0675a1"
+    }
+  },
+  "mezzo-322-a": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-322-a-front.webp",
+          "alt": "Powersoft Mezzo 322 A 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 322 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x129",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-322-a-rear.webp",
+          "alt": "Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 322 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "530x137",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "1768ebcb15bde80d758e7976e5f5e5caf74b31212a338c2f3960d7ed80e16e52"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-322-a"
+        }
+      ],
+      "approved": "02af903ca5b29328be3f6ea0391a1eb5851df154698d22b7a4f0c67d071a5505"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Line level audio out",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "1 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "제어/모니터링 전용 (오디오 네트워킹 미지원)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "ccacc13659562091c8e7afecd82e191cacf29c9dddcafbceff13e1677af20ffc"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "32ed1d4dcca34c4c83d95693bc0df98c1fe8aa7693a08db9712a38c8bfd3fd4b"
+    }
+  },
+  "mezzo-322-ad": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-322-ad-front.webp",
+          "alt": "Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 322 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024×500",
+          "resolution": "509×127",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "82dd5c6fa9b7f6ccb24f86a4ad5f95c29f04fffa8644054a829ff4b19a3e17c0"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-322-ad"
+        }
+      ],
+      "approved": "b99d100231e3a967a764918a18c8c2aab2cbb564330d605ed03a119b2648b225"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Audio",
+          "connector": "MISSING",
+          "signal": "Balanced/Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널(언밸런스 2 + 밸런스 2 혼합)",
+          "protocol": "",
+          "availability": "",
+          "condition": "블록 커넥터 방식, 정확한 커넥터 규격 미확인",
+          "source": "M",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "Ethernet (RJ45)",
+          "signal": "Dante/AES67 audio + DSP control/monitoring",
+          "direction": "I/O",
+          "quantity": "2",
+          "protocol": "Dante, AES67",
+          "availability": "AD 모델",
+          "condition": "두 포트가 연결되어 있으며 하나는 Dante 전용, 나머지는 제어·Dante 겸용",
+          "source": "M",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Control",
+          "connector": "GPI",
+          "signal": "출력 레벨 조절용 GPI 입력",
+          "direction": "IN",
+          "quantity": "2(2채널 모델 기준, I1·I2)",
+          "protocol": "",
+          "availability": "",
+          "condition": "10kΩ 수동 포텐셔미터 연결",
+          "source": "M",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Power",
+          "connector": "AC 인렛",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Output",
+          "connector": "Output terminal block",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2(2채널)",
+          "protocol": "",
+          "availability": "",
+          "condition": "락킹 방식 출력단자, 배선 전 락 체결 필요",
+          "source": "M",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "GPI",
+          "signal": "Status contact output",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "Contact closure",
+          "availability": "",
+          "condition": "Normally closed; opens on amplifier/channel fault; carried by the shared GPI terminal block.",
+          "source": "M",
+          "verification": "VERIFIED"
+        }
+      ],
+      "approved": "71ff1be6b100482e7bf432dae6462feeae8bdaa6e3e30bc1f29a75308eb3e8fc"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "2a2d9f3f128808440b47a04103137378d247adef1ec8b20d49469ca13796f9c9"
+    }
+  },
+  "mezzo-324-a": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-324-a-front.webp",
+          "alt": "Powersoft Mezzo 324 A 전면부(사이트에서 322 A와 공용 이미지 사용)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 324 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x129",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-324-a-rear.webp",
+          "alt": "Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 324 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "530x137",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "aebc10150e950f6745b3de333581a5d94e1d4e1b465d4ef1134714e2d6560a61"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-a"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-a"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-a"
+        }
+      ],
+      "approved": "6a2b5d980e19b525e3e9b85c69e8d1fa20d6969787d574648be75efd2dd51d9e"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "1 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "제어/모니터링 전용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "230b355e5863f5b44752e90b0a3370468b89469c268cf8bd2769bbd616063383"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "2ab328a8879eea5f190dea72f0bebf4161cc2ad712edab9723e2a17611d950a3"
+    }
+  },
+  "mezzo-324-ad": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-324-ad-front.webp",
+          "alt": "Powersoft Mezzo 324 AD 전면부(사이트에서 322 A와 공용 이미지 사용)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 324 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x129",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-324-ad-rear.webp",
+          "alt": "Powersoft Mezzo 324 AD 후면 커넥터부",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 324 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "528x133",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "16b2ff0329dda3a5234b730fccfb42235235626368421fa6e0a62679cf26733c"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-ad"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-ad"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-324-ad"
+        }
+      ],
+      "approved": "71fddfa51855d0c93e52648c97a609c127ed2327dc0ca163127e5cd1ef4a387e"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "최대 2 플로우",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "2 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "f08f0aff292c45adfaa4d5d28276a3d954c7f72965c88b342ed70f37b51dd104"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "e98c20be7ebebb7d882eba4f69c8c9116017e54203ec47ea801f8819da67497d"
+    }
+  },
+  "mezzo-602-a": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-602-a-front.webp",
+          "alt": "Powersoft Mezzo 602 A 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 602 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x130",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-602-a-rear.webp",
+          "alt": "Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 602 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "530x137",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "7aaf2fda40d2551e104a45e33f123632aa7b00d2b554045e237db34e92f6295e"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-a"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-a"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-a"
+        }
+      ],
+      "approved": "664c8d10fcc36352153d921e1d1f7c23827210851edf1f39ce20c7d053d93833"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Line level audio out",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "1 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "제어/모니터링 전용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "7e25e70ab11267b18a5efd996636d461696bd9d4469926ec16503d8da7963dcc"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "f96da61c424b84dd80347064a1d2f353c027e9f68bff6964526ecc1907bf9710"
+    }
+  },
+  "mezzo-602-ad": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-602-ad-front.webp",
+          "alt": "Powersoft Mezzo 602 AD 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 602 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x130",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-602-ad-rear.webp",
+          "alt": "Powersoft Mezzo AD 시리즈 후면 커넥터부(대표 이미지)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 602 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "528x133",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "5ddefe4034a30c7979a58b5365d3c8a272025afa0924b189903ce1b37eb325eb"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-602-ad"
+        }
+      ],
+      "approved": "9377ed347a491e08a8c6c1d362073f97424ca005d67ad10efaa97e19d7194cec"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Line level audio out",
+          "direction": "OUT",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "최대 2 플로우 Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "2 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "1e2961b9f2cc8d87a3b8f60f482d9eeb80722c26e89aa7186879d45ec3396448"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "71eb6dd177cba09a8624a78dc2c96d3b1327fac9e984ec0dd52af75b1aabbc1e"
+    }
+  },
+  "mezzo-604-a": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-604-a-front.webp",
+          "alt": "Powersoft Mezzo 604 A 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 604 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604AD_gallery-cardL_front-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "511x130",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-604-a-rear.webp",
+          "alt": "Powersoft Mezzo 604 A 후면 커넥터부",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 604 A",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "530x137",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "ad733311f52e8966f1b596e84cfe4e31074c7cbc25489b5a1f704cca151a42ff"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-a"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604AD_gallery-cardL_front-1.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-a"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-a"
+        }
+      ],
+      "approved": "6e5d64b07b0af41fcfcf1456a7405af472376715e63679f1eaf6f5c3486fb962"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "connector": "1 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "제어/모니터링 전용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "230b355e5863f5b44752e90b0a3370468b89469c268cf8bd2769bbd616063383"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "c0fabc9327d775d839b56e86d4357e62c371a9cd5787513f1985417d9d943066"
+    }
+  },
+  "mezzo-604-ad": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "mezzo-604-ad-front.webp",
+          "alt": "Powersoft Mezzo 604 AD 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 604 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "512x130",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mezzo-604-ad-rear.webp",
+          "alt": "Powersoft Mezzo AD 시리즈 후면 커넥터부(대표 이미지)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Mezzo 604 AD",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "528x133",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "83c2cae7cf8717b9f934f68a6617747a952db5eaac61bc4c70cf28ff07453665"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-ad"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-ad"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/mezzo-series/mezzo-604-ad"
+        }
+      ],
+      "approved": "c4921eb5dc3648a750b6a34f6adb5a30556d848fed2ec1be995d00db468b1afc"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Euro 5mm 커넥터",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Euro 3.8mm",
+          "signal": "Balanced analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "3.5mm 스테레오 미니잭",
+          "signal": "Unbalanced analog audio in",
+          "direction": "IN",
+          "quantity": "2채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "입력1·2와 병렬",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "최대 2 플로우 Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "RJ45(네트워크 포트 공용)",
+          "signal": "Dante/AES67 audio",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "2 x RJ45 Fast Ethernet",
+          "signal": "제어/모니터링 네트워크",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "ArmoníaPlus",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC 10A",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "57eb130cbf989bf1062e7aaba53d0a66f73174a279fc0aa0fb897629bb182926"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "37d756d3e7239539718560d1caa1fcce6490fd9085ecdafb3039688d77b21b21"
+    }
+  },
+  "quattrocanali-1204-dsp": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-1204-dsp-front.webp",
+          "alt": "Powersoft Quattrocanali 1204 DSP 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 1204 DSP",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-4.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "7a6f68c7cd1deb3ff1f075ee266b193762d61559aedeae83dc8a3036cd327c9e"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-4.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp"
+        }
+      ],
+      "approved": "e79148c8691ca0dd5c73decbd571116ffd9bf0b4c6379d60a2ee1ebf53d76db1"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "4672d796db06ec2760891a2116335deb265077cfe0f34367de71662ada1d6763"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dsp",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 데이터시트",
+          "url": "https://www.powersoft.com/wp-content/uploads/2018/08/powersoft_Quattrocanali_DS_EN_WEB.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approved": "07c385beb2bcc4ca1f46157e06268a122f618fc8ad5e98c21e5a5cd2ef8dd06e"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "8919bdd3bd206003f569919a0a30ef7cc0fc7874ff29cf5a18d1c0239d29038c"
+    }
+  },
+  "quattrocanali-1204-dspd": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-1204-dspd-front.webp",
+          "alt": "Powersoft Quattrocanali 1204 DSP+D 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 1204 DSP+D",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-5.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1006x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "ee32e347dc6b88982e7386945609ce5fada0aeff1d6dc64267a426ed0c474dc7"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dspd"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-5.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dspd"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dspd"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-1204-dspd"
+        }
+      ],
+      "approved": "2a20561e9534e5302bef6754d061f15c35f619eea8b1a406c2764b9762d25b0c"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "1 x RJ45",
+          "signal": "Dante/AES67 audio",
+          "direction": "I/O",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "제어·모니터링 겸용 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "7d11ffbd64d4da6929be9a4fb997d306a6f9d54e4db338be86b78f828bd9ca76"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "0ed323a9b0dd8fb2bc1b1e5af61215fc8f0301aee5e360023ef3be8da2a20fab"
+    }
+  },
+  "quattrocanali-2404-dsp": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-2404-dsp-front.webp",
+          "alt": "Powersoft Quattrocanali 2404 DSP 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 2404 DSP",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-3.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1007x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "099da8adf68275bdb90336edb26859df0feee32d0bb988f5324d81bab193e44d"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-3.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp"
+        }
+      ],
+      "approved": "ba4c76000ca150ad5ee7ae45281ae70b275d5bb56aeb08dc6eaa22d88308b7ed"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "4672d796db06ec2760891a2116335deb265077cfe0f34367de71662ada1d6763"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404dsp",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 데이터시트",
+          "url": "https://www.powersoft.com/wp-content/uploads/2018/08/powersoft_Quattrocanali_DS_EN_WEB.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approved": "0fe504625fb2639fcfded8e5c6fcd47330c768f13f828f58a8787886c8cb723c"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "8180d7f138a25b01c617dd028b8b495643d9536fcd8a401ca302017e9eccd307"
+    }
+  },
+  "quattrocanali-2404-dspd": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-2404-dspd-front.webp",
+          "alt": "Powersoft Quattrocanali 2404 DSP+D 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 2404 DSP+D",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1007x131",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "bfcb5cd476cc3fb25befe37625fec24ad3b252603792b48db358c5ff53501a8b"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-2.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+        }
+      ],
+      "approved": "7c26c67af01f6f752f11f367a5903c4c94f607e99e1619085e2b17323bef56e0"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81 커넥터",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "1 x RJ45",
+          "signal": "Dante/AES67 audio",
+          "direction": "I/O",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "제어·모니터링 겸용 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "지역별 전원 케이블 동봉",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "6d59746d9155c568dc1e6c31df206d8cd0e769c4e9212f4877fb3f027428cdbc"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "33f3c62f8c0a82f9f2ca3014b50fe318d45ae0e6fbd8c0e71dcaee194064b726"
+    }
+  },
+  "quattrocanali-4804-dsp": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-4804-dsp-front.webp",
+          "alt": "Powersoft Quattrocanali 4804 DSP 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 4804 DSP",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1007x132",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "4c7022c4f6f7173ffadc17d92f436169a081d57e05831b8c866c782292642ee2"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp"
+        }
+      ],
+      "approved": "4a6e85d5a052dbb81851d5d2a57dbaef90cee8df0383cfd1ea8ea58cf4750158"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "4672d796db06ec2760891a2116335deb265077cfe0f34367de71662ada1d6763"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804-dsp",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://powersoft.com/wp-content/uploads/user_guide/PS_duecanaliquattrocanali_UG.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "D",
+          "name": "제조사 데이터시트",
+          "url": "https://www.powersoft.com/wp-content/uploads/2018/08/powersoft_Quattrocanali_DS_EN_WEB.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approved": "b9f83e629dce65138e7abab30c5ebdb1e9aedc41e9684f971e617db12f13b751"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "8363948006fee1867b02bedc13675f1ca2fdce070f4964df9e2cf54fe6745dfc"
+    }
+  },
+  "quattrocanali-4804-dspd": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "quattrocanali-4804-dspd-front.webp",
+          "alt": "Powersoft Quattrocanali 4804 DSP+D 전면부",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Powersoft",
+          "model": "Quattrocanali 4804 DSP+D",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1024x500",
+          "resolution": "1007x132",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approved": "6113511009b721d5ae4cd6a2a099b9d33789184d23823e8048d78aece9c12f1f"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804dspd"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804dspd"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804dspd"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-4804dspd"
+        }
+      ],
+      "approved": "4152411246b5d520b6fdb5b0cb05e1023ca63bd772655528b33621ae30315c7c"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Output",
+          "connector": "Phoenix PC 5/8-STF1-7,62",
+          "signal": "Speaker output",
+          "direction": "OUT",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "Hi-Z 또는 Lo-Z, 채널 쌍 브릿지 가능",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Phoenix MC 1,5/12-ST-3,81 커넥터",
+          "signal": "Analog audio in",
+          "direction": "IN",
+          "quantity": "4채널",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio Network",
+          "connector": "1 x RJ45",
+          "signal": "Dante/AES67 audio",
+          "direction": "I/O",
+          "quantity": "4채널",
+          "protocol": "Dante, AES67",
+          "availability": "AD/DSP+D 모델",
+          "condition": "제어·모니터링 겸용 포트",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "IEC C20 inlet (20A max)",
+          "signal": "Mains power",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approved": "6bfc78f2642fc45e52a6cdca441937a85764a967a586261c33a327879dfb2122"
+    },
+    "portMap": {
+      "prior": null,
+      "approved": "7f08a50189e8d24f1fd050be6f236c5f602929bdf1e3da415c0e0999abbf17ef"
+    }
+  }
+}
