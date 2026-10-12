@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW06003Raw } from './w06003-history.mjs';
+import { beforeW12001Raw } from './w12001-history.mjs';
 import { summarizeVerificationStatuses } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -65,9 +66,13 @@ test('the five public Product Detail JSON Git blobs match their approved fixed h
   ]);
   for (const [name, hash] of expected) {
     const path = `beta/site/detail/data/${name}`;
-    const blob = name === 'brc-am7.json'
+    const blob = ['brc-am7.json', 'dm7.json', 'ki-pro-go2.json'].includes(name)
       ? (() => {
-          const raw = beforeW032Raw(beforeW06003Raw(readFileSync(new URL(path, root), 'utf8').replace(/\r\n/g, '\n'), 'brc-am7'), 'brc-am7');
+          const slug = name.slice(0, -5);
+          const current = readFileSync(new URL(path, root), 'utf8').replace(/\r\n/g, '\n');
+          const raw = slug === 'brc-am7'
+            ? beforeW032Raw(beforeW06003Raw(current, slug), slug)
+            : beforeW12001Raw(current, slug);
           const bytes = Buffer.from(raw);
           return createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
         })()
