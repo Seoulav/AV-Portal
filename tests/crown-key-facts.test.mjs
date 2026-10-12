@@ -1,3 +1,4 @@
+import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
@@ -5,8 +6,8 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
 
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Product } from './w032-history.mjs';
@@ -61,7 +62,7 @@ test('Crown 25 new overview cards render two to four evidence-shaped facts', () 
     }
     const core = structuredClone(product);
     delete core.lead; delete core.subtitle; delete core.keyFacts;
-    assert.equal(sha(beforeW12001Product(beforeW12002Product(core,slug), slug)), proof.coreSha256, `${slug}: only three presentation fields change`);
+    assert.equal(sha(beforeW12001Product(beforeW12002Product(beforeW12005Product(core,slug),slug), slug)), proof.coreSha256, `${slug}: only three presentation fields change`);
   }
 });
 
@@ -69,7 +70,7 @@ test('the approved DCi 4|600DA pilot remains untouched', () => {
   const product = read(`beta/site/detail/data/${pilot}.json`);
   assert.equal(product.keyFacts.length, 4);
   assert.equal(sha(product.keyFacts), '04fb5ebbf30be83c434f0b94f85b1f62ef3ec676a2e8057e7692e1cb335b862c');
-  assert.equal(sha(beforeW12001Product(beforeW12002Product(product,pilot), pilot)), evidence.pilotSha256);
+  assert.equal(sha(beforeW12001Product(beforeW12002Product(beforeW12005Product(product,pilot),pilot), pilot)), evidence.pilotSha256);
 });
 
 test('217 other product JSON objects retain their pre-task content', () => {

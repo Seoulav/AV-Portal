@@ -1,0 +1,1631 @@
+{
+  "dci-2-300": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-2-300-rear.webp",
+        "width": 2000,
+        "height": 590
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 172,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 400,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 471,
+          "x2": 547,
+          "y": 405,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 688,
+          "x2": 720,
+          "y": 178,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 178,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 195,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 245,
+          "x2": 306,
+          "y": 250,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원 연결",
+          "x1": 214,
+          "x2": 337,
+          "y": 360,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      }
+    },
+    "approvedSha256": "f67e6ec80d8d49addf6725f74b246b199a28c284fd42770f0e659e0ddf02ddd1",
+    "priorCoreSha256": "4b5f6197003cfded6cd8016de948bbcacfdc495c224759bcb21362e7df91ba6e"
+  },
+  "dci-2-300n": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-2-300n-rear.webp",
+        "width": 2000,
+        "height": 546
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 2채널 오디오 입력.",
+          "x1": 1700,
+          "x2": 1810,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널당 300 W(4Ω) · 최대 10 AWG.",
+          "x1": 1575,
+          "x2": 1785,
+          "y": 335,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "GPIO",
+          "desc": "RJ-11 · 일반 목적 입출력.",
+          "x1": 700,
+          "x2": 755,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "Ethernet 제어",
+          "desc": "HiQnet 제어·모니터링 · CAT5e.",
+          "x1": 780,
+          "x2": 835,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "BLU link IN",
+          "desc": "디지털 오디오 링 입력 · CAT5e · Dante 아님.",
+          "x1": 885,
+          "x2": 940,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "BLU link OUT",
+          "desc": "디지털 오디오 링 출력 · CAT5e · Dante 아님.",
+          "x1": 965,
+          "x2": 1020,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브.",
+          "x1": 1165,
+          "x2": 1255,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 455,
+          "x2": 530,
+          "y": 365,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격으로 교체.",
+          "x1": 225,
+          "x2": 295,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC.",
+          "x1": 205,
+          "x2": 330,
+          "y": 340,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      }
+    },
+    "approvedSha256": "f292fbe1136ddcf5b3e78f48c7cbffa79343b77bb337bc1ff165b8940aa5baea",
+    "priorCoreSha256": "5e575fd41a2b3741c2767604f922367c8cb28dc12c0dbeedb75220151e88aa8e"
+  },
+  "dci-2-600": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-2-600-rear.webp",
+        "width": 2000,
+        "height": 590
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 172,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 400,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 471,
+          "x2": 547,
+          "y": 405,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 688,
+          "x2": 720,
+          "y": 178,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 178,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 195,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 245,
+          "x2": 306,
+          "y": 250,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원 연결",
+          "x1": 214,
+          "x2": 337,
+          "y": 360,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      }
+    },
+    "approvedSha256": "98447cf5cafcfd95712a811aeae5d5bd1e80c3b8dd71488533fd2f74f6367324",
+    "priorCoreSha256": "3032e2ed31a4e99dcb3627f5a1cd3885743b80a9ddc66536fcb4316b20d0468d"
+  },
+  "dci-2-600n": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-2-600n-rear.webp",
+        "width": 2000,
+        "height": 546
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 2채널 오디오 입력.",
+          "x1": 1700,
+          "x2": 1810,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널당 600 W(4Ω) · 최대 10 AWG.",
+          "x1": 1575,
+          "x2": 1785,
+          "y": 335,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "GPIO",
+          "desc": "RJ-11 · 일반 목적 입출력.",
+          "x1": 700,
+          "x2": 755,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "Ethernet 제어",
+          "desc": "HiQnet 제어·모니터링 · CAT5e.",
+          "x1": 780,
+          "x2": 835,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "BLU link IN",
+          "desc": "디지털 오디오 링 입력 · CAT5e · Dante 아님.",
+          "x1": 885,
+          "x2": 940,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "BLU link OUT",
+          "desc": "디지털 오디오 링 출력 · CAT5e · Dante 아님.",
+          "x1": 965,
+          "x2": 1020,
+          "y": 140,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브.",
+          "x1": 1165,
+          "x2": 1255,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 455,
+          "x2": 530,
+          "y": 365,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격으로 교체.",
+          "x1": 225,
+          "x2": 295,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC.",
+          "x1": 205,
+          "x2": 330,
+          "y": 340,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      }
+    },
+    "approvedSha256": "a80b301ae3c025a9643faa6728e774111e8807980af2e3889e3925ff6117b75a",
+    "priorCoreSha256": "d7406e43880cc6d52492cf1138676b45216443d7c6ad19bafccc1dce290d8b84"
+  },
+  "dci-4-300": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-4-300-rear.webp",
+        "width": 2000,
+        "height": 616
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 184,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 184,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 440,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 440,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 425,
+          "x2": 500,
+          "y": 435,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 652,
+          "x2": 688,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "채널 3·4 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "입력 감쇠 3·4",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 178,
+          "x2": 239,
+          "y": 270,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원 연결",
+          "x1": 144,
+          "x2": 277,
+          "y": 395,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      }
+    },
+    "approvedSha256": "738cddc499af403c80710a4f7e4945f17fe3fcc87e8db71f186a70c45ea9fc6b",
+    "priorCoreSha256": "9b6de3be1ae52cdd7cfcd244033bfd38c67c6004102f35f15744ec878f2c74cd"
+  },
+  "dci-4-300n": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-4-300n-rear.webp",
+        "width": 2000,
+        "height": 544
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 채널 3·4 오디오 입력.",
+          "x1": 1610,
+          "x2": 1725,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 채널 1·2 오디오 입력.",
+          "x1": 1760,
+          "x2": 1835,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널당 300 W(4Ω) · 최대 10 AWG.",
+          "x1": 1345,
+          "x2": 1550,
+          "y": 345,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널당 300 W(4Ω) · 최대 10 AWG.",
+          "x1": 1600,
+          "x2": 1810,
+          "y": 345,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPIO",
+          "desc": "RJ-11 · 일반 목적 입출력.",
+          "x1": 710,
+          "x2": 770,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "HiQnet 제어·모니터링 · CAT5e.",
+          "x1": 790,
+          "x2": 850,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "BLU link IN",
+          "desc": "디지털 오디오 링 입력 · CAT5e · Dante 아님.",
+          "x1": 890,
+          "x2": 950,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "BLU link OUT",
+          "desc": "디지털 오디오 링 출력 · CAT5e · Dante 아님.",
+          "x1": 970,
+          "x2": 1030,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "입력 감쇠 1–4",
+          "desc": "채널별 21단계 감쇠 노브 4개.",
+          "x1": 1080,
+          "x2": 1265,
+          "y": 165,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 460,
+          "x2": 540,
+          "y": 385,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격으로 교체.",
+          "x1": 230,
+          "x2": 295,
+          "y": 225,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC.",
+          "x1": 210,
+          "x2": 335,
+          "y": 350,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      }
+    },
+    "approvedSha256": "056a7cce05525d41b81b954fe864d950987b42a97af27c9d4123766f6ec8cb6b",
+    "priorCoreSha256": "abd73971b263162dcd6b24667c8f252efbb3f9e874746b4f64842ae4a2c77468"
+  },
+  "dci-4-600": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-4-600-rear.webp",
+        "width": 2000,
+        "height": 616
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 184,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 믹서/DSP의 입력 채널 쌍 연결",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 184,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 440,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널 쌍 연결 · 최대 6mm²/10 AWG 배선.",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 440,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 425,
+          "x2": 500,
+          "y": 435,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "전체 설정 DIP",
+          "desc": "70/100V, AMP STATUS, POWER SAVE 설정.",
+          "x1": 652,
+          "x2": 688,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "채널 1·2 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "입력 감쇠 1·2",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "채널 3·4 DIP",
+          "desc": "채널별 Lo-Z/Hi-Z 및 채널 쌍 브리지 설정.",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "입력 감쇠 3·4",
+          "desc": "채널별 21단계 감쇠 노브 · −95~0 dB.",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 205,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격 퓨즈로 교체.",
+          "x1": 178,
+          "x2": 239,
+          "y": 270,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC 전원 연결",
+          "x1": 144,
+          "x2": 277,
+          "y": 395,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      }
+    },
+    "approvedSha256": "4bdd80288f12fb37ea2bde1edc52f08c3df4c54cb62e8bb8a409bb2dd1121d4f",
+    "priorCoreSha256": "b876356e4f137b98d23c75919163f676a1dcf165367d993c61da213210f1a14b"
+  },
+  "dci-4-600n": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dci-4-600n-rear.webp",
+        "width": 2000,
+        "height": 544
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 3·4",
+          "desc": "밸런스 6핀 · 채널 3·4 오디오 입력.",
+          "x1": 1610,
+          "x2": 1725,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 1·2",
+          "desc": "밸런스 6핀 · 채널 1·2 오디오 입력.",
+          "x1": 1760,
+          "x2": 1835,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "스피커 출력 3·4",
+          "desc": "4극 단자대 · 채널당 600 W(4Ω) · 최대 10 AWG.",
+          "x1": 1345,
+          "x2": 1550,
+          "y": 345,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "스피커 출력 1·2",
+          "desc": "4극 단자대 · 채널당 600 W(4Ω) · 최대 10 AWG.",
+          "x1": 1600,
+          "x2": 1810,
+          "y": 345,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPIO",
+          "desc": "RJ-11 · 일반 목적 입출력.",
+          "x1": 710,
+          "x2": 770,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "HiQnet 제어·모니터링 · CAT5e.",
+          "x1": 790,
+          "x2": 850,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "BLU link IN",
+          "desc": "디지털 오디오 링 입력 · CAT5e · Dante 아님.",
+          "x1": 890,
+          "x2": 950,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "BLU link OUT",
+          "desc": "디지털 오디오 링 출력 · CAT5e · Dante 아님.",
+          "x1": 970,
+          "x2": 1030,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "입력 감쇠 1–4",
+          "desc": "채널별 21단계 감쇠 노브 4개.",
+          "x1": 1080,
+          "x2": 1265,
+          "y": 165,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "AUX",
+          "desc": "3핀 · 원격 Sleep 및 앰프 상태 감시.",
+          "x1": 460,
+          "x2": 540,
+          "y": 385,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "전원 퓨즈",
+          "desc": "F20AH 250V · 동일 규격으로 교체.",
+          "x1": 230,
+          "x2": 295,
+          "y": 225,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 입력",
+          "desc": "15A IEC · 100–240V AC.",
+          "x1": 210,
+          "x2": 335,
+          "y": 350,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      }
+    },
+    "approvedSha256": "85fe50250c351c6898fcdd681e1f01e023137c1434f2753a8c1af4c946f50327",
+    "priorCoreSha256": "67630b06ce11c4dfeba4aa9aeabe24556285a23183b7639929e8464611f0fc37"
+  },
+  "dm3": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dm3-rear.webp",
+        "width": 1082,
+        "height": 476
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "INPUT 1–4",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "x1": 695,
+          "x2": 1004,
+          "y": 143,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "INPUT 5–8",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "x1": 389,
+          "x2": 692,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "INPUT 9–12",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "x1": 695,
+          "x2": 1004,
+          "y": 242,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "INPUT 13–16 (콤보)",
+          "desc": "XLR/TRS 콤보 입력 4채널",
+          "x1": 389,
+          "x2": 692,
+          "y": 242,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "OUTPUT 1–4",
+          "desc": "XLR 라인 출력 4채널",
+          "x1": 78,
+          "x2": 385,
+          "y": 143,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "OUTPUT 5–8",
+          "desc": "XLR 라인 출력 4채널",
+          "x1": 78,
+          "x2": 385,
+          "y": 242,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "Dante PRIMARY · SECONDARY",
+          "desc": "etherCON 네트워크 포트 2개",
+          "x1": 624,
+          "x2": 779,
+          "y": 378,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "제어 네트워크 RJ-45",
+          "x1": 888,
+          "x2": 960,
+          "y": 387,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "USB TO HOST",
+          "desc": "USB Type-B",
+          "x1": 811,
+          "x2": 859,
+          "y": 400,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "DC INPUT",
+          "desc": "XLR 4핀 전원 입력",
+          "x1": 161,
+          "x2": 235,
+          "y": 379,
+          "side": "top"
+        }
+      ]
+    },
+    "approvedSha256": "a8d0addb1d2befe41df17175ccb285b701990496ec1a647817b87578178b4f60",
+    "priorCoreSha256": "be2103b1b3f3c9b15378b8e5d20eb1a3afecc10eb1fb84924b05eb0f2b591c86"
+  },
+  "dm7": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dm7-rear.webp",
+        "width": 1800,
+        "height": 1800
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1–16",
+          "desc": "밸런스 XLR 16개 · 1–16번 마이크 또는 라인 레벨 소스 연결",
+          "x1": 1219,
+          "x2": 1566,
+          "y": 920,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 17–32",
+          "desc": "밸런스 XLR 16개 · 17–32번 마이크 또는 라인 레벨 소스 연결",
+          "x1": 814,
+          "x2": 1161,
+          "y": 920,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "AES/EBU 입력 1/2",
+          "desc": "밸런스 XLR · 디지털 오디오 채널 1/2 수신",
+          "x1": 918,
+          "x2": 950,
+          "y": 1063,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "AES/EBU 입력 3/4",
+          "desc": "밸런스 XLR · 디지털 오디오 채널 3/4 수신",
+          "x1": 819,
+          "x2": 851,
+          "y": 1063,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "타임코드 입력",
+          "desc": "밸런스 XLR · 외부 시간 코드 신호 수신",
+          "x1": 974,
+          "x2": 1006,
+          "y": 1063,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "워드 클록 입력",
+          "desc": "BNC · 외부 워드 클록 수신",
+          "x1": 1068,
+          "x2": 1093,
+          "y": 1049,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "OMNI OUT 1–16",
+          "desc": "밸런스 XLR 16개 · 아날로그 오디오 출력",
+          "x1": 421,
+          "x2": 768,
+          "y": 920,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "AES/EBU 출력 1/2",
+          "desc": "밸런스 XLR · 디지털 오디오 채널 1/2 출력",
+          "x1": 868,
+          "x2": 900,
+          "y": 1063,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "AES/EBU 출력 3/4",
+          "desc": "밸런스 XLR · 디지털 오디오 채널 3/4 출력",
+          "x1": 771,
+          "x2": 803,
+          "y": 1063,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "워드 클록 출력",
+          "desc": "BNC · 외부 장치에 워드 클록 전달",
+          "x1": 1024,
+          "x2": 1049,
+          "y": 1049,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "Dante PRIMARY",
+          "desc": "etherCON/RJ-45 · Dante 오디오 네트워크의 주 연결",
+          "x1": 955,
+          "x2": 991,
+          "y": 1126,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "Dante SECONDARY",
+          "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
+          "x1": 1005,
+          "x2": 1041,
+          "y": 1126,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "NETWORK",
+          "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결",
+          "x1": 1143,
+          "x2": 1178,
+          "y": 1160,
+          "side": "top"
+        },
+        {
+          "n": 14,
+          "label": "USB TO HOST",
+          "desc": "USB-C · 컴퓨터와 오디오/제어 데이터 연결",
+          "x1": 1105,
+          "x2": 1136,
+          "y": 1160,
+          "side": "bottom"
+        },
+        {
+          "n": 15,
+          "label": "GPI",
+          "desc": "D-sub 15핀 · 외부 제어 장치와 신호를 송수신",
+          "x1": 1127,
+          "x2": 1163,
+          "y": 1080,
+          "side": "top"
+        },
+        {
+          "n": 16,
+          "label": "PY 카드 슬롯",
+          "desc": "선택 장착 PY 카드용 슬롯 · 기본 장착 카드로 표시하지 않음",
+          "x1": 750,
+          "x2": 940,
+          "y": 1113,
+          "side": "bottom"
+        },
+        {
+          "n": 17,
+          "label": "AC 전원 입력 A",
+          "desc": "IEC · 전원 코드 A 연결",
+          "x1": 607,
+          "x2": 649,
+          "y": 1063,
+          "side": "top"
+        },
+        {
+          "n": 18,
+          "label": "AC 전원 입력 B",
+          "desc": "IEC · 전원 코드 B 연결",
+          "x1": 402,
+          "x2": 444,
+          "y": 1063,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 520,
+        "bottom": 570
+      }
+    },
+    "approvedSha256": "13e7f7e2e576d1687f988befb0e6fa56893b96a026563bdf24efeffa7237c5b1",
+    "priorCoreSha256": "5fcc0b735b75ab75efb24d285a0393c6d9810d363c063f53b8661995e6d636af"
+  },
+  "ki-pro-go2": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ki-pro-go2-rear.webp",
+        "width": 1140,
+        "height": 450
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "SDI 입력 1–4",
+          "desc": "BNC 4개 · 기록용 SDI 영상 소스",
+          "y1": 230,
+          "y2": 379,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 입력 1–4",
+          "desc": "HDMI 4개 · 기록용 HDMI 영상 소스",
+          "x1": 293,
+          "x2": 490,
+          "y": 267,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 오디오 입력 L·R",
+          "desc": "밸런스 XLR 2개 · L은 왼쪽 오디오, R은 설정에 따라 오른쪽 오디오 또는 LTC 시간 코드 입력",
+          "x1": 343,
+          "x2": 593,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "REF LOOP 입력·출력",
+          "desc": "BNC 2개 · 외부 동기 신호 입력과 다음 장치로의 루프 출력",
+          "x1": 122,
+          "x2": 257,
+          "y": 178,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "SDI 출력 1–4",
+          "desc": "BNC 4개 · 채널별 SDI 영상 출력",
+          "x1": 517,
+          "x2": 662,
+          "y": 265,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 모니터 출력",
+          "desc": "HDMI · 모니터 영상 출력",
+          "x1": 691,
+          "x2": 773,
+          "y": 273,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "SDI 모니터 출력",
+          "desc": "BNC · 모니터 영상 출력",
+          "x1": 699,
+          "x2": 767,
+          "y": 347,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "아날로그 모니터 L·R",
+          "desc": "RCA 2개 · 왼쪽·오른쪽 모니터 오디오 출력",
+          "x1": 631,
+          "x2": 744,
+          "y": 177,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "USB 5",
+          "desc": "USB-A · 다섯 번째 기록 매체 연결",
+          "x1": 784,
+          "x2": 811,
+          "y": 175,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결",
+          "x1": 784,
+          "x2": 871,
+          "y": 272,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "DC 전원 입력 1–2",
+          "desc": "XLR 2개 · 외부 DC 공급장치 2계통 입력",
+          "y1": 111,
+          "y2": 336,
+          "side": "right"
+        }
+      ]
+    },
+    "approvedSha256": "dac260d6831f484bfe73fa9580f1d63d1fc803e0001613232e13c6b2e6146d6c",
+    "priorCoreSha256": "6ddbc0f88b0914a9433b1399e62e1163174f82464fd27e72f0b3360dad858635"
+  },
+  "novastar-h2": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "h2-rear.webp",
+        "width": 2400,
+        "height": 534
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "GENLOCK 입력",
+          "desc": "BNC · 외부 동기 신호 입력",
+          "x1": 334,
+          "x2": 392,
+          "y": 380,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "GENLOCK LOOP",
+          "desc": "BNC · 동기 신호를 다음 장치로 전달",
+          "x1": 423,
+          "x2": 481,
+          "y": 380,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · 네트워크 제어 연결",
+          "x1": 567,
+          "x2": 639,
+          "y": 382,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "USB 1",
+          "desc": "USB · 유지보수용 저장 장치 연결",
+          "x1": 668,
+          "x2": 713,
+          "y": 383,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "USB 2",
+          "desc": "USB · 유지보수용 저장 장치 연결",
+          "x1": 725,
+          "x2": 770,
+          "y": 383,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "RS-232 입력",
+          "desc": "RJ-45 · 직렬 제어 신호 입력",
+          "x1": 798,
+          "x2": 856,
+          "y": 383,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "RS-232 출력",
+          "desc": "RJ-45 · 직렬 제어 신호를 다음 장치로 전달",
+          "x1": 871,
+          "x2": 929,
+          "y": 383,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 본체에 AC 전원 연결",
+          "x1": 2130,
+          "x2": 2230,
+          "y": 239,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedSha256": "bfd07b9b8941abbd1157c5cc6a5e1e619ede7ca5bfceaa0276c36cceba05498f",
+    "priorCoreSha256": "c9abfa67c58b863c42f00fa654b1ac668ee55c64172c4ae66ea23242150f8187"
+  },
+  "vs10": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "lumantek-vs10-rear.webp",
+        "width": 2000,
+        "height": 905
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "SDI 입력 1",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 768,
+          "x2": 812,
+          "y": 640,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "SDI 입력 2",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 855,
+          "x2": 899,
+          "y": 640,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "SDI 입력 3",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 942,
+          "x2": 986,
+          "y": 640,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 4",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 1029,
+          "x2": 1073,
+          "y": 640,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "SDI 입력 5",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 1116,
+          "x2": 1160,
+          "y": 640,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "SDI 입력 6",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 1203,
+          "x2": 1247,
+          "y": 640,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SDI 입력 7",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 768,
+          "x2": 812,
+          "y": 499,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "SDI 입력 8",
+          "desc": "BNC · 3G-SDI 영상 소스 연결",
+          "x1": 908,
+          "x2": 952,
+          "y": 499,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "HDMI 입력 9",
+          "desc": "HDMI · 영상 소스 연결",
+          "x1": 1026,
+          "x2": 1084,
+          "y": 499,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "HDMI 입력 10",
+          "desc": "HDMI · 영상 소스 연결",
+          "x1": 1170,
+          "x2": 1228,
+          "y": 499,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "오디오 입력 1",
+          "desc": "XLR · 외부 아날로그 오디오 입력",
+          "x1": 1469,
+          "x2": 1552,
+          "y": 565,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "오디오 입력 2",
+          "desc": "XLR · 외부 아날로그 오디오 입력",
+          "x1": 1584,
+          "x2": 1667,
+          "y": 565,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "AUX 출력 1",
+          "desc": "BNC · 선택한 영상 소스를 SDI로 출력",
+          "x1": 291,
+          "x2": 337,
+          "y": 498,
+          "side": "top"
+        },
+        {
+          "n": 14,
+          "label": "AUX 출력 2",
+          "desc": "BNC · 선택한 영상 소스를 SDI로 출력",
+          "x1": 375,
+          "x2": 421,
+          "y": 498,
+          "side": "bottom"
+        },
+        {
+          "n": 15,
+          "label": "AUX 출력 3",
+          "desc": "BNC · 선택한 영상 소스를 SDI로 출력",
+          "x1": 459,
+          "x2": 505,
+          "y": 498,
+          "side": "top"
+        },
+        {
+          "n": 16,
+          "label": "AUX 출력 4",
+          "desc": "BNC · 선택한 영상 소스를 SDI로 출력",
+          "x1": 543,
+          "x2": 589,
+          "y": 498,
+          "side": "bottom"
+        },
+        {
+          "n": 17,
+          "label": "PGM SDI 출력 1",
+          "desc": "BNC · 프로그램 영상을 SDI로 출력",
+          "x1": 626,
+          "x2": 672,
+          "y": 499,
+          "side": "top"
+        },
+        {
+          "n": 18,
+          "label": "PGM SDI 출력 2",
+          "desc": "BNC · 프로그램 영상을 SDI로 출력",
+          "x1": 713,
+          "x2": 759,
+          "y": 499,
+          "side": "bottom"
+        },
+        {
+          "n": 19,
+          "label": "PGM HDMI 출력",
+          "desc": "HDMI · 프로그램 영상 출력",
+          "x1": 364,
+          "x2": 426,
+          "y": 638,
+          "side": "bottom"
+        },
+        {
+          "n": 20,
+          "label": "Multiview HDMI 출력",
+          "desc": "HDMI · 멀티뷰 영상 출력",
+          "x1": 481,
+          "x2": 543,
+          "y": 638,
+          "side": "top"
+        },
+        {
+          "n": 21,
+          "label": "오디오 출력 1",
+          "desc": "XLR · 아날로그 오디오 출력",
+          "x1": 1710,
+          "x2": 1793,
+          "y": 565,
+          "side": "top"
+        },
+        {
+          "n": 22,
+          "label": "오디오 출력 2",
+          "desc": "XLR · 아날로그 오디오 출력",
+          "x1": 1823,
+          "x2": 1906,
+          "y": 565,
+          "side": "bottom"
+        },
+        {
+          "n": 23,
+          "label": "REF 입력",
+          "desc": "BNC · 외부 동기 신호 입력",
+          "x1": 248,
+          "x2": 292,
+          "y": 639,
+          "side": "top"
+        },
+        {
+          "n": 24,
+          "label": "REMOTE",
+          "desc": "D-sub · 원격 제어 장치 연결",
+          "x1": 605,
+          "x2": 681,
+          "y": 639,
+          "side": "bottom"
+        },
+        {
+          "n": 25,
+          "label": "USB",
+          "desc": "USB · 저장 장치 연결",
+          "x1": 1321,
+          "x2": 1387,
+          "y": 640,
+          "side": "bottom"
+        },
+        {
+          "n": 26,
+          "label": "DC 전원 입력",
+          "desc": "DC · 제공된 전원 공급장치 연결",
+          "x1": 111,
+          "x2": 201,
+          "y": 567,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedSha256": "c54b24b86323aa74970174359c8515263ef3a69c9ad78f717fca6518da9c0a0a",
+    "priorCoreSha256": "a8041880f91abc472e10301431e4ad46d30f33e2e2fe71d6b8816b6de7ccfc3d"
+  }
+}

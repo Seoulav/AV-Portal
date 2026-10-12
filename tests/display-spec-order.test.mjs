@@ -1,3 +1,4 @@
+import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
@@ -5,8 +6,8 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
 
 import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -24,7 +25,7 @@ import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 const root=new URL('../',import.meta.url);
 const folder=new URL('beta/site/detail/data/',root);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-013-evidence.json',root),'utf8'));
-const read=slug=>beforeSamsungW04011(beforeW12002Product(JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug);
+const read=slug=>beforeSamsungW04011(beforeW12002Product(beforeW12005Product(JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug),slug);
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const normalized=text=>text.replace(/\r\n/g,'\n');
 const physicalSize=name=>/^크기\([^)]*가로x높이x깊이\)$/.test(name);

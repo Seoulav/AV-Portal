@@ -8,8 +8,9 @@ import {beforeSamsungForeignPurge} from './samsung-w014-history.mjs';
 import {beforeSamsungManualIo} from './samsung-w015-history.mjs';
 import {beforeSamsungW04010Path} from './samsung-w04010-history.mjs';
 import {beforeW12002Path} from './w12002-wording-history.mjs';
+import { beforeW12005Path } from './w12005-history.mjs';
 
-const read = path => beforeSamsungW04010Path(path, beforeW12002Path(path,JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'))));
+const read = path => beforeSamsungW04010Path(path, beforeW12002Path(path,beforeW12005Path(path,JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8')))));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const absentValue = value => ['미지원(사양표 "No")','Not available'].includes(String(value || '').trim());
 
