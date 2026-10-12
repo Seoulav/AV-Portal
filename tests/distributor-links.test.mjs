@@ -9,9 +9,10 @@ test('verified distributor mapping contains only exact Harman product matches', 
   const catalog = JSON.parse(await readFile(new URL('beta/site/catalog.json', root), 'utf8'));
   const catalogBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.slug, item]));
 
-  assert.equal(distributorLinks.length, 48);
+  const harmanLinks = distributorLinks.filter(item => item.distributor === '테크데이타피에스');
+  assert.equal(harmanLinks.length, 48);
   assert.equal(new Set(distributorLinks.map(item => item.slug)).size, distributorLinks.length);
-  for (const item of distributorLinks) {
+  for (const item of harmanLinks) {
     const catalogItem = catalogBySlug.get(item.slug);
     assert.ok(catalogItem, `${item.slug}: catalog product missing`);
     assert.ok(isHarmanManufacturer(catalogItem.brand), `${item.slug}: ${catalogItem.brand} is not Harman`);
@@ -32,7 +33,7 @@ test('verified distributor mapping contains only exact Harman product matches', 
 test('Pages verifier enforces distributor slug, manufacturer, model and canonical URL', async () => {
   const verifier = await readFile(new URL('beta/verify-pages.mjs', root), 'utf8');
   assert.match(verifier, /distributorLinks/);
-  assert.match(verifier, /isHarmanManufacturer/);
-  assert.match(verifier, /techdata-ps\\\.com/);
+  assert.match(verifier, /distributorRuleFor/);
+  assert.match(verifier, /rule\.urlPattern/);
   assert.match(verifier, /distributor\.model/);
 });
