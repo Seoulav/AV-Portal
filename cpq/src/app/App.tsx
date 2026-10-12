@@ -396,7 +396,7 @@ function QuoteWorkspace() {
           </div>
         </header>
 
-        <nav aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">AV 견적 산출기</span></nav>
+        <nav className="q-portal-nav" aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">AV 견적 산출기</span></nav>
         <ReferenceDocs />
 
         <div className="q-workspace">

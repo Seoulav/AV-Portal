@@ -113,6 +113,18 @@ select {
   color: var(--q-accent);
 }
 
+/*
+ * 포털 이동 줄과 자료 안내 카드도 셸 직속 블록이다 — 카드들과 같은
+ * 좌우 여백(--q-gutter)을 받아야 왼쪽·오른쪽 선이 맞는다.
+ */
+.q-portal-nav {
+  margin: 12px var(--q-gutter) 0;
+}
+
+.q-shell > .q-reference-docs {
+  margin: 12px var(--q-gutter) 0;
+}
+
 .q-workspace {
   display: flex;
   align-items: center;
@@ -198,10 +210,16 @@ select {
   }
   .q-top,
   .q-workspace,
-  .q-main {
+  .q-main,
+  .q-shell > .q-reference-docs {
     margin-left: 0;
     margin-right: 0;
     border-radius: 0;
+  }
+  /* 이동 줄은 카드가 아니라 맨글자라서, 전면 폭에서도 살짝 들여 둔다. */
+  .q-portal-nav {
+    margin-left: var(--q-gutter);
+    margin-right: var(--q-gutter);
   }
   .q-main {
     padding: 20px 16px;
