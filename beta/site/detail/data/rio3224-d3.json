@@ -114,23 +114,23 @@
   ],
   "features": [
     {
-      "text": "아날로그 입력 32, 출력 16, AES/EBU 출력 8을 지원하는 대형 Dante 호환 I/O 랙이다.",
+      "text": "아날로그 입력 32, 출력 16, AES/EBU 출력 8을 지원하는 대형 Dante 호환 I/O 랙",
       "source": ""
     },
     {
-      "text": "AES/EBU 1/2, 3/4, 5/6, 7/8 출력(RS422, 24bit)은 Rio3224-D3에만 구현된 전용 기능이다.",
+      "text": "AES/EBU 1/2, 3/4, 5/6, 7/8 출력(RS422, 24bit)은 Rio3224-D3에만 구현된 전용 기능",
       "source": ""
     },
     {
-      "text": "PRIMARY/SECONDARY Dante 포트(etherCON Cat5e)로 데이지 체인 또는 이중화 네트워크를 구성한다.",
+      "text": "PRIMARY/SECONDARY Dante 포트(etherCON Cat5e)로 데이지 체인 또는 이중화 네트워크 구성",
       "source": ""
     },
     {
-      "text": "전면 디스플레이와 PHONES/METER, MENU/HOME 버튼으로 유닛 상태를 직접 확인·설정할 수 있다.",
+      "text": "전면 디스플레이와 PHONES/METER, MENU/HOME 버튼으로 유닛 상태를 직접 확인·설정 가능",
       "source": ""
     },
     {
-      "text": "이중 팬(듀얼 쿨링 팬)을 탑재해 대용량 I/O 처리 시 발열을 관리한다.",
+      "text": "이중 팬(듀얼 쿨링 팬)을 탑재해 대용량 I/O 처리 시 발열 관리",
       "source": ""
     }
   ],
@@ -360,7 +360,7 @@
       {
         "n": 1,
         "label": "Dante PRIMARY",
-        "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결입니다.",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결",
         "x1": 127,
         "x2": 168,
         "y": 80,
@@ -369,7 +369,7 @@
       {
         "n": 2,
         "label": "Dante SECONDARY",
-        "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결입니다.",
+        "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
         "x1": 189,
         "x2": 230,
         "y": 80,
@@ -378,7 +378,7 @@
       {
         "n": 3,
         "label": "NETWORK",
-        "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결합니다.",
+        "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결",
         "x1": 266,
         "x2": 308,
         "y": 81,
@@ -387,7 +387,7 @@
       {
         "n": 4,
         "label": "AC 전원 입력 A",
-        "desc": "IEC · 전원 코드 A를 연결합니다.",
+        "desc": "IEC · 전원 코드 A 연결",
         "x1": 175,
         "x2": 233,
         "y": 385,
@@ -396,7 +396,7 @@
       {
         "n": 5,
         "label": "AC 전원 입력 B",
-        "desc": "IEC · 전원 코드 B를 연결합니다.",
+        "desc": "IEC · 전원 코드 B 연결",
         "x1": 289,
         "x2": 347,
         "y": 385,

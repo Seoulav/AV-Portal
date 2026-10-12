@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { group1Images } from '../beta/group1-images.mjs';
+import { beforeW12002Product } from './w12002-wording-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'));
 const slugs = ['mp008f', 'mp012f', 'mp016f'];
@@ -13,7 +14,7 @@ test('MPF cabinets have model-linked official Main photos while unverified LED c
   const catalog = read('beta/site/catalog.json');
   const imageHashes = [];
   for (const [index, slug] of slugs.entries()) {
-    const detail = read(`beta/site/detail/data/${slug}.json`);
+    const detail = beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug);
     const baseline = read(`tests/fixtures/w024-mpf-before/${slug}.json`);
     const card = catalog.find(item => item.slug === slug);
     const expectedSku = `lh${['008', '012', '016'][index]}mpfaaa-go`;

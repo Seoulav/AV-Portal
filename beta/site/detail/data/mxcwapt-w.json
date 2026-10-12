@@ -128,15 +128,15 @@
   ],
   "features": [
     {
-      "text": "AES-128 암호화를 지원한다(RF (무선 회의 유닛과의 통신)).",
+      "text": "AES-128 암호화 지원(RF (무선 회의 유닛과의 통신))",
       "source": ""
     },
     {
-      "text": "Dante 디지털 오디오 네트워킹을 지원한다.",
+      "text": "Dante 디지털 오디오 네트워킹 지원",
       "source": ""
     },
     {
-      "text": "PoE(Power over Ethernet)로 전원을 공급받는다.",
+      "text": "PoE(Power over Ethernet)로 전원을 공급",
       "source": ""
     }
   ],

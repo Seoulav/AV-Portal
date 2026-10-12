@@ -155,35 +155,35 @@
   ],
   "features": [
     {
-      "text": "SD부터 UHD(2160p60)까지 대부분의 입력 포맷을 지원하고, DCI 포맷 포함 40종의 출력 포맷으로 변환한다.",
+      "text": "SD부터 UHD(2160p60)까지 대부분의 입력 포맷을 지원하고, DCI 포맷 포함 40종의 출력 포맷으로 변환",
       "source": "P"
     },
     {
-      "text": "SDI IN의 LOOP 출력과 스케일러 SDI OUT을 동시에 지원하며, HDMI OUT은 HDMI IN Bypass 또는 스케일러 출력을 선택한다.",
+      "text": "SDI IN의 LOOP 출력과 스케일러 SDI OUT을 동시에 지원, HDMI OUT은 HDMI IN Bypass 또는 스케일러 출력 선택",
       "source": "P"
     },
     {
-      "text": "REF IN(Black Burst/Tri-Level)으로 젠락을 지원하고, Triple Buffering 방식 프레임 레이트 컨버터·싱커를 내장했다.",
+      "text": "REF IN(Black Burst/Tri-Level)으로 젠락을 지원하고, Triple Buffering 방식 프레임 레이트 컨버터·싱커 내장",
       "source": "M"
     },
     {
-      "text": "SDI/HDMI의 스테레오·멀티채널(최대 8채널, 7.1ch/5.1ch) 오디오를 임베딩·디임베딩하고 스테레오로 다운믹스한다.",
+      "text": "SDI/HDMI의 스테레오·멀티채널(최대 8채널, 7.1ch/5.1ch) 오디오를 임베딩·디임베딩하고 스테레오로 다운믹스",
       "source": "P"
     },
     {
-      "text": "D-SUB 9핀 AUDIO 단자와 브레이크아웃 케이블로 아날로그 스테레오 XLR 입력·출력을 지원한다.",
+      "text": "D-SUB 9핀 AUDIO 단자와 브레이크아웃 케이블로 아날로그 스테레오 XLR 입력·출력 지원",
       "source": "M"
     },
     {
-      "text": "2.7인치 LCD로 입력 영상, 오디오 레벨 미터, SDI Eye Diagram, HDMI Eye Scan, SDI 케이블 길이(64단계)를 표시한다.",
+      "text": "2.7인치 LCD로 입력 영상, 오디오 레벨 미터, SDI Eye Diagram, HDMI Eye Scan, SDI 케이블 길이(64단계)를 표시",
       "source": "P"
     },
     {
-      "text": "4개 키(ESC·Up·Down·OK)와 LCD OSD 메뉴로 모든 설정을 제어하며, USB Type-C로 연결한 ez-Control(PC·모바일)에서도 동일하게 제어한다.",
+      "text": "4개 키(ESC·Up·Down·OK)와 LCD OSD 메뉴로 모든 설정을 제어하며, USB Type-C로 연결한 ez-Control(PC·모바일)에서도 동일하게 제어",
       "source": "P"
     },
     {
-      "text": "UF2 파일 방식 펌웨어 업데이트로 별도 소프트웨어 설치가 필요 없다.",
+      "text": "UF2 파일 방식 펌웨어 업데이트로 별도 소프트웨어 설치가 불필요",
       "source": "P"
     }
   ],

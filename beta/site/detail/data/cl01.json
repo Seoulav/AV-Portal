@@ -112,23 +112,23 @@
   ],
   "features": [
     {
-      "text": "3개의 회전 노브(줌·화이트밸런스·초점)와 조이스틱, OLED 디스플레이로 직관적인 PTZ 제어를 지원한다.",
+      "text": "3개의 회전 노브(줌·화이트밸런스·초점)와 조이스틱, OLED 디스플레이로 직관적인 PTZ 제어 지원",
       "source": ""
     },
     {
-      "text": "VISCA, SONY VISCA, PELCO-D/P, UDP, VISCA over IP 프로토콜로 최대 255대의 PTZ 카메라를 제어할 수 있다.",
+      "text": "VISCA, SONY VISCA, PELCO-D/P, UDP, VISCA over IP 프로토콜로 최대 255대의 PTZ 카메라 제어 가능",
       "source": ""
     },
     {
-      "text": "7개의 카메라 단축 채널(CAM 1~7)로 빠른 카메라 전환이 가능하다.",
+      "text": "7개의 카메라 단축 채널(CAM 1~7)로 빠른 카메라 전환이 가능",
       "source": ""
     },
     {
-      "text": "RS-485·RS-422·RS-232·IP 등 다중 통신 인터페이스를 동시에 지원한다(모든 통신 포트 동시 사용 가능).",
+      "text": "RS-485·RS-422·RS-232·IP 등 다중 통신 인터페이스를 동시에 지원(모든 통신 포트 동시 사용 가능)",
       "source": ""
     },
     {
-      "text": "Micro USB 포트를 통한 펌웨어 업그레이드를 지원한다.",
+      "text": "Micro USB 포트를 통한 펌웨어 업그레이드 지원",
       "source": ""
     }
   ],

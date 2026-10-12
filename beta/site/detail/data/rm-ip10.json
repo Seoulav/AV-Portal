@@ -119,27 +119,27 @@
   ],
   "features": [
     {
-      "text": "IP 네트워크로 최대 112대, VISCA 직렬 연결로 최대 7대의 Sony PTZ 카메라를 제어한다.",
+      "text": "IP 네트워크로 최대 112대, VISCA 직렬 연결로 최대 7대의 Sony PTZ 카메라 제어",
       "source": "PP, OI"
     },
     {
-      "text": "한 네트워크에서 최대 5대의 RM-IP10이 제어를 공유해 다중 사용자 동시 제어가 가능하다.",
+      "text": "한 네트워크에서 최대 5대의 RM-IP10이 제어를 공유해 다중 사용자 동시 제어가 가능",
       "source": "PP, OI"
     },
     {
-      "text": "VISCA over IP, VISCA RS-422, VISCA RS-232C 중 하나를 선택해 사용한다.",
+      "text": "VISCA over IP, VISCA RS-422, VISCA RS-232C 중 하나를 선택해 사용",
       "source": "PP, OI"
     },
     {
-      "text": "카메라 설정 조합(팬·틸트·줌 위치 등)을 최대 16개 포지션으로 저장하고 불러온다.",
+      "text": "카메라 설정 조합(팬·틸트·줌 위치 등)을 최대 16개 포지션으로 저장하고 불러오기",
       "source": "OI"
     },
     {
-      "text": "제어 중인 모든 카메라를 동시에 프리셋 위치로 되돌릴 수 있다.",
+      "text": "제어 중인 모든 카메라를 동시에 프리셋 위치로 되돌리기 가능",
       "source": "PP"
     },
     {
-      "text": "RJ-45(10BASE-T/100BASE-TX 자동 감지) 연결과 PC용 설정 소프트웨어로 IP·카메라 수를 구성한다.",
+      "text": "RJ-45(10BASE-T/100BASE-TX 자동 감지) 연결과 PC용 설정 소프트웨어로 IP·카메라 수 구성",
       "source": "PP, OI"
     }
   ],

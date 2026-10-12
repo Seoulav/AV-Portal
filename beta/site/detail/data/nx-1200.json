@@ -111,27 +111,27 @@
   ],
   "features": [
     {
-      "text": "Dual NIC 구성으로 LAN 포트(외부 네트워크)와 ICSLan 포트(AMX/타사 AV 장비 전용)를 물리적으로 분리해 보안을 강화한다.",
+      "text": "Dual NIC 구성으로 LAN 포트(외부 네트워크)와 ICSLan 포트(AMX/타사 AV 장비 전용)를 물리적으로 분리해 보안 강화",
       "source": "D"
     },
     {
-      "text": "IPv6, IEEE 802.1X, X.509 인증서, Full LDAP 통합 등 엔터프라이즈급 네트워크 보안 기능을 지원한다.",
+      "text": "IPv6, IEEE 802.1X, X.509 인증서, Full LDAP 통합 등 엔터프라이즈급 네트워크 보안 기능 지원",
       "source": "D"
     },
     {
-      "text": "RPM, NetLinx, Java 등 유연한 프로그래밍 플랫폼을 지원하는 고성능 아키텍처를 갖췄다.",
+      "text": "RPM, NetLinx, Java 등 유연한 프로그래밍 플랫폼을 지원하는 고성능 아키텍처 탑재",
       "source": "D"
     },
     {
-      "text": "TLS/SSH 클라이언트를 지원해 원격 장치·서버와의 보안 통신을 관리할 수 있다.",
+      "text": "TLS/SSH 클라이언트를 지원해 원격 장치·서버와의 보안 통신 관리 가능",
       "source": "D"
     },
     {
-      "text": "FIPS 140-2 기준의 암호화를 지원하며, USB 드라이브를 통한 설정 백업/복원 및 펌웨어 업데이트가 가능하다.",
+      "text": "FIPS 140-2 기준의 암호화를 지원, USB 드라이브를 통한 설정 백업/복원 및 펌웨어 업데이트가 가능",
       "source": "D"
     },
     {
-      "text": "1600 MIPS 프로세서, 512MB 온보드 RAM, 4GB SDHC 플래시 메모리를 탑재한 컴팩트(1RU x 1/3) 컨트롤러다.",
+      "text": "1600 MIPS 프로세서, 512MB 온보드 RAM, 4GB SDHC 플래시 메모리를 탑재한 컴팩트(1RU x 1/3) 컨트롤러",
       "source": "D"
     }
   ],

@@ -99,27 +99,27 @@
   ],
   "features": [
     {
-      "text": "PC·모바일 기기를 블루투스로 Dante 오디오 네트워크에 무선 연결한다.",
+      "text": "PC·모바일 기기를 블루투스로 Dante 오디오 네트워크에 무선 연결",
       "source": ""
     },
     {
-      "text": "2입력/1출력(2x1) 채널을 지원한다.",
+      "text": "2입력/1출력(2x1) 채널 지원",
       "source": ""
     },
     {
-      "text": "Class 1 802.3af PoE로 동작해 별도 전원 어댑터가 필요 없다.",
+      "text": "Class 1 802.3af PoE로 동작해 별도 전원 어댑터가 불필요",
       "source": ""
     },
     {
-      "text": "블루투스 5.0을 지원한다.",
+      "text": "블루투스 5.0 지원",
       "source": ""
     },
     {
-      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.",
+      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정 가능",
       "source": ""
     },
     {
-      "text": "Dante Domain Manager(DDM)와 호환되며 AES67 RTP 전송도 지원한다.",
+      "text": "Dante Domain Manager(DDM)와 호환되며 AES67 RTP 전송도 지원",
       "source": ""
     }
   ],

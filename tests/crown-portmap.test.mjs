@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -120,7 +121,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
       assert.match(product.issues[0].detail,/Dante/);
     } else assert.deepEqual(product.io,prior.beforeIo,`${slug}: I/O unchanged`);
     assert.deepEqual(product.issues,prior.beforeIssues,`${slug}: issues retained`);
-    const core = beforeCrownW03013(structuredClone(product),slug);
+    const core = beforeCrownW03013(beforeW12002Product(product,slug),slug);
     delete core.specifications;delete core.io;delete core.issues;delete core.portMap;
     if (prior.beforeSources) core.sources = prior.beforeSources;
     assert.equal(sha(JSON.stringify(core)),prior.nonSpecificationsSha256,slug);

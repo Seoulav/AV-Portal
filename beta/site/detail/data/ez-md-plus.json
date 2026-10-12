@@ -98,27 +98,27 @@
   ],
   "features": [
     {
-      "text": "HDMI와 SDI 신호를 상호 변환하는 크로스 컨버터로, 두 방향 동시 출력을 지원한다.",
+      "text": "HDMI와 SDI 신호를 상호 변환하는 크로스 컨버터로, 두 방향 동시 출력 지원",
       "source": ""
     },
     {
-      "text": "B.B·TRI 레퍼런스 입력으로 Free Running, Input Lock, Genlock 동기 모드를 지원한다.",
+      "text": "B.B·TRI 레퍼런스 입력으로 Free Running, Input Lock, Genlock 동기 모드 지원",
       "source": ""
     },
     {
-      "text": "D-SUB 9핀 오디오 입출력으로 오디오 Mux/Demux 기능을 제공한다.",
+      "text": "D-SUB 9핀 오디오 입출력으로 오디오 Mux/Demux 기능 제공",
       "source": ""
     },
     {
-      "text": "10극 DIP 스위치로 출력 해상도·비율·입력 소스·오디오 소스·동기 모드·오디오 게인을 설정한다.",
+      "text": "10극 DIP 스위치로 출력 해상도·비율·입력 소스·오디오 소스·동기 모드·오디오 게인 설정",
       "source": ""
     },
     {
-      "text": "50ms 단위 오디오 딜레이 컨트롤을 갖췄다.",
+      "text": "50ms 단위 오디오 딜레이 컨트롤 탑재",
       "source": ""
     },
     {
-      "text": "Micro-USB 포트를 통한 펌웨어 업데이트를 지원한다.",
+      "text": "Micro-USB 포트를 통한 펌웨어 업데이트 지원",
       "source": ""
     }
   ],

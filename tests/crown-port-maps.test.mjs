@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeW12001Product} from './w12001-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 const read=p=>JSON.parse(readFileSync(new URL('../'+p,import.meta.url)));
 const proof=read('Work/기록/W-20261001-001-crown-port-map-evidence.json');
@@ -10,7 +11,7 @@ const later=read('Work/기록/W-20261003-009-evidence.json');
 test('22 approved Crown models have evidence-tied maps without modifying technical data',()=>{
  assert.equal(Object.keys(proof.products).length,22);
  for(const [slug,e] of Object.entries(proof.products)){
-   const p=beforeW12001Product(read(`beta/site/detail/data/${slug}.json`),slug),map=prepareEnhancements(p).portMap;
+   const p=beforeW12001Product(beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug),slug),map=prepareEnhancements(p).portMap;
   assert.ok(map,slug);assert.equal(createHash('sha256').update(readFileSync(new URL('../beta/site/'+e.pdf,import.meta.url))).digest('hex'),e.pdfSha256);assert.deepEqual(map.items,e.markers.map(({pages,...m})=>m));
   assert.deepEqual(map.items.map(x=>x.n),map.items.map((_,i)=>i+1));
   const image=p.images.find(i=>i.role==='Rear');assert.equal(image.file,e.image.file);

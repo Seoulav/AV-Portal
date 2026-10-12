@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -104,7 +105,7 @@ test('the five existing BSS products preserve every field outside Signal Flow', 
     'blu-dan': 'e164bfb271b38b12aabaaa01a099b682ba2f19014a10d1b2f3ed4d4b3d2d9fb4'
   };
   for (const [slug, expected] of Object.entries(original)) {
-    const data = product(slug);
+    const data = beforeW12002Product(product(slug),slug);
     delete data.signalFlow;
     assert.equal(sha(JSON.stringify(beforeBssAlignment(data, slug))), expected, slug);
   }

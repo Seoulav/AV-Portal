@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW06005Product, beforeW06005Raw } from './w06005-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
+import { beforeW12002Product } from './w12002-wording-history.mjs';
 
 const approved = JSON.parse(readFileSync(new URL('../Work/기록/W-20261006-005-approved-maps.json', import.meta.url)));
 const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url)));
@@ -26,7 +27,7 @@ test('ten approved rear maps cover only photographed connectors and survive vali
     const image = product.images.find(image => image.role === 'Rear');
     const [width, height] = image.resolution.split(/[x×]/).map(Number);
     assert.deepEqual(map.measuredImage, { file: image.file, width, height }, slug);
-    assert.equal(hash(beforeW06005Product(beforeW12001Product(product, slug), slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
+    assert.equal(hash(beforeW06005Product(beforeW12001Product(beforeW12002Product(product,slug), slug), slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
   }
 });
 
