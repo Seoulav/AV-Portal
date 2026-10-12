@@ -237,12 +237,12 @@
       "connector": "10-pin modular plug",
       "signal": "Conference unit connection",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "탈부착식, 핵스키로 잠금 가능",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [

@@ -63,15 +63,24 @@
 
 ## W-20261012-013 — 빌더 라이브러리 단자 전수 검토
 
-- 상태: IN_PROGRESS · 1차 리뷰 수정 반영·재검증 완료, PR 준비
-- 명세: `Work/작업/W-20261012-013.md` (읽은 main: `a16360380e42e3b150876778e6745de0cb1cfd04`, PR #409)
-- 브랜치: `codex/W-20261012-013-builder-ports`; 전용 워크트리 `codex-b`
-- 승인·범위: 사용자 2026-10-12 READY 명세. 1차는 Crown·Powersoft·BSS의 아날로그 I/O와 Shure ULXD4·ULXD4D. 세션 A 충돌 제품 JSON은 건드리지 않는다.
-- 기준 리포트: 제품 303, I/O 행 1,451, 생성 단자 2,145, 확인 필요 264, 단자 0 제품 12.
+- 상태: IN_PROGRESS · 1차 MERGED, 2차 Shure 묶음 구현·검증 완료, PR 준비
+- 명세: `Work/작업/W-20261012-013.md` (READY, PR #409 병합; 읽은 기준 main `a16360380e42e3b150876778e6745de0cb1cfd04`)
+- 구현: 1차 PR #410 병합 `6c9a904ae5be8922021852d2743767ee2cb7f848`; 2차 Shure 브랜치 `codex/W-20261012-013-phase2-shure`
+- 승인·범위: 사용자 2026-10-12 READY 명세. 세션 A 제외 목록의 제품 파일은 변경하지 않는다.
 
-- [x] Shure ULXD 단일/2채널 공식 매뉴얼을 대조했다. ULXD4 원본 복합 행 `1/4" (6.35 mm) TRS 및 XLR`을 그대로 보존하고 근거 기반 IO_OVERRIDES로 XLR 1·TRS 1을 생성했다. RF BNC 2, Ethernet 제어 1이며 Dante는 추가하지 않았다. ULXD4D의 XLR 2·Dante RJ-45 2는 기존 생성 결과와 일치함을 검사했다.
-- [x] Crown I-TECH 4x3500HD 공식 매뉴얼 rear-panel diagram을 근거로 다중 포트 override를 추가했다. 아날로그 XLR 4, AES3 XLR 2, CobraNet/VDrive RJ-45 1. 원본 복합 I/O 문구는 그대로 유지한다. 옵션 Speakon/Binding Post 스피커 출력 행은 선택형이므로 검토 상태로 둔다.
-- [x] ULXD4 변경의 과거 이력 되감기 함수와 전체 제품 해시 연결 검사 초안을 추가했다.
-- [x] 1차 리포트 변화: 확인 필요 264→261, I/O 행 1,451→1,452, 단자 2,145→2,157, 단자 0 제품 12 유지. Crown 28→27, Shure 35→33. 미확정 BLU-160 카드 구성·Mezzo 322 AD 커넥터는 값 추정 없이 남겼다.
-- [x] ULXD4 원문 보존을 요구한 독립 리뷰 지적을 반영했고, 표적 테스트 5/5 및 전체 테스트 484건(483 통과·기존 skip 1), Builder·검색 인덱스·읽기 카탈로그·Pages 검증을 통과했다.
-- [ ] 최신 main 재통합·커밋·PR 리뷰·병합·Pages 공개 및 Builder 화면 캡처.
+### 1차 — Crown·Powersoft·BSS 및 ULXD4/ULXD4D
+
+- [x] 공식 문서 대조, I/O 전용 이력 되감기, 공개 Builder 캡처를 포함해 PR #410 병합.
+- [x] Pages 배포 workflow run `38248661982` 성공 확인. Crown/I-TECH와 ULXD4 캡처는 `Work/기록/W-20261012-013-screens/`에 기록.
+- [x] 당시 기준 제품 303·I/O 1,452·생성 단자 2,157·미해결 261·단자 0 제품 12.
+
+### 2차 — Shure 묶음
+
+- [x] 정확한 모델 자료로 MX395, MXC420/C, MXCW640, MXCWAPT-W, QLXD1/4, SLXD1+/4+/4D+, UA844+SWB, UA845UWB, UA864A, UA874XA, ULXD1의 수량·포트 표현을 보강했다. 원문 복합 커넥터는 유지하고 필요한 경우 `IO_OVERRIDES`를 사용했다.
+- [x] ULXD4Q·MX392/C·MX418D/C는 세션 A 작업 충돌 회피로 그대로 뒀다. MX395 팬텀 전원 행, MXA925W-R 중복 오디오 행, MXCWAPT-W 공유 RJ45 Dante/PoE 행도 중복 물리 포트를 만들지 않도록 미해결로 보존했다.
+- [x] 제품 13종의 I/O 전용 되감기와 고정 전체 제품 SHA 검사를 연결했다. W-06005 고정 해시 테스트도 새 W-013 이력 규칙과 연결했다.
+- [x] 리포트 변화(2차 전): 제품 303·I/O 1,452·생성 단자 2,157·미해결 261·단자 0 제품 12 → 제품 303·I/O 1,453·생성 단자 2,214·미해결 238·단자 0 제품 7. Shure 미해결 10행(세션 A 제외 7행 포함)은 제품/행별 이유와 함께 PR 기록에 남긴다.
+- [x] 집중 검사 16/16. 최신 main 통합 후 전체 Node 검사 498건 중 497 pass·0 fail·기존 skip 1을 순차 실행으로 확인했다. 검색 인덱스·스냅샷을 재생성했고 Builder, 검색 인덱스 `--check`, 읽기 카탈로그 `--check`, Pages 검증을 통과했다(장비 274·상세 271·공식 WebP 452·사용자 업로드 PDF 항목 130). 잠금 PDF 12건은 전체 검사에서 확인.
+- [x] 최신 `origin/main` `9fa8e5bd09551c00c5c6c8f559ce438d37b2ee15` 통합. 파생 인덱스 충돌은 재생성으로 해결하고 merge commit `417bbc7`에 기록. 통합 후 전체 검증 통과.
+- [ ] PR 리뷰·병합·Pages 배포와 공개 Shure 화면 확인.
+- [ ] Shure 묶음 배포 후 다음 제조사 묶음으로 계속한다.

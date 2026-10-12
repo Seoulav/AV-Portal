@@ -345,12 +345,12 @@
       "connector": "3-pin XLR 또는 5-pin XLR (LED 모델)",
       "signal": "Microphone audio output (phantom powered)",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "One output connector; 3-pin XLR for standard variants and 5-pin XLR for LED variants.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

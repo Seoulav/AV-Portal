@@ -610,24 +610,24 @@
       "connector": "XLR ×1, 1/4\"(6.35 mm) ×1 (inst/aux)",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1 per connector",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "One balanced XLR and one 1/4-inch instrument/auxiliary output.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
       "connector": "RJ45",
       "signal": "Network (control only)",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "단일 포트 Ethernet 10/100 Mbps (RJ45)",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

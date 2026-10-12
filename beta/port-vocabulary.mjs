@@ -219,6 +219,68 @@ export const NOT_PLACEABLE_LEVEL3 = Object.freeze(['Cable', 'Active Optical Cabl
 // 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. match에는 그 행의 connector·signal 원문을 그대로 적는다.
 // 원문이 바뀌면(행 이동·수정) 적용하지 않고 제품 이슈 override-stale로 알린다. note에 근거(제조사 자료 등)를 적는다.
 export const IO_OVERRIDES = Object.freeze({
+  'mx395#0': {
+    match: { connector: '3-pin XLR 또는 5-pin XLR (LED 모델)', signal: 'Microphone audio output (phantom powered)' },
+    ports: [{ connector: 'XLR', signals: ['MIC-AUDIO'], direction: 'out', quantity: 1 }],
+    note: 'Shure MX395 User Guide, XLR output connector: 3-pin standard variants and 5-pin LED variants; https://pubs.shure.com/view/guide/MX395/en-US.pdf',
+  },
+  'mxc420-c#0': {
+    match: { connector: '10-pin modular plug', signal: 'Conference unit connection' },
+    ports: [{ connector: 'PROPRIETARY', signals: ['MIC-AUDIO'], direction: 'out', quantity: 1 }],
+    note: 'Shure MXC User Guide, MXC420/C gooseneck microphone uses one locking 10-pin modular connector; https://www.shure.com/en-US/docs/guide/MXC',
+  },
+  'mxcw640#0': {
+    match: { connector: '10-pin modular connector', signal: 'Gooseneck microphone' },
+    ports: [{ connector: 'PROPRIETARY', signals: ['MIC-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Shure MXCW640 product page and MXC User Guide identify one lockable 10-pin MXC gooseneck microphone connector; https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640 ; https://www.shure.com/en-US/docs/guide/MXC',
+  },
+  'qlxd1#1': {
+    match: { connector: '4핀 male mini connector (TA4M)', signal: 'Mic/instrument input' },
+    ports: [{ connector: 'PROPRIETARY', signals: ['MIC-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Shure QLX-D User Guide, QLXD1 specifications identify one TA4M input connector; https://pubs.shure.com/view/guide/QLXD/en-US.pdf',
+  },
+  'qlxd4#1': {
+    match: { connector: '1/4" (6.35 mm) 및 XLR', signal: 'Audio output' },
+    ports: [
+      { connector: 'XLR', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+      { connector: 'TRS-6.3', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+    ],
+    note: 'Shure QLX-D User Guide, QLXD4 receiver output connector diagram and specifications; https://pubs.shure.com/view/guide/QLXD/en-US.pdf',
+  },
+  'slxd1-plus#0': {
+    match: { connector: 'TA4M (4핀 수 미니 커넥터)', signal: 'Mic/instrument input' },
+    ports: [{ connector: 'PROPRIETARY', signals: ['MIC-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Shure SLX-D+ User Guide, SLXD1+ transmitter TA4M input; https://www.shure.com/en-US/docs/guide/SLXD4plus',
+  },
+  'slxd4-plus#1': {
+    match: { connector: 'XLR ×1, 1/4"(6.35 mm) ×1 (inst/aux)', signal: 'Audio output' },
+    ports: [
+      { connector: 'XLR', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+      { connector: 'TRS-6.3', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+    ],
+    note: 'Shure SLX-D+ User Guide, SLXD4+ rear panel and output specifications; https://www.shure.com/en-US/docs/guide/SLXD4plus',
+  },
+  'slxd4d-plus#1': {
+    match: { connector: 'XLR ×2, 1/4"(6.35 mm) ×2 (채널별 XLR + inst/aux)', signal: 'Audio output' },
+    ports: [
+      { connector: 'XLR', signals: ['LINE-AUDIO'], direction: 'out', quantity: 2 },
+      { connector: 'TRS-6.3', signals: ['LINE-AUDIO'], direction: 'out', quantity: 2 },
+    ],
+    note: 'Shure SLX-D+ User Guide, SLXD4D+ is the dual receiver with the additional output per channel; https://www.shure.com/en-US/docs/guide/SLXD4plus',
+  },
+  'ua845uwb#0': {
+    match: { connector: 'BNC', signal: 'RF input/output (antenna distribution)' },
+    ports: [
+      { connector: 'BNC', signals: ['RF'], direction: 'in', quantity: 2 },
+      { connector: 'BNC', signals: ['RF'], direction: 'out', quantity: 10 },
+    ],
+    note: 'Shure UA845UWB User Guide, rear panel has two antenna inputs, eight receiver outputs, and two cascade outputs; https://www.shure.com/en-US/docs/guide/UA845UWB',
+  },
+  'ulxd1#1': {
+    match: { connector: '4핀 male mini connector (TA4M)', signal: 'Mic/instrument input' },
+    ports: [{ connector: 'PROPRIETARY', signals: ['MIC-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Shure ULX-D User Guide, ULXD1 transmitter uses one TA4M input; https://www.shure.com/en-US/docs/guide/ULXD-DQ',
+  },
   'ulxd4#1': {
     match: { connector: '1/4" (6.35 mm) TRS 및 XLR', signal: 'Audio output' },
     ports: [

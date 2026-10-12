@@ -44,5 +44,543 @@
       "ioSha": "d45fd5505764b2863477aa2f60e488ed737e168a6dd48eb71442ea37de7221ff",
       "productShaBefore": "f6b61f397773904f28b0d95a75266c97e16335fb59e4fc3b9dfd2d57512b5d08"
     }
+  },
+  "mx395": {
+    "prior": {
+      "io": [
+        {
+          "group": "Audio",
+          "connector": "3-pin XLR 또는 5-pin XLR (LED 모델)",
+          "signal": "Microphone audio output (phantom powered)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "XLR (팬텀 전원)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "11-52V DC, 2.0mA",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "a7c296b62f4b6ed6cf325a7e7a401d29887de7524c073a36c18216a60a6da9ff",
+      "productShaBefore": "f8809d1083ae210f64bc05718749994faf9e6682d6d7adb3e4673256d65e74c8"
+    }
+  },
+  "mxc420-c": {
+    "prior": {
+      "io": [
+        {
+          "group": "Audio",
+          "connector": "10-pin modular plug",
+          "signal": "Conference unit connection",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "탈부착식, 핵스키로 잠금 가능",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "3479e5f9c5855d0a545c6c255f2c9a1ec0454202bb3d60caec68972f815cd040",
+      "productShaBefore": "fa38f959c887e34cf14887cc1b4fbee40755988bd6be75d5f9e366f9422759dc"
+    }
+  },
+  "mxcwapt-w": {
+    "prior": {
+      "io": [
+        {
+          "group": "Audio",
+          "connector": "3-pin male XLR",
+          "signal": "Audio output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45",
+          "signal": "Network / Dante audio",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "Dante",
+          "availability": "",
+          "condition": "Gigabit Ethernet, Dante 디지털 오디오 (10/100/1000Mbps)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "RJ45 (PoE)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "Power over Ethernet (PoE) (37-57V DC 공급전압)",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "0b644929a2502a32501785dbd9de1d7a0fc4734f026689c58b03d3ded5bacf0a",
+      "productShaBefore": "9d5b87a2c9b8cb439cbfc67524e1a9d0d674b294472a074cc92b3b4a825b3aef"
+    }
+  },
+  "qlxd1": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "SMA",
+          "signal": "RF antenna output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "4핀 male mini connector (TA4M)",
+          "signal": "Mic/instrument input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "0cee64ce13b04bc2d12209bfe79c672a625346903b3d21d6f3bce2207432d807",
+      "productShaBefore": "b1c5fe4e61215ea8a0080001da75e88bc67f8e0ee09d5da3226b0abd1efca051"
+    }
+  },
+  "qlxd4": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC",
+          "signal": "RF antenna input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "1/4\" (6.35 mm) 및 XLR",
+          "signal": "Audio output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "커넥터 규격 정보 없음",
+          "signal": "Network (control only)",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "단일 포트 이더넷 10/100 Mbps (Dante 미지원 — 제어/펌웨어 업데이트 용도)",
+          "source": "P",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Power",
+          "connector": "DC 입력 (외부 전원공급장치)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "12 V DC @ 0.4 A, 외부 전원공급장치(팁 포지티브)",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "1fe69d03a4d5b341fc6d1d1908f070975bde796ce5eb71b0ad975af2179c8f6b",
+      "productShaBefore": "e30b9144368bdaca2d645f9ac049a4d168aee397cf7d7465516a257002e7c42a"
+    }
+  },
+  "slxd1-plus": {
+    "prior": {
+      "io": [
+        {
+          "group": "Audio",
+          "connector": "TA4M (4핀 수 미니 커넥터)",
+          "signal": "Mic/instrument input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "15a816823b9af2818bb41e7468dc5b9a662ad846e19fe5deaf21404d0591b35d",
+      "productShaBefore": "ee962f4f550ded3d4c0cee551cc0295381518a03b8ddf169805057c492b14367"
+    }
+  },
+  "slxd4-plus": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC ×2 (antenna A/B)",
+          "signal": "RF antenna input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "XLR ×1, 1/4\"(6.35 mm) ×1 (inst/aux)",
+          "signal": "Audio output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45",
+          "signal": "Network (control only)",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "단일 포트 Ethernet 10/100 Mbps (RJ45)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "DC 입력 (외부 전원공급장치)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "15 VDC @ 360 mA (외부 전원 공급기, 팁 +)",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "32a9634fa739b682ca7abbc7a350e519e918541fb72992eb80622b75df672d72",
+      "productShaBefore": "d523a3c59906717aa938236e0e7b749347ec9dd15d26b73332d2f1d3d6e3ece1"
+    }
+  },
+  "slxd4d-plus": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC ×2 (antenna A/B)",
+          "signal": "RF antenna input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "XLR ×2, 1/4\"(6.35 mm) ×2 (채널별 XLR + inst/aux)",
+          "signal": "Audio output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45",
+          "signal": "Network (control only)",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "단일 포트 Ethernet 10/100 Mbps (RJ45)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "DC 입력 (외부 전원공급장치)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "15 VDC @ 360 mA (외부 전원 공급기, 팁 +)",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "3f19c53a1a499c47e21b54e5ba550162d76d519322c042da25416d5cf581a171",
+      "productShaBefore": "06fce1ed554dfe1136a3a661925a7d0ae4b777eaec0b9b800d09531ca23601ed"
+    }
+  },
+  "ua844-swb": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC",
+          "signal": "RF antenna input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "RF",
+          "connector": "BNC",
+          "signal": "RF output to receivers",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "커넥터 규격 정보 없음",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "14 ~ 18 V DC",
+          "source": "P",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Power",
+          "connector": "커넥터 규격 정보 없음",
+          "signal": "DC power output to receivers",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "14~18V DC x 4채널",
+          "source": "P",
+          "verification": "PARTIAL"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "69bcb8ce8a9d4b7f398ce4647ecb294d65ea6880955d998152d3a5d55452ff08",
+      "productShaBefore": "1f89cf4dc29e3af616bbf3ca2a30f73dba5a5ca95ccd6c7cc71d19e32f0b2738"
+    }
+  },
+  "ua845uwb": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC",
+          "signal": "RF input/output (antenna distribution)",
+          "direction": "I/O",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "커넥터 규격 정보 없음",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "100-240V AC, 50/60Hz (스위칭)",
+          "source": "P",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Power",
+          "connector": "커넥터 규격 정보 없음",
+          "signal": "DC power output to receivers",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "15V DC x 4 커넥터",
+          "source": "P",
+          "verification": "PARTIAL"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "b58cc6e85fa6a2fb67089bd6368055161f6991de57f143e8449c1025770af5b6",
+      "productShaBefore": "a5a6c509fbd84c5ab9974427d441fd975cb41ed674926a61f9af489a04fb1f78"
+    }
+  },
+  "ua864a": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC (Female)",
+          "signal": "RF output to receiver",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "BNC (동축 바이어스 공급)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "10~15V DC 바이어스 (동축 커넥터를 통해 공급), 75mA",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "90f7b918e1a8d7f26374ab24703c6c1cf72a6e3c3c2203e215d5a772e0ec9551",
+      "productShaBefore": "16eaf0bd9ab83d581ffff36244f0c4d422807d00bbd99934c6399ea1175224ca"
+    }
+  },
+  "ua874xa": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC (Female)",
+          "signal": "RF output to receiver",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "BNC (동축 바이어스 공급)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "10~15 V DC 바이어스 (동축 커넥터를 통해 공급), 75 mA (바이어스 없이는 동작하지 않음 (패시브 0dB/-6dB 게인 설정 포함))",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "5e3cdef8f866c07b39e6d72529979c22e69cb4142397c4db9bc29e84899cc9d0",
+      "productShaBefore": "755b9cc232919617284fd7072facd039d1565eaa8b25f6d5463cc942f7622736"
+    }
+  },
+  "ulxd1": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "SMA",
+          "signal": "RF antenna output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "4핀 male mini connector (TA4M)",
+          "signal": "Mic/instrument input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "0cee64ce13b04bc2d12209bfe79c672a625346903b3d21d6f3bce2207432d807",
+      "productShaBefore": "5367d6a4b56e1be3a3e94e7eca4dd9318bc93c46725e98cf18800ff270ad3951"
+    }
   }
 }
