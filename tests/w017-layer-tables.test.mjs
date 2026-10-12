@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { layerComparisonFor } from '../beta/site/detail/layer-tables.mjs';
+import { layerComparisonFor, layerComparisonHeadings } from '../beta/site/detail/layer-tables.mjs';
 
 const readDetail = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
 const expected = {
@@ -65,4 +65,9 @@ test('detail renderer provides an accessible, internally scrollable comparison t
   assert.match(app, /aria-current/);
   assert.match(css, /\.layer-table-scroll[^}]*overflow-x:\s*auto/s);
   assert.match(css, /\.layer-table-scroll table[^}]*min-width/s);
+});
+
+test('manufacturer table heading is not duplicated and all column labels are complete', () => {
+  assert.equal(layerComparisonFor('aquilon-rs4').title, '\uB808\uC774\uC5B4 \uC218 \uD55C\uB208\uC5D0 \uBCF4\uAE30');
+  assert.deepEqual(layerComparisonHeadings, ['\uC81C\uD488', '4K60p \uC785\uB825', '4K60p \uCD9C\uB825', '4K \uB808\uC774\uC5B4', '2K/DL \uB808\uC774\uC5B4', '\uBE44\uACE0']);
 });
