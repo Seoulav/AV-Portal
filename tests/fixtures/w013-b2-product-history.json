@@ -1113,105 +1113,11 @@
       }
     ],
     "approved": {
-      "ioSha": "0c20fd6d69ee62455467cad10e19a92741defb743da4b75b2b9a81b7084aeddd",
-      "productShaAfter": "c6510bb2ef635f1e1383d25b72bc62000fb411d228b731ed81cbc33da3f71d8d",
+      "ioSha": "c5c65edf289176c76b91e9839e23db27f8b4e41c07af3892c126809c5da0f484",
+      "productShaAfter": "f2c3c5e51cbf3aba2acd3e53b75d3d10a10b2371d3d951c35d5a420cff038bd4",
       "productShaBefore": "1f2049895acc404ce98af50bbd7dcd8a883fc6dcf4b0c563b2b85db447b4e7f2"
     },
     "priorIoRaw": "  \"io\": [\n    {\n      \"group\": \"Audio\",\n      \"connector\": \"MISSING\",\n      \"signal\": \"Balanced/Unbalanced analog audio in\",\n      \"direction\": \"IN\",\n      \"quantity\": \"2채널(언밸런스 2 + 밸런스 2 혼합)\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"블록 커넥터 방식, 정확한 커넥터 규격 미확인\",\n      \"source\": \"M\",\n      \"verification\": \"PARTIAL\"\n    },\n    {\n      \"group\": \"Audio Network\",\n      \"connector\": \"Ethernet (RJ45)\",\n      \"signal\": \"Dante/AES67 audio + DSP control/monitoring\",\n      \"direction\": \"I/O\",\n      \"quantity\": \"2\",\n      \"protocol\": \"Dante, AES67\",\n      \"availability\": \"AD 모델\",\n      \"condition\": \"두 포트가 연결되어 있으며 하나는 Dante 전용, 나머지는 제어·Dante 겸용\",\n      \"source\": \"M\",\n      \"verification\": \"PARTIAL\"\n    },\n    {\n      \"group\": \"Control\",\n      \"connector\": \"GPI\",\n      \"signal\": \"출력 레벨 조절용 GPI 입력\",\n      \"direction\": \"IN\",\n      \"quantity\": \"2(2채널 모델 기준, I1·I2)\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"10kΩ 수동 포텐셔미터 연결\",\n      \"source\": \"M\",\n      \"verification\": \"PARTIAL\"\n    },\n    {\n      \"group\": \"Power\",\n      \"connector\": \"AC 인렛\",\n      \"signal\": \"Mains power\",\n      \"direction\": \"IN\",\n      \"quantity\": \"1\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Output\",\n      \"connector\": \"Output terminal block\",\n      \"signal\": \"Speaker output\",\n      \"direction\": \"OUT\",\n      \"quantity\": \"2(2채널)\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"락킹 방식 출력단자, 배선 전 락 체결 필요\",\n      \"source\": \"M\",\n      \"verification\": \"FOUND\"\n    }\n  ]"
-  },
-  "mezzo-324-ad": {
-    "priorIo": [
-      {
-        "group": "Output",
-        "connector": "Euro 5mm 커넥터",
-        "signal": "Speaker output",
-        "direction": "OUT",
-        "quantity": "4채널",
-        "protocol": "",
-        "availability": "",
-        "condition": "",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Audio",
-        "connector": "Euro 3.8mm",
-        "signal": "Balanced analog audio in",
-        "direction": "IN",
-        "quantity": "4채널",
-        "protocol": "",
-        "availability": "",
-        "condition": "",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Audio",
-        "connector": "3.5mm 스테레오 미니잭",
-        "signal": "Unbalanced analog audio in",
-        "direction": "IN",
-        "quantity": "2채널",
-        "protocol": "",
-        "availability": "",
-        "condition": "입력1·2와 병렬",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Audio Network",
-        "connector": "RJ45(네트워크 포트 공용)",
-        "signal": "Dante/AES67 audio",
-        "direction": "IN",
-        "quantity": "4채널",
-        "protocol": "Dante, AES67",
-        "availability": "AD/DSP+D 모델",
-        "condition": "최대 2 플로우",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Audio Network",
-        "connector": "RJ45(네트워크 포트 공용)",
-        "signal": "Dante/AES67 audio",
-        "direction": "OUT",
-        "quantity": "4채널",
-        "protocol": "Dante, AES67",
-        "availability": "AD/DSP+D 모델",
-        "condition": "",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Control",
-        "connector": "2 x RJ45 Fast Ethernet",
-        "signal": "제어/모니터링 네트워크",
-        "direction": "I/O",
-        "quantity": "",
-        "protocol": "ArmoníaPlus",
-        "availability": "",
-        "condition": "",
-        "source": "P",
-        "verification": "FOUND"
-      },
-      {
-        "group": "Power",
-        "connector": "IEC 10A",
-        "signal": "Mains power",
-        "direction": "IN",
-        "quantity": "1",
-        "protocol": "",
-        "availability": "",
-        "condition": "",
-        "source": "P",
-        "verification": "FOUND"
-      }
-    ],
-    "approved": {
-      "ioSha": "237cd2855c08602b2e8ec8c334b1f25c597e72d388df5b4ffb45eb71de2b6b96",
-      "productShaAfter": "09149f748ec807f0d04de1a55079202550d2a8f659fc978544278179d54a87de",
-      "productShaBefore": "36b0e529e8c254bfc6e500bd73a0dee0066091f820b78f6f45fa96db76d55bf9"
-    },
-    "priorIoRaw": "  \"io\": [\n    {\n      \"group\": \"Output\",\n      \"connector\": \"Euro 5mm 커넥터\",\n      \"signal\": \"Speaker output\",\n      \"direction\": \"OUT\",\n      \"quantity\": \"4채널\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Audio\",\n      \"connector\": \"Euro 3.8mm\",\n      \"signal\": \"Balanced analog audio in\",\n      \"direction\": \"IN\",\n      \"quantity\": \"4채널\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Audio\",\n      \"connector\": \"3.5mm 스테레오 미니잭\",\n      \"signal\": \"Unbalanced analog audio in\",\n      \"direction\": \"IN\",\n      \"quantity\": \"2채널\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"입력1·2와 병렬\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Audio Network\",\n      \"connector\": \"RJ45(네트워크 포트 공용)\",\n      \"signal\": \"Dante/AES67 audio\",\n      \"direction\": \"IN\",\n      \"quantity\": \"4채널\",\n      \"protocol\": \"Dante, AES67\",\n      \"availability\": \"AD/DSP+D 모델\",\n      \"condition\": \"최대 2 플로우\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Audio Network\",\n      \"connector\": \"RJ45(네트워크 포트 공용)\",\n      \"signal\": \"Dante/AES67 audio\",\n      \"direction\": \"OUT\",\n      \"quantity\": \"4채널\",\n      \"protocol\": \"Dante, AES67\",\n      \"availability\": \"AD/DSP+D 모델\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Control\",\n      \"connector\": \"2 x RJ45 Fast Ethernet\",\n      \"signal\": \"제어/모니터링 네트워크\",\n      \"direction\": \"I/O\",\n      \"quantity\": \"\",\n      \"protocol\": \"ArmoníaPlus\",\n      \"availability\": \"\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    },\n    {\n      \"group\": \"Power\",\n      \"connector\": \"IEC 10A\",\n      \"signal\": \"Mains power\",\n      \"direction\": \"IN\",\n      \"quantity\": \"1\",\n      \"protocol\": \"\",\n      \"availability\": \"\",\n      \"condition\": \"\",\n      \"source\": \"P\",\n      \"verification\": \"FOUND\"\n    }\n  ]"
   },
   "mezzo-602-ad": {
     "priorIo": [

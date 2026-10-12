@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { expectedBuilderLibrary } from '../beta/build-builder-library.mjs';
 
 const library = await expectedBuilderLibrary();
@@ -18,6 +19,20 @@ test('Powersoft MEZZO Dante rows are carried by the shared dual RJ45 connectors'
     assert.equal(ports(record, 'bidirectional', 'RJ45', 'DANTE').length, 0, id);
     assert.ok(!record.unresolved.some(row => row.ioIndex === (id === 'mezzo-324-ad' ? 3 : id === 'mezzo-602-ad' ? 4 : 3) || row.ioIndex === (id === 'mezzo-324-ad' ? 4 : id === 'mezzo-602-ad' ? 5 : 4)), id);
   }
+});
+
+test('Powersoft source wording and verification states remain intact', async () => {
+  const mezzo322 = JSON.parse(await readFile(new URL('../beta/site/detail/data/mezzo-322-ad.json', import.meta.url), 'utf8'));
+  const gpi = mezzo322.io.find(row => row.signal === '출력 레벨 조절용 GPI 입력');
+  assert.equal(gpi.quantity, '2(2채널 모델 기준, I1·I2)');
+  assert.equal(gpi.verification, 'PARTIAL');
+
+  const mezzo324 = JSON.parse(await readFile(new URL('../beta/site/detail/data/mezzo-324-ad.json', import.meta.url), 'utf8'));
+  const danteRows = mezzo324.io.filter(row => row.group === 'Audio Network' && row.signal === 'Dante/AES67 audio');
+  assert.deepEqual(danteRows.map(row => [row.condition, row.verification]), [
+    ['최대 2 플로우', 'FOUND'],
+    ['', 'FOUND'],
+  ]);
 });
 
 test('Powersoft MEZZO 322 AD has two physical GPI inputs', () => {

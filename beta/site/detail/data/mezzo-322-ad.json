@@ -259,12 +259,12 @@
       "connector": "GPI",
       "signal": "출력 레벨 조절용 GPI 입력",
       "direction": "IN",
-      "quantity": "2",
+      "quantity": "2(2채널 모델 기준, I1·I2)",
       "protocol": "",
       "availability": "",
       "condition": "10kΩ 수동 포텐셔미터 연결",
       "source": "M",
-      "verification": "VERIFIED"
+      "verification": "PARTIAL"
     },
     {
       "group": "Power",
