@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
 import {selectKeySpecifications,prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mjs';
 import {adaptRtcomDetail} from '../beta/site/shared/rtcom-adapter.mjs';
+import { isW1010Name } from './w1010-history.mjs';
+import { isW1012Name } from './w1012-history.mjs';
 
 test('fallback prefers values up to 16 characters, then up to 20, and rejects longer values',()=>{
   const groups=[
@@ -35,7 +37,7 @@ test('one available fallback value hides the grid; authored key facts still use 
 
 test('all published fallback display values stay within 20 characters without changing authored cards',async()=>{
   const dir=new URL('../beta/site/detail/data/',import.meta.url);
-  const files=(await readdir(dir)).filter(name=>name.endsWith('.json'));
+  const files=(await readdir(dir)).filter(name=>name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name));
   let authored=0,fallback=0;
   for(const file of files){
     const product=prepareProductDetail(JSON.parse(await readFile(new URL(file,dir))));

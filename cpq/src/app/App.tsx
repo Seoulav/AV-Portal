@@ -384,7 +384,7 @@ function QuoteWorkspace() {
             </span>
             <span>
               <span className="q-brand">
-                AV <span>견적</span>
+                AV <span>견적 산출기</span>
               </span>
               <span className="q-brand-sub">QUOTE WORKSPACE</span>
             </span>
@@ -396,7 +396,7 @@ function QuoteWorkspace() {
           </div>
         </header>
 
-        <nav aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">견적</span></nav>
+        <nav aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">AV 견적 산출기</span></nav>
         <ReferenceDocs />
 
         <div className="q-workspace">

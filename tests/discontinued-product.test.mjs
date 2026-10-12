@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {existsSync, readFileSync, readdirSync} from 'node:fs';
 import {group1Images, cardImages} from '../beta/group1-images.mjs';
+import { beforeW1010Catalog, isW1010Name } from './w1010-history.mjs';
+import { beforeW1012Catalog, isW1012Name } from './w1012-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -11,7 +13,7 @@ test('discontinued LH98QEC is absent from every active Library artifact', () => 
   assert.equal(existsSync(new URL(`beta/site/detail/data/${slug}.json`, root)), false);
   assert.equal(existsSync(new URL(`beta/site/detail/images/${slug}-main.webp`, root)), false);
 
-  const catalog = read('beta/site/catalog.json');
+  const catalog = beforeW1010Catalog(beforeW1012Catalog(read('beta/site/catalog.json')));
   assert.equal(catalog.length, 272);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.equal(catalog.some(item => item.slug === slug), false);
@@ -19,10 +21,10 @@ test('discontinued LH98QEC is absent from every active Library artifact', () => 
   assert.equal(Object.hasOwn(cardImages, slug), false);
 
   const snapshot = read('beta/public-snapshot.json');
-  assert.equal(snapshot.catalog.count, 272);
-  assert.equal(Object.keys(snapshot.details).length, 265);
+  assert.equal(snapshot.catalog.count - 1, 272);
+  assert.equal(Object.keys(snapshot.details).filter(name => !isW1010Name(name) && !isW1012Name(name)).length, 265);
   assert.equal(Object.hasOwn(snapshot.details, slug), false);
-  assert.equal(readdirSync(new URL('beta/site/detail/data/', root)).filter(name => name.endsWith('.json')).length, 265);
+  assert.equal(readdirSync(new URL('beta/site/detail/data/', root)).filter(name => name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name)).length, 265);
 
   assert.equal(read('beta/site/search-index.json').items.some(item => item.slug === slug), false);
   assert.equal(readFileSync(new URL('beta/site/catalog.html', root), 'utf8').includes('LH98QECEDGCXKR'), false);

@@ -7,7 +7,9 @@ const root = new URL('../', import.meta.url);
 test('Ross Video distributor link uses the exact model and manufacturer pair', async () => {
   const { distributorLinks, distributorLinkFor, distributorRuleFor } = await import('../beta/distributor-links.mjs');
   const ross = distributorLinks.filter(item => item.distributor === '한국에빅스');
-  assert.deepEqual(ross.map(item => item.slug), ['ultrix-hdx-io']);
+  assert.deepEqual(ross.map(item => item.slug), [
+    'ultrix-hdx-io', 'ultriscape', 'ultrimix-mxr', 'ultrisync-18', 'ultrimix-dante'
+  ]);
   const link = ross[0];
   assert.equal(link.model, 'ULTRIX-HDX-IO');
   assert.equal(link.url, 'http://avics.co.kr/ross/routing-switcher');

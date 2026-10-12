@@ -225,6 +225,10 @@ export const group1Images = {
     image('Front', 'rio3224-d3-front.webp', 'Yamaha Rio3224-D3 전면 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-front01_tcm144-2339162.jpg', '1200×1200', '1086×569', 'VERIFIED'),
     image('Rear', 'rio3224-d3-rear.webp', 'Yamaha Rio3224-D3 후면 단자 이미지', 'Yamaha', 'Rio3224-D3', 'https://kr.yamaha.com/ko/files/Rio3224-D3-rear05_tcm144-2339157.jpg', '1200×1200', '1084×515', 'VERIFIED')
   ],
+  tr535: [
+    image('Front', 'tr535-front.webp', 'AVer TR535 전면 이미지', 'AVer', 'TR535', 'https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_3.png', '545×425', '545×425', 'FOUND', 'Front · 제조사 한국 공식 이미지'),
+    image('Rear', 'tr535-rear.webp', 'AVer TR535 후면 단자 이미지', 'AVer', 'TR535', 'https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_6.png', '545×425', '545×425', 'FOUND', 'Rear · 제조사 한국 공식 이미지')
+  ],
   tr335: [
     image('Front', 'tr335-front.webp', 'AVer TR335 전면 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png', '474×458', '338×381', 'FOUND'),
     image('Rear', 'tr335-rear.webp', 'AVer TR335 후면 단자 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png', '474×458', '308×411', 'FOUND')
@@ -492,6 +496,10 @@ export const group1Images = {
   'ultrix-ns-fr2': [
     image('Main', 'ultrix-ns-fr2-main.webp', 'ULTRIX-NS-FR2 2RU 프레임 (Ultrix 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-NS-FR2', 'https://www.rossvideo.com/wp-content/uploads/2026/07/ULTRIX_FAMILY_FR2.png', '768x440', '768x440', 'VERIFIED')
   ],
+  ultriscape: [],
+  'ultrimix-mxr': [],
+  'ultrisync-18': [],
+  'ultrimix-dante': [],
   'ultrix-hdx-io': [
     image('Main', 'ultrix-hdx-io-main.webp', 'ULTRIX-HDX-IO SDI I/O 카드 (Ultrix I/O Cards 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-HDX-IO', 'https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png', '2048x521', '2048x521', 'VERIFIED')
   ],
@@ -1067,6 +1075,7 @@ export const cardImages = {
   dm3: 'dm3-front.webp',
   'rio1608-d3': 'rio1608-d3-front.webp',
   'rio3224-d3': 'rio3224-d3-front.webp',
+  tr535: 'tr535-front.webp',
   tr335: 'tr335-front.webp',
   tr315: 'tr315-perspective.webp',
   cl01: 'cl01-front.webp',
