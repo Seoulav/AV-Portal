@@ -1,0 +1,21 @@
+{
+  "priorImages": [
+    {
+      "role": "Front",
+      "file": "mxc420c-front.webp",
+      "alt": "MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부",
+      "note": "Front · 제조사 공식 이미지",
+      "provider": "Shure",
+      "model": "MXC420/C — MXC Gooseneck Microphone, 20\", Single-flex, Cardioid",
+      "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "2562x2562",
+      "resolution": "1500x1500",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "approvedSha256": "d132ce87d7dde2142413b66356f5439a42e593ade9e399ee213e3dd31c461204",
+  "priorImageSha256": "ff29e894c02a5d5ee440d2dc18367f7210e0ee56c2fb3de0900aa46aa5398a9f",
+  "approvedImageSha256": "ddd73e6ebd0944d9a5bcb775a793b806ccf104005168c1f1885d86cda9943cb3"
+}
