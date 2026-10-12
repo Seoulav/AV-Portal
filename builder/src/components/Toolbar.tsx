@@ -130,7 +130,7 @@ export function Toolbar() {
     <header className="toolbar" onMouseDown={keepFocus}>
       <button type="button" onClick={() => { try { openQuote(JSON.parse(state.exportText()), text => state.notify({text,tone:'info'})); } catch { state.notify({text:'구성도를 전달하지 못했습니다. 내용을 확인해 주세요.',tone:'error'}); } }}>견적 만들기</button>
       <a className="brand" href="../">AV Portal</a>
-      <span className="app-name">AV System Builder <span className="beta">베타</span></span>
+      <span className="app-name">AV System Designer <span className="beta">베타</span></span>
       <div className="toolbar-actions">
         <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
         <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>

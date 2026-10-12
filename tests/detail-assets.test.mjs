@@ -53,7 +53,8 @@ test('detail template exposes distributor links in the header and manufacturer a
   ]);
   assert.match(html, /id="header-distributor"/);
   assert.match(html, /id="footer-distributor-link"/);
-  assert.match(app, /국내 총판 테크데이타 ↗/);
-  assert.match(app, /국내 총판 · 테크데이타피에스 ↗/);
+  assert.match(app, /distributorLink\.distributor/);
+  assert.match(app, /국내 총판 \$\{headerName\} ↗/);
+  assert.match(app, /국내 총판 · \$\{distributorName\} ↗/);
   assert.match(app, /distributorLinkFor/);
 });

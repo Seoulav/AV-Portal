@@ -21,9 +21,10 @@ const statusClass = status => ({
   'REVIEW REQUIRED': 'state-review', CONFLICTED: 'state-conflict'
 })[status] ?? 'state-review';
 const badge = status => element('span', 'state ' + statusClass(status), status);
-function safeLink(url, label, className = '') {
+function safeLink(url, label, className = '', allowedHttpHost = '') {
   const parsed = new URL(url);
-  if (parsed.protocol !== 'https:' || parsed.username || parsed.password) throw new Error('공식 링크 형식이 올바르지 않습니다.');
+  const allowedHttp = parsed.protocol === 'http:' && parsed.hostname === allowedHttpHost;
+  if ((parsed.protocol !== 'https:' && !allowedHttp) || parsed.username || parsed.password) throw new Error('공식 링크 형식이 올바르지 않습니다.');
   const link = element('a', className, label);
   link.href = parsed.href;
   link.target = '_blank';
@@ -132,8 +133,11 @@ if (!productKey && !allowContentFallback) {
 
   const distributorLink = distributorLinkFor(productKey, data.manufacturer);
   if (distributorLink) {
-    $('#header-distributor').append(safeLink(distributorLink.url, '국내 총판 테크데이타 ↗', 'pg-btn'));
-    $('#footer-distributor-link').append(safeLink(distributorLink.url, '국내 총판 · 테크데이타피에스 ↗', 'pg-btn'));
+    const distributorName = distributorLink.distributor;
+    const headerName = distributorName === '테크데이타피에스' ? '테크데이타' : distributorName;
+    const allowedHttpHost = distributorName === '한국에빅스' ? 'avics.co.kr' : '';
+    $('#header-distributor').append(safeLink(distributorLink.url, `국내 총판 ${headerName} ↗`, 'pg-btn', allowedHttpHost));
+    $('#footer-distributor-link').append(safeLink(distributorLink.url, `국내 총판 · ${distributorName} ↗`, 'pg-btn', allowedHttpHost));
   }
 
   const manifestPath = '../../beta/site/docs/manifest.json';

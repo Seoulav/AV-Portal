@@ -13,7 +13,7 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
 import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
 import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
-import { distributorLinks, isHarmanManufacturer } from './distributor-links.mjs';
+import { distributorLinks, distributorRuleFor } from './distributor-links.mjs';
 import { verifyPdfLock } from './pdf-lock.mjs';
 
 const site = new URL('./site/', import.meta.url);
@@ -287,8 +287,10 @@ const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.
     seenDistributorSlugs.add(distributor.slug);
     const manufacturer = brandBySlug.get(distributor.slug);
     assert.ok(manufacturer, `${distributor.slug}: 국내 총판 대응표의 제품이 없음`);
-    assert.ok(isHarmanManufacturer(manufacturer), `${distributor.slug}: Harman 계열 제조사가 아님`);
-    assert.match(distributor.url, /^https:\/\/techdata-ps\.com\/m21_view\.php\?idx=\d+$/, `${distributor.slug}: 테크데이타 주소 형식`);
+    const rule = distributorRuleFor(manufacturer);
+    assert.ok(rule, `${distributor.slug}: 허용된 총판 제조사가 아님`);
+    assert.equal(distributor.distributor, rule.distributor, `${distributor.slug}: 제조사·총판 쌍 불일치`);
+    assert.match(distributor.url, rule.urlPattern, `${distributor.slug}: 총판 주소 형식`);
     const product = JSON.parse(await readFile(new URL(`detail/data/${distributor.slug}.json`, site), 'utf8'));
     assert.equal(distributor.model, product.model, `${distributor.slug}: 국내 총판 대응표 모델 불일치`);
   }
