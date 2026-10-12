@@ -1,7 +1,8 @@
 import test from 'node:test';
 import {beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(value, slug), slug);
+import { beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
 
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';

@@ -1,8 +1,9 @@
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(value, slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(value, slug), slug);
+import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
 
 import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeW06005Product} from './w06005-history.mjs';
@@ -23,7 +24,7 @@ import {beforeShureW04003,beforeShureW04003Raw,shureW04003Slug} from './shure-w0
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
   const product=JSON.parse(bytes(path));
-  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeW06005Product(beforeW12001Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeW06005Product(beforeW12001Product(beforeW12001IdentityProduct(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
 // Git stores text with LF; compare repository bytes across Windows/Linux checkouts.

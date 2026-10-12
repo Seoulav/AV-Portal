@@ -4,8 +4,9 @@ import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-hi
 import {beforeBssAlignment} from './bss-alignment-history.mjs';
 import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(value, slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(value, slug), slug);
+import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
