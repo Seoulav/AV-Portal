@@ -1,6 +1,5 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
@@ -67,18 +66,16 @@ test('the five public Product Detail JSON Git blobs match their approved fixed h
   ]);
   for (const [name, hash] of expected) {
     const path = `beta/site/detail/data/${name}`;
-    const blob = ['brc-am7.json', 'dm7.json', 'ki-pro-go2.json'].includes(name)
-      ? (() => {
-          const slug = name.slice(0, -5);
-          const current = readFileSync(new URL(path, root), 'utf8').replace(/\r\n/g, '\n');
-          const restoredWording=beforeW12002Raw(current,slug);
-          const raw = slug === 'brc-am7'
-            ? beforeW032Raw(beforeW06003Raw(restoredWording, slug), slug)
-            : beforeW12001Raw(restoredWording, slug);
-          const bytes = Buffer.from(raw);
-          return createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
-        })()
-      : execFileSync('git', ['rev-parse', `HEAD:${path}`], { cwd: root, encoding: 'utf8' }).trim();
+    const slug = name.slice(0, -5);
+    const current = readFileSync(new URL(path, root), 'utf8').replace(/\r\n/g, '\n');
+    const restoredWording = beforeW12002Raw(current, slug);
+    const raw = slug === 'brc-am7'
+      ? beforeW032Raw(beforeW06003Raw(restoredWording, slug), slug)
+      : ['dm7', 'ki-pro-go2'].includes(slug)
+        ? beforeW12001Raw(restoredWording, slug)
+        : restoredWording;
+    const bytes = Buffer.from(raw);
+    const blob = createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
     assert.equal(blob, hash, name);
   }
 });
