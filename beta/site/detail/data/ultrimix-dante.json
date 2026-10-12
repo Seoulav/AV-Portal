@@ -1,0 +1,44 @@
+{
+  "itemType": "PRODUCT",
+  "manufacturer": "Ross Video",
+  "model": "ULTRIMIX-DANTE",
+  "productName": "ULTRIMIX-DANTE",
+  "categories": ["영상", "Video", "License"],
+  "korean": "ULTRIMIX-DANTE는 Ultrix 프레임에 Dante 오디오 I/O를 통합하는 소프트웨어 라이선스다. 단일 네트워크에서 64채널, 이중화 네트워크에서 32채널을 제공한다.",
+  "english": "ULTRIMIX-DANTE is a software license that integrates Dante audio I/O into an Ultrix frame, providing 64 channels on one network or 32 channels on redundant networks.",
+  "overview": "ULTRIMIX-DANTE는 HDX 또는 MODX I/O 카드의 AUX 포트를 이용해 Dante 오디오를 Ultrix와 Ultrimix에 통합한다. AUX C 한 개를 사용하는 단일 네트워크 구성은 64채널, AUX C와 D를 사용하는 이중화 네트워크 구성은 32채널이다. 샘플 레이트는 48kHz이며 비동기 Dante 네트워크를 위한 샘플 레이트 변환을 포함한다. FR1-NS, FR2-NS, FR5, FR12 프레임에서 사용할 수 있고 ULTRIX-NS-FR2에는 최대 3개 라이선스를 적용할 수 있다.",
+  "features": [
+    {"text": "Ultrix·Ultrimix용 Dante 오디오 I/O 통합", "source": "R"},
+    {"text": "단일 네트워크 64채널 또는 이중화 네트워크 32채널 구성", "source": "R/B"},
+    {"text": "비동기 Dante 네트워크용 샘플 레이트 변환", "source": "R"},
+    {"text": "ULTRIX-NS-FR2 기준 최대 3개 라이선스", "source": "B"}
+  ],
+  "specifications": [
+    {"group": "Dante", "name": "단일 네트워크 채널 수", "value": "64", "unit": "채널", "condition": "AUX C 사용", "source": "R/B", "verification": "VERIFIED"},
+    {"group": "Dante", "name": "이중화 네트워크 채널 수", "value": "32", "unit": "채널", "condition": "AUX C와 AUX D 사용", "source": "R/B", "verification": "VERIFIED"},
+    {"group": "Dante", "name": "샘플 레이트", "value": "48", "unit": "kHz", "condition": "", "source": "B", "verification": "VERIFIED"},
+    {"group": "Compatibility", "name": "지원 프레임", "value": "FR1-NS, FR2-NS, FR5, FR12", "unit": "", "condition": "HDX 또는 MODX I/O 카드", "source": "R", "verification": "VERIFIED"},
+    {"group": "Compatibility", "name": "카드당 최대 라이선스 수", "value": "1", "unit": "개", "condition": "HDX 또는 MODX I/O 카드", "source": "B", "verification": "VERIFIED"},
+    {"group": "FR2", "name": "FR2 최대 라이선스 수", "value": "3", "unit": "개", "condition": "ULTRIX-NS-FR2", "source": "B", "verification": "VERIFIED"},
+    {"group": "Processing", "name": "샘플 레이트 변환", "value": "포함", "unit": "", "condition": "비동기 Dante 네트워크 동기화", "source": "R", "verification": "VERIFIED"}
+  ],
+  "documents": [
+    {"type": "User Manual", "status": "FOUND", "title": "ULTRIX-MODX-IO User Guide", "language": "en", "note": "지원 I/O 카드 운용 안내", "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf"},
+    {"type": "Independent Specification", "status": "FOUND", "title": "한국에빅스 Ultrix 라이선스", "language": "ko", "note": "국내 공급사 Dante 통합 개요; SKU별 채널·한도 근거로 사용하지 않음", "url": "http://avics.co.kr/ross/ultrix-liecense"},
+    {"type": "Specification", "status": "FOUND", "title": "Ultrimix-Dante Brochure", "language": "en", "note": "제조사 공식 채널·프레임별 한도", "url": "https://documentation.rossvideo.com/files/Brochures/Routers/Ultrix/Ultrimix-Dante-Brochure.pdf"},
+    {"type": "Technical Document", "status": "MISSING", "title": "Technical Document 미확인", "language": "언어 미확인", "note": ""},
+    {"type": "Official Product Page", "status": "VERIFIED", "title": "Ultrix Licenses 공식 페이지", "language": "en", "note": "ULTRIMIX-DANTE 섹션", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"}
+  ],
+  "images": [],
+  "imageStatuses": [{"role": "Main", "status": "MISSING", "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "reason": "소프트웨어 라이선스 항목으로 제품 사진 적용 대상 아님"}],
+  "io": [],
+  "sources": [
+    {"code": "R", "name": "Ross Video Ultrix Licenses", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "scope": "ULTRIMIX-DANTE 기능·채널 구성·지원 프레임·SRC"},
+    {"code": "B", "name": "Ross Video Ultrimix-Dante Brochure", "url": "https://documentation.rossvideo.com/files/Brochures/Routers/Ultrix/Ultrimix-Dante-Brochure.pdf", "scope": "채널·샘플 레이트·카드 및 프레임별 라이선스 한도"},
+    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 Dante 통합 개요; SKU별 수치 근거 아님"}
+  ],
+  "issues": [],
+  "packageStatus": "VERIFIED",
+  "verificationSummary": "ULTRIMIX-DANTE의 개별 채널 구성과 FR2 한도는 Ross Video 공식 페이지와 브로슈어에서 확인했으며 한국에빅스 페이지는 국내 공급사 개요 근거로만 사용했다.",
+  "presentation": {"galleryRightsBadge": "소프트웨어 라이선스", "galleryRights": "소프트웨어 라이선스 항목으로 제품 사진을 적용하지 않습니다.", "specIntro": "Dante 채널 구성과 프레임별 라이선스 한도를 표시합니다.", "ioIntro": "물리 단자가 없는 소프트웨어 라이선스 항목입니다.", "supplementalNote": "SKU별 수치는 Ross Video 공식 자료를 기준으로 표시합니다.", "footerNote": "Ross Video ULTRIMIX-DANTE 공식 자료 기준", "visualVariant": "missing-product-images", "galleryFootNote": "소프트웨어 라이선스 · 제품 사진 없음"}
+}

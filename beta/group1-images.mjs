@@ -489,6 +489,10 @@ export const group1Images = {
   'ultrix-ns-fr2': [
     image('Main', 'ultrix-ns-fr2-main.webp', 'ULTRIX-NS-FR2 2RU 프레임 (Ultrix 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-NS-FR2', 'https://www.rossvideo.com/wp-content/uploads/2026/07/ULTRIX_FAMILY_FR2.png', '768x440', '768x440', 'VERIFIED')
   ],
+  ultriscape: [],
+  'ultrimix-mxr': [],
+  'ultrisync-18': [],
+  'ultrimix-dante': [],
   'ultrix-hdx-io': [
     image('Main', 'ultrix-hdx-io-main.webp', 'ULTRIX-HDX-IO SDI I/O 카드 (Ultrix I/O Cards 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-HDX-IO', 'https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png', '2048x521', '2048x521', 'VERIFIED')
   ],

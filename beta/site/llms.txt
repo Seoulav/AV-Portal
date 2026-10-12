@@ -6,7 +6,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
 - 공개 장비: 305개
-- Product Detail: 298개
+- Product Detail: 302개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -128,6 +128,7 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://www.rossvideo.com/products/signal-processing/ultriscape/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultriscape
 
 - 제품: NETGEAR GSM4248PX
   분류: 제어 | Network | Network Switch
@@ -1220,22 +1221,25 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   상세: https://seoulav.github.io/AV-Portal/detail/?product=h-800w-psu
 
 - 제품: Ross Video ULTRIMIX-MXR
-  분류: 영상 | Video | Router Module
+  분류: 영상 | Video | License
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-licenses/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrimix-mxr
 
 - 제품: Ross Video ULTRISYNC-18
-  분류: 영상 | Video | Router Frame
+  분류: 영상 | Video | License
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-licenses/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrisync-18
 
 - 제품: Ross Video ULTRIMIX-DANTE
-  분류: 영상 | Video | Router Module
+  분류: 영상 | Video | License
   종류: 장비
   제품군 링크: https://www.rossvideo.com/products/routing-systems/ultrix-licenses/
   매뉴얼: https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=ultrimix-dante
 
 - 제품: BSS Audio BLU-101
   분류: 오디오 | Audio | Audio Processor

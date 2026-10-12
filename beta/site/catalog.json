@@ -265,7 +265,8 @@
     "official_links": [
       "https://www.rossvideo.com/products/signal-processing/ultriscape/"
     ],
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf",
+    "slug": "ultriscape"
   },
   {
     "brand": "NETGEAR",
@@ -2903,14 +2904,15 @@
     "categories": [
       "영상",
       "Video",
-      "Router Module"
+      "License"
     ],
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
     "link_scope": "series",
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf",
+    "slug": "ultrimix-mxr"
   },
   {
     "brand": "Ross Video",
@@ -2918,14 +2920,15 @@
     "categories": [
       "영상",
       "Video",
-      "Router Frame"
+      "License"
     ],
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
     "link_scope": "series",
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+    "slug": "ultrisync-18"
   },
   {
     "brand": "Ross Video",
@@ -2933,14 +2936,15 @@
     "categories": [
       "영상",
       "Video",
-      "Router Module"
+      "License"
     ],
     "kind": "equipment",
     "official_links": [
       "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"
     ],
     "link_scope": "series",
-    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf"
+    "manual_link": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/ULTRIX-MODX-IO%20User%20Guide.pdf",
+    "slug": "ultrimix-dante"
   },
   {
     "brand": "BSS Audio",
