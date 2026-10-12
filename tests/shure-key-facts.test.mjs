@@ -1,4 +1,5 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
+import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
@@ -36,11 +37,12 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
   assert.deepEqual(Object.keys(evidence.products).sort(),targets.map(([slug])=>slug).sort());
   for(const [slug,product] of targets){
     const proof=evidence.products[slug];
+    const historical=beforeKiprogo2Mx395Product(product,slug);
     assert.ok(product.keyFacts?.length>=2&&product.keyFacts?.length<=4,slug);
     assert.equal(prepareEnhancements(product).keyFacts.length,product.keyFacts.length,`${slug}: visible`);
     assert.equal(product.keyFacts.length,proof.facts.length,slug);
-    assert.equal(product.lead,proof.lead,slug);
-    assert.equal(product.subtitle,proof.subtitle,slug);
+    assert.equal(historical.lead,proof.lead,slug);
+    assert.equal(historical.subtitle,proof.subtitle,slug);
     assert.equal((product.lead.match(/\*\*/g)||[]).length,2,`${slug}: one bold span`);
     assert.equal((product.lead.match(/[^.!?]+[.!?]/g)||[]).length,2,`${slug}: two sentences`);
     for(const [i,fact] of product.keyFacts.entries()){
@@ -58,7 +60,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
       assert.equal(row.value,fact.value,`${slug}: original value`);
       assert.equal(row.unit||'',fact.unit,`${slug}: original unit`);
     }
-    const core=structuredClone(product);
+    const core=structuredClone(historical);
     delete core.lead;delete core.subtitle;delete core.keyFacts;
     assert.equal(sha(JSON.stringify(beforeW06004Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(core,slug),slug),slug),slug))),proof.coreSha256,`${slug}: only three fields added`);
   }

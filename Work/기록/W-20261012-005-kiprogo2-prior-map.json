@@ -1,0 +1,653 @@
+{
+  "slug": "ki-pro-go2",
+  "prior": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ki-pro-go2-rear.webp",
+      "width": 1140,
+      "height": 450
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "SDI 입력 1–4",
+        "desc": "BNC 4개 · 기록용 SDI 영상 소스",
+        "y1": 230,
+        "y2": 379,
+        "side": "left",
+        "x": 105
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI · 기록용 HDMI 영상 소스 1",
+        "x1": 293,
+        "x2": 367,
+        "y": 267,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI · 기록용 HDMI 영상 소스 2",
+        "x1": 412,
+        "x2": 490,
+        "y": 267,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 3–4",
+        "desc": "HDMI 2개 · 기록용 HDMI 영상 소스 3–4",
+        "x1": 293,
+        "x2": 490,
+        "y": 352,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "아날로그 오디오 입력 L·R",
+        "desc": "밸런스 XLR 2개 · L은 왼쪽 오디오, R은 설정에 따라 오른쪽 오디오 또는 LTC 시간 코드 입력",
+        "x1": 343,
+        "x2": 593,
+        "y": 155,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "REF LOOP 입력·출력",
+        "desc": "BNC 2개 · 외부 동기 신호 입력과 다음 장치로의 루프 출력",
+        "x1": 122,
+        "x2": 257,
+        "y": 178,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "SDI 출력 1–2",
+        "desc": "BNC 2개 · 채널별 SDI 영상 출력 1–2",
+        "x1": 517,
+        "x2": 662,
+        "y": 265,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "SDI 출력 3–4",
+        "desc": "BNC 2개 · 채널별 SDI 영상 출력 3–4",
+        "x1": 517,
+        "x2": 662,
+        "y": 350,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 모니터 출력",
+        "desc": "HDMI · 모니터 영상 출력",
+        "x1": 691,
+        "x2": 773,
+        "y": 273,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "SDI 모니터 출력",
+        "desc": "BNC · 모니터 영상 출력",
+        "x1": 699,
+        "x2": 767,
+        "y": 347,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "아날로그 모니터 L·R",
+        "desc": "RCA 2개 · 왼쪽·오른쪽 모니터 오디오 출력",
+        "x1": 631,
+        "x2": 744,
+        "y": 177,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "USB 5",
+        "desc": "USB-A · 다섯 번째 기록 매체 연결",
+        "x1": 784,
+        "x2": 811,
+        "y": 175,
+        "side": "top"
+      },
+      {
+        "n": 13,
+        "label": "LAN",
+        "desc": "RJ-45 · 네트워크 연결",
+        "x1": 784,
+        "x2": 871,
+        "y": 272,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "DC 전원 입력 1–2",
+        "desc": "XLR 2개 · 외부 DC 공급장치 2계통 입력",
+        "y1": 111,
+        "y2": 336,
+        "side": "right",
+        "x": 1040
+      }
+    ]
+  },
+  "approvedSha256": "e18d58e9b65533ffe10cc91c5a4323f6a9aca34e49d2f18654bfdd851c911aa5",
+  "mx395": {
+    "priorImages": [
+      {
+        "role": "Front",
+        "file": "mx395-front.webp",
+        "alt": "MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "Shure",
+        "model": "MX395 Microflex Low Profile Boundary Microphone",
+        "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "2397x2397",
+        "resolution": "1500x1500",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "approvedSha256": "c9e01057ac98c43ee2b5193b35f3da4ada95e125cc4012512ad79242e88385c1",
+    "priorImageSha256": "4f4e19fa3d4ee87e77e5eadda1d07eb38262b7c4438a3bd160163336980a1bec",
+    "approvedImageSha256": "1d1b81f24da4c81f339b6aeb192f2e4f73466aad2470131e9b3ce3d30a1c491c"
+  },
+  "extraProducts": {
+    "mx395": {
+      "lead": {
+        "previous": "Shure **MX395**는 설치면 위로 작게 돌출되는 유선 경계면 마이크입니다. 폴라 패턴과 LED 유무에 따라 제품 변형을 선택합니다.",
+        "approvedSha256": "1cd4c5e1348bcbd8542b3ea5c063392272988d2f703183e363404f0c311df800"
+      }
+    },
+    "mx392-c": {
+      "images": {
+        "previous": [
+          {
+            "role": "Front",
+            "file": "mx392c-front.webp",
+            "alt": "MX392 바운더리 마이크로폰 (원형 로우프로파일 하우징, 상단 케이블 출구)",
+            "note": "Front · 제조사 공식 이미지",
+            "provider": "Shure",
+            "model": "MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)",
+            "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/831/97f/c9-/original/77bca0e1da0c0c30e908e78d266c8c8a.webp",
+            "officialSource": true,
+            "verificationStatus": "FOUND",
+            "originalSize": "3000x3000",
+            "resolution": "1500x1500",
+            "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+          }
+        ],
+        "approvedSha256": "1ad25ef8412f3face09ce9f33d27b145bcc4d0947b1f9bcf904eadad2aa344f1"
+      },
+      "lead": {
+        "previous": "Shure **MX392/C**는 카디오이드 카트리지를 쓰는 유선 경계면 마이크입니다. 무소음 멤브레인 스위치를 발언·뮤트 동작에 맞게 설정할 수 있습니다.",
+        "approvedSha256": "1fef97b9eaadd58631acd472d8f34adecd6f015028949c9991d3fdff914a286d"
+      },
+      "subtitle": {
+        "previous": "Microflex Wired Boundary Microphones · 경계면 마이크",
+        "approvedSha256": "4661279d76309775134cddd3f12e49e63e5997925e14d2b6465edf808b41014c"
+      }
+    },
+    "tr315": {
+      "specifications": {
+        "previous": [
+          {
+            "group": "Camera",
+            "name": "센서 크기",
+            "value": "1/2.8인치 CMOS",
+            "unit": "",
+            "condition": "8MP",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "Camera",
+            "name": "광학줌/디지털줌/총줌",
+            "value": "12X / 12X / 12X",
+            "unit": "",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "Camera",
+            "name": "초점거리",
+            "value": "f=3.9 ~ 46.8",
+            "unit": "mm",
+            "condition": "Iris F1.6(Wide) ~ F2.8(Tele)",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "Camera",
+            "name": "화각(D/H/V FOV)",
+            "value": "78°/70°/42° (Wide) ~ 7°/6°/3° (Tele)",
+            "unit": "",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "Camera",
+            "name": "최소 조도",
+            "value": "0.5",
+            "unit": "lux",
+            "condition": "50 IRE, F1.6, Max AGC, 1/30",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "Parameter",
+            "name": "팬/틸트 각도",
+            "value": "팬 -170°~+170°, 틸트 -30°~+90°",
+            "unit": "",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "IP Streaming",
+            "name": "최대 해상도",
+            "value": "4K",
+            "unit": "60fps",
+            "condition": "H.264/H.265/MJPEG",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "System",
+            "name": "NDI",
+            "value": "NDI|HX3",
+            "unit": "",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "I/O",
+            "name": "PoE",
+            "value": "PoE+ (IEEE802.3at)",
+            "unit": "",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "System",
+            "name": "소비전력",
+            "value": "18",
+            "unit": "W",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "System",
+            "name": "크기(W×D×H)",
+            "value": "180 × 145 × 192",
+            "unit": "mm",
+            "condition": "커넥터 제외",
+            "source": "D",
+            "verification": "VERIFIED"
+          },
+          {
+            "group": "System",
+            "name": "무게",
+            "value": "2.0 (±0.1)",
+            "unit": "kg",
+            "condition": "",
+            "source": "D",
+            "verification": "VERIFIED"
+          }
+        ],
+        "approvedSha256": "64b5b92c22e89c1e3bce910aa32de131725a6e919f9befb059735a90ed453f9c"
+      }
+    },
+    "nx-1200": {
+      "keyFacts": {
+        "previous": [
+          {
+            "label": "RS-232/422/485",
+            "value": "1",
+            "unit": "포트"
+          },
+          {
+            "label": "IR/Serial 출력",
+            "value": "2",
+            "unit": "포트"
+          },
+          {
+            "label": "디지털 I/O",
+            "value": "4",
+            "unit": "포트"
+          },
+          {
+            "label": "입력 전압",
+            "value": "12",
+            "unit": "VDC"
+          }
+        ],
+        "approvedSha256": "246cc4c258d73c2acc7f193b18d8cee37c3bfe07eee29e5f93aa30a90bee8a8c"
+      },
+      "portMap": {
+        "previous": {
+          "image": "Rear",
+          "measuredImage": {
+            "file": "nx-1200-rear.webp",
+            "width": 4096,
+            "height": 1306
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "디지털 I/O ×4",
+              "desc": "6핀 터미널 1개 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+              "x1": 414,
+              "x2": 978,
+              "y": 451,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "IR/Serial 출력 ×2",
+              "desc": "2핀 터미널 2개 · 1-way IR/Serial 송신 · NetLinx Port 11–12",
+              "x1": 994,
+              "x2": 1399,
+              "y": 451,
+              "side": "top"
+            },
+            {
+              "n": 3,
+              "label": "RS-232/422/485",
+              "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
+              "x1": 414,
+              "x2": 1399,
+              "y": 757,
+              "side": "bottom"
+            },
+            {
+              "n": 4,
+              "label": "RS-232",
+              "desc": "5핀 터미널 · 양방향 직렬 제어 · NetLinx Port 2",
+              "x1": 1486,
+              "x2": 1997,
+              "y": 757,
+              "side": "bottom"
+            },
+            {
+              "n": 5,
+              "label": "AxLink",
+              "desc": "4핀 터미널 · 외부 AxLink 장치 데이터·전원 공급",
+              "x1": 2241,
+              "x2": 2698,
+              "y": 757,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "LAN 10/100",
+              "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+              "x1": 2783,
+              "x2": 3138,
+              "y": 731,
+              "side": "bottom"
+            }
+          ]
+        },
+        "approvedSha256": "bb14c923aa2ecedebb84b26ad0a61ac1cefad0a7d0d1ff64dfbb52ab01042143"
+      }
+    },
+    "nx-2200": {
+      "keyFacts": {
+        "previous": [
+          {
+            "label": "RS-232/422/485",
+            "value": "1",
+            "unit": "포트"
+          },
+          {
+            "label": "IR/Serial 출력",
+            "value": "4",
+            "unit": "포트"
+          },
+          {
+            "label": "디지털 I/O",
+            "value": "4",
+            "unit": "포트"
+          },
+          {
+            "label": "입력 전압",
+            "value": "12",
+            "unit": "VDC"
+          }
+        ],
+        "approvedSha256": "945a146828e286fbdaba744ebe29424755f45fb6ad2548352a3b8ac29ac58a4d"
+      },
+      "portMap": {
+        "previous": {
+          "image": "Rear",
+          "measuredImage": {
+            "file": "nx-2200-rear.webp",
+            "width": 4096,
+            "height": 789
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "RS-232 ×3",
+              "desc": "2핀 터미널 3개 · 양방향 직렬 제어 · NetLinx Port 2–4",
+              "x1": 173,
+              "x2": 731,
+              "y": 485,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "RS-232/422/485",
+              "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
+              "x1": 798,
+              "x2": 1194,
+              "y": 485,
+              "side": "bottom"
+            },
+            {
+              "n": 3,
+              "label": "릴레이 ×4",
+              "desc": "8핀 터미널 1개 · SPST 릴레이 · NetLinx Port 21",
+              "x1": 1273,
+              "x2": 1581,
+              "y": 485,
+              "side": "top"
+            },
+            {
+              "n": 4,
+              "label": "디지털 I/O ×4",
+              "desc": "6핀 터미널 1개 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+              "x1": 1661,
+              "x2": 1933,
+              "y": 485,
+              "side": "bottom"
+            },
+            {
+              "n": 5,
+              "label": "IR/Serial 출력 ×4",
+              "desc": "2핀 터미널 4개 · 1-way IR/Serial 송신 · NetLinx Port 11–14",
+              "x1": 2023,
+              "x2": 2378,
+              "y": 485,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "AxLink",
+              "desc": "4핀 터미널 · 외부 AxLink 장치 데이터·전원 공급",
+              "x1": 2190,
+              "x2": 2340,
+              "y": 485,
+              "side": "bottom"
+            },
+            {
+              "n": 7,
+              "label": "ICSLAN",
+              "desc": "RJ-45 · 10/100 Ethernet 격리 제어 네트워크",
+              "x1": 2797,
+              "x2": 2941,
+              "y": 454,
+              "side": "top"
+            },
+            {
+              "n": 8,
+              "label": "USB 2.0 Host",
+              "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
+              "x1": 3048,
+              "x2": 3177,
+              "y": 475,
+              "side": "bottom"
+            },
+            {
+              "n": 9,
+              "label": "LAN 10/100",
+              "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+              "x1": 3383,
+              "x2": 3525,
+              "y": 454,
+              "side": "top"
+            }
+          ]
+        },
+        "approvedSha256": "b474bf43c94e9354715c9bfc1f1bc4f05b48de9d197a2564537a6fc58650143e"
+      }
+    },
+    "nx-3200": {
+      "keyFacts": {
+        "previous": [
+          {
+            "label": "RS-232/422/485",
+            "value": "2",
+            "unit": "포트"
+          },
+          {
+            "label": "IR/Serial 출력",
+            "value": "8",
+            "unit": "포트"
+          },
+          {
+            "label": "디지털 I/O",
+            "value": "8",
+            "unit": "포트"
+          },
+          {
+            "label": "입력 전압",
+            "value": "12",
+            "unit": "VDC"
+          }
+        ],
+        "approvedSha256": "61dffb09bdd9b34acb64351a6d3f798942c841e45d4779d80c6e0086e331eb27"
+      },
+      "portMap": {
+        "previous": {
+          "image": "Rear",
+          "measuredImage": {
+            "file": "nx-3200-rear.webp",
+            "width": 4096,
+            "height": 769
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "RS-232 ×6",
+              "desc": "5핀 터미널 6개 · 양방향 직렬 제어 · NetLinx Port 2–4, 6–8",
+              "x1": 191,
+              "x2": 820,
+              "y": 469,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "RS-232/422/485 ×2",
+              "desc": "10핀 터미널 2개 · 양방향 직렬 제어 · NetLinx Port 1, 5",
+              "x1": 869,
+              "x2": 1216,
+              "y": 469,
+              "side": "bottom"
+            },
+            {
+              "n": 3,
+              "label": "릴레이 ×8",
+              "desc": "8핀 터미널 2개 · SPST 릴레이 · NetLinx Port 21",
+              "x1": 1289,
+              "x2": 1634,
+              "y": 469,
+              "side": "top"
+            },
+            {
+              "n": 4,
+              "label": "디지털 I/O ×8",
+              "desc": "10핀 터미널 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+              "x1": 1697,
+              "x2": 2043,
+              "y": 469,
+              "side": "bottom"
+            },
+            {
+              "n": 5,
+              "label": "IR/Serial 출력 ×8",
+              "desc": "2핀 터미널 8개 · 1-way IR/Serial 송신 · NetLinx Port 11–18",
+              "x1": 2105,
+              "x2": 2452,
+              "y": 469,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "AxLink ×2",
+              "desc": "4핀 터미널 2개 · 외부 AxLink 장치 데이터·전원 공급",
+              "x1": 2210,
+              "x2": 2370,
+              "y": 469,
+              "side": "bottom"
+            },
+            {
+              "n": 7,
+              "label": "ICSLAN",
+              "desc": "RJ-45 · 10/100 Ethernet 격리 제어 네트워크",
+              "x1": 2862,
+              "x2": 3006,
+              "y": 440,
+              "side": "top"
+            },
+            {
+              "n": 8,
+              "label": "USB 2.0 Host",
+              "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
+              "x1": 3112,
+              "x2": 3244,
+              "y": 462,
+              "side": "bottom"
+            },
+            {
+              "n": 9,
+              "label": "LAN 10/100",
+              "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+              "x1": 3445,
+              "x2": 3588,
+              "y": 440,
+              "side": "top"
+            }
+          ]
+        },
+        "approvedSha256": "bc2fd62e0d9df5cfc706d9084fa04f9979f831c12bb4de537019411b88ddb63b"
+      }
+    }
+  },
+  "mx392Photo": {
+    "priorImageSha256": "b2fd19c3e1cc38df91a495886192d20abb090e0519f17007eb1fdfbcc8905a5a",
+    "approvedImageSha256": "dc4828445f04cb4f53e4aacf6ae9313bf18c85f39cd9d839495e9f3984e60942"
+  }
+}

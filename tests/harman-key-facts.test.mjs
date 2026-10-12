@@ -10,6 +10,7 @@ const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(before
 const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
 
 import {beforeAmxW008Product} from './amx-w008-history.mjs';
+import {beforeKiprogo2Mx395Product} from './w12005-kiprogo2-mx395-history.mjs';
 import {beforeJblW06001Product} from './jbl-w06001-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Product } from './w032-history.mjs';
@@ -39,7 +40,7 @@ test('32 JBL, BSS and AMX cards use exact verified product rows',()=>{
     assert.equal(targets.filter(slug=>evidence.products[slug].brand===brand).length,count);
   }
   for(const slug of targets){
-    const product=beforeBssW04004(beforeBssAlignment(beforeAmxW008Product(beforeJblW06001Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug),slug),slug),slug),slug),slug),slug);
+    const product=beforeBssW04004(beforeBssAlignment(beforeAmxW008Product(beforeJblW06001Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeKiprogo2Mx395Product(read(`beta/site/detail/data/${slug}.json`),slug),slug),slug),slug),slug),slug),slug),slug);
     const proof=evidence.products[slug];
     assert.equal(product.manufacturer,proof.brand,slug);
     assert.equal(product.overview,proof.overview,slug);

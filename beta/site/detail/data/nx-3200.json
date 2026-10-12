@@ -461,8 +461,13 @@
   "subtitle": "프로그래머블 네트워크 컨트롤러",
   "keyFacts": [
     {
-      "label": "RS-232/422/485",
-      "value": "2",
+      "label": "직렬 제어 포트",
+      "value": "RS-232 6 · RS-232/422/485 2",
+      "unit": ""
+    },
+    {
+      "label": "릴레이",
+      "value": "8",
       "unit": "포트"
     },
     {
@@ -474,11 +479,6 @@
       "label": "디지털 I/O",
       "value": "8",
       "unit": "포트"
-    },
-    {
-      "label": "입력 전압",
-      "value": "12",
-      "unit": "VDC"
     }
   ],
   "portMap": {
@@ -496,7 +496,7 @@
         "x1": 191,
         "x2": 820,
         "y": 469,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 2,
@@ -514,14 +514,14 @@
         "x1": 1289,
         "x2": 1634,
         "y": 469,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 4,
         "label": "디지털 I/O ×8",
         "desc": "10핀 터미널 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
         "x1": 1697,
-        "x2": 2043,
+        "x2": 1900,
         "y": 469,
         "side": "bottom"
       },
@@ -529,17 +529,17 @@
         "n": 5,
         "label": "IR/Serial 출력 ×8",
         "desc": "2핀 터미널 8개 · 1-way IR/Serial 송신 · NetLinx Port 11–18",
-        "x1": 2105,
-        "x2": 2452,
+        "x1": 1910,
+        "x2": 2165,
         "y": 469,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 6,
         "label": "AxLink ×2",
         "desc": "4핀 터미널 2개 · 외부 AxLink 장치 데이터·전원 공급",
-        "x1": 2210,
-        "x2": 2370,
+        "x1": 2200,
+        "x2": 2380,
         "y": 469,
         "side": "bottom"
       },
@@ -550,12 +550,12 @@
         "x1": 2862,
         "x2": 3006,
         "y": 440,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 8,
-      "label": "USB 2.0 Host",
-      "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
+        "label": "USB 2.0 Host",
+        "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
         "x1": 3112,
         "x2": 3244,
         "y": 462,
@@ -568,7 +568,7 @@
         "x1": 3445,
         "x2": 3588,
         "y": 440,
-        "side": "top"
+        "side": "bottom"
       }
     ]
   }

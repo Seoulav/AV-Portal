@@ -7,6 +7,7 @@ import { beforeAmxW008Product, beforeAmxW008Raw } from './amx-w008-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct, beforeW12001IdentityRaw } from './w12001-identity-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
+import { beforeKiprogo2Mx395Product, beforeKiprogo2Mx395Raw } from './w12005-kiprogo2-mx395-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -60,7 +61,7 @@ const productAssets = {
   'varia-sl50': ['varia-sl50-other-left-front.webp', 'varia-sl50-other-left.webp', 'varia-sl50-other-right-front.webp', 'varia-sl50-rear.webp'],
 };
 const mapRows = {
-  'nx-1200': [6, 4, 2, 3, 1, 0],
+  'nx-1200': [6, 2, 4, 3, 1, 0],
   'nx-2200': [4, 3, 7, 6, 5, 2, 1, 8, 0],
   'nx-3200': [4, 3, 7, 6, 5, 2, 1, 8, 0],
 };
@@ -115,7 +116,7 @@ test('NX rear maps use only connectors that are visible in the matching drawings
       assert.ok(marker.label.includes(io.signal.split('(')[0].split(' ')[0]) || marker.desc.includes(io.signal.split('(')[0]), `${slug}: marker ${marker.n} backed by I/O row ${ioIndex}`);
     });
   }
-  assert.deepEqual(mapRows['nx-1200'], [6, 4, 2, 3, 1, 0], 'rear photo excludes front USB host and IR receiver');
+  assert.deepEqual(mapRows['nx-1200'], [6, 2, 4, 3, 1, 0], 'rear photo excludes front USB host and IR receiver');
   for (const slug of ['nx-2200', 'nx-3200']) {
     const product = read(`beta/site/detail/data/${slug}.json`);
     const rearUsb = product.portMap.items.find(item => item.n === 8);
@@ -129,7 +130,7 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
   for (const slug of Object.keys(productAssets)) {
     const product = read(`beta/site/detail/data/${slug}.json`);
     if (slug.startsWith('varia-')) assert.equal(product.portMap, undefined, `${slug}: no Port Map`);
-    const current = beforeW12002Product(product,slug);
+    const current = beforeW12002Product(beforeKiprogo2Mx395Product(product,slug),slug);
     delete current.images;
     delete current.imageStatuses;
     delete current.portMap;
@@ -140,18 +141,18 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
 test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
   for (const slug of Object.keys(productAssets)) {
     const current = read(`beta/site/detail/data/${slug}.json`);
-    const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug);
+    const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug), slug);
     const altered = structuredClone(current);
     altered.io = [];
-    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(altered, slug), slug), slug).io, [], `${slug}: current I/O passes through`);
-    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(JSON.stringify(altered, null, 2) + '\n', slug), slug), slug), baseline, `${slug}: old hash catches I/O regression`);
+    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(altered, slug), slug), slug), slug).io, [], `${slug}: current I/O passes through`);
+    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(JSON.stringify(altered, null, 2) + '\n', slug), slug), slug), slug), baseline, `${slug}: old hash catches I/O regression`);
     const changedImage = structuredClone(current);
     changedImage.images.at(-1).alt += ' altered';
-    assert.throws(() => beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(changedImage, slug), slug), slug), /unexpected W-008 images change/);
+    assert.throws(() => beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(changedImage, slug), slug), slug), slug), /unexpected W-008 images change/);
     if (current.portMap) {
       const changedMap = structuredClone(current);
       changedMap.portMap.items[0].x1 += 1;
-      assert.throws(() => beforeAmxW008Product(changedMap, slug), /unexpected W-008 portMap change/);
+      assert.throws(() => beforeKiprogo2Mx395Product(changedMap, slug), /unexpected portMap change/);
     }
   }
 });

@@ -449,9 +449,9 @@
   "subtitle": "프로그래머블 네트워크 컨트롤러",
   "keyFacts": [
     {
-      "label": "RS-232/422/485",
-      "value": "1",
-      "unit": "포트"
+      "label": "직렬 제어 포트",
+      "value": "RS-232 1 · RS-232/422/485 1",
+      "unit": ""
     },
     {
       "label": "IR/Serial 출력",
@@ -488,21 +488,21 @@
       },
       {
         "n": 2,
-        "label": "IR/Serial 출력 ×2",
-        "desc": "2핀 터미널 2개 · 1-way IR/Serial 송신 · NetLinx Port 11–12",
-        "x1": 994,
-        "x2": 1399,
-        "y": 451,
-        "side": "top"
-      },
-      {
-        "n": 3,
         "label": "RS-232/422/485",
         "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
         "x1": 414,
         "x2": 1399,
         "y": 757,
         "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "IR/Serial 출력 ×2",
+        "desc": "2핀 터미널 2개 · 1-way IR/Serial 송신 · NetLinx Port 11–12",
+        "x1": 994,
+        "x2": 1399,
+        "y": 451,
+        "side": "top"
       },
       {
         "n": 4,
@@ -520,7 +520,7 @@
         "x1": 2241,
         "x2": 2698,
         "y": 757,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 6,
