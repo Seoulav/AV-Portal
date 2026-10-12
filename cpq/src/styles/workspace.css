@@ -212,6 +212,7 @@
 }
 
 .q-cover-condition-add input {
+  min-width: 0;
   flex: 1;
   border: 1px solid var(--q-line);
   background: var(--q-field-fill);

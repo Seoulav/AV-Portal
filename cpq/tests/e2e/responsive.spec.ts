@@ -150,3 +150,14 @@ test('접기 단추가 aria-expanded 로 상태를 알린다', async ({ page }) 
   await toggle.click();
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
 });
+
+test('390px — 조건 추가 입력은 큰 대체 글꼴에서도 버튼을 밀어내지 않는다', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await openTwoSystemQuote(page);
+  const section = page.locator('.q-section-toggle').filter({ hasText: '견적 정보 (고객·현장)' });
+  if (await section.getAttribute('aria-expanded') === 'false') await section.click();
+  await expect(page.getByLabel('조건 추가', { exact: true })).toBeVisible();
+  // Native input intrinsic width changes with OS fallback fonts and text scaling.
+  await page.getByLabel('조건 추가', { exact: true }).evaluate(el => { el.style.font = '32px monospace'; });
+  await assertNoHorizontalOverflow(page);
+});
