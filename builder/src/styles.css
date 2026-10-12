@@ -239,3 +239,14 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
 .swatch.clear { background-image: linear-gradient(45deg, transparent 45%, var(--danger) 45%, var(--danger) 55%, transparent 55%) !important; }
 .chip-row { display: flex; flex-wrap: wrap; gap: 5px; }
 .check { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+
+/* Narrow screens keep the library, canvas and editing panel reachable. */
+@media (max-width: 760px) {
+ .app { height: auto; min-height: 100%; }
+ .workspace { flex-direction: column; flex: none; }
+ .library-panel, .side-panel { width: 100%; box-sizing: border-box; max-height: 300px; }
+ .canvas { flex: none; height: 440px; min-height: 440px; width: 100%; }
+ .toolbar { padding: 8px; gap: 8px; }
+ .toolbar-status { width: 100%; }
+ .equipment-quote-panel { max-height: none; }
+}

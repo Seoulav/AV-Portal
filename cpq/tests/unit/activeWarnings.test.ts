@@ -1,0 +1,232 @@
+import { describe, expect, it } from 'vitest';
+import { computeActiveWarnings } from '@/domain/quote/activeWarnings';
+import { buildQuoteDocument } from '@/domain/quote/buildDocument';
+import type { ImportWarning } from '@/import/diagram/devices';
+import type { QuoteDocument, SheetRow } from '@/domain/quote/types';
+import { buildCableLines } from '@/import/diagram/cables';
+import { cat, diagram, edge, node } from '../fixtures/diagram';
+
+function baseDocument(): QuoteDocument {
+  return buildQuoteDocument({
+    header: {
+      quoteNumber: 'AW-1',
+      quoteDate: '2026-10-04',
+      customer: '',
+      projectName: '',
+      contact: '',
+      conditions: [],
+    },
+    systems: [{ name: '시스템1', lines: [] }],
+    documentId: 'doc-aw-1',
+    rowIdPrefix: 'aw',
+  });
+}
+
+function itemRow(partial: Partial<SheetRow> & { rowId: string; systemId: string }): SheetRow {
+  return {
+    type: 'item',
+    name: '임시',
+    specification: '',
+    unit: 'EA',
+    quantity: '1',
+    laborMode: 'not-applicable',
+    remark: '',
+    origin: 'rule',
+    ...partial,
+  } as SheetRow;
+}
+
+describe('computeActiveWarnings', () => {
+  it('완제품 최대 길이 초과는 SKU와 가격을 채워도 해소되지 않는다', () => {
+    const source = diagram([node('n1', 'A', 'SRG-X40UH'), node('n2', 'B', 'XDM-12')], [
+      edge('e1', 'n1', 'n2', 'video', { bomRows: [
+        { cableType: 'ready-made', productName: 'HDMI Cable', length: '33.8', quantity: '1' },
+      ] }),
+    ]);
+    const { warnings } = buildCableLines(source, cat());
+    const document = { ...baseDocument(), rows: [itemRow({
+      rowId: 'r1', systemId: 'S1', sourceEdgeIds: ['e1'], sku: 'HDMI-20', sellingUnitPrice: '100',
+    })] };
+    expect(computeActiveWarnings(document, warnings).some(w => w.blocking && w.message.includes('33.8'))).toBe(true);
+  });
+
+  it('한 구간에 제품 행이 여러 개면 첫 행만 해결됐다고 전체 경고를 지우지 않는다', () => {
+    const document = { ...baseDocument(), rows: [
+      itemRow({ rowId: 'r1', systemId: 'S1', sourceEdgeIds: ['e1'], sku: 'X', sellingUnitPrice: '100' }),
+      itemRow({ rowId: 'r2', systemId: 'S1', sourceEdgeIds: ['e1'] }),
+    ] };
+    const warnings: ImportWarning[] = [{ code: 'cable-item-unresolved', blocking: true, message: 'e1', edgeId: 'e1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual(warnings);
+  });
+  it('본체 행이 아직 sku/판매단가를 안 갖췄으면 경고가 남는다', () => {
+    const document = { ...baseDocument(), rows: [itemRow({ rowId: 'r1', systemId: 'S1', sourceNodeIds: ['n1'] })] };
+    const warnings: ImportWarning[] = [
+      { code: 'device-not-in-catalog', blocking: true, message: 'x', nodeId: 'n1' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual(warnings);
+  });
+
+  it('본체 행이 sku와 판매단가를 둘 다 갖추면 그 경고만 사라진다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({ rowId: 'r1', systemId: 'S1', sourceNodeIds: ['n1'], sku: 'X', sellingUnitPrice: '100' }),
+      ],
+    };
+    const warnings: ImportWarning[] = [
+      { code: 'device-not-in-catalog', blocking: true, message: 'x', nodeId: 'n1' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual([]);
+  });
+
+  it('본체만 해결해도 같은 노드의 옵션 경고는 그대로 남는다(옵션은 optionId로 독립 판정)', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        // 본체 행 — 해결됨.
+        itemRow({ rowId: 'r1', systemId: 'S1', sourceNodeIds: ['n1'], sku: 'X', sellingUnitPrice: '100' }),
+        // 옵션 행 — 같은 노드지만 optionId가 있고, 아직 미해결.
+        itemRow({ rowId: 'r2', systemId: 'S1', sourceNodeIds: ['n1'], optionId: 'opt1' }),
+      ],
+    };
+    const warnings: ImportWarning[] = [
+      { code: 'device-not-in-catalog', blocking: true, message: '본체', nodeId: 'n1' },
+      { code: 'option-definition-missing', blocking: true, message: '옵션', nodeId: 'n1', optionId: 'opt1' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual([warnings[1]]);
+  });
+
+  it('옵션만 해결해도 본체 경고는 그대로 남는다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({ rowId: 'r1', systemId: 'S1', sourceNodeIds: ['n1'] }),
+        itemRow({
+          rowId: 'r2',
+          systemId: 'S1',
+          sourceNodeIds: ['n1'],
+          optionId: 'opt1',
+          sku: 'Y',
+          sellingUnitPrice: '200',
+        }),
+      ],
+    };
+    const warnings: ImportWarning[] = [
+      { code: 'device-not-in-catalog', blocking: true, message: '본체', nodeId: 'n1' },
+      { code: 'option-definition-missing', blocking: true, message: '옵션', nodeId: 'n1', optionId: 'opt1' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual([warnings[0]]);
+  });
+
+  it('여러 노드가 한 행으로 합쳐졌으면 하나만 해결해도 그 행에 속한 모든 노드의 경고가 같이 사라진다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({
+          rowId: 'r1',
+          systemId: 'S1',
+          sourceNodeIds: ['n1', 'n2'],
+          sku: 'X',
+          sellingUnitPrice: '100',
+        }),
+      ],
+    };
+    const warnings: ImportWarning[] = [
+      { code: 'device-not-in-catalog', blocking: true, message: 'n1용', nodeId: 'n1' },
+      { code: 'device-not-in-catalog', blocking: true, message: 'n2용', nodeId: 'n2' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual([]);
+  });
+
+  it('이 기능이 다루지 않는 경고 코드는 행 상태와 무관하게 항상 남는다', () => {
+    const document = baseDocument();
+    const warnings: ImportWarning[] = [
+      { code: 'price-not-registered', blocking: true, message: 'x', nodeId: 'n1' },
+      { code: 'cable-length-missing', blocking: false, message: 'y', edgeId: 'e1' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual(warnings);
+  });
+
+  it('케이블 행이 sourceEdgeIds로 해소되면 cable-item-unresolved 경고가 사라진다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [itemRow({ rowId: 'r1', systemId: 'S1', sourceEdgeIds: ['e1'], sku: 'X', sellingUnitPrice: '100' })],
+    };
+    const warnings: ImportWarning[] = [{ code: 'cable-item-unresolved', blocking: true, message: 'x', edgeId: 'e1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual([]);
+  });
+
+  it('케이블 행이 아직 미해결이면 경고가 남고, 무관한 구간 경고는 각자 독립적이다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({ rowId: 'r1', systemId: 'S1', sourceEdgeIds: ['e1'], sku: 'X', sellingUnitPrice: '100' }),
+        itemRow({ rowId: 'r2', systemId: 'S1', sourceEdgeIds: ['e2'] }),
+      ],
+    };
+    const warnings: ImportWarning[] = [
+      { code: 'cable-item-unresolved', blocking: true, message: 'e1용', edgeId: 'e1' },
+      { code: 'cable-item-unresolved', blocking: true, message: 'e2용', edgeId: 'e2' },
+    ];
+    expect(computeActiveWarnings(document, warnings)).toEqual([warnings[1]]);
+  });
+
+  it('품목(SKU)만 고르고 수량은 아직 자리표시자면 경고가 사라지지 않는다(독립 검토 지적)', () => {
+    // BOM 없는 케이블 구간 — toRow가 quantity '1'을 자리표시자로
+    // 채우고 quantityUnresolved: true를 남긴다. SKU·가격을 채워도
+    // 이 표식이 남아 있으면 "해소됨"이 아니다.
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({
+          rowId: 'r1',
+          systemId: 'S1',
+          sourceEdgeIds: ['e1'],
+          sku: 'X',
+          sellingUnitPrice: '100',
+          quantity: '1',
+          quantityUnresolved: true,
+        }),
+      ],
+    };
+    const warnings: ImportWarning[] = [{ code: 'cable-item-unresolved', blocking: true, message: 'x', edgeId: 'e1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual(warnings);
+  });
+
+  it('사람이 수량을 실제로 확인한 뒤(quantityUnresolved 없음)에는 해소된다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [
+        itemRow({
+          rowId: 'r1',
+          systemId: 'S1',
+          sourceEdgeIds: ['e1'],
+          sku: 'X',
+          sellingUnitPrice: '100',
+          quantity: '1',
+          // quantityUnresolved 없음 — workspace.setQuantity가 지운 상태를 흉내낸다.
+        }),
+      ],
+    };
+    const warnings: ImportWarning[] = [{ code: 'cable-item-unresolved', blocking: true, message: 'x', edgeId: 'e1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual([]);
+  });
+
+  it('catalog-item-removed — 해당 행이 미해결이면 경고가 남는다(독립 검토 지적)', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [itemRow({ rowId: 'r1', systemId: 'S1' })],
+    };
+    const warnings: ImportWarning[] = [{ code: 'catalog-item-removed', blocking: true, message: 'x', rowId: 'r1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual(warnings);
+  });
+
+  it('catalog-item-removed — 같은 rowId를 다시 해소하면(onResolveRow) 경고가 사라진다', () => {
+    const document = {
+      ...baseDocument(),
+      rows: [itemRow({ rowId: 'r1', systemId: 'S1', sku: 'REPLACEMENT', sellingUnitPrice: '30000' })],
+    };
+    const warnings: ImportWarning[] = [{ code: 'catalog-item-removed', blocking: true, message: 'x', rowId: 'r1' }];
+    expect(computeActiveWarnings(document, warnings)).toEqual([]);
+  });
+});

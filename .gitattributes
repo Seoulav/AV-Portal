@@ -16,3 +16,6 @@ beta/site/vendor/pdfjs/cmaps/LICENSE -text whitespace=-trailing-space,-blank-at-
 beta/site/vendor/pdfjs/standard_fonts/LICENSE_* -text whitespace=-trailing-space,-blank-at-eof
 # Builder PDF 글꼴(Pretendard 원본 그대로, B-20261006-10)
 builder/public/fonts/*.ttf -text -diff
+
+# Preserve validated CPQ source bytes; its upstream file uses CRLF.
+cpq/src/data/catalog/verifyLabor.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

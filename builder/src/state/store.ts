@@ -40,7 +40,7 @@ export interface Notice { text: string; tone: 'info' | 'warn' | 'error' }
 export interface ConnectionVerdict { allowed: boolean; code?: string; handle?: string; fromHandle?: string }
 export interface ConnectionLike { source: string | null; sourceHandle?: string | null; target: string | null; targetHandle?: string | null }
 // 앱 안 클립보드(구 Builder와 같다, 시스템 클립보드는 쓰지 않는다). 고른 노드와 양 끝이 모두 고른 장비인 연결
-export interface Clipboard { nodes: DiagramNode[]; edges: DiagramEdge[] }
+export interface Clipboard { nodes: DiagramNode[]; edges: DiagramEdge[]; options?: Diagram['options'] }
 // 붙여넣을 때마다 이만큼 더 오른쪽 아래로 놓는다(결정 K-b, 구 Builder는 매번 원본에서 40px).
 // 몇 칸 옮길지는 그 자리가 비었는지로 정한다. 붙여넣기를 실행 취소하면 그 자리가 다시 빈다
 export const PASTE_STEP = 40;
@@ -95,6 +95,7 @@ export interface BuilderState {
   connectionJudge(from: { nodeId: string; handle: string; type?: 'source' | 'target' }): (to: { nodeId: string; handle: string }) => ConnectionVerdict;
   notifyBlocked(code: string | undefined): void;
   setNodeLabel(nodeId: string, label: string): void;
+  setQuoteMetadata(nodeId: string, systemName: string, quantities: Record<string, number>, optionProductId?: string): boolean;
   updateNoteData(nodeId: string, patch: Record<string, unknown>): boolean;
   editNote(nodeId: string): void;
   clearNoteFocus(): void;
@@ -358,6 +359,23 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
 
       // 메모·영역 서식(구 Builder EditAnnotationModal). 1.1 서식 키만 바꾸고, undefined는 키를 지운다.
       // 한 번의 실행 취소 단위다. 바뀐 것이 없으면 기록하지 않는다
+      setQuoteMetadata(nodeId, systemName, quantities, optionProductId) {
+        const { diagram, library } = get();
+        const node = diagram.nodes.find(n => n.id === nodeId && n.type === 'equipment');
+        if (!node || !Object.values(quantities).every(q => Number.isSafeInteger(q) && q >= 0)) return false;
+        const options = [...(diagram.options ?? [])];
+        if (optionProductId) {
+          const product = library?.products.get(optionProductId);
+          if (!product) return false;
+          const id = `portal-option:${product.productId}`;
+          if (!options.some(o => o.id === id)) options.push({ id, model: product.product, name: product.product, manufacturer: product.brand });
+        }
+        const existing = node.data.selectedOptionQuantities as Record<string, number> | undefined;
+        if (Object.keys(quantities).some(id => !options.some(o => o.id === id) && !(existing && Object.hasOwn(existing,id)))) return false;
+        remember();
+        set({ diagram: { ...diagram, options, nodes: diagram.nodes.map(n => n.id === nodeId ? { ...n, data: { ...n.data, systemName: systemName.trim(), selectedOptionQuantities: { ...quantities } } } : n) } });
+        return true;
+      },
       updateNoteData(nodeId, patch) {
         const { diagram } = get();
         const node = diagram.nodes.find(item => item.id === nodeId);
@@ -462,7 +480,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (!nodes.length) return 0;
         const picked = new Set(nodes.map(node => node.id));
         const edges = diagram.edges.filter(edge => picked.has(edge.source) && picked.has(edge.target));
-        const clipboard = JSON.parse(JSON.stringify({ nodes: nodes.map(({ selected: _s, dragging: _d, ...node }) => node), edges })) as Clipboard;
+        const clipboard = JSON.parse(JSON.stringify({ nodes: nodes.map(({ selected: _s, dragging: _d, ...node }) => node), edges, options: (diagram.options ?? []).filter(option => nodes.some(n => Object.hasOwn(n.data.selectedOptionQuantities ?? {}, option.id))) })) as Clipboard;
         set({ clipboard, notice: { text: `${nodes.length}개를 복사했습니다${edges.length ? `(연결 ${edges.length}개 포함)` : ''}.`, tone: 'info' } });
         return nodes.length;
       },
@@ -471,9 +489,29 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       paste() {
         const { clipboard, diagram, library, hiddenLineTypes } = get();
         if (!clipboard?.nodes.length) return 0;
+        const optionDefinitions = [...(diagram.options ?? [])];
+        const sourceDefinitions = clipboard.options ?? [];
+        const referencedIds = (nodes: DiagramNode[]) => new Set(nodes.flatMap(node => Object.keys(node.data.selectedOptionQuantities ?? {})));
+        const sourceRefs = referencedIds(clipboard.nodes);
+        const targetRefs = referencedIds(diagram.nodes);
+        const wouldResolveUnknown = [...sourceRefs].some(id => !sourceDefinitions.some(o => o.id === id) && optionDefinitions.some(o => o.id === id))
+          || [...targetRefs].some(id => !optionDefinitions.some(o => o.id === id) && sourceDefinitions.some(o => o.id === id));
+        if (wouldResolveUnknown) {
+          set({ notice: { text: '정의가 없는 옵션이 다른 구성도의 품목으로 바뀔 수 있어 붙여넣기를 취소했습니다. 기존 구성도를 유지합니다.', tone: 'warn' } });
+          return 0;
+        }
+        for (const option of clipboard.options ?? []) {
+          const existing = optionDefinitions.find(o => o.id === option.id);
+          if (existing && (existing.model !== option.model || existing.manufacturer !== option.manufacturer || existing.name !== option.name)) {
+            set({ notice: { text: '동일한 옵션 ID가 다른 제품을 가리켜 붙여넣기를 취소했습니다. 기존 구성도를 유지합니다.', tone: 'warn' } });
+            return 0;
+          }
+          if (!existing) optionDefinitions.push({ ...option });
+        }
         const shift = pasteShift(diagram.nodes, clipboard);
         const next = copy(diagram);
         next.nodes = next.nodes.map(node => (node.selected ? { ...node, selected: false } : node));
+        if (optionDefinitions.length) next.options = optionDefinitions;
         const newIds = new Map<string, string>();
         for (const node of clipboard.nodes) {
           const id = node.type === 'equipment' ? ids.node() : node.type === 'shape' ? ids.shape() : ids.annotation();

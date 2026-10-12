@@ -79,6 +79,7 @@ export function normalizeDiagram(diagram, { library = null, rules = library?.rul
     edges,
     lineTypes,
     equipmentDB,
+    ...(diagram.options ? { options: diagram.options.map(option => pick(option, ['id', 'model', 'name', 'manufacturer'])) } : {}),
     generator: pick(diagram.generator ?? {}, ['app', 'version']),
     library: diagram.library ? { schemaVersion: diagram.library.schemaVersion, source: pick(diagram.library.source ?? {}, ['catalogSha', 'detailSetSha', 'rtcomSha', 'vocabularyVersion']) } : null,
     issues: [],

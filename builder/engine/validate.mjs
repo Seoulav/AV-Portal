@@ -29,6 +29,10 @@ function structureErrors(diagram) {
   need(diagram.version === '1.2', 'version', `"1.2"이어야 한다(현재 ${JSON.stringify(diagram.version)})`);
   for (const key of ['nodes', 'edges', 'lineTypes', 'equipmentDB']) need(Array.isArray(diagram[key]), key, '배열이어야 한다');
   if (errors.length) return errors;
+  if (diagram.options !== undefined) {
+    need(Array.isArray(diagram.options) && diagram.options.every(o => isObject(o) && isText(o.id) && isText(o.model) && ['name','manufacturer'].every(k => o[k] === undefined || typeof o[k] === 'string')), 'options', '옵션 ID와 모델이 필요하다');
+    if (Array.isArray(diagram.options)) need(new Set(diagram.options.map(o => o?.id)).size === diagram.options.length, 'options', '옵션 ID가 중복됐다');
+  }
   diagram.lineTypes.forEach((lineType, i) => need(isObject(lineType) && isText(lineType.id) && typeof lineType.name === 'string' && typeof lineType.color === 'string', `lineTypes[${i}]`, '{id, name, color}가 필요하다'));
   diagram.nodes.forEach((node, i) => {
     const at = `nodes[${i}]`;
@@ -38,6 +42,10 @@ function structureErrors(diagram) {
     need(isObject(node.position) && Number.isFinite(node.position.x) && Number.isFinite(node.position.y), `${at}.position`, '{x, y} 숫자가 필요하다');
     need(isObject(node.data), `${at}.data`, '객체가 필요하다');
     if (node.type === 'equipment' && isObject(node.data)) {
+      const d = node.data;
+      need(d.systemName === undefined || typeof d.systemName === 'string', `${at}.data.systemName`, '시스템명은 문자열이어야 한다');
+      need(d.selectedOptionQuantities === undefined || (isObject(d.selectedOptionQuantities) && Object.values(d.selectedOptionQuantities).every(q => Number.isSafeInteger(q) && q >= 0)), `${at}.data.selectedOptionQuantities`, '옵션 수량은 0 이상의 안전한 정수여야 한다');
+      need(d.optionPortIds === undefined || (Array.isArray(d.optionPortIds) && d.optionPortIds.every(isText)), `${at}.data.optionPortIds`, '단자 ID 배열이 필요하다');
       for (const key of ['id', 'category', 'name', 'model']) need(typeof node.data[key] === 'string', `${at}.data.${key}`, '문자열이 필요하다');
       for (const [list, direction] of Object.entries(PORT_LISTS)) {
         if (!Array.isArray(node.data[list])) { need(false, `${at}.data.${list}`, '배열이어야 한다'); continue; }

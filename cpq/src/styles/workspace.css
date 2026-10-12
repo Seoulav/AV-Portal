@@ -1,0 +1,631 @@
+/*
+ * 본문 작업면 — 안내/오류 배너, 입구 카드, 견적 표/간접비 패널의
+ * 스크롤·반응형(§4 파일 책임).
+ */
+.q-notice {
+  padding: 12px 15px;
+  margin: 0 0 16px;
+  background: var(--q-tint);
+  color: var(--q-accent);
+  border-radius: var(--q-r-chip);
+  font-size: 13px;
+}
+
+.q-notice-error {
+  background: var(--q-v-no-tint);
+  color: var(--q-v-no-ink);
+  border: 1px solid var(--q-v-no-border);
+}
+
+.q-notice-error h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: var(--q-fw-medium);
+}
+
+.q-notice-error ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.q-warning-list > ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.q-warning-list li {
+  margin-bottom: 10px;
+}
+
+.q-resolve-candidates {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.q-resolve-candidates li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--q-line);
+  border-radius: var(--q-r-chip);
+  font-size: 12px;
+}
+
+.q-candidate-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.q-candidate-name {
+  font-weight: 600;
+}
+
+.q-candidate-desc {
+  color: var(--q-muted);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.q-candidate-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--q-muted);
+}
+
+.q-resolve-candidates-grouped {
+  margin-top: 6px;
+  display: grid;
+  gap: 10px;
+}
+
+.q-resolve-candidate-group > summary {
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.q-resolve-search {
+  margin-top: 6px;
+}
+
+.q-resolve-search input {
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.q-card {
+  border: 1px solid var(--q-line);
+  background: var(--q-bg);
+  padding: 20px;
+  border-radius: var(--q-r-card);
+}
+
+.q-card h3 {
+  margin: 0 0 8px;
+  font-weight: var(--q-fw-medium);
+}
+
+.q-route-panel fieldset {
+  min-width: 0;
+  margin: 12px 0;
+}
+
+.q-route-panel .q-grade-option,
+.q-installation-panel .q-grade-option {
+  flex-wrap: wrap;
+}
+
+.q-route-panel .q-grade-option input,
+.q-installation-panel .q-grade-option input:not([type="checkbox"]):not([type="radio"]),
+.q-route-panel select {
+  width: 132px;
+  max-width: 100%;
+  height: var(--q-h-input);
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: inherit;
+}
+
+.q-muted {
+  color: var(--q-muted);
+  font-size: 13px;
+}
+
+.q-field-error {
+  margin: 4px 0 0;
+  color: var(--q-v-no-ink);
+  font-size: 11px;
+}
+
+.q-cover-sheet,
+.q-quote-sheet,
+.q-indirect-panel {
+  margin-top: 16px;
+}
+
+.q-cover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.q-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--q-muted);
+}
+
+.q-field input {
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--q-ink);
+}
+
+.q-field input:focus-visible {
+  outline: none;
+  background: var(--q-field-fill-focus);
+  box-shadow: var(--q-focus-ring);
+}
+
+.q-cover-conditions ul {
+  list-style: none;
+  margin: 8px 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.q-cover-conditions li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--q-line);
+  border-radius: var(--q-r-chip);
+  font-size: 13px;
+}
+
+.q-cover-condition-add {
+  display: flex;
+  gap: 8px;
+}
+
+.q-cover-condition-add input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.q-quote-system + .q-quote-system {
+  margin-top: 24px;
+}
+
+.q-table-wrap {
+  overflow-x: auto;
+}
+
+.q-quote-table,
+.q-indirect-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.q-quote-table th,
+.q-quote-table td,
+.q-indirect-table th,
+.q-indirect-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--q-line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.q-quote-table th,
+.q-indirect-table th {
+  color: var(--q-muted);
+  font-weight: 400;
+  background: var(--q-soft);
+}
+
+.q-quote-table td:last-child,
+.q-quote-table th:last-child,
+.q-indirect-table td:last-child,
+.q-indirect-table th:last-child {
+  text-align: right;
+}
+
+.q-quote-table input,
+.q-indirect-table input {
+  width: 100%;
+  min-width: 72px;
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.q-quote-table input:focus-visible,
+.q-indirect-table input:focus-visible {
+  outline: none;
+  background: var(--q-field-fill-focus);
+  box-shadow: var(--q-focus-ring);
+}
+
+.q-quote-table tfoot td {
+  font-weight: var(--q-fw-medium);
+  background: var(--q-soft);
+}
+
+.q-picker-matches,
+.q-picker-picked {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.q-picker-matches li,
+.q-picker-picked li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--q-line);
+  border-radius: var(--q-r-chip);
+}
+
+.q-picker-matches .q-button { flex-shrink: 0; }
+.q-picker-matches .q-candidate-name { overflow-wrap: anywhere; }
+.q-picker-target { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+.q-picker-target select { max-width: 100%; padding: 6px 8px; }
+.q-product-picker > input,
+.q-picker-target select {
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.q-product-picker > input { width: min(100%, 420px); }
+.q-save-status { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin: 0 0 12px; font-size: 13px; }
+
+.q-picker-picked input {
+  width: 72px;
+  border: 1px solid var(--q-line);
+  background: var(--q-field-fill);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+/*
+ * ⛔ 좁은 화면이라고 표 칸을 `white-space: normal` 로 풀지 않는다.
+ *
+ * 전에는 720px 아래에서 풀었는데, 칸이 31px 까지 좁아져 품명이 **한 글자씩**
+ * 줄바꿈됐다(실측 390px). 지금은 표가 `.q-table-wrap` 안에서 스스로 가로
+ * 스크롤하므로 `nowrap` 을 유지하는 편이 읽기 쉽다. 대신 칸이 지나치게
+ * 좁아지지 않도록 최소 폭을 준다.
+ */
+@media (max-width: 720px) {
+  .q-quote-table th,
+  .q-quote-table td,
+  .q-indirect-table th,
+  .q-indirect-table td {
+    min-width: 72px;
+  }
+  /* 품명·규격은 더 넉넉해야 알아볼 수 있다. */
+  .q-quote-table th:first-child,
+  .q-quote-table td:first-child,
+  .q-quote-table th:nth-child(2),
+  .q-quote-table td:nth-child(2) {
+    min-width: 140px;
+  }
+}
+
+.q-reference-docs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.q-reference-docs li + li {
+  padding-top: 14px;
+  border-top: 1px solid var(--q-line);
+}
+
+.q-reference-doc-actions {
+  display: inline-flex;
+  gap: 14px;
+  margin-left: 12px;
+}
+
+.q-reference-doc-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--q-accent);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.q-reference-doc-actions a:hover {
+  text-decoration: underline;
+}
+
+/* --- 상세 열 숨김 (사용성 2차 Task C) ------------------------------------
+ * ⛔ 열을 **떼지 않고** 감추기만 한다. 조건부 렌더로 없애면 사람이 치던
+ * 값(TextCell 의 지역 draft)과 미저장 표식이 함께 사라진다.
+ */
+.q-quote-table .q-detail-hidden {
+  display: none;
+}
+
+.q-sheet-tools {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+/* --- 접을 수 있는 설정 영역 --------------------------------------------- */
+.q-workspace-section {
+  margin-top: 16px;
+}
+
+.q-section-head {
+  margin: 0;
+}
+
+.q-section-toggle {
+  width: 100%;
+  text-align: left;
+  font-weight: var(--q-fw-medium);
+}
+
+/* 이동해 온 항목을 눈에 띄게 한다. 포커스 테두리는 브라우저 기본을 쓴다. */
+.q-warning-list li:focus-visible,
+.q-labor-basis:focus-visible {
+  outline: 2px solid var(--q-accent);
+  outline-offset: 2px;
+}
+
+/* --- 견적 내 이동 메뉴 (계획 §1 기본 배치) ------------------------------
+ *
+ * 큰 화면에서는 왼쪽 한 열, 가운데가 견적표다. 좁은 화면에서는 한 열로
+ * 합쳐지고 단추들이 가로로 줄바꿈된다.
+ *
+ * ⛔ 세 번째 고정 열을 만들지 않는다 — 표가 쓸 수 있는 너비가 줄어든다.
+ */
+.q-workspace-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.q-workspace-body {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-width: 0;
+}
+
+@media (min-width: 1100px) {
+  .q-workspace-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .q-workspace-nav {
+    position: sticky;
+    top: 12px;
+  }
+}
+
+.q-workspace-nav {
+  min-width: 0;
+}
+
+.q-nav-group-title {
+  margin: 8px 0 4px;
+  font-size: 11px;
+  color: var(--q-muted);
+}
+
+.q-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+@media (min-width: 1100px) {
+  .q-nav-list {
+    display: grid;
+  }
+}
+
+.q-nav-item {
+  text-align: left;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* 좁은 화면에서는 단추가 내용만큼만 차지해 가로로 줄바꿈된다. */
+@media (max-width: 1099px) {
+  .q-nav-item {
+    width: auto;
+  }
+}
+
+/* --- 지금 보고 있는 견적 ------------------------------------------------- */
+.q-quote-identity {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+
+/* --- 확인 항목 요약 ------------------------------------------------------ */
+.q-review-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.q-review-head h3 {
+  margin: 0;
+}
+
+.q-review-blocking {
+  color: var(--q-v-no-ink);
+}
+
+/*
+ * 확인 항목이 많아도 **견적표를 화면 밖으로 밀어내지 않는다.**
+ *
+ * 미해결이 많은 실제 구성도에서는 항목이 수십 건까지 간다. 목록을 다
+ * 펼쳐 쌓으면 표가 한참 아래로 내려가, 2차 개선의 약속("견적표를 먼저
+ * 본다")이 그대로 깨진다(2026-10-12 독립 검토 지적).
+ *
+ * 목록을 접어 버리는 대신 **높이만 제한하고 안에서 스크롤**한다. 접으면
+ * "확인 항목에서 바로 이동한다"는 동선에 클릭이 한 번 더 붙기 때문이다.
+ */
+.q-review-items {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  max-height: 11.5rem;
+  overflow-y: auto;
+}
+
+.q-review-item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--q-line);
+  background: var(--q-bg);
+  border-radius: var(--q-r-chip);
+  padding: 8px 10px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.q-review-item:hover {
+  background: var(--q-soft);
+}
+
+.q-review-category {
+  flex: none;
+  font-size: 11px;
+  color: var(--q-muted);
+}
+
+.q-review-message {
+  overflow-wrap: anywhere;
+}
+
+/*
+ * 문구가 같은 두 항목을 눈으로 가르는 단서 — 어느 시스템의 몇 번째 줄인지다.
+ *
+ * ⛔ `white-space: nowrap` 을 주지 않는다. 390px 에서 이 한 줄이 줄어들지
+ * 못해 페이지 전체가 옆으로 넘쳤다(실측).
+ */
+.q-review-location {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--q-muted);
+  overflow-wrap: anywhere;
+}
+
+/*
+ * 넓은 화면에서는 한 줄로 잘라 보여준다 — 품명이 길면 위치 표시가 경고
+ * 문구보다 길어져 정작 무엇이 문제인지가 묻힌다. 잘려도 앞쪽의
+ * "회의실 A · 2번째 줄"이 남아 두 항목을 가르는 데는 지장이 없고,
+ * 전체 문구는 마우스를 올리면 보인다.
+ */
+@media (min-width: 1100px) {
+  .q-review-location {
+    max-width: 38%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.q-review-item-detail {
+  border: 1px solid var(--q-line);
+  border-radius: var(--q-r-chip);
+  padding: 8px 10px;
+}
+
+/* --- 좁은 화면에서 페이지가 옆으로 넘치지 않게 (사용성 2차 Task D) --------
+ *
+ * 표는 `.q-table-wrap` 안에서 **스스로 가로 스크롤**한다. 그런데 flex·grid
+ * 자식은 기본이 `min-width: auto` 라 내용보다 작아지지 않는다 — 그래서 넓은
+ * 표가 래퍼를 밀어내고 페이지 전체가 넘쳤다(실측 390px 에서 545px).
+ *
+ * 줄여도 되는 자리에 `min-width: 0` 을 주어 래퍼가 화면 폭에 맞게 줄고,
+ * 넘치는 부분은 표 내부 스크롤이 받도록 한다. **표의 내부 스크롤은 허용**이고
+ * 페이지 전체 가로 스크롤만 막는다.
+ */
+.q-main,
+.q-workspace,
+.q-card,
+.q-quote-sheet,
+.q-quote-system,
+.q-workspace-section {
+  min-width: 0;
+}
+
+.q-table-wrap {
+  max-width: 100%;
+}
+
+/* 자료 안내 — 제목·보기·다운로드가 먼저 보이고 설명은 접어 둔다. */
+.q-reference-doc-notes summary {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.q-reference-doc-notes p {
+  margin: 6px 0 0;
+}
