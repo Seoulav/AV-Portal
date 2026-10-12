@@ -12,7 +12,11 @@ import {portMapGeometry,renderPortMap} from '../prototype/brc-am7/detail-enhance
 import {beforeDisplayW04013Raw} from './display-w04013-history.mjs';
 import {beforeBssW04015Raw} from './bss-w04015-history.mjs';
 import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
-import {beforeW026Product,beforeW026Raw} from './w026-history.mjs';
+import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
+import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(value, slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(value, slug), slug);
+
 
 const root=new URL('../',import.meta.url);
 const baseline=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-014-baseline.json',root),'utf8'));

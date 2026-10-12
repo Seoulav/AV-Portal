@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW12001Product } from './w12001-history.mjs';
 import { enhancementErrors, prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeCrownW03009 } from './crown-w03009-history.mjs';
 
@@ -76,7 +77,7 @@ test('pilot map coordinates remain tied to measured images and evidence; only fo
   assert.deepEqual(portProof.quantityChanges.map(c=>[c.product,c.ioIndex,c.previous,c.next]), [
     ['ulxd4d',0,'','2'], ['ulxd4d',2,'','2'], ['ulxd4d',3,'','2'], ['dci-4-600da',1,'','2']]);
   for (const [slug, proof] of Object.entries(portProof.products)) {
-    const p = read(`beta/site/detail/data/${slug}.json`);
+    const p = beforeW12001Product(read(`beta/site/detail/data/${slug}.json`), slug);
     const image = p.images.find(i=>i.role==='Rear');
     assert.equal(image.file, proof.image.file);
     assert.equal(createHash('sha256').update(readFileSync(new URL('../beta/site/detail/images/'+image.file, import.meta.url))).digest('hex'), proof.image.sha256);

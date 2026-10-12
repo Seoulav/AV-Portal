@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeAmxW008Product, beforeAmxW008Raw } from './amx-w008-history.mjs';
+import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -130,14 +131,14 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
 test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
   for (const slug of Object.keys(productAssets)) {
     const current = read(`beta/site/detail/data/${slug}.json`);
-    const baseline = beforeAmxW008Raw(JSON.stringify(current, null, 2) + '\n', slug);
+    const baseline = beforeAmxW008Raw(beforeW12001Raw(JSON.stringify(current, null, 2) + '\n', slug), slug);
     const altered = structuredClone(current);
     altered.io = [];
-    assert.deepEqual(beforeAmxW008Product(altered, slug).io, [], `${slug}: current I/O passes through`);
-    assert.notEqual(beforeAmxW008Raw(JSON.stringify(altered, null, 2) + '\n', slug), baseline, `${slug}: old hash catches I/O regression`);
+    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(altered, slug), slug).io, [], `${slug}: current I/O passes through`);
+    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(JSON.stringify(altered, null, 2) + '\n', slug), slug), baseline, `${slug}: old hash catches I/O regression`);
     const changedImage = structuredClone(current);
     changedImage.images.at(-1).alt += ' altered';
-    assert.throws(() => beforeAmxW008Product(changedImage, slug), /unexpected W-008 images change/);
+    assert.throws(() => beforeAmxW008Product(beforeW12001Product(changedImage, slug), slug), /unexpected W-008 images change/);
     if (current.portMap) {
       const changedMap = structuredClone(current);
       changedMap.portMap.items[0].x1 += 1;
