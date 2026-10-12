@@ -86,32 +86,20 @@ async function openDiagram(page: Parameters<typeof mockResources>[0], model: str
   });
 }
 
-test('BRC-H800 — 후보가 근거와 함께 화면에 뜨고, 눌러서 연결된다', async ({ page }) => {
+test('BRC-H800 — model/quoteSpec 칸의 유일 후보는 자동 연결되고 알림이 남는다 (운영자 결정 2026-10-12)', async ({ page }) => {
   await openDiagram(page, 'BRC-H800');
 
-  const warnings = page.getByRole('alert').filter({ hasText: '확인이 필요합니다' });
-  const item = warnings.locator('li', { hasText: 'BRC-H800' }).first();
-
-  // 1) 후보를 올린다는 사실을 글로 알린다 — "카탈로그에 없다"로 끝나지 않는다.
-  await expect(item).toContainText('후보로 올린다');
-  await expect(item).toContainText('사람이 확인해야 한다');
-
-  // 2) 어느 칸에서 어떤 글자가 맞았는지 보인다 (계획 §6).
-  await expect(item).toContainText('모델 칸에서');
-  await expect(item).toContainText('규격 칸에서');
-  await expect(item).toContainText('BRC-H800');
-
-  // 3) 아직 연결되지 않았다 — 견적 행에 카탈로그 품명도 단가도 없다.
-  const rows = page.locator('.q-quote-table tbody tr');
-  await expect(rows.filter({ hasText: '1" Exmor R PTZ Camera' })).toHaveCount(0);
-
-  // 4) 사람이 고르면 그때 붙는다.
-  await item.getByRole('button', { name: '선택' }).first().click();
+  // 1) 견적 행에 제품과 단가가 바로 붙는다.
   const linked = page.locator('.q-quote-table tbody tr', { hasText: '1" Exmor R PTZ Camera' });
   await expect(linked).toHaveCount(1);
   await expect(linked).toContainText('7000000');
-  // 해소되면 알림 영역 자체가 사라진다. 없는 대상에는 not.toContainText 를 쓸 수 없다.
-  await expect(warnings.locator('li', { hasText: '후보로 올린다' })).toHaveCount(0);
+
+  // 2) 자동 연결 사실이 비차단 알림으로 남는다 — 숨기지 않는다.
+  const warnings = page.getByRole('alert').filter({ hasText: '확인이 필요합니다' });
+  const item = warnings.locator('li', { hasText: 'BRC-H800' }).first();
+  await expect(item).toContainText('자동 연결했다');
+  await expect(item).toContainText('다른 제품이면 바꿔야 한다');
+  await expect(item).toContainText('1" Exmor R PTZ Camera');
 });
 
 test('WJD-2DV — 설명 칸에서만 맞은 후보는 경고를 달고 뜬다 (부속품이 본체로 붙는 것을 막는다)', async ({ page }) => {

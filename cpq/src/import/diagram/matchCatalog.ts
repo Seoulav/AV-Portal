@@ -31,6 +31,14 @@ export type MatchKind =
    * **연결이 아니라 제시다** — `product`도 `sellingUnitPrice`도 비어 있다.
    */
   | 'model-search'
+  /**
+   * 4단계 후보가 **정확히 1건**이고 그 후보가 **model/quoteSpec 칸**에서
+   * 맞은 경우 — 자동 연결한다 (운영자 결정 2026-10-12, BLU-101 선례:
+   * 카탈로그가 `BLU-101, AEC/Bluelink지원`처럼 모델명 뒤에 설명을 붙여
+   * 적어 1~3단계가 못 걸던 행). quoteName/description에서만 맞은 후보는
+   * 부속품·일반 명칭일 수 있어 여전히 제시만 한다.
+   */
+  | 'model-contained'
   | 'none';
 
 /** 4단계가 카탈로그의 어느 칸에서 모델명을 찾았는지. */
@@ -335,5 +343,22 @@ function searchCatalogByModel(model: string, catalog: Catalog): MatchResult {
   }
 
   if (candidates.length === 0) return NO_MATCH;
+  // 후보가 정확히 1건이고 model/quoteSpec 칸에서 맞았으면 자동 연결한다
+  // (운영자 결정 2026-10-12). 근거(맞은 칸·글자)는 그대로 돌려줘서
+  // 화면과 비고가 "왜 붙었는지"를 보여줄 수 있게 한다.
+  if (candidates.length === 1) {
+    const only = candidates[0]!;
+    const strong = only.matches.find((m) => m.field === 'model' || m.field === 'quoteSpec');
+    if (strong !== undefined) {
+      const product = catalog.products.find((p) => p.sku === only.sku);
+      if (product !== undefined) {
+        return {
+          ...resolve(product, catalog, 'model-contained'),
+          matchedFragment: strong.text,
+          modelSearchCandidates: candidates,
+        };
+      }
+    }
+  }
   return { matchedBy: 'model-search', modelSearchCandidates: candidates };
 }
