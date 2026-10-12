@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeUltritouchFollowupProduct, beforeUltritouchFollowupRaw } from './w12005-ultritouch-history.mjs';
 
 // Undo only approved W-005 Port Map changes for older whole-product hashes.
 // All other fields of the current product remain visible to those assertions.
@@ -7,6 +8,7 @@ const fixture = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-p
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW12005Product(current, slug) {
+  current = beforeUltritouchFollowupProduct(current, slug);
   const record = fixture[slug];
   if (!record) return current;
   const actual = hash(current.portMap);
@@ -18,6 +20,7 @@ export function beforeW12005Product(current, slug) {
 }
 
 export function beforeW12005Raw(raw, slug) {
+  raw = beforeUltritouchFollowupRaw(raw, slug);
   if (!fixture[slug]) return raw;
   return JSON.stringify(beforeW12005Product(JSON.parse(raw), slug), null, 2) + '\n';
 }
