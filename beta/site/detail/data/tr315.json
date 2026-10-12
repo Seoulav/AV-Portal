@@ -132,10 +132,10 @@
     },
     {
       "group": "Camera",
-      "name": "광학줌/디지털줌/총줌",
-      "value": "12X / 12X / 12X",
+      "name": "광학줌/디지털줌",
+      "value": "12X / 12X",
       "unit": "",
-      "condition": "",
+      "condition": "제조사 데이터시트의 총줌 12X는 광학·디지털 각 12X와 불일치하여 총줌 미기재",
       "source": "D",
       "verification": "VERIFIED"
     },

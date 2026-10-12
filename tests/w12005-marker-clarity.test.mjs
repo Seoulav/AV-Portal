@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
+import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-prior-maps.json', import.meta.url), 'utf8'));
 const path = slug => `beta/site/detail/data/${slug}.json`;
@@ -30,14 +31,14 @@ test('historical inverse rejects a changed marker and exposes unrelated current 
     assert.deepEqual(beforeW12005Product(changedIo, slug).io, [], slug);
     assert.notEqual(beforeW12005Raw(JSON.stringify(changedIo, null, 2) + '\n', slug),
       beforeW12005Raw(readFileSync(path(slug), 'utf8'), slug), slug);
-    const changedMap = structuredClone(product);
+    const changedMap = structuredClone(beforeKiprogo2Mx395Product(product, slug));
     changedMap.portMap.items[0].label += ' altered';
-    assert.throws(() => beforeW12005Product(changedMap, slug), /unexpected W-005 Port Map change/, slug);
+    assert.throws(() => beforeW12005Product(changedMap, slug), /unexpected (Ki Pro GO2 regrouping|W-005 Port Map change)/, slug);
   }
 });
 
 test('two-row groups cover both rows and contiguous VS10 ports retain all 26 old entries', () => {
-  const ki = current('ki-pro-go2').portMap.items;
+  const ki = beforeKiprogo2Mx395Product(current('ki-pro-go2'), 'ki-pro-go2').portMap.items;
   assert.equal(ki.length, 14);
   const hdmi = ki.filter(item => item.label.startsWith('HDMI 입력'));
   assert.deepEqual(hdmi.map(item => item.label), ['HDMI 입력 1', 'HDMI 입력 2', 'HDMI 입력 3–4']);

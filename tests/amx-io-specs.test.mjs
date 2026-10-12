@@ -10,6 +10,7 @@ const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(before
 const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
 
 import {beforeAmxW008Product} from './amx-w008-history.mjs';
+import {beforeKiprogo2Mx395Product} from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -164,7 +165,7 @@ test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest
 
 test('AMX presentation fields and every other product JSON remain fixed', () => {
   for (const slug of slugs) {
-    const current = beforeHarmanW03014(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(product(slug),slug),slug),slug),slug),slug);
+    const current = beforeHarmanW03014(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeKiprogo2Mx395Product(product(slug),slug),slug),slug),slug),slug),slug);
     const { specifications, io, sources, ...core } = current;
     assert.equal(sha(JSON.stringify(core)), evidence.products[slug].coreSha256, slug);
     assert.equal(current.keyFacts?.length ?? 0, 0, `${slug}: keyFacts deferred`);
