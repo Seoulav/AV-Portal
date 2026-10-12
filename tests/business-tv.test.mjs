@@ -1,3 +1,4 @@
+import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name, beforeW1010Catalog } from './w1010-history.mjs';
@@ -6,8 +7,8 @@ import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => beforeW013Product(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug), slug);
 
 import { isW006Name, withoutW006Catalog } from './w006-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';

@@ -116,16 +116,23 @@ export function normalizeQuantity(row, connector) {
 export function validateOverride(key, override) {
   const fail = message => { throw new Error(`IO_OVERRIDES ${key}: ${message}`); };
   if (!override.match || typeof override.match.connector !== 'string' || typeof override.match.signal !== 'string') fail('match.connector·match.signal(원문)이 필요하다');
-  if (!V.CONNECTORS.includes(override.connector)) fail(`알 수 없는 커넥터 ${override.connector}`);
-  if (!Array.isArray(override.signals) || !override.signals.length || !override.signals.every(id => V.SIGNAL_BY_ID.has(id))) fail('signals가 비었거나 알 수 없는 신호가 있다');
-  if (!['in', 'out', 'both'].includes(override.direction)) fail(`알 수 없는 방향 ${override.direction}`);
-  if (!Number.isInteger(override.quantity) || override.quantity < 1) fail('quantity는 1 이상의 정수다');
   if (!text(override.note)) fail('note(근거)가 필요하다');
+  const ports = Array.isArray(override.ports) ? override.ports : [override];
+  if (!ports.length) fail('ports가 비어 있다');
+  for (const port of ports) {
+    if (!V.CONNECTORS.includes(port.connector)) fail(`알 수 없는 커넥터 ${port.connector}`);
+    if (!Array.isArray(port.signals) || !port.signals.length || !port.signals.every(id => V.SIGNAL_BY_ID.has(id))) fail('signals가 비었거나 알 수 없는 신호가 있다');
+    if (!['in', 'out', 'both'].includes(port.direction)) fail(`알 수 없는 방향 ${port.direction}`);
+    if (!Number.isInteger(port.quantity) || port.quantity < 1) fail('quantity는 1 이상의 정수다');
+  }
 }
 
 // 한 I/O 행의 판정. override는 IO_OVERRIDES 항목(부록 A 밖의 개별 지정)
 export function classifyIoRow(row, override = null) {
   if (override) {
+    if (Array.isArray(override.ports)) {
+      return { kind: 'port', portSpecs: override.ports.map(port => ({ connector: port.connector, signals: sortSignals(port.signals), direction: port.direction, count: port.quantity })), reasons: [], override: true };
+    }
     return { kind: 'port', connector: override.connector, signals: sortSignals(override.signals), direction: override.direction, count: override.quantity, reasons: [], override: true };
   }
   const nonPort = nonPortKind(row);
@@ -205,7 +212,10 @@ export function buildPorts(rows, { overrides = {}, productId, strip = null, issu
     }
     const result = classifyIoRow(row, override);
     if (result.kind === 'port') {
-      for (let i = 0; i < result.count; i += 1) ports.push({ row, ioIndex, result, group: strip ? text(row.group).replace(strip, '') : text(row.group) });
+      const portSpecs = result.portSpecs ?? [result];
+      for (const spec of portSpecs) {
+        for (let i = 0; i < spec.count; i += 1) ports.push({ row, ioIndex, result: spec, group: strip ? text(row.group).replace(strip, '') : text(row.group) });
+      }
     } else if (result.kind === 'review') {
       unresolved.push(unresolvedItem(row, ioIndex, result.reasons));
     } else {

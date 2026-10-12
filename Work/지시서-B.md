@@ -60,3 +60,17 @@
 - [x] 전체 직렬 검사 476건 중 475 pass·0 fail·기존 skip 1, Pages 자료 검증 273장비·270상세·451 WebP·128 uploads, 검색 인덱스 일치, 잠금 PDF 업로드 12건 유지를 확인했다. 기본 병렬 실행의 RTCOM 복구 테스트 1건은 단독·직렬 실행에서 통과했다.
 - [x] 최신 main `1e7daa64083f01dea281861f075b21899d79c3ad` 통합 후 상세 파생 자산을 재생성했다. PR #404 CI 전체 통과 후 병합했으며, Pages 배포 run `38243264841` 성공을 확인했다.
 - [x] 공개 i-tech 4x3500HD 화면에서 표·8Ω 충돌 조건·빈칸 대시를 확인하고 [캡처](기록/W-20261012-008-screens/public-i-tech-4x3500hd-1280.png)를 추가했다.
+
+## W-20261012-013 — 빌더 라이브러리 단자 전수 검토
+
+- 상태: IN_PROGRESS · 1차 구현·검증 진행
+- 명세: `Work/작업/W-20261012-013.md` (읽은 main: `a16360380e42e3b150876778e6745de0cb1cfd04`, PR #409)
+- 브랜치: `codex/W-20261012-013-builder-ports`; 전용 워크트리 `codex-b`
+- 승인·범위: 사용자 2026-10-12 READY 명세. 1차는 Crown·Powersoft·BSS의 아날로그 I/O와 Shure ULXD4·ULXD4D. 세션 A 충돌 제품 JSON은 건드리지 않는다.
+- 기준 리포트: 제품 303, I/O 행 1,451, 생성 단자 2,145, 확인 필요 264, 단자 0 제품 12.
+
+- [x] Shure ULXD 단일/2채널 공식 매뉴얼을 대조했다. ULXD4는 RF BNC 2, XLR 1, TRS 1, Ethernet 제어 1로 보강했고 Dante는 추가하지 않았다. ULXD4D의 XLR 2·Dante RJ-45 2는 기존 생성 결과와 일치함을 검사했다.
+- [x] Crown I-TECH 4x3500HD 공식 매뉴얼 rear-panel diagram을 근거로 다중 포트 override를 추가했다. 아날로그 XLR 4, AES3 XLR 2, CobraNet/VDrive RJ-45 1. 원본 복합 I/O 문구는 그대로 유지한다. 옵션 Speakon/Binding Post 스피커 출력 행은 선택형이므로 검토 상태로 둔다.
+- [x] ULXD4 변경의 과거 이력 되감기 함수와 전체 제품 해시 연결 검사 초안을 추가했다.
+- [x] 1차 리포트 변화: 확인 필요 264→261, 단자 2,145→2,157, 단자 0 제품 12 유지. Crown 28→27, Shure 35→33. 미확정 BLU-160 카드 구성·Mezzo 322 AD 커넥터는 값 추정 없이 남겼다.
+- [ ] 생성 자산·전체 검사·`verify-pages`·최근 main 통합·PR·Pages 공개 화면 및 앰프/ULXD4 캡처.
