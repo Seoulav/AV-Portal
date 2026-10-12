@@ -35,6 +35,12 @@ export type ImportWarningCode =
   | 'misc-basis-review-required'
   | 'device-not-in-catalog'
   | 'device-ambiguous-match'
+  /**
+   * 4단계 모델명 검색의 유일 후보가 model/quoteSpec 칸에서 맞아
+   * **자동 연결**됐다 (운영자 결정 2026-10-12). 차단은 아니지만 사람이
+   * 다른 제품인지 한 번 볼 수 있게 근거를 남긴다.
+   */
+  | 'device-model-contained'
   | 'option-definition-missing'
   | 'price-not-registered'
   | 'unknown-line-type'
@@ -246,6 +252,24 @@ export function buildDeviceLines(
       });
     }
 
+    if (match.matchedBy === 'model-contained' && match.product !== undefined) {
+      // 자동 연결 사실과 근거를 남긴다 — 차단하지 않되, 다른 제품이면
+      // 사람이 바로 알아채고 바꿀 수 있어야 한다.
+      warnings.push({
+        code: 'device-model-contained',
+        blocking: false,
+        message:
+          `'${model || name}'과 글자 그대로 일치하는 제품은 없지만, ` +
+          `모델명이 모델/규격 칸에 들어 있는 제품이 '${match.product.quoteName} (${match.product.quoteSpec})' ` +
+          `1건뿐이라 자동 연결했다. 다른 제품이면 바꿔야 한다.`,
+        nodeId: node.id,
+        candidates: [match.product.sku],
+        ...(match.modelSearchCandidates !== undefined
+          ? { modelSearchCandidates: match.modelSearchCandidates }
+          : {}),
+      });
+    }
+
     const deviceDescription = descriptionOf(match.product);
     const deviceLine: DeviceLine = {
       ...(match.product !== undefined ? { sku: match.product.sku } : {}),
@@ -335,6 +359,24 @@ export function buildDeviceLines(
           message: `옵션 '${optionMatch.product.quoteName}'의 판매 단가가 미등록이다.`,
           nodeId: node.id,
           optionId,
+        });
+      }
+
+      if (optionMatch.matchedBy === 'model-contained' && optionMatch.product !== undefined) {
+        // 본체와 같은 규칙 — 자동 연결 사실과 근거를 남긴다.
+        warnings.push({
+          code: 'device-model-contained',
+          blocking: false,
+          message:
+            `옵션 '${definition.model}'과 글자 그대로 일치하는 제품은 없지만, ` +
+            `모델명이 모델/규격 칸에 들어 있는 제품이 '${optionMatch.product.quoteName} (${optionMatch.product.quoteSpec})' ` +
+            `1건뿐이라 자동 연결했다. 다른 제품이면 바꿔야 한다.`,
+          nodeId: node.id,
+          optionId,
+          candidates: [optionMatch.product.sku],
+          ...(optionMatch.modelSearchCandidates !== undefined
+            ? { modelSearchCandidates: optionMatch.modelSearchCandidates }
+            : {}),
         });
       }
 
