@@ -57,6 +57,7 @@ export function transformDetailApp(source) {
     .replace("from '../../beta/site/shared/rtcom-adapter.mjs'", "from '../shared/rtcom-adapter.mjs?v=w20261012-015-rtcom-parity'")
     .replace("from '../../beta/distributor-links.mjs'", "from '../shared/distributor-links.mjs'")
     .replace("from '../../beta/site/shared/brand-links.mjs'", "from '../shared/brand-links.mjs'")
+    .replace("from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002'", "from './rtcom-embed.mjs?v=w20261013-002'")
     .replace("`../../beta/site/rtcom/raw/products/${rtcomId}.json`", "`../rtcom/raw/products/${rtcomId}.json`")
     .replace("fetch('../../beta/site/catalog.json')", "fetch('../catalog.json')")
     .replace("brandListingHref(brand, '../../beta/site/')", "brandListingHref(brand)")
