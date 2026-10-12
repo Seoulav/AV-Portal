@@ -1,10 +1,11 @@
+import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
 
 import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeW06005Product} from './w06005-history.mjs';
@@ -25,7 +26,7 @@ import {beforeShureW04003,beforeShureW04003Raw,shureW04003Slug} from './shure-w0
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
   const product=JSON.parse(bytes(path));
-  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeW06005Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeW06005Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeW12005Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
 // Git stores text with LF; compare repository bytes across Windows/Linux checkouts.
@@ -76,7 +77,7 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
   assert.equal(Object.keys(proof.preservedProducts).length, 235);
   const priorRead = path => {
     const slug=path.split('/').at(-1).slice(0,-5);
-    return beforeW032Product(beforeBssW04004(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(JSON.parse(bytes(path)),slug),slug),slug),slug),slug);
+    return beforeW032Product(beforeBssW04004(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(JSON.parse(bytes(path)),slug),slug),slug),slug),slug),slug);
   };
   const priorRaw = path => beforeW032Raw(beforeW026Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {

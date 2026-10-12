@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
+import { beforeW12005Product } from './w12005-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-001-prior-coords.json', import.meta.url), 'utf8'));
 const directory = new URL('../beta/site/detail/data/', import.meta.url);
@@ -16,7 +17,7 @@ test('W-001 coordinate history restores exactly the recorded markers', () => {
   assert.equal(Object.keys(records).length, 39);
   let changedMarkers = 0;
   for (const [slug, record] of Object.entries(records)) {
-    const current = beforeW12003Product(JSON.parse(readFileSync(new URL(`${slug}.json`, directory), 'utf8')), slug);
+    const current = beforeW12003Product(beforeW12005Product(JSON.parse(readFileSync(new URL(`${slug}.json`, directory), 'utf8')), slug), slug);
     const restored = beforeW12001Product(current, slug);
     const now = coords(current);
     assert.equal(sha(now), record.approved, slug);
@@ -31,7 +32,7 @@ test('W-001 coordinate history restores exactly the recorded markers', () => {
     const edited = structuredClone(current);
     const field = fields.find(key => Object.hasOwn(edited.portMap.items[0], key));
     edited.portMap.items[0][field] += 1;
-    assert.throws(() => beforeW12001Product(edited, slug), /unexpected W-001 coordinate change/);
+    assert.throws(() => beforeW12001Product(edited, slug), /unexpected W-(?:001 coordinate|005 Port Map) change/);
   }
   assert.equal(changedMarkers, 263);
 });

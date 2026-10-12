@@ -7,6 +7,7 @@ import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW06003Raw } from './w06003-history.mjs';
 import { beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12002Raw } from './w12002-wording-history.mjs';
+import { beforeW12005Raw } from './w12005-history.mjs';
 import { summarizeVerificationStatuses } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -68,7 +69,7 @@ test('the five public Product Detail JSON Git blobs match their approved fixed h
     const path = `beta/site/detail/data/${name}`;
     const slug = name.slice(0, -5);
     const current = readFileSync(new URL(path, root), 'utf8').replace(/\r\n/g, '\n');
-    const restoredWording = beforeW12002Raw(current, slug);
+    const restoredWording = beforeW12002Raw(beforeW12005Raw(current, slug), slug);
     const raw = slug === 'brc-am7'
       ? beforeW032Raw(beforeW06003Raw(restoredWording, slug), slug)
       : ['dm7', 'ki-pro-go2'].includes(slug)
