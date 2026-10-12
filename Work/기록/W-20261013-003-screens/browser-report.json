@@ -1,0 +1,237 @@
+{
+  "failures": [],
+  "errors": [],
+  "scenarios": {
+    "home-1280": {
+      "active": false,
+      "columns": 3,
+      "count": 0,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 0,
+      "noImage": 0,
+      "summaries": 0,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 136,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 136,
+      "noImage": 1,
+      "summaries": 136,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": "HDMI",
+      "search": "HDMI"
+    },
+    "Shure-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 30,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 30,
+      "noImage": 0,
+      "summaries": 30,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "video-1280": {
+      "active": true,
+      "columns": 4,
+      "count": 100,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 100,
+      "noImage": 6,
+      "summaries": 98,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "home-390": {
+      "active": false,
+      "columns": 1,
+      "count": 0,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 0,
+      "noImage": 0,
+      "summaries": 0,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-390": {
+      "active": true,
+      "columns": 1,
+      "count": 136,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 136,
+      "noImage": 1,
+      "summaries": 136,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": "HDMI",
+      "search": "HDMI"
+    },
+    "Shure-390": {
+      "active": true,
+      "columns": 1,
+      "count": 30,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 30,
+      "noImage": 0,
+      "summaries": 30,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "video-390": {
+      "active": true,
+      "columns": 1,
+      "count": 100,
+      "overflow": false,
+      "broken": [],
+      "font": "\"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", \"Noto Sans KR\", sans-serif",
+      "statusBadges": 0,
+      "mediaSlots": 100,
+      "noImage": 6,
+      "summaries": 98,
+      "readableSection": false,
+      "sectionNumbers": [
+        "01",
+        "02",
+        "03"
+      ],
+      "alternateLinks": [
+        "./llms.txt"
+      ],
+      "query": null,
+      "search": ""
+    },
+    "HDMI-900": {
+      "columns": 3,
+      "overflow": false
+    },
+    "HDMI-650": {
+      "columns": 2,
+      "overflow": false
+    }
+  },
+  "readableFiles": {
+    "/catalog.html": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 172919
+    },
+    "/llms.txt": {
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 95340
+    }
+  },
+  "noSummary": {
+    "summary": false,
+    "placeholder": true
+  },
+  "empty": {
+    "visible": true,
+    "reset": true,
+    "count": 0
+  },
+  "reset": {
+    "workspaceHidden": true,
+    "query": ""
+  },
+  "brandBefore": {
+    "brand": "Shure",
+    "count": 0
+  },
+  "brandAfter": {
+    "brand": "Shure",
+    "selected": "true",
+    "count": 0
+  },
+  "longFact": {
+    "text": "MXA920 시리즈 전 모델 (라운드형)",
+    "fontSize": "14px",
+    "fontWeight": "700"
+  }
+}
