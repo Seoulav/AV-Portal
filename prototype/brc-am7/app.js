@@ -1,4 +1,4 @@
-import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261012-017-layer-tables';
+import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
