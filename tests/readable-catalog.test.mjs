@@ -32,11 +32,14 @@ test('llms text lists the public catalog and every detail URL', async () => {
   assert.equal((content.match(/^  상세: https:\/\/seoulav\.github\.io\/AV-Portal\/detail\/\?product=/gm) ?? []).length, publicCatalog.filter(item => item.slug).length);
 });
 
-test('home advertises downloadable static catalog files', async () => {
+test('home keeps the machine-readable alternate and design tools without a download section', async () => {
   const home = await readFile(new URL('index.html', site), 'utf8');
-  assert.match(home, /rel="canonical" href="https:\/\/seoulav\.github\.io\/AV-Portal\/"/);
-  assert.match(home, /href="\.\/catalog\.html" download/);
-  assert.match(home, /href="\.\/llms\.txt" download/);
+  const head = home.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? '';
+  const main = home.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? '';
+  assert.match(head, /<link rel="alternate" type="text\/plain" href="\.\/llms\.txt"/);
+  assert.doesNotMatch(main, /class="[^"]*readable-catalog|catalog\.html 다운로드|llms\.txt 다운로드|04 텍스트 목록/);
+  assert.match(main, /class="pg-idx">03<\/span> 설계 도구/);
+  assert.match(main, /href="builder\/"/);
 });
 
 test('Pages rebuilds readable files before validating the artifact', async () => {

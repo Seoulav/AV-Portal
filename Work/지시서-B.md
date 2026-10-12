@@ -246,3 +246,17 @@
 - main Pages 배포 run `38298859788` 성공. 배포 파이프라인의 verify-pages, 전체 테스트, Builder 생성, 빌드, 업로드를 모두 통과했다.
 - 공개 [AV System Designer](https://seoulav.github.io/AV-Portal/builder/)에서 Powersoft MEZZO 322 AD를 추가해 단자 9개와 이슈 0을 확인했다. 캡처: [public-builder-b2-mezzo-322-ad-1280.png](기록/W-20261012-013-screens/public-builder-b2-mezzo-322-ad-1280.png).
 - W-013 B2 완료. AVer는 요청에 따라 제품·생성기 변경 없이 공식 자료와 행만 증거 메모로 세션 A에 인계했다.
+
+## W-20261013-003 — 첫 화면 텍스트 목록 섹션 제거
+
+- 명세: `Work/작업/W-20261013-003.md`; 읽은 기준 main SHA `f98a80c5fcdb6671f40feef2311f6d056997d296`; 구현 브랜치 `codex/W-20261013-003-home-cleanup`.
+- 사용자 승인 범위: 첫 화면의 04 읽기용 카탈로그 링크 섹션만 제거. 03 설계 도구, `catalog.html`·`llms.txt` 산출물 및 head alternate 링크는 유지.
+- [x] 기존 UI·브라우저 검사·읽기용 산출물 검증 흐름 확인.
+- [x] 회귀 테스트 RED 확인: 5개 중 4개 통과, 홈 노출 회귀 1개 실패.
+- [x] 첫 화면과 브라우저 검증 갱신, 화면 캡처(1280px·390px), 직접 접근 200 확인.
+- [x] 전체 테스트·verify-pages·산출물 재생성·최신 main 통합·PR/CI·병합/Pages·공개 확인.
+- 최신 origin/main 4fdc1370d432f5a2b4eed31d890fe14f5e2ce8ed 통합 후 readable catalog와 search index를 재생성했다.
+- 브라우저 검사 10개 시나리오, 실패 0, 오류 0. catalog.html·llms.txt 로컬 HTTP 200, 유형과 내용 확인.
+- 홈 1280/390 및 Shure 제조사 선택 1280/390 캡처를 만들었다. 홈에 03 설계 도구가 남고 04 섹션은 없는 것을 확인했다.
+- 전체 테스트 571개: 570 통과, 0 실패, 1 기존 비공개 제품 목록 경로 스킵. verify-pages, readable catalog 생성, search-index --check 통과.
+- 제품 데이터 JSON 변경 없음. 구현 PR #439은 Builder CI 통과 후 merge SHA 42a07d3bbace01258fd6dac767508d9251ef3e57로 병합했다. Pages run 38302599149 성공. 공개 홈·Shure 화면 1280/390 및 catalog.html·llms.txt 직접 접근을 확인했다. 공개 캡처는 W-20261013-003-screens/public-* 파일이다.

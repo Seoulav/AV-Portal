@@ -21,8 +21,8 @@ test('stage 3 home keeps the search-first structure and shared design shell', as
   assert.match(html, /id="results-workspace"[^>]+hidden/);
   assert.match(html, /id="top-categories"/);
   assert.match(html, /id="manufacturer-browser"/);
-  assert.match(html, /catalog\.html/);
-  assert.match(html, /llms\.txt/);
+  assert.match(html, /<link rel="alternate" type="text\/plain" href="\.\/llms\.txt"/);
+  assert.doesNotMatch(html, /catalog\.html|04 텍스트 목록/);
 });
 
 test('home loads the stored RTCOM feed and exposes the configurator as the third design tool', async () => {

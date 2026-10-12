@@ -4,7 +4,7 @@ const { resolve, extname, sep } = require('node:path');
 const { chromium } = require('playwright');
 
 const root = resolve(__dirname, '../beta/site');
-const reportDir = resolve(__dirname, '../Work/기록/stage3-screens');
+const reportDir = resolve(__dirname, '../Work/기록/W-20261013-003-screens');
 const contentType = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8' };
 const server = createServer((request, response) => {
   try {
@@ -47,22 +47,24 @@ const server = createServer((request, response) => {
         mediaSlots: cards.filter(card => card.querySelector('.card-media')).length,
         noImage: cards.filter(card => card.querySelector('.media-placeholder')).length,
         summaries: cards.filter(card => card.querySelector('.card-summary')).length,
-        links: [...document.querySelectorAll('.readable-catalog a')].map(link => link.getAttribute('href')),
+        readableSection: Boolean(document.querySelector('.readable-catalog')),
+        sectionNumbers: [...document.querySelectorAll('main .section-heading .pg-idx')].map(index => index.textContent.trim()),
+        alternateLinks: [...document.head.querySelectorAll('link[rel="alternate"]')].map(link => link.getAttribute('href')),
         query: new URL(location.href).searchParams.get('q'),
         search: document.querySelector('#search').value
       };
     });
-    if (state.active !== expectedActive || state.overflow || state.broken.length || state.statusBadges || !state.font.includes('Pretendard Variable') || !state.links.includes('./catalog.html') || !state.links.includes('./llms.txt')) failures.push({ name, width, state });
+    if (state.active !== expectedActive || state.overflow || state.broken.length || state.statusBadges || !state.font.includes('Pretendard Variable') || state.readableSection || !state.sectionNumbers.includes('03') || state.sectionNumbers.includes('04') || !state.alternateLinks.includes('./llms.txt')) failures.push({ name, width, state });
     if (expectedActive && (state.columns !== expectedColumns || state.mediaSlots !== state.count)) failures.push({ name, width, expectedColumns, state });
     if (name === 'HDMI' && (state.query !== 'HDMI' || state.count === 0)) failures.push({ name, width, state });
     scenarios[`${name}-${width}`] = state;
-    await page.screenshot({ path: resolve(reportDir, `${name.toLowerCase()}-${width}.png`), fullPage: true });
+    if (name === 'home' || name === 'Shure') await page.screenshot({ path: resolve(reportDir, `${name.toLowerCase()}-${width}.png`), fullPage: true });
   }
 
   for (const width of [1280, 390]) {
     await inspect('home', '/', width, 0, false);
     await inspect('HDMI', '/?q=HDMI', width, width === 1280 ? 4 : 1, true);
-    await inspect('Shure', '/?brand=Shure&sort=brand', width, width === 1280 ? 4 : 1, true);
+    await inspect('Shure', '/?brand=Shure&series=all&sort=brand', width, width === 1280 ? 4 : 1, true);
     await inspect('video', '/?top=video', width, width === 1280 ? 4 : 1, true);
   }
   for (const [width, columns] of [[900, 3], [650, 2]]) {
@@ -72,9 +74,16 @@ const server = createServer((request, response) => {
     scenarios[`HDMI-${width}`] = result;
     if (result.columns !== columns || result.overflow) failures.push({ width, result, expectedColumns: columns });
   }
-  await page.goto(base + '/?q=ULTRISCAPE', { waitUntil: 'networkidle' });
+  const readableFiles = {};
+  for (const [path, type, marker] of [['/catalog.html', /^text\/html/, '<!doctype html>'], ['/llms.txt', /^text\/plain/, '# AV Portal']]) {
+    const response = await page.request.get(base + path);
+    const body = await response.text();
+    readableFiles[path] = { status: response.status(), contentType: response.headers()['content-type'], bytes: body.length };
+    if (response.status() !== 200 || !type.test(response.headers()['content-type'] ?? '') || !body.toLowerCase().includes(marker.toLowerCase())) failures.push({ file: path, status: response.status(), contentType: response.headers()['content-type'], marker });
+  }
+  await page.goto(base + '/?q=D-Cerno%20Advanced', { waitUntil: 'networkidle' });
   const noSummary = await page.evaluate(() => {
-    const card = [...document.querySelectorAll('#cards .card')].find(item => item.querySelector('h3')?.textContent === 'ULTRISCAPE');
+    const card = [...document.querySelectorAll('#cards .card')].find(item => item.querySelector('h3')?.textContent === 'D-Cerno Advanced');
     return card && { summary: Boolean(card.querySelector('.card-summary')), placeholder: Boolean(card.querySelector('.media-placeholder')) };
   });
   if (!noSummary || noSummary.summary || !noSummary.placeholder) failures.push({ interaction: 'missing summary', noSummary });
@@ -91,13 +100,13 @@ const server = createServer((request, response) => {
   await page.goBack({ waitUntil: 'networkidle' });
   const brandAfter = await page.evaluate(() => ({ brand: new URL(location.href).searchParams.get('brand'), selected: document.querySelector('[data-manufacturer="Shure"]').getAttribute('aria-pressed'), count: document.querySelectorAll('#cards .card').length }));
   if (brandBefore.brand !== 'Shure' || brandAfter.brand !== 'Shure' || brandAfter.selected !== 'true' || brandAfter.count !== brandBefore.count) failures.push({ interaction: 'back', brandBefore, brandAfter });
-  await page.goto(base + '/detail/?product=novastar-h5#overview', { waitUntil: 'networkidle' });
+  await page.goto(base + '/detail/?product=a900w-r-gm#overview', { waitUntil: 'networkidle' });
   const longFact = await page.evaluate(() => {
     const node = document.querySelector('#key-specs .long-key-value');
     return node && { text: node.textContent, fontSize: getComputedStyle(node).fontSize, fontWeight: getComputedStyle(node).fontWeight };
   });
   if (!longFact || longFact.fontSize !== '14px' || longFact.fontWeight !== '700') failures.push({ interaction: 'long fact', longFact });
-  const report = { failures, errors, scenarios, noSummary, empty, reset, brandBefore, brandAfter, longFact };
+  const report = { failures, errors, scenarios, readableFiles, noSummary, empty, reset, brandBefore, brandAfter, longFact };
   writeFileSync(resolve(reportDir, 'browser-report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ failures: failures.length, errors: errors.length, scenarios: Object.keys(scenarios).length, sample: failures.slice(0, 4) }));
   await browser.close(); server.close();
