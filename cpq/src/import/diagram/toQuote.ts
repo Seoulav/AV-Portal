@@ -50,6 +50,13 @@ function remarkFor(line: DeviceLine): string {
   // 4단계는 후보만 올리고 제품을 붙이지 않는다. `matchedBy`가 'none'에서
   // 'model-search'로 바뀌었다고 해서 "미등록"이라는 사실이 비고에서 사라지면 안 된다.
   if (line.matchedBy === 'model-search') return '구성도 — 카탈로그 미등록. 후보 있음, 확인 필요';
+  // 유일 후보 자동 연결(운영자 결정 2026-10-12) — 자동으로 붙었다는
+  // 사실과 맞은 글자를 비고에 남겨 사람이 검토할 수 있게 한다.
+  if (line.matchedBy === 'model-contained') {
+    return line.matchedFragment !== undefined
+      ? `구성도 — 모델 칸의 '${line.matchedFragment}' 일치로 자동 연결. 확인 권장`
+      : '구성도 — 모델명 포함 일치로 자동 연결. 확인 권장';
+  }
   if (line.matchedBy === 'none') return '구성도 — 카탈로그 미등록. 확인 필요';
   return '구성도';
 }

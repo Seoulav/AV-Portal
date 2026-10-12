@@ -266,18 +266,20 @@ describe('matchByModel — `/`로 묶인 모델명 (실측 22건 구제)', () =>
  * 그 제품이라는 근거가 되지 않는다.
  */
 describe('matchByModel — 4단계 모델명 검색 (후보 제시만 한다)', () => {
-  it('BRC-H800 이 `12배줌, BRC-H800` 을 후보로 올린다 — 자동 연결하지는 않는다', () => {
-    // 실물 카탈로그 VID-0006 의 값 그대로다.
+  it('BRC-H800 — model/quoteSpec 칸의 유일 후보는 자동 연결한다 (운영자 결정 2026-10-12)', () => {
+    // 실물 카탈로그 VID-0006 의 값 그대로다. BLU-101 선례와 같은 모양:
+    // 카탈로그가 모델명 앞뒤에 설명을 붙여 적어 1~3단계가 못 걸던 행이다.
     const c = catalog([product('VID-0006', '1" Exmor R PTZ Camera', '12배줌, BRC-H800')], {
       'VID-0006': '7000000',
     });
 
     const r = matchByModel('BRC-H800', c);
 
-    // 후보로만 오른다 — 제품도 단가도 붙지 않는다.
-    expect(r.product).toBeUndefined();
-    expect(r.sellingUnitPrice).toBeUndefined();
-    expect(r.matchedBy).toBe('model-search');
+    // 유일 후보 + model/quoteSpec 칸 일치 → 제품·단가가 붙고 근거가 남는다.
+    expect(r.product?.sku).toBe('VID-0006');
+    expect(r.sellingUnitPrice).toBe('7000000');
+    expect(r.matchedBy).toBe('model-contained');
+    expect(r.matchedFragment).toBe('BRC-H800');
     expect(r.modelSearchCandidates?.map((x) => x.sku)).toEqual(['VID-0006']);
   });
 });

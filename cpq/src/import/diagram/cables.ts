@@ -47,6 +47,18 @@ export const READY_MADE_STEPS = [1, 2, 3, 5, 7, 10, 15, 20] as const;
 export const BULK_UNIT_METERS = 10;
 
 /**
+ * 선 종류 이름(대문자) → 기본 벌크 케이블 SKU (운영자 결정 2026-10-12).
+ *
+ * 구성도 연결선에 케이블 품목이 지정되지 않았을 때, 여기 등록된 선
+ * 종류는 "품목 미정" 행 대신 이 SKU를 자동 지정한다. **수량은 여전히
+ * 경로 거리에서만 나온다** — 한 구간이라도 거리를 모르면 수량을 비우고
+ * 확정을 막는다. 등록되지 않은 선 종류는 기존대로 품목 미정 + 후보 제시다.
+ */
+export const DEFAULT_BULK_CABLE_SKU_BY_LINE_TYPE: ReadonlyMap<string, string> = new Map([
+  ['A.AUDIO', 'CBL-0106'], // 1CH MIC CABLE · YJ56878 (마이크 케이블)
+]);
+
+/**
  * 완제품 길이를 계단으로 **올린다**.
  *
  * 내리면 케이블이 모자란다. 현장에서 모자란 것보다 남는 편이 낫다.
@@ -240,6 +252,75 @@ export function buildCableLines(
     if (rows.length === 0) {
       // 선은 그어져 있는데 케이블 품목이 없다. 무시하면 케이블 없는 견적이 나간다.
       const label = lineTypeName.get(lineTypeId) ?? lineTypeId ?? '미상';
+
+      // 기본 케이블이 정해진 선 종류(예: A.AUDIO → 마이크 케이블)는 품목을
+      // 자동 지정한다 (운영자 결정 2026-10-12). 거리는 역산하지 않는다 —
+      // 한 구간이라도 경로 입력이 없으면 수량을 비우고 차단 경고를 세운다.
+      const defaultSku = DEFAULT_BULK_CABLE_SKU_BY_LINE_TYPE.get(label.trim().toUpperCase());
+      const defaultProduct =
+        defaultSku !== undefined ? catalog.products.find((p) => p.sku === defaultSku) : undefined;
+      if (defaultProduct !== undefined) {
+        const route = routes.get(edge.id);
+        const routeStarted = route !== undefined;
+        const routeMeters = routeStarted ? calcRouteMeters(route) : undefined;
+        const routeIncomplete = routeStarted && routeMeters === undefined;
+        const key = `bulk:auto:${defaultProduct.sku}`;
+        const price = catalog.prices.get(defaultProduct.sku);
+        // 교체 선택지는 같은 품셈 묶음의 벌크 케이블(예: YJ56878·9451)이다.
+        const groupMates = catalog.products
+          .filter((p) => p.options['group'] !== undefined && p.options['group'] === defaultProduct.options['group'])
+          .map((p) => p.sku);
+        const line: CableLine = {
+          sku: defaultProduct.sku,
+          name: defaultProduct.quoteName,
+          specification: defaultProduct.quoteSpec,
+          unit: `${BULK_UNIT_METERS}M`,
+          ...(price !== undefined ? { sellingUnitPrice: price } : {}),
+          ...(defaultProduct.laborMappingId !== undefined
+            ? { laborMappingId: defaultProduct.laborMappingId }
+            : {}),
+          segmentCount: 1,
+          lineTypeId,
+          sourceEdgeIds: [edge.id],
+          sourceCableMembers: [JSON.stringify([edge.id, -1])],
+        };
+        if (routeIncomplete) {
+          withholdQuantity.add(key);
+          warnings.push({
+            code: 'cable-route-incomplete',
+            blocking: true,
+            message:
+              `'${label}' 연결선 구간의 경로 입력이 아직 완성되지 않았다 ` +
+              '(수평/입상/입하 또는 확인된 총길이를 모두 채워야 한다). ' +
+              '완성 전까지는 수량을 정하지 않는다.',
+            edgeId: edge.id,
+            sourceCableKey: key,
+          });
+          push(key, line, 0, edge.id);
+          continue;
+        }
+        if (routeMeters === undefined) {
+          // 거리를 아직 모른다 — 품목은 지정하되 수량은 끝까지 비워 둔다.
+          // 일부 구간만 거리가 있어도 합계가 모자라므로 키 전체를 비운다.
+          withholdQuantity.add(key);
+          warnings.push({
+            code: 'cable-item-unresolved',
+            blocking: true,
+            message:
+              `'${label}' 연결선에 기본 케이블 '${defaultProduct.quoteName} (${defaultProduct.quoteSpec})'을(를) ` +
+              '자동 지정했다. 케이블 거리(경로)를 입력해야 수량이 정해진다 — ' +
+              '다른 품목이면 아래에서 바꿀 수 있다.',
+            edgeId: edge.id,
+            candidates: groupMates,
+            sourceCableKey: key,
+          });
+          push(key, line, 0, edge.id);
+          continue;
+        }
+        push(key, line, Number(routeMeters), edge.id);
+        continue;
+      }
+
       const key = `unresolved:${lineTypeId}`;
       withholdQuantity.add(key);
       const existing = byKey.get(key);
