@@ -289,7 +289,54 @@ export const IO_OVERRIDES = Object.freeze({
     ],
     note: 'Shure ULX-D Wireless System User Guide, ULXD4 rear panel: one balanced XLR and one balanced 1/4 inch TRS output; https://pubs.shure.com/view/guide/ULXD/en-US.pdf',
   },
-  'i-tech-4x3500hd#1': {
+  'mezzo-322-a#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-324-a#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-324-ad#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-602-a#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-602-ad#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-604-a#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-604-ad#2': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide, rear-panel callout for channels 1–2 unbalanced input is one stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet identifies two unbalanced channels in parallel with balanced inputs 1–2: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-322-ad#0': {
+    match: { connector: 'MISSING', signal: 'Balanced/Unbalanced analog audio in' },
+    ports: [
+      { connector: 'TERMINAL-BLOCK', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 },
+      { connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 },
+    ],
+    note: 'Powersoft MEZZO user guide, exact 322 AD rear-panel diagram identifies the balanced input terminal block and the channels 1–2 unbalanced stereo mini-jack; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; datasheet confirms two balanced and two unbalanced channels: https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-322-ad#4': {
+    match: { connector: 'Output terminal block', signal: 'Speaker output' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['SPEAKER'], direction: 'out', quantity: 1 }],
+    note: 'Powersoft MEZZO user guide rear-panel callout identifies one connector for CH2–CH1 outputs; the series datasheet specifies two output channels on Euro 5 mm for the 322 AD; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },  'i-tech-4x3500hd#1': {
     match: {
       connector: 'XLR-3F(아날로그·AES3 입력), etherCON/RJ-45(CobraNet·VDrive)',
       signal: 'Audio input (Analog, AES3, CobraNet, VDrive)',
