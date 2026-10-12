@@ -37,6 +37,7 @@
 | 이 문서 | 흐름과 작업 목록 |
 | `작업/B-YYYYMMDD-NN.md` | 작업 하나의 명세 + 진행 기록 + 결과. [작업 템플릿](작업템플릿.md)으로 만든다 |
 | `builder/README.md`, `builder/CHANGELOG.md` | 앱이 생긴 뒤(P4~) 실행법과 버전별 변경 기록 |
+| [장비별 입출력 단자](장비별-입출력-단자.md) | Builder에 나오는 장비마다 입력·출력·양방향 단자를 표로 정리한 읽기용 문서. 자동 생성이며 `node beta/build-builder-port-doc.mjs`로 다시 만든다 |
 
 - 작업 ID는 `B-YYYYMMDD-NN`이다. Portal의 `W-` ID와 섞이지 않는다.
 - 같은 날 여러 작업이면 `NN`을 01부터 올린다.
