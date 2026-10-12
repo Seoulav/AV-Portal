@@ -20,11 +20,16 @@ const configFor = brand => Object.hasOwn(SERIES, brand) ? SERIES[brand] : null;
 export const seriesBrandLabelFor = brand => configFor(brand)?.label ?? brand;
 
 export function seriesIdFor(item) {
+  if (item.brand === 'RTCOM') return item.brandSort?.group ?? '';
   const group = item.brandSort?.group;
   return configFor(item.brand)?.groups.find(entry => entry.members.includes(group))?.id ?? '';
 }
 
-export function seriesGroupsFor(brand, items) {
+export function seriesGroupsFor(brand, items, rtcomGroups) {
+  if (brand === 'RTCOM' && rtcomGroups) return Object.entries(rtcomGroups).map(([id, label], order) => {
+    const match = item => item.brand === 'RTCOM' && seriesIdFor(item) === id;
+    return { id, label, match, count: items.filter(match).length, order };
+  });
   const config = configFor(brand);
   if (!config) return null;
   return config.groups.map(entry => {
@@ -34,7 +39,7 @@ export function seriesGroupsFor(brand, items) {
   }).sort((a, b) => a.order - b.order);
 }
 
-export function normalizeSeriesFor(brand, series, items) {
-  const groups = seriesGroupsFor(brand, items);
+export function normalizeSeriesFor(brand, series, items, rtcomGroups) {
+  const groups = seriesGroupsFor(brand, items, rtcomGroups);
   return groups && (series === 'all' || groups.some(group => group.id === series)) ? series : '';
 }

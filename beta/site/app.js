@@ -117,6 +117,7 @@ if (typeof document !== 'undefined') {
   const element = (tag, className, content) => { const item = document.createElement(tag); if (className) item.className = className; if (content !== undefined) item.textContent = content; return item; };
   const ui = { search: $('#search'), heroSearch: $('#hero-search-form'), heroNote: $('.hero-note'), headerSearch: $('#header-search-form'), globalSearch: $('#global-search'), resultSearch: $('#result-search'), brand: $('#brand-filter'), categories: $('#categories'), categoryCount: $('#category-count'), resource: $('#resource-filter'), sort: $('#sort-filter'), cards: $('#cards'), seriesBrowser: $('#series-browser'), filters: $('.filters'), resultsHead: $('.results-head'), resultCount: $('#result-count'), workspace: $('#results-workspace'), empty: $('#empty-state'), error: $('#load-error'), suggestions: $('#search-suggestions') };
   let products = [];
+  let rtcomGroups = null;
   let state = parseExploreState(location.search);
   let activeSuggestion = -1;
 
@@ -162,13 +163,14 @@ if (typeof document !== 'undefined') {
     const actions = element('div', 'card-actions');
     if (item.slug) { const detail = element('a', 'detail-link', '제품 상세 보기'); detail.href = `./detail/?product=${item.slug}`; detail.addEventListener('click', saveScroll); actions.append(detail); }
     const official = item.official_links?.[0]; if (official) { const link = element('a', 'official-link', item.link_scope === 'series' ? '제조사 제품군 페이지 ↗' : '제조사 공식 페이지 ↗'); link.href = official; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
+    if (item.configurator_link) { const link = element('a', 'configurator-link', '슬롯 구성기'); link.href = item.configurator_link; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     if (item.manual_link) { const link = element('a', 'manual-link', '제조사 매뉴얼 ↗'); link.href = item.manual_link; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }
     if (item.reference_link) { item.reference_link.forEach((url, index) => { const link = element('a', 'reference-link', `참고자료${item.reference_link.length > 1 ? ` ${index + 1}` : ''} ↗`); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; actions.append(link); }); }
     body.append(actions); card.append(body); return card;
   }
 
   function contextCopy(filtered) {
-    const groups = seriesGroupsFor(state.brand, products);
+    const groups = seriesGroupsFor(state.brand, products, rtcomGroups);
     if (groups) {
       const brand = seriesBrandLabelFor(state.brand);
       if (!state.series) return `${brand} · 시리즈를 선택하세요`;
@@ -185,7 +187,7 @@ if (typeof document !== 'undefined') {
 
   function render(push = false) {
     setFacets();
-    state.series = normalizeSeriesFor(state.brand, state.series, products);
+    state.series = normalizeSeriesFor(state.brand, state.series, products, rtcomGroups);
     ui.search.value = state.query; ui.globalSearch.value = state.query; ui.resultSearch.value = state.query; ui.resource.value = state.resource; ui.sort.value = state.sort;
     const active = hasExploration(); ui.workspace.hidden = !active; document.body.classList.toggle('is-exploring', active);
     ui.headerSearch.hidden = !active;
@@ -198,7 +200,7 @@ if (typeof document !== 'undefined') {
     document.querySelectorAll('[data-manufacturer]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.manufacturer === state.brand)));
     if (!active) { ui.cards.replaceChildren(); ui.seriesBrowser.hidden = true; saveUrl(push); return; }
     const filtered = filterCatalog(products, state);
-    const groups = seriesGroupsFor(state.brand, products);
+    const groups = seriesGroupsFor(state.brand, products, rtcomGroups);
     ui.seriesBrowser.hidden = !groups;
     ui.seriesBrowser.replaceChildren();
     if (groups) {
@@ -281,6 +283,7 @@ if (typeof document !== 'undefined') {
       if (rtcomResponse.ok) { rtcomRaw = await rtcomResponse.text(); rtcomIndex = JSON.parse(rtcomRaw); }
     } catch { /* The AV catalog stays available if the optional synchronized source is unavailable. */ }
     products = combinePublicCatalog(data.filter(item => item.kind === 'equipment'), rtcomIndex);
+    rtcomGroups = rtcomIndex?.groups ?? null;
     await loadSearchIndex(products, combinedCatalogSource(catalogRaw, rtcomRaw));
     $('#equipment-total').textContent = products.length.toLocaleString('ko-KR'); $('#brand-total').textContent = `${new Set(products.map(item => item.brand)).size}개 제조사`;
     renderDiscovery(); render(); if (hasExploration()) restoreScroll();
