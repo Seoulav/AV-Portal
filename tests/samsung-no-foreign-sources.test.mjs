@@ -9,6 +9,7 @@ import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
 import { beforeW024 } from './mpf-images-history.mjs';
 import { beforeW12002Path } from './w12002-wording-history.mjs';
+import { beforeW013A2Product } from './w013-a2-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => beforeSamsungW04010Path(path, beforeW024(beforeW12002Path(path,JSON.parse(readFileSync(new URL(path, root), 'utf8'))), /(?:^|\/)([^/]+)\.json$/.exec(path)?.[1]));
@@ -37,7 +38,7 @@ test('W-014 preserves prior values and connector rows while withdrawing overseas
   const evidence = read('Work/기록/W-20261002-014-evidence.json');
   const sha = raw => createHash('sha256').update(raw).digest('hex');
   for (const [slug, expected] of Object.entries(evidence.untouchedProductSha256)) {
-    const restored=beforeSamsungManualIo(beforeSamsungWhiteboard(read(`beta/site/detail/data/${slug}.json`),slug),slug);
+    const restored=beforeSamsungManualIo(beforeSamsungWhiteboard(beforeW013A2Product(read(`beta/site/detail/data/${slug}.json`), slug),slug),slug);
     assert.equal(sha(JSON.stringify(restored,null,2)+'\n'), expected, `${slug}: outside W-014`);
   }
   for (const [slug, e] of Object.entries(evidence.products)) {
@@ -136,7 +137,7 @@ test('the recorded source cleanup reconstructs every pre-change Samsung JSON exa
   const evidence = read('Work/기록/W-20261002-010-evidence.json');
   for (const item of read('beta/site/catalog.json').filter(product => product.brand === 'Samsung')) {
     if (!evidence.products[item.slug]) continue; // W-010 predates the three W-012 MPF entries.
-    const detail = beforeSamsungWhiteboard(read(`beta/site/detail/data/${item.slug}.json`), item.slug);
+    const detail = beforeSamsungWhiteboard(beforeW013A2Product(read(`beta/site/detail/data/${item.slug}.json`), item.slug), item.slug);
     const before = beforeSamsungSourceCleanup(beforeSamsungForeignPurge(beforeSamsungManualIo(detail,item.slug), item.slug), item.slug);
     const digest = createHash('sha256').update(JSON.stringify(before, null, 2) + '\n').digest('hex');
     assert.equal(digest, evidence.products[item.slug].previousFileSha256, item.slug);

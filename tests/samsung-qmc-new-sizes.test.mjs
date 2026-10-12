@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW12002Raw } from './w12002-wording-history.mjs';
+import { beforeW013A2Raw } from './w013-a2-history.mjs';
 import { beforeW1010Catalog } from './w1010-history.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -61,7 +62,7 @@ test('six established QMC records and published PDFs remain untouched', () => {
   // same Git text on both platforms without changing the approved baseline.
   for (const [slug, hash] of old) {
     const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
-    assert.equal(sha(beforeW12002Raw(normalized,slug)), hash, slug);
+    assert.equal(sha(beforeW12002Raw(beforeW013A2Raw(normalized, slug),slug)), hash, slug);
   }
   const uploads = withoutW011Uploads(json('beta/site/docs/manifest.json').uploads);
   assert.equal(uploads.length, 128);
