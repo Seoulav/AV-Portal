@@ -54,7 +54,7 @@ export function transformDetailApp(source) {
     "const productDataPath = `./data/${productKey}.json`;");
   return output
     .replace("from '../../beta/site/shared/pdf-viewer.mjs'", "from '../shared/pdf-viewer.mjs'")
-    .replace("from '../../beta/site/shared/rtcom-adapter.mjs'", "from '../shared/rtcom-adapter.mjs'")
+    .replace("from '../../beta/site/shared/rtcom-adapter.mjs'", "from '../shared/rtcom-adapter.mjs?v=w20261012-015-rtcom-parity'")
     .replace("from '../../beta/distributor-links.mjs'", "from '../shared/distributor-links.mjs'")
     .replace("from '../../beta/site/shared/brand-links.mjs'", "from '../shared/brand-links.mjs'")
     .replace("`../../beta/site/rtcom/raw/products/${rtcomId}.json`", "`../rtcom/raw/products/${rtcomId}.json`")

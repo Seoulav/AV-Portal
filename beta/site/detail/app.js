@@ -1,10 +1,10 @@
 import { layerComparisonFor } from './layer-tables.mjs?v=w20261012-017-layer-tables';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-010-samsung-115-rear';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
-import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
+import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs?v=w20261012-015-rtcom-parity';
 import { distributorLinkFor } from '../shared/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../shared/brand-links.mjs';
 
@@ -159,7 +159,8 @@ if (!productKey) {
     if (!action) return;
     const labels = documentActionLabels(item, action, header);
     if (action.kind === 'external') {
-      container.append(safeLink(action.url, labels.primary, 'pg-btn'));
+      container.append(safeLink(action.url, labels.primary, 'pg-btn',
+        isRtcomProduct && item.type === 'Official Link' ? 'rtcomav.com' : ''));
       return;
     }
     const showDocument = trigger => pdfViewer.open({
@@ -224,6 +225,9 @@ if (!productKey) {
   const featured = $('#featured-image');
   const dialog = $('#image-dialog');
   const galleryBasis = $('#gallery-basis');
+  const maps = enhancements.portMaps.length ? enhancements.portMaps : enhancements.portMap ? [enhancements.portMap] : [];
+  const mapForImage = image => maps.find(map => map.imageFile
+    ? map.imageFile === image?.file : map.image === image?.role);
   if (!enhancements.portMap && data.io.length) {
     galleryBasis.textContent = '— 입출력 표 기준';
     galleryBasis.hidden = false;
@@ -240,12 +244,13 @@ if (!productKey) {
     $('#image-missing').hidden = true;
     $('#zoom-button').disabled = false;
     $('#image-role').textContent = image.role ?? '';
-    $('#image-caption').textContent = image.note || image.alt || '';
+    const selectedMap = mapForImage(image);
+    $('#image-caption').textContent = [selectedMap?.title, image.note || image.alt, selectedMap?.note].filter(Boolean).join(' · ');
     for (const [position, button] of [...$('#thumbnails').children].entries()) button.setAttribute('aria-pressed', String(position === index));
     updatePortMap();
   }
   function updatePortMap() {
-    const map = enhancements.portMap;
+    const map = mapForImage(data.images[selectedImage]);
     const layer = $('#port-map-layer');
     $('#port-map-loupe').hidden = true;
     layer.replaceChildren();
@@ -288,14 +293,14 @@ if (!productKey) {
     $('#zoom-button').disabled = true;
   });
   for (const [index, image] of data.images.entries()) {
-    const button = element('button', '', image.role || `이미지 ${index + 1}`);
+    const button = element('button', '', mapForImage(image)?.title || image.role || `이미지 ${index + 1}`);
     button.type = 'button';
     button.setAttribute('aria-pressed', String(index === 0));
     button.addEventListener('click', () => selectImage(index));
     $('#thumbnails').append(button);
   }
   $('#thumbnails').hidden = data.images.length < 2;
-  if (data.images.length) selectImage(enhancements.portMap ? data.images.findIndex(i => i.role === enhancements.portMap.image) : 0);
+  if (data.images.length) selectImage(maps.length ? data.images.findIndex(i => mapForImage(i)) : 0);
   else { $('#image-missing').hidden = false; $('#zoom-button').disabled = true; }
   $('#zoom-button').addEventListener('click', () => {
     if (!featured.complete || !featured.naturalWidth) return;

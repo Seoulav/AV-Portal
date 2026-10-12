@@ -41,9 +41,10 @@ test('public detail loads RTCOM raw data through the display adapter', async () 
   const { prepareProductDetail } = await import('../prototype/brc-am7/product-detail-model.mjs');
   const raw = JSON.parse(await file('beta/site/rtcom/raw/products/qms-88ux.json'));
   const adapted = prepareProductDetail(adaptRtcomDetail(raw));
-  assert.equal(adapted.enhancements.portMap, null);
+  assert.deepEqual(adapted.enhancements.portMap.items.map(item => item.label), raw.portMap.items.map(item => item.label));
+  assert.equal(adapted.enhancements.portMaps.length, 1);
   assert.equal(adapted.enhancements.signalFlow, null);
-  assert.deepEqual(adapted.enhancements.settings, []);
+  assert.deepEqual(adapted.enhancements.settings.map(item => item.kind), ['modes', 'table']);
 });
 
 test('detail template exposes distributor links in the header and manufacturer area', async () => {

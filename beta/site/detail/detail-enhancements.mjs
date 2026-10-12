@@ -22,9 +22,16 @@ const validMarker = i => {
     (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0));
 };
 function validMap(map, product) {
-  const image = product.images?.find(i => i.role === map?.image && text(i.file));
+  const rtcom = product.manufacturer === 'RTCOM';
+  const image = product.images?.find(i => i.role === map?.image && text(i.file) &&
+    (!rtcom || i.file === map?.imageFile));
   const size = dimensions(image?.resolution);
-  return record(map) && keys(map, ['image', 'items', 'measuredImage', 'crop']) && ['Front', 'Rear', 'Diagram'].includes(map.image) &&
+  return record(map) && keys(map, rtcom
+    ? ['image', 'imageFile', 'items', 'measuredImage', 'crop', 'title', 'note', 'basis', 'displayWidth']
+    : ['image', 'items', 'measuredImage', 'crop']) &&
+    (rtcom ? ['Main', 'Front', 'Rear', 'Other', 'Perspective', 'Diagram'] : ['Front', 'Rear', 'Diagram']).includes(map.image) &&
+    (!rtcom || (text(map.imageFile) && typeof map.title !== 'number' &&
+      (map.displayWidth === undefined || Number.isFinite(map.displayWidth) && map.displayWidth > 0))) &&
     size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'
       ? Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= map.crop.top && i.y2 <= size[1] - map.crop.bottom
       : Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
@@ -101,7 +108,12 @@ function validity(product) {
   return {
     lead: typeof product.lead === 'string', subtitle: typeof product.subtitle === 'string',
     keyFacts: Array.isArray(product.keyFacts) && product.keyFacts.length <= 4 && product.keyFacts.every(validFact),
-    portMap: validMap(product.portMap, product), signalFlow: validFlow(product.signalFlow, product),
+    portMap: validMap(product.portMap, product),
+    portMaps: product.manufacturer === 'RTCOM' && Array.isArray(product.portMaps) &&
+      product.portMaps.length > 0 && product.portMaps.length <= 8 &&
+      product.portMaps.every(map => validMap(map, product)) &&
+      JSON.stringify(product.portMap) === JSON.stringify(product.portMaps[0]),
+    signalFlow: validFlow(product.signalFlow, product),
     settings: Array.isArray(product.settings) && product.settings.length <= 2 && product.settings.every(validSetting)
   };
 }
@@ -115,6 +127,7 @@ export function prepareEnhancements(product) {
     subtitle: valid.subtitle && text(product.subtitle) ? product.subtitle : null,
     keyFacts: valid.keyFacts && product.keyFacts.length >= 2 ? product.keyFacts : [],
     portMap: valid.portMap ? product.portMap : null,
+    portMaps: valid.portMaps ? product.portMaps : [],
     signalFlow: valid.signalFlow ? product.signalFlow : null,
     settings: valid.settings ? product.settings : []
   };
