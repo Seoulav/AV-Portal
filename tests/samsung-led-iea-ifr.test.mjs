@@ -7,6 +7,7 @@ import { isW1012Name, beforeW1012Catalog } from './w1012-history.mjs';
 import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
+import { beforeW014Catalog } from './w014-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
@@ -91,7 +92,7 @@ test('LED cabinet addition changes only the three new products and keeps the pri
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),
     ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']);
-  const previous = beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const previous = beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '8af626c34c459c90001f5dae1698ea1bbbb5899ed1a132932c84c89c747a02c0');
   const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], {
     cwd: fileURLToPath(root), encoding: 'utf8'

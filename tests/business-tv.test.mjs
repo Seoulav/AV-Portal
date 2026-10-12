@@ -6,6 +6,7 @@ import { isW1012Name, beforeW1012Catalog } from './w1012-history.mjs';
 import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
+import { beforeW014Catalog } from './w014-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
@@ -77,6 +78,6 @@ test('the existing 242 detail files and 249 catalog objects remain byte/value-id
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
   const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(detailDigests)), '8dc33b1204a5fad8487a4e87d511eeca9862ca3ad6aa33fdffa211be69a49789');
-  const originalCatalog = beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json')))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const originalCatalog = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json'))))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(originalCatalog)), '3b8f31e02ec31ff94cd6b8192447a14549c2ed03188ea7d392ae51f9f262f6da');
 });
