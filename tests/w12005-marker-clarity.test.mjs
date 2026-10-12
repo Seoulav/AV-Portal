@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
+import { beforeW013Product } from './w013-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-prior-maps.json', import.meta.url), 'utf8'));
 const path = slug => `beta/site/detail/data/${slug}.json`;
@@ -18,7 +19,7 @@ test('thirteen corrected maps leave all other current product fields unchanged',
     assert.deepEqual(restored.portMap, records[slug].prior, slug);
     const core = structuredClone(product);
     delete core.portMap;
-    assert.equal(createHash('sha256').update(JSON.stringify(core)).digest('hex'), records[slug].priorCoreSha256, slug);
+    assert.equal(createHash('sha256').update(JSON.stringify(beforeW013Product(core,slug))).digest('hex'), records[slug].priorCoreSha256, slug);
     assert.ok(prepareEnhancements(product).portMap, `${slug}: current map visible`);
   }
 });

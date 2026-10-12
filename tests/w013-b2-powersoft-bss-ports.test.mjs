@@ -36,6 +36,6 @@ test('BSS BLU-160 exposes the maximum 16 optional card I/O terminals', () => {
 
 test('BSS BLU-50v2 watchdog output uses one documented Phoenix control terminal', () => {
   const record = product('blu-50v2');
-  assert.equal(ports(record, 'outputs', 'TERMINAL-BLOCK', 'GPIO').length, 1);
+  assert.equal(ports(record, 'outputs', 'TERMINAL-BLOCK', 'RELAY').length, 1);
   assert.ok(!unresolvedAt(record, 6));
 });

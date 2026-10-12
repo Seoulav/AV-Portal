@@ -465,6 +465,31 @@ export const IO_OVERRIDES = Object.freeze({
     ],
     note: 'BSS BLU-101 model-specific datasheet lists 12 control inputs and 6 logic outputs; source row identifies Phoenix/Combicon; https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf',
   },
+  'blu-160#0': {
+    match: { connector: 'Phoenix/Combicon (Analog Input Card)', signal: 'Mic/Line 아날로그 입력' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['MIC-AUDIO', 'LINE-AUDIO'], direction: 'in', quantity: 16 }],
+    note: 'BSS BLU-160 datasheet documents up to 16 optional analog input channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
+  'blu-160#1': {
+    match: { connector: 'Phoenix/Combicon (Analog Output Card)', signal: '라인 레벨 아날로그 출력' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['LINE-AUDIO'], direction: 'out', quantity: 16 }],
+    note: 'BSS BLU-160 datasheet documents up to 16 optional analog output channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
+  'blu-160#2': {
+    match: { connector: 'Phoenix/Combicon (Digital Input Card)', signal: 'AES/EBU, S/PDIF 디지털 입력' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['AES3', 'SPDIF'], direction: 'in', quantity: 16 }],
+    note: 'BSS BLU-160 datasheet lists the optional AES/EBU or S/PDIF digital input card and four card slots; represent 16 maximum selectable input channels without changing source text. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
+  'blu-160#3': {
+    match: { connector: 'Phoenix/Combicon (Digital Output Card)', signal: 'AES/EBU, S/PDIF 디지털 출력' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['AES3', 'SPDIF'], direction: 'out', quantity: 16 }],
+    note: 'BSS BLU-160 datasheet lists the optional AES/EBU or S/PDIF digital output card and four card slots; represent 16 maximum selectable output channels without changing source text. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
+  'blu-160#4': {
+    match: { connector: 'Phoenix/Combicon (AEC Input Card)', signal: 'AEC 마이크 입력' },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['MIC-AUDIO'], direction: 'in', quantity: 16 }],
+    note: 'BSS BLU-160 datasheet lists up to 16 optional AEC input card channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
   'blu-160#8': {
     match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
     ports: [
@@ -505,7 +530,7 @@ export const IO_OVERRIDES = Object.freeze({
   "mezzo-602-ad#5": {"match":{"connector":"RJ45(네트워크 포트 공용)","signal":"Dante/AES67 audio"},"ports":[],"action":"already-represented","note":"Powersoft MEZZO AD official rear-panel documentation identifies dual RJ45 network ports; Dante/AES67 audio channels use those shared physical ports, so this row adds no separate connector. https://www.powersoft.com/en/products/install-amps/mezzo-324-ad ; https://www.powersoft.com/wp-content/user_guide/PS_MEZZO_UG.pdf"},
   "mezzo-604-ad#3": {"match":{"connector":"RJ45(네트워크 포트 공용)","signal":"Dante/AES67 audio"},"ports":[],"action":"already-represented","note":"Powersoft MEZZO AD official rear-panel documentation identifies dual RJ45 network ports; Dante/AES67 audio channels use those shared physical ports, so this row adds no separate connector. https://www.powersoft.com/en/products/install-amps/mezzo-324-ad ; https://www.powersoft.com/wp-content/user_guide/PS_MEZZO_UG.pdf"},
   "mezzo-604-ad#4": {"match":{"connector":"RJ45(네트워크 포트 공용)","signal":"Dante/AES67 audio"},"ports":[],"action":"already-represented","note":"Powersoft MEZZO AD official rear-panel documentation identifies dual RJ45 network ports; Dante/AES67 audio channels use those shared physical ports, so this row adds no separate connector. https://www.powersoft.com/en/products/install-amps/mezzo-324-ad ; https://www.powersoft.com/wp-content/user_guide/PS_MEZZO_UG.pdf"},
-  "blu-50v2#6": {"match":{"connector":"Phoenix/Combicon","signal":"워치독 출력"},"ports":[{"connector":"TERMINAL-BLOCK","signals":["GPIO"],"direction":"out","quantity":1}],"note":"BSS BLU-50v2 official datasheet specifies one Phoenix/Combicon watchdog output for fail-safe control. https://bssaudio.com/en/site_elements/data-sheet-blu-50v2"},
+  "blu-50v2#6": {"match":{"connector":"Phoenix/Combicon","signal":"워치독 출력"},"ports":[{"connector":"TERMINAL-BLOCK","signals":["RELAY"],"direction":"out","quantity":1}],"note":"BSS BLU-50v2 official datasheet specifies one Phoenix/Combicon watchdog output for fail-safe control; keep it separate from the six GPIO logic outputs. https://bssaudio.com/en/site_elements/data-sheet-blu-50v2"},
   "mezzo-322-ad#2": {"match":{"connector":"GPI","signal":"출력 레벨 조절용 GPI 입력"},"ports":[{"connector":"TERMINAL-BLOCK","signals":["GPIO"],"direction":"in","quantity":2}],"note":"Powersoft MEZZO user guide documents GPI terminals I1/I2 for 2-channel models; 10 kOhm passive potentiometer control. https://www.powersoft.com/wp-content/user_guide/PS_MEZZO_UG.pdf"},
   "mezzo-322-ad#5": {"match":{"connector":"GPI","signal":"Status contact output"},"ports":[{"connector":"TERMINAL-BLOCK","signals":["RELAY"],"direction":"out","quantity":1}],"note":"Powersoft MEZZO GPIO application note documents the normally-closed status contact output on the shared terminal block. https://www.powersoft.com/en/document/gpio"},
   "pt-mz11k#2": {"match":{"connector":"D-sub 9-pin (female/male)","signal":"SERIAL/MULTI PROJECTOR SYNC IN/OUT"},"ports":[{"connector":"DSUB-9","signals":["RS-232"],"direction":"in","quantity":1},{"connector":"DSUB-9","signals":["RS-232"],"direction":"out","quantity":1}],"note":"Panasonic Korean User Manual DPQP1432ZC/X1 applies to PT-MZ20K/MZ17K/MZ14K/MZ11K and labels these connectors on page 28. https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf"},
