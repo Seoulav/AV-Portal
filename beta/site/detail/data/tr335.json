@@ -19,29 +19,29 @@
     {
       "role": "Front",
       "file": "tr335-front.webp",
-      "alt": "AVer TR335 전면 이미지",
-      "note": "Front · 제조사 공식 이미지",
+      "alt": "AVer TR335 정면 이미지",
+      "note": "Front · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진",
       "provider": "AVer",
       "model": "TR335",
-      "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_1.png",
       "officialSource": true,
       "verificationStatus": "FOUND",
-      "originalSize": "474×458",
-      "resolution": "338×381",
+      "originalSize": "551x351",
+      "resolution": "329x351",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     {
       "role": "Rear",
       "file": "tr335-rear.webp",
       "alt": "AVer TR335 후면 단자 이미지",
-      "note": "Rear · 제조사 공식 이미지",
+      "note": "Rear · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진",
       "provider": "AVer",
       "model": "TR335",
-      "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png",
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_4.png",
       "officialSource": true,
       "verificationStatus": "FOUND",
-      "originalSize": "474×458",
-      "resolution": "308×411",
+      "originalSize": "551x351",
+      "resolution": "326x350",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -54,17 +54,17 @@
     {
       "role": "Front",
       "status": "FOUND",
-      "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png"
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_1.png"
     },
     {
       "role": "Rear",
       "status": "FOUND",
-      "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png"
+      "sourceUrl": "https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_4.png"
     },
     {
       "role": "Perspective",
       "status": "MISSING",
-      "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr335"
+      "sourceUrl": "https://presentation.aver.com/model/tr335"
     },
     {
       "role": "Other",
@@ -292,6 +292,30 @@
       "condition": "",
       "source": "D",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "AUDIO IN",
+      "signal": "Audio input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "MIC in/Line in · 제조사 데이터시트와 후면 사진 라벨 대조",
+      "source": "D",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC 12V",
+      "signal": "DC power in",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DC 12V",
+      "availability": "",
+      "condition": "외부 DC 전원 · 제조사 데이터시트와 후면 사진 라벨 대조",
+      "source": "D",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -310,8 +334,8 @@
     {
       "code": "IMG",
       "name": "제조사 이미지 자료",
-      "url": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png",
-      "scope": "제조사 공식 출처"
+      "url": "https://presentation.aver.com/model/tr335",
+      "scope": "제조사 공식 TR335 갤러리 정면 images_1.png · 후면 images_4.png. 제조사는 TR315/TR335에 동일 사진을 사용"
     }
   ],
   "issues": [],
@@ -467,5 +491,91 @@
       "3G-SDI 출력은 1080p60까지만 지원합니다.",
       "USB3.0 UVC 행은 MJPG 최대 2160p 정보를 제공합니다. io[0]의 USB와 물리적으로 같은 단자인지는 이 흐름에서 확정하지 않습니다."
     ]
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "tr335-rear.webp",
+      "width": 326,
+      "height": 350
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "LAN/PoE+",
+        "desc": "RJ-45 · IP 영상·VISCA 네트워크 제어·PoE+ 전원",
+        "x1": 40,
+        "x2": 77,
+        "y": 278,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "RS-232",
+        "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+        "x1": 82,
+        "x2": 106,
+        "y": 316,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "RS-422",
+        "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+        "x1": 109,
+        "x2": 140,
+        "y": 278,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "USB 3.0 출력",
+        "desc": "USB Type-B · UVC 영상·오디오 출력",
+        "x1": 144,
+        "x2": 168,
+        "y": 316,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "오디오 입력",
+        "desc": "AUDIO IN · MIC/LINE 입력",
+        "x1": 171,
+        "x2": 194,
+        "y": 278,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력",
+        "desc": "HDMI 영상 출력",
+        "x1": 199,
+        "x2": 231,
+        "y": 316,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "3G-SDI 출력",
+        "desc": "BNC · 최대 1080p60 영상 출력",
+        "x1": 234,
+        "x2": 258,
+        "y": 278,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "DC 12V 입력",
+        "desc": "외부 12V DC 전원 입력",
+        "x1": 263,
+        "x2": 282,
+        "y": 316,
+        "side": "bottom"
+      }
+    ],
+    "crop": {
+      "top": 237,
+      "bottom": 0
+    }
   }
 }

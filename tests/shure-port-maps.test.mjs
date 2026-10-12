@@ -3,6 +3,7 @@ import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
 import { beforeKiprogo2Mx395ImageSha } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeMxc420PhotoImageSha } from './mxc420-photo-history.mjs';
+import { verifyAverW12009ReplacedImage } from './aver-w12009-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
@@ -122,6 +123,7 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
 test('Shure mapping preserves published source images, PDFs and catalog bytes', () => {
   const updatedImages=JSON.parse(bytes('Work/기록/W-20261006-004-image-hashes.json'));
   for (const [path, hash] of Object.entries(proof.assets)) {
+    if (path.startsWith('detail/images/') && verifyAverW12009ReplacedImage(path.split('/').at(-1), hash)) continue;
     // Historical evidence includes the W-20261002-011 discontinued product.
     // W-20261003-002 adds approved uploads to the manifest. Its dedicated test
     // locks the original mirrors and five uploads while checking the new PDFs.

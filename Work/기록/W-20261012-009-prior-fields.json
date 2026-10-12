@@ -1,0 +1,349 @@
+{
+  "tr315": {
+    "images": {
+      "prior": [
+        {
+          "role": "Perspective",
+          "file": "tr315-perspective.webp",
+          "alt": "AVer TR315 원근 이미지(제조사 마케팅 이미지, NDI 배지 포함)",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "AVer",
+          "model": "TR315",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1100×1000",
+          "resolution": "1053×982",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "8184d74b5cd982d38b45e4c648d56556540a1a2dbcc894694ce9de32df4ab754"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr315"
+        }
+      ],
+      "approvedSha256": "3daef1e1276ac43fb0c157e03b71249c24b849dd43726bc7f74569e008fa2e58"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Video",
+          "connector": "3G-SDI, HDMI, IP, USB",
+          "signal": "Video/Audio out",
+          "direction": "OUT",
+          "quantity": "4",
+          "protocol": "",
+          "availability": "동시 출력(멀티스트림) 지원",
+          "condition": "3G-SDI는 1080p60까지만 지원",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "USB3.0 Type B",
+          "signal": "UVC video out",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "USB3.0",
+          "availability": "",
+          "condition": "MJPG, 최대 2160p",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232/RS-422/Ethernet",
+          "signal": "VISCA/PELCO-D, CGI(IP)",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "PoE+/Ethernet",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IEEE802.3at",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        }
+      ],
+      "approvedSha256": "89eed339e248eaffaf8598ea5e6d86156b434756fa534aac100ac4fcf31be359"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(TR315)",
+          "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr315-datasheet.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.averusa.com/products/auto-tracking-camera/tr315",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approvedSha256": "25da5c5f8722ab3c274c8475bbf4f4065b8b0f4e829b415bf5eb264bf7fb03e8"
+    },
+    "portMap": {
+      "prior": null,
+      "approvedSha256": "5feffbe96285065ddac78b3a13885389002faa0b5d7d6deae4d57b1312f1db7c"
+    }
+  },
+  "tr335": {
+    "images": {
+      "prior": [
+        {
+          "role": "Front",
+          "file": "tr335-front.webp",
+          "alt": "AVer TR335 전면 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "AVer",
+          "model": "TR335",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "474×458",
+          "resolution": "338×381",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "tr335-rear.webp",
+          "alt": "AVer TR335 후면 단자 이미지",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "AVer",
+          "model": "TR335",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "474×458",
+          "resolution": "308×411",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "aff6655cf64c851b4b74bea8b649e38e18387e94ae8a4def2f70b8cb9488bd52"
+    },
+    "imageStatuses": {
+      "prior": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr335"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr335"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.averusa.com/products/auto-tracking-camera/tr335"
+        }
+      ],
+      "approvedSha256": "6e5437b331eab14fd354588c2691b33db565c5829e40db876efc3f308eddf854"
+    },
+    "io": {
+      "prior": [
+        {
+          "group": "Video",
+          "connector": "3G-SDI, HDMI, IP, USB",
+          "signal": "Video/Audio out",
+          "direction": "OUT",
+          "quantity": "4",
+          "protocol": "",
+          "availability": "동시 출력(멀티스트림) 지원",
+          "condition": "3G-SDI는 1080p60까지만 지원",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "USB3.0 Type B",
+          "signal": "UVC video out",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "USB3.0",
+          "availability": "",
+          "condition": "MJPG, 최대 2160p",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232/RS-422/Ethernet",
+          "signal": "VISCA/PELCO-D, CGI(IP)",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "PoE+/Ethernet",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "IEEE802.3at",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        }
+      ],
+      "approvedSha256": "89eed339e248eaffaf8598ea5e6d86156b434756fa534aac100ac4fcf31be359"
+    },
+    "sources": {
+      "prior": [
+        {
+          "code": "D",
+          "name": "제조사 공식 데이터시트(TR335)",
+          "url": "https://www.averusa.com/pro-av/downloads/datasheet-brochure/tr335-datasheet.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.averusa.com/products/auto-tracking-camera/tr335",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approvedSha256": "f93195a65a6a6983d7a0527dab7cc06ae9fd004a3275971f1003449cc829744c"
+    },
+    "portMap": {
+      "prior": null,
+      "approvedSha256": "7b1dd4f68c7314065125887529fb642f8daa15ea062d797ccc1295455bda27a7"
+    }
+  },
+  "cl01": {
+    "io": {
+      "prior": [
+        {
+          "group": "Control",
+          "connector": "RS-485 (4-pin terminal)",
+          "signal": "PTZ control",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "동시 사용 가능",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "RS-232 (DB9 male)",
+          "signal": "PTZ control",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "동시 사용 가능",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45 (LAN)",
+          "signal": "PTZ control (IP)",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "UDP/VISCA over IP",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Update",
+          "connector": "Micro USB",
+          "signal": "Firmware upgrade",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Power",
+          "connector": "DC Jack",
+          "signal": "DC power in",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "DC 12V",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        }
+      ],
+      "approvedSha256": "e25d260cc51747cb9d042d837e5c078a1d628c3bf9939db5560a490ec5713fb7"
+    },
+    "portMap": {
+      "prior": null,
+      "approvedSha256": "e360367f6a52d6a0791cc62f893cf0efb1b3d4d48f1d8bf039fbd8e7b27a21fd"
+    }
+  }
+}
