@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
 
 // Restore only Port Map coordinates for assertions pinned to the pre-W-001 data.
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-001-prior-coords.json', import.meta.url), 'utf8'));
@@ -11,6 +12,9 @@ const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('
 export function beforeW12001Product(current, slug) {
   const record = records[slug];
   if (!record) return current;
+  // W-003 later condenses this one map; restore its approved 24-marker
+  // predecessor before checking the independent W-001 coordinate history.
+  if (slug === 'ki-pro-go2' && current.portMap?.items?.length === 11) current = beforeW12003Product(current, slug);
   const approved = coordinates(current);
   if (sha(approved) !== record.approved) throw new Error(`${slug}: unexpected W-001 coordinate change`);
   if (approved.length !== record.prior.items.length ||
