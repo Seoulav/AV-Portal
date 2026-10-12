@@ -14,7 +14,7 @@
   "korean": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다.",
   "verificationSummary": "Shure 공식 사이트(shure.com)와 공식 PDF 사용자 안내서·스펙시트를 출처로 사용했다. 제조사 공식 자료의 값만 반영했으며, 명시되지 않은 항목은 정보 없음으로 남겼다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다. 무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 로고 입력·출력(logic I/O)도 지원한다. 저프로파일 디자인에 커스텀 색상 도장을 위한 페인트 마스크가 제공된다.",
+  "overview": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다. 무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 제조사 표기 Logic Connections(LED IN 입력·SWITCH OUT 출력, GPIO 성격의 외부 제어선)도 지원한다. 저프로파일 디자인에 커스텀 색상 도장을 위한 페인트 마스크가 제공된다.",
   "images": [
     {
       "role": "Front",
@@ -108,7 +108,7 @@
       "source": ""
     },
     {
-      "text": "무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 로고 입력·출력(logic I/O)도 지원",
+      "text": "무소음 멤브레인 스위치의 Push-to-Talk·Push-to-Mute·Push On/Off 설정 및 제조사 표기 Logic Connections(LED IN 입력·SWITCH OUT 출력, GPIO 성격의 외부 제어선) 지원",
       "source": ""
     }
   ],
@@ -277,11 +277,11 @@
     },
     {
       "group": "전기/커넥터",
-      "name": "로직 커넥션 (LOGIC-OUT)",
+      "name": "로직 커넥션 (SWITCH OUT)",
       "value": "Active low (≤0.5V), 최대 20mA 싱크, 절대 최대 -0.7V~24V(3kΩ 통해 50V)",
       "unit": "",
       "condition": "",
-      "source": "P",
+      "source": "P, D, M",
       "verification": "VERIFIED"
     },
     {
@@ -342,15 +342,39 @@
   "io": [
     {
       "group": "Audio",
-      "connector": "커넥터 없음(3.7 m 무단말 케이블 직결)",
+      "connector": "나사식 단자(스크류 터미널)",
       "signal": "Microphone audio output (phantom powered)",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "3.5m(12ft) 부착형, 실드 오디오 페어 + 로직 3선(비종단)",
-      "source": "P, D",
+      "condition": "3.5m(12ft) 부착형 무단말 케이블 · 오디오 3단자(+·−·실드) · 로직 3단자(LED IN·SWITCH OUT·접지) · 오디오 출력 1계통",
+      "source": "P, D, M",
       "verification": "PARTIAL"
+    },
+    {
+      "group": "Logic",
+      "connector": "나사식 단자(스크류 터미널)",
+      "signal": "LED IN",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "TTL",
+      "availability": "",
+      "condition": "주황색 리드선 · 제조사 표기 Logic Connections(로직/GPIO 성격의 외부 제어선) · LED IN: 외부 장치가 마이크 LED를 제어하는 입력 · active low ≤1.0V, 공통 접지 사용",
+      "source": "D, M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Logic",
+      "connector": "나사식 단자(스크류 터미널)",
+      "signal": "SWITCH OUT",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "TTL",
+      "availability": "",
+      "condition": "흰색 리드선 · 제조사 표기 Logic Connections(로직/GPIO 성격의 외부 제어선) · SWITCH OUT: 마이크 스위치 상태를 외부 장치에 전달하는 출력(GPO) · active low ≤0.5V, 최대 20mA 싱크, 공통 접지 사용",
+      "source": "D, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

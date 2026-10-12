@@ -1,0 +1,465 @@
+{
+  "mx392-c": {
+    "io": {
+      "prior": [
+        {
+          "group": "Audio",
+          "connector": "커넥터 없음(3.7 m 무단말 케이블 직결)",
+          "signal": "Microphone audio output (phantom powered)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "3.5m(12ft) 부착형, 실드 오디오 페어 + 로직 3선(비종단)",
+          "source": "P, D",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Power",
+          "connector": "오디오 케이블 경유 (팬텀 전원)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "11-52V DC, 2.0mA",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approvedSha256": "a787c8b6f5a93729ad4a1e2f70d4a3c1b4f64bac5dabc27c0dcb2d0603dfedb6"
+    },
+    "specifications": {
+      "prior": [
+        {
+          "group": "Audio",
+          "name": "타입",
+          "value": "일렉트렛 콘덴서 (내장 프리앰프)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "주파수 응답",
+          "value": "50-17000",
+          "unit": "Hz",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "폴라 패턴 (MX392/C)",
+          "value": "Cardioid",
+          "unit": "",
+          "condition": "MX392/S=Supercardioid, MX392/O=Omnidirectional",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "출력 임피던스",
+          "value": "180",
+          "unit": "Ω",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "출력 구성",
+          "value": "Active Balanced",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "감도 (1kHz, open circuit, Cardioid)",
+          "value": "-30",
+          "unit": "dBV/Pa",
+          "condition": "1Pa=94dB SPL",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "최대 SPL (1kHz, 1%THD, 1kΩ부하, Cardioid)",
+          "value": "119",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "자기잡음 (A-weighted, Cardioid)",
+          "value": "23",
+          "unit": "dB SPL",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "신호대잡음비 (Cardioid, 94dB SPL@1kHz 기준)",
+          "value": "71",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "다이내믹 레인지 (1kΩ부하@1kHz)",
+          "value": "96",
+          "unit": "dB",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "공통 모드 제거비",
+          "value": "45",
+          "unit": "dB (최소)",
+          "condition": "10Hz-100kHz",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "클리핑 레벨 (1%THD)",
+          "value": "-6dBV(0.5V)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "name": "뮤트 스위치 감쇠 (50-20000Hz)",
+          "value": "-50",
+          "unit": "dB (최소)",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "전원 요구사항",
+          "value": "11-52V DC, 2.0mA",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "케이블 (MX392)",
+          "value": "3.5m(12ft) 부착형, 실드 오디오 페어 + 로직 3선(비종단)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "케이블 (MX392BE)",
+          "value": "3.5m(12ft) 부착형, 하단(바텀) 출구 배선",
+          "unit": "",
+          "condition": "동일 사양의 바텀-케이블-이그짓 버전",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "케이블 (MX393, 참고)",
+          "value": "3.5m(12ft) 탈착형, 3핀 오디오 커넥터",
+          "unit": "",
+          "condition": "MX393은 MX392와 유사하나 케이블 탈착식",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "로직 커넥션 (LED IN)",
+          "value": "Active low (≤1.0V), TTL 호환, 절대 최대 -0.7V~50V",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "전기/커넥터",
+          "name": "로직 커넥션 (LOGIC-OUT)",
+          "value": "Active low (≤0.5V), 최대 20mA 싱크, 절대 최대 -0.7V~24V(3kΩ 통해 50V)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "기구/환경",
+          "name": "무게",
+          "value": "172",
+          "unit": "g",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "기구/환경",
+          "name": "동작 온도",
+          "value": "-18°C ~ 57°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "기구/환경",
+          "name": "보관 온도",
+          "value": "-29°C ~ 74°C",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "기구/환경",
+          "name": "상대습도",
+          "value": "0-95%",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "기구/환경",
+          "name": "포함 액세서리",
+          "value": "페인트 마스크(커스텀 색상 도장용)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Certification",
+          "name": "국내 인증",
+          "value": "인증 완료",
+          "unit": "",
+          "condition": "운영사 확인(2026-09-26, Shure 전 제품 국내 인증 완료). 인증번호·대상 대역은 미기재",
+          "source": "U",
+          "verification": "FOUND"
+        }
+      ],
+      "approvedSha256": "6d4890ef20fd52928bd28a6188bdbfd4ac10499e2b638a504ab98d1a73045948"
+    },
+    "overview": {
+      "prior": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택할 수 있다. 무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 로고 입력·출력(logic I/O)도 지원한다. 저프로파일 디자인에 커스텀 색상 도장을 위한 페인트 마스크가 제공된다.",
+      "approvedSha256": "b27eec411625d5c24b7d707712451d3e75b6bf10a187fb8d08caa0d41871c5b2"
+    },
+    "features": {
+      "prior": [
+        {
+          "text": "극성 패턴은 Cardioid",
+          "source": ""
+        },
+        {
+          "text": "MX392는 회의실, 강단, 원격 화상강의 등에 폭넓게 사용되는 바운더리(경계면) 마이크로폰으로, 교체형 콘덴서 카트리지를 이용해 카디오이드/슈퍼카디오이드/무지향성 패턴 중 선택 가능",
+          "source": ""
+        },
+        {
+          "text": "무소음 멤브레인 스위치로 Push-to-Talk, Push-to-Mute, Push On/Off 동작을 프로그래밍할 수 있고, 로고 입력·출력(logic I/O)도 지원",
+          "source": ""
+        }
+      ],
+      "approvedSha256": "ad6d87b341183eefdc572c8455b9bce0f2265cfbaeca7efd868a8864a96ac6c7"
+    }
+  },
+  "mx418d-c": {
+    "io": {
+      "prior": [
+        {
+          "group": "Audio",
+          "connector": "3핀 male XLR (부착형 케이블)",
+          "signal": "Microphone audio output (phantom powered)",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "3m(10ft) 부착형, 3핀 male XLR + 로직용 비종단 3선",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "XLR (팬텀 전원)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "11-52V DC 팬텀, 2.0mA",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "approvedSha256": "7fb8117c86c872aaa66c5fe47648f389f4f7ec4fab6cb808aff9b4ec99209a84"
+    }
+  },
+  "ulxd4q": {
+    "portMap": {
+      "prior": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "ulxd4q-rear.webp",
+          "width": 2000,
+          "height": 264
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "안테나 입력 A",
+            "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+            "x1": 1800,
+            "x2": 1876,
+            "y": 62,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "안테나 입력 B",
+            "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+            "x1": 427,
+            "x2": 500,
+            "y": 65,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "오디오 출력 1",
+            "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+            "x1": 1565,
+            "x2": 1668,
+            "y": 150,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "오디오 출력 2",
+            "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+            "x1": 1370,
+            "x2": 1471,
+            "y": 150,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "오디오 출력 3",
+            "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+            "x1": 892,
+            "x2": 991,
+            "y": 150,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "오디오 출력 4",
+            "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+            "x1": 698,
+            "x2": 798,
+            "y": 150,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "캐스케이드 출력 A",
+            "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 A 신호 전달",
+            "x1": 1710,
+            "x2": 1777,
+            "y": 215,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "캐스케이드 출력 B",
+            "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 B 신호 전달",
+            "x1": 522,
+            "x2": 590,
+            "y": 215,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "출력 1 MIC/LINE",
+            "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+            "x1": 1527,
+            "x2": 1547,
+            "y": 201,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "출력 2 MIC/LINE",
+            "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+            "x1": 1330,
+            "x2": 1350,
+            "y": 201,
+            "side": "bottom"
+          },
+          {
+            "n": 11,
+            "label": "출력 3 MIC/LINE",
+            "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+            "x1": 852,
+            "x2": 872,
+            "y": 201,
+            "side": "bottom"
+          },
+          {
+            "n": 12,
+            "label": "출력 4 MIC/LINE",
+            "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+            "x1": 656,
+            "x2": 676,
+            "y": 201,
+            "side": "bottom"
+          },
+          {
+            "n": 13,
+            "label": "Dante Primary",
+            "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어 연결",
+            "x1": 1160,
+            "x2": 1240,
+            "y": 111,
+            "side": "top"
+          },
+          {
+            "n": 14,
+            "label": "Dante Secondary",
+            "desc": "RJ-45 · 네트워크 모드에 맞춰 연결(이중화/스위치/분리)",
+            "x1": 1060,
+            "x2": 1138,
+            "y": 190,
+            "side": "bottom"
+          },
+          {
+            "n": 15,
+            "label": "AC 전원 입력",
+            "desc": "IEC · 100–240V AC 전원 연결",
+            "x1": 129,
+            "x2": 204,
+            "y": 210,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "c0458944156dc242fa1b5be4b7d9e717cd2dece535ded6cac6e1914b14a57680"
+    }
+  }
+}
