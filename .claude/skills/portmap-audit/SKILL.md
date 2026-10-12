@@ -1,6 +1,6 @@
 ---
 name: portmap-audit
-description: AV Portal 제품 상세의 Port Map(사진 위 단자 번호·괄호선)이 실제 단자를 정확히 가리키고 덮는지 사진으로 대조하고, 틀린 좌표를 고치고, 점검표에 남긴다. Port Map을 새로 만들었거나 고쳤을 때, 사진을 바꿨을 때, "단자 번호가 안 맞는다"는 지적을 받았을 때, 전수 점검을 돌릴 때 쓴다.
+description: Use when AV Portal Port Map 번호·괄호선이 사진 속 단자를 제대로 가리키는지 확인하거나, 사진 교체 뒤 좌표를 재검증하거나, 단자 번호 오류를 조사할 때.
 ---
 
 # Port Map 위치 점검 (`portmap-audit`)
@@ -52,7 +52,7 @@ AV Portal 상세 페이지의 **02 Port Map**은 제품 사진 위에 괄호선�
 
 ## 2. 도구 — `scripts/portmap-audit.py`
 
-> 도구는 W-20261012-001 구현에서 만든다. 아래가 그 사양이다. Pillow(`python -c "import PIL"`)만 쓴다.
+> `scripts/portmap-audit.py`는 Pillow만 쓴다. 숫자 검사 신호는 사진 판정의 대체물이 아니다.
 
 ```
 python scripts/portmap-audit.py --list
@@ -82,6 +82,8 @@ python scripts/portmap-audit.py <slug> --lint-only  # 숫자 검사만
 | `STACKED` | 같은 구간, 다른 `y` | `ki-pro-go2`·`vs10`처럼 2단 단자. 사진으로 확인 |
 | `OVERLAP` | 같은 변·같은 높이(±사진 높이 3%)에서 구간이 겹침 | 이웃 단자를 덮음 |
 | `SHARED_WITH` | 다른 제품과 좌표가 통째로 같음 | 형제 모델 공유(삼성 QMC·QHC). 한 제품의 오류가 여럿에 퍼짐 → **같이 본다** |
+
+`side:left/right`에서 `x`가 없으면 개별 확대 조각은 **도면의 전체 가로 폭**을 포함한다. 가장자리 선만 자르면 단자 몸체가 잘려 판정할 수 없다.
 
 ## 3. 판정 — 표식마다 이 순서로
 

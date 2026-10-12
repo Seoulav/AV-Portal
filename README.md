@@ -53,6 +53,8 @@ npm run verify:local
 npm run verify:resources:local
 ```
 
+Port Map 사진 대조에는 `python scripts/portmap-audit.py --all`을 사용합니다. 제품별 원본 사진 오버레이와 표식 확대 이미지가 Git 제외 경로 `.portmap-audit/`에 생성됩니다. 사용법과 판정 기준은 [portmap-audit 스킬](.claude/skills/portmap-audit/SKILL.md)에 있습니다.
+
 `npm test`는 합성 자료로 기존 검색·필터와 서비스 분리, 비공개값 비노출, 자료 관계·상태·오류를 검사합니다. `verify:local`은 `AV_PORTAL_PRODUCT_LIST_PATH`가 설정됐을 때 실제 목록을 검사하며, 없으면 SKIP됩니다. `verify:resources:local`은 두 환경 변수에 실제 파일의 **절대 경로**가 필요하고, 제품·원본 행·자료·관계 수를 실제 입력에서 검증해 출력합니다. 자료 수를 코드에 고정하지 않습니다.
 
 ## 공동 작업

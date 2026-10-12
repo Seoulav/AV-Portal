@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW06005Product, beforeW06005Raw } from './w06005-history.mjs';
+import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 
 const approved = JSON.parse(readFileSync(new URL('../Work/기록/W-20261006-005-approved-maps.json', import.meta.url)));
 const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url)));
@@ -25,7 +26,7 @@ test('ten approved rear maps cover only photographed connectors and survive vali
     const image = product.images.find(image => image.role === 'Rear');
     const [width, height] = image.resolution.split(/[x×]/).map(Number);
     assert.deepEqual(map.measuredImage, { file: image.file, width, height }, slug);
-    assert.equal(hash(beforeW06005Product(product, slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
+    assert.equal(hash(beforeW06005Product(beforeW12001Product(product, slug), slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
   }
 });
 
@@ -46,11 +47,11 @@ test('unseen connector rows are not assigned photograph numbers', () => {
 test('historical inverse rejects marker edits and exposes unrelated current changes', () => {
   for (const slug of Object.keys(counts)) {
     const product = read(slug);
-    const older = beforeW06005Raw(JSON.stringify(product, null, 2) + '\n', slug);
+    const older = beforeW06005Raw(beforeW12001Raw(JSON.stringify(product, null, 2) + '\n', slug), slug);
     const changedIo = structuredClone(product);
     changedIo.io = [];
-    assert.deepEqual(beforeW06005Product(changedIo, slug).io, [], slug);
-    assert.notEqual(beforeW06005Raw(JSON.stringify(changedIo, null, 2) + '\n', slug), older, slug);
+    assert.deepEqual(beforeW06005Product(beforeW12001Product(changedIo, slug), slug).io, [], slug);
+    assert.notEqual(beforeW06005Raw(beforeW12001Raw(JSON.stringify(changedIo, null, 2) + '\n', slug), slug), older, slug);
     const changedMap = structuredClone(product);
     const marker = changedMap.portMap.items[0];
     if (marker.x1 === undefined) marker.y1 += 1;

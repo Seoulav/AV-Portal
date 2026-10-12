@@ -1,7 +1,11 @@
 import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name, withoutW006Uploads } from './w006-history.mjs';
-import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
+import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(value, slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(value, slug), slug);
+
 import { beforeW032Mirrors, beforeW032Raw } from './w032-history.mjs';
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
