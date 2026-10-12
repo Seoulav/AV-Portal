@@ -16,7 +16,7 @@ test('camera flows use verified I/O without invented Genlock or output grades', 
   const brc=product('brc-am7'), srg=product('srg-a40');
   assert.ok(prepareEnhancements(brc).signalFlow);
   assert.ok(prepareEnhancements(srg).signalFlow);
-  for(const slug of cameras.slice(2)) assert.equal(product(slug).signalFlow,undefined);
+  for(const slug of ['rm-ip10','rm-ip500','cl01']) assert.equal(product(slug).signalFlow,undefined);
   const a=JSON.stringify(brc.signalFlow), b=JSON.stringify(srg.signalFlow);
   assert.match(a,/SDI OUT1.*12G|12G.*SDI OUT1/);
   assert.match(a,/SDI OUT2.*3G|3G.*SDI OUT2/);

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
+import { beforeW12004Raw } from './w12004-history.mjs';
 import { beforeW06003Product } from './w06003-history.mjs';
 import { beforeW06005Product } from './w06005-history.mjs';
 import { beforeW12001Product } from './w12001-history.mjs';
@@ -26,7 +27,7 @@ test('current camera technical fields are identical to the pre-W-032 baseline', 
       assert.deepEqual(current[key], baseline[key], `${slug}: ${key}`);
     }
   }
-  for (const [slug, hash] of untouched) assert.equal(sha(beforeW12002Raw(raw(slug),slug)), hash, slug);
+  for (const [slug, hash] of untouched) assert.equal(sha(beforeW12004Raw(beforeW12002Raw(raw(slug),slug),slug)), hash, slug);
 });
 
 test('historical inverse keeps current I/O, model and Port Map changes visible', () => {

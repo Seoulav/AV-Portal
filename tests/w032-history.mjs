@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW12004Product, beforeW12004Raw } from './w12004-history.mjs';
 
 // Historical assertions retain their original hashes. Undo only the W-032
 // document edits and new flows at those assertions, using the actual current
@@ -16,6 +17,8 @@ const hasOwn = (object, key) => Object.hasOwn(object, key);
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW032Product(product, slug) {
+  // Shared historical read path: remove W-004's approved flow only.
+  product = beforeW12004Product(product, slug);
   const after = approved[slug];
   if (!after) return structuredClone(product);
   const before = JSON.parse(readFileSync(new URL(`./fixtures/w032-before/${slug}.json`, import.meta.url), 'utf8'));
@@ -48,7 +51,7 @@ export function beforeW032Product(product, slug) {
 }
 
 export function beforeW032Raw(raw, slug) {
-  if (!approved[slug]) return raw;
+  if (!approved[slug]) return beforeW12004Raw(raw, slug);
   return JSON.stringify(beforeW032Product(JSON.parse(raw), slug), null, 2) + (raw.endsWith('\n') ? '\n' : '');
 }
 
