@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { beforeW12002Product, beforeW12002Raw, w12002Slugs } from './w12002-wording-history.mjs';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
+import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 
-const product=slug=>JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8'));
+const product=slug=>beforeW12005Product(JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8')),slug);
 test('wording history restores only approved feature and marker text',()=>{
   assert.equal(w12002Slugs.size,194);
   const current=product('ki-pro-go2');
@@ -36,7 +37,7 @@ test('wording history rejects unexpected changed sentence, missing marker, or co
 
 test('raw inverse is limited to affected products',()=>{
   const raw=readFileSync(new URL('../beta/site/detail/data/ki-pro-go2.json',import.meta.url),'utf8');
-  assert.notEqual(beforeW12002Raw(raw,'ki-pro-go2'),raw);
+  assert.notEqual(beforeW12002Raw(beforeW12005Raw(raw,'ki-pro-go2'),'ki-pro-go2'),raw);
   const unrelated=readFileSync(new URL('../beta/site/detail/data/blucard-in.json',import.meta.url),'utf8');
   assert.equal(beforeW12002Raw(unrelated,'blucard-in'),unrelated);
 });
