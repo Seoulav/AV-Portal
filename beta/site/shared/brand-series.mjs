@@ -1,6 +1,18 @@
 // Display groups for brands with a dedicated series-choice stage. Keep the
 // catalog's brandSort values intact; this module only maps them for navigation.
 const SERIES = {
+  Shure: {
+    label: 'Shure',
+    groups: [
+      { id: 'ulx-d', label: 'ULX-D \uBB34\uC120 \uC2DC\uC2A4\uD15C', members: ['ULX-D'] },
+      { id: 'qlx-d', label: 'QLX-D \uBB34\uC120 \uC2DC\uC2A4\uD15C', members: ['QLX-D'] },
+      { id: 'slx-d-plus', label: 'SLX-D Plus \uBB34\uC120 \uC2DC\uC2A4\uD15C', members: ['SLX-D+'] },
+      { id: 'mxc', label: '\uD68C\uC758\uC6A9 \uC7A5\uBE44 (MXC\u00B7MXCW)', members: ['MXC'] },
+      { id: 'mx', label: 'Microflex \uC720\uC120 \uB9C8\uC774\uD06C', members: ['MX'] },
+      { id: 'mxa', label: '\uCC9C\uC7A5 \uC5B4\uB808\uC774 (MXA)', members: ['MXA'] },
+      { id: 'ua', label: '\uC548\uD14C\uB098\u00B7\uBD84\uBC30', members: ['UA'] }
+    ]
+  },
   Samsung: {
     label: '삼성전자',
     groups: [

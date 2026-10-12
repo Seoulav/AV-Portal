@@ -45,7 +45,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
     "slug": "mxcw640",
-    "card_image": "mxcw640-main.webp"
+    "card_image": "mxcw640-main.webp",
+    "brandSort": {
+      "group": "MXC",
+      "order": 4
+    }
   },
   {
     "brand": "Yamaha",
@@ -156,7 +160,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd4q",
-    "card_image": "ulxd4q-front.webp"
+    "card_image": "ulxd4q-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -172,7 +180,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
     "slug": "qlxd4",
-    "card_image": "qlxd4-front.webp"
+    "card_image": "qlxd4-front.webp",
+    "brandSort": {
+      "group": "QLX-D",
+      "order": 2
+    }
   },
   {
     "brand": "Shure",
@@ -188,7 +200,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/UA874",
     "slug": "ua874xa",
-    "card_image": "ua874xa-front.webp"
+    "card_image": "ua874xa-front.webp",
+    "brandSort": {
+      "group": "UA",
+      "order": 7
+    }
   },
   {
     "brand": "Sony",
@@ -1772,7 +1788,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/A900-GM",
     "slug": "a900w-r-gm",
-    "card_image": "a900w-r-gm-front.webp"
+    "card_image": "a900w-r-gm-front.webp",
+    "brandSort": {
+      "group": "MXA",
+      "order": 6
+    }
   },
   {
     "brand": "Shure",
@@ -1788,7 +1808,11 @@
     ],
     "link_scope": "series",
     "slug": "mx395",
-    "card_image": "mx395-front.webp"
+    "card_image": "mx395-front.webp",
+    "brandSort": {
+      "group": "MX",
+      "order": 5
+    }
   },
   {
     "brand": "Shure",
@@ -1805,7 +1829,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd2-beta58",
-    "card_image": "ulxd2-beta58-front.webp"
+    "card_image": "ulxd2-beta58-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -1822,7 +1850,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd2-beta87",
-    "card_image": "ulxd2-beta87-front.webp"
+    "card_image": "ulxd2-beta87-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -1839,7 +1871,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd1",
-    "card_image": "ulxd1-front.webp"
+    "card_image": "ulxd1-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -1856,7 +1892,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd8",
-    "card_image": "ulxd8-front.webp"
+    "card_image": "ulxd8-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -1872,7 +1912,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/UA844SWBplus",
     "slug": "ua844-swb",
-    "card_image": "ua844swb-front.webp"
+    "card_image": "ua844swb-front.webp",
+    "brandSort": {
+      "group": "UA",
+      "order": 7
+    }
   },
   {
     "brand": "Shure",
@@ -1888,7 +1932,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/MX400D",
     "slug": "mx418d-c",
-    "card_image": "mx418dc-front.webp"
+    "card_image": "mx418dc-front.webp",
+    "brandSort": {
+      "group": "MX",
+      "order": 5
+    }
   },
   {
     "brand": "JBL",
@@ -3287,7 +3335,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
     "slug": "mxcwapt-w",
-    "card_image": "mxcwaptw-front.webp"
+    "card_image": "mxcwaptw-front.webp",
+    "brandSort": {
+      "group": "MXC",
+      "order": 4
+    }
   },
   {
     "brand": "Shure",
@@ -3304,7 +3356,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/MXCW",
     "slug": "mxc420-c",
-    "card_image": "mxc420c-front.webp"
+    "card_image": "mxc420c-front.webp",
+    "brandSort": {
+      "group": "MXC",
+      "order": 4
+    }
   },
   {
     "brand": "Yamaha",
@@ -3762,7 +3818,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/MXA925",
     "slug": "mxa925w-r",
-    "card_image": "mxa925wr-front.webp"
+    "card_image": "mxa925wr-front.webp",
+    "brandSort": {
+      "group": "MXA",
+      "order": 6
+    }
   },
   {
     "brand": "Shure",
@@ -3779,7 +3839,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd4d",
-    "card_image": "ulxd4d-front.webp"
+    "card_image": "ulxd4d-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -3796,7 +3860,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd4",
-    "card_image": "ulxd4-front.webp"
+    "card_image": "ulxd4-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -3813,7 +3881,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/ULXD",
     "slug": "ulxd2-ksm9",
-    "card_image": "ulxd2-ksm9-front.webp"
+    "card_image": "ulxd2-ksm9-front.webp",
+    "brandSort": {
+      "group": "ULX-D",
+      "order": 1
+    }
   },
   {
     "brand": "Shure",
@@ -3830,7 +3902,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
     "slug": "qlxd2-beta87a",
-    "card_image": "qlxd2-beta87a-front.webp"
+    "card_image": "qlxd2-beta87a-front.webp",
+    "brandSort": {
+      "group": "QLX-D",
+      "order": 2
+    }
   },
   {
     "brand": "Shure",
@@ -3847,7 +3923,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
     "slug": "qlxd2-beta58",
-    "card_image": "qlxd2-beta58-front.webp"
+    "card_image": "qlxd2-beta58-front.webp",
+    "brandSort": {
+      "group": "QLX-D",
+      "order": 2
+    }
   },
   {
     "brand": "Shure",
@@ -3864,7 +3944,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/QLXD",
     "slug": "qlxd1",
-    "card_image": "qlxd1-front.webp"
+    "card_image": "qlxd1-front.webp",
+    "brandSort": {
+      "group": "QLX-D",
+      "order": 2
+    }
   },
   {
     "brand": "Shure",
@@ -3881,7 +3965,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/UA864",
     "slug": "ua864a",
-    "card_image": "ua864a-front.webp"
+    "card_image": "ua864a-front.webp",
+    "brandSort": {
+      "group": "UA",
+      "order": 7
+    }
   },
   {
     "brand": "Shure",
@@ -3898,7 +3986,11 @@
     "link_scope": "series",
     "manual_link": "https://www.shure.com/en-US/docs/guide/MX39x",
     "slug": "mx392-c",
-    "card_image": "mx392c-front.webp"
+    "card_image": "mx392c-front.webp",
+    "brandSort": {
+      "group": "MX",
+      "order": 5
+    }
   },
   {
     "brand": "Lightware",
@@ -3976,7 +4068,11 @@
     ],
     "manual_link": "https://www.shure.com/en-US/docs/guide/UA845UWB",
     "slug": "ua845uwb",
-    "card_image": "ua845uwb-front.webp"
+    "card_image": "ua845uwb-front.webp",
+    "brandSort": {
+      "group": "UA",
+      "order": 7
+    }
   },
   {
     "brand": "Shure",
@@ -3992,7 +4088,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd4d-plus",
-    "card_image": "slxd4d-plus-front.webp"
+    "card_image": "slxd4d-plus-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "Shure",
@@ -4008,7 +4108,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd4-plus",
-    "card_image": "slxd4-plus-front.webp"
+    "card_image": "slxd4-plus-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "Shure",
@@ -4024,7 +4128,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd2-plus-58",
-    "card_image": "slxd2-plus-58-front.webp"
+    "card_image": "slxd2-plus-58-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "Shure",
@@ -4040,7 +4148,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd2-plus-b58",
-    "card_image": "slxd2-plus-b58-front.webp"
+    "card_image": "slxd2-plus-b58-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "Shure",
@@ -4056,7 +4168,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd2-plus-b87a",
-    "card_image": "slxd2-plus-b87a-front.webp"
+    "card_image": "slxd2-plus-b87a-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "Shure",
@@ -4072,7 +4188,11 @@
     ],
     "manual_link": "https://pubs.shure.com/view/guide/SLXD4plus/en-US.pdf",
     "slug": "slxd1-plus",
-    "card_image": "slxd1-plus-front.webp"
+    "card_image": "slxd1-plus-front.webp",
+    "brandSort": {
+      "group": "SLX-D+",
+      "order": 3
+    }
   },
   {
     "brand": "NETGEAR",
