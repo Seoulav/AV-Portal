@@ -102,3 +102,11 @@
 - PR #415 병합 SHA `62879814cd5ad4e52cb727a419594d584829d498`; Pages run `38255978790` 성공.
 - Pages 이후 공개 Builder URL에서 MEZZO 322 AD를 추가해 Line Audio In 1·2, Speaker Out 1, Dante I/O 1·2를 확인했다. 이슈는 0, 미확정 GPI 행은 `확인 1`로 유지됐다. [화면 캡처](기록/W-20261012-013-screens/public-builder-powersoft-mezzo-322-ad-1280.png).
 - 다음 제조사 검토는 BSS Audio 묶음부터 이어간다.
+### BSS Audio 묶음
+
+- 상태: 구현·집중/전체 검증 완료, PR 준비. 작업 브랜치 `codex/W-20261012-013-phase4-bss`.
+- 변경 대상은 `blu-100`, `blu-101`, `blu-160`, `blu-50v2`의 `IO_OVERRIDES` 4건이다. 제품 JSON은 바꾸지 않았다.
+- 모델별 BSS 공식 데이터시트의 12 control inputs·6 logic outputs를 방향별 GPIO 포트로 분리했다. BLU-100/101/160은 원문 Phoenix/Combicon을 terminal block으로 나타냈고, BLU-50v2는 단자 형상을 공식 자료가 특정하지 않아 `UNKNOWN`으로 보존했다.
+- Builder 전후: 303 제품·1,455 I/O·2,226 단자·229 확인 필요·단자 0 제품 5 → 303·1,455·2,298·225·5. BSS 미해결 10→6행.
+- 남은 BSS 6행: BLU-160 선택 카드 I/O 5행은 실제 장착 구성이 제품별로 다르고, BLU-50v2 watchdog output 1행은 수량이 공개 자료에서 불명확해 미해결로 보존했다.
+- BSS 집중 5/5, Builder 기존 검사 14/14, 전체 직렬 검사 507건 중 506 pass·0 fail·skip 1. 검색 인덱스 `--check`, `verify-pages` 통과. Pages 공개 BSS 화면 캡처와 최신 main 재통합·파생물 재생성·최종 검증·리뷰·PR·배포가 남았다.

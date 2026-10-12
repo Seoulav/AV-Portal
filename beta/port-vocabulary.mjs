@@ -336,6 +336,37 @@ export const IO_OVERRIDES = Object.freeze({
     match: { connector: 'Output terminal block', signal: 'Speaker output' },
     ports: [{ connector: 'TERMINAL-BLOCK', signals: ['SPEAKER'], direction: 'out', quantity: 1 }],
     note: 'Powersoft MEZZO user guide rear-panel callout identifies one connector for CH2–CH1 outputs; the series datasheet specifies two output channels on Euro 5 mm for the 322 AD; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },  'blu-100#5': {
+    match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
+    ports: [
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'in', quantity: 12 },
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'out', quantity: 6 },
+    ],
+    note: 'BSS BLU-100 datasheet lists 12 control inputs and 6 logic outputs; source row identifies Phoenix/Combicon; https://bssaudio.com/en/product_documents/blu100_datasheetpdf',
+  },
+  'blu-101#5': {
+    match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
+    ports: [
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'in', quantity: 12 },
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'out', quantity: 6 },
+    ],
+    note: 'BSS BLU-101 model-specific datasheet lists 12 control inputs and 6 logic outputs; source row identifies Phoenix/Combicon; https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf',
+  },
+  'blu-160#8': {
+    match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
+    ports: [
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'in', quantity: 12 },
+      { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'out', quantity: 6 },
+    ],
+    note: 'BSS BLU-160 datasheet lists 12 control inputs and 6 logic outputs; source row identifies Phoenix/Combicon; https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
+  },
+  'blu-50v2#5': {
+    match: { connector: '커넥터 규격 정보 없음', signal: '제어 입력/로직 출력(GPIO)' },
+    ports: [
+      { connector: 'UNKNOWN', signals: ['GPIO'], direction: 'in', quantity: 12 },
+      { connector: 'UNKNOWN', signals: ['GPIO'], direction: 'out', quantity: 6 },
+    ],
+    note: 'BSS BLU-50v2 manufacturer product page/datasheet list 12 control inputs and 6 logic outputs; neither maps a connector shape to those ports, so preserve UNKNOWN; https://bssaudio.com/ko/products/blu-50v2 ; https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2',
   },  'i-tech-4x3500hd#1': {
     match: {
       connector: 'XLR-3F(아날로그·AES3 입력), etherCON/RJ-45(CobraNet·VDrive)',
