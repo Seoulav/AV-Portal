@@ -4599,5 +4599,20 @@
     "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Technical+Datasheet/Aquilon-RS-alpha-datasheet-en-20260703.pdf",
     "slug": "aquilon-rsalpha",
     "card_image": "aquilon-rsalpha-front.webp"
+  },
+  {
+    "brand": "VS ENT",
+    "product": "DS-8S",
+    "categories": [
+      "제어",
+      "Control",
+      "Power Conditioner"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    ],
+    "slug": "ds-8s",
+    "card_image": "ds-8s-front.webp"
   }
 ]

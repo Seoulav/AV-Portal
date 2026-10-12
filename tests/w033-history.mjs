@@ -6,7 +6,9 @@ const files = new Set([
 ]);
 
 export function beforeW033Uploads(uploads) {
-  return uploads.filter(entry => entry.slug !== 'lh43behhlbfxkr' || !files.has(entry.file));
+  // The DS-8S uploads were added after W-033. They also must not enter
+  // assertions about the earlier upload inventory.
+  return uploads.filter(entry => entry.slug !== 'ds-8s' && (entry.slug !== 'lh43behhlbfxkr' || !files.has(entry.file)));
 }
 
 export function isW033Manual(name) {

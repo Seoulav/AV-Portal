@@ -21,7 +21,7 @@ test('discontinued LH98QEC is absent from every active Library artifact', () => 
   assert.equal(Object.hasOwn(cardImages, slug), false);
 
   const snapshot = read('beta/public-snapshot.json');
-  assert.equal(snapshot.catalog.count - 1, 272);
+  assert.equal(snapshot.catalog.count - 2, 272);
   assert.equal(Object.keys(snapshot.details).filter(name => !isW1010Name(name) && !isW1012Name(name)).length, 265);
   assert.equal(Object.hasOwn(snapshot.details, slug), false);
   assert.equal(readdirSync(new URL('beta/site/detail/data/', root)).filter(name => name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name)).length, 265);

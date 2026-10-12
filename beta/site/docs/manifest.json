@@ -1701,6 +1701,18 @@
       "file": "manuals/samsung-behx-h-common-manual-ko.pdf",
       "kind": "manual",
       "title": "삼성전자 BEHX-H 공용 통합 사용설명서 BN81-28760B-500 · 모델별 단자 배치 미확인"
+    },
+    {
+      "slug": "ds-8s",
+      "file": "manuals/vs-ent-ds-8s-leaflet-ko.pdf",
+      "kind": "reference",
+      "title": "VS ENT DS-8S 리플렛(사용자 제공)"
+    },
+    {
+      "slug": "ds-8s",
+      "file": "manuals/vs-ent-ds-8s-amx-manual-ko.pdf",
+      "kind": "manual",
+      "title": "VS ENT DS-8S AMX 통신 설명서(사용자 제공)"
     }
   ]
 }

@@ -28,6 +28,7 @@ export const manufacturerHosts = {
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
   SurgeX: ['ametekesp.com'],
   Televic: ['televic-conference.com', 'televic.digital', 'televic.com'],
+  'VS ENT': ['vsent.co.kr'],
   Yamaha: ['yamaha.com'],
   Yealink: ['yealink.com']
 };
@@ -41,3 +42,7 @@ export function allowedHostsFor(brand) {
 export function isAllowedHost(hostname, hosts) {
   return hosts.some(host => hostname === host || hostname.endsWith(`.${host}`));
 }
+
+// VS ENT currently serves its DS-8S page over HTTP only. Keep the exception
+// at one exact manufacturer URL; all other official links still require HTTPS.
+export const isAllowedHttpOfficialPage = url => url === 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14';

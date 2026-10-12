@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { withoutW011Uploads } from './w011-history.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -62,7 +63,7 @@ test('six established QMC records and published PDFs remain untouched', () => {
     const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
     assert.equal(sha(beforeW12002Raw(normalized,slug)), hash, slug);
   }
-  const uploads = json('beta/site/docs/manifest.json').uploads;
+  const uploads = withoutW011Uploads(json('beta/site/docs/manifest.json').uploads);
   assert.equal(uploads.length, 128);
   assert.equal(uploads.filter(upload => upload.locked).length, 12);
 });
