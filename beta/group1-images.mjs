@@ -170,13 +170,13 @@ export const group1Images = {
     image('Rear', 'sx-1216-rti-rear.webp', 'SurgeX SX-1216-RTi 후면 단자 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '740×120', 'FOUND')
   ],
   'led-780h': [
-    image('Front', 'led-780h-front.webp', 'Magnimage LED-780H 전면 이미지', 'Magnimage', 'LED-780H', 'https://www.magnimage.com/article/ddddeffeefe', '880×278(제조사 제품 목록 대표 이미지)', '880×159', 'FOUND')
+    image('Front', 'led-780h-front.webp', 'Magnimage LED-780H 전면 이미지', 'Magnimage', 'LED-780H', 'https://www.magnimage.com/Upload/2022/7/202207266625494.png', '880×278(제조사 제품 목록 대표 이미지)', '880×220', 'FOUND')
   ],
   'hdmi20-optj-tx90': [
-    image('Front', 'hdmi20-optj-tx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-TX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '905×177', 'FOUND')
+    image('Front', 'hdmi20-optj-tx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-TX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-TX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '980×340', 'FOUND')
   ],
   'hdmi20-optj-rx90': [
-    image('Front', 'hdmi20-optj-rx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-RX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-RX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '905×177', 'FOUND')
+    image('Front', 'hdmi20-optj-rx90-front.webp', 'Lightware HDMI20-OPTJ-TX90/RX90 공용 외관 이미지', 'Lightware', 'HDMI20-OPTJ-RX90', 'https://assets.prod.pim.lightware.com/assets/File-Downloads/Images-and-Drawings/Product-Pictures/HDMI20-OPTJ-RX90/4-WebImage/HDMI20-OPTJ-RX-TX90_Front.png', '1200×780', '980×340', 'FOUND')
   ],
   'avio-bt': [
     image('Main', 'avio-bt-main.webp', 'Audinate Dante AVIO Bluetooth I/O Adapter 이미지', 'Audinate', 'Dante AVIO Bluetooth Adapter (ADP-BT-AU-2X1)', 'https://www.getdante.com/wp-content/uploads/2024/01/avio-bluetooth-crop.png', '약 460×346(WordPress 미디어)', '385×129', 'VERIFIED')
@@ -958,8 +958,8 @@ export const group1Images = {
     image('Front', 'mx395-front.webp', 'MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지', 'Shure', 'MX395 Microflex Low Profile Boundary Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp', '2397x2397', '1500x1500')
   ],
   'ua844-swb': [
-    image('Front', 'ua844swb-front.webp', 'UA844+SWB 랙마운트 전면 패널 (전원 LED, 470-952MHz 표기)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/6f8/07b/2a-/original/5dc9d3e64aaa92a9c959f1ef9bbed0a3.webp', '3000x3000', '1500x1500'),
-    image('Rear', 'ua844swb-rear.webp', 'UA844+SWB 후면 패널 (Antenna A/B, RF Output A/B, Cascade, Power In/Out 커넥터)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_images/files/64a/850/63-/original/de2d6cc3ee3e23eccb299dffdc5a22c9.webp', '3000x3000', '1500x1500')
+    image('Front', 'ua844swb-front.webp', 'UA844+SWB 랙마운트 전면 패널 (전원 LED, 470-952MHz 표기)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/6f8/07b/2a-/original/5dc9d3e64aaa92a9c959f1ef9bbed0a3.webp', '3000x3000', '2960x600'),
+    image('Rear', 'ua844swb-rear.webp', 'UA844+SWB 후면 패널 (Antenna A/B, RF Output A/B, Cascade, Power In/Out 커넥터)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_images/files/64a/850/63-/original/de2d6cc3ee3e23eccb299dffdc5a22c9.webp', '3000x3000', '2960x600')
   ],
   'mx418d-c': [
     image('Front', 'mx418dc-front.webp', 'MX418D/C 전용 정면 이미지(18인치 구스넥, 데스크탑 베이스, XLR 커넥터)', 'Shure', 'MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18", Cardioid, with Desktop Base', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/0dd/25f/e7-/original/98ba7f2494e6332fb99aa9e1eaf1b9c1.webp', '2664x2664', '1164x2000', 'VERIFIED')
@@ -977,15 +977,15 @@ export const group1Images = {
     image('Rear', 'mxa925w-r-rear.webp', 'MXA925W-R 후면 (천장 장착면, 모델 라벨 \'MXA925W-R Microflex Advance Ceiling Array Microphone\', 네트워크 단자 수납부 커버)', 'Shure', 'MXA925W-R', 'https://products.shureweb.eu/shure_product_db/product_images/files/f15/407/81-/original/a455fc40213212d66f2339ed85483901.webp', '3000x3000', '1997x2000', 'VERIFIED')
   ],
   ua864a: [
-    image('Front', 'ua864a-front.webp', 'UA864 벽면형 광대역 안테나 (화이트 하우징, 전면 게인 스위치/LED)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/265/152/2a-/original/360efcae2b1c88e5f044c28fd536eedc.webp', '3000x3000', '1500x1500'),
-    image('Rear', 'ua864a-rear.webp', 'UA864 후면 마운팅 플레이트 (케이블 배선 채널, BNC 커넥터, 게인 스위치 라벨)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a39/ea7/e1-/original/bbe7a66c6bc370a61bc0e5047fe0a083.webp', '3000x3000', '1500x1500')
+    image('Front', 'ua864a-front.webp', 'UA864 벽면형 광대역 안테나 (화이트 하우징, 전면 게인 스위치/LED)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/265/152/2a-/original/360efcae2b1c88e5f044c28fd536eedc.webp', '3000x3000', '2400x2140'),
+    image('Rear', 'ua864a-rear.webp', 'UA864 후면 마운팅 플레이트 (케이블 배선 채널, BNC 커넥터, 게인 스위치 라벨)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a39/ea7/e1-/original/bbe7a66c6bc370a61bc0e5047fe0a083.webp', '3000x3000', '2400x2140')
   ],
   'mx392-c': [
     image('Front', 'mx392c-front.webp', 'MX392 바운더리 마이크로폰 (원형 로우프로파일 하우징, 상단 케이블 출구)', 'Shure', 'MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/831/97f/c9-/original/77bca0e1da0c0c30e908e78d266c8c8a.webp', '3000x3000', '1500x1500')
   ],
   ua845uwb: [
-    image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '1500x1500'),
-    image('Rear', 'ua845uwb-rear.webp', 'UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp', '3300x3300', '1500x1500')
+    image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '3140x700'),
+    image('Rear', 'ua845uwb-rear.webp', 'UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp', '3300x3300', '3140x700')
   ]
 };
 

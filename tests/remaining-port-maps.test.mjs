@@ -110,6 +110,7 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
 });
 
 test('surviving published images and PDFs retain their baseline SHA-256', () => {
+  const updatedImages=JSON.parse(bytes('Work/기록/W-20261006-004-image-hashes.json'));
   assert.equal(Object.keys(proof.assets).length,489);
   for(const [path,hash] of Object.entries(proof.assets)){
     // Historical evidence includes the W-20261002-011 discontinued product.
@@ -117,6 +118,11 @@ test('surviving published images and PDFs retain their baseline SHA-256', () => 
     // W-026 explicitly recrops GSM4248PX's existing Rear asset; the new
     // product-specific test locks its current bytes and dimensions.
     if(path==='detail/images/lh98qecedgcxkr-main.webp'||path==='detail/images/gsm4248px-rear.webp'||path==='catalog.json'||path==='docs/manifest.json') continue;
+    if(path.startsWith('detail/images/')&&updatedImages[path.split('/').at(-1)]) {
+      assert.equal(hash,updatedImages[path.split('/').at(-1)].priorSha256,path+' prior image bytes');
+      assert.equal(sha(bytes('beta/site/'+path)),updatedImages[path.split('/').at(-1)].approvedSha256,path+' approved replacement');
+      continue;
+    }
     const hashFile=/\.(json|svg)$/.test(path)?textSha:sha;
     assert.equal(hashFile(bytes('beta/site/'+path)),hash,path);
   }

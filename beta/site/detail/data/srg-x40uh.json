@@ -646,12 +646,12 @@
     {
       "group": "Network / Power",
       "connector": "LAN RJ-45",
-      "signal": "Network/PoE",
+      "signal": "Network/PoE+",
       "direction": "I/O",
       "quantity": "1",
       "protocol": "VISCA over IP, PoE+ (IEEE802.3at)",
       "availability": "Fixed",
-      "condition": "LAN 속도 규격은 공식 사양에 명시 없음(정보 없음)",
+      "condition": "LAN 속도 규격은 공식 사양에 명시 없음(정보 없음) · PoE+ (IEEE802.3at)",
       "source": "PP, OI",
       "verification": "VERIFIED"
     },
