@@ -497,7 +497,7 @@ export const group1Images = {
   ],
   'ultritouch-2-hr': [
     image('Front', 'ultritouch-2-hr-main.webp', 'Ultritouch-2-HR 전면 (Ultritouch 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg', '1600x800', '1600x800', 'VERIFIED'),
-    image('Rear', 'ultritouch-2-hr-rear.webp', 'Ultritouch 후면 패널 - 전원/네트워크 커넥터 (참고용, 2RU/4RU 공용 이미지일 가능성 있음)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back.jpg', '1600x800', '1600x800', 'FOUND')
+    image('Rear', 'ultritouch-2-hr-rear.webp', 'Ultritouch-2-HR 후면 측면 단자 — PWR1·PWR2·ENET1 소켓', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Back-Angled.jpg', '1600x800', '1600x800', 'FOUND')
   ],
   'novastar-h2': [
     image('Front', 'h2-front.webp', 'NovaStar H2 전면부', 'NovaStar', 'H2', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x532', '2400x532', 'VERIFIED'),

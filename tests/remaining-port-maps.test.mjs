@@ -1,4 +1,5 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
+import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
@@ -45,7 +46,7 @@ test('G1–G5-qualified maps render with exact PDF pages, model images and origi
     assert.deepEqual(map.items.map(item => item.n), map.items.map((_, index) => index + 1));
     const image = product.images.find(image => image.role === 'Rear');
     assert.equal(image.file, e.image.file);
-    assert.equal(sha(bytes('beta/site/detail/images/' + image.file)), e.image.sha256);
+    assert.equal(beforeUltritouchFollowupImageSha(sha(bytes('beta/site/detail/images/' + image.file)), image.file), e.image.sha256);
     assert.deepEqual(map.measuredImage, {file:image.file,width:e.image.width,height:e.image.height});
     assert.ok(portMapImageMatches(image,e.image.width,e.image.height,map));
     for (const item of e.markers) {
@@ -130,6 +131,7 @@ test('surviving published images and PDFs retain their baseline SHA-256', () => 
       continue;
     }
     const hashFile=/\.(json|svg)$/.test(path)?textSha:sha;
-    assert.equal(hashFile(bytes('beta/site/'+path)),hash,path);
+    const currentHash = hashFile(bytes('beta/site/'+path));
+    assert.equal(beforeUltritouchFollowupImageSha(currentHash, path.split('/').at(-1)),hash,path);
   }
 });

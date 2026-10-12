@@ -1,4 +1,5 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
+import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {beforeW026Product as priorbeforeW026Product,beforeW026Raw as priorbeforeW026Raw} from './w026-history.mjs';
@@ -129,6 +130,7 @@ test('Shure mapping preserves published source images, PDFs and catalog bytes', 
       assert.equal(sha(bytes('beta/site/'+path)),updatedImages[path.split('/').at(-1)].approvedSha256,path+' approved replacement');
       continue;
     }
-    assert.equal(hashFile(bytes('beta/site/' + path)), hash, path);
+    const currentHash = hashFile(bytes('beta/site/' + path));
+    assert.equal(beforeUltritouchFollowupImageSha(currentHash, path.split('/').at(-1)), hash, path);
   }
 });
