@@ -447,5 +447,24 @@
       "value": "AES-128 암호화",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "mxcwapt-w-rear.webp",
+      "width": 2000,
+      "height": 1182
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "아날로그 오디오 출력",
+        "desc": "3핀 수 XLR 출력",
+        "x1": 1039,
+        "x2": 1255,
+        "y": 972,
+        "side": "bottom"
+      }
+    ]
+  }
 }

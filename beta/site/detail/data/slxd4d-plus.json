@@ -739,5 +739,69 @@
       "value": "하프랙 수신기(랙 마운트 하드웨어 동봉)",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "slxd4d-plus-rear.webp",
+      "width": 2000,
+      "height": 1324
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 B 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 99,
+        "x2": 263,
+        "y": 1133,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 A 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 1670,
+        "x2": 1837,
+        "y": 1133,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "OUTPUT 1 · XLR/6.35 mm",
+        "desc": "채널 1 오디오 출력 2종",
+        "x1": 1190,
+        "x2": 1618,
+        "y": 1129,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "OUTPUT 2 · XLR/6.35 mm",
+        "desc": "채널 2 오디오 출력 2종",
+        "x1": 710,
+        "x2": 1145,
+        "y": 1129,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "LAN",
+        "desc": "제어 네트워크 RJ-45",
+        "x1": 514,
+        "x2": 678,
+        "y": 1136,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "DC 15V 입력",
+        "desc": "외부 전원 공급기 연결",
+        "x1": 352,
+        "x2": 470,
+        "y": 1127,
+        "side": "bottom"
+      }
+    ]
+  }
 }

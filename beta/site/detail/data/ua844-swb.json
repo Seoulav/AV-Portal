@@ -381,5 +381,69 @@
       "value": "14 ~ 18",
       "unit": "V DC"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ua844swb-rear.webp",
+      "width": 2960,
+      "height": 600
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 B 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 657,
+        "x2": 778,
+        "y": 404,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 A 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 2728,
+        "x2": 2851,
+        "y": 404,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "RF OUTPUT B 1–4",
+        "desc": "수신기 RF 분배 출력 4개",
+        "x1": 1019,
+        "x2": 1702,
+        "y": 404,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "RF OUTPUT A 1–4",
+        "desc": "수신기 RF 분배 출력 4개",
+        "x1": 1807,
+        "x2": 2496,
+        "y": 404,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DC OUTPUT 1–4",
+        "desc": "수신기 전원 분배 출력 4개",
+        "x1": 237,
+        "x2": 601,
+        "y": 348,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "전원 입력",
+        "desc": "후면 power in 단자",
+        "x1": 136,
+        "x2": 244,
+        "y": 298,
+        "side": "bottom"
+      }
+    ]
+  }
 }

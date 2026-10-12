@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import { beforeW06003Product } from './w06003-history.mjs';
+import { beforeW06005Product } from './w06005-history.mjs';
 
 const root = new URL('../beta/site/detail/data/', import.meta.url);
 const raw = slug => readFileSync(new URL(`${slug}.json`, root), 'utf8').replace(/\r\n/g, '\n');
@@ -17,7 +18,7 @@ const untouched = new Map([
 
 test('current camera technical fields are identical to the pre-W-032 baseline', () => {
   for (const slug of changed) {
-    const current = beforeW06003Product(JSON.parse(raw(slug)), slug);
+    const current = beforeW06003Product(beforeW06005Product(JSON.parse(raw(slug)), slug), slug);
     const baseline = JSON.parse(readFileSync(new URL(`./fixtures/w032-before/${slug}.json`, import.meta.url), 'utf8'));
     for (const key of ['model', 'io', 'specifications', 'keyFacts', 'images', 'portMap']) {
       assert.deepEqual(current[key], baseline[key], `${slug}: ${key}`);
