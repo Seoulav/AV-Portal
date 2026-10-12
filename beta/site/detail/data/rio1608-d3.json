@@ -336,5 +336,33 @@
     "footerNote": "Yamaha Rio1608-D3 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "rio1608-d3-rear.webp",
+      "width": 1087,
+      "height": 308
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "Dante PRIMARY · SECONDARY",
+        "desc": "etherCON 네트워크 포트 2개",
+        "x1": 119,
+        "x2": 232,
+        "y": 87,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "LAN · 제어",
+        "desc": "RJ-45 제어 네트워크",
+        "x1": 304,
+        "x2": 355,
+        "y": 83,
+        "side": "bottom"
+      }
+    ]
   }
 }

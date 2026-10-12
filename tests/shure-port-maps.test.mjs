@@ -1,6 +1,7 @@
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW026Product,beforeW026Raw} from './w026-history.mjs';
 import {beforeW06004Product} from './w06004-history.mjs';
+import {beforeW06005Product} from './w06005-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
 import test from 'node:test';
@@ -18,7 +19,7 @@ import {beforeShureW04003,beforeShureW04003Raw,shureW04003Slug} from './shure-w0
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
   const product=JSON.parse(bytes(path));
-  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(product,path.split('/').at(-1).slice(0,-5)):product;
+  return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeW06005Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
 // Git stores text with LF; compare repository bytes across Windows/Linux checkouts.

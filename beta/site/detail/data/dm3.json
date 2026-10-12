@@ -404,5 +404,105 @@
     "footerNote": "Yamaha DM3 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "dm3-rear.webp",
+      "width": 1082,
+      "height": 476
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "INPUT 1–4",
+        "desc": "XLR 마이크·라인 입력 4채널",
+        "x1": 695,
+        "x2": 1004,
+        "y": 143,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "INPUT 5–8",
+        "desc": "XLR 마이크·라인 입력 4채널",
+        "x1": 389,
+        "x2": 692,
+        "y": 143,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "INPUT 9–12",
+        "desc": "XLR 마이크·라인 입력 4채널",
+        "x1": 695,
+        "x2": 1004,
+        "y": 242,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "INPUT 13–16 (콤보)",
+        "desc": "XLR/TRS 콤보 입력 4채널",
+        "x1": 389,
+        "x2": 692,
+        "y": 242,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "OUTPUT 1–4",
+        "desc": "XLR 라인 출력 4채널",
+        "x1": 78,
+        "x2": 385,
+        "y": 143,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "OUTPUT 5–8",
+        "desc": "XLR 라인 출력 4채널",
+        "x1": 78,
+        "x2": 385,
+        "y": 242,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "Dante PRIMARY · SECONDARY",
+        "desc": "etherCON 네트워크 포트 2개",
+        "x1": 624,
+        "x2": 779,
+        "y": 378,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "LAN",
+        "desc": "제어 네트워크 RJ-45",
+        "x1": 888,
+        "x2": 960,
+        "y": 387,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "USB TO HOST",
+        "desc": "USB Type-B",
+        "x1": 811,
+        "x2": 859,
+        "y": 400,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "DC INPUT",
+        "desc": "XLR 4핀 전원 입력",
+        "x1": 161,
+        "x2": 235,
+        "y": 379,
+        "side": "top"
+      }
+    ]
   }
 }

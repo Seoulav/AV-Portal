@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeW06004Product} from './w06004-history.mjs';
+import {beforeW06005Product} from './w06005-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -21,7 +22,7 @@ test('nine replacement images are the approved bytes and metadata names their me
     const current=JSON.parse(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root)));
     const restored=beforeW06004Product(current,slug);
     assert.deepEqual(restored.images,prior.images,slug);
-    assert.deepEqual(restored.portMap,prior.portMap===undefined?undefined:prior.portMap,slug);
+    assert.deepEqual(beforeW06005Product(restored,slug).portMap,prior.portMap===undefined?undefined:prior.portMap,slug);
     const currentOther=structuredClone(current),previousOther=structuredClone(restored);
     delete currentOther.images;delete previousOther.images;
     if(slug==='ua864a'){delete currentOther.portMap;delete previousOther.portMap;}

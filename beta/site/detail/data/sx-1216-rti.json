@@ -305,5 +305,51 @@
     "footerNote": "SurgeX SX-1216-RTi · 공식 출처 기반",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "sx-1216-rti-rear.webp",
+      "width": 740,
+      "height": 120
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "OUTPUT 1–4",
+        "desc": "사진에 보이는 IEC C13 출력 4개",
+        "x1": 203,
+        "x2": 396,
+        "y": 77,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "OUTPUT 5–8",
+        "desc": "사진에 보이는 IEC C13 출력 4개",
+        "x1": 401,
+        "x2": 590,
+        "y": 77,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "OUTPUT 9–10",
+        "desc": "사진에 보이는 IEC C13 출력 2개 · I/O 표의 수량 11과 불일치",
+        "x1": 594,
+        "x2": 688,
+        "y": 77,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "원격 트리거 입력",
+        "desc": "단자대 · 원격 켜기 트리거 입력",
+        "x1": 108,
+        "x2": 188,
+        "y": 76,
+        "side": "bottom"
+      }
+    ]
   }
 }

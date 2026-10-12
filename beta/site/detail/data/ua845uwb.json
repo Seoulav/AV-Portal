@@ -348,5 +348,78 @@
       "value": "100-240V AC, 50/60Hz (스위칭)",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ua845uwb-rear.webp",
+      "width": 3140,
+      "height": 700
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "안테나 B 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 766,
+        "x2": 878,
+        "y": 491,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "안테나 A 입력",
+        "desc": "BNC RF 안테나 입력",
+        "x1": 2902,
+        "x2": 3016,
+        "y": 490,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "RF OUTPUT B 1–4",
+        "desc": "수신기 RF 분배 출력 4개",
+        "x1": 1151,
+        "x2": 1836,
+        "y": 495,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "RF OUTPUT A 1–4",
+        "desc": "수신기 RF 분배 출력 4개",
+        "x1": 1917,
+        "x2": 2588,
+        "y": 495,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DC OUTPUT B ×2",
+        "desc": "B 구역의 수신기 전원 분배 출력 2개",
+        "x1": 874,
+        "x2": 1156,
+        "y": 384,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "DC OUTPUT A ×2",
+        "desc": "A 구역의 수신기 전원 분배 출력 2개",
+        "x1": 2080,
+        "x2": 2353,
+        "y": 384,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "AC 전원 입력",
+        "desc": "100–240V AC 입력",
+        "x1": 329,
+        "x2": 473,
+        "y": 427,
+        "side": "bottom"
+      }
+    ]
+  }
 }

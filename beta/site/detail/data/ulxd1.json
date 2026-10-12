@@ -421,5 +421,31 @@
       "value": "470–932",
       "unit": "MHz"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ulxd1-rear.webp",
+      "width": 753,
+      "height": 2211
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "TA4M 입력",
+        "desc": "마이크·악기 4핀 입력",
+        "y1": 1140,
+        "y2": 1215,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "SMA 안테나 출력",
+        "desc": "RF 송신 안테나 연결",
+        "y1": 1134,
+        "y2": 1210,
+        "side": "right"
+      }
+    ]
+  }
 }

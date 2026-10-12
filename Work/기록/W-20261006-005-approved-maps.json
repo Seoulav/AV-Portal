@@ -1,0 +1,42 @@
+{
+  "srg-a40": {
+    "mapSha": "09298606a23726e4fdf4ef171b06f4e93a296337742e5b6fe4c44a6b2197c60b",
+    "coreSha": "905caab55dd360159463f85e468997086b0346eaf83e3c0218482e1e4b873ce5"
+  },
+  "sx-1216-rti": {
+    "mapSha": "d25aedb92d9d98338dbfe3667e7ca7293cce5189a9c133ac7afd03ade34f52e5",
+    "coreSha": "8b98a57727099a3e1416f78958ce786dd41a90e4c9891ca7c07b04de93426d96"
+  },
+  "dm3": {
+    "mapSha": "19e7a6d9f0ec2ec62b290958e5dddfaa773c9263f353d3a1890d882d20756d15",
+    "coreSha": "2eaa7589392bcbcc3157106290e1bef286fc36ab5faf4aac6d1612c82fe7727d"
+  },
+  "rio1608-d3": {
+    "mapSha": "f96a3696c1894d4525631a4a5a3181d59da7dd5dd6748792e71ee1f0df1f8185",
+    "coreSha": "e532a792f73441707551eff0f2564ad83a7b7bbdc1fe3a30908d7177d5326382"
+  },
+  "ulxd1": {
+    "mapSha": "2de08cbc3a6a8b87621855af8426d944c2160b4a78425f669272a5a81e717c0d",
+    "coreSha": "5831f2506bf396dcafbd43a35405b7a781f1b909c5adfa40253d16eddcf5c017"
+  },
+  "mxcwapt-w": {
+    "mapSha": "18cdbfd6e811ae0248009d8d6ed535b8e156e5fc4c2e7f3921653eaeea284193",
+    "coreSha": "1747a4019edccb35cd4102bae17a0ec0fc95b3f017d18a7e2d0bd5dc5204d02a"
+  },
+  "slxd4d-plus": {
+    "mapSha": "61e118e14353e8ad27dd9ca451236d548cf877375e60688607932ca7d0043bda",
+    "coreSha": "bf103011269bec02d608938f735dfa1297f7f93f26629991a76201ce65ac78f0"
+  },
+  "slxd1-plus": {
+    "mapSha": "5d1b9de55242aa70db35b5fcdd3cc9cb192cdd42e35140797999a079a67ebf64",
+    "coreSha": "edc8c8ad61cab1888eb6c1049def31cf657e613df6f3ce684f4e5d2d22624c9c"
+  },
+  "ua844-swb": {
+    "mapSha": "2d11e0f74868fce8f60897e9f1658ddd786b5bde05dbc63e1bb99a3e24317623",
+    "coreSha": "ec728145dbb1e240b24b2ef82c75e61bcdd8716417aa838b7279c32653019aea"
+  },
+  "ua845uwb": {
+    "mapSha": "cf1c69d11a1d93c0902a8abd0cdb3e82d2ec84dd9de11783a16030ac3d7f0df1",
+    "coreSha": "8442825f469b866787067ac38f937c5353a23d3a5b800fc9b5248a17743ec213"
+  }
+}

@@ -991,5 +991,78 @@
     "notes": [
       "HDMI와 SDI는 동시 출력 가능하나, SDI의 4K 출력은 미지원입니다."
     ]
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "srg-a40-rear.webp",
+      "width": 814,
+      "height": 907
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "SDI 출력",
+        "desc": "SDI 영상 출력 · 4K 출력 미지원",
+        "x1": 211,
+        "x2": 273,
+        "y": 817,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 출력",
+        "desc": "HDMI 영상 출력",
+        "x1": 95,
+        "x2": 174,
+        "y": 817,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "LAN · PoE++",
+        "desc": "네트워크·전원 입력",
+        "x1": 602,
+        "x2": 714,
+        "y": 801,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "VISCA RS-422 입력",
+        "desc": "PTZ 제어 입력",
+        "x1": 87,
+        "x2": 192,
+        "y": 695,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "VISCA RS-422 출력",
+        "desc": "PTZ 제어 출력",
+        "x1": 194,
+        "x2": 304,
+        "y": 695,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "MIC 입력",
+        "desc": "3.5 mm 오디오 입력",
+        "x1": 124,
+        "x2": 179,
+        "y": 604,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "DC 19.5V 입력",
+        "desc": "외부 전원 어댑터 입력",
+        "x1": 628,
+        "x2": 699,
+        "y": 605,
+        "side": "bottom"
+      }
+    ]
   }
 }

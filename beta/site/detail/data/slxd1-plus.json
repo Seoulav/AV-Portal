@@ -598,5 +598,23 @@
       "value": "470–937.5",
       "unit": "MHz"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "slxd1-plus-rear.webp",
+      "width": 679,
+      "height": 2000
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "TA4M 입력",
+        "desc": "마이크·악기 4핀 입력",
+        "y1": 1075,
+        "y2": 1139,
+        "side": "left"
+      }
+    ]
+  }
 }
