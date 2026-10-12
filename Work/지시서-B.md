@@ -102,11 +102,14 @@
 - PR #415 병합 SHA `62879814cd5ad4e52cb727a419594d584829d498`; Pages run `38255978790` 성공.
 - Pages 이후 공개 Builder URL에서 MEZZO 322 AD를 추가해 Line Audio In 1·2, Speaker Out 1, Dante I/O 1·2를 확인했다. 이슈는 0, 미확정 GPI 행은 `확인 1`로 유지됐다. [화면 캡처](기록/W-20261012-013-screens/public-builder-powersoft-mezzo-322-ad-1280.png).
 - 다음 제조사 검토는 BSS Audio 묶음부터 이어간다.
-### BSS Audio 묶음
+### BSS Audio GPIO 묶음 (PR 준비)
 
-- 상태: 구현·집중/전체 검증 완료, PR 준비. 작업 브랜치 `codex/W-20261012-013-phase4-bss`.
-- 변경 대상은 `blu-100`, `blu-101`, `blu-160`, `blu-50v2`의 `IO_OVERRIDES` 4건이다. 제품 JSON은 바꾸지 않았다.
-- 모델별 BSS 공식 데이터시트의 12 control inputs·6 logic outputs를 방향별 GPIO 포트로 분리했다. BLU-100/101/160은 원문 Phoenix/Combicon을 terminal block으로 나타냈고, BLU-50v2는 단자 형상을 공식 자료가 특정하지 않아 `UNKNOWN`으로 보존했다.
-- Builder 전후: 303 제품·1,455 I/O·2,226 단자·229 확인 필요·단자 0 제품 5 → 303·1,455·2,298·225·5. BSS 미해결 10→6행.
-- 남은 BSS 6행: BLU-160 선택 카드 I/O 5행은 실제 장착 구성이 제품별로 다르고, BLU-50v2 watchdog output 1행은 수량이 공개 자료에서 불명확해 미해결로 보존했다.
-- BSS 집중 5/5, Builder 기존 검사 14/14, 전체 직렬 검사 507건 중 506 pass·0 fail·skip 1. 검색 인덱스 `--check`, `verify-pages` 통과. Pages 공개 BSS 화면 캡처와 최신 main 재통합·파생물 재생성·최종 검증·리뷰·PR·배포가 남았다.
+- 상태: 구현·집중 검증 완료, PR 준비. 브랜치 `codex/W-20261012-013-phase4-bss`; 세션 A 제외 제품 JSON은 수정하지 않았다.
+- `beta/port-vocabulary.mjs` exact-match override 4건과 `tests/w013-bss-ports.test.mjs` 추가. 리뷰에서 지적된 connector 원문 검증 assertion도 보완했다.
+- BSS 공식 모델별 자료로 BLU-100·101·160 GPIO 12입력·6출력을 확인해 Phoenix/Combicon 단자 포트로 분리했다. BLU-50v2는 방향별 수량만 확인되고 단자 모양은 불명확해 `UNKNOWN`으로 유지했다.
+- 최신 main 기준 Builder 리포트: 303 제품·1,459 I/O·2,230 단자·229 확인 필요·단자 0 제품 5 → BSS 적용 후 303·1,459·2,302·225·5. BSS 확인 필요 행은 10→6.
+- 남은 BSS 6행은 BLU-160 선택 카드 I/O 5행(실제 장착 구성에 따라 다름)과 BLU-50v2 watchdog 출력 수량 1행(공개 자료에서 불명확)으로, 추정하지 않고 남겼다.
+- BSS 집중 5/5, Builder 라이브러리 검사 14/14. 최신 main `dcbc37b` 통합 후 검색 인덱스·공개 스냅샷·읽기 카탈로그 재생성, 검색 인덱스 `--check`, 읽기 카탈로그 `--check`, `verify-pages` 통과(장비 274·상세 271·공식 WebP 453·사용자 PDF 항목 130). 생성된 파생 파일의 추가 diff 없음.
+- 전체 `npm test`: 511건 중 508 통과·2 실패·기존 skip 1. 두 실패 모두 RTCom 동기화의 Windows 임시 디렉터리 rename `EPERM`; 그중 한 케이스는 단독 재실행 통과. W-013 BSS 테스트는 통과했다.
+- BSS 근거: [BLU-100 datasheet](https://bssaudio.com/en/product_documents/blu100_datasheetpdf), [BLU-101 datasheet](https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf), [BLU-160 datasheet](https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf), [BLU-50v2 한국 제품 페이지](https://bssaudio.com/ko/products/blu-50v2) 및 [공식 datasheet](https://bssaudio.com/ko/site_elements/data-sheet-blu-50v2).
+- 남은 단계: PR 필수 CI 확인·병합·Pages 배포, 공개 BLU-100 Builder 화면 캡처 및 기록. BSS 묶음 뒤 나머지 제조사 검토를 계속한다.
