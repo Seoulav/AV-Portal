@@ -1,0 +1,40 @@
+{
+  "0": {
+    "quantity": {
+      "prior": "",
+      "approved": "2"
+    },
+    "condition": {
+      "prior": "",
+      "approved": "Shure ULX-D Dual and Quad User Guide 후면 패널: 안테나 입력 A/B 2개"
+    },
+    "source": {
+      "prior": "P",
+      "approved": "P, M"
+    }
+  },
+  "2": {
+    "quantity": {
+      "prior": "",
+      "approved": "4"
+    },
+    "condition": {
+      "prior": "",
+      "approved": "Shure ULX-D Dual and Quad User Guide 후면 패널: 4채널 XLR 출력 각 1개"
+    },
+    "source": {
+      "prior": "P",
+      "approved": "P, M"
+    }
+  },
+  "3": {
+    "quantity": {
+      "prior": "",
+      "approved": "2"
+    },
+    "condition": {
+      "prior": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (ULXD4D/ULXD4Q 전용, 내장(별도 카드 불필요))",
+      "approved": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (ULXD4D/ULXD4Q 전용, 내장(별도 카드 불필요)) · Shure ULX-D Dual and Quad User Guide 후면 패널: Dante Primary/Secondary 2개"
+    }
+  }
+}
