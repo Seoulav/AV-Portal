@@ -1,6 +1,7 @@
 import { isApprovedCpqTemplate } from '../scripts/cpq-public-assets.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
+import { isW1010Name, beforeW1010Catalog } from './w1010-history.mjs';
 import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
@@ -78,11 +79,11 @@ test('three exact workbook models retain their own facts and omit unsupported co
 });
 
 test('LED cabinet addition changes only the three new products and keeps the private workbook offline', () => {
-  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file)).sort();
+  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file)).sort();
   assert.equal(files.length, 247);
   const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(beforeW006Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '02769b62612aacaee971e39f4a7783469415c2a8a4aa8280830b4e4e4f499083');
-  const catalog = read('beta/site/catalog.json');
+  const catalog = beforeW1010Catalog(read('beta/site/catalog.json'));
   assert.equal(catalog.length, 272);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),

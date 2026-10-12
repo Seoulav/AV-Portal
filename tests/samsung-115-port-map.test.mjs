@@ -8,6 +8,7 @@ const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Pr
 
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
+import { isW1010Name } from './w1010-history.mjs';
 import {createHash} from 'node:crypto';
 import {beforeDisplayW04013} from './display-w04013-history.mjs';
 import {prepareEnhancements as prototypePrepare} from '../prototype/brc-am7/detail-enhancements.mjs';
@@ -46,7 +47,7 @@ test('left/right markers accept vertical ranges and reject mixed or out-of-bound
 test('all 51 approved horizontal maps remain valid with their original fields', () => {
   const dir = new URL('beta/site/detail/data/', root);
   let count = 0, cropped = 0;
-  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh115qhfebgxkr.json')) {
+  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh115qhfebgxkr.json' && !isW1010Name(name))) {
     const p = beforeW026Product(JSON.parse(readFileSync(new URL(file, dir), 'utf8')),file.slice(0,-5));
     if (!p.portMap || p.portMap.image === 'Diagram') continue;
     count++;

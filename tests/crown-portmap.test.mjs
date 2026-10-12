@@ -1,5 +1,6 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
+import { isW1010Name } from './w1010-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -129,7 +130,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   }
   const dir = new URL('beta/site/detail/data/',root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name)&&!crown.includes(name.slice(0,-5))).sort()) {
+  for (const name of readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name)&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
     const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)

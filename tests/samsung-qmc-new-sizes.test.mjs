@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW12002Raw } from './w12002-wording-history.mjs';
+import { beforeW1010Catalog } from './w1010-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const file = path => readFileSync(new URL(path, root));
@@ -19,7 +20,7 @@ const old = new Map([
 ]);
 
 test('QM50C and QM75C have their own specifications and a validated eleven-port manual map', () => {
-  const catalog = json('beta/site/catalog.json');
+  const catalog = beforeW1010Catalog(json('beta/site/catalog.json'));
   const expected = [
     [50, '10', '0.285x0.285', '1124.1 x 644.8 x 28.5', '11.8'],
     [75, '8', '0.429x0.429', '1682.3 x 960.4 x 28.5', '33.4'],

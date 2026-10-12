@@ -1,5 +1,6 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
+import { isW1010Name } from './w1010-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name, withoutW006Uploads } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -77,7 +78,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(others.digest('hex'), '7d9e6ac1869ed1d4661a7e8232617894572f9953f60659888b98457cbca652a2');
 
   const details = new URL('detail/data/', root);
-  const names = readdirSync(details).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name)).sort();
+  const names = readdirSync(details).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name)).sort();
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)

@@ -1,5 +1,6 @@
 import { beforeW12005Product } from './w12005-history.mjs';
 import test from 'node:test';
+import { isW1010Name } from './w1010-history.mjs';
 import {beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
@@ -67,7 +68,7 @@ test('all published maps retain supported crop and side placement without produc
   const files = (await readdir('beta/site/detail/data')).filter(name => name.endsWith('.json'));
   const maps = [];
   const digest = createHash('sha256');
-  for (const file of files) {
+  for (const file of files.filter(file => !isW1010Name(file))) {
     const product = beforeW026Product(JSON.parse(await readFile(join('beta/site/detail/data', file))),file.slice(0,-5));
     // This historical W-001 digest predates the W-010 vertical Samsung map.
     if (product.portMap && product.portMap.image !== 'Diagram' && !bssW04004Slugs.has(file.slice(0,-5)) && file !== 'lh115qhfebgxkr.json') {

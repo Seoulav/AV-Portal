@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { filterCatalog } from '../beta/site/app.js';
+import { beforeW1010Catalog } from './w1010-history.mjs';
 
 const catalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
 const slugs = items => items.map(item => item.slug);
@@ -38,12 +39,13 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
 });
 
 test('all other catalog products keep their complete previous brand order', () => {
-  const others = catalog.filter(item => item.brand !== 'Samsung');
+  const historicalCatalog = beforeW1010Catalog(catalog);
+  const others = historicalCatalog.filter(item => item.brand !== 'Samsung');
   assert.equal(others.length, 237);
   assert.ok(others.every(item => !item.brandSort));
   assert.deepEqual(slugs(filterCatalog(others, { sort: 'brand' })), slugs(legacySort(others, {})));
   for (const brand of new Set(others.map(item => item.brand))) {
-    assert.deepEqual(slugs(filterCatalog(catalog, { brand, sort: 'brand' })), slugs(legacySort(others, { brand })), brand);
+    assert.deepEqual(slugs(filterCatalog(historicalCatalog, { brand, sort: 'brand' })), slugs(legacySort(others, { brand })), brand);
   }
 });
 
