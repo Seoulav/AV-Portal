@@ -101,7 +101,6 @@ section[id] { scroll-margin-top: 100px; }
 .tool-links strong { color: var(--pg-ink); font-size: 13px; }
 .tool-links small { color: var(--pg-muted); font-size: 11px; }
 .tool-links b { margin-left: auto; color: var(--pg-accent-2); }
-.download-links { display: flex; flex-wrap: wrap; gap: 8px; }
 footer { display: flex; justify-content: space-between; gap: 14px; padding: 12px 6px 0; color: var(--pg-muted); font-size: 11px; }
 footer strong { color: var(--pg-ink-2); }
 .pg-page :is(a,button,input,select,summary):focus-visible { outline: 3px solid var(--pg-accent-2); outline-offset: 2px; }
