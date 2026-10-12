@@ -1,0 +1,48 @@
+{
+  "ulxd4": {
+    "prior": {
+      "io": [
+        {
+          "group": "RF",
+          "connector": "BNC",
+          "signal": "RF antenna input",
+          "direction": "IN",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "1/4\" (6.35 mm) TRS 및 XLR",
+          "signal": "Audio output",
+          "direction": "OUT",
+          "quantity": "",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "connector": "DC 입력 (외부 전원공급장치)",
+          "signal": "Power input",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "15 V DC @ 0.6 A, 외부 전원공급장치(팁 포지티브)",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ]
+    },
+    "approved": {
+      "ioSha": "d45fd5505764b2863477aa2f60e488ed737e168a6dd48eb71442ea37de7221ff",
+      "productShaBefore": "f6b61f397773904f28b0d95a75266c97e16335fb59e4fc3b9dfd2d57512b5d08"
+    }
+  }
+}
