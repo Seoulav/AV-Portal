@@ -219,6 +219,66 @@ export const NOT_PLACEABLE_LEVEL3 = Object.freeze(['Cable', 'Active Optical Cabl
 // 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. match에는 그 행의 connector·signal 원문을 그대로 적는다.
 // 원문이 바뀌면(행 이동·수정) 적용하지 않고 제품 이슈 override-stale로 알린다. note에 근거(제조사 자료 등)를 적는다.
 export const IO_OVERRIDES = Object.freeze({
+  'eb-pu2010w-b#4': {
+    match: { connector: "BNC", signal: "디지털 비디오 입력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'in', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI In (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2010series_en_r102.pdf",
+  },
+  'eb-pu2010w-b#5': {
+    match: { connector: "BNC", signal: "디지털 비디오 출력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI Out (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2010series_en_r102.pdf",
+  },
+  'eb-pu2213b#4': {
+    match: { connector: "BNC", signal: "디지털 비디오 입력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'in', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI In (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2220series_en_r100.pdf",
+  },
+  'eb-pu2213b#5': {
+    match: { connector: "BNC", signal: "디지털 비디오 출력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI Out (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2220series_en_r100.pdf",
+  },
+  'eb-pu2216b#4': {
+    match: { connector: "BNC", signal: "디지털 비디오 입력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'in', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI In (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2220series_en_r100.pdf",
+  },
+  'eb-pu2216b#5': {
+    match: { connector: "BNC", signal: "디지털 비디오 출력" },
+    ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 }],
+    note: "Epson official model-applicable interface specifications identify SDI Out (BNC), one jack; https://files.support.epson.com/pdf/specs/specifications_ebpu2220series_en_r100.pdf",
+  },
+  'mx392-c#1': {
+    match: { connector: "나사식 단자(스크류 터미널)", signal: "LED IN" },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'in', quantity: 1 }],
+    note: "Shure MX39x User Guide Logic Connections: LED IN, one external logic connection on screw terminals with common ground; https://www.shure.com/en-US/docs/guide/MX39x",
+  },
+  'mx392-c#2': {
+    match: { connector: "나사식 단자(스크류 터미널)", signal: "SWITCH OUT" },
+    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'out', quantity: 1 }],
+    note: "Shure MX39x User Guide Logic Connections: SWITCH OUT, one external logic connection on screw terminals with common ground; https://www.shure.com/en-US/docs/guide/MX39x",
+  },
+  'pt-mz882#6': {
+    match: { connector: "M3 스테레오 미니잭", signal: "AUDIO IN/OUT" },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 1 }, { connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 }],
+    note: "Panasonic Korean manual DPQP1564ZA/X1 p.27, PT-MZ882/MZ782/MZ682: AUDIO IN and AUDIO OUT, one 3.5 mm jack each.",
+  },
+  'pt-vmz51#2': {
+    match: { connector: "M3 스테레오 미니잭", signal: "Audio IN / Variable Audio OUT" },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 2 }, { connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 }],
+    note: "Panasonic Korean manual DPQP1388ZD/X1 p.25, PT-VMZ71/61/51: AUDIO IN 1/2 and VARIABLE AUDIO OUT, three 3.5 mm jacks.",
+  },
+  'pt-vmz61#2': {
+    match: { connector: "M3 스테레오 미니잭", signal: "Audio IN / Variable Audio OUT" },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 2 }, { connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 }],
+    note: "Panasonic Korean manual DPQP1388ZD/X1 p.25, PT-VMZ71/61/51: AUDIO IN 1/2 and VARIABLE AUDIO OUT, three 3.5 mm jacks.",
+  },
+  'pt-vmz71#2': {
+    match: { connector: "M3 스테레오 미니잭", signal: "Audio IN / Variable Audio OUT" },
+    ports: [{ connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'in', quantity: 2 }, { connector: 'TRS-3.5', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 }],
+    note: "Panasonic Korean manual DPQP1388ZD/X1 p.25, PT-VMZ71/61/51: AUDIO IN 1/2 and VARIABLE AUDIO OUT, three 3.5 mm jacks.",
+  },
   'mx395#0': {
     match: { connector: '3-pin XLR 또는 5-pin XLR (LED 모델)', signal: 'Microphone audio output (phantom powered)' },
     ports: [{ connector: 'XLR', signals: ['MIC-AUDIO'], direction: 'out', quantity: 1 }],

@@ -444,11 +444,11 @@
       "connector": "BNC",
       "signal": "RF antenna input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
+      "condition": "Shure ULX-D Dual and Quad User Guide 후면 패널: 안테나 입력 A/B 2개",
+      "source": "P, M",
       "verification": "FOUND"
     },
     {
@@ -468,11 +468,11 @@
       "connector": "XLR (채널당 1개, 다이렉트 또는 합산 출력 가능)",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "4",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
+      "condition": "Shure ULX-D Dual and Quad User Guide 후면 패널: 4채널 XLR 출력 각 1개",
+      "source": "P, M",
       "verification": "FOUND"
     },
     {
@@ -480,10 +480,10 @@
       "connector": "RJ-45",
       "signal": "Network / Dante audio",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "Dante",
       "availability": "",
-      "condition": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (ULXD4D/ULXD4Q 전용, 내장(별도 카드 불필요))",
+      "condition": "듀얼 포트 이더넷 10/100 Mbps, 1 Gbps; Dante 디지털 오디오 (ULXD4D/ULXD4Q 전용, 내장(별도 카드 불필요)) · Shure ULX-D Dual and Quad User Guide 후면 패널: Dante Primary/Secondary 2개",
       "source": "P, M",
       "verification": "PARTIAL"
     },
