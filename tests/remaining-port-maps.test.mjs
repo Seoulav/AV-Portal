@@ -3,6 +3,7 @@ import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
 import { beforeKiprogo2Mx395ImageSha } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeMxc420PhotoImageSha } from './mxc420-photo-history.mjs';
+import { verifyAverW12009ReplacedImage } from './aver-w12009-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeHarmanW03014,beforeHarmanW03014Raw,harmanW03014Slug} from './harman-w03014-history.mjs';
 import {beforeBssW04004,beforeBssW04004Raw,bssW04004Slugs} from './bss-w04004-history.mjs';
@@ -123,6 +124,7 @@ test('surviving published images and PDFs retain their baseline SHA-256', () => 
   const updatedImages=JSON.parse(bytes('Work/기록/W-20261006-004-image-hashes.json'));
   assert.equal(Object.keys(proof.assets).length,489);
   for(const [path,hash] of Object.entries(proof.assets)){
+    if(path.startsWith('detail/images/') && verifyAverW12009ReplacedImage(path.split('/').at(-1), hash)) continue;
     // Historical evidence includes the W-20261002-011 discontinued product.
     // W-20261003-002 extends the manifest; its test preserves prior entries.
     // W-026 explicitly recrops GSM4248PX's existing Rear asset; the new
