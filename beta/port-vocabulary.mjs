@@ -336,7 +336,8 @@ export const IO_OVERRIDES = Object.freeze({
     match: { connector: 'Output terminal block', signal: 'Speaker output' },
     ports: [{ connector: 'TERMINAL-BLOCK', signals: ['SPEAKER'], direction: 'out', quantity: 1 }],
     note: 'Powersoft MEZZO user guide rear-panel callout identifies one connector for CH2–CH1 outputs; the series datasheet specifies two output channels on Euro 5 mm for the 322 AD; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
-  },  'blu-100#5': {
+  },
+  'blu-100#5': {
     match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
     ports: [
       { connector: 'TERMINAL-BLOCK', signals: ['GPIO'], direction: 'in', quantity: 12 },
