@@ -57,7 +57,7 @@ export async function diagramPdf(drawing: DiagramSvg, { fontUrl = `${import.meta
   doc.addFont(PDF_FONT_FILE, PDF_FONT_NAME, 'normal');
   doc.addFont(PDF_FONT_FILE, PDF_FONT_NAME, 'bold');
   doc.setFont(PDF_FONT_NAME, 'normal');
-  doc.setProperties({ title: 'AV System Builder 구성도', creator: 'AV Portal Builder' });
+  doc.setProperties({ title: 'AV System Designer 구성도', creator: 'AV Portal Builder' });
 
   // 글꼴에 없는 글자(한자·이모지 등)는 PDF에서 빠진다. 미리 찾아 알린다
   // 바로 위 setFont로 정한 지금 글꼴(PDF_FONT_NAME normal)

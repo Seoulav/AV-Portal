@@ -304,7 +304,7 @@ export function diagramSvg(diagram: Pick<Diagram, 'nodes' | 'edges'>, options: S
   const stamp = stampText ? text(stampText, { x: width - MARGIN / 2, y: height - MARGIN / 2, 'font-size': 10, fill: COLORS.muted, 'text-anchor': 'end' }) : '';
   const svg = `<?xml version="1.0" encoding="UTF-8"?>\n`
     + `<svg xmlns="http://www.w3.org/2000/svg"${attrs({ width, height, viewBox: `0 0 ${n(width)} ${n(height)}`, 'font-family': SVG_FONT })}>`
-    + '<title>AV System Builder 구성도</title>'
+    + '<title>AV System Designer 구성도</title>'
     + (notes.length ? `<defs>${notes.map(note => note.clip).join('')}</defs>` : '')
     + `<rect${attrs({ x: 0, y: 0, width, height, fill: COLORS.background })}/>`
     + `<g${attrs({ transform: `translate(${n(shift.x)} ${n(shift.y)})` })}>`
