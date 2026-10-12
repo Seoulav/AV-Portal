@@ -457,12 +457,12 @@
       "connector": "Phoenix/Combicon",
       "signal": "워치독 출력",
       "direction": "OUT",
-      "quantity": "정보 없음",
+      "quantity": "1",
       "protocol": "",
       "availability": "표준",
       "condition": "페일세이프 제어용",
       "source": "D",
-      "verification": "PARTIAL"
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",

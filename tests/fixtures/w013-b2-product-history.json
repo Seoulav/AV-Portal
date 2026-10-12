@@ -1,0 +1,1571 @@
+{
+  "blu-160": {
+    "priorIo": [
+      {
+        "group": "Audio",
+        "connector": "Phoenix/Combicon (Analog Input Card)",
+        "signal": "Mic/Line 아날로그 입력",
+        "direction": "IN",
+        "quantity": "슬롯당 4, 최대 16",
+        "protocol": "",
+        "availability": "옵션(카드 장착 시)",
+        "condition": "48V 팬텀 파워 채널별 선택",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Phoenix/Combicon (Analog Output Card)",
+        "signal": "라인 레벨 아날로그 출력",
+        "direction": "OUT",
+        "quantity": "슬롯당 4, 최대 16",
+        "protocol": "",
+        "availability": "옵션(카드 장착 시)",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Phoenix/Combicon (Digital Input Card)",
+        "signal": "AES/EBU, S/PDIF 디지털 입력",
+        "direction": "IN",
+        "quantity": "슬롯당 4, 최대 16",
+        "protocol": "AES/EBU, S/PDIF",
+        "availability": "옵션(카드 장착 시)",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Phoenix/Combicon (Digital Output Card)",
+        "signal": "AES/EBU, S/PDIF 디지털 출력",
+        "direction": "OUT",
+        "quantity": "슬롯당 4, 최대 16",
+        "protocol": "AES/EBU, S/PDIF",
+        "availability": "옵션(카드 장착 시)",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Phoenix/Combicon (AEC Input Card)",
+        "signal": "AEC 마이크 입력",
+        "direction": "IN",
+        "quantity": "슬롯당 4, 최대 16",
+        "protocol": "",
+        "availability": "옵션(카드 장착 시)",
+        "condition": "48V 팬텀 파워",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Network",
+        "connector": "RJ-45",
+        "signal": "BLU link 디지털 오디오 버스",
+        "direction": "IN/OUT",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "표준",
+        "condition": "Cat 5e, 최대 100m",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-45",
+        "signal": "Ethernet 제어망",
+        "direction": "IN/OUT",
+        "quantity": "1",
+        "protocol": "HiQnet",
+        "availability": "표준",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "커넥터 규격 정보 없음",
+        "signal": "RS-232",
+        "direction": "I/O",
+        "quantity": "1",
+        "protocol": "RS-232",
+        "availability": "표준",
+        "condition": "공식 자료는 RS-232 포트 존재만 명시(후면 인쇄 'RS232'), 커넥터 형태 미기재",
+        "source": "P",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "Phoenix/Combicon",
+        "signal": "제어 입력/로직 출력(GPIO)",
+        "direction": "IN/OUT",
+        "quantity": "12 입력 / 6 출력",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "9ca4f58233d66d449e034c69bea86d98996c8e8a3c8e1cf85e43100f5e89985c",
+      "productShaAfter": "af94fd0ea3d478f7f0575b7aaf0d8ae3335204cde72ba34cd178033e21cbb180",
+      "productShaBefore": "b57a180223a011311aa538aaf8469c920ff46438940bd3dfc945bbfeb6bd83eb"
+    }
+  },
+  "blu-50v2": {
+    "priorIo": [
+      {
+        "group": "Audio",
+        "connector": "Phoenix Mini Combicon 스크류 단자",
+        "signal": "Mic/Line 아날로그 입력",
+        "direction": "IN",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "48V 팬텀 파워 채널별 선택, +48dB까지 6dB 단위 게인",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Phoenix Mini Combicon 스크류 단자",
+        "signal": "라인 레벨 아날로그 출력",
+        "direction": "OUT",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Network",
+        "connector": "RJ-45",
+        "signal": "BLU link 디지털 오디오 버스",
+        "direction": "IN/OUT",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "표준",
+        "condition": "Cat 5e, 최대 100m",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-45",
+        "signal": "Ethernet 제어망(PoE 급전 겸용)",
+        "direction": "IN/OUT",
+        "quantity": "1",
+        "protocol": "HiQnet",
+        "availability": "표준",
+        "condition": "Cat 5, 스위치까지 최대 100m. PoE+ [Type 2], PoE++ [Type 3 & 4]",
+        "source": "D",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "터미널 블록(커넥터 규격 정보 없음)",
+        "signal": "DC 전원 입력",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "12-48VDC(데이터시트) / 11.5-48VDC(제품 페이지, 이슈 R2). 구성품 목록에 2핀 오렌지 유로 커넥터 1x2x5.08mm 1개가 있으나 포트 대응은 명시되지 않음",
+        "source": "D",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "커넥터 규격 정보 없음",
+        "signal": "제어 입력/로직 출력(GPIO)",
+        "direction": "IN/OUT",
+        "quantity": "12 입력 / 6 출력",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "데이터시트에 제어 포트 커넥터 형태 미기재. 제품 페이지 구성품 목록에 12핀 오렌지 유로 커넥터 3.5mm 2개가 있으나 포트 대응은 명시되지 않음",
+        "source": "D",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "Phoenix/Combicon",
+        "signal": "워치독 출력",
+        "direction": "OUT",
+        "quantity": "정보 없음",
+        "protocol": "",
+        "availability": "표준",
+        "condition": "페일세이프 제어용",
+        "source": "D",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "커넥터 규격 정보 없음",
+        "signal": "RS-232",
+        "direction": "I/O",
+        "quantity": "1",
+        "protocol": "RS-232",
+        "availability": "표준",
+        "condition": "공식 자료는 RS-232 포트 존재만 명시(후면 인쇄 'RS232'), 커넥터 형태 미기재",
+        "source": "P",
+        "verification": "PARTIAL"
+      }
+    ],
+    "approved": {
+      "ioSha": "0a0f6f64e82ce45128f2296e45dbe10d0b4f61dff799b46a2d987fd89177aa46",
+      "productShaAfter": "9353b0caadaee8e290c336c43a654a50b2e8e9eaab2a45e513a8f511d47873b9",
+      "productShaBefore": "3cafe7c934f65b266cec40fd9c092859b1b7070cd4c60aa452da1aa9b74c4784"
+    }
+  },
+  "cdi-2-1200bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "28feb8c3edf0d3e63ea20e7bbb894c88767f1ad365234f261ec8f5b93dd594e2",
+      "productShaAfter": "42731c05c4223a834604913bc762b819ec414cfdaf4d74f6c10d7a0a8b062a85",
+      "productShaBefore": "92c2c5c858e5ffb5304fc8832f95d435a2a98d8be3014cdea20bb1c6da0ea911"
+    }
+  },
+  "cdi-2-300": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio",
+        "connector": "밸런스 XLR",
+        "signal": "Analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet Audio Architect",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 320",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "c03b5f27c4dae3e245add9e699cafe18d2150426e353d6741a277e79b6842198",
+      "productShaAfter": "ec3f80201ef5cee3473478847d6946f329a9f0791390c9bf8c5b3d7501600c83",
+      "productShaBefore": "b08c6d1e2d0a3220fff44b07037ad31bda02016c5e03946205d8e5d6c16c82b9"
+    }
+  },
+  "cdi-2-300bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio",
+        "connector": "밸런스 XLR",
+        "signal": "Analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원 (256채널 디지털 오디오 버스) (non-BL 모델과의 차이점)",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet Audio Architect",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "8핀 블록 커넥터(GPIO·AUX 공용)",
+        "signal": "GPIO/AUX 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 320",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "ee2600d9a85d4f9abd21c928dbac53dae047332d81ecae948217ce578664abc1",
+      "productShaAfter": "dbfa05da434d93d33cf27d6c6cc6634341c4e5bd202cbc1b1c1f5ff08db31941",
+      "productShaBefore": "190d69889500222fff44011d9efd84473444282ac2a7aab7ebeb9c756ab5fe7f"
+    }
+  },
+  "cdi-2-600bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet Audio Architect",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 320",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "1c3f0a0973eee9d70a8a9584f7e3c61e5f354b59f1f3719c42867a51bcb10d7a",
+      "productShaAfter": "5dd9cb35e25d0acadb4d21833d7eff0c07fb6b34dc3074869700a1a7e279b890",
+      "productShaBefore": "717d8666990b100786da3ddf098b3dfa9b31ee13d1f8215fed6559074ad55dd4"
+    }
+  },
+  "cdi-4-1200bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "20A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "9478c94ac024ae255fc8205a6fce235fed8c96b9138db970645dfe454058eee5",
+      "productShaAfter": "e9c11980ce74f44c17c4bbce6758d12cdff9c096447898300927b466afa57037",
+      "productShaBefore": "eba067730f427494a8aecfa45fd186c44d3f87549be6db2921ded8f4fff7b54a"
+    }
+  },
+  "cdi-4-300bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원(256채널 디지털 오디오 버스)",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 320(탈착식)",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "68a1c215a859aac80893171ef88ca016fb01bc17b2936b2010de03fe8c52ced2",
+      "productShaAfter": "bd1f905667103ca1c83b602751ad40f683768f5ce4e909cac34f70b4558252ee",
+      "productShaBefore": "a8c521aa7f250d886646cb0fe522669a37b00e68623ed5c8378725c4a7960084"
+    }
+  },
+  "cdi-4-600bl": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "BLU link: 지원",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "0f75b8efad145fe6739d4c0ffbb57b34297a233513604279aec6cf4180a5a8c0",
+      "productShaAfter": "28f84c37130dc51e4265205a6b5b38422c1e2429f3b2fd0956bad92aac2251a1",
+      "productShaBefore": "0d55de0be55810fb571861d2724f5e4b35c64e1fc1f96e919d34d848026d0301"
+    }
+  },
+  "comtech-d-2125": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "4핀 유로블록 x1 (2채널당 1개)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "6핀 유로블록 x1 (S/+/−, 2채널당 1개)",
+        "signal": "Analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+        "signal": "Dante/AES67 audio",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "Dante, AES67",
+        "availability": "DA/ComTech D 모델",
+        "condition": "Dante 입출력: 지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary) (데이터시트 'Digital Audio Input/Output (Dante/AES67) 2x RJ45'; 채널수·샘플레이트는 정보 없음)",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "6핀 유로블록 (1-4, 5V)",
+        "signal": "GPIO/AUX 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 인렛",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독, 후면 표기 '100-240VAC 50/60Hz'",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "6c2fdc3c4e2a0d84fe03319631cb353b0b57cc7fce1e9c825ae9f8bea3a6e2d2",
+      "productShaAfter": "5a4549b69f6ad18d98cfc0da89d2325e5068d70e028de95a49eacdc867eb7d85",
+      "productShaBefore": "fef24e4a0d7ffe20e8b2b133aaa2a618490fb4a4840813aa38cafc850f78e018"
+    }
+  },
+  "comtech-d-4125": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "4핀 유로블록 x2 (2채널당 1개)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "6핀 유로블록 x2 (S/+/−, 2채널당 1개)",
+        "signal": "Analog audio in",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary)",
+        "signal": "Dante/AES67 audio",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "Dante, AES67",
+        "availability": "DA/ComTech D 모델",
+        "condition": "Dante 입출력: 지원 (RJ45 x2: Dante/AES67 Primary · HControl Secondary) (데이터시트 'Digital Audio Input/Output (Dante/AES67) 2x RJ45'; 채널수·샘플레이트는 정보 없음)",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "6핀 유로블록 (1-4, 5V)",
+        "signal": "GPIO/AUX 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 인렛",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "공식 후면 사진 판독, 후면 표기 '100-240VAC 50/60Hz'",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "4988fa0b6b51d838cef8de6b83f48841ea665831f77fe92d64d186a865c51e03",
+      "productShaAfter": "66d4b687ba48340d4badf00d7a50eaf1ef771a58660055a981b4656ed824c813",
+      "productShaBefore": "67dd47ba5586807045d3bb4c2d95ed71cf2b38bf0d8eed1f577135829ef6e4ba"
+    }
+  },
+  "dci-2-300n": {
+    "priorIo": [
+      {
+        "group": "Input",
+        "connector": "6핀 터미널 블록",
+        "signal": "Analog audio input",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45 (IN·OUT)",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "HARMAN BLU-Link 디지털 오디오 전송 (Dante 아님)",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet (TCP/IP)",
+        "availability": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-11(6포지션)",
+        "signal": "GPIO 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "3핀 터미널 블록",
+        "signal": "AUX 원격 Sleep·상태 감시",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "2ccf6b4c676b52111ec5f3979bb4c06c5a81df92024064c6ebee430e79202949",
+      "productShaAfter": "ef8249b2c2a2a51a01632641a1334176771e9f74f9f7b37c0ca91d1d6480ac4a",
+      "productShaBefore": "a7ba93c0153edfa96fd0f1e6bcbbfc6c79a22e50f6b709ccf1c22d63dfbe2c27"
+    }
+  },
+  "dci-2-600n": {
+    "priorIo": [
+      {
+        "group": "Input",
+        "connector": "6핀 터미널 블록",
+        "signal": "Analog audio input",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45 (IN·OUT)",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "HARMAN BLU-Link 디지털 오디오 전송 (Dante 아님)",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet(TCP/IP)",
+        "availability": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-11(6포지션)",
+        "signal": "GPIO 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "3핀 터미널 블록",
+        "signal": "AUX 원격 Sleep·상태 감시",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "e39ee07880a5b154c82268fbe51cbb34d8e47eaad72e431f6f53d4c82488bc53",
+      "productShaAfter": "c32c0c6257d249caadaf19d19997f22c9d4616d0d40c0fd2d4386b984f16363d",
+      "productShaBefore": "f10762d2aa4535fa779eeb382f05d512863da1af9d0b0b8817e60199e937ed03"
+    }
+  },
+  "dci-4-300da": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ-45",
+        "signal": "Dante/AES67 audio",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "Dante, AES67",
+        "availability": "DA/ComTech D 모델",
+        "condition": "네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "fff973af450235533d547a5bf9cb7d56881ae63881a18034863518c5dcbe16be",
+      "productShaAfter": "37940156b595f9f38613a06fc4e78ef98671fadcc51ecc5794110eace6831880",
+      "productShaBefore": "14d6a9e505ab1b15a679295e918976c8e4becf82d60abd3c9583fa148e0a3b0e"
+    }
+  },
+  "dci-4-300n": {
+    "priorIo": [
+      {
+        "group": "Input",
+        "connector": "6핀 터미널 블록",
+        "signal": "Analog audio input",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45 (IN·OUT)",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "HARMAN BLU-Link 디지털 오디오 전송 (Dante 아님)",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet(TCP/IP)",
+        "availability": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-11(6포지션)",
+        "signal": "GPIO 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "3핀 터미널 블록",
+        "signal": "AUX 원격 Sleep·상태 감시",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "aed31ff12d366b338757ee62cf56246a1b4e86a2f6bd30e16dc633274b6dc8b8",
+      "productShaAfter": "2c1b10988f1a186b6a7148c34cf4ff374f8647b2b095bee04afa6ee17b41d103",
+      "productShaBefore": "ed2f8c265129e216f0cfaa6a73afed86275e82855f0677022fb6f3fc3859337e"
+    }
+  },
+  "dci-4-600n": {
+    "priorIo": [
+      {
+        "group": "Input",
+        "connector": "6핀 터미널 블록",
+        "signal": "Analog audio input",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Output",
+        "connector": "Barrier strip(4극 터치 방지 단자대, 채널 쌍당 1개, 최대 10 AWG/6 mm²)",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P, M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45 (IN·OUT)",
+        "signal": "HARMAN BLU link digital audio bus",
+        "direction": "I/O",
+        "quantity": "2",
+        "protocol": "BLU link",
+        "availability": "BL/N 모델",
+        "condition": "HARMAN BLU-Link 디지털 오디오 전송 (Dante 아님)",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ45",
+        "signal": "HiQnet 제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "HiQnet(TCP/IP)",
+        "availability": "",
+        "condition": "",
+        "source": "P, M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "RJ-11(6포지션)",
+        "signal": "GPIO 제어 입출력",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "3핀 터미널 블록",
+        "signal": "AUX 원격 Sleep·상태 감시",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "M1",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "15A IEC",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "aed31ff12d366b338757ee62cf56246a1b4e86a2f6bd30e16dc633274b6dc8b8",
+      "productShaAfter": "95164e2648bd7ee81510538909928f283cefab0a57686377d6f1c9ae6de06fa1",
+      "productShaBefore": "b9749eaf31a3acb6d61bc81822eb3b9f949f6dc8249fa59e59befa5ea9c91736"
+    }
+  },
+  "mezzo-322-ad": {
+    "priorIo": [
+      {
+        "group": "Audio",
+        "connector": "MISSING",
+        "signal": "Balanced/Unbalanced analog audio in",
+        "direction": "IN",
+        "quantity": "2채널(언밸런스 2 + 밸런스 2 혼합)",
+        "protocol": "",
+        "availability": "",
+        "condition": "블록 커넥터 방식, 정확한 커넥터 규격 미확인",
+        "source": "M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "Ethernet (RJ45)",
+        "signal": "Dante/AES67 audio + DSP control/monitoring",
+        "direction": "I/O",
+        "quantity": "2",
+        "protocol": "Dante, AES67",
+        "availability": "AD 모델",
+        "condition": "두 포트가 연결되어 있으며 하나는 Dante 전용, 나머지는 제어·Dante 겸용",
+        "source": "M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Control",
+        "connector": "GPI",
+        "signal": "출력 레벨 조절용 GPI 입력",
+        "direction": "IN",
+        "quantity": "2(2채널 모델 기준, I1·I2)",
+        "protocol": "",
+        "availability": "",
+        "condition": "10kΩ 수동 포텐셔미터 연결",
+        "source": "M",
+        "verification": "PARTIAL"
+      },
+      {
+        "group": "Power",
+        "connector": "AC 인렛",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Output",
+        "connector": "Output terminal block",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2(2채널)",
+        "protocol": "",
+        "availability": "",
+        "condition": "락킹 방식 출력단자, 배선 전 락 체결 필요",
+        "source": "M",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "0c20fd6d69ee62455467cad10e19a92741defb743da4b75b2b9a81b7084aeddd",
+      "productShaAfter": "c6510bb2ef635f1e1383d25b72bc62000fb411d228b731ed81cbc33da3f71d8d",
+      "productShaBefore": "1f2049895acc404ce98af50bbd7dcd8a883fc6dcf4b0c563b2b85db447b4e7f2"
+    }
+  },
+  "mezzo-324-ad": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Euro 5mm 커넥터",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Euro 3.8mm",
+        "signal": "Balanced analog audio in",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Unbalanced analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "입력1·2와 병렬",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "최대 2 플로우",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "2 x RJ45 Fast Ethernet",
+        "signal": "제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "ArmoníaPlus",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 10A",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "237cd2855c08602b2e8ec8c334b1f25c597e72d388df5b4ffb45eb71de2b6b96",
+      "productShaAfter": "09149f748ec807f0d04de1a55079202550d2a8f659fc978544278179d54a87de",
+      "productShaBefore": "36b0e529e8c254bfc6e500bd73a0dee0066091f820b78f6f45fa96db76d55bf9"
+    }
+  },
+  "mezzo-602-ad": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Euro 5mm 커넥터",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Euro 3.8mm",
+        "signal": "Balanced analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Unbalanced analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "입력1·2와 병렬",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Euro 3.8mm",
+        "signal": "Line level audio out",
+        "direction": "OUT",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "최대 2 플로우",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "2 x RJ45 Fast Ethernet",
+        "signal": "제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "ArmoníaPlus",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 10A",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "8020738e736754fe9c7c6bb9f0f0686a0313d768d1d79e3e2da92a0f02f08546",
+      "productShaAfter": "c75d9507d896dcbba37373b15cad7918b48f018e79f2baeaf09a68c8d9707cdc",
+      "productShaBefore": "7ca584fe5eddeff29dfb6bf499b1ca122ca6fb2bf8f38bab787c9fdf8ed61ca6"
+    }
+  },
+  "mezzo-604-ad": {
+    "priorIo": [
+      {
+        "group": "Output",
+        "connector": "Euro 5mm 커넥터",
+        "signal": "Speaker output",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "Euro 3.8mm",
+        "signal": "Balanced analog audio in",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Unbalanced analog audio in",
+        "direction": "IN",
+        "quantity": "2채널",
+        "protocol": "",
+        "availability": "",
+        "condition": "입력1·2와 병렬",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "IN",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "최대 2 플로우",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Audio Network",
+        "connector": "RJ45(네트워크 포트 공용)",
+        "signal": "Dante/AES67 audio",
+        "direction": "OUT",
+        "quantity": "4채널",
+        "protocol": "Dante, AES67",
+        "availability": "AD/DSP+D 모델",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Control",
+        "connector": "2 x RJ45 Fast Ethernet",
+        "signal": "제어/모니터링 네트워크",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "ArmoníaPlus",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "IEC 10A",
+        "signal": "Mains power",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "237cd2855c08602b2e8ec8c334b1f25c597e72d388df5b4ffb45eb71de2b6b96",
+      "productShaAfter": "4f7b4842acb01c49076e473eb83743582ab7407e63a566ca0e7cc4c831ab13a5",
+      "productShaBefore": "471cca7a536066aa28ea59d4633e1c1f2f886d1c8344196355530cc316f91a09"
+    }
+  },
+  "mxcwapt-w": {
+    "priorIo": [
+      {
+        "group": "Audio",
+        "connector": "3-pin male XLR",
+        "signal": "Audio output",
+        "direction": "OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "One analog XLR output channel.",
+        "source": "P, M",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Audio",
+        "connector": "XLR",
+        "signal": "Audio input",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "One analog XLR input channel on the MXCWAPT-W access point.",
+        "source": "P, M",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Network",
+        "connector": "RJ45",
+        "signal": "Network / Dante audio",
+        "direction": "I/O",
+        "quantity": "",
+        "protocol": "Dante",
+        "availability": "",
+        "condition": "Gigabit Ethernet, Dante 디지털 오디오 (10/100/1000Mbps)",
+        "source": "P",
+        "verification": "FOUND"
+      },
+      {
+        "group": "Power",
+        "connector": "RJ45 (PoE)",
+        "signal": "Power input",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "Power over Ethernet (PoE) (37-57V DC 공급전압)",
+        "source": "P",
+        "verification": "FOUND"
+      }
+    ],
+    "approved": {
+      "ioSha": "977764bb3d50fab384e90347105ac866826a796975af80f08aad5bf1e909f069",
+      "productShaAfter": "12ad3f94cd133b2698da4476ebcde922ea36d15bdc7fc1f6bb3be97d3a1c752d",
+      "productShaBefore": "78fbf531a99515473638f1518a01acb0eaef9fa49991e3dcd67ffb82d0ff9512"
+    }
+  }
+}

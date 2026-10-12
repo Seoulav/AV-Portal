@@ -310,60 +310,60 @@
       "connector": "Phoenix/Combicon (Analog Input Card)",
       "signal": "Mic/Line 아날로그 입력",
       "direction": "IN",
-      "quantity": "슬롯당 4, 최대 16",
+      "quantity": "16",
       "protocol": "",
       "availability": "옵션(카드 장착 시)",
-      "condition": "48V 팬텀 파워 채널별 선택",
+      "condition": "48V 팬텀 파워 채널별 선택 Four I/O card slots; four channels per installed card, up to 16 total; optional card configuration.",
       "source": "D",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "Phoenix/Combicon (Analog Output Card)",
       "signal": "라인 레벨 아날로그 출력",
       "direction": "OUT",
-      "quantity": "슬롯당 4, 최대 16",
+      "quantity": "16",
       "protocol": "",
       "availability": "옵션(카드 장착 시)",
-      "condition": "",
+      "condition": "Four I/O card slots; four channels per installed card, up to 16 total; optional card configuration.",
       "source": "D",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "Phoenix/Combicon (Digital Input Card)",
       "signal": "AES/EBU, S/PDIF 디지털 입력",
       "direction": "IN",
-      "quantity": "슬롯당 4, 최대 16",
+      "quantity": "16",
       "protocol": "AES/EBU, S/PDIF",
       "availability": "옵션(카드 장착 시)",
-      "condition": "",
+      "condition": "Four I/O card slots; four channels per installed card, up to 16 total; optional card configuration.",
       "source": "D",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "Phoenix/Combicon (Digital Output Card)",
       "signal": "AES/EBU, S/PDIF 디지털 출력",
       "direction": "OUT",
-      "quantity": "슬롯당 4, 최대 16",
+      "quantity": "16",
       "protocol": "AES/EBU, S/PDIF",
       "availability": "옵션(카드 장착 시)",
-      "condition": "",
+      "condition": "Four I/O card slots; four channels per installed card, up to 16 total; optional card configuration.",
       "source": "D",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "Phoenix/Combicon (AEC Input Card)",
       "signal": "AEC 마이크 입력",
       "direction": "IN",
-      "quantity": "슬롯당 4, 최대 16",
+      "quantity": "16",
       "protocol": "",
       "availability": "옵션(카드 장착 시)",
-      "condition": "48V 팬텀 파워",
+      "condition": "48V 팬텀 파워 Four I/O card slots; four channels per installed card, up to 16 total; optional card configuration.",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",

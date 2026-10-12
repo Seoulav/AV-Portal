@@ -54,7 +54,7 @@ test('historical inverse rejects marker edits and exposes unrelated current chan
     const changedIo = structuredClone(product);
     changedIo.io = [];
     if (w013Slugs.has(slug)) {
-      assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013 I\/O change/, slug);
+      assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013(?: B2)? I\/O change/, slug);
     } else {
       assert.deepEqual(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12005Product(changedIo, slug), slug), slug), slug).io, [], slug);
     }

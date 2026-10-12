@@ -259,12 +259,12 @@
       "connector": "GPI",
       "signal": "출력 레벨 조절용 GPI 입력",
       "direction": "IN",
-      "quantity": "2(2채널 모델 기준, I1·I2)",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
       "condition": "10kΩ 수동 포텐셔미터 연결",
       "source": "M",
-      "verification": "PARTIAL"
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",
@@ -289,6 +289,18 @@
       "condition": "락킹 방식 출력단자, 배선 전 락 체결 필요",
       "source": "M",
       "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "GPI",
+      "signal": "Status contact output",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "Contact closure",
+      "availability": "",
+      "condition": "Normally closed; opens on amplifier/channel fault; carried by the shared GPI terminal block.",
+      "source": "M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [

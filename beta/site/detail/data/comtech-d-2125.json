@@ -348,14 +348,26 @@
     {
       "group": "Control",
       "connector": "6핀 유로블록 (1-4, 5V)",
-      "signal": "GPIO/AUX 제어 입출력",
-      "direction": "I/O",
-      "quantity": "",
+      "signal": "GPIO control input",
+      "direction": "IN",
+      "quantity": "4",
       "protocol": "",
       "availability": "",
-      "condition": "공식 후면 사진 판독",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "Pin 2-5: Control Input 1-4; pin 1 common ground, pin 6 common +5V.",
+      "source": "P, M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "3-pin Euroblock",
+      "signal": "Fault relay output",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "NO/COM/NC; relay rating 30 VDC, 1 A.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",
