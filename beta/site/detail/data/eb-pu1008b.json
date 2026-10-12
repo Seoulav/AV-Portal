@@ -518,5 +518,87 @@
     "footerNote": "Epson EB-PU1008B 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "eb-pu1008b-rear.webp",
+      "width": 604,
+      "height": 218
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "LAN",
+        "desc": "RJ-45 · 유선 네트워크",
+        "x1": 227,
+        "x2": 247,
+        "y": 31,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDBaseT 입력",
+        "desc": "HDBaseT 디지털 영상 입력",
+        "x1": 261,
+        "x2": 278,
+        "y": 31,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "DVI-D 입력",
+        "desc": "DVI-D 디지털 영상 입력",
+        "x1": 293,
+        "x2": 326,
+        "y": 32,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력",
+        "desc": "HDMI 디지털 영상 입력",
+        "x1": 342,
+        "x2": 361,
+        "y": 32,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "USB-A",
+        "desc": "USB Type-A · USB 연결",
+        "x1": 374,
+        "x2": 390,
+        "y": 47,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "USB 서비스",
+        "desc": "USB Type-B · 서비스 연결",
+        "x1": 397,
+        "x2": 410,
+        "y": 47,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "Computer 입력",
+        "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+        "x1": 293,
+        "x2": 321,
+        "y": 110,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "오디오 출력",
+        "desc": "스테레오 미니 · 오디오 출력",
+        "x1": 327,
+        "x2": 344,
+        "y": 80,
+        "side": "top"
+      }
+    ]
   }
 }

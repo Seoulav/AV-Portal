@@ -8,7 +8,7 @@ const expected = {
   'brc-am7': ['Main', 'Front', 'Rear', 'Perspective'],
   dm7: ['Front', 'Rear', 'Perspective'],
   'ki-pro-go2': ['Main', 'Rear'],
-  'pt-mz17k': ['Front', 'Perspective'],
+  'pt-mz17k': ['Front', 'Perspective', 'Diagram'],
   'rally-bar': ['Front', 'Perspective']
 };
 
@@ -21,7 +21,7 @@ test('Group 1 product pages publish only the reviewed official image roles', asy
     assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
 
     for (const image of product.images) {
-      assert.match(image.file, new RegExp(`^${slug}-(?:main|front|rear|perspective)\\.webp$`));
+      assert.match(image.file, new RegExp(`^${slug}-(?:main|front|rear|perspective|diagram)\\.webp$`));
       assert.equal(image.officialSource, true);
       assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
       assert.match(image.publicationStatus, /사용자 게시 승인/);

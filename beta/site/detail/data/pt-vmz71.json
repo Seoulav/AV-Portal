@@ -29,6 +29,20 @@
       "originalSize": "708×376",
       "resolution": "708×372",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "pt-vmz71-diagram.webp",
+      "alt": "PT-VMZ71 PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 후면 단자 도면",
+      "note": "Diagram · Panasonic PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 · 모델 적용 확인",
+      "provider": "Panasonic",
+      "model": "PT-VMZ71",
+      "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1288x700",
+      "resolution": "1288x700",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -56,6 +70,11 @@
       "role": "Other",
       "status": "REVIEW REQUIRED",
       "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf"
     }
   ],
   "documents": [
@@ -269,8 +288,8 @@
       "quantity": "2",
       "protocol": "HDCP, Deep Color, 4K/30p",
       "availability": "CEC 지원",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -281,8 +300,8 @@
       "quantity": "2",
       "protocol": "RGB/YPbPr/YCbCr",
       "availability": "",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -293,8 +312,8 @@
       "quantity": "2 IN, 1 OUT",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -305,8 +324,8 @@
       "quantity": "1",
       "protocol": "RS-232C",
       "availability": "",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -317,8 +336,8 @@
       "quantity": "1",
       "protocol": "HDBaseT, 100Base-TX",
       "availability": "PJLink Class 2 호환",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -329,8 +348,8 @@
       "quantity": "1",
       "protocol": "10Base-T, 100Base-TX",
       "availability": "PJLink Class 2 호환",
-      "condition": "",
-      "source": "S",
+      "condition": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     },
     {
@@ -341,8 +360,8 @@
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "DC 5V 최대 2A 출력",
-      "source": "S",
+      "condition": "DC 5V 최대 2A 출력 · PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자",
+      "source": "S, M1",
       "verification": "VERIFIED"
     }
   ],
@@ -364,6 +383,12 @@
       "name": "제조사 이미지 자료",
       "url": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M1",
+      "name": "PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서",
+      "url": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf",
+      "scope": "PT-VMZ71 표지 적용 모델 확인 · 25쪽 연결 단자 도면과 설명"
     }
   ],
   "issues": [
@@ -383,5 +408,105 @@
     "footerNote": "Panasonic PT-VMZ71 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "pt-vmz71-diagram.webp",
+      "width": 1288,
+      "height": 700
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB (VIEWER/WIRELESS/DC OUT)",
+        "desc": "USB Type-A · 메모리/무선/전원 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 56,
+        "x2": 161,
+        "y": 210,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "AUDIO IN 1",
+        "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 205,
+        "x2": 283,
+        "y": 230,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "AUDIO IN 2",
+        "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 205,
+        "x2": 283,
+        "y": 325,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "COMPUTER 1 IN",
+        "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 330,
+        "x2": 548,
+        "y": 225,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "COMPUTER 2 IN",
+        "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 330,
+        "x2": 548,
+        "y": 355,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "HDMI IN 1–2",
+        "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 585,
+        "x2": 919,
+        "y": 220,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "LAN",
+        "desc": "RJ-45 · 네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 940,
+        "x2": 1060,
+        "y": 225,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "DIGITAL LINK/LAN",
+        "desc": "RJ-45 · DIGITAL LINK/네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 1105,
+        "x2": 1223,
+        "y": 225,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "VARIABLE AUDIO OUT",
+        "desc": "M3 스테레오 미니 · 가변 오디오 출력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 914,
+        "x2": 982,
+        "y": 390,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "SERIAL IN",
+        "desc": "D-Sub 9핀 · RS-232C 제어 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+        "x1": 1025,
+        "x2": 1235,
+        "y": 395,
+        "side": "bottom"
+      }
+    ]
   }
 }

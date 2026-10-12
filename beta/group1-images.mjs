@@ -133,7 +133,8 @@ export const group1Images = {
   ],
   'pt-mz17k': [
     image('Front', 'pt-mz17k-front.webp', 'Panasonic PT-MZ17K 프로젝터 전면 이미지', 'Panasonic', 'PT-MZ17K', 'https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg', '1250×755', '1250×755'),
-    image('Perspective', 'pt-mz17k-perspective.webp', 'Panasonic PT-MZ17K 프로젝터 원근 이미지', 'Panasonic', 'PT-MZ17K', 'https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg', '2500×1536', '1800×1106')
+    image('Perspective', 'pt-mz17k-perspective.webp', 'Panasonic PT-MZ17K 프로젝터 원근 이미지', 'Panasonic', 'PT-MZ17K', 'https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg', '2500×1536', '1800×1106'),
+    image("Diagram", "pt-mz17k-diagram.webp", "PT-MZ17K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
   ],
   'rally-bar': [
     image('Front', 'rally-bar-front.webp', 'Logitech Rally Bar 그래파이트 전면 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1', '1384×1038', '1384×1038'),
@@ -277,22 +278,28 @@ export const group1Images = {
     image('Other', 'logitech-rally-mic-pod-top.webp', 'Logitech Rally Mic Pod 상단 음소거 버튼 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png', '1600×1200', '1106×1183', 'FOUND')
   ],
   'pt-vmz71': [
-    image('Main', 'pt-vmz71-main.webp', 'Panasonic PT-VMZ71 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+    image('Main', 'pt-vmz71-main.webp', 'Panasonic PT-VMZ71 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND'),
+    image("Diagram", "pt-vmz71-diagram.webp", "PT-VMZ71 PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-VMZ71", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf", "1288x700", "1288x700", "VERIFIED", "Diagram · Panasonic PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-vmz61': [
-    image('Main', 'pt-vmz61-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+    image('Main', 'pt-vmz61-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND'),
+    image("Diagram", "pt-vmz61-diagram.webp", "PT-VMZ61 PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-VMZ61", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf", "1288x700", "1288x700", "VERIFIED", "Diagram · Panasonic PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-vmz51': [
-    image('Main', 'pt-vmz51-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND')
+    image('Main', 'pt-vmz51-main.webp', 'Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND'),
+    image("Diagram", "pt-vmz51-diagram.webp", "PT-VMZ51 PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-VMZ51", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf", "1288x700", "1288x700", "VERIFIED", "Diagram · Panasonic PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-mz14k': [
-    image('Main', 'pt-mz14kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+    image('Main', 'pt-mz14kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),
+    image("Diagram", "pt-mz14k-diagram.webp", "PT-MZ14K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ14K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-mz11k': [
-    image('Main', 'pt-mz11kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+    image('Main', 'pt-mz11kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),
+    image("Diagram", "pt-mz11k-diagram.webp", "PT-MZ11K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ11K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-mz882': [
-    image('Main', 'pt-mz882-main.webp', 'Panasonic PT-MZ882 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ882 Series', 'https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND')
+    image('Main', 'pt-mz882-main.webp', 'Panasonic PT-MZ882 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ882 Series', 'https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),
+    image("Diagram", "pt-mz882-diagram.webp", "PT-MZ882 PT-MZ882/MZ782/MZ682 한국어 사용설명서 DPQP1564ZA/X1 27쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ882", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-06/PT-MZ882_Series_manual_ko_1716090610.3225.pdf", "1270x730", "1270x730", "VERIFIED", "Diagram · Panasonic PT-MZ882/MZ782/MZ682 한국어 사용설명서 DPQP1564ZA/X1 27쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pulse-4k': [
     image('Front', 'pulse4k-front.webp', "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)", 'Analog Way', 'Pulse 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg', '6952×1960', '1800×390', 'VERIFIED')

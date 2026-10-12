@@ -1,0 +1,1409 @@
+{
+  "eb-l260f": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "8da72c0d2e51052acbac119db6984346f9e6e982e1e00e3910d849604f233691"
+    },
+    "baselineSha256": "c62c66638c6f929c7b05ad0783c23819ae6c2660790b1e51aa29ebd94cde8408"
+  },
+  "eb-l530u": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "804f6d607a339cb2aa5c6b1d770fc0b2e74cfe353e106674c5372742dd43d8d1"
+    },
+    "baselineSha256": "279f091141afe9bd20cff2aafdebe3710fff80e4ef000f983d7b542cd7d49ff2"
+  },
+  "eb-l690u": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "f5b7d319aa88ac9842fb5c8c2db8ce47832479c0f912110cb0e0e7415d48b662"
+    },
+    "baselineSha256": "889b2cad542c8914672a63a89fd0fe66aec1ef37434b99dd7ac39cdff3ac3620"
+  },
+  "eb-l695se": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "533d013f316faf0d032076c6b7be914442b2543ade984807095724b07fed17a4"
+    },
+    "baselineSha256": "2bcf1546b898c05712ff04e2893ac34fadd811ebdb657e77cd97fef8e7703d4f"
+  },
+  "eb-l790su": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "2bf6c7aad9082eb6c62e2b38e3cabc06916c3f94c6f6bd7487b59383361cc72e"
+    },
+    "baselineSha256": "30050aeb90825bee1befbb0453c56104dfd78f73bda0deef049e65b74be5d941"
+  },
+  "eb-l790u": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "39f36019038ac71ea92ee87e9a3dced4760876fc60c6411b39ef5d870641ac31"
+    },
+    "baselineSha256": "60101eaa2bd09c5971fba91c91117d3161b0c579e55b977377ad0050b22210c6"
+  },
+  "eb-l795se": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "5f378b5816694b81481ec8e4202dd9d781d579f2c9131a46440278abaa089671"
+    },
+    "baselineSha256": "23f51df9786ee7f3ecf0c1c728e9b2d25240bdf7a7d8323f1cab46619d40b78a"
+  },
+  "eb-l895e": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "9c15a98ec138fa3d65f3e8903136eea2f72d6cb92dcdb9a1b566345b2fb51dc2"
+    },
+    "baselineSha256": "b02a8f57c939c662d00f0a59ba0a221a16c12c1483b15296c9b0ccd40d8cc837"
+  },
+  "eb-l895u": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "769a249474b2d26632f94611a05e982579955dd7a72ddcad5eea090cad2ca863"
+    },
+    "baselineSha256": "a757e59731b24b50d56be7012ff0558669454d050e4fa70c62bb67866bf1b6e7"
+  },
+  "eb-pq2213b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "94f9ff5cf188d885bfad5317d8d3fb464fe09f76e16a51fcc973adad7e23829d"
+    },
+    "baselineSha256": "6190845e33f6936d9539f0ebeb794d9398bdd1df23010c02a06eb41bf089399f"
+  },
+  "eb-pq2216b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "ca282883877b8f952021cb24c56171545a623da564eaae66e01f6e03cc4f121d"
+    },
+    "baselineSha256": "2a73ac28b0c171b3429c25f02e50e784079d27c2a138d5afc7cfdb3c9725f853"
+  },
+  "eb-pu1008b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "395ad21f645c5fcc81327734528ec9e5085064d740eda8cf5e445a68af1edc95"
+    },
+    "baselineSha256": "fd941d2b33635407c487bd58bedccba9344456d4faa85427ea2c5f2cd46ce2a7"
+  },
+  "eb-pu2010w-b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "4441561abb808417a99187ba8be2ec904cb44b8474c12833a1396902c8679db2"
+    },
+    "baselineSha256": "4df67b507fe72397654dd7d3451af67843f072207af4207258e99031ac0250fc"
+  },
+  "eb-pu2213b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "ea9b7c4dcc39b44a76c0c9424185724fa25b809c15c78f78d27a1edb8f82432e"
+    },
+    "baselineSha256": "a6bca508163832436a9ab311bab98a492e3d2f44ee6e81a2b13f104a2145d338"
+  },
+  "eb-pu2216b": {
+    "fields": [
+      "portMap"
+    ],
+    "prior": {
+      "portMap": null
+    },
+    "approved": {
+      "portMap": "60a0a836a59b3b213427f8bcb64ea7f55578e505aa8c2aa5c4b2de12896e88a5"
+    },
+    "baselineSha256": "cc517e12b74375ad560a9ce72ef0b58c85f703ce6ed6114d0823e402fcd36b33"
+  },
+  "pt-mz17k": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "pt-mz17k-front.webp",
+          "alt": "Panasonic PT-MZ17K 프로젝터 전면 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ17K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1250×755",
+          "resolution": "1250×755",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Perspective",
+          "file": "pt-mz17k-perspective.webp",
+          "alt": "Panasonic PT-MZ17K 프로젝터 원근 이미지",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ17K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "2500×1536",
+          "resolution": "1800×1106",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Network / Control",
+          "connector": "LAN connector",
+          "signal": "Network control",
+          "direction": "I/O",
+          "quantity": "REVIEW REQUIRED",
+          "protocol": "Web control, command control, PJLink Class 2",
+          "availability": "Fixed 여부 REVIEW REQUIRED",
+          "condition": "물리 커넥터 종류·수량은 모델별 수량 미확인",
+          "source": "M",
+          "verification": "PARTIAL"
+        },
+        {
+          "group": "Video",
+          "connector": "MISSING",
+          "signal": "Video",
+          "direction": "IN",
+          "quantity": "—",
+          "protocol": "—",
+          "availability": "—",
+          "condition": "물리 입력 단자표 미정리",
+          "source": "",
+          "verification": "MISSING"
+        },
+        {
+          "group": "Control",
+          "connector": "MISSING",
+          "signal": "Serial / remote control",
+          "direction": "I/O",
+          "quantity": "—",
+          "protocol": "—",
+          "availability": "—",
+          "condition": "물리 제어 단자표 미정리",
+          "source": "",
+          "verification": "MISSING"
+        },
+        {
+          "group": "Power",
+          "connector": "MISSING",
+          "signal": "AC power",
+          "direction": "IN",
+          "quantity": "—",
+          "protocol": "—",
+          "availability": "—",
+          "condition": "모델별 값 미정리",
+          "source": "",
+          "verification": "MISSING"
+        }
+      ],
+      "sources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl",
+          "scope": "모델·지역 표기 검토 중"
+        },
+        {
+          "code": "R",
+          "name": "제조사 자료 목록",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/resources/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 사용 안내",
+          "url": "https://ap.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_en.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "F",
+          "name": "제조사 기술 자료",
+          "url": "https://docs.connect.panasonic.com/projector//feature_guide/docs/Feature_comparison_chart.pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "642c46ce21d0712a3b07f6cc5ab72de7561ad3a77e75ecb49aa8c53305432942",
+      "imageStatuses": "fe31fafc4248c887fd20afb82be317d482f9581dc180d63888931704445758dd",
+      "portMap": "2ba58f7b67ced4e8510461fbec396dbbcacfc5546750a5ee3b6c0d873a502c22",
+      "io": "73f3a236cf7dee5cb26360a73ab3f5d0a3416e9b65dc93dad2872289b3083e47",
+      "sources": "0fa23c451dc0863017b89cff271385cd7deb520829b06d838b0b80c2ddca9f24"
+    },
+    "baselineSha256": "3c9f94df2035005e076fb22ebfe5cbeabecbeab4506ff05e2d619fd6b7f39816"
+  },
+  "pt-mz14k": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-mz14kl-main.webp",
+          "alt": "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ20K Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "488×259",
+          "resolution": "488×259",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "BNC",
+          "signal": "SDI IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "3G/HD-SDI",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI 19-pin",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP 2.3, Deep Color, 4K/60p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female/male)",
+          "signal": "SERIAL/MULTI PROJECTOR SYNC IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "REMOTE 1 IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "병렬",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "M3",
+          "signal": "REMOTE 2 IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "유선 리모컨",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "DIGITAL LINK",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net, HDCP 2.3",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "DC OUT / USB (무선 모듈/메모리)",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V 최대 2A 출력",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(PT-MZ20K 시리즈)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료(시리즈 공용)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "08380dff5b4059fba9c9742fd72147c5635e34e2bc1f8dc8e70a919dd2c88379",
+      "imageStatuses": "5dab29476a994edd7c9e629243493904ab749c73b926d80f88bc3e5c8dd3643f",
+      "portMap": "d3224625d2683839c5868997ef173010912141cceac0edbed4d14ebf3709656f",
+      "io": "e04f62b689631e9f273e32534ea17d089318df7739dd01c245d574ae261a92a2",
+      "sources": "e286a0e9abadf133b69c913b4962f489643f60fd51e8345bbd21d11960e47e26"
+    },
+    "baselineSha256": "435a3cd5983375b89cecd80b2cf6b41ab5a6133cb90efa500d6d999efd633fcf"
+  },
+  "pt-mz11k": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-mz11kl-main.webp",
+          "alt": "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ20K Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "488×259",
+          "resolution": "488×259",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "BNC",
+          "signal": "SDI IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "3G/HD-SDI",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI 19-pin",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP 2.3, Deep Color, 4K/60p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female/male)",
+          "signal": "SERIAL/MULTI PROJECTOR SYNC IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "REMOTE 1 IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "병렬",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "M3",
+          "signal": "REMOTE 2 IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "유선 리모컨",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "DIGITAL LINK",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net, HDCP 2.3",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "DC OUT / USB (무선 모듈/메모리)",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V 최대 2A 출력",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(PT-MZ20K 시리즈)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료(시리즈 공용)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "f2b143695d297657208ab4bd088841abb275d3b23129bb759665ca7af182d1c9",
+      "imageStatuses": "5dab29476a994edd7c9e629243493904ab749c73b926d80f88bc3e5c8dd3643f",
+      "portMap": "fd111841ba9c40fc20385af03b1122cb044e822e4e8ac4390d941b7600e92033",
+      "io": "e04f62b689631e9f273e32534ea17d089318df7739dd01c245d574ae261a92a2",
+      "sources": "9090f5c7e22082e87fed9a6c997ca6be461425fad47ef549dc1d81de3503b41b"
+    },
+    "baselineSha256": "66fa0c9c7ea64e253dd1ce56f55db07dacb7caa4dd7ef736af2bbe1ea3f7e75a"
+  },
+  "pt-mz882": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-mz882-main.webp",
+          "alt": "Panasonic PT-MZ882 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ882 Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "488×259",
+          "resolution": "488×259",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz882/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "3",
+          "protocol": "Deep Color, HDCP 2.3, 4K/60p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "D-sub HD 15-pin (female)",
+          "signal": "COMPUTER IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RGB/YPbPr/YCbCr",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "D-sub HD 15-pin (female)",
+          "signal": "MONITOR OUT",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "RGB/YPbPr/YCbCr",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female/male)",
+          "signal": "SERIAL/MULTI SYNC IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "M3 스테레오 미니잭",
+          "signal": "REMOTE 1 IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "유선 리모컨",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "REMOTE 2 IN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "병렬",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "connector": "M3 스테레오 미니잭",
+          "signal": "AUDIO IN/OUT",
+          "direction": "IN/OUT",
+          "quantity": "1/1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "DIGITAL LINK/LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net, HDCP 2.3",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2, Art-Net",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "DC OUT",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V, 2A",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz882/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(PT-MZ882 시리즈)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz882/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료(시리즈 공용)",
+          "url": "https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "35549d65fdfa23bbb1bcc92e0584e8cbce2849abdae6d90da83c637bb768a53c",
+      "imageStatuses": "a8349c7592bf5a174bed6d87edac6c3afa56ec5e47e7e85936c5f5ec71880c6a",
+      "portMap": "85b1e54bc3ff7fa4b0f15306130f8fdfb5fb4950ae963b2885b6ee3e279f4f56",
+      "io": "846b6260fbbaac41de0740be32fb2d4eaf9b3567b7f090a1d59a724208d95072",
+      "sources": "6021869bad067dc880e86a48a73a565c5ad6b4f67190e1b31c5e2411753a2040"
+    },
+    "baselineSha256": "d628d5dc88164c2ca1b21189fa4b6f5812c78e08b10de537cffd4037f292fc05"
+  },
+  "pt-vmz51": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-vmz51-main.webp",
+          "alt": "Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-VMZ71 Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "708×376",
+          "resolution": "708×372",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "HDMI 19-pin",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP, Deep Color, 4K/30p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "D-sub 15-pin (female)",
+          "signal": "Computer IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "RGB/YPbPr/YCbCr",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "connector": "M3 스테레오 미니잭",
+          "signal": "Audio IN / Variable Audio OUT",
+          "direction": "IN/OUT",
+          "quantity": "2 IN, 1 OUT",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "SERIAL IN (RS-232C)",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN/DIGITAL LINK",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "Memory Viewer / Wireless / DC OUT",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V 최대 2A 출력",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(시리즈 페이지, PT-VMZ71 대표)",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료(시리즈 공용)",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "d75dc7ce1e2ddbe8dd559211f62412fc11d5caf4d22946e1b7a4dcb8a107dfbe",
+      "imageStatuses": "3cc8a5b9b6fc24d5cd16d551153146a71871a6890e25e12cd8e452931e006d36",
+      "portMap": "c6bce7c751bdc6212d8b3b3fb8c706b457cc719a22b95dcf10e3edee5fb0eebe",
+      "io": "3766c65e6b6cff7efb4856ba30735f612c8f1b4511b9e55a645516ca86dd3763",
+      "sources": "ea2a252c68bfe4ea44e8c26f5b319d8e61cd8db702a9c91827580de2e5f83e83"
+    },
+    "baselineSha256": "455903d7cd7101e8512ca1242907d7431c1c3eff50f15e8471535944fdd78ed4"
+  },
+  "pt-vmz61": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-vmz61-main.webp",
+          "alt": "Panasonic PT-VMZ71/VMZ61 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-VMZ71 Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "708×376",
+          "resolution": "708×372",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "HDMI 19-pin",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP, Deep Color, 4K/30p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "D-sub 15-pin (female)",
+          "signal": "Computer IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "RGB/YPbPr/YCbCr",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "connector": "M3 스테레오 미니잭",
+          "signal": "Audio IN / Variable Audio OUT",
+          "direction": "IN/OUT",
+          "quantity": "2 IN, 1 OUT",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "SERIAL IN (RS-232C)",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN/DIGITAL LINK",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "Memory Viewer / Wireless / DC OUT",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V 최대 2A 출력",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(시리즈 페이지, PT-VMZ71 대표)",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료(시리즈 공용)",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "9cee70bd716cf5dcc67f0a31d1d7cf3578477f08892aaf6bfbe2f885de3738be",
+      "imageStatuses": "3cc8a5b9b6fc24d5cd16d551153146a71871a6890e25e12cd8e452931e006d36",
+      "portMap": "d12715ecdf676f113128f4ad8c0a674f4378a34326c7d568adcd332b0940da6f",
+      "io": "3766c65e6b6cff7efb4856ba30735f612c8f1b4511b9e55a645516ca86dd3763",
+      "sources": "74c5d8f790e420c1daa2b9ca0ad3db090d96c7d798de70439756effcebcf56f9"
+    },
+    "baselineSha256": "35000e2f703112ef27d56616ba3937976b399da25e56e3c3f186ccb5e16aac7b"
+  },
+  "pt-vmz71": {
+    "fields": [
+      "images",
+      "imageStatuses",
+      "portMap",
+      "io",
+      "sources"
+    ],
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-vmz71-main.webp",
+          "alt": "Panasonic PT-VMZ71 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-VMZ71 Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "708×376",
+          "resolution": "708×372",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/vmz71/"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Video",
+          "connector": "HDMI 19-pin",
+          "signal": "HDMI IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP, Deep Color, 4K/30p",
+          "availability": "CEC 지원",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Video",
+          "connector": "D-sub 15-pin (female)",
+          "signal": "Computer IN",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "RGB/YPbPr/YCbCr",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Audio",
+          "connector": "M3 스테레오 미니잭",
+          "signal": "Audio IN / Variable Audio OUT",
+          "direction": "IN/OUT",
+          "quantity": "2 IN, 1 OUT",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Control",
+          "connector": "D-sub 9-pin (female)",
+          "signal": "SERIAL IN (RS-232C)",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "RS-232C",
+          "availability": "",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN/DIGITAL LINK",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDBaseT, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ-45",
+          "signal": "LAN",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "10Base-T, 100Base-TX",
+          "availability": "PJLink Class 2 호환",
+          "condition": "",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "Memory Viewer / Wireless / DC OUT",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "DC 5V 최대 2A 출력",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "S",
+          "name": "제조사 공식 사양 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/spec/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "426d9af3c92984339eb3c8cc683ceed0a82d3ed1095138919e035b2dd1183251",
+      "imageStatuses": "3cc8a5b9b6fc24d5cd16d551153146a71871a6890e25e12cd8e452931e006d36",
+      "portMap": "d2523323118bd424c30a2b3fec824eee7f02781523f53baca9186f1a689d0f11",
+      "io": "3766c65e6b6cff7efb4856ba30735f612c8f1b4511b9e55a645516ca86dd3763",
+      "sources": "05dd32456075ebe9006c55d4759192317a03bb5fc9552ec9dc4744baed5fe529"
+    },
+    "baselineSha256": "5fc11fc4fec4c3b36db0416369f50158e706e1024b896522685e8932d607942c"
+  }
+}
