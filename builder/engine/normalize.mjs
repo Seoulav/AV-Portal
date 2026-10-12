@@ -1,7 +1,7 @@
 // 키 순서·필드 정리(기반명세 §3.4·§8.2·§8.3). serialize·issues가 함께 쓴다.
 
 export const PORT_KEYS = ['id', 'label', 'type', 'direction', 'connector', 'signals', 'verification', 'portalIo'];
-export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal'];
+export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal', 'systemName', 'selectedOptionQuantities', 'optionPortIds'];
 export const PORTAL_KEYS = ['productId', 'source', 'unit', 'variant', 'detailUrl'];
 export const ANNOTATION_DATA_KEYS = ['label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderRadius', 'textAlign', 'locked'];
 export const SHAPE_DATA_KEYS = ['shapeType', 'label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderWidth', 'locked'];
@@ -32,6 +32,8 @@ export function normalizeEquipmentData(data, { withReused = true } = {}) {
   for (const key of Object.keys(PORT_LISTS)) out[key] = Array.isArray(data[key]) ? data[key].map(normalizePort) : [];
   if (withReused) out.isReused = Boolean(data.isReused);
   else delete out.isReused;
+  if (data.selectedOptionQuantities) out.selectedOptionQuantities = { ...data.selectedOptionQuantities };
+  if (data.optionPortIds) out.optionPortIds = [...data.optionPortIds];
   if (data.portal) out.portal = pick(data.portal, PORTAL_KEYS);
   return pick(out, EQUIPMENT_DATA_KEYS);
 }

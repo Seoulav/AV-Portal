@@ -36,7 +36,8 @@ export interface Equipment {
   imageUrl?: string;
   portal: Portal;
 }
-export interface EquipmentData extends Equipment { isReused: boolean }
+export interface QuoteOption { id: string; model: string; name?: string; manufacturer?: string }
+export interface EquipmentData extends Equipment { isReused: boolean; systemName?: string; selectedOptionQuantities?: Record<string, number>; optionPortIds?: string[] }
 export interface LineType { id: string; name: string; color: string }
 export interface BomRow { cableType: 'ready-made' | 'manufactured'; productName: string; lineTypeId?: string; length?: number; quantity?: number }
 export interface DiagramNode {
@@ -62,6 +63,7 @@ export interface DiagramEdge {
 }
 export interface Diagram {
   version: '1.2';
+  options?: QuoteOption[];
   nodes: DiagramNode[];
   edges: DiagramEdge[];
   lineTypes: LineType[];

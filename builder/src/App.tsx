@@ -8,6 +8,7 @@ import { EdgePanel } from './components/EdgePanel';
 import { IssuesPanel } from './components/IssuesPanel';
 import { LibraryPanel } from './components/LibraryPanel';
 import { NotePanel } from './components/NotePanel';
+import { EquipmentQuotePanel } from './components/EquipmentQuotePanel';
 import { Toolbar } from './components/Toolbar';
 import { lineFilter } from './lineFilter';
 
@@ -40,6 +41,8 @@ function SidePanel() {
     const selected = state.diagram.nodes.filter(node => node.selected);
     return selected.length === 1 && selected[0].type !== 'equipment' ? selected[0].id : null;
   });
+  const equipmentId = useBuilder(state => { const selected=state.diagram.nodes.filter(n=>n.selected); return selected.length===1 && selected[0].type==='equipment' && !state.selectedEdgeIds.length ? selected[0].id : null; });
+  if (equipmentId) return <EquipmentQuotePanel key={equipmentId} nodeId={equipmentId} />;
   if (edgeId) return <EdgePanel edgeId={edgeId} />;
   return noteId ? <NotePanel key={noteId} nodeId={noteId} /> : <IssuesPanel />;
 }

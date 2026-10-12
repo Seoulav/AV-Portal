@@ -3,8 +3,8 @@
 AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 화면이다. 방향과 범위는 [통합 재구축 기획](../Work/기획/시스템빌더통합기획-2026-10-06.md), 작업 흐름은 [Builder 작업 흐름](../Work/빌더/README.md)을 따른다.
 
 - 공개 주소: `https://seoulav.github.io/AV-Portal/builder/`
-- 아직 Portal 메뉴에 연결하지 않았다. 구 Builder 수준이 되는 P5 뒤에 기존 링크와 바꾼다(B-20261006-04 결정 G-b).
-- 가격·견적은 범위 밖이다. 견적 쪽은 이 앱이 내보내는 JSON만 읽는다([예제와 안내](examples/README.md)).
+- Portal 메뉴의 구성도에서 접근한다. 견적 통합은 B-20261012-02에서 검증했으며, 사용자 승인에 따라 Portal Pages 빌드에 포함한다.
+- 가격 계산은 별도 [CPQ 앱](../cpq/README.md)이 맡는다. Builder는 시스템명·옵션·케이블을 포함한 구성도를 `견적 만들기`로 메모리 전달한다. 기존 JSON 내보내기도 유지한다([예제와 안내](examples/README.md)).
 
 ## 구조
 
