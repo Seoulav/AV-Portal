@@ -384,12 +384,12 @@
       "connector": "RJ-45",
       "signal": "HARMAN BLU link digital audio bus",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "BLU link",
       "availability": "BL/N 모델",
       "condition": "BLU link: 지원(256채널 디지털 오디오 버스)",
       "source": "P, M",
-      "verification": "PARTIAL"
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

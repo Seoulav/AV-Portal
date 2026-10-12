@@ -118,7 +118,8 @@ export function validateOverride(key, override) {
   if (!override.match || typeof override.match.connector !== 'string' || typeof override.match.signal !== 'string') fail('match.connector·match.signal(원문)이 필요하다');
   if (!text(override.note)) fail('note(근거)가 필요하다');
   const ports = Array.isArray(override.ports) ? override.ports : [override];
-  if (!ports.length) fail('ports가 비어 있다');
+  if (!ports.length && override.action !== 'already-represented') fail('empty ports require action already-represented');
+  if (ports.length && override.action) fail('action is only valid when ports are empty');
   for (const port of ports) {
     if (!V.CONNECTORS.includes(port.connector)) fail(`알 수 없는 커넥터 ${port.connector}`);
     if (!Array.isArray(port.signals) || !port.signals.length || !port.signals.every(id => V.SIGNAL_BY_ID.has(id))) fail('signals가 비었거나 알 수 없는 신호가 있다');
@@ -130,6 +131,7 @@ export function validateOverride(key, override) {
 // 한 I/O 행의 판정. override는 IO_OVERRIDES 항목(부록 A 밖의 개별 지정)
 export function classifyIoRow(row, override = null) {
   if (override) {
+    if (override.action === 'already-represented') return { kind: 'port', portSpecs: [], reasons: [], override: true };
     if (Array.isArray(override.ports)) {
       return { kind: 'port', portSpecs: override.ports.map(port => ({ connector: port.connector, signals: sortSignals(port.signals), direction: port.direction, count: port.quantity })), reasons: [], override: true };
     }

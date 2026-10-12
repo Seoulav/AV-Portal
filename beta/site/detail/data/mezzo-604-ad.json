@@ -739,9 +739,9 @@
       "quantity": "4채널",
       "protocol": "Dante, AES67",
       "availability": "AD/DSP+D 모델",
-      "condition": "최대 2 플로우",
+      "condition": "최대 2 플로우 Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio Network",
@@ -751,9 +751,9 @@
       "quantity": "4채널",
       "protocol": "Dante, AES67",
       "availability": "AD/DSP+D 모델",
-      "condition": "",
+      "condition": "Four Dante/AES67 audio channels share the network RJ45 connections represented by the control-network row.",
       "source": "P",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",

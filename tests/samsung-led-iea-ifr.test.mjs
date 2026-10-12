@@ -10,8 +10,8 @@ import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
 import { beforeW014Catalog } from './w014-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => beforeW013Product(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(value, slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(value, slug), slug), slug), slug), slug);
 
 import { isW006Name, beforeW006Raw, withoutW006Catalog } from './w006-history.mjs';
 import {beforeW005Raw} from './w005-history.mjs';

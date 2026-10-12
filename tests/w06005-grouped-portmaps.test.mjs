@@ -50,11 +50,11 @@ test('unseen connector rows are not assigned photograph numbers', () => {
 test('historical inverse rejects marker edits and exposes unrelated current changes', () => {
   for (const slug of Object.keys(counts)) {
     const product = read(slug);
-    const older = beforeW013Raw(beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug),slug);
+    const older = beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(beforeW013Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug), slug);
     const changedIo = structuredClone(product);
     changedIo.io = [];
     if (w013Slugs.has(slug)) {
-      assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013 I\/O change/, slug);
+      assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013(?: B2)? I\/O change/, slug);
     } else {
       assert.deepEqual(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12005Product(changedIo, slug), slug), slug), slug).io, [], slug);
     }

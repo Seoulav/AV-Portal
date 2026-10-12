@@ -9,8 +9,8 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => beforeW013Product(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(value, slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(value, slug), slug), slug), slug), slug);
 
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
@@ -123,7 +123,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
       assert.deepEqual(product.sources.slice(0,-1),prior.beforeSources);
       assert.equal(product.sources.at(-1).code,'M1');
       assert.match(product.issues[0].detail,/Dante/);
-    } else assert.deepEqual(product.io,prior.beforeIo,`${slug}: I/O unchanged`);
+    } else assert.deepEqual(beforeW013Product(product,slug).io,prior.beforeIo,`${slug}: I/O unchanged`);
     assert.deepEqual(product.issues,prior.beforeIssues,`${slug}: issues retained`);
     const core = beforeCrownW03013(beforeW12002Product(product,slug),slug);
     delete core.specifications;delete core.io;delete core.issues;delete core.portMap;
