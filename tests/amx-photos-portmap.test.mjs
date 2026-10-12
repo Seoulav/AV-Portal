@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeAmxW008Product, beforeAmxW008Raw } from './amx-w008-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
+import { beforeW12001IdentityProduct, beforeW12001IdentityRaw } from './w12001-identity-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -114,6 +115,13 @@ test('NX rear maps use only connectors that are visible in the matching drawings
     });
   }
   assert.deepEqual(mapRows['nx-1200'], [6, 4, 2, 3, 1, 0], 'rear photo excludes front USB host and IR receiver');
+  for (const slug of ['nx-2200', 'nx-3200']) {
+    const product = read(`beta/site/detail/data/${slug}.json`);
+    const rearUsb = product.portMap.items.find(item => item.n === 8);
+    assert.equal(rearUsb.label, 'USB 2.0 Host', `${slug}: rear photo shows one USB host socket`);
+    assert.match(rearUsb.desc, /후면 USB Type-A 1개/);
+    assert.equal(product.io.find(row => row.signal === 'USB 호스트')?.quantity, '2', `${slug}: front and rear total`);
+  }
 });
 
 test('VARIA stays map-free and every non-image product field stays fixed', () => {
@@ -131,14 +139,14 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
 test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
   for (const slug of Object.keys(productAssets)) {
     const current = read(`beta/site/detail/data/${slug}.json`);
-    const baseline = beforeAmxW008Raw(beforeW12001Raw(JSON.stringify(current, null, 2) + '\n', slug), slug);
+    const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug);
     const altered = structuredClone(current);
     altered.io = [];
-    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(altered, slug), slug).io, [], `${slug}: current I/O passes through`);
-    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(JSON.stringify(altered, null, 2) + '\n', slug), slug), baseline, `${slug}: old hash catches I/O regression`);
+    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(altered, slug), slug), slug).io, [], `${slug}: current I/O passes through`);
+    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(JSON.stringify(altered, null, 2) + '\n', slug), slug), slug), baseline, `${slug}: old hash catches I/O regression`);
     const changedImage = structuredClone(current);
     changedImage.images.at(-1).alt += ' altered';
-    assert.throws(() => beforeAmxW008Product(beforeW12001Product(changedImage, slug), slug), /unexpected W-008 images change/);
+    assert.throws(() => beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(changedImage, slug), slug), slug), /unexpected W-008 images change/);
     if (current.portMap) {
       const changedMap = structuredClone(current);
       changedMap.portMap.items[0].x1 += 1;

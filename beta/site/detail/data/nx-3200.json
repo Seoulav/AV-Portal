@@ -554,8 +554,8 @@
       },
       {
         "n": 8,
-        "label": "USB 2.0 Host ×2",
-        "desc": "USB Type-A · 전면과 후면을 합친 USB 2.0 호스트 2개 중 후면 단자",
+      "label": "USB 2.0 Host",
+      "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
         "x1": 3112,
         "x2": 3244,
         "y": 462,
