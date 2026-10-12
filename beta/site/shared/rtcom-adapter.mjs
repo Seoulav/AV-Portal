@@ -142,7 +142,7 @@ const adaptSettings = raw => {
     kind: 'table', title: '제품군 구성',
     columns: ['모델', '종류', '구성·사양', 'RU'],
     rows: raw.lineup.map(item => [item.model, item.kind, item.summary,
-      item.rackUnits == null ? '' : String(item.rackUnits)])
+      item.rackUnits == null ? '—' : String(item.rackUnits)])
   });
   return settings;
 };

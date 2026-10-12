@@ -14,9 +14,9 @@ test('RTCOM adapter preserves every source map and binds each to its exact image
     const original = raw.portMap ? (Array.isArray(raw.portMap) ? raw.portMap : [raw.portMap]) : [];
     const detail = adaptRtcomDetail(raw);
     assert.equal(detail.portMaps?.length ?? 0, original.length, raw.id);
+    assert.deepEqual(enhancementErrors(detail), [], raw.id);
     if (!original.length) continue;
     assert.deepEqual(detail.portMap, detail.portMaps[0], raw.id);
-    assert.deepEqual(enhancementErrors(detail), [], raw.id);
     assert.equal(prepareEnhancements(detail).portMaps.length, original.length, raw.id);
     for (const [index, map] of detail.portMaps.entries()) {
       const source = original[index];
@@ -62,7 +62,9 @@ test('RTCOM series lineup keeps every mainframe and card entry without inventing
     const detail = adaptRtcomDetail(raw);
     const table = detail.settings.find(item => item.title === '제품군 구성');
     assert.ok(table, id);
-    assert.deepEqual(table.rows, raw.lineup.map(item => [item.model, item.kind, item.summary, item.rackUnits == null ? '' : String(item.rackUnits)]), id);
+    assert.deepEqual(table.rows, raw.lineup.map(item => [item.model, item.kind, item.summary, item.rackUnits == null ? '—' : String(item.rackUnits)]), id);
+    assert.deepEqual(enhancementErrors(detail), [], id);
+    assert.equal(prepareEnhancements(detail).settings.length, 1, id);
   }
 });
 
