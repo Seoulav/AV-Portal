@@ -3,6 +3,7 @@ import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
 import { beforeKiprogo2Mx395ImageSha } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeMxc420PhotoImageSha } from './mxc420-photo-history.mjs';
+import { beforeW13001ImageSha } from './w13001-powersoft-history.mjs';
 import { verifyAverW12009ReplacedImage } from './aver-w12009-history.mjs';
 import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
@@ -136,6 +137,6 @@ test('Shure mapping preserves published source images, PDFs and catalog bytes', 
       continue;
     }
     const currentHash = hashFile(bytes('beta/site/' + path));
-    assert.equal(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), hash, path);
+    assert.equal(beforeW13001ImageSha(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), hash, path);
   }
 });

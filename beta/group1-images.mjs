@@ -1,4 +1,4 @@
-export const publicationStatus = '사용자 게시 승인 · 공식 출처 기록';
+﻿export const publicationStatus = '사용자 게시 승인 · 공식 출처 기록';
 // Group 2에서 넘어온 사진도 확인된 공식 출처를 표시한다.
 const group2PublicationStatus = '사용자 게시 승인 · 공식 출처 기록';
 
@@ -141,7 +141,8 @@ export const group1Images = {
     image('Perspective', 'rally-bar-perspective.webp', 'Logitech Rally Bar 그래파이트 원근 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1', '1384×1038', '1384×1038')
   ],
   'mezzo-322-ad': [
-    group2Image('Front', 'mezzo-322-ad-front.webp', 'Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)', 'Powersoft', 'Mezzo 322 AD', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024×500', '509×127')
+    group2Image('Front', 'mezzo-322-ad-front.webp', 'Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)', 'Powersoft', 'Mezzo 322 AD', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024×500', '509×127'),
+    image("Rear", "mezzo-322-ad-rear.webp", "Powersoft Mezzo 322 AD 후면 단자 사진", "Powersoft", "Mezzo 322 AD", "https://www.powersoft.com/api/media/file/Mezzo322AD_gallery-cardL_rear-2.png", "1024x500", "488x95", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'v-02hd-mk-ii': [
     group2Image('Perspective', 'v-02hd-mk-ii-perspective.webp', 'Roland V-02HD MK II 좌측 45도 원근 이미지', 'Roland', 'V-02HD MK II', 'https://static.roland.com/assets/media/zip/v-02hdmkii_hr_img.zip', '4048×2705', '1800×1203')
@@ -759,64 +760,73 @@ export const group1Images = {
     image('Rear', 'control-426lp-rear.webp', 'JBL Control 426LP 천장 스피커 후면(백캔 상단)', 'JBL', 'Control 426LP', 'https://adn.harmanpro.com/productattachment/12933/product_attachment/x_large_2x-59026bdc9e862be3db62ce05fd6f7747.webp', '2141x1605', '870x870', 'VERIFIED')
   ],
   'quattrocanali-2404-dspd': [
-    image('Front', 'quattrocanali-2404-dspd-front.webp', 'Powersoft Quattrocanali 2404 DSP+D 전면부', 'Powersoft', 'Quattrocanali 2404 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-2.png', '1024x500', '1007x131')
+    image('Front', 'quattrocanali-2404-dspd-front.webp', 'Powersoft Quattrocanali 2404 DSP+D 전면부', 'Powersoft', 'Quattrocanali 2404 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-2.png', '1024x500', '1007x131'),
+    image("Rear", "quattrocanali-2404-dspd-rear.webp", "Powersoft Quattrocanali 2404 DSP+D 후면 단자 사진", "Powersoft", "Quattrocanali 2404 DSP+D", "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_rear-5.png", "1024x500", "968x96", "FOUND", "Rear · Quattrocanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지")
   ],
   'quattrocanali-4804-dspd': [
-    image('Front', 'quattrocanali-4804-dspd-front.webp', 'Powersoft Quattrocanali 4804 DSP+D 전면부', 'Powersoft', 'Quattrocanali 4804 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png', '1024x500', '1007x132')
+    image('Front', 'quattrocanali-4804-dspd-front.webp', 'Powersoft Quattrocanali 4804 DSP+D 전면부', 'Powersoft', 'Quattrocanali 4804 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png', '1024x500', '1007x132'),
+    image("Rear", "quattrocanali-4804-dspd-rear.webp", "Powersoft Quattrocanali 4804 DSP+D 후면 단자 사진", "Powersoft", "Quattrocanali 4804 DSP+D", "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_rear-5.png", "1024x500", "968x96", "FOUND", "Rear · Quattrocanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지")
   ],
   'duecanali-1604-dsp': [
-    image('Front', 'duecanali-1604-dsp-front.webp', 'Powersoft Duecanali 1604 DSP 전면부', 'Powersoft', 'Duecanali 1604 DSP', 'https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-5.png', '1024x500', '1006x131')
+    image('Front', 'duecanali-1604-dsp-front.webp', 'Powersoft Duecanali 1604 DSP 전면부', 'Powersoft', 'Duecanali 1604 DSP', 'https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-5.png', '1024x500', '1006x131'),
+    image("Diagram", "duecanali-1604-dsp-diagram.webp", "Powersoft Duecanali 1604 DSP 후면 공식 도면", "Powersoft", "Duecanali 1604 DSP", "https://www.powersoft.com/api/media/file/PS_Duecanali-DSPONLY_DS_EN.pdf?v=ms9fk8x5", "2382x3368", "2060x210", "VERIFIED", "Diagram · Duecanali DSP Series Datasheet 2쪽 일반 DSP 후면 도면. Dante 미탑재 변형 전용")
   ],
   'mezzo-602-ad': [
     image('Front', 'mezzo-602-ad-front.webp', 'Powersoft Mezzo 602 AD 전면부', 'Powersoft', 'Mezzo 602 AD', 'https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_front-2.png', '1024x500', '511x130'),
-    image('Rear', 'mezzo-602-ad-rear.webp', 'Powersoft Mezzo AD 시리즈 후면 커넥터부(대표 이미지)', 'Powersoft', 'Mezzo 602 AD', 'https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png', '1024x500', '528x133')
+    image("Rear", "mezzo-602-ad-rear.webp", "Powersoft Mezzo 602 AD 후면 단자 사진", "Powersoft", "Mezzo 602 AD", "https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_rear-2.png", "1024x500", "487x95", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'mezzo-322-a': [
     image('Front', 'mezzo-322-a-front.webp', 'Powersoft Mezzo 322 A 전면부', 'Powersoft', 'Mezzo 322 A', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024x500', '511x129'),
-    image('Rear', 'mezzo-322-a-rear.webp', 'Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)', 'Powersoft', 'Mezzo 322 A', 'https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png', '1024x500', '530x137')
+    image("Rear", "mezzo-322-a-rear.webp", "Powersoft Mezzo 322 A 후면 단자 사진", "Powersoft", "Mezzo 322 A", "https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_rear-3.png", "1024x500", "490x95", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'mezzo-602-a': [
     image('Front', 'mezzo-602-a-front.webp', 'Powersoft Mezzo 602 A 전면부', 'Powersoft', 'Mezzo 602 A', 'https://www.powersoft.com/api/media/file/Mezzo602A_gallery-cardL_front-2.png', '1024x500', '511x130'),
-    image('Rear', 'mezzo-602-a-rear.webp', 'Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)', 'Powersoft', 'Mezzo 602 A', 'https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png', '1024x500', '530x137')
+    image("Rear", "mezzo-602-a-rear.webp", "Powersoft Mezzo 602 A 후면 단자 사진", "Powersoft", "Mezzo 602 A", "https://www.powersoft.com/api/media/file/Mezzo602A_gallery-cardL_rear-2.png", "1024x500", "492x95", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'duecanali-1604-dspd': [
-    image('Front', 'duecanali-1604-dspd-front.webp', 'Powersoft Duecanali 1604 DSP+D 전면부', 'Powersoft', 'Duecanali 1604 DSP+D', 'https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-4.png', '1024x500', '1006x131')
+    image('Front', 'duecanali-1604-dspd-front.webp', 'Powersoft Duecanali 1604 DSP+D 전면부', 'Powersoft', 'Duecanali 1604 DSP+D', 'https://www.powersoft.com/api/media/file/Duecanali1604DSP_gallery-cardL_front-4.png', '1024x500', '1006x131'),
+    image("Rear", "duecanali-1604-dspd-rear.webp", "Powersoft Duecanali 1604 DSP+D 후면 단자 사진", "Powersoft", "Duecanali 1604 DSP+D", "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_rear-1.png", "1024x500", "967x95", "FOUND", "Rear · Duecanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지")
   ],
   'quattrocanali-1204-dspd': [
-    image('Front', 'quattrocanali-1204-dspd-front.webp', 'Powersoft Quattrocanali 1204 DSP+D 전면부', 'Powersoft', 'Quattrocanali 1204 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-5.png', '1024x500', '1006x131')
+    image('Front', 'quattrocanali-1204-dspd-front.webp', 'Powersoft Quattrocanali 1204 DSP+D 전면부', 'Powersoft', 'Quattrocanali 1204 DSP+D', 'https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-5.png', '1024x500', '1006x131'),
+    image("Rear", "quattrocanali-1204-dspd-rear.webp", "Powersoft Quattrocanali 1204 DSP+D 후면 단자 사진", "Powersoft", "Quattrocanali 1204 DSP+D", "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_rear-5.png", "1024x500", "968x96", "FOUND", "Rear · Quattrocanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지")
   ],
   'duecanali-804-dsp': [
-    image('Front', 'duecanali-804-dsp-front.webp', 'Powersoft Duecanali 804 DSP 전면부', 'Powersoft', 'Duecanali 804 DSP', 'https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png', '1024x500', '1006x131')
+    image('Front', 'duecanali-804-dsp-front.webp', 'Powersoft Duecanali 804 DSP 전면부', 'Powersoft', 'Duecanali 804 DSP', 'https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-4.png', '1024x500', '1006x131'),
+    image("Diagram", "duecanali-804-dsp-diagram.webp", "Powersoft Duecanali 804 DSP 후면 공식 도면", "Powersoft", "Duecanali 804 DSP", "https://www.powersoft.com/api/media/file/PS_Duecanali-DSPONLY_DS_EN.pdf?v=ms9fk8x5", "2382x3368", "2060x210", "VERIFIED", "Diagram · Duecanali DSP Series Datasheet 2쪽 일반 DSP 후면 도면. Dante 미탑재 변형 전용")
   ],
   'quattrocanali-1204-dsp': [
-    image('Front', 'quattrocanali-1204-dsp-front.webp', 'Powersoft Quattrocanali 1204 DSP 전면부', 'Powersoft', 'Quattrocanali 1204 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-4.png', '1024x500', '1006x131')
+    image('Front', 'quattrocanali-1204-dsp-front.webp', 'Powersoft Quattrocanali 1204 DSP 전면부', 'Powersoft', 'Quattrocanali 1204 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali1204DSP_gallery-cardL_front-4.png', '1024x500', '1006x131'),
+    image("Diagram", "quattrocanali-1204-dsp-diagram.webp", "Powersoft Quattrocanali 1204 DSP 후면 공식 도면", "Powersoft", "Quattrocanali 1204 DSP", "https://www.powersoft.com/api/media/file/PS_Quattrocanali-DSPONLY_DS_EN.pdf?v=ms9fk8xq", "2382x3368", "2060x210", "VERIFIED", "Diagram · Quattrocanali DSP Series Datasheet 2쪽 일반 DSP 후면 도면. Dante 미탑재 변형 전용")
   ],
   'quattrocanali-4804-dsp': [
-    image('Front', 'quattrocanali-4804-dsp-front.webp', 'Powersoft Quattrocanali 4804 DSP 전면부', 'Powersoft', 'Quattrocanali 4804 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png', '1024x500', '1007x132')
+    image('Front', 'quattrocanali-4804-dsp-front.webp', 'Powersoft Quattrocanali 4804 DSP 전면부', 'Powersoft', 'Quattrocanali 4804 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_front-6.png', '1024x500', '1007x132'),
+    image("Diagram", "quattrocanali-4804-dsp-diagram.webp", "Powersoft Quattrocanali 4804 DSP 후면 공식 도면", "Powersoft", "Quattrocanali 4804 DSP", "https://www.powersoft.com/api/media/file/PS_Quattrocanali-DSPONLY_DS_EN.pdf?v=ms9fk8xq", "2382x3368", "2060x210", "VERIFIED", "Diagram · Quattrocanali DSP Series Datasheet 2쪽 일반 DSP 후면 도면. Dante 미탑재 변형 전용")
   ],
   'mezzo-324-ad': [
     image('Front', 'mezzo-324-ad-front.webp', 'Powersoft Mezzo 324 AD 전면부(사이트에서 322 A와 공용 이미지 사용)', 'Powersoft', 'Mezzo 324 AD', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024x500', '511x129'),
-    image('Rear', 'mezzo-324-ad-rear.webp', 'Powersoft Mezzo 324 AD 후면 커넥터부', 'Powersoft', 'Mezzo 324 AD', 'https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png', '1024x500', '528x133')
+    image("Rear", "mezzo-324-ad-rear.webp", "Powersoft Mezzo 324 AD 후면 단자 사진", "Powersoft", "Mezzo 324 AD", "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-2.png", "1024x500", "488x93", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'mezzo-604-ad': [
     image('Front', 'mezzo-604-ad-front.webp', 'Powersoft Mezzo 604 AD 전면부', 'Powersoft', 'Mezzo 604 AD', 'https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_front-2.png', '1024x500', '512x130'),
-    image('Rear', 'mezzo-604-ad-rear.webp', 'Powersoft Mezzo AD 시리즈 후면 커넥터부(대표 이미지)', 'Powersoft', 'Mezzo 604 AD', 'https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png', '1024x500', '528x133')
+    image("Rear", "mezzo-604-ad-rear.webp", "Powersoft Mezzo 604 AD 후면 단자 사진", "Powersoft", "Mezzo 604 AD", "https://www.powersoft.com/api/media/file/Mezzo604AD_gallery-cardL_rear-2.png", "1024x500", "490x94", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'mezzo-324-a': [
     image('Front', 'mezzo-324-a-front.webp', 'Powersoft Mezzo 324 A 전면부(사이트에서 322 A와 공용 이미지 사용)', 'Powersoft', 'Mezzo 324 A', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024x500', '511x129'),
-    image('Rear', 'mezzo-324-a-rear.webp', 'Powersoft Mezzo A 시리즈 후면 커넥터부(대표 이미지)', 'Powersoft', 'Mezzo 324 A', 'https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png', '1024x500', '530x137')
+    image("Rear", "mezzo-324-a-rear.webp", "Powersoft Mezzo 324 A 후면 단자 사진", "Powersoft", "Mezzo 324 A", "https://www.powersoft.com/api/media/file/Mezzo324A_gallery-cardL_rear-3.png", "1024x500", "489x95", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'mezzo-604-a': [
     image('Front', 'mezzo-604-a-front.webp', 'Powersoft Mezzo 604 A 전면부', 'Powersoft', 'Mezzo 604 A', 'https://www.powersoft.com/api/media/file/Mezzo604AD_gallery-cardL_front-1.png', '1024x500', '511x130'),
-    image('Rear', 'mezzo-604-a-rear.webp', 'Powersoft Mezzo 604 A 후면 커넥터부', 'Powersoft', 'Mezzo 604 A', 'https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-1.png', '1024x500', '530x137')
+    image("Rear", "mezzo-604-a-rear.webp", "Powersoft Mezzo 604 A 후면 단자 사진", "Powersoft", "Mezzo 604 A", "https://www.powersoft.com/api/media/file/Mezzo604A_gallery-cardL_rear-2.png", "1024x500", "490x97", "FOUND", "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용")
   ],
   'duecanali-804-dspd': [
-    image('Front', 'duecanali-804-dspd-front.webp', 'Powersoft Duecanali 804 DSP+D 전면부', 'Powersoft', 'Duecanali 804 DSP+D', 'https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-5.png', '1024x500', '1006x131')
+    image('Front', 'duecanali-804-dspd-front.webp', 'Powersoft Duecanali 804 DSP+D 전면부', 'Powersoft', 'Duecanali 804 DSP+D', 'https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_front-5.png', '1024x500', '1006x131'),
+    image("Rear", "duecanali-804-dspd-rear.webp", "Powersoft Duecanali 804 DSP+D 후면 단자 사진", "Powersoft", "Duecanali 804 DSP+D", "https://www.powersoft.com/api/media/file/Duecanali804DSP_gallery-cardL_rear-1.png", "1024x500", "967x95", "FOUND", "Rear · Duecanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지")
   ],
   'quattrocanali-2404-dsp': [
-    image('Front', 'quattrocanali-2404-dsp-front.webp', 'Powersoft Quattrocanali 2404 DSP 전면부', 'Powersoft', 'Quattrocanali 2404 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-3.png', '1024x500', '1007x131')
-  ]
-,
+    image('Front', 'quattrocanali-2404-dsp-front.webp', 'Powersoft Quattrocanali 2404 DSP 전면부', 'Powersoft', 'Quattrocanali 2404 DSP', 'https://www.powersoft.com/api/media/file/Quattrocanali2404DSP_gallery-cardL_front-3.png', '1024x500', '1007x131'),
+    image("Diagram", "quattrocanali-2404-dsp-diagram.webp", "Powersoft Quattrocanali 2404 DSP 후면 공식 도면", "Powersoft", "Quattrocanali 2404 DSP", "https://www.powersoft.com/api/media/file/PS_Quattrocanali-DSPONLY_DS_EN.pdf?v=ms9fk8xq", "2382x3368", "2060x210", "VERIFIED", "Diagram · Quattrocanali DSP Series Datasheet 2쪽 일반 DSP 후면 도면. Dante 미탑재 변형 전용")
+  ],
   'cdi-2-300bl': [
     image('Front', 'cdi-2-300bl-front.webp', 'Crown CDi 2|300BL 전면', 'HARMAN', 'Crown CDi 2|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6020_1728939592/Crown_CDi_DriveCore_2300BL_Front_x_large_2x.webp', '4096x1283', '2000x626'),
     image('Rear', 'cdi-2-300bl-rear.webp', 'Crown CDi 2|300BL 후면 커넥터 패널', 'HARMAN', 'Crown CDi 2|300BL', 'https://adn.harmanpro.com/product_attachments/product_attachments/6024_1728990132/Crown_CDi_DriveCore_2300BL_Rear_x_large_2x.webp', '4096x1377', '2000x672')

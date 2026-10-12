@@ -29,6 +29,20 @@
       "originalSize": "1024x500",
       "resolution": "1007x131",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "quattrocanali-2404-dspd-rear.webp",
+      "alt": "Powersoft Quattrocanali 2404 DSP+D 후면 단자 사진",
+      "note": "Rear · Quattrocanali DSP+D 공식 제품 페이지 후면 사진. 동일 단자 배치의 시리즈 공용 이미지",
+      "provider": "Powersoft",
+      "model": "Quattrocanali 2404 DSP+D",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_rear-5.png",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1024x500",
+      "resolution": "968x96",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -44,8 +58,8 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
-      "sourceUrl": "https://www.powersoft.com/en/products/install-amps/quattrocanali-series/quattrocanali-2404-dspd"
+      "status": "FOUND",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Quattrocanali4804DSP_gallery-cardL_rear-5.png"
     },
     {
       "role": "Perspective",
@@ -773,6 +787,54 @@
       "condition": "지역별 전원 케이블 동봉",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ45 Ethernet",
+      "signal": "Ethernet 제어",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "Duecanali + Quattrocanali User Guide 6–7쪽 · ArmoníaPlus 원격 제어",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "Phoenix 단자대",
+      "signal": "GPI / REMOTE ON·OFF",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "Duecanali + Quattrocanali User Guide 6–7쪽 · 후면 원격 제어 단자",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "Phoenix 단자대",
+      "signal": "ALARM 접점",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "Duecanali + Quattrocanali User Guide 6–7쪽 · NO/NC 상태 경보 접점",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "Phoenix MC 1,5/12-ST-3,81",
+      "signal": "Aux analog audio in",
+      "direction": "IN",
+      "quantity": "4채널",
+      "protocol": "",
+      "availability": "",
+      "condition": "Duecanali + Quattrocanali User Guide 6쪽: 채널별 main/aux 이중 입력 · 후면 LINE 단자대",
+      "source": "M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -824,5 +886,87 @@
     "footerNote": "Powersoft Quattrocanali 2404 DSP+D · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "AC 전원",
+        "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 45,
+        "x2": 140,
+        "y": 55,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "스피커 출력 1–4",
+        "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 400,
+        "x2": 570,
+        "y": 28,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "BALANCED 입력",
+        "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+        "x1": 600,
+        "x2": 710,
+        "y": 34,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "LINE 입력",
+        "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+        "x1": 600,
+        "x2": 710,
+        "y": 70,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "GPI/원격 제어",
+        "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 700,
+        "x2": 753,
+        "y": 26,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "Ethernet 제어",
+        "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 795,
+        "x2": 844,
+        "y": 72,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "Dante/AES67",
+        "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 866,
+        "x2": 907,
+        "y": 72,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "ALARM 접점",
+        "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+        "x1": 850,
+        "x2": 930,
+        "y": 26,
+        "side": "top"
+      }
+    ],
+    "measuredImage": {
+      "file": "quattrocanali-2404-dspd-rear.webp",
+      "width": 968,
+      "height": 96
+    }
   }
 }

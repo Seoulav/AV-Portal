@@ -452,28 +452,28 @@
       "io": 6
     },
     "duecanali-1604-dsp": {
-      "sha256": "9BE7E098858265BC563B8563621B97DE77BE313D88B0AE798B99C960E081D87E",
+      "sha256": "F57ADCD5CBB411EBBE0B5FDF81A9B40D445C9D286D49C455FBA06BD15C2CF059",
       "features": 4,
       "specifications": 48,
-      "io": 3
+      "io": 7
     },
     "duecanali-1604-dspd": {
-      "sha256": "00FAF366768C483ED16BFA82D7DDEBFD05F48D92170E152B51318B128B2467C8",
+      "sha256": "29ADE4AC36CF30AC9D886183A1AD3871888C614FE18878D21E7E8E250874D074",
       "features": 5,
       "specifications": 67,
-      "io": 4
+      "io": 8
     },
     "duecanali-804-dsp": {
-      "sha256": "B126CC3F21E1533489E6FD4AB3233E8ABACE12AD734FF2865EC766E7FBC56212",
+      "sha256": "D1C5988288E40D6FE76787E2AE168270CBDDA3AEB36D694EC27F7081D1932794",
       "features": 4,
       "specifications": 48,
-      "io": 3
+      "io": 7
     },
     "duecanali-804-dspd": {
-      "sha256": "A7323BFE1812C6961F3551830FFA4B0799D6EC54CCDD45EE9109B5B10F20D141",
+      "sha256": "EE7B841AA5026DE21DC061D75E92ABB86E0F7E8541076BB3C4914C104B46F0A9",
       "features": 5,
       "specifications": 67,
-      "io": 4
+      "io": 8
     },
     "eb-l260f": {
       "sha256": "3FFC6E4093DE06B6732C19045AFFE341EF711A25BCEF9D2639B13D3B2E5B0F70",
@@ -962,52 +962,52 @@
       "io": 9
     },
     "mezzo-322-a": {
-      "sha256": "220E39BFA38DA92444F35320C65801716663E22A443ECDCF777CD8F322308EA0",
+      "sha256": "FC982E825C53E5643D74C9E9B90F0ED436D7B516A1BE797230876D62E70715A5",
       "features": 4,
       "specifications": 57,
-      "io": 6
+      "io": 7
     },
     "mezzo-322-ad": {
-      "sha256": "6730CE7D49EC6B4D8CFAB6CA05999A259557316F429AD9097C651473C29989E3",
+      "sha256": "F93D01F269565A61F441A2ED8CA262C27ED9EEC8C882A21D9807D4423BBA5570",
       "features": 7,
       "specifications": 11,
-      "io": 6
+      "io": 9
     },
     "mezzo-324-a": {
-      "sha256": "3E3ED6B53036C6C7206BA820D548E7C134411A76F91F77D6A3FA7DD2D7010923",
+      "sha256": "7517805644AE93011BF9025A9F21B9FFFE6DD194F7AF3403047AC835CE1ED9AB",
       "features": 4,
       "specifications": 56,
-      "io": 5
-    },
-    "mezzo-324-ad": {
-      "sha256": "8ADF6FEFD8269A3152B23049139CD73334D51FF9BC530030D313AFFEE1915248",
-      "features": 5,
-      "specifications": 59,
-      "io": 7
-    },
-    "mezzo-602-a": {
-      "sha256": "DC8E1B6278DDE71A813E9FD6A5D42942B3A982E338B1952F3CC4DE1A00B84FFA",
-      "features": 4,
-      "specifications": 60,
       "io": 6
     },
-    "mezzo-602-ad": {
-      "sha256": "B22DD7EAB4B087FE2942306906D539258C7B6900DDA1CC7D2C08377C62E9B39B",
+    "mezzo-324-ad": {
+      "sha256": "6DCD2EFB8191F2C67433EBF66C0820F19389D02DBF4747CCC9B36D4E2415B6C5",
       "features": 5,
-      "specifications": 63,
+      "specifications": 59,
       "io": 8
     },
+    "mezzo-602-a": {
+      "sha256": "E4936B0DF98C5C836DA50825B81E60A47AEB3E6CCC7D97C1A31C949011CDA369",
+      "features": 4,
+      "specifications": 60,
+      "io": 7
+    },
+    "mezzo-602-ad": {
+      "sha256": "A9CCD9441D667D2B3A9592A9ED36B3434E5097324CE1522E431E8D5596E9C2CC",
+      "features": 5,
+      "specifications": 63,
+      "io": 9
+    },
     "mezzo-604-a": {
-      "sha256": "B5B92A783DC98A786EB4A908E6BA2F29EABFA3321D7F51084CE1348B3589DA75",
+      "sha256": "92F00C3942753C9DD189417FE699FCC610704E3ABB2EA7A9A3FC994F4F6E92C4",
       "features": 4,
       "specifications": 59,
-      "io": 5
+      "io": 6
     },
     "mezzo-604-ad": {
-      "sha256": "96DA81057F298C9A828F35519E303689AFD6D519A95F2D3773FDBD3FE9BCDDA7",
+      "sha256": "183506368305C61C995FA48944B6E984F717028518B0BD3E6D300088DB39C4F0",
       "features": 5,
       "specifications": 62,
-      "io": 7
+      "io": 8
     },
     "mp008f": {
       "sha256": "0BB0FADBE8270ED21360A84554269605FEE75284CB4FDB7080D19C14FB60638B",
@@ -1190,40 +1190,40 @@
       "io": 4
     },
     "quattrocanali-1204-dsp": {
-      "sha256": "5CC800C38D74E10BF34574F7828A97B28A13B60789F50A771368FD99AA3A231B",
+      "sha256": "0C2149629B3417F0EB2DDF283B0A8063221B57D72D18B8F7B48E2E0D2051A191",
       "features": 4,
       "specifications": 49,
-      "io": 3
+      "io": 7
     },
     "quattrocanali-1204-dspd": {
-      "sha256": "A4F0327B0095C3043656DEADE251DC78362B348DCFDE9939500B4A4D3EE94EFF",
+      "sha256": "6B68AF05D1B83412403E7FD74E43FBE9DDD1B44ACD73671FDA8CFC25BB5BB630",
       "features": 5,
       "specifications": 67,
-      "io": 4
+      "io": 8
     },
     "quattrocanali-2404-dsp": {
-      "sha256": "747E04E3494FA13F05CF9C3B4EC40D9CE30D871DCF4AE720DB48DDB892739D9B",
+      "sha256": "FC27099D12593A6E147BD882F3B835C3ED578E30C646A9CE0D0E4AA17C7EBC59",
       "features": 4,
       "specifications": 49,
-      "io": 3
+      "io": 7
     },
     "quattrocanali-2404-dspd": {
-      "sha256": "EA74C1BD21EEF3B0EB35DC4DC9F0A2B6421AA62446B59EB88A67BD45195F95C6",
+      "sha256": "00DE16C34A243645449EC940A8A98C0EEB15ACF8FCD2AE12B9FF414BEEFCEA4B",
       "features": 5,
       "specifications": 67,
-      "io": 4
+      "io": 8
     },
     "quattrocanali-4804-dsp": {
-      "sha256": "24405180FD00BA84225B5F15E1343C497020D488E4F21CAD0E3CB0A5AC837A36",
+      "sha256": "91C2AE05E54ADB2AE523A592BB63C6DEA0EA10857EBD0867CD765D7BA27CE008",
       "features": 4,
       "specifications": 49,
-      "io": 3
+      "io": 7
     },
     "quattrocanali-4804-dspd": {
-      "sha256": "B3321D7FFDE27AD6FE48EAC65D4D0B911661D54E79A28F7C3CD2B5F4DAC1AA5F",
+      "sha256": "86F159DAFF11E1863B1DC2652291429F02489AFEDE5C45BC724782275DEF6E17",
       "features": 5,
       "specifications": 67,
-      "io": 4
+      "io": 8
     },
     "rally-bar": {
       "sha256": "1A72C3ADFD7F6D83E64A288DE8E171BFAEEE67A49B5483AC1C36110AA94B92C1",

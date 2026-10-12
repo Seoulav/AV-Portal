@@ -33,15 +33,15 @@
     {
       "role": "Rear",
       "file": "mezzo-602-ad-rear.webp",
-      "alt": "Powersoft Mezzo AD 시리즈 후면 커넥터부(대표 이미지)",
-      "note": "Rear · 제조사 공식 이미지",
+      "alt": "Powersoft Mezzo 602 AD 후면 단자 사진",
+      "note": "Rear · 제조사 해당 모델 공식 제품 페이지의 후면 사진. 기존 시리즈 대표 사진 대신 실제 모델 이미지 사용",
       "provider": "Powersoft",
       "model": "Mezzo 602 AD",
-      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png",
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_rear-2.png",
       "officialSource": true,
       "verificationStatus": "FOUND",
       "originalSize": "1024x500",
-      "resolution": "528x133",
+      "resolution": "487x95",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -59,7 +59,7 @@
     {
       "role": "Rear",
       "status": "FOUND",
-      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo324AD_gallery-cardL_rear-1.png"
+      "sourceUrl": "https://www.powersoft.com/api/media/file/Mezzo602AD_gallery-cardL_rear-2.png"
     },
     {
       "role": "Perspective",
@@ -781,12 +781,12 @@
       "connector": "2 x RJ45 Fast Ethernet",
       "signal": "제어/모니터링 네트워크",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "ArmoníaPlus",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "MEZZO Series User Guide 39쪽: 2 RJ45",
+      "source": "M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",
@@ -799,6 +799,18 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "GPIO 단자대",
+      "signal": "다목적 GPIO",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "MEZZO Series User Guide 39쪽 · 제어용 GPIO 단자대",
+      "source": "M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -850,5 +862,78 @@
     "footerNote": "Powersoft Mezzo 602 AD · 공식 출처 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "items": [
+      {
+        "n": 1,
+        "label": "AC 전원",
+        "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+        "x1": 34,
+        "x2": 118,
+        "y": 45,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "스피커 출력 1–2",
+        "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+        "x1": 188,
+        "x2": 241,
+        "y": 68,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "아날로그 입력 1–2",
+        "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+        "x1": 251,
+        "x2": 305,
+        "y": 68,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "비밸런스 입력",
+        "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+        "x1": 315,
+        "x2": 331,
+        "y": 68,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "라인 출력 1–2",
+        "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
+        "x1": 334,
+        "x2": 393,
+        "y": 68,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "네트워크",
+        "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
+        "x1": 396,
+        "x2": 483,
+        "y": 25,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "GPIO",
+        "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+        "x1": 403,
+        "x2": 483,
+        "y": 75,
+        "side": "bottom"
+      }
+    ],
+    "measuredImage": {
+      "file": "mezzo-602-ad-rear.webp",
+      "width": 487,
+      "height": 95
+    }
   }
 }
