@@ -122,7 +122,7 @@
 ## W-20261012-013 first phase closeout
 
 - Status: first phase complete; PR #420 merged at `5f0a976d3acc2414438b54ccfb62f7c1120b5f17`. Builder CI run `38258773502` passed; Pages run `38259165309` passed.
-- Scope completed: Crown/I-TECH, Powersoft Mezzo, BSS GPIO, ULXD4 and ULXD4D batches. Public BLU-100 Builder page confirmed GPIO In 1?12 and GPIO Out 1?6, with issue count 0; capture is `Work/??/W-20261012-013-screens/public-builder-bss-blu-100-1280.png`.
+- Scope completed: Crown/I-TECH, Powersoft Mezzo, BSS GPIO, ULXD4 and ULXD4D batches. Public BLU-100 Builder page confirmed GPIO In 1-12 and GPIO Out 1-6, with issue count 0; capture: `Work/기록/W-20261012-013-screens/public-builder-bss-blu-100-1280.png`.
 - Session B has moved to the queued W-014 task. Other manufacturer batches remain for later planning.
 
 
@@ -138,4 +138,12 @@
 
 - PR #422 merged, merge SHA `13218d3639a668190764b0b6b5a6ba47a7ae794e`; Builder CI run `38262027969` and Pages deployment run `38262404409` passed.
 - Public AV Portal Shure view confirmed all 30 items and seven groups: ULX-D 8, QLX-D 4, SLX-D+ 6, MXC 3, MX 3, MXA 2, UA 4. A900W-R-GM appears in MXA and no ACC group is shown.
-- Screenshot: `Work/??/W-20261012-014-screens/public-shure-lineup-1280.png`. W-014 complete. Proceeding to queued W-017 after this closeout record.
+- Screenshot: `Work/기록/W-20261012-014-screens/public-shure-lineup-1280.png`. W-014 complete. Proceeding to queued W-017 after this closeout record.
+
+## W-20261012-017 implementation
+
+- Status: W-017 branch integrated the latest main commit `53c7e7401bd68c8568d51db24b5550ea3cf4904f` per the user-approved order (W-017 first, before session A opens a PR).
+- Confirmed the RS4 catalog row and full detail record already existed on main (from commit `98f9056`); existing product values cite the supplied RS4 datasheet and match its model-specific figures. No product JSON, catalog, image, or uploaded PDF was changed or duplicated. The supplied PDF hash matched the task reference; its filename is dated 20260703 while page 7 carries internal code `AQL-RS4-EN-20260401`.
+- Added a single manufacturer-specific comparison module for 12 products: Analog Way (7), NovaStar (2), Colorlight (3). The current product row is emphasized and marked `aria-current`; XDM-WOS100 and unrelated products receive no table. The six-column table has a focusable internal horizontal scroller.
+- Implemented from the prototype detail source and regenerated the public detail assets. Product data remains unchanged. Focused table and asset-generation tests passed (9/9); `verify-pages` passed (274 equipment items, 271 details, 453 reviewed official WebP images, 130 uploaded-PDF entries). A first full-suite run found the expected source/generated asset mismatch; adding the prototype source and asset transform pair resolved it. After source/generated asset synchronization, full serial suite passed: 517 passed, 0 failed, 1 existing skip.
+- Integration resolved conflicts in both detail HTML templates and `tests/verification-ui.test.mjs`; W-015 RTCOM adapter/enhancement changes and W-017 layer table renderer/module are both present. Regenerated detail assets, search index, readable catalog, and public snapshot after integration.
