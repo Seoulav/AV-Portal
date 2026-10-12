@@ -1,4 +1,5 @@
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
+import { beforeW013A2Product } from './w013-a2-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
@@ -40,7 +41,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   assert.equal(Object.keys(evidence.untouched).length,225);
   let total=0;
   for(const [slug,record] of Object.entries(evidence.products)){
-    const product=beforeW024(read(slug),slug);
+    const product=beforeW024(beforeW013A2Product(read(slug),slug),slug);
     const {specifications,...core}=product;
     assert.equal(hash(JSON.stringify(core)),record.coreSha256,`${slug} non-specification fields`);
     assert.equal(hash(JSON.stringify(product.sources)),record.sourcesSha256,`${slug} sources`);

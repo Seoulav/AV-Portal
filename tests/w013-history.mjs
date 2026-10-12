@@ -1,14 +1,16 @@
 ﻿import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW013AProduct } from './w013-a-history.mjs';
+import { beforeW013A2Product } from './w013-a2-history.mjs';
 import { rewindW013B2Product } from './w013-b2-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w013-product-history.json', import.meta.url), 'utf8'));
 export const w013Slugs = new Set(Object.keys(fixture));
 const hash = value => createHash('sha256').update(value).digest('hex');
 
-// Restore only the approved W-013 I/O field; the prior whole-product SHA catches any other edits.
+// Rewind each approved W-013 batch in reverse order; the final whole-product SHA catches other edits.
 export function beforeW013Product(current, slug) {
+  current = beforeW013A2Product(current, slug);
   current = rewindW013B2Product(current, slug);
   current = beforeW013AProduct(current, slug);
   if (!w013Slugs.has(slug)) return current;

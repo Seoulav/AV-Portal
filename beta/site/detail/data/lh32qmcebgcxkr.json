@@ -455,12 +455,12 @@
       "connector": "IR 입력",
       "signal": "IR 수신/외부 IR",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "IR",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
@@ -479,48 +479,48 @@
       "connector": "오디오 출력",
       "signal": "아날로그 오디오 출력",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "있음(스테레오 미니 잭)",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 입력",
       "signal": "외부 제어",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",
       "connector": "RS-232C 출력",
       "signal": "외부 제어(루프아웃)",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "RS-232C",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
       "connector": "RJ45(LAN)",
       "signal": "유선 네트워크",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Ethernet",
       "availability": "있음",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M1",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -534,6 +534,11 @@
       "code": "S3",
       "name": "삼성전자 스마트 LCD 사이니지 제품가이드 (사용자 제공)",
       "scope": "국내 모델 LH32QMCEBGCXKR 일치 · 슬라이드 10의 모델별 연결성 표. 원본 사본은 게시하지 않음; SHA-256 347a5d9a3a657c89d648da0aa82d3c3dcd9c27a367efa192ce34dc08167674f4"
+    },
+    {
+      "code": "M1",
+      "name": "삼성전자 한글 사용설명서 BN81-24537G-14 (사용자 제공)",
+      "scope": "QM32C 적용 모델 전용 단자 도면·설명 24쪽. 공개 사용설명서 BN81-24537G-14 · SHA-256 b82e05f4cf163ca62ff19fa9a1f9b9bb465560eb5776280d903358508afe56e3."
     },
     {
       "code": "U1",

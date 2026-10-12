@@ -219,6 +219,58 @@ export const NOT_PLACEABLE_LEVEL3 = Object.freeze(['Cable', 'Active Optical Cabl
 // 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. match에는 그 행의 connector·signal 원문을 그대로 적는다.
 // 원문이 바뀌면(행 이동·수정) 적용하지 않고 제품 이슈 override-stale로 알린다. note에 근거(제조사 자료 등)를 적는다.
 export const IO_OVERRIDES = Object.freeze({
+  'v-02hd-mk-ii#1': {
+    match: { connector: 'PGM OUT / PREVIEW OUT', signal: 'Video' },
+    ports: [{ connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 }],
+    note: 'Roland V-02HD MK II Reference Manual, Main Specifications: separate PROGRAM OUT and PREVIEW OUT HDMI Type A connectors; https://static.roland.com/assets/media/pdf/V-02HD_MKII_reference_eng03_W.pdf',
+  },
+  // Alta 4K fixed HDMI/SDI mirrored output pairs; optional SFP+ module rows stay unresolved.
+  ...Object.fromEntries(['zenith-100', 'zenith-200'].flatMap(id => [
+    [`${id}#4`, {
+      match: { connector: 'HDMI 2.0 + 12G-SDI(미러링)', signal: '4K60 out' },
+      ports: [
+        { connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 },
+        { connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 2 },
+      ],
+      note: `Analog Way official ${id} specifications: two output channels each mirrored on HDMI 2.0 and 12G-SDI; https://www.analogway.com/products/${id}`,
+    }],
+    [`${id}#6`, {
+      match: { connector: 'HDMI 1.4 + 3G-SDI(미러링)', signal: 'Multiviewer out' },
+      ports: [
+        { connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 1 },
+        { connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 },
+      ],
+      note: `Analog Way official ${id} specifications: one HDMI 1.4 multiviewer output mirrored on 3G-SDI; https://www.analogway.com/products/${id}`,
+    }],
+  ])),
+  // Midra 4K has mirrored HDMI and SDI jacks on each physical output; both remain connectable.
+  ...Object.fromEntries(['eikos-4k', 'pulse-4k'].flatMap(id => [
+    [`${id}#4`, {
+      match: { connector: 'HDMI 2.0 + 12G/6G/3G-SDI(미러링)', signal: '4K60 PGM/AUX out' },
+      ports: [
+        { connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 },
+        { connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 2 },
+      ],
+      note: `Analog Way official ${id} datasheet: two HDMI 2.0 outputs, each mirrored on 12G/6G/3G-SDI; https://www.analogway.com/products/${id}`,
+    }],
+    [`${id}#5`, {
+      match: { connector: 'HDMI 1.4 + 3G-SDI(미러링)', signal: 'Multiviewer out' },
+      ports: [
+        { connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 1 },
+        { connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 },
+      ],
+      note: `Analog Way official ${id} datasheet: one HDMI 1.4 multiviewer output mirrored on 3G-SDI; https://www.analogway.com/products/${id}`,
+    }],
+  ])),
+  // Aquilon RS standard multiviewer card: two independent HDMI 2.0 output jacks.
+  // The portal I/O row is already correct; the generic parser mistakes "multiviewer" for multiple signal types.
+  ...Object.fromEntries(['aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'aquilon-rsalpha'].map(id => [
+    `${id}#2`, {
+      match: { connector: 'HDMI 2.0', signal: '멀티뷰어 out' },
+      ports: [{ connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 }],
+      note: `Analog Way official ${id} product specifications, "2 Dedicated Multiviewer Outputs": 2 HDMI 2.0 ports; https://www.analogway.com/products/${id === 'aquilon-rsalpha' ? 'aquilon-rs-alpha' : id}`,
+    },
+  ])),
   'eb-pu2010w-b#4': {
     match: { connector: "BNC", signal: "디지털 비디오 입력" },
     ports: [{ connector: 'BNC', signals: ['SDI'], direction: 'in', quantity: 1 }],

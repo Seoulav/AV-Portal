@@ -10,9 +10,10 @@ import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
 import { beforeW12002Path } from './w12002-wording-history.mjs';
+import { beforeW013A2Product } from './w013-a2-history.mjs';
 
 const app = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
-const read = path => beforeSamsungW04010Path(path, beforeW12002Path(path,JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'))));
+const read = path => beforeSamsungW04010Path(path, beforeW12002Path(path,beforeW013A2Product(JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8')), path.split('/').at(-1).replace(/\.json$/, ''))));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const targets = ['hg43u800fnfxkr','hg50u800fnfxkr','hg65u800fnfxkr','lh115qhfebgxkr','lh32qmcebgcxkr','lh43qhcebgcxkr','lh43qmcebgcxkr','lh75qhcebgcxkr','lh85qmcebgcxkr','lh98qmcebgcxkr','lh55vhcrbgbxkr','lh55vmcrbgbxkr','lh55wmfwbgcxkr','lh75wmfwlgcxkr'];
 
