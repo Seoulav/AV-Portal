@@ -239,3 +239,10 @@
 - 수정 후 전체 테스트: 568 tests, 567 passed, 0 failed, 1 skipped. Windows 임시 디렉터리에서 실행.
 - 복원 후 search index와 public snapshot을 다시 생성했다. `verify-pages`, search-index `--check`, readable-catalog `--check`, builder-library `--check`, PR diff check 모두 통과했다.
 - 현재 PR #434의 기존 Builder CI는 초록이지만, 리뷰 반영 커밋을 push한 뒤 새 head의 CI를 다시 확인해야 한다. 공개 Builder 캡처, merge, Pages 배포 확인은 아직 완료되지 않았다.
+
+### W-013 B2 배포 완료 (2026-10-13)
+
+- 리뷰 수정 반영 head `cfc19243e696f635e59f56de5e8b04262c8c06ce`의 Builder CI run `38298551678` 통과 후 PR [#434](https://github.com/Seoulav/AV-Portal/pull/434)을 병합했다. merge SHA: `dcd6c762833aa66ec62c01fa82933bf387d8f9fd`.
+- main Pages 배포 run `38298859788` 성공. 배포 파이프라인의 verify-pages, 전체 테스트, Builder 생성, 빌드, 업로드를 모두 통과했다.
+- 공개 [AV System Designer](https://seoulav.github.io/AV-Portal/builder/)에서 Powersoft MEZZO 322 AD를 추가해 단자 9개와 이슈 0을 확인했다. 캡처: [public-builder-b2-mezzo-322-ad-1280.png](기록/W-20261012-013-screens/public-builder-b2-mezzo-322-ad-1280.png).
+- W-013 B2 완료. AVer는 요청에 따라 제품·생성기 변경 없이 공식 자료와 행만 증거 메모로 세션 A에 인계했다.
