@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw, beforeW026Product} from './w026-history.mjs';
+import {beforeW06004Product} from './w06004-history.mjs';
 import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
 import { isW030Name } from './w030-history.mjs';
@@ -51,7 +52,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
     }
     const core=structuredClone(product);
     delete core.lead;delete core.subtitle;delete core.keyFacts;
-    assert.equal(sha(JSON.stringify(core)),proof.coreSha256,`${slug}: only three fields added`);
+    assert.equal(sha(JSON.stringify(beforeW06004Product(core,slug))),proof.coreSha256,`${slug}: only three fields added`);
   }
 });
 

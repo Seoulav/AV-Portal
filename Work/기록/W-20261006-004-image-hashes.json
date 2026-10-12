@@ -1,0 +1,38 @@
+{
+  "ua844swb-front.webp": {
+    "priorSha256": "c3346b4acb9691e735d4d870b0bc18a0fc73853d46bb663de228ce258aa1cebb",
+    "approvedSha256": "a18fdf60e4e60384ea8dc563b683ce9f7705b408f40c03c4e3c5d14016503caf"
+  },
+  "ua844swb-rear.webp": {
+    "priorSha256": "2e1491a78cab692a8fa609b3b185d897be4683ba578e086ed1cac7225e26d1f3",
+    "approvedSha256": "1bc415b52691860f2d01a0f85a4de6bb656f0e077850e7c5b30e7d56cf3d6de8"
+  },
+  "ua864a-front.webp": {
+    "priorSha256": "5cce556e04f23f7f93ddb250b71c7a99366cf98dfbb100cb5c6756c2fe3ec98c",
+    "approvedSha256": "9bb10c9a868ee4f34dfa6de837b2fef6d9ec4da399f97359b8ebc9e591856671"
+  },
+  "ua864a-rear.webp": {
+    "priorSha256": "41ac4ba8c65c106a8aae48db98fd7a1bd50f0d8cddd39531510d6b00777a1076",
+    "approvedSha256": "813bbba8469e6051c016277492b35db52661fe5eca8f5643dbc9761bacd40bc9"
+  },
+  "ua845uwb-front.webp": {
+    "priorSha256": "dc8e0989a8a077bb26f146e8c671dce47fd706a9bd52a50d36bc07b2b320e73e",
+    "approvedSha256": "56277072e39fe1fd6d9623097817140a14720351303077ccd9bae17b37d7fe3b"
+  },
+  "ua845uwb-rear.webp": {
+    "priorSha256": "187a4301d3dfe2ba36adac3bef442f014e2f687eb9bccc27e1e70e661093ac06",
+    "approvedSha256": "802351874dc669e8923b1d099aea115d5476734a17e72b530003eaf04571a282"
+  },
+  "hdmi20-optj-rx90-front.webp": {
+    "priorSha256": "c77b9bee5d121ce0ea6f4dc729df3e10dc3b559325accceb32edae5726f24d8e",
+    "approvedSha256": "0e231f966a6e77c6c4962714326f84d7305ae8ecd3648dfbfa8b80bb74ecd31a"
+  },
+  "hdmi20-optj-tx90-front.webp": {
+    "priorSha256": "c77b9bee5d121ce0ea6f4dc729df3e10dc3b559325accceb32edae5726f24d8e",
+    "approvedSha256": "0e231f966a6e77c6c4962714326f84d7305ae8ecd3648dfbfa8b80bb74ecd31a"
+  },
+  "led-780h-front.webp": {
+    "priorSha256": "1bc6b9b6a926506117fe3e09f56b6ffb235dc67ea6c66428ddeac7eeea1a37af",
+    "approvedSha256": "ad7b36f5c30f1d160e9cc5e80b7f532526748de77276b2962a2ef1c19a86e226"
+  }
+}
