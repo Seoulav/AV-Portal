@@ -533,5 +533,123 @@
     "footerNote": "Epson EB-L260F 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "eb-l260f-rear.webp",
+      "width": 486,
+      "height": 173
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB 서비스",
+        "desc": "USB Type-B · USB 연결",
+        "x1": 75,
+        "x2": 93,
+        "y": 31,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "USB-A",
+        "desc": "USB Type-A · USB 연결",
+        "x1": 101,
+        "x2": 120,
+        "y": 31,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "LAN",
+        "desc": "RJ-45 · 유선 네트워크",
+        "x1": 129,
+        "x2": 154,
+        "y": 32,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI 디지털 영상 입력 1",
+        "x1": 245,
+        "x2": 267,
+        "y": 32,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI 디지털 영상 입력 2",
+        "x1": 282,
+        "x2": 304,
+        "y": 32,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "Computer 1 입력",
+        "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+        "x1": 151,
+        "x2": 184,
+        "y": 79,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "Computer 2 / Monitor Out",
+        "desc": "D-Sub 15핀 · 아날로그 영상 입력 또는 출력",
+        "x1": 202,
+        "x2": 230,
+        "y": 80,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "Video 입력",
+        "desc": "RCA · 아날로그 비디오 입력",
+        "x1": 127,
+        "x2": 146,
+        "y": 68,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "오디오 입력",
+        "desc": "RCA · 아날로그 오디오 입력",
+        "x1": 127,
+        "x2": 146,
+        "y": 96,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "오디오 입력 1",
+        "desc": "스테레오 미니 · 오디오 입력",
+        "x1": 181,
+        "x2": 196,
+        "y": 104,
+        "side": "top"
+      },
+      {
+        "n": 11,
+        "label": "오디오 입력 2",
+        "desc": "스테레오 미니 · 오디오 입력",
+        "x1": 209,
+        "x2": 224,
+        "y": 104,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "오디오 출력",
+        "desc": "스테레오 미니 · 오디오 출력",
+        "x1": 234,
+        "x2": 250,
+        "y": 104,
+        "side": "top"
+      }
+    ]
   }
 }

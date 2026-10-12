@@ -518,5 +518,87 @@
     "footerNote": "Epson EB-L895E 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "eb-l895e-rear.webp",
+      "width": 1199,
+      "height": 380
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB 서비스",
+        "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+        "x1": 188,
+        "x2": 219,
+        "y": 60,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "USB-A ×2",
+        "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+        "x1": 240,
+        "x2": 323,
+        "y": 61,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력",
+        "desc": "HDMI 디지털 영상 출력",
+        "x1": 359,
+        "x2": 408,
+        "y": 54,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI 디지털 영상 입력 1",
+        "x1": 432,
+        "x2": 482,
+        "y": 54,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI 디지털 영상 입력 2",
+        "x1": 504,
+        "x2": 556,
+        "y": 54,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "HDBaseT 입력",
+        "desc": "HDBaseT 디지털 영상 입력",
+        "x1": 641,
+        "x2": 691,
+        "y": 62,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "LAN",
+        "desc": "RJ-45 · 유선 네트워크",
+        "x1": 724,
+        "x2": 770,
+        "y": 62,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "오디오 출력",
+        "desc": "스테레오 미니 · 오디오 출력",
+        "x1": 560,
+        "x2": 599,
+        "y": 139,
+        "side": "bottom"
+      }
+    ]
   }
 }
