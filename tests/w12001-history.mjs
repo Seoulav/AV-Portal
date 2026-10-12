@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
+import { beforeW12014Product, beforeW12014Raw } from './w12014-history.mjs';
 
 // Restore only Port Map coordinates for assertions pinned to the pre-W-001 data.
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-001-prior-coords.json', import.meta.url), 'utf8'));
@@ -12,6 +13,9 @@ const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('
 export function beforeW12001Product(current, slug) {
   const record = records[slug];
   if (!record) return current;
+  // W-014 groups the ULXD4Q MIC/LINE switches. A direct call may still see
+  // that current 13-marker map; callers that already restored it see 15.
+  if(slug==='ulxd4q' && current.portMap?.items?.length===13)current=beforeW12014Product(current,slug);
   // W-003 later condenses this one map; restore its approved 24-marker
   // predecessor before checking the independent W-001 coordinate history.
   if (slug === 'ki-pro-go2' && current.portMap?.items?.length === 11) current = beforeW12003Product(current, slug);
@@ -32,6 +36,7 @@ export function beforeW12001Product(current, slug) {
 }
 
 export function beforeW12001Raw(raw, slug) {
+  if(slug==='ulxd4q' && JSON.parse(raw).portMap?.items?.length===13)raw=beforeW12014Raw(raw,slug);
   if (!records[slug]) return raw;
   return JSON.stringify(beforeW12001Product(JSON.parse(raw), slug), null, 2) + '\n';
 }

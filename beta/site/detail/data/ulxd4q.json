@@ -625,42 +625,24 @@
       },
       {
         "n": 9,
-        "label": "출력 1 MIC/LINE",
+        "label": "MIC/LINE 스위치 1–2",
         "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
-        "x1": 1527,
+        "x1": 1330,
         "x2": 1547,
         "y": 201,
         "side": "bottom"
       },
       {
         "n": 10,
-        "label": "출력 2 MIC/LINE",
+        "label": "MIC/LINE 스위치 3–4",
         "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
-        "x1": 1330,
-        "x2": 1350,
-        "y": 201,
-        "side": "bottom"
-      },
-      {
-        "n": 11,
-        "label": "출력 3 MIC/LINE",
-        "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
-        "x1": 852,
+        "x1": 656,
         "x2": 872,
         "y": 201,
         "side": "bottom"
       },
       {
-        "n": 12,
-        "label": "출력 4 MIC/LINE",
-        "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
-        "x1": 656,
-        "x2": 676,
-        "y": 201,
-        "side": "bottom"
-      },
-      {
-        "n": 13,
+        "n": 11,
         "label": "Dante Primary",
         "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어 연결",
         "x1": 1160,
@@ -669,7 +651,7 @@
         "side": "top"
       },
       {
-        "n": 14,
+        "n": 12,
         "label": "Dante Secondary",
         "desc": "RJ-45 · 네트워크 모드에 맞춰 연결(이중화/스위치/분리)",
         "x1": 1060,
@@ -678,7 +660,7 @@
         "side": "bottom"
       },
       {
-        "n": 15,
+        "n": 13,
         "label": "AC 전원 입력",
         "desc": "IEC · 100–240V AC 전원 연결",
         "x1": 129,
