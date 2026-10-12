@@ -1,8 +1,9 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
-// Historical checks restore only the user-approved MX392/MX418D I/O,
-// MX392 specification name, and ULXD4Q Port Map. Other live fields pass through.
+// Historical checks restore only the user-approved MX392 I/O, specification,
+// overview and feature text, MX418D I/O, and ULXD4Q Port Map.
+// Other live fields pass through.
 const fixture=JSON.parse(readFileSync(new URL('../Work/기록/20261012-mx392-ulxd4q-후속-prior-fields.json',import.meta.url),'utf8'));
 const sha=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
 
