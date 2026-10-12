@@ -1,6 +1,6 @@
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261004-010-samsung-115-rear';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows } from './product-detail-model.mjs?v=w20261004-013-spec-order';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs';
@@ -400,23 +400,69 @@ if (!productKey) {
     row.append(element('td', '', name), element('td', '', value));
     $('#spec-table-body').append(row);
   }
+  const outputTable = prepareOutputPowerTable(data);
+  const groupDot = groupIndex => {
+    const dot = element('span', 'spec-category-dot');
+    dot.setAttribute('aria-hidden', 'true');
+    dot.style.setProperty('--category-color', ['#3478d4', '#7c5ab8', '#16806a', '#b86e14', '#bf5272', '#526a8c'][groupIndex % 6]);
+    return dot;
+  };
+  if (outputTable.groups.length) {
+    const wrap = element('div', 'pg-table amp-output-table');
+    wrap.dataset.columns = String(outputTable.groups.length);
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', '부하별 앰프 출력 표');
+    wrap.tabIndex = 0;
+    const table = element('table');
+    table.append(element('caption', 'sr-only', '부하별 앰프 출력'));
+    const heading = element('tr');
+    const loadHeading = element('th', '', '부하');
+    loadHeading.scope = 'col';
+    heading.append(loadHeading);
+    for (const group of outputTable.groups) {
+      const cell = element('th');
+      cell.scope = 'col';
+      cell.append(groupDot(group.groupIndex), element('span', '', group.name.replace(/^출력\((.*)\)$/, '$1')));
+      heading.append(cell);
+    }
+    const head = element('thead');
+    head.append(heading);
+    table.append(head);
+    const body = element('tbody');
+    for (const outputRow of outputTable.rows) {
+      const row = element('tr');
+      const load = element('th', '', outputRow.name);
+      load.scope = 'row';
+      row.append(load);
+      for (const spec of outputRow.cells) {
+        const value = element('td', '', spec ? [spec.value, spec.unit].filter(Boolean).join(' ') : '—');
+        if (spec?.verification && !['VERIFIED', 'FOUND'].includes(spec.verification)) value.append(badge(spec.verification));
+        if (spec?.condition) value.append(element('small', '', `조건: ${spec.condition}`));
+        row.append(value);
+      }
+      body.append(row);
+    }
+    table.append(body);
+    wrap.append(table);
+    $('#spec-table-body').closest('.pg-table').before(wrap);
+  }
   let specNumber = 0;
   for (const { group, groupIndex, spec } of orderSpecificationRows(data)) {
+      if (spec.source) {
+        const record = element('div', 'source-row spec-source-record');
+        record.append(element('strong', '', group.name + ' · ' + spec.name), element('span', '', '출처: ' + spec.source));
+        $('#spec-source-records').append(record);
+      }
+      if (outputTable.entries.has(spec)) continue;
       const row = element('tr', 'spec-data-row');
       row.dataset.specIndex = String(specNumber++);
       const value = element('td', '', [spec.value, spec.unit].filter(Boolean).join(' '));
       if (spec.verification && !['VERIFIED', 'FOUND'].includes(spec.verification)) value.append(badge(spec.verification));
       for (const detail of [spec.condition && `조건: ${spec.condition}`]) if (detail) value.append(element('small', '', detail));
       const name = element('td');
-      const dot = element('span', 'spec-category-dot'); dot.setAttribute('aria-hidden', 'true');
-      dot.style.setProperty('--category-color', ['#3478d4', '#7c5ab8', '#16806a', '#b86e14', '#bf5272', '#526a8c'][groupIndex % 6]);
+      const dot = groupDot(groupIndex);
       name.append(dot, element('span', 'sr-only', group.name + ' · '), document.createTextNode(spec.name));
       row.append(name, value);
-      if (spec.source) {
-        const record = element('div', 'source-row spec-source-record');
-        record.append(element('strong', '', group.name + ' · ' + spec.name), element('span', '', '출처: ' + spec.source));
-        $('#spec-source-records').append(record);
-      }
       $('#spec-table-body').append(row);
   }
   function renderSpecs(expanded = false) {

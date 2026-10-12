@@ -281,3 +281,21 @@ export function orderSpecificationRows(detail) {
   if (detail.manufacturer !== 'Samsung' || !detail.categories?.includes('Display')) return rows;
   return rows.sort((a, b) => samsungDisplaySpecRank(a.spec.name) - samsungDisplaySpecRank(b.spec.name));
 }
+
+const outputLoadName = /^[0-9.]+Ω( 브리지)?$|^(70|100)V$/;
+
+export function prepareOutputPowerTable(detail) {
+  const groups = detail.specificationGroups.flatMap((group, groupIndex) =>
+    /^출력\(/.test(group.name) && group.entries.some(spec => outputLoadName.test(spec.name))
+      ? [{ ...group, groupIndex }] : []);
+  const rows = new Map();
+  const entries = new Set();
+  for (const [column, group] of groups.entries()) {
+    for (const spec of group.entries) {
+      entries.add(spec);
+      if (!rows.has(spec.name)) rows.set(spec.name, { name: spec.name, cells: Array(groups.length).fill(null) });
+      rows.get(spec.name).cells[column] = spec;
+    }
+  }
+  return { groups, rows: [...rows.values()], entries };
+}
