@@ -27,7 +27,7 @@
       "officialSource": true,
       "verificationStatus": "FOUND",
       "originalSize": "3000x3000",
-      "resolution": "1500x1500",
+      "resolution": "900x1623",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -408,8 +408,8 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
   },
-  "lead": "Shure **MX392/C**는 카디오이드 카트리지를 쓰는 유선 경계면 마이크입니다. 무소음 멤브레인 스위치를 발언·뮤트 동작에 맞게 설정할 수 있습니다.",
-  "subtitle": "Microflex Wired Boundary Microphones · 경계면 마이크",
+  "lead": "Shure **MX392/C**는 카디오이드 카트리지를 쓰는 유선 바운더리 마이크입니다. 무소음 멤브레인 스위치를 발언·뮤트 동작에 맞게 설정할 수 있습니다.",
+  "subtitle": "Microflex Wired Boundary Microphones · 바운더리 마이크",
   "keyFacts": [
     {
       "label": "주파수 응답",

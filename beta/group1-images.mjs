@@ -959,7 +959,7 @@ export const group1Images = {
     image('Front', 'a900w-r-gm-front.webp', 'A900W-R-GM 키트 구성품 — 흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이(변형 전용 사진으로 교체: 기존 사진은 검정 커버(A900B-R-GM)였음)', 'Shure', 'A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/fcc/37f/17-/original/8b6484716b5b1952cfaabe8d8771930e.webp', '3000x3000', '2000x1281', 'VERIFIED')
   ],
   mx395: [
-    image('Front', 'mx395-front.webp', 'MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지', 'Shure', 'MX395 Microflex Low Profile Boundary Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp', '2397x2397', '1500x1500')
+    image('Front', 'mx395-front.webp', 'MX395 카트리지 3종(녹색/적색 LED 링 포함 블랙, 화이트) 제품 이미지', 'Shure', 'MX395 Microflex Low Profile Boundary Microphone', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/799/333/29-/original/05489c7b942819560ab7c2f6763d2b31.webp', '2397x2397', '1500x1024')
   ],
   'ua844-swb': [
     image('Front', 'ua844swb-front.webp', 'UA844+SWB 랙마운트 전면 패널 (전원 LED, 470-952MHz 표기)', 'Shure', 'UA844+SWB Antenna Distribution System (5-way active antenna splitter and power distribution)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/6f8/07b/2a-/original/5dc9d3e64aaa92a9c959f1ef9bbed0a3.webp', '3000x3000', '2960x600'),
@@ -985,7 +985,7 @@ export const group1Images = {
     image('Rear', 'ua864a-rear.webp', 'UA864 후면 마운팅 플레이트 (케이블 배선 채널, BNC 커넥터, 게인 스위치 라벨)', 'Shure', 'UA864 Wall-Mounted Wideband Antenna (variant UA864A, 650-952 MHz)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a39/ea7/e1-/original/bbe7a66c6bc370a61bc0e5047fe0a083.webp', '3000x3000', '2400x2140')
   ],
   'mx392-c': [
-    image('Front', 'mx392c-front.webp', 'MX392 바운더리 마이크로폰 (원형 로우프로파일 하우징, 상단 케이블 출구)', 'Shure', 'MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/831/97f/c9-/original/77bca0e1da0c0c30e908e78d266c8c8a.webp', '3000x3000', '1500x1500')
+    image('Front', 'mx392c-front.webp', 'MX392 바운더리 마이크로폰 (원형 로우프로파일 하우징, 상단 케이블 출구)', 'Shure', 'MX392/C Microflex Boundary Microphone (Cardioid, Top Cable Exit)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/831/97f/c9-/original/77bca0e1da0c0c30e908e78d266c8c8a.webp', '3000x3000', '900x1623')
   ],
   ua845uwb: [
     image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '3140x700'),
