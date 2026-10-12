@@ -1,3 +1,4 @@
+import { isApprovedCpqTemplate } from '../scripts/cpq-public-assets.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -90,6 +91,6 @@ test('LED cabinet addition changes only the three new products and keeps the pri
   const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], {
     cwd: fileURLToPath(root), encoding: 'utf8'
   }).split(/\r?\n/);
-  assert.deepEqual(repositoryFiles.filter(name => /\.xlsx?$/i.test(name)), [], 'private workbook must not be tracked or staged');
+  assert.deepEqual(repositoryFiles.filter(name => /\.xlsx?$/i.test(name) && !isApprovedCpqTemplate(name, readFileSync(new URL(name, root)))), [], 'private workbook must not be tracked or staged');
   for (const [slug] of models) assert.equal(existsSync(new URL(`beta/site/detail/images/${slug}-main.webp`, root)), false);
 });

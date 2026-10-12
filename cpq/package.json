@@ -1,0 +1,42 @@
+{
+  "name": "av-cpq",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AV 견적 프로그램 — 웹에서 견적을 완성하고 수식이 살아 있는 Excel을 생성한다",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "audit:exports": "node tools/audit-exports.mjs",
+    "verify": "npm run typecheck && npm test && npm run audit:exports",
+    "test:e2e:portal": "playwright test --config playwright.portal.config.ts"
+  },
+  "dependencies": {
+    "decimal.js": "10.6.0",
+    "fflate": "0.8.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "zod": "4.1.11"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0",
+    "@types/node": "24.6.2",
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "@vitejs/plugin-react": "5.0.4",
+    "jsdom": "^30.1.2",
+    "typescript": "5.9.3",
+    "vite": "7.1.9",
+    "vitest": "3.2.4"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

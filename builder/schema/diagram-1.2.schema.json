@@ -88,6 +88,30 @@
       "items": {
         "$ref": "#/$defs/issue"
       }
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "model"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "$defs": {
@@ -282,6 +306,22 @@
         },
         "portal": {
           "$ref": "#/$defs/portal"
+        },
+        "systemName": {
+          "type": "string"
+        },
+        "selectedOptionQuantities": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "optionPortIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

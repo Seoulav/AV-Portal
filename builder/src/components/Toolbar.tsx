@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useReactFlow } from '@xyflow/react';
 import { version as APP_VERSION } from '../../package.json';
+import { openQuote } from '../quoteHandoff';
 import { DEFAULT_RULES } from '../engine';
 import { diagramSvg } from '../export/diagramSvg';
 import { freePosition } from '../state/store';
@@ -127,6 +128,7 @@ export function Toolbar() {
   const equipmentCount = state.diagram.nodes.filter(node => node.type === 'equipment').length;
   return (
     <header className="toolbar" onMouseDown={keepFocus}>
+      <button type="button" onClick={() => { try { openQuote(JSON.parse(state.exportText()), text => state.notify({text,tone:'info'})); } catch { state.notify({text:'구성도를 전달하지 못했습니다. 내용을 확인해 주세요.',tone:'error'}); } }}>견적 만들기</button>
       <a className="brand" href="../">AV Portal</a>
       <span className="app-name">AV System Builder <span className="beta">베타</span></span>
       <div className="toolbar-actions">

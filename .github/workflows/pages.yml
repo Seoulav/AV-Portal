@@ -37,6 +37,11 @@ jobs:
       - run: npm run build
         working-directory: builder
       - run: mkdir -p beta/site/builder && cp -R builder/dist/. beta/site/builder/
+      - run: npm ci
+        working-directory: cpq
+      - run: npm run typecheck && npm test && npm run audit:exports && npm run build
+        working-directory: cpq
+      - run: mkdir -p beta/site/cpq && cp -R cpq/dist/. beta/site/cpq/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

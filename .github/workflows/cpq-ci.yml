@@ -1,0 +1,32 @@
+name: CPQ integration CI
+on:
+  pull_request:
+    paths: ['cpq/**', 'shared/**', 'builder/**', 'scripts/serve-portal.mjs', 'scripts/cpq-public-assets.mjs', '.github/workflows/cpq-ci.yml', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+        working-directory: cpq
+      - run: npm run verify && npm run build
+        working-directory: cpq
+      - run: npm ci && npm run typecheck && npm test && npm run build
+        working-directory: builder
+      - run: node beta/build-builder-library.mjs --out beta/site/builder-library.json
+      - run: npx playwright install --with-deps chromium
+        working-directory: cpq
+      - run: npm run test:e2e:portal
+        working-directory: cpq
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cpq-test-results
+          path: cpq/test-results/
+          retention-days: 7
