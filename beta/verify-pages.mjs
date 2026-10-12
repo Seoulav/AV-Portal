@@ -64,7 +64,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   }
 }
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'detail-enhancements.mjs', 'detail-enhancement-view.mjs', 'images', 'index.html', 'pdf-documents.mjs', 'product-detail-model.mjs', 'styles.css'].sort());
+assert.deepEqual((await readdir(detail)).sort(), ['app.js', 'data', 'detail-enhancements.mjs', 'detail-enhancement-view.mjs', 'images', 'index.html', 'layer-tables.mjs', 'pdf-documents.mjs', 'product-detail-model.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
 const previewImageFiles = group2Previews.map(entry => entry.image.file);
 assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');

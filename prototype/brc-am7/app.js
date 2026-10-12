@@ -1,3 +1,4 @@
+import { layerComparisonFor } from './layer-tables.mjs?v=w20261012-017-layer-tables';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
@@ -481,6 +482,42 @@ if (!productKey && !allowContentFallback) {
   }
   renderSpecs();
   $('#spec-toggle').addEventListener('click', () => renderSpecs($('#spec-toggle').getAttribute('aria-expanded') !== 'true'));
+  const layerComparison = layerComparisonFor(productKey);
+  if (layerComparison) {
+    const section = element('div', 'layer-comparison');
+    section.append(element('h3', '', `${layerComparison.manufacturer} ${layerComparison.title}`));
+    section.append(element('p', 'layer-comparison-definition', layerComparison.definition));
+    const wrap = element('div', 'pg-table layer-table-scroll');
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', `${layerComparison.manufacturer} ??? ? ???`);
+    wrap.tabIndex = 0;
+    const table = element('table');
+    table.append(element('caption', 'sr-only', `${layerComparison.manufacturer} ??? ??? ? ??`));
+    const headings = ['??', '4K60p ??', '4K60p ??', '4K ???', '2K/DL ???', '??'];
+    const head = element('thead');
+    const headingRow = element('tr');
+    for (const heading of headings) {
+      const cell = element('th', '', heading);
+      cell.scope = 'col';
+      headingRow.append(cell);
+    }
+    head.append(headingRow);
+    table.append(head);
+    const body = element('tbody');
+    for (const item of layerComparison.rows) {
+      const row = element('tr', item.slug === productKey ? 'layer-current' : '');
+      if (item.slug === productKey) row.setAttribute('aria-current', 'true');
+      const product = element('th', '', item.product);
+      product.scope = 'row';
+      row.append(product);
+      for (const value of [item.input4k, item.output4k, item.layers4k, item.layers2k, item.note]) row.append(element('td', '', value));
+      body.append(row);
+    }
+    table.append(body);
+    wrap.append(table);
+    section.append(wrap);
+    $('#spec-toggle').after(section);
+  }
 
   for (const feature of data.features) $('#feature-list').append(element('li', '', feature.text));
   function renderFeatures(expanded = false) {
