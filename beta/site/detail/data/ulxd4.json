@@ -400,11 +400,11 @@
       "connector": "BNC",
       "signal": "RF antenna input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
+      "condition": "Antenna A/B input (2)",
+      "source": "P, M",
       "verification": "FOUND"
     },
     {
@@ -412,11 +412,23 @@
       "connector": "1/4\" (6.35 mm) TRS 및 XLR",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1 per connector",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
+      "condition": "Balanced XLR and balanced 6.35 mm TRS outputs (one each)",
+      "source": "P, M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "connector": "RJ-45",
+      "signal": "Ethernet control/monitoring",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "Ethernet",
+      "availability": "",
+      "condition": "Remote control and monitoring; ULXD4 does not provide Dante audio",
+      "source": "M",
       "verification": "FOUND"
     },
     {

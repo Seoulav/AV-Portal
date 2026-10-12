@@ -215,7 +215,28 @@ export const CATEGORY_BY_LEVEL2 = Object.freeze({ Audio: 'audio', Video: 'video'
 export const NOT_PLACEABLE_LEVEL3 = Object.freeze(['Cable', 'Active Optical Cable', 'HDMI Cable', 'License']);
 
 // ── 개별 지정(P6에서 채운다) ──
-// '<제품ID>#<io 행 위치>' → { match: { connector, signal }, connector, signals, direction, quantity, note }
+// '<제품ID>#<io 행 위치>' → 단일 {connector, signals, direction, quantity} 또는 복합 ports 배열 + match/note
 // 원문은 맞는데 규칙으로 읽지 못하는 행만 넣는다. match에는 그 행의 connector·signal 원문을 그대로 적는다.
 // 원문이 바뀌면(행 이동·수정) 적용하지 않고 제품 이슈 override-stale로 알린다. note에 근거(제조사 자료 등)를 적는다.
-export const IO_OVERRIDES = Object.freeze({});
+export const IO_OVERRIDES = Object.freeze({
+  'ulxd4#1': {
+    match: { connector: '1/4" (6.35 mm) TRS 및 XLR', signal: 'Audio output' },
+    ports: [
+      { connector: 'XLR', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+      { connector: 'TRS-6.3', signals: ['LINE-AUDIO'], direction: 'out', quantity: 1 },
+    ],
+    note: 'Shure ULX-D Wireless System User Guide, ULXD4 rear panel: one balanced XLR and one balanced 1/4 inch TRS output; https://pubs.shure.com/view/guide/ULXD/en-US.pdf',
+  },
+  'i-tech-4x3500hd#1': {
+    match: {
+      connector: 'XLR-3F(아날로그·AES3 입력), etherCON/RJ-45(CobraNet·VDrive)',
+      signal: 'Audio input (Analog, AES3, CobraNet, VDrive)',
+    },
+    ports: [
+      { connector: 'XLR', signals: ['LINE-AUDIO'], direction: 'in', quantity: 4 },
+      { connector: 'XLR', signals: ['AES3'], direction: 'in', quantity: 2 },
+      { connector: 'RJ45', signals: ['COBRANET', 'AES3'], direction: 'in', quantity: 1 },
+    ],
+    note: 'Crown I-Tech HD Series Owner’s Manual, manufacturer rear-panel diagram and VDrive connector section; https://www.crownaudio.com/en-US/site_elements/i-tech-4x3500hd-manual-english',
+  },
+});

@@ -1,3 +1,4 @@
+import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeMxc420PhotoProduct } from './mxc420-photo-history.mjs';
@@ -10,8 +11,8 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => beforeW013Product(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug), slug);
 
 import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeW06005Product} from './w06005-history.mjs';
@@ -40,7 +41,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
   assert.deepEqual(Object.keys(evidence.products).sort(),targets.map(([slug])=>slug).sort());
   for(const [slug,product] of targets){
     const proof=evidence.products[slug];
-    const historical=beforeKiprogo2Mx395Product(beforeMxc420PhotoProduct(product,slug),slug);
+    const historical=beforeW013Product(beforeKiprogo2Mx395Product(beforeMxc420PhotoProduct(product,slug),slug),slug);
     assert.ok(product.keyFacts?.length>=2&&product.keyFacts?.length<=4,slug);
     assert.equal(prepareEnhancements(product).keyFacts.length,product.keyFacts.length,`${slug}: visible`);
     assert.equal(product.keyFacts.length,proof.facts.length,slug);
