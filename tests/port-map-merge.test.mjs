@@ -7,11 +7,12 @@ import { renderIoFallbackCards, renderPortMapCards } from '../prototype/brc-am7/
 import { beforeW032Product } from './w032-history.mjs';
 import { beforeW12004Product } from './w12004-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
+import { isW1012Name } from './w1012-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = async path => readFile(new URL(path, root), 'utf8');
 const products = await Promise.all((await readdir(new URL('beta/site/detail/data/', root)))
-  .filter(name => name.endsWith('.json') && !isW1010Name(name)).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
+  .filter(name => name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name)).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
 
 class Node {
   constructor(tag, text = '') { this.tag = tag; this.ownText = String(text); this.children = []; this.className = ''; }

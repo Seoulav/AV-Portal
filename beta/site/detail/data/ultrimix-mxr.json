@@ -1,0 +1,42 @@
+{
+  "itemType": "PRODUCT",
+  "manufacturer": "Ross Video",
+  "model": "ULTRIMIX-MXR",
+  "productName": "ULTRIMIX-MXR",
+  "categories": ["영상", "Video", "License"],
+  "korean": "ULTRIMIX-MXR은 Ultrix 프레임에서 최대 128×64 가상 오디오 믹서를 활성화하는 소프트웨어 라이선스다. 32×16 블록 단위로 확장할 수 있다.",
+  "english": "ULTRIMIX-MXR is a software license that enables a virtual audio mixer up to 128x64 in an Ultrix frame, licensed in 32x16 blocks.",
+  "overview": "ULTRIMIX-MXR은 Ultrix 프레임에 내장된 가상 오디오 믹서 기능이다. 최대 믹서 크기는 128×64이고 32×16 블록 단위로 라이선스를 추가할 수 있다. 최대 128개 직접 출력과 입력별 4밴드 파라메트릭 EQ, 노이즈 게이트, 컴프레서/리미터 처리를 제공한다. 모든 Ultrix 프레임에서 사용할 수 있으며 ULTRIX-NS-FR2의 최대 믹서 크기도 128×64다.",
+  "features": [
+    {"text": "최대 128×64 가상 오디오 믹서", "source": "R"},
+    {"text": "32×16 블록 단위 라이선스 확장", "source": "R"},
+    {"text": "최대 128개 직접 출력", "source": "R"},
+    {"text": "입력별 4밴드 파라메트릭 EQ·노이즈 게이트·컴프레서/리미터 처리", "source": "R"}
+  ],
+  "specifications": [
+    {"group": "Mixer", "name": "최대 믹서 크기", "value": "128×64", "unit": "", "condition": "ULTRIX-NS-FR2 포함 모든 Ultrix 프레임", "source": "R/S", "verification": "VERIFIED"},
+    {"group": "License", "name": "라이선스 블록", "value": "32×16", "unit": "", "condition": "블록 단위 확장", "source": "R", "verification": "VERIFIED"},
+    {"group": "Mixer", "name": "최대 직접 출력 수", "value": "128", "unit": "개", "condition": "Direct Outputs", "source": "R", "verification": "VERIFIED"},
+    {"group": "Processing", "name": "입력 처리", "value": "4밴드 파라메트릭 EQ, 노이즈 게이트, 컴프레서/리미터", "unit": "", "condition": "입력별", "source": "R", "verification": "VERIFIED"},
+    {"group": "Control", "name": "제어", "value": "DashBoard, Ultritouch 2/4", "unit": "", "condition": "", "source": "R", "verification": "VERIFIED"}
+  ],
+  "documents": [
+    {"type": "User Manual", "status": "MISSING", "title": "User Manual 미확인", "language": "언어 미확인", "note": ""},
+    {"type": "Independent Specification", "status": "FOUND", "title": "한국에빅스 Ultrix 라이선스", "language": "ko", "note": "국내 공급사 라이선스 분류 페이지이며 MXR 개별 수치 근거로 사용하지 않음", "url": "http://avics.co.kr/ross/ultrix-liecense"},
+    {"type": "Specification", "status": "FOUND", "title": "Ultrix Licenses", "language": "en", "note": "제조사 공식 라이선스 사양", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"},
+    {"type": "Technical Document", "status": "FOUND", "title": "UltriMix-MXR Direct Output Applications", "language": "en", "note": "제조사 공식 애플리케이션 노트", "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Application%20Notes/UItriMix-MXR%20Direct%20Output%20Applications.pdf"},
+    {"type": "Official Product Page", "status": "VERIFIED", "title": "Ultrix Licenses 공식 페이지", "language": "en", "note": "ULTRIMIX-MXR 섹션", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"}
+  ],
+  "images": [],
+  "imageStatuses": [{"role": "Main", "status": "MISSING", "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "reason": "소프트웨어 라이선스 항목으로 제품 사진 적용 대상 아님"}],
+  "io": [],
+  "sources": [
+    {"code": "R", "name": "Ross Video Ultrix Licenses", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "scope": "ULTRIMIX-MXR 기능·용량·처리·제어"},
+    {"code": "S", "name": "Ross Video Ultrix Specifications", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/", "scope": "ULTRIX-NS-FR2 최대 믹서 크기"},
+    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 라이선스 분류; MXR 개별 수치 근거 아님"}
+  ],
+  "issues": [],
+  "packageStatus": "VERIFIED",
+  "verificationSummary": "ULTRIMIX-MXR의 개별 기능과 수치는 Ross Video 공식 자료에서 확인했으며 한국에빅스 페이지는 국내 공급사 분류 근거로만 사용했다.",
+  "presentation": {"galleryRightsBadge": "소프트웨어 라이선스", "galleryRights": "소프트웨어 라이선스 항목으로 제품 사진을 적용하지 않습니다.", "specIntro": "라이선스 블록과 믹서 용량을 함께 표시합니다.", "ioIntro": "물리 단자가 없는 소프트웨어 라이선스 항목입니다.", "supplementalNote": "개별 수치는 Ross Video 공식 자료를 기준으로 표시합니다.", "footerNote": "Ross Video ULTRIMIX-MXR 공식 자료 기준", "visualVariant": "missing-product-images", "galleryFootNote": "소프트웨어 라이선스 · 제품 사진 없음"}
+}

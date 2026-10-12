@@ -36,4 +36,5 @@ test('Pages verifier enforces distributor slug, manufacturer, model and canonica
   assert.match(verifier, /distributorRuleFor/);
   assert.match(verifier, /rule\.urlPattern/);
   assert.match(verifier, /distributor\.model/);
+  assert.match(verifier, /entry === verifiedDistributor\?\.url/);
 });

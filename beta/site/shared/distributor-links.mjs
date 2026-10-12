@@ -53,13 +53,17 @@ export const distributorLinks = Object.freeze([
   { slug: 'control-426lp', model: 'Control 426LP', distributor: '테크데이타피에스', url: 'https://techdata-ps.com/m21_view.php?idx=2683', checkedAt: '2026-10-01', pageTitle: 'Control 426LP' },
   { slug: 'control-440cst', model: 'Control 440CS/T', distributor: '테크데이타피에스', url: 'https://techdata-ps.com/m21_view.php?idx=2742', checkedAt: '2026-10-01', pageTitle: 'Control 440CS/T' },
   { slug: 'control-447ct', model: 'Control 447C/T', distributor: '테크데이타피에스', url: 'https://techdata-ps.com/m21_view.php?idx=2739', checkedAt: '2026-10-01', pageTitle: 'Control 447C/T' },
-  { slug: 'ultrix-hdx-io', model: 'ULTRIX-HDX-IO', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/routing-switcher', checkedAt: '2026-10-12', pageTitle: 'Ross Video Routing Switcher < ULTRIX, UltriTouch | (주)한국에빅스' }
+  { slug: 'ultrix-hdx-io', model: 'ULTRIX-HDX-IO', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/routing-switcher', checkedAt: '2026-10-12', pageTitle: 'Ross Video Routing Switcher < ULTRIX, UltriTouch | (주)한국에빅스' },
+  { slug: 'ultriscape', model: 'ULTRISCAPE', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/ultrix-liecense', checkedAt: '2026-10-12', pageTitle: '[ROSS] Ultrix Liecense ACUITY, CARBONITE, GRAPHITE < (주)한국에빅스' },
+  { slug: 'ultrimix-mxr', model: 'ULTRIMIX-MXR', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/ultrix-liecense', checkedAt: '2026-10-12', pageTitle: '[ROSS] Ultrix Liecense ACUITY, CARBONITE, GRAPHITE < (주)한국에빅스' },
+  { slug: 'ultrisync-18', model: 'ULTRISYNC-18', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/ultrix-liecense', checkedAt: '2026-10-12', pageTitle: '[ROSS] Ultrix Liecense ACUITY, CARBONITE, GRAPHITE < (주)한국에빅스' },
+  { slug: 'ultrimix-dante', model: 'ULTRIMIX-DANTE', distributor: '한국에빅스', url: 'http://avics.co.kr/ross/ultrix-liecense', checkedAt: '2026-10-12', pageTitle: '[ROSS] Ultrix Liecense ACUITY, CARBONITE, GRAPHITE < (주)한국에빅스' }
 ]);
 
 const harmanManufacturers = new Set(HARMAN_MANUFACTURERS);
 const distributorRules = Object.freeze({
   harman: Object.freeze({ distributor: '테크데이타피에스', urlPattern: /^https:\/\/techdata-ps\.com\/m21_view\.php\?idx=\d+$/ }),
-  ross: Object.freeze({ distributor: '한국에빅스', urlPattern: /^http:\/\/avics\.co\.kr\/ross\/routing-switcher$/ })
+  ross: Object.freeze({ distributor: '한국에빅스', urlPattern: /^http:\/\/avics\.co\.kr\/ross\/(?:routing-switcher|ultrix-liecense)$/ })
 });
 const linksBySlug = new Map(distributorLinks.map(item => [item.slug, item]));
 

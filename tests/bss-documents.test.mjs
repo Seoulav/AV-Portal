@@ -1,6 +1,7 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
+import { isW1012Name } from './w1012-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name, withoutW006Uploads } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -131,7 +132,7 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
       assert.equal(sources.length,before.beforeSources.length+evidence.inventory.documents.filter(doc=>doc.slug===slug).length,`${slug}: sources`);
     }
   }
-  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name)&&!slugs.includes(name.slice(0,-5))).sort();
+  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!slugs.includes(name.slice(0,-5))).sort();
   const digest=sha(names.map(name=>{
     const slug=name.slice(0,-5),raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeW032Raw(beforeW026Raw(bytes(`beta/site/detail/data/${name}`).toString('utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug);
     return `${name}\0${crownW03013Slug(slug)?JSON.stringify(beforeCrownW03013(JSON.parse(raw),slug),null,2)+'\n':raw}`;

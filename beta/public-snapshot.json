@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 273,
-    "sha256": "C4A1776982AE111EE2A8BBB3B0804910BBA123C5D12BFEB3DB465D7756D455E3",
+    "sha256": "F75FFF82EA37ADC585FF126E1F7AB24C23D95D4ACFA526B4B30273D7C2E3E92A",
     "baselineCount": 25,
     "baselineSha256": "2036FAD276A4333090C62455062BEC5C4FC640CE40916230C547A0D3D11349CE"
   },
@@ -1393,6 +1393,18 @@
       "specifications": 15,
       "io": 2
     },
+    "ultrimix-dante": {
+      "sha256": "88AD28BC232104E26C7394BDAE9F6EE740E1EE1C3483E5FCBFD6523B9176A3DF",
+      "features": 4,
+      "specifications": 7,
+      "io": 0
+    },
+    "ultrimix-mxr": {
+      "sha256": "FBFE23E2CD1260936FE45045AA5DCB2804684A026F90C69DE4DB4C751D6EC4D5",
+      "features": 4,
+      "specifications": 5,
+      "io": 0
+    },
     "ultripower-ps": {
       "sha256": "5B3C9E0409D80C95A92B5A465A2BCD7CA387E95549C99CA9E14EF7C59F30EED4",
       "features": 3,
@@ -1404,6 +1416,18 @@
       "features": 4,
       "specifications": 10,
       "io": 2
+    },
+    "ultriscape": {
+      "sha256": "851F2449D8190430D0A6F5687C95FBC62AE3A548000AF9C760AF07E54BE8B43C",
+      "features": 4,
+      "specifications": 5,
+      "io": 0
+    },
+    "ultrisync-18": {
+      "sha256": "E0A78AF9467C31F89B52C8E8303AFD37EF2025C68563F0F92EB7D1F205D64B32",
+      "features": 4,
+      "specifications": 5,
+      "io": 0
     },
     "ultritouch-2-hr": {
       "sha256": "DF7759510093829E4F4A32F9A85D39F175282FA388E5C4F9EDD660597F694BC4",

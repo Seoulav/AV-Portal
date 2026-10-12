@@ -1,0 +1,43 @@
+{
+  "itemType": "PRODUCT",
+  "manufacturer": "Ross Video",
+  "model": "ULTRISYNC-18",
+  "productName": "ULTRISYNC-18",
+  "categories": ["영상", "Video", "License"],
+  "korean": "ULTRISYNC-18은 Ultrix 프레임의 입력 프레임 동기화 기능과 연관된 카탈로그 SKU다. Ross Video 공식 자료에서 ULTRISYNC 기능은 확인했으나 ULTRISYNC-18이라는 정확한 SKU 구성은 확인되지 않았다.",
+  "english": "ULTRISYNC-18 is a catalog SKU associated with the Ultrix input frame synchronization license. The ULTRISYNC function is documented by Ross Video, while the exact ULTRISYNC-18 SKU composition remains unconfirmed.",
+  "overview": "ULTRISYNC는 Ultrix 프레임의 선택한 입력에 소프트웨어 정의 프레임 동기화 기능을 적용하는 라이선스다. SD부터 3G 신호까지 지원하고 입력별 또는 묶음 라이선스로 구성하며, 라이선스는 같은 프레임 안에서 필요한 입력으로 이동할 수 있다. ULTRIX-NS-FR2의 최대 3G 입력 프레임 동기화 수는 72개다. 다만 Ross Video 공식 웹페이지와 매뉴얼에서 ULTRISYNC-18이라는 정확한 문자열과 18입력 SKU 구성을 확인하지 못했으므로 모델명은 유지하고 구성을 검토 대상으로 표시한다.",
+  "features": [
+    {"text": "SD–3G 입력용 소프트웨어 정의 프레임 동기화", "source": "R"},
+    {"text": "입력별 또는 묶음 단위 라이선스 구성", "source": "R"},
+    {"text": "동일 프레임 내 라이선스 이동 할당", "source": "R"},
+    {"text": "ULTRIX-NS-FR2 기준 최대 72개 3G 입력 프레임 동기화", "source": "S"}
+  ],
+  "specifications": [
+    {"group": "License", "name": "기능", "value": "소프트웨어 정의 입력 프레임 동기화", "unit": "", "condition": "Ultrix 프레임에 적용", "source": "R", "verification": "VERIFIED"},
+    {"group": "Signal", "name": "지원 신호", "value": "SD–3G", "unit": "", "condition": "ULTRISYNC; UHD 변형은 별도", "source": "R", "verification": "VERIFIED"},
+    {"group": "License", "name": "할당 방식", "value": "단일 입력 또는 묶음, 프레임 내 이동 할당", "unit": "", "condition": "", "source": "R", "verification": "VERIFIED"},
+    {"group": "FR2", "name": "FR2 최대 3G 입력 프레임 동기화 수", "value": "72", "unit": "입력", "condition": "ULTRIX-NS-FR2(2RU) 시스템 최대치; ULTRISYNC-18 SKU 수량과 별개", "source": "S", "verification": "VERIFIED"},
+    {"group": "SKU", "name": "ULTRISYNC-18 SKU 구성", "value": "구성 확인 필요", "unit": "", "condition": "Ross Video 공식 웹페이지와 매뉴얼에서 정확한 SKU 문자열 및 18입력 구성을 확인하지 못함", "source": "R/M", "verification": "REVIEW REQUIRED"}
+  ],
+  "documents": [
+    {"type": "User Manual", "status": "FOUND", "title": "Ultrix User Guide", "language": "en", "note": "Ultrisync 기능 확인; ULTRISYNC-18 정확한 SKU 구성 미확인", "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf"},
+    {"type": "Independent Specification", "status": "FOUND", "title": "한국에빅스 Ultrix 라이선스", "language": "ko", "note": "국내 공급사 Ultrisync 기능 설명; 정확한 ULTRISYNC-18 구성 미기재", "url": "http://avics.co.kr/ross/ultrix-liecense"},
+    {"type": "Specification", "status": "FOUND", "title": "Ultrix Specifications", "language": "en", "note": "FR2 최대 프레임 동기화 수", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"},
+    {"type": "Technical Document", "status": "MISSING", "title": "Technical Document 미확인", "language": "언어 미확인", "note": ""},
+    {"type": "Official Product Page", "status": "VERIFIED", "title": "Ultrix Licenses 공식 페이지", "language": "en", "note": "ULTRISYNC 기능 설명", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/"}
+  ],
+  "images": [],
+  "imageStatuses": [{"role": "Main", "status": "MISSING", "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "reason": "소프트웨어 라이선스 항목으로 제품 사진 적용 대상 아님"}],
+  "io": [],
+  "sources": [
+    {"code": "R", "name": "Ross Video Ultrix Licenses", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "scope": "ULTRISYNC 기능·신호·라이선스 방식"},
+    {"code": "S", "name": "Ross Video Ultrix Specifications", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/", "scope": "ULTRIX-NS-FR2 최대 3G 입력 프레임 동기화 수"},
+    {"code": "M", "name": "Ross Video Ultrix User Guide", "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf", "scope": "Ultrisync 운용 설명과 SKU 문자열 확인"},
+    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 Ultrisync 기능 설명"}
+  ],
+  "issues": [{"status": "REVIEW REQUIRED", "title": "ULTRISYNC-18 SKU 구성 확인 필요", "detail": "Ross Video 공식 웹페이지와 매뉴얼에서 ULTRISYNC-18이라는 정확한 SKU 문자열과 18입력 구성을 확인하지 못했다."}],
+  "packageStatus": "REVIEW REQUIRED",
+  "verificationSummary": "ULTRISYNC 기능과 FR2의 72입력 한도는 Ross Video 공식 자료로 확인했고, ULTRISYNC-18의 정확한 SKU 구성은 검토 대상으로 유지했다.",
+  "presentation": {"galleryRightsBadge": "소프트웨어 라이선스", "galleryRights": "소프트웨어 라이선스 항목으로 제품 사진을 적용하지 않습니다.", "specIntro": "확인된 기능·FR2 시스템 한도와 미확인 SKU 구성을 구분합니다.", "ioIntro": "물리 단자가 없는 소프트웨어 라이선스 항목입니다.", "supplementalNote": "ULTRISYNC-18 SKU 구성은 검토가 필요합니다.", "footerNote": "Ross Video ULTRISYNC 공식 자료 기준", "visualVariant": "missing-product-images", "galleryFootNote": "소프트웨어 라이선스 · 제품 사진 없음"}
+}

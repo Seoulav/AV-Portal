@@ -1,0 +1,42 @@
+{
+  "itemType": "PRODUCT",
+  "manufacturer": "Ross Video",
+  "model": "ULTRISCAPE",
+  "productName": "ULTRISCAPE",
+  "categories": ["영상", "Video", "License"],
+  "korean": "ULTRISCAPE는 Ultrix 프레임에서 멀티뷰어 기능을 활성화하는 소프트웨어 라이선스다. 12RU 프레임 기준 최대 48개 독립 헤드와 헤드당 최대 100개 PIP를 제공한다.",
+  "english": "ULTRISCAPE is a software-defined multiviewer license for Ultrix frames, providing up to 48 independent heads in a 12RU frame and up to 100 PIPs per head.",
+  "overview": "ULTRISCAPE는 별도 멀티뷰어 하드웨어 없이 Ultrix 프레임의 처리 자원을 멀티뷰어로 사용하는 소프트웨어 라이선스다. 각 헤드는 독립적으로 제어할 수 있고 헤드당 최대 100개 PIP를 구성할 수 있다. 프레임별 최대 헤드 수는 FR1 6개, FR2 12개, FR5 27개, FR12 48개이며, 보유 중인 ULTRIX-NS-FR2에서는 HDX/MODX I/O 완전 라이선스 구성 시 최대 12개, IPX I/O 구성 시 최대 6개다.",
+  "features": [
+    {"text": "Ultrix 프레임의 소프트웨어 정의 멀티뷰어 기능 활성화", "source": "R"},
+    {"text": "12RU 프레임 기준 최대 48개 독립 헤드 구성", "source": "R"},
+    {"text": "헤드당 최대 100개 PIP 구성", "source": "R"},
+    {"text": "ULTRIX-NS-FR2의 I/O 카드 종류별 최대 헤드 한도 적용", "source": "S"}
+  ],
+  "specifications": [
+    {"group": "License", "name": "기능", "value": "소프트웨어 정의 멀티뷰어", "unit": "", "condition": "Ultrix 프레임에 적용", "source": "R", "verification": "VERIFIED"},
+    {"group": "Capacity", "name": "헤드당 최대 PIP 수", "value": "100", "unit": "개", "condition": "독립 제어 헤드 기준", "source": "R", "verification": "VERIFIED"},
+    {"group": "Capacity", "name": "프레임별 최대 헤드 수", "value": "6 / 12 / 27 / 48", "unit": "헤드", "condition": "FR1 / FR2 / FR5 / FR12 순서", "source": "A", "verification": "FOUND"},
+    {"group": "FR2", "name": "FR2 최대 멀티뷰어 헤드 수 (HDX/MODX)", "value": "12", "unit": "헤드", "condition": "ULTRIX-NS-FR2, HDX/MODX I/O 완전 라이선스 구성", "source": "S", "verification": "VERIFIED"},
+    {"group": "FR2", "name": "FR2 최대 멀티뷰어 헤드 수 (IPX)", "value": "6", "unit": "헤드", "condition": "ULTRIX-NS-FR2, IPX I/O 완전 라이선스 구성", "source": "S", "verification": "VERIFIED"}
+  ],
+  "documents": [
+    {"type": "User Manual", "status": "FOUND", "title": "UltriScape User Guide", "language": "en", "note": "제조사 공식 사용 안내서", "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/UltriScape%20User%20Guide%20(2101DR-018).pdf"},
+    {"type": "Independent Specification", "status": "FOUND", "title": "한국에빅스 Ultrix 라이선스", "language": "ko", "note": "국내 공급사 라이선스 분류 페이지", "url": "http://avics.co.kr/ross/ultrix-liecense"},
+    {"type": "Specification", "status": "FOUND", "title": "Ultrix Specifications", "language": "en", "note": "FR2 적용 한도 확인", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"},
+    {"type": "Technical Document", "status": "MISSING", "title": "Technical Document 미확인", "language": "언어 미확인", "note": ""},
+    {"type": "Official Product Page", "status": "VERIFIED", "title": "ULTRISCAPE 공식 제품 페이지", "language": "en", "note": "제조사 공식 제품 페이지", "url": "https://www.rossvideo.com/products/signal-processing/ultriscape/"}
+  ],
+  "images": [],
+  "imageStatuses": [{"role": "Main", "status": "MISSING", "sourceUrl": "https://www.rossvideo.com/products/signal-processing/ultriscape/", "reason": "소프트웨어 라이선스 항목으로 제품 사진 적용 대상 아님"}],
+  "io": [],
+  "sources": [
+    {"code": "R", "name": "Ross Video Ultrix Licenses", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "scope": "ULTRISCAPE 기능과 전체 프레임 한도"},
+    {"code": "S", "name": "Ross Video Ultrix Specifications", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/", "scope": "ULTRIX-NS-FR2 카드별 최대 헤드 수"},
+    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 라이선스 분류와 프레임별 헤드 수"}
+  ],
+  "issues": [],
+  "packageStatus": "VERIFIED",
+  "verificationSummary": "Ross Video 공식 라이선스·사양 페이지와 한국에빅스 페이지를 구분해 ULTRISCAPE 기능 및 FR2 적용 한도를 확인했다.",
+  "presentation": {"galleryRightsBadge": "소프트웨어 라이선스", "galleryRights": "소프트웨어 라이선스 항목으로 제품 사진을 적용하지 않습니다.", "specIntro": "프레임별 적용 한도와 근거를 함께 표시합니다.", "ioIntro": "물리 단자가 없는 소프트웨어 라이선스 항목입니다.", "supplementalNote": "Ross Video 공식 자료와 한국에빅스 자료를 구분해 표시합니다.", "footerNote": "Ross Video ULTRISCAPE 공식 자료 기준", "visualVariant": "missing-product-images", "galleryFootNote": "소프트웨어 라이선스 · 제품 사진 없음"}
+}

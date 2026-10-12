@@ -1,6 +1,7 @@
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
+import { isW1012Name } from './w1012-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -75,7 +76,7 @@ test('the approved DCi 4|600DA pilot remains untouched', () => {
 });
 
 test('217 other product JSON objects retain their pre-task content', () => {
-  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name)).sort();
+  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
   const otherNames = names.filter(name => !targets.includes(name.slice(0,-5)));
   const other = otherNames.map(name => [name,beforeHarmanW03014(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(beforeW032Product(beforeW026Product(read(`beta/site/detail/data/${name}`), name.slice(0,-5)), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(otherNames.length, 217);

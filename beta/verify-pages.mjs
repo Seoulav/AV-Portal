@@ -13,7 +13,7 @@ import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageSc
 import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
 import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
 import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
-import { distributorLinks, distributorRuleFor } from './distributor-links.mjs';
+import { distributorLinks, distributorLinkFor, distributorRuleFor } from './distributor-links.mjs';
 import { verifyPdfLock } from './pdf-lock.mjs';
 
 const site = new URL('./site/', import.meta.url);
@@ -302,13 +302,15 @@ function verifyOfficialUrls(value, slug, hosts) {
   // 제조사 호스트 목록 검사를 건너뛴다(2026-09-27 운영자 지시: 제품 일치만 확인되면 출처 불명 사진도 게시).
   // 프로토콜·자격정보·비공개 경로 검사는 그대로 적용한다. url·sourceUrl 외 다른 필드나 documents/sources는 영향받지 않는다.
   const isUnverifiedImage = value.officialSource === false && typeof value.sourceUrl === 'string';
+  const verifiedDistributor = distributorLinkFor(slug, brandBySlug.get(slug));
   for (const [key, entry] of Object.entries(value)) {
     if ((key === 'url' || key === 'sourceUrl') && entry) {
       const url = new URL(entry);
-      assert.equal(url.protocol, 'https:');
+      const isVerifiedDistributorUrl = entry === verifiedDistributor?.url;
+      assert.equal(url.protocol, isVerifiedDistributorUrl ? 'http:' : 'https:');
       assert.equal(url.username, '');
       assert.equal(url.password, '');
-      if (!(key === 'sourceUrl' && isUnverifiedImage)) {
+      if (!isVerifiedDistributorUrl && !(key === 'sourceUrl' && isUnverifiedImage)) {
         assert.ok(isAllowedHost(url.hostname, hosts), `${slug}: non-manufacturer URL`);
       }
       assert.ok(!/C:[\\/]|Users[\\/]|hkkim[\\/]|outputs[\\/]/i.test(url.href), `${slug}: private URL path`);
