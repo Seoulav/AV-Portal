@@ -403,36 +403,36 @@
       "connector": "BNC",
       "signal": "RF antenna input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "Two receiver antenna inputs, A and B.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "1/4\" (6.35 mm) 및 XLR",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1 per connector",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "One balanced XLR and one impedance-balanced 6.35 mm output.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",
-      "connector": "커넥터 규격 정보 없음",
+      "connector": "RJ45",
       "signal": "Network (control only)",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "단일 포트 이더넷 10/100 Mbps (Dante 미지원 — 제어/펌웨어 업데이트 용도)",
-      "source": "P",
-      "verification": "PARTIAL"
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

@@ -499,12 +499,12 @@
       "connector": "TA4M (4핀 수 미니 커넥터)",
       "signal": "Mic/instrument input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [

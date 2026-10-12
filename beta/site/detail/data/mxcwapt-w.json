@@ -337,12 +337,24 @@
       "connector": "3-pin male XLR",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "One analog XLR output channel.",
+      "source": "P, M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "XLR",
+      "signal": "Audio input",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "One analog XLR input channel on the MXCWAPT-W access point.",
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Network",

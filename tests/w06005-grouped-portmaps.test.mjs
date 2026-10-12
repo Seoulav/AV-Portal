@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW06005Product, beforeW06005Raw } from './w06005-history.mjs';
+import { beforeW013Product, beforeW013Raw, w013Slugs } from './w013-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12002Product } from './w12002-wording-history.mjs';
 import { beforeW12005Raw, beforeW12005Product } from './w12005-history.mjs';
@@ -28,7 +29,7 @@ test('ten approved rear maps cover only photographed connectors and survive vali
     const image = product.images.find(image => image.role === 'Rear');
     const [width, height] = image.resolution.split(/[x×]/).map(Number);
     assert.deepEqual(map.measuredImage, { file: image.file, width, height }, slug);
-    assert.equal(hash(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeW12005Product(product,slug),slug), slug), slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
+    assert.equal(hash(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeW12005Product(product,slug),slug), slug),slug),slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
   }
 });
 
@@ -49,11 +50,17 @@ test('unseen connector rows are not assigned photograph numbers', () => {
 test('historical inverse rejects marker edits and exposes unrelated current changes', () => {
   for (const slug of Object.keys(counts)) {
     const product = read(slug);
-    const older = beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug);
+    const older = beforeW013Raw(beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug),slug);
     const changedIo = structuredClone(product);
     changedIo.io = [];
-    assert.deepEqual(beforeW06005Product(beforeW12001Product(beforeW12005Product(changedIo, slug), slug), slug).io, [], slug);
-    assert.notEqual(beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(JSON.stringify(changedIo, null, 2) + '\n', slug), slug), slug), older, slug);
+    if (w013Slugs.has(slug)) {
+      assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013 I\/O change/, slug);
+    } else {
+      assert.deepEqual(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12005Product(changedIo, slug), slug), slug), slug).io, [], slug);
+    }
+    const changedTitle = structuredClone(product);
+    changedTitle.title = `${changedTitle.title ?? ''} preserved`;
+    assert.equal(beforeW013Product(changedTitle, slug).title, changedTitle.title, `${slug}: unrelated current title remains`);
     const changedMap = structuredClone(product);
     const marker = changedMap.portMap.items[0];
     if (marker.x1 === undefined) marker.y1 += 1;

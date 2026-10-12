@@ -347,24 +347,24 @@
       "connector": "SMA",
       "signal": "RF antenna output",
       "direction": "OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Audio",
       "connector": "4핀 male mini connector (TA4M)",
       "signal": "Mic/instrument input",
       "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
       "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
