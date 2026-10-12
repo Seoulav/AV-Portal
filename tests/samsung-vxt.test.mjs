@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -69,7 +70,7 @@ test('the other 233 products, protected target fields and prior source/specifica
   const coreHash = createHash('sha256');
   const priorEditableHash = createHash('sha256');
   for (const slug of targets) {
-    const { specifications, sources, ...protectedFields } = beforeSamsungW04017(read(slug), slug);
+    const { specifications, sources, ...protectedFields } = beforeSamsungW04017(beforeW12002Product(read(slug),slug), slug);
     // LH32QMC also carried the obsolete launch claim in its public overview.
     if (slug === 'lh32qmcebgcxkr')
       protectedFields.overview = protectedFields.overview.replace('VXT를 지원한다', 'VXT(국내 추후 출시 예정)를 지원한다');

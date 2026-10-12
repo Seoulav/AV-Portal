@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { beforeW006Raw, beforeW006Product, w006Slugs } from './w006-history.mjs';
+import { beforeW12002Raw } from './w12002-wording-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
@@ -79,7 +80,7 @@ test('the eight new products reuse only their applicable uploaded manuals', asyn
 
 test('only the approved VESA row changes the existing 43-inch TV', async () => {
   const raw = await readFile(new URL('beta/site/detail/data/lh43behhlbfxkr.json', root), 'utf8');
-  assert.equal(sha(beforeW006Raw(raw, 'lh43behhlbfxkr')), 'e2f4ad55c9d90b78bcfdf69c6be256ebbab5dc89278938a92873dff1caba466b');
+  assert.equal(sha(beforeW006Raw(beforeW12002Raw(raw,'lh43behhlbfxkr'), 'lh43behhlbfxkr')), 'e2f4ad55c9d90b78bcfdf69c6be256ebbab5dc89278938a92873dff1caba466b');
   const current = JSON.parse(raw);
   assert.equal(beforeW006Product(current, 'lh43behhlbfxkr').specifications.length, 21);
   const changed = structuredClone(current);

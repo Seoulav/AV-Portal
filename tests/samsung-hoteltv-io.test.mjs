@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -41,7 +42,7 @@ const row = (product, connector) => {
 test('three U800F hotel TVs have the manual HDMI, physical ports and unchanged protected fields', () => {
   const reference = load(slugs[0]).io;
   for (const slug of slugs) {
-    const product = load(slug);
+    const product = beforeW12002Product(load(slug),slug);
     assert.equal(product.io.length, 13, `${slug}: 9 existing + 4 U800F rows`);
     assert.deepEqual(product.io, reference, `${slug}: shared series I/O`);
     const { io, sources, issues, ...core } = product;

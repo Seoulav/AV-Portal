@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8');
@@ -31,7 +32,8 @@ test('seven Samsung RS-232C output markers explain passthrough without changing 
     const input = data.portMap.items.find(item => item.n === number - 1);
     assert.equal(output.label, 'RS-232C 출력', slug);
     assert.equal(input.label, 'RS-232C 입력', slug);
-    assert.equal(input.desc, oldDescription, slug);
+    assert.equal(beforeW12002Product(data,slug).portMap.items.find(item=>item.n===number-1).desc, oldDescription, slug);
+    assert.equal(input.desc, 'RS232C 어댑터로 MDC 연결', slug);
     assert.match(output.desc, /다음 (디스플레이|모니터).*명령/, slug);
     assert.doesNotMatch(output.desc, /MDC/, slug);
     const user = data.sources.find(source => source.code === 'U2');

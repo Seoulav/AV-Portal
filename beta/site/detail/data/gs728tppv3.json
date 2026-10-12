@@ -142,39 +142,39 @@
   ],
   "features": [
     {
-      "text": "10/100/1000BASE-T RJ45 24개 포트 모두 IEEE 802.3at PoE+를 지원해 포트당 최대 30W를 공급하며, 총 PoE 예산은 380W다.",
+      "text": "10/100/1000BASE-T RJ45 24개 포트 모두 IEEE 802.3at PoE+ 지원, 포트당 최대 30W 공급 · 총 PoE 예산 380W",
       "source": "P, D, IG"
     },
     {
-      "text": "4개의 전용 1G SFP 포트로 네트워크 코어 광 업링크와 링크 집계·페일오버 기반 이중화를 구성할 수 있다.",
+      "text": "4개의 전용 1G SFP 포트로 네트워크 코어 광 업링크와 링크 집계·페일오버 기반 이중화 구성 가능",
       "source": "P, D"
     },
     {
-      "text": "웹 GUI로 로컬 관리하거나 NETGEAR Insight 앱·Insight Cloud 포털로 원격/클라우드 관리할 수 있으며, 두 방식의 설정은 서로 동기화된다(1년 Insight 구독 포함).",
+      "text": "웹 GUI로 로컬 관리하거나 NETGEAR Insight 앱·Insight Cloud 포털로 원격/클라우드 관리할 수 있으며, 두 방식의 설정은 서로 동기화(1년 Insight 구독 포함)",
       "source": "P, D, IG"
     },
     {
-      "text": "IPv4/IPv6 정적 라우팅(각 32개)과 VLAN 라우팅으로 VLAN 간 로컬 라우팅을 제공한다.",
+      "text": "IPv4/IPv6 정적 라우팅(각 32개)과 VLAN 라우팅으로 VLAN 간 로컬 라우팅 제공",
       "source": "P, D"
     },
     {
-      "text": "IGMP 스누핑(v1/v2/v3)·쿼리어·Fast Leave, MLD 스누핑, MVR로 멀티캐스트 트래픽을 최적화한다.",
+      "text": "IGMP 스누핑(v1/v2/v3)·쿼리어·Fast Leave, MLD 스누핑, MVR로 멀티캐스트 트래픽을 최적화",
       "source": "P, D"
     },
     {
-      "text": "Auto-VoIP, Auto-Voice VLAN, Auto-Video VLAN으로 IP 전화와 IP 감시 카메라 배치를 간소화한다.",
+      "text": "Auto-VoIP, Auto-Voice VLAN, Auto-Video VLAN으로 IP 전화와 IP 감시 카메라 배치를 간소화",
       "source": "P, D"
     },
     {
-      "text": "포트별 PoE 제어와 PoE 스케줄링, 원격 PoE 전원 재인가를 지원한다.",
+      "text": "포트별 PoE 제어와 PoE 스케줄링, 원격 PoE 전원 재인가 지원",
       "source": "D"
     },
     {
-      "text": "온도·부하 기반 팬 속도 제어로 25℃에서 33.30dBA의 소음으로 동작한다.",
+      "text": "온도·부하 기반 팬 속도 제어로 25℃에서 33.30dBA의 소음으로 동작",
       "source": "P, D"
     },
     {
-      "text": "이중 펌웨어 이미지, 케이블 테스트, 포트 미러링, Energy Efficient Ethernet(IEEE 802.3az)을 지원한다.",
+      "text": "이중 펌웨어 이미지, 케이블 테스트, 포트 미러링, Energy Efficient Ethernet(IEEE 802.3az)을 지원",
       "source": "P, D"
     }
   ],

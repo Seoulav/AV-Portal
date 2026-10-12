@@ -6,6 +6,7 @@ import { beforeW032Product, beforeW032Raw } from './w032-history.mjs';
 import { beforeW06003Product } from './w06003-history.mjs';
 import { beforeW06005Product } from './w06005-history.mjs';
 import { beforeW12001Product } from './w12001-history.mjs';
+import { beforeW12002Product, beforeW12002Raw } from './w12002-wording-history.mjs';
 
 const root = new URL('../beta/site/detail/data/', import.meta.url);
 const raw = slug => readFileSync(new URL(`${slug}.json`, root), 'utf8').replace(/\r\n/g, '\n');
@@ -19,13 +20,13 @@ const untouched = new Map([
 
 test('current camera technical fields are identical to the pre-W-032 baseline', () => {
   for (const slug of changed) {
-    const current = beforeW06003Product(beforeW06005Product(beforeW12001Product(JSON.parse(raw(slug)), slug), slug), slug);
+    const current = beforeW06003Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(JSON.parse(raw(slug)),slug), slug), slug), slug);
     const baseline = JSON.parse(readFileSync(new URL(`./fixtures/w032-before/${slug}.json`, import.meta.url), 'utf8'));
     for (const key of ['model', 'io', 'specifications', 'keyFacts', 'images', 'portMap']) {
       assert.deepEqual(current[key], baseline[key], `${slug}: ${key}`);
     }
   }
-  for (const [slug, hash] of untouched) assert.equal(sha(raw(slug)), hash, slug);
+  for (const [slug, hash] of untouched) assert.equal(sha(beforeW12002Raw(raw(slug),slug)), hash, slug);
 });
 
 test('historical inverse keeps current I/O, model and Port Map changes visible', () => {

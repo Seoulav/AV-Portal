@@ -26,7 +26,7 @@ HDMI 소스 4대 연결
 
 ## 1. 도구 — `scripts/check-feature-wording.mjs`
 
-> 도구는 W-20261012-002 구현에서 만든다. 아래가 그 사양이다. Node만 쓴다.
+Node 도구가 공개 제품 JSON의 현재 문구와 기준 커밋의 변경 범위를 검사한다.
 
 ```
 node scripts/check-feature-wording.mjs                       # 남은 대상: slug · 필드 · 순번 · 문장 · 끝맺음 유형
@@ -39,7 +39,7 @@ node scripts/check-feature-wording.mjs --json > out.json     # 대조표 만들 
 
 ### 대상 판정 (서술형으로 보는 끝)
 
-문장 끝 공백·따옴표와 **끝에 붙은 괄호 덩어리**를 떼고 본다. `지원한다(무선 LAN 필요).`의 끝은 `지원한다`다(대상 48건이 이 모양, [전환 규칙 §4](references/전환규칙.md)).
+문장 끝 공백·따옴표와 **끝에 붙은 괄호 덩어리(중첩 괄호 포함)**를 떼고 본다. `지원한다(무선 LAN 필요).`의 끝은 `지원한다`다([전환 규칙 §4](references/전환규칙.md)). 특정 어미(`~습니다`)의 집계 수를 전체 대상으로 오해하지 않는다.
 
 | 유형 | 정규식(끝) | 예 |
 |---|---|---|
@@ -75,7 +75,7 @@ node scripts/check-feature-wording.mjs --json > out.json     # 대조표 만들 
 3. **마침표를 뗀다.**
 4. **앞 절의 서술은 쉼표로 잇는다.** `A를 내장하며, B를 갖췄다.` → `A 내장, B 탑재`. 연결어미(`~해`·`~하여`·`~로`)가 이유·수단을 나타내면 그대로 둔다: `DSP를 내장해 튜닝을 앰프에서 수행한다.` → `DSP를 내장해 튜닝을 앰프에서 수행`.
 5. **문장을 나누거나 합치지 않는다.** 항목 수가 바뀌면 화면의 「기능 N개 더 보기」 수가 달라지고 사실 보존 검사가 실패한다.
-6. **뜻이 약해지면 바꾸지 않고 「검토」로 올린다.** 특히 부정·구별·조건 문장(`~이 아니라`, `~는 포함되지 않는다`, `~일 때만`).
+6. **뜻이 약해질 수 있으면 「검토」로 표시해 원문과 결과를 대조한다.** 특히 부정·구별·조건 문장(`~이 아니라`, `~는 포함되지 않는다`, `~일 때만`). 뜻을 보존하는 표현을 찾지 못하면 추측해 반영하지 않는다.
 
 ## 3. 절대 지킬 것
 
@@ -90,16 +90,16 @@ node scripts/check-feature-wording.mjs --json > out.json     # 대조표 만들 
 2. 제조사 묶음 단위로 바꾼다. 묶음 순서는 문장 수가 많은 순(작업 명세 참고).
 3. 묶음마다 `--diff origin/main`을 돌려 통과시킨다.
 4. [대조표 양식](references/대조표양식.md)대로 `Work/기록/<작업ID>-대조표.md`에 **바꾼 문장 전부**를 적는다.
-5. 「검토」 문장은 고치지 않은 채 모아서 사용자에게 한 번에 보고하고, 답을 받은 뒤 반영한다.
+5. 「검토」 문장은 전후 의미와 조건을 독립 확인하고 근거를 대조표에 남긴다. 판단할 근거가 부족한 문장만 사용자에게 묻는다.
 6. 전부 끝나면 `--check` 0건.
 
 ## 5. 테스트와 생성물
 
 - 새 테스트 `tests/feature-wording.test.mjs`: `--check`와 같은 판정을 테스트로 고정한다. 새 제품이 서술형으로 들어오면 실패해야 한다. 대상 밖 필드는 보지 않는다.
 - 과거 해시 테스트가 깨진다 → [과거 해시 테스트 대응](../portmap-audit/references/과거해시테스트.md). 되감기 기록은 `features`(그리고 `desc`를 바꿨으면 `n`별 `desc`)만 저장한다.
-- 실제 제품의 `features`를 옛 값과 비교하는 테스트(예: `tests/videowall-loopout-prose.test.mjs:35~39`, `tests/videowall-w03001-history.mjs`)는 되감기로 처리한다. `grep -ln "features" tests/*.mjs`로 찾는다. 나머지 `features` 언급은 가짜 표본 데이터라 무관하다.
+- 실제 제품의 `features`를 옛 값과 비교하는 테스트는 되감기로 처리한다. `rg -l "features" tests`로 찾는다. 나머지 `features` 언급은 가짜 표본 데이터일 수 있으므로 대상을 확인한다.
 - **검색 인덱스가 `features[].text`를 검색어로 담는다**(`beta/site/shared/search-index.mjs:6`). 문장을 바꾸면 반드시 `node beta/build-search-index.mjs`로 다시 만들고 `--check`를 통과시킨다.
-- `beta/public-snapshot.json`은 `features` **개수**만 담는다(`beta/update-snapshot.mjs:24`). 개수가 그대로면 바뀌지 않는다.
+- `beta/public-snapshot.json`은 제품 JSON의 SHA-256과 `features` 개수를 담는다. 문구만 바꿔도 SHA가 달라지므로 `node beta/update-snapshot.mjs`로 갱신한다.
 
 ## 6. 검증
 

@@ -99,31 +99,31 @@
   ],
   "features": [
     {
-      "text": "USB-C 커넥터로 컴퓨터·모바일 기기를 별도 드라이버 없이 Dante 오디오 네트워크에 연결한다.",
+      "text": "USB-C 커넥터로 컴퓨터·모바일 기기를 별도 드라이버 없이 Dante 오디오 네트워크에 연결",
       "source": ""
     },
     {
-      "text": "2입력/2출력(2x2) 양방향 오디오 채널을 지원한다.",
+      "text": "2입력/2출력(2x2) 양방향 오디오 채널 지원",
       "source": ""
     },
     {
-      "text": "Class 1 802.3af PoE 또는 USB 버스 파워로 동작해 별도 전원 어댑터가 필요 없다.",
+      "text": "Class 1 802.3af PoE 또는 USB 버스 파워로 동작해 별도 전원 어댑터가 불필요",
       "source": ""
     },
     {
-      "text": "USB Power Delivery(5V 1.5A)를 지원해 연결 기기에 전원을 공급할 수 있다.",
+      "text": "USB Power Delivery(5V 1.5A)를 지원해 연결 기기에 전원 공급 가능",
       "source": ""
     },
     {
-      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정할 수 있다.",
+      "text": "Dante Controller에서 지연시간을 1/2/5ms로 설정 가능",
       "source": ""
     },
     {
-      "text": "AES67 RTP 전송을 지원해 비-Dante 네트워크와도 연동한다.",
+      "text": "AES67 RTP 전송을 지원해 비-Dante 네트워크와도 연동",
       "source": ""
     },
     {
-      "text": "Dante Domain Manager(DDM)와 호환되어 IT 수준의 보안·관리가 가능하다.",
+      "text": "Dante Domain Manager(DDM)와 호환되어 IT 수준의 보안·관리가 가능",
       "source": ""
     }
   ],

@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -112,7 +113,7 @@ test('rear HDMI, LAN, audio, USB, SERVICE and TOUCH follow the exact WMFX drawin
 
 test('55-inch facts use verified display axes; unrelated product fields and 75-inch facts stay fixed', () => {
   for (const slug of slugs) {
-    const current = product(slug);
+    const current = beforeW12002Product(product(slug),slug);
     const { specifications, io, sources, issues, keyFacts, ...core } = current;
     assert.equal(sha(JSON.stringify(core)), evidence.products[slug].coreSha256, slug);
     if (slug === slugs[1]) assert.deepEqual(keyFacts, evidence.products[slug].before.keyFacts);

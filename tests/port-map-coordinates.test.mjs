@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { beforeMobileRs232 } from './mobile-rs232-history.mjs';
+import { beforeW12002Product } from './w12002-wording-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const a = ['lh43qmcebgcxkr', 'lh85qmcebgcxkr', 'lh98qmcebgcxkr', 'lh43qhcebgcxkr', 'lh75qhcebgcxkr'];
@@ -117,7 +118,7 @@ test('QH115FX uses its own eleven-port manual diagram in the published map', () 
 test('all seven products preserve the approved marker numbers, labels, and manual descriptions', () => {
   const hash = createHash('sha256');
   for (const slug of [...a, b, c]) {
-    hash.update(slug).update(JSON.stringify(beforeMobileRs232(product(slug), slug).portMap.items.map(
+    hash.update(slug).update(JSON.stringify(beforeMobileRs232(beforeW12002Product(product(slug),slug), slug).portMap.items.map(
       ({n,label,desc,side}) => ({n,label,desc,side}))));
   }
   assert.equal(hash.digest('hex'), '6efdeff673bef36f69c6859ea400b7f02eb77d06f6fd00ebdccfd28f4068b6cd');
@@ -126,7 +127,7 @@ test('all seven products preserve the approved marker numbers, labels, and manua
 test('the seven product cores and photograph-only loupe rule remain scoped', () => {
   const hash = createHash('sha256');
   for (const slug of [...a, b, c]) {
-    const core = structuredClone(beforeMobileRs232(product(slug), slug));
+    const core = structuredClone(beforeMobileRs232(beforeW12002Product(product(slug),slug), slug));
     delete core.portMap;
     core.images = core.images.filter(image => image.role !== 'Diagram');
     core.imageStatuses = core.imageStatuses.filter(image => image.role !== 'Diagram');

@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeW06005Product} from './w06005-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
 
 const root=new URL('../',import.meta.url);
@@ -20,10 +21,10 @@ test('nine replacement images are the approved bytes and metadata names their me
   }
   for(const [slug,{prior}] of Object.entries(fixture)) {
     const current=JSON.parse(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root)));
-    const restored=beforeW06004Product(current,slug);
+    const restored=beforeW06004Product(beforeW12002Product(current,slug),slug);
     assert.deepEqual(restored.images,prior.images,slug);
     assert.deepEqual(beforeW06005Product(restored,slug).portMap,prior.portMap===undefined?undefined:prior.portMap,slug);
-    const currentOther=structuredClone(current),previousOther=structuredClone(restored);
+    const currentOther=beforeW12002Product(current,slug),previousOther=structuredClone(restored);
     delete currentOther.images;delete previousOther.images;
     if(slug==='ua864a'){delete currentOther.portMap;delete previousOther.portMap;}
     assert.deepEqual(currentOther,previousOther,slug+' unrelated fields');
@@ -43,7 +44,7 @@ test('UA864A markers follow the new Rear photo but preserve their identities and
   assert.equal(prepareEnhancements(current).portMap!==null,true);
   for(const [index,item] of current.portMap.items.entries()) {
     const old=previous.items[index];
-    for(const field of ['n','label','desc','side'])assert.equal(item[field],old[field],field);
+    for(const field of ['n','label','desc','side'])assert.equal(field==='desc'?beforeW12002Product(current,'ua864a').portMap.items[index][field]:item[field],old[field],field);
     assert.ok(item.x1>=0&&item.x1<item.x2&&item.x2<=2400);
     assert.ok(item.y>=0&&item.y<=2140);
   }
@@ -53,7 +54,7 @@ test('UA864A markers follow the new Rear photo but preserve their identities and
 test('inverse rejects changed approved metadata, while unrelated fields pass through',()=>{
   const current=JSON.parse(readFileSync(new URL('beta/site/detail/data/ua864a.json',root)));
   const mutated=structuredClone(current);mutated.portMap.items[0].x1++;
-  assert.throws(()=>beforeW06004Product(mutated,'ua864a'),/unexpected W-004 portMap/);
+  assert.throws(()=>beforeW06004Product(beforeW12002Product(mutated,'ua864a'),'ua864a'),/unexpected W-004 portMap/);
   const changed=structuredClone(current);changed.io=[];
-  assert.deepEqual(beforeW06004Product(changed,'ua864a').io,[]);
+  assert.deepEqual(beforeW06004Product(beforeW12002Product(changed,'ua864a'),'ua864a').io,[]);
 });

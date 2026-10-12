@@ -1,5 +1,6 @@
 import test from 'node:test';
 import {beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(value, slug), slug), slug);
@@ -80,7 +81,7 @@ test('QH115FX preserves its Rear photograph and maps eleven ports on its own man
   assert.deepEqual([...new Set(evidence.markers.map(item => item.ioIndex))].sort((a, b) => a - b), [1, 2, 3, 4, 6, 7, 8, 9]);
   assert.equal(sha256(readFileSync(new URL(evidence.publishedImage.file, root))), evidence.publishedImage.sha256);
   assert.equal(sha256(readFileSync(new URL(evidence.manual.file, root))), evidence.manual.sha256);
-  const core = structuredClone(beforeDisplayW04013(product, 'lh115qhfebgxkr'));
+  const core = structuredClone(beforeDisplayW04013(beforeW12002Product(product,'lh115qhfebgxkr'), 'lh115qhfebgxkr'));
   delete core.images; delete core.imageStatuses; delete core.portMap;
   assert.equal(sha256(JSON.stringify(core)), evidence.coreSha256);
 });

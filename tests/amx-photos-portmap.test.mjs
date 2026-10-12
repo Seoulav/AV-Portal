@@ -6,6 +6,7 @@ import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mj
 import { beforeAmxW008Product, beforeAmxW008Raw } from './amx-w008-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct, beforeW12001IdentityRaw } from './w12001-identity-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -128,7 +129,7 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
   for (const slug of Object.keys(productAssets)) {
     const product = read(`beta/site/detail/data/${slug}.json`);
     if (slug.startsWith('varia-')) assert.equal(product.portMap, undefined, `${slug}: no Port Map`);
-    const current = structuredClone(product);
+    const current = beforeW12002Product(product,slug);
     delete current.images;
     delete current.imageStatuses;
     delete current.portMap;

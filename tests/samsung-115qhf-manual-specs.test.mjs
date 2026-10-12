@@ -2,6 +2,7 @@ import { isW06002Name } from './w06002-history.mjs';
 import { isW007Name } from './w007-history.mjs';
 import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(value, slug), slug), slug);
@@ -29,7 +30,7 @@ import { beforeSamsungW04010 } from './samsung-w04010-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261003-003-evidence.json',root),'utf8'));
-const product=beforeSamsungW04010(JSON.parse(readFileSync(new URL(`beta/site/detail/data/${evidence.slug}.json`,root),'utf8')),evidence.slug);
+const product=beforeSamsungW04010(beforeW12002Product(JSON.parse(readFileSync(new URL(`beta/site/detail/data/${evidence.slug}.json`,root),'utf8')),evidence.slug),evidence.slug);
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const row=name=>{
   const matches=product.specifications.filter(item=>item.name===name);

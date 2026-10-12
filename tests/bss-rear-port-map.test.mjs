@@ -6,6 +6,7 @@ import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs'
 import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import {beforeBssW04004,beforeBssW04004Raw} from './bss-w04004-history.mjs';
 import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
+import {beforeW12002Product,beforeW12002Raw} from './w12002-wording-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -26,7 +27,7 @@ const dims=bytes=>{
 
 test('four model-linked BSS rear photos render valid port maps on the published pixels',()=>{
   for(const [slug,want] of Object.entries(targets)){
-    const product=read(`beta/site/detail/data/${slug}.json`);
+    const product=beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug);
     const proof=evidence.products[slug];
     const rear=product.images.find(image=>image.role==='Rear');
     assert.ok(rear,`${slug}: Rear`);
@@ -75,7 +76,7 @@ test('approved BLU-50v2 stays fixed and four unsupported BSS models gain no map'
   };
   for(const [slug,want] of Object.entries(fixed)){
     const bytes=readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
-    assert.equal(sha(slug==='blu-50v2'?beforeBssW04004Raw(beforeBssAlignmentRaw(bytes.toString('utf8').replace(/\r\n/g,'\n'),slug),slug):bytes),want,`${slug}: existing pre-flow JSON bytes`);
+    assert.equal(sha(slug==='blu-50v2'?beforeBssW04004Raw(beforeBssAlignmentRaw(beforeW12002Raw(bytes.toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug):bytes),want,`${slug}: existing pre-flow JSON bytes`);
     if(slug==='blu-50v2')continue;
     const product=JSON.parse(bytes);
     assert.equal(product.images.some(image=>image.role==='Rear'),false,slug);

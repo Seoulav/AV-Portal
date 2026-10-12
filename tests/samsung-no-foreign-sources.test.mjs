@@ -8,9 +8,10 @@ import { beforeSamsungManualIo } from './samsung-w015-history.mjs';
 import { beforeSamsungWhiteboard } from './samsung-w03006-history.mjs';
 import { beforeSamsungW04010Path } from './samsung-w04010-history.mjs';
 import { beforeW024 } from './mpf-images-history.mjs';
+import { beforeW12002Path } from './w12002-wording-history.mjs';
 
 const root = new URL('../', import.meta.url);
-const read = path => beforeSamsungW04010Path(path, beforeW024(JSON.parse(readFileSync(new URL(path, root), 'utf8')), /(?:^|\/)([^/]+)\.json$/.exec(path)?.[1]));
+const read = path => beforeSamsungW04010Path(path, beforeW024(beforeW12002Path(path,JSON.parse(readFileSync(new URL(path, root), 'utf8'))), /(?:^|\/)([^/]+)\.json$/.exec(path)?.[1]));
 const sourceCodes = value => String(value ?? '').split(',').map(code => code.trim()).filter(Boolean);
 const isForeignSamsung = source => {
   if (!source.url) return false;

@@ -99,27 +99,27 @@
   ],
   "features": [
     {
-      "text": "HDMI 2.0 신호를 단일 멀티모드 광섬유(SC 심플렉스)로 최대 1100m(OM4 기준)까지 무압축 전송한다.",
+      "text": "HDMI 2.0 신호를 단일 멀티모드 광섬유(SC 심플렉스)로 최대 1100m(OM4 기준)까지 무압축 전송",
       "source": ""
     },
     {
-      "text": "최대 4096×2160@60Hz(4:4:4) 또는 3840×2160@60Hz(4:4:4) 해상도를 지원한다.",
+      "text": "최대 4096×2160@60Hz(4:4:4) 또는 3840×2160@60Hz(4:4:4) 해상도 지원",
       "source": ""
     },
     {
-      "text": "HDCP 1.4/2.2를 소스·싱크에 따라 자동 선택하며 EDID·CEC도 투명하게 통과시킨다.",
+      "text": "HDCP 1.4/2.2를 소스·싱크에 따라 자동 선택하며 EDID·CEC도 투명하게 통과",
       "source": ""
     },
     {
-      "text": "8채널 PCM, Dolby Atmos/TrueHD, DTS-HD Master Audio 7.1 등 HBR 오디오를 지원한다.",
+      "text": "8채널 PCM, Dolby Atmos/TrueHD, DTS-HD Master Audio 7.1 등 HBR 오디오 지원",
       "source": ""
     },
     {
-      "text": "HDMI 소스가 5V/500mA를 제공하면 별도 전원 없이 HDMI 급전만으로 동작할 수 있다.",
+      "text": "HDMI 소스가 5V/500mA를 제공하면 별도 전원 없이 HDMI 급전만으로 동작 가능",
       "source": ""
     },
     {
-      "text": "OPTJ Power Tray(1RU)에 최대 16개 TX/RX 유닛을 수납해 전원을 공급할 수 있다.",
+      "text": "OPTJ Power Tray(1RU)에 최대 16개 TX/RX 유닛을 수납해 전원 공급 가능",
       "source": ""
     }
   ],
