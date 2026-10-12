@@ -361,12 +361,12 @@
       "connector": "RJ45",
       "signal": "Network / Dante audio",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "Dante",
       "availability": "",
       "condition": "Gigabit Ethernet, Dante 디지털 오디오 (10/100/1000Mbps)",
-      "source": "P",
-      "verification": "FOUND"
+      "source": "P, M",
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

@@ -428,12 +428,12 @@
       "connector": "RJ-45",
       "signal": "HiQnet 제어/모니터링 네트워크",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "HiQnet Audio Architect",
       "availability": "",
       "condition": "",
       "source": "P, M",
-      "verification": "PARTIAL"
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

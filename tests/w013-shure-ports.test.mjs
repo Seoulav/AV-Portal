@@ -55,19 +55,19 @@ test('Shure MX395 exposes one generic XLR microphone output across connector var
   const product = library.products.find(item => item.productId === 'mx395');
   const equipment = product.units[0].equipment;
   assert.equal(count(equipment, 'outputs', 'XLR', 'MIC-AUDIO'), 1);
-  assert.ok(product.unresolved.some(item => item.connector === 'XLR (팬텀 전원)' && item.reason === 'no-signal'));
+  assert.ok(!product.unresolved.some(item => item.ioIndex === 1), 'phantom power shares the existing audio XLR');
 });
 
 test('Shure ambiguous analog and Dante/PoE rows remain unresolved without new generated ports', async () => {
   const library = await expectedBuilderLibrary();
   const mxa = library.products.find(item => item.productId === 'mxa925w-r');
   const mxaPorts = mxa.units[0].equipment.bidirectional.filter(port => port.connector === 'RJ45');
-  assert.equal(mxaPorts.length, 3); // Two Dante RJ45 and one PoE row already map from source rows.
+  assert.equal(mxaPorts.length, 2); // The two physical RJ45 ports; PoE is carried by port 1.
   assert.ok(mxa.unresolved.some(item => item.ioIndex === 0 && item.reason === 'no-signal'));
   assert.equal(mxa.units[0].equipment.outputs.length, 0);
   const apt = library.products.find(item => item.productId === 'mxcwapt-w');
   assert.equal(apt.units[0].equipment.bidirectional.filter(port => port.connector === 'RJ45').length, 1);
-  assert.ok(apt.unresolved.some(item => item.group === 'Network' && item.connector === 'RJ45' && item.reason === 'quantity'));
+  assert.ok(!apt.unresolved.some(item => item.group === 'Network' && item.connector === 'RJ45'));
 });
 
 test('Shure UA844 and UA845 expose documented antenna distribution and DC output counts', async () => {

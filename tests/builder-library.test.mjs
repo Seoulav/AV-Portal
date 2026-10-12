@@ -131,6 +131,12 @@ test('review regressions from the independent reviews stay fixed', () => {
   kind(row('RJ-45', 'HARMAN BLU link digital audio bus', 'I/O', ''), 'review', 'quantity');
 });
 
+test('an override with no new ports requires an explicit already-represented action', () => {
+  const shared = { match: { connector: 'RJ45', signal: 'Power input' }, ports: [], action: 'already-represented', note: 'Power shares the existing network port.' };
+  assert.doesNotThrow(() => validateOverride('x#0', shared));
+  assert.throws(() => validateOverride('x#0', { ...shared, action: undefined }), /empty ports require action/);
+});
+
 test('overrides are validated and ignored when the original text changed', () => {
   const ok = { match: { connector: 'BNC', signal: '디지털 비디오 입력' }, connector: 'BNC', signals: ['SDI'], direction: 'in', quantity: 1, note: '제조사 매뉴얼 p.12' };
   assert.doesNotThrow(() => validateOverride('k', ok));

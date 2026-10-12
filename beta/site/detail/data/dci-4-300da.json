@@ -456,12 +456,12 @@
       "connector": "RJ-45",
       "signal": "Dante/AES67 audio",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "Dante, AES67",
       "availability": "DA/ComTech D 모델",
       "condition": "네트워크 오디오: Dante / AES67 (이중화 Primary/Secondary 포트)",
       "source": "P, M",
-      "verification": "PARTIAL"
+      "verification": "VERIFIED"
     },
     {
       "group": "Power",

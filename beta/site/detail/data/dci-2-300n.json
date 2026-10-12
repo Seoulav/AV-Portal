@@ -399,12 +399,12 @@
       "connector": "RJ45",
       "signal": "HiQnet 제어/모니터링 네트워크",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "HiQnet (TCP/IP)",
       "availability": "",
       "condition": "",
       "source": "P, M1",
-      "verification": "FOUND"
+      "verification": "VERIFIED"
     },
     {
       "group": "Control",

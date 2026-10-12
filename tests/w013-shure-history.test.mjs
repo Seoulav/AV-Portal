@@ -15,7 +15,7 @@ test('W-013 Shure I/O changes rewind to their exact pre-batch whole-product hash
     assert.equal(digest(prior), w013PriorProductSha(slug), `${slug} prior product SHA`);
     const changed = structuredClone(current);
     changed.io[0].condition += 'unexpected';
-    assert.throws(() => beforeW013Product(changed, slug), /unexpected W-013 I\/O change/);
+    assert.throws(() => beforeW013Product(changed, slug), /unexpected W-013(?: B2)? I\/O change/);
     const outside = structuredClone(current);
     outside.model += ' preserved';
     assert.equal(beforeW013Product(outside, slug).model, outside.model, `${slug} unrelated fields remain current`);
