@@ -42,10 +42,14 @@ test('all other catalog products keep their complete previous brand order', () =
   const historicalCatalog = beforeW1010Catalog(catalog);
   const others = historicalCatalog.filter(item => item.brand !== 'Samsung');
   assert.equal(others.length, 237);
-  assert.ok(others.every(item => !item.brandSort));
-  assert.deepEqual(slugs(filterCatalog(others, { sort: 'brand' })), slugs(legacySort(others, {})));
-  for (const brand of new Set(others.map(item => item.brand))) {
-    assert.deepEqual(slugs(filterCatalog(historicalCatalog, { brand, sort: 'brand' })), slugs(legacySort(others, { brand })), brand);
+  const shure = others.filter(item => item.brand === 'Shure');
+  assert.equal(shure.length, 30);
+  assert.ok(shure.every(item => item.brandSort && Number.isInteger(item.brandSort.order)));
+  const unaffected = others.filter(item => item.brand !== 'Shure');
+  assert.ok(unaffected.every(item => !item.brandSort));
+  assert.deepEqual(slugs(filterCatalog(unaffected, { sort: 'brand' })), slugs(legacySort(unaffected, {})));
+  for (const brand of new Set(unaffected.map(item => item.brand))) {
+    assert.deepEqual(slugs(filterCatalog(historicalCatalog, { brand, sort: 'brand' })), slugs(legacySort(unaffected, { brand })), brand);
   }
 });
 
