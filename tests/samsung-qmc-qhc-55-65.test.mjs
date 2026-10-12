@@ -5,6 +5,7 @@ import { isW1010Name, beforeW1010Catalog } from './w1010-history.mjs';
 import { isW1012Name, beforeW1012Catalog } from './w1012-history.mjs';
 import { isW007Name, withoutW007Catalog } from './w007-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
+import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
 const beforeW026Raw = (value, slug) => beforeW013Raw(priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(value, slug), slug), slug), slug), slug);
@@ -75,6 +76,6 @@ test('all 243 pre-existing product JSON files and catalog entries remain unchang
     return [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(raw, slug), slug), slug), slug))];
   });
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
-  const previous = beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json'))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const previous = beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json')))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
 });

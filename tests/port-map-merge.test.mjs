@@ -49,7 +49,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261006-005 moves ten more visible rear panels; the two covered Shure
   // panels stay in the fallback, so the total remains 265.
   // W-20261012-006 moves 15 Epson and seven Panasonic projectors into maps.
-  assert.deepEqual(counts, { mapIo: 106, ioOnly: 139, neither: 20 });
+  // W-009 maps three existing AVer products, moving them from fallback to map.
+  assert.deepEqual(counts, { mapIo: 109, ioOnly: 136, neither: 20 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

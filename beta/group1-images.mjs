@@ -233,11 +233,12 @@ export const group1Images = {
     image('Rear', 'tr535-rear.webp', 'AVer TR535 후면 단자 이미지', 'AVer', 'TR535', 'https://cors-web.aver.com/Contents/Model/tr535/img/product-pic/images_6.png', '545×425', '545×425', 'FOUND', 'Rear · 제조사 한국 공식 이미지')
   ],
   tr335: [
-    image('Front', 'tr335-front.webp', 'AVer TR335 전면 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-front.png', '474×458', '338×381', 'FOUND'),
-    image('Rear', 'tr335-rear.webp', 'AVer TR335 후면 단자 이미지', 'AVer', 'TR335', 'https://www.averusa.com/images-aver/products/tr335-335n/ptz-back.png', '474×458', '308×411', 'FOUND')
+    image('Front', 'tr335-front.webp', 'AVer TR335 정면 이미지', 'AVer', 'TR335', 'https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_1.png', '551x351', '329x351', 'FOUND', 'Front · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진'),
+    image('Rear', 'tr335-rear.webp', 'AVer TR335 후면 단자 이미지', 'AVer', 'TR335', 'https://cors-web.aver.com/Contents/Model/tr335/img/product-pic/images_4.png', '551x351', '326x350', 'FOUND', 'Rear · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진')
   ],
   tr315: [
-    image('Perspective', 'tr315-perspective.webp', 'AVer TR315 원근 이미지(제조사 마케팅 이미지, NDI 배지 포함)', 'AVer', 'TR315', 'https://www.averusa.com/images-aver/products/tr315-315n/product-main-ptz-2.png', '1100×1000', '1053×982', 'FOUND')
+    image('Front', 'tr315-front.webp', 'AVer TR315 정면 이미지', 'AVer', 'TR315', 'https://cors-web.aver.com/Contents/Model/tr315/img/product-pic/images_1.png', '551x351', '329x351', 'FOUND', 'Front · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진'),
+    image('Rear', 'tr315-rear.webp', 'AVer TR315 후면 단자 이미지', 'AVer', 'TR315', 'https://cors-web.aver.com/Contents/Model/tr315/img/product-pic/images_4.png', '551x351', '326x350', 'FOUND', 'Rear · 제조사 공식이 TR315/TR335 공용으로 쓰는 사진')
   ],
   cl01: [
     image('Front', 'cl01-front.webp', 'AVer CL01 상단 조작부 이미지', 'AVer', 'CL01', 'https://www.averusa.com/images-aver/products/cl01/controller-top.png', '515×314', '515×301', 'FOUND'),
@@ -1081,7 +1082,7 @@ export const cardImages = {
   'rio3224-d3': 'rio3224-d3-front.webp',
   tr535: 'tr535-front.webp',
   tr335: 'tr335-front.webp',
-  tr315: 'tr315-perspective.webp',
+  tr315: 'tr315-front.webp',
   cl01: 'cl01-front.webp',
   vs5: 'lumantek-vs5-main.webp',
   vs10: 'lumantek-vs10-main.webp',
