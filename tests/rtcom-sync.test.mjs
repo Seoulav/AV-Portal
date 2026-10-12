@@ -8,7 +8,7 @@ import { syncRtcom, verifyRtcomSnapshot } from '../beta/sync-rtcom.mjs';
 
 const sourceRoot = 'https://fixture.test/';
 const indexUrl = `${sourceRoot}data/products/index.json`;
-const exactIndex = Buffer.from(`{\r\n  "schema": "rtcom.products.v1",\r\n  "manufacturer": "RTCOM",\r\n  "detailPath": "data/products/{id}.json",\r\n  "imagePath": "output/design/assets/products/{file}",\r\n  "products": [\r\n    {"id":"alpha","group":"integrated","productName":"Alpha","model":"Alpha","itemType":"PRODUCT","categories":["영상","Video","Matrix Switcher"],"cardImage":"alpha.webp"},\r\n    {"id":"blocked","group":"integrated","productName":"HS-88MX","model":"HS-88MX","itemType":"PRODUCT","categories":["영상","Video","Matrix Switcher"],"cardImage":"blocked.webp"}\r\n  ]\r\n}\r\n`, 'utf8');
+const exactIndex = Buffer.from(`{\r\n  "schema": "rtcom.products.v1",\r\n  "manufacturer": "RTCOM",\r\n  "detailPath": "data/products/{id}.json",\r\n  "imagePath": "output/design/assets/products/{file}",\r\n  "groups": {"integrated":"일체형 매트릭스"},\r\n  "products": [\r\n    {"id":"alpha","group":"integrated","productName":"Alpha","model":"Alpha","itemType":"PRODUCT","categories":["영상","Video","Matrix Switcher"],"cardImage":"alpha.webp"},\r\n    {"id":"blocked","group":"integrated","productName":"HS-88MX","model":"HS-88MX","itemType":"PRODUCT","categories":["영상","Video","Matrix Switcher"],"cardImage":"blocked.webp"}\r\n  ]\r\n}\r\n`, 'utf8');
 const detail = Buffer.from(JSON.stringify({
   id: 'alpha', manufacturer: 'RTCOM', productName: 'Alpha', model: 'Alpha', categories: ['영상', 'Video', 'Matrix Switcher'],
   english: 'Alpha', korean: '알파', overview: '알파', packageStatus: 'VERIFIED', verificationSummary: '검증',
@@ -89,6 +89,31 @@ test('unreachable index, missing detail and missing image preserve the last-know
   assert.equal(await digestTree(destination), baseline);
   await assert.rejects(syncRtcom({ destination, indexUrl, sourceRoot, fetchImpl: fixtureFetch({ [`${sourceRoot}output/design/assets/products/alpha.webp`]: new Response('missing', { status: 404 }) }) }), /alpha\.webp.*404/);
   assert.equal(await digestTree(destination), baseline);
+});
+
+test('invalid group candidates fail before promotion and preserve the last-known-good bytes', async t => {
+  const root = await mkdtemp(join(tmpdir(), 'rtcom-groups-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const destination = join(root, 'rtcom');
+  await syncRtcom({ destination, indexUrl, sourceRoot, fetchImpl: fixtureFetch() });
+  const baseline = await digestTree(destination);
+  const original = JSON.parse(exactIndex.toString('utf8'));
+  const cases = [
+    ['missing groups', value => { delete value.groups; }],
+    ['empty groups', value => { value.groups = {}; }],
+    ['empty key', value => { value.groups[''] = 'blank'; }],
+    ['reserved all', value => { value.groups.all = '전체'; }],
+    ['empty label', value => { value.groups.integrated = ' '; }],
+    ['unknown membership', value => { value.products[0].group = 'unknown'; }]
+  ];
+  for (const [label, change] of cases) {
+    const candidate = structuredClone(original);
+    change(candidate);
+    const bytes = Buffer.from(JSON.stringify(candidate));
+    await assert.rejects(syncRtcom({ destination, indexUrl, sourceRoot, fetchImpl: fixtureFetch({ [indexUrl]: bytes }) }), /group/, label);
+    assert.equal(await digestTree(destination), baseline, label);
+    assert.deepEqual(await readFile(join(destination, 'raw', 'index.json')), exactIndex, label);
+  }
 });
 
 test('validation rejects slug collisions before promotion', async t => {

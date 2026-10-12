@@ -12,6 +12,7 @@ import {
 const index = {
   schema: 'rtcom.products.v1',
   manufacturer: 'RTCOM',
+  groups: { series: '매트릭스 시리즈', integrated: '일체형 매트릭스' },
   detailPath: 'data/products/{id}.json',
   imagePath: 'output/design/assets/products/{file}',
   products: [
@@ -44,6 +45,8 @@ test('RTCOM adapter derives dynamic products, exclusions and prefixed slugs', ()
     link_scope: 'series',
     slug: 'rtcom-xdm',
     rtcomId: 'xdm',
+    brandSort: { group: 'series', order: 0 },
+    configurator_link: 'https://seoulav.github.io/rtcom-configurator/#matrix-configurator',
     aliases: ['XDM Series'],
     cardSummary: '모듈형 매트릭스',
     cardImage: {

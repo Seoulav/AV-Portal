@@ -27,6 +27,10 @@ export function isExcludedRtcomProduct(product = {}) {
 export function validateRtcomIndex(index, { existingSlugs = [] } = {}) {
   if (!index || index.schema !== 'rtcom.products.v1') throw new Error('RTCOM schema가 rtcom.products.v1이 아닙니다.');
   if (!Array.isArray(index.products)) throw new Error('RTCOM products 배열이 없습니다.');
+  if (!index.groups || typeof index.groups !== 'object' || Array.isArray(index.groups) || !Object.keys(index.groups).length) throw new Error('RTCOM groups 객체가 비어 있습니다.');
+  for (const [key, label] of Object.entries(index.groups)) {
+    if (!key.trim() || key === 'all' || typeof label !== 'string' || !label.trim()) throw new Error(`RTCOM group 이름 또는 키가 올바르지 않습니다: ${key}`);
+  }
   if (index.detailPath !== 'data/products/{id}.json') throw new Error('RTCOM detailPath 형식이 올바르지 않습니다.');
   if (index.imagePath !== 'output/design/assets/products/{file}') throw new Error('RTCOM imagePath 형식이 올바르지 않습니다.');
   const ids = new Set();
@@ -38,6 +42,7 @@ export function validateRtcomIndex(index, { existingSlugs = [] } = {}) {
     if (ids.has(product.id)) throw new Error(`RTCOM id 중복: ${product.id}`);
     ids.add(product.id);
     if (!product.productName || !product.model || !Array.isArray(product.categories)) throw new Error(`RTCOM 제품 식별 정보 누락: ${product.id}`);
+    if (typeof product.group !== 'string' || !Object.hasOwn(index.groups, product.group)) throw new Error(`RTCOM product group 미등록: ${product.id}`);
     if (isExcludedRtcomProduct(product)) { excluded.push(product); continue; }
     const slug = rtcomSlug(product.id);
     if (occupied.has(slug)) throw new Error(`RTCOM 상세 slug 충돌: ${slug}`);
@@ -49,6 +54,7 @@ export function validateRtcomIndex(index, { existingSlugs = [] } = {}) {
 
 export function adaptRtcomCatalog(index, options) {
   const { products } = validateRtcomIndex(index, options);
+  const sourceOrder = new Map(index.products.map((product, order) => [product.id, order]));
   return products.map(product => {
     const item = {
       brand: 'RTCOM',
@@ -59,6 +65,10 @@ export function adaptRtcomCatalog(index, options) {
       link_scope: product.group === 'series' ? 'series' : 'model',
       slug: rtcomSlug(product.id),
       rtcomId: product.id,
+      // Use the source index position for brand sorting even if a future
+      // synchronized index interleaves groups. Group choice order is separate.
+      brandSort: { group: product.group, order: sourceOrder.get(product.id) },
+      ...(product.group === 'series' ? { configurator_link: 'https://seoulav.github.io/rtcom-configurator/#matrix-configurator' } : {}),
       aliases: [...new Set([product.model, product.productName].filter(Boolean))],
       cardSummary: plainText(product.korean)
     };
