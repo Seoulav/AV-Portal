@@ -409,13 +409,13 @@
     },
     {
       "group": "Audio",
-      "connector": "XLR",
+      "connector": "1/4\" (6.35 mm) TRS 및 XLR",
       "signal": "Audio output",
       "direction": "OUT",
-      "quantity": "1",
+      "quantity": "1 per connector",
       "protocol": "",
       "availability": "",
-      "condition": "Balanced XLR audio output",
+      "condition": "Balanced XLR and balanced 6.35 mm TRS outputs (one each)",
       "source": "P, M",
       "verification": "FOUND"
     },
@@ -429,18 +429,6 @@
       "availability": "",
       "condition": "Remote control and monitoring; ULXD4 does not provide Dante audio",
       "source": "M",
-      "verification": "FOUND"
-    },
-    {
-      "group": "Audio",
-      "connector": "1/4\" (6.35 mm) TRS",
-      "signal": "Audio output",
-      "direction": "OUT",
-      "quantity": "1",
-      "protocol": "",
-      "availability": "",
-      "condition": "Balanced TRS audio output",
-      "source": "P, M",
       "verification": "FOUND"
     },
     {

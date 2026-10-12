@@ -17,6 +17,10 @@ test('ULXD4 exposes verified RF, analog outputs, and Ethernet control without Da
   assert.equal(equipment.outputs.filter(port => port.connector === 'TRS-6.3' && port.signals.includes('LINE-AUDIO')).length, 1);
   assert.equal(equipment.bidirectional.filter(port => port.connector === 'RJ45' && port.signals.includes('ETHERNET')).length, 1);
   assert.equal(equipment.bidirectional.some(port => port.signals.includes('DANTE')), false);
+  const originalOutputRow = JSON.parse(fs.readFileSync(new URL('../beta/site/detail/data/ulxd4.json', import.meta.url), 'utf8')).io[1];
+  assert.equal(originalOutputRow.connector, '1/4" (6.35 mm) TRS 및 XLR');
+  assert.equal(originalOutputRow.signal, 'Audio output');
+  assert.equal(originalOutputRow.quantity, '1 per connector');
 });
 
 test('ULXD4D exposes two XLR channels and two Dante network ports', async () => {
