@@ -985,7 +985,7 @@ export const group1Images = {
     image('Rear', 'mxcwapt-w-rear.webp', 'MXCWAPT 단자부 (커버 분리 상태, \'Analog in\' XLR 암 · gnd lift 스위치 · \'Analog out\' XLR 수)', 'Shure', 'MXCWAPT (제품 공통 이미지; 페이지 variant=MXCWAPT-W)', 'https://products.shureweb.eu/shure_product_db/product_images/files/91a/796/b8-/original/0fef5ec0a86b3b86b4778ac786e5b37d.webp', '3000x3000', '2000x1182', 'VERIFIED')
   ],
   'mxc420-c': [
-    image('Front', 'mxc420c-front.webp', 'MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부', 'Shure', 'MXC420/C — MXC Gooseneck Microphone, 20", Single-flex, Cardioid', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp', '2562x2562', '1500x1500')
+    image('Front', 'mxc420c-front.webp', 'MXC 시리즈 구스넥 마이크 3종(길이별) — 10핀 모듈러 커넥터 하단부', 'Shure', 'MXC420/C — MXC Gooseneck Microphone, 20", Single-flex, Cardioid', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/b12/004/76-/original/0cc6731625430e0cc0cca0c921b8163e.webp', '2562x2562', '679x1500', 'FOUND', 'Front · 제조사 공식 이미지 · 원본 투명 배경을 흰색으로 합성하고 빈 여백을 잘라냄')
   ],
   'mxa925w-r': [
     image('Front', 'mxa925wr-front.webp', 'MXA925W-R 전용 정면 이미지(화이트, 원형 천장형 어레이 마이크)', 'Shure', 'MXA925 Ceiling Array Microphone (variant MXA925W-R: White, Round)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/548/ca2/36-/original/a1c86b593204942f18177b7be9a91bb6.webp', '3000x3000', '1999x1999', 'VERIFIED'),
