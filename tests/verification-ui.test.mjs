@@ -51,7 +51,7 @@ test('public pages display a version badge while detail assets retain their refr
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
   // W-008 refreshes both detail assets so cached pages receive the amplifier output table.
   assert.match(detail, /styles\.css\?v=w20261012-008-amp-table/);
-  assert.match(detail, /app\.js\?v=w20261012-008-amp-table/);
+  assert.match(detail, /app\.js\?v=w20261012-015-rtcom-parity/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

@@ -92,10 +92,67 @@ export function combinedCatalogSource(avCatalogRaw, rtcomIndexRaw = '') {
 
 const mapDocumentType = type => type === 'Manual' ? 'User Manual' : type;
 
+const rtcomOfficialUrl = url => {
+  const parsed = new URL(url);
+  if (!['http:', 'https:'].includes(parsed.protocol) || parsed.hostname !== 'rtcomav.com' ||
+      parsed.username || parsed.password || parsed.pathname !== '/kor/bbs/board.php' ||
+      !parsed.searchParams.has('bo_table') || !parsed.searchParams.has('wr_id')) {
+    throw new Error(`RTCOM 공식 링크 출처가 올바르지 않습니다: ${url}`);
+  }
+  return parsed.href;
+};
+
+const adaptPortMaps = raw => {
+  if (!raw.portMap) return [];
+  const sourceMaps = Array.isArray(raw.portMap) ? raw.portMap : [raw.portMap];
+  return sourceMaps.map(map => {
+    const image = raw.images?.find(item => map.file ? item.file === map.file : item.role === map.image);
+    if (!image || image.role !== map.image) throw new Error(`RTCOM Port Map 이미지 불일치: ${raw.id}`);
+    const size = /^(\d+)\s*[×x]\s*(\d+)$/i.exec(image.resolution ?? '');
+    if (!size) throw new Error(`RTCOM Port Map 이미지 크기 누락: ${raw.id} ${image.file}`);
+    return {
+      image: image.role, imageFile: image.file,
+      // The configurator treats an omitted side as top; Portal defaults it to bottom.
+      items: map.items.map(item => ({ ...structuredClone(item), side: item.side ?? 'top' })),
+      measuredImage: { file: image.file, width: Number(size[1]), height: Number(size[2]) },
+      ...(map.title ? { title: map.title } : {}),
+      ...(map.note ? { note: map.note } : {}),
+      ...(map.basis ? { basis: map.basis } : {}),
+      ...(map.displayWidth ? { displayWidth: map.displayWidth } : {})
+    };
+  });
+};
+
+const adaptSettings = raw => {
+  const settings = [];
+  if (raw.videoModes?.modes?.length) settings.push({
+    kind: 'modes', title: '비디오 모드',
+    items: raw.videoModes.modes.map(mode => ({
+      name: mode.name, summary: mode.summary,
+      detail: [mode.detail, mode.layouts?.length ? `레이아웃: ${mode.layouts.join(' · ')}` : '',
+        mode.page ? `원본 ${mode.page}쪽` : '', raw.videoModes.source ? `출처 ${raw.videoModes.source}` : ''].filter(Boolean).join(' · ')
+    }))
+  });
+  if (raw.audioOutFlow) settings.push({
+    kind: 'table', title: '오디오 출력 선택',
+    columns: ['구분', '선택 경로', '출처'],
+    rows: [[raw.audioOutFlow.tag, raw.audioOutFlow.caption, raw.audioOutFlow.source]]
+  });
+  if (raw.lineup?.length) settings.push({
+    kind: 'table', title: '제품군 구성',
+    columns: ['모델', '종류', '구성·사양', 'RU'],
+    rows: raw.lineup.map(item => [item.model, item.kind, item.summary,
+      item.rackUnits == null ? '—' : String(item.rackUnits)])
+  });
+  return settings;
+};
+
 export function adaptRtcomDetail(raw) {
   if (!raw || !validId(raw.id) || raw.manufacturer !== 'RTCOM') throw new Error('RTCOM 상세 식별 정보가 올바르지 않습니다.');
   if (!raw.productName || !raw.model || !Array.isArray(raw.categories)) throw new Error(`RTCOM 상세 필수 정보 누락: ${raw.id}`);
   const sourceUrl = rtcomSourceUrl(raw.id);
+  const portMaps = adaptPortMaps(raw);
+  const settings = adaptSettings(raw);
   const documents = [{
     type: 'Official Product Page', status: 'FOUND', title: '알티컴 제품정보', url: sourceUrl, language: 'ko'
   }, ...(raw.documents ?? []).map(document => {
@@ -103,7 +160,9 @@ export function adaptRtcomDetail(raw) {
     if (document.file) mapped.url = new URL(document.file, RTCOM_DOCUMENT_BASE).href;
     delete mapped.file;
     return mapped;
-  })];
+  }), ...(raw.officialLinks ?? []).map(link => ({
+    type: 'Official Link', status: 'FOUND', title: link.label, url: rtcomOfficialUrl(link.url), language: 'ko'
+  }))];
   const images = (raw.images ?? []).map(image => ({
     ...image,
     sourceUrl: image.sourceUrl ?? new URL(image.file, RTCOM_IMAGE_BASE).href
@@ -137,6 +196,8 @@ export function adaptRtcomDetail(raw) {
     images,
     imageStatuses: structuredClone(raw.imageStatuses ?? []),
     documents,
+    ...(portMaps.length ? { portMap: portMaps[0], portMaps } : {}),
+    ...(settings.length ? { settings } : {}),
     features: structuredClone(raw.features ?? []),
     specifications: structuredClone(raw.specifications ?? []),
     io: structuredClone(raw.io ?? []),
