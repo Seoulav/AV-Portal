@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { beforeW12002Product, beforeW12002Raw, w12002Slugs } from './w12002-wording-history.mjs';
+import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
 
 const product=slug=>JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8'));
 test('wording history restores only approved feature and marker text',()=>{
@@ -10,7 +11,7 @@ test('wording history restores only approved feature and marker text',()=>{
   const prior=beforeW12002Product(current,'ki-pro-go2');
   assert.notEqual(prior.features[0].text,current.features[0].text);
   assert.notEqual(prior.portMap.items[0].desc,current.portMap.items[0].desc);
-  const changed=structuredClone(current);
+  const changed=beforeW12003Product(current,'ki-pro-go2');
   changed.model='INVALID';
   changed.io=[];
   changed.portMap.items[0].x1=-1;
@@ -21,7 +22,7 @@ test('wording history restores only approved feature and marker text',()=>{
 });
 
 test('wording history rejects unexpected changed sentence, missing marker, or count',()=>{
-  const original=product('ki-pro-go2');
+  const original=beforeW12003Product(product('ki-pro-go2'),'ki-pro-go2');
   const feature=structuredClone(original);
   feature.features[0].text='altered';
   assert.throws(()=>beforeW12002Product(feature,'ki-pro-go2'),/feature 1/);

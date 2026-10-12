@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeW12003Product, beforeW12003Raw } from './w12003-kiprogo2-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
 // tested. Current non-wording fields pass through, so unrelated regressions
@@ -14,6 +15,9 @@ export function beforeW12002Path(path,current){
 export function beforeW12002Product(current,slug){
   const record=fixture[slug];
   if(!record)return current;
+  // Ki Pro GO2's later W-003 grouping must be undone before the older
+  // 24-marker wording fixture can inspect only its approved descriptions.
+  if(slug==='ki-pro-go2' && current.portMap?.items?.length===11)current=beforeW12003Product(current,slug);
   if((current.features?.length??0)!==record.featureCount)throw new Error(`${slug}: unexpected W-002 feature count`);
   if((current.portMap?.items?.length??0)!==record.markerCount)throw new Error(`${slug}: unexpected W-002 marker count`);
   const result=structuredClone(current);
@@ -32,6 +36,7 @@ export function beforeW12002Product(current,slug){
 
 export function beforeW12002Raw(raw,slug){
   if(!fixture[slug])return raw;
+  if(slug==='ki-pro-go2' && JSON.parse(raw).portMap?.items?.length===11)raw=beforeW12003Raw(raw,slug);
   beforeW12002Product(JSON.parse(raw),slug);
   // Historical byte hashes include hand-formatted JSON. Replace only the
   // approved value literals so their original whitespace stays observable.
