@@ -2,7 +2,7 @@ import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeMxc420PhotoProduct } from './mxc420-photo-history.mjs';
-import { beforeW12014Product } from './w12014-history.mjs';
+import { beforeMx392Ulxd4qFollowupProduct } from './mx392-ulxd4q-followup-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
 import { isW1012Name } from './w1012-history.mjs';
@@ -67,7 +67,7 @@ test('Shure 29 authored 01 cards use only their own verified specification rows'
     }
     const core=structuredClone(historical);
     delete core.lead;delete core.subtitle;delete core.keyFacts;
-    assert.equal(sha(JSON.stringify(beforeW06004Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeW12014Product(core,slug),slug),slug),slug),slug))),proof.coreSha256,`${slug}: only three fields added`);
+    assert.equal(sha(JSON.stringify(beforeW06004Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeMx392Ulxd4qFollowupProduct(core,slug),slug),slug),slug),slug))),proof.coreSha256,`${slug}: only three fields added`);
   }
 });
 

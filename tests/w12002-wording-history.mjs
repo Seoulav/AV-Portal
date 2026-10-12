@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { beforeW12003Product, beforeW12003Raw } from './w12003-kiprogo2-history.mjs';
-import { beforeW12014Product } from './w12014-history.mjs';
+import { beforeMx392Ulxd4qFollowupProduct } from './mx392-ulxd4q-followup-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
 // tested. Current non-wording fields pass through, so unrelated regressions
@@ -14,7 +14,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug){
-  if((slug==='ulxd4q' && current.portMap?.items?.length===13)||slug==='mx392-c')current=beforeW12014Product(current,slug);
+  if((slug==='ulxd4q' && current.portMap?.items?.length===13)||slug==='mx392-c')current=beforeMx392Ulxd4qFollowupProduct(current,slug);
   const record=fixture[slug];
   if(!record)return current;
   // Ki Pro GO2's later W-003 grouping must be undone before the older

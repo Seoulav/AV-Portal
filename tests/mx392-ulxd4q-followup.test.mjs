@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { expectedBuilderLibrary } from '../beta/build-builder-library.mjs';
-import { beforeW12014Product } from './w12014-history.mjs';
+import { beforeMx392Ulxd4qFollowupProduct } from './mx392-ulxd4q-followup-history.mjs';
 
 const detail = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
 
@@ -51,14 +51,14 @@ test('ULXD4Q MIC/LINE switches have one grouped label with sequential marker num
 test('historical inverse rejects an unapproved field edit but keeps unrelated live data', () => {
   for (const [slug, field] of [['mx392-c', 'io'], ['mx418d-c', 'io'], ['ulxd4q', 'portMap']]) {
     const current=detail(slug);
-    const restored=beforeW12014Product(current,slug);
+    const restored=beforeMx392Ulxd4qFollowupProduct(current,slug);
     assert.notDeepEqual(restored[field],current[field],slug);
     const unrelated=structuredClone(current);
     unrelated.model='INVALID MODEL';
-    assert.equal(beforeW12014Product(unrelated,slug).model,'INVALID MODEL',slug);
+    assert.equal(beforeMx392Ulxd4qFollowupProduct(unrelated,slug).model,'INVALID MODEL',slug);
     const changed=structuredClone(current);
     if(field==='portMap')changed.portMap.items[0].label='INVALID';
     else changed.io[0].quantity='99';
-    assert.throws(()=>beforeW12014Product(changed,slug),/unexpected W-014/,slug);
+    assert.throws(()=>beforeMx392Ulxd4qFollowupProduct(changed,slug),/unexpected MX392\/ULXD4Q followup/,slug);
   }
 });
