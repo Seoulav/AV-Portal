@@ -23,7 +23,8 @@ const statusClass = status => ({
 const badge = status => element('span', 'state ' + statusClass(status), status);
 function safeLink(url, label, className = '', allowedHttpHost = '') {
   const parsed = new URL(url);
-  const allowedHttp = parsed.protocol === 'http:' && parsed.hostname === allowedHttpHost;
+  const vsEntPage = productKey === 'ds-8s' && parsed.href === 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14';
+  const allowedHttp = parsed.protocol === 'http:' && (parsed.hostname === allowedHttpHost || vsEntPage);
   if ((parsed.protocol !== 'https:' && !allowedHttp) || parsed.username || parsed.password) throw new Error('공식 링크 형식이 올바르지 않습니다.');
   const link = element('a', className, label);
   link.href = parsed.href;

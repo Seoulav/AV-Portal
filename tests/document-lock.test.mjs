@@ -25,6 +25,7 @@ import { verifyPdfLock } from '../beta/pdf-lock.mjs';
 import { beforeSamsungW04017Raw } from './samsung-w04017-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 import { beforeW033Uploads, isW033Manual } from './w033-history.mjs';
+import { isW011Manual } from './w011-history.mjs';
 
 GlobalWorkerOptions.workerSrc = new URL('../beta/site/vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const root = new URL('../beta/site/', import.meta.url);
@@ -71,7 +72,7 @@ test('PDF.js requests a new password after an incorrect attempt', async () => {
 
 test('all other posted PDFs, product JSON, and document links keep their prior bytes', () => {
   const manuals = new URL('manuals/', root);
-  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && !isW033Manual(name)).sort();
+  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && !isW033Manual(name) && !isW011Manual(name)).sort();
   assert.equal(files.length, 56);
   const others = createHash('sha256');
   for (const name of files.filter(name => !targetSet.has(name)))

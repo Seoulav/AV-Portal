@@ -7,7 +7,7 @@ import { MAX_PDF_BYTES } from './mirror-docs.mjs';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
 import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, identity } from './user-manuals.mjs';
-import { allowedHostsFor, isAllowedHost } from './manufacturer-hosts.mjs';
+import { allowedHostsFor, isAllowedHost, isAllowedHttpOfficialPage } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
@@ -206,7 +206,8 @@ for (const item of catalog) {
   if (item.official_links.length === 0) assert.equal(item.product, 'PT-MZ17K');
   for (const link of item.official_links) {
     const url = new URL(link);
-    assert.equal(url.protocol, 'https:');
+    const httpOfficial = item.brand === 'VS ENT' && isAllowedHttpOfficialPage(link);
+    assert.equal(url.protocol, httpOfficial ? 'http:' : 'https:');
     assert.equal(url.username, '');
     assert.equal(url.password, '');
     assert.ok(!/\.pdf$/i.test(url.pathname));
@@ -307,7 +308,8 @@ function verifyOfficialUrls(value, slug, hosts) {
     if ((key === 'url' || key === 'sourceUrl') && entry) {
       const url = new URL(entry);
       const isVerifiedDistributorUrl = entry === verifiedDistributor?.url;
-      assert.equal(url.protocol, isVerifiedDistributorUrl ? 'http:' : 'https:');
+      const httpOfficial = brandBySlug.get(slug) === 'VS ENT' && isAllowedHttpOfficialPage(entry);
+      assert.equal(url.protocol, isVerifiedDistributorUrl || httpOfficial ? 'http:' : 'https:');
       assert.equal(url.username, '');
       assert.equal(url.password, '');
       if (!isVerifiedDistributorUrl && !(key === 'sourceUrl' && isUnverifiedImage)) {

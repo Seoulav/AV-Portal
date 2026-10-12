@@ -1,0 +1,352 @@
+{
+  "manufacturer": "VS ENT",
+  "productName": "DS-8S",
+  "model": "DS-8S",
+  "itemType": "PRODUCT",
+  "categories": [
+    "제어",
+    "Control",
+    "Power Conditioner"
+  ],
+  "english": "Eight-channel sequential power distributor with one unswitched AC outlet, remote contact control, and RS-485.",
+  "korean": "DS-8S는 AC 출력 8계통을 순차 제어하고 비연동 AC 출력 1계통을 제공하는 순차전원공급기다.",
+  "verificationSummary": "사용자 제공 VS ENT DS-8S 리플렛과 동일 모델 사양서를 대조했다. AC 출력은 리플렛 본문 2200W와 표 2500W가 상충해 두 값을 병기했다.",
+  "packageStatus": "CONFLICTED",
+  "overview": "DS-8S는 연동 AC 출력 8계통과 비연동 AC 출력 1계통을 제공하는 순차전원공급기다. 채널별 순차 간격 1~99초, SEQUENCE/바이패스, REMOTE 접점·모니터 단자와 RS-485 제어를 제공한다.\n\n제조사 리플렛 본문은 AC 출력 각각을 2200W로, 같은 자료의 사양표는 채널당 2500W(AC 220V 10A)로 표기한다. 사용자 제공 동일 모델 사양서도 2200W와 MAX. 2500W를 함께 적는다. 어느 값을 단일 정격으로 확정하지 않고 출처 문구와 조건을 함께 표시한다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "ds-8s-front.webp",
+      "alt": "VS ENT DS-8S 순차전원공급기 전면",
+      "note": "Front · 제조사 DS-8S 리플렛 이미지",
+      "provider": "VS ENT",
+      "model": "DS-8S",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1469×273(제조사 리플렛 EMF에서 추출)",
+      "resolution": "1469×273",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "DS-8S AMX 통신 설명서(사용자 제공)",
+      "language": "ko",
+      "note": "4쪽 사용자 제공 PDF는 업로드 자료 카드에서 보기·내려받기 제공"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "독립 검증 사양서 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "DS-8S 리플렛·사양서(사용자 제공)",
+      "language": "ko",
+      "note": "리플렛 1쪽 공개. 별도 사양서는 원문 대조에 사용했고 판매 자료 원본은 게시하지 않음."
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "기술 문서 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "VS ENT DS-8S 공식 제품 페이지",
+      "language": "ko",
+      "note": "제조사 사이트가 HTTP만 제공",
+      "url": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
+    }
+  ],
+  "features": [
+    {
+      "text": "연동 AC 출력 8계통·비연동 AC 출력 1계통",
+      "source": "L"
+    },
+    {
+      "text": "채널별 순차 간격 1~99초 설정",
+      "source": "L"
+    },
+    {
+      "text": "SEQUENCE·바이패스 전환",
+      "source": "L"
+    },
+    {
+      "text": "AC 입력 전압 조정·표시",
+      "source": "L"
+    },
+    {
+      "text": "REMOTE 접점·모니터 단자 원격 제어",
+      "source": "L"
+    },
+    {
+      "text": "LOCK 기능과 RS-485 통신 제어",
+      "source": "L"
+    },
+    {
+      "text": "별도 프로그램을 통한 예약 ON/OFF",
+      "source": "L"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Power",
+      "name": "AC 출력",
+      "value": "2200 / 2500",
+      "unit": "W/채널",
+      "condition": "리플렛 본문: 각 2200W · 사양표: 채널당 2500W(AC 220V 10A). 동일 모델 사양서: 2200W, MAX. 2500W. 정격·최대 표기가 일치하지 않아 단일 값으로 확정하지 않음.",
+      "source": "L/S",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Power",
+      "name": "DC 출력",
+      "value": "24",
+      "unit": "V / 500mA",
+      "condition": "비연동(UNSWITCHED)",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connection",
+      "name": "사용 케이블",
+      "value": "CAT-5",
+      "unit": "",
+      "condition": "RJ-45 JACK",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "통신거리(링크)",
+      "value": "1",
+      "unit": "km 이내",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "원격 제어",
+      "value": "RS-485",
+      "unit": "",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "접점",
+      "value": "DRY Contact",
+      "unit": "",
+      "condition": "무접점",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "모니터 전압",
+      "value": "5",
+      "unit": "V DC",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "사용전원",
+      "value": "AC 220V 60Hz",
+      "unit": "",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "동작온도",
+      "value": "-10 ~ +40",
+      "unit": "℃",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Environment",
+      "name": "사용습도",
+      "value": "0 ~ 90",
+      "unit": "%",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(가로×높이×깊이)",
+      "value": "482 × 88 × 390",
+      "unit": "mm",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "7.45",
+      "unit": "kg",
+      "condition": "",
+      "source": "L",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Power",
+      "connector": "연동 AC 아울렛",
+      "signal": "AC 220V 출력",
+      "direction": "OUT",
+      "quantity": "8",
+      "protocol": "",
+      "availability": "",
+      "condition": "채널별 순차 제어",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "비연동 AC 아울렛",
+      "signal": "AC 220V 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "UNSWITCHED",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC 출력",
+      "signal": "DC 24V / 500mA",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "UNSWITCHED",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45 JACK",
+      "signal": "RS-485 링크",
+      "direction": "IN/OUT",
+      "quantity": "",
+      "protocol": "CAT-5",
+      "availability": "",
+      "condition": "링크 통신거리 1km 이내. 물리 단자 수는 리플렛 미기재",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "REMOTE 접점",
+      "signal": "DRY Contact",
+      "direction": "IN",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "물리 단자 형상·수량은 리플렛 미기재",
+      "source": "L",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "모니터 단자",
+      "signal": "DC 5V",
+      "direction": "OUT",
+      "quantity": "",
+      "protocol": "",
+      "availability": "",
+      "condition": "물리 단자 형상·수량은 리플렛 미기재",
+      "source": "L",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "L",
+      "name": "VS ENT DS-8S 리플렛(사용자 제공)",
+      "scope": "제조사 공개 홍보물 1쪽. 공개 사본 manuals/vs-ent-ds-8s-leaflet-ko.pdf"
+    },
+    {
+      "code": "S",
+      "name": "VS ENT DS-8S 사양서(사용자 제공)",
+      "scope": "동일 모델 사양서 1쪽. AC 출력 2200W와 MAX. 2500W를 함께 표기. 원본은 로컬 근거로만 사용"
+    },
+    {
+      "code": "P",
+      "name": "VS ENT DS-8S 공식 제품 페이지",
+      "url": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14",
+      "scope": "제조사 VS ENT 공식 사이트. HTTP만 제공하며 모델명·공개 리플렛을 확인"
+    },
+    {
+      "code": "M",
+      "name": "DS-8S AMX 통신 설명서(사용자 제공)",
+      "scope": "동일 모델 4쪽 설명서. 공개 사본 manuals/vs-ent-ds-8s-amx-manual-ko.pdf"
+    }
+  ],
+  "issues": [
+    {
+      "code": "C1",
+      "status": "CONFLICTED",
+      "title": "AC 출력 전력의 원문 표기 차이",
+      "detail": "리플렛 본문 각 2200W, 같은 리플렛 표 채널당 2500W(AC 220V 10A). 별도 동일 모델 사양서는 2200W와 MAX. 2500W를 병기한다. 정격·최대의 단일 확정값을 만들지 않음."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "제조사 리플렛·동일 모델 사양서의 값과 충돌 조건을 함께 표시합니다.",
+    "ioIntro": "리플렛에 명시된 전원 출력·제어 단자만 표시합니다.",
+    "supplementalNote": "AC 출력 전력은 원문 표기가 서로 달라 단일 정격으로 확정하지 않았습니다.",
+    "footerNote": "VS ENT DS-8S 사용자 제공 제조사 자료 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 DS-8S 리플렛 이미지"
+  }
+}
