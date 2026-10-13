@@ -31,6 +31,7 @@ import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
 import { isW011Manual } from './w011-history.mjs';
 import { beforeW13005Raw, isW13006Manual } from './w13005-ds8s-history.mjs';
 import { beforeW13005FollowupRaw } from './w13005-ds8s-followup-history.mjs';
+import { beforeW13005PhotoRaw } from './w13005-ds8s-photo-history.mjs';
 import { isW13008Manual, withoutW13008Uploads } from './w13008-surgex-history.mjs';
 
 GlobalWorkerOptions.workerSrc = new URL('../beta/site/vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
@@ -90,7 +91,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)
-    productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(beforeW13005Raw(beforeW13005FollowupRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
+    productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(beforeW13005Raw(beforeW13005FollowupRaw(beforeW13005PhotoRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
   const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(manifest.uploads))))) }, null, 2) + '\n';
