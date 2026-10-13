@@ -45,6 +45,8 @@ function structureErrors(diagram) {
       const d = node.data;
       need(d.systemName === undefined || typeof d.systemName === 'string', `${at}.data.systemName`, '시스템명은 문자열이어야 한다');
       need(d.selectedOptionQuantities === undefined || (isObject(d.selectedOptionQuantities) && Object.values(d.selectedOptionQuantities).every(q => Number.isSafeInteger(q) && q >= 0)), `${at}.data.selectedOptionQuantities`, '옵션 수량은 0 이상의 안전한 정수여야 한다');
+      need(d.portsEdited === undefined || typeof d.portsEdited === 'boolean', `${at}.data.portsEdited`, '참·거짓 값이어야 한다');
+      need(d.userPortSeq === undefined || (Number.isSafeInteger(d.userPortSeq) && d.userPortSeq > 0), `${at}.data.userPortSeq`, '1 이상의 정수여야 한다');
       need(d.optionPortIds === undefined || (Array.isArray(d.optionPortIds) && d.optionPortIds.every(isText)), `${at}.data.optionPortIds`, '단자 ID 배열이 필요하다');
       for (const key of ['id', 'category', 'name', 'model']) need(typeof node.data[key] === 'string', `${at}.data.${key}`, '문자열이 필요하다');
       for (const [list, direction] of Object.entries(PORT_LISTS)) {
@@ -58,6 +60,9 @@ function structureErrors(diagram) {
           need(port.direction === direction, `${portAt}.direction`, `${list}에는 '${direction}' 단자만 둔다`);
           need(Array.isArray(port.signals) && port.signals.length > 0 && port.signals.every(isText), `${portAt}.signals`, '신호 배열이 필요하다');
           need(isText(port.connector), `${portAt}.connector`, '문자열이 필요하다');
+          // 구성도에서 고친 단자 표시(B-20261013-01)
+          need(port.origin === undefined || (port.origin === 'user' && /^(in|out|both)-user-[1-9]\d*$/.test(port.id ?? '')), `${portAt}.origin`, "'user'만 쓰고, id는 <방향>-user-<n>이어야 한다");
+          need(port.edited === undefined || typeof port.edited === 'boolean', `${portAt}.edited`, '참·거짓 값이어야 한다');
         });
       }
     }

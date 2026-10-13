@@ -23,7 +23,12 @@ export const library = {
   schemaVersion: '1.0.0',
   source: { catalogSha: 'e2e', detailSetSha: 'e2e', rtcomSha: 'e2e', vocabularyVersion: '1.0.0' },
   lineTypes: DEFAULT_RULES.lineTypes.map(item => ({ ...item })),
-  vocabulary: { connectorWildcards: {}, connectorEquivalents: [], levelPairs: [] },
+  // 장비 설정 창(B-20261013-01)이 고를 신호·커넥터 목록
+  vocabulary: {
+    signals: [{ id: 'HDMI', label: 'HDMI', lineType: 'video' }, { id: 'ETHERNET', label: 'Ethernet', lineType: 'network' }, { id: 'RS-232', label: 'RS-232', lineType: 'control' }, { id: 'SDI', label: 'SDI', lineType: 'sdi' }],
+    connectors: ['UNKNOWN', 'HDMI', 'RJ45', 'BNC', 'RS-232'],
+    connectorWildcards: {}, connectorEquivalents: [], levelPairs: [],
+  },
   products: UNITS.map(([id, category, ports]) => ({
     productId: id, source: 'portal', brand: 'Test', product: id.toUpperCase(), categories: ['시험', category, 'Device'], detailUrl: '', placeable: true,
     units: [{

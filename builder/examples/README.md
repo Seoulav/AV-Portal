@@ -57,11 +57,17 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 - 최상위: `generator`, `library`, `issues`
 - 노드 `data.portal`
 - 단자: `connector`, `signals`, `verification`, `portalIo`
+- 단자 `origin: "user"`(구성도에서 사용자가 추가한 단자, id `<in|out|both>-user-<n>`, `verification` 없음)·`edited: true`(라이브러리 단자를 이 구성도에서 고침, id 그대로)
+- 노드 `data.portsEdited: true`(이 장비의 단자가 Portal과 다르다. 이 구성도 안에서만 고친 값이다), `data.userPortSeq`(마지막 사용자 단자 번호. 견적에는 쓰지 않는다)
+- 같은 장비의 노드 중 일부만 단자를 고쳤으면 `equipmentDB`에는 고치지 않은 노드의 장비 정보가 들어간다. 대수·단자는 늘 `nodes[]`를 읽는다
 - 엣지 `data.signal`
+
+**견적 정보** (B-20261012-02부터 저장한다):
+- 노드 `data.systemName`(시스템명), `data.selectedOptionQuantities`(옵션 ID → 수량), `data.optionPortIds`
+- 최상위 `options[]`(옵션 정의 `{id, model, name, manufacturer}`)
 
 **없어진 값**:
 - 노드 `data.quantity`(노드 하나로 N대 기능은 취소됐다)
-- 옵션 카드 필드(`selectedOptionQuantities`·`optionPortIds`)
 - 화면 상태(`selected`·`dragging`·`dimmed`)
 
 ## 이슈 코드
@@ -78,7 +84,8 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 | `no-ports` | Portal에 단자 정보가 없는 제품이다 |
 | `series-config-pending` | 매트릭스 시리즈의 카드 구성이 정해지지 않았다 |
 | `product-removed` | 파일을 만든 뒤 Portal에서 제품이 빠졌다(단종 등) |
-| `library-drift` | 파일을 만든 뒤 Portal의 장비 정보가 바뀌었다 |
+| `library-drift` | 파일을 만든 뒤 Portal의 장비 정보가 바뀌었다(견적 정보는 비교하지 않는다) |
+| `ports-edited` | 이 구성도에서 장비의 단자를 고쳤다(`portsEdited`). 단자 수는 노드의 단자 목록을 그대로 읽는다 |
 
 ## 예제를 다시 만들 때
 

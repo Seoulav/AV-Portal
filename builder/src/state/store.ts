@@ -8,8 +8,8 @@ import { layoutPositions, type DagreModule } from '../layout';
 import { lineFilter, visibleNodes } from '../lineFilter';
 import {
   ANNOTATION_DATA_KEYS, DEFAULT_RULES, SHAPE_DATA_KEYS, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
-  judgeConnection, occupiedPorts, parseHandle, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, validateDiagram,
-  type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type IdFactory, type LibraryIndex, type Rules, type ValidationError,
+  judgeConnection, occupiedPorts, parseHandle, resetEquipmentPorts, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, updateEquipmentPorts, validateDiagram,
+  type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type IdFactory, type LibraryIndex, type PortEditResult, type PortLists, type Rules, type ValidationError,
 } from '../engine';
 
 export const HISTORY_LIMIT = 50;
@@ -36,6 +36,17 @@ export function freePosition(nodes: { position: { x: number; y: number } }[], po
 }
 
 export interface Notice { text: string; tone: 'info' | 'warn' | 'error' }
+// 장비 설정 창(B-20261013-01)이 한 번에 적용하는 값. ports가 null이면 단자는 그대로, resetPorts면 라이브러리 값으로 되돌린다
+export interface EquipmentSettings {
+  isReused: boolean;
+  systemName: string;
+  ports: PortLists | null;
+  resetPorts?: boolean;
+  quantities: Record<string, number>;
+  // 이번에 새로 고른 Portal 옵션 품목(제품 ID). 옵션 정의(diagram.options)는 적용할 때 만든다
+  optionProductIds?: string[];
+}
+export const optionIdOf = (productId: string) => `portal-option:${productId}`;
 // 근접 연결 판정. handle·fromHandle은 연결하면 엣지에 실제로 남을 핸들이다(양방향은 역할에 따라 source_/target_)
 export interface ConnectionVerdict { allowed: boolean; code?: string; handle?: string; fromHandle?: string }
 export interface ConnectionLike { source: string | null; sourceHandle?: string | null; target: string | null; targetHandle?: string | null }
@@ -96,6 +107,12 @@ export interface BuilderState {
   notifyBlocked(code: string | undefined): void;
   setNodeLabel(nodeId: string, label: string): void;
   setQuoteMetadata(nodeId: string, systemName: string, quantities: Record<string, number>, optionProductId?: string): boolean;
+  // 장비 설정 창(B-20261013-01). 열린 노드 ID는 화면 상태다
+  settingsNodeId: string | null;
+  openNodeSettings(nodeId: string): void;
+  closeNodeSettings(): void;
+  // 기본·단자·견적 옵션을 실행 취소 한 단계로 적용한다. 걸리는 연결이 있으면 removeEdges 없이는 바꾸지 않고 code 'edges-affected'를 돌려준다
+  applyEquipmentSettings(nodeId: string, settings: EquipmentSettings, options?: { removeEdges?: boolean }): PortEditResult;
   updateNoteData(nodeId: string, patch: Record<string, unknown>): boolean;
   editNote(nodeId: string): void;
   clearNoteFocus(): void;
@@ -154,6 +171,22 @@ const portOf = (diagram: Diagram, nodeId: string | null, handle: string | null |
 };
 // 라벨·케이블만 비교한다(엣지 편집 패널이 바꾸는 두 값)
 const edgeEditable = (data: { label?: string; bomRows?: BomRow[] }) => JSON.stringify([data.label ?? '', data.bomRows ?? []]);
+
+// 견적 정보 검사와 옵션 정의 추가(장비 견적 패널·장비 설정 창이 함께 쓴다). 쓸 수 없으면 null
+function quoteOptions(diagram: Diagram, library: LibraryIndex | null, node: DiagramNode, quantities: Record<string, number>, optionProductIds: string[]) {
+  if (!Object.values(quantities).every(q => Number.isSafeInteger(q) && q >= 0)) return null;
+  const options = [...(diagram.options ?? [])];
+  for (const productId of optionProductIds) {
+    const product = library?.products.get(productId);
+    if (!product) return null;
+    const id = optionIdOf(product.productId);
+    if (!options.some(o => o.id === id)) options.push({ id, model: product.product, name: product.product, manufacturer: product.brand });
+  }
+  const existing = node.data.selectedOptionQuantities as Record<string, number> | undefined;
+  if (Object.keys(quantities).some(id => !options.some(o => o.id === id) && !(existing && Object.hasOwn(existing, id)))) return null;
+  return options;
+}
+const PORT_LIST_KEYS = ['inputs', 'outputs', 'bidirectional'] as const;
 
 export function createBuilderStore({ ids = createIdFactory(), initial = null as Diagram | null } = {}) {
   return createStore<BuilderState>()((set, get) => {
@@ -286,7 +319,9 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         if (nextNodes.length === diagram.nodes.length && nextEdges.length === diagram.edges.length) return;
         remember();
         const remaining = new Set(nextEdges.map(edge => edge.id));
+        const settingsNodeId = get().settingsNodeId;
         set({
+          ...(settingsNodeId && nodes.has(settingsNodeId) ? { settingsNodeId: null } : {}),
           diagram: { ...diagram, nodes: nextNodes, edges: nextEdges },
           selectedEdgeIds: selectedEdgeIds.filter(id => remaining.has(id)),
           ...portsState(get().selectedPorts.filter(key => !nodes.has(parseKey(key).nodeId))),
@@ -362,20 +397,61 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       setQuoteMetadata(nodeId, systemName, quantities, optionProductId) {
         const { diagram, library } = get();
         const node = diagram.nodes.find(n => n.id === nodeId && n.type === 'equipment');
-        if (!node || !Object.values(quantities).every(q => Number.isSafeInteger(q) && q >= 0)) return false;
-        const options = [...(diagram.options ?? [])];
-        if (optionProductId) {
-          const product = library?.products.get(optionProductId);
-          if (!product) return false;
-          const id = `portal-option:${product.productId}`;
-          if (!options.some(o => o.id === id)) options.push({ id, model: product.product, name: product.product, manufacturer: product.brand });
-        }
-        const existing = node.data.selectedOptionQuantities as Record<string, number> | undefined;
-        if (Object.keys(quantities).some(id => !options.some(o => o.id === id) && !(existing && Object.hasOwn(existing,id)))) return false;
+        if (!node) return false;
+        const options = quoteOptions(diagram, library, node, quantities, optionProductId ? [optionProductId] : []);
+        if (!options) return false;
         remember();
         set({ diagram: { ...diagram, options, nodes: diagram.nodes.map(n => n.id === nodeId ? { ...n, data: { ...n.data, systemName: systemName.trim(), selectedOptionQuantities: { ...quantities } } } : n) } });
         return true;
       },
+      settingsNodeId: null,
+      openNodeSettings(nodeId) {
+        if (get().diagram.nodes.some(node => node.id === nodeId && node.type === 'equipment')) set({ settingsNodeId: nodeId });
+      },
+      closeNodeSettings() { if (get().settingsNodeId) set({ settingsNodeId: null }); },
+
+      applyEquipmentSettings(nodeId, settings, { removeEdges = false } = {}) {
+        const { diagram, library } = get();
+        const index = diagram.nodes.findIndex(n => n.id === nodeId && n.type === 'equipment');
+        if (index < 0) return { ok: false, code: 'node-missing', removedEdgeIds: [] };
+        const next = copy(diagram);
+        const libraryEquipment = library?.units.get(String(diagram.nodes[index].data.id))?.equipment ?? null;
+        const portOptions = { removeEdges, rules: rulesOf(library), signalVocabulary: library?.library.vocabulary?.signals ?? [], libraryEquipment };
+        let removedEdgeIds: string[] = [];
+        if (settings.resetPorts || settings.ports) {
+          const result = settings.resetPorts
+            ? resetEquipmentPorts(next, nodeId, libraryEquipment, portOptions)
+            : updateEquipmentPorts(next, nodeId, settings.ports!, portOptions);
+          if (!result.ok) return result;
+          removedEdgeIds = result.removedEdgeIds;
+        }
+        const node = next.nodes[index];
+        const options = quoteOptions(next, library, node, settings.quantities, settings.optionProductIds ?? []);
+        if (!options) return { ok: false, code: 'quote-invalid', removedEdgeIds: [] };
+        // 빈 시스템명·빈 옵션은 키를 새로 두지 않는다(열고 닫기만 해도 파일이 바뀌지 않게)
+        const data: Record<string, unknown> = { ...node.data, isReused: Boolean(node.data.isReused) === settings.isReused ? node.data.isReused : settings.isReused };
+        const systemName = settings.systemName.trim();
+        if (systemName) data.systemName = systemName;
+        else if (node.data.systemName !== undefined) data.systemName = '';
+        if (Object.keys(settings.quantities).length || node.data.selectedOptionQuantities) data.selectedOptionQuantities = { ...settings.quantities };
+        next.nodes[index] = { ...node, data };
+        if (options.length || next.options) next.options = options;
+        const same = JSON.stringify(data) === JSON.stringify(diagram.nodes[index].data)
+          && JSON.stringify(next.options ?? []) === JSON.stringify(diagram.options ?? [])
+          && next.edges.length === diagram.edges.length && next.edges.every((edge, i) => edge === diagram.edges[i]);
+        if (same) return { ok: true, removedEdgeIds: [], changed: false };
+        remember();
+        // 지운 연결·단자를 가리키는 선택은 푼다
+        const remaining = new Set(next.edges.map(edge => edge.id));
+        const ports = new Set(PORT_LIST_KEYS.flatMap(list => (data[list] as { id: string }[]).map(port => port.id)));
+        set({
+          diagram: next,
+          selectedEdgeIds: get().selectedEdgeIds.filter(id => remaining.has(id)),
+          ...portsState(get().selectedPorts.filter(key => { const { nodeId: owner, portId } = parseKey(key); return owner !== nodeId || ports.has(portId); })),
+        });
+        return { ok: true, removedEdgeIds, changed: true };
+      },
+
       updateNoteData(nodeId, patch) {
         const { diagram } = get();
         const node = diagram.nodes.find(item => item.id === nodeId);
@@ -590,18 +666,18 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
       undo() {
         const { past, future, diagram } = get();
         if (!past.length) return;
-        set({ diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
+        set({ settingsNodeId: null, diagram: restore(past[past.length - 1]), past: past.slice(0, -1), future: [snapshot(diagram), ...future].slice(0, HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
       },
       redo() {
         const { past, future, diagram } = get();
         if (!future.length) return;
-        set({ diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
+        set({ settingsNodeId: null, diagram: restore(future[0]), future: future.slice(1), past: [...past, snapshot(diagram)].slice(-HISTORY_LIMIT), selectedEdgeIds: [], ...portsState([]), dragging: false, resizing: false });
       },
 
       newDiagram() {
         remember();
         const { library } = get();
-        set({ diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null, hiddenLineTypes: [] });
+        set({ settingsNodeId: null, diagram: createDiagram({ library, generatorVersion: APP_VERSION }), selectedEdgeIds: [], ...portsState([]), notice: null, hiddenLineTypes: [] });
       },
 
       importText(text) {
@@ -614,7 +690,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { errors } = validateDiagram(parsed, { library: get().library });
         if (errors.length) return { ok: false, errors };
         remember();
-        set({ diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]), hiddenLineTypes: [] });
+        set({ settingsNodeId: null, diagram: parsed as Diagram, selectedEdgeIds: [], ...portsState([]), hiddenLineTypes: [] });
         return { ok: true, errors: [] };
       },
       exportText() {

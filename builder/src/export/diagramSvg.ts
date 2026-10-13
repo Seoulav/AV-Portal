@@ -113,8 +113,10 @@ function equipmentSvg(node: DiagramNode, colorOf: (type: string) => string): str
     const dot = (cx: number) => out.push(`<circle${attrs({ cx, cy: rowY, r: G.HANDLE_SIZE / 2, fill: color, stroke: '#ffffff', 'stroke-width': 1.5 })}/>`);
     if (side === 'left' || side === 'both') dot(x - G.HANDLE_OUTSET + G.HANDLE_SIZE / 2);
     if (side === 'right' || side === 'both') dot(x + width + G.HANDLE_OUTSET - G.HANDLE_SIZE / 2);
-    // 확인이 필요한 단자(VERIFIED·FOUND가 아님)는 화면처럼 "확인" 배지를 붙인다. 배지 자리만큼 이름 폭을 줄인다
-    const review = !ACCEPTED.has(port.verification ?? '');
+    // 확인이 필요한 단자(VERIFIED·FOUND가 아님)는 화면처럼 "확인" 배지를 붙인다. 배지 자리만큼 이름 폭을 줄인다.
+    // 사용자가 추가한 단자는 화면처럼 "추가" 배지다(B-20261013-01)
+    const user = port.origin === 'user';
+    const review = user || !ACCEPTED.has(port.verification ?? '');
     // 오디오 단자는 화면처럼 커넥터 약칭·레벨 배지를 붙인다(B-20261013-05)
     const audio = audioPortTags(port);
     const tags = audio ? [audio.connector, audio.level].filter((tag): tag is string => Boolean(tag)) : [];
@@ -128,8 +130,8 @@ function equipmentSvg(node: DiagramNode, colorOf: (type: string) => string): str
       let bx = start;
       const reviewBadge = () => {
         if (!review) return;
-        out.push(`<rect${attrs({ x: bx, y: rowY - 6.5, width: BADGE_WIDTH, height: 13, rx: 4, fill: '#fef3c7' })}/>`);
-        out.push(text('확인', { x: bx + BADGE_WIDTH / 2, y: rowY + 3, 'font-size': 9, fill: '#b45309', 'text-anchor': 'middle' }));
+        out.push(`<rect${attrs({ x: bx, y: rowY - 6.5, width: BADGE_WIDTH, height: 13, rx: 4, fill: user ? '#e0efff' : '#fef3c7' })}/>`);
+        out.push(text(user ? '추가' : '확인', { x: bx + BADGE_WIDTH / 2, y: rowY + 3, 'font-size': 9, fill: user ? '#007aff' : '#b45309', 'text-anchor': 'middle' }));
         bx += BADGE_WIDTH + 4;
       };
       const audioBadges = () => {

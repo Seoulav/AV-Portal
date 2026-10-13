@@ -13,12 +13,16 @@ for(const width of [1280,390]) test(`Builder 작성 → CPQ 새 견적, 시스�
  await page.getByRole('button',{name:/영상/}).click();
  await page.getByRole('button',{name:'FIX 추가',exact:true}).click();
  const node=page.locator('.react-flow__node-equipment').first();await node.click();
- await page.getByLabel('장비 시스템명').fill('회의실 A');
- await page.getByRole('button',{name:'견적 정보 적용'}).click();
- await page.getByLabel('포털 옵션 품목').selectOption('fix');
- await page.getByRole('button',{name:'옵션 1개 추가'}).click();
- await page.getByLabel('옵션 수량 portal-option:fix').fill('2');
- await page.getByRole('button',{name:'견적 정보 적용'}).click();
+ // 시스템명·옵션은 장비 설정 창(B-20261013-01)에서 넣는다. 오른쪽 패널은 요약과 "설정 열기"다
+ await page.getByRole('button',{name:'설정 열기'}).click();
+ const settings=page.getByRole('dialog',{name:'장비 설정'});
+ await settings.getByLabel('장비 시스템명').fill('회의실 A');
+ await settings.getByRole('tab',{name:'견적 옵션'}).click();
+ await settings.getByLabel('포털 옵션 품목').selectOption('fix');
+ await settings.getByRole('button',{name:'옵션 1개 추가'}).click();
+ await settings.getByLabel('옵션 수량 portal-option:fix').fill('2');
+ await settings.getByRole('button',{name:'적용',exact:true}).click();
+ await expect(settings).toHaveCount(0);
  const popup=page.waitForEvent('popup');await page.getByRole('button',{name:'견적 만들기',exact:true}).click();const quote=await popup;
  await expect(quote.getByText('구성도를 새 견적으로 가져왔습니다.',{exact:false})).toBeVisible();
  const doc=await save(quote);expect(doc.systems.map((s:any)=>s.name)).toEqual(['회의실 A']);

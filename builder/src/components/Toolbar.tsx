@@ -39,6 +39,8 @@ export function Toolbar() {
       const target = event.target as HTMLElement | null;
       if (target && (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable)) return;
       if (!(event.ctrlKey || event.metaKey)) return;
+      // 장비 설정 창이 열려 있으면 실행 취소·복사 단축키를 쓰지 않는다(창의 초안과 어긋나지 않게)
+      if (state.settingsNodeId) return;
       const key = event.key.toLowerCase();
       if (key === 'z' && !event.shiftKey) { event.preventDefault(); state.undo(); }
       if (key === 'y' || (key === 'z' && event.shiftKey)) { event.preventDefault(); state.redo(); }

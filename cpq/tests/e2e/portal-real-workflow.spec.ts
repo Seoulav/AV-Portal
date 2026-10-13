@@ -13,15 +13,22 @@ test('실제 Portal 장비를 화면에서 구성하여 승인 CPQ 자료로 새
   const group=page.locator('.group-title').first();if((await group.innerText()).includes('▸')) await group.click();
   await page.getByRole('button',{name:`${model} 추가`,exact:true}).click();
  };
+ // 시스템명·옵션은 장비 설정 창(B-20261013-01)에서 넣는다: 장비를 고르고 "설정 열기" → 적용
+ const settings=page.getByRole('dialog',{name:'장비 설정'});
+ const configure=async(node:ReturnType<typeof page.locator>,option?:string)=>{
+  // 세 번째 장비부터는 캔버스 밖에 놓일 수 있어 먼저 전체 보기로 맞춘다
+  await page.getByRole('button',{name:'Fit View'}).click();
+  await node.locator('.node-header').click();await page.getByRole('button',{name:'설정 열기'}).click();
+  await settings.getByLabel('장비 시스템명').fill('가상 회의실 A');
+  if(option){await settings.getByRole('tab',{name:'견적 옵션'}).click();await settings.getByLabel('포털 옵션 품목').selectOption(option);await settings.getByRole('button',{name:'옵션 1개 추가'}).click();}
+  await settings.getByRole('button',{name:'적용',exact:true}).click();await expect(settings).toHaveCount(0);
+ };
  const cameraNodes=()=>page.locator('.react-flow__node-equipment').filter({hasText:'SRG-A40'});
- await add('SRG-A40');await cameraNodes().first().locator('.node-header').click();
- await page.getByLabel('장비 시스템명').fill('가상 회의실 A');await page.getByRole('button',{name:'견적 정보 적용'}).click();
- await page.getByLabel('포털 옵션 품목').selectOption('rm-ip10');await page.getByRole('button',{name:'옵션 1개 추가'}).click();
- await add('SRG-A40');await cameraNodes().last().locator('.node-header').click();
- await page.getByLabel('장비 시스템명').fill('가상 회의실 A');await page.getByRole('button',{name:'견적 정보 적용'}).click();
+ await add('SRG-A40');await configure(cameraNodes().first(),'rm-ip10');
+ await add('SRG-A40');await configure(cameraNodes().last());
  await add('HD-13U');
  const distributor=page.locator('.react-flow__node-equipment').filter({hasText:'HD-13U'});
- await distributor.locator('.node-header').click();await page.getByLabel('장비 시스템명').fill('가상 회의실 A');await page.getByRole('button',{name:'견적 정보 적용'}).click();
+ await configure(distributor);
  await page.getByRole('button',{name:'오토 레이아웃',exact:true}).click();
  await page.waitForTimeout(500);
  const from=await cameraNodes().first().locator('[data-handleid="out-hdmi-1"]').boundingBox();const to=await distributor.locator('[data-handleid="in-hdmi-1"]').boundingBox();

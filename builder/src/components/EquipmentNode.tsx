@@ -6,8 +6,8 @@
 // 핸들의 nokey: React Flow 선택 키(Shift)를 누른 채 단자를 눌러도 범위 선택이 시작되지 않게 한다.
 // LOD 덮개(구 Builder): 줌아웃하면 장비 위에 모델명을 크게 덮는다. 보이기·글자 크기는 Canvas의 LodLevel이 CSS로 정한다.
 // 덮개는 포인터를 받지 않아 단자 행의 핸들과 근접 연결은 그대로 동작한다.
-import { memo, type CSSProperties, type MouseEvent } from 'react';
-import { Handle, Position, type NodeProps } from '@xyflow/react';
+import { memo, useEffect, type CSSProperties, type MouseEvent } from 'react';
+import { Handle, Position, useUpdateNodeInternals, type NodeProps } from '@xyflow/react';
 import { audioPortTags, geometry as G, type EquipmentData, type Port } from '../engine';
 import { portKey } from '../bundle';
 import { justConnected } from '../state/gesture';
@@ -16,8 +16,10 @@ import { builderStore, useBuilder } from '../state/useBuilder';
 const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 
 function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
-  const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}`;
-  const review = !ACCEPTED.has(port.verification ?? '');
+  // 사용자가 추가한 단자는 점선 테두리와 "추가" 표시를 단다(B-20261013-01 결정 D3). Portal 검증 상태가 없다
+  const user = port.origin === 'user';
+  const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}${user ? ' · 사용자 추가' : port.edited ? ' · 구성도에서 고침' : ''}`;
+  const review = !user && !ACCEPTED.has(port.verification ?? '');
   // 오디오 단자는 커넥터 약칭(XLR·EB·TRS…)과 레벨(MIC·LINE·M/L·SPK·AES)을 붙인다(B-20261013-05)
   const audio = audioPortTags(port);
   const style = { '--port-color': color } as CSSProperties;
@@ -31,11 +33,12 @@ function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: 
     else builderStore.getState().selectPorts([key]);
   };
   return (
-    <div className={`port-row port-${side}${selected}`} style={{ height: G.PORT_ROW_HEIGHT }}>
+    <div className={`port-row port-${side}${selected}${user ? ' port-user' : ''}`} style={{ height: G.PORT_ROW_HEIGHT }}>
       <span className="port-dot" style={{ background: color }} />
       <span className="port-label">{port.label}</span>
       {audio && <span className="port-audio">{audio.connector && <span className="port-conn">{audio.connector}</span>}<span className={`port-level level-${audio.level === 'M/L' ? 'ml' : audio.level.toLowerCase().replace('/', '')}`}>{audio.level}</span></span>}
       {review && <span className="port-badge">확인</span>}
+      {user && <span className="port-badge port-badge-user">추가</span>}
       {side === 'left' && <Handle type="target" position={Position.Left} id={port.id} className={`port-handle port-handle-in nokey${selected}`} style={style} title={title} onClick={onClick} />}
       {side === 'right' && <Handle type="source" position={Position.Right} id={port.id} className={`port-handle port-handle-out nokey${selected}`} style={style} title={title} onClick={onClick} />}
       {side === 'both' && <Handle type="target" position={Position.Left} id={`target_${port.id}`} className={`port-handle port-handle-in port-handle-half nokey${selected}`} style={style} title={title} onClick={onClick} />}
@@ -56,6 +59,10 @@ function EquipmentNodeView({ id, data, selected }: NodeProps) {
       {ports.map(port => <PortRow key={port.id} nodeId={id} port={port} side={side} color={colorOf(port.type)} picked={picked.has(port.id)} />)}
     </div>
   );
+  // 장비 설정 창에서 단자 순서·구성을 바꾸면 높이가 같아도 핸들 위치가 바뀐다. React Flow에 다시 재게 한다
+  const updateNodeInternals = useUpdateNodeInternals();
+  const portSignature = [equipment.inputs, equipment.outputs, equipment.bidirectional].map(list => list.map(port => port.id).join(',')).join('|');
+  useEffect(() => { updateNodeInternals(id); }, [id, portSignature, updateNodeInternals]);
   const hasIO = equipment.inputs.length > 0 || equipment.outputs.length > 0;
   const tag = equipment.portal?.unit ? equipment.portal.unit.toUpperCase() : equipment.portal?.variant ? '모델' : null;
   // 핸들 크기·위치는 CSS 변수로 넘겨 geometry 한 곳에서 정한다
@@ -63,7 +70,7 @@ function EquipmentNodeView({ id, data, selected }: NodeProps) {
   return (
     <div className={`equipment-node${selected ? ' selected' : ''}${equipment.isReused ? ' reused' : ''}`} style={sizes}>
       <div className="node-header node-drag" style={{ height: G.NODE_HEADER_HEIGHT }}>
-        <div className="node-brand">{equipment.manufacturer}{tag && <span className="node-tag">{tag}</span>}{equipment.isReused && <span className="node-tag reused">재사용</span>}</div>
+        <div className="node-brand">{equipment.manufacturer}{tag && <span className="node-tag">{tag}</span>}{equipment.isReused && <span className="node-tag reused">재사용</span>}{equipment.portsEdited && <span className="node-tag edited" title="이 구성도에서 단자를 고쳤습니다">단자 수정</span>}</div>
         <div className="node-model">{equipment.model}</div>
         <div className="node-name">{equipment.name}</div>
       </div>

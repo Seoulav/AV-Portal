@@ -9,6 +9,7 @@ import { IssuesPanel } from './components/IssuesPanel';
 import { LibraryPanel } from './components/LibraryPanel';
 import { NotePanel } from './components/NotePanel';
 import { EquipmentQuotePanel } from './components/EquipmentQuotePanel';
+import { EquipmentSettingsModal } from './components/EquipmentSettingsModal';
 import { Toolbar } from './components/Toolbar';
 import { lineFilter } from './lineFilter';
 
@@ -79,6 +80,7 @@ export function App() {
           {libraryReady ? <Canvas /> : <div className="canvas canvas-loading">장비 라이브러리를 불러오는 중입니다…</div>}
           <SidePanel />
         </div>
+        <EquipmentSettingsModal />
         <Notice />
       </div>
     </ReactFlowProvider>

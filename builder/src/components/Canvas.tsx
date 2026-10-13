@@ -82,6 +82,7 @@ export function Canvas() {
   const connect = useBuilder(state => state.connect);
   const addEquipment = useBuilder(state => state.addEquipment);
   const editNote = useBuilder(state => state.editNote);
+  const openNodeSettings = useBuilder(state => state.openNodeSettings);
   const theme = useBuilder(state => state.theme);
   const removeElements = useBuilder(state => state.removeElements);
   const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
@@ -89,6 +90,8 @@ export function Canvas() {
   const dragging = useBuilder(state => state.dragging);
   const resizing = useBuilder(state => state.resizing);
   const locked = useBuilder(state => state.locked);
+  // 장비 설정 창이 열려 있으면 바탕의 삭제 키를 끈다(창 밖으로 초점이 남아 있어도 노드가 지워지지 않게)
+  const settingsOpen = useBuilder(state => state.settingsNodeId !== null);
   const snapToGrid = useBuilder(state => state.snapToGrid);
   const showMiniMap = useBuilder(state => state.showMiniMap);
   const hiddenLineTypes = useBuilder(state => state.hiddenLineTypes);
@@ -279,10 +282,12 @@ export function Canvas() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  // 메모·영역은 두 번 눌러 서식 패널의 글 칸으로 간다(구 Builder는 서식 창을 열었다)
+  // 메모·영역은 두 번 눌러 서식 패널의 글 칸으로 간다(구 Builder는 서식 창을 열었다).
+  // 장비는 두 번 눌러 장비 설정 창을 연다(B-20261013-01, 구 Builder EditNodeModal)
   const onNodeDoubleClick = useCallback((_: unknown, node: Node) => {
-    if (node.type !== 'equipment') editNote(node.id);
-  }, [editNote]);
+    if (node.type === 'equipment') openNodeSettings(node.id);
+    else editNote(node.id);
+  }, [editNote, openNodeSettings]);
 
   const onDrop = useCallback((event: DragEvent) => {
     event.preventDefault();
@@ -331,7 +336,7 @@ export function Canvas() {
         panOnDrag={PAN_BUTTONS}
         panActivationKeyCode="Space"
         defaultEdgeOptions={{ type: 'smoothstep' }}
-        deleteKeyCode={['Delete', 'Backspace']}
+        deleteKeyCode={settingsOpen ? null : ['Delete', 'Backspace']}
         minZoom={0.05}
         maxZoom={2}
         fitView

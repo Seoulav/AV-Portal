@@ -1,25 +1,30 @@
-import { useEffect, useState } from 'react';
+// 장비 하나를 골랐을 때 오른쪽 패널: 요약만 보이고, 고치는 일은 장비 설정 창에서 한다(B-20261013-01 결정 D1).
+// 시스템명·옵션 품목 입력은 설정 창의 "기본"·"견적 옵션" 탭으로 옮겼다.
+import type { EquipmentData } from '../engine';
 import { useBuilder } from '../state/useBuilder';
-export function EquipmentQuotePanel({nodeId}:{nodeId:string}) {
- const state=useBuilder(s=>s);
- const node=state.diagram.nodes.find(n=>n.id===nodeId)!;
- const [system,setSystem]=useState(''); const [quantities,setQuantities]=useState<Record<string,number>>({});
- const [productId,setProduct]=useState(''); const [search,setSearch]=useState('');
- useEffect(()=>{setSystem(String(node.data.systemName??''));setQuantities({...node.data.selectedOptionQuantities as Record<string,number>??{}});},[node.data]);
- const products=[...(state.library?.products.values()??[])].filter(p=>(p.brand+' '+p.product).toLowerCase().includes(search.toLowerCase()));
- const save=(add=false)=>{
-  const q={...quantities}; if(add && productId) {const id=`portal-option:${productId}`;q[id]=(q[id]??0)+1;}
-  if(!state.setQuoteMetadata(nodeId,system,q,add?productId:undefined)) state.notify({text:'옵션 품목과 수량을 확인해 주세요.',tone:'error'});
-  else state.notify({text:'견적 정보를 적용했습니다.',tone:'info'});
- };
- return <aside className="side-panel equipment-quote-panel">
-  <h2 className="panel-title">장비 견적 정보</h2><strong>{String(node.data.model)}</strong>
-  <label className="field">시스템명<input aria-label="장비 시스템명" value={system} onChange={e=>setSystem(e.target.value)} placeholder="비우면 시스템1" /></label>
-  <p className="panel-note">노드 1개는 장비 1대입니다. 옵션은 견적에 추가할 품목이며 단자와 호환성을 자동 설정하지 않습니다.</p>
-  {Object.entries(quantities).map(([id,q])=><label className="field" key={id}>{state.diagram.options?.find(o=>o.id===id)?.model??`미확인 옵션 ${id}`}<input aria-label={`옵션 수량 ${id}`} type="number" min="0" step="1" value={Number.isNaN(q)?'':q} onChange={e=>setQuantities({...quantities,[id]:e.target.value===''?NaN:Number(e.target.value)})}/></label>)}
-  <button onClick={()=>save()}>견적 정보 적용</button>
-  <label className="field">옵션 검색<input value={search} onChange={e=>setSearch(e.target.value)} /></label>
-  <label className="field">포털 옵션 품목<select value={productId} onChange={e=>setProduct(e.target.value)}><option value="">품목 선택</option>{products.map(p=><option key={p.productId} value={p.productId}>{p.brand} {p.product}</option>)}</select></label>
-  <button disabled={!productId} onClick={()=>save(true)}>옵션 1개 추가</button>
- </aside>;
+
+export function EquipmentQuotePanel({ nodeId }: { nodeId: string }) {
+  const node = useBuilder(state => state.diagram.nodes.find(n => n.id === nodeId) ?? null);
+  const options = useBuilder(state => state.diagram.options);
+  const open = useBuilder(state => state.openNodeSettings);
+  if (!node) return null;
+  const data = node.data as unknown as EquipmentData;
+  const quantities = Object.entries(data.selectedOptionQuantities ?? {}).filter(([, q]) => q > 0);
+  const ports = data.inputs.length + data.outputs.length + data.bidirectional.length;
+  const userPorts = [...data.inputs, ...data.outputs, ...data.bidirectional].filter(port => port.origin === 'user').length;
+  return (
+    <aside className="side-panel equipment-quote-panel">
+      <h2 className="panel-title">장비</h2>
+      <strong>{data.model}</strong>
+      <dl className="edge-facts">
+        <dt>제조사</dt><dd>{data.manufacturer ?? '—'}</dd>
+        <dt>시스템명</dt><dd>{data.systemName || '시스템1'}</dd>
+        <dt>재활용</dt><dd>{data.isReused ? '예' : '아니오'}</dd>
+        <dt>단자</dt><dd>{ports}개{data.portsEdited ? ` · 구성도에서 고침${userPorts ? `(추가 ${userPorts})` : ''}` : ''}</dd>
+        <dt>옵션</dt><dd>{quantities.length ? quantities.map(([id, q]) => `${options?.find(o => o.id === id)?.model ?? id} ×${q}`).join(', ') : '없음'}</dd>
+      </dl>
+      <button type="button" onClick={() => open(nodeId)}>설정 열기</button>
+      <p className="panel-note">장비를 두 번 눌러도 설정 창이 열립니다.</p>
+    </aside>
+  );
 }

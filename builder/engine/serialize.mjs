@@ -62,7 +62,9 @@ export function derivedParts(nodes, edges, known) {
     return { id: lineType.id, name: lineType.name, color: lineType.color };
   });
   const units = new Map();
-  for (const node of nodes) if (node.type === 'equipment' && !units.has(node.data.id)) units.set(node.data.id, normalizeEquipmentData(node.data, { withReused: false }));
+  // 같은 장비가 여럿이면 구성도에서 단자를 고치지 않은 노드를 먼저 쓴다(B-20261013-01). 모두 고쳤으면 id 순 첫 노드
+  const ordered = [...nodes.filter(node => node.data?.portsEdited !== true), ...nodes.filter(node => node.data?.portsEdited === true)];
+  for (const node of ordered) if (node.type === 'equipment' && !units.has(node.data.id)) units.set(node.data.id, normalizeEquipmentData(node.data, { withReused: false }));
   return { lineTypes, equipmentDB: [...units.values()].sort(byId) };
 }
 
