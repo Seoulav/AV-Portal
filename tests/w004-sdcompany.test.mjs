@@ -64,7 +64,12 @@ test('PixelFit screen examples preserve the three approved layouts and render a 
     [1295, 780, 0, 0, 625, 300],
     [1920, 1080, undefined, undefined, undefined, undefined]
   ]);
-  assert.deepEqual(examples?.map(item => item.method), ['NVIDIA 하드웨어 마스크', 'AMD 하드웨어 마스크', '마스킹 없음']);
+  assert.deepEqual(examples?.map(item => item.method), ['NVIDIA 커스텀 해상도 제작', 'AMD 마스킹 + 작업표시줄 표시', '마스킹 없음']);
+  assert.match(product.overview, /NVIDIA.*커스텀 해상도/);
+  assert.match(product.overview, /AMD.*일반.*마스킹.*작업표시줄/);
+  assert.ok(product.features.some(item => item.text === 'NVIDIA GPU 커스텀 해상도 제작'));
+  assert.ok(product.features.some(item => item.text === '일반 모드 마스킹·작업표시줄 표시 및 디버그 모드'));
+  assert.equal(product.specifications.find(item => item.name === 'NVIDIA 적용 방식')?.condition, '사용자 확인(2026-10-13)');
   assert.ok(examples?.every(item => item.signal === '1920×1080@60Hz'));
   assert.equal(examples?.[2].note, '물리 해상도 그대로');
   const { renderScreenExampleSvg } = await import('../beta/site/detail/detail-enhancement-view.mjs');

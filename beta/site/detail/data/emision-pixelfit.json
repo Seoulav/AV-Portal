@@ -10,7 +10,7 @@
   ],
   "english": "Windows software for masking the unused desktop area outside an LED display viewport.",
   "korean": "emision PixelFit은 LED가 사용하는 표시 영역만 남기고 나머지 화면을 가리는 Windows용 바탕화면 뷰포트·출력 마스킹 소프트웨어다.",
-  "overview": "캡처 화면에서 버전 2.0.0.0과 부제 “바탕화면 뷰포트 / 출력 마스킹”을 확인했다. 표시 영역은 파란 박스를 드래그하거나 X·Y 좌표와 가로·세로 크기(px)를 입력해 지정할 수 있고, 상·하·좌·우 여백을 자동 계산한다. “하드웨어 베젤 컷 적용” 기능도 표시된다.\n\n적용 방식 선택 화면에는 NVIDIA 하드웨어 마스크와 AMD 하드웨어 마스크가 구분돼 있다. NVIDIA 방식은 GPU 출력 단계에서 뷰포트 밖을 검게 가리고, AMD 방식은 드라이버 크기·위치 조정, 언더스캔, 소프트웨어 마스크 순으로 처리한다. 캡처에서 일반 실행 모드, emision 작업표시줄, 디스플레이 식별·새로고침, 활성 신호 해상도 표시와 디버그 모드 화면도 확인된다.\n\n인트로 화면은 Activation Code를 SDCompany 인증센터에 전달해 LicenseKey를 발급받아 등록하는 절차를 안내한다. OS 세부 버전, GPU 드라이버 요건, 판매 단위는 확인되지 않았다.",
+  "overview": "캡처 화면에서 버전 2.0.0.0과 부제 “바탕화면 뷰포트 / 출력 마스킹”을 확인했다. 표시 영역은 파란 박스를 드래그하거나 X·Y 좌표와 가로·세로 크기(px)를 입력해 지정할 수 있고, 상·하·좌·우 여백을 자동 계산한다. “하드웨어 베젤 컷 적용” 기능도 표시된다.\n\n적용 방식은 NVIDIA의 커스텀 해상도 제작, AMD 및 일반 모드의 표시 영역 마스킹·작업표시줄 표시로 구분된다. AMD 방식은 드라이버 크기·위치 조정, 언더스캔, 소프트웨어 마스크 순으로 처리한다. 전체 화면 예시는 물리 해상도 그대로이며 마스킹 영역이 없다. 캡처에서 emision 작업표시줄, 디스플레이 식별·새로고침, 활성 신호 해상도 표시와 디버그 모드 화면도 확인된다.\n\n인트로 화면은 Activation Code를 SDCompany 인증센터에 전달해 LicenseKey를 발급받아 등록하는 절차를 안내한다. OS 세부 버전, GPU 드라이버 요건, 판매 단위는 확인되지 않았다.",
   "features": [
     {
       "text": "바탕화면 뷰포트·출력 마스킹",
@@ -25,11 +25,11 @@
       "source": "P"
     },
     {
-      "text": "NVIDIA GPU 출력 단계 하드웨어 마스크",
+      "text": "NVIDIA GPU 커스텀 해상도 제작",
       "source": "P"
     },
     {
-      "text": "AMD 드라이버 조정·언더스캔·소프트웨어 마스크 적용",
+      "text": "AMD 드라이버 조정·언더스캔·마스킹·작업표시줄 표시",
       "source": "P"
     },
     {
@@ -41,7 +41,7 @@
       "source": "P"
     },
     {
-      "text": "일반 모드 및 디버그 모드",
+      "text": "일반 모드 마스킹·작업표시줄 표시 및 디버그 모드",
       "source": "P"
     },
     {
@@ -80,9 +80,9 @@
     {
       "group": "Masking",
       "name": "NVIDIA 적용 방식",
-      "value": "GPU 출력 단계 하드웨어 마스크",
+      "value": "GPU 커스텀 해상도 제작",
       "unit": "",
-      "condition": "뷰포트 밖 영역을 검게 가림",
+      "condition": "사용자 확인(2026-10-13)",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -91,7 +91,7 @@
       "name": "AMD 적용 방식",
       "value": "드라이버 크기·위치 조정 → 언더스캔 → 소프트웨어 마스크",
       "unit": "",
-      "condition": "뷰포트 밖 영역을 가림",
+      "condition": "표시 영역 마스킹 및 작업표시줄 표시; 사용자 확인(2026-10-13)",
       "source": "P",
       "verification": "VERIFIED"
     },
@@ -212,8 +212,8 @@
       "title": "화면 구성 예시",
       "items": [
         {
-          "name": "예시 1 · NVIDIA 하드웨어 마스크",
-          "method": "NVIDIA 하드웨어 마스크",
+          "name": "예시 1 · NVIDIA 커스텀 해상도",
+          "method": "NVIDIA 커스텀 해상도 제작",
           "signal": "1920×1080@60Hz",
           "activeWidth": 1340,
           "activeHeight": 780,
@@ -224,8 +224,8 @@
           "bottomMargin": 300
         },
         {
-          "name": "예시 2 · AMD 하드웨어 마스크",
-          "method": "AMD 하드웨어 마스크",
+          "name": "예시 2 · AMD 마스킹·작업표시줄",
+          "method": "AMD 마스킹 + 작업표시줄 표시",
           "signal": "1920×1080@60Hz",
           "activeWidth": 1295,
           "activeHeight": 780,
