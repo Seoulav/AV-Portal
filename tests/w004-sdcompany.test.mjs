@@ -60,12 +60,17 @@ test('PixelFit screen examples preserve the three approved layouts and render a 
   const examples = product.settings?.find(item => item.kind === 'screen-examples')?.items;
   assert.equal(examples?.length, 3, 'only the three approved layouts should appear');
   assert.deepEqual(examples?.map(item => [item.activeWidth, item.activeHeight, item.offsetX, item.offsetY, item.rightMargin, item.bottomMargin]), [
-    [1340, 780, 0, 0, 580, 300],
+    [1340, 780, undefined, undefined, undefined, undefined],
     [1295, 780, 0, 0, 625, 300],
     [1920, 1080, undefined, undefined, undefined, undefined]
   ]);
-  assert.deepEqual(examples?.map(item => item.method), ['NVIDIA 하드웨어 마스크', 'AMD 하드웨어 마스크', '마스킹 없음']);
-  assert.ok(examples?.every(item => item.signal === '1920×1080@60Hz'));
+  assert.deepEqual(examples?.map(item => item.method), ['커스텀 해상도 제작', '표시 영역 마스킹 + emision 작업표시줄', '마스킹 없음']);
+  assert.match(product.overview, /NVIDIA.*커스텀 해상도/);
+  assert.match(product.overview, /AMD.*일반.*마스킹.*작업표시줄/);
+  assert.ok(product.features.some(item => item.text === 'NVIDIA GPU 커스텀 해상도 제작'));
+  assert.ok(product.features.some(item => item.text === '일반 모드 마스킹·작업표시줄 표시 및 디버그 모드'));
+  assert.equal(product.specifications.find(item => item.name === 'NVIDIA 적용 방식')?.condition, '사용자 확인(2026-10-13)');
+  assert.deepEqual(examples?.map(item => item.signal), ['1340×780', '1920×1080@60Hz', '1920×1080@60Hz']);
   assert.equal(examples?.[2].note, '물리 해상도 그대로');
   const { renderScreenExampleSvg } = await import('../beta/site/detail/detail-enhancement-view.mjs');
   const [{ enhancementErrors: siteEnhancementErrors }, { enhancementErrors: pageEnhancementErrors }] = await Promise.all([
@@ -76,7 +81,8 @@ test('PixelFit screen examples preserve the three approved layouts and render a 
   const svg = renderScreenExampleSvg(examples[0]);
   assert.match(svg, /<svg[^>]+viewBox=/);
   assert.match(svg, /class="screen-active-area"/);
-  assert.match(svg, /마스킹\(검정\) 영역/);
+  assert.doesNotMatch(svg, /마스킹\(검정\) 영역/);
   assert.match(svg, /1340×780/);
+  assert.match(renderScreenExampleSvg(examples[1]), /마스킹\(검정\) 영역/);
   assert.doesNotMatch(renderScreenExampleSvg(examples[2]), /마스킹\(검정\) 영역/);
 });
