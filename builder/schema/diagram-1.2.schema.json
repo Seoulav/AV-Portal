@@ -339,6 +339,18 @@
           "items": {
             "type": "string"
           }
+        },
+        "slotAssignments": {
+          "type": "object",
+          "description": "슬롯 번호별로 장착한 카드의 배치 단위 ID(B-20261013-04). 카드 단자 id는 opt-<카드 ID>-<슬롯 번호>-<카드 단자 id>",
+          "minProperties": 1,
+          "propertyNames": {
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },
@@ -616,7 +628,9 @@
             "series-config-pending",
             "product-removed",
             "library-drift",
-            "ports-edited"
+            "ports-edited",
+            "slot-empty",
+            "slot-legacy-ports"
           ]
         },
         "severity": {

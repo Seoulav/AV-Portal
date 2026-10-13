@@ -10,6 +10,7 @@ import * as N from '../engine/normalize.mjs';
 import * as P from '../engine/ports.mjs';
 import * as R from '../engine/rules.mjs';
 import * as S from '../engine/serialize.mjs';
+import * as SL from '../engine/slots.mjs';
 import * as VA from '../engine/validate.mjs';
 
 export type Direction = 'in' | 'out' | 'both';
@@ -42,7 +43,8 @@ export interface Equipment {
   portal: Portal;
 }
 export interface QuoteOption { id: string; model: string; name?: string; manufacturer?: string }
-export interface EquipmentData extends Equipment { isReused: boolean; portsEdited?: boolean; userPortSeq?: number; systemName?: string; selectedOptionQuantities?: Record<string, number>; optionPortIds?: string[] }
+// slotAssignments: 슬롯 번호 → 장착한 카드 배치 단위 ID(B-20261013-04)
+export interface EquipmentData extends Equipment { isReused: boolean; portsEdited?: boolean; userPortSeq?: number; systemName?: string; selectedOptionQuantities?: Record<string, number>; optionPortIds?: string[]; slotAssignments?: Record<string, string> }
 export interface LineType { id: string; name: string; color: string }
 export interface BomRow { cableType: 'ready-made' | 'manufactured'; productName: string; lineTypeId?: string; length?: number; quantity?: number }
 export interface DiagramNode {
@@ -81,7 +83,10 @@ export interface Issue { code: string; severity: 'warning' | 'info'; target: { n
 export interface ValidationError { code: string; path?: string; target?: Issue['target']; detail?: string }
 export interface Rules { lineTypes: LineType[]; connectorWildcards: Record<string, string[] | '*'>; connectorEquivalents: string[][]; levelPairs: string[][] }
 // slots·card: 라이브러리 1.1.0(B-20261013-03)의 프레임 슬롯·카드 장착 정보. 배치 단위에 붙고 장비(equipment)·노드 data에는 들어가지 않는다
-export interface LibraryUnit { unitId: string; unit?: 'tx' | 'rx'; variant?: string; equipment: Equipment; slots?: Record<string, unknown>; card?: Record<string, unknown> }
+export type SlotType = 'input' | 'output' | 'shared';
+export interface SlotInfo { input: number; output: number; shared: number; source: string; verification: string; note?: string; list: { id: string; slotType: SlotType }[]; compatibleCards: string[] }
+export interface CardInfo { slotType: SlotType; compatibleFrames: string[] }
+export interface LibraryUnit { unitId: string; unit?: 'tx' | 'rx'; variant?: string; equipment: Equipment; slots?: SlotInfo; card?: CardInfo }
 export interface LibraryProduct {
   productId: string;
   source: 'portal' | 'rtcom';
@@ -146,6 +151,18 @@ export const resetEquipmentPorts = P.resetEquipmentPorts as (diagram: Diagram, n
 export const portLineType = P.portLineType as (connector: string, signals: string[], signalVocabulary?: VocabularySignal[]) => string | null;
 export const nextPortLabels = P.nextPortLabels as (list: { label?: string }[], signalLabel: string, direction: Direction, count: number) => string[];
 export const PORT_DIRECTION_LABELS = P.DIRECTION_LABELS as Readonly<Record<Direction, string>>;
+// 슬롯 번호별 카드 장착(B-20261013-04)
+export interface SlotCard { unitId: string; product: LibraryProduct; unit: LibraryUnit; equipment: Equipment }
+export const frameSlots = SL.frameSlots as (library: LibraryIndex | null, unitId: string) => SlotInfo | null;
+export const slotCards = SL.slotCards as (library: LibraryIndex, frameUnitId: string, slotId: string) => SlotCard[];
+export const slotOfPort = SL.slotOfPort as (data: Partial<EquipmentData>, portId: string) => string | null;
+export const cardPortPrefix = SL.cardPortPrefix as (cardUnitId: string, slotId: string) => string;
+export const cardOptionIdOf = SL.optionIdOf as (unitId: string) => string;
+export const nodeLibraryEquipment = SL.nodeLibraryEquipment as (library: LibraryIndex | null, data: Partial<EquipmentData>) => Equipment | null;
+export const legacyCardPortCount = SL.legacyCardPortCount as (library: LibraryIndex | null, data: Partial<EquipmentData>) => number;
+export const mountedQuantities = SL.mountedQuantities as (quantities: Record<string, number>, assignments: Record<string, string> | undefined) => Record<string, number>;
+export const updateSlotAssignments = SL.updateSlotAssignments as (diagram: Diagram, nodeId: string, assignments: Record<string, string>, options?: { library?: LibraryIndex | null; removeEdges?: boolean; rules?: Rules; powerEnabled?: boolean }) => PortEditResult;
+export const resetFramePorts = SL.resetFramePorts as (diagram: Diagram, nodeId: string, library: LibraryIndex | null, options?: { removeEdges?: boolean; rules?: Rules; powerEnabled?: boolean }) => PortEditResult;
 export const computeIssues = I.computeIssues as (diagram: Diagram, options?: { library?: LibraryIndex | null; rules?: Rules }) => Issue[];
 // 메모·영역 data에 둘 수 있는 서식 키(1.1과 같다). 그 밖의 키는 저장할 때 버려진다
 export const ANNOTATION_DATA_KEYS = N.ANNOTATION_DATA_KEYS as readonly string[];

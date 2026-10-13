@@ -3,7 +3,8 @@
 // 모든 탭의 값은 창 안의 초안이고, "적용"을 누를 때 실행 취소 한 단계로 반영한다. Esc·바깥 클릭·취소는 아무것도 바꾸지 않는다.
 // 지우거나 바꾼 단자에 걸린 연결이 규칙에 맞지 않게 되면 "연결 n개도 함께 지웁니다"를 확인받은 뒤에만 적용한다.
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
-import { PORT_DIRECTION_LABELS, nextPortLabels, parseHandle, type Direction, type EquipmentData, type Port, type PortLists, type VocabularySignal } from '../engine';
+import { PORT_DIRECTION_LABELS, cardOptionIdOf, nextPortLabels, nodeLibraryEquipment, parseHandle, type Direction, type EquipmentData, type Port, type PortLists, type VocabularySignal } from '../engine';
+import { SlotsTab, slotChanged } from './SlotsTab';
 import { optionIdOf } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
 
@@ -28,7 +29,11 @@ const PROBLEMS: Record<string, string> = {
   'library-missing': '라이브러리에서 이 장비를 찾지 못해 되돌릴 수 없습니다',
   'quote-invalid': '옵션 품목과 수량을 확인해 주세요',
   'node-missing': '장비를 찾지 못했습니다',
+  'slot-unknown': '이 장비에 없는 슬롯입니다',
+  'card-incompatible': '이 슬롯에 넣을 수 없는 카드입니다',
+  'slots-missing': '라이브러리에 이 장비의 슬롯 정보가 없습니다',
 };
+const SLOT_PROBLEMS = new Set(['slot-unknown', 'card-incompatible', 'slots-missing']);
 
 let keySeq = 0;
 const draftOf = (ports: Port[]): DraftPort[] => ports.map(port => ({ key: `k${(keySeq += 1)}`, id: port.id, label: port.label, connector: port.connector, signals: [...port.signals], origin: port.origin, edited: port.edited }));
@@ -56,9 +61,11 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
   const vocabulary = library?.library.vocabulary;
   const signals: VocabularySignal[] = useMemo(() => vocabulary?.signals ?? [], [vocabulary]);
   const connectors: string[] = useMemo(() => vocabulary?.connectors ?? [], [vocabulary]);
-  const libraryEquipment = library?.units.get(data.id)?.equipment ?? null;
+  // 카드를 꽂은 프레임이면 프레임 + 카드 단자가 "라이브러리 값"이다(B-20261013-04)
+  const libraryEquipment = useMemo(() => nodeLibraryEquipment(library, data), [library, data]);
+  const slotInfo = library?.units.get(data.id)?.unit.slots ?? null;
 
-  const [tab, setTab] = useState<'basic' | 'ports' | 'quote'>('basic');
+  const [tab, setTab] = useState<'basic' | 'ports' | 'slots' | 'quote'>('basic');
   const [isReused, setReused] = useState(Boolean(data.isReused));
   const [systemName, setSystemName] = useState(String(data.systemName ?? ''));
   const [draft, setDraft] = useState<Draft>(() => draftLists(data));
@@ -70,6 +77,8 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
   const [productId, setProductId] = useState('');
   const [confirm, setConfirm] = useState<number | null>(null);
   const [error, setError] = useState('');
+  // 슬롯별 카드 초안(슬롯 번호 → 카드 배치 단위 ID, 빈 슬롯은 키 없음)
+  const [slots, setSlots] = useState<Record<string, string>>({ ...(data.slotAssignments ?? {}) });
   // 열리면 창으로 초점을 옮긴다. 두 번 누른 장비에 초점이 남으면 Esc·Delete가 바탕으로 간다
   const dialogRef = useRef<HTMLDivElement>(null);
   useEffect(() => { dialogRef.current?.focus(); }, []);
@@ -105,6 +114,11 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     const labels = nextPortLabels(current[list], signal.label, direction, count);
     return { ...current, [list]: [...current[list], ...labels.map(label => ({ key: `k${(keySeq += 1)}`, label, connector, signals: [signal.id], origin: 'user' as const }))] };
   });
+  const changeSlots = (value: Record<string, string>) => {
+    setSlots(value);
+    setError('');
+    setConfirm(null);
+  };
   const resetToLibrary = () => {
     if (!libraryEquipment) return;
     setDraft(draftLists(libraryEquipment));
@@ -118,12 +132,14 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     const ports = portsTouched && !reset
       ? Object.fromEntries(SECTIONS.map(({ list }) => [list, draft[list].map(({ id, label, connector, signals: s }) => ({ ...(id ? { id } : {}), label, connector, signals: s }))])) as unknown as PortLists
       : null;
-    const result = apply(nodeId, { isReused, systemName, ports, resetPorts: reset, quantities, optionProductIds: addedProducts }, { removeEdges });
+    const slotDraft = slotInfo && slotChanged(data.slotAssignments, slots) ? slots : null;
+    const result = apply(nodeId, { isReused, systemName, ports, resetPorts: reset, quantities, optionProductIds: addedProducts, slots: slotDraft }, { removeEdges });
     if (result.code === 'edges-affected') { setConfirm(result.removedEdgeIds.length); return; }
     if (!result.ok) {
       setConfirm(null);
       setError(`${PROBLEMS[result.code ?? ''] ?? `적용하지 못했습니다(${result.code})`}${result.detail ? `: ${result.detail}` : ''}`);
-      if (result.code !== 'quote-invalid') setTab('ports');
+      if (SLOT_PROBLEMS.has(result.code ?? '')) setTab('slots');
+      else if (result.code !== 'quote-invalid') setTab('ports');
       return;
     }
     close();
@@ -149,8 +165,10 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     if (!addedProducts.includes(productId)) setAddedProducts([...addedProducts, productId]);
   };
 
+  // 저장된 슬롯에 장착한 장수(견적 수량은 이보다 작아지지 않는다. 슬롯 탭 변경은 적용할 때 더하고 뺀다)
+  const mounted = (optionId: string) => Object.values(data.slotAssignments ?? {}).filter(card => cardOptionIdOf(card) === optionId).length;
   const portCount = SECTIONS.reduce((sum, { list }) => sum + draft[list].length, 0);
-  const tabs: [typeof tab, string][] = [['basic', '기본'], ['ports', `단자 ${portCount}`], ['quote', '견적 옵션']];
+  const tabs: [typeof tab, string][] = [['basic', '기본'], ['ports', `단자 ${portCount}`], ...(slotInfo ? [['slots', `슬롯 ${Object.keys(slots).length}/${slotInfo.list.length}`] as [typeof tab, string]] : []), ['quote', '견적 옵션']];
 
   return (
     <div className="modal-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) close(); }} onKeyDown={onKeyDown} onKeyUp={event => event.stopPropagation()}>
@@ -193,11 +211,15 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
               {reset && <p className="panel-note">적용하면 라이브러리 단자로 돌아갑니다.</p>}
             </div>
           )}
+          {tab === 'slots' && slotInfo && library && (
+            <SlotsTab library={library} data={data} slotInfo={slotInfo} value={slots} edges={edges} nodeId={nodeId} onChange={changeSlots}
+              resetPending={reset} onMigrate={() => { resetToLibrary(); }} />
+          )}
           {tab === 'quote' && (
             <div className="modal-section">
               <p className="panel-note">노드 1개는 장비 1대입니다. 옵션은 견적에 추가할 품목이며 단자와 호환성을 자동 설정하지 않습니다.</p>
               {Object.entries(quantities).map(([id, q]) => (
-                <label className="field" key={id}>{optionName(id)}
+                <label className="field" key={id}>{optionName(id)}{mounted(id) > 0 && <span className="muted"> (슬롯 장착 {mounted(id)}장 포함)</span>}
                   <input aria-label={`옵션 수량 ${id}`} type="number" min="0" step="1" value={Number.isNaN(q) ? '' : q} onChange={event => setQuantities({ ...quantities, [id]: event.target.value === '' ? Number.NaN : Number(event.target.value) })} />
                 </label>
               ))}

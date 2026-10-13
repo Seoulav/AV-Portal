@@ -128,8 +128,8 @@ function reconcileEdges(diagram, nodeId, nextData, { rules, powerEnabled }) {
   return { removed, updated };
 }
 
-// 새 data로 노드를 바꾸고 걸린 연결을 정리한다(update·reset 공용)
-function commit(diagram, index, nextData, { removeEdges, rules, powerEnabled }) {
+// 새 data로 노드를 바꾸고 걸린 연결을 정리한다(update·reset·슬롯 카드 장착 공용)
+export function commitNodeData(diagram, index, nextData, { removeEdges, rules, powerEnabled }) {
   const node = diagram.nodes[index];
   // 지운 단자를 가리키는 견적 단자 목록(optionPortIds)도 정리한다
   if (Array.isArray(nextData.optionPortIds)) {
@@ -163,12 +163,13 @@ export function updateEquipmentPorts(diagram, nodeId, lists, { removeEdges = fal
   if (edited) nextData.portsEdited = true;
   else delete nextData.portsEdited;
   if (built.lastUser > 0) nextData.userPortSeq = built.lastUser;
-  return commit(diagram, index, nextData, { removeEdges, rules, powerEnabled });
+  return commitNodeData(diagram, index, nextData, { removeEdges, rules, powerEnabled });
 }
 
 // "라이브러리 값으로 되돌리기": 라이브러리 단자를 그대로 복사하고(verification·portalIo 포함) portsEdited·origin·edited를 지운다.
-// 연결 처리는 updateEquipmentPorts와 같다. 사용자 단자 번호(userPortSeq)는 남겨 지운 번호를 다시 쓰지 않는다
-export function resetEquipmentPorts(diagram, nodeId, libraryEquipment, { removeEdges = false, rules = DEFAULT_RULES, powerEnabled = false } = {}) {
+// 연결 처리는 updateEquipmentPorts와 같다. 사용자 단자 번호(userPortSeq)는 남겨 지운 번호를 다시 쓰지 않는다.
+// optionPortIds: 주면 노드의 optionPortIds를 이 값으로 바꾼 뒤 정리한다(슬롯 카드 단자를 되살릴 때, slots.mjs resetFramePorts)
+export function resetEquipmentPorts(diagram, nodeId, libraryEquipment, { removeEdges = false, rules = DEFAULT_RULES, powerEnabled = false, optionPortIds } = {}) {
   if (!libraryEquipment) return problem('library-missing', nodeId);
   const index = findNodeIndex(diagram, nodeId);
   if (index < 0) return problem('node-missing', nodeId);
@@ -176,7 +177,8 @@ export function resetEquipmentPorts(diagram, nodeId, libraryEquipment, { removeE
   const nextData = { ...node.data };
   for (const list of Object.keys(PORT_LISTS)) nextData[list] = clone(libraryEquipment[list] ?? []);
   delete nextData.portsEdited;
+  if (Array.isArray(optionPortIds)) nextData.optionPortIds = [...optionPortIds];
   const last = lastUserNumber(node.data);
   if (last > 0) nextData.userPortSeq = last;
-  return commit(diagram, index, nextData, { removeEdges, rules, powerEnabled });
+  return commitNodeData(diagram, index, nextData, { removeEdges, rules, powerEnabled });
 }

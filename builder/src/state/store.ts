@@ -8,8 +8,9 @@ import { layoutPositions, type DagreModule } from '../layout';
 import { lineFilter, visibleNodes } from '../lineFilter';
 import {
   ANNOTATION_DATA_KEYS, DEFAULT_RULES, SHAPE_DATA_KEYS, addAnnotationNode, addEquipmentNode, addShapeNode, connectPorts, createDiagram, createIdFactory, findPort,
-  judgeConnection, occupiedPorts, parseHandle, resetEquipmentPorts, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, updateEquipmentPorts, validateDiagram,
-  type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type IdFactory, type LibraryIndex, type PortEditResult, type PortLists, type Rules, type ValidationError,
+  judgeConnection, mountedQuantities, nodeLibraryEquipment, occupiedPorts, parseHandle, resetFramePorts, serializeDiagram, setEdgeCable, setEdgeLabel, sourceHandleOf, targetHandleOf, updateEquipmentPorts,
+  updateSlotAssignments, validateDiagram,
+  type BomRow, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type EquipmentData, type IdFactory, type LibraryIndex, type PortEditResult, type PortLists, type Rules, type ValidationError,
 } from '../engine';
 
 export const HISTORY_LIMIT = 50;
@@ -45,6 +46,8 @@ export interface EquipmentSettings {
   quantities: Record<string, number>;
   // 이번에 새로 고른 Portal 옵션 품목(제품 ID). 옵션 정의(diagram.options)는 적용할 때 만든다
   optionProductIds?: string[];
+  // 슬롯별 카드 전체 구성(B-20261013-04). null·생략이면 슬롯은 그대로다
+  slots?: Record<string, string> | null;
 }
 export const optionIdOf = (productId: string) => `portal-option:${productId}`;
 // 근접 연결 판정. handle·fromHandle은 연결하면 엣지에 실제로 남을 핸들이다(양방향은 역할에 따라 source_/target_)
@@ -111,7 +114,7 @@ export interface BuilderState {
   settingsNodeId: string | null;
   openNodeSettings(nodeId: string): void;
   closeNodeSettings(): void;
-  // 기본·단자·견적 옵션을 실행 취소 한 단계로 적용한다. 걸리는 연결이 있으면 removeEdges 없이는 바꾸지 않고 code 'edges-affected'를 돌려준다
+  // 기본·단자·슬롯·견적 옵션을 실행 취소 한 단계로 적용한다. 걸리는 연결이 있으면 removeEdges 없이는 바꾸지 않고 code 'edges-affected'를 돌려준다
   applyEquipmentSettings(nodeId: string, settings: EquipmentSettings, options?: { removeEdges?: boolean }): PortEditResult;
   updateNoteData(nodeId: string, patch: Record<string, unknown>): boolean;
   editNote(nodeId: string): void;
@@ -414,16 +417,20 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const { diagram, library } = get();
         const index = diagram.nodes.findIndex(n => n.id === nodeId && n.type === 'equipment');
         if (index < 0) return { ok: false, code: 'node-missing', removedEdgeIds: [] };
+        // next는 얕은 복사본이고 엔진은 노드·엣지 배열을 새로 만들어 바꾸므로, 중간에 그만둬도 지금 구성도는 그대로다
         const next = copy(diagram);
-        const libraryEquipment = library?.units.get(String(diagram.nodes[index].data.id))?.equipment ?? null;
-        const portOptions = { removeEdges, rules: rulesOf(library), signalVocabulary: library?.library.vocabulary?.signals ?? [], libraryEquipment };
-        let removedEdgeIds: string[] = [];
+        const rules = rulesOf(library);
+        // 비교·되돌리기 기준: 카드를 꽂은 프레임이면 프레임 + 카드 단자(B-20261013-04)
+        const libraryEquipment = nodeLibraryEquipment(library, diagram.nodes[index].data as unknown as EquipmentData);
+        // 걸리는 연결은 단자·슬롯 단계를 끝까지 해 본 뒤 한 번에 확인받는다(두 탭을 함께 바꿀 수 있다)
+        const portOptions = { removeEdges: true, rules, signalVocabulary: library?.library.vocabulary?.signals ?? [], libraryEquipment };
+        const removedEdgeIds: string[] = [];
         if (settings.resetPorts || settings.ports) {
           const result = settings.resetPorts
-            ? resetEquipmentPorts(next, nodeId, libraryEquipment, portOptions)
+            ? resetFramePorts(next, nodeId, library, portOptions)
             : updateEquipmentPorts(next, nodeId, settings.ports!, portOptions);
           if (!result.ok) return result;
-          removedEdgeIds = result.removedEdgeIds;
+          removedEdgeIds.push(...result.removedEdgeIds);
         }
         const node = next.nodes[index];
         const options = quoteOptions(next, library, node, settings.quantities, settings.optionProductIds ?? []);
@@ -433,17 +440,26 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const systemName = settings.systemName.trim();
         if (systemName) data.systemName = systemName;
         else if (node.data.systemName !== undefined) data.systemName = '';
-        if (Object.keys(settings.quantities).length || node.data.selectedOptionQuantities) data.selectedOptionQuantities = { ...settings.quantities };
+        // 장착한 카드 수량은 장착 장수 밑으로 내려가지 않는다
+        if (Object.keys(settings.quantities).length || node.data.selectedOptionQuantities) data.selectedOptionQuantities = mountedQuantities(settings.quantities, node.data.slotAssignments as Record<string, string> | undefined);
         next.nodes[index] = { ...node, data };
         if (options.length || next.options) next.options = options;
-        const same = JSON.stringify(data) === JSON.stringify(diagram.nodes[index].data)
+        // 슬롯 카드: 견적 수량을 정한 뒤에 장착 장수만큼 더하고 뺀다
+        if (settings.slots) {
+          const result = updateSlotAssignments(next, nodeId, settings.slots, { library, removeEdges: true, rules });
+          if (!result.ok) return result;
+          removedEdgeIds.push(...result.removedEdgeIds);
+        }
+        if (removedEdgeIds.length && !removeEdges) return { ok: false, code: 'edges-affected', removedEdgeIds, changed: false };
+        const finalData = next.nodes[index].data;
+        const same = JSON.stringify(finalData) === JSON.stringify(diagram.nodes[index].data)
           && JSON.stringify(next.options ?? []) === JSON.stringify(diagram.options ?? [])
           && next.edges.length === diagram.edges.length && next.edges.every((edge, i) => edge === diagram.edges[i]);
         if (same) return { ok: true, removedEdgeIds: [], changed: false };
         remember();
         // 지운 연결·단자를 가리키는 선택은 푼다
         const remaining = new Set(next.edges.map(edge => edge.id));
-        const ports = new Set(PORT_LIST_KEYS.flatMap(list => (data[list] as { id: string }[]).map(port => port.id)));
+        const ports = new Set(PORT_LIST_KEYS.flatMap(list => (finalData[list] as { id: string }[]).map(port => port.id)));
         set({
           diagram: next,
           selectedEdgeIds: get().selectedEdgeIds.filter(id => remaining.has(id)),

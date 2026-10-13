@@ -64,6 +64,7 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 
 **견적 정보** (B-20261012-02부터 저장한다):
 - 노드 `data.systemName`(시스템명), `data.selectedOptionQuantities`(옵션 ID → 수량), `data.optionPortIds`
+- 노드 `data.slotAssignments`(B-20261013-04, 슬롯 번호 → 카드 배치 단위 ID). 장착한 카드는 `selectedOptionQuantities`의 `portal-option:<카드 배치 단위 ID>` = 장착 장수와 `options[]` 정의로 견적 품목이 된다. 카드 단자 id는 `opt-<카드 배치 단위 ID>-<슬롯 번호>-<카드 단자 id>`이고 `optionPortIds`에 들어간다. 카드 배치 단위 ID는 Portal 카드면 제품 ID, RTCOM 시리즈 카드면 `<제품ID>:<모델 슬러그>`다
 - 최상위 `options[]`(옵션 정의 `{id, model, name, manufacturer}`)
 
 **없어진 값**:
@@ -82,10 +83,12 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 | `signal-level` | 마이크·라인처럼 레벨이 다른 신호를 이었다. 오디오는 `detail`에 프리앰프·감쇠 필요 여부를 붙인다 |
 | `unverified-port` | 단자 정보가 Portal에서 아직 확인 중이다 |
 | `no-ports` | Portal에 단자 정보가 없는 제품이다 |
-| `series-config-pending` | 매트릭스 시리즈의 카드 구성이 정해지지 않았다 |
+| `series-config-pending` | 매트릭스 시리즈의 카드 구성이 정해지지 않았다. 라이브러리에 슬롯 정보가 있는 프레임·카드는 내지 않고 슬롯 흐름을 쓴다(라이브러리 없이 검증하면 카드를 꽂지 않은 시리즈 프레임에는 그대로 난다) |
 | `product-removed` | 파일을 만든 뒤 Portal에서 제품이 빠졌다(단종 등) |
 | `library-drift` | 파일을 만든 뒤 Portal의 장비 정보가 바뀌었다(견적 정보는 비교하지 않는다) |
 | `ports-edited` | 이 구성도에서 장비의 단자를 고쳤다(`portsEdited`). 단자 수는 노드의 단자 목록을 그대로 읽는다 |
+| `slot-empty` | 슬롯이 있는 프레임에 카드를 하나도 꽂지 않았다(호환 카드 정보가 없는 프레임은 내지 않는다) |
+| `slot-legacy-ports` | 슬롯 프레임에 예전 방식으로 펼친 카드 단자가 남아 있다(`detail` = `<장비 ID>: <단자 수>`). 자동으로 옮기지 않는다 |
 
 ## 예제를 다시 만들 때
 

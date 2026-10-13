@@ -2,6 +2,7 @@
 import { DEFAULT_RULES } from './defaults.mjs';
 import { equipmentPorts, findPort } from './library.mjs';
 import { normalizeEquipmentData } from './normalize.mjs';
+import { legacyCardPortCount, slotEquipment } from './slots.mjs';
 import { connectionFindings, connectionSignal, parseHandle } from './rules.mjs';
 
 const compareText = (a = '', b = '') => (a < b ? -1 : a > b ? 1 : 0);
@@ -17,8 +18,8 @@ export function sortIssues(issues) {
 // 견적 정보(시스템명·옵션)는 사용자가 넣는 값이라 빼고, 구성도에서 고친 단자(portsEdited)는 단자를 빼고 본다(B-20261013-01)
 const QUOTE_KEYS = ['systemName', 'selectedOptionQuantities', 'optionPortIds'];
 const PORT_KEYS_OF_NODE = ['inputs', 'outputs', 'bidirectional', 'portsEdited'];
-// 사용자 단자 번호 기록은 단자를 되돌린 뒤에도 남는 값이라 늘 뺀다
-const EDIT_KEYS = ['userPortSeq'];
+// 사용자 단자 번호 기록은 단자를 되돌린 뒤에도 남는 값이라 늘 뺀다. 슬롯 카드 구성은 라이브러리 장비에 없는 값이라 뺀다(단자는 프레임 + 카드와 비교)
+const EDIT_KEYS = ['userPortSeq', 'slotAssignments'];
 const comparable = (data, { withoutPorts = false } = {}) => {
   const out = normalizeEquipmentData(data, { withReused: false });
   for (const key of [...QUOTE_KEYS, ...EDIT_KEYS, ...(withoutPorts ? PORT_KEYS_OF_NODE : [])]) delete out[key];
@@ -33,7 +34,11 @@ export function computeIssues(diagram, { library = null, rules = DEFAULT_RULES }
     if (node.type !== 'equipment') continue;
     const data = node.data;
     if (equipmentPorts(data).length === 0) issues.push({ code: 'no-ports', severity: 'warning', target: { node: node.id }, detail: data.id });
-    if (data.portal?.variant) issues.push({ code: 'series-config-pending', severity: 'warning', target: { node: node.id }, detail: data.portal.variant });
+    const entry = library?.units.get(data.id) ?? null;
+    const slots = entry?.unit?.slots ?? null;
+    const assigned = Object.keys(data.slotAssignments ?? {}).length > 0;
+    // 슬롯 정보가 있는 시리즈 프레임·카드는 슬롯 장착 흐름을 쓴다(B-20261013-04). 그 밖의 시리즈 모델만 구성 대기다
+    if (data.portal?.variant && !slots && !entry?.unit?.card && !assigned) issues.push({ code: 'series-config-pending', severity: 'warning', target: { node: node.id }, detail: data.portal.variant });
     // 구성도 안에서 단자를 고친 노드: 라이브러리 차이(library-drift) 대신 이 안내를 낸다
     const portsEdited = data.portsEdited === true;
     if (portsEdited) issues.push({ code: 'ports-edited', severity: 'info', target: { node: node.id }, detail: data.id });
@@ -41,8 +46,17 @@ export function computeIssues(diagram, { library = null, rules = DEFAULT_RULES }
       const current = library.units.get(data.id);
       if (!current || !library.products.has(data.portal?.productId)) {
         issues.push({ code: 'product-removed', severity: 'warning', target: { node: node.id }, detail: data.id });
-      } else if (comparable(current.equipment, { withoutPorts: portsEdited }) !== comparable(data, { withoutPorts: portsEdited })) {
-        issues.push({ code: 'library-drift', severity: 'info', target: { node: node.id }, detail: data.id });
+      } else {
+        // 카드를 꽂은 프레임은 프레임 + 카드 단자가 라이브러리 값이다. 라이브러리에 없는 카드는 product-removed로 알린다
+        const composed = slots && assigned ? slotEquipment(library, data.id, data.slotAssignments) : { equipment: current.equipment, missing: [] };
+        for (const missing of composed.missing) issues.push({ code: 'product-removed', severity: 'warning', target: { node: node.id }, detail: missing });
+        // 예전에 펼쳐 둔 카드 단자(BLU-160 등): 자동으로 옮기지 않고 안내만 한다(결정 D1). 단자 차이는 이 안내가 대신한다
+        const legacy = legacyCardPortCount(library, data);
+        if (legacy) issues.push({ code: 'slot-legacy-ports', severity: 'info', target: { node: node.id }, detail: `${data.id}: ${legacy}` });
+        // 슬롯이 있는데 하나도 채우지 않았다(호환 카드 정보가 없는 프레임은 채울 수 없으므로 뺀다)
+        else if (slots && !assigned && slots.compatibleCards?.length) issues.push({ code: 'slot-empty', severity: 'info', target: { node: node.id }, detail: data.id });
+        const withoutPorts = portsEdited || legacy > 0;
+        if (comparable(composed.equipment, { withoutPorts }) !== comparable(data, { withoutPorts })) issues.push({ code: 'library-drift', severity: 'info', target: { node: node.id }, detail: data.id });
       }
     }
   }

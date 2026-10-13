@@ -2,6 +2,25 @@
 
 ## [미배포] — 2026-10-13
 
+[B-20261013-04](../Work/빌더/작업/B-20261013-04.md). 슬롯 번호별 카드 장착 화면(P9).
+
+### Added
+- 장비 설정 창 **슬롯** 탭: 라이브러리에 슬롯 정보(`slots`)가 있는 프레임에만 보인다. 슬롯(`IN1…`·`OUT1…`·`S1…`)마다 호환 카드를 고른다(비움 포함). 입력 슬롯엔 입력 카드만, 공용 슬롯엔 입력·출력 카드가 보인다. 호환 카드 정보가 없는 프레임(SPX-R6)은 "장착 가능 모듈 정보 없음"으로 보인다
+- 카드 단자 합성: 카드 단자를 프레임 단자 뒤에 슬롯 순서로 붙인다. id `opt-<카드 배치 단위 ID>-<슬롯 번호>-<카드 단자 id>`, 이름 `IN2 HDMI In 3`(결정 D2). 한 슬롯의 카드를 바꿔도 다른 슬롯 연결은 그대로다
+- 구성도 JSON 1.2에 노드 `data.slotAssignments`(`{슬롯 번호: 카드 배치 단위 ID}`) 추가. 카드는 `selectedOptionQuantities` `portal-option:<카드 배치 단위 ID>` = 장착 장수, `optionPortIds`, 최상위 `options[]` 정의로 견적 품목이 된다. 스키마·검증기·타입 반영
+- 이슈 `slot-empty`(안내, 슬롯을 하나도 채우지 않은 프레임), `slot-legacy-ports`(안내, B-03 전에 펼쳐 둔 BLU-160 등의 카드 단자가 남은 노드. 자동 변환은 하지 않는다 — 결정 D1). 슬롯 탭에 "카드 구성으로 옮기기" 안내와 버튼(프레임 단자만 남기기)을 둔다
+- 엔진 `engine/slots.mjs`: `updateSlotAssignments`·`resetFramePorts`·`slotCards`·`cardPorts`·`slotEquipment`·`nodeLibraryEquipment` 등
+- 엔진 테스트 11건(`tests/builder-slot-ui.test.mjs`), vitest 5건(`test/slot-settings.test.ts`), Playwright 2건(`e2e/slots.spec.ts`), 견적 앱 통합 시험 1건(`cpq/tests/integration/builderSlotCards.test.ts`)
+
+### Changed
+- 슬롯 정보가 있는 RTCOM 시리즈 프레임과 카드 단위는 `series-config-pending`을 내지 않는다(슬롯 흐름을 쓴다). 슬롯 정보가 없는 시리즈 모델은 그대로다
+- 카드를 꽂은 프레임의 라이브러리 비교(`library-drift`·`portsEdited`)와 "라이브러리 값으로 되돌리기"는 프레임 + 장착 카드 단자를 기준으로 한다. 되돌려도 카드 구성은 남는다
+- 설정 창 적용은 단자 탭·슬롯 탭에서 함께 걸리는 연결을 한 번에 세어 확인받는다
+- 견적 옵션 탭의 카드 수량은 장착 장수 밑으로 내려가지 않는다. 따로 넣은 예비 수량은 카드를 바꾸거나 빼도 남는다
+- `equipmentDB`는 같은 장비의 노드 중 단자를 고치지 않고 카드도 꽂지 않은 노드를 먼저 쓴다
+
+## [미배포] — 2026-10-13
+
 [B-20261013-01](../Work/빌더/작업/B-20261013-01.md). 장비 설정 창과 구성도 단자 편집(구 Builder `EditNodeModal` 이식, P9 앞당김).
 
 ### Added

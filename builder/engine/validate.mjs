@@ -48,6 +48,8 @@ function structureErrors(diagram) {
       need(d.portsEdited === undefined || typeof d.portsEdited === 'boolean', `${at}.data.portsEdited`, '참·거짓 값이어야 한다');
       need(d.userPortSeq === undefined || (Number.isSafeInteger(d.userPortSeq) && d.userPortSeq > 0), `${at}.data.userPortSeq`, '1 이상의 정수여야 한다');
       need(d.optionPortIds === undefined || (Array.isArray(d.optionPortIds) && d.optionPortIds.every(isText)), `${at}.data.optionPortIds`, '단자 ID 배열이 필요하다');
+      // 슬롯별 카드(B-20261013-04): { 슬롯 번호: 카드 배치 단위 ID }
+      need(d.slotAssignments === undefined || (isObject(d.slotAssignments) && Object.entries(d.slotAssignments).every(([slot, card]) => isText(slot) && isText(card))), `${at}.data.slotAssignments`, '{슬롯 번호: 카드 ID} 객체가 필요하다');
       for (const key of ['id', 'category', 'name', 'model']) need(typeof node.data[key] === 'string', `${at}.data.${key}`, '문자열이 필요하다');
       for (const [list, direction] of Object.entries(PORT_LISTS)) {
         if (!Array.isArray(node.data[list])) { need(false, `${at}.data.${list}`, '배열이어야 한다'); continue; }

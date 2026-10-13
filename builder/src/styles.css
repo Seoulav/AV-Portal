@@ -288,5 +288,12 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
 .port-tag { font-size: 11px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); border-radius: 4px; padding: 0 5px; }
 .port-tag.user { color: var(--accent); background: var(--accent-soft); }
 .port-tag.link { color: var(--warn); background: var(--warn-soft); }
+/* 슬롯 탭(B-20261013-04) */
+.slot-row { display: grid; grid-template-columns: 52px 40px minmax(0, 1fr); gap: 4px 8px; align-items: center; padding: 3px 4px; border-radius: 6px; }
+.slot-row select { min-width: 0; width: 100%; box-sizing: border-box; }
+.slot-row .port-edit-meta { grid-column: 3 / -1; }
+.slot-id { font-weight: 600; font-variant-numeric: tabular-nums; }
+.slot-legacy { display: flex; flex-direction: column; gap: 6px; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--warn-line); background: var(--warn-bg); font-size: 13px; }
+.slot-legacy p { margin: 0; }
 .port-add-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 64px auto; gap: 6px; margin-top: 2px; }
 .port-add-row select, .port-add-row input { min-width: 0; width: 100%; box-sizing: border-box; }
