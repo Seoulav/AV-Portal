@@ -52,7 +52,7 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261012-006 moves 15 Epson and seven Panasonic projectors into maps.
   // W-009 maps three existing AVer products, moving them from fallback to map.
   // W-20261013-001 maps all 18 existing Powersoft amplifiers; no product is added.
-  assert.deepEqual(counts, { mapIo: 127, ioOnly: 119, neither: 21 });
+  assert.deepEqual(counts, { mapIo: 133, ioOnly: 113, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {
