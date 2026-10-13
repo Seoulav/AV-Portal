@@ -2,7 +2,7 @@
 // 근거: Work/빌더/기반명세.md 부록 A. 규칙 표의 순서가 판정 순서이므로 순서를 바꾸지 않는다.
 // 규칙을 바꾸면 VOCABULARY_VERSION을 올리고 기반명세 부록 A를 함께 고친다.
 
-export const VOCABULARY_VERSION = '1.0.0';
+export const VOCABULARY_VERSION = '1.0.1';
 
 // ── 표준 신호: [id, 표시명, 선 종류, 대칭 여부]. 배열 순서 = 주 신호 우선순위(부록 A3 ORDER) ──
 export const SIGNALS = Object.freeze([
@@ -79,7 +79,7 @@ export const CARD_IO_AVAILABILITY = /카드 장착 시/;
 export const UNKNOWN_CONNECTOR = /^(정보 없음|MISSING|—|커넥터 규격 정보 없음|)$/;
 export const CONNECTOR_RULES = Object.freeze([
   ['CAPTIVE', /커넥터 없음|무단말 케이블|부착형 케이블|captive/i],
-  ['TERMINAL-BLOCK', /Phoenix|Combicon|Euro ?\d|유로블록|터미널 블록|터미널\(|Terminal|Screw(?!-lock)|스크류 단자|단자대|Barrier|WAGO|핀 블록|블록 커넥터|\d+-pin terminal|2핀 단자/i],
+  ['TERMINAL-BLOCK', /Phoenix|피닉스|Combicon|Euro ?\d|Euro ?block|유로 ?블[록럭]|터미널 블록|터미널\(|Terminal|Screw(?!-lock)|스크류 단자|단자대|Barrier|WAGO|핀 블록|블록 커넥터|\d+-pin terminal|2핀 단자/i],
   ['BINDING-POST', /Binding Post/i],
   ['SPEAKON', /Speakon|NL4/i],
   ['POWERCON', /powerCON/i],
