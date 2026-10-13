@@ -200,6 +200,7 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
           {tab === 'ports' && (
             <div className="modal-section">
               <p className="panel-note">이 구성도의 이 장비에만 적용됩니다. Portal·장비 목록은 바뀌지 않습니다. 선 종류는 신호로 정해집니다.</p>
+              {slotInfo && slotChanged(data.slotAssignments, slots) && <p className="panel-note" role="note">슬롯 탭에서 바꾼 카드 단자는 적용한 뒤 여기에 보입니다. 빼거나 바꾼 카드의 단자는 고쳐도 적용할 때 사라집니다.</p>}
               {SECTIONS.map(section => (
                 <PortSection key={section.list} direction={section.direction} title={section.title} ports={draft[section.list]} signals={signals} connectors={connectors} connections={connections}
                   onChange={(key, patch) => updatePort(section.list, key, patch)} onRemove={key => removePort(section.list, key)} onMove={(index, step) => movePort(section.list, index, step)}

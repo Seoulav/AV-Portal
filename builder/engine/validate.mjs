@@ -9,6 +9,8 @@ import { derivedParts } from './serialize.mjs';
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const isText = value => typeof value === 'string' && value.length > 0;
+// 슬롯 번호: 영문 대문자 + 1 이상의 번호(IN1·OUT1·S1). 카드 단자 id `opt-<카드>-<슬롯>-<단자>`가 겹치지 않게 '-'를 막는다
+const SLOT_ID = /^[A-Z]+[1-9]\d*$/;
 
 // 케이블 행 하나를 검사한다. 견적 쪽이 이 값으로 수량을 세므로 0개·음수·빈 이름을 막는다(B-20261006-05 결정 H-d).
 // 화면(연결 편집 패널)도 이 함수로 저장 전에 검사한다. 문제가 없으면 null
@@ -49,7 +51,7 @@ function structureErrors(diagram) {
       need(d.userPortSeq === undefined || (Number.isSafeInteger(d.userPortSeq) && d.userPortSeq > 0), `${at}.data.userPortSeq`, '1 이상의 정수여야 한다');
       need(d.optionPortIds === undefined || (Array.isArray(d.optionPortIds) && d.optionPortIds.every(isText)), `${at}.data.optionPortIds`, '단자 ID 배열이 필요하다');
       // 슬롯별 카드(B-20261013-04): { 슬롯 번호: 카드 배치 단위 ID }
-      need(d.slotAssignments === undefined || (isObject(d.slotAssignments) && Object.entries(d.slotAssignments).every(([slot, card]) => isText(slot) && isText(card))), `${at}.data.slotAssignments`, '{슬롯 번호: 카드 ID} 객체가 필요하다');
+      need(d.slotAssignments === undefined || (isObject(d.slotAssignments) && Object.entries(d.slotAssignments).every(([slot, card]) => SLOT_ID.test(slot) && isText(card))), `${at}.data.slotAssignments`, '{슬롯 번호(IN1·OUT1·S1 꼴): 카드 ID} 객체가 필요하다');
       for (const key of ['id', 'category', 'name', 'model']) need(typeof node.data[key] === 'string', `${at}.data.${key}`, '문자열이 필요하다');
       for (const [list, direction] of Object.entries(PORT_LISTS)) {
         if (!Array.isArray(node.data[list])) { need(false, `${at}.data.${list}`, '배열이어야 한다'); continue; }

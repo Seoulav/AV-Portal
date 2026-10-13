@@ -404,7 +404,7 @@ export function createBuilderStore({ ids = createIdFactory(), initial = null as 
         const options = quoteOptions(diagram, library, node, quantities, optionProductId ? [optionProductId] : []);
         if (!options) return false;
         remember();
-        set({ diagram: { ...diagram, options, nodes: diagram.nodes.map(n => n.id === nodeId ? { ...n, data: { ...n.data, systemName: systemName.trim(), selectedOptionQuantities: { ...quantities } } } : n) } });
+        set({ diagram: { ...diagram, options, nodes: diagram.nodes.map(n => n.id === nodeId ? { ...n, data: { ...n.data, systemName: systemName.trim(), selectedOptionQuantities: mountedQuantities(quantities, n.data.slotAssignments as Record<string, string> | undefined) } } : n) } });
         return true;
       },
       settingsNodeId: null,

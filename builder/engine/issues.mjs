@@ -53,9 +53,10 @@ export function computeIssues(diagram, { library = null, rules = DEFAULT_RULES }
         // 예전에 펼쳐 둔 카드 단자(BLU-160 등): 자동으로 옮기지 않고 안내만 한다(결정 D1). 단자 차이는 이 안내가 대신한다
         const legacy = legacyCardPortCount(library, data);
         if (legacy) issues.push({ code: 'slot-legacy-ports', severity: 'info', target: { node: node.id }, detail: `${data.id}: ${legacy}` });
-        // 슬롯이 있는데 하나도 채우지 않았다(호환 카드 정보가 없는 프레임은 채울 수 없으므로 뺀다)
-        else if (slots && !assigned && slots.compatibleCards?.length) issues.push({ code: 'slot-empty', severity: 'info', target: { node: node.id }, detail: data.id });
-        const withoutPorts = portsEdited || legacy > 0;
+        // 슬롯이 있는데 하나도 채우지 않았다. 호환 카드 정보가 없는 프레임(SPX-R6 등)은 그 사실을 detail에 적는다
+        if (slots && !assigned) issues.push({ code: 'slot-empty', severity: 'info', target: { node: node.id }, detail: slots.compatibleCards?.length ? data.id : `${data.id}: 장착 가능 모듈 정보 없음` });
+        // 예전 카드 단자 안내와 별개로 단자 차이(library-drift)는 그대로 본다
+        const withoutPorts = portsEdited;
         if (comparable(composed.equipment, { withoutPorts }) !== comparable(data, { withoutPorts })) issues.push({ code: 'library-drift', severity: 'info', target: { node: node.id }, detail: data.id });
       }
     }

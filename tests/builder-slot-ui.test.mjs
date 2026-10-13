@@ -9,7 +9,7 @@ import { createLibraryIndex } from '../builder/engine/library.mjs';
 import { updateEquipmentPorts } from '../builder/engine/ports.mjs';
 import { serializeDiagram } from '../builder/engine/serialize.mjs';
 import {
-  cardPortId, cardPorts, frameSlots, nodeLibraryEquipment, optionIdOf, resetFramePorts, slotCards, slotOfPort, updateSlotAssignments,
+  cardPortId, cardPorts, frameSlots, legacyCardPortCount, nodeLibraryEquipment, optionIdOf, resetFramePorts, slotCards, slotOfPort, updateSlotAssignments,
 } from '../builder/engine/slots.mjs';
 import { validateDiagram } from '../builder/engine/validate.mjs';
 import * as V from '../beta/port-vocabulary.mjs';
@@ -227,9 +227,11 @@ test('RTCOM series frames use the slot flow instead of series-config-pending (un
   assert.deepEqual(codes(computeIssues(diagram), frame.id), []);
 });
 
-test('frames without compatible card data are not nagged with slot-empty', () => {
+test('frames without compatible card data say so in slot-empty', () => {
   const { diagram, frame, library } = sample('empty-frame');
-  assert.deepEqual(codes(computeIssues(diagram, { library }), frame.id), []);
+  const issues = computeIssues(diagram, { library });
+  assert.deepEqual(codes(issues, frame.id), ['slot-empty']);
+  assert.equal(issues[0].detail, 'empty-frame: 장착 가능 모듈 정보 없음');
   assert.deepEqual(slotCards(library, 'empty-frame', 'S1'), []);
 });
 
@@ -275,10 +277,23 @@ test('legacy expanded card ports (BLU-160 before B-03) get a notice, not an auto
   const data = dataOf(diagram, frame);
   data.inputs = [p('in-mic-line-audio-1', 'in', 'TERMINAL-BLOCK', ['MIC-AUDIO'], 'audio'), p('in-mic-line-audio-2', 'in', 'TERMINAL-BLOCK', ['MIC-AUDIO'], 'audio')];
   const issues = computeIssues(diagram, { library });
-  assert.deepEqual(codes(issues, frame.id), ['slot-legacy-ports']);
+  // 단자 차이(library-drift)는 그대로 알리고, 예전 카드 단자 안내를 함께 낸다(슬롯이 비었다는 안내도)
+  assert.deepEqual(codes(issues, frame.id), ['library-drift', 'slot-empty', 'slot-legacy-ports']);
   assert.equal(issues.find(issue => issue.code === 'slot-legacy-ports').detail, 'blu: 2');
+  // 카드를 꽂아도 예전 단자가 남아 있으면 안내가 사라지지 않는다(자동 변환 없음)
+  const mounted = structuredClone(diagram);
+  assert.equal(updateSlotAssignments(mounted, frame.id, { S1: 'cin' }, { library }).ok, true);
+  assert.equal(legacyCardPortCount(library, dataOf(mounted, frame)), 2);
+  assert.ok(codes(computeIssues(mounted, { library }), frame.id).includes('slot-legacy-ports'));
+  // 프레임 단자 자체가 바뀐 경우(Portal 쪽 변경)는 예전 카드 단자로 보지 않고 library-drift로 둔다
+  const renamed = structuredClone(diagram);
+  const renamedData = dataOf(renamed, frame);
+  renamedData.inputs = [];
+  renamedData.bidirectional = [{ ...renamedData.bidirectional[0], id: 'both-lan-1' }];
+  assert.deepEqual(codes(computeIssues(renamed, { library }), frame.id), ['library-drift', 'slot-empty']);
   // 사용자가 추가한 단자는 예전 카드 단자로 보지 않는다
   data.inputs = [{ ...p('in-user-1', 'in', 'HDMI', ['HDMI'], 'video'), origin: 'user' }];
+  data.bidirectional = library.units.get('blu').equipment.bidirectional.map(port => ({ ...port }));
   data.portsEdited = true;
   data.userPortSeq = 1;
   assert.deepEqual(codes(computeIssues(diagram, { library }), frame.id), ['ports-edited', 'slot-empty']);
@@ -288,7 +303,7 @@ test('slotAssignments is checked by the validator and dropped when empty', () =>
   const { diagram, frame, library, opts } = sample();
   updateSlotAssignments(diagram, frame.id, { IN1: 'cin' }, opts);
   const { saved } = saveAndValidate(diagram, library);
-  for (const bad of [[], { IN1: '' }, { IN1: 3 }, 'IN1']) {
+  for (const bad of [[], { IN1: '' }, { IN1: 3 }, 'IN1', { 'IN-1': 'cin' }, { in1: 'cin' }, { IN0: 'cin' }]) {
     const copy = JSON.parse(JSON.stringify(saved));
     copy.nodes.find(node => node.id === frame.id).data.slotAssignments = bad;
     assert.ok(validateDiagram(copy).errors.some(error => error.code === 'structure' && error.path.endsWith('slotAssignments')), JSON.stringify(bad));
@@ -297,4 +312,20 @@ test('slotAssignments is checked by the validator and dropped when empty', () =>
   copy.nodes.find(node => node.id === frame.id).data.slotAssignments = {};
   const again = JSON.parse(serializeDiagram(copy, { library }));
   assert.equal('slotAssignments' in again.nodes.find(node => node.id === frame.id).data, false);
+});
+
+test('a card later dropped from the library does not block other slots, and reset on plain devices adds nothing', () => {
+  const { diagram, frame, src, library, opts } = sample();
+  updateSlotAssignments(diagram, frame.id, { IN1: 'cin' }, opts);
+  // 라이브러리에서 cin이 빠졌다고 본다
+  library.units.get('h2').unit.slots.compatibleCards = ['cin4', 'cout'];
+  const result = updateSlotAssignments(diagram, frame.id, { IN1: 'cin', IN2: 'cin4' }, opts);
+  assert.equal(result.ok, true);
+  assert.deepEqual(dataOf(diagram, frame).slotAssignments, { IN1: 'cin', IN2: 'cin4' });
+  // 그 슬롯에 다시 고르는 것은 막는다
+  assert.equal(updateSlotAssignments(diagram, frame.id, { IN2: 'cin' }, opts).code, 'card-incompatible');
+  // 카드 없는 장비의 되돌리기: 바뀐 것이 없고 optionPortIds를 새로 두지 않는다
+  const before = JSON.stringify(dataOf(diagram, src));
+  assert.deepEqual(resetFramePorts(diagram, src.id, library, opts), { ok: true, removedEdgeIds: [], changed: false });
+  assert.equal(JSON.stringify(dataOf(diagram, src)), before);
 });

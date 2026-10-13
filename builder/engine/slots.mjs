@@ -90,14 +90,18 @@ export function nodeLibraryEquipment(library, data) {
   return library?.units.get(data?.id)?.equipment ?? null;
 }
 
-// 예전 Builder·B-03 이전 라이브러리에서 펼쳐 둔 카드 단자 수(BLU-160 등). 슬롯 프레임인데 카드를 꽂지 않았고,
-// 라이브러리 프레임에 없는 단자(사용자 추가·카드 단자 제외)가 남아 있으면 그 수. 자동으로 옮기지 않는다(결정 D1)
+// 예전 Builder·B-03 이전 라이브러리에서 펼쳐 둔 카드 단자 수(BLU-160 등). 슬롯 프레임 노드에 라이브러리 프레임 단자가 id로 모두 남아 있고,
+// 그 밖에 사용자 추가 단자도 지금 장착한 카드 단자도 아닌 단자가 더 있으면 그 수다(카드를 꽂은 뒤에도 센다).
+// 프레임 단자가 하나라도 없어졌으면 Portal 쪽 단자 변경일 수 있어 0이다(library-drift가 알린다). 자동으로 옮기지 않는다(결정 D1)
 export function legacyCardPortCount(library, data) {
   const entry = library?.units.get(data?.id);
   if (!entry?.unit?.slots) return 0;
-  if (isObject(data.slotAssignments) && Object.keys(data.slotAssignments).length) return 0;
-  const known = new Set(Object.keys(PORT_LISTS).flatMap(list => (entry.equipment[list] ?? []).map(port => port.id)));
-  return Object.keys(PORT_LISTS).flatMap(list => data[list] ?? []).filter(port => port.origin !== 'user' && !known.has(port.id)).length;
+  const frameIds = Object.keys(PORT_LISTS).flatMap(list => (entry.equipment[list] ?? []).map(port => port.id));
+  const ports = Object.keys(PORT_LISTS).flatMap(list => data[list] ?? []);
+  const present = new Set(ports.map(port => port.id));
+  if (!frameIds.every(id => present.has(id))) return 0;
+  const known = new Set(frameIds);
+  return ports.filter(port => port.origin !== 'user' && !known.has(port.id) && slotOfPort(data, port.id) === null).length;
 }
 
 // 카드 품목 정의(최상위 options[]). 견적 옵션(store quoteOptions)과 같은 모양이다.
@@ -127,15 +131,18 @@ export function updateSlotAssignments(diagram, nodeId, assignments, { library = 
   const node = diagram.nodes[index];
   const slots = frameSlots(library, node.data.id);
   if (!slots) return problem('slots-missing', node.data.id);
+  const before = isObject(node.data.slotAssignments) ? node.data.slotAssignments : {};
   const wanted = {};
   for (const [slotId, cardUnitId] of Object.entries(assignments ?? {})) {
     if (!cardUnitId) continue;
-    if (!slots.list.some(slot => slot.id === slotId)) return problem('slot-unknown', slotId);
-    if (!slotCards(library, node.data.id, slotId).some(card => card.unitId === cardUnitId)) return problem('card-incompatible', `${slotId}: ${cardUnitId}`);
+    // 그대로 둔 슬롯은 다시 검사하지 않는다(나중에 라이브러리에서 빠진 카드가 다른 슬롯 변경을 막지 않게. 그 카드는 이슈로 알린다)
+    if (before[slotId] !== cardUnitId) {
+      if (!slots.list.some(slot => slot.id === slotId)) return problem('slot-unknown', slotId);
+      if (!slotCards(library, node.data.id, slotId).some(card => card.unitId === cardUnitId)) return problem('card-incompatible', `${slotId}: ${cardUnitId}`);
+    }
     wanted[slotId] = cardUnitId;
   }
   const next = orderedAssignments(slots, wanted);
-  const before = isObject(node.data.slotAssignments) ? node.data.slotAssignments : {};
   const changed = [...new Set([...Object.keys(before), ...Object.keys(next)])].filter(slotId => before[slotId] !== next[slotId]);
   if (!changed.length) return { ok: true, removedEdgeIds: [], changed: false };
 
@@ -147,7 +154,7 @@ export function updateSlotAssignments(diagram, nodeId, assignments, { library = 
   for (const list of Object.keys(PORT_LISTS)) nextData[list] = (node.data[list] ?? []).filter(port => !removedPort(port.id));
   for (const slotId of changed) {
     if (!next[slotId]) continue;
-    const ports = cardPorts(library.units.get(next[slotId]).equipment, next[slotId], slotId);
+    const ports = cardPorts(library.units.get(next[slotId])?.equipment, next[slotId], slotId);
     for (const list of Object.keys(PORT_LISTS)) { nextData[list].push(...ports[list]); added.push(...ports[list].map(port => port.id)); }
   }
   // 목록마다 프레임 단자(카드 단자가 아닌 것)를 앞에 두고 카드 단자를 슬롯 순서로 뒤에 둔다(같은 슬롯 안 순서는 유지)
@@ -184,7 +191,7 @@ export function updateSlotAssignments(diagram, nodeId, assignments, { library = 
   if (!result.ok || !result.changed) return result;
   // 카드 품목 정의를 최상위 options[]에 둔다(없을 때만. 견적 옵션처럼 정의는 지우지 않는다)
   const options = [...(diagram.options ?? [])];
-  for (const cardUnitId of newCount.keys()) if (!options.some(option => option.id === optionIdOf(cardUnitId))) options.push(cardOptionDefinition(library, cardUnitId));
+  for (const cardUnitId of newCount.keys()) if (library.units.has(cardUnitId) && !options.some(option => option.id === optionIdOf(cardUnitId))) options.push(cardOptionDefinition(library, cardUnitId));
   if (options.length || diagram.options) diagram.options = options;
   return result;
 }
@@ -197,7 +204,9 @@ export function resetFramePorts(diagram, nodeId, library, { removeEdges = false,
   const equipment = nodeLibraryEquipment(library, node.data);
   const cardIds = Object.keys(PORT_LISTS).flatMap(list => (equipment?.[list] ?? []).map(port => port.id)).filter(id => slotOfPort(node.data, id) !== null);
   const optionPortIds = [...new Set([...(node.data.optionPortIds ?? []).filter(id => slotOfPort(node.data, id) === null), ...cardIds])];
-  return resetEquipmentPorts(diagram, nodeId, equipment, { removeEdges, rules, powerEnabled, optionPortIds });
+  // 키가 없던 노드에 빈 목록을 새로 두지 않는다(카드 없는 장비의 되돌리기가 파일을 바꾸지 않게)
+  const keep = node.data.optionPortIds !== undefined || optionPortIds.length > 0;
+  return resetEquipmentPorts(diagram, nodeId, equipment, { removeEdges, rules, powerEnabled, ...(keep ? { optionPortIds } : {}) });
 }
 
 // 장착한 카드 수량이 견적 수량보다 크면 장착 수로 올린다(견적 옵션 탭에서 장착 수 밑으로 줄인 경우). 새 객체를 돌려준다

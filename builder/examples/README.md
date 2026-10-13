@@ -87,8 +87,8 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 | `product-removed` | 파일을 만든 뒤 Portal에서 제품이 빠졌다(단종 등) |
 | `library-drift` | 파일을 만든 뒤 Portal의 장비 정보가 바뀌었다(견적 정보는 비교하지 않는다) |
 | `ports-edited` | 이 구성도에서 장비의 단자를 고쳤다(`portsEdited`). 단자 수는 노드의 단자 목록을 그대로 읽는다 |
-| `slot-empty` | 슬롯이 있는 프레임에 카드를 하나도 꽂지 않았다(호환 카드 정보가 없는 프레임은 내지 않는다) |
-| `slot-legacy-ports` | 슬롯 프레임에 예전 방식으로 펼친 카드 단자가 남아 있다(`detail` = `<장비 ID>: <단자 수>`). 자동으로 옮기지 않는다 |
+| `slot-empty` | 슬롯이 있는 프레임에 카드를 하나도 꽂지 않았다. 호환 카드 정보가 없는 프레임(SPX-R6)은 `detail`이 `<장비 ID>: 장착 가능 모듈 정보 없음`이다 |
+| `slot-legacy-ports` | 슬롯 프레임에 예전 방식으로 펼친 카드 단자가 남아 있다(`detail` = `<장비 ID>: <단자 수>`). 프레임 단자가 id로 모두 남아 있을 때만 센다. 자동으로 옮기지 않는다 |
 
 ## 예제를 다시 만들 때
 
