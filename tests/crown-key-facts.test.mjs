@@ -1,3 +1,4 @@
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -30,7 +31,7 @@ const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const dataDir = new URL('beta/site/detail/data/', root);
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
-const crown = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json')
+const crown = readdirSync(dataDir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json')
   .map(name => name.slice(0, -5)).filter(slug => read(`beta/site/detail/data/${slug}.json`).manufacturer === 'Crown').sort();
 const pilot = 'dci-4-600da';
 const targets = crown.filter(slug => slug !== pilot);
@@ -77,7 +78,7 @@ test('the approved DCi 4|600DA pilot remains untouched', () => {
 });
 
 test('217 other product JSON objects retain their pre-task content', () => {
-  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
+  const names = readdirSync(dataDir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
   const otherNames = names.filter(name => !targets.includes(name.slice(0,-5)));
   const other = otherNames.map(name => [name,beforeHarmanW03014(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(beforeW032Product(beforeW026Product(read(`beta/site/detail/data/${name}`), name.slice(0,-5)), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);
   assert.equal(otherNames.length, 217);

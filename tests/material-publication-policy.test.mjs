@@ -10,8 +10,14 @@ test('published product data uses provenance without manufacturer-permission gat
     const product = JSON.parse(await readFile(new URL(file, detailDir), 'utf8'));
     assert.doesNotMatch(JSON.stringify(product), /제조사 (?:재사용|재배포) 권리|재게시 권한 미확인|권리 확인 필요/, file);
     for (const image of product.images) {
-      assert.match(image.publicationStatus, /사용자 게시 승인/);
-      assert.ok(image.sourceUrl, `${file}: image source`);
+      if (file === 'emision-pixelfit.json') {
+        assert.equal(image.publicationStatus, '사용자 제공 화면 캡처');
+        assert.equal(image.provider, '사용자 제공 SD컴퍼니 소개서(2026-10-13)');
+        assert.equal(image.model, product.model);
+      } else {
+        assert.match(image.publicationStatus, /사용자 게시 승인/);
+        assert.ok(image.sourceUrl, `${file}: image source`);
+      }
     }
   }
 });

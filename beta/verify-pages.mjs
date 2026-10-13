@@ -355,7 +355,17 @@ for (const slug of slugs) {
   verifyOfficialUrls(product, slug, allowedHostsFor(brandBySlug.get(slug)));
   assert.ok(Array.isArray(product.images), `${slug}: images 배열 누락`);
   assert.deepEqual(product.images, group1Images[slug], `${slug}: reviewed official image manifest`);
-  if (product.images.length) {
+  if (product.images.length && product.images.every(image => image.officialSource === false && image.provider === '사용자 제공 SD컴퍼니 소개서(2026-10-13)')) {
+    assert.equal(product.presentation.visualVariant, 'user-provided-screenshots');
+    assert.match(product.presentation.galleryRights, /사용자 제공.*화면 캡처/);
+    for (const image of product.images) {
+      assert.equal(image.verificationStatus, 'FOUND');
+      assert.equal(image.publicationStatus, '사용자 제공 화면 캡처');
+      const bytes = await readFile(new URL('detail/images/' + image.file, site));
+      assert.ok(bytes.length > 1_000, image.file + ': usable screenshot');
+      assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', image.file + ': PNG signature');
+    }
+  } else if (product.images.length) {
     assert.equal(product.presentation.visualVariant, 'official-product-images');
     assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
   } else {
@@ -370,4 +380,4 @@ for (const slug of slugs) {
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
-console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed official WebP images, ${previewImageFiles.length} card preview images, ${uploadManifest.uploads.length} user-uploaded PDF entries.`);
+console.log(`Public Pages artifact: ${catalog.length} equipment items, ${slugs.length} details, ${productImageFiles.length} reviewed product image assets, ${previewImageFiles.length} card preview images, ${uploadManifest.uploads.length} user-uploaded PDF entries.`);

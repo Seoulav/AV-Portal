@@ -255,6 +255,27 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .setting-table th, .setting-table td { min-width: 100px; overflow-wrap: anywhere; }
 .setting-card { min-width: 0; }
 @media (max-width:1000px) { .setting-card { grid-area: auto; } }
+.screen-example-section, .screen-example-grid, .screen-example-card { min-width: 0; max-width: 100%; }
+.screen-example-grid { display: grid; gap: 14px; }
+.screen-example-card { padding: 12px; border: 1px solid var(--pg-line); border-radius: 14px; background: #f8faff; }
+.screen-example-card h3 { margin: 0 0 8px; font-size: 14px; }
+.screen-example-figure { margin: 0; }
+.screen-example-art { display: block; width: 100%; }
+.screen-example-monitor { display: block; width: min(100%, 340px); height: auto; margin: 0 auto; }
+.screen-monitor-bezel, .screen-monitor-neck, .screen-monitor-foot { fill: #141820; }
+.screen-monitor-surface { fill: #050608; }
+.screen-active-area { fill: #007aff; }
+.screen-active-label { fill: #fff; font: 700 12px Pretendard, sans-serif; }
+.screen-mask-label { fill: #fff; font: 600 8px Pretendard, sans-serif; }
+.screen-example-figure figcaption { margin-top: 2px; color: var(--pg-ink-2); font-size: 10px; line-height: 1.4; }
+.screen-example-details { display: grid; gap: 6px; margin: 10px 0 0; }
+.screen-example-detail { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 8px; font-size: 11px; line-height: 1.45; }
+.screen-example-detail dt { color: var(--pg-ink-2); }
+.screen-example-detail dd { min-width: 0; margin: 0; overflow-wrap: anywhere; font-weight: 650; }
+@media (max-width:420px) {
+  .screen-example-card { padding: 10px; }
+  .screen-example-detail { grid-template-columns: 78px minmax(0,1fr); gap: 6px; }
+}
 
 .layer-comparison { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--pg-line); min-width: 0; }
 .layer-comparison h3 { margin: 0 0 8px; font-size: 15px; }

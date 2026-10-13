@@ -4734,5 +4734,35 @@
     ],
     "slug": "ds-8s",
     "card_image": "ds-8s-front.webp"
+  },
+  {
+    "brand": "SD컴퍼니",
+    "product": "emision Media Server",
+    "categories": [
+      "영상",
+      "Video",
+      "Media Server"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.sdcompany.kr/products/7",
+      "https://www.sdcompany.kr/products/8"
+    ],
+    "slug": "emision-media-server"
+  },
+  {
+    "brand": "SD컴퍼니",
+    "product": "emision PixelFit",
+    "categories": [
+      "영상",
+      "Video",
+      "Software"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.sdcompany.kr/"
+    ],
+    "slug": "emision-pixelfit",
+    "card_image": "emision-pixelfit-mask.png"
   }
 ]
