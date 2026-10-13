@@ -702,10 +702,12 @@ export const group1Images = {
     image('Diagram', 'lh55vhcrbgbxkr-diagram.webp', 'LH55VHCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면', 'Samsung', 'LH55VHCRBGBXKR', 'https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/', '480x2280', '480x2280', 'VERIFIED', 'Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용')
   ],
   lh55wmfwbgcxkr: [
-    image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55wmfwbgcxkr-diagram.webp', 'LH55WMFWBGCXKR 삼성전자 한글 사용설명서 13쪽 후면 단자 도면', 'Samsung', 'LH55WMFWBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/', '760x760', '760x760', 'VERIFIED', 'Diagram · 공식 한글 사용설명서 BN81-28453F-02 13쪽 WM55FX 전용 후면 도면 발췌')
   ],
   lh75wmfwlgcxkr: [
-    image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh75wmfwlgcxkr-diagram.webp', 'LH75WMFWLGCXKR 삼성전자 한글 사용설명서 14쪽 후면 단자 도면', 'Samsung', 'LH75WMFWLGCXKR', 'https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/', '760x800', '760x800', 'VERIFIED', 'Diagram · 공식 한글 사용설명서 BN81-28453F-02 14쪽 WM75FX 전용 후면 도면 발췌')
   ],
   'control-23-1': [
     image('Main', 'control-23-1-main.webp', 'JBL Control 23-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp', '1500x986', '1500x986', 'VERIFIED'),

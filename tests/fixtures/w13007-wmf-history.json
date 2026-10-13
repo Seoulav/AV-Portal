@@ -1,0 +1,112 @@
+{
+  "lh55wmfwbgcxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "lh55wmfwbgcxkr-main.webp",
+          "alt": "Flip Pro 전자칠판 55인치 정면",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "LH55WMFWBGCXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "ba619deca5ed491ac682bc5886654d56d20aa130650f19d5e3328d4ebabd5c1f"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+        }
+      ],
+      "approvedSha256": "0aee03d9b79cfb971f8cb024fc48a5245ae1bd4a8975ac87df5714fad75dfea3"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "164f88b565494e9384b85bc3a236f4a786e364c665288d1841f99b0de30d1d7d"
+    }
+  },
+  "lh75wmfwlgcxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "lh75wmfwlgcxkr-main.webp",
+          "alt": "Flip Pro 전자칠판 75인치 정면",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "LH75WMFWLGCXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "1ee84142dc3e2e2e3a2511af5f90b515870691919e6f9a0e4988c404035a139e"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/"
+        }
+      ],
+      "approvedSha256": "317135003c4b71ddba09e66edf98168ead6c6e2f0a1ee7191a2ec79a8dfc8a19"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "a91d9ab93077074e15c5df66e2d1cd049fb697b78b0993071bbbdeaa76519f3f"
+    }
+  }
+}
