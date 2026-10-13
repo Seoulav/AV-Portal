@@ -8,7 +8,7 @@
 // 덮개는 포인터를 받지 않아 단자 행의 핸들과 근접 연결은 그대로 동작한다.
 import { memo, type CSSProperties, type MouseEvent } from 'react';
 import { Handle, Position, type NodeProps } from '@xyflow/react';
-import { geometry as G, type EquipmentData, type Port } from '../engine';
+import { audioPortTags, geometry as G, type EquipmentData, type Port } from '../engine';
 import { portKey } from '../bundle';
 import { justConnected } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
@@ -18,6 +18,8 @@ const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
   const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}`;
   const review = !ACCEPTED.has(port.verification ?? '');
+  // 오디오 단자는 커넥터 약칭(XLR·EB·TRS…)과 레벨(MIC·LINE·M/L·SPK·AES)을 붙인다(B-20261013-05)
+  const audio = audioPortTags(port);
   const style = { '--port-color': color } as CSSProperties;
   const selected = picked ? ' port-selected' : '';
   // 노드 선택으로 번지지 않게 막는다. 선 긋기가 이 단자에서 끝난 직후의 click은 무시한다(gesture.ts)
@@ -32,6 +34,7 @@ function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: 
     <div className={`port-row port-${side}${selected}`} style={{ height: G.PORT_ROW_HEIGHT }}>
       <span className="port-dot" style={{ background: color }} />
       <span className="port-label">{port.label}</span>
+      {audio && <span className="port-audio">{audio.connector && <span className="port-conn">{audio.connector}</span>}<span className={`port-level level-${audio.level === 'M/L' ? 'ml' : audio.level.toLowerCase().replace('/', '')}`}>{audio.level}</span></span>}
       {review && <span className="port-badge">확인</span>}
       {side === 'left' && <Handle type="target" position={Position.Left} id={port.id} className={`port-handle port-handle-in nokey${selected}`} style={style} title={title} onClick={onClick} />}
       {side === 'right' && <Handle type="source" position={Position.Right} id={port.id} className={`port-handle port-handle-out nokey${selected}`} style={style} title={title} onClick={onClick} />}

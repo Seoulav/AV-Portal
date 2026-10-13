@@ -1,5 +1,6 @@
 // builder/engine(의존성 없는 JS 모듈)을 앱에서 타입과 함께 쓰기 위한 얇은 감싸개.
 // 규칙과 형식은 모두 엔진에 있다. 여기서는 타입만 붙인다.
+import * as A from '../engine/audio.mjs';
 import * as D from '../engine/defaults.mjs';
 import * as DG from '../engine/diagram.mjs';
 import * as G from '../engine/geometry.mjs';
@@ -117,6 +118,9 @@ export const createLibraryIndex = L.createLibraryIndex as (library: Library) => 
 export const findPort = L.findPort as (data: Equipment, portId: string) => Port | null;
 export const equipmentPorts = L.equipmentPorts as (data: Equipment) => Port[];
 export const judgeConnection = R.judgeConnection as (from: PortRef, to: PortRef, options?: { occupied?: (nodeId: string, portId: string) => boolean; powerEnabled?: boolean; rules?: Rules }) => Judgement;
+// 오디오 단자 배지·추천 케이블(B-20261013-05)
+export const audioPortTags = A.audioPortTags as (port: Port) => { connector: string | null; level: string } | null;
+export const audioCable = A.audioCable as (source: Port, target: Port, signal?: string) => { kind: 'analog' | 'digital' | 'speaker'; name: string; balanced?: boolean } | null;
 export const sourceHandleOf = R.sourceHandleOf as (port: Port) => string;
 export const targetHandleOf = R.targetHandleOf as (port: Port) => string;
 export const parseHandle = R.parseHandle as (handle: string | null | undefined) => { portId: string; role: 'source' | 'target' | null } | null;
