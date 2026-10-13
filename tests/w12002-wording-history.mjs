@@ -4,6 +4,7 @@ import { beforeMx392Ulxd4qFollowupProduct } from './mx392-ulxd4q-followup-histor
 import { beforeAverW12009Product, beforeAverW12009Raw } from './aver-w12009-history.mjs';
 import { beforeW13001Product, beforeW13001Raw } from './w13001-powersoft-history.mjs';
 import { beforeB13003Product, beforeB13003Raw } from './b13003-slot-history.mjs';
+import { beforeW13007Product, beforeW13007Raw } from './w13007-videowall-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
 // tested. Current non-wording fields pass through, so unrelated regressions
@@ -17,6 +18,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug){
+  current=beforeW13007Product(current,slug);
   current=beforeW13001Product(beforeB13003Product(current,slug),slug);
   current=beforeAverW12009Product(current,slug);
   if((slug==='ulxd4q' && current.portMap?.items?.length===13)||slug==='mx392-c')current=beforeMx392Ulxd4qFollowupProduct(current,slug);
@@ -42,6 +44,7 @@ export function beforeW12002Product(current,slug){
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW13007Raw(raw,slug);
   raw=beforeW13001Raw(beforeB13003Raw(raw,slug),slug);
   raw=beforeAverW12009Raw(raw,slug);
   if(!fixture[slug])return raw;
