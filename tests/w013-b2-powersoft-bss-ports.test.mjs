@@ -42,11 +42,16 @@ test('Powersoft MEZZO 322 AD has two physical GPI inputs', () => {
   assert.ok(!unresolvedAt(record, 2));
 });
 
-test('BSS BLU-160 exposes the maximum 16 optional card I/O terminals', () => {
+// B-20261013-03 D3: "최대 16채널" 펼침 대신 4슬롯(slots)에 카드를 장착한다. 카드 I/O 행은 슬롯 행이다.
+test('BSS BLU-160 optional card I/O rows are slot rows, not maximum-capacity terminals', () => {
   const record = product('blu-160');
-  for (const index of [0, 1, 2, 3, 4]) assert.ok(!unresolvedAt(record, index), `card row ${index}`);
-  assert.equal(ports(record, 'inputs', 'TERMINAL-BLOCK', 'LINE-AUDIO').length, 16);
-  assert.equal(ports(record, 'outputs', 'TERMINAL-BLOCK', 'LINE-AUDIO').length, 16);
+  for (const index of [0, 1, 2, 3, 4]) {
+    assert.ok(!unresolvedAt(record, index), `card row ${index}`);
+    assert.ok(record.nonPort.some(row => row.ioIndex === index && row.kind === 'slot'), `card row ${index} is a slot row`);
+  }
+  assert.equal(ports(record, 'inputs', 'TERMINAL-BLOCK', 'LINE-AUDIO').length, 0);
+  assert.equal(ports(record, 'outputs', 'TERMINAL-BLOCK', 'LINE-AUDIO').length, 0);
+  assert.equal(record.units[0].slots.shared, 4);
 });
 
 test('BSS BLU-50v2 watchdog output uses one documented Phoenix control terminal', () => {

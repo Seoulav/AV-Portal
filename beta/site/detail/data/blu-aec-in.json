@@ -251,6 +251,10 @@
       "verification": "FOUND"
     }
   ],
+  "slotType": "input",
+  "compatibleFrames": [
+    "blu-160"
+  ],
   "sources": [
     {
       "code": "P",

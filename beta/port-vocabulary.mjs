@@ -71,6 +71,9 @@ export const NON_PORT_RULES = Object.freeze([
   ['slot', 'connector', /슬롯|slot|보드\(선택형\)|CFexpress|카드/i, /Combicon|온보드|USB/i],
   ['slot', 'condition', /모듈 칸|카드 구성에 따라|카드형/],
 ]);
+// 슬롯 정보(slots)가 있는 프레임에서 카드를 꽂아야 생기는 행(availability 칸). 이 행은 슬롯 행으로 두고
+// 단자는 장착한 카드 제품에서 만든다(B-20261013-03). slots가 없는 제품에는 적용하지 않는다.
+export const CARD_IO_AVAILABILITY = /카드 장착 시/;
 
 // ── A2. 커넥터 ──
 export const UNKNOWN_CONNECTOR = /^(정보 없음|MISSING|—|커넥터 규격 정보 없음|)$/;
@@ -465,31 +468,8 @@ export const IO_OVERRIDES = Object.freeze({
     ],
     note: 'BSS BLU-101 model-specific datasheet lists 12 control inputs and 6 logic outputs; source row identifies Phoenix/Combicon; https://bssaudio.com/en-US/product_documents/blu101datasheet_18-0818-bpdf',
   },
-  'blu-160#0': {
-    match: { connector: 'Phoenix/Combicon (Analog Input Card)', signal: 'Mic/Line 아날로그 입력' },
-    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['MIC-AUDIO', 'LINE-AUDIO'], direction: 'in', quantity: 16 }],
-    note: 'BSS BLU-160 datasheet documents up to 16 optional analog input channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
-  },
-  'blu-160#1': {
-    match: { connector: 'Phoenix/Combicon (Analog Output Card)', signal: '라인 레벨 아날로그 출력' },
-    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['LINE-AUDIO'], direction: 'out', quantity: 16 }],
-    note: 'BSS BLU-160 datasheet documents up to 16 optional analog output channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
-  },
-  'blu-160#2': {
-    match: { connector: 'Phoenix/Combicon (Digital Input Card)', signal: 'AES/EBU, S/PDIF 디지털 입력' },
-    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['AES3', 'SPDIF'], direction: 'in', quantity: 16 }],
-    note: 'BSS BLU-160 datasheet lists the optional AES/EBU or S/PDIF digital input card and four card slots; represent 16 maximum selectable input channels without changing source text. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
-  },
-  'blu-160#3': {
-    match: { connector: 'Phoenix/Combicon (Digital Output Card)', signal: 'AES/EBU, S/PDIF 디지털 출력' },
-    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['AES3', 'SPDIF'], direction: 'out', quantity: 16 }],
-    note: 'BSS BLU-160 datasheet lists the optional AES/EBU or S/PDIF digital output card and four card slots; represent 16 maximum selectable output channels without changing source text. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
-  },
-  'blu-160#4': {
-    match: { connector: 'Phoenix/Combicon (AEC Input Card)', signal: 'AEC 마이크 입력' },
-    ports: [{ connector: 'TERMINAL-BLOCK', signals: ['MIC-AUDIO'], direction: 'in', quantity: 16 }],
-    note: 'BSS BLU-160 datasheet lists up to 16 optional AEC input card channels across four card slots; retain the source quantity wording and represent maximum capacity. https://bssaudio.com/en-US/product_documents/blu160datasheet-pdf',
-  },
+  // BLU-160 카드 I/O 행(0~4)의 "최대 16채널" 펼침은 B-20261013-03에서 뺐다. 상세에 slots(공용 4슬롯)가 생겨
+  // 그 행은 슬롯 행이 되고, 단자는 장착한 카드 제품(blucard-in·blucard-out·blu-aec-in)에서 만든다.
   'blu-160#8': {
     match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
     ports: [

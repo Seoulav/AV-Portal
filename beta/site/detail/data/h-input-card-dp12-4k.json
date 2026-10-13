@@ -183,6 +183,11 @@
       "verification": "FOUND"
     }
   ],
+  "slotType": "input",
+  "compatibleFrames": [
+    "novastar-h2",
+    "novastar-h5"
+  ],
   "sources": [
     {
       "code": "P",
