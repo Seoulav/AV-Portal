@@ -8,7 +8,7 @@
 // 덮개는 포인터를 받지 않아 단자 행의 핸들과 근접 연결은 그대로 동작한다.
 import { memo, useEffect, type CSSProperties, type MouseEvent } from 'react';
 import { Handle, Position, useUpdateNodeInternals, type NodeProps } from '@xyflow/react';
-import { audioPortTags, geometry as G, type EquipmentData, type Port } from '../engine';
+import { audioPortTags, connectorLabel, geometry as G, type EquipmentData, type Port } from '../engine';
 import { portKey } from '../bundle';
 import { justConnected } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
@@ -18,7 +18,7 @@ const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
   // 사용자가 추가한 단자는 점선 테두리와 "추가" 표시를 단다(B-20261013-01 결정 D3). Portal 검증 상태가 없다
   const user = port.origin === 'user';
-  const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}${user ? ' · 사용자 추가' : port.edited ? ' · 구성도에서 고침' : ''}`;
+  const title = `${port.label} · ${connectorLabel(port.connector)} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}${user ? ' · 사용자 추가' : port.edited ? ' · 구성도에서 고침' : ''}`;
   const review = !user && !ACCEPTED.has(port.verification ?? '');
   // 오디오 단자는 커넥터 약칭(XLR·EB·TRS…)과 레벨(MIC·LINE·M/L·SPK·AES)을 붙인다(B-20261013-05)
   const audio = audioPortTags(port);

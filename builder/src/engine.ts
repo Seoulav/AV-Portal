@@ -113,6 +113,7 @@ export interface PortAnchor { portId: string; handle: string; side: 'left' | 'ri
 export interface Judgement { allowed: boolean; code?: string; source: PortRef; target: PortRef; flipped: boolean; signal?: string; lineTypeId?: string; findings?: Issue[] }
 
 export const DEFAULT_RULES = D.DEFAULT_RULES as unknown as Rules;
+export const connectorLabel = D.connectorLabel as (id: string) => string;
 export const createIdFactory = DG.createIdFactory as (options?: { seed?: number; now?: number }) => IdFactory;
 export const createDiagram = DG.createDiagram as (options?: { library?: LibraryIndex | null; generatorVersion?: string }) => Diagram;
 export const addEquipmentNode = DG.addEquipmentNode as (diagram: Diagram, equipment: Equipment, options?: { position?: { x: number; y: number }; isReused?: boolean; ids?: IdFactory }) => DiagramNode;
