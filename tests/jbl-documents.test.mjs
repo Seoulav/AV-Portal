@@ -1,3 +1,4 @@
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -120,7 +121,7 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
       assert.equal(hash(Buffer.from(beforeHarmanW03014Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
     }
   }
-  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x) && !isW006Name(x) && !isW007Name(x) && !isW06002Name(x) && !isW1010Name(x) && !isW1012Name(x)&&!slugs.includes(x.slice(0,-5))).sort();
+  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && !isW004Name(x) && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x) && !isW006Name(x) && !isW007Name(x) && !isW06002Name(x) && !isW1010Name(x) && !isW1012Name(x)&&!slugs.includes(x.slice(0,-5))).sort();
   const digest=hash(names.map(name=>{
     const slug=name.slice(0,-5);
     const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);

@@ -1,3 +1,4 @@
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { isApprovedCpqTemplate } from '../scripts/cpq-public-assets.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
@@ -83,16 +84,16 @@ test('three exact workbook models retain their own facts and omit unsupported co
 });
 
 test('LED cabinet addition changes only the three new products and keeps the private workbook offline', () => {
-  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
+  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW004Name(file) && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
   assert.equal(files.length, 247);
   const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(beforeW006Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '02769b62612aacaee971e39f4a7783469415c2a8a4aa8280830b4e4e4f499083');
   const catalog = beforeW1010Catalog(beforeW1012Catalog(read('beta/site/catalog.json')));
-  assert.equal(catalog.length, 272);
+  assert.equal(catalog.length, 274);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),
     ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']);
-  const previous = beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const previous = beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '8af626c34c459c90001f5dae1698ea1bbbb5899ed1a132932c84c89c747a02c0');
   const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], {
     cwd: fileURLToPath(root), encoding: 'utf8'

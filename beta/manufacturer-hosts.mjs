@@ -24,6 +24,7 @@ export const manufacturerHosts = {
   Roland: ['roland.com'],
   'Ross Video': ['rossvideo.com'],
   Samsung: ['samsung.com', 'samsungsvc.co.kr'],
+  'SD컴퍼니': ['sdcompany.kr'],
   Shure: ['shure.com', 'shureweb.eu', 'shure.widen.net'],
   Sony: ['pro.sony', 'sony.net', 'sony.co.kr', 'sony.com'],
   SurgeX: ['ametekesp.com'],
