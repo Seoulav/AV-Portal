@@ -1,7 +1,8 @@
 // 키 순서·필드 정리(기반명세 §3.4·§8.2·§8.3). serialize·issues가 함께 쓴다.
 
-export const PORT_KEYS = ['id', 'label', 'type', 'direction', 'connector', 'signals', 'verification', 'portalIo'];
-export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal', 'systemName', 'selectedOptionQuantities', 'optionPortIds'];
+// origin·edited·portsEdited: 구성도 안에서 고친 단자 표시(B-20261013-01). 1.1 키 뒤에 추가만 한다
+export const PORT_KEYS = ['id', 'label', 'type', 'direction', 'connector', 'signals', 'verification', 'portalIo', 'origin', 'edited'];
+export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal', 'portsEdited', 'systemName', 'selectedOptionQuantities', 'optionPortIds'];
 export const PORTAL_KEYS = ['productId', 'source', 'unit', 'variant', 'detailUrl'];
 export const ANNOTATION_DATA_KEYS = ['label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderRadius', 'textAlign', 'locked'];
 export const SHAPE_DATA_KEYS = ['shapeType', 'label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderWidth', 'locked'];
@@ -21,6 +22,9 @@ export function normalizePort(port) {
   const out = pick(port, PORT_KEYS);
   if (Array.isArray(out.signals)) out.signals = [...out.signals];
   if (out.portalIo) out.portalIo = pick(out.portalIo, ['group', 'connector', 'signal']);
+  // 표시는 켜졌을 때만 남긴다
+  if (out.origin !== 'user') delete out.origin;
+  if (out.edited !== true) delete out.edited;
   return out;
 }
 
@@ -35,5 +39,6 @@ export function normalizeEquipmentData(data, { withReused = true } = {}) {
   if (data.selectedOptionQuantities) out.selectedOptionQuantities = { ...data.selectedOptionQuantities };
   if (data.optionPortIds) out.optionPortIds = [...data.optionPortIds];
   if (data.portal) out.portal = pick(data.portal, PORTAL_KEYS);
+  if (out.portsEdited !== true) delete out.portsEdited;
   return pick(out, EQUIPMENT_DATA_KEYS);
 }

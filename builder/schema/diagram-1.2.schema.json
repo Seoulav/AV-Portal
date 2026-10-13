@@ -204,6 +204,14 @@
               "type": "string"
             }
           }
+        },
+        "origin": {
+          "const": "user",
+          "description": "구성도에서 사용자가 추가한 단자(B-20261013-01). id는 <in|out|both>-user-<n>. Portal 검증 상태(verification)가 없다"
+        },
+        "edited": {
+          "type": "boolean",
+          "description": "라이브러리 단자를 이 구성도에서 고쳤다. id는 라이브러리 그대로다"
         }
       }
     },
@@ -306,6 +314,10 @@
         },
         "portal": {
           "$ref": "#/$defs/portal"
+        },
+        "portsEdited": {
+          "type": "boolean",
+          "description": "이 노드의 단자가 라이브러리(Portal)와 다르다. 구성도 안에서만 고친 값이다"
         },
         "systemName": {
           "type": "string"
@@ -596,7 +608,8 @@
             "no-ports",
             "series-config-pending",
             "product-removed",
-            "library-drift"
+            "library-drift",
+            "ports-edited"
           ]
         },
         "severity": {
