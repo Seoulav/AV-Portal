@@ -27,6 +27,20 @@
       "originalSize": "1920x1280",
       "resolution": "1920x1280",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "lh55wmfwbgcxkr-diagram.webp",
+      "alt": "LH55WMFWBGCXKR 삼성전자 한글 사용설명서 13쪽 후면 단자 도면",
+      "note": "Diagram · 공식 한글 사용설명서 BN81-28453F-02 13쪽 WM55FX 전용 후면 도면 발췌",
+      "provider": "Samsung",
+      "model": "LH55WMFWBGCXKR",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "760x760",
+      "resolution": "760x760",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -53,6 +67,11 @@
     {
       "role": "Other",
       "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
       "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/"
     }
   ],
@@ -475,5 +494,71 @@
       "value": "회전형(가로/세로 모드 전환)",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "lh55wmfwbgcxkr-diagram.webp",
+      "width": 760,
+      "height": 760
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 출력",
+        "desc": "HDMI 케이블로 외부 기기에 화면 출력",
+        "y1": 145,
+        "y2": 209,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "RJ45(LAN)",
+        "desc": "LAN 케이블로 네트워크 연결 · 10/100 Mbps",
+        "y1": 239,
+        "y2": 285,
+        "side": "left"
+      },
+      {
+        "n": 3,
+        "label": "SERVICE",
+        "desc": "서비스 전용 · 연결 금지",
+        "y1": 315,
+        "y2": 345,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력",
+        "desc": "HDMI 케이블로 외부기기 화면 입력",
+        "y1": 384,
+        "y2": 449,
+        "side": "left"
+      },
+      {
+        "n": 5,
+        "label": "오디오 출력",
+        "desc": "음향 케이블로 소리 출력",
+        "y1": 499,
+        "y2": 531,
+        "side": "left"
+      },
+      {
+        "n": 6,
+        "label": "USB(후면)",
+        "desc": "후면 USB 메모리 연결 · 허용 전류 최대 1.0 A",
+        "y1": 565,
+        "y2": 624,
+        "side": "left"
+      },
+      {
+        "n": 7,
+        "label": "TOUCH",
+        "desc": "PC 터치 제어용 USB 연결",
+        "y1": 659,
+        "y2": 689,
+        "side": "left"
+      }
+    ]
+  }
 }
