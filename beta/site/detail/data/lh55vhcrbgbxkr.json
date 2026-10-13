@@ -27,6 +27,20 @@
       "originalSize": "1920x1280",
       "resolution": "1920x1280",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "lh55vhcrbgbxkr-diagram.webp",
+      "alt": "LH55VHCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면",
+      "note": "Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용",
+      "provider": "Samsung",
+      "model": "LH55VHCRBGBXKR",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "480x2280",
+      "resolution": "480x2280",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -53,6 +67,11 @@
     {
       "role": "Other",
       "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
       "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
     }
   ],
@@ -630,5 +649,119 @@
       "value": "0.88",
       "unit": "mm"
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "lh55vhcrbgbxkr-diagram.webp",
+      "width": 480,
+      "height": 2280
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "IR 출력",
+        "desc": "외장 센서 보드 입력 신호 루프아웃",
+        "y1": 77,
+        "y2": 130,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "IR 입력",
+        "desc": "외장 센서 보드 전원 공급 · 조도 센서 신호 입력",
+        "y1": 177,
+        "y2": 230,
+        "side": "left"
+      },
+      {
+        "n": 3,
+        "label": "DVI 입력",
+        "desc": "DVI 또는 HDMI-DVI 케이블로 외부기기 연결",
+        "y1": 345,
+        "y2": 505,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 1",
+        "desc": "HDMI 케이블로 외부기기 연결",
+        "y1": 625,
+        "y2": 790,
+        "side": "left"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 2",
+        "desc": "HDMI 케이블로 외부기기 연결",
+        "y1": 826,
+        "y2": 991,
+        "side": "left"
+      },
+      {
+        "n": 6,
+        "label": "DP 입력",
+        "desc": "DP 케이블로 PC 연결",
+        "y1": 1033,
+        "y2": 1150,
+        "side": "left"
+      },
+      {
+        "n": 7,
+        "label": "오디오 출력",
+        "desc": "음향 케이블로 소리 출력",
+        "y1": 1252,
+        "y2": 1305,
+        "side": "left"
+      },
+      {
+        "n": 8,
+        "label": "오디오 입력",
+        "desc": "음향 케이블로 소리 입력",
+        "y1": 1361,
+        "y2": 1415,
+        "side": "left"
+      },
+      {
+        "n": 9,
+        "label": "RS-232C 출력",
+        "desc": "Serial cable로 다음 디스플레이에 제어 명령 전달 · 루프아웃",
+        "y1": 1472,
+        "y2": 1526,
+        "side": "left"
+      },
+      {
+        "n": 10,
+        "label": "RS-232C 입력",
+        "desc": "RS232C 어댑터로 MDC 연결",
+        "y1": 1584,
+        "y2": 1639,
+        "side": "left"
+      },
+      {
+        "n": 11,
+        "label": "DP 출력(LOOPOUT)",
+        "desc": "DP 케이블로 다음 디스플레이 연결 · 같은 모델 간 연결 권장 · FHD 전용 DP 루프아웃 세트와 비호환",
+        "y1": 1739,
+        "y2": 1858,
+        "side": "left"
+      },
+      {
+        "n": 12,
+        "label": "SERVICE",
+        "desc": "서비스 전용 단자",
+        "y1": 1900,
+        "y2": 1982,
+        "side": "left"
+      },
+      {
+        "n": 13,
+        "label": "RJ45(LAN)",
+        "desc": "LAN 케이블로 MDC 연결 · 10/100 Mbps",
+        "y1": 2075,
+        "y2": 2161,
+        "side": "left"
+      }
+    ]
+  }
 }
