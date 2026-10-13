@@ -5,6 +5,7 @@ import * as D from '../engine/defaults.mjs';
 import * as DG from '../engine/diagram.mjs';
 import * as G from '../engine/geometry.mjs';
 import * as I from '../engine/issues.mjs';
+import * as IR from '../engine/io-request.mjs';
 import * as L from '../engine/library.mjs';
 import * as N from '../engine/normalize.mjs';
 import * as P from '../engine/ports.mjs';
@@ -21,7 +22,8 @@ export interface Port {
   connector: string;
   signals: string[];
   verification?: string;
-  portalIo?: { group: string; connector: string; signal: string };
+  // ioIndex·direction·quantity: 라이브러리 1.2.0(B-20261013-02). 구성도 파일에는 group·connector·signal만 저장한다
+  portalIo?: { group: string; connector: string; signal: string; ioIndex?: number; direction?: string; quantity?: string };
   // 구성도에서 고친 단자(B-20261013-01): 사용자가 추가한 단자는 origin 'user', 라이브러리 단자를 고쳤으면 edited
   origin?: 'user';
   edited?: boolean;
@@ -164,3 +166,29 @@ export const geometry = {
   nodeHeight: G.nodeHeight as (data: Equipment) => number,
   portAnchors: G.portAnchors as (data: Equipment) => PortAnchor[],
 };
+
+// Portal 반영 요청(B-20261013-02). 장비 설정 창이 고친 단자를 Portal io 행 변경으로 묶어 파일로 내려받는다
+export interface IoRow { group: string; connector: string; signal: string; direction: string; quantity: string }
+export type IoChange =
+  | { op: 'add'; row: IoRow; reason: string }
+  | { op: 'update'; ioIndex: number; before: IoRow; after: IoRow; reason: string }
+  | { op: 'remove'; ioIndex: number; before: IoRow; reason: string };
+export interface IoRequest {
+  schema: 'av-portal.builder-io-request';
+  schemaVersion: '1.0.0';
+  productId: string;
+  source: 'portal' | 'rtcom';
+  unitId: string;
+  model?: string;
+  createdAt?: string;
+  library: { catalogSha: string; detailSetSha: string; rtcomSha?: string };
+  changes: IoChange[];
+}
+// code: label(이름만 바꿈) · override(개별 지정 행) · override-shift(행 삭제가 개별 지정 번호를 밀어냄) · not-representable(Portal 원문으로 나타낼 수 없음)
+export interface IoNotReflected { code: 'label' | 'override' | 'override-shift' | 'not-representable'; ports: string[]; detail?: string }
+export interface IoRequestPort { id?: string; label: string; connector: string; signals: string[]; origin?: 'user'; reason?: string }
+export interface IoRequestResult { ok: boolean; code?: 'library-missing' | 'library-old' | 'library-changed'; detail?: string; request: IoRequest | null; notReflected: IoNotReflected[] }
+export const buildIoRequest = IR.buildIoRequest as (input: { lists: PortLists<IoRequestPort>; data: Pick<EquipmentData, 'model' | 'portal'>; libraryEquipment: Equipment | null; librarySource?: Record<string, string>; signalVocabulary?: VocabularySignal[]; createdAt?: string }) => IoRequestResult;
+export const ioRequestFileName = IR.ioRequestFileName as (productId: string, date?: Date) => string;
+export const serializeIoRequest = IR.serializeIoRequest as (request: IoRequest) => string;
+export const validateIoRequest = IR.validateIoRequest as (request: unknown) => string[];

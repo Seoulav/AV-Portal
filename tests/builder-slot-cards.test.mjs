@@ -21,9 +21,9 @@ const unitOf = (lib, unitId) => lib.products.flatMap(product => product.units).f
 const frame = (slots, io = []) => ({ slug: 'frame', detail: { io, slots } });
 const card = (slug, slotType, compatibleFrames, io = [row('HDMI', 'HDMI 입력')]) => ({ slug, categories: CARD, detail: { io, slotType, compatibleFrames } });
 
-test('library schemaVersion is 1.1.0 (slot·card fields added)', () => {
-  assert.equal(LIBRARY_SCHEMA_VERSION, '1.1.0');
-  assert.equal(library().schemaVersion, '1.1.0');
+test('library schemaVersion is 1.2.0 (1.1.0 slot·card, 1.2.0 portalIo row fields)', () => {
+  assert.equal(LIBRARY_SCHEMA_VERSION, '1.2.0');
+  assert.equal(library().schemaVersion, '1.2.0');
 });
 
 test('a Portal frame carries numbered slots, source and verification on its unit', () => {
