@@ -45,9 +45,10 @@ test('all published fallback display values stay within 20 characters without ch
     fallback++;
     assert.ok(product.keySpecifications.every(item=>[item.value,item.unit].filter(Boolean).join(' ').length<=20),file);
   }
-  // W-007 adds two authored QMC cards; W-004 adds PixelFit's evidence-based metric tiles.
-  assert.equal(authored,124);
-  assert.equal(fallback,143);
+  // W-010 moves DM3 from fallback to a four-tile authored card so the
+  // model-specific Dante difference is visible without losing prior values.
+  assert.equal(authored,125);
+  assert.equal(fallback,142);
 });
 
 test('RTCOM detail keeps its existing unfiltered fallback presentation',async()=>{

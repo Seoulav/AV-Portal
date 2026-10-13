@@ -33,7 +33,13 @@ test('DM3 and DM7 retain every marker fact while moving only the approved sides'
 
 test('DM3 distinguishes Dante-capable DM3 from DM3 Standard using separate documents', () => {
   const dm3 = product('dm3');
-  assert.deepEqual(dm3.keyFacts, [{ label: 'Dante 지원 차이', value: 'DM3 지원 · DM3 Standard(DM3S) 미지원', unit: '' }]);
+  assert.deepEqual(dm3.keyFacts, [
+    { label: '믹스버스', value: '6', unit: '' },
+    { label: '샘플링 주파수 · 신호 지연', value: '96 / 48 kHz · 1.3 ms 미만', unit: '' },
+    { label: 'PC/Mac 레코딩·플레이백', value: '18 트랙', unit: '' },
+    { label: 'Dante 지원 차이', value: 'DM3 지원 · DM3 Standard(DM3S) 미지원', unit: '' },
+  ]);
+  assert.deepEqual(prepareEnhancements(dm3).keyFacts, dm3.keyFacts);
   assert.equal(dm3.documents.find(row => row.type === 'Specification').url,
     'https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/specs.html');
   assert.deepEqual(dm3.sources.filter(row => ['U1', 'U2'].includes(row.code)).map(row => row.code), ['U1', 'U2']);
