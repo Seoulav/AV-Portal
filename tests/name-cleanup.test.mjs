@@ -1,3 +1,4 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyCatalogNames, applyDetailNames } from '../beta/name-cleanup.mjs';
@@ -72,7 +73,7 @@ test('normalizes the approved BSS EC-4BV Network/Control label only', async () =
 });
 
 test('renamed catalog categories preserve home top-category counts and filter membership', async () => {
-  const catalog = beforeW1010Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8')));
+  const catalog = beforeW1010Catalog(beforeW009Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'))));
   assert.deepEqual(mapTopCategories(catalog).map(({ id, count }) => [id, count]), [
     ['audio', 116],
     ['video', 69],

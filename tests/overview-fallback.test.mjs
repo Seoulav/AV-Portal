@@ -48,7 +48,7 @@ test('all published fallback display values stay within 20 characters without ch
   // W-010 moves DM3 from fallback to a four-tile authored card so the
   // model-specific Dante difference is visible without losing prior values.
   assert.equal(authored,125);
-  assert.equal(fallback,142);
+  assert.equal(fallback,146);
 });
 
 test('RTCOM detail keeps its existing unfiltered fallback presentation',async()=>{
