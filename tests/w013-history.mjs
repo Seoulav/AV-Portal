@@ -6,6 +6,7 @@ import { beforeW013A2Product } from './w013-a2-history.mjs';
 import { beforeW013A2Raw } from './w013-a2-history.mjs';
 import { rewindW013B2Product, rewindW013B2Raw } from './w013-b2-history.mjs';
 import { beforeW13001Product, beforeW13001Raw } from './w13001-powersoft-history.mjs';
+import { beforeB13003Product, beforeB13003Raw } from './b13003-slot-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w013-product-history.json', import.meta.url), 'utf8'));
 export const w013Slugs = new Set(Object.keys(fixture));
@@ -13,7 +14,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 // Rewind each approved W-013 batch in reverse order; the final whole-product SHA catches other edits.
 export function beforeW013Product(current, slug) {
-  current = beforeW13001Product(current, slug);
+  current = beforeW13001Product(beforeB13003Product(current, slug), slug);
   current = beforeW013A2Product(current, slug);
   current = rewindW013B2Product(current, slug);
   current = beforeW013AProduct(current, slug);
@@ -26,7 +27,7 @@ export function beforeW013Product(current, slug) {
 }
 
 export function beforeW013Raw(raw, slug) {
-  let result = beforeW013A2Raw(beforeW13001Raw(raw, slug), slug);
+  let result = beforeW013A2Raw(beforeW13001Raw(beforeB13003Raw(raw, slug), slug), slug);
   result = rewindW013B2Raw(result, slug);
   result = beforeW013ARaw(result, slug);
   if (w013Slugs.has(slug)) {
