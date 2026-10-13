@@ -51,6 +51,7 @@ const markup = `
   </div>
   <div class="ds8s-guide-block ds8s-communication">
     <h3>RS-485 통신 연결 <small>가이드 4쪽</small></h3>
+    <p>이 RJ-45 핀 안내는 설정 가이드 판본의 내용입니다. 제조사 제공 실물 후면 사진에는 SERIAL 4핀과 LINK IN/OUT 단자가 보이므로 사진의 단자에 RJ-45 핀 번호를 적용하지 마십시오.</p>
     <div class="ds8s-pin-layout">
       <svg viewBox="0 0 410 180" role="img" aria-labelledby="ds8s-rj-title ds8s-rj-desc">
         <title id="ds8s-rj-title">RS-485S INPUT RJ-45 핀 안내</title>
