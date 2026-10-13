@@ -8,6 +8,7 @@ import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs?v=w20261012-015-rt
 import { distributorLinkFor } from '../shared/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../shared/brand-links.mjs';
 import { mountRtcomProductView } from './rtcom-embed.mjs?v=w20261013-002';
+import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-006';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -400,6 +401,7 @@ if (!productKey) {
     $('#io').append(renderSignalFlow(section03Content.flow, data.model));
   }
   for (const [index, setting] of enhancements.settings.entries()) $('.detail-cards').append(renderSetting(setting, index + 6));
+  if (productKey === 'ds-8s') $('#documents').before(renderDs8sGuide());
 
   const specificationRows = [];
   if (data.series) specificationRows.push(['시리즈', data.series]);

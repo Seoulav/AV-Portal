@@ -28,6 +28,7 @@ import { beforeSamsungW04017Raw } from './samsung-w04017-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 import { beforeW033Uploads, isW033Manual } from './w033-history.mjs';
 import { isW011Manual } from './w011-history.mjs';
+import { beforeW13005Raw, isW13006Manual } from './w13005-ds8s-history.mjs';
 
 GlobalWorkerOptions.workerSrc = new URL('../beta/site/vendor/pdfjs/pdf.worker.min.mjs', import.meta.url).href;
 const root = new URL('../beta/site/', import.meta.url);
@@ -74,7 +75,7 @@ test('PDF.js requests a new password after an incorrect attempt', async () => {
 
 test('all other posted PDFs, product JSON, and document links keep their prior bytes', () => {
   const manuals = new URL('manuals/', root);
-  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && !isW033Manual(name) && !isW011Manual(name)).sort();
+  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && !isW033Manual(name) && !isW011Manual(name) && !isW13006Manual(name)).sort();
   assert.equal(files.length, 56);
   const others = createHash('sha256');
   for (const name of files.filter(name => !targetSet.has(name)))
@@ -86,7 +87,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)
-    productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
+    productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(beforeW13005Raw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
   const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
   const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(manifest.uploads))) }, null, 2) + '\n';

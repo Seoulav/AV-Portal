@@ -176,7 +176,8 @@ export const group1Images = {
     image('Rear', 'sx-1216-rti-rear.webp', 'SurgeX SX-1216-RTi 후면 단자 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '740×120', 'FOUND')
   ],
   'ds-8s': [
-    image('Front', 'ds-8s-front.webp', 'VS ENT DS-8S 순차전원공급기 전면', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '1469×273(제조사 리플렛 EMF에서 추출)', '1469×273', 'VERIFIED', 'Front · 제조사 DS-8S 리플렛 이미지')
+    image('Front', 'ds-8s-front.webp', 'VS ENT DS-8S 순차전원공급기 전면', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '1469×273(제조사 리플렛 EMF에서 추출)', '1469×273', 'VERIFIED', 'Front · 제조사 DS-8S 리플렛 이미지'),
+    image('Diagram', 'ds-8s-diagram.webp', 'VS ENT DS-8S 설명서 3쪽 후면 패널 도면. 순차 전원 출력 8구, 제어·통신 단자와 AC 입력 단자대', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '제조사 설명서 3쪽 벡터 도면', '1362×280', 'VERIFIED', 'Diagram · 사용자 제공 VS ENT DS-8S Operating Manual 3쪽 후면 패널 도면')
   ],
   'led-780h': [
     image('Front', 'led-780h-front.webp', 'Magnimage LED-780H 전면 이미지', 'Magnimage', 'LED-780H', 'https://www.magnimage.com/Upload/2022/7/202207266625494.png', '880×278(제조사 제품 목록 대표 이미지)', '880×220', 'FOUND')
