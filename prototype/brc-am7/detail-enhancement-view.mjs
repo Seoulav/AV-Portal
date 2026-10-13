@@ -304,40 +304,36 @@ export function renderSignalFlow(flow, model) {
 const svgText = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
 export function renderScreenExampleSvg(item) {
   const bounds = { x: 28, y: 24, width: 304, height: 171 };
-  const sourceWidth = item.signalType === 'output' ? item.outputWidth : 1920;
-  const sourceHeight = item.signalType === 'output' ? item.outputHeight : 1080;
+  const sourceWidth = item.signalType === 'output' ? item.outputWidth : item.signalWidth;
+  const sourceHeight = item.signalType === 'output' ? item.outputHeight : item.signalHeight;
   const aspect = sourceWidth / sourceHeight;
   const screen = aspect < bounds.width / bounds.height
     ? { x: bounds.x + (bounds.width - bounds.height * aspect) / 2, y: bounds.y, width: bounds.height * aspect, height: bounds.height }
     : { x: bounds.x, y: bounds.y + (bounds.height - bounds.width / aspect) / 2, width: bounds.width, height: bounds.width / aspect };
   const activeWidth = screen.width * item.activeWidth / sourceWidth;
   const activeHeight = screen.height * item.activeHeight / sourceHeight;
+  const activeX = screen.x + screen.width * (item.offsetX || 0) / sourceWidth;
+  const activeY = screen.y + screen.height * (item.offsetY || 0) / sourceHeight;
   const displayLabel = `${item.activeWidth}×${item.activeHeight}`;
+  const maskLabelX = item.rightMargin > 0
+    ? activeX + activeWidth + screen.width * item.rightMargin / sourceWidth / 2
+    : screen.x + screen.width / 2;
+  const maskLabelY = item.bottomMargin > 0 && item.rightMargin === 0
+    ? activeY + activeHeight + screen.height * item.bottomMargin / sourceHeight / 2
+    : activeY + activeHeight / 2;
   const maskLabel = item.masked
-    ? `<text class="screen-mask-label" x="${screen.x + 5}" y="${screen.y + screen.height - screen.height * item.bottomMargin / 2160 + 3}">마스킹(검정) 영역</text>`
+    ? `<text class="screen-mask-label" x="${maskLabelX}" y="${maskLabelY}" text-anchor="middle" dominant-baseline="middle">마스킹(검정) 영역</text>`
     : '';
-  return `<svg class="screen-example-monitor" viewBox="0 0 360 258" role="img" aria-label="화면 구성 예시: ${svgText(displayLabel)} 활성 표시 영역${item.masked ? ', 검정 마스킹 영역' : ', 마스킹 없음'}">
+  const activeLabel = item.areaLabel || '활성 표시 영역';
+  return `<svg class="screen-example-monitor" viewBox="0 0 360 258" role="img" aria-label="화면 구성 예시: ${svgText(item.signal)} 신호, ${svgText(displayLabel)} ${svgText(activeLabel)}${item.masked ? ', 검정 마스킹 영역' : ', 마스킹 없음'}">
     <rect class="screen-monitor-bezel" x="18" y="14" width="324" height="191" rx="12" />
     <rect class="screen-monitor-surface" x="${screen.x}" y="${screen.y}" width="${screen.width}" height="${screen.height}" rx="2" />
-    <rect class="screen-active-area" x="${screen.x}" y="${screen.y}" width="${activeWidth}" height="${activeHeight}" />
-    <text class="screen-active-label" x="${screen.x + activeWidth / 2}" y="${screen.y + activeHeight / 2}" text-anchor="middle" dominant-baseline="middle">${svgText(displayLabel)}</text>
+    <rect class="screen-active-area" x="${activeX}" y="${activeY}" width="${activeWidth}" height="${activeHeight}" />
+    <text class="screen-active-label" x="${activeX + activeWidth / 2}" y="${activeY + activeHeight / 2}" text-anchor="middle" dominant-baseline="middle">${svgText(displayLabel)}</text>
     ${maskLabel}
     <path class="screen-monitor-neck" d="M156 205h48l10 30h-68z" />
     <rect class="screen-monitor-foot" x="132" y="234" width="96" height="8" rx="4" />
   </svg>`;
-}
-const modeIcon = icon => icon === 'resolution'
-  ? '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3.5" y="5" width="25" height="18" rx="2.5"/><path d="M12 28h8M16 23v5M10 11h12M10 15h8"/></svg>'
-  : '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3.5" y="5" width="25" height="22" rx="2.5"/><path d="M9 10h14v12H9zM4 5l5 5M28 27l-5-5"/></svg>';
-function renderModeCards(setting, card) {
-  const grid = el('div', 'mode-card-grid');
-  for (const item of setting.items) {
-    const mode = el('article', `mode-card mode-card-${item.icon}`);
-    const icon = el('span', 'mode-card-icon'); icon.innerHTML = modeIcon(item.icon);
-    mode.append(icon, el('h3', '', item.name), el('p', 'mode-card-english', item.english), el('p', 'mode-card-summary', item.summary));
-    grid.append(mode);
-  }
-  card.append(grid);
 }
 function renderScreenExample(item) {
   const example = el('article', 'screen-example-card');
@@ -345,14 +341,14 @@ function renderScreenExample(item) {
   const image = el('span', 'screen-example-art'); image.innerHTML = renderScreenExampleSvg(item);
   const caption = item.signalType === 'output'
     ? `출력 해상도 자체가 ${item.signal} · 마스킹 없음`
-    : item.masked ? '파란 칸: 활성 표시 영역 · 검정: 마스킹 영역' : item.note;
+    : item.masked ? `파란 칸: ${item.areaLabel || '활성 표시 영역'} · 검정: 마스킹 영역` : item.note;
   figure.append(image, el('figcaption', '', caption));
   example.append(figure);
   const details = el('dl', 'screen-example-details');
   const rows = [
     ['적용 방식', item.method],
-    [item.signalType === 'output' ? '출력 해상도' : '신호 해상도', item.signalType === 'output' ? item.signal : `${item.signal} (변경 불가)`],
-    ['활성 표시 영역', `${item.activeWidth}×${item.activeHeight}px`]
+    [item.signalType === 'output' ? '출력 해상도' : '신호 해상도', item.signal],
+    [item.areaLabel || '활성 표시 영역', `${item.activeWidth}×${item.activeHeight}px`]
   ];
   if (item.masked) {
     rows.push(['위치', `X ${item.offsetX} · Y ${item.offsetY}`]);
@@ -367,28 +363,14 @@ function renderScreenExample(item) {
 }
 function renderScreenExamples(setting, card) {
   card.classList.add('screen-example-section');
-  const tabs = el('div', 'screen-example-tabs');
-  tabs.setAttribute('role', 'tablist'); tabs.setAttribute('aria-label', setting.title);
-  const panel = el('div', 'screen-example-panel'); panel.setAttribute('role', 'tabpanel'); panel.tabIndex = 0;
-  panel.id = `${card.id}-example-panel`;
-  const buttons = setting.items.map((item, index) => {
-    const button = el('button', 'screen-example-tab', item.name);
-    button.type = 'button'; button.setAttribute('role', 'tab');
-    button.setAttribute('aria-controls', panel.id); button.id = `${card.id}-example-tab-${index + 1}`;
-    button.setAttribute('aria-selected', index === 0 ? 'true' : 'false'); button.tabIndex = index === 0 ? 0 : -1;
-    button.addEventListener('click', () => select(index));
-    button.addEventListener('keydown', event => {
-      const last = buttons.length - 1;
-      const next = event.key === 'ArrowRight' ? (index + 1) % buttons.length : event.key === 'ArrowLeft' ? (index + last) % buttons.length : event.key === 'Home' ? 0 : event.key === 'End' ? last : -1;
-      if (next >= 0) { event.preventDefault(); buttons[next].focus(); select(next); }
-    });
-    tabs.append(button); return button;
-  });
-  function select(index) {
-    buttons.forEach((button, current) => { button.setAttribute('aria-selected', current === index ? 'true' : 'false'); button.tabIndex = current === index ? 0 : -1; });
-    panel.setAttribute('aria-labelledby', buttons[index].id); panel.replaceChildren(renderScreenExample(setting.items[index]));
+  const grid = el('div', 'screen-example-grid');
+  for (const [index, item] of setting.items.entries()) {
+    const example = renderScreenExample(item);
+    example.prepend(el('h3', '', item.name));
+    example.dataset.example = String(index + 1);
+    grid.append(example);
   }
-  select(0); card.append(tabs, panel);
+  card.append(grid);
 }
 export function renderSetting(setting, number) {
   const card = el('section', 'pg-card setting-card');
@@ -399,7 +381,6 @@ export function renderSetting(setting, number) {
   title.append(el('span', 'pg-idx', card.dataset.card), document.createTextNode(setting.title));
   card.append(title);
   if (setting.kind === 'screen-examples') renderScreenExamples(setting, card);
-  else if (setting.kind === 'mode-cards') renderModeCards(setting, card);
   else if (setting.kind === 'modes') for (const item of setting.items) {
     const details = el('details', 'pg-inline-more');
     details.append(el('summary', '', item.name), el('p', '', item.summary));

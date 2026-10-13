@@ -55,23 +55,22 @@ test('SD컴퍼니 feature labels end as compact noun phrases', async () => {
   }
 });
 
-test('PixelFit screen examples preserve the three approved layouts and render a monitor diagram', async () => {
+test('PixelFit presents the 4K AOI baseline and NVIDIA custom resolution as static monitor examples', async () => {
   const product = detail('emision-pixelfit');
   const examples = product.settings?.find(item => item.kind === 'screen-examples')?.items;
-  assert.equal(examples?.length, 3, 'only the three approved layouts should appear');
-  assert.deepEqual(examples?.map(item => [item.activeWidth, item.activeHeight, item.offsetX, item.offsetY, item.rightMargin, item.bottomMargin]), [
-    [1340, 780, undefined, undefined, undefined, undefined],
-    [1295, 780, 0, 0, 625, 300],
-    [1920, 1080, undefined, undefined, undefined, undefined]
+  assert.equal(examples?.length, 2, 'the 4K baseline and captured NVIDIA output are shown');
+  assert.deepEqual(examples?.map(item => [item.signal, item.activeWidth, item.activeHeight, item.offsetX, item.offsetY, item.rightMargin, item.bottomMargin]), [
+    ['3840×2160', 1295, 780, 0, 0, 2545, 1380],
+    ['1340×780', 1340, 780, undefined, undefined, undefined, undefined]
   ]);
-  assert.deepEqual(examples?.map(item => item.method), ['커스텀 해상도 제작', '표시 영역 마스킹 + emision 작업표시줄', '마스킹 없음']);
+  assert.deepEqual(examples?.map(item => item.method), ['표시 영역(AOI) 마스킹 + emision 작업표시줄', '커스텀 해상도 제작']);
   assert.match(product.overview, /NVIDIA.*커스텀 해상도/);
   assert.match(product.overview, /AMD.*일반.*마스킹.*작업표시줄/);
   assert.ok(product.features.some(item => item.text === 'NVIDIA GPU 커스텀 해상도 제작'));
   assert.ok(product.features.some(item => item.text === '일반 모드 마스킹·작업표시줄 표시 및 디버그 모드'));
   assert.equal(product.specifications.find(item => item.name === 'NVIDIA 적용 방식')?.condition, '사용자 확인(2026-10-13)');
-  assert.deepEqual(examples?.map(item => item.signal), ['1340×780', '1920×1080@60Hz', '1920×1080@60Hz']);
-  assert.equal(examples?.[2].note, '물리 해상도 그대로');
+  assert.equal(product.presentation.keyFactsVariant, undefined, 'the previous standard facts presentation is restored');
+  assert.equal(product.settings.some(item => item.kind === 'mode-cards'), false);
   const { renderScreenExampleSvg } = await import('../beta/site/detail/detail-enhancement-view.mjs');
   const [{ enhancementErrors: siteEnhancementErrors }, { enhancementErrors: pageEnhancementErrors }] = await Promise.all([
     import('../beta/site/detail/detail-enhancements.mjs'), import('../prototype/brc-am7/detail-enhancements.mjs')
@@ -81,8 +80,9 @@ test('PixelFit screen examples preserve the three approved layouts and render a 
   const svg = renderScreenExampleSvg(examples[0]);
   assert.match(svg, /<svg[^>]+viewBox=/);
   assert.match(svg, /class="screen-active-area"/);
-  assert.doesNotMatch(svg, /마스킹\(검정\) 영역/);
-  assert.match(svg, /1340×780/);
-  assert.match(renderScreenExampleSvg(examples[1]), /마스킹\(검정\) 영역/);
-  assert.doesNotMatch(renderScreenExampleSvg(examples[2]), /마스킹\(검정\) 영역/);
+  assert.match(svg, /3840×2160 신호/);
+  assert.match(svg, /표시 영역\(AOI\)/);
+  assert.match(svg, /마스킹\(검정\) 영역/);
+  assert.match(renderScreenExampleSvg(examples[1]), /1340×780/);
+  assert.doesNotMatch(renderScreenExampleSvg(examples[1]), /마스킹\(검정\) 영역/);
 });
