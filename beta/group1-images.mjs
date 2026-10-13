@@ -17,6 +17,10 @@ const imageWith = (rights) => (role, file, alt, provider, model, sourceUrl, orig
   publicationStatus: rights
 });
 const image = imageWith(publicationStatus);
+const providedScreenshot = (role, file, alt, note) => ({
+  role, file, alt, note, provider: '사용자 제공 SD컴퍼니 소개서(2026-10-13)', model: 'emision PixelFit',
+  officialSource: false, verificationStatus: 'FOUND', publicationStatus: '사용자 제공 화면 캡처'
+});
 // Group 2 카드 대표 사진 조사 기록(Work/기록/W-20260925-012-사진조사.md)에서 넘어온 8개 제품 전용.
 const group2Image = imageWith(group2PublicationStatus);
 
@@ -1016,6 +1020,13 @@ export const group1Images = {
   ua845uwb: [
     image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '3140x700'),
     image('Rear', 'ua845uwb-rear.webp', 'UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp', '3300x3300', '3140x700')
+  ],
+  'emision-media-server': [],
+  'emision-pixelfit': [
+    providedScreenshot('마스킹 화면', 'emision-pixelfit-mask.png', 'emision PixelFit 표시 영역 좌표와 출력 마스킹 화면', '표시 영역과 여백 계산 화면'),
+    providedScreenshot('적용 방식', 'emision-pixelfit-methods.png', 'NVIDIA·AMD 하드웨어 마스크 적용 방식 선택 화면', 'NVIDIA·AMD 마스크 방식 설명'),
+    providedScreenshot('AMD 마스크', 'emision-pixelfit-amd.png', 'emision PixelFit AMD 하드웨어 마스크 화면', 'AMD 마스크 선택 화면'),
+    providedScreenshot('디버그 모드', 'emision-pixelfit-debug.png', 'emision PixelFit 디버그 모드 화면', '디버그 모드 UI 예시')
   ]
 };
 
@@ -1302,5 +1313,6 @@ export const cardImages = {
   'mxa925w-r': 'mxa925wr-front.webp',
   ua864a: 'ua864a-front.webp',
   'mx392-c': 'mx392c-front.webp',
-  ua845uwb: 'ua845uwb-front.webp'
+  ua845uwb: 'ua845uwb-front.webp',
+  'emision-pixelfit': 'emision-pixelfit-mask.png'
 };

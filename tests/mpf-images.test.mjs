@@ -51,7 +51,7 @@ test('MPF cabinets have model-linked official Main photos while unverified LED c
     .filter(file => file.endsWith('.json') && read(`beta/site/detail/data/${file}`).images.length === 0)
     .map(file => file.replace(/\.json$/, '')).sort();
   assert.deepEqual(imageless, [
-    'ie015a-e', 'ie020a-e', 'if015r-m', 'lh65behhlbfxkr',
+    'emision-media-server', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh65behhlbfxkr',
     'ultrimix-dante', 'ultrimix-mxr', 'ultriscape', 'ultrisync-18'
   ]);
 });

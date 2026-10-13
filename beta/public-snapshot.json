@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 274,
-    "sha256": "15B46E2A95C1FDB14A4164D37618E99A30AFA774E55AB0F0C5B31AF01B4C2A97",
+    "count": 276,
+    "sha256": "5F161EE863C6E17504BFB682BAC0E0097A1B1532D5792AD42977AF092FA77C09",
     "baselineCount": 25,
     "baselineSha256": "8835F3145F1DBC14141E700D4F3F99ACFD847020AB08A562D0C2C2EE53F053B8"
   },
@@ -582,6 +582,18 @@
       "features": 6,
       "specifications": 15,
       "io": 10
+    },
+    "emision-media-server": {
+      "sha256": "E88362FCF5B679A6216A5DE558348687D9F93785B5930AD55922F5FAF1E2CCEB",
+      "features": 10,
+      "specifications": 10,
+      "io": 3
+    },
+    "emision-pixelfit": {
+      "sha256": "D7C7AD84DCC3C734732DB84F22E7CD6276EE5E84F3975B4E7BC33C76ED899130",
+      "features": 9,
+      "specifications": 6,
+      "io": 0
     },
     "ez-hsv-plus": {
       "sha256": "BE2C740525868CE1EC60C890744C9C381755D0FE65C0B6E7A263625E453838F3",

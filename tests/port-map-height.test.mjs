@@ -1,3 +1,4 @@
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -27,7 +28,7 @@ const root=new URL('../',import.meta.url);
 const baseline=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-014-baseline.json',root),'utf8'));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const details=new URL('beta/site/detail/data/',root);
-const products=readdirSync(details).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
+const products=readdirSync(details).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
 const read=slug=>JSON.parse(readFileSync(new URL(`${slug}.json`,details),'utf8'));
 const size=product=>{
   const resolution=product.images.find(image=>image.role===product.portMap.image)?.resolution;

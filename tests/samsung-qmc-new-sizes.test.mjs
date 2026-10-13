@@ -54,7 +54,7 @@ test('QM50C and QM75C have their own specifications and a validated eleven-port 
     });
     assert.equal(sha(file(`beta/site/detail/images/${slug}-diagram.webp`)), sha(file('beta/site/detail/images/lh55qmcebgcxkr-diagram.webp')));
   }
-  assert.equal(catalog.length, 272);
+  assert.equal(catalog.length, 274);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
 });
 
