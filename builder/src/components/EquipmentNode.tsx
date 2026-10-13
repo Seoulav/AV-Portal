@@ -16,8 +16,10 @@ import { builderStore, useBuilder } from '../state/useBuilder';
 const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 
 function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
-  const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}`;
-  const review = !ACCEPTED.has(port.verification ?? '');
+  // 사용자가 추가한 단자는 점선 테두리와 "추가" 표시를 단다(B-20261013-01 결정 D3). Portal 검증 상태가 없다
+  const user = port.origin === 'user';
+  const title = `${port.label} · ${port.connector} · ${port.signals.join(', ')}${port.verification ? ` · ${port.verification}` : ''}${user ? ' · 사용자 추가' : port.edited ? ' · 구성도에서 고침' : ''}`;
+  const review = !user && !ACCEPTED.has(port.verification ?? '');
   const style = { '--port-color': color } as CSSProperties;
   const selected = picked ? ' port-selected' : '';
   // 노드 선택으로 번지지 않게 막는다. 선 긋기가 이 단자에서 끝난 직후의 click은 무시한다(gesture.ts)
@@ -29,10 +31,11 @@ function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: 
     else builderStore.getState().selectPorts([key]);
   };
   return (
-    <div className={`port-row port-${side}${selected}`} style={{ height: G.PORT_ROW_HEIGHT }}>
+    <div className={`port-row port-${side}${selected}${user ? ' port-user' : ''}`} style={{ height: G.PORT_ROW_HEIGHT }}>
       <span className="port-dot" style={{ background: color }} />
       <span className="port-label">{port.label}</span>
       {review && <span className="port-badge">확인</span>}
+      {user && <span className="port-badge port-badge-user">추가</span>}
       {side === 'left' && <Handle type="target" position={Position.Left} id={port.id} className={`port-handle port-handle-in nokey${selected}`} style={style} title={title} onClick={onClick} />}
       {side === 'right' && <Handle type="source" position={Position.Right} id={port.id} className={`port-handle port-handle-out nokey${selected}`} style={style} title={title} onClick={onClick} />}
       {side === 'both' && <Handle type="target" position={Position.Left} id={`target_${port.id}`} className={`port-handle port-handle-in port-handle-half nokey${selected}`} style={style} title={title} onClick={onClick} />}
@@ -60,7 +63,7 @@ function EquipmentNodeView({ id, data, selected }: NodeProps) {
   return (
     <div className={`equipment-node${selected ? ' selected' : ''}${equipment.isReused ? ' reused' : ''}`} style={sizes}>
       <div className="node-header node-drag" style={{ height: G.NODE_HEADER_HEIGHT }}>
-        <div className="node-brand">{equipment.manufacturer}{tag && <span className="node-tag">{tag}</span>}{equipment.isReused && <span className="node-tag reused">재사용</span>}</div>
+        <div className="node-brand">{equipment.manufacturer}{tag && <span className="node-tag">{tag}</span>}{equipment.isReused && <span className="node-tag reused">재사용</span>}{equipment.portsEdited && <span className="node-tag edited" title="이 구성도에서 단자를 고쳤습니다">단자 수정</span>}</div>
         <div className="node-model">{equipment.model}</div>
         <div className="node-name">{equipment.name}</div>
       </div>

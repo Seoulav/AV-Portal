@@ -16,6 +16,7 @@ export const ISSUE_LABELS: Record<string, string> = {
   'series-config-pending': '시리즈 구성 미정',
   'product-removed': 'Portal에서 빠진 장비',
   'library-drift': 'Portal 정보가 바뀐 장비',
+  'ports-edited': '구성도에서 단자를 고친 장비',
 };
 const SEVERITIES: [Issue['severity'], string][] = [['warning', '주의'], ['info', '안내']];
 

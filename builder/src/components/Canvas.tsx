@@ -82,6 +82,7 @@ export function Canvas() {
   const connect = useBuilder(state => state.connect);
   const addEquipment = useBuilder(state => state.addEquipment);
   const editNote = useBuilder(state => state.editNote);
+  const openNodeSettings = useBuilder(state => state.openNodeSettings);
   const theme = useBuilder(state => state.theme);
   const removeElements = useBuilder(state => state.removeElements);
   const selectedEdgeIds = useBuilder(state => state.selectedEdgeIds);
@@ -279,10 +280,12 @@ export function Canvas() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  // 메모·영역은 두 번 눌러 서식 패널의 글 칸으로 간다(구 Builder는 서식 창을 열었다)
+  // 메모·영역은 두 번 눌러 서식 패널의 글 칸으로 간다(구 Builder는 서식 창을 열었다).
+  // 장비는 두 번 눌러 장비 설정 창을 연다(B-20261013-01, 구 Builder EditNodeModal)
   const onNodeDoubleClick = useCallback((_: unknown, node: Node) => {
-    if (node.type !== 'equipment') editNote(node.id);
-  }, [editNote]);
+    if (node.type === 'equipment') openNodeSettings(node.id);
+    else editNote(node.id);
+  }, [editNote, openNodeSettings]);
 
   const onDrop = useCallback((event: DragEvent) => {
     event.preventDefault();

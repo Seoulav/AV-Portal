@@ -250,3 +250,33 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
  .toolbar-status { width: 100%; }
  .equipment-quote-panel { max-height: none; }
 }
+
+/* 장비 설정 창(B-20261013-01) */
+.node-tag.edited { color: var(--muted); background: color-mix(in srgb, var(--muted) 14%, transparent); }
+/* 사용자가 추가한 단자: 점선 테두리 + "추가" 표시(결정 D3) */
+.port-row.port-user { outline: 1px dashed color-mix(in srgb, var(--accent) 70%, transparent); outline-offset: -2px; border-radius: 4px; }
+.port-badge.port-badge-user { color: var(--accent); background: var(--accent-soft); }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.modal { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+  width: min(760px, 94vw); max-height: 88vh; display: flex; flex-direction: column; padding: 14px 16px; gap: 10px; box-sizing: border-box; }
+.modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.modal-sub { font-size: 12px; color: var(--muted); }
+.modal-tabs { display: flex; gap: 6px; }
+.modal-body { overflow-y: auto; min-height: 120px; }
+.modal-section { display: flex; flex-direction: column; gap: 8px; }
+.modal-error { color: var(--danger); font-size: 13px; margin: 0; }
+.modal-confirm { display: flex; flex-direction: column; gap: 8px; padding: 10px; border-radius: 8px; background: var(--warn-soft); color: var(--text); font-size: 13px; }
+.port-section { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid var(--line); }
+.port-section-title { font-size: 13px; margin: 0 0 2px; }
+.port-section-title .muted { color: var(--muted); font-weight: 400; }
+.port-edit-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) auto; gap: 4px 6px; align-items: center; padding: 3px 4px; border-radius: 6px; }
+.port-edit-row.user { outline: 1px dashed color-mix(in srgb, var(--accent) 70%, transparent); outline-offset: -1px; }
+.port-edit-row input, .port-edit-row select { min-width: 0; width: 100%; box-sizing: border-box; }
+.port-edit-tools { display: flex; gap: 2px; }
+.port-edit-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; }
+.port-edit-meta:empty { display: none; }
+.port-tag { font-size: 11px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); border-radius: 4px; padding: 0 5px; }
+.port-tag.user { color: var(--accent); background: var(--accent-soft); }
+.port-tag.link { color: var(--warn); background: var(--warn-soft); }
+.port-add-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 64px auto; gap: 6px; margin-top: 2px; }
+.port-add-row select, .port-add-row input { min-width: 0; width: 100%; box-sizing: border-box; }
