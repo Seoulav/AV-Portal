@@ -11,7 +11,7 @@
 - 구성도 JSON 1.2에 필드 추가(1.1 키는 그대로): 단자 `origin: "user"`·`edited: true`, 노드 `data.portsEdited: true`·`data.userPortSeq`(마지막 사용자 단자 번호, 지운 번호 재사용 방지). 스키마·검증기·타입 반영
 - 이슈 `ports-edited`(안내): 단자를 고친 노드는 `library-drift` 대신 이 이슈를 낸다. 단자 밖의 차이는 그대로 `library-drift`다
 - 사용자가 추가한 단자는 노드·도면(SVG·PDF)에 점선 테두리·"추가" 표시를 단다. 단자를 고친 장비 헤더에 "단자 수정"을 단다
-- 엔진 테스트 14건(`tests/builder-port-edit.test.mjs`), vitest 6건(`test/node-settings.test.ts`), Playwright 5건(`e2e/node-settings.spec.ts`)
+- 엔진 테스트 15건(`tests/builder-port-edit.test.mjs`), vitest 6건(`test/node-settings.test.ts`), Playwright 5건(`e2e/node-settings.spec.ts`)
 
 ### Changed
 - 장비 하나를 골랐을 때 오른쪽 패널은 요약(시스템명·재활용·단자 수·옵션)과 "설정 열기"만 보인다. 시스템명·옵션 품목 입력은 설정 창으로 옮겼다
