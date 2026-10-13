@@ -750,7 +750,7 @@
       "connector": "GPIO 단자대",
       "signal": "다목적 GPIO",
       "direction": "I/O",
-      "quantity": "",
+      "quantity": "2",
       "protocol": "",
       "availability": "",
       "condition": "MEZZO Series User Guide 39쪽 · 제어용 GPIO 단자대",
