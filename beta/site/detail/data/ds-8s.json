@@ -353,14 +353,66 @@
   ],
   "portMap": {
     "image": "Diagram",
-    "measuredImage": { "file": "ds-8s-diagram.webp", "width": 1362, "height": 280 },
+    "measuredImage": {
+      "file": "ds-8s-diagram.webp",
+      "width": 1362,
+      "height": 280
+    },
     "items": [
-      { "n": 1, "label": "순차 AC 출력 CH1–8", "desc": "AC 220V 순차 출력 콘센트 8구 · DS-8S 설명서 3쪽", "x1": 24, "x2": 1150, "y": 208, "side": "bottom" },
-      { "n": 2, "label": "DC 24V 출력", "desc": "전류 표기는 리플렛 500mA·설명서 800mA로 불일치 · 설명서 3쪽 후면 단자", "x1": 850, "x2": 905, "y": 67, "side": "top" },
-      { "n": 3, "label": "RS-485 링크", "desc": "8P 모듈러 잭 · IN/OUT 링크 · DS-8S 설명서 3쪽", "x1": 955, "x2": 1053, "y": 69, "side": "top" },
-      { "n": 4, "label": "REMOTE SWITCH", "desc": "원격 SEQUENCE POWER ON/OFF 스위치 연결잭 · DS-8S 설명서 3쪽", "x1": 1066, "x2": 1108, "y": 65, "side": "top" },
-      { "n": 5, "label": "REMOTE LED", "desc": "원격 전원 상태 LED 연결잭 · DS-8S 설명서 3쪽", "x1": 1113, "x2": 1155, "y": 65, "side": "top" },
-      { "n": 6, "label": "AC 전원 입력 L/N/E", "desc": "AC 220V 60Hz 메인 전원 입력 단자대 · DS-8S 설명서 3쪽", "x": 1310, "y1": 50, "y2": 252, "side": "right" }
+      {
+        "n": 1,
+        "label": "순차 AC 출력 CH1–8",
+        "desc": "AC 220V 순차 출력 콘센트 8구 · DS-8S 설명서 3쪽",
+        "x1": 27,
+        "x2": 1148,
+        "y": 176,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "DC 24V 출력",
+        "desc": "전류 표기는 리플렛 500mA·설명서 800mA로 불일치 · 설명서 3쪽 후면 단자",
+        "x1": 845,
+        "x2": 906,
+        "y": 48,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "RS-485 링크",
+        "desc": "8P 모듈러 잭 · IN/OUT 링크 · DS-8S 설명서 3쪽",
+        "x1": 958,
+        "x2": 1053,
+        "y": 47,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "REMOTE SWITCH",
+        "desc": "원격 SEQUENCE POWER ON/OFF 스위치 연결잭 · DS-8S 설명서 3쪽",
+        "x1": 1070,
+        "x2": 1107,
+        "y": 43,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "REMOTE LED",
+        "desc": "원격 전원 상태 LED 연결잭 · DS-8S 설명서 3쪽",
+        "x1": 1109,
+        "x2": 1148,
+        "y": 43,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "AC 전원 입력 L/N/E",
+        "desc": "AC 220V 60Hz 메인 전원 입력 단자대 · DS-8S 설명서 3쪽",
+        "x": 1331,
+        "y1": 14,
+        "y2": 265,
+        "side": "right"
+      }
     ]
   },
   "sources": [
