@@ -92,7 +92,7 @@
       "status": "FOUND",
       "title": "공식 제품 페이지 사양(Specs) 탭",
       "language": "ko",
-      "note": "Outline·General specifications 표 수록",
+      "note": "제조사 웹 사양표 링크 유지 · DM3 및 DM3 Standard 데이터시트 원본은 아래 파일 카드에서 보기·내려받기",
       "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/specs.html"
     },
     {
@@ -385,6 +385,16 @@
       "name": "제조사 이미지 자료",
       "url": "https://kr.yamaha.com/ko/files/DM3-front_tcm144-1729385.jpg",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "U1",
+      "name": "사용자 제공 Yamaha DM3 Technical Data Sheet(7쪽, 2026-10-13)",
+      "scope": "DM3 Dante 지원·16입력/16출력·Primary/Secondary; 제조사 발행 원본, 사용자 제공"
+    },
+    {
+      "code": "U2",
+      "name": "사용자 제공 Yamaha DM3 Standard(DM3S) Technical Data Sheet(7쪽, 2026-10-13)",
+      "scope": "DM3 Standard Dante I/O No; 제조사 발행 원본, 사용자 제공"
     }
   ],
   "issues": [
@@ -429,16 +439,16 @@
         "x1": 389,
         "x2": 692,
         "y": 143,
-        "side": "bottom"
+        "side": "top"
       },
       {
-      "n": 3,
-      "label": "INPUT 9–12",
-      "desc": "XLR 마이크·라인 입력 4채널",
-      "y1": 205,
-      "y2": 285,
-      "side": "right",
-      "x": 1022
+        "n": 3,
+        "label": "INPUT 9–12",
+        "desc": "XLR 마이크·라인 입력 4채널",
+        "y1": 205,
+        "y2": 285,
+        "side": "right",
+        "x": 1022
       },
       {
         "n": 4,
@@ -504,5 +514,12 @@
         "side": "bottom"
       }
     ]
-  }
+  },
+  "keyFacts": [
+    {
+      "label": "Dante 지원 차이",
+      "value": "DM3 지원 · DM3 Standard(DM3S) 미지원",
+      "unit": ""
+    }
+  ]
 }

@@ -1,0 +1,352 @@
+{
+  "dm3": {
+    "prior": {
+      "portMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "dm3-rear.webp",
+          "width": 1082,
+          "height": 476
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "INPUT 1–4",
+            "desc": "XLR 마이크·라인 입력 4채널",
+            "x1": 695,
+            "x2": 1004,
+            "y": 143,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "INPUT 5–8",
+            "desc": "XLR 마이크·라인 입력 4채널",
+            "x1": 389,
+            "x2": 692,
+            "y": 143,
+            "side": "bottom"
+          },
+          {
+            "n": 3,
+            "label": "INPUT 9–12",
+            "desc": "XLR 마이크·라인 입력 4채널",
+            "y1": 205,
+            "y2": 285,
+            "side": "right",
+            "x": 1022
+          },
+          {
+            "n": 4,
+            "label": "INPUT 13–16 (콤보)",
+            "desc": "XLR/TRS 콤보 입력 4채널",
+            "x1": 389,
+            "x2": 692,
+            "y": 242,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "OUTPUT 1–4",
+            "desc": "XLR 라인 출력 4채널",
+            "x1": 78,
+            "x2": 385,
+            "y": 143,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "OUTPUT 5–8",
+            "desc": "XLR 라인 출력 4채널",
+            "x1": 78,
+            "x2": 385,
+            "y": 242,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "Dante PRIMARY · SECONDARY",
+            "desc": "etherCON 네트워크 포트 2개",
+            "x1": 624,
+            "x2": 779,
+            "y": 378,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "LAN",
+            "desc": "제어 네트워크 RJ-45",
+            "x1": 888,
+            "x2": 960,
+            "y": 387,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "USB TO HOST",
+            "desc": "USB Type-B",
+            "x1": 811,
+            "x2": 859,
+            "y": 400,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "DC INPUT",
+            "desc": "XLR 4핀 전원 입력",
+            "x1": 161,
+            "x2": 235,
+            "y": 379,
+            "side": "bottom"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "User Manual",
+          "status": "MISSING",
+          "title": "User Manual 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "공식 제품 페이지 사양(Specs) 탭",
+          "language": "ko",
+          "note": "Outline·General specifications 표 수록",
+          "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/specs.html"
+        },
+        {
+          "type": "Technical Document",
+          "status": "FOUND",
+          "title": "DM3 Reference Manual (웹 매뉴얼, 한국어)",
+          "language": "ko",
+          "note": "카탈로그 manual_link와 동일. JS 렌더링 웹 매뉴얼",
+          "url": "https://manual.yamaha.com/pa/mixers/dm3/rm/ko-KR/"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/"
+        }
+      ],
+      "sources": [
+        {
+          "code": "M",
+          "name": "제조사 공식 제품 페이지·사양 탭",
+          "url": "https://kr.yamaha.com/ko/business/audio/products/mixers/dm3/specs.html",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://kr.yamaha.com/ko/files/DM3-front_tcm144-1729385.jpg",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "keyFacts": null
+    },
+    "approved": {
+      "portMap": "1044c0eb44b42607020543b2d3cbe5e2560a46b8901d43c9bb526c9fee2f05f8",
+      "documents": "f8a42084d6e3beafb29d4a3947b9cdffc6e7e112fcadedebfeed40f1c5366b6b",
+      "sources": "7943fa5395571d2cfe7cdd9adca72ef7e7aa6aec6624938b99f7174e9c1b7456",
+      "keyFacts": "79b973cfa9ae8885a796f8da976031e261c816ac2dcbf972f0337bdc98242283"
+    },
+    "protectedSha256": "6228bfe320d328d4c116258f1c871d5016697ff1c47ca9c1604b38a1ca8cbc7f"
+  },
+  "dm7": {
+    "prior": {
+      "portMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "dm7-rear.webp",
+          "width": 1800,
+          "height": 1800
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "아날로그 입력 1–16",
+            "desc": "밸런스 XLR 16개 · 1–16번 마이크 또는 라인 레벨 소스 연결",
+            "side": "right",
+            "x": 1576,
+            "y1": 920,
+            "y2": 1010
+          },
+          {
+            "n": 2,
+            "label": "아날로그 입력 17–32",
+            "desc": "밸런스 XLR 16개 · 17–32번 마이크 또는 라인 레벨 소스 연결",
+            "side": "right",
+            "x": 1170,
+            "y1": 920,
+            "y2": 1010
+          },
+          {
+            "n": 3,
+            "label": "AES/EBU 입력 1/2",
+            "desc": "밸런스 XLR · 디지털 오디오 채널 1/2 수신",
+            "x1": 918,
+            "x2": 950,
+            "y": 1063,
+            "side": "bottom"
+          },
+          {
+            "n": 4,
+            "label": "AES/EBU 입력 3/4",
+            "desc": "밸런스 XLR · 디지털 오디오 채널 3/4 수신",
+            "x1": 819,
+            "x2": 851,
+            "y": 1063,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "타임코드 입력",
+            "desc": "밸런스 XLR · 외부 시간 코드 신호 수신",
+            "x1": 974,
+            "x2": 1006,
+            "y": 1063,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "워드 클록 입력",
+            "desc": "BNC · 외부 워드 클록 수신",
+            "x1": 1068,
+            "x2": 1093,
+            "y": 1049,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "OMNI OUT 1–16",
+            "desc": "밸런스 XLR 16개 · 아날로그 오디오 출력",
+            "side": "left",
+            "x": 410,
+            "y1": 920,
+            "y2": 1010
+          },
+          {
+            "n": 8,
+            "label": "AES/EBU 출력 1/2",
+            "desc": "밸런스 XLR · 디지털 오디오 채널 1/2 출력",
+            "x1": 868,
+            "x2": 900,
+            "y": 1063,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "AES/EBU 출력 3/4",
+            "desc": "밸런스 XLR · 디지털 오디오 채널 3/4 출력",
+            "x1": 771,
+            "x2": 803,
+            "y": 1063,
+            "side": "top"
+          },
+          {
+            "n": 10,
+            "label": "워드 클록 출력",
+            "desc": "BNC · 외부 장치에 워드 클록 전달",
+            "x1": 1024,
+            "x2": 1049,
+            "y": 1049,
+            "side": "top"
+          },
+          {
+            "n": 11,
+            "label": "Dante PRIMARY",
+            "desc": "etherCON/RJ-45 · Dante 오디오 네트워크의 주 연결",
+            "x1": 955,
+            "x2": 991,
+            "y": 1126,
+            "side": "top"
+          },
+          {
+            "n": 12,
+            "label": "Dante SECONDARY",
+            "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
+            "x1": 1005,
+            "x2": 1041,
+            "y": 1126,
+            "side": "bottom"
+          },
+          {
+            "n": 13,
+            "label": "NETWORK",
+            "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결",
+            "x1": 1143,
+            "x2": 1178,
+            "y": 1160,
+            "side": "top"
+          },
+          {
+            "n": 14,
+            "label": "USB TO HOST",
+            "desc": "USB-C · 컴퓨터와 오디오/제어 데이터 연결",
+            "x1": 1105,
+            "x2": 1136,
+            "y": 1160,
+            "side": "bottom"
+          },
+          {
+            "n": 15,
+            "label": "GPI",
+            "desc": "D-sub 15핀 · 외부 제어 장치와 신호를 송수신",
+            "x1": 1127,
+            "x2": 1163,
+            "y": 1080,
+            "side": "top"
+          },
+          {
+            "n": 16,
+            "label": "PY 카드 슬롯",
+            "desc": "선택 장착 PY 카드용 슬롯 · 기본 장착 카드로 표시하지 않음",
+            "x1": 750,
+            "x2": 940,
+            "y": 1113,
+            "side": "bottom"
+          },
+          {
+            "n": 17,
+            "label": "AC 전원 입력 A",
+            "desc": "IEC · 전원 코드 A 연결",
+            "x1": 607,
+            "x2": 649,
+            "y": 1063,
+            "side": "top"
+          },
+          {
+            "n": 18,
+            "label": "AC 전원 입력 B",
+            "desc": "IEC · 전원 코드 B 연결",
+            "x1": 402,
+            "x2": 444,
+            "y": 1063,
+            "side": "bottom"
+          }
+        ],
+        "crop": {
+          "top": 520,
+          "bottom": 570
+        }
+      }
+    },
+    "approved": {
+      "portMap": "282a3bb693fd8cfe14e6daa7a9062349400900691d044c22ef707448e63c10be"
+    },
+    "protectedSha256": "5fcc0b735b75ab75efb24d285a0393c6d9810d363c063f53b8661995e6d636af"
+  }
+}

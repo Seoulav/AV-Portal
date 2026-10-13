@@ -151,11 +151,13 @@ if (!productKey) {
   } catch { /* External document links remain available. */ }
   const pdfViewer = createPdfViewer();
   const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest);
-  const openDocuments = [
+  const linkedDocuments = [
     ...data.quickDocuments.filter(item => item.available).map(item => ({ ...item.resource, label: item.label })),
-    ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type })),
-    ...uploadedDocuments
+    ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type }))
   ];
+  const openDocuments = productKey === 'dm3'
+    ? [...uploadedDocuments, ...linkedDocuments]
+    : [...linkedDocuments, ...uploadedDocuments];
   function appendDocumentActions(container, item, header = false) {
     const action = item.action ?? resolveDocumentAction(item, documentManifest);
     if (!action) return;
