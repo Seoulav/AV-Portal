@@ -308,3 +308,16 @@
 - [x] 최신 main 통합 후 직렬 전체 테스트 통과. `node beta/build-search-index.mjs --check`, `node beta/build-readable-catalog.mjs --check`, `node beta/verify-pages.mjs`, `node scripts/check-feature-wording.mjs --check`, `git diff --check` 통과.
 - [ ] 변경 커밋 push 후 PR #459 필수 CI 확인.
 - [ ] 병합 후 Pages 배포 및 공개 PixelFit 1280px·390px 캡처·탭 동작 확인.
+
+## W-20261013-004 PixelFit 4K AOI·디자인 복귀 후속 (2026-10-13)
+
+- 브랜치: `codex/W-20261013-004-pixelfit-aoi`, 기준 main `da85553adfdaf17074123d4f95d9b117fc60beb7` (PR #459 병합분 포함).
+- 사용자 수정 지시: QMS형 타일·모드 카드·예시 탭을 제거해 이전 정적 카드 디자인으로 복귀. NVIDIA 커스텀 해상도 / AMD·일반 마스킹+작업표시줄 교정은 유지. 기본 캔버스는 3840×2160 신호 안의 표시 영역(AOI).
+- [x] 회귀 테스트를 먼저 갱신해 현재 구현에서 실패함을 확인.
+- [x] PixelFit 한 제품의 예시를 4K AOI(1295×780, 오른쪽 2545px·아래 1380px)와 NVIDIA 커스텀 1340×780 두 장의 정적 카드로 변경. AOI 외곽은 검정 마스킹으로 표시.
+- [x] site·prototype 렌더러/검증기와 표현 CSS를 동기화. PixelFit 외 제품 JSON 변경 없음.
+- [x] PixelFit·W-004 집중 테스트 8/8 통과. 직렬 전체 테스트 632건(631 통과, 0 실패, 1 skip).
+- [x] Chrome 로컬 1280px·390px에서 표준 요약 4개, 정적 카드 2개, AOI/마스킹 및 1340×780 보조 예시 확인. 문서 수평 넘침 0px.
+- [x] search index·public snapshot 재생성, search-index/readable-catalog `--check`, `verify-pages`, feature-wording `--check` 통과. 검증 중 선택 canvas polyfill 경고만 기록됨.
+- [ ] 최신 origin/main 통합 후 파생 산출물 재생성 및 전체 재검증.
+- [ ] 변경 커밋·PR·필수 CI 확인, 병합·Pages 배포 후 공개 1280px·390px 화면 캡처와 확인.
