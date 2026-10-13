@@ -252,7 +252,8 @@ test('split and series units keep their documented shape', async () => {
   for (const p of lib.products.filter(item => item.units.some(unit => unit.unit))) assert.deepEqual(p.units.map(unit => unit.unit), ['tx', 'rx'], p.productId);
   for (const p of lib.products.filter(item => item.units.some(unit => unit.variant))) {
     for (const unit of p.units) {
-      assert.equal(portsOf(unit.equipment).length, 0, unit.unitId);
+      // 시리즈 메인프레임은 단자 없이 놓인다. RTCOM 원본에 카드 io가 들어오면 카드 유닛은 그 단자를 가진다(B-20261013-03)
+      if (!unit.card) assert.equal(portsOf(unit.equipment).length, 0, unit.unitId);
       assert.match(unit.unitId, new RegExp(`^${p.productId}:[a-z0-9-]+$`));
     }
   }
