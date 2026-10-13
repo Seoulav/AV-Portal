@@ -319,4 +319,6 @@
 - [x] PixelFit·W-004 집중 테스트 8/8 통과. 직렬 전체 테스트 636건(635 통과, 0 실패, 1 환경 의존 skip). 병렬 테스트에서 한 번 발생한 Windows 임시 경로 `EPERM rename`은 직렬 전체 실행에서 재현되지 않음.
 - [x] Chrome 로컬 1280px·390px에서 표준 요약 4개, 정적 카드 2개, AOI/마스킹 및 1340×780 보조 예시 확인. 문서 수평 넘침 0px.
 - [x] 최신 origin/main 통합 후 search index·readable catalog·public snapshot 재생성. search-index/readable-catalog `--check`, `verify-pages`, feature-wording `--check`, PR diff check 통과. `verify-pages`는 276 항목·273 상세·477 제품 이미지·132 PDF 확인. PDF.js 선택 canvas polyfill 경고는 있었으나 검증은 성공.
-- [ ] 파생 산출물·진행 기록 커밋·PR·필수 CI 확인, 병합·Pages 배포 후 공개 1280px·390px 화면 캡처와 확인.
+- [x] 파생 산출물·진행 기록 커밋 후 PR [#465](https://github.com/Seoulav/AV-Portal/pull/465) 생성. Builder CI 통과 후 병합 SHA `2ae3341761b0fc8859f4841aa036e487cf21442f`.
+- [x] Pages 배포 run [#38382533033](https://github.com/Seoulav/AV-Portal/actions/runs/38382533033) 성공.
+- [x] 공개 PixelFit 상세에서 표준 요약 4개·정적 예시 2개·4K AOI 마스킹·NVIDIA 1340×780 예시를 확인. 1280px 가로 여유 15px, 390px 수평 넘침 0px. 캡처: `Work/기록/W-20261013-004-screens/pixelfit-aoi-public/`.
