@@ -9,7 +9,7 @@ const AUTOSAVE_KEY = 'av-portal-builder:current';
 async function openFixture(page: Page) {
   await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
   await page.goto('./');
-  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 6종');
+  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 8종');
   const { text, nodeIds } = diagramText([['cam', 0, 0], ['disp', 500, 0]]);
   await page.locator('input[type=file]').setInputFiles({ name: 'fixture.diagram.json', mimeType: 'application/json', buffer: Buffer.from(text) });
   await expect(page.locator('.react-flow__node-equipment')).toHaveCount(2);

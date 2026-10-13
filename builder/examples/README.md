@@ -77,7 +77,9 @@ node builder/cli/validate.mjs <파일> --library https://seoulav.github.io/AV-Po
 | `cable-unspecified` | 케이블(`bomRows`)이 아직 없다 |
 | `connector-adapter` | 두 단자의 커넥터가 달라 변환 케이블·젠더가 필요하다 |
 | `connector-unknown` | 원문에 커넥터 형상이 없어 모른다 |
-| `signal-level` | 마이크·라인처럼 레벨이 다른 신호를 이었다 |
+| `audio-cable` | 오디오 선 단자끼리 커넥터가 달라 양 끝이 다른 케이블(예: XLR(F)–유로블록 3P)로 잇는다. `detail`이 추천 케이블이다 |
+| `audio-unbalanced` | 평형 단자와 불평형 단자(RCA·3.5mm)를 이었다 |
+| `signal-level` | 마이크·라인처럼 레벨이 다른 신호를 이었다. 오디오는 `detail`에 프리앰프·감쇠 필요 여부를 붙인다 |
 | `unverified-port` | 단자 정보가 Portal에서 아직 확인 중이다 |
 | `no-ports` | Portal에 단자 정보가 없는 제품이다 |
 | `series-config-pending` | 매트릭스 시리즈의 카드 구성이 정해지지 않았다 |

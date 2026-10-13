@@ -2,8 +2,9 @@
 import { DEFAULT_RULES, addEquipmentNode, connectPorts, createDiagram, createIdFactory, createLibraryIndex, serializeDiagram, type Library } from '../src/engine';
 
 type Direction = 'in' | 'out' | 'both';
-const port = (id: string, direction: Direction, signal: string, type: string) => ({
-  id, label: id, type, direction, connector: signal === 'ETHERNET' ? 'RJ45' : signal, signals: [signal], verification: 'FOUND',
+// signal은 쉼표로 여러 개. connector를 주지 않으면 신호 이름을 커넥터로 쓴다
+const port = (id: string, direction: Direction, signal: string, type: string, connector?: string) => ({
+  id, label: id, type, direction, connector: connector ?? (signal === 'ETHERNET' ? 'RJ45' : signal), signals: signal.split(','), verification: 'FOUND',
 });
 const UNITS: [string, string, ReturnType<typeof port>[]][] = [
   ['cam', 'Video', [port('out-hdmi-1', 'out', 'HDMI', 'video'), port('out-hdmi-2', 'out', 'HDMI', 'video'), port('both-ethernet-1', 'both', 'ETHERNET', 'network')]],
@@ -12,6 +13,9 @@ const UNITS: [string, string, ReturnType<typeof port>[]][] = [
   ['mon', 'Display', [port('in-hdmi-1', 'in', 'HDMI', 'video')]],
   ['quad', 'Video', [1, 2, 3, 4].map(i => port(`out-hdmi-${i}`, 'out', 'HDMI', 'video'))],
   ['wall', 'Display', [1, 2, 3, 4, 5, 6].map(i => port(`in-hdmi-${i}`, 'in', 'HDMI', 'video'))],
+  // 오디오 연결 판정(B-20261013-05): 마이크 XLR 출력, DSP 유로블록 마이크/라인 입력
+  ['mic', 'Audio', [port('out-mic-audio-1', 'out', 'MIC-AUDIO', 'audio', 'XLR')]],
+  ['dsp', 'Audio', [1, 2].map(i => port(`in-mic-audio-${i}`, 'in', 'MIC-AUDIO,LINE-AUDIO', 'audio', 'TERMINAL-BLOCK'))],
 ];
 
 export const library = {

@@ -115,6 +115,14 @@ input, select, textarea { border: 1px solid var(--line); border-radius: 8px; pad
 .port-both { justify-content: center; }
 .port-dot { width: 5px; height: 5px; border-radius: 50%; flex: none; }
 .port-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.port-audio { display: inline-flex; gap: 2px; flex: none; font-size: 8.5px; line-height: 12px; font-weight: 600; }
+.port-conn { color: var(--muted); border: 1px solid currentColor; border-radius: 3px; padding: 0 2px; }
+.port-level { color: #fff; border-radius: 3px; padding: 0 3px; background: #a855f7; }
+.port-level.level-mic { background: #db2777; }
+.port-level.level-line { background: #7c3aed; }
+.port-level.level-ml { background: #9333ea; }
+.port-level.level-spk { background: #0891b2; }
+.port-level.level-aes, .port-level.level-spdif { background: #4f46e5; }
 .port-badge { font-size: 9px; color: var(--warn); background: var(--warn-soft); border-radius: 4px; padding: 0 3px; flex: none; }
 /* 단자 핸들(기반명세 §9): 행 칸 전체 + 테두리 바깥 점까지 덮는다. 상자의 바깥 끝 = 점의 바깥 끝 = 선이 붙는 곳.
    React Flow 기본 핸들(작은 원, 가운데 정렬)을 덮어쓴다. 치수는 EquipmentNode가 넘기는 CSS 변수(geometry)다 */
@@ -250,6 +258,7 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
  .toolbar-status { width: 100%; }
  .equipment-quote-panel { max-height: none; }
 }
+.cable-suggestion { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 
 /* 장비 설정 창(B-20261013-01) */
 .node-tag.edited { color: var(--muted); background: color-mix(in srgb, var(--muted) 14%, transparent); }

@@ -25,6 +25,22 @@
 - 견적 정보(시스템명·옵션 수량·`optionPortIds`)만 넣은 장비가 `library-drift`로 잡히던 문제
 - 연결된 단자를 지우면 끊어진 엣지가 남던 구 Builder의 문제를 되풀이하지 않는다: 지울 연결을 확인받고 함께 지운다
 
+## [미배포] — 2026-10-13
+
+[B-20261013-05](../Work/빌더/작업/B-20261013-05.md). 오디오 단자 표시와 오디오 연결 판정.
+
+### Added
+- 노드 오디오 단자 행에 커넥터 약칭·레벨 배지(`engine/audio.mjs` `audioPortTags`)
+- 연결 패널 추천 케이블과 "케이블로 추가"(제작 케이블 행)
+- 이슈 코드 `audio-cable`(안내, `detail` = 추천 케이블), `audio-unbalanced`(안내)
+
+### Changed
+- 오디오(아날로그·AES3·S/PDIF·스피커)를 선 단자끼리 이으면 커넥터가 달라도 `connector-adapter` 경고를 내지 않는다. 예: 마이크 XLR 출력 → DSP 유로블록 입력
+- 오디오 `signal-level` 경고의 `detail`에 "프리앰프 필요"·"감쇠(패드) 필요"를 붙인다
+- 디지털 오디오는 임피던스로 나눈다. AES3 110Ω(XLR·유로블록)과 S/PDIF 75Ω(RCA) 사이는 지금처럼 `connector-adapter`다. `CAPTIVE`(커넥터 없음·직결 케이블)와 `UNKNOWN`은 케이블을 추천하지 않고 `connector-unknown`으로 남긴다
+- SVG·PDF 도면에도 오디오 배지를 화면과 같은 순서로 그린다
+- 예제 `auditorium-audio`의 이슈를 새 규칙으로 다시 계산했다(장비·연결은 그대로)
+
 ## [미배포] — 2026-10-12
 
 [B-20261012-02](../Work/빌더/작업/B-20261012-02.md). Portal CPQ 연결을 로컬 검증했다.
