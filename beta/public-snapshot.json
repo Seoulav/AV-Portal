@@ -446,7 +446,7 @@
       "io": 15
     },
     "ds-8s": {
-      "sha256": "E210BD36BD4C6EF08F7E51CB98C0F93742F40DCF9F88944EDC23C51EE4EB3991",
+      "sha256": "527955DFFE19680D4A2F0BB878CF2D4A02C3ECCB1FD6980A7561F535C44C8B2E",
       "features": 7,
       "specifications": 12,
       "io": 8
@@ -1346,9 +1346,9 @@
       "io": 2
     },
     "sx-1216-rti": {
-      "sha256": "D87C6E4D78348FEE314A88C53290E1C7C36E5BB59AD52CA1CDD3E5418D8C276B",
+      "sha256": "407315A8666EE2A27D8A6FDC2419696F5CC5D08524FC890396455006D52E8CEC",
       "features": 7,
-      "specifications": 9,
+      "specifications": 15,
       "io": 3
     },
     "tio1608-d2": {

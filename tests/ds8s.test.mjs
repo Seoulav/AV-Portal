@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { isAllowedHttpOfficialPage } from '../beta/manufacturer-hosts.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeW13005Product } from './w13005-ds8s-history.mjs';
+import { beforeW13005FollowupProduct } from './w13005-ds8s-followup-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
@@ -51,13 +52,16 @@ test('DS-8S uploads are viewable/downloadable and the twelve locked entries rema
 
 test('DS-8S historical inverse rejects an I/O regression and preserves unrelated current fields', async () => {
   const product = await read('beta/site/detail/data/ds-8s.json');
-  const restored = beforeW13005Product(product, 'ds-8s');
+  const restored = beforeW13005Product(beforeW13005FollowupProduct(product, 'ds-8s'), 'ds-8s');
   assert.equal(restored.portMap, undefined);
   assert.deepEqual(restored.specifications, product.specifications);
   const unexpected = structuredClone(product);
   unexpected.io[0].quantity = '7';
-  assert.throws(() => beforeW13005Product(unexpected, 'ds-8s'), /unexpected W-005 io change/);
+  assert.throws(() => beforeW13005Product(beforeW13005FollowupProduct(unexpected, 'ds-8s'), 'ds-8s'), /unexpected W-005 io change/);
   const unapproved = structuredClone(product);
   unapproved.specifications[0].value = 'INVALID';
-  assert.equal(beforeW13005Product(unapproved, 'ds-8s').specifications[0].value, 'INVALID');
+  assert.equal(beforeW13005Product(beforeW13005FollowupProduct(unapproved, 'ds-8s'), 'ds-8s').specifications[0].value, 'INVALID');
+  const shifted = structuredClone(product);
+  shifted.portMap.items[0].x1 += 1;
+  assert.throws(() => beforeW13005FollowupProduct(shifted, 'ds-8s'), /unexpected follow-up portMap change/);
 });
