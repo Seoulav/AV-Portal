@@ -10,6 +10,7 @@ import {beforeW12002Product,beforeW12002Raw} from './w12002-wording-history.mjs'
 import {beforeMx392Ulxd4qFollowupProduct,beforeMx392Ulxd4qFollowupRaw} from './mx392-ulxd4q-followup-history.mjs';
 import {beforeW13001Product,beforeW13001Raw} from './w13001-powersoft-history.mjs';
 import {beforeB13003Product,beforeB13003Raw} from './b13003-slot-history.mjs';
+import {beforeW13007Product,beforeW13007Raw} from './w13007-videowall-history.mjs';
 
 // Historical assertions undo approved W-005 maps and W-004 photo edits, then
 // the newer Sony, Aquilon, JBL, AMX, and W-026 edits. Each inverse accepts current products and
@@ -18,6 +19,7 @@ const prior=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-prior
 const approved=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-approved-fields.json',import.meta.url)));
 export const w026Slugs=new Set(Object.keys(prior));
 export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}) {
+  current=beforeW13007Product(current,slug);
   current=beforeW13001Product(beforeB13003Product(current,slug),slug);
   if(slug!=='ulxd4q'||current.portMap?.items?.length===13)current=beforeMx392Ulxd4qFollowupProduct(current,slug);
   if(!wordingAlreadyRestored)current=beforeW12002Product(current,slug);
@@ -37,6 +39,7 @@ export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}
   return result;
 }
 export function beforeW026Raw(raw,slug) {
+  raw=beforeW13007Raw(raw,slug);
   raw=beforeW13001Raw(beforeB13003Raw(raw,slug),slug);
   if(slug!=='ulxd4q'||JSON.parse(raw).portMap?.items?.length===13)raw=beforeMx392Ulxd4qFollowupRaw(raw,slug);
   raw=beforeW12002Raw(raw,slug);

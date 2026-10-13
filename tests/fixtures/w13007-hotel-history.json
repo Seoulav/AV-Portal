@@ -1,0 +1,332 @@
+{
+  "hg43u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg43u800fnfxkr-main.webp",
+          "alt": "호텔 TV HU8000F 시리즈 정면",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "HG43U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "68dd033c27e006ccd96c6336d1284d6a5b91d70a70fe67b55698b9f9c139e0d5"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "480a16cb9e7c18a5c74c689add6d8862528af741473422909447026dbfe45d76"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "586509a6dedf4c7ccb8b78c2a9205bc4cb7f1e2d6a42e8c1e8a94840f152253f"
+    }
+  },
+  "hg50u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg50u800fnfxkr-main.webp",
+          "alt": "호텔 TV HU8000F 시리즈 정면",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "HG50U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/cfdadb87-1342-48f3-9107-71e55db7b799.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "45d76e8a80de730f5bb8fc9f9329168a307f5ae4d120e7db5c64679e25725886"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/cfdadb87-1342-48f3-9107-71e55db7b799.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "8bc8c80f87a34322ff7dd5275517e755c763304c0e88e54ee31021032977b946"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "52fd5ebb579eaeeb8a3a0833eaa36c74c9c8d0278801d4c0d7e2c9a55e41eb52"
+    }
+  },
+  "hg55u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg55u800fnfxkr-main.webp",
+          "alt": "삼성 HU8000F 시리즈 공식 정면 이미지",
+          "note": "Main · HG55U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음",
+          "provider": "Samsung",
+          "model": "HG55U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/21ff3212-558c-4484-b5b7-192f5e195e9b.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "ace4ad068c5804203d841fed60bfc6095e4cc123237e773ae2cbf28709f24092"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/21ff3212-558c-4484-b5b7-192f5e195e9b.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "4a6c7a422d76816a58abfe0f420cce2f0a32b0cebb3ad62bf997018027e4b18b"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "ddb407f4af6776bfae5c0d0f0b0bdbc60cb34f354a2542830241141d1d761f4c"
+    }
+  },
+  "hg65u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg65u800fnfxkr-main.webp",
+          "alt": "호텔 TV HU8000F 시리즈 정면",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "HG65U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "6ea3c651557a6dfb8c842351e6880fd03fe0411b212b8e3319b9459f613e6821"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "69d3fac83b9afc4dc51fd24eaf93020c1b4e0c709d26809b987ea10f046a9429"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "125dd4de03c1b555c9ac2ce4bd99ba7ce16804d4cd4392bc58b10eb7a38ad919"
+    }
+  },
+  "hg75u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg75u800fnfxkr-main.webp",
+          "alt": "삼성 HU8000F 시리즈 공식 정면 이미지",
+          "note": "Main · HG75U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음",
+          "provider": "Samsung",
+          "model": "HG75U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/d2dc20fb-af1c-4a3d-9300-2b42b057be2c.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "4ab6cf72113c0f451ab02f8aba58a9aa66d344fd5218ca033ebdb05a65aea78f"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/d2dc20fb-af1c-4a3d-9300-2b42b057be2c.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "6c7e1a8271241b203a236bff40ffac4fdd0d8c315f27b1a92a6440d2f6fd9021"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "79f2ce69903911abd2319eb2c8e7991d89ac71458500f8a81738687ce59db764"
+    }
+  },
+  "hg85u800fnfxkr": {
+    "images": {
+      "previous": [
+        {
+          "role": "Main",
+          "file": "hg85u800fnfxkr-main.webp",
+          "alt": "삼성 HU8000F 시리즈 공식 정면 이미지",
+          "note": "Main · HG85U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음",
+          "provider": "Samsung",
+          "model": "HG85U800FNFXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/0d396362-4a93-4606-8d6c-48bf0e944193.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "d666eaa312f477775ab491a04c9cefdfde91a5923c88dd8f6560782cfd34c952"
+    },
+    "imageStatuses": {
+      "previous": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2025/10/21/0d396362-4a93-4606-8d6c-48bf0e944193.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/"
+        }
+      ],
+      "approvedSha256": "58b203fdfc7546430490e2f3d1a588238ce656c74f68cbcb009b3ae8052f320f"
+    },
+    "portMap": {
+      "previous": null,
+      "approvedSha256": "57cf76c795eeadb92d75aa07ef64d28611a8c2917ff956355534a9bc3af1234f"
+    }
+  }
+}
