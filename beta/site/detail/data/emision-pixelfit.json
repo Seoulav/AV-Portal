@@ -210,34 +210,31 @@
     "supplementalNote": "지원 OS·GPU 드라이버·판매 단위는 확인되지 않았습니다.",
     "footerNote": "SD컴퍼니 emision PixelFit · 캡처 자료 기준",
     "galleryFootNote": "사용자 제공 PixelFit 화면 캡처",
-    "visualVariant": "user-provided-screenshots",
-    "keyFactsVariant": "metric-tiles"
+    "visualVariant": "user-provided-screenshots"
   },
   "settings": [
-    {
-      "kind": "mode-cards",
-      "title": "동작 모드",
-      "items": [
-        {
-          "icon": "resolution",
-          "name": "커스텀 해상도 제작",
-          "english": "CUSTOM RESOLUTION",
-          "summary": "NVIDIA 방식 · 활성 윈도우 해상도와 바탕화면 해상도"
-        },
-        {
-          "icon": "masking",
-          "name": "마스킹 영역 해상도",
-          "english": "DISPLAY MASKING",
-          "summary": "AMD 및 모든 디스플레이 방식 · 마스킹 영역과 emision 작업표시줄"
-        }
-      ]
-    },
     {
       "kind": "screen-examples",
       "title": "화면 구성 예시",
       "items": [
         {
-          "name": "NVIDIA",
+          "name": "4K 표시 영역(AOI)",
+          "method": "표시 영역(AOI) 마스킹 + emision 작업표시줄",
+          "signal": "3840×2160",
+          "signalType": "fixed",
+          "signalWidth": 3840,
+          "signalHeight": 2160,
+          "areaLabel": "표시 영역(AOI)",
+          "activeWidth": 1295,
+          "activeHeight": 780,
+          "masked": true,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rightMargin": 2545,
+          "bottomMargin": 1380
+        },
+        {
+          "name": "NVIDIA 커스텀 해상도",
           "method": "커스텀 해상도 제작",
           "signal": "1340×780",
           "signalType": "output",
@@ -246,29 +243,6 @@
           "activeWidth": 1340,
           "activeHeight": 780,
           "masked": false
-        },
-        {
-          "name": "AMD",
-          "method": "표시 영역 마스킹 + emision 작업표시줄",
-          "signal": "1920×1080@60Hz",
-          "signalType": "fixed",
-          "activeWidth": 1295,
-          "activeHeight": 780,
-          "masked": true,
-          "offsetX": 0,
-          "offsetY": 0,
-          "rightMargin": 625,
-          "bottomMargin": 300
-        },
-        {
-          "name": "전체 화면",
-          "method": "마스킹 없음",
-          "signal": "1920×1080@60Hz",
-          "signalType": "fixed",
-          "activeWidth": 1920,
-          "activeHeight": 1080,
-          "masked": false,
-          "note": "물리 해상도 그대로"
         }
       ]
     }
