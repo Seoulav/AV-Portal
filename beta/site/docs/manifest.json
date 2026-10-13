@@ -1725,6 +1725,18 @@
       "file": "manuals/surgex-brochure-ko.pdf",
       "kind": "reference",
       "title": "SurgeX 브로슈어(국문 · 사용자 제공)"
+    },
+    {
+      "slug": "dm3",
+      "file": "manuals/yamaha-dm3-data-sheet-en.pdf",
+      "kind": "reference",
+      "title": "Yamaha DM3 사양서 · Dante 지원(사용자 제공)"
+    },
+    {
+      "slug": "dm3",
+      "file": "manuals/yamaha-dm3-standard-data-sheet-en.pdf",
+      "kind": "reference",
+      "title": "Yamaha DM3 Standard(DM3S) 사양서 · Dante 미지원(사용자 제공)"
     }
   ]
 }

@@ -6,6 +6,7 @@ import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeW013Product } from './w013-history.mjs';
+import { beforeW13010Product } from './w13010-yamaha-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-prior-maps.json', import.meta.url), 'utf8'));
 const path = slug => `beta/site/detail/data/${slug}.json`;
@@ -17,7 +18,7 @@ test('thirteen corrected maps leave all other current product fields unchanged',
     const product = current(slug);
     const restored = beforeW12005Product(product, slug);
     assert.deepEqual(restored.portMap, records[slug].prior, slug);
-    const core = structuredClone(product);
+    const core = structuredClone(beforeW13010Product(product, slug));
     delete core.portMap;
     assert.equal(createHash('sha256').update(JSON.stringify(beforeW013Product(core,slug))).digest('hex'), records[slug].priorCoreSha256, slug);
     assert.ok(prepareEnhancements(product).portMap, `${slug}: current map visible`);
@@ -34,7 +35,7 @@ test('historical inverse rejects a changed marker and exposes unrelated current 
       beforeW12005Raw(readFileSync(path(slug), 'utf8'), slug), slug);
     const changedMap = structuredClone(beforeKiprogo2Mx395Product(product, slug));
     changedMap.portMap.items[0].label += ' altered';
-    assert.throws(() => beforeW12005Product(changedMap, slug), /unexpected (Ki Pro GO2 regrouping|W-005 Port Map change)/, slug);
+    assert.throws(() => beforeW12005Product(changedMap, slug), /unexpected (Ki Pro GO2 regrouping|W-005 Port Map change|W-010 portMap change)/, slug);
   }
 });
 
