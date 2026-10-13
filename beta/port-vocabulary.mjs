@@ -452,6 +452,12 @@ export const IO_OVERRIDES = Object.freeze({
     ports: [{ connector: 'TERMINAL-BLOCK', signals: ['SPEAKER'], direction: 'out', quantity: 1 }],
     note: 'Powersoft MEZZO user guide rear-panel callout identifies one connector for CH2–CH1 outputs; the series datasheet specifies two output channels on Euro 5 mm for the 322 AD; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
   },
+  'mezzo-322-ad#7': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [],
+    action: 'already-represented',
+    note: 'Powersoft MEZZO user guide rear-panel callout shows one stereo mini-jack for channels 1–2. This same physical input is already emitted by mezzo-322-ad#0; do not create a duplicate connector. https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf',
+  },
   'blu-100#5': {
     match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },
     ports: [

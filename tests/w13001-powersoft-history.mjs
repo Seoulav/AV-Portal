@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW013A3Product } from './w013-a3-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w13001-powersoft-history.json', import.meta.url), 'utf8'));
 const b2Fixture = JSON.parse(readFileSync(new URL('./fixtures/w013-b2-product-history.json', import.meta.url), 'utf8'));
@@ -13,6 +14,7 @@ const digest = value => createHash('sha256').update(JSON.stringify(value ?? null
 export function beforeW13001Product(current, slug) {
   const fields = fixture[slug];
   if (!fields) return current;
+  current = beforeW013A3Product(current, slug);
   const result = structuredClone(current);
   for (const [field, { prior, approved }] of Object.entries(fields)) {
     if (digest(current[field]) === digest(prior)) continue;
