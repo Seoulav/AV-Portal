@@ -12,7 +12,7 @@ import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
 import { prepareProductDetail } from '../prototype/brc-am7/product-detail-model.mjs';
 import { verifyRtcomSnapshot } from './sync-rtcom.mjs';
-import { adaptRtcomDetail, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
+import { adaptRtcomDetail, rtcomSlug, RTCOM_EXCLUDED_MODELS } from './site/shared/rtcom-adapter.mjs';
 import { distributorLinks, distributorLinkFor, distributorRuleFor } from './distributor-links.mjs';
 import { verifyPdfLock } from './pdf-lock.mjs';
 
@@ -112,6 +112,7 @@ assert.ok(String(version.revision).length > 0);
 assert.equal(hashText(raw), snapshot.catalog.sha256);
 
 const catalog = JSON.parse(raw);
+const rtcomSlugs = new Set();
 // RTCOM은 원본 바이트와 SHA를 보존한 마지막 정상본 전체를 먼저 검증한 뒤 표시용 어댑터로 읽는다.
 {
   const rtcomRoot = new URL('rtcom/', site);
@@ -122,6 +123,7 @@ const catalog = JSON.parse(raw);
   const forbidden = new Set(RTCOM_EXCLUDED_MODELS.map(value => value.toUpperCase()));
   assert.ok(verified.products.every(product => !forbidden.has(String(product.model).toUpperCase())), 'RTCOM 제외 모델이 공개 정상본에 포함됨');
   for (const item of verified.products) {
+    rtcomSlugs.add(rtcomSlug(item.id));
     const source = JSON.parse(await readFile(new URL(`rtcom/raw/products/${item.id}.json`, site), 'utf8'));
     const product = prepareProductDetail(adaptRtcomDetail(source));
     assert.equal(product.manufacturer, 'RTCOM');
@@ -170,7 +172,7 @@ const catalog = JSON.parse(raw);
   assert.equal(new Set(uploadKeys).size, uploadKeys.length, '사용자 업로드 PDF 중복 등록');
   assert.deepEqual(new Set(uploadKeys.filter(key => uploaded.has(key))), uploaded, '기존 사용자 업로드 PDF 대응표 불일치');
   for (const entry of manifest.uploads) {
-    assert.ok(catalog.some(item => item.slug === entry.slug), `${entry.slug}: 공개 상세 제품 없음`);
+    assert.ok(catalog.some(item => item.slug === entry.slug) || rtcomSlugs.has(entry.slug), `${entry.slug}: 공개 상세 제품 없음`);
     assert.match(entry.file, /^manuals\/[a-z0-9-]+\.pdf$/, `${entry.slug}: 업로드 경로`);
     assert.ok(['manual', 'reference'].includes(entry.kind), `${entry.slug}: 업로드 종류`);
     assert.ok(typeof entry.title === 'string' && entry.title.trim(), `${entry.slug}: 업로드 제목`);

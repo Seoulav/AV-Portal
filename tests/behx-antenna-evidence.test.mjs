@@ -8,6 +8,7 @@ import { beforeW006Product, withoutW006Uploads } from './w006-history.mjs';
 import { withoutW011Uploads } from './w011-history.mjs';
 import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
 import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
+import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -41,7 +42,8 @@ test('BEHX-H evidence update leaves other product data and uploaded documents in
   };
   for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(product, 'lh43behhlbfxkr')[field]), expected, field);
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(beforeW009Uploads(withoutW13010Uploads(manifest.uploads))))).length, 110);
+  const uploadsBeforeNewDocs = withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads));
+  assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 110);
   assert.equal(manifest.uploads.filter(item => item.locked === true).length, 12);
 });
 

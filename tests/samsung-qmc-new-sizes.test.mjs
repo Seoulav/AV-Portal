@@ -3,6 +3,7 @@ import test from 'node:test';
 import { withoutW011Uploads } from './w011-history.mjs';
 import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
 import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
+import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -67,7 +68,8 @@ test('six established QMC records and published PDFs remain untouched', () => {
     const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
     assert.equal(sha(beforeW12002Raw(beforeW013A2Raw(normalized, slug),slug)), hash, slug);
   }
-  const uploads = withoutW011Uploads(withoutW13008Uploads(beforeW009Uploads(withoutW13010Uploads(json('beta/site/docs/manifest.json').uploads))));
+  const uploadsBeforeNewDocs = withoutXdmCommandGuideUpload(beforeW009Uploads(json('beta/site/docs/manifest.json').uploads));
+  const uploads = withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)));
   assert.equal(uploads.length, 128);
   assert.equal(uploads.filter(upload => upload.locked).length, 12);
 });

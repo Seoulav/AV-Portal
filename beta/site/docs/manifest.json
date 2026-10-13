@@ -1761,6 +1761,12 @@
       "file": "manuals/insta360-conference-line-collection-20260729.pdf",
       "kind": "reference",
       "title": "Insta360 Conference Line Product Collection 브로슈어 (2026-07-29 · 사용자 제공)"
+    },
+    {
+      "slug": "rtcom-xdm",
+      "file": "manuals/rtcom-xdm-command-guide-1013.pdf",
+      "kind": "manual",
+      "title": "XDM 커맨드 가이드(1013 · 사용자 제공)"
     }
   ]
 }
