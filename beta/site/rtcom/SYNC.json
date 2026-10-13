@@ -544,16 +544,16 @@
       "bytes": 17445
     },
     "raw/products/spx.json": {
-      "sha256": "71875df1901f9d30927cddb04c9a387bc389ae8e19d9ee747a1157701b0b81a3",
-      "bytes": 18235
+      "sha256": "d89288d61a9d17a0fdfbe842b54e4b08094d7e63ee08032b9ad5bc239c9be3f3",
+      "bytes": 18481
     },
     "raw/products/umc.json": {
       "sha256": "6c6dc114006dcbbb64a2b999a5620b8d22a55714efe60e4bf78104f206a5857c",
       "bytes": 6441
     },
     "raw/products/vdm.json": {
-      "sha256": "6ee2d8abae696369af475461a71a08a840f18b51e7b3e4271eb3eee5c8d0628b",
-      "bytes": 29877
+      "sha256": "d1b4cab1eebe9d321200d9c936a7c3f3a7441770ed08e22102e5c6091666363d",
+      "bytes": 30759
     },
     "raw/products/xdm-ct103-cr103.json": {
       "sha256": "2a48b8a40b9aae9981aeeeea2f3da88724cc7827ed2a7de34a4989395ca873bf",
@@ -572,12 +572,12 @@
       "bytes": 20790
     },
     "raw/products/xdm-psu.json": {
-      "sha256": "7ab1ec1c5f4017ee865a8810253175c755d448ca9a14c05cf5283fb7e8dacd21",
-      "bytes": 10364
+      "sha256": "91415e9a7af9f052ac37861a472b1fa921fa293dcbf7373fd3bc4ec2f6ba41cb",
+      "bytes": 10851
     },
     "raw/products/xdm.json": {
-      "sha256": "361df3765763f22c18d7644cd2bc060f1d145ffbedf0b9d3db3039a5f30b31e2",
-      "bytes": 30159
+      "sha256": "7413865368bbf720135f300e4d54525e1c3d18ea9e11c7cf9c76e79b8e683be9",
+      "bytes": 34313
     }
   }
 }
