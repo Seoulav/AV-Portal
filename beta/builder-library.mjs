@@ -274,14 +274,31 @@ export function categoryFields(categories) {
 // ── 슬롯·카드 (B-20261013-03). Portal 상세 최상위와 RTCOM lineup 항목이 같은 모양이다 ──
 //   프레임: slots { input?, output?, shared?, source, verification, note? }
 //   카드:   slotType "input"|"output"|"shared", compatibleFrames [Portal slug | RTCOM 메인프레임 model]
-// 형식 오류는 데이터를 잘못 읽은 결선이 나가지 않도록 생성기 오류로 멈춘다.
+// 형식 오류 처리
+//   Portal 데이터: 생성기 오류로 멈춘다(PR 검사에서 잡힌다).
+//   RTCOM 데이터: 원본이 Portal 밖에서 바뀌어 배포가 멈추지 않도록, 그 필드만 빼고 제품 이슈로 남긴다
+//     (slot-data-invalid · card-frame-missing · card-slot-mismatch).
 const SLOT_KINDS = [['input', 'IN'], ['output', 'OUT'], ['shared', 'S']];
 const SLOT_TYPES = SLOT_KINDS.map(([kind]) => kind);
+const SLOT_KEYS = [...SLOT_TYPES, 'source', 'verification', 'note'];
 const isPlainObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+
+// fn이 던진 형식 오류를 출처에 따라 멈추거나(Portal) 이슈로 바꾼다(RTCOM)
+function slotData(source, issues, fn) {
+  if (source !== 'rtcom') return fn();
+  try {
+    return fn();
+  } catch (error) {
+    issues.push({ code: 'slot-data-invalid', detail: error.message });
+    return undefined;
+  }
+}
 
 export function frameSlots(where, raw) {
   const fail = message => { throw new Error(`slots ${where}: ${message}`); };
   if (!isPlainObject(raw)) fail('객체가 아니다');
+  const unknown = Object.keys(raw).filter(key => !SLOT_KEYS.includes(key));
+  if (unknown.length) fail(`알 수 없는 키 ${unknown.join('·')}`);
   const counts = {};
   for (const kind of SLOT_TYPES) {
     const value = raw[kind] ?? 0;
@@ -326,13 +343,16 @@ export function buildProduct(input, overrides = V.IO_OVERRIDES) {
   const indexed = io.map((row, ioIndex) => ({ row, ioIndex }));
   // 시리즈 판정이 먼저다. 시리즈에 TX/RX 접두어 행이 있어도 시리즈로 다룬다
   const split = detail.itemType === 'SERIES' ? { status: 'series' } : txRxUnits(productId, detail.model ?? input.model, io);
-  const isFrame = detail.slots !== undefined;
-  const isCard = hasCardFields(detail);
-  if (isFrame && isCard) throw new Error(`slots ${productId}: 프레임(slots)과 카드(slotType·compatibleFrames)를 함께 둘 수 없다`);
-  if ((isFrame || isCard) && split.status !== 'none') throw new Error(`slots ${productId}: 최상위 slots·카드 필드는 나누지 않는 단일 제품에만 둔다 (${split.status})`);
-  const extra = {};
-  if (isFrame) extra.slots = frameSlots(productId, detail.slots);
-  if (isCard) extra.card = cardInfo(productId, detail.slotType, detail.compatibleFrames);
+  const extra = slotData(source, issues, () => {
+    const isFrame = detail.slots !== undefined;
+    const isCard = hasCardFields(detail);
+    if (isFrame && isCard) throw new Error(`slots ${productId}: 프레임(slots)과 카드(slotType·compatibleFrames)를 함께 둘 수 없다`);
+    if ((isFrame || isCard) && split.status !== 'none') throw new Error(`slots ${productId}: 최상위 slots·카드 필드는 나누지 않는 단일 제품에만 둔다 (${split.status})`);
+    if (isFrame) return { slots: frameSlots(productId, detail.slots) };
+    if (isCard) return { card: cardInfo(productId, detail.slotType, detail.compatibleFrames) };
+    return {};
+  }) ?? {};
+  const isFrame = Boolean(extra.slots);
   let cardIoRows = 0;
   if (split.status === 'split') {
     for (const part of split.units) {
@@ -349,8 +369,13 @@ export function buildProduct(input, overrides = V.IO_OVERRIDES) {
     unresolved.push(...indexed.map(({ row, ioIndex }) => unresolvedItem(row, ioIndex, ['txrx'])));
   } else if (split.status === 'series') {
     const seen = new Map();
+    const lineup = detail.lineup ?? [];
+    // 메인프레임도 카드도 아닌 항목(전송기·전원 등)의 슬롯·카드 필드는 쓰지 않고 알린다
+    for (const item of lineup.filter(item => item.kind !== '메인프레임' && !hasCardFields(item) && item.slots !== undefined)) {
+      slotData(source, issues, () => { throw new Error(`slots ${productId} ${item.model}: 메인프레임이 아닌 항목(${item.kind})에 slots가 있다`); });
+    }
     // 메인프레임은 모두, 카드는 slotType이 있는 항목만 배치 단위가 된다(카드 단자는 그 항목의 io)
-    for (const entry of (detail.lineup ?? []).filter(item => item.kind === '메인프레임' || hasCardFields(item))) {
+    for (const entry of lineup.filter(item => item.kind === '메인프레임' || hasCardFields(item))) {
       let slug = modelSlug(entry.model);
       const count = (seen.get(slug) ?? 0) + 1;
       seen.set(slug, count);
@@ -360,18 +385,19 @@ export function buildProduct(input, overrides = V.IO_OVERRIDES) {
       }
       const unitId = `${productId}:${slug}`;
       const where = `${productId} ${entry.model}`;
-      const unitExtra = {};
-      if (entry.kind === '메인프레임') {
-        if (hasCardFields(entry)) throw new Error(`card ${where}: 메인프레임에 카드 필드를 둘 수 없다`);
-        if (entry.slots !== undefined) unitExtra.slots = frameSlots(where, entry.slots);
-      } else {
+      const unitExtra = slotData(source, issues, () => {
+        if (entry.kind === '메인프레임') {
+          if (hasCardFields(entry)) throw new Error(`card ${where}: 메인프레임에 카드 필드를 둘 수 없다`);
+          return entry.slots !== undefined ? { slots: frameSlots(where, entry.slots) } : {};
+        }
         if (entry.slots !== undefined) throw new Error(`slots ${where}: 카드에 slots를 둘 수 없다`);
-        unitExtra.card = cardInfo(where, entry.slotType, entry.compatibleFrames);
-      }
-      const cardRows = Array.isArray(entry.io) ? entry.io.map((row, ioIndex) => ({ row, ioIndex })) : [];
-      cardIoRows += cardRows.length;
-      // 개별 지정 키는 '<배치 단위 ID>#<행 번호>'다(예: rtcom-spx:spx-hos10#0)
-      const built = buildPorts(cardRows, { overrides, productId: unitId, issues });
+        return { card: cardInfo(where, entry.slotType, entry.compatibleFrames) };
+      }) ?? {};
+      const entryRows = Array.isArray(entry.io) ? entry.io.map((row, ioIndex) => ({ row, ioIndex })) : [];
+      cardIoRows += entryRows.length;
+      // 개별 지정 키는 '<배치 단위 ID>#<행 번호>'다(예: rtcom-spx:spx-hos10#0).
+      // 슬롯 정보가 있는 메인프레임의 io에서 카드 장착 시 행은 단일 제품과 같이 슬롯 행으로 둔다
+      const built = buildPorts(entryRows, { overrides, productId: unitId, issues, cardIo: Boolean(unitExtra.slots) });
       // 시리즈 모델의 설명은 lineup의 모델별 요약을 쓰고, 없으면 시리즈 설명을 쓴다
       units.push({ unitId, variant: entry.model, equipment: equipmentObject({ ...base, unitId, model: entry.model, description: text(entry.summary) || description, ports: built.ports, portal: { productId, source, variant: entry.model, detailUrl } }), ...unitExtra });
       unresolved.push(...built.unresolved.map(item => ({ ...item, variant: entry.model })));
@@ -399,33 +425,42 @@ export function buildProduct(input, overrides = V.IO_OVERRIDES) {
 
 // 카드의 compatibleFrames(원문 이름)를 프레임 배치 단위 ID로 바꾸고, 프레임에 장착 가능한 카드 목록을 채운다.
 //   Portal 카드: Portal 제품 slug · RTCOM 카드: RTCOM 메인프레임·제품 model
-// 가리키는 프레임이 없거나 그 프레임에 맞는 슬롯이 0이면 생성기 오류다.
+// 가리키는 프레임이 없거나 그 프레임에 맞는 슬롯이 0이면 Portal은 생성기 오류, RTCOM은 그 대상만 빼고 제품 이슈다.
+// 원문 이름을 단위 ID로 바꿔 쓰므로 한 라이브러리에 한 번만 부른다(buildBuilderLibrary).
 export function linkSlotCards(products) {
   const frames = { portal: new Map(), rtcom: new Map() };
+  const known = { portal: new Set(), rtcom: new Set() };
   for (const product of products) {
     for (const unit of product.units) {
-      if (!unit.slots) continue;
       const key = product.source === 'portal' ? product.productId : unit.equipment.model;
-      if (frames[product.source].has(key)) throw new Error(`slots ${unit.unitId}: 프레임 이름 ${key}가 겹친다`);
+      known[product.source].add(key);
+      if (!unit.slots) continue;
+      if (frames[product.source].has(key)) {
+        slotData(product.source, product.issues, () => { throw new Error(`slots ${unit.unitId}: 프레임 이름 ${key}가 겹친다`); });
+        continue;
+      }
       frames[product.source].set(key, unit);
     }
   }
-  const portalIds = new Set(products.filter(product => product.source === 'portal').map(product => product.productId));
   for (const product of products) {
     for (const unit of product.units) {
       if (!unit.card) continue;
-      unit.card.compatibleFrames = unit.card.compatibleFrames.map(name => {
+      const linked = [];
+      for (const name of unit.card.compatibleFrames) {
         const frame = frames[product.source].get(name);
-        if (!frame) {
-          const why = product.source === 'portal' && portalIds.has(name) ? `${name}에 slots가 없다` : `${name} 제품이 없다`;
-          throw new Error(`card ${unit.unitId}: compatibleFrames ${name} — ${why}`);
-        }
         const { slotType } = unit.card;
-        const fits = frame.slots[slotType] > 0 || (slotType !== 'shared' && frame.slots.shared > 0);
-        if (!fits) throw new Error(`card ${unit.unitId}: ${frame.unitId}에 ${slotType} 카드를 꽂을 슬롯이 없다`);
+        let problem = null;
+        if (!frame) problem = { code: 'card-frame-missing', message: `compatibleFrames ${name} — ${known[product.source].has(name) ? `${name}에 slots가 없다` : `${name} 제품이 없다`}` };
+        else if (!(frame.slots[slotType] > 0 || (slotType !== 'shared' && frame.slots.shared > 0))) problem = { code: 'card-slot-mismatch', message: `${frame.unitId}에 ${slotType} 카드를 꽂을 슬롯이 없다` };
+        if (problem) {
+          if (product.source !== 'rtcom') throw new Error(`card ${unit.unitId}: ${problem.message}`);
+          product.issues.push({ code: problem.code, detail: `${unit.unitId}: ${problem.message}` });
+          continue;
+        }
         frame.slots.compatibleCards.push(unit.unitId);
-        return frame.unitId;
-      });
+        linked.push(frame.unitId);
+      }
+      unit.card.compatibleFrames = linked;
     }
   }
   for (const unit of [...frames.portal.values(), ...frames.rtcom.values()]) unit.slots.compatibleCards.sort();

@@ -149,10 +149,45 @@ test('RTCOM lineup slots and card io become frame slots and card units', () => {
   for (const item of [...product.unresolved, ...product.nonPort]) assert.equal(item.variant, 'SPX-HOS10');
   const report = libraryReport(lib);
   assert.deepEqual([report.slotFrames, report.cards, report.cardsWithoutFrames], [2, 1, 0]);
-  // 없는 모델을 가리키면 오류
-  const broken = structuredClone(detail);
-  broken.lineup[3].compatibleFrames = ['SPX-M9999'];
-  assert.throws(() => library({ rtcom: [{ id: 'spx', detail: broken }] }), /SPX-M9999/);
+});
+
+test('RTCOM slot-data problems become product issues instead of stopping the build', () => {
+  const lineup = [
+    { model: 'M1', kind: '메인프레임', slots: { input: 2, source: 'C', verification: 'VERIFIED' } },
+    // 수량 미확인으로 REVIEW REQUIRED만 둔 slots → 슬롯 정보 없음 + 이슈
+    { model: 'M2', kind: '메인프레임', slots: { verification: 'REVIEW REQUIRED', source: 'C' } },
+    { model: 'M3', kind: '메인프레임' },
+    // 없는 모델 · 슬롯 정보 없는 모델 · 슬롯 종류 불일치는 그 대상만 빠진다
+    { model: 'C1', kind: '입력 카드', slotType: 'input', compatibleFrames: ['M1', 'M2', 'M3', 'M9999'], io: [] },
+    { model: 'C2', kind: '출력 카드', slotType: 'output', compatibleFrames: ['M1'], io: [] },
+    // 메인프레임·카드가 아닌 항목의 slots
+    { model: 'T1', kind: '전송기', slots: { input: 1, source: 'C', verification: 'VERIFIED' } },
+  ];
+  const lib = library({ rtcom: [{ id: 's', detail: { model: 'S', itemType: 'SERIES', io: [], lineup } }] });
+  const product = lib.products[0];
+  assert.ok(!('slots' in unitOf(lib, 'rtcom-s:m2')));
+  assert.deepEqual(unitOf(lib, 'rtcom-s:c1').card.compatibleFrames, ['rtcom-s:m1']);
+  assert.deepEqual(unitOf(lib, 'rtcom-s:c2').card.compatibleFrames, []);
+  assert.deepEqual(unitOf(lib, 'rtcom-s:m1').slots.compatibleCards, ['rtcom-s:c1']);
+  assert.deepEqual(product.issues.map(issue => issue.code).sort(), ['card-frame-missing', 'card-frame-missing', 'card-frame-missing', 'card-slot-mismatch', 'slot-data-invalid', 'slot-data-invalid']);
+  assert.ok(!product.units.some(unit => unit.unitId === 'rtcom-s:t1'));
+  assert.equal(libraryReport(lib).cardsWithoutFrames, 1);
+});
+
+test('a series mainframe with slots keeps card-dependent io rows as slot rows', () => {
+  const io = [
+    { group: 'Video', connector: 'HDMI', signal: 'HDMI 입력', direction: 'IN', quantity: '4', protocol: '', availability: '옵션(카드 장착 시)', condition: '', source: 'C', verification: 'VERIFIED' },
+    { group: 'Control', connector: 'RJ-45', signal: 'Ethernet 제어', direction: 'IN/OUT', quantity: '1', protocol: '', availability: '표준', condition: '', source: 'C', verification: 'VERIFIED' },
+  ];
+  const lib = library({ rtcom: [{ id: 's', detail: { model: 'S', itemType: 'SERIES', io: [], lineup: [{ model: 'M1', kind: '메인프레임', slots: { input: 1, source: 'C', verification: 'VERIFIED' }, io }] } }] });
+  const unit = unitOf(lib, 'rtcom-s:m1');
+  assert.equal(unit.equipment.inputs.length, 0);
+  assert.equal(unit.equipment.bidirectional.length, 1);
+  assert.deepEqual(lib.products[0].nonPort, [{ ioIndex: 0, kind: 'slot', variant: 'M1' }]);
+});
+
+test('unknown keys in Portal slots stop the generator', () => {
+  assert.throws(() => library({ portal: [frame({ input: 2, outputs: 3, source: 'D', verification: 'FOUND' })] }), /outputs/);
 });
 
 test('an RTCOM product (spx-r6 shape) with top-level shared slots is a frame', () => {
