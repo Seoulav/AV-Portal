@@ -9,7 +9,7 @@ const markup = `
       <desc id="ds8s-console-desc">왼쪽 FND 표시창과 TIME SET, BYPASS, D/OUT CH1, 오른쪽 채널 1부터 8까지의 버튼 위치를 나타낸 설명 그림</desc>
       <rect x="3" y="3" width="894" height="214" rx="18" class="ds8s-panel"/>
       <rect x="19" y="20" width="215" height="176" rx="12" class="ds8s-display-case"/>
-      <text x="44" y="76" class="ds8s-console-ac">AC</text>
+      <text x="36" y="77" class="ds8s-console-ac">AC</text>
       <rect x="89" y="51" width="116" height="92" rx="5" class="ds8s-display"/>
       <text x="111" y="117" class="ds8s-fnd">o1</text>
       <circle cx="199" cy="164" r="12" class="ds8s-button"/><text x="159" y="189" class="ds8s-console-label">TIME SET</text>

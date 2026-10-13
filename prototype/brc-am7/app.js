@@ -8,7 +8,7 @@ import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
 import { distributorLinkFor } from '../../beta/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-links.mjs';
 import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
-import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-006';
+import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
