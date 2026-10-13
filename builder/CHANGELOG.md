@@ -1,5 +1,20 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [미배포] — 2026-10-13
+
+[B-20261013-05](../Work/빌더/작업/B-20261013-05.md). 오디오 단자 표시와 오디오 연결 판정.
+
+### Added
+- 노드 오디오 단자 행에 커넥터 약칭·레벨 배지(`engine/audio.mjs` `audioPortTags`)
+- 연결 패널 추천 케이블과 "케이블로 추가"(제작 케이블 행)
+- 이슈 코드 `audio-cable`(안내, `detail` = 추천 케이블), `audio-unbalanced`(안내)
+
+### Changed
+- 오디오(아날로그·AES3·S/PDIF·스피커)를 선 단자끼리 이으면 커넥터가 달라도 `connector-adapter` 경고를 내지 않는다. 예: 마이크 XLR 출력 → DSP 유로블록 입력
+- 오디오 `signal-level` 경고의 `detail`에 "프리앰프 필요"·"감쇠(패드) 필요"를 붙인다
+- 오디오 연결에서 `CAPTIVE`는 유로블록으로 보고 `connector-unknown`을 내지 않는다
+- 예제 `auditorium-audio`의 이슈를 새 규칙으로 다시 계산했다(장비·연결은 그대로)
+
 ## [미배포] — 2026-10-12
 
 [B-20261012-02](../Work/빌더/작업/B-20261012-02.md). Portal CPQ 연결을 로컬 검증했다.

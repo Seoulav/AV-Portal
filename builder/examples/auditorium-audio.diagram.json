@@ -1941,20 +1941,20 @@
   },
   "issues": [
     {
-      "code": "connector-adapter",
-      "severity": "warning",
+      "code": "audio-cable",
+      "severity": "info",
       "target": {
         "edge": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv04dwktrnvqn3gkwfz8"
       },
-      "detail": "XLR → TERMINAL-BLOCK"
+      "detail": "XLR(F)–유로블록 3P 평형"
     },
     {
-      "code": "connector-adapter",
-      "severity": "warning",
+      "code": "audio-cable",
+      "severity": "info",
       "target": {
         "edge": "e-node_01m49thv013yb6r3feq3wtmw5h-node_01m49thv029z39bysmsg72nhyw-01m49thv05qyr8p1775dnx5kad"
       },
-      "detail": "XLR → TERMINAL-BLOCK"
+      "detail": "XLR(F)–유로블록 3P 평형"
     },
     {
       "code": "unverified-port",

@@ -65,7 +65,7 @@ test('§7.3 allowed cases', () => {
 
 test('§7.3 warning cases', () => {
   assert.deepEqual(codes(judge(port('out', 'HDMI', 'HDMI'), port('in', 'DVI', 'HDMI,DVI'))), ['connector-adapter']);       // W1
-  assert.deepEqual(codes(judge(port('out', 'TERMINAL-BLOCK', 'LINE-AUDIO'), port('in', 'XLR', 'LINE-AUDIO'))), ['connector-adapter']); // W2
+  assert.deepEqual(codes(judge(port('out', 'TERMINAL-BLOCK', 'LINE-AUDIO'), port('in', 'XLR', 'LINE-AUDIO'))), ['audio-cable']); // W2 (B-20261013-05: 오디오 선 단자끼리는 케이블 안내)
   const w3 = judge(port('out', 'XLR', 'LINE-AUDIO'), port('in', 'XLR', 'MIC-AUDIO'));
   assert.equal(w3.allowed, true); assert.deepEqual(codes(w3), ['signal-level']); assert.equal(w3.signal, 'LINE-AUDIO');    // W3
   assert.deepEqual(codes(judge(port('out', 'HDMI', 'HDMI', 'REVIEW REQUIRED'), port('in', 'HDMI', 'HDMI'))), ['unverified-port']); // W4

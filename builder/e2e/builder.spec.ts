@@ -15,7 +15,7 @@ async function openFixture(page: Page, placements: [string, number, number][] = 
   await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
   page.on('dialog', dialog => void dialog.accept());
   await page.goto('./');
-  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 6종');
+  await expect(page.locator('.library-panel .panel-foot')).toContainText('Portal 제품 8종');
   const { text, nodeIds } = diagramText(placements, links);
   await page.locator('input[type=file]').setInputFiles({ name: 'fixture.diagram.json', mimeType: 'application/json', buffer: Buffer.from(text) });
   await expect(page.locator('.react-flow__node-equipment')).toHaveCount(placements.length);
@@ -786,4 +786,24 @@ test('PDF export loads its library and Korean font on demand and keeps text as t
   expect(Math.abs(read.width - Number(width))).toBeLessThan(1);
   expect(Math.abs(read.height - Number(height))).toBeLessThan(1);
   for (const word of ['CAM', 'DISP', 'in-hdmi-1', '양방향', '랙 앞 전원 확인 & <점검>', 'AV Portal Builder']) expect(read.text).toContain(word);
+});
+
+test('a mic XLR output lands on a DSP Euroblock input with a cable suggestion, not an adapter warning (B-20261013-05)', async ({ page }) => {
+  const { nodeIds } = await openFixture(page, [['mic', 0, 0], ['dsp', 500, 0]]);
+  const [mic, dsp] = nodeIds;
+  // 단자 배지: 커넥터 약칭과 레벨
+  await expect(page.locator(`.react-flow__node[data-id="${mic}"] .port-audio`)).toHaveText('XLRMIC');
+  await expect(page.locator(`.react-flow__node[data-id="${dsp}"] .port-audio`).first()).toHaveText('EBM/L');
+  await drag(page, await dot(handle(page, mic, 'out-mic-audio-1'), 'right'), await rowInside(handle(page, dsp, 'in-mic-audio-1'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-mic-audio-1>in-mic-audio-1']);
+  const issues = (await saved(page)).issues.map((issue: { code: string; detail: string }) => `${issue.code}:${issue.detail}`);
+  expect(issues).toContain('audio-cable:XLR(F)–유로블록 3P 평형');
+  expect(issues.some((item: string) => item.startsWith('connector-adapter'))).toBe(false);
+  // 연결 패널의 추천 케이블을 제작 케이블로 넣는다
+  await page.locator('.react-flow__edge').first().click({ force: true });
+  await expect(page.locator('.cable-suggestion')).toContainText('XLR(F)–유로블록 3P 평형');
+  await page.getByRole('button', { name: '케이블로 추가' }).click();
+  await page.getByPlaceholder('길이(m)').fill('15');
+  await page.getByRole('button', { name: '저장' }).click();
+  await expect.poll(async () => (await saved(page)).edges[0].data.bomRows).toEqual([{ cableType: 'manufactured', productName: 'XLR(F)–유로블록 3P 평형', lineTypeId: 'audio', length: 15 }]);
 });

@@ -1,6 +1,6 @@
 // 선택한 엣지의 라벨과 케이블(1.1 bomRows 형식) 편집.
 import { useEffect, useMemo, useState } from 'react';
-import { bomRowProblem, findPort, parseHandle, type BomRow, type Equipment } from '../engine';
+import { audioCable, bomRowProblem, findPort, parseHandle, type BomRow, type Equipment, type Port } from '../engine';
 import { useBuilder } from '../state/useBuilder';
 
 const emptyRow = (lineTypeId: string): BomRow => ({ cableType: 'ready-made', productName: '', lineTypeId, quantity: 1 });
@@ -23,12 +23,23 @@ export function EdgePanel({ edgeId }: { edgeId: string }) {
   // 케이블 제품명 후보: Portal의 케이블 분류 제품
   const cableNames = useMemo(() => (library?.library.products ?? []).filter(product => !product.placeable && /Cable/.test(product.categories[2] ?? '')).map(product => `${product.brand} ${product.product}`), [library]);
   if (!edge) return null;
-  const end = (nodeId: string, handle: string) => {
+  const portOf = (nodeId: string, handle: string) => {
     const node = diagram.nodes.find(item => item.id === nodeId);
     const parsed = parseHandle(handle);
     const data = node?.data as unknown as Equipment | undefined;
-    const port = data && parsed ? findPort(data, parsed.portId) : null;
-    return `${data?.model ?? '?'} · ${port?.label ?? handle}`;
+    return { data, port: data && parsed ? findPort(data, parsed.portId) : null };
+  };
+  const end = (nodeId: string, handle: string) => {
+    const { data, port } = portOf(nodeId, handle);
+    return `${data?.model ?? '?'} · ${port?.label ?? handle}${port ? ` (${port.connector})` : ''}`;
+  };
+  // 오디오 연결이면 추천 케이블(B-20261013-05). 제작 케이블 행으로 넣고 길이는 사용자가 적는다
+  const sourcePort = portOf(edge.source, edge.sourceHandle).port;
+  const targetPort = portOf(edge.target, edge.targetHandle).port;
+  const suggested = sourcePort && targetPort ? audioCable(sourcePort as Port, targetPort as Port) : null;
+  const addSuggested = () => {
+    if (!suggested || rows.some(row => row.productName === suggested.name)) return;
+    setRows([...rows, { cableType: 'manufactured', productName: suggested.name, lineTypeId: edge.data.lineTypeId }]);
   };
   // 기성으로 바꾸면 수량 1부터 시작한다(제작으로 바꿀 때 수량은 지워진다)
   const update = (index: number, patch: Partial<BomRow>) => setRows(rows.map((row, i) => {
@@ -53,6 +64,12 @@ export function EdgePanel({ edgeId }: { edgeId: string }) {
         <dt>도착</dt><dd>{end(edge.target, edge.targetHandle)}</dd>
         <dt>신호</dt><dd>{edge.data.signal} · {edge.data.lineTypeId}</dd>
       </dl>
+      {suggested && (
+        <div className="cable-suggestion">
+          <span className="panel-note">추천 케이블: <strong>{suggested.name}</strong></span>
+          <button type="button" onClick={addSuggested} disabled={rows.some(row => row.productName === suggested.name)}>케이블로 추가</button>
+        </div>
+      )}
       <label className="field">라벨<input value={label} onChange={event => setLabelText(event.target.value)} placeholder="예: HDBaseT 70m 구간" /></label>
       <div className="panel-subtitle">케이블</div>
       {rows.length === 0 && <div className="panel-note">케이블을 아직 정하지 않았습니다.</div>}
