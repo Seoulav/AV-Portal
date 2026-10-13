@@ -278,6 +278,36 @@ test('edits prune optionPortIds, keep legacy edges without a signal key, and equ
   assert.equal(entry.inputs.length, 2);
 });
 
+test('real library 1.1.0: a BLU-160 frame (slots) and a card unit edit and reset cleanly', async () => {
+  const { expectedBuilderLibrary } = await import('../beta/build-builder-library.mjs');
+  const library = createLibraryIndex(await expectedBuilderLibrary());
+  const signals = library.library.vocabulary.signals;
+  const ids = createIdFactory({ seed: 21, now: 0 });
+  const diagram = createDiagram({ library });
+  for (const unitId of ['blu-160', 'blucard-in']) {
+    const entry = library.units.get(unitId);
+    assert.ok(entry, unitId);
+    const node = addEquipmentNode(diagram, entry.equipment, { position: { x: 0, y: 0 }, ids });
+    // 슬롯·카드 정보는 배치 단위에 있고 노드 data에는 들어가지 않는다
+    assert.equal('slots' in node.data || 'card' in node.data, false);
+    const options = { rules: library.rules, signalVocabulary: signals, libraryEquipment: entry.equipment };
+    const lists = editable(node.data);
+    const list = lists.inputs.length ? lists.inputs : lists.outputs;
+    list.push({ label: 'User In 1', connector: 'RJ45', signals: ['ETHERNET'] });
+    list.shift();
+    assert.equal(updateEquipmentPorts(diagram, node.id, lists, options).ok, true);
+    assert.equal(nodeOf(diagram, node).data.portsEdited, true);
+    assert.equal(resetEquipmentPorts(diagram, node.id, entry.equipment, options).ok, true);
+    const data = nodeOf(diagram, node).data;
+    assert.equal('portsEdited' in data, false);
+    for (const key of ['inputs', 'outputs', 'bidirectional']) assert.deepEqual(data[key], entry.equipment[key]);
+  }
+  const saved = JSON.parse(serializeDiagram(diagram, { library }));
+  const { errors, issues } = validateDiagram(saved, { library });
+  assert.deepEqual(errors, []);
+  assert.deepEqual(issues.filter(i => ['ports-edited', 'library-drift'].includes(i.code)), []);
+});
+
 test('quote fields alone do not raise library-drift, other differences still do', () => {
   const { diagram, library, cam } = sample();
   const node = nodeOf(diagram, cam);

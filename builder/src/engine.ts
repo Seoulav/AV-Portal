@@ -80,7 +80,8 @@ export interface Diagram {
 export interface Issue { code: string; severity: 'warning' | 'info'; target: { node?: string; edge?: string; port?: string }; detail?: string }
 export interface ValidationError { code: string; path?: string; target?: Issue['target']; detail?: string }
 export interface Rules { lineTypes: LineType[]; connectorWildcards: Record<string, string[] | '*'>; connectorEquivalents: string[][]; levelPairs: string[][] }
-export interface LibraryUnit { unitId: string; unit?: 'tx' | 'rx'; variant?: string; equipment: Equipment }
+// slots·card: 라이브러리 1.1.0(B-20261013-03)의 프레임 슬롯·카드 장착 정보. 배치 단위에 붙고 장비(equipment)·노드 data에는 들어가지 않는다
+export interface LibraryUnit { unitId: string; unit?: 'tx' | 'rx'; variant?: string; equipment: Equipment; slots?: Record<string, unknown>; card?: Record<string, unknown> }
 export interface LibraryProduct {
   productId: string;
   source: 'portal' | 'rtcom';
