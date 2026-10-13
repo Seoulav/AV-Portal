@@ -9,7 +9,7 @@ export { classifyIoRow, nonPortKind, normalizeConnector, normalizeDirection, nor
 
 export const LIBRARY_SCHEMA = 'av-portal.builder-library';
 // 1.1.0 (B-20261013-03): 배치 단위에 프레임 슬롯(slots)·카드 장착 정보(card) 추가
-// 1.2.0 (B-20261013-02): 단자 portalIo에 원본 행 번호(ioIndex)·방향(direction)·수량(quantity) 원문 추가 — Portal 반영 요청이 행 단위로 묶는 데 쓴다
+// 1.2.0 (B-20261013-02): 단자 portalIo에 원본 행 번호(ioIndex)·방향(direction)·수량(quantity)·프로토콜(protocol) 원문 추가 — Portal 반영 요청이 행 단위로 묶는 데 쓴다
 export const LIBRARY_SCHEMA_VERSION = '1.2.0';
 export const PORTAL_BASE = 'https://seoulav.github.io/AV-Portal/';
 
@@ -107,8 +107,8 @@ export function buildPorts(rows, { overrides = {}, productId, strip = null, issu
     const port = { id: `${key}-${n}`, label: `${signal.label} ${V.DIRECTION_LABELS[result.direction]} ${n}${suffix}`, type: portLineType(result.connector, result.signals), direction: result.direction, connector: result.connector, signals: result.signals };
     const verification = text(row.verification);
     if (verification) port.verification = verification;
-    // ioIndex: 그 배치 단위의 io 배열 안 행 번호(단일 제품·TX/RX는 상세 io, 시리즈는 lineup 항목 io). direction·quantity: 원문
-    port.portalIo = { group: text(row.group), connector: text(row.connector), signal: text(row.signal), ioIndex, direction: text(row.direction), quantity: text(row.quantity) };
+    // ioIndex: 그 배치 단위의 io 배열 안 행 번호(단일 제품·TX/RX는 상세 io, 시리즈는 lineup 항목 io). direction·quantity·protocol: 원문(protocol은 신호 판정에 쓰인다)
+    port.portalIo = { group: text(row.group), connector: text(row.connector), signal: text(row.signal), ioIndex, direction: text(row.direction), quantity: text(row.quantity), protocol: text(row.protocol) };
     return port;
   });
   return { ports: built, unresolved, nonPort };

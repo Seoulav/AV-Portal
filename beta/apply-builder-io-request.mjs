@@ -16,7 +16,7 @@ import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { classifyIoRow } from './port-classify.mjs';
 import { IO_OVERRIDES } from './port-vocabulary.mjs';
-import { ROW_FIELDS, validateIoRequest } from '../builder/engine/io-request.mjs';
+import { ROW_FIELDS, overrideApplies, validateIoRequest } from '../builder/engine/io-request.mjs';
 
 const root = new URL('../', import.meta.url);
 const site = new URL('./site/', import.meta.url);
@@ -31,49 +31,74 @@ export const SKIP_REASONS = Object.freeze({
   override: '개별 지정(IO_OVERRIDES) 행이다. 생성기 표를 함께 고쳐야 하므로 Builder 작업으로 따로 처리한다',
   'override-shift': '이 행을 지우면 뒤 행의 개별 지정(IO_OVERRIDES) 번호가 밀린다',
   'not-port': '고친 원문이 단자 행으로 판정되지 않는다',
+  'source-skipped': '갈라져 나온 원래 행의 변경을 건너뛰어 이 새 행도 넣지 않는다',
+  'already-applied': '이미 반영된 값이다(같은 요청을 다시 적용)',
 });
 
-// 요청 → 적용 계획. detail: 상세 JSON 객체. 결과: { io(새 io 배열), applied: [{ change, index }], skipped: [{ change, index, code }] }
+// 요청 → 적용 계획. detail: 상세 JSON 객체.
+// 결과: { io(새 io 배열), applied: [{ change, index }], skipped: [{ change, index, code }], alreadyApplied(같은 요청을 다시 적용한 흔적) }
 // 변경은 원래 행 번호로 판단한다: update를 먼저 제자리에 쓰고, remove는 큰 번호부터 지우고, add는 끝에 붙인다
 export function planIoRequest(request, detail, { overrides = IO_OVERRIDES } = {}) {
   const io = Array.isArray(detail.io) ? detail.io.map(row => ({ ...row })) : [];
+  const original = io.map(row => ({ ...row }));
   const overrideIndexes = Object.keys(overrides).filter(key => key.startsWith(`${request.productId}#`)).map(key => Number(key.slice(request.productId.length + 1))).filter(Number.isInteger);
   const applied = [];
   const skipped = [];
   const removals = [];
   const additions = [];
-  request.changes.forEach((change, index) => {
-    const skip = code => skipped.push({ change, index, code });
+  const skippedRows = new Set();
+  let alreadyApplied = false;
+  // update·remove를 먼저 판단한다(갈라진 add가 원래 행의 결과를 따라야 해서)
+  const order = request.changes.map((change, index) => ({ change, index })).sort((a, b) => (a.change.op === 'add') - (b.change.op === 'add'));
+  for (const { change, index } of order) {
+    const skip = code => {
+      skipped.push({ change, index, code });
+      if (change.op !== 'add') skippedRows.add(change.ioIndex);
+    };
+    const done = () => applied.push({ change, index });
     if (change.op !== 'add') {
-      const current = io[change.ioIndex];
-      if (!current) return skip('index-missing');
-      if (!isDeepStrictEqual(rowSnapshot(current), rowSnapshot(change.before))) return skip('before-mismatch');
-      if (overrideIndexes.includes(change.ioIndex)) return skip('override');
+      const current = original[change.ioIndex];
+      if (!current) { skip('index-missing'); continue; }
+      if (!isDeepStrictEqual(rowSnapshot(current), rowSnapshot(change.before))) {
+        // 지금 행이 after와 같으면 같은 요청을 이미 적용한 것이다
+        if (change.op === 'update' && isDeepStrictEqual(rowSnapshot(current), rowSnapshot(change.after)) && text(current.verification) === REVIEW_REQUIRED) { alreadyApplied = true; skip('already-applied'); } else skip('before-mismatch');
+        continue;
+      }
+      if (overrideIndexes.includes(change.ioIndex) && overrideApplies(overrides, `${request.productId}#${change.ioIndex}`, current)) { skip('override'); continue; }
       if (change.op === 'remove') {
-        if (overrideIndexes.some(other => other > change.ioIndex)) return skip('override-shift');
+        if (overrideIndexes.some(other => other > change.ioIndex)) { skip('override-shift'); continue; }
         removals.push(change.ioIndex);
-        return applied.push({ change, index });
+        done();
+        continue;
       }
       const next = { ...current, ...change.after, source: '', verification: REVIEW_REQUIRED };
-      if (classifyIoRow(next).kind !== 'port') return skip('not-port');
+      if (classifyIoRow(next).kind !== 'port') { skip('not-port'); continue; }
       io[change.ioIndex] = next;
-      return applied.push({ change, index });
+      done();
+      continue;
     }
+    if (change.fromIoIndex !== undefined && skippedRows.has(change.fromIoIndex)) { skip('source-skipped'); continue; }
     const row = { ...change.row, protocol: '', availability: '', condition: '', source: '', verification: REVIEW_REQUIRED };
-    if (classifyIoRow(row).kind !== 'port') return skip('not-port');
+    // 같은 새 행이 이미 있으면(REVIEW REQUIRED·출처 없음) 같은 요청을 다시 적용한 것이다
+    if (original.some(item => isDeepStrictEqual(rowSnapshot(item), rowSnapshot(row)) && text(item.verification) === REVIEW_REQUIRED && !text(item.source))) { alreadyApplied = true; skip('already-applied'); continue; }
+    if (classifyIoRow(row).kind !== 'port') { skip('not-port'); continue; }
     additions.push(row);
-    return applied.push({ change, index });
-  });
+    done();
+  }
   for (const ioIndex of removals.sort((a, b) => b - a)) io.splice(ioIndex, 1);
   io.push(...additions);
-  return { io, applied, skipped };
+  const byIndex = (a, b) => a.index - b.index;
+  return { io, applied: applied.sort(byIndex), skipped: skipped.sort(byIndex), alreadyApplied };
 }
 
 // ── 겹치는 작업 ──
-// 진행 중 작업 블록: 지시서.md는 "## 현재 상태" 절에서 W- ID로 시작하는 단락, 지시서-B.md는 "## W-" 절.
-// 상태가 MERGED·DEPLOYED·완료뿐이면 끝난 작업으로 본다
-const ACTIVE = /IN_PROGRESS|REVIEW|BLOCKED|진행|검토|보류/;
-const DONE = /MERGED|DEPLOYED|완료/;
+// 작업 블록: 지시서.md는 W- ID로 시작하는 단락(모든 절), 지시서-B.md는 "## W-" 절.
+// 진행 표시(IN_PROGRESS·REVIEW·BLOCKED 등)가 있으면 MERGED가 함께 있어도 진행 중으로 본다(예: "IN_PROGRESS · 1차 MERGED").
+// 끝난 표시(MERGED·DEPLOYED·완료·종료)만 있으면 끝난 작업이다. 상태를 알아볼 수 없으면 진행 중으로 본다(놓치지 않게)
+const ACTIVE = /IN_PROGRESS|REVIEW|BLOCKED|진행|검토|보류|준비|대기/;
+const DONE = /MERGED|DEPLOYED|완료|종료/;
+const TASK_ID = /^W-\d{8}-\d{3}/;
+const isActive = status => ACTIVE.test(status) || !DONE.test(status);
 export function activeTasks(file, markdown) {
   const lines = String(markdown).replaceAll('\r\n', '\n').split('\n');
   const blocks = [];
@@ -83,41 +108,57 @@ export function activeTasks(file, markdown) {
       if (/^## /.test(line)) { current = { title: line.slice(3).trim(), lines: [] }; blocks.push(current); continue; }
       current?.lines.push(line);
     }
-    return blocks.filter(block => /^W-\d{8}-\d{3}/.test(block.title)).map(block => {
+    return blocks.filter(block => TASK_ID.test(block.title)).map(block => {
       const status = block.lines.find(line => /^- 상태:/.test(line)) ?? '';
-      return { file, task: block.title.split(/\s/)[0], title: block.title, status: status.replace(/^- 상태:\s*/, ''), text: block.lines.join('\n') };
-    }).filter(block => ACTIVE.test(block.status) && !DONE.test(block.status));
+      return { file, task: TASK_ID.exec(block.title)[0], title: block.title, status: status.replace(/^- 상태:\s*/, ''), text: `${block.title}\n${block.lines.join('\n')}` };
+    }).filter(block => isActive(block.status));
   }
-  const start = lines.findIndex(line => /^## 현재 상태/.test(line));
-  if (start < 0) return [];
   let current = null;
-  for (const line of lines.slice(start + 1)) {
-    if (/^## /.test(line)) break;
-    if (/^W-\d{8}-\d{3}/.test(line)) { current = { file, task: line.split(/\s/)[0], title: line, lines: [line] }; blocks.push(current); continue; }
+  for (const line of lines) {
+    if (/^#/.test(line)) { current = null; continue; }
+    if (TASK_ID.test(line)) { current = { task: TASK_ID.exec(line)[0], title: line, lines: [line] }; blocks.push(current); continue; }
     current?.lines.push(line);
   }
-  return blocks.map(block => ({ file, task: block.task, title: block.title.slice(0, 120), status: (/\*\*([^*]+)\*\*/.exec(block.title)?.[1] ?? ''), text: block.lines.join('\n') }))
-    .filter(block => ACTIVE.test(block.status) && !DONE.test(block.status));
+  return blocks.map(block => {
+    // 상태: 첫 줄의 굵은 글씨(**IN_PROGRESS** 등). 없으면 첫 줄 앞부분(예: "종료 보완:")
+    const status = /\*\*([^*]+)\*\*/.exec(block.title)?.[1] ?? block.title.slice(block.task.length, block.task.length + 40);
+    return { file, task: block.task, title: block.title.slice(0, 120), status: status.trim(), text: block.lines.join('\n') };
+  }).filter(block => isActive(block.status));
 }
 
-// 진행 중 작업이 이 제품을 언급하는지(slug·상세 경로·모델명). 대소문자 무시
-export function instructionOverlaps(tasks, { slug, model }) {
-  const needles = [slug, `detail/data/${slug}.json`, model].map(text).filter(value => value.length >= 3).map(value => value.toLowerCase());
+// 진행 중 작업이 이 제품을 언급하는지(slug·상세 경로·모델명·제조사). 대소문자 무시.
+// 제조사 단위로 맡은 작업("Powersoft 앰프 18종")도 잡도록 제조사 이름을 넣는다. 지나치게 잡히면 사람이 확인하고 --overlap-checked로 넘긴다
+export function instructionOverlaps(tasks, { slug, model, brand }) {
+  const needles = [slug, `detail/data/${slug}.json`, model, brand].map(text).filter(value => value.length >= 3).map(value => value.toLowerCase());
   return tasks.filter(task => needles.some(needle => task.text.toLowerCase().includes(needle)));
 }
 
-// 열린 PR 중 같은 상세 파일을 고치는 것. prs: gh pr list --json number,title,url,files 결과
+// 열린 PR 중 같은 상세 파일을 고치는 것. prs: gh pr list --json number,title,url,files 결과.
+// gh는 PR마다 파일을 100개까지만 돌려준다. 100개 이상이면 다 보지 못했으므로 uncertain으로 둔다
+export const PR_FILE_LIMIT = 100;
 export function pullRequestOverlaps(prs, slug) {
   const path = `beta/site/detail/data/${slug}.json`;
-  return prs.filter(pr => (pr.files ?? []).some(file => file.path === path));
+  const hits = prs.filter(pr => (pr.files ?? []).some(file => file.path === path));
+  const uncertain = prs.filter(pr => !hits.includes(pr) && (pr.files ?? []).length >= PR_FILE_LIMIT);
+  return { hits, uncertain };
 }
 
-// gh로 열린 PR 목록. 쓸 수 없으면 null
+// gh로 열린 PR 목록. 쓸 수 없으면 null. 저장소를 지정해 복제본(원격이 로컬 경로)에서도 쓴다
+export const REPOSITORY = 'Seoulav/AV-Portal';
 export function listOpenPullRequests() {
   if (process.env.AV_PORTAL_NO_GH === '1') return null;
   try {
-    const out = execFileSync('gh', ['pr', 'list', '--state', 'open', '--limit', '100', '--json', 'number,title,url,files'], { cwd: fileURLToPath(root), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: 60000 });
+    const out = execFileSync('gh', ['pr', 'list', '--repo', REPOSITORY, '--state', 'open', '--limit', '200', '--json', 'number,title,url,files'], { cwd: fileURLToPath(root), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: 60000 });
     return JSON.parse(out);
+  } catch {
+    return null;
+  }
+}
+
+// 상세 파일에 커밋하지 않은 변경이 있는지(같은 요청을 두 번 적용하거나 손으로 고친 중인 파일에 덮어쓰지 않게). git이 없으면 null
+export function detailIsDirty(slug) {
+  try {
+    return execFileSync('git', ['status', '--porcelain', '--', `beta/site/detail/data/${slug}.json`], { cwd: fileURLToPath(root), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim() !== '';
   } catch {
     return null;
   }
@@ -239,23 +280,27 @@ export async function main(argv, log = console.log) {
   for (const name of ['지시서.md', '지시서-B.md']) {
     try { tasks.push(...activeTasks(name, await readFile(new URL(`Work/${name}`, root), 'utf8'))); } catch { /* 파일이 없으면 넘어간다 */ }
   }
-  const taskHits = instructionOverlaps(tasks, { slug: request.productId, model: detail.model ?? item.product });
+  const taskHits = instructionOverlaps(tasks, { slug: request.productId, model: detail.model ?? item.product, brand: item.brand });
   const prs = listOpenPullRequests();
-  const prHits = prs ? pullRequestOverlaps(prs, request.productId) : [];
+  const { hits: prHits, uncertain: prUncertain } = prs ? pullRequestOverlaps(prs, request.productId) : { hits: [], uncertain: [] };
   let blocked = false;
   if (prHits.length) {
     blocked = true;
     log(`중단: 열린 PR이 같은 상세 파일을 고칩니다.\n${prHits.map(pr => `  - #${pr.number} ${pr.title} ${pr.url ?? ''}`).join('\n')}`);
   }
+  if (prUncertain.length && !args.overlapChecked) {
+    blocked = true;
+    log(`중단: 파일이 ${PR_FILE_LIMIT}개 이상인 열린 PR은 gh가 파일을 다 보여 주지 않습니다. 같은 상세 파일을 고치지 않는지 직접 확인한 뒤 --overlap-checked로 다시 실행하세요.\n${prUncertain.map(pr => `  - #${pr.number} ${pr.title} ${pr.url ?? ''}`).join('\n')}`);
+  }
   if (taskHits.length && !args.overlapChecked) {
     blocked = true;
-    log(`중단: 진행 중 작업이 이 제품을 다룹니다. 사용자에게 확인한 뒤 --overlap-checked로 다시 실행하세요.\n${taskHits.map(task => `  - ${task.file} ${task.task} [${task.status}]`).join('\n')}`);
+    log(`중단: 진행 중 작업이 이 제품(또는 제조사)을 언급합니다. 사용자에게 확인한 뒤 --overlap-checked로 다시 실행하세요.\n${taskHits.map(task => `  - ${task.file} ${task.task} [${task.status}]`).join('\n')}`);
   }
   if (!prs && !args.overlapChecked) {
     blocked = true;
     log([
       'gh로 열린 PR을 확인하지 못했습니다. 아래를 직접 확인한 뒤 --overlap-checked로 다시 실행하세요.',
-      `  - [ ] 열린 PR 중 beta/site/detail/data/${request.productId}.json을 고치는 PR이 없다 (https://github.com/Seoulav/AV-Portal/pulls)`,
+      `  - [ ] 열린 PR 중 beta/site/detail/data/${request.productId}.json을 고치는 PR이 없다 (https://github.com/${REPOSITORY}/pulls)`,
       `  - [ ] Work/지시서.md·Work/지시서-B.md의 진행 중 작업이 이 제품을 다루지 않는다`,
       ...tasks.map(task => `      · ${task.file} ${task.task} [${task.status}]`),
     ].join('\n'));
@@ -265,6 +310,10 @@ export async function main(argv, log = console.log) {
   log(`\n${item.product} (${request.productId}) — 적용 ${plan.applied.length}건 · 건너뜀 ${plan.skipped.length}건`);
   for (const { change } of plan.applied) log(`  ✓ ${describeChange(change)}${change.reason ? ` — 근거: ${change.reason}` : ' — 근거 없음'}`);
   for (const { change, code } of plan.skipped) log(`  ✗ ${describeChange(change)} — ${SKIP_REASONS[code]}`);
+  if (plan.alreadyApplied) {
+    blocked = true;
+    log('중단: 이 요청은 이미 반영된 것으로 보입니다(같은 새 행 또는 바뀐 값이 이미 있다). 다시 적용하지 않습니다.');
+  }
 
   if (args.dryRun) {
     log('\n--dry-run: 파일을 바꾸지 않았습니다.');
@@ -273,6 +322,11 @@ export async function main(argv, log = console.log) {
   if (blocked) return 1;
   if (!plan.applied.length) {
     log('적용할 변경이 없습니다.');
+    return 1;
+  }
+  // 커밋하지 않은 변경이 있는 상세에는 쓰지 않는다(재생성 도중 실패한 뒤 다시 실행해 행이 겹치는 일을 막는다)
+  if (detailIsDirty(request.productId)) {
+    log(`중단: beta/site/detail/data/${request.productId}.json에 커밋하지 않은 변경이 있습니다. 앞 실행의 결과라면 git checkout으로 되돌린 뒤 다시 실행하세요.`);
     return 1;
   }
   await writeFile(detailUrl, replaceIoText(raw, plan.io));
@@ -284,7 +338,12 @@ export async function main(argv, log = console.log) {
   const product = library.products.find(entry => entry.productId === request.productId);
   log(`라이브러리 생성 확인: ${product.productId} 단자 ${product.readiness.ports}개 · 확인 필요 행 ${product.readiness.unresolvedRows}개`);
   log(run('./build-search-index.mjs', ['--check']).trim());
-  log('\n다음: LF 복제본에서 전체 시험과 node beta/verify-pages.mjs를 돌린 뒤 PR을 엽니다. 과거 바이트 검사(tests/*history*.mjs)가 이 상세를 보면 되감기 모듈이 필요합니다.');
+  log([
+    '',
+    '다음: LF 복제본에서 전체 시험과 node beta/verify-pages.mjs를 돌린 뒤 PR을 엽니다.',
+    `  - 이 제품의 io 내용·행 번호를 고정한 시험(제품 전용 시험, tests/*history*.mjs 되감기 검사 등)이 실패하면 이번 변경에 맞게 고칩니다. 행을 지웠으면 뒤 행 번호가 하나씩 당겨집니다.`,
+    `  - 찾기: grep -l "${request.productId}" tests/*.mjs`,
+  ].join('\n'));
   log(`\nPR 제목 초안: data: ${item.product} I/O 행 Portal 반영 (Builder 요청)\n\n${pullRequestBody(request, { product: item.product, ...plan, shaMismatch })}`);
   return 0;
 }

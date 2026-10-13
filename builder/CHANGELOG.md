@@ -9,11 +9,12 @@
 - 반영하지 않는 단자를 확인 화면에 이유와 함께 보인다: 이름만 바꾼 단자(이름은 생성기가 매긴다), 개별 지정(IO_OVERRIDES) 행, 지우면 뒤 행의 개별 지정 번호가 밀리는 행, Portal 원문으로 나타낼 수 없는 값(AVB, PoE를 주 신호로, 대칭 신호의 한 방향 등)
 - 엔진 `engine/io-request.mjs`: `buildIoRequest`(단자 → 행 묶기), `validateIoRequest`, 표준값 → Portal 원문 표(`CONNECTOR_TEXT`·`SIGNAL_TEXT`·`DIRECTION_TEXT`·`GROUP_TEXT`)
 - 요청 스키마 `schema/builder-io-request-1.0.schema.json`(`npm run check:schema`가 함께 검사)
-- 저장소 적용 스크립트 `beta/apply-builder-io-request.mjs <파일> [--dry-run] [--overlap-checked]`
-- 시험: 루트 `tests/builder-io-request.test.mjs` 14건(왕복 포함), vitest `test/io-request.test.ts` 2건, Playwright `e2e/io-request.spec.ts` 3건
+- 저장소 적용 스크립트 `beta/apply-builder-io-request.mjs <파일> [--dry-run] [--overlap-checked]`. 같은 요청 재적용·커밋하지 않은 상세 파일·원래 행을 건너뛴 갈라진 새 행(`fromIoIndex`)을 막는다
+- Portal 제품의 TX/RX·시리즈 배치 단위는 요청을 만들지 않는다고 알린다(RTCOM은 전달용으로 만든다)
+- 시험: 루트 `tests/builder-io-request.test.mjs` 18건(왕복 포함), vitest `test/io-request.test.ts` 2건, Playwright `e2e/io-request.spec.ts` 3건
 
 ### Changed
-- 결선용 라이브러리 1.2.0: 단자 `portalIo`에 원본 행 번호 `ioIndex`·방향 `direction`·수량 `quantity` 원문을 더했다. 구성도 파일에는 지금처럼 `group`·`connector`·`signal`만 저장한다
+- 결선용 라이브러리 1.2.0: 단자 `portalIo`에 원본 행 번호 `ioIndex`·방향 `direction`·수량 `quantity`·프로토콜 `protocol` 원문을 더했다. 구성도 파일에는 지금처럼 `group`·`connector`·`signal`만 저장한다
 - 행 판정 규칙(부록 A1~A5)을 `beta/port-classify.mjs`로 옮겼다. 생성기(`beta/builder-library.mjs`)는 같은 이름으로 다시 내보내고, Builder 화면도 이 규칙으로 요청 원문을 확인한다
 - 브라우저 시험의 "적용" 버튼은 이름을 정확히 찾는다(`exact: true`) — 단자 탭에 "적용하고 Portal 반영 요청 내보내기"가 함께 있어서다
 

@@ -38,6 +38,7 @@ const EXPORT_PROBLEMS: Record<string, string> = {
   'library-missing': '라이브러리에서 이 장비를 찾지 못해 Portal 반영 요청을 만들 수 없습니다',
   'library-old': '라이브러리가 오래되어(1.2.0 미만) 단자의 원본 행을 알 수 없습니다. 새로 고친 뒤 다시 시도해 주세요',
   'library-changed': '라이브러리가 바뀌어 원본 행을 찾지 못한 단자가 있습니다. "라이브러리 값으로 되돌리기" 뒤 다시 고쳐 주세요',
+  'unit-unsupported': 'TX/RX·시리즈로 나뉜 장비는 아직 Portal 반영 요청을 만들 수 없습니다',
 };
 const NOT_REFLECTED: Record<IoNotReflected['code'], string> = {
   label: '이름은 Portal 행에서 자동으로 매겨져 반영하지 않습니다',
@@ -150,8 +151,11 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     setPendingExport(null);
   };
 
-  // 근거만 고친다(단자 초안은 그대로라 확인을 다시 받지 않는다)
-  const updateReason = (list: ListKey, key: string, reason: string) => setDraft(current => ({ ...current, [list]: current[list].map(port => (port.key === key ? { ...port, reason } : port)) }));
+  // 근거만 고친다(연결 확인은 그대로 둔다). 열린 요청 확인 화면은 옛 근거로 만든 것이라 닫는다
+  const updateReason = (list: ListKey, key: string, reason: string) => {
+    setDraft(current => ({ ...current, [list]: current[list].map(port => (port.key === key ? { ...port, reason } : port)) }));
+    setReview(null);
+  };
 
   // 적용할 단자(초안)와 라이브러리를 견줘 Portal 반영 요청을 만들고 확인 화면을 연다
   const startExport = () => {
@@ -220,7 +224,7 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
           <button type="button" className="icon-button" aria-label="닫기" onClick={close}>×</button>
         </header>
         <nav className="modal-tabs" role="tablist">
-          {tabs.map(([id, label]) => <button key={id} type="button" role="tab" aria-selected={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)}>{label}</button>)}
+          {tabs.map(([id, label]) => <button key={id} type="button" role="tab" aria-selected={tab === id} className={tab === id ? 'active' : ''} onClick={() => { setTab(id); setReview(null); }}>{label}</button>)}
         </nav>
         <div className="modal-body">
           {tab === 'basic' && (

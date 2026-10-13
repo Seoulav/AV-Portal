@@ -75,8 +75,9 @@ test('vocabulary → Portal text: every signal (but AVB and PoE as main signal) 
 test('library 1.2.0 ports carry the source row number, direction and quantity text', () => {
   const product = fixtureProduct(fixtureDetail());
   const { inputs, bidirectional } = product.units[0].equipment;
-  assert.deepEqual(inputs[0].portalIo, { group: 'Input', connector: 'HDMI Type-A', signal: 'HDMI 2.0 입력', ioIndex: 0, direction: 'IN', quantity: '3' });
+  assert.deepEqual(inputs[0].portalIo, { group: 'Input', connector: 'HDMI Type-A', signal: 'HDMI 2.0 입력', ioIndex: 0, direction: 'IN', quantity: '3', protocol: '' });
   assert.equal(bidirectional[0].portalIo.ioIndex, 2);
+  assert.equal(bidirectional[0].portalIo.protocol, 'TCP/IP');
 });
 
 test('port edits group into io-row changes: quantity, split-off row, removal, user rows; labels are not reflected', () => {
@@ -100,7 +101,7 @@ test('port edits group into io-row changes: quantity, split-off row, removal, us
     { op: 'update', ioIndex: 0, before: { group: 'Input', connector: 'HDMI Type-A', signal: 'HDMI 2.0 입력', direction: 'IN', quantity: '3' }, after: { group: 'Input', connector: 'HDMI Type-A', signal: 'HDMI 2.0 입력', direction: 'IN', quantity: '2' }, reason: '' },
     { op: 'update', ioIndex: 1, before: { group: 'Output', connector: 'HDMI Type-A', signal: 'HDMI 출력', direction: 'OUT', quantity: '2' }, after: { group: 'Output', connector: 'HDMI Type-A', signal: 'HDMI 출력', direction: 'OUT', quantity: '1' }, reason: '' },
     { op: 'remove', ioIndex: 2, before: { group: 'Network', connector: 'RJ-45', signal: '10/100 Ethernet(LAN)', direction: 'IN/OUT', quantity: '1' }, reason: '' },
-    { op: 'add', row: { group: 'Output', connector: 'DP', signal: 'DP', direction: 'OUT', quantity: '1' }, reason: '' },
+    { op: 'add', fromIoIndex: 1, row: { group: 'Output', connector: 'DP', signal: 'DP', direction: 'OUT', quantity: '1' }, reason: '' },
     { op: 'add', row: { group: 'Input', connector: 'BNC', signal: 'SDI', direction: 'IN', quantity: '2' }, reason: 'FX-1 매뉴얼 12쪽' },
   ]);
   assert.deepEqual(result.notReflected, [{ code: 'label', ports: ['메인 L'] }]);
@@ -162,6 +163,90 @@ test('values the Portal text cannot express, override rows and index-shifting re
   assert.deepEqual(planIoRequest(forged, detail, { overrides }).skipped.map(item => item.code), ['override-shift', 'override']);
 });
 
+// 리뷰 반영(독립 리뷰 지적 1·5~9)
+test('protocol text takes part in the check: edits it would undo are reported, not silently dropped', () => {
+  const detail = { model: 'NET-1', io: [row('Network', 'RJ-45', 'Audio network', 'IN/OUT', '1', { protocol: 'Dante' }), row('Network', 'RJ-45', 'Ethernet', 'IN/OUT', '2', { protocol: 'Dante' })] };
+  const product = buildProduct({ productId: 'net-1', source: 'portal', brand: 'Test', product: 'NET-1', categories: ['오디오', 'Audio', 'DSP'], detail }, {});
+  const { diagram, node, equipment, options } = place(product);
+  assert.deepEqual(equipment.bidirectional.map(port => port.signals), [['DANTE', 'ETHERNET'], ['DANTE', 'ETHERNET'], ['DANTE', 'ETHERNET']]);
+  // 첫 행: Ethernet만으로 / 둘째 행: Dante를 빼려 함(protocol이 Dante라 원문으로 나타낼 수 없다)
+  const lists = editable(node.data);
+  lists.bidirectional = lists.bidirectional.map(port => ({ ...port, signals: ['ETHERNET'] }));
+  assert.equal(updateEquipmentPorts(diagram, node.id, lists, options).ok, true);
+  const result = requestFor(nodeData(diagram, node), equipment, { overrides: {} });
+  assert.deepEqual(result.request.changes, []);
+  assert.deepEqual(result.notReflected.map(item => item.code), ['not-representable', 'not-representable']);
+
+  // 수량만 바꾸면 protocol 덕분에 원문 signal은 그대로 둔다
+  const again = place(product);
+  const fewer = editable(again.node.data);
+  fewer.bidirectional.pop();
+  assert.equal(updateEquipmentPorts(again.diagram, again.node.id, fewer, again.options).ok, true);
+  assert.deepEqual(requestFor(nodeData(again.diagram, again.node), again.equipment, { overrides: {} }).request.changes.map(change => change.after), [{ group: 'Network', connector: 'RJ-45', signal: 'Ethernet', direction: 'IN/OUT', quantity: '1' }]);
+});
+
+test('counts written in the connector text, moved directions, re-added ports and stale overrides', () => {
+  const detail = { model: 'MIX-1', io: [row('Input', 'XLR x4', 'Mic input', 'IN', ''), row('Output', 'HDMI', 'HDMI out', 'OUT', '2'), row('Input', 'HDMI', 'HDMI in', 'IN', '1')] };
+  // io[2]의 개별 지정은 원문이 바뀌어 생성기가 쓰지 않는다(stale) → 편집을 막지 않는다
+  const overrides = { 'mix-1#2': { match: { connector: 'HDMI Type-A', signal: '옛 원문' }, connector: 'HDMI', signals: ['HDMI'], direction: 'in', quantity: 1, note: '시험' } };
+  const product = buildProduct({ productId: 'mix-1', source: 'portal', brand: 'Test', product: 'MIX-1', categories: ['오디오', 'Audio', 'Mixer'], detail }, overrides);
+  const { diagram, node, equipment, options } = place(product);
+  const lists = editable(node.data);
+  lists.inputs = lists.inputs.filter((port, index) => index !== 0); // "XLR x4"에서 하나 지움 → 원문끼리 어긋나므로 반영하지 않는다
+  const moved = lists.outputs.pop(); // HDMI 출력 하나를 양방향으로 옮김 → 갈라진 새 행의 group은 방향을 따른다
+  lists.bidirectional.push(moved);
+  const hdmiIn = lists.inputs.find(port => port.signals[0] === 'HDMI');
+  lists.inputs = lists.inputs.filter(port => port !== hdmiIn);
+  lists.inputs.push({ label: 'HDMI In 9', connector: 'HDMI', signals: ['HDMI'] }); // 지운 HDMI 입력을 같은 값으로 다시 더함 → 그 행에 되돌려 넣어 변경 없음
+  lists.inputs.push({ label: 'HDMI In 10', connector: 'HDMI', signals: ['HDMI'] }); // 하나 더 → 사용자 단자 새 행
+  assert.equal(updateEquipmentPorts(diagram, node.id, lists, options).ok, true);
+  const result = requestFor(nodeData(diagram, node), equipment, { overrides });
+  assert.deepEqual(result.request.changes.map(change => [change.op, change.ioIndex ?? change.fromIoIndex, change.after?.quantity ?? change.row?.group]), [
+    ['update', 1, '1'],
+    ['add', 1, 'Input/Output'],
+    ['add', undefined, 'Input'],
+  ]);
+  assert.deepEqual(result.notReflected, [{ code: 'not-representable', ports: lists.inputs.filter(port => port.signals[0] === 'MIC-AUDIO').map(port => port.label) }]);
+  // stale 개별 지정 행(io[2])은 지우거나 고칠 수 있다
+  const again = place(product);
+  const gone = editable(again.node.data);
+  gone.inputs = gone.inputs.filter(port => port.signals[0] !== 'HDMI');
+  assert.equal(updateEquipmentPorts(again.diagram, again.node.id, gone, again.options).ok, true);
+  assert.deepEqual(requestFor(nodeData(again.diagram, again.node), again.equipment, { overrides }).request.changes.map(change => [change.op, change.ioIndex]), [['remove', 2]]);
+  assert.deepEqual(planIoRequest({ productId: 'mix-1', changes: [{ op: 'remove', ioIndex: 2, before: { group: 'Input', connector: 'HDMI', signal: 'HDMI in', direction: 'IN', quantity: '1' }, reason: '' }] }, detail, { overrides }).skipped, []);
+});
+
+test('apply: split-off rows follow their source row, and re-applying the same request is detected', () => {
+  const detail = fixtureDetail();
+  const { diagram, node, equipment, options } = place(fixtureProduct(detail));
+  const lists = editable(node.data);
+  lists.outputs[1] = { ...lists.outputs[1], connector: 'DP', signals: ['DP'] };
+  assert.equal(updateEquipmentPorts(diagram, node.id, lists, options).ok, true);
+  const { request } = requestFor(nodeData(diagram, node), equipment, { overrides: {} });
+  // 요청 뒤 원래 행(io[1])이 바뀌면 그 update와 갈라진 add를 함께 건너뛴다
+  const drifted = structuredClone(detail);
+  drifted.io[1].quantity = '3';
+  assert.deepEqual(planIoRequest(request, drifted, { overrides: {} }).skipped.map(item => item.code), ['before-mismatch', 'source-skipped']);
+  // 한 번 적용한 결과에 다시 적용하면 이미 반영됐다고 알린다(행이 겹치지 않는다)
+  const once = planIoRequest(request, detail, { overrides: {} });
+  const twice = planIoRequest(request, { ...detail, io: once.io }, { overrides: {} });
+  assert.equal(twice.alreadyApplied, true);
+  assert.deepEqual(twice.applied, []);
+});
+
+test('Portal products split into TX/RX or series units cannot export yet; RTCOM units can (to forward)', () => {
+  const detail = fixtureDetail();
+  const { node, equipment } = place(fixtureProduct(detail));
+  const tx = { ...structuredClone(equipment), id: 'fx-1:tx' };
+  assert.equal(requestFor({ ...node.data, portal: { ...node.data.portal, unit: 'tx' } }, tx).code, 'unit-unsupported');
+  const rtcom = { ...structuredClone(equipment), id: 'rtcom-fx:tx', portal: { productId: 'rtcom-fx', source: 'rtcom', unit: 'tx', detailUrl: '' } };
+  const data = { ...structuredClone(node.data), portal: rtcom.portal };
+  data.inputs.pop();
+  const result = requestFor(data, rtcom, { overrides: {} });
+  assert.equal(result.ok, true);
+  assert.deepEqual([result.request.source, result.request.unitId], ['rtcom', 'rtcom-fx:tx']);
+});
+
 test('a request built on an old library or with ports the library no longer has is refused', () => {
   const detail = fixtureDetail();
   const { node, equipment } = place(fixtureProduct(detail));
@@ -211,11 +296,18 @@ test('active tasks come from the instruction logs and overlap by slug, detail pa
   const a = ['# 지시서', '', '## 현재 상태', '', 'W-20261013-001 Powersoft 앰프 — **REVIEW**. `beta/site/detail/data/fx-1.json`을 고친다.', '- [x] 무엇', '', 'W-20261013-002 RTCOM 화면 — **MERGED·DEPLOYED**. FX-1도 봤다.', '', '## 이전 진행 기록', 'W-20261012-013 **IN_PROGRESS**. fx-1'].join('\n');
   const b = ['# 세션 B', '', '## W-20261012-007 — 링크', '', '- 상태: MERGED · PR #395', 'fx-1', '', '## W-20261013-009 — FX 보강', '', '- 상태: IN_PROGRESS', 'FX-1 사진'].join('\n');
   const tasks = [...activeTasks('지시서.md', a), ...activeTasks('지시서-B.md', b)];
-  assert.deepEqual(tasks.map(task => `${task.file} ${task.task} ${task.status}`), ['지시서.md W-20261013-001 REVIEW', '지시서-B.md W-20261013-009 IN_PROGRESS']);
-  assert.deepEqual(instructionOverlaps(tasks, { slug: 'fx-1', model: 'FX-1' }).map(task => task.task), ['W-20261013-001', 'W-20261013-009']);
+  assert.deepEqual(tasks.map(task => `${task.file} ${task.task} ${task.status}`), ['지시서.md W-20261013-001 REVIEW', '지시서.md W-20261012-013 IN_PROGRESS', '지시서-B.md W-20261013-009 IN_PROGRESS']);
+  assert.deepEqual(instructionOverlaps(tasks, { slug: 'fx-1', model: 'FX-1' }).map(task => task.task), ['W-20261013-001', 'W-20261012-013', 'W-20261013-009']);
   assert.deepEqual(instructionOverlaps(tasks, { slug: 'other', model: 'OTHER' }), []);
   const prs = [{ number: 1, title: 'a', files: [{ path: 'beta/site/detail/data/fx-1.json' }] }, { number: 2, title: 'b', files: [{ path: 'beta/site/detail/data/fx-10.json' }] }];
-  assert.deepEqual(pullRequestOverlaps(prs, 'fx-1').map(pr => pr.number), [1]);
+  assert.deepEqual(pullRequestOverlaps(prs, 'fx-1').hits.map(pr => pr.number), [1]);
+  // 파일이 100개 이상인 PR은 다 보지 못했으므로 확실하지 않다고 본다
+  const big = { number: 3, title: 'c', files: Array.from({ length: 100 }, (_, i) => ({ path: `x/${i}` })) };
+  assert.deepEqual(pullRequestOverlaps([...prs, big], 'fx-1').uncertain.map(pr => pr.number), [3]);
+  // 진행·끝 표시가 섞이면 진행 중, 알아볼 수 없으면 진행 중(놓치지 않게), 끝 표시만 있으면 끝
+  const mixed = ['## W-20261013-010 — A', '- 상태: IN_PROGRESS · 1차 MERGED', '## W-20261013-011 — B', '- 상태: PR 준비', '## W-20261013-012 — C', '- 상태: MERGED · PR #1'].join('\n');
+  assert.deepEqual(activeTasks('지시서-B.md', mixed).map(task => task.task), ['W-20261013-010', 'W-20261013-011']);
+  assert.deepEqual(instructionOverlaps([{ task: 'W', text: 'Powersoft 앰프 18종' }], { slug: 'x-1', model: 'X 1', brand: 'Powersoft' }).length, 1);
   // 지금 저장소의 지시서도 읽힌다(형식이 바뀌면 여기서 드러난다)
   const real = activeTasks('지시서.md', readFileSync(new URL('Work/지시서.md', root), 'utf8'));
   assert.ok(real.every(task => /^W-\d{8}-\d{3}$/.test(task.task)));
