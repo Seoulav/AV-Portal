@@ -67,12 +67,43 @@ test('AES3: 선 단자끼리는 케이블, BNC는 변환 필요', () => {
   assert.deepEqual(codes(judge(port('out', 'OPTICAL', 'SPDIF'), port('in', 'TERMINAL-BLOCK', 'AES3,SPDIF'))), ['connector-adapter']);
 });
 
-test('CAPTIVE는 오디오에서 유로블록으로 본다, UNKNOWN은 그대로 미상', () => {
+test('CAPTIVE(커넥터 없음·직결 케이블)와 UNKNOWN은 케이블을 추천하지 않고 미상으로 남긴다', () => {
   const r = judge(port('out', 'CAPTIVE', 'MIC-AUDIO'), port('in', 'XLR', 'MIC-AUDIO,LINE-AUDIO'));
-  assert.deepEqual(codes(r), ['audio-cable']);
-  assert.equal(detailOf(r, 'audio-cable'), '유로블록 3P–XLR(M) 평형');
+  assert.equal(r.allowed, true);
+  assert.deepEqual(codes(r), ['connector-unknown']);
+  assert.equal(audioCable(port('out', 'CAPTIVE', 'MIC-AUDIO'), port('in', 'XLR', 'MIC-AUDIO')), null);
   assert.deepEqual(codes(judge(port('out', 'UNKNOWN', 'LINE-AUDIO'), port('in', 'XLR', 'LINE-AUDIO'))), ['connector-unknown']);
   assert.equal(audioCable(port('out', 'UNKNOWN', 'LINE-AUDIO'), port('in', 'XLR', 'LINE-AUDIO')), null);
+});
+
+test('디지털 오디오: 110Ω 평형(XLR·유로블록)과 75Ω 동축(RCA)은 변환 필요', () => {
+  assert.deepEqual(codes(judge(port('out', 'XLR', 'AES3'), port('in', 'RCA', 'AES3'))), ['connector-adapter']);
+  assert.deepEqual(codes(judge(port('out', 'RCA', 'SPDIF'), port('in', 'XLR', 'SPDIF'))), ['connector-adapter']);
+  assert.deepEqual(audioCable(port('out', 'RCA', 'SPDIF'), port('in', 'RCA', 'SPDIF')), { kind: 'digital', name: 'RCA–RCA S/PDIF 75Ω' });
+});
+
+test('콤보 잭은 상대에 맞춰 받는다: TRS 플러그면 TRS–TRS', () => {
+  const r = judge(port('out', 'TRS-6.3', 'LINE-AUDIO'), port('in', 'XLR-COMBO', 'LINE-AUDIO'));
+  assert.deepEqual(codes(r), []);
+  assert.equal(audioCable(port('out', 'TRS-6.3', 'LINE-AUDIO'), port('in', 'XLR-COMBO', 'LINE-AUDIO')).name, 'TRS 6.3–TRS 6.3 평형');
+  assert.equal(audioCable(port('out', 'XLR', 'MIC-AUDIO'), port('in', 'XLR-COMBO', 'MIC-AUDIO')).name, 'XLR(F)–XLR(M) 평형');
+});
+
+test('레벨 안내는 커넥터를 몰라도 붙는다', () => {
+  const r = judge(port('out', 'XLR', 'MIC-AUDIO'), port('in', 'UNKNOWN', 'LINE-AUDIO'));
+  assert.deepEqual(codes(r), ['connector-unknown', 'signal-level']);
+  assert.equal(detailOf(r, 'signal-level'), 'MIC-AUDIO → LINE-AUDIO (프리앰프 필요)');
+});
+
+test('입력에서 출력으로 그어도(뒤집힘) 성별은 출력 쪽 F, 입력 쪽 M', () => {
+  const r = judge(port('in', 'TERMINAL-BLOCK', 'MIC-AUDIO'), port('out', 'XLR', 'MIC-AUDIO'));
+  assert.equal(r.flipped, true);
+  assert.equal(detailOf(r, 'audio-cable'), 'XLR(F)–유로블록 3P 평형');
+});
+
+test('양방향 XLR은 성별을 적지 않는다', () => {
+  const r = judge(port('both', 'XLR', 'AES3'), port('both', 'TERMINAL-BLOCK', 'AES3'));
+  assert.equal(detailOf(r, 'audio-cable'), 'XLR–유로블록 3P AES 110Ω');
 });
 
 test('오디오가 아닌 연결은 지금 규칙 그대로', () => {
@@ -86,6 +117,7 @@ test('노드 배지: 커넥터 약칭과 레벨', () => {
   assert.deepEqual(audioPortTags(port('out', 'XLR', 'LINE-AUDIO')), { connector: 'XLR', level: 'LINE' });
   assert.deepEqual(audioPortTags(port('in', 'XLR-COMBO', 'MIC-AUDIO')), { connector: 'XLR/TRS', level: 'MIC' });
   assert.deepEqual(audioPortTags(port('out', 'TERMINAL-BLOCK', 'SPEAKER')), { connector: 'EB', level: 'SPK' });
+  assert.deepEqual(audioPortTags(port('in', 'SPEAKON', 'SPEAKER')), { connector: 'NL4', level: 'SPK' });
   assert.deepEqual(audioPortTags(port('in', 'XLR', 'AES3')), { connector: 'XLR', level: 'AES' });
   assert.deepEqual(audioPortTags(port('in', 'UNKNOWN', 'LINE-AUDIO')), { connector: null, level: 'LINE' });
   assert.equal(audioPortTags(port('in', 'HDMI', 'HDMI')), null);

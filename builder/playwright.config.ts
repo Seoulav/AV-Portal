@@ -3,7 +3,8 @@
 //   npm run build && npm run e2e
 import { defineConfig } from '@playwright/test';
 
-const PORT = 4319;
+// 여러 체크아웃이 동시에 시험할 때는 PW_PORT로 포트를 바꾼다(기본 4319)
+const PORT = Number(process.env.PW_PORT ?? 4319);
 
 export default defineConfig({
   testDir: 'e2e',

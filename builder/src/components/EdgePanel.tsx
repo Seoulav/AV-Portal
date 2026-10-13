@@ -36,7 +36,7 @@ export function EdgePanel({ edgeId }: { edgeId: string }) {
   // 오디오 연결이면 추천 케이블(B-20261013-05). 제작 케이블 행으로 넣고 길이는 사용자가 적는다
   const sourcePort = portOf(edge.source, edge.sourceHandle).port;
   const targetPort = portOf(edge.target, edge.targetHandle).port;
-  const suggested = sourcePort && targetPort ? audioCable(sourcePort as Port, targetPort as Port) : null;
+  const suggested = sourcePort && targetPort ? audioCable(sourcePort as Port, targetPort as Port, edge.data.signal) : null;
   const addSuggested = () => {
     if (!suggested || rows.some(row => row.productName === suggested.name)) return;
     setRows([...rows, { cableType: 'manufactured', productName: suggested.name, lineTypeId: edge.data.lineTypeId }]);

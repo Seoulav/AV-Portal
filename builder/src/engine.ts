@@ -120,7 +120,7 @@ export const equipmentPorts = L.equipmentPorts as (data: Equipment) => Port[];
 export const judgeConnection = R.judgeConnection as (from: PortRef, to: PortRef, options?: { occupied?: (nodeId: string, portId: string) => boolean; powerEnabled?: boolean; rules?: Rules }) => Judgement;
 // 오디오 단자 배지·추천 케이블(B-20261013-05)
 export const audioPortTags = A.audioPortTags as (port: Port) => { connector: string | null; level: string } | null;
-export const audioCable = A.audioCable as (source: Port, target: Port) => { kind: 'analog' | 'digital' | 'speaker'; name: string; balanced?: boolean } | null;
+export const audioCable = A.audioCable as (source: Port, target: Port, signal?: string) => { kind: 'analog' | 'digital' | 'speaker'; name: string; balanced?: boolean } | null;
 export const sourceHandleOf = R.sourceHandleOf as (port: Port) => string;
 export const targetHandleOf = R.targetHandleOf as (port: Port) => string;
 export const parseHandle = R.parseHandle as (handle: string | null | undefined) => { portId: string; role: 'source' | 'target' | null } | null;

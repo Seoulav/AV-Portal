@@ -1,5 +1,5 @@
 // 연결 판정(기반명세 §7.1). 화면의 연결 가능 표시와 검증기가 이 모듈 하나를 쓴다.
-import { audioFindings } from './audio.mjs';
+import { audioCableFindings, levelDetail } from './audio.mjs';
 import { DEFAULT_RULES, POWER_SIGNAL } from './defaults.mjs';
 
 const ACCEPTED_VERIFICATION = new Set(['VERIFIED', 'FOUND']);
@@ -29,15 +29,16 @@ export function connectionSignal(source, target, rules = DEFAULT_RULES) {
 export const edgeLineType = (source, target) => (source.type === 'fiber' || target.type === 'fiber' ? 'fiber' : source.type);
 
 // 경고·안내(§7.1 6~9번). 차단 판정을 통과한 쌍에만 쓴다
-// 오디오(아날로그·AES3·S/PDIF·스피커)를 선 단자끼리 이으면 커넥터 차이 대신 케이블 안내를 낸다(B-20261013-05, audio.mjs)
-export function connectionFindings(source, target, level, rules = DEFAULT_RULES) {
-  const audio = audioFindings(source, target, level, rules);
+// 오디오(아날로그·AES3·S/PDIF·스피커)를 케이블 한 가닥으로 잇는 단자끼리 이으면 커넥터 차이 대신 케이블 안내를 낸다(B-20261013-05, audio.mjs)
+// signal: 연결 신호. 주지 않으면 connectionSignal로 다시 구한다
+export function connectionFindings(source, target, level, rules = DEFAULT_RULES, signal = connectionSignal(source, target, rules)?.signal) {
+  const audio = audioCableFindings(source, target, signal, rules);
   const findings = audio ?? [];
   if (!audio) {
     if (!connectorsCompatible(source.connector, target.connector, rules)) findings.push({ code: 'connector-adapter', severity: 'warning', detail: `${source.connector} → ${target.connector}` });
     if (UNKNOWN_CONNECTORS.has(source.connector) || UNKNOWN_CONNECTORS.has(target.connector)) findings.push({ code: 'connector-unknown', severity: 'info', detail: `${source.connector} → ${target.connector}` });
-    if (level) findings.push({ code: 'signal-level', severity: 'warning', detail: `${source.signals[0]} → ${target.signals[0]}` });
   }
+  if (level) findings.push({ code: 'signal-level', severity: 'warning', detail: levelDetail(source, target, signal ?? source.signals[0]) });
   for (const port of [source, target]) {
     if (!ACCEPTED_VERIFICATION.has(port.verification)) findings.push({ code: 'unverified-port', severity: 'warning', detail: `${port.id} ${port.verification ?? '검증 상태 없음'}` });
   }
@@ -71,7 +72,7 @@ export function judgeConnection(from, to, { occupied = () => false, powerEnabled
     allowed: true,
     signal: matched.signal,
     lineTypeId: edgeLineType(source.port, target.port),
-    findings: connectionFindings(source.port, target.port, matched.level, rules),
+    findings: connectionFindings(source.port, target.port, matched.level, rules, matched.signal),
   };
 }
 
