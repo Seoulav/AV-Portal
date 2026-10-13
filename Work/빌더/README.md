@@ -208,7 +208,7 @@ Builder 장비 설정 창의 **적용하고 Portal 반영 요청 내보내기**�
 
 | 칸 | 원문 |
 |---|---|
-| `connector` | 커넥터 ID 그대로(HDMI·RJ45·BNC 등). 다만 `UNKNOWN`→`정보 없음`, `BINDING-POST`→`Binding Post`, `IEC-C13`→`IEC C13`, `SCHUKO`→`CEE7/7`, `XLR4`→`XLR 4pin`, `DSUB-15`→`D-SUB 15`, `DSUB-25`→`DB-25`, `DSUB-9`→`D-SUB 9`, `MINI-DIN-8`→`Mini DIN 8`, `USB-MICRO`→`Micro USB`, `USB-MINI`→`Mini USB`, `MINI-XLR`→`Mini XLR`, `TRS-6.3`→`6.3mm TRS`, `TRS-3.5`→`3.5mm TRS`, `PROPRIETARY`→`Proprietary modular` |
+| `connector` | 커넥터 ID 그대로(HDMI·RJ45·BNC 등). 다만 `UNKNOWN`→`정보 없음`, `TERMINAL-BLOCK`→`유로블록`, `BINDING-POST`→`Binding Post`, `IEC-C13`→`IEC C13`, `SCHUKO`→`CEE7/7`, `XLR4`→`XLR 4pin`, `DSUB-15`→`D-SUB 15`, `DSUB-25`→`DB-25`, `DSUB-9`→`D-SUB 9`, `MINI-DIN-8`→`Mini DIN 8`, `USB-MICRO`→`Micro USB`, `USB-MINI`→`Mini USB`, `MINI-XLR`→`Mini XLR`, `TRS-6.3`→`6.3mm TRS`, `TRS-3.5`→`3.5mm TRS`, `PROPRIETARY`→`Proprietary modular` |
 | `signal` | 어휘 표시명(HDMI·SDI·Dante 등). 다만 `SYNC`→`Sync (Reference)`, `ANALOG-VIDEO`→`Analog video`, `BLU-LINK`→`BLU link`. 여러 신호는 ` / `로 잇는다 |
 | `direction` | `in`→`IN`, `out`→`OUT`, `both`→`IN/OUT` |
 | `quantity` | 단자 수(정수) |
@@ -241,3 +241,4 @@ Builder 장비 설정 창의 **적용하고 Portal 반영 요청 내보내기**�
 | [B-20261013-03](작업/B-20261013-03.md) | 슬롯·카드 데이터 형식(Portal·RTCOM 공통)과 라이브러리 반영 — Novastar H·BSS BLU 먼저 | P9 | 검토 |
 | [B-20261013-04](작업/B-20261013-04.md) | 슬롯 번호별 카드 장착 화면, 카드 단자 합성, 견적 옵션과 통합 | P9 | 승인 |
 | [B-20261013-05](작업/B-20261013-05.md) | 오디오 단자 표시(커넥터·레벨)와 오디오 연결 판정(케이블 추천·레벨·평형) | P5 보완 | 승인 |
+| [B-20261013-07](작업/B-20261013-07.md) | 피닉스·유로블럭 표기를 유로블록(`TERMINAL-BLOCK`)으로 통합, 화면 커넥터 한글 이름 | P2 보완 | 검토 |

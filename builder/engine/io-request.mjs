@@ -21,6 +21,8 @@ export const ROW_FIELDS = Object.freeze(['group', 'connector', 'signal', 'direct
 // 표에 없는 커넥터는 ID 그대로 쓴다(HDMI·RJ45 등은 ID가 곧 원문)
 export const CONNECTOR_TEXT = Object.freeze({
   UNKNOWN: '정보 없음',
+  // 유로블록(어휘 1.0.1, B-20261013-07): 피닉스·유로블럭 표기를 하나로 묶은 Portal 표기
+  'TERMINAL-BLOCK': '유로블록',
   'BINDING-POST': 'Binding Post',
   'IEC-C13': 'IEC C13',
   SCHUKO: 'CEE7/7',

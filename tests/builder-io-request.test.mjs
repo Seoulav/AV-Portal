@@ -52,6 +52,9 @@ function assertRoundTrip(rebuilt, data) {
 
 test('vocabulary → Portal text: every connector reads back as itself', () => {
   for (const connector of V.CONNECTORS) assert.equal(normalizeConnector(connectorText(connector)), connector, connector);
+  // 어휘 1.0.1(B-20261013-07): 유로블록은 Portal 한글 표기로 쓰고 TERMINAL-BLOCK으로 다시 읽힌다
+  assert.equal(connectorText('TERMINAL-BLOCK'), '유로블록');
+  assert.equal(normalizeConnector('유로블록'), 'TERMINAL-BLOCK');
   assert.ok(Object.keys(CONNECTOR_TEXT).every(id => V.CONNECTORS.includes(id)));
   assert.deepEqual(Object.keys(DIRECTION_TEXT), ['in', 'out', 'both']);
   assert.deepEqual(Object.keys(GROUP_TEXT), ['in', 'out', 'both']);

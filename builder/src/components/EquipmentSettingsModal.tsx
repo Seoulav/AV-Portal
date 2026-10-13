@@ -5,7 +5,7 @@
 // 단자 탭의 "적용하고 Portal 반영 요청 내보내기"(B-20261013-02)는 고친 단자를 Portal io 행 변경으로 묶어 보여 주고,
 // 근거를 받은 뒤 적용과 함께 요청 파일을 내려받는다. 저장소에서 node beta/apply-builder-io-request.mjs로 적용한다.
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
-import { PORT_DIRECTION_LABELS, buildIoRequest, ioRequestFileName, nextPortLabels, parseHandle, serializeIoRequest, type Direction, type EquipmentData, type IoChange, type IoNotReflected, type IoRequest, type IoRequestPort, type Port, type PortLists, type VocabularySignal } from '../engine';
+import { PORT_DIRECTION_LABELS, buildIoRequest, connectorLabel, ioRequestFileName, nextPortLabels, parseHandle, serializeIoRequest, type Direction, type EquipmentData, type IoChange, type IoNotReflected, type IoRequest, type IoRequestPort, type Port, type PortLists, type VocabularySignal } from '../engine';
 import { optionIdOf } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
 
@@ -353,7 +353,7 @@ function PortSection({ direction, title, ports, signals, connectors, connections
           <div className={`port-edit-row${port.origin === 'user' ? ' user' : ''}`} key={port.key} data-port-id={port.id ?? ''}>
             <input aria-label={`${title} 단자 이름 ${index + 1}`} value={port.label} onChange={event => onChange(port.key, { label: event.target.value })} />
             <select aria-label={`${title} 단자 커넥터 ${index + 1}`} value={port.connector} onChange={event => onChange(port.key, { connector: event.target.value })}>
-              {options(connectors, port.connector).map(item => <option key={item} value={item}>{item}</option>)}
+              {options(connectors, port.connector).map(item => <option key={item} value={item}>{connectorLabel(item)}</option>)}
             </select>
             <select aria-label={`${title} 단자 신호 ${index + 1}`} value={main}
               // 같은 단자의 다른 신호를 고르면 순서만 바꾸고, 새 신호면 그 신호 하나로 바꾼다
@@ -380,7 +380,7 @@ function PortSection({ direction, title, ports, signals, connectors, connections
           {signals.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}
         </select>
         <select aria-label={`${title} 추가 커넥터`} value={chosenConnector} onChange={event => setConnector(event.target.value)}>
-          {options(connectors, chosenConnector).map(item => <option key={item} value={item}>{item}</option>)}
+          {options(connectors, chosenConnector).map(item => <option key={item} value={item}>{connectorLabel(item)}</option>)}
         </select>
         <input aria-label={`${title} 추가 개수`} type="number" min="1" max={MAX_ADD} value={count} onChange={event => setCount(Math.max(1, Math.min(MAX_ADD, Math.floor(Number(event.target.value) || 1))))} />
         <button type="button" disabled={!signal || !chosenConnector} onClick={() => signal && onAdd(signal, chosenConnector, count)} aria-label={`${title} 단자 추가`}>
