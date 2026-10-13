@@ -122,3 +122,13 @@ test('노드 배지: 커넥터 약칭과 레벨', () => {
   assert.deepEqual(audioPortTags(port('in', 'UNKNOWN', 'LINE-AUDIO')), { connector: null, level: 'LINE' });
   assert.equal(audioPortTags(port('in', 'HDMI', 'HDMI')), null);
 });
+
+test('피닉스·유로블럭 표기는 모두 TERMINAL-BLOCK(유로블록)으로 묶인다 (B-20261013-07)', async () => {
+  const { normalizeConnector } = await import('../beta/builder-library.mjs');
+  const { connectorLabel } = await import('../builder/engine/defaults.mjs');
+  for (const raw of ['피닉스 3핀', '피닉스 5핀(오디오 단자와 공용)', '피닉스(녹색, 핀 수 미기재)', '유로블럭 3P', '유로블록', 'Euroblock', 'Phoenix/Combicon', 'Euro 3.81']) {
+    assert.equal(normalizeConnector(raw), 'TERMINAL-BLOCK', raw);
+  }
+  assert.equal(connectorLabel('TERMINAL-BLOCK'), '유로블록(피닉스)');
+  assert.equal(connectorLabel('NEW-ONE'), 'NEW-ONE');
+});

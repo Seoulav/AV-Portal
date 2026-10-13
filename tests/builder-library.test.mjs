@@ -208,9 +208,10 @@ test('changing a rule table requires a vocabulary version bump', () => {
   const serialize = value => JSON.stringify(value, (key, item) => (item instanceof RegExp ? `/${item.source}/${item.flags}` : item));
   const tables = { NON_PORT_RULES: V.NON_PORT_RULES, UNKNOWN_CONNECTOR: V.UNKNOWN_CONNECTOR, CONNECTOR_RULES: V.CONNECTOR_RULES, CONNECTOR_FAMILIES: V.CONNECTOR_FAMILIES, FAMILY_EXEMPTIONS: V.FAMILY_EXEMPTIONS, MULTI_SPLIT: V.MULTI_SPLIT, SIGNALS: V.SIGNALS, SIGNAL_RULES: V.SIGNAL_RULES, LINE: V.LINE, MIC: V.MIC, POWER_TEXT: V.POWER_TEXT, POWER_EXCLUDE: V.POWER_EXCLUDE, DIRECTION_RULES: V.DIRECTION_RULES, CHANNEL_CONNECTORS: V.CHANNEL_CONNECTORS, LINE_TYPES: V.LINE_TYPES };
   const fingerprint = createHash('sha256').update(serialize(tables)).digest('hex').slice(0, 16);
-  assert.deepEqual({ version: V.VOCABULARY_VERSION, fingerprint }, { version: '1.0.0', fingerprint: FINGERPRINT_1_0_0 });
+  assert.deepEqual({ version: V.VOCABULARY_VERSION, fingerprint }, { version: '1.0.1', fingerprint: FINGERPRINT_1_0_1 });
 });
-const FINGERPRINT_1_0_0 = 'aa1f8ed660df8cc0';
+// 1.0.1(B-20261013-07): TERMINAL-BLOCK에 한글 '피닉스'·'유로블럭'·'Euroblock' 표기 추가
+const FINGERPRINT_1_0_1 = 'ca5569ffdf371073';
 
 // ── 현재 데이터로 만든 라이브러리: 고정 수치가 아니라 구조 불변 조건만 본다 ──
 let cached;

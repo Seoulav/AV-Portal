@@ -1,6 +1,6 @@
 // 선택한 엣지의 라벨과 케이블(1.1 bomRows 형식) 편집.
 import { useEffect, useMemo, useState } from 'react';
-import { audioCable, bomRowProblem, findPort, parseHandle, type BomRow, type Equipment, type Port } from '../engine';
+import { audioCable, bomRowProblem, connectorLabel, findPort, parseHandle, type BomRow, type Equipment, type Port } from '../engine';
 import { useBuilder } from '../state/useBuilder';
 
 const emptyRow = (lineTypeId: string): BomRow => ({ cableType: 'ready-made', productName: '', lineTypeId, quantity: 1 });
@@ -31,7 +31,7 @@ export function EdgePanel({ edgeId }: { edgeId: string }) {
   };
   const end = (nodeId: string, handle: string) => {
     const { data, port } = portOf(nodeId, handle);
-    return `${data?.model ?? '?'} · ${port?.label ?? handle}${port ? ` (${port.connector})` : ''}`;
+    return `${data?.model ?? '?'} · ${port?.label ?? handle}${port ? ` (${connectorLabel(port.connector)})` : ''}`;
   };
   // 오디오 연결이면 추천 케이블(B-20261013-05). 제작 케이블 행으로 넣고 길이는 사용자가 적는다
   const sourcePort = portOf(edge.source, edge.sourceHandle).port;
