@@ -536,24 +536,24 @@
       "bytes": 15063
     },
     "raw/products/spx-r6.json": {
-      "sha256": "6ecfa605dc073a10d8c4143068316368969d6df9d0029670ff25097107118ff4",
-      "bytes": 14554
+      "sha256": "868b6ca7cb441bf7fccea677fcbaffefd2de6005465c833b717dd0ef715a9b65",
+      "bytes": 14955
     },
     "raw/products/spx-rx-tx.json": {
       "sha256": "c707c3f880a47a6d3efeb1a89460c556cad5dc77e01ab719232b7a08e0870636",
       "bytes": 17445
     },
     "raw/products/spx.json": {
-      "sha256": "041ef341f5cc71020012ca2c4b3b0c8c8db7b182b8e946af8706e4bcd5b57f3b",
-      "bytes": 13174
+      "sha256": "71875df1901f9d30927cddb04c9a387bc389ae8e19d9ee747a1157701b0b81a3",
+      "bytes": 18235
     },
     "raw/products/umc.json": {
       "sha256": "6c6dc114006dcbbb64a2b999a5620b8d22a55714efe60e4bf78104f206a5857c",
       "bytes": 6441
     },
     "raw/products/vdm.json": {
-      "sha256": "8b6b15551ff694d0e4f5647f2add0cb1aa3b97df5167a2fd8ce0a7697d64b417",
-      "bytes": 14312
+      "sha256": "6ee2d8abae696369af475461a71a08a840f18b51e7b3e4271eb3eee5c8d0628b",
+      "bytes": 29877
     },
     "raw/products/xdm-ct103-cr103.json": {
       "sha256": "2a48b8a40b9aae9981aeeeea2f3da88724cc7827ed2a7de34a4989395ca873bf",
@@ -576,8 +576,8 @@
       "bytes": 10364
     },
     "raw/products/xdm.json": {
-      "sha256": "9a884e58889d9e904334cad9b3529e7bd0dff2c2f051f3307a7fca006ecf2c5e",
-      "bytes": 16125
+      "sha256": "361df3765763f22c18d7644cd2bc060f1d145ffbedf0b9d3db3039a5f30b31e2",
+      "bytes": 30159
     }
   }
 }
