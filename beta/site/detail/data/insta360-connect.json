@@ -1,0 +1,389 @@
+{
+  "manufacturer": "Insta360",
+  "productName": "Insta360 Connect",
+  "model": "Connect",
+  "series": "Insta360 Conferencing",
+  "seriesNote": "",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Video Bar"
+  ],
+  "english": "Dual-4K camera AI video bar for video conferencing.",
+  "korean": "Insta360 Connect는 듀얼 카메라·14마이크 어레이·스피커를 통합한 화상회의용 비디오 바입니다.",
+  "verificationSummary": "Insta360 공식 Connect 제품 페이지와 Wave for Business 공식 매뉴얼을 확인했습니다. USB 포트별 개수는 제조사 표에서 확인되지 않았습니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Insta360 Connect는 광각 카메라와 짐벌 망원 카메라, 14마이크 어레이, 스피커를 통합한 듀얼-4K 화상회의 비디오 바다. 공식 제품 페이지는 HDMI 입력 1개와 출력 2개, USB-A 2.0·3.0, USB-C 3.0, LAN 연결을 기재한다. USB-A·USB-C의 개별 수량은 명시하지 않아 수량을 비워 둔다.\n\n공식 Wave for Business 매뉴얼은 Insta360 Connect와 Wave의 오디오 캐스케이딩을 안내한다. 2026-10-13 사용자 확인에 따라 호환 기기는 Wave for Business로 한정하고, 일반 Wave는 연동 불가로 표시한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "insta360-connect-main.webp",
+      "alt": "Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Insta360",
+      "model": "Insta360 Connect",
+      "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "5120×1320",
+      "resolution": "1800×464",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "공식 사용 설명서 파일 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "독립 시방서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "공식 제품 사양 페이지",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://www.insta360.com/product/insta360-connect"
+    },
+    {
+      "type": "Technical Document",
+      "title": "추가 기술 문서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    }
+  ],
+  "features": [
+    {
+      "text": "110° HFOV 광각 카메라와 짐벌 망원 카메라의 듀얼 4K 구성",
+      "source": "P"
+    },
+    {
+      "text": "14마이크 어레이 및 최대 10m 음성 픽업",
+      "source": "P"
+    },
+    {
+      "text": "AI 화자 추적·그룹 프레이밍·8K Gallery Mode",
+      "source": "P"
+    },
+    {
+      "text": "25W 최대·20W 정격 내장 스피커 출력",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 입력 1개 및 HDMI 출력 2개",
+      "source": "P"
+    },
+    {
+      "text": "Insta360 Link 2 카메라 최대 3대 멀티카메라 연결",
+      "source": "P"
+    },
+    {
+      "text": "Wave for Business만 오디오 캐스케이딩 연동 가능, 일반 Wave 연동 불가",
+      "source": "M, U"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Camera",
+      "name": "광각 카메라 최대 해상도",
+      "value": "4K30fps",
+      "unit": "",
+      "condition": "광각 카메라",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "광각 카메라 화각",
+      "value": "110",
+      "unit": "° HFOV",
+      "condition": "1/1.3인치 CMOS 센서",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "망원 짐벌 카메라 최대 해상도",
+      "value": "4K30fps",
+      "unit": "",
+      "condition": "망원 카메라",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "망원 카메라 화각",
+      "value": "40",
+      "unit": "° HFOV",
+      "condition": "1/2.8인치 센서",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "마이크 어레이",
+      "value": "14",
+      "unit": "개",
+      "condition": "내장",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "음성 픽업 범위",
+      "value": "33ft (10)",
+      "unit": "m",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커 정격 출력",
+      "value": "20",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "스피커 최대 출력",
+      "value": "25",
+      "unit": "W",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Network",
+      "name": "LAN",
+      "value": "10/100/1000",
+      "unit": "Mbps Ethernet",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Wireless",
+      "name": "Wi-Fi",
+      "value": "2.4 / 5",
+      "unit": "GHz",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Wireless",
+      "name": "Bluetooth",
+      "value": "5.1",
+      "unit": "",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 입력",
+      "value": "1",
+      "unit": "개",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "name": "HDMI 출력",
+      "value": "2",
+      "unit": "개",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "name": "USB-A",
+      "value": "USB-A 2.0, USB-A 3.0",
+      "unit": "",
+      "condition": "개별 수량 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "USB",
+      "name": "USB-C",
+      "value": "USB-C 3.0",
+      "unit": "",
+      "condition": "수량 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "name": "DC 입력",
+      "value": "12V / 7A",
+      "unit": "",
+      "condition": "DC Port",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(W×H×D)",
+      "value": "685×77×86.1",
+      "unit": "mm",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "2.27",
+      "unit": "kg",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Environment",
+      "name": "작동 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "영상",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI",
+      "signal": "영상",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-A",
+      "signal": "USB 주변기기",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "USB 2.0 / USB 3.0",
+      "availability": "Fixed",
+      "condition": "세대별 수량 제조사 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "USB",
+      "connector": "USB Type-C",
+      "signal": "USB",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "USB 3.0",
+      "availability": "Fixed",
+      "condition": "수량 제조사 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Network",
+      "connector": "LAN",
+      "signal": "Ethernet",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "10/100/1000 Mbps",
+      "availability": "Fixed",
+      "condition": "커넥터 세부 형상 제조사 미기재",
+      "source": "P",
+      "verification": "PARTIAL"
+    },
+    {
+      "group": "Power",
+      "connector": "DC Port",
+      "signal": "전원",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "12V / 7A",
+      "availability": "Fixed",
+      "condition": "",
+      "source": "P",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "Insta360 Connect 공식 제품 페이지",
+      "url": "https://www.insta360.com/product/insta360-connect",
+      "scope": "제품 소개·사양"
+    },
+    {
+      "code": "M",
+      "name": "Wave for Business 공식 온라인 매뉴얼: Connect 연동",
+      "url": "https://onlinemanual.insta360.com/wave-for-business/ko-kr/camera/advanced-use/use-connect",
+      "scope": "Wave for Business와 Connect 오디오 캐스케이딩"
+    },
+    {
+      "code": "U",
+      "name": "사용자 확인(2026-10-13)",
+      "url": "",
+      "scope": "Wave for Business만 Video Bar 연동 가능, 일반 Wave 연동 불가"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
+      "url": "",
+      "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "USB 포트별 수량",
+      "detail": "공식 제품 페이지는 USB-A 2.0·3.0 및 USB-C 3.0을 기재하지만 개별 포트 수량은 제시하지 않습니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 공식 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 확인할 수 있습니다.",
+    "specIntro": "공식 자료에서 확인되는 값과 조건을 함께 표시합니다.",
+    "ioIntro": "공식 자료에 단자 종류·방향·수량이 명시된 항목만 기재합니다.",
+    "supplementalNote": "제품별 공식 정보와 사용자 확인 내용을 구분합니다.",
+    "footerNote": "Insta360 Insta360 Connect · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "Insta360 공식 제품 이미지"
+  }
+}

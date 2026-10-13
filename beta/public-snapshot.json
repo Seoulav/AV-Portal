@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 276,
-    "sha256": "5F161EE863C6E17504BFB682BAC0E0097A1B1532D5792AD42977AF092FA77C09",
+    "count": 280,
+    "sha256": "E8FD8EC27ED45AB35EAAF50D53A4EC6492BE990A7B9BC95079F19A874C0F6DC1",
     "baselineCount": 25,
     "baselineSha256": "8835F3145F1DBC14141E700D4F3F99ACFD847020AB08A562D0C2C2EE53F053B8"
   },
@@ -822,6 +822,30 @@
       "features": 2,
       "specifications": 40,
       "io": 0
+    },
+    "insta360-connect": {
+      "sha256": "351E311F81FA6479E6EF99C59079D5C75AC4BEC648CCF921751322C807495791",
+      "features": 7,
+      "specifications": 19,
+      "io": 6
+    },
+    "insta360-link-2": {
+      "sha256": "97C3B86E22B3D8611158982DB33F9ECF8AEFAA86A0F4951729789086B5D06F8A",
+      "features": 5,
+      "specifications": 10,
+      "io": 1
+    },
+    "insta360-wave-business": {
+      "sha256": "A1C5AF1846CE07C6866E8BEADAA0B5EE1F4BED57B4A46DC3660DE8E298E3A566",
+      "features": 6,
+      "specifications": 19,
+      "io": 1
+    },
+    "insta360-wave": {
+      "sha256": "7F31936A0B1EE0CCF68E65BCB31AE1BA4AA5AB3B41CFC2DB542B34E1E61E85C8",
+      "features": 6,
+      "specifications": 16,
+      "io": 1
     },
     "ki-pro-go2": {
       "sha256": "78E901E8E003EFF68FBEB7E9CE4AED69D8819D63D86ED66B82CDD8C463B96A06",

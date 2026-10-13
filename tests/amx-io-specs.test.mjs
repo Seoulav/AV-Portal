@@ -1,3 +1,4 @@
+import { isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW013C3Product } from './w013-c3-history.mjs';
@@ -177,7 +178,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   }
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
     const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug), slug),slug),slug),slug),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)

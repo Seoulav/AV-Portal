@@ -14,6 +14,7 @@ export const manufacturerHosts = {
   Epson: ['epson.co.kr', 'goepson.com'],
   JBL: ['techdata-ps.com', 'jblpro.com', 'harmanpro.com'],
   Lightware: ['lightware.com'],
+  Insta360: ['insta360.com'],
   Logitech: ['logitech.com'],
   Lumantek: ['lumantek.com', 'lumantek.co.kr'],
   Magnimage: ['magnimage.com'],

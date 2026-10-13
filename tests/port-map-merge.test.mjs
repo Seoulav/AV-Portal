@@ -54,7 +54,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261013-001 maps all 18 existing Powersoft amplifiers; no product is added.
   // W-20261013-007 maps two video walls and six U800F hotel TVs; totals stay fixed.
   // W-20261013-007 adds rear maps for two WMFX panels; the products are unchanged.
-  assert.deepEqual(counts, { mapIo: 137, ioOnly: 109, neither: 21 });
+  // W-009 adds four products with I/O and no rear maps; all remain in the fallback.
+  assert.deepEqual(counts, { mapIo: 137, ioOnly: 113, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

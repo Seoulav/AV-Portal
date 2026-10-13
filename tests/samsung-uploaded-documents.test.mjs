@@ -1,3 +1,4 @@
+import { beforeW009Uploads, isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
@@ -37,7 +38,7 @@ import {beforeW04021Uploads} from './document-lock-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
-const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
+const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(beforeW009Uploads(manifest.uploads)));
 const historicalManifest = {...manifest, uploads: historicalUploads.slice(0, 22)};
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const files = {
@@ -172,7 +173,7 @@ test('W-005 published PDFs match supplied bytes and earlier upload history and p
   assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  const names = readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
+  const names = readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(names.length, 242);
   for (const name of names) {
     const slug = name.slice(0, -5);
