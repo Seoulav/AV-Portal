@@ -1,0 +1,310 @@
+{
+  "manufacturer": "Insta360",
+  "productName": "Insta360 Wave",
+  "model": "CINSABCA",
+  "series": "Insta360 Conferencing",
+  "seriesNote": "",
+  "itemType": "PRODUCT",
+  "categories": [
+    "오디오",
+    "Conferencing",
+    "Microphone"
+  ],
+  "english": "All-in-one omnidirectional conference microphone with a touchscreen and wireless dongle.",
+  "korean": "Insta360 Wave는 마이크·스피커·녹음 기능을 갖춘 전방향 회의용 마이크입니다.",
+  "verificationSummary": "Insta360 Wave 공식 한국어 사양·사용 매뉴얼을 확인했습니다. Video Bar 연동 불가 문구는 2026-10-13 사용자 확인에 근거합니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Insta360 Wave는 8마이크 어레이와 터치스크린을 갖춘 회의용 마이크다. 공식 한국어 매뉴얼은 USB-C·동글·Bluetooth 연결, AI 기반 오디오 처리와 Link 2 장착 및 발언자 추적을 안내한다. 사용자가 확인한 차이에 따라 일반 Wave는 Insta360 Connect(Video Bar)와 연동 불가로 표시한다. Wave for Business의 API 및 Video Bar 연동을 일반 Wave 기능으로 옮기지 않는다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "insta360-wave-main.webp",
+      "alt": "Insta360 Wave 흰색 본체와 터치 베이스",
+      "note": "Main · 제조사 공식 이미지",
+      "provider": "Insta360",
+      "model": "CINSABCA",
+      "sourceUrl": "https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1280×1280",
+      "resolution": "1280×1280",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "공식 사용 설명서 파일 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "독립 시방서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "공식 제품 사양 페이지",
+      "language": "ko",
+      "status": "FOUND",
+      "url": "https://onlinemanual.insta360.com/wave/ko-kr/camera/specifications"
+    },
+    {
+      "type": "Technical Document",
+      "title": "추가 기술 문서 미확인",
+      "language": "언어 미확인",
+      "status": "MISSING"
+    }
+  ],
+  "features": [
+    {
+      "text": "8개 MEMS 마이크 어레이 및 5가지 빔포밍 패턴",
+      "source": "M"
+    },
+    {
+      "text": "AI 노이즈 제거·자동 게인 제어·에코 제거",
+      "source": "M"
+    },
+    {
+      "text": "최대 12시간 통화 시간 및 9800mAh 배터리",
+      "source": "M"
+    },
+    {
+      "text": "Insta360 Link 2 장착 및 발언자 자동 추적",
+      "source": "M"
+    },
+    {
+      "text": "USB-C·무선 동글·Bluetooth 연결",
+      "source": "M"
+    },
+    {
+      "text": "Video Bar(Insta360 Connect) 연동 불가",
+      "source": "U"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "General",
+      "name": "모델 코드",
+      "value": "CINSABCA",
+      "unit": "",
+      "condition": "공식 Wave 사양 페이지",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "Ø64.3",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "높이",
+      "value": "248",
+      "unit": "mm",
+      "condition": "확장 시",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "높이",
+      "value": "198",
+      "unit": "mm",
+      "condition": "접힘 시",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "490",
+      "unit": "g",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "마이크",
+      "value": "8",
+      "unit": "개",
+      "condition": "MEMS",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "주파수 응답",
+      "value": "20Hz–20kHz",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "음성 수음 샘플링 레이트",
+      "value": "48",
+      "unit": "kHz",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "음성 수음 범위",
+      "value": "5",
+      "unit": "m",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "최대 출력 음압 레벨",
+      "value": "91",
+      "unit": "dB SPL",
+      "condition": "@ 0.5m/1W",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Audio",
+      "name": "빔포밍 패턴",
+      "value": "전지향성, 카디오이드, 초지향성, 8자형, 스테레오",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "배터리 용량",
+      "value": "9800",
+      "unit": "mAh",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "충전 시간",
+      "value": "5",
+      "unit": "시간",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Power",
+      "name": "통화 시간",
+      "value": "최대 12",
+      "unit": "시간",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Display",
+      "name": "터치스크린",
+      "value": "1.82",
+      "unit": "인치",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "System",
+      "name": "컴퓨터 OS",
+      "value": "Windows 10 이상, macOS 12 이상",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "USB",
+      "connector": "USB Type-C",
+      "signal": "USB 연결",
+      "direction": "I/O",
+      "quantity": "",
+      "protocol": "USB-C",
+      "availability": "Fixed",
+      "condition": "수량 제조사 미기재",
+      "source": "M",
+      "verification": "PARTIAL"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "Insta360 Wave 공식 한국 스토어",
+      "url": "https://store.insta360.com/kr/product/wave",
+      "scope": "제품 페이지"
+    },
+    {
+      "code": "M",
+      "name": "Insta360 Wave 공식 한국어 매뉴얼: 제품 사양",
+      "url": "https://onlinemanual.insta360.com/wave/ko-kr/camera/specifications",
+      "scope": "일반 Wave 사양"
+    },
+    {
+      "code": "M",
+      "name": "Insta360 Wave 공식 한국어 매뉴얼: Link 2 사용",
+      "url": "https://onlinemanual.insta360.com/wave/ko-kr/camera/advanced-use/use-link2",
+      "scope": "Link 2 장착 및 발언자 추적"
+    },
+    {
+      "code": "U",
+      "name": "사용자 확인(2026-10-13)",
+      "url": "",
+      "scope": "일반 Wave는 Video Bar와 연동 불가"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
+      "url": "",
+      "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "일반 Wave와 Video Bar 호환",
+      "detail": "일반 Wave 한국어 사양·사용 매뉴얼에서 Connect 연동 항목은 확인되지 않았습니다. Video Bar 연동 불가는 사용자 확인(2026-10-13)에 근거합니다."
+    },
+    {
+      "code": "R2",
+      "status": "REVIEW REQUIRED",
+      "title": "Wave 모델 코드",
+      "detail": "일반 Wave 공식 사양 페이지와 Wave for Business 공식 사양 페이지가 같은 CINSABCA 코드를 표기합니다. 공식 표기를 그대로 보존했습니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 공식 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 확인할 수 있습니다.",
+    "specIntro": "공식 자료에서 확인되는 값과 조건을 함께 표시합니다.",
+    "ioIntro": "공식 자료에 단자 종류·방향·수량이 명시된 항목만 기재합니다.",
+    "supplementalNote": "제품별 공식 정보와 사용자 확인 내용을 구분합니다.",
+    "footerNote": "Insta360 Insta360 Wave · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "Insta360 공식 제품 이미지"
+  }
+}

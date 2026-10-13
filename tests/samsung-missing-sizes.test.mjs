@@ -1,3 +1,4 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -26,7 +27,7 @@ const spec = (data, name) => data.specifications.find(row => row.name === name);
 const sha = value => createHash('sha256').update(value).digest('hex');
 
 test('six U800F and six BEHX-H products retain model-specific official values', async () => {
-  const catalog = beforeW1010Catalog(await read('beta/site/catalog.json'));
+  const catalog = beforeW1010Catalog(beforeW009Catalog(await read('beta/site/catalog.json')));
   assert.equal(catalog.length, 274);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   for (const [slug, [max, typical, size, weight]] of Object.entries(hotel)) {

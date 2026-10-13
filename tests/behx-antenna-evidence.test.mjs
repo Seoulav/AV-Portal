@@ -1,3 +1,4 @@
+import { beforeW009Uploads } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -40,7 +41,7 @@ test('BEHX-H evidence update leaves other product data and uploaded documents in
   };
   for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(product, 'lh43behhlbfxkr')[field]), expected, field);
   const manifest = read('beta/site/docs/manifest.json');
-  assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(manifest.uploads)))).length, 110);
+  assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(beforeW009Uploads(withoutW13010Uploads(manifest.uploads))))).length, 110);
   assert.equal(manifest.uploads.filter(item => item.locked === true).length, 12);
 });
 

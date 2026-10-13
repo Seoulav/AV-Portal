@@ -1,3 +1,4 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -49,7 +50,7 @@ test('A900W-R-GM is grouped with MXA from its official MXA920/MXA925 accessory s
 });
 
 test('non-Shure catalog entries stay byte-stable through the lineup change', () => {
-  const nonShure = withoutW004Catalog(catalog).filter(item => item.brand !== 'Shure');
+  const nonShure = withoutW004Catalog(beforeW009Catalog(catalog)).filter(item => item.brand !== 'Shure');
   const sha = createHash('sha256').update(JSON.stringify(nonShure)).digest('hex');
   assert.equal(nonShure.length, 244);
   assert.equal(sha, '8a08e4e596394d01b60370bb72646ceb1a0907c3d208119a32b35cf945ee5980');

@@ -1,3 +1,4 @@
+import { beforeW009Catalog, beforeW009Uploads } from './w009-history.mjs';
 import test from 'node:test';
 import { withoutW011Uploads } from './w011-history.mjs';
 import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
@@ -24,7 +25,7 @@ const old = new Map([
 ]);
 
 test('QM50C and QM75C have their own specifications and a validated eleven-port manual map', () => {
-  const catalog = beforeW1010Catalog(json('beta/site/catalog.json'));
+  const catalog = beforeW1010Catalog(beforeW009Catalog(json('beta/site/catalog.json')));
   const expected = [
     [50, '10', '0.285x0.285', '1124.1 x 644.8 x 28.5', '11.8'],
     [75, '8', '0.429x0.429', '1682.3 x 960.4 x 28.5', '33.4'],
@@ -66,7 +67,7 @@ test('six established QMC records and published PDFs remain untouched', () => {
     const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
     assert.equal(sha(beforeW12002Raw(beforeW013A2Raw(normalized, slug),slug)), hash, slug);
   }
-  const uploads = withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(json('beta/site/docs/manifest.json').uploads)));
+  const uploads = withoutW011Uploads(withoutW13008Uploads(beforeW009Uploads(withoutW13010Uploads(json('beta/site/docs/manifest.json').uploads))));
   assert.equal(uploads.length, 128);
   assert.equal(uploads.filter(upload => upload.locked).length, 12);
 });

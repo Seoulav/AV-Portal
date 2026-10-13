@@ -60,6 +60,35 @@ export const userReferences = [
     title: 'AE Series U-Bracket Handbook (브라켓 설치·치수 참고자료, AC18 외 다수 모델 공용)',
     note: uploadNote
   }
+  ,
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Connect',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Link 2',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Wave for Business',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Wave',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  }
 ];
 
 const referencesByIdentity = new Map(userReferences.map(entry => [identity(entry.brand, entry.product), entry]));

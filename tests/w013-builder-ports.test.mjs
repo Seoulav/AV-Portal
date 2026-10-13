@@ -1,10 +1,10 @@
-﻿import test from 'node:test';
+import { beforeW013Product, w013PriorProductSha } from './w013-history.mjs';
+import { createHash } from 'node:crypto';
+import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { buildProduct, validateOverride } from '../beta/builder-library.mjs';
 import { expectedBuilderLibrary } from '../beta/build-builder-library.mjs';
-import { beforeW013Product, w013PriorProductSha } from './w013-history.mjs';
-import { createHash } from 'node:crypto';
 
 test('ULXD4 exposes verified RF, analog outputs, and Ethernet control without Dante', async () => {
   const library = await expectedBuilderLibrary();
