@@ -1,0 +1,110 @@
+{
+  "lh55vhcrbgbxkr": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "lh55vhcrbgbxkr-main.webp",
+          "alt": "비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "LH55VHCRBGBXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "3e50c29d8d0ae2db882658cabe7a9481726315d2d741959f9a36f3a3dcd1dfd9",
+      "imageStatuses": "274b1503e8bf1ce4635cfb74a7062760cf1e38fa37f6d6d0f402f7d5ed0f1e05",
+      "portMap": "be902eda40be2dd7b75235712bff57ddc5d64106d45fe3ec775bad51b0dd199e"
+    },
+    "coreSha256": "5f3ba1dbdcb52fc161965095fb55afcc8e0295c42ca1f73fd20de1009afbe3aa"
+  },
+  "lh55vmcrbgbxkr": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "lh55vmcrbgbxkr-main.webp",
+          "alt": "비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Samsung",
+          "model": "LH55VMCRBGBXKR",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1920x1280",
+          "resolution": "1920x1280",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "4058bfbcb585a6fb768ca7ae13495f0da38fcd579bba39e064a76ad838198c68",
+      "imageStatuses": "77fa78eabb433e060e5ee1450fa8f1b4a12e0395801f3cc5adef5e0906a84878",
+      "portMap": "c81c5e0bee3487a2b711cbceaec3cb29229e6e978e963e0ae513fba8e93034cd"
+    },
+    "coreSha256": "8f165e39ea39a930eb29f61d485f8e6750dc1db98088fcb0250a273b0a9b9ab9"
+  }
+}

@@ -1,4 +1,4 @@
-import test from 'node:test';
+﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { prepareProductDetail, isAbsentConnector, prepareIoFallbackEntries, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
@@ -52,7 +52,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261012-006 moves 15 Epson and seven Panasonic projectors into maps.
   // W-009 maps three existing AVer products, moving them from fallback to map.
   // W-20261013-001 maps all 18 existing Powersoft amplifiers; no product is added.
-  assert.deepEqual(counts, { mapIo: 133, ioOnly: 113, neither: 21 });
+  // W-20261013-007 maps two video walls and six U800F hotel TVs; totals stay fixed.
+  assert.deepEqual(counts, { mapIo: 135, ioOnly: 111, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

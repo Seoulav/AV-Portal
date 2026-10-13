@@ -694,10 +694,12 @@ export const group1Images = {
     image('Diagram', 'lh115qhfebgxkr-diagram.webp', 'LH115QHFEBGXKR 삼성전자 한글 사용설명서 15쪽 QH115FX 후면 단자 도면', 'Samsung', 'LH115QHFEBGXKR', 'https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/', '318x1375', '318x1375', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-26720E-04 15쪽')
   ],
   lh55vmcrbgbxkr: [
-    image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55vmcrbgbxkr-diagram.webp', 'LH55VMCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면', 'Samsung', 'LH55VMCRBGBXKR', 'https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/', '480x2280', '480x2280', 'VERIFIED', 'Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용')
   ],
   lh55vhcrbgbxkr: [
-    image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55vhcrbgbxkr-diagram.webp', 'LH55VHCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면', 'Samsung', 'LH55VHCRBGBXKR', 'https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/', '480x2280', '480x2280', 'VERIFIED', 'Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용')
   ],
   lh55wmfwbgcxkr: [
     image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
