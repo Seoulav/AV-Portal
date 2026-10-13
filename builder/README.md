@@ -10,7 +10,7 @@ AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 화면이다. 방�
 
 | 위치 | 내용 |
 |---|---|
-| `engine/` | 구성도 엔진(의존성 없는 ESM). 연결 규칙·직렬화·검증. 앱과 CLI가 함께 쓴다 |
+| `engine/` | 구성도 엔진(의존성 없는 ESM). 연결 규칙·직렬화·검증·노드 단자 편집(`ports.mjs`). 앱과 CLI가 함께 쓴다 |
 | `schema/diagram-1.2.schema.json` | 구성도 JSON 1.2 형식 정의 |
 | `cli/validate.mjs` | 구성도 파일 검증 CLI |
 | `examples/` | 예제 구성도 3종과 견적 담당자용 안내 |
@@ -23,8 +23,8 @@ AV Portal 장비 데이터로 구성도 JSON 1.2를 만드는 화면이다. 방�
 | `src/export/` | 도면 내보내기: 구성도 데이터로 그리는 SVG(`diagramSvg.ts`), SVG를 벡터로 옮긴 PDF(`diagramPdf.ts`, 누를 때 불러옴) |
 | `public/fonts/` | PDF에 넣는 한글 글꼴 Pretendard Regular 원본과 라이선스(`OFL.txt`, SIL OFL 1.1) |
 | `src/edges/` | 선 그리기(구 Builder `edgeProcessing`·`edgeGeometry` 이식): 평행선 간격·채널 순서, 직교 경로·교차 점프, 양방향 선 뒤집기(화면에만) |
-| `src/components/` | 장비 목록, 캔버스·노드, 메모·영역 노드, 엣지(`BuilderEdge`, 구 `CustomSmoothstepEdge`), 연결 미리보기, 연결 편집 패널, 메모·영역 서식 패널, 이슈 패널, 상단 막대 |
-| `test/` | vitest(상태 저장소·자동 저장·근접 연결·묶음 연결·선 그리기·오토 레이아웃·복사·선 종류 필터·메모 서식·도면 내보내기·케이블 검사·목록 필터). 선 그리기와 오토 레이아웃은 구 Builder 결과를 표본으로 대조한다 |
+| `src/components/` | 장비 목록, 캔버스·노드, 메모·영역 노드, 엣지(`BuilderEdge`, 구 `CustomSmoothstepEdge`), 연결 미리보기, 연결 편집 패널, 장비 설정 창(`EquipmentSettingsModal`, 구 `EditNodeModal`)과 장비 요약 패널, 메모·영역 서식 패널, 이슈 패널, 상단 막대 |
+| `test/` | vitest(상태 저장소·자동 저장·근접 연결·묶음 연결·선 그리기·오토 레이아웃·복사·선 종류 필터·메모 서식·장비 설정 창·도면 내보내기·케이블 검사·목록 필터). 선 그리기와 오토 레이아웃은 구 Builder 결과를 표본으로 대조한다 |
 | `e2e/` | Playwright 브라우저 시험과 합성 라이브러리 픽스처 |
 | `scripts/check-schema.mjs` | ajv로 스키마를 컴파일하고 예제·깨진 사본을 검사한다 |
 
@@ -54,7 +54,7 @@ npm run build; npm run e2e   # 빌드한 앱을 Chrome으로 연다(합성 라�
 node cli/validate.mjs examples/small-room.diagram.json examples/auditorium-audio.diagram.json examples/rtcom-extender.diagram.json --library ../beta/.generated/builder-library.json
 ```
 
-엔진·라이브러리 생성기 테스트는 루트의 `tests/builder-engine.test.mjs`, `tests/builder-library.test.mjs`다. PR에서는 `.github/workflows/builder-ci.yml`이 위 검사와 빌드, 브라우저 시험을 모두 돌린다. 브라우저 시험은 Pages 배포에는 넣지 않는다(B-20261006-05 결정 H-b).
+엔진·라이브러리 생성기 테스트는 루트의 `tests/builder-engine.test.mjs`, `tests/builder-port-edit.test.mjs`(단자 편집), `tests/builder-library.test.mjs`다. PR에서는 `.github/workflows/builder-ci.yml`이 위 검사와 빌드, 브라우저 시험을 모두 돌린다. 브라우저 시험은 Pages 배포에는 넣지 않는다(B-20261006-05 결정 H-b).
 
 브라우저 시험은 설치된 Chrome을 쓴다(`PW_CHANNEL`로 바꿀 수 있다). `vite preview`를 4319번 포트로 띄우며, 이미 떠 있으면 그 서버를 쓴다(CI 제외).
 
@@ -80,6 +80,8 @@ node cli/validate.mjs examples/small-room.diagram.json examples/auditorium-audio
 | 줌아웃 보기 | 0.55배 아래로 줄이면 장비 위에 모델명을 크게 덮어 보인다. 0.3배 아래에서는 모델명만 보인다. 그 상태에서도 선을 그을 수 있다 |
 | 케이블 보기 | 상단 막대의 "케이블 보기"를 누르면 모든 연결 라벨에 케이블 요약(이름 × 수량 / 총 길이)을 보인다. 케이블이 없는 연결은 "⚠ 미입력"과 흐린 선이다(구 Builder BOM 모드) |
 | 케이블 | 연결을 누르면 오른쪽 패널에서 라벨과 케이블을 넣는다. 제품명은 꼭 넣고, 기성은 1 이상의 정수 수량, 제작은 0보다 큰 길이(m)를 넣는다. 맞지 않으면 저장하지 않고 알린다. 검증 CLI도 같은 규칙으로 막는다(`bom-row-invalid`) |
+| 장비 설정 | 장비를 두 번 누르면(또는 장비를 고르고 오른쪽 패널의 "설정 열기") 설정 창이 열린다. **이 구성도의 이 장비만** 고치고 Portal·장비 목록은 바뀌지 않는다. "적용" 한 번이 실행 취소 한 단계이고, Esc·바깥 누르기·취소는 아무것도 바꾸지 않는다. 탭은 셋이다. **기본**: 모델·제조사(읽기 전용, Portal 상세 링크), 시스템명, 재활용 장비. **단자**: 입력·출력·양방향마다 이름·커넥터·신호를 고치고, 위·아래로 순서를 바꾸고, 지우고, "HDMI In 2개 추가"처럼 개수를 정해 더한다(이름은 섹션의 같은 이름 다음 번호부터). 선 종류는 신호로 정해진다(광 커넥터면 광). "라이브러리 값으로 되돌리기"는 노드 단자 전체를 라이브러리 값으로 돌린다. **견적 옵션**: Portal 제품을 옵션 품목으로 더하고 수량을 정한다 |
+| 단자 편집과 연결 | 지우거나 방향·신호를 바꾼 단자에 걸린 연결이 규칙에 맞지 않게 되면, 적용할 때 "연결 n개도 함께 지웁니다"를 확인받는다. 확인하면 그 연결도 함께 지우고, 돌아가면 아무것도 바뀌지 않는다. 규칙에 맞는 연결은 남고 선 종류·신호·핸들을 새 단자에 맞춘다. 끊어진 연결이 파일에 남지 않는다. 사용자가 더한 단자는 점선 테두리와 "추가" 표시가 붙고(Portal 검증 상태 없음), 단자를 고친 장비 헤더에는 "단자 수정"이 붙는다. 파일에는 `origin: "user"`(추가 단자, id `<in|out|both>-user-<n>`, 지운 번호는 다시 쓰지 않고 노드 `userPortSeq`에 마지막 번호를 남긴다)·`edited: true`(고친 라이브러리 단자, id 그대로)·노드 `portsEdited: true`로 남고, 이슈는 `ports-edited`(안내)다. 설정 창이 열려 있는 동안 바탕의 Delete·Ctrl+Z 등은 동작하지 않는다 |
 | 메모·영역 | 상단 막대에서 넣는다. 하나만 고르면 오른쪽 패널이 서식 편집이 된다(두 번 누르면 글 칸으로 간다). 메모는 글·글자 크기와 색·바탕색과 투명도·테두리 색과 모양·모서리 둥글기·정렬과 빠른 서식 4종, 영역은 이름·모양(사각형·둥근 사각형·원)·테두리 굵기를 바꾼다. "적용"이 실행 취소 한 단위다(구 Builder 서식 창과 같은 항목·프리셋) |
 | 크기·고정 | 고른 메모·영역의 테두리 손잡이를 끌어 크기를 바꾼다(메모 최소 60×30, 영역 최소 80×80). 한 번 끌기가 실행 취소 한 단위다. 서식 패널에서 "고정"하면 끌거나 크기를 바꾸지 못한다(파일의 `data.locked`) |
 | 테마 | 상단 막대의 "어두운 테마"로 어두운 화면과 밝은 화면을 바꾼다. 처음은 밝은 화면이다. 고른 테마는 이 브라우저에 남고(`localStorage` 키 `av-portal-builder:theme`) 파일에는 들어가지 않는다 |

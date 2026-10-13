@@ -1,5 +1,30 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [미배포] — 2026-10-13
+
+[B-20261013-01](../Work/빌더/작업/B-20261013-01.md). 장비 설정 창과 구성도 단자 편집(구 Builder `EditNodeModal` 이식, P9 앞당김).
+
+### Added
+- 장비를 두 번 누르면 장비 설정 창이 열린다(기본·단자·견적 옵션 탭). "적용" 한 번이 실행 취소 한 단계이고 Esc·바깥 누르기·취소는 아무것도 바꾸지 않는다
+- 단자 편집: 이름·커넥터·신호 변경, 개수를 정해 추가(이름은 이어서 매김), 삭제, 섹션 안 순서 바꾸기, "라이브러리 값으로 되돌리기". 커넥터·신호는 라이브러리 어휘에서 고르고 선 종류는 생성기와 같은 규칙으로 신호에서 정한다
+- 엔진 `engine/ports.mjs`: `updateEquipmentPorts`·`resetEquipmentPorts`(연결 재판정·정리 포함), `portLineType`, `nextPortLabels`
+- 구성도 JSON 1.2에 필드 추가(1.1 키는 그대로): 단자 `origin: "user"`·`edited: true`, 노드 `data.portsEdited: true`·`data.userPortSeq`(마지막 사용자 단자 번호, 지운 번호 재사용 방지). 스키마·검증기·타입 반영
+- 이슈 `ports-edited`(안내): 단자를 고친 노드는 `library-drift` 대신 이 이슈를 낸다. 단자 밖의 차이는 그대로 `library-drift`다
+- 사용자가 추가한 단자는 노드·도면(SVG·PDF)에 점선 테두리·"추가" 표시를 단다. 단자를 고친 장비 헤더에 "단자 수정"을 단다
+- 엔진 테스트 14건(`tests/builder-port-edit.test.mjs`), vitest 6건(`test/node-settings.test.ts`), Playwright 5건(`e2e/node-settings.spec.ts`)
+
+### Changed
+- 장비 하나를 골랐을 때 오른쪽 패널은 요약(시스템명·재활용·단자 수·옵션)과 "설정 열기"만 보인다. 시스템명·옵션 품목 입력은 설정 창으로 옮겼다
+- 단자를 지우면 노드 `optionPortIds`에서도 그 id를 뺀다
+- `equipmentDB`는 같은 장비의 노드 중 단자를 고치지 않은 노드를 먼저 쓴다
+- 단자 순서·구성이 바뀌면 React Flow 핸들 위치를 다시 잰다(높이가 같아도 선이 옛 행에 붙지 않게)
+- 설정 창이 열려 있는 동안 바탕의 Delete·Ctrl+Z·Ctrl+C·V 단축키를 쓰지 않는다
+- 브라우저 시험 픽스처 라이브러리에 신호·커넥터 어휘를 넣었다
+
+### Fixed
+- 견적 정보(시스템명·옵션 수량·`optionPortIds`)만 넣은 장비가 `library-drift`로 잡히던 문제
+- 연결된 단자를 지우면 끊어진 엣지가 남던 구 Builder의 문제를 되풀이하지 않는다: 지울 연결을 확인받고 함께 지운다
+
 ## [미배포] — 2026-10-12
 
 [B-20261012-02](../Work/빌더/작업/B-20261012-02.md). Portal CPQ 연결을 로컬 검증했다.
