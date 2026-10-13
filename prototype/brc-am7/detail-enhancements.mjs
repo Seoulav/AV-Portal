@@ -99,29 +99,31 @@ export function validFlow(flow, product) {
   if (flow.band !== undefined && (!record(flow.band) || !keys(flow.band, ['label', 'detail', 'evidence']) || !shortText(flow.band.label) || !optionalText(flow.band.detail) || !evidence(flow.band.evidence))) return false;
   return list(flow.legend, 9, l => record(l) && keys(l, ['signal', 'label']) && signalKinds.includes(l.signal) && shortText(l.label)) && list(flow.notes, 12, shortText);
 }
+function validScreenExample(item) {
+  if (!record(item) || !keys(item, ['name', 'method', 'signal', 'signalType', 'signalWidth', 'signalHeight', 'outputWidth', 'outputHeight', 'activeWidth', 'activeHeight', 'masked', 'offsetX', 'offsetY', 'rightMargin', 'bottomMargin', 'areaLabel', 'note']) ||
+      !text(item.name) || !text(item.method) || !text(item.signal) || !Number.isInteger(item.activeWidth) || item.activeWidth <= 0 ||
+      !Number.isInteger(item.activeHeight) || item.activeHeight <= 0 || typeof item.masked !== 'boolean') return false;
+  if (item.signalType === 'output') return item.masked === false && Number.isInteger(item.outputWidth) && item.outputWidth > 0 &&
+    Number.isInteger(item.outputHeight) && item.outputHeight > 0 && item.activeWidth === item.outputWidth &&
+    item.activeHeight === item.outputHeight && item.signal === `${item.outputWidth}×${item.outputHeight}` &&
+    item.signalWidth === undefined && item.signalHeight === undefined && item.areaLabel === undefined &&
+    item.offsetX === undefined && item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined && item.note === undefined;
+  if (item.signalType !== 'fixed' || item.outputWidth !== undefined || item.outputHeight !== undefined ||
+      !Number.isInteger(item.signalWidth) || item.signalWidth <= 0 || !Number.isInteger(item.signalHeight) || item.signalHeight <= 0 ||
+      item.signal !== `${item.signalWidth}×${item.signalHeight}`) return false;
+  if (item.masked) return Number.isInteger(item.offsetX) && item.offsetX >= 0 && Number.isInteger(item.offsetY) && item.offsetY >= 0 &&
+    text(item.areaLabel) && Number.isInteger(item.rightMargin) && item.rightMargin >= 0 &&
+    Number.isInteger(item.bottomMargin) && item.bottomMargin >= 0 &&
+    item.offsetX + item.activeWidth + item.rightMargin === item.signalWidth &&
+    item.offsetY + item.activeHeight + item.bottomMargin === item.signalHeight && item.note === undefined;
+  return item.activeWidth === item.signalWidth && item.activeHeight === item.signalHeight && item.offsetX === undefined &&
+    item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined &&
+    item.areaLabel === undefined && typeof item.note === 'string';
+}
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
   if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string'));
-  if (s.kind === 'mode-cards') return keys(s, ['kind', 'title', 'items']) &&
-    list(s.items, 2, item => record(item) && keys(item, ['icon', 'name', 'english', 'summary']) &&
-      ['resolution', 'masking'].includes(item.icon) && text(item.name) && text(item.english) && text(item.summary), 2);
-  if (s.kind === 'screen-examples') return keys(s, ['kind', 'title', 'items']) &&
-    list(s.items, 3, item => record(item) &&
-      keys(item, ['name', 'method', 'signal', 'signalType', 'outputWidth', 'outputHeight', 'activeWidth', 'activeHeight', 'masked', 'offsetX', 'offsetY', 'rightMargin', 'bottomMargin', 'note']) &&
-      text(item.name) && text(item.method) && text(item.signal) &&
-      Number.isInteger(item.activeWidth) && item.activeWidth > 0 &&
-      Number.isInteger(item.activeHeight) && item.activeHeight > 0 && typeof item.masked === 'boolean' &&
-      (item.signalType === 'output'
-        ? item.masked === false && Number.isInteger(item.outputWidth) && item.outputWidth > 0 &&
-          Number.isInteger(item.outputHeight) && item.outputHeight > 0 && item.activeWidth === item.outputWidth &&
-          item.activeHeight === item.outputHeight && item.signal === `${item.outputWidth}×${item.outputHeight}` &&
-          item.offsetX === undefined && item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined && item.note === undefined
-        : item.signalType === 'fixed' && item.outputWidth === undefined && item.outputHeight === undefined && item.signal === '1920×1080@60Hz' && (item.masked
-        ? Number.isInteger(item.offsetX) && item.offsetX === 0 && Number.isInteger(item.offsetY) && item.offsetY === 0 &&
-          Number.isInteger(item.rightMargin) && item.rightMargin >= 0 && Number.isInteger(item.bottomMargin) && item.bottomMargin >= 0 &&
-          item.offsetX + item.activeWidth + item.rightMargin === 1920 && item.offsetY + item.activeHeight + item.bottomMargin === 1080 && item.note === undefined
-        : item.activeWidth === 1920 && item.activeHeight === 1080 && item.offsetX === undefined && item.offsetY === undefined &&
-          item.rightMargin === undefined && item.bottomMargin === undefined && item.method === '마스킹 없음' && item.note === '물리 해상도 그대로')), 3);
+  if (s.kind === 'screen-examples') return keys(s, ['kind', 'title', 'items']) && list(s.items, 3, validScreenExample, 2);
   return ['edid', 'dip', 'table'].includes(s.kind) && keys(s, ['kind', 'title', 'columns', 'rows']) && texts(s.columns) && s.columns.length > 0 && Array.isArray(s.rows) && s.rows.length > 0 && s.rows.every(r => texts(r) && r.length === s.columns.length);
 }
 function validity(product) {
