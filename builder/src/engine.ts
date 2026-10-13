@@ -41,7 +41,7 @@ export interface Equipment {
   portal: Portal;
 }
 export interface QuoteOption { id: string; model: string; name?: string; manufacturer?: string }
-export interface EquipmentData extends Equipment { isReused: boolean; portsEdited?: boolean; systemName?: string; selectedOptionQuantities?: Record<string, number>; optionPortIds?: string[] }
+export interface EquipmentData extends Equipment { isReused: boolean; portsEdited?: boolean; userPortSeq?: number; systemName?: string; selectedOptionQuantities?: Record<string, number>; optionPortIds?: string[] }
 export interface LineType { id: string; name: string; color: string }
 export interface BomRow { cableType: 'ready-made' | 'manufactured'; productName: string; lineTypeId?: string; length?: number; quantity?: number }
 export interface DiagramNode {

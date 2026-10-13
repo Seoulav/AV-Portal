@@ -319,6 +319,11 @@
           "type": "boolean",
           "description": "이 노드의 단자가 라이브러리(Portal)와 다르다. 구성도 안에서만 고친 값이다"
         },
+        "userPortSeq": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "이 노드에서 마지막으로 쓴 사용자 단자 번호(<방향>-user-<n>의 n). 지운 번호를 다시 쓰지 않으려고 남긴다"
+        },
         "systemName": {
           "type": "string"
         },

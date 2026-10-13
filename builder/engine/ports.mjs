@@ -53,8 +53,8 @@ const problem = (code, detail) => ({ ok: false, code, detail, removedEdgeIds: []
 function buildPorts(oldData, lists, { signalVocabulary, libraryEquipment }) {
   const oldPorts = new Map(equipmentPorts(oldData).map(port => [port.id, port]));
   const libraryPorts = libraryEquipment ? new Map(equipmentPorts(libraryEquipment).map(port => [port.id, port])) : null;
-  // 사용자 단자 번호는 노드 안에서 하나로 이어 간다. 이번 편집에서 지운 번호도 건너뛴다
-  let lastUser = Math.max(0, ...[...oldPorts.keys()].map(userNumber), ...Object.keys(PORT_LISTS).flatMap(list => (lists[list] ?? []).map(port => userNumber(port.id))));
+  // 사용자 단자 번호는 노드 안에서 하나로 이어 간다. 지운 번호는 다시 쓰지 않는다(노드 userPortSeq에 마지막 번호를 남긴다)
+  let lastUser = Math.max(0, lastUserNumber(oldData), ...Object.keys(PORT_LISTS).flatMap(list => (lists[list] ?? []).map(port => userNumber(port.id))));
   const seen = new Set();
   const out = {};
   for (const [list, direction] of Object.entries(PORT_LISTS)) {
@@ -89,8 +89,11 @@ function buildPorts(oldData, lists, { signalVocabulary, libraryEquipment }) {
       out[list].push(port);
     }
   }
-  return { ports: out };
+  return { ports: out, lastUser };
 }
+
+// 지금까지 쓴 사용자 단자 번호 중 가장 큰 것(저장된 userPortSeq와 남은 단자 id 중 큰 값)
+const lastUserNumber = data => Math.max(0, Number.isSafeInteger(data?.userPortSeq) ? data.userPortSeq : 0, ...equipmentPorts(data ?? {}).map(port => userNumber(port.id)));
 
 // 이 노드에 걸린 엣지를 새 단자로 다시 판정한다. 맞지 않는 엣지 id 목록과, 핸들·선 종류·신호를 새로 맞춘 엣지를 돌려준다
 function reconcileEdges(diagram, nodeId, nextData, { rules, powerEnabled }) {
@@ -114,16 +117,39 @@ function reconcileEdges(diagram, nodeId, nextData, { rules, powerEnabled }) {
     if (!judgement.allowed || judgement.flipped) { removed.push(edge.id); continue; }
     const sourceHandle = sourceHandleOf(source);
     const targetHandle = targetHandleOf(target);
-    const { lineTypeId, signal } = judgement;
+    const { lineTypeId } = judgement;
+    // signal은 이미 적혀 있는 엣지만 고친다(없는 옛 엣지에 새로 쓰지 않는다)
+    const signal = edge.data?.signal === undefined ? undefined : judgement.signal;
     if (edge.sourceHandle === sourceHandle && edge.targetHandle === targetHandle && edge.data?.lineTypeId === lineTypeId && edge.data?.signal === signal) continue;
-    updated.set(edge.id, { ...edge, sourceHandle, targetHandle, style: { ...edge.style, stroke: colorOf(lineTypeId) }, data: { ...edge.data, lineTypeId, signal } });
+    const data = { ...edge.data, lineTypeId };
+    if (signal !== undefined) data.signal = signal;
+    updated.set(edge.id, { ...edge, sourceHandle, targetHandle, style: { ...edge.style, stroke: colorOf(lineTypeId) }, data });
   }
   return { removed, updated };
 }
 
+// 새 data로 노드를 바꾸고 걸린 연결을 정리한다(update·reset 공용)
+function commit(diagram, index, nextData, { removeEdges, rules, powerEnabled }) {
+  const node = diagram.nodes[index];
+  // 지운 단자를 가리키는 견적 단자 목록(optionPortIds)도 정리한다
+  if (Array.isArray(nextData.optionPortIds)) {
+    const ids = new Set(equipmentPorts(nextData).map(port => port.id));
+    nextData.optionPortIds = nextData.optionPortIds.filter(id => ids.has(id));
+  }
+  const { removed, updated } = reconcileEdges(diagram, node.id, nextData, { rules, powerEnabled });
+  if (removed.length && !removeEdges) return { ok: false, code: 'edges-affected', removedEdgeIds: removed, changed: false };
+  const changed = removed.length > 0 || updated.size > 0 || JSON.stringify(nextData) !== JSON.stringify(node.data);
+  if (!changed) return { ok: true, removedEdgeIds: [], changed: false };
+  // 노드·엣지 객체는 새로 만든다(이전 상태와 공유하지 않게)
+  diagram.nodes[index] = { ...node, data: nextData };
+  const gone = new Set(removed);
+  diagram.edges = diagram.edges.filter(edge => !gone.has(edge.id)).map(edge => updated.get(edge.id) ?? edge);
+  return { ok: true, removedEdgeIds: removed, changed: true };
+}
+
 // lists: { inputs, outputs, bidirectional } — 편집한 단자 목록 전체(순서 포함).
 // options: removeEdges(걸리는 연결을 함께 지울지), rules, powerEnabled, signalVocabulary(라이브러리 vocabulary.signals),
-//          libraryEquipment(이 노드의 라이브러리 장비. 주면 표시를 라이브러리와 비교해 정한다)
+//          libraryEquipment(이 노드의 라이브러리 장비. 주면 표시를 라이브러리와 비교해 정한다. 없으면 한 번 켠 표시는 유지한다)
 // 결과: { ok, code?, detail?, removedEdgeIds, changed }
 //   code 'edges-affected': removeEdges 없이 걸리는 연결이 있어 바꾸지 않았다. removedEdgeIds가 지울 엣지다
 export function updateEquipmentPorts(diagram, nodeId, lists, { removeEdges = false, rules = DEFAULT_RULES, powerEnabled = false, signalVocabulary = [], libraryEquipment = null } = {}) {
@@ -136,34 +162,21 @@ export function updateEquipmentPorts(diagram, nodeId, lists, { removeEdges = fal
   const edited = libraryEquipment ? !samePorts(built.ports, libraryEquipment) : (Boolean(node.data.portsEdited) || !samePorts(built.ports, node.data));
   if (edited) nextData.portsEdited = true;
   else delete nextData.portsEdited;
-  const { removed, updated } = reconcileEdges(diagram, nodeId, nextData, { rules, powerEnabled });
-  if (removed.length && !removeEdges) return { ok: false, code: 'edges-affected', removedEdgeIds: removed, changed: false };
-  const changed = removed.length > 0 || updated.size > 0 || JSON.stringify(nextData) !== JSON.stringify(node.data);
-  if (!changed) return { ok: true, removedEdgeIds: [], changed: false };
-  // 노드·엣지 객체는 새로 만든다(이전 상태와 공유하지 않게)
-  diagram.nodes[index] = { ...node, data: nextData };
-  const gone = new Set(removed);
-  diagram.edges = diagram.edges.filter(edge => !gone.has(edge.id)).map(edge => updated.get(edge.id) ?? edge);
-  return { ok: true, removedEdgeIds: removed, changed: true };
+  if (built.lastUser > 0) nextData.userPortSeq = built.lastUser;
+  return commit(diagram, index, nextData, { removeEdges, rules, powerEnabled });
 }
 
-// "라이브러리 값으로 되돌리기": 라이브러리 단자 그대로 돌리고 portsEdited·origin·edited를 지운다. 연결 처리는 updateEquipmentPorts와 같다
-export function resetEquipmentPorts(diagram, nodeId, libraryEquipment, options = {}) {
+// "라이브러리 값으로 되돌리기": 라이브러리 단자를 그대로 복사하고(verification·portalIo 포함) portsEdited·origin·edited를 지운다.
+// 연결 처리는 updateEquipmentPorts와 같다. 사용자 단자 번호(userPortSeq)는 남겨 지운 번호를 다시 쓰지 않는다
+export function resetEquipmentPorts(diagram, nodeId, libraryEquipment, { removeEdges = false, rules = DEFAULT_RULES, powerEnabled = false } = {}) {
   if (!libraryEquipment) return problem('library-missing', nodeId);
   const index = findNodeIndex(diagram, nodeId);
   if (index < 0) return problem('node-missing', nodeId);
   const node = diagram.nodes[index];
-  const lists = Object.fromEntries(Object.keys(PORT_LISTS).map(list => [list, libraryEquipment[list] ?? []]));
-  // 사본에서 연결을 먼저 처리한다. 걸리는 연결이 있고 removeEdges가 없으면 원본은 그대로다
-  const work = { ...diagram, nodes: [...diagram.nodes], edges: [...diagram.edges] };
-  const result = updateEquipmentPorts(work, nodeId, lists, { ...options, libraryEquipment });
-  if (!result.ok) return result;
-  // 단자는 라이브러리 값 그대로 복사한다(verification·portalIo 포함)
-  const data = { ...node.data };
-  for (const list of Object.keys(PORT_LISTS)) data[list] = clone(libraryEquipment[list] ?? []);
-  delete data.portsEdited;
-  if (!result.changed && JSON.stringify(data) === JSON.stringify(node.data)) return { ok: true, removedEdgeIds: [], changed: false };
-  diagram.nodes[index] = { ...node, data };
-  diagram.edges = work.edges;
-  return { ok: true, removedEdgeIds: result.removedEdgeIds, changed: true };
+  const nextData = { ...node.data };
+  for (const list of Object.keys(PORT_LISTS)) nextData[list] = clone(libraryEquipment[list] ?? []);
+  delete nextData.portsEdited;
+  const last = lastUserNumber(node.data);
+  if (last > 0) nextData.userPortSeq = last;
+  return commit(diagram, index, nextData, { removeEdges, rules, powerEnabled });
 }

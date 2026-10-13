@@ -2,7 +2,7 @@
 // 이 구성도의 이 노드만 고친다. Portal 데이터·라이브러리는 바뀌지 않는다(통합 기획 §8 "장비 DB 편집 폐기" 유지).
 // 모든 탭의 값은 창 안의 초안이고, "적용"을 누를 때 실행 취소 한 단계로 반영한다. Esc·바깥 클릭·취소는 아무것도 바꾸지 않는다.
 // 지우거나 바꾼 단자에 걸린 연결이 규칙에 맞지 않게 되면 "연결 n개도 함께 지웁니다"를 확인받은 뒤에만 적용한다.
-import { useMemo, useState, type KeyboardEvent, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import { PORT_DIRECTION_LABELS, nextPortLabels, parseHandle, type Direction, type EquipmentData, type Port, type PortLists, type VocabularySignal } from '../engine';
 import { optionIdOf } from '../state/store';
 import { useBuilder } from '../state/useBuilder';
@@ -70,6 +70,9 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
   const [productId, setProductId] = useState('');
   const [confirm, setConfirm] = useState<number | null>(null);
   const [error, setError] = useState('');
+  // 열리면 창으로 초점을 옮긴다. 두 번 누른 장비에 초점이 남으면 Esc·Delete가 바탕으로 간다
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { dialogRef.current?.focus(); }, []);
 
   // 단자별 연결 수(지금 저장된 구성도 기준)
   const connections = useMemo(() => {
@@ -86,6 +89,8 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     setPortsTouched(true);
     setReset(false);
     setError('');
+    // 확인 중에 초안을 바꾸면 확인한 연결 수가 맞지 않으므로 확인을 다시 받는다
+    setConfirm(null);
   };
   const updatePort = (list: ListKey, key: string, patch: Partial<DraftPort>) => editPorts(current => ({ ...current, [list]: current[list].map(port => (port.key === key ? { ...port, ...patch } : port)) }));
   const removePort = (list: ListKey, key: string) => editPorts(current => ({ ...current, [list]: current[list].filter(port => port.key !== key) }));
@@ -106,6 +111,7 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
     setPortsTouched(true);
     setReset(true);
     setError('');
+    setConfirm(null);
   };
 
   const submit = (removeEdges: boolean) => {
@@ -148,7 +154,7 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
 
   return (
     <div className="modal-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) close(); }} onKeyDown={onKeyDown} onKeyUp={event => event.stopPropagation()}>
-      <div className="modal equipment-settings" role="dialog" aria-modal="true" aria-label="장비 설정">
+      <div className="modal equipment-settings" role="dialog" aria-modal="true" aria-label="장비 설정" tabIndex={-1} ref={dialogRef}>
         <header className="modal-head">
           <div>
             <div className="modal-sub">{data.manufacturer}</div>

@@ -2,7 +2,7 @@
 
 // origin·edited·portsEdited: 구성도 안에서 고친 단자 표시(B-20261013-01). 1.1 키 뒤에 추가만 한다
 export const PORT_KEYS = ['id', 'label', 'type', 'direction', 'connector', 'signals', 'verification', 'portalIo', 'origin', 'edited'];
-export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal', 'portsEdited', 'systemName', 'selectedOptionQuantities', 'optionPortIds'];
+export const EQUIPMENT_DATA_KEYS = ['id', 'category', 'name', 'model', 'manufacturer', 'description', 'series', 'inputs', 'outputs', 'bidirectional', 'imageUrl', 'isReused', 'portal', 'portsEdited', 'userPortSeq', 'systemName', 'selectedOptionQuantities', 'optionPortIds'];
 export const PORTAL_KEYS = ['productId', 'source', 'unit', 'variant', 'detailUrl'];
 export const ANNOTATION_DATA_KEYS = ['label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderRadius', 'textAlign', 'locked'];
 export const SHAPE_DATA_KEYS = ['shapeType', 'label', 'fontSize', 'fontColor', 'bgColor', 'bgOpacity', 'borderColor', 'borderStyle', 'borderWidth', 'locked'];
@@ -40,5 +40,6 @@ export function normalizeEquipmentData(data, { withReused = true } = {}) {
   if (data.optionPortIds) out.optionPortIds = [...data.optionPortIds];
   if (data.portal) out.portal = pick(data.portal, PORTAL_KEYS);
   if (out.portsEdited !== true) delete out.portsEdited;
+  if (!(Number.isSafeInteger(out.userPortSeq) && out.userPortSeq > 0)) delete out.userPortSeq;
   return pick(out, EQUIPMENT_DATA_KEYS);
 }

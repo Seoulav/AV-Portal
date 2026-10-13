@@ -111,6 +111,40 @@ test('two added ports draw, connect, and deleting one asks first and leaves no o
   await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-user-1']);
 });
 
+test('keys right after the double-click stay in the dialog', async ({ page }) => {
+  const { disp } = await openFixture(page);
+  const before = JSON.stringify(await saved(page));
+  const dialog = await openSettings(page, disp);
+  // 창 안을 누르지 않은 채 Delete·Ctrl+Z를 눌러도 바탕의 장비가 지워지거나 되돌려지지 않는다
+  await page.keyboard.press('Delete');
+  await page.keyboard.press('Control+z');
+  await expect(dialog).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(dialog).toHaveCount(0);
+  await expect(page.locator('.react-flow__node-equipment')).toHaveCount(2);
+  await page.waitForTimeout(400);
+  expect(JSON.stringify(await saved(page))).toBe(before);
+});
+
+test('moving a connected port up moves its line with it', async ({ page }) => {
+  const { cam, disp } = await openFixture(page);
+  await drag(page, await rowInside(handle(page, cam, 'out-hdmi-1'), 'right'), await rowInside(handle(page, disp, 'in-hdmi-3'), 'left'));
+  await expect.poll(() => savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-3']);
+  const dialog = await openSettings(page, disp);
+  await dialog.getByRole('tab', { name: /단자/ }).click();
+  await dialog.getByRole('button', { name: 'in-hdmi-3 위로' }).click();
+  await dialog.getByRole('button', { name: 'in-hdmi-3 위로' }).click();
+  await dialog.getByRole('button', { name: '적용' }).click();
+  await expect(dialog).toHaveCount(0);
+  expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-3']);
+  // 선 끝이 옮겨 간 단자 행(이제 첫 행)에 붙는다
+  const target = await handle(page, disp, 'in-hdmi-3').boundingBox();
+  await expect.poll(async () => {
+    const box = await page.locator('.react-flow__edge path.react-flow__edge-path').first().boundingBox();
+    return box ? Math.abs(box.y + box.height - (target!.y + target!.height / 2)) : 999;
+  }).toBeLessThan(6);
+});
+
 test('the side panel shows a summary and opens the same settings', async ({ page }) => {
   const { disp } = await openFixture(page);
   await page.locator(`.react-flow__node[data-id="${disp}"] .node-header`).click();

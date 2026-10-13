@@ -17,9 +17,11 @@ export function sortIssues(issues) {
 // 견적 정보(시스템명·옵션)는 사용자가 넣는 값이라 빼고, 구성도에서 고친 단자(portsEdited)는 단자를 빼고 본다(B-20261013-01)
 const QUOTE_KEYS = ['systemName', 'selectedOptionQuantities', 'optionPortIds'];
 const PORT_KEYS_OF_NODE = ['inputs', 'outputs', 'bidirectional', 'portsEdited'];
+// 사용자 단자 번호 기록은 단자를 되돌린 뒤에도 남는 값이라 늘 뺀다
+const EDIT_KEYS = ['userPortSeq'];
 const comparable = (data, { withoutPorts = false } = {}) => {
   const out = normalizeEquipmentData(data, { withReused: false });
-  for (const key of [...QUOTE_KEYS, ...(withoutPorts ? PORT_KEYS_OF_NODE : [])]) delete out[key];
+  for (const key of [...QUOTE_KEYS, ...EDIT_KEYS, ...(withoutPorts ? PORT_KEYS_OF_NODE : [])]) delete out[key];
   return JSON.stringify(out);
 };
 

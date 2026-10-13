@@ -90,6 +90,8 @@ export function Canvas() {
   const dragging = useBuilder(state => state.dragging);
   const resizing = useBuilder(state => state.resizing);
   const locked = useBuilder(state => state.locked);
+  // 장비 설정 창이 열려 있으면 바탕의 삭제 키를 끈다(창 밖으로 초점이 남아 있어도 노드가 지워지지 않게)
+  const settingsOpen = useBuilder(state => state.settingsNodeId !== null);
   const snapToGrid = useBuilder(state => state.snapToGrid);
   const showMiniMap = useBuilder(state => state.showMiniMap);
   const hiddenLineTypes = useBuilder(state => state.hiddenLineTypes);
@@ -334,7 +336,7 @@ export function Canvas() {
         panOnDrag={PAN_BUTTONS}
         panActivationKeyCode="Space"
         defaultEdgeOptions={{ type: 'smoothstep' }}
-        deleteKeyCode={['Delete', 'Backspace']}
+        deleteKeyCode={settingsOpen ? null : ['Delete', 'Backspace']}
         minZoom={0.05}
         maxZoom={2}
         fitView

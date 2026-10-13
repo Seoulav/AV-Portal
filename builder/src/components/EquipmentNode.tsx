@@ -6,8 +6,8 @@
 // 핸들의 nokey: React Flow 선택 키(Shift)를 누른 채 단자를 눌러도 범위 선택이 시작되지 않게 한다.
 // LOD 덮개(구 Builder): 줌아웃하면 장비 위에 모델명을 크게 덮는다. 보이기·글자 크기는 Canvas의 LodLevel이 CSS로 정한다.
 // 덮개는 포인터를 받지 않아 단자 행의 핸들과 근접 연결은 그대로 동작한다.
-import { memo, type CSSProperties, type MouseEvent } from 'react';
-import { Handle, Position, type NodeProps } from '@xyflow/react';
+import { memo, useEffect, type CSSProperties, type MouseEvent } from 'react';
+import { Handle, Position, useUpdateNodeInternals, type NodeProps } from '@xyflow/react';
 import { geometry as G, type EquipmentData, type Port } from '../engine';
 import { portKey } from '../bundle';
 import { justConnected } from '../state/gesture';
@@ -56,6 +56,10 @@ function EquipmentNodeView({ id, data, selected }: NodeProps) {
       {ports.map(port => <PortRow key={port.id} nodeId={id} port={port} side={side} color={colorOf(port.type)} picked={picked.has(port.id)} />)}
     </div>
   );
+  // 장비 설정 창에서 단자 순서·구성을 바꾸면 높이가 같아도 핸들 위치가 바뀐다. React Flow에 다시 재게 한다
+  const updateNodeInternals = useUpdateNodeInternals();
+  const portSignature = [equipment.inputs, equipment.outputs, equipment.bidirectional].map(list => list.map(port => port.id).join(',')).join('|');
+  useEffect(() => { updateNodeInternals(id); }, [id, portSignature, updateNodeInternals]);
   const hasIO = equipment.inputs.length > 0 || equipment.outputs.length > 0;
   const tag = equipment.portal?.unit ? equipment.portal.unit.toUpperCase() : equipment.portal?.variant ? '모델' : null;
   // 핸들 크기·위치는 CSS 변수로 넘겨 geometry 한 곳에서 정한다

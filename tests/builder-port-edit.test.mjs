@@ -87,7 +87,8 @@ test('adding ports gives unique user ids, marks the node and keeps 1.1 keys', ()
   const { saved, errors, issues } = saveAndValidate(diagram, library);
   assert.deepEqual(errors, []);
   const node = saved.nodes.find(n => n.id === disp.id);
-  assert.deepEqual(Object.keys(node.data), ['id', 'category', 'name', 'model', 'manufacturer', 'inputs', 'outputs', 'bidirectional', 'isReused', 'portal', 'portsEdited']);
+  assert.deepEqual(Object.keys(node.data), ['id', 'category', 'name', 'model', 'manufacturer', 'inputs', 'outputs', 'bidirectional', 'isReused', 'portal', 'portsEdited', 'userPortSeq']);
+  assert.equal(node.data.userPortSeq, 4);
   assert.deepEqual(Object.keys(node.data.inputs[2]), ['id', 'label', 'type', 'direction', 'connector', 'signals', 'origin']);
   assert.deepEqual(issues.filter(i => i.target.node === disp.id).map(i => i.code), ['ports-edited']);
   // 다시 저장해도 같은 바이트
@@ -232,6 +233,49 @@ test('a deleted library port can come back with its library id', () => {
   const ghost = editable(data);
   ghost.inputs.push({ ...ghost.inputs[0], id: 'in-hdmi-9' });
   assert.equal(updateEquipmentPorts(diagram, disp.id, ghost, { signalVocabulary: SIGNALS }).code, 'port-unknown');
+});
+
+test('user port numbers are never reused across edits or a reset', () => {
+  const { diagram, library, disp, forNode } = sample();
+  const add = label => {
+    const lists = editable(nodeOf(diagram, disp).data);
+    lists.inputs.push({ label, connector: 'HDMI', signals: ['HDMI'] });
+    updateEquipmentPorts(diagram, disp.id, lists, forNode(disp));
+  };
+  add('A'); add('B');
+  const lists = editable(nodeOf(diagram, disp).data);
+  lists.inputs = lists.inputs.filter(x => x.id !== 'in-user-2');
+  updateEquipmentPorts(diagram, disp.id, lists, forNode(disp));
+  add('C');
+  assert.deepEqual(nodeOf(diagram, disp).data.inputs.map(x => x.id).filter(id => id.includes('user')), ['in-user-1', 'in-user-3']);
+  // 되돌리기는 어휘 없이도 되고, 번호 기록은 남는다
+  assert.equal(resetEquipmentPorts(diagram, disp.id, library.units.get('disp').equipment, { rules: library.rules }).ok, true);
+  assert.equal(nodeOf(diagram, disp).data.userPortSeq, 3);
+  add('D');
+  assert.equal(nodeOf(diagram, disp).data.inputs.at(-1).id, 'in-user-4');
+  // 되돌린 뒤 번호 기록만 남은 노드는 이슈가 없다
+  resetEquipmentPorts(diagram, disp.id, library.units.get('disp').equipment, { rules: library.rules });
+  assert.deepEqual(computeIssues(diagram, { library, rules: library.rules }).filter(i => i.target.node), []);
+  assert.deepEqual(validateDiagram(JSON.parse(serializeDiagram(diagram, { library })), { library }).errors, []);
+});
+
+test('edits prune optionPortIds, keep legacy edges without a signal key, and equipmentDB prefers unedited nodes', () => {
+  const { diagram, library, ids, cam, disp, forNode } = sample();
+  const lan = connectPorts(diagram, { nodeId: cam.id, portId: 'both-ethernet-1' }, { nodeId: disp.id, portId: 'both-ethernet-1' }, { ids, rules: library.rules });
+  delete diagram.edges.find(e => e.id === lan.edge.id).data.signal;
+  nodeOf(diagram, disp).data = { ...nodeOf(diagram, disp).data, optionPortIds: ['in-hdmi-1', 'in-hdmi-2'] };
+  const second = addEquipmentNode(diagram, library.units.get('disp').equipment, { position: { x: 800, y: 0 }, ids });
+  const lists = editable(nodeOf(diagram, disp).data);
+  lists.inputs = lists.inputs.filter(x => x.id !== 'in-hdmi-2');
+  lists.inputs[0].label = '이름만 바꿈';
+  assert.equal(updateEquipmentPorts(diagram, disp.id, lists, forNode(disp)).ok, true);
+  assert.deepEqual(nodeOf(diagram, disp).data.optionPortIds, ['in-hdmi-1']);
+  assert.equal('signal' in diagram.edges.find(e => e.id === lan.edge.id).data, false);
+  const saved = JSON.parse(serializeDiagram(diagram, { library }));
+  assert.ok(disp.id < second.id);
+  const entry = saved.equipmentDB.find(e => e.id === 'disp');
+  assert.equal(entry.portsEdited, undefined);
+  assert.equal(entry.inputs.length, 2);
 });
 
 test('quote fields alone do not raise library-drift, other differences still do', () => {
