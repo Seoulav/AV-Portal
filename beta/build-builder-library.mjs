@@ -36,6 +36,7 @@ function formatReport(report) {
     `제품 ${report.products} · I/O 행 ${report.ioRows} · 단자 ${report.ports}`,
     `행: 단자 ${report.rows.port} (${pct(report.rows.port, report.ioRows)}) · 확인 필요 ${report.rows.review} · 무선 ${report.rows.wireless} · 미지원 ${report.rows.unsupported} · 슬롯 ${report.rows.slot} · 서비스 ${report.rows.service}`,
     `제품: 단자 있음 ${report.productsWithPorts} (모두 해결 ${report.productsAllResolved} · 일부 확인 필요 ${report.productsPartial}) · I/O 있으나 단자 0 ${report.productsNoPort} · I/O 없음 ${report.productsNoIo}`,
+    `슬롯: 슬롯 정보 있는 프레임 ${report.slotFrames} · 카드 ${report.cards} · 호환 대상 없는 카드 ${report.cardsWithoutFrames}`,
     `확인 필요 사유: ${Object.entries(report.reviewByReason).map(([reason, count]) => `${reason} ${count}`).join(' · ')}`,
     `제품 이슈: ${Object.entries(report.productIssues).map(([code, count]) => `${code} ${count}`).join(' · ') || '없음'}`,
     `확인 필요 제조사: ${Object.entries(report.reviewByBrand).map(([brand, count]) => `${brand} ${count}`).join(' · ')}`,
