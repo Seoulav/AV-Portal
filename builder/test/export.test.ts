@@ -158,4 +158,15 @@ describe('diagram SVG export (B-20261006-10)', () => {
     expect(svg).toContain(`fill="${video}"`);
     expect(svg).toMatch(new RegExp(`<path data-edge="[^"]+" d="[^"]+" fill="none" stroke="${network}"`));
   });
+  it('draws the audio connector and level tags like the screen (B-20261013-05)', () => {
+    const store = createBuilderStore({ ids: createIdFactory({ seed: 9, now: 0 }) });
+    const equipment: Equipment = { id: 'dsp', category: 'audio', name: 'DSP', model: 'DSP', inputs: [{ id: 'in-mic-audio-1', label: 'Mic In 1', type: 'audio', direction: 'in', connector: 'TERMINAL-BLOCK', signals: ['MIC-AUDIO', 'LINE-AUDIO'], verification: 'FOUND' }], outputs: [{ id: 'out-line-audio-1', label: 'Out 1', type: 'audio', direction: 'out', connector: 'XLR', signals: ['LINE-AUDIO'], verification: 'REVIEW REQUIRED' }], bidirectional: [], portal: { productId: 'dsp', source: 'portal', detailUrl: '' } };
+    store.getState().addEquipment(equipment, { x: 0, y: 0 });
+    const { svg } = diagramSvg(store.getState().diagram, OPTIONS);
+    for (const tag of ['>EB<', '>M/L<', '>XLR<', '>LINE<', '>확인<']) expect(svg).toContain(tag);
+    // 오른쪽 행은 화면(row-reverse)처럼 [확인][XLR][LINE][이름] 순서
+    const at = (tag: string) => svg.indexOf(tag);
+    expect(at('>확인<')).toBeLessThan(at('>XLR<'));
+    expect(at('>XLR<')).toBeLessThan(at('>LINE<'));
+  });
 });

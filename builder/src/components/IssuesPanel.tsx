@@ -9,6 +9,8 @@ import { useBuilder } from '../state/useBuilder';
 export const ISSUE_LABELS: Record<string, string> = {
   'connector-adapter': '커넥터 변환 필요',
   'connector-unknown': '커넥터를 알 수 없음',
+  'audio-cable': '오디오 케이블 양 끝이 다름',
+  'audio-unbalanced': '불평형 오디오 구간',
   'signal-level': '신호 레벨이 다름',
   'unverified-port': '확인 중인 단자에 연결',
   'cable-unspecified': '케이블 미지정',

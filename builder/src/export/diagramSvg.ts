@@ -3,7 +3,7 @@
 // - 장비: 엔진 geometry 치수(화면과 같다). 사진은 넣지 않고 자리만 둔다(결정 M-c)
 // - 연결: 화면과 같은 계산(normalizeBidiEdges → edgeOffsets → edgeJumps → buildOrthogonalPath). 라벨은 화면과 같다(결정 M-d)
 // - 메모·영역: 구 Builder AnnotationNode·ShapeNode와 같은 규칙(B-20261006-09)
-import { geometry as G, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type LineType, type Port } from '../engine';
+import { audioPortTags, geometry as G, type Diagram, type DiagramEdge, type DiagramNode, type Equipment, type LineType, type Port } from '../engine';
 import { ANNOTATION_DEFAULTS, SHAPE_DEFAULTS } from '../components/NoteNodes';
 import { buildOrthogonalPath, edgeJumps, getEdgePoints, type XY } from '../edges/edgeGeometry';
 import { edgeOffsets, normalizeBidiEdges } from '../edges/edgeProcessing';
@@ -17,6 +17,8 @@ const NODE_ORDER: Record<string, number> = { shape: 0, equipment: 1, annotation:
 // 화면과 같은 기준: 이 둘이 아닌 단자는 "확인" 배지를 단다(EquipmentNode)
 const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
 const BADGE_WIDTH = 22;
+// 오디오 레벨 배지 색(화면 styles.css .port-level과 같다)
+const LEVEL_COLORS: Record<string, string> = { MIC: '#db2777', LINE: '#7c3aed', 'M/L': '#9333ea', SPK: '#0891b2', AES: '#4f46e5', 'S/PDIF': '#4f46e5' };
 
 export interface SvgOptions {
   lineTypes: LineType[];
@@ -113,13 +115,33 @@ function equipmentSvg(node: DiagramNode, colorOf: (type: string) => string): str
     if (side === 'right' || side === 'both') dot(x + width + G.HANDLE_OUTSET - G.HANDLE_SIZE / 2);
     // 확인이 필요한 단자(VERIFIED·FOUND가 아님)는 화면처럼 "확인" 배지를 붙인다. 배지 자리만큼 이름 폭을 줄인다
     const review = !ACCEPTED.has(port.verification ?? '');
-    const badge = review ? BADGE_WIDTH + 4 : 0;
+    // 오디오 단자는 화면처럼 커넥터 약칭·레벨 배지를 붙인다(B-20261013-05)
+    const audio = audioPortTags(port);
+    const tags = audio ? [audio.connector, audio.level].filter((tag): tag is string => Boolean(tag)) : [];
+    const tagWidths = tags.map(tag => textWidth(tag, 8.5) + 6);
+    const audioWidth = tags.length ? tagWidths.reduce((a, b) => a + b, 0) + 2 * (tags.length - 1) + 4 : 0;
+    const badge = (review ? BADGE_WIDTH + 4 : 0) + audioWidth;
     const label = ellipsize(str(port.label, port.id), 11, (side === 'both' ? width - 40 : column) - badge);
     const labelWidth = textWidth(label, 11);
-    const badgeAt = (bx: number) => {
-      if (!review) return;
-      out.push(`<rect${attrs({ x: bx, y: rowY - 6.5, width: BADGE_WIDTH, height: 13, rx: 4, fill: '#fef3c7' })}/>`);
-      out.push(text('확인', { x: bx + BADGE_WIDTH / 2, y: rowY + 3, 'font-size': 9, fill: '#b45309', 'text-anchor': 'middle' }));
+    // 화면 순서와 같게: 왼쪽·양방향 행은 이름 뒤에 [커넥터][레벨][확인], 오른쪽 행(row-reverse)은 이름 앞에 [확인][커넥터][레벨]
+    const badgeAt = (start: number, reviewFirst = false) => {
+      let bx = start;
+      const reviewBadge = () => {
+        if (!review) return;
+        out.push(`<rect${attrs({ x: bx, y: rowY - 6.5, width: BADGE_WIDTH, height: 13, rx: 4, fill: '#fef3c7' })}/>`);
+        out.push(text('확인', { x: bx + BADGE_WIDTH / 2, y: rowY + 3, 'font-size': 9, fill: '#b45309', 'text-anchor': 'middle' }));
+        bx += BADGE_WIDTH + 4;
+      };
+      const audioBadges = () => {
+        tags.forEach((tag, i) => {
+          const isLevel = i === tags.length - 1;
+          out.push(`<rect${attrs({ x: bx, y: rowY - 6, width: tagWidths[i], height: 12, rx: 3, fill: isLevel ? LEVEL_COLORS[tag] ?? '#a855f7' : '#ffffff', stroke: isLevel ? undefined : COLORS.muted })}/>`);
+          out.push(text(tag, { x: bx + tagWidths[i] / 2, y: rowY + 3, 'font-size': 8.5, fill: isLevel ? '#ffffff' : COLORS.muted, 'text-anchor': 'middle' }));
+          bx += tagWidths[i] + 2;
+        });
+        if (tags.length) bx += 2;
+      };
+      if (reviewFirst) { reviewBadge(); audioBadges(); } else { audioBadges(); reviewBadge(); }
     };
     if (side === 'left') {
       out.push(`<circle${attrs({ cx: x + 14.5, cy: rowY, r: 2.5, fill: color })}/>`);
@@ -128,7 +150,7 @@ function equipmentSvg(node: DiagramNode, colorOf: (type: string) => string): str
     } else if (side === 'right') {
       out.push(`<circle${attrs({ cx: x + width - 14.5, cy: rowY, r: 2.5, fill: color })}/>`);
       out.push(text(label, { x: x + width - 21, y: rowY + 4, 'font-size': 11, fill: COLORS.text, 'text-anchor': 'end' }));
-      badgeAt(x + width - 21 - labelWidth - 4 - BADGE_WIDTH);
+      badgeAt(x + width - 21 - labelWidth - badge, true);
     } else {
       // 양방향 행: 점 + 이름 (+ 배지)을 가운데에 모은다(화면 .port-both와 같다)
       const start = x + width / 2 - (5 + 4 + labelWidth + badge) / 2;

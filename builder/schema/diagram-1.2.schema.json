@@ -590,6 +590,8 @@
           "enum": [
             "connector-adapter",
             "connector-unknown",
+            "audio-cable",
+            "audio-unbalanced",
             "signal-level",
             "unverified-port",
             "cable-unspecified",
