@@ -38,6 +38,7 @@ test('wording history rejects unexpected changed sentence, missing marker, or co
 test('raw inverse is limited to affected products',()=>{
   const raw=readFileSync(new URL('../beta/site/detail/data/ki-pro-go2.json',import.meta.url),'utf8');
   assert.notEqual(beforeW12002Raw(beforeW12005Raw(raw,'ki-pro-go2'),'ki-pro-go2'),raw);
-  const unrelated=readFileSync(new URL('../beta/site/detail/data/blucard-in.json',import.meta.url),'utf8');
-  assert.equal(beforeW12002Raw(unrelated,'blucard-in'),unrelated);
+  // blucard-in은 B-20261013-03에서 카드 키가 추가돼 되감기 대상이 됐다. 손대지 않은 BSS 제품으로 바꾼다
+  const unrelated=readFileSync(new URL('../beta/site/detail/data/ec-4bv.json',import.meta.url),'utf8');
+  assert.equal(beforeW12002Raw(unrelated,'ec-4bv'),unrelated);
 });

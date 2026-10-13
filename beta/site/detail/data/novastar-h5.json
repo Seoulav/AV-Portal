@@ -469,6 +469,13 @@
       "verification": "PARTIAL"
     }
   ],
+  "slots": {
+    "input": 10,
+    "output": 3,
+    "source": "D",
+    "verification": "FOUND",
+    "note": "MVR 슬롯(프리뷰 카드 전용)은 데이터시트 텍스트에 수량이 없어 넣지 않음"
+  },
   "sources": [
     {
       "code": "P",

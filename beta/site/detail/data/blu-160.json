@@ -414,6 +414,12 @@
       "verification": "FOUND"
     }
   ],
+  "slots": {
+    "shared": 4,
+    "source": "P",
+    "verification": "FOUND",
+    "note": "4슬롯 공용(카드 종류별 4장 장착 시 최대 16채널). Digital In/Out·Telephone Hybrid 카드는 Portal 제품 미등록"
+  },
   "sources": [
     {
       "code": "P",
