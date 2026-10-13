@@ -401,11 +401,11 @@
       "connector": "USB Type-C",
       "signal": "USB OTG",
       "direction": "IN/OUT",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "USB 2.0",
       "availability": "",
-      "condition": "",
-      "source": "D1",
+      "condition": "VARIA-80 전용 Quick Start Guide 1쪽 후면 그림의 USB 1개",
+      "source": "D1, Q1",
       "verification": "VERIFIED"
     }
   ],
@@ -425,6 +425,12 @@
       "code": "D1",
       "name": "AMX VARIA-80 Data Sheet",
       "scope": "표지 VARIA-80(AMX-UTP0811), 2쪽 Specifications/CONNECTIONS. 사용자 제공 사양서_VARIA80.pdf; SHA-256 20756894218044c703afd418b2a6c8a5b2f99741352fdfa57f331ebfc3b69a0f"
+    },
+    {
+      "code": "Q1",
+      "name": "AMX VARIA-80 Quick Start Guide",
+      "url": "https://www.amx.com/en-US/site_elements/quick-start-guide-varia-80",
+      "scope": "VARIA-80(AMX-UTP0811) 전용 가이드 1쪽 Fig. 1 후면 그림의 USB 단자 1개. USB Type-C OTG 형상은 D1 사양서 2쪽과 대조."
     }
   ],
   "issues": [
