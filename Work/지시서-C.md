@@ -2,7 +2,7 @@
 
 ## W-20261012-013 3차 — 영상·기타 제조사 Builder 단자 재검토
 
-- 상태: REVIEW (로컬 검증 완료, PR·병합·배포 대기)
+- 상태: MERGED (배포·공개 Builder 확인)
 - 명세: `Work/작업/W-20261012-013.md` (읽은 main `12c1e607ddd6d9c9d176f1b7ff0d884686c7366e`)
 - 브랜치: `codex/W-20261012-013-phase3-video-c`; 전용 워크트리 `codex-c`
 - 범위: Samsung·Sony·Panasonic·AVer·Roland·Analog Way·AMX·기타의 확인 필요 행. 세션 A 소유 오디오·TR315/TR335·`pt-*` 파일은 변경하지 않는다.
@@ -12,7 +12,8 @@
 - [x] 전체 직렬 검사 646건(645 pass·0 fail·기존 skip 1), Pages 검증(276 장비·273 상세·479 WebP·134 uploads), 검색 인덱스·읽기용 카탈로그·빌더 라이브러리 `--check`를 통과했다.
 - [x] Builder 타입 검사, 단위 검사 101건, 스키마 검사, 빌드, E2E 39건을 통과했다.
 - [x] 로컬 Builder 대표 TR535 1280px·390px 화면에서 영상 출력과 제어 단자, 사진, 가로 넘침 없음, 브라우저 오류 없음을 확인했다.
-- [ ] PR·CI, 세션 A 병합 순서 확인, 최신 main 재통합과 파생 산출물 재생성, 병합·Pages·공개 화면 확인.
+- [x] Work가 #472 선병합 순서를 확정했다. 병합 직전 `origin/main`은 시작 SHA `12c1e607`과 같아 재통합·파생 재생성이 불필요했다. PR diff 범위·`git diff --check origin/main...HEAD`를 확인하고 필수 Builder CI run `38396120370` 성공 후 PR #472를 병합했다(병합 SHA `b15fea7d6f70780b7ce8f07e2ce7fd7ffb5c272e`).
+- [x] Pages run `38396545856` 성공. [공개 Builder](https://seoulav.github.io/AV-Portal/builder/)에서 TR535를 1280px·390px로 확인했다(HTTP 200, 사진·HDMI Out 2개·SDI Out 1개·RS-232/RS-422 양방향 단자 표시, 가로 넘침·브라우저 오류 없음). [1280px 캡처](기록/W-20261012-013-C3-public-1280.png) · [390px 캡처](기록/W-20261012-013-C3-public-390.png).
 
 [근거표](기록/W-20261012-013-C3-근거표.md) · [Work 인계](기록/W-20261012-013-C3-Work-인계.md)
 
