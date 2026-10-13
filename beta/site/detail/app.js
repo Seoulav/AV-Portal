@@ -217,7 +217,9 @@ if (!productKey) {
     $('#key-specs').append(cell);
   }
   if (enhancements.keyFacts.length) {
-    const facts = renderKeyFacts(enhancements.keyFacts); facts.id = 'key-specs'; $('#key-specs').replaceWith(facts);
+    const facts = renderKeyFacts(enhancements.keyFacts); facts.id = 'key-specs';
+    if (data.presentation.keyFactsVariant === 'metric-tiles') facts.classList.add('pg-facts-metric-tiles');
+    $('#key-specs').replaceWith(facts);
   }
   $('#key-specs').hidden = !$('#key-specs').children.length;
 

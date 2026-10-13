@@ -11,6 +11,12 @@
   "english": "Windows software for masking the unused desktop area outside an LED display viewport.",
   "korean": "emision PixelFit은 LED가 사용하는 표시 영역만 남기고 나머지 화면을 가리는 Windows용 바탕화면 뷰포트·출력 마스킹 소프트웨어다.",
   "overview": "캡처 화면에서 버전 2.0.0.0과 부제 “바탕화면 뷰포트 / 출력 마스킹”을 확인했다. 표시 영역은 파란 박스를 드래그하거나 X·Y 좌표와 가로·세로 크기(px)를 입력해 지정할 수 있고, 상·하·좌·우 여백을 자동 계산한다. “하드웨어 베젤 컷 적용” 기능도 표시된다.\n\n적용 방식은 NVIDIA의 커스텀 해상도 제작, AMD 및 일반 모드의 표시 영역 마스킹·작업표시줄 표시로 구분된다. AMD 방식은 드라이버 크기·위치 조정, 언더스캔, 소프트웨어 마스크 순으로 처리한다. 전체 화면 예시는 물리 해상도 그대로이며 마스킹 영역이 없다. 캡처에서 emision 작업표시줄, 디스플레이 식별·새로고침, 활성 신호 해상도 표시와 디버그 모드 화면도 확인된다.\n\n인트로 화면은 Activation Code를 SDCompany 인증센터에 전달해 LicenseKey를 발급받아 등록하는 절차를 안내한다. OS 세부 버전, GPU 드라이버 요건, 판매 단위는 확인되지 않았다.",
+  "keyFacts": [
+    { "label": "버전", "value": "2.0.0.0", "unit": "" },
+    { "label": "컨셉", "value": "2가지", "unit": "" },
+    { "label": "지원 GPU", "value": "NVIDIA · AMD", "unit": "" },
+    { "label": "대응 범위", "value": "모든 디스플레이", "unit": "" }
+  ],
   "features": [
     {
       "text": "바탕화면 뷰포트·출력 마스킹",
@@ -204,29 +210,48 @@
     "supplementalNote": "지원 OS·GPU 드라이버·판매 단위는 확인되지 않았습니다.",
     "footerNote": "SD컴퍼니 emision PixelFit · 캡처 자료 기준",
     "galleryFootNote": "사용자 제공 PixelFit 화면 캡처",
-    "visualVariant": "user-provided-screenshots"
+    "visualVariant": "user-provided-screenshots",
+    "keyFactsVariant": "metric-tiles"
   },
   "settings": [
+    {
+      "kind": "mode-cards",
+      "title": "동작 모드",
+      "items": [
+        {
+          "icon": "resolution",
+          "name": "커스텀 해상도 제작",
+          "english": "CUSTOM RESOLUTION",
+          "summary": "NVIDIA 방식 · 활성 윈도우 해상도와 바탕화면 해상도"
+        },
+        {
+          "icon": "masking",
+          "name": "마스킹 영역 해상도",
+          "english": "DISPLAY MASKING",
+          "summary": "AMD 및 모든 디스플레이 방식 · 마스킹 영역과 emision 작업표시줄"
+        }
+      ]
+    },
     {
       "kind": "screen-examples",
       "title": "화면 구성 예시",
       "items": [
         {
-          "name": "예시 1 · NVIDIA 커스텀 해상도",
-          "method": "NVIDIA 커스텀 해상도 제작",
-          "signal": "1920×1080@60Hz",
+          "name": "NVIDIA",
+          "method": "커스텀 해상도 제작",
+          "signal": "1340×780",
+          "signalType": "output",
+          "outputWidth": 1340,
+          "outputHeight": 780,
           "activeWidth": 1340,
           "activeHeight": 780,
-          "masked": true,
-          "offsetX": 0,
-          "offsetY": 0,
-          "rightMargin": 580,
-          "bottomMargin": 300
+          "masked": false
         },
         {
-          "name": "예시 2 · AMD 마스킹·작업표시줄",
-          "method": "AMD 마스킹 + 작업표시줄 표시",
+          "name": "AMD",
+          "method": "표시 영역 마스킹 + emision 작업표시줄",
           "signal": "1920×1080@60Hz",
+          "signalType": "fixed",
           "activeWidth": 1295,
           "activeHeight": 780,
           "masked": true,
@@ -236,9 +261,10 @@
           "bottomMargin": 300
         },
         {
-          "name": "예시 3 · 전체 화면",
+          "name": "전체 화면",
           "method": "마스킹 없음",
           "signal": "1920×1080@60Hz",
+          "signalType": "fixed",
           "activeWidth": 1920,
           "activeHeight": 1080,
           "masked": false,
