@@ -1713,6 +1713,12 @@
       "file": "manuals/vs-ent-ds-8s-amx-manual-ko.pdf",
       "kind": "manual",
       "title": "VS ENT DS-8S AMX 통신 설명서(사용자 제공)"
+    },
+    {
+      "slug": "ds-8s",
+      "file": "manuals/vs-ent-ds-8s-setting-guide-ko.pdf",
+      "kind": "manual",
+      "title": "순차 전원 공급 설정 가이드(2022-05 · 사용자 제공)"
     }
   ]
 }
