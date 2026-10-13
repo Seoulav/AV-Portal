@@ -177,6 +177,10 @@
       "verification": "FOUND"
     }
   ],
+  "slotType": "input",
+  "compatibleFrames": [
+    "novastar-h2"
+  ],
   "sources": [
     {
       "code": "P",

@@ -457,6 +457,13 @@
       "verification": "FOUND"
     }
   ],
+  "slots": {
+    "input": 4,
+    "output": 2,
+    "source": "D",
+    "verification": "FOUND",
+    "note": "일부 입력 슬롯은 프리뷰 카드 겸용(데이터시트: 'can accept an input card or preview card'). 겸용 슬롯 번호는 데이터시트에 없음"
+  },
   "sources": [
     {
       "code": "P",
