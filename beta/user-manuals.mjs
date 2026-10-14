@@ -31,6 +31,13 @@ export const userManuals = [
     note: '제조사 공식 웹사이트(magnimage.com)에서 확보. 다운로드 자산이 referer 화이트리스트로 보호되어 있어 이 사이트에서 직접 링크하면 방문자에게 접근 거부가 발생한다 — 그래서 사용자가 업로드했다.'
   },
   { brand: 'Ross Video', product: 'Carbonite Ultra', file: 'carbonite-ultra-user-manual-v9-2.pdf', title: 'Ultra 9.2 User Manual (4841DR-110-09.2, November 2025) · 사용자 제공', note: uploadNote },
+  {
+    brand: 'HDCVT',
+    product: 'HDF-CCF Full-featured Type-C AOC Cable',
+    file: 'hdf-ccf-user-manual-v1-1.pdf',
+    title: 'HDF-CCF \uC0AC\uC6A9\uC790 \uB9E4\uB274\uC5BC V1.1(\uC0AC\uC6A9\uC790 \uC81C\uACF5)',
+    note: uploadNote
+  },
 ];
 
 export const identity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;

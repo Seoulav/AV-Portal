@@ -40,7 +40,7 @@ const models = [
 const newSlugs = new Set(models.map(([slug]) => slug));
 
 test('three exact workbook models retain their own facts and omit unsupported connector maps', () => {
-  const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(read('beta/site/catalog.json')));
+  const catalog =beforeW20261014_005Catalog(read('beta/site/catalog.json'));
   for (const [slug, model, code, pitch, resolution, diode, brightnessName, brightness, contrast] of models) {
     const card = catalog.find(item => item.slug === slug);
     const detail = read(`beta/site/detail/data/${slug}.json`);
@@ -95,7 +95,7 @@ test('LED cabinet addition changes only the three new products and keeps the pri
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),
     ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']);
-  const previous =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog)));
+  const previous =beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '8af626c34c459c90001f5dae1698ea1bbbb5899ed1a132932c84c89c747a02c0');
   const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '--', ':(top,icase,glob)**/*.xls', ':(top,icase,glob)**/*.xlsx'], {
     cwd: fileURLToPath(root), encoding: 'utf8'

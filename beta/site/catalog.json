@@ -4891,5 +4891,22 @@
     "manual_link": "https://inogeni.com/u-bridge-3-user-guide",
     "slug": "u-bridge-3",
     "card_image": "u-bridge-3-main.png"
+  },
+  {
+    "brand": "HDCVT",
+    "product": "HDF-CCF Full-featured Type-C AOC Cable",
+    "categories": [
+      "연결·전송",
+      "Connectivity",
+      "Cable",
+      "USB 3.2 Gen2 10Gbps"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://cn.hdcvt.com/product_169/567.html"
+    ],
+    "manual_link": "./manuals/hdf-ccf-user-manual-v1-1.pdf",
+    "slug": "hdf-ccf",
+    "card_image": "hdf-ccf-main.png"
   }
 ]

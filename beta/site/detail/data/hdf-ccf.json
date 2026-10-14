@@ -1,0 +1,308 @@
+{
+  "manufacturer": "HDCVT",
+  "productName": "Full-featured Type-C Active Optical Cable",
+  "model": "HDF-CCF",
+  "itemType": "PRODUCT",
+  "categories": [
+    "연결·전송",
+    "Connectivity",
+    "Cable",
+    "USB 3.2 Gen2 10Gbps"
+  ],
+  "english": "HDF-CCF is a full-featured USB-C active optical cable supporting DisplayPort Alt Mode, USB data, and power delivery, with 5 m, 10 m, and 15 m length options.",
+  "korean": "HDF-CCF는 DisplayPort Alt Mode 영상, USB 데이터, 전원 전달을 지원하는 USB-C 액티브 광 케이블로, 5m·10m·15m 길이 옵션을 제공한다.",
+  "verificationSummary": "HDCVT 공식 HDF-CCF 제품 페이지와 사용자 제공 매뉴얼 V1.1을 대조했다. USB 3.2 Gen2 10Gbps는 2 Lane DP 1.4 모드에서 지원한다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "HDF-CCF는 USB-C 단자를 사용하는 양방향 연결형 Type-C 액티브 광 케이블이다. SOURCE 단자를 소스 기기에, DISPLAY 단자를 디스플레이에 연결하며 연결 방향을 바꾸지 않는다. 5m·10m·15m 길이 옵션이 있다.\n\n자동 전환되는 두 동작 모드 중 4 Lane DP 1.4 + USB 2.0 모드는 8K@60Hz와 4K@144/120Hz 영상 전송을 지원한다. 2 Lane DP 1.4 + USB 3.2 Gen 2 10Gbps 모드는 4K@60Hz 영상과 최대 10Gbps USB 데이터 전송을 지원한다.\n\n전력 표기는 매뉴얼 내 차이를 그대로 보존한다. 2쪽 특장점 본문은 최대 100W PD로 표기하고, 3쪽 사양표는 5m 90W·10m/15m 85W로 구분한다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "hdf-ccf-main.png",
+      "alt": "HDCVT HDF-CCF Type-C AOC Cable, SOURCE and DISPLAY ends",
+      "note": "Main ? HDCVT official product page lists exact model HDF-CCF",
+      "provider": "HDCVT",
+      "model": "HDF-CCF",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1920x1308",
+      "resolution": "1920x1308",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html"
+    },
+    {
+      "role": "Front",
+      "status": "MISSING",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://cn.hdcvt.com/product_169/567.html"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "MISSING",
+      "title": "User Manual 미확인",
+      "language": "언어 미확인",
+      "note": "사용자 제공 매뉴얼은 문서 카드로 별도 게시"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "HDF-CCF 공식 제품 페이지",
+      "language": "zh-CN",
+      "note": "모델명·기능·모드 및 USB 3.2 Gen2 10Gbps 확인",
+      "url": "https://cn.hdcvt.com/product_169/567.html"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "HDCVT 공식 제품 페이지",
+      "language": "zh-CN",
+      "note": "HDF-CCF 제품 상세",
+      "url": "https://cn.hdcvt.com/product_169/567.html"
+    }
+  ],
+  "features": [
+    {
+      "text": "4 Lane DP 1.4 + USB 2.0 모드 · 8K@60Hz·4K@144/120Hz 영상 전송",
+      "source": "M"
+    },
+    {
+      "text": "2 Lane DP 1.4 + USB 3.2 Gen 2 10Gbps 모드 · 4K@60Hz 영상·데이터 전송",
+      "source": "M"
+    },
+    {
+      "text": "USB-C 한 케이블로 DP 영상·USB 데이터·PD 전원 전달 · 외부 전원 불필요",
+      "source": "M"
+    },
+    {
+      "text": "SOURCE → DISPLAY 방향 연결 · 역방향 연결 금지",
+      "source": "M"
+    },
+    {
+      "text": "광섬유·주석도금 구리 하이브리드 전송 · 최대 15m 길이 옵션",
+      "source": "M"
+    },
+    {
+      "text": "자동 모드 전환 · 별도 설정·펌웨어 불필요",
+      "source": "M"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Cable",
+      "name": "케이블 유형",
+      "value": "Full-featured Type-C Active Optical Cable (AOC)",
+      "unit": "",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Cable",
+      "name": "길이 옵션",
+      "value": "5m / 10m / 15m",
+      "unit": "",
+      "condition": "사용자 확인(2026-10-14), 매뉴얼 3쪽 사양표",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB / DisplayPort",
+      "name": "4 Lane 모드",
+      "value": "DP 1.4 + USB 2.0",
+      "unit": "",
+      "condition": "영상 8K@60Hz, 4K@144/120Hz",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB / DisplayPort",
+      "name": "2 Lane 모드",
+      "value": "DP 1.4 + USB 3.2 Gen 2 10Gbps",
+      "unit": "",
+      "condition": "영상 4K@60Hz",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "PD 충전 출력",
+      "value": "최대 100W",
+      "unit": "",
+      "condition": "매뉴얼 2쪽 특장점 본문 표기. 매뉴얼 3쪽 사양표의 길이별 출력과 상충",
+      "source": "M",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Power",
+      "name": "PD 충전 출력",
+      "value": "5m: 90W / 10m·15m: 85W",
+      "unit": "",
+      "condition": "매뉴얼 3쪽 사양표. 매뉴얼 2쪽 본문 '100W PD' 표기와 상충",
+      "source": "M",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Cable",
+      "name": "광원 파장",
+      "value": "850",
+      "unit": "nm",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "name": "커넥터",
+      "value": "USB Type-C male ↔ USB Type-C male",
+      "unit": "",
+      "condition": "SOURCE 단자를 소스 기기, DISPLAY 단자를 디스플레이에 연결",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "외경",
+      "value": "6.5",
+      "unit": "mm",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "동작 온도",
+      "value": "0–40",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "보관 온도",
+      "value": "−20–60",
+      "unit": "°C",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "ESD",
+      "name": "ESD 보호",
+      "value": "IEC 61000-4-2",
+      "unit": "",
+      "condition": "공기 방전 ±8kV · 접촉 방전 ±4kV",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Handling",
+      "name": "인장력",
+      "value": "10 이하",
+      "unit": "kg",
+      "condition": "",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Connector",
+      "connector": "USB Type-C male · SOURCE",
+      "signal": "DP 영상·USB 데이터·PD 전원",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "DP Alt Mode",
+      "availability": "Fixed",
+      "condition": "소스 기기 측 연결",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "connector": "USB Type-C male · DISPLAY",
+      "signal": "DP 영상·USB 데이터·PD 전원",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "DP Alt Mode",
+      "availability": "Fixed",
+      "condition": "디스플레이 측 연결",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "HDCVT 공식 HDF-CCF 제품 페이지",
+      "url": "https://cn.hdcvt.com/product_169/567.html",
+      "scope": "제조사·모델명·USB 3.2 Gen2 10Gbps 지원 모드·공식 제품 이미지 확인"
+    },
+    {
+      "code": "M",
+      "name": "사용자 제공 HDF-CCF User Manual V1.1",
+      "url": "",
+      "scope": "2쪽 특장점·3쪽 사양표·4–5쪽 적용 시나리오"
+    },
+    {
+      "code": "U",
+      "name": "사용자 확인(2026-10-14)",
+      "url": "",
+      "scope": "HDF-CCF 길이 옵션 5m·10m·15m"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "CONFLICTED",
+      "title": "PD 충전 출력 표기 차이",
+      "detail": "매뉴얼 2쪽 특장점 본문은 최대 100W PD를 표기하고, 3쪽 사양표는 5m 90W·10m/15m 85W로 구분한다. 두 값을 모두 유지했다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "모드·길이별 조건 및 확인 상태를 함께 표시합니다.",
+    "ioIntro": "SOURCE에서 DISPLAY 방향으로 연결합니다.",
+    "supplementalNote": "USB 3.2 Gen2 10Gbps 데이터 전송은 2 Lane DP 1.4 모드 조건입니다.",
+    "footerNote": "HDCVT HDF-CCF 공식 제품 페이지 및 사용자 제공 매뉴얼 V1.1 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 제품 이미지"
+  }
+}

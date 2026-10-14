@@ -12,6 +12,7 @@ export const manufacturerHosts = {
   Colorlight: ['colorlightinside.com'],
   Crown: ['techdata-ps.com', 'crownaudio.com', 'harmanpro.com'],
   Epson: ['epson.co.kr', 'goepson.com'],
+  HDCVT: ['hdcvt.com'],
   JBL: ['techdata-ps.com', 'jblpro.com', 'harmanpro.com'],
   Lightware: ['lightware.com'],
   Insta360: ['insta360.com'],

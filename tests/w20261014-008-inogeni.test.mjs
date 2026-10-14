@@ -52,11 +52,11 @@ test('host and module I/O stay distinct and map only evidenced connectors', () =
 test('W-008 inverse removes only these two entries from historical snapshots', () => {
   const oldCatalog = beforeW20261014_008Catalog(catalog);
   assert.equal(catalog.length - oldCatalog.length, 2);
-  assert.deepEqual(oldCatalog, catalog.slice(0, -2));
+  assert.deepEqual(oldCatalog, catalog.filter(row => !inogeniSlugs.has(row.slug)));
   assert.deepEqual(beforeW20261014_008DetailFiles(['old.json', 'toggle-dock-2x1.json', 'u-bridge-3.json']), ['old.json']);
   const snapshot = read('../public-snapshot.json');
   const oldSnapshot = beforeW20261014_008Snapshot(snapshot);
   assert.equal(snapshot.catalog.count - oldSnapshot.catalog.count, 2);
   assert.equal(Object.keys(snapshot.details).length - Object.keys(oldSnapshot.details).length, 2);
-  assert.throws(() => beforeW20261014_008Catalog([...catalog, catalog.at(-1)]), /duplicate W-008/);
+  assert.throws(() => beforeW20261014_008Catalog([...catalog, catalog.find(row => inogeniSlugs.has(row.slug))]), /duplicate W-008/);
 });

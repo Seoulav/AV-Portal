@@ -21,7 +21,7 @@ const expectedByModel = {
 const differingNames = ['픽셀 피치', '밝기', '명암비', '전력 소비량 (최대)'];
 
 test('three MPF cabinets retain all 20 model-matched guide fields without invented connectors', () => {
-  const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(read('beta/site/catalog.json')));
+  const catalog =beforeW20261014_005Catalog(read('beta/site/catalog.json'));
   const products = slugs.map((slug, index) => {
     const card = catalog.find(item => item.slug === slug);
     const current = read(`beta/site/detail/data/${slug}.json`);

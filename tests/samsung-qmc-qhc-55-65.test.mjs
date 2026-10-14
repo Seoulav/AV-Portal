@@ -59,7 +59,7 @@ test('the four exact Korean models have their own specifications and the correct
 });
 
 test('Samsung brand order expands within the existing QHC and QMC groups', () => {
-  const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json'))))));
+  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))));
   assert.equal(catalog.length, 274);
   const samsung = filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' });
   assert.equal(samsung.length, 35);
@@ -80,6 +80,6 @@ test('all 243 pre-existing product JSON files and catalog entries remain unchang
     return [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(raw, slug), slug), slug), slug))];
   });
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
-  const previous =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog)));
+  const previous =beforeW20261014_005Catalog(beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog));
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
 });

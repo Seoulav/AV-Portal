@@ -422,3 +422,27 @@
 - [x] Work가 1280px·390px 시각 캡처 생략을 승인(2026-10-14). 탭형 예시 구현으로 진행; 정적 카드 비교는 생략.
 - [x] PR [#505](https://github.com/Seoulav/AV-Portal/pull/505) Ready 전환 후 필수 `builder` CI 성공(run [38579252097](https://github.com/Seoulav/AV-Portal/actions/runs/38579252097)). 병합 SHA `e48dc1bdd94a1ebbbf7a7b699b5d073ecfaafe95`.
 - [x] Pages 배포 성공(run [38579905649](https://github.com/Seoulav/AV-Portal/actions/runs/38579905649)). 공개 상세 HTML·JSON HTTP 200 확인. 공개 JSON에 GPU별 지원표와 3개 예시 포함; 공개 JS 해시가 저장소와 일치하고 03 번호·gallery 뒤 이동 로직이 배포된 코드에 포함됨. 공개 렌더러·CSS 해시 일치, 탭·비교표·420px 모바일 규칙 존재 확인.
+
+
+## W-20261014-007 USB cable facet ? 2026-10-15
+
+- Status: IN_PROGRESS. Branch: codex/W-20261014-007-usb32gen2-cables. Worktree: codex-b only.
+- Read the READY spec. User confirmed the fourth categories[] level is permitted only for HDF-CCF with the exact label "USB 3.2 Gen2 10Gbps". verify-pages and regression tests keep every other catalog item at three levels.
+- Added HDF-CCF once under manufacturer HDCVT, with 5m/10m/15m options, per-length PD values, the 100W conflict preserved, official image, and the uploaded V1.1 manual. Added a strict W-007 history inverse and adjusted prior full-history checks without weakening their assertions.
+- Official HDCVT exact-model page confirms HDF-CCF and USB 3.2 Gen 2 10Gbps. The uploaded PDF SHA-256 matches the supplied file; PDF.js reads all 7 pages and the detail viewer resolves its local upload card.
+- Beluga Highwave Pro C-to-C 8K 5M remains unregistered: no exact-model official 10Gbps specification found. The closest Beluga official HIGH WAVE CtoC page is a 1.5m generic cable; it does not establish the 5m Pro variant.
+- Existing records with USB 3.2 Gen 1 (AJA Ki Pro GO2 and INOGENI U-BRIDGE 3) were identified for reporting only; neither meets the requested Gen 2 / 10Gbps classification, and neither was changed.
+- Current verification: `npm.cmd test` (705 total, 704 pass, 1 existing skip); `node beta/verify-pages.mjs`; `node beta/build-search-index.mjs --check`; `node scripts/check-feature-wording.mjs --check` all pass. HDF PDF is unlocked; 12 locked-upload references are retained.
+- Pending: latest-main integration check, PR/CI, merge, Pages deployment, and public data/document URL confirmation. No browser surface is available in this environment; report nonvisual verification if that remains true.
+
+## W-20261014-007 — USB 3.2 Gen2 10Gbps 케이블 분류 (2026-10-15)
+
+- 상태: REVIEW. 브랜치 `codex/W-20261014-007-usb32gen2-cables`, 기준 `origin/main` `c3e212e3d4a78f601b58cfb6c477c7b48bda0c32`.
+- 사용자 확인에 따라 `categories[]` 4단 값은 HDF-CCF에만 허용. `verify-pages`가 나머지 제품의 기존 3단과 HDF의 정확한 4단 목록을 검사.
+- HDF-CCF를 HDCVT 제조사로 1개 등록. 길이 옵션 5m·10m·15m, 전력 5m 90W / 10m·15m 85W, 본문 100W와의 충돌을 `CONFLICTED`로 보존. 모드별 4-lane/2-lane, SOURCE→DISPLAY 방향 및 최대 15m를 근거에 맞게 반영.
+- 사용자 제공 V1.1 매뉴얼을 게시. PDF SHA-256 `c96e33cce303073b0c0106c3e61eb90d6f33a712e1f8c2a5e7bd41ee3229518f`, 7쪽·잠금 없음. 업로드 문서 카드/뷰어 테스트 포함. 잠긴 PDF 업로드 참조 12건 유지.
+- Beluga Highwave Pro C-to-C 8K 5M은 정확한 모델의 공식 USB 3.2 Gen2/10Gbps 근거를 확인하지 못해 등록 보류. 기존 제품 조사에서 AJA Ki Pro GO2 및 INOGENI U-BRIDGE 3는 USB 3.2 Gen1로 확인되어 후보 보고만 하며 재분류하지 않음.
+- 최신 main 확인: `origin/main`은 위 SHA이며 현재 구현 브랜치의 조상. 열린 PR #449는 Builder 화면 작업으로 경로 중복 없음.
+- 검증: 직렬 전체 테스트 705건 중 704 통과, 기존 skip 1, 실패 0. `verify-pages`: 284 제품·281 상세·502 검토 이미지·143 업로드 PDF. 검색 인덱스 `--check`(702064 bytes), feature wording(대상 0), `git diff --check` 통과. 병렬 테스트에서는 기존 RTCOM 임시 디렉터리 교체에서 Windows EPERM이 나왔으나 직렬 전체 실행에서 재현되지 않음.
+- 파생 산출물(검색 인덱스·읽기용 카탈로그·공개 스냅샷) 최신 기준으로 재생성. 공개 후 브라우저 캡처 대신 JSON/HTML/PDF URL과 SHA로 비시각 확인 예정(이 환경에 브라우저 표면 없음).
+- 다음: 지정 파일만 커밋 → PR/CI 초록 → 병합 → Pages 완료 및 공개 JSON·HTML·PDF 확인.
