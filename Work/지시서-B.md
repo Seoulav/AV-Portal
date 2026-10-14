@@ -409,3 +409,14 @@
 - [x] Six-page guide metadata and PDF bytes unchanged; full tests 692 (691 pass, 0 fail, 1 existing skip), verify-pages (281 products/278 details/142 uploaded PDFs, 12 locked PDFs retained), search-index --check, readable catalog regeneration, feature wording check, and diff checks pass.
 - [ ] Open PR, confirm required CI, merge, verify Pages deployment and public card/viewer titles at 1280px and 390px.
 - Other SD Company product documents: MediaServer introduction remains unpublished; no other posted SD Company documents found.
+
+## PixelFit 03 화면 구성 예시 확대 + GPU 지원 범위 보강 (2026-10-14)
+
+- 브랜치 `codex/W-20261014-pixelfit-example-layout`, 시작 기준 HEAD `9ded72a4` (W-007 명세 PR #501 병합본).
+- [x] 화면 구성 예시를 제품 사진 바로 다음으로 이동하고 번호를 03으로 재배열. 4K AOI 데이터와 예시 수치·구도는 유지.
+- [x] 정적 예시 카드를 칩 전환형 큰 카드로 구현. 탭 키보드 조작 및 접근성 상태 구현; 모바일은 그림 뒤에 설명이 오도록 CSS 구성.
+- [x] overview·작업 모드·주요 기능에 NVIDIA만 실제 커스텀 해상도 생성, NVIDIA는 생성·마스킹 모두, NVIDIA 외 GPU는 마스킹만 가능하다는 사용자 확인(2026-10-14) 반영. 신호 해상도 유지형 마스킹과 실제 OS/GPU 해상도 생성의 차이 설명 및 GPU 지원 비교 표 추가.
+- [x] 제안서 근거 6·9쪽과 사용자 확인을 D/U 근거에 연결. 제품 상세 JSON 외 제품 데이터는 수정하지 않음.
+- [x] 생성기 실행 후 공개 detail 자산·검색 인덱스·스냅샷 재생성. 집중 테스트 23/23, 전체 직렬 테스트 693건 중 692 통과·0 실패·기존 skip 1, `verify-pages`(281 항목·278 상세·142 업로드 PDF, 잠금 PDF 12건 유지), 검색 인덱스 `--check`, feature wording(대상 0), `git diff --check` 통과.
+- [ ] 1280px·390px 화면 캡처와 탭형/정적 큰 카드 시각 비교 미완료. 현재 환경에서 브라우저 캡처 자동화가 사용자 Edge/PDF 세션에 연결되는 문제가 있어 재시도하지 않음. 공개 화면을 캡처해 육안 확인하기 전에는 PR 병합·배포 완료로 기록하지 않음.
+- [ ] 최신 `origin/main` fetch/통합, 캡처 검증, PR·CI·병합·Pages 배포 및 공개 화면 확인.

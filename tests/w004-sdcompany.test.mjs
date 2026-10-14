@@ -32,7 +32,14 @@ test('PixelFit is listed only as evidenced software and has no fabricated physic
   assert.deepEqual(product.io, []);
   assert.ok(product.sources.some(source => source.name === '사용자 제공 SD컴퍼니 소개서(2026-10-13)'));
   const text = JSON.stringify(product);
-  for (const fact of ['2.0.0.0', '바탕화면 뷰포트', '출력 마스킹', 'NVIDIA', 'AMD', '작업표시줄', '디버그', 'Activation Code', 'LicenseKey']) assert.ok(text.includes(fact), `missing ${fact}`);
+  for (const fact of ['2.0.0.0', '바탕화면 뷰포트', '출력 마스킹', '실제 커스텀 해상도 생성 · NVIDIA GPU 전용', 'NVIDIA 외 GPU(AMD 등) · 바탕화면 마스킹만 가능', 'NVIDIA', 'AMD', '작업표시줄', '디버그', 'Activation Code', 'LicenseKey']) assert.ok(text.includes(fact), `missing ${fact}`);
+  assert.deepEqual(product.settings.find(setting => setting.kind === 'modes').comparison, {
+    title: 'GPU별 지원 방식',
+    columns: ['GPU', '실제 커스텀 해상도 생성', '바탕화면 마스킹'],
+    rows: [['NVIDIA', '○ 가능', '○ 가능'], ['AMD·기타', '✕ 불가', '○ 가능']]
+  });
+  assert.match(product.overview, /실제 커스텀 해상도 생성은 NVIDIA GPU에서만 가능/);
+  assert.match(product.overview, /NVIDIA 외 GPU\(AMD 등\)는 바탕화면 마스킹만 가능/);
   for (const issue of ['OS 버전', '드라이버', '판매 단위', '제품 페이지']) assert.ok(product.issues.some(item => JSON.stringify(item).includes(issue)), `missing issue ${issue}`);
   for (const filename of ['emision-pixelfit-mask.png', 'emision-pixelfit-methods.png', 'emision-pixelfit-amd.png', 'emision-pixelfit-debug.png']) assert.ok(existsSync(new URL(`../beta/site/detail/images/${filename}`, import.meta.url)), `missing screenshot ${filename}`);
 });
@@ -55,7 +62,7 @@ test('SD컴퍼니 feature labels end as compact noun phrases', async () => {
   }
 });
 
-test('PixelFit presents the 4K AOI baseline and NVIDIA custom resolution as static monitor examples', async () => {
+test('PixelFit presents the 4K AOI baseline and NVIDIA custom resolution in an accessible example switcher', async () => {
   const product = detail('emision-pixelfit');
   const examples = product.settings?.find(item => item.kind === 'screen-examples')?.items;
   assert.equal(examples?.length, 3, 'the 4K AOI examples include a qualitative movable-position illustration');
@@ -65,15 +72,16 @@ test('PixelFit presents the 4K AOI baseline and NVIDIA custom resolution as stat
     ['3840×2160', undefined, undefined, undefined, undefined, undefined, undefined]
   ]);
   assert.deepEqual(examples?.map(item => item.method), [
-    '바탕화면 마스킹 모드: NVIDIA 하드웨어 마스크 또는 AMD 하드웨어 마스크 선택 · emision 작업표시줄 추가 권장',
-    'GPU 커스텀 해상도 모드: NVIDIA 전용 · AOI에 맞춘 데스크톱 해상도',
-    '화면 안 위치와 기준점 지정'
+    '신호 해상도 3840×2160 유지, AOI 밖 마스킹 · NVIDIA/AMD 하드웨어 마스크 선택 · emision 작업표시줄 추가 권장',
+    'NVIDIA GPU 모드: OS·GPU에 AOI 크기의 실제 커스텀 해상도 생성·출력 · 그림은 3840×2160 안 AOI 구도 유지',
+    'X·Y 위치와 기준점 지정 가능 · 마스킹 모드에서는 신호 해상도 유지'
   ]);
-  assert.match(product.overview, /GPU 커스텀 해상도 모드: NVIDIA 전용/);
-  assert.match(product.overview, /NVIDIA 하드웨어 마스크 또는 AMD 하드웨어 마스크/);
+  assert.match(product.overview, /실제 커스텀 해상도 생성은 NVIDIA GPU에서만 가능/);
+  assert.match(product.overview, /NVIDIA 외 GPU\(AMD 등\)는 바탕화면 마스킹만 가능/);
   assert.match(product.overview, /화면 안 어느 위치든 지정할 수 있고, 기준점 변경도 가능/);
   assert.ok(product.sources.some(source => source.code === 'U' && /사용자 확인\(2026-10-14\)/.test(source.name)));
-  assert.ok(product.features.some(item => item.text.startsWith('작업 모드 · GPU 커스텀 해상도: NVIDIA 전용')));
+  assert.ok(product.features.some(item => item.text === '실제 커스텀 해상도 생성 · NVIDIA GPU 전용'));
+  assert.ok(product.features.some(item => item.text === 'NVIDIA 외 GPU(AMD 등) · 바탕화면 마스킹만 가능'));
   assert.ok(product.features.some(item => item.text === '마스킹 모드 · emision 작업표시줄 추가(권장)'));
   assert.match(product.specifications.find(item => item.name === 'GPU 커스텀 해상도 모드')?.condition ?? '', /6쪽/);
   assert.equal(product.presentation.keyFactsVariant, undefined, 'the previous standard facts presentation is restored');

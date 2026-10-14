@@ -1,5 +1,5 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
-import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261004-014-portmap-height';
+import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
 import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
@@ -403,7 +403,12 @@ if (!productKey) {
   if (section03Content?.type === 'signal-flow') {
     $('#io').append(renderSignalFlow(section03Content.flow, data.model));
   }
-  for (const [index, setting] of enhancements.settings.entries()) $('.detail-cards').append(renderSetting(setting, index + 6));
+  const settingNumber = (setting, index) => setting.kind === 'screen-examples' ? 3 : index + 6;
+  for (const [index, setting] of enhancements.settings.entries()) $('.detail-cards').append(renderSetting(setting, settingNumber(setting, index)));
+  const screenExampleSetting = enhancements.settings.find(setting => setting.kind === 'screen-examples');
+  const screenExampleCardId = screenExampleSetting ? `setting-${settingNumber(screenExampleSetting, enhancements.settings.indexOf(screenExampleSetting))}` : null;
+  const screenExampleCard = screenExampleCardId ? document.getElementById(screenExampleCardId) : null;
+  if (screenExampleCard) $('#gallery').after(screenExampleCard);
   if (productKey === 'ds-8s') $('#documents').before(renderDs8sGuide());
 
   const specificationRows = [];
@@ -542,11 +547,12 @@ if (!productKey) {
 
   const visible = new Set(visibleDetailCards(data));
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
-  for (const [index] of enhancements.settings.entries()) visible.add('setting-' + (index + 6));
+  for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);
   const cardGrid = $('.detail-cards');
-  const leftCardIds = ['overview', 'specifications', 'features', ...enhancements.settings.map((_, index) => 'setting-' + (index + 6))];
-  const rightCardIds = ['gallery', 'io'];
+  const leftCardIds = ['overview', 'specifications', 'features', ...enhancements.settings
+    .map((setting, index) => setting.kind === 'screen-examples' ? null : `setting-${settingNumber(setting, index)}`).filter(Boolean)];
+  const rightCardIds = ['gallery', ...(screenExampleCardId ? [screenExampleCardId] : []), 'io'];
   let rtcomEmbedded = false;
   let packingQueued = false;
   function packCards() {

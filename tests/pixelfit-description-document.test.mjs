@@ -33,16 +33,18 @@ test('PixelFit publishes the product proposal PDF separately from the six-page s
   assert.ok(documents.every(item => documentActionLabels(item, item.action).download));
 });
 
-test('PixelFit presents two parent modes and nests NVIDIA and AMD under desktop masking', () => {
+test('PixelFit distinguishes actual NVIDIA custom resolutions from masking-only GPUs', () => {
   const modes = product.settings.find(item => item.kind === 'modes');
   assert.deepEqual(modes.items.map(item => item.name), [
     'GPU \uCEE4\uC2A4\uD140 \uD574\uC0C1\uB3C4 \uBAA8\uB4DC',
     '\uBC14\uD0D5\uD654\uBA74 \uB9C8\uC2A4\uD0B9 \uBAA8\uB4DC'
   ]);
-  assert.match(modes.items[0].summary, /NVIDIA/);
-  assert.match(modes.items[1].summary, /NVIDIA.*AMD/);
+  assert.match(modes.items[0].summary, /NVIDIA.*실제 생성해 출력/);
+  assert.match(modes.items[1].summary, /신호 해상도 유지/);
+  assert.deepEqual(modes.comparison.rows, [['NVIDIA', '○ 가능', '○ 가능'], ['AMD·기타', '✕ 불가', '○ 가능']]);
   assert.match(modes.items[1].detail, /emision/);
-  assert.match(product.overview, /\uC0AC\uC6A9\uC790 \uAD6C\uB450 \uC124\uBA85/);
+  assert.match(product.overview, /실제 커스텀 해상도 생성은 NVIDIA GPU에서만 가능/);
+  assert.match(product.overview, /NVIDIA 외 GPU\(AMD 등\)는 바탕화면 마스킹만 가능/);
   assert.deepEqual(product.specifications.filter(item => item.source === 'D').map(item => item.name), [
     '작업 모드',
     'GPU 커스텀 해상도 모드',
@@ -58,7 +60,8 @@ test('PixelFit presents two parent modes and nests NVIDIA and AMD under desktop 
   assert.equal(product.sources.some(item => item.name.includes('?')), false);
   assert.ok(evidence);
   for (const page of [3, 4, 6, 8, 9, 11]) assert.match(evidence.scope, new RegExp(page + '.{0,2}' + String.fromCharCode(0xCABD)));
-  assert.match(evidence.scope, /\uAD6C\uB450/);
+  assert.match(evidence.scope, /사용자 확인\(2026-10-14\)/);
+  assert.ok(product.sources.find(item => item.code === 'U')?.scope.includes('NVIDIA 외 GPU'));
   assert.ok(product.features.some(item => /NVIDIA \uD558\uB4DC\uC6E8\uC5B4 \uB9C8\uC2A4\uD06C/.test(item.text)));
   assert.ok(product.features.some(item => /AMD \uD558\uB4DC\uC6E8\uC5B4 \uB9C8\uC2A4\uD06C/.test(item.text)));
   const example = product.settings.find(item => item.kind === 'screen-examples').items[0];
