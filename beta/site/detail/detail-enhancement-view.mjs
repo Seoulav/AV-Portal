@@ -368,14 +368,85 @@ function renderScreenExample(item) {
 }
 function renderScreenExamples(setting, card) {
   card.classList.add('screen-example-section');
-  const grid = el('div', 'screen-example-grid');
+  const tabs = el('div', 'screen-example-tabs');
+  tabs.setAttribute('role', 'tablist');
+  tabs.setAttribute('aria-label', '화면 구성 예시 선택');
+  tabs.setAttribute('aria-orientation', 'horizontal');
+  const panels = [];
+  const selectExample = index => {
+    for (const [tabIndex, tab] of [...tabs.children].entries()) {
+      const selected = tabIndex === index;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      panels[tabIndex].hidden = !selected;
+    }
+  };
   for (const [index, item] of setting.items.entries()) {
     const example = renderScreenExample(item);
-    example.prepend(el('h3', '', item.name));
+    const tabId = `${card.id}-tab-${index + 1}`;
+    const panelId = `${card.id}-panel-${index + 1}`;
+    const tab = el('button', 'screen-example-tab', item.name);
+    tab.type = 'button';
+    tab.id = tabId;
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-controls', panelId);
+    tab.setAttribute('aria-selected', String(index === 0));
+    tab.tabIndex = index === 0 ? 0 : -1;
+    tab.addEventListener('click', () => selectExample(index));
+    tabs.append(tab);
+
+    example.id = panelId;
+    example.setAttribute('role', 'tabpanel');
+    example.setAttribute('aria-labelledby', tabId);
+    example.tabIndex = 0;
+    example.hidden = index !== 0;
     example.dataset.example = String(index + 1);
-    grid.append(example);
+    example.prepend(el('h3', 'screen-example-heading', item.name));
+    panels.push(example);
   }
-  card.append(grid);
+  tabs.addEventListener('keydown', event => {
+    const current = [...tabs.children].indexOf(document.activeElement);
+    if (current < 0) return;
+    let next = current;
+    if (event.key === 'ArrowRight') next = (current + 1) % tabs.children.length;
+    else if (event.key === 'ArrowLeft') next = (current - 1 + tabs.children.length) % tabs.children.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = tabs.children.length - 1;
+    else return;
+    event.preventDefault();
+    selectExample(next);
+    tabs.children[next].focus();
+  });
+  card.append(tabs, ...panels);
+}
+function renderSettingComparison(comparison) {
+  const section = el('div', 'setting-comparison');
+  section.append(el('h3', '', comparison.title));
+  const wrap = el('div', 'pg-table setting-table');
+  wrap.tabIndex = 0;
+  wrap.setAttribute('role', 'region');
+  wrap.setAttribute('aria-label', `${comparison.title} 표`);
+  const table = el('table');
+  table.append(el('caption', 'sr-only', comparison.title));
+  const row = el('tr');
+  for (const label of comparison.columns) {
+    const heading = el('th', '', label);
+    heading.scope = 'col';
+    row.append(heading);
+  }
+  const head = el('thead'); head.append(row); table.append(head);
+  const body = el('tbody');
+  for (const values of comparison.rows) {
+    const dataRow = el('tr');
+    for (const [index, value] of values.entries()) {
+      const cell = index === 0 ? el('th', '', value) : el('td', '', value);
+      if (index === 0) cell.scope = 'row';
+      dataRow.append(cell);
+    }
+    body.append(dataRow);
+  }
+  table.append(body); wrap.append(table); section.append(wrap);
+  return section;
 }
 export function renderSetting(setting, number) {
   const card = el('section', 'pg-card setting-card');
@@ -386,11 +457,14 @@ export function renderSetting(setting, number) {
   title.append(el('span', 'pg-idx', card.dataset.card), document.createTextNode(setting.title));
   card.append(title);
   if (setting.kind === 'screen-examples') renderScreenExamples(setting, card);
-  else if (setting.kind === 'modes') for (const item of setting.items) {
-    const details = el('details', 'pg-inline-more');
-    details.append(el('summary', '', item.name), el('p', '', item.summary));
-    if (item.detail) details.append(el('p', '', item.detail));
-    card.append(details);
+  else if (setting.kind === 'modes') {
+    for (const item of setting.items) {
+      const details = el('details', 'pg-inline-more');
+      details.append(el('summary', '', item.name), el('p', '', item.summary));
+      if (item.detail) details.append(el('p', '', item.detail));
+      card.append(details);
+    }
+    if (setting.comparison) card.append(renderSettingComparison(setting.comparison));
   } else {
     const wrap = el('div', 'pg-table setting-table');
     wrap.tabIndex = 0; wrap.setAttribute('aria-label', `${setting.title} 표`);

@@ -50,10 +50,9 @@ test('public pages display a version badge while detail assets retain their refr
   assert.match(home, /data-system-version/);
   assert.match(publicDetail, /data-system-version/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
-  // W-008 refreshes both detail assets so cached pages receive the amplifier output table.
-  // W-017 updates the detail renderer and its manufacturer comparison tables.
-  assert.match(detail, /styles\.css\?v=w20261013-005-followup/);
-  assert.match(detail, /app\.js\?v=w20261013-005-followup/);
+  // The detail asset version advances when its presentation renderer changes.
+  assert.match(detail, /styles\.css\?v=w20261014-pixelfit-layout/);
+  assert.match(detail, /app\.js\?v=w20261014-pixelfit-layout/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

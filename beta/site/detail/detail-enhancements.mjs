@@ -124,9 +124,14 @@ function validScreenExample(item) {
     item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined &&
     item.areaLabel === undefined && typeof item.note === 'string';
 }
+function validComparison(comparison) {
+  return record(comparison) && keys(comparison, ['title', 'columns', 'rows']) && text(comparison.title) &&
+    texts(comparison.columns) && comparison.columns.length > 1 && Array.isArray(comparison.rows) && comparison.rows.length > 0 &&
+    comparison.rows.every(row => texts(row) && row.length === comparison.columns.length);
+}
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
-  if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string'));
+  if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items', 'comparison']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string')) && (s.comparison === undefined || validComparison(s.comparison));
   if (s.kind === 'screen-examples') return keys(s, ['kind', 'title', 'items']) && list(s.items, 3, validScreenExample, 2);
   return ['edid', 'dip', 'table'].includes(s.kind) && keys(s, ['kind', 'title', 'columns', 'rows']) && texts(s.columns) && s.columns.length > 0 && Array.isArray(s.rows) && s.rows.length > 0 && s.rows.every(r => texts(r) && r.length === s.columns.length);
 }

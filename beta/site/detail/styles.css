@@ -261,7 +261,10 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .setting-card { min-width: 0; }
 @media (max-width:1000px) { .setting-card { grid-area: auto; } }
 .screen-example-section, .screen-example-grid, .screen-example-card { min-width: 0; max-width: 100%; }
-.screen-example-grid { display: grid; gap: 14px; }
+.screen-example-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.screen-example-tab { min-width: 0; padding: 9px 14px; border: 1px solid var(--pg-line); border-radius: 999px; color: var(--pg-ink-2); background: #fff; font-size: 13px; font-weight: 700; cursor: pointer; }
+.screen-example-tab[aria-selected="true"] { border-color: var(--pg-accent); color: var(--pg-accent-2); background: var(--pg-accent-tint); box-shadow: inset 0 0 0 1px var(--pg-accent); }
+.screen-example-tab:focus-visible { outline: 2px solid var(--pg-accent); outline-offset: 2px; }
 .screen-example-card { padding: 12px; border: 1px solid var(--pg-line); border-radius: 14px; background: #f8faff; }
 .screen-example-card h3 { margin: 0 0 8px; font-size: 14px; }
 .screen-example-figure { margin: 0; }
@@ -270,16 +273,24 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .screen-monitor-bezel, .screen-monitor-neck, .screen-monitor-foot { fill: #141820; }
 .screen-monitor-surface { fill: #050608; }
 .screen-active-area { fill: #007aff; }
-.screen-active-label { fill: #fff; font: 700 12px Pretendard, sans-serif; }
-.screen-mask-label { fill: #fff; font: 600 8px Pretendard, sans-serif; }
-.screen-example-figure figcaption { margin-top: 2px; color: var(--pg-ink-2); font-size: 10px; line-height: 1.4; }
-.screen-example-details { display: grid; gap: 6px; margin: 10px 0 0; }
-.screen-example-detail { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 8px; font-size: 11px; line-height: 1.45; }
+.screen-active-label { fill: #fff; font: 700 16px Pretendard, sans-serif; }
+.screen-mask-label { fill: #fff; font: 600 11px Pretendard, sans-serif; }
+.screen-example-figure figcaption { margin-top: 6px; color: var(--pg-ink-2); font-size: 12px; line-height: 1.45; }
+.screen-example-details { display: grid; gap: 10px; margin: 10px 0 0; }
+.screen-example-detail { display: grid; grid-template-columns: 105px minmax(0, 1fr); gap: 8px; font-size: 13px; line-height: 1.5; }
 .screen-example-detail dt { color: var(--pg-ink-2); }
 .screen-example-detail dd { min-width: 0; margin: 0; overflow-wrap: anywhere; font-weight: 650; }
+#setting-3.screen-example-section .screen-example-card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr); align-items: center; gap: 22px; padding: 18px; }
+#setting-3 .screen-example-heading { grid-column: 1 / -1; margin: 0; font-size: 18px; }
+#setting-3 .screen-example-monitor { width: min(100%, 640px); }
+#setting-3 .screen-example-details { margin: 0; gap: 12px; }
+#setting-3 .screen-example-detail { grid-template-columns: 112px minmax(0, 1fr); font-size: 14px; }
 @media (max-width:420px) {
-  .screen-example-card { padding: 10px; }
-  .screen-example-detail { grid-template-columns: 78px minmax(0,1fr); gap: 6px; }
+  #setting-3.screen-example-section .screen-example-card { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 12px; }
+  #setting-3 .screen-example-monitor { width: 100%; }
+  #setting-3 .screen-example-details { gap: 9px; }
+  #setting-3 .screen-example-detail { grid-template-columns: 92px minmax(0, 1fr); gap: 6px; font-size: 13px; }
+  #setting-3 .screen-example-heading { font-size: 16px; }
 }
 .layer-comparison { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--pg-line); min-width: 0; }
 .layer-comparison h3 { margin: 0 0 8px; font-size: 15px; }
