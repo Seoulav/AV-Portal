@@ -399,3 +399,13 @@
 - [x] 구현 PR [#498](https://github.com/Seoulav/AV-Portal/pull/498) 필수 CI 성공·병합(SHA `4f5d0a30b71042eab8c9cf3c0d93209f3af5dff9`); Pages run [38549535124](https://github.com/Seoulav/AV-Portal/actions/runs/38549535124) 성공.
 - [x] 공개 상세 1280px·390px, Port Map, 문서 보기/다운로드 확인. 공개 매뉴얼 뷰어 첫 페이지 canvas 및 `/ 277` 확인; PDF 다운로드 HTTP 200·SHA 원본 일치. 캡처는 `Work/기록/W-20261014-005-screens/public/`.
 - [x] 병합 후 검사 보완: 비공개 스프레드시트 검사가 `.XLS`·`.XLSX`도 찾도록 대소문자 무시 Git pathspec으로 수정, 실제 대문자 확장자 탐지 확인. 전체 테스트 692건 중 691 통과·0 실패·기존 skip 1.
+
+
+## PixelFit 12-page document title correction (2026-10-14)
+
+- Scope: rename the emision PixelFit 12-page user PDF to "emision PixelFit product proposal (user provided)" across the document card/viewer metadata, source D, product evidence text, upload manifest, and fixed test values. Keep the separate six-page screen guide unchanged.
+- [x] Updated userReferences title, product detail wording/evidence name, manifest upload title, targeted regression tests, and rebuilt search index.
+- [x] Focused PixelFit document tests pass (2/2).
+- [x] Six-page guide metadata and PDF bytes unchanged; full tests 692 (691 pass, 0 fail, 1 existing skip), verify-pages (281 products/278 details/142 uploaded PDFs, 12 locked PDFs retained), search-index --check, readable catalog regeneration, feature wording check, and diff checks pass.
+- [ ] Open PR, confirm required CI, merge, verify Pages deployment and public card/viewer titles at 1280px and 390px.
+- Other SD Company product documents: MediaServer introduction remains unpublished; no other posted SD Company documents found.
