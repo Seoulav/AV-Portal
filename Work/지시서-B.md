@@ -386,19 +386,14 @@
 
 ## W-20261014-005 — Ross Video Carbonite Ultra 등록 (2026-10-14)
 
-- 명세: `Work/작업/W-20261014-005.md` (READY, 명세 읽은 기준 커밋 `c30ddfbd` / PR #495 병합 확인)
-- 구현 브랜치: `codex/W-20261014-005-carbonite-ultra` · 작업 위치: 별도 `codex-b`
-- 착수 기준: `origin/main` `c30ddfbdb1592e40d64c4b015e45892f86e782ad`
-- 승인: 2026-10-14 사용자 “이것도 추가” — Ross Video Carbonite Ultra 등록, 전면·후면 사진 및 PDF 게시
-- 자료 SHA-256 검증: PDF `0527e3d4d02e60e634321ab7072505110510a35d7cc62f97ee1504340e319848`; Front `330778d4c551ca74e7f880dd6820c30fac399fdbec2e4b9884293d940a34a1f9`; Rear `ea814491f3812d2010d8438a583a5c3dae23b3ff95f849772e8d9c1bea5ee079`
-- [x] 명세·인계 규칙 및 입력 파일 확인. PDF.js로 277쪽·제목 `Ultra 9.2 User Manual`·Ross Part 4841DR-110-09.2 확인. 전면 인쇄에서 Carbonite/Ultra 모델 표기 확인.
-- [x] Ross 공식 제품·사양 페이지 확인. SD/HD·UHD 입력/출력 구성이 다르며, 후면 사진 출력 라벨과 User Manual p.175 그림의 번호가 다름을 확인. 사진 라벨을 지도에 사용하고 데이터에 충돌을 병기 예정.
-- [ ] 제품 카탈로그·상세·이미지·문서 등록 및 focused tests
-- [ ] Port Map 좌표 감사 및 PDF 뷰어 렌더 확인
-- [ ] 다른 제품 불변·잠긴 PDF 12건 유지·전수 검사·파생 산출물 검사
-- [ ] PR·필수 CI·병합·Pages 배포·공개 상세 검증(1280/390)·보고
-
-﻿- [x] 후면 Port Map 16개 표식의 라벨·수량·색 구획·인접 단자를 확대 대조하고 점검표 Work/기록/W-20261014-005-점검표.md 작성. 대조 중 REF IN/OUT 두 표식이 반대임을 발견해 사진 인쇄(I/O) 기준으로 교정, 회귀 테스트에 위치를 고정.
-- [x] Ross 9.2 사용자 매뉴얼(277쪽) 메타데이터 및 p.175 단자 도면 대조. 공식 사양과 제공 사진/매뉴얼 간 SDI 출력 범위·수량 차이는 CONFLICTED 상태로 보존.
-- [x] Carbonite Ultra 제품 상세·카탈로그·Front/Rear 사진·업로드 문서 등록 및 focused test 3/3 통과. PDF SHA-256 확인 완료.
-- [ ] 최신 origin/main 통합 뒤 파생 파일 재생성, 전체 검사, 1280/390 브라우저 및 277쪽 PDF 렌더·다운로드 확인, PR/CI/병합/Pages 공개 확인.
+- 명세: `Work/작업/W-20261014-005.md` READY, PR #495 병합. 명세를 읽은 기준 commit `c30ddfbd`; 구현 브랜치 `codex/W-20261014-005-carbonite-ultra`, 별도 폴더 `codex-b`.
+- 사용자 승인: 2026-10-14 “이것도 추가” — Carbonite Ultra 및 전면·후면 사진/PDF 게시.
+- 입력 자료 SHA-256 확인: PDF `0527e3d4d02e60e634321ab7072505110510a35d7cc62f97ee1504340e319848`; Front `330778d4c551ca74e7f880dd6820c30fac399fdbec2e4b9884293d940a34a1f9`; Rear `ea814491f3812d2010d8438a583a5c3dae23b3ff95f849772e8d9c1bea5ee079`.
+- [x] 명세·입력 파일 확인. PDF.js 277쪽 `Ultra 9.2 User Manual`, Part 4841DR-110-09.2 확인. 전면 인쇄와 두 사진의 Carbonite Ultra 모델 일치 확인.
+- [x] Ross 공식 제품·사양 페이지와 매뉴얼 대조. SDI 출력 구성 차이를 `CONFLICTED`로 보존.
+- [x] 제품 카탈로그·상세·Front/Rear 사진·사용자 매뉴얼 업로드 등록, 검색·카탈로그 파생물 생성 및 Carbonite focused tests 통과.
+- [x] Port Map 16표식 사진 감사 및 REF IN/OUT 방향 교정. 자동 lint 0 경고. 전체 `node --test --test-concurrency=1 tests/*.test.mjs`: 692건 중 691 pass, 0 fail, 1 기존 skip.
+- [x] `verify-pages` 281 제품·278 상세·497 검토 이미지·142 업로드 PDF; 잠금 PDF 12건 유지. 검색 인덱스 `--check` 통과. 문구 검사 0 대상/0 제품.
+- [x] 로컬 1280px·390px 상세와 PDF.js 매뉴얼 `/ 277`·canvas 렌더 및 다운로드 SHA 확인. 공개 캡처·Pages 확인은 병합 후 진행.
+- [ ] 최신 `origin/main` 재확인·통합, 읽기용 카탈로그 포함 파생물 `--check`, 최종 diff 검사.
+- [ ] PR·필수 CI·병합·Pages 배포·공개 상세 1280/390 및 보기/다운로드 확인·캡처·최종 보고.
