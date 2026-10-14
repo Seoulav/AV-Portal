@@ -1067,6 +1067,14 @@ export const group1Images = {
     {"role":"Rear","file":"carbonite-ultra-rear.png","alt":"Ross Video Carbonite Ultra 후면. 색상별 MV OUTPUT, OUTPUT 3–12, INPUT 1–24와 전원·제어 단자","note":"Rear · 사용자 제공 사진 (2026-10-14)","provider":"사용자 제공","model":"Carbonite Ultra","officialSource":false,"verificationStatus":"VERIFIED","originalSize":"1600x800","resolution":"1600x800","publicationStatus":"사용자 제공 사진 · 2026-10-14"}
   ],
   'insta360-wave': [image('Main', 'insta360-wave-main.webp', 'Insta360 Wave 흰색 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
+  'toggle-dock-2x1': [
+    image('Main', 'toggle-dock-2x1-main.png', 'INOGENI TOGGLE DOCK 2×1 모델명이 인쇄된 본체 전면과 상단', 'INOGENI', 'TOGGLE DOCK 2×1', 'https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Perspective_Left-scaled.png', '2560x1593', '2560x1593', 'VERIFIED', 'Main · 공식 제품 페이지 원본, 본체 전면 TOGGLE DOCK 2×1 인쇄 확인'),
+    image('Diagram', 'toggle-dock-2x1-diagram.png', 'INOGENI TOGGLE DOCK 2×1 공식 연결도와 후면 단자', 'INOGENI', 'TOGGLE DOCK 2×1', 'https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png', '1024x631', '1024x631', 'VERIFIED', 'Diagram · 공식 제품 페이지 연결 그림, 후면 호스트·장치·제어 구획 확인')
+  ],
+  'u-bridge-3': [
+    image('Main', 'u-bridge-3-main.png', 'U-BRIDGE 3 PC HOST와 DEVICE 모듈 모델명 및 전면 USB 단자', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_PC-HOST-DEVICE_Perspective-Front_08-2024.png', '2560x1441', '2560x1441', 'VERIFIED', 'Main · 공식 제품 페이지 원본, 양 모듈 U-BRIDGE 3 인쇄 확인'),
+    image('Diagram', 'u-bridge-3-diagram.png', 'U-BRIDGE 3 PC HOST·DEVICE 두 모듈의 전후면 단자 연결도', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png', '1024x924', '1024x924', 'VERIFIED', 'Diagram · 공식 제품 페이지 양 모듈의 전면·후면 단자 그림')
+  ],
 };
 
 export function applyPublishedImages(product, slug) {
@@ -1360,4 +1368,6 @@ export const cardImages = {
   'insta360-wave-business': 'insta360-wave-business-main.webp',
   'insta360-wave': 'insta360-wave-main.webp',
   'carbonite-ultra': 'carbonite-ultra-front.png',
+  'toggle-dock-2x1': 'toggle-dock-2x1-main.png',
+  'u-bridge-3': 'u-bridge-3-main.png',
 };
