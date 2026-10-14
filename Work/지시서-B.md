@@ -421,3 +421,5 @@
 - [ ] 1280px·390px 화면 캡처와 탭형/정적 큰 카드 시각 비교 미완료. 현재 환경에서 브라우저 캡처 자동화가 사용자 Edge/PDF 세션에 연결되는 문제가 있어 재시도하지 않음. 공개 화면을 캡처해 육안 확인하기 전에는 PR 병합·배포 완료로 기록하지 않음.
 - [x] Draft PR [#505](https://github.com/Seoulav/AV-Portal/pull/505) 생성. 필수 `builder` CI 성공(run [38575384994](https://github.com/Seoulav/AV-Portal/actions/runs/38575384994)).
 - [ ] 1280px·390px 캡처 및 탭형/정적 큰 카드 시각 비교가 미완료라 병합·배포·공개 확인은 보류. 현재 CUA/브라우저 세션은 사용자 Edge PDF 창에 연결되는 이력이 있어 추가 시도하지 않음.
+- [x] 사용자 병합 순서에 따라 #506 병합(SHA `3e341e40e4cf7204dd5cb0393956764f9c4d4820`) 후 최신 main 통합. `beta/site/search-index.json` 충돌은 손으로 해소하지 않고 detail asset·검색 인덱스·공개 스냅샷 생성기로 재생성.
+- [x] #506 통합 후 전체 직렬 테스트 698건 중 697 통과·0 실패·기존 skip 1, `verify-pages`(281 항목·278 상세·142 업로드 PDF, 잠금 PDF 12건 유지), 검색 인덱스 `--check`, feature wording(대상 0), diff 검사 통과.
