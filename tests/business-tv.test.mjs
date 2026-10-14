@@ -11,6 +11,7 @@ import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
 import { beforeW014Catalog } from './w014-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
+import { beforeW13007BehhlGuideProduct } from './w13007-behhl-guide-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(value, slug), slug), slug), slug), slug);
 const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(value, slug), slug), slug), slug), slug);
 
@@ -63,7 +64,7 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
   assert.ok(product.images.some(image => image.role === 'Main' && image.resolution === '1920x1280'));
   assert.equal(product.images[0].verificationStatus, 'FOUND', 'gallery image has no printed model name');
   assert.equal(product.imageStatuses.find(item => item.role === 'Main').status, 'FOUND');
-  assert.equal(product.portMap, undefined);
+  assert.equal(beforeW13007BehhlGuideProduct(product, slug).portMap, undefined);
   assert.equal(product.signalFlow, undefined);
   const prepared = prepareProductDetail(product);
   assert.ok(visibleDetailCards(prepared).includes('gallery'));

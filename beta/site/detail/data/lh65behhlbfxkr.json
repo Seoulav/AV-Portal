@@ -13,7 +13,22 @@
   "verificationSummary": "2026-10-05 삼성전자 대한민국 비즈니스 LH65BEHHLBFXKR 공식 제품 페이지의 스펙 탭을 Chromium에서 직접 확인했다. BEHX-H 공용 설치가이드 BN68-26620A-01 2쪽 65인치 치수표와 제품 크기·무게를 대조하고 VESA 규격을 추가했다. RF 물리 단자 수와 디스플레이 면적은 확인되지 않아 만들지 않았다.",
   "packageStatus": "REVIEW REQUIRED",
   "overview": "LH65BEHHLBFXKR은 삼성전자 BEHX-H 비즈니스TV 65인치 모델이다. 공식 스펙 탭에서 4K 화면 해상도, ATSC 3.0 디지털 방송방식, HDMI 3개, 삼성 비즈니스TV 앱과 VXT Player 지원을 확인했다. 제품 크기는 1444.1 x 831.2 x 76.8 mm이며, 디스플레이 면적은 공식 페이지와 공용 설치가이드에 기재되지 않았다.",
-  "images": [],
+  "images": [
+    {
+      "role": "Diagram",
+      "file": "lh65behhlbfxkr-diagram.webp",
+      "alt": "LH65BEHHLBFXKR BEHX-H 공용 설치가이드 1쪽 연결 안내 범례",
+      "note": "Diagram · 사용자 제공 삼성전자 BN68-26620A-01 1쪽 BEHX-H 연결 안내 범례. 그림에는 HDMI(eARC) 1개와 일반 HDMI 1개, 합계 2개만 표시되지만 공식 사양은 HDMI 입력 3개이며 세 번째 위치는 미표기 · 실제 후면 전체 배치도가 아님",
+      "provider": "Samsung",
+      "model": "LH65BEHHLBFXKR",
+      "sourceUrl": "https://downloadcenter.samsung.com/content/EM/202607/20260708093125167/BN68-26620A-01_IG_BEHX-H_Basic_feet_43-85inch_WW_L10_260521.0.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1120x624",
+      "resolution": "1120x624",
+      "publicationStatus": "사용자 게시 승인 · 공식 설치가이드 발췌"
+    }
+  ],
   "imageStatuses": [
     {
       "role": "Main",
@@ -41,9 +56,8 @@
     },
     {
       "role": "Diagram",
-      "status": "MISSING",
-      "sourceUrl": "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH65BEHHLBFXKR/",
-      "reason": "공식 갤러리 정면 이미지 URL이 HTTP 404를 반환해 게시 불가"
+      "status": "VERIFIED",
+      "sourceUrl": "https://downloadcenter.samsung.com/content/EM/202607/20260708093125167/BN68-26620A-01_IG_BEHX-H_Basic_feet_43-85inch_WW_L10_260521.0.pdf"
     }
   ],
   "documents": [
@@ -405,14 +419,14 @@
     }
   ],
   "presentation": {
-    "galleryRightsBadge": "MISSING",
-    "galleryRights": "해당 모델을 특정할 수 있는 공개 제품 사진을 확보하지 못했습니다.",
+      "galleryRightsBadge": "사용자 게시 승인 · 범례 출처 기록",
+      "galleryRights": "설치가이드 범례는 출처와 모델 일치 확인. 정면 제품 사진은 미확보.",
     "specIntro": "값·조건·검증 상태를 함께 표시합니다.",
     "ioIntro": "공식 스펙의 연결 항목을 표시하며, 물리 단자 수가 미확인인 항목은 비웁니다.",
     "supplementalNote": "삼성전자 국내 공식 제품 페이지의 모델별 표기와 미기재 항목을 구분합니다.",
     "footerNote": "Samsung LH65BEHHLBFXKR 공식 페이지 기준",
-    "visualVariant": "missing-product-images",
-    "galleryFootNote": "모델별 사진 미확인"
+      "visualVariant": "official-product-images",
+      "galleryFootNote": "정면 사진 미확인 · 설치가이드 연결 안내 범례만 게시"
   },
   "lead": "**65인치 비즈니스TV** LH65BEHHLBFXKR은 BEHX-H 시리즈 모델이다. 4K 화면과 방송 수신, 삼성 비즈니스TV 앱·VXT Player 지원을 공식 스펙에서 확인했다.",
   "subtitle": "BEHX-H · 비즈니스TV",
@@ -437,5 +451,55 @@
       "value": "ATSC 3.0",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "lh65behhlbfxkr-diagram.webp",
+      "width": 1120,
+      "height": 624
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB",
+        "desc": "BEHX-H 설치가이드 1쪽 연결 안내 범례의 USB 표시",
+        "y1": 61,
+        "y2": 183,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "LAN",
+        "desc": "BEHX-H 설치가이드 1쪽 연결 안내 범례의 유선 LAN 표시",
+        "y1": 67,
+        "y2": 177,
+        "side": "right"
+      },
+      {
+        "n": 3,
+        "label": "HDMI (eARC)",
+        "desc": "설치가이드 범례의 HDMI(eARC) 표시 · 공식 사양 HDMI 입력은 총 3개이나 그림에는 2개만 표시되고 세 번째 위치는 미표기",
+        "y1": 242,
+        "y2": 364,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "ANT",
+        "desc": "BEHX-H 설치가이드 1쪽 연결 안내 범례의 안테나 표시 · 실제 RF 물리 단자 수는 미확정",
+        "y1": 267,
+        "y2": 348,
+        "side": "right"
+      },
+      {
+        "n": 5,
+        "label": "HDMI",
+        "desc": "설치가이드 범례의 일반 HDMI 표시 · 공식 사양 HDMI 입력 3개 중 이 범례에 없는 세 번째 단자 위치는 미표기",
+        "y1": 413,
+        "y2": 541,
+        "side": "left"
+      }
+    ]
+  }
 }
