@@ -100,17 +100,21 @@ export function validFlow(flow, product) {
   return list(flow.legend, 9, l => record(l) && keys(l, ['signal', 'label']) && signalKinds.includes(l.signal) && shortText(l.label)) && list(flow.notes, 12, shortText);
 }
 function validScreenExample(item) {
-  if (!record(item) || !keys(item, ['name', 'method', 'signal', 'signalType', 'signalWidth', 'signalHeight', 'outputWidth', 'outputHeight', 'activeWidth', 'activeHeight', 'masked', 'offsetX', 'offsetY', 'rightMargin', 'bottomMargin', 'areaLabel', 'note']) ||
-      !text(item.name) || !text(item.method) || !text(item.signal) || !Number.isInteger(item.activeWidth) || item.activeWidth <= 0 ||
-      !Number.isInteger(item.activeHeight) || item.activeHeight <= 0 || typeof item.masked !== 'boolean') return false;
+  if (!record(item) || !keys(item, ['name', 'method', 'signal', 'signalType', 'signalWidth', 'signalHeight', 'outputWidth', 'outputHeight', 'activeWidth', 'activeHeight', 'masked', 'offsetX', 'offsetY', 'rightMargin', 'bottomMargin', 'areaLabel', 'note', 'placementHint']) ||
+      !text(item.name) || !text(item.method) || !text(item.signal) || typeof item.masked !== 'boolean') return false;
   if (item.signalType === 'output') return item.masked === false && Number.isInteger(item.outputWidth) && item.outputWidth > 0 &&
     Number.isInteger(item.outputHeight) && item.outputHeight > 0 && item.activeWidth === item.outputWidth &&
     item.activeHeight === item.outputHeight && item.signal === `${item.outputWidth}×${item.outputHeight}` &&
     item.signalWidth === undefined && item.signalHeight === undefined && item.areaLabel === undefined &&
-    item.offsetX === undefined && item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined && item.note === undefined;
+    item.offsetX === undefined && item.offsetY === undefined && item.rightMargin === undefined && item.bottomMargin === undefined && item.note === undefined && item.placementHint === undefined;
   if (item.signalType !== 'fixed' || item.outputWidth !== undefined || item.outputHeight !== undefined ||
       !Number.isInteger(item.signalWidth) || item.signalWidth <= 0 || !Number.isInteger(item.signalHeight) || item.signalHeight <= 0 ||
       item.signal !== `${item.signalWidth}×${item.signalHeight}`) return false;
+  if (item.placementHint === 'illustrative-offset') return item.masked && text(item.areaLabel) && text(item.note) &&
+    item.activeWidth === undefined && item.activeHeight === undefined && item.offsetX === undefined && item.offsetY === undefined &&
+    item.rightMargin === undefined && item.bottomMargin === undefined;
+  if (item.placementHint !== undefined || !Number.isInteger(item.activeWidth) || item.activeWidth <= 0 ||
+      !Number.isInteger(item.activeHeight) || item.activeHeight <= 0) return false;
   if (item.masked) return Number.isInteger(item.offsetX) && item.offsetX >= 0 && Number.isInteger(item.offsetY) && item.offsetY >= 0 &&
     text(item.areaLabel) && Number.isInteger(item.rightMargin) && item.rightMargin >= 0 &&
     Number.isInteger(item.bottomMargin) && item.bottomMargin >= 0 &&

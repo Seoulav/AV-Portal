@@ -4764,7 +4764,10 @@
       "https://www.sdcompany.kr/"
     ],
     "slug": "emision-pixelfit",
-    "card_image": "emision-pixelfit-mask.png"
+    "card_image": "emision-pixelfit-mask.png",
+    "reference_link": [
+      "./manuals/emision-pixelfit-capture.pdf"
+    ]
   },
   {
     "brand": "Insta360",

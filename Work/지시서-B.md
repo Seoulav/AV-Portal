@@ -337,3 +337,15 @@
 - [x] 공개 상세 4종 모두 문서 카드에 보기 버튼·다운로드 링크 확인(각 2개: 헤더/문서 행). Connect에서 보기 버튼을 눌러 PDF.js 뷰어의 64쪽 canvas 렌더 확인; 다운로드 실파일 9,092,982 bytes, SHA-256 `c93167947683439df5da7f2e441f4c7d2d9e9f7e0b99c0014e01e04e6249102f` 일치. 파일 URL HTTP 200, `application/pdf`.
 - [x] 캡처 10장: `Work/기록/W-20261013-009-screens/` (4종 상세 + 제조사 칩, 각 1280px·390px).
 - #479는 W-009 뒤 세션 A가 통합해 `6beb63783c2d8114dc7966cbd80ef1e47d801428`로 병합했다. 현재 main에는 이어서 RTCOM 동기화 `f54a05f401fbb1a47de3b51c533f44d45dfb756d`도 포함된다.
+
+## W-20261013-004 PixelFit 사용자 제공 PDF 게시 + AOI 위치 교정 (2026-10-14)
+
+- 브랜치 `codex/W-20261014-pixelfit-docs-aoi`, 기준 main `84826c2ea88b070b4b591d07e85fe071e4fb3bc8`; 작업 위치 `codex-b`.
+- [x] 사용자 제공 `emision_PixelFit_Capture.pptx`를 PowerPoint로 PDF 변환. 원본 6장·PDF 6쪽, PDF 432,999 bytes, SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06`. 여섯 쪽을 시각 확인했으며 원본 PPTX는 커밋하지 않는다.
+- [x] `beta/site/manuals/emision-pixelfit-capture.pdf`를 PixelFit 참고자료로 등록하고 문서 보기·다운로드 액션 연결. Media Server 소개서와 다른 자료는 추가하지 않는다.
+- [x] NVIDIA·AMD 예시 모두 3840×2160 캔버스 안에 AOI를 표시. 캡처 수치 1295×780·1340×780은 보존하고 4K 기준 여백은 산술 계산. NVIDIA는 커스텀 해상도 제작, AMD·일반은 AOI 밖 마스킹+emision 작업표시줄로 구분.
+- [x] X·Y로 화면 안 어디든 AOI 지정 및 기준점 변경 가능을 사용자 확인(2026-10-14) 근거로 설명. 수치가 없는 위치 이동 카드는 “위치 지정 예시”로 표시하고 크기·좌표 수치를 만들지 않는다.
+- [x] 정적 카드 디자인을 유지하고 사이트·prototype renderer/validator를 함께 갱신. 새 PDF에 맞춰 `mirror-docs.mjs` 업로드 목록 생성이 기존 순서·잠금 상태를 보존하도록 수정. 관련 과거 테스트는 새 PixelFit 문서 한 행/파일만 되감는 함수 적용.
+- [x] PDF 6쪽, 1280px·390px 로컬 상세 캡처: `Work/기록/W-20261013-004-screens/pixelfit-document-local/`. CDP DOM에서 390px document/body 폭 390px, 화면 카드 3개 확인. PDF.js 뷰어에서 `/ 6` 및 첫 쪽 canvas 렌더 확인. 실제 다운로드 파일 432,999 bytes, SHA가 게시 예정 PDF와 일치.
+- [x] `node beta/build-search-index.mjs --check`, `node beta/build-readable-catalog.mjs --check`, `node beta/verify-pages.mjs` 통과(280 항목·277 상세·490 검토 이미지·140 사용자 업로드 PDF, 잠금 PDF 12건). 전체 직렬 테스트 663개 중 662 통과·실패 0·환경 의존 skip 1. PDF.js 선택 canvas/font polyfill 경고는 있었으나 관련 검증은 통과.
+- [ ] 변경 범위 최종 점검·커밋·PR·CI·병합·Pages 배포 후 공개 화면 1280px·390px, 문서 보기/다운로드, 동일 4K AOI 구도를 다시 확인한다.

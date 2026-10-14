@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir, mkdir, writeFile, rename, stat } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { identity, userManuals, userReferences } from './user-manuals.mjs';
 
 export const MAX_PDF_BYTES = 50 * 1024 * 1024;
 const active = new Set(['FOUND', 'VERIFIED', 'READY']);
@@ -74,6 +75,28 @@ async function readJson(file, fallback) {
   catch (error) { if (error.code === 'ENOENT') return fallback; throw error; }
 }
 
+export function collectUploads(catalog, existingUploads = []) {
+  const sourceByIdentity = new Map([...userManuals, ...userReferences].map(entry => [identity(entry.brand, entry.product), entry]));
+  const uploads = existingUploads.map(entry => ({ ...entry }));
+  const existingKeys = new Set(uploads.map(entry => [entry.slug, entry.file, entry.kind].join('|')));
+  for (const item of catalog) {
+    if (!item.slug) continue;
+    for (const [kind, url] of [['manual', item.manual_link], ...((item.reference_link ?? []).map(link => ['reference', link]))]) {
+      if (typeof url !== 'string' || !/^\.\/manuals\/[a-z0-9-]+\.pdf$/.test(url)) continue;
+      const file = url.slice(2);
+      const key = [item.slug, file, kind].join('|');
+      if (existingKeys.has(key)) continue;
+      const source = sourceByIdentity.get(identity(item.brand, item.product));
+      uploads.push({
+        slug: item.slug, file, kind,
+        title: source?.file === file.slice('manuals/'.length) ? source.title : kind === 'manual' ? '사용자 업로드 매뉴얼' : '사용자 업로드 참고자료'
+      });
+      existingKeys.add(key);
+    }
+  }
+  return uploads;
+}
+
 export async function runMirror({ root = fileURLToPath(new URL('../', import.meta.url)), fetcher = fetch, concurrency = 10 } = {}) {
   const detailDir = join(root, 'beta/site/detail/data');
   const docsDir = join(root, 'beta/site/docs');
@@ -85,14 +108,7 @@ export async function runMirror({ root = fileURLToPath(new URL('../', import.met
   })));
   const candidates = collectCandidates(rows);
   const catalog = await readJson(join(root, 'beta/site/catalog.json'), []);
-  const uploads = [];
-  for (const item of catalog) {
-    if (!item.slug) continue;
-    for (const [kind, url] of [['manual', item.manual_link], ...((item.reference_link ?? []).map(link => ['reference', link]))]) {
-      if (typeof url !== 'string' || !/^\.\/manuals\/[a-z0-9-]+\.pdf$/.test(url)) continue;
-      uploads.push({ slug: item.slug, file: url.slice(2), kind, title: kind === 'manual' ? '사용자 업로드 매뉴얼' : '사용자 업로드 참고자료' });
-    }
-  }
+  const uploads = collectUploads(catalog, old.uploads);
   const results = new Array(candidates.length);
   let next = 0, finished = 0;
   async function worker() {
@@ -109,7 +125,6 @@ export async function runMirror({ root = fileURLToPath(new URL('../', import.met
   const knownUrls = new Set(candidates.map(item => item.url));
   for (const oldEntry of old.mirrors) if (!knownUrls.has(oldEntry.url) && await goodExisting(oldEntry, docsDir)) mirrors.push(oldEntry);
   mirrors.sort((a, b) => a.url.localeCompare(b.url));
-  uploads.sort((a, b) => a.slug.localeCompare(b.slug) || a.file.localeCompare(b.file));
   await mkdir(docsDir, { recursive: true });
   await writeFile(manifestFile, JSON.stringify({ mirrors, uploads }, null, 2) + '\n');
   const report = { checked: candidates.length, copied: mirrors.length, bytes: mirrors.reduce((sum, item) => sum + item.bytes, 0), exclusions };
