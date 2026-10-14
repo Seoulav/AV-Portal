@@ -13,7 +13,10 @@
 - [x] 번호·지시선 다섯 개를 대표 1280px와 390px 좌우 스크롤 캡처로 눈 확인했다. 로컬 브라우저 오류·문서 가로 넘침 없음.
 - [ ] 대표 1280px·390px 공개 캡처.
 - [x] 전체 직렬 검사 659건(658 pass·0 fail·기존 skip 1), 검색 인덱스 `--check`, Pages 검증(280장비·277상세·490 WebP·139 uploads)을 통과했다.
-- [ ] 최신 main 통합·파생 재생성·재검증, PR, CI, 병합, Pages 배포, 공개 확인.
+- [x] 최신 main `7db7b99d23fc0e948676728fff455acfadeaab3e`의 RTCOM 동기화 변경을 통합했다. 검색 인덱스 충돌은 통합 원본에서 재생성하여 해소했다.
+- [x] 통합 후 전체 직렬 검사 659건(658 pass·0 fail·기존 skip 1), 검색 인덱스 `--check`, RTCOM 동기화 `--check`(32/32), Pages 검증(280장비·277상세·490 WebP·139 uploads), `git diff --check origin/main...HEAD`를 통과했다.
+- [x] Work가 현재 #449와 파일이 겹치지 않으며 이 PR을 CI 통과 후 먼저 병합해도 된다고 확인했다.
+- [ ] PR, CI, 병합, Pages 배포, 공개 확인.
 
 [지도 근거표](기록/W-20261013-007-C-BEHHL-지도-근거표.md) · [Work 인계](기록/W-20261013-007-C-BEHHL-지도-Work-인계.md)
 
