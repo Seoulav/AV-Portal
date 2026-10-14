@@ -173,7 +173,135 @@ export const wrapFlowText = (text, width) => {
   if (line) lines.push(line);
   return lines;
 };
+// HDF-CCF cable scenario renderer start
+let sequence = 0;
+const line = (parent, x1, y1, x2, y2, cls, marker) => {
+  const attrs = { d: 'M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2, class: cls };
+  if (marker) attrs['marker-end'] = 'url(#' + marker + ')';
+  parent.append(svgNode('path', attrs));
+};
+const text = (parent, x, y, value, cls, anchor = 'middle') =>
+  parent.append(svgNode('text', { x, y, class: cls, 'text-anchor': anchor }, value));
+const monitor = (svg, x, title) => {
+  svg.append(svgNode('rect', { x, y: 94, width: 108, height: 68, rx: 7, class: 'cable-flow-screen' }));
+  svg.append(svgNode('rect', { x: x + 8, y: 103, width: 92, height: 49, rx: 3, class: 'cable-flow-screen-inner' }));
+  line(svg, x + 54, 162, x + 54, 174, 'cable-flow-device-stroke');
+  line(svg, x + 31, 174, x + 77, 174, 'cable-flow-device-stroke');
+  text(svg, x + 54, 193, title, 'cable-flow-device-label');
+};
+const laptop = svg => {
+  svg.append(svgNode('rect', { x: 28, y: 101, width: 112, height: 61, rx: 5, class: 'cable-flow-laptop' }));
+  svg.append(svgNode('rect', { x: 35, y: 108, width: 98, height: 47, rx: 2, class: 'cable-flow-laptop-screen' }));
+  svg.append(svgNode('path', { d: 'M21 163 H147 L137 173 H31 Z', class: 'cable-flow-laptop-base' }));
+  text(svg, 84, 192, '노트북 · USB-C', 'cable-flow-device-label');
+};
+const connector = (svg, x, role, caption) => {
+  svg.append(svgNode('rect', { x, y: 102, width: 130, height: 74, rx: 12, class: 'cable-flow-connector' }));
+  svg.append(svgNode('rect', { x: x + 47, y: 114, width: 36, height: 16, rx: 8, class: 'cable-flow-usbc-port' }));
+  text(svg, x + 65, 153, role, 'cable-flow-connector-role');
+  text(svg, x + 65, 169, 'USB-C', 'cable-flow-connector-type');
+  text(svg, x + 65, 91, caption, 'cable-flow-role-caption');
+};
+const hub = (svg, scenario) => {
+  svg.append(svgNode('rect', { x: 810, y: 102, width: 142, height: 74, rx: 12, class: 'cable-flow-hub' }));
+  for (const x of [838, 868, 898]) svg.append(svgNode('rect', { x, y: 116, width: 17, height: 10, rx: 2, class: 'cable-flow-hub-port' }));
+  svg.append(svgNode('rect', { x: 842, y: 137, width: 38, height: 13, rx: 2, class: 'cable-flow-hdmi-port' }));
+  text(svg, 881, 166, 'USB-C 허브/스위치', 'cable-flow-device-label');
+  text(svg, 881, 91, '외부 장비 예시', 'cable-flow-role-caption');
+  line(svg, 952, 138, 1003, 138, 'cable-flow-signal-line', null);
+  text(svg, 978, 118, scenario.outputLabel, 'cable-flow-hdmi-label');
+  monitor(svg, 1005, scenario.displayLabel);
+  text(svg, 881, 207, 'USB: ' + scenario.peripherals.join(' · '), 'cable-flow-peripherals');
+};
+function graphic(scenario, model) {
+  const uid = 'cable-scenario-' + (++sequence);
+  const svg = svgNode('svg', { class: 'cable-flow-svg', viewBox: '0 0 1120 250', role: 'img',
+    'aria-label': scenario.title + ' · ' + scenario.signalLabel + ' · ' + scenario.powerLabel });
+  svg.append(svgNode('title', {}, model + ' ' + scenario.title));
+  const defs = svgNode('defs');
+  for (const [suffix, color] of [['arrow-right', '#2470ce'], ['arrow-left', '#e87925']]) {
+    const marker = svgNode('marker', { id: uid + '-' + suffix, markerWidth: 11, markerHeight: 11,
+      refX: 9, refY: 5.5, orient: 'auto', markerUnits: 'userSpaceOnUse' });
+    marker.append(svgNode('path', { d: 'M0 0 L10 5.5 L0 11 Z', fill: color }));
+    defs.append(marker);
+  }
+  svg.append(defs);
+  laptop(svg);
+  connector(svg, 175, 'SOURCE', '노트북 쪽');
+  connector(svg, 670, 'DISPLAY', scenario.receiver === 'hub' ? '허브 쪽' : '모니터 쪽');
+  line(svg, 147, 138, 174, 138, 'cable-flow-signal-line', null);
+  line(svg, 305, 138, 310, 138, 'cable-flow-signal-line', null);
+  line(svg, 310, 138, 670, 138, 'cable-flow-signal-line', uid + '-arrow-right');
+  line(svg, 310, 138, 670, 138, 'cable-flow-signal-motion', null);
+  line(svg, 670, 160, 310, 160, 'cable-flow-power-line', uid + '-arrow-left');
+  svg.append(svgNode('rect', { x: 367, y: 57, width: 246, height: 51, rx: 25, class: 'cable-flow-pill' }));
+  const [hybrid, functions] = scenario.cableLabel.split(' · ');
+  text(svg, 490, 77, hybrid, 'cable-flow-pill-main');
+  text(svg, 490, 96, functions || '', 'cable-flow-pill-sub');
+  text(svg, 490, 127, 'AOC · SOURCE → DISPLAY', 'cable-flow-cable-caption');
+  if (scenario.receiver === 'hub') hub(svg, scenario);
+  else {
+    line(svg, 800, 138, 916, 138, 'cable-flow-signal-line', null);
+    monitor(svg, 920, scenario.displayLabel);
+  }
+  text(svg, 490, 222, scenario.signalLabel, 'cable-flow-signal-caption');
+  text(svg, 490, 242, scenario.powerLabel, 'cable-flow-power-caption');
+  return svg;
+}
+export function renderCableScenarioFlow(flow, model) {
+  const host = el('div', 'signal-flow cable-flow');
+  host.dataset.flowType = flow.type;
+  const figures = [];
+  for (const scenario of flow.scenarios) {
+    const article = el('article', 'cable-flow-scenario');
+    article.append(el('h3', 'cable-flow-title', scenario.title), el('p', 'cable-flow-mode', scenario.mode));
+    const scroll = el('div', 'cable-flow-scroll');
+    scroll.tabIndex = 0;
+    scroll.setAttribute('role', 'region');
+    scroll.setAttribute('aria-label', scenario.title + ' 그림 · 좌우 방향키로 이동');
+    const picture = graphic(scenario, model);
+    scroll.append(picture);
+    const direction = el('p', 'cable-flow-direction');
+    direction.append(el('span', 'cable-flow-direction-signal', '→ ' + scenario.signalLabel),
+      el('span', 'cable-flow-direction-power', '← ' + scenario.powerLabel));
+    article.append(scroll, el('p', 'cable-flow-scroll-hint', '↔ 좌우로 움직여 전체 경로를 확인하세요'), direction);
+    if (scenario.receiver === 'hub') article.append(el('p', 'cable-flow-extra', scenario.receiverLabel + ' → ' + scenario.outputLabel + ' → ' + scenario.displayLabel + ' · USB 주변기기: ' + scenario.peripherals.join(' · ')));
+    figures.push(picture);
+    host.append(article);
+  }
+  const legend = el('div', 'cable-flow-legend');
+  for (const [cls, label] of [['source', '입력 · SOURCE'], ['signal', '영상·USB →'], ['power', '← PD 전원'], ['display', '출력 · DISPLAY']]) {
+    const item = el('span', 'cable-flow-legend-item');
+    item.append(el('i', 'cable-flow-swatch cable-flow-swatch-' + cls), document.createTextNode(label));
+    legend.append(item);
+  }
+  host.append(legend);
+  const details = el('details', 'pg-inline-more cable-flow-description');
+  details.append(el('summary', '', '그림 설명'), el('p', '', flow.description));
+  for (const scenario of flow.scenarios) {
+    details.append(el('h4', '', scenario.title));
+    const steps = el('ol');
+    for (const step of scenario.steps) steps.append(el('li', '', step));
+    details.append(steps);
+  }
+  host.append(details, el('p', 'cable-flow-footer', flow.notes.join(' ')));
+  const zoom = el('button', 'pg-btn cable-flow-zoom', '크게 보기');
+  zoom.type = 'button';
+  const dialog = el('dialog', 'cable-flow-dialog');
+  dialog.setAttribute('aria-label', model + ' 시그널 플로우 크게 보기');
+  const close = el('button', 'pg-btn cable-flow-close', '닫기');
+  close.type = 'button';
+  close.addEventListener('click', () => dialog.close());
+  dialog.append(close);
+  for (const figure of figures) dialog.append(figure.cloneNode(true));
+  zoom.addEventListener('click', () => dialog.showModal());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  host.append(zoom, dialog);
+  return host;
+}
+// HDF-CCF cable scenario renderer end
 export function renderSignalFlow(flow, model) {
+  if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);
   const host=el('div','signal-flow');host.dataset.flowType=flow.type;
   const frame=el('div','flow-frame'),scroll=el('div','flow-scroll');scroll.tabIndex=0;
   scroll.setAttribute('role','region');scroll.setAttribute('aria-label',`${model} 신호 흐름 그림 · 좌우 방향키로 이동`);

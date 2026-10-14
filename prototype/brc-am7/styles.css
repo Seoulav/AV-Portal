@@ -361,3 +361,60 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .layer-table-scroll td:last-child { min-width: 220px; }
 .layer-table-scroll .layer-current { background: var(--pg-accent-tint); outline: 2px solid var(--pg-accent); outline-offset: -2px; }
 .layer-table-scroll .layer-current th { color: var(--pg-accent-2); }
+
+/* HDF-CCF cable scenarios. Existing signal-flow layout uses its own classes. */
+.cable-flow { display: grid; gap: 14px; }
+.cable-flow-scenario { min-width: 0; padding: 16px; border: 1px solid #d9e4f2; border-radius: 16px; background: #fbfdff; }
+.cable-flow-title { margin: 0 0 4px; color: #173655; font-size: 16px; }
+.cable-flow-mode { margin: 0 0 10px; color: #4a6078; font-size: 13px; }
+.cable-flow-scroll { overflow-x: auto; border-radius: 10px; background: #fff; scrollbar-width: thin; }
+.cable-flow-scroll-hint { margin: 6px 0 0; color: #50647f; font-size: 12px; }
+.cable-flow-direction { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.cable-flow-direction-signal { color: #1d5eaa; font-weight: 700; }
+.cable-flow-direction-power { color: #bb5b0c; font-weight: 700; }
+.cable-flow-scroll:focus-visible { outline: 3px solid #2470ce; outline-offset: 2px; }
+.signal-flow .cable-flow-svg { display: block; width: 100%; height: auto; max-width: none; }
+@media (max-width: 700px) { .signal-flow .cable-flow-scroll .cable-flow-svg { width: 1120px; } }
+.cable-flow-svg text { font-family: Pretendard, sans-serif; }
+.cable-flow-laptop, .cable-flow-connector, .cable-flow-hub, .cable-flow-screen { fill: #f1f6fc; stroke: #8eacca; stroke-width: 2; }
+.cable-flow-laptop-screen, .cable-flow-screen-inner { fill: #d8eafe; }
+.cable-flow-laptop-base { fill: #c5d7ec; stroke: #8eacca; stroke-width: 1.5; }
+.cable-flow-device-stroke { stroke: #8eacca; stroke-width: 3; }
+.cable-flow-usbc-port { fill: #233e5c; stroke: #6699cd; stroke-width: 1.5; }
+.cable-flow-hub-port { fill: #40658d; }
+.cable-flow-hdmi-port { fill: #2c4a6a; }
+.cable-flow-device-label, .cable-flow-connector-role { fill: #213f61; font-size: 14px; font-weight: 700; }
+.cable-flow-connector-type, .cable-flow-role-caption, .cable-flow-cable-caption { fill: #49637c; font-size: 11px; }
+.cable-flow-hdmi-label { fill: #2470ce; font-size: 11px; font-weight: 700; }
+.cable-flow-peripherals { fill: #5b6e81; font-size: 11px; }
+.cable-flow-signal-line { fill: none; stroke: #2470ce; stroke-width: 4; stroke-linecap: round; }
+.cable-flow-signal-motion { fill: none; stroke: #92c8ff; stroke-width: 2; stroke-dasharray: 10 18; animation: cable-flow-forward 3s linear infinite; }
+.cable-flow-power-line { fill: none; stroke: #e87925; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 9 7; animation: cable-flow-backward 2.5s linear infinite; }
+.cable-flow-pill { fill: #eaf4ff; stroke: #8ebde9; }
+.cable-flow-pill-main { fill: #164b80; font-size: 13px; font-weight: 700; }
+.cable-flow-pill-sub { fill: #476784; font-size: 11px; }
+.cable-flow-signal-caption { fill: #1c65b3; font-size: 12px; font-weight: 700; }
+.cable-flow-power-caption { fill: #b85c13; font-size: 12px; font-weight: 700; }
+.cable-flow-direction { margin: 7px 0 0; color: #294e71; font-size: 12px; line-height: 1.5; }
+.cable-flow-footer { margin: 0; color: #4a6078; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.cable-flow-extra { margin: 9px 0 0; color: #49637c; font-size: 12px; line-height: 1.5; }
+.cable-flow-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 10px 0; border-top: 1px solid #e5eaf1; color: #465d75; font-size: 13px; }
+.cable-flow-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.cable-flow-swatch { display: inline-block; width: 18px; height: 4px; border-radius: 2px; }
+.cable-flow-swatch-source { background: #86a6c8; }
+.cable-flow-swatch-signal { background: #2470ce; }
+.cable-flow-swatch-power { background: #e87925; }
+.cable-flow-swatch-display { background: #8eacca; }
+.cable-flow-description h4 { margin: 12px 0 5px; font-size: 13px; }
+.cable-flow-description ol { margin: 4px 0 12px 24px; padding: 0; font-size: 13px; line-height: 1.6; }
+.cable-flow-description li { margin: 3px 0; }
+.cable-flow-zoom { justify-self: start; }
+.cable-flow-dialog { width: min(96vw, 1180px); max-width: 96vw; max-height: 92vh; padding: 16px; border: 1px solid #c4d5e8; border-radius: 16px; overflow: auto; background: #fff; }
+.cable-flow-dialog::backdrop { background: rgb(20 39 62 / 72%); }
+.cable-flow-dialog .cable-flow-svg { width: 1120px; margin: 12px auto 20px; }
+.cable-flow-close { display: block; margin-left: auto; }
+@keyframes cable-flow-forward { to { stroke-dashoffset: -28; } }
+@keyframes cable-flow-backward { to { stroke-dashoffset: 16; } }
+@media (prefers-reduced-motion: reduce) {
+  .cable-flow-signal-motion, .cable-flow-power-line { animation: none; }
+}

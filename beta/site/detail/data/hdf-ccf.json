@@ -304,5 +304,433 @@
     "footerNote": "HDCVT HDF-CCF 공식 제품 페이지 및 사용자 제공 매뉴얼 V1.1 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "signalFlow": {
+    "type": "extender",
+    "layout": "cable-scenarios",
+    "description": "두 시나리오는 매뉴얼의 연결 예시입니다. 허브/스위치는 이 제품에 포함되지 않는 외부 장비이며 표시 경로는 고정 결선이 아닙니다.",
+    "inputs": [
+      {
+        "id": "direct-source",
+        "label": "노트북",
+        "signal": "video",
+        "caption": "USB-C · SOURCE",
+        "group": "direct",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "id": "hub-source",
+        "label": "노트북",
+        "signal": "video",
+        "caption": "USB-C · SOURCE",
+        "group": "hub",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "direct-display",
+        "label": "TV/모니터",
+        "signal": "video",
+        "caption": "DISPLAY 쪽",
+        "group": "direct",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "id": "hub-display",
+        "label": "Type-C 허브/프레젠테이션 스위치",
+        "signal": "video",
+        "caption": "DISPLAY 쪽",
+        "group": "hub",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "id": "direct-cable",
+        "kind": "bridge",
+        "label": "HDF-CCF",
+        "caption": "광+구리 USB-C AOC",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 2
+          }
+        ]
+      },
+      {
+        "id": "hub-cable",
+        "kind": "bridge",
+        "label": "HDF-CCF",
+        "caption": "광+구리 USB-C AOC",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 2
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "direct-source",
+        "to": "direct-cable",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "direct-cable",
+        "to": "direct-display",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "direct-source",
+        "to": "direct-cable",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "direct-cable",
+        "to": "direct-display",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "hub-source",
+        "to": "hub-cable",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "hub-cable",
+        "to": "hub-display",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "hub-source",
+        "to": "hub-cable",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "from": "hub-cable",
+        "to": "hub-display",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      }
+    ],
+    "auxiliary": [],
+    "groups": [
+      {
+        "id": "direct",
+        "label": "시나리오 1 · 직결",
+        "caption": "4-lane DP 1.4 + USB 2.0",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "id": "hub",
+        "label": "시나리오 2 · 허브 연동",
+        "caption": "2-lane DP 1.4 + USB 3.2 10G",
+        "evidence": [
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상·데이터 SOURCE → DISPLAY"
+      },
+      {
+        "signal": "power",
+        "label": "전원 PD DISPLAY → SOURCE"
+      }
+    ],
+    "notes": [
+      "SOURCE는 소스 기기(노트북), DISPLAY는 디스플레이·허브 쪽 · 방향 바꿔 꽂지 않기.",
+      "길이 옵션 5m / 10m / 15m. PD 출력 수치는 사양의 CONFLICTED 두 표기(본문 100W / 길이별 90W·85W)를 확인."
+    ],
+    "scenarios": [
+      {
+        "id": "direct",
+        "title": "시나리오 1 · 직결",
+        "mode": "4-lane DP 1.4 + USB 2.0",
+        "source": "direct-source",
+        "cable": "direct-cable",
+        "sink": "direct-display",
+        "receiver": "monitor",
+        "receiverLabel": "TV/모니터",
+        "displayLabel": "TV/모니터",
+        "outputLabel": "USB-C DP Alt",
+        "peripherals": [],
+        "cableLabel": "광+구리 하이브리드 · 영상+USB+PD",
+        "signalLabel": "영상·USB 신호 SOURCE → DISPLAY",
+        "powerLabel": "PD 역공급 DISPLAY → SOURCE",
+        "powerDirection": "reverse",
+        "steps": [
+          "노트북 USB-C를 케이블 SOURCE 단자에 연결",
+          "케이블 DISPLAY 단자를 TV/모니터에 연결",
+          "DP 1.4 영상·USB 2.0은 SOURCE → DISPLAY, 모니터 PD는 DISPLAY → SOURCE"
+        ],
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "id": "hub",
+        "title": "시나리오 2 · 허브 연동",
+        "mode": "2-lane DP 1.4 + USB 3.2 10G",
+        "source": "hub-source",
+        "cable": "hub-cable",
+        "sink": "hub-display",
+        "receiver": "hub",
+        "receiverLabel": "Type-C 허브/프레젠테이션 스위치",
+        "displayLabel": "TV/모니터",
+        "outputLabel": "HDMI 출력",
+        "peripherals": [
+          "키보드",
+          "마우스",
+          "USB 드라이브",
+          "외장 HDD"
+        ],
+        "cableLabel": "광+구리 하이브리드 · 영상+USB+PD",
+        "signalLabel": "영상·USB 신호 SOURCE → DISPLAY",
+        "powerLabel": "PD 역공급 DISPLAY → SOURCE",
+        "powerDirection": "reverse",
+        "steps": [
+          "노트북 USB-C를 케이블 SOURCE 단자에 연결",
+          "케이블 DISPLAY 단자를 외부 허브/프레젠테이션 스위치에 연결",
+          "허브의 HDMI 출력을 TV/모니터에 연결하고 USB 주변기기를 허브에 연결",
+          "영상·USB는 SOURCE → DISPLAY, 허브의 PD 전원은 DISPLAY → SOURCE"
+        ],
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "pdf",
+            "source": "M",
+            "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+            "page": 6
+          }
+        ]
+      }
+    ]
   }
 }
