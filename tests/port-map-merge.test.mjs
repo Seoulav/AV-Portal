@@ -55,7 +55,9 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261013-007 maps two video walls and six U800F hotel TVs; totals stay fixed.
   // W-20261013-007 adds rear maps for two WMFX panels; the products are unchanged.
   // W-009 adds four products with I/O and no rear maps; all remain in the fallback.
-  assert.deepEqual(counts, { mapIo: 143, ioOnly: 107, neither: 21 });
+  // W-20261014-001 moves five evidenced Logitech products to maps; the Mic
+  // Pod extension cable retains its I/O fallback pending connector evidence.
+  assert.deepEqual(counts, { mapIo: 148, ioOnly: 102, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {
