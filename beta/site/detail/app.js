@@ -9,6 +9,7 @@ import { distributorLinkFor } from '../shared/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../shared/brand-links.mjs';
 import { mountRtcomProductView } from './rtcom-embed.mjs?v=w20261013-002';
 import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
+import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -225,11 +226,14 @@ if (!productKey) {
   $('#key-specs').hidden = !$('#key-specs').children.length;
 
   let selectedImage = 0;
+  let showFrontPoints = false;
   let zoomOpener = null;
   const imageBase = data.presentation.imageBase ?? './images/';
   const featured = $('#featured-image');
   const dialog = $('#image-dialog');
   const galleryBasis = $('#gallery-basis');
+  const frontPoints = frontConnectionPointsFor(data);
+  const frontImageIndex = data.images.findIndex(image => image.file === frontPoints?.measuredImage.file);
   const maps = enhancements.portMaps.length ? enhancements.portMaps : enhancements.portMap ? [enhancements.portMap] : [];
   const mapForImage = image => maps.find(map => map.imageFile
     ? map.imageFile === image?.file : map.image === image?.role);
@@ -237,10 +241,33 @@ if (!productKey) {
     galleryBasis.textContent = '— 입출력 표 기준';
     galleryBasis.hidden = false;
   }
-  function selectImage(index) {
+  function paintFrontPoints(layer, image) {
+    layer.replaceChildren();
+    if (!showFrontPoints || !frontPoints || !image.complete ||
+        image.naturalWidth !== frontPoints.measuredImage.width ||
+        image.naturalHeight !== frontPoints.measuredImage.height) return;
+    const imageRect = image.getBoundingClientRect();
+    const parentRect = layer.parentElement.getBoundingClientRect();
+    layer.style.left = `${imageRect.left - parentRect.left}px`;
+    layer.style.top = `${imageRect.top - parentRect.top}px`;
+    layer.style.width = `${imageRect.width}px`;
+    layer.style.height = `${imageRect.height}px`;
+    for (const item of frontPoints.items) {
+      const percent = frontPointPercent(item, frontPoints.measuredImage);
+      const box = element('div', 'front-point');
+      box.style.left = `${percent.left}%`;
+      box.style.top = `${percent.top}%`;
+      box.style.width = `${percent.right - percent.left}%`;
+      box.style.height = `${percent.bottom - percent.top}%`;
+      box.append(element('span', 'front-point-label', item.label));
+      layer.append(box);
+    }
+  }
+  function selectImage(index, frontMode = false) {
     const image = data.images[index];
     if (!image) return;
     selectedImage = index;
+    showFrontPoints = frontMode && index === frontImageIndex;
     $('#port-map-layer').replaceChildren();
     $('#port-map-list').hidden = true;
     featured.src = imageBase + image.file;
@@ -248,10 +275,14 @@ if (!productKey) {
     featured.hidden = false;
     $('#image-missing').hidden = true;
     $('#zoom-button').disabled = false;
-    $('#image-role').textContent = image.role ?? '';
+    $('#image-role').textContent = showFrontPoints ? '정면 연결 지점' : image.role ?? '';
     const selectedMap = mapForImage(image);
-    $('#image-caption').textContent = [selectedMap?.title, image.note || image.alt, selectedMap?.note].filter(Boolean).join(' · ');
-    for (const [position, button] of [...$('#thumbnails').children].entries()) button.setAttribute('aria-pressed', String(position === index));
+    $('#image-caption').textContent = showFrontPoints ? '후면 연결 구역을 정면 기준으로 환산' :
+      [selectedMap?.title, image.note || image.alt, selectedMap?.note].filter(Boolean).join(' · ');
+    $('#front-points-note').hidden = !showFrontPoints;
+    for (const [position, button] of [...$('#thumbnails').children].entries()) {
+      button.setAttribute('aria-pressed', String(showFrontPoints ? position === data.images.length : position === index));
+    }
     updatePortMap();
   }
   function updatePortMap() {
@@ -262,10 +293,21 @@ if (!productKey) {
     $('#port-map-list').replaceChildren();
     $('#port-map-list').hidden = true;
     const scroll = $('.port-photo-scroll'), photoStage = featured.parentElement;
+    $('#front-points-layer').replaceChildren();
+    if (showFrontPoints) {
+      photoStage.classList.remove('map-active');
+      paintFrontPoints($('#front-points-layer'), featured);
+      galleryBasis.textContent = '— 삼성 공식 후면 사진 기준';
+      galleryBasis.hidden = false;
+      scroll.tabIndex = -1;
+      $('#port-map-scroll-hint').hidden = true;
+      return;
+    }
     const matches = map && data.images[selectedImage]?.role === map.image && featured.complete && featured.naturalWidth && !featured.hidden && portMapImageMatches(data.images[selectedImage], featured.naturalWidth, featured.naturalHeight, map);
     photoStage.classList.toggle('map-active', Boolean(matches));
     if (!matches) {
       if (map) galleryBasis.hidden = true;
+      else if (frontPoints && data.io.length) { galleryBasis.textContent = '— 입출력 표 기준'; galleryBasis.hidden = false; }
       scroll.tabIndex = -1;
       $('#port-map-scroll-hint').hidden = true;
       return;
@@ -288,11 +330,15 @@ if (!productKey) {
     scroll.scrollLeft = event.key === 'Home' ? 0 : event.key === 'End' ? scroll.scrollWidth : scroll.scrollLeft + (event.key === 'ArrowRight' ? 160 : -160);
   });
   featured.addEventListener('load', updatePortMap);
-  window.addEventListener('resize', updatePortMap);
+  window.addEventListener('resize', () => {
+    updatePortMap();
+    if (dialog.open) paintFrontPoints($('#dialog-front-points-layer'), $('#dialog-image'));
+  });
   featured.addEventListener('error', () => {
     if (enhancements.portMap) galleryBasis.hidden = true;
     $('#port-map-loupe').hidden = true;
     $('#port-map-layer').replaceChildren(); $('#port-map-list').hidden = true;
+    $('#front-points-layer').replaceChildren();
     featured.hidden = true;
     $('#image-missing').hidden = false;
     $('#zoom-button').disabled = true;
@@ -304,7 +350,14 @@ if (!productKey) {
     button.addEventListener('click', () => selectImage(index));
     $('#thumbnails').append(button);
   }
-  $('#thumbnails').hidden = data.images.length < 2;
+  if (frontPoints && frontImageIndex >= 0) {
+    const button = element('button', '', '정면 연결 지점');
+    button.type = 'button';
+    button.setAttribute('aria-pressed', 'false');
+    button.addEventListener('click', () => selectImage(frontImageIndex, true));
+    $('#thumbnails').append(button);
+  }
+  $('#thumbnails').hidden = $('#thumbnails').children.length < 2;
   if (data.images.length) selectImage(maps.length ? data.images.findIndex(i => mapForImage(i)) : 0);
   else { $('#image-missing').hidden = false; $('#zoom-button').disabled = true; }
   $('#zoom-button').addEventListener('click', () => {
@@ -312,13 +365,20 @@ if (!productKey) {
     zoomOpener = $('#zoom-button');
     $('#dialog-image').src = featured.src;
     $('#dialog-image').alt = featured.alt;
-    $('#dialog-role').textContent = data.images[selectedImage].role ?? '';
+    $('#dialog-role').textContent = showFrontPoints ? '정면 연결 지점' : data.images[selectedImage].role ?? '';
     dialog.showModal();
+    requestAnimationFrame(() => paintFrontPoints($('#dialog-front-points-layer'), $('#dialog-image')));
     $('#dialog-close').focus();
+  });
+  $('#dialog-image').addEventListener('load', () => {
+    if (dialog.open) paintFrontPoints($('#dialog-front-points-layer'), $('#dialog-image'));
   });
   $('#dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-  dialog.addEventListener('close', () => zoomOpener?.focus());
+  dialog.addEventListener('close', () => {
+    $('#dialog-front-points-layer').replaceChildren();
+    zoomOpener?.focus();
+  });
   const LOUPE_SIZE = 216, LOUPE_ZOOM = 3;
   function attachLoupe(wrap, loupe, currentImage) {
     wrap.addEventListener('pointermove', event => {
