@@ -1262,7 +1262,7 @@
       "io": 8
     },
     "rally-bar": {
-      "sha256": "1A72C3ADFD7F6D83E64A288DE8E171BFAEEE67A49B5483AC1C36110AA94B92C1",
+      "sha256": "9880076D5DE407819EEF45C27FF264E7EC1C23134E72A5CC478E385B6362FDF6",
       "features": 8,
       "specifications": 16,
       "io": 9
@@ -1274,22 +1274,22 @@
       "io": 1
     },
     "rally-mic-pod-hub": {
-      "sha256": "149F5CBF4DB4AB7F3E15A51AB17A29B92CAF46493608BB423EAAAE5DB487BE3E",
+      "sha256": "71496069E28247C12A9B53279B078C3ADCC68627A39F47AB185EC3669F051D18",
       "features": 4,
       "specifications": 5,
-      "io": 1
+      "io": 2
     },
     "rally-mic-pod": {
-      "sha256": "8C8EDA3ECD65BC3EB47D28847DD85D6D07985251DB02FC00A278E7D70CDBF003",
+      "sha256": "7286816BE1396E1BC7EDCAE862927BFF50BB35A04506B97C8234AD62CC88F52C",
       "features": 5,
       "specifications": 13,
       "io": 2
     },
     "rally-plus": {
-      "sha256": "ED80AAA07856A1FB53B40D7D64B580A6360E08C0DA15BE2BD2F50730D415A605",
+      "sha256": "DC62FEFA6D28C253D3FA240D4AAFE56FBAF63AACFF9CF675A23E65A091D27C3E",
       "features": 5,
       "specifications": 15,
-      "io": 8
+      "io": 12
     },
     "rc400t": {
       "sha256": "B7DDB2FC9A356DDB03A96EBEF8C90BA8B9520D149E6FABFD7D283A7333B3BEC5",
@@ -1376,7 +1376,7 @@
       "io": 7
     },
     "strong-usb-cable": {
-      "sha256": "26EB862E3DF018B8E7C7B0917340DEEF4AE879228739994D08CC743B3326D649",
+      "sha256": "2E6C7B6C73F44275665B5FD83C9B4AEB3744FC91AA40E2D2603B976C3A03F48A",
       "features": 3,
       "specifications": 4,
       "io": 2
