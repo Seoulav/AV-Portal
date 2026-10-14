@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 281,
-    "sha256": "5BB49DF241674E46C109D8A925D04BE432E4DDCA2081FC81E0202C0DA7C6BACD",
+    "count": 283,
+    "sha256": "F5B44F023CF0B2A0FF0500CEEA57307D51ECAA383026195C4D54BE0238FDF841",
     "baselineCount": 25,
     "baselineSha256": "B8AB75CBE36032B6C20FB28DE019A234C1EA6CE7CBAB7E0FC7B005C966AFDF26"
   },
@@ -1399,6 +1399,12 @@
       "specifications": 12,
       "io": 3
     },
+    "toggle-dock-2x1": {
+      "sha256": "0F7E2A25BD6F17E6DB8EBBB3AC17DE26901F2199848CF76B09DA1CB694D9BB39",
+      "features": 7,
+      "specifications": 12,
+      "io": 9
+    },
     "tr315": {
       "sha256": "CB85C341F1F0A425DA4B5AA9EF375B138EE57A5E039231EECC664C57CF7FF121",
       "features": 5,
@@ -1416,6 +1422,12 @@
       "features": 6,
       "specifications": 13,
       "io": 4
+    },
+    "u-bridge-3": {
+      "sha256": "1BD4DBAFFE5365BAECE1F8FFA8F65DA0C5045DB224C4B091C168BA2B013B796A",
+      "features": 6,
+      "specifications": 13,
+      "io": 7
     },
     "ua844-swb": {
       "sha256": "B1C47D1B93F2087709F04A130AB4B9B4B5EF88F4F7CF94E10637E91AD115D600",

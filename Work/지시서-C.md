@@ -1,5 +1,20 @@
 ﻿# 세션 C 진행 기록
 
+## W-20261014-008 — INOGENI 신설·TOGGLE DOCK 2×1·U-BRIDGE 3 등록
+
+- 상태: REVIEW (구현·로컬 검증 완료, PR·CI·병합·공개 검증 대기)
+- 명세: `Work/작업/W-20261014-008.md` (읽은 main `aca29d5da0f89a95c10492c4c900d966d9c893ef`) · 브랜치 `codex/W-20261014-008-inogeni` · 전용 워크트리 `codex-c`
+- 승인 근거(사용자 원문): “https://inogeni.com/product/toggle-dock-2x1/ , https://inogeni.com/product/u-bridge-3-0/ 2제품도 추가해줘” + “제품의 특징은 홈페이지 참고해”. 명세의 세션 B 표기보다 최신 사용자 배정인 세션 C를 따른다.
+- [x] 공식 Overview·Tech specs·Resources·Compatible Devices를 확인했다. 명세 작성 시 빠졌던 Tech specs의 본체별 크기·무게와 공식 원격 PDF 링크를 발견해 근거표에 기록했다. PDF 사본은 게시하지 않았다.
+- [x] 두 제품의 모델명 인쇄를 공식 원본 사진에서 읽고 Main·Diagram 4개를 등록했다. TOGGLE 호스트 1 USB-C와 호스트 2 USB-B+HDMI, U-BRIDGE PC HOST·DEVICE 단자를 별도 I/O로 작성했다.
+- [x] 공식 연결 그림에 TOGGLE 9개, U-BRIDGE 11개 번호를 게시 픽셀로 좌표화했다. `portMap` 유효성 오류 0건, 로컬 1280px·390px 지도 눈 확인, 브라우저 오류·가로 넘침 0건. Python 명령이 없어 `portmap-audit.py` 대신 실제 렌더러 SVG와 원본을 대조했다.
+- [x] 제조사 허용 호스트·이미지 매니페스트·카탈로그·검색 인덱스·읽기용 카탈로그·스냅샷을 갱신했다. 선택적 W-008 되감기를 기존 이력 검사에 연결했다.
+- [x] Builder 파생 라이브러리에서 TOGGLE 9행·12단자, U-BRIDGE 7행·12단자를 확인했다. 두 제품 모두 확인 필요 I/O 행 0건이다.
+- [x] 전체 검사 697건(696 pass·0 fail·기존 skip 1), `verify-pages` 283장비·280상세·501 이미지·142 uploads, 검색 인덱스 `--check` 통과.
+- [ ] 최신 main 통합·파생 재생성·PR·CI·병합 순서 확인·병합·Pages 배포·공개 1280px/390px 검증을 마친다.
+
+[제품별 근거표](기록/W-20261014-008-C-근거표.md) · [Work 인계](기록/W-20261014-008-C-Work-인계.md)
+
 ## W-20261014-002·003·004 — 제품 문구 및 Port Map 표시
 
 - 상태: MERGED (PR #496 병합·Pages 공개 화면 확인)

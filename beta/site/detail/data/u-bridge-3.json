@@ -1,0 +1,477 @@
+{
+  "manufacturer": "INOGENI",
+  "productName": "U-BRIDGE 3",
+  "model": "U-BRIDGE 3",
+  "series": "U-BRIDGE",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Extender"
+  ],
+  "english": "Two-module USB 3.2 Gen 1 extender for up to three devices over one CAT6A U/FTP cable up to 100 m.",
+  "korean": "CAT6A U/FTP 한 가닥으로 USB 3.2 Gen 1 장치 3개를 최대 100m 확장하는 PC HOST·DEVICE 모듈형 연장기.",
+  "verificationSummary": "INOGENI 공식 제품 Overview·Tech specs·두 모듈 연결도에서 기능, 모듈별 단자와 물리 사양을 확인했다. PDF는 공식 원격 링크만 연결했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "U-BRIDGE 3는 PC HOST와 DEVICE 모듈을 CAT6A U/FTP 한 가닥으로 연결해 USB 3.2 Gen 1(최대 5Gbps) 장치 3개를 최대 100m 연장한다. DEVICE에는 USB-A 2개와 USB-C 1개, PC HOST에는 잠금 나사 구멍이 있는 USB-C 1개가 있다. USB 2.0 장치와 호환하고, RS-232 신호도 두 모듈 사이로 전달한다.\n\n전원은 PC HOST 또는 DEVICE 어느 쪽에서든 공급할 수 있고 PoC로 반대쪽 모듈에도 전달된다. 공식 페이지는 카메라·비디오바·마이크·저장 장치와 Windows·macOS·Linux 사용을 안내하며 별도 드라이버가 필요 없다고 명시한다. 호환 브랜드 예시는 Vaddio·Huddly·HuddleCamHD·AVer·Jabra·Logitech·Marshall이다. 캐나다 제조, TAA 적합, 2024년 8월 1일 이후 최종 사용자 구매 제품 5년 보증.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "u-bridge-3-main.png",
+      "alt": "U-BRIDGE 3 PC HOST와 DEVICE 모듈 모델명 및 전면 USB 단자",
+      "note": "Main · 공식 제품 페이지 원본, 양 모듈 U-BRIDGE 3 인쇄 확인",
+      "provider": "INOGENI",
+      "model": "U-BRIDGE 3",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_PC-HOST-DEVICE_Perspective-Front_08-2024.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2560x1441",
+      "resolution": "2560x1441",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "u-bridge-3-diagram.png",
+      "alt": "U-BRIDGE 3 PC HOST·DEVICE 두 모듈의 전후면 단자 연결도",
+      "note": "Diagram · 공식 제품 페이지 양 모듈의 전면·후면 단자 그림",
+      "provider": "INOGENI",
+      "model": "U-BRIDGE 3",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1024x924",
+      "resolution": "1024x924",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "VERIFIED",
+      "title": "U-BRIDGE 3 User Guide",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/u-bridge-3-user-guide"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "VERIFIED",
+      "title": "U-BRIDGE 3 Sales Sheet",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/ubridge-3-sales-sheet"
+    },
+    {
+      "type": "Technical Document",
+      "status": "VERIFIED",
+      "title": "U-BRIDGE 3 Quick Start Guide",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/u-bridge-3-quick-start-guide"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "INOGENI U-BRIDGE 3 공식 제품 페이지",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/product/u-bridge-3-0/"
+    }
+  ],
+  "features": [
+    {
+      "text": "CAT6A U/FTP 한 가닥으로 USB 3.2 Gen 1 최대 5Gbps·100m 연장",
+      "source": "P"
+    },
+    {
+      "text": "DEVICE 모듈 USB-A 2개·USB-C 1개와 PC HOST 모듈 잠금형 USB-C 1개",
+      "source": "P"
+    },
+    {
+      "text": "USB 2.0 하위 호환 및 카메라·비디오바·마이크 등 장치 3개 동시 연결",
+      "source": "P"
+    },
+    {
+      "text": "PC HOST 또는 DEVICE 한쪽 전원 공급과 PoC 반대쪽 전원 전달",
+      "source": "P"
+    },
+    {
+      "text": "VISCA 등 제어용 RS-232 신호 연장 및 드라이버 없는 사용",
+      "source": "P"
+    },
+    {
+      "text": "Windows·macOS·Linux 지원, 캐나다 제조·TAA 적합·조건부 5년 보증",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Link",
+      "name": "전송 거리",
+      "value": "최대 100",
+      "unit": "m",
+      "condition": "CAT6A U/FTP 한 가닥",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "전송 속도",
+      "value": "최대 5",
+      "unit": "Gbps",
+      "condition": "USB 3.2 Gen 1",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "하위 호환",
+      "value": "USB 3.1 Gen 1 / 3.0 / 2.0",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "USB-C DisplayPort Alt Mode",
+      "value": "미지원",
+      "unit": "",
+      "condition": "영상 신호는 연장하지 않음",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "DEVICE 포트 전력",
+      "value": "최대 1.8A 공유",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "PC HOST 크기(W×L×H)",
+      "value": "7.0 × 9.7 × 2.3",
+      "unit": "cm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "PC HOST 무게",
+      "value": "170",
+      "unit": "g",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "DEVICE 크기(W×L×H)",
+      "value": "7.0 × 13.7 × 2.3",
+      "unit": "cm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "DEVICE 무게",
+      "value": "210",
+      "unit": "g",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 어댑터",
+      "value": "AC 100–240V → DC 24V/1.5A",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Origin",
+      "name": "제조국",
+      "value": "캐나다",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "보증",
+      "value": "5",
+      "unit": "년",
+      "condition": "최종 사용자 구매일 2024-08-01 이후",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Certification",
+      "name": "TAA",
+      "value": "적합",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "PC HOST",
+      "connector": "USB-C",
+      "signal": "호스트 PC USB 3.2 Gen 1",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "잠금 나사 구멍",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DEVICE",
+      "connector": "USB-A",
+      "signal": "USB 3.2 Gen 1 주변기기",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "DEVICE",
+      "connector": "USB-C",
+      "signal": "USB 3.2 Gen 1 주변기기",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "LINK",
+      "connector": "RJ-45",
+      "signal": "USB 3.2 Gen 1 연장 링크",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "HDBaseT-USB3",
+      "availability": "",
+      "condition": "PC HOST 1개·DEVICE 1개; 최대 100m",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "4핀 단자대",
+      "signal": "RS-232 패스스루",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "PC HOST 1개·DEVICE 1개",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Management",
+      "connector": "USB-mini",
+      "signal": "모듈 관리",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "PC HOST 1개·DEVICE 1개; 공식 사용자 가이드 3쪽",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC 24V",
+      "signal": "모듈 전원 입력",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "PC HOST 또는 DEVICE 한쪽에서 공급·PoC 전달",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "INOGENI 공식 제품 Overview",
+      "url": "https://inogeni.com/product/u-bridge-3-0/",
+      "scope": "특징·용도·호환 목록"
+    },
+    {
+      "code": "S",
+      "name": "INOGENI 공식 Tech specs",
+      "url": "https://inogeni.com/product/u-bridge-3-0/?tpl=techspecs",
+      "scope": "모듈별 단자·크기·무게·전원·구성품"
+    },
+    {
+      "code": "IMG",
+      "name": "INOGENI 공식 연결 그림",
+      "url": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png",
+      "scope": "Port Map 좌표"
+    },
+    {
+      "code": "M",
+      "name": "INOGENI U-BRIDGE 3 User Guide",
+      "url": "https://inogeni.com/u-bridge-3-user-guide",
+      "scope": "3쪽 모듈별 USB-mini MGMT 단자 설명"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "제조사 공식 제품 페이지와 Tech specs 탭의 수치입니다.",
+    "ioIntro": "호스트·장치·제어 단자의 역할과 수량을 구분했습니다.",
+    "supplementalNote": "제조사 공식 홈페이지 본문·사양·그림을 대조했습니다.",
+    "footerNote": "INOGENI U-BRIDGE 3 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "INOGENI 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "u-bridge-3-diagram.png",
+      "width": 1024,
+      "height": 924
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "PC HOST USB-C",
+        "desc": "호스트 PC USB 3.2 Gen 1 연결",
+        "x1": 161,
+        "x2": 213,
+        "y": 330,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "PC HOST MGMT",
+        "desc": "PC HOST 모듈 USB-mini 관리 단자",
+        "x1": 266,
+        "x2": 314,
+        "y": 330,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "DEVICE USB-C",
+        "desc": "DEVICE 모듈 USB-C 주변기기 단자",
+        "x1": 704,
+        "x2": 750,
+        "y": 330,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "DEVICE USB-A 1–2",
+        "desc": "DEVICE 모듈 USB-A 주변기기 단자 2개",
+        "x1": 787,
+        "x2": 883,
+        "y": 323,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "DEVICE MGMT",
+        "desc": "DEVICE 모듈 USB-mini 관리 단자",
+        "x1": 924,
+        "x2": 967,
+        "y": 330,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "PC HOST DC 24V",
+        "desc": "PC HOST 모듈 DC 24V 전원 입력",
+        "x1": 50,
+        "x2": 112,
+        "y": 578,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "PC HOST LINK",
+        "desc": "PC HOST 모듈 CAT6A 연장 링크",
+        "x1": 126,
+        "x2": 234,
+        "y": 581,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "PC HOST RS-232",
+        "desc": "PC HOST 모듈 RS-232 패스스루",
+        "x1": 264,
+        "x2": 331,
+        "y": 583,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "DEVICE DC 24V",
+        "desc": "DEVICE 모듈 DC 24V 전원 입력",
+        "x1": 708,
+        "x2": 767,
+        "y": 578,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "DEVICE LINK",
+        "desc": "DEVICE 모듈 CAT6A 연장 링크",
+        "x1": 781,
+        "x2": 887,
+        "y": 581,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "DEVICE RS-232",
+        "desc": "DEVICE 모듈 RS-232 패스스루",
+        "x1": 901,
+        "x2": 967,
+        "y": 583,
+        "side": "bottom"
+      }
+    ]
+  },
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_PC-HOST-DEVICE_Perspective-Front_08-2024.png"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png"
+    }
+  ]
+}
