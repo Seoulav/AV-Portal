@@ -4,7 +4,7 @@
 // 순서
 //   1. 형식 검사. RTCOM 제품(source "rtcom")은 적용하지 않는다(RTCOM 원본은 Portal에서 고치지 않는다 — AGENTS.md)
 //   2. 요청을 만든 라이브러리의 catalogSha·detailSetSha가 지금과 다르면 경고하고, 행마다 before가 지금 행과 같은지 본다. 다르면 그 변경만 건너뛴다
-//   3. 겹치는 작업 확인: Work/지시서.md·Work/지시서-B.md의 진행 중 작업, 열린 PR(gh). 겹치면 중단
+//   3. 겹치는 작업 확인: Work/지시서.md·Work/지시서-B.md·Work/지시서-C.md의 진행 중 작업, 열린 PR(gh). 겹치면 중단
 //      gh를 쓸 수 없으면 확인 목록을 출력하고 중단한다. 사람이 확인했으면 --overlap-checked로 다시 실행한다
 //   4. 적용: 고친 행·새 행은 verification "REVIEW REQUIRED", source "". reason은 상세 JSON에 쓰지 않는다(PR 본문에 쓴다). remove는 행을 지운다
 //   5. 검색 인덱스·공개 스냅샷 재생성, 라이브러리 생성 확인, 검색 인덱스 --check
@@ -92,7 +92,7 @@ export function planIoRequest(request, detail, { overrides = IO_OVERRIDES } = {}
 }
 
 // ── 겹치는 작업 ──
-// 작업 블록: 지시서.md는 W- ID로 시작하는 단락(모든 절), 지시서-B.md는 "## W-" 절.
+// 작업 블록: 지시서.md는 W- ID로 시작하는 단락(모든 절), 지시서-B.md·지시서-C.md는 "## W-" 절.
 // 진행 표시(IN_PROGRESS·REVIEW·BLOCKED 등)가 있으면 MERGED가 함께 있어도 진행 중으로 본다(예: "IN_PROGRESS · 1차 MERGED").
 // 끝난 표시(MERGED·DEPLOYED·완료·종료)만 있으면 끝난 작업이다. 상태를 알아볼 수 없으면 진행 중으로 본다(놓치지 않게)
 const ACTIVE = /IN_PROGRESS|REVIEW|BLOCKED|진행|검토|보류|준비|대기/;
@@ -102,7 +102,7 @@ const isActive = status => ACTIVE.test(status) || !DONE.test(status);
 export function activeTasks(file, markdown) {
   const lines = String(markdown).replaceAll('\r\n', '\n').split('\n');
   const blocks = [];
-  if (/지시서-B/.test(file)) {
+  if (/지시서-[BC]/.test(file)) {
     let current = null;
     for (const line of lines) {
       if (/^## /.test(line)) { current = { title: line.slice(3).trim(), lines: [] }; blocks.push(current); continue; }
@@ -277,7 +277,7 @@ export async function main(argv, log = console.log) {
 
   // 겹치는 작업
   const tasks = [];
-  for (const name of ['지시서.md', '지시서-B.md']) {
+  for (const name of ['지시서.md', '지시서-B.md', '지시서-C.md']) {
     try { tasks.push(...activeTasks(name, await readFile(new URL(`Work/${name}`, root), 'utf8'))); } catch { /* 파일이 없으면 넘어간다 */ }
   }
   const taskHits = instructionOverlaps(tasks, { slug: request.productId, model: detail.model ?? item.product, brand: item.brand });
@@ -301,7 +301,7 @@ export async function main(argv, log = console.log) {
     log([
       'gh로 열린 PR을 확인하지 못했습니다. 아래를 직접 확인한 뒤 --overlap-checked로 다시 실행하세요.',
       `  - [ ] 열린 PR 중 beta/site/detail/data/${request.productId}.json을 고치는 PR이 없다 (https://github.com/${REPOSITORY}/pulls)`,
-      `  - [ ] Work/지시서.md·Work/지시서-B.md의 진행 중 작업이 이 제품을 다루지 않는다`,
+      `  - [ ] Work/지시서.md·Work/지시서-B.md·Work/지시서-C.md의 진행 중 작업이 이 제품을 다루지 않는다`,
       ...tasks.map(task => `      · ${task.file} ${task.task} [${task.status}]`),
     ].join('\n'));
   }

@@ -189,7 +189,7 @@ Builder 장비 설정 창의 **적용하고 Portal 반영 요청 내보내기**�
 3. 적용: `node beta/apply-builder-io-request.mjs <파일>`. 스크립트가 하는 일:
    - 형식 검사(`builder/schema/builder-io-request-1.0.schema.json`과 같은 규칙).
    - 요청을 만든 라이브러리의 `catalogSha`·`detailSetSha`가 지금과 다르면 경고하고, 변경마다 `before`(행 원문 다섯 칸)가 지금 행과 같은지 본다. 다르면 **그 변경만 건너뛰고** 보고한다.
-   - 겹침 확인: `Work/지시서.md`·`Work/지시서-B.md`의 진행 중 작업이 이 제품(slug·상세 경로·모델명·**제조사**)을 언급하거나, 열린 PR이 같은 상세 파일을 고치면 **중단**한다.
+   - 겹침 확인: `Work/지시서.md`·`Work/지시서-B.md`·`Work/지시서-C.md`의 진행 중 작업이 이 제품(slug·상세 경로·모델명·**제조사**)을 언급하거나, 열린 PR이 같은 상세 파일을 고치면 **중단**한다.
      - 진행 중 판단: 진행 표시(IN_PROGRESS·REVIEW·BLOCKED·준비·대기 등)가 있으면 MERGED가 함께 있어도 진행 중, 끝 표시(MERGED·DEPLOYED·완료·종료)만 있으면 끝, 알아볼 수 없으면 진행 중으로 본다(놓치지 않는 쪽).
      - `gh`를 쓸 수 없거나, 파일이 100개 이상이라 gh가 다 보여 주지 않는 열린 PR이 있으면 확인 목록을 출력하고 중단한다.
      - 사람이 확인했으면 `--overlap-checked`로 다시 실행한다. 열린 PR이 같은 파일을 고치는 경우는 이 옵션으로도 넘어가지 않는다.

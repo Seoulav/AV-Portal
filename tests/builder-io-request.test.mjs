@@ -310,6 +310,9 @@ test('active tasks come from the instruction logs and overlap by slug, detail pa
   // 진행·끝 표시가 섞이면 진행 중, 알아볼 수 없으면 진행 중(놓치지 않게), 끝 표시만 있으면 끝
   const mixed = ['## W-20261013-010 — A', '- 상태: IN_PROGRESS · 1차 MERGED', '## W-20261013-011 — B', '- 상태: PR 준비', '## W-20261013-012 — C', '- 상태: MERGED · PR #1'].join('\n');
   assert.deepEqual(activeTasks('지시서-B.md', mixed).map(task => task.task), ['W-20261013-010', 'W-20261013-011']);
+  const sessionC = activeTasks('지시서-C.md', mixed);
+  assert.deepEqual(sessionC.map(task => task.task), ['W-20261013-010', 'W-20261013-011']);
+  assert.equal(instructionOverlaps(sessionC, { slug: 'W-20261013-010' }).length, 1);
   assert.deepEqual(instructionOverlaps([{ task: 'W', text: 'Powersoft 앰프 18종' }], { slug: 'x-1', model: 'X 1', brand: 'Powersoft' }).length, 1);
   // 지금 저장소의 지시서도 읽힌다(형식이 바뀌면 여기서 드러난다)
   const real = activeTasks('지시서.md', readFileSync(new URL('Work/지시서.md', root), 'utf8'));
