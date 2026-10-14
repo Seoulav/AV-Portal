@@ -8,6 +8,7 @@ import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct, beforeW12001IdentityRaw } from './w12001-identity-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeKiprogo2Mx395Product, beforeKiprogo2Mx395Raw } from './w12005-kiprogo2-mx395-history.mjs';
+import { beforeW013C3Product } from './w013-c3-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -130,7 +131,7 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
   for (const slug of Object.keys(productAssets)) {
     const product = read(`beta/site/detail/data/${slug}.json`);
     if (slug.startsWith('varia-')) assert.equal(product.portMap, undefined, `${slug}: no Port Map`);
-    const current = beforeW12002Product(beforeKiprogo2Mx395Product(product,slug),slug);
+    const current = beforeW12002Product(beforeKiprogo2Mx395Product(beforeW013C3Product(product, slug),slug),slug);
     delete current.images;
     delete current.imageStatuses;
     delete current.portMap;

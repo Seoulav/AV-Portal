@@ -260,3 +260,94 @@
 - 홈 1280/390 및 Shure 제조사 선택 1280/390 캡처를 만들었다. 홈에 03 설계 도구가 남고 04 섹션은 없는 것을 확인했다.
 - 전체 테스트 571개: 570 통과, 0 실패, 1 기존 비공개 제품 목록 경로 스킵. verify-pages, readable catalog 생성, search-index --check 통과.
 - 제품 데이터 JSON 변경 없음. 구현 PR #439은 Builder CI 통과 후 merge SHA 42a07d3bbace01258fd6dac767508d9251ef3e57로 병합했다. Pages run 38302599149 성공. 공개 홈·Shure 화면 1280/390 및 catalog.html·llms.txt 직접 접근을 확인했다. 공개 캡처는 W-20261013-003-screens/public-* 파일이다.
+
+## W-20261013-004 — SD컴퍼니·emision Media Server·PixelFit
+
+- 명세: `Work/작업/W-20261013-004.md` (READY, main 반영). 작업 브랜치 `codex/W-20261013-004-sdcompany`; 시작 기준 main `9a2c5274b5320703610f4c97536936de6fc50aed`.
+- 사용자 승인: SD컴퍼니 제조사와 emision 미디어서버·PIXELFIT 등록, PixelFit의 QMS-88UX 06 스타일 화면 구성 예시.
+- [x] SD컴퍼니 공식 홈페이지·Media Server 모델 페이지 확인. Media Server와 PixelFit 상세, 분류·공식 링크·PixelFit 캡처 이미지 4장을 등록했다. PPT 원본과 Activation Code가 포함된 image1은 커밋 대상에서 제외.
+- [x] PixelFit은 사용자 캡처에서 확인된 값만 기록했다. OS 버전, 드라이버, 판매 단위, 전용 제품 페이지는 확인 필요로 남겼다. 사용자 ROI 수치는 게시하지 않았다.
+- [x] 화면 예시 SVG 3종: 1340×780 / 1295×780 / 물리 해상도 1920×1080. 각 적용 방식, 1920×1080@60Hz 변경 불가 신호, 여백·위치를 함께 표시. 출처 캡처에 없는 레이아웃은 추가하지 않았다.
+- [x] renderer·validator·CSS를 prototype 원본과 beta 생성본에 반영하고 `detail-assets.test.mjs` 동기화 검사를 통과했다.
+- [x] 전체 테스트 626개 중 625 통과, 0 실패, 1 스킵. Search index `--check` 통과. `verify-pages` 통과(276 카탈로그 항목, 273 상세).
+- [x] 390px에서 본문 가로 폭 375px, 예시 카드 305px, SVG 284px 확인. 가로 넘침 없음.
+- [ ] 최신 `origin/main` (`2df15a54df52e2a8c2be9dc52c48bb3aa7111094`) 통합 후 파생물 재생성 및 전체 검증.
+- [ ] PR·필수 CI·열린 PR 경로 겹침 확인, 병합·Pages 배포·공개 1280/390 확인.
+- 브라우저 screenshot API가 세션 탭의 프레임을 반환하지 않아 현재 캡처 파일은 만들지 못했다. 공개 확인 시 재시도한다.
+
+- W-004 최신 main `3485105f22412d5c881a5d7fac02decb83d1d3a9` 통합 완료. 충돌난 검색 인덱스는 통합 후 재생성함.
+- 통합 후 전체 테스트 627건(626 통과·0 실패·1 skip), `verify-pages`, search-index `--check`, PR diff check 통과. 코드 리뷰 차단 없음.
+- 다음: 변경 기록 커밋/push/PR, CI 확인, 공개 배포 후 두 상세와 제조사 칩을 1280px·390px에서 확인·캡처.
+
+### W-20261013-004 완료 (2026-10-13)
+
+- PR [#456](https://github.com/Seoulav/AV-Portal/pull/456) CI 전체 통과 후 병합, SHA `047f0fe0b938bf0ca41e8a343819c5df9d808e84`.
+- Pages run [#38370072445](https://github.com/Seoulav/AV-Portal/actions/runs/38370072445) 성공. PixelFit·Media Server 공개 상세와 SD컴퍼니 칩을 확인했다.
+- 1280px/390px 공개 화면 캡처 6장을 `Work/기록/W-20261013-004-screens/`에 보존했다. 상세 DOM은 390px에서 가로 넘침 없음, 제조사 칩 선택 시 2개 제품 노출.
+- W-004 완료. 이후 대기열의 Insta360 W-009에는 사용자 보강 사실을 공식 자료와 대조해 반영한다.
+
+## W-004 PixelFit 적용 방식 교정 후속 (2026-10-13)
+
+- 사용자 교정: NVIDIA는 커스텀 해상도 제작, AMD·일반 모드는 표시 영역 마스킹과 작업표시줄 표시.
+- PixelFit overview·주요기능·적용 방식 사양과 예시 1·2의 적용 방식 라벨을 교정했다. 화면 예시의 1340×780, 1295×780, 물리 해상도 1920×1080 및 1920×1080@60Hz 값은 유지했다.
+- 테스트 우선으로 `tests/w004-sdcompany.test.mjs`의 적용 방식 기대값을 변경했고, 기존 테스트가 두 하드웨어 마스크 라벨에서 실패하는 것을 확인한 뒤 구현을 수정했다.
+- 후속 상세 회귀 6/6 통과. 병렬 전체 테스트에서 RTCOM 임시 디렉터리 rename `EPERM`이 간헐적으로 발생했으나, 해당 파일 단독 실행과 직렬 전체 테스트가 통과했다(전체 627건, 1 skip).
+- `node scripts/check-feature-wording.mjs --check` 통과. 전용 `--diff origin/main`은 승인된 의미 수정이 overview·specifications·settings에 포함되어 `non-wording product fields changed` 1건을 보고한다. 대상 외 필드 수정 여부는 JSON diff를 직접 점검한다.
+- 최신 main `c038ff56` 기준 후속 브랜치 `codex/W-20261013-004-pixelfit-concepts`. 열린 PR #449 파일과 충돌 없음. PR·CI·병합·Pages·공개 화면 확인 대기.
+
+## W-20261013-004 PixelFit QMS-style 상세 개선 후속 (2026-10-13)
+
+- 사용자 요청에 따라 PixelFit 상세의 01·06·07 표현 계층을 QMS-88UX 상세 규약에 맞춰 개선한다. 제품 사양과 예시 값은 기존 승인 자료에서 확인되는 값만 사용한다.
+- [x] 01 한눈에 보기: 버전 2.0.0.0, 컨셉 2가지, NVIDIA·AMD, 모든 디스플레이 타일 4개.
+- [x] 06 동작 모드: 커스텀 해상도 제작 / 마스킹 영역 해상도 카드. 활성 윈도우·바탕화면 해상도와 AMD·모든 디스플레이·emision 작업표시줄 설명을 포함.
+- [x] 07 화면 구성 예시를 키보드 조작 가능한 칩 전환으로 변경. NVIDIA는 1340×780 출력 자체를 파란 화면으로, AMD는 1920×1080 신호 내 1295×780 표시 영역 및 오른쪽 625px·아래 300px 검정 마스킹으로 표현. 전체 화면 예시 유지.
+- [x] Site·prototype renderer, validator, CSS를 함께 갱신. 다른 제품 상세 데이터 JSON은 수정하지 않음.
+- [x] 테스트 우선: `tests/pixelfit-presentation.test.mjs` RED 후 GREEN. W-004 상세 테스트 6/6 통과.
+- [x] Chrome 로컬 화면: 1280px / 390px에서 타일 4개, 모드 2개, 예시 탭 3개 확인. 가로 넘침 1280px -15px / 390px 0px. 클릭·화살표 키 전환 확인.
+- [x] 최신 main `0bda1d5a9ebc344d164383c538724b22d88bd66a` 통합. search-index 충돌은 원본에서 재생성. snapshot·search index·readable catalog 갱신.
+- [x] 최신 main 통합 후 직렬 전체 테스트 통과. `node beta/build-search-index.mjs --check`, `node beta/build-readable-catalog.mjs --check`, `node beta/verify-pages.mjs`, `node scripts/check-feature-wording.mjs --check`, `git diff --check` 통과.
+- [ ] 변경 커밋 push 후 PR #459 필수 CI 확인.
+- [ ] 병합 후 Pages 배포 및 공개 PixelFit 1280px·390px 캡처·탭 동작 확인.
+
+## W-20261013-004 PixelFit 4K AOI·디자인 복귀 후속 (2026-10-13)
+
+- 브랜치: `codex/W-20261013-004-pixelfit-aoi`, 최신 main `aee3364d45c33c9a8d251908eb3e024bb2526910` 통합 완료.
+- 사용자 수정 지시: QMS형 타일·모드 카드·예시 탭을 제거해 이전 정적 카드 디자인으로 복귀. NVIDIA 커스텀 해상도 / AMD·일반 마스킹+작업표시줄 교정은 유지. 기본 캔버스는 3840×2160 신호 안의 표시 영역(AOI).
+- [x] 회귀 테스트를 먼저 갱신해 현재 구현에서 실패함을 확인.
+- [x] PixelFit 한 제품의 예시를 4K AOI(1295×780, 오른쪽 2545px·아래 1380px)와 NVIDIA 커스텀 1340×780 두 장의 정적 카드로 변경. AOI 외곽은 검정 마스킹으로 표시.
+- [x] site·prototype 렌더러/검증기와 표현 CSS를 동기화. PixelFit 외 제품 JSON 변경 없음.
+- [x] PixelFit·W-004 집중 테스트 8/8 통과. 직렬 전체 테스트 636건(635 통과, 0 실패, 1 환경 의존 skip). 병렬 테스트에서 한 번 발생한 Windows 임시 경로 `EPERM rename`은 직렬 전체 실행에서 재현되지 않음.
+- [x] Chrome 로컬 1280px·390px에서 표준 요약 4개, 정적 카드 2개, AOI/마스킹 및 1340×780 보조 예시 확인. 문서 수평 넘침 0px.
+- [x] 최신 origin/main 통합 후 search index·readable catalog·public snapshot 재생성. search-index/readable-catalog `--check`, `verify-pages`, feature-wording `--check`, PR diff check 통과. `verify-pages`는 276 항목·273 상세·477 제품 이미지·132 PDF 확인. PDF.js 선택 canvas polyfill 경고는 있었으나 검증은 성공.
+- [x] 파생 산출물·진행 기록 커밋 후 PR [#465](https://github.com/Seoulav/AV-Portal/pull/465) 생성. Builder CI 통과 후 병합 SHA `2ae3341761b0fc8859f4841aa036e487cf21442f`.
+- [x] Pages 배포 run [#38382533033](https://github.com/Seoulav/AV-Portal/actions/runs/38382533033) 성공.
+- [x] 공개 PixelFit 상세에서 표준 요약 4개·정적 예시 2개·4K AOI 마스킹·NVIDIA 1340×780 예시를 확인. 1280px 가로 여유 15px, 390px 수평 넘침 0px. 캡처: `Work/기록/W-20261013-004-screens/pixelfit-aoi-public/`.
+
+## W-20261013-009 — Insta360 제조사·4종 등록 (2026-10-14)
+
+- 명세 `Work/작업/W-20261013-009.md` READY 및 PR #455 병합 커밋 `3485105f22412d5c881a5d7fac02decb83d1d3a9` 확인. 구현 브랜치 `codex/W-20261013-009-insta360`, 기준 main `9390b93aed08ef20e92a010bfbc5e25d89d9911c`.
+- [x] Insta360 Connect(Video Bar)·Link 2·Wave for Business·Wave 등록. 제조사 공식 링크·이미지 연결, Compuzone은 공식 링크에서 제외.
+- [x] 사용자 제공 64쪽 PDF를 `beta/site/manuals/insta360-conference-line-collection-20260729.pdf`에 게시. SHA-256 `c93167947683439df5da7f2e441f4c7d2d9e9f7e0b99c0014e01e04e6249102f`, 무잠금, 가격 표기 없음. 네 제품 문서 카드 모두 보기·다운로드 액션으로 연결.
+- [x] Wave for Business만 Connect(Video Bar) 연동 가능, 일반 Wave 연동 불가를 명시하고 사용자 확인 및 공식 매뉴얼 근거를 구분.
+- [x] W-009 추가 제품·업로드·스냅샷만 제거하는 과거 상태 되감기 함수를 만들고 과거 카탈로그·파일·문서·해시 회귀 검사에 적용. W-013 Builder 테스트의 중복 import/test 선언도 정리해 기존 테스트가 실행되도록 복원.
+- [x] W-009 전용 테스트 4/4 통과. 병렬 `npm test` 재실행은 Windows 임시 폴더 rename `EPERM` 1건으로 실패했으나, `node --test --test-concurrency=1 tests/*.test.mjs`는 655개 중 654 통과·실패 0·기존 skip 1로 통과. PR 필수 CI도 전체 성공.
+- [x] `verify-pages`: 장비 280, 상세 277, 검토 이미지 484, 사용자 업로드 PDF 138, 잠금 PDF 12건 유지. PDF.js 선택 canvas polyfill 경고가 있었으나 검증 성공.
+- [x] 공개 화면 4종·Insta360 제조사 목록을 실제 1280px·390px CSS viewport로 확인·캡처. 네 상세와 목록 모두 390px에서 `documentWidth=390`으로 가로 넘침 없음; 제조사 칩 `Insta360 4` 선택 상태 확인.
+- [x] PR [#478](https://github.com/Seoulav/AV-Portal/pull/478) 필수 `builder` CI 성공 후 병합. 병합 SHA `7fdfda4eae2aa860a02db610330d3b43273c8188` (2026-10-13 22:34:51 UTC). Pages 배포 run [#38478739867](https://github.com/Seoulav/AV-Portal/actions/runs/38478739867) 성공.
+- [x] 공개 상세 4종 모두 문서 카드에 보기 버튼·다운로드 링크 확인(각 2개: 헤더/문서 행). Connect에서 보기 버튼을 눌러 PDF.js 뷰어의 64쪽 canvas 렌더 확인; 다운로드 실파일 9,092,982 bytes, SHA-256 `c93167947683439df5da7f2e441f4c7d2d9e9f7e0b99c0014e01e04e6249102f` 일치. 파일 URL HTTP 200, `application/pdf`.
+- [x] 캡처 10장: `Work/기록/W-20261013-009-screens/` (4종 상세 + 제조사 칩, 각 1280px·390px).
+- #479는 W-009 뒤 세션 A가 통합해 `6beb63783c2d8114dc7966cbd80ef1e47d801428`로 병합했다. 현재 main에는 이어서 RTCOM 동기화 `f54a05f401fbb1a47de3b51c533f44d45dfb756d`도 포함된다.
+
+## W-20261013-004 PixelFit 사용자 제공 PDF 게시 + AOI 위치 교정 (2026-10-14)
+
+- 브랜치 `codex/W-20261014-pixelfit-docs-aoi`, 기준 main `84826c2ea88b070b4b591d07e85fe071e4fb3bc8`; 작업 위치 `codex-b`.
+- [x] 사용자 제공 `emision_PixelFit_Capture.pptx`를 PowerPoint로 PDF 변환. 원본 6장·PDF 6쪽, PDF 432,999 bytes, SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06`. 여섯 쪽을 시각 확인했으며 원본 PPTX는 커밋하지 않는다.
+- [x] `beta/site/manuals/emision-pixelfit-capture.pdf`를 PixelFit 참고자료로 등록하고 문서 보기·다운로드 액션 연결. Media Server 소개서와 다른 자료는 추가하지 않는다.
+- [x] NVIDIA·AMD 예시 모두 3840×2160 캔버스 안에 AOI를 표시. 캡처 수치 1295×780·1340×780은 보존하고 4K 기준 여백은 산술 계산. NVIDIA는 커스텀 해상도 제작, AMD·일반은 AOI 밖 마스킹+emision 작업표시줄로 구분.
+- [x] X·Y로 화면 안 어디든 AOI 지정 및 기준점 변경 가능을 사용자 확인(2026-10-14) 근거로 설명. 수치가 없는 위치 이동 카드는 “위치 지정 예시”로 표시하고 크기·좌표 수치를 만들지 않는다.
+- [x] 정적 카드 디자인을 유지하고 사이트·prototype renderer/validator를 함께 갱신. 새 PDF에 맞춰 `mirror-docs.mjs` 업로드 목록 생성이 기존 순서·잠금 상태를 보존하도록 수정. 관련 과거 테스트는 새 PixelFit 문서 한 행/파일만 되감는 함수 적용.
+- [x] PDF 6쪽, 1280px·390px 로컬 상세 캡처: `Work/기록/W-20261013-004-screens/pixelfit-document-local/`. CDP DOM에서 390px document/body 폭 390px, 화면 카드 3개 확인. PDF.js 뷰어에서 `/ 6` 및 첫 쪽 canvas 렌더 확인. 실제 다운로드 파일 432,999 bytes, SHA가 게시 예정 PDF와 일치.
+- [x] `node beta/build-search-index.mjs --check`, `node beta/build-readable-catalog.mjs --check`, `node beta/verify-pages.mjs` 통과(280 항목·277 상세·490 검토 이미지·140 사용자 업로드 PDF, 잠금 PDF 12건). 전체 직렬 테스트 663개 중 662 통과·실패 0·환경 의존 skip 1. PDF.js 선택 canvas/font polyfill 경고는 있었으나 관련 검증은 통과.
+- [x] PR [#486](https://github.com/Seoulav/AV-Portal/pull/486) 필수 `builder` CI 성공 후 병합(SHA `6f131a7b8bb73ec195cc2e5b90c9ad4173f943a0`). Pages run [#38511064123](https://github.com/Seoulav/AV-Portal/actions/runs/38511064123) 성공.
+- [x] 공개 상세 1280px·390px에서 AOI 카드 3개, 각 3840×2160 캔버스, 위치 지정 문구, 문서 액션 확인. document/body 폭은 1280px viewport에서 1265px, 390px viewport에서 390px로 넘침 없음. 공개 캡처: `Work/기록/W-20261013-004-screens/pixelfit-document-public/`.
+- [x] 공개 PDF URL HTTP 200·`application/pdf`·432,999 bytes. 뷰어 `/ 6`, 6 canvas 렌더. 내려받은 실파일 SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06` 일치.

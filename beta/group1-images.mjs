@@ -1,4 +1,4 @@
-﻿export const publicationStatus = '사용자 게시 승인 · 공식 출처 기록';
+export const publicationStatus = '사용자 게시 승인 · 공식 출처 기록';
 // Group 2에서 넘어온 사진도 확인된 공식 출처를 표시한다.
 const group2PublicationStatus = '사용자 게시 승인 · 공식 출처 기록';
 
@@ -17,6 +17,21 @@ const imageWith = (rights) => (role, file, alt, provider, model, sourceUrl, orig
   publicationStatus: rights
 });
 const image = imageWith(publicationStatus);
+const behhlGuideDiagram = size => {
+  const model = `LH${size}BEHHLBFXKR`;
+  const slug = model.toLowerCase();
+  return {
+    ...image('Diagram', `${slug}-diagram.webp`, `${model} BEHX-H 공용 설치가이드 1쪽 연결 안내 범례`, 'Samsung', model,
+      'https://downloadcenter.samsung.com/content/EM/202607/20260708093125167/BN68-26620A-01_IG_BEHX-H_Basic_feet_43-85inch_WW_L10_260521.0.pdf',
+      '1120x624', '1120x624', 'VERIFIED',
+      'Diagram · 사용자 제공 삼성전자 BN68-26620A-01 1쪽 BEHX-H 연결 안내 범례. 그림에는 HDMI(eARC) 1개와 일반 HDMI 1개, 합계 2개만 표시되지만 공식 사양은 HDMI 입력 3개이며 세 번째 위치는 미표기 · 실제 후면 전체 배치도가 아님'),
+    publicationStatus: '사용자 게시 승인 · 공식 설치가이드 발췌'
+  };
+};
+const providedScreenshot = (role, file, alt, note) => ({
+  role, file, alt, note, provider: '사용자 제공 SD컴퍼니 소개서(2026-10-13)', model: 'emision PixelFit',
+  officialSource: false, verificationStatus: 'FOUND', publicationStatus: '사용자 제공 화면 캡처'
+});
 // Group 2 카드 대표 사진 조사 기록(Work/기록/W-20260925-012-사진조사.md)에서 넘어온 8개 제품 전용.
 const group2Image = imageWith(group2PublicationStatus);
 
@@ -42,14 +57,14 @@ const unverifiedImage = (role, file, alt, provider, model, sourceUrl, originalSi
 
 export const group1Images = {
   // W-006: exact-model Samsung pages link these galleries; repeated bytes are identified as series-common imagery.
-  hg55u800fnfxkr: [image("Main", "hg55u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG55U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/21ff3212-558c-4484-b5b7-192f5e195e9b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG55U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  hg75u800fnfxkr: [image("Main", "hg75u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG75U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/d2dc20fb-af1c-4a3d-9300-2b42b057be2c.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG75U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  hg85u800fnfxkr: [image("Main", "hg85u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG85U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/0d396362-4a93-4606-8d6c-48bf0e944193.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG85U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  lh50behhlbfxkr: [image("Main", "lh50behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH50BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/4b92c6d9-1498-4ac6-b7ec-6c0c4272686b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH50BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  lh55behhlbfxkr: [image("Main", "lh55behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH55BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/47d7fea5-ec40-4880-8c64-c6134ab68533.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH55BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  lh65behhlbfxkr: [],
-  lh75behhlbfxkr: [image("Main", "lh75behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH75BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/fca92e0c-9f9a-4567-bf8a-e30be766f846.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH75BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
-  lh85behhlbfxkr: [image("Main", "lh85behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH85BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/3b2adce4-faa5-462b-a28d-cee9656b7e0b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH85BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음")],
+  hg55u800fnfxkr: [image("Main", "hg55u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG55U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/21ff3212-558c-4484-b5b7-192f5e195e9b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG55U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), image("Diagram", "hg55u800fnfxkr-diagram.webp", "HG55U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG55U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG55U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")],
+  hg75u800fnfxkr: [image("Main", "hg75u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG75U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/d2dc20fb-af1c-4a3d-9300-2b42b057be2c.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG75U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), image("Diagram", "hg75u800fnfxkr-diagram.webp", "HG75U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG75U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG75U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")],
+  hg85u800fnfxkr: [image("Main", "hg85u800fnfxkr-main.webp", "삼성 HU8000F 시리즈 공식 정면 이미지", "Samsung", "HG85U800FNFXKR", "https://images.samsung.com/kdp/goods/2025/10/21/0d396362-4a93-4606-8d6c-48bf0e944193.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · HG85U800FNFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), image("Diagram", "hg85u800fnfxkr-diagram.webp", "HG85U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG85U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG85U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")],
+  lh50behhlbfxkr: [image("Main", "lh50behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH50BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/4b92c6d9-1498-4ac6-b7ec-6c0c4272686b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH50BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), behhlGuideDiagram(50)],
+  lh55behhlbfxkr: [image("Main", "lh55behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH55BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/47d7fea5-ec40-4880-8c64-c6134ab68533.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH55BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), behhlGuideDiagram(55)],
+  lh65behhlbfxkr: [behhlGuideDiagram(65)],
+  lh75behhlbfxkr: [image("Main", "lh75behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH75BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/fca92e0c-9f9a-4567-bf8a-e30be766f846.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH75BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), behhlGuideDiagram(75)],
+  lh85behhlbfxkr: [image("Main", "lh85behhlbfxkr-main.webp", "삼성 BEHX-H 시리즈 공식 정면 이미지", "Samsung", "LH85BEHHLBFXKR", "https://images.samsung.com/kdp/goods/2026/07/01/3b2adce4-faa5-462b-a28d-cee9656b7e0b.png?$Q90_1920_1280_F_PNG$", "1920x1280", "1920x1280", "FOUND", "Main · LH85BEHHLBFXKR 공식 제품 페이지 갤러리 연결 · 동일 시리즈의 다른 인치 페이지와 동일 이미지 바이트 · 개별 인치 실물 사진으로 단정하지 않음"), behhlGuideDiagram(85)],
   // The US SKU galleries explicitly name these MPF models. MP012F and MP016F publish identical front-image bytes.
   mp008f: [image('Main', 'mp008f-main.webp', '삼성 MP008F The Wall MPF LED 캐비닛 정면', 'Samsung', 'MP008F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh008mpfaaa-go/gallery/us-led-signage-lh008mpfaaa-go-mpf-the-wall-premium-indoor-led-display-black-550079002?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MP008F SKU 갤러리 정면 이미지. 국내 사양 근거로 사용하지 않음')],
   mp012f: [image('Main', 'mp012f-main.webp', '삼성 The Wall MPF LED 캐비닛 정면. MP012F와 MP016F 갤러리에 공통으로 게시된 이미지', 'Samsung', 'MP012F', 'https://images.samsung.com/is/image/samsung/p6pim/us/lh012mpfaaa-go/gallery/us-mpf-571024-lh012mpfaaa-go-550063999?$ORIGIN_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 미국 MPF 제품군 공통 정면 이미지. MP016F 갤러리 원본과 동일하며 모델 전용 실물 사진으로 확정하지 않음')],
@@ -172,7 +187,15 @@ export const group1Images = {
     image('Rear', 'sx-1216-rti-rear.webp', 'SurgeX SX-1216-RTi 후면 단자 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '740×120', 'FOUND')
   ],
   'ds-8s': [
-    image('Front', 'ds-8s-front.webp', 'VS ENT DS-8S 순차전원공급기 전면', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '1469×273(제조사 리플렛 EMF에서 추출)', '1469×273', 'VERIFIED', 'Front · 제조사 DS-8S 리플렛 이미지')
+    image('Front', 'ds-8s-front.webp', 'VS ENT DS-8S 순차전원공급기 전면', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '1469×273(제조사 리플렛 EMF에서 추출)', '1469×273', 'VERIFIED', 'Front · 제조사 DS-8S 리플렛 이미지'),
+    {
+      role: 'Rear', file: 'ds-8s-rear.webp',
+      alt: 'VS ENT DS-8S 제조사 제공 실물 후면 사진. CH.8부터 CH.1 순차 출력, SERIAL·DC 24V·LINK·REMOTE·AC 입력 단자',
+      note: 'Rear · 제조사 제공 실물 사진(사용자 업로드, 2026-10-13) · 설명서 도면과 단자 배치가 다른 판본',
+      provider: 'VS ENT', model: 'DS-8S', officialSource: false, verificationStatus: 'FOUND',
+      originalSize: '1500×900', resolution: '1500×365', publicationStatus: '사용자 게시 승인'
+    },
+    image('Diagram', 'ds-8s-diagram.webp', 'VS ENT DS-8S 설명서 3쪽 후면 패널 도면. 순차 전원 출력 8구, 제어·통신 단자와 AC 입력 단자대', 'VS ENT', 'DS-8S', 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14', '제조사 설명서 3쪽 벡터 도면', '1362×280', 'VERIFIED', 'Diagram · 사용자 제공 VS ENT DS-8S Operating Manual 3쪽 후면 패널 도면 · 실물 사진과 제어 단자 형상이 다른 판본')
   ],
   'led-780h': [
     image('Front', 'led-780h-front.webp', 'Magnimage LED-780H 전면 이미지', 'Magnimage', 'LED-780H', 'https://www.magnimage.com/Upload/2022/7/202207266625494.png', '880×278(제조사 제품 목록 대표 이미지)', '880×220', 'FOUND')
@@ -621,16 +644,20 @@ export const group1Images = {
     image('Rear', 'eb-l260f-rear.webp', '엡손 EB-L260F 후면 입출력 단자 패널', 'Epson', 'EB-L260F', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&vid=9dbfd645308d4cd47921f49bdedb4ff7fc13c40f&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '486x173', 'VERIFIED')
   ],
   hg43u800fnfxkr: [
-    image('Main', 'hg43u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG43U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'hg43u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG43U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/abaf8ac7-e9d1-4d61-99b2-3d1f89b28067.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image("Diagram", "hg43u800fnfxkr-diagram.webp", "HG43U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG43U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG43U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")
   ],
   hg50u800fnfxkr: [
-    image('Main', 'hg50u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG50U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/cfdadb87-1342-48f3-9107-71e55db7b799.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'hg50u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG50U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/cfdadb87-1342-48f3-9107-71e55db7b799.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image("Diagram", "hg50u800fnfxkr-diagram.webp", "HG50U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG50U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG50U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")
   ],
   hg65u800fnfxkr: [
-    image('Main', 'hg65u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG65U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'hg65u800fnfxkr-main.webp', '호텔 TV HU8000F 시리즈 정면', 'Samsung', 'HG65U800FNFXKR', 'https://images.samsung.com/kdp/goods/2025/10/21/b9dd4f62-d73d-4524-ac49-5b58c65c44f0.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image("Diagram", "hg65u800fnfxkr-diagram.webp", "HG65U800FNFXKR 삼성전자 한글 사용설명서 12쪽 U800F 전용 후면 단자 도면", "Samsung", "HG65U800FNFXKR", "https://www.samsung.com/sec/business/hotel-tvs/hoteltv-hu8000f/HG65U800FNFXKR/", "900x1120", "900x1120", "VERIFIED", "Diagram · 공식 한글 사용설명서 BN81-28062C-00 12쪽 두 패널 발췌")
   ],
   lh43behhlbfxkr: [
-    image('Main', 'lh43behhlbfxkr-main.webp', '삼성 LH43BEHHLBFXKR 비즈니스TV 정면 이미지', 'Samsung', 'LH43BEHHLBFXKR', 'https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 대한민국 비즈니스 공식 제품 페이지 갤러리')
+    image('Main', 'lh43behhlbfxkr-main.webp', '삼성 LH43BEHHLBFXKR 비즈니스TV 정면 이미지', 'Samsung', 'LH43BEHHLBFXKR', 'https://images.samsung.com/kdp/goods/2026/07/09/c7deb3bd-ac9a-4102-9697-c5d8960f686d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'FOUND', 'Main · 삼성전자 대한민국 비즈니스 공식 제품 페이지 갤러리'),
+    behhlGuideDiagram(43)
   ],
   lh32qmcebgcxkr: [
     image('Main', 'lh32qmcebgcxkr-main.webp', '단독형 UHD M 시리즈 80.1cm 정면', 'Samsung', 'LH32QMCEBGCXKR', 'https://images.samsung.com/kdp/goods/2023/11/27/b5d508b0-450b-484b-92ee-ad6d24cec05d.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
@@ -686,16 +713,20 @@ export const group1Images = {
     image('Diagram', 'lh115qhfebgxkr-diagram.webp', 'LH115QHFEBGXKR 삼성전자 한글 사용설명서 15쪽 QH115FX 후면 단자 도면', 'Samsung', 'LH115QHFEBGXKR', 'https://www.samsung.com/sec/business/smart-signage/standalone-lh115qhfebgxkr/LH115QHFEBGXKR/', '318x1375', '318x1375', 'VERIFIED', 'Diagram · 삼성전자 사용설명서 BN81-26720E-04 15쪽')
   ],
   lh55vmcrbgbxkr: [
-    image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55vmcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VMCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6661afd9-e11d-4006-b99f-25d82ab9fba2.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55vmcrbgbxkr-diagram.webp', 'LH55VMCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면', 'Samsung', 'LH55VMCRBGBXKR', 'https://www.samsung.com/sec/business/smart-signage/videowall-vmc-r-series/LH55VMCRBGBXKR/', '480x2280', '480x2280', 'VERIFIED', 'Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용')
   ],
   lh55vhcrbgbxkr: [
-    image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55vhcrbgbxkr-main.webp', '비디오월 Razor 베젤 0.88mm 시리즈 첫번째 이미지', 'Samsung', 'LH55VHCRBGBXKR', 'https://images.samsung.com/kdp/goods/2024/10/15/6528e22c-b75f-41f3-b452-08bacd0bc570.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55vhcrbgbxkr-diagram.webp', 'LH55VHCRBGBXKR 삼성전자 한글 사용설명서 14쪽 공용 후면 단자 도면', 'Samsung', 'LH55VHCRBGBXKR', 'https://www.samsung.com/sec/business/smart-signage/videowall-vhc-r-series/LH55VHCRBGBXKR/', '480x2280', '480x2280', 'VERIFIED', 'Diagram · 삼성전자 한글 사용설명서 BN81-25348H-02 14쪽 · VH55C-R/VM55C-R 공용')
   ],
   lh55wmfwbgcxkr: [
-    image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh55wmfwbgcxkr-main.webp', 'Flip Pro 전자칠판 55인치 정면', 'Samsung', 'LH55WMFWBGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/59151f93-3b7c-4eec-afc7-16f4cb9e2547.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh55wmfwbgcxkr-diagram.webp', 'LH55WMFWBGCXKR 삼성전자 한글 사용설명서 13쪽 후면 단자 도면', 'Samsung', 'LH55WMFWBGCXKR', 'https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH55WMFWBGCXKR/', '760x760', '760x760', 'VERIFIED', 'Diagram · 공식 한글 사용설명서 BN81-28453F-02 13쪽 WM55FX 전용 후면 도면 발췌')
   ],
   lh75wmfwlgcxkr: [
-    image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED')
+    image('Main', 'lh75wmfwlgcxkr-main.webp', 'Flip Pro 전자칠판 75인치 정면', 'Samsung', 'LH75WMFWLGCXKR', 'https://images.samsung.com/kdp/goods/2026/03/17/ec3ecbb6-32ff-4c50-af3c-a200d8917a90.png?$Q90_1920_1280_F_PNG$', '1920x1280', '1920x1280', 'VERIFIED'),
+    image('Diagram', 'lh75wmfwlgcxkr-diagram.webp', 'LH75WMFWLGCXKR 삼성전자 한글 사용설명서 14쪽 후면 단자 도면', 'Samsung', 'LH75WMFWLGCXKR', 'https://www.samsung.com/sec/business/smart-signage/flip-pro-wmfx/LH75WMFWLGCXKR/', '760x800', '760x800', 'VERIFIED', 'Diagram · 공식 한글 사용설명서 BN81-28453F-02 14쪽 WM75FX 전용 후면 도면 발췌')
   ],
   'control-23-1': [
     image('Main', 'control-23-1-main.webp', 'JBL Control 23-1 실내외 겸용 스피커 정면 각도컷', 'JBL', 'Control 23-1', 'https://adn.harmanpro.com/productattachment/7359/product_attachment/x_large_2x-bb9eecb2cee425988260ed8fbf868dbc.webp', '1500x986', '1500x986', 'VERIFIED'),
@@ -1015,7 +1046,18 @@ export const group1Images = {
   ua845uwb: [
     image('Front', 'ua845uwb-front.webp', 'UA845UWB 전면 패널 (5개 대역 선택 LED, SET 버튼, 전원 스위치)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/549/2ef/c1-/original/5f45082dd425412462578da6f3dc45e3.webp', '3300x3300', '3140x700'),
     image('Rear', 'ua845uwb-rear.webp', 'UA845UWB 후면 패널 (AC 전원 인렛/아울렛, Antenna A/B, RF Output A/B, Cascade 커넥터)', 'Shure', 'UA845UWB Antenna Distribution System (Active VHF/UHF Wideband Antenna/Power Distribution, 5-way)', 'https://products.shureweb.eu/shure_product_db/product_images/files/a35/035/23-/original/9222484608393bff08cfc97cf9fb98b2.webp', '3300x3300', '3140x700')
-  ]
+  ],
+  'emision-media-server': [],
+  'emision-pixelfit': [
+    providedScreenshot('마스킹 화면', 'emision-pixelfit-mask.png', 'emision PixelFit 표시 영역 좌표와 출력 마스킹 화면', '표시 영역과 여백 계산 화면'),
+    providedScreenshot('적용 방식', 'emision-pixelfit-methods.png', 'NVIDIA·AMD 하드웨어 마스크 적용 방식 선택 화면', 'NVIDIA·AMD 마스크 방식 설명'),
+    providedScreenshot('AMD 마스크', 'emision-pixelfit-amd.png', 'emision PixelFit AMD 하드웨어 마스크 화면', 'AMD 마스크 선택 화면'),
+    providedScreenshot('디버그 모드', 'emision-pixelfit-debug.png', 'emision PixelFit 디버그 모드 화면', '디버그 모드 UI 예시')
+  ],
+  'insta360-connect': [image('Main', 'insta360-connect-main.webp', 'Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지', 'Insta360', 'Insta360 Connect', 'https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg', '5120×1320', '1800×464', 'FOUND')],
+  'insta360-link-2': [image('Main', 'insta360-link-2-main.webp', 'Insta360 Link 2와 Link 2C를 함께 보여 주는 공식 키비주얼(Link 2 포함)', 'Insta360', 'Insta360 Link 2', 'https://res.insta360.com/static/dddd8a37240101bc565af9ff599d7674/KV_%401920.jpg', '2881×1600', '1800×999', 'FOUND', 'Main · 공식 키비주얼에 Link 2·Link 2C 함께 표기')],
+  'insta360-wave-business': [image('Main', 'insta360-wave-business-main.webp', 'Insta360 Wave for Business 짙은 색상 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://wassets.insta360.com/store/479729971b3f4af8bf5d5a7ffd7baa31/14655_b564c32b-b619-43e4-9622-0273add5d428.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
+  'insta360-wave': [image('Main', 'insta360-wave-main.webp', 'Insta360 Wave 흰색 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
 };
 
 export function applyPublishedImages(product, slug) {
@@ -1042,6 +1084,7 @@ export const cardImages = {
   hg85u800fnfxkr: 'hg85u800fnfxkr-main.webp',
   lh50behhlbfxkr: 'lh50behhlbfxkr-main.webp',
   lh55behhlbfxkr: 'lh55behhlbfxkr-main.webp',
+  lh65behhlbfxkr: 'lh65behhlbfxkr-diagram.webp',
   lh75behhlbfxkr: 'lh75behhlbfxkr-main.webp',
   lh85behhlbfxkr: 'lh85behhlbfxkr-main.webp',
   mp008f: 'mp008f-main.webp',
@@ -1301,5 +1344,10 @@ export const cardImages = {
   'mxa925w-r': 'mxa925wr-front.webp',
   ua864a: 'ua864a-front.webp',
   'mx392-c': 'mx392c-front.webp',
-  ua845uwb: 'ua845uwb-front.webp'
+  ua845uwb: 'ua845uwb-front.webp',
+  'emision-pixelfit': 'emision-pixelfit-mask.png',
+  'insta360-connect': 'insta360-connect-main.webp',
+  'insta360-link-2': 'insta360-link-2-main.webp',
+  'insta360-wave-business': 'insta360-wave-business-main.webp',
+  'insta360-wave': 'insta360-wave-main.webp',
 };

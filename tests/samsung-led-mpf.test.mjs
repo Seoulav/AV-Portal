@@ -1,3 +1,4 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -61,8 +62,8 @@ test('three MPF cabinets retain all 20 model-matched guide fields without invent
 });
 
 test('guide remains a private evidence source, while the public catalog gains exactly three LED entries', () => {
-  const catalog = beforeW1010Catalog(read('beta/site/catalog.json'));
-  assert.equal(catalog.length, 272);
+  const catalog = beforeW1010Catalog(beforeW009Catalog(read('beta/site/catalog.json')));
+  assert.equal(catalog.length, 274);
   assert.deepEqual(catalog.filter(item => item.categories.includes('LED Signage')).map(item => item.slug).sort(), [...slugs, 'ie015a-e', 'ie020a-e', 'if015r-m'].sort());
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   const index = read('beta/site/search-index.json');

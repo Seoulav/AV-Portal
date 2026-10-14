@@ -1,3 +1,5 @@
+import { isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -84,7 +86,7 @@ test('BLU link routes are not inferred from port existence, and the bridge has o
 
 test('other 237 product JSON files and the four approved flows remain byte-for-byte fixed', () => {
   const digest = createHash('sha256');
-  const files = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
+  const files = readdirSync(directory).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(files.length, 242);
   // Git stores LF; Windows checkouts may materialize CRLF. Compare the same
   // published text on both platforms without weakening the content snapshot.

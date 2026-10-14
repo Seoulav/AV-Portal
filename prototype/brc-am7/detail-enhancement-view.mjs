@@ -301,6 +301,82 @@ export function renderSignalFlow(flow, model) {
   for(const note of flow.notes)details.append(el('p','flow-note',note));host.append(details);
   return host;
 }
+const svgText = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
+export function renderScreenExampleSvg(item) {
+  const bounds = { x: 28, y: 24, width: 304, height: 171 };
+  const sourceWidth = item.signalType === 'output' ? item.outputWidth : item.signalWidth;
+  const sourceHeight = item.signalType === 'output' ? item.outputHeight : item.signalHeight;
+  const illustrative = item.placementHint === 'illustrative-offset';
+  const aspect = sourceWidth / sourceHeight;
+  const screen = aspect < bounds.width / bounds.height
+    ? { x: bounds.x + (bounds.width - bounds.height * aspect) / 2, y: bounds.y, width: bounds.height * aspect, height: bounds.height }
+    : { x: bounds.x, y: bounds.y + (bounds.height - bounds.width / aspect) / 2, width: bounds.width, height: bounds.width / aspect };
+  const activeWidth = screen.width * (illustrative ? 0.28 : item.activeWidth / sourceWidth);
+  const activeHeight = screen.height * (illustrative ? 0.3 : item.activeHeight / sourceHeight);
+  const activeX = illustrative ? screen.x + screen.width * 0.36 : screen.x + screen.width * (item.offsetX || 0) / sourceWidth;
+  const activeY = illustrative ? screen.y + screen.height * 0.34 : screen.y + screen.height * (item.offsetY || 0) / sourceHeight;
+  const displayLabel = illustrative ? '위치 지정 예시' : `${item.activeWidth}×${item.activeHeight}`;
+  const maskLabelX = illustrative
+    ? screen.x + screen.width / 2
+    : item.rightMargin > 0
+      ? activeX + activeWidth + screen.width * item.rightMargin / sourceWidth / 2
+      : screen.x + screen.width / 2;
+  const maskLabelY = illustrative
+    ? screen.y + screen.height * 0.82
+    : item.bottomMargin > 0 && item.rightMargin === 0
+      ? activeY + activeHeight + screen.height * item.bottomMargin / sourceHeight / 2
+      : activeY + activeHeight / 2;
+  const maskLabel = item.masked
+    ? `<text class="screen-mask-label" x="${maskLabelX}" y="${maskLabelY}" text-anchor="middle" dominant-baseline="middle">마스킹(검정) 영역</text>`
+    : '';
+  const activeLabel = item.areaLabel || '활성 표시 영역';
+  return `<svg class="screen-example-monitor" viewBox="0 0 360 258" role="img" aria-label="화면 구성 예시: ${svgText(item.signal)} 신호, ${svgText(displayLabel)} ${svgText(activeLabel)}${item.masked ? ', 검정 마스킹 영역' : ', 마스킹 없음'}">
+    <rect class="screen-monitor-bezel" x="18" y="14" width="324" height="191" rx="12" />
+    <rect class="screen-monitor-surface" x="${screen.x}" y="${screen.y}" width="${screen.width}" height="${screen.height}" rx="2" />
+    <rect class="screen-active-area" x="${activeX}" y="${activeY}" width="${activeWidth}" height="${activeHeight}" />
+    <text class="screen-active-label" x="${activeX + activeWidth / 2}" y="${activeY + activeHeight / 2}" text-anchor="middle" dominant-baseline="middle">${svgText(displayLabel)}</text>
+    ${maskLabel}
+    <path class="screen-monitor-neck" d="M156 205h48l10 30h-68z" />
+    <rect class="screen-monitor-foot" x="132" y="234" width="96" height="8" rx="4" />
+  </svg>`;
+}
+function renderScreenExample(item) {
+  const example = el('article', 'screen-example-card');
+  const figure = el('figure', 'screen-example-figure');
+  const image = el('span', 'screen-example-art'); image.innerHTML = renderScreenExampleSvg(item);
+  const caption = item.placementHint === 'illustrative-offset'
+    ? '파란 칸: 표시 영역(AOI) · 검정: 마스킹 영역 · 좌표·크기 수치 미표시'
+    : item.masked ? `파란 칸: ${item.areaLabel || '활성 표시 영역'} · 검정: 마스킹 영역` : item.note;
+  figure.append(image, el('figcaption', '', caption));
+  example.append(figure);
+  const details = el('dl', 'screen-example-details');
+  const rows = [['적용 방식', item.method], [item.signalType === 'output' ? '출력 해상도' : '신호 해상도', item.signal]];
+  if (item.placementHint === 'illustrative-offset') rows.push(['화면 구성', item.note]);
+  else {
+    rows.push([item.areaLabel || '활성 표시 영역', `${item.activeWidth}×${item.activeHeight}px`]);
+    if (item.masked) {
+      rows.push(['위치', `X ${item.offsetX} · Y ${item.offsetY}`]);
+      rows.push(['여백', `오른쪽 ${item.rightMargin}px · 아래 ${item.bottomMargin}px`]);
+    } else if (item.note) rows.push(['화면 구성', item.note]);
+  }
+  for (const [label, value] of rows) {
+    const row = el('div', 'screen-example-detail');
+    row.append(el('dt', '', label), el('dd', '', value)); details.append(row);
+  }
+  example.append(details);
+  return example;
+}
+function renderScreenExamples(setting, card) {
+  card.classList.add('screen-example-section');
+  const grid = el('div', 'screen-example-grid');
+  for (const [index, item] of setting.items.entries()) {
+    const example = renderScreenExample(item);
+    example.prepend(el('h3', '', item.name));
+    example.dataset.example = String(index + 1);
+    grid.append(example);
+  }
+  card.append(grid);
+}
 export function renderSetting(setting, number) {
   const card = el('section', 'pg-card setting-card');
   card.id = `setting-${number}`;
@@ -309,7 +385,8 @@ export function renderSetting(setting, number) {
   const title = el('h2'); title.id = `${card.id}-title`;
   title.append(el('span', 'pg-idx', card.dataset.card), document.createTextNode(setting.title));
   card.append(title);
-  if (setting.kind === 'modes') for (const item of setting.items) {
+  if (setting.kind === 'screen-examples') renderScreenExamples(setting, card);
+  else if (setting.kind === 'modes') for (const item of setting.items) {
     const details = el('details', 'pg-inline-more');
     details.append(el('summary', '', item.name), el('p', '', item.summary));
     if (item.detail) details.append(el('p', '', item.detail));

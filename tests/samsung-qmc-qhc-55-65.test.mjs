@@ -1,3 +1,5 @@
+import { beforeW009Catalog, isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -56,8 +58,8 @@ test('the four exact Korean models have their own specifications and the correct
 });
 
 test('Samsung brand order expands within the existing QHC and QMC groups', () => {
-  const catalog = beforeW1010Catalog(beforeW1012Catalog(read('beta/site/catalog.json')));
-  assert.equal(catalog.length, 272);
+  const catalog = beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json'))));
+  assert.equal(catalog.length, 274);
   const samsung = filterCatalog(catalog, { brand: 'Samsung', sort: 'brand' });
   assert.equal(samsung.length, 35);
   assert.deepEqual(samsung.filter(item => item.brandSort.group === 'QHC').map(item => item.slug),
@@ -69,7 +71,7 @@ test('Samsung brand order expands within the existing QHC and QMC groups', () =>
 test('all 243 pre-existing product JSON files and catalog entries remain unchanged', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW004Name(file) && !newSlugs.has(file.slice(0, -5)) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
   assert.equal(files.length, 243);
   const digests = files.map(file => {
     const slug = file.slice(0, -5);
@@ -77,6 +79,6 @@ test('all 243 pre-existing product JSON files and catalog entries remain unchang
     return [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(raw, slug), slug), slug), slug))];
   });
   assert.equal(sha(JSON.stringify(digests)), '4cae051f2642c39623fe16c9334d54528b16d249abefe98d55ef2070715d678a');
-  const previous = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json'))))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const previous = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => !newSlugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(previous)), '0245d3e4eb24affc18c5606fc95afc2394175393eae83d0ea452bdf2e9e9602f');
 });

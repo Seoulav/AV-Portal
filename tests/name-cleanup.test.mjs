@@ -1,3 +1,4 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyCatalogNames, applyDetailNames } from '../beta/name-cleanup.mjs';
@@ -72,17 +73,17 @@ test('normalizes the approved BSS EC-4BV Network/Control label only', async () =
 });
 
 test('renamed catalog categories preserve home top-category counts and filter membership', async () => {
-  const catalog = beforeW1010Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8')));
+  const catalog = beforeW1010Catalog(beforeW009Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'))));
   assert.deepEqual(mapTopCategories(catalog).map(({ id, count }) => [id, count]), [
     ['audio', 116],
-    ['video', 67],
+    ['video', 69],
     ['camera-conference', 30],
     ['display-projection', 58], // W-007 adds two QMC sizes.
     ['network-control', 18],
     ['power-infrastructure', 4]
   ]);
   assert.equal(filterCatalog(catalog, { topCategory: 'power-infrastructure' }).length, 4);
-  assert.equal(filterCatalog(catalog, { topCategory: 'video' }).length, 67);
+  assert.equal(filterCatalog(catalog, { topCategory: 'video' }).length, 69);
   assert.ok(filterCatalog(catalog, { categories: ['Power Conditioner'] }).some(item => item.product === 'SX-1216-RTi'));
   assert.equal(filterCatalog(catalog, { categories: ['Video Processor Card'] }).length, 10);
 });

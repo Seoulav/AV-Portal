@@ -47,6 +47,13 @@ export function userManualLinkFor(item) {
 // 이 참고자료가 붙는 카탈로그 항목 각각을 기준으로 한 줄씩 적는다.
 export const userReferences = [
   {
+    brand: 'SD컴퍼니',
+    product: 'emision PixelFit',
+    file: 'emision-pixelfit-capture.pdf',
+    title: 'emision PixelFit 화면 안내(사용자 제공)',
+    note: uploadNote
+  },
+  {
     brand: 'JBL',
     product: 'AC18/95',
     file: 'jbl-ae-series-u-bracket-handbook.pdf',
@@ -58,6 +65,35 @@ export const userReferences = [
     product: 'AC18/26',
     file: 'jbl-ae-series-u-bracket-handbook.pdf',
     title: 'AE Series U-Bracket Handbook (브라켓 설치·치수 참고자료, AC18 외 다수 모델 공용)',
+    note: uploadNote
+  }
+  ,
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Connect',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Link 2',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Wave for Business',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
+    note: uploadNote
+  },
+  {
+    brand: 'Insta360',
+    product: 'Insta360 Wave',
+    file: 'insta360-conference-line-collection-20260729.pdf',
+    title: 'Insta360 Conference Line Product Collection 브로슈어 (2026-07-29)',
     note: uploadNote
   }
 ];

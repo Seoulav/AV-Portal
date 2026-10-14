@@ -1,8 +1,10 @@
+import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { filterCatalog } from '../beta/site/app.js';
 import { beforeW1010Catalog } from './w1010-history.mjs';
+import { withoutW004Catalog } from './w004-history.mjs';
 
 const catalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
 const slugs = items => items.map(item => item.slug);
@@ -39,7 +41,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
 });
 
 test('all other catalog products keep their complete previous brand order', () => {
-  const historicalCatalog = beforeW1010Catalog(catalog);
+  const historicalCatalog = withoutW004Catalog(beforeW1010Catalog(beforeW009Catalog(catalog)));
   const others = historicalCatalog.filter(item => item.brand !== 'Samsung');
   assert.equal(others.length, 237);
   const shure = others.filter(item => item.brand === 'Shure');

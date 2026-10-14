@@ -227,6 +227,38 @@ export const IO_OVERRIDES = Object.freeze({
     ports: [{ connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 }],
     note: 'Roland V-02HD MK II Reference Manual, Main Specifications: separate PROGRAM OUT and PREVIEW OUT HDMI Type A connectors; https://static.roland.com/assets/media/pdf/V-02HD_MKII_reference_eng03_W.pdf',
   },
+  'ki-pro-go2#9': {
+    match: { connector: 'SDI BNC / XLR R', signal: 'Timecode' },
+    ports: [],
+    action: 'already-represented',
+    note: 'AJA Ki Pro GO2 official specifications: RP-188 timecode arrives on an existing SDI input BNC, or LTC on the existing right analog-audio XLR input. Neither mode adds a jack; https://www.aja.com/products/ki-pro-go2',
+  },
+  'tr535#0': {
+    match: { connector: '3G-SDI, HDMI ×2, IP, USB', signal: 'Video/Audio out' },
+    ports: [
+      { connector: 'HDMI', signals: ['HDMI'], direction: 'out', quantity: 2 },
+      { connector: 'BNC', signals: ['SDI'], direction: 'out', quantity: 1 },
+    ],
+    note: 'AVer Korea TR535 model brochure and official rear photo show HDMI 1/2 and 3G-SDI outputs. IP/PoE RJ45 and USB 3.0 each have a separate portal I/O row, so do not duplicate them; https://kr.presentation.aver.com/DownloadFile.ashx?n=3259&t=ModelBrochure ; https://kr.presentation.aver.com/model/tr535',
+  },
+  'tr535#2': {
+    match: { connector: 'RS-232, RS-422, IP, USB', signal: 'Camera control' },
+    ports: [
+      { connector: 'MINI-DIN-8', signals: ['RS-232'], direction: 'both', quantity: 1 },
+      { connector: 'RJ45', signals: ['RS-422'], direction: 'both', quantity: 1 },
+    ],
+    note: 'AVer Korea TR535 brochure lists RS-232 (DIN8), RS-422 (RJ45), IP and USB control; the model-specific rear photo shows one socket of each physical type. IP/PoE RJ45 and USB 3.0 are already separate portal I/O rows; https://kr.presentation.aver.com/DownloadFile.ashx?n=3259&t=ModelBrochure ; https://kr.presentation.aver.com/model/tr535',
+  },
+  ...Object.fromEntries(Object.entries({
+    'v-160hd#16': 'https://static.roland.com/assets/media/pdf/V-160HD_Control_jpn03_W.pdf',
+    'v-1hd-plus#10': 'https://static.roland.com/assets/media/pdf/V-1HD_plus_reference_eng02_W.pdf',
+    'v-80hd#13': 'https://static.roland.com/assets/media/pdf/V-80HD_Control_eng01_W.pdf',
+    'vr-6hd#12': 'https://static.roland.com/assets/media/pdf/VR-6HD_Control_eng02_W.pdf',
+  }).map(([key, url]) => [key, {
+    match: { connector: 'DB-9(Male)', signal: 'RS-232' },
+    ports: [{ connector: 'DSUB-9', signals: ['RS-232'], direction: 'both', quantity: 1 }],
+    note: `Roland model-specific RS-232 reference: DB-9 pin 2 RXD and pin 3 TXD, full-duplex communication on one connector; ${url}`,
+  }])),
   // Alta 4K fixed HDMI/SDI mirrored output pairs; optional SFP+ module rows stay unresolved.
   ...Object.fromEntries(['zenith-100', 'zenith-200'].flatMap(id => [
     [`${id}#4`, {
@@ -451,6 +483,12 @@ export const IO_OVERRIDES = Object.freeze({
     match: { connector: 'Output terminal block', signal: 'Speaker output' },
     ports: [{ connector: 'TERMINAL-BLOCK', signals: ['SPEAKER'], direction: 'out', quantity: 1 }],
     note: 'Powersoft MEZZO user guide rear-panel callout identifies one connector for CH2–CH1 outputs; the series datasheet specifies two output channels on Euro 5 mm for the 322 AD; https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf ; https://www.powersoft.com/wp-content/uploads/datasheet/PS_MEZZO_DS.pdf',
+  },
+  'mezzo-322-ad#7': {
+    match: { connector: '3.5mm 스테레오 미니잭', signal: 'Unbalanced analog audio in' },
+    ports: [],
+    action: 'already-represented',
+    note: 'Powersoft MEZZO user guide rear-panel callout shows one stereo mini-jack for channels 1–2. This same physical input is already emitted by mezzo-322-ad#0; do not create a duplicate connector. https://www.powersoft.com/wp-content/uploads/user_guide/PS_MEZZO_UG.pdf',
   },
   'blu-100#5': {
     match: { connector: 'Phoenix/Combicon', signal: '제어 입력/로직 출력(GPIO)' },

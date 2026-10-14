@@ -1,3 +1,5 @@
+import { beforeW009Catalog, isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -9,6 +11,7 @@ import { beforeAverW12009Catalog } from './aver-w12009-history.mjs';
 import { beforeW014Catalog } from './w014-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
+import { beforeW13007BehhlGuideProduct } from './w13007-behhl-guide-history.mjs';
 const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(value, slug), slug), slug), slug), slug);
 const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(value, slug), slug), slug), slug), slug);
 
@@ -29,9 +32,9 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const slug = 'lh43behhlbfxkr';
 
 test('BEHX-H products occupy the business-TV sort slot', () => {
-  const catalog = beforeW1010Catalog(beforeW1012Catalog(read('beta/site/catalog.json')));
+  const catalog = beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json'))));
   const card = catalog.find(item => item.slug === slug);
-  assert.equal(catalog.length, 272);
+  assert.equal(catalog.length, 274);
   assert.deepEqual(catalog.filter(item => /^lh(?:43|50|55|65|75|85)behhlbfxkr$/.test(item.slug)).map(item => item.slug), [slug, 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']);
   assert.equal(card.product, 'LH43BEHHLBFXKR');
   assert.deepEqual(card.categories, ['사이니지', 'Display', 'Business TV']);
@@ -61,7 +64,7 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
   assert.ok(product.images.some(image => image.role === 'Main' && image.resolution === '1920x1280'));
   assert.equal(product.images[0].verificationStatus, 'FOUND', 'gallery image has no printed model name');
   assert.equal(product.imageStatuses.find(item => item.role === 'Main').status, 'FOUND');
-  assert.equal(product.portMap, undefined);
+  assert.equal(beforeW13007BehhlGuideProduct(product, slug).portMap, undefined);
   assert.equal(product.signalFlow, undefined);
   const prepared = prepareProductDetail(product);
   assert.ok(visibleDetailCards(prepared).includes('gallery'));
@@ -73,11 +76,11 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
 test('the existing 242 detail files and 249 catalog objects remain byte/value-identical', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
   assert.equal(files.length, 242);
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
   const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(detailDigests)), '8dc33b1204a5fad8487a4e87d511eeca9862ca3ad6aa33fdffa211be69a49789');
-  const originalCatalog = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(read('beta/site/catalog.json'))))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug)).map(beforeW024Catalog);
+  const originalCatalog = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog);
   assert.equal(sha(JSON.stringify(originalCatalog)), '3b8f31e02ec31ff94cd6b8192447a14549c2ed03188ea7d392ae51f9f262f6da');
 });

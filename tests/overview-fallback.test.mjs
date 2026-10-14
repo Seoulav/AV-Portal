@@ -45,9 +45,10 @@ test('all published fallback display values stay within 20 characters without ch
     fallback++;
     assert.ok(product.keySpecifications.every(item=>[item.value,item.unit].filter(Boolean).join(' ').length<=20),file);
   }
-  // W-20261004-003 authors 29 Shure cards that previously used the fallback.
-  assert.equal(authored,123); // W-007 adds two authored QMC cards.
-  assert.equal(fallback,142);
+  // W-010 moves DM3 from fallback to a four-tile authored card so the
+  // model-specific Dante difference is visible without losing prior values.
+  assert.equal(authored,125);
+  assert.equal(fallback,146);
 });
 
 test('RTCOM detail keeps its existing unfiltered fallback presentation',async()=>{

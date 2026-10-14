@@ -1,3 +1,5 @@
+import { beforeW009Uploads, isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -25,6 +27,10 @@ import { beforeSamsungW04011Raw } from './samsung-w04011-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';
 import { beforeW04021Uploads } from './document-lock-history.mjs';
 import { beforeW033Uploads } from './w033-history.mjs';
+import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
+import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
+import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
+import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -37,9 +43,10 @@ const removed = {
 };
 
 test('W-016 removes only the three requested PDF files and six upload links', () => {
-  assert.equal(beforeW033Uploads(withoutW006Uploads(manifest.uploads)).length, 107);
+  const uploadsBeforeNewDocs = withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads)));
+  assert.equal(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 107);
   assert.equal(manifest.uploads.filter(item => /\/winstar-/.test(item.file)).length, 0);
-  assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(manifest.uploads)))))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
+  assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))))))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
   assert.equal(beforeW032Mirrors(manifest.mirrors).length, 111);
   assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), 'ad01fc0b4ac91d999ae119a14f4fe858ac5a60f09fd2b7225c38bde02bc566ef');
   for (const file of Object.keys(removed))
@@ -60,7 +67,7 @@ test('all six affected products retain Samsung documents and no Winstar viewer l
 
 test('all 242 published product JSON files and their source records remain fixed', () => {
   const directory = new URL('beta/site/detail/data/', root);
-  const names = readdirSync(directory).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
   for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));

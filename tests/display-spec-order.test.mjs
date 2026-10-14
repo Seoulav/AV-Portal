@@ -1,3 +1,5 @@
+import { isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW013A2Product } from './w013-a2-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
@@ -57,7 +59,7 @@ test('the 131 approved removals leave every other display field and all 225 othe
   for(const [slug,expected] of Object.entries(evidence.untouched)){
     assert.equal(hash(beforeBssW04015Raw(beforeBssAlignmentRaw(beforeW024Raw(normalized(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`${slug}.json`,folder),'utf8'), slug), slug)),slug),slug),slug)),expected,`${slug} untouched pre-flow bytes`);
   }
-  assert.equal(readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file)).length,242);
+  assert.equal(readdirSync(folder).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).length,242);
 });
 
 test('all 54 published Samsung key facts keep a sourced FOUND or VERIFIED row',()=>{
@@ -112,7 +114,7 @@ test('04 specification table omits the uniform PRODUCT type while all 242 record
     assert.doesNotMatch(source,/specificationRows\.push\(\['종류',\s*data\.itemType\]\)/,`${path} renders type`);
     assert.match(source,/specificationRows\.push\(\['시리즈',\s*data\.series\]\)/,`${path} keeps series`);
   }
-  for(const file of readdirSync(folder).filter(file=>file.endsWith('.json') && file !== 'lh43behhlbfxkr.json')){
+  for(const file of readdirSync(folder).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== 'lh43behhlbfxkr.json')){
     assert.equal(JSON.parse(readFileSync(new URL(file,folder),'utf8')).itemType,'PRODUCT',`${file} keeps itemType`);
   }
 });

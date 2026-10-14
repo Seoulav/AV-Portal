@@ -2,6 +2,7 @@
 export const detailAssetPairs = [
   ['prototype/brc-am7/detail-enhancements.mjs', 'beta/site/detail/detail-enhancements.mjs', 'copy'],
   ['prototype/brc-am7/detail-enhancement-view.mjs', 'beta/site/detail/detail-enhancement-view.mjs', 'copy'],
+  ['prototype/brc-am7/ds8s-guide.mjs', 'beta/site/detail/ds8s-guide.mjs', 'copy'],
   ['prototype/brc-am7/layer-tables.mjs', 'beta/site/detail/layer-tables.mjs', 'copy'],
   ['prototype/brc-am7/index.html', 'beta/site/detail/index.html', 'html'],
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],

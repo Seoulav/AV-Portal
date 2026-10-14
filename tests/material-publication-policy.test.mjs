@@ -10,8 +10,23 @@ test('published product data uses provenance without manufacturer-permission gat
     const product = JSON.parse(await readFile(new URL(file, detailDir), 'utf8'));
     assert.doesNotMatch(JSON.stringify(product), /제조사 (?:재사용|재배포) 권리|재게시 권한 미확인|권리 확인 필요/, file);
     for (const image of product.images) {
-      assert.match(image.publicationStatus, /사용자 게시 승인/);
-      assert.ok(image.sourceUrl, `${file}: image source`);
+      if (file === 'ds-8s.json' && image.role === 'Rear') {
+        // The DS-8S rear is a manufacturer photograph supplied directly by
+        // the user, so there is no public origin URL to invent.
+        assert.equal(image.officialSource, false);
+        assert.equal(image.provider, 'VS ENT');
+        assert.equal(image.model, 'DS-8S');
+        assert.match(image.note, /제조사 제공 실물 사진\(사용자 업로드, 2026-10-13\)/);
+        assert.match(image.publicationStatus, /사용자 게시 승인/);
+        assert.equal(image.sourceUrl, undefined);
+      } else if (file === 'emision-pixelfit.json') {
+        assert.equal(image.publicationStatus, '사용자 제공 화면 캡처');
+        assert.equal(image.provider, '사용자 제공 SD컴퍼니 소개서(2026-10-13)');
+        assert.equal(image.model, product.model);
+      } else {
+        assert.match(image.publicationStatus, /사용자 게시 승인/);
+        assert.ok(image.sourceUrl, `${file}: image source`);
+      }
     }
   }
 });

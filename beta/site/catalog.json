@@ -4594,6 +4594,7 @@
       "https://www.samsung.com/sec/business/smart-signage/behx-h-series/LH65BEHHLBFXKR/"
     ],
     "slug": "lh65behhlbfxkr",
+    "card_image": "lh65behhlbfxkr-diagram.webp",
     "brandSort": {
       "group": "Business TV",
       "order": 6,
@@ -4734,5 +4735,112 @@
     ],
     "slug": "ds-8s",
     "card_image": "ds-8s-front.webp"
+  },
+  {
+    "brand": "SD컴퍼니",
+    "product": "emision Media Server",
+    "categories": [
+      "영상",
+      "Video",
+      "Media Server"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.sdcompany.kr/products/7",
+      "https://www.sdcompany.kr/products/8"
+    ],
+    "slug": "emision-media-server"
+  },
+  {
+    "brand": "SD컴퍼니",
+    "product": "emision PixelFit",
+    "categories": [
+      "영상",
+      "Video",
+      "Software"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.sdcompany.kr/"
+    ],
+    "slug": "emision-pixelfit",
+    "card_image": "emision-pixelfit-mask.png",
+    "reference_link": [
+      "./manuals/emision-pixelfit-capture.pdf"
+    ]
+  },
+  {
+    "brand": "Insta360",
+    "product": "Insta360 Connect",
+    "categories": [
+      "화상회의",
+      "Conferencing",
+      "Video Bar"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.insta360.com/product/insta360-connect"
+    ],
+    "slug": "insta360-connect",
+    "card_image": "insta360-connect-main.webp",
+    "reference_link": [
+      "./manuals/insta360-conference-line-collection-20260729.pdf"
+    ]
+  },
+  {
+    "brand": "Insta360",
+    "product": "Insta360 Link 2",
+    "categories": [
+      "화상회의",
+      "Conferencing",
+      "Webcam"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.insta360.com/product/insta360-link2"
+    ],
+    "slug": "insta360-link-2",
+    "card_image": "insta360-link-2-main.webp",
+    "reference_link": [
+      "./manuals/insta360-conference-line-collection-20260729.pdf"
+    ]
+  },
+  {
+    "brand": "Insta360",
+    "product": "Insta360 Wave for Business",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Microphone"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://store.insta360.com/product/wave-for-business",
+      "https://onlinemanual.insta360.com/wave-for-business/ko-kr/camera/product-description/overview"
+    ],
+    "slug": "insta360-wave-business",
+    "card_image": "insta360-wave-business-main.webp",
+    "reference_link": [
+      "./manuals/insta360-conference-line-collection-20260729.pdf"
+    ]
+  },
+  {
+    "brand": "Insta360",
+    "product": "Insta360 Wave",
+    "categories": [
+      "오디오",
+      "Conferencing",
+      "Microphone"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://store.insta360.com/kr/product/wave",
+      "https://onlinemanual.insta360.com/wave/ko-kr/camera/specifications"
+    ],
+    "slug": "insta360-wave",
+    "card_image": "insta360-wave-main.webp",
+    "reference_link": [
+      "./manuals/insta360-conference-line-collection-20260729.pdf"
+    ]
   }
 ]

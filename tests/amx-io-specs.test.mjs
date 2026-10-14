@@ -1,4 +1,7 @@
+import { isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
+import { beforeW013C3Product } from './w013-c3-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
@@ -61,7 +64,7 @@ test('NX-1200, 2200 and 3200 expose the missing USB 2.0 host counts without chan
 });
 
 test('VARIA-80 gains only data-sheet-supported USB and display/memory facts', () => {
-  const current = product('varia-80');
+  const current = beforeW013C3Product(product('varia-80'), 'varia-80');
   const before = evidence.products['varia-80'].before;
   assert.equal(current.io.length, before.io.length + 1);
   assert.deepEqual(current.io[0], before.io[0]);
@@ -175,7 +178,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   }
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
     const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug), slug),slug),slug),slug),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)

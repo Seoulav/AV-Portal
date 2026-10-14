@@ -1,3 +1,5 @@
+import { isW009DetailFile } from './w009-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { isW06002Name } from './w06002-history.mjs';
@@ -35,7 +37,7 @@ import { beforeSamsungW04010Raw } from './samsung-w04010-history.mjs';
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const targets = ['dci-2-300n', 'dci-2-600n', 'dci-4-300n', 'dci-4-600n'];
-const crown = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && file !== 'lh43behhlbfxkr.json').map(file => file.slice(0, -5)).filter(slug => read(`beta/site/detail/data/${slug}.json`).manufacturer === 'Crown');
+const crown = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== 'lh43behhlbfxkr.json').map(file => file.slice(0, -5)).filter(slug => read(`beta/site/detail/data/${slug}.json`).manufacturer === 'Crown');
 const evidence = read('Work/기록/W-20261003-009-evidence.json');
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
@@ -132,7 +134,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   }
   const dir = new URL('beta/site/detail/data/',root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name=>name.endsWith('.json') && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!crown.includes(name.slice(0,-5))).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!isW009DetailFile(name)&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
     const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)

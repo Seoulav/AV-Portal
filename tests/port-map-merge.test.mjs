@@ -1,4 +1,4 @@
-import test from 'node:test';
+﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { prepareProductDetail, isAbsentConnector, prepareIoFallbackEntries, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
@@ -8,6 +8,7 @@ import { beforeW032Product } from './w032-history.mjs';
 import { beforeW12004Product } from './w12004-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
 import { isW1012Name } from './w1012-history.mjs';
+import { isW004Name } from './w004-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = async path => readFile(new URL(path, root), 'utf8');
@@ -37,7 +38,7 @@ test('remaining io-only products retain every present connector in the 02 fallba
     const cards = renderIoFallbackCards(entries);
     assert.equal(cards.children.length, entries.length, raw.model);
     assert.equal(selectCardModes(data, data.enhancements).gallery, 'io-fallback', raw.model);
-    if (!data.images.length) assert.equal(raw.model, 'LH65BEHHLBFXKR', 'only the verified-photo gap may show I/O without a photograph');
+    if (!data.images.length) assert.ok(['LH65BEHHLBFXKR', '4CH Model A / Model N'].includes(raw.model), 'only explicitly reviewed photo gaps may show I/O without a photograph');
     for (const [index, item] of data.io.filter(item => !isAbsentConnector(item)).entries()) {
       assert.equal(cards.children[index].children[0].children[0].textContent, String(index + 1), raw.model);
       assert.ok(cards.children[index].textContent.includes(connectorPresentation(item).displayConnector), raw.model);
@@ -51,7 +52,10 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261012-006 moves 15 Epson and seven Panasonic projectors into maps.
   // W-009 maps three existing AVer products, moving them from fallback to map.
   // W-20261013-001 maps all 18 existing Powersoft amplifiers; no product is added.
-  assert.deepEqual(counts, { mapIo: 127, ioOnly: 118, neither: 20 });
+  // W-20261013-007 maps two video walls and six U800F hotel TVs; totals stay fixed.
+  // W-20261013-007 adds rear maps for two WMFX panels; the products are unchanged.
+  // W-009 adds four products with I/O and no rear maps; all remain in the fallback.
+  assert.deepEqual(counts, { mapIo: 143, ioOnly: 107, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

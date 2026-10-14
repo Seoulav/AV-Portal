@@ -8,11 +8,33 @@
     "Control",
     "Power Conditioner"
   ],
-  "english": "Eight-channel sequential power distributor with one unswitched AC outlet, remote contact control, and RS-485.",
-  "korean": "DS-8S는 AC 출력 8계통을 순차 제어하고 비연동 AC 출력 1계통을 제공하는 순차전원공급기다.",
-  "verificationSummary": "사용자 제공 VS ENT DS-8S 리플렛과 동일 모델 사양서를 대조했다. AC 출력은 리플렛 본문 2200W와 표 2500W가 상충해 두 값을 병기했다.",
+  "english": "Eight-channel sequential power distributor. The supplied rear photograph shows SERIAL and LINK connectors; an older manual edition documents an RJ-45 RS-485 link.",
+  "korean": "DS-8S는 AC 출력 8계통을 순차 제어하는 순차전원공급기다. 리플렛은 비연동 AC 출력 1계통을 표기하지만, 제공된 실물 후면 사진에서는 별도 단자가 식별되지 않는다.",
+  "verificationSummary": "사용자 제공 VS ENT DS-8S 리플렛·사양서와 제조사 제공 실물 후면 사진을 대조했다. AC 출력 전력 2200W/2500W와 DC 출력 전류 500mA/800mA/1.5A는 출처별 차이를 병기한다. 실물의 SERIAL·LINK 단자와 설명서의 RJ-45 링크는 판본 차이로 구분한다.",
   "packageStatus": "CONFLICTED",
-  "overview": "DS-8S는 연동 AC 출력 8계통과 비연동 AC 출력 1계통을 제공하는 순차전원공급기다. 채널별 순차 간격 1~99초, SEQUENCE/바이패스, REMOTE 접점·모니터 단자와 RS-485 제어를 제공한다.\n\n제조사 리플렛 본문은 AC 출력 각각을 2200W로, 같은 자료의 사양표는 채널당 2500W(AC 220V 10A)로 표기한다. 사용자 제공 동일 모델 사양서도 2200W와 MAX. 2500W를 함께 적는다. 어느 값을 단일 정격으로 확정하지 않고 출처 문구와 조건을 함께 표시한다.",
+  "overview": "DS-8S는 AC 출력 8계통을 순차 제어하는 순차전원공급기다. 리플렛에는 비연동 AC 출력 1계통이 적혀 있지만, 제공된 실물 후면 사진에서는 별도 단자가 식별되지 않는다. 실물 후면에는 SERIAL 4핀·LINK IN/OUT·REMOTE SWITCH 단자가 보이고, 설명서·설정 가이드에는 다른 판본의 RS-485 RJ-45 링크가 적혀 있다.\n\n제조사 리플렛 본문은 AC 출력 각각을 2200W로, 같은 자료의 사양표는 채널당 2500W(AC 220V 10A)로 표기한다. 사용자 제공 동일 모델 사양서도 2200W와 MAX. 2500W를 함께 적는다. 어느 값을 단일 정격으로 확정하지 않고 출처 문구와 조건을 함께 표시한다.",
+  "keyFacts": [
+    {
+      "label": "순차 AC 출력",
+      "value": "8구",
+      "unit": ""
+    },
+    {
+      "label": "DC 출력(실물 인쇄)",
+      "value": "24 V / 1.5A",
+      "unit": ""
+    },
+    {
+      "label": "자료별 DC 전류",
+      "value": "500mA · 800mA · 1.5A",
+      "unit": ""
+    },
+    {
+      "label": "실물 후면 제어",
+      "value": "SERIAL · LINK IN/OUT",
+      "unit": ""
+    }
+  ],
   "images": [
     {
       "role": "Front",
@@ -26,6 +48,33 @@
       "verificationStatus": "VERIFIED",
       "originalSize": "1469×273(제조사 리플렛 EMF에서 추출)",
       "resolution": "1469×273",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "ds-8s-rear.webp",
+      "alt": "VS ENT DS-8S 제조사 제공 실물 후면 사진. CH.8부터 CH.1 순차 출력, SERIAL·DC 24V·LINK·REMOTE·AC 입력 단자",
+      "note": "Rear · 제조사 제공 실물 사진(사용자 업로드, 2026-10-13) · 설명서 도면과 단자 배치가 다른 판본",
+      "provider": "VS ENT",
+      "model": "DS-8S",
+      "officialSource": false,
+      "verificationStatus": "FOUND",
+      "originalSize": "1500×900",
+      "resolution": "1500×365",
+      "publicationStatus": "사용자 게시 승인"
+    },
+    {
+      "role": "Diagram",
+      "file": "ds-8s-diagram.webp",
+      "alt": "VS ENT DS-8S 설명서 3쪽 후면 패널 도면. 순차 전원 출력 8구, 제어·통신 단자와 AC 입력 단자대",
+      "note": "Diagram · 사용자 제공 VS ENT DS-8S Operating Manual 3쪽 후면 패널 도면 · 실물 사진과 제어 단자 형상이 다른 판본",
+      "provider": "VS ENT",
+      "model": "DS-8S",
+      "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "제조사 설명서 3쪽 벡터 도면",
+      "resolution": "1362×280",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -42,7 +91,11 @@
     },
     {
       "role": "Rear",
-      "status": "MISSING",
+      "status": "FOUND"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
       "sourceUrl": "http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14"
     },
     {
@@ -138,17 +191,17 @@
       "group": "Power",
       "name": "DC 출력",
       "value": "24",
-      "unit": "V / 500mA",
-      "condition": "비연동(UNSWITCHED)",
-      "source": "L",
-      "verification": "VERIFIED"
+      "unit": "V / 1.5A",
+      "condition": "제조사 제공 실물 후면 인쇄: 24V / 1.5A. 리플렛: 500mA, 설명서 3쪽: 800mA. 판본별 표기가 달라 동일 정격으로 일반화하지 않음.",
+      "source": "F, L, M",
+      "verification": "CONFLICTED"
     },
     {
       "group": "Connection",
       "name": "사용 케이블",
       "value": "CAT-5",
       "unit": "",
-      "condition": "RJ-45 JACK",
+      "condition": "리플렛·설정 가이드의 RS-485 RJ-45 링크 판본 기준. 제조사 제공 실물 후면 사진에는 SERIAL 4핀·LINK IN/OUT 단자가 보이고 RJ-45는 보이지 않음",
       "source": "L",
       "verification": "VERIFIED"
     },
@@ -243,8 +296,8 @@
       "quantity": "8",
       "protocol": "",
       "availability": "",
-      "condition": "채널별 순차 제어",
-      "source": "L",
+      "condition": "채널별 순차 제어 · 실물 후면 오른쪽 CH.1부터 왼쪽 CH.8까지 8구, MAX 9900W 인쇄",
+      "source": "L, M, F",
       "verification": "VERIFIED"
     },
     {
@@ -255,45 +308,81 @@
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "UNSWITCHED",
+      "condition": "UNSWITCHED(리플렛 기재). 제조사 제공 실물 후면에서는 별도 비연동 아울렛 미식별 — 판본 차이 확인 필요",
       "source": "L",
       "verification": "VERIFIED"
     },
     {
       "group": "Power",
       "connector": "DC 출력",
-      "signal": "DC 24V / 500mA",
+      "signal": "DC 24V 출력",
       "direction": "OUT",
       "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "UNSWITCHED",
-      "source": "L",
-      "verification": "VERIFIED"
+      "condition": "실물 후면 인쇄 24V / 1.5A · 리플렛 500mA · 설명서 3쪽 800mA. 판본별 전류 표기 차이",
+      "source": "F, L, M",
+      "verification": "CONFLICTED"
     },
     {
       "group": "Control",
-      "connector": "RJ-45 JACK",
-      "signal": "RS-485 링크",
+      "connector": "SERIAL 4핀 단자대",
+      "signal": "TX / RX / V+ / GND",
       "direction": "IN/OUT",
-      "quantity": "",
-      "protocol": "CAT-5",
-      "availability": "",
-      "condition": "링크 통신거리 1km 이내. 물리 단자 수는 리플렛 미기재",
-      "source": "L",
-      "verification": "VERIFIED"
-    },
-    {
-      "group": "Control",
-      "connector": "REMOTE 접점",
-      "signal": "DRY Contact",
-      "direction": "IN",
-      "quantity": "",
+      "quantity": "1",
       "protocol": "",
       "availability": "",
-      "condition": "물리 단자 형상·수량은 리플렛 미기재",
-      "source": "L",
-      "verification": "VERIFIED"
+      "condition": "제조사 제공 실물 후면 인쇄. 설명서·설정 가이드 판본의 RS-485 RJ-45 링크와 단자 형상이 달라 적용 판본 구분 필요",
+      "source": "F, M, G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "LINK OUT(Mini-DIN)",
+      "signal": "LINK",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "제조사 제공 실물 후면 LINK OUT 인쇄. 설명서·설정 가이드 판본의 RJ-45 링크와 형상이 다름",
+      "source": "F, M, G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "LINK IN(Mini-DIN)",
+      "signal": "LINK",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "제조사 제공 실물 후면 LINK IN 인쇄. 설명서·설정 가이드 판본의 RJ-45 링크와 형상이 다름",
+      "source": "F, M, G",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RCA(REMOTE SWITCH)",
+      "signal": "원격 스위치",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "실물 후면 REMOTE SWITCH 인쇄. 설명서 3쪽은 SW 연결잭으로 표기하며 형상 차이 있음",
+      "source": "F, M",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "RCA(SPRC LED)",
+      "signal": "SPRC LED",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "실물 후면 SPRC LED 인쇄. 설명서 3쪽의 REMOTE LED와 동일 기능인지는 미확인",
+      "source": "F, M",
+      "verification": "FOUND"
     },
     {
       "group": "Control",
@@ -303,11 +392,105 @@
       "quantity": "",
       "protocol": "",
       "availability": "",
-      "condition": "물리 단자 형상·수량은 리플렛 미기재",
+      "condition": "물리 단자 형상·수량은 리플렛 미기재. 사용자 제공 실물 후면 사진에서 별도 모니터 단자로 식별되지 않음",
       "source": "L",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "AC 입력 단자대(L/N/G)",
+      "signal": "AC 220V 60Hz 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "실물 후면 L/N/G 및 WHITE:LIVE · BLACK:NEUTRAL · GREEN:GROUND 인쇄. 설명서 3쪽 표기는 L/N/E",
+      "source": "F, M",
+      "verification": "FOUND"
     }
   ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "ds-8s-rear.webp",
+      "width": 1500,
+      "height": 365
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "순차 AC 출력 CH1–8",
+        "desc": "실물 후면 오른쪽 CH.1부터 왼쪽 CH.8 · AC 220V MAX.2500W/구, 전체 MAX.9900W 인쇄",
+        "x1": 96,
+        "x2": 1265,
+        "y": 270,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "SERIAL 4핀",
+        "desc": "TX · RX · V+ · GND 인쇄 · 설명서 판본의 RJ-45 링크와 형상 차이",
+        "x1": 207,
+        "x2": 266,
+        "y": 82,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "DC 24V 출력",
+        "desc": "실물 인쇄 1.5A · 리플렛 500mA · 설명서 800mA로 판본별 불일치",
+        "x1": 771,
+        "x2": 869,
+        "y": 84,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "LINK OUT",
+        "desc": "실물 후면 미니DIN형 LINK OUT · 설명서 판본의 RJ-45 링크와 형상 차이",
+        "x1": 926,
+        "x2": 971,
+        "y": 92,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "SPRC LED",
+        "desc": "실물 후면 RCA SPRC LED 인쇄 · 설명서 REMOTE LED와 동일 기능 여부 미확인",
+        "x1": 975,
+        "x2": 1012,
+        "y": 89,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "LINK IN",
+        "desc": "실물 후면 미니DIN형 LINK IN · 설명서 판본의 RJ-45 링크와 형상 차이",
+        "x1": 1072,
+        "x2": 1120,
+        "y": 92,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "REMOTE SWITCH",
+        "desc": "실물 후면 RCA REMOTE SWITCH 인쇄 · 원격 스위치 입력",
+        "x1": 1123,
+        "x2": 1164,
+        "y": 89,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "AC 전원 입력 L/N/G",
+        "desc": "실물 후면 L/N/G 3극 단자대 · LIVE/NEUTRAL/GROUND 인쇄",
+        "x": 1438,
+        "y1": 61,
+        "y2": 270,
+        "side": "right"
+      }
+    ]
+  },
   "sources": [
     {
       "code": "L",
@@ -328,7 +511,17 @@
     {
       "code": "M",
       "name": "DS-8S AMX 통신 설명서(사용자 제공)",
-      "scope": "동일 모델 4쪽 설명서. 공개 사본 manuals/vs-ent-ds-8s-amx-manual-ko.pdf"
+      "scope": "동일 모델 4쪽 설명서. 3쪽에 후면 패널 도면·단자 설명. 공개 사본 manuals/vs-ent-ds-8s-amx-manual-ko.pdf"
+    },
+    {
+      "code": "G",
+      "name": "순차 전원 공급 설정 가이드(사용자 제공, 2022-05)",
+      "scope": "4쪽 설정 가이드. 설정 요약은 1~4쪽, RJ-45 핀 배치와 POWER OFF 주의는 4쪽. 공개 사본 manuals/vs-ent-ds-8s-setting-guide-ko.pdf. 문서 자체에 DS-8S 모델명은 없어 사용자 지정 적용 근거로 연결"
+    },
+    {
+      "code": "F",
+      "name": "제조사 제공 실물 사진(사용자 업로드, 2026-10-13)",
+      "scope": "DS-8S 후면 원본 1500×900, SHA-256 3847832b24c59f9127497ebca60da9b915555f4deab8ebb36ccfab2b150a3670. SERIAL·LINK IN/OUT·REMOTE·AC 입력 및 DC 24V/1.5A 인쇄를 사진에서 직접 대조"
     }
   ],
   "issues": [
@@ -337,16 +530,28 @@
       "status": "CONFLICTED",
       "title": "AC 출력 전력의 원문 표기 차이",
       "detail": "리플렛 본문 각 2200W, 같은 리플렛 표 채널당 2500W(AC 220V 10A). 별도 동일 모델 사양서는 2200W와 MAX. 2500W를 병기한다. 정격·최대의 단일 확정값을 만들지 않음."
+    },
+    {
+      "code": "C2",
+      "status": "CONFLICTED",
+      "title": "DC 출력 전류의 원문 표기 차이",
+      "detail": "제조사 제공 실물 후면 인쇄 24V/1.5A, 리플렛 24V/500mA, 동일 모델 설명서 3쪽 24V/800mA. 현재 실물 사진의 1.5A를 우선 표시하되 세 근거의 판본별 차이를 보존하고 모든 판본의 공통 정격으로 일반화하지 않음."
+    },
+    {
+      "code": "C3",
+      "status": "CONFLICTED",
+      "title": "후면 제어 단자의 판본별 형상 차이",
+      "detail": "사용자 제공 제조사 실물 사진에는 SERIAL 4핀·LINK OUT/IN 미니DIN형·SPRC LED·REMOTE SWITCH RCA가 보인다. 설명서 3쪽과 설정 가이드 4쪽은 RS-485 RJ-45 링크 판본을 설명한다. 두 자료의 적용 판본을 혼합하지 않음."
     }
   ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
     "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
-    "specIntro": "제조사 리플렛·동일 모델 사양서의 값과 충돌 조건을 함께 표시합니다.",
-    "ioIntro": "리플렛에 명시된 전원 출력·제어 단자만 표시합니다.",
-    "supplementalNote": "AC 출력 전력은 원문 표기가 서로 달라 단일 정격으로 확정하지 않았습니다.",
+    "specIntro": "제조사 실물 사진·리플렛·설명서의 DC 출력 전류와 AC 출력 전력 충돌을 함께 표시합니다.",
+    "ioIntro": "실물 후면 사진의 단자를 우선 표시합니다. 설명서·설정 가이드의 RJ-45 링크는 다른 판본 안내로 구분합니다.",
+    "supplementalNote": "AC 출력 전력과 DC 출력 전류는 자료마다 다릅니다. 사진 속 실물 인쇄와 문서 표기를 함께 확인하십시오.",
     "footerNote": "VS ENT DS-8S 사용자 제공 제조사 자료 기준",
     "visualVariant": "official-product-images",
-    "galleryFootNote": "제조사 DS-8S 리플렛 이미지"
+    "galleryFootNote": "전면은 제조사 리플렛, 후면은 사용자 업로드 제조사 실물 사진, 도면은 설명서 3쪽"
   }
 }
