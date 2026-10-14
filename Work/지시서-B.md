@@ -417,9 +417,8 @@
 - [x] 정적 예시 카드를 칩 전환형 큰 카드로 구현. 탭 키보드 조작 및 접근성 상태 구현; 모바일은 그림 뒤에 설명이 오도록 CSS 구성.
 - [x] overview·작업 모드·주요 기능에 NVIDIA만 실제 커스텀 해상도 생성, NVIDIA는 생성·마스킹 모두, NVIDIA 외 GPU는 마스킹만 가능하다는 사용자 확인(2026-10-14) 반영. 신호 해상도 유지형 마스킹과 실제 OS/GPU 해상도 생성의 차이 설명 및 GPU 지원 비교 표 추가.
 - [x] 제안서 근거 6·9쪽과 사용자 확인을 D/U 근거에 연결. 제품 상세 JSON 외 제품 데이터는 수정하지 않음.
-- [x] 최신 `origin/main` (`781ec120`, W-006 기록·W-008 명세 및 QM32/QM55 전면 안내 변경 포함) 통합. 상세 자산 13개·검색 인덱스·스냅샷 재생성 후 전체 직렬 테스트 695건 중 694 통과·0 실패·기존 skip 1, `verify-pages`(281 항목·278 상세·142 업로드 PDF, 잠금 PDF 12건 유지), 검색 인덱스 `--check`, feature wording(대상 0), `git diff --check` 통과.
-- [ ] 1280px·390px 화면 캡처와 탭형/정적 큰 카드 시각 비교 미완료. 현재 환경에서 브라우저 캡처 자동화가 사용자 Edge/PDF 세션에 연결되는 문제가 있어 재시도하지 않음. 공개 화면을 캡처해 육안 확인하기 전에는 PR 병합·배포 완료로 기록하지 않음.
-- [x] Draft PR [#505](https://github.com/Seoulav/AV-Portal/pull/505) 생성. 필수 `builder` CI 성공(run [38575384994](https://github.com/Seoulav/AV-Portal/actions/runs/38575384994)).
-- [ ] 1280px·390px 캡처 및 탭형/정적 큰 카드 시각 비교가 미완료라 병합·배포·공개 확인은 보류. 현재 CUA/브라우저 세션은 사용자 Edge PDF 창에 연결되는 이력이 있어 추가 시도하지 않음.
-- [x] 사용자 병합 순서에 따라 #506 병합(SHA `3e341e40e4cf7204dd5cb0393956764f9c4d4820`) 후 최신 main 통합. `beta/site/search-index.json` 충돌은 손으로 해소하지 않고 detail asset·검색 인덱스·공개 스냅샷 생성기로 재생성.
-- [x] #506 통합 후 전체 직렬 테스트 698건 중 697 통과·0 실패·기존 skip 1, `verify-pages`(281 항목·278 상세·142 업로드 PDF, 잠금 PDF 12건 유지), 검색 인덱스 `--check`, feature wording(대상 0), diff 검사 통과.
+- [x] 최신 `origin/main`에 #506 Carbonite 설명과 #507 INOGENI 등록을 통합. 검색 인덱스 충돌은 수동 해소하지 않고 상세 자산·검색 인덱스·공개 스냅샷·읽기용 카탈로그를 원본에서 재생성.
+- [x] #507 통합 후 전체 직렬 테스트 701건 중 700 통과·0 실패·기존 skip 1, `verify-pages`(283 항목·280 상세·501 검증 이미지·142 업로드 PDF, 잠금 PDF 12건 유지), 검색 인덱스 `--check`, feature wording(대상 0), diff 검사를 통과.
+- [x] Work가 1280px·390px 시각 캡처 생략을 승인(2026-10-14). 탭형 예시 구현으로 진행; 정적 카드 비교는 생략.
+- [x] PR [#505](https://github.com/Seoulav/AV-Portal/pull/505) Ready 전환 후 필수 `builder` CI 성공(run [38579252097](https://github.com/Seoulav/AV-Portal/actions/runs/38579252097)). 병합 SHA `e48dc1bdd94a1ebbbf7a7b699b5d073ecfaafe95`.
+- [x] Pages 배포 성공(run [38579905649](https://github.com/Seoulav/AV-Portal/actions/runs/38579905649)). 공개 상세 HTML·JSON HTTP 200 확인. 공개 JSON에 GPU별 지원표와 3개 예시 포함; 공개 JS 해시가 저장소와 일치하고 03 번호·gallery 뒤 이동 로직이 배포된 코드에 포함됨. 공개 렌더러·CSS 해시 일치, 탭·비교표·420px 모바일 규칙 존재 확인.
