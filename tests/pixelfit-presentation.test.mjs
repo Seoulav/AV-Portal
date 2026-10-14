@@ -14,27 +14,27 @@ test('PixelFit keeps evidence-based overview facts in the standard presentation'
     { label: '대응 범위', value: '모든 디스플레이', unit: '' }
   ]);
   assert.equal(product.presentation.keyFactsVariant, undefined);
-  assert.equal(product.settings.some(setting => setting.kind === 'mode-cards'), false);
-  assert.deepEqual(product.settings.map(setting => setting.kind), ['screen-examples']);
+  assert.equal(product.settings.some(setting => setting.kind === 'modes'), true);
+  assert.deepEqual(product.settings.map(setting => setting.kind), ['modes', 'screen-examples']);
   const { enhancementErrors } = await import('../beta/site/detail/detail-enhancements.mjs');
   assert.deepEqual(enhancementErrors(product), []);
 });
 
 test('PixelFit explains user-confirmed flexible AOI positioning', () => {
-  assert.match(product.overview, /좌표는 화면 안 어느 위치든 지정/);
+  assert.match(product.overview, /좌표는 화면 안 어느 위치든 지정할 수 있고/);
   assert.match(product.overview, /기준점 변경도 가능/);
   assert.ok(product.sources.some(source => source.code === 'U' && /사용자 확인\(2026-10-14\)/.test(source.name)));
 });
 
 test('PixelFit document reference is an uploaded PDF mapped to its own product', () => {
-  const entry = userReferences.find(item => item.brand === 'SD컴퍼니' && item.product === 'emision PixelFit');
+  const entry = userReferences.find(item => item.brand === 'SD컴퍼니' && item.product === 'emision PixelFit' && item.file === 'emision-pixelfit-capture.pdf');
   assert.deepEqual(entry && { file: entry.file, title: entry.title }, {
     file: 'emision-pixelfit-capture.pdf', title: 'emision PixelFit 화면 안내(사용자 제공)'
   });
 });
 
 test('PixelFit uploaded PDF exposes working local view and download actions', () => {
-  const reference = userReferences.find(item => item.product === 'emision PixelFit');
+  const reference = userReferences.find(item => item.product === 'emision PixelFit' && item.file === 'emision-pixelfit-capture.pdf');
   const [document] = uploadedDocumentsFor('emision-pixelfit', {
     uploads: [{ slug: 'emision-pixelfit', file: 'manuals/emision-pixelfit-capture.pdf', title: reference.title, kind: 'reference' }]
   });
@@ -56,7 +56,7 @@ test('PixelFit shows NVIDIA and AMD in a shared 4K AOI coordinate system', async
   assert.deepEqual([aoi.signalWidth, aoi.signalHeight], [3840, 2160]);
   assert.deepEqual([aoi.activeWidth, aoi.activeHeight, aoi.offsetX, aoi.offsetY], [1295, 780, 0, 0]);
   assert.deepEqual([aoi.rightMargin, aoi.bottomMargin], [2545, 1380]);
-  assert.equal(aoi.method, 'AMD·일반: AOI 밖 마스킹 + emision 작업표시줄');
+  assert.match(aoi.method, /NVIDIA.*AMD/);
   assert.equal(aoi.masked, true);
 
   assert.equal(nvidia.signalType, 'fixed');
@@ -64,7 +64,7 @@ test('PixelFit shows NVIDIA and AMD in a shared 4K AOI coordinate system', async
   assert.deepEqual([nvidia.signalWidth, nvidia.signalHeight], [3840, 2160]);
   assert.deepEqual([nvidia.activeWidth, nvidia.activeHeight], [1340, 780]);
   assert.equal(nvidia.masked, true);
-  assert.equal(nvidia.method, 'AOI 기준 커스텀 해상도 제작(활성 윈도우 해상도·바탕화면 해상도)');
+  assert.match(nvidia.method, /GPU 커스텀 해상도 모드: NVIDIA 전용/);
   assert.doesNotMatch(nvidia.method, /마스킹 없음/);
 
   assert.equal(position.signalType, 'fixed');

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { MAX_PDF_BYTES } from './mirror-docs.mjs';
 import { group1Images, cardImages } from './group1-images.mjs';
 import { group2Previews, previewCatalogFieldsFor } from './group2-images.mjs';
-import { userManuals, userManualLinkFor, userReferences, userReferenceLinkFor, identity } from './user-manuals.mjs';
+import { userManuals, userManualLinkFor, userReferences, userReferenceLinksFor, identity } from './user-manuals.mjs';
 import { allowedHostsFor, isAllowedHost, isAllowedHttpOfficialPage } from './manufacturer-hosts.mjs';
 import { computeSnapshot, hashText, readSnapshot } from './update-snapshot.mjs';
 import { derivedCatalogFields, linkScopes, optionalCatalogFields, previewImageScopes, stripDerivedCatalogFields } from '../prototype/group1/group1-data.mjs';
@@ -34,13 +34,13 @@ assert.match(commonStyle, /\.pg-page\s*\{/);
 assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
 
 // 제조사·대리점 링크를 못 찾아 사용자가 직접 올린 매뉴얼·참고자료 PDF: 실제 PDF, 목록과 폴더가 정확히 일치해야 한다.
-// 한 파일을 여러 카탈로그 항목이 공유할 수 있으므로(예: 여러 모델을 함께 다루는 시리즈 매뉴얼·브라켓 핸드북)
-// 파일명 자체의 중복은 허용하고, 대신 각 목록 안에서 같은 (brand, product)가 두 번 나오지 않는지만 확인한다.
+// 한 파일을 여러 카탈로그 항목이 공유할 수 있으며, 한 제품에 서로 다른 참고자료 PDF를 둘 수 있다.
+// 매뉴얼은 (brand, product), 참고자료는 (brand, product, file) 중복만 차단한다.
 {
   const manualFiles = userManuals.map(entry => entry.file);
   assert.equal(new Set(userManuals.map(entry => identity(entry.brand, entry.product))).size, userManuals.length, '사용자 업로드 매뉴얼에 같은 제품이 중복 등록됨');
   const referenceFiles = userReferences.map(entry => entry.file);
-  assert.equal(new Set(userReferences.map(entry => identity(entry.brand, entry.product))).size, userReferences.length, '사용자 업로드 참고자료에 같은 제품이 중복 등록됨');
+  assert.equal(new Set(userReferences.map(entry => identity(entry.brand, entry.product) + '\\0' + entry.file)).size, userReferences.length, '사용자 업로드 참고자료에 같은 제품·파일이 중복 등록됨');
   const manualsDir = new URL('manuals/', site);
   const onDisk = (await readdir(manualsDir)).filter(name => !name.startsWith('.'));
   const expectedFiles = [...new Set([...manualFiles, ...referenceFiles, ...uploadManifest.uploads.map(entry => entry.file.replace(/^manuals\//, ''))])];
@@ -233,9 +233,9 @@ for (const item of catalog) {
   if (item.reference_link !== undefined) {
     assert.ok(Array.isArray(item.reference_link) && item.reference_link.length > 0, `${item.product}: 참고자료 링크`);
     assert.equal(new Set(item.reference_link).size, item.reference_link.length, `${item.product}: 참고자료 링크 중복`);
-    const uploaded = userReferenceLinkFor(item);
-    if (uploaded !== null) {
-      assert.deepEqual(item.reference_link, [uploaded], `${item.product}: 참고자료 링크가 사용자 업로드 목록과 다름`);
+    const uploaded = userReferenceLinksFor(item);
+    if (uploaded.length > 0) {
+      assert.deepEqual(item.reference_link, uploaded, item.product + ': 참고자료 링크가 사용자 업로드 목록과 다름');
     } else {
       for (const link of item.reference_link) {
         assert.ok(typeof link === 'string' && link.trim(), `${item.product}: 참고자료 링크`);
@@ -247,7 +247,7 @@ for (const item of catalog) {
       }
     }
   } else {
-    assert.equal(userReferenceLinkFor(item), null, `${item.product}: 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음`);
+    assert.deepEqual(userReferenceLinksFor(item), [], item.product + ': 사용자 업로드 참고자료가 있는데 reference_link가 비어 있음');
   }
   if (item.slug !== undefined) {
     assert.match(item.slug, /^[a-z0-9-]+$/, '상세 slug 형식');

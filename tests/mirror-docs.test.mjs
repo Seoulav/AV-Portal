@@ -58,3 +58,14 @@ test('manifest uploads retain old entries and product-specific user-provided tit
     title: 'emision PixelFit 화면 안내(사용자 제공)'
   }]);
 });
+
+test('maps multiple PixelFit reference PDFs to their own titles', () => {
+  const uploads = collectUploads([{
+    slug: 'emision-pixelfit', brand: 'SD컴퍼니', product: 'emision PixelFit',
+    reference_link: ['./manuals/emision-pixelfit-capture.pdf', './manuals/emision-pixelfit-description.pdf']
+  }]);
+  assert.deepEqual(uploads.map(item => item.title), [
+    'emision PixelFit 화면 안내(사용자 제공)',
+    'emision PixelFit 설명자료(사용자 제공)'
+  ]);
+});

@@ -1773,6 +1773,12 @@
       "file": "manuals/emision-pixelfit-capture.pdf",
       "kind": "reference",
       "title": "emision PixelFit 화면 안내(사용자 제공)"
+    },
+    {
+      "slug": "emision-pixelfit",
+      "file": "manuals/emision-pixelfit-description.pdf",
+      "kind": "reference",
+      "title": "emision PixelFit 설명자료(사용자 제공)"
     }
   ]
 }

@@ -351,3 +351,14 @@
 - [x] PR [#486](https://github.com/Seoulav/AV-Portal/pull/486) 필수 `builder` CI 성공 후 병합(SHA `6f131a7b8bb73ec195cc2e5b90c9ad4173f943a0`). Pages run [#38511064123](https://github.com/Seoulav/AV-Portal/actions/runs/38511064123) 성공.
 - [x] 공개 상세 1280px·390px에서 AOI 카드 3개, 각 3840×2160 캔버스, 위치 지정 문구, 문서 액션 확인. document/body 폭은 1280px viewport에서 1265px, 390px viewport에서 390px로 넘침 없음. 공개 캡처: `Work/기록/W-20261013-004-screens/pixelfit-document-public/`.
 - [x] 공개 PDF URL HTTP 200·`application/pdf`·432,999 bytes. 뷰어 `/ 6`, 6 canvas 렌더. 내려받은 실파일 SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06` 일치.
+
+
+## PixelFit 설명자료 등록 후속 (2026-10-14)
+
+- 기준: 최신 origin/main에서 시작한 codex/W-20261014-pixelfit-description-pdf (기준 SHA d6a69ae9, PR #488 병합분 포함).
+- 새 자료: 사용자 제공 PixelFit_설명자료.pdf; 입력 SHA-256 e25ccb1547e9711f25f7c618f18314c7df93e113ec2698b12319cce222476dbe, 12쪽, 잠금 없음. 모든 쪽 텍스트·연락표 시각 검토 완료.
+- 사용자 Work 승인(2026-10-14): 작업 모드 2종(① NVIDIA 전용 GPU 커스텀 해상도 ② 바탕화면 마스킹)과 마스킹 내부 NVIDIA·AMD 하드웨어 마스크 선택 구조 승인. 사용자 구두 설명과의 관계를 source D에 6·9쪽 근거와 함께 명시.
+- 반영: PixelFit 설명 PDF 별도 업로드·카탈로그/매니페스트 등록, 기존 6쪽 화면 안내 PDF 별도 유지. 상세의 모드 설정·features·사양·설명과 D 근거표에 3·4·6·8·9·11쪽 인용 추가. OS 버전·GPU/드라이버 최소 요건·판매 단위는 미확정 유지.
+- 동기화 경로가 같은 제품의 여러 사용자 참고 PDF를 지원하도록 userReferenceLinksFor 추가, 매니페스트 생성 시 제품+파일별 제목 조회, verify-pages 중복 기준 확장. PDF 두 카드 보기/다운로드 회귀 테스트 추가.
+- 검증: PixelFit/mirror-docs 집중 테스트 18/18 통과. 전체 테스트 684건 중 683 통과, 0 실패, 1 기존 skip. verify-pages: 280 제품·277 상세·490 이미지·141 업로드 PDF 통과. 검색 인덱스·읽기용 카탈로그 --check 통과. 주요기능 명사형 검사 통과. 전체 해시 비교는 출처/기능/수치의 승인된 사실 보강 때문에 변경 항목으로 보고하며 실패 원인은 아님.
+- 상태: REVIEW 준비; 최신 main 재통합, PR·CI·Pages 및 공개 화면 확인은 진행 예정.

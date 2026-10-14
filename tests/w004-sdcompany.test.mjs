@@ -65,17 +65,17 @@ test('PixelFit presents the 4K AOI baseline and NVIDIA custom resolution as stat
     ['3840×2160', undefined, undefined, undefined, undefined, undefined, undefined]
   ]);
   assert.deepEqual(examples?.map(item => item.method), [
-    'AMD·일반: AOI 밖 마스킹 + emision 작업표시줄',
-    'AOI 기준 커스텀 해상도 제작(활성 윈도우 해상도·바탕화면 해상도)',
+    '바탕화면 마스킹 모드: NVIDIA 하드웨어 마스크 또는 AMD 하드웨어 마스크 선택 · emision 작업표시줄 추가 권장',
+    'GPU 커스텀 해상도 모드: NVIDIA 전용 · AOI에 맞춘 데스크톱 해상도',
     '화면 안 위치와 기준점 지정'
   ]);
-  assert.match(product.overview, /NVIDIA.*커스텀 해상도/);
-  assert.match(product.overview, /AMD.*일반.*마스킹.*작업표시줄/);
+  assert.match(product.overview, /GPU 커스텀 해상도 모드: NVIDIA 전용/);
+  assert.match(product.overview, /NVIDIA 하드웨어 마스크 또는 AMD 하드웨어 마스크/);
   assert.match(product.overview, /화면 안 어느 위치든 지정할 수 있고, 기준점 변경도 가능/);
   assert.ok(product.sources.some(source => source.code === 'U' && /사용자 확인\(2026-10-14\)/.test(source.name)));
-  assert.ok(product.features.some(item => item.text === 'NVIDIA GPU 커스텀 해상도 제작'));
-  assert.ok(product.features.some(item => item.text === '일반 모드 마스킹·작업표시줄 표시 및 디버그 모드'));
-  assert.equal(product.specifications.find(item => item.name === 'NVIDIA 적용 방식')?.condition, '사용자 확인(2026-10-14)');
+  assert.ok(product.features.some(item => item.text.startsWith('작업 모드 · GPU 커스텀 해상도: NVIDIA 전용')));
+  assert.ok(product.features.some(item => item.text === '마스킹 모드 · emision 작업표시줄 추가(권장)'));
+  assert.match(product.specifications.find(item => item.name === 'GPU 커스텀 해상도 모드')?.condition ?? '', /6쪽/);
   assert.equal(product.presentation.keyFactsVariant, undefined, 'the previous standard facts presentation is restored');
   assert.equal(product.settings.some(item => item.kind === 'mode-cards'), false);
   const { renderScreenExampleSvg } = await import('../beta/site/detail/detail-enhancement-view.mjs');
