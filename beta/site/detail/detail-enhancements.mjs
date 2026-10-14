@@ -70,7 +70,7 @@ function validEvidence(refs, product) {
   }, 1);
 }
 export function validFlow(flow, product) {
-  if (isDisplayProduct(product) || !record(flow) || !keys(flow, ['type', 'description', 'inputs', 'outputs', 'processes', 'connections', 'auxiliary', 'groups', 'band', 'legend', 'notes']) || !flowTypes.includes(flow.type) || !shortText(flow.description)) return false;
+  if (isDisplayProduct(product) || !record(flow) || !keys(flow, ['type', 'layout', 'scenarios', 'description', 'inputs', 'outputs', 'processes', 'connections', 'auxiliary', 'groups', 'band', 'legend', 'notes']) || !flowTypes.includes(flow.type) || !shortText(flow.description)) return false;
   const evidence = value => validEvidence(value, product);
   const endpoint = n => record(n) && keys(n, ['id', 'label', 'signal', 'group', 'caption', 'tag', 'evidence']) && identifier(n.id) && shortText(n.label) && signalKinds.includes(n.signal) && optionalText(n.caption) && (n.tag === undefined || (shortText(n.tag) && n.tag.length <= 8)) && evidence(n.evidence);
   if (!list(flow.inputs, 32, endpoint, 1) || !list(flow.outputs, 32, endpoint, 1) || !list(flow.processes, 6, n => record(n) && keys(n, ['id', 'kind', 'label', 'caption', 'crosspoints', 'evidence']) && identifier(n.id) && processKinds.includes(n.kind) && shortText(n.label) && optionalText(n.caption) && evidence(n.evidence), 1)) return false;
@@ -97,6 +97,27 @@ export function validFlow(flow, product) {
     if (!list(c.examples, 16, x => record(x) && keys(x, ['input', 'output']) && c.inputs.includes(x.input) && c.outputs.includes(x.output)) || new Set(c.examples.map(x => x.output)).size !== c.examples.length) return false;
   }
   if (flow.band !== undefined && (!record(flow.band) || !keys(flow.band, ['label', 'detail', 'evidence']) || !shortText(flow.band.label) || !optionalText(flow.band.detail) || !evidence(flow.band.evidence))) return false;
+  if (flow.layout === undefined) {
+    if (flow.scenarios !== undefined) return false;
+  } else {
+    if (flow.layout !== 'cable-scenarios' || flow.type !== 'extender') return false;
+    const inputIds = new Set(flow.inputs.map(n => n.id)), processIds = new Set(flow.processes.map(n => n.id)),
+      outputIds = new Set(flow.outputs.map(n => n.id));
+    const scenario = s => record(s) && keys(s, ['id', 'title', 'mode', 'source', 'cable', 'sink', 'receiver', 'receiverLabel', 'displayLabel', 'outputLabel', 'peripherals', 'cableLabel', 'signalLabel', 'powerLabel', 'powerDirection', 'steps', 'evidence']) &&
+      identifier(s.id) && shortText(s.title) && shortText(s.mode) &&
+      inputIds.has(s.source) && processIds.has(s.cable) && outputIds.has(s.sink) &&
+      ['monitor', 'hub'].includes(s.receiver) && shortText(s.receiverLabel) && shortText(s.displayLabel) && shortText(s.outputLabel) &&
+      list(s.peripherals, 6, shortText) && shortText(s.cableLabel) && shortText(s.signalLabel) && shortText(s.powerLabel) &&
+      s.powerDirection === 'reverse' && list(s.steps, 5, shortText, 3) && evidence(s.evidence) &&
+      ['video', 'usb'].every(signal => flow.connections.some(e => e.from === s.source && e.to === s.cable && e.signal === signal) &&
+        flow.connections.some(e => e.from === s.cable && e.to === s.sink && e.signal === signal));
+    if (!list(flow.scenarios, 2, scenario, 2) ||
+        new Set(flow.scenarios.map(s => s.id)).size !== 2 ||
+        new Set(flow.scenarios.map(s => s.source)).size !== 2 ||
+        new Set(flow.scenarios.map(s => s.cable)).size !== 2 ||
+        new Set(flow.scenarios.map(s => s.sink)).size !== 2 ||
+        flow.scenarios.map(s => s.receiver).sort().join(',') !== 'hub,monitor') return false;
+  }
   return list(flow.legend, 9, l => record(l) && keys(l, ['signal', 'label']) && signalKinds.includes(l.signal) && shortText(l.label)) && list(flow.notes, 12, shortText);
 }
 function validScreenExample(item) {
