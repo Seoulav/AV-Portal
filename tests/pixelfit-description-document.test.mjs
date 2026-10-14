@@ -6,12 +6,12 @@ import { userReferences, userReferenceLinksFor } from '../beta/user-manuals.mjs'
 import { uploadedDocumentsFor, documentActionLabels } from '../beta/site/detail/pdf-documents.mjs';
 
 const slug = 'emision-pixelfit';
-const title = 'emision PixelFit \uC124\uBA85\uC790\uB8CC(\uC0AC\uC6A9\uC790 \uC81C\uACF5)';
+const title = 'emision PixelFit 제품 제안서(사용자 제공)';
 const product = JSON.parse(readFileSync(new URL('../beta/site/detail/data/emision-pixelfit.json', import.meta.url)));
 const catalog = JSON.parse(readFileSync(new URL('../beta/site/catalog.json', import.meta.url)));
 const manifest = JSON.parse(readFileSync(new URL('../beta/site/docs/manifest.json', import.meta.url)));
 
-test('PixelFit publishes the explanatory PDF separately from the six-page screen guide', () => {
+test('PixelFit publishes the product proposal PDF separately from the six-page screen guide', () => {
   const refs = userReferences.filter(item => item.product === 'emision PixelFit');
   assert.deepEqual(refs.map(({ file, title: name }) => ({ file, title: name })), [
     { file: 'emision-pixelfit-capture.pdf', title: 'emision PixelFit \uD654\uBA74 \uC548\uB0B4(\uC0AC\uC6A9\uC790 \uC81C\uACF5)' },
@@ -48,7 +48,7 @@ test('PixelFit presents two parent modes and nests NVIDIA and AMD under desktop 
     'GPU 커스텀 해상도 모드',
     '바탕화면 마스킹 모드',
     '마스킹 모드 GPU 선택지',
-    '설명자료 표시 영역 예시',
+    '제품 제안서 표시 영역 예시',
     '적용 확인'
   ]);
   assert.equal(product.specifications.some(item => ['NVIDIA 적용 방식', 'AMD 적용 방식'].includes(item.name)), false);

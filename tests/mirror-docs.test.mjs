@@ -66,6 +66,6 @@ test('maps multiple PixelFit reference PDFs to their own titles', () => {
   }]);
   assert.deepEqual(uploads.map(item => item.title), [
     'emision PixelFit 화면 안내(사용자 제공)',
-    'emision PixelFit 설명자료(사용자 제공)'
+    'emision PixelFit 제품 제안서(사용자 제공)'
   ]);
 });

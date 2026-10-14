@@ -58,7 +58,7 @@ export const userReferences = [
     brand: 'SD컴퍼니',
     product: 'emision PixelFit',
     file: 'emision-pixelfit-description.pdf',
-    title: 'emision PixelFit 설명자료(사용자 제공)',
+    title: 'emision PixelFit 제품 제안서(사용자 제공)',
     note: uploadNote
   },
   {
