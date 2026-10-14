@@ -9,6 +9,7 @@ import { withoutW011Uploads } from './w011-history.mjs';
 import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
 import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
 import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
+import { beforeW13007BehhlGuideProduct } from './w13007-behhl-guide-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -28,7 +29,7 @@ test('BEHX-H guide confirms an ANT connector but does not prove its physical cou
   assert.match(guide?.name ?? '', /삼성전자.*BN68-26620A-01/);
   assert.match(guide?.scope ?? '', /1쪽.*ANT.*43~85인치 공용/);
   assert.match(guide?.scope ?? '', /manuals\/samsung-behx-h-installation-guide-ko\.pdf/);
-  assert.equal(product.portMap, undefined);
+  assert.equal(beforeW13007BehhlGuideProduct(product, 'lh43behhlbfxkr').portMap, undefined);
 });
 
 test('BEHX-H evidence update leaves other product data and uploaded documents intact', () => {
@@ -40,7 +41,7 @@ test('BEHX-H evidence update leaves other product data and uploaded documents in
     documents: '52b9daaf350c5f45dbe1199767d07315d19342bcfb8e8d4ad2e322a84de5912d',
     issues: 'f8352e13333d06ddbfa932281efe2b0659136b6d642487cb89e9c348b1ed92b1',
   };
-  for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(product, 'lh43behhlbfxkr')[field]), expected, field);
+  for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(beforeW13007BehhlGuideProduct(product, 'lh43behhlbfxkr'), 'lh43behhlbfxkr')[field]), expected, field);
   const manifest = read('beta/site/docs/manifest.json');
   const uploadsBeforeNewDocs = withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads));
   assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 110);

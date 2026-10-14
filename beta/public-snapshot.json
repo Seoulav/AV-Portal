@@ -2,7 +2,7 @@
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
     "count": 280,
-    "sha256": "E8FD8EC27ED45AB35EAAF50D53A4EC6492BE990A7B9BC95079F19A874C0F6DC1",
+    "sha256": "9E86E62A56F1391400B00AB5B22B6684B76A5FD7DE4687E25C9AC9AE7010FDDC",
     "baselineCount": 25,
     "baselineSha256": "8835F3145F1DBC14141E700D4F3F99ACFD847020AB08A562D0C2C2EE53F053B8"
   },
@@ -872,7 +872,7 @@
       "io": 9
     },
     "lh43behhlbfxkr": {
-      "sha256": "A234204520E31E71B5DD2E07256E824C5C1ADEA9ED3C08D97AA5FB4E069E1979",
+      "sha256": "252115ACB907F244C681AB2C427FFE0DE9055FB29715B56D22C1E4A4B2F3B513",
       "features": 4,
       "specifications": 22,
       "io": 6
@@ -890,7 +890,7 @@
       "io": 9
     },
     "lh50behhlbfxkr": {
-      "sha256": "DEDEEE5E12433CB10EB66A58DCCC982627650333BDBA074775E5145F73DF3D80",
+      "sha256": "EE866AE97439F2C00066FBF724BE77CD0E8C37821C1A7E67C206EB8CB806D9EC",
       "features": 4,
       "specifications": 22,
       "io": 6
@@ -902,7 +902,7 @@
       "io": 9
     },
     "lh55behhlbfxkr": {
-      "sha256": "C1A7011A7641CCC5F28D3265BE20DD743862EC1088B7094BD373DE9A639D2D41",
+      "sha256": "3BDAC1CAA2D0AB01C9AFCA7D65B0A0D7982A14AC87C2ADCDA6FE7236ABBDCCC3",
       "features": 4,
       "specifications": 22,
       "io": 6
@@ -938,7 +938,7 @@
       "io": 9
     },
     "lh65behhlbfxkr": {
-      "sha256": "FBA534131091EF0620C769652FD8714E044261CCB7154CC551FE7B708A2F4C45",
+      "sha256": "78DEF6377FD92BA372A6B982AD872B9ACDD3EEB2E05587CBCCFFFD13CD561300",
       "features": 4,
       "specifications": 22,
       "io": 6
@@ -956,7 +956,7 @@
       "io": 9
     },
     "lh75behhlbfxkr": {
-      "sha256": "08C391E7AD2833B6AB2B491913746F965327065DAC3ACCB91DB785CF701A34B9",
+      "sha256": "417E1848580BE537AC04C4A06E8E722BADE52CEA3B1EFA6AEC1FDF454DDA2AE5",
       "features": 4,
       "specifications": 22,
       "io": 6
@@ -980,7 +980,7 @@
       "io": 9
     },
     "lh85behhlbfxkr": {
-      "sha256": "552EED6FC11654EE9553D3D65784A4764BCE512546E6F502E7A89ECE50170BC0",
+      "sha256": "D5E0C24E8954A80E1BFC01BB6E146C2D19420DE32B3BB47AB72C71A1AE258554",
       "features": 4,
       "specifications": 22,
       "io": 6
