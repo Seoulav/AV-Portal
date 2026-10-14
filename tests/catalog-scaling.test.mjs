@@ -86,15 +86,25 @@ test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일
     // W-20261002-012 MPF 3종은 별도 삼성 제품가이드·국내 목록 근거로 등록했다.
     // W-023's new model is verified directly against its official Samsung Korea page.
     if (['mp008f', 'mp012f', 'mp016f', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh43behhlbfxkr', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'aquilon-rsalpha', 'ds-8s', 'emision-media-server', 'emision-pixelfit', 'insta360-connect', 'insta360-link-2', 'insta360-wave-business', 'insta360-wave', ...w029Slugs, ...w006Slugs, ...w007Slugs].includes(item.slug)) continue;
+    if (item.slug === 'hdf-ccf') continue; // No brand-series link-scope decision applies to this single cable.
     const scope = scopeOf.get(`${norm(item.brand)}\0${norm(item.product)}`);
     assert.ok(scope, `${item.brand} ${item.product}: 결정표에 없음`);
     assert.equal(item.link_scope ?? 'model', scope, `${item.brand} ${item.product}`);
   }
 });
 
-test('모든 공개 목록 항목의 카테고리는 3단이다', () => {
-  // 상세 페이지의 categories는 한국어 설명형 표시값이라 이 규칙의 대상이 아니다.
-  for (const item of catalog) assert.equal(item.categories.length, 3, `${item.brand} ${item.product}`);
+test('USB 3.2 Gen2 facet is a scoped fourth level; every other catalog item remains three-level', () => {
+  const allowedFourthLevel = new Map([['hdf-ccf', 'USB 3.2 Gen2 10Gbps']]);
+  for (const item of catalog) {
+    const fourth = allowedFourthLevel.get(item.slug);
+    if (fourth) {
+      assert.equal(item.categories.length, 4, `${item.brand} ${item.product}`);
+      assert.deepEqual(item.categories.slice(0, 3), ['\uC5F0\uACB0\u00B7\uC804\uC1A1', 'Connectivity', 'Cable']);
+      assert.equal(item.categories[3], fourth);
+    } else {
+      assert.equal(item.categories.length, 3, `${item.brand} ${item.product}`);
+    }
+  }
 });
 
 test('홈 카테고리 카드 여섯 개가 모두 비어 있지 않다', async () => {

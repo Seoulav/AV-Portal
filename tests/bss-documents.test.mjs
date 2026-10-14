@@ -42,8 +42,20 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const uploadsBeforeNewDocs =beforeW20261014_005Uploads(beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads)))));
-const historicalUploads=beforeW20261014_005Uploads(beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))))))));
+const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads))));
+const historicalUploads=beforeW04021Uploads(
+  beforeWinstarW04016Uploads(
+    withoutW029Uploads(
+      beforeW033Uploads(
+        withoutW006Uploads(
+          withoutW13008Uploads(
+            withoutW13010Uploads(uploadsBeforeNewDocs)
+          )
+        )
+      )
+    )
+  )
+);
 const slugs=Object.keys(evidence.products);
 const product=slug=>read(`beta/site/detail/data/${slug}.json`);
 const changed=['blu-100','blu-101','blu-160','blu-dan','ec-4bv'];

@@ -145,7 +145,7 @@ test('existing AMX specification values remain intact except documented conditio
 
 test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest entries', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  const historicalUploads =beforeW20261014_005Uploads(beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads))));
+  const historicalUploads =beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads)));
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 28);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
   assert.equal(sha(JSON.stringify(beforeW032Mirrors(manifest.mirrors))), evidence.manifest.mirrorsSha256);

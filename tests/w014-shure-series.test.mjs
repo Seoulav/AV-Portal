@@ -9,7 +9,7 @@ import { beforeW13007BehhlGuideCatalog } from './w13007-behhl-guide-history.mjs'
 import { filterCatalog } from '../beta/site/app.js';
 import { seriesGroupsFor, seriesIdFor } from '../beta/site/shared/brand-series.mjs';
 
-const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'))));
+const catalog =beforeW20261014_005Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8')));
 const expected = [
   { group: 'ULX-D', id: 'ulx-d', label: 'ULX-D \uBB34\uC120 \uC2DC\uC2A4\uD15C', slugs: ['ulxd4','ulxd4d','ulxd4q','ulxd1','ulxd2-beta58','ulxd2-beta87','ulxd2-ksm9','ulxd8'] },
   { group: 'QLX-D', id: 'qlx-d', label: 'QLX-D \uBB34\uC120 \uC2DC\uC2A4\uD15C', slugs: ['qlxd4','qlxd1','qlxd2-beta58','qlxd2-beta87a'] },

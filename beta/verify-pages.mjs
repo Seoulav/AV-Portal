@@ -205,6 +205,11 @@ for (const item of catalog) {
   assert.ok(typeof item.product === 'string' && item.product.trim());
   assert.ok(Array.isArray(item.categories) && item.categories.length);
   assert.ok(item.categories.every(value => typeof value === 'string' && value.trim()));
+  if (item.brand === 'HDCVT' && item.product === 'HDF-CCF Full-featured Type-C AOC Cable') {
+    assert.deepEqual(item.categories, ['\uC5F0\uACB0\u00B7\uC804\uC1A1', 'Connectivity', 'Cable', 'USB 3.2 Gen2 10Gbps']);
+  } else {
+    assert.equal(item.categories.length, 3, `${item.product}: existing category depth`);
+  }
   assert.ok(Array.isArray(item.official_links));
   if (item.official_links.length === 0) assert.equal(item.product, 'PT-MZ17K');
   for (const link of item.official_links) {

@@ -1785,6 +1785,12 @@
       "file": "manuals/carbonite-ultra-user-manual-v9-2.pdf",
       "kind": "manual",
       "title": "Ultra 9.2 User Manual (4841DR-110-09.2, November 2025) · 사용자 제공"
+    },
+    {
+      "slug": "hdf-ccf",
+      "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
+      "kind": "manual",
+      "title": "HDF-CCF 사용자 매뉴얼 V1.1(사용자 제공)"
     }
   ]
 }
