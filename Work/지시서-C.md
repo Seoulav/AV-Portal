@@ -2,7 +2,7 @@
 
 ## W-20261014-008 — INOGENI 신설·TOGGLE DOCK 2×1·U-BRIDGE 3 등록
 
-- 상태: REVIEW (구현·로컬 검증 완료, PR·CI·병합·공개 검증 대기)
+- 상태: MERGED (PR #507 병합·Pages 공개 검증 완료)
 - 명세: `Work/작업/W-20261014-008.md` (읽은 main `aca29d5da0f89a95c10492c4c900d966d9c893ef`) · 브랜치 `codex/W-20261014-008-inogeni` · 전용 워크트리 `codex-c`
 - 승인 근거(사용자 원문): “https://inogeni.com/product/toggle-dock-2x1/ , https://inogeni.com/product/u-bridge-3-0/ 2제품도 추가해줘” + “제품의 특징은 홈페이지 참고해”. 명세의 세션 B 표기보다 최신 사용자 배정인 세션 C를 따른다.
 - [x] 공식 Overview·Tech specs·Resources·Compatible Devices를 확인했다. 명세 작성 시 빠졌던 Tech specs의 본체별 크기·무게와 공식 원격 PDF 링크를 발견해 근거표에 기록했다. PDF 사본은 게시하지 않았다.
@@ -11,7 +11,9 @@
 - [x] 제조사 허용 호스트·이미지 매니페스트·카탈로그·검색 인덱스·읽기용 카탈로그·스냅샷을 갱신했다. 선택적 W-008 되감기를 기존 이력 검사에 연결했다.
 - [x] Builder 파생 라이브러리에서 TOGGLE 9행·12단자, U-BRIDGE 7행·12단자를 확인했다. 두 제품 모두 확인 필요 I/O 행 0건이다.
 - [x] 전체 검사 697건(696 pass·0 fail·기존 skip 1), `verify-pages` 283장비·280상세·501 이미지·142 uploads, 검색 인덱스 `--check` 통과.
-- [ ] 최신 main 통합·파생 재생성·PR·CI·병합 순서 확인·병합·Pages 배포·공개 1280px/390px 검증을 마친다.
+- [x] Work 지정 순서에 따라 #506 병합 뒤 최신 main을 통합하고 충돌 난 검색 인덱스를 원본에서 재생성했다. 추가 #508 문서 병합도 통합했다. 전체 직렬 검사 700건(699 pass·0 fail·기존 skip 1), 검색 인덱스 검사, Pages 검증(283장비·280상세·501 이미지·142 uploads) 통과.
+- [x] PR #507의 최종 Builder CI run `38577993536` 성공 뒤 병합 SHA `8d6b5cadf1ee5583315bf0c0e2c143f535fe6550`을 확인했다.
+- [x] Pages run `38578538504` 성공. 공개 version revision `8d6b5ca`. TOGGLE DOCK 2×1과 U-BRIDGE 3을 각각 1280px·390px에서 확인했다(HTTP 200, 지도 9·11개, 브라우저 오류·문서 가로 넘침 없음). 모바일 양쪽 스크롤과 INOGENI 칩의 2제품 필터도 눈으로 확인했다. [공개 검증](기록/W-20261014-008-C-공개검증.md).
 
 [제품별 근거표](기록/W-20261014-008-C-근거표.md) · [Work 인계](기록/W-20261014-008-C-Work-인계.md)
 
