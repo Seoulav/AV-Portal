@@ -374,3 +374,12 @@
 - 공개 상세 재확인에서 이전 구현 시 남은 깨진 중복 출처명 한 건을 발견했다. 검증된 출처 D(사용자 제공 PixelFit 설명자료 PDF)는 그대로 보존하고, 깨진 중복만 제거했다.
 - 회귀 테스트에 설명자료 출처 D가 하나이며 출처명에 깨진 물음표 문자가 없는 조건을 추가했다.
 - #491 재배포에서 사양 행은 정상 표시됨을 확인했다. 이 정정 PR 병합·배포 후 문서 카드, 두 PDF의 보기·다운로드 및 1280px·390px 공개 화면을 최종 확인한다.
+
+### 최종 공개 확인
+
+- PR [#492](https://github.com/Seoulav/AV-Portal/pull/492) 병합 SHA `c5b91698670c789219bf6d6d1b3effbfee1ed054`; Builder CI run [38541346140](https://github.com/Seoulav/AV-Portal/actions/runs/38541346140) 성공. Pages 배포 run [38541794324](https://github.com/Seoulav/AV-Portal/actions/runs/38541794324) 성공.
+- 공개 상세 [emision PixelFit](https://seoulav.github.io/AV-Portal/detail/?product=emision-pixelfit)에서 두 문서 카드, 2개 보기 버튼, 다운로드 링크를 확인. 6쪽 화면 안내는 뷰어 `/ 6`, 설명자료는 `/ 12` 및 페이지 canvas 렌더 확인.
+- 공개 PDF 두 파일 모두 HTTP 200·`application/pdf`: 화면 안내 432,999 bytes, SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06`; 설명자료 474,421 bytes, SHA-256 `e25ccb1547e9711f25f7c618f18314c7df93e113ec2698b12319cce222476dbe`.
+- 캡처 `Work/기록/W-20261013-004-screens/pixelfit-explanation-final/`: 1280px과 390px의 문서 섹션. 1280px 페이지 너비 1265px, 390px 페이지 너비 390px로 가로 넘침 없음; 두 카드 모두 표시.
+- 배포 검증: 280 제품·277 상세·490 검토 이미지·141 업로드 PDF, 잠금 PDF 12건 보존. 전체 테스트 684건: 683 통과·0 실패·기존 skip 1.
+- 앞선 #489 배포 QA에서 사양 인코딩 깨짐/중복을 찾아 #491로 고친 뒤 공개 재확인했고, 출처명 깨짐 중복 1건도 #492로 정리했다. 현재 공개 사양·두 모드·출처 등록 및 문서 동작이 정상이다.
