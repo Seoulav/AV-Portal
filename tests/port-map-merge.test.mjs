@@ -59,7 +59,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261014-001 moves five evidenced Logitech products to maps; the Mic
   // Pod extension cable retains its I/O fallback pending connector evidence.
   // W-20261014-003 adds rear maps to three existing X100 Pro products.
-  assert.deepEqual(counts, { mapIo: 152, ioOnly: 99, neither: 21 });
+  // W-20261014-008 adds two INOGENI products with official Diagram maps.
+  assert.deepEqual(counts, { mapIo: 154, ioOnly: 99, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

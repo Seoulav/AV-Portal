@@ -1,0 +1,476 @@
+{
+  "manufacturer": "INOGENI",
+  "productName": "TOGGLE DOCK 2×1",
+  "model": "TOGGLE DOCK 2×1",
+  "series": "TOGGLE",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Switcher"
+  ],
+  "english": "Controllable 4K60 BYOM switcher dock for two laptop hosts, three USB devices and one HDMI display.",
+  "korean": "두 노트북 호스트 사이에서 USB 장치 3개와 HDMI 디스플레이 1대를 전환하는 4K60 BYOM 스위처 도크.",
+  "verificationSummary": "INOGENI 공식 제품 Overview·Tech specs·연결 그림에서 모델, 기능, 단자 수량, 물리 사양을 확인했다. PDF는 공식 원격 링크만 연결했다.",
+  "packageStatus": "VERIFIED",
+  "overview": "TOGGLE DOCK 2×1은 회의실 PC 없이 두 노트북에서 USB 주변기기 3개와 HDMI 디스플레이 1대를 번갈아 쓰는 4K60 BYOM 스위처 도크다. 호스트 1은 USB-C 한 단자로 USB 3.0·DisplayPort Alt Mode·최대 100W 충전을 연결하고, 호스트 2는 USB 3.0 Type-B와 HDMI 2.0을 함께 쓴다. HDMI 출력은 4K60과 21:9 5Kp30을 지원한다.\n\n전면 버튼으로 호스트를 선택하며 RS-232·LAN의 REST API/Telnet·GPI 접점 2개와 별매 버튼 키트도 지원한다. 공식 페이지는 Teams·Zoom·Google Meet 회의 사용과 Crestron·Q-SYS·Extron·AMX 제어 시스템 연동을 안내한다. 장치 호환 예시로 Logitech·Jabra·AVer·Huddly·Bose·MAXHUB·Poly 등을 명시한다. 캐나다 제조, TAA 적합, 5년 보증.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "toggle-dock-2x1-main.png",
+      "alt": "INOGENI TOGGLE DOCK 2×1 모델명이 인쇄된 본체 전면과 상단",
+      "note": "Main · 공식 제품 페이지 원본, 본체 전면 TOGGLE DOCK 2×1 인쇄 확인",
+      "provider": "INOGENI",
+      "model": "TOGGLE DOCK 2×1",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Perspective_Left-scaled.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2560x1593",
+      "resolution": "2560x1593",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "toggle-dock-2x1-diagram.png",
+      "alt": "INOGENI TOGGLE DOCK 2×1 공식 연결도와 후면 단자",
+      "note": "Diagram · 공식 제품 페이지 연결 그림, 후면 호스트·장치·제어 구획 확인",
+      "provider": "INOGENI",
+      "model": "TOGGLE DOCK 2×1",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1024x631",
+      "resolution": "1024x631",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "VERIFIED",
+      "title": "TOGGLE DOCK 2×1 User Guide",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/toggle-dock-2x1-user-guide"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "VERIFIED",
+      "title": "TOGGLE DOCK 2×1 Sales Sheet",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/toggle-dock-2x1-salessheet"
+    },
+    {
+      "type": "Technical Document",
+      "status": "VERIFIED",
+      "title": "TOGGLE DOCK 2×1 Quick Start Guide",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/toggle-dock-2x1-quick-start-guide"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "INOGENI TOGGLE DOCK 2×1 공식 제품 페이지",
+      "language": "en",
+      "note": "제조사 공식 사이트의 원격 PDF 링크 · 저장소 사본 없음",
+      "url": "https://inogeni.com/product/toggle-dock-2x1/"
+    }
+  ],
+  "features": [
+    {
+      "text": "두 노트북 호스트 사이에서 USB 주변기기 3개와 HDMI 디스플레이 1대 전환",
+      "source": "P"
+    },
+    {
+      "text": "호스트 1 USB-C의 USB 3.0·DP Alt Mode·최대 100W Power Delivery 지원",
+      "source": "P"
+    },
+    {
+      "text": "호스트 2의 USB 3.0 Type-B와 HDMI 2.0 입력 지원",
+      "source": "P"
+    },
+    {
+      "text": "HDMI 출력의 4K60 및 21:9 5Kp30 지원",
+      "source": "P"
+    },
+    {
+      "text": "전면 버튼·RS-232·LAN REST API/Telnet·GPI 2접점으로 호스트 전환 제어",
+      "source": "P"
+    },
+    {
+      "text": "Crestron·Q-SYS·Extron·AMX 제어 시스템 연동 및 별매 INO-BUTTON KIT 지원",
+      "source": "P"
+    },
+    {
+      "text": "Teams·Zoom·Google Meet 회의 활용, 캐나다 제조·TAA 적합·5년 보증",
+      "source": "P"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "HDMI 출력 최대",
+      "value": "3840×2160p60 / 4096×2160p60, 21:9 5Kp30",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "호스트 1",
+      "value": "USB-C · USB 3.0 / DP Alt Mode / 최대 100W PD",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "호스트 2",
+      "value": "USB 3.0 Type-B + HDMI 2.0",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "USB",
+      "name": "장치 단자",
+      "value": "USB 3.0 Type-A ×3 · 1.8A 공유",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "IP 제어",
+      "value": "10/100Mbps · REST API / Telnet",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "접점 제어",
+      "value": "GPI 접점 2개",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "본체 크기(W×L×H)",
+      "value": "25.1 × 11.57 × 3.26",
+      "unit": "cm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "본체 무게",
+      "value": "790",
+      "unit": "g",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 어댑터",
+      "value": "160W · AC 85–264V 50/60Hz → DC 24V/6.67A",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Origin",
+      "name": "제조국",
+      "value": "캐나다",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Warranty",
+      "name": "보증",
+      "value": "5",
+      "unit": "년",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Certification",
+      "name": "TAA",
+      "value": "적합",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Host 1",
+      "connector": "USB-C",
+      "signal": "PC 1 USB 3.0·DP Alt Mode·100W PD",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Host 2",
+      "connector": "USB 3.0 Type-B",
+      "signal": "PC 2 USB 호스트",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Host 2",
+      "connector": "HDMI 2.0",
+      "signal": "PC 2 영상 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Device",
+      "connector": "USB 3.0 Type-A",
+      "signal": "USB 주변기기",
+      "direction": "IN/OUT",
+      "quantity": "3",
+      "protocol": "",
+      "availability": "",
+      "condition": "전력 1.8A 공유",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Display",
+      "connector": "HDMI 2.0",
+      "signal": "선택 호스트 영상 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ-45",
+      "signal": "LAN·IP 제어",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "4핀 단자대",
+      "signal": "RS-232 제어",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "4핀 단자대",
+      "signal": "GPI 접점·버튼 인터페이스",
+      "direction": "IN",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "접점 2개가 단자대 1개를 공유",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "DC 24V",
+      "signal": "전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "INOGENI 공식 제품 Overview",
+      "url": "https://inogeni.com/product/toggle-dock-2x1/",
+      "scope": "특징·용도·호환 목록"
+    },
+    {
+      "code": "S",
+      "name": "INOGENI 공식 Tech specs",
+      "url": "https://inogeni.com/product/toggle-dock-2x1/?tpl=techspecs",
+      "scope": "단자·크기·무게·전원·구성품"
+    },
+    {
+      "code": "IMG",
+      "name": "INOGENI 공식 연결 그림",
+      "url": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png",
+      "scope": "Port Map 좌표"
+    }
+  ],
+  "issues": [],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "제조사 공식 제품 페이지와 Tech specs 탭의 수치입니다.",
+    "ioIntro": "호스트·장치·제어 단자의 역할과 수량을 구분했습니다.",
+    "supplementalNote": "제조사 공식 홈페이지 본문·사양·그림을 대조했습니다.",
+    "footerNote": "INOGENI TOGGLE DOCK 2×1 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "INOGENI 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "toggle-dock-2x1-diagram.png",
+      "width": 1024,
+      "height": 631
+    },
+    "crop": {
+      "top": 155,
+      "bottom": 320
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "DC 24V",
+        "desc": "DC 24V 전원 입력",
+        "x1": 238,
+        "x2": 273,
+        "y": 238,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HOST 1 USB-C",
+        "desc": "USB 3.0·DP Alt Mode·100W PD 호스트 연결",
+        "x1": 297,
+        "x2": 324,
+        "y": 250,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "HOST 2 USB-B",
+        "desc": "USB 3.0 Type-B 호스트 연결",
+        "x1": 333,
+        "x2": 370,
+        "y": 237,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HOST 2 HDMI",
+        "desc": "HDMI 2.0 영상 입력",
+        "x1": 373,
+        "x2": 417,
+        "y": 242,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "USB 3.0 ×3",
+        "desc": "USB 주변기기 3개 연결",
+        "x1": 535,
+        "x2": 603,
+        "y": 238,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "HDMI OUT",
+        "desc": "선택 호스트의 HDMI 디스플레이 출력",
+        "x1": 618,
+        "x2": 665,
+        "y": 241,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "LAN",
+        "desc": "네트워크 및 IP 제어",
+        "x1": 736,
+        "x2": 784,
+        "y": 236,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "RS-232",
+        "desc": "4핀 단자대 제어",
+        "x1": 800,
+        "x2": 847,
+        "y": 248,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "GPI",
+        "desc": "4핀 단자대의 접점 2개와 버튼 인터페이스",
+        "x1": 849,
+        "x2": 894,
+        "y": 248,
+        "side": "top"
+      }
+    ]
+  },
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "VERIFIED",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Perspective_Left-scaled.png"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png"
+    }
+  ]
+}

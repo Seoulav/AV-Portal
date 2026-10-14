@@ -4859,5 +4859,37 @@
     "reference_link": [
       "./manuals/insta360-conference-line-collection-20260729.pdf"
     ]
+  },
+  {
+    "brand": "INOGENI",
+    "product": "TOGGLE DOCK 2×1",
+    "categories": [
+      "영상",
+      "Video",
+      "Switcher"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://inogeni.com/product/toggle-dock-2x1/"
+    ],
+    "manual_link": "https://inogeni.com/toggle-dock-2x1-user-guide",
+    "slug": "toggle-dock-2x1",
+    "card_image": "toggle-dock-2x1-main.png"
+  },
+  {
+    "brand": "INOGENI",
+    "product": "U-BRIDGE 3",
+    "categories": [
+      "영상",
+      "Video",
+      "Extender"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://inogeni.com/product/u-bridge-3-0/"
+    ],
+    "manual_link": "https://inogeni.com/u-bridge-3-user-guide",
+    "slug": "u-bridge-3",
+    "card_image": "u-bridge-3-main.png"
   }
 ]

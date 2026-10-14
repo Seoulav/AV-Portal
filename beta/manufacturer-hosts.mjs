@@ -15,6 +15,7 @@ export const manufacturerHosts = {
   JBL: ['techdata-ps.com', 'jblpro.com', 'harmanpro.com'],
   Lightware: ['lightware.com'],
   Insta360: ['insta360.com'],
+  INOGENI: ['inogeni.com'],
   Logitech: ['logitech.com'],
   Lumantek: ['lumantek.com', 'lumantek.co.kr'],
   Magnimage: ['magnimage.com'],
