@@ -182,6 +182,11 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .port-map-panel { width: 100%; }
 .port-photo-stage { position: relative; width: 100%; margin: auto; display: grid; place-items: center; }
 .port-photo-stage > img { display: block; max-width: 100%; }
+.front-points-layer { position: absolute; z-index: 2; pointer-events: none; }
+.front-point { position: absolute; box-sizing: border-box; border: 3px solid #d71920; background: transparent; }
+.front-point-label { position: absolute; top: -30px; left: -3px; padding: 3px 7px; border: 2px solid #d71920; border-radius: 4px; background: #fff; color: #a81018; font: 800 12px/1.2 system-ui, sans-serif; white-space: nowrap; }
+.front-points-note { margin: 10px 0 0; color: var(--pg-ink-2); font-size: 12px; line-height: 1.5; }
+@media (max-width: 650px) { .front-point { border-width: 2px; } .front-point-label { top: -24px; left: -2px; border-width: 1px; padding: 2px 4px; font-size: 10px; } .front-points-note { font-size: 11px; } }
 #port-map-layer { display: none; }
 /* Only the diagram scrolls, never the page. Photo files/metadata are unchanged. */
 .port-photo-scroll { width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
