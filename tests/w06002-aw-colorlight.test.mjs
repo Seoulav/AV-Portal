@@ -37,7 +37,8 @@ test('three Colorlight products gain only rear photo metadata; other current fie
     assert.deepEqual(p.images.map(x => x.role), ['Front', 'Rear']);
     assert.deepEqual(p.images[0], old.images[0]);
     assert.equal(old.images.length, 1);
-    assert.equal(p.portMap, undefined);
+    assert.equal(p.portMap.items.length, 2);
+    assert.deepEqual(old.portMap, p.portMap);
     assert.equal(p.io.length, 2);
     const tampered = structuredClone(p); tampered.io = [];
     assert.deepEqual(beforeW06002Product(tampered, slug).io, []);
