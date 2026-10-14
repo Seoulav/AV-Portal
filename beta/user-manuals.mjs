@@ -54,6 +54,13 @@ export const userReferences = [
     note: uploadNote
   },
   {
+    brand: 'SD컴퍼니',
+    product: 'emision PixelFit',
+    file: 'emision-pixelfit-description.pdf',
+    title: 'emision PixelFit 설명자료(사용자 제공)',
+    note: uploadNote
+  },
+  {
     brand: 'JBL',
     product: 'AC18/95',
     file: 'jbl-ae-series-u-bracket-handbook.pdf',
@@ -98,11 +105,16 @@ export const userReferences = [
   }
 ];
 
-const referencesByIdentity = new Map(userReferences.map(entry => [identity(entry.brand, entry.product), entry]));
+const referencesByIdentity = new Map();
+for (const entry of userReferences) {
+  const key = identity(entry.brand, entry.product);
+  referencesByIdentity.set(key, [...(referencesByIdentity.get(key) ?? []), entry]);
+}
 
-// 카탈로그 항목에 붙일 reference_link 값. 해당 참고자료가 없으면 null.
+export function userReferenceLinksFor(item) {
+  return (referencesByIdentity.get(identity(item.brand, item.product)) ?? []).map(entry => './manuals/' + entry.file);
+}
+
 export function userReferenceLinkFor(item) {
-  const entry = referencesByIdentity.get(identity(item.brand, item.product));
-  if (!entry) return null;
-  return `./manuals/${entry.file}`;
+  return userReferenceLinksFor(item)[0] ?? null;
 }

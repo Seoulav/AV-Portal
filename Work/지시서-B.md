@@ -351,3 +351,35 @@
 - [x] PR [#486](https://github.com/Seoulav/AV-Portal/pull/486) 필수 `builder` CI 성공 후 병합(SHA `6f131a7b8bb73ec195cc2e5b90c9ad4173f943a0`). Pages run [#38511064123](https://github.com/Seoulav/AV-Portal/actions/runs/38511064123) 성공.
 - [x] 공개 상세 1280px·390px에서 AOI 카드 3개, 각 3840×2160 캔버스, 위치 지정 문구, 문서 액션 확인. document/body 폭은 1280px viewport에서 1265px, 390px viewport에서 390px로 넘침 없음. 공개 캡처: `Work/기록/W-20261013-004-screens/pixelfit-document-public/`.
 - [x] 공개 PDF URL HTTP 200·`application/pdf`·432,999 bytes. 뷰어 `/ 6`, 6 canvas 렌더. 내려받은 실파일 SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06` 일치.
+
+
+## PixelFit 설명자료 등록 후속 (2026-10-14)
+
+- 기준: 최신 origin/main에서 시작한 codex/W-20261014-pixelfit-description-pdf (기준 SHA d6a69ae9, PR #488 병합분 포함).
+- 새 자료: 사용자 제공 PixelFit_설명자료.pdf; 입력 SHA-256 e25ccb1547e9711f25f7c618f18314c7df93e113ec2698b12319cce222476dbe, 12쪽, 잠금 없음. 모든 쪽 텍스트·연락표 시각 검토 완료.
+- 사용자 Work 승인(2026-10-14): 작업 모드 2종(① NVIDIA 전용 GPU 커스텀 해상도 ② 바탕화면 마스킹)과 마스킹 내부 NVIDIA·AMD 하드웨어 마스크 선택 구조 승인. 사용자 구두 설명과의 관계를 source D에 6·9쪽 근거와 함께 명시.
+- 반영: PixelFit 설명 PDF 별도 업로드·카탈로그/매니페스트 등록, 기존 6쪽 화면 안내 PDF 별도 유지. 상세의 모드 설정·features·사양·설명과 D 근거표에 3·4·6·8·9·11쪽 인용 추가. OS 버전·GPU/드라이버 최소 요건·판매 단위는 미확정 유지.
+- 동기화 경로가 같은 제품의 여러 사용자 참고 PDF를 지원하도록 userReferenceLinksFor 추가, 매니페스트 생성 시 제품+파일별 제목 조회, verify-pages 중복 기준 확장. PDF 두 카드 보기/다운로드 회귀 테스트 추가.
+- 검증: PixelFit/mirror-docs 집중 테스트 18/18 통과. 전체 테스트 684건 중 683 통과, 0 실패, 1 기존 skip. verify-pages: 280 제품·277 상세·490 이미지·141 업로드 PDF 통과. 검색 인덱스·읽기용 카탈로그 --check 통과. 주요기능 명사형 검사 통과. 전체 해시 비교는 출처/기능/수치의 승인된 사실 보강 때문에 변경 항목으로 보고하며 실패 원인은 아님.
+- 상태: REVIEW 준비; 최신 main 재통합, PR·CI·Pages 및 공개 화면 확인은 진행 예정.
+
+## 공개 확인 후 사양 표 정정 (2026-10-14)
+
+- PR #489 병합 및 Pages run 38538545011 성공 뒤 공개 화면을 확인하는 중, 설명자료에서 추가한 사양 일부가 인코딩 깨짐으로 저장되고 기존 NVIDIA·AMD 적용 행이 중복 노출되는 것을 발견.
+- 원인: 제품 JSON 구성 스크립트가 신규 spec 텍스트 일부를 잘못 기록했고, 기존 적용 방식 행 제거·보존 필터가 중복으로 포함.
+- 조치: 잘못된 5개 사양 행과 기존 중복 2개 적용 방식 행 제거. 검증된 6개 source D 행만 유지하고 정확한 PDF 쪽수 근거 유지. 새 회귀 테스트에서 정확한 사양 이름 목록·구식 항목 부재·깨진 '?' 문자 부재를 확인.
+- 이 정정은 별도 후속 PR에서 코드 CI·Pages 배포 후 공개 확인할 것. 사용자 요청 완료 처리는 다음 배포 확인까지 보류.
+## PixelFit 설명자료 출처 표기 정정 후속 (2026-10-14)
+
+- 공개 상세 재확인에서 이전 구현 시 남은 깨진 중복 출처명 한 건을 발견했다. 검증된 출처 D(사용자 제공 PixelFit 설명자료 PDF)는 그대로 보존하고, 깨진 중복만 제거했다.
+- 회귀 테스트에 설명자료 출처 D가 하나이며 출처명에 깨진 물음표 문자가 없는 조건을 추가했다.
+- #491 재배포에서 사양 행은 정상 표시됨을 확인했다. 이 정정 PR 병합·배포 후 문서 카드, 두 PDF의 보기·다운로드 및 1280px·390px 공개 화면을 최종 확인한다.
+
+### 최종 공개 확인
+
+- PR [#492](https://github.com/Seoulav/AV-Portal/pull/492) 병합 SHA `c5b91698670c789219bf6d6d1b3effbfee1ed054`; Builder CI run [38541346140](https://github.com/Seoulav/AV-Portal/actions/runs/38541346140) 성공. Pages 배포 run [38541794324](https://github.com/Seoulav/AV-Portal/actions/runs/38541794324) 성공.
+- 공개 상세 [emision PixelFit](https://seoulav.github.io/AV-Portal/detail/?product=emision-pixelfit)에서 두 문서 카드, 2개 보기 버튼, 다운로드 링크를 확인. 6쪽 화면 안내는 뷰어 `/ 6`, 설명자료는 `/ 12` 및 페이지 canvas 렌더 확인.
+- 공개 PDF 두 파일 모두 HTTP 200·`application/pdf`: 화면 안내 432,999 bytes, SHA-256 `1a9d953e6c2a807fe84fe0381f0096ed43deda78f6a5f6db8eaf3241f089be06`; 설명자료 474,421 bytes, SHA-256 `e25ccb1547e9711f25f7c618f18314c7df93e113ec2698b12319cce222476dbe`.
+- 캡처 `Work/기록/W-20261013-004-screens/pixelfit-explanation-final/`: 1280px과 390px의 문서 섹션. 1280px 페이지 너비 1265px, 390px 페이지 너비 390px로 가로 넘침 없음; 두 카드 모두 표시.
+- 배포 검증: 280 제품·277 상세·490 검토 이미지·141 업로드 PDF, 잠금 PDF 12건 보존. 전체 테스트 684건: 683 통과·0 실패·기존 skip 1.
+- 앞선 #489 배포 QA에서 사양 인코딩 깨짐/중복을 찾아 #491로 고친 뒤 공개 재확인했고, 출처명 깨짐 중복 1건도 #492로 정리했다. 현재 공개 사양·두 모드·출처 등록 및 문서 동작이 정상이다.
