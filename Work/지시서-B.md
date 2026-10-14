@@ -395,5 +395,7 @@
 - [x] Port Map 16표식 사진 감사 및 REF IN/OUT 방향 교정. 자동 lint 0 경고. 전체 `node --test --test-concurrency=1 tests/*.test.mjs`: 692건 중 691 pass, 0 fail, 1 기존 skip.
 - [x] `verify-pages` 281 제품·278 상세·497 검토 이미지·142 업로드 PDF; 잠금 PDF 12건 유지. 검색 인덱스 `--check` 통과. 문구 검사 0 대상/0 제품.
 - [x] 로컬 1280px·390px 상세와 PDF.js 매뉴얼 `/ 277`·canvas 렌더 및 다운로드 SHA 확인. 공개 캡처·Pages 확인은 병합 후 진행.
-- [ ] 최신 `origin/main` 재확인·통합, 읽기용 카탈로그 포함 파생물 `--check`, 최종 diff 검사.
-- [ ] PR·필수 CI·병합·Pages 배포·공개 상세 1280/390 및 보기/다운로드 확인·캡처·최종 보고.
+- [x] 최신 `origin/main` 통합 후 검색 인덱스·읽기용 카탈로그 `--check`, `verify-pages`, 전체 직렬 테스트, 문구 검사와 diff 검사 통과.
+- [x] 구현 PR [#498](https://github.com/Seoulav/AV-Portal/pull/498) 필수 CI 성공·병합(SHA `4f5d0a30b71042eab8c9cf3c0d93209f3af5dff9`); Pages run [38549535124](https://github.com/Seoulav/AV-Portal/actions/runs/38549535124) 성공.
+- [x] 공개 상세 1280px·390px, Port Map, 문서 보기/다운로드 확인. 공개 매뉴얼 뷰어 첫 페이지 canvas 및 `/ 277` 확인; PDF 다운로드 HTTP 200·SHA 원본 일치. 캡처는 `Work/기록/W-20261014-005-screens/public/`.
+- [x] 병합 후 검사 보완: 비공개 스프레드시트 검사가 `.XLS`·`.XLSX`도 찾도록 대소문자 무시 Git pathspec으로 수정, 실제 대문자 확장자 탐지 확인. 전체 테스트 692건 중 691 통과·0 실패·기존 skip 1.

@@ -97,7 +97,7 @@ test('LED cabinet addition changes only the three new products and keeps the pri
     ['mp008f', 'mp012f', 'ie015a-e', 'if015r-m', 'mp016f', 'ie020a-e']);
   const previous =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW014Catalog(beforeAverW12009Catalog(withoutW006Catalog(withoutW007Catalog(catalog)))).filter(item => !newSlugs.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog)));
   assert.equal(sha(JSON.stringify(previous)), '8af626c34c459c90001f5dae1698ea1bbbb5899ed1a132932c84c89c747a02c0');
-  const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '--', '*.xls', '*.xlsx'], {
+  const repositoryFiles = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '--', ':(top,icase,glob)**/*.xls', ':(top,icase,glob)**/*.xlsx'], {
     cwd: fileURLToPath(root), encoding: 'utf8'
   }).split(/\r?\n/);
   assert.deepEqual(repositoryFiles.filter(name => /\.xlsx?$/i.test(name) && !isApprovedCpqTemplate(name, readFileSync(new URL(name, root)))), [], 'private workbook must not be tracked or staged');
