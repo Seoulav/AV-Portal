@@ -43,6 +43,16 @@ test('PixelFit presents two parent modes and nests NVIDIA and AMD under desktop 
   assert.match(modes.items[1].summary, /NVIDIA.*AMD/);
   assert.match(modes.items[1].detail, /emision/);
   assert.match(product.overview, /\uC0AC\uC6A9\uC790 \uAD6C\uB450 \uC124\uBA85/);
+  assert.deepEqual(product.specifications.filter(item => item.source === 'D').map(item => item.name), [
+    '작업 모드',
+    'GPU 커스텀 해상도 모드',
+    '바탕화면 마스킹 모드',
+    '마스킹 모드 GPU 선택지',
+    '설명자료 표시 영역 예시',
+    '적용 확인'
+  ]);
+  assert.equal(product.specifications.some(item => ['NVIDIA 적용 방식', 'AMD 적용 방식'].includes(item.name)), false);
+  assert.ok(product.specifications.every(item => !item.name.includes('?')));
   const evidence = product.sources.find(item => item.code === 'D');
   assert.ok(evidence);
   for (const page of [3, 4, 6, 8, 9, 11]) assert.match(evidence.scope, new RegExp(page + '.{0,2}' + String.fromCharCode(0xCABD)));
