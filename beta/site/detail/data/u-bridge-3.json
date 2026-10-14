@@ -270,10 +270,10 @@
     {
       "group": "LINK",
       "connector": "RJ-45",
-      "signal": "CAT6A U/FTP 연장 링크",
+      "signal": "USB 3.2 Gen 1 연장 링크",
       "direction": "IN/OUT",
       "quantity": "2",
-      "protocol": "",
+      "protocol": "HDBaseT-USB3",
       "availability": "",
       "condition": "PC HOST 1개·DEVICE 1개; 최대 100m",
       "source": "S",
