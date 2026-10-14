@@ -23,6 +23,11 @@ test('published product data uses provenance without manufacturer-permission gat
         assert.equal(image.publicationStatus, '사용자 제공 화면 캡처');
         assert.equal(image.provider, '사용자 제공 SD컴퍼니 소개서(2026-10-13)');
         assert.equal(image.model, product.model);
+      } else if (file === 'carbonite-ultra.json') {
+        assert.equal(image.provider, '사용자 제공');
+        assert.equal(image.model, product.model);
+        assert.match(image.publicationStatus, /사용자 제공 사진/);
+        assert.equal(image.sourceUrl, undefined);
       } else {
         assert.match(image.publicationStatus, /사용자 게시 승인/);
         assert.ok(image.sourceUrl, `${file}: image source`);

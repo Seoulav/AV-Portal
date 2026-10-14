@@ -1,3 +1,4 @@
+import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW009Uploads, isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -43,7 +44,7 @@ const removed = {
 };
 
 test('W-016 removes only the three requested PDF files and six upload links', () => {
-  const uploadsBeforeNewDocs = withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads)));
+  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads))));
   assert.equal(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 107);
   assert.equal(manifest.uploads.filter(item => /\/winstar-/.test(item.file)).length, 0);
   assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))))))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
@@ -67,7 +68,7 @@ test('all six affected products retain Samsung documents and no Winstar viewer l
 
 test('all 242 published product JSON files and their source records remain fixed', () => {
   const directory = new URL('beta/site/detail/data/', root);
-  const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
   for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));

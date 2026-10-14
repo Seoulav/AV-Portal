@@ -1,3 +1,4 @@
+import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -37,7 +38,7 @@ import { beforeSamsungW04010Raw } from './samsung-w04010-history.mjs';
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const targets = ['dci-2-300n', 'dci-2-600n', 'dci-4-300n', 'dci-4-600n'];
-const crown = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== 'lh43behhlbfxkr.json').map(file => file.slice(0, -5)).filter(slug => read(`beta/site/detail/data/${slug}.json`).manufacturer === 'Crown');
+const crown = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== 'lh43behhlbfxkr.json').map(file => file.slice(0, -5)).filter(slug => read(`beta/site/detail/data/${slug}.json`).manufacturer === 'Crown');
 const evidence = read('Work/기록/W-20261003-009-evidence.json');
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
@@ -73,7 +74,7 @@ test('all Crown products have uploaded documents and retain measurement conditio
 
 test('five distinct PDFs serve exact models in eleven new upload links', () => {
   const manifest = read('beta/site/docs/manifest.json');
-  const historicalUploads = beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads));
+  const historicalUploads =beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads)));
   // This audit locks the W-009 upload segment; later JBL uploads are checked separately.
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 11);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0,evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
@@ -134,7 +135,7 @@ test('approved Crown maps, non-Crown JSON, and prior values are retained', () =>
   }
   const dir = new URL('beta/site/detail/data/',root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!isW009DetailFile(name)&&!crown.includes(name.slice(0,-5))).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!isW009DetailFile(name)&&!crown.includes(name.slice(0,-5))).sort()) {
     const slug=name.slice(0,-5);
     const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);
     const historical=jblW03010Slug(slug)?beforeJblW03010(JSON.parse(raw),slug)

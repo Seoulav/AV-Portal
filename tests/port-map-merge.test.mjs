@@ -54,11 +54,12 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261013-001 maps all 18 existing Powersoft amplifiers; no product is added.
   // W-20261013-007 maps two video walls and six U800F hotel TVs; totals stay fixed.
   // W-20261013-007 adds rear maps for two WMFX panels; the products are unchanged.
+  // W-20261014-005 adds Carbonite Ultra with a rear Port Map and documented I/O.
   // W-009 adds four products with I/O and no rear maps; all remain in the fallback.
   // W-20261014-001 moves five evidenced Logitech products to maps; the Mic
   // Pod extension cable retains its I/O fallback pending connector evidence.
   // W-20261014-003 adds rear maps to three existing X100 Pro products.
-  assert.deepEqual(counts, { mapIo: 151, ioOnly: 99, neither: 21 });
+  assert.deepEqual(counts, { mapIo: 152, ioOnly: 99, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

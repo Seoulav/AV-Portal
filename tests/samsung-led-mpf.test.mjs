@@ -1,3 +1,4 @@
+import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -20,7 +21,7 @@ const expectedByModel = {
 const differingNames = ['픽셀 피치', '밝기', '명암비', '전력 소비량 (최대)'];
 
 test('three MPF cabinets retain all 20 model-matched guide fields without invented connectors', () => {
-  const catalog = read('beta/site/catalog.json');
+  const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(read('beta/site/catalog.json')));
   const products = slugs.map((slug, index) => {
     const card = catalog.find(item => item.slug === slug);
     const current = read(`beta/site/detail/data/${slug}.json`);
@@ -62,7 +63,7 @@ test('three MPF cabinets retain all 20 model-matched guide fields without invent
 });
 
 test('guide remains a private evidence source, while the public catalog gains exactly three LED entries', () => {
-  const catalog = beforeW1010Catalog(beforeW009Catalog(read('beta/site/catalog.json')));
+  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW009Catalog(read('beta/site/catalog.json'))));
   assert.equal(catalog.length, 274);
   assert.deepEqual(catalog.filter(item => item.categories.includes('LED Signage')).map(item => item.slug).sort(), [...slugs, 'ie015a-e', 'ie020a-e', 'if015r-m'].sort());
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);

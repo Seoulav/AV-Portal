@@ -1,3 +1,4 @@
+import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { beforeW12005Product } from './w12005-history.mjs';
 import test from 'node:test';
 import {beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
@@ -47,7 +48,7 @@ test('left/right markers accept vertical ranges and reject mixed or out-of-bound
 test('all 51 approved horizontal maps remain valid with their original fields', () => {
   const dir = new URL('beta/site/detail/data/', root);
   let count = 0, cropped = 0;
-  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && name !== 'lh115qhfebgxkr.json' && !isW1010Name(name))) {
+  for (const file of readdirSync(dir).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && name !== 'lh115qhfebgxkr.json' && !isW1010Name(name))) {
     const p = beforeW026Product(JSON.parse(readFileSync(new URL(file, dir), 'utf8')),file.slice(0,-5));
     if (!p.portMap || p.portMap.image === 'Diagram') continue;
     count++;
