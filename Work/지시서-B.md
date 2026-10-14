@@ -426,7 +426,7 @@
 
 ## W-20261014-007 USB cable facet ? 2026-10-15
 
-- Status: IN_PROGRESS. Branch: codex/W-20261014-007-usb32gen2-cables. Worktree: codex-b only.
+- Status: COMPLETE. Implementation PR: #511, merge SHA `b881074592a5cf72c52ead02168238507c88993b`.
 - Read the READY spec. User confirmed the fourth categories[] level is permitted only for HDF-CCF with the exact label "USB 3.2 Gen2 10Gbps". verify-pages and regression tests keep every other catalog item at three levels.
 - Added HDF-CCF once under manufacturer HDCVT, with 5m/10m/15m options, per-length PD values, the 100W conflict preserved, official image, and the uploaded V1.1 manual. Added a strict W-007 history inverse and adjusted prior full-history checks without weakening their assertions.
 - Official HDCVT exact-model page confirms HDF-CCF and USB 3.2 Gen 2 10Gbps. The uploaded PDF SHA-256 matches the supplied file; PDF.js reads all 7 pages and the detail viewer resolves its local upload card.
@@ -446,3 +446,11 @@
 - 검증: 직렬 전체 테스트 705건 중 704 통과, 기존 skip 1, 실패 0. `verify-pages`: 284 제품·281 상세·502 검토 이미지·143 업로드 PDF. 검색 인덱스 `--check`(702064 bytes), feature wording(대상 0), `git diff --check` 통과. 병렬 테스트에서는 기존 RTCOM 임시 디렉터리 교체에서 Windows EPERM이 나왔으나 직렬 전체 실행에서 재현되지 않음.
 - 파생 산출물(검색 인덱스·읽기용 카탈로그·공개 스냅샷) 최신 기준으로 재생성. 공개 후 브라우저 캡처 대신 JSON/HTML/PDF URL과 SHA로 비시각 확인 예정(이 환경에 브라우저 표면 없음).
 - 다음: 지정 파일만 커밋 → PR/CI 초록 → 병합 → Pages 완료 및 공개 JSON·HTML·PDF 확인.
+
+### W-007 병합·배포 확인
+
+- PR #511은 필수 Builder CI 전체 성공(run `38595234366`) 후 2026-10-14 16:10 UTC에 병합. main SHA `b881074592a5cf72c52ead02168238507c88993b`.
+- Pages 배포 성공(run `38595836941`, deploy job 2m18s).
+- 공개 HTTPS 확인: catalog/detail/search-index/docs manifest/detail HTML/catalog HTML/PDF 모두 HTTP 200. 공개 카탈로그에서 HDCVT·HDF-CCF 및 네 번째 `USB 3.2 Gen2 10Gbps` 값 확인. 매뉴얼 PDF 853678 bytes, `%PDF-`, SHA-256 `c96e33cce303073b0c0106c3e61eb90d6f33a712e1f8c2a5e7bd41ee3229518f`로 게시본 일치.
+- 브라우저 캡처 도구 미가용으로 시각 캡처는 하지 않음. 공개 JSON/HTML/PDF 응답과 자동 문서 카드·PDF 액션 검증으로 대체.
+- Beluga Highwave Pro 8K 5M은 정확 모델의 공식 USB 3.2 Gen2 근거 부족으로 등록 보류. AJA Ki Pro GO2 및 INOGENI U-BRIDGE 3의 USB 3.2 Gen1 표기는 후보 보고만 완료.
