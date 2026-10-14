@@ -52,6 +52,22 @@
     }
   },
   {
+    "brand": "Ross Video",
+    "product": "Carbonite Ultra",
+    "categories": [
+      "영상",
+      "Video",
+      "Production Switcher"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.rossvideo.com/products/production-switchers/carbonite-ultra"
+    ],
+    "manual_link": "./manuals/carbonite-ultra-user-manual-v9-2.pdf",
+    "slug": "carbonite-ultra",
+    "card_image": "carbonite-ultra-front.png"
+  },
+  {
     "brand": "Yamaha",
     "product": "DM7",
     "categories": [

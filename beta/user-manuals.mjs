@@ -29,7 +29,8 @@ export const userManuals = [
     file: 'magnimage-led-780h-user-manual.pdf',
     title: 'LED-780H User Manual V2.1',
     note: '제조사 공식 웹사이트(magnimage.com)에서 확보. 다운로드 자산이 referer 화이트리스트로 보호되어 있어 이 사이트에서 직접 링크하면 방문자에게 접근 거부가 발생한다 — 그래서 사용자가 업로드했다.'
-  }
+  },
+  { brand: 'Ross Video', product: 'Carbonite Ultra', file: 'carbonite-ultra-user-manual-v9-2.pdf', title: 'Ultra 9.2 User Manual (4841DR-110-09.2, November 2025) · 사용자 제공', note: uploadNote },
 ];
 
 export const identity = (brand, product) => `${brand.toLowerCase()}\0${product.toLowerCase()}`;

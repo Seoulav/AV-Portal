@@ -1062,6 +1062,10 @@ export const group1Images = {
   'insta360-connect': [image('Main', 'insta360-connect-main.webp', 'Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지', 'Insta360', 'Insta360 Connect', 'https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg', '5120×1320', '1800×464', 'FOUND')],
   'insta360-link-2': [image('Main', 'insta360-link-2-main.webp', 'Insta360 Link 2와 Link 2C를 함께 보여 주는 공식 키비주얼(Link 2 포함)', 'Insta360', 'Insta360 Link 2', 'https://res.insta360.com/static/dddd8a37240101bc565af9ff599d7674/KV_%401920.jpg', '2881×1600', '1800×999', 'FOUND', 'Main · 공식 키비주얼에 Link 2·Link 2C 함께 표기')],
   'insta360-wave-business': [image('Main', 'insta360-wave-business-main.webp', 'Insta360 Wave for Business 짙은 색상 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://wassets.insta360.com/store/479729971b3f4af8bf5d5a7ffd7baa31/14655_b564c32b-b619-43e4-9622-0273add5d428.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
+  'carbonite-ultra': [
+    {"role":"Front","file":"carbonite-ultra-front.png","alt":"Ross Video Carbonite Ultra 전면. Carbonite·Ultra 인쇄와 USB·UPGRADE·POWER 표기","note":"Front · 사용자 제공 사진 (2026-10-14)","provider":"사용자 제공","model":"Carbonite Ultra","officialSource":false,"verificationStatus":"VERIFIED","originalSize":"1600x400","resolution":"1600x400","publicationStatus":"사용자 제공 사진 · 2026-10-14"},
+    {"role":"Rear","file":"carbonite-ultra-rear.png","alt":"Ross Video Carbonite Ultra 후면. 색상별 MV OUTPUT, OUTPUT 3–12, INPUT 1–24와 전원·제어 단자","note":"Rear · 사용자 제공 사진 (2026-10-14)","provider":"사용자 제공","model":"Carbonite Ultra","officialSource":false,"verificationStatus":"VERIFIED","originalSize":"1600x800","resolution":"1600x800","publicationStatus":"사용자 제공 사진 · 2026-10-14"}
+  ],
   'insta360-wave': [image('Main', 'insta360-wave-main.webp', 'Insta360 Wave 흰색 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
 };
 
@@ -1355,4 +1359,5 @@ export const cardImages = {
   'insta360-link-2': 'insta360-link-2-main.webp',
   'insta360-wave-business': 'insta360-wave-business-main.webp',
   'insta360-wave': 'insta360-wave-main.webp',
+  'carbonite-ultra': 'carbonite-ultra-front.png',
 };

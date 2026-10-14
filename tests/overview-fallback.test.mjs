@@ -1,3 +1,4 @@
+import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
@@ -37,7 +38,7 @@ test('one available fallback value hides the grid; authored key facts still use 
 
 test('all published fallback display values stay within 20 characters without changing authored cards',async()=>{
   const dir=new URL('../beta/site/detail/data/',import.meta.url);
-  const files=(await readdir(dir)).filter(name=>name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name));
+  const files=(await readdir(dir)).filter(name=>name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW1010Name(name) && !isW1012Name(name));
   let authored=0,fallback=0;
   for(const file of files){
     const product=prepareProductDetail(JSON.parse(await readFile(new URL(file,dir))));

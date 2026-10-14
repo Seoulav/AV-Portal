@@ -1,3 +1,4 @@
+import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -6,7 +7,7 @@ import { filterCatalog } from '../beta/site/app.js';
 import { beforeW1010Catalog } from './w1010-history.mjs';
 import { withoutW004Catalog } from './w004-history.mjs';
 
-const catalog = JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
+const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'))));
 const slugs = items => items.map(item => item.slug);
 const legacySort = (items, state) => [...items].filter(item =>
   item.kind === 'equipment' && (!state.brand || item.brand === state.brand)
@@ -41,7 +42,7 @@ test('Samsung brand order follows catalog groups and increasing size, with Busin
 });
 
 test('all other catalog products keep their complete previous brand order', () => {
-  const historicalCatalog = withoutW004Catalog(beforeW1010Catalog(beforeW009Catalog(catalog)));
+  const historicalCatalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(withoutW004Catalog(beforeW1010Catalog(beforeW009Catalog(catalog)))));
   const others = historicalCatalog.filter(item => item.brand !== 'Samsung');
   assert.equal(others.length, 237);
   const shure = others.filter(item => item.brand === 'Shure');

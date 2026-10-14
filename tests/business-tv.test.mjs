@@ -1,3 +1,4 @@
+import { beforeW20261014_005Catalog, isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { beforeW009Catalog, isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -32,7 +33,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const slug = 'lh43behhlbfxkr';
 
 test('BEHX-H products occupy the business-TV sort slot', () => {
-  const catalog = beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json'))));
+  const catalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json'))))));
   const card = catalog.find(item => item.slug === slug);
   assert.equal(catalog.length, 274);
   assert.deepEqual(catalog.filter(item => /^lh(?:43|50|55|65|75|85)behhlbfxkr$/.test(item.slug)).map(item => item.slug), [slug, 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']);
@@ -76,11 +77,11 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
 test('the existing 242 detail files and 249 catalog objects remain byte/value-identical', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW004Name(file) && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
   assert.equal(files.length, 242);
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
   const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(detailDigests)), '8dc33b1204a5fad8487a4e87d511eeca9862ca3ad6aa33fdffa211be69a49789');
-  const originalCatalog = beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog);
+  const originalCatalog =beforeW20261014_005Catalog(beforeW20261014_005Catalog(beforeW014Catalog(beforeAverW12009Catalog(beforeW1010Catalog(withoutW006Catalog(withoutW007Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))))))).filter(item => item.slug !== slug && !w029Slugs.has(item.slug) && !w030.has(item.slug) && !isW06002Name(item.slug) && !['emision-media-server', 'emision-pixelfit'].includes(item.slug)).map(beforeW024Catalog)));
   assert.equal(sha(JSON.stringify(originalCatalog)), '3b8f31e02ec31ff94cd6b8192447a14549c2ed03188ea7d392ae51f9f262f6da');
 });

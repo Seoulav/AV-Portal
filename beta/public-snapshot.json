@@ -1,10 +1,10 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 280,
-    "sha256": "A1D859E380840D40BBF5064D5CEC2DC7F836EDDB86D5F9301D0C7C25703B902B",
+    "count": 281,
+    "sha256": "5BB49DF241674E46C109D8A925D04BE432E4DDCA2081FC81E0202C0DA7C6BACD",
     "baselineCount": 25,
-    "baselineSha256": "8835F3145F1DBC14141E700D4F3F99ACFD847020AB08A562D0C2C2EE53F053B8"
+    "baselineSha256": "B8AB75CBE36032B6C20FB28DE019A234C1EA6CE7CBAB7E0FC7B005C966AFDF26"
   },
   "details": {
     "a900w-r-gm": {
@@ -150,6 +150,12 @@
       "features": 8,
       "specifications": 27,
       "io": 14
+    },
+    "carbonite-ultra": {
+      "sha256": "CF0F589AC99422ECA3ED4AC7DAF89B9683DDCE108AA3BE2B666F64663C48C20B",
+      "features": 7,
+      "specifications": 14,
+      "io": 11
     },
     "cdi-2-1200": {
       "sha256": "431108E4AC6CD9CC15027D5AF0EA3DDECCAB46B11E986CB7063DB72EEE0AF91A",

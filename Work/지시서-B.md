@@ -383,3 +383,17 @@
 - 캡처 `Work/기록/W-20261013-004-screens/pixelfit-explanation-final/`: 1280px과 390px의 문서 섹션. 1280px 페이지 너비 1265px, 390px 페이지 너비 390px로 가로 넘침 없음; 두 카드 모두 표시.
 - 배포 검증: 280 제품·277 상세·490 검토 이미지·141 업로드 PDF, 잠금 PDF 12건 보존. 전체 테스트 684건: 683 통과·0 실패·기존 skip 1.
 - 앞선 #489 배포 QA에서 사양 인코딩 깨짐/중복을 찾아 #491로 고친 뒤 공개 재확인했고, 출처명 깨짐 중복 1건도 #492로 정리했다. 현재 공개 사양·두 모드·출처 등록 및 문서 동작이 정상이다.
+
+## W-20261014-005 — Ross Video Carbonite Ultra 등록 (2026-10-14)
+
+- 명세: `Work/작업/W-20261014-005.md` READY, PR #495 병합. 명세를 읽은 기준 commit `c30ddfbd`; 구현 브랜치 `codex/W-20261014-005-carbonite-ultra`, 별도 폴더 `codex-b`.
+- 사용자 승인: 2026-10-14 “이것도 추가” — Carbonite Ultra 및 전면·후면 사진/PDF 게시.
+- 입력 자료 SHA-256 확인: PDF `0527e3d4d02e60e634321ab7072505110510a35d7cc62f97ee1504340e319848`; Front `330778d4c551ca74e7f880dd6820c30fac399fdbec2e4b9884293d940a34a1f9`; Rear `ea814491f3812d2010d8438a583a5c3dae23b3ff95f849772e8d9c1bea5ee079`.
+- [x] 명세·입력 파일 확인. PDF.js 277쪽 `Ultra 9.2 User Manual`, Part 4841DR-110-09.2 확인. 전면 인쇄와 두 사진의 Carbonite Ultra 모델 일치 확인.
+- [x] Ross 공식 제품·사양 페이지와 매뉴얼 대조. SDI 출력 구성 차이를 `CONFLICTED`로 보존.
+- [x] 제품 카탈로그·상세·Front/Rear 사진·사용자 매뉴얼 업로드 등록, 검색·카탈로그 파생물 생성 및 Carbonite focused tests 통과.
+- [x] Port Map 16표식 사진 감사 및 REF IN/OUT 방향 교정. 자동 lint 0 경고. 전체 `node --test --test-concurrency=1 tests/*.test.mjs`: 692건 중 691 pass, 0 fail, 1 기존 skip.
+- [x] `verify-pages` 281 제품·278 상세·497 검토 이미지·142 업로드 PDF; 잠금 PDF 12건 유지. 검색 인덱스 `--check` 통과. 문구 검사 0 대상/0 제품.
+- [x] 로컬 1280px·390px 상세와 PDF.js 매뉴얼 `/ 277`·canvas 렌더 및 다운로드 SHA 확인. 공개 캡처·Pages 확인은 병합 후 진행.
+- [ ] 최신 `origin/main` 재확인·통합, 읽기용 카탈로그 포함 파생물 `--check`, 최종 diff 검사.
+- [ ] PR·필수 CI·병합·Pages 배포·공개 상세 1280/390 및 보기/다운로드 확인·캡처·최종 보고.

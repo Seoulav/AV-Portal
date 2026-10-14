@@ -1779,6 +1779,12 @@
       "file": "manuals/emision-pixelfit-description.pdf",
       "kind": "reference",
       "title": "emision PixelFit 설명자료(사용자 제공)"
+    },
+    {
+      "slug": "carbonite-ultra",
+      "file": "manuals/carbonite-ultra-user-manual-v9-2.pdf",
+      "kind": "manual",
+      "title": "Ultra 9.2 User Manual (4841DR-110-09.2, November 2025) · 사용자 제공"
     }
   ]
 }
