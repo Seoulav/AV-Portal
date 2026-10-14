@@ -1,0 +1,480 @@
+{
+  "rally-bar": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "rally-bar-front.webp",
+          "alt": "Logitech Rally Bar 그래파이트 전면 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Bar",
+          "sourceUrl": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1384×1038",
+          "resolution": "1384×1038",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Perspective",
+          "file": "rally-bar-perspective.webp",
+          "alt": "Logitech Rally Bar 그래파이트 원근 이미지",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Bar",
+          "sourceUrl": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1384×1038",
+          "resolution": "1384×1038",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1"
+        },
+        {
+          "role": "Rear",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "d2e1d82777a0bcc1c4d6fc5821453d1d1a4dd12e52119a232cdd41a9f0af4bab",
+      "imageStatuses": "56caef91a9ac99f8bb3cb17e4d62daafde2fb7bcd488c9adaea3052c4404f6ef",
+      "portMap": "c39d1adf2cd42da9bfe37ebf41ecd026ecd481bc4c383250ea13d8489fc43835"
+    }
+  },
+  "rally-plus": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "logitech-rally-plus-main.webp",
+          "alt": "Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Plus",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3856×2160",
+          "resolution": "1400×331",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Camera",
+          "connector": "USB Type C",
+          "signal": "카메라-Display Hub 연결(Ultra HD/4K 대응)",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "USB 3.1",
+          "availability": "",
+          "condition": "6.5ft(2m) 케이블",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Display Hub",
+          "connector": "HDMI Type A",
+          "signal": "디스플레이 출력",
+          "direction": "OUT",
+          "quantity": "2",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Display Hub",
+          "connector": "USB Type B",
+          "signal": "회의실 컴퓨터 연결",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Display Hub",
+          "connector": "RJ45",
+          "signal": "Table Hub 연결",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "CAT6A",
+          "availability": "",
+          "condition": "16.4ft(5m) 케이블 포함, 최대 164ft(50m) 지원",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Display Hub",
+          "connector": "Mini XLR",
+          "signal": "스피커 연결",
+          "direction": "OUT",
+          "quantity": "2",
+          "protocol": "",
+          "availability": "",
+          "condition": "스피커 최대 2개 전원 공급",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Table Hub",
+          "connector": "12-pin",
+          "signal": "Mic Pod 연결",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "데이지체인 최대 7개",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Table Hub",
+          "connector": "HDMI Type A",
+          "signal": "유선 콘텐츠 공유",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "D",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Remote",
+          "connector": "RF",
+          "signal": "리모컨",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "CR2032 배터리 포함",
+          "source": "D",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "D",
+          "name": "제조사 공식 Tech Specs 데이터시트",
+          "url": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지(Rally Plus)",
+          "url": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "123ad8c6f8aebd8ec9fd7ba88a6c3521a334aaf2f103a604dea2490bbfc83719",
+      "imageStatuses": "5f4ed9c32044864b5f052c28e9b84b125b25fbd1ce12ea23ec9f24cb57ce531d",
+      "portMap": "e3c00d9c22ee34c066ff5e3da96511b1f16314d3e23417829572f585f0b56afd",
+      "io": "0cb4922ce152423e34ad4d30e92fa9af75cdf3435cde85b4f57789491e262c38",
+      "sources": "817256fb24c83c6b16ccf9a6c9fccfaf30ccce13f25cda0189f0fff75e494cbc"
+    }
+  },
+  "rally-mic-pod-hub": {
+    "prior": {
+      "images": [
+        {
+          "role": "Perspective",
+          "file": "logitech-rally-mic-pod-hub-perspective.webp",
+          "alt": "Logitech Rally Mic Pod Hub 상단 원근 이미지",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Mic Pod Hub",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1600×1374",
+          "resolution": "1528×814",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "logitech-rally-mic-pod-hub-front.webp",
+          "alt": "Logitech Rally Mic Pod Hub 하단 커넥터 이미지",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Mic Pod Hub",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1600×1374",
+          "resolution": "1559×816",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-2.png"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
+        }
+      ],
+      "portMap": null,
+      "io": [
+        {
+          "group": "Connector",
+          "connector": "12-pin",
+          "signal": "Mic Pod / Mic Pod Hub 연결",
+          "direction": "IN/OUT",
+          "quantity": "3",
+          "protocol": "",
+          "availability": "",
+          "condition": "임의 조합 가능",
+          "source": "P",
+          "verification": "VERIFIED"
+        }
+      ],
+      "sources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "PLUS",
+          "name": "제조사 공식 Rally/Rally Plus 데이터시트",
+          "url": "https://www.logitech.com/content/dam/logitech/en/video-collaboration/pdf/rally-plus.pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "59d23fe0fa62d377559634551c37bd4a581c75edb80c13f7a5da9be9b2b5217a",
+      "imageStatuses": "e82183df9f9a5d3b8f12d9b742e5a3d7ee76caa041dae282b65ecd56433f5374",
+      "portMap": "4d0f20f480a04a6bd35e3318233cc9f02d4514cd4186aec9420ae5d446c98f3d",
+      "io": "eb70aa323056944a77c669cd94f9cfd6025cd1ea563f5f62c68d11520942a928",
+      "sources": "75b4803c3f6d05b4a1ab4037cc49d2c27f04d2a1f751939e9a4764e6382421b0"
+    }
+  },
+  "rally-mic-pod": {
+    "prior": {
+      "images": [
+        {
+          "role": "Perspective",
+          "file": "logitech-rally-mic-pod-perspective.webp",
+          "alt": "Logitech Rally Mic Pod 원근 이미지",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Mic Pod",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1600×1200",
+          "resolution": "1400×822",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Other",
+          "file": "logitech-rally-mic-pod-top.webp",
+          "alt": "Logitech Rally Mic Pod 상단 음소거 버튼 이미지",
+          "note": "Other · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Rally Mic Pod",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1600×1200",
+          "resolution": "1106×1183",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png"
+        },
+        {
+          "role": "Other",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png"
+        }
+      ],
+      "portMap": null,
+      "sources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.logitech.com/en-us/products/video-conferencing/accessories/mic-pod-for-rally.html",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "IMG",
+          "name": "제조사 이미지 자료",
+          "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png",
+          "scope": "제조사 공식 출처"
+        }
+      ]
+    },
+    "approved": {
+      "images": "77ddafb219dd65fe3a32cf535fe5d07b8e8d95e8eca047a8c8e078b77ee5a655",
+      "imageStatuses": "de5221e06ee3e5c31f8b1b15f8fd147de837061b7d1e4446753fee9f1e74ff0e",
+      "portMap": "c69601a77c9fdb01cdb79d8e7b75b627b861b7e6ce10b1e228fdfc59703dfc7c",
+      "sources": "ef665e28251efd8ff908c26c864668ce7c18e93f57a0da28adfcb34c1f037bc6"
+    }
+  },
+  "strong-usb-cable": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "logitech-strong-usb-cable-main.webp",
+          "alt": "Logitech Strong USB-A to USB-C 케이블 이미지",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Logitech",
+          "model": "Strong USB Cable",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1600×1374",
+          "resolution": "1371×1187",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+        }
+      ],
+      "portMap": null
+    },
+    "approved": {
+      "images": "7b3c40e2511852e925d5dfc1f9bf8035b497f49c0e3496092aaf14d0debd394d",
+      "imageStatuses": "a7add44172cebe20ff381d50ed5e2ce402866e98c717331a27e2e9b36bb4b5b5",
+      "portMap": "4638d48f64196d0bb7c592f5b7fb6caf9dec2f2f29ea606f9ea12b812f28133a"
+    }
+  }
+}

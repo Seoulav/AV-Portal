@@ -9,7 +9,7 @@ const expected = {
   dm7: ['Front', 'Rear', 'Perspective'],
   'ki-pro-go2': ['Main', 'Rear'],
   'pt-mz17k': ['Front', 'Perspective', 'Diagram'],
-  'rally-bar': ['Front', 'Perspective']
+  'rally-bar': ['Front', 'Perspective', 'Diagram']
 };
 
 test('Group 1 product pages publish only the reviewed official image roles', async () => {

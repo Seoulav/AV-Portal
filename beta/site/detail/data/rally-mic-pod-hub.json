@@ -42,6 +42,20 @@
       "originalSize": "1600×1374",
       "resolution": "1559×816",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "rally-mic-pod-hub-diagram.webp",
+      "alt": "Rally Mic Pod Hub 공식 설계 도면 밑면과 12핀 연결부 3개",
+      "note": "Diagram · Logitech 공식 Rally Mic Pods 설계 도면, LOGITECH_RALLY_MICPOD_HUB.pdf 밑면 · 12핀 소켓 3개와 고정 케이블",
+      "provider": "Logitech",
+      "model": "Rally Mic Pod Hub",
+      "sourceUrl": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1080x530",
+      "resolution": "1080x530",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -69,6 +83,11 @@
       "role": "Other",
       "status": "REVIEW REQUIRED",
       "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/accessories/hub-for-rally-mic-pod.html"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk"
     }
   ],
   "documents": [
@@ -187,6 +206,18 @@
       "condition": "임의 조합 가능",
       "source": "P",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "Connector",
+      "connector": "12-pin captive cable",
+      "signal": "Table Hub 또는 Mic Pod Hub 연결",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "공식 Rally 액세서리 데이터시트 2쪽 및 설계 도면",
+      "source": "PLUS, CAD",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -207,6 +238,12 @@
       "name": "제조사 이미지 자료",
       "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "CAD",
+      "name": "Logitech Rally Mic Pods 공식 설계 도면(PDF)",
+      "url": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk",
+      "scope": "Rally Mic Pod Hub 밑면 도면"
     }
   ],
   "issues": [
@@ -226,5 +263,51 @@
     "footerNote": "Logitech Rally Mic Pod Hub 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "rally-mic-pod-hub-diagram.webp",
+      "width": 1080,
+      "height": 530
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "고정 케이블",
+        "desc": "12핀 고정 케이블 · Table Hub 또는 추가 Mic Pod Hub 연결 · 공식 설계 도면",
+        "x1": 77,
+        "x2": 146,
+        "y": 375,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "Mic Pod 연결 1",
+        "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+        "x1": 625,
+        "x2": 669,
+        "y": 255,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "Mic Pod 연결 2",
+        "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+        "x1": 759,
+        "x2": 806,
+        "y": 192,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "Mic Pod 연결 3",
+        "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+        "x1": 858,
+        "x2": 894,
+        "y": 286,
+        "side": "top"
+      }
+    ]
   }
 }

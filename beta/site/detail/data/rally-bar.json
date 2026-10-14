@@ -42,6 +42,20 @@
       "originalSize": "1384×1038",
       "resolution": "1384×1038",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "rally-bar-diagram.webp",
+      "alt": "Rally Bar 공식 설치 가이드의 후면 포트 라벨 도면",
+      "note": "공식 도면 기준 단자 위치 안내(커버 닫힘 상태, 소켓 모양 비표시) · Logitech 설치 가이드 6쪽",
+      "provider": "Logitech",
+      "model": "Rally Bar",
+      "sourceUrl": "https://www.logitech.com/assets/65999/rally-bar-qsg.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1100x340",
+      "resolution": "1100x340",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -69,6 +83,11 @@
       "role": "Other",
       "status": "REVIEW REQUIRED",
       "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/room-solutions/rallybar.html"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.logitech.com/assets/65999/rally-bar-qsg.pdf"
     }
   ],
   "documents": [
@@ -444,5 +463,71 @@
     "footerNote": "Logitech Rally Bar · 공식 출처 기반",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "rally-bar-diagram.webp",
+      "width": 1100,
+      "height": 340
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "전원 입력",
+        "desc": "DC 전원 연결 · Rally Bar 설치 가이드 6쪽 라벨 위치",
+        "y1": 142,
+        "y2": 158,
+        "side": "left"
+      },
+      {
+        "n": 2,
+        "label": "Mic Pod 입력",
+        "desc": "Rally Mic Pod 연결 · 설치 가이드 6쪽 라벨 위치",
+        "y1": 168,
+        "y2": 183,
+        "side": "left"
+      },
+      {
+        "n": 3,
+        "label": "USB-A 1–3",
+        "desc": "USB Type-A ×3 · 설치 가이드 6쪽 라벨 위치",
+        "y1": 193,
+        "y2": 244,
+        "side": "left"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력",
+        "desc": "HDMI-IN · 설치 가이드 6쪽 라벨 위치",
+        "y1": 142,
+        "y2": 158,
+        "side": "right"
+      },
+      {
+        "n": 5,
+        "label": "HDMI 출력 1–2",
+        "desc": "HDMI-OUT 1·2 · 설치 가이드 6쪽 라벨 위치",
+        "y1": 169,
+        "y2": 192,
+        "side": "right"
+      },
+      {
+        "n": 6,
+        "label": "Ethernet",
+        "desc": "유선 네트워크 · 설치 가이드 6쪽 라벨 위치",
+        "y1": 204,
+        "y2": 218,
+        "side": "right"
+      },
+      {
+        "n": 7,
+        "label": "USB-C",
+        "desc": "USB Type-C · 설치 가이드 6쪽 라벨 위치",
+        "y1": 232,
+        "y2": 246,
+        "side": "right"
+      }
+    ]
   }
 }

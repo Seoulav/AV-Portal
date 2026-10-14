@@ -42,6 +42,20 @@
       "originalSize": "1600×1200",
       "resolution": "1106×1183",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "rally-mic-pod-diagram.webp",
+      "alt": "Rally Mic Pod 공식 설계 도면 밑면의 고정 케이블과 데이지체인 입력",
+      "note": "Diagram · Logitech 공식 Rally Mic Pods 설계 도면, LOGITECH_RALLY_MICPOD.pdf 밑면",
+      "provider": "Logitech",
+      "model": "Rally Mic Pod",
+      "sourceUrl": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1080x480",
+      "resolution": "1080x480",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -69,6 +83,11 @@
       "role": "Other",
       "status": "FOUND",
       "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk"
     }
   ],
   "documents": [
@@ -289,6 +308,12 @@
       "name": "제조사 이미지 자료",
       "url": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "CAD",
+      "name": "Logitech Rally Mic Pods 공식 설계 도면(PDF)",
+      "url": "https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk",
+      "scope": "Rally Mic Pod 밑면 도면"
     }
   ],
   "issues": [
@@ -308,5 +333,33 @@
     "footerNote": "Logitech Rally Mic Pod 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "rally-mic-pod-diagram.webp",
+      "width": 1080,
+      "height": 480
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "고정 케이블 출력",
+        "desc": "12핀 고정 케이블 · Table Hub 또는 Mic Pod Hub 연결 · 공식 설계 도면",
+        "x1": 61,
+        "x2": 137,
+        "y": 249,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "데이지체인 입력",
+        "desc": "12핀 입력 소켓 · 추가 Mic Pod 연결 · 공식 설계 도면",
+        "x1": 808,
+        "x2": 871,
+        "y": 248,
+        "side": "top"
+      }
+    ]
   }
 }

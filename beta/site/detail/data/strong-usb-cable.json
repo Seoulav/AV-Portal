@@ -27,6 +27,20 @@
       "originalSize": "1600×1374",
       "resolution": "1371×1187",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "strong-usb-cable-diagram.webp",
+      "alt": "Strong USB 케이블 USB-C·USB-A 양끝 확대",
+      "note": "Diagram · 공식 제품 사진에서 양끝 커넥터를 각각 발췌(같은 제품)",
+      "provider": "Logitech",
+      "model": "Strong USB Cable",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1371x1187",
+      "resolution": "950x300",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -54,6 +68,11 @@
       "role": "Other",
       "status": "REVIEW REQUIRED",
       "sourceUrl": "https://www.logitech.com/ko-kr/products/video-conferencing/accessories/strong-usb-cable.html"
+    },
+    {
+      "role": "Diagram",
+      "status": "VERIFIED",
+      "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png"
     }
   ],
   "documents": [
@@ -203,5 +222,33 @@
     "footerNote": "Logitech Strong USB-A to USB-C Cable 10m 공식 자료 기준",
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Diagram",
+    "measuredImage": {
+      "file": "strong-usb-cable-diagram.webp",
+      "width": 950,
+      "height": 300
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "USB-C",
+        "desc": "케이블 한쪽 USB-C 커넥터 · 공식 제품 사진",
+        "x1": 64,
+        "x2": 455,
+        "y": 112,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "USB-A",
+        "desc": "케이블 반대쪽 USB-A 커넥터 · 공식 제품 사진",
+        "x1": 530,
+        "x2": 880,
+        "y": 112,
+        "side": "top"
+      }
+    ]
   }
 }
