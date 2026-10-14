@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 312개
-- Product Detail: 309개
+- 공개 장비: 313개
+- Product Detail: 310개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -33,6 +33,13 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://www.shure.com/en-US/products/wireless-systems/mxcw/mxcw640
   매뉴얼: https://www.shure.com/en-US/docs/guide/MXCW
   상세: https://seoulav.github.io/AV-Portal/detail/?product=mxcw640
+
+- 제품: Ross Video Carbonite Ultra
+  분류: 영상 | Video | Production Switcher
+  종류: 장비
+  공식 링크: https://www.rossvideo.com/products/production-switchers/carbonite-ultra
+  매뉴얼: ./manuals/carbonite-ultra-user-manual-v9-2.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=carbonite-ultra
 
 - 제품: Yamaha DM7
   분류: 오디오 | Audio | Mixer

@@ -1,0 +1,596 @@
+{
+  "manufacturer": "Ross Video",
+  "productName": "Carbonite Ultra",
+  "model": "Carbonite Ultra",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Production Switcher"
+  ],
+  "english": "Carbonite Ultra is a standalone production switcher with SD/HD and UHD workflows, integrated processing, multiviewers, and RAVE audio mixing.",
+  "korean": "Carbonite Ultra는 SD·HD·UHD 제작을 위한 Ross Video의 독립형 프로덕션 스위처다.",
+  "verificationSummary": "Ross Video 공식 제품·사양 자료와 Ultra 9.2 User Manual, 사용자 제공 전·후면 사진을 대조했다. 후면 사진과 매뉴얼 p.175의 출력 라벨·수량이 달라 충돌을 함께 표시했다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Carbonite Ultra는 Ross Video의 독립형 라이브 프로덕션 스위처다. 공식 페이지는 HD·UHD 제작, 멀티 ME, 통합 프로세싱과 RAVE 오디오 믹싱을 안내한다. 입력·출력 매트릭스와 일부 처리 자원은 제작 모드(SD/HD 또는 UHD)에 따라 다르다.\n\n후면 사진의 단자 이름과 번호는 사진 기준 Port Map에 보존했다. 사진은 빨간 MV OUTPUT 4개(IO-1·IO-2·1·2)와 초록 OUTPUT 3–12를 표시해 총 14개 위치를 보여 주며, Ross Video 사양표는 SD/HD 출력 12개·UHD 출력 11개, User Manual v9.2 p.175 도면은 MV OUT 1–4와 OUT 5–14로 표기한다. 매뉴얼은 하드웨어 버전에 따라 포트 외관이 다를 수 있다고 안내하지만, 제공된 사진의 하드웨어 버전은 확인되지 않아 하나의 번호 체계로 합치지 않았다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "carbonite-ultra-front.png",
+      "alt": "Ross Video Carbonite Ultra 전면. Carbonite·Ultra 인쇄와 USB·UPGRADE·POWER 표기",
+      "note": "Front · 사용자 제공 사진 (2026-10-14)",
+      "provider": "사용자 제공",
+      "model": "Carbonite Ultra",
+      "officialSource": false,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1600x400",
+      "resolution": "1600x400",
+      "publicationStatus": "사용자 제공 사진 · 2026-10-14"
+    },
+    {
+      "role": "Rear",
+      "file": "carbonite-ultra-rear.png",
+      "alt": "Ross Video Carbonite Ultra 후면. 색상별 MV OUTPUT, OUTPUT 3–12, INPUT 1–24와 전원·제어 단자",
+      "note": "Rear · 사용자 제공 사진 (2026-10-14)",
+      "provider": "사용자 제공",
+      "model": "Carbonite Ultra",
+      "officialSource": false,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "1600x800",
+      "resolution": "1600x800",
+      "publicationStatus": "사용자 제공 사진 · 2026-10-14"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra"
+    },
+    {
+      "role": "Front",
+      "status": "VERIFIED"
+    },
+    {
+      "role": "Rear",
+      "status": "VERIFIED"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra"
+    },
+    {
+      "role": "Other",
+      "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Ultra 9.2 User Manual (4841DR-110-09.2, November 2025) · 사용자 제공",
+      "language": "en",
+      "note": "277쪽. 사용자 제공 PDF를 uploads 방식으로 게시."
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "Independent Specification 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "VERIFIED",
+      "title": "Carbonite Ultra 공식 사양",
+      "language": "en",
+      "note": "Ross Video 공식 제품 사양 페이지",
+      "url": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra/carbonite-ultra-specifications/"
+    },
+    {
+      "type": "Technical Document",
+      "status": "MISSING",
+      "title": "Technical Document 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "Carbonite Ultra Series 공식 제품 페이지",
+      "language": "en",
+      "note": "",
+      "url": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra"
+    }
+  ],
+  "features": [
+    {
+      "text": "SD/HD 모드에서 최대 3개 Full ME와 4개 MiniME 구성",
+      "source": "P, S"
+    },
+    {
+      "text": "SD/HD 24개 또는 UHD 18개 SDI 입력 구성",
+      "source": "S"
+    },
+    {
+      "text": "SD/HD·UHD 제작과 단일 링크 12G-SDI 연결",
+      "source": "P, S"
+    },
+    {
+      "text": "내장 멀티뷰어·프레임 동기화·포맷 변환",
+      "source": "P, S"
+    },
+    {
+      "text": "RAVE 오디오 믹서와 최대 48개 스테레오 페이더",
+      "source": "P, S"
+    },
+    {
+      "text": "TouchDrive 컨트롤 패널 및 DashBoard 제어 인터페이스",
+      "source": "P, S"
+    },
+    {
+      "text": "매크로·메모리·2D DVE·크로마 키 프로덕션 기능",
+      "source": "P, S"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "SDI 입력 매트릭스",
+      "value": "24 (SD/HD) / 18 (UHD)",
+      "unit": "입력",
+      "condition": "UHD 입력은 12G single link 18개 또는 16 single link + 2 single/quad link 구성",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "SDI 출력 매트릭스",
+      "value": "12 (SD/HD) / 11 (UHD) · 후면 사진 14개 라벨 위치",
+      "unit": "출력",
+      "condition": "Ross 사양표: SD/HD 10 assignable + 2 dedicated Multiviewer, UHD 10 assignable + 1 dedicated Multiviewer. 사용자 제공 후면 사진: MV OUTPUT IO-1·IO-2·1·2와 OUTPUT 3–12. Ultra 9.2 User Manual p.175 도면: MV OUT 1–4와 OUT 5–14. 매뉴얼은 하드웨어 버전에 따라 포트가 다르게 보일 수 있다고 안내하나 사진의 하드웨어 버전은 미확인.",
+      "source": "S, M, F",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Video",
+      "name": "Full ME",
+      "value": "최대 3 (SD/HD) / 최대 2 (UHD)",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "MiniME",
+      "value": "4 (SD/HD) / 2 (UHD)",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "Multiviewer",
+      "value": "최대 4 (SD/HD) / 최대 2 (UHD)",
+      "unit": "",
+      "condition": "각 최대 16개 윈도우",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "name": "지원 영상 표준",
+      "value": "480i, 576i, 720p, 1080i, 1080p, 2160p",
+      "unit": "",
+      "condition": "지원 주사율은 해상도·신호 유형별 상이. UHD 12Gb/s",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "AES 오디오 출력",
+      "value": "2",
+      "unit": "출력",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "Tally",
+      "value": "24",
+      "unit": "tally",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "GPI/O",
+      "value": "24",
+      "unit": "GPI/O",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Media",
+      "name": "MediaStore 용량",
+      "value": "8GB (SD/HD) / 8GB (UHD)",
+      "unit": "공유",
+      "condition": "SD/HD 4 MediaStores · UHD 2 MediaStores",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "섀시",
+      "value": "1",
+      "unit": "RU",
+      "condition": "Carbonite Ultra Frame",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "482.1 (전면 너비) × 444.5 (후면 너비) × 41.4 (높이) × 254.0 (깊이)",
+      "unit": "mm",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "5.90",
+      "unit": "kg",
+      "condition": "1RU chassis",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "입력 전압",
+      "value": "100–240",
+      "unit": "VAC",
+      "condition": "47–63Hz",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "HD-BNC",
+      "signal": "SDI",
+      "direction": "입력",
+      "quantity": "24",
+      "protocol": "SD/HD",
+      "availability": "",
+      "condition": "후면 INPUT 1–24. 공식 사양표의 UHD 매트릭스는 18 입력이며 12G single link 또는 multi-link 구성.",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HD-BNC",
+      "signal": "SDI",
+      "direction": "출력",
+      "quantity": "14 (후면 사진 라벨)",
+      "protocol": "",
+      "availability": "",
+      "condition": "사진: 빨간 MV OUTPUT IO-1·IO-2·1·2 및 초록 OUTPUT 3–12. Ross 공식 사양표: SD/HD 12, UHD 11. User Manual p.175: MV OUT 1–4, OUT 5–14. 하드웨어 버전별 차이 가능성은 언급되나 사진 버전 미확인.",
+      "source": "S, M, F",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Audio",
+      "connector": "HD-BNC",
+      "signal": "AES Audio",
+      "direction": "출력",
+      "quantity": "2",
+      "protocol": "AES",
+      "availability": "",
+      "condition": "후면 AES 표기 2개",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "HD-BNC",
+      "signal": "Reference",
+      "direction": "입력",
+      "quantity": "1",
+      "protocol": "Tri-Level HD / Analog SD Black Burst",
+      "availability": "",
+      "condition": "REF IN",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "HD-BNC",
+      "signal": "Reference",
+      "direction": "출력",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "Independent REF OUT",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Timecode",
+      "connector": "HD-BNC",
+      "signal": "Analog LTC",
+      "direction": "입력",
+      "quantity": "1",
+      "protocol": "LTC",
+      "availability": "",
+      "condition": "LiveEDL 또는 Multiviewer clock 기능",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ45",
+      "signal": "Ethernet",
+      "direction": "양방향",
+      "quantity": "1",
+      "protocol": "RossTalk, AMP over IP 등",
+      "availability": "",
+      "condition": "후면 LAN",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ45",
+      "signal": "RS-422 Editor",
+      "direction": "양방향",
+      "quantity": "1",
+      "protocol": "RS-422",
+      "availability": "",
+      "condition": "후면 EDITOR",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "DB25",
+      "signal": "Tally",
+      "direction": "출력",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "매뉴얼: 커넥터당 24 fixed tallies",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "DB25",
+      "signal": "GPI/O",
+      "direction": "양방향",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "",
+      "condition": "매뉴얼: 커넥터당 24 GPI I/O",
+      "source": "S, M, F",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "connector": "전원 입력",
+      "signal": "Power Supply",
+      "direction": "입력",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "",
+      "condition": "후면 PS1·PS2 인쇄",
+      "source": "M, F",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "Ross Video Carbonite Ultra Series 공식 제품 페이지",
+      "url": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra",
+      "scope": "제조사 공식 제품 설명·기능"
+    },
+    {
+      "code": "S",
+      "name": "Ross Video Carbonite Ultra 공식 사양 페이지",
+      "url": "https://www.rossvideo.com/products/production-switchers/carbonite-ultra/carbonite-ultra-specifications/",
+      "scope": "제조사 공식 제품 사양"
+    },
+    {
+      "code": "M",
+      "name": "사용자 제공 Ross Video Ultra 9.2 User Manual (Ross Part Number 4841DR-110-09.2, 2025-11)",
+      "scope": "3쪽 문서 정보, 174–178쪽 후면 패널·단자 설명. 하드웨어 버전에 따라 포트 외관이 다를 수 있다는 주의와 p.175 출력 번호 도면 포함"
+    },
+    {
+      "code": "F",
+      "name": "사용자 제공 Carbonite Ultra 전면·후면 사진 (2026-10-14)",
+      "scope": "전면 Carbonite/Ultra 인쇄와 후면 실제 단자 라벨·색상 그룹"
+    }
+  ],
+  "issues": [
+    {
+      "code": "C1",
+      "status": "CONFLICTED",
+      "title": "후면 SDI 출력 라벨·수량",
+      "detail": "후면 사진은 MV OUTPUT 4개와 OUTPUT 3–12를 표시한다. Ross Video 사양표는 SD/HD 12개와 UHD 11개, User Manual p.175 도면은 MV OUT 1–4와 OUT 5–14를 표시한다. 매뉴얼은 하드웨어 버전에 따라 포트가 다를 수 있다고 안내하지만 사진 버전은 식별되지 않아 번호·수량을 통합하지 않음."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 제공 사진",
+    "galleryRights": "사용자 제공 Carbonite Ultra 사진의 전면 인쇄와 후면 라벨을 대조했습니다.",
+    "galleryFootNote": "Front · Rear · 사용자 제공 (2026-10-14)",
+    "specIntro": "Ross Video 공식 사양과 매뉴얼을 기준으로 값·조건·충돌 상태를 표시합니다.",
+    "ioIntro": "후면 사진의 포트 라벨을 기준으로 하며 자료 간 차이는 별도 표시합니다.",
+    "supplementalNote": "User Manual v9.2와 공식 제품·사양 페이지를 참조합니다.",
+    "footerNote": "Ross Video Carbonite Ultra · 공식 제품 자료 및 사용자 제공 사진 기준",
+    "visualVariant": "user-provided-product-photos"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "carbonite-ultra-rear.png",
+      "width": 1600,
+      "height": 800
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "PS1",
+        "desc": "전원 공급 입력 PS1",
+        "x1": 118,
+        "x2": 157,
+        "y": 355,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "PS2",
+        "desc": "전원 공급 입력 PS2",
+        "x1": 170,
+        "x2": 210,
+        "y": 355,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "EDITOR",
+        "desc": "RJ45 · RS-422 편집기 제어 연결",
+        "x1": 221,
+        "x2": 280,
+        "y": 339,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "LAN",
+        "desc": "RJ45 · Ethernet 네트워크 연결",
+        "x1": 287,
+        "x2": 344,
+        "y": 339,
+        "side": "top"
+      },
+      {
+        "n": 5,
+        "label": "TALLY",
+        "desc": "DB25 · 24 fixed tally 연결",
+        "x1": 367,
+        "x2": 505,
+        "y": 334,
+        "side": "top"
+      },
+      {
+        "n": 6,
+        "label": "GPIO",
+        "desc": "DB25 · 24 GPI/O 연결",
+        "x1": 542,
+        "x2": 685,
+        "y": 334,
+        "side": "top"
+      },
+      {
+        "n": 7,
+        "label": "LTC",
+        "desc": "Analog LTC 입력",
+        "x1": 810,
+        "x2": 852,
+        "y": 350,
+        "side": "top"
+      },
+      {
+        "n": 8,
+        "label": "AES 1",
+        "desc": "AES audio 출력 포트 1",
+        "x1": 860,
+        "x2": 897,
+        "y": 350,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "AES 2",
+        "desc": "AES audio 출력 포트 2",
+        "x1": 904,
+        "x2": 943,
+        "y": 350,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "REF IN",
+        "desc": "Reference 입력",
+        "x1": 292,
+        "x2": 316,
+        "y": 401,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "REF OUT",
+        "desc": "Reference 출력",
+        "x1": 318,
+        "x2": 343,
+        "y": 401,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "MV OUTPUT IO-1–IO-2 · 1–2",
+        "desc": "빨간색 MV OUTPUT 구획 · 사진 인쇄 IO-1, IO-2, 1, 2",
+        "x1": 350,
+        "x2": 472,
+        "y": 403,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "OUTPUT 3–12",
+        "desc": "초록색 출력 구획 · 사진 인쇄 3–12",
+        "x1": 474,
+        "x2": 768,
+        "y": 403,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "INPUT 1–24",
+        "desc": "파란색 SDI 입력 구획 · 사진 인쇄 1–24",
+        "x1": 770,
+        "x2": 1495,
+        "y": 403,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "UPGD",
+        "desc": "UPGD 표기 단자 식별",
+        "x1": 249,
+        "x2": 271,
+        "y": 384,
+        "side": "top"
+      },
+      {
+        "n": 16,
+        "label": "SD",
+        "desc": "SD 표기 단자 식별",
+        "x1": 273,
+        "x2": 290,
+        "y": 384,
+        "side": "top"
+      }
+    ]
+  }
+}

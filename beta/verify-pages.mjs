@@ -367,6 +367,16 @@ for (const slug of slugs) {
       assert.ok(bytes.length > 1_000, image.file + ': usable screenshot');
       assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', image.file + ': PNG signature');
     }
+  } else if (product.images.length && product.images.every(image => image.officialSource === false && image.provider === '사용자 제공' && ['Front', 'Rear'].includes(image.role))) {
+    assert.equal(product.presentation.visualVariant, 'user-provided-product-photos');
+    assert.match(product.presentation.galleryRights, /사용자 제공/);
+    for (const image of product.images) {
+      assert.equal(image.verificationStatus, 'VERIFIED');
+      assert.match(image.publicationStatus, /사용자 제공 사진/);
+      const bytes = await readFile(new URL('detail/images/' + image.file, site));
+      assert.ok(bytes.length > 1_000, image.file + ': usable user-provided product photo');
+      assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', image.file + ': PNG signature');
+    }
   } else if (product.images.length) {
     assert.equal(product.presentation.visualVariant, 'official-product-images');
     assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
