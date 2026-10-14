@@ -1,0 +1,593 @@
+{
+  "h-output-card-hdmi20-4k": {
+    "priorRawSha256": "253b26207393685fb006c31afc3330b95f4e5bc6e585c995fdeb5fd33969c424",
+    "fields": {
+      "english": {
+        "prior": "Single-channel 4K-capable HDMI 2.0 output card with a mirrored copy connector, up to 144Hz output.",
+        "approved": "91f0cfc9ed5a2a586e086173d5d03e673ac6c6f3411b95a46d72228547134a9d"
+      },
+      "korean": {
+        "prior": "미러(복제) 출력 커넥터를 포함한 단일 채널 4K HDMI 2.0 출력 카드로, 최대 144Hz 출력을 지원한다.",
+        "approved": "123dec6ef35937c9652d6dd41f7c6b4a658c39e3d7167c0f75d9227725da21e4"
+      },
+      "overview": {
+        "prior": "H_1xHDMI2.0 출력 카드는 2개의 HDMI 2.0 커넥터를 제공하며, 커넥터 2는 커넥터 1의 출력을 그대로 복제(copy)한다. 최대 8192x1080@60Hz 또는 4096x2160@60Hz까지 출력할 수 있으며, 커스텀 해상도 기준 최대 폭 8192픽셀까지 지원한다.\n\n8비트 또는 10비트 RGB/YCbCr 4:4:4, YCbCr 4:2:2 출력을 지원하며, 최대 144Hz 출력을 지원한다.",
+        "approved": "3bbe16a8d91fb36022f6219931f639c9d336cb360950282a6e539f2a7df157c3"
+      },
+      "features": {
+        "prior": [
+          {
+            "text": "1개 출력 신호를 2개 HDMI 2.0 커넥터로 동시 출력(미러/복제)",
+            "source": "D"
+          },
+          {
+            "text": "최대 8192x1080@60Hz 또는 4096x2160@60Hz(4K UHD) 출력 지원",
+            "source": "D"
+          },
+          {
+            "text": "8비트/10비트 RGB, YCbCr 4:4:4/4:2:2 출력 및 최대 144Hz 지원",
+            "source": "D"
+          }
+        ],
+        "approved": "d89455e82a3ca7e9e9930553ea7b1d83adb9a0a74315e6b51d050cabcabfad3e"
+      }
+    }
+  },
+  "eb-pq2213b": {
+    "priorRawSha256": "8f17f2db013144a8aa79fe822bda3a25f13988810652c49e4a9f50f9a2fd2b93",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PQ2213B is a compact 4K, 13,000-lumen 3LCD laser projector with 4K Crystal Motion technology, sharing its chassis with the PQ22-series family.",
+        "approved": "dec721ca8df2ceef97de3db10fc70ec84cad3a6591d8b7b9be32e797cbc8c3ba"
+      },
+      "korean": {
+        "prior": "엡손 EB-PQ2213B는 4K, 13,000루멘의 콤팩트한 3LCD 레이저 프로젝터로, PQ22 시리즈 패밀리와 동일한 설계를 공유한다.",
+        "approved": "df02929e90de868876aa552bee16e5b429475c141c4b5d11ab56a4a7f38651d5"
+      },
+      "overview": {
+        "prior": "EB-PQ2213B는 엡손의 4K, 13,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가볍고 콤팩트한 4K 프로젝터군에 속한다(2023년 엡손 자체 조사 기준). 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n13,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 기존 EB-PU22/20 모델과 렌즈를 호환해 사용할 수 있고 초단초점(UST) 렌즈도 지원한다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
+        "approved": "7f78d1c70fcd4ddf79f89200fb517c24e7fd659c7cae63d6125197c76c978572"
+      },
+      "features": {
+        "prior": [
+          {
+            "text": "세계에서 가장 가볍고 콤팩트한 4K, 13,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+            "source": "P"
+          },
+          {
+            "text": "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+            "source": "P"
+          },
+          {
+            "text": "13,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+            "source": "P"
+          },
+          {
+            "text": "기존 EB-PU22/20 모델과 렌즈 호환, 초단초점(UST) 렌즈 지원(투사율 0.34, 제로 오프셋)",
+            "source": "P"
+          },
+          {
+            "text": "NFC 기능으로 이동 설치 전 초기 설정 가능, 대량 설치 시 세팅 시간 절약",
+            "source": "P"
+          },
+          {
+            "text": "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원",
+            "source": "P"
+          }
+        ],
+        "approved": "adabcbbe4fee86cb8f73336296f4288413a651d0a76abcf504e802b0256862d9"
+      }
+    }
+  },
+  "eb-pq2216b": {
+    "priorRawSha256": "1503457975b39c9ecee1228768d9eb0a18e5a38039ccaccaa125eb396c640378",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PQ2216B is a compact 4K, 16,000-lumen 3LCD laser projector with 4K Crystal Motion technology, sharing its chassis with the PQ22-series family.",
+        "approved": "613579e0c5f1b8e2e30716cfa8c3388a1532fd668fb8dc38ab246529edb55320"
+      },
+      "korean": {
+        "prior": "엡손 EB-PQ2216B는 4K, 16,000루멘의 콤팩트한 3LCD 레이저 프로젝터로, PQ22 시리즈 패밀리와 동일한 설계를 공유한다.",
+        "approved": "9f426a107bd6973338b3d784d6756114537f56824c57805bec097672d554f619"
+      },
+      "overview": {
+        "prior": "EB-PQ2216B는 엡손의 4K, 16,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가볍고 콤팩트한 4K 프로젝터군에 속한다(2023년 엡손 자체 조사 기준). 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n16,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 기존 EB-PU22/20 모델과 렌즈를 호환해 사용할 수 있고 초단초점(UST) 렌즈도 지원한다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
+        "approved": "03329473746fa75ebee0c77105e42b6510082a95099f46584720dcdbd37b1c17"
+      },
+      "features": {
+        "prior": [
+          {
+            "text": "세계에서 가장 가볍고 콤팩트한 4K, 16,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+            "source": "P"
+          },
+          {
+            "text": "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+            "source": "P"
+          },
+          {
+            "text": "16,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+            "source": "P"
+          },
+          {
+            "text": "기존 EB-PU22/20 모델과 렌즈 호환, 초단초점(UST) 렌즈 지원(투사율 0.34, 제로 오프셋)",
+            "source": "P"
+          },
+          {
+            "text": "NFC 기능으로 이동 설치 전 초기 설정 가능, 대량 설치 시 세팅 시간 절약",
+            "source": "P"
+          },
+          {
+            "text": "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원",
+            "source": "P"
+          }
+        ],
+        "approved": "83fb384577fd9e3db237334fc3544dea0eefb970d635e3fdcd0534171ce7f243"
+      }
+    }
+  },
+  "eb-pq2220b": {
+    "priorRawSha256": "baca60aeee96cab45b35e60de4246fd9f41ee38dcd7a74a4c42441af648991a6",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PQ2220B is the world's lightest and most compact 4K, 20,000-lumen 3LCD laser projector with 4K Crystal Motion technology.",
+        "approved": "f7c960542b482090691edced6a448367316b8116282815063644c7cd354a3392"
+      },
+      "korean": {
+        "prior": "엡손 EB-PQ2220B는 세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 3LCD 레이저 프로젝터로 4K 크리스탈 모션 기술을 탑재했다.",
+        "approved": "81b49511705fd7aac236d45bec663f121db0d55d263aeba95875bb75ca2b46a9"
+      },
+      "overview": {
+        "prior": "EB-PQ2220B는 엡손의 4K, 20,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가볍고 콤팩트한 크기(2023년 엡손 자체 조사 기준, 렌즈와 받침대 제외)를 구현했다. 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 효율적인 광원 구조, 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n20,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 광범위한 렌즈 라인업과 초단초점(UST) 렌즈를 지원해 다양한 설치 환경에 대응할 수 있다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
+        "approved": "c06073f5076ab4183ebb3a9dad905153183976e6d00bae176b66440d7818a256"
+      },
+      "features": {
+        "prior": [
+          {
+            "text": "세계에서 가장 가볍고 콤팩트한 4K, 20,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+            "source": "P"
+          },
+          {
+            "text": "엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도 구현",
+            "source": "P"
+          },
+          {
+            "text": "20,000루멘의 백색 밝기와 컬러 밝기로 밝고 정확한 색 재현",
+            "source": "P"
+          },
+          {
+            "text": "높은 명암비(Over 5,000,000:1, Dynamic Contrast On)와 33x33 그리드 포인트 보정 지원",
+            "source": "P"
+          },
+          {
+            "text": "광범위한 렌즈 라인업과 초단초점(UST) 렌즈(투사율 0.34, 제로 오프셋) 지원",
+            "source": "P"
+          },
+          {
+            "text": "ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 색상·형상 보정 지원",
+            "source": "P"
+          }
+        ],
+        "approved": "5e194fa2b781c319f9211ac1f4258518e00d96fab2fe10f30b37a3f87b375028"
+      }
+    }
+  },
+  "eb-pu1008b": {
+    "priorRawSha256": "57a49c434c38b385aab82bfc230b5bfc53fe5524651fe7d7370395d63d139143",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PU1008B is a compact 3LCD laser projector with inorganic LCD panels delivering 8,500 lm color/white brightness and WUXGA resolution with 4K Enhancement.",
+        "approved": "325fdc6415b2b7d3110de02b349fd5219cd0ee1c180a287e3f8577426828468a"
+      },
+      "korean": {
+        "prior": "엡손 EB-PU1008B는 무기 LCD 패널을 탑재한 콤팩트한 3LCD 고광량 레이저 프로젝터로, 8,500루멘의 컬러/백색 밝기와 4K Enhancement 지원 WUXGA 해상도를 제공한다.",
+        "approved": "e812801738ccb86520555c7946e37d4ecff2b57515bdd5d1a71694b32e957b50"
+      },
+      "overview": {
+        "prior": "EB-PU1008B는 무기 LCD 패널의 높은 내구성과 유지보수가 필요 없는 레이저 광원을 갖춘 8,500루멘 고광량 3LCD 레이저 프로젝터다. 콤팩트한 디자인과 제로 옵셋 렌즈로 설치가 유연하며, 레이저 광원은 최대 20,000시간 동안 별도의 유지보수 없이 작동한다.\n\nWUXGA 해상도에 4K Enhancement 기술을 지원해 4K 상당의 고해상도 영상을 구현하며, 무기 형광휠과 결합된 방진 설계로 타사 동급 모델 대비 약 24% 더 작은 콤팩트한 사이즈를 실현했다. 제로 옵셋 초단초점 렌즈와 렌즈 시프트 기능으로 공간이 부족한 장소에서도 설치가 용이하다.\n\n360도 전방향 회전 설치가 가능하며, 심플 스태킹 기능과 SDI 신호 지원으로 PC나 Wi-Fi 라우터 등 추가 장비 없이도 다중 프로젝션 설치가 가능하다. Epson Projector Management로 최대 2,000대까지 네트워크 프로젝터를 모니터링·제어할 수 있다.",
+        "approved": "ad8b0fd9e43e846733480219596ed63720ca31d02da3339205901032c7762642"
+      }
+    }
+  },
+  "eb-pu2010w-b": {
+    "priorRawSha256": "4a48153099af215d6cf207ccc3cbbf89c0717c60c5b172eab3719d217d3a27b5",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PU2010B is a compact 3LCD laser projector with inorganic LCD panels delivering 10,000 lm color/white brightness and WUXGA resolution with 4K Enhancement.",
+        "approved": "1af51800fa9edf0caee1efcadaa48e44b7640457ba05afca5ba390d4b9b3e8e1"
+      },
+      "korean": {
+        "prior": "엡손 EB-PU2010B는 무기 LCD 패널을 탑재한 콤팩트한 3LCD 고광량 레이저 프로젝터로, 10,000루멘의 컬러/백색 밝기와 4K Enhancement 지원 WUXGA 해상도를 제공한다.",
+        "approved": "92ae4744d44261a87121fa5ab903a297b6b1a817cc36575233accab62f2f780d"
+      },
+      "overview": {
+        "prior": "EB-PU2010B(카탈로그 표기 EB-PU2010W/B)는 무기 LCD 패널의 높은 내구성과 유지보수가 필요 없는 레이저 광원을 갖춘 10,000루멘 고광량 3LCD 레이저 프로젝터다. 콤팩트한 디자인과 제로 옵셋 렌즈로 설치가 유연하며, 레이저 광원은 최대 20,000시간 동안 별도의 유지보수 없이 작동한다.\n\nWUXGA 해상도에 4K Enhancement 기술을 지원해 4K 상당의 고해상도 영상을 구현하며, 무기 형광휠과 결합된 방진 설계로 타사 동급 모델 대비 약 24% 더 작은 콤팩트한 사이즈를 실현했다. 제로 옵셋 초단초점 렌즈와 렌즈 시프트 기능으로 공간이 부족한 장소에서도 설치가 용이하다.\n\n360도 전방향 회전 설치가 가능하며, 심플 스태킹 기능과 SDI 신호 지원으로 PC나 Wi-Fi 라우터 등 추가 장비 없이도 다중 프로젝션 설치가 가능하다. Epson Projector Management로 최대 2,000대까지 네트워크 프로젝터를 모니터링·제어할 수 있다.",
+        "approved": "58de4bd5411ac7f44c9cf5c750ef69becb4f5fbf7eae380a3a21f0732bbbda0e"
+      }
+    }
+  },
+  "eb-pu2213b": {
+    "priorRawSha256": "d968da752a354ac2b1de77bb1eb6e73979c4c20799fbc3a9caa44d7b158d4f89",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PU2213B is a compact, high-brightness 3LCD laser projector delivering 13,000 lm color/white brightness with WUXGA resolution and 4K Enhancement.",
+        "approved": "b70fa5abec992023696a4ccb61f322f7421b6422b61249837b43850b7eee0e58"
+      },
+      "korean": {
+        "prior": "엡손 EB-PU2213B는 13,000루멘의 컬러/백색 밝기와 WUXGA 해상도(4K Enhancement 지원)를 제공하는 콤팩트한 고광량 3LCD 레이저 프로젝터다.",
+        "approved": "b5f5c2b272300343c418eda13ccf6c544fe4a069eb85d6697c5072b6091d00de"
+      },
+      "overview": {
+        "prior": "EB-PU2213B는 엡손 고유의 액체 냉각 시스템과 최적화된 구조가 적용된 작고 가벼운 13,000루멘 3LCD 레이저 프로젝터다. 약 23.7kg의 무게와 콤팩트한 사이즈로 유연한 설치가 가능해 비용 절감 효과를 제공한다.\n\nWUXGA 해상도에 4K Enhancement 기술을 더해 4K 상당의 고해상도 영상을 지원하며 HDR10, Hybrid Log-Gamma를 지원한다. 다양한 옵티컬 렌즈 라인업과 제로 옵셋 초단초점 렌즈를 지원해 설치 환경에 맞는 최적의 구성이 가능하다.\n\n레이저 광원으로 최대 20,000시간까지 별도의 유지보수 없이 작동하며, IP5X 인증을 받은 광학 엔진과 레이저 광원 모듈로 방진 성능을 갖추었다. ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정 기능도 지원한다.",
+        "approved": "6c02fa01c80d25a7919b8f2639ccea9c177ed41036218312e02c29d06ef3a010"
+      }
+    }
+  },
+  "eb-pu2216b": {
+    "priorRawSha256": "1a980c0d50695eda510a215fbd1031705607085fbff4eedbb7c6a2bcf1b11645",
+    "fields": {
+      "english": {
+        "prior": "Epson EB-PU2216B is a compact, high-brightness 3LCD laser projector delivering 16,000 lm color/white brightness with WUXGA resolution and 4K Enhancement.",
+        "approved": "6ddf109d363dfd8df4f694f022ce91546de4d90eea467078881054aa5250fc3a"
+      },
+      "korean": {
+        "prior": "엡손 EB-PU2216B는 16,000루멘의 컬러/백색 밝기와 WUXGA 해상도(4K Enhancement 지원)를 제공하는 콤팩트한 고광량 3LCD 레이저 프로젝터다.",
+        "approved": "6d58773b3219755b4c96e37f52401bbacea26852c0348c194ccde9cfeb648c4e"
+      },
+      "overview": {
+        "prior": "EB-PU2216B는 엡손 고유의 액체 냉각 시스템과 최적화된 구조가 적용된 작고 가벼운 16,000루멘 3LCD 레이저 프로젝터다. 약 24.2kg의 무게와 콤팩트한 사이즈로 유연한 설치가 가능해 비용 절감 효과를 제공한다.\n\nWUXGA 해상도에 4K Enhancement 기술을 더해 4K 상당의 고해상도 영상을 지원하며 HDR10, Hybrid Log-Gamma를 지원한다. 다양한 옵티컬 렌즈 라인업과 제로 옵셋 초단초점 렌즈를 지원해 설치 환경에 맞는 최적의 구성이 가능하다.\n\n레이저 광원으로 최대 20,000시간까지 별도의 유지보수 없이 작동하며, IP5X 인증을 받은 광학 엔진과 레이저 광원 모듈로 방진 성능을 갖추었다. ELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정 기능도 지원한다.",
+        "approved": "c353e17c78a6283860771e5dd8795176e608ff7f06088b1b9880c61bfe224d2e"
+      }
+    }
+  },
+  "x100pro-2u": {
+    "priorRawSha256": "a1cd5fd810267ee4d53a9347ff31068c1aa4922acc413ccd444edec35ebdc26a",
+    "fields": {
+      "portMap": {
+        "prior": null,
+        "approved": "036f6b6f56659748a460fa672020f653e425d3462cdf849a8dc1daf133310c91"
+      }
+    }
+  },
+  "x100pro-4u": {
+    "priorRawSha256": "248aaaf01b35ea31d7beb9fef81c706e8062e12bfe9ddac977848e3494885920",
+    "fields": {
+      "portMap": {
+        "prior": null,
+        "approved": "e88481fa1d149deab46c18bdf499281dbe51dc93c801f344b6d3c7fd971981d3"
+      }
+    }
+  },
+  "x100pro-7u": {
+    "priorRawSha256": "44fd64a9caec3f7cd5db4b303ba255b417b25100e4cff686b4f6db1a199bb97a",
+    "fields": {
+      "portMap": {
+        "prior": null,
+        "approved": "8064242802887b571e9a9fb13dc3910b771a56ed3991b062e45f8053f98b297a"
+      }
+    }
+  },
+  "pt-mz11k": {
+    "priorRawSha256": "e367ae5b8642026680ac4275d9ef9ad3df30dba87b766451876e7e05b3fc9d3f",
+    "fields": {
+      "portMap": {
+        "prior": {
+          "image": "Diagram",
+          "measuredImage": {
+            "file": "pt-mz11k-diagram.webp",
+            "width": 890,
+            "height": 494
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "USB",
+              "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 80,
+              "x2": 132,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "SDI IN",
+              "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 145,
+              "x2": 233,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 3,
+              "label": "HDMI IN 1–2",
+              "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 253,
+              "x2": 490,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 4,
+              "label": "DIGITAL LINK",
+              "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 508,
+              "x2": 613,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 5,
+              "label": "LAN",
+              "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 620,
+              "x2": 720,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "DC OUT",
+              "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 32,
+              "x2": 83,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 7,
+              "label": "SERIAL/MULTI SYNC IN",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 150,
+              "x2": 257,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 8,
+              "label": "SERIAL/MULTI SYNC OUT",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 307,
+              "x2": 421,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 9,
+              "label": "REMOTE 1 IN",
+              "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 477,
+              "x2": 586,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 10,
+              "label": "REMOTE 2 IN/OUT",
+              "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 609,
+              "x2": 725,
+              "y": 350,
+              "side": "bottom"
+            }
+          ]
+        },
+        "approved": "e7b59966facdafcb572a4365b2ea74659b7c086073752742b859d547d65b4d1b"
+      }
+    }
+  },
+  "pt-mz14k": {
+    "priorRawSha256": "5d3cb9a05741b4f05a05812cc958093524ea9ef2dda258110f39db26a38d8a8c",
+    "fields": {
+      "portMap": {
+        "prior": {
+          "image": "Diagram",
+          "measuredImage": {
+            "file": "pt-mz14k-diagram.webp",
+            "width": 890,
+            "height": 494
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "USB",
+              "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 80,
+              "x2": 132,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "SDI IN",
+              "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 145,
+              "x2": 233,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 3,
+              "label": "HDMI IN 1–2",
+              "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 253,
+              "x2": 490,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 4,
+              "label": "DIGITAL LINK",
+              "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 508,
+              "x2": 613,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 5,
+              "label": "LAN",
+              "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 620,
+              "x2": 720,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "DC OUT",
+              "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 32,
+              "x2": 83,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 7,
+              "label": "SERIAL/MULTI SYNC IN",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 150,
+              "x2": 257,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 8,
+              "label": "SERIAL/MULTI SYNC OUT",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 307,
+              "x2": 421,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 9,
+              "label": "REMOTE 1 IN",
+              "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 477,
+              "x2": 586,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 10,
+              "label": "REMOTE 2 IN/OUT",
+              "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 609,
+              "x2": 725,
+              "y": 350,
+              "side": "bottom"
+            }
+          ]
+        },
+        "approved": "1b4b9bd139ff1a596c7e337e585215bc887d49254abc2656525ab1e3ea0737f2"
+      }
+    }
+  },
+  "pt-mz17k": {
+    "priorRawSha256": "49299fa07cabec9591615688b076908afe95d81f1c5a3da20d5bf7064bacdd06",
+    "fields": {
+      "portMap": {
+        "prior": {
+          "image": "Diagram",
+          "measuredImage": {
+            "file": "pt-mz17k-diagram.webp",
+            "width": 890,
+            "height": 494
+          },
+          "items": [
+            {
+              "n": 1,
+              "label": "USB",
+              "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 80,
+              "x2": 132,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 2,
+              "label": "SDI IN",
+              "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 145,
+              "x2": 233,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 3,
+              "label": "HDMI IN 1–2",
+              "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 253,
+              "x2": 490,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 4,
+              "label": "DIGITAL LINK",
+              "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 508,
+              "x2": 613,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 5,
+              "label": "LAN",
+              "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 620,
+              "x2": 720,
+              "y": 165,
+              "side": "top"
+            },
+            {
+              "n": 6,
+              "label": "DC OUT",
+              "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 32,
+              "x2": 83,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 7,
+              "label": "SERIAL/MULTI SYNC IN",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 150,
+              "x2": 257,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 8,
+              "label": "SERIAL/MULTI SYNC OUT",
+              "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 307,
+              "x2": 421,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 9,
+              "label": "REMOTE 1 IN",
+              "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 477,
+              "x2": 586,
+              "y": 350,
+              "side": "bottom"
+            },
+            {
+              "n": 10,
+              "label": "REMOTE 2 IN/OUT",
+              "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+              "x1": 609,
+              "x2": 725,
+              "y": 350,
+              "side": "bottom"
+            }
+          ]
+        },
+        "approved": "6d3da18f9970b504b6fbafde027f1a12e79f65c68b2b5a06b46ba9f5724dcfbb"
+      }
+    }
+  }
+}

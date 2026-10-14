@@ -8,11 +8,11 @@
     "Video",
     "Video Processor Card"
   ],
-  "english": "Single-channel 4K-capable HDMI 2.0 output card with a mirrored copy connector, up to 144Hz output.",
-  "korean": "미러(복제) 출력 커넥터를 포함한 단일 채널 4K HDMI 2.0 출력 카드로, 최대 144Hz 출력을 지원한다.",
+  "english": "Single-channel 4K-capable HDMI 2.0 output card with a copy output connector, up to 144Hz output.",
+  "korean": "복제 출력 커넥터를 포함한 단일 채널 4K HDMI 2.0 출력 카드로, 최대 144Hz 출력을 지원한다.",
   "verificationSummary": "제조사 공식 H Series 데이터시트로 사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "H_1xHDMI2.0 출력 카드는 2개의 HDMI 2.0 커넥터를 제공하며, 커넥터 2는 커넥터 1의 출력을 그대로 복제(copy)한다. 최대 8192x1080@60Hz 또는 4096x2160@60Hz까지 출력할 수 있으며, 커스텀 해상도 기준 최대 폭 8192픽셀까지 지원한다.\n\n8비트 또는 10비트 RGB/YCbCr 4:4:4, YCbCr 4:2:2 출력을 지원하며, 최대 144Hz 출력을 지원한다.",
+  "overview": "H_1xHDMI2.0 출력 카드는 2개의 HDMI 2.0 커넥터를 제공하며, 커넥터 2는 커넥터 1의 출력을 그대로 복제한다. 최대 8192x1080@60Hz 또는 4096x2160@60Hz까지 출력할 수 있으며, 커스텀 해상도 기준 최대 폭 8192픽셀까지 지원한다.\n\n8비트 또는 10비트 RGB/YCbCr 4:4:4, YCbCr 4:2:2 출력을 지원하며, 최대 144Hz 출력을 지원한다.",
   "images": [
     {
       "role": "Main",
@@ -97,7 +97,7 @@
   ],
   "features": [
     {
-      "text": "1개 출력 신호를 2개 HDMI 2.0 커넥터로 동시 출력(미러/복제)",
+      "text": "1개 출력 신호를 2개 HDMI 2.0 커넥터로 동시 출력(복제)",
       "source": "D"
     },
     {

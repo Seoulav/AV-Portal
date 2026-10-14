@@ -8,11 +8,11 @@
     "Display",
     "Projector"
   ],
-  "english": "Epson EB-PQ2213B is a compact 4K, 13,000-lumen 3LCD laser projector with 4K Crystal Motion technology, sharing its chassis with the PQ22-series family.",
-  "korean": "엡손 EB-PQ2213B는 4K, 13,000루멘의 콤팩트한 3LCD 레이저 프로젝터로, PQ22 시리즈 패밀리와 동일한 설계를 공유한다.",
+  "english": "Epson EB-PQ2213B is a 4K, 13,000-lumen 3LCD laser projector with 4K Crystal Motion technology, sharing its chassis with the PQ22-series family.",
+  "korean": "엡손 EB-PQ2213B는 4K, 13,000루멘의 3LCD 레이저 프로젝터로, PQ22 시리즈 패밀리와 동일한 설계를 공유한다.",
   "verificationSummary": "제조사 공식 한글 사이트(epson.co.kr)에서 사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "EB-PQ2213B는 엡손의 4K, 13,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가볍고 콤팩트한 4K 프로젝터군에 속한다(2023년 엡손 자체 조사 기준). 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n13,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 기존 EB-PU22/20 모델과 렌즈를 호환해 사용할 수 있고 초단초점(UST) 렌즈도 지원한다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
+  "overview": "EB-PQ2213B는 엡손의 4K, 13,000루멘 3LCD 레이저 프로젝터로, 세계에서 가장 가벼운 4K 프로젝터군에 속한다(2023년 엡손 자체 조사 기준). 동급 경쟁 제품 대비 약 30% 더 작은 크기와 15% 더 가벼운 무게를 갖추었으며, 새로운 4-in-1 레이저와 정교한 액체 냉각 시스템으로 소형화를 실현했다.\n\n13,000루멘의 백색 밝기와 컬러 밝기를 동시에 제공하며, 엡손 고유의 4K 크리스탈 모션 기술로 선명한 4K 해상도를 구현한다. 명암비는 Dynamic Contrast On 기준 5,000,000:1을 초과하며, 기존 EB-PU22/20 모델과 렌즈를 호환해 사용할 수 있고 초단초점(UST) 렌즈도 지원한다.\n\nELPEC01 옵션 카메라를 활용한 간편한 스태킹과 보정, IP5X 인증 광학 엔진 및 레이저 광원 모듈, 백업 소스 기능, HDR10/HLG 지원 등 대형 강당 및 미팅룸용 고광량 설치 프로젝터에 필요한 기능을 폭넓게 갖추었다.",
   "images": [
     {
       "role": "Main",
@@ -111,7 +111,7 @@
   ],
   "features": [
     {
-      "text": "세계에서 가장 가볍고 콤팩트한 4K, 13,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
+      "text": "세계에서 가장 가벼운 4K, 13,000루멘 프로젝터로 동급 경쟁사 대비 약 30% 더 작고 15% 더 가벼움",
       "source": "P"
     },
     {

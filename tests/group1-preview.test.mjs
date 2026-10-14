@@ -8,7 +8,7 @@ test('local Group 1 preview preserves the published reviewed images and product 
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   try {
     const origin = `http://127.0.0.1:${server.address().port}`;
-    const counts = { 'brc-am7': 4, dm7: 3, 'ki-pro-go2': 2, 'pt-mz17k': 3, 'rally-bar': 2 };
+    const counts = { 'brc-am7': 4, dm7: 3, 'ki-pro-go2': 2, 'pt-mz17k': 3, 'rally-bar': 3 };
     for (const [slug, count] of Object.entries(counts)) {
       const publicData = JSON.parse(await readFile(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
       const response = await fetch(`${origin}/detail/data/${slug}.json`);

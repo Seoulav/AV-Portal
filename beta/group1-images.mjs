@@ -153,7 +153,8 @@ export const group1Images = {
   ],
   'rally-bar': [
     image('Front', 'rally-bar-front.webp', 'Logitech Rally Bar 그래파이트 전면 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1', '1384×1038', '1384×1038'),
-    image('Perspective', 'rally-bar-perspective.webp', 'Logitech Rally Bar 그래파이트 원근 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1', '1384×1038', '1384×1038')
+    image('Perspective', 'rally-bar-perspective.webp', 'Logitech Rally Bar 그래파이트 원근 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-02.png?v=1', '1384×1038', '1384×1038'),
+      image('Diagram', 'rally-bar-diagram.webp', 'Rally Bar 공식 설치 가이드의 후면 포트 라벨 도면', 'Logitech', 'Rally Bar', 'https://www.logitech.com/assets/65999/rally-bar-qsg.pdf', '1100x340', '1100x340', 'VERIFIED', '공식 도면 기준 단자 위치 안내(커버 닫힘 상태, 소켓 모양 비표시) · Logitech 설치 가이드 6쪽')
   ],
   'mezzo-322-ad': [
     group2Image('Front', 'mezzo-322-ad-front.webp', 'Powersoft Mezzo 계열 공용 전면 패널 이미지(Mezzo 322 AD 제품 페이지 대표 이미지)', 'Powersoft', 'Mezzo 322 AD', 'https://www.powersoft.com/api/media/file/Mezzo322A_gallery-cardL_front-2.png', '1024×500', '509×127'),
@@ -294,20 +295,24 @@ export const group1Images = {
   ],
   'rally-mic-pod-hub': [
     image('Perspective', 'logitech-rally-mic-pod-hub-perspective.webp', 'Logitech Rally Mic Pod Hub 상단 원근 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-2.png', '1600×1374', '1528×814', 'FOUND'),
-    image('Rear', 'logitech-rally-mic-pod-hub-front.webp', 'Logitech Rally Mic Pod Hub 하단 커넥터 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png', '1600×1374', '1559×816', 'FOUND')
+    image('Rear', 'logitech-rally-mic-pod-hub-front.webp', 'Logitech Rally Mic Pod Hub 하단 커넥터 이미지', 'Logitech', 'Rally Mic Pod Hub', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod-hub/gallery/rally-mic-pod-hub-gallery-1.png', '1600×1374', '1559×816', 'FOUND'),
+    image('Diagram', 'rally-mic-pod-hub-diagram.webp', 'Rally Mic Pod Hub 공식 설계 도면 밑면과 12핀 연결부 3개', 'Logitech', 'Rally Mic Pod Hub', 'https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk', '1080x530', '1080x530', 'VERIFIED', 'Diagram · Logitech 공식 Rally Mic Pods 설계 도면, LOGITECH_RALLY_MICPOD_HUB.pdf 밑면 · 12핀 소켓 3개와 고정 케이블')
   ],
   'rally-mic-pod-extension-cable': [
     image('Main', 'logitech-rally-mic-pod-extension-cable-main.webp', 'Logitech Rally Mic Pod Extension Cable 이미지', 'Logitech', 'Rally Mic Pod Extension Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/mic-pod-extension-cable/gallery-1.png', '1569×1098', '1362×851', 'FOUND')
   ],
   'strong-usb-cable': [
-    image('Main', 'logitech-strong-usb-cable-main.webp', 'Logitech Strong USB-A to USB-C 케이블 이미지', 'Logitech', 'Strong USB Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png', '1600×1374', '1371×1187', 'VERIFIED')
+    image('Main', 'logitech-strong-usb-cable-main.webp', 'Logitech Strong USB-A to USB-C 케이블 이미지', 'Logitech', 'Strong USB Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png', '1600×1374', '1371×1187', 'VERIFIED'),
+    image('Diagram', 'strong-usb-cable-diagram.webp', 'Strong USB 케이블 USB-C·USB-A 양끝 확대', 'Logitech', 'Strong USB Cable', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/strong-usb/gallery/strong-usb-cable-gallery-1.png', '1371x1187', '950x300', 'VERIFIED', 'Diagram · 공식 제품 사진에서 양끝 커넥터를 각각 발췌(같은 제품)')
   ],
   'rally-plus': [
-    image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND')
+    image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND'),
+      image('Diagram', 'rally-plus-diagram.webp', 'Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열')
   ],
   'rally-mic-pod': [
     image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
-    image('Other', 'logitech-rally-mic-pod-top.webp', 'Logitech Rally Mic Pod 상단 음소거 버튼 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png', '1600×1200', '1106×1183', 'FOUND')
+    image('Other', 'logitech-rally-mic-pod-top.webp', 'Logitech Rally Mic Pod 상단 음소거 버튼 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-2.png', '1600×1200', '1106×1183', 'FOUND'),
+    image('Diagram', 'rally-mic-pod-diagram.webp', 'Rally Mic Pod 공식 설계 도면 밑면의 고정 케이블과 데이지체인 입력', 'Logitech', 'Rally Mic Pod', 'https://hub.sync.logitech.com/support/post/video-conferencing-product-design-file-hub-1SHJfOP9BPQ2enk', '1080x480', '1080x480', 'VERIFIED', 'Diagram · Logitech 공식 Rally Mic Pods 설계 도면, LOGITECH_RALLY_MICPOD.pdf 밑면')
   ],
   'pt-vmz71': [
     image('Main', 'pt-vmz71-main.webp', 'Panasonic PT-VMZ71 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-VMZ71 Series', 'https://docs.connect.panasonic.com/projector/products/vmz71/img/img_mainimg001.png', '708×376', '708×372', 'FOUND'),
