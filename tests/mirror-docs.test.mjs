@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, readFile, stat, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { collectCandidates, mirrorCandidate } from '../beta/mirror-docs.mjs';
+import { collectCandidates, collectUploads, mirrorCandidate } from '../beta/mirror-docs.mjs';
 
 const candidate = { url: 'https://example.com/manual.pdf', slug: 'camera-a', type: 'User Manual' };
 const pdf = Buffer.from('%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF');
@@ -45,4 +45,16 @@ test('rejects webpage and oversized response, retaining prior copy after failure
     assert.equal(failed.reason, 'error');
     assert.deepEqual(failed.entry, first.entry);
   } finally { await rm(dir, { recursive: true, force: true }); }
+});
+
+test('manifest uploads retain old entries and product-specific user-provided titles', () => {
+  const old = [{ slug: 'retained-product', file: 'manuals/retained.pdf', kind: 'manual', title: '기존 업로드', locked: true }];
+  const uploads = collectUploads([{
+    slug: 'emision-pixelfit', brand: 'SD컴퍼니', product: 'emision PixelFit',
+    reference_link: ['./manuals/emision-pixelfit-capture.pdf']
+  }], old);
+  assert.deepEqual(uploads, [old[0], {
+    slug: 'emision-pixelfit', file: 'manuals/emision-pixelfit-capture.pdf', kind: 'reference',
+    title: 'emision PixelFit 화면 안내(사용자 제공)'
+  }]);
 });

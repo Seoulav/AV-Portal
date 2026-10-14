@@ -47,6 +47,13 @@ export function userManualLinkFor(item) {
 // 이 참고자료가 붙는 카탈로그 항목 각각을 기준으로 한 줄씩 적는다.
 export const userReferences = [
   {
+    brand: 'SD컴퍼니',
+    product: 'emision PixelFit',
+    file: 'emision-pixelfit-capture.pdf',
+    title: 'emision PixelFit 화면 안내(사용자 제공)',
+    note: uploadNote
+  },
+  {
     brand: 'JBL',
     product: 'AC18/95',
     file: 'jbl-ae-series-u-bracket-handbook.pdf',

@@ -33,6 +33,7 @@ import {beforeW033Uploads} from './w033-history.mjs';
 import {withoutW13008Uploads} from './w13008-surgex-history.mjs';
 import {withoutW13010Uploads} from './w13010-yamaha-history.mjs';
 import {withoutXdmCommandGuideUpload} from './xdm-command-guide-history.mjs';
+import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -40,7 +41,7 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const uploadsBeforeNewDocs = withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads));
+const uploadsBeforeNewDocs = withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(manifest.uploads)));
 const historicalUploads=beforeW04021Uploads(beforeWinstarW04016Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))))));
 const slugs=Object.keys(evidence.products);
 const product=slug=>read(`beta/site/detail/data/${slug}.json`);
