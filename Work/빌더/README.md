@@ -171,6 +171,55 @@ flowchart LR
 - Portal 데이터 보강(P6)은 이 흐름으로 하되, 1단계 준비의 충돌 확인을 반드시 거친다.
 - 기존 Work/Codex 대기열과 순서를 다투지 않는다. 같은 파일을 동시에 고치지 않는 것만 지킨다.
 
+## Portal 반영 요청 처리
+
+Builder 장비 설정 창의 **적용하고 Portal 반영 요청 내보내기**가 만든 `builder-io-request-<productId>-<YYYYMMDD>.json`을 Portal 상세 JSON에 반영하는 절차다([B-20261013-02](작업/B-20261013-02.md)).
+
+### 누가·언제
+
+- 사용자가 요청 파일을 Claude Code에게 준다(결정 D1). Claude Code가 이 흐름으로 적용하고 PR을 연다.
+- 파일 하나 = 제품 하나 = PR 하나. 받은 날 처리한다. 다른 작업이 같은 상세 파일을 고치는 중이면 그 작업이 병합된 뒤에 한다.
+- **RTCOM 제품**(`"source": "rtcom"`)은 적용하지 않는다. 스크립트가 거부하고 안내를 낸다. 파일을 RTCOM 원본 담당에게 전달하고, 원본에 반영되면 `node beta/sync-rtcom.mjs`로 가져온다(AGENTS.md: RTCOM 원본은 Portal에서 고치지 않는다).
+- TX/RX·시리즈 배치 단위의 요청은 아직 적용하지 않는다(2026-10-13 기준 Portal 데이터에 해당 제품이 없다).
+
+### 순서
+
+1. 최신 `origin/main`에서 `claude-feat/B-portal-io-<productId>` 브랜치를 만든다.
+2. 계획 확인: `node beta/apply-builder-io-request.mjs <파일> --dry-run`. 파일을 바꾸지 않고 적용할 변경·건너뛸 변경·겹치는 작업을 보여 준다.
+3. 적용: `node beta/apply-builder-io-request.mjs <파일>`. 스크립트가 하는 일:
+   - 형식 검사(`builder/schema/builder-io-request-1.0.schema.json`과 같은 규칙).
+   - 요청을 만든 라이브러리의 `catalogSha`·`detailSetSha`가 지금과 다르면 경고하고, 변경마다 `before`(행 원문 다섯 칸)가 지금 행과 같은지 본다. 다르면 **그 변경만 건너뛰고** 보고한다.
+   - 겹침 확인: `Work/지시서.md`·`Work/지시서-B.md`·`Work/지시서-C.md`의 진행 중 작업이 이 제품(slug·상세 경로·모델명·**제조사**)을 언급하거나, 열린 PR이 같은 상세 파일을 고치면 **중단**한다.
+     - 진행 중 판단: 진행 표시(IN_PROGRESS·REVIEW·BLOCKED·준비·대기 등)가 있으면 MERGED가 함께 있어도 진행 중, 끝 표시(MERGED·DEPLOYED·완료·종료)만 있으면 끝, 알아볼 수 없으면 진행 중으로 본다(놓치지 않는 쪽).
+     - `gh`를 쓸 수 없거나, 파일이 100개 이상이라 gh가 다 보여 주지 않는 열린 PR이 있으면 확인 목록을 출력하고 중단한다.
+     - 사람이 확인했으면 `--overlap-checked`로 다시 실행한다. 열린 PR이 같은 파일을 고치는 경우는 이 옵션으로도 넘어가지 않는다.
+   - 개별 지정(`IO_OVERRIDES`)이 실제로 쓰이는 행을 고치는 변경, 지우면 뒤 행의 개별 지정 번호가 밀리는 삭제, 고친 원문이 단자 행으로 판정되지 않는 변경은 건너뛴다. 고친 행에서 갈라진 새 행(`fromIoIndex`)은 원래 행의 변경을 건너뛰면 함께 건너뛴다.
+   - 같은 요청을 다시 적용하면(바뀐 값·새 행이 이미 있다) 중단한다. 상세 파일에 커밋하지 않은 변경이 있으면 쓰지 않는다(앞 실행이 재생성 도중 멈췄다면 `git checkout`으로 되돌린 뒤 다시 실행).
+   - 고친 행·새 행: `verification: "REVIEW REQUIRED"`, `source: ""`. 근거(`reason`)는 상세 JSON에 쓰지 않는다. 삭제는 행을 지운다. 상세 파일은 `io` 배열만 바꾸고 나머지 서식은 그대로 둔다.
+   - `node beta/build-search-index.mjs`, `node beta/update-snapshot.mjs`(공개 스냅샷의 해시·io 행 수), 라이브러리 생성 확인, 검색 인덱스 `--check`. 목록(`catalog.json`)은 바꾸지 않으므로 읽기용 목록은 다시 만들지 않는다.
+   - 바뀐 행 요약과 PR 본문 초안을 출력한다.
+4. 검증: 이 문서 §5 공통 검증(LF 복제본 전체 시험, `verify-pages`, 검색 인덱스 `--check`, `node beta/build-builder-library.mjs --report`). 이 제품의 io 내용·행 번호를 고정한 시험(`grep -l "<productId>" tests/*.mjs` — 제품 전용 시험, 과거 바이트 검사 `tests/*history*.mjs`)이 실패하면 이번 변경에 맞게 고친다. 과거 바이트 검사는 기존 되감기 모듈 방식으로 이번 변경 칸만 되감는다. 행을 지웠으면 뒤 행 번호가 하나씩 당겨진다. 2026-10-13 LF 복제본에서 NX-1200에 적용해 본 결과, 제품 전용 시험 2건이 의도대로 실패했다(io 내용을 고정한 시험).
+5. PR: 제목 `data: <제품명> I/O 행 Portal 반영 (Builder 요청)`. 본문은 스크립트가 낸 초안(변경마다 근거, 비었으면 **근거 없음**(결정 D2), 건너뛴 변경과 이유)에 요청 파일 이름을 더한다. 요청 파일 자체는 커밋하지 않는다.
+6. 병합: 공통 병합 규칙을 따른다. 새 행은 `REVIEW REQUIRED`이므로 자료로 확인한 뒤 출처·상태를 채우는 일은 별도 작업이다(`VERIFIED`를 자동으로 주지 않는다).
+
+### 원문 대응표
+
+새 행과 고친 칸의 원문은 Builder의 표준값에서 만든다(`builder/engine/io-request.mjs`). 생성기가 같은 표준값으로 다시 읽는지는 Builder가 내보내기 전에 생성기 규칙(`beta/port-classify.mjs`)으로 확인하고, `tests/builder-io-request.test.mjs`가 어휘 전체를 확인한다.
+
+| 칸 | 원문 |
+|---|---|
+| `connector` | 커넥터 ID 그대로(HDMI·RJ45·BNC 등). 다만 `UNKNOWN`→`정보 없음`, `TERMINAL-BLOCK`→`유로블록`, `BINDING-POST`→`Binding Post`, `IEC-C13`→`IEC C13`, `SCHUKO`→`CEE7/7`, `XLR4`→`XLR 4pin`, `DSUB-15`→`D-SUB 15`, `DSUB-25`→`DB-25`, `DSUB-9`→`D-SUB 9`, `MINI-DIN-8`→`Mini DIN 8`, `USB-MICRO`→`Micro USB`, `USB-MINI`→`Mini USB`, `MINI-XLR`→`Mini XLR`, `TRS-6.3`→`6.3mm TRS`, `TRS-3.5`→`3.5mm TRS`, `PROPRIETARY`→`Proprietary modular` |
+| `signal` | 어휘 표시명(HDMI·SDI·Dante 등). 다만 `SYNC`→`Sync (Reference)`, `ANALOG-VIDEO`→`Analog video`, `BLU-LINK`→`BLU link`. 여러 신호는 ` / `로 잇는다 |
+| `direction` | `in`→`IN`, `out`→`OUT`, `both`→`IN/OUT` |
+| `quantity` | 단자 수(정수) |
+| `group` | 고친 행에서 갈라진 새 행은 원래 행의 group. 사용자가 더한 단자의 새 행은 `Input`·`Output`·`Input/Output` |
+
+원문 확인에는 그 행의 `protocol` 원문도 넣는다(라이브러리 1.2.0 `portalIo.protocol`). protocol이 신호를 더하는 행(예: RJ45 + protocol "Dante")은 그 신호를 빼는 편집을 나타낼 수 없다. protocol은 고치지 않는다.
+
+나타낼 수 없는 값: AVB(원문 규칙이 없다), PoE를 주 신호로(원문은 Ethernet이 주 신호가 된다), 대칭 신호(Dante·Ethernet 등)의 한 방향, 아날로그 오디오를 디지털 커넥터에, 수를 커넥터 원문에서 읽는 행("XLR x4")의 수량 변경, 원문을 바꿔도 같은 단자가 나오는 편집(예: 생성기가 덧붙인 신호만 빼기). 생성기가 덧붙이는 보조 신호는 이더넷 위 신호(Dante·AES67 등)의 Ethernet만 받아들인다. 원래 행을 고칠 수 없으면 그 행에서 갈라진 단자도 반영하지 않는다. 단자 이름과 순서는 생성기가 정하므로 반영하지 않는다.
+
+그 밖의 묶기 규칙: 라이브러리 단자를 지우고 같은 값의 사용자 단자를 더했다면 그 행에 되돌려 넣는다(변경 없음). 다른 방향 목록으로 옮긴 단자의 새 행 group은 방향을 따른다. Portal 제품의 TX/RX·시리즈 배치 단위는 Builder가 요청을 만들지 않는다.
+
 ## 작업 목록
 
 | ID | 내용 | 로드맵 | 상태 |
@@ -188,7 +237,7 @@ flowchart LR
 
 | [B-20261012-02](작업/B-20261012-02.md) | CPQ 통합: 구성도 전달·독립 견적 앱·실제 Excel 출력 검증 | 사용자 추가 승인 | 완료 — PR #385·Pages·공개 흐름 확인 |
 | [B-20261013-01](작업/B-20261013-01.md) | 장비 설정 창(더블클릭)과 구성도 단자 편집, 단자 삭제 시 연결 정리 | P9 앞당김 | 검토 |
-| [B-20261013-02](작업/B-20261013-02.md) | 단자 변경 Portal 반영 요청 파일·적용 스크립트 | P6 | 승인 |
+| [B-20261013-02](작업/B-20261013-02.md) | 단자 변경 Portal 반영 요청 파일·적용 스크립트 | P6 | 검토 — PR #488 |
 | [B-20261013-03](작업/B-20261013-03.md) | 슬롯·카드 데이터 형식(Portal·RTCOM 공통)과 라이브러리 반영 — Novastar H·BSS BLU 먼저 | P9 | 검토 |
 | [B-20261013-04](작업/B-20261013-04.md) | 슬롯 번호별 카드 장착 화면, 카드 단자 합성, 견적 옵션과 통합 | P9 | 승인 |
 | [B-20261013-05](작업/B-20261013-05.md) | 오디오 단자 표시(커넥터·레벨)와 오디오 연결 판정(케이블 추천·레벨·평형) | P5 보완 | 승인 |

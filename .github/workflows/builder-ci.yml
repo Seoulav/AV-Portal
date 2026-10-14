@@ -27,7 +27,7 @@ jobs:
       - name: Builder library (generator + tests)
         run: |
           node beta/build-builder-library.mjs --report
-          node --test tests/builder-library.test.mjs tests/builder-engine.test.mjs tests/builder-port-edit.test.mjs
+          node --test tests/builder-library.test.mjs tests/builder-engine.test.mjs tests/builder-port-edit.test.mjs tests/builder-io-request.test.mjs
       - run: npm ci
         working-directory: builder
       - run: npm run typecheck

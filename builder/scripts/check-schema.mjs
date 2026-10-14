@@ -27,4 +27,22 @@ for (const [name, mutate] of broken) {
   console.log(`${ok ? '통과(문제)' : '거부'} 깨진 사본: ${name}`);
   if (ok) failed += 1;
 }
+// Portal 반영 요청(B-20261013-02): 스키마가 strict로 컴파일되고, 문서의 모양은 통과·깨진 사본은 거부된다
+const validateRequest = ajv.compile(read('../schema/builder-io-request-1.0.schema.json'));
+const row = { group: 'Input', connector: 'HDMI', signal: 'HDMI', direction: 'IN', quantity: '2' };
+const request = {
+  schema: 'av-portal.builder-io-request', schemaVersion: '1.0.0', productId: 'example', source: 'portal', unitId: 'example',
+  library: { catalogSha: 'c', detailSetSha: 'd' },
+  changes: [{ op: 'add', row, reason: '' }, { op: 'update', ioIndex: 3, before: row, after: { ...row, quantity: '1' }, reason: '매뉴얼 12쪽' }, { op: 'remove', ioIndex: 5, before: row, reason: '' }],
+};
+const requestOk = validateRequest(request);
+console.log(`${requestOk ? '통과' : '실패'} Portal 반영 요청 예시`);
+if (!requestOk) { failed += 1; console.log(JSON.stringify(validateRequest.errors?.slice(0, 5), null, 2)); }
+for (const [name, mutate] of [['op 없음', r => { delete r.changes[0].op; }], ['remove에 after', r => { r.changes[2].after = row; }], ['source 다름', r => { r.source = 'x'; }]]) {
+  const copy = structuredClone(request);
+  mutate(copy);
+  const ok = validateRequest(copy);
+  console.log(`${ok ? '통과(문제)' : '거부'} 깨진 요청: ${name}`);
+  if (ok) failed += 1;
+}
 process.exitCode = failed ? 1 : 0;

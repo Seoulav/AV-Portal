@@ -66,7 +66,7 @@ test('two added ports draw, connect, and deleting one asks first and leaves no o
   await dialog.getByLabel('입력 추가 개수').fill('2');
   await dialog.getByRole('button', { name: '입력 단자 추가' }).click();
   await expect(dialog.locator('.port-edit-row.user')).toHaveCount(2);
-  await dialog.getByRole('button', { name: '적용' }).click();
+  await dialog.getByRole('button', { name: '적용', exact: true }).click();
   await expect(dialog).toHaveCount(0);
   // 노드에 바로 그려지고(점선·"추가" 표시) 저장된다
   await expect(page.locator(`.react-flow__node[data-id="${disp}"] .port-row.port-user`)).toHaveCount(2);
@@ -83,13 +83,13 @@ test('two added ports draw, connect, and deleting one asks first and leaves no o
   await dialog.getByRole('tab', { name: /단자/ }).click();
   await expect(dialog.locator('.port-edit-row[data-port-id="in-user-1"]')).toContainText('연결 1');
   await dialog.getByRole('button', { name: 'HDMI In 1 삭제' }).click();
-  await dialog.getByRole('button', { name: '적용' }).click();
+  await dialog.getByRole('button', { name: '적용', exact: true }).click();
   const confirm = dialog.getByRole('alertdialog', { name: '연결 삭제 확인' });
   await expect(confirm).toContainText('연결 1개도 함께 지웁니다');
   await confirm.getByRole('button', { name: '돌아가기' }).click();
   await expect(confirm).toHaveCount(0);
   expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-user-1']);
-  await dialog.getByRole('button', { name: '적용' }).click();
+  await dialog.getByRole('button', { name: '적용', exact: true }).click();
   await confirm.getByRole('button', { name: '연결도 지우고 적용' }).click();
   await expect(dialog).toHaveCount(0);
   await expect.poll(() => savedEdges(page)).toEqual([]);
@@ -134,7 +134,7 @@ test('moving a connected port up moves its line with it', async ({ page }) => {
   await dialog.getByRole('tab', { name: /단자/ }).click();
   await dialog.getByRole('button', { name: 'in-hdmi-3 위로' }).click();
   await dialog.getByRole('button', { name: 'in-hdmi-3 위로' }).click();
-  await dialog.getByRole('button', { name: '적용' }).click();
+  await dialog.getByRole('button', { name: '적용', exact: true }).click();
   await expect(dialog).toHaveCount(0);
   expect(await savedEdges(page)).toEqual(['out-hdmi-1>in-hdmi-3']);
   // 선 끝이 옮겨 간 단자 행(이제 첫 행)에 붙는다
@@ -153,7 +153,7 @@ test('the side panel shows a summary and opens the same settings', async ({ page
   await panel.getByRole('button', { name: '설정 열기' }).click();
   const dialog = page.getByRole('dialog', { name: '장비 설정' });
   await dialog.getByLabel('장비 시스템명').fill('회의실 A');
-  await dialog.getByRole('button', { name: '적용' }).click();
+  await dialog.getByRole('button', { name: '적용', exact: true }).click();
   await expect(panel).toContainText('회의실 A');
   await expect.poll(async () => (await saved(page)).nodes.find((n: { id: string }) => n.id === disp).data.systemName).toBe('회의실 A');
   // 견적 정보만 넣은 노드는 이슈가 없다

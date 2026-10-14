@@ -284,6 +284,13 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
 .port-edit-row input, .port-edit-row select { min-width: 0; width: 100%; box-sizing: border-box; }
 .port-edit-tools { display: flex; gap: 2px; }
 .port-edit-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; }
+/* Portal 반영 요청(B-20261013-02): 단자별 근거 칸과 확인 화면 */
+.port-edit-row .port-edit-reason { grid-column: 1 / -1; font-size: 12px; }
+.io-request-review { max-height: 45vh; overflow: auto; }
+.io-request-changes { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.io-request-changes li { display: flex; flex-direction: column; gap: 3px; }
+.io-request-changes input { width: 100%; box-sizing: border-box; }
+.io-request-skipped ul { margin: 2px 0 0; padding-left: 20px; }
 .port-edit-meta:empty { display: none; }
 .port-tag { font-size: 11px; color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); border-radius: 4px; padding: 0 5px; }
 .port-tag.user { color: var(--accent); background: var(--accent-soft); }
