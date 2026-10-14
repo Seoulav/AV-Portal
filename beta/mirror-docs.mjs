@@ -76,7 +76,7 @@ async function readJson(file, fallback) {
 }
 
 export function collectUploads(catalog, existingUploads = []) {
-  const sourceByIdentity = new Map([...userManuals, ...userReferences].map(entry => [identity(entry.brand, entry.product), entry]));
+  const sourceByIdentity = new Map([...userManuals, ...userReferences].map(entry => [identity(entry.brand, entry.product) + '|' + entry.file, entry]));
   const uploads = existingUploads.map(entry => ({ ...entry }));
   const existingKeys = new Set(uploads.map(entry => [entry.slug, entry.file, entry.kind].join('|')));
   for (const item of catalog) {
@@ -86,7 +86,7 @@ export function collectUploads(catalog, existingUploads = []) {
       const file = url.slice(2);
       const key = [item.slug, file, kind].join('|');
       if (existingKeys.has(key)) continue;
-      const source = sourceByIdentity.get(identity(item.brand, item.product));
+      const source = sourceByIdentity.get(identity(item.brand, item.product) + '|' + file.slice('manuals/'.length));
       uploads.push({
         slug: item.slug, file, kind,
         title: source?.file === file.slice('manuals/'.length) ? source.title : kind === 'manual' ? '사용자 업로드 매뉴얼' : '사용자 업로드 참고자료'
