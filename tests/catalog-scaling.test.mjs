@@ -1,4 +1,4 @@
-﻿import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
+import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { w029Slugs } from './w029-history.mjs';
 import { w006Slugs } from './w006-history.mjs';
 import { w007Slugs } from './w007-history.mjs';
@@ -116,4 +116,3 @@ test('Group 1 빌더는 공개 목록 전체를 기준으로 삼는다', async (
   assert.match(source, /buildPreviewCatalog\(existingCatalog,/);
   assert.doesNotMatch(source, /assert\.equal\(catalog\.length, 27\)/);
 });
-

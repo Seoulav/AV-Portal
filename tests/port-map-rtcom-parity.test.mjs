@@ -1,4 +1,4 @@
-﻿import { beforeW20261014_005Catalog, beforeW20261014_005DetailFiles, isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
+import { beforeW20261014_005Catalog, beforeW20261014_005DetailFiles, isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW12005Product } from './w12005-history.mjs';
 import test from 'node:test';
 import { isW1010Name } from './w1010-history.mjs';
@@ -139,4 +139,3 @@ test('Port Map source and CSS contain no obsolete blue or DOM-measurement placem
     assert.doesNotMatch(block, /getBoundingClientRect|paddingTop|paddingBottom/);
   }
 });
-
