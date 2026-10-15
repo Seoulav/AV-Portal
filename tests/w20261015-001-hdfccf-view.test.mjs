@@ -36,3 +36,14 @@ test('two rows show direct and hub to HDMI with an explicit reverse PD arrow', (
   assert.equal(nodes.filter(n => n.tag === 'li').length, 7);
   assert.equal(nodes.filter(n => n.tag === 'dialog').length, 1);
 });
+
+test('hub scenario shows external USB-PD supply entering the hub before charging the laptop', () => {
+  const host = renderCableScenarioFlow(flow, 'HDF-CCF');
+  const nodes = walk(host);
+  const hubSvg = nodes.filter(n => n.tag === 'svg')[1];
+  const hubNodes = walk(hubSvg);
+  assert.match(hubSvg.textContent, /외부 USB-PD 전원/);
+  assert.ok(hubNodes.some(n => n.tag === 'path' && n.attrs.class === 'cable-flow-hub-power-line'
+    && n.attrs['marker-end']?.includes('arrow-down')));
+  assert.match(host.textContent, /허브.*노트북.*충전/);
+});

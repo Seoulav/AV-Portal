@@ -308,7 +308,7 @@
   "signalFlow": {
     "type": "extender",
     "layout": "cable-scenarios",
-    "description": "두 시나리오는 매뉴얼의 연결 예시입니다. 허브/스위치는 이 제품에 포함되지 않는 외부 장비이며 표시 경로는 고정 결선이 아닙니다.",
+    "description": "두 시나리오는 매뉴얼의 연결 예시입니다. 허브 연동 시 외부 USB-PD 전원이 허브에 공급되고, 허브가 HDF-CCF를 거쳐 입력 노트북을 충전합니다. 허브/스위치와 전원 공급기는 이 제품에 포함되지 않는 외부 장비이며 표시 경로는 고정 결선이 아닙니다.",
     "inputs": [
       {
         "id": "direct-source",
@@ -712,7 +712,7 @@
           "노트북 USB-C를 케이블 SOURCE 단자에 연결",
           "케이블 DISPLAY 단자를 외부 허브/프레젠테이션 스위치에 연결",
           "허브의 HDMI 출력을 TV/모니터에 연결하고 USB 주변기기를 허브에 연결",
-          "영상·USB는 SOURCE → DISPLAY, 허브의 PD 전원은 DISPLAY → SOURCE"
+          "영상·USB는 SOURCE → DISPLAY, 외부 USB-PD 전원은 허브에 입력되어 HDF-CCF를 통해 노트북을 충전"
         ],
         "evidence": [
           {

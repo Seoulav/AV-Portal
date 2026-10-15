@@ -382,6 +382,10 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .cable-flow-device-stroke { stroke: #8eacca; stroke-width: 3; }
 .cable-flow-usbc-port { fill: #233e5c; stroke: #6699cd; stroke-width: 1.5; }
 .cable-flow-hub-port { fill: #40658d; }
+.cable-flow-pd-source { fill: #fff3e8; stroke: #e87925; stroke-width: 2; }
+.cable-flow-pd-source-label { fill: #9e4808; font-size: 11px; font-weight: 700; }
+.cable-flow-pd-source-caption { fill: #a95416; font-size: 10px; }
+.cable-flow-hub-power-line { fill: none; stroke: #e87925; stroke-width: 3; stroke-linecap: round; }
 .cable-flow-hdmi-port { fill: #2c4a6a; }
 .cable-flow-device-label, .cable-flow-connector-role { fill: #213f61; font-size: 14px; font-weight: 700; }
 .cable-flow-connector-type, .cable-flow-role-caption, .cable-flow-cable-caption { fill: #49637c; font-size: 11px; }
@@ -398,6 +402,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .cable-flow-direction { margin: 7px 0 0; color: #294e71; font-size: 12px; line-height: 1.5; }
 .cable-flow-footer { margin: 0; color: #4a6078; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
 .cable-flow-extra { margin: 9px 0 0; color: #49637c; font-size: 12px; line-height: 1.5; }
+.cable-flow-pd-path { color: #a95416; font-weight: 700; }
 .cable-flow-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 10px 0; border-top: 1px solid #e5eaf1; color: #465d75; font-size: 13px; }
 .cable-flow-legend-item { display: inline-flex; align-items: center; gap: 6px; }
 .cable-flow-swatch { display: inline-block; width: 18px; height: 4px; border-radius: 2px; }
