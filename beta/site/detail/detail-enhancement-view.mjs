@@ -40,7 +40,10 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
     }
     const side = item.side === 'top' ? 'top' : 'bottom';
     const x1 = X0 + item.x1 * scale, x2 = X0 + item.x2 * scale;
-    return { item, side, x1, x2, cx: (x1 + x2) / 2, sourceY: item.y };
+    const cx = (x1 + x2) / 2;
+    return item.labelX === undefined
+      ? { item, side, x1, x2, cx, sourceY: item.y }
+      : { item, side, x1, x2, cx: X0 + item.labelX * scale, sourceY: item.y, anchorX: cx };
   });
   const laneCounts = {};
   for (const side of ['top', 'bottom']) {
@@ -107,11 +110,11 @@ export function renderPortMap(map, image, model = '') {
     } else if (side === 'bottom') {
       const { x1, x2, anchorY: B } = marker;
       bracket = `M${x1} ${B - 8}V${B + 6}H${x2}V${B - 8}`;
-      leader = `M${cx} ${B + 6}V${cy - 10}`;
+      leader = marker.item.labelX === undefined ? `M${cx} ${B + 6}V${cy - 10}` : `M${marker.anchorX} ${B + 6}L${cx} ${cy - 10}`;
     } else {
       const { x1, x2, anchorY: B } = marker;
       bracket = `M${x1} ${B + 8}V${B - 6}H${x2}V${B + 8}`;
-      leader = `M${cx} ${B - 6}V${cy + 10}`;
+      leader = marker.item.labelX === undefined ? `M${cx} ${B - 6}V${cy + 10}` : `M${marker.anchorX} ${B - 6}L${cx} ${cy + 10}`;
     }
     for (const d of [bracket, leader]) svg.append(svgNode('path', { d, fill: 'none', stroke: 'var(--pg-accent)', 'stroke-width': 1.5 }));
     svg.append(svgNode('circle', { cx, cy, r: 10, fill: 'var(--pg-accent)' }));

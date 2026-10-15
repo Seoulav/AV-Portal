@@ -9,17 +9,18 @@ export const isDisplayProduct = product => product.categories?.some(c => /^(Disp
 const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(key));
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
 const validMarker = i => {
-  if (!record(i) || !keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'y1', 'y2', 'x', 'side']) ||
+  if (!record(i) || !keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'y1', 'y2', 'x', 'side', 'labelX']) ||
       !Number.isInteger(i.n) || i.n <= 0 || !text(i.label) || typeof i.desc !== 'string') return false;
   if (i.side === 'left' || i.side === 'right') {
-    return i.x1 === undefined && i.x2 === undefined && i.y === undefined &&
+    return i.x1 === undefined && i.x2 === undefined && i.y === undefined && i.labelX === undefined &&
       Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= 0 && i.y2 > i.y1 &&
       (i.x === undefined || (Number.isFinite(i.x) && i.x >= 0));
   }
   return (i.side === undefined || i.side === 'top' || i.side === 'bottom') &&
     i.y1 === undefined && i.y2 === undefined && i.x === undefined &&
     Number.isFinite(i.x1) && Number.isFinite(i.x2) && i.x1 >= 0 && i.x2 > i.x1 &&
-    (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0));
+    (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0)) &&
+    (i.labelX === undefined || (Number.isFinite(i.labelX) && i.labelX >= 0));
 };
 function validMap(map, product) {
   const rtcom = product.manufacturer === 'RTCOM';
@@ -37,7 +38,8 @@ function validMap(map, product) {
       : Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
     map.items.every(i => validMarker(i) && (i.side === 'left' || i.side === 'right'
       ? i.y2 <= size[1] && (i.x === undefined || i.x <= size[0])
-      : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
+      : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]) &&
+        (i.labelX === undefined || i.labelX <= size[0]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
 }
 const dimensions = value => {
   const match = typeof value === 'string' && /^(\d+)\s*[x×]\s*(\d+)$/i.exec(value.trim());
