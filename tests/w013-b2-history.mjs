@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeW15004Product, beforeW15004Raw } from './w15004-shure-photo-history.mjs';
 import { createHash } from 'node:crypto';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w013-b2-product-history.json', import.meta.url), 'utf8'));
@@ -20,7 +21,7 @@ function restoreB2Io(current, slug, strict) {
   return result;
 }
 
-export const beforeW013B2Product = (current, slug) => restoreB2Io(current, slug, true);
+export const beforeW013B2Product = (current, slug) => restoreB2Io(w013B2Slugs.has(slug) ? beforeW15004Product(current, slug) : current, slug, true);
 export const rewindW013B2Product = (current, slug) => restoreB2Io(current, slug, false);
 
 function matchingClose(text, open, left, right) {
@@ -40,6 +41,7 @@ function matchingClose(text, open, left, right) {
 
 export function rewindW013B2Raw(raw, slug) {
   if (!w013B2Slugs.has(slug)) return raw;
+  raw = beforeW15004Raw(raw, slug);
   const current = JSON.parse(raw);
   const { priorIo, priorIoRaw, approved } = fixture[slug];
   if (hash(current.io) === hash(priorIo)) return raw;
