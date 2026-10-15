@@ -1014,7 +1014,7 @@ export const group1Images = {
     image('Front', 'qlxd2-beta58-front.webp', 'Shure QLXD2/B58A 핸드헬드 송신기(BETA 58A 캡슐) 정면', 'Shure', 'QLXD2/B58A Handheld Transmitter with BETA 58A Capsule', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/bac/92-/large/eb22fb750c52c34d58c82492cce87518.jpeg', '1500x1500', '1500x1500')
   ],
   ua874xa: [
-    image('Front', 'ua874xa-front.webp', 'Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)', 'Shure', 'UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp', '3000x3000', '1500x1500')
+    image('Front', 'ua874xa-front.webp', 'Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)', 'Shure', 'UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp', '3000x3000', '1500x1500', 'FOUND', 'Front · 제조사 공식 이미지 · 원본 투명 배경을 흰색으로 합성'),
   ],
   'a900w-r-gm': [
     image('Front', 'a900w-r-gm-front.webp', 'A900W-R-GM 키트 구성품 — 흰색 백커버, Gripple 커넥터, 스틸 케이블, 케이블 타이(변형 전용 사진으로 교체: 기존 사진은 검정 커버(A900B-R-GM)였음)', 'Shure', 'A900-GM Gripple Suspension Mount Kit for Ceiling Array Microphones (variant A900W-R-GM: Round, White Cover)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/fcc/37f/17-/original/8b6484716b5b1952cfaabe8d8771930e.webp', '3000x3000', '2000x1281', 'VERIFIED')
@@ -1030,8 +1030,8 @@ export const group1Images = {
     image('Front', 'mx418dc-front.webp', 'MX418D/C 전용 정면 이미지(18인치 구스넥, 데스크탑 베이스, XLR 커넥터)', 'Shure', 'MX418D/C — MX400D Series Desktop Gooseneck Microphone, 18", Cardioid, with Desktop Base', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/0dd/25f/e7-/original/98ba7f2494e6332fb99aa9e1eaf1b9c1.webp', '2664x2664', '1164x2000', 'VERIFIED')
   ],
   'mxcwapt-w': [
-    image('Front', 'mxcwaptw-front.webp', 'MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp', '3000x3000', '1500x1500'),
-    image('Other', 'mxcwaptw-detail.webp', 'MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp', '3000x3000', '1500x1500'),
+    image('Front', 'mxcwaptw-front.webp', 'MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp', '3000x3000', '1500x1500', 'FOUND', 'Front · 제조사 공식 이미지 · 원본 투명 배경을 흰색으로 합성'),
+    image('Other', 'mxcwaptw-detail.webp', 'MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)', 'Shure', 'MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)', 'https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp', '3000x3000', '1500x1500', 'FOUND', 'Other · 제조사 공식 이미지 · 원본 투명 배경을 흰색으로 합성'),
     image('Rear', 'mxcwapt-w-rear.webp', 'MXCWAPT 단자부 (커버 분리 상태, \'Analog in\' XLR 암 · gnd lift 스위치 · \'Analog out\' XLR 수)', 'Shure', 'MXCWAPT (제품 공통 이미지; 페이지 variant=MXCWAPT-W)', 'https://products.shureweb.eu/shure_product_db/product_images/files/91a/796/b8-/original/0fef5ec0a86b3b86b4778ac786e5b37d.webp', '3000x3000', '2000x1182', 'VERIFIED')
   ],
   'mxc420-c': [
