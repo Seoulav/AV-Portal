@@ -64,7 +64,9 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261014-008 adds two INOGENI products with official Diagram maps.
   // W-20261014-007 adds HDF-CCF with two I/O rows and a verified Main photo, but no rear Port Map.
   // W-20261015-006 maps eleven existing Analog Way products; all eleven leave the I/O fallback.
-  assert.deepEqual(counts, { mapIo: 168, ioOnly: 86, neither: 21 });
+  // W-20261015-008 maps three existing Sony products with official rear photos.
+  // W-20261015-010 maps three JBL Control speakers with visible rear inputs.
+  assert.deepEqual(counts, { mapIo: 171, ioOnly: 83, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

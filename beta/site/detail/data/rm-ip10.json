@@ -481,5 +481,64 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지",
     "footerNote": "SONY RM-IP10 · 공식 출처 기반"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "rm-ip10-rear.webp",
+      "width": 982,
+      "height": 428
+    },
+    "crop": {
+      "top": 285,
+      "bottom": 0
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "LAN",
+        "desc": "RJ-45 · 카메라 제어 네트워크 연결",
+        "x1": 398,
+        "x2": 441,
+        "y": 363,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "VISCA RS-232C OUT",
+        "desc": "Mini DIN 8핀 · 카메라 또는 광 멀티플렉스 장치 제어 출력",
+        "x1": 466,
+        "x2": 499,
+        "y": 363,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "VISCA RS-422",
+        "desc": "9핀 단자대 · 카메라 또는 광 멀티플렉스 장치 제어 연결",
+        "x1": 523,
+        "x2": 604,
+        "y": 371,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "TALLY/CONTACT",
+        "desc": "9핀 단자대 · 탤리 입력 또는 접점 출력",
+        "x1": 627,
+        "x2": 711,
+        "y": 371,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DC IN 12V",
+        "desc": "DC 잭 · 전원 어댑터 연결",
+        "x1": 751,
+        "x2": 779,
+        "y": 363,
+        "side": "top"
+      }
+    ]
   }
 }
