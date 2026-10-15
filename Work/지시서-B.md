@@ -474,3 +474,9 @@
 - [x] 직렬 전체 테스트: 726건 중 725 통과, 0 실패, 기존 skip 1. `verify-pages`: 284 제품·281 상세·508 검토 이미지·143 업로드 PDF. `build-search-index --check`, feature wording 검사, `git diff --check` 통과. 잠금 PDF 12건 유지.
 - 도구 한계: Python/Pillow 미설치로 자동 Port Map 좌표 감사는 실행하지 않음. 원본 격자 이미지와 렌더 결과의 시각 검토·독립 에이전트 확인을 기록. QSG 후면 도면은 직접 시각 판독 불가.
 - 상태: 검증 완료, PR 준비. 공개 배포 및 Varia-100/80 후속 도면 판독은 남음.
+
+### W-011 최신 main #528 통합·최종 검증
+
+- 최신 `origin/main` `32161e0f71662bcf8f7a3bc5905dc820462cdeff`(PR #528 Sony 공개 점검 기록)를 통합한 뒤 검색 인덱스와 public snapshot 재생성.
+- 전체 직렬 테스트 재실행 결과: 726건, 725 통과, 0 실패, 기존 skip 1. `verify-pages`, 검색 인덱스 `--check`, feature wording, PR diff check도 재통과.
+- PR용 변경 범위는 W-011 제품/기록/테스트 파일로 확인. Sony 변경은 최신 main에서만 포함되며 PR 변경으로 재포함되지 않음.
