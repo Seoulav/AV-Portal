@@ -64,7 +64,7 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261014-008 adds two INOGENI products with official Diagram maps.
   // W-20261014-007 adds HDF-CCF with two I/O rows and a verified Main photo, but no rear Port Map.
   // W-20261015-006 maps eleven existing Analog Way products; all eleven leave the I/O fallback.
-  assert.deepEqual(counts, { mapIo: 165, ioOnly: 89, neither: 21 });
+  assert.deepEqual(counts, { mapIo: 168, ioOnly: 86, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {

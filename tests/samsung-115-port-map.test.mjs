@@ -1,3 +1,4 @@
+import {beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { beforeW12005Product } from './w12005-history.mjs';
 import test from 'node:test';
@@ -5,7 +6,7 @@ import {beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(value, slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug);
 
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';

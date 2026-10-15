@@ -418,5 +418,24 @@
       "value": "45 Hz – 20 kHz",
       "unit": ""
     }
-  ]
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "control-28-1-rear.webp",
+      "width": 579,
+      "height": 900
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "스피커 입력",
+        "desc": "후면 나사식 ± 입력 단자 · 앰프 출력 연결",
+        "x1": 256,
+        "x2": 326,
+        "y": 231,
+        "side": "top"
+      }
+    ]
+  }
 }

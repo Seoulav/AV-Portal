@@ -1,3 +1,4 @@
+import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW009Uploads, isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
@@ -11,8 +12,8 @@ import { isW006Name } from './w006-history.mjs';
 import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW026Product} from './w026-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(value, slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(value, slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
 
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW032Mirrors } from './w032-history.mjs';
@@ -102,7 +103,7 @@ test('only the drawing labeled AC18/95 and AC18/26 is attached; other cabinet dr
 
 test('JBL I/O, presentation and all other products remain unchanged; only ten spec-sheet products gain source-backed facts',()=>{
   for(const slug of slugs){
-    const p=beforeHarmanW03014(product(slug),slug),before=evidence.products[slug];
+    const p=beforeHarmanW03014(beforeJblW15010Product(product(slug),slug),slug),before=evidence.products[slug];
     const {specifications,sources,...core}=p;
     assert.equal(hash(JSON.stringify(core)),before.coreSha256,`${slug}: protected fields including I/O`);
     assert.equal(hash(JSON.stringify(p.io)),before.ioSha256,`${slug}: I/O changed`);
@@ -120,7 +121,7 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
     }else{
       assert.equal(hash(JSON.stringify(specifications)),before.specificationsSha256,`${slug}: no model-specific spec sheet`);
       assert.equal(hash(JSON.stringify(sources)),before.sourcesSha256,`${slug}: source should stay unchanged`);
-      assert.equal(hash(Buffer.from(beforeHarmanW03014Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
+      assert.equal(hash(Buffer.from(beforeHarmanW03014Raw(beforeJblW15010Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
     }
   }
   const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && !isW20261014_005DetailFile(x) && !isW004Name(x) && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x) && !isW006Name(x) && !isW007Name(x) && !isW06002Name(x) && !isW1010Name(x) && !isW1012Name(x)&&!isW009DetailFile(x)&&!slugs.includes(x.slice(0,-5))).sort();
