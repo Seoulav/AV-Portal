@@ -10,10 +10,10 @@
     "Extender"
   ],
   "english": "Two-module USB 3.2 Gen 1 extender for up to three devices over one CAT6A U/FTP cable up to 100 m.",
-  "korean": "CAT6A U/FTP 한 가닥으로 USB 3.2 Gen 1 장치 3개를 최대 100m 확장하는 PC HOST·DEVICE 모듈형 연장기.",
+  "korean": "CAT6A U/FTP 한 가닥으로 USB 3.2 Gen 1 장치 3개를 최대 100m 확장하는 PC HOST·DEVICE 모듈형 연장기. 연장 케이블은 CAT6A U/FTP 이상 차폐형 필수(UTP 불가).",
   "verificationSummary": "INOGENI 공식 제품 Overview·Tech specs·두 모듈 연결도에서 기능, 모듈별 단자와 물리 사양을 확인했다. PDF는 공식 원격 링크만 연결했다.",
   "packageStatus": "VERIFIED",
-  "overview": "U-BRIDGE 3는 PC HOST와 DEVICE 모듈을 CAT6A U/FTP 한 가닥으로 연결해 USB 3.2 Gen 1(최대 5Gbps) 장치 3개를 최대 100m 연장한다. DEVICE에는 USB-A 2개와 USB-C 1개, PC HOST에는 잠금 나사 구멍이 있는 USB-C 1개가 있다. USB 2.0 장치와 호환하고, RS-232 신호도 두 모듈 사이로 전달한다.\n\n전원은 PC HOST 또는 DEVICE 어느 쪽에서든 공급할 수 있고 PoC로 반대쪽 모듈에도 전달된다. 공식 페이지는 카메라·비디오바·마이크·저장 장치와 Windows·macOS·Linux 사용을 안내하며 별도 드라이버가 필요 없다고 명시한다. 호환 브랜드 예시는 Vaddio·Huddly·HuddleCamHD·AVer·Jabra·Logitech·Marshall이다. 캐나다 제조, TAA 적합, 2024년 8월 1일 이후 최종 사용자 구매 제품 5년 보증.",
+  "overview": "U-BRIDGE 3는 PC HOST와 DEVICE 모듈을 CAT6A U/FTP 한 가닥으로 연결해 USB 3.2 Gen 1(최대 5Gbps) 장치 3개를 최대 100m 연장한다. 연장 케이블은 CAT6A U/FTP 이상 차폐형(U/FTP·S/FTP) 필수이며 비차폐(UTP)는 사용 불가. DEVICE에는 USB-A 2개와 USB-C 1개, PC HOST에는 잠금 나사 구멍이 있는 USB-C 1개가 있다. USB 2.0 장치와 호환하고, RS-232 신호도 두 모듈 사이로 전달한다.\n\n전원은 PC HOST 또는 DEVICE 어느 쪽에서든 공급할 수 있고 PoC로 반대쪽 모듈에도 전달된다. 공식 페이지는 카메라·비디오바·마이크·저장 장치와 Windows·macOS·Linux 사용을 안내하며 별도 드라이버가 필요 없다고 명시한다. 호환 브랜드 예시는 Vaddio·Huddly·HuddleCamHD·AVer·Jabra·Logitech·Marshall이다. 캐나다 제조, TAA 적합, 2024년 8월 1일 이후 최종 사용자 구매 제품 5년 보증.",
   "images": [
     {
       "role": "Main",
@@ -91,6 +91,10 @@
       "source": "P"
     },
     {
+      "text": "CAT6A U/FTP 이상 차폐 케이블 필수(비차폐 UTP 사용 불가)",
+      "source": "U"
+    },
+    {
       "text": "DEVICE 모듈 USB-A 2개·USB-C 1개와 PC HOST 모듈 잠금형 USB-C 1개",
       "source": "P"
     },
@@ -120,6 +124,15 @@
       "condition": "CAT6A U/FTP 한 가닥",
       "source": "S",
       "verification": "VERIFIED"
+    },
+    {
+      "group": "Link",
+      "name": "연장 케이블",
+      "value": "CAT6A U/FTP 이상 차폐형(U/FTP·S/FTP) 필수",
+      "unit": "",
+      "condition": "비차폐(UTP) 사용 불가",
+      "source": "U",
+      "verification": "FOUND"
     },
     {
       "group": "USB",
@@ -340,9 +353,21 @@
       "name": "INOGENI U-BRIDGE 3 User Guide",
       "url": "https://inogeni.com/u-bridge-3-user-guide",
       "scope": "3쪽 모듈별 USB-mini MGMT 단자 설명"
+    },
+    {
+      "code": "U",
+      "name": "사용자 확인",
+      "scope": "2026-10-16 U-BRIDGE 3 연장 케이블: CAT6A U/FTP 이상 차폐형(U/FTP·S/FTP) 필수, 비차폐 UTP 사용 불가"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "code": "CABLE-SHIELD",
+      "status": "INFO",
+      "title": "연장 케이블 차폐형 필수",
+      "detail": "INOGENI 공식 제품 페이지(P)는 CAT6A U/FTP 링크와 INO-CAT6A 케이블 권장을 안내한다. 사용자 확인(2026-10-16, U)은 CAT6A U/FTP 이상 차폐형(U/FTP·S/FTP)을 필수로 하고 비차폐 UTP를 금지한다. 공식 안내와 충돌하지 않는 강화 조건이며 사용자 확인을 별도 근거로 표시한다."
+    }
+  ],
   "presentation": {
     "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
     "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
@@ -600,7 +625,7 @@
         "id": "cat1",
         "kind": "bridge",
         "label": "CAT6A U/FTP",
-        "caption": "한 가닥 · 최대 100m",
+        "caption": "CAT6A U/FTP 이상 차폐 케이블 필수(UTP 불가)",
         "evidence": [
           {
             "kind": "io",
@@ -676,7 +701,7 @@
         "id": "cat2",
         "kind": "bridge",
         "label": "CAT6A U/FTP",
-        "caption": "한 가닥 · 최대 100m",
+        "caption": "CAT6A U/FTP 이상 차폐 케이블 필수(UTP 불가)",
         "evidence": [
           {
             "kind": "io",
@@ -960,6 +985,7 @@
       }
     ],
     "notes": [
+      "CAT6A U/FTP 이상 차폐 케이블 필수(UTP 사용 불가). U/FTP 또는 S/FTP, CAT6A 이상 사용.",
       "24V 외부 전원은 PC HOST 또는 DEVICE 유닛 한쪽에만 연결하며, 다른 쪽은 CAT6A PoC로 전원을 받습니다.",
       "RS-232는 패스스루 보조 경로이고 USB-mini는 각 유닛 관리용입니다.",
       "USB-A 두 개와 USB-C 한 개는 DEVICE 유닛의 주변기기 연결 단자입니다."

@@ -1,3 +1,4 @@
+import { beforeW20261016_002Product } from './w20261016-002-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -46,7 +47,7 @@ test('host and module I/O stay distinct and map only evidenced connectors', () =
   assert.equal(bridge.portMap.items.length, 11);
   assert.ok(bridge.specifications.some(row => row.name === 'USB-C DisplayPort Alt Mode' && row.value === '미지원'));
   assert.ok(dock.features.every(row => row.source === 'P'));
-  assert.ok(bridge.features.every(row => row.source === 'P'));
+  assert.ok(beforeW20261016_002Product(bridge, 'u-bridge-3').features.every(row => row.source === 'P'));
 });
 
 test('W-008 inverse removes only these two entries from historical snapshots', () => {

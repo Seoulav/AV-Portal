@@ -227,3 +227,16 @@
 - [x] 전체 검사 734건 중 733 pass·0 fail·기존 skip 1, 검색 인덱스 `--check`, Pages 검증 284 제품·281 상세·508 사진·143 uploads, `git diff --check` 통과. 로컬 1280px·390px 캡처에서 두 시나리오·전원 방향·가로 스크롤 확인.
 - [x] 병합 직전 main `9a9beb98` 통합(추가 변경 없음), 파생 파일 재생성·검증, PR #536 Builder CI run `38814385797` 성공, 병합 SHA `e50f372ad71f6f873e27567a2f8eb1faa490c0bc`.
 - [x] Pages run `38814876129` 성공. 공개 `version.json` revision `e50f372`. TOGGLE DOCK·U-BRIDGE 3 모두 1280px·390px에서 HTTP 200, 시나리오 2개, JS 오류 0. 390px에서는 좌우 834px 스크롤로 양끝 경로 확인. [근거·Work 인계](기록/W-20261016-001-C-Work-인계.md).
+
+## W-20261016-002 · U-BRIDGE 3 차폐 케이블 필수 조건
+
+- 상태: REVIEW
+- 승인 근거: 사용자 2026-10-16 “U-BRIDGE 3는 반드시 U/FTP CAT6A 이상 S/FTP 케이블을 사용해야 해”. READY 명세 `Work/작업/W-20261016-002.md`와 `Work/기록/W-20261016-002-Codex-인계.md`를 main `49725e5aa851aef5ccf6f5ebe066f631262c280e`에서 읽었다.
+- 기준 main `49725e5a`, 브랜치 `codex/W-20261016-002-ubridge-shielded-cable`, 전용 워크트리 `../codex-c`.
+- 범위: `u-bridge-3`의 사양·특징·사용자 확인 근거·시그널 플로우 케이블 문구, 필요한 두 제품 전용 렌더 알약 텍스트만. 다른 제품·수치·Port Map 불변.
+- [x] 사용자 확인(U) 출처·INFO 이슈·Link 사양, 한눈에 보기·기능·시그널 플로우에 차폐형 필수 조건 반영.
+- [x] 선택적 되감기, 전체 검사·파생 산출물·Pages 검증, 로컬 1280px·390px 확인.
+- [ ] PR CI, 최신 main 재통합, 병합 순서 확인, 병합·Pages 배포·공개 보고.
+
+- 검증: 전체 737건 중 736 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, `verify-pages`(284 제품·281 상세·508 이미지·143 PDF), `feature-wording --check`, 로컬 1280px·390px 두 시나리오와 가로 스크롤 통과. 신규 feature 행은 변경 전후 문장 비교용 `feature-wording --diff` 범위 밖이며, 기존 feature 보존과 명사형은 작업 전용 검사로 확인.
+- [근거표](기록/W-20261016-002-C-근거표.md) · [Work 인계](기록/W-20261016-002-C-Work-인계.md)

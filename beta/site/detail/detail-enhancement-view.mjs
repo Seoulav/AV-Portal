@@ -622,7 +622,7 @@ const t = (svg,x,y,value,cls='cable-flow-device-label') => svg.append(s('text',{
 const r = (svg,x,y,w,h,cls) => svg.append(s('rect',{x,y,width:w,height:h,rx:12,class:cls}));
 const l = (svg,d,cls,marker) => svg.append(s('path',{d,class:cls,...(marker?{'marker-end':`url(#${marker})`}:{})}));
 let seq=0;
-function figure(group,index,toggle) {
+function figure(group,index,toggle,flow) {
   const id=`inogeni-flow-${++seq}`;
   const a=s('svg',{class:'cable-flow-svg',viewBox:'0 0 1120 290',role:'img','aria-label':group.label+' · '+group.caption});
   a.append(s('title',{},group.label));
@@ -659,7 +659,8 @@ function figure(group,index,toggle) {
     l(a,'M146 149 L182 149','cable-flow-signal-line',`${id}-signal-right`);
     l(a,'M336 143 L779 143','cable-flow-signal-line',`${id}-signal-right`);
     l(a,'M933 149 L957 149','cable-flow-signal-line',`${id}-signal-right`);
-    r(a,428,43,255,54,'cable-flow-pill'); t(a,555,67,'CAT6A U/FTP · 한 가닥','cable-flow-pill-main'); t(a,555,87,'USB 3.0 · 최대 100m','cable-flow-pill-sub');
+    const cable=flow.processes.find(p=>p.id===(index===0?'cat1':'cat2'));
+    r(a,356,43,399,54,'cable-flow-pill'); t(a,555,67,cable.caption,'cable-flow-pill-main'); t(a,555,87,'한 가닥 · USB 3.0 · 최대 100m','cable-flow-pill-sub');
     const px=index===0?190:786, from=index===0?336:780, to=index===0?779:336;
     r(a,px,8,145,49,'cable-flow-pd-source'); t(a,px+72,29,'외부 DC 24V','cable-flow-pd-source-label'); t(a,px+72,46,index===0?'PC HOST 쪽':'DEVICE 쪽','cable-flow-pd-source-caption');
     l(a,`M${px+72} 58 L${px+72} 98`,'cable-flow-power-line',`${id}-power-down`);
@@ -676,7 +677,7 @@ function renderInogeniSignalFlow(flow,model) {
   for(const [index,group] of flow.groups.entries()) {
     const article=h('article','cable-flow-scenario'); article.append(h('h3','cable-flow-title',group.label),h('p','cable-flow-mode',group.caption));
     const scroll=h('div','cable-flow-scroll'); scroll.tabIndex=0; scroll.setAttribute('role','region'); scroll.setAttribute('aria-label',group.label+' 그림 좌우 스크롤');
-    const pic=figure(group,index,toggle); scroll.append(pic); pictures.push(pic);
+    const pic=figure(group,index,toggle,flow); scroll.append(pic); pictures.push(pic);
     article.append(scroll,h('p','cable-flow-scroll-hint','↔ 좌우로 움직여 전체 경로를 확인하세요')); host.append(article);
   }
   const legend=h('div','cable-flow-legend');
