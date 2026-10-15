@@ -181,7 +181,8 @@ export const group1Images = {
     image('Rear', 'gsm4248px-rear.webp', 'NETGEAR GSM4248PX 후면 포트면. RJ45 40개와 SFP+ 8개가 보이는 제조사 공식 사진', 'NETGEAR', 'GSM4248PX', 'https://assets.netgear.com/transform/099b30e6-a6c9-4fcb-b29b-388a51fc3688/B6_gsm4248px_32', '779x536', '683x74', 'FOUND', 'Rear · 제조사 공식 이미지의 포트면만 크롭')
   ],
   'aquilon-rs1': [
-    group2Image('Front', 'aquilon-rs1-front.webp', 'Analog Way Aquilon RS1 전면 이미지', 'Analog Way', 'Aquilon RS1', 'https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg', '3175×1772', '1800×768')
+    group2Image('Front', 'aquilon-rs1-front.webp', 'Analog Way Aquilon RS1 전면 이미지', 'Analog Way', 'Aquilon RS1', 'https://dwn01.analogway.com/Site+Internet/Series/LivePremier/Products/Aquilon+RS1/High+Resolution+Pictures/aquilon-4u-rs1-fav-det.jpg', '3175×1772', '1800×768'),
+    image('Rear', 'aquilon-rs1-rear.webp', 'Analog Way Aquilon RS1 후면 이미지', 'Analog Way', 'Aquilon RS1', 'https://www.analogway.com/products/aquilon-rs1', '2400×969', '1800×727', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'sx-1216-rti': [
     image('Front', 'sx-1216-rti-front.webp', 'SurgeX SX-1216-RTi 전면 이미지', 'SurgeX', 'SX-1216-RTi', 'https://www.ametekesp.com/-/media/ametekesp/products/surgex/remote-turn-on/groupimages/surgexi-sx1216-rti.jpg', '800×800(원본 합성 이미지에서 분리)', '798×111', 'VERIFIED'),
@@ -339,13 +340,16 @@ export const group1Images = {
     image("Diagram", "pt-mz882-diagram.webp", "PT-MZ882 PT-MZ882/MZ782/MZ682 한국어 사용설명서 DPQP1564ZA/X1 27쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ882", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-06/PT-MZ882_Series_manual_ko_1716090610.3225.pdf", "1270x730", "1270x730", "VERIFIED", "Diagram · Panasonic PT-MZ882/MZ782/MZ682 한국어 사용설명서 DPQP1564ZA/X1 27쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pulse-4k': [
-    image('Front', 'pulse4k-front.webp', "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)", 'Analog Way', 'Pulse 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg', '6952×1960', '1800×390', 'VERIFIED')
+    image('Front', 'pulse4k-front.webp', "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)", 'Analog Way', 'Pulse 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg', '6952×1960', '1800×390', 'VERIFIED'),
+    image('Rear', 'pulse-4k-rear.webp', 'Analog Way Pulse 4K 후면 이미지', 'Analog Way', 'Pulse 4K', 'https://www.analogway.com/products/pulse-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지')
   ],
   'eikos-4k': [
-    image('Front', 'eikos4k-front.webp', "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)", 'Analog Way', 'Eikos 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg', '6844×1848', '1800×395', 'VERIFIED')
+    image('Front', 'eikos4k-front.webp', "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)", 'Analog Way', 'Eikos 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg', '6844×1848', '1800×395', 'VERIFIED'),
+    image('Rear', 'eikos-4k-rear.webp', 'Analog Way Eikos 4K 후면 이미지', 'Analog Way', 'Eikos 4K', 'https://www.analogway.com/products/eikos-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지')
   ],
   'aquilon-rs2': [
-    image('Front', 'aquilonrs2-front.webp', "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)", 'Analog Way', 'Aquilon RS2', 'https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg', '3175×1772', '1800×686', 'VERIFIED')
+    image('Front', 'aquilonrs2-front.webp', "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)", 'Analog Way', 'Aquilon RS2', 'https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg', '3175×1772', '1800×686', 'VERIFIED'),
+    image('Rear', 'aquilon-rs2-rear.webp', 'Analog Way Aquilon RS2 후면 이미지', 'Analog Way', 'Aquilon RS2', 'https://www.analogway.com/products/aquilon-rs2', '2400×954', '1800×716', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   ...Object.fromEntries([
     ['rs3', 'Aquilon RS3', '2400×1209', '2400×1243', '1800×907', '1800×932'],
@@ -361,10 +365,12 @@ export const group1Images = {
     ]];
   })),
   'zenith-100': [
-    image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED')
+    image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED'),
+    image('Rear', 'zenith-100-rear.webp', 'Analog Way Zenith 100 후면 이미지', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1800×587', 'VERIFIED', 'Rear · 제조사 제품 이미지')
   ],
   'zenith-200': [
-    image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED')
+    image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED'),
+    image('Rear', 'zenith-200-rear.webp', 'Analog Way Zenith 200 후면 이미지', 'Analog Way', 'Zenith 200', 'https://www.analogway.com/products/zenith-200', '2400×794', '1800×596', 'VERIFIED', 'Rear · 제조사 제품 이미지')
   ],
   rc400t: [
     image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED'),
