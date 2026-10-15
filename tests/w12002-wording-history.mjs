@@ -11,6 +11,7 @@ import { beforeW13007Product, beforeW13007Raw } from './w13007-videowall-history
 import { beforeW13010Product, beforeW13010Raw } from './w13010-yamaha-history.mjs';
 import { beforeW141002004Product, beforeW141002004Raw } from './w141002-004-history.mjs';
 import { beforeW20261015_006Product, beforeW20261015_006Raw } from './w20261015-006-history.mjs';
+import { beforeW20261015_011Product, beforeW20261015_011Raw } from './w20261015-011-history.mjs';
 import { beforeW20261015_006LabelsProduct, beforeW20261015_006LabelsRaw } from './w20261015-006-labels-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
@@ -24,7 +25,8 @@ export function beforeW12002Path(path,current){
   return match?beforeW12002Product(current,match[1]):current;
 }
 
-export function beforeW12002Product(current,slug){
+export function beforeW12002Product(current,slug,{w011Undone=false}={}){
+  if(!w011Undone)current=beforeW20261015_011Product(current,slug);
   current=beforeW20261015_006Product(beforeW20261015_006LabelsProduct(current,slug),slug);
   current=beforeW141002004Product(current,slug);
   current=beforeW13007BehhlGuideProduct(current,slug);
@@ -55,6 +57,7 @@ export function beforeW12002Product(current,slug){
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW20261015_011Raw(raw,slug);
   raw=beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(raw,slug),slug);
   raw=beforeW141002004Raw(raw,slug);
   raw=beforeW13007BehhlGuideRaw(raw,slug);
@@ -64,7 +67,7 @@ export function beforeW12002Raw(raw,slug){
   raw=beforeAverW12009Raw(raw,slug);
   if(!fixture[slug])return raw;
   if(slug==='ki-pro-go2' && JSON.parse(raw).portMap?.items?.length===11)raw=beforeW12003Raw(raw,slug);
-  beforeW12002Product(JSON.parse(raw),slug);
+  beforeW12002Product(JSON.parse(raw),slug,{w011Undone:true});
   // Historical byte hashes include hand-formatted JSON. Replace only the
   // approved value literals so their original whitespace stays observable.
   let restored=raw;

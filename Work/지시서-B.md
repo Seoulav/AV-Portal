@@ -454,3 +454,13 @@
 - 공개 HTTPS 확인: catalog/detail/search-index/docs manifest/detail HTML/catalog HTML/PDF 모두 HTTP 200. 공개 카탈로그에서 HDCVT·HDF-CCF 및 네 번째 `USB 3.2 Gen2 10Gbps` 값 확인. 매뉴얼 PDF 853678 bytes, `%PDF-`, SHA-256 `c96e33cce303073b0c0106c3e61eb90d6f33a712e1f8c2a5e7bd41ee3229518f`로 게시본 일치.
 - 브라우저 캡처 도구 미가용으로 시각 캡처는 하지 않음. 공개 JSON/HTML/PDF 응답과 자동 문서 카드·PDF 액션 검증으로 대체.
 - Beluga Highwave Pro 8K 5M은 정확 모델의 공식 USB 3.2 Gen2 근거 부족으로 등록 보류. AJA Ki Pro GO2 및 INOGENI U-BRIDGE 3의 USB 3.2 Gen1 표기는 후보 보고만 완료.
+## W-20261015-011 — AMX Varia Port Map (2026-10-15)
+
+- 명세 `Work/작업/W-20261015-011.md` READY, 기준 SHA `c9fef4cced0282d8a3cb80f7f107cc31beb26af5`, 브랜치 `codex/W-20261015-011-amx-varia-portmaps`.
+- 범위: AMX Varia 4종 사진 적합성 확인 및 후면 단자 지도. JBL·Sony 및 다른 제품 파일은 수정하지 않음.
+- [x] 세션 C 사진 감사 시트와 대상 상세 JSON·Rear 사진 대조.
+- [x] SL50·SL80 후면 사진을 원본 픽셀 격자로 직접 확대 확인. 두 사진의 RJ-45 하우징 1개만 현행 I/O(PoE 802.3af)와 대응해 Port Map 추가; USB 형태로 보이는 포트는 I/O/모델별 근거가 없어 제외.
+- [ ] VARIA-100/80 추가 도면 조사·시각 판독. 공식 QSG 자료는 찾았으나 이 환경에서 직접 렌더할 수 없어 좌표를 입력하지 않고 제품별 보류.
+- [ ] 되감기 함수·회귀 검사·점검표 및 인계 문서.
+- [ ] 최신 main 통합 후 파생물 재생성, 전체 직렬 검사·verify-pages, PR/CI, 병합·배포·공개 확인.
+- 도구 제한: Python/py/Pillow가 설치되지 않아 `scripts/portmap-audit.py`를 실행하지 못함. Edge headless 캔버스 격자로 원본 좌표를 눈으로 확인해 수동 배치했으며, 미통과 자동 점검은 통과로 기록하지 않음.
