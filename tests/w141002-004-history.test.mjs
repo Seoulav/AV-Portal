@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeW141002004Product,beforeW141002004Raw} from './w141002-004-history.mjs';
+import {beforeW20261015_002EpsonProduct,beforeW20261015_002EpsonRaw} from './w20261015-002-history.mjs';
 import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
 
 const fixture=JSON.parse(readFileSync(new URL('./fixtures/w141002-004-history.json',import.meta.url),'utf8'));
@@ -13,8 +14,8 @@ test('approved wording and Port Map changes selectively rewind to exact prior JS
   for(const [slug,record] of Object.entries(fixture)){
     const raw=readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8');
     const product=JSON.parse(raw);
-    const restored=beforeW141002004Product(product,slug);
-    assert.equal(sha(beforeW141002004Raw(raw,slug)),record.priorRawSha256,slug);
+    const restored=beforeW141002004Product(beforeW20261015_002EpsonProduct(product,slug),slug);
+    assert.equal(sha(beforeW141002004Raw(beforeW20261015_002EpsonRaw(raw,slug),slug)),record.priorRawSha256,slug);
     assert.deepEqual(beforeW141002004Product(restored,slug),restored,slug);
     for(const field of Object.keys(record.fields)){
       if(field==='portMap')continue;

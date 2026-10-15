@@ -558,8 +558,8 @@
         "n": 2,
         "label": "HDMI 2 입력",
         "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
-        "x1": 482,
-        "x2": 492,
+        "x1": 483,
+        "x2": 511,
         "y": 66,
         "side": "top"
       },

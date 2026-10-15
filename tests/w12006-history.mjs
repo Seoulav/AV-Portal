@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeMxc420PhotoProduct, beforeMxc420PhotoRaw } from './mxc420-photo-history.mjs';
 import { beforeW141002004Product, beforeW141002004Raw } from './w141002-004-history.mjs';
+import { beforeW20261015_002EpsonProduct } from './w20261015-002-history.mjs';
 
 // Older whole-product hashes see the current product with only W-006's
 // approved fields restored. Every unrelated current field stays observable.
@@ -10,6 +11,7 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value??null)).diges
 export const w12006Slugs=new Set(Object.keys(fixture));
 
 export function beforeW12006Product(current,slug){
+ current=beforeW20261015_002EpsonProduct(current,slug);
  current=beforeW141002004Product(current,slug);
  current=beforeMxc420PhotoProduct(current,slug);
  const record=fixture[slug];if(!record)return current;
