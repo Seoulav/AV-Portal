@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeW15004Product, beforeW15004Raw } from './w15004-shure-photo-history.mjs';
 import { createHash } from 'node:crypto';
 import { beforeW013AProduct } from './w013-a-history.mjs';
 import { beforeW013ARaw } from './w013-a-history.mjs';
@@ -15,6 +16,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 // Rewind each approved W-013 batch in reverse order; the final whole-product SHA catches other edits.
 export function beforeW013Product(current, slug) {
+  current = beforeW15004Product(current, slug);
   current = beforeW013C3Product(current, slug);
   current = beforeW13001Product(beforeB13003Product(current, slug), slug);
   current = beforeW013A2Product(current, slug);
@@ -29,7 +31,7 @@ export function beforeW013Product(current, slug) {
 }
 
 export function beforeW013Raw(raw, slug) {
-  let result = beforeW013C3Raw(raw, slug);
+  let result = beforeW013C3Raw(beforeW15004Raw(raw, slug), slug);
   result = beforeW013A2Raw(beforeW13001Raw(beforeB13003Raw(result, slug), slug), slug);
   result = rewindW013B2Raw(result, slug);
   result = beforeW013ARaw(result, slug);

@@ -1,0 +1,135 @@
+{
+  "products": {
+    "mxcwapt-w": {
+      "priorImages": [
+        {
+          "role": "Front",
+          "file": "mxcwaptw-front.webp",
+          "alt": "MXCWAPT 액세스 포인트 트랜시버 상단면 (디스플레이 및 조작 버튼)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/84f/73b/9c-/original/e81ee1c5db5e07d5cb8d9244c4ab8910.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Other",
+          "file": "mxcwaptw-detail.webp",
+          "alt": "MXCWAPT 측면/저면 각도 (LCD 디스플레이, PoE/네트워크 상태 LED, 하단 케이블 정리부)",
+          "note": "Other · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "MXCWAPT Access Point Transceiver (regional variant MXCWAPT-W: Worldwide)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/967/6e0/7e-/original/39209942fef990c36ce98adf69ee2e9e.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "mxcwapt-w-rear.webp",
+          "alt": "MXCWAPT 단자부 (커버 분리 상태, 'Analog in' XLR 암 · gnd lift 스위치 · 'Analog out' XLR 수)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "MXCWAPT (제품 공통 이미지; 페이지 variant=MXCWAPT-W)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_images/files/91a/796/b8-/original/0fef5ec0a86b3b86b4778ac786e5b37d.webp",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "3000x3000",
+          "resolution": "2000x1182",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "dbfdb264931633766a399a0768fe38fd48b6241421c4d0832b5849fc31e39a3f"
+    },
+    "ua874xa": {
+      "priorImages": [
+        {
+          "role": "Front",
+          "file": "ua874xa-front.webp",
+          "alt": "Shure UA874XA 능동형 지향성 안테나 (902-960MHz 라벨 표기 확인됨)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Shure",
+          "model": "UA874 Active Directional Antenna (variant UA874XA, 902-960 MHz)",
+          "sourceUrl": "https://products.shureweb.eu/shure_product_db/product_main_images/files/248/aee/26-/original/203aa9b5f7aeb51664dfed7d966905cd.webp",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "3000x3000",
+          "resolution": "1500x1500",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "approvedSha256": "0ab52cc26ceaf9f517853ebca0ac5ff50e657147bb0d54177d82460a010d6734"
+    }
+  },
+  "images": {
+    "mxcwaptw-front.webp": {
+      "priorSha256": "d177d25d887fd7fbb38b4c1087cba0773713666cf091c1f4cc36331c243d8bfc",
+      "approvedSha256": "cba8231a5c7ca00d669fc960e0b17848edf6bf36cdf4b18f288973f7bf7bf97e"
+    },
+    "mxcwaptw-detail.webp": {
+      "priorSha256": "00f873d3cf7a4d815dd3cd87f8f8e9f92c35098d4ebbf7e3a82549da086b7740",
+      "approvedSha256": "68bbb2615d1bfa5c08255c5e7f9ed464137c4c087a6309ccf62417b23d4ab0ac"
+    },
+    "ua874xa-front.webp": {
+      "priorSha256": "73e5d0ce0e35d23521218f95f68d6a39fa6db807dc36c4633b1764912fd2d71e",
+      "approvedSha256": "bb3cdc1fd3616b0a67dd0751b1d5262fe97df3e90323ec1a5522e7df8ae4a148"
+    }
+  },
+  "unchangedImages": {
+    "a900w-r-gm-front.webp": "e32d71211b7686c48eebfaf7a49b7778a2edd4285a86359326f97d404d1da9db",
+    "mx392c-front.webp": "dc4828445f04cb4f53e4aacf6ae9313bf18c85f39cd9d839495e9f3984e60942",
+    "mx395-front.webp": "1d1b81f24da4c81f339b6aeb192f2e4f73466aad2470131e9b3ce3d30a1c491c",
+    "mx418dc-front.webp": "080b7b7abe22b0be32375d75ebd2be2d48fcb92199ddb4db8996b842c66dec89",
+    "mxa925wr-front.webp": "6c418811a030e834a957660a6b8330453a62c029d3b23b962f9a1b4e80617416",
+    "mxa925w-r-rear.webp": "045f431b24b3a5831868f782b53edaa02499eeadf0f16faadf7d25126522daeb",
+    "mxc420c-front.webp": "ddd73e6ebd0944d9a5bcb775a793b806ccf104005168c1f1885d86cda9943cb3",
+    "mxcw640-main.webp": "bf8b8cce766429f0669bc216a9ae52e659b2f9accd212178b801237c16d1c74a",
+    "mxcw640-rear.webp": "56b45c6b2e51201fb643def452204c4debb6c4aff1beb76595d2443d0f72c48d",
+    "mxcwapt-w-rear.webp": "e7780a5690a2e0307f1e9491228726cb81db5f8c71d7367b60aaf187636c51a9",
+    "qlxd1-front.webp": "49e4154003100d6d185834c45d167aa885e2ef00b7abec6513df536d1b5ee442",
+    "qlxd1-angle-front.webp": "d3d7612534176987f5a52279254bbfe3e41bf6c65038f2f24934dfe671fd5f81",
+    "qlxd2-beta58-front.webp": "d8531b0030636193ce0882f63d3d4d1089b1227ddc5d285188c4b6bf926be3d4",
+    "qlxd2-beta87a-front.webp": "9d7516eb173a160e7bcb3ab0b50354b450de386e37411b382861bc7e7c66f239",
+    "qlxd4-front.webp": "eebdfc89b106eb0f217db82da5bb2981cc21d260c2a5755309e20ee1c59488f6",
+    "qlxd4-rear.webp": "7db90763d32d8f632cd42aeb8a634c9e3c0f95b62ea3f010e8d1e5017dea3653",
+    "slxd1-plus-front.webp": "cbe279400d2e69cd8a35b3ae238dc636b488f94e2007aea72b14d88daa2f160d",
+    "slxd1-plus-rear.webp": "d2e260b128262bf2b59f47a9792c26d81cd694ce884958040a4aef6860240a3d",
+    "slxd1-plus-top.webp": "c3574158de82d61de30d3f5100dbb2d291b11412158976af2ed932b4d2c32050",
+    "slxd2-plus-58-front.webp": "2f72e9017b95cdd53bf27762568cef3320573d0d6123c3fd2c3008c4bfa4b886",
+    "slxd2-plus-b58-front.webp": "22c9991f6a934efdd23df357cbad5bd9fb9f4e7fcc3dc908d3438a16c8b0535b",
+    "slxd2-plus-b87a-front.webp": "77a628a4e694748463a9cb5c9e0c00aa7b6ad1dcc2d2aaa973f08eac82c104e3",
+    "slxd4-plus-front.webp": "14abe449a14a5d356baf12670aac62033c52908dc8235f2869561a683c8023c4",
+    "slxd4-plus-rear.webp": "3434dbdbcb156a9a620d0e501eb36f73f56638bfb999049a87cbf8ee2b51aaf8",
+    "slxd4-plus-angle.webp": "a30e4185af4886d413b081d4b9339ff3a5cee75d8058dc5459afa93ba5cea686",
+    "slxd4d-plus-front.webp": "443b0407f9a6f49ac6e54e79b6a195d74b78edfc5226ac11bb2b9b37b5ceeb0c",
+    "slxd4d-plus-rear.webp": "066d7aafa8b5d429caa7c8dc286a3578aeac0c308c9bd11c0b1cf751379abf8d",
+    "slxd4d-plus-angle.webp": "df224a852ecec4adfe431d3d138fcc13e66431d33c78533a1f355aadc49415a6",
+    "ua844swb-front.webp": "a18fdf60e4e60384ea8dc563b683ce9f7705b408f40c03c4e3c5d14016503caf",
+    "ua844swb-rear.webp": "1bc415b52691860f2d01a0f85a4de6bb656f0e077850e7c5b30e7d56cf3d6de8",
+    "ua845uwb-front.webp": "56277072e39fe1fd6d9623097817140a14720351303077ccd9bae17b37d7fe3b",
+    "ua845uwb-rear.webp": "802351874dc669e8923b1d099aea115d5476734a17e72b530003eaf04571a282",
+    "ua864a-front.webp": "9bb10c9a868ee4f34dfa6de837b2fef6d9ec4da399f97359b8ebc9e591856671",
+    "ua864a-rear.webp": "813bbba8469e6051c016277492b35db52661fe5eca8f5643dbc9761bacd40bc9",
+    "ulxd1-front.webp": "54c79b2ed1343cabfaa6360cedfcf5b595842441703eae4a681175872b781bea",
+    "ulxd1-rear.webp": "8cc3dbf8ae66f7a990891254bd2652824167c354b0fb5086613365f5188cee80",
+    "ulxd1-angle-front.webp": "9b7d1f90beed6843fc963e384a3d2706c4703f2186f4b2febb2eafaeebd46962",
+    "ulxd1-top.webp": "b6c69cfe599ce3b688fc18a19181b5e5231ba56086ac34c7bf3e713c8a6e837f",
+    "ulxd2-beta58-front.webp": "af6390c78b19c73dd3e9ffb58d48eac7e138e6217916506461ee9f0883432341",
+    "ulxd2-beta87-front.webp": "b409e1758414840dd40fd4a21a784ca9063092907945e79fd703f3c458971016",
+    "ulxd2-ksm9-front.webp": "b1818072a8720c93dd82de68843b8ff8287657cce83cc1e82480c0b2fc4bccdb",
+    "ulxd4-front.webp": "b16cb2b66f03ffc6122af845c76530d67b16fa8c02ac57101cf096dfea57ab3d",
+    "ulxd4-rear.webp": "46b36b813b8ec9cdd0fa9919dbd7daf46d305f8bd56176c112c25547fbde8843",
+    "ulxd4-angle-front.webp": "cb11e2c471ae069bc8e2f3aec2174f1e67eed16ad6ee0e41d97bd1cd696385ed",
+    "ulxd4d-front.webp": "33a38b3bf3feeb370843bf3dd05e390524f560cba64de49fd9a07c9813bb3ec3",
+    "ulxd4d-rear.webp": "a0ba3c2a22dbf0e93fa3808879dd2f0ce7bb8db891dd7c8474560bba167da81a",
+    "ulxd4q-front.webp": "bf16f20804ecbf1af7b8b4668aa46cd6b22630b7296cafbc178a5af43290ae91",
+    "ulxd4q-rear.webp": "87324e91e89ea6565c0d9fb6cbfd035db1528968b800c3cea3948659a2112a45",
+    "ulxd8-front.webp": "913c0010aa7f557365e709e511c95c17fff1c82c0315fd9cab38787ad5156005"
+  }
+}
