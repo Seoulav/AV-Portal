@@ -1,3 +1,4 @@
+import {beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -60,7 +61,7 @@ test('only each JBL card changes; old card facts are restored without hiding oth
   assert.deepEqual(Object.keys(prior).sort(), Object.keys(impedance).sort());
   for (const slug of Object.keys(impedance)) {
     const current = JSON.parse(readFileSync(new URL(`${slug}.json`, root), 'utf8'));
-    const protectedFields = structuredClone(current);
+    const protectedFields = beforeJblW15010Product(structuredClone(current), slug);
     delete protectedFields.keyFacts;
     assert.equal(sha(protectedFields), prior[slug].protectedSha256, `${slug}: protected fields`);
     const old = beforeJblW06001Product(current, slug);
