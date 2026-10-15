@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
 import { beforeMx392Ulxd4qFollowupProduct, beforeMx392Ulxd4qFollowupRaw } from './mx392-ulxd4q-followup-history.mjs';
+import { beforeW20261015_005Product } from './w20261015-005-history.mjs';
 
 // Restore only Port Map coordinates for assertions pinned to the pre-W-001 data.
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-001-prior-coords.json', import.meta.url), 'utf8'));
@@ -11,6 +12,7 @@ const coordinates = product => (product.portMap?.items ?? []).map(item =>
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW12001Product(current, slug) {
+  current = beforeW20261015_005Product(current, slug);
   const record = records[slug];
   if (!record) return current;
   // MX392/ULXD4Q followup groups the ULXD4Q MIC/LINE switches. A direct call may still see
