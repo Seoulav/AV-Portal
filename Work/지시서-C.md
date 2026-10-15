@@ -186,7 +186,7 @@
 
 ## W-20261015-007 · Epson EB-PQ2213B·PQ2216B 후면 표식 보완
 
-- 상태: REVIEW
+- 상태: MERGED (PR #524 병합, Pages 배포·공개 확인)
 - 승인 근거: 2026-10-15 사용자 지시: “W-20261015-007 사용을 승인합니다(EB-PQ2213B·PQ2216B REMOTE·AC 입력 번호 보완).” 작업 명세는 아직 main에 없으므로 직접 승인된 두 제품만 처리.
 - 기준 main: `dc14e22cb16bf5348e96e26210bcbc0b44239698` · 브랜치: `codex/W-20261015-007-epson-pq-portmap` · 전용 워크트리 `codex-c`.
 - [x] 세 모델의 제조사 공식 후면 사진 SHA-256 일치와 Epson 공용 매뉴얼(EB-PQ2213B·2216B·2220B 적용)에서 REMOTE·AC inlet을 확인했다.
@@ -194,6 +194,7 @@
 - [x] `portmap-audit` 두 제품 각 14개, 위치 오류 0. 공용 사진 `SHARED_WITH` 알림만 각 1건. 1280px·390px 로컬 화면에서 14개 표식·가로 이동·오류 없음을 확인했다.
 - [x] 변경 지도의 선택적 되감기와 기존 Epson 이력 검사를 연결했다. 해당 검사 6건 통과.
 - [x] 검색 인덱스·스냅샷·읽기용 카탈로그 재생성. 전체 직렬 검사 722건(721 pass·0 fail·기존 skip 1), Pages 검증 284 장비·281 상세·508 이미지·143 uploads, 검색 인덱스 `--check` 및 `git diff --check` 통과.
-- [ ] PR·CI·최신 main 재통합, 병합·배포·공개 1280px·390px 화면 확인.
+- [x] PR #524 필수 Builder CI run `38670788343` 통과. 최신 main `dc14e22c` 통합 및 파생 재생성 결과 변경 없음; PR 범위·`git diff --check origin/main...HEAD` 확인 후 병합 SHA `c67a8112285d10f8faafc8d425a14799dbab2dda`.
+- [x] Pages run `38671217691` 성공. 공개 revision `c67a811`에서 EB-PQ2213B·PQ2216B 모두 1280px·390px HTTP 200, 번호 14개, 오류·페이지 가로 넘침 0, 모바일 지도 가로 이동 확인. 사진의 REMOTE 잭·AC 소켓과 새 지시선 일치.
 
 [근거·시각 점검](기록/W-20261015-007-C-근거표.md) · [Work 인계](기록/W-20261015-007-C-Work-인계.md)
