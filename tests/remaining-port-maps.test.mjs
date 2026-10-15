@@ -1,5 +1,6 @@
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { beforeW15004ImageSha } from './w15004-shure-photo-history.mjs';
+import { beforeW15012ImageSha } from './w15012-black-background-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
@@ -53,7 +54,7 @@ test('G1–G5-qualified maps render with exact PDF pages, model images and origi
     assert.deepEqual(map.items.map(item => item.n), map.items.map((_, index) => index + 1));
     const image = product.images.find(image => image.role === 'Rear');
     assert.equal(image.file, e.image.file);
-    assert.equal(beforeUltritouchFollowupImageSha(sha(bytes('beta/site/detail/images/' + image.file)), image.file), e.image.sha256);
+    assert.equal(beforeUltritouchFollowupImageSha(beforeW15012ImageSha(sha(bytes('beta/site/detail/images/' + image.file)), image.file), image.file), e.image.sha256);
     assert.deepEqual(map.measuredImage, {file:image.file,width:e.image.width,height:e.image.height});
     assert.ok(portMapImageMatches(image,e.image.width,e.image.height,map));
     for (const item of e.markers) {
@@ -140,6 +141,6 @@ test('surviving published images and PDFs retain their baseline SHA-256', () => 
     }
     const hashFile=/\.(json|svg)$/.test(path)?textSha:sha;
     const currentHash = hashFile(bytes('beta/site/'+path));
-    assert.equal(beforeW13001ImageSha(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(beforeW15004ImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)),hash,path);
+    assert.equal(beforeW13001ImageSha(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(beforeW15004ImageSha(beforeW15012ImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)),hash,path);
   }
 });

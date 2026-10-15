@@ -235,7 +235,7 @@ export const group1Images = {
     image('Rear', 'x100pro-4u-rear.webp', 'Colorlight X100 Pro-4U 후면 이미지', 'Colorlight', 'X100 Pro-4U', 'https://en.colorlightinside.com/product/download/111', '2400×1014', '1800×761', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'x100pro-2u': [
-    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED'),
+    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED', 'Front · 제조사 공식 사양서 내장 투명 원본을 흰 배경으로 합성'),
     image('Rear', 'x100pro-2u-rear.webp', 'Colorlight X100 Pro-2U 후면 이미지', 'Colorlight', 'X100 Pro-2U', 'https://en.colorlightinside.com/product/download/111', '2400×697', '1800×523', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'tio1608-d2': [
@@ -272,7 +272,7 @@ export const group1Images = {
   ],
   vs5: [
     image('Front', 'lumantek-vs5-main.webp', 'Lumantek ez-Pro VS5 전면 조작부 이미지', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png', '860×550', '743×550', 'VERIFIED'),
-    image('Rear', 'lumantek-vs5-rear.webp', 'Lumantek ez-Pro VS5 후면 단자부 이미지(전원, USB Host, 1Gbps Ethernet, UVC USB3.0, Multiview HDMI, Program HDMI/SDI 출력, SDI/HDMI 입력 5계통, Audio In/Out D-sub9, 라벨 표기 포함)', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png', '1200×512', '1162×422', 'VERIFIED')
+    image('Rear', 'lumantek-vs5-rear.webp', 'Lumantek ez-Pro VS5 후면 단자부 이미지(전원, USB Host, 1Gbps Ethernet, UVC USB3.0, Multiview HDMI, Program HDMI/SDI 출력, SDI/HDMI 입력 5계통, Audio In/Out D-sub9, 라벨 표기 포함)', 'Lumantek', 'VS5', 'https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png', '1200×512', '1162×422', 'VERIFIED', 'Rear · 제조사 한국 공식 단자 안내 이미지의 투명 배경을 흰색으로 합성')
   ],
   vs10: [
     image('Front', 'lumantek-vs10-main.webp', 'Lumantek ez-Pro VS10 전면 조작부 이미지', 'Lumantek', 'VS10', 'https://www.lumantek.com/uploads/product/2184f50a528aef5c943fc733a7d5b698.png', '860×550', '785×550', 'VERIFIED'),
@@ -524,7 +524,7 @@ export const group1Images = {
     image('Main', 'plixus-ae-r-ps-main.webp', 'Plixus AE-R PS 외장 전원 공급 장치', 'Televic', 'Plixus AE-R PS', 'https://documents.televic.digital/conference/index.php/s/f2XKZpPkcbYfnKX', '1867x990', '1867x990', 'VERIFIED')
   ],
   'confidea-flex': [
-    image('Main', 'confidea-flex-main.webp', 'Confidea FLEX 터치스크린 탁상형 회의 유닛', 'Televic', 'Confidea FLEX', 'https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf', '2902x1659', '2902x1659', 'VERIFIED')
+    image('Main', 'confidea-flex-main.webp', 'Confidea FLEX 터치스크린 탁상형 회의 유닛', 'Televic', 'Confidea FLEX', 'https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf', '2902x1659', '2902x1659', 'VERIFIED', 'Main · 제조사 공식 데이터시트 내장 투명 원본을 흰 배경으로 합성')
   ],
   'plixus-next': [
     image('Main', 'plixus-next-main.webp', 'Plixus NEXT 네트워크 익스텐더', 'Televic', 'Plixus NEXT', 'https://documents.televic.digital/conference/index.php/s/W9kbS3grpBJJncP', '1868x990', '1868x990', 'VERIFIED')
@@ -543,11 +543,11 @@ export const group1Images = {
     image('Main', 'ultrix-hdx-io-main.webp', 'ULTRIX-HDX-IO SDI I/O 카드 (Ultrix I/O Cards 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRIX-HDX-IO', 'https://www.rossvideo.com/wp-content/uploads/2026/01/HDX-io.png', '2048x521', '2048x521', 'VERIFIED')
   ],
   ultripower: [
-    image('Main', 'ultripower-main.webp', 'Ross Video Ultripower 1RU 랙마운트 전원 공급 유닛 전면(중앙에 \'Ultripower\', 좌우 슬롯에 \'Ultripower-PS\' 모듈 2개 장착)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED'),
-    image('Rear', 'ultripower-rear.webp', 'Ross Video Ultripower 후면 패널(이더넷 포트, OUT 1-4 전원 커넥터, IEC 전원 인렛 A/B 확인 가능)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1225x200', '1225x200', 'FOUND')
+    image('Main', 'ultripower-main.webp', 'Ross Video Ultripower 1RU 랙마운트 전원 공급 유닛 전면(중앙에 \'Ultripower\', 좌우 슬롯에 \'Ultripower-PS\' 모듈 2개 장착)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED', 'Main · 제조사 공식 컷시트 내장 투명 원본을 흰 배경으로 합성'),
+    image('Rear', 'ultripower-rear.webp', 'Ross Video Ultripower 후면 패널(이더넷 포트, OUT 1-4 전원 커넥터, IEC 전원 인렛 A/B 확인 가능)', 'Ross Video', 'ULTRIPOWER', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1225x200', '1225x200', 'FOUND', 'Rear · 제조사 공식 컷시트 내장 투명 원본을 흰 배경으로 합성')
   ],
   'ultripower-ps': [
-    image('Main', 'ultripower-ps-main.webp', 'Ross Video Ultripower-PS 개별 전원 모듈(섀시에 장착된 상태, 모듈 전면에 \'Ultripower-PS\' 라벨과 냉각팬 확인 가능)', 'Ross Video', 'ULTRIPOWER-PS', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED')
+    image('Main', 'ultripower-ps-main.webp', 'Ross Video Ultripower-PS 개별 전원 모듈(섀시에 장착된 상태, 모듈 전면에 \'Ultripower-PS\' 라벨과 냉각팬 확인 가능)', 'Ross Video', 'ULTRIPOWER-PS', 'https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf', '1229x200', '1229x200', 'VERIFIED', 'Main · 제조사 공식 컷시트 내장 투명 원본을 흰 배경으로 합성 · 모듈은 섀시에 장착된 상태')
   ],
   'ultritouch-2-hr': [
     image('Front', 'ultritouch-2-hr-main.webp', 'Ultritouch-2-HR 전면 (Ultritouch 제품 페이지 공식 이미지)', 'Ross Video', 'ULTRITOUCH-2-HR', 'https://www.rossvideo.com/wp-content/uploads/2018/08/Ultritouch-Front2.jpg', '1600x800', '1600x800', 'VERIFIED'),
@@ -592,7 +592,7 @@ export const group1Images = {
     image('Main', 'h-output-card-hdmi20-4k-main.webp', 'H_1xHDMI2.0 출력 카드 전면 커넥터(주 출력 + 복제 출력)', 'NovaStar', 'H_1xHDMI2.0 Output Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1342x137', '1342x137', 'VERIFIED')
   ],
   'h-800w-psu': [
-    image('Main', 'h-800w-psu-main.webp', 'H_800W 전원 공급 모듈 실물 사진', 'NovaStar', 'H_800W Power', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '550x466', '550x466', 'VERIFIED')
+    image('Main', 'h-800w-psu-main.webp', 'H_800W 전원 공급 모듈 실물 사진', 'NovaStar', 'H_800W Power', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H15%20Video%20Wall%20Splicer%20Specifications%20V1.14.0.pdf', '550x466', '550x466', 'VERIFIED', 'Main · 제조사 H15 공식 데이터시트 PDF 파일 36쪽의 H_800W Power 투명 원본을 흰 배경으로 합성')
   ],
   'eb-pq2220b': [
     image('Main', 'eb-pq2220b-main.webp', '엡손 EB-PQ2220B 4K 레이저 프로젝터 정면 이미지', 'Epson', 'EB-PQ2220B', 'https://mediaserver.goepson.com/adaptivemedia/rendition?id=a33d9a01df167a802f294561e4272660fc9f3496&vid=a33d9a01df167a802f294561e4272660fc9f3496&prid=original&clid=SAPDAM&prclid=productpictures', '690x460', '690x460', 'FOUND'),
@@ -1065,7 +1065,7 @@ export const group1Images = {
     providedScreenshot('AMD 마스크', 'emision-pixelfit-amd.png', 'emision PixelFit AMD 하드웨어 마스크 화면', 'AMD 마스크 선택 화면'),
     providedScreenshot('디버그 모드', 'emision-pixelfit-debug.png', 'emision PixelFit 디버그 모드 화면', '디버그 모드 UI 예시')
   ],
-  'insta360-connect': [image('Main', 'insta360-connect-main.webp', 'Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지', 'Insta360', 'Insta360 Connect', 'https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg', '5120×1320', '1800×464', 'FOUND')],
+  'insta360-connect': [image('Main', 'insta360-connect-main.webp', 'Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지', 'Insta360', 'Insta360 Connect', 'https://res.insta360.com/dynamic/store/16184622a04cc44941bf62a892d6ceb1/303_01329b5a-6d85-4b12-9a54-78e291e44ac5.png', '1280×1280', '1080×255', 'FOUND', 'Main · 제조사 공식 스토어의 Insta360 Connect 투명 제품 컷을 흰 배경으로 합성')],
   'insta360-link-2': [image('Main', 'insta360-link-2-main.webp', 'Insta360 Link 2와 Link 2C를 함께 보여 주는 공식 키비주얼(Link 2 포함)', 'Insta360', 'Insta360 Link 2', 'https://res.insta360.com/static/dddd8a37240101bc565af9ff599d7674/KV_%401920.jpg', '2881×1600', '1800×999', 'FOUND', 'Main · 공식 키비주얼에 Link 2·Link 2C 함께 표기')],
   'insta360-wave-business': [image('Main', 'insta360-wave-business-main.webp', 'Insta360 Wave for Business 짙은 색상 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://wassets.insta360.com/store/479729971b3f4af8bf5d5a7ffd7baa31/14655_b564c32b-b619-43e4-9622-0273add5d428.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
   'carbonite-ultra': [

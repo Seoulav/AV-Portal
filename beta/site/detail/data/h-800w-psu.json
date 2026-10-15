@@ -18,10 +18,10 @@
       "role": "Main",
       "file": "h-800w-psu-main.webp",
       "alt": "H_800W 전원 공급 모듈 실물 사진",
-      "note": "Main · 제조사 공식 이미지",
+      "note": "Main · 제조사 H15 공식 데이터시트 PDF 파일 36쪽의 H_800W Power 투명 원본을 흰 배경으로 합성",
       "provider": "NovaStar",
       "model": "H_800W Power",
-      "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
+      "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H15%20Video%20Wall%20Splicer%20Specifications%20V1.14.0.pdf",
       "officialSource": true,
       "verificationStatus": "VERIFIED",
       "originalSize": "550x466",
@@ -33,7 +33,7 @@
     {
       "role": "Main",
       "status": "FOUND",
-      "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf"
+      "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H15%20Video%20Wall%20Splicer%20Specifications%20V1.14.0.pdf"
     },
     {
       "role": "Front",
