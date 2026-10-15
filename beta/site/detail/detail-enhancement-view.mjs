@@ -310,6 +310,7 @@ export function renderCableScenarioFlow(flow, model) {
 }
 // HDF-CCF cable scenario renderer end
 export function renderSignalFlow(flow, model) {
+  if (model === 'TOGGLE DOCK 2×1' || model === 'U-BRIDGE 3') return renderInogeniSignalFlow(flow, model);
   if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);
   const host=el('div','signal-flow');host.dataset.flowType=flow.type;
   const frame=el('div','flow-frame'),scroll=el('div','flow-scroll');scroll.tabIndex=0;
@@ -613,3 +614,86 @@ export function renderSetting(setting, number) {
   }
   return card;
 }
+
+// W-20261016-001: scoped INOGENI connection diagrams.
+const h = (tag, cls='', value='') => { const n=document.createElement(tag); n.className=cls; if(value)n.textContent=value; return n; };
+const s = (tag, attrs={}, value) => { const n=document.createElementNS('http://www.w3.org/2000/svg',tag); for(const [k,v] of Object.entries(attrs)) n.setAttribute(k,v); if(value!==undefined)n.textContent=value; return n; };
+const t = (svg,x,y,value,cls='cable-flow-device-label') => svg.append(s('text',{x,y,class:cls,'text-anchor':'middle'},value));
+const r = (svg,x,y,w,h,cls) => svg.append(s('rect',{x,y,width:w,height:h,rx:12,class:cls}));
+const l = (svg,d,cls,marker) => svg.append(s('path',{d,class:cls,...(marker?{'marker-end':`url(#${marker})`}:{})}));
+let seq=0;
+function figure(group,index,toggle) {
+  const id=`inogeni-flow-${++seq}`;
+  const a=s('svg',{class:'cable-flow-svg',viewBox:'0 0 1120 290',role:'img','aria-label':group.label+' · '+group.caption});
+  a.append(s('title',{},group.label));
+  const defs=s('defs');
+  for(const [name,color] of [['signal','#2470ce'],['power','#e87925']]) for(const side of ['right','left','down']) {
+    const marker=s('marker',{id:`${id}-${name}-${side}`,markerWidth:11,markerHeight:11,refX:9,refY:5.5,orient:'auto',markerUnits:'userSpaceOnUse'});
+    marker.append(s('path',{d:'M0 0 L10 5.5 L0 11 Z',fill:color})); defs.append(marker);
+  }
+  a.append(defs);
+  r(a,25,118,120,65,'cable-flow-laptop'); r(a,34,126,102,49,'cable-flow-laptop-screen');
+  a.append(s('path',{d:'M17 184 H153 L141 194 H29 Z',class:'cable-flow-laptop-base'}));
+  t(a,85,216,'노트북 / PC');
+  if(toggle) {
+    r(a,385,102,225,105,'cable-flow-connector'); t(a,497,138,'TOGGLE DOCK 2×1'); t(a,497,177,group.label,'cable-flow-connector-type');
+    r(a,920,104,165,73,'cable-flow-screen'); t(a,1002,136,'TV / 모니터'); t(a,1002,161,'HDMI 출력','cable-flow-connector-type');
+    r(a,820,213,260,48,'cable-flow-hub'); t(a,950,242,'USB-A ×3 주변기기 공유');
+    l(a,'M610 140 L918 140','cable-flow-signal-line',`${id}-signal-right`); t(a,765,128,'HDMI 출력','cable-flow-hdmi-label');
+    l(a,'M610 167 L780 167 L780 235 L818 235','cable-flow-signal-line',`${id}-signal-right`);
+    r(a,418,8,158,48,'cable-flow-pd-source'); t(a,497,30,'외부 DC 24V','cable-flow-pd-source-label'); t(a,497,46,'도크 전원 입력','cable-flow-pd-source-caption');
+    l(a,'M497 56 L497 99','cable-flow-power-line',`${id}-power-down`);
+    if(index===0) {
+      l(a,'M150 150 L382 150','cable-flow-signal-line',`${id}-signal-right`); t(a,265,136,'USB-C · USB 3.0 + DP Alt','cable-flow-hdmi-label');
+      l(a,'M383 177 L151 177','cable-flow-power-line',`${id}-power-left`); t(a,265,204,'PD 최대 100W → 호스트 1','cable-flow-power-caption');
+    } else {
+      l(a,'M150 128 L382 128','cable-flow-signal-line',`${id}-signal-right`); t(a,265,115,'USB-B · USB 3.0','cable-flow-hdmi-label');
+      l(a,'M150 169 L382 169','cable-flow-signal-line',`${id}-signal-right`); t(a,265,190,'HDMI 입력','cable-flow-hdmi-label');
+      t(a,265,212,'호스트 2 PD 공급 없음','cable-flow-power-caption');
+    }
+    l(a,'M386 248 L610 248','inogeni-control-line'); t(a,497,275,'RS-232 · LAN · GPI 제어','cable-flow-peripherals');
+  } else {
+    r(a,185,101,150,105,'cable-flow-connector'); t(a,260,136,'PC HOST'); t(a,260,175,'USB-C','cable-flow-connector-type');
+    r(a,782,101,150,105,'cable-flow-connector'); t(a,857,136,'DEVICE'); t(a,857,175,'USB-A ×2 + USB-C ×1','cable-flow-connector-type');
+    r(a,960,109,150,70,'cable-flow-hub'); t(a,1035,140,'USB 주변기기'); t(a,1035,164,'3개','cable-flow-connector-type');
+    l(a,'M146 149 L182 149','cable-flow-signal-line',`${id}-signal-right`);
+    l(a,'M336 143 L779 143','cable-flow-signal-line',`${id}-signal-right`);
+    l(a,'M933 149 L957 149','cable-flow-signal-line',`${id}-signal-right`);
+    r(a,428,43,255,54,'cable-flow-pill'); t(a,555,67,'CAT6A U/FTP · 한 가닥','cable-flow-pill-main'); t(a,555,87,'USB 3.0 · 최대 100m','cable-flow-pill-sub');
+    const px=index===0?190:786, from=index===0?336:780, to=index===0?779:336;
+    r(a,px,8,145,49,'cable-flow-pd-source'); t(a,px+72,29,'외부 DC 24V','cable-flow-pd-source-label'); t(a,px+72,46,index===0?'PC HOST 쪽':'DEVICE 쪽','cable-flow-pd-source-caption');
+    l(a,`M${px+72} 58 L${px+72} 98`,'cable-flow-power-line',`${id}-power-down`);
+    l(a,`M${from} 179 L${to} 179`,'cable-flow-power-line',`${id}-power-${index===0?'right':'left'}`);
+    t(a,555,206,index===0?'PoC 전원 PC HOST → DEVICE':'PoC 전원 DEVICE → PC HOST','cable-flow-power-caption');
+    l(a,'M336 238 L780 238','inogeni-control-line'); t(a,555,263,'RS-232 패스스루 · USB-mini 모듈 관리','cable-flow-peripherals');
+  }
+  return a;
+}
+function renderInogeniSignalFlow(flow,model) {
+  const toggle=model.startsWith('TOGGLE DOCK');
+  const host=h('div','signal-flow cable-flow inogeni-flow'); host.dataset.flowType=flow.type;
+  const pictures=[];
+  for(const [index,group] of flow.groups.entries()) {
+    const article=h('article','cable-flow-scenario'); article.append(h('h3','cable-flow-title',group.label),h('p','cable-flow-mode',group.caption));
+    const scroll=h('div','cable-flow-scroll'); scroll.tabIndex=0; scroll.setAttribute('role','region'); scroll.setAttribute('aria-label',group.label+' 그림 좌우 스크롤');
+    const pic=figure(group,index,toggle); scroll.append(pic); pictures.push(pic);
+    article.append(scroll,h('p','cable-flow-scroll-hint','↔ 좌우로 움직여 전체 경로를 확인하세요')); host.append(article);
+  }
+  const legend=h('div','cable-flow-legend');
+  for(const [cls,value] of [['source','호스트 입력'],['signal',toggle?'영상·USB → 출력':'USB 데이터 → DEVICE'],['power',toggle?'24V 입력 · USB-C PD':'24V 입력 · PoC'],['display','연결 장비']]) {
+    const item=h('span','cable-flow-legend-item'); item.append(h('i','cable-flow-swatch cable-flow-swatch-'+cls),document.createTextNode(value)); legend.append(item);
+  }
+  host.append(legend);
+  const details=h('details','pg-inline-more cable-flow-description'); details.append(h('summary','','그림 설명'),h('p','',flow.description));
+  for(const group of flow.groups) { details.append(h('h4','',group.label)); const steps=h('ol');
+    const lines=toggle ? group.id==='host1' ? ['호스트 1 USB-C 한 줄을 도크에 연결','영상은 HDMI 출력, USB는 공유 주변기기로 전달','도크 24V 입력과 호스트 1 USB-C PD 공급을 구분'] : ['호스트 2 USB-B와 HDMI 두 줄을 도크에 연결','영상은 HDMI 출력, USB는 공유 주변기기로 전달','호스트 2에는 USB-C PD 경로가 없음'] : group.id==='host-power' ? ['PC USB-C를 PC HOST에 연결','CAT6A U/FTP 한 가닥으로 DEVICE 유닛 연결','PC HOST의 24V 전원이 PoC로 DEVICE에 전달'] : ['PC USB-C를 PC HOST에 연결','CAT6A U/FTP 한 가닥으로 DEVICE 유닛 연결','DEVICE의 24V 전원이 PoC로 PC HOST에 전달'];
+    for(const value of lines) steps.append(h('li','',value)); details.append(steps);
+  }
+  host.append(details,h('p','cable-flow-footer',flow.notes.join(' ')));
+  const zoom=h('button','pg-btn cable-flow-zoom','크게 보기'); zoom.type='button';
+  const dialog=h('dialog','cable-flow-dialog'); dialog.setAttribute('aria-label',model+' 시그널 플로우 크게 보기');
+  const close=h('button','pg-btn cable-flow-close','닫기'); close.type='button'; close.addEventListener('click',()=>dialog.close()); dialog.append(close);
+  for(const pic of pictures)dialog.append(pic.cloneNode(true)); zoom.addEventListener('click',()=>dialog.showModal()); dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();}); host.append(zoom,dialog);
+  return host;
+}
+// W-20261016-001: end INOGENI connection diagrams.

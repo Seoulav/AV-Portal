@@ -473,5 +473,496 @@
       "status": "VERIFIED",
       "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png"
     }
-  ]
+  ],
+  "signalFlow": {
+    "type": "extender",
+    "description": "PC HOST 유닛과 DEVICE 유닛을 CAT6A U/FTP 케이블 한 가닥(최대 100m)으로 연결합니다. USB 3.0 데이터와 RS-232 패스스루를 전달하며, 24V는 두 유닛 중 한쪽에만 입력해 PoC로 반대쪽에 전달합니다.",
+    "inputs": [
+      {
+        "id": "pc1",
+        "label": "PC USB-C",
+        "signal": "usb",
+        "group": "host-power",
+        "caption": "PC HOST 연결",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "pc2",
+        "label": "PC USB-C",
+        "signal": "usb",
+        "group": "device-power",
+        "caption": "PC HOST 연결",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "dc-host",
+        "label": "PC HOST DC 24V",
+        "signal": "power",
+        "group": "host-power",
+        "caption": "외부 전원 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "dc-device",
+        "label": "DEVICE DC 24V",
+        "signal": "power",
+        "group": "device-power",
+        "caption": "외부 전원 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "usb-host",
+        "label": "DEVICE USB-A ×2 + USB-C ×1",
+        "signal": "usb",
+        "group": "host-power",
+        "caption": "USB 주변기기",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "usb-device",
+        "label": "DEVICE USB-A ×2 + USB-C ×1",
+        "signal": "usb",
+        "group": "device-power",
+        "caption": "USB 주변기기",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "id": "host1",
+        "kind": "bridge",
+        "label": "PC HOST",
+        "caption": "호스트 쪽 유닛",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "cat1",
+        "kind": "bridge",
+        "label": "CAT6A U/FTP",
+        "caption": "한 가닥 · 최대 100m",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "device1",
+        "kind": "bridge",
+        "label": "DEVICE",
+        "caption": "주변기기 쪽 유닛",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "host2",
+        "kind": "bridge",
+        "label": "PC HOST",
+        "caption": "호스트 쪽 유닛",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "cat2",
+        "kind": "bridge",
+        "label": "CAT6A U/FTP",
+        "caption": "한 가닥 · 최대 100m",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "device2",
+        "kind": "bridge",
+        "label": "DEVICE",
+        "caption": "주변기기 쪽 유닛",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "pc1",
+        "to": "host1",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "host1",
+        "to": "cat1",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "cat1",
+        "to": "device1",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "device1",
+        "to": "usb-host",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "from": "pc2",
+        "to": "host2",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "host2",
+        "to": "cat2",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "cat2",
+        "to": "device2",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "device2",
+        "to": "usb-device",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "dc-host",
+        "to": "host1",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "from": "host1",
+        "to": "cat1",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "from": "cat1",
+        "to": "device1",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "from": "dc-device",
+        "to": "device2",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "id": "host-power",
+        "label": "PC HOST 쪽 전원",
+        "caption": "24V → PC HOST → CAT6A PoC → DEVICE",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      },
+      {
+        "id": "device-power",
+        "label": "DEVICE 쪽 전원",
+        "caption": "24V → DEVICE → CAT6A PoC → PC HOST",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "signal": "usb",
+        "label": "USB 데이터 PC HOST → DEVICE"
+      },
+      {
+        "signal": "power",
+        "label": "24V 입력 · PoC 반대쪽 전달"
+      },
+      {
+        "signal": "control",
+        "label": "RS-232 패스스루 · 모듈 관리"
+      }
+    ],
+    "notes": [
+      "24V 외부 전원은 PC HOST 또는 DEVICE 유닛 한쪽에만 연결하며, 다른 쪽은 CAT6A PoC로 전원을 받습니다.",
+      "RS-232는 패스스루 보조 경로이고 USB-mini는 각 유닛 관리용입니다.",
+      "USB-A 두 개와 USB-C 한 개는 DEVICE 유닛의 주변기기 연결 단자입니다."
+    ]
+  }
 }

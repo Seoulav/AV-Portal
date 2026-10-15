@@ -1,3 +1,4 @@
+import { beforeW20261016_001Product } from './w20261016-001-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 
@@ -9,6 +10,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 export function beforeW20261015_002Product(product, slug) {
   if (slug !== 'toggle-dock-2x1') return product;
+  product = beforeW20261016_001Product(product, slug);
   const diagram = product.images.find(image => image.role === 'Diagram');
   assert.ok(diagram, 'TOGGLE DOCK diagram must exist');
   assert.equal(hash(JSON.stringify({ note: diagram.note, crop: product.portMap.crop })), changedFieldsHash,
