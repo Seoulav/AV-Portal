@@ -12,6 +12,7 @@ import { beforeW13010Product, beforeW13010Raw } from './w13010-yamaha-history.mj
 import { beforeW141002004Product, beforeW141002004Raw } from './w141002-004-history.mjs';
 import { beforeW20261015_006Product, beforeW20261015_006Raw } from './w20261015-006-history.mjs';
 import { beforeW20261015_006LabelsProduct, beforeW20261015_006LabelsRaw } from './w20261015-006-labels-history.mjs';
+import { beforeW20261015_008Product, beforeW20261015_008Raw } from './w20261015-008-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
 // tested. Current non-wording fields pass through, so unrelated regressions
@@ -25,6 +26,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug){
+  current=beforeW20261015_008Product(current,slug);
   current=beforeW20261015_006Product(beforeW20261015_006LabelsProduct(current,slug),slug);
   current=beforeW141002004Product(current,slug);
   current=beforeW13007BehhlGuideProduct(current,slug);
@@ -55,6 +57,7 @@ export function beforeW12002Product(current,slug){
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW20261015_008Raw(raw,slug);
   raw=beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(raw,slug),slug);
   raw=beforeW141002004Raw(raw,slug);
   raw=beforeW13007BehhlGuideRaw(raw,slug);
