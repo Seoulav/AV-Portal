@@ -215,7 +215,7 @@
 
 ## W-20261016-001 · INOGENI 2종 시그널 플로우
 
-- 상태: REVIEW (로컬 검증 완료·PR 준비)
+- 상태: MERGED (PR #536 병합·Pages 공개 확인)
 - 승인 근거: 사용자 원문 “toggle-dock-2x1과 u-bridge-3 2가지 제품도 hdf-ccf 나오는 것처럼 시그널 플로우 만들어줘”. READY 명세 `Work/작업/W-20261016-001.md`, 인계 `Work/기록/W-20261016-001-Codex-인계.md`를 main 커밋 `9a9beb98`에서 읽었다(PR #535).
 - 기준 main SHA: `9a9beb98` · 브랜치 `codex/W-20261016-001-inogeni-signalflow` · 워크트리 `../codex-c`.
 - 범위: TOGGLE DOCK 2×1 및 U-BRIDGE 3 제품 JSON의 `signalFlow`, 두 제품 전용 렌더, 원본/생성 상세 자산, 선택적 되감기 함수, 파생 산출물. 다른 제품 데이터·포트맵은 불변.
@@ -225,4 +225,5 @@
 - [x] 기존 HDF-CCF와 다른 제품 검증·렌더 결과를 보존했다. 공유 `validFlow` 수정은 자동 승인 검토가 기존 제품 영향 우려로 거부하여 시도하지 않았고, 기존 규약에 맞는 데이터와 모델 두 개에 한정한 렌더 경로를 사용했다.
 - [x] 변경 JSON과 렌더의 선택적 되감기를 기존 해시 검사에 연결했다. 대상 검사 및 데스크톱/모바일 로컬 화면을 확인했다.
 - [x] 전체 검사 734건 중 733 pass·0 fail·기존 skip 1, 검색 인덱스 `--check`, Pages 검증 284 제품·281 상세·508 사진·143 uploads, `git diff --check` 통과. 로컬 1280px·390px 캡처에서 두 시나리오·전원 방향·가로 스크롤 확인.
-- [ ] 최신 main 통합, PR·CI, 병합, Pages, 공개 1280px·390px 확인.
+- [x] 병합 직전 main `9a9beb98` 통합(추가 변경 없음), 파생 파일 재생성·검증, PR #536 Builder CI run `38814385797` 성공, 병합 SHA `e50f372ad71f6f873e27567a2f8eb1faa490c0bc`.
+- [x] Pages run `38814876129` 성공. 공개 `version.json` revision `e50f372`. TOGGLE DOCK·U-BRIDGE 3 모두 1280px·390px에서 HTTP 200, 시나리오 2개, JS 오류 0. 390px에서는 좌우 834px 스크롤로 양끝 경로 확인. [근거·Work 인계](기록/W-20261016-001-C-Work-인계.md).
