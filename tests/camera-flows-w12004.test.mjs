@@ -6,6 +6,7 @@ import { enhancementErrors, prepareEnhancements, selectCardModes } from '../beta
 import { beforeW12004Product } from './w12004-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeAverW12009Product } from './aver-w12009-history.mjs';
+import { beforeW20261015_008Product } from './w20261015-008-history.mjs';
 
 const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -69,7 +70,7 @@ test('only signalFlow is added to the three products; existing flows and control
     const product = read(slug);
     assert.equal(sha(beforeW12004Product(beforeKiprogo2Mx395Product(beforeAverW12009Product(product, slug), slug), slug)), prior[slug], slug);
   }
-  for (const [slug, expected] of Object.entries(untouched)) assert.equal(sha(beforeAverW12009Product(read(slug), slug)), expected, slug);
+  for (const [slug, expected] of Object.entries(untouched)) assert.equal(sha(beforeAverW12009Product(beforeW20261015_008Product(read(slug), slug), slug)), expected, slug);
 });
 
 test('historical inverse rejects changed flows and exposes unrelated current changes', () => {
