@@ -472,5 +472,457 @@
       "status": "VERIFIED",
       "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png"
     }
-  ]
+  ],
+  "signalFlow": {
+    "type": "switcher",
+    "description": "호스트 1(USB-C 한 줄) 또는 호스트 2(USB-B와 HDMI 두 줄) 중 선택된 한 쪽만 도크의 HDMI 출력과 USB 주변기기 3개를 공유합니다. 24V는 도크 전원 입력이며, USB-C PD는 호스트 1 쪽 공급입니다.",
+    "inputs": [
+      {
+        "id": "h1",
+        "label": "호스트 1 USB-C",
+        "signal": "usb",
+        "group": "host1",
+        "caption": "USB 3.0 + DP Alt",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "h2-usb",
+        "label": "호스트 2 USB-B",
+        "signal": "usb",
+        "group": "host2",
+        "caption": "USB 3.0",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": "h2-hdmi",
+        "label": "호스트 2 HDMI",
+        "signal": "video",
+        "group": "host2",
+        "caption": "영상 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "id": "dc1",
+        "label": "도크 DC 24V",
+        "signal": "power",
+        "group": "host1",
+        "caption": "외부 전원 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "id": "dc2",
+        "label": "도크 DC 24V",
+        "signal": "power",
+        "group": "host2",
+        "caption": "외부 전원 입력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "display1",
+        "label": "HDMI 출력",
+        "signal": "video",
+        "group": "host1",
+        "caption": "TV/모니터",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "id": "usb1",
+        "label": "공유 USB 주변기기 3개",
+        "signal": "usb",
+        "group": "host1",
+        "caption": "USB-A ×3",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "id": "pd1",
+        "label": "호스트 1 USB-C PD",
+        "signal": "power",
+        "group": "host1",
+        "caption": "최대 100W",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "id": "display2",
+        "label": "HDMI 출력",
+        "signal": "video",
+        "group": "host2",
+        "caption": "TV/모니터",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "id": "usb2",
+        "label": "공유 USB 주변기기 3개",
+        "signal": "usb",
+        "group": "host2",
+        "caption": "USB-A ×3",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "id": "dock1",
+        "kind": "select",
+        "label": "TOGGLE DOCK 2×1",
+        "caption": "호스트 1 선택",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "id": "dock2",
+        "kind": "select",
+        "label": "TOGGLE DOCK 2×1",
+        "caption": "호스트 2 선택",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "h1",
+        "to": "dock1",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "h1",
+        "to": "dock1",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "dock1",
+        "to": "display1",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "dock1",
+        "to": "usb1",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "h2-usb",
+        "to": "dock2",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "h2-hdmi",
+        "to": "dock2",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "dock2",
+        "to": "display2",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "dock2",
+        "to": "usb2",
+        "signal": "usb",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 3
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "dc1",
+        "to": "dock1",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "from": "dock1",
+        "to": "pd1",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "from": "dc2",
+        "to": "dock2",
+        "signal": "power",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "id": "host1",
+        "label": "호스트 1 선택",
+        "caption": "USB-C 한 줄 · 영상+USB, USB-C PD 최대 100W",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          },
+          {
+            "kind": "io",
+            "index": 7
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      },
+      {
+        "id": "host2",
+        "label": "호스트 2 선택",
+        "caption": "USB-B + HDMI 두 줄 · 영상+USB, 호스트 PD 없음",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          },
+          {
+            "kind": "io",
+            "index": 3
+          },
+          {
+            "kind": "io",
+            "index": 4
+          },
+          {
+            "kind": "io",
+            "index": 5
+          },
+          {
+            "kind": "io",
+            "index": 6
+          },
+          {
+            "kind": "io",
+            "index": 7
+          },
+          {
+            "kind": "io",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 → HDMI 출력"
+      },
+      {
+        "signal": "usb",
+        "label": "USB → 공유 주변기기"
+      },
+      {
+        "signal": "power",
+        "label": "24V 입력 · USB-C PD 공급"
+      }
+    ],
+    "notes": [
+      "선택된 호스트 한 쪽만 활성. HDMI 출력과 USB-A 주변기기 3개는 두 호스트가 공유합니다.",
+      "RS-232·LAN·GPI는 전환 제어용 보조 경로입니다.",
+      "24V DC 전원은 도크에 입력됩니다. 100W USB-C PD는 호스트 1에 공급되며 호스트 2 USB-B/HDMI로 공급되지 않습니다."
+    ]
+  }
 }

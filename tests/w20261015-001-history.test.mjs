@@ -1,3 +1,4 @@
+import { beforeW20261016_001View, beforeW20261016_001Styles } from './w20261016-001-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
@@ -38,11 +39,11 @@ test('all pre-existing products still validate and view source matches the appro
     const p=JSON.parse(readFileSync(new URL(name,detailPath),'utf8'));
     assert.deepEqual(enhancementErrors(p),[],name);
   }
-  const view=readFileSync(new URL('../beta/site/detail/detail-enhancement-view.mjs',import.meta.url),'utf8')
+  const view=beforeW20261016_001View(readFileSync(new URL('../beta/site/detail/detail-enhancement-view.mjs',import.meta.url),'utf8'))
     .replace(/\/\/ HDF-CCF cable scenario renderer start\n[\s\S]*?\/\/ HDF-CCF cable scenario renderer end\n/,'')
     .replace("  if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);\n",'');
   assert.equal(sha(view),'1f512b14f80b04e862e56c9a1c729a1ac73a60ea0986ccb9b1402f538b843e3d');
-  const css=readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8')
+  const css=beforeW20261016_001Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8'))
     .split('\n/* HDF-CCF cable scenarios. Existing signal-flow layout uses its own classes. */')[0];
   assert.equal(sha(css),'415112b0c26aae92313c91840579a1505d2de0f5d4559367407e44b80f9cc61d');
 });

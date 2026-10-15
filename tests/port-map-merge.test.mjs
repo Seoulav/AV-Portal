@@ -1,3 +1,4 @@
+import { beforeW20261016_001Product } from './w20261016-001-history.mjs';
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
@@ -82,12 +83,14 @@ test('03 visibility follows selected content; map numbers never use io indices',
     }
   }
   const withFlow = products.filter(({ raw }) => prepareProductDetail(raw).enhancements.signalFlow);
+  const rewindNew = (raw, name) => beforeW20261016_001Product(raw, name.slice(0, -5));
   // W-20261004-015 adds the five BSS pilot flows without changing 02 card selection.
-  assert.equal(products.filter(({ name, raw }) => prepareProductDetail(beforeW032Product(beforeW20261015_001Product(beforeW20261015_003Product(raw, name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow).length, 9);
-  const beforeW004 = products.filter(({ name, raw }) => prepareProductDetail(beforeW12004Product(beforeW20261015_001Product(beforeW20261015_003Product(raw, name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow);
+  assert.equal(products.filter(({ name, raw }) => prepareProductDetail(beforeW032Product(beforeW20261015_001Product(beforeW20261015_003Product(rewindNew(raw, name), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow).length, 9);
+  const beforeW004 = products.filter(({ name, raw }) => prepareProductDetail(beforeW12004Product(beforeW20261015_001Product(beforeW20261015_003Product(rewindNew(raw, name), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow);
   assert.equal(beforeW004.length, 11);
   // W-20261015-001 adds one HDF-CCF flow after the three prior Signal Flow additions.
-  assert.equal(withFlow.length, beforeW004.length + 4);
+  // W-20261016-001 adds the two INOGENI flows on top of the prior four additions.
+  assert.equal(withFlow.length, beforeW004.length + 6);
   assert.ok(withFlow.every(({ raw }) => selectSection03Content(prepareProductDetail(raw).enhancements)?.type === 'signal-flow'));
   assert.equal(selectSection03Content({}), null);
 });
