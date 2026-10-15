@@ -480,3 +480,11 @@
 - 최신 `origin/main` `32161e0f71662bcf8f7a3bc5905dc820462cdeff`(PR #528 Sony 공개 점검 기록)를 통합한 뒤 검색 인덱스와 public snapshot 재생성.
 - 전체 직렬 테스트 재실행 결과: 726건, 725 통과, 0 실패, 기존 skip 1. `verify-pages`, 검색 인덱스 `--check`, feature wording, PR diff check도 재통과.
 - PR용 변경 범위는 W-011 제품/기록/테스트 파일로 확인. Sony 변경은 최신 main에서만 포함되며 PR 변경으로 재포함되지 않음.
+
+### W-011 PR·배포·공개 확인 완료
+
+- PR #529 (https://github.com/Seoulav/AV-Portal/pull/529) CI `builder` 초록, 병합 SHA `4f50adcde08660aaeb4de8794417bbd5e735b991`.
+- Pages 배포 workflow run `38675364250` 성공.
+- 공개 URL 비시각 확인: `detail/data/varia-sl50.json`, `detail/data/varia-sl80.json`, 두 상세 route 모두 HTTP 200. JSON에 후면 RJ-45 Ethernet / PoE(802.3af) 각 1개와 승인 좌표가 게시됨.
+- 공개 `varia-100`·`varia-80` 상세 JSON도 HTTP 200이고 `portMap` 없음 확인. 공식 모델별 QSG 후면 연결 도면은 찾았으나 그림을 직접 렌더해 시각 판독하지 못해 지도화는 보류.
+- CUA에서 사용 가능한 브라우저 surface가 없어서 시각 캡처는 생략하고 공개 JSON·HTML 응답으로 확인.
