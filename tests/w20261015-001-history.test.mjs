@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {beforeW20261015_001Product,beforeW20261015_001Raw} from './w20261015-001-history.mjs';
+import {beforeW20261015_003Product} from './w20261015-003-history.mjs';
 import {enhancementErrors} from '../beta/site/detail/detail-enhancements.mjs';
 
 const detailPath = new URL('../beta/site/detail/data/', import.meta.url);
@@ -10,15 +11,26 @@ const read = slug => readFileSync(new URL(slug+'.json',detailPath),'utf8');
 const sha = value => createHash('sha256').update(value).digest('hex');
 
 test('selective inverse restores the exact pre-flow HDF-CCF JSON', () => {
-  assert.equal(sha(beforeW20261015_001Raw(read('hdf-ccf'),'hdf-ccf')),
+  const before003 = beforeW20261015_003Product(JSON.parse(read('hdf-ccf')), 'hdf-ccf');
+  assert.equal(sha(beforeW20261015_001Raw(JSON.stringify(before003, null, 2) + '\n','hdf-ccf')),
     '1e584920f55f4009baece93c7fca04dfc2986679ae0a307359c169a358e0cb1f');
-  const product = JSON.parse(read('hdf-ccf'));
+  const product = beforeW20261015_003Product(JSON.parse(read('hdf-ccf')), 'hdf-ccf');
   product.overview += ' 독립적인 후속 설명';
   assert.match(beforeW20261015_001Product(product,'hdf-ccf').overview,/후속 설명/);
   product.signalFlow.scenarios[1].powerDirection='forward';
   assert.throws(()=>beforeW20261015_001Product(product,'hdf-ccf'),/approved flow changed/);
   const other = {model:'OTHER',signalFlow:{future:true}};
   assert.equal(beforeW20261015_001Product(other,'other'),other);
+});
+
+test('PD source correction inverse restores only the previous flow wording', () => {
+  const current = JSON.parse(read('hdf-ccf'));
+  const prior = beforeW20261015_003Product(current, 'hdf-ccf');
+  assert.equal(sha(JSON.stringify(prior.signalFlow)), '46c40b840df4c0f31493f3a0a0560d806e151b5976cb771d202d6292acc32f59');
+  current.signalFlow.scenarios[1].powerDirection = 'forward';
+  assert.throws(() => beforeW20261015_003Product(current, 'hdf-ccf'), /revised PD flow changed/);
+  const other = { model: 'OTHER' };
+  assert.equal(beforeW20261015_003Product(other, 'other'), other);
 });
 
 test('all pre-existing products still validate and generic view source is unchanged', () => {

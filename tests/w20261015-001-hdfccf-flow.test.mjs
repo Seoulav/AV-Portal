@@ -29,6 +29,9 @@ test('HDF-CCF has the two manual scenarios with forward signal and reverse PD', 
     assert.ok(!/\\d+\\s*W/i.test(scenario.powerLabel + scenario.cableLabel));
   }
   assert.match(flow.description, /외부 장비/);
+  assert.match(flow.description, /외부 USB-PD 전원이 허브에 공급/);
+  assert.match(flow.description, /입력 노트북을 충전/);
+  assert.match(flow.scenarios[1].steps[3], /허브에 입력되어 HDF-CCF를 통해 노트북을 충전/);
   assert.match(flow.description, /고정 결선/);
   assert.deepEqual(enhancementErrors(product), []);
   assert.equal(prepareEnhancements(product).signalFlow, flow);

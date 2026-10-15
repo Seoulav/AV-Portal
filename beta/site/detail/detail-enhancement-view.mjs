@@ -202,12 +202,15 @@ const connector = (svg, x, role, caption) => {
   text(svg, x + 65, 169, 'USB-C', 'cable-flow-connector-type');
   text(svg, x + 65, 91, caption, 'cable-flow-role-caption');
 };
-const hub = (svg, scenario) => {
+const hub = (svg, scenario, uid) => {
+  svg.append(svgNode('rect', { x: 805, y: 8, width: 152, height: 42, rx: 12, class: 'cable-flow-pd-source' }));
+  text(svg, 881, 26, '외부 USB-PD 전원', 'cable-flow-pd-source-label');
+  text(svg, 881, 42, '허브에 전원 입력', 'cable-flow-pd-source-caption');
+  line(svg, 881, 51, 881, 99, 'cable-flow-hub-power-line', uid + '-arrow-down');
   svg.append(svgNode('rect', { x: 810, y: 102, width: 142, height: 74, rx: 12, class: 'cable-flow-hub' }));
   for (const x of [838, 868, 898]) svg.append(svgNode('rect', { x, y: 116, width: 17, height: 10, rx: 2, class: 'cable-flow-hub-port' }));
   svg.append(svgNode('rect', { x: 842, y: 137, width: 38, height: 13, rx: 2, class: 'cable-flow-hdmi-port' }));
   text(svg, 881, 166, 'USB-C 허브/스위치', 'cable-flow-device-label');
-  text(svg, 881, 91, '외부 장비 예시', 'cable-flow-role-caption');
   line(svg, 952, 138, 1003, 138, 'cable-flow-signal-line', null);
   text(svg, 978, 118, scenario.outputLabel, 'cable-flow-hdmi-label');
   monitor(svg, 1005, scenario.displayLabel);
@@ -219,7 +222,7 @@ function graphic(scenario, model) {
     'aria-label': scenario.title + ' · ' + scenario.signalLabel + ' · ' + scenario.powerLabel });
   svg.append(svgNode('title', {}, model + ' ' + scenario.title));
   const defs = svgNode('defs');
-  for (const [suffix, color] of [['arrow-right', '#2470ce'], ['arrow-left', '#e87925']]) {
+  for (const [suffix, color] of [['arrow-right', '#2470ce'], ['arrow-left', '#e87925'], ['arrow-down', '#e87925']]) {
     const marker = svgNode('marker', { id: uid + '-' + suffix, markerWidth: 11, markerHeight: 11,
       refX: 9, refY: 5.5, orient: 'auto', markerUnits: 'userSpaceOnUse' });
     marker.append(svgNode('path', { d: 'M0 0 L10 5.5 L0 11 Z', fill: color }));
@@ -239,7 +242,7 @@ function graphic(scenario, model) {
   text(svg, 490, 77, hybrid, 'cable-flow-pill-main');
   text(svg, 490, 96, functions || '', 'cable-flow-pill-sub');
   text(svg, 490, 127, 'AOC · SOURCE → DISPLAY', 'cable-flow-cable-caption');
-  if (scenario.receiver === 'hub') hub(svg, scenario);
+  if (scenario.receiver === 'hub') hub(svg, scenario, uid);
   else {
     line(svg, 800, 138, 916, 138, 'cable-flow-signal-line', null);
     monitor(svg, 920, scenario.displayLabel);
@@ -265,7 +268,10 @@ export function renderCableScenarioFlow(flow, model) {
     direction.append(el('span', 'cable-flow-direction-signal', '→ ' + scenario.signalLabel),
       el('span', 'cable-flow-direction-power', '← ' + scenario.powerLabel));
     article.append(scroll, el('p', 'cable-flow-scroll-hint', '↔ 좌우로 움직여 전체 경로를 확인하세요'), direction);
-    if (scenario.receiver === 'hub') article.append(el('p', 'cable-flow-extra', scenario.receiverLabel + ' → ' + scenario.outputLabel + ' → ' + scenario.displayLabel + ' · USB 주변기기: ' + scenario.peripherals.join(' · ')));
+    if (scenario.receiver === 'hub') article.append(
+      el('p', 'cable-flow-extra cable-flow-pd-path', '외부 USB-PD 전원 → 허브 → HDF-CCF → 노트북 충전'),
+      el('p', 'cable-flow-extra', scenario.receiverLabel + ' → ' + scenario.outputLabel + ' → ' + scenario.displayLabel + ' · USB 주변기기: ' + scenario.peripherals.join(' · '))
+    );
     figures.push(picture);
     host.append(article);
   }

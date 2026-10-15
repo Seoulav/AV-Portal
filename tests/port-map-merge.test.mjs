@@ -7,6 +7,7 @@ import { renderIoFallbackCards, renderPortMapCards } from '../prototype/brc-am7/
 import { beforeW032Product } from './w032-history.mjs';
 import { beforeW12004Product } from './w12004-history.mjs';
 import { beforeW20261015_001Product } from './w20261015-001-history.mjs';
+import { beforeW20261015_003Product } from './w20261015-003-history.mjs';
 import { isW1010Name } from './w1010-history.mjs';
 import { isW1012Name } from './w1012-history.mjs';
 import { isW004Name } from './w004-history.mjs';
@@ -78,8 +79,8 @@ test('03 visibility follows selected content; map numbers never use io indices',
   }
   const withFlow = products.filter(({ raw }) => prepareProductDetail(raw).enhancements.signalFlow);
   // W-20261004-015 adds the five BSS pilot flows without changing 02 card selection.
-  assert.equal(products.filter(({ name, raw }) => prepareProductDetail(beforeW032Product(beforeW20261015_001Product(raw, name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow).length, 9);
-  const beforeW004 = products.filter(({ name, raw }) => prepareProductDetail(beforeW12004Product(beforeW20261015_001Product(raw, name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow);
+  assert.equal(products.filter(({ name, raw }) => prepareProductDetail(beforeW032Product(beforeW20261015_001Product(beforeW20261015_003Product(raw, name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow).length, 9);
+  const beforeW004 = products.filter(({ name, raw }) => prepareProductDetail(beforeW12004Product(beforeW20261015_001Product(beforeW20261015_003Product(raw, name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5))).enhancements.signalFlow);
   assert.equal(beforeW004.length, 11);
   // W-20261015-001 adds one HDF-CCF flow after the three prior Signal Flow additions.
   assert.equal(withFlow.length, beforeW004.length + 4);
