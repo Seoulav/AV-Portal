@@ -518,5 +518,64 @@
     "visualVariant": "official-product-images",
     "galleryFootNote": "제조사 공식 제품 이미지",
     "footerNote": "SONY RM-IP500 · 공식 출처 기반"
+  },
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "rm-ip500-rear.webp",
+      "width": 888,
+      "height": 442
+    },
+    "crop": {
+      "top": 275,
+      "bottom": 0
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "접지",
+        "desc": "본체 접지선 연결",
+        "x1": 125,
+        "x2": 158,
+        "y": 347,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "GPI I/O",
+        "desc": "D-sub 15핀 · 탤리 입력 또는 접점 출력",
+        "x1": 201,
+        "x2": 330,
+        "y": 347,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "LAN",
+        "desc": "RJ-45 · 카메라 제어 네트워크 연결",
+        "x1": 357,
+        "x2": 427,
+        "y": 347,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "VISCA RS-422 OUT",
+        "desc": "RJ-45 · 카메라로 VISCA RS-422 제어 출력",
+        "x1": 465,
+        "x2": 531,
+        "y": 347,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DC IN 12V",
+        "desc": "DC 잭 · 전원 어댑터 연결",
+        "x1": 541,
+        "x2": 573,
+        "y": 347,
+        "side": "top"
+      }
+    ]
   }
 }
