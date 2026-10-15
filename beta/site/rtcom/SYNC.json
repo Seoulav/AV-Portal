@@ -484,11 +484,11 @@
       "bytes": 11758
     },
     "raw/products/hd-13u.json": {
-      "sha256": "9e984297ebc03653a73a9097bd2013b89a66bc57d1e2c2e618d73511ac4c05f1",
+      "sha256": "e751f31231159e1791dc4d854a28a4249a0184ee7ee3585043c9798782fad2ad",
       "bytes": 14940
     },
     "raw/products/hd-210u.json": {
-      "sha256": "093a6e6dc6a9b38128a138eb727ffb1c4caeb3caf7ce92bc1536a928888a9bd2",
+      "sha256": "f4a711c5e9717a5907a695db9e5bb12dc26164b3496a287fe3ebdc731e52a4a3",
       "bytes": 13745
     },
     "raw/products/hd-d102u-rack.json": {
@@ -516,8 +516,8 @@
       "bytes": 6595
     },
     "raw/products/mr-4s.json": {
-      "sha256": "ee2e06313452a01d7d189d68acd4d2b8208396a1a4fcd80ed3c6bd3c39b2e578",
-      "bytes": 8561
+      "sha256": "914495b6279d4e33590e58016aec6b2ea5de66ac0115d8a369d61f080ba4f8a4",
+      "bytes": 8281
     },
     "raw/products/obhd-2c.json": {
       "sha256": "201f1574d4dcac0d4696236c0e95169b3e4970520196395f3cab2b73b1900819",
@@ -544,8 +544,8 @@
       "bytes": 17445
     },
     "raw/products/spx.json": {
-      "sha256": "d89288d61a9d17a0fdfbe842b54e4b08094d7e63ee08032b9ad5bc239c9be3f3",
-      "bytes": 18481
+      "sha256": "ca83ee8798760dc4650619290f206356a5230277d95b87ff274a49bd5e3fcb68",
+      "bytes": 18499
     },
     "raw/products/umc.json": {
       "sha256": "6c6dc114006dcbbb64a2b999a5620b8d22a55714efe60e4bf78104f206a5857c",
