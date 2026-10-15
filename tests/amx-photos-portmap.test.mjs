@@ -9,6 +9,7 @@ import { beforeW12001IdentityProduct, beforeW12001IdentityRaw } from './w12001-i
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeKiprogo2Mx395Product, beforeKiprogo2Mx395Raw } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeW013C3Product } from './w013-c3-history.mjs';
+import { beforeW20261015_011Product, beforeW20261015_011Raw } from './w20261015-011-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -130,7 +131,8 @@ test('NX rear maps use only connectors that are visible in the matching drawings
 test('VARIA stays map-free and every non-image product field stays fixed', () => {
   for (const slug of Object.keys(productAssets)) {
     const product = read(`beta/site/detail/data/${slug}.json`);
-    if (slug.startsWith('varia-')) assert.equal(product.portMap, undefined, `${slug}: no Port Map`);
+    if (['varia-100', 'varia-80'].includes(slug)) assert.equal(product.portMap, undefined, `${slug}: no map without visually verified connection drawing`);
+    if (['varia-sl50', 'varia-sl80'].includes(slug)) assert.equal(product.portMap?.items.length, 1, `${slug}: only the verified RJ-45 is mapped`);
     const current = beforeW12002Product(beforeKiprogo2Mx395Product(beforeW013C3Product(product, slug),slug),slug);
     delete current.images;
     delete current.imageStatuses;
@@ -142,15 +144,19 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
 test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
   for (const slug of Object.keys(productAssets)) {
     const current = read(`beta/site/detail/data/${slug}.json`);
-    const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug), slug);
+    const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(beforeW20261015_011Raw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug), slug), slug);
     const altered = structuredClone(current);
     altered.io = [];
-    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(altered, slug), slug), slug), slug).io, [], `${slug}: current I/O passes through`);
-    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(JSON.stringify(altered, null, 2) + '\n', slug), slug), slug), slug), baseline, `${slug}: old hash catches I/O regression`);
+    assert.deepEqual(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(beforeW20261015_011Product(altered, slug), slug), slug), slug), slug).io, [], `${slug}: current I/O passes through`);
+    assert.notEqual(beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(beforeW20261015_011Raw(JSON.stringify(altered, null, 2) + '\n', slug), slug), slug), slug), slug), baseline, `${slug}: old hash catches I/O regression`);
     const changedImage = structuredClone(current);
     changedImage.images.at(-1).alt += ' altered';
-    assert.throws(() => beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(changedImage, slug), slug), slug), slug), /unexpected W-008 images change/);
-    if (current.portMap) {
+    assert.throws(() => beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeKiprogo2Mx395Product(beforeW20261015_011Product(changedImage, slug), slug), slug), slug), slug), /unexpected W-008 images change/);
+    if (['varia-sl50', 'varia-sl80'].includes(slug)) {
+      const changedMap = structuredClone(current);
+      changedMap.portMap.items[0].x1 += 1;
+      assert.throws(() => beforeW20261015_011Product(changedMap, slug), /unexpected W-011 Port Map change/);
+    } else if (current.portMap) {
       const changedMap = structuredClone(current);
       changedMap.portMap.items[0].x1 += 1;
       assert.throws(() => beforeKiprogo2Mx395Product(changedMap, slug), /unexpected portMap change/);

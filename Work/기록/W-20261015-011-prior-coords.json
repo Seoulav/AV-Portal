@@ -1,0 +1,20 @@
+{
+  "varia-sl50": {
+    "prior": {
+      "items": []
+    },
+    "approved": {
+      "coordinates": "70b1eb369eaf441a8334538467e51d88f2e82fceb719c819a73cd5857f9a28b3",
+      "metadata": "29b09c974df4375cd10ca51d424578399cae3c98a0adb4d7f132b899e7b19173"
+    }
+  },
+  "varia-sl80": {
+    "prior": {
+      "items": []
+    },
+    "approved": {
+      "coordinates": "55bd5bc096bc96635c6046ec3af9c48a020b7b21ee5843c272c210ed3a85b461",
+      "metadata": "dcfc4d2e8d5075943a85c8de4b848d09823d948cfa7e8ec41b4a8c2eeb21e08d"
+    }
+  }
+}

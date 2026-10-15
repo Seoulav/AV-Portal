@@ -454,3 +454,29 @@
 - 공개 HTTPS 확인: catalog/detail/search-index/docs manifest/detail HTML/catalog HTML/PDF 모두 HTTP 200. 공개 카탈로그에서 HDCVT·HDF-CCF 및 네 번째 `USB 3.2 Gen2 10Gbps` 값 확인. 매뉴얼 PDF 853678 bytes, `%PDF-`, SHA-256 `c96e33cce303073b0c0106c3e61eb90d6f33a712e1f8c2a5e7bd41ee3229518f`로 게시본 일치.
 - 브라우저 캡처 도구 미가용으로 시각 캡처는 하지 않음. 공개 JSON/HTML/PDF 응답과 자동 문서 카드·PDF 액션 검증으로 대체.
 - Beluga Highwave Pro 8K 5M은 정확 모델의 공식 USB 3.2 Gen2 근거 부족으로 등록 보류. AJA Ki Pro GO2 및 INOGENI U-BRIDGE 3의 USB 3.2 Gen1 표기는 후보 보고만 완료.
+## W-20261015-011 — AMX Varia Port Map (2026-10-15)
+
+- 명세 `Work/작업/W-20261015-011.md` READY, 기준 SHA `c9fef4cced0282d8a3cb80f7f107cc31beb26af5`, 브랜치 `codex/W-20261015-011-amx-varia-portmaps`.
+- 범위: AMX Varia 4종 사진 적합성 확인 및 후면 단자 지도. JBL·Sony 및 다른 제품 파일은 수정하지 않음.
+- [x] 세션 C 사진 감사 시트와 대상 상세 JSON·Rear 사진 대조.
+- [x] SL50·SL80 후면 사진을 원본 픽셀 격자로 직접 확대 확인. 두 사진의 RJ-45 하우징 1개만 현행 I/O(PoE 802.3af)와 대응해 Port Map 추가; USB 형태로 보이는 포트는 I/O/모델별 근거가 없어 제외.
+- [ ] VARIA-100/80 추가 도면 조사·시각 판독. 공식 QSG 자료는 찾았으나 이 환경에서 직접 렌더할 수 없어 좌표를 입력하지 않고 제품별 보류.
+- [ ] 되감기 함수·회귀 검사·점검표 및 인계 문서.
+- [ ] 최신 main 통합 후 파생물 재생성, 전체 직렬 검사·verify-pages, PR/CI, 병합·배포·공개 확인.
+- 도구 제한: Python/py/Pillow가 설치되지 않아 `scripts/portmap-audit.py`를 실행하지 못함. Edge headless 캔버스 격자로 원본 좌표를 눈으로 확인해 수동 배치했으며, 미통과 자동 점검은 통과로 기록하지 않음.
+
+## W-20261015-011 — AMX Varia Port Map (2026-10-15, 병합 전 통합 업데이트)
+
+- 기준 명세: `Work/작업/W-20261015-011.md` (PR #526 병합), 구현 브랜치 `codex/W-20261015-011-amx-varia-portmaps`.
+- [x] Varia-SL50·SL80 Rear의 보이는 RJ-45 각 1개만 Port Map에 추가. 사진 원본 격자와 렌더 결과를 수동 검토했고, 별도 에이전트도 좌표가 RJ-45 몸체를 가리키는지 독립 확인.
+- [x] Varia-100·Varia-80은 기존 Rear에 단자가 없고, 공식 QSG의 후면 도면은 현재 환경에서 페이지 그림을 직접 렌더·판독할 수 없어 지도화 보류. Other 사진은 연결 도면이 아님. 추정 좌표 미입력.
+- [x] 되감기 함수, 제품 범위 회귀 테스트, 기존 전역 집계 테스트 반영. 최신 `origin/main` `c0c528ad7fa4b23346fe7317a6c68734d94393bc`(PR #527 Sony rear maps) 통합. 검색 인덱스와 public snapshot 재생성.
+- [x] 직렬 전체 테스트: 726건 중 725 통과, 0 실패, 기존 skip 1. `verify-pages`: 284 제품·281 상세·508 검토 이미지·143 업로드 PDF. `build-search-index --check`, feature wording 검사, `git diff --check` 통과. 잠금 PDF 12건 유지.
+- 도구 한계: Python/Pillow 미설치로 자동 Port Map 좌표 감사는 실행하지 않음. 원본 격자 이미지와 렌더 결과의 시각 검토·독립 에이전트 확인을 기록. QSG 후면 도면은 직접 시각 판독 불가.
+- 상태: 검증 완료, PR 준비. 공개 배포 및 Varia-100/80 후속 도면 판독은 남음.
+
+### W-011 최신 main #528 통합·최종 검증
+
+- 최신 `origin/main` `32161e0f71662bcf8f7a3bc5905dc820462cdeff`(PR #528 Sony 공개 점검 기록)를 통합한 뒤 검색 인덱스와 public snapshot 재생성.
+- 전체 직렬 테스트 재실행 결과: 726건, 725 통과, 0 실패, 기존 skip 1. `verify-pages`, 검색 인덱스 `--check`, feature wording, PR diff check도 재통과.
+- PR용 변경 범위는 W-011 제품/기록/테스트 파일로 확인. Sony 변경은 최신 main에서만 포함되며 PR 변경으로 재포함되지 않음.
