@@ -1069,7 +1069,7 @@ export const group1Images = {
   'insta360-wave': [image('Main', 'insta360-wave-main.webp', 'Insta360 Wave 흰색 본체와 터치 베이스', 'Insta360', 'CINSABCA', 'https://res.insta360.com/dynamic/store/ff6a22eabcf524d0cea295cc7aed7e52/304_998dc5ad-1e93-41ed-aec9-854843179b47.png?x-oss-process=image%2Fauto-orient%2C1%2Fformat%2Cwebp', '1280×1280', '1280×1280', 'FOUND')],
   'toggle-dock-2x1': [
     image('Main', 'toggle-dock-2x1-main.png', 'INOGENI TOGGLE DOCK 2×1 모델명이 인쇄된 본체 전면과 상단', 'INOGENI', 'TOGGLE DOCK 2×1', 'https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Perspective_Left-scaled.png', '2560x1593', '2560x1593', 'VERIFIED', 'Main · 공식 제품 페이지 원본, 본체 전면 TOGGLE DOCK 2×1 인쇄 확인'),
-    image('Diagram', 'toggle-dock-2x1-diagram.png', 'INOGENI TOGGLE DOCK 2×1 공식 연결도와 후면 단자', 'INOGENI', 'TOGGLE DOCK 2×1', 'https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png', '1024x631', '1024x631', 'VERIFIED', 'Diagram · 공식 제품 페이지 연결 그림, 후면 호스트·장치·제어 구획 확인')
+    image('Diagram', 'toggle-dock-2x1-diagram.png', 'INOGENI TOGGLE DOCK 2×1 공식 연결도와 후면 단자', 'INOGENI', 'TOGGLE DOCK 2×1', 'https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png', '1024x631', '1024x631', 'VERIFIED', 'Diagram · 공식 연결도에서 후면 단자 부분만 표시. 원본의 색 화살표와 외부 장비 예시는 제외')
   ],
   'hdf-ccf': [image('Main', 'hdf-ccf-main.png', 'HDCVT HDF-CCF Type-C AOC Cable, SOURCE and DISPLAY ends', 'HDCVT', 'HDF-CCF', 'https://cn.hdcvt.com/product_169/567.html', '1920x1308', '1920x1308', 'VERIFIED', 'Main ? HDCVT official product page lists exact model HDF-CCF')],
   'u-bridge-3': [

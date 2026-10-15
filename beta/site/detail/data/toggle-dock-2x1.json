@@ -33,7 +33,7 @@
       "role": "Diagram",
       "file": "toggle-dock-2x1-diagram.png",
       "alt": "INOGENI TOGGLE DOCK 2×1 공식 연결도와 후면 단자",
-      "note": "Diagram · 공식 제품 페이지 연결 그림, 후면 호스트·장치·제어 구획 확인",
+      "note": "Diagram · 공식 연결도에서 후면 단자 부분만 표시. 원본의 색 화살표와 외부 장비 예시는 제외",
       "provider": "INOGENI",
       "model": "TOGGLE DOCK 2×1",
       "sourceUrl": "https://inogeni.com/wp-content/uploads/2025/03/INOGENI_TOGGLE-DOCK-2x1_Connectivity_1-1-1024x631.png",
@@ -374,8 +374,8 @@
       "height": 631
     },
     "crop": {
-      "top": 155,
-      "bottom": 320
+      "top": 181,
+      "bottom": 348
     },
     "items": [
       {
