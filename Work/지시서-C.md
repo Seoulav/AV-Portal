@@ -230,13 +230,15 @@
 
 ## W-20261016-002 · U-BRIDGE 3 차폐 케이블 필수 조건
 
-- 상태: REVIEW
+- 상태: MERGED (PR #539 병합·Pages 공개 확인)
 - 승인 근거: 사용자 2026-10-16 “U-BRIDGE 3는 반드시 U/FTP CAT6A 이상 S/FTP 케이블을 사용해야 해”. READY 명세 `Work/작업/W-20261016-002.md`와 `Work/기록/W-20261016-002-Codex-인계.md`를 main `49725e5aa851aef5ccf6f5ebe066f631262c280e`에서 읽었다.
 - 기준 main `49725e5a`, 브랜치 `codex/W-20261016-002-ubridge-shielded-cable`, 전용 워크트리 `../codex-c`.
 - 범위: `u-bridge-3`의 사양·특징·사용자 확인 근거·시그널 플로우 케이블 문구, 필요한 두 제품 전용 렌더 알약 텍스트만. 다른 제품·수치·Port Map 불변.
 - [x] 사용자 확인(U) 출처·INFO 이슈·Link 사양, 한눈에 보기·기능·시그널 플로우에 차폐형 필수 조건 반영.
 - [x] 선택적 되감기, 전체 검사·파생 산출물·Pages 검증, 로컬 1280px·390px 확인.
-- [ ] PR CI, 최신 main 재통합, 병합 순서 확인, 병합·Pages 배포·공개 보고.
+- [x] PR CI, 최신 main 재통합, 병합 순서 확인, 병합·Pages 배포·공개 확인.
 
 - 검증: 전체 737건 중 736 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, `verify-pages`(284 제품·281 상세·508 이미지·143 PDF), `feature-wording --check`, 로컬 1280px·390px 두 시나리오와 가로 스크롤 통과. 신규 feature 행은 변경 전후 문장 비교용 `feature-wording --diff` 범위 밖이며, 기존 feature 보존과 명사형은 작업 전용 검사로 확인.
 - [근거표](기록/W-20261016-002-C-근거표.md) · [Work 인계](기록/W-20261016-002-C-Work-인계.md)
+- PR [#539](https://github.com/Seoulav/AV-Portal/pull/539): Builder CI [run 38824947674](https://github.com/Seoulav/AV-Portal/actions/runs/38824947674) 통과. 최신 main `49725e5a`와 파생 산출물을 재확인한 뒤 병합 SHA `2c2dd179a90a617886687885ad0f0de0785aafb6`.
+- Pages [run 38825292302](https://github.com/Seoulav/AV-Portal/actions/runs/38825292302) 성공. 공개 `version.json` revision `2c2dd17`. [U-BRIDGE 3 공개 페이지](https://seoulav.github.io/AV-Portal/detail/?product=u-bridge-3) 1280px·390px HTTP 200, 두 시나리오 필수 케이블 알약 표시·한눈에 보기·사양 문구 확인, JS 오류 0. 390px은 기존 좌우 스크롤로 전체 그림 확인. 캡처는 로컬 `tmp/w16002-public-*`에 보관(비커밋).
