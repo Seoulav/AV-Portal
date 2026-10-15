@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW20261015_002Product, beforeW20261015_002Raw, beforeW20261015_002EpsonProduct, beforeW20261015_002EpsonRaw } from './w20261015-002-history.mjs';
+import { beforeW20261015_007Product, beforeW20261015_007Raw } from './w20261015-007-history.mjs';
 
 const raw = readFileSync(new URL('../beta/site/detail/data/toggle-dock-2x1.json', import.meta.url), 'utf8');
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -23,8 +24,8 @@ test('Epson HDMI 2 coordinate inverses restore both exact prior product JSON fil
     ['eb-pq2216b', '4a3bbd97dc686398859b257506ccdff929007a5588830ffb435cd7baa75e5720']
   ]) {
     const text = readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8');
-    assert.equal(sha(beforeW20261015_002EpsonRaw(text, slug)), expectedHash, slug);
-    const changed = JSON.parse(text);
+    assert.equal(sha(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(text, slug), slug)), expectedHash, slug);
+    const changed = beforeW20261015_007Product(JSON.parse(text), slug);
     changed.overview += ' independent later wording';
     assert.match(beforeW20261015_002EpsonProduct(changed, slug).overview, /independent later wording/);
     changed.portMap.items.find(item => item.n === 2).x2 = 510;
