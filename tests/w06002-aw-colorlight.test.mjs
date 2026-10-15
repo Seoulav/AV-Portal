@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { beforeW06002Product, w06002NewSlugs } from './w06002-history.mjs';
+import { beforeW20261015_006Product } from './w20261015-006-history.mjs';
 
 const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
 const catalog = JSON.parse(readFileSync(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'));
@@ -24,7 +25,8 @@ test('five Aquilon models retain their own data-sheet capacities and two photos'
     assert.equal(p.specifications.find(x => x.name === '크기(RU)').value, ru);
     assert.equal(p.specifications.find(x => x.name === '최대 소비전력').value, watts);
     assert.deepEqual(p.images.map(x => x.role), ['Front', 'Rear']);
-    assert.equal(p.portMap, undefined);
+    assert.equal(beforeW20261015_006Product(p, slug).portMap, undefined);
+    assert.ok(p.portMap?.items.length > 0, slug);
     assert.equal(p.images.every(x => x.officialSource && new URL(x.sourceUrl).hostname === 'www.analogway.com'), true);
   }
   assert.equal(w06002NewSlugs.size, 5);

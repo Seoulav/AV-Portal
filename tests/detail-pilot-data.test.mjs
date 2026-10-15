@@ -29,9 +29,11 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
         assert.equal(readFileSync(new URL('../beta/site/' + ref[1], import.meta.url)).subarray(0, 4).toString(), '%PDF');
       }
     }
-    assert.equal(Boolean(prepared.portMap), Object.hasOwn(portProof.products, slug));
+    // RS1 gained a photographed rear map in W-20261015-006, after the pilot evidence fixture.
+    assert.equal(Boolean(prepared.portMap), Object.hasOwn(portProof.products, slug) || slug === 'aquilon-rs1');
     const evidence = baseline.evidence;
-    for (const key of optional.filter(key => Object.hasOwn(p, key))) assert.ok(evidence.fields[key] || (key === 'portMap' && portProof.products[slug]), `${slug}.${key} evidence`);
+    for (const key of optional.filter(key => Object.hasOwn(p, key))) assert.ok(evidence.fields[key] ||
+      (key === 'portMap' && (portProof.products[slug] || slug === 'aquilon-rs1')), `${slug}.${key} evidence`);
     if (evidence.file) {
       const bytes = readFileSync(new URL('../beta/site/' + evidence.file, import.meta.url));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), evidence.sha256);

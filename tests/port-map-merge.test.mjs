@@ -63,7 +63,8 @@ test('remaining io-only products retain every present connector in the 02 fallba
   // W-20261014-003 adds rear maps to three existing X100 Pro products.
   // W-20261014-008 adds two INOGENI products with official Diagram maps.
   // W-20261014-007 adds HDF-CCF with two I/O rows and a verified Main photo, but no rear Port Map.
-  assert.deepEqual(counts, { mapIo: 154, ioOnly: 100, neither: 21 });
+  // W-20261015-006 maps eleven existing Analog Way products; all eleven leave the I/O fallback.
+  assert.deepEqual(counts, { mapIo: 165, ioOnly: 89, neither: 21 });
 });
 
 test('03 visibility follows selected content; map numbers never use io indices', () => {
