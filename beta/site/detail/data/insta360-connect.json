@@ -20,14 +20,14 @@
       "role": "Main",
       "file": "insta360-connect-main.webp",
       "alt": "Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지",
-      "note": "Main · 제조사 공식 이미지",
+      "note": "Main · 제조사 공식 스토어의 Insta360 Connect 투명 제품 컷을 흰 배경으로 합성",
       "provider": "Insta360",
       "model": "Insta360 Connect",
-      "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg",
+      "sourceUrl": "https://res.insta360.com/dynamic/store/16184622a04cc44941bf62a892d6ceb1/303_01329b5a-6d85-4b12-9a54-78e291e44ac5.png",
       "officialSource": true,
       "verificationStatus": "FOUND",
-      "originalSize": "5120×1320",
-      "resolution": "1800×464",
+      "originalSize": "1280×1280",
+      "resolution": "1080×255",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -35,7 +35,7 @@
     {
       "role": "Main",
       "status": "FOUND",
-      "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg"
+      "sourceUrl": "https://res.insta360.com/dynamic/store/16184622a04cc44941bf62a892d6ceb1/303_01329b5a-6d85-4b12-9a54-78e291e44ac5.png"
     }
   ],
   "documents": [

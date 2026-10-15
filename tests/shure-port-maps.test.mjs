@@ -1,5 +1,6 @@
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { beforeW15004ImageSha } from './w15004-shure-photo-history.mjs';
+import { beforeW15012ImageSha } from './w15012-black-background-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeUltritouchFollowupImageSha } from './w12005-ultritouch-history.mjs';
@@ -139,6 +140,6 @@ test('Shure mapping preserves published source images, PDFs and catalog bytes', 
       continue;
     }
     const currentHash = hashFile(bytes('beta/site/' + path));
-    assert.equal(beforeW13001ImageSha(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(beforeW15004ImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), hash, path);
+    assert.equal(beforeW13001ImageSha(beforeUltritouchFollowupImageSha(beforeKiprogo2Mx395ImageSha(beforeMxc420PhotoImageSha(beforeW15004ImageSha(beforeW15012ImageSha(currentHash, path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), path.split('/').at(-1)), hash, path);
   }
 });

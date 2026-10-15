@@ -1,0 +1,396 @@
+{
+  "products": {
+    "ultripower": {
+      "priorImages": [
+        {
+          "role": "Main",
+          "file": "ultripower-main.webp",
+          "alt": "Ross Video Ultripower 1RU 랙마운트 전원 공급 유닛 전면(중앙에 'Ultripower', 좌우 슬롯에 'Ultripower-PS' 모듈 2개 장착)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Ross Video",
+          "model": "ULTRIPOWER",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1229x200",
+          "resolution": "1229x200",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "ultripower-rear.webp",
+          "alt": "Ross Video Ultripower 후면 패널(이더넷 포트, OUT 1-4 전원 커넥터, IEC 전원 인렛 A/B 확인 가능)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Ross Video",
+          "model": "ULTRIPOWER",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1225x200",
+          "resolution": "1225x200",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        }
+      ],
+      "approvedImagesSha256": "22c6442579e73473058a04d010b16d60625034504defe370ef8c5b2f2823377d",
+      "approvedImageStatusesSha256": "b1e8eaa4549118cd8892ef7501a8442cba83e10d3d00ae69396bc5d91b79b216",
+      "priorCoreSha256": "f873d30997ab770e38ed897e9b8d78e3af7fa7b654d22c97734ac0252f7c8670"
+    },
+    "ultripower-ps": {
+      "priorImages": [
+        {
+          "role": "Main",
+          "file": "ultripower-ps-main.webp",
+          "alt": "Ross Video Ultripower-PS 개별 전원 모듈(섀시에 장착된 상태, 모듈 전면에 'Ultripower-PS' 라벨과 냉각팬 확인 가능)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Ross Video",
+          "model": "ULTRIPOWER-PS",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1229x200",
+          "resolution": "1229x200",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://documentation.rossvideo.com/files/Brochures/Infrastructure/Ultripower%20Cutsheet.pdf"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/"
+        }
+      ],
+      "approvedImagesSha256": "9e9a713316e116c487b6764311f5656818225c2d7927444b2cc0d056871b43ca",
+      "approvedImageStatusesSha256": "9fa82f3345790cf098273edb0ffb17fdfadbba0b4451c8e7e6b318db210aeef4",
+      "priorCoreSha256": "baaeedc9abc1ded2e3d69e5f1120a57aca4a06321f29dfccedde2f799adc2f04"
+    },
+    "confidea-flex": {
+      "priorImages": [
+        {
+          "role": "Main",
+          "file": "confidea-flex-main.webp",
+          "alt": "Confidea FLEX 터치스크린 탁상형 회의 유닛",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Televic",
+          "model": "Confidea FLEX",
+          "sourceUrl": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2902x1659",
+          "resolution": "2902x1659",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://documents.televic.digital/conference/index.php/s/2kDk4ndpZ5ZaaPf"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://conference.televic.digital/knowledgebase/products/confidea-flex/"
+        }
+      ],
+      "approvedImagesSha256": "aaf225615e2091c06e113cf043eecb79990985cfda38941cf8a78b08a9aa1d21",
+      "approvedImageStatusesSha256": "572dbfc41e69dc044bfb6adc0251c6b1a73286d87321cc7e21fd48232d960c8c",
+      "priorCoreSha256": "56eb4109dd166a338b11ddd4b6aa6465af76c21f58d0b7c8da0b0c5275a3eca5"
+    },
+    "h-800w-psu": {
+      "priorImages": [
+        {
+          "role": "Main",
+          "file": "h-800w-psu-main.webp",
+          "alt": "H_800W 전원 공급 모듈 실물 사진",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "NovaStar",
+          "model": "H_800W Power",
+          "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "550x466",
+          "resolution": "550x466",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39"
+        }
+      ],
+      "approvedImagesSha256": "cfb80d7c686fde1d74b7b9c1e1db595736a655b0403e3cafea2bf6fa0a2e75bd",
+      "approvedImageStatusesSha256": "623c01425e09c4984ee33f492cdfe5926e6382a3c988722f37ffafe1056d77a9",
+      "priorCoreSha256": "9d08dad7cef9664adfeff3306fc51a254921d8853666840478055e93d0807b87"
+    },
+    "x100pro-2u": {
+      "priorImages": [
+        {
+          "role": "Front",
+          "file": "x100pro-2u-front.webp",
+          "alt": "Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-2U",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2362×603(사양서 내장 이미지)",
+          "resolution": "1800×459",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "x100pro-2u-rear.webp",
+          "alt": "Colorlight X100 Pro-2U 후면 이미지",
+          "note": "Rear · 제조사 제품 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-2U",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "2400×697",
+          "resolution": "1800×523",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        }
+      ],
+      "approvedImagesSha256": "5a4e8a2a5672a72ea39d095abe121a4f1d7862e214a0a8358b2eab887524de0e",
+      "approvedImageStatusesSha256": "a483869c5667b82f45c804b9ae05aace385de38a65f88654d966e752aad92725",
+      "priorCoreSha256": "25a84a603f569b3f17e5247a09358aad6459faa7bacaa53613199c1acf04ad5b"
+    },
+    "vs5": {
+      "priorImages": [
+        {
+          "role": "Front",
+          "file": "lumantek-vs5-main.webp",
+          "alt": "Lumantek ez-Pro VS5 전면 조작부 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Lumantek",
+          "model": "VS5",
+          "sourceUrl": "https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "860×550",
+          "resolution": "743×550",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "lumantek-vs5-rear.webp",
+          "alt": "Lumantek ez-Pro VS5 후면 단자부 이미지(전원, USB Host, 1Gbps Ethernet, UVC USB3.0, Multiview HDMI, Program HDMI/SDI 출력, SDI/HDMI 입력 5계통, Audio In/Out D-sub9, 라벨 표기 포함)",
+          "note": "Rear · 제조사 공식 이미지",
+          "provider": "Lumantek",
+          "model": "VS5",
+          "sourceUrl": "https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "1200×512",
+          "resolution": "1162×422",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://lumantek.co.kr/uploads/product/935aceab0caf7fac17df7c43adf54046.png"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://lumantek.co.kr/uploads/product/fdc40ea6a4167b19902d62c0769b0196.png"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://lumantek.co.kr/index/product_intro/74"
+        }
+      ],
+      "approvedImagesSha256": "ed6f0158632cbe9a4c1aa0a71407cfc109a5ea629a208f3b7a5df7df6bc64026",
+      "approvedImageStatusesSha256": "19f7b32da47e48334aefb2b548bd715a716266046ff7690f280ce286148565d0",
+      "priorCoreSha256": "a07ccb4ef7d4acbbe0c5f2b237df0c02a8ef8c3e1c7eeedce6a7212313082dc0"
+    },
+    "insta360-connect": {
+      "priorImages": [
+        {
+          "role": "Main",
+          "file": "insta360-connect-main.webp",
+          "alt": "Insta360 Connect 듀얼 카메라 AI 비디오바 제품 이미지",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Insta360",
+          "model": "Insta360 Connect",
+          "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "5120×1320",
+          "resolution": "1800×464",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "priorImageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://res.insta360.com/static/9c588b8bccc905e11d98ea25332d9032/KV%20-%20BYOD.jpg"
+        }
+      ],
+      "approvedImagesSha256": "16cc7bfed734dcdb423f821a5aff8838fc07742891d639bd42ea2f7ee1c775ab",
+      "approvedImageStatusesSha256": "aef00a7c82e04b19ccd64d8d470da7853d907b4b35bd629162c32ffc712979e8",
+      "priorCoreSha256": "97737eedf4509b47b7c48d69d4e03f923de7de6ad976b0b897e9c907f79a7f4f"
+    }
+  },
+  "images": {
+    "ultripower-main.webp": {
+      "priorSha256": "e9b8b269c961c38cd6a3ef13c585afda907ee59998ec8ed68a3df6d4a826c785",
+      "approvedSha256": "3f21a296f6a1a834256c73a8dc5eab8bff1eb29faff8161704af6a2887079c07"
+    },
+    "ultripower-rear.webp": {
+      "priorSha256": "9d8b7c7c7fb8280bea3a50adea7683fa270caaefeb432b76e56770a42277e091",
+      "approvedSha256": "a0f312d4410ea517b21860407ec739c9b7a402f1cd8e6221fe15bdb8ddf13f49"
+    },
+    "ultripower-ps-main.webp": {
+      "priorSha256": "e9b8b269c961c38cd6a3ef13c585afda907ee59998ec8ed68a3df6d4a826c785",
+      "approvedSha256": "3f21a296f6a1a834256c73a8dc5eab8bff1eb29faff8161704af6a2887079c07"
+    },
+    "confidea-flex-main.webp": {
+      "priorSha256": "1dd64240a14bc25d7613573ed2f4f8770d905b7ac93e2951a42d2a7a080cb288",
+      "approvedSha256": "9596b61d7065ae5c68f2363d1d1ce7619f58c8a0292c9991b20e7cf88ff2fd4a"
+    },
+    "h-800w-psu-main.webp": {
+      "priorSha256": "78c04e899dbe22d7b7ac7bbf1454d73dd885a45a6e252f709b48cc1637316b16",
+      "approvedSha256": "e830720f4f4841a895ab992575af41a42b8b6703f9e0d389685b0c91e842082e"
+    },
+    "x100pro-2u-front.webp": {
+      "priorSha256": "c31b72a7dedf8a5ec4cf7c907225867c76dc2a572eda959f111c69f3ffe88bdf",
+      "approvedSha256": "ca3d3c8a07dad7dac878a28242f28f165899b7d644512715096d2e4b97642f9b"
+    },
+    "lumantek-vs5-rear.webp": {
+      "priorSha256": "6023d9d0971d537737b6c957aab3cc4f75f2c62826acad06272a494ba3a12e4b",
+      "approvedSha256": "81c206a6b12fb040155ea4e035b4f7d0a549979b931cc7791dc3d85a4a9e398f"
+    },
+    "insta360-connect-main.webp": {
+      "priorSha256": "208c84d01b8c8f1ec58dc275ef303e4d8dc66050955e04770ffd5110e16ca372",
+      "approvedSha256": "060b50b082287eac9abec0d734124ab531763007311ebfe639d5493bd332182a"
+    }
+  }
+}
