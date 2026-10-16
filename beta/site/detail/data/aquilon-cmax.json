@@ -1,0 +1,1117 @@
+{
+  "manufacturer": "Analog Way",
+  "productName": "Aquilon Cmax (AQL-CMAX)",
+  "model": "Aquilon Cmax",
+  "series": "Aquilon (LivePremier) Series",
+  "seriesNote": "C 시리즈는 주문 구성(BTO) 제품입니다. 최대 입력·출력·VPU 사양과 실제 장착 카드를 구분해야 합니다.",
+  "itemType": "PRODUCT",
+  "categories": [
+    "영상",
+    "Video",
+    "Video Processor"
+  ],
+  "english": "6RU build-to-order multi-screen processor; up to 32 4K60p inputs and 24 physical outputs.",
+  "korean": "Aquilon Cmax는 최대 32개 4K60p 입력과 24개 물리 출력을 구성할 수 있는 6RU 주문형 멀티스크린 프로세서입니다.",
+  "verificationSummary": "모델별 기술 데이터시트·공용 매뉴얼 v6.2 적용 모델 목록·브로슈어를 대조했습니다. 수치는 BTO 최대 구성 기준입니다.",
+  "packageStatus": "REVIEW REQUIRED",
+  "overview": "Aquilon Cmax는 I/O 카드와 처리 카드를 주문 시 선택하는 6RU 멀티스크린 프레젠테이션 프로세서입니다. BTO 최대 구성에서 4K60p 입력 32개, 물리 출력 24개, 4K60p 프로그램 출력 16개를 지원합니다. 물리 출력과 프로그램 출력은 서로 다른 항목이며, 나머지는 복제·보조(AUX) 출력으로 사용합니다.\n\n최대 4개의 VPU로 시스템 전체 16개 4K 믹싱 레이어 또는 32개 Dual/2K 믹싱 레이어를 구성합니다. 2×2 4K60 화면은 최대 4개이며, 화면마다 4K 믹싱 레이어 4개(분할 8개)를 배치할 수 있습니다. 실제 처리 자원은 주문한 VPU 수와 화면 설정에 따릅니다.\n\n전용 멀티뷰어 출력 2개와 Web RCS 제어, Dante 오디오 네트워킹을 지원합니다. 2+1 이중화 전원과 최대 1500W 소비전력(SDVoE 입력·출력 카드 완전 장착 조건)이 명시돼 있습니다. 후면 사진은 제조사가 제시한 장착 예이며 최대 구성을 보장하는 납품 사진은 아닙니다.",
+  "images": [
+    {
+      "role": "Front",
+      "file": "aquilon-cmax-front.webp",
+      "alt": "Analog Way Aquilon Cmax 전면 이미지",
+      "note": "Front · 제조사 모델별 제품 이미지",
+      "provider": "Analog Way",
+      "model": "Aquilon Cmax",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1500×848",
+      "resolution": "1500×848",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Rear",
+      "file": "aquilon-cmax-rear.webp",
+      "alt": "Analog Way Aquilon Cmax 후면 이미지",
+      "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경",
+      "provider": "Analog Way",
+      "model": "Aquilon Cmax",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1500×878",
+      "resolution": "1500×878",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax"
+    },
+    {
+      "role": "Rear",
+      "status": "FOUND",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "sourceUrl": "https://www.analogway.com/products/aquilon-cmax"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "status": "FOUND",
+      "title": "Aquilon User Manual v6.2",
+      "language": "en",
+      "note": "1쪽 References에 Cmini·C·C+·Cmax 명시",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+    },
+    {
+      "type": "Independent Specification",
+      "status": "MISSING",
+      "title": "독립 규격서 미확인",
+      "language": "언어 미확인",
+      "note": ""
+    },
+    {
+      "type": "Specification",
+      "status": "FOUND",
+      "title": "Aquilon Cmax Technical Datasheet",
+      "language": "en",
+      "note": "모델 전용 기술 데이터시트 · BTO 최대 구성",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+Cmax/Technical+Datasheet/Aquilon-Cmax-datasheet-en-20260703.pdf"
+    },
+    {
+      "type": "Brochure",
+      "status": "FOUND",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+      "language": "en",
+      "note": "공유 브로슈어 · 7쪽 모델별 최대 입력·출력·레이어 비교",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "quickSlot": "technical"
+    },
+    {
+      "type": "Official Product Page",
+      "status": "VERIFIED",
+      "title": "공식 제품 페이지",
+      "language": "en",
+      "note": "",
+      "url": "https://www.analogway.com/products/aquilon-cmax"
+    }
+  ],
+  "features": [
+    {
+      "text": "BTO 최대 구성에서 4K60p 입력 32개·물리 출력 24개 지원",
+      "source": "S"
+    },
+    {
+      "text": "최대 4개 VPU, 시스템 전체 16개 4K 또는 32개 Dual/2K 믹싱 레이어 지원",
+      "source": "S"
+    },
+    {
+      "text": "화면 구성에 따라 Mix 수량의 2배인 Split 레이어 지원",
+      "source": "S"
+    },
+    {
+      "text": "10·12bit 영상 처리, 10bit 4:4:4 기준 최대 160메가픽셀 처리 스루풋 지원",
+      "source": "S"
+    },
+    {
+      "text": "전용 멀티뷰어 출력 2개, 장착 카드에 따른 HDMI 2.0 또는 DP 1.2 선택",
+      "source": "S"
+    },
+    {
+      "text": "Web RCS와 REST API·JSON 기반 TCP 제어 지원",
+      "source": "S"
+    },
+    {
+      "text": "Dante 64×64채널(48kHz) 또는 32×32채널(96kHz) 오디오 네트워킹 지원",
+      "source": "S"
+    },
+    {
+      "text": "2+1 이중화 교체형 전원 공급 장치 탑재",
+      "source": "S"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "I/O",
+      "name": "4K60p 입력",
+      "value": "32",
+      "unit": "개",
+      "condition": "BTO 최대 구성 · 입력 카드 조합",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "물리 출력 커넥터",
+      "value": "24",
+      "unit": "개",
+      "condition": "BTO 최대 구성 · 브로슈어 7쪽",
+      "source": "BR",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "4K60p 프로그램 출력",
+      "value": "16",
+      "unit": "개",
+      "condition": "BTO 최대 구성 · 물리 커넥터 수와 구별",
+      "source": "M 71쪽; S 6쪽: Up to 24x Dual/2K60p program outputs or up to 16x 4K60p program outputs cloneable to any other unused outputs",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "I/O",
+      "name": "멀티뷰어 출력",
+      "value": "2",
+      "unit": "개",
+      "condition": "HDMI 2.0 또는 DP 1.2 카드 · HDMI: 2×4K30p 또는 1×4K60p+복제",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "최대 믹싱 레이어",
+      "value": "16×4K 또는 32×Dual/2K",
+      "unit": "",
+      "condition": "BTO 최대 구성 · 시스템 전체 · 화면 설정에 따름",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "VPU",
+      "value": "4",
+      "unit": "개",
+      "condition": "BTO 최대 구성",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Processing",
+      "name": "처리 스루풋",
+      "value": "160",
+      "unit": "메가픽셀",
+      "condition": "최대 · 10bit 4:4:4 @60Hz",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "name": "Dante 채널",
+      "value": "64×64 @48kHz 또는 32×32 @96kHz",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "name": "제어",
+      "value": "Web RCS / REST API / JSON 기반 TCP",
+      "unit": "",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(랙귀 제외)",
+      "value": "439.8×264×700",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기(핸들 포함)",
+      "value": "482.4×264.2×701",
+      "unit": "mm",
+      "condition": "W×H×D",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "45",
+      "unit": "kg",
+      "condition": "부속품 제외 · 최대 장착 기준(매뉴얼 30–31쪽)",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "운송 무게",
+      "value": "64",
+      "unit": "kg",
+      "condition": "부속품 포함",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Physical",
+      "name": "랙 유닛",
+      "value": "6",
+      "unit": "RU",
+      "condition": "",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "전원 입력",
+      "value": "100–240VAC, 12–7A, 50/60Hz",
+      "unit": "",
+      "condition": "2+1 이중화 교체형",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Power",
+      "name": "최대 소비전력",
+      "value": "1500",
+      "unit": "W",
+      "condition": "SDVoE 입력·출력 카드 완전 장착 조건",
+      "source": "S",
+      "verification": "VERIFIED"
+    }
+  ],
+  "io": [
+    {
+      "group": "Video",
+      "connector": "교체형 영상 입력 카드",
+      "signal": "4K60p input",
+      "direction": "IN",
+      "quantity": "최대 32",
+      "protocol": "",
+      "availability": "카드 구성에 따름",
+      "condition": "BTO 최대 구성 · HDMI/DP/SDI 등 선택",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "교체형 영상 출력 카드",
+      "signal": "4K60p output",
+      "direction": "OUT",
+      "quantity": "최대 24",
+      "protocol": "",
+      "availability": "카드 구성에 따름",
+      "condition": "BTO 최대 구성 · 물리 커넥터 수",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Video",
+      "connector": "HDMI 2.0 또는 DP 1.2",
+      "signal": "Multiviewer",
+      "direction": "OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "카드 구성에 따름",
+      "condition": "전용 카드 · HDMI: 2×4K30p 또는 1×4K60p+복제",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Audio",
+      "connector": "RJ45",
+      "signal": "Dante",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "Primary/Secondary · 64×64 @48kHz 또는 32×32 @96kHz",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "LAN",
+      "signal": "Web RCS / REST / TCP",
+      "direction": "IN/OUT",
+      "quantity": "1",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "기본 제어 카드 · 사진의 LAN 1개",
+      "source": "S",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Sync",
+      "connector": "BNC",
+      "signal": "Framelock INPUT / LOOP OUT",
+      "direction": "IN/OUT",
+      "quantity": "2",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "외부 기준 동기 입력 1개·루프 출력 1개",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "USB",
+      "signal": "USB",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "전면 2개·후면 2개",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "RJ45 SYNC",
+      "signal": "장비 간 동기",
+      "direction": "IN/OUT",
+      "quantity": "4",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "사진의 SYNC IN 2개·SYNC OUT 2개 · 매뉴얼상 포트 독립 사용",
+      "source": "M",
+      "verification": "VERIFIED"
+    },
+    {
+      "group": "Control",
+      "connector": "MCO 5핀 ×3",
+      "signal": "ON/OFF · GPI · GPO",
+      "direction": "IN/OUT",
+      "quantity": "3",
+      "protocol": "",
+      "availability": "고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)",
+      "condition": "ON/OFF 1·GPI 2·GPO 8 기능",
+      "source": "M",
+      "verification": "VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "제조사 공식 제품 페이지",
+      "url": "https://www.analogway.com/products/aquilon-cmax",
+      "scope": "모델명·모델별 사진 첨부"
+    },
+    {
+      "code": "S",
+      "name": "Aquilon Cmax Technical Datasheet",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+Cmax/Technical+Datasheet/Aquilon-Cmax-datasheet-en-20260703.pdf",
+      "page": "PDF 1·5·6·8·9쪽",
+      "scope": "BTO 최대 사양·모델 코드·처리·전원·크기·무게 · 프로그램 출력·직접 LED 벽 구성 예"
+    },
+    {
+      "code": "M",
+      "name": "Aquilon User Manual v6.2",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "page": "PDF 1·30–33·35–41·61·66–71·79·83·101쪽",
+      "scope": "1쪽 적용 모델 4종 확인 · 고정 단자·VPU·레이어 계산"
+    },
+    {
+      "code": "BR",
+      "name": "Analog Way Aquilon 브로슈어(2026년 4월)",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf",
+      "page": "PDF 7쪽",
+      "scope": "C 시리즈 최대 입력·출력·레이어 비교"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "주문 구성 확인",
+      "detail": "입출력 카드·VPU·IPU·LINK 옵션은 주문 구성에 따라 다릅니다. 납품 구성표와 장착 카드를 확인해야 합니다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 각 이미지에서 확인할 수 있습니다.",
+    "specIntro": "BTO 최대 구성 기준입니다. 주문한 카드와 처리 자원에 따라 실제 수량이 달라집니다.",
+    "ioIntro": "최대 영상 I/O와 고정 제어 단자를 구분합니다. 사진은 제조사 장착 예입니다.",
+    "supplementalNote": "제조사 공식 출처와 검토 상태를 구분해 표시합니다.",
+    "footerNote": "Analog Way Aquilon Cmax (AQL-CMAX) · BTO 최대 구성 기준",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "제조사 공식 장착 예 · 실제 주문 카드와 구별"
+  },
+  "lead": "**BTO 최대 구성: 2×2 4K60 화면 4개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)**를 구성할 수 있습니다. 물리 출력 24개와 4K60 프로그램 출력 16개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+  "subtitle": "Aquilon C 시리즈 · 주문형(BTO) · 최대 4 VPU",
+  "keyFacts": [
+    {
+      "label": "2×2 4K60 화면 · 최대",
+      "value": "4",
+      "unit": "개"
+    },
+    {
+      "label": "화면당 4K Mix",
+      "value": "4",
+      "unit": "레이어"
+    },
+    {
+      "label": "4K60p 입력 · 최대",
+      "value": "32",
+      "unit": "개"
+    },
+    {
+      "label": "물리 출력 · 최대",
+      "value": "24",
+      "unit": "개"
+    }
+  ],
+  "signalFlow": {
+    "type": "video-processor",
+    "description": "Aquilon Cmax의 BTO 최대 구성 개념도입니다. 주문한 카드·VPU와 화면 설정에 따라 실제 수량이 달라집니다.",
+    "inputs": [
+      {
+        "id": "video",
+        "label": "4K60p 입력 · 최대 32",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 0
+          }
+        ],
+        "caption": "교체형 입력 카드 · 주문 구성"
+      },
+      {
+        "id": "control",
+        "label": "Web RCS · IP 제어",
+        "signal": "control",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "program",
+        "label": "물리 출력 · 최대 24",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 1
+          }
+        ],
+        "caption": "4K60p PGM 최대 16 · BTO 최대 구성"
+      },
+      {
+        "id": "preview",
+        "label": "전용 멀티뷰 출력 2개",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 3
+          }
+        ],
+        "caption": "장착 멀티뷰 카드에 따른 포맷"
+      }
+    ],
+    "processes": [
+      {
+        "id": "mix",
+        "kind": "mix",
+        "label": "레이어 합성",
+        "caption": "최대 4 VPU · 16×4K Mix",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "id": "screen",
+        "kind": "scale",
+        "label": "화면 배치 · 출력 구성",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "video",
+        "to": "mix",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "mix",
+        "to": "screen",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 4
+          }
+        ]
+      },
+      {
+        "from": "screen",
+        "to": "program",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "auxiliary": [
+      {
+        "from": "video",
+        "to": "preview",
+        "signal": "video",
+        "label": "모니터링",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 3
+          }
+        ]
+      },
+      {
+        "from": "control",
+        "to": "screen",
+        "signal": "control",
+        "label": "제어",
+        "evidence": [
+          {
+            "kind": "spec",
+            "index": 8
+          }
+        ]
+      }
+    ],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상 · 점선은 모니터링"
+      },
+      {
+        "signal": "control",
+        "label": "화면 제어"
+      }
+    ],
+    "notes": [
+      "모든 수량은 BTO 최대 구성 기준입니다. 실제 주문한 카드·VPU와 화면 설정을 확인해야 합니다.",
+      "최대 24개 물리 출력이 독립 4K60 프로그램 화면 24개를 뜻하지 않습니다.",
+      "2×2 4K60 화면 최대 4개, 화면마다 4K 믹싱 레이어 4개(분할 8개)입니다."
+    ],
+    "band": {
+      "label": "4K60p · BTO 최대 구성",
+      "detail": "입력·물리 출력·프로그램 출력·VPU 구별",
+      "evidence": [
+        {
+          "kind": "spec",
+          "index": 0
+        }
+      ]
+    }
+  },
+  "layerPlan": {
+    "type": "aquilon",
+    "title": "Aquilon C 레이어 구성 · BTO 최대 구성",
+    "currentSlug": "aquilon-cmax",
+    "models": [
+      {
+        "slug": "aquilon-cmini",
+        "model": "Aquilon Cmini",
+        "inputs4k": 8,
+        "outputConnectors4k": 12,
+        "programOutputs4k": 4,
+        "mixingLayers4k": 4,
+        "splitLayers2k": 8,
+        "vpus": 1,
+        "screens2x2": 1,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
+      },
+      {
+        "slug": "aquilon-c",
+        "model": "Aquilon C",
+        "inputs4k": 16,
+        "outputConnectors4k": 16,
+        "programOutputs4k": 8,
+        "mixingLayers4k": 8,
+        "splitLayers2k": 16,
+        "vpus": 2,
+        "screens2x2": 2,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
+      },
+      {
+        "slug": "aquilon-cplus",
+        "model": "Aquilon C+",
+        "inputs4k": 24,
+        "outputConnectors4k": 20,
+        "programOutputs4k": 12,
+        "mixingLayers4k": 12,
+        "splitLayers2k": 24,
+        "vpus": 3,
+        "screens2x2": 3,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
+      },
+      {
+        "slug": "aquilon-cmax",
+        "model": "Aquilon Cmax",
+        "inputs4k": 32,
+        "outputConnectors4k": 24,
+        "programOutputs4k": 16,
+        "mixingLayers4k": 16,
+        "splitLayers2k": 32,
+        "vpus": 4,
+        "screens2x2": 4,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
+      }
+    ],
+    "sourceTypes": [
+      "라이브 입력",
+      "정지 화면·이미지",
+      "배경",
+      "시계·타이머",
+      "다른 화면(조건별)"
+    ],
+    "example": {
+      "title": "계산 예시 · 2×2 4K60 화면 1개",
+      "outputs": 4,
+      "outputCapacity": 2,
+      "outputLinks": 8,
+      "sourceLinksPerVpu": 8,
+      "layerCapacity": 2,
+      "layerLinksPerMixer": 2,
+      "mixingLayersPerScreen": 4,
+      "splitLayersPerScreen": 8,
+      "vpusForScreen": 1
+    },
+    "background": {
+      "setsPerScreen": 8,
+      "noLayerScreenResources": 0
+    },
+    "xdmComparison": {
+      "xdmWos100": {
+        "outputPorts": 4,
+        "allPortsSameScreenWithLayers": true,
+        "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+      }
+    },
+    "notes": [
+      "BTO 최대 구성: Aquilon Cmax는 2×2 4K60 화면 4개, 화면마다 4K 믹싱 레이어 4개(분할 8개)입니다. 실제 수량은 주문한 카드·VPU에 따릅니다.",
+      "2×2 4K60 화면 1개는 4개 출력으로 구성됩니다. 4K60 출력은 각 용량 2이므로 출력 링크 8개가 필요하며, 이는 VPU 1개의 출력 용량입니다(매뉴얼 61·66·68쪽).",
+      "VPU 1개의 소스 링크는 8개입니다. 용량 2 믹싱 레이어는 2링크를 사용하므로 화면 전체에 최대 4개, 분할 레이어는 최대 8개입니다(매뉴얼 66·79쪽).",
+      "따라서 모든 Aquilon 모델에서 2×2 4K60 화면 1개당 4K 믹싱 레이어 최대 4개(분할 8개)입니다. 큰 모델은 이런 화면을 더 많이 만들며, 2×2 4K60 화면 기준으로 한 화면의 레이어 수를 늘리지는 않습니다.",
+      "화면 전체 레이어와 한 출력 안의 PiP는 같은 자원을 사용하므로 PiP로 링크가 절약되지 않습니다(매뉴얼 67·68쪽).",
+      "화면 8개 이하 출력 링크를 VPU가 2개 이상인 C 모델에서 VPU 2개에 분산할 수 있는지는 매뉴얼 미기재로 미확인입니다.",
+      "용량 1(HD) PiP를 용량 2 레이어와 섞을 때의 자원 비용은 미확인입니다. 매뉴얼 69쪽은 용량 2 레이어만 사용할 것을 권고합니다.",
+      "Region Captive PiPs라는 표현은 Aquilon Cmax 데이터시트 6쪽에 있습니다. 매뉴얼 83쪽은 Screen 영역을 제한해 레이어 자원을 최적화한다고 설명하지만 절감 산식은 미확인입니다.",
+      "배경은 출력과 용량을 맞춰야 하며 확대·축소되지 않습니다(매뉴얼 101쪽). 2×2 4K60 화면에는 출력마다 4K60 배경 소스 하나가 필요합니다.",
+      "표는 휴대폰에서 좌우로 밀어 입력·출력 단자·VPU 열을 확인할 수 있습니다.",
+      "4K60 프로그램 출력 수는 매뉴얼 71쪽 및 Aquilon Cmax 데이터시트 6쪽의 최대값입니다. 출력 커넥터 수는 브로슈어 7쪽 값이며 서로 다른 항목입니다."
+    ],
+    "evidence": {
+      "manualPages": [
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        69,
+        71,
+        79,
+        82,
+        83,
+        84,
+        85,
+        86,
+        100,
+        101
+      ],
+      "brochurePage": 7,
+      "rtcomSource": "RTCOM 구성기 XDM 창 및 beta/site/rtcom/raw/products/xdm.json",
+      "programOutputsManualPage": 71,
+      "outputConnectorsBrochurePage": 7,
+      "rs1DatasheetPage": 3
+    }
+  },
+  "settings": [
+    {
+      "kind": "table",
+      "title": "시스템 전체 레이어 한도 · BTO 최대 구성",
+      "columns": [
+        "모드",
+        "전환",
+        "최대 수량"
+      ],
+      "rows": [
+        [
+          "Mix",
+          "True seamless",
+          "16×4K 또는 32×Dual/2K"
+        ],
+        [
+          "Split",
+          "Cut 또는 Fade To Black",
+          "Mix 수량의 2배 · 화면 설정에 따름"
+        ]
+      ]
+    },
+    {
+      "kind": "modes",
+      "title": "출력 구성 구별",
+      "items": [
+        {
+          "name": "프로그램 출력",
+          "summary": "BTO 최대 16개 4K60p 프로그램 출력입니다."
+        },
+        {
+          "name": "출력 복제·Scaled AUX",
+          "summary": "사용하지 않은 출력은 프로그램 출력 복제 또는 Scaled AUX로 구성할 수 있습니다.",
+          "detail": "프로그램 화면 수와 물리 커넥터 수를 단순 합산하지 않습니다."
+        }
+      ]
+    }
+  ],
+  "portMap": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-cmax-rear.webp",
+      "width": 1500,
+      "height": 878
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 왼쪽 1단",
+        "desc": "사진 장착 HDMI 입력 1–4 단자 · 카드 구성에 따른 영상 입력",
+        "side": "left",
+        "y1": 116,
+        "y2": 146
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 왼쪽 2단",
+        "desc": "사진 장착 HDMI 입력 1–4 단자 · 카드 구성에 따른 영상 입력",
+        "side": "left",
+        "y1": 253,
+        "y2": 283
+      },
+      {
+        "n": 3,
+        "label": "DP 입력 카드 · 왼쪽 3단",
+        "desc": "사진 장착 DP 입력 1–4 단자 · 카드 구성에 따른 영상 입력",
+        "side": "left",
+        "y1": 391,
+        "y2": 421
+      },
+      {
+        "n": 4,
+        "label": "SDI 입력 카드 · 왼쪽 4단",
+        "desc": "사진 장착 SDI 입력 1–4 단자 · 카드 구성에 따른 영상 입력",
+        "side": "left",
+        "y1": 524,
+        "y2": 554
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 카드 · 가운데 1단",
+        "desc": "사진 장착 HDMI 입력 1–4 단자",
+        "side": "top",
+        "x1": 578,
+        "x2": 884
+      },
+      {
+        "n": 6,
+        "label": "HDMI 입력 카드 · 가운데 2단",
+        "desc": "사진 장착 HDMI 입력 1–4 단자",
+        "side": "top",
+        "x1": 578,
+        "x2": 884,
+        "y": 236,
+        "labelX": 520,
+        "via": [
+          [
+            520,
+            236
+          ],
+          [
+            520,
+            0
+          ]
+        ]
+      },
+      {
+        "n": 7,
+        "label": "DP 입력 카드 · 가운데 3단",
+        "desc": "사진 장착 DP 입력 1–4 단자",
+        "side": "top",
+        "x1": 578,
+        "x2": 884,
+        "y": 370,
+        "labelX": 940,
+        "via": [
+          [
+            940,
+            370
+          ],
+          [
+            940,
+            0
+          ]
+        ]
+      },
+      {
+        "n": 8,
+        "label": "SDI 입력 카드 · 가운데 4단",
+        "desc": "사진 장착 SDI 입력 1–4 단자",
+        "side": "bottom",
+        "x1": 565,
+        "x2": 883,
+        "y": 592,
+        "labelX": 1000,
+        "via": [
+          [
+            1000,
+            592
+          ],
+          [
+            1000,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 9,
+        "label": "HDMI 출력 카드 · 1단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 119,
+        "y2": 143
+      },
+      {
+        "n": 10,
+        "label": "HDMI 출력 카드 · 2단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 257,
+        "y2": 281
+      },
+      {
+        "n": 11,
+        "label": "HDMI 출력 카드 · 3단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 394,
+        "y2": 418
+      },
+      {
+        "n": 12,
+        "label": "HDMI 출력 카드 · 4단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 533,
+        "y2": 557
+      },
+      {
+        "n": 13,
+        "label": "HDMI 출력 카드 · 5단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 670,
+        "y2": 694
+      },
+      {
+        "n": 14,
+        "label": "HDMI 출력 카드 · 6단",
+        "desc": "사진 장착 HDMI 출력 1–4 단자 · 6개 카드 합계 24개",
+        "side": "right",
+        "y1": 807,
+        "y2": 831
+      },
+      {
+        "n": 15,
+        "label": "USB · 후면 2개",
+        "desc": "전면 2개와 별도인 후면 USB 포트 2개",
+        "side": "left",
+        "x": 145,
+        "y1": 633,
+        "y2": 693,
+        "via": [
+          [
+            130,
+            663
+          ],
+          [
+            130,
+            612
+          ],
+          [
+            0,
+            612
+          ]
+        ]
+      },
+      {
+        "n": 16,
+        "label": "SYNC IN 1·2",
+        "desc": "장비 간 동기 연결 · 각 포트 독립 사용",
+        "side": "bottom",
+        "x1": 207,
+        "x2": 331,
+        "y": 700,
+        "labelX": 289,
+        "via": [
+          [
+            289,
+            716
+          ],
+          [
+            289,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 17,
+        "label": "SYNC OUT 1·2",
+        "desc": "장비 간 동기 연결 · 각 포트 독립 사용",
+        "side": "bottom",
+        "x1": 335,
+        "x2": 464,
+        "y": 700,
+        "labelX": 480,
+        "via": [
+          [
+            480,
+            716
+          ],
+          [
+            480,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 18,
+        "label": "LOCK INPUT · LOOP OUT",
+        "desc": "외부 기준 동기 입력과 동기 신호 루프 출력",
+        "side": "bottom",
+        "x1": 557,
+        "x2": 676,
+        "y": 700,
+        "labelX": 658,
+        "via": [
+          [
+            658,
+            716
+          ],
+          [
+            658,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 19,
+        "label": "LAN",
+        "desc": "Web RCS 및 IP 제어 네트워크 연결",
+        "side": "bottom",
+        "x1": 683,
+        "x2": 750,
+        "y": 700,
+        "labelX": 690,
+        "via": [
+          [
+            690,
+            716
+          ],
+          [
+            690,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 20,
+        "label": "MULTIVIEWERS 1·2",
+        "desc": "사진 장착 HDMI 멀티뷰어 출력 2개 · HDMI 카드 포맷에 따른 모니터링",
+        "side": "bottom",
+        "x1": 762,
+        "x2": 894,
+        "y": 700,
+        "labelX": 940,
+        "via": [
+          [
+            940,
+            716
+          ],
+          [
+            940,
+            878
+          ]
+        ]
+      },
+      {
+        "n": 21,
+        "label": "AC 전원 · PSU 3개",
+        "desc": "2+1 이중화 교체형 전원 공급 장치 3개",
+        "side": "bottom",
+        "x1": 114,
+        "x2": 600
+      },
+      {
+        "n": 22,
+        "label": "ON/OFF · GPI · GPO",
+        "desc": "MCO 5핀 커넥터 3개 · ON/OFF 1·GPI 2·GPO 8 기능",
+        "side": "bottom",
+        "x1": 710,
+        "x2": 815
+      },
+      {
+        "n": 23,
+        "label": "Dante 1st·2nd",
+        "desc": "Dante Primary/Secondary 오디오 네트워크 연결",
+        "side": "bottom",
+        "x1": 838,
+        "x2": 888
+      }
+    ]
+  }
+}

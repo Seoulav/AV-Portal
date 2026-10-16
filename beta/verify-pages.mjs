@@ -288,7 +288,7 @@ assert.deepEqual(Object.keys(snapshot.details).sort(), slugs);
 // 상세 JSON에 허용되는 최상위 키. 새 키는 공개 경계를 다시 검토한 뒤에만 추가한다.
 const detailRequiredKeys = ['categories', 'documents', 'english', 'features', 'imageStatuses', 'images', 'io', 'issues', 'korean', 'manufacturer', 'model', 'overview', 'packageStatus', 'presentation', 'productName', 'sources', 'specifications', 'verificationSummary'];
 // slots·slotType·compatibleFrames: 슬롯 수·카드 장착 대상만 담는 Builder용 공개 필드(B-20261013-03 승인). 형식 검사는 결선용 라이브러리 생성기가 한다.
-const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitle', 'keyFacts', 'portMap', 'signalFlow', 'settings', 'layerPlan', 'videoLayerPlan', 'slots', 'slotType', 'compatibleFrames'];
+const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitle', 'keyFacts', 'portMap', 'portMaps', 'signalFlow', 'settings', 'layerPlan', 'videoLayerPlan', 'slots', 'slotType', 'compatibleFrames'];
 const detailAllowedKeys = new Set([...detailRequiredKeys, ...detailOptionalKeys]);
 
 const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.slug, item.brand]));

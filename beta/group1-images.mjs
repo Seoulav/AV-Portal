@@ -311,7 +311,8 @@ export const group1Images = {
   ],
   'rally-plus': [
     image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND'),
-      image('Diagram', 'rally-plus-diagram.webp', 'Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열')
+    image('Other', 'rally-plus-diagram.webp', 'Rally Plus 공식 설치 가이드의 원본 번호·설명선 포함 테이블/디스플레이 허브 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Other · 한국어 설치 가이드 24–25쪽 원본 도면 · 제조사 번호·설명선 포함'),
+    image('Diagram', 'rally-plus-port-panels.webp', 'Rally Plus 테이블 허브·디스플레이 허브 단자 그림만 발췌한 번호 지도 바탕', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '640x360', 'VERIFIED', 'Diagram · 한국어 설치 가이드 24–25쪽 원본 단자 그림을 자르기·배치만 한 정리본 · 원본 주석 도면은 Other')
   ],
   'rally-mic-pod': [
     image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
@@ -564,7 +565,8 @@ export const group1Images = {
   ],
   'novastar-h5': [
     image('Front', 'h5-front.webp', 'NovaStar H5 전면부(터치스크린 LCD)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1176', '2400x1176', 'VERIFIED'),
-    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED')
+    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED'),
+    image('Other', 'h5-control-panel.png', 'NovaStar H5 공식 후면 사진의 제어 단자 줄 확대', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '1600x216', 'VERIFIED', '공식 후면 사진의 제어 단자 줄 확대(자르기·배치만)')
   ],
   'h-preview-card-2xrj45-1xhdmi13': [
     image('Main', 'h-preview-card-2xrj45-1xhdmi13-main.webp', 'H_2xRJ45+1xHDMI1.3 프리뷰 카드 전면 커넥터', 'NovaStar', 'H_2xRJ45+1xHDMI1.3 Preview Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1126x117', '1126x117', 'VERIFIED')
@@ -1386,3 +1388,129 @@ export const cardImages = {
   'hdf-ccf': 'hdf-ccf-main.png',
   'u-bridge-3': 'u-bridge-3-main.png',
 };
+
+// W-018 Aquilon C: official model-specific front/rear photographs.
+group1Images['aquilon-cmini'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cmini-front.webp",
+    "alt": "Analog Way Aquilon Cmini 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmini",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmini",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×429",
+    "resolution": "1500×429",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cmini-rear.webp",
+    "alt": "Analog Way Aquilon Cmini 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 DP 4개·HDMI 4개·LINK 카드, 최대 영상 출력 12개",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmini",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmini",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1918×595",
+    "resolution": "1918×595",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cmini'] = 'aquilon-cmini-front.webp';
+group1Images['aquilon-c'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-c-front.webp",
+    "alt": "Analog Way Aquilon C 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon C",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-c",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×837",
+    "resolution": "1500×837",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-c-rear.webp",
+    "alt": "Analog Way Aquilon C 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 HDMI 출력 12개, 최대 16개",
+    "provider": "Analog Way",
+    "model": "Aquilon C",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-c",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×646",
+    "resolution": "1500×646",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-c'] = 'aquilon-c-front.webp';
+group1Images['aquilon-cplus'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cplus-front.webp",
+    "alt": "Analog Way Aquilon C+ 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon C+",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cplus",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×795",
+    "resolution": "1500×795",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cplus-rear.webp",
+    "alt": "Analog Way Aquilon C+ 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 HDMI 출력 16개, 최대 20개",
+    "provider": "Analog Way",
+    "model": "Aquilon C+",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cplus",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×812",
+    "resolution": "1500×812",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cplus'] = 'aquilon-cplus-front.webp';
+group1Images['aquilon-cmax'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cmax-front.webp",
+    "alt": "Analog Way Aquilon Cmax 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmax",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×848",
+    "resolution": "1500×848",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cmax-rear.webp",
+    "alt": "Analog Way Aquilon Cmax 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmax",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×878",
+    "resolution": "1500×878",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cmax'] = 'aquilon-cmax-front.webp';

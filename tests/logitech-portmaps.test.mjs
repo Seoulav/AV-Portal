@@ -19,7 +19,7 @@ test('five evidenced Logitech maps retain current unrelated fields',()=>{
     }
     for(const field of Object.keys(current))if(!(field in fixture[slug].prior))assert.deepEqual(historical[field],current[field],`${slug} current ${field}`);
     const changed=structuredClone(current);changed.portMap.items[0].label='INVALID';
-    assert.throws(()=>beforeLogitechW14001Product(beforeW16015Group5Product(changed,slug),slug),/unexpected (?:W-015 group-5 portMap|W-20261014-001 portMap) change/);
+    assert.throws(()=>beforeLogitechW14001Product(beforeW16015Group5Product(changed,slug),slug),/unexpected (?:W-015 group-5 portMap|W-20261014-001 portMap|W-015 Rally Plus portMap) change/);
     const unrelated=structuredClone(current);unrelated.model='INVALID';
     assert.equal(beforeLogitechW14001Product(beforeW16015Group5Product(unrelated,slug),slug).model,'INVALID');
   }
