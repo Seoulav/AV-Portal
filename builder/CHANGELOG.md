@@ -1,5 +1,16 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [미배포] — 2026-10-16 (B-20261016-02)
+
+[B-20261016-02](../Work/빌더/작업/B-20261016-02.md). 소스 기기로 쓰는 빌더 전용 일반 장비.
+
+### Added
+- 장비 목록에 **소스 기기** 묶음: PC·노트북을 **HDMI 출력판·DP 출력판** 중 골라 놓는다(`generic-pc:hdmi`·`generic-pc:dp`·`generic-laptop:hdmi`·`generic-laptop:dp`). 단자는 고른 영상 출력 하나이고, 더 필요하면 장비 설정 창에서 더한다
+- 엔진 `engine/generic.mjs`: `createLibraryIndex`가 Portal 라이브러리 뒤에 일반 장비를 붙인다. 구성도 노드의 `portal.source`는 `"builder"`(스키마 enum에 추가)
+- 일반 장비는 Portal 반영 요청을 만들지 않는다(`generic-equipment`)
+- 견적 앱: `portal.source`가 `"builder"`인 노드는 장비 행·미등록 경고를 만들지 않는다. 연결선의 케이블은 그대로 산정한다
+- 시험: vitest `test/generic.test.ts` 4건, Playwright `e2e/generic-source.spec.ts` 1건, 견적 앱 `tests/unit/builderGenericNode.test.ts` 3건
+
 ## [미배포] — 2026-10-13 (B-20261013-07)
 
 [B-20261013-07](../Work/빌더/작업/B-20261013-07.md). 피닉스·유로블럭 표기 통합.

@@ -1,3 +1,4 @@
+import { beforeW16004Uploads } from './w16004-history.mjs';
 import { beforeW20261014_005Catalog, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
 import { beforeW009Catalog, beforeW009Uploads } from './w009-history.mjs';
@@ -71,7 +72,7 @@ test('six established QMC records and published PDFs remain untouched', () => {
     const normalized = file(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g, '\n');
     assert.equal(sha(beforeW12002Raw(beforeW013A2Raw(normalized, slug),slug)), hash, slug);
   }
-  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(json('beta/site/docs/manifest.json').uploads)))));
+  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(json('beta/site/docs/manifest.json').uploads))))));
   const uploads =withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)));
   assert.equal(uploads.length, 128);
   assert.equal(uploads.filter(upload => upload.locked).length, 12);

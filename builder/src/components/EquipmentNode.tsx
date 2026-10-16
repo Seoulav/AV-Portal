@@ -13,7 +13,7 @@ import { portKey } from '../bundle';
 import { justConnected } from '../state/gesture';
 import { builderStore, useBuilder } from '../state/useBuilder';
 
-const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
+const ACCEPTED = new Set(['VERIFIED', 'FOUND', 'GENERIC']);
 
 function PortRow({ nodeId, port, side, color, picked }: { nodeId: string; port: Port; side: 'left' | 'right' | 'both'; color: string; picked: boolean }) {
   // 사용자가 추가한 단자는 점선 테두리와 "추가" 표시를 단다(B-20261013-01 결정 D3). Portal 검증 상태가 없다

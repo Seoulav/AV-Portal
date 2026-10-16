@@ -88,7 +88,7 @@ export function LibraryPanel() {
           );
         })}
       </div>
-      {library && <div className="panel-foot">Portal 제품 {library.library.products.length}종 · 어휘 {library.source.vocabularyVersion}</div>}
+      {library && <div className="panel-foot">Portal 제품 {library.library.products.filter(product => product.source !== 'builder').length}종 · 어휘 {library.source.vocabularyVersion}</div>}
     </aside>
   );
 }

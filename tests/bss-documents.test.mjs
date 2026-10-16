@@ -1,3 +1,4 @@
+import { beforeW16004Uploads } from './w16004-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
@@ -44,7 +45,7 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(manifest.uploads)))));
+const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
 const historicalUploads=beforeW04021Uploads(
   beforeWinstarW04016Uploads(
     withoutW029Uploads(

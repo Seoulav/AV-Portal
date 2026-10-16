@@ -17,6 +17,8 @@
     {"group": "License", "name": "기능", "value": "소프트웨어 정의 멀티뷰어", "unit": "", "condition": "Ultrix 프레임에 적용", "source": "R", "verification": "VERIFIED"},
     {"group": "Capacity", "name": "헤드당 최대 PIP 수", "value": "100", "unit": "개", "condition": "독립 제어 헤드 기준", "source": "R", "verification": "VERIFIED"},
     {"group": "Capacity", "name": "프레임별 최대 헤드 수", "value": "6 / 12 / 27 / 48", "unit": "헤드", "condition": "FR1 / FR2 / FR5 / FR12 순서", "source": "A", "verification": "FOUND"},
+    {"group":"License","name":"라이선스당 활성 멀티뷰어 헤드 수","value":"1","unit":"헤드","condition":"한국어 번역 브로슈어 15쪽; Ultriscape 라이선스 1개 기준","source":"B","verification":"FOUND"},
+    {"group":"Capacity","name":"30RU 최대 멀티뷰어 헤드 수","value":"96","unit":"헤드","condition":"한국어 번역 브로슈어 15쪽; 30RU 프레임 기준","source":"B","verification":"FOUND"},
     {"group": "FR2", "name": "FR2 최대 멀티뷰어 헤드 수 (HDX/MODX)", "value": "12", "unit": "헤드", "condition": "ULTRIX-NS-FR2, HDX/MODX I/O 완전 라이선스 구성", "source": "S", "verification": "VERIFIED"},
     {"group": "FR2", "name": "FR2 최대 멀티뷰어 헤드 수 (IPX)", "value": "6", "unit": "헤드", "condition": "ULTRIX-NS-FR2, IPX I/O 완전 라이선스 구성", "source": "S", "verification": "VERIFIED"}
   ],
@@ -33,7 +35,8 @@
   "sources": [
     {"code": "R", "name": "Ross Video Ultrix Licenses", "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/", "scope": "ULTRISCAPE 기능과 전체 프레임 한도"},
     {"code": "S", "name": "Ross Video Ultrix Specifications", "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/", "scope": "ULTRIX-NS-FR2 카드별 최대 헤드 수"},
-    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 라이선스 분류와 프레임별 헤드 수"}
+    {"code": "A", "name": "한국에빅스 Ultrix 라이선스", "url": "http://avics.co.kr/ross/ultrix-liecense", "scope": "국내 공급사 라이선스 분류와 프레임별 헤드 수"},
+    {"code":"B","name":"사용자 제공 Ultrix 제품군 브로슈어(한국어 번역판)","url":"","scope":"15쪽 라이선스당 멀티뷰어 헤드 및 30RU 최대 헤드 수"}
   ],
   "issues": [],
   "packageStatus": "VERIFIED",
