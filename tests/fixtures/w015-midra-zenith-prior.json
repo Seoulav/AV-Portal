@@ -1,0 +1,2324 @@
+{
+  "pulse-4k": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "pulse-4k-rear.webp",
+        "width": 1800,
+        "height": 451
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 145,
+          "x2": 310,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 337,
+          "x2": 490,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 입력 1·2",
+          "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+          "x1": 154,
+          "x2": 310,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 5–8·루프",
+          "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+          "x1": 337,
+          "x2": 866,
+          "y": 375,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DisplayPort 입력 9·10",
+          "desc": "IN #9·10의 DisplayPort 1.2 입력",
+          "x1": 908,
+          "x2": 1080,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 1106,
+          "x2": 1413,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 출력",
+          "desc": "MVW 표기의 HDMI·SDI 출력",
+          "x1": 1445,
+          "x2": 1575,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1445,
+          "x2": 1580,
+          "y": 281,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1600,
+          "x2": 1675,
+          "y": 348,
+          "side": "bottom"
+        }
+      ]
+    },
+    "images": [
+      {
+        "role": "Front",
+        "file": "pulse4k-front.webp",
+        "alt": "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "Analog Way",
+        "model": "Pulse 4K",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "6952×1960",
+        "resolution": "1800×390",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "pulse-4k-rear.webp",
+        "alt": "Analog Way Pulse 4K 후면 이미지",
+        "note": "Rear · 제조사 제품 이미지",
+        "provider": "Analog Way",
+        "model": "Pulse 4K",
+        "sourceUrl": "https://www.analogway.com/products/pulse-4k",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2400×601",
+        "resolution": "1800×451",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/pulse-4k"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg"
+      },
+      {
+        "role": "Rear",
+        "status": "VERIFIED",
+        "sourceUrl": "https://www.analogway.com/products/pulse-4k"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/pulse-4k"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.analogway.com/products/pulse-4k"
+      }
+    ],
+    "io": [
+      {
+        "group": "Input",
+        "connector": "HDMI 2.0",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "",
+        "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "DisplayPort 1.2",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "12G/6G/3G-SDI (Level A&B)",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "HDMI 1.4 또는 3G-SDI",
+        "signal": "2K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "사용자 선택 커넥터",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G/6G/3G-SDI(미러링)",
+        "signal": "4K60 PGM/AUX out",
+        "direction": "OUT",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+        "signal": "Multiviewer out",
+        "direction": "OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "최대 2560x1600@60",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Control",
+        "connector": "Neutrik RJ45",
+        "signal": "Gigabit Ethernet",
+        "direction": "IN/OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Control",
+        "connector": "USB Host Type A",
+        "signal": "펌웨어 업데이트/설정 백업",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Sync",
+        "connector": "BNC (loop)",
+        "signal": "Genlock, Blackburst, Tri-level",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Audio(옵션)",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Analog audio in/out",
+        "direction": "IN/OUT",
+        "quantity": "각 2",
+        "protocol": "",
+        "availability": "옵션 카드 필요",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      }
+    ],
+    "features": [
+      {
+        "text": "8x 4K60 + 2x 1080p 총 10개 입력과 2개의 4K60 미러링(HDMI+SDI) 출력을 지원, Mixer(1 PGM+1 AUX) 또는 Matrix(2 PGM) 모드로 동작",
+        "source": ""
+      },
+      {
+        "text": "4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리와 HDR10·HLG 지원, 3D LUT 기반 색공간 변환 제공",
+        "source": ""
+      },
+      {
+        "text": "라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어) + 1개의 4K 정지영상 전경 레이어 구성 가능",
+        "source": ""
+      },
+      {
+        "text": "전용 멀티뷰어(HDMI+미러링 SDI, 최대 2560x1600@60, 17개 위젯)로 프로그램·프리뷰·모든 입력을 모니터링",
+        "source": ""
+      },
+      {
+        "text": "RTMP/RTMPS 기반으로 임의의 입력·출력을 최대 1080p30까지 라이브 스트리밍 가능",
+        "source": ""
+      },
+      {
+        "text": "HTML5 기반 Web RCS 인터페이스, RC400T 이벤트 컨트롤러, SKAARHOJ Air Fly Pro 등 다양한 제어 옵션을 지원, 옵션으로 32x32 Dante 오디오 네트워킹 카드 장착 가능",
+        "source": ""
+      }
+    ],
+    "videoLayerPlan": {
+      "type": "analog-way-video-layers",
+      "title": "Midra 4K · Alta 4K 화면과 레이어 구성",
+      "notes": [
+        "각 활성 화면에는 배경 레이어 1개와 전경 레이어 1개가 따로 있습니다. 배경에는 라이브 입력이나 정지 이미지를 사용할 수 있고, 표의 레이어 수는 이와 별도로 배정하는 레이어 자원입니다.",
+        "믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 같은 자원으로 레이어를 2배 구성합니다.",
+        "Alta 4K에서는 장비 전체 레이어 자원을 각 프로그램 화면에 나눠 배정합니다. 여러 출력을 한 화면으로 묶어도 배정한 자원 수를 따릅니다(매뉴얼 42–43쪽). 레이어가 출력 경계를 넘을 때 추가 자원이 필요한지는 미확인입니다.",
+        "1080p Aux(보조 화면)에는 크기를 바꿀 수 없는 레이어가 1개 있습니다. Alta 4K의 보조 출력은 레이어 자원을 쓰지 않습니다. 4K/HD 레이어를 섞을 때 추가 비용이 있는지는 미확인입니다.",
+        "화면 안 작은 창(PiP)은 별도 레이어 수로 더하지 않았습니다. 공식 자료는 추가 PiP 수를 별도로 제시하지 않습니다."
+      ],
+      "comparison": {
+        "xdm": {
+          "model": "RTCOM XDM-WOS100",
+          "outputPorts": 4,
+          "summary": "RTCOM 자료에는 HDMI 출력 4개, 4K/60 @4:4:4, 비디오 월 사용 조건이 있으며, 레이어를 쓰면 네 출력에 같은 화면이 나오는 것으로 확인돼 있습니다. 레이어 최대 개수는 명시하지 않습니다.",
+          "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+        },
+        "aquilon": "Aquilon RS는 2×2 4K60 화면에 믹싱 4개 또는 분할 8개를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽).",
+        "twoByTwo": {
+          "pulse-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Pulse 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Pulse 4K Technical Datasheet 5쪽).",
+          "eikos-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Eikos 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Eikos 4K Technical Datasheet 6쪽).",
+          "zenith-100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 PGM 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
+          "zenith-200": "Zenith 200은 2×2 격자 화면을 지원합니다(Alta 4K User Manual 52쪽). 레이어 자원 4개를 이 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개입니다. Aquilon RS의 2×2 값과 같습니다. 가정: 자원 4개 전부를 한 화면에 배정합니다(Alta 4K User Manual 42·52쪽; Aquilon User Manual v6.2 66·79쪽)."
+        }
+      },
+      "evidence": {
+        "xdmSource": "beta/site/rtcom/raw/products/xdm.json · lineup XDM-WOS100.io[0]",
+        "manuals": [
+          {
+            "series": "Midra 4K",
+            "title": "Midra 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+            "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          {
+            "series": "Alta 4K",
+            "title": "Alta 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+            "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              46,
+              50,
+              52
+            ]
+          }
+        ],
+        "datasheets": [
+          {
+            "slug": "pulse-4k",
+            "title": "Pulse 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+            "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+            "page": 5,
+            "pages": [
+              5
+            ]
+          },
+          {
+            "slug": "eikos-4k",
+            "title": "Eikos 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+            "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+            "page": 6,
+            "pages": [
+              6
+            ]
+          },
+          {
+            "slug": "zenith-100",
+            "title": "Zenith 100 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+            "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          },
+          {
+            "slug": "zenith-200",
+            "title": "Zenith 200 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+            "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          }
+        ]
+      },
+      "currentSlug": "pulse-4k",
+      "models": [
+        {
+          "slug": "pulse-4k",
+          "model": "Pulse 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 프로그램 화면을 최대 2개 만들 수 있고, 이때 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면만 쓰는 Mixer 모드에서는 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 화면마다 라이브 배경 1개는 별도입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "eikos-4k",
+          "model": "Eikos 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 화면 최대 2개에서 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면이면 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 두 출력을 잇는 블렌딩 화면도 믹싱 2개 또는 분할 4개입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            },
+            {
+              "id": "hard-soft-edge",
+              "label": "Hard/Soft Edge · 블렌딩 화면 1개",
+              "pgmScreens": 1,
+              "layout": "두 출력을 이어 만든 블렌딩 화면 1개 · 합계 최대 2×4K60",
+              "outputsPerScreen": 2,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "zenith-100",
+          "model": "Zenith 100",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 3개 만들 수 있고, 장비 전체 레이어 3개(분할 6개)를 화면끼리 나눠 씁니다. 화면 3개면 화면마다 1개(분할 2개), 화면 1개면 3개(분할 6개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 3,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 3,
+          "maxSplit4kPerScreenOneScreen": 6,
+          "totalMixing4k": 3,
+          "totalSplit4k": 6,
+          "maxAuxOutputs": 2,
+          "auxOutputsAtMaxScreens": 1,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 3",
+            "2화면 2+1",
+            "3화면 1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 3,
+              "layout": "최대 3개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 3,
+              "totalSplit4k": 6,
+              "auxOutputs": 1
+            }
+          ]
+        },
+        {
+          "slug": "zenith-200",
+          "model": "Zenith 200",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 4개 만들 수 있고, 장비 전체 레이어 4개(분할 8개)를 화면끼리 나눠 씁니다. 화면 4개면 화면마다 1개(분할 2개), 화면 1개면 4개(분할 8개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 4,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 4,
+          "maxSplit4kPerScreenOneScreen": 8,
+          "totalMixing4k": 4,
+          "totalSplit4k": 8,
+          "maxAuxOutputs": 4,
+          "auxOutputsAtMaxScreens": 2,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 4",
+            "2화면 3+1 또는 2+2",
+            "3화면 2+1+1",
+            "4화면 1+1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 4,
+              "layout": "최대 4개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 4,
+              "totalSplit4k": 8,
+              "auxOutputs": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "eikos-4k": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eikos-4k-rear.webp",
+        "width": 1800,
+        "height": 451
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 145,
+          "x2": 310,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 337,
+          "x2": 490,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 입력 1·2",
+          "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+          "x1": 154,
+          "x2": 310,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 5–8·루프",
+          "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+          "x1": 337,
+          "x2": 866,
+          "y": 375,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DisplayPort 입력 9·10",
+          "desc": "IN #9·10의 DisplayPort 1.2 입력",
+          "x1": 908,
+          "x2": 1080,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 1106,
+          "x2": 1413,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 출력",
+          "desc": "MVW 표기의 HDMI·SDI 출력",
+          "x1": 1445,
+          "x2": 1575,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1445,
+          "x2": 1580,
+          "y": 281,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1600,
+          "x2": 1675,
+          "y": 348,
+          "side": "bottom"
+        }
+      ]
+    },
+    "images": [
+      {
+        "role": "Front",
+        "file": "eikos4k-front.webp",
+        "alt": "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "Analog Way",
+        "model": "Eikos 4K",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "6844×1848",
+        "resolution": "1800×395",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "eikos-4k-rear.webp",
+        "alt": "Analog Way Eikos 4K 후면 이미지",
+        "note": "Rear · 제조사 제품 이미지",
+        "provider": "Analog Way",
+        "model": "Eikos 4K",
+        "sourceUrl": "https://www.analogway.com/products/eikos-4k",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2400×601",
+        "resolution": "1800×451",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg"
+      },
+      {
+        "role": "Rear",
+        "status": "VERIFIED",
+        "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+      }
+    ],
+    "io": [
+      {
+        "group": "Input",
+        "connector": "HDMI 2.0",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "",
+        "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "DisplayPort 1.2",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "12G/6G/3G-SDI (Level A&B)",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "HDMI 1.4 또는 3G-SDI",
+        "signal": "2K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "사용자 선택 커넥터",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G/6G/3G-SDI(미러링)",
+        "signal": "4K60 PGM/AUX out",
+        "direction": "OUT",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+        "signal": "Multiviewer out",
+        "direction": "OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "최대 2560x1600@60",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Control",
+        "connector": "Neutrik RJ45",
+        "signal": "Gigabit Ethernet",
+        "direction": "IN/OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Control",
+        "connector": "USB Host Type A",
+        "signal": "펌웨어 업데이트/설정 백업",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Sync",
+        "connector": "BNC (loop)",
+        "signal": "Genlock, Blackburst, Tri-level",
+        "direction": "IN",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Audio(옵션)",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Analog audio in/out",
+        "direction": "IN/OUT",
+        "quantity": "각 2",
+        "protocol": "",
+        "availability": "옵션 카드 필요",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      }
+    ],
+    "features": [
+      {
+        "text": "Pulse 4K와 동일한 8x 4K60 + 2x 1080p 총 10개 입력과 2개의 4K60 미러링(HDMI+SDI) 출력을 지원, Hard/Soft Edge·Matrix·Mixer 3가지 모드로 동작",
+        "source": ""
+      },
+      {
+        "text": "4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리와 HDR10·HLG 지원, 3D LUT 기반 색공간 변환 제공",
+        "source": ""
+      },
+      {
+        "text": "라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어) + 1개의 4K 정지영상 전경 레이어 구성 가능",
+        "source": ""
+      },
+      {
+        "text": "전용 멀티뷰어(HDMI+미러링 SDI, 최대 2560x1600@60, 17개 위젯)로 프로그램·프리뷰·모든 입력을 모니터링",
+        "source": ""
+      },
+      {
+        "text": "RTMP/RTMPS 기반으로 임의의 입력·출력을 최대 1080p30까지 라이브 스트리밍 가능(Pulse 4K 대비 상향된 사양)",
+        "source": ""
+      },
+      {
+        "text": "HTML5 기반 Web RCS 인터페이스, RC400T 이벤트 컨트롤러 등 다양한 제어 옵션을 지원, 옵션으로 32x32 Dante 오디오 네트워킹 카드 장착 가능",
+        "source": ""
+      }
+    ],
+    "videoLayerPlan": {
+      "type": "analog-way-video-layers",
+      "title": "Midra 4K · Alta 4K 화면과 레이어 구성",
+      "notes": [
+        "각 활성 화면에는 배경 레이어 1개와 전경 레이어 1개가 따로 있습니다. 배경에는 라이브 입력이나 정지 이미지를 사용할 수 있고, 표의 레이어 수는 이와 별도로 배정하는 레이어 자원입니다.",
+        "믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 같은 자원으로 레이어를 2배 구성합니다.",
+        "Alta 4K에서는 장비 전체 레이어 자원을 각 프로그램 화면에 나눠 배정합니다. 여러 출력을 한 화면으로 묶어도 배정한 자원 수를 따릅니다(매뉴얼 42–43쪽). 레이어가 출력 경계를 넘을 때 추가 자원이 필요한지는 미확인입니다.",
+        "1080p Aux(보조 화면)에는 크기를 바꿀 수 없는 레이어가 1개 있습니다. Alta 4K의 보조 출력은 레이어 자원을 쓰지 않습니다. 4K/HD 레이어를 섞을 때 추가 비용이 있는지는 미확인입니다.",
+        "화면 안 작은 창(PiP)은 별도 레이어 수로 더하지 않았습니다. 공식 자료는 추가 PiP 수를 별도로 제시하지 않습니다."
+      ],
+      "comparison": {
+        "xdm": {
+          "model": "RTCOM XDM-WOS100",
+          "outputPorts": 4,
+          "summary": "RTCOM 자료에는 HDMI 출력 4개, 4K/60 @4:4:4, 비디오 월 사용 조건이 있으며, 레이어를 쓰면 네 출력에 같은 화면이 나오는 것으로 확인돼 있습니다. 레이어 최대 개수는 명시하지 않습니다.",
+          "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+        },
+        "aquilon": "Aquilon RS는 2×2 4K60 화면에 믹싱 4개 또는 분할 8개를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽).",
+        "twoByTwo": {
+          "pulse-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Pulse 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Pulse 4K Technical Datasheet 5쪽).",
+          "eikos-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Eikos 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Eikos 4K Technical Datasheet 6쪽).",
+          "zenith-100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 PGM 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
+          "zenith-200": "Zenith 200은 2×2 격자 화면을 지원합니다(Alta 4K User Manual 52쪽). 레이어 자원 4개를 이 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개입니다. Aquilon RS의 2×2 값과 같습니다. 가정: 자원 4개 전부를 한 화면에 배정합니다(Alta 4K User Manual 42·52쪽; Aquilon User Manual v6.2 66·79쪽)."
+        }
+      },
+      "evidence": {
+        "xdmSource": "beta/site/rtcom/raw/products/xdm.json · lineup XDM-WOS100.io[0]",
+        "manuals": [
+          {
+            "series": "Midra 4K",
+            "title": "Midra 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+            "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          {
+            "series": "Alta 4K",
+            "title": "Alta 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+            "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              46,
+              50,
+              52
+            ]
+          }
+        ],
+        "datasheets": [
+          {
+            "slug": "pulse-4k",
+            "title": "Pulse 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+            "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+            "page": 5,
+            "pages": [
+              5
+            ]
+          },
+          {
+            "slug": "eikos-4k",
+            "title": "Eikos 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+            "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+            "page": 6,
+            "pages": [
+              6
+            ]
+          },
+          {
+            "slug": "zenith-100",
+            "title": "Zenith 100 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+            "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          },
+          {
+            "slug": "zenith-200",
+            "title": "Zenith 200 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+            "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          }
+        ]
+      },
+      "currentSlug": "eikos-4k",
+      "models": [
+        {
+          "slug": "pulse-4k",
+          "model": "Pulse 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 프로그램 화면을 최대 2개 만들 수 있고, 이때 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면만 쓰는 Mixer 모드에서는 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 화면마다 라이브 배경 1개는 별도입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "eikos-4k",
+          "model": "Eikos 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 화면 최대 2개에서 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면이면 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 두 출력을 잇는 블렌딩 화면도 믹싱 2개 또는 분할 4개입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            },
+            {
+              "id": "hard-soft-edge",
+              "label": "Hard/Soft Edge · 블렌딩 화면 1개",
+              "pgmScreens": 1,
+              "layout": "두 출력을 이어 만든 블렌딩 화면 1개 · 합계 최대 2×4K60",
+              "outputsPerScreen": 2,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "zenith-100",
+          "model": "Zenith 100",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 3개 만들 수 있고, 장비 전체 레이어 3개(분할 6개)를 화면끼리 나눠 씁니다. 화면 3개면 화면마다 1개(분할 2개), 화면 1개면 3개(분할 6개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 3,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 3,
+          "maxSplit4kPerScreenOneScreen": 6,
+          "totalMixing4k": 3,
+          "totalSplit4k": 6,
+          "maxAuxOutputs": 2,
+          "auxOutputsAtMaxScreens": 1,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 3",
+            "2화면 2+1",
+            "3화면 1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 3,
+              "layout": "최대 3개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 3,
+              "totalSplit4k": 6,
+              "auxOutputs": 1
+            }
+          ]
+        },
+        {
+          "slug": "zenith-200",
+          "model": "Zenith 200",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 4개 만들 수 있고, 장비 전체 레이어 4개(분할 8개)를 화면끼리 나눠 씁니다. 화면 4개면 화면마다 1개(분할 2개), 화면 1개면 4개(분할 8개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 4,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 4,
+          "maxSplit4kPerScreenOneScreen": 8,
+          "totalMixing4k": 4,
+          "totalSplit4k": 8,
+          "maxAuxOutputs": 4,
+          "auxOutputsAtMaxScreens": 2,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 4",
+            "2화면 3+1 또는 2+2",
+            "3화면 2+1+1",
+            "4화면 1+1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 4,
+              "layout": "최대 4개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 4,
+              "totalSplit4k": 8,
+              "auxOutputs": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "zenith-100": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "zenith-100-rear.webp",
+        "width": 1800,
+        "height": 587
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 145,
+          "x2": 307,
+          "y": 397,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 335,
+          "x2": 490,
+          "y": 397,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 입력 1·2",
+          "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+          "x1": 150,
+          "x2": 310,
+          "y": 493,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 5–8·루프",
+          "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+          "x1": 335,
+          "x2": 870,
+          "y": 493,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DisplayPort 입력 9·10",
+          "desc": "IN #9·10의 DisplayPort 1.2 입력",
+          "x1": 907,
+          "x2": 1070,
+          "y": 493,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 1090,
+          "x2": 1420,
+          "y": 493,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 출력",
+          "desc": "MVW 표기의 HDMI·SDI 출력",
+          "x1": 1430,
+          "x2": 1575,
+          "y": 493,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "HDMI 입력 11–13",
+          "desc": "상단 IN #11–13 HDMI 입력",
+          "x1": 1023,
+          "x2": 1287,
+          "y": 327,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "PGM 출력 3·4",
+          "desc": "상단 OUT #3·4의 HDMI·SDI·SFP+ 미러 출력",
+          "x1": 1290,
+          "x2": 1590,
+          "y": 327,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "아날로그 오디오",
+          "desc": "LINE IN 1·2 및 LINE OUT 1·2 단자",
+          "x1": 780,
+          "x2": 907,
+          "y": 392,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "Dante 네트워크",
+          "desc": "Dante PRIMARY·SECONDARY RJ-45 연결",
+          "x1": 936,
+          "x2": 1065,
+          "y": 390,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1442,
+          "x2": 1583,
+          "y": 399,
+          "side": "top"
+        },
+        {
+          "n": 13,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1599,
+          "x2": 1675,
+          "y": 449,
+          "side": "bottom"
+        }
+      ]
+    },
+    "images": [
+      {
+        "role": "Front",
+        "file": "zenith100-front.webp",
+        "alt": "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "Analog Way",
+        "model": "Zenith 100",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2362×699",
+        "resolution": "1800×510",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "zenith-100-rear.webp",
+        "alt": "Analog Way Zenith 100 후면 이미지",
+        "note": "Rear · 제조사 제품 이미지",
+        "provider": "Analog Way",
+        "model": "Zenith 100",
+        "sourceUrl": "https://www.analogway.com/products/zenith-100",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2400×783",
+        "resolution": "1800×587",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/zenith-100"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png"
+      },
+      {
+        "role": "Rear",
+        "status": "VERIFIED",
+        "sourceUrl": "https://www.analogway.com/products/zenith-100"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/zenith-100"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.analogway.com/products/zenith-100"
+      }
+    ],
+    "io": [
+      {
+        "group": "Input",
+        "connector": "HDMI 2.0",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "6",
+        "protocol": "",
+        "availability": "",
+        "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "DisplayPort 1.2",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "3",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "12G/6G/3G-SDI (Level A&B)",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "HDMI 1.4 또는 3G-SDI",
+        "signal": "2K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "사용자 선택 커넥터",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G-SDI(미러링)",
+        "signal": "4K60 out",
+        "direction": "OUT",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G-SDI + SFP+(미러링)",
+        "signal": "4K60 out",
+        "direction": "OUT",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "SFP+ 옵션 모듈 필요",
+        "condition": "광섬유/ST2110 호환",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+        "signal": "Multiviewer out",
+        "direction": "OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "최대 2560x1600@60",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Audio(옵션)",
+        "connector": "3.5mm 스테레오 미니잭",
+        "signal": "Analog audio in/out",
+        "direction": "IN/OUT",
+        "quantity": "각 2",
+        "protocol": "",
+        "availability": "옵션 카드 필요",
+        "condition": "32x32 Dante @48kHz",
+        "source": "D",
+        "verification": "VERIFIED"
+      }
+    ],
+    "features": [
+      {
+        "text": "11x 4K60 + 2x 1080p 총 13개 입력과 4개의 독립 4K60 출력(그중 2개는 SFP+ 커넥터 추가)을 지원",
+        "source": ""
+      },
+      {
+        "text": "Analog Way 5세대 스케일링 엔진 기반 네이티브 4K60 10비트 4:4:4 초저지연 영상 처리 제공",
+        "source": ""
+      },
+      {
+        "text": "출력을 최대 3개의 4K60 PGM 화면으로 구성하거나 미사용 출력을 1080p 보조 출력으로 활용 가능",
+        "source": ""
+      },
+      {
+        "text": "최대 6개의 4K 분할 레이어(또는 3개의 믹싱 레이어)와 라이브/정지영상 배경 지원",
+        "source": ""
+      },
+      {
+        "text": "전용 멀티뷰어(27개 위젯, 20개 메모리)로 프로그램·프리뷰·보조 화면·모든 입력을 모니터링",
+        "source": ""
+      },
+      {
+        "text": "옵션으로 32x32 Dante 오디오 네트워킹 카드 장착 가능",
+        "source": ""
+      }
+    ],
+    "videoLayerPlan": {
+      "type": "analog-way-video-layers",
+      "title": "Midra 4K · Alta 4K 화면과 레이어 구성",
+      "notes": [
+        "각 활성 화면에는 배경 레이어 1개와 전경 레이어 1개가 따로 있습니다. 배경에는 라이브 입력이나 정지 이미지를 사용할 수 있고, 표의 레이어 수는 이와 별도로 배정하는 레이어 자원입니다.",
+        "믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 같은 자원으로 레이어를 2배 구성합니다.",
+        "Alta 4K에서는 장비 전체 레이어 자원을 각 프로그램 화면에 나눠 배정합니다. 여러 출력을 한 화면으로 묶어도 배정한 자원 수를 따릅니다(매뉴얼 42–43쪽). 레이어가 출력 경계를 넘을 때 추가 자원이 필요한지는 미확인입니다.",
+        "1080p Aux(보조 화면)에는 크기를 바꿀 수 없는 레이어가 1개 있습니다. Alta 4K의 보조 출력은 레이어 자원을 쓰지 않습니다. 4K/HD 레이어를 섞을 때 추가 비용이 있는지는 미확인입니다.",
+        "화면 안 작은 창(PiP)은 별도 레이어 수로 더하지 않았습니다. 공식 자료는 추가 PiP 수를 별도로 제시하지 않습니다."
+      ],
+      "comparison": {
+        "xdm": {
+          "model": "RTCOM XDM-WOS100",
+          "outputPorts": 4,
+          "summary": "RTCOM 자료에는 HDMI 출력 4개, 4K/60 @4:4:4, 비디오 월 사용 조건이 있으며, 레이어를 쓰면 네 출력에 같은 화면이 나오는 것으로 확인돼 있습니다. 레이어 최대 개수는 명시하지 않습니다.",
+          "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+        },
+        "aquilon": "Aquilon RS는 2×2 4K60 화면에 믹싱 4개 또는 분할 8개를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽).",
+        "twoByTwo": {
+          "pulse-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Pulse 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Pulse 4K Technical Datasheet 5쪽).",
+          "eikos-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Eikos 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Eikos 4K Technical Datasheet 6쪽).",
+          "zenith-100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 PGM 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
+          "zenith-200": "Zenith 200은 2×2 격자 화면을 지원합니다(Alta 4K User Manual 52쪽). 레이어 자원 4개를 이 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개입니다. Aquilon RS의 2×2 값과 같습니다. 가정: 자원 4개 전부를 한 화면에 배정합니다(Alta 4K User Manual 42·52쪽; Aquilon User Manual v6.2 66·79쪽)."
+        }
+      },
+      "evidence": {
+        "xdmSource": "beta/site/rtcom/raw/products/xdm.json · lineup XDM-WOS100.io[0]",
+        "manuals": [
+          {
+            "series": "Midra 4K",
+            "title": "Midra 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+            "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          {
+            "series": "Alta 4K",
+            "title": "Alta 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+            "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              46,
+              50,
+              52
+            ]
+          }
+        ],
+        "datasheets": [
+          {
+            "slug": "pulse-4k",
+            "title": "Pulse 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+            "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+            "page": 5,
+            "pages": [
+              5
+            ]
+          },
+          {
+            "slug": "eikos-4k",
+            "title": "Eikos 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+            "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+            "page": 6,
+            "pages": [
+              6
+            ]
+          },
+          {
+            "slug": "zenith-100",
+            "title": "Zenith 100 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+            "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          },
+          {
+            "slug": "zenith-200",
+            "title": "Zenith 200 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+            "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          }
+        ]
+      },
+      "currentSlug": "zenith-100",
+      "models": [
+        {
+          "slug": "pulse-4k",
+          "model": "Pulse 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 프로그램 화면을 최대 2개 만들 수 있고, 이때 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면만 쓰는 Mixer 모드에서는 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 화면마다 라이브 배경 1개는 별도입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "eikos-4k",
+          "model": "Eikos 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 화면 최대 2개에서 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면이면 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 두 출력을 잇는 블렌딩 화면도 믹싱 2개 또는 분할 4개입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            },
+            {
+              "id": "hard-soft-edge",
+              "label": "Hard/Soft Edge · 블렌딩 화면 1개",
+              "pgmScreens": 1,
+              "layout": "두 출력을 이어 만든 블렌딩 화면 1개 · 합계 최대 2×4K60",
+              "outputsPerScreen": 2,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "zenith-100",
+          "model": "Zenith 100",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 3개 만들 수 있고, 장비 전체 레이어 3개(분할 6개)를 화면끼리 나눠 씁니다. 화면 3개면 화면마다 1개(분할 2개), 화면 1개면 3개(분할 6개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 3,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 3,
+          "maxSplit4kPerScreenOneScreen": 6,
+          "totalMixing4k": 3,
+          "totalSplit4k": 6,
+          "maxAuxOutputs": 2,
+          "auxOutputsAtMaxScreens": 1,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 3",
+            "2화면 2+1",
+            "3화면 1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 3,
+              "layout": "최대 3개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 3,
+              "totalSplit4k": 6,
+              "auxOutputs": 1
+            }
+          ]
+        },
+        {
+          "slug": "zenith-200",
+          "model": "Zenith 200",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 4개 만들 수 있고, 장비 전체 레이어 4개(분할 8개)를 화면끼리 나눠 씁니다. 화면 4개면 화면마다 1개(분할 2개), 화면 1개면 4개(분할 8개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 4,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 4,
+          "maxSplit4kPerScreenOneScreen": 8,
+          "totalMixing4k": 4,
+          "totalSplit4k": 8,
+          "maxAuxOutputs": 4,
+          "auxOutputsAtMaxScreens": 2,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 4",
+            "2화면 3+1 또는 2+2",
+            "3화면 2+1+1",
+            "4화면 1+1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 4,
+              "layout": "최대 4개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 4,
+              "totalSplit4k": 8,
+              "auxOutputs": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "zenith-200": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "zenith-200-rear.webp",
+        "width": 1800,
+        "height": 596
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 145,
+          "x2": 307,
+          "y": 404,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 335,
+          "x2": 490,
+          "y": 404,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 입력 1·2",
+          "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+          "x1": 150,
+          "x2": 310,
+          "y": 500,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 5–8·루프",
+          "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+          "x1": 335,
+          "x2": 870,
+          "y": 500,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DisplayPort 입력 9·10",
+          "desc": "IN #9·10의 DisplayPort 1.2 입력",
+          "x1": 907,
+          "x2": 1070,
+          "y": 500,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 1090,
+          "x2": 1420,
+          "y": 500,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 출력",
+          "desc": "MVW 표기의 HDMI·SDI 출력",
+          "x1": 1430,
+          "x2": 1575,
+          "y": 500,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "HDMI 입력 11–13",
+          "desc": "상단 왼쪽 IN #11–13 HDMI 입력",
+          "x1": 324,
+          "x2": 577,
+          "y": 337,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "PGM 출력 3·4",
+          "desc": "상단 왼쪽 OUT #3·4의 HDMI·SDI·SFP+ 미러 출력",
+          "x1": 580,
+          "x2": 890,
+          "y": 337,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "HDMI 입력 14–16",
+          "desc": "상단 오른쪽 IN #14–16 HDMI 입력",
+          "x1": 1023,
+          "x2": 1287,
+          "y": 337,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "PGM 출력 5·6",
+          "desc": "상단 오른쪽 OUT #5·6의 HDMI·SDI·SFP+ 미러 출력",
+          "x1": 1290,
+          "x2": 1590,
+          "y": 337,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "아날로그 오디오",
+          "desc": "LINE IN 1·2 및 LINE OUT 1·2 단자",
+          "x1": 780,
+          "x2": 907,
+          "y": 399,
+          "side": "top"
+        },
+        {
+          "n": 13,
+          "label": "Dante 네트워크",
+          "desc": "Dante PRIMARY·SECONDARY RJ-45 연결",
+          "x1": 936,
+          "x2": 1065,
+          "y": 397,
+          "side": "top"
+        },
+        {
+          "n": 14,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1442,
+          "x2": 1583,
+          "y": 406,
+          "side": "top"
+        },
+        {
+          "n": 15,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1599,
+          "x2": 1675,
+          "y": 456,
+          "side": "bottom"
+        }
+      ]
+    },
+    "images": [
+      {
+        "role": "Front",
+        "file": "zenith200-front.webp",
+        "alt": "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)",
+        "note": "Front · 제조사 공식 이미지",
+        "provider": "Analog Way",
+        "model": "Zenith 200",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2362×764",
+        "resolution": "1800×533",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Rear",
+        "file": "zenith-200-rear.webp",
+        "alt": "Analog Way Zenith 200 후면 이미지",
+        "note": "Rear · 제조사 제품 이미지",
+        "provider": "Analog Way",
+        "model": "Zenith 200",
+        "sourceUrl": "https://www.analogway.com/products/zenith-200",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "2400×794",
+        "resolution": "1800×596",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "imageStatuses": [
+      {
+        "role": "Main",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/zenith-200"
+      },
+      {
+        "role": "Front",
+        "status": "FOUND",
+        "sourceUrl": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png"
+      },
+      {
+        "role": "Rear",
+        "status": "VERIFIED",
+        "sourceUrl": "https://www.analogway.com/products/zenith-200"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.analogway.com/products/zenith-200"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.analogway.com/products/zenith-200"
+      }
+    ],
+    "io": [
+      {
+        "group": "Input",
+        "connector": "HDMI 2.0",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "8",
+        "protocol": "",
+        "availability": "",
+        "condition": "8bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "DisplayPort 1.2",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:4:4 또는 12bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "12G/6G/3G-SDI (Level A&B)",
+        "signal": "4K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "10bit 4:2:2",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Input",
+        "connector": "HDMI 1.4 또는 3G-SDI",
+        "signal": "2K60 video in",
+        "direction": "IN",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "사용자 선택 커넥터",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G-SDI(미러링)",
+        "signal": "4K60 out",
+        "direction": "OUT",
+        "quantity": "2",
+        "protocol": "",
+        "availability": "",
+        "condition": "",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 2.0 + 12G-SDI + SFP+(미러링)",
+        "signal": "4K60 out",
+        "direction": "OUT",
+        "quantity": "4",
+        "protocol": "",
+        "availability": "SFP+ 옵션 모듈 필요",
+        "condition": "광섬유/ST2110 호환",
+        "source": "D",
+        "verification": "VERIFIED"
+      },
+      {
+        "group": "Output",
+        "connector": "HDMI 1.4 + 3G-SDI(미러링)",
+        "signal": "Multiviewer out",
+        "direction": "OUT",
+        "quantity": "1",
+        "protocol": "",
+        "availability": "",
+        "condition": "최대 2560x1600@60",
+        "source": "D",
+        "verification": "VERIFIED"
+      }
+    ],
+    "features": [
+      {
+        "text": "8x HDMI + 4x DisplayPort + 2x 12G-SDI + 2x 1080p 선택 입력 총 16개 입력과 6개의 독립 4K60 출력(그중 4개는 SFP+ 커넥터 추가)을 지원",
+        "source": ""
+      },
+      {
+        "text": "Zenith 100과 동일한 5세대 스케일링 엔진 기반 네이티브 4K60 10비트 4:4:4 초저지연 영상 처리 제공",
+        "source": ""
+      },
+      {
+        "text": "커스텀 입출력 포맷을 최대 8192 width/height까지 지원해 Zenith 100(4096)보다 넓은 캔버스 구성 가능",
+        "source": ""
+      },
+      {
+        "text": "출력을 최대 4개의 4K60 PGM 화면으로 구성하거나 미사용 출력을 1080p 보조 출력으로 활용 가능",
+        "source": ""
+      },
+      {
+        "text": "최대 8개의 4K 분할 레이어(또는 4개의 믹싱 레이어)와 라이브/정지영상 배경 지원",
+        "source": ""
+      },
+      {
+        "text": "전용 멀티뷰어(27개 위젯, 20개 메모리)로 프로그램·프리뷰·보조 화면·모든 입력을 모니터링",
+        "source": ""
+      }
+    ],
+    "videoLayerPlan": {
+      "type": "analog-way-video-layers",
+      "title": "Midra 4K · Alta 4K 화면과 레이어 구성",
+      "notes": [
+        "각 활성 화면에는 배경 레이어 1개와 전경 레이어 1개가 따로 있습니다. 배경에는 라이브 입력이나 정지 이미지를 사용할 수 있고, 표의 레이어 수는 이와 별도로 배정하는 레이어 자원입니다.",
+        "믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 같은 자원으로 레이어를 2배 구성합니다.",
+        "Alta 4K에서는 장비 전체 레이어 자원을 각 프로그램 화면에 나눠 배정합니다. 여러 출력을 한 화면으로 묶어도 배정한 자원 수를 따릅니다(매뉴얼 42–43쪽). 레이어가 출력 경계를 넘을 때 추가 자원이 필요한지는 미확인입니다.",
+        "1080p Aux(보조 화면)에는 크기를 바꿀 수 없는 레이어가 1개 있습니다. Alta 4K의 보조 출력은 레이어 자원을 쓰지 않습니다. 4K/HD 레이어를 섞을 때 추가 비용이 있는지는 미확인입니다.",
+        "화면 안 작은 창(PiP)은 별도 레이어 수로 더하지 않았습니다. 공식 자료는 추가 PiP 수를 별도로 제시하지 않습니다."
+      ],
+      "comparison": {
+        "xdm": {
+          "model": "RTCOM XDM-WOS100",
+          "outputPorts": 4,
+          "summary": "RTCOM 자료에는 HDMI 출력 4개, 4K/60 @4:4:4, 비디오 월 사용 조건이 있으며, 레이어를 쓰면 네 출력에 같은 화면이 나오는 것으로 확인돼 있습니다. 레이어 최대 개수는 명시하지 않습니다.",
+          "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+        },
+        "aquilon": "Aquilon RS는 2×2 4K60 화면에 믹싱 4개 또는 분할 8개를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽).",
+        "twoByTwo": {
+          "pulse-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Pulse 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Pulse 4K Technical Datasheet 5쪽).",
+          "eikos-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Eikos 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Eikos 4K Technical Datasheet 6쪽).",
+          "zenith-100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 PGM 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
+          "zenith-200": "Zenith 200은 2×2 격자 화면을 지원합니다(Alta 4K User Manual 52쪽). 레이어 자원 4개를 이 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개입니다. Aquilon RS의 2×2 값과 같습니다. 가정: 자원 4개 전부를 한 화면에 배정합니다(Alta 4K User Manual 42·52쪽; Aquilon User Manual v6.2 66·79쪽)."
+        }
+      },
+      "evidence": {
+        "xdmSource": "beta/site/rtcom/raw/products/xdm.json · lineup XDM-WOS100.io[0]",
+        "manuals": [
+          {
+            "series": "Midra 4K",
+            "title": "Midra 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+            "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          {
+            "series": "Alta 4K",
+            "title": "Alta 4K User Manual",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+            "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+            "pages": [
+              25,
+              41,
+              42,
+              43,
+              46,
+              50,
+              52
+            ]
+          }
+        ],
+        "datasheets": [
+          {
+            "slug": "pulse-4k",
+            "title": "Pulse 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+            "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+            "page": 5,
+            "pages": [
+              5
+            ]
+          },
+          {
+            "slug": "eikos-4k",
+            "title": "Eikos 4K Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+            "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+            "page": 6,
+            "pages": [
+              6
+            ]
+          },
+          {
+            "slug": "zenith-100",
+            "title": "Zenith 100 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+            "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          },
+          {
+            "slug": "zenith-200",
+            "title": "Zenith 200 Technical Datasheet",
+            "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+            "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+            "page": 6,
+            "pages": [
+              1,
+              6
+            ]
+          }
+        ]
+      },
+      "currentSlug": "zenith-200",
+      "models": [
+        {
+          "slug": "pulse-4k",
+          "model": "Pulse 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 프로그램 화면을 최대 2개 만들 수 있고, 이때 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면만 쓰는 Mixer 모드에서는 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 화면마다 라이브 배경 1개는 별도입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "eikos-4k",
+          "model": "Eikos 4K",
+          "series": "Midra 4K",
+          "headline": "4K60 화면 최대 2개에서 화면마다 믹싱 1개 또는 분할 2개입니다. 한 화면이면 믹싱 2개 또는 분할 4개와 1080p60 보조 화면 1개를 구성할 수 있습니다. 두 출력을 잇는 블렌딩 화면도 믹싱 2개 또는 분할 4개입니다.",
+          "maxPgm4kScreens": 2,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 2,
+          "maxSplit4kPerScreenOneScreen": 4,
+          "totalMixing4k": 2,
+          "totalSplit4k": 4,
+          "maxAuxOutputs": 1,
+          "auxOutputsAtMaxScreens": 0,
+          "resourceScope": "mode",
+          "allocationExamples": [],
+          "screenModes": [
+            {
+              "id": "mixer",
+              "label": "Mixer · 프로그램 1개 + 보조 화면 1개",
+              "pgmScreens": 1,
+              "layout": "단일 출력 4K60 프로그램 화면 1개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 1
+            },
+            {
+              "id": "matrix",
+              "label": "Matrix · 독립 프로그램 화면 2개",
+              "pgmScreens": 2,
+              "layout": "서로 독립된 단일 출력 4K60 프로그램 화면 2개",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            },
+            {
+              "id": "hard-soft-edge",
+              "label": "Hard/Soft Edge · 블렌딩 화면 1개",
+              "pgmScreens": 1,
+              "layout": "두 출력을 이어 만든 블렌딩 화면 1개 · 합계 최대 2×4K60",
+              "outputsPerScreen": 2,
+              "mixing4kPerScreen": 2,
+              "split4kPerScreen": 4,
+              "totalMixing4k": 2,
+              "totalSplit4k": 4,
+              "auxOutputs": 0
+            }
+          ]
+        },
+        {
+          "slug": "zenith-100",
+          "model": "Zenith 100",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 3개 만들 수 있고, 장비 전체 레이어 3개(분할 6개)를 화면끼리 나눠 씁니다. 화면 3개면 화면마다 1개(분할 2개), 화면 1개면 3개(분할 6개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 3,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 3,
+          "maxSplit4kPerScreenOneScreen": 6,
+          "totalMixing4k": 3,
+          "totalSplit4k": 6,
+          "maxAuxOutputs": 2,
+          "auxOutputsAtMaxScreens": 1,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 3",
+            "2화면 2+1",
+            "3화면 1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 3,
+              "layout": "최대 3개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 3,
+              "totalSplit4k": 6,
+              "auxOutputs": 1
+            }
+          ]
+        },
+        {
+          "slug": "zenith-200",
+          "model": "Zenith 200",
+          "series": "Alta 4K",
+          "headline": "화면을 최대 4개 만들 수 있고, 장비 전체 레이어 4개(분할 8개)를 화면끼리 나눠 씁니다. 화면 4개면 화면마다 1개(분할 2개), 화면 1개면 4개(분할 8개)입니다. 여러 출력을 이어 붙인 화면도 같으며, 화면마다 라이브 배경 1개가 따로 있습니다.",
+          "maxPgm4kScreens": 4,
+          "mixing4kPerScreenAtMaxScreens": 1,
+          "split4kPerScreenAtMaxScreens": 2,
+          "maxMixing4kPerScreenOneScreen": 4,
+          "maxSplit4kPerScreenOneScreen": 8,
+          "totalMixing4k": 4,
+          "totalSplit4k": 8,
+          "maxAuxOutputs": 4,
+          "auxOutputsAtMaxScreens": 2,
+          "resourceScope": "device",
+          "allocationExamples": [
+            "1화면 4",
+            "2화면 3+1 또는 2+2",
+            "3화면 2+1+1",
+            "4화면 1+1+1+1"
+          ],
+          "screenModes": [
+            {
+              "id": "resource-pool",
+              "label": "Alta 4K · 장비 전체 레이어 배분",
+              "pgmScreens": 4,
+              "layout": "최대 4개 프로그램 화면 · 레이어 자원을 장비 전체에서 나눠 배정",
+              "outputsPerScreen": 1,
+              "mixing4kPerScreen": 1,
+              "split4kPerScreen": 2,
+              "totalMixing4k": 4,
+              "totalSplit4k": 8,
+              "auxOutputs": 2
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

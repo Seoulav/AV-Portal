@@ -347,11 +347,13 @@ export const group1Images = {
   ],
   'pulse-4k': [
     image('Front', 'pulse4k-front.webp', "Analog Way Pulse 4K 전면 조작부 이미지(전면에 모델명 'Pulse 4K' 표기)", 'Analog Way', 'Pulse 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/High+Resolution+Pictures/pulse-4k-fav.jpg', '6952×1960', '1800×390', 'VERIFIED'),
-    image('Rear', 'pulse-4k-rear.webp', 'Analog Way Pulse 4K 후면 이미지', 'Analog Way', 'Pulse 4K', 'https://www.analogway.com/products/pulse-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지')
+    image('Rear', 'pulse-4k-rear.webp', 'Analog Way Pulse 4K 후면 이미지', 'Analog Way', 'Pulse 4K', 'https://www.analogway.com/products/pulse-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지'),
+    image('Other', 'pulse-4k-io-panel.png', 'Analog Way Pulse 4K 후면 단자 확대 패널', 'Analog Way', 'Pulse 4K', 'https://www.analogway.com/products/pulse-4k', '2400×601', '1580×205', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
   ],
   'eikos-4k': [
     image('Front', 'eikos4k-front.webp', "Analog Way Eikos 4K 전면 조작부 이미지(전면에 모델명 'Eikos 4K' 표기)", 'Analog Way', 'Eikos 4K', 'https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/High+Resolution+Pictures/eikos-4k-fav.jpg', '6844×1848', '1800×395', 'VERIFIED'),
-    image('Rear', 'eikos-4k-rear.webp', 'Analog Way Eikos 4K 후면 이미지', 'Analog Way', 'Eikos 4K', 'https://www.analogway.com/products/eikos-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지')
+    image('Rear', 'eikos-4k-rear.webp', 'Analog Way Eikos 4K 후면 이미지', 'Analog Way', 'Eikos 4K', 'https://www.analogway.com/products/eikos-4k', '2400×601', '1800×451', 'VERIFIED', 'Rear · 제조사 제품 이미지'),
+    image('Other', 'eikos-4k-io-panel.png', 'Analog Way Eikos 4K 후면 단자 확대 패널', 'Analog Way', 'Eikos 4K', 'https://www.analogway.com/products/eikos-4k', '2400×601', '1580×205', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
   ],
   'aquilon-rs2': [
     image('Front', 'aquilonrs2-front.webp', "Analog Way Aquilon RS2 전면 이미지(전면에 모델명 'Aquilon RS2' 표기)", 'Analog Way', 'Aquilon RS2', 'https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/High+Resolution+Pictures/aquilon-4u-rs2-fav-det-web.jpg', '3175×1772', '1800×686', 'VERIFIED'),
@@ -372,11 +374,13 @@ export const group1Images = {
   })),
   'zenith-100': [
     image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED'),
-    image('Rear', 'zenith-100-rear.webp', 'Analog Way Zenith 100 후면 이미지', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1800×587', 'VERIFIED', 'Rear · 제조사 제품 이미지')
+    image('Rear', 'zenith-100-rear.webp', 'Analog Way Zenith 100 후면 이미지', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1800×587', 'VERIFIED', 'Rear · 제조사 제품 이미지'),
+    image('Other', 'zenith-100-io-panel.png', 'Analog Way Zenith 100 후면 단자 확대 패널', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1570×728', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
   ],
   'zenith-200': [
     image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED'),
-    image('Rear', 'zenith-200-rear.webp', 'Analog Way Zenith 200 후면 이미지', 'Analog Way', 'Zenith 200', 'https://www.analogway.com/products/zenith-200', '2400×794', '1800×596', 'VERIFIED', 'Rear · 제조사 제품 이미지')
+    image('Rear', 'zenith-200-rear.webp', 'Analog Way Zenith 200 후면 이미지', 'Analog Way', 'Zenith 200', 'https://www.analogway.com/products/zenith-200', '2400×794', '1800×596', 'VERIFIED', 'Rear · 제조사 제품 이미지'),
+    image('Other', 'zenith-200-io-panel.png', 'Analog Way Zenith 200 후면 단자 확대 패널', 'Analog Way', 'Zenith 200', 'https://www.analogway.com/products/zenith-200', '2400×794', '1570×634', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
   ],
   rc400t: [
     image('Front', 'rc400t-front.webp', "Analog Way RC400T 전면 이미지(전면에 모델명 'RC400T' 표기)", 'Analog Way', 'RC400T', 'https://cdn.prod.website-files.com/6540cb540116ce87ec8b62fe/65ef10bc1d235af01c99b642_RC400T.avif', '500×220', '471×215', 'VERIFIED'),

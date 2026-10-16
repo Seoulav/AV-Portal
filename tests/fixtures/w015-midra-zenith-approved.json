@@ -1,0 +1,94 @@
+{
+  "pulse-4k": {
+    "portMapsSha256": "ed37d2c6be7232742cad36ee2a5c31bc1b86c866d9f3d62ec8c28bbb54f32a6f",
+    "panelFileSha256": "e9ed353f428096aac69ffaa812b6db4b969258659e017e0b5ff11591b53b8a59",
+    "otherImage": {
+      "role": "Other",
+      "file": "pulse-4k-io-panel.png",
+      "alt": "Analog Way Pulse 4K 후면 단자 확대 패널",
+      "note": "제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널",
+      "provider": "Analog Way",
+      "model": "Pulse 4K",
+      "sourceUrl": "https://www.analogway.com/products/pulse-4k",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×601",
+      "resolution": "1580×205",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    "otherStatus": {
+      "role": "Other",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.analogway.com/products/pulse-4k"
+    }
+  },
+  "eikos-4k": {
+    "portMapsSha256": "109efc39297c786cc44cce6a4b5450c1fe8bb499f33ea6c14de8af4f53d46cb6",
+    "panelFileSha256": "144bb14b4f279dffe781f7b3369697115726c125d62f60c56fb7c9fc78274acd",
+    "otherImage": {
+      "role": "Other",
+      "file": "eikos-4k-io-panel.png",
+      "alt": "Analog Way Eikos 4K 후면 단자 확대 패널",
+      "note": "제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널",
+      "provider": "Analog Way",
+      "model": "Eikos 4K",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×601",
+      "resolution": "1580×205",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    "otherStatus": {
+      "role": "Other",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.analogway.com/products/eikos-4k"
+    }
+  },
+  "zenith-100": {
+    "portMapsSha256": "903bdd6fba30e6cf0ce63ca9a7a51f7c6ceda8edaa865d23bca51ada1ab8e03d",
+    "panelFileSha256": "25934b4462cff8a0c38109502e74335032c0268b60605a276a9833ec939f5f61",
+    "otherImage": {
+      "role": "Other",
+      "file": "zenith-100-io-panel.png",
+      "alt": "Analog Way Zenith 100 후면 단자 확대 패널",
+      "note": "제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널",
+      "provider": "Analog Way",
+      "model": "Zenith 100",
+      "sourceUrl": "https://www.analogway.com/products/zenith-100",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×783",
+      "resolution": "1570×728",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    "otherStatus": {
+      "role": "Other",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.analogway.com/products/zenith-100"
+    }
+  },
+  "zenith-200": {
+    "portMapsSha256": "d7f87869670a30d34a5dc5fae30da86d034895d42b7ed9e46d8df6ea7b3e7d08",
+    "panelFileSha256": "13faadd6c2253d42d8ae36f8ca8f95a6c78126592c2b3f447abda098f365d14f",
+    "otherImage": {
+      "role": "Other",
+      "file": "zenith-200-io-panel.png",
+      "alt": "Analog Way Zenith 200 후면 단자 확대 패널",
+      "note": "제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널",
+      "provider": "Analog Way",
+      "model": "Zenith 200",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×794",
+      "resolution": "1570×634",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    "otherStatus": {
+      "role": "Other",
+      "status": "VERIFIED",
+      "sourceUrl": "https://www.analogway.com/products/zenith-200"
+    }
+  }
+}

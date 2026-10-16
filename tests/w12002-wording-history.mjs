@@ -17,6 +17,7 @@ import { beforeW20261015_006Product, beforeW20261015_006Raw } from './w20261015-
 import { beforeW20261015_011Product, beforeW20261015_011Raw } from './w20261015-011-history.mjs';
 import { beforeW20261015_006LabelsProduct, beforeW20261015_006LabelsRaw } from './w20261015-006-labels-history.mjs';
 import { beforeW20261015_008Product, beforeW20261015_008Raw } from './w20261015-008-history.mjs';
+import { beforeW20261016_015MidraProduct, beforeW20261016_015MidraRaw } from './w20261016-015-midra-zenith-history.mjs';
 
 // Undo only approved W-002 sentence text when an older whole-product hash is
 // tested. Current non-wording fields pass through, so unrelated regressions
@@ -30,6 +31,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug,{w011Undone=false,w015PlacementUndone=false}={}){
+  current=beforeW20261016_015MidraProduct(current,slug);
   current=beforeH5PanelProduct(current,slug);
   if(!w015PlacementUndone)current=beforeW16015SamsungHotelPlacementProduct(current,slug);
   current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
@@ -65,6 +67,7 @@ export function beforeW12002Product(current,slug,{w011Undone=false,w015Placement
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW20261016_015MidraRaw(raw,slug);
   raw=beforeH5PanelRaw(raw,slug);
   raw=beforeW16015SamsungHotelPlacementRaw(raw,slug);
   raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
