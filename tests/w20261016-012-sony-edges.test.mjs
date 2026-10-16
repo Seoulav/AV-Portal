@@ -1,10 +1,12 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 import {beforeW20261016_017Product} from './w20261016-017-history.mjs';
 import {beforeW20261016_015B4Product} from './w20261016-015-b4-history.mjs';
 import {beforeW16015Product} from './w16015-group1-history.mjs';
 import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync,readdirSync} from 'node:fs';
+import {readdirSync} from 'node:fs';
 import {enhancementErrors,prepareEnhancements} from '../beta/site/detail/detail-enhancements.mjs';
 import {adaptRtcomDetail} from '../beta/site/shared/rtcom-adapter.mjs';
 const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-012-prior-fields.json',import.meta.url)));

@@ -39,7 +39,8 @@ test('front and rear images identify this model and the rear Port Map follows pr
     'PS1', 'PS2', 'EDITOR', 'LAN', 'TALLY', 'GPIO', 'LTC', 'AES 1', 'AES 2',
     'REF IN', 'REF OUT', 'MV OUTPUT IO-1–IO-2 · 1–2', 'OUTPUT 3–12', 'INPUT 1–24', 'UPGD', 'SD'
   ]);
-  assert.deepEqual(map.items.filter(row => row.n === 10 || row.n === 11).map(row => [row.n, row.label, row.x1, row.x2]), [[10, 'REF IN', 292, 316], [11, 'REF OUT', 318, 343]]);
+  // W-015 group6b separates adjacent 1.5px bracket legs without changing REF groups.
+  assert.deepEqual(map.items.filter(row => row.n === 10 || row.n === 11).map(row => [row.n, row.label, row.x1, row.x2]), [[10, 'REF IN', 292, 315], [11, 'REF OUT', 321, 343]]);
   assert.ok(map.items.every(row => /[가-힣]+$|[0-9–]+$|AES [12]$|REF (?:OUT|IN)$|PS[12] · 전원$|EDITOR$|LAN$|TALLY$|GPIO$|LTC$|UPGD$|SD$/.test(row.label)));
   assert.ok(prepareEnhancements(item).portMap);
   assert.ok(item.specifications.some(row => row.verification === 'CONFLICTED' && /사진.*매뉴얼|매뉴얼.*사진/.test(row.condition)));
