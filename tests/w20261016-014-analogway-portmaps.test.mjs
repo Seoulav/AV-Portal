@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { prepareEnhancements, enhancementErrors } from '../beta/site/detail/detail-enhancements.mjs';
 import { renderPortMapCards as renderBeta } from '../beta/site/detail/detail-enhancement-view.mjs';
 import { renderPortMapCards as renderPrototype } from '../prototype/brc-am7/detail-enhancement-view.mjs';
+import { beforeW20261016_015MidraProduct } from './w20261016-015-midra-zenith-history.mjs';
 
 class MockNode {
   constructor(tag, text = '') { this.tag = tag; this.className = ''; this.children = []; this._text = text; }
@@ -170,12 +171,13 @@ test('Aquilon RS card maps use one grouped edge bracket per card type with card 
   }
 });
 
-test('fixed-panel Pulse, Eikos, and Zenith maps are restored to the pre-W-014 baseline', () => {
+test('fixed-panel Pulse, Eikos, and Zenith panels rewind to the W-015 pre-redesign baseline', () => {
   const root = new URL('../beta/site/detail/data/', import.meta.url);
-  const prior = JSON.parse(readFileSync(new URL('./fixtures/w014-analogway-prior-portmaps.json', import.meta.url), 'utf8'));
+  const prior = JSON.parse(readFileSync(new URL('./fixtures/w015-midra-zenith-prior.json', import.meta.url), 'utf8'));
   for (const id of ['pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200']) {
     const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
-    assert.deepEqual(product.portMap, prior[id], `${id}: fixed-panel map must remain at the main baseline pending redesign`);
+    assert.deepEqual(beforeW20261016_015MidraProduct(product, id).portMap, prior[id].portMap, `${id}: undo should restore the W-015 base map`);
+    assert.deepEqual(product.portMaps.map(map => map.image), ['Rear', 'Other'], `${id}: panel maps should remain available`);
   }
 });
 

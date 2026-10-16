@@ -647,3 +647,18 @@
 
 - 최종 범위 조정: 고정 단자판 4종은 줄 단위 옆 괄호로 단자를 특정할 수 없어 제외했다. 네 제품 지도는 `origin/main`과 portMap 필드가 완전히 동일하다. 예외 기록·Work 인계서·PNG 갤러리·PR 본문은 승인 범위 7종으로 표기한다.
 - 최종 검증: 집중 Port Map·되감기·기준 불변 테스트 8/8 통과. 전체 `node --test --test-concurrency=1 tests/*.test.mjs`: 838건 중 837 통과·실패 0·기존 skip 1. `verify-pages` 통과(289 카탈로그, 286 상세, 525 이미지, 167 PDF); search/readable `--check`와 `git diff --check` 통과. Python 런타임이 없어 Port Map audit 스크립트는 재실행하지 못했으며, 승인된 Aquilon RS 제품 좌표는 수정하지 않았다.
+
+## W-20261016-015 후속 — Midra·Zenith 고정 단자판 4종 (2026-10-17)
+
+- 명세: W-20261016-015·016·017, 기준 `origin/main` `1ebee612`; 작업 브랜치 `codex/W-20261016-015-midra-zenith-panels`. 대상 pulse-4k·eikos-4k·zenith-100·zenith-200. Aquilon RS·C와 다른 제조사 JSON은 변경하지 않음.
+- Rear 개요와 Other 단자 확대 패널을 구성. 단자 배치·번호·이름·설명·I/O·`videoLayerPlan` 불변, 공식 후면 사진의 크롭 픽셀만 사용.
+- 브라우저 캡처: 4종 각각 전후 760px, 390px 좌·우(총 24장). [미리보기](Work/기록/W-20261016-015-midra-zenith-preview/index.html).
+- 상태: 구현 및 전후 시각 점검 완료, 단위 테스트 3/3 통과. 전체 검사·PR·CI 미완료. 병합 전 Work 시각 검토 필요.
+
+### W-20261016-015 Midra·Zenith 후속 — 통합·검증 완료
+
+- `origin/main` `64839b82` (#594) fast-forward 통합 완료. 병합 뒤 detail assets·snapshot·search-index·readable catalog 재생성. 검색·읽기 카탈로그 `--check`, `verify-pages` 통과(289 품목·286 상세·529 제품 이미지·167 PDF).
+- 전체 순차 테스트: 858건 중 857 통과, 0 실패, 기존 skip 1. 신규/과거 되감기/변경 범위 테스트 17/17 통과.
+- Port Map lint: Zenith 2종 0 신호, Pulse/Eikos 각 1 `SHARED_WITH` 레이아웃 신호. 비주얼 24 PNG 전후 비교에서 다른 줄 단자·인쇄 라벨 관통 없음.
+- 미리보기: `Work/기록/W-20261016-015-midra-zenith-preview/index.html`. 구현·검증 완료, Work 화면 검토/PR 병합 순서 응답 대기.
+- Work 2026-10-17 검토 반영: Zenith 100 상단 단자 띠의 확대를 2.24배에서 원본 픽셀 1:1로 조정하고 패널을 1570×711로 재구성, 번호 8·9 좌표 재측정. 760px·390px 좌우 캡처 갱신: `Work/기록/W-20261016-015-midra-zenith-preview/screenshots/zenith-100-after-760.png` 및 좌·우 캡처. 사진 띠 사이 빈 흰 간격을 지나는 Zenith 100 10·11, Zenith 200 12(오디오)·13(Dante)의 수평선 1/4 폭 예외를 Work 승인(2026-10-17)대로 PR·예외 기록에 병기. 전체 테스트 858건(857 통과·0 실패·기존 skip 1), verify-pages·search/readable --check 통과. 수정 커밋 3f4ee249 CI run 38946031107 성공. 작업 기록 갱신 커밋의 CI 재실행 대기.

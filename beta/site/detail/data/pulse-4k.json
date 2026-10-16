@@ -43,6 +43,20 @@
       "originalSize": "2400×601",
       "resolution": "1800×451",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "pulse-4k-io-panel.png",
+      "alt": "Analog Way Pulse 4K 후면 단자 확대 패널",
+      "note": "제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널",
+      "provider": "Analog Way",
+      "model": "Pulse 4K",
+      "sourceUrl": "https://www.analogway.com/products/pulse-4k",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400×601",
+      "resolution": "1580×205",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -68,7 +82,7 @@
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
+      "status": "VERIFIED",
       "sourceUrl": "https://www.analogway.com/products/pulse-4k"
     }
   ],
@@ -446,47 +460,11 @@
         "side": "top"
       },
       {
-        "n": 3,
-        "label": "HDMI 입력 1·2",
-        "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
-        "x1": 154,
-        "x2": 310,
-        "y": 376,
-        "side": "bottom"
-      },
-      {
-        "n": 4,
-        "label": "HDMI 입력 5–8·루프",
-        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
-        "x1": 337,
-        "x2": 866,
-        "y": 375,
-        "side": "bottom"
-      },
-      {
-        "n": 5,
-        "label": "DisplayPort 입력 9·10",
-        "desc": "IN #9·10의 DisplayPort 1.2 입력",
-        "x1": 908,
-        "x2": 1080,
-        "y": 376,
-        "side": "bottom"
-      },
-      {
         "n": 6,
         "label": "PGM 출력 1·2",
         "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
         "x1": 1106,
         "x2": 1413,
-        "y": 376,
-        "side": "bottom"
-      },
-      {
-        "n": 7,
-        "label": "멀티뷰어 출력",
-        "desc": "MVW 표기의 HDMI·SDI 출력",
-        "x1": 1445,
-        "x2": 1575,
         "y": 376,
         "side": "bottom"
       },
@@ -784,5 +762,144 @@
         ]
       }
     ]
-  }
+  },
+  "portMaps": [
+    {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "pulse-4k-rear.webp",
+        "width": 1800,
+        "height": 451
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 145,
+          "x2": 310,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 337,
+          "x2": 490,
+          "y": 282,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 1106,
+          "x2": 1413,
+          "y": 376,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1445,
+          "x2": 1580,
+          "y": 281,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1600,
+          "x2": 1675,
+          "y": 348,
+          "side": "bottom"
+        }
+      ]
+    },
+    {
+      "image": "Other",
+      "measuredImage": {
+        "file": "pulse-4k-io-panel.png",
+        "width": 1580,
+        "height": 205
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "선택형 SDI 입력 1·2",
+          "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+          "x1": 35,
+          "x2": 200,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "12G-SDI 입력 3·4",
+          "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+          "x1": 227,
+          "x2": 380,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 입력 1·2",
+          "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+          "x1": 44,
+          "x2": 200,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 5–8·루프",
+          "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+          "x1": 227,
+          "x2": 756,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DisplayPort 입력 9·10",
+          "desc": "IN #9·10의 DisplayPort 1.2 입력",
+          "x1": 798,
+          "x2": 970,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "PGM 출력 1·2",
+          "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+          "x1": 996,
+          "x2": 1303,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 출력",
+          "desc": "MVW 표기의 HDMI·SDI 출력",
+          "x1": 1335,
+          "x2": 1465,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Genlock·Loop",
+          "desc": "GENLOCK 입력 및 LOOP BNC",
+          "x1": 1335,
+          "x2": 1470,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "CONTROL",
+          "desc": "CONTROL 표기의 RJ-45 제어 연결",
+          "x1": 1490,
+          "x2": 1565,
+          "side": "bottom"
+        }
+      ]
+    }
+  ]
 }
