@@ -1,5 +1,6 @@
 import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
+import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import { beforeW15004ImageSha } from './w15004-shure-photo-history.mjs';
 import { beforeW15012ImageSha } from './w15012-black-background-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -35,7 +36,8 @@ import {beforeShureW04003Raw,shureW04003Slug} from './shure-w04003-history.mjs';
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
-  const product=JSON.parse(bytes(path));
+  const original=JSON.parse(bytes(path));
+  const product=beforeW20261016_015B4Product(original,path.split('/').at(-1).slice(0,-5));
   return path.startsWith('beta/site/detail/data/')?beforeBssW04004(beforeBssAlignment(beforeW026Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -98,7 +100,7 @@ test('Rio1608 and Rally retain fallback and the other 227 product JSON Git blobs
   assert.equal(target.filter(slug => read(`beta/site/detail/data/${slug}.json`).portMap).length,13);
   assert.equal(Object.keys(proof.preservedProducts).length,227);
   const priorRead = path => beforeW032Product(read(path), path.split('/').at(-1).slice(0, -5));
-  const priorRaw = path => beforeW032Raw(beforeW026Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
+  const priorRaw = path => beforeW032Raw(beforeW026Raw(beforeW20261016_015B4Raw(bytes(path).toString('utf8').replaceAll('\r\n', '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
   for(const [file,hash] of Object.entries(proof.preservedProducts)){
     // W-20261002-005 updates only Samsung provenance; its new audit locks the current rows.
     const later = samsung.products[file.slice(0,-5)];

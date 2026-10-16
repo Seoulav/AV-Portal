@@ -548,3 +548,22 @@
 - Public catalog, detail JSON and detail route returned HTTP 200. Product AVC024, category `화상회의 / Conferencing / Wireless Presentation`, 8 signal-flow connections, and 3 Port Map plugs were present.
 - Public PDF GET returned 200, 122,775 bytes, SHA-256 `e7e3f1a8d8b438aa2f26e1cad5202505980bc1e36d0cadee6952b8c39a25214b`. Non-Belkin mirror changes: 0.
 - CUA had no browser surface; public visual capture unavailable. Local 1280px and 390px previews were reviewed and public JSON/HTML/PDF were checked. No `builder/` or `cpq/` changes.
+
+## W-20261016-015 묶음 4 — Powersoft·Shure Port Map
+
+- 명세: `Work/작업/W-20261016-015.md` (읽은 main blob SHA `21b225881d17dd095f53299dfd5593983ca3ef37`); 보완 기준 `Work/작업/W-20261016-016.md` (blob SHA `18c067fe507d4776a7cb942b9c3eba96d81a0d4a`).
+- 착수 기준 main: `2694ab2c2b99d6f0303aef51bcd1e72a229eed4d` (#571·#573 및 #578 종료 기록 병합 후). 구현 브랜치: `codex/W-20261016-015-bundle4-powersoft-shure`.
+- 범위: Powersoft Port Map 18종, Shure Port Map 12종(그중 내부 `y` 사용 지도 10종). `#573`가 병합되어 제품 데이터 수정 선행 조건 충족. W-016 가운데 줄 기준을 공통 검토에 적용하되, BRC-AM7·SRG-A40 별도 조정은 세션 D 범위이므로 제외.
+- 시작 수치 확인: Powersoft 18/18 내부 `y`; Shure 12개 중 10개 내부 `y`. 번호·이름·설명·I/O·사진·렌더러 변경 금지. 760px·390px 전후 캡처, 예외 기록, 되감기 함수, 전체 검사·verify-pages 및 파생 산출물 재생성 예정.
+- 상태: REVIEW 준비 — 기본 90장 외에 수정 후 캡처 90장 및 30개 제품 전후 비교 갤러리 구성. PR·CI·Work 병합 순서 확인·병합·배포·공개 확인은 미완료.
+
+### W-015 묶음 4 최신 main 통합·검증 (2026-10-16)
+
+- `origin/main`이 W-017 `8845d808` 이후 W-013 #582 `0d7bd46a`까지 진행되어 이를 작업 브랜치에 fast-forward 통합. 이후 snapshot(285 catalog/282 detail), search index(704524 bytes), readable catalog 재생성.
+- Powersoft 18종·Shure 12종 총 30개 지도 수정. 시작 internal `y` 198개 중 185개를 사진 바깥으로 이동, 내부 예외 13개 유지. via 3개: `slxd1-plus` #1, `ulxd1` #1·#2. ULXD1 #1 경로를 TA4M 소켓을 지나지 않도록 `y=1140`으로 조정.
+- 예외 기록 `Work/기록/W-20261016-015-예외.md`에 가운데 단자 및 기존 `y` 유지 사유와 via 좌표 추가. W-017 규칙에 맞춰 번호는 사진 밖, via 종점 높이에 배치.
+- 전후 760px·390px·390px 우측 캡처를 30개 제품 전부 보관. 좌우 비교 갤러리 `Work/기록/W-20261016-015-bundle4-preview/index.html`; ULXD1 760px/390px를 눈으로 재확인.
+- 전체 직렬 테스트 `node --test --test-concurrency=1 --test-reporter=tap tests/*.test.mjs`: 790개 중 789 통과, 0 실패, skip 1. 병렬 `npm.cmd test`는 Windows 임시 파일 EPERM 재현이 있어 직렬 전체 실행으로 검사.
+- `node beta/build-search-index.mjs --check` 통과(704524 bytes); `node beta/verify-pages.mjs` 통과(285 제품, 282 상세, 515 검토 이미지, 163 업로드 PDF); 전체 테스트에서 잠긴 PDF 12건 유지; `git diff --check HEAD` 통과.
+- 이력 회귀 조정: B4 대상의 과거 `portMap`을 최신 Sony 검증 집계 전에 복원. W-001 이력 대상이 아닌 제품은 Raw/객체 identity 그대로 통과. UA864A 과거 검사는 W-017 가장자리 배치 규칙에 맞춰 정리.
+- 기준 main 통합 후 재검증까지 완료. 다음: 의도한 파일만 커밋·PR, CI 초록 확인, Work에 비교 갤러리 경로와 함께 병합 순서 요청. Work 승인 전 병합 금지.
