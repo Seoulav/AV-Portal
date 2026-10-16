@@ -1,5 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeW20261016_015B4Product} from './w20261016-015-b4-history.mjs';
 
 // Restore only approved W-004 photo metadata and UA864A map coordinates.
 // All other current fields remain visible to the historical hash assertions.
@@ -7,6 +8,7 @@ const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261006-004-pri
 const hash=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
 export const w06004Slugs=new Set(Object.keys(fixture));
 export function beforeW06004Product(current,slug) {
+  current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   if(!w06004Slugs.has(slug))return current;
   const {prior,approved}=fixture[slug];
   for(const field of Object.keys(approved)) {

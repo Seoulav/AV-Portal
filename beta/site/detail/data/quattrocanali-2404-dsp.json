@@ -717,8 +717,7 @@
         "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 150,
         "x2": 345,
-        "y": 120,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 2,
@@ -726,8 +725,7 @@
         "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 830,
         "x2": 1170,
-        "y": 80,
-        "side": "bottom"
+        "side": "top"
       },
       {
         "n": 3,
@@ -735,7 +733,6 @@
         "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
         "x1": 1240,
         "x2": 1490,
-        "y": 82,
         "side": "top"
       },
       {
@@ -744,7 +741,6 @@
         "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
         "x1": 1240,
         "x2": 1490,
-        "y": 151,
         "side": "bottom"
       },
       {
@@ -753,8 +749,7 @@
         "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 1510,
         "x2": 1580,
-        "y": 64,
-        "side": "bottom"
+        "side": "top"
       },
       {
         "n": 6,
@@ -762,8 +757,7 @@
         "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 1710,
         "x2": 1780,
-        "y": 112,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 7,
@@ -771,14 +765,17 @@
         "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 1800,
         "x2": 1950,
-        "y": 65,
-        "side": "bottom"
+        "side": "top"
       }
     ],
     "measuredImage": {
       "file": "quattrocanali-2404-dsp-diagram.webp",
       "width": 2060,
       "height": 210
+    },
+    "crop": {
+      "top": 24,
+      "bottom": 30
     }
   }
 }
