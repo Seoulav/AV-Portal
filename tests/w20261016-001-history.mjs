@@ -36,6 +36,7 @@ export function beforeW20261016_001Styles(css) {
     css=css.slice(0,start)+css.slice(end+laterEnd.length);
   }
   const addition='\n.inogeni-flow .inogeni-control-line { fill: none; stroke: #686580; stroke-width: 2; stroke-dasharray: 7 6; }\n';
-  if (!css.endsWith(addition)) throw new Error('W-001 renderer style changed');
-  return css.slice(0,-addition.length);
+  const normalized = css.trimEnd();
+  if (!normalized.endsWith(addition.trimEnd())) throw new Error('W-001 renderer style changed');
+  return normalized.slice(0,-addition.trimEnd().length);
 }

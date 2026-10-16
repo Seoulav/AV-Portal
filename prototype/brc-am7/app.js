@@ -1,7 +1,7 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-011-video-layer-plan';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-011-video-layer-plan';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-011-review2';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-011-review2';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
@@ -108,19 +108,12 @@ function renderVideoLayerPlan(plan, currentSlug) {
   section.append(element('p', 'video-layer-intro', current.headline));
 
   const metrics = element('div', 'video-layer-metrics');
-  const metricRows = current.resourceScope === 'device'
-    ? [
-        ['4K60 PGM 출력 구성 최대', `${current.maxPgm4kScreens}개`],
-        ['한 화면에 배정 시 최대', `${current.maxMixing4kPerScreen} 믹싱 (${current.maxSplit4kPerScreen} 분할)`],
-        ['장비 전체 레이어 자원', `${current.totalMixing4k} 믹싱 (${current.totalSplit4k} 분할)`],
-        ['미사용 출력의 Aux 최대', `${current.maxAuxOutputs}개 · 최대 1080p60`]
-      ]
-    : [
-        ['4K60 PGM 화면 구성 최대', `${current.maxPgm4kScreens}개`],
-        ['화면당 최대 · Mixer', `${current.screenModes.find(mode => mode.id === 'mixer')?.mixing4kPerScreen ?? current.maxMixing4kPerScreen} 믹싱 (${current.screenModes.find(mode => mode.id === 'mixer')?.split4kPerScreen ?? current.maxSplit4kPerScreen} 분할)`],
-        ['장비 전체 4K 레이어', `${current.totalMixing4k} 믹싱 (${current.totalSplit4k} 분할)`],
-        ['Aux 출력 최대', `${current.maxAuxOutputs}개 · 최대 1080p60`]
-      ];
+  const metricRows = [
+    ['화면 최대 수', `${current.maxPgm4kScreens}개`],
+    ['화면 최대 때 화면당 레이어', `${current.mixing4kPerScreenAtMaxScreens}개 믹싱 또는 ${current.split4kPerScreenAtMaxScreens}개 분할`],
+    ['한 화면만 쓸 때 최대 레이어', `${current.maxMixing4kPerScreenOneScreen}개 믹싱 또는 ${current.maxSplit4kPerScreenOneScreen}개 분할`],
+    ['장비 전체 레이어', `${current.totalMixing4k}개 믹싱 또는 ${current.totalSplit4k}개 분할`]
+  ];
   for (const [label, value] of metricRows) {
     const card = element('div', 'video-layer-metric');
     card.append(element('small', '', label), element('strong', '', value));
@@ -129,34 +122,42 @@ function renderVideoLayerPlan(plan, currentSlug) {
   section.append(metrics);
 
   const modes = element('div', 'video-layer-modes');
-  modes.append(element('h3', '', current.resourceScope === 'device' ? '레이어 자원 배분' : '동작 모드별 화면 구성'));
+  modes.append(element('h3', '', current.resourceScope === 'device' ? '화면별 레이어 배분 예' : '동작 모드별 화면 구성'));
   for (const mode of current.screenModes) {
     const card = element('article', 'video-layer-mode');
     card.append(element('h4', '', mode.label));
     card.append(element('p', '', mode.layout));
     const allocation = current.resourceScope === 'device'
-      ? `장비 전체 ${mode.totalMixing4k} 믹싱 / ${mode.totalSplit4k} 분할 자원을 PGM Screen에 배분합니다. 한 화면에 전부 배정하면 최대 ${mode.mixing4kPerScreen} 믹싱 / ${mode.split4kPerScreen} 분할이며, 여러 화면으로 나누면 화면별 수는 배분에 따라 달라집니다.`
-      : `4K60 PGM 화면 ${mode.pgmScreens}개 · 화면당 최대 ${mode.mixing4kPerScreen} 믹싱 / ${mode.split4kPerScreen} 분할 레이어 · 모드 전체 ${mode.totalMixing4k} 믹싱 / ${mode.totalSplit4k} 분할`;
+      ? `화면 ${mode.pgmScreens}개를 만들 때 화면마다 믹싱 ${mode.mixing4kPerScreen}개 또는 분할 ${mode.split4kPerScreen}개를 배정합니다. 장비 전체에는 믹싱 ${mode.totalMixing4k}개 또는 분할 ${mode.totalSplit4k}개가 있습니다.`
+      : `프로그램 화면 ${mode.pgmScreens}개 · 화면마다 믹싱 ${mode.mixing4kPerScreen}개 또는 분할 ${mode.split4kPerScreen}개 · 전체 믹싱 ${mode.totalMixing4k}개 또는 분할 ${mode.totalSplit4k}개`;
     card.append(element('p', '', allocation));
-    if (mode.outputsPerScreen) card.append(element('p', '', `화면당 출력 ${mode.outputsPerScreen}개`));
-    if (mode.auxOutputs) card.append(element('p', '', `이 모드의 Aux 출력 ${mode.auxOutputs}개`));
+    if (mode.outputsPerScreen > 1) card.append(element('p', '', `이 화면은 출력 ${mode.outputsPerScreen}개를 이어 만듭니다.`));
+    card.append(element('p', '', `이 구성의 보조 화면 ${mode.auxOutputs}개`));
     modes.append(card);
   }
+  if (current.allocationExamples.length) modes.append(element('p', 'video-layer-allocation-examples', `매뉴얼의 화면별 배분 예: ${current.allocationExamples.join(' · ')}`));
   section.append(modes);
+  section.append(element('p', 'video-layer-explainer', '믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 레이어 수를 2배로 구성합니다. 프로그램 화면은 메인 출력 화면이고, 보조 화면은 별도 보조 출력입니다.'));
 
   const comparison = element('div', 'video-layer-comparison');
-  comparison.append(element('h3', '', '같은 4K 구성의 비교 자료'));
+  comparison.append(element('h3', '', '다른 장비의 참고 정보'));
   const compareGrid = element('div', 'video-layer-comparison-grid');
   const xdm = element('article', 'video-layer-compare-card');
   xdm.append(element('strong', '', plan.comparison.xdm.model));
-  xdm.append(element('p', '', `RTCOM 원본에는 ${plan.comparison.xdm.outputPorts}개 HDMI 출력과 다음 조건이 기록돼 있습니다.`));
-  xdm.append(element('p', '', plan.comparison.xdm.sourceCondition));
-  xdm.append(element('p', '', 'RTCOM 원본은 이 구성의 레이어 최대 개수를 명시하지 않습니다.'));
+  xdm.append(element('p', '', plan.comparison.xdm.summary));
+  const original = element('details', 'video-layer-source-details');
+  original.append(element('summary', '', 'RTCOM 원문 보기'), element('p', '', plan.comparison.xdm.sourceCondition));
+  xdm.append(original);
   const aquilon = element('article', 'video-layer-compare-card');
   aquilon.append(element('strong', '', 'Aquilon RS'));
   aquilon.append(element('p', '', plan.comparison.aquilon));
   compareGrid.append(xdm, aquilon);
   comparison.append(compareGrid);
+  if (current.series === 'Alta 4K') {
+    const twoByTwo = element('article', 'video-layer-compare-card video-layer-two-by-two');
+    twoByTwo.append(element('strong', '', '2×2 격자 화면 비교 · 출력 4개 가정'), element('p', '', plan.comparison.twoByTwo[current.slug]));
+    comparison.append(twoByTwo);
+  }
   section.append(comparison);
 
   const tableTitle = element('h3', '', 'Midra 4K · Alta 4K 모델 비교');
@@ -168,7 +169,7 @@ function renderVideoLayerPlan(plan, currentSlug) {
   const table = element('table');
   const head = element('thead');
   const header = element('tr');
-  for (const label of ['모델', '시리즈', '4K60 PGM 화면 구성 최대', '한 화면에 배정 시 최대 레이어', '장비 전체 레이어 자원', 'Aux 출력 최대']) {
+  for (const label of ['모델', '화면 최대 수', '화면 최대 때 화면당 레이어', '장비 전체 레이어', '보조 화면(화면 최대 시)', '한 화면만 쓸 때 최대 레이어', '시리즈']) {
     const cell = element('th', '', label); cell.scope = 'col'; header.append(cell);
   }
   head.append(header); table.append(head);
@@ -177,11 +178,12 @@ function renderVideoLayerPlan(plan, currentSlug) {
     const row = element('tr', rowData.slug === currentSlug ? 'video-layer-current' : '');
     if (rowData.slug === currentSlug) row.setAttribute('aria-current', 'true');
     row.append(element('th', '', rowData.model));
-    row.append(element('td', '', rowData.series));
     row.append(element('td', '', `${rowData.maxPgm4kScreens}개`));
-    row.append(element('td', '', `${rowData.maxMixing4kPerScreen} 믹싱 (${rowData.maxSplit4kPerScreen} 분할)`));
-    row.append(element('td', '', `${rowData.totalMixing4k} 믹싱 (${rowData.totalSplit4k} 분할)`));
-    row.append(element('td', '', `${rowData.maxAuxOutputs}개`));
+    row.append(element('td', '', `${rowData.mixing4kPerScreenAtMaxScreens}개 믹싱 또는 ${rowData.split4kPerScreenAtMaxScreens}개 분할`));
+    row.append(element('td', '', `${rowData.totalMixing4k}개 믹싱 또는 ${rowData.totalSplit4k}개 분할`));
+    row.append(element('td', '', `${rowData.auxOutputsAtMaxScreens}개`));
+    row.append(element('td', '', `${rowData.maxMixing4kPerScreenOneScreen}개 믹싱 또는 ${rowData.maxSplit4kPerScreenOneScreen}개 분할`));
+    row.append(element('td', '', rowData.series));
     body.append(row);
   }
   table.append(body); wrap.append(table); section.append(wrap);
@@ -189,7 +191,7 @@ function renderVideoLayerPlan(plan, currentSlug) {
   const notes = element('ul', 'video-layer-notes');
   for (const note of plan.notes) notes.append(element('li', '', note));
   section.append(notes);
-  section.append(element('small', 'video-layer-source-note', '근거: Midra 4K User Manual, 인쇄 41–44쪽; Alta 4K User Manual, 인쇄 25·41–43·46쪽; 모델별 공식 Technical Datasheet 5–6쪽. 정확한 원문 인용과 쪽수는 작업 PR 본문에 기록합니다.'));
+  section.append(element('small', 'video-layer-source-note', '근거: Midra 4K User Manual 인쇄 25·41–44쪽; Alta 4K User Manual 인쇄 25·42–43·46·50·52쪽; 모델별 공식 Technical Datasheet 1·5–6쪽.'));
   return section;
 }
 
