@@ -23,8 +23,16 @@ test('W-015 group 1-2 changes only nine approved maps and preserves marker meani
     beforeY += record.prior.items.filter(item=>item.y!==undefined).length;
     afterY += current.portMap.items.filter(item=>item.y!==undefined).length;
     via += current.portMap.items.filter(item=>item.via).length;
+    const width = Number(current.images.find(image => image.role === current.portMap.image)?.resolution.match(/^\d+/)?.[0]);
+    assert.ok(width > 0, slug + ': photo width');
+    for (const item of current.portMap.items.filter(marker => marker.via)) {
+      const horizontal = ['left','right'].includes(item.side)
+        ? Math.abs(item.x - item.via.at(-1)[0])
+        : Math.abs((item.x1 + item.x2) / 2 - item.via[0][0]);
+      assert.ok(horizontal <= width / 4, slug + ': marker ' + item.n + ' has a long horizontal route');
+    }
   }
-  assert.deepEqual([markers,beforeY,afterY,via],[105,105,0,14]);
+  assert.deepEqual([markers,beforeY,afterY,via],[105,105,13,10]);
 });
 
 test('W-015 group 1-2 inverse rejects map drift and exposes other current regressions', () => {
