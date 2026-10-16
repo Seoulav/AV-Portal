@@ -1,3 +1,4 @@
+import { beforeW16004Uploads } from './w16004-history.mjs';
 import { beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
 import { beforeW009Uploads } from './w009-history.mjs';
@@ -46,7 +47,7 @@ test('BEHX-H evidence update leaves other product data and uploaded documents in
   };
   for (const [field, expected] of Object.entries(hashes)) assert.equal(sha(beforeW006Product(beforeW13007BehhlGuideProduct(product, 'lh43behhlbfxkr'), 'lh43behhlbfxkr')[field]), expected, field);
   const manifest = read('beta/site/docs/manifest.json');
-  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(manifest.uploads)))));
+  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
   assert.equal(withoutW006Uploads(withoutW011Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 110);
   assert.equal(manifest.uploads.filter(item => item.locked === true).length, 12);
 });

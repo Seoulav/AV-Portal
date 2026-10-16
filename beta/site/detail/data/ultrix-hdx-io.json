@@ -197,11 +197,11 @@
     {
       "group": "AUX",
       "name": "AUX C 포트 기능",
-      "value": "Dante I/O (라이선스 시)",
+      "value": "Dante I/O (라이선스 시, 기존) · Ultristream MV 출력 또는 Dante I/O (브로슈어)",
       "unit": "",
-      "condition": "",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "기존 제품 사양은 AUX C를 Dante I/O로 표기; 한국어 번역 브로슈어 26쪽은 AUX C·D 모두 Ultristream MV 출력 또는 Dante I/O로 표기. 판본 차이 미확인.",
+      "source": "P, B",
+      "verification": "CONFLICTED"
     },
     {
       "group": "AUX",
@@ -326,6 +326,12 @@
       "name": "제조사 공식 Ultrix User Guide",
       "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Ultrix 제품군 브로슈어(한국어 번역판)",
+      "url": "",
+      "scope": "26쪽 HDX-IO AUX C·D 커넥터 기능 대조"
     }
   ],
   "issues": [],

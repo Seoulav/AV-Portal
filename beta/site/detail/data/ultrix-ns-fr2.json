@@ -220,11 +220,11 @@
     {
       "group": "Capacity",
       "name": "최대 UHD 게이트박스 수",
-      "value": "12입력/12출력",
+      "value": "12입력/12출력 (기존) · 15입력/15출력 (브로슈어)",
       "unit": "",
-      "condition": "HDX/MODX I/O 완전 장착 시",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "기존 HDX/MODX I/O 완전 장착 시 12입력/12출력; 한국어 번역 브로슈어 25쪽 2RU 표는 15입력/15출력. 판본 차이 미확인.",
+      "source": "P, B",
+      "verification": "CONFLICTED"
     },
     {
       "group": "Capacity",
@@ -238,11 +238,11 @@
     {
       "group": "Capacity",
       "name": "최대 UHD 입력 프레임 동기화 수",
-      "value": "27",
+      "value": "27 (기존) · 51 (브로슈어)",
       "unit": "",
-      "condition": "HDX 또는 MODX I/O 사용 시",
-      "source": "P",
-      "verification": "FOUND"
+      "condition": "기존 HDX 또는 MODX I/O 사용 시 27; 한국어 번역 브로슈어 25쪽 2RU 표는 51. 판본 차이 미확인.",
+      "source": "P, B",
+      "verification": "CONFLICTED"
     },
     {
       "group": "Capacity",
@@ -463,6 +463,12 @@
       "name": "제조사 공식 Ultrix Installation Guide",
       "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Installation%20Guides/Ultrix%20Installation%20Guide%20(2101DR-003).pdf",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Ultrix 제품군 브로슈어(한국어 번역판)",
+      "url": "",
+      "scope": "25쪽 2RU 프레임 UHD 게이트박스·입력 프레임 동기화 수 대조"
     }
   ],
   "issues": [],

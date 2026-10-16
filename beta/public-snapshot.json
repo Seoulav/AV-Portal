@@ -1484,9 +1484,9 @@
       "io": 2
     },
     "ultriscape": {
-      "sha256": "851F2449D8190430D0A6F5687C95FBC62AE3A548000AF9C760AF07E54BE8B43C",
+      "sha256": "245DCBEA04DB1A902E24D9809C585135093EE5B8F4DC5B976E0632628D4FA764",
       "features": 4,
-      "specifications": 5,
+      "specifications": 7,
       "io": 0
     },
     "ultrisync-18": {
@@ -1502,13 +1502,13 @@
       "io": 4
     },
     "ultrix-hdx-io": {
-      "sha256": "5D2CB5226FC5EFFC1EB8C4464430945EC5AC7E4F44C432E634607320F2C4CDEF",
+      "sha256": "3E47C2D731F98B9653F3FD6A9CFC893CF28A82039AA6A88D686EDBB5A592F831",
       "features": 6,
       "specifications": 15,
       "io": 4
     },
     "ultrix-ns-fr2": {
-      "sha256": "7D73CE2BAD2107CE75821AEB1062B8A9D846824F75600AC287E1329ADDB04D7E",
+      "sha256": "FF4B3CFE05DEE844960FA8761B9B6082B1D5506F53FA51BAC0EE6B9B36450E57",
       "features": 5,
       "specifications": 28,
       "io": 6
