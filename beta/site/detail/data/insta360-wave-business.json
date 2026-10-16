@@ -80,7 +80,7 @@
     },
     {
       "text": "Video Bar(Insta360 Connect) 오디오 캐스케이딩 연동 지원",
-      "source": "M, U"
+      "source": "M, B, U"
     },
     {
       "text": "기업 시스템 연동용 API 및 원격 기기 관리",
@@ -89,6 +89,18 @@
     {
       "text": "현재 Connect 1대와 Wave 1대 캐스케이드 구성, 지정 펌웨어 필요",
       "source": "M"
+    },
+    {
+      "text": "테이블 마운트 기본 구성품 포함",
+      "source": "B"
+    },
+    {
+      "text": "온디바이스 AI 텍스트 변환",
+      "source": "B"
+    },
+    {
+      "text": "역할 기반 접근 제어 및 관리자 기능 설정",
+      "source": "B"
     }
   ],
   "specifications": [
@@ -259,8 +271,8 @@
       "name": "Connect 결합 수음 범위",
       "value": "최대 20",
       "unit": "m",
-      "condition": "제품 개요 페이지 표기. 상세 연결 장은 Wave 5m·Connect 10m를 별도 표기",
-      "source": "M",
+      "condition": "공식 제품 개요 및 사용자 제공 브로슈어 7·9쪽은 최대 20m 표기. 상세 연결 장은 Wave 5m·Connect 10m를 별도 표기",
+      "source": "M, B",
       "verification": "CONFLICTED"
     }
   ],
@@ -320,6 +332,12 @@
       "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
       "url": "",
       "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Wave for Business 제품 브로슈어(한국어, 2026-10-16)",
+      "url": "",
+      "scope": "19쪽; Business·Standard 비교(2쪽), Wave x Connect(7쪽·9쪽), 관리·AI·구성품(10–19쪽)"
     }
   ],
   "issues": [
@@ -327,7 +345,7 @@
       "code": "C1",
       "status": "CONFLICTED",
       "title": "Connect 결합 수음 범위",
-      "detail": "한국어 제품 개요는 Wave x Connect 결합 시 최대 20m라고 표기합니다. 상세 연결 장은 Wave 5m와 Connect 10m를 각각 제시합니다. 두 원문 수치를 병기하고 결합 범위를 단일값으로 환산하지 않습니다."
+      "detail": "한국어 제품 개요 및 사용자 제공 Wave for Business 브로슈어 7·9쪽은 Wave x Connect 결합 시 최대 20m라고 표기합니다. 상세 연결 장은 Wave 5m와 Connect 10m를 별도로 제시합니다. 각 원문 수치와 근거를 병기하고 결합 범위를 단일값으로 환산하지 않습니다."
     },
     {
       "code": "C2",

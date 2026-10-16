@@ -1740,9 +1740,21 @@
     },
     {
       "slug": "insta360-connect",
+      "file": "manuals/insta360-connect-brochure-20261016.pdf",
+      "kind": "reference",
+      "title": "Insta360 Connect 제품 브로슈어(한국어 · 8쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "insta360-connect",
       "file": "manuals/insta360-conference-line-collection-20260729.pdf",
       "kind": "reference",
       "title": "Insta360 Conference Line Product Collection 브로슈어 (2026-07-29 · 사용자 제공)"
+    },
+    {
+      "slug": "insta360-link-2",
+      "file": "manuals/insta360-link-2-brochure-20261016.pdf",
+      "kind": "reference",
+      "title": "Insta360 Link 2 제품 브로슈어(한국어 · 8쪽 · 사용자 제공)"
     },
     {
       "slug": "insta360-link-2",
@@ -1752,9 +1764,21 @@
     },
     {
       "slug": "insta360-wave-business",
+      "file": "manuals/insta360-wave-for-business-brochure-20261016.pdf",
+      "kind": "reference",
+      "title": "Insta360 Wave for Business 제품 브로슈어(한국어 · 19쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "insta360-wave-business",
       "file": "manuals/insta360-conference-line-collection-20260729.pdf",
       "kind": "reference",
       "title": "Insta360 Conference Line Product Collection 브로슈어 (2026-07-29 · 사용자 제공)"
+    },
+    {
+      "slug": "insta360-wave",
+      "file": "manuals/insta360-wave-brochure-20261016.pdf",
+      "kind": "reference",
+      "title": "Insta360 Wave 제품 브로슈어(한국어 · 10쪽 · 사용자 제공)"
     },
     {
       "slug": "insta360-wave",

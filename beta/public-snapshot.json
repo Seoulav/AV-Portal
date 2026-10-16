@@ -836,27 +836,27 @@
       "io": 0
     },
     "insta360-connect": {
-      "sha256": "83284A59541BD67804F77750C481A9B3A687218CD3A1CF5519B29517970577F0",
-      "features": 7,
-      "specifications": 19,
+      "sha256": "1E95EBFC6FA2AB69C42AB44EBD633F2BBF6B3DFBA7B4BDFDF3E1CA21C53FA678",
+      "features": 11,
+      "specifications": 20,
       "io": 6
     },
     "insta360-link-2": {
-      "sha256": "97C3B86E22B3D8611158982DB33F9ECF8AEFAA86A0F4951729789086B5D06F8A",
-      "features": 5,
+      "sha256": "01568D252442D458EB6B2710BEECC2C01F1F79F393528F44E5F20CC89A987E40",
+      "features": 6,
       "specifications": 10,
       "io": 1
     },
     "insta360-wave-business": {
-      "sha256": "A1C5AF1846CE07C6866E8BEADAA0B5EE1F4BED57B4A46DC3660DE8E298E3A566",
-      "features": 6,
+      "sha256": "5E1F3F4CDA378873675699647FF29416048151F9432A6EDB852F1E9E714B12CE",
+      "features": 9,
       "specifications": 19,
       "io": 1
     },
     "insta360-wave": {
-      "sha256": "7F31936A0B1EE0CCF68E65BCB31AE1BA4AA5AB3B41CFC2DB542B34E1E61E85C8",
-      "features": 6,
-      "specifications": 16,
+      "sha256": "645B9204535D6CE686D1CB188573FE09956CEAE8E4C7331043F814DEB363DFE4",
+      "features": 8,
+      "specifications": 20,
       "io": 1
     },
     "ki-pro-go2": {

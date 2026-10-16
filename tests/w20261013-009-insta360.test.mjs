@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
+import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
 import { beforeW009Catalog, beforeW009DetailFiles, beforeW009Snapshot, beforeW009Uploads } from './w009-history.mjs';
 import { test } from 'node:test';
 import { allowedHostsFor, isAllowedHost } from '../beta/manufacturer-hosts.mjs';
@@ -52,7 +53,7 @@ test('W-009 stores the conference collection brochure for viewing and downloadin
     assert.equal(userReferenceLinkFor(item), `./${file}`);
     const entry = manifest.uploads.find(upload => upload.slug === slug && upload.file === file && upload.kind === 'reference');
     assert.ok(entry);
-    const [doc] = uploadedDocumentsFor(slug, manifest);
+    const doc = uploadedDocumentsFor(slug, manifest).find(item => item.action.file === '../' + file);
     assert.equal(doc.action.kind, 'local');
     assert.equal(doc.action.file, `../${file}`);
   }
@@ -70,6 +71,6 @@ test('W-009 history reverse removes only the four new products and their brochur
   const snapshot = await readJson('../public-snapshot.json');
   assert.equal(beforeW009Catalog(catalog).length, catalog.length - 4);
   assert.equal(beforeW009DetailFiles(detailFiles).length, detailFiles.length - 4);
-  assert.equal(beforeW009Uploads(manifest.uploads).length, manifest.uploads.length - 4);
+  assert.equal(beforeW009Uploads(beforeW20261016_003Uploads(manifest.uploads)).length, manifest.uploads.length - 8);
   assert.equal(beforeW009Snapshot(snapshot).catalog.count, snapshot.catalog.count - 4);
 });

@@ -89,6 +89,14 @@
     {
       "text": "Video Bar(Insta360 Connect) 연동 불가",
       "source": "U"
+    },
+    {
+      "text": "32GB 내장 저장 공간 및 MP3 최대 1,000시간 저장",
+      "source": "B"
+    },
+    {
+      "text": "복수 Wave 무선 연동 및 수음 범위 확장(OTA 제공 예정)",
+      "source": "B"
     }
   ],
   "specifications": [
@@ -108,7 +116,7 @@
       "unit": "mm",
       "condition": "",
       "source": "M",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
     },
     {
       "group": "Physical",
@@ -232,9 +240,45 @@
       "name": "컴퓨터 OS",
       "value": "Windows 10 이상, macOS 12 이상",
       "unit": "",
-      "condition": "",
+      "condition": "공식 사양 페이지의 Windows 10 이상·macOS 12 이상; 사용자 제공 브로슈어 10쪽은 Windows 7 이상·macOS 10 이상으로 표기",
       "source": "M",
-      "verification": "FOUND"
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "Physical",
+      "name": "크기",
+      "value": "52.8",
+      "unit": "mm",
+      "condition": "사용자 제공 제품 브로슈어 10쪽 표기 \"지름: 52.8mm\"; 도면·각주에 측정 부위 차이 미기재",
+      "source": "B",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "System",
+      "name": "컴퓨터 OS",
+      "value": "Windows 7 이상, macOS 10 이상",
+      "unit": "",
+      "condition": "사용자 제공 제품 브로슈어 10쪽; PDF 메타데이터 생성일 2025-10-13, 본문 발행일·판 미표기",
+      "source": "B",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "System",
+      "name": "스마트폰·태블릿 OS",
+      "value": "Android 10 이상, iOS 12 이상, iPadOS 12 이상",
+      "unit": "",
+      "condition": "공식 Wave 한국어 제품 사양 페이지; 사용자 제공 브로슈어 10쪽은 Android 8.0 이상·iOS 9 이상·iPadOS 9 이상으로 표기",
+      "source": "M",
+      "verification": "CONFLICTED"
+    },
+    {
+      "group": "System",
+      "name": "스마트폰·태블릿 OS",
+      "value": "Android 8.0 이상, iOS 9 이상, iPadOS 9 이상",
+      "unit": "",
+      "condition": "사용자 제공 제품 브로슈어 10쪽; PDF 메타데이터 생성일 2025-10-13, 본문 발행일·판 미표기",
+      "source": "B",
+      "verification": "CONFLICTED"
     }
   ],
   "io": [
@@ -281,6 +325,12 @@
       "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
       "url": "",
       "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Wave 제품 브로슈어(한국어, 2026-10-16)",
+      "url": "",
+      "scope": "10쪽; 기능·구성품·사양(1–10쪽); 지름·컴퓨터 OS 충돌은 10쪽; Video Bar 비호환 여부는 명시하지 않음"
     }
   ],
   "issues": [
@@ -295,6 +345,24 @@
       "status": "REVIEW REQUIRED",
       "title": "Wave 모델 코드",
       "detail": "일반 Wave 공식 사양 페이지와 Wave for Business 공식 사양 페이지가 같은 CINSABCA 코드를 표기합니다. 공식 표기를 그대로 보존했습니다."
+    },
+    {
+      "code": "C3",
+      "status": "CONFLICTED",
+      "title": "본체 지름",
+      "detail": "공식 Wave 제품 사양 페이지는 본체 지름 Ø64.3mm를 표기하고, 사용자 제공 제품 브로슈어 10쪽은 \"지름: 52.8mm\"로 표기합니다. 브로슈어 10쪽의 외형 도면·각주에는 측정 부위를 다르게 한 설명이 없어 차이를 해소하지 않았습니다. 브로슈어 PDF 메타데이터 생성일은 2025-10-13이며 본문 발행일·판 표기는 확인되지 않았습니다."
+    },
+    {
+      "code": "C4",
+      "status": "CONFLICTED",
+      "title": "컴퓨터 OS 요구 사항",
+      "detail": "기존 공식 한국어 제품 사양 페이지는 Windows 10 이상·macOS 12 이상을 표기하고, 사용자 제공 제품 브로슈어 10쪽은 Windows 7 이상·macOS 10 이상을 표기합니다. 기존 공식 사양값을 유지하고 브로슈어 값을 병기했습니다. PDF 메타데이터 생성일은 2025-10-13이며 본문 발행일·판 표기는 확인되지 않았습니다."
+    },
+    {
+      "code": "C5",
+      "status": "CONFLICTED",
+      "title": "스마트폰·태블릿 OS 요구 사항",
+      "detail": "공식 Wave 한국어 제품 사양 페이지는 Android 10 이상·iOS 12 이상·iPadOS 12 이상을 표기하고, 사용자 제공 제품 브로슈어 10쪽은 Android 8.0 이상·iOS 9 이상·iPadOS 9 이상을 표기합니다. 브로슈어 PDF 메타데이터 생성일은 2025-10-13이며 본문 발행일·판 표기는 확인되지 않았습니다."
     }
   ],
   "presentation": {

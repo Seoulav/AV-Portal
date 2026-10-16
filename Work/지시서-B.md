@@ -488,3 +488,15 @@
 - 공개 URL 비시각 확인: `detail/data/varia-sl50.json`, `detail/data/varia-sl80.json`, 두 상세 route 모두 HTTP 200. JSON에 후면 RJ-45 Ethernet / PoE(802.3af) 각 1개와 승인 좌표가 게시됨.
 - 공개 `varia-100`·`varia-80` 상세 JSON도 HTTP 200이고 `portMap` 없음 확인. 공식 모델별 QSG 후면 연결 도면은 찾았으나 그림을 직접 렌더해 시각 판독하지 못해 지도화는 보류.
 - CUA에서 사용 가능한 브라우저 surface가 없어서 시각 캡처는 생략하고 공개 JSON·HTML 응답으로 확인.
+
+## W-20261016-003 — Insta360 제품별 브로슈어 (2026-10-16)
+
+- 명세·인계서를 `origin/main` `6efb560164d905a1efd4c527b742018af871cbd4`에서 재확인. 브랜치 `codex/W-20261016-003-insta360-brochures`. 작업 시작 시 추적 변경은 없었고, 기존 stash 5건은 다른 작업 기록이어서 열거나 적용하지 않음.
+- [x] 사용자 제공 PDF 4건의 SHA-256·쪽수·잠금 확인: Connect 8쪽, Link 2 8쪽(본문 한국어), Wave 10쪽, Wave for Business 19쪽. 원본 해시 모두 명세와 일치하고 잠금 없음. 각 제품의 새 문서를 기존 64쪽 컬렉션 앞에 등록, 문서 제목에 한국어·쪽수·사용자 제공 표시.
+- [x] 첨부 이미지(1785×2526) 확인: `Insta360 Link 2 Pro | Link 2C Pro` 공동 소개 이미지. 일반 Link 2 사진으로 모델이 일치하지 않아 제품 사진에 등록하지 않음.
+- [x] 브로슈어 전문 대조: Connect 48MP 광각 카메라·8K Gallery 최대 8명·AI Resolution+·모드 및 설치 옵션, Link 2 오디오 모드 3종, Wave 32GB 저장·MP3 최대 1,000시간·다중 Wave OTA 예정, Wave for Business 기본 테이블 마운트·온디바이스 AI 전사·역할 기반 접근 제어 추가.
+- [x] WfB 브로슈어 2쪽(Business/Standard 비교)·7쪽(Wave x Connect)에서 WfB의 Connect 연동 확인. 9쪽은 결합 수음 최대 20m 표기. 일반 Wave 브로슈어에는 Video Bar 불가가 명시되지 않아 사용자 확인(2026-10-13) 근거는 유지.
+- [x] 일반 Wave 지름 및 데스크톱·모바일 OS 값을 공식 사양 페이지와 브로슈어 10쪽에서 대조, 두 쪽 값을 `CONFLICTED`로 나란히 기록. PDF 메타데이터 생성일 2025-10-13(본문 발행일/판 미표기). 측정 부위 차이는 도면/각주에서 확인되지 않아 추정하지 않음.
+- [x] 되감기 함수 `tests/w20261016-003-history.mjs`, 문서·충돌 테스트 `tests/w20261016-003-insta360.test.mjs` 작성. 타깃 테스트 3/3 통과. 검색 인덱스(702878 bytes)·공개 스냅샷(284 항목/281 상세) 재생성. `build-search-index --check`, feature wording(0 대상), `git diff --check`, `verify-pages`(284 장비/281 상세/508 이미지/147 PDF 업로드) 통과.
+- [ ] 전체 직렬 테스트, 잠금 PDF 12건 확인, 변경 파일 리뷰 및 브라우저 사용 가능 여부 확인.
+- [ ] 최신 `origin/main` 재통합 후 파생물 재생성·검증, PR/CI, 병합, Pages 배포·공개 문서/다운로드 SHA 확인.

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW15012Product, beforeW15012ImageSha } from './w15012-black-background-history.mjs';
+import { beforeW20261016_003Product } from './w20261016-003-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w15012-black-background-history.json', import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -14,7 +15,7 @@ test('W-012 historical inverse restores only approved photo fields and exposes o
     const current = read(slug);
     const core = structuredClone(current);
     delete core.images; delete core.imageStatuses;
-    assert.equal(sha(JSON.stringify(core)), record.priorCoreSha256, slug + ' protected fields');
+    assert.equal(sha(JSON.stringify(beforeW20261016_003Product(core, slug))), record.priorCoreSha256, slug + ' protected fields');
     const previous = beforeW15012Product(current, slug);
     assert.deepEqual(previous.images, record.priorImages);
     assert.deepEqual(previous.imageStatuses, record.priorImageStatuses);
