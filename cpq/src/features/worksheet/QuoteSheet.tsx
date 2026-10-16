@@ -513,8 +513,13 @@ export function QuoteSheet({
                     }
 
                     const rowCalc = calc?.rows.find((r) => r.rowId === row.rowId);
+                    // 단가가 없으면 '단가 미등록'이다 — 0으로 채우지 않는다(설계서 §5.6, B-20261016-06).
                     const materialText =
-                      rowCalc?.materialAmount !== undefined ? rowCalc.materialAmount.toFixed() : '미등록';
+                      rowCalc?.materialAmount !== undefined
+                        ? rowCalc.materialAmount.toFixed()
+                        : row.sellingUnitPrice === undefined
+                          ? '단가 미등록'
+                          : '미등록';
                     const laborText =
                       row.laborMode === 'not-applicable'
                         ? '해당없음'

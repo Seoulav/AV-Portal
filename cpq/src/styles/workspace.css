@@ -648,3 +648,12 @@
 .q-empty-main { min-height: 0; padding-block: 18px; }
 .q-empty-main .q-start-intro { padding: 0; }
 .q-empty-main .q-start-intro p { margin-top: 6px; }
+
+/* 가격표 (B-20261016-06) — 단추는 좁은 화면에서 줄바꿈한다. */
+.q-price-book { display: grid; gap: 8px; margin-bottom: 12px; }
+.q-price-book h3 { margin: 0; }
+.q-price-book p { margin: 0; }
+.q-price-book-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.q-price-book label { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-right: 12px; }
+.q-price-book select { max-width: 100%; }
+.q-price-book-result details { font-size: 12px; }

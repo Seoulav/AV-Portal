@@ -10,14 +10,15 @@
  *   - 영문+한글 혼용 — 줄바꿈 지점이 다르다
  *   - **셀 안에 줄바꿈이 든 것** — 고정 행 높이에서 잘릴 수 있다
  *
- * 가격은 `prices.json`에서 읽는다. 이것은 회사 판매가지만 결정 D3으로
- * 배포가 승인된 데이터이고, 테스트는 금액을 출력하지 않는다.
+ * 가격은 **가짜**다(`fakePrices.ts`, B-20261016-06). 공개 판매 단가
+ * `prices.json`을 저장소에서 뺐고, 실제 단가를 시험 자료로 옮기지 않는다.
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 import type { DecimalText, QuoteDocument, SheetRow } from '@/domain/quote/types';
 import { standardIndirectCosts } from './syntheticQuote';
+import { fakeApprovedPrices } from './fakePrices';
 
 const ROOT = resolve(__dirname, '../..');
 
@@ -33,9 +34,7 @@ function loadCatalog(): { products: CatalogProduct[]; prices: Record<string, { s
   const products = JSON.parse(
     readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8'),
   ).products as CatalogProduct[];
-  const prices = JSON.parse(
-    readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8'),
-  ).prices as Record<string, { sellingUnitPrice: DecimalText }>;
+  const prices = (fakeApprovedPrices() as { prices: unknown }).prices as Record<string, { sellingUnitPrice: DecimalText }>;
   return { products, prices };
 }
 

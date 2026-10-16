@@ -26,6 +26,7 @@ import { buildMultiSystemSalesGuideWorkbook } from '@/export/internal/guideWorkb
 import { internalLines } from '@/services/private-cost/calculate';
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
 import { scanCostLeak } from '../../tools/costLeakScan';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 다중/혼합 시스템 (독립 검토 P1-5 우선순위 1).
@@ -55,7 +56,7 @@ const allGuides = (): GuideTemplateSet =>
 
 /** 시스템마다 다른 프로파일을 줄 수 있게, picker 로 N개 시스템을 만든다. */
 function build(systemProfiles: readonly IndirectProfileId[]) {
-  const catalog = buildCatalog(j('products.json'), j('prices.json'));
+  const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
   const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
   const rest = catalog.products
     .filter(

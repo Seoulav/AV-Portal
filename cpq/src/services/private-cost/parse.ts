@@ -151,7 +151,7 @@ export interface ParseResult {
 }
 
 /** `"1,234,567"`, `"₩1,234"`, `"1 234"` → `"1234567"`. 숫자가 아니면 undefined. */
-function normalizeNumber(raw: string): string | undefined {
+export function normalizeNumber(raw: string): string | undefined {
   const cleaned = raw.replace(/[,\s₩$¥€]/g, '');
   if (cleaned === '') return undefined;
   if (!/^-?\d+(\.\d+)?$/.test(cleaned)) return undefined;
