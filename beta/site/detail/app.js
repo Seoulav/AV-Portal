@@ -153,11 +153,9 @@ function renderVideoLayerPlan(plan, currentSlug) {
   aquilon.append(element('p', '', plan.comparison.aquilon));
   compareGrid.append(xdm, aquilon);
   comparison.append(compareGrid);
-  if (current.series === 'Alta 4K') {
-    const twoByTwo = element('article', 'video-layer-compare-card video-layer-two-by-two');
-    twoByTwo.append(element('strong', '', '2×2 격자 화면 비교 · 출력 4개 가정'), element('p', '', plan.comparison.twoByTwo[current.slug]));
-    comparison.append(twoByTwo);
-  }
+  const twoByTwo = element('article', 'video-layer-compare-card video-layer-two-by-two');
+  twoByTwo.append(element('strong', '', '2×2 격자 화면 비교 · 출력 4개 가정'), element('p', '', plan.comparison.twoByTwo[current.slug]));
+  comparison.append(twoByTwo);
   section.append(comparison);
 
   const tableTitle = element('h3', '', 'Midra 4K · Alta 4K 모델 비교');

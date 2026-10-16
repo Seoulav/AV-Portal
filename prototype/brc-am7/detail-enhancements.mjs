@@ -227,7 +227,8 @@ export function validVideoLayerPlan(plan, product) {
   if (!record(comparison) || !keys(comparison, ['xdm', 'aquilon', 'twoByTwo']) || !record(comparison.xdm) ||
       !keys(comparison.xdm, ['model', 'outputPorts', 'summary', 'sourceCondition']) || comparison.xdm.model !== 'RTCOM XDM-WOS100' ||
       comparison.xdm.outputPorts !== 4 || !shortText(comparison.xdm.summary) || !shortText(comparison.xdm.sourceCondition) || !shortText(comparison.aquilon) ||
-      !record(comparison.twoByTwo) || !keys(comparison.twoByTwo, ['zenith100', 'zenith200']) || !shortText(comparison.twoByTwo.zenith100) || !shortText(comparison.twoByTwo.zenith200)) return false;
+      !record(comparison.twoByTwo) || !keys(comparison.twoByTwo, ['pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200']) ||
+      !Object.values(comparison.twoByTwo).every(value => text(value) && value.length <= 400)) return false;
   const evidence = plan.evidence;
   const validDocument = (doc, pages) => record(doc) && typeof doc.series === 'string' && shortText(doc.title) &&
     typeof doc.url === 'string' && doc.url.startsWith('https://') && /^[a-f0-9]{64}$/.test(doc.sha256) &&

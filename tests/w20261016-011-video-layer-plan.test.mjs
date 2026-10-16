@@ -64,8 +64,8 @@ test('Alta resources are system-wide and documentation gaps remain explicitly un
   assert.doesNotMatch(plan.notes.join(' '), /1080p Aux[^.]*미확인/);
   assert.deepEqual(z100.allocationExamples, ['1화면 3', '2화면 2+1', '3화면 1+1+1']);
   assert.deepEqual(z200.allocationExamples, ['1화면 4', '2화면 3+1 또는 2+2', '3화면 2+1+1', '4화면 1+1+1+1']);
-  assert.equal(readProduct('zenith-100').videoLayerPlan.comparison.twoByTwo.zenith100.includes('최대 3개'), true);
-  assert.equal(readProduct('zenith-200').videoLayerPlan.comparison.twoByTwo.zenith200.includes('믹싱 4개 또는 분할 8개'), true);
+  assert.equal(readProduct('zenith-100').videoLayerPlan.comparison.twoByTwo['zenith-100'].includes('최대 3개'), true);
+  assert.equal(readProduct('zenith-200').videoLayerPlan.comparison.twoByTwo['zenith-200'].includes('믹싱 4개 또는 분할 8개'), true);
 });
 
 test('background and foreground layers are described separately from the live layer counts and Aux behavior is accurate', () => {
@@ -87,6 +87,23 @@ test('XDM and Aquilon comparisons avoid unsupported layer-count claims for XDM',
   assert.match(plan.comparison.xdm.summary, /레이어 최대 개수는 명시하지 않습니다/);
   assert.equal(Object.hasOwn(plan.comparison.xdm, 'mixingLayers'), false);
   assert.match(plan.comparison.aquilon, /4.*8/);
+});
+
+test('the 2×2 comparison card has model-specific copy for every rendered product slug', () => {
+  const expected = {
+    'pulse-4k': /2×2.*PGM 출력.*2개.*수 없습니다.*Datasheet 5쪽/,
+    'eikos-4k': /2×2.*PGM 출력.*2개.*수 없습니다.*Datasheet 6쪽/,
+    'zenith-100': /최대 3개.*2×2.*구성할 수 없습니다.*25쪽/,
+    'zenith-200': /지원.*레이어 자원 4개.*믹싱 4개 또는 분할 8개.*Aquilon RS.*가정/
+  };
+  for (const slug of slugs) {
+    const copy = readProduct(slug).videoLayerPlan.comparison.twoByTwo[slug];
+    assert.equal(typeof copy, 'string', `${slug} has visible comparison text`);
+    assert.match(copy, expected[slug], slug);
+  }
+  const app = readFileSync(new URL('../beta/site/detail/app.js', import.meta.url), 'utf8');
+  assert.match(app, /plan\.comparison\.twoByTwo\[current\.slug\]/);
+  assert.match(app, /2×2 격자 화면 비교 · 출력 4개 가정/);
 });
 
 test('a product without a processor analysis retains existing detail behavior', () => {

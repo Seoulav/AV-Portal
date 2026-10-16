@@ -538,8 +538,10 @@
       },
       "aquilon": "Aquilon RS는 2×2 4K60 화면에 믹싱 4개 또는 분할 8개를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽).",
       "twoByTwo": {
-        "zenith100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 프로그램 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
-        "zenith200": "Zenith 200은 2×2 격자 화면을 지원합니다. 레이어 자원 4개를 한 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개를 쓸 수 있어 Aquilon RS와 같습니다(Alta 4K User Manual 42·52쪽)."
+        "pulse-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Pulse 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Pulse 4K Technical Datasheet 5쪽).",
+        "eikos-4k": "2×2 4K60 화면에는 출력 4개가 필요합니다. Eikos 4K는 PGM 출력이 최대 2개라 이 구성을 만들 수 없습니다(Midra 4K User Manual 42쪽; Eikos 4K Technical Datasheet 6쪽).",
+        "zenith-100": "2×2 격자에는 출력 4개가 필요합니다. Zenith 100은 PGM 출력이 최대 3개라 2×2 화면을 구성할 수 없습니다(Alta 4K User Manual 25쪽).",
+        "zenith-200": "Zenith 200은 2×2 격자 화면을 지원합니다(Alta 4K User Manual 52쪽). 레이어 자원 4개를 이 화면에 모두 배정하면 2×2 4K60 화면 1개에 믹싱 4개 또는 분할 8개입니다. Aquilon RS의 2×2 값과 같습니다. 가정: 자원 4개 전부를 한 화면에 배정합니다(Alta 4K User Manual 42·52쪽; Aquilon User Manual v6.2 66·79쪽)."
       }
     },
     "evidence": {

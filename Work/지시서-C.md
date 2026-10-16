@@ -283,3 +283,12 @@
 - [근거표](기록/W-20261016-002-C-근거표.md) · [Work 인계](기록/W-20261016-002-C-Work-인계.md)
 - PR [#539](https://github.com/Seoulav/AV-Portal/pull/539): Builder CI [run 38824947674](https://github.com/Seoulav/AV-Portal/actions/runs/38824947674) 통과. 최신 main `49725e5a`와 파생 산출물을 재확인한 뒤 병합 SHA `2c2dd179a90a617886687885ad0f0de0785aafb6`.
 - Pages [run 38825292302](https://github.com/Seoulav/AV-Portal/actions/runs/38825292302) 성공. 공개 `version.json` revision `2c2dd17`. [U-BRIDGE 3 공개 페이지](https://seoulav.github.io/AV-Portal/detail/?product=u-bridge-3) 1280px·390px HTTP 200, 두 시나리오 필수 케이블 알약 표시·한눈에 보기·사양 문구 확인, JS 오류 0. 390px은 기존 좌우 스크롤로 전체 그림 확인. 캡처는 로컬 `tmp/w16002-public-*`에 보관(비커밋).
+
+## W-20261016-011 · Work 재검토 2차 수정
+
+- Work가 확인한 빈 “2×2 격자 화면 비교 · 출력 4개 가정” 카드 원인은 제품 slug(`zenith-100` 등)와 데이터 키(`zenith100`) 불일치 및 Alta 전용 렌더 조건이었다.
+- [x] 네 제품 모두 카드가 렌더되도록 하고 slug 키로 제품별 문구를 불러오게 수정했다. Pulse·Eikos는 출력 최대 2개, Zenith 100은 최대 3개라 4출력 구성 불가를 매뉴얼/모델 데이터시트 쪽수와 함께 표시했다. Zenith 200은 AM 52쪽의 2×2 지원, 레이어 자원 4개를 한 화면에 배정하는 가정, 믹싱 4개 또는 분할 8개를 표시했다.
+- [x] 모든 네 제품의 1280px·390px 미리보기를 새로 캡처했다. 390px에서 네 제품 모두 `document.documentElement.scrollWidth=390`, 비교 카드 제목과 본문 표시를 확인했다. 캡처는 `tmp/w011-preview/`에 보관했다.
+- [x] 최신 `origin/main` `4daad18d98fc079ff8388ffa53b2247e42b7e223`를 통합하고 상세 생성 자산·검색 인덱스·공개 스냅샷을 재생성했다.
+- [x] 전체 테스트 803건 중 802 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages`(285 장비·282 상세·515 이미지·163 uploads)와 `git diff --check` 통과.
+- [ ] 수정본 커밋·push 및 새 CI 확인 후, 사용자가 승인한 자동 병합 절차에 따라 병합·배포·공개 확인 예정.
