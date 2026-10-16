@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {prepareEnhancements} from '../beta/site/detail/detail-enhancements.mjs';
 import {beforeW026Product} from './w026-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const sha = value => createHash('sha256').update(value).digest('hex');
 const products = {
@@ -46,7 +47,7 @@ test('nine NETGEAR maps group only visible connectors from their pictured face',
     assert.ok(image && image.role!=='Main',slug);
     const [width,height]=image.resolution.split(/[x×]/).map(Number);
     assert.deepEqual(map.measuredImage,{file:image.file,width,height},slug);
-    assert.ok(map.items.every(item=>item.x1>=0 && item.x1<item.x2 && item.x2<=width && item.y>=0 && item.y<=height),slug);
+    assert.ok(map.items.every(item=>item.x1>=0 && item.x1<item.x2 && item.x2<=width && item.y===undefined),slug+' edge brackets');
     const imageBytes=readFileSync(new URL(`../beta/site/detail/images/${image.file}`,import.meta.url));
     assert.ok(imageBytes.length>0,slug);
     if(expected.imageSha) assert.equal(sha(imageBytes),expected.imageSha,slug+' published photograph bytes');
@@ -63,11 +64,11 @@ test('historical inverse exposes unapproved changes to current I/O',()=>{
   const current=read('gsm4212p');
   const changed=structuredClone(current);
   changed.io[0].connector='INVALID';
-  const oldCurrent=beforeW026Product(current,'gsm4212p');
-  const oldChanged=beforeW026Product(changed,'gsm4212p');
+  const oldCurrent=beforeW026Product(beforeW16015Group5Product(current,'gsm4212p'),'gsm4212p');
+  const oldChanged=beforeW026Product(beforeW16015Group5Product(changed,'gsm4212p'),'gsm4212p');
   assert.notEqual(sha(JSON.stringify(oldCurrent)),sha(JSON.stringify(oldChanged)));
   assert.equal(oldChanged.io[0].connector,'INVALID');
   const moved=structuredClone(current);
   moved.portMap.items[0].x1+=1;
-  assert.throws(()=>beforeW026Product(moved,'gsm4212p'),/unexpected W-026 portMap change/);
+  assert.throws(()=>beforeW16015Group5Product(moved,'gsm4212p'),/unexpected W-015 group-5 portMap change/);
 });

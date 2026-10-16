@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {beforeLogitechW14001Product,logitechW14001Slugs} from './logitech-w14001-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const load=slug=>JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url)));
 const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261014-001-prior-fields.json',import.meta.url)));
@@ -12,15 +13,15 @@ test('five evidenced Logitech maps retain current unrelated fields',()=>{
     const current=load(slug);
     assert.ok(current.portMap.items.length>=2,slug);
     assert.equal(current.images.find(i=>i.role===current.portMap.image).file,current.portMap.measuredImage.file,slug);
-    const historical=beforeLogitechW14001Product(current,slug);
+    const historical=beforeLogitechW14001Product(beforeW16015Group5Product(current,slug),slug);
     for(const [field,oldValue] of Object.entries(fixture[slug].prior)){
       assert.deepEqual(historical[field]??null,oldValue,`${slug} prior ${field}`);
     }
     for(const field of Object.keys(current))if(!(field in fixture[slug].prior))assert.deepEqual(historical[field],current[field],`${slug} current ${field}`);
     const changed=structuredClone(current);changed.portMap.items[0].label='INVALID';
-    assert.throws(()=>beforeLogitechW14001Product(changed,slug),/unexpected W-20261014-001 portMap/);
+    assert.throws(()=>beforeLogitechW14001Product(beforeW16015Group5Product(changed,slug),slug),/unexpected (?:W-015 group-5 portMap|W-20261014-001 portMap) change/);
     const unrelated=structuredClone(current);unrelated.model='INVALID';
-    assert.equal(beforeLogitechW14001Product(unrelated,slug).model,'INVALID');
+    assert.equal(beforeLogitechW14001Product(beforeW16015Group5Product(unrelated,slug),slug).model,'INVALID');
   }
 });
 
