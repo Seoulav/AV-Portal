@@ -279,3 +279,19 @@
 - CI38925889877 SUCCESS, Pages38926618884 SUCCESS(2026-10-16T15:49:15Z).
 - 공개 https://seoulav.github.io/AV-Portal/detail/index.html?product=novastar-h5 에서760/390 각 Rear→Other→Front→Other→Rear 총10회 확인. Rear목록1·3·5·12·13, Other목록2·4·6·7·8·9·10·11, Front목록숨김. 페이지넘침0. 실제공개760/390캡처시각확인.
 - 공개JSON/검증기/새패널/원본사진4개 SHA가 승인본과일치. 로컬증빙 outputs/h5/public-verification.json, public-assets.json 및 public/*.png.
+
+
+## W-015 Aquilon C 카드 번호 통합 — IN_PROGRESS (2026-10-17)
+
+- Work 착수 알림 확인. 선행 #597 MERGED `1ebee612c72228529af00d0455fa0a6846c89c77`, 최신 명세·코드 기준 `64839b82b13e5dacdc901d3c9889f160002f041b` 통합 완료. #594 가이드도 포함.
+- 열린 PR #599는 Midra·Zenith 4종으로 대상 JSON 중복 없음. C 4종 portMap만 구현하며 사전 준비 체크 2의 선행 조건 충족.
+- 카드 종류별 좌측 범위, 출력 열 전체 우측 범위, 제어 줄 하단 배치. 혼합 행의 서로 다른 카드가 같은 높이에 있는 문제를 전후 그림으로 집중 검토.
+- 제품 이름·사진·io·사양·레이어, RS 7종, 검증기·렌더러 무변경. 사진 장착 예와 BTO 최대 사양 구별 유지.
+
+- Work 2026-10-17 precise안 승인: 혼합 가운데 SDI 3곳만 위쪽 직접 괄호, 나머지 카드 행/출력 열 통합. 번호 원 14/16/19/23→각12. 최종 화면이 승인안과 같고 독립 검토·전체 검사·CI 초록이면 재질문 없이 병합→Pages→공개 4종760/390 확인 승인.
+
+- [x] 4종 precise 적용 및 USB 독립 검토 보정. 원 72→48, 실제 페이지 760/390 총 8조건에서 원·목록 각12와 넘침0 확인.
+- [x] 전체 직렬 857건 중 856 pass / 0 fail / 기존 skip1. Pages 289·286·525·167, 검색 인덱스 --check 통과, 파생 재생성.
+- [ ] 독립 최종 시각 확인→PR/CI→USB 보정 화면 Work 재확인→병합/Pages/공개 확인.
+
+- [x] 독립 최종 48개 시각 검토 OK. C+ #1 L자 배치는 위치 설명과 SDI #3 직접 표식 유지 조건. USB 보정 때문에 최종 Work 화면 재확인 필요. 상태 REVIEW.
