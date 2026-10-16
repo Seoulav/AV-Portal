@@ -410,6 +410,22 @@ function QuoteWorkspace() {
             (계획 §1). 값은 갑지 입력에서 그대로 읽는다 — 비어 있으면
             비었다고 말하고 지어내지 않는다.
           */}
+          {state.kind === 'loading' && (
+            <p role="status" className="q-notice">
+              자료를 불러오는 중입니다…
+            </p>
+          )}
+          {state.kind === 'error' && (
+            <div role="alert" className="q-notice q-notice-error">
+              <h2>초기 자료를 불러오지 못했습니다</h2>
+              <p className="q-muted">아래 사유를 해결한 뒤 새로고침하세요.</p>
+              <ul>
+                {state.reasons.map((reason) => (
+                  <li key={reason}>{reason}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           {status.kind === 'editing' && (
             <p role="status" aria-label="현재 견적" className="q-quote-identity">
               <strong>{status.document.header.customer || '고객 미입력'}</strong>
@@ -444,12 +460,15 @@ function QuoteWorkspace() {
               품목 직접 선택
             </button>
             </div>
+            <div className="q-edit-tools" role="group" aria-label="편집">
             <button type="button" className="q-button" onClick={workspace.undo} disabled={!workspace.canUndo}>
               실행 취소
             </button>
             <button type="button" className="q-button" onClick={workspace.redo} disabled={!workspace.canRedo}>
               다시 실행
             </button>
+            </div>
+            <div className="q-file-tools" role="group" aria-label="작업 파일">
             <button
               type="button"
               className="q-button"
@@ -478,7 +497,9 @@ function QuoteWorkspace() {
                 if (file !== undefined) void handleOpenWorkFileSelected(file);
               }}
             />
+            </div>
           </div>
+          <div className="q-output-tools" role="group" aria-label="출력">
           <div className="q-grade" role="radiogroup" aria-label="출력 등급">
             {OUTPUT_GRADES.map((grade) => (
               <label key={grade.value} className="q-grade-option">
@@ -501,6 +522,7 @@ function QuoteWorkspace() {
               Excel 다운로드
             </button>
           </div>
+          </div>
           {status.kind === 'editing' && status.prepared.blocking && (
             <p role="status" className="q-muted">
               해결되지 않은 구성도/품셈/계산 경고가 있어 Excel을 출력할 수 없습니다 — 위 경고를
@@ -516,22 +538,6 @@ function QuoteWorkspace() {
         <ReferenceDocs />
 
         <main className={`q-main${status.kind === 'editing' ? ' q-editing-main' : ''}`}>
-          {state.kind === 'loading' && (
-            <p role="status" className="q-notice">
-              자료를 불러오는 중입니다…
-            </p>
-          )}
-          {state.kind === 'error' && (
-            <div role="alert" className="q-notice q-notice-error">
-              <h2>초기 자료를 불러오지 못했습니다</h2>
-              <p className="q-muted">아래 사유를 해결한 뒤 새로고침하세요.</p>
-              <ul>
-                {state.reasons.map((reason) => (
-                  <li key={reason}>{reason}</li>
-                ))}
-              </ul>
-            </div>
-          )}
           {resources !== undefined && (
             <>
               {!resources.catalog.pricesAvailable && (

@@ -635,3 +635,12 @@
 .q-start-intro p { color: var(--q-muted); line-height: 1.65; margin-bottom: 0; }
 .q-reference-docs { color: var(--q-muted); }
 .q-reference-docs h3, .q-reference-docs strong { color: var(--q-ink); }
+
+/* Editing stage: review, document, then supporting inputs. */
+.q-editing-main { background: var(--q-glass-fill); }
+.q-editing-main .q-quote-sheet { border-color: var(--q-glass-stroke); box-shadow: 0 12px 36px #53698a12; }
+.q-editing-main .q-review-summary { background: var(--q-tint); border-color: var(--q-line); }
+.q-editing-main .q-workspace-section { background: var(--q-bg); }
+.q-quote-identity { width: 100%; font-size: 15px; }
+.q-save-status { width: 100%; margin: -4px 0 2px; }
+.q-save-status .q-muted { font-size: 11px; }

@@ -264,3 +264,19 @@ select {
   .q-start-actions { width: 100%; }
   .q-start-actions .q-button { flex: 1 1 100%; }
 }
+
+/* Distinct work-file, edit and output stages */
+.q-tools { align-items: center; }
+.q-edit-tools, .q-file-tools, .q-output-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-width: 0; }
+.q-edit-tools, .q-file-tools { padding-left: 12px; border-left: 1px solid var(--q-line); }
+.q-output-tools { width: 100%; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--q-line); }
+.q-output-tools .q-grade { gap: 16px; }
+.q-output-tools > .q-button { margin-left: auto; }
+.q-start-workspace .q-output-tools { margin-top: 18px; }
+@media (max-width: 720px) {
+  .q-workspace { align-items: stretch; }
+  .q-tools, .q-edit-tools, .q-file-tools, .q-output-tools { width: 100%; }
+  .q-edit-tools, .q-file-tools { padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--q-line); }
+  .q-output-tools > .q-button { margin-left: 0; }
+  .q-file-tools .q-button, .q-edit-tools .q-button { flex: 1 1 auto; }
+}
