@@ -24,6 +24,7 @@ test('W-001 coordinate history restores exactly the recorded markers', () => {
     const now = coords(current);
     assert.equal(sha(now), record.approved, slug);
     assert.deepEqual(coords(restored), record.prior.items, slug);
+    assert.strictEqual(beforeW12001Product(restored, slug, { allowHistorical: true }), restored, `${slug}: W-026 repeated inverse`);
     changedMarkers += now.filter((item, index) => JSON.stringify(item) !== JSON.stringify(record.prior.items[index])).length;
     const originalNonCoordinates = structuredClone(current);
     const restoredNonCoordinates = structuredClone(restored);

@@ -6,6 +6,7 @@ import {beforeW06004Product} from './w06004-history.mjs';
 import {beforeW06005Product} from './w06005-history.mjs';
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {prepareEnhancements} from '../prototype/brc-am7/detail-enhancements.mjs';
+import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
 
 const root=new URL('../',import.meta.url);
 const proof=JSON.parse(readFileSync(new URL('Work/기록/W-20261006-004-image-hashes.json',root)));
@@ -46,9 +47,12 @@ test('UA864A markers follow the new Rear photo but preserve their identities and
     const old=previous.items[index];
     for(const field of ['n','label','desc','side'])assert.equal(field==='desc'?beforeW12002Product(current,'ua864a').portMap.items[index][field]:item[field],old[field],field);
     assert.ok(item.x1>=0&&item.x1<item.x2&&item.x2<=2400);
-    assert.ok(item.y>=0&&item.y<=2140);
+    assert.ok(['top','bottom'].includes(item.side));
   }
-  assert.ok(current.portMap.items[0].y<current.portMap.items[1].y);
+  const geometry=portMapGeometry(current.portMap,2400,2140);
+  assert.equal(geometry.markers[0].side,'top');
+  assert.equal(geometry.markers[1].side,'bottom');
+  assert.ok(geometry.markers[0].cy<geometry.markers[1].cy);
 });
 
 test('inverse rejects changed approved metadata, while unrelated fields pass through',()=>{

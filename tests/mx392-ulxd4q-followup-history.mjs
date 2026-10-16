@@ -1,5 +1,6 @@
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeW20261016_015B4Product} from './w20261016-015-b4-history.mjs';
 
 // Historical checks restore only the user-approved MX392 I/O, specification,
 // overview and feature text, MX418D I/O, and ULXD4Q Port Map.
@@ -8,6 +9,7 @@ const fixture=JSON.parse(readFileSync(new URL('../Work/기록/20261012-mx392-ulx
 const sha=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
 
 export function beforeMx392Ulxd4qFollowupProduct(current,slug){
+  current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   const fields=fixture[slug];
   if(!fields)return current;
   const result=structuredClone(current);

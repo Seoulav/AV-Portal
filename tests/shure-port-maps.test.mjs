@@ -1,4 +1,5 @@
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
+import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import { beforeW15004ImageSha } from './w15004-shure-photo-history.mjs';
 import { beforeW15012ImageSha } from './w15012-black-background-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -34,7 +35,8 @@ import {beforeShureW04003,beforeShureW04003Raw,shureW04003Slug} from './shure-w0
 
 const bytes = path => readFileSync(new URL('../' + path, import.meta.url));
 const read = path => {
-  const product=JSON.parse(bytes(path));
+  const original=JSON.parse(bytes(path));
+  const product=beforeW20261016_015B4Product(original,path.split('/').at(-1).slice(0,-5));
   return path.startsWith('beta/site/detail/data/')?beforeW013Product(beforeBssW04004(beforeW06005Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeW12005Product(product,path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)),path.split('/').at(-1).slice(0,-5)):product;
 };
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -88,7 +90,7 @@ test('Shure models that lack sufficient evidence keep photo fallback and all 235
     const slug=path.split('/').at(-1).slice(0,-5);
     return beforeW032Product(beforeBssW04004(priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(JSON.parse(bytes(path)),slug),slug),slug),slug),slug),slug),slug);
   };
-  const priorRaw = path => beforeW032Raw(beforeW026Raw(bytes(path).toString('utf8').replace(/\r\n/g, '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
+  const priorRaw = path => beforeW032Raw(beforeW026Raw(beforeW20261016_015B4Raw(bytes(path).toString('utf8').replaceAll('\r\n', '\n'), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5)), path.split('/').at(-1).slice(0, -5));
   for (const [file, hash] of Object.entries(proof.preservedProducts)) {
     const later = remaining.products[file.slice(0,-5)];
     const samsungLater = samsung.products[file.slice(0,-5)];
