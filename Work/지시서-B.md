@@ -670,3 +670,19 @@
 - 집중 테스트·되감기 테스트 3/3 및 전체 직렬 테스트 860건(859 통과·0 실패·기존 skip 1) 통과. `verify-pages`(289 품목·286 상세·529 이미지·167 PDF), `search-index --check`, `git diff --check` 통과; snapshot·search-index·readable catalog 재생성. Pulse 4K·Eikos 4K·Zenith 200 공개 패널은 확대 재점검에서 같은 누락·오인 없음. PR CI 후 Work 검토 전 병합하지 않음.
 
 \n
+
+## W-20261017-002 — Analog Way 자료·문서 전수 점검 1단계 (2026-10-17)
+
+- 명세: Work/작업/W-20261017-002.md, origin/main 598757af700c961a4caf0888a5f5ce3dcde79c08의 blob SHA 17c08a0e8028c98e933a265849b96f90c1637f58 확인.
+- 작업 브랜치: codex/W-20261017-002-analogway-audit (최신 origin/main 기준).
+- 범위: Aquilon RSalpha·RS1–RS6, Cmini·C·C+·Cmax, Pulse 4K, Eikos 4K, Zenith 100·200, RC400T — 총 16종 공식 자료·문서·사진·사양/I/O·signal flow·features·overview 점검. 제품 JSON 무변경.
+- 금지: layerPlan/videoLayerPlan 수치·Port Map 좌표 변경, 미확인 값 채움, builder/·cpq/ 변경.
+- 상태: REVIEW. 제품별 점검표 작성 완료, 문서 전용 PR 준비 중. 병합은 Work 확인 전 보류.
+- 사전 상태: 열린 PR 0건으로 확인. 이전 작업에서 남은 	mp/ 로컬 캡처·도구는 보존, 커밋 대상에 포함하지 않음.
+- 체크리스트:
+  - [x] 16종 공식 제품 페이지·자료 목록 및 문서 링크 대조(공식 PDF 직접 열기는 403으로 상세표 대조 제한, 점검표에 명시)
+  - [x] 제품 개요·페이지 노출 핵심 사양/I/O·기능 및 16종 정면 사진 모델 표기 대조(세부 PDF 전수 비교는 열람 제한)
+  - [x] RC400T 빈 항목 및 공식 페이지에 추가 문서(도면/QSG/펌웨어/Release Note) 존재 확인
+  - [x] layerPlan/videoLayerPlan·Port Map 좌표는 변경하지 않았으며 점검표에 재측정 미수행/기존 검증 유지로 명시
+  - [x] Work/기록/W-20261017-002-점검표.md 작성
+  - [ ] 문서 링크·항목·자기 범위 확인 후 문서 전용 PR 작성, 병합 전 Work 확인 요청
