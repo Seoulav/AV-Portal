@@ -284,6 +284,14 @@ function LaborBasisPanel({
                   이 근거를 {row.laborConfirmation!.confirmedAt}에 확인했습니다.
                 </p>
               )}
+              {!isConfirmed && breakdown.mappingRemembered === true && (
+                // B-20261016-05: 이 PC가 같은 품셈 판에서 이 연결을 이미 확인했다.
+                // 행 확인은 필요 없지만, 이 행의 숫자를 다시 보고 남기고 싶으면
+                // 아래 "확인함"을 그대로 쓸 수 있다.
+                <p role="status" className="q-muted" data-labor-mapping-remembered="">
+                  이 품셈 연결은 이 PC에서 이미 확인했습니다(같은 품셈 판).
+                </p>
+              )}
               {wasInvalidated && (
                 <p role="alert" className="q-notice">
                   계산 근거가 바뀌어 이전 확인이 더는 유효하지 않습니다. 위 내용을 다시 확인해 주세요.

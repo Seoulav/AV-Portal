@@ -5,7 +5,7 @@
  * 눌렀을 때 **두 번째 행만** 펼쳐져야 한다. 문구로 묶으면 첫 행이 열린다.
  */
 import { test, expect, type Page } from '@playwright/test';
-import { mockResources } from './fixtures';
+import { mockResources, expectExportReviewPending } from './fixtures';
 
 // 품목 선택 화면은 같은 SKU 를 두 번 담지 않는다. **이름이 같고 번호가 다른**
 // 두 품목을 두어 "문구가 같은 두 행"을 만든다 — 실제로 흔한 모양이다
@@ -96,9 +96,11 @@ test('한 행을 확인하면 그 항목만 사라지고, 실행취소하면 되
   const secondPanel = page.locator(`tr[data-labor-basis-for="${rowIds[1]}"]`);
   await secondPanel.getByRole('button', { name: '확인함', exact: true }).click();
 
-  // 하나만 사라진다. 남은 하나가 계속 출력을 막는다.
+  // 하나만 사라진다. 남은 하나는 계속 확인 항목이다.
+  // (확인한 연결의 기억은 다음 견적부터 쓴다 — 열어 둔 견적의 다른 행은 그대로다. B-20261016-05)
+  // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기 — 버튼 비활성 대신 안내로 본다.
   await expect(issues).toHaveCount(1);
-  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+  await expectExportReviewPending(page);
 
   await page.getByRole('button', { name: '실행 취소', exact: true }).click();
   await expect(issues).toHaveCount(2);

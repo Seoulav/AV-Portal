@@ -43,6 +43,14 @@ export interface CustomerItemRow {
   unit: string;
   quantity: DecimalText;
   remark: string;
+  /**
+   * 수량이 아직 사람이 확인하지 않은 **자리표시자**(`'1'`)다
+   * (`QuoteRow.quantityUnresolved`). 출력은 이 칸을 빈칸으로 둔다 —
+   * 확인 항목이 남아도 내려받게 한 뒤(B-20261016-05) 자리표시자 `1`이
+   * 실제 수량처럼 파일에 찍히지 않게 하려는 것이다. 값이 아니라 표식이라
+   * 고객 파일에 새는 정보가 없다.
+   */
+  quantityUnresolved?: true;
 }
 
 export interface CustomerDerivedRow {
@@ -131,6 +139,7 @@ export function buildCustomerProjection(
           unit: row.unit,
           quantity: row.quantity,
           remark: row.remark,
+          ...(row.quantityUnresolved === true ? { quantityUnresolved: true as const } : {}),
         });
       }
     }

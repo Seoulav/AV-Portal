@@ -13,7 +13,13 @@
 import { readFileSync } from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 import { test, expect, type Page, type Download } from '@playwright/test';
-import { mockResources, expandWorkspaceSections, showDetailColumns } from './fixtures';
+import {
+  mockResources,
+  expandWorkspaceSections,
+  showDetailColumns,
+  expectExportReviewClear,
+  expectExportReviewPending,
+} from './fixtures';
 
 async function downloadedBytes(download: Download): Promise<Uint8Array> {
   const path = await download.path();
@@ -72,7 +78,7 @@ async function reopen(page: Page, document: unknown): Promise<void> {
 async function makeDownloadableQuote(page: Page): Promise<void> {
   const document = withResolvedLabor(await saveQuote(page));
   await reopen(page, document);
-  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeEnabled();
+  await expectExportReviewClear(page);
 }
 
 test('고객용(2단계) — 실제 다운로드 파일을 연다', async ({ page }) => {
@@ -118,7 +124,13 @@ test('영업팀용(0단계) — 원가 세션이 없어도 출력은 된다(원�
   expect(files['[Content_Types].xml']).toBeDefined();
 });
 
-test('해결되지 않은 구성도/품셈/계산 경고 — 해결 전에는 출력을 막는다', async ({ page }) => {
+/**
+ * 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05).
+ * 전에는 이 시험이 "해결 전에는 출력을 막는다"(버튼 비활성)를 고정했다.
+ * 이제는 막지 않고, 내려받기 직전 확인 창에 남은 건수를 알린다. 취소하면
+ * 파일을 만들지 않는다. 0·1은 행 비고에 [확인 필요]가 붙고 2는 붙지 않는다.
+ */
+test('확인 항목이 남아 있어도 확인 창을 거쳐 0/1/2 모두 내려받고, 취소하면 만들지 않는다', async ({ page }) => {
   await mockResources(page, { '/data/approved/prices.json': 'missing' });
   await page.goto('./');
   await page.getByRole('button', { name: '품목 직접 선택' }).click();
@@ -127,8 +139,79 @@ test('해결되지 않은 구성도/품셈/계산 경고 — 해결 전에는 �
   await page.getByRole('button', { name: '견적 만들기' }).click();
   await expandWorkspaceSections(page);
 
-  await expect(page.getByText('해결되지 않은 구성도/품셈/계산 경고가 있어', { exact: false })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+  await expectExportReviewPending(page);
+  const excelButton = page.getByRole('button', { name: 'Excel 다운로드' });
+
+  let downloads = 0;
+  page.on('download', () => {
+    downloads += 1;
+  });
+  const messages: string[] = [];
+  let answer: 'accept' | 'dismiss' = 'dismiss';
+  page.on('dialog', async (dialog) => {
+    messages.push(dialog.message());
+    if (answer === 'accept') await dialog.accept();
+    else await dialog.dismiss();
+  });
+
+  // 1) 취소하면 파일을 만들지 않는다.
+  await excelButton.click();
+  expect(messages).toHaveLength(1);
+  expect(messages[0]).toMatch(/^확인 필요 \d+건\(구성도 \d+·품셈\(노무\) \d+·계산 \d+\)이 남아 있습니다\. 그래도 내려받을까요\?$/);
+  expect(downloads).toBe(0);
+
+  // 2) 승인하면 세 등급 모두 실제 파일이 나온다.
+  answer = 'accept';
+  const details: Record<string, string> = {};
+  for (const grade of ['2 고객용', '1 공유용', '0 영업팀용'] as const) {
+    await page.getByRole('radio', { name: grade }).check();
+    const event = page.waitForEvent('download');
+    await excelButton.click();
+    const files = unzipSync(await downloadedBytes(await event));
+    expect(files['[Content_Types].xml'], grade).toBeDefined();
+    details[grade] = strFromU8(files['xl/worksheets/sheet2.xml']!);
+    expect(details[grade], grade).toContain('합성 테스트 품목');
+  }
+  expect(downloads).toBe(3);
+  // 0단계는 확인 항목 창 다음에 기존 원가 확인 창이 그대로 한 번 더 뜬다.
+  expect(messages.filter((m) => m.startsWith('확인 필요'))).toHaveLength(4);
+  expect(messages.filter((m) => m.includes('원가'))).toHaveLength(1);
+
+  // 3) 고객용에는 표시가 없고, 공유용·영업팀용에는 그 행 비고에 사유가 붙는다.
+  expect(details['2 고객용']).not.toContain('[확인 필요]');
+  for (const grade of ['1 공유용', '0 영업팀용'] as const) {
+    expect(details[grade], grade).toContain('[확인 필요]');
+    expect(details[grade], grade).toContain('판매 단가 미등록');
+  }
+});
+
+/**
+ * 독립 검토 지적 A — 수량 미정(자리표시자) 행은 Excel 에서 수량 빈칸·금액 0으로
+ * 나가 화면 합계와 달라진다. 확인 창이 세 등급 모두에서 이 사실을 알려야 한다.
+ */
+test('수량 미정 행이 있으면 0/1/2 모두 확인 창이 "화면 합계와 다릅니다"를 알린다', async ({ page }) => {
+  const document = withResolvedLabor(await saveQuote(page));
+  const item = (document['rows'] as Array<Record<string, unknown>>).find((r) => r['type'] === 'item')!;
+  item['quantityUnresolved'] = true;
+  await reopen(page, document);
+  await expectExportReviewPending(page);
+
+  const messages: string[] = [];
+  page.on('dialog', async (dialog) => {
+    messages.push(dialog.message());
+    await dialog.accept();
+  });
+  for (const grade of ['2 고객용', '1 공유용', '0 영업팀용'] as const) {
+    await page.getByRole('radio', { name: grade }).check();
+    const event = page.waitForEvent('download');
+    await page.getByRole('button', { name: 'Excel 다운로드' }).click();
+    await event;
+  }
+  const review = messages.filter((m) => m.startsWith('확인 필요'));
+  expect(review).toHaveLength(3);
+  for (const message of review) {
+    expect(message).toContain('수량 미정 1행은 Excel에서 수량 빈칸·금액 0으로 나가 화면 합계와 다릅니다.');
+  }
 });
 
 test('거래처/영업비고 입력 — 1단계에는 남고 2단계(고객용)에는 애초에 없다', async ({ page }) => {

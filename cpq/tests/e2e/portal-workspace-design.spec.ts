@@ -1,6 +1,6 @@
 import { mkdirSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
-import { mockResources } from './fixtures';
+import { mockResources, expectExportReviewPending } from './fixtures';
 
 test('empty quote presents both entry paths once above references', async ({ page }) => {
   await mockResources(page);
@@ -46,7 +46,8 @@ test('editing groups preserve the quote workflow and output gate', async ({ page
   await expect(page.locator('.q-output-tools')).toBeVisible();
   await expect(page.getByRole('radiogroup', { name: '출력 등급' }).getByRole('button')).toHaveCount(0);
   await expect(page.getByRole('radio', { name: '2 고객용' })).toBeChecked();
-  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+  // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05) — 비활성 대신 안내.
+  await expectExportReviewPending(page);
   await expect(page.getByRole('button', { name: '작업 파일 열기' })).toHaveCount(1);
   await expect(page.getByRole('button', { name: '작업 파일로 저장' })).toBeEnabled();
   const positions = await page.evaluate(() => [

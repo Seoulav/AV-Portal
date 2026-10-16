@@ -13,7 +13,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '../..');
 const SKU = 'FIX-0001';
@@ -180,4 +180,28 @@ export async function expandWorkspaceSections(page: Page): Promise<void> {
 export async function showDetailColumns(page: Page): Promise<void> {
   const toggle = page.getByRole('button', { name: '상세 열 표시' });
   if (await toggle.isVisible().catch(() => false)) await toggle.click();
+}
+
+/**
+ * 확인 항목(구성도·품셈·계산 경고)이 남아 있다는 화면 안내.
+ *
+ * 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05). 전에는
+ * 시험들이 "Excel 다운로드 버튼이 비활성"으로 "확인 항목이 남았다"를 보았다.
+ * 이제 버튼은 켜진 채로 두고 이 안내로 알린다 — 그래서 같은 사실을 이 안내의
+ * 유무로 본다. 기준 불일치(D23)·케이블 수정 대기는 여전히 버튼을 끈다.
+ */
+export function exportReviewNotice(page: Page): Locator {
+  return page.locator('[data-export-review-pending]');
+}
+
+/** 확인 항목이 남아 있다 — 안내가 보이고, 내려받기 버튼은 켜져 있다. */
+export async function expectExportReviewPending(page: Page): Promise<void> {
+  await expect(exportReviewNotice(page)).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeEnabled();
+}
+
+/** 확인 항목이 없다 — 안내가 없고, 내려받기 버튼은 켜져 있다(확인 창 없이 바로 받는다). */
+export async function expectExportReviewClear(page: Page): Promise<void> {
+  await expect(exportReviewNotice(page)).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeEnabled();
 }

@@ -23,7 +23,13 @@ import { WarningList } from '../features/worksheet/WarningList';
 import { ReviewSummary } from '../features/worksheet/ReviewSummary';
 import { WorkspaceSection, sectionDomId } from '../features/worksheet/WorkspaceSection';
 import { WorkspaceNav, type NavTarget } from '../features/worksheet/WorkspaceNav';
-import { buildReviewItems, decideNavigation, type ReviewTarget } from '../features/worksheet/reviewItems';
+import {
+  buildReviewItems,
+  decideNavigation,
+  exportReviewConfirmMessage,
+  exportReviewCounts,
+  type ReviewTarget,
+} from '../features/worksheet/reviewItems';
 import { systemSectionDomId, type RowNavigation } from '../features/worksheet/QuoteSheet';
 import type { ImportNavigation } from '../features/worksheet/WarningList';
 import { InstallationPanel } from '../features/installation/InstallationPanel';
@@ -294,6 +300,13 @@ function QuoteWorkspace() {
     // 직접 막은 것이 실제로는 구분되지 않았다(2026-10-05 독립 검토 지적).
     if (resources === undefined || !exportGate(status, pendingCableEdit).allowed) return;
     if (status.kind !== 'editing' || workspace.basisVersions === undefined) return; // 위 gate와 같은 결론이지만, 아래 타입 좁히기에 필요하다.
+    // 2026-10-16 사용자 결정(B-20261016-05): 확인 항목(구성도·품셈·계산)이
+    // 남아도 세 등급 모두 내려받는다. 대신 매번 남은 건수를 알리고, 취소하면
+    // 파일을 만들지 않는다. 0·1단계는 그 행 비고에 `[확인 필요]`가 붙고
+    // 2단계(고객용)에는 붙지 않는다(`export/variants/reviewMarks.ts`).
+    if (status.prepared.blocking && !window.confirm(exportReviewConfirmMessage(exportReviewCounts(status.prepared)))) {
+      return;
+    }
     // Task6: 원가 포함 파일은 매번 저장 직전에 확인한다. 취소하면 생성도 하지 않는다.
     if (outputGrade === '0' && !window.confirm(
       '영업팀용 파일에는 등록된 원가와 내부 메모가 포함됩니다. 고객에게 전달하지 않도록 주의해 주세요. 다운로드하시겠습니까?',
@@ -524,9 +537,28 @@ function QuoteWorkspace() {
             </button>
           </div>
           {status.kind === 'editing' && status.prepared.blocking && (
-            <p role="status" className="q-muted">
-              해결되지 않은 구성도/품셈/계산 경고가 있어 Excel을 출력할 수 없습니다 — 위 경고를
-              먼저 해결하세요.
+            // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받는다 — 막지 않고 알린다.
+            <p role="status" className="q-muted" data-export-review-pending="">
+              확인 필요 항목이 남아 있습니다. 내려받을 수는 있고, 내려받기 전에 남은 건수를 다시
+              알려 드립니다(영업팀용·공유용은 해당 행 비고에 [확인 필요]가 붙습니다).
+            </p>
+          )}
+          {workspace.rememberedLaborMappingCount > 0 && (
+            // 이 PC가 기억한 "확인한 품셈 연결"(B-20261016-05). 다음 견적부터
+            // 같은 품셈 판의 같은 연결은 다시 묻지 않는다.
+            <p role="status" aria-label="확인한 품셈 연결 기억" className="q-muted">
+              이 PC에 확인한 품셈 연결 {workspace.rememberedLaborMappingCount}건을 기억하고 있습니다 —
+              다음 견적부터 같은 연결은 다시 묻지 않습니다.{' '}
+              <button type="button" className="q-button" onClick={workspace.clearRememberedLaborMappings}>
+                확인한 품셈 연결 모두 지우기
+              </button>
+            </p>
+          )}
+          {workspace.laborMemoryError !== undefined && (
+            // 저장 실패를 조용히 성공처럼 보이지 않는다(B-20261016-05 독립 검토 지적).
+            <p role="alert" className="q-notice q-notice-error">
+              확인한 품셈 연결을 이 PC에 저장하거나 지우지 못했습니다 — {workspace.laborMemoryError} 지금
+              견적의 행 확인은 그대로 반영됩니다.
             </p>
           )}
           {exportError !== undefined && (

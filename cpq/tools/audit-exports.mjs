@@ -12,6 +12,9 @@
 //   4. 위험한 실행 — eval, new Function, dynamic import (설계서 §8.3)
 //   5. 화면 경로 — 견적 문서를 브라우저에 영속 저장하거나 외부 origin으로 보내는가 (§8.8, §8.4)
 //   6. 시그니처 — calculateQuote/buildCustomerProjection이 PrivateCostSession을 받는가 (§10.4)
+//   7. 영속 저장 허용 목록 — 위 경로 밖(예: 새 services/*)도 브라우저 저장소를 쓰면 막는다.
+//      유일한 예외는 "확인한 품셈 연결 기억"(B-20261016-05) 파일 하나이고, 그 파일도
+//      정해진 열쇠 하나(`LABOR_MEMORY_STORAGE_KEY`)로만 읽고 쓴다.
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
@@ -62,6 +65,23 @@ const UI_PREFIXES = ['src/features', 'src/app'];
  */
 const EXTERNAL_ORIGIN = /\b(?:fetch|XMLHttpRequest|WebSocket|EventSource)\s*\(\s*[`'"]\s*https?:/;
 const BEACON = /navigator\s*\.\s*sendBeacon/;
+
+/**
+ * 7. 영속 저장 허용 목록 (B-20261016-05 독립 검토 지적).
+ *
+ * "확인한 품셈 연결 기억"은 품셈 판·연결 id·연결 내용 지문·확인 시각만
+ * 브라우저 저장소에 둔다(문서·고객·금액·원가 없음). 이 **파일 하나**에서만,
+ * 그리고 **이 열쇠 하나**로만 허용한다. 다른 모든 `src` 경로의 영속 저장은
+ * 이 규칙이 막는다(1~5번 규칙이 다루지 않는 새 경로 포함).
+ */
+const PERSISTENCE_ALLOWED = new Map([
+  ['src/services/labor-memory/laborMappingMemory.ts', {
+    keyConstant: 'LABOR_MEMORY_STORAGE_KEY',
+    keyValue: 'av-cpq.confirmed-labor-mappings.v1',
+  }],
+]);
+/** 저장소 메서드 호출 — 첫 인자가 정해진 열쇠 상수여야 한다. */
+const STORAGE_CALL = /\.(getItem|setItem|removeItem|clear|key)\s*\(([^,)]*)/g;
 
 const findings = [];
 
@@ -126,6 +146,14 @@ for (const file of files) {
   const isCostFree = COST_FREE_PREFIXES.some((p) => rel.startsWith(p));
   const isCostModule = COST_MODULE.test(rel);
   const isUi = UI_PREFIXES.some((p) => rel.startsWith(p));
+  const persistenceRule = PERSISTENCE_ALLOWED.get(rel);
+
+  if (persistenceRule !== undefined) {
+    const declaration = `export const ${persistenceRule.keyConstant} = '${persistenceRule.keyValue}';`;
+    if (!source.includes(declaration)) {
+      findings.push(`${rel}  허용된 저장 열쇠 ${persistenceRule.keyConstant} = '${persistenceRule.keyValue}' 선언이 없다`);
+    }
+  }
 
   for (const [number, line] of lines) {
     // 1. 금지 import
@@ -146,6 +174,20 @@ for (const file of files) {
     // 3. 네트워크 — 원가 모듈은 네트워크에 닿으면 안 된다
     if (isCostModule && NETWORK.test(line)) {
       findings.push(`${rel}:${number}  원가 모듈에서 네트워크 API 사용: ${line.trim()}`);
+    }
+
+    // 7. 영속 저장 허용 목록 — 원가·화면 규칙 밖의 경로도 막는다.
+    if (PERSISTENCE.test(line) && !isCostModule && !isCostFree && !isUi && persistenceRule === undefined) {
+      findings.push(`${rel}:${number}  허용 목록 밖에서 영속 저장 API 사용: ${line.trim()}`);
+    }
+    if (persistenceRule !== undefined) {
+      for (const match of line.matchAll(STORAGE_CALL)) {
+        if (match[1] === 'clear' || match[1] === 'key' || match[2].trim() !== persistenceRule.keyConstant) {
+          findings.push(
+            `${rel}:${number}  저장소 호출은 ${persistenceRule.keyConstant} 열쇠 하나로만 한다: ${line.trim()}`,
+          );
+        }
+      }
     }
 
     // 4. 위험한 실행 — 전 범위

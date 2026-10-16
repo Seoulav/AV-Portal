@@ -13,7 +13,13 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 import { test, expect } from '@playwright/test';
-import { mockResources, expandWorkspaceSections, showDetailColumns } from './fixtures';
+import {
+  mockResources,
+  expandWorkspaceSections,
+  showDetailColumns,
+  expectExportReviewClear,
+  expectExportReviewPending,
+} from './fixtures';
 
 const NAME = '합성 대사 장비';
 const meta = { schemaVersion: 1, generatedOn: '2026-01-01' };
@@ -65,9 +71,10 @@ for (const profile of ['ds', 'general'] as const) {
     }
     await page.getByRole('button', { name: `${NAME} 노무 처리 펼치기` }).click();
     await expect(page.getByText('적용 노무 단가 49587', { exact: true })).toBeVisible();
-    await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+    // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05) — 버튼 비활성 대신 안내로 본다.
+    await expectExportReviewPending(page);
     await page.getByRole('button', { name: '확인함', exact: true }).click();
-    await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeEnabled();
+    await expectExportReviewClear(page);
 
     const totals = page.locator('.q-quote-table tfoot');
     for (const amount of ['377778', '148761', '526539', expected[profile].indirect, expected[profile].total]) {

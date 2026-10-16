@@ -12,13 +12,17 @@
 import type { PreparedQuote } from '../variants/prepare';
 import { quoteFileName } from '../variants/fileName';
 import { assertExportAllowed, assertSingleCompleteGroup, guideBySystemOf, type ExportFile } from '../variants/download';
+import { withReviewMarks } from '../variants/reviewMarks';
 import { buildSharedProjection, type SharedNotes } from '../shared/projection';
 import { buildMultiSystemSalesGuideWorkbook, type MultiSystemSalesExtras } from './guideWorkbookMulti';
 import type { GuideTemplateSet } from '../ooxml/guideTemplate';
 import type { InternalLine } from '../../services/private-cost/calculate';
 import type { BasisVersions } from '../../data/catalog/guideBasis';
 
-/** 영업팀용(0단계) — 원가·이윤·AI 메모 포함. */
+/**
+ * 영업팀용(0단계) — 원가·이윤·AI 메모 포함.
+ * 확인 항목이 남은 행은 비고에 `[확인 필요] 사유`를 단다(B-20261016-05).
+ */
 export function buildSalesDownload(
   prepared: PreparedQuote,
   guides: GuideTemplateSet,
@@ -29,7 +33,7 @@ export function buildSalesDownload(
 ): ExportFile {
   assertExportAllowed(prepared, guides, currentBasisVersions);
   assertSingleCompleteGroup(prepared.document);
-  const shared = buildSharedProjection(prepared, notes);
+  const shared = buildSharedProjection(withReviewMarks(prepared), notes);
   const guideBySystemId = guideBySystemOf(prepared.document, guides, true);
   const baseGuideBySystemId = guideBySystemOf(prepared.document, guides, false);
   const extras: MultiSystemSalesExtras = { ...notes, lines, aiNotesByRow };

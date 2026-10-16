@@ -78,7 +78,9 @@ test('handoff rejects wrong source/origin and replay; allowed fields alone reach
  expect(saved.systems.map((s:any)=>s.name)).toEqual(['합성 시스템','합성 시스템 B']);
  const unresolved=saved.rows.find((r:any)=>r.specification==='SYNTHETIC-UNMATCHED');
  expect(unresolved).toBeDefined();expect(unresolved.sku).toBeUndefined();expect(unresolved.sellingUnitPrice).toBeUndefined();
- await expect(quote.getByRole('button',{name:'Excel 다운로드'})).toBeDisabled();
+ // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05) — 버튼은 켜지고 확인 항목 안내가 뜬다.
+ await expect(quote.locator('[data-export-review-pending]')).toBeVisible();
+ await expect(quote.getByRole('button',{name:'Excel 다운로드'})).toBeEnabled();
  expect(JSON.stringify(saved)).not.toContain('COST-SENTINEL');
  const qty=quote.getByLabel('수량').first();await qty.fill('3');await qty.press('Tab');
  let dialogs=0;quote.on('dialog',async d=>{dialogs++;await d.dismiss();});

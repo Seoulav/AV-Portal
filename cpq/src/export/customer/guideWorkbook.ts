@@ -185,7 +185,11 @@ export function buildSystemSheetContent(
       [col('name')]: text(row.name),
       [col('spec')]: text(row.specification),
       [col('unit')]: text(row.unit),
-      [col('quantity')]: num(row.quantity),
+      // 수량 미확인(자리표시자 `1`)은 **빈 칸**이다 — 확인 항목이 남아도
+      // 내려받게 한 뒤(B-20261016-05) 지어낸 수량이 파일에 찍히지 않게
+      // 한다. 금액 수식(수량×단가)은 Excel 에서 0 이 되고, 0·1단계는 그
+      // 행 비고에 `[확인 필요] 수량 미확인`이 붙는다.
+      [col('quantity')]: row.quantityUnresolved === true ? blank : num(row.quantity),
       [col('remark')]: text(row.remark),
     };
     // 미등록 단가는 **빈 칸**이다. `0` 으로 채우면 공짜 제품이 된다 (§5.6).

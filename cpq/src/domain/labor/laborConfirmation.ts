@@ -89,3 +89,59 @@ export function computeLaborConfirmationFingerprint(input: LaborConfirmationFing
 
   return fnv1a64(JSON.stringify(structured));
 }
+
+/**
+ * **품셈 연결 내용**의 지문 (B-20261016-05 독립 검토 지적 C).
+ *
+ * "이 PC가 기억한 확인한 연결"은 품셈 판(`versions.labor` = 노임표
+ * `sourceSha256`)만으로는 부족하다 — 원본 해시가 같은 채 `labor-mappings.json`
+ * 의 연결 내용(품셈 항목·할증·요율·환산·배율)만 고치면 예전 확인이 그대로
+ * 적용된다. 그래서 기억 항목에 이 지문을 함께 저장하고, 지금 연결과 지문이
+ * 같을 때만 기억을 쓴다.
+ *
+ * 들어가는 것: 연결 id·SKU · 품셈 항목 id · 할증·요율·환산·배율 · 그 품셈
+ * 항목의 코드·기준 단위·노임 단위·직종별 절사 방식·직종별 공수. 노임 **값**은 넣지 않는다 —
+ * 노임은 품셈 판(`wage` 기준)이 따로 막고, 연결 자체가 맞는지와는 별개다.
+ */
+export interface LaborMappingFingerprintInput {
+  mapping: {
+    laborMappingId: string;
+    sku: string;
+    laborItemId: string;
+    conversionFactor: DecimalText;
+    surcharge: DecimalText;
+    itemRate: DecimalText;
+    multiplier?: DecimalText | undefined;
+  };
+  item: {
+    laborItemId: string;
+    code: string;
+    baseUnit: string;
+    wageUnit: string;
+    perTradeRounding?: 'int' | undefined;
+    trades: readonly { trade: string; quantity: DecimalText }[];
+  };
+}
+
+export function computeLaborMappingFingerprint({ mapping, item }: LaborMappingFingerprintInput): string {
+  const structured = {
+    laborMappingId: mapping.laborMappingId,
+    sku: mapping.sku,
+    laborItemId: mapping.laborItemId,
+    conversionFactor: normalizeDecimal(mapping.conversionFactor),
+    surcharge: normalizeDecimal(mapping.surcharge),
+    itemRate: normalizeDecimal(mapping.itemRate),
+    multiplier: mapping.multiplier === undefined ? null : normalizeDecimal(mapping.multiplier),
+    item: {
+      laborItemId: item.laborItemId,
+      code: item.code,
+      baseUnit: item.baseUnit,
+      wageUnit: item.wageUnit,
+      perTradeRounding: item.perTradeRounding ?? null,
+      trades: [...item.trades]
+        .map((t) => ({ trade: t.trade, quantity: normalizeDecimal(t.quantity) }))
+        .sort((a, b) => a.trade.localeCompare(b.trade)),
+    },
+  };
+  return fnv1a64(JSON.stringify(structured));
+}

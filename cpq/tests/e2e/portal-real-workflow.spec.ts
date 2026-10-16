@@ -47,7 +47,9 @@ test('실제 Portal 장비를 화면에서 구성하여 승인 CPQ 자료로 새
  await page.screenshot({path:resolve(out,'01-builder.png'),fullPage:true});
  const popup=page.waitForEvent('popup');await page.getByRole('button',{name:'견적 만들기',exact:true}).click();const quote=await popup;
  await expect(quote.getByText('구성도를 새 견적으로 가져왔습니다.',{exact:false})).toBeVisible();
- await expect(quote.getByRole('button',{name:'Excel 다운로드'})).toBeDisabled();
+ // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05) — 버튼은 켜지고 확인 항목 안내가 뜬다.
+ await expect(quote.locator('[data-export-review-pending]')).toBeVisible();
+ await expect(quote.getByRole('button',{name:'Excel 다운로드'})).toBeEnabled();
  await quote.screenshot({path:resolve(out,'02-review-required.png'),fullPage:true});
  // Confirm each mapped row against the displayed adopted labor basis. Unknown labor is never silently zeroed.
  const toggles=quote.getByRole('button',{name:/노무 처리 펼치기/});
@@ -58,6 +60,7 @@ test('실제 Portal 장비를 화면에서 구성하여 승인 CPQ 자료로 새
  await quote.screenshot({path:resolve(out,'03-labor-reviewed.png'),fullPage:true});
  const downloadButton=quote.getByRole('button',{name:'Excel 다운로드'});
  await expect(downloadButton).toBeEnabled();
+ await expect(quote.locator('[data-export-review-pending]')).toHaveCount(0);
  const saved=quote.waitForEvent('download');await quote.getByRole('button',{name:'작업 파일로 저장'}).click();const work=await saved;const text=readFileSync((await work.path())!,'utf8');const doc=JSON.parse(text);
  await work.saveAs(resolve(out,'synthetic.avcpq.json'));
  expect(doc.systems.map((s:any)=>s.name)).toEqual(['가상 회의실 A']);

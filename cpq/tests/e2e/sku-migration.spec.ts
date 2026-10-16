@@ -11,7 +11,7 @@
  */
 import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
-import { mockResources, expandWorkspaceSections } from './fixtures';
+import { mockResources, expandWorkspaceSections, expectExportReviewPending } from './fixtures';
 
 const SKU = 'FIX-0001';
 const SHA_OLD = 'a'.repeat(64);
@@ -99,8 +99,9 @@ test('치환을 막은 행은 적용한 뒤에도 옛 제품으로 남지 않는
   // 사람이 다시 골라야 한다는 것을, 왜 막혔는지와 함께 보여준다.
   await expect(page.getByText('다시 골라야', { exact: false }).first()).toBeVisible();
   await expect(page.getByText('다른 제품이고', { exact: false }).first()).toBeVisible();
-  // 미해결로 되돌아갔으므로 출력이 막힌다.
-  await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+  // 미해결로 되돌아갔으므로 확인 항목이 남는다.
+  // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05) — 막지 않고 안내한다.
+  await expectExportReviewPending(page);
 });
 
 test('취소하면 문서가 그대로 남는다 — 막혔다고 제품이 지워지지 않는다', async ({ page }) => {
@@ -126,7 +127,9 @@ test('적용한 뒤 실행취소하면 옛 문서로 돌아간다', async ({ pag
   await expect(page.getByText('전혀 다른 합성 품목', { exact: false })).toHaveCount(0);
 });
 
-test('치환이 막힌 행이 있으면 0·1·2 단계 출력이 전부 막힌다', async ({ page }) => {
+// 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05). 전에는 "0·1·2 출력이 전부
+// 막힌다"였다. 이제 세 등급 모두 확인 항목 안내가 남고 내려받기 직전 확인 창이 뜬다.
+test('치환이 막힌 행이 있으면 0·1·2 단계 모두 확인 항목 안내가 남는다', async ({ page }) => {
   const saved = await saveQuote(page);
   await reopenWithSwappedCatalog(page, saved);
   await page.getByRole('button', { name: '현재 기준으로 다시 계산 — 미리보기' }).click();
@@ -134,7 +137,7 @@ test('치환이 막힌 행이 있으면 0·1·2 단계 출력이 전부 막힌�
 
   for (const grade of ['2 고객용', '1 공유용', '0 영업팀용']) {
     await page.getByRole('radio', { name: grade }).check();
-    await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
+    await expectExportReviewPending(page);
   }
 });
 

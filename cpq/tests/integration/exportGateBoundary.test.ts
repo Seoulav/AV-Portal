@@ -24,10 +24,15 @@ import type { SharedNotes } from '@/export/shared/projection';
 import type { QuoteDocument } from '@/domain/quote/types';
 
 /**
- * 공통 출력 경계 — blocking인 prepared는 등급과 무관하게 전부 거부한다
- * (2026-10-05 독립 검토 지적: `buildCustomerDownload`/`buildSharedDownload`/
- * `buildSalesDownload`는 그룹 완전성만 확인하고 `prepared.blocking`은
- * 전혀 보지 않았다 — 화면 버튼의 disabled 속성만이 유일한 방어선이었다).
+ * 공통 출력 경계 — 기준 불일치(가이드 템플릿·노임 판)인 prepared는 등급과
+ * 무관하게 전부 거부한다(2026-10-05 독립 검토 지적: 화면 버튼의 disabled
+ * 속성만이 유일한 방어선이면 안 된다).
+ *
+ * 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05). 전에는
+ * 여기서 "`prepared.blocking`이면 세 등급 전부 거부"도 고정했다. 이제
+ * blocking(구성도·품셈·계산 확인 항목)은 출력 경계가 막지 않는다 — 아래
+ * 해당 시험은 "세 등급 모두 실제 바이트를 만든다"로 바뀌었다. 기준 불일치
+ * 거부 시험은 그대로다.
  *
  * **실제 승인 카탈로그로 만든 prepared를 직접 호출한다** — UI/버튼을 전혀
  * 거치지 않는다. 그래야 "버튼이 막아서 호출이 안 된 것"과 "이 함수
@@ -97,10 +102,16 @@ describe('실제 승인 카탈로그 전제 확인', () => {
 });
 
 describe('assertExportAllowed — 공통 출력 경계의 단일 게이트', () => {
-  it('blocking이면 guides/basis를 보기도 전에 던진다', () => {
-    expect(() =>
-      assertExportAllowed({ blocking: true } as PreparedQuote, {} as GuideTemplateSet, {} as BasisVersions),
-    ).toThrow(ExportBlockedError);
+  // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기. blocking만으로는 던지지 않는다.
+  it('blocking이어도 기준이 지금과 같으면 던지지 않는다', () => {
+    expect(() => assertExportAllowed(realPrepared(), allGuides(), realBasisVersions())).not.toThrow();
+  });
+
+  it('blocking이고 템플릿 기준이 다르면 기준 불일치로 던진다 — blocking 허용이 기준 대조를 건너뛰지 않는다', () => {
+    const p = realPrepared();
+    const stale = { ...p, document: { ...p.document, versions: { ...p.document.versions, template: 'STALE' } } };
+    expect(stale.blocking).toBe(true);
+    expect(() => assertExportAllowed(stale, allGuides(), realBasisVersions())).toThrow(ExportBlockedError);
   });
 });
 
@@ -151,28 +162,26 @@ describe('과거에는 유효했던(blocking:false) prepared도 지금 guides와
   });
 });
 
-describe('blocking인 prepared는 0/1/2 세 등급 전부가 거부한다 — UI를 거치지 않고 직접 호출', () => {
-  it('고객용(2단계)이 거부한다', () => {
+// 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05).
+// 전에는 이 묶음이 "blocking인 prepared는 0/1/2 세 등급 전부가 거부한다"였다.
+// 확인 필요 표시(0·1 있음, 2 없음)와 값 칸 처리는 `exportUnblocked.test.ts`가 본다.
+describe('blocking인 prepared도 0/1/2 세 등급 모두 실제 바이트를 만든다 — UI를 거치지 않고 직접 호출', () => {
+  it('고객용(2단계)이 만든다', () => {
     const p = realPrepared();
-    expect(() => buildCustomerDownload(p, allGuides(), realBasisVersions())).toThrow(ExportBlockedError);
+    expect(p.blocking).toBe(true);
+    expect(buildCustomerDownload(p, allGuides(), realBasisVersions()).bytes.length).toBeGreaterThan(0);
   });
 
-  it('공유용(1단계)이 거부한다', () => {
+  it('공유용(1단계)이 만든다', () => {
     const p = realPrepared();
-    expect(() => buildSharedDownload(p, allGuides(), EMPTY_NOTES, realBasisVersions())).toThrow(ExportBlockedError);
+    expect(buildSharedDownload(p, allGuides(), EMPTY_NOTES, realBasisVersions()).bytes.length).toBeGreaterThan(0);
   });
 
-  it('영업팀용(0단계)이 거부한다', () => {
+  it('영업팀용(0단계)이 만든다', () => {
     const p = realPrepared();
-    expect(() => buildSalesDownload(p, allGuides(), EMPTY_NOTES, [], new Map(), realBasisVersions())).toThrow(
-      ExportBlockedError,
-    );
-  });
-
-  it('blocking이 아니면(가정) 실제로 바이트를 만든다 — 차단이 전부를 막는 게 아니라 이 조건만 가린다는 증거', () => {
-    const p = { ...realPrepared(), blocking: false };
-    const file = buildCustomerDownload(p, allGuides(), realBasisVersions());
-    expect(file.bytes.length).toBeGreaterThan(0);
+    expect(
+      buildSalesDownload(p, allGuides(), EMPTY_NOTES, [], new Map(), realBasisVersions()).bytes.length,
+    ).toBeGreaterThan(0);
   });
 });
 
