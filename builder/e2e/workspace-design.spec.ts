@@ -9,8 +9,36 @@ test('desktop presents Portal identity and grouped commands', async ({ page }) =
   await expect(page.locator('.toolbar-group-project').getByRole('button', { name: '내보내기' })).toBeVisible();
   await expect(page.locator('.toolbar-group-edit').getByRole('button', { name: '메모' })).toBeVisible();
   await expect(page.locator('.toolbar-group-view').getByRole('button', { name: '미니맵' })).toBeVisible();
+  await expect(page.getByRole('group', { name: '프로젝트' })).toBeVisible();
   await expect(page.locator('.canvas')).toBeVisible();
 });
+
+test('empty canvas explains how to add equipment and clears the hint after adding', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
+  await page.goto('./');
+  await expect(page.locator('.canvas-empty-hint')).toBeVisible();
+  await page.locator('.library-group .group-title').first().click();
+  await page.locator('.unit-item button[aria-label$="추가"]').first().click();
+  await expect(page.locator('.canvas-empty-hint')).toHaveCount(0);
+});
+
+for (const width of [768, 390]) {
+  test(`workspace actions and tabs fit a ${width}px viewport in both themes`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.route('**/builder-library.json', route => route.fulfill({ json: library }));
+    await page.goto('./');
+    await expect(page.getByRole('tab', { name: '라이브러리' })).toBeVisible();
+    await expect(page.getByRole('tab', { name: '캔버스' })).toBeVisible();
+    await expect(page.locator('.toolbar-group-project').getByRole('button', { name: '내보내기' })).toBeVisible();
+    await expect(page.locator('.toolbar-group-view').getByRole('button', { name: '미니맵' })).toBeVisible();
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
+    await page.getByRole('button', { name: '어두운 테마' }).click();
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await expect(page.getByRole('tab', { name: '캔버스' })).toBeVisible();
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
+  });
+}
 
 test('mobile adds a library unit to a persistent canvas and keeps it through inspector switches', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });

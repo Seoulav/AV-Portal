@@ -107,6 +107,8 @@ input, select, textarea { border: 1px solid var(--line); border-radius: 8px; pad
 .lib-badge.muted { color: var(--muted); background: var(--surface-soft); }
 
 .canvas { flex: 1; position: relative; min-width: 0; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow); overflow: hidden; }
+.canvas-empty-hint { position: absolute; z-index: 3; top: 32%; left: 50%; transform: translateX(-50%); width: min(340px, 82%); display: grid; gap: 7px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb, var(--panel) 92%, transparent); color: var(--muted); box-shadow: var(--card-shadow); text-align: center; font-size: 13px; pointer-events: none; }
+.canvas-empty-hint strong { color: var(--text); font-size: 16px; }
 .canvas-loading { display: grid; place-items: center; color: var(--muted); }
 
 /* 장비 노드: 폭 220, 위아래 여백 12, 헤더 54, 사진 68, 단자 행 24 + 간격 4, 양방향 앞 간격 8 + 머리 13 */

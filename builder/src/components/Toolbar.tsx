@@ -136,7 +136,7 @@ export function Toolbar() {
         <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       </div>
       <div className="toolbar-actions">
-        <div className="toolbar-group toolbar-group-project" aria-label="프로젝트">
+        <div className="toolbar-group toolbar-group-project" role="group" aria-label="프로젝트">
           <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
           <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>
           <button type="button" className="primary" onClick={exportFile} disabled={!ready} title="구성도 JSON(1.2) 파일">내보내기</button>
@@ -144,13 +144,13 @@ export function Toolbar() {
           <button type="button" onClick={() => void exportPdf()} disabled={!ready || !state.diagram.nodes.length || makingPdf} title="도면을 벡터 PDF로 받는다(한글 글꼴 포함)">{makingPdf ? 'PDF 만드는 중…' : 'PDF'}</button>
           <button type="button" onClick={() => { try { openQuote(JSON.parse(state.exportText()), text => state.notify({text,tone:'info'})); } catch { state.notify({text:'구성도를 전달하지 못했습니다. 내용을 확인해 주세요.',tone:'error'}); } }}>견적 만들기</button>
         </div>
-        <div className="toolbar-group toolbar-group-edit" aria-label="편집">
+        <div className="toolbar-group toolbar-group-edit" role="group" aria-label="편집">
           <button type="button" onClick={state.undo} disabled={!state.past.length} title="Ctrl+Z">실행 취소</button>
           <button type="button" onClick={state.redo} disabled={!state.future.length} title="Ctrl+Y">다시 실행</button>
           <button type="button" onClick={() => state.addAnnotation(center())} disabled={!ready}>메모</button>
           <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
         </div>
-        <div className="toolbar-group toolbar-group-view" aria-label="보기">
+        <div className="toolbar-group toolbar-group-view" role="group" aria-label="보기">
           <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
           <button type="button" onClick={() => void autoLayout()} disabled={!ready || laying || equipmentCount === 0} title="신호 흐름을 왼쪽에서 오른쪽으로 놓는다. 실행 취소로 되돌릴 수 있다">오토 레이아웃</button>
           <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
