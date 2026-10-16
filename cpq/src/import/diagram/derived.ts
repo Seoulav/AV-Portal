@@ -34,6 +34,16 @@ export const CONNECTOR_PACK = 10;
 /** 구성도가 제품을 지정하지 않았을 때 쓰는 기본 품명. 카탈로그에서 찾아본다. */
 const DEFAULT_CONNECTOR_MODEL = 'CAT6 UTP용';
 
+/**
+ * 케이블 SKU → 그 케이블 전용 커넥터 SKU (운영자 결정 2026-10-16).
+ *
+ * 여기 있는 케이블의 구간은 기본 커넥터 대신 이 커넥터로 따로 센다.
+ * 개수 규칙(구간당 3개, 10EA 묶음)은 같다.
+ */
+export const CONNECTOR_SKU_BY_CABLE_SKU: ReadonlyMap<string, string> = new Map([
+  ['CBL-0090', 'CBL-0091'], // 10GXE02 S/FTP CAT6A → STP Modular Cat.7/Cat.6A용
+]);
+
 /** 구간 수 → 10EA 묶음 개수. */
 export function connectorPacks(segmentCount: number): number {
   if (segmentCount <= 0) return 0;
@@ -84,9 +94,10 @@ export function buildDerivedLines(cables: readonly CableLine[], catalog: Catalog
   const lines: DeviceLine[] = [];
   const warnings: ImportWarning[] = [];
 
-  // --- 커넥터: 벌크 케이블 구간 수의 합 ---
+  // --- 커넥터: 나머지 벌크 케이블 구간 수의 합 ---
   const bulkSegments = cables
     .filter(isBulkLine)
+    .filter((line) => line.sku === undefined || !CONNECTOR_SKU_BY_CABLE_SKU.has(line.sku))
     .reduce((sum, line) => sum + line.segmentCount, 0);
 
   const packs = connectorPacks(bulkSegments);
@@ -110,6 +121,40 @@ export function buildDerivedLines(cables: readonly CableLine[], catalog: Catalog
       });
     }
   }
+
+  // --- 전용 커넥터: 케이블 SKU별로 따로 센다 (기본 커넥터 행 뒤에 둬 그 행 번호를 지킨다) ---
+  const dedicatedSegments = new Map<string, number>();
+  for (const cable of cables.filter(isBulkLine)) {
+    const connectorSku = cable.sku !== undefined ? CONNECTOR_SKU_BY_CABLE_SKU.get(cable.sku) : undefined;
+    if (connectorSku === undefined) continue;
+    dedicatedSegments.set(connectorSku, (dedicatedSegments.get(connectorSku) ?? 0) + cable.segmentCount);
+  }
+  for (const [connectorSku, segments] of dedicatedSegments) {
+    const product = catalog.products.find((p) => p.sku === connectorSku);
+    const price = catalog.prices.get(connectorSku);
+    lines.push({
+      ...(product !== undefined ? { sku: product.sku } : {}),
+      name: product?.quoteName ?? connectorSku,
+      specification: `${product?.quoteSpec ?? connectorSku} (${segments}구간 × ${CONNECTORS_PER_SEGMENT}개)`,
+      unit: `${CONNECTOR_PACK}EA`,
+      quantity: String(connectorPacks(segments)),
+      ...(price !== undefined ? { sellingUnitPrice: price } : {}),
+      ...(product?.laborMappingId !== undefined ? { laborMappingId: product.laborMappingId } : {}),
+      isAccessory: true,
+      sourceNodeIds: [],
+      matchedBy: product !== undefined ? 'model-exact' : 'none',
+      // 재산출 때 같은 행으로 짝짓는 식별자. 기본 커넥터 행은 예전처럼 비워 둔다.
+      sourceCableMembers: [`connector:${connectorSku}`],
+    });
+    if (product === undefined) {
+      warnings.push({
+        code: 'device-not-in-catalog',
+        blocking: true,
+        message: `커넥터 '${connectorSku}'을 카탈로그에서 찾을 수 없다. 단가가 미등록이다.`,
+      });
+    }
+  }
+
 
   return { lines, warnings };
 }
