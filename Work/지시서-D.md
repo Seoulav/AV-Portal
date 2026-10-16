@@ -200,7 +200,7 @@
 
 ## W-20261016-018 — Aquilon C 시리즈4종 구현 계획
 
-- 상태 **IN_PROGRESS**. 명세/인계는 main3ad49837에서 읽음, 착수기준 최신main54d0693c. 브랜치 codex/W-20261016-018-aquilon-c, codex-d 전용. 묶음6b 병합·배포·공개확인 선행조건 충족. W-019는 다른 세션 범위.
+- 상태 **REVIEW**. 명세/인계는 main3ad49837에서 읽음, 착수기준 최신main54d0693c. 브랜치 codex/W-20261016-018-aquilon-c, codex-d 전용. 묶음6b 병합·배포·공개확인 선행조건 충족. W-019는 다른 세션 범위.
 - 목표: Aquilon Cmax/C+/C/Cmini를 공식자료로 등록. 기존 제품 형식과 layerPlan·signalFlow 렌더러 재사용.
 - 파일: beta/site/catalog.json, detail/data/aquilon-c*.json 4건, 모델별 공식사진, Work/기록/W-20261016-018 근거·점검·인계, 신규 회귀·추가제품 되감기, 검색인덱스/스냅샷/읽기용카탈로그.
 - 기술: Node 데이터/검증, 공식PDF 텍스트 및 페이지 이미지 대조, Chrome 실제1280/390 상세와760/390좌우 지도. 원본PDF는 로컬outputs/w018에 보관하고 기존 브로슈어 uploads 공유 연결.
@@ -221,3 +221,5 @@
 - verify-pages289제품/286상세/523사진/167uploads행 통과. 실제 PDF 파일 추가0. 원문·쪽 근거표,72표식 점검표,Work 인계,20장 미리보기 작성.
 
 - 최신 main38489ee0(#588 Epson9종) 통합, 검색 인덱스 충돌을 양쪽 제품 원본으로 재생성해 해결. 통합 전체823건/822pass/0fail/기존skip1(68초), verify-pages·검색인덱스check·PR전체diffcheck 통과. RS JSON·잠금PDF·Port Map 렌더러는 변경0. PR/CI 후 Work 독립자료검증·병합순서 요청 예정.
+
+- PR #596: https://github.com/Seoulav/AV-Portal/pull/596. 코드 독립 검토 승인: 신규8회귀·추가2행 경계 통과, 역사복원 catalog/uploads가 origin/main과 일치, RS7JSON/DOM/text 및 공개 복사본 불변 확인. 현재 CI 확인 중이며 Work 독립자료검증/병합순서 승인은 아직 받지 않음.
