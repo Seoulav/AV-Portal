@@ -634,3 +634,12 @@
 
 - W-014 Work 검토용 PNG 캡처 보강: Chrome headless CDP + 실제 상세 페이지 렌더로 11종 각각 before/after Port Map(760px, 390px 좌·우) 66장과 RS6·Zenith 200·Crown DCi 4|600 상세 번호 목록 1280px 3장을 생성. PNG 시그니처·파일 수·화면 너비를 확인(69장, 잘못된 파일 0). 캡처 인덱스 `Work/기록/W-20261016-014-analogway-preview/screenshots/index.html`; 캡처는 동일 폴더. Work가 PNG 확인 후 병합 순서를 정하기로 해 병합 보류.
 - W-014 #596 병합 후 통합: latest origin/main `4cc0f961` (#596 Aquilon C) 병합 및 검색 인덱스 재생성. `build-detail-assets`, `update-snapshot`, `build-search-index`, `build-readable-catalog` 후 search/readable `--check`, verify-pages 통과(289 카탈로그·286 상세·523 이미지·167 PDF). 전체 직렬 테스트 828개 중 827 통과·실패 0·기존 skip 1. W-014 11종 audit는 29개의 수동 확인 lint 신호(중복 도면/stacked coordinate 안내)로 완료; 전체 audit는 신규 Aquilon C `portMap`의 누락 `measuredImage`에서 중단되어 W-014 범위 밖으로 보고. 통합 후 Chrome 캡처를 다시 만들었고 변경 PNG 4장을 반영. #597 병합은 Work 캡처 검토 전 보류.
+
+### W-014 Work 피드백 반영 (2026-10-17)
+
+- PR #597 병합 보류 지시를 반영. Aquilon C 4종은 세션 D에 배정되어 변경하지 않음.
+- RS 카드형 지도는 입력 카드 종류별 1개, 출력 카드 열별 1개 외곽 괄호로 재배치. 카드 장착 수를 desc에 넣고 제어 단자는 하단 번호로 유지. Pulse/Eikos/Zenith의 중간 줄은 좌우 외곽 범위 괄호로 바꿔 다른 단자 행을 가로지르는 세로 지시선을 제거.
+- 수정 직전/수정 후 번호 원 수: RSalpha 9→8, RS1 12→10, RS2 13→10, RS3 15→10, RS4 16→10, RS5 18→10, RS6 19→10, Pulse 10→10, Eikos 10→10, Zenith 100 14→14, Zenith 200 16→16. Pulse/Eikos/Zenith는 표식 수 감축 대상이 아니며 짧은 가장자리 괄호로 오인 가능성을 줄임.
+- 11종 전후 760px·390px 좌우 66장과 RS6·Zenith 200·Crown DCi 4|600 목록 1280px 3장 캡처, 갤러리: Work/기록/W-20261016-014-analogway-preview/screenshots/index.html. RS6·Pulse·Zenith 대표 화면 및 390px를 검토; 번호와 카드 목록 유지, 비대상 Crown 목록 동일.
+- 집중 지도 테스트·되감기·기존 라벨 회귀 테스트 10/10 통과. `verify-pages`, search-index/readable-catalog `--check` 통과. 전체 테스트 831건 중 829 통과, 실패 1, 기존 skip 1; 유일한 실패는 `tests/rtcom-sync.test.mjs`의 Windows 임시 경로 `rename` EPERM으로 코드 단언 실패가 아니었다. #598 `849450c5`는 main에 병합됨. 현재 지도 수정·캡처를 다시 만드는 중이며, 그 뒤 준비된 변경을 커밋하고 최신 main을 통합한다.
+- #598 849450c5 병합 확인. 다음: 작업 커밋 → 최신 origin/main 통합, validMap의 portMaps 제조사 제한 해제·일반 제품 role 고유 검사·Other 허용과 W-014 같은 번호 허용 보존 → 전체 검사·캡처 확인 → PR #597 CI 초록 후 Work에 병합 순서 요청. 병합 금지.

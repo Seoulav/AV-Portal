@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const folder=path.dirname(fileURLToPath(import.meta.url));
 const root=path.resolve(folder,'../../../beta/site');
-const fixture=JSON.parse(fs.readFileSync(path.resolve(folder,'../../../tests/fixtures/w014-analogway-prior-portmaps.json'),'utf8'));
+const fixture=JSON.parse(fs.readFileSync(path.resolve(folder,'../../../tests/fixtures/w014-analogway-before-revision.json'),'utf8'));
 const mode=process.argv[2],port=Number(process.argv[3]);
 if(!['before','after'].includes(mode)||!Number.isInteger(port))throw new Error('usage: node preview-server.mjs before|after <port>');
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.pdf':'application/pdf'};

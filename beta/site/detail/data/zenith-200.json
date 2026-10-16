@@ -413,167 +413,129 @@
         "n": 1,
         "label": "선택형 SDI 입력 1·2",
         "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
-        "x1": 145,
-        "x2": 307,
-        "y": 368,
-        "side": "top"
+        "side": "left",
+        "y1": 336,
+        "y2": 350
       },
       {
         "n": 2,
         "label": "12G-SDI 입력 3·4",
         "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
-        "x1": 335,
-        "x2": 490,
-        "y": 368,
-        "side": "top"
+        "side": "right",
+        "y1": 345,
+        "y2": 359
       },
       {
         "n": 3,
         "label": "HDMI 입력 1·2",
         "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
-        "x1": 150,
-        "x2": 310,
-        "y": 452,
-        "side": "bottom"
+        "side": "left",
+        "y1": 427,
+        "y2": 441
       },
       {
         "n": 4,
         "label": "HDMI 입력 5–8·루프",
         "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
-        "x1": 335,
-        "x2": 594,
-        "y": 452,
-        "side": "bottom"
+        "side": "right",
+        "y1": 427,
+        "y2": 441
       },
       {
         "n": 4,
         "label": "HDMI 입력 5–8·루프",
         "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
-        "x1": 612,
-        "x2": 870,
-        "y": 452,
-        "side": "bottom"
+        "side": "left",
+        "y1": 445,
+        "y2": 459
       },
       {
         "n": 5,
         "label": "DisplayPort 입력 9·10",
         "desc": "IN #9·10의 DisplayPort 1.2 입력",
-        "x1": 907,
-        "x2": 1070,
-        "y": 452,
-        "side": "bottom"
+        "side": "right",
+        "y1": 445,
+        "y2": 459
       },
       {
         "n": 6,
         "label": "PGM 출력 1·2",
         "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
-        "x1": 1090,
-        "x2": 1420,
-        "y": 452,
-        "side": "bottom"
+        "side": "left",
+        "y1": 463,
+        "y2": 477
       },
       {
         "n": 7,
         "label": "멀티뷰어 출력",
         "desc": "MVW 표기의 HDMI·SDI 출력",
-        "x1": 1430,
-        "x2": 1575,
-        "y": 452,
-        "side": "bottom"
+        "side": "right",
+        "y1": 463,
+        "y2": 477
       },
       {
         "n": 8,
         "label": "HDMI 입력 11–13",
         "desc": "상단 왼쪽 IN #11–13 HDMI 입력",
-        "x1": 324,
-        "x2": 571,
-        "y": 260,
-        "side": "top",
-        "labelX": 396,
-        "via": [
-          [
-            448,
-            267
-          ],
-          [
-            396,
-            267
-          ]
-        ]
+        "side": "left",
+        "y1": 244,
+        "y2": 258
       },
       {
         "n": 9,
         "label": "PGM 출력 3·4",
         "desc": "상단 왼쪽 OUT #3·4의 HDMI·SDI·SFP+ 미러 출력",
-        "x1": 586,
-        "x2": 890,
-        "y": 260,
-        "side": "top"
+        "side": "right",
+        "y1": 244,
+        "y2": 258
       },
       {
         "n": 10,
         "label": "HDMI 입력 14–16",
         "desc": "상단 오른쪽 IN #14–16 HDMI 입력",
-        "x1": 1023,
-        "x2": 1281,
-        "y": 260,
-        "side": "top"
+        "side": "left",
+        "y1": 262,
+        "y2": 276
       },
       {
         "n": 11,
         "label": "PGM 출력 5·6",
         "desc": "상단 오른쪽 OUT #5·6의 HDMI·SDI·SFP+ 미러 출력",
-        "x1": 1296,
-        "x2": 1590,
-        "y": 260,
-        "side": "top"
+        "side": "right",
+        "y1": 262,
+        "y2": 276
       },
       {
         "n": 12,
         "label": "아날로그 오디오",
         "desc": "LINE IN 1·2 및 LINE OUT 1·2 단자",
-        "x1": 780,
-        "x2": 907,
-        "y": 363,
-        "side": "top"
+        "side": "left",
+        "y1": 354,
+        "y2": 368
       },
       {
         "n": 13,
         "label": "Dante 네트워크",
         "desc": "Dante PRIMARY·SECONDARY RJ-45 연결",
-        "x1": 936,
-        "x2": 1065,
-        "y": 361,
-        "side": "top"
+        "side": "right",
+        "y1": 363,
+        "y2": 377
       },
       {
         "n": 14,
         "label": "Genlock·Loop",
         "desc": "GENLOCK 입력 및 LOOP BNC",
-        "x1": 1442,
-        "x2": 1583,
-        "y": 345,
-        "side": "top"
+        "side": "left",
+        "y1": 372,
+        "y2": 386
       },
       {
         "n": 15,
         "label": "CONTROL",
         "desc": "CONTROL 표기의 RJ-45 제어 연결",
-        "x1": 1599,
-        "x2": 1675,
-        "y": 578,
-        "side": "bottom",
-        "labelX": 1710,
-        "via": [
-          [
-            1637,
-            442
-          ],
-          [
-            1710,
-            442
-          ]
-        ]
+        "side": "left",
+        "y1": 571,
+        "y2": 585
       }
     ]
   },

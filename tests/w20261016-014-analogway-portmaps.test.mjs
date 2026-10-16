@@ -112,11 +112,15 @@ test('the 11 Analog Way maps use shared card numbers and short photo leaders', (
       const group = groups.get(item.n) ?? [];
       group.push(item);
       groups.set(item.n, group);
-      assert.ok(item.x2 - item.x1 <= width / 4, `${id} #${item.n}: horizontal bracket exceeds 1/4 photo width`);
+      if (item.x1 !== undefined) assert.ok(item.x2 - item.x1 <= width / 4, `${id} #${item.n}: horizontal bracket exceeds 1/4 photo width`);
       if (item.via) {
-        const anchorX = (item.x1 + item.x2) / 2;
-        assert.ok(Math.abs(item.via[0][0] - anchorX) <= 0.5, `${id} #${item.n}: route starts at bracket center`);
-        assert.equal(item.via[0][1], item.via[1][1], `${id} #${item.n}: route's second segment is horizontal`);
+        const horizontalSegments = item.via.slice(1).map((point, index) => Math.abs(point[0] - item.via[index][0]));
+        assert.ok(horizontalSegments.every(length => length <= width / 4), `${id} #${item.n}: via horizontal segment exceeds 1/4 photo width`);
+        if (item.x1 !== undefined) {
+          const anchorX = (item.x1 + item.x2) / 2;
+          assert.ok(Math.abs(item.via[0][0] - anchorX) <= 0.5, `${id} #${item.n}: route starts at bracket center`);
+          assert.equal(item.via[0][1], item.via[1][1], `${id} #${item.n}: route's second segment is horizontal`);
+        }
       }
     }
     for (const [number, group] of groups) {
@@ -128,6 +132,58 @@ test('the 11 Analog Way maps use shared card numbers and short photo leaders', (
       if (Math.abs(a.y - b.y) >= 6) continue;
       const gap = Math.max(0, Math.max(a.x1, b.x1) - Math.min(a.x2, b.x2));
       assert.ok(gap >= 6, `${id} #${a.n}/#${b.n}: nearby horizontal brackets have ${gap}px gap`);
+    }
+  }
+});
+
+test('the revised marker counts match each layout while retaining every Port Map number', () => {
+  const root = new URL('../beta/site/detail/data/', import.meta.url);
+  const before = JSON.parse(readFileSync(new URL('./fixtures/w014-analogway-before-revision.json', import.meta.url), 'utf8'));
+  const expected = {
+    'aquilon-rsalpha': 8, 'aquilon-rs1': 10, 'aquilon-rs2': 10, 'aquilon-rs3': 10,
+    'aquilon-rs4': 10, 'aquilon-rs5': 10, 'aquilon-rs6': 10,
+    'pulse-4k': 10, 'eikos-4k': 10, 'zenith-100': 14, 'zenith-200': 16
+  };
+  for (const [id, afterCount] of Object.entries(expected)) {
+    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    assert.equal(product.portMap.items.length, afterCount, `${id}: revised marker-circle count`);
+    assert.deepEqual([...new Set(product.portMap.items.map(item => item.n))].sort((a, b) => a - b),
+      [...new Set(before[id].items.map(item => item.n))].sort((a, b) => a - b), `${id}: Port Map number set`);
+    assert.ok(product.portMap.items.length <= before[id].items.length, `${id}: marker count did not decrease`);
+  }
+});
+
+test('Aquilon RS card maps use one grouped edge bracket per card type with card counts', () => {
+  const root = new URL('../beta/site/detail/data/', import.meta.url);
+  const ids = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6'];
+  for (const id of ids) {
+    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    const cards = product.portMap.items.filter(item => /입력 카드|출력 카드/.test(item.label));
+    for (const label of ['HDMI 입력 카드', 'HDMI 출력 카드', 'DisplayPort 입력 카드', 'SDI 입력 카드']) {
+      const group = cards.filter(item => item.label === label);
+      assert.equal(group.length, label.startsWith('HDMI') && label.endsWith('입력 카드') ? 1 :
+        label === 'HDMI 출력 카드' ? 1 : group.length ? 1 : 0, `${id}: ${label} should use one card-type bracket`);
+      if (!group.length) continue;
+      assert.match(group[0].desc, /카드 \d+장/);
+      assert.ok(['left', 'right'].includes(group[0].side), `${id}: ${label} should use an edge bracket`);
+      assert.ok(Number.isFinite(group[0].y1) && Number.isFinite(group[0].y2));
+    }
+  }
+});
+
+test('middle-row fixed-port markers use short edge brackets instead of crossing adjacent rows', () => {
+  const root = new URL('../beta/site/detail/data/', import.meta.url);
+  const required = {
+    'pulse-4k': [3, 4, 5, 6, 7], 'eikos-4k': [3, 4, 5, 6, 7],
+    'zenith-100': [3, 4, 5, 6, 7, 10, 11, 12],
+    'zenith-200': [3, 4, 5, 6, 7, 12, 13, 14]
+  };
+  for (const [id, numbers] of Object.entries(required)) {
+    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    for (const number of numbers) {
+      const matching = product.portMap.items.filter(item => item.n === number);
+      assert.ok(matching.length, `${id} #${number} missing`);
+      assert.ok(matching.every(item => ['left', 'right'].includes(item.side) && Number.isFinite(item.y1) && Number.isFinite(item.y2)), `${id} #${number} must use an edge bracket`);
     }
   }
 });
