@@ -212,6 +212,26 @@ interface RawSheet {
   rows: string[][];
   /** 행마다 수식이 있던 열 번호. `rows`와 같은 길이다. */
   formulas: Set<number>[];
+  /** 병합 셀 범위(0부터). 2단 머리글의 위 칸이 어느 열까지 덮는지 알려 준다. */
+  merges?: XlsxMerge[];
+}
+
+/** 병합 셀 범위 — 0부터 센 행·열, 양 끝 포함. 값이 아니라 자리만 담는다. */
+export interface XlsxMerge {
+  firstRow: number;
+  firstColumn: number;
+  lastRow: number;
+  lastColumn: number;
+}
+
+/** 통합문서 한 시트를 통째로 — 가격표 불러오기(B-20261016-06)가 시트마다 머리글을 찾는다. */
+export interface XlsxSheetGrid {
+  /** Excel 탭에 보이는 실제 이름. */
+  name: string;
+  /** 배열 인덱스 i = 시트의 (i+1)행. 생략된 빈 행도 빈 배열로 채운다. */
+  rows: string[][];
+  formulas: ReadonlySet<number>[];
+  merges: readonly XlsxMerge[];
 }
 
 export interface XlsxSheetInfo {
@@ -301,7 +321,7 @@ function guardZip(files: Record<string, Uint8Array>, limits: InputLimits): void 
   }
 }
 
-function parseXlsxSheet(files: Record<string, Uint8Array>, sheetPath: string, limits: InputLimits): RawSheet {
+function parseSharedStrings(files: Record<string, Uint8Array>): string[] {
   const sharedStrings: string[] = [];
   const sstRaw = files['xl/sharedStrings.xml'];
   if (sstRaw !== undefined) {
@@ -320,14 +340,46 @@ function parseXlsxSheet(files: Record<string, Uint8Array>, sheetPath: string, li
       sharedStrings.push(joined);
     }
   }
+  return sharedStrings;
+}
+
+/** `A1` → `{ row: 0, column: 0 }`. 모양이 틀리면 undefined. */
+function cellPosition(ref: string): { row: number; column: number } | undefined {
+  const match = /^([A-Z]+)(\d+)$/.exec(ref.trim().toUpperCase().replace(/\$/g, ''));
+  if (match === null) return undefined;
+  return { row: Number.parseInt(match[2]!, 10) - 1, column: columnOf(match[1]!) - 1 };
+}
+
+function parseMerges(worksheet: ReturnType<typeof parseXml>['root']): XlsxMerge[] {
+  const mergeCells = findChild(worksheet, 'mergeCells');
+  if (mergeCells === undefined) return [];
+  const out: XlsxMerge[] = [];
+  for (const merge of findChildren(mergeCells, 'mergeCell')) {
+    const [from, to] = (merge.attrs['ref'] ?? '').split(':');
+    const start = from === undefined ? undefined : cellPosition(from);
+    const end = to === undefined ? start : cellPosition(to);
+    if (start === undefined || end === undefined) continue;
+    out.push({ firstRow: start.row, firstColumn: start.column, lastRow: end.row, lastColumn: end.column });
+  }
+  return out;
+}
+
+function parseXlsxSheet(
+  files: Record<string, Uint8Array>,
+  sheetPath: string,
+  limits: InputLimits,
+  sharedStringsCache?: string[],
+): RawSheet {
+  const sharedStrings = sharedStringsCache ?? parseSharedStrings(files);
 
   const sheetRaw = files[sheetPath];
   if (sheetRaw === undefined) {
     throw new TableReadError(`시트 '${sheetPath}'를 찾을 수 없다.`, 'sheet-not-found');
   }
   const worksheet = parseXml(strFromU8(sheetRaw)).root;
+  const merges = parseMerges(worksheet);
   const sheetData = findChild(worksheet, 'sheetData');
-  if (sheetData === undefined) return { rows: [], formulas: [] };
+  if (sheetData === undefined) return { rows: [], formulas: [], merges };
 
   // XLSX는 완전히 빈 행의 `<row>` 태그 자체를 생략한다(희소 표현) —
   // `r` 속성이 2, 6, 8처럼 듬성듬성 나올 수 있다. 그걸 배열에 그냥
@@ -373,6 +425,9 @@ function parseXlsxSheet(files: Record<string, Uint8Array>, sheetPath: string, li
       if (type === 's') {
         const at = Number.parseInt(findChild(cellEl, 'v')?.text ?? '', 10);
         value = Number.isNaN(at) ? '' : (sharedStrings[at] ?? '');
+      } else if (type === 'b') {
+        // 참/거짓 칸은 숫자 1/0이 아니다 — 글자로 넘겨 가격으로 읽히지 않게 한다.
+        value = findChild(cellEl, 'v')?.text === '1' ? 'TRUE' : 'FALSE';
       } else if (type === 'inlineStr') {
         const is = findChild(cellEl, 'is');
         value = is === undefined ? '' : (findChild(is, 't')?.text ?? '');
@@ -386,7 +441,7 @@ function parseXlsxSheet(files: Record<string, Uint8Array>, sheetPath: string, li
     rows[rowNumber - 1] = values;
     formulas[rowNumber - 1] = formulaAt;
   }
-  return { rows, formulas };
+  return { rows, formulas, merges };
 }
 
 function parseXlsx(bytes: Uint8Array, limits: InputLimits, sheetPath?: string): RawSheet {
@@ -413,6 +468,35 @@ export function previewXlsxRows(
   guardZip(files, limits);
   const sheet = parseXlsxSheet(files, sheetPath, limits);
   return sheet.rows.slice(0, maxRows);
+}
+
+/**
+ * 통합문서의 **모든 시트**를 탭 순서대로 읽는다 — 가격표 불러오기
+ * (B-20261016-06)용. 표준품셈 원본은 시트마다 품목이 나뉘어 있고, 시트마다
+ * 머리글을 찾아야 한다.
+ *
+ * 거부 규칙은 `readTable`과 같다(크기·ZIP·매크로·외부 링크·암호화·시간
+ * 제한). 수식은 파일 단위로 막지 않고 자리만 넘긴다 — 가격 칸에 수식이
+ * 있으면 읽는 쪽이 그 칸을 쓰지 않는다.
+ */
+export function readXlsxWorkbook(bytes: Uint8Array, limits: InputLimits = DEFAULT_LIMITS): XlsxSheetGrid[] {
+  if (bytes.byteLength > limits.maxBytes) {
+    throw new TableReadError('파일 크기가 제한을 넘는다.', 'file-too-large');
+  }
+  const started = Date.now();
+  assertOoxml(bytes);
+  const files = unzipSync(bytes);
+  guardZip(files, limits);
+  const sharedStrings = parseSharedStrings(files);
+  const out: XlsxSheetGrid[] = [];
+  for (const info of listSheetsFromFiles(files)) {
+    const sheet = parseXlsxSheet(files, info.sheetPath, limits, sharedStrings);
+    out.push({ name: info.name, rows: sheet.rows, formulas: sheet.formulas, merges: sheet.merges ?? [] });
+    if (Date.now() - started > limits.maxParseMs) {
+      throw new TableReadError('파싱 시간이 제한을 넘었다.', 'parse-timeout');
+    }
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------------------

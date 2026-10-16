@@ -18,6 +18,7 @@ import { prepareQuote } from '@/export/variants/prepare';
 import { buildCustomerProjection } from '@/export/customer/projection';
 import { buildCustomerGuideWorkbook } from '@/export/customer/guideWorkbook';
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 가이드 템플릿으로 만든 **고객용** 통합문서 (계획 2026-10-04 Task 5·6).
@@ -48,7 +49,7 @@ const allGuides = (): GuideTemplateSet =>
   Object.fromEntries(GUIDE_IDS.map((id) => [id, guideOf(id)])) as GuideTemplateSet;
 
 function build(profile: IndirectProfileId, itemCount: number) {
-  const catalog = buildCatalog(j('products.json'), j('prices.json'));
+  const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
   const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
   const rest = catalog.products
     .filter(
@@ -301,7 +302,7 @@ describe('고객용 가이드 통합문서 — 경계', () => {
   });
 
   it('시스템이 둘이면 아직 막는다 — 조용히 하나만 내보내지 않는다', () => {
-    const catalog = buildCatalog(j('products.json'), j('prices.json'));
+    const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
     const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
     const document = pickedItemsToQuote(
       {

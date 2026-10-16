@@ -24,6 +24,7 @@ import { prepareQuote, type PreparedQuote } from '@/export/variants/prepare';
 import { REVIEW_MARK_PREFIX, reviewReasonsByRow, withReviewMarks } from '@/export/variants/reviewMarks';
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
 import type { ImportWarning } from '@/import/diagram/devices';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기 (B-20261016-05).
@@ -64,7 +65,7 @@ const UNMATCHED = 'row-unmatched';
 const UNMATCHED_NODE = 'node-unmatched';
 
 function blockedPrepared(): PreparedQuote {
-  const catalog = buildCatalog(j('products.json'), j('prices.json'));
+  const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
   // 확인한 연결(B-20261016-07)이 붙은 품목은 고르지 않는다 — 미확인이 남아야 한다.
   const unconfirmed = new Set(BASIS.reference.mappings.filter((m) => !m.confirmed).map((m) => m.laborMappingId));
   const priced = catalog.products.filter(

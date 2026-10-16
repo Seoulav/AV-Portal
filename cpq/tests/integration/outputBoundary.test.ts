@@ -16,6 +16,7 @@ import { buildCustomerProjection } from '@/export/customer/projection';
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
 import { buildCatalog } from '@/data/catalog/load';
 import type { QuoteDocument } from '@/domain/quote/types';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 출력 3종의 데이터 경계 (계획 2026-10-04 Task 4, 결정 D18).
@@ -54,7 +55,7 @@ const SENTINEL_SALES = 'SENTINEL_영업메모';
 const SENTINEL_DESCRIPTION = 'SENTINEL_제품설명';
 
 function prepared(): PreparedQuote {
-  const cat = buildCatalog(j('products.json'), j('prices.json'));
+  const cat = buildCatalog(j('products.json'), fakeApprovedPrices());
   const matrix = cat.products.find((p) => p.quoteSpec === 'XDM-12')!;
   const document = pickedItemsToQuote(
     {

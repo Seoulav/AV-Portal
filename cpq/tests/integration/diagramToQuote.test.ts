@@ -12,6 +12,7 @@ import { calculateLaborForRows } from '@/domain/labor/calculateLabor';
 import { TEMPLATE_PATH } from '@/export/ooxml/anchors';
 import { cat, diagram, edge, node } from '../fixtures/diagram';
 import type { QuoteHeader } from '@/domain/quote/types';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /** 계획 2026-10-04 Task 6. */
 
@@ -272,7 +273,7 @@ describe('실물 구성도 (파일이 있을 때만)', () => {
     const d = parseDiagram(raw);
     const catalog = buildCatalog(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8')),
-      JSON.parse(readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8')),
+      fakeApprovedPrices(),
     );
     const result = diagramToQuote(d, catalog, {
       header: { ...header(), projectName: '실물 구성도 검증' },
@@ -296,7 +297,7 @@ describe('실물 구성도 (파일이 있을 때만)', () => {
     const d = parseDiagram(JSON.parse(readFileSync(SAMPLE, 'utf8')));
     const catalog = buildCatalog(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8')),
-      JSON.parse(readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8')),
+      fakeApprovedPrices(),
     );
     const result = diagramToQuote(d, catalog, options);
     const labor = withLabor(result.document);
@@ -315,7 +316,7 @@ describe('실물 구성도 (파일이 있을 때만)', () => {
     const d = parseDiagram(JSON.parse(readFileSync(SAMPLE, 'utf8')));
     const catalog = buildCatalog(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8')),
-      JSON.parse(readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8')),
+      fakeApprovedPrices(),
     );
     const result = diagramToQuote(d, catalog, { ...options });
     const ptz = result.document.rows.find(

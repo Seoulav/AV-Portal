@@ -29,6 +29,7 @@ import { parsePrivatePrices } from '@/services/private-cost/parse';
 import { createSession } from '@/services/private-cost/session';
 import { internalLines } from '@/services/private-cost/calculate';
 import type { OutputLevel } from '@/export/variants/fileName';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 출력 3종 × 프로파일 2종 = **6조합**의 데이터 경계
@@ -70,7 +71,7 @@ const SENTINEL_COST = '7777777';
 
 function buildVariant(profile: IndirectProfileId, level: OutputLevel) {
   const guides = allGuides();
-  const catalog = buildCatalog(j('products.json'), j('prices.json'));
+  const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
   const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
   const rest = catalog.products
     .filter(

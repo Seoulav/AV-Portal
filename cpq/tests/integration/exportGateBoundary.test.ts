@@ -22,6 +22,7 @@ import {
 import { buildSalesDownload } from '@/export/internal/salesExportAction';
 import type { SharedNotes } from '@/export/shared/projection';
 import type { QuoteDocument } from '@/domain/quote/types';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 공통 출력 경계 — 기준 불일치(가이드 템플릿·노임 판)인 prepared는 등급과
@@ -64,7 +65,7 @@ function realBasisVersions(): BasisVersions {
  * 연결이 확인됐으므로 확인된 연결은 고르지 않는다.
  */
 function unconfirmedPricedProduct() {
-  const cat = buildCatalog(j('products.json'), j('prices.json'));
+  const cat = buildCatalog(j('products.json'), fakeApprovedPrices());
   const mappings = (j('labor-mappings.json') as { mappings: { laborMappingId: string; confirmed: boolean }[] }).mappings;
   const unconfirmed = new Set(mappings.filter((m) => !m.confirmed).map((m) => m.laborMappingId));
   const product = cat.products.find(

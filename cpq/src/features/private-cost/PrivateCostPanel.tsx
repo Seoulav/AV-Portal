@@ -43,6 +43,7 @@ import type { TableFormat } from '../../services/private-cost/readTable';
 import { usePrivateCostController, type PrivateCostController, type XlsxWizard } from './usePrivateCostController';
 import type { InternalLine } from '../../services/private-cost/calculate';
 import type { UnresolvedRowCandidates } from '../../services/private-cost/candidates';
+import type { PrivateCostSession } from '../../services/private-cost/session';
 
 function formatOf(name: string): TableFormat | undefined {
   if (/\.csv$/i.test(name)) return 'csv';
@@ -54,9 +55,12 @@ export function PrivateCostPanel({
   document,
   documentGeneration,
   onLinesChange,
+  priceBookSession,
 }: {
   document: QuoteDocument;
   documentGeneration: number;
+  /** 이 브라우저에 저장된 가격표의 원가(B-20261016-06). 원가 파일을 고르지 않았을 때 쓴다. */
+  priceBookSession?: PrivateCostSession;
   /**
    * 영업팀용(0단계) 출력이 쓸 수 있도록 현재 원가 연결 결과를 부모로
    * 올린다(계획 Task6) — 이 화면 밖에서는 `lines`에 직접 접근할 길이
@@ -65,8 +69,9 @@ export function PrivateCostPanel({
   onLinesChange?: (lines: readonly InternalLine[]) => void;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const controller = usePrivateCostController(document, documentGeneration);
+  const controller = usePrivateCostController(document, documentGeneration, priceBookSession);
   const { status } = controller;
+  const usingPriceBook = priceBookSession !== undefined && controller.session === priceBookSession;
 
   useEffect(() => {
     onLinesChange?.(controller.lines);
@@ -137,7 +142,14 @@ export function PrivateCostPanel({
           onConfirm={controller.confirmDefaults}
         />
       )}
-      {controller.session !== undefined && status.kind !== 'loaded' && (
+      {usingPriceBook && (
+        <p className="q-muted" data-price-book-cost="">
+          가격표 원가 사용 중 — {priceBookSession.size}품목(이 브라우저에 저장된 가격표). 원가 파일을 고르면 그
+          파일이 우선합니다. 「원가 비우기」는 고른 원가 파일만 비웁니다 — 가격표 원가는 위의 「가격표 지우기」로
+          지웁니다. 영업팀용(0) 출력에는 이 원가가 들어갑니다.
+        </p>
+      )}
+      {controller.session !== undefined && !usingPriceBook && status.kind !== 'loaded' && (
         <p role="status" className="q-muted">
           연결된 원가 — {controller.session.size}줄
         </p>

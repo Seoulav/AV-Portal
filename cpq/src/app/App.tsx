@@ -10,7 +10,7 @@
  * Focus 5번). `useWorkspace`는 자료가 아직 없을 때도 같은 순서로
  * 불려야 하므로(React 훅 규칙) `Resources | undefined`를 받는다.
  */
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { loadResources, type ResourcesResult } from './resources';
 import { useWorkspace, exportGate, type LoadedDocument } from './workspace';
 import { DiagramInput } from '../features/entry/DiagramInput';
@@ -36,6 +36,9 @@ import { InstallationPanel } from '../features/installation/InstallationPanel';
 import { CableRoutePanel } from '../features/installation/CableRoutePanel';
 import { PortalDiagramInput } from '../features/entry/PortalDiagramInput';
 import { PrivateCostPanel } from '../features/private-cost/PrivateCostPanel';
+import { PriceBookPanel } from '../features/price-book/PriceBookPanel';
+import { costSessionFor, loadPriceSources } from './priceSources';
+import type { StoredPriceRecord } from '../services/price-book/types';
 import { encodeWorkFile, decodeWorkFile } from '../services/files/workFile';
 import { downloadTextFile, downloadBinaryFile } from '../services/files/download';
 import { buildCustomerDownload, buildSharedDownload } from '../export/variants/download';
@@ -89,6 +92,10 @@ export function App() {
 
 function QuoteWorkspace() {
   const [state, setState] = useState<LoadState>({ kind: 'loading' });
+  // 이 브라우저에 저장된 가격표(B-20261016-06) — **원가만** 담는다. 원가 세션으로만
+  // 흘러간다(영업팀용 0과 원가 영역). 판매가는 공개 `prices.json`이다(`priceSources.ts`).
+  const [priceRecord, setPriceRecord] = useState<StoredPriceRecord | undefined>(undefined);
+  const [priceStoreError, setPriceStoreError] = useState<string | undefined>(undefined);
   const [entry, setEntry] = useState<EntryView>(null);
   const [outputGrade, setOutputGrade] = useState<OutputGrade>('2');
   const [pendingCableEdit, setPendingCableEdit] = useState(false);
@@ -127,6 +134,11 @@ function QuoteWorkspace() {
   }
 
   const resources = state.kind === 'ready' ? state.resources : undefined;
+  const priceBook = priceRecord?.book;
+  const priceBookSession = useMemo(
+    () => (resources === undefined ? undefined : costSessionFor(resources.catalog, priceBook)),
+    [resources, priceBook],
+  );
   const workspace = useWorkspace(resources);
   const status = workspace.status;
   const pendingQuoteDrafts = useHasPendingQuoteDrafts();
@@ -362,7 +374,15 @@ function QuoteWorkspace() {
   useEffect(() => {
     let cancelled = false;
     loadResources({ baseUrl: import.meta.env.BASE_URL })
-      .then((result) => {
+      .then(async (result) => {
+        // 저장된 원가 가격표를 먼저 읽고 나서 화면을 연다. 저장소를 못 읽어도
+        // 원가 없이 계속한다(판매가는 이미 카탈로그에 있다).
+        if (result.kind === 'ready') {
+          const stored = await loadPriceSources();
+          if (cancelled) return;
+          if (stored.kind === 'ok') setPriceRecord(stored.record);
+          if (stored.kind === 'error') setPriceStoreError(stored.reason);
+        }
         if (!cancelled) setState(result);
       })
       .catch((err: unknown) => {
@@ -575,6 +595,17 @@ function QuoteWorkspace() {
                   판매단가 파일이 없습니다({resources.catalog.pricesUnavailableReason}) — 모든 품목을
                   '미등록'으로 표시합니다.
                 </p>
+              )}
+              {resources !== undefined && (
+                <PriceBookPanel
+                  catalog={resources.catalog}
+                  record={priceRecord}
+                  storeError={priceStoreError}
+                  onRecordChange={(next) => {
+                    setPriceRecord(next);
+                    setPriceStoreError(undefined);
+                  }}
+                />
               )}
               {workFileOpenError !== undefined && (
                 <p role="alert" className="q-notice q-notice-error">
@@ -893,6 +924,7 @@ function QuoteWorkspace() {
                       document={status.document}
                       documentGeneration={workspace.documentGeneration}
                       onLinesChange={setCostLines}
+                      {...(priceBookSession !== undefined ? { priceBookSession } : {})}
                     />
                   </WorkspaceSection>
                   </div>
