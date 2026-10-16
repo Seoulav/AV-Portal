@@ -498,5 +498,20 @@
 - [x] WfB 브로슈어 2쪽(Business/Standard 비교)·7쪽(Wave x Connect)에서 WfB의 Connect 연동 확인. 9쪽은 결합 수음 최대 20m 표기. 일반 Wave 브로슈어에는 Video Bar 불가가 명시되지 않아 사용자 확인(2026-10-13) 근거는 유지.
 - [x] 일반 Wave 지름 및 데스크톱·모바일 OS 값을 공식 사양 페이지와 브로슈어 10쪽에서 대조, 두 쪽 값을 `CONFLICTED`로 나란히 기록. PDF 메타데이터 생성일 2025-10-13(본문 발행일/판 미표기). 측정 부위 차이는 도면/각주에서 확인되지 않아 추정하지 않음.
 - [x] 되감기 함수 `tests/w20261016-003-history.mjs`, 문서·충돌 테스트 `tests/w20261016-003-insta360.test.mjs` 작성. 타깃 테스트 3/3 통과. 검색 인덱스(702878 bytes)·공개 스냅샷(284 항목/281 상세) 재생성. `build-search-index --check`, feature wording(0 대상), `git diff --check`, `verify-pages`(284 장비/281 상세/508 이미지/147 PDF 업로드) 통과.
-- [ ] 전체 직렬 테스트, 잠금 PDF 12건 확인, 변경 파일 리뷰 및 브라우저 사용 가능 여부 확인.
-- [ ] 최신 `origin/main` 재통합 후 파생물 재생성·검증, PR/CI, 병합, Pages 배포·공개 문서/다운로드 SHA 확인.
+- [x] 전체 직렬 테스트, 잠금 PDF 12건 확인, 변경 파일 리뷰 및 브라우저 사용 가능 여부 확인.
+- [x] 최신 `origin/main` 재통합 후 파생물 재생성·검증, PR/CI, 병합, Pages 배포·공개 문서/다운로드 SHA 확인.
+
+## W-20261016-003 완료 보고 (2026-10-16)
+
+- PR [#542](https://github.com/Seoulav/AV-Portal/pull/542) 병합 완료, merge SHA `86f1f0d78e58a3f3740bad4ec8e75e2b592dd6d0`.
+- 필수 Builder CI 성공(run `38832637946`); Pages 배포 성공(run `38832979722`).
+- 전체 테스트 `npm.cmd test`: 740건 중 739 통과, 실패 0, 기존 skip 1. `verify-pages`: 284 제품·281 상세·508 검토 이미지·147 업로드 PDF, 잠금 PDF 12건 유지. 검색 인덱스 검사·feature-wording·diff 검사 통과.
+- 공개 확인(비시각): 네 제품 상세 JSON·HTML과 manifest HTTP 200. 네 브로슈어 PDF GET 200이며 공개본 SHA가 게시 전 입력값과 모두 일치; 제품별 브로슈어가 기존 64쪽 컬렉션보다 먼저 표시.
+  - Connect 8쪽 / 4,703,979 bytes / SHA `95536f0ea8a290d312e654690b01f9b2bce4360210e23b0774739a436068acb0`
+  - Link 2 8쪽 / 7,289,769 bytes / SHA `b05b78559ae5bd9e36c292441577bdd33b8fa0894279ec1a1c32bbf7936549c4`
+  - Wave 10쪽 / 3,920,627 bytes / SHA `cf1364499c9168e678f41b2a1c8bbda148c820119001edab8313fadaaf03d65f`
+  - Wave for Business 19쪽 / 4,069,400 bytes / SHA `7c50e65e1b8432b222c8d6bf992a51c429ddbb48c24c0039d39d61ffbedade7f`
+- 공개 Wave 충돌은 지름 Ø64.3mm(M) 대 52.8mm(B, 10쪽), 컴퓨터 OS Windows 10/macOS 12(M) 대 Windows 7/macOS 10(B, 10쪽), 모바일 OS Android 10/iOS·iPadOS 12(M) 대 Android 8/iOS·iPadOS 9(B, 10쪽) 모두 `CONFLICTED`로 병기.
+- Wave for Business 브로슈어 2·7쪽에서 Connect 연동 지지를 확인. 일반 Wave 브로슈어에는 비호환 문구가 없어 Video Bar 연동 불가 표기는 사용자 확인 U(2026-10-13) 유지.
+- CUA에 브라우저 surface가 없어 1280px·390px 화면 캡처는 만들지 못함. 상세 HTML·JSON, 문서 manifest, PDF 다운로드 응답/SHA 및 보기·다운로드 링크 회귀 검사로 비시각 확인.
+- 첨부 이미지는 Link 2 Pro·Link 2C Pro 공동 이미지로 확인되어 일반 Link 2 제품 사진에 사용하지 않음.
