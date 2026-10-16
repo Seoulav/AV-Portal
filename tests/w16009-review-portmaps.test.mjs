@@ -52,8 +52,9 @@ test('Colorlight board rows and Epson serial socket have distinct source-backed 
  assert.match(e.io[8].condition,/22·184·276쪽/);
  assert.equal(e.io[8].quantity,'1');
  assert.equal(e.io[8].verification,'VERIFIED');
- const m6=e.portMap.items.find(x=>x.n===6),m9=e.portMap.items.find(x=>x.n===9);
- assert.deepEqual([m6.side,m9.side],['top','bottom']);
- assert.ok(m6.y<45 && m9.y>175);
+ const top=e.portMap.items.filter(x=>x.n<=7),m8=e.portMap.items.find(x=>x.n===8),m9=e.portMap.items.find(x=>x.n===9);
+ assert.ok(top.every(x=>x.side==='top' && x.y===8),'upper brackets above sockets and labels');
+ assert.deepEqual([m8.side,m9.side],['bottom','bottom']);
+ assert.ok(m8.y>=185 && m9.y>=185,'lower brackets below printed labels');
  assert.deepEqual([m9.x1,m9.x2],[634,700]);
 });
