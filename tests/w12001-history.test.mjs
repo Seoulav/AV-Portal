@@ -34,7 +34,7 @@ test('W-001 coordinate history restores exactly the recorded markers', () => {
     const edited = structuredClone(current);
     const field = fields.find(key => Object.hasOwn(edited.portMap.items[0], key));
     edited.portMap.items[0][field] += 1;
-    assert.throws(() => beforeW12001Product(edited, slug), /unexpected W-(?:001 coordinate|005 Port Map) change|Crown DCi 4\|600DA approved connector ranges changed/);
+    assert.throws(() => beforeW12001Product(edited, slug), /unexpected W-(?:001 coordinate|005 Port Map|015 Crown geometry) change|Crown DCi 4\|600DA approved connector ranges changed/);
   }
   assert.equal(changedMarkers, 263);
 });

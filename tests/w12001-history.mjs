@@ -1,3 +1,4 @@
+import {beforeCrownW16015Product} from './crown-w16015-history.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
@@ -12,6 +13,8 @@ const coordinates = product => (product.portMap?.items ?? []).map(item =>
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW12001Product(current, slug) {
+  // These eight DCi maps are already rewound by W-005 before this older audit.
+  if (!/^dci-[24]-(300|600)n?$/.test(slug) && slug !== 'dci-4-600da') current = beforeCrownW16015Product(current, slug);
   current = beforeW20261015_005Product(current, slug);
   const record = records[slug];
   if (!record) return current;

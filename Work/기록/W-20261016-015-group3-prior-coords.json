@@ -1,0 +1,4108 @@
+{
+  "cdi-2-1200": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1700,
+          "x2": 1798,
+          "y": 458
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1210,
+          "x2": 1438,
+          "y": 450
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1667,
+          "x2": 1737,
+          "y": 248
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1464,
+          "x2": 1594,
+          "y": 258
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 279,
+          "x2": 394,
+          "y": 415
+        }
+      ]
+    },
+    "unchanged": "a9077c65d65345563f04e6fa61fd09acfb982dc494960883c08a5e21dd293df2",
+    "photo": "ec2b177bc940d1781b7dd04e80221e35e39ccb79bbbc424ec67176bd88f30a37",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "fbde42af537a043f365f40d02ab370487d896e64f2728d3452935f98d9ff1880"
+  },
+  "cdi-2-1200bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1710,
+          "x2": 1810,
+          "y": 458
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1210,
+          "x2": 1445,
+          "y": 451
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1247,
+          "x2": 1318,
+          "y": 238
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1337,
+          "x2": 1402,
+          "y": 238
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1680,
+          "x2": 1746,
+          "y": 239
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1475,
+          "x2": 1604,
+          "y": 252
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 258,
+          "x2": 376,
+          "y": 409
+        }
+      ]
+    },
+    "unchanged": "7e7635ad95c7d32c4b717b4eb3f1b0972a3537c8da8bee1082281e04dc7a0a9a",
+    "photo": "6918c63f08ab78c3f9010574438d33e2d138a126888e7acc522bef83b09f29a1",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "8b4ff5d27a2a90744cad19f07cd592ee70b4bb0dacc5fa1f03d2a5d9cfeac0a1"
+  },
+  "cdi-2-300": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1695,
+          "x2": 1786,
+          "y": 452
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1210,
+          "x2": 1430,
+          "y": 441
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1667,
+          "x2": 1734,
+          "y": 240
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1464,
+          "x2": 1592,
+          "y": 252
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 280,
+          "x2": 399,
+          "y": 405
+        }
+      ]
+    },
+    "unchanged": "5c3b51187cf3cd11d447409e77c07da17f92cbd7347ca5db0a61a53b3256f836",
+    "photo": "d6bb082fc8b414a74bf40fe48d1df1bba5068b09f2cb8bf95d385d004919c606",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "9bf2e496c76162e1f96bef4769902f21a673c637600e0da6232b45566163bbf3"
+  },
+  "cdi-2-300bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1694,
+          "x2": 1785,
+          "y": 454
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1213,
+          "x2": 1434,
+          "y": 443
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1250,
+          "x2": 1317,
+          "y": 242
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1335,
+          "x2": 1399,
+          "y": 242
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1667,
+          "x2": 1732,
+          "y": 242
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1467,
+          "x2": 1592,
+          "y": 253
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 296,
+          "x2": 412,
+          "y": 405
+        }
+      ]
+    },
+    "unchanged": "a2aaee81fbb2c2cbd0da1b15cfcc4a8fb188f15781734d0c9f11c9f635f1b492",
+    "photo": "bf8c5c936b0b6925b7150f22ae4f37fd1ba61517ea2844a96872304c153906d4",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "a88372e867190601bfabc6726800c0a068658dd617bb6804200b39a51d337453"
+  },
+  "cdi-2-600": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1695,
+          "x2": 1786,
+          "y": 444
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1215,
+          "x2": 1433,
+          "y": 435
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1669,
+          "x2": 1734,
+          "y": 239
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1468,
+          "x2": 1595,
+          "y": 247
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 303,
+          "x2": 422,
+          "y": 395
+        }
+      ]
+    },
+    "unchanged": "8c1a0c00e0a2c1226138a00cec5ee6735cc53a4d08541323c61cb197197d86e1",
+    "photo": "0e12787353e7beec996ddf7f6c0c5b7767a28f91c86c5354276c5f2549f78375",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "031a8d7f357caec2b689852c17e0b8a8f02af65d0244321b868835e5346f8807"
+  },
+  "cdi-2-600bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1715,
+          "x2": 1810,
+          "y": 467
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1217,
+          "x2": 1445,
+          "y": 451
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1256,
+          "x2": 1320,
+          "y": 243
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1345,
+          "x2": 1409,
+          "y": 243
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1687,
+          "x2": 1754,
+          "y": 243
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1484,
+          "x2": 1610,
+          "y": 257
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 266,
+          "x2": 388,
+          "y": 418
+        }
+      ]
+    },
+    "unchanged": "e24c83baf554d523a4e288bb1a3187e906b969e93731eca535aa79f1f0204c25",
+    "photo": "8a364367c72334dc85008c93acd7e9376c9a2ba46e64b55a4c9ecf824ac0abc1",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "01b23fea5475e191dcbb28942fd01d2fad7389a9cbe29dc4ca938a511d988bf2"
+  },
+  "cdi-4-1200": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1740,
+          "x2": 1836,
+          "y": 474
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1601,
+          "x2": 1704,
+          "y": 474
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1230,
+          "x2": 1455,
+          "y": 464
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 940,
+          "x2": 1165,
+          "y": 464
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1706,
+          "x2": 1777,
+          "y": 244
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1495,
+          "x2": 1627,
+          "y": 250
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 211,
+          "x2": 351,
+          "y": 430
+        }
+      ]
+    },
+    "unchanged": "f3a481204e25ffbf5dcfedfc73a1b56c44925fded8930060847dfca4004552bd",
+    "photo": "0135aff8a4e056149821b112110512b3053513b6d4adc9589c2949843b4020ab",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "6c2efd96ae14ab290f863e1deabca4e69a11f51a5b08a54a7a2fcbd64222d9de"
+  },
+  "cdi-4-1200bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1716,
+          "x2": 1810,
+          "y": 452
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1578,
+          "x2": 1678,
+          "y": 452
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1220,
+          "x2": 1445,
+          "y": 442
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 940,
+          "x2": 1164,
+          "y": 442
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1253,
+          "x2": 1321,
+          "y": 232
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1341,
+          "x2": 1406,
+          "y": 232
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1685,
+          "x2": 1752,
+          "y": 233
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 1478,
+          "x2": 1608,
+          "y": 243
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 242,
+          "x2": 378,
+          "y": 405
+        }
+      ]
+    },
+    "unchanged": "bb721bc6cf37fd606149cb961aa75bfd987350e9a8ff9b88a902867121547bb9",
+    "photo": "1f21f00d1bfd78cfa22dcf45478819e9912447bb281d1c2b5aa38f0ad119cb14",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "cc651fae6cb945fc22eb3bbe5252bf3231842defd5c40801571237c2e7845424"
+  },
+  "cdi-4-300": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1688,
+          "x2": 1782,
+          "y": 455
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1555,
+          "x2": 1655,
+          "y": 455
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1205,
+          "x2": 1430,
+          "y": 445
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 940,
+          "x2": 1155,
+          "y": 445
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1663,
+          "x2": 1728,
+          "y": 243
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1466,
+          "x2": 1589,
+          "y": 251
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 294,
+          "x2": 407,
+          "y": 410
+        }
+      ]
+    },
+    "unchanged": "6d69e6a8dba4511d70a141a82ef7f371cbf7ef0755d6d6b3af4f472fa330a9d2",
+    "photo": "0f86bedc53ce70899bf047c59c069c8565d914dfe4b81b003140970f707d0fb6",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "a22531c327c306543182ecd373ebef4576356d1dd8afca72514aa3a987e619cd"
+  },
+  "cdi-4-300bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1718,
+          "x2": 1818,
+          "y": 457
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1584,
+          "x2": 1680,
+          "y": 457
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1219,
+          "x2": 1444,
+          "y": 448
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 939,
+          "x2": 1163,
+          "y": 448
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1254,
+          "x2": 1320,
+          "y": 235
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1347,
+          "x2": 1411,
+          "y": 235
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1693,
+          "x2": 1758,
+          "y": 237
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 1483,
+          "x2": 1617,
+          "y": 249
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 262,
+          "x2": 384,
+          "y": 415
+        }
+      ]
+    },
+    "unchanged": "a05469cb6ffc369db09627445ac00f7d68225f8f972a01129356e3785cc78d23",
+    "photo": "cfd6dfacd3c44834157a0ebbad855cfa9f5aa8fcb127a302f1e0441f22cac718",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "d2edc7b68cd4789a9d89b7c79d5e0e362002200d21da0c7d11e2dbaac394cfec"
+  },
+  "cdi-4-600": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1698,
+          "x2": 1794,
+          "y": 457
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1564,
+          "x2": 1665,
+          "y": 457
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1210,
+          "x2": 1438,
+          "y": 448
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 942,
+          "x2": 1157,
+          "y": 448
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1672,
+          "x2": 1738,
+          "y": 245
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1468,
+          "x2": 1595,
+          "y": 255
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 276,
+          "x2": 394,
+          "y": 415
+        }
+      ]
+    },
+    "unchanged": "91fa3db608378478533466cb11ea638c92b608e70722dcc1efe7651468f3d689",
+    "photo": "e564e23863a1219caf7d0316382e57ab33ea50ceea1a0e59c71581a046a262a5",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "515007f56265c027ee9b42f546a4d36f555b1fe02b00205ee38bd1ce84b46fee"
+  },
+  "cdi-4-600bl": {
+    "prior": {
+      "crop": {
+        "top": 120,
+        "bottom": 100
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 1710,
+          "x2": 1805,
+          "y": 455
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1575,
+          "x2": 1675,
+          "y": 455
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1228,
+          "x2": 1450,
+          "y": 444
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 960,
+          "x2": 1178,
+          "y": 444
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1268,
+          "x2": 1338,
+          "y": 234
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1348,
+          "x2": 1415,
+          "y": 234
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1687,
+          "x2": 1750,
+          "y": 234
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 1486,
+          "x2": 1610,
+          "y": 247
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 306,
+          "x2": 421,
+          "y": 406
+        }
+      ]
+    },
+    "unchanged": "f429e3f16ded1abe50f230b9f73fb818822cb9bab5f5cc55aa5f868a2b6bebc9",
+    "photo": "cf4c4b55c692dd35d85e427ad26d77e8b82463b17abf9485c49b0afce54cc338",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "c5396414b31a868a5518fe06ea87a124ca1f9f1079ec483c68adf92a8fd812d7"
+  },
+  "comtech-d-2125": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 819,
+          "x2": 950,
+          "y": 210
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 373,
+          "x2": 552,
+          "y": 210
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 994,
+          "x2": 1088,
+          "y": 105
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1103,
+          "x2": 1199,
+          "y": 105
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 973,
+          "x2": 1105,
+          "y": 205
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 1127,
+          "x2": 1198,
+          "y": 205
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 778,
+          "x2": 799,
+          "y": 208
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 143,
+          "x2": 320,
+          "y": 145
+        }
+      ]
+    },
+    "unchanged": "04afe90bd9f2635b1e0771b293d1df1452fbd6b36c3f9b6d87f25167f0b72b2a",
+    "photo": "974cd26c03b0ee409aa0d3d99a20fc756810b0722e4e85f411851669de6f6a3a",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "349522032a5337cb38fdff1ce8dce7db081446a692e69cedb64ec7c2263eb1a0"
+  },
+  "comtech-d-4125": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 819,
+          "x2": 950,
+          "y": 125
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 819,
+          "x2": 950,
+          "y": 205
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 374,
+          "x2": 553,
+          "y": 210
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 575,
+          "x2": 754,
+          "y": 210
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 993,
+          "x2": 1086,
+          "y": 105
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1101,
+          "x2": 1196,
+          "y": 105
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 972,
+          "x2": 1103,
+          "y": 205
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 1125,
+          "x2": 1196,
+          "y": 205
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 776,
+          "x2": 797,
+          "y": 205
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 145,
+          "x2": 322,
+          "y": 145
+        }
+      ]
+    },
+    "unchanged": "76659a7e092f96c0fb00d2fec06ae194ddb5704ac684678b95936695000610f4",
+    "photo": "6e1eebfeba5d6e9b5f85a5dc85d2ef8c2b7006ba9ce0f349362e7e5f4c706665",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "11f0bf338b4a497741b95da2e336f986e4e4ff87164b8d68f28a9923f4d44281"
+  },
+  "comtech-d-8125": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1019,
+          "x2": 1095,
+          "y": 80
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1110,
+          "x2": 1184,
+          "y": 80
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1019,
+          "x2": 1095,
+          "y": 125
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1110,
+          "x2": 1184,
+          "y": 125
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 354,
+          "x2": 460,
+          "y": 125
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 471,
+          "x2": 577,
+          "y": 125
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 623,
+          "x2": 728,
+          "y": 125
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 742,
+          "x2": 846,
+          "y": 125
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1328,
+          "x2": 1383,
+          "y": 88
+        },
+        {
+          "n": 10,
+          "side": "top",
+          "x1": 1390,
+          "x2": 1446,
+          "y": 88
+        },
+        {
+          "n": 11,
+          "side": "bottom",
+          "x1": 1225,
+          "x2": 1301,
+          "y": 130
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 1313,
+          "x2": 1391,
+          "y": 130
+        },
+        {
+          "n": 13,
+          "side": "bottom",
+          "x1": 1400,
+          "x2": 1445,
+          "y": 130
+        },
+        {
+          "n": 14,
+          "side": "bottom",
+          "x1": 974,
+          "x2": 993,
+          "y": 125
+        },
+        {
+          "n": 15,
+          "side": "bottom",
+          "x1": 95,
+          "x2": 194,
+          "y": 100
+        }
+      ]
+    },
+    "unchanged": "1a9f6dcc5054e3eeb4a3dfb8468af0dc76877f73b221b151ea186a247aab87a7",
+    "photo": "97413c17176d5d23f3cc76a967219e6592370311b0c976f10e10809279359e6b",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "5a77c6b8542a95ea6aa78ca2c407a4e0692af0145f46cd7ef51f077750ef2dff"
+  },
+  "dci-2-300": {
+    "prior": {
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 172
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 400
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 471,
+          "x2": 547,
+          "y": 405
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 688,
+          "x2": 720,
+          "y": 178
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 178
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 195
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 245,
+          "x2": 306,
+          "y": 250
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 214,
+          "x2": 337,
+          "y": 360
+        }
+      ]
+    },
+    "unchanged": "778188b95afa0f5908f5646b07e46e2086aaac34d6c26b0b0af4798122d9e346",
+    "photo": "17d76c88213f718b454ca05add11c13952344bf4f8efcfd31f744575def1404b",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "f2fd67e3e8b87a453c66fb8658d42bfe26cbca90aaaa8d73f80f1be4f3fb7897"
+  },
+  "dci-2-300n": {
+    "prior": {
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1700,
+          "x2": 1810,
+          "y": 120
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1575,
+          "x2": 1785,
+          "y": 335
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 700,
+          "x2": 755,
+          "y": 140
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 780,
+          "x2": 835,
+          "y": 140
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 885,
+          "x2": 940,
+          "y": 140
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 965,
+          "x2": 1020,
+          "y": 140
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1165,
+          "x2": 1255,
+          "y": 150
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 455,
+          "x2": 530,
+          "y": 365
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 225,
+          "x2": 295,
+          "y": 205
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 205,
+          "x2": 330,
+          "y": 340
+        }
+      ]
+    },
+    "unchanged": "c7f02fdcce23acf0967ea16d7b8aceb427080f3ff505fea01113094b267a46bc",
+    "photo": "5d994d5b347c71c2013d492e5c76750efa937c7d596938b1ca015c2df7120726",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "2c1af05232d8609604022c408586d53bcaf466e34ee59f3b682ebb1b2c0890a9"
+  },
+  "dci-2-600": {
+    "prior": {
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1737,
+          "x2": 1835,
+          "y": 172
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1572,
+          "x2": 1792,
+          "y": 400
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 471,
+          "x2": 547,
+          "y": 405
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 688,
+          "x2": 720,
+          "y": 178
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 1185,
+          "x2": 1218,
+          "y": 178
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 1230,
+          "x2": 1321,
+          "y": 195
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 245,
+          "x2": 306,
+          "y": 250
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 214,
+          "x2": 337,
+          "y": 360
+        }
+      ]
+    },
+    "unchanged": "239d8e43577cd953a16761d9f2a4b7935cad75fff608f25daa23b233ccdc1ac4",
+    "photo": "17d76c88213f718b454ca05add11c13952344bf4f8efcfd31f744575def1404b",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "f2fd67e3e8b87a453c66fb8658d42bfe26cbca90aaaa8d73f80f1be4f3fb7897"
+  },
+  "dci-2-600n": {
+    "prior": {
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1700,
+          "x2": 1810,
+          "y": 120
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 1575,
+          "x2": 1785,
+          "y": 335
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 700,
+          "x2": 755,
+          "y": 140
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 780,
+          "x2": 835,
+          "y": 140
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 885,
+          "x2": 940,
+          "y": 140
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 965,
+          "x2": 1020,
+          "y": 140
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1165,
+          "x2": 1255,
+          "y": 150
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 455,
+          "x2": 530,
+          "y": 365
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 225,
+          "x2": 295,
+          "y": 205
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 205,
+          "x2": 330,
+          "y": 340
+        }
+      ]
+    },
+    "unchanged": "0a5b26ef0d0af66e7f89ab5762b5c50d12f04d249f7b7ff734a336827dd1e77b",
+    "photo": "5d994d5b347c71c2013d492e5c76750efa937c7d596938b1ca015c2df7120726",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "2c1af05232d8609604022c408586d53bcaf466e34ee59f3b682ebb1b2c0890a9"
+  },
+  "dci-4-300": {
+    "prior": {
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 184
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 184
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 440
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 440
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 425,
+          "x2": 500,
+          "y": 435
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 652,
+          "x2": 688,
+          "y": 190
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 190
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 205
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 190
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 205
+        },
+        {
+          "n": 11,
+          "side": "top",
+          "x1": 178,
+          "x2": 239,
+          "y": 270
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 144,
+          "x2": 277,
+          "y": 395
+        }
+      ]
+    },
+    "unchanged": "3ad5a3ef6c2fb8ab08e65f4043bdb842600187662993338d11b730b281ff4d90",
+    "photo": "7c8cbb5bc7d49e07aba9c92655c0fe3bc3664d1f3bef7ba3afef763e11d65213",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "5c04dc1f6c6ed1b47651f97fff9a71be2d3c83f6fe2d19358538d46a45909bc7"
+  },
+  "dci-4-300da": {
+    "prior": {
+      "crop": {
+        "top": 400,
+        "bottom": 360
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1735,
+          "x2": 1835,
+          "y": 575
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1598,
+          "x2": 1696,
+          "y": 575
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1568,
+          "x2": 1800,
+          "y": 810
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1310,
+          "x2": 1543,
+          "y": 810
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 875,
+          "x2": 944,
+          "y": 615
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 970,
+          "x2": 1040,
+          "y": 615
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 766,
+          "x2": 840,
+          "y": 590
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 697,
+          "x2": 754,
+          "y": 585
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 441,
+          "x2": 510,
+          "y": 805
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 183,
+          "x2": 297,
+          "y": 770
+        }
+      ]
+    },
+    "unchanged": "b229eba6b91760afce8db4735d8d40b07b0123ae74c1b955453f575db3e1e386",
+    "photo": "638edffbcfeec6d7f9b6b263bfa10ada45846b0ca6a181dc7355d98b7f612a8f",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "cecb23fc607baa6d3dc69586a786b64bd36a5a4bab053a3477275e67f3187cf5"
+  },
+  "dci-4-300n": {
+    "prior": {
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1610,
+          "x2": 1725,
+          "y": 142
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1760,
+          "x2": 1835,
+          "y": 142
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1345,
+          "x2": 1550,
+          "y": 345
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1600,
+          "x2": 1810,
+          "y": 345
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 710,
+          "x2": 770,
+          "y": 155
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 790,
+          "x2": 850,
+          "y": 155
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 890,
+          "x2": 950,
+          "y": 155
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 970,
+          "x2": 1030,
+          "y": 155
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1080,
+          "x2": 1265,
+          "y": 165
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 460,
+          "x2": 540,
+          "y": 385
+        },
+        {
+          "n": 11,
+          "side": "top",
+          "x1": 230,
+          "x2": 295,
+          "y": 225
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 210,
+          "x2": 335,
+          "y": 350
+        }
+      ]
+    },
+    "unchanged": "66cc1d7af2387c8f5f9a74c3b953e70f2fa129054fa0d39e2958b35743337042",
+    "photo": "29ce707c662694aa302f98084bdd9c8be414e32b697a7b7f63ff89d20e7a6eaf",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "bf42c515239fe3f290d3c7ae82cd4cf002fd4747a53f4bdd65ca40da633f2b6a"
+  },
+  "dci-4-600": {
+    "prior": {
+      "crop": {
+        "top": 60,
+        "bottom": 60
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1778,
+          "x2": 1880,
+          "y": 184
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1630,
+          "x2": 1738,
+          "y": 184
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1600,
+          "x2": 1843,
+          "y": 440
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1335,
+          "x2": 1580,
+          "y": 440
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 425,
+          "x2": 500,
+          "y": 435
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 652,
+          "x2": 688,
+          "y": 190
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1180,
+          "x2": 1220,
+          "y": 190
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 1230,
+          "x2": 1330,
+          "y": 205
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1024,
+          "x2": 1063,
+          "y": 190
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 1073,
+          "x2": 1170,
+          "y": 205
+        },
+        {
+          "n": 11,
+          "side": "top",
+          "x1": 178,
+          "x2": 239,
+          "y": 270
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 144,
+          "x2": 277,
+          "y": 395
+        }
+      ]
+    },
+    "unchanged": "8bd162519964caa6982a2c47e337dfd6f38b14ae3d0ab1f757b24b2260c373c2",
+    "photo": "7c8cbb5bc7d49e07aba9c92655c0fe3bc3664d1f3bef7ba3afef763e11d65213",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "5c04dc1f6c6ed1b47651f97fff9a71be2d3c83f6fe2d19358538d46a45909bc7"
+  },
+  "dci-4-600da": {
+    "prior": {
+      "crop": {
+        "top": 400,
+        "bottom": 360
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1735,
+          "x2": 1835,
+          "y": 575
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1598,
+          "x2": 1696,
+          "y": 575
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1568,
+          "x2": 1800,
+          "y": 810
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1310,
+          "x2": 1543,
+          "y": 810
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 875,
+          "x2": 944,
+          "y": 615
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 971,
+          "x2": 1040,
+          "y": 615
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 770,
+          "x2": 845,
+          "y": 590
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 695,
+          "x2": 746,
+          "y": 585
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 430,
+          "x2": 510,
+          "y": 805
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 176,
+          "x2": 295,
+          "y": 770
+        }
+      ]
+    },
+    "unchanged": "a6582e82c172720e27b7125dc25e3934435a4621a70d4538a5bfd4e0048bf27a",
+    "photo": "638edffbcfeec6d7f9b6b263bfa10ada45846b0ca6a181dc7355d98b7f612a8f",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "548e9c6075cfd27e88ce40ca5efd4b5c7ff121c44d3c345674dc1779937c190e"
+  },
+  "dci-4-600n": {
+    "prior": {
+      "crop": {
+        "top": 55,
+        "bottom": 55
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 1610,
+          "x2": 1725,
+          "y": 142
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 1760,
+          "x2": 1835,
+          "y": 142
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 1345,
+          "x2": 1550,
+          "y": 345
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 1600,
+          "x2": 1810,
+          "y": 345
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 710,
+          "x2": 770,
+          "y": 155
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 790,
+          "x2": 850,
+          "y": 155
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 890,
+          "x2": 950,
+          "y": 155
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 970,
+          "x2": 1030,
+          "y": 155
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1080,
+          "x2": 1265,
+          "y": 165
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 460,
+          "x2": 540,
+          "y": 385
+        },
+        {
+          "n": 11,
+          "side": "top",
+          "x1": 230,
+          "x2": 295,
+          "y": 225
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 210,
+          "x2": 335,
+          "y": 350
+        }
+      ]
+    },
+    "unchanged": "96a754b6cbbb4e7114c1e6f0380da9bd4131fddd88918f8af9cbdd9d2b27eb0d",
+    "photo": "29ce707c662694aa302f98084bdd9c8be414e32b697a7b7f63ff89d20e7a6eaf",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "bf42c515239fe3f290d3c7ae82cd4cf002fd4747a53f4bdd65ca40da633f2b6a"
+  },
+  "i-tech-4x3500hd": {
+    "prior": {
+      "crop": {
+        "top": 405,
+        "bottom": 516
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 683,
+          "x2": 781,
+          "y": 570
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 792,
+          "x2": 892,
+          "y": 570
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 948,
+          "x2": 1050,
+          "y": 570
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1056,
+          "x2": 1156,
+          "y": 570
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 684,
+          "x2": 784,
+          "y": 690
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 792,
+          "x2": 891,
+          "y": 690
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1565,
+          "x2": 1718,
+          "y": 550
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 1748,
+          "x2": 1885,
+          "y": 550
+        },
+        {
+          "n": 9,
+          "side": "bottom",
+          "x1": 1642,
+          "x2": 1795,
+          "y": 700
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 948,
+          "x2": 1045,
+          "y": 700
+        },
+        {
+          "n": 11,
+          "side": "bottom",
+          "x1": 380,
+          "x2": 516,
+          "y": 770
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 133,
+          "x2": 261,
+          "y": 700
+        }
+      ]
+    },
+    "unchanged": "239725ab7ea27edc7fa588a0a24c8d21cd22d99e53c22bd7bf9476c6636d8248",
+    "photo": "b63ba7c5716d3733ae34d3c54b3cada99460da81dcd2bad809b58415c448a20d",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "79b8f446254a664dae30222bca73f737f7a34fc95460df4b7f0bd4a8504cf4fd"
+  }
+}
