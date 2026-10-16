@@ -35,7 +35,8 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
     if (item.side === 'left' || item.side === 'right') {
       const direction = item.side === 'left' ? -1 : 1;
       const edgeX = X0 + (typeof item.x === 'number' ? item.x : direction < 0 ? 0 : naturalWidth) * scale;
-      return { item, side: item.side, direction, edgeX, cx: edgeX + direction * 24,
+      return { item, side: item.side, direction, edgeX,
+        cx: (item.via ? X0 + (direction < 0 ? 0 : W) : edgeX) + direction * 24,
         sourceY1: item.y1, sourceY2: item.y2 };
     }
     const side = item.side === 'top' ? 'top' : 'bottom';
@@ -58,6 +59,32 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
   }
   const topMargin = Math.max(40, 34 + 24 * (laneCounts.top - 1));
   const bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));
+  let extraLeft = 0, extraRight = 0;
+  // Keep the midpoint height, or the last via height. Reuse the first free outward column.
+  for (const side of ['left', 'right']) {
+    const labelY = m => m.item.via
+      ? topMargin + (m.item.via.at(-1)[1] - cropTop) * scale : ((topMargin + (m.sourceY1 - cropTop) * scale) +
+      (topMargin + (m.sourceY2 - cropTop) * scale)) / 2;
+    const placed = [];
+    for (const marker of markers.filter(m => m.side === side).sort((a, b) => labelY(a) - labelY(b) || a.item.n - b.item.n)) {
+      const cy = labelY(marker);
+      let cx = marker.cx;
+      while (placed.some(p => Math.abs(cx - p.cx) < 22 && Math.abs(cy - p.cy) < 22)) cx += marker.direction * 24;
+      if (cx !== marker.cx) {
+        marker.columnShift = cx - marker.cx;
+        marker.cx = cx;
+        extraLeft = Math.max(extraLeft, X0 - 24 - cx);
+        extraRight = Math.max(extraRight, cx - (X0 + W + 24));
+      }
+      placed.push({ cx, cy });
+    }
+  }
+  // Translating the entire drawing retains photo coordinates and the outer 6px clearance.
+  if (extraLeft) for (const marker of markers) {
+    for (const key of ['cx', 'edgeX', 'x1', 'x2', 'anchorX']) {
+      if (marker[key] !== undefined) marker[key] += extraLeft;
+    }
+  }
   if (!map.displayWidth && photoHeight + topMargin + bottomMargin > maxHeight + 1e-8) {
     const availableHeight = maxHeight - topMargin - bottomMargin;
     if (availableHeight <= 0) throw new RangeError('Port Map marker lanes exceed the height limit');
@@ -69,7 +96,8 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
     if (marker.side === 'left' || marker.side === 'right') {
       marker.y1 = photoTop + (marker.sourceY1 - cropTop) * scale;
       marker.y2 = photoTop + (marker.sourceY2 - cropTop) * scale;
-      marker.cy = (marker.y1 + marker.y2) / 2;
+      marker.cy = marker.item.via
+        ? photoTop + (marker.item.via.at(-1)[1] - cropTop) * scale : (marker.y1 + marker.y2) / 2;
     } else {
       marker.anchorY = typeof marker.sourceY === 'number'
         ? photoTop + (marker.sourceY - cropTop) * scale
@@ -79,9 +107,30 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
         : photoBottom + 24 + marker.lane * 24;
     }
   }
-  return { width: W + X0 * 2, height: photoBottom + bottomMargin, scale,
-    image: { x: X0, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },
+  return { width: W + X0 * 2 + extraLeft + extraRight, height: photoBottom + bottomMargin, scale,
+    image: { x: X0 + extraLeft, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },
     photoTop, photoBottom, topMargin, bottomMargin, markers };
+}
+
+// via coordinates are original image pixels. Every segment is horizontal or vertical.
+// The first segment leaves the bracket normally; the last meets the circle normally.
+function portMapViaPath(marker, geometry) {
+  const { side, cx, cy } = marker;
+  const vertical = side === 'top' || side === 'bottom';
+  const direction = side === 'top' || side === 'left' ? -1 : 1;
+  const start = vertical ? [marker.anchorX ?? cx, marker.anchorY + direction * 6]
+    : [marker.edgeX + direction * 6, (marker.y1 + marker.y2) / 2];
+  const end = vertical ? [cx, cy - direction * 10] : [cx - direction * 10, cy];
+  const points = marker.item.via.map(([x, y]) => [geometry.image.x + x * geometry.scale, geometry.image.y + y * geometry.scale]);
+  let [x, y] = start, path = 'M' + x + ' ' + y;
+  for (const [index, point] of [...points, end].entries()) {
+    const [nx, ny] = point;
+    const yFirst = index === 0 ? vertical : index === points.length ? !vertical : false;
+    const horizontal = () => { if (nx !== x) { path += 'H' + nx; x = nx; } };
+    const upright = () => { if (ny !== y) { path += 'V' + ny; y = ny; } };
+    if (yFirst) { upright(); horizontal(); } else { horizontal(); upright(); }
+  }
+  return path;
 }
 
 export function renderPortMap(map, image, model = '') {
@@ -106,7 +155,8 @@ export function renderPortMap(map, image, model = '') {
     if (side === 'left' || side === 'right') {
       const { edgeX: E, direction: dir, y1, y2 } = marker;
       bracket = `M${E - dir * 8} ${y1}H${E + dir * 6}V${y2}H${E - dir * 8}`;
-      leader = `M${E + dir * 6} ${cy}H${E + dir * 14}`;
+      leader = marker.columnShift === undefined ? `M${E + dir * 6} ${cy}H${E + dir * 14}`
+        : `M${E + dir * 6} ${cy}H${cx - dir * 10}`;
     } else if (side === 'bottom') {
       const { x1, x2, anchorY: B } = marker;
       bracket = `M${x1} ${B - 8}V${B + 6}H${x2}V${B - 8}`;
@@ -116,6 +166,7 @@ export function renderPortMap(map, image, model = '') {
       bracket = `M${x1} ${B + 8}V${B - 6}H${x2}V${B + 8}`;
       leader = marker.item.labelX === undefined ? `M${cx} ${B - 6}V${cy + 10}` : `M${marker.anchorX} ${B - 6}L${cx} ${cy + 10}`;
     }
+    if (marker.item.via) leader = portMapViaPath(marker, geometry);
     for (const d of [bracket, leader]) svg.append(svgNode('path', { d, fill: 'none', stroke: 'var(--pg-accent)', 'stroke-width': 1.5 }));
     svg.append(svgNode('circle', { cx, cy, r: 10, fill: 'var(--pg-accent)' }));
     svg.append(svgNode('text', { x: cx, y: cy + 4, 'text-anchor': 'middle', 'font-size': 11,

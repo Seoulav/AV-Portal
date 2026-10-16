@@ -1004,65 +1004,80 @@
         "n": 1,
         "label": "SDI 출력",
         "desc": "SDI 영상 출력 · 4K 출력 미지원",
+        "side": "bottom",
         "x1": 211,
-        "x2": 273,
-        "y": 817,
-        "side": "bottom"
+        "x2": 273
       },
       {
         "n": 2,
         "label": "HDMI 출력",
         "desc": "HDMI 영상 출력",
+        "side": "bottom",
         "x1": 95,
-        "x2": 174,
-        "y": 817,
-        "side": "top"
+        "x2": 174
       },
       {
         "n": 3,
         "label": "LAN · PoE++",
         "desc": "네트워크·전원 입력",
+        "side": "bottom",
         "x1": 602,
-        "x2": 714,
-        "y": 801,
-        "side": "bottom"
+        "x2": 714
       },
       {
         "n": 4,
         "label": "VISCA RS-422 입력",
         "desc": "PTZ 제어 입력",
-        "x1": 87,
-        "x2": 192,
-        "y": 695,
-        "side": "top"
+        "side": "left",
+        "x": 79,
+        "y1": 656,
+        "y2": 738,
+        "via": [
+          [
+            0,
+            697
+          ]
+        ]
       },
       {
         "n": 5,
         "label": "VISCA RS-422 출력",
         "desc": "PTZ 제어 출력",
-        "x1": 194,
-        "x2": 304,
-        "y": 695,
-        "side": "bottom"
+        "side": "left",
+        "x": 211,
+        "y1": 657,
+        "y2": 738,
+        "via": [
+          [
+            203,
+            744
+          ],
+          [
+            0,
+            744
+          ]
+        ]
       },
       {
         "n": 6,
         "label": "MIC 입력",
         "desc": "3.5 mm 오디오 입력",
+        "side": "top",
         "x1": 124,
-        "x2": 179,
-        "y": 604,
-        "side": "top"
+        "x2": 179
       },
       {
         "n": 7,
         "label": "DC 19.5V 입력",
         "desc": "외부 전원 어댑터 입력",
+        "side": "top",
         "x1": 628,
-        "x2": 699,
-        "y": 605,
-        "side": "bottom"
+        "x2": 699
       }
-    ]
+    ],
+    "crop": {
+      "top": 540,
+      "bottom": 15
+    }
   }
 }
