@@ -44,7 +44,15 @@ function validMap(map, product) {
     map.items.every(i => validMarker(i) && validVia(i.via, ...size, map.crop) && (i.side === 'left' || i.side === 'right'
       ? i.y2 <= size[1] && (i.x === undefined || i.x <= size[0])
       : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]) &&
-        (i.labelX === undefined || i.labelX <= size[0]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
+        (i.labelX === undefined || i.labelX <= size[0]))) && (() => {
+          const byNumber = new Map();
+          for (const item of map.items) {
+            const existing = byNumber.get(item.n);
+            if (existing && (existing.label !== item.label || existing.desc !== item.desc)) return false;
+            byNumber.set(item.n, item);
+          }
+          return true;
+        })();
 }
 const dimensions = value => {
   const match = typeof value === 'string' && /^(\d+)\s*[x×]\s*(\d+)$/i.exec(value.trim());

@@ -126,9 +126,10 @@ test('Sony changes preserve photos and facts; selective inverse restores exact p
 });
 
 import {beforeW20261016_017View} from './w20261016-017-history.mjs';
+import {beforeW014View} from './w014-analogway-history.mjs';
 test('renderer inverse exposes unrelated changes and rejects edits inside the approved block',()=>{
  const view=readFileSync(new URL('../prototype/brc-am7/detail-enhancement-view.mjs',import.meta.url),'utf8');
- assert.equal(sha(beforeW20261016_017View(view)),prior.priorViewSha);
- assert.ok(beforeW20261016_017View(view+'\n// unrelated').endsWith('// unrelated'));
+ assert.equal(sha(beforeW20261016_017View(beforeW014View(view))),prior.priorViewSha);
+ assert.ok(beforeW20261016_017View(beforeW014View(view+'\n// unrelated')).endsWith('// unrelated'));
  assert.throws(()=>beforeW20261016_017View(view.replace('cx += marker.direction * 24','cx += marker.direction * 25')),/unexpected W-017 renderer change/);
 });

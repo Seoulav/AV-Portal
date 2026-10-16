@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W-20261016-014 Analog Way Port Map 전후 미리보기</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,"Malgun Gothic",sans-serif;color:#172033;background:#f3f5f8}*{box-sizing:border-box}body{margin:0;padding:20px}.head{max-width:1500px;margin:0 auto 18px}.head h1{font-size:22px;margin:0 0 8px}.head p{margin:4px 0;color:#536174}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.controls select{font:inherit;padding:8px 10px;border:1px solid #cbd3df;border-radius:8px;background:white}.grid{display:grid;grid-template-columns:1528px 788px;gap:16px;width:max-content;margin:0 auto}.device{min-width:0;background:white;border:1px solid #dce2ea;border-radius:12px;padding:12px;box-shadow:0 3px 12px #1b2b4012}.device h2{font-size:16px;margin:0 0 8px}.pair{display:grid;grid-template-columns:repeat(2,max-content);gap:8px}.view{min-width:0}.view h3{font-size:12px;color:#4d5c70;margin:0 0 6px}.frame{display:block;width:760px;height:880px;border:1px solid #d9dfe8;border-radius:7px;background:white}.mobile .frame{width:390px;height:1000px}.note{font-size:12px;color:#657185}.error{color:#a21b1b}.links{display:flex;gap:12px;flex-wrap:wrap;font-size:13px}a{color:#075cc5}@media(max-width:900px){body{padding:10px}.frame{height:760px}.mobile .frame{height:860px}}
+</style>
+</head>
+<body>
+<header class="head"><h1>W-20261016-014 · Analog Way Port Map</h1><p>각 패널은 실제 상세 페이지 렌더입니다. Before는 시작 시점 Port Map 데이터를 되감고, After는 작업본을 사용합니다.</p><p>두 서버를 실행해야 합니다: <code>node Work/기록/W-20261016-014-analogway-preview/preview-server.mjs before 4175</code> · <code>node Work/기록/W-20261016-014-analogway-preview/preview-server.mjs after 4176</code></p>
+<div class="controls"><label for="model">제품</label><select id="model"></select><span class="note">왼쪽: Before · 오른쪽: After. 상단/하단 지도 영역을 실제 포털 760px·390px 뷰포트로 확인합니다.</span></div></header>
+<main class="grid">
+<section class="device"><h2>760px 상세</h2><div class="pair"><div class="view"><h3>Before · 760px</h3><iframe class="frame desktop" title="Before 760px"></iframe></div><div class="view"><h3>After · 760px</h3><iframe class="frame desktop" title="After 760px"></iframe></div></div></section>
+<section class="device mobile"><h2>390px 상세</h2><div class="pair"><div class="view"><h3>Before · 390px</h3><iframe class="frame" title="Before 390px"></iframe></div><div class="view"><h3>After · 390px</h3><iframe class="frame" title="After 390px"></iframe></div></div></section>
+</main><script>
+const models=[['aquilon-rsalpha','Aquilon RSalpha'],['aquilon-rs1','Aquilon RS1'],['aquilon-rs2','Aquilon RS2'],['aquilon-rs3','Aquilon RS3'],['aquilon-rs4','Aquilon RS4'],['aquilon-rs5','Aquilon RS5'],['aquilon-rs6','Aquilon RS6'],['pulse-4k','Pulse 4K'],['eikos-4k','Eikos 4K'],['zenith-100','Zenith 100'],['zenith-200','Zenith 200']];
+const select=document.querySelector('#model');for(const [id,name] of models){const option=document.createElement('option');option.value=id;option.textContent=name;select.append(option)}
+const frames=[...document.querySelectorAll('iframe')];function update(){const slug=select.value;frames.forEach((frame,index)=>{const mode=index===0||index===2?'before':'after';frame.src=`http://127.0.0.1:${mode==='before'?4175:4176}/detail/?product=${slug}#gallery`})}select.addEventListener('change',update);update();
+</script></body></html>

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { portMapGeometry } from '../prototype/brc-am7/detail-enhancement-view.mjs';
 
-test('Aquilon repeated card columns have separate top labels while brackets retain card ranges', () => {
+test('Aquilon repeated card columns share the same card number while retaining separate photo markers', () => {
   for (const slug of ['aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6']) {
     const product = JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url)));
     const map = product.portMap;
@@ -12,12 +12,16 @@ test('Aquilon repeated card columns have separate top labels while brackets reta
     const top = markers.filter(marker => marker.side === 'top');
     assert.equal(top.length, 6, slug);
     assert.ok(top.every(marker => marker.cy + 10 <= photoTop), slug);
-    assert.ok(top.every(marker => marker.lane === 0), slug);
-    for (const n of [4, 5, 6]) {
-      const first = top.find(marker => marker.item.n === n - 3);
-      const second = top.find(marker => marker.item.n === n);
-      assert.ok(first.cx - second.cx >= 40, `${slug}: ${n} label clearance`);
-      assert.equal(second.anchorX, first.cx, `${slug}: ${n} bracket column`);
+    const groups = new Map();
+    for (const marker of top) {
+      const same = groups.get(marker.item.n) ?? [];
+      same.push(marker);
+      groups.set(marker.item.n, same);
+    }
+    for (const group of groups.values()) {
+      assert.ok(group.every(marker => marker.item.label === group[0].item.label && marker.item.desc === group[0].item.desc), slug);
+      for (let i = 0; i < group.length; i++) for (const other of group.slice(i + 1))
+        assert.ok(Math.hypot(group[i].cx - other.cx, group[i].cy - other.cy) >= 20, `${slug}: marker circles overlap`);
     }
   }
 });

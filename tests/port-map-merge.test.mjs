@@ -79,8 +79,9 @@ test('03 visibility follows selected content; map numbers never use io indices',
     assert.equal(Boolean(selectCardModes(data, data.enhancements).io), Boolean(content), raw.model);
     if (data.enhancements.portMap) {
       const cards = renderPortMapCards(data.enhancements.portMap.items);
-      assert.deepEqual(cards.children.map(card => Number(card.children[0].children[0].textContent)),
-        [...data.enhancements.portMap.items].map(item => item.n).sort((a, b) => a - b), raw.model);
+      const expected = [...new Set(data.enhancements.portMap.items.map(item => item.n))].sort((a, b) => a - b);
+      const actual = cards.children.map(card => Number(card.children[0].children[0].textContent.match(/^\d+/)?.[0]));
+      assert.deepEqual(actual, expected, raw.model);
     }
   }
   const withFlow = products.filter(({ raw }) => prepareProductDetail(raw).enhancements.signalFlow);

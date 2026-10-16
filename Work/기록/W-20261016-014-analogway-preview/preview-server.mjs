@@ -1,0 +1,11 @@
+﻿import { createServer } from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const folder=path.dirname(fileURLToPath(import.meta.url));
+const root=path.resolve(folder,'../../../beta/site');
+const fixture=JSON.parse(fs.readFileSync(path.resolve(folder,'../../../tests/fixtures/w014-analogway-prior-portmaps.json'),'utf8'));
+const mode=process.argv[2],port=Number(process.argv[3]);
+if(!['before','after'].includes(mode)||!Number.isInteger(port))throw new Error('usage: node preview-server.mjs before|after <port>');
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.pdf':'application/pdf'};
+createServer((req,res)=>{try{const url=new URL(req.url,'http://127.0.0.1');let pathname=decodeURIComponent(url.pathname);if(pathname.endsWith('/'))pathname+='index.html';const target=path.resolve(root,'.'+pathname);if(!target.startsWith(root+path.sep)){res.writeHead(403);return res.end();}let body=fs.readFileSync(target);if(mode==='before'){const match=pathname.match(/^\/detail\/data\/([a-z0-9-]+)\.json$/);if(match&&fixture[match[1]]){const product=JSON.parse(body);product.portMap=fixture[match[1]];body=Buffer.from(JSON.stringify(product));}}res.writeHead(200,{'Content-Type':types[path.extname(target)]||'application/octet-stream','Cache-Control':'no-store'});res.end(body);}catch{res.writeHead(404);res.end();}}).listen(port,'127.0.0.1',()=>console.log(`W-014 ${mode} preview at http://127.0.0.1:${port}/`));

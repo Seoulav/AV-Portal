@@ -607,3 +607,21 @@
 - 검증: 집중 검사 8/8, 전체 직렬 검사 805건 중 804 통과·실패 0·기존 skip 1. `search-index --check`, `verify-pages`(285 제품·282 상세·515 이미지·163 PDF), Samsung lint 통과. lint 25개는 공유 도면 형제 모델 `SHARED_WITH` 신호이며 좌표 충돌 없음. 최신 main에서 재생성한 snapshot·검색 인덱스 포함.
 - 캡처: hg55u800fnfxkr 전후 760px·390px 비교를 `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html`에 저장. 기존 760px 캡처는 새 렌더러에서도 육안 재확인 완료; 390px에서 상단 6–8·하단 9–10 배치 확인.
 - 상태: 검증 완료, 새 PR 생성 및 CI 대기. #587은 이미 병합됐으며 이 수정은 Work의 새 병합 순서 승인 전에는 병합하지 않음.
+
+## W-20261016-015 묶음 6 후속 — 호텔 TV Port Map 병합·배포 완료 (2026-10-16)
+
+- PR [#589](https://github.com/Seoulav/AV-Portal/pull/589) 병합, merge SHA `137e010ac7203ede5e0ae819d6b3f3e6ec359010`.
+- Builder CI run `38906296896` 전체 성공. Pages run `38907124706` 성공.
+- 공개 `hg55u800fnfxkr` 상세와 데이터 JSON HTTP 200. 공개 JSON SHA-256 `b51f671e54836fd60847b0cb43f5fb341c911c1282c9dda9f4025b014e68c020`이 병합 데이터와 일치.
+- 760px·390px 공개 화면 캡처를 확인했고, PR 미리보기 `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html`에서 6종의 전후 좌우 비교를 보존.
+- merge diff의 `Work/기록/W-20261016-015-예외.md`는 16 추가·9 삭제로 호텔 TV 항목만 갱신. 다른 섹션은 유지.
+
+## W-20261016-014 + W-015 묶음 2 — Analog Way Port Map (2026-10-16)
+
+- 명세 `Work/작업/W-20261016-014.md` blob SHA `8c8c393ad99b3705731cad873d06b62d35a2d3d1`; W-015 `21b225881d17dd095f53299dfd5593983ca3ef37`; W-016 `18c067fe507d4776a7cb942b9c3eba96d81a0d4a`; W-017 `40a9a775ea59707eb6e264d63baaa7da55ef9a41`; 기획 인계 `Work/기록/W-20261016-014-Codex-인계.md` 재확인.
+- 선행 PR #583이 merge SHA `169800d681cef4b2e2012a8024f06c55a96bd9b8`로 병합됨을 GitHub에서 확인. 브랜치 시작 기준 `54d0693c694d1da023c5e7538e6b34c65705b025` (PR #593 포함). 이어서 fetch한 `origin/main`은 `38489ee05147808cba15407c4d5f696e2777a8bd` (#588 포함). PR #594는 OPEN이며 `app.js`·`styles.css`를 변경하므로 PR 직전 main 통합·재생성 대상. 사용자 Work 알림에 따라 기존 세션 C 배정을 세션 B가 이어받음.
+- 구현 브랜치 `codex/W-20261016-014-analogway-portmaps`, 별도 worktree `codex-b-group6`.
+- 범위: Analog Way 11개 상세 Port Map(제품: Aquilon RSalpha·RS1–RS6, Pulse 4K, Eikos 4K, Zenith 100·200); 동일 카드 종류·방향별 번호 통합 및 짧은 표기, 같은 번호는 label·desc 완전 일치만 허용, 목록 한 번호 한 줄·복수 개수 `×N`, 02 지도 괄호 위치 정리. 새 기준: 사진 안 수평 구간 ≤ 사진 폭의 1/4, 다른 선과 ≥6px, 가운데 줄은 가까운 위·아래 여백 우선.
+- 금지 범위: Aquilon `layerPlan`, Pulse/Eikos/Zenith `videoLayerPlan`, Aquilon C 시리즈 4종, `io`·사양·사진 및 `builder/`·`cpq/` 수정 금지. 세션 C W-019와 `app.js`·`styles.css`가 겹칠 수 있어 해당 파일은 가급적 건드리지 않고, PR 직전 최신 main을 통합해 의도를 함께 보존.
+- 작업 순서: (1) 11종 기존 지도·사진 측정값과 760px·390px 기준 화면 기록 (2) 중복 n의 동일/상이 label·desc 검증 테스트와 단일 번호 목록 그룹 테스트를 먼저 작성하고 RED 확인 (3) validator/list renderer 구현, 데이터 전수 정리·전후 되감기 이력 연결 (4) 11종 전후 760px·390px 좌우 미리보기 및 변경 외 제품 화면 불변 확인 (5) 파생 산출물 재생성, 전체 테스트·포트맵 감사·verify-pages·검색 인덱스 검사 (6) PR·CI 확인 후 병합 순서를 Work에 미리보기 경로와 함께 요청.
+- 현재 상태: 구현·검증 진행 중. [x] #583 선행 병합 확인(169800d6), [x] 대상 11종 기준 사진·지도·기존 번호 수 확인, [x] 동일 n은 label·desc 완전 일치만 허용하는 검증과 한 줄·×N 목록 렌더·전용 넓은 배지 스타일, [x] 11종 Port Map 번호 간소화·좌표 조정 및 되감기 함수, [x] 전후 화면을 실제 상세 페이지로 여는 760px·390px HTML 갤러리 준비. 집중 검사 5/5 통과.   [ ] Edge headless는 종료 코드 21, Chrome headless는 캡처 없이 종료 대기, CUA 브라우저 목록은 비어 있어 PNG 캡처 미생성; 실제 페이지를 띄우는 HTML 갤러리 경로는 `Work/기록/W-20261016-014-analogway-preview/index.html`. Work가 육안 확인 필요. [ ] 전체 직렬 테스트·포트맵 감사·verify-pages·파생 재생성, 최신 main 통합 및 #594 공존 확인, PR·CI 대기 남음.
