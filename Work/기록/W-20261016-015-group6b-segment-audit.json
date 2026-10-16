@@ -1,0 +1,93 @@
+{
+  "carbonite-ultra": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "control-23-1": {
+    "width": 539.746835443038,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "control-25-1": {
+    "width": 583.7129840546697,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "control-28-1": {
+    "width": 527.5333333333333,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "ds-8s": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "ki-pro-go2": {
+    "width": 680,
+    "maxHorizontalFraction": 0.22456140350877196,
+    "minimumParallelClearance": 6.850877192982466,
+    "tooLong": [],
+    "close": []
+  },
+  "novastar-h2": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "sx-1216-rti": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "toggle-dock-2x1": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "ultripower": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "ultritouch-2-hr": {
+    "width": 680,
+    "maxHorizontalFraction": 0.04437500000000002,
+    "minimumParallelClearance": 16.775000000000034,
+    "tooLong": [],
+    "close": []
+  },
+  "vs10": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  },
+  "vs5": {
+    "width": 680,
+    "maxHorizontalFraction": 0,
+    "minimumParallelClearance": null,
+    "tooLong": [],
+    "close": []
+  }
+}

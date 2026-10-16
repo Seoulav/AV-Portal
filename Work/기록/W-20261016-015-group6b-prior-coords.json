@@ -1,0 +1,1688 @@
+{
+  "carbonite-ultra": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 118,
+          "x2": 157,
+          "y": 355
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 170,
+          "x2": 210,
+          "y": 355
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 221,
+          "x2": 280,
+          "y": 339
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 287,
+          "x2": 344,
+          "y": 339
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 367,
+          "x2": 505,
+          "y": 334
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 542,
+          "x2": 685,
+          "y": 334
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 810,
+          "x2": 852,
+          "y": 350
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 860,
+          "x2": 897,
+          "y": 350
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 904,
+          "x2": 943,
+          "y": 350
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 292,
+          "x2": 316,
+          "y": 401
+        },
+        {
+          "n": 11,
+          "side": "bottom",
+          "x1": 318,
+          "x2": 343,
+          "y": 401
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 350,
+          "x2": 472,
+          "y": 403
+        },
+        {
+          "n": 13,
+          "side": "bottom",
+          "x1": 474,
+          "x2": 768,
+          "y": 403
+        },
+        {
+          "n": 14,
+          "side": "bottom",
+          "x1": 770,
+          "x2": 1495,
+          "y": 403
+        },
+        {
+          "n": 15,
+          "side": "top",
+          "x1": 249,
+          "x2": 271,
+          "y": 384
+        },
+        {
+          "n": 16,
+          "side": "top",
+          "x1": 273,
+          "x2": 290,
+          "y": 384
+        }
+      ]
+    },
+    "unchanged": "6e76b093e9ec1f10a16f5cf9800a67c6c8f205adee2b57d484fee1f8a67ebdb8",
+    "photo": "ea814491f3812d2010d8438a583a5c3dae23b3ff95f849772e8d9c1bea5ee079",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "274dbe191c76a0a9adca2e233956f42f788e40ad60871ee01ed6734fb66c84d2",
+    "internalY": []
+  },
+  "control-23-1": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 230,
+          "x2": 345,
+          "y": 162
+        }
+      ]
+    },
+    "unchanged": "68f5177a8fa9a1f5cf105cf7aade762372992645b991f52dc204af19ef9fd79b",
+    "photo": "c322e7db6594b65814710711f6fee708cb28463c5fe79ab936b1af3fb75736e0",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "187ae3d6d90d0c0de0be238d859e1a4d929fdac036f82dbdbdbfd41fc64482ba",
+    "internalY": []
+  },
+  "control-25-1": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 268,
+          "x2": 371,
+          "y": 154
+        }
+      ]
+    },
+    "unchanged": "27dabb98d666da759b2fcd3abb7f42c0aab4fa530654b329787c298f3ac1754f",
+    "photo": "bcbf06fb0f549ad8d0e579b8acd16dc24b22d529f3b7cd1e9321459beed26217",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "51aa87e163ddbb0897a1b2adb5e26f1cdc5832f91f645ff4bd4bed01b8400322",
+    "internalY": []
+  },
+  "control-28-1": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 256,
+          "x2": 326,
+          "y": 231
+        }
+      ]
+    },
+    "unchanged": "fe405bdca7f07543e4fce1b6bb0cb292064712c33217264e6acc88cdb65e5aa0",
+    "photo": "18c27273f2cee0d67e311adf220fb4748a372229d039cac14b589ecca35be27a",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "3418612b71edd094e0d65496919b157b00bd734b0bb1f229944108c72ebd69b6",
+    "internalY": []
+  },
+  "ds-8s": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 96,
+          "x2": 1265,
+          "y": 270
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 207,
+          "x2": 266,
+          "y": 82
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 771,
+          "x2": 869,
+          "y": 84
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 926,
+          "x2": 971,
+          "y": 92
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 975,
+          "x2": 1012,
+          "y": 89
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 1072,
+          "x2": 1120,
+          "y": 92
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 1123,
+          "x2": 1164,
+          "y": 89
+        },
+        {
+          "n": 8,
+          "side": "right",
+          "x": 1438,
+          "y1": 61,
+          "y2": 270
+        }
+      ]
+    },
+    "unchanged": "8d521e5bbc3326fff1ceda83b0aef3b419adab8e7019b6b9fdd01706d2aa0755",
+    "photo": "9ee5beb825c008556ea1d52491d3922926ba8690454002479987cfc370e212f6",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x",
+        "y1",
+        "y2",
+        "side"
+      ]
+    ],
+    "approved": "c592f96fba357e2e05dfc0eed51bdc98c70b0a2b4c0210888230d39c0e9ae3f0",
+    "internalY": []
+  },
+  "ki-pro-go2": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "left",
+          "x": 105,
+          "y1": 230,
+          "y2": 379
+        },
+        {
+          "n": 2,
+          "side": "left",
+          "x": 278,
+          "y1": 229,
+          "y2": 376
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 343,
+          "x2": 593,
+          "y": 155
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 122,
+          "x2": 257,
+          "y": 178
+        },
+        {
+          "n": 5,
+          "side": "left",
+          "x": 505,
+          "y1": 225,
+          "y2": 375
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 691,
+          "x2": 773,
+          "y": 273
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 699,
+          "x2": 767,
+          "y": 347
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 631,
+          "x2": 744,
+          "y": 177
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 784,
+          "x2": 811,
+          "y": 175
+        },
+        {
+          "n": 10,
+          "side": "bottom",
+          "x1": 784,
+          "x2": 871,
+          "y": 272
+        },
+        {
+          "n": 11,
+          "side": "right",
+          "x": 1040,
+          "y1": 111,
+          "y2": 336
+        }
+      ]
+    },
+    "unchanged": "1e445a0dce5400e2d235c317b4fb5bccbad2360d7b8384afc144da0fc44fc4da",
+    "photo": "624195b1e7812ebdfca4f2e1fc6d8d8b458753c3dc7101f39faa891ac821d5b2",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ]
+    ],
+    "approved": "3a478ed3adba6a671d04f40728e9cf7f40953c70f233b8692e28e08870ae6e67",
+    "internalY": [
+      6
+    ]
+  },
+  "novastar-h2": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 334,
+          "x2": 392,
+          "y": 380
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 423,
+          "x2": 481,
+          "y": 380
+        },
+        {
+          "n": 3,
+          "side": "bottom",
+          "x1": 567,
+          "x2": 639,
+          "y": 382
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 668,
+          "x2": 713,
+          "y": 383
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 725,
+          "x2": 770,
+          "y": 383
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 798,
+          "x2": 856,
+          "y": 383
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 871,
+          "x2": 929,
+          "y": 383
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 2130,
+          "x2": 2230,
+          "y": 239
+        }
+      ]
+    },
+    "unchanged": "c2186e23883e91ff0d4f257802e492598e7a592ce7737f2b205c917c5d10593b",
+    "photo": "4cc970c6ccb073783ea9661635a89871b04ad6f1a237799ca8942d3073f6e642",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "132354cd7082d3a8ba2a2f8882ae8d11499475a8ead90777d77d0db34fdb963a",
+    "internalY": []
+  },
+  "sx-1216-rti": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 203,
+          "x2": 396,
+          "y": 49
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 401,
+          "x2": 590,
+          "y": 49
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 594,
+          "x2": 688,
+          "y": 49
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 108,
+          "x2": 188,
+          "y": 66
+        }
+      ]
+    },
+    "unchanged": "266e96b5fd547ecc736b8a724da45f05e86d5a2966024d91b539979c31e157d9",
+    "photo": "8e286a794fbb01d62b6ef447ec5bb16a2701da860c20ebc2d8a1276e966d3506",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "ecc6a47fe412d1586eacc057d6422a6e214517495bd6a3fbd8a6fff59cf4fdcb",
+    "internalY": []
+  },
+  "toggle-dock-2x1": {
+    "prior": {
+      "crop": {
+        "top": 181,
+        "bottom": 348
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 238,
+          "x2": 273,
+          "y": 238
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 297,
+          "x2": 324,
+          "y": 250
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 333,
+          "x2": 370,
+          "y": 237
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 373,
+          "x2": 417,
+          "y": 242
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 535,
+          "x2": 603,
+          "y": 238
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 618,
+          "x2": 665,
+          "y": 241
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 736,
+          "x2": 784,
+          "y": 236
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 800,
+          "x2": 847,
+          "y": 248
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 849,
+          "x2": 894,
+          "y": 248
+        }
+      ]
+    },
+    "unchanged": "41ab070c38e32f54266bad738441a3b62e16d3505e79fc0bd386db792cabbcc5",
+    "photo": "f3fbbfb18cb183a657e27904a31e8789625500aed2ba05d28e501f23698afa56",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "b7d3d325a990203b321182d85c6907ee05ed8d91dc67b7d3ba58dd09f7f996bf",
+    "internalY": []
+  },
+  "ultripower": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 195,
+          "x2": 226,
+          "y": 132
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 231,
+          "x2": 267,
+          "y": 132
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 696,
+          "x2": 732,
+          "y": 132
+        },
+        {
+          "n": 4,
+          "side": "bottom",
+          "x1": 738,
+          "x2": 768,
+          "y": 132
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 571,
+          "x2": 623,
+          "y": 124
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 349,
+          "x2": 436,
+          "y": 118
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 885,
+          "x2": 953,
+          "y": 118
+        }
+      ]
+    },
+    "unchanged": "11728ec7f05a77d2861eff2c6403edef55e990a31a2a28fc0fc07f60f48031c2",
+    "photo": "a0f312d4410ea517b21860407ec739c9b7a402f1cd8e6221fe15bdb8ddf13f49",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "a97669ccbce5fdd205044f426c88cde8d4b29b2ccb1c1b4977bbd338c720bc7f",
+    "internalY": []
+  },
+  "ultritouch-2-hr": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "right",
+          "x": 985,
+          "y1": 448,
+          "y2": 496
+        },
+        {
+          "n": 2,
+          "side": "right",
+          "x": 985,
+          "y1": 292,
+          "y2": 328
+        },
+        {
+          "n": 3,
+          "side": "right",
+          "x": 985,
+          "y1": 341,
+          "y2": 379
+        }
+      ]
+    },
+    "unchanged": "6a7671185ef6a3ac9952edc2045d19a9de02f3445bcae6c0ec169baa2110dd05",
+    "photo": "785fa3010525add1808d2de06b11dfde8f1c0b79d88445f225f03e1ed3c3d0b5",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "y1",
+        "y2",
+        "side",
+        "x"
+      ]
+    ],
+    "approved": "78d0992e974c604c544006a7c79d46395004bdb09f599bd7b0374bc16b8140f8",
+    "internalY": [
+      1,
+      2,
+      3
+    ]
+  },
+  "vs10": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "bottom",
+          "x1": 768,
+          "x2": 1247,
+          "y": 640
+        },
+        {
+          "n": 2,
+          "side": "top",
+          "x1": 768,
+          "x2": 952,
+          "y": 499
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 1026,
+          "x2": 1228,
+          "y": 499
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 1469,
+          "x2": 1667,
+          "y": 565
+        },
+        {
+          "n": 5,
+          "side": "top",
+          "x1": 291,
+          "x2": 589,
+          "y": 498
+        },
+        {
+          "n": 6,
+          "side": "top",
+          "x1": 626,
+          "x2": 759,
+          "y": 499
+        },
+        {
+          "n": 7,
+          "side": "bottom",
+          "x1": 364,
+          "x2": 426,
+          "y": 638
+        },
+        {
+          "n": 8,
+          "side": "top",
+          "x1": 481,
+          "x2": 543,
+          "y": 638
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1710,
+          "x2": 1906,
+          "y": 565
+        },
+        {
+          "n": 10,
+          "side": "top",
+          "x1": 248,
+          "x2": 292,
+          "y": 639
+        },
+        {
+          "n": 11,
+          "side": "bottom",
+          "x1": 605,
+          "x2": 681,
+          "y": 639
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 1321,
+          "x2": 1387,
+          "y": 640
+        },
+        {
+          "n": 13,
+          "side": "bottom",
+          "x1": 111,
+          "x2": 201,
+          "y": 567
+        }
+      ]
+    },
+    "unchanged": "3b8678182a9fcde4501ce91a59d450f86bef673ed3729a22984af961b9191109",
+    "photo": "5df32d19e9bfa2eaa2d460058216126ce2cdb088ef7f58f43bbe03986086a033",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "dc256ed9204cd7b056127d61cf00654b878f25e6f86d31d252037ae949a360d4",
+    "internalY": []
+  },
+  "vs5": {
+    "prior": {
+      "items": [
+        {
+          "n": 1,
+          "side": "top",
+          "x1": 573,
+          "x2": 623,
+          "y": 184
+        },
+        {
+          "n": 2,
+          "side": "bottom",
+          "x1": 639,
+          "x2": 689,
+          "y": 184
+        },
+        {
+          "n": 3,
+          "side": "top",
+          "x1": 705,
+          "x2": 755,
+          "y": 184
+        },
+        {
+          "n": 4,
+          "side": "top",
+          "x1": 806,
+          "x2": 871,
+          "y": 184
+        },
+        {
+          "n": 5,
+          "side": "bottom",
+          "x1": 886,
+          "x2": 951,
+          "y": 184
+        },
+        {
+          "n": 6,
+          "side": "bottom",
+          "x1": 514,
+          "x2": 569,
+          "y": 184
+        },
+        {
+          "n": 7,
+          "side": "top",
+          "x1": 398,
+          "x2": 464,
+          "y": 184
+        },
+        {
+          "n": 8,
+          "side": "bottom",
+          "x1": 323,
+          "x2": 389,
+          "y": 184
+        },
+        {
+          "n": 9,
+          "side": "top",
+          "x1": 1001,
+          "x2": 1095,
+          "y": 184
+        },
+        {
+          "n": 10,
+          "side": "top",
+          "x1": 160,
+          "x2": 213,
+          "y": 140
+        },
+        {
+          "n": 11,
+          "side": "bottom",
+          "x1": 160,
+          "x2": 215,
+          "y": 185
+        },
+        {
+          "n": 12,
+          "side": "top",
+          "x1": 233,
+          "x2": 277,
+          "y": 190
+        },
+        {
+          "n": 13,
+          "side": "bottom",
+          "x1": 52,
+          "x2": 102,
+          "y": 185
+        }
+      ]
+    },
+    "unchanged": "0c005c66b24210d7fd30ea30dc22729be2d8f33334d8da0236a798fa2b4302ac",
+    "photo": "81c206a6b12fb040155ea4e035b4f7d0a549979b931cc7791dc3d85a4a9e398f",
+    "itemOrders": [
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ],
+      [
+        "n",
+        "label",
+        "desc",
+        "x1",
+        "x2",
+        "y",
+        "side"
+      ]
+    ],
+    "approved": "4897e806b4616d7035bdeb426138e8b7afdc8d5f9ad47cce39096f15d20bc4bc",
+    "internalY": []
+  }
+}

@@ -1,6 +1,8 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync, readdirSync} from 'node:fs';
+import {readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mjs';
 import {beforeSamsungSourceCleanup} from './samsung-w010-history.mjs';
