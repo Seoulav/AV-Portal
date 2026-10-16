@@ -1,3 +1,4 @@
+import { beforeW20261016_012Product, beforeW20261016_012Raw } from './w20261016-012-history.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeUltritouchFollowupProduct, beforeUltritouchFollowupRaw } from './w12005-ultritouch-history.mjs';
@@ -12,6 +13,7 @@ const fixture = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-p
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW12005Product(current, slug) {
+  current = beforeW20261016_012Product(current, slug);
   current = beforeW13010Product(current, slug);
   current = beforeW13008Product(current, slug);
   current = beforeW12006Product(current, slug);
@@ -28,6 +30,7 @@ export function beforeW12005Product(current, slug) {
 }
 
 export function beforeW12005Raw(raw, slug) {
+  raw = beforeW20261016_012Raw(raw, slug);
   raw = beforeW13010Raw(raw, slug);
   raw = beforeW13008Raw(raw, slug);
   raw = beforeW12006Raw(raw, slug);

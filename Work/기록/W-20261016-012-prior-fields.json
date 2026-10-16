@@ -1,0 +1,1211 @@
+{
+  "basis": "a16ec715",
+  "products": {
+    "srg-x40uh": {
+      "priorPortMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "srg-x40uh-rear.webp",
+          "width": 1888,
+          "height": 2000
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "VISCA RS-422 입력",
+            "desc": "RJ-45 · 외부 카메라 제어 신호 입력",
+            "x1": 290,
+            "x2": 472,
+            "y": 1760,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "VISCA RS-422 출력",
+            "desc": "RJ-45 · 다음 카메라로 제어 신호 전달",
+            "x1": 558,
+            "x2": 762,
+            "y": 1760,
+            "side": "bottom"
+          },
+          {
+            "n": 3,
+            "label": "VIDEO OUT",
+            "desc": "USB-C · UVC 영상 출력 연결",
+            "x1": 868,
+            "x2": 985,
+            "y": 1818,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "HDMI 출력",
+            "desc": "HDMI · 영상 모니터나 스위처에 연결",
+            "x1": 1062,
+            "x2": 1231,
+            "y": 1803,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "LAN",
+            "desc": "RJ-45 · 네트워크 제어 및 PoE+ 전원 연결",
+            "x1": 1390,
+            "x2": 1580,
+            "y": 1765,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "DC 전원 입력",
+            "desc": "DC · 외부 전원 공급장치 연결",
+            "x1": 1625,
+            "x2": 1730,
+            "y": 1760,
+            "side": "bottom"
+          }
+        ],
+        "crop": {
+          "top": 930,
+          "bottom": 0
+        }
+      },
+      "priorRawSha": "bf6550487ecd24c4e2832a7d98defa6580c358bf2ddad66a33bc48af817b6ca9",
+      "unchangedSha": "be61016facf2a96026e558e39628442b42ede2e2cd78eff7049b495d5dd84d68",
+      "imageSha": "d4a918da7f7d30340f42d70e9e642040c37984611bf90216f326e1b8aaab5743",
+      "approvedPortMapSha": "759ef6721d271b2f5e78e6ddc75e1e4e73eff5f8c55681cfa47c16632d4b849e"
+    },
+    "rm-ip10": {
+      "priorPortMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "rm-ip10-rear.webp",
+          "width": 982,
+          "height": 428
+        },
+        "crop": {
+          "top": 285,
+          "bottom": 0
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "LAN",
+            "desc": "RJ-45 · 카메라 제어 네트워크 연결",
+            "x1": 398,
+            "x2": 441,
+            "y": 363,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "VISCA RS-232C OUT",
+            "desc": "Mini DIN 8핀 · 카메라 또는 광 멀티플렉스 장치 제어 출력",
+            "x1": 466,
+            "x2": 499,
+            "y": 363,
+            "side": "bottom"
+          },
+          {
+            "n": 3,
+            "label": "VISCA RS-422",
+            "desc": "9핀 단자대 · 카메라 또는 광 멀티플렉스 장치 제어 연결",
+            "x1": 523,
+            "x2": 604,
+            "y": 371,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "TALLY/CONTACT",
+            "desc": "9핀 단자대 · 탤리 입력 또는 접점 출력",
+            "x1": 627,
+            "x2": 711,
+            "y": 371,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "DC IN 12V",
+            "desc": "DC 잭 · 전원 어댑터 연결",
+            "x1": 751,
+            "x2": 779,
+            "y": 363,
+            "side": "top"
+          }
+        ]
+      },
+      "priorRawSha": "a15171866593e3807675c2d947f547d031da60e59a42ef950c77b5e21eddfb9d",
+      "unchangedSha": "549fe1e03d328f669ee0af44fb272765f54ee555f456e62d67ef80dc3c937faa",
+      "imageSha": "e48ff7754b946ad0b0e5e61d9e88162d774bc798ec008a5ce5ff06e91ecef1bb",
+      "approvedPortMapSha": "9a7dbc2536e9e3669b293042790df07c5d14052455005d143265dae4558b1341"
+    },
+    "rm-ip500": {
+      "priorPortMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "rm-ip500-rear.webp",
+          "width": 888,
+          "height": 442
+        },
+        "crop": {
+          "top": 275,
+          "bottom": 0
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "접지",
+            "desc": "본체 접지선 연결",
+            "x1": 125,
+            "x2": 158,
+            "y": 347,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "GPI I/O",
+            "desc": "D-sub 15핀 · 탤리 입력 또는 접점 출력",
+            "x1": 201,
+            "x2": 330,
+            "y": 347,
+            "side": "bottom"
+          },
+          {
+            "n": 3,
+            "label": "LAN",
+            "desc": "RJ-45 · 카메라 제어 네트워크 연결",
+            "x1": 357,
+            "x2": 427,
+            "y": 347,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "VISCA RS-422 OUT",
+            "desc": "RJ-45 · 카메라로 VISCA RS-422 제어 출력",
+            "x1": 465,
+            "x2": 531,
+            "y": 347,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "DC IN 12V",
+            "desc": "DC 잭 · 전원 어댑터 연결",
+            "x1": 541,
+            "x2": 573,
+            "y": 347,
+            "side": "top"
+          }
+        ]
+      },
+      "priorRawSha": "e3f25948f222ff1e709b2d3d09941df7b41d44cdd6c3cc0a91d4cd532cb30828",
+      "unchangedSha": "7e7b87826189b777597d849026f18e338a61ab65ba2872f8b0a059869ea208df",
+      "imageSha": "1c0ab7e5cb7ebad4f8d12d5e857143761e59703a73c03b5b414747a6720c1968",
+      "approvedPortMapSha": "d2bb3dad6d12ba93ef271bf7d75b349b654fe22f9f9c49d3f10ba3ae43e4326c"
+    }
+  },
+  "validation": {
+    "aquilon-rs1": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rs2": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rs3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rs4": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rs5": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rs6": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "aquilon-rsalpha": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "blu-100": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "blu-101": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "blu-160": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "blu-50v2": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "blu-dan": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "brc-am7": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "carbonite-ultra": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "cdi-2-1200": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-2-1200bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-2-300": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-2-300bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-2-600": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-2-600bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-1200": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-1200bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-300": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-300bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-600": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cdi-4-600bl": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "cl01": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "comtech-d-2125": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "comtech-d-4125": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "comtech-d-8125": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "control-23-1": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "control-25-1": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "control-28-1": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "dci-2-300": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-2-300n": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-2-600": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-2-600n": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-300": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-300da": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-300n": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-600": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-600da": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dci-4-600n": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "dm3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "dm7": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "ds-8s": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "duecanali-1604-dsp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "duecanali-1604-dspd": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "duecanali-804-dsp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "duecanali-804-dspd": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l260f": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l530u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l690u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l695se": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l790su": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l790u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l795se": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l895e": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-l895u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pq2213b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pq2216b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pq2220b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pu1008b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pu2010w-b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pu2213b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eb-pu2216b": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "eikos-4k": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gs108pp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gs116pp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gs728tppv3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gsm4212p": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gsm4230p": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gsm4230px": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gsm4248p": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "gsm4248px": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg43u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg50u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg55u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg65u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg75u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "hg85u800fnfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "i-tech-4x3500hd": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "ki-pro-go2": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh115qhfebgxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh32qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh43behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh43qhcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh43qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh50behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh50qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55qhcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55vhcrbgbxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55vmcrbgbxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh55wmfwbgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh65behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh65qhcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh65qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh75behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh75qhcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh75qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh75wmfwlgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh85behhlbfxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh85qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "lh98qmcebgcxkr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-322-a": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-322-ad": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-324-a": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-324-ad": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-602-a": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-602-ad": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-604-a": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mezzo-604-ad": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "mxcwapt-w": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "novastar-h2": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "novastar-h5": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "nx-1200": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "nx-2200": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "nx-3200": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-mz11k": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-mz14k": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-mz17k": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-mz882": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-vmz51": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-vmz61": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pt-vmz71": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "pulse-4k": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "qlxd4": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-1204-dsp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-1204-dspd": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-2404-dsp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-2404-dspd": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-4804-dsp": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "quattrocanali-4804-dspd": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rally-bar": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rally-mic-pod-hub": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rally-mic-pod": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rally-plus": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rio1608-d3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rio3224-d3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rm-ip10": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "rm-ip500": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "slxd1-plus": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "slxd4-plus": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "slxd4d-plus": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "srg-a40": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "srg-x40uh": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "strong-usb-cable": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "sx-1216-rti": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "tio1608-d2": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "toggle-dock-2x1": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "tr315": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "tr335": {
+      "accepted": true,
+      "errors": [],
+      "crop": true
+    },
+    "tr535": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "u-bridge-3": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ua844-swb": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ua845uwb": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ua864a": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ultripower": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ultritouch-2-hr": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ulxd1": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ulxd4": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ulxd4d": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "ulxd4q": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "varia-sl50": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "varia-sl80": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "vs10": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "vs5": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "x100pro-2u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "x100pro-4u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "x100pro-7u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "xsm4216f": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "zenith-100": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "zenith-200": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-ct101-u-cr101-u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-ct103-u-h-cr103-u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-ct104-u-cr104-u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-ft101-u-fr101-u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-ft103-u-h-fr103-u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-104u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-108u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-13u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-210u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-d102u-rack": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hd-d102u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hds-21u": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-hds-42mu": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-mr-4s": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-obhd-2c": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-obux-1c": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-qms-44ux": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-qms-88ux": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-spx-r6": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-spx-rx-tx": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-xdm-ct103-cr103": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-xdm-ctr100-pse": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-xdm-ctr100": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-xdm-ft101-fr101": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    },
+    "rtcom-xdm-psu": {
+      "accepted": true,
+      "errors": [],
+      "crop": false
+    }
+  }
+}
