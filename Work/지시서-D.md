@@ -317,3 +317,5 @@
 - 제품·사진·렌더러·검증기·예외 원문·다른 세션 진행 파일은 수정하지 않음. 보고서 Work/기록/W-20261016-015-마감점검.md, 전체측정표 및 preview17PNG. 조사 스크립트/원시JSON은 outputs/w015-closeout 로컬 전용이며 PR 제외.
 
 - PR: https://github.com/Seoulav/AV-Portal/pull/601. 최신 origin/main 59e70af1 통합 확인. CI는 문서 전용 PR 경로가 Builder/CPQ pull_request paths 대상이 아니어서 자동 체크0개(gh pr checks: no checks reported). CI 초록으로 표현하지 않으며 로컬 전체860건 통과 결과를 근거로 전달. 배포 워크플로는 실행하지 않음.
+
+- Work 2026-10-17 #601 승인: 5절 끝에 Work 결정 추가, 3절7항에 Zenith100 #9 의미상 오인 사례 추가. Epson8종은 평행≤8px 예외로 종결, Sony/Shure 장선1/4 기준 소급 안 함. RS7종+Sony2종 총9지도는 후속 수정 배정. 문서 PR은 재질문 없이 병합 승인.
