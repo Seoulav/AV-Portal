@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -10,7 +11,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
 test('PQ2213B and PQ2216B show visible REMOTE and AC connectors in their exact shared photograph', () => {
   const slugs = ['eb-pq2213b', 'eb-pq2216b', 'eb-pq2220b'];
-  const products = slugs.map(read);
+  const products = slugs.map(slug => beforeW16015Product(read(slug),slug));
   const imageHashes = products.map(({ portMap }) => sha(readFileSync(new URL(`images/${portMap.measuredImage.file}`, root))));
   assert.deepEqual([...new Set(imageHashes)], ['02f14fd8c156cb5c4bd9ce298130e38c1a23f5ece4eb92f7f0b8a3089feada79']);
   const reference = products[2].portMap.items;

@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -24,8 +25,8 @@ test('Epson HDMI 2 coordinate inverses restore both exact prior product JSON fil
     ['eb-pq2216b', '4a3bbd97dc686398859b257506ccdff929007a5588830ffb435cd7baa75e5720']
   ]) {
     const text = readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8');
-    assert.equal(sha(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(text, slug), slug)), expectedHash, slug);
-    const changed = beforeW20261015_007Product(JSON.parse(text), slug);
+    assert.equal(sha(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(beforeW16015Raw(text,slug), slug), slug)), expectedHash, slug);
+    const changed = beforeW20261015_007Product(beforeW16015Product(JSON.parse(text),slug), slug);
     changed.overview += ' independent later wording';
     assert.match(beforeW20261015_002EpsonProduct(changed, slug).overview, /independent later wording/);
     changed.portMap.items.find(item => item.n === 2).x2 = 510;

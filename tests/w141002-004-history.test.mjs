@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -16,9 +17,9 @@ const digits=value=>[...JSON.stringify(value).matchAll(/\d+(?:[.,/]\d+)*/g)].map
 test('approved wording and Port Map changes selectively rewind to exact prior JSON',()=>{
   for(const [slug,record] of Object.entries(fixture)){
     const raw=readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8');
-    const product=beforeW16009Product(JSON.parse(raw),slug);
+    const product=beforeW16009Product(beforeW16015Product(JSON.parse(raw),slug),slug);
     const restored=beforeW141002004Product(beforeW20261015_002EpsonProduct(beforeW20261015_007Product(beforeW15012Product(product,slug),slug),slug),slug);
-    assert.equal(sha(beforeW141002004Raw(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(beforeW15012Raw(beforeW16009Raw(raw,slug),slug),slug),slug),slug)),record.priorRawSha256,slug);
+    assert.equal(sha(beforeW141002004Raw(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(beforeW15012Raw(beforeW16009Raw(beforeW16015Raw(raw,slug),slug),slug),slug),slug),slug)),record.priorRawSha256,slug);
     assert.deepEqual(beforeW141002004Product(restored,slug),restored,slug);
     for(const field of Object.keys(record.fields)){
       if(field==='portMap')continue;
@@ -33,7 +34,7 @@ test('approved wording and Port Map changes selectively rewind to exact prior JS
 
 test('X100 Pro board ranges and Panasonic numbers render outside their source images',()=>{
   for(const slug of ['x100pro-2u','x100pro-4u','x100pro-7u','pt-mz11k','pt-mz14k','pt-mz17k']){
-    const product=beforeW16009Product(JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8')),slug);
+    const product=beforeW16009Product(beforeW16015Product(JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8')),slug),slug);
     const map=product.portMap;
     const {width,height}=map.measuredImage;
     const geometry=portMapGeometry(map,width,height);
