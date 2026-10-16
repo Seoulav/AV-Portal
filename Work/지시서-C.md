@@ -2,7 +2,7 @@
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
-- 상태: REVIEW (PR #576 열림, Work 병합 순서 확인 대기)
+- 상태: MERGED (PR #576 병합·Pages 배포·공개 검증 완료)
 - 명세: `Work/작업/W-20261016-010.md` · 인계서 `Work/기록/W-20261016-010-Codex-인계.md`
 - 명세 확인 기준: main `5932cf1c643ba6599fbdc9f89dc8816593778669`
 - 브랜치: `codex/W-20261016-010-aquilon-layers` · 전용 워크트리 `../codex-c-w010`
@@ -18,8 +18,28 @@
   - [x] 전체 `npm.cmd test`: 769개 중 768 통과, 실패 0, 기존 skip 1. 선택 관련 시험 22/22 통과.
   - [x] 최신 `origin/main` `2694ab2c2b99d6f0303aef51bcd1e72a229eed4d` 통합 후 search-index·readable catalog·public snapshot 재생성; `build-search-index --check`, `sync-rtcom --check`, `verify-pages` 통과(카탈로그 285, 상세 282, 사진 515, 업로드 PDF 163).
   - [x] PR #576 갱신, 최종 Builder CI 통과(run 38886817492). 이후 #578까지 통합한 갱신 커밋 CI도 통과(run 38886817492 기준 최종 push는 `5aea7524`; 확인 결과 pass).
-  - [ ] Work에 #571 병합 후 현재 순서(#576 다음 병합 여부)를 미리보기 경로와 함께 문의함: https://github.com/Seoulav/AV-Portal/pull/576#issuecomment-6213450801. 답변 대기.
-  - [ ] 병합·Pages 배포·RS1/RS6 공개 화면 검증.
+  - [x] Work가 #571 다음 #576 병합을 승인했고, 최신 main 통합 후 PR #576을 병합했다(병합 SHA `ea8ce10ef167cf7b4804eacd7ff70a78dabe5122`).
+  - [x] Pages run `38889793893` 성공. 공개 RS1·RS6 1280px·390px에서 페이지 가로 넘침 없이 표 내부 좌우 스크롤을 확인했고, 브로슈어 열기·내려받기 및 게시 PDF SHA-256 일치를 확인했다.
+
+## W-20261016-011 — Midra 4K · Zenith(Alta 4K) 공용 레이어 해설
+
+- 상태: REVIEW
+- 명세: `Work/작업/W-20261016-011.md` · 인계서 `Work/기록/W-20261016-011-Codex-인계.md`
+- 명세 확인 커밋: `6063ab4afcb239cc7a5a9609117fa9353600934f` · 구현 시작 main: `ea8ce10ef167cf7b4804eacd7ff70a78dabe5122`
+- 브랜치: `codex/W-20261016-011-midra-zenith` · 전용 워크트리 `../codex-c-w011`
+- 범위: Pulse 4K·Eikos 4K·Zenith 100·Zenith 200 네 제품의 공용 기술 해설, 검증기·상세 렌더러·테스트. Port Map 및 기존 VERIFIED 사양은 수정하지 않는다.
+- [x] 공식 공용 매뉴얼·모델별 데이터시트 규칙을 확인하고 모델별 적용 여부를 대조했다. Zenith 100·200은 Alta 4K 계열임을 확인했다.
+- [x] Work 독립 검토 수정 반영: 최대 화면 수일 때 화면당 레이어와 한 화면만 쓸 때 최대 레이어를 별도 열·카드로 표시했다. Zenith 100/200 화면별 배분 예와 최대 화면 수 구성의 Aux 수(각 1·2개)를 AM 43쪽에 맞췄다.
+- [x] 배경·전경 및 Aux 설명을 바로잡았다. 라이브 화면마다 배경 1개와 전경 1개가 있고 배경은 라이브 입력 또는 정지 이미지다. Midra 1080p Aux는 크기 조절 불가 레이어 1개, Alta Aux는 레이어 자원을 쓰지 않는다. 출력 경계 추가 비용과 4K/HD 혼합 비용만 미확인이다.
+- [x] 사용자 친화 용어, XDM 접힌 원문, Eikos 블렌딩 출처(MM 42쪽), 2×2 비교(Zenith 200은 4개 출력에 레이어 4/분할 8, Zenith 100은 PGM 출력 3개라 불가)를 반영했다. 4개 JSON의 `models` 구조도 일치시켰다.
+- [x] 네 제품 JSON에 계열 공유 `videoLayerPlan`과 제품별 결론 문장을 추가했다. XDM-WOS100 레이어 수는 RTCOM 원본에 없어 숫자 비교를 하지 않는다.
+- [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 모델 구조·문구 검증을 갱신했다. 과거 스타일 되감기 함수와 캐시 버전 시험도 업데이트했다.
+- [x] W-017 (`8845d808`), #582 (`0d7bd46a`), #584 (`2f5c455b`), #585 (`2e4bc54c`), #586 (`8ca862e3fa0b5ffa45a810652ab9e0a3624ff2d5`)를 포함한 최신 `origin/main`을 통합했다. `search-index`, readable catalog, public snapshot, 상세 정적 자산을 재생성했다. merge conflict는 파생 인덱스 재생성으로 해결했다.
+- [x] 네 제품의 1280px·390px 캡처를 다시 만들고 눈으로 확인했다. 390px `document.documentElement.scrollWidth`는 네 제품 모두 390이다. 1280px 캡처 파일과 390px 파일: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
+- [x] 최신 main 기준 직렬 전체 테스트 802건 중 801 통과·1 스킵·실패 0. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF). PDF.js canvas/font 관련 환경 경고는 있으나 해당 검사와 테스트는 통과했다.
+- [x] PR #583을 Work 검토 수정과 최신 main 통합 내용으로 갱신했다. Builder CI run `38899749586` 통과.
+- [ ] Work 독립 재검토·승인 대기. 승인 전 병합하지 않는다.
+- 근거표: `Work/기록/W-20261016-011-근거표.md` · Work 인계: `Work/기록/W-20261016-011-Work-인계.md`
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검
 
@@ -263,3 +283,12 @@
 - [근거표](기록/W-20261016-002-C-근거표.md) · [Work 인계](기록/W-20261016-002-C-Work-인계.md)
 - PR [#539](https://github.com/Seoulav/AV-Portal/pull/539): Builder CI [run 38824947674](https://github.com/Seoulav/AV-Portal/actions/runs/38824947674) 통과. 최신 main `49725e5a`와 파생 산출물을 재확인한 뒤 병합 SHA `2c2dd179a90a617886687885ad0f0de0785aafb6`.
 - Pages [run 38825292302](https://github.com/Seoulav/AV-Portal/actions/runs/38825292302) 성공. 공개 `version.json` revision `2c2dd17`. [U-BRIDGE 3 공개 페이지](https://seoulav.github.io/AV-Portal/detail/?product=u-bridge-3) 1280px·390px HTTP 200, 두 시나리오 필수 케이블 알약 표시·한눈에 보기·사양 문구 확인, JS 오류 0. 390px은 기존 좌우 스크롤로 전체 그림 확인. 캡처는 로컬 `tmp/w16002-public-*`에 보관(비커밋).
+
+## W-20261016-011 · Work 재검토 2차 수정
+
+- Work가 확인한 빈 “2×2 격자 화면 비교 · 출력 4개 가정” 카드 원인은 제품 slug(`zenith-100` 등)와 데이터 키(`zenith100`) 불일치 및 Alta 전용 렌더 조건이었다.
+- [x] 네 제품 모두 카드가 렌더되도록 하고 slug 키로 제품별 문구를 불러오게 수정했다. Pulse·Eikos는 출력 최대 2개, Zenith 100은 최대 3개라 4출력 구성 불가를 매뉴얼/모델 데이터시트 쪽수와 함께 표시했다. Zenith 200은 AM 52쪽의 2×2 지원, 레이어 자원 4개를 한 화면에 배정하는 가정, 믹싱 4개 또는 분할 8개를 표시했다.
+- [x] 모든 네 제품의 1280px·390px 미리보기를 새로 캡처했다. 390px에서 네 제품 모두 `document.documentElement.scrollWidth=390`, 비교 카드 제목과 본문 표시를 확인했다. 캡처는 `tmp/w011-preview/`에 보관했다.
+- [x] 최신 `origin/main` `4daad18d98fc079ff8388ffa53b2247e42b7e223`를 통합하고 상세 생성 자산·검색 인덱스·공개 스냅샷을 재생성했다.
+- [x] 전체 테스트 803건 중 802 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages`(285 장비·282 상세·515 이미지·163 uploads)와 `git diff --check` 통과.
+- [ ] 수정본 커밋·push 및 새 CI 확인 후, 사용자가 승인한 자동 병합 절차에 따라 병합·배포·공개 확인 예정.
