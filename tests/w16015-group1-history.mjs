@@ -10,6 +10,10 @@ export const w16015Group1Slugs = new Set(Object.keys(fixture));
 export function beforeW16015Product(current, slug) {
   const record = fixture[slug];
   if (!record) return current;
+  if (record.deferred) {
+    if (hash(current.portMap) !== hash(record.prior)) throw Error(`${slug}: deferred W-015 map drift`);
+    return current;
+  }
   if (hash(current.portMap) === hash(record.prior)) return current;
   if (hash(current.portMap) !== record.approved) throw Error(`${slug}: unexpected W-015 portMap change`);
   const result = structuredClone(current);

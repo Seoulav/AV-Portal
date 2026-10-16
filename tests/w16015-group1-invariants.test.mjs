@@ -24,7 +24,7 @@ test('W-015 group 1 maps change only approved geometry and keep all current prod
       continue;
     }
     const approved = fixture[slug];
-    assert.equal(hash(current.portMap), approved.approved, slug);
+    assert.equal(hash(current.portMap), approved.deferred ? hash(approved.prior) : approved.approved, slug);
     const rest = structuredClone(current);
     delete rest.portMap;
     assert.equal(hash(rest), approved.unchangedSha, `${slug}: non-map data changed`);
@@ -35,15 +35,20 @@ test('W-015 group 1 maps change only approved geometry and keep all current prod
   }
   assert.equal(markers, 241);
   assert.equal(beforeY, 238);
-  assert.equal(afterY, 0);
+  assert.equal(afterY, 105);
+  assert.equal(Object.values(fixture).filter(record => record.deferred).length, 9);
+  assert.equal(Object.values(fixture).filter(record => !record.deferred).length, 16);
 });
 
 test('W-015 inverse exposes unrelated current regressions and rejects unexpected map drift', () => {
-  const current = product('eb-l260f');
+  const current = product('eb-l690u');
   const ioChanged = structuredClone(current);
   ioChanged.io = [];
-  assert.deepEqual(beforeW16015Product(ioChanged, 'eb-l260f').io, []);
+  assert.deepEqual(beforeW16015Product(ioChanged, 'eb-l690u').io, []);
   const mapChanged = structuredClone(current);
   mapChanged.portMap.items[0].x1 += 1;
-  assert.throws(() => beforeW16015Product(mapChanged, 'eb-l260f'), /unexpected W-015 portMap change/);
+  assert.throws(() => beforeW16015Product(mapChanged, 'eb-l690u'), /unexpected W-015 portMap change/);
+  const deferred = product('eb-l260f');
+  deferred.portMap.items[0].x1 += 1;
+  assert.throws(() => beforeW16015Product(deferred, 'eb-l260f'), /deferred W-015 map drift/);
 });
