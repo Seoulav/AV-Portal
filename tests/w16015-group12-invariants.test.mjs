@@ -35,6 +35,26 @@ test('W-015 group 1-2 changes only nine approved maps and preserves marker meani
   assert.deepEqual([markers,beforeY,afterY,via],[105,105,13,10]);
 });
 
+test('W-015 Epson Audio Out routes retain six-pixel clearance', () => {
+  // Published PU1008B/PU2010W-B Rear WebP: first RS-232C glyph row is y=90.
+  // The 3x browser crops independently measure 6+ source pixels of separation.
+  for (const slug of ['eb-pu1008b', 'eb-pu2010w-b']) {
+    const map = product(slug).portMap;
+    const audio = map.items.find(item => item.n === 8);
+    assert.ok(audio.x1 >= 326 && audio.x2 <= 342, slug + ': bracket spans Audio Out jack only');
+    assert.ok(90 - audio.y >= 6, slug + ': RS-232C print clearance');
+  }
+  for (const slug of ['eb-pu2213b', 'eb-pu2216b']) {
+    const map = product(slug).portMap;
+    const audio = map.items.find(item => item.n === 9);
+    const dvi = map.items.find(item => item.n === 3);
+    const hdmi = map.items.find(item => item.n === 4);
+    assert.ok(audio.labelX - dvi.x2 >= 6, slug + ': DVI-D bracket clearance');
+    assert.ok(hdmi.x1 - audio.labelX >= 6, slug + ': HDMI bracket clearance');
+    assert.equal(audio.via[0][0], audio.labelX, slug + ': straight segment through clear lane');
+  }
+});
+
 test('W-015 group 1-2 inverse rejects map drift and exposes other current regressions', () => {
   const current = product('eb-l260f');
   const ioChanged = structuredClone(current);
