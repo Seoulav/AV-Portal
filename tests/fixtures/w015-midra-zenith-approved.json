@@ -46,8 +46,8 @@
     }
   },
   "zenith-100": {
-    "portMapsSha256": "a4e6ef4c937be883ad12d08a7a9570cc83644a2a42b1ea2d64a902ff80c77bd9",
-    "panelFileSha256": "0f776f0a1221da5091ce5504b9dc9488a48dfceb90ce7f00b0defbeda67be865",
+    "portMapsSha256": "7043f0c866ee77168c412d77b901f21030a115c245de0d458893e7cdef3bb94c",
+    "panelFileSha256": "f1eecc4999878c056ecd8dfadd47285918660522aa2b3f44d870d86ee5159f3a",
     "otherImage": {
       "role": "Other",
       "file": "zenith-100-io-panel.png",
