@@ -305,7 +305,7 @@
 - [x] 11개 모델 상세에서 카드 표시·11개 모델 결과를 확인했다. 390px `scrollWidth=390`; 예시 3개, 키보드 행 추가·삭제 동작과 브라우저 오류 0 확인.
 - [x] 전체 직렬 테스트 821건(820 pass·0 fail·기존 skip 1), `verify-pages`(285 장비·282 상세·515 이미지·0 미리보기·163 사용자 PDF), 검색 인덱스 `--check`, `git diff --check` 통과.
 - [x] RS2 가이드 전용 1280px·390px 캡처를 `%TEMP%\w019-preview\guide-rs2-{1280,390}.png`에 저장. 세 대표 제품 전체 페이지 캡처도 같은 폴더에 보관.
-- [ ] PR #594가 기존 구현 초안이다. 현재 작업본은 해당 원격 브랜치와 통합 후 계산·표시 수정 및 새 전체 CI를 다시 확인해야 한다. PR 본문에 규칙별 공식 매뉴얼 원문과 쪽을 기록한다.
+- [x] 기존 PR #594(Claude 초안)를 이어 받아 최신 main과 통합하고, Work 재검토 수정·매뉴얼 원문/쪽수·새 시험·화면 증거를 PR 본문에 기록했다. 최신 수정 head의 Builder CI run `38931624999` 통과.
 - 근거 확인: Aquilon User Manual v6.2 66쪽 “Each VPU contains 8 source links and 8 outputs links.” 및 “4 mixer layers (or 4 pairs of split layers)”; 68쪽 “A Screen using more than 8 outputs uses another VPU.”; 69쪽 “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.”; Alta 4K User Manual 42쪽 “One Layer resource = one Mixing layer or one pair of Split layers allocated to a Screen.”; Zenith 100·200 데이터시트 각 6쪽 입력 상한 11·14; Midra 4K User Manual 42쪽 Mixer·Matrix·Blend 모드 규칙.
 ### W-20261016-019 재검증 (2026-10-16)
 
@@ -324,4 +324,5 @@
 - [x] Aquilon Cmini·C·C+·Cmax를 추가하고 커넥터 수에 “BTO 최대 구성”을 표시했다. 가능 모델 우선, 불가 모델 접기, 추천 시리즈 순서와 “가격 비교가 아님” 안내를 넣었다.
 - [x] Prototype 원본을 수정하고 beta 사본 15개를 `node beta/build-detail-assets.mjs`로 생성했다. 공개 제품 JSON은 바꾸지 않았다.
 - [x] RS2·Zenith 200·C+ 시나리오 2 미리보기: `%TEMP%\w019-preview\review-{aquilon-rs2,zenith-200,aquilon-cplus}-{1280,390}.png`. 각 1280px·390px에서 결과 15종, 가능 8·불가 7, `scrollWidth=390`; 모바일은 불가 7종 접힘, 브라우저 오류 0.
-- [ ] 전체 검사·verify-pages·검색 인덱스 점검 및 새 CI 실행 후 Work의 독립 재검토를 받는다. 승인 전 병합하지 않는다.
+- [x] 전체 직렬 테스트 846 pass·0 fail, W-019 16/16, `verify-pages`(289 equipment·286 details·525 images·0 preview·167 user PDFs), 검색 인덱스 `--check`(712807 bytes), `git diff --check` 통과. PR #594 최신 head `898f2f91` Builder CI run `38931624999` 통과.
+- [ ] Work 독립 재검토 대기. 승인 전 병합하지 않는다.
