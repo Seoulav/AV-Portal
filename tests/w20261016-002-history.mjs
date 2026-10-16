@@ -1,3 +1,4 @@
+import {beforeW20261016_017View} from './w20261016-017-history.mjs';
 import assert from 'node:assert/strict';
 const slug='u-bridge-3';
 const original='CAT6A U/FTP 한 가닥으로 연결해 USB 3.2 Gen 1(최대 5Gbps) 장치 3개를 최대 100m 연장한다.';
@@ -38,6 +39,7 @@ export function beforeW20261016_002Raw(raw,name) {
   return JSON.stringify(beforeW20261016_002Product(JSON.parse(raw),name),null,2)+'\n';
 }
 export function beforeW20261016_002View(view) {
+  view=beforeW20261016_017View(view);
   let result=view;
   const replacements=[
     ['function figure(group,index,toggle,flow) {','function figure(group,index,toggle) {'],

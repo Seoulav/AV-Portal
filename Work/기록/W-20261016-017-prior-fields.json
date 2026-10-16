@@ -1,0 +1,260 @@
+{
+  "base": "2694ab2c",
+  "products": {
+    "brc-am7": {
+      "priorPortMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "brc-am7-rear.webp",
+          "width": 1200,
+          "height": 720
+        },
+        "crop": {
+          "top": 450,
+          "bottom": 0
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "접지",
+            "desc": "보호 접지선 연결",
+            "x1": 367,
+            "x2": 384,
+            "y": 591,
+            "side": "bottom"
+          },
+          {
+            "n": 2,
+            "label": "VISCA IN",
+            "desc": "RJ-45 · RS-422 원격 제어 입력",
+            "x1": 383,
+            "x2": 431,
+            "y": 541,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "VISCA OUT",
+            "desc": "RJ-45 · 다음 카메라로 RS-422 제어 연결",
+            "x1": 446,
+            "x2": 495,
+            "y": 541,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "MIC",
+            "desc": "3.5 mm 스테레오 · 마이크 입력",
+            "x1": 639,
+            "x2": 665,
+            "y": 551,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "AUDIO IN 1",
+            "desc": "XLR 3핀 · 외부 마이크·오디오 입력 1",
+            "x1": 676,
+            "x2": 747,
+            "y": 522,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "AUDIO IN 2",
+            "desc": "XLR 3핀 · 외부 마이크·오디오 입력 2",
+            "x1": 756,
+            "x2": 831,
+            "y": 522,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "LAN · PoE++",
+            "desc": "RJ-45 · 네트워크 통신 및 PoE++ 전원 입력",
+            "x1": 421,
+            "x2": 472,
+            "y": 608,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "OPTICAL 출력",
+            "desc": "SFP+ 슬롯 · 선택형 광 모듈 장착 시 SDI OUT1 신호 출력",
+            "x1": 518,
+            "x2": 568,
+            "y": 596,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "SDI OUT1",
+            "desc": "BNC · 12G/6G/3G/1.5G SDI 영상 출력",
+            "x1": 575,
+            "x2": 622,
+            "y": 596,
+            "side": "top"
+          },
+          {
+            "n": 10,
+            "label": "OPTION",
+            "desc": "RJ-45 · 외부 장치의 기록 신호 연결",
+            "x1": 644,
+            "x2": 691,
+            "y": 608,
+            "side": "bottom"
+          },
+          {
+            "n": 11,
+            "label": "TC IN",
+            "desc": "BNC · 외부 기준 타임코드 입력",
+            "x1": 714,
+            "x2": 755,
+            "y": 608,
+            "side": "bottom"
+          },
+          {
+            "n": 12,
+            "label": "GENLOCK",
+            "desc": "BNC · 외부 동기 신호 입력",
+            "x1": 769,
+            "x2": 814,
+            "y": 608,
+            "side": "bottom"
+          },
+          {
+            "n": 13,
+            "label": "DC IN",
+            "desc": "XLR 4핀 · 외부 DC 전원 입력",
+            "x1": 367,
+            "x2": 434,
+            "y": 674,
+            "side": "bottom"
+          },
+          {
+            "n": 14,
+            "label": "HDMI OUT",
+            "desc": "HDMI Type A · 영상 출력",
+            "x1": 473,
+            "x2": 520,
+            "y": 660,
+            "side": "bottom"
+          },
+          {
+            "n": 15,
+            "label": "SDI OUT2",
+            "desc": "BNC · 3G/1.5G SDI 영상 출력",
+            "x1": 568,
+            "x2": 614,
+            "y": 662,
+            "side": "bottom"
+          },
+          {
+            "n": 16,
+            "label": "카드 슬롯 A",
+            "desc": "CFexpress Type A 또는 SD 기록 매체 슬롯 A",
+            "x1": 628,
+            "x2": 707,
+            "y": 660,
+            "side": "bottom"
+          },
+          {
+            "n": 17,
+            "label": "카드 슬롯 B",
+            "desc": "CFexpress Type A 또는 SD 기록 매체 슬롯 B",
+            "x1": 719,
+            "x2": 811,
+            "y": 660,
+            "side": "bottom"
+          }
+        ]
+      },
+      "priorRawSha": "2a73242bf4b515fca4daeb6370ef7058d4ef9f0e0078ffc335393c2f7b0feda9",
+      "unchangedSha": "1838b87a944770ca0e0a4ddbbddbb91c9620b82d7468e1fb99334c0e928f4040",
+      "imageSha": "f466bcfc98dbfb18aa920674e70fc1661f4e82ae9a245dd6e939e95f9ec1c0f0",
+      "approvedPortMapSha": "f45d8fe7797adf33eda61b9dbf1954f381bb9f150e04abdd127597e922f7b827"
+    },
+    "srg-a40": {
+      "priorPortMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "srg-a40-rear.webp",
+          "width": 814,
+          "height": 907
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "SDI 출력",
+            "desc": "SDI 영상 출력 · 4K 출력 미지원",
+            "x1": 211,
+            "x2": 273,
+            "y": 817,
+            "side": "bottom"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 출력",
+            "desc": "HDMI 영상 출력",
+            "x1": 95,
+            "x2": 174,
+            "y": 817,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "LAN · PoE++",
+            "desc": "네트워크·전원 입력",
+            "x1": 602,
+            "x2": 714,
+            "y": 801,
+            "side": "bottom"
+          },
+          {
+            "n": 4,
+            "label": "VISCA RS-422 입력",
+            "desc": "PTZ 제어 입력",
+            "x1": 87,
+            "x2": 192,
+            "y": 695,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "VISCA RS-422 출력",
+            "desc": "PTZ 제어 출력",
+            "x1": 194,
+            "x2": 304,
+            "y": 695,
+            "side": "bottom"
+          },
+          {
+            "n": 6,
+            "label": "MIC 입력",
+            "desc": "3.5 mm 오디오 입력",
+            "x1": 124,
+            "x2": 179,
+            "y": 604,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "DC 19.5V 입력",
+            "desc": "외부 전원 어댑터 입력",
+            "x1": 628,
+            "x2": 699,
+            "y": 605,
+            "side": "bottom"
+          }
+        ]
+      },
+      "priorRawSha": "19516f3c56d87f70e5072a6a4ec0d248dbb81e6fb34614cc557b34f205205507",
+      "unchangedSha": "8816896be688a634d853f2cdca95ea3aab7ca0312c35fda46eb222ed56dd81da",
+      "imageSha": "251b32d494a6911486545b1faa17043c90a59593578bb0bb66bdd071f150c6d4",
+      "approvedPortMapSha": "7ce63766be242febb4ba703992f3628851d11b2723408c85f61d519d318653ac"
+    }
+  },
+  "priorViewBlock": "export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit = Infinity) {\n  const X0 = 40;\n  const defaultPhotoWidth = 680;\n  const maxHeight = 900;\n  const W = map.displayWidth ? map.displayWidth - X0 * 2\n    : Math.min(defaultPhotoWidth, (maxHeight - X0 * 2) * naturalWidth / naturalHeight, autoWidthLimit);\n  const scale = W / naturalWidth;\n  const cropTop = map.crop?.top || 0, cropBottom = map.crop?.bottom || 0;\n  const photoHeight = (naturalHeight - cropTop - cropBottom) * scale;\n  const markers = map.items.map(item => {\n    if (item.side === 'left' || item.side === 'right') {\n      const direction = item.side === 'left' ? -1 : 1;\n      const edgeX = X0 + (typeof item.x === 'number' ? item.x : direction < 0 ? 0 : naturalWidth) * scale;\n      return { item, side: item.side, direction, edgeX, cx: edgeX + direction * 24,\n        sourceY1: item.y1, sourceY2: item.y2 };\n    }\n    const side = item.side === 'top' ? 'top' : 'bottom';\n    const x1 = X0 + item.x1 * scale, x2 = X0 + item.x2 * scale;\n    const cx = (x1 + x2) / 2;\n    return item.labelX === undefined\n      ? { item, side, x1, x2, cx, sourceY: item.y }\n      : { item, side, x1, x2, cx: X0 + item.labelX * scale, sourceY: item.y, anchorX: cx };\n  });\n  const laneCounts = {};\n  for (const side of ['top', 'bottom']) {\n    const lastX = [];\n    for (const marker of markers.filter(entry => entry.side === side).sort((a, b) => a.cx - b.cx || a.item.n - b.item.n)) {\n      let lane = lastX.findIndex(x => marker.cx - x >= 22);\n      if (lane < 0) lane = lastX.length;\n      lastX[lane] = marker.cx;\n      marker.lane = lane;\n    }\n    laneCounts[side] = lastX.length;\n  }\n  const topMargin = Math.max(40, 34 + 24 * (laneCounts.top - 1));\n  const bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));\n  if (!map.displayWidth && photoHeight + topMargin + bottomMargin > maxHeight + 1e-8) {\n    const availableHeight = maxHeight - topMargin - bottomMargin;\n    if (availableHeight <= 0) throw new RangeError('Port Map marker lanes exceed the height limit');\n    return portMapGeometry(map, naturalWidth, naturalHeight,\n      Math.min(W, availableHeight * naturalWidth / (naturalHeight - cropTop - cropBottom)));\n  }\n  const photoTop = topMargin, photoBottom = photoTop + photoHeight;\n  for (const marker of markers) {\n    if (marker.side === 'left' || marker.side === 'right') {\n      marker.y1 = photoTop + (marker.sourceY1 - cropTop) * scale;\n      marker.y2 = photoTop + (marker.sourceY2 - cropTop) * scale;\n      marker.cy = (marker.y1 + marker.y2) / 2;\n    } else {\n      marker.anchorY = typeof marker.sourceY === 'number'\n        ? photoTop + (marker.sourceY - cropTop) * scale\n        : marker.side === 'top' ? photoTop : photoBottom;\n      marker.cy = marker.side === 'top'\n        ? photoTop - 24 - marker.lane * 24\n        : photoBottom + 24 + marker.lane * 24;\n    }\n  }\n  return { width: W + X0 * 2, height: photoBottom + bottomMargin, scale,\n    image: { x: X0, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },\n    photoTop, photoBottom, topMargin, bottomMargin, markers };\n}\n\nexport function renderPortMap(map, image, model = '') {\n  const geometry = portMapGeometry(map, image.naturalWidth, image.naturalHeight);\n  const svg = svgNode('svg', { class: 'port-map-svg', viewBox: `0 0 ${geometry.width} ${geometry.height}`,\n    role: 'img', 'aria-label': `${model} 단자 지도`, 'aria-describedby': 'port-map-photo-desc' });\n  svg.append(svgNode('desc', { id: 'port-map-photo-desc' }, image.alt || `${model} 제품 사진`));\n  if (map.displayWidth) svg.style.maxWidth = `${map.displayWidth}px`;\n  else if (geometry.width < 760) {\n    svg.style.minWidth = '0px';\n    svg.style.maxWidth = `${geometry.width}px`;\n  }\n  const clipId = 'port-map-photo-clip';\n  const clip = svgNode('clipPath', { id: clipId });\n  clip.append(svgNode('rect', { x: geometry.image.x, y: geometry.photoTop,\n    width: geometry.image.width, height: geometry.photoBottom - geometry.photoTop }));\n  const defs = svgNode('defs'); defs.append(clip); svg.append(defs);\n  svg.append(svgNode('image', { href: image.currentSrc || image.src, ...geometry.image, 'clip-path': `url(#${clipId})` }));\n  for (const marker of geometry.markers) {\n    const { side, cx, cy } = marker;\n    let bracket, leader;\n    if (side === 'left' || side === 'right') {\n      const { edgeX: E, direction: dir, y1, y2 } = marker;\n      bracket = `M${E - dir * 8} ${y1}H${E + dir * 6}V${y2}H${E - dir * 8}`;\n      leader = `M${E + dir * 6} ${cy}H${E + dir * 14}`;\n    } else if (side === 'bottom') {\n      const { x1, x2, anchorY: B } = marker;\n      bracket = `M${x1} ${B - 8}V${B + 6}H${x2}V${B - 8}`;\n      leader = marker.item.labelX === undefined ? `M${cx} ${B + 6}V${cy - 10}` : `M${marker.anchorX} ${B + 6}L${cx} ${cy - 10}`;\n    } else {\n      const { x1, x2, anchorY: B } = marker;\n      bracket = `M${x1} ${B + 8}V${B - 6}H${x2}V${B + 8}`;\n      leader = marker.item.labelX === undefined ? `M${cx} ${B - 6}V${cy + 10}` : `M${marker.anchorX} ${B - 6}L${cx} ${cy + 10}`;\n    }\n    for (const d of [bracket, leader]) svg.append(svgNode('path', { d, fill: 'none', stroke: 'var(--pg-accent)', 'stroke-width': 1.5 }));\n    svg.append(svgNode('circle', { cx, cy, r: 10, fill: 'var(--pg-accent)' }));\n    svg.append(svgNode('text', { x: cx, y: cy + 4, 'text-anchor': 'middle', 'font-size': 11,\n      'font-weight': 700, fill: '#fff' }, marker.item.n));\n  }\n  return svg;\n}\n\n",
+  "priorViewSha": "829a011f6c8f00d179fc754f9c6d1ac28ca5af41f019e675789a7581e605e944",
+  "approvedViewBlockSha": "7259c8a04af081171778eedb266daf9de07ffd95582825a62d58d6ea7d85f120"
+}

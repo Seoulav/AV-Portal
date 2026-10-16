@@ -1,3 +1,4 @@
+import {beforeW20261016_017View} from './w20261016-017-history.mjs';
 import assert from 'node:assert/strict';
 const slugs = new Map([
   ['toggle-dock-2x1', { type:'switcher', groups:['host1','host2'] }],
@@ -17,6 +18,7 @@ export function beforeW20261016_001Raw(raw,slug) {
   return JSON.stringify(beforeW20261016_001Product(JSON.parse(raw),slug),null,2)+'\n';
 }
 export function beforeW20261016_001View(view) {
+  view=beforeW20261016_017View(view);
   const start='\n// W-20261016-001: scoped INOGENI connection diagrams.\n';
   const end='// W-20261016-001: end INOGENI connection diagrams.\n';
   if (!view.includes(start) || !view.includes(end)) throw new Error('W-001 renderer boundary changed');

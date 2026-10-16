@@ -9,7 +9,7 @@ export const isDisplayProduct = product => product.categories?.some(c => /^(Disp
 const keys = (item, allowed) => Object.keys(item).every(key => allowed.includes(key));
 const validFact = f => record(f) && keys(f, ['label', 'value', 'unit']) && text(f.label) && (text(f.value) || (typeof f.value === 'number' && Number.isFinite(f.value))) && typeof f.unit === 'string';
 const validMarker = i => {
-  if (!record(i) || !keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'y1', 'y2', 'x', 'side', 'labelX']) ||
+  if (!record(i) || !keys(i, ['n', 'label', 'desc', 'x1', 'x2', 'y', 'y1', 'y2', 'x', 'side', 'labelX', 'via']) ||
       !Number.isInteger(i.n) || i.n <= 0 || !text(i.label) || typeof i.desc !== 'string') return false;
   if (i.side === 'left' || i.side === 'right') {
     return i.x1 === undefined && i.x2 === undefined && i.y === undefined && i.labelX === undefined &&
@@ -22,6 +22,11 @@ const validMarker = i => {
     (i.y === undefined || (Number.isFinite(i.y) && i.y >= 0)) &&
     (i.labelX === undefined || (Number.isFinite(i.labelX) && i.labelX >= 0));
 };
+const validVia = (via, width, height, crop) => via === undefined ||
+  (Array.isArray(via) && via.length >= 1 && via.length <= 3 && via.every(point =>
+    Array.isArray(point) && point.length === 2 && point.every(Number.isFinite) &&
+    point[0] >= 0 && point[0] <= width && point[1] >= (crop?.top ?? 0) &&
+    point[1] <= height - (crop?.bottom ?? 0)));
 function validMap(map, product) {
   const rtcom = product.manufacturer === 'RTCOM';
   const image = product.images?.find(i => i.role === map?.image && text(i.file) &&
@@ -36,7 +41,7 @@ function validMap(map, product) {
     size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'
       ? Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= map.crop.top && i.y2 <= size[1] - map.crop.bottom
       : i.y === undefined || (Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom)))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
-    map.items.every(i => validMarker(i) && (i.side === 'left' || i.side === 'right'
+    map.items.every(i => validMarker(i) && validVia(i.via, ...size, map.crop) && (i.side === 'left' || i.side === 'right'
       ? i.y2 <= size[1] && (i.x === undefined || i.x <= size[0])
       : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]) &&
         (i.labelX === undefined || i.labelX <= size[0]))) && new Set(map.items.map(i => i.n)).size === map.items.length;
