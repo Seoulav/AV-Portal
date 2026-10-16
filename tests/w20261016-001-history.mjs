@@ -28,6 +28,13 @@ export function beforeW20261016_001View(view) {
   return result.replace(branch,'');
 }
 export function beforeW20261016_001Styles(css) {
+  const guideStart='\n/* W-20261016-019 Analog Way layer design guide. */';
+  const guideEnd='/* W-20261016-019 layer design guide end. */\n';
+  if(css.includes(guideStart)) {
+    const start=css.indexOf(guideStart), end=css.indexOf(guideEnd,start);
+    if(end<0) throw new Error('W-019 guide style boundary changed');
+    css=css.slice(0,start)+css.slice(end+guideEnd.length);
+  }
   const laterStart='\n/* W-20261016-011 shared Midra 4K / Alta 4K layer analysis. */';
   const laterEnd='/* W-20261016-011 shared layer analysis end. */';
   if(css.includes(laterStart)) {

@@ -292,3 +292,52 @@
 - [x] 최신 `origin/main` `4daad18d98fc079ff8388ffa53b2247e42b7e223`를 통합하고 상세 생성 자산·검색 인덱스·공개 스냅샷을 재생성했다.
 - [x] 전체 테스트 803건 중 802 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages`(285 장비·282 상세·515 이미지·163 uploads)와 `git diff --check` 통과.
 - [ ] 수정본 커밋·push 및 새 CI 확인 후, 사용자가 승인한 자동 병합 절차에 따라 병합·배포·공개 확인 예정.
+
+## W-20261016-019 · Analog Way 화면·레이어 설계 가이드
+
+- 상태: REVIEW (기존 초안 PR #594에 계산·표시 결함 수정 중)
+- 명세·인계: `Work/작업/W-20261016-019.md`, `Work/기록/W-20261016-019-Codex-인계.md`, 기준 main `54d0693c`에서 확인.
+- 브랜치: `codex/W-20261016-019-aw-layer-guide` · 전용 워크트리 `codex-c-w019`.
+- 범위: Analog Way 프로세서 15종 계산 가이드(Midra 2·Alta 2·Aquilon RS 7·Aquilon C 4). 제품 JSON·공개 스냅샷·검색 인덱스 불변.
+- [x] Aquilon·Alta·Midra 규칙으로 입력 계산과 3개 예시를 검증하는 순수 계산 모듈·시험 구현. 포털 `layerPlan`·`videoLayerPlan` 및 I/O 행의 모델별 입력 수와 대조.
+- [x] 카드가 공용 보조 카드 가시성 필터에서 숨겨지는 문제와 2×2 예시의 출력 선택값 변환 오류를 고쳤다.
+- [x] prototype 원본과 생성 beta 자산을 동기화하고 검증기 파일 허용 목록을 갱신했다. 과거 스타일 검사에는 W-019 추가분만 되감는 함수를 연결했다.
+- [x] 11개 모델 상세에서 카드 표시·11개 모델 결과를 확인했다. 390px `scrollWidth=390`; 예시 3개, 키보드 행 추가·삭제 동작과 브라우저 오류 0 확인.
+- [x] 전체 직렬 테스트 821건(820 pass·0 fail·기존 skip 1), `verify-pages`(285 장비·282 상세·515 이미지·0 미리보기·163 사용자 PDF), 검색 인덱스 `--check`, `git diff --check` 통과.
+- [x] RS2 가이드 전용 1280px·390px 캡처를 `%TEMP%\w019-preview\guide-rs2-{1280,390}.png`에 저장. 세 대표 제품 전체 페이지 캡처도 같은 폴더에 보관.
+- [x] 기존 PR #594(Claude 초안)를 이어 받아 최신 main과 통합하고, Work 재검토 수정·매뉴얼 원문/쪽수·새 시험·화면 증거를 PR 본문에 기록했다. 최신 수정 head의 Builder CI run `38931624999` 통과.
+- 근거 확인: Aquilon User Manual v6.2 66쪽 “Each VPU contains 8 source links and 8 outputs links.” 및 “4 mixer layers (or 4 pairs of split layers)”; 68쪽 “A Screen using more than 8 outputs uses another VPU.”; 69쪽 “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.”; Alta 4K User Manual 42쪽 “One Layer resource = one Mixing layer or one pair of Split layers allocated to a Screen.”; Zenith 100·200 데이터시트 각 6쪽 입력 상한 11·14; Midra 4K User Manual 42쪽 Mixer·Matrix·Blend 모드 규칙.
+### W-20261016-019 재검증 (2026-10-16)
+
+- #594는 Claude 작성 초안(3eceaf2)을 이어받았다. 추가 PR 없이 기존 브랜치를 보완했다. 계산/가시성 수정 570bc407, PR 브랜치 통합 1eb270ea, 최신 main 통합 f3afad77.
+- supplemental 카드 가시성 목록 누락과 2×2 출력 조합 select 매핑 오류를 고쳤다. prototype 원본·beta 생성 자산·역사 되감기 검사를 함께 맞췄다.
+- 전체 직렬 검사 824건: 823 pass, 0 fail, 기존 skip 1. W-019 전용 9/9. verify-pages 285·282·515·0·163, 검색 인덱스 --check 704524 bytes, git diff --check origin/main...HEAD 통과.
+- Headless Chromium: 11개 승인 모델 각각 가이드 1개·비교 결과 11개, RC400T·EC-4BV 0개. 모든 대상 제품에서 scrollWidth=390. 예시 추천 Zenith 200 / Aquilon RS2 / Pulse 4K. 키보드 Enter 행 추가·삭제 2→1, JS 오류 0.
+- 미리보기: %TEMP%\w019-preview\guide-aquilon-rs2-{1280,390}.png, guide-zenith-200-{1280,390}.png, guide-pulse-4k-{1280,390}.png; 전체 상세는 같은 폴더의 aquilon-rs2·zenith-200·pulse-4k 각 {1280,390}.png.
+- 세부 매뉴얼 원문·쪽·캡처·독립 검증 요청은 Work/기록/W-20261016-019-Work-인계.md에 기록. #594는 Draft 상태로 두고 Work 승인 전 병합하지 않는다.
+
+### W-20261016-019 Work 검토 반영 (2026-10-17)
+
+- [x] 최신 main `0645b86c`를 통합하고, Aquilon VPU 배분을 전수탐색으로 바꿨다. [1,2,2,3] 레이어 입력 순서의 24개 순열이 모두 RS2를 2 VPU로 가능·추천 처리한다.
+- [x] 레이어 0인 화면은 Aquilon 처리 링크를 소비하지 않지만 PGM·커넥터 수에는 포함한다. 분할 레이어는 쌍 단위 자원 규칙을 적용했다(Work 2026-10-17 결정, 매뉴얼 66쪽).
+- [x] 초과한 한도만 사유로 쓰고 불가 모델의 VPU 사용량·Optimized mode를 감췄다. 표시를 쉬운 말로 바꾸고 불가 모델을 모바일 접기 목록으로 분리했다.
+- [x] Aquilon Cmini·C·C+·Cmax를 추가하고 커넥터 수에 “BTO 최대 구성”을 표시했다. 가능 모델 우선, 불가 모델 접기, 추천 시리즈 순서와 “가격 비교가 아님” 안내를 넣었다.
+- [x] Prototype 원본을 수정하고 beta 사본 15개를 `node beta/build-detail-assets.mjs`로 생성했다. 공개 제품 JSON은 바꾸지 않았다.
+- [x] RS2·Zenith 200·C+ 시나리오 2 미리보기: `%TEMP%\w019-preview\review-{aquilon-rs2,zenith-200,aquilon-cplus}-{1280,390}.png`. 각 1280px·390px에서 결과 15종, 가능 8·불가 7, `scrollWidth=390`; 모바일은 불가 7종 접힘, 브라우저 오류 0.
+- [x] 전체 직렬 테스트 846 pass·0 fail, W-019 16/16, `verify-pages`(289 equipment·286 details·525 images·0 preview·167 user PDFs), 검색 인덱스 `--check`(712807 bytes), `git diff --check` 통과. PR #594 최신 head `898f2f91` Builder CI run `38931624999` 통과.
+- [ ] Work 독립 재검토 대기. 승인 전 병합하지 않는다.
+
+
+### W-20261016-019 Work recheck #2 (2026-10-17)
+
+- [x] Updated the C-series note to "입출력 수: BTO maximum configuration". Screen-output inputs now accept 1?4 outputs, matching the UI. Midra overflow wording now uses "4K 화면 출력".
+- [x] Updated prototype sources and regenerated beta assets; added boundary and wording regression assertions. W-019 focused tests: 17/17 pass.
+- [x] Full serial suite: 848 tests, 847 pass, 0 fail, 1 skipped. Concurrent mode reproduced the existing Windows RTCOM temp-directory rename EPERM; serial mode passed. Pages verification and search-index check passed.
+- [ ] PR #597 remains open; latest origin/main is 0645b86c. Integrate if #597 merges before W-019 merge.
+
+### W-20261016-019 post-#597 integration (2026-10-17)
+
+- [x] #597 is merged at 1ebee612c72228529af00d0455fa0a6846c89c77. Integrated into this branch as merge commit eb4c19cc; resolved the shared history test while retaining both W-014 and W-019 inverse checks.
+- [x] Regenerated detail assets, search-index (712807 bytes), and readable catalog after main integration.
+- [x] Post-integration serial suite: 855 tests, 854 pass, 0 fail, 1 skipped. verify-pages and search-index --check pass.
+- [ ] Push integration, update PR text, confirm CI, then mark ready and merge.
