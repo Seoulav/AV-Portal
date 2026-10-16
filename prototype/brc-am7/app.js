@@ -1,7 +1,7 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-008-portmap-data';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-010-aquilon-layer-plan-571';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-010-aquilon-layer-plan';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
@@ -25,6 +25,78 @@ const statusClass = status => ({
   'REVIEW REQUIRED': 'state-review', CONFLICTED: 'state-conflict'
 })[status] ?? 'state-review';
 const badge = status => element('span', 'state ' + statusClass(status), status);
+function renderAquilonLayerPlan(plan, currentSlug) {
+  const section = element('section', 'aquilon-layer-plan');
+  section.setAttribute('aria-labelledby', 'aquilon-layer-title');
+  section.append(element('h2', '', plan.title));
+  section.append(element('p', 'aquilon-layer-intro', '2×2 4K60 화면 한 개에는 모든 Aquilon 모델에서 4K 믹싱 레이어 최대 4개(분할 8개)를 배치할 수 있습니다. 큰 모델은 같은 구성을 더 많이 만들 수 있습니다.'));
+  const current = plan.models.find(row => row.slug === currentSlug);
+  const metrics = element('div', 'aquilon-layer-metrics');
+  for (const [label, value] of [
+    ['2×2 4K60 화면 최대', `${current.screens2x2}개`],
+    ['화면당 4K 믹싱 레이어', `${current.mixingLayers4kPerScreen}개`],
+    ['화면당 분할 레이어', `${current.splitLayers2kPerScreen}개`],
+    ['장비 전체 4K 믹싱 레이어', `${current.mixingLayers4k}개`]
+  ]) {
+    const card = element('div', 'aquilon-layer-metric');
+    card.append(element('small', '', label), element('strong', '', value));
+    metrics.append(card);
+  }
+  section.append(metrics);
+  const diagram = element('div', 'aquilon-layer-diagram');
+  diagram.setAttribute('role', 'img');
+  diagram.setAttribute('aria-label', '입력·정지 화면 등 소스가 Aquilon 레이어 풀을 거쳐 2 곱하기 2 4K 화면으로 출력되는 예시');
+  const sources = element('div', 'aquilon-layer-node aquilon-layer-sources');
+  sources.append(element('strong', '', '레이어 소스'));
+  for (const source of plan.sourceTypes) sources.append(element('span', '', source));
+  const pool = element('div', 'aquilon-layer-node aquilon-layer-pool');
+  pool.append(element('strong', '', 'Aquilon 레이어 풀'), element('span', '', `이 화면에서 4K 믹싱 레이어 ${current.mixingLayers4kPerScreen}개`), element('span', '', `분할 레이어 ${current.splitLayers2kPerScreen}개`));
+  const output = element('div', 'aquilon-layer-node aquilon-layer-output');
+  output.append(element('strong', '', '2×2 4K 화면'), element('span', '', '화면에 출력 연결된 4개 출력 링크'));
+  diagram.append(sources, element('span', 'aquilon-layer-arrow', '→'), pool, element('span', 'aquilon-layer-arrow', '→'), output);
+  section.append(diagram);
+  const example = plan.example;
+  const calculation = element('div', 'aquilon-layer-callout');
+  calculation.append(element('h3', '', example.title));
+  calculation.append(element('p', '', `2×2 화면은 4K60 출력 ${example.outputs}개입니다. 출력마다 용량 ${example.outputCapacity}이므로 출력 링크 ${example.outputLinks}개가 필요합니다. VPU 1개의 소스 링크 ${example.sourceLinksPerVpu}개를 쓰며, 용량 ${example.layerCapacity} 믹싱 레이어 하나는 ${example.layerLinksPerMixer}개 링크를 사용합니다. 따라서 화면 전체는 4K 믹싱 레이어 ${example.mixingLayersPerScreen}개, 분할 레이어 ${example.splitLayersPerScreen}개가 최대입니다.`));
+  calculation.append(element('small', '', '근거: Aquilon User Manual v6.2, 61·66쪽(4K 출력 용량·레이어 링크), 68쪽(VPU 용량), 79쪽(VPU별 믹싱 레이어).'));
+  section.append(calculation);
+  const comparison = element('div', 'aquilon-layer-comparison');
+  comparison.append(element('h3', '', '같은 2×2 화면 예시 · XDM-WOS100 비교'));
+  const compareGrid = element('div', 'aquilon-layer-comparison-grid');
+  const aquilonCompare = element('div', 'aquilon-layer-compare-card');
+  aquilonCompare.append(element('strong', '', 'Aquilon RS · 모든 모델'), element('p', '', `2×2 4K60 화면 전체에 4K 믹싱 레이어 최대 ${example.mixingLayersPerScreen}개(분할 ${example.splitLayersPerScreen}개).`));
+  const xdmCompare = element('div', 'aquilon-layer-compare-card');
+  xdmCompare.append(element('strong', '', 'RTCOM XDM-WOS100'), element('p', '', `RTCOM 원본: HDMI 출력 ${plan.xdmComparison.xdmWos100.outputPorts}개. ${plan.xdmComparison.xdmWos100.sourceCondition}.`));
+  compareGrid.append(aquilonCompare, xdmCompare);
+  comparison.append(compareGrid, element('small', '', 'RTCOM 원본에는 XDM-WOS100의 2×2 화면당 레이어 개수가 명시되어 있지 않아 숫자 비교는 하지 않습니다.'));
+  section.append(comparison);
+  section.append(element('p', 'aquilon-layer-table-hint', '모바일에서는 표를 좌우로 밀어 입력·출력 단자·VPU 열을 확인할 수 있습니다.'));
+  const wrap = element('div', 'pg-table aquilon-layer-table-wrap');
+  wrap.setAttribute('role', 'region');
+  wrap.setAttribute('aria-label', 'Aquilon RS 모델별 레이어·출력 비교표');
+  wrap.tabIndex = 0;
+  const table = element('table');
+  const columns = ['모델', '2×2 4K60 화면 수', '화면당 4K 레이어(분할)', '장비 전체 4K 레이어(분할)', '4K 입력', '4K 출력 단자', '4K60 PGM 출력', 'VPU'];
+  const head = element('thead');
+  const header = element('tr');
+  for (const label of columns) { const cell = element('th', '', label); cell.scope = 'col'; header.append(cell); }
+  head.append(header); table.append(head);
+  const body = element('tbody');
+  for (const rowData of plan.models) {
+    const row = element('tr', rowData.slug === currentSlug ? 'aquilon-layer-current' : '');
+    if (rowData.slug === currentSlug) row.setAttribute('aria-current', 'true');
+    row.append(element('th', '', rowData.model));
+    for (const value of [rowData.screens2x2, `${rowData.mixingLayers4kPerScreen} (${rowData.splitLayers2kPerScreen})`, `${rowData.mixingLayers4k} (${rowData.splitLayers2k})`, rowData.inputs4k, rowData.outputConnectors4k, rowData.programOutputs4k, rowData.vpus]) row.append(element('td', '', value));
+    body.append(row);
+  }
+  table.append(body); wrap.append(table); section.append(wrap);
+  const notes = element('ul', 'aquilon-layer-notes');
+  for (const note of plan.notes) notes.append(element('li', '', note));
+  section.append(notes);
+  section.append(element('small', 'aquilon-layer-sources-note', `4K60 프로그램 출력 수 근거: Aquilon User Manual v6.2 ${plan.evidence.programOutputsManualPage}쪽. 출력 커넥터·입력 수 근거: 공식 브로슈어 ${plan.evidence.outputConnectorsBrochurePage}쪽.`));
+  return section;
+}
 function safeLink(url, label, className = '', allowedHttpHost = '') {
   const parsed = new URL(url);
   const vsEntPage = productKey === 'ds-8s' && parsed.href === 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14';
@@ -152,7 +224,7 @@ if (!productKey && !allowContentFallback) {
     if (manifestResponse.ok) documentManifest = await manifestResponse.json();
   } catch { /* External document links remain available. */ }
   const pdfViewer = createPdfViewer();
-  const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest);
+  const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest, data.quickDocuments.map(item => item.resource?.file).filter(Boolean));
   const linkedDocuments = [
     ...data.quickDocuments.filter(item => item.available).map(item => ({ ...item.resource, label: item.label })),
     ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type }))
@@ -553,7 +625,13 @@ if (!productKey && !allowContentFallback) {
   }
   renderSpecs();
   $('#spec-toggle').addEventListener('click', () => renderSpecs($('#spec-toggle').getAttribute('aria-expanded') !== 'true'));
-  const layerComparison = layerComparisonFor(productKey);
+  if (enhancements.layerPlan) {
+    const layerCard = renderAquilonLayerPlan(enhancements.layerPlan, productKey);
+    layerCard.id = 'aquilon-layer-card';
+    layerCard.dataset.supplemental = '';
+    $('.supplemental-cards').prepend(layerCard);
+  }
+  const layerComparison = enhancements.layerPlan ? null : layerComparisonFor(productKey);
   if (layerComparison) {
     const section = element('div', 'layer-comparison');
     section.append(element('h3', '', `${layerComparison.manufacturer} ${layerComparison.title}`));
@@ -607,6 +685,7 @@ if (!productKey && !allowContentFallback) {
   }
 
   const visible = new Set(visibleDetailCards(data));
+  if (enhancements.layerPlan) visible.add('aquilon-layer-card');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);

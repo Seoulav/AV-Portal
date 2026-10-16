@@ -6,6 +6,7 @@ import { beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12002Product } from './w12002-wording-history.mjs';
 import { enhancementErrors, prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeCrownW03009 } from './crown-w03009-history.mjs';
+import { beforeW010AquilonProduct } from './w20261016-010-aquilon-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const proof = read('Work/기록/W-20261001-001-pilot-evidence.json');
@@ -46,7 +47,7 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
         assert.ok(Number(match[1]) <= evidence.pageCount);
       }
     }
-    const original = beforeCrownW03009(beforeW12002Product(p,slug), slug);
+    const original = beforeCrownW03009(beforeW12002Product(beforeW010AquilonProduct(p, slug),slug), slug);
     optional.forEach(key => delete original[key]);
     for (const change of portProof.quantityChanges.filter(c => c.product === slug)) {
       assert.equal(change.previous, '');

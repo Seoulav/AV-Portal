@@ -36,6 +36,7 @@ import { withoutW13008Uploads } from './w13008-surgex-history.mjs';
 import { withoutW13010Uploads } from './w13010-yamaha-history.mjs';
 import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
 import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
+import { beforeW010AquilonRaw, beforeW010AquilonUploads } from './w20261016-010-aquilon-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -48,7 +49,7 @@ const removed = {
 };
 
 test('W-016 removes only the three requested PDF files and six upload links', () => {
-  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
+  const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(beforeW010AquilonUploads(manifest.uploads)))))));
   assert.equal(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 107);
   assert.equal(manifest.uploads.filter(item => /\/winstar-/.test(item.file)).length, 0);
   assert.equal(sha(JSON.stringify(beforeW04021Uploads(withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))))))), 'b49dabfdc5348057ebf402e974364226f02d5e2f6db7ae269c57d8de1bad43df');
@@ -75,7 +76,7 @@ test('all 242 published product JSON files and their source records remain fixed
   const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
-  for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
+  for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(beforeW010AquilonRaw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(digest.digest('hex'), '74cc23674b4a88c852145b0db991c99e0a9383af3affbae2414175ca78ec87fc');
   for (const slug of [...removed['winstar-qhc-standalone-spec-ko.pdf'], ...removed['winstar-qmc-standalone-spec-ko.pdf']]) {
     const product = read(`beta/site/detail/data/${slug}.json`);
