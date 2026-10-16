@@ -41,6 +41,20 @@
       "originalSize": "2400x1175",
       "resolution": "2400x1175",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Other",
+      "file": "h5-control-panel.png",
+      "alt": "NovaStar H5 공식 후면 사진의 제어 단자 줄 확대",
+      "note": "공식 후면 사진의 제어 단자 줄 확대(자르기·배치만)",
+      "provider": "NovaStar",
+      "model": "H5",
+      "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "2400x1175",
+      "resolution": "1600x216",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -563,118 +577,41 @@
         "n": 1,
         "label": "입력 카드 영역 · I-1~I-10",
         "desc": "최대 10매 · 사진의 장착 카드는 구성 예시 · 기본 구성을 뜻하지 않음",
-        "x1": 325,
-        "x2": 1180,
-        "y": 75,
-        "side": "top"
-      },
-      {
-        "n": 2,
-        "label": "Genlock IN",
-        "desc": "BNC · Bi-Level/Tri-Level 동기 신호 입력",
-        "x1": 1305,
-        "x2": 1405,
-        "y": 840,
-        "side": "bottom"
+        "side": "left",
+        "y1": 75,
+        "y2": 1045
       },
       {
         "n": 3,
         "label": "출력 카드 영역 · O-11~O-13",
         "desc": "최대 3매 · 단자 종류와 출력 구성은 장착 카드에 따라 상이",
-        "x1": 1330,
-        "x2": 2040,
-        "y": 70,
-        "side": "top"
-      },
-      {
-        "n": 4,
-        "label": "Genlock LOOP",
-        "desc": "BNC · 입력된 동기 신호를 다음 장비에 전달",
-        "x1": 1415,
-        "x2": 1496,
-        "y": 840,
-        "side": "bottom"
+        "side": "right",
+        "y1": 75,
+        "y2": 647
       },
       {
         "n": 5,
         "label": "MVR 카드 영역",
         "desc": "프리뷰 카드 전용 슬롯 · 사진의 단자는 장착 카드 구성 예시",
-        "x1": 1280,
-        "x2": 2120,
-        "y": 660,
-        "side": "top"
-      },
-      {
-        "n": 6,
-        "label": "Ethernet",
-        "desc": "기가비트 · 제어 PC/라우터에 연결하여 Web 제어·NovaLCT 설정에 사용",
-        "x1": 1515,
-        "x2": 1607,
-        "y": 840,
-        "side": "bottom"
-      },
-      {
-        "n": 7,
-        "label": "USB 1",
-        "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
-        "x1": 1626,
-        "x2": 1654,
-        "y": 840,
-        "side": "bottom"
-      },
-      {
-        "n": 8,
-        "label": "USB 2",
-        "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
-        "x1": 1683,
-        "x2": 1712,
-        "y": 840,
-        "side": "bottom"
-      },
-      {
-        "n": 9,
-        "label": "COM IN",
-        "desc": "RJ-45 형태의 RS-232 · 중앙 제어 명령 입력 · Ethernet 포트 아님",
-        "x1": 1735,
-        "x2": 1807,
-        "y": 840,
-        "side": "bottom"
-      },
-      {
-        "n": 10,
-        "label": "COM OUT",
-        "desc": "RS-232 · 외부 장비에 사용자 명령 출력; 장비 캐스케이드 제어 불가.",
-        "x1": 1808,
-        "x2": 1880,
-        "y": 840,
-        "side": "bottom"
-      },
-      {
-        "n": 11,
-        "label": "전원 스위치",
-        "desc": "−/ON 켜기 · O/OFF 끄기.",
-        "x1": 1910,
-        "x2": 2070,
-        "y": 840,
-        "side": "bottom"
+        "side": "right",
+        "y1": 666,
+        "y2": 750
       },
       {
         "n": 12,
         "label": "AC 전원 모듈 · 사진 왼쪽",
         "desc": "100–240V AC, 50/60Hz · 기본 단일 전원, 이중화 전원은 옵션",
+        "side": "bottom",
         "x1": 1495,
-        "x2": 1675,
-        "y": 1020,
-        "side": "bottom"
+        "x2": 1675
       },
       {
         "n": 13,
         "label": "AC 전원 모듈 · 사진 오른쪽",
         "desc": "사진은 전원 2매 구성 예시 · 기본 장착 수량으로 해석하지 않음",
+        "side": "bottom",
         "x1": 1875,
-        "x2": 2055,
-        "y": 1020,
-        "side": "bottom"
+        "x2": 2055
       }
     ]
   },
@@ -912,6 +849,132 @@
           "name": "전환 효과",
           "summary": "카드별 레이어 한도를 초과하는 프리셋에서는 페이드 대신 Cut이 적용될 수 있습니다.",
           "detail": "PDF 8쪽의 SL/DL/4K/8K 수량 및 입력 커넥터 용량 조건을 확인합니다."
+        }
+      ]
+    }
+  ],
+  "portMaps": [
+    {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "h5-rear.webp",
+        "width": 2400,
+        "height": 1175
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "입력 카드 영역 · I-1~I-10",
+          "desc": "최대 10매 · 사진의 장착 카드는 구성 예시 · 기본 구성을 뜻하지 않음",
+          "side": "left",
+          "y1": 75,
+          "y2": 1045
+        },
+        {
+          "n": 3,
+          "label": "출력 카드 영역 · O-11~O-13",
+          "desc": "최대 3매 · 단자 종류와 출력 구성은 장착 카드에 따라 상이",
+          "side": "right",
+          "y1": 75,
+          "y2": 647
+        },
+        {
+          "n": 5,
+          "label": "MVR 카드 영역",
+          "desc": "프리뷰 카드 전용 슬롯 · 사진의 단자는 장착 카드 구성 예시",
+          "side": "right",
+          "y1": 666,
+          "y2": 750
+        },
+        {
+          "n": 12,
+          "label": "AC 전원 모듈 · 사진 왼쪽",
+          "desc": "100–240V AC, 50/60Hz · 기본 단일 전원, 이중화 전원은 옵션",
+          "side": "bottom",
+          "x1": 1495,
+          "x2": 1675
+        },
+        {
+          "n": 13,
+          "label": "AC 전원 모듈 · 사진 오른쪽",
+          "desc": "사진은 전원 2매 구성 예시 · 기본 장착 수량으로 해석하지 않음",
+          "side": "bottom",
+          "x1": 1875,
+          "x2": 2055
+        }
+      ]
+    },
+    {
+      "image": "Other",
+      "measuredImage": {
+        "file": "h5-control-panel.png",
+        "width": 1600,
+        "height": 216
+      },
+      "items": [
+        {
+          "n": 2,
+          "label": "Genlock IN",
+          "desc": "BNC · Bi-Level/Tri-Level 동기 신호 입력",
+          "side": "top",
+          "x1": 84,
+          "x2": 226
+        },
+        {
+          "n": 4,
+          "label": "Genlock LOOP",
+          "desc": "BNC · 입력된 동기 신호를 다음 장비에 전달",
+          "side": "bottom",
+          "x1": 260,
+          "x2": 408
+        },
+        {
+          "n": 6,
+          "label": "Ethernet",
+          "desc": "기가비트 · 제어 PC/라우터에 연결하여 Web 제어·NovaLCT 설정에 사용",
+          "side": "bottom",
+          "x1": 416,
+          "x2": 604
+        },
+        {
+          "n": 7,
+          "label": "USB 1",
+          "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
+          "side": "top",
+          "x1": 634,
+          "x2": 688
+        },
+        {
+          "n": 8,
+          "label": "USB 2",
+          "desc": "USB 2.0 · 업데이트/설정 가져오기·내보내기용; 연결 기기에 전원 공급 불가.",
+          "side": "top",
+          "x1": 738,
+          "x2": 796
+        },
+        {
+          "n": 9,
+          "label": "COM IN",
+          "desc": "RJ-45 형태의 RS-232 · 중앙 제어 명령 입력 · Ethernet 포트 아님",
+          "side": "bottom",
+          "x1": 848,
+          "x2": 985
+        },
+        {
+          "n": 10,
+          "label": "COM OUT",
+          "desc": "RS-232 · 외부 장비에 사용자 명령 출력; 장비 캐스케이드 제어 불가.",
+          "side": "bottom",
+          "x1": 1005,
+          "x2": 1142
+        },
+        {
+          "n": 11,
+          "label": "전원 스위치",
+          "desc": "−/ON 켜기 · O/OFF 끄기.",
+          "side": "top",
+          "x1": 1230,
+          "x2": 1430
         }
       ]
     }

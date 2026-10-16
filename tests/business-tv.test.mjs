@@ -1,5 +1,5 @@
 // W-015 group6b: compare this historical task with the approved later layout rewound.
-import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
+import {readBeforeW018Group6bFileSync as readFileSync} from './w20261016-018-history.mjs';
 import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
@@ -32,7 +32,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { beforeMobileRs232Raw } from './mobile-rs232-history.mjs';
-import {readdirSync} from 'node:fs';
+import {readdirBeforeW018Sync as readdirSync} from './w20261016-018-history.mjs';
 import { prepareProductDetail, visibleDetailCards, prepareIoFallbackEntries, orderSpecificationRows } from '../prototype/brc-am7/product-detail-model.mjs';
 
 const root = new URL('../', import.meta.url);
