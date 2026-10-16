@@ -1,0 +1,1708 @@
+{
+  "aquilon-rsalpha": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rsalpha-rear.webp",
+        "width": 1800,
+        "height": 716
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 99,
+          "y2": 135,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 99,
+          "y2": 135,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 409,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              459
+            ],
+            [
+              310,
+              459
+            ],
+            [
+              310,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 4,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 409,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              459
+            ],
+            [
+              510,
+              459
+            ],
+            [
+              510,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 5,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 409,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              459
+            ],
+            [
+              760,
+              459
+            ],
+            [
+              760,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 409,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              459
+            ],
+            [
+              760,
+              459
+            ],
+            [
+              760,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 409,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              459
+            ],
+            [
+              980,
+              459
+            ],
+            [
+              980,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 519,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              553
+            ],
+            [
+              1091,
+              553
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "7558ed083eb312778328ee6125da42e832eecca338336c0c9add6f2c05f0ee14",
+    "images": [
+      {
+        "file": "aquilon-rsalpha-front.webp",
+        "sha256": "084356b4f09e2f6a328739610f58b13523a4a0c42af43c80d40681b71bd215bc"
+      },
+      {
+        "file": "aquilon-rsalpha-rear.webp",
+        "sha256": "cc9fdd05f5789352f27fad9f4aa825c64823fab652f5d4cba259869053900d9e"
+      }
+    ],
+    "afterPortMapSha256": "3a50ece4637b158be648471fdbf9602a623ed80163586780d98b498d7ba3c607"
+  },
+  "aquilon-rs1": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs1-rear.webp",
+        "width": 1800,
+        "height": 727
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 103,
+          "y2": 139,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 103,
+          "y2": 301,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 265,
+          "y2": 301,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 265,
+          "y2": 301,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 421,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              471
+            ],
+            [
+              310,
+              471
+            ],
+            [
+              310,
+              727
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 421,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              471
+            ],
+            [
+              510,
+              471
+            ],
+            [
+              510,
+              727
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 421,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              471
+            ],
+            [
+              760,
+              471
+            ],
+            [
+              760,
+              727
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 421,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              471
+            ],
+            [
+              760,
+              471
+            ],
+            [
+              760,
+              727
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 421,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              471
+            ],
+            [
+              980,
+              471
+            ],
+            [
+              980,
+              727
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 526,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              560
+            ],
+            [
+              1091,
+              560
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "ceaddad6c84a9b71f38900fa75bb5f89d2d4d1260b15f9c6af9a0153141c4616",
+    "images": [
+      {
+        "file": "aquilon-rs1-front.webp",
+        "sha256": "2856b08a32ff683b369c02f54388489d237dec0c1e3b297756710829d253f559"
+      },
+      {
+        "file": "aquilon-rs1-rear.webp",
+        "sha256": "07cc842765ebbca363877b4c4eb58778f69b1a7fdfa12f8b1fea2d2c226d045a"
+      }
+    ],
+    "afterPortMapSha256": "d97cda764dadff47b5a7e27248944576e282c35c5f0110dd4cb1da27ec1f86cd"
+  },
+  "aquilon-rs2": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs2-rear.webp",
+        "width": 1800,
+        "height": 716
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 102,
+          "y2": 138,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 3장 · 카드 장착 구성 예시",
+          "y1": 102,
+          "y2": 448,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 263,
+          "y2": 299,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 263,
+          "y2": 299,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 420,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              470
+            ],
+            [
+              310,
+              470
+            ],
+            [
+              310,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 420,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              470
+            ],
+            [
+              510,
+              470
+            ],
+            [
+              510,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 420,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              470
+            ],
+            [
+              760,
+              470
+            ],
+            [
+              760,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 420,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              470
+            ],
+            [
+              760,
+              470
+            ],
+            [
+              760,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 420,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              470
+            ],
+            [
+              980,
+              470
+            ],
+            [
+              980,
+              716
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 526,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              560
+            ],
+            [
+              1091,
+              560
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "9b150549ad934df65c818ca4a22d46168734a73d1e86ca264376dcd14487d7c7",
+    "images": [
+      {
+        "file": "aquilonrs2-front.webp",
+        "sha256": "dd2dc630d1efc34fd0d15ebc58321c6e616eca56e7064b8d454e7f55bc59ef00"
+      },
+      {
+        "file": "aquilon-rs2-rear.webp",
+        "sha256": "c7bceef8719bee9973ea4a50d71b33f91ea13a669653625a33299a68485793ed"
+      }
+    ],
+    "afterPortMapSha256": "5ab8cc9e6b77a71376c32770b50563142273461c5d042ebd30a6b9ed913dcaa8"
+  },
+  "aquilon-rs3": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs3-rear.webp",
+        "width": 1800,
+        "height": 932
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 3장 · 카드 장착 구성 예시",
+          "y1": 126,
+          "y2": 326,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 3장 · 카드 장착 구성 예시",
+          "y1": 126,
+          "y2": 477,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 441,
+          "y2": 477,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 290,
+          "y2": 326,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 605,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              655
+            ],
+            [
+              310,
+              655
+            ],
+            [
+              310,
+              932
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 605,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              655
+            ],
+            [
+              510,
+              655
+            ],
+            [
+              510,
+              932
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 605,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              655
+            ],
+            [
+              760,
+              655
+            ],
+            [
+              760,
+              932
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 605,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              655
+            ],
+            [
+              760,
+              655
+            ],
+            [
+              760,
+              932
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 605,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              655
+            ],
+            [
+              980,
+              655
+            ],
+            [
+              980,
+              932
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 716,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              750
+            ],
+            [
+              1091,
+              750
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "815c7fa8a1cb40e6c307c951a6c582b03d84f4c199f92efddec26990cb117142",
+    "images": [
+      {
+        "file": "aquilon-rs3-front.webp",
+        "sha256": "97d5e1fa7e8ce22acbf577ec103da453b76fe8b82bffecaa508da941c738e1ed"
+      },
+      {
+        "file": "aquilon-rs3-rear.webp",
+        "sha256": "118389aa14bbe65fe8159bcf88c27f81804a4b39e8484151c7943b2ce54eb5b4"
+      }
+    ],
+    "afterPortMapSha256": "5de5a27a5f89520953738ed3d43e06cf8e4b0ee1e1e896fedbf07a7fa40898f1"
+  },
+  "aquilon-rs4": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs4-rear.webp",
+        "width": 1800,
+        "height": 914
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 3장 · 카드 장착 구성 예시",
+          "y1": 115,
+          "y2": 315,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 4장 · 카드 장착 구성 예시",
+          "y1": 115,
+          "y2": 628,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 429,
+          "y2": 465,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 1장 · 카드 장착 구성 예시",
+          "y1": 279,
+          "y2": 315,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 610,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              660
+            ],
+            [
+              310,
+              660
+            ],
+            [
+              310,
+              914
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 610,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              660
+            ],
+            [
+              510,
+              660
+            ],
+            [
+              510,
+              914
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 610,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              660
+            ],
+            [
+              760,
+              660
+            ],
+            [
+              760,
+              914
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 610,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              660
+            ],
+            [
+              760,
+              660
+            ],
+            [
+              760,
+              914
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 610,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              660
+            ],
+            [
+              980,
+              660
+            ],
+            [
+              980,
+              914
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 720,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              754
+            ],
+            [
+              1091,
+              754
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "19fd28adcb731abf351edf9566ebf8a43f034a946bc0289508bd223b347d5b5f",
+    "images": [
+      {
+        "file": "aquilon-rs4-front.webp",
+        "sha256": "57f973902beed69f8250cb523d1277a5f03349968590bb294dfbc492b8e10799"
+      },
+      {
+        "file": "aquilon-rs4-rear.webp",
+        "sha256": "5ae69b316a9d60ec3c98fd3b1e61b344e0892bef90cdaef7880aecb1189163a9"
+      }
+    ],
+    "afterPortMapSha256": "ae36b647fe9fdf034f5a1700285f643111f04cfb6c7b8fba48ccb7b8da54fde5"
+  },
+  "aquilon-rs5": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs5-rear.webp",
+        "width": 1800,
+        "height": 991
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 4장 · 카드 장착 구성 예시",
+          "y1": 115,
+          "y2": 298,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 4장 · 카드 장착 구성 예시",
+          "y1": 115,
+          "y2": 580,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 397,
+          "y2": 433,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 544,
+          "y2": 580,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 693,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              743
+            ],
+            [
+              310,
+              743
+            ],
+            [
+              310,
+              991
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 693,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              743
+            ],
+            [
+              510,
+              743
+            ],
+            [
+              510,
+              991
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 693,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              743
+            ],
+            [
+              760,
+              743
+            ],
+            [
+              760,
+              991
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 693,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              743
+            ],
+            [
+              760,
+              743
+            ],
+            [
+              760,
+              991
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 693,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              743
+            ],
+            [
+              980,
+              743
+            ],
+            [
+              980,
+              991
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 803,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              837
+            ],
+            [
+              1091,
+              837
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "f289ecde23375ea6a95452b690c4b065151ee19628b0b624334e117aca3bcf57",
+    "images": [
+      {
+        "file": "aquilon-rs5-front.webp",
+        "sha256": "97f3bfabaecc399df883c70197be208f40d8ef2d5140fa0d7495cdbd8c2dd31e"
+      },
+      {
+        "file": "aquilon-rs5-rear.webp",
+        "sha256": "86d594133e695b231bc30452accf68bf4118e6e0881ca66a2a938416d492dcf6"
+      }
+    ],
+    "afterPortMapSha256": "11e72157f5038aceaab0140e39516d77d6d56297c29690060e7742a301aaff00"
+  },
+  "aquilon-rs6": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "aquilon-rs6-rear.webp",
+        "width": 1800,
+        "height": 968
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 입력 카드",
+          "desc": "HDMI IN 1–4 · 카드 4장 · 카드 장착 구성 예시",
+          "y1": 113,
+          "y2": 289,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력 카드",
+          "desc": "HDMI OUT 1–4 · 카드 5장 · 카드 장착 구성 예시",
+          "y1": 113,
+          "y2": 698,
+          "side": "right"
+        },
+        {
+          "n": 3,
+          "label": "DisplayPort 입력 카드",
+          "desc": "DisplayPort IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 384,
+          "y2": 420,
+          "side": "left"
+        },
+        {
+          "n": 4,
+          "label": "SDI 입력 카드",
+          "desc": "SDI IN 1–4 · 카드 2장 · 카드 장착 구성 예시",
+          "y1": 521,
+          "y2": 557,
+          "side": "left"
+        },
+        {
+          "n": 5,
+          "label": "USB",
+          "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+          "x1": 194,
+          "x2": 246,
+          "y": 681,
+          "side": "bottom",
+          "labelX": 174,
+          "via": [
+            [
+              220,
+              731
+            ],
+            [
+              310,
+              731
+            ],
+            [
+              310,
+              968
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "SYNC IN/OUT",
+          "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+          "x1": 261,
+          "x2": 563,
+          "y": 681,
+          "side": "bottom",
+          "via": [
+            [
+              412,
+              731
+            ],
+            [
+              510,
+              731
+            ],
+            [
+              510,
+              968
+            ]
+          ]
+        },
+        {
+          "n": 7,
+          "label": "LOCK",
+          "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+          "x1": 680,
+          "x2": 805,
+          "y": 681,
+          "side": "bottom",
+          "via": [
+            [
+              742.5,
+              731
+            ],
+            [
+              760,
+              731
+            ],
+            [
+              760,
+              968
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "LAN 표기의 Neutrik RJ-45 연결",
+          "x1": 825,
+          "x2": 894,
+          "y": 681,
+          "side": "bottom",
+          "labelX": 910,
+          "via": [
+            [
+              859.5,
+              731
+            ],
+            [
+              760,
+              731
+            ],
+            [
+              760,
+              968
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "멀티뷰어 1·2",
+          "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+          "x1": 914,
+          "x2": 1065,
+          "y": 681,
+          "side": "bottom",
+          "via": [
+            [
+              989.5,
+              731
+            ],
+            [
+              980,
+              731
+            ],
+            [
+              980,
+              968
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "Dante 1·2",
+          "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+          "x1": 991,
+          "x2": 1073,
+          "y": 787,
+          "side": "bottom",
+          "labelX": 1091,
+          "via": [
+            [
+              1032,
+              821
+            ],
+            [
+              1091,
+              821
+            ]
+          ]
+        }
+      ]
+    },
+    "factsSha256": "17bcbbc913d21e96c51f0e39bb598bb7d828f264c4291370cd8af2557323467b",
+    "images": [
+      {
+        "file": "aquilon-rs6-front.webp",
+        "sha256": "70d13e8be3cb291d0614199234a3d4ebe260c734d31d1212d4ddd7c9f626bf64"
+      },
+      {
+        "file": "aquilon-rs6-rear.webp",
+        "sha256": "27e8bb544edf6a2bef079bafdc31638ad3c14af2a60789eea7cbd726f354e4c2"
+      }
+    ],
+    "afterPortMapSha256": "af78ee37fc76826ade927d25f59a75cc7970bcd3e3f6bd8e3779073abc623bc8"
+  },
+  "brc-am7": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "brc-am7-rear.webp",
+        "width": 1200,
+        "height": 720
+      },
+      "crop": {
+        "top": 440,
+        "bottom": 0
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "접지",
+          "desc": "보호 접지선 연결",
+          "side": "left",
+          "x": 344,
+          "y1": 590,
+          "y2": 608,
+          "via": [
+            [
+              100,
+              599
+            ]
+          ]
+        },
+        {
+          "n": 2,
+          "label": "VISCA IN",
+          "desc": "RJ-45 · RS-422 원격 제어 입력",
+          "side": "top",
+          "x1": 383,
+          "x2": 431
+        },
+        {
+          "n": 3,
+          "label": "VISCA OUT",
+          "desc": "RJ-45 · 다음 카메라로 RS-422 제어 연결",
+          "side": "top",
+          "x1": 446,
+          "x2": 495
+        },
+        {
+          "n": 4,
+          "label": "MIC",
+          "desc": "3.5 mm 스테레오 · 마이크 입력",
+          "side": "top",
+          "x1": 639,
+          "x2": 665
+        },
+        {
+          "n": 5,
+          "label": "AUDIO IN 1",
+          "desc": "XLR 3핀 · 외부 마이크·오디오 입력 1",
+          "side": "top",
+          "x1": 676,
+          "x2": 747
+        },
+        {
+          "n": 6,
+          "label": "AUDIO IN 2",
+          "desc": "XLR 3핀 · 외부 마이크·오디오 입력 2",
+          "side": "top",
+          "x1": 756,
+          "x2": 831
+        },
+        {
+          "n": 7,
+          "label": "LAN · PoE++",
+          "desc": "RJ-45 · 네트워크 통신 및 PoE++ 전원 입력",
+          "side": "left",
+          "x": 417,
+          "y1": 584,
+          "y2": 632,
+          "via": [
+            [
+              320,
+              608
+            ],
+            [
+              320,
+              650
+            ],
+            [
+              0,
+              650
+            ]
+          ]
+        },
+        {
+          "n": 8,
+          "label": "OPTICAL 출력",
+          "desc": "SFP+ 슬롯 · 선택형 광 모듈 장착 시 SDI OUT1 신호 출력",
+          "side": "left",
+          "x": 500,
+          "y1": 580,
+          "y2": 614,
+          "via": [
+            [
+              500,
+              597
+            ],
+            [
+              500,
+              505
+            ],
+            [
+              0,
+              505
+            ]
+          ]
+        },
+        {
+          "n": 9,
+          "label": "SDI OUT1",
+          "desc": "BNC · 12G/6G/3G/1.5G SDI 영상 출력",
+          "side": "right",
+          "x": 628,
+          "y1": 565,
+          "y2": 618,
+          "via": [
+            [
+              632,
+              591.5
+            ],
+            [
+              632,
+              465
+            ],
+            [
+              1200,
+              465
+            ]
+          ]
+        },
+        {
+          "n": 10,
+          "label": "OPTION",
+          "desc": "RJ-45 · 외부 장치의 기록 신호 연결",
+          "side": "right",
+          "x": 695.5,
+          "y1": 590,
+          "y2": 637,
+          "via": [
+            [
+              710,
+              613.5
+            ],
+            [
+              710,
+              702
+            ],
+            [
+              1100,
+              702
+            ]
+          ]
+        },
+        {
+          "n": 11,
+          "label": "TC IN",
+          "desc": "BNC · 외부 기준 타임코드 입력",
+          "side": "right",
+          "x": 756,
+          "y1": 592,
+          "y2": 634,
+          "via": [
+            [
+              765,
+              613
+            ],
+            [
+              765,
+              575
+            ],
+            [
+              1050,
+              575
+            ]
+          ]
+        },
+        {
+          "n": 12,
+          "label": "GENLOCK",
+          "desc": "BNC · 외부 동기 신호 입력",
+          "side": "right",
+          "x": 832,
+          "y1": 593,
+          "y2": 633,
+          "via": [
+            [
+              1000,
+              613
+            ]
+          ]
+        },
+        {
+          "n": 13,
+          "label": "DC IN",
+          "desc": "XLR 4핀 · 외부 DC 전원 입력",
+          "side": "bottom",
+          "x1": 367,
+          "x2": 434
+        },
+        {
+          "n": 14,
+          "label": "HDMI OUT",
+          "desc": "HDMI Type A · 영상 출력",
+          "side": "bottom",
+          "x1": 473,
+          "x2": 520
+        },
+        {
+          "n": 15,
+          "label": "SDI OUT2",
+          "desc": "BNC · 3G/1.5G SDI 영상 출력",
+          "side": "bottom",
+          "x1": 568,
+          "x2": 614
+        },
+        {
+          "n": 16,
+          "label": "카드 슬롯 A",
+          "desc": "CFexpress Type A 또는 SD 기록 매체 슬롯 A",
+          "side": "bottom",
+          "x1": 628,
+          "x2": 707
+        },
+        {
+          "n": 17,
+          "label": "카드 슬롯 B",
+          "desc": "CFexpress Type A 또는 SD 기록 매체 슬롯 B",
+          "side": "bottom",
+          "x1": 719,
+          "x2": 811
+        }
+      ]
+    },
+    "factsSha256": "1838b87a944770ca0e0a4ddbbddbb91c9620b82d7468e1fb99334c0e928f4040",
+    "images": [
+      {
+        "file": "brc-am7-main.webp",
+        "sha256": "fce569e75d1a31f4ed015bbec8840164772e86c6a453a355b75ce33ba9f338fa"
+      },
+      {
+        "file": "brc-am7-front.webp",
+        "sha256": "f4ab321a55be7c22ab960cc274887e58b45b02e51de4f89e3cb74c1eb3ea514d"
+      },
+      {
+        "file": "brc-am7-rear.webp",
+        "sha256": "f466bcfc98dbfb18aa920674e70fc1661f4e82ae9a245dd6e939e95f9ec1c0f0"
+      },
+      {
+        "file": "brc-am7-perspective.webp",
+        "sha256": "05e0d0d3d685a589110641674306c560957aaabad6b93380acd7995a471aefdd"
+      }
+    ],
+    "afterPortMapSha256": "e53c0236f236052644aed959d5f7448cfadd3378b1de126400beab7d55dc2341"
+  },
+  "srg-a40": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "srg-a40-rear.webp",
+        "width": 814,
+        "height": 907
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "SDI 출력",
+          "desc": "SDI 영상 출력 · 4K 출력 미지원",
+          "side": "bottom",
+          "x1": 211,
+          "x2": 273
+        },
+        {
+          "n": 2,
+          "label": "HDMI 출력",
+          "desc": "HDMI 영상 출력",
+          "side": "bottom",
+          "x1": 95,
+          "x2": 174
+        },
+        {
+          "n": 3,
+          "label": "LAN · PoE++",
+          "desc": "네트워크·전원 입력",
+          "side": "bottom",
+          "x1": 602,
+          "x2": 714
+        },
+        {
+          "n": 4,
+          "label": "VISCA RS-422 입력",
+          "desc": "PTZ 제어 입력",
+          "side": "left",
+          "x": 79,
+          "y1": 656,
+          "y2": 738,
+          "via": [
+            [
+              0,
+              697
+            ]
+          ]
+        },
+        {
+          "n": 5,
+          "label": "VISCA RS-422 출력",
+          "desc": "PTZ 제어 출력",
+          "side": "left",
+          "x": 211,
+          "y1": 657,
+          "y2": 738,
+          "via": [
+            [
+              203,
+              744
+            ],
+            [
+              0,
+              744
+            ]
+          ]
+        },
+        {
+          "n": 6,
+          "label": "MIC 입력",
+          "desc": "3.5 mm 오디오 입력",
+          "side": "top",
+          "x1": 124,
+          "x2": 179
+        },
+        {
+          "n": 7,
+          "label": "DC 19.5V 입력",
+          "desc": "외부 전원 어댑터 입력",
+          "side": "top",
+          "x1": 628,
+          "x2": 699
+        }
+      ],
+      "crop": {
+        "top": 540,
+        "bottom": 15
+      }
+    },
+    "factsSha256": "8816896be688a634d853f2cdca95ea3aab7ca0312c35fda46eb222ed56dd81da",
+    "images": [
+      {
+        "file": "srg-a40-main.webp",
+        "sha256": "30b939b30eb90b127b516a7251202f5ff92186805c646f298e264c14b4a37560"
+      },
+      {
+        "file": "srg-a40-front.webp",
+        "sha256": "f8c08f06339672d4b2f4a90f365ae03f7d9a17a1a64ca0bd8aae8dea87ae0e3e"
+      },
+      {
+        "file": "srg-a40-rear.webp",
+        "sha256": "251b32d494a6911486545b1faa17043c90a59593578bb0bb66bdd071f150c6d4"
+      },
+      {
+        "file": "srg-a40-perspective.webp",
+        "sha256": "8882a0f6e18ec5560b7588f2610604d9197057d85b4c8674160d68b3d980b63b"
+      }
+    ],
+    "afterPortMapSha256": "3d10a28c7cf81b498dbf194675740e1bb280f5e26fa7282beae740eef07e9e3e"
+  }
+}

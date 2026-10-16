@@ -1,3 +1,4 @@
+import { beforeW015CloseoutProduct } from './w015-closeout-history.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -30,7 +31,11 @@ export function beforeW014View(current){
 export function beforeW014AnalogWayProduct(product,slug){
  product=beforeW20261016_015MidraProduct(product,slug);
  const old=prior[slug];if(!old||!product.portMap)return product;
- const currentHash=sha(product.portMap);if(currentHash===sha(old))return product;
+ let currentHash=sha(product.portMap);if(currentHash===sha(old))return product;
+ if(![approvedPrevious[slug],approved[slug]].includes(currentHash)){
+  product=beforeW015CloseoutProduct(product,slug,'W-014 Port Map changes');
+  currentHash=sha(product.portMap);
+ }
  assert.ok([approvedPrevious[slug],approved[slug]].includes(currentHash),slug+': unexpected W-014 Port Map changes');
  const restored=structuredClone(product);restored.portMap=structuredClone(old);return restored;
 }
