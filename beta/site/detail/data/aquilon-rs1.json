@@ -758,7 +758,10 @@
         "programOutputs4k": 4,
         "mixingLayers4k": 4,
         "splitLayers2k": 8,
-        "vpus": 1
+        "vpus": 1,
+        "screens2x2": 1,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs1",
@@ -768,7 +771,10 @@
         "programOutputs4k": 4,
         "mixingLayers4k": 4,
         "splitLayers2k": 8,
-        "vpus": 1
+        "vpus": 1,
+        "screens2x2": 1,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs2",
@@ -778,7 +784,10 @@
         "programOutputs4k": 8,
         "mixingLayers4k": 8,
         "splitLayers2k": 16,
-        "vpus": 2
+        "vpus": 2,
+        "screens2x2": 2,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs3",
@@ -788,7 +797,10 @@
         "programOutputs4k": 8,
         "mixingLayers4k": 8,
         "splitLayers2k": 16,
-        "vpus": 2
+        "vpus": 2,
+        "screens2x2": 2,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs4",
@@ -798,7 +810,10 @@
         "programOutputs4k": 12,
         "mixingLayers4k": 12,
         "splitLayers2k": 24,
-        "vpus": 3
+        "vpus": 3,
+        "screens2x2": 3,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs5",
@@ -808,7 +823,10 @@
         "programOutputs4k": 12,
         "mixingLayers4k": 12,
         "splitLayers2k": 24,
-        "vpus": 3
+        "vpus": 3,
+        "screens2x2": 3,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       },
       {
         "slug": "aquilon-rs6",
@@ -818,7 +836,10 @@
         "programOutputs4k": 16,
         "mixingLayers4k": 16,
         "splitLayers2k": 32,
-        "vpus": 4
+        "vpus": 4,
+        "screens2x2": 4,
+        "mixingLayers4kPerScreen": 4,
+        "splitLayers2kPerScreen": 8
       }
     ],
     "sourceTypes": [
@@ -829,13 +850,16 @@
       "다른 화면(조건별)"
     ],
     "example": {
-      "title": "계산 예시 · 2×2 4K60 화면",
+      "title": "계산 예시 · 2×2 4K60 화면 1개",
       "outputs": 4,
       "outputCapacity": 2,
       "outputLinks": 8,
+      "sourceLinksPerVpu": 8,
       "layerCapacity": 2,
-      "layerLinkWidth": 4,
-      "layerLinks": 2
+      "layerLinksPerMixer": 2,
+      "mixingLayersPerScreen": 4,
+      "splitLayersPerScreen": 8,
+      "vpusForScreen": 1
     },
     "background": {
       "setsPerScreen": 8,
@@ -843,19 +867,22 @@
     },
     "xdmComparison": {
       "xdmWos100": {
-        "cardCount": 1,
         "outputPorts": 4,
-        "layers4kPerOutput": 4,
-        "allPortsSameScreenWithLayers": true
+        "allPortsSameScreenWithLayers": true,
+        "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
       }
     },
     "notes": [
-      "브로슈어의 레이어 수량은 모델 최대값입니다. 실제 동시 사용 수는 화면 배치와 레이어 용량에 따라 달라집니다.",
-      "매뉴얼은 여러 출력 링크에 펼친 레이어가 4개 초과 출력 링크를 사용하면 추가 레이어 링크가 필요하다고 설명합니다(68–69쪽).",
-      "Region Captive PiP는 자원 최적화 기능으로 소개되지만, 절감량·산식은 공용 매뉴얼 v6.2에서 확인되지 않았습니다.",
-      "배경 전용 Screen은 처리 자원을 사용하지 않으며, Screen마다 Background Set 최대 8개를 지원합니다(66·86·100쪽).",
-      "화면 소스는 Aux Screen 및 Split layer 조건에서 사용할 수 있고, Background는 Screen Background layer로 사용합니다(63–64쪽).",
-      "출력 복제(clone)는 같은 신호를 내보내며 처리 자원을 사용하지 않는 별도 기능입니다(82쪽). 이 표의 화면 출력 배치와 혼동하지 마십시오."
+      "2×2 4K60 화면 1개는 4개 출력으로 구성됩니다. 4K60 출력은 각 용량 2이므로 출력 링크 8개가 필요하며, 이는 VPU 1개의 출력 용량입니다(매뉴얼 61·66·68쪽).",
+      "VPU 1개의 소스 링크는 8개입니다. 용량 2 믹싱 레이어는 2링크를 사용하므로 화면 전체에 최대 4개, 분할 레이어는 최대 8개입니다(매뉴얼 66·79쪽).",
+      "따라서 모든 Aquilon 모델에서 2×2 4K60 화면 1개당 4K 믹싱 레이어 최대 4개(분할 8개)입니다. 큰 모델은 이런 화면을 더 많이 만들며, 한 화면의 레이어 수를 늘리지는 않습니다.",
+      "화면 전체 레이어와 한 출력 안의 PiP는 같은 자원을 사용하므로 PiP로 링크가 절약되지 않습니다(매뉴얼 67·68쪽).",
+      "화면 8개 이하 출력 링크를 RS2 이상에서 VPU 2개에 분산할 수 있는지는 매뉴얼 미기재로 미확인입니다.",
+      "용량 1(HD) PiP를 용량 2 레이어와 섞을 때의 자원 비용은 미확인입니다. 매뉴얼 69쪽은 용량 2 레이어만 사용할 것을 권고합니다.",
+      "Region Captive PiPs라는 표현은 RS1 데이터시트 3쪽에 있습니다. 매뉴얼 83쪽은 Screen 영역을 제한해 레이어 자원을 최적화한다고 설명하지만 절감 산식은 미확인입니다.",
+      "배경은 출력과 용량을 맞춰야 하며 확대·축소되지 않습니다(매뉴얼 101쪽). 2×2 4K60 화면에는 출력마다 4K60 배경 소스 하나가 필요합니다.",
+      "표는 휴대폰에서 좌우로 밀어 입력·출력 단자·VPU 열을 확인할 수 있습니다.",
+      "4K60 프로그램 출력 수는 매뉴얼 71쪽의 최대값입니다. 출력 커넥터 수는 브로슈어 7쪽 값이며 서로 다른 항목입니다."
     ],
     "evidence": {
       "manualPages": [
@@ -868,15 +895,20 @@
         68,
         69,
         71,
+        79,
         82,
         83,
         84,
         85,
         86,
-        100
+        100,
+        101
       ],
       "brochurePage": 7,
-      "rtcomSource": "RTCOM 구성기 XDM 창 및 beta/site/rtcom/raw/products/xdm.json"
+      "rtcomSource": "RTCOM 구성기 XDM 창 및 beta/site/rtcom/raw/products/xdm.json",
+      "programOutputsManualPage": 71,
+      "outputConnectorsBrochurePage": 7,
+      "rs1DatasheetPage": 3
     }
   }
 }

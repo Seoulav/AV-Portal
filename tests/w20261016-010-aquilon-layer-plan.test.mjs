@@ -11,11 +11,13 @@ const slugs = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', '
 
 test('Aquilon layer plans expose the seven model rows and current product values', () => {
   const expected = [
-    [8, 4, 4, 4, 8, 1], [16, 8, 4, 4, 8, 1], [16, 12, 8, 8, 16, 2],
-    [24, 12, 8, 8, 16, 2], [24, 16, 12, 12, 24, 3], [32, 16, 12, 12, 24, 3], [32, 20, 16, 16, 32, 4]
+    [8, 4, 4, 1, 4, 8, 4, 8, 1], [16, 8, 4, 1, 4, 8, 4, 8, 1],
+    [16, 12, 8, 2, 4, 8, 8, 16, 2], [24, 12, 8, 2, 4, 8, 8, 16, 2],
+    [24, 16, 12, 3, 4, 8, 12, 24, 3], [32, 16, 12, 3, 4, 8, 12, 24, 3],
+    [32, 20, 16, 4, 4, 8, 16, 32, 4]
   ];
   const allModels = readProduct('aquilon-rs1').layerPlan.models;
-  assert.deepEqual(allModels.map(row => [row.inputs4k, row.outputConnectors4k, row.programOutputs4k, row.mixingLayers4k, row.splitLayers2k, row.vpus]), expected);
+  assert.deepEqual(allModels.map(row => [row.inputs4k, row.outputConnectors4k, row.programOutputs4k, row.screens2x2, row.mixingLayers4kPerScreen, row.splitLayers2kPerScreen, row.mixingLayers4k, row.splitLayers2k, row.vpus]), expected);
   for (const slug of slugs) {
     const product = readProduct(slug);
     const plan = product.layerPlan;
@@ -26,14 +28,44 @@ test('Aquilon layer plans expose the seven model rows and current product values
   }
 });
 
-test('the 2x2 4K example calculates output links and the extra layer link from manual rules', () => {
+test('the 2x2 4K example derives four mixing layers and eight split layers from one VPU', () => {
   const product = readProduct('aquilon-rs1');
   const example = product.layerPlan.example;
   assert.equal(example.outputs, 4);
   assert.equal(example.outputCapacity, 2);
   assert.equal(example.outputLinks, 8);
-  assert.equal(example.layerLinks, 2);
-  assert.equal(validLayerPlan({ ...product.layerPlan, example: { ...example, outputLinks: 7 } }, product), false);
+  assert.equal(example.sourceLinksPerVpu, 8);
+  assert.equal(example.layerLinksPerMixer, 2);
+  assert.equal(example.mixingLayersPerScreen, 4);
+  assert.equal(example.splitLayersPerScreen, 8);
+  assert.equal(example.vpusForScreen, 1);
+  assert.equal(validLayerPlan({ ...product.layerPlan, example: { ...example, mixingLayersPerScreen: 5 } }, product), false);
+  assert.equal(Object.hasOwn(example, 'layerLinkWidth'), false);
+});
+
+test('Aquilon comparison contains only XDM-WOS100 facts present in RTCOM raw data', () => {
+  const product = readProduct('aquilon-rs1');
+  const raw = JSON.parse(readFileSync(new URL('../beta/site/rtcom/raw/products/xdm.json', import.meta.url), 'utf8'));
+  const wos = raw.lineup.find(row => row.model === 'XDM-WOS100');
+  const comparison = product.layerPlan.xdmComparison.xdmWos100;
+  assert.equal(comparison.outputPorts, 4);
+  assert.equal(comparison.allPortsSameScreenWithLayers, true);
+  assert.equal(comparison.sourceCondition, wos.io[0].condition);
+  assert.equal(Object.hasOwn(comparison, 'layers4kPerOutput'), false);
+  assert.equal(Object.hasOwn(comparison, 'cardCount'), false);
+});
+
+test('model table leads with screen counts and screen-layer totals, with cited distinct output sources', () => {
+  const plan = readProduct('aquilon-rs1').layerPlan;
+  assert.deepEqual(plan.models.map(row => row.screens2x2), [1, 1, 2, 2, 3, 3, 4]);
+  assert.ok(plan.notes.some(note => /좌우로 밀어/.test(note)));
+  assert.ok(plan.notes.some(note => /배경은 출력과 용량을 맞춰야 하며 확대·축소되지 않습니다/.test(note)));
+  assert.ok(plan.notes.some(note => /용량 1.*미확인/.test(note)));
+  assert.ok(plan.notes.some(note => /8개 이하.*VPU 2개.*미확인/.test(note)));
+  assert.ok(plan.evidence.manualPages.includes(79));
+  assert.ok(plan.evidence.manualPages.includes(101));
+  assert.equal(plan.evidence.programOutputsManualPage, 71);
+  assert.equal(plan.evidence.outputConnectorsBrochurePage, 7);
 });
 
 test('products without Aquilon layer data retain the existing detail behavior', () => {
