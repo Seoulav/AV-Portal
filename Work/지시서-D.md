@@ -339,3 +339,13 @@
 - [x] 최신 origin/main f5a7a6b0(#602 Zenith100) 통합, 파생물 재생성. 통합 후 전체872건871pass/0fail/기존skip1(54.8초), Pages/검색/읽기용카탈로그check 재통과. PR 전 원본변경 범위·예외8줄추가·캡처72장/문서링크76개·diffcheck 확인.
 
 - PR #603: https://github.com/Seoulav/AV-Portal/pull/603. 9지도 전후72PNG·3배확대·점검표 제출. CI 실행 중이며 Work 최종 시각 승인/병합 순서 확인 전 병합하지 않음.
+
+## W-015 Port Map 전수 정리 종결 — CLOSED (2026-10-17)
+
+- Work 2026-10-17 #603 시각 승인: RS6 760px·3배, BRC-AM7·SRG-A40 3배 확인 뒤 즉시 병합 승인.
+- [PR #603](https://github.com/Seoulav/AV-Portal/pull/603) MERGED. 병합 SHA **02ecbc1c3766bb80218006b0b98e4dca3bfb671c**, 2026-10-16T19:29:36Z. 병합 직전 최신 origin/main 통합 상태·전체872건871pass/0fail/기존skip1·CI SUCCESS 확인.
+- [Pages 38955315204](https://github.com/Seoulav/AV-Portal/actions/runs/38955315204) SUCCESS. 완료시각 2026-10-16T19:33:24Z.
+- 공개 aquilon-rs6·aquilon-rsalpha·brc-am7을 각각760px·390px(좌/우 스크롤 포함)로 직접 확인. 번호 원/목록 각각10·8·17개 일치, 페이지 가로 넘침0, 사진·번호 표시 정상. 공개 캡처9장 시각 확인 완료.
+- 공개 수정9제품 JSON 및 렌더러·검증기·CSS3개(총12파일) SHA가 승인본과 일치. 공개 증빙은 outputs/w015-closeout-fixes/public-verification.json, public-assets.json, public/*.png 및 completion.json에 보존.
+- 마감 점검 기준180제품185지도. 사진 안쪽 y필드 지도148→42; 남은42지도는 기록된 승인 예외. 마지막9지도 규칙대상 근접16→0, 번호원92 유지. 평행<=8px 및 기존 승인 장선 소급 제외 결정을 유지. 자동 간격 검사는 단자 의미 오인을 판단하지 못하므로 독립 확대 시각검토를 병행했다.
+- **W-015 Port Map 전수 정리 종료. 새 배정 대기.** 종전 REVIEW/승인대기 체크는 당시 스냅샷이며, 이 종료 기록으로 완료 상태를 확정한다.
