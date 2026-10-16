@@ -1815,6 +1815,60 @@
       "file": "manuals/hdf-ccf-user-manual-v1-1.pdf",
       "kind": "manual",
       "title": "HDF-CCF 사용자 매뉴얼 V1.1(사용자 제공)"
+    },
+    {
+      "slug": "ultrix-ns-fr2",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultrix-hdx-io",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultriscape",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultrimix-mxr",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultrimix-dante",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultrisync-18",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultripower",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultripower-ps",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
+    },
+    {
+      "slug": "ultritouch-2-hr",
+      "file": "manuals/ross-ultrix-family-brochure-ko.pdf",
+      "kind": "reference",
+      "title": "Ross Video Ultrix 제품군 브로슈어(한국어 · 28쪽 · 사용자 제공)"
     }
   ]
 }
