@@ -502,3 +502,41 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
   .video-layer-comparison-grid { grid-template-columns: minmax(0, 1fr); }
 }
 /* W-20261016-011 shared layer analysis end. */
+/* W-20261016-019 Analog Way layer design guide. */
+.aw-guide { min-width: 0; }
+.aw-guide h2 { margin: 0 0 8px; font-size: 20px; }
+.aw-guide-intro, .aw-guide-hint { color: var(--pg-ink-2); line-height: 1.65; }
+.aw-guide-hint { margin: 6px 0 0; font-size: 13px; }
+.aw-guide-presets { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0; }
+.aw-guide-label { color: var(--pg-ink-2); font-size: 12px; font-weight: 700; }
+.aw-guide-form { display: grid; gap: 12px; padding: 14px; border: 1px solid var(--pg-line); border-radius: 14px; background: linear-gradient(135deg, #f7faff, #f2fbfc); }
+.aw-guide-screens { display: grid; gap: 8px; }
+.aw-guide-screen { display: grid; grid-template-columns: 64px minmax(0, 1.5fr) minmax(0, 1.2fr) 72px auto auto; align-items: center; gap: 8px; min-width: 0; }
+.aw-guide-screen strong { font-size: 13px; }
+.aw-guide-screen select, .aw-guide-screen input, .aw-guide-field input { min-width: 0; width: 100%; padding: 8px 10px; border: 1px solid var(--pg-line); border-radius: 10px; background: #fff; color: var(--pg-ink); font: inherit; font-size: 13px; }
+.aw-guide-unit { color: var(--pg-ink-2); font-size: 12px; }
+.aw-guide-remove { padding: 7px 12px; font-size: 12px; }
+.aw-guide-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; }
+.aw-guide-field { display: grid; gap: 4px; min-width: 150px; color: var(--pg-ink-2); font-size: 12px; font-weight: 700; }
+.aw-guide-summary { margin: 14px 0 8px; padding: 12px 14px; border-left: 4px solid var(--pg-accent); border-radius: 10px; background: #fff; color: var(--pg-ink); font-weight: 650; line-height: 1.6; }
+.aw-guide-table-wrap { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.aw-guide-table-wrap table { min-width: 860px; }
+.aw-guide-table-wrap th:first-child, .aw-guide-table-wrap td:nth-child(2) { white-space: nowrap; }
+.aw-guide-table-wrap td { vertical-align: top; }
+.aw-guide-usage { font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.aw-guide-table-wrap ul { margin: 0; padding-left: 16px; font-size: 12.5px; line-height: 1.5; }
+.aw-guide-table-wrap td small { color: var(--pg-ink-2); }
+.aw-guide-ok td:nth-child(2) { color: #1f7a4a; font-weight: 750; }
+.aw-guide-no td:nth-child(2) { color: #b03a2e; font-weight: 750; }
+.aw-guide-no th, .aw-guide-no td { color: var(--pg-ink-2); }
+.aw-guide-current { background: #eaf3ff; }
+.aw-guide-badge { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--pg-accent); color: #fff; font-size: 11px; font-weight: 750; vertical-align: middle; }
+.aw-guide-notes { margin-top: 14px; color: var(--pg-ink-2); font-size: 13px; line-height: 1.6; }
+.aw-guide-notes summary { cursor: pointer; color: var(--pg-accent-2); font-weight: 700; }
+.aw-guide-notes ul { padding-left: 18px; }
+.aw-guide-notes li + li { margin-top: 4px; }
+@media (max-width: 720px) {
+  .aw-guide-screen { grid-template-columns: 1fr 1fr; }
+  .aw-guide-screen strong { grid-column: 1 / -1; }
+}
+/* W-20261016-019 layer design guide end. */

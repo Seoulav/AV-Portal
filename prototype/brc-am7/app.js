@@ -9,6 +9,7 @@ import { distributorLinkFor } from '../../beta/distributor-links.mjs';
 import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-links.mjs';
 import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
 import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
+import { renderAnalogWayLayerGuide, guideSlugs as analogWayGuideSlugs } from './analogway-layer-guide.mjs?v=w20261016-019';
 import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
 
 const $ = selector => document.querySelector(selector);
@@ -737,6 +738,14 @@ if (!productKey && !allowContentFallback) {
     layerCard.dataset.supplemental = '';
     $('.supplemental-cards').prepend(layerCard);
   }
+  // W-20261016-019: Analog Way 프로세서 11종에 화면·레이어 설계 가이드 카드(레이어 해설 카드 바로 아래).
+  if (analogWayGuideSlugs.includes(productKey)) {
+    const guideCard = renderAnalogWayLayerGuide(productKey);
+    guideCard.id = 'analogway-layer-guide';
+    guideCard.dataset.supplemental = '';
+    const anchor = $('#aquilon-layer-card') || $('#video-layer-card');
+    if (anchor) anchor.after(guideCard); else $('.supplemental-cards').prepend(guideCard);
+  }
   const layerComparison = (enhancements.layerPlan || enhancements.videoLayerPlan) ? null : layerComparisonFor(productKey);
   if (layerComparison) {
     const section = element('div', 'layer-comparison');
@@ -793,6 +802,7 @@ if (!productKey && !allowContentFallback) {
   const visible = new Set(visibleDetailCards(data));
   if (enhancements.layerPlan) visible.add('aquilon-layer-card');
   if (enhancements.videoLayerPlan) visible.add('video-layer-card');
+  if (analogWayGuideSlugs.includes(productKey)) visible.add('analogway-layer-guide');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);
