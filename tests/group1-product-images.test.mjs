@@ -8,7 +8,7 @@ const expected = {
   'brc-am7': ['Main', 'Front', 'Rear', 'Perspective'],
   dm7: ['Front', 'Rear', 'Perspective'],
   'ki-pro-go2': ['Main', 'Rear'],
-  'pt-mz17k': ['Front', 'Perspective', 'Diagram'],
+  'pt-mz17k': ['Front', 'Perspective', 'Other', 'Diagram'],
   'rally-bar': ['Front', 'Perspective', 'Diagram']
 };
 
@@ -21,7 +21,8 @@ test('Group 1 product pages publish only the reviewed official image roles', asy
     assert.match(product.presentation.galleryRights, /출처와 모델 일치/);
 
     for (const image of product.images) {
-      assert.match(image.file, new RegExp(`^${slug}-(?:main|front|rear|perspective|diagram)\\.webp$`));
+      if (slug === 'pt-mz17k' && image.role === 'Diagram') assert.equal(image.file, 'pt-mz17k-clean-panels.png');
+      else assert.match(image.file, new RegExp(`^${slug}-(?:main|front|rear|perspective|diagram)\\.webp$`));
       assert.equal(image.officialSource, true);
       assert.ok(['FOUND', 'VERIFIED'].includes(image.verificationStatus));
       assert.match(image.publicationStatus, /사용자 게시 승인/);
@@ -30,8 +31,11 @@ test('Group 1 product pages publish only the reviewed official image roles', asy
       const file = new URL(`images/${image.file}`, site);
       const bytes = await readFile(file);
       assert.ok((await stat(file)).size > 10_000, `${image.file}: usable image file`);
-      assert.equal(bytes.subarray(0, 4).toString('ascii'), 'RIFF', `${image.file}: WebP RIFF header`);
-      assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', `${image.file}: WebP signature`);
+      if (image.file.endsWith('.png')) assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${image.file}: PNG signature`);
+      else {
+        assert.equal(bytes.subarray(0, 4).toString('ascii'), 'RIFF', `${image.file}: WebP RIFF header`);
+        assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', `${image.file}: WebP signature`);
+      }
     }
   }
 });

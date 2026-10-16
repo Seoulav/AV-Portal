@@ -147,9 +147,10 @@ export const group1Images = {
     image('Rear', 'ki-pro-go2-rear.webp', 'AJA Ki Pro GO2 후면 연결 단자 이미지', 'AJA', 'Ki Pro GO2', 'https://d26ddnfpy9hzf8.cloudfront.net/aja-web/public/assets/images/products/728/6346-Ki_Pro_Go2_feature_rear.png', '1140×450', '1140×450')
   ],
   'pt-mz17k': [
-    image('Front', 'pt-mz17k-front.webp', 'Panasonic PT-MZ17K 프로젝터 전면 이미지', 'Panasonic', 'PT-MZ17K', 'https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg', '1250×755', '1250×755'),
-    image('Perspective', 'pt-mz17k-perspective.webp', 'Panasonic PT-MZ17K 프로젝터 원근 이미지', 'Panasonic', 'PT-MZ17K', 'https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg', '2500×1536', '1800×1106'),
-    image("Diagram", "pt-mz17k-diagram.webp", "PT-MZ17K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
+    image("Front", "pt-mz17k-front.webp", "Panasonic PT-MZ17K 프로젝터 전면 이미지", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg", "1250×755", "1250×755", "FOUND", "Front · 제조사 공식 이미지"),
+    image("Perspective", "pt-mz17k-perspective.webp", "Panasonic PT-MZ17K 프로젝터 원근 이미지", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg", "2500×1536", "1800×1106", "FOUND", "Perspective · 제조사 공식 이미지"),
+    image("Other", "pt-mz17k-diagram.webp", "PT-MZ17K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인 · 제조사 인쇄 번호가 있는 원본 도면으로 갤러리 보존"),
+    image("Diagram", "pt-mz17k-clean-panels.png", "PT-MZ17K 공식 한국어 설명서 28쪽 연결 단자판 번호 없는 재배치 이미지", "Panasonic", "PT-MZ17K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890×494(공식 도면)", "890×440", "VERIFIED", "Diagram · DPQP1432ZC/X1 28쪽 원본 단자판만 크롭·재배치(단자 그림 변경 없음) · 적용 모델 PT-MZ20K/MZ17K/MZ14K/MZ11K")
   ],
   'rally-bar': [
     image('Front', 'rally-bar-front.webp', 'Logitech Rally Bar 그래파이트 전면 이미지', 'Logitech', 'Rally Bar', 'https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/rally-bar/buy/gallery/rally-bar-graphite-01.png?v=1', '1384×1038', '1384×1038'),
@@ -235,8 +236,9 @@ export const group1Images = {
     image('Rear', 'x100pro-4u-rear.webp', 'Colorlight X100 Pro-4U 후면 이미지', 'Colorlight', 'X100 Pro-4U', 'https://en.colorlightinside.com/product/download/111', '2400×1014', '1800×761', 'FOUND', 'Rear · 제조사 제품 이미지')
   ],
   'x100pro-2u': [
-    image('Front', 'x100pro-2u-front.webp', 'Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)', 'Colorlight', 'X100 Pro-2U', 'https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf', '2362×603(사양서 내장 이미지)', '1800×459', 'VERIFIED', 'Front · 제조사 공식 사양서 내장 투명 원본을 흰 배경으로 합성'),
-    image('Rear', 'x100pro-2u-rear.webp', 'Colorlight X100 Pro-2U 후면 이미지', 'Colorlight', 'X100 Pro-2U', 'https://en.colorlightinside.com/product/download/111', '2400×697', '1800×523', 'FOUND', 'Rear · 제조사 제품 이미지')
+    image("Front", "x100pro-2u-front.webp", "Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)", "Colorlight", "X100 Pro-2U", "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf", "2362×603(사양서 내장 이미지)", "1800×459", "VERIFIED", "Front · 제조사 공식 사양서 내장 투명 원본을 흰 배경으로 합성"),
+    image("Rear", "x100pro-2u-rear.webp", "Colorlight X100 Pro-2U 후면 이미지", "Colorlight", "X100 Pro-2U", "https://en.colorlightinside.com/product/download/111", "2400×697", "1800×523", "FOUND", "Rear · 제조사 제품 이미지"),
+    image("Diagram", "x100pro-2u-cards.png", "Colorlight X100 Pro-2U 후면 INPUT 및 OUTPUT 카드 영역 확대", "Colorlight", "X100 Pro-2U", "https://en.colorlightinside.com/product/download/111", "1800×523(게시 후면 사진)", "1500×370", "FOUND", "Diagram · 제조사 공식 후면 사진에서 카드 슬롯만 크롭·재배치 · 기존 Rear 전체 사진 병행 유지")
   ],
   'tio1608-d2': [
     image('Front', 'tio1608-d2-front.webp', 'Yamaha Tio1608-D2 전면 이미지', 'Yamaha', 'Tio1608-D2', 'https://kr.yamaha.com/ko/files/Tio1608-D2-front01_tcm144-1741118.jpg', '1200×1200', '1086×202', 'VERIFIED'),
@@ -328,12 +330,14 @@ export const group1Images = {
     image("Diagram", "pt-vmz51-diagram.webp", "PT-VMZ51 PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-VMZ51", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/vmz71_manual_ko.pdf", "1288x700", "1288x700", "VERIFIED", "Diagram · Panasonic PT-VMZ71/VMZ61/VMZ51 한국어 사용설명서 DPQP1388ZD/X1 25쪽 연결 단자 · 모델 적용 확인"),
   ],
   'pt-mz14k': [
-    image('Main', 'pt-mz14kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),
-    image("Diagram", "pt-mz14k-diagram.webp", "PT-MZ14K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ14K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
+    image("Main", "pt-mz14kl-main.webp", "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)", "Panasonic", "PT-MZ20K Series", "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg", "488×259", "488×259", "FOUND", "Main · 제조사 공식 이미지"),
+    image("Other", "pt-mz14k-diagram.webp", "PT-MZ14K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ14K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인 · 제조사 인쇄 번호가 있는 원본 도면으로 갤러리 보존"),
+    image("Diagram", "pt-mz14k-clean-panels.png", "PT-MZ14K 공식 한국어 설명서 28쪽 연결 단자판 번호 없는 재배치 이미지", "Panasonic", "PT-MZ14K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890×494(공식 도면)", "890×440", "VERIFIED", "Diagram · DPQP1432ZC/X1 28쪽 원본 단자판만 크롭·재배치(단자 그림 변경 없음) · 적용 모델 PT-MZ20K/MZ17K/MZ14K/MZ11K")
   ],
   'pt-mz11k': [
-    image('Main', 'pt-mz11kl-main.webp', 'Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ20K Series', 'https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),
-    image("Diagram", "pt-mz11k-diagram.webp", "PT-MZ11K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ11K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인"),
+    image("Main", "pt-mz11kl-main.webp", "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)", "Panasonic", "PT-MZ20K Series", "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg", "488×259", "488×259", "FOUND", "Main · 제조사 공식 이미지"),
+    image("Other", "pt-mz11k-diagram.webp", "PT-MZ11K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면", "Panasonic", "PT-MZ11K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890x494", "890x494", "VERIFIED", "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인 · 제조사 인쇄 번호가 있는 원본 도면으로 갤러리 보존"),
+    image("Diagram", "pt-mz11k-clean-panels.png", "PT-MZ11K 공식 한국어 설명서 28쪽 연결 단자판 번호 없는 재배치 이미지", "Panasonic", "PT-MZ11K", "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf", "890×494(공식 도면)", "890×440", "VERIFIED", "Diagram · DPQP1432ZC/X1 28쪽 원본 단자판만 크롭·재배치(단자 그림 변경 없음) · 적용 모델 PT-MZ20K/MZ17K/MZ14K/MZ11K")
   ],
   'pt-mz882': [
     image('Main', 'pt-mz882-main.webp', 'Panasonic PT-MZ882 시리즈 대표 이미지(흑백 투톤)', 'Panasonic', 'PT-MZ882 Series', 'https://docs.connect.panasonic.com/projector/products/mz882/img/img_mainimg001.jpg', '488×259', '488×259', 'FOUND'),

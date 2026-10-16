@@ -1,0 +1,820 @@
+{
+  "pt-mz11k": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-mz11kl-main.webp",
+          "alt": "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ20K Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "488×259",
+          "resolution": "488×259",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Diagram",
+          "file": "pt-mz11k-diagram.webp",
+          "alt": "PT-MZ11K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면",
+          "note": "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인",
+          "provider": "Panasonic",
+          "model": "PT-MZ11K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "890x494",
+          "resolution": "890x494",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Diagram",
+          "status": "VERIFIED",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf"
+        }
+      ],
+      "portMap": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "pt-mz11k-diagram.webp",
+          "width": 890,
+          "height": 494
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB",
+            "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 80,
+            "x2": 132,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "SDI IN",
+            "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 145,
+            "x2": 233,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "HDMI IN 1–2",
+            "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 253,
+            "x2": 490,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "DIGITAL LINK",
+            "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 508,
+            "x2": 613,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "LAN",
+            "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 620,
+            "x2": 720,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "DC OUT",
+            "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 32,
+            "x2": 83,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "SERIAL/MULTI SYNC IN",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 150,
+            "x2": 257,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "SERIAL/MULTI SYNC OUT",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 307,
+            "x2": 421,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "REMOTE 1 IN",
+            "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 477,
+            "x2": 586,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "REMOTE 2 IN/OUT",
+            "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 609,
+            "x2": 725,
+            "y": 494,
+            "side": "bottom"
+          }
+        ]
+      }
+    },
+    "approved": {
+      "images": "4eb24453155f74a8e8d0623758ce69b0e9d963d4e6b388707f9778777e7fed8d",
+      "imageStatuses": "d06167bd691bd79a9b2cdd674ee3bd505899fadc2c91d1be4bff567eb6cdb60c",
+      "portMap": "f0b73b46ef2988e25a01faf76ad430b48ad0b3e19558e711809d9d0392ab30f5"
+    }
+  },
+  "pt-mz14k": {
+    "prior": {
+      "images": [
+        {
+          "role": "Main",
+          "file": "pt-mz14kl-main.webp",
+          "alt": "Panasonic PT-MZ20K 시리즈 대표 이미지(흑백 투톤)",
+          "note": "Main · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ20K Series",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "488×259",
+          "resolution": "488×259",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Diagram",
+          "file": "pt-mz14k-diagram.webp",
+          "alt": "PT-MZ14K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면",
+          "note": "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인",
+          "provider": "Panasonic",
+          "model": "PT-MZ14K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "890x494",
+          "resolution": "890x494",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "FOUND",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/img/img_mainimg001.jpg"
+        },
+        {
+          "role": "Front",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://docs.connect.panasonic.com/projector/products/mz20k/"
+        },
+        {
+          "role": "Diagram",
+          "status": "VERIFIED",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf"
+        }
+      ],
+      "portMap": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "pt-mz14k-diagram.webp",
+          "width": 890,
+          "height": 494
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB",
+            "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 80,
+            "x2": 132,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "SDI IN",
+            "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 145,
+            "x2": 233,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "HDMI IN 1–2",
+            "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 253,
+            "x2": 490,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "DIGITAL LINK",
+            "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 508,
+            "x2": 613,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "LAN",
+            "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 620,
+            "x2": 720,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "DC OUT",
+            "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 32,
+            "x2": 83,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "SERIAL/MULTI SYNC IN",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 150,
+            "x2": 257,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "SERIAL/MULTI SYNC OUT",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 307,
+            "x2": 421,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "REMOTE 1 IN",
+            "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 477,
+            "x2": 586,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "REMOTE 2 IN/OUT",
+            "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 609,
+            "x2": 725,
+            "y": 494,
+            "side": "bottom"
+          }
+        ]
+      }
+    },
+    "approved": {
+      "images": "dfd2261bf906f4ed672e5e883a55e4719ff75e721f8421d34fbfd9c5f861428a",
+      "imageStatuses": "d06167bd691bd79a9b2cdd674ee3bd505899fadc2c91d1be4bff567eb6cdb60c",
+      "portMap": "aff27c4ddd6ac4e26e079df88ffe0c33777b379a7c3a97615c72a54cf596de2d"
+    }
+  },
+  "pt-mz17k": {
+    "prior": {
+      "images": [
+        {
+          "role": "Front",
+          "file": "pt-mz17k-front.webp",
+          "alt": "Panasonic PT-MZ17K 프로젝터 전면 이미지",
+          "note": "Front · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ17K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "1250×755",
+          "resolution": "1250×755",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Perspective",
+          "file": "pt-mz17k-perspective.webp",
+          "alt": "Panasonic PT-MZ17K 프로젝터 원근 이미지",
+          "note": "Perspective · 제조사 공식 이미지",
+          "provider": "Panasonic",
+          "model": "PT-MZ17K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "2500×1536",
+          "resolution": "1800×1106",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Diagram",
+          "file": "pt-mz17k-diagram.webp",
+          "alt": "PT-MZ17K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면",
+          "note": "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인",
+          "provider": "Panasonic",
+          "model": "PT-MZ17K",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "890x494",
+          "resolution": "890x494",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_front_low.jpg"
+        },
+        {
+          "role": "Rear",
+          "status": "MISSING",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        },
+        {
+          "role": "Perspective",
+          "status": "FOUND",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/image/2024-04/mz17k_bk_slant_l_high.jpg"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+        },
+        {
+          "role": "Diagram",
+          "status": "VERIFIED",
+          "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf"
+        }
+      ],
+      "portMap": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "pt-mz17k-diagram.webp",
+          "width": 890,
+          "height": 494
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB",
+            "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 80,
+            "x2": 132,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "SDI IN",
+            "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 145,
+            "x2": 233,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 3,
+            "label": "HDMI IN 1–2",
+            "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 253,
+            "x2": 490,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "DIGITAL LINK",
+            "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 508,
+            "x2": 613,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 5,
+            "label": "LAN",
+            "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 620,
+            "x2": 720,
+            "y": 0,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "DC OUT",
+            "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 32,
+            "x2": 83,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "SERIAL/MULTI SYNC IN",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 150,
+            "x2": 257,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 8,
+            "label": "SERIAL/MULTI SYNC OUT",
+            "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 307,
+            "x2": 421,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 9,
+            "label": "REMOTE 1 IN",
+            "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 477,
+            "x2": 586,
+            "y": 494,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "REMOTE 2 IN/OUT",
+            "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+            "x1": 609,
+            "x2": 725,
+            "y": 494,
+            "side": "bottom"
+          }
+        ]
+      }
+    },
+    "approved": {
+      "images": "2b4f964d3462da75dc95c50c918352d5392f5f9924bc6e9ae42c07f5dedce0d2",
+      "imageStatuses": "c49f4617f725a993cbce41d5b823e3134583286f2cecc44a092b6569fa147eca",
+      "portMap": "e831536e6bb398601c411053b2f9e9805aef7101499358f98f7d9ac99fe6b8c9"
+    }
+  },
+  "x100pro-2u": {
+    "prior": {
+      "portMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "x100pro-2u-rear.webp",
+          "width": 1800,
+          "height": 523
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "입력 보드(선택형)",
+            "desc": "후면 왼쪽 녹색 INPUT 슬롯 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+            "x1": 275,
+            "x2": 910,
+            "y": 50,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "출력 보드(선택형)",
+            "desc": "후면 오른쪽 파란색 OUTPUT 슬롯 및 PORT 1–10 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+            "x1": 1035,
+            "x2": 1670,
+            "y": 50,
+            "side": "top"
+          }
+        ]
+      },
+      "images": [
+        {
+          "role": "Front",
+          "file": "x100pro-2u-front.webp",
+          "alt": "Colorlight X100 Pro-2U 전면 이미지(전면 표시창에 모델명 표기)",
+          "note": "Front · 제조사 공식 사양서 내장 투명 원본을 흰 배경으로 합성",
+          "provider": "Colorlight",
+          "model": "X100 Pro-2U",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf",
+          "officialSource": true,
+          "verificationStatus": "VERIFIED",
+          "originalSize": "2362×603(사양서 내장 이미지)",
+          "resolution": "1800×459",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        },
+        {
+          "role": "Rear",
+          "file": "x100pro-2u-rear.webp",
+          "alt": "Colorlight X100 Pro-2U 후면 이미지",
+          "note": "Rear · 제조사 제품 이미지",
+          "provider": "Colorlight",
+          "model": "X100 Pro-2U",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111",
+          "officialSource": true,
+          "verificationStatus": "FOUND",
+          "originalSize": "2400×697",
+          "resolution": "1800×523",
+          "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+        }
+      ],
+      "imageStatuses": [
+        {
+          "role": "Main",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Front",
+          "status": "FOUND",
+          "sourceUrl": "https://support.colorlightinside.com/uploads/X100Pro-2USpecificationV2.0_1785395408.pdf"
+        },
+        {
+          "role": "Rear",
+          "status": "FOUND",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Perspective",
+          "status": "MISSING",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        },
+        {
+          "role": "Other",
+          "status": "REVIEW REQUIRED",
+          "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+        }
+      ]
+    },
+    "approved": {
+      "portMap": "7a73d7312597afd6049da0889419f813c80dd1d6f9664eb930750c866654419e",
+      "images": "8b1dc02206c69fd07b3988487ace18d4e051113f9fa7009e6292c31c25966c05",
+      "imageStatuses": "1932134634d09865f81c446759170406a2da0bdf38b834c6e8430fb6aa5bcb6d"
+    }
+  },
+  "eb-l895e": {
+    "prior": {
+      "sources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 제품 페이지",
+          "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L895E/p/V11HB24151",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "io": [
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "디지털 비디오 입력",
+          "direction": "IN",
+          "quantity": "2",
+          "protocol": "HDCP 2.3",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "HDBaseT",
+          "signal": "디지털 비디오 입력",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "HDCP 2.3",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Video",
+          "connector": "HDMI",
+          "signal": "디지털 비디오 출력",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "HDCP 2.3",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "connector": "Stereo mini",
+          "signal": "오디오 출력",
+          "direction": "OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-A",
+          "signal": "USB",
+          "direction": "IN/OUT",
+          "quantity": "2",
+          "protocol": "",
+          "availability": "PC Free, Document Camera, 펌웨어 업데이트, OSD 설정 복사, 콘텐츠 재생, ELPEC01 또는 5V/2A(0.9A) 전원 공급",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "USB",
+          "connector": "USB Type-B",
+          "signal": "USB",
+          "direction": "IN",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "펌웨어 업데이트, OSD 설정 복사",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "RJ45",
+          "signal": "유선 LAN",
+          "direction": "IN/OUT",
+          "quantity": "1",
+          "protocol": "",
+          "availability": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Network",
+          "connector": "Wireless LAN",
+          "signal": "무선 LAN",
+          "direction": "",
+          "quantity": "1",
+          "protocol": "Wi-Fi 6E",
+          "availability": "내장(Built-in)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "portMap": {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "eb-l895e-rear.webp",
+          "width": 1199,
+          "height": 380
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 서비스",
+            "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+            "x1": 188,
+            "x2": 219,
+            "y": 60,
+            "side": "top"
+          },
+          {
+            "n": 2,
+            "label": "USB-A ×2",
+            "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+            "x1": 240,
+            "x2": 323,
+            "y": 61,
+            "side": "bottom"
+          },
+          {
+            "n": 3,
+            "label": "HDMI 출력",
+            "desc": "HDMI 디지털 영상 출력",
+            "x1": 359,
+            "x2": 408,
+            "y": 54,
+            "side": "top"
+          },
+          {
+            "n": 4,
+            "label": "HDMI 입력 1",
+            "desc": "HDMI 디지털 영상 입력 1",
+            "x1": 432,
+            "x2": 482,
+            "y": 54,
+            "side": "bottom"
+          },
+          {
+            "n": 5,
+            "label": "HDMI 입력 2",
+            "desc": "HDMI 디지털 영상 입력 2",
+            "x1": 504,
+            "x2": 556,
+            "y": 54,
+            "side": "top"
+          },
+          {
+            "n": 6,
+            "label": "HDBaseT 입력",
+            "desc": "HDBaseT 디지털 영상 입력",
+            "x1": 641,
+            "x2": 691,
+            "y": 62,
+            "side": "bottom"
+          },
+          {
+            "n": 7,
+            "label": "LAN",
+            "desc": "RJ-45 · 유선 네트워크",
+            "x1": 724,
+            "x2": 770,
+            "y": 62,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "오디오 출력",
+            "desc": "스테레오 미니 · 오디오 출력",
+            "x1": 560,
+            "x2": 599,
+            "y": 139,
+            "side": "bottom"
+          }
+        ]
+      }
+    },
+    "approved": {
+      "sources": "a53260233973182c33ccf1e8311de9c4b25f5fad5051e6584c95f9282f6302b9",
+      "io": "b08c65090568e7f7a235c4a06c5ea0010cefddcf63499532ef84af2381b9c847",
+      "portMap": "1541d05d2b71ca342575e29e70120dee2d02a4c5bdc0866a770c3663315544ac"
+    }
+  }
+}

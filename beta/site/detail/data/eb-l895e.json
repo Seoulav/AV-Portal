@@ -485,6 +485,18 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Control",
+      "connector": "미니 D-Sub 9핀(수형)",
+      "signal": "RS-232C 시리얼 제어",
+      "direction": "I/O",
+      "quantity": "1",
+      "protocol": "RS-232C",
+      "availability": "",
+      "condition": "EB-L890E 계열 한국어 사용자 설명서 Rev03 22·184·276쪽 · 컴퓨터에서 프로젝터 제어용",
+      "source": "M",
+      "verification": "VERIFIED"
     }
   ],
   "sources": [
@@ -493,6 +505,12 @@
       "name": "제조사 공식 제품 페이지",
       "url": "https://www.epson.co.kr/비즈니스용-제품/프로젝터/중형-강당-미팅룸-프로젝터/EB-L895E/p/V11HB24151",
       "scope": "제조사 공식 출처"
+    },
+    {
+      "code": "M",
+      "name": "EB-L890E 계열 한국어 사용자 설명서 Rev03",
+      "url": "https://www.epson.co.kr/c/EB-L895E/s/SPT_V11HB24151",
+      "scope": "EB-L895E 국내 공식 지원 페이지의 한국어 사용자 설명서 Rev03 · 직접 PDF URL과 쪽 번호는 W-009 근거표 기록"
     }
   ],
   "issues": [
@@ -578,8 +596,8 @@
         "desc": "HDBaseT 디지털 영상 입력",
         "x1": 641,
         "x2": 691,
-        "y": 62,
-        "side": "bottom"
+        "y": 29,
+        "side": "top"
       },
       {
         "n": 7,
@@ -597,6 +615,15 @@
         "x1": 560,
         "x2": 599,
         "y": 139,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "RS-232C",
+        "desc": "미니 D-Sub 9핀 · 컴퓨터에서 프로젝터 제어 · 한국어 사용자 설명서 Rev03 22·184쪽",
+        "x1": 634,
+        "x2": 700,
+        "y": 185,
         "side": "bottom"
       }
     ]
