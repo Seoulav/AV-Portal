@@ -130,9 +130,9 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .image-dialog::backdrop { background: rgba(0,0,0,.72); }
 .dialog-top { display: flex; align-items: center; gap: 12px; }
 .dialog-top button { margin-left: auto; border: 0; background: var(--pg-field-fill); border-radius: var(--pg-r-pill); padding: 8px 14px; cursor: pointer; }
-.dialog-image-wrap { position: relative; display: grid; place-items: center; margin-top: 12px; overflow: hidden; background: #fff; }
+.dialog-image-wrap { min-height: 120px; position: relative; display: grid; place-items: center; margin-top: 12px; overflow: hidden; background: #fff; }
 .dialog-image-wrap > img { display: block; max-width: 100%; max-height: 72vh; object-fit: contain; }
-.image-loupe { position: absolute; width: 216px; height: 216px; border: 3px solid white; border-radius: 50%; pointer-events: none; box-shadow: 0 2px 14px rgba(0,0,0,.4); }
+.image-loupe { background-repeat: no-repeat; background-color: #fff; position: absolute; width: 216px; height: 216px; border: 3px solid white; border-radius: 50%; pointer-events: none; box-shadow: 0 2px 14px rgba(0,0,0,.4); }
 .image-dialog > p { font-size: 11px; }
 @media (max-width:1000px) {
   .detail-cards { grid-template-columns: minmax(0,1fr); grid-template-areas: none; }

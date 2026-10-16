@@ -462,33 +462,37 @@ if (!productKey && !allowContentFallback) {
       if (event.clientX < visible.left || event.clientX > visible.right ||
           event.clientY < visible.top || event.clientY > visible.bottom) { loupe.hidden = true; return; }
       const wrapRect = wrap.getBoundingClientRect();
-      let centerX = event.clientX, centerY = event.clientY;
-      if (keepInside) {
-        const scrollRect = $('.port-photo-scroll').getBoundingClientRect();
+      let centerX = event.clientX, centerY = event.clientY, size = LOUPE_SIZE;
+      if (keepInside || visible.right - visible.left < LOUPE_SIZE || visible.bottom - visible.top < LOUPE_SIZE) {
+        const scrollRect = keepInside ? $('.port-photo-scroll').getBoundingClientRect() : wrapRect;
         const left = Math.max(visible.left, scrollRect.left), right = Math.min(visible.right, scrollRect.right);
         const top = Math.max(visible.top, scrollRect.top), bottom = Math.min(visible.bottom, scrollRect.bottom);
-        if (right - left < LOUPE_SIZE || bottom - top < LOUPE_SIZE) { loupe.hidden = true; return; }
-        // The lens stays inside the photograph, leaving the outside-number rail visible.
-        centerX = Math.max(left + LOUPE_SIZE / 2, Math.min(right - LOUPE_SIZE / 2, centerX));
-        centerY = Math.max(top + LOUPE_SIZE / 2, Math.min(bottom - LOUPE_SIZE / 2, centerY));
+        if (right <= left || bottom <= top || event.clientX < left || event.clientX > right ||
+            event.clientY < top || event.clientY > bottom) { loupe.hidden = true; return; }
+        // Fit medium photos; retain a readable lens on thin rack panels, using the outer margin.
+        const frameTop = Math.max(wrapRect.top, scrollRect.top), frameBottom = Math.min(wrapRect.bottom, scrollRect.bottom);
+        size = Math.min(LOUPE_SIZE, Math.max(120, Math.min(right - left, bottom - top)), right - left, frameBottom - frameTop);
+        const clamp = (value, low, high) => high - low < size ? (low + high) / 2
+          : Math.max(low + size / 2, Math.min(high - size / 2, value));
+        centerX = clamp(centerX, left, right);
+        centerY = clamp(clamp(centerY, top, bottom), frameTop, frameBottom);
       }
       loupe.hidden = false;
-      loupe.style.left = centerX - wrapRect.left - LOUPE_SIZE / 2 + 'px';
-      loupe.style.top = centerY - wrapRect.top - LOUPE_SIZE / 2 + 'px';
+      loupe.style.width = loupe.style.height = size + 'px';
+      loupe.style.left = centerX - wrapRect.left - size / 2 + 'px';
+      loupe.style.top = centerY - wrapRect.top - size / 2 + 'px';
       loupe.style.backgroundImage = `url("${src}")`;
       loupe.style.backgroundSize = rect.width * zoom + 'px ' + rect.height * zoom + 'px';
-      loupe.style.backgroundPosition = `${LOUPE_SIZE / 2 - (event.clientX - rect.left) * zoom}px ${LOUPE_SIZE / 2 - (event.clientY - rect.top) * zoom}px`;
+      loupe.style.backgroundPosition = `${size / 2 - (event.clientX - rect.left) * zoom}px ${size / 2 - (event.clientY - rect.top) * zoom}px`;
     });
     for (const type of ['pointerleave', 'pointerup', 'pointercancel']) wrap.addEventListener(type, () => { loupe.hidden = true; });
   }
   attachLoupe($('#dialog-image-wrap'), $('#dialog-loupe'), () => {
-    if (data.images[selectedImage]?.role === 'Diagram') return null;
     const image = $('#dialog-image');
     return image.complete && image.naturalWidth ? {rect: image.getBoundingClientRect(), src: image.src} : null;
   });
   dialog.addEventListener('close', () => { $('#dialog-loupe').hidden = true; });
   attachLoupe(featured.parentElement, $('#port-map-loupe'), () => {
-    if (data.images[selectedImage]?.role === 'Diagram') return null;
     if (!featured.parentElement.classList.contains('map-active') || !featured.complete || !featured.naturalWidth) return null;
     const svg = $('#port-map-layer svg');
     const image = $('#port-map-layer svg image');
