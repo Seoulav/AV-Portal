@@ -1,7 +1,7 @@
 # AV Portal Builder·CPQ 작업 화면 통합 디자인
 
 작성일: 2026-10-16
-상태: 사용자 검토용 설계
+상태: 사용자 승인 설계 (2026-10-16, “문서 승인, 계획 작성”)
 승인된 방향: 포털 공통 스타일 적용, Builder 3열·모바일 탭, CPQ 시작 동작 강조·견적표 우선 구조. 사용자 요청은 “https://seoulav.github.io/AV-Portal/cpq/, https://seoulav.github.io/AV-Portal/builder/ 2개소 디자인을 우리 컨셉에 맞게 수정해줘”이며 후속 선택은 “화면 구조까지 더 크게 변경”, “이 설계로 진행”이다.
 
 ## 목적과 현재 화면
