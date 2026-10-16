@@ -58,21 +58,31 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
     laneCounts[side] = lastX.length;
   }
   const topMargin = Math.max(40, 34 + 24 * (laneCounts.top - 1));
-  let bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));
-  // Move only colliding side labels. Bracket anchors and separated columns stay put.
+  const bottomMargin = Math.max(40, 34 + 24 * (laneCounts.bottom - 1));
+  let extraLeft = 0, extraRight = 0;
+  // Keep the midpoint height, or the last via height. Reuse the first free outward column.
   for (const side of ['left', 'right']) {
-    const anchorY = m => ((topMargin + (m.sourceY1 - cropTop) * scale) +
+    const labelY = m => m.item.via
+      ? topMargin + (m.item.via.at(-1)[1] - cropTop) * scale : ((topMargin + (m.sourceY1 - cropTop) * scale) +
       (topMargin + (m.sourceY2 - cropTop) * scale)) / 2;
     const placed = [];
-    for (const marker of markers.filter(m => m.side === side).sort((a, b) => anchorY(a) - anchorY(b) || a.item.n - b.item.n)) {
-      const start = anchorY(marker);
-      let cy = start;
-      while (placed.some(p => Math.abs(marker.cx - p.cx) < 22 && Math.abs(cy - p.cy) < 22)) cy += 24;
-      if (cy !== start) {
-        marker.labelShift = cy - start;
-        bottomMargin = Math.max(bottomMargin, cy + 10 - topMargin - photoHeight);
+    for (const marker of markers.filter(m => m.side === side).sort((a, b) => labelY(a) - labelY(b) || a.item.n - b.item.n)) {
+      const cy = labelY(marker);
+      let cx = marker.cx;
+      while (placed.some(p => Math.abs(cx - p.cx) < 22 && Math.abs(cy - p.cy) < 22)) cx += marker.direction * 24;
+      if (cx !== marker.cx) {
+        marker.columnShift = cx - marker.cx;
+        marker.cx = cx;
+        extraLeft = Math.max(extraLeft, X0 - 24 - cx);
+        extraRight = Math.max(extraRight, cx - (X0 + W + 24));
       }
-      placed.push({ cx: marker.cx, cy });
+      placed.push({ cx, cy });
+    }
+  }
+  // Translating the entire drawing retains photo coordinates and the outer 6px clearance.
+  if (extraLeft) for (const marker of markers) {
+    for (const key of ['cx', 'edgeX', 'x1', 'x2', 'anchorX']) {
+      if (marker[key] !== undefined) marker[key] += extraLeft;
     }
   }
   if (!map.displayWidth && photoHeight + topMargin + bottomMargin > maxHeight + 1e-8) {
@@ -86,11 +96,8 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
     if (marker.side === 'left' || marker.side === 'right') {
       marker.y1 = photoTop + (marker.sourceY1 - cropTop) * scale;
       marker.y2 = photoTop + (marker.sourceY2 - cropTop) * scale;
-      marker.cy = (marker.y1 + marker.y2) / 2;
-      if (marker.labelShift !== undefined) {
-        marker.anchorY = marker.cy;
-        marker.cy += marker.labelShift;
-      }
+      marker.cy = marker.item.via
+        ? photoTop + (marker.item.via.at(-1)[1] - cropTop) * scale : (marker.y1 + marker.y2) / 2;
     } else {
       marker.anchorY = typeof marker.sourceY === 'number'
         ? photoTop + (marker.sourceY - cropTop) * scale
@@ -100,8 +107,8 @@ export function portMapGeometry(map, naturalWidth, naturalHeight, autoWidthLimit
         : photoBottom + 24 + marker.lane * 24;
     }
   }
-  return { width: W + X0 * 2, height: photoBottom + bottomMargin, scale,
-    image: { x: X0, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },
+  return { width: W + X0 * 2 + extraLeft + extraRight, height: photoBottom + bottomMargin, scale,
+    image: { x: X0 + extraLeft, y: photoTop - cropTop * scale, width: W, height: naturalHeight * scale },
     photoTop, photoBottom, topMargin, bottomMargin, markers };
 }
 
@@ -148,8 +155,8 @@ export function renderPortMap(map, image, model = '') {
     if (side === 'left' || side === 'right') {
       const { edgeX: E, direction: dir, y1, y2 } = marker;
       bracket = `M${E - dir * 8} ${y1}H${E + dir * 6}V${y2}H${E - dir * 8}`;
-      leader = marker.labelShift === undefined ? `M${E + dir * 6} ${cy}H${E + dir * 14}`
-        : `M${E + dir * 6} ${marker.anchorY}H${E + dir * 10}V${cy}H${cx - dir * 10}`;
+      leader = marker.columnShift === undefined ? `M${E + dir * 6} ${cy}H${E + dir * 14}`
+        : `M${E + dir * 6} ${cy}H${cx - dir * 10}`;
     } else if (side === 'bottom') {
       const { x1, x2, anchorY: B } = marker;
       bracket = `M${x1} ${B - 8}V${B + 6}H${x2}V${B - 8}`;

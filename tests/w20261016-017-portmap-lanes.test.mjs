@@ -10,29 +10,52 @@ const image={naturalWidth:680,naturalHeight:200,src:'rear.webp',alt:'Rear'};
 const paths=svg=>svg.children.filter(x=>x.tag==='path').map(x=>x.attrs.d);
 const render=(map,im=image)=>withSvgDocument(()=>renderPortMap(map,im,'Test'));
 
-test('automatic side lanes keep real brackets fixed and separate labels by 24px steps',()=>{
- const map={items:[side(3,101),side(2,100),side(1,100),side(4,123),side(5,100,'right')]};
+test('side lanes keep midpoint height, alternate outward columns and reuse a free column',()=>{
+ const map={items:[side(3,119),side(2,100),side(1,80),side(4,142),side(5,100,'right')]};
  const g=portMapGeometry(map,680,200),byN=n=>g.markers.find(m=>m.item.n===n);
- assert.equal(byN(1).cy,140);assert.equal(byN(2).cy,164);assert.equal(byN(3).cy,189);assert.equal(byN(4).cy,211);
- assert.equal(byN(5).cy,140);
+ assert.deepEqual([1,2,3,4].map(n=>byN(n).cy),[120,140,159,182]);
+ assert.deepEqual([1,2,3,4].map(n=>byN(n).cx),[40,16,40,40]);
+ assert.equal(byN(5).cy,140);assert.equal(byN(5).cx,768);
  assert.equal(byN(2).y1,135);assert.equal(byN(2).y2,145);
- assert.equal(byN(2).anchorY,140);
- assert.equal(paths(render(map))[3],'M34 140H30V164H26');
- const ordered=[1,2,3,4].map(byN);assert.ok(ordered.every((m,i)=>!i||m.cy-ordered[i-1].cy>=22));
- assert.deepEqual(portMapGeometry({...map,items:[...map.items].reverse()},680,200).markers.map(m=>[m.item.n,m.cy]).sort(),g.markers.map(m=>[m.item.n,m.cy]).sort());
+ assert.equal(g.image.x,64);assert.equal(g.width,784);
+ assert.equal(paths(render(map))[3],'M58 140H26');
+ for(const m of g.markers)assert.equal(m.cy,(m.y1+m.y2)/2);
+ const positions=x=>x.markers.map(m=>[m.item.n,m.cx,m.cy]).sort();
+ assert.deepEqual(positions(portMapGeometry({...map,items:[...map.items].reverse()},680,200)),positions(g));
 });
 
-test('22px boundary and independent sides keep legacy SVG, overflow grows bottom margin',()=>{
+test('22px boundary keeps legacy SVG; extra side columns grow horizontal gutters only',()=>{
  const map={items:[side(1,100),side(2,122),side(3,100,'right')]};
  const g=portMapGeometry(map,680,200);assert.deepEqual(g.markers.map(m=>m.cy),[140,162,140]);
- assert.equal(paths(render(map))[1],'M34 140H26');
- const crowded={items:[1,2,3,4].map(n=>side(n,195))};
+ assert.equal(paths(render(map))[1],'M34 140H26');assert.equal(g.width,760);
+ const crowded={items:['left','right'].flatMap((sideName,i)=>[1,2,3,4].map(n=>side(n+i*4,195,sideName)))};
  const overflow=portMapGeometry(crowded,680,200);
- assert.ok(overflow.bottomMargin>40);
- assert.ok(overflow.markers.every(m=>m.cy+10<=overflow.height));
+ assert.equal(overflow.bottomMargin,40);assert.equal(overflow.height,280);
+ assert.equal(overflow.image.x,112);assert.equal(overflow.width,904);
+ assert.deepEqual(overflow.markers.slice(0,4).map(m=>m.cx),[88,64,40,16]);
+ assert.deepEqual(overflow.markers.slice(4).map(m=>m.cx),[816,840,864,888]);
+ assert.ok(overflow.markers.every(m=>m.cy===235 && m.cx-10>=0 && m.cx+10<=overflow.width));
+ assert.ok(paths(render(crowded)).filter((_,i)=>i%2).every(d=>/^M[\d.]+ [\d.]+H[\d.]+$/.test(d)));
  const tall=portMapGeometry({items:Array.from({length:12},(_,n)=>side(n+1,1790))},680,1800);
- assert.ok(tall.height<=900+1e-8);
- assert.ok(tall.markers.every(m=>m.cy+10<=tall.height+1e-8));
+ assert.ok(tall.height<=900+1e-8);assert.ok(tall.markers.every(m=>m.cy+10<=tall.height+1e-8));
+});
+
+test('side via uses final waypoint height and shares outward collision columns with plain sides',()=>{
+ const map={crop:{top:100,bottom:0},items:[
+  {...side(1,300),x:250,via:[[100,400]]},
+  {...side(2,500),x:400,via:[[100,400]]},
+  side(3,400),
+  {...side(4,300,'right'),x:400,via:[[1000,400]]},
+  {...side(5,600,'right'),x:500,via:[[1000,400]]}
+ ]};
+ const g=portMapGeometry(map,1360,800);
+ assert.deepEqual(g.markers.map(m=>m.cy),[190,190,190,190,190]);
+ assert.deepEqual(g.markers.map(m=>m.cx),[64,40,16,792,816]);
+ assert.equal(g.width,832);assert.equal(g.image.x,88);
+ assert.equal(g.markers[0].y1,137.5);assert.equal(g.markers[1].y1,237.5);
+ const im={...image,naturalWidth:1360,naturalHeight:800};
+ assert.equal(paths(render(map,im))[1],'M207 140H138V190H74');
+ assert.equal(paths(render(map,im))[3],'M282 240H138V190H50');
 });
 
 test('via uses original pixels with crop and scaling, orthogonal starts and circle endpoints',()=>{
@@ -78,8 +101,8 @@ test('side via keeps brackets at x and labels outside, legacy x remains unchange
  assert.deepEqual(g.markers.map(m=>m.edgeX),[290,440]);
  assert.equal(paths(render(plain))[1],'M284 140H276');
  const pair=portMapGeometry({items:[{...routed.items[0],n:1},{...routed.items[0],n:2,x:400}]},680,200);
- assert.deepEqual(pair.markers.map(m=>m.cy),[140,164]);
- assert.deepEqual(pair.markers.map(m=>m.cx),[16,16]);
+ assert.deepEqual(pair.markers.map(m=>m.cy),[140,140]);
+ assert.deepEqual(pair.markers.map(m=>m.cx),[40,16]);
 });
 import {createHash} from 'node:crypto';
 import {beforeW20261016_017Product,beforeW20261016_017Raw} from './w20261016-017-history.mjs';
@@ -107,5 +130,5 @@ test('renderer inverse exposes unrelated changes and rejects edits inside the ap
  const view=readFileSync(new URL('../prototype/brc-am7/detail-enhancement-view.mjs',import.meta.url),'utf8');
  assert.equal(sha(beforeW20261016_017View(view)),prior.priorViewSha);
  assert.ok(beforeW20261016_017View(view+'\n// unrelated').endsWith('// unrelated'));
- assert.throws(()=>beforeW20261016_017View(view.replace('cy += 24','cy += 25')),/unexpected W-017 renderer change/);
+ assert.throws(()=>beforeW20261016_017View(view.replace('cx += marker.direction * 24','cx += marker.direction * 25')),/unexpected W-017 renderer change/);
 });

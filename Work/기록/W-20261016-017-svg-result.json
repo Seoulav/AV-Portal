@@ -824,7 +824,7 @@
       "id": "portal/rally-bar/0",
       "changed": true,
       "beforeSha256": "de1838c362aa36257fb36a53f9687490626cfe140c4b3687776d2e5b18d45f97",
-      "afterSha256": "86d869b7ed4942a4d072d82e3498586f987699cecee9bee12d26ffffad9b3167"
+      "afterSha256": "9f7dbe3791396ef4357e4d5679ec4fc45211068a7ba45527232435459e356e70"
     },
     {
       "id": "portal/rally-mic-pod-hub/0",
@@ -974,7 +974,7 @@
       "id": "portal/ultritouch-2-hr/0",
       "changed": true,
       "beforeSha256": "3a67638b93851155d3234411eba407a611b6d95d797b658d8daf2cf042ae2656",
-      "afterSha256": "224a8059d9614f39931dbef08ec67c8651f93e3b4fdb6dffb49824a8d543a967"
+      "afterSha256": "3c1a6ebf2f51fae34699e950fa32cd2f2df582314802a5785c0cb49f0a00711f"
     },
     {
       "id": "portal/ulxd1/0",
