@@ -48,6 +48,7 @@ test('all pre-existing products still validate and view source matches the appro
     .replace('.dialog-image-wrap { min-height: 120px;', '.dialog-image-wrap {')
     .replace('.image-loupe { background-repeat: no-repeat; background-color: #fff;', '.image-loupe {'))
     .replace(/\n\/\* W-20261016-010 Aquilon layer-plan card\. \*\/[\s\S]*?\/\* W-20261016-010 Aquilon layer-plan card end\. \*\/\n/,'\n')
+    .replace(/\n\/\* W-20261016-011 shared Midra 4K \/ Alta 4K layer analysis\. \*\/[\s\S]*?\/\* W-20261016-011 shared layer analysis end\. \*\//,'')
     .split('\n/* HDF-CCF cable scenarios. Existing signal-flow layout uses its own classes. */')[0];
   assert.equal(sha(css),'415112b0c26aae92313c91840579a1505d2de0f5d4559367407e44b80f9cc61d');
 });
