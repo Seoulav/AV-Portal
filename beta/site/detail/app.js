@@ -1,7 +1,7 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-010-aquilon-layer-plan-571';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-010-aquilon-layer-plan';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-011-video-layer-plan';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-011-video-layer-plan';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../shared/rtcom-adapter.mjs?v=w20261012-015-rtcom-parity';
@@ -97,6 +97,102 @@ function renderAquilonLayerPlan(plan, currentSlug) {
   section.append(element('small', 'aquilon-layer-sources-note', `4K60 프로그램 출력 수 근거: Aquilon User Manual v6.2 ${plan.evidence.programOutputsManualPage}쪽. 출력 커넥터·입력 수 근거: 공식 브로슈어 ${plan.evidence.outputConnectorsBrochurePage}쪽.`));
   return section;
 }
+function renderVideoLayerPlan(plan, currentSlug) {
+  const section = element('section', 'video-layer-plan');
+  section.setAttribute('aria-labelledby', 'video-layer-title');
+  const heading = element('h2', '', plan.title);
+  heading.id = 'video-layer-title';
+  section.append(heading);
+  const current = plan.models.find(row => row.slug === currentSlug);
+  if (!current) return section;
+  section.append(element('p', 'video-layer-intro', current.headline));
+
+  const metrics = element('div', 'video-layer-metrics');
+  const metricRows = current.resourceScope === 'device'
+    ? [
+        ['4K60 PGM 출력 구성 최대', `${current.maxPgm4kScreens}개`],
+        ['한 화면에 배정 시 최대', `${current.maxMixing4kPerScreen} 믹싱 (${current.maxSplit4kPerScreen} 분할)`],
+        ['장비 전체 레이어 자원', `${current.totalMixing4k} 믹싱 (${current.totalSplit4k} 분할)`],
+        ['미사용 출력의 Aux 최대', `${current.maxAuxOutputs}개 · 최대 1080p60`]
+      ]
+    : [
+        ['4K60 PGM 화면 구성 최대', `${current.maxPgm4kScreens}개`],
+        ['화면당 최대 · Mixer', `${current.screenModes.find(mode => mode.id === 'mixer')?.mixing4kPerScreen ?? current.maxMixing4kPerScreen} 믹싱 (${current.screenModes.find(mode => mode.id === 'mixer')?.split4kPerScreen ?? current.maxSplit4kPerScreen} 분할)`],
+        ['장비 전체 4K 레이어', `${current.totalMixing4k} 믹싱 (${current.totalSplit4k} 분할)`],
+        ['Aux 출력 최대', `${current.maxAuxOutputs}개 · 최대 1080p60`]
+      ];
+  for (const [label, value] of metricRows) {
+    const card = element('div', 'video-layer-metric');
+    card.append(element('small', '', label), element('strong', '', value));
+    metrics.append(card);
+  }
+  section.append(metrics);
+
+  const modes = element('div', 'video-layer-modes');
+  modes.append(element('h3', '', current.resourceScope === 'device' ? '레이어 자원 배분' : '동작 모드별 화면 구성'));
+  for (const mode of current.screenModes) {
+    const card = element('article', 'video-layer-mode');
+    card.append(element('h4', '', mode.label));
+    card.append(element('p', '', mode.layout));
+    const allocation = current.resourceScope === 'device'
+      ? `장비 전체 ${mode.totalMixing4k} 믹싱 / ${mode.totalSplit4k} 분할 자원을 PGM Screen에 배분합니다. 한 화면에 전부 배정하면 최대 ${mode.mixing4kPerScreen} 믹싱 / ${mode.split4kPerScreen} 분할이며, 여러 화면으로 나누면 화면별 수는 배분에 따라 달라집니다.`
+      : `4K60 PGM 화면 ${mode.pgmScreens}개 · 화면당 최대 ${mode.mixing4kPerScreen} 믹싱 / ${mode.split4kPerScreen} 분할 레이어 · 모드 전체 ${mode.totalMixing4k} 믹싱 / ${mode.totalSplit4k} 분할`;
+    card.append(element('p', '', allocation));
+    if (mode.outputsPerScreen) card.append(element('p', '', `화면당 출력 ${mode.outputsPerScreen}개`));
+    if (mode.auxOutputs) card.append(element('p', '', `이 모드의 Aux 출력 ${mode.auxOutputs}개`));
+    modes.append(card);
+  }
+  section.append(modes);
+
+  const comparison = element('div', 'video-layer-comparison');
+  comparison.append(element('h3', '', '같은 4K 구성의 비교 자료'));
+  const compareGrid = element('div', 'video-layer-comparison-grid');
+  const xdm = element('article', 'video-layer-compare-card');
+  xdm.append(element('strong', '', plan.comparison.xdm.model));
+  xdm.append(element('p', '', `RTCOM 원본에는 ${plan.comparison.xdm.outputPorts}개 HDMI 출력과 다음 조건이 기록돼 있습니다.`));
+  xdm.append(element('p', '', plan.comparison.xdm.sourceCondition));
+  xdm.append(element('p', '', 'RTCOM 원본은 이 구성의 레이어 최대 개수를 명시하지 않습니다.'));
+  const aquilon = element('article', 'video-layer-compare-card');
+  aquilon.append(element('strong', '', 'Aquilon RS'));
+  aquilon.append(element('p', '', plan.comparison.aquilon));
+  compareGrid.append(xdm, aquilon);
+  comparison.append(compareGrid);
+  section.append(comparison);
+
+  const tableTitle = element('h3', '', 'Midra 4K · Alta 4K 모델 비교');
+  section.append(tableTitle, element('p', 'video-layer-table-hint', '휴대폰에서는 표 안을 좌우로 밀어 나머지 열을 확인할 수 있습니다.'));
+  const wrap = element('div', 'pg-table video-layer-table-wrap');
+  wrap.setAttribute('role', 'region');
+  wrap.setAttribute('aria-label', 'Midra 4K 및 Alta 4K 모델별 출력·레이어 자원 비교');
+  wrap.tabIndex = 0;
+  const table = element('table');
+  const head = element('thead');
+  const header = element('tr');
+  for (const label of ['모델', '시리즈', '4K60 PGM 화면 구성 최대', '한 화면에 배정 시 최대 레이어', '장비 전체 레이어 자원', 'Aux 출력 최대']) {
+    const cell = element('th', '', label); cell.scope = 'col'; header.append(cell);
+  }
+  head.append(header); table.append(head);
+  const body = element('tbody');
+  for (const rowData of plan.models) {
+    const row = element('tr', rowData.slug === currentSlug ? 'video-layer-current' : '');
+    if (rowData.slug === currentSlug) row.setAttribute('aria-current', 'true');
+    row.append(element('th', '', rowData.model));
+    row.append(element('td', '', rowData.series));
+    row.append(element('td', '', `${rowData.maxPgm4kScreens}개`));
+    row.append(element('td', '', `${rowData.maxMixing4kPerScreen} 믹싱 (${rowData.maxSplit4kPerScreen} 분할)`));
+    row.append(element('td', '', `${rowData.totalMixing4k} 믹싱 (${rowData.totalSplit4k} 분할)`));
+    row.append(element('td', '', `${rowData.maxAuxOutputs}개`));
+    body.append(row);
+  }
+  table.append(body); wrap.append(table); section.append(wrap);
+
+  const notes = element('ul', 'video-layer-notes');
+  for (const note of plan.notes) notes.append(element('li', '', note));
+  section.append(notes);
+  section.append(element('small', 'video-layer-source-note', '근거: Midra 4K User Manual, 인쇄 41–44쪽; Alta 4K User Manual, 인쇄 25·41–43·46쪽; 모델별 공식 Technical Datasheet 5–6쪽. 정확한 원문 인용과 쪽수는 작업 PR 본문에 기록합니다.'));
+  return section;
+}
+
 function safeLink(url, label, className = '', allowedHttpHost = '') {
   const parsed = new URL(url);
   const vsEntPage = productKey === 'ds-8s' && parsed.href === 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14';
@@ -630,7 +726,13 @@ if (!productKey) {
     layerCard.dataset.supplemental = '';
     $('.supplemental-cards').prepend(layerCard);
   }
-  const layerComparison = enhancements.layerPlan ? null : layerComparisonFor(productKey);
+  if (enhancements.videoLayerPlan) {
+    const layerCard = renderVideoLayerPlan(enhancements.videoLayerPlan, productKey);
+    layerCard.id = 'video-layer-card';
+    layerCard.dataset.supplemental = '';
+    $('.supplemental-cards').prepend(layerCard);
+  }
+  const layerComparison = (enhancements.layerPlan || enhancements.videoLayerPlan) ? null : layerComparisonFor(productKey);
   if (layerComparison) {
     const section = element('div', 'layer-comparison');
     section.append(element('h3', '', `${layerComparison.manufacturer} ${layerComparison.title}`));
@@ -685,6 +787,7 @@ if (!productKey) {
 
   const visible = new Set(visibleDetailCards(data));
   if (enhancements.layerPlan) visible.add('aquilon-layer-card');
+  if (enhancements.videoLayerPlan) visible.add('video-layer-card');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);

@@ -2,7 +2,7 @@
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
-- 상태: REVIEW (PR #576 열림, Work 병합 순서 확인 대기)
+- 상태: MERGED (PR #576 병합·Pages 배포·공개 검증 완료)
 - 명세: `Work/작업/W-20261016-010.md` · 인계서 `Work/기록/W-20261016-010-Codex-인계.md`
 - 명세 확인 기준: main `5932cf1c643ba6599fbdc9f89dc8816593778669`
 - 브랜치: `codex/W-20261016-010-aquilon-layers` · 전용 워크트리 `../codex-c-w010`
@@ -18,8 +18,22 @@
   - [x] 전체 `npm.cmd test`: 769개 중 768 통과, 실패 0, 기존 skip 1. 선택 관련 시험 22/22 통과.
   - [x] 최신 `origin/main` `2694ab2c2b99d6f0303aef51bcd1e72a229eed4d` 통합 후 search-index·readable catalog·public snapshot 재생성; `build-search-index --check`, `sync-rtcom --check`, `verify-pages` 통과(카탈로그 285, 상세 282, 사진 515, 업로드 PDF 163).
   - [x] PR #576 갱신, 최종 Builder CI 통과(run 38886817492). 이후 #578까지 통합한 갱신 커밋 CI도 통과(run 38886817492 기준 최종 push는 `5aea7524`; 확인 결과 pass).
-  - [ ] Work에 #571 병합 후 현재 순서(#576 다음 병합 여부)를 미리보기 경로와 함께 문의함: https://github.com/Seoulav/AV-Portal/pull/576#issuecomment-6213450801. 답변 대기.
-  - [ ] 병합·Pages 배포·RS1/RS6 공개 화면 검증.
+  - [x] Work가 #571 다음 #576 병합을 승인했고, 최신 main 통합 후 PR #576을 병합했다(병합 SHA `ea8ce10ef167cf7b4804eacd7ff70a78dabe5122`).
+  - [x] Pages run `38889793893` 성공. 공개 RS1·RS6 1280px·390px에서 페이지 가로 넘침 없이 표 내부 좌우 스크롤을 확인했고, 브로슈어 열기·내려받기 및 게시 PDF SHA-256 일치를 확인했다.
+
+## W-20261016-011 — Midra 4K · Zenith(Alta 4K) 공용 레이어 해설
+
+- 상태: IN_PROGRESS
+- 명세: `Work/작업/W-20261016-011.md` · 인계서 `Work/기록/W-20261016-011-Codex-인계.md`
+- 명세 확인 커밋: `6063ab4afcb239cc7a5a9609117fa9353600934f` · 구현 시작 main: `ea8ce10ef167cf7b4804eacd7ff70a78dabe5122`
+- 브랜치: `codex/W-20261016-011-midra-zenith` · 전용 워크트리 `../codex-c-w011`
+- 범위: Pulse 4K·Eikos 4K·Zenith 100·Zenith 200 네 제품의 공용 기술 해설, 검증기·상세 렌더러·테스트. Port Map 및 기존 VERIFIED 사양은 수정하지 않는다.
+- [x] 공식 공용 매뉴얼·모델별 데이터시트 규칙을 확인하고 모델별 적용 여부를 대조했다. Zenith 100·200은 Alta 4K 계열임을 확인했다.
+- [x] Midra Mixer·Matrix, Eikos Hard/Soft Edge, Alta 장비 전체 레이어 풀·화면 배분을 구분했다. 출력별 추가 자원 산식, HD Aux 레이어·4K/HD 혼합 비용은 미확인으로 기록했다.
+- [x] 네 제품 JSON에 계열 공유 `videoLayerPlan`과 제품별 결론 문장을 추가했다. XDM-WOS100 레이어 수는 RTCOM 원본에 없어 숫자 비교를 하지 않는다.
+- [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 6개 타깃 테스트를 추가했다.
+- [ ] 1280px·390px 미리보기 4종, 전체 테스트·파생 산출물·verify-pages, 최신 main 통합, PR·CI·Work 병합 순서 확인.
+- 근거표: `Work/기록/W-20261016-011-근거표.md` · Work 인계: `Work/기록/W-20261016-011-Work-인계.md`
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검
 

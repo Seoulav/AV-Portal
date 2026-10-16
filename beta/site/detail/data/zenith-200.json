@@ -545,5 +545,224 @@
         "side": "bottom"
       }
     ]
+  },
+  "videoLayerPlan": {
+    "type": "analog-way-video-layers",
+    "title": "Midra 4K · Alta 4K 화면과 레이어 구성",
+    "notes": [
+      "화면 전체 레이어는 라이브 입력 레이어입니다. 배경·전경 이미지는 별도 화면 레이어이며, 믹싱/분할 선택에 따라 전환 방식과 라이브 레이어 수가 달라집니다.",
+      "다중 출력 화면에서 레이어에 추가되는 자원 비용은 공식 자료에 산식이 없어 미확인입니다.",
+      "Alta 4K의 Mixing/Split 자원은 장비 전체 풀입니다. 매뉴얼은 자원을 Screen에 배정한다고 설명하며, 출력 수에 따른 별도 비용 배수는 밝히지 않습니다.",
+      "1080p Aux의 라이브 레이어 수와 4K/HD 혼합 비용은 공식 자료에서 미확인입니다.",
+      "PiP는 별도 자원 항목으로 정의되지 않습니다. 라이브 레이어의 배치·크기 기능과 최대 수를 함께 보되 별도 PiP 개수를 더하지 않습니다."
+    ],
+    "comparison": {
+      "xdm": {
+        "model": "RTCOM XDM-WOS100",
+        "outputPorts": 4,
+        "sourceCondition": "4K/60 @ 4:4:4 · 비디오 월 · 커맨드 중첩(레이어를 쓰면 4포트 모두 같은 화면) · 매뉴얼 KV08에는 없고 카탈로그 9쪽 기준 · 오디오 출력 없음(알티컴 확인 2026-10-13)"
+      },
+      "aquilon": "Aquilon RS는 2×2 4K60 한 화면에 4개 믹싱(분할 8개) 레이어를 배치할 수 있습니다(W-010, Aquilon User Manual v6.2 66·79쪽)."
+    },
+    "evidence": {
+      "xdmSource": "beta/site/rtcom/raw/products/xdm.json · lineup XDM-WOS100.io[0]",
+      "manuals": [
+        {
+          "series": "Midra 4K",
+          "title": "Midra 4K User Manual",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf",
+          "sha256": "9303207266f76f89afca81601c0cf60e6c24b8ed54ba868d9b2d212842941d5b",
+          "pages": [
+            41,
+            42,
+            43,
+            44
+          ]
+        },
+        {
+          "series": "Alta 4K",
+          "title": "Alta 4K User Manual",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Common/User+Manual/AW_Alta4K_UserManual_20260521.pdf",
+          "sha256": "07bbed99073102d6e95cd7cb57952d2aa45b58943f72003ef10be96b460daa7b",
+          "pages": [
+            25,
+            41,
+            42,
+            43,
+            46
+          ]
+        }
+      ],
+      "datasheets": [
+        {
+          "slug": "pulse-4k",
+          "title": "Pulse 4K Technical Datasheet",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf",
+          "sha256": "2b5bf3d89e0effede01722c0a734b8ed06ab695a144e4b1745ab21a8fb65f2e7",
+          "page": 5
+        },
+        {
+          "slug": "eikos-4k",
+          "title": "Eikos 4K Technical Datasheet",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Eikos+4k/Technical+Datasheet/AW_Midra4K_Eikos4K_Datasheet_en_20260521.pdf",
+          "sha256": "f9501259f270e17dcdee476a8280bae553ea3648752135b9bec27bd24274ebe2",
+          "page": 6
+        },
+        {
+          "slug": "zenith-100",
+          "title": "Zenith 100 Technical Datasheet",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/Technical+Datasheet/AW_Alta4K_Zenith100_Datasheet_en_20260521.pdf",
+          "sha256": "fd94f9593229562d85e0ead6c694e7b21c879cc096d240b48ae544c160180abb",
+          "page": 6
+        },
+        {
+          "slug": "zenith-200",
+          "title": "Zenith 200 Technical Datasheet",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/Technical+Datasheet/AW_Alta4K_Zenith200_Datasheet_en_20260521.pdf",
+          "sha256": "e165b39b65877a8ad5edb15272195096aba5c5c3bf286d51137962f348b1c77e",
+          "page": 6
+        }
+      ]
+    },
+    "currentSlug": "zenith-200",
+    "models": [
+      {
+        "slug": "pulse-4k",
+        "model": "Pulse 4K",
+        "series": "Midra 4K",
+        "maxPgm4kScreens": 2,
+        "maxMixing4kPerScreen": 2,
+        "maxSplit4kPerScreen": 4,
+        "totalMixing4k": 2,
+        "totalSplit4k": 4,
+        "maxAuxOutputs": 1,
+        "resourceScope": "mode",
+        "headline": "Pulse 4K는 Matrix 모드에서 4K60 PGM 화면 최대 2개(화면당 믹싱 1개·분할 2개), Mixer 모드에서 1개(화면당 믹싱 2개·분할 4개)를 구성할 수 있습니다.",
+        "screenModes": [
+          {
+            "id": "mixer",
+            "label": "Mixer · 1 PGM + 1 AUX",
+            "pgmScreens": 1,
+            "layout": "단일 출력 4K60 PGM 화면",
+            "mixing4kPerScreen": 2,
+            "split4kPerScreen": 4,
+            "totalMixing4k": 2,
+            "totalSplit4k": 4,
+            "auxOutputs": 1
+          },
+          {
+            "id": "matrix",
+            "label": "Matrix · 2 PGM",
+            "pgmScreens": 2,
+            "layout": "독립 단일 출력 4K60 PGM 화면",
+            "mixing4kPerScreen": 1,
+            "split4kPerScreen": 2,
+            "totalMixing4k": 2,
+            "totalSplit4k": 4,
+            "auxOutputs": 0
+          }
+        ]
+      },
+      {
+        "slug": "eikos-4k",
+        "model": "Eikos 4K",
+        "series": "Midra 4K",
+        "maxPgm4kScreens": 2,
+        "maxMixing4kPerScreen": 2,
+        "maxSplit4kPerScreen": 4,
+        "totalMixing4k": 2,
+        "totalSplit4k": 4,
+        "maxAuxOutputs": 1,
+        "resourceScope": "mode",
+        "headline": "Eikos 4K는 Matrix 모드에서 4K60 PGM 화면 최대 2개(화면당 믹싱 1개·분할 2개), Mixer 또는 2출력 Hard/Soft Edge 모드에서 화면 1개(화면당 믹싱 2개·분할 4개)를 구성할 수 있습니다.",
+        "screenModes": [
+          {
+            "id": "mixer",
+            "label": "Mixer · 1 PGM + 1 AUX",
+            "pgmScreens": 1,
+            "layout": "단일 출력 4K60 PGM 화면",
+            "mixing4kPerScreen": 2,
+            "split4kPerScreen": 4,
+            "totalMixing4k": 2,
+            "totalSplit4k": 4,
+            "auxOutputs": 1
+          },
+          {
+            "id": "matrix",
+            "label": "Matrix · 2 PGM",
+            "pgmScreens": 2,
+            "layout": "독립 단일 출력 4K60 PGM 화면",
+            "mixing4kPerScreen": 1,
+            "split4kPerScreen": 2,
+            "totalMixing4k": 2,
+            "totalSplit4k": 4,
+            "auxOutputs": 0
+          },
+          {
+            "id": "hard-soft-edge",
+            "label": "Hard/Soft Edge · 1 PGM",
+            "pgmScreens": 1,
+            "layout": "두 출력으로 구성한 하나의 수평·수직 블렌딩 화면",
+            "mixing4kPerScreen": 2,
+            "split4kPerScreen": 4,
+            "totalMixing4k": 2,
+            "totalSplit4k": 4,
+            "auxOutputs": 0
+          }
+        ]
+      },
+      {
+        "slug": "zenith-100",
+        "model": "Zenith 100",
+        "series": "Alta 4K",
+        "maxPgm4kScreens": 3,
+        "maxMixing4kPerScreen": 3,
+        "maxSplit4kPerScreen": 6,
+        "totalMixing4k": 3,
+        "totalSplit4k": 6,
+        "maxAuxOutputs": 2,
+        "resourceScope": "device",
+        "headline": "Zenith 100(Alta 4K)은 최대 3개의 4K60 PGM 출력으로 독립 화면·멀티 출력 화면을 구성하며, 장비 전체 3개 믹싱 자원(분할 6개)을 화면에 배분합니다.",
+        "screenModes": [
+          {
+            "id": "resource-pool",
+            "label": "Alta 4K 레이어 자원 풀",
+            "pgmScreens": 3,
+            "layout": "최대 3개 PGM 화면 출력 구성; 자원은 장비 전체에서 각 Screen으로 배분",
+            "mixing4kPerScreen": 3,
+            "split4kPerScreen": 6,
+            "totalMixing4k": 3,
+            "totalSplit4k": 6,
+            "auxOutputs": 2
+          }
+        ]
+      },
+      {
+        "slug": "zenith-200",
+        "model": "Zenith 200",
+        "series": "Alta 4K",
+        "maxPgm4kScreens": 4,
+        "maxMixing4kPerScreen": 4,
+        "maxSplit4kPerScreen": 8,
+        "totalMixing4k": 4,
+        "totalSplit4k": 8,
+        "maxAuxOutputs": 4,
+        "resourceScope": "device",
+        "headline": "Zenith 200(Alta 4K)은 최대 4개의 4K60 PGM 출력 구성을 지원합니다. 장비 전체 4개 믹싱 자원(분할 8개)을 화면에 나눠 쓰며, 한 화면에 전부 배정하면 최대 4개 믹싱(분할 8개)이고 화면별 수는 배분에 따라 달라집니다.",
+        "screenModes": [
+          {
+            "id": "resource-pool",
+            "label": "Alta 4K 레이어 자원 풀",
+            "pgmScreens": 4,
+            "layout": "최대 4개 PGM 화면 출력 구성; 자원은 장비 전체에서 각 Screen으로 배분",
+            "mixing4kPerScreen": 4,
+            "split4kPerScreen": 8,
+            "totalMixing4k": 4,
+            "totalSplit4k": 8,
+            "auxOutputs": 4
+          }
+        ]
+      }
+    ]
   }
 }

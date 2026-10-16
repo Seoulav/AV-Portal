@@ -183,6 +183,51 @@ export function validLayerPlan(plan, product) {
       evidence.programOutputsManualPage !== 71 || evidence.outputConnectorsBrochurePage !== 7 || evidence.rs1DatasheetPage !== 3 || !shortText(evidence.rtcomSource)) return false;
   return true;
 }
+export function validVideoLayerPlan(plan, product) {
+  const expected = ['pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200'];
+  if (!record(plan) || !keys(plan, ['type', 'title', 'currentSlug', 'models', 'notes', 'comparison', 'evidence']) ||
+      plan.type !== 'analog-way-video-layers' || !shortText(plan.title) || !expected.includes(plan.currentSlug)) return false;
+  const mode = item => record(item) && keys(item, ['id', 'label', 'pgmScreens', 'layout', 'outputsPerScreen', 'mixing4kPerScreen', 'split4kPerScreen', 'totalMixing4k', 'totalSplit4k', 'auxOutputs']) &&
+    identifier(item.id) && shortText(item.label) && shortText(item.layout) && (item.outputsPerScreen === undefined || (Number.isInteger(item.outputsPerScreen) && item.outputsPerScreen > 0)) &&
+    ['pgmScreens', 'mixing4kPerScreen', 'split4kPerScreen', 'totalMixing4k', 'totalSplit4k', 'auxOutputs'].every(key => Number.isInteger(item[key]) && item[key] >= 0) &&
+    item.pgmScreens > 0 && item.mixing4kPerScreen > 0 && item.split4kPerScreen === item.mixing4kPerScreen * 2 &&
+    item.totalMixing4k > 0 && item.totalSplit4k === item.totalMixing4k * 2 && item.auxOutputs <= 4;
+  const row = item => record(item) && keys(item, ['slug', 'model', 'series', 'headline', 'maxPgm4kScreens', 'maxMixing4kPerScreen', 'maxSplit4kPerScreen', 'totalMixing4k', 'totalSplit4k', 'maxAuxOutputs', 'resourceScope', 'screenModes']) &&
+    identifier(item.slug) && shortText(item.model) && ['Midra 4K', 'Alta 4K'].includes(item.series) && shortText(item.headline) &&
+    ['maxPgm4kScreens', 'maxMixing4kPerScreen', 'maxSplit4kPerScreen', 'totalMixing4k', 'totalSplit4k'].every(key => Number.isInteger(item[key]) && item[key] > 0) &&
+    Number.isInteger(item.maxAuxOutputs) && item.maxAuxOutputs >= 0 && item.maxAuxOutputs <= 4 && ['mode', 'device'].includes(item.resourceScope) &&
+    list(item.screenModes, 3, mode, 1) && new Set(item.screenModes.map(m => m.id)).size === item.screenModes.length &&
+    item.maxPgm4kScreens === Math.max(...item.screenModes.map(m => m.pgmScreens)) &&
+    item.maxMixing4kPerScreen === Math.max(...item.screenModes.map(m => m.mixing4kPerScreen)) &&
+    item.maxSplit4kPerScreen === Math.max(...item.screenModes.map(m => m.split4kPerScreen)) &&
+    item.totalMixing4k === Math.max(...item.screenModes.map(m => m.totalMixing4k)) &&
+    item.totalSplit4k === Math.max(...item.screenModes.map(m => m.totalSplit4k)) &&
+    item.maxAuxOutputs === Math.max(...item.screenModes.map(m => m.auxOutputs)) &&
+    (item.resourceScope !== 'mode' || item.screenModes.every(m => m.totalMixing4k === m.pgmScreens * m.mixing4kPerScreen));
+  if (!list(plan.models, 4, row, 4) || plan.models.map(m => m.slug).join(',') !== expected.join(',')) return false;
+  const current = plan.models.find(item => item.slug === plan.currentSlug);
+  if (!current || current.model !== product.model || current.series !== (plan.currentSlug.startsWith('zenith-') ? 'Alta 4K' : 'Midra 4K')) return false;
+  if (current.slug === 'pulse-4k' && current.screenModes.map(m => m.id).join(',') !== 'mixer,matrix') return false;
+  if (current.slug === 'eikos-4k' && current.screenModes.map(m => m.id).join(',') !== 'mixer,matrix,hard-soft-edge') return false;
+  if (current.slug.startsWith('zenith-') && (current.resourceScope !== 'device' || current.screenModes.length !== 1 || current.screenModes[0].id !== 'resource-pool')) return false;
+  if (!list(plan.notes, 10, shortText, 4) || !plan.notes.some(note => note.includes('자원 비용') && note.includes('미확인')) ||
+      !plan.notes.some(note => note.includes('1080p') && note.includes('미확인')) || !plan.notes.some(note => note.includes('PiP') && note.includes('별도'))) return false;
+  const comparison = plan.comparison;
+  if (!record(comparison) || !keys(comparison, ['xdm', 'aquilon']) || !record(comparison.xdm) ||
+      !keys(comparison.xdm, ['model', 'outputPorts', 'sourceCondition']) || comparison.xdm.model !== 'RTCOM XDM-WOS100' ||
+      comparison.xdm.outputPorts !== 4 || !shortText(comparison.xdm.sourceCondition) || !shortText(comparison.aquilon)) return false;
+  const evidence = plan.evidence;
+  const validDocument = (doc, pages) => record(doc) && typeof doc.series === 'string' && shortText(doc.title) &&
+    typeof doc.url === 'string' && doc.url.startsWith('https://') && /^[a-f0-9]{64}$/.test(doc.sha256) &&
+    Array.isArray(doc.pages) && pages.every(page => doc.pages.includes(page));
+  if (!record(evidence) || !keys(evidence, ['xdmSource', 'manuals', 'datasheets']) || !shortText(evidence.xdmSource) ||
+      !list(evidence.manuals, 2, x => record(x) && keys(x, ['series', 'title', 'url', 'sha256', 'pages']) &&
+        validDocument(x, x.series === 'Midra 4K' ? [41, 42, 44] : x.series === 'Alta 4K' ? [25, 41, 42, 43, 46] : []), 2) ||
+      !list(evidence.datasheets, 4, x => record(x) && keys(x, ['slug', 'title', 'url', 'sha256', 'page']) &&
+        expected.includes(x.slug) && shortText(x.title) && x.url.startsWith('https://') && /^[a-f0-9]{64}$/.test(x.sha256) && Number.isInteger(x.page) && x.page > 0, 4) ||
+      new Set(evidence.datasheets.map(x => x.slug)).size !== 4) return false;
+  return true;
+}
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
   if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items', 'comparison']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string')) && (s.comparison === undefined || validComparison(s.comparison));
@@ -200,6 +245,7 @@ function validity(product) {
       JSON.stringify(product.portMap) === JSON.stringify(product.portMaps[0]),
     signalFlow: validFlow(product.signalFlow, product),
     layerPlan: validLayerPlan(product.layerPlan, product),
+    videoLayerPlan: validVideoLayerPlan(product.videoLayerPlan, product),
     settings: Array.isArray(product.settings) && product.settings.length <= 2 && product.settings.every(validSetting)
   };
 }
@@ -216,6 +262,7 @@ export function prepareEnhancements(product) {
     portMaps: valid.portMaps ? product.portMaps : [],
     signalFlow: valid.signalFlow ? product.signalFlow : null,
     layerPlan: valid.layerPlan ? product.layerPlan : null,
+    videoLayerPlan: valid.videoLayerPlan ? product.videoLayerPlan : null,
     settings: valid.settings ? product.settings : []
   };
 }
