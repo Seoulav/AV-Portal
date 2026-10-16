@@ -7,10 +7,11 @@ import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeW013Product } from './w013-history.mjs';
 import { beforeW13010Product } from './w13010-yamaha-history.mjs';
+import { beforeW16015Group5Product, beforeW16015Group5Raw } from './w16015-group5-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-005-prior-maps.json', import.meta.url), 'utf8'));
 const path = slug => `beta/site/detail/data/${slug}.json`;
-const current = slug => JSON.parse(readFileSync(path(slug), 'utf8'));
+const current = slug => beforeW16015Group5Product(JSON.parse(readFileSync(path(slug), 'utf8')), slug);
 
 test('thirteen corrected maps leave all other current product fields unchanged', () => {
   assert.equal(Object.keys(records).length, 13);
@@ -32,7 +33,7 @@ test('historical inverse rejects a changed marker and exposes unrelated current 
     changedIo.io = [];
     assert.deepEqual(beforeW12005Product(changedIo, slug).io, [], slug);
     assert.notEqual(beforeW12005Raw(JSON.stringify(changedIo, null, 2) + '\n', slug),
-      beforeW12005Raw(readFileSync(path(slug), 'utf8'), slug), slug);
+      beforeW12005Raw(beforeW16015Group5Raw(readFileSync(path(slug), 'utf8'), slug), slug), slug);
     const changedMap = structuredClone(beforeKiprogo2Mx395Product(product, slug));
     changedMap.portMap.items[0].label += ' altered';
     assert.throws(() => beforeW12005Product(changedMap, slug), /unexpected (Ki Pro GO2 regrouping|W-005 Port Map change|W-010 portMap change)/, slug);

@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12002Product } from './w12002-wording-history.mjs';
 import { beforeW013Product } from './w013-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const products = new URL('../beta/site/detail/data/', import.meta.url);
 const read = slug => JSON.parse(readFileSync(new URL(`${slug}.json`, products), 'utf8'));
@@ -61,7 +62,7 @@ test('the five measured Rear photos stay byte-for-byte unchanged', () => {
 test('all five BSS products preserve every field except marker horizontal coordinates', () => {
   const hash = createHash('sha256');
   for (const slug of Object.keys(imageHashes)) {
-    const product = beforeW12002Product(beforeW013Product(read(slug), slug), slug);
+    const product = beforeW12002Product(beforeW013Product(beforeW16015Group5Product(read(slug), slug), slug), slug);
     for (const marker of product.portMap.items) {
       delete marker.x1;
       delete marker.x2;

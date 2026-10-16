@@ -10,6 +10,7 @@ import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeKiprogo2Mx395Product, beforeKiprogo2Mx395Raw } from './w12005-kiprogo2-mx395-history.mjs';
 import { beforeW013C3Product } from './w013-c3-history.mjs';
 import { beforeW20261015_011Product, beforeW20261015_011Raw } from './w20261015-011-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -133,7 +134,7 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
     const product = read(`beta/site/detail/data/${slug}.json`);
     if (['varia-100', 'varia-80'].includes(slug)) assert.equal(product.portMap, undefined, `${slug}: no map without visually verified connection drawing`);
     if (['varia-sl50', 'varia-sl80'].includes(slug)) assert.equal(product.portMap?.items.length, 1, `${slug}: only the verified RJ-45 is mapped`);
-    const current = beforeW12002Product(beforeKiprogo2Mx395Product(beforeW013C3Product(product, slug),slug),slug);
+    const current = beforeW12002Product(beforeKiprogo2Mx395Product(beforeW013C3Product(beforeW16015Group5Product(product, slug), slug),slug),slug);
     delete current.images;
     delete current.imageStatuses;
     delete current.portMap;
@@ -143,7 +144,7 @@ test('VARIA stays map-free and every non-image product field stays fixed', () =>
 
 test('historical inverse keeps unrelated current changes visible and rejects changed approved fields', () => {
   for (const slug of Object.keys(productAssets)) {
-    const current = read(`beta/site/detail/data/${slug}.json`);
+    const current = beforeW16015Group5Product(read(`beta/site/detail/data/${slug}.json`), slug);
     const baseline = beforeAmxW008Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeKiprogo2Mx395Raw(beforeW20261015_011Raw(JSON.stringify(current, null, 2) + '\n', slug), slug), slug), slug), slug);
     const altered = structuredClone(current);
     altered.io = [];

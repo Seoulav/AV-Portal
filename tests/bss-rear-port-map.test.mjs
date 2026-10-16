@@ -9,6 +9,7 @@ import {beforeBssAlignment,beforeBssAlignmentRaw} from './bss-alignment-history.
 import {beforeW12002Product,beforeW12002Raw} from './w12002-wording-history.mjs';
 import {beforeW013Raw} from './w013-history.mjs';
 import {beforeB13003Raw} from './b13003-slot-history.mjs';
+import {beforeW16015Group5Product,beforeW16015Group5Raw} from './w16015-group5-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -29,7 +30,7 @@ const dims=bytes=>{
 
 test('four model-linked BSS rear photos render valid port maps on the published pixels',()=>{
   for(const [slug,want] of Object.entries(targets)){
-    const product=beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug);
+    const product=beforeW12002Product(beforeW16015Group5Product(read(`beta/site/detail/data/${slug}.json`),slug),slug);
     const proof=evidence.products[slug];
     const rear=product.images.find(image=>image.role==='Rear');
     assert.ok(rear,`${slug}: Rear`);
@@ -78,7 +79,7 @@ test('approved BLU-50v2 stays fixed and four unsupported BSS models gain no map'
   };
   for(const [slug,want] of Object.entries(fixed)){
     const bytes=readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root));
-    assert.equal(sha(slug==='blu-50v2'?beforeBssW04004Raw(beforeBssAlignmentRaw(beforeW12002Raw(beforeW013Raw(bytes.toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug):beforeB13003Raw(bytes.toString('utf8'),slug)),want,`${slug}: existing pre-flow JSON bytes`);
+    assert.equal(sha(slug==='blu-50v2'?beforeBssW04004Raw(beforeBssAlignmentRaw(beforeW12002Raw(beforeW013Raw(beforeW16015Group5Raw(bytes.toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug),slug):beforeB13003Raw(bytes.toString('utf8'),slug)),want,`${slug}: existing pre-flow JSON bytes`);
     if(slug==='blu-50v2')continue;
     const product=JSON.parse(bytes);
     assert.equal(product.images.some(image=>image.role==='Rear'),false,slug);
@@ -94,7 +95,9 @@ test('printed BSS bank numbers and BLU-160 card-slot positions stay literal',()=
       '아날로그 출력 D · 1–4','아날로그 출력 E · 1–4'
     ],`${slug}: each photographed bank prints its own 1–4`);
   }
-  const slots=read('beta/site/detail/data/blu-160.json').portMap.items.slice(0,4);
+  const currentSlots=read('beta/site/detail/data/blu-160.json').portMap.items.slice(0,4);
+  assert.ok(currentSlots.every(item=>item.y===undefined), 'W-015 places the four slot brackets at the photo edges');
+  const slots=beforeW16015Group5Product(read('beta/site/detail/data/blu-160.json'),'blu-160').portMap.items.slice(0,4);
   assert.deepEqual(slots.map(({label,y,side})=>({label:label.at(-1),y,side})),[
     {label:'A',y:250,side:'top'},
     {label:'B',y:250,side:'top'},

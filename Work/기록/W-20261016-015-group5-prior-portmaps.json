@@ -1,0 +1,1973 @@
+{
+  "blu-100": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "blu-100-rear.webp",
+        "width": 4096,
+        "height": 575
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3559,
+          "x2": 3947,
+          "y": 414,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3150,
+          "x2": 3540,
+          "y": 414,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 2740,
+          "x2": 3131,
+          "y": 414,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 2306,
+          "x2": 2699,
+          "y": 414,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 1896,
+          "x2": 2288,
+          "y": 414,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 247,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 414,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 940,
+          "x2": 1110,
+          "y": 414,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 690,
+          "x2": 900,
+          "y": 414,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 247,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 414,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "d9d1863947bc65ca36e2d55138862dd1b4aebb322dabd3c3d01603349246169a",
+    "unchangedSha": "4e7cbe89cec19a8e7a9c39b580e7f7f6bcaf2c8f2540c15bc6c54d284395d076"
+  },
+  "blu-101": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "blu-101-rear.webp",
+        "width": 4096,
+        "height": 410
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 A · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3638,
+          "x2": 4050,
+          "y": 295,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 B · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 3207,
+          "x2": 3618,
+          "y": 295,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 C · 1–4",
+          "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
+          "x1": 2778,
+          "x2": 3187,
+          "y": 295,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "아날로그 출력 D · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 2327,
+          "x2": 2737,
+          "y": 295,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 E · 1–4",
+          "desc": "Phoenix/Combicon · 라인 출력 4채널",
+          "x1": 1897,
+          "x2": 2306,
+          "y": 295,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 176,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1190,
+          "x2": 1360,
+          "y": 295,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 940,
+          "x2": 1110,
+          "y": 295,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 690,
+          "x2": 900,
+          "y": 295,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 176,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 1420,
+          "x2": 1810,
+          "y": 295,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "ab82e8155e19c89ce21cfb8576b042d6c24740c4301967b67efeb30666f66de8",
+    "unchangedSha": "c513cb9c45ee878314ba81e9b093839754f0a4bb7c0094cea6f0c28c00b51a80"
+  },
+  "blu-160": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "blu-160-rear.webp",
+        "width": 4096,
+        "height": 586
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "옵션 I/O 카드 A",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류 상이",
+          "x1": 3259,
+          "x2": 3916,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "옵션 I/O 카드 B",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류 상이",
+          "x1": 2463,
+          "x2": 3119,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "옵션 I/O 카드 C",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류 상이",
+          "x1": 3259,
+          "x2": 3917,
+          "y": 410,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "옵션 I/O 카드 D",
+          "desc": "장착 카드에 따라 입력·출력과 신호 종류 상이",
+          "x1": 2462,
+          "x2": 3119,
+          "y": 410,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 1660,
+          "x2": 1820,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 1660,
+          "x2": 1820,
+          "y": 410,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 1390,
+          "x2": 1550,
+          "y": 410,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 1120,
+          "x2": 1320,
+          "y": 410,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "CONTROL 입력",
+          "desc": "Phoenix/Combicon · 제어 입력 12개",
+          "x1": 2000,
+          "x2": 2390,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "LOGIC 출력",
+          "desc": "Phoenix/Combicon · 로직 출력 6개",
+          "x1": 2000,
+          "x2": 2390,
+          "y": 410,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "48d95326395e0ea8a58f8fbb52d9e8e2e92f6de9b2df4410fb4821c56383de2c",
+    "unchangedSha": "f32b186da950bad273fb6d49efb0a80d618e8435b699d1baafab5fb0baf20eb0"
+  },
+  "blu-50v2": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "blu-50v2-rear.webp",
+        "width": 2000,
+        "height": 394
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 입력 1",
+          "desc": "플러그인 단자 · 아날로그 오디오 입력",
+          "x1": 1842,
+          "x2": 1941,
+          "y": 277,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "아날로그 입력 2",
+          "desc": "플러그인 단자 · 아날로그 오디오 입력",
+          "x1": 1743,
+          "x2": 1841,
+          "y": 277,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3",
+          "desc": "플러그인 단자 · 아날로그 오디오 입력",
+          "x1": 1644,
+          "x2": 1742,
+          "y": 277,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "아날로그 입력 4",
+          "desc": "플러그인 단자 · 아날로그 오디오 입력",
+          "x1": 1545,
+          "x2": 1643,
+          "y": 277,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 출력 1",
+          "desc": "플러그인 단자 · 처리된 아날로그 오디오 출력",
+          "x1": 1420,
+          "x2": 1518,
+          "y": 277,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "아날로그 출력 2",
+          "desc": "플러그인 단자 · 처리된 아날로그 오디오 출력",
+          "x1": 1321,
+          "x2": 1419,
+          "y": 277,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "아날로그 출력 3",
+          "desc": "플러그인 단자 · 처리된 아날로그 오디오 출력",
+          "x1": 1221,
+          "x2": 1320,
+          "y": 277,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "아날로그 출력 4",
+          "desc": "플러그인 단자 · 처리된 아날로그 오디오 출력",
+          "x1": 1120,
+          "x2": 1220,
+          "y": 277,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 524,
+          "x2": 599,
+          "y": 174,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스를 다음 장치로 연결",
+          "x1": 524,
+          "x2": 599,
+          "y": 268,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "CONTROL 입력",
+          "desc": "플러그인 단자 · 외부 제어 입력 연결",
+          "x1": 745,
+          "x2": 895,
+          "y": 174,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "LOGIC 출력",
+          "desc": "플러그인 단자 · 외부 장치에 로직 신호 출력",
+          "x1": 745,
+          "x2": 895,
+          "y": 269,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "RS-232",
+          "desc": "D-sub · 외부 직렬 제어 장치 연결",
+          "x1": 294,
+          "x2": 384,
+          "y": 170,
+          "side": "top"
+        },
+        {
+          "n": 14,
+          "label": "Ethernet·PoE+",
+          "desc": "RJ-45 · 제어 네트워크 연결, PoE+ 전원 사용 가능",
+          "x1": 86,
+          "x2": 181,
+          "y": 268,
+          "side": "bottom"
+        },
+        {
+          "n": 15,
+          "label": "DC 전원 입력",
+          "desc": "플러그인 단자 · 외부 DC 전원 공급장치 연결",
+          "x1": 242,
+          "x2": 337,
+          "y": 266,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "bed649dc6e97c2ead4b94ca27ae3bb6811c7025713bcb6894e04ae219985ffbd",
+    "unchangedSha": "76be71f304ddad139ccb9279bd5d58b2031d32ba8d454371c9d36943ca207760"
+  },
+  "blu-dan": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "blu-dan-rear.webp",
+        "width": 4096,
+        "height": 776
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante/AES67 기본 오디오망",
+          "x1": 1760,
+          "x2": 2070,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · Dante/AES67 보조 오디오망",
+          "x1": 2170,
+          "x2": 2490,
+          "y": 250,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "BLU link 입력",
+          "desc": "RJ-45 · BLU link 오디오 버스 입력",
+          "x1": 3180,
+          "x2": 3470,
+          "y": 300,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "BLU link 출력",
+          "desc": "RJ-45 · BLU link 오디오 버스 출력",
+          "x1": 3180,
+          "x2": 3470,
+          "y": 580,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · HiQnet 제어 네트워크",
+          "x1": 2630,
+          "x2": 2920,
+          "y": 550,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "RS-232",
+          "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
+          "x1": 2110,
+          "x2": 2480,
+          "y": 550,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "a5ace58ca1d1c825fb25105c5bf1ada9aef1fee57c81d0f81af75493595c2e4d",
+    "unchangedSha": "ee8036066e4ee9c37846f3e81e149cc90bc3e85742fbb0e98b1172ae767d1916"
+  },
+  "cl01": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "cl01-rear.webp",
+        "width": 515,
+        "height": 264
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "펌웨어 업데이트",
+          "desc": "Micro USB · 펌웨어 업데이트",
+          "x1": 204,
+          "x2": 225,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RS-422 제어",
+          "desc": "4핀 터미널 · 사진 RS422 라벨, 데이터시트 RS-485/RS-422 제어",
+          "x1": 235,
+          "x2": 271,
+          "y": 187,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "RS-232 제어",
+          "desc": "DB9 · PTZ 카메라 직렬 제어",
+          "x1": 281,
+          "x2": 326,
+          "y": 142,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LAN 제어",
+          "desc": "RJ-45 · VISCA over IP 제어",
+          "x1": 343,
+          "x2": 367,
+          "y": 187,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DC 12V 입력",
+          "desc": "DC 잭 · 외부 12V 전원 입력",
+          "x1": 378,
+          "x2": 399,
+          "y": 142,
+          "side": "top"
+        }
+      ],
+      "crop": {
+        "top": 119,
+        "bottom": 45
+      }
+    },
+    "approved": "79b1948beb4a92e47a4cd1486e77830177527f318efb9d31198eb729e8cff6b8",
+    "unchangedSha": "61648534b35c3b469896b1d89f0944118c34e05434b4163d52eb68c933d8f75d"
+  },
+  "dm3": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "dm3-rear.webp",
+        "width": 1082,
+        "height": 476
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "INPUT 1–4",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "x1": 695,
+          "x2": 1004,
+          "y": 143,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "INPUT 5–8",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "x1": 389,
+          "x2": 692,
+          "y": 143,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "INPUT 9–12",
+          "desc": "XLR 마이크·라인 입력 4채널",
+          "y1": 205,
+          "y2": 285,
+          "side": "right",
+          "x": 1022
+        },
+        {
+          "n": 4,
+          "label": "INPUT 13–16 (콤보)",
+          "desc": "XLR/TRS 콤보 입력 4채널",
+          "x1": 389,
+          "x2": 692,
+          "y": 242,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "OUTPUT 1–4",
+          "desc": "XLR 라인 출력 4채널",
+          "x1": 78,
+          "x2": 385,
+          "y": 143,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "OUTPUT 5–8",
+          "desc": "XLR 라인 출력 4채널",
+          "x1": 78,
+          "x2": 385,
+          "y": 242,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "Dante PRIMARY · SECONDARY",
+          "desc": "etherCON 네트워크 포트 2개",
+          "x1": 624,
+          "x2": 779,
+          "y": 378,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "제어 네트워크 RJ-45",
+          "x1": 888,
+          "x2": 960,
+          "y": 387,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "USB TO HOST",
+          "desc": "USB Type-B",
+          "x1": 811,
+          "x2": 859,
+          "y": 400,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "DC INPUT",
+          "desc": "XLR 4핀 전원 입력",
+          "x1": 161,
+          "x2": 235,
+          "y": 379,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "462b7087b86d499835f6427ee34dec70865f7ce84af2d18fbc2f906cee57fced",
+    "unchangedSha": "1ea1f342dce568f4458f3bf1fc4479b227082a69f9eecfff742006e02fdde80a"
+  },
+  "gs108pp": {
+    "prior": {
+      "image": "Front",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 1–4 · PoE+",
+          "desc": "1–4번 1GbE RJ-45 · 데이터 및 PoE+ 연결.",
+          "x1": 233,
+          "x2": 432,
+          "y": 47,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RJ-45 5–8 · PoE+",
+          "desc": "5–8번 1GbE RJ-45 · 데이터 및 PoE+ 연결.",
+          "x1": 461,
+          "x2": 659,
+          "y": 47,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "gs108pp-front.webp",
+        "width": 727,
+        "height": 88
+      }
+    },
+    "approved": "74ab6772337af1d092ca4d12a1b85d749d04acf0c8bd5398283f039077f09250",
+    "unchangedSha": "71f68cc7687fcc96082e232031c65037945dacfd33962283a68c52a42b0a64c7"
+  },
+  "gs116pp": {
+    "prior": {
+      "image": "Front",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 1–16 · PoE+",
+          "desc": "1–16번 1GbE RJ-45 · 전 포트 PoE+ 연결.",
+          "x1": 61,
+          "x2": 728,
+          "y": 43,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "gs116pp-front.webp",
+        "width": 747,
+        "height": 75
+      }
+    },
+    "approved": "ad08840d8c2cdf8be8768078c6541a73ee4783adf24abdf1fb7df026544bd1b2",
+    "unchangedSha": "9633e45579519affe56063fa7073e9637d3c35f4de6e06b054e732b5f42a23f2"
+  },
+  "gs728tppv3": {
+    "prior": {
+      "image": "Front",
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 저장장치",
+          "desc": "전면 USB 2.0 저장장치 연결.",
+          "x1": 161,
+          "x2": 185,
+          "y": 199,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "PoE+ RJ-45 1–24",
+          "desc": "1–24번 1GbE RJ-45 · 전면 PoE+ 포트.",
+          "x1": 800,
+          "x2": 1411,
+          "y": 199,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "SFP 25–28",
+          "desc": "25–28번 전용 1G SFP 포트.",
+          "x1": 1419,
+          "x2": 1547,
+          "y": 199,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "gs728tppv3-front.webp",
+        "width": 1608,
+        "height": 283
+      }
+    },
+    "approved": "f36bc483519d6b9a3b6a6d17795c7eb58d21b716665eb2c121a0f2a2bb4f5766",
+    "unchangedSha": "cafc30330dcc113f062e68a23226e94bfc5a592d3b54207b2030a9292d7bbeb2"
+  },
+  "gsm4212p": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "OOB RJ-45",
+          "desc": "관리 전용 1GbE RJ-45 · 후면 Out-of-band.",
+          "x1": 206,
+          "x2": 294,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RJ-45 콘솔",
+          "desc": "RS-232 콘솔용 RJ-45 · 후면.",
+          "x1": 309,
+          "x2": 401,
+          "y": 230,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "USB-C 콘솔",
+          "desc": "콘솔용 USB Type-C · 후면.",
+          "x1": 410,
+          "x2": 461,
+          "y": 239,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "PoE+ RJ-45 1–8",
+          "desc": "1–8번 1GbE RJ-45 · 후면 PoE+.",
+          "x1": 473,
+          "x2": 1121,
+          "y": 230,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "RJ-45 9–10",
+          "desc": "9–10번 1GbE RJ-45 · PoE 미지원.",
+          "x1": 1133,
+          "x2": 1321,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "SFP 11–12",
+          "desc": "11–12번 1G SFP 포트.",
+          "x1": 1336,
+          "x2": 1511,
+          "y": 230,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "IEC C14 전원",
+          "desc": "후면 AC 전원 인렛 · 전원 스위치는 옆에 위치",
+          "x1": 2078,
+          "x2": 2165,
+          "y": 230,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "gsm4212p-rear.webp",
+        "width": 2400,
+        "height": 393
+      }
+    },
+    "approved": "79079a190461b33a59a9ad6402e4149719860d362eefa2233e49b6cdef4696e3",
+    "unchangedSha": "dac68d504b6a761a44b0c274f32eeb7f2a303ffcc13074e795b851247afedddc"
+  },
+  "gsm4230p": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 콘솔",
+          "desc": "RJ45-DB9 콘솔 케이블용 포트 · 같은 I/O 행의 USB-C 콘솔과 별도 단자",
+          "x1": 72,
+          "x2": 99,
+          "y": 38,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-C 콘솔",
+          "desc": "USB Type-C 콘솔 케이블용 포트 · 같은 I/O 행의 RJ-45 콘솔과 별도 단자",
+          "x1": 105,
+          "x2": 118,
+          "y": 41,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "PoE+ RJ-45 ×24",
+          "desc": "1GbE PoE+ RJ-45 24개 묶음.",
+          "x1": 120,
+          "x2": 393,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "RJ-45 ×2",
+          "desc": "PoE 미지원 1GbE 업링크 2개.",
+          "x1": 396,
+          "x2": 426,
+          "y": 39,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "SFP ×4",
+          "desc": "1G 광 업링크 SFP 4개.",
+          "x1": 429,
+          "x2": 479,
+          "y": 39,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "gsm4230p-rear.webp",
+        "width": 683,
+        "height": 72
+      }
+    },
+    "approved": "e5b23a5e42b22b88bc21110b3f933994ff652508e3a0dc3b158f4d6ab7a485c3",
+    "unchangedSha": "5c747130b67116bcc5b4877411ff8efa293e27f56fe5635248476d372d69006f"
+  },
+  "gsm4230px": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 콘솔",
+          "desc": "RJ45-DB9 콘솔 케이블용 포트 · 같은 I/O 행의 USB-C 콘솔과 별도 단자",
+          "x1": 58,
+          "x2": 84,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-C 콘솔",
+          "desc": "USB Type-C 콘솔 케이블용 포트 · 같은 I/O 행의 RJ-45 콘솔과 별도 단자",
+          "x1": 86,
+          "x2": 98,
+          "y": 43,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "PoE+ RJ-45 ×24",
+          "desc": "1GbE PoE+ RJ-45 24개 묶음.",
+          "x1": 100,
+          "x2": 319,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "RJ-45 ×2",
+          "desc": "PoE 미지원 1GbE 업링크 2개.",
+          "x1": 321,
+          "x2": 350,
+          "y": 40,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "SFP+ ×4",
+          "desc": "1G/10G 광 업링크 SFP+ 4개.",
+          "x1": 352,
+          "x2": 391,
+          "y": 40,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "gsm4230px-rear.webp",
+        "width": 555,
+        "height": 62
+      }
+    },
+    "approved": "83b948631fd39504e0faffe041de65df6f3685906cf8c818b8c3964ba108a201",
+    "unchangedSha": "e540e107e05f161006af3271255ac376cce316d9cc639afe6cd817be41002f51"
+  },
+  "gsm4248p": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 콘솔",
+          "desc": "RJ45-DB9 콘솔 케이블용 포트 · 같은 I/O 행의 USB-C 콘솔과 별도 단자",
+          "x1": 27,
+          "x2": 51,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-C 콘솔",
+          "desc": "USB Type-C 콘솔 케이블용 포트 · 같은 I/O 행의 RJ-45 콘솔과 별도 단자",
+          "x1": 5,
+          "x2": 18,
+          "y": 48,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "PoE+ RJ-45 ×40",
+          "desc": "1GbE PoE+ RJ-45 40개 묶음.",
+          "x1": 52,
+          "x2": 424,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "SFP ×8",
+          "desc": "1G 광 업링크 SFP 8개.",
+          "x1": 427,
+          "x2": 499,
+          "y": 40,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "gsm4248p-rear.webp",
+        "width": 555,
+        "height": 62
+      }
+    },
+    "approved": "e276fc7f1d4ed19f4f62a7498c9d3d0e0e674a223c6e702c4635516255c8d98e",
+    "unchangedSha": "c1d6e7e104471e47e5f620c551156224d1ab6fa0b78b6dca2b3461d8a7fd860a"
+  },
+  "gsm4248px": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "PoE+ RJ45 ×40",
+          "desc": "1GbE PoE+ RJ45 40개 묶음.",
+          "x1": 61,
+          "x2": 520,
+          "y": 44,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "SFP+ ×8",
+          "desc": "10G 업링크 SFP+ 8개.",
+          "x1": 527,
+          "x2": 614,
+          "y": 44,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "gsm4248px-rear.webp",
+        "width": 683,
+        "height": 74
+      }
+    },
+    "approved": "7550a5c15ed092af0795898ed63d5d1ed42b62fd8ba0693fb47d38df52ae4112",
+    "unchangedSha": "8cfdc211144ee335914bca4d78c1eac75ccefccc78923d44529e4f2a83ee94c7"
+  },
+  "nx-1200": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "nx-1200-rear.webp",
+        "width": 4096,
+        "height": 1306
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "디지털 I/O ×4",
+          "desc": "6핀 터미널 1개 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+          "x1": 414,
+          "x2": 978,
+          "y": 451,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RS-232/422/485",
+          "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
+          "x1": 414,
+          "x2": 1399,
+          "y": 757,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "IR/Serial 출력 ×2",
+          "desc": "2핀 터미널 2개 · 1-way IR/Serial 송신 · NetLinx Port 11–12",
+          "x1": 994,
+          "x2": 1399,
+          "y": 451,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "RS-232",
+          "desc": "5핀 터미널 · 양방향 직렬 제어 · NetLinx Port 2",
+          "x1": 1486,
+          "x2": 1997,
+          "y": 757,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "AxLink",
+          "desc": "4핀 터미널 · 외부 AxLink 장치 데이터·전원 공급",
+          "x1": 2241,
+          "x2": 2698,
+          "y": 757,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "LAN 10/100",
+          "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+          "x1": 2783,
+          "x2": 3138,
+          "y": 731,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "4598f7914e9cc6560db2881a02e1fde547915b74042f1bfc641c94d2652f3193",
+    "unchangedSha": "fd16de23cb720ca2a060b001bb0257f2233bf33545d5f07a12982b7d84210b49"
+  },
+  "nx-2200": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "nx-2200-rear.webp",
+        "width": 4096,
+        "height": 789
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "RS-232 ×3",
+          "desc": "2핀 터미널 3개 · 양방향 직렬 제어 · NetLinx Port 2–4",
+          "x1": 173,
+          "x2": 731,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "RS-232/422/485",
+          "desc": "10핀 터미널 · 양방향 직렬 제어 · NetLinx Port 1",
+          "x1": 798,
+          "x2": 1194,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "릴레이 ×4",
+          "desc": "8핀 터미널 1개 · SPST 릴레이 · NetLinx Port 21",
+          "x1": 1273,
+          "x2": 1581,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "디지털 I/O ×4",
+          "desc": "6핀 터미널 1개 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+          "x1": 1661,
+          "x2": 1900,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "IR/Serial 출력 ×4",
+          "desc": "2핀 터미널 4개 · 1-way IR/Serial 송신 · NetLinx Port 11–14",
+          "x1": 1910,
+          "x2": 2150,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "AxLink",
+          "desc": "4핀 터미널 · 외부 AxLink 장치 데이터·전원 공급",
+          "x1": 2190,
+          "x2": 2360,
+          "y": 485,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "ICSLAN",
+          "desc": "RJ-45 · 10/100 Ethernet 격리 제어 네트워크",
+          "x1": 2797,
+          "x2": 2941,
+          "y": 454,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "USB 2.0 Host",
+          "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
+          "x1": 3048,
+          "x2": 3177,
+          "y": 475,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "LAN 10/100",
+          "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+          "x1": 3383,
+          "x2": 3525,
+          "y": 454,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "c91f2c56049da56c9f1009724f4060b2d962f9a4f115f3fe1b0bdfeffe90a152",
+    "unchangedSha": "b2b1b26e90e210c1decb8ff3c8d5494709c1fd0fd59938268ef274174aa91336"
+  },
+  "nx-3200": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "nx-3200-rear.webp",
+        "width": 4096,
+        "height": 769
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "RS-232 ×6",
+          "desc": "5핀 터미널 6개 · 양방향 직렬 제어 · NetLinx Port 2–4, 6–8",
+          "x1": 191,
+          "x2": 820,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "RS-232/422/485 ×2",
+          "desc": "10핀 터미널 2개 · 양방향 직렬 제어 · NetLinx Port 1, 5",
+          "x1": 869,
+          "x2": 1216,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "릴레이 ×8",
+          "desc": "8핀 터미널 2개 · SPST 릴레이 · NetLinx Port 21",
+          "x1": 1289,
+          "x2": 1634,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "디지털 I/O ×8",
+          "desc": "10핀 터미널 · 접점 폐쇄 및 전압 감지 · NetLinx Port 22",
+          "x1": 1697,
+          "x2": 1900,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "IR/Serial 출력 ×8",
+          "desc": "2핀 터미널 8개 · 1-way IR/Serial 송신 · NetLinx Port 11–18",
+          "x1": 1910,
+          "x2": 2165,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "AxLink ×2",
+          "desc": "4핀 터미널 2개 · 외부 AxLink 장치 데이터·전원 공급",
+          "x1": 2200,
+          "x2": 2380,
+          "y": 469,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "ICSLAN",
+          "desc": "RJ-45 · 10/100 Ethernet 격리 제어 네트워크",
+          "x1": 2862,
+          "x2": 3006,
+          "y": 440,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "USB 2.0 Host",
+          "desc": "후면 USB Type-A 1개 · 전면 포함 USB 2.0 호스트 총 2개",
+          "x1": 3112,
+          "x2": 3244,
+          "y": 462,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "LAN 10/100",
+          "desc": "RJ-45 · 10/100 Ethernet 제어 네트워크",
+          "x1": 3445,
+          "x2": 3588,
+          "y": 440,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "9449de076b863be5c8cf90430bc0f694eff0e8984ec54122696840755e06dec2",
+    "unchangedSha": "419c40571920e18ed7a9036c32f974da8a5e592e7658788296f6a6ca374ae78a"
+  },
+  "rally-mic-pod-hub": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "rally-mic-pod-hub-diagram.webp",
+        "width": 1080,
+        "height": 530
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "고정 케이블",
+          "desc": "12핀 고정 케이블 · Table Hub 또는 추가 Mic Pod Hub 연결 · 공식 설계 도면",
+          "x1": 77,
+          "x2": 146,
+          "y": 375,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "Mic Pod 연결 1",
+          "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+          "x1": 625,
+          "x2": 669,
+          "y": 255,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "Mic Pod 연결 2",
+          "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+          "x1": 759,
+          "x2": 806,
+          "y": 192,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "Mic Pod 연결 3",
+          "desc": "12핀 소켓 · Mic Pod 또는 추가 Hub 연결 · 공식 설계 도면",
+          "x1": 858,
+          "x2": 894,
+          "y": 286,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "91a6fa5e79de47bd905bece9e9c14fd5d43087dfb5efb803f4c48c3741a8af92",
+    "unchangedSha": "8b7c63705783dc713a5501306ee6fa86cbfffd071ca7c06cd9d2d0ca7886f855"
+  },
+  "rally-mic-pod": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "rally-mic-pod-diagram.webp",
+        "width": 1080,
+        "height": 480
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "고정 케이블 출력",
+          "desc": "12핀 고정 케이블 · Table Hub 또는 Mic Pod Hub 연결 · 공식 설계 도면",
+          "x1": 61,
+          "x2": 137,
+          "y": 249,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "데이지체인 입력",
+          "desc": "12핀 입력 소켓 · 추가 Mic Pod 연결 · 공식 설계 도면",
+          "x1": 808,
+          "x2": 871,
+          "y": 248,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "3091a14623c7dcbde723fc600f4837661c6d8eece9f2dadedc4b939b6728591e",
+    "unchangedSha": "2b4f182c2537b9e7706d632ffa215fba272fb1270dacd382dc86195b6a12fdc8"
+  },
+  "rio1608-d3": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "rio1608-d3-rear.webp",
+        "width": 1087,
+        "height": 308
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "Dante PRIMARY · SECONDARY",
+          "desc": "etherCON 네트워크 포트 2개",
+          "x1": 119,
+          "x2": 232,
+          "y": 87,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "LAN · 제어",
+          "desc": "RJ-45 제어 네트워크",
+          "x1": 304,
+          "x2": 355,
+          "y": 83,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "38c5f30e9a72cec6d56b207449998bc50eda36c2029e14a284357322b69ffd23",
+    "unchangedSha": "2a907bd2f231a1d4aafbc231da01e9fdac6e0174c0f04af7e3b072da60258919"
+  },
+  "rio3224-d3": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "rio3224-d3-rear.webp",
+        "width": 1084,
+        "height": 515
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "Dante PRIMARY",
+          "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결",
+          "x1": 127,
+          "x2": 168,
+          "y": 80,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "Dante SECONDARY",
+          "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
+          "x1": 189,
+          "x2": 230,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "NETWORK",
+          "desc": "RJ-45 · 컴퓨터 제어 네트워크에 연결",
+          "x1": 266,
+          "x2": 308,
+          "y": 81,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "AC 전원 입력 A",
+          "desc": "IEC · 전원 코드 A 연결",
+          "x1": 175,
+          "x2": 233,
+          "y": 385,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "AC 전원 입력 B",
+          "desc": "IEC · 전원 코드 B 연결",
+          "x1": 289,
+          "x2": 347,
+          "y": 385,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "859f7a7be4f54594c18f9036fd4e35da3e99a912990833221f2ead3ab11012f0",
+    "unchangedSha": "8086f26e93c156ec943cf14bae5cb8e2a93ef269cc72b686190a793c4ffe063c"
+  },
+  "strong-usb-cable": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "strong-usb-cable-diagram.webp",
+        "width": 950,
+        "height": 300
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB-C",
+          "desc": "케이블 한쪽 USB-C 커넥터 · 공식 제품 사진",
+          "x1": 64,
+          "x2": 455,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A",
+          "desc": "케이블 반대쪽 USB-A 커넥터 · 공식 제품 사진",
+          "x1": 530,
+          "x2": 880,
+          "y": 112,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "6607f8263593b992efa8456e1e2f25080390c6ac97af5e08be226fd3f60f930f",
+    "unchangedSha": "3f5600b077b0a8e3eb0a97e8cde99d54bd49eba8469ea4c07f4583b3a203d04c"
+  },
+  "tio1608-d2": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "tio1608-d2-rear.webp",
+        "width": 1086,
+        "height": 222
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "Dante PRIMARY",
+          "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결",
+          "x1": 744,
+          "x2": 793,
+          "y": 147,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "Dante SECONDARY",
+          "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
+          "x1": 811,
+          "x2": 860,
+          "y": 147,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 전원 코드 연결",
+          "x1": 56,
+          "x2": 111,
+          "y": 110,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "d8fc390bbe0dcbc8b628c3692cf51e2f324428ab0a710ded87ff1c3e94c73608",
+    "unchangedSha": "5650a9d7e7bf3121ecbf11d7821353a018bab3f2681b81fa8c69ab85fe19f7ea"
+  },
+  "tr315": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "tr315-rear.webp",
+        "width": 326,
+        "height": 350
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN/PoE+",
+          "desc": "RJ-45 · IP 영상·VISCA 네트워크 제어·PoE+ 전원",
+          "x1": 40,
+          "x2": 77,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RS-232",
+          "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+          "x1": 82,
+          "x2": 106,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "RS-422",
+          "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+          "x1": 109,
+          "x2": 140,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "USB 3.0 출력",
+          "desc": "USB Type-B · UVC 영상·오디오 출력",
+          "x1": 144,
+          "x2": 168,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "오디오 입력",
+          "desc": "AUDIO IN · MIC/LINE 입력",
+          "x1": 171,
+          "x2": 194,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 출력",
+          "desc": "HDMI 영상 출력",
+          "x1": 199,
+          "x2": 231,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "3G-SDI 출력",
+          "desc": "BNC · 최대 1080p60 영상 출력",
+          "x1": 234,
+          "x2": 258,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "DC 12V 입력",
+          "desc": "외부 12V DC 전원 입력",
+          "x1": 263,
+          "x2": 282,
+          "y": 316,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 237,
+        "bottom": 0
+      }
+    },
+    "approved": "fa92c7839631970cb4ec6a8edf8dfc1d17fec179a059189f483b16a8c5eb524e",
+    "unchangedSha": "3eaaad7f45863292e2a4192d3923741ac6ad5cb799b187c73103a6d6d33f2078"
+  },
+  "tr335": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "tr335-rear.webp",
+        "width": 326,
+        "height": 350
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN/PoE+",
+          "desc": "RJ-45 · IP 영상·VISCA 네트워크 제어·PoE+ 전원",
+          "x1": 40,
+          "x2": 77,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RS-232",
+          "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+          "x1": 82,
+          "x2": 106,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "RS-422",
+          "desc": "직렬 카메라 제어 · VISCA/PELCO-D",
+          "x1": 109,
+          "x2": 140,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "USB 3.0 출력",
+          "desc": "USB Type-B · UVC 영상·오디오 출력",
+          "x1": 144,
+          "x2": 168,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "오디오 입력",
+          "desc": "AUDIO IN · MIC/LINE 입력",
+          "x1": 171,
+          "x2": 194,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 출력",
+          "desc": "HDMI 영상 출력",
+          "x1": 199,
+          "x2": 231,
+          "y": 316,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "3G-SDI 출력",
+          "desc": "BNC · 최대 1080p60 영상 출력",
+          "x1": 234,
+          "x2": 258,
+          "y": 278,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "DC 12V 입력",
+          "desc": "외부 12V DC 전원 입력",
+          "x1": 263,
+          "x2": 282,
+          "y": 316,
+          "side": "bottom"
+        }
+      ],
+      "crop": {
+        "top": 237,
+        "bottom": 0
+      }
+    },
+    "approved": "d111ac7a5e0ab565824f9437c5f77423822a7d9d353450290484b70db64c050e",
+    "unchangedSha": "4eca1783c7289d5f7bb77a7832eb1912172c9bb23eaffb7a92b237ed66feba95"
+  },
+  "tr535": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "tr535-rear.webp",
+        "width": 545,
+        "height": 425
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "Kensington",
+          "desc": "도난 방지 케이블 슬롯",
+          "x1": 49,
+          "x2": 71,
+          "y": 242,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "RS-232",
+          "desc": "VISCA·PELCO-D/P 카메라 제어",
+          "x1": 145,
+          "x2": 185,
+          "y": 214,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "RS-422",
+          "desc": "VISCA·PELCO-D/P 카메라 제어",
+          "x1": 191,
+          "x2": 242,
+          "y": 214,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "MIC IN",
+          "desc": "마이크 입력",
+          "x1": 262,
+          "x2": 286,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "LINE IN",
+          "desc": "라인 입력",
+          "x1": 306,
+          "x2": 332,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 1",
+          "desc": "HDMI 영상·오디오 출력 1",
+          "x1": 53,
+          "x2": 103,
+          "y": 319,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "3G-SDI",
+          "desc": "1080p 영상·오디오 출력",
+          "x1": 125,
+          "x2": 164,
+          "y": 314,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "HDMI 2",
+          "desc": "HDMI 영상·오디오 출력 2",
+          "x1": 192,
+          "x2": 243,
+          "y": 319,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "USB 3.0",
+          "desc": "USB 3.2 Gen 1 영상·오디오 출력",
+          "x1": 321,
+          "x2": 369,
+          "y": 314,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "PoE++",
+          "desc": "2.5GbE 네트워크·PoE++ 입력",
+          "x1": 378,
+          "x2": 429,
+          "y": 314,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "DC 12V",
+          "desc": "DC 12V 전원 입력",
+          "x1": 449,
+          "x2": 495,
+          "y": 316,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "ba2341c5c8f3d09cbc715c308594c5a1e9ee44d60219423d72de936484a4b91e",
+    "unchangedSha": "aa2138aae704ac9feb7ec9a85e920cf60c403b28e4301400800cd6b71a52738d"
+  },
+  "varia-sl50": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "varia-sl50-rear.webp",
+        "width": 2170,
+        "height": 3072
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 Ethernet",
+          "desc": "Ethernet · PoE(802.3af)",
+          "x1": 850,
+          "x2": 1165,
+          "y": 1620,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "ca0444603bef199283a6ac75684f7fd449f90b71cabb2f29ba05f53c0caa1105",
+    "unchangedSha": "fc9481a478669b5c94edf8a32cf623f5c68daf106c3977debd0ce0e532d6674f"
+  },
+  "varia-sl80": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "varia-sl80-rear.webp",
+        "width": 4087,
+        "height": 3072
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 Ethernet",
+          "desc": "Ethernet · PoE(802.3af)",
+          "x1": 1810,
+          "x2": 2105,
+          "y": 1365,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "eb67bcf34ee571a9f00990cd3a68ea6a54a6ed425eebcfb4ec786f2b87369380",
+    "unchangedSha": "a68da469b2245ebf39b4aec4fda77f34e1f1e2136dec989a2b40e81ded17c96c"
+  },
+  "xsm4216f": {
+    "prior": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "RJ-45 콘솔",
+          "desc": "RJ45-DB9 콘솔 케이블용 포트 · 같은 I/O 행의 USB-C 콘솔과 별도 단자",
+          "x1": 55,
+          "x2": 81,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-C 콘솔",
+          "desc": "USB Type-C 콘솔 케이블용 포트 · 같은 I/O 행의 RJ-45 콘솔과 별도 단자",
+          "x1": 85,
+          "x2": 98,
+          "y": 44,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "SFP+ ×16",
+          "desc": "1G/10G 광 업링크 SFP+ 16개 묶음.",
+          "x1": 99,
+          "x2": 403,
+          "y": 44,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "xsm4216f-rear.webp",
+        "width": 555,
+        "height": 62
+      }
+    },
+    "approved": "2960aeea0e069001449b54513e591c413d217e378b16e7de52928e59d0a4f6d6",
+    "unchangedSha": "fe38fd6f60df688e6a036180ff42924b52bc2d1e1855b6ebdcebd945a6e05689"
+  }
+}

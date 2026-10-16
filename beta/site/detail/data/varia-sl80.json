@@ -399,9 +399,12 @@
         "desc": "Ethernet · PoE(802.3af)",
         "x1": 1810,
         "x2": 2105,
-        "y": 1365,
         "side": "bottom"
       }
-    ]
+    ],
+    "crop": {
+      "top": 1150,
+      "bottom": 1500
+    }
   }
 }

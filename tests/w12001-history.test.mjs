@@ -7,6 +7,7 @@ import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
 import { beforeW12005Product } from './w12005-history.mjs';
 import { beforeMx392Ulxd4qFollowupProduct } from './mx392-ulxd4q-followup-history.mjs';
 import { beforeW20261015_005Product } from './w20261015-005-history.mjs';
+import { beforeW16015Group5Product } from './w16015-group5-history.mjs';
 
 const records = JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-001-prior-coords.json', import.meta.url), 'utf8'));
 const directory = new URL('../beta/site/detail/data/', import.meta.url);
@@ -19,7 +20,7 @@ test('W-001 coordinate history restores exactly the recorded markers', () => {
   assert.equal(Object.keys(records).length, 39);
   let changedMarkers = 0;
   for (const [slug, record] of Object.entries(records)) {
-    const current = beforeW20261015_005Product(beforeW12003Product(beforeW12005Product(beforeMx392Ulxd4qFollowupProduct(JSON.parse(readFileSync(new URL(`${slug}.json`, directory), 'utf8')), slug), slug), slug), slug);
+    const current = beforeW20261015_005Product(beforeW12003Product(beforeW12005Product(beforeMx392Ulxd4qFollowupProduct(beforeW16015Group5Product(JSON.parse(readFileSync(new URL(`${slug}.json`, directory), 'utf8')), slug), slug), slug), slug), slug);
     const restored = beforeW12001Product(current, slug);
     const now = coords(current);
     assert.equal(sha(now), record.approved, slug);

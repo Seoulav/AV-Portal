@@ -8,6 +8,7 @@ import { beforeW013Product, beforeW013Raw, w013Slugs } from './w013-history.mjs'
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW12002Product } from './w12002-wording-history.mjs';
 import { beforeW12005Raw, beforeW12005Product } from './w12005-history.mjs';
+import { beforeW16015Group5Raw, beforeW16015Group5Product } from './w16015-group5-history.mjs';
 
 const approved = JSON.parse(readFileSync(new URL('../Work/기록/W-20261006-005-approved-maps.json', import.meta.url)));
 const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url)));
@@ -29,7 +30,7 @@ test('ten approved rear maps cover only photographed connectors and survive vali
     const image = product.images.find(image => image.role === 'Rear');
     const [width, height] = image.resolution.split(/[x×]/).map(Number);
     assert.deepEqual(map.measuredImage, { file: image.file, width, height }, slug);
-    assert.equal(hash(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeW12005Product(product,slug),slug), slug),slug),slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
+    assert.equal(hash(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12002Product(beforeW12005Product(beforeW16015Group5Product(product,slug),slug),slug), slug),slug),slug)), approved[slug].coreSha, `${slug}: all other data stays fixed`);
   }
 });
 
@@ -50,7 +51,7 @@ test('unseen connector rows are not assigned photograph numbers', () => {
 test('historical inverse rejects marker edits and exposes unrelated current changes', () => {
   for (const slug of Object.keys(counts)) {
     const product = read(slug);
-    const older = beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(beforeW013Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug), slug);
+    const older = beforeW06005Raw(beforeW12001Raw(beforeW12005Raw(beforeW013Raw(beforeW16015Group5Raw(JSON.stringify(product, null, 2) + '\n', slug), slug), slug), slug), slug);
     const changedIo = structuredClone(product);
     changedIo.io = [];
     if (slug === 'sx-1216-rti') {
@@ -58,7 +59,7 @@ test('historical inverse rejects marker edits and exposes unrelated current chan
     } else if (w013Slugs.has(slug)) {
       assert.throws(() => beforeW013Product(changedIo, slug), /unexpected W-013(?: B2)? I\/O change/, slug);
     } else {
-      assert.deepEqual(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12005Product(changedIo, slug), slug), slug), slug).io, [], slug);
+      assert.deepEqual(beforeW013Product(beforeW06005Product(beforeW12001Product(beforeW12005Product(beforeW16015Group5Product(changedIo, slug), slug), slug), slug), slug).io, [], slug);
     }
     const changedTitle = structuredClone(product);
     changedTitle.title = `${changedTitle.title ?? ''} preserved`;
