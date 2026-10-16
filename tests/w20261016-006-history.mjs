@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW20261016_007Product } from './w20261016-007-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-006-prior-fields.json', import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(JSON.stringify(value ?? null)).digest('hex');
@@ -8,10 +9,11 @@ const sha = value => createHash('sha256').update(JSON.stringify(value ?? null)).
 // fields continue into older whole-product assertions.
 export function beforeW20261016_006Product(current, slug) {
   if (slug !== 'u-bridge-3') return current;
+  const priorW007 = beforeW20261016_007Product(current, slug);
   for (const field of ['images', 'portMap']) {
-    if (sha(current[field]) !== fixture.approved[field]) throw new Error(`u-bridge-3: unexpected W-006 ${field} change`);
+    if (sha(priorW007[field]) !== fixture.approved[field]) throw new Error(`u-bridge-3: unexpected W-006 ${field} change`);
   }
-  const result = structuredClone(current);
+  const result = structuredClone(priorW007);
   for (const field of ['images', 'portMap']) result[field] = structuredClone(fixture.prior[field]);
   return result;
 }
