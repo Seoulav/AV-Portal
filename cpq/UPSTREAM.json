@@ -959,9 +959,9 @@
     {
       "path": "data/approved/labor-mappings.json",
       "upstreamSha256": "3167389175c5a64415f17d156a09d5b4beafdd5090e6859b251eaf2de8eb6e07",
-      "sha256": "7aa217a1edddb7e6dd59e35ee9baec6e62edefe05e5b1dac78922133f8689fb6",
+      "sha256": "ba9b0a2d58897d75864661eaa3852686a8c7fea14f4f0bea98f6a5c1ddb0f9f6",
       "task": "B-20261016-07",
-      "summary": "회의실 견적 샘플 노무비 단가와 앱 계산이 일치한 품셈 연결 76건의 confirmed를 true로, note를 확인 근거로 바꿈. 다른 칸·순서는 원본 그대로."
+      "summary": "회의실 견적 샘플 노무비 단가와 앱 계산이 일치한 품셈 연결 76건의 confirmed를 true로, note를 확인 근거로 바꿈. 이어서 샘플과 달랐던 4건(AUD-0308·AUD-0073·CBL-0091·TVD-0036)은 사용자 확인(앱 계산이 맞음)으로 true. 다른 칸·순서는 원본 그대로."
     }
   ]
 }
