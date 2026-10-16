@@ -1,3 +1,4 @@
+import {beforeW16015RallyProduct} from './w16015-rally-history.mjs';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
@@ -7,6 +8,7 @@ const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261014-001-pri
 const hash=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
 export const logitechW14001Slugs=new Set(Object.keys(fixture));
 export function beforeLogitechW14001Product(current,slug){
+  current=beforeW16015RallyProduct(current,slug);
   if(!logitechW14001Slugs.has(slug))return current;
   const {prior,approved}=fixture[slug];
   for(const [field,expected] of Object.entries(approved)){

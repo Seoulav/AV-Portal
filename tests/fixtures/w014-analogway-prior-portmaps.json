@@ -1,0 +1,1462 @@
+{
+  "aquilon-rsalpha": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rsalpha-rear.webp",
+      "width": 1800,
+      "height": 716
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 153,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 153,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 153,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 457,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 457,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 457,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 457,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 457,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 567,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs1": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs1-rear.webp",
+      "width": 1800,
+      "height": 727
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 157,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 157,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 157,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "DisplayPort 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 319,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "SDI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 319,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 319,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 469,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 574,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs2": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs2-rear.webp",
+      "width": 1800,
+      "height": 716
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 156,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 156,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 156,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "DisplayPort 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 317,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "SDI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 317,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 317,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "HDMI 출력 카드 · 셋째 줄 오른쪽",
+        "desc": "사진의 셋째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 478,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 468,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 468,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 468,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 468,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 468,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 574,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs3": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs3-rear.webp",
+      "width": 1800,
+      "height": 932
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 180,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 180,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 180,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 344,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "SDI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 344,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 344,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 왼쪽",
+        "desc": "사진의 셋째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 507,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 가운데",
+        "desc": "사진의 셋째 줄 가운데 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 507,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 출력 카드 · 셋째 줄 오른쪽",
+        "desc": "사진의 셋째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 507,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 653,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 653,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 653,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 653,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 653,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 764,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs4": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs4-rear.webp",
+      "width": 1800,
+      "height": 914
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 333,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "SDI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 333,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 333,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 왼쪽",
+        "desc": "사진의 셋째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 495,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 가운데",
+        "desc": "사진의 셋째 줄 가운데 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 495,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 출력 카드 · 셋째 줄 오른쪽",
+        "desc": "사진의 셋째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 495,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "HDMI 출력 카드 · 넷째 줄 오른쪽",
+        "desc": "사진의 넷째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 658,
+        "side": "bottom"
+      },
+      {
+        "n": 16,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 768,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs5": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs5-rear.webp",
+      "width": 1800,
+      "height": 991
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 169,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 316,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 316,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 316,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 왼쪽",
+        "desc": "사진의 셋째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 463,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 가운데",
+        "desc": "사진의 셋째 줄 가운데 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 463,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 출력 카드 · 셋째 줄 오른쪽",
+        "desc": "사진의 셋째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 463,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "SDI 입력 카드 · 넷째 줄 왼쪽",
+        "desc": "사진의 넷째 줄 왼쪽 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 610,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "SDI 입력 카드 · 넷째 줄 가운데",
+        "desc": "사진의 넷째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 610,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "HDMI 출력 카드 · 넷째 줄 오른쪽",
+        "desc": "사진의 넷째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 610,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 741,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 741,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 741,
+        "side": "bottom"
+      },
+      {
+        "n": 16,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 741,
+        "side": "bottom"
+      },
+      {
+        "n": 17,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 741,
+        "side": "bottom"
+      },
+      {
+        "n": 18,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 851,
+        "side": "bottom"
+      }
+    ]
+  },
+  "aquilon-rs6": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "aquilon-rs6-rear.webp",
+      "width": 1800,
+      "height": 968
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "HDMI 입력 카드 · 첫째 줄 왼쪽",
+        "desc": "사진의 첫째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 167,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "HDMI 입력 카드 · 첫째 줄 가운데",
+        "desc": "사진의 첫째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 167,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 출력 카드 · 첫째 줄 오른쪽",
+        "desc": "사진의 첫째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 167,
+        "side": "top"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 카드 · 둘째 줄 왼쪽",
+        "desc": "사진의 둘째 줄 왼쪽 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 307,
+        "side": "top",
+        "labelX": 256
+      },
+      {
+        "n": 5,
+        "label": "HDMI 입력 카드 · 둘째 줄 가운데",
+        "desc": "사진의 둘째 줄 가운데 카드에 인쇄된 HDMI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 307,
+        "side": "top",
+        "labelX": 760.5
+      },
+      {
+        "n": 6,
+        "label": "HDMI 출력 카드 · 둘째 줄 오른쪽",
+        "desc": "사진의 둘째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 307,
+        "side": "top",
+        "labelX": 1280
+      },
+      {
+        "n": 7,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 왼쪽",
+        "desc": "사진의 셋째 줄 왼쪽 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 450,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "DisplayPort 입력 카드 · 셋째 줄 가운데",
+        "desc": "사진의 셋째 줄 가운데 카드에 인쇄된 DisplayPort IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 450,
+        "side": "bottom"
+      },
+      {
+        "n": 9,
+        "label": "HDMI 출력 카드 · 셋째 줄 오른쪽",
+        "desc": "사진의 셋째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 450,
+        "side": "bottom"
+      },
+      {
+        "n": 10,
+        "label": "SDI 입력 카드 · 넷째 줄 왼쪽",
+        "desc": "사진의 넷째 줄 왼쪽 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 194,
+        "x2": 558,
+        "y": 587,
+        "side": "bottom"
+      },
+      {
+        "n": 11,
+        "label": "SDI 입력 카드 · 넷째 줄 가운데",
+        "desc": "사진의 넷째 줄 가운데 카드에 인쇄된 SDI IN 1–4 · 장착 카드 구성 예시",
+        "x1": 700,
+        "x2": 1061,
+        "y": 587,
+        "side": "bottom"
+      },
+      {
+        "n": 12,
+        "label": "HDMI 출력 카드 · 넷째 줄 오른쪽",
+        "desc": "사진의 넷째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 587,
+        "side": "bottom"
+      },
+      {
+        "n": 13,
+        "label": "HDMI 출력 카드 · 다섯째 줄 오른쪽",
+        "desc": "사진의 다섯째 줄 오른쪽 카드에 인쇄된 HDMI OUT 1–4 · 장착 카드 구성 예시",
+        "x1": 1215,
+        "x2": 1585,
+        "y": 728,
+        "side": "bottom"
+      },
+      {
+        "n": 14,
+        "label": "USB",
+        "desc": "후면 USB 단자 2개 · UPDATE/RECOVERY 표기 영역",
+        "x1": 194,
+        "x2": 246,
+        "y": 729,
+        "side": "bottom"
+      },
+      {
+        "n": 15,
+        "label": "SYNC IN/OUT",
+        "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 RJ-45 단자",
+        "x1": 261,
+        "x2": 563,
+        "y": 729,
+        "side": "bottom"
+      },
+      {
+        "n": 16,
+        "label": "LOCK",
+        "desc": "LOCK INPUT 및 LOOP OUT BNC 단자",
+        "x1": 680,
+        "x2": 805,
+        "y": 729,
+        "side": "bottom"
+      },
+      {
+        "n": 17,
+        "label": "LAN",
+        "desc": "LAN 표기의 Neutrik RJ-45 연결",
+        "x1": 825,
+        "x2": 894,
+        "y": 729,
+        "side": "bottom"
+      },
+      {
+        "n": 18,
+        "label": "멀티뷰어 1·2",
+        "desc": "MULTIVIEWERS 1·2 표기의 HDMI 출력",
+        "x1": 914,
+        "x2": 1065,
+        "y": 729,
+        "side": "bottom"
+      },
+      {
+        "n": 19,
+        "label": "Dante 1·2",
+        "desc": "Dante 1ST·2ND 표기의 RJ-45 연결",
+        "x1": 991,
+        "x2": 1073,
+        "y": 835,
+        "side": "bottom"
+      }
+    ]
+  },
+  "pulse-4k": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "pulse-4k-rear.webp",
+      "width": 1800,
+      "height": 451
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "선택형 SDI 입력 1·2",
+        "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+        "x1": 145,
+        "x2": 310,
+        "y": 282,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "12G-SDI 입력 3·4",
+        "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+        "x1": 337,
+        "x2": 490,
+        "y": 282,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 입력 1·2",
+        "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+        "x1": 154,
+        "x2": 310,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 5–8·루프",
+        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+        "x1": 337,
+        "x2": 866,
+        "y": 375,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DisplayPort 입력 9·10",
+        "desc": "IN #9·10의 DisplayPort 1.2 입력",
+        "x1": 908,
+        "x2": 1080,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "PGM 출력 1·2",
+        "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+        "x1": 1106,
+        "x2": 1413,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "멀티뷰어 출력",
+        "desc": "MVW 표기의 HDMI·SDI 출력",
+        "x1": 1445,
+        "x2": 1575,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "Genlock·Loop",
+        "desc": "GENLOCK 입력 및 LOOP BNC",
+        "x1": 1445,
+        "x2": 1580,
+        "y": 281,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "CONTROL",
+        "desc": "CONTROL 표기의 RJ-45 제어 연결",
+        "x1": 1600,
+        "x2": 1675,
+        "y": 348,
+        "side": "bottom"
+      }
+    ]
+  },
+  "eikos-4k": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "eikos-4k-rear.webp",
+      "width": 1800,
+      "height": 451
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "선택형 SDI 입력 1·2",
+        "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+        "x1": 145,
+        "x2": 310,
+        "y": 282,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "12G-SDI 입력 3·4",
+        "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+        "x1": 337,
+        "x2": 490,
+        "y": 282,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 입력 1·2",
+        "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+        "x1": 154,
+        "x2": 310,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 5–8·루프",
+        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+        "x1": 337,
+        "x2": 866,
+        "y": 375,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DisplayPort 입력 9·10",
+        "desc": "IN #9·10의 DisplayPort 1.2 입력",
+        "x1": 908,
+        "x2": 1080,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "PGM 출력 1·2",
+        "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+        "x1": 1106,
+        "x2": 1413,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "멀티뷰어 출력",
+        "desc": "MVW 표기의 HDMI·SDI 출력",
+        "x1": 1445,
+        "x2": 1575,
+        "y": 376,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "Genlock·Loop",
+        "desc": "GENLOCK 입력 및 LOOP BNC",
+        "x1": 1445,
+        "x2": 1580,
+        "y": 281,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "CONTROL",
+        "desc": "CONTROL 표기의 RJ-45 제어 연결",
+        "x1": 1600,
+        "x2": 1675,
+        "y": 348,
+        "side": "bottom"
+      }
+    ]
+  },
+  "zenith-100": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "zenith-100-rear.webp",
+      "width": 1800,
+      "height": 587
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "선택형 SDI 입력 1·2",
+        "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+        "x1": 145,
+        "x2": 307,
+        "y": 397,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "12G-SDI 입력 3·4",
+        "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+        "x1": 335,
+        "x2": 490,
+        "y": 397,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 입력 1·2",
+        "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+        "x1": 150,
+        "x2": 310,
+        "y": 493,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 5–8·루프",
+        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+        "x1": 335,
+        "x2": 870,
+        "y": 493,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DisplayPort 입력 9·10",
+        "desc": "IN #9·10의 DisplayPort 1.2 입력",
+        "x1": 907,
+        "x2": 1070,
+        "y": 493,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "PGM 출력 1·2",
+        "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+        "x1": 1090,
+        "x2": 1420,
+        "y": 493,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "멀티뷰어 출력",
+        "desc": "MVW 표기의 HDMI·SDI 출력",
+        "x1": 1430,
+        "x2": 1575,
+        "y": 493,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "HDMI 입력 11–13",
+        "desc": "상단 IN #11–13 HDMI 입력",
+        "x1": 1023,
+        "x2": 1287,
+        "y": 327,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "PGM 출력 3·4",
+        "desc": "상단 OUT #3·4의 HDMI·SDI·SFP+ 미러 출력",
+        "x1": 1290,
+        "x2": 1590,
+        "y": 327,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "아날로그 오디오",
+        "desc": "LINE IN 1·2 및 LINE OUT 1·2 단자",
+        "x1": 780,
+        "x2": 907,
+        "y": 392,
+        "side": "top"
+      },
+      {
+        "n": 11,
+        "label": "Dante 네트워크",
+        "desc": "Dante PRIMARY·SECONDARY RJ-45 연결",
+        "x1": 936,
+        "x2": 1065,
+        "y": 390,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "Genlock·Loop",
+        "desc": "GENLOCK 입력 및 LOOP BNC",
+        "x1": 1442,
+        "x2": 1583,
+        "y": 399,
+        "side": "top"
+      },
+      {
+        "n": 13,
+        "label": "CONTROL",
+        "desc": "CONTROL 표기의 RJ-45 제어 연결",
+        "x1": 1599,
+        "x2": 1675,
+        "y": 449,
+        "side": "bottom"
+      }
+    ]
+  },
+  "zenith-200": {
+    "image": "Rear",
+    "measuredImage": {
+      "file": "zenith-200-rear.webp",
+      "width": 1800,
+      "height": 596
+    },
+    "items": [
+      {
+        "n": 1,
+        "label": "선택형 SDI 입력 1·2",
+        "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
+        "x1": 145,
+        "x2": 307,
+        "y": 404,
+        "side": "top"
+      },
+      {
+        "n": 2,
+        "label": "12G-SDI 입력 3·4",
+        "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
+        "x1": 335,
+        "x2": 490,
+        "y": 404,
+        "side": "top"
+      },
+      {
+        "n": 3,
+        "label": "HDMI 입력 1·2",
+        "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
+        "x1": 150,
+        "x2": 310,
+        "y": 500,
+        "side": "bottom"
+      },
+      {
+        "n": 4,
+        "label": "HDMI 입력 5–8·루프",
+        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
+        "x1": 335,
+        "x2": 870,
+        "y": 500,
+        "side": "bottom"
+      },
+      {
+        "n": 5,
+        "label": "DisplayPort 입력 9·10",
+        "desc": "IN #9·10의 DisplayPort 1.2 입력",
+        "x1": 907,
+        "x2": 1070,
+        "y": 500,
+        "side": "bottom"
+      },
+      {
+        "n": 6,
+        "label": "PGM 출력 1·2",
+        "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
+        "x1": 1090,
+        "x2": 1420,
+        "y": 500,
+        "side": "bottom"
+      },
+      {
+        "n": 7,
+        "label": "멀티뷰어 출력",
+        "desc": "MVW 표기의 HDMI·SDI 출력",
+        "x1": 1430,
+        "x2": 1575,
+        "y": 500,
+        "side": "bottom"
+      },
+      {
+        "n": 8,
+        "label": "HDMI 입력 11–13",
+        "desc": "상단 왼쪽 IN #11–13 HDMI 입력",
+        "x1": 324,
+        "x2": 577,
+        "y": 337,
+        "side": "top"
+      },
+      {
+        "n": 9,
+        "label": "PGM 출력 3·4",
+        "desc": "상단 왼쪽 OUT #3·4의 HDMI·SDI·SFP+ 미러 출력",
+        "x1": 580,
+        "x2": 890,
+        "y": 337,
+        "side": "top"
+      },
+      {
+        "n": 10,
+        "label": "HDMI 입력 14–16",
+        "desc": "상단 오른쪽 IN #14–16 HDMI 입력",
+        "x1": 1023,
+        "x2": 1287,
+        "y": 337,
+        "side": "top"
+      },
+      {
+        "n": 11,
+        "label": "PGM 출력 5·6",
+        "desc": "상단 오른쪽 OUT #5·6의 HDMI·SDI·SFP+ 미러 출력",
+        "x1": 1290,
+        "x2": 1590,
+        "y": 337,
+        "side": "top"
+      },
+      {
+        "n": 12,
+        "label": "아날로그 오디오",
+        "desc": "LINE IN 1·2 및 LINE OUT 1·2 단자",
+        "x1": 780,
+        "x2": 907,
+        "y": 399,
+        "side": "top"
+      },
+      {
+        "n": 13,
+        "label": "Dante 네트워크",
+        "desc": "Dante PRIMARY·SECONDARY RJ-45 연결",
+        "x1": 936,
+        "x2": 1065,
+        "y": 397,
+        "side": "top"
+      },
+      {
+        "n": 14,
+        "label": "Genlock·Loop",
+        "desc": "GENLOCK 입력 및 LOOP BNC",
+        "x1": 1442,
+        "x2": 1583,
+        "y": 406,
+        "side": "top"
+      },
+      {
+        "n": 15,
+        "label": "CONTROL",
+        "desc": "CONTROL 표기의 RJ-45 제어 연결",
+        "x1": 1599,
+        "x2": 1675,
+        "y": 456,
+        "side": "bottom"
+      }
+    ]
+  }
+}

@@ -177,10 +177,17 @@ export function renderPortMap(map, image, model = '') {
 
 export function renderPortMapCards(items) {
   const cards = el('div', 'port-map-ports');
+  const byNumber = new Map();
   for (const item of [...items].sort((a, b) => a.n - b.n)) {
+    const group = byNumber.get(item.n) ?? [];
+    group.push(item);
+    byNumber.set(item.n, group);
+  }
+  for (const [number, group] of byNumber) {
+    const item = group[0];
     const card = el('div', 'port-map-port');
     const heading = el('b');
-    heading.append(el('span', 'port-map-n', item.n), document.createTextNode(item.label));
+    heading.append(el('span', group.length > 1 ? 'port-map-n port-map-n-many' : 'port-map-n', group.length > 1 ? `${number} ×${group.length}` : number), document.createTextNode(item.label));
     card.append(heading, document.createTextNode(item.desc));
     cards.append(card);
   }

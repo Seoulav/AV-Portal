@@ -28,7 +28,7 @@ test('optional cards fall back without changing original data', () => {
   assert.deepEqual(prepareEnhancements({ keyFacts: [{ label: 'A', value: '2', unit: '개' }] }).keyFacts, []);
   assert.deepEqual(base, original);
 });
-test('port map validates roles, measured spans and unique positive numbers', () => {
+test('port map validates roles and measured spans; duplicate numbers require identical descriptions', () => {
   const p = { ...base, portMap: { image: 'Rear', items: [{ n: 1, label: 'XLR', desc: 'Input', x1: 20, x2: 60 }] } };
   assert.equal(selectCardModes(p, prepareEnhancements(p)).gallery, 'port-map');
   assert.equal(prepareEnhancements({ ...p, images: [] }).portMap, null);
@@ -37,7 +37,11 @@ test('port map validates roles, measured spans and unique positive numbers', () 
     assert.ok(enhancementErrors(bad).length);
     assert.equal(prepareEnhancements(bad).portMap, null);
   }
-  assert.ok(enhancementErrors({ ...p, portMap: { ...p.portMap, items: [...p.portMap.items, ...p.portMap.items] } }).length);
+  const repeated = { ...p, portMap: { ...p.portMap, items: [...p.portMap.items, { ...p.portMap.items[0] }] } };
+  assert.equal(enhancementErrors(repeated).length, 0);
+  const conflicting = structuredClone(repeated);
+  conflicting.portMap.items[1].desc = 'Different';
+  assert.ok(enhancementErrors(conflicting).length);
   assert.deepEqual(portMarkerPercent(p.portMap.items[0], 200), { left: 10, width: 20 });
   for (const width of [0, -1, NaN, 30]) assert.equal(portMarkerPercent(p.portMap.items[0], width), null);
 });

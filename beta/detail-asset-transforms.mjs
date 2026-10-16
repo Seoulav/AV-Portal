@@ -5,6 +5,8 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/ds8s-guide.mjs', 'beta/site/detail/ds8s-guide.mjs', 'copy'],
   ['prototype/brc-am7/front-connection-points.mjs', 'beta/site/detail/front-connection-points.mjs', 'copy'],
   ['prototype/brc-am7/front-connection-points-data.mjs', 'beta/site/detail/front-connection-points-data.mjs', 'copy'],
+  ['prototype/brc-am7/analogway-layer-guide-data.mjs', 'beta/site/detail/analogway-layer-guide-data.mjs', 'copy'],
+  ['prototype/brc-am7/analogway-layer-guide.mjs', 'beta/site/detail/analogway-layer-guide.mjs', 'copy'],
   ['prototype/brc-am7/layer-tables.mjs', 'beta/site/detail/layer-tables.mjs', 'copy'],
   ['prototype/brc-am7/index.html', 'beta/site/detail/index.html', 'html'],
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
