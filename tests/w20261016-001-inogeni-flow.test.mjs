@@ -1,4 +1,5 @@
 import { beforeW20261016_002Raw } from './w20261016-002-history.mjs';
+import { beforeW20261016_005Raw } from './w20261016-005-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -62,7 +63,7 @@ test('both new flows rewind to exact prior product bytes without changing unrela
   ]);
   for (const [slug, hash] of expected) {
     const raw=readFileSync(new URL('../beta/site/detail/data/'+slug+'.json',import.meta.url),'utf8');
-    assert.equal(createHash('sha256').update(beforeW20261016_001Raw(beforeW20261016_002Raw(raw,slug),slug)).digest('hex'),hash);
+    assert.equal(createHash('sha256').update(beforeW20261016_001Raw(beforeW20261016_002Raw(beforeW20261016_005Raw(raw,slug),slug),slug)).digest('hex'),hash);
   }
   assert.equal(beforeW20261016_001Raw('{"x":1}', 'hdf-ccf'),'{"x":1}');
 });

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { enhancementErrors } from '../beta/site/detail/detail-enhancements.mjs';
 import { renderSignalFlow } from '../beta/site/detail/detail-enhancement-view.mjs';
+import { beforeW20261016_005Raw } from './w20261016-005-history.mjs';
 
 class Node {
   constructor(tag,value=''){this.tag=tag;this.value=String(value);this.children=[];this.attrs={};this.dataset={};}
@@ -52,8 +53,8 @@ const sha=value=>createHash('sha256').update(value).digest('hex');
 
 test('W-002 inverse restores exact prior U-BRIDGE data and scoped renderer bytes',()=>{
   const raw=readFileSync(new URL('../beta/site/detail/data/u-bridge-3.json',import.meta.url),'utf8');
-  assert.equal(sha(beforeW20261016_002Raw(raw,'u-bridge-3')),'3d601ec684b48020e9eeb1917e2a939412e604f2c1b63eacc10a32fad46308d3');
-  const prior=beforeW20261016_002Product(JSON.parse(raw),'u-bridge-3');
+  assert.equal(sha(beforeW20261016_002Raw(beforeW20261016_005Raw(raw,'u-bridge-3'),'u-bridge-3')),'3d601ec684b48020e9eeb1917e2a939412e604f2c1b63eacc10a32fad46308d3');
+  const prior=beforeW20261016_002Product(JSON.parse(beforeW20261016_005Raw(raw,'u-bridge-3')),'u-bridge-3');
   assert.ok(prior.korean.includes('CAT6A U/FTP 한 가닥'));
   assert.ok(!prior.sources.some(x=>x.code==='U'));
   assert.equal(beforeW20261016_002Raw('{"x":1}','toggle-dock-2x1'),'{"x":1}');

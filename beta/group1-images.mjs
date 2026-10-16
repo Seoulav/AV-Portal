@@ -1080,7 +1080,8 @@ export const group1Images = {
   'hdf-ccf': [image('Main', 'hdf-ccf-main.png', 'HDCVT HDF-CCF Type-C AOC Cable, SOURCE and DISPLAY ends', 'HDCVT', 'HDF-CCF', 'https://cn.hdcvt.com/product_169/567.html', '1920x1308', '1920x1308', 'VERIFIED', 'Main ? HDCVT official product page lists exact model HDF-CCF')],
   'u-bridge-3': [
     image('Main', 'u-bridge-3-main.png', 'U-BRIDGE 3 PC HOST와 DEVICE 모듈 모델명 및 전면 USB 단자', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_PC-HOST-DEVICE_Perspective-Front_08-2024.png', '2560x1441', '2560x1441', 'VERIFIED', 'Main · 공식 제품 페이지 원본, 양 모듈 U-BRIDGE 3 인쇄 확인'),
-    image('Diagram', 'u-bridge-3-diagram.png', 'U-BRIDGE 3 PC HOST·DEVICE 두 모듈의 전후면 단자 연결도', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png', '1024x924', '1024x924', 'VERIFIED', 'Diagram · 공식 제품 페이지 양 모듈의 전면·후면 단자 그림')
+    image('Diagram', 'u-bridge-3-panels.png', 'U-BRIDGE 3 PC HOST·DEVICE의 앞뒤 단자판 네 개를 재배치한 번호 안내도', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png', '1024x924', '784x580', 'VERIFIED', 'Diagram · 제조사 공식 연결도에서 네 단자판과 PC HOST·DEVICE 제목만 픽셀 그대로 잘라 재배치, 영어 설명선 제외'),
+    image('Other', 'u-bridge-3-diagram.png', 'U-BRIDGE 3 PC HOST·DEVICE 두 모듈의 전후면 단자 연결도', 'INOGENI', 'U-BRIDGE 3', 'https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png', '1024x924', '1024x924', 'VERIFIED', 'Diagram · 공식 제품 페이지 양 모듈의 전면·후면 단자 그림')
   ],
 };
 
