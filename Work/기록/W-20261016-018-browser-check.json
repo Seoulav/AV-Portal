@@ -8,7 +8,9 @@
       "title": "Aquilon Cmini (AQL-CMINI)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 14,
-      "height": 4327
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 1개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 12개와 4K60 프로그램 출력 4개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 4391
     },
     {
       "slug": "aquilon-cmini",
@@ -17,7 +19,9 @@
       "title": "Aquilon Cmini (AQL-CMINI)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 14,
-      "height": 7904
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 1개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 12개와 4K60 프로그램 출력 4개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 7968
     },
     {
       "slug": "aquilon-c",
@@ -26,7 +30,9 @@
       "title": "Aquilon C (AQL-C)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 16,
-      "height": 4327
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 2개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 16개와 4K60 프로그램 출력 8개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 4391
     },
     {
       "slug": "aquilon-c",
@@ -35,7 +41,9 @@
       "title": "Aquilon C (AQL-C)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 16,
-      "height": 7979
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 2개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 16개와 4K60 프로그램 출력 8개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 8043
     },
     {
       "slug": "aquilon-cplus",
@@ -44,7 +52,9 @@
       "title": "Aquilon C+ (AQL-C+)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 19,
-      "height": 4327
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 3개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 20개와 4K60 프로그램 출력 12개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 4391
     },
     {
       "slug": "aquilon-cplus",
@@ -53,7 +63,9 @@
       "title": "Aquilon C+ (AQL-C+)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 19,
-      "height": 8235
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 3개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 20개와 4K60 프로그램 출력 12개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 8299
     },
     {
       "slug": "aquilon-cmax",
@@ -62,7 +74,9 @@
       "title": "Aquilon Cmax (AQL-CMAX)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 23,
-      "height": 4327
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 4개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 24개와 4K60 프로그램 출력 16개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 4391
     },
     {
       "slug": "aquilon-cmax",
@@ -71,7 +85,9 @@
       "title": "Aquilon Cmax (AQL-CMAX)",
       "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
       "markers": 23,
-      "height": 8560
+      "fixedRows": 6,
+      "lead": "BTO 최대 구성: 2×2 4K60 화면 4개, 화면마다 4K 믹싱 레이어 4개(분할 8개 · 전환 효과가 Cut·Fade로 제한되는 대신 레이어 수가 2배)를 구성할 수 있습니다. 물리 출력 24개와 4K60 프로그램 출력 16개는 구별해야 합니다. 나머지는 복제·보조(AUX) 출력으로 사용합니다.",
+      "height": 8624
     }
   ]
 }

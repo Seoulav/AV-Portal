@@ -38,3 +38,8 @@ test('W-018 four current port maps preserve outside numbers, short orthogonal le
  for(const text of [...p.features.map(x=>x.text),...m.items.map(x=>x.desc)])assert.doesNotMatch(text,/(?:한다|합니다|할 수 있다|할 수 있습니다)\.?$/);
  }
 });
+
+// Work independent review: fixed control parts must not read as optional cards.
+test('W-018 distinguishes six fixed common connectors from configurable video and multiviewer cards',()=>{
+ for(const [slug]of expected){const p=read('detail/data/'+slug+'.json');const fixed=p.io.filter(x=>!['4K60p input','4K60p output','Multiviewer'].includes(x.signal));assert.equal(fixed.length,6);for(const row of fixed)assert.equal(row.availability,'고정 · 모든 Aquilon 공통(매뉴얼 39–41쪽)',slug+' '+row.connector);assert.equal(p.io.find(x=>x.signal==='Multiviewer').availability,'카드 구성에 따름');assert.equal(p.io.filter(x=>x.availability==='카드 구성에 따름').length,3);}
+});

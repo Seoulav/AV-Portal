@@ -223,3 +223,11 @@
 - 최신 main38489ee0(#588 Epson9종) 통합, 검색 인덱스 충돌을 양쪽 제품 원본으로 재생성해 해결. 통합 전체823건/822pass/0fail/기존skip1(68초), verify-pages·검색인덱스check·PR전체diffcheck 통과. RS JSON·잠금PDF·Port Map 렌더러는 변경0. PR/CI 후 Work 독립자료검증·병합순서 요청 예정.
 
 - PR #596: https://github.com/Seoulav/AV-Portal/pull/596. 코드 독립 검토 승인: 신규8회귀·추가2행 경계 통과, 역사복원 catalog/uploads가 origin/main과 일치, RS7JSON/DOM/text 및 공개 복사본 불변 확인. 현재 CI 확인 중이며 Work 독립자료검증/병합순서 승인은 아직 받지 않음.
+
+## W-018 Work 독립 검증 반영 (2026-10-17)
+
+- Work가 숫자·데이터시트4SHA 모두 일치 확인. 1~7 문구/근거 보완 후 전체검사·CI 초록이면 재질문 없이 병합→Pages→공개4종1280/390 확인 승인. 포트맵은 유지, W-014 후속.
+- 고정6행 회귀 실패 재현 후 공통 고정 표시로 수정. C4데이터의PGM출처·무게최대장착·split설명·2×2한정·복제/AUX설명과 근거충돌 기록 보완. 숫자·사진·포트맵·렌더러 불변 확인.
+- Cmini VPU분산 문구는 기존 validLayerPlan의 필수 note 조건 때문에 삭제 불가. Work 허용 예외대로 유지하고 근거/인계에 기록. 공통 검증기 범위 확대 없음.
+
+- Work 보완 후 전체824건/823pass/0fail/기존skip1(55초), 신규9회귀 통과. verify-pages 및 검색인덱스check 통과. Chrome1280/390 8화면 고정6행/분할풀이/복제-AUX 문구 확인, RS7 DOM바이트불변·페이지넘침0. 숫자·사진·포트맵·렌더러 불변, 상세 미리보기8장 갱신. 수정HEAD CI 성공 후 승인된 병합을 실행한다.
