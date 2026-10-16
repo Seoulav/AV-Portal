@@ -53,7 +53,8 @@ export function ReviewSummary({ items, onNavigate, navigationError }: ReviewSumm
       <div className="q-review-head">
         <h3>
           확인 항목 {items.length}건
-          {blockingCount > 0 && <span className="q-review-blocking"> · 출력을 막는 항목 {blockingCount}건</span>}
+          {/* 2026-10-16 사용자 결정(B-20261016-05): 확인 항목이 남아도 내려받는다 — "출력을 막는"이 아니다. */}
+          {blockingCount > 0 && <span className="q-review-blocking"> · 내려받기 전 확인할 항목 {blockingCount}건</span>}
         </h3>
         <button type="button" className="q-button" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
           {open ? '목록 접기' : '목록 펼치기'}

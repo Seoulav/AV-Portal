@@ -86,6 +86,13 @@ export interface LaborBreakdown {
  */
 export interface RowLaborBreakdown extends LaborBreakdown {
   currentFingerprint: string;
+  /**
+   * 이 행의 `mapping-unconfirmed`를 **이 PC가 기억한 확인**
+   * (`LaborReference.rememberedMappingIds`)으로 풀었는가(B-20261016-05).
+   * 행 지문 확인으로 푼 경우와 구별해 화면이 "이 PC에서 이미 확인한
+   * 연결"이라고 알려 줄 수 있게 한다.
+   */
+  mappingRemembered?: true;
 }
 
 export function calculateLaborUnitPrice(
@@ -196,6 +203,25 @@ export interface LaborReference {
   items: readonly LaborItem[];
   mappings: readonly LaborMapping[];
   wages: WageTable;
+  /**
+   * 사람이 이 PC에서 이미 "연결 자체가 맞다"고 확인한 품셈 연결 id
+   * (B-20261016-05, 2026-10-16 사용자 결정 "한 번 확인한 연결은 기억").
+   *
+   * 호출부(`workspace.ts`)가 **지금 품셈 판(`versions.labor`)에서 확인한
+   * 것만** 골라 넣는다 — 판이 다르면 비어 있다. 비우거나 빼면 지금과
+   * 똑같이 동작한다.
+   *
+   * ## 왜 `mapping.confirmed`를 덮어쓰지 않고 따로 받는가
+   *
+   * `confirmed`를 실행 시점에 `true`로 바꾸면 `mapping-unconfirmed`가
+   * 아예 생기지 않아, **행 지문 확인의 무효화**(수량 등이 바뀌면 다시
+   * 확인)까지 사라진다. 기억은 "연결 자체가 맞다"는 확인이고 행 지문은
+   * "이 행의 이 숫자를 봤다"는 확인이라 서로 다른 사실이다. 그래서 이
+   * 목록은 **행 단위 확인 기록이 없는 행에만** `mapping-unconfirmed`를
+   * 푼다(`applyLaborConfirmation`). 행 확인 기록이 있으면 지금처럼 그
+   * 지문만 본다 — 지문이 어긋나면 기억이 있어도 다시 확인하라고 한다.
+   */
+  rememberedMappingIds?: ReadonlySet<string>;
 }
 
 export interface LaborRowRequest {
@@ -301,6 +327,7 @@ function applyLaborConfirmation(
   item: LaborItem,
   mapping: LaborMapping,
   wages: WageTable,
+  rememberedMappingIds: ReadonlySet<string> | undefined,
 ): RowLaborBreakdown {
   const currentFingerprint = computeCurrentLaborFingerprint(
     request.rowId,
@@ -314,13 +341,25 @@ function applyLaborConfirmation(
   const hasUnconfirmedWarning = breakdown.warnings.some((w) => w.code === 'mapping-unconfirmed');
   const matchesExisting =
     request.existingConfirmation !== undefined && currentFingerprint === request.existingConfirmation.basisFingerprint;
+  // 기억(B-20261016-05)은 **행 확인 기록이 없는 행에만** 쓴다 — 기록이
+  // 있으면 그 지문이 우선이다(어긋나면 기억이 있어도 다시 확인한다).
+  // 자세한 이유는 `LaborReference.rememberedMappingIds` 주석.
+  const remembered =
+    request.existingConfirmation === undefined &&
+    (rememberedMappingIds?.has(mapping.laborMappingId) ?? false);
 
-  if (!hasUnconfirmedWarning || !matchesExisting) {
+  if (!hasUnconfirmedWarning || (!matchesExisting && !remembered)) {
     return { ...breakdown, currentFingerprint };
   }
 
   const warnings = breakdown.warnings.filter((w) => w.code !== 'mapping-unconfirmed');
-  return { ...breakdown, currentFingerprint, warnings, blocking: warnings.some((w) => w.blocking) };
+  return {
+    ...breakdown,
+    currentFingerprint,
+    warnings,
+    blocking: warnings.some((w) => w.blocking),
+    ...(remembered ? { mappingRemembered: true as const } : {}),
+  };
 }
 
 export function calculateLaborForRows(
@@ -357,7 +396,14 @@ export function calculateLaborForRows(
     }
 
     const rawBreakdown = calculateLaborUnitPrice(item, mapping, reference.wages);
-    const breakdown = applyLaborConfirmation(rawBreakdown, request, item, mapping, reference.wages);
+    const breakdown = applyLaborConfirmation(
+      rawBreakdown,
+      request,
+      item,
+      mapping,
+      reference.wages,
+      reference.rememberedMappingIds,
+    );
     breakdowns.set(request.rowId, breakdown);
     unitPrices.set(request.rowId, breakdown.appliedUnitPrice);
     for (const w of breakdown.warnings) {

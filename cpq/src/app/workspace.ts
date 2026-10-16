@@ -8,7 +8,7 @@
  * 원가 세션은 여기서 다루지 않는다 — 실행취소 이력에도 넣지 않는다
  * (계획 §1).
  */
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { buildGuideBasis, GuideBasisError, type BasisVersions } from '../data/catalog/guideBasis';
 import { prepareQuote, type PreparedQuote } from '../export/variants/prepare';
 import { priceQuote } from '../domain/quote/priceQuote';
@@ -43,6 +43,19 @@ import {
 import type { LaborMode, QuoteDocument, QuoteHeader } from '../domain/quote/types';
 import type { ImportWarning } from '../import/diagram/devices';
 import type { Resources } from './resources';
+import {
+  applicableEntries,
+  applicableMappingIds,
+  clearLaborMappingMemory,
+  forgetLaborMapping,
+  isApplicable,
+  loadLaborMappingMemory,
+  rememberLaborMapping,
+  type CurrentMappingFingerprint,
+  type MemoryWriteResult,
+  type RememberedLaborMapping,
+} from '../services/labor-memory/laborMappingMemory';
+import { computeLaborMappingFingerprint } from '../domain/labor/laborConfirmation';
 
 export interface LoadedDocument {
   document: QuoteDocument;
@@ -75,19 +88,23 @@ export type ExportGateResult =
 /**
  * 0/1/2단계 Excel 출력을 지금 내보내도 되는지 — **버튼 disabled 속성과
  * 다운로드 핸들러가 똑같은 판단 하나를 공유**한다(D23, 2026-10-05 독립
- * 검토 지적: 핸들러가 `status.kind`만 보고 `prepared.blocking`·
- * `pendingCableEdit`는 버튼에만 있어, 핸들러 자신은 "출력 경계에서
- * 재확인"을 실제로 하지 않았다 — 버튼이 비활성인 이유로 클릭이 막힌
- * 것과 핸들러가 막은 것은 다른 사실인데 섞여 있었다).
+ * 검토 지적: 핸들러가 `status.kind`만 보고 `pendingCableEdit`는 버튼에만
+ * 있어, 핸들러 자신은 "출력 경계에서 재확인"을 실제로 하지 않았다 —
+ * 버튼이 비활성인 이유로 클릭이 막힌 것과 핸들러가 막은 것은 다른
+ * 사실인데 섞여 있었다).
  *
  * 이 함수 하나로 가른다 — 호출부가 각자 조건을 다시 나열하지 않는다.
+ *
+ * **`prepared.blocking`(구성도·품셈·계산 확인 항목)은 막지 않는다** —
+ * 2026-10-16 사용자 결정(B-20261016-05: "중간에 뭔가 해석이 안 되도 엑셀
+ * 다운로드는 되었으면 해"). 남은 확인 항목은 화면이 내려받기 직전 확인
+ * 창으로 알린다. 계속 막는 것은 셋이다 — 문서 없음, 계산 기준 불일치
+ * (`basis-conflict`, D23), 아직 적용하지 않은 케이블 거리 수정. 셋 다
+ * "확인할 것이 남은" 상태가 아니라 "아직 반영하지 않은" 상태다.
  */
 export function exportGate(status: WorkspaceStatus, pendingCableEdit: boolean): ExportGateResult {
   if (status.kind !== 'editing') {
     return { allowed: false, reason: '문서가 아직 없거나 계산 기준이 바뀌어 적용을 기다리고 있다.' };
-  }
-  if (status.prepared.blocking) {
-    return { allowed: false, reason: '해결되지 않은 구성도/품셈/계산 경고가 있다.' };
   }
   if (pendingCableEdit) {
     return { allowed: false, reason: '케이블 거리 수정이 아직 견적에 반영되지 않았다.' };
@@ -170,6 +187,20 @@ export interface Workspace {
    * 없거나 기준 충돌(basis-conflict) 상태여도 아무것도 하지 않는다.
    */
   confirmLaborRow(rowId: string, displayedFingerprint: string): void;
+  /**
+   * 이 PC가 기억한 "확인한 품셈 연결" 중 **지금 품셈 판·지금 연결 내용에
+   * 실제로 적용되는** 수(B-20261016-05). `confirmLaborRow`가 성공할 때마다
+   * 그 행의 `laborMappingId`를 지금 품셈 판·연결 내용 지문과 함께 더한다.
+   * 그 확인을 실행 취소하면 그 행동으로 새로 더한 기억도 뺀다.
+   */
+  rememberedLaborMappingCount: number;
+  /** 기억한 확인을 전부 지운다. 다음에 여는 견적부터 다시 행마다 묻는다. */
+  clearRememberedLaborMappings(): void;
+  /**
+   * 기억을 저장하거나 지우지 못했을 때의 사유(브라우저 저장소를 쓸 수
+   * 없음 등). 이때 건수는 늘거나 줄지 않는다 — 조용히 성공한 척하지 않는다.
+   */
+  laborMemoryError: string | undefined;
   setHeader(patch: Partial<QuoteHeader>): void;
   setProfile(systemId: string, profile: IndirectProfileId): void;
   setIndirectRule(systemId: string, itemId: string, patch: { applied?: boolean; rate?: string }): void;
@@ -415,6 +446,29 @@ export interface RecalculationPreview {
  * 조용히 멈춘다.
  */
 export function useWorkspace(resources: Resources | undefined): Workspace {
+  /**
+   * 이 PC가 기억한 "확인한 품셈 연결"(B-20261016-05) — 화면 표시(건수)와
+   * 지우기용 **지금 값**이다.
+   */
+  const [laborMemory, setLaborMemory] = useState<readonly RememberedLaborMapping[]>(() => loadLaborMappingMemory());
+  /**
+   * 계산에 쓰는 기억은 **문서를 열 때(`loadDocument`/`openWorkFile`) 한 번
+   * 찍어 둔 값**이다. 열어 둔 견적에서 "확인함"을 눌러도 그 견적의 다른
+   * 행 경고는 그대로 둔다 — 지금 견적에서는 행 단위 확인·실행취소가
+   * 이전과 똑같이 동작하고(같은 연결의 두 행 중 하나만 확인하면 하나만
+   * 풀린다), 기억은 **다음 견적부터** 쓴다(명세 "다음 견적부터 같은 판의
+   * 같은 연결은 묻지 않는다"). 지우기도 다음 견적부터 반영된다.
+   */
+  const [memorySnapshot, setMemorySnapshot] = useState<readonly RememberedLaborMapping[]>(() => laborMemory);
+  const [laborMemoryError, setLaborMemoryError] = useState<string | undefined>(undefined);
+  /**
+   * "확인함"이 **새로** 더한 기억 — 그 확인으로 생긴 문서(history 항목)를
+   * 열쇠로 둔다(독립 검토 지적 B). 실행 취소로 그 문서에서 물러나면 이
+   * 기억을 빼고, 다시 실행으로 돌아오면 다시 더한다. 이미 기억에 있던
+   * 연결은 여기 올리지 않으므로 실행 취소가 지우지 않는다.
+   */
+  const memoryAdditions = useRef(new WeakMap<QuoteDocument, RememberedLaborMapping>());
+
   const basis = useMemo(
     () =>
       resources === undefined
@@ -426,6 +480,61 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
             choice: { kind: 'guide', guide: resources.guides[WAGE_GUIDE_ID] },
           }),
     [resources],
+  );
+
+  /**
+   * 계산에 넘기는 품셈 기준 — `basis.reference`에 **지금 품셈 판에서
+   * 확인한 기억**만 얹는다. 끼우는 자리를 여기(호출부)로 고른 이유:
+   * 품셈 자료(`labor-mappings.json`의 `confirmed`)와 `buildGuideBasis`는
+   * 그대로 두고, 판 대조도 지금 채택된 `basis.versions.labor` 하나로 끝난다.
+   * 계산 쪽은 `LaborReference.rememberedMappingIds`를 행 확인 기록이 없는
+   * 행에만 쓴다(`calculateLabor.ts` — 행 지문 무효화는 그대로 산다).
+   */
+  /**
+   * 지금 품셈 자료에서 연결 하나의 **내용 지문**(독립 검토 지적 C) — 기억은
+   * 판이 같고 이 지문까지 같을 때만 쓴다. 1,331건을 한꺼번에 계산하지 않고
+   * 물어볼 때 계산해 둔다.
+   */
+  const mappingFingerprintOf = useMemo<CurrentMappingFingerprint | undefined>(() => {
+    if (basis === undefined) return undefined;
+    const mappings = new Map(basis.reference.mappings.map((m) => [m.laborMappingId, m]));
+    const items = new Map(basis.reference.items.map((i) => [i.laborItemId, i]));
+    const cache = new Map<string, string | undefined>();
+    return (laborMappingId) => {
+      if (cache.has(laborMappingId)) return cache.get(laborMappingId);
+      const mapping = mappings.get(laborMappingId);
+      const item = mapping === undefined ? undefined : items.get(mapping.laborItemId);
+      const fingerprint =
+        mapping === undefined || item === undefined ? undefined : computeLaborMappingFingerprint({ mapping, item });
+      cache.set(laborMappingId, fingerprint);
+      return fingerprint;
+    };
+  }, [basis]);
+
+  const laborReference = useMemo(
+    () =>
+      basis === undefined || mappingFingerprintOf === undefined
+        ? undefined
+        : {
+            ...basis.reference,
+            rememberedMappingIds: applicableMappingIds(memorySnapshot, basis.versions.labor, mappingFingerprintOf),
+          },
+    [basis, mappingFingerprintOf, memorySnapshot],
+  );
+
+  /** 저장·삭제 결과를 화면 상태에 반영한다. 실패하면 건수를 바꾸지 않고 사유를 남긴다. */
+  const applyMemoryWrite = useCallback((result: MemoryWriteResult): boolean => {
+    setLaborMemory(result.memory);
+    setLaborMemoryError(result.ok ? undefined : result.reason);
+    return result.ok;
+  }, []);
+
+  /** 지금 판·지금 연결 내용에 적용되는 기록만 남긴다(저장할 때 옛 기록 정리). */
+  const keepApplicable = useCallback(
+    (entry: RememberedLaborMapping): boolean =>
+      basis !== undefined && mappingFingerprintOf !== undefined &&
+      isApplicable(entry, basis.versions.labor, mappingFingerprintOf),
+    [basis, mappingFingerprintOf],
   );
 
   const [history, setHistory] = useState<History>(EMPTY_HISTORY);
@@ -457,7 +566,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
 
   const prepareNow = useCallback(
     (document: QuoteDocument): PrepareResult | undefined => {
-      if (basis === undefined || resources === undefined) return undefined;
+      if (basis === undefined || laborReference === undefined || resources === undefined) return undefined;
 
       // labor/wage/template보다 먼저 본다 — 이 둘은 `prepareQuote`의
       // `assertSameBasis`/`assertSameTemplate`가 다루지 않는 축이다
@@ -477,7 +586,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
       try {
         const prepared = prepareQuote({
           document,
-          laborReference: basis.reference,
+          laborReference,
           basisVersions: basis.versions,
           guides: resources.guides,
           // 문서 자신이 들고 있는 프로파일에서 그대로 끌어낸다 — 별도
@@ -521,7 +630,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
         throw err;
       }
     },
-    [basis, resources, allImportWarnings, documentOrigin],
+    [basis, laborReference, resources, allImportWarnings, documentOrigin],
   );
 
   const prepareResult = useMemo(
@@ -533,7 +642,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     (input: LoadedDocument) => {
       // 자료가 아직 준비되지 않았으면 조용히 멈춘다 — 그 사이 입구
       // 버튼은 비활성이라 화면에서는 실제로 호출되지 않는다.
-      if (basis === undefined || resources === undefined) return;
+      if (basis === undefined || mappingFingerprintOf === undefined || resources === undefined) return;
       // 케이블 생성 소유 경고는 `cableWarnings`가 따로 들고 다닌다(진단
       // 문서 쪽). 여기 `document.importWarnings`에는 그 나머지(장비·옵션
       // 등)만 얼려 둔다 — 저장된 작업 파일을 다시 열 때도 미해결 후보
@@ -554,9 +663,15 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
       // 즉시 한 번 준비해 기준을 문서에 찍은 **그** 문서를 현재 상태로
       // 삼는다 — 안 그러면 다음 렌더의 재준비가 'initialize-new'를 다시
       // 타려다 "이미 기준이 적힌 문서" 예외를 만난다.
+      // 새 견적을 여는 이 순간의 기억을 찍는다(다음 렌더의 계산이 쓴다).
+      // 여기서 바로 계산하는 `first`도 같은 기억으로 계산해 둘이 어긋나지 않게 한다.
+      const snapshot = loadLaborMappingMemory();
       const first = prepareQuote({
         document: seeded,
-        laborReference: basis.reference,
+        laborReference: {
+          ...basis.reference,
+          rememberedMappingIds: applicableMappingIds(snapshot, basis.versions.labor, mappingFingerprintOf),
+        },
         basisVersions: basis.versions,
         guides: resources.guides,
         profileBySystem: profileMapOf(seeded),
@@ -567,13 +682,15 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
         ],
         wageMode: 'initialize-new',
       });
+      setMemorySnapshot(snapshot);
+      setLaborMemory(snapshot);
       setAllImportWarnings(input.importWarnings);
       setDocumentOrigin('new');
       setSavedContent(undefined);
       setDocumentGeneration((g) => g + 1);
       setHistory({ past: [], present: first.document, future: [] });
     },
-    [basis, resources],
+    [basis, mappingFingerprintOf, resources],
   );
 
   const openWorkFile = useCallback((document: QuoteDocument) => {
@@ -587,6 +704,9 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     // 그대로 복원한다 — 안 그러면 재열기 후 미해결 후보 선택 UI가
     // 사라진다(독립 검토 지적). 케이블 쪽은 `importWarningsFor`가
     // `document.cableWarnings`에서 직접 가져온다.
+    const snapshot = loadLaborMappingMemory();
+    setMemorySnapshot(snapshot);
+    setLaborMemory(snapshot);
     setAllImportWarnings(document.importWarnings ?? []);
     setDocumentOrigin('reopened');
     setSavedContent(JSON.stringify(document));
@@ -602,7 +722,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
    * 반영하려면 `applyRecalculatedBasis`를 따로 불러야 한다.
    */
   const previewRecalculateWithCurrentBasis = useCallback((resetRowIds: readonly string[] = []) => {
-    if (basis === undefined || resources === undefined || history.present === undefined) return;
+    if (basis === undefined || laborReference === undefined || resources === undefined || history.present === undefined) return;
     const present = history.present;
 
     // 1) 케이블을 **원본(아직 가격 갱신 전) 문서**로 먼저 재산출한다 —
@@ -652,7 +772,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     };
     const prepared = prepareQuote({
       document: withCurrentVersions,
-      laborReference: basis.reference,
+      laborReference,
       basisVersions: basis.versions,
       guides: resources.guides,
       profileBySystem: profileMapOf(withCurrentVersions),
@@ -693,7 +813,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     let beforeTotal: string | undefined;
     if (laborWageUnchanged) {
       try {
-        const beforePriced = priceQuote(present, basis.reference);
+        const beforePriced = priceQuote(present, laborReference);
         // 기준이 같아도 계산 자체가 막혔으면(예: 품셈이 못 다루는
         // 직종) 그 합계는 신뢰할 수 있는 "완결된 계산"이 아니다 —
         // 일부가 빠지거나 0으로 깔린 값일 수 있다. 숫자를 보여주는
@@ -719,7 +839,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
       cableConflictDetails,
       miscMigrations,
     });
-  }, [basis, resources, history.present, allImportWarnings]);
+  }, [basis, laborReference, resources, history.present, allImportWarnings]);
 
   const applyRecalculatedBasis = useCallback(() => {
     // `sourceDocument`가 지금의 `history.present`와 다르면(그 사이 다른
@@ -743,12 +863,17 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     setRecalcPreview(undefined);
   }, []);
 
-  const commit = useCallback((mutate: (document: QuoteDocument) => QuoteDocument) => {
+  const commit = useCallback((
+    mutate: (document: QuoteDocument) => QuoteDocument,
+    /** 실제로 새 history 항목이 생겼을 때 그 문서를 받는다(기억 실행 취소용). */
+    onCommitted?: (present: QuoteDocument) => void,
+  ) => {
     setHistory((h) => {
       if (h.present === undefined) return h;
       const changed = mutate(h.present);
       if (changed === h.present) return h;
       const present = resources === undefined ? changed : synchronizeMiscMaterials(changed, resources.catalog);
+      onCommitted?.(present);
       return { past: [...h.past, h.present], present, future: [] };
     });
   }, [resources]);
@@ -860,8 +985,52 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
       // 숨겨지는 것과 별개로 액션 자신이 거부한다(2026-10-05 독립 검토
       // 지적: D23에서 이미 같은 이유로 버튼 disabled와 핸들러 내부 검사를
       // 분리했다 — 여기도 같은 경계를 지킨다).
-      if (basis === undefined || prepareResult === undefined || prepareResult.kind !== 'ok') return;
-      commit((document) => ({
+      if (
+        basis === undefined ||
+        laborReference === undefined ||
+        mappingFingerprintOf === undefined ||
+        prepareResult === undefined ||
+        prepareResult.kind !== 'ok'
+      ) {
+        return;
+      }
+      let newlyRemembered: RememberedLaborMapping | undefined;
+      const confirmedAt = new Date().toISOString();
+      // 행 확인이 실제로 받아들여질 때만 기억한다 — 화면이 그린 지문과
+      // 지금 지문이 달라 거부되는 경우까지 기억하면, 사람이 보지 않은
+      // 근거를 "확인한 연결"로 남기게 된다. 판정은 아래 commit과 같은
+      // 함수·같은 입력으로 한 번 더 한다(지금 문서 기준).
+      const present = history.present;
+      const target = present?.rows.find((r) => r.type === 'item' && r.rowId === rowId);
+      if (present !== undefined && target !== undefined && target.type === 'item' && target.laborMappingId !== undefined) {
+        const accepted = confirmLaborRowIfDisplayedFingerprintMatches(
+          target,
+          laborReference,
+          {
+            ...(target.productId !== undefined ? { productId: target.productId } : {}),
+            ...(target.sku !== undefined ? { sku: target.sku } : {}),
+            unit: target.unit,
+            quantity: target.quantity,
+            ruleVersion: present.versions.rule,
+          },
+          displayedFingerprint,
+          confirmedAt,
+        );
+        const mappingFingerprint = mappingFingerprintOf(target.laborMappingId);
+        if (accepted !== undefined && mappingFingerprint !== undefined) {
+          const entry: RememberedLaborMapping = {
+            laborVersion: basis.versions.labor,
+            laborMappingId: target.laborMappingId,
+            mappingFingerprint,
+            confirmedAt,
+          };
+          const result = rememberLaborMapping(entry, keepApplicable);
+          // 저장에 성공했고 **이 행동으로 새로** 더해진 것만 실행 취소 대상이다.
+          if (applyMemoryWrite(result) && result.ok && result.added) newlyRemembered = entry;
+        }
+      }
+      commit(
+        (document) => ({
         ...document,
         rows: document.rows.map((r) => {
           if (r.type !== 'item' || r.rowId !== rowId) return r;
@@ -878,17 +1047,25 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
           // 확인하지 않는다.
           const updated = confirmLaborRowIfDisplayedFingerprintMatches(
             r,
-            basis.reference,
+            laborReference,
             identity,
             displayedFingerprint,
-            new Date().toISOString(),
+            confirmedAt,
           );
           return updated === undefined ? r : { type: 'item', ...updated };
         }),
-      }));
+        }),
+        (present) => {
+          if (newlyRemembered !== undefined) memoryAdditions.current.set(present, newlyRemembered);
+        },
+      );
     },
-    [commit, basis, prepareResult],
+    [commit, basis, laborReference, mappingFingerprintOf, prepareResult, history.present, keepApplicable, applyMemoryWrite],
   );
+
+  const clearRememberedLaborMappings = useCallback(() => {
+    applyMemoryWrite(clearLaborMappingMemory());
+  }, [applyMemoryWrite]);
 
   const setHeader = useCallback(
     (patch: Partial<QuoteHeader>) => {
@@ -1073,20 +1250,33 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
   );
 
   const undo = useCallback(() => {
+    // 물러나는 문서가 "확인함"으로 새 기억을 더한 그 문서면 그 기억도 뺀다
+    // (독립 검토 지적 B). 이미 있던 기억은 여기 올라 있지 않아 지우지 않는다.
+    const leaving = history.present;
+    if (leaving !== undefined && history.past.length > 0) {
+      const added = memoryAdditions.current.get(leaving);
+      if (added !== undefined) applyMemoryWrite(forgetLaborMapping(added));
+    }
     setHistory((h) => {
       if (h.present === undefined || h.past.length === 0) return h;
       const previous = h.past[h.past.length - 1]!;
       return { past: h.past.slice(0, -1), present: previous, future: [h.present, ...h.future] };
     });
-  }, []);
+  }, [history, applyMemoryWrite]);
 
   const redo = useCallback(() => {
+    // 다시 실행으로 돌아오는 문서가 새 기억을 더했던 문서면 다시 더한다.
+    const returning = history.future[0];
+    if (history.present !== undefined && returning !== undefined) {
+      const added = memoryAdditions.current.get(returning);
+      if (added !== undefined) applyMemoryWrite(rememberLaborMapping(added, keepApplicable));
+    }
     setHistory((h) => {
       if (h.present === undefined || h.future.length === 0) return h;
       const next = h.future[0]!;
       return { past: [...h.past, h.present], present: next, future: h.future.slice(1) };
     });
-  }, []);
+  }, [history, applyMemoryWrite, keepApplicable]);
 
   const status: WorkspaceStatus =
     history.present === undefined || prepareResult === undefined
@@ -1127,6 +1317,12 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     setManualLaborUnitPrice,
     setOverrideReason,
     confirmLaborRow,
+    rememberedLaborMappingCount:
+      basis === undefined || mappingFingerprintOf === undefined
+        ? 0
+        : applicableEntries(laborMemory, basis.versions.labor, mappingFingerprintOf).length,
+    clearRememberedLaborMappings,
+    laborMemoryError,
     setHeader,
     setProfile,
     setIndirectRule,

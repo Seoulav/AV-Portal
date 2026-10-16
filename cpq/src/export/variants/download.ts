@@ -28,6 +28,7 @@ import {
   type IndirectProfileId,
 } from '../ooxml/guideTemplate';
 import { assertSameBasis, GuideBasisError, type BasisVersions } from '../../data/catalog/guideBasis';
+import { withReviewMarks } from './reviewMarks';
 
 export class ExportBlockedError extends Error {
   constructor(message: string) {
@@ -60,10 +61,19 @@ export function guideBySystemOf(
  * (2026-10-05 독립 검토 지적: 전엔 화면 버튼의 disabled 속성만이 유일한
  * 방어선이었다 — 이 세 함수를 UI 없이 직접 불러도 막혀야 한다).
  *
- * **`blocking` 플래그만 보는 것으로는 부족하다**(재지적) — `prepared`가
- * 과거 한때는(그 시점 기준으로) 유효했더라도(`blocking: false`), **지금
- * 넘겨받은 `guides`와 그 문서가 기록한 가이드 템플릿 기준이 다르면**
- * 옛 계산 결과를 지금 기준인 것처럼 출력하는 셈이다. `prepareQuote`의
+ * **`prepared.blocking`(구성도·품셈·계산 확인 항목)은 더 이상 막지
+ * 않는다** — 2026-10-16 사용자 결정(B-20261016-05): "중간에 뭔가 해석이
+ * 안 되도 엑셀 다운로드는 되었으면 해", 출력 범위 "고객용까지 모두 허용".
+ * 확인 항목은 화면이 내려받기 직전 확인 창으로 알리고, 0·1단계는 행
+ * 비고에 `[확인 필요]`를 단다(`reviewMarks.ts`). 값이 없는 칸(단가 미등록·
+ * 수량 미확인)은 빈칸으로 나간다 — 0으로 채우지 않는다.
+ *
+ * 아래 **기준 불일치**(가이드 템플릿·노임·품셈 판)는 계속 막는다. 이건
+ * "확인할 것이 남은" 상태가 아니라 "지금 기준으로 계산되지 않은" 상태다
+ * (D23 — 재계산 적용으로 해결한다).
+ *
+ * `prepared`가 **지금 넘겨받은 `guides`와 그 문서가 기록한 가이드 템플릿
+ * 기준이 다르면** 옛 계산 결과를 지금 기준인 것처럼 출력하는 셈이다. `prepareQuote`의
  * `assertSameTemplate`(재계산·재열기 경로)과 같은 비교를, 실제로 바이트를
  * 쓰는 이 경계에서 **한 번 더** 한다 — 호출부가 신선한 `prepared`를
  * 들고 있었다는 것만 믿지 않는다.
@@ -80,9 +90,6 @@ export function assertExportAllowed(
   guides: GuideTemplateSet,
   currentBasisVersions: BasisVersions,
 ): void {
-  if (prepared.blocking) {
-    throw new ExportBlockedError('해결되지 않은 구성도/품셈/계산 경고가 있어 출력할 수 없다.');
-  }
   const currentTemplate = guideTemplateFingerprint(guides);
   if (prepared.document.versions.template !== currentTemplate) {
     throw new ExportBlockedError(
@@ -126,7 +133,13 @@ export function assertSingleCompleteGroup(document: QuoteDocument): void {
   }
 }
 
-/** 고객용(2단계) — 원가 없음, 설명/품셈 없음. */
+/**
+ * 고객용(2단계) — 원가 없음, 설명/품셈 없음.
+ *
+ * 확인 항목이 남아 있어도 **표시를 달지 않는다**(2026-10-16 사용자 결정:
+ * 고객용에는 확인 필요 표시를 넣지 않는다). 그래서 `withReviewMarks`를
+ * 부르지 않는다.
+ */
 export function buildCustomerDownload(
   prepared: PreparedQuote,
   guides: GuideTemplateSet,
@@ -143,7 +156,10 @@ export function buildCustomerDownload(
   };
 }
 
-/** 공유용(1단계) — 설명/품셈/거래처 포함, 원가는 없음. */
+/**
+ * 공유용(1단계) — 설명/품셈/거래처 포함, 원가는 없음.
+ * 확인 항목이 남은 행은 비고에 `[확인 필요] 사유`를 단다(`reviewMarks.ts`).
+ */
 export function buildSharedDownload(
   prepared: PreparedQuote,
   guides: GuideTemplateSet,
@@ -152,7 +168,7 @@ export function buildSharedDownload(
 ): ExportFile {
   assertExportAllowed(prepared, guides, currentBasisVersions);
   assertSingleCompleteGroup(prepared.document);
-  const shared = buildSharedProjection(prepared, notes);
+  const shared = buildSharedProjection(withReviewMarks(prepared), notes);
   const guideBySystemId = guideBySystemOf(prepared.document, guides, false);
   const result = buildMultiSystemSharedGuideWorkbook({ shared, guideBySystemId });
   return {

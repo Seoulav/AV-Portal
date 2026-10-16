@@ -358,3 +358,62 @@ export function decideNavigation(input: {
   }
   return { kind: 'go' };
 }
+
+/**
+ * 내려받기 직전 확인 창에 보여줄 **남은 확인 항목 건수** (B-20261016-05).
+ *
+ * 2026-10-16 사용자 결정으로 확인 항목(`blocking`)이 남아도 내려받는다.
+ * 대신 몇 건이 남았는지 알린다. 나누는 기준은 **확인 목록 화면의 분류
+ * (`category`)와 같다**(독립 검토 지적) — 출처(source)로 나누면 노무
+ * 계열 계산 경고(`labor-unresolved` 등)가 "계산"으로, `misc-*` 구성도
+ * 경고가 "구성도"로 세어져 화면 목록과 어긋난다.
+ *
+ * ```
+ * 구성도        품목 연결 · 시공 입력
+ * 품셈(노무)    노무 확인
+ * 계산          수량 확인 · 계산 확인
+ * ```
+ *
+ * 케이블 거리 수정 대기는 여기 세지 않는다 — 그건 여전히 내려받기 자체를
+ * 막는다(`exportGate`).
+ *
+ * `unresolvedQuantityRows`는 수량 미확인(자리표시자) **행** 수다. 그 행은
+ * Excel 에서 수량 칸이 빈칸이라 금액이 0 이 되어 화면 합계와 달라진다 —
+ * 확인 창이 이 사실을 따로 알린다(독립 검토 지적 A).
+ */
+export interface ExportReviewCounts {
+  total: number;
+  diagram: number;
+  labor: number;
+  calculation: number;
+  unresolvedQuantityRows: number;
+}
+
+export function exportReviewCounts(prepared: PreparedQuote): ExportReviewCounts {
+  const items = buildReviewItems(prepared, false).filter((item) => item.blocking);
+  const diagram = items.filter((item) => item.category === 'product' || item.category === 'installation').length;
+  const labor = items.filter((item) => item.category === 'labor').length;
+  const calculation = items.filter((item) => item.category === 'quantity' || item.category === 'calculation').length;
+  const unresolvedQuantityRows = new Set(
+    prepared.priced.calculation.warnings
+      .filter((w) => w.code === 'quantity-unresolved' && w.rowId !== undefined)
+      .map((w) => w.rowId),
+  ).size;
+  return { total: diagram + labor + calculation, diagram, labor, calculation, unresolvedQuantityRows };
+}
+
+/**
+ * 확인 창 문구. 0건인 분류도 빼지 않고 적는다 — 어느 쪽이 남았는지 한눈에
+ * 보이게. 수량 미확인 행이 있으면 Excel 합계가 화면과 다르다는 것을 덧붙인다
+ * (세 등급 모두 — 고객용도 수량 칸이 빈칸으로 나간다).
+ */
+export function exportReviewConfirmMessage(counts: ExportReviewCounts): string {
+  const quantityNote =
+    counts.unresolvedQuantityRows > 0
+      ? ` 수량 미정 ${counts.unresolvedQuantityRows}행은 Excel에서 수량 빈칸·금액 0으로 나가 화면 합계와 다릅니다.`
+      : '';
+  return (
+    `확인 필요 ${counts.total}건(구성도 ${counts.diagram}·품셈(노무) ${counts.labor}·계산 ${counts.calculation})이 ` +
+    `남아 있습니다.${quantityNote} 그래도 내려받을까요?`
+  );
+}

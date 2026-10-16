@@ -30,13 +30,21 @@ describe('exportGate', () => {
     expect(result.allowed).toBe(false);
   });
 
-  it('prepared.blocking이면 editing 상태여도 막는다', () => {
+  // 2026-10-16 사용자 결정: 확인 항목이 남아도 내려받기(B-20261016-05).
+  // 전에는 "prepared.blocking이면 막는다"를 고정했다. 이제 확인 항목은
+  // 막지 않고 화면이 내려받기 직전 확인 창으로 알린다.
+  it('prepared.blocking(확인 항목 남음)이어도 editing이면 막지 않는다', () => {
     const result = exportGate(editingStatus(true), false);
-    expect(result.allowed).toBe(false);
+    expect(result.allowed).toBe(true);
   });
 
   it('pendingCableEdit이면 blocking이 아니어도 막는다', () => {
     const result = exportGate(editingStatus(false), true);
+    expect(result.allowed).toBe(false);
+  });
+
+  it('pendingCableEdit은 blocking과 함께여도 계속 막는다 — 확인 항목 허용이 케이블 수정 대기까지 풀지 않는다', () => {
+    const result = exportGate(editingStatus(true), true);
     expect(result.allowed).toBe(false);
   });
 
