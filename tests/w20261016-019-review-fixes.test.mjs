@@ -83,9 +83,22 @@ test('model recommendation order groups Midra, Alta, Aquilon RS then Aquilon C',
 
 test('mobile result rendering separates possible models from collapsed unavailable models and uses plain language',()=>{
   const source=readFileSync(new URL('../beta/site/detail/analogway-layer-guide.mjs',import.meta.url),'utf8');
-  assert.match(source,/불가/);
-  assert.match(source,/종 보기/);
-  assert.match(source,/details/);
+  assert.ok(source.includes(String.fromCodePoint(0xBD88,0xAC00)));
+  assert.ok(source.includes(String.fromCodePoint(0xC885,0x20,0xBCF4,0xAE30)));
+  assert.ok(source.includes('details'));
   assert.match(source,/추천은 시리즈·규모 순서이며 가격 비교가 아닙니다/);
   assert.doesNotMatch(source,/VPU first-fit|공유 레이어 자원/);
+});
+
+
+test('screen output input is capped at four and Midra uses the shared output term',()=>{
+  assert.equal(resultFor([{outputs:4,layerType:'mixing',layers:0}]).valid,true);
+  assert.equal(resultFor([{outputs:5,layerType:'mixing',layers:0}]).valid,false);
+  const overMidraOutputs=resultFor([
+    {outputs:1,layerType:'mixing',layers:1},
+    {outputs:4,layerType:'mixing',layers:1},
+  ]);
+  assert.ok(resultModel(overMidraOutputs,'pulse-4k').reasons.some(reason=>reason.includes('4K \uD654\uBA74 \uCD9C\uB825 5')));
+  const source=readFileSync(new URL('../beta/site/detail/analogway-layer-guide.mjs',import.meta.url),'utf8');
+  assert.ok(source.includes(String.fromCodePoint(0xC785,0xCD9C,0xB825,0x20,0xC218,0x3A,0x20)));
 });

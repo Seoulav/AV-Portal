@@ -15,7 +15,7 @@ function checkInput(input) {
   if (!input || !Array.isArray(input.screens) || input.screens.length < 1 || input.screens.length > 8 ||
       !validInteger(input.auxOutputs,0,999) || !validInteger(input.inputs4k,0,999)) return '입력값을 확인해 주세요.';
   for (const screen of input.screens) {
-    if (!screen || !validInteger(screen.outputs,1,8) || !['mixing','split'].includes(screen.layerType) || !validInteger(screen.layers,0,8)) return '화면별 출력·레이어 입력값을 확인해 주세요.';
+    if (!screen || !validInteger(screen.outputs,1,4) || !['mixing','split'].includes(screen.layerType) || !validInteger(screen.layers,0,8)) return '화면별 출력·레이어 입력값을 확인해 주세요.';
   }
   return '';
 }
@@ -130,7 +130,7 @@ function evaluateMidra(model,input,pgmOutputs) {
     reasons.push(model.slug==='pulse-4k'&&screens.length===1&&screens[0].outputs===2?'Pulse 4K는 두 출력 블렌딩 모드를 지원하지 않습니다.':'선택한 화면 수·출력 구성에 해당하는 Midra Mixer·Matrix·Blend 모드가 공식 자료에 없습니다.');
   }
   if (input.inputs4k>model.inputs4k) reasons.push(`4K 입력 ${input.inputs4k}개가 한도 ${model.inputs4k}개를 넘습니다.`);
-  if (pgmOutputs>model.pgmOutputs) reasons.push(`4K PGM 출력 ${pgmOutputs}개가 한도 ${model.pgmOutputs}개를 넘습니다.`);
+  if (pgmOutputs>model.pgmOutputs) reasons.push(`4K 화면 출력 ${pgmOutputs}개가 ${model.pgmOutputs}개를 넘습니다.`);
   const totalLayers=screens.reduce((sum,s)=>sum+s.layers,0);
   const mixOrSplitLayers=screens.reduce((sum,s)=>sum+(s.layerType==='mixing'?s.layers:Math.ceil(s.layers/2)),0);
   const possible=reasons.length===0;
@@ -188,7 +188,7 @@ function renderModelResult(result,currentSlug){
     if(model.slug===currentSlug)head.append(makeElement('span','aw-guide-current-badge','현재 제품'));
     card.append(head);
     card.append(makeElement('p',model.possible?'aw-guide-status is-possible':'aw-guide-status is-impossible',model.possible?'가능 · '+model.displayMode:'불가'));
-    if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','출력 커넥터: '+model.connectorBasis));
+    if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','입출력 수: '+model.connectorBasis));
     if(model.reasons.length){
       const reasons=makeElement('ul','aw-guide-reasons');
       for(const reason of model.reasons)reasons.append(makeElement('li','',reason));

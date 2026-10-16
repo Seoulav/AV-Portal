@@ -55,10 +55,12 @@ test('one single-output screen with four split layers and one Aux output fits Pu
   assert.equal(model(result, 'eikos-4k').mode, 'Mixer');
 });
 
-test('Aquilon rejects output-link and per-screen layer limits with matching reasons', () => {
+test('Aquilon caps per-screen output input at four and enforces per-screen layer limits', () => {
   const tooManyOutputs = calculateRecommendations({screens:[{outputs:5,layerType:'mixing',layers:1}],auxOutputs:0,inputs4k:1});
   assert.equal(model(tooManyOutputs, 'aquilon-rs6').possible, false);
-  assert.match(model(tooManyOutputs, 'aquilon-rs6').reasons.join(' '), /출력 링크 10개/);
+  assert.equal(tooManyOutputs.valid,false);
+  const maxOutputs = calculateRecommendations({screens:[{outputs:4,layerType:'mixing',layers:1}],auxOutputs:0,inputs4k:1});
+  assert.equal(maxOutputs.valid,true);
   const tooManySources = calculateRecommendations({screens:[{outputs:4,layerType:'mixing',layers:5}],auxOutputs:0,inputs4k:1});
   assert.equal(model(tooManySources, 'aquilon-rs6').possible, false);
   assert.deepEqual(model(tooManySources, 'aquilon-rs6').reasons,['화면당 4K 믹싱 최대 4개(매뉴얼 66·79쪽) 초과']);

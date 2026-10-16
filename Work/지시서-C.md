@@ -326,3 +326,11 @@
 - [x] RS2·Zenith 200·C+ 시나리오 2 미리보기: `%TEMP%\w019-preview\review-{aquilon-rs2,zenith-200,aquilon-cplus}-{1280,390}.png`. 각 1280px·390px에서 결과 15종, 가능 8·불가 7, `scrollWidth=390`; 모바일은 불가 7종 접힘, 브라우저 오류 0.
 - [x] 전체 직렬 테스트 846 pass·0 fail, W-019 16/16, `verify-pages`(289 equipment·286 details·525 images·0 preview·167 user PDFs), 검색 인덱스 `--check`(712807 bytes), `git diff --check` 통과. PR #594 최신 head `898f2f91` Builder CI run `38931624999` 통과.
 - [ ] Work 독립 재검토 대기. 승인 전 병합하지 않는다.
+
+
+### W-20261016-019 Work recheck #2 (2026-10-17)
+
+- [x] Updated the C-series note to "입출력 수: BTO maximum configuration". Screen-output inputs now accept 1?4 outputs, matching the UI. Midra overflow wording now uses "4K 화면 출력".
+- [x] Updated prototype sources and regenerated beta assets; added boundary and wording regression assertions. W-019 focused tests: 17/17 pass.
+- [x] Full serial suite: 848 tests, 847 pass, 0 fail, 1 skipped. Concurrent mode reproduced the existing Windows RTCOM temp-directory rename EPERM; serial mode passed. Pages verification and search-index check passed.
+- [ ] PR #597 remains open; latest origin/main is 0645b86c. Integrate if #597 merges before W-019 merge.
