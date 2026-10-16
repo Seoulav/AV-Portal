@@ -115,3 +115,5 @@
 - 대표4종8장 캡처·390touch검증, 독립코드/시각검토 완료. 가장낮은RM-IP10 추가확인에서120px렌즈가아래2번일부가림. 좁은mouse창잘림은size/frame경계보정후실제390에서통과. RM-IP10번호가림과SRG-X40UH본문127px는Work판단대상으로인계에명시.
 
 - W-013 최종전체789건/788 pass/0 fail/기존skip1. 신규회귀9개 포함. Work판단전병합하지않으며CI·순서확인대기.
+
+- W-013 PR: https://github.com/Seoulav/AV-Portal/pull/582 — OPEN. 최신 main8845d808 통합 및 파생 재생성 후 변경 없음. 전체789건/788 pass/0 fail/기존skip1, Pages 검증 통과. CI 초록 뒤 Work 시각 판단·병합 순서 요청.
