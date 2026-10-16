@@ -1,4 +1,4 @@
-﻿import {readFileSync} from 'node:fs';
+import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const fixture=JSON.parse(readFileSync(new URL('./fixtures/w13007-hotel-history.json',import.meta.url),'utf8'));
 const hash=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
