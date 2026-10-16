@@ -1,0 +1,514 @@
+{
+  "products": {
+    "ultrix-ns-fr2": {
+      "priorSpecifications": [
+        {
+          "group": "Physical",
+          "name": "너비",
+          "value": "17.5",
+          "unit": "inch",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "깊이",
+          "value": "7.9",
+          "unit": "inch",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "높이",
+          "value": "3.48",
+          "unit": "inch",
+          "condition": "2RU",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Physical",
+          "name": "프레임 무게(I/O 카드 미장착, 근사치)",
+          "value": "5.44 (12)",
+          "unit": "kg (lb)",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 비디오 매트릭스 크기",
+          "value": "72×72",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "내장 SDI I/O",
+          "value": "16×16",
+          "unit": "",
+          "condition": "HD-BNC",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "내장 AUX SFP 포트",
+          "value": "2",
+          "unit": "포트",
+          "condition": "SDI/MADI 겸용",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "I/O·처리 카드 슬롯 수",
+          "value": "3",
+          "unit": "슬롯",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 오디오 매트릭스 크기",
+          "value": "1536×1536",
+          "unit": "",
+          "condition": "MADI I/O 완전 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 Ultriscape MV 헤드 수",
+          "value": "12",
+          "unit": "헤드",
+          "condition": "MODX/HDX I/O로 완전 라이선스 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 Ultriscape MV 헤드 수 (IPX I/O)",
+          "value": "6",
+          "unit": "헤드",
+          "condition": "IPX I/O로 완전 라이선스 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 UHD 게이트박스 수",
+          "value": "12입력/12출력",
+          "unit": "",
+          "condition": "HDX/MODX I/O 완전 장착 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 3Gb/s 입력 프레임 동기화 수",
+          "value": "72",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 UHD 입력 프레임 동기화 수",
+          "value": "27",
+          "unit": "",
+          "condition": "HDX 또는 MODX I/O 사용 시",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 UHD Clean/Quiet 출력 스위치 수",
+          "value": "72",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Capacity",
+          "name": "최대 Ultrimix-MXR 오디오 믹서 크기",
+          "value": "128×64",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "전원 공급 방식",
+          "value": "외부 15VDC 브릭(PSU) 2개",
+          "unit": "",
+          "condition": "기본 구성",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "이중화 옵션",
+          "value": "외부 15VDC 브릭(PSU) 추가 2개",
+          "unit": "",
+          "condition": "완전 이중화(2N) 구성 시 총 4개",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "최소 필요 PSU 수",
+          "value": "2",
+          "unit": "개",
+          "condition": "주 전원",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "완전 이중화 필요 PSU 수",
+          "value": "4",
+          "unit": "개",
+          "condition": "2N 이중화",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "PSU 출력",
+          "value": "15VDC @ 17A (255W)",
+          "unit": "",
+          "condition": "PSU 1개 기준",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "PSU 입력",
+          "value": "100-240VAC, 50/60Hz, 4.5A",
+          "unit": "",
+          "condition": "PSU 1개 기준",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "Ultripower 지원",
+          "value": "Optional",
+          "unit": "",
+          "condition": "FR2는 Ultripower 연결이 선택 사항(FR5/FR12는 필수)",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Power",
+          "name": "최대 소비전력(참고치)",
+          "value": "약 395",
+          "unit": "W",
+          "condition": "ULTRIX-HDX-IO 카드 4장 완전 장착 시 typical",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Cooling",
+          "name": "팬 모듈 수",
+          "value": "2",
+          "unit": "개",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "이더넷 포트",
+          "value": "ENET1, ENET2 (RJ45)",
+          "unit": "",
+          "condition": "ENET1 기본 연결, ENET2는 이중화용, PoE 미지원",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "USB 포트",
+          "value": "USB-시리얼 변환기 연결용",
+          "unit": "",
+          "condition": "",
+          "source": "I",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Control",
+          "name": "레퍼런스 입력",
+          "value": "HD-BNC 2포트 (개별 또는 루프)",
+          "unit": "",
+          "condition": "아날로그 블랙, 트라이레벨 싱크, AES/DARS 지원",
+          "source": "I",
+          "verification": "FOUND"
+        }
+      ],
+      "priorSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 Ultrix Specifications 페이지",
+          "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 공식 Ultrix User Guide",
+          "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "I",
+          "name": "제조사 공식 Ultrix Installation Guide",
+          "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/Installation%20Guides/Ultrix%20Installation%20Guide%20(2101DR-003).pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approvedSpecificationsSha256": "2bf1677997a22650491660583d44e80eb3a1030d1cdfceb6908db98b85f53d3a",
+      "approvedSourcesSha256": "1d1adeab5a11fe40c138f3ad79519789613061851b0f536303af47d553794d33"
+    },
+    "ultrix-hdx-io": {
+      "priorSpecifications": [
+        {
+          "group": "I/O",
+          "name": "신호 형식",
+          "value": "SDI, 270Mb/s ~ 12Gb/s",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "포트 수량",
+          "value": "16",
+          "unit": "포트",
+          "condition": "입력/출력 각각",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "I/O",
+          "name": "커넥터",
+          "value": "HD-BNC",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Electrical",
+          "name": "임피던스",
+          "value": "75",
+          "unit": "Ohm",
+          "condition": "",
+          "source": "S1",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Electrical",
+          "name": "출력 진폭",
+          "value": "800mV ±10%",
+          "unit": "",
+          "condition": "출력 기준",
+          "source": "S1",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Electrical",
+          "name": "리턴 로스",
+          "value": "Per SMPTE 2082-1",
+          "unit": "",
+          "condition": "",
+          "source": "S1",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Electrical",
+          "name": "지터",
+          "value": "<0.2 UI(3G 이하 정렬)/<0.3 UI(12G 정렬)/<2UI(270M 타이밍)/<1UI(1.5G 타이밍)/<2UI(3G,12G 타이밍)",
+          "unit": "",
+          "condition": "",
+          "source": "S1",
+          "verification": "FOUND"
+        },
+        {
+          "group": "AUX",
+          "name": "AUX A/B 포트 기능",
+          "value": "추가 SDI I/O, HDMI I/O 또는 64채널 MADI I/O",
+          "unit": "",
+          "condition": "SFP 교체 방식",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "AUX",
+          "name": "AUX C 포트 기능",
+          "value": "Dante I/O (라이선스 시)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "AUX",
+          "name": "AUX D 포트 기능",
+          "value": "Ultristream MV 출력 또는 Dante I/O (라이선스 시)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Audio",
+          "name": "I/O당 오디오 채널 수",
+          "value": "16",
+          "unit": "채널",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Processing",
+          "name": "표준 처리 기능",
+          "value": "Ultriclean (Clean/Quiet 스위칭)",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Processing",
+          "name": "라이선스 가능 기능",
+          "value": "UltriSRC, Ultrisync, Ultriscape, Ultriformat, Ultriproc, Ultriproc-3DLUT, Ultristream, Ultrimix-Dante",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Processing",
+          "name": "카드당 최대 라이선스 가능 Ultriscape 헤드 수",
+          "value": "3",
+          "unit": "헤드",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        },
+        {
+          "group": "Compatibility",
+          "name": "지원 프레임",
+          "value": "ULTRIX-NS-FR1, ULTRIX-NS-FR2, ULTRIX-NS-FR5, ULTRIX-FR5, ULTRIX-FR12",
+          "unit": "",
+          "condition": "",
+          "source": "P",
+          "verification": "FOUND"
+        }
+      ],
+      "priorSources": [
+        {
+          "code": "P",
+          "name": "제조사 공식 Ultrix I/O Cards 페이지",
+          "url": "https://www.rossvideo.com/products/routing-systems/ultrix-io-cards/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "S1",
+          "name": "제조사 공식 Ultrix Specifications 페이지",
+          "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+          "scope": "제조사 공식 출처"
+        },
+        {
+          "code": "M",
+          "name": "제조사 공식 Ultrix User Guide",
+          "url": "https://documentation.rossvideo.com/files/Manuals/Routers/Ultrix/User%20Guides/Ultrix%20User%20Guide%20(2101DR-004).pdf",
+          "scope": "제조사 공식 출처"
+        }
+      ],
+      "approvedSpecificationsSha256": "400c02aa46944398855c413d30da2a9095c2a902fa43ff353bdbf84968adc5e4",
+      "approvedSourcesSha256": "7fff8b8222fc1d6eb4fd934920b20f0ebfeaf6c09c827e265593f20d504e178d"
+    },
+    "ultriscape": {
+      "priorSpecifications": [
+        {
+          "group": "License",
+          "name": "기능",
+          "value": "소프트웨어 정의 멀티뷰어",
+          "unit": "",
+          "condition": "Ultrix 프레임에 적용",
+          "source": "R",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Capacity",
+          "name": "헤드당 최대 PIP 수",
+          "value": "100",
+          "unit": "개",
+          "condition": "독립 제어 헤드 기준",
+          "source": "R",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "Capacity",
+          "name": "프레임별 최대 헤드 수",
+          "value": "6 / 12 / 27 / 48",
+          "unit": "헤드",
+          "condition": "FR1 / FR2 / FR5 / FR12 순서",
+          "source": "A",
+          "verification": "FOUND"
+        },
+        {
+          "group": "FR2",
+          "name": "FR2 최대 멀티뷰어 헤드 수 (HDX/MODX)",
+          "value": "12",
+          "unit": "헤드",
+          "condition": "ULTRIX-NS-FR2, HDX/MODX I/O 완전 라이선스 구성",
+          "source": "S",
+          "verification": "VERIFIED"
+        },
+        {
+          "group": "FR2",
+          "name": "FR2 최대 멀티뷰어 헤드 수 (IPX)",
+          "value": "6",
+          "unit": "헤드",
+          "condition": "ULTRIX-NS-FR2, IPX I/O 완전 라이선스 구성",
+          "source": "S",
+          "verification": "VERIFIED"
+        }
+      ],
+      "priorSources": [
+        {
+          "code": "R",
+          "name": "Ross Video Ultrix Licenses",
+          "url": "https://www.rossvideo.com/products/routing-systems/ultrix-licenses/",
+          "scope": "ULTRISCAPE 기능과 전체 프레임 한도"
+        },
+        {
+          "code": "S",
+          "name": "Ross Video Ultrix Specifications",
+          "url": "https://www.rossvideo.com/products/routing-systems/ultrix/ultrix-specifications/",
+          "scope": "ULTRIX-NS-FR2 카드별 최대 헤드 수"
+        },
+        {
+          "code": "A",
+          "name": "한국에빅스 Ultrix 라이선스",
+          "url": "http://avics.co.kr/ross/ultrix-liecense",
+          "scope": "국내 공급사 라이선스 분류와 프레임별 헤드 수"
+        }
+      ],
+      "approvedSpecificationsSha256": "8aa4cc9eea6bfd9a2baeeade6b8f3c5e606493e2adaabfcea8f35b73900bc03a",
+      "approvedSourcesSha256": "61d9a2b9960839e55d244738160c98eea273a7ca2c8128a55659dfbc46231c05"
+    }
+  }
+}
