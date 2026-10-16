@@ -279,4 +279,9 @@ select {
   .q-edit-tools, .q-file-tools { padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--q-line); }
   .q-output-tools > .q-button { margin-left: 0; }
   .q-file-tools .q-button, .q-edit-tools .q-button { flex: 1 1 auto; }
+  .q-file-tools .q-button, .q-edit-tools .q-button, .q-output-tools .q-button { min-height: var(--q-h-touch); }
+}
+
+@media (max-width: 768px) {
+  .q-file-tools .q-button, .q-edit-tools .q-button, .q-output-tools .q-button { min-height: var(--q-h-touch); }
 }

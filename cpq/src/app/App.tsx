@@ -513,6 +513,7 @@ function QuoteWorkspace() {
                 {grade.label}
               </label>
             ))}
+          </div>
             <button
               type="button"
               className="q-button q-primary"
@@ -521,7 +522,6 @@ function QuoteWorkspace() {
             >
               Excel 다운로드
             </button>
-          </div>
           </div>
           {status.kind === 'editing' && status.prepared.blocking && (
             <p role="status" className="q-muted">
@@ -535,9 +535,7 @@ function QuoteWorkspace() {
             </p>
           )}
         </div>
-        <ReferenceDocs />
-
-        <main className={`q-main${status.kind === 'editing' ? ' q-editing-main' : ''}`}>
+        <main className={`q-main${status.kind === 'editing' ? ' q-editing-main' : status.kind === 'empty' ? ' q-empty-main' : ''}`}>
           {resources !== undefined && (
             <>
               {!resources.catalog.pricesAvailable && (
@@ -576,8 +574,8 @@ function QuoteWorkspace() {
 
               {entry === null && status.kind === 'empty' && (
                 <div className="q-start-intro">
-                  <strong>두 가지 방법 중 하나를 선택하세요</strong>
-                  <p>구성도 JSON은 장비 목록을 한 번에 불러오고, 직접 선택은 필요한 품목을 골라 시작합니다.</p>
+                  <strong>견적을 만든 뒤에는</strong>
+                  <p>확인 항목을 살핀 다음 수량과 견적 정보를 편집하고 작업 파일로 보관하세요.</p>
                 </div>
               )}
 
@@ -871,6 +869,7 @@ function QuoteWorkspace() {
             </>
           )}
         </main>
+        <ReferenceDocs />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+import { test, expect, type Page } from '@playwright/test';
 import { mockResources } from './fixtures';
 
 test('empty quote presents both entry paths once above references', async ({ page }) => {
@@ -9,6 +10,8 @@ test('empty quote presents both entry paths once above references', async ({ pag
   await expect(page.getByRole('button', { name: '품목 직접 선택' })).toHaveCount(1);
   await expect(page.locator('.q-start-actions')).toBeVisible();
   await expect(page.locator('.q-reference-docs')).toBeVisible();
+  expect((await page.locator('.q-main').boundingBox())?.height ?? 0).toBeLessThan(250);
+  expect(await page.locator('.q-start-intro').evaluate(el => !!(el.compareDocumentPosition(document.querySelector('.q-reference-docs')!) & 4))).toBeTruthy();
   await expect(page.locator('.q-start-actions')).toBeInViewport();
   await page.getByRole('button', { name: '품목 직접 선택' }).click();
   await expect(page.getByText('승인된 카탈로그 1개 품목에서 고릅니다.')).toBeVisible();
@@ -41,6 +44,7 @@ test('editing groups preserve the quote workflow and output gate', async ({ page
   await expect(page.locator('.q-file-tools')).toBeVisible();
   await expect(page.locator('.q-edit-tools')).toBeVisible();
   await expect(page.locator('.q-output-tools')).toBeVisible();
+  await expect(page.getByRole('radiogroup', { name: '출력 등급' }).getByRole('button')).toHaveCount(0);
   await expect(page.getByRole('radio', { name: '2 고객용' })).toBeChecked();
   await expect(page.getByRole('button', { name: 'Excel 다운로드' })).toBeDisabled();
   await expect(page.getByRole('button', { name: '작업 파일 열기' })).toHaveCount(1);
@@ -57,4 +61,58 @@ test('editing groups preserve the quote workflow and output gate', async ({ page
   await expect(page.getByRole('button', { name: '실행 취소' })).toBeEnabled();
   await page.getByRole('button', { name: '실행 취소' }).click();
   await expect(page.getByRole('button', { name: '다시 실행' })).toBeEnabled();
+});
+
+
+async function pageWidth(page: Page): Promise<[number, number]> {
+  return page.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
+}
+
+for (const width of [390, 768, 1280]) {
+  test(`${width}px start controls remain touchable without page overflow`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await mockResources(page);
+    await page.goto('./');
+    for (const button of await page.locator('.q-start-actions .q-button').all()) {
+      await expect(button).toBeVisible();
+      expect((await button.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(44);
+    }
+    const [scroll, client] = await pageWidth(page);
+    expect(scroll).toBeLessThanOrEqual(client + 1);
+    mkdirSync('.local/screens/cpq-redesign', { recursive: true });
+    await page.screenshot({ path: `.local/screens/cpq-redesign/empty-${width}.png`, fullPage: true });
+  });
+}
+
+for (const width of [390, 768, 1280]) test(`${width}px long quote keeps table scrolling inside its card`, async ({ page }) => {
+  await page.setViewportSize({ width, height: 844 });
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await mockResources(page);
+  await page.goto('./');
+  await page.getByRole('button', { name: '구성도 JSON 열기' }).click();
+  const nodes = Array.from({ length: 20 }, (_, i) => ({
+    id: `n${i}`, type: 'equipment',
+    data: { name: `긴 합성 장비 ${i}`, model: 'FIX', category: 'video', systemName: i < 10 ? '회의실 A' : '교육장 B' },
+  }));
+  await page.getByLabel('구성도 파일 선택').setInputFiles({
+    name: 'long-quote.json', mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify({ version: '1.1', nodes, edges: [], lineTypes: [] })),
+  });
+  await expect(page.locator('.q-quote-sheet')).toBeVisible();
+  if (width <= 768) for (const button of await page.locator('.q-file-tools .q-button, .q-edit-tools .q-button, .q-output-tools .q-button').all()) {
+    expect((await button.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(44);
+  }
+  const wrap = page.locator('.q-table-wrap').first();
+  if (width === 390) expect(await wrap.evaluate(el => el.scrollWidth)).toBeGreaterThan(await wrap.evaluate(el => el.clientWidth));
+  for (let i = 0; i < 20; i++) {
+    const closed = page.locator('.q-section-toggle[aria-expanded="false"]');
+    if (await closed.count() === 0) break;
+    await closed.first().click();
+  }
+  const [scroll, client] = await pageWidth(page);
+  expect(scroll).toBeLessThanOrEqual(client + 1);
+  expect(errors).toEqual([]);
+  mkdirSync('.local/screens/cpq-redesign', { recursive: true });
+  await page.screenshot({ path: `.local/screens/cpq-redesign/editing-${width}.png`, fullPage: true });
 });

@@ -644,3 +644,7 @@
 .q-quote-identity { width: 100%; font-size: 15px; }
 .q-save-status { width: 100%; margin: -4px 0 2px; }
 .q-save-status .q-muted { font-size: 11px; }
+
+.q-empty-main { min-height: 0; padding-block: 18px; }
+.q-empty-main .q-start-intro { padding: 0; }
+.q-empty-main .q-start-intro p { margin-top: 6px; }
