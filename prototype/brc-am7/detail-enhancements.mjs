@@ -35,7 +35,7 @@ function validMap(map, product) {
       (map.displayWidth === undefined || Number.isFinite(map.displayWidth) && map.displayWidth > 0))) &&
     size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'
       ? Number.isFinite(i.y1) && Number.isFinite(i.y2) && i.y1 >= map.crop.top && i.y2 <= size[1] - map.crop.bottom
-      : Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
+      : i.y === undefined || (Number.isFinite(i.y) && i.y >= map.crop.top && i.y <= size[1] - map.crop.bottom)))) && portMapImageMatches(image, ...size, map) && Array.isArray(map.items) && map.items.length > 0 &&
     map.items.every(i => validMarker(i) && (i.side === 'left' || i.side === 'right'
       ? i.y2 <= size[1] && (i.x === undefined || i.x <= size[0])
       : i.x2 <= size[0] && (i.y === undefined || i.y <= size[1]) &&
