@@ -2,9 +2,9 @@ import {modelData, exampleConfigurations, guideEvidence} from './analogway-layer
 export {modelData, exampleConfigurations};
 
 const RESOURCE_NOTES = {
-  aquilon:'Aquilon: VPU 하나마다 소스·출력 링크 8개. 용량 2 믹싱 레이어는 소스 링크 2개, 분할 레이어는 1개를 사용합니다. AUX 출력은 처리 자원을 쓰지 않습니다. 화면 하나는 하나의 VPU 안에 들어가야 한다는 가정으로 계산합니다.',
-  alta:'Alta 4K: 믹싱 레이어 1개 또는 분할 레이어 2개가 레이어 자원 1개입니다. 출력 경계를 넘는 추가 비용은 공식 자료에서 미확인입니다.',
-  midra:'Midra 4K: Mixer·Matrix·Blend 모드별 고정 구성을 적용합니다. 문서에 적힌 모드 이외의 조합은 지원 불가로 표시합니다.',
+  aquilon:'Aquilon은 4K60 용량 2 기준으로 계산합니다. 믹싱 한 개는 링크 두 개, 분할 레이어 두 개 한 쌍도 링크 두 개를 사용합니다. 레이어가 없는 화면과 보조 출력은 처리 링크를 쓰지 않습니다.',
+  alta:'Alta 4K는 믹싱 한 개 또는 분할 두 개를 레이어 자원 한 개로 계산합니다. 레이어가 여러 출력 경계를 넘을 때 추가 자원은 미확인입니다.',
+  midra:'Midra 4K는 공식 문서에 있는 Mixer·Matrix·Blend 구성만 계산합니다.',
 };
 
 const validInteger = (value,min,max) => Number.isInteger(value) && value >= min && value <= max;
@@ -20,42 +20,94 @@ function checkInput(input) {
   return '';
 }
 
-function firstFitAquilon(screens) {
-  const bins=[]; const oversized=[];
-  for (let index=0; index<screens.length; index++) {
-    const screen=screens[index], outputLinks=screen.outputs*2;
-    const sourceLinks=screen.layerType === 'mixing' ? screen.layers*2 : screen.layers;
-    if (outputLinks>8 || sourceLinks>8) { oversized.push({screen:index+1,outputLinks,sourceLinks}); continue; }
-    let bin=bins.find(item=>item.outputLinks+outputLinks<=8 && item.sourceLinks+sourceLinks<=8);
-    if (!bin) { bin={outputLinks:0,sourceLinks:0,screens:[]}; bins.push(bin); }
-    bin.outputLinks+=outputLinks; bin.sourceLinks+=sourceLinks; bin.screens.push(index+1);
+function packAquilonAtLimit(tasks,limit) {
+  const bins=[];
+  function place(index) {
+    if(index===tasks.length)return true;
+    const task=tasks[index],seen=new Set();
+    for(const bin of bins){
+      const signature=bin.outputLinks+':'+bin.sourceLinks;
+      if(seen.has(signature))continue;
+      seen.add(signature);
+      if(bin.outputLinks+task.outputLinks>8||bin.sourceLinks+task.sourceLinks>8)continue;
+      bin.outputLinks+=task.outputLinks;bin.sourceLinks+=task.sourceLinks;bin.screens.push(task.screen);
+      if(place(index+1))return true;
+      bin.outputLinks-=task.outputLinks;bin.sourceLinks-=task.sourceLinks;bin.screens.pop();
+    }
+    if(bins.length<limit){
+      bins.push({outputLinks:task.outputLinks,sourceLinks:task.sourceLinks,screens:[task.screen]});
+      if(place(index+1))return true;
+      bins.pop();
+    }
+    return false;
   }
-  return {bins,oversized,totalSourceLinks:screens.reduce((sum,s)=>sum+(s.layerType==='mixing'?s.layers*2:s.layers),0),totalOutputLinks:screens.reduce((sum,s)=>sum+s.outputs*2,0)};
+  return place(0)?bins.map(bin=>({...bin,screens:[...bin.screens]})):null;
+}
+
+function packAquilonScreens(screens,maxUnits=4) {
+  const tasks=screens.map((screen,index)=>({
+    screen:index+1,
+    outputLinks:screen.layers===0?0:screen.outputs*2,
+    sourceLinks:screen.layers===0?0:screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2,
+  })).filter(task=>task.outputLinks||task.sourceLinks);
+  const oversized=tasks.filter(task=>task.outputLinks>8||task.sourceLinks>8);
+  const validTasks=tasks.filter(task=>task.outputLinks<=8&&task.sourceLinks<=8)
+    .sort((a,b)=>Math.max(b.outputLinks,b.sourceLinks)-Math.max(a.outputLinks,a.sourceLinks)||
+      (b.outputLinks+b.sourceLinks)-(a.outputLinks+a.sourceLinks)||a.screen-b.screen);
+  if(oversized.length)return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  for(let limit=0;limit<=maxUnits;limit++){
+    const bins=limit===0?(validTasks.length===0?[]:null):packAquilonAtLimit(validTasks,limit);
+    if(bins)return {bins,oversized,fits:true,minUnits:bins.length,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  }
+  return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
 }
 
 function evaluateAquilon(model,input,pgmOutputs) {
-  const reasons=[]; const fit=firstFitAquilon(input.screens);
-  const layers=input.screens.reduce((sum,s)=>sum+s.layers,0);
-  if (fit.oversized.length) reasons.push(`한 화면에 소스 링크 ${Math.max(...fit.oversized.map(x=>x.sourceLinks))}개 또는 출력 링크 ${Math.max(...fit.oversized.map(x=>x.outputLinks))}개가 필요합니다. VPU 1개당 각 8개 한도를 넘는 화면은 배분 규칙이 미확인입니다.`);
-  if (fit.bins.length>model.processingUnits) reasons.push(`화면별 first-fit 배분에 VPU ${fit.bins.length}개가 필요하지만 보유 VPU는 ${model.processingUnits}개입니다 (총 소스 링크 ${fit.totalSourceLinks}/${model.processingUnits*8}).`);
-  if (pgmOutputs>model.pgmOutputs) reasons.push(`4K PGM 출력 ${pgmOutputs}개가 한도 ${model.pgmOutputs}개를 넘습니다.`);
-  if (pgmOutputs+input.auxOutputs>model.outputConnectors) reasons.push(`PGM+보조 출력 ${pgmOutputs+input.auxOutputs}개가 출력 커넥터 ${model.outputConnectors}개를 넘습니다.`);
-  if (input.inputs4k>model.inputs4k) reasons.push(`4K 입력 ${input.inputs4k}개가 한도 ${model.inputs4k}개를 넘습니다.`);
-  const modes=unique(input.screens.filter(s=>s.outputs>=3&&s.layers>0).map(()=> 'Optimized mode · 4K 전용'));
-  return {possible:reasons.length===0,reasons,mode:modes.join(', ')||'VPU first-fit',used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,inputs4k:input.inputs4k,processingUnits:fit.bins.length,sourceLinks:fit.totalSourceLinks,outputLinks:fit.totalOutputLinks,layers},remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),processingUnits:Math.max(0,model.processingUnits-fit.bins.length),sourceLinks:Math.max(0,model.processingUnits*8-fit.totalSourceLinks),outputLinks:Math.max(0,model.processingUnits*8-fit.totalOutputLinks)}};
+  const reasons=[],fit=packAquilonScreens(input.screens,4);
+  for(const screen of input.screens){
+    if(screen.layers===0)continue;
+    const outputLinks=screen.outputs*2;
+    if(outputLinks>8)reasons.push('한 화면에 필요한 출력 링크 '+outputLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
+    if(screen.layerType==='mixing'&&screen.layers>model.mixingLayersPerScreen)
+      reasons.push('화면당 4K 믹싱 최대 '+model.mixingLayersPerScreen+'개(매뉴얼 66·79쪽) 초과');
+    else if(screen.layerType==='split'&&screen.layers>model.splitLayersPerScreen)
+      reasons.push('화면당 4K 분할 최대 '+model.splitLayersPerScreen+'개 초과');
+    else {
+      const sourceLinks=screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2;
+      if(sourceLinks>8)reasons.push('한 화면에 필요한 레이어 입력 링크 '+sourceLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
+    }
+  }
+  if(fit.fits&&fit.minUnits>model.processingUnits)
+    reasons.push('처리 보드(VPU) '+fit.minUnits+'개가 필요하지만 보유 수는 '+model.processingUnits+'개입니다.');
+  else if(!fit.fits&&!reasons.length)
+    reasons.push('요청한 화면의 링크를 보유한 처리 보드(VPU) '+model.processingUnits+'개에 배분할 수 없습니다.');
+  if(pgmOutputs>model.pgmOutputs)reasons.push('4K 화면 출력 '+pgmOutputs+'개가 모델 한도 '+model.pgmOutputs+'개를 넘습니다.');
+  if(pgmOutputs+input.auxOutputs>model.outputConnectors)reasons.push('화면과 보조 출력 합계 '+(pgmOutputs+input.auxOutputs)+'개가 출력 커넥터 '+model.outputConnectors+'개를 넘습니다.');
+  if(input.inputs4k>model.inputs4k)reasons.push('4K 입력 '+input.inputs4k+'개가 한도 '+model.inputs4k+'개를 넘습니다.');
+  const possible=reasons.length===0;
+  const layers=input.screens.reduce((sum,screen)=>sum+screen.layers,0);
+  const modes=unique(input.screens.filter(screen=>screen.outputs>=3&&screen.layers>0).map(()=> 'Optimized mode · 4K 전용'));
+  return {possible,reasons,mode:possible?(modes.join(', ')||'처리 보드(VPU) '+fit.minUnits+'개'):'' ,
+    displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용':'레이어 처리 보드 불필요'):'',
+    used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,outputConnectors:pgmOutputs+input.auxOutputs,inputs4k:input.inputs4k,processingUnits:fit.minUnits,sourceLinks:fit.totalSourceLinks,outputLinks:fit.totalOutputLinks,layers},
+    remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),processingUnits:fit.fits?Math.max(0,model.processingUnits-fit.minUnits):undefined,sourceLinks:Math.max(0,model.processingUnits*8-fit.totalSourceLinks),outputLinks:Math.max(0,model.processingUnits*8-fit.totalOutputLinks)}};
 }
 
 function evaluateAlta(model,input,pgmOutputs) {
-  const reasons=[]; const resources=input.screens.reduce((sum,s)=>sum+layerResourceCount(s),0);
-  const maxOutputsPerScreen=model.pgmScreens;
-  if (input.screens.length>model.pgmScreens) reasons.push(`프로그램 화면 ${input.screens.length}개가 한도 ${model.pgmScreens}개를 넘습니다.`);
-  if (input.screens.some(s=>s.outputs>maxOutputsPerScreen)) reasons.push(`한 화면의 출력 수가 ${maxOutputsPerScreen}개 한도를 넘습니다.`);
-  if (pgmOutputs>model.pgmOutputs) reasons.push(`4K PGM 출력 ${pgmOutputs}개가 한도 ${model.pgmOutputs}개를 넘습니다.`);
-  if (resources>model.mixingLayers) reasons.push(`레이어 자원 ${resources}개가 한도 ${model.mixingLayers}개를 넘습니다.`);
-  if (input.auxOutputs>model.auxOutputs) reasons.push(`보조 출력 ${input.auxOutputs}개가 한도 ${model.auxOutputs}개를 넘습니다.`);
-  if (pgmOutputs+input.auxOutputs>model.outputConnectors) reasons.push(`PGM+보조 출력 ${pgmOutputs+input.auxOutputs}개가 출력 커넥터 ${model.outputConnectors}개를 넘습니다.`);
-  if (input.inputs4k>model.inputs4k) reasons.push(`4K 입력 ${input.inputs4k}개가 한도 ${model.inputs4k}개를 넘습니다.`);
-  return {possible:reasons.length===0,reasons,mode:'Alta 4K · 공유 레이어 자원',used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,inputs4k:input.inputs4k,layerResources:resources,mixingLayers:input.screens.filter(s=>s.layerType==='mixing').reduce((n,s)=>n+s.layers,0),splitLayers:input.screens.filter(s=>s.layerType==='split').reduce((n,s)=>n+s.layers,0)},remaining:{pgmScreens:Math.max(0,model.pgmScreens-input.screens.length),pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),auxOutputs:Math.max(0,model.auxOutputs-input.auxOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),layerResources:Math.max(0,model.mixingLayers-resources)}};
+  const reasons=[],resources=input.screens.reduce((sum,screen)=>sum+layerResourceCount(screen),0);
+  if(input.screens.length>model.pgmScreens)reasons.push('프로그램 화면 '+input.screens.length+'개가 모델 한도 '+model.pgmScreens+'개를 넘습니다.');
+  if(input.screens.some(screen=>screen.outputs>model.maxOutputsPerScreen))reasons.push('한 화면의 출력 수가 모델 한도 '+model.maxOutputsPerScreen+'개를 넘습니다.');
+  if(pgmOutputs>model.pgmOutputs)reasons.push('4K 화면 출력 '+pgmOutputs+'개가 모델 한도 '+model.pgmOutputs+'개를 넘습니다.');
+  if(resources>model.mixingLayers)reasons.push('레이어 자원 '+resources+'개가 모델 한도 '+model.mixingLayers+'개를 넘습니다.');
+  if(input.auxOutputs>model.auxOutputs)reasons.push('보조 출력 '+input.auxOutputs+'개가 모델 한도 '+model.auxOutputs+'개를 넘습니다.');
+  if(pgmOutputs+input.auxOutputs>model.outputConnectors)reasons.push('화면과 보조 출력 합계 '+(pgmOutputs+input.auxOutputs)+'개가 출력 커넥터 '+model.outputConnectors+'개를 넘습니다.');
+  if(input.inputs4k>model.inputs4k)reasons.push('4K 입력 '+input.inputs4k+'개가 한도 '+model.inputs4k+'개를 넘습니다.');
+  const possible=reasons.length===0;
+  const mixLayers=input.screens.filter(screen=>screen.layerType==='mixing').reduce((sum,screen)=>sum+screen.layers,0);
+  const splitLayers=input.screens.filter(screen=>screen.layerType==='split').reduce((sum,screen)=>sum+screen.layers,0);
+  return {possible,reasons,mode:possible?'Alta 4K · 레이어 자원':'',displayMode:possible?'레이어 '+model.mixingLayers+'개 중 '+resources+'개 사용':'',
+    used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,inputs4k:input.inputs4k,layerResources:resources,mixingLayers:mixLayers,splitLayers},
+    remaining:{pgmScreens:Math.max(0,model.pgmScreens-input.screens.length),pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),auxOutputs:Math.max(0,model.auxOutputs-input.auxOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),layerResources:Math.max(0,model.mixingLayers-resources)}};
 }
 
 function evaluateMidra(model,input,pgmOutputs) {
@@ -81,7 +133,9 @@ function evaluateMidra(model,input,pgmOutputs) {
   if (pgmOutputs>model.pgmOutputs) reasons.push(`4K PGM 출력 ${pgmOutputs}개가 한도 ${model.pgmOutputs}개를 넘습니다.`);
   const totalLayers=screens.reduce((sum,s)=>sum+s.layers,0);
   const mixOrSplitLayers=screens.reduce((sum,s)=>sum+(s.layerType==='mixing'?s.layers:Math.ceil(s.layers/2)),0);
-  return {possible:reasons.length===0,reasons,mode,used:{screens:screens.length,pgmOutputs,auxOutputs:input.auxOutputs,inputs4k:input.inputs4k,mixingLayers:screens.filter(s=>s.layerType==='mixing').reduce((n,s)=>n+s.layers,0),splitLayers:screens.filter(s=>s.layerType==='split').reduce((n,s)=>n+s.layers,0),mixOrSplitLayers},remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),auxOutputs:Math.max(0,model.auxOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),mixOrSplitLayers:Math.max(0,model.mixingLayers-mixOrSplitLayers)}};
+  const possible=reasons.length===0;
+  const displayMode=mode==='Mixer'?'4K 화면 1개 구성':mode==='Matrix'?'4K 화면 2개 구성':mode==='Blend'?'2개 출력을 이어 만든 화면 구성':'';
+  return {possible,reasons,mode:possible?mode:'',displayMode:possible?displayMode:'',used:{screens:screens.length,pgmOutputs,auxOutputs:input.auxOutputs,inputs4k:input.inputs4k,mixingLayers:screens.filter(s=>s.layerType==='mixing').reduce((n,s)=>n+s.layers,0),splitLayers:screens.filter(s=>s.layerType==='split').reduce((n,s)=>n+s.layers,0),mixOrSplitLayers},remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),auxOutputs:Math.max(0,model.auxOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),mixOrSplitLayers:Math.max(0,model.mixingLayers-mixOrSplitLayers)}};
 }
 
 export function calculateRecommendations(input) {
@@ -89,8 +143,8 @@ export function calculateRecommendations(input) {
   if (invalid) return {valid:false,error:invalid,recommendedModel:null,models:modelData.map(m=>({slug:m.slug,name:m.name,possible:false,recommended:false,reasons:[invalid],mode:'',used:{},remaining:{}}))};
   const pgmOutputs=input.screens.reduce((sum,s)=>sum+s.outputs,0);
   const models=modelData.map(model=>{
-    const evaluated=model.platform==='aquilon'?evaluateAquilon(model,input,pgmOutputs):model.platform==='alta'?evaluateAlta(model,input,pgmOutputs):evaluateMidra(model,input,pgmOutputs);
-    return {slug:model.slug,name:model.name,platform:model.platform,...evaluated,recommended:false};
+    const evaluated=model.platform.startsWith('aquilon')?evaluateAquilon(model,input,pgmOutputs):model.platform==='alta'?evaluateAlta(model,input,pgmOutputs):evaluateMidra(model,input,pgmOutputs);
+    return {slug:model.slug,name:model.name,platform:model.platform,connectorBasis:model.connectorBasis,...evaluated,recommended:false};
   });
   const recommended=models.find(item=>item.possible);
   if(recommended) recommended.recommended=true;
@@ -120,35 +174,51 @@ function readScreenInputs(container){
 }
 
 function renderModelResult(result,currentSlug){
-  const list=makeElement('div','aw-guide-result-list');
-  const sorted=[...result.models].sort((a,b)=>Number(b.recommended)-Number(a.recommended));
-  for(const model of sorted){
+  const possibleModels=result.models.filter(model=>model.possible).sort((a,b)=>Number(b.recommended)-Number(a.recommended));
+  const unavailable=result.models.filter(model=>!model.possible);
+  const groups=makeElement('div','aw-guide-result-groups');
+  const possibleGroup=makeElement('section','aw-guide-possible-models');
+  possibleGroup.append(makeElement('h3','','가능한 모델'));
+  const possibleList=makeElement('div','aw-guide-result-list');
+  function appendCard(model,target){
     const card=makeElement('article','aw-guide-model'+(model.recommended?' is-recommended':'')+(model.slug===currentSlug?' is-current':''));
     const head=makeElement('div','aw-guide-model-heading');
     head.append(makeElement('h4','',model.name));
     if(model.recommended)head.append(makeElement('span','aw-guide-recommend-badge','추천 모델'));
     if(model.slug===currentSlug)head.append(makeElement('span','aw-guide-current-badge','현재 제품'));
     card.append(head);
-    card.append(makeElement('p',model.possible?'aw-guide-status is-possible':'aw-guide-status is-impossible',model.possible?`가능 · ${model.mode}`:'구성 불가'));
+    card.append(makeElement('p',model.possible?'aw-guide-status is-possible':'aw-guide-status is-impossible',model.possible?'가능 · '+model.displayMode:'불가'));
+    if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','출력 커넥터: '+model.connectorBasis));
     if(model.reasons.length){
       const reasons=makeElement('ul','aw-guide-reasons');
       for(const reason of model.reasons)reasons.append(makeElement('li','',reason));
       card.append(reasons);
     }
+    if(!model.possible){target.append(card);return;}
     const details=makeElement('details','aw-guide-resource-details');
     details.append(makeElement('summary','','사용 자원과 남는 한도'));
     const metrics=makeElement('dl','aw-guide-resource-metrics');
-    const names={screens:'화면',pgmOutputs:'4K PGM 출력',auxOutputs:'보조 출력',inputs4k:'4K 입력',processingUnits:'사용 VPU',sourceLinks:'소스 링크',outputLinks:'출력 링크',layerResources:'레이어 자원',mixingLayers:'믹싱 레이어',splitLayers:'분할 레이어',mixOrSplitLayers:'믹싱/분할 자원',pgmScreens:'PGM 화면',outputConnectors:'출력 커넥터'};
-    const keys=Object.keys(model.used).filter(key=>names[key]);
-    for(const key of keys){
+    const names={screens:'화면',pgmOutputs:'프로그램 출력',auxOutputs:'보조 출력',inputs4k:'4K 입력',processingUnits:'처리 보드(VPU)',sourceLinks:'소스 링크',outputLinks:'출력 링크',layerResources:'레이어 자원',mixingLayers:'믹싱 레이어',splitLayers:'분할 레이어',mixOrSplitLayers:'믹싱/분할 자원',pgmScreens:'프로그램 화면',outputConnectors:'출력 커넥터'};
+    for(const key of Object.keys(model.used).filter(key=>names[key])){
       const row=makeElement('div','aw-guide-resource-row');
-      row.append(makeElement('dt','',names[key]),makeElement('dd','',`${model.used[key]} 사용`));
-      if(model.remaining[key]!==undefined)row.append(makeElement('dd','aw-guide-remaining',`${model.remaining[key]} 남음`));
+      row.append(makeElement('dt','',names[key]),makeElement('dd','',model.used[key]+'개 사용'));
+      if(model.remaining[key]!==undefined)row.append(makeElement('dd','aw-guide-remaining',model.remaining[key]+'개 남음'));
       metrics.append(row);
     }
-    details.append(metrics); card.append(details); list.append(card);
+    if(model.mode?.includes('Optimized mode'))metrics.append(makeElement('p','aw-guide-technical-note','작동 조건: '+model.mode));
+    details.append(metrics);card.append(details);target.append(card);
   }
-  return list;
+  for(const model of possibleModels)appendCard(model,possibleList);
+  possibleGroup.append(possibleList);groups.append(possibleGroup);
+  if(unavailable.length){
+    const unavailableDetails=makeElement('details','aw-guide-unavailable');
+    unavailableDetails.open=!(window.matchMedia?.('(max-width: 720px)').matches??false);
+    unavailableDetails.append(makeElement('summary','','불가 '+unavailable.length+'종 보기'));
+    const unavailableList=makeElement('div','aw-guide-result-list');
+    for(const model of unavailable)appendCard(model,unavailableList);
+    unavailableDetails.append(unavailableList);groups.append(unavailableDetails);
+  }
+  return groups;
 }
 
 export function renderAnalogWayLayerGuide(currentSlug){
@@ -158,6 +228,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
   section.setAttribute('aria-labelledby','aw-layer-guide-title');
   const title=makeElement('h2','','화면·레이어 설계 가이드'); title.id='aw-layer-guide-title'; section.append(title);
   section.append(makeElement('p','aw-guide-intro','필요한 화면 구성과 레이어 수를 입력하면, 공식 문서에 적힌 구성 한도 안에서 가능한 Analog Way 모델을 비교합니다.'));
+  section.append(makeElement('p','aw-guide-order-note','추천은 시리즈·규모 순서이며 가격 비교가 아닙니다.'));
   const examples=makeElement('div','aw-guide-examples');
   examples.setAttribute('role','group'); examples.setAttribute('aria-label','구성 예시');
   for(const [key,config] of Object.entries(exampleConfigurations)){
@@ -217,11 +288,13 @@ export function renderAnalogWayLayerGuide(currentSlug){
   const noteList=makeElement('ul','');
   for(const note of [
     'Aquilon은 용량 2의 4K60만 계산합니다. 1080p 용량 1 레이어를 섞을 때의 비용은 미확인입니다.',
-    'Aquilon에서 한 화면의 링크를 VPU 여러 개에 나눌 수 있는지 미확인입니다. 계산기는 각 화면을 VPU 하나 안에 담는다고 가정합니다.',
+    '출력 8개 이하 화면의 레이어를 처리 보드(VPU) 2개로 나누어 늘릴 수 있는지는 공식 자료에서 확인되지 않았습니다.',
     'Aquilon 화면이 5개 이상 출력 링크에 걸치고 용량 2 레이어를 쓰면 Optimized mode가 적용됩니다. 이 계산은 4K60만 사용해 추가 4링크 경계 비용을 더하지 않습니다.',
     'Aquilon AUX는 처리 자원을 쓰지 않지만, PGM과 AUX를 합친 출력 수는 모델의 출력 커넥터 수 이하여야 합니다.',
     'Alta 4K에서 레이어가 여러 출력에 걸칠 때 추가 자원은 미확인입니다. 공개된 믹싱/분할 자원 수만 계산합니다.',
-    '수량·모드 한도에 대한 근거: Aquilon User Manual v6.2 61·66–69·79쪽, Aquilon 데이터시트 1·3쪽; Alta 4K User Manual 25·42–43·46·50·52쪽, 데이터시트 6쪽; Midra 4K User Manual 25·41–42·44쪽, 데이터시트 5–6쪽.',
+    'Aquilon 레이어 링크 계산은 4K60 용량 2 기준입니다. 믹싱 레이어 한 개와 분할 레이어 한 쌍은 각각 소스 링크 두 개를 씁니다(사용설명서 66쪽). 레이어가 없는 화면은 처리 자원을 쓰지 않습니다(66쪽).',
+    '믹싱은 부드럽게 화면을 바꾸고, 분할은 컷 전환만 되는 대신 같은 자원으로 레이어를 두 배 쓸 수 있습니다. 4K60 화면 출력은 링크 두 개씩 사용하며, 한 화면이 출력 8개를 넘으면 다른 VPU를 씁니다(66·68쪽).',
+    '수량·모드 한도 근거: Aquilon User Manual v6.2 61·66–69·79쪽, Aquilon 데이터시트 1·3쪽; Alta 4K User Manual 25·42–43·46·50·52쪽, 데이터시트 6쪽; Midra 4K User Manual 25·41–42·44쪽, 데이터시트 5–6쪽.',
   ])noteList.append(makeElement('li','',note));
   notes.append(noteList);
   const simulator=makeElement('p','aw-guide-simulator-note','계산 결과를 실제 장비 구성에 적용하기 전에 제조사 시뮬레이터에서 최종 확인하세요.');

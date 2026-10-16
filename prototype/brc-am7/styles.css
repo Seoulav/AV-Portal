@@ -508,6 +508,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-layer-guide h2 { margin: 0 0 8px; font-size: 20px; }
 .aw-layer-guide h3 { margin: 0 0 10px; font-size: 15px; }
 .aw-guide-intro { max-width: 75ch; color: var(--pg-ink-2); line-height: 1.6; }
+.aw-guide-order-note { margin: 0 0 12px; color: var(--pg-ink-2); font-size: 12px; }
 .aw-guide-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
 .aw-guide-example, .aw-guide-add-screen, .aw-guide-remove-screen { min-height: 38px; padding: 8px 12px; border: 1px solid #cbd9eb; border-radius: 999px; color: var(--pg-ink); background: #fff; font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; }
 .aw-guide-example:hover, .aw-guide-add-screen:hover, .aw-guide-remove-screen:hover { border-color: var(--pg-accent); color: var(--pg-accent-2); }
@@ -529,6 +530,12 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-recommendation { color: #075b3a; }
 .aw-guide-no-recommendation, .aw-guide-error { color: #9b2c24; }
 .aw-guide-result-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; min-width: 0; }
+.aw-guide-possible-models, .aw-guide-unavailable { min-width: 0; }
+.aw-guide-possible-models > h3 { margin: 14px 0 8px; }
+.aw-guide-unavailable { margin-top: 12px; }
+.aw-guide-unavailable > summary { width: fit-content; color: var(--pg-accent-2); font-weight: 750; cursor: pointer; }
+.aw-guide-unavailable > summary:focus-visible, .aw-guide-resource-details summary:focus-visible, .aw-guide-notes summary:focus-visible { outline: 3px solid #8ebfff; outline-offset: 3px; border-radius: 4px; }
+.aw-guide-unavailable[open] > .aw-guide-result-list { margin-top: 9px; }
 .aw-guide-model { min-width: 0; padding: 12px; border: 1px solid var(--pg-line); border-radius: 12px; background: #fff; }
 .aw-guide-model.is-recommended { border-color: #6eb996; box-shadow: inset 0 0 0 1px #6eb996; }
 .aw-guide-model.is-current { background: #f0f6ff; }
@@ -539,6 +546,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-status { margin: 6px 0; font-size: 12px; font-weight: 750; }
 .aw-guide-status.is-possible { color: #087349; }
 .aw-guide-status.is-impossible { color: #9b2c24; }
+.aw-guide-model-note, .aw-guide-technical-note { color: var(--pg-ink-2); font-size: 11px; }
 .aw-guide-reasons { margin: 6px 0; padding-left: 18px; color: var(--pg-ink-2); font-size: 12px; line-height: 1.5; }
 .aw-guide-reasons li + li { margin-top: 3px; }
 .aw-guide-resource-details { margin-top: 8px; color: var(--pg-ink-2); font-size: 12px; }

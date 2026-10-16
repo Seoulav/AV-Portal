@@ -298,7 +298,7 @@
 - 상태: REVIEW (기존 초안 PR #594에 계산·표시 결함 수정 중)
 - 명세·인계: `Work/작업/W-20261016-019.md`, `Work/기록/W-20261016-019-Codex-인계.md`, 기준 main `54d0693c`에서 확인.
 - 브랜치: `codex/W-20261016-019-aw-layer-guide` · 전용 워크트리 `codex-c-w019`.
-- 범위: Analog Way 프로세서 11종 전용 계산 가이드. 제품 JSON·공개 스냅샷·검색 인덱스 불변.
+- 범위: Analog Way 프로세서 15종 계산 가이드(Midra 2·Alta 2·Aquilon RS 7·Aquilon C 4). 제품 JSON·공개 스냅샷·검색 인덱스 불변.
 - [x] Aquilon·Alta·Midra 규칙으로 입력 계산과 3개 예시를 검증하는 순수 계산 모듈·시험 구현. 포털 `layerPlan`·`videoLayerPlan` 및 I/O 행의 모델별 입력 수와 대조.
 - [x] 카드가 공용 보조 카드 가시성 필터에서 숨겨지는 문제와 2×2 예시의 출력 선택값 변환 오류를 고쳤다.
 - [x] prototype 원본과 생성 beta 자산을 동기화하고 검증기 파일 허용 목록을 갱신했다. 과거 스타일 검사에는 W-019 추가분만 되감는 함수를 연결했다.
@@ -315,3 +315,13 @@
 - Headless Chromium: 11개 승인 모델 각각 가이드 1개·비교 결과 11개, RC400T·EC-4BV 0개. 모든 대상 제품에서 scrollWidth=390. 예시 추천 Zenith 200 / Aquilon RS2 / Pulse 4K. 키보드 Enter 행 추가·삭제 2→1, JS 오류 0.
 - 미리보기: %TEMP%\w019-preview\guide-aquilon-rs2-{1280,390}.png, guide-zenith-200-{1280,390}.png, guide-pulse-4k-{1280,390}.png; 전체 상세는 같은 폴더의 aquilon-rs2·zenith-200·pulse-4k 각 {1280,390}.png.
 - 세부 매뉴얼 원문·쪽·캡처·독립 검증 요청은 Work/기록/W-20261016-019-Work-인계.md에 기록. #594는 Draft 상태로 두고 Work 승인 전 병합하지 않는다.
+
+### W-20261016-019 Work 검토 반영 (2026-10-17)
+
+- [x] 최신 main `0645b86c`를 통합하고, Aquilon VPU 배분을 전수탐색으로 바꿨다. [1,2,2,3] 레이어 입력 순서의 24개 순열이 모두 RS2를 2 VPU로 가능·추천 처리한다.
+- [x] 레이어 0인 화면은 Aquilon 처리 링크를 소비하지 않지만 PGM·커넥터 수에는 포함한다. 분할 레이어는 쌍 단위 자원 규칙을 적용했다(Work 2026-10-17 결정, 매뉴얼 66쪽).
+- [x] 초과한 한도만 사유로 쓰고 불가 모델의 VPU 사용량·Optimized mode를 감췄다. 표시를 쉬운 말로 바꾸고 불가 모델을 모바일 접기 목록으로 분리했다.
+- [x] Aquilon Cmini·C·C+·Cmax를 추가하고 커넥터 수에 “BTO 최대 구성”을 표시했다. 가능 모델 우선, 불가 모델 접기, 추천 시리즈 순서와 “가격 비교가 아님” 안내를 넣었다.
+- [x] Prototype 원본을 수정하고 beta 사본 15개를 `node beta/build-detail-assets.mjs`로 생성했다. 공개 제품 JSON은 바꾸지 않았다.
+- [x] RS2·Zenith 200·C+ 시나리오 2 미리보기: `%TEMP%\w019-preview\review-{aquilon-rs2,zenith-200,aquilon-cplus}-{1280,390}.png`. 각 1280px·390px에서 결과 15종, 가능 8·불가 7, `scrollWidth=390`; 모바일은 불가 7종 접힘, 브라우저 오류 0.
+- [ ] 전체 검사·verify-pages·검색 인덱스 점검 및 새 CI 실행 후 Work의 독립 재검토를 받는다. 승인 전 병합하지 않는다.

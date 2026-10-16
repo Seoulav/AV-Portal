@@ -43,7 +43,7 @@ test('three single-output screens with two mixing layers each need twelve source
   const result = calculateRecommendations(exampleConfigurations['3-screens-mix2-aux2']);
   for (const slug of ['zenith-100','zenith-200','aquilon-rsalpha','aquilon-rs1']) assert.equal(model(result, slug).possible, false, slug);
   for (const slug of ['aquilon-rs2','aquilon-rs3','aquilon-rs4','aquilon-rs5','aquilon-rs6']) assert.equal(model(result, slug).possible, true, slug);
-  assert.match(model(result, 'aquilon-rs1').reasons.join(' '), /12.*8|2.*VPU/);
+  assert.match(model(result, 'aquilon-rs1').reasons.join(' '), /VPU\) 2개가 필요/);
   assert.equal(model(result, 'zenith-100').possible, false);
   assert.equal(model(result, 'zenith-200').possible, false);
 });
@@ -55,13 +55,13 @@ test('one single-output screen with four split layers and one Aux output fits Pu
   assert.equal(model(result, 'eikos-4k').mode, 'Mixer');
 });
 
-test('Aquilon rejects a screen needing nine output links and flags one-screen cross-VPU needs as unconfirmed', () => {
+test('Aquilon rejects output-link and per-screen layer limits with matching reasons', () => {
   const tooManyOutputs = calculateRecommendations({screens:[{outputs:5,layerType:'mixing',layers:1}],auxOutputs:0,inputs4k:1});
   assert.equal(model(tooManyOutputs, 'aquilon-rs6').possible, false);
   assert.match(model(tooManyOutputs, 'aquilon-rs6').reasons.join(' '), /출력 링크 10개/);
-  const tooManySources = calculateRecommendations({screens:[{outputs:1,layerType:'mixing',layers:5}],auxOutputs:0,inputs4k:1});
+  const tooManySources = calculateRecommendations({screens:[{outputs:4,layerType:'mixing',layers:5}],auxOutputs:0,inputs4k:1});
   assert.equal(model(tooManySources, 'aquilon-rs6').possible, false);
-  assert.match(model(tooManySources, 'aquilon-rs6').reasons.join(' '), /미확인|소스 링크 10개/);
+  assert.deepEqual(model(tooManySources, 'aquilon-rs6').reasons,['화면당 4K 믹싱 최대 4개(매뉴얼 66·79쪽) 초과']);
 });
 
 test('Aquilon uses Optimized mode for a 4K60 screen spanning five or more output links without extra boundary cost', () => {
@@ -91,9 +91,11 @@ test('model recommendation order picks the first feasible model and reports used
   assert.equal(model(result, 'pulse-4k').recommended, true);
 });
 
-test('guide is limited to the eleven approved Analog Way processors and mounted as a supplemental card', () => {
-  assert.equal(modelData.length,11);
+test('guide includes the fifteen approved Analog Way processors and mounts on all Analog Way detail pages', () => {
+  assert.equal(modelData.length,15);
   assert.equal(modelData.some(item=>item.slug==='rc400t'),false);
+  assert.deepEqual(modelData.slice(11).map(item=>item.slug),['aquilon-cmini','aquilon-c','aquilon-cplus','aquilon-cmax']);
+  assert.ok(modelData.slice(11).every(item=>item.connectorBasis==='BTO 최대 구성'));
   const app=readFileSync(new URL('../beta/site/detail/app.js',import.meta.url),'utf8');
   assert.match(app,/renderAnalogWayLayerGuide/);
   assert.match(app,/data\.manufacturer\s*===\s*['"]Analog Way['"]/);
