@@ -11,11 +11,12 @@ import {beforeW12002Path} from './w12002-wording-history.mjs';
 import { beforeW12005Path } from './w12005-history.mjs';
 import { beforeW013A2Product } from './w013-a2-history.mjs';
 import { beforeLogitechW14001Product } from './logitech-w14001-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const read = path => {
   const current = JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
   const slug=path.split('/').at(-1).replace(/\.json$/, '');
-  const restored = beforeW013A2Product(beforeLogitechW14001Product(current,slug),slug);
+  const restored = beforeW013A2Product(beforeLogitechW14001Product(beforeW16015Group5Product(current,slug),slug),slug);
   return beforeSamsungW04010Path(path, beforeW12002Path(path, beforeW12005Path(path, restored)));
 };
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');

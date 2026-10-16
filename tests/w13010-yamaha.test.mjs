@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
-import { beforeW13010Product, withoutW13010Uploads, w13010Fixture } from './w13010-yamaha-history.mjs';
+import { beforeW13010Product as priorBeforeW13010Product, withoutW13010Uploads, w13010Fixture } from './w13010-yamaha-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
+const beforeW13010Product = (current, slug) => priorBeforeW13010Product(beforeW16015Group5Product(current, slug), slug);
 
 const root = new URL('../beta/site/', import.meta.url);
 const product = slug => JSON.parse(readFileSync(new URL(`detail/data/${slug}.json`, root), 'utf8'));
@@ -24,7 +26,7 @@ test('DM3 and DM7 retain every marker fact while moving only the approved sides'
       w13010Fixture[slug].protectedSha256, `${slug}: protected fields`);
     const invalid = structuredClone(current);
     invalid.portMap.items[0].label += ' altered';
-    assert.throws(() => beforeW13010Product(invalid, slug), /unexpected W-010 portMap change/, slug);
+    assert.throws(() => beforeW13010Product(invalid, slug), slug === 'dm3' ? /unexpected W-015 group-5 portMap change/ : /unexpected W-010 portMap change/, slug);
     invalid.portMap = current.portMap;
     invalid.io = [];
     assert.deepEqual(beforeW13010Product(invalid, slug).io, [], `${slug}: unrelated regression remains visible`);

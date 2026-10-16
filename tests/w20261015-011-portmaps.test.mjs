@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeW20261015_011Product } from './w20261015-011-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -13,7 +14,7 @@ const expected = {
 
 test('W-011 maps only the single RJ-45 physically visible in each exact SL Rear photo', () => {
   for (const [slug, coordinates] of Object.entries(expected)) {
-    const product = read(`beta/site/detail/data/${slug}.json`);
+    const product = beforeW16015Group5Product(read(`beta/site/detail/data/${slug}.json`),slug);
     const rear = product.images.find(image => image.role === 'Rear');
     assert.equal(rear.file, coordinates.file);
     assert.equal(rear.model, product.model);

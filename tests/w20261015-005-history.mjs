@@ -1,3 +1,4 @@
+import {beforeCrownW16015Product} from './crown-w16015-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 
@@ -9,8 +10,9 @@ const coords = product => product.portMap.items.slice(0, 4).map(item =>
 
 export function beforeW20261015_005Product(product, productSlug) {
   if (productSlug !== slug) return product;
+  if (coords(product).every((item, index) => item.x1 === prior[index][0] && item.x2 === prior[index][1])) return product;
+  product = beforeCrownW16015Product(product, productSlug);
   const current = coords(product);
-  if (current.every((item, index) => item.x1 === prior[index][0] && item.x2 === prior[index][1])) return product;
   assert.equal(createHash('sha256').update(JSON.stringify(current)).digest('hex'), changedCoordsHash,
     'Crown DCi 4|600DA approved connector ranges changed');
   const copy = structuredClone(product);
