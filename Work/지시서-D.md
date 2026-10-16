@@ -154,7 +154,7 @@
 
 ## W-20261016-015 묶음 6b — Samsung 외 15종
 
-- 상태 **IN_PROGRESS**. Work 2026-10-16 #586 승인 답변에서 직접 배정. 명세 W-015 및 보완 W-016·W-017을 읽은 main SHA **8ca862e3fa0b5ffa45a810652ab9e0a3624ff2d5**. 브랜치 `codex/W-20261016-015-group6b`, ../codex-d 전용.
+- 상태 **REVIEW**. Work 2026-10-16 #586 승인 답변에서 직접 배정. 명세 W-015 및 보완 W-016·W-017을 읽은 main SHA **8ca862e3fa0b5ffa45a810652ab9e0a3624ff2d5**. 브랜치 `codex/W-20261016-015-group6b`, ../codex-d 전용.
 - 목표: 15종 119개 번호의 단자/인쇄 관통0, 오인0, 사진 밖 번호. 기존 내부 y 111개. Ultritouch 2 HR은 Ross Video이며 대상에 포함.
 - 범위: JBL3/Ross3/NovaStar2/INOGENI2/Lumantek2/VS ENT1/AJA1/SurgeX1. JSON의 좌표·side·crop·via만 수정, 번호·이름·설명·I/O·사진·렌더러 보존. Samsung·Analog Way·다른 진행 파일·PDF·builder/cpq 제외.
 - 구조/기술: 현행 SVG 가장자리 괄호, 다층판은 기존 W-017 via/옆 번호 바깥 가로 칸 사용. Chrome760/390좌우, 원본 사진 대조, 선택적 좌표 복원 및 의미/사진 불변 시험. 계획과 진행은 이 파일에만 기록.
@@ -172,3 +172,5 @@
 - 통합 전 전체 검사: `node --test --test-concurrency=1 tests/*.test.mjs` 800건 / 799 pass / 0 fail / 기존 skip1(74.5초). 앞선 병렬 실행의 RTCOM 임시 디렉터리 rename EPERM2건은 단독 재실행6건 및 전체 순차 재실행에서 통과. 실제 상세28화면(14종×760/390) 번호수 일치·페이지 넘침0. verify-pages/검색 인덱스/87PNG 갤러리/diff 검사 통과.
 
 - 최신 main **4daad18d**(#587 Samsung 검토 기록) 통합. 공통 예외 기록의 append 충돌은 Samsung 원문 섹션과6b섹션을 모두 보존. 제품/렌더러/테스트 변경 없는 문서 통합이며 파생 재생성 후 변화 없음.
+
+- REVIEW: 완료14종106표식의 구현·시각·코드 검토와 로컬 검증 완료. PR 생성 및CI 확인 후 Work에 병합 순서를 요청한다. Work 승인 전 병합/배포하지 않음.
