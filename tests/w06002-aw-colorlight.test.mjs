@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { beforeW06002Product, w06002NewSlugs } from './w06002-history.mjs';
 import { beforeW15012Product } from './w15012-black-background-history.mjs';
+import { beforeW16009Product } from './w16009-history.mjs';
 import { beforeW20261015_006Product } from './w20261015-006-history.mjs';
 import { beforeW20261015_006LabelsProduct } from './w20261015-006-labels-history.mjs';
 
@@ -37,14 +38,14 @@ test('five Aquilon models retain their own data-sheet capacities and two photos'
 
 test('three Colorlight products gain only rear photo metadata; other current fields remain visible to history', () => {
   for (const n of ['2u', '4u', '7u']) {
-    const slug = `x100pro-${n}`, p = read(slug), approvedEarlier = beforeW15012Product(p, slug), old = beforeW06002Product(approvedEarlier, slug);
-    assert.deepEqual(p.images.map(x => x.role), ['Front', 'Rear']);
+    const slug = `x100pro-${n}`, p = read(slug), preW009 = beforeW16009Product(p, slug), approvedEarlier = beforeW15012Product(preW009, slug), old = beforeW06002Product(approvedEarlier, slug);
+    assert.deepEqual(p.images.map(x => x.role), n === '2u' ? ['Front', 'Rear', 'Diagram'] : ['Front', 'Rear']);
     assert.deepEqual(approvedEarlier.images[0], old.images[0]);
     assert.equal(old.images.length, 1);
-    assert.equal(p.portMap.items.length, 2);
-    assert.deepEqual(old.portMap, p.portMap);
+    assert.equal(p.portMap.items.length, n === '2u' ? 3 : 2);
+    assert.deepEqual(old.portMap, preW009.portMap);
     assert.equal(p.io.length, 2);
-    const tampered = structuredClone(p); tampered.io = [];
+    const tampered = structuredClone(preW009); tampered.io = [];
     assert.deepEqual(beforeW06002Product(beforeW15012Product(tampered, slug), slug).io, []);
     tampered.images[1].model = 'wrong';
     assert.throws(() => beforeW06002Product(beforeW15012Product(tampered, slug), slug), /unexpected/);
