@@ -28,7 +28,8 @@ test('Sony maps use the approved official rear photos and visible connector coun
     const image = product.images.find(row => row.role === 'Rear');
     assert.equal(product.portMap.measuredImage.file, image.file, slug);
     assert.equal(sha(readFileSync(`beta/site/detail/images/${image.file}`)), photoHash, slug);
-    assert.ok(product.portMap.items.every(item => item.y >= product.portMap.crop.top), slug);
+    // W-012/W-015: absent y uses the cropped edge; explicit positions stay in crop.
+    assert.ok(product.portMap.items.every(item => item.y === undefined || item.y >= product.portMap.crop.top), slug);
   }
   const brc = JSON.parse(readFileSync(file('brc-am7'), 'utf8'));
   assert.equal(brc.portMap.items.find(item => item.n === 10).label, 'OPTION');

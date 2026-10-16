@@ -1,3 +1,4 @@
+import { beforeW20261016_012Product } from './w20261016-012-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -68,9 +69,9 @@ test('TR335 and TR315 group four output media without treating USB UVC as a fift
 test('only signalFlow is added to the three products; existing flows and controllers stay byte-for-byte fixed', () => {
   for (const slug of targets) {
     const product = read(slug);
-    assert.equal(sha(beforeW12004Product(beforeKiprogo2Mx395Product(beforeAverW12009Product(product, slug), slug), slug)), prior[slug], slug);
+    assert.equal(sha(beforeW12004Product(beforeW20261016_012Product(beforeKiprogo2Mx395Product(beforeAverW12009Product(product, slug), slug), slug), slug)), prior[slug], slug);
   }
-  for (const [slug, expected] of Object.entries(untouched)) assert.equal(sha(beforeAverW12009Product(beforeW20261015_008Product(read(slug), slug), slug)), expected, slug);
+  for (const [slug, expected] of Object.entries(untouched)) assert.equal(sha(beforeAverW12009Product(beforeW20261015_008Product(beforeW20261016_012Product(read(slug), slug), slug), slug)), expected, slug);
 });
 
 test('historical inverse rejects changed flows and exposes unrelated current changes', () => {
