@@ -104,6 +104,7 @@ const importWarningSchema = z
       'cable-item-unresolved',
       'cable-length-missing',
       'cable-length-exceeded',
+      'cable-length-assumed',
       'cable-route-incomplete',
       'edge-endpoint-missing',
       'catalog-item-removed',

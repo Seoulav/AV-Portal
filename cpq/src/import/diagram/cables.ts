@@ -53,9 +53,40 @@ export const BULK_UNIT_METERS = 10;
  * 종류는 "품목 미정" 행 대신 이 SKU를 자동 지정한다. **수량은 여전히
  * 경로 거리에서만 나온다** — 한 구간이라도 거리를 모르면 수량을 비우고
  * 확정을 막는다. 등록되지 않은 선 종류는 기존대로 품목 미정 + 후보 제시다.
+ *
+ * 예외: `DEFAULT_BULK_METERS_PER_SEGMENT_BY_LINE_TYPE`에 있는 선 종류는
+ * 거리를 입력하지 않은 구간을 그 길이로 계산한다(운영자 결정 2026-10-16).
  */
 export const DEFAULT_BULK_CABLE_SKU_BY_LINE_TYPE: ReadonlyMap<string, string> = new Map([
   ['A.AUDIO', 'CBL-0106'], // 1CH MIC CABLE · YJ56878 (마이크 케이블)
+  // 벨덴 S/FTP CAT6A · 10GXE02. 이름이 'LAN'인 선 전체(HDBaseT·네트워크·Dante)에 적용한다.
+  ['LAN', 'CBL-0090'],
+]);
+
+/**
+ * 선 종류 이름(대문자) → 거리 미입력 구간에 쓰는 기본 길이(m)
+ * (운영자 결정 2026-10-16: "구간당 기본 10m로 계산").
+ *
+ * 경로 입력을 **아예 하지 않은** 구간에만 쓴다. 입력을 시작했으나
+ * 완성하지 않은 구간은 지금처럼 수량을 비우고 막는다. 기본 길이를 쓴
+ * 구간에는 차단하지 않는 `cable-length-assumed` 안내를 남긴다.
+ */
+export const DEFAULT_BULK_METERS_PER_SEGMENT_BY_LINE_TYPE: ReadonlyMap<string, number> = new Map([
+  ['LAN', 10],
+]);
+
+/**
+ * 선 종류 이름(대문자) → 기본 완제품 케이블 SKU (운영자 결정 2026-10-16).
+ *
+ * 품목이 지정되지 않은 연결선에 구간당 1EA를 자동 지정한다.
+ * - 거리를 입력하지 않았으면 이 SKU 그대로다(차단하지 않는 안내만 남긴다).
+ * - 거리를 입력했으면 **같은 품셈 묶음에서 그 거리 이상인 가장 짧은
+ *   제품**으로 바꾼다. 묶음의 길이가 판매 계단(`READY_MADE_STEPS`)과
+ *   달라도(예: 7m 없음) 묶음에 실제로 있는 길이에서 고른다.
+ * - 묶음의 가장 긴 제품보다 멀면 차단 경고(`cable-length-exceeded`)를 세운다.
+ */
+export const DEFAULT_READY_MADE_CABLE_SKU_BY_LINE_TYPE: ReadonlyMap<string, string> = new Map([
+  ['HDMI', 'CBL-0017'], // RTCOM Locking HDMI Cable 2m · UMC-002
 ]);
 
 /**
@@ -253,6 +284,104 @@ export function buildCableLines(
       // 선은 그어져 있는데 케이블 품목이 없다. 무시하면 케이블 없는 견적이 나간다.
       const label = lineTypeName.get(lineTypeId) ?? lineTypeId ?? '미상';
 
+      // 기본 완제품 케이블이 정해진 선 종류(HDMI → UMC-002)는 구간당 1EA를
+      // 자동 지정한다 (운영자 결정 2026-10-16).
+      const readyMadeSku = DEFAULT_READY_MADE_CABLE_SKU_BY_LINE_TYPE.get(label.trim().toUpperCase());
+      const readyMadeDefault =
+        readyMadeSku !== undefined ? catalog.products.find((p) => p.sku === readyMadeSku) : undefined;
+      if (readyMadeDefault !== undefined) {
+        const route = routes.get(edge.id);
+        const routeStarted = route !== undefined;
+        const routeMeters = routeStarted ? calcRouteMeters(route) : undefined;
+        // 같은 묶음의 완제품을 길이순으로 — 거리에 맞춰 바꿀 선택지다.
+        const group = readyMadeDefault.options['group'];
+        const lengthMates = catalog.products
+          .filter((p) => group !== undefined && p.options['group'] === group && p.unit !== `${BULK_UNIT_METERS}M`)
+          .filter((p) => lengthOf(p) !== undefined)
+          .sort((a, b) => lengthOf(a)! - lengthOf(b)!);
+        const lineFor = (product: CatalogProduct): CableLine => {
+          const price = catalog.prices.get(product.sku);
+          return {
+            sku: product.sku,
+            name: product.quoteName,
+            specification: product.quoteSpec,
+            unit: 'EA',
+            ...(price !== undefined ? { sellingUnitPrice: price } : {}),
+            ...(product.laborMappingId !== undefined ? { laborMappingId: product.laborMappingId } : {}),
+            segmentCount: 1,
+            lineTypeId,
+            sourceEdgeIds: [edge.id],
+            sourceCableMembers: [JSON.stringify([edge.id, -1])],
+          };
+        };
+
+        if (routeStarted && routeMeters === undefined) {
+          const key = `ready:auto:route-incomplete:${readyMadeDefault.sku}`;
+          withholdQuantity.add(key);
+          warnings.push({
+            code: 'cable-route-incomplete',
+            blocking: true,
+            message:
+              `'${label}' 연결선 구간의 경로 입력이 아직 완성되지 않았다 ` +
+              '(수평/입상/입하 또는 확인된 총길이를 모두 채워야 한다). ' +
+              '완성 전까지는 케이블 길이와 수량을 정하지 않는다.',
+            edgeId: edge.id,
+            sourceCableKey: key,
+          });
+          push(key, lineFor(readyMadeDefault), 0, edge.id);
+          continue;
+        }
+
+        if (routeMeters === undefined) {
+          const key = `ready:auto:${readyMadeDefault.sku}`;
+          warnings.push({
+            code: 'cable-length-assumed',
+            blocking: false,
+            message:
+              `'${label}' 연결선의 거리를 입력하지 않아 기본 케이블 ` +
+              `'${readyMadeDefault.quoteName} (${readyMadeDefault.quoteSpec})'을(를) 지정했다. ` +
+              '케이블 거리를 입력하면 그 거리에 맞는 길이로 바뀐다.',
+            edgeId: edge.id,
+            sourceCableKey: key,
+          });
+          push(key, lineFor(readyMadeDefault), 1, edge.id);
+          continue;
+        }
+
+        const meters = Number(routeMeters);
+        const fitted = lengthMates.find((p) => lengthOf(p)! >= meters);
+        if (fitted === undefined) {
+          // 기본 묶음보다 길다 — 품목을 사람이 고르게 한다. 구간마다 필요한
+          // 길이가 다르므로 구간별 키로 둔다(한 번 고른 품목이 다른 길이의
+          // 구간에 함께 붙지 않게). 후보는 그 길이 이상인 같은 선 종류 완제품이다.
+          const longest = lengthMates[lengthMates.length - 1] ?? readyMadeDefault;
+          const key = `ready:auto:over:${edge.id}`;
+          warnings.push({
+            code: 'cable-item-unresolved',
+            blocking: true,
+            message:
+              `'${label}' 구간이 ${routeMeters}m다. 기본 케이블 묶음의 최대 길이 ` +
+              `${lengthOf(longest) ?? '?'}m를 넘는다. 그 길이 이상의 케이블을 직접 골라야 한다.`,
+            edgeId: edge.id,
+            candidates: cableCandidates(catalog, label, meters),
+            sourceCableKey: key,
+            requiredCableMeters: routeMeters,
+          });
+          push(key, {
+            name: `${label} 케이블 (${routeMeters}m, 품목 선택 필요)`,
+            specification: `기본 케이블 최대 ${lengthOf(longest) ?? '?'}m 초과`,
+            unit: 'EA',
+            segmentCount: 1,
+            lineTypeId,
+            sourceEdgeIds: [edge.id],
+            sourceCableMembers: [JSON.stringify([edge.id, -1])],
+          }, 1, edge.id);
+          continue;
+        }
+        push(`ready:auto:${fitted.sku}`, lineFor(fitted), 1, edge.id);
+        continue;
+      }
+
       // 기본 케이블이 정해진 선 종류(예: A.AUDIO → 마이크 케이블)는 품목을
       // 자동 지정한다 (운영자 결정 2026-10-12). 거리는 역산하지 않는다 —
       // 한 구간이라도 경로 입력이 없으면 수량을 비우고 차단 경고를 세운다.
@@ -297,6 +426,22 @@ export function buildCableLines(
             sourceCableKey: key,
           });
           push(key, line, 0, edge.id);
+          continue;
+        }
+        const assumedMeters = DEFAULT_BULK_METERS_PER_SEGMENT_BY_LINE_TYPE.get(label.trim().toUpperCase());
+        if (routeMeters === undefined && assumedMeters !== undefined) {
+          // 거리를 입력하지 않은 구간은 정해 둔 기본 길이로 계산한다
+          // (운영자 결정 2026-10-16). 거리를 넣으면 그 값으로 다시 계산된다.
+          warnings.push({
+            code: 'cable-length-assumed',
+            blocking: false,
+            message:
+              `'${label}' 연결선의 거리를 입력하지 않아 '${defaultProduct.quoteName} (${defaultProduct.quoteSpec})'을(를) ` +
+              `구간당 기본 ${assumedMeters}m로 계산했다. 케이블 거리를 입력하면 그 값으로 다시 계산한다.`,
+            edgeId: edge.id,
+            sourceCableKey: key,
+          });
+          push(key, line, assumedMeters, edge.id);
           continue;
         }
         if (routeMeters === undefined) {
