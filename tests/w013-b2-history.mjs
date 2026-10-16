@@ -1,3 +1,4 @@
+import {beforeCrownW16015Product,beforeCrownW16015Raw} from './crown-w16015-history.mjs';
 import { readFileSync } from 'node:fs';
 import { beforeW15004Product, beforeW15004Raw } from './w15004-shure-photo-history.mjs';
 import { createHash } from 'node:crypto';
@@ -10,6 +11,7 @@ export const w013B2Slugs = new Set(Object.keys(fixture));
 // Restore only the B2-approved I/O changes. The strict entrypoint also proves the whole product has no unrelated edits.
 function restoreB2Io(current, slug, strict) {
   if (!w013B2Slugs.has(slug)) return current;
+  if (strict) current = beforeCrownW16015Product(current, slug);
   const { priorIo, approved } = fixture[slug];
   const currentHash = hash(current.io);
   const priorHash = hash(priorIo);
@@ -45,6 +47,7 @@ function matchingClose(text, open, left, right) {
 
 export function rewindW013B2Raw(raw, slug) {
   if (!w013B2Slugs.has(slug)) return raw;
+  raw = beforeCrownW16015Raw(raw, slug);
   raw = beforeW20261016_015B4Raw(raw, slug, {allowHistorical:true});
   raw = beforeW15004Raw(raw, slug);
   const current = JSON.parse(raw);
