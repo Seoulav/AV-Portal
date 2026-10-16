@@ -2,7 +2,7 @@ import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w2026
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile,readdir} from 'node:fs/promises';
+import {readBeforeW018File as readFile, readdirBeforeW018 as readdir} from './w20261016-018-history.mjs';
 import {selectKeySpecifications,prepareProductDetail} from '../prototype/brc-am7/product-detail-model.mjs';
 import {adaptRtcomDetail} from '../beta/site/shared/rtcom-adapter.mjs';
 import { isW1010Name } from './w1010-history.mjs';

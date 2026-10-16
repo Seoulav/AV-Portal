@@ -165,7 +165,7 @@ export function validLayerPlan(plan, product) {
     row.screens2x2 === row.programOutputs4k / 4 && row.mixingLayers4kPerScreen === 4 && row.splitLayers2kPerScreen === 8 &&
     row.mixingLayers4k === row.screens2x2 * row.mixingLayers4kPerScreen && row.splitLayers2k === row.screens2x2 * row.splitLayers2kPerScreen && row.vpus === row.screens2x2;
   const example = plan.example, background = plan.background, comparison = plan.xdmComparison, evidence = plan.evidence;
-  if (!list(plan.models, 7, model, 7) || new Set(plan.models.map(row => row.slug)).size !== 7) return false;
+  if (!list(plan.models, 12, model, 2) || new Set(plan.models.map(row => row.slug)).size !== plan.models.length) return false;
   const current = plan.models.find(row => row.slug === plan.currentSlug);
   if (!current || current.model !== product.model) return false;
   if (!texts(plan.sourceTypes) || plan.sourceTypes.length < 3 || !record(example) ||

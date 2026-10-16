@@ -192,3 +192,30 @@
 - Work 승인 순서: Samsung 호텔 TV → #591 → Epson. 전체검사·CI 초록 확인 뒤 재질문 없이 병합 → Pages → 공개 대표3종(KI PRO GO2/Ultritouch 2 HR/Carbonite Ultra) 760px·390px 좌우 확인 → 보고 → W-018.
 
 - U-BRIDGE 복원 후 main137e010a(#589 Samsung 호텔 TV) 통합. 검색 인덱스 충돌은 재생성으로 해결. 최종 전체 **812건 /811 pass /0 fail /기존skip1**(67.1초), 신규·변경 회귀7건 통과. verify-pages285제품/282상세/515사진/163PDF 및 검색인덱스704524bytes check 통과. 13종95표식, 원본유지2종, 갤러리84PNG 링크 모두 정상. 최종 HEAD CI 확인 뒤 승인된 병합을 실행한다.
+
+
+## 묶음 6b 종료 확인
+
+- PR #591 MERGED, 병합 SHA **12c70d7ee3c4cb5219329fd142c0617261881056**, 2026-10-16T13:27:47Z. 완료13종95표식, H5 후속 보류·U-BRIDGE 3 사용자 승인 배치 유지. 최종 CI38907538596/Pages38908026597 성공. 공개 대표3종 KI PRO GO2·Ultritouch 2 HR·Carbonite Ultra의760px·390px좌우9장 직접 확인, 번호수11/3/16 및 페이지넘침0. 공개JSON15개가 승인본과 바이트 동일. Work에 완료 보고.
+
+## W-20261016-018 — Aquilon C 시리즈4종 구현 계획
+
+- 상태 **IN_PROGRESS**. 명세/인계는 main3ad49837에서 읽음, 착수기준 최신main54d0693c. 브랜치 codex/W-20261016-018-aquilon-c, codex-d 전용. 묶음6b 병합·배포·공개확인 선행조건 충족. W-019는 다른 세션 범위.
+- 목표: Aquilon Cmax/C+/C/Cmini를 공식자료로 등록. 기존 제품 형식과 layerPlan·signalFlow 렌더러 재사용.
+- 파일: beta/site/catalog.json, detail/data/aquilon-c*.json 4건, 모델별 공식사진, Work/기록/W-20261016-018 근거·점검·인계, 신규 회귀·추가제품 되감기, 검색인덱스/스냅샷/읽기용카탈로그.
+- 기술: Node 데이터/검증, 공식PDF 텍스트 및 페이지 이미지 대조, Chrome 실제1280/390 상세와760/390좌우 지도. 원본PDF는 로컬outputs/w018에 보관하고 기존 브로슈어 uploads 공유 연결.
+- 제약: RS alpha/RS1~RS6 JSON·렌더러·잠금PDF12건·builder/cpq·타진행파일 불변. 매뉴얼의 적용모델 확인 우선, 미확인 레이어 규칙은 공식 자료 미확인. 번호사진밖/관통0/오인0, 사진안 수평≤폭1/4 및 다른선6px.
+- 검토 집중: 최대값과 실제 장착I/O 구분, 모델별매뉴얼 적용범위, 4K60 PGM과물리커넥터 구분, 출력에 걸친레이어 비용, 사진모델/단자정체 및모바일표 읽기.
+- [x] 1. 공식페이지·데이터시트·공용매뉴얼 적용목록·브로슈어 원문/쪽 근거표 확보.
+- [x] 2. 확인된 모델별값·공유브로슈어·signalFlow/layerPlan 계약 회귀 작성·실패 확인. 4제품·카탈로그·사진 등록 후 통과.
+- [x] 3. 원본사진 모델확인·Port Map 전표식점검·독립시각확인,1280/390상세 및760/390좌우 캡처.
+- [ ] 4. 되감기와 타제품불변·전체검사/verify-pages/파생재생성, 최신main통합·PR·CI.
+- [ ] 5. Work에 원문영어/쪽·미리보기로 독립자료검증과 병합승인 요청. 승인후 병합/배포/공개확인/보고.
+
+- validLayerPlan 모델 수 범위화: Work 2026-10-16 승인. models2~12행, 고유slug수=models.length, currentSlug 포함 검사 유지. 다른 숫자·근거·문구검사·RS JSON·Port Map 렌더러 보존, 기존생성절차로 공개복사본 동기화.
+
+- layerPlan family 표시 일반화: Work 2026-10-16 승인. plan.models 전부 Aquilon RS면 Aquilon RS, 전부 Aquilon C면 Aquilon C, 혼합은 Aquilon. 비교 카드 제목·표 aria-label 두 곳에만 적용. 변경 전 Chrome에서 RS7종 DOM/text 저장, 동일 직렬화 시험에 SHA 고정.
+
+- 재개 후 승인된 validator/family 변경 및 공개 복사본 동기화 완료. 신규 회귀8건 통과. 기존 RS7종 Chrome DOM/text 바이트 동일. 4종 상세1280/390과 지도760/390좌우20장, 모바일 scrollWidth390·번호14/16/19/23 일치. 독립 시각72표식 확인 후 관통·끝접촉·붙은 괄호2쌍 보정.
+- 전체검사 첫818건 중44실패는 신규4종에 대한 과거 스냅샷과 재생성 전 스냅샷 차이였다. 엄격한4종 추가 역변환을36개 과거 시험 읽기에 연결해 기존 해시 상수를 보존. 두 번째818건816pass/1fail/1기존skip에서 남은 단종시험 스냅샷도4종만 되감도록 보완, 해당시험 통과. 최신main 통합 후 전체 재실행 예정.
+- verify-pages289제품/286상세/523사진/167uploads행 통과. 실제 PDF 파일 추가0. 원문·쪽 근거표,72표식 점검표,Work 인계,20장 미리보기 작성.

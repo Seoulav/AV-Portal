@@ -1,0 +1,77 @@
+{
+  "rsDomByteIdentical": 7,
+  "details": [
+    {
+      "slug": "aquilon-cmini",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "title": "Aquilon Cmini (AQL-CMINI)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 14,
+      "height": 4327
+    },
+    {
+      "slug": "aquilon-cmini",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Aquilon Cmini (AQL-CMINI)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 14,
+      "height": 7904
+    },
+    {
+      "slug": "aquilon-c",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "title": "Aquilon C (AQL-C)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 16,
+      "height": 4327
+    },
+    {
+      "slug": "aquilon-c",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Aquilon C (AQL-C)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 16,
+      "height": 7979
+    },
+    {
+      "slug": "aquilon-cplus",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "title": "Aquilon C+ (AQL-C+)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 19,
+      "height": 4327
+    },
+    {
+      "slug": "aquilon-cplus",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Aquilon C+ (AQL-C+)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 19,
+      "height": 8235
+    },
+    {
+      "slug": "aquilon-cmax",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "title": "Aquilon Cmax (AQL-CMAX)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 23,
+      "height": 4327
+    },
+    {
+      "slug": "aquilon-cmax",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Aquilon Cmax (AQL-CMAX)",
+      "layerLabel": "Aquilon C 모델별 레이어·출력 비교표",
+      "markers": 23,
+      "height": 8560
+    }
+  ]
+}

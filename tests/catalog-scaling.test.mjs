@@ -1,3 +1,4 @@
+import {beforeW018Catalog} from './w20261016-018-history.mjs';
 import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { w029Slugs } from './w029-history.mjs';
 import { w006Slugs } from './w006-history.mjs';
@@ -82,7 +83,7 @@ test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일
   const norm = value => String(value ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
   const scopeOf = new Map(decisions.entries.filter(entry => entry.manufacturer).map(entry => [`${norm(entry.manufacturer)}\0${norm(entry.model)}`, entry.link_scope]));
   // 기준 27개는 결정표 이전에 개별 검토된 항목이라 대상이 아니다.
-  for (const item of beforeW20261014_005Catalog(catalog).slice(27)) {
+  for (const item of beforeW20261014_005Catalog(beforeW018Catalog(catalog)).slice(27)) {
     // W-20261002-012 MPF 3종은 별도 삼성 제품가이드·국내 목록 근거로 등록했다.
     // W-023's new model is verified directly against its official Samsung Korea page.
     if (['mp008f', 'mp012f', 'mp016f', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh43behhlbfxkr', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'aquilon-rsalpha', 'ds-8s', 'emision-media-server', 'emision-pixelfit', 'insta360-connect', 'insta360-link-2', 'insta360-wave-business', 'insta360-wave', ...w029Slugs, ...w006Slugs, ...w007Slugs].includes(item.slug)) continue;

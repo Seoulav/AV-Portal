@@ -26,6 +26,8 @@ const statusClass = status => ({
 })[status] ?? 'state-review';
 const badge = status => element('span', 'state ' + statusClass(status), status);
 function renderAquilonLayerPlan(plan, currentSlug) {
+  const family = plan.models.every(row => row.model.startsWith('Aquilon RS')) ? 'Aquilon RS'
+    : plan.models.every(row => row.model.startsWith('Aquilon C')) ? 'Aquilon C' : 'Aquilon';
   const section = element('section', 'aquilon-layer-plan');
   section.setAttribute('aria-labelledby', 'aquilon-layer-title');
   section.append(element('h2', '', plan.title));
@@ -65,7 +67,7 @@ function renderAquilonLayerPlan(plan, currentSlug) {
   comparison.append(element('h3', '', '같은 2×2 화면 예시 · XDM-WOS100 비교'));
   const compareGrid = element('div', 'aquilon-layer-comparison-grid');
   const aquilonCompare = element('div', 'aquilon-layer-compare-card');
-  aquilonCompare.append(element('strong', '', 'Aquilon RS · 모든 모델'), element('p', '', `2×2 4K60 화면 전체에 4K 믹싱 레이어 최대 ${example.mixingLayersPerScreen}개(분할 ${example.splitLayersPerScreen}개).`));
+  aquilonCompare.append(element('strong', '', `${family} · 모든 모델`), element('p', '', `2×2 4K60 화면 전체에 4K 믹싱 레이어 최대 ${example.mixingLayersPerScreen}개(분할 ${example.splitLayersPerScreen}개).`));
   const xdmCompare = element('div', 'aquilon-layer-compare-card');
   xdmCompare.append(element('strong', '', 'RTCOM XDM-WOS100'), element('p', '', `RTCOM 원본: HDMI 출력 ${plan.xdmComparison.xdmWos100.outputPorts}개. ${plan.xdmComparison.xdmWos100.sourceCondition}.`));
   compareGrid.append(aquilonCompare, xdmCompare);
@@ -74,7 +76,7 @@ function renderAquilonLayerPlan(plan, currentSlug) {
   section.append(element('p', 'aquilon-layer-table-hint', '모바일에서는 표를 좌우로 밀어 입력·출력 단자·VPU 열을 확인할 수 있습니다.'));
   const wrap = element('div', 'pg-table aquilon-layer-table-wrap');
   wrap.setAttribute('role', 'region');
-  wrap.setAttribute('aria-label', 'Aquilon RS 모델별 레이어·출력 비교표');
+  wrap.setAttribute('aria-label', `${family} 모델별 레이어·출력 비교표`);
   wrap.tabIndex = 0;
   const table = element('table');
   const columns = ['모델', '2×2 4K60 화면 수', '화면당 4K 레이어(분할)', '장비 전체 4K 레이어(분할)', '4K 입력', '4K 출력 단자', '4K60 PGM 출력', 'VPU'];

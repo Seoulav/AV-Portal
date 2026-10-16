@@ -1386,3 +1386,129 @@ export const cardImages = {
   'hdf-ccf': 'hdf-ccf-main.png',
   'u-bridge-3': 'u-bridge-3-main.png',
 };
+
+// W-018 Aquilon C: official model-specific front/rear photographs.
+group1Images['aquilon-cmini'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cmini-front.webp",
+    "alt": "Analog Way Aquilon Cmini 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmini",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmini",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×429",
+    "resolution": "1500×429",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cmini-rear.webp",
+    "alt": "Analog Way Aquilon Cmini 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 DP 4개·HDMI 4개·LINK 카드, 최대 영상 출력 12개",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmini",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmini",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1918×595",
+    "resolution": "1918×595",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cmini'] = 'aquilon-cmini-front.webp';
+group1Images['aquilon-c'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-c-front.webp",
+    "alt": "Analog Way Aquilon C 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon C",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-c",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×837",
+    "resolution": "1500×837",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-c-rear.webp",
+    "alt": "Analog Way Aquilon C 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 HDMI 출력 12개, 최대 16개",
+    "provider": "Analog Way",
+    "model": "Aquilon C",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-c",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×646",
+    "resolution": "1500×646",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-c'] = 'aquilon-c-front.webp';
+group1Images['aquilon-cplus'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cplus-front.webp",
+    "alt": "Analog Way Aquilon C+ 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon C+",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cplus",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×795",
+    "resolution": "1500×795",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cplus-rear.webp",
+    "alt": "Analog Way Aquilon C+ 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경 · 사진의 HDMI 출력 16개, 최대 20개",
+    "provider": "Analog Way",
+    "model": "Aquilon C+",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cplus",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×812",
+    "resolution": "1500×812",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cplus'] = 'aquilon-cplus-front.webp';
+group1Images['aquilon-cmax'] = [
+  {
+    "role": "Front",
+    "file": "aquilon-cmax-front.webp",
+    "alt": "Analog Way Aquilon Cmax 전면 이미지",
+    "note": "Front · 제조사 모델별 제품 이미지",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmax",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×848",
+    "resolution": "1500×848",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  {
+    "role": "Rear",
+    "file": "aquilon-cmax-rear.webp",
+    "alt": "Analog Way Aquilon Cmax 후면 이미지",
+    "note": "Rear · 사진에 장착된 카드 기준 · BTO 구성에 따라 단자 종류·수량 변경",
+    "provider": "Analog Way",
+    "model": "Aquilon Cmax",
+    "sourceUrl": "https://www.analogway.com/products/aquilon-cmax",
+    "officialSource": true,
+    "verificationStatus": "FOUND",
+    "originalSize": "1500×878",
+    "resolution": "1500×878",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  }
+];
+cardImages['aquilon-cmax'] = 'aquilon-cmax-front.webp';

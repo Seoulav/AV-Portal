@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 285,
-    "sha256": "E3BE3717B1B9D3A7B48271756321C0D7B7F443A5C7B8F56AE39C995EB7FB4DD6",
+    "count": 289,
+    "sha256": "137EFB28D9B229B90543F05036CC618E02E8280DBCB515CEDB430CB32FA47B2B",
     "baselineCount": 25,
     "baselineSha256": "B8AB75CBE36032B6C20FB28DE019A234C1EA6CE7CBAB7E0FC7B005C966AFDF26"
   },
@@ -24,6 +24,30 @@
       "features": 6,
       "specifications": 16,
       "io": 2
+    },
+    "aquilon-c": {
+      "sha256": "A43108E9E878A4D5CE8F48CDDF63D44F1E2D24448085EEAA1FD63F65E6241E26",
+      "features": 8,
+      "specifications": 16,
+      "io": 9
+    },
+    "aquilon-cmax": {
+      "sha256": "81092DD46D34910E33D6B57B2CB0B1A874EDB60AAFE467445BBD203A02EB9F0A",
+      "features": 8,
+      "specifications": 16,
+      "io": 9
+    },
+    "aquilon-cmini": {
+      "sha256": "2680B827088D302C2B6FFD9F0C51AC5F45CA4D4A74564570EC356021407A654E",
+      "features": 8,
+      "specifications": 16,
+      "io": 9
+    },
+    "aquilon-cplus": {
+      "sha256": "C425F19252F998B90489EEFF01462C0D3FFC6DF3F4B760EB4C94CD522FAB7B32",
+      "features": 8,
+      "specifications": 16,
+      "io": 9
     },
     "aquilon-rs1": {
       "sha256": "CCB67B6EDC24AAA9C7AD4109BF19C47E9B769BFD988EACBD25905DF2F4BDA3F3",

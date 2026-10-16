@@ -1,0 +1,94 @@
+{
+  "catalog": [
+    {
+      "brand": "Analog Way",
+      "product": "Aquilon Cmini",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "kind": "equipment",
+      "official_links": [
+        "https://www.analogway.com/products/aquilon-cmini"
+      ],
+      "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "slug": "aquilon-cmini",
+      "card_image": "aquilon-cmini-front.webp"
+    },
+    {
+      "brand": "Analog Way",
+      "product": "Aquilon C",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "kind": "equipment",
+      "official_links": [
+        "https://www.analogway.com/products/aquilon-c"
+      ],
+      "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "slug": "aquilon-c",
+      "card_image": "aquilon-c-front.webp"
+    },
+    {
+      "brand": "Analog Way",
+      "product": "Aquilon C+",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "kind": "equipment",
+      "official_links": [
+        "https://www.analogway.com/products/aquilon-cplus"
+      ],
+      "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "slug": "aquilon-cplus",
+      "card_image": "aquilon-cplus-front.webp"
+    },
+    {
+      "brand": "Analog Way",
+      "product": "Aquilon Cmax",
+      "categories": [
+        "영상",
+        "Video",
+        "Video Processor"
+      ],
+      "kind": "equipment",
+      "official_links": [
+        "https://www.analogway.com/products/aquilon-cmax"
+      ],
+      "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+      "slug": "aquilon-cmax",
+      "card_image": "aquilon-cmax-front.webp"
+    }
+  ],
+  "uploads": [
+    {
+      "slug": "aquilon-cmini",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "kind": "reference",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)"
+    },
+    {
+      "slug": "aquilon-c",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "kind": "reference",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)"
+    },
+    {
+      "slug": "aquilon-cplus",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "kind": "reference",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)"
+    },
+    {
+      "slug": "aquilon-cmax",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "kind": "reference",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)"
+    }
+  ]
+}

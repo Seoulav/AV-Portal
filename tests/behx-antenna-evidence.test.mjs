@@ -5,7 +5,7 @@ import { beforeW009Uploads } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import {readBeforeW018FileSync as readFileSync} from './w20261016-018-history.mjs';
 import { beforeW005Product } from './w005-history.mjs';
 import { beforeW006Product, withoutW006Uploads } from './w006-history.mjs';
 import { withoutW011Uploads } from './w011-history.mjs';
