@@ -60,7 +60,8 @@ export function beforeW16004Uploads(uploads) {
     throw new Error('unexpected W-004 upload count or membership');
   }
   for (const item of added) {
-    if (!slugs.has(item.slug) || item.title !== brochureTitle || item.kind !== 'reference' || item.locked === true) {
+    const expected = { slug: item.slug, file: brochureFile, kind: 'reference', title: brochureTitle };
+    if (!slugs.has(item.slug) || JSON.stringify(item) !== JSON.stringify(expected)) {
       throw new Error(`unexpected W-004 upload for ${item.slug}`);
     }
   }
