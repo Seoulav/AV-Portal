@@ -1,3 +1,4 @@
+import { beforeW015CloseoutProduct } from './w015-closeout-history.mjs';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-017-prior-fields.json',import.meta.url)));
@@ -6,8 +7,9 @@ const sha=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 export function beforeW20261016_017Product(current,slug){
  const f=fixture.products[slug];
  if(!f||current.portMap===undefined)return current;
+ if(sha(current.portMap)===sha(f.priorPortMap))return current;
+ current=beforeW015CloseoutProduct(current,slug,'W-017 portMap change (approved Sony map changed)');
  const actual=sha(current.portMap);
- if(actual===sha(f.priorPortMap))return current;
  if(actual!==f.approvedPortMapSha)throw Error(slug+': unexpected W-017 portMap change (approved Sony map changed)');
  const p=structuredClone(current);p.portMap=structuredClone(f.priorPortMap);return p;
 }
