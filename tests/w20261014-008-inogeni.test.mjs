@@ -25,7 +25,11 @@ test('INOGENI has two exact-model catalog and detail entries, filter chip and se
     assert.ok(index.items.some(item => item.slug === slug));
     assert.equal(detail.portMap.image, 'Diagram');
     assert.ok(prepareEnhancements(detail).portMap);
-    assert.deepEqual(detail.images.map(image => image.role), ['Main', 'Diagram']);
+    assert.deepEqual(detail.images.map(image => image.role), slug === 'u-bridge-3' ? ['Main', 'Diagram', 'Other'] : ['Main', 'Diagram']);
+    if (slug === 'u-bridge-3') {
+      assert.equal(detail.images[1].file, 'u-bridge-3-panels.png');
+      assert.equal(detail.images[2].file, 'u-bridge-3-diagram.png');
+    }
     for (const image of detail.images) {
       assert.equal(image.model, detail.model);
       assert.equal(image.officialSource, true);
