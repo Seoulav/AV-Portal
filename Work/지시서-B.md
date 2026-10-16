@@ -631,3 +631,5 @@
 
 
 - W-014 integration/verification: merged latest origin/main 38489ee (#588). Resolved exception notes by preserving both Analog Way and Epson sections; regenerated search-index from sources. Rebuilt detail assets, snapshot/search/readable outputs; search-index --check and verify-pages passed. Full serial suite: 818 pass, 0 fail, 1 existing skip (819 total). PR #594 and #596 were OPEN at last check.
+
+- W-014 Work 검토용 PNG 캡처 보강: Chrome headless CDP + 실제 상세 페이지 렌더로 11종 각각 before/after Port Map(760px, 390px 좌·우) 66장과 RS6·Zenith 200·Crown DCi 4|600 상세 번호 목록 1280px 3장을 생성. PNG 시그니처·파일 수·화면 너비를 확인(69장, 잘못된 파일 0). 캡처 인덱스 `Work/기록/W-20261016-014-analogway-preview/screenshots/index.html`; 캡처는 동일 폴더. Work가 PNG 확인 후 병합 순서를 정하기로 해 병합 보류.
