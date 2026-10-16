@@ -13,7 +13,8 @@
 - [x] 카드 렌더링·15종 JSON 수치·기존 XDM 비교 DOM 보존 단위 테스트 통과. `verify-pages`, 검색 인덱스 `--check` 통과.
 - [x] 전체 테스트 875건 실행: 872 pass, 2 fail, 1 skip. 실패 2건은 기존 `rtcom-sync.test.mjs`의 임시 디렉터리 `rename` EPERM으로, W-003 변경과 무관함.
 - [ ] 1280px·390px PNG 및 `scrollWidth === 390`: 브라우저 호스트 `screenshot_no_frame`, Windows Edge·Chrome headless `STATUS_BREAKPOINT`로 PNG 생성·390px 측정 불가. Work 측 브라우저 환경에서 시각 검증 필요.
-- [ ] PR 본문에 원문 인용·쪽·미리보기 상태를 기록하고 Work 독립 검토를 요청한다. 사용자 검토 전 병합하지 않는다.
+- [x] Draft PR #609 생성: https://github.com/Seoulav/AV-Portal/pull/609. 본문에 원문 인용·쪽·검증 결과·시각 검토 차단 사유를 기록했다.
+- [ ] Builder CI는 `in_progress`(2026-10-17 확인). 초록 결과와 Work 독립 검토를 기다린다. PNG 캡처·390px 실측이 없는 상태이므로 사용자 검토·병합은 보류한다.
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
