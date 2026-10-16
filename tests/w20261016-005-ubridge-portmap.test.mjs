@@ -43,5 +43,5 @@ test('W-005 selective inverse retains every current nonapproved field and reject
   assert.deepEqual(beforeW20261016_005Product(alteredIo, 'u-bridge-3').io, []);
   const alteredMap = structuredClone(published);
   alteredMap.portMap.items[0].label = 'INVALID';
-  assert.throws(() => beforeW20261016_005Product(alteredMap, 'u-bridge-3'), /unexpected W-006 portMap change/);
+  assert.throws(() => beforeW20261016_005Product(alteredMap, 'u-bridge-3'), /unexpected W-007 portMap change/);
 });

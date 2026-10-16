@@ -1,0 +1,118 @@
+{
+  "prior": {
+    "portMap": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "u-bridge-3-panels.png",
+        "width": 944,
+        "height": 580
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "PC HOST USB-C",
+          "desc": "호스트 PC USB 3.2 Gen 1 연결",
+          "x1": 161,
+          "x2": 213,
+          "y": 203,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "PC HOST MGMT",
+          "desc": "PC HOST 모듈 USB-mini 관리 단자",
+          "x1": 266,
+          "x2": 314,
+          "y": 203,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "DEVICE USB-C",
+          "desc": "DEVICE 모듈 USB-C 주변기기 단자",
+          "x1": 624,
+          "x2": 670,
+          "y": 203,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "DEVICE USB-A 1–2",
+          "desc": "DEVICE 모듈 USB-A 주변기기 단자 2개",
+          "x1": 707,
+          "x2": 803,
+          "y": 196,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "DEVICE MGMT",
+          "desc": "DEVICE 모듈 USB-mini 관리 단자",
+          "x1": 844,
+          "x2": 887,
+          "y": 203,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "PC HOST DC 24V",
+          "desc": "PC HOST 모듈 DC 24V 전원 입력",
+          "x1": 50,
+          "x2": 112,
+          "y": 396,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "PC HOST LINK",
+          "desc": "PC HOST 모듈 CAT6A 연장 링크",
+          "x1": 126,
+          "x2": 234,
+          "y": 399,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "PC HOST RS-232",
+          "desc": "PC HOST 모듈 RS-232 패스스루",
+          "x1": 264,
+          "x2": 331,
+          "y": 401,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "DEVICE DC 24V",
+          "desc": "DEVICE 모듈 DC 24V 전원 입력",
+          "x1": 628,
+          "x2": 687,
+          "y": 396,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "DEVICE LINK",
+          "desc": "DEVICE 모듈 CAT6A 연장 링크",
+          "x1": 701,
+          "x2": 807,
+          "y": 399,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "DEVICE RS-232",
+          "desc": "DEVICE 모듈 RS-232 패스스루",
+          "x1": 821,
+          "x2": 887,
+          "y": 401,
+          "side": "bottom"
+        }
+      ]
+    }
+  },
+  "approved": {
+    "portMap": "a8e7f7f9bc30acc95472f5ea2218ed0bd01aecca0bc425d6e58ee82bf9dfac3b"
+  },
+  "unchangedSha256": "1bbd856bcb5b9246d37d629d63b71ec37cfd8258dfb2f943f4f8d65c3b601bea",
+  "imageSha256": "694c5ab946ce69eead8de429a4449c9aa32c8c8c1ca6630dc74506a1066239f9"
+}
