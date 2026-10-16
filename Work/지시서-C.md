@@ -307,3 +307,11 @@
 - [x] RS2 가이드 전용 1280px·390px 캡처를 `%TEMP%\w019-preview\guide-rs2-{1280,390}.png`에 저장. 세 대표 제품 전체 페이지 캡처도 같은 폴더에 보관.
 - [ ] PR #594가 기존 구현 초안이다. 현재 작업본은 해당 원격 브랜치와 통합 후 계산·표시 수정 및 새 전체 CI를 다시 확인해야 한다. PR 본문에 규칙별 공식 매뉴얼 원문과 쪽을 기록한다.
 - 근거 확인: Aquilon User Manual v6.2 66쪽 “Each VPU contains 8 source links and 8 outputs links.” 및 “4 mixer layers (or 4 pairs of split layers)”; 68쪽 “A Screen using more than 8 outputs uses another VPU.”; 69쪽 “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.”; Alta 4K User Manual 42쪽 “One Layer resource = one Mixing layer or one pair of Split layers allocated to a Screen.”; Zenith 100·200 데이터시트 각 6쪽 입력 상한 11·14; Midra 4K User Manual 42쪽 Mixer·Matrix·Blend 모드 규칙.
+### W-20261016-019 재검증 (2026-10-16)
+
+- #594는 Claude 작성 초안(3eceaf2)을 이어받았다. 추가 PR 없이 기존 브랜치를 보완했다. 계산/가시성 수정 570bc407, PR 브랜치 통합 1eb270ea, 최신 main 통합 f3afad77.
+- supplemental 카드 가시성 목록 누락과 2×2 출력 조합 select 매핑 오류를 고쳤다. prototype 원본·beta 생성 자산·역사 되감기 검사를 함께 맞췄다.
+- 전체 직렬 검사 824건: 823 pass, 0 fail, 기존 skip 1. W-019 전용 9/9. verify-pages 285·282·515·0·163, 검색 인덱스 --check 704524 bytes, git diff --check origin/main...HEAD 통과.
+- Headless Chromium: 11개 승인 모델 각각 가이드 1개·비교 결과 11개, RC400T·EC-4BV 0개. 모든 대상 제품에서 scrollWidth=390. 예시 추천 Zenith 200 / Aquilon RS2 / Pulse 4K. 키보드 Enter 행 추가·삭제 2→1, JS 오류 0.
+- 미리보기: %TEMP%\w019-preview\guide-aquilon-rs2-{1280,390}.png, guide-zenith-200-{1280,390}.png, guide-pulse-4k-{1280,390}.png; 전체 상세는 같은 폴더의 aquilon-rs2·zenith-200·pulse-4k 각 {1280,390}.png.
+- 세부 매뉴얼 원문·쪽·캡처·독립 검증 요청은 Work/기록/W-20261016-019-Work-인계.md에 기록. #594는 Draft 상태로 두고 Work 승인 전 병합하지 않는다.
