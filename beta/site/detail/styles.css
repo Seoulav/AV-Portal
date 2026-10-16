@@ -485,6 +485,12 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-layer-standards-example p, .aw-layer-standards-explanations { color: var(--pg-ink-2); line-height: 1.6; }
 .aw-layer-standards-example p { margin: 0; }
 .aw-layer-standards-explanations { padding-left: 20px; }
+.aw-layer-standards-cautions { min-width: 0; margin-top: 16px; padding: 12px 14px; border: 1px solid var(--pg-line); border-radius: 12px; background: #fff; color: var(--pg-ink-2); line-height: 1.6; }
+.aw-layer-standards-cautions summary { cursor: pointer; color: var(--pg-ink); font-weight: 700; }
+.aw-layer-standards-cautions p { margin: 10px 0 0; }
+.aw-layer-standards-cautions ul { margin: 8px 0 0; padding-left: 20px; }
+.aw-layer-standards-cautions li + li { margin-top: 6px; }
+.aw-layer-standards-source { display: block; margin-top: 10px; font-size: 12px; color: var(--pg-ink-2); }
 @media (max-width: 720px) {
   .aw-layer-standards { padding: 14px; }
   .aw-layer-standards-example-grid { grid-template-columns: minmax(0, 1fr); }

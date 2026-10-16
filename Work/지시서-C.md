@@ -2,7 +2,7 @@
 
 ## W-20261017-003 1부 — Analog Way 레이어 연출 기준 정리
 
-- 상태: REVIEW (미리보기 캡처 및 휴대폰 실측은 실행 환경 차단으로 BLOCKED)
+- 상태: REVIEW (Work 독립 검증 통과; 지적 수정 완료, 수정본 캡처·CI 대기)
 - 명세: `Work/작업/W-20261017-003.md` · 명세 확인 main `598757af700c961a4caf0888a5f5ce3dcde79c08`
 - 브랜치: `codex/W-20261017-003-aw-layer-rules` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
 - 시작 main `598757af700c961a4caf0888a5f5ce3dcde79c08`; 최신 `origin/main` `08d255b7c42faf2f10ba74b2b37a38b453ea09ad` 통합 완료(merge `c38c160f50c955ea4fb41771dae3101f831020b5`).
@@ -12,9 +12,14 @@
 - [x] 기존 해설 카드에서 공통 규칙 문구를 새 카드로 옮기는 구현을 시작했다. 기존 XDM 비교 DOM 코드는 보존했다.
 - [x] 카드 렌더링·15종 JSON 수치·기존 XDM 비교 DOM 보존 단위 테스트 통과. `verify-pages`, 검색 인덱스 `--check` 통과.
 - [x] 전체 테스트 875건 실행: 872 pass, 2 fail, 1 skip. 실패 2건은 기존 `rtcom-sync.test.mjs`의 임시 디렉터리 `rename` EPERM으로, W-003 변경과 무관함.
-- [ ] 1280px·390px PNG 및 `scrollWidth === 390`: 브라우저 호스트 `screenshot_no_frame`, Windows Edge·Chrome headless `STATUS_BREAKPOINT`로 PNG 생성·390px 측정 불가. Work 측 브라우저 환경에서 시각 검증 필요.
+- [x] 세션 D가 만든 대표 3종·RC400T 1280px·390px 캡처를 Work가 확인했다. 390px `scrollWidth` 390, RC400T 카드 미표시 확인. 이 세션의 브라우저 호스트는 여전히 `screenshot_no_frame`이라 Midra 표 수정 후 캡처 1장은 세션 D에 재요청이 필요하다.
+- [x] Work 중간 검토에 따라 Midra 표를 Matrix(최대 2화면) 화면당 1(분할 2)과 Mixer(한 화면) 2(분할 4) 열로 분리했다. 값은 기존 `videoLayerPlan`에서 읽으며 시험으로 두 행을 확인했다.
+- [x] 수정 후 `npm.cmd test`: 876건 중 875 pass, 1 skip, 0 fail. `node beta/verify-pages.mjs`와 `node beta/build-search-index.mjs --check` 통과. `node beta/build-detail-assets.mjs`로 공개 사본 재생성.
+- [x] Work 2026-10-17 독립 검증: 인용·쪽 오기 0, 표 15종·예시 4개와 제품 JSON 값 일치, 15종 한정·RC400T 제외 확인. 조건부 병합 승인 후 문서 §1·§5의 `출력` 8개 기준, §7 PiP 표현과 §6 추론 표기를 정정했다. 공용 카드 하단에 계산 근거·미확인 사항 접기 절을 복원하고 BTO 뜻·Pulse 조사도 바로잡았다.
+- [x] Work 2026-10-17 승인: 기존 모델별 해설 카드의 레이어 다이어그램·계산 예시 콜아웃 제거. 공용 카드와 새 접기 절로 대체한다.
+- [x] 수정 후 전체 876건을 순차 실행: 875 pass, 1 skip, 0 fail. 일반 병렬 실행의 `rtcom-sync.test.mjs` 임시 디렉터리 rename `EPERM`은 Windows 간헐 오류이며, 같은 시험 단독 및 전체 순차 실행은 통과. `verify-pages`, 검색 인덱스 `--check`, 공개 상세 자산 재생성 통과.
 - [x] Draft PR #609 생성: https://github.com/Seoulav/AV-Portal/pull/609. 본문에 원문 인용·쪽·검증 결과·시각 검토 차단 사유를 기록했다.
-- [ ] Builder CI는 `in_progress`(2026-10-17 확인). 초록 결과와 Work 독립 검토를 기다린다. PNG 캡처·390px 실측이 없는 상태이므로 사용자 검토·병합은 보류한다.
+- [ ] 수정 커밋의 Builder CI 초록, 새 카드 1280px(접기 절 펼침)·390px 캡처 후 Draft 해제·병합한다. 이 세션 브라우저는 `screenshot_no_frame`이므로 세션 D 캡처를 Work에 요청했다.
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 

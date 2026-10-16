@@ -45,6 +45,8 @@ const videoModel = row => ({
     screens: row.maxPgm4kScreens,
     mixPerScreenAtMax: row.mixing4kPerScreenAtMaxScreens,
     splitPerScreenAtMax: row.split4kPerScreenAtMaxScreens,
+    mixOneScreen: row.maxMixing4kPerScreenOneScreen,
+    splitOneScreen: row.maxSplit4kPerScreenOneScreen,
     totalMix: row.totalMixing4k,
     totalSplit: row.totalSplit4k,
     auxAtMaxScreens: row.auxOutputsAtMaxScreens,
@@ -71,7 +73,7 @@ export function buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }) {
   return {
     series: [
       { id: 'aquilon-rs', title: 'Aquilon RS', models: rs },
-      { id: 'aquilon-c', title: 'Aquilon C · BTO 최대 구성', models: c },
+      { id: 'aquilon-c', title: 'Aquilon C · BTO(주문 제작) 최대 구성', models: c },
       { id: 'alta', title: 'Alta 4K', models: alta },
       { id: 'midra', title: 'Midra 4K', models: midra },
     ],
@@ -86,7 +88,7 @@ export function buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }) {
       },
       {
         title: 'Midra 4K · 독립 화면 2개(Matrix)',
-        text: `${pulse.model}은 각 화면에 믹싱 ${matrix.mixing4kPerScreen}개 또는 분할 ${matrix.split4kPerScreen}개를 배치하며, 두 화면 전체에 믹싱 ${matrix.totalMixing4k}개 또는 분할 ${matrix.totalSplit4k}개를 씁니다.`,
+        text: `${pulse.model}는 각 화면에 믹싱 ${matrix.mixing4kPerScreen}개 또는 분할 ${matrix.split4kPerScreen}개를 배치하며, 두 화면 전체에 믹싱 ${matrix.totalMixing4k}개 또는 분할 ${matrix.totalSplit4k}개를 씁니다.`,
       },
       {
         title: 'Eikos 4K · 두 출력 블렌딩',
@@ -99,6 +101,14 @@ export function buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }) {
       '보조 화면(AUX)은 주 화면과 별도 출력입니다. Midra 1080p AUX에는 크기를 바꿀 수 없는 레이어 1개가 있고, Alta AUX는 레이어 자원을 쓰지 않습니다.',
     ],
     pipNote: '화면 안 작은 창(PiP)은 화면의 레이어 자원을 사용합니다. PiP만의 별도 최대 개수는 확인되지 않았습니다.',
+    calculationNote: `2×2 4K60 화면 1개 = 출력 ${rsExample.outputs}개 × 용량 ${rsExample.outputCapacity} = 출력 링크 ${rsExample.outputLinks}개 = VPU ${rsExample.vpusForScreen}개. 화면당 믹싱 ${rsExample.mixingLayersPerScreen}개 또는 분할 ${rsExample.splitLayersPerScreen}개까지 배치합니다. (Aquilon User Manual v6.2, 61·66·79쪽)`,
+    cautionNotes: [
+      '배경 콘텐츠는 출력 용량과 일치해야 하며 확대·축소되지 않습니다. 2×2 4K60 화면은 출력마다 4K60 소스가 필요합니다. (Aquilon User Manual v6.2, 101쪽)',
+      '출력 8개 이하인 화면의 레이어를 VPU 두 개에 나눠 늘릴 수 있는지는 확인되지 않았습니다. (같은 매뉴얼, 68쪽의 확인 범위)',
+      '용량 1(HD)과 용량 2(4K60) 레이어를 섞을 때의 자원 비용은 확인되지 않았습니다. 매뉴얼은 Optimized mode에서 용량 2만 쓰도록 권고합니다. (같은 매뉴얼, 69쪽)',
+      'Region Captive PiP의 절감 산식은 확인되지 않았습니다. PiP 배치만으로 링크가 절약된다고 확인되지 않았습니다. (Aquilon RS1 Technical Datasheet, 3쪽; Aquilon User Manual v6.2, 83쪽)',
+    ],
+    sourceNote: '근거: Aquilon User Manual v6.2 61·66·68·69·79·83·101쪽; Aquilon RS1 Technical Datasheet 3쪽.',
   };
 }
 
@@ -112,7 +122,7 @@ function renderTable(series, currentSlug) {
     ? ['모델', '2×2 4K60 화면 수', '화면당 레이어(분할)', '장비 전체 레이어(분할)', '4K60 프로그램 출력', 'VPU']
     : series.id === 'alta'
       ? ['모델', '최대 화면 수', '최대 화면 수일 때 화면당(분할)', '장비 전체(분할)', '그때 AUX', '한 화면만 쓸 때(분할)', 'AUX 최대']
-      : ['모델', '최대 4K60 화면', '화면당 레이어(분할)', '장비 전체(분할)', '운영 모드'];
+      : ['모델', '최대 4K60 화면', '최대 화면 수일 때 화면당(분할)', '장비 전체(분할)', '한 화면만 쓸 때(분할)', '운영 모드'];
   const head = make('thead');
   const header = make('tr');
   for (const label of headings) {
@@ -131,7 +141,7 @@ function renderTable(series, currentSlug) {
       ? [`${row.screens}개`, `${row.mixPerScreen} (${row.splitPerScreen})`, `${row.totalMix} (${row.totalSplit})`, `${row.outputs}개`, `${row.processingUnits}개`]
       : series.id === 'alta'
         ? [`${row.screens}개`, `${row.mixPerScreen} (${row.splitPerScreen})`, `${row.totalMix} (${row.totalSplit})`, `${row.auxAtMaxScreens}개`, `${row.mixOneScreen} (${row.splitOneScreen})`, `${row.auxMax}개`]
-        : [`${row.screens}개`, `${row.mixPerScreen} (${row.splitPerScreen})`, `${row.totalMix} (${row.totalSplit})`, row.modes.map(mode => mode.label).join(' · ')];
+        : [`${row.screens}개`, `${row.mixPerScreen} (${row.splitPerScreen})`, `${row.totalMix} (${row.totalSplit})`, `${row.mixOneScreen} (${row.splitOneScreen})`, row.modes.map(mode => mode.label).join(' · ')];
     for (const value of values) tr.append(make('td', '', value));
     body.append(tr);
   }
@@ -170,5 +180,13 @@ export function renderAnalogWayLayerStandards(standards, currentSlug) {
   for (const text of standards.explanations) explanations.append(make('li', '', text));
   explanations.append(make('li', '', standards.pipNote));
   section.append(explanations);
+  const details = make('details', 'aw-layer-standards-cautions');
+  details.append(make('summary', '', '계산 근거와 미확인 사항'));
+  details.append(make('p', 'aw-layer-standards-calculation', standards.calculationNote));
+  const cautions = make('ul');
+  for (const note of standards.cautionNotes) cautions.append(make('li', '', note));
+  details.append(cautions);
+  details.append(make('small', 'aw-layer-standards-source', standards.sourceNote));
+  section.append(details);
   return section;
 }

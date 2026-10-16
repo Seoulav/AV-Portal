@@ -6,11 +6,11 @@
 
 ### 1. 화면(Screen)·출력·AUX의 관계
 
-화면은 하나 이상의 프로그램 출력으로 구성합니다. Aquilon VPU 한 개에는 출력 링크 8개가 있고, 화면에서 출력 링크를 8개보다 많이 쓰면 다른 VPU가 필요합니다. C 시리즈 수량은 주문형(BTO) 최대 구성을 표시하므로 실제 장착 카드·VPU에 따라 달라질 수 있습니다.
+화면은 하나 이상의 프로그램 출력으로 구성합니다. Aquilon VPU 한 개에는 출력 링크 8개가 있습니다. 한 화면이 출력 8개를 초과하면 다른 VPU가 필요합니다. C 시리즈 수량은 주문형(BTO) 최대 구성을 표시하므로 실제 장착 카드·VPU에 따라 달라질 수 있습니다.
 
 - 원문: “Each VPU contains 8 source links and 8 outputs links.” — Aquilon User Manual v6.2, 66쪽.
 - 원문: “A Screen using more than 8 outputs uses another VPU.” — Aquilon User Manual v6.2, 68쪽.
-- 4K60 출력의 용량 표 — 같은 매뉴얼, 61쪽.
+- 표 원문: 4K60 출력의 용량 표 — 같은 매뉴얼, 61쪽.
 
 ### 2. 레이어 종류
 
@@ -27,19 +27,19 @@
 - 원문: “Each VPU contains 8 source links and 8 outputs links.” — 66쪽.
 - 원문: “Capacity 1 uses one link and capacity 2 uses two links, etc.” — 66쪽.
 - 원문: “4 mixer layers (or 4 pairs of split layers) spread over 4 outputs, in capacity 2.” — 66쪽.
-- 용량 2 레이어 구성 — 같은 매뉴얼, 79쪽.
+- 표 원문: 용량 2 레이어 구성 — 같은 매뉴얼, 79쪽.
 
 ### 4. 화면 크기·해상도(용량)에 따른 차이
 
 용량은 출력 형식에 따라 정해집니다. 4K60은 용량 2이며, 다른 해상도에 대한 일반 조합 계산은 이번 카드에서 제공하지 않습니다.
 
-- 출력 해상도별 용량 표 — Aquilon User Manual v6.2, 61쪽.
+- 표 원문: 출력 해상도별 용량 표 — Aquilon User Manual v6.2, 61쪽.
 - 원문: “Capacity 1 uses one link and capacity 2 uses two links, etc.” — 66쪽.
 - 원문: “When Optimized mode is enabled in one Screen, use only layers of capacity 2.” — 69쪽.
 
 ### 5. 여러 출력에 걸친 화면의 계산
 
-2×2 4K60 화면 하나는 출력 4개, 출력 링크 8개를 씁니다. 한 화면이 출력 링크 5개 이상을 쓰고 용량 2 레이어가 하나 이상이면 해당 VPU의 Optimized mode가 적용되어 4링크 경계를 없앱니다. 화면이 8개 초과 출력 링크를 쓰면 다른 VPU가 필요합니다.
+2×2 4K60 화면 하나는 출력 4개, 출력 링크 8개를 씁니다. 한 화면이 출력 링크 5개 이상을 쓰고 용량 2 레이어가 하나 이상이면 해당 VPU의 Optimized mode가 적용되어 4링크 경계를 없앱니다. 한 화면이 출력 8개를 초과하면 다른 VPU가 필요합니다.
 
 - 원문: “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.” — Aquilon User Manual v6.2, 69쪽.
 - 원문: “The Optimized mode removes the 4 links boundary and configures the links to bring the best performance for layers of capacity 2.” — 69쪽.
@@ -47,13 +47,13 @@
 
 ### 6. 레이어 없는 화면
 
-레이어를 배치하지 않는 화면은 처리 자원을 쓰지 않습니다. 다만 프로그램 출력·물리 커넥터 수 한도에는 포함됩니다.
+레이어를 배치하지 않는 화면은 처리 자원을 쓰지 않습니다. 프로그램 출력·물리 커넥터 수 한도에는 포함된다고 계산합니다. 뒤 문장은 제품의 출력 수·커넥터 수 한도를 함께 적용한 추론이며 매뉴얼 66쪽에 명시된 문장은 아닙니다.
 
-- 원문: “Consume zero processing resources: Yes.” — Aquilon User Manual v6.2, 66쪽.
+- 표 원문: “Consume zero processing resources: Yes.” — Aquilon User Manual v6.2, 66쪽.
 
 ### 7. PiP
 
-화면 전체 레이어와 출력 내부 PiP는 같은 처리 링크를 사용하므로, PiP를 만든다고 링크가 절약되지는 않습니다. Region Captive PiPs라는 용어는 RS1 데이터시트 3쪽에 있으며 매뉴얼 83쪽은 화면 영역 제한을 설명하지만 절감 산식은 제시하지 않습니다.
+화면 전체 레이어와 출력 내부 PiP는 같은 처리 링크를 사용합니다. PiP를 만든다고 링크가 절약된다고 확인되지 않았습니다. Region Captive PiPs라는 용어는 RS1 데이터시트 3쪽에 있으며 매뉴얼 83쪽은 화면 영역 제한을 설명하지만 절감 산식은 제시하지 않습니다.
 
 - Region Captive PiPs 용어 — Aquilon RS1 Technical Datasheet, 3쪽.
 - 원문: “Set Screen regions to optimize layer resources by limiting layers to specific outputs of a Screen.” — Aquilon User Manual v6.2, 83쪽.
@@ -61,7 +61,7 @@
 
 ### 8. 확인되지 않은 점
 
-- 출력 링크가 8개 이하인 화면의 레이어를 두 VPU에 나눠 배치할 수 있는지.
+- 출력이 8개 이하인 화면의 레이어를 두 VPU에 나눠 배치할 수 있는지.
 - 용량 1(HD)과 용량 2(4K60) 레이어를 섞을 때의 자원 비용. 매뉴얼은 Optimized mode에서 용량 2만 사용할 것을 권고합니다(69쪽).
 - Region Captive PiP의 레이어 절감 산식.
 - 배경 콘텐츠는 출력 용량과 맞아야 하며 확대·축소되지 않습니다. 예를 들어 2×2 4K60 화면에는 각 출력마다 4K60 소스가 필요합니다(101쪽).
@@ -120,7 +120,7 @@
 
 Alta AUX는 레이어 자원을 소비하지 않는 출력으로 구성할 수 있습니다.
 
-- 원문: “Up to two outputs without layer resources can be used as Aux.” (Zenith 100) / “Up to four outputs without layer resources can be used as Aux.” (Zenith 200) — Alta 4K User Manual, 42쪽.
+- 목록 원문: “Up to two outputs without layer resources can be used as Aux.” (Zenith 100) / “Up to four outputs without layer resources can be used as Aux.” (Zenith 200) — Alta 4K User Manual, 42쪽.
 
 ### 7. PiP
 
