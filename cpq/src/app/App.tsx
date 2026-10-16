@@ -397,14 +397,35 @@ function QuoteWorkspace() {
         </header>
 
         <nav className="q-portal-nav" aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">AV 견적 산출기</span></nav>
-        <ReferenceDocs />
-
-        <div className="q-workspace">
+        <div className={`q-workspace${status.kind === 'empty' ? ' q-start-workspace' : ''}`}>
+          {status.kind === 'empty' && (
+            <div className="q-start-heading">
+              <span className="q-start-eyebrow">AV QUOTE WORKSPACE</span>
+              <h1 className="q-start-title">견적 시작</h1>
+              <p>구성도를 가져오거나 포털 품목을 직접 골라 견적을 만드세요.</p>
+            </div>
+          )}
           {/*
             지금 어느 견적을 보고 있는지 **상단에서** 알 수 있어야 한다
             (계획 §1). 값은 갑지 입력에서 그대로 읽는다 — 비어 있으면
             비었다고 말하고 지어내지 않는다.
           */}
+          {state.kind === 'loading' && (
+            <p role="status" className="q-notice">
+              자료를 불러오는 중입니다…
+            </p>
+          )}
+          {state.kind === 'error' && (
+            <div role="alert" className="q-notice q-notice-error">
+              <h2>초기 자료를 불러오지 못했습니다</h2>
+              <p className="q-muted">아래 사유를 해결한 뒤 새로고침하세요.</p>
+              <ul>
+                {state.reasons.map((reason) => (
+                  <li key={reason}>{reason}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           {status.kind === 'editing' && (
             <p role="status" aria-label="현재 견적" className="q-quote-identity">
               <strong>{status.document.header.customer || '고객 미입력'}</strong>
@@ -421,6 +442,7 @@ function QuoteWorkspace() {
             </p>
           )}
           <div className="q-tools">
+            <div className="q-start-actions" role="group" aria-label="견적 시작 방법">
             <button
               type="button"
               className="q-button"
@@ -437,12 +459,16 @@ function QuoteWorkspace() {
             >
               품목 직접 선택
             </button>
+            </div>
+            <div className="q-edit-tools" role="group" aria-label="편집">
             <button type="button" className="q-button" onClick={workspace.undo} disabled={!workspace.canUndo}>
               실행 취소
             </button>
             <button type="button" className="q-button" onClick={workspace.redo} disabled={!workspace.canRedo}>
               다시 실행
             </button>
+            </div>
+            <div className="q-file-tools" role="group" aria-label="작업 파일">
             <button
               type="button"
               className="q-button"
@@ -471,7 +497,9 @@ function QuoteWorkspace() {
                 if (file !== undefined) void handleOpenWorkFileSelected(file);
               }}
             />
+            </div>
           </div>
+          <div className="q-output-tools" role="group" aria-label="출력">
           <div className="q-grade" role="radiogroup" aria-label="출력 등급">
             {OUTPUT_GRADES.map((grade) => (
               <label key={grade.value} className="q-grade-option">
@@ -485,6 +513,7 @@ function QuoteWorkspace() {
                 {grade.label}
               </label>
             ))}
+          </div>
             <button
               type="button"
               className="q-button q-primary"
@@ -506,24 +535,7 @@ function QuoteWorkspace() {
             </p>
           )}
         </div>
-
-        <main className="q-main">
-          {state.kind === 'loading' && (
-            <p role="status" className="q-notice">
-              자료를 불러오는 중입니다…
-            </p>
-          )}
-          {state.kind === 'error' && (
-            <div role="alert" className="q-notice q-notice-error">
-              <h2>초기 자료를 불러오지 못했습니다</h2>
-              <p className="q-muted">아래 사유를 해결한 뒤 새로고침하세요.</p>
-              <ul>
-                {state.reasons.map((reason) => (
-                  <li key={reason}>{reason}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+        <main className={`q-main${status.kind === 'editing' ? ' q-editing-main' : status.kind === 'empty' ? ' q-empty-main' : ''}`}>
           {resources !== undefined && (
             <>
               {!resources.catalog.pricesAvailable && (
@@ -561,7 +573,10 @@ function QuoteWorkspace() {
                 ))}
 
               {entry === null && status.kind === 'empty' && (
-                <p className="q-muted">왼쪽 위 버튼으로 구성도를 열거나 품목을 직접 고르세요.</p>
+                <div className="q-start-intro">
+                  <strong>견적을 만든 뒤에는</strong>
+                  <p>확인 항목을 살핀 다음 수량과 견적 정보를 편집하고 작업 파일로 보관하세요.</p>
+                </div>
               )}
 
               {status.kind === 'basis-conflict' && (
@@ -854,6 +869,7 @@ function QuoteWorkspace() {
             </>
           )}
         </main>
+        <ReferenceDocs />
       </div>
     </div>
   );
