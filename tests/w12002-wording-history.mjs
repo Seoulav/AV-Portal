@@ -1,3 +1,4 @@
+import {beforeH5PanelProduct,beforeH5PanelRaw} from './h5-panel-history.mjs';
 import { readFileSync } from 'node:fs';
 import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import { beforeW16015SamsungHotelPlacementProduct, beforeW16015SamsungHotelPlacementRaw } from './w16015-samsung-hotel-placement-history.mjs';
@@ -29,6 +30,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug,{w011Undone=false,w015PlacementUndone=false}={}){
+  current=beforeH5PanelProduct(current,slug);
   if(!w015PlacementUndone)current=beforeW16015SamsungHotelPlacementProduct(current,slug);
   current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   if(!w011Undone)current=beforeW20261015_011Product(current,slug);
@@ -63,6 +65,7 @@ export function beforeW12002Product(current,slug,{w011Undone=false,w015Placement
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeH5PanelRaw(raw,slug);
   raw=beforeW16015SamsungHotelPlacementRaw(raw,slug);
   raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
   raw=beforeW20261015_011Raw(raw,slug);

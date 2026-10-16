@@ -564,7 +564,8 @@ export const group1Images = {
   ],
   'novastar-h5': [
     image('Front', 'h5-front.webp', 'NovaStar H5 전면부(터치스크린 LCD)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1176', '2400x1176', 'VERIFIED'),
-    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED')
+    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED'),
+    image('Other', 'h5-control-panel.png', 'NovaStar H5 공식 후면 사진의 제어 단자 줄 확대', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '1600x216', 'VERIFIED', '공식 후면 사진의 제어 단자 줄 확대(자르기·배치만)')
   ],
   'h-preview-card-2xrj45-1xhdmi13': [
     image('Main', 'h-preview-card-2xrj45-1xhdmi13-main.webp', 'H_2xRJ45+1xHDMI1.3 프리뷰 카드 전면 커넥터', 'NovaStar', 'H_2xRJ45+1xHDMI1.3 Preview Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1126x117', '1126x117', 'VERIFIED')
