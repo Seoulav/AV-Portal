@@ -1,8 +1,11 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
+import {readBeforeGroup6bFile as readFile} from './group6b-w16015-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
-import { readFile } from 'node:fs/promises';
+
+
 import { beforeW032Raw } from './w032-history.mjs';
 import { beforeW06003Raw } from './w06003-history.mjs';
 import { beforeW12001Raw } from './w12001-history.mjs';

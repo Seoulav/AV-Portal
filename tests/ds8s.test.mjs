@@ -1,6 +1,8 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFile as readFile} from './group6b-w16015-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+
 import { isAllowedHttpOfficialPage } from '../beta/manufacturer-hosts.mjs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeW13005Product } from './w13005-ds8s-history.mjs';

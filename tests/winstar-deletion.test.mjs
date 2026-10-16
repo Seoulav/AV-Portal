@@ -1,3 +1,5 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW16004Uploads } from './w16004-history.mjs';
@@ -29,7 +31,7 @@ import test from 'node:test';
 import { beforeW024Raw } from './mpf-images-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import {existsSync, readdirSync} from 'node:fs';
 import { uploadedDocumentsFor } from '../beta/site/detail/pdf-documents.mjs';
 import { beforeSamsungW04011Raw } from './samsung-w04011-history.mjs';
 import { beforeBssAlignmentRaw } from './bss-alignment-history.mjs';

@@ -1,6 +1,8 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+
 import { beforeW12002Product, beforeW12002Raw, w12002Slugs } from './w12002-wording-history.mjs';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
 import { beforeW12005Product, beforeW12005Raw } from './w12005-history.mjs';
