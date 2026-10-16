@@ -1,7 +1,7 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
-import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-010-layer-plan';
+import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261016-010-aquilon-layer-plan';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
 import { adaptRtcomDetail } from '../../beta/site/shared/rtcom-adapter.mjs';
@@ -25,6 +25,71 @@ const statusClass = status => ({
   'REVIEW REQUIRED': 'state-review', CONFLICTED: 'state-conflict'
 })[status] ?? 'state-review';
 const badge = status => element('span', 'state ' + statusClass(status), status);
+function renderAquilonLayerPlan(plan, currentSlug) {
+  const section = element('section', 'aquilon-layer-plan');
+  section.setAttribute('aria-labelledby', 'aquilon-layer-title');
+  section.append(element('h2', '', plan.title));
+  section.append(element('p', 'aquilon-layer-intro', '레이어 최대 수량은 모델별 상한입니다. 실제로 배치할 수 있는 수는 출력 링크 용량과 화면 구성에 따라 달라집니다.'));
+  const current = plan.models.find(row => row.slug === currentSlug);
+  const metrics = element('div', 'aquilon-layer-metrics');
+  for (const [label, value] of [
+    ['4K 믹싱 레이어 최대', `${current.mixingLayers4k}개`],
+    ['2K/DL 분할 레이어 최대', `${current.splitLayers2k}개`],
+    ['4K60 프로그램 출력 최대', `${current.programOutputs4k}개`],
+    ['출력별 배경 레이어', '1개']
+  ]) {
+    const card = element('div', 'aquilon-layer-metric');
+    card.append(element('small', '', label), element('strong', '', value));
+    metrics.append(card);
+  }
+  section.append(metrics);
+  const diagram = element('div', 'aquilon-layer-diagram');
+  diagram.setAttribute('role', 'img');
+  diagram.setAttribute('aria-label', '입력·정지 화면 등 소스가 Aquilon 레이어 풀을 거쳐 2 곱하기 2 4K 화면으로 출력되는 예시');
+  const sources = element('div', 'aquilon-layer-node aquilon-layer-sources');
+  sources.append(element('strong', '', '레이어 소스'));
+  for (const source of plan.sourceTypes) sources.append(element('span', '', source));
+  const pool = element('div', 'aquilon-layer-node aquilon-layer-pool');
+  pool.append(element('strong', '', 'Aquilon 레이어 풀'), element('span', '', `${current.mixingLayers4k}개 4K 믹싱 레이어 최대`), element('span', '', `${current.splitLayers2k}개 2K/DL 분할 레이어 최대`));
+  const output = element('div', 'aquilon-layer-node aquilon-layer-output');
+  output.append(element('strong', '', '2×2 4K 화면'), element('span', '', '화면에 출력 연결된 4개 출력 링크'));
+  diagram.append(sources, element('span', 'aquilon-layer-arrow', '→'), pool, element('span', 'aquilon-layer-arrow', '→'), output);
+  section.append(diagram);
+  const example = plan.example;
+  const calculation = element('div', 'aquilon-layer-callout');
+  calculation.append(element('h3', '', example.title));
+  calculation.append(element('p', '', `4K60 출력 링크 1개는 용량 ${example.outputCapacity}를 사용합니다. ${example.outputs}개 출력 링크는 총 ${example.outputLinks} 용량 링크입니다. 한 레이어를 4개보다 많은 출력 링크에 펼치면 추가 레이어 링크가 필요하므로, 이 예시에서는 레이어 용량 ${example.layerCapacity} 기준 레이어 링크 ${example.layerLinks}개를 사용합니다.`));
+  calculation.append(element('small', '', '근거: Aquilon User Manual v6.2, 61쪽(4K60 용량), 66쪽(용량 링크), 68–69쪽(4개 초과 출력 링크에 걸친 레이어).'));
+  section.append(calculation);
+  const comparison = element('div', 'aquilon-layer-comparison');
+  comparison.append(element('h3', '', '같은 2×2 화면 예시 · XDM-WOS100 비교'));
+  comparison.append(element('p', '', `Aquilon은 위 매뉴얼 규칙으로 레이어 링크를 계산합니다. RTCOM XDM-WOS100은 출력 4개에 4K 레이어를 출력당 최대 ${plan.xdmComparison.xdmWos100.layers4kPerOutput}개 배치하는 구성 예이며, 레이어 사용 시 네 출력이 같은 화면을 공유합니다. 두 장비의 수치는 각각의 구성 방식에 따른 정보입니다.`));
+  section.append(comparison);
+  const wrap = element('div', 'pg-table aquilon-layer-table-wrap');
+  wrap.setAttribute('role', 'region');
+  wrap.setAttribute('aria-label', 'Aquilon RS 모델별 레이어·출력 비교표');
+  wrap.tabIndex = 0;
+  const table = element('table');
+  const columns = ['모델', '4K 입력', '4K 출력 단자', '4K60 프로그램 출력', '4K 믹싱 레이어 최대', '2K/DL 분할 레이어 최대', 'VPU'];
+  const head = element('thead');
+  const header = element('tr');
+  for (const label of columns) { const cell = element('th', '', label); cell.scope = 'col'; header.append(cell); }
+  head.append(header); table.append(head);
+  const body = element('tbody');
+  for (const rowData of plan.models) {
+    const row = element('tr', rowData.slug === currentSlug ? 'aquilon-layer-current' : '');
+    if (rowData.slug === currentSlug) row.setAttribute('aria-current', 'true');
+    row.append(element('th', '', rowData.model));
+    for (const value of [rowData.inputs4k, rowData.outputConnectors4k, rowData.programOutputs4k, rowData.mixingLayers4k, rowData.splitLayers2k, rowData.vpus]) row.append(element('td', '', value));
+    body.append(row);
+  }
+  table.append(body); wrap.append(table); section.append(wrap);
+  const notes = element('ul', 'aquilon-layer-notes');
+  for (const note of plan.notes) notes.append(element('li', '', note));
+  section.append(notes);
+  section.append(element('small', 'aquilon-layer-sources-note', `수량 근거: 공식 브로슈어 ${plan.evidence.brochurePage}쪽. 계산 규칙: Aquilon User Manual v6.2 ${plan.evidence.manualPages.join(', ')}쪽.`));
+  return section;
+}
 function safeLink(url, label, className = '', allowedHttpHost = '') {
   const parsed = new URL(url);
   const vsEntPage = productKey === 'ds-8s' && parsed.href === 'http://www.vsent.co.kr/bbs/board.php?bo_table=c4&wr_id=14';
@@ -152,7 +217,7 @@ if (!productKey && !allowContentFallback) {
     if (manifestResponse.ok) documentManifest = await manifestResponse.json();
   } catch { /* External document links remain available. */ }
   const pdfViewer = createPdfViewer();
-  const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest);
+  const uploadedDocuments = uploadedDocumentsFor(productKey, documentManifest, data.quickDocuments.map(item => item.resource?.file).filter(Boolean));
   const linkedDocuments = [
     ...data.quickDocuments.filter(item => item.available).map(item => ({ ...item.resource, label: item.label })),
     ...data.additionalDocuments.filter(goodDocument).map(item => ({ ...item, label: item.type }))
@@ -553,7 +618,13 @@ if (!productKey && !allowContentFallback) {
   }
   renderSpecs();
   $('#spec-toggle').addEventListener('click', () => renderSpecs($('#spec-toggle').getAttribute('aria-expanded') !== 'true'));
-  const layerComparison = layerComparisonFor(productKey);
+  if (enhancements.layerPlan) {
+    const layerCard = renderAquilonLayerPlan(enhancements.layerPlan, productKey);
+    layerCard.id = 'aquilon-layer-card';
+    layerCard.dataset.supplemental = '';
+    $('.supplemental-cards').prepend(layerCard);
+  }
+  const layerComparison = enhancements.layerPlan ? null : layerComparisonFor(productKey);
   if (layerComparison) {
     const section = element('div', 'layer-comparison');
     section.append(element('h3', '', `${layerComparison.manufacturer} ${layerComparison.title}`));
@@ -607,6 +678,7 @@ if (!productKey && !allowContentFallback) {
   }
 
   const visible = new Set(visibleDetailCards(data));
+  if (enhancements.layerPlan) visible.add('aquilon-layer-card');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);

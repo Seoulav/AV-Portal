@@ -38,6 +38,7 @@ import {withoutW13008Uploads} from './w13008-surgex-history.mjs';
 import {withoutW13010Uploads} from './w13010-yamaha-history.mjs';
 import {withoutXdmCommandGuideUpload} from './xdm-command-guide-history.mjs';
 import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
+import { beforeW010AquilonUploads } from './w20261016-010-aquilon-history.mjs';
 
 const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
@@ -45,7 +46,7 @@ const bytes=path=>readFileSync(new URL(path,root));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const evidence=read('Work/기록/W-20261003-011-evidence.json');
 const manifest=read('beta/site/docs/manifest.json');
-const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
+const uploadsBeforeNewDocs =beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW009Uploads(beforeW20261016_003Uploads(beforeW16004Uploads(beforeW010AquilonUploads(manifest.uploads)))))));
 const historicalUploads=beforeW04021Uploads(
   beforeWinstarW04016Uploads(
     withoutW029Uploads(

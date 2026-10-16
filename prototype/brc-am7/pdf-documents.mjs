@@ -14,6 +14,10 @@ function trustedRtcomPdf(url) {
 }
 
 export function resolveDocumentAction(document, manifest) {
+  if (typeof document?.file === 'string' && /^manuals\/[a-z0-9-]+\.pdf$/.test(document.file)) {
+    const upload = (manifest?.uploads ?? []).find(entry => entry.file === document.file && typeof entry.slug === 'string');
+    if (upload) return { kind: 'local', file: `../${upload.file}`, sourceUrl: `../${upload.file}`, ...(upload.locked === true ? { locked: true } : {}) };
+  }
   if (!document?.url) return null;
   const copy = (manifest?.mirrors ?? []).find(entry => entry.url === document.url && validName(entry.file));
   if (copy) return { kind: 'local', file: `../../beta/site/docs/${copy.file}`, sourceUrl: document.url };
@@ -21,9 +25,10 @@ export function resolveDocumentAction(document, manifest) {
   return { kind: 'external', url: document.url };
 }
 
-export function uploadedDocumentsFor(slug, manifest) {
+export function uploadedDocumentsFor(slug, manifest, excludedFiles = []) {
+  const excluded = new Set(excludedFiles);
   return (manifest?.uploads ?? [])
-    .filter(entry => entry.slug === slug && /^manuals\/[a-z0-9-]+\.pdf$/.test(entry.file))
+    .filter(entry => entry.slug === slug && !excluded.has(entry.file) && /^manuals\/[a-z0-9-]+\.pdf$/.test(entry.file))
     .map(entry => {
       const file = `../${entry.file}`;
       return {

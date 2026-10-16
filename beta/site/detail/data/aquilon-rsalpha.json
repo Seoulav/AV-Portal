@@ -97,11 +97,13 @@
       "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Technical+Datasheet/Aquilon-RS-alpha-datasheet-en-20260703.pdf"
     },
     {
-      "type": "Technical Document",
-      "status": "MISSING",
-      "title": "Technical Document 미확인",
-      "language": "언어 미확인",
-      "note": ""
+      "type": "Brochure",
+      "status": "FOUND",
+      "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+      "language": "en",
+      "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+      "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+      "quickSlot": "technical"
     },
     {
       "type": "Official Product Page",
@@ -358,6 +360,12 @@
       "name": "제조사 제품 이미지",
       "url": "https://www.analogway.com/products/aquilon-rs-alpha",
       "scope": "제품별 전면·후면 사진"
+    },
+    {
+      "code": "BR",
+      "name": "사용자 제공 Analog Way 공식 브로슈어",
+      "url": "https://www.analogway.com/aquilon-presentation-systems",
+      "scope": "Aquilon RS 모델별 최대 레이어·입력·출력 수량(7쪽)"
     }
   ],
   "issues": [],
@@ -461,5 +469,139 @@
         "side": "bottom"
       }
     ]
+  },
+  "layerPlan": {
+    "type": "aquilon",
+    "title": "Aquilon RS 레이어 구성",
+    "currentSlug": "aquilon-rsalpha",
+    "models": [
+      {
+        "slug": "aquilon-rsalpha",
+        "model": "Aquilon RS alpha",
+        "inputs4k": 8,
+        "outputConnectors4k": 4,
+        "programOutputs4k": 4,
+        "mixingLayers4k": 4,
+        "splitLayers2k": 8,
+        "vpus": 1
+      },
+      {
+        "slug": "aquilon-rs1",
+        "model": "Aquilon RS1",
+        "inputs4k": 16,
+        "outputConnectors4k": 8,
+        "programOutputs4k": 4,
+        "mixingLayers4k": 4,
+        "splitLayers2k": 8,
+        "vpus": 1
+      },
+      {
+        "slug": "aquilon-rs2",
+        "model": "Aquilon RS2",
+        "inputs4k": 16,
+        "outputConnectors4k": 12,
+        "programOutputs4k": 8,
+        "mixingLayers4k": 8,
+        "splitLayers2k": 16,
+        "vpus": 2
+      },
+      {
+        "slug": "aquilon-rs3",
+        "model": "Aquilon RS3",
+        "inputs4k": 24,
+        "outputConnectors4k": 12,
+        "programOutputs4k": 8,
+        "mixingLayers4k": 8,
+        "splitLayers2k": 16,
+        "vpus": 2
+      },
+      {
+        "slug": "aquilon-rs4",
+        "model": "Aquilon RS4",
+        "inputs4k": 24,
+        "outputConnectors4k": 16,
+        "programOutputs4k": 12,
+        "mixingLayers4k": 12,
+        "splitLayers2k": 24,
+        "vpus": 3
+      },
+      {
+        "slug": "aquilon-rs5",
+        "model": "Aquilon RS5",
+        "inputs4k": 32,
+        "outputConnectors4k": 16,
+        "programOutputs4k": 12,
+        "mixingLayers4k": 12,
+        "splitLayers2k": 24,
+        "vpus": 3
+      },
+      {
+        "slug": "aquilon-rs6",
+        "model": "Aquilon RS6",
+        "inputs4k": 32,
+        "outputConnectors4k": 20,
+        "programOutputs4k": 16,
+        "mixingLayers4k": 16,
+        "splitLayers2k": 32,
+        "vpus": 4
+      }
+    ],
+    "sourceTypes": [
+      "라이브 입력",
+      "정지 화면·이미지",
+      "배경",
+      "시계·타이머",
+      "다른 화면(조건별)"
+    ],
+    "example": {
+      "title": "계산 예시 · 2×2 4K60 화면",
+      "outputs": 4,
+      "outputCapacity": 2,
+      "outputLinks": 8,
+      "layerCapacity": 2,
+      "layerLinkWidth": 4,
+      "layerLinks": 2
+    },
+    "background": {
+      "setsPerScreen": 8,
+      "noLayerScreenResources": 0
+    },
+    "xdmComparison": {
+      "xdmWos100": {
+        "cardCount": 1,
+        "outputPorts": 4,
+        "layers4kPerOutput": 4,
+        "allPortsSameScreenWithLayers": true
+      }
+    },
+    "notes": [
+      "브로슈어의 레이어 수량은 모델 최대값입니다. 실제 동시 사용 수는 화면 배치와 레이어 용량에 따라 달라집니다.",
+      "매뉴얼은 여러 출력 링크에 펼친 레이어가 4개 초과 출력 링크를 사용하면 추가 레이어 링크가 필요하다고 설명합니다(68–69쪽).",
+      "Region Captive PiP는 자원 최적화 기능으로 소개되지만, 절감량·산식은 공용 매뉴얼 v6.2에서 확인되지 않았습니다.",
+      "배경 전용 Screen은 처리 자원을 사용하지 않으며, Screen마다 Background Set 최대 8개를 지원합니다(66·86·100쪽).",
+      "화면 소스는 Aux Screen 및 Split layer 조건에서 사용할 수 있고, Background는 Screen Background layer로 사용합니다(63–64쪽).",
+      "출력 복제(clone)는 같은 신호를 내보내며 처리 자원을 사용하지 않는 별도 기능입니다(82쪽). 이 표의 화면 출력 배치와 혼동하지 마십시오."
+    ],
+    "evidence": {
+      "manualPages": [
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        69,
+        71,
+        82,
+        83,
+        84,
+        85,
+        86,
+        100
+      ],
+      "brochurePage": 7,
+      "rtcomSource": "RTCOM 구성기 XDM 창 및 beta/site/rtcom/raw/products/xdm.json"
+    }
   }
 }

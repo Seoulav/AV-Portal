@@ -152,6 +152,30 @@ function validComparison(comparison) {
     texts(comparison.columns) && comparison.columns.length > 1 && Array.isArray(comparison.rows) && comparison.rows.length > 0 &&
     comparison.rows.every(row => texts(row) && row.length === comparison.columns.length);
 }
+export function validLayerPlan(plan, product) {
+  if (!record(plan) || !keys(plan, ['type', 'title', 'currentSlug', 'models', 'sourceTypes', 'example', 'background', 'xdmComparison', 'notes', 'evidence']) ||
+      plan.type !== 'aquilon' || !shortText(plan.title) || !identifier(plan.currentSlug)) return false;
+  const model = row => record(row) && keys(row, ['slug', 'model', 'inputs4k', 'outputConnectors4k', 'programOutputs4k', 'mixingLayers4k', 'splitLayers2k', 'vpus']) &&
+    identifier(row.slug) && shortText(row.model) && ['inputs4k', 'outputConnectors4k', 'programOutputs4k', 'mixingLayers4k', 'splitLayers2k', 'vpus'].every(key => Number.isInteger(row[key]) && row[key] > 0) &&
+    row.splitLayers2k === row.mixingLayers4k * 2;
+  const example = plan.example, background = plan.background, comparison = plan.xdmComparison, evidence = plan.evidence;
+  if (!list(plan.models, 7, model, 7) || new Set(plan.models.map(row => row.slug)).size !== 7) return false;
+  const current = plan.models.find(row => row.slug === plan.currentSlug);
+  if (!current || current.model !== product.model) return false;
+  if (!texts(plan.sourceTypes) || plan.sourceTypes.length < 3 || !record(example) ||
+      !keys(example, ['title', 'outputs', 'outputCapacity', 'outputLinks', 'layerCapacity', 'layerLinkWidth', 'layerLinks']) ||
+      !shortText(example.title) || !Number.isInteger(example.outputs) || example.outputs !== 4 || example.outputCapacity !== 2 ||
+      example.outputLinks !== example.outputs * example.outputCapacity || example.layerCapacity !== 2 || example.layerLinkWidth !== 4 ||
+      example.layerLinks !== Math.ceil(example.outputLinks / example.layerLinkWidth)) return false;
+  if (!record(background) || !keys(background, ['setsPerScreen', 'noLayerScreenResources']) || background.setsPerScreen !== 8 || background.noLayerScreenResources !== 0) return false;
+  if (!record(comparison) || !keys(comparison, ['xdmWos100']) || !record(comparison.xdmWos100) ||
+      !keys(comparison.xdmWos100, ['cardCount', 'outputPorts', 'layers4kPerOutput', 'allPortsSameScreenWithLayers']) ||
+      comparison.xdmWos100.cardCount !== 1 || comparison.xdmWos100.outputPorts !== 4 || comparison.xdmWos100.layers4kPerOutput !== 4 || comparison.xdmWos100.allPortsSameScreenWithLayers !== true) return false;
+  if (!list(plan.notes, 12, shortText, 4) || !record(evidence) || !keys(evidence, ['manualPages', 'brochurePage', 'rtcomSource']) ||
+      !list(evidence.manualPages, 16, page => Number.isInteger(page) && page > 0, 8) || !evidence.manualPages.includes(68) || !evidence.manualPages.includes(69) ||
+      evidence.brochurePage !== 7 || !shortText(evidence.rtcomSource)) return false;
+  return true;
+}
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
   if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items', 'comparison']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string')) && (s.comparison === undefined || validComparison(s.comparison));
@@ -168,6 +192,7 @@ function validity(product) {
       product.portMaps.every(map => validMap(map, product)) &&
       JSON.stringify(product.portMap) === JSON.stringify(product.portMaps[0]),
     signalFlow: validFlow(product.signalFlow, product),
+    layerPlan: validLayerPlan(product.layerPlan, product),
     settings: Array.isArray(product.settings) && product.settings.length <= 2 && product.settings.every(validSetting)
   };
 }
@@ -183,6 +208,7 @@ export function prepareEnhancements(product) {
     portMap: valid.portMap ? product.portMap : null,
     portMaps: valid.portMaps ? product.portMaps : [],
     signalFlow: valid.signalFlow ? product.signalFlow : null,
+    layerPlan: valid.layerPlan ? product.layerPlan : null,
     settings: valid.settings ? product.settings : []
   };
 }
