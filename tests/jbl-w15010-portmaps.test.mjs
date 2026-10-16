@@ -1,7 +1,9 @@
+// W-015 group6b: compare this historical task with the approved later layout rewound.
+import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 ﻿import {beforeJblW15010Product,jblW15010Slugs} from './jbl-w15010-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+
 
 const get = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url)));
 const visible = ['control-23-1','control-25-1','control-28-1'];

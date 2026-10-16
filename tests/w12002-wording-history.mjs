@@ -1,5 +1,6 @@
-﻿import { readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
+import { beforeW16015SamsungHotelPlacementProduct, beforeW16015SamsungHotelPlacementRaw } from './w16015-samsung-hotel-placement-history.mjs';
 import { beforeW13007HotelProduct, beforeW13007HotelRaw } from './w13007-hotel-history.mjs';
 import { beforeW13007WmfProduct, beforeW13007WmfRaw } from './w13007-wmf-history.mjs';
 import { beforeW13007BehhlGuideProduct, beforeW13007BehhlGuideRaw } from './w13007-behhl-guide-history.mjs';
@@ -27,7 +28,8 @@ export function beforeW12002Path(path,current){
   return match?beforeW12002Product(current,match[1]):current;
 }
 
-export function beforeW12002Product(current,slug,{w011Undone=false}={}){
+export function beforeW12002Product(current,slug,{w011Undone=false,w015PlacementUndone=false}={}){
+  if(!w015PlacementUndone)current=beforeW16015SamsungHotelPlacementProduct(current,slug);
   current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   if(!w011Undone)current=beforeW20261015_011Product(current,slug);
   current=beforeW20261015_008Product(current,slug);
@@ -61,6 +63,7 @@ export function beforeW12002Product(current,slug,{w011Undone=false}={}){
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW16015SamsungHotelPlacementRaw(raw,slug);
   raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
   raw=beforeW20261015_011Raw(raw,slug);
   raw=beforeW20261015_008Raw(raw,slug);
@@ -73,7 +76,7 @@ export function beforeW12002Raw(raw,slug){
   raw=beforeAverW12009Raw(raw,slug);
   if(!fixture[slug])return raw;
   if(slug==='ki-pro-go2' && JSON.parse(raw).portMap?.items?.length===11)raw=beforeW12003Raw(raw,slug);
-  beforeW12002Product(JSON.parse(raw),slug,{w011Undone:true});
+  beforeW12002Product(JSON.parse(raw),slug,{w011Undone:true,w015PlacementUndone:true});
   // Historical byte hashes include hand-formatted JSON. Replace only the
   // approved value literals so their original whitespace stays observable.
   let restored=raw;
