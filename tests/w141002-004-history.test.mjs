@@ -7,6 +7,7 @@ import {beforeW20261015_002EpsonProduct,beforeW20261015_002EpsonRaw} from './w20
 import {beforeW20261015_007Product,beforeW20261015_007Raw} from './w20261015-007-history.mjs';
 import {portMapGeometry} from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import {beforeW15012Product,beforeW15012Raw} from './w15012-black-background-history.mjs';
+import {beforeW16009Product,beforeW16009Raw} from './w16009-history.mjs';
 
 const fixture=JSON.parse(readFileSync(new URL('./fixtures/w141002-004-history.json',import.meta.url),'utf8'));
 const sha=value=>createHash('sha256').update(value).digest('hex');
@@ -15,9 +16,9 @@ const digits=value=>[...JSON.stringify(value).matchAll(/\d+(?:[.,/]\d+)*/g)].map
 test('approved wording and Port Map changes selectively rewind to exact prior JSON',()=>{
   for(const [slug,record] of Object.entries(fixture)){
     const raw=readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8');
-    const product=JSON.parse(raw);
+    const product=beforeW16009Product(JSON.parse(raw),slug);
     const restored=beforeW141002004Product(beforeW20261015_002EpsonProduct(beforeW20261015_007Product(beforeW15012Product(product,slug),slug),slug),slug);
-    assert.equal(sha(beforeW141002004Raw(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(beforeW15012Raw(raw,slug),slug),slug),slug)),record.priorRawSha256,slug);
+    assert.equal(sha(beforeW141002004Raw(beforeW20261015_002EpsonRaw(beforeW20261015_007Raw(beforeW15012Raw(beforeW16009Raw(raw,slug),slug),slug),slug),slug)),record.priorRawSha256,slug);
     assert.deepEqual(beforeW141002004Product(restored,slug),restored,slug);
     for(const field of Object.keys(record.fields)){
       if(field==='portMap')continue;
@@ -32,7 +33,7 @@ test('approved wording and Port Map changes selectively rewind to exact prior JS
 
 test('X100 Pro board ranges and Panasonic numbers render outside their source images',()=>{
   for(const slug of ['x100pro-2u','x100pro-4u','x100pro-7u','pt-mz11k','pt-mz14k','pt-mz17k']){
-    const product=JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8'));
+    const product=beforeW16009Product(JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`,import.meta.url),'utf8')),slug);
     const map=product.portMap;
     const {width,height}=map.measuredImage;
     const geometry=portMapGeometry(map,width,height);
