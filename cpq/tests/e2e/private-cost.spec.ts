@@ -134,10 +134,11 @@ test('문서 교체 — 작업 파일을 다시 열면(같은 내용이라도 �
     buffer: Buffer.from(savedText),
   });
   await expect(page.getByRole('alert').filter({ hasText: '계산 기준이 바뀌었습니다' })).toHaveCount(0);
-  await expect(page.locator('.q-quote-table tbody tr', { hasText: '합성 테스트 품목' })).toBeVisible();
+  await expect(page.locator('.q-quote-table tbody tr', { hasText: '합성 테스트 품목' }).first()).toBeVisible();
 
   await expect(page.getByRole('status').filter({ hasText: '인식됨' })).toHaveCount(0);
   await expect(page.getByText('cost-a.csv')).toHaveCount(0);
+  await expect(page.locator('.q-quote-table tbody tr', { hasText: '합성 테스트 품목' })).toHaveCount(1);
 });
 
 test('격리 — 원가 파일을 연결한 채로 작업 파일을 저장해도 원가 값이나 파일명이 들어가지 않는다', async ({ page }) => {
