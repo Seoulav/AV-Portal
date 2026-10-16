@@ -163,6 +163,7 @@ function importCategory(warning: ImportWarning): ReviewCategory {
     case 'cable-route-incomplete':
     case 'cable-length-missing':
     case 'cable-length-exceeded':
+    case 'cable-length-assumed':
       return 'installation';
     case 'misc-classification-missing':
     case 'misc-basis-review-required':

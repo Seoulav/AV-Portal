@@ -49,6 +49,11 @@ export type ImportWarningCode =
   /** 제품 연결만으로 해소할 수 없는 완제품 길이 한계. */
   | 'cable-length-exceeded'
   /**
+   * 거리를 입력하지 않은 구간에 기본 케이블 길이를 썼다(운영자 결정
+   * 2026-10-16). 차단하지 않는다 — 사람이 거리를 넣으면 다시 계산된다.
+   */
+  | 'cable-length-assumed'
+  /**
    * 구간 경로 입력(`RouteInput`)을 **시작은 했지만** 아직 완성되지
    * 않았거나 형식이 틀렸다 — `cable-length-missing`(입력 자체가
    * 없음)과 다르다. 이 상태에서는 구성도 원본 길이(`bomRows[].length`)로
@@ -134,6 +139,8 @@ export interface DeviceLine {
   isAccessory: boolean;
   /** 합쳐진 노드 전부. 나중에 되돌릴 수 있게 남긴다. */
   sourceNodeIds: string[];
+  /** 케이블에서 파생된 행(전용 커넥터)의 재산출 짝짓기 식별자. */
+  sourceCableMembers?: readonly string[];
   /** 옵션 카드 행에만 있다 — `optionByKey`의 병합 키와 같다. */
   optionId?: string;
   /** 어떻게 붙었는지. 사람이 검토할 근거. */
