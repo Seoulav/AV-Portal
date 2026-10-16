@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW16004Uploads } from './w16004-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
@@ -39,7 +40,7 @@ import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
 const root = new URL('../', import.meta.url);
 const read = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const sha = value => createHash('sha256').update(value).digest('hex');
-const manifest = read('beta/site/docs/manifest.json');
+const manifest = beforeW008Manifest(read('beta/site/docs/manifest.json'));
 const removed = {
   'winstar-qhc-standalone-spec-ko.pdf': ['lh43qhcebgcxkr', 'lh75qhcebgcxkr'],
   'winstar-qmc-standalone-spec-ko.pdf': ['lh43qmcebgcxkr', 'lh85qmcebgcxkr'],
@@ -71,7 +72,7 @@ test('all six affected products retain Samsung documents and no Winstar viewer l
 
 test('all 242 published product JSON files and their source records remain fixed', () => {
   const directory = new URL('beta/site/detail/data/', root);
-  const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
+  const names = readdirSync(directory).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   assert.equal(names.length, 242);
   const digest = createHash('sha256');
   for (const name of names) digest.update(name).update('\0').update(beforeW024Raw(beforeSamsungW04011Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, directory), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));

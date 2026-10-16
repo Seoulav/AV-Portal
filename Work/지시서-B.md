@@ -525,7 +525,10 @@
 - 승인: Belkin Connect Air 등록·시그널 플로우·AirMedia 비교 장점 정리. 카테고리 `화상회의 / Conferencing / Wireless Presentation` 사용자 승인(2026-10-16). 1단계 기존 한글값 유지, 검증기는 대상 slug 한정 허용.
 - 범위 제외: Crestron 등록, 가격·판매처, `builder/`, `cpq/`, 다른 제조사 제품 변경.
 - 체크리스트:
-  - [ ] 한국 공식 제품 정보·공식 글로벌 보충 자료 대조 및 비교 근거표 작성
-  - [ ] Belkin 제조사·Connect Air 카탈로그/상세/공식 사진·Port Map·시그널 플로우 등록
-  - [ ] 공개 파생물 재생성, 전체 테스트·검사 및 모바일 Port Map 선 미리보기 확인
+  - [x] 한국 공식 제품 정보·공식 글로벌 보충 자료 대조 및 비교 근거표 작성
+  - [x] Belkin 제조사·Connect Air 카탈로그/상세/공식 사진·Port Map·시그널 플로우 등록
+  - [x] 공개 파생물 재생성, 전체 테스트·검사 및 모바일 Port Map 선 미리보기 확인
   - [ ] Work 인계서 작성, PR·CI·병합 순서 확인·배포·공개 점검
+
+- Full suite: 753 tests, 752 passed, 0 failed, 1 skipped.
+- Derived outputs regenerated; `--check`, `verify-pages`, and 390px Port Map preview passed. Non-Belkin PDF/manifest mirror changes: 0.

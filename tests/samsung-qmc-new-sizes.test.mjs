@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW16004Uploads } from './w16004-history.mjs';
 import { beforeW20261014_005Catalog, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
@@ -30,7 +31,7 @@ const old = new Map([
 ]);
 
 test('QM50C and QM75C have their own specifications and a validated eleven-port manual map', () => {
-  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW009Catalog(json('beta/site/catalog.json'))));
+  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW009Catalog(beforeW008Catalog(json('beta/site/catalog.json')))));
   const expected = [
     [50, '10', '0.285x0.285', '1124.1 x 644.8 x 28.5', '11.8'],
     [75, '8', '0.429x0.429', '1682.3 x 960.4 x 28.5', '33.4'],

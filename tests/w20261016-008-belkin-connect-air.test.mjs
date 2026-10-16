@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, beforeW008Snapshot } from './w20261016-008-history.mjs';
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -40,4 +41,24 @@ test('Belkin Connect Air is registered in the approved conferencing presentation
   assert.equal(detail.portMap.items.length, 3);
   assert.match(detail.portMap.note, /케이블 일체형 플러그/);
   assert.deepEqual(detail.portMap.items.map(item => item.label).sort(), ['HDMI OUT', 'USB-A POWER', 'USB-C IN'].sort());
+});
+
+test('W-008 historical inverse removes only the Belkin catalog, mirror, and snapshot addition', async () => {
+  const catalog = await json('../beta/site/catalog.json');
+  const priorCatalog = beforeW008Catalog(catalog);
+  assert.equal(catalog.length, priorCatalog.length + 1);
+  assert.ok(catalog.some(item => item.slug === 'belkin-connect-air'));
+  assert.deepEqual(catalog.filter(item => item.slug !== 'belkin-connect-air'), priorCatalog);
+
+  const manifest = await json('../beta/site/docs/manifest.json');
+  const priorManifest = beforeW008Manifest(manifest);
+  assert.equal(manifest.mirrors.length, priorManifest.mirrors.length + 1);
+  assert.deepEqual(manifest.uploads, priorManifest.uploads);
+  assert.deepEqual(manifest.mirrors.filter(item => item.file !== 'belkin-connect-air-specification-2650a8f7c667.pdf'), priorManifest.mirrors);
+
+  const snapshot = await json('../beta/public-snapshot.json');
+  const priorSnapshot = beforeW008Snapshot(snapshot);
+  assert.equal(snapshot.catalog.count, priorSnapshot.catalog.count + 1);
+  assert.equal(Object.keys(snapshot.details).length, Object.keys(priorSnapshot.details).length + 1);
+  assert.equal(Object.hasOwn(priorSnapshot.details, 'belkin-connect-air'), false);
 });

@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { isW009DetailFile } from './w009-history.mjs';
@@ -100,7 +101,7 @@ test('frequency ranges, remaining review rows and fields outside specifications/
 test('every other product detail JSON retains its pre-change Git LF bytes',()=>{
   const dir=new URL('beta/site/detail/data/',root);
   const hash=createHash('sha256');
-  for(const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!isW009DetailFile(name)&&name!==`${evidence.slug}.json`).sort()){
+  for(const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json'&&!isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name)&&!isW009DetailFile(name)&&name!==`${evidence.slug}.json`).sort()){
     const slug=name.slice(0,-5);
     const raw=beforeBssW04004Raw(beforeDisplayW04013Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name,dir),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug);
     const historical=['lh55wmfwbgcxkr','lh75wmfwlgcxkr'].includes(slug)||amxW03008Slug(slug)||crownW03009Slug(slug)||jblW03010Slug(slug)||bssW03011Slug(slug)||harmanW03014Slug(slug)||shureW04003Slug(slug)
