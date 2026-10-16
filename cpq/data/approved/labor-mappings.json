@@ -720,8 +720,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 사용자 확인: 앱 계산(표준품셈)이 맞고 회의실 견적 샘플 값은 예외(2-3·3-3 샘플만 약 0.1배)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0092",
@@ -2770,8 +2770,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 사용자 확인: 앱 계산(표준품셈)이 맞고 회의실 견적 샘플 값은 예외(샘플 노무비가 앱 계산의 약 0.2배)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0074",
@@ -4270,8 +4270,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 사용자 확인: 앱 계산(표준품셈)이 맞고 회의실 견적 샘플 값은 예외(샘플 노무비가 앱 계산의 2배)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0309",
@@ -7800,8 +7800,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 사용자 확인: 앱 계산(표준품셈)이 맞고 회의실 견적 샘플 값은 예외(샘플 노무비가 앱보다 약 0.4% 낮음)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0039",

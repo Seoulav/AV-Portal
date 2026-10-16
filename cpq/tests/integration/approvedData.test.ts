@@ -157,8 +157,10 @@ describe('배포 데이터 — 불변식', () => {
     // 매핑은 정해진 근거 문구(날짜·일치 행 수·노임 판·작업 ID)만 쓴다 —
     // 금액·구매처가 들어갈 자리가 없다.
     const AUTO_NOTE = '표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다.';
+    // 두 번째 형식: 샘플과 달랐지만 사용자가 "앱 계산(표준품셈)이 맞다"고
+    // 확인한 매핑(2026-10-16). 괄호 안은 차이 비율 설명뿐 금액은 없다.
     const CONFIRM_NOTE =
-      /^\d{4}-\d{2}-\d{2} 회의실 견적 샘플 노무비 단가 일치\(\d+행, \d{2}년 [상하]반기 노임 기준\)로 확인 \(B-20261016-07\)\.$/;
+      /^\d{4}-\d{2}-\d{2} (회의실 견적 샘플 노무비 단가 일치\(\d+행, \d{2}년 [상하]반기 노임 기준\)로 확인|사용자 확인: 앱 계산\(표준품셈\)이 맞고 회의실 견적 샘플 값은 예외\([^()0-9,원]*(\d+(\.\d+)?(배|%)|\d-\d·\d-\d)[^()]*\)로 확인) \(B-20261016-07\)\.$/;
     const mappings = laborMappingsFileSchema.parse(raw['labor-mappings.json']).mappings;
     for (const m of mappings) {
       if (m.confirmed) expect(m.note, m.laborMappingId).toMatch(CONFIRM_NOTE);
