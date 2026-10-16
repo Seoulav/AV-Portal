@@ -292,3 +292,18 @@
 - [x] 최신 `origin/main` `4daad18d98fc079ff8388ffa53b2247e42b7e223`를 통합하고 상세 생성 자산·검색 인덱스·공개 스냅샷을 재생성했다.
 - [x] 전체 테스트 803건 중 802 pass·0 fail·기존 skip 1. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages`(285 장비·282 상세·515 이미지·163 uploads)와 `git diff --check` 통과.
 - [ ] 수정본 커밋·push 및 새 CI 확인 후, 사용자가 승인한 자동 병합 절차에 따라 병합·배포·공개 확인 예정.
+
+## W-20261016-019 · Analog Way 화면·레이어 설계 가이드
+
+- 상태: REVIEW (기존 초안 PR #594에 계산·표시 결함 수정 중)
+- 명세·인계: `Work/작업/W-20261016-019.md`, `Work/기록/W-20261016-019-Codex-인계.md`, 기준 main `54d0693c`에서 확인.
+- 브랜치: `codex/W-20261016-019-aw-layer-guide` · 전용 워크트리 `codex-c-w019`.
+- 범위: Analog Way 프로세서 11종 전용 계산 가이드. 제품 JSON·공개 스냅샷·검색 인덱스 불변.
+- [x] Aquilon·Alta·Midra 규칙으로 입력 계산과 3개 예시를 검증하는 순수 계산 모듈·시험 구현. 포털 `layerPlan`·`videoLayerPlan` 및 I/O 행의 모델별 입력 수와 대조.
+- [x] 카드가 공용 보조 카드 가시성 필터에서 숨겨지는 문제와 2×2 예시의 출력 선택값 변환 오류를 고쳤다.
+- [x] prototype 원본과 생성 beta 자산을 동기화하고 검증기 파일 허용 목록을 갱신했다. 과거 스타일 검사에는 W-019 추가분만 되감는 함수를 연결했다.
+- [x] 11개 모델 상세에서 카드 표시·11개 모델 결과를 확인했다. 390px `scrollWidth=390`; 예시 3개, 키보드 행 추가·삭제 동작과 브라우저 오류 0 확인.
+- [x] 전체 직렬 테스트 821건(820 pass·0 fail·기존 skip 1), `verify-pages`(285 장비·282 상세·515 이미지·0 미리보기·163 사용자 PDF), 검색 인덱스 `--check`, `git diff --check` 통과.
+- [x] RS2 가이드 전용 1280px·390px 캡처를 `%TEMP%\w019-preview\guide-rs2-{1280,390}.png`에 저장. 세 대표 제품 전체 페이지 캡처도 같은 폴더에 보관.
+- [ ] PR #594가 기존 구현 초안이다. 현재 작업본은 해당 원격 브랜치와 통합 후 계산·표시 수정 및 새 전체 CI를 다시 확인해야 한다. PR 본문에 규칙별 공식 매뉴얼 원문과 쪽을 기록한다.
+- 근거 확인: Aquilon User Manual v6.2 66쪽 “Each VPU contains 8 source links and 8 outputs links.” 및 “4 mixer layers (or 4 pairs of split layers)”; 68쪽 “A Screen using more than 8 outputs uses another VPU.”; 69쪽 “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.”; Alta 4K User Manual 42쪽 “One Layer resource = one Mixing layer or one pair of Split layers allocated to a Screen.”; Zenith 100·200 데이터시트 각 6쪽 입력 상한 11·14; Midra 4K User Manual 42쪽 Mixer·Matrix·Blend 모드 규칙.

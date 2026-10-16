@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {beforeW20261015_001Product,beforeW20261015_001Raw} from './w20261015-001-history.mjs';
 import {beforeW20261015_003Product} from './w20261015-003-history.mjs';
 import {enhancementErrors} from '../beta/site/detail/detail-enhancements.mjs';
+import {beforeW20261016_019Styles} from './w20261016-019-history.mjs';
 
 const detailPath = new URL('../beta/site/detail/data/', import.meta.url);
 const read = slug => readFileSync(new URL(slug+'.json',detailPath),'utf8');
@@ -44,7 +45,7 @@ test('all pre-existing products still validate and view source matches the appro
     .replace("  if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);\n",'');
   assert.equal(sha(view),'1f512b14f80b04e862e56c9a1c729a1ac73a60ea0986ccb9b1402f538b843e3d');
   // W-20261016-013 changes only these loupe declarations; other CSS still hits the historical hash.
-  const css=beforeW20261016_001Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8')
+  const css=beforeW20261016_001Styles(beforeW20261016_019Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8'))
     .replace('.dialog-image-wrap { min-height: 120px;', '.dialog-image-wrap {')
     .replace('.image-loupe { background-repeat: no-repeat; background-color: #fff;', '.image-loupe {'))
     .replace(/\n\/\* W-20261016-010 Aquilon layer-plan card\. \*\/[\s\S]*?\/\* W-20261016-010 Aquilon layer-plan card end\. \*\/\n/,'\n')

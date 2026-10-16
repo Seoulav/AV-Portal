@@ -10,6 +10,7 @@ import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-
 import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
 import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
 import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
+import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261016-019';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -737,6 +738,10 @@ if (!productKey && !allowContentFallback) {
     layerCard.dataset.supplemental = '';
     $('.supplemental-cards').prepend(layerCard);
   }
+  if (data.manufacturer === 'Analog Way') {
+    const guide = renderAnalogWayLayerGuide(productKey);
+    if (guide) $('.supplemental-cards').prepend(guide);
+  }
   const layerComparison = (enhancements.layerPlan || enhancements.videoLayerPlan) ? null : layerComparisonFor(productKey);
   if (layerComparison) {
     const section = element('div', 'layer-comparison');
@@ -793,6 +798,7 @@ if (!productKey && !allowContentFallback) {
   const visible = new Set(visibleDetailCards(data));
   if (enhancements.layerPlan) visible.add('aquilon-layer-card');
   if (enhancements.videoLayerPlan) visible.add('video-layer-card');
+  if (data.manufacturer === 'Analog Way') visible.add('analogway-layer-guide');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);
