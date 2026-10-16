@@ -11,6 +11,7 @@ import { buildQuoteWorkbook } from '@/export/ooxml/workbook';
 import { TEMPLATE_PATH } from '@/export/ooxml/anchors';
 import { cat, diagram, node } from '../fixtures/diagram';
 import type { QuoteHeader } from '@/domain/quote/types';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 결정 D7 보강 — 견적을 만드는 입구가 둘이다.
@@ -184,7 +185,7 @@ describe('priceQuote — 노무비 연결을 빼먹을 수 없다', () => {
   const realCatalog = () =>
     buildCatalog(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8')),
-      JSON.parse(readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8')),
+      fakeApprovedPrices(),
     );
 
   it('품셈을 넘기면 노무비와 간접비가 들어간다', () => {
@@ -265,7 +266,7 @@ describe('품목 선택 → Excel 까지', () => {
   it('PC + 프로젝터 같은 간단한 견적이 Excel로 나온다', () => {
     const catalog = buildCatalog(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/products.json'), 'utf8')),
-      JSON.parse(readFileSync(resolve(ROOT, 'data/approved/prices.json'), 'utf8')),
+      fakeApprovedPrices(),
     );
     const labor = buildLaborReference(
       JSON.parse(readFileSync(resolve(ROOT, 'data/approved/labor-items.json'), 'utf8')),

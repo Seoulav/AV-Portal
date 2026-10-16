@@ -22,6 +22,7 @@ import {
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
 import { strFromU8, strToU8, unzipSync, zipSync } from 'fflate';
 import { scanCostLeak } from '../../tools/costLeakScan';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 /**
  * 실물 고객용 산출물에 원가가 섞였는지 (계획 2026-10-04 B2, Task 6).
@@ -58,7 +59,7 @@ function build(profile: IndirectProfileId): {
   result: GuideWorkbookResult;
   sellingValues: string[];
 } {
-  const catalog = buildCatalog(j('products.json'), j('prices.json'));
+  const catalog = buildCatalog(j('products.json'), fakeApprovedPrices());
   const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
   const rest = catalog.products
     .filter(

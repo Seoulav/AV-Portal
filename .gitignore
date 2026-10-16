@@ -32,3 +32,12 @@
 /.integration-*.log
 
 /.integration-audit.json
+
+# 가격표·원가·표준품셈 원본은 저장소에 넣지 않는다(B-20261016-06, LED 구성기 방식).
+# 원가는 견적 앱의 「가격표 불러오기」로 각자의 브라우저에만 저장한다(판매가는 회사 서버 이전 전까지 공개).
+*가격표*.xlsx
+*원가*.xlsx
+*.prices.xlsx
+*.prices.json
+prices.local.*
+*표준품셈*.xlsx
