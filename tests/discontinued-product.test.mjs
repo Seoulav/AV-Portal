@@ -1,3 +1,4 @@
+import {beforeW018Snapshot} from './w20261016-018-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, beforeW008Snapshot, isW008DetailFile } from './w20261016-008-history.mjs';
 import { isW20261014_007DetailFile } from './w20261014-007-history.mjs';
 import { beforeW20261014_005Catalog, beforeW20261014_005Snapshot, isW20261014_005DetailFile } from './w20261014-005-history.mjs';
@@ -5,7 +6,8 @@ import { beforeW009Catalog, beforeW009Snapshot, isW009DetailFile } from './w009-
 import { isW004Name } from './w004-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {existsSync, readFileSync, readdirSync} from 'node:fs';
+import {existsSync} from 'node:fs';
+import {readBeforeW018FileSync as readFileSync, readdirBeforeW018Sync as readdirSync} from './w20261016-018-history.mjs';
 import {group1Images, cardImages} from '../beta/group1-images.mjs';
 import { beforeW1010Catalog, isW1010Name } from './w1010-history.mjs';
 import { beforeW1012Catalog, isW1012Name } from './w1012-history.mjs';
@@ -25,7 +27,7 @@ test('discontinued LH98QEC is absent from every active Library artifact', () => 
   assert.equal(Object.hasOwn(group1Images, slug), false);
   assert.equal(Object.hasOwn(cardImages, slug), false);
 
-  const snapshot = beforeW009Snapshot(beforeW20261014_005Snapshot(beforeW008Snapshot(read('beta/public-snapshot.json'))));
+  const snapshot = beforeW009Snapshot(beforeW20261014_005Snapshot(beforeW008Snapshot(beforeW018Snapshot(read('beta/public-snapshot.json')))));
   assert.equal(snapshot.catalog.count - 2, 274);
   assert.equal(Object.keys(snapshot.details).filter(name => !isW004Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !isW20261014_007DetailFile(name)).length, 265);
   assert.equal(Object.hasOwn(snapshot.details, slug), false);

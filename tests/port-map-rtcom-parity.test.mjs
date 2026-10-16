@@ -1,5 +1,5 @@
 // W-015 group6b: compare this historical task with the approved later layout rewound.
-import {readBeforeGroup6bFile as readFile} from './group6b-w16015-history.mjs';
+import {readBeforeW018Group6bFile as readFile} from './w20261016-018-history.mjs';
 import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Product} from './jbl-w15010-history.mjs';
@@ -14,7 +14,7 @@ const beforeW026ProductWithoutGroup5 = (value, slug) => priorbeforeW026Product(b
 const beforeW026Product = (value, slug) => beforeW026ProductWithoutGroup5(beforeW16015Group5Product(value, slug), slug);
 
 import assert from 'node:assert/strict';
-import {readdir} from 'node:fs/promises';
+import {readdirBeforeW018 as readdir} from './w20261016-018-history.mjs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { bssW04004Slugs } from './bss-w04004-history.mjs';

@@ -11,7 +11,7 @@ import { withoutXdmCommandGuideUpload } from './xdm-command-guide-history.mjs';
 import { withoutPixelFitDocumentUpload } from './pixelfit-document-history.mjs';
 import { beforeW010AquilonUploads } from './w20261016-010-aquilon-history.mjs';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import {readBeforeW018FileSync as readFileSync} from './w20261016-018-history.mjs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW12002Raw } from './w12002-wording-history.mjs';
