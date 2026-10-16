@@ -15,7 +15,7 @@ const STAMP_HEIGHT = 24;
 const COLORS = { text: '#0f172a', muted: '#64748b', line: '#e2e8f0', node: '#ffffff', reused: '#fffbeb', photo: '#f1f5f9', background: '#ffffff' };
 const NODE_ORDER: Record<string, number> = { shape: 0, equipment: 1, annotation: 2 };
 // 화면과 같은 기준: 이 둘이 아닌 단자는 "확인" 배지를 단다(EquipmentNode)
-const ACCEPTED = new Set(['VERIFIED', 'FOUND']);
+const ACCEPTED = new Set(['VERIFIED', 'FOUND', 'GENERIC']);
 const BADGE_WIDTH = 22;
 // 오디오 레벨 배지 색(화면 styles.css .port-level과 같다)
 const LEVEL_COLORS: Record<string, string> = { MIC: '#db2777', LINE: '#7c3aed', 'M/L': '#9333ea', SPK: '#0891b2', AES: '#4f46e5', 'S/PDIF': '#4f46e5' };
