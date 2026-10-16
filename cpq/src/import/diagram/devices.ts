@@ -168,6 +168,18 @@ interface Accumulator {
   quantity: ReturnType<typeof dec>;
 }
 
+/**
+ * 빌더 전용 일반 장비(PC·노트북, B-20261016-02)인가.
+ *
+ * Portal 제품이 아니라 구성도에 소스 기기를 놓기 위한 장비다(`data.portal.source`
+ * `'builder'`). 고객 지참·별도 장비로 보고 **장비 행을 만들지 않는다.**
+ * 연결선은 그대로 남으므로 케이블은 산정된다.
+ */
+export function isBuilderGenericNode(node: DiagramNode): boolean {
+  const portal = node.data['portal'];
+  return typeof portal === 'object' && portal !== null && (portal as { source?: unknown }).source === 'builder';
+}
+
 export function buildDeviceLines(
   diagram: DiagramFile,
   catalog: Catalog,
@@ -205,6 +217,7 @@ export function buildDeviceLines(
   };
 
   for (const node of diagram.nodes) {
+    if (isBuilderGenericNode(node)) continue;
     // --- 주 장비 ---
     const match = matchByModel(node.data.model, catalog);
     const name = node.data.name?.trim() ?? '';

@@ -28,7 +28,7 @@ export interface Port {
   origin?: 'user';
   edited?: boolean;
 }
-export interface Portal { productId: string; source: 'portal' | 'rtcom'; unit?: 'tx' | 'rx'; variant?: string; detailUrl: string }
+export interface Portal { productId: string; source: 'portal' | 'rtcom' | 'builder'; unit?: 'tx' | 'rx'; variant?: string; detailUrl: string }
 export interface Equipment {
   id: string;
   category: string;
@@ -86,7 +86,7 @@ export interface Rules { lineTypes: LineType[]; connectorWildcards: Record<strin
 export interface LibraryUnit { unitId: string; unit?: 'tx' | 'rx'; variant?: string; equipment: Equipment; slots?: Record<string, unknown>; card?: Record<string, unknown> }
 export interface LibraryProduct {
   productId: string;
-  source: 'portal' | 'rtcom';
+  source: 'portal' | 'rtcom' | 'builder';
   brand: string;
   product: string;
   categories: string[];
@@ -188,7 +188,7 @@ export interface IoRequest {
 // code: label(이름만 바꿈) · override(개별 지정 행) · override-shift(행 삭제가 개별 지정 번호를 밀어냄) · not-representable(Portal 원문으로 나타낼 수 없음)
 export interface IoNotReflected { code: 'label' | 'override' | 'override-shift' | 'not-representable'; ports: string[]; detail?: string }
 export interface IoRequestPort { id?: string; label: string; connector: string; signals: string[]; origin?: 'user'; reason?: string }
-export interface IoRequestResult { ok: boolean; code?: 'library-missing' | 'library-old' | 'library-changed' | 'unit-unsupported'; detail?: string; request: IoRequest | null; notReflected: IoNotReflected[] }
+export interface IoRequestResult { ok: boolean; code?: 'library-missing' | 'library-old' | 'library-changed' | 'unit-unsupported' | 'generic-equipment'; detail?: string; request: IoRequest | null; notReflected: IoNotReflected[] }
 export const buildIoRequest = IR.buildIoRequest as (input: { lists: PortLists<IoRequestPort>; data: Pick<EquipmentData, 'model' | 'portal'>; libraryEquipment: Equipment | null; librarySource?: Record<string, string>; signalVocabulary?: VocabularySignal[]; createdAt?: string }) => IoRequestResult;
 export const ioRequestFileName = IR.ioRequestFileName as (productId: string, date?: Date) => string;
 export const serializeIoRequest = IR.serializeIoRequest as (request: IoRequest) => string;

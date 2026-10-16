@@ -38,6 +38,7 @@ const EXPORT_PROBLEMS: Record<string, string> = {
   'library-missing': '라이브러리에서 이 장비를 찾지 못해 Portal 반영 요청을 만들 수 없습니다',
   'library-old': '라이브러리가 오래되어(1.2.0 미만) 단자의 원본 행을 알 수 없습니다. 새로 고친 뒤 다시 시도해 주세요',
   'library-changed': '라이브러리가 바뀌어 원본 행을 찾지 못한 단자가 있습니다. "라이브러리 값으로 되돌리기" 뒤 다시 고쳐 주세요',
+  'generic-equipment': '빌더 전용 일반 장비(PC·노트북)는 Portal 원본이 없어 반영 요청을 만들지 않습니다. 단자는 이 구성도에서만 바뀝니다',
   'unit-unsupported': 'TX/RX·시리즈로 나뉜 장비는 아직 Portal 반영 요청을 만들 수 없습니다',
 };
 const NOT_REFLECTED: Record<IoNotReflected['code'], string> = {
@@ -290,7 +291,7 @@ function SettingsDialog({ nodeId }: { nodeId: string }) {
         ) : (
           <footer className="panel-actions modal-foot">
             <button type="button" onClick={close}>취소</button>
-            {tab === 'ports' && <button type="button" onClick={startExport}>적용하고 Portal 반영 요청 내보내기</button>}
+            {tab === 'ports' && data.portal?.source !== 'builder' && <button type="button" onClick={startExport}>적용하고 Portal 반영 요청 내보내기</button>}
             <button type="button" className="primary" onClick={() => submit(false)} title="이 구성도에만 적용">적용</button>
           </footer>
         )}

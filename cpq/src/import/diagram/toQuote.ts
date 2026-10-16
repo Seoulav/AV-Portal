@@ -17,7 +17,7 @@ import {
   type QuoteSystemInput,
 } from '../../domain/quote/buildDocument';
 import type { Catalog } from '../../data/catalog/load';
-import { buildDeviceLines, type DeviceLine, type ImportWarning } from './devices';
+import { buildDeviceLines, isBuilderGenericNode, type DeviceLine, type ImportWarning } from './devices';
 import { buildCableLines, type CableLine } from './cables';
 import { buildDerivedLines } from './derived';
 import type { DiagramFile, DiagramNode } from './types';
@@ -122,6 +122,8 @@ export function diagramToQuote(
   const systemOrder: string[] = [];
   const nodesBySystem = new Map<string, DiagramNode[]>();
   for (const node of diagram.nodes) {
+    // 빌더 전용 일반 장비(PC·노트북)는 장비 행이 없으므로 시스템도 만들지 않는다.
+    if (isBuilderGenericNode(node)) continue;
     const name = systemNameOf(node, options.defaultSystemName);
     if (!nodesBySystem.has(name)) {
       nodesBySystem.set(name, []);

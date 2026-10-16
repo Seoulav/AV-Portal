@@ -2,7 +2,8 @@
 import { audioCableFindings, levelDetail } from './audio.mjs';
 import { DEFAULT_RULES, POWER_SIGNAL } from './defaults.mjs';
 
-const ACCEPTED_VERIFICATION = new Set(['VERIFIED', 'FOUND']);
+// GENERIC: 빌더 전용 일반 장비(PC·노트북)의 표준 단자(B-20261016-02)
+const ACCEPTED_VERIFICATION = new Set(['VERIFIED', 'FOUND', 'GENERIC']);
 const UNKNOWN_CONNECTORS = new Set(['UNKNOWN', 'CAPTIVE']);
 
 // 두 커넥터를 같은 것으로 볼지(§2.8)
