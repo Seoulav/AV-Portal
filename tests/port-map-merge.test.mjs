@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW20261016_001Product } from './w20261016-001-history.mjs';
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -16,7 +17,7 @@ import { isW004Name } from './w004-history.mjs';
 const root = new URL('../', import.meta.url);
 const read = async path => readFile(new URL(path, root), 'utf8');
 const products = await Promise.all((await readdir(new URL('beta/site/detail/data/', root)))
-  .filter(name => name.endsWith('.json') && !isW1010Name(name) && !isW1012Name(name)).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
+  .filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW1010Name(name) && !isW1012Name(name)).map(async name => ({ name, raw: JSON.parse(await read(`beta/site/detail/data/${name}`)) })));
 
 class Node {
   constructor(tag, text = '') { this.tag = tag; this.ownText = String(text); this.children = []; this.className = ''; }
@@ -105,5 +106,6 @@ test('02 owns the fallback; 03 keeps only content and full io records remain in 
   assert.match(app, /\$\('#io-records'\)\.append\(\$\('#io-table-details'\)\)/);
   assert.match(app, /selectSection03Content\(enhancements\)/);
   assert.match(app, /product-detail-model\.mjs\?v=w20261016-010-aquilon-layer-plan/);
-  assert.match(model, /detail-enhancements\.mjs\?v=w20261012-015-rtcom-parity/);
+  assert.match(app, /detail-enhancements\.mjs\?v=w20261016-010-aquilon-layer-plan-571/);
+  assert.match(model, /detail-enhancements\.mjs\?v=w20261016-008-portmap-data/);
 });

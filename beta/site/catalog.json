@@ -4908,5 +4908,20 @@
     "manual_link": "./manuals/hdf-ccf-user-manual-v1-1.pdf",
     "slug": "hdf-ccf",
     "card_image": "hdf-ccf-main.png"
+  },
+  {
+    "brand": "Belkin",
+    "product": "Connect Air",
+    "categories": [
+      "화상회의",
+      "Conferencing",
+      "Wireless Presentation"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.belkin.com/kr/p/%EB%AC%B4%EC%84%A0-hdmi-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4-%EC%96%B4%EB%8C%91%ED%84%B0/AVC024dqBK.html"
+    ],
+    "slug": "belkin-connect-air",
+    "card_image": "belkin-connect-air-main.jpg"
   }
 ]

@@ -433,6 +433,14 @@
       "sourceHost": "pubs.shure.com"
     },
     {
+      "url": "https://s3.belkin.com/resources/pdf/avc024-sales-sheet.pdf",
+      "file": "belkin-connect-air-specification-2650a8f7c667.pdf",
+      "sha256": "e7e3f1a8d8b438aa2f26e1cad5202505980bc1e36d0cadee6952b8c39a25214b",
+      "bytes": 122775,
+      "fetchedAt": "2026-10-16T08:34:07.049Z",
+      "sourceHost": "s3.belkin.com"
+    },
+    {
       "url": "https://static.roland.com/assets/media/pdf/V-160HD_Reference_eng09_W.pdf",
       "file": "v-160hd-specification-f435e72baacb.pdf",
       "sha256": "16a26572a9fb39e3019b440f9395df326bc2fe2ee8d3b7172d5e77323c1cc2c7",

@@ -7,6 +7,7 @@ export const manufacturerHosts = {
   'Analog Way': ['analogway.com', 'website-files.com'],
   Audinate: ['getdante.com', 'audinate.com'],
   AVer: ['aver.com', 'averusa.com'],
+  Belkin: ['belkin.com'],
   'Blackmagic Design': ['blackmagicdesign.com'],
   'BSS Audio': ['techdata-ps.com', 'bssaudio.com', 'harmanpro.com'],
   Colorlight: ['colorlightinside.com'],

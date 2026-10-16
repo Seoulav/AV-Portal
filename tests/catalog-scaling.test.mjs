@@ -86,15 +86,18 @@ test('공개 목록의 제품군 링크 표시는 결정표의 link_scope와 일
     // W-20261002-012 MPF 3종은 별도 삼성 제품가이드·국내 목록 근거로 등록했다.
     // W-023's new model is verified directly against its official Samsung Korea page.
     if (['mp008f', 'mp012f', 'mp016f', 'ie015a-e', 'ie020a-e', 'if015r-m', 'lh43behhlbfxkr', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'aquilon-rsalpha', 'ds-8s', 'emision-media-server', 'emision-pixelfit', 'insta360-connect', 'insta360-link-2', 'insta360-wave-business', 'insta360-wave', ...w029Slugs, ...w006Slugs, ...w007Slugs].includes(item.slug)) continue;
-    if (item.slug === 'hdf-ccf') continue; // No brand-series link-scope decision applies to this single cable.
+    if (item.slug === 'belkin-connect-air' || item.slug === 'hdf-ccf') continue; // No brand-series link-scope decision applies to this single cable.
     const scope = scopeOf.get(`${norm(item.brand)}\0${norm(item.product)}`);
     assert.ok(scope, `${item.brand} ${item.product}: 결정표에 없음`);
     assert.equal(item.link_scope ?? 'model', scope, `${item.brand} ${item.product}`);
   }
 });
 
-test('USB 3.2 Gen2 facet is a scoped fourth level; every other catalog item remains three-level', () => {
+test('category depth exceptions are scoped to USB 3.2 and Wireless Presentation', () => {
   const allowedFourthLevel = new Map([['hdf-ccf', 'USB 3.2 Gen2 10Gbps']]);
+  const wirelessPresentation = catalog.filter(item => item.categories[2] === 'Wireless Presentation');
+  assert.deepEqual(wirelessPresentation.map(item => item.slug), ['belkin-connect-air']);
+  assert.deepEqual(wirelessPresentation[0].categories, ['\uD654\uC0C1\uD68C\uC758', 'Conferencing', 'Wireless Presentation']);
   for (const item of catalog) {
     const fourth = allowedFourthLevel.get(item.slug);
     if (fourth) {
