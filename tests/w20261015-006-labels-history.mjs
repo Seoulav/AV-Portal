@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { beforeW014AnalogWayProduct } from './w014-analogway-history.mjs';
 
 const approved = {
   'aquilon-rs1': 'fcd407116b1d2407b27ea6e62d636dd250921ea9fd7700ea51eb81f8a1e91729',
@@ -13,6 +14,7 @@ const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('
 
 // Undo only this follow-up's six label offsets before the W-006 map hash gate.
 export function beforeW20261015_006LabelsProduct(product, slug) {
+  product = beforeW014AnalogWayProduct(product, slug);
   if (!approved[slug] || product.portMap === undefined) return product;
   assert.equal(sha(product.portMap), approved[slug], `${slug}: approved marker offsets changed`);
   const prior = structuredClone(product);

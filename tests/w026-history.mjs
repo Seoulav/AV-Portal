@@ -18,6 +18,7 @@ import {beforeB13003Product,beforeB13003Raw} from './b13003-slot-history.mjs';
 import {beforeW13007Product,beforeW13007Raw} from './w13007-videowall-history.mjs';
 import {beforeW13010Product,beforeW13010Raw} from './w13010-yamaha-history.mjs';
 import {beforeLogitechW14001Product,beforeLogitechW14001Raw} from './logitech-w14001-history.mjs';
+import {beforeW014AnalogWayProduct,beforeW014AnalogWayRaw} from './w014-analogway-history.mjs';
 
 // Historical assertions undo approved W-005 maps and W-004 photo edits, then
 // the newer Sony, Aquilon, JBL, AMX, and W-026 edits. Each inverse accepts current products and
@@ -26,6 +27,7 @@ const prior=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-prior
 const approved=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-approved-fields.json',import.meta.url)));
 export const w026Slugs=new Set(Object.keys(prior));
 export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}) {
+  current=beforeW014AnalogWayProduct(current,slug);
   current=beforeW011VideoLayerProduct(current,slug);
   current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   current=beforeW16004Product(current,slug);
@@ -53,6 +55,7 @@ export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}
   return result;
 }
 export function beforeW026Raw(raw,slug) {
+  raw=beforeW014AnalogWayRaw(raw,slug);
   raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
   raw=beforeW16004Raw(raw,slug);
   raw=beforeW15012Raw(raw,slug);
