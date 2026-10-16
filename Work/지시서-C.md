@@ -5,6 +5,7 @@
 - 상태: REVIEW (미리보기 캡처 및 휴대폰 실측은 실행 환경 차단으로 BLOCKED)
 - 명세: `Work/작업/W-20261017-003.md` · 명세 확인 main `598757af700c961a4caf0888a5f5ce3dcde79c08`
 - 브랜치: `codex/W-20261017-003-aw-layer-rules` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
+- 시작 main `598757af700c961a4caf0888a5f5ce3dcde79c08`; 최신 `origin/main` `08d255b7c42faf2f10ba74b2b37a38b453ea09ad` 통합 완료(merge `c38c160f50c955ea4fb41771dae3101f831020b5`).
 - 범위: 15종 상세 공용 레이어 기준 카드와 `Work/기획/AnalogWay-레이어연출기준.md`. XDM-WOS100 기존 문구 및 제품 JSON·layerPlan/videoLayerPlan 값은 변경하지 않는다.
 - [x] W-019·W-011 근거표와 명세를 읽고 Aquilon RS·C, Alta 4K, Midra 4K의 검증된 기준을 통합하기 시작했다.
 - [x] 제품 JSON 계획에서 15개 모델 수치를 정규화하는 모듈과 4개 데이터 기반 예시를 작성했다.
