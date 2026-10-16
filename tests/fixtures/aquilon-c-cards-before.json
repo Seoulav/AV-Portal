@@ -1,0 +1,58 @@
+{
+  "aquilon-cmini": {
+    "beforeMarkerCount": 14,
+    "factsSha256": "21f6af32dde96d9516a949fe1482c7ffb5c63ff14b89f65dd6167c4f70814b82",
+    "images": [
+      {
+        "file": "aquilon-cmini-front.webp",
+        "sha256": "96ab20f343bb8585bdeea3b979fb9441c9f1b3af5596e746e51560671cad5fc0"
+      },
+      {
+        "file": "aquilon-cmini-rear.webp",
+        "sha256": "a11bd3af1a71dccfe724d5e7dc816349f90689d67a26011f8ad20bd0cb1d0646"
+      }
+    ]
+  },
+  "aquilon-c": {
+    "beforeMarkerCount": 16,
+    "factsSha256": "ffc20e2e78eca65859190adb433544c5a27466afa9687099bd6877d84426f7b0",
+    "images": [
+      {
+        "file": "aquilon-c-front.webp",
+        "sha256": "c7109d10a89d5ee4012ccfd9b1409676a75961960800659972fcba10822c1209"
+      },
+      {
+        "file": "aquilon-c-rear.webp",
+        "sha256": "f18716859194242814273706ff3b6091682ccb2064ef78072876675afa971457"
+      }
+    ]
+  },
+  "aquilon-cplus": {
+    "beforeMarkerCount": 19,
+    "factsSha256": "27de3f452e860b4948975f291a3f004daf7959cce4893d30964827db303992ea",
+    "images": [
+      {
+        "file": "aquilon-cplus-front.webp",
+        "sha256": "f10177329ed1dc8afe3f95fda830f25c1f495d3a09919c8f7841399d2f6a1a3e"
+      },
+      {
+        "file": "aquilon-cplus-rear.webp",
+        "sha256": "b5fe3682e87a34d956312eeff7b4b43b6b69451f435fd1e517ecb1a2f71f14b7"
+      }
+    ]
+  },
+  "aquilon-cmax": {
+    "beforeMarkerCount": 23,
+    "factsSha256": "dc9c31ce9ea777439955cf69d54a919d0cd2889f54e0a3e84b87111dbe814d29",
+    "images": [
+      {
+        "file": "aquilon-cmax-front.webp",
+        "sha256": "3bc2ca2536f9f387311776dbc17bad4bf38097d32bffa3da58f1249065a81bab"
+      },
+      {
+        "file": "aquilon-cmax-rear.webp",
+        "sha256": "333aa996c220a96813482428a6ae32f4784b9d25467de96294032c266f3ea12e"
+      }
+    ]
+  }
+}
