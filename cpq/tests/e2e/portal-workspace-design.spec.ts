@@ -88,18 +88,28 @@ for (const width of [390, 768, 1280]) test(`${width}px long quote keeps table sc
   await page.setViewportSize({ width, height: 844 });
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  await mockResources(page);
-  await page.goto('./');
-  await page.getByRole('button', { name: '구성도 JSON 열기' }).click();
-  const nodes = Array.from({ length: 20 }, (_, i) => ({
-    id: `n${i}`, type: 'equipment',
-    data: { name: `긴 합성 장비 ${i}`, model: 'FIX', category: 'video', systemName: i < 10 ? '회의실 A' : '교육장 B' },
+  const products = Array.from({ length: 20 }, (_, i) => ({
+    productId: `FIX-${i}`, sku: `FIX-${i}`, brand: '', model: `FIX-${i}`,
+    quoteName: `합성 장비 ${i}`, quoteSpec: `FIX-SPEC-${i}`, unit: 'EA',
+    options: { group: '합성 장비' }, currency: 'KRW', evidence: 'verified',
   }));
-  await page.getByLabel('구성도 파일 선택').setInputFiles({
-    name: 'long-quote.json', mimeType: 'application/json',
-    buffer: Buffer.from(JSON.stringify({ version: '1.1', nodes, edges: [], lineTypes: [] })),
+  await mockResources(page, {
+    '/data/approved/products.json': {
+      schemaVersion: 1, generatedOn: '2026-01-01', sourceSha256: 'a'.repeat(64), products,
+    },
+    '/data/approved/prices.json': {
+      schemaVersion: 1, generatedOn: '2026-01-01', sourceSha256: 'a'.repeat(64), currency: 'KRW',
+      prices: Object.fromEntries(products.map(product => [product.sku, { sellingUnitPrice: '10000', currency: 'KRW' }])),
+    },
   });
+  await page.goto('./');
+  await page.getByRole('button', { name: '품목 직접 선택' }).click();
+  await page.getByLabel('품목 검색').fill('합성 장비');
+  await expect(page.locator('.q-picker-matches .q-button')).toHaveCount(20);
+  for (let i = 0; i < 20; i++) await page.locator('.q-picker-matches .q-button').nth(i).click();
+  await page.getByRole('button', { name: '견적 만들기' }).click();
   await expect(page.locator('.q-quote-sheet')).toBeVisible();
+  await expect.poll(() => page.locator('.q-quote-table tbody tr[data-row-id]').count()).toBeGreaterThanOrEqual(20);
   if (width <= 768) for (const button of await page.locator('.q-file-tools .q-button, .q-edit-tools .q-button, .q-output-tools .q-button').all()) {
     expect((await button.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(44);
   }
