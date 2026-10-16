@@ -256,3 +256,5 @@
 
 - 최종 코드검토: 중요문제0, 역사복원 mirror 불일치 검사 보완(실패 재현→회귀5/5). 최종 순차전체 **829건/828pass/0fail/기존skip1**(54.4초). 직전 병렬 실행RTC임시폴더 rename EPERM2건은 단독6/6 및 전체순차 재실행 통과.
 - verify-pages289제품/286상세/524사진/167uploads, 검색인덱스712807bytes check, 파생재생성,15PNG 링크·diffcheck 통과. 렌더러/app/RTCOM adapter/타제품/잠금PDF 불변. Work 검토용 PR·CI 진행.
+
+- 검토 PR: https://github.com/Seoulav/AV-Portal/pull/598, 구현 커밋2fbb8f463ffea67fe2b07015862120e79ff71d7d. 최신origin/main4cc0f961 통합 확인(Already up to date). CI 진행 중이며 완료 후 Work에 미리보기·병합 순서 요청.
