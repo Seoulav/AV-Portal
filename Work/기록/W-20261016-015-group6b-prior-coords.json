@@ -488,7 +488,7 @@
         "side"
       ]
     ],
-    "approved": "59201b04ee3837d23bbf0104f6bac797f9ad248297a245fbce823e9923ad9c23",
+    "approved": "c592f96fba357e2e05dfc0eed51bdc98c70b0a2b4c0210888230d39c0e9ae3f0",
     "internalY": []
   },
   "ki-pro-go2": {
@@ -676,8 +676,10 @@
         "x"
       ]
     ],
-    "approved": "ddf8b7856132d2594559d4653995ac0b417086cbbf646387c1a62aab8250c54e",
-    "internalY": []
+    "approved": "3a478ed3adba6a671d04f40728e9cf7f40953c70f233b8692e28e08870ae6e67",
+    "internalY": [
+      6
+    ]
   },
   "novastar-h2": {
     "prior": {
@@ -1424,8 +1426,12 @@
         "x"
       ]
     ],
-    "approved": "16619a9ef883b823c8b687c407d358650a97d80bea278e170bb6f5357df89c57",
-    "internalY": []
+    "approved": "78d0992e974c604c544006a7c79d46395004bdb09f599bd7b0374bc16b8140f8",
+    "internalY": [
+      1,
+      2,
+      3
+    ]
   },
   "vs10": {
     "prior": {

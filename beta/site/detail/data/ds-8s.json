@@ -453,7 +453,7 @@
         "n": 5,
         "label": "SPRC LED",
         "desc": "실물 후면 RCA SPRC LED 인쇄 · 설명서 REMOTE LED와 동일 기능 여부 미확인",
-        "x1": 975,
+        "x1": 979,
         "x2": 1012,
         "side": "top"
       },
@@ -462,14 +462,14 @@
         "label": "LINK IN",
         "desc": "실물 후면 미니DIN형 LINK IN · 설명서 판본의 RJ-45 링크와 형상 차이",
         "x1": 1072,
-        "x2": 1120,
+        "x2": 1118,
         "side": "top"
       },
       {
         "n": 7,
         "label": "REMOTE SWITCH",
         "desc": "실물 후면 RCA REMOTE SWITCH 인쇄 · 원격 스위치 입력",
-        "x1": 1123,
+        "x1": 1126,
         "x2": 1164,
         "side": "top"
       },

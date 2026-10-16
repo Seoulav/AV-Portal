@@ -458,7 +458,7 @@
       "io": 15
     },
     "ds-8s": {
-      "sha256": "7C9D30F5ECC4522EF05357694E16FA09858E781B6F57D788978836AA478EBDF8",
+      "sha256": "0209FE0AD14CC4D00821AD9971DC097F4E25FE1333EE69D920EDE05B031AB884",
       "features": 7,
       "specifications": 12,
       "io": 10
@@ -866,7 +866,7 @@
       "io": 1
     },
     "ki-pro-go2": {
-      "sha256": "646EC5C5084B799FC71481D6E923C776F9E6A702B0581BB572AA8A71CD9F354B",
+      "sha256": "C65B6CC55CFD5615E7BCE53BF9C6BAB1A56411AE2FBCC3DF0AF4EBA3176978E1",
       "features": 8,
       "specifications": 16,
       "io": 11
@@ -1502,7 +1502,7 @@
       "io": 0
     },
     "ultritouch-2-hr": {
-      "sha256": "D2ECA6DA8727243FF5DDE0BCA4606465ED6A2C708903049B1E982503223FECD2",
+      "sha256": "AC2FE6F86EC361C7E0AA13CAB420494A1337B52183381920F85CFB1B191A2E5B",
       "features": 5,
       "specifications": 12,
       "io": 4

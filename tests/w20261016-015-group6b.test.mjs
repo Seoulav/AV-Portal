@@ -1,3 +1,4 @@
+import {portMapSegments} from './portmap-segment-audit.mjs';
 import {beforeGroup6bW16015Product,beforeGroup6bW16015Raw,group6bGeometry,readBeforeGroup6bFileSync,readBeforeGroup6bFile} from './group6b-w16015-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -57,5 +58,13 @@ test('historical file adapter restores only target JSON and preserves buffers, t
  }
  for(const relative of ['../beta/site/detail/data/novastar-h5.json','../beta/site/detail/images/h5-rear.webp']){
   const url=new URL(relative,import.meta.url);assert.deepEqual(readBeforeGroup6bFileSync(url),fs.readFileSync(url));
+ }
+});
+
+test('Group 6b inside-photo leaders stay within a quarter width and 6px from parallel callouts',()=>{
+ for(const slug of Object.keys(records)){
+  const measured=portMapSegments(read(slug).portMap);
+  assert.deepEqual(measured.tooLong,[],slug+' inside-photo horizontal leader exceeds 1/4 width');
+  assert.deepEqual(measured.close,[],slug+' inside-photo parallel leader clearance below 6px');
  }
 });
