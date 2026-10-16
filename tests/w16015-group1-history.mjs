@@ -1,3 +1,4 @@
+import {beforeW16015Group12Product} from './w16015-group12-history.mjs';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
@@ -8,6 +9,7 @@ const hash = value => createHash('sha256').update(JSON.stringify(value ?? null))
 export const w16015Group1Slugs = new Set(Object.keys(fixture));
 
 export function beforeW16015Product(current, slug) {
+  current = beforeW16015Group12Product(current, slug);
   const record = fixture[slug];
   if (!record) return current;
   if (record.deferred) {
