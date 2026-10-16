@@ -335,3 +335,5 @@
 - [x] 전후72PNG 및 갤러리/점검표/Work인계 작성. 예외파일은 본인 섹션만 추가.
 - [x] 전체872건871pass/0fail/기존skip1, Pages289/286/529/167, 검색·읽기용카탈로그check 통과. 독립 코드리뷰 Blocking/Important0. 역사 역복원 순서/오류문구 호환 문제는 수정 후 전체 재검증 완료.
 - [ ] 최신main 통합·파생재생성·PR/CI→Work 병합 승인 요청. 상태 REVIEW. 승인 전 병합 금지.
+
+- [x] 최신 origin/main f5a7a6b0(#602 Zenith100) 통합, 파생물 재생성. 통합 후 전체872건871pass/0fail/기존skip1(54.8초), Pages/검색/읽기용카탈로그check 재통과. PR 전 원본변경 범위·예외8줄추가·캡처72장/문서링크76개·diffcheck 확인.

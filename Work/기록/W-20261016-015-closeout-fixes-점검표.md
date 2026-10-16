@@ -75,3 +75,9 @@ portmap-audit 스킬의 독립 재검토 절차로 다른 검토자가 원본과
 - `node beta/verify-pages.mjs`: 289 제품 / 286 상세 / 529 사진 / 167 PDF 항목, 종료0. 기존 PDF Canvas/font 환경 경고는 있었고 검사 실패는 없음.
 - 독립 코드 리뷰: Blocking/Important 0. 연속 선분 합산 간격 재측정, 승인 범위 확인, 표식 문구 mutation 184건 거부 확인. 최신 main 통합·CI 결과는 PR과 인계 기록에 최종 기재.
 - 로컬 측정/캡처 스크립트와 원시 결과는 `outputs/w015-closeout-fixes/`에 보존(PR 제외). 캡처와 검사 fixture는 PR에 포함. Python 미설치 환경에서 공개 SVG 렌더러 + Chrome CDP로 측정·캡처.
+
+## 최신 main 통합
+
+- origin/main f5a7a6b0433166209fca715ad37bd874dd158500 (#602 Zenith100 보정 포함)을 통합. 제품/테스트/사진의 세션 B 변경을 그대로 보존. 검색 인덱스 충돌은 원본에서 재생성으로 해결.
+- 본 PR 기준 예외 문서 변경은 세션 D 섹션 8줄 추가뿐. 렌더러·검증기·잠금 PDF·builder/cpq·다른 세션 진행 파일 변경 없음.
+- 통합 후 전체872건871pass/0fail/기존skip1(54.8초), 종료0. Pages·검색·읽기용카탈로그check 재통과.
