@@ -1,3 +1,4 @@
+import {beforeW16015Group12Product} from './w16015-group12-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync} from 'node:fs';
@@ -16,15 +17,16 @@ test('W-015 group 1 maps change only approved geometry and keep all current prod
   let markers = 0, beforeY = 0, afterY = 0;
   for (const slug of group) {
     const current = product(slug);
+    const group1Current = beforeW16015Group12Product(current, slug);
     markers += current.portMap.items.length;
-    afterY += current.portMap.items.filter(item => item.y !== undefined).length;
+    afterY += group1Current.portMap.items.filter(item => item.y !== undefined).length;
     if (!fixture[slug]) {
       assert.equal(slug, 'x100pro-2u');
       assert.equal(hash(current.portMap), '7a73d7312597afd6049da0889419f813c80dd1d6f9664eb930750c866654419e');
       continue;
     }
     const approved = fixture[slug];
-    assert.equal(hash(current.portMap), approved.deferred ? hash(approved.prior) : approved.approved, slug);
+    assert.equal(hash(group1Current.portMap), approved.deferred ? hash(approved.prior) : approved.approved, slug);
     const rest = structuredClone(current);
     delete rest.portMap;
     assert.equal(hash(rest), approved.unchangedSha, `${slug}: non-map data changed`);
@@ -50,5 +52,5 @@ test('W-015 inverse exposes unrelated current regressions and rejects unexpected
   assert.throws(() => beforeW16015Product(mapChanged, 'eb-l690u'), /unexpected W-015 portMap change/);
   const deferred = product('eb-l260f');
   deferred.portMap.items[0].x1 += 1;
-  assert.throws(() => beforeW16015Product(deferred, 'eb-l260f'), /deferred W-015 map drift/);
+  assert.throws(() => beforeW16015Product(deferred, 'eb-l260f'), /unexpected W-015 group-1-2 portMap change/);
 });
