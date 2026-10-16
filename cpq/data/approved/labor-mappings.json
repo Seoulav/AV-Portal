@@ -170,8 +170,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(15행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0030",
@@ -180,8 +180,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0031",
@@ -330,8 +330,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(18행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0048",
@@ -660,8 +660,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(54행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0085",
@@ -710,8 +710,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(19행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0091",
@@ -740,8 +740,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0094",
@@ -750,8 +750,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(12행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0095",
@@ -840,8 +840,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0109",
@@ -880,8 +880,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0113",
@@ -930,8 +930,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0119",
@@ -940,8 +940,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0120",
@@ -1000,8 +1000,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0128",
@@ -1010,8 +1010,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0129",
@@ -1190,8 +1190,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0151",
@@ -1200,8 +1200,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0152",
@@ -2130,8 +2130,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0273",
@@ -2190,8 +2190,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(20행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CBL-0279",
@@ -2540,8 +2540,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0046",
@@ -2610,8 +2610,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0053",
@@ -2780,8 +2780,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0075",
@@ -3210,8 +3210,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.24",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0135",
@@ -3230,8 +3230,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0137",
@@ -3520,8 +3520,8 @@
    "conversionFactor": "1",
    "surcharge": "0.2",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0182",
@@ -3630,8 +3630,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0195",
@@ -3840,8 +3840,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0252",
@@ -3950,8 +3950,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0269",
@@ -4060,8 +4060,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "AUD-0281",
@@ -4490,8 +4490,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0009",
@@ -4510,8 +4510,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0011",
@@ -4730,8 +4730,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(11행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0040",
@@ -4890,8 +4890,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0061",
@@ -5440,8 +5440,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0133",
@@ -5480,8 +5480,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0139",
@@ -5490,8 +5490,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0140",
@@ -5510,8 +5510,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0142",
@@ -5520,8 +5520,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0143",
@@ -5610,8 +5610,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0152",
@@ -6000,8 +6000,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0197",
@@ -6020,8 +6020,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0199",
@@ -6030,8 +6030,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0200",
@@ -6410,8 +6410,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(12행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0251",
@@ -6420,8 +6420,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(12행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0252",
@@ -6550,8 +6550,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(24행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0265",
@@ -6560,8 +6560,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.16",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(18행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0266",
@@ -6820,8 +6820,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.24",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VID-0304",
@@ -7700,8 +7700,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0026",
@@ -7710,8 +7710,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.8",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0027",
@@ -7720,8 +7720,8 @@
    "conversionFactor": "1",
    "surcharge": "0.5",
    "itemRate": "0.9",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0028",
@@ -7740,8 +7740,8 @@
    "conversionFactor": "1",
    "surcharge": "0.5",
    "itemRate": "1",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0031",
@@ -7920,8 +7920,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0057",
@@ -7930,8 +7930,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(27행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0059",
@@ -8100,8 +8100,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0081",
@@ -8460,8 +8460,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0125",
@@ -8840,8 +8840,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0171",
@@ -8950,8 +8950,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0196",
@@ -8980,8 +8980,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.12",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(27행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "TVD-0201",
@@ -9490,8 +9490,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0007",
@@ -9590,8 +9590,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.05",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0018",
@@ -9650,8 +9650,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0037",
@@ -9660,8 +9660,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(3행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0043",
@@ -9820,8 +9820,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(11행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0075",
@@ -9910,8 +9910,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "CTL-0088",
@@ -10240,8 +10240,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(18행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PWR-0007",
@@ -10260,8 +10260,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PWR-0021",
@@ -10570,8 +10570,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PWR-0061",
@@ -10670,8 +10670,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PWR-0075",
@@ -10710,8 +10710,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(9행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PWR-0079",
@@ -10900,8 +10900,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.12",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VCF-0008",
@@ -11270,8 +11270,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.12",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(4행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VCF-0056",
@@ -11330,8 +11330,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.12",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(11행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VCF-0064",
@@ -11430,8 +11430,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.12",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VCF-0078",
@@ -11470,8 +11470,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(5행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "VCF-0084",
@@ -12120,8 +12120,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.1",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PRJ-0010",
@@ -12760,8 +12760,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(4행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PRJ-0105",
@@ -12770,8 +12770,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.32",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(2행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PRJ-0107",
@@ -12840,8 +12840,8 @@
    "conversionFactor": "1",
    "surcharge": "0",
    "itemRate": "0.63",
-   "confirmed": false,
-   "note": "표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다."
+   "confirmed": true,
+   "note": "2026-10-16 회의실 견적 샘플 노무비 단가 일치(6행, 26년 하반기 노임 기준)로 확인 (B-20261016-07)."
   },
   {
    "laborMappingId": "PRJ-0123",

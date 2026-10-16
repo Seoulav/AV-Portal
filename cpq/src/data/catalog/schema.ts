@@ -117,8 +117,12 @@ export const laborMappingSchema = z
     itemRate: decimalText,
     /** 원본 수식에 박힌 배율. `INT` **다음에** 곱한다. */
     multiplier: decimalText.optional(),
-    // 자동 추출 산출물은 전부 false여야 한다 (설계서 §5.3).
-    confirmed: z.literal(false),
+    /**
+     * 배포본에서는 사람이 확인한 연결만 `true`다(B-20261016-07: 회의실 견적
+     * 샘플 노무비 단가 일치). **자동 추출 산출물은 전부 `false`여야 한다**
+     * (설계서 §5.3) — 그 검사는 `generatedLaborMappingsFileSchema`가 한다.
+     */
+    confirmed: z.boolean(),
     note: z.string().min(1),
   })
   .strict();
@@ -130,6 +134,16 @@ export const laborMappingsFileSchema = z.object({
   mappings: z.array(laborMappingSchema),
   /** 품셈을 붙일 수 없는 SKU. 숨기지 않고 함께 배포해 화면에 경고를 띄운다. */
   unmappedSkus: z.array(z.string()),
+});
+
+/**
+ * 추출기(`tools/build-approved.ts`)가 **새로 만든** 연결 파일. 자동 추출을
+ * 확인 완료로 올리지 않는다 — 전부 `confirmed: false`다(설계서 §5.3).
+ * 사람이 확인한 표시는 배포본에만 얹는다. 다시 추출하면 확인 표시가 사라지므로
+ * 그때는 확인을 다시 거친다.
+ */
+export const generatedLaborMappingsFileSchema = laborMappingsFileSchema.extend({
+  mappings: z.array(laborMappingSchema.extend({ confirmed: z.literal(false) }).strict()),
 });
 
 export type ProductsFile = z.infer<typeof productsFileSchema>;
