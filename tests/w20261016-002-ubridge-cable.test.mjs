@@ -51,6 +51,7 @@ test('both public signal-flow scenarios label shielded cable as mandatory while 
 });
 import { createHash } from 'node:crypto';
 import { beforeW20261016_002Product, beforeW20261016_002Raw, beforeW20261016_002View } from './w20261016-002-history.mjs';
+import {beforeW014View} from './w014-analogway-history.mjs';
 const sha=value=>createHash('sha256').update(value).digest('hex');
 
 test('W-002 inverse restores exact prior U-BRIDGE data and scoped renderer bytes',()=>{
@@ -62,6 +63,6 @@ test('W-002 inverse restores exact prior U-BRIDGE data and scoped renderer bytes
   assert.equal(beforeW20261016_002Raw('{"x":1}','toggle-dock-2x1'),'{"x":1}');
   for(const path of ['../prototype/brc-am7/detail-enhancement-view.mjs','../beta/site/detail/detail-enhancement-view.mjs']){
     const view=readFileSync(new URL(path,import.meta.url),'utf8');
-    assert.equal(sha(beforeW20261016_002View(view)),'4c8a1937ba089644657fb10773ec51d7e01beab87a489dd65708d86c68850264');
+    assert.equal(sha(beforeW20261016_002View(beforeW014View(view))),'4c8a1937ba089644657fb10773ec51d7e01beab87a489dd65708d86c68850264');
   }
 });

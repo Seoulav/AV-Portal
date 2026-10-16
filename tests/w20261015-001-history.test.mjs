@@ -7,6 +7,7 @@ import {beforeW20261015_001Product,beforeW20261015_001Raw} from './w20261015-001
 import {beforeW20261015_003Product} from './w20261015-003-history.mjs';
 import {enhancementErrors} from '../beta/site/detail/detail-enhancements.mjs';
 import {beforeW20261016_019Styles} from './w20261016-019-history.mjs';
+import {beforeW014View} from './w014-analogway-history.mjs';
 
 const detailPath = new URL('../beta/site/detail/data/', import.meta.url);
 const read = slug => readFileSync(new URL(slug+'.json',detailPath),'utf8');
@@ -40,14 +41,17 @@ test('all pre-existing products still validate and view source matches the appro
     const p=JSON.parse(readFileSync(new URL(name,detailPath),'utf8'));
     assert.deepEqual(enhancementErrors(p),[],name);
   }
-  const view=beforeW20261016_001View(readFileSync(new URL('../beta/site/detail/detail-enhancement-view.mjs',import.meta.url),'utf8'))
+  const view=beforeW20261016_001View(beforeW014View(readFileSync(new URL('../beta/site/detail/detail-enhancement-view.mjs',import.meta.url),'utf8')))
     .replace(/\/\/ HDF-CCF cable scenario renderer start\n[\s\S]*?\/\/ HDF-CCF cable scenario renderer end\n/,'')
     .replace("  if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);\n",'');
   assert.equal(sha(view),'1f512b14f80b04e862e56c9a1c729a1ac73a60ea0986ccb9b1402f538b843e3d');
   // W-20261016-013 changes only these loupe declarations; other CSS still hits the historical hash.
-  const css=beforeW20261016_001Styles(beforeW20261016_019Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8'))
-    .replace('.dialog-image-wrap { min-height: 120px;', '.dialog-image-wrap {')
-    .replace('.image-loupe { background-repeat: no-repeat; background-color: #fff;', '.image-loupe {'))
+  const css=beforeW20261016_001Styles(beforeW20261016_019Styles(
+    readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8')
+      .replace(/\n\.port-map-n-many \{[^}]*\}\n/,'\n')
+      .replace('.dialog-image-wrap { min-height: 120px;', '.dialog-image-wrap {')
+      .replace('.image-loupe { background-repeat: no-repeat; background-color: #fff;', '.image-loupe {')
+  )).replace(/\n\/\* W-20261016-010 Aquilon layer-plan card\. \*\/[\s\S]*?\/\* W-20261016-010 Aquilon layer-plan card end\. \*\/\n/,'\n')
     .replace(/\n\/\* W-20261016-010 Aquilon layer-plan card\. \*\/[\s\S]*?\/\* W-20261016-010 Aquilon layer-plan card end\. \*\/\n/,'\n')
     .replace(/\n\/\* W-20261016-011 shared Midra 4K \/ Alta 4K layer analysis\. \*\/[\s\S]*?\/\* W-20261016-011 shared layer analysis end\. \*\//,'')
     .split('\n/* HDF-CCF cable scenarios. Existing signal-flow layout uses its own classes. */')[0];

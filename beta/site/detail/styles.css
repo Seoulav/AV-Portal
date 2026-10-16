@@ -209,6 +209,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .port-map-port .port-flag { color: #805000; }
 .port-map-port .state { display: inline-block; margin-top: 6px; }
 .port-map-n { flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--pg-accent); color: #fff; font-size: 10.5px; font-weight: 700; display: grid; place-items: center; }
+.port-map-n-many { width: auto; min-width: 30px; padding: 0 4px; border-radius: 10px; }
 @media (max-width: 720px) { .port-map-ports { grid-template-columns: 1fr 1fr; } }
 .signal-flow { width: 100%; min-width: 0; }
 .signal-flow svg { display: block; width: 100%; height: auto; }

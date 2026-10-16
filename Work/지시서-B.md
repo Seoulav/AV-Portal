@@ -607,3 +607,43 @@
 - 검증: 집중 검사 8/8, 전체 직렬 검사 805건 중 804 통과·실패 0·기존 skip 1. `search-index --check`, `verify-pages`(285 제품·282 상세·515 이미지·163 PDF), Samsung lint 통과. lint 25개는 공유 도면 형제 모델 `SHARED_WITH` 신호이며 좌표 충돌 없음. 최신 main에서 재생성한 snapshot·검색 인덱스 포함.
 - 캡처: hg55u800fnfxkr 전후 760px·390px 비교를 `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html`에 저장. 기존 760px 캡처는 새 렌더러에서도 육안 재확인 완료; 390px에서 상단 6–8·하단 9–10 배치 확인.
 - 상태: 검증 완료, 새 PR 생성 및 CI 대기. #587은 이미 병합됐으며 이 수정은 Work의 새 병합 순서 승인 전에는 병합하지 않음.
+
+## W-20261016-015 묶음 6 후속 — 호텔 TV Port Map 병합·배포 완료 (2026-10-16)
+
+- PR [#589](https://github.com/Seoulav/AV-Portal/pull/589) 병합, merge SHA `137e010ac7203ede5e0ae819d6b3f3e6ec359010`.
+- Builder CI run `38906296896` 전체 성공. Pages run `38907124706` 성공.
+- 공개 `hg55u800fnfxkr` 상세와 데이터 JSON HTTP 200. 공개 JSON SHA-256 `b51f671e54836fd60847b0cb43f5fb341c911c1282c9dda9f4025b014e68c020`이 병합 데이터와 일치.
+- 760px·390px 공개 화면 캡처를 확인했고, PR 미리보기 `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html`에서 6종의 전후 좌우 비교를 보존.
+- merge diff의 `Work/기록/W-20261016-015-예외.md`는 16 추가·9 삭제로 호텔 TV 항목만 갱신. 다른 섹션은 유지.
+
+## W-20261016-014 + W-015 묶음 2 — Analog Way Port Map (2026-10-16)
+
+- 명세 `Work/작업/W-20261016-014.md` blob SHA `8c8c393ad99b3705731cad873d06b62d35a2d3d1`; W-015 `21b225881d17dd095f53299dfd5593983ca3ef37`; W-016 `18c067fe507d4776a7cb942b9c3eba96d81a0d4a`; W-017 `40a9a775ea59707eb6e264d63baaa7da55ef9a41`; 기획 인계 `Work/기록/W-20261016-014-Codex-인계.md` 재확인.
+- 선행 PR #583이 merge SHA `169800d681cef4b2e2012a8024f06c55a96bd9b8`로 병합됨을 GitHub에서 확인. 브랜치 시작 기준 `54d0693c694d1da023c5e7538e6b34c65705b025` (PR #593 포함). 이어서 fetch한 `origin/main`은 `38489ee05147808cba15407c4d5f696e2777a8bd` (#588 포함). PR #594는 OPEN이며 `app.js`·`styles.css`를 변경하므로 PR 직전 main 통합·재생성 대상. 사용자 Work 알림에 따라 기존 세션 C 배정을 세션 B가 이어받음.
+- 구현 브랜치 `codex/W-20261016-014-analogway-portmaps`, 별도 worktree `codex-b-group6`.
+- 최초 작업 계획은 Analog Way 11종이었으나 최종 승인 범위는 Aquilon RSalpha·RS1–RS6 7종으로 조정했다. 동일 카드 종류·방향별 번호 통합 및 짧은 표기, 같은 번호는 label·desc 완전 일치만 허용, 목록 한 번호 한 줄·복수 개수 `×N`, 02 지도 괄호 위치 정리. 기준: 사진 안 수평 구간 ≤ 사진 폭의 1/4, 다른 선과 ≥6px, 가운데 줄은 가까운 위·아래 여백 우선.
+- 금지 범위: Aquilon `layerPlan`, Pulse/Eikos/Zenith `videoLayerPlan`, Aquilon C 시리즈 4종, `io`·사양·사진 및 `builder/`·`cpq/` 수정 금지. 세션 C W-019와 `app.js`·`styles.css`가 겹칠 수 있어 해당 파일은 가급적 건드리지 않고, PR 직전 최신 main을 통합해 의도를 함께 보존.
+- 작업 순서: (1) 승인 7종 지도·사진 기준 확인 (2) 동일 n label·desc 검증과 단일 번호 목록 테스트 (3) validator/list renderer와 RS 지도·되감기 함수 (4) 승인 7종 전후 미리보기 및 비대상 화면 불변 확인 (5) 전체 검사·파생물 검사 (6) PR·CI·병합.
+- 초기 구현·검증 경과는 위에 남겼다. 최신 지시 반영: Pulse·Eikos·Zenith 4종 `portMap`을 `origin/main`으로 복원하고 Aquilon RS 7종만 병합 범위로 유지한다. 되감기 테스트도 이 네 지도와 main 기준 픽스처의 동일성을 확인한다.
+\n\n- W-014 최신 main 통합: origin/main 38489ee (#588 Epson 변경 포함). Work/기록/W-20261016-015-예외.md 충돌은 Analog Way·Epson 두 섹션을 모두 보존했고 search-index는 원본에서 재생성. build-detail-assets, snapshot/search/readable 재생성, search-index --check, verify-pages 통과. 직렬 전체 테스트 819개 중 818 통과·실패 0·기존 skip 1. PR #594와 #596은 확인 시 OPEN.\n
+
+- W-014 main 통합·검증: origin/main 38489ee (#588 포함). 예외 기록은 Analog Way와 Epson 섹션을 모두 보존하고 search-index 충돌은 재생성으로 해결. detail-assets, snapshot/search/readable 재생성 및 search-index --check·verify-pages 통과. 전체 테스트 819개 중 818 통과, 실패 0, 기존 skip 1. 확인 시 PR #594·#596 OPEN.
+
+
+- W-014 integration/verification: merged latest origin/main 38489ee (#588). Resolved exception notes by preserving both Analog Way and Epson sections; regenerated search-index from sources. Rebuilt detail assets, snapshot/search/readable outputs; search-index --check and verify-pages passed. Full serial suite: 818 pass, 0 fail, 1 existing skip (819 total). PR #594 and #596 were OPEN at last check.
+
+- W-014 Work 검토용 PNG 캡처 보강: Chrome headless CDP + 실제 상세 페이지 렌더로 11종 각각 before/after Port Map(760px, 390px 좌·우) 66장과 RS6·Zenith 200·Crown DCi 4|600 상세 번호 목록 1280px 3장을 생성. PNG 시그니처·파일 수·화면 너비를 확인(69장, 잘못된 파일 0). 캡처 인덱스 `Work/기록/W-20261016-014-analogway-preview/screenshots/index.html`; 캡처는 동일 폴더. Work가 PNG 확인 후 병합 순서를 정하기로 해 병합 보류.
+- W-014 #596 병합 후 통합: latest origin/main `4cc0f961` (#596 Aquilon C) 병합 및 검색 인덱스 재생성. `build-detail-assets`, `update-snapshot`, `build-search-index`, `build-readable-catalog` 후 search/readable `--check`, verify-pages 통과(289 카탈로그·286 상세·523 이미지·167 PDF). 전체 직렬 테스트 828개 중 827 통과·실패 0·기존 skip 1. W-014 11종 audit는 29개의 수동 확인 lint 신호(중복 도면/stacked coordinate 안내)로 완료; 전체 audit는 신규 Aquilon C `portMap`의 누락 `measuredImage`에서 중단되어 W-014 범위 밖으로 보고. 통합 후 Chrome 캡처를 다시 만들었고 변경 PNG 4장을 반영. #597 병합은 Work 캡처 검토 전 보류.
+
+### W-014 Work 피드백 반영 (2026-10-17)
+
+- PR #597 병합 보류 지시를 반영. Aquilon C 4종은 세션 D에 배정되어 변경하지 않음.
+- RS 카드형 지도는 입력 카드 종류별 1개, 출력 카드 열별 1개 외곽 괄호로 재배치. 카드 장착 수를 desc에 넣고 제어 단자는 하단 번호로 유지. Pulse/Eikos/Zenith의 중간 줄은 좌우 외곽 범위 괄호로 바꿔 다른 단자 행을 가로지르는 세로 지시선을 제거.
+- 수정 직전/수정 후 번호 원 수: RSalpha 9→8, RS1 12→10, RS2 13→10, RS3 15→10, RS4 16→10, RS5 18→10, RS6 19→10, Pulse 10→10, Eikos 10→10, Zenith 100 14→14, Zenith 200 16→16. Pulse/Eikos/Zenith는 표식 수 감축 대상이 아니며 짧은 가장자리 괄호로 오인 가능성을 줄임.
+- 11종 전후 760px·390px 좌우 66장과 RS6·Zenith 200·Crown DCi 4|600 목록 1280px 3장 캡처, 갤러리: Work/기록/W-20261016-014-analogway-preview/screenshots/index.html. RS6·Pulse·Zenith 대표 화면 및 390px를 검토; 번호와 카드 목록 유지, 비대상 Crown 목록 동일.
+- 집중 지도 테스트·되감기·기존 라벨·#598 H5 검증 테스트 22/22 통과. `verify-pages`, search-index/readable-catalog `--check` 통과. 최신 main `0645b86c`에는 #598 `849450c58f2d2b591f8c74a24ff682543c95f11e`가 포함됨. W-014 중복 번호 동일 label·desc 허용을 유지하면서 `portMaps` 제조사 제한 해제·일반 role 고유성·Other 허용 조건도 보존. 전체 테스트 838건 중 837 통과·실패 0·기존 skip 1.
+- 최신 미리보기 69장 재생성: 11종 전후 760px·390px 좌우 66장 + RS6·Zenith 200·Crown DCi 4|600 번호 목록 1280px 3장. 다음은 통합 커밋/push 후 PR #597 필수 CI 확인; Work가 화면을 확인하고 병합 순서를 다시 결정할 때까지 병합하지 않는다.
+- #598 849450c5 병합 확인. 다음: 작업 커밋 → 최신 origin/main 통합, validMap의 portMaps 제조사 제한 해제·일반 제품 role 고유 검사·Other 허용과 W-014 같은 번호 허용 보존 → 전체 검사·캡처 확인 → PR #597 CI 초록 후 Work에 병합 순서 요청. 병합 금지.
+
+- 최종 범위 조정: 고정 단자판 4종은 줄 단위 옆 괄호로 단자를 특정할 수 없어 제외했다. 네 제품 지도는 `origin/main`과 portMap 필드가 완전히 동일하다. 예외 기록·Work 인계서·PNG 갤러리·PR 본문은 승인 범위 7종으로 표기한다.
+- 최종 검증: 집중 Port Map·되감기·기준 불변 테스트 8/8 통과. 전체 `node --test --test-concurrency=1 tests/*.test.mjs`: 838건 중 837 통과·실패 0·기존 skip 1. `verify-pages` 통과(289 카탈로그, 286 상세, 525 이미지, 167 PDF); search/readable `--check`와 `git diff --check` 통과. Python 런타임이 없어 Port Map audit 스크립트는 재실행하지 못했으며, 승인된 Aquilon RS 제품 좌표는 수정하지 않았다.
