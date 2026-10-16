@@ -1,19 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {beforeW16009Product, beforeW16009Raw} from './w16009-history.mjs';
 import {portMapGeometry} from '../beta/site/detail/detail-enhancement-view.mjs';
 const slugs=['pt-mz11k','pt-mz14k','pt-mz17k','x100pro-2u','eb-l895e'];
+const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-009-prior-fields.json',import.meta.url),'utf8'));
 const read=s=>JSON.parse(readFileSync(new URL('../beta/site/detail/data/'+s+'.json',import.meta.url),'utf8'));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 test('W-009 selective inverse restores only approved fields and exposes unrelated regressions',()=>{
  for(const slug of slugs){
   const raw=readFileSync(new URL('../beta/site/detail/data/'+slug+'.json',import.meta.url),'utf8');
-  const prior=execFileSync('git',['show','origin/main:beta/site/detail/data/'+slug+'.json'],{encoding:'utf8'});
-  assert.equal(beforeW16009Raw(raw,slug),prior,slug);
   const current=JSON.parse(raw);
+  const reversed=JSON.parse(beforeW16009Raw(raw,slug));
+  const approvedFields=new Set(Object.keys(fixture[slug].prior));
+  for(const field of approvedFields)assert.deepEqual(reversed[field],fixture[slug].prior[field],slug+': prior '+field);
+  for(const [field,value] of Object.entries(current))if(!approvedFields.has(field))assert.deepEqual(reversed[field],value,slug+': current '+field);
   const unrelated=structuredClone(current);
   unrelated.model='INVALID';
   assert.equal(beforeW16009Product(unrelated,slug).model,'INVALID',slug);
