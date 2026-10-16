@@ -37,7 +37,8 @@
 - [x] W-017 (`8845d808`), #582 (`0d7bd46a`), #584 (`2f5c455b`), #585 (`2e4bc54c8d49f33d59273b5c5cb71e166752dd61`)를 포함한 최신 `origin/main`을 통합했다. `search-index`, readable catalog, public snapshot, 상세 정적 자산을 재생성했다. merge conflict는 파생 인덱스 재생성과 이력 되감기 함수를 병합해 해결했다.
 - [x] 네 제품의 1280px·390px 캡처를 다시 만들고 눈으로 확인했다. 390px `document.documentElement.scrollWidth`는 네 제품 모두 390이다. 1280px 캡처 파일과 390px 파일: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
 - [x] 최신 main 기준 직렬 전체 테스트 799건 중 798 통과·1 스킵·실패 0. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF). PDF.js canvas/font 관련 환경 경고는 있으나 해당 검사와 테스트는 통과했다.
-- [ ] 변경 커밋·PR 갱신·CI 확인·Work 재검토 요청 대기. Work 승인 전 병합하지 않는다.
+- [x] PR #583을 Work 검토 수정과 최신 main 통합 내용으로 갱신했다. Builder CI run `38899749586` 통과.
+- [ ] Work 독립 재검토·승인 대기. 승인 전 병합하지 않는다.
 - 근거표: `Work/기록/W-20261016-011-근거표.md` · Work 인계: `Work/기록/W-20261016-011-Work-인계.md`
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검
