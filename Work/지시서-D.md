@@ -170,3 +170,5 @@
 - 48개 과거 검사 파일의 읽기 지점에 좌표만 되감는 어댑터 적용. 현재14종approved SHA 직접 검사, 예상 외 기하 거부, desc/io/overview 보존 회귀 추가. 기존 해시 상수 유지.
 
 - 통합 전 전체 검사: `node --test --test-concurrency=1 tests/*.test.mjs` 800건 / 799 pass / 0 fail / 기존 skip1(74.5초). 앞선 병렬 실행의 RTCOM 임시 디렉터리 rename EPERM2건은 단독 재실행6건 및 전체 순차 재실행에서 통과. 실제 상세28화면(14종×760/390) 번호수 일치·페이지 넘침0. verify-pages/검색 인덱스/87PNG 갤러리/diff 검사 통과.
+
+- 최신 main **4daad18d**(#587 Samsung 검토 기록) 통합. 공통 예외 기록의 append 충돌은 Samsung 원문 섹션과6b섹션을 모두 보존. 제품/렌더러/테스트 변경 없는 문서 통합이며 파생 재생성 후 변화 없음.
