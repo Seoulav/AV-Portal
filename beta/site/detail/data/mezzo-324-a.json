@@ -769,7 +769,6 @@
         "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
         "x1": 35,
         "x2": 119,
-        "y": 45,
         "side": "top"
       },
       {
@@ -778,7 +777,6 @@
         "desc": "4채널 스피커 출력 · MEZZO Series User Guide 39쪽",
         "x1": 136,
         "x2": 242,
-        "y": 68,
         "side": "bottom"
       },
       {
@@ -787,7 +785,6 @@
         "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
         "x1": 252,
         "x2": 306,
-        "y": 68,
         "side": "top"
       },
       {
@@ -796,7 +793,6 @@
         "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
         "x1": 316,
         "x2": 332,
-        "y": 68,
         "side": "bottom"
       },
       {
@@ -805,7 +801,6 @@
         "desc": "아날로그 입력 단자대 · MEZZO Series User Guide 39쪽",
         "x1": 336,
         "x2": 392,
-        "y": 68,
         "side": "top"
       },
       {
@@ -814,7 +809,6 @@
         "desc": "제어/모니터링 · MEZZO Series User Guide 39쪽",
         "x1": 396,
         "x2": 447,
-        "y": 25,
         "side": "top"
       },
       {
@@ -823,7 +817,6 @@
         "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
         "x1": 403,
         "x2": 483,
-        "y": 75,
         "side": "bottom"
       }
     ],
@@ -831,6 +824,10 @@
       "file": "mezzo-324-a-rear.webp",
       "width": 489,
       "height": 95
+    },
+    "crop": {
+      "top": 25,
+      "bottom": 14
     }
   }
 }

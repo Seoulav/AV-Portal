@@ -872,7 +872,6 @@
         "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
         "x1": 34,
         "x2": 118,
-        "y": 45,
         "side": "top"
       },
       {
@@ -881,7 +880,6 @@
         "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
         "x1": 188,
         "x2": 241,
-        "y": 68,
         "side": "bottom"
       },
       {
@@ -890,7 +888,6 @@
         "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
         "x1": 251,
         "x2": 305,
-        "y": 68,
         "side": "top"
       },
       {
@@ -899,7 +896,6 @@
         "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
         "x1": 315,
         "x2": 331,
-        "y": 68,
         "side": "bottom"
       },
       {
@@ -908,7 +904,6 @@
         "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
         "x1": 334,
         "x2": 393,
-        "y": 68,
         "side": "top"
       },
       {
@@ -917,7 +912,6 @@
         "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
         "x1": 396,
         "x2": 483,
-        "y": 25,
         "side": "top"
       },
       {
@@ -926,7 +920,6 @@
         "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
         "x1": 403,
         "x2": 483,
-        "y": 75,
         "side": "bottom"
       }
     ],
@@ -934,6 +927,10 @@
       "file": "mezzo-602-ad-rear.webp",
       "width": 487,
       "height": 95
+    },
+    "crop": {
+      "top": 25,
+      "bottom": 14
     }
   }
 }
