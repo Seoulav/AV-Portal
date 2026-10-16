@@ -21,6 +21,8 @@
   --lod-dim: rgba(15, 23, 42, 0.55);
   --notice-bg: #0f172a;
   --notice-text: #ffffff;
+  --page-wash: radial-gradient(circle at 8% 0%, #e7efff 0, transparent 38%), radial-gradient(circle at 92% 10%, #f0eaff 0, transparent 32%), var(--bg);
+  --card-shadow: 0 12px 32px rgba(24, 47, 91, 0.08);
   font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -47,6 +49,8 @@
   --lod-dim: rgba(255, 255, 255, 0.5);
   --notice-bg: #e2e8f0;
   --notice-text: #0f172a;
+  --page-wash: radial-gradient(circle at 8% 0%, #1d3155 0, transparent 38%), radial-gradient(circle at 92% 10%, #282044 0, transparent 32%), var(--bg);
+  --card-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -57,22 +61,27 @@ button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent);
 button:disabled { opacity: 0.45; cursor: default; }
 button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 button.primary:hover:not(:disabled) { color: #fff; filter: brightness(1.08); }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 button.danger { color: var(--danger); }
 .icon-button { padding: 0 6px; line-height: 20px; border-radius: 6px; }
 input, select, textarea { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: var(--panel); color: var(--text); min-width: 0; font: inherit; }
 
-.app { display: flex; flex-direction: column; height: 100%; }
-.toolbar { display: flex; align-items: center; gap: 12px; padding: 8px 14px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.app { display: flex; flex-direction: column; height: 100%; background: var(--page-wash); }
+.toolbar { display: flex; flex-direction: column; gap: 10px; padding: 12px 16px; margin: 12px 12px 0; background: color-mix(in srgb, var(--panel) 94%, transparent); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--card-shadow); }
+.toolbar-brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .brand { font-weight: 700; color: var(--accent); text-decoration: none; }
+.brand-mark { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 8px; color: white; font-size: 11px; font-weight: 800; border-radius: 9px; background: linear-gradient(135deg, #007aff, #7457d7); }
 .app-name { font-weight: 700; }
 .beta { font-size: 11px; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 1px 7px; margin-left: 4px; }
-.toolbar-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.toolbar-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.toolbar-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; padding: 5px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }
+.toolbar-group button { min-height: 32px; }
 .divider { width: 1px; height: 20px; background: var(--line); margin: 0 4px; }
 .toolbar-status { margin-left: auto; color: var(--muted); font-size: 13px; }
 
-.workspace { flex: 1; display: flex; min-height: 0; }
-.library-panel, .side-panel { width: 280px; flex: none; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; padding: 12px; gap: 8px; overflow: hidden; }
-.side-panel { border-right: 0; border-left: 1px solid var(--line); overflow-y: auto; }
+.workspace { flex: 1; display: flex; gap: 12px; min-height: 0; padding: 12px; }
+.library-panel, .side-panel { width: 270px; flex: none; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow); display: flex; flex-direction: column; padding: 14px; gap: 8px; overflow: hidden; }
+.side-panel { overflow-y: auto; }
 .panel-head { display: flex; align-items: center; justify-content: space-between; }
 .panel-title { font-weight: 700; }
 .panel-subtitle { font-weight: 600; font-size: 13px; margin-top: 6px; }
@@ -92,7 +101,7 @@ input, select, textarea { border: 1px solid var(--line); border-radius: 8px; pad
 .lib-badge { font-size: 10px; color: var(--warn); background: var(--warn-soft); border-radius: 999px; padding: 0 6px; white-space: nowrap; }
 .lib-badge.muted { color: var(--muted); background: var(--surface-soft); }
 
-.canvas { flex: 1; position: relative; min-width: 0; }
+.canvas { flex: 1; position: relative; min-width: 0; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--card-shadow); overflow: hidden; }
 .canvas-loading { display: grid; place-items: center; color: var(--muted); }
 
 /* 장비 노드: 폭 220, 위아래 여백 12, 헤더 54, 사진 68, 단자 행 24 + 간격 4, 양방향 앞 간격 8 + 머리 13 */

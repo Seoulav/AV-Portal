@@ -130,32 +130,35 @@ export function Toolbar() {
   const equipmentCount = state.diagram.nodes.filter(node => node.type === 'equipment').length;
   return (
     <header className="toolbar" onMouseDown={keepFocus}>
-      <button type="button" onClick={() => { try { openQuote(JSON.parse(state.exportText()), text => state.notify({text,tone:'info'})); } catch { state.notify({text:'구성도를 전달하지 못했습니다. 내용을 확인해 주세요.',tone:'error'}); } }}>견적 만들기</button>
-      <a className="brand" href="../">AV Portal</a>
-      <span className="app-name">AV System Designer <span className="beta">베타</span></span>
-      <div className="toolbar-actions">
-        <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
-        <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>
-        <button type="button" className="primary" onClick={exportFile} disabled={!ready} title="구성도 JSON(1.2) 파일">내보내기</button>
-        <button type="button" onClick={exportSvg} disabled={!ready || !state.diagram.nodes.length} title="도면을 벡터 SVG로 받는다">SVG</button>
-        <button type="button" onClick={() => void exportPdf()} disabled={!ready || !state.diagram.nodes.length || makingPdf} title="도면을 벡터 PDF로 받는다(한글 글꼴 포함)">{makingPdf ? 'PDF 만드는 중…' : 'PDF'}</button>
-        <span className="divider" />
-        <button type="button" onClick={state.undo} disabled={!state.past.length} title="Ctrl+Z">실행 취소</button>
-        <button type="button" onClick={state.redo} disabled={!state.future.length} title="Ctrl+Y">다시 실행</button>
-        <span className="divider" />
-        <button type="button" onClick={() => state.addAnnotation(center())} disabled={!ready}>메모</button>
-        <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
-        <span className="divider" />
-        <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
-        <span className="divider" />
-        <button type="button" onClick={() => void autoLayout()} disabled={!ready || laying || equipmentCount === 0} title="신호 흐름을 왼쪽에서 오른쪽으로 놓는다. 실행 취소로 되돌릴 수 있다">오토 레이아웃</button>
-        <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
-        <button type="button" className={state.snapToGrid ? 'active' : ''} aria-pressed={state.snapToGrid} onClick={state.toggleSnapToGrid} title="장비를 15px 격자에 맞춰 놓는다">격자</button>
-        <button type="button" className={state.showMiniMap ? 'active' : ''} aria-pressed={state.showMiniMap} onClick={state.toggleMiniMap} title="오른쪽 아래에 전체 도면을 작게 보인다">미니맵</button>
-        <span className="divider" />
-        <button type="button" className={state.theme === 'dark' ? 'active' : ''} aria-pressed={state.theme === 'dark'} onClick={state.toggleTheme} title="어두운 화면과 밝은 화면을 바꾼다. 이 브라우저에 남는다">어두운 테마</button>
+      <div className="toolbar-brand">
+        <a className="brand" href="../"><span className="brand-mark" aria-hidden="true">AV</span>AV Portal</a>
+        <span className="app-name">AV System Designer <span className="beta">베타</span></span>
+        <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
       </div>
-      <span className="toolbar-status">장비 {equipmentCount} · 연결 {state.diagram.edges.length}</span>
+      <div className="toolbar-actions">
+        <div className="toolbar-group toolbar-group-project" aria-label="프로젝트">
+          <button type="button" onClick={confirmNew} disabled={!ready}>새 구성도</button>
+          <button type="button" onClick={() => fileInput.current?.click()} disabled={!ready}>열기</button>
+          <button type="button" className="primary" onClick={exportFile} disabled={!ready} title="구성도 JSON(1.2) 파일">내보내기</button>
+          <button type="button" onClick={exportSvg} disabled={!ready || !state.diagram.nodes.length} title="도면을 벡터 SVG로 받는다">SVG</button>
+          <button type="button" onClick={() => void exportPdf()} disabled={!ready || !state.diagram.nodes.length || makingPdf} title="도면을 벡터 PDF로 받는다(한글 글꼴 포함)">{makingPdf ? 'PDF 만드는 중…' : 'PDF'}</button>
+          <button type="button" onClick={() => { try { openQuote(JSON.parse(state.exportText()), text => state.notify({text,tone:'info'})); } catch { state.notify({text:'구성도를 전달하지 못했습니다. 내용을 확인해 주세요.',tone:'error'}); } }}>견적 만들기</button>
+        </div>
+        <div className="toolbar-group toolbar-group-edit" aria-label="편집">
+          <button type="button" onClick={state.undo} disabled={!state.past.length} title="Ctrl+Z">실행 취소</button>
+          <button type="button" onClick={state.redo} disabled={!state.future.length} title="Ctrl+Y">다시 실행</button>
+          <button type="button" onClick={() => state.addAnnotation(center())} disabled={!ready}>메모</button>
+          <button type="button" onClick={() => state.addShape(center())} disabled={!ready}>영역</button>
+        </div>
+        <div className="toolbar-group toolbar-group-view" aria-label="보기">
+          <button type="button" className={state.cableView ? 'active' : ''} aria-pressed={state.cableView} onClick={state.toggleCableView} title="엣지 라벨에 케이블 요약을 보인다(구 Builder BOM 모드)">케이블 보기</button>
+          <button type="button" onClick={() => void autoLayout()} disabled={!ready || laying || equipmentCount === 0} title="신호 흐름을 왼쪽에서 오른쪽으로 놓는다. 실행 취소로 되돌릴 수 있다">오토 레이아웃</button>
+          <button type="button" className={state.locked ? 'active lock' : ''} aria-pressed={state.locked} onClick={state.toggleLock} title="장비를 끌어 옮기지 못하게 한다. 연결은 그대로 할 수 있다">잠금</button>
+          <button type="button" className={state.snapToGrid ? 'active' : ''} aria-pressed={state.snapToGrid} onClick={state.toggleSnapToGrid} title="장비를 15px 격자에 맞춰 놓는다">격자</button>
+          <button type="button" className={state.showMiniMap ? 'active' : ''} aria-pressed={state.showMiniMap} onClick={state.toggleMiniMap} title="오른쪽 아래에 전체 도면을 작게 보인다">미니맵</button>
+          <button type="button" className={state.theme === 'dark' ? 'active' : ''} aria-pressed={state.theme === 'dark'} onClick={state.toggleTheme} title="어두운 화면과 밝은 화면을 바꾼다. 이 브라우저에 남는다">어두운 테마</button>
+        </div>
+      </div>
       <input ref={fileInput} type="file" accept=".json,application/json" hidden onChange={event => { void openFile(event.target.files?.[0]); event.target.value = ''; }} />
     </header>
   );
