@@ -337,3 +337,5 @@
 - [ ] 최신main 통합·파생재생성·PR/CI→Work 병합 승인 요청. 상태 REVIEW. 승인 전 병합 금지.
 
 - [x] 최신 origin/main f5a7a6b0(#602 Zenith100) 통합, 파생물 재생성. 통합 후 전체872건871pass/0fail/기존skip1(54.8초), Pages/검색/읽기용카탈로그check 재통과. PR 전 원본변경 범위·예외8줄추가·캡처72장/문서링크76개·diffcheck 확인.
+
+- PR #603: https://github.com/Seoulav/AV-Portal/pull/603. 9지도 전후72PNG·3배확대·점검표 제출. CI 실행 중이며 Work 최종 시각 승인/병합 순서 확인 전 병합하지 않음.

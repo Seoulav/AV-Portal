@@ -31,3 +31,5 @@ REVIEW. Work 2026-10-17 배정. 문서 PR #601은 d960088b6d8ed82c94aa16f1834c57
 - origin/main f5a7a6b0433166209fca715ad37bd874dd158500 (#602 Zenith100 보정 포함)을 통합. 제품/테스트/사진의 세션 B 변경을 그대로 보존. 검색 인덱스 충돌은 원본에서 재생성으로 해결.
 - 본 PR 기준 예외 문서 변경은 세션 D 섹션 8줄 추가뿐. 렌더러·검증기·잠금 PDF·builder/cpq·다른 세션 진행 파일 변경 없음.
 - 통합 후 전체872건871pass/0fail/기존skip1(54.8초), 종료0. Pages·검색·읽기용카탈로그check 재통과.
+
+- PR: https://github.com/Seoulav/AV-Portal/pull/603. CI/Work 승인 대기.
