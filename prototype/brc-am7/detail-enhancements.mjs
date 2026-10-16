@@ -27,10 +27,11 @@ function validMap(map, product) {
   const image = product.images?.find(i => i.role === map?.image && text(i.file) &&
     (!rtcom || i.file === map?.imageFile));
   const size = dimensions(image?.resolution);
+  const belkinPlugMap = product.manufacturer === 'Belkin' && product.model === 'AVC024' && map?.image === 'Main';
   return record(map) && keys(map, rtcom
     ? ['image', 'imageFile', 'items', 'measuredImage', 'crop', 'title', 'note', 'basis', 'displayWidth']
-    : ['image', 'items', 'measuredImage', 'crop']) &&
-    (rtcom ? ['Main', 'Front', 'Rear', 'Other', 'Perspective', 'Diagram'] : ['Front', 'Rear', 'Diagram']).includes(map.image) &&
+    : belkinPlugMap ? ['image', 'items', 'measuredImage', 'crop', 'note'] : ['image', 'items', 'measuredImage', 'crop']) &&
+    (rtcom ? ['Main', 'Front', 'Rear', 'Other', 'Perspective', 'Diagram'] : (product.manufacturer === 'Belkin' && product.model === 'AVC024' && map.image === 'Main' ? ['Front', 'Rear', 'Diagram', 'Main'] : ['Front', 'Rear', 'Diagram'])).includes(map.image) &&
     (!rtcom || (text(map.imageFile) && typeof map.title !== 'number' &&
       (map.displayWidth === undefined || Number.isFinite(map.displayWidth) && map.displayWidth > 0))) &&
     size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'

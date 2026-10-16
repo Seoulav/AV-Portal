@@ -1,4 +1,4 @@
-import { prepareEnhancements, selectCardModes } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
+import { prepareEnhancements, selectCardModes } from './detail-enhancements.mjs?v=w20261016-008-belkin-connect-air';
 const QUICK_DOCUMENTS = [
   ['매뉴얼', 'User Manual', '매뉴얼 미확인'],
   ['시방서', 'Independent Specification', '공식 독립 시방서 미확인'],

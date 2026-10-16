@@ -1,6 +1,6 @@
 import { layerComparisonFor, layerComparisonHeadings } from './layer-tables.mjs?v=w20261013-017-labels';
 import { renderLead, renderKeyFacts, renderPortMap, renderPortMapCards, renderIoFallbackCards, renderSignalFlow, renderSetting } from './detail-enhancement-view.mjs?v=w20261014-pixelfit-layout';
-import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261012-015-rtcom-parity';
+import { portMapImageMatches, selectSection03Content } from './detail-enhancements.mjs?v=w20261016-008-belkin-connect-air';
 import { prepareProductDetail, visibleDetailCards, connectorPresentation, prepareIoFallbackEntries, orderSpecificationRows, prepareOutputPowerTable } from './product-detail-model.mjs?v=w20261012-008-amp-table';
 import { resolveDocumentAction, uploadedDocumentsFor, documentCardVisible, documentActionLabels } from './pdf-documents.mjs';
 import { createPdfViewer } from '../../beta/site/shared/pdf-viewer.mjs';
