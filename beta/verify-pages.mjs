@@ -288,7 +288,7 @@ assert.deepEqual(Object.keys(snapshot.details).sort(), slugs);
 // 상세 JSON에 허용되는 최상위 키. 새 키는 공개 경계를 다시 검토한 뒤에만 추가한다.
 const detailRequiredKeys = ['categories', 'documents', 'english', 'features', 'imageStatuses', 'images', 'io', 'issues', 'korean', 'manufacturer', 'model', 'overview', 'packageStatus', 'presentation', 'productName', 'sources', 'specifications', 'verificationSummary'];
 // slots·slotType·compatibleFrames: 슬롯 수·카드 장착 대상만 담는 Builder용 공개 필드(B-20261013-03 승인). 형식 검사는 결선용 라이브러리 생성기가 한다.
-const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitle', 'keyFacts', 'portMap', 'signalFlow', 'settings', 'slots', 'slotType', 'compatibleFrames'];
+const detailOptionalKeys = ['itemType', 'series', 'seriesNote', 'lead', 'subtitle', 'keyFacts', 'portMap', 'signalFlow', 'settings', 'layerPlan', 'slots', 'slotType', 'compatibleFrames'];
 const detailAllowedKeys = new Set([...detailRequiredKeys, ...detailOptionalKeys]);
 
 const brandBySlug = new Map(catalog.filter(item => item.slug).map(item => [item.slug, item.brand]));
@@ -395,7 +395,9 @@ for (const slug of slugs) {
   assert.equal(product.specifications.length, expected.specifications);
   assert.equal(product.io.length, expected.io);
   assert.ok(product.features.length > 0 && product.specifications.length > 0, `${slug}: 빈 상세`);
-  assert.equal(product.documents.filter(document => ['User Manual', 'Independent Specification', 'Specification', 'Technical Document'].includes(document.type)).length, 4);
+  const quickDocumentTypes = product.documents.map(document => document.type);
+  for (const type of ['User Manual', 'Independent Specification', 'Specification']) assert.equal(quickDocumentTypes.filter(value => value === type).length, 1, `${slug}: ${type} 문서 슬롯`);
+  assert.equal(quickDocumentTypes.filter(value => value === 'Technical Document' || value === 'Brochure').length, 1, `${slug}: 기술문서 또는 브로슈어 슬롯`);
   for (const document of product.documents) if (document.status === 'MISSING') assert.equal(document.url, undefined);
   for (const image of product.imageStatuses) assert.ok(['MISSING', 'REVIEW REQUIRED', 'FOUND', 'VERIFIED'].includes(image.status));
 }
