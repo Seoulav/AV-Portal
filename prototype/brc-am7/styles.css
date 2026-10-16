@@ -465,3 +465,36 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 }
 
 .inogeni-flow .inogeni-control-line { fill: none; stroke: #686580; stroke-width: 2; stroke-dasharray: 7 6; }
+
+/* W-20261016-011 shared Midra 4K / Alta 4K layer analysis. */
+.video-layer-plan { margin-top: 22px; padding: 20px; border: 1px solid var(--pg-line); border-radius: var(--pg-r-inner); background: linear-gradient(135deg, #f7faff, #f2fbfc); min-width: 0; }
+.video-layer-plan h2 { margin: 0 0 8px; font-size: 20px; }
+.video-layer-plan h3 { margin: 16px 0 8px; font-size: 15px; }
+.video-layer-intro { color: var(--pg-ink); font-weight: 650; line-height: 1.65; }
+.video-layer-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+.video-layer-metric, .video-layer-mode, .video-layer-compare-card { min-width: 0; padding: 14px; border: 1px solid var(--pg-line); border-radius: 14px; background: #fff; }
+.video-layer-metric { display: grid; gap: 7px; }
+.video-layer-metric small, .video-layer-source-note { color: var(--pg-ink-2); }
+.video-layer-metric strong { font-size: 18px; }
+.video-layer-modes { margin: 16px 0; }
+.video-layer-mode + .video-layer-mode { margin-top: 9px; }
+.video-layer-mode h4 { margin: 0 0 5px; }
+.video-layer-mode p, .video-layer-compare-card p { margin: 4px 0; color: var(--pg-ink-2); line-height: 1.6; }
+.video-layer-table-wrap { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.video-layer-table-wrap table { min-width: 720px; }
+.video-layer-table-wrap th, .video-layer-table-wrap td { white-space: nowrap; }
+.video-layer-table-wrap th:first-child { min-width: 140px; text-align: left; }
+.video-layer-current { background: #eaf3ff; }
+.video-layer-table-hint { margin: 6px 0; color: var(--pg-ink-2); font-size: 13px; }
+.video-layer-comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.video-layer-notes { padding-left: 20px; color: var(--pg-ink-2); line-height: 1.65; }
+.video-layer-notes li + li { margin-top: 5px; }
+.video-layer-source-note { display: block; margin-top: 12px; line-height: 1.6; }
+@media (max-width: 720px) {
+  .video-layer-plan { padding: 14px; }
+  .video-layer-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-layer-metric { padding: 11px; }
+  .video-layer-metric strong { font-size: 15px; }
+  .video-layer-comparison-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* W-20261016-011 shared layer analysis end. */

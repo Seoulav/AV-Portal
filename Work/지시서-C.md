@@ -23,7 +23,7 @@
 
 ## W-20261016-011 — Midra 4K · Zenith(Alta 4K) 공용 레이어 해설
 
-- 상태: IN_PROGRESS
+- 상태: REVIEW
 - 명세: `Work/작업/W-20261016-011.md` · 인계서 `Work/기록/W-20261016-011-Codex-인계.md`
 - 명세 확인 커밋: `6063ab4afcb239cc7a5a9609117fa9353600934f` · 구현 시작 main: `ea8ce10ef167cf7b4804eacd7ff70a78dabe5122`
 - 브랜치: `codex/W-20261016-011-midra-zenith` · 전용 워크트리 `../codex-c-w011`
@@ -32,7 +32,10 @@
 - [x] Midra Mixer·Matrix, Eikos Hard/Soft Edge, Alta 장비 전체 레이어 풀·화면 배분을 구분했다. 출력별 추가 자원 산식, HD Aux 레이어·4K/HD 혼합 비용은 미확인으로 기록했다.
 - [x] 네 제품 JSON에 계열 공유 `videoLayerPlan`과 제품별 결론 문장을 추가했다. XDM-WOS100 레이어 수는 RTCOM 원본에 없어 숫자 비교를 하지 않는다.
 - [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 6개 타깃 테스트를 추가했다.
-- [ ] 1280px·390px 미리보기 4종, 전체 테스트·파생 산출물·verify-pages, 최신 main 통합, PR·CI·Work 병합 순서 확인.
+- [x] 최신 `origin/main` (`8845d808`, W-017) 통합 및 파생 산출물 재생성을 마쳤다.
+- [x] 네 제품을 1280px·390px로 캡처했다. 모바일 `document.documentElement.scrollWidth`는 모두 390이며 레이어 영역 전체가 보인다. 캡처: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
+- [x] 직렬 전체 테스트 786건 중 785 통과·1 스킵·실패 0. 검색 인덱스·읽기용 카탈로그 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF).
+- [ ] PR·CI·Work 병합 순서 확인·병합·Pages 공개 확인.
 - 근거표: `Work/기록/W-20261016-011-근거표.md` · Work 인계: `Work/기록/W-20261016-011-Work-인계.md`
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검

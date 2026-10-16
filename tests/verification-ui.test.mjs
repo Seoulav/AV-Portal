@@ -51,8 +51,8 @@ test('public pages display a version badge while detail assets retain their refr
   assert.match(publicDetail, /data-system-version/);
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
   // The detail asset version advances when its presentation renderer changes.
-  assert.match(detail, /styles\.css\?v=w20261016-010-aquilon-layer-plan/);
-  assert.match(detail, /app\.js\?v=w20261016-010-aquilon-layer-plan/);
+  assert.match(detail, /styles\.css\?v=w20261016-011-video-layer-plan/);
+  assert.match(detail, /app\.js\?v=w20261016-011-video-layer-plan/);
   assert.match(publicDetail, /styles\.css\?v=w20261016-011-video-layer-plan/);
   assert.match(publicDetail, /app\.js\?v=w20261016-011-video-layer-plan/);
 });
