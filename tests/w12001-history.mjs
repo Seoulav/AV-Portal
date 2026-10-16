@@ -1,3 +1,4 @@
+import {beforeCrownW16015Product} from './crown-w16015-history.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW12003Product } from './w12003-kiprogo2-history.mjs';
@@ -16,6 +17,11 @@ export function beforeW12001Product(current, slug, { allowHistorical = false } =
   // Preserve object identity when this history has no record for the product.
   if (!records[slug]) return current;
   current = beforeW20261016_015B4Product(current, slug, { allowHistorical: true });
+  // W-026 may call this again after the exact recorded W-001 predecessor was restored.
+  const previous = records[slug].prior.items.map(item => Object.fromEntries([['n', item.n], ...fields.filter(field => Object.hasOwn(item, field)).map(field => [field, item[field]])]));
+  if (sha(coordinates(current)) === sha(previous)) return current;
+  // These eight DCi maps are already rewound by W-005 before this older audit.
+  if (!/^dci-[24]-(300|600)n?$/.test(slug) && slug !== 'dci-4-600da') current = beforeCrownW16015Product(current, slug);
   current = beforeW20261015_005Product(current, slug);
   const record = records[slug];
   // MX392/ULXD4Q followup groups the ULXD4Q MIC/LINE switches. A direct call may still see
@@ -25,7 +31,6 @@ export function beforeW12001Product(current, slug, { allowHistorical = false } =
   // predecessor before checking the independent W-001 coordinate history.
   if (slug === 'ki-pro-go2' && current.portMap?.items?.length === 11) current = beforeW12003Product(current, slug);
   const approved = coordinates(current);
-  const previous = record.prior.items.map(item => Object.fromEntries([['n', item.n], ...fields.filter(field => Object.hasOwn(item, field)).map(field => [field, item[field]])]));
   if (sha(approved) === sha(previous)) return current;
   if (sha(approved) !== record.approved) {
     if (allowHistorical) return current;

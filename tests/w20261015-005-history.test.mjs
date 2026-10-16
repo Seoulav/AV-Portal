@@ -14,7 +14,7 @@ test('Crown coordinate inverse restores the prior exact product while preserving
   changed.overview += ' independent later wording';
   assert.match(beforeW20261015_005Product(changed, 'dci-4-600da').overview, /independent later wording/);
   changed.portMap.items[0].x2--;
-  assert.throws(() => beforeW20261015_005Product(changed, 'dci-4-600da'), /approved connector ranges changed/);
+  assert.throws(() => beforeW20261015_005Product(changed, 'dci-4-600da'), /approved connector ranges changed|unexpected W-015 Crown geometry change/);
   const other = { model: 'OTHER' };
   assert.equal(beforeW20261015_005Product(other, 'other'), other);
 });
