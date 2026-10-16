@@ -368,3 +368,6 @@
 - [ ] 문서 PR·CI 확인 후 Work 검토/병합 승인 요청. 승인 전 병합 금지. 제품 등록 없음.
 
 - PR [#606](https://github.com/Seoulav/AV-Portal/pull/606) OPEN. 최신 main 598757af 통합 완료, PR 전체 diff 문서3개만 확인. CI 확인 후 Work 문서 승인 요청 예정.
+
+- PR CI: 문서 경로는 Builder/CPQ PR workflow의 paths 대상이 아니고 Pages는 main push에서만 실행됩니다. #606 체크·workflow run 0개, mergeStateStatus CLEAN. CI 통과로 표현하지 않습니다.
+- [x] 문서 PR 제출·최신main/변경범위/CI 적용 여부 확인 완료. Work에게 병합 검토 요청; 승인 전까지 REVIEW 유지.
