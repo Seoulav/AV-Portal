@@ -10,21 +10,14 @@ import {
   readPumsemPrices,
   savedChoiceFits,
 } from '@/services/price-book/readPriceFile';
-import {
-  catalogWithPriceBook,
-  costEntriesFromBook,
-  priceBookCostSession,
-  NO_PRICE_BOOK_REASON,
-  STALE_PRICE_BOOK_REASON,
-} from '@/services/price-book/apply';
-import { buildBlankPriceTemplate, currentCableDefaults, ITEM_HEADERS } from '@/services/price-book/template';
-import { parseStoredPriceRecord, type PriceBook } from '@/services/price-book/types';
+import { costEntriesFromBook, priceBookCostSession } from '@/services/price-book/apply';
+import { buildBlankPriceTemplate, currentCableDefaults, ITEM_HEADERS, ITEM_NOTE_ROW } from '@/services/price-book/template';
+import { parseStoredPriceRecord, type PriceBook, type PumsemColumnChoice } from '@/services/price-book/types';
 import { buildSimpleXlsx, type XlsxCell } from '@/services/price-book/xlsxWriter';
-import { repriceFromCatalog } from '@/domain/quote/repriceFromCatalog';
-import type { QuoteDocument } from '@/domain/quote/types';
 
 /**
- * 가격표 파일 방식 (B-20261016-06).
+ * 가격표 파일 방식 (B-20261016-06) — 2026-10-16 「공개 유지안」: 원가만 읽고,
+ * 판매가는 공개 단가와 대조만 한다.
  *
  * ⚠ **전부 가짜다.** 실제 표준품셈·원가·가격표 파일을 열지 않는다. 머리글
  * 이름은 사용자 견적서 양식(2단 머리글: 원가·재료비·노무비 아래 단가·금액)을
@@ -48,6 +41,20 @@ function product(sku: string, sheet: string, row: number, quoteName: string, spe
   };
 }
 
+/** 가짜 **공개** 판매 단가 — 공개 `prices.json` 자리. */
+const PUBLIC_PRICES = {
+  schemaVersion: 1,
+  generatedOn: '2026-01-01',
+  sourceSha256: SHA,
+  currency: 'KRW',
+  prices: {
+    'VID-0005': { sellingUnitPrice: '1200000', currency: 'KRW' },
+    'VID-0008': { sellingUnitPrice: '400000', currency: 'KRW' },
+    'VID-0011': { sellingUnitPrice: '1234000', currency: 'KRW' },
+    'AUD-0004': { sellingUnitPrice: '99000', currency: 'KRW' },
+  },
+};
+
 function fakeCatalog(): Catalog {
   return buildCatalog({
     schemaVersion: 1,
@@ -64,7 +71,7 @@ function fakeCatalog(): Catalog {
       product('AUD-0004', '오디오', 4, '앰프', 'FAKE-AMP'),
       product('CCT-0005', 'CCTV', 5, '카메라', 'FAKE-CAM'),
     ],
-  });
+  }, PUBLIC_PRICES);
 }
 
 const n = (value: string): XlsxCell => ({ number: value });
@@ -157,15 +164,41 @@ describe('표준품셈 원본 — 시트·행으로 SKU를 찾고, 품명·규�
   const sheets = readXlsxWorkbook(fakePumsemWorkbook());
   const catalog = fakeCatalog();
   const analysis = analyzePumsemWorkbook(sheets, catalog);
-  const book = readPumsemPrices(sheets, analysis, analysis.suggestion, catalog, '2026-10-16T00:00:00.000Z');
+  const choice = analysis.suggestion as PumsemColumnChoice;
+  const book = readPumsemPrices(sheets, analysis, choice, catalog, '2026-10-16T00:00:00.000Z');
 
-  it('맞는 행의 원가·판매가가 붙는다', () => {
-    expect(book.entries['VID-0005']).toEqual({ cost: '800000', selling: '1200000' });
-    expect(book.entries['VID-0011']).toEqual({ cost: '900000', selling: '1234000' });
+  it('맞는 행의 원가만 붙는다 — 판매가는 담지 않는다', () => {
+    expect(book.entries['VID-0005']).toEqual({ cost: '800000' });
+    expect(book.entries['VID-0011']).toEqual({ cost: '900000' });
+    expect(JSON.stringify(book.entries)).not.toContain('selling');
   });
 
   it('다른 시트는 열 위치가 달라도 같은 머리글 이름으로 찾는다', () => {
-    expect(book.entries['AUD-0004']).toEqual({ cost: '70000', selling: '99000' });
+    expect(book.entries['AUD-0004']).toEqual({ cost: '70000' });
+  });
+
+  it('판매가 열은 공개 단가와 대조만 한다 — 다르거나 공개 단가가 없으면 세고 붙이지 않는다', () => {
+    expect(book.summary.sellingDiffers).toBe(2);
+    expect(book.summary.issues).toContainEqual({
+      sheet: '영상', row: 8, sku: 'VID-0008', reason: '가격표 판매가가 공개 단가와 다름 — 붙이지 않음(공개 단가 사용)',
+    });
+    expect(book.summary.issues).toContainEqual({
+      sheet: '영상', row: 10, sku: 'VID-0010', reason: '가격표에 판매가가 있지만 공개 단가가 없음 — 붙이지 않음',
+    });
+    // 쉼표가 든 문자열(1,234,000)은 공개 단가 1234000과 같다.
+    expect(book.summary.issues.some((i) => i.sku === 'VID-0011')).toBe(false);
+  });
+
+  it('판매가 열을 고르지 않아도 된다 — 원가만 읽는다', () => {
+    const costOnly = readPumsemPrices(sheets, analysis, { cost: choice.cost }, catalog, '');
+    expect(costOnly.summary.applied).toBe(4);
+    expect(costOnly.summary.sellingDiffers).toBe(0);
+  });
+
+  it('원가 열은 반드시 골라야 한다', () => {
+    expect(() =>
+      readPumsemPrices(sheets, analysis, { selling: choice.selling } as unknown as PumsemColumnChoice, catalog, ''),
+    ).toThrow(PriceFileError);
   });
 
   it('품명이 다른 행은 "가격표 행 불일치"로 세고 붙이지 않는다', () => {
@@ -174,29 +207,27 @@ describe('표준품셈 원본 — 시트·행으로 SKU를 찾고, 품명·규�
     expect(book.summary.issues).toContainEqual({ sheet: '영상', row: 6, sku: 'VID-0006', reason: '품명이 견적 단가표와 다름' });
   });
 
-  it('빈 칸은 미등록이다 — 0으로 채우지 않는다', () => {
+  it('원가 빈 칸은 미등록이다 — 0으로 채우지 않는다', () => {
     expect(book.entries['VID-0007']).toBeUndefined();
     expect(book.summary.blank).toBe(1);
   });
 
-  it('수식 가격 칸은 읽지 않는다', () => {
-    expect(book.entries['VID-0008']).toEqual({ selling: '444444' });
+  it('수식 원가 칸은 읽지 않는다', () => {
+    expect(book.entries['VID-0008']).toBeUndefined();
     expect(book.summary.formulaSkipped).toBe(1);
   });
 
-  it('파생 단가 품목에는 판매가를 붙이지 않는다', () => {
+  it('파생 단가 품목은 원가만 읽고 판매가는 대조하지 않는다', () => {
     expect(book.entries['VID-0009']).toEqual({ cost: '5000' });
   });
 
-  it('숫자가 아닌 칸은 세고 붙이지 않는다', () => {
-    expect(book.entries['VID-0010']).toEqual({ selling: '660000' });
+  it('숫자가 아닌 원가 칸은 세고 붙이지 않는다', () => {
+    expect(book.entries['VID-0010']).toBeUndefined();
     expect(book.summary.notNumeric).toBe(1);
   });
 
   it('붙은·불일치·빈 칸 건수와 찾지 못한 품목 수를 낸다', () => {
-    expect(book.summary.applied).toBe(6);
-    expect(book.summary.sellingApplied).toBe(5);
-    expect(book.summary.costApplied).toBe(4);
+    expect(book.summary.applied).toBe(4);
     expect(book.summary.missingInFile).toBe(1); // CCTV 시트가 파일에 없다
     expect(book.summary.sheetsRead).toEqual(['영상', '오디오']);
     expect(book.kind).toBe('pumsem');
@@ -213,7 +244,7 @@ describe('표준품셈 원본 — 시트·행으로 SKU를 찾고, 품명·규�
   });
 
   it('저장한 열 선택은 같은 자리·같은 이름일 때만 다시 묻지 않는다', () => {
-    expect(savedChoiceFits(analysis, analysis.suggestion)).toBe(true);
+    expect(savedChoiceFits(analysis, choice)).toBe(true);
     expect(savedChoiceFits(analysis, { cost: { index: 7, label: '원가 / 단 가' } })).toBe(false);
     expect(savedChoiceFits(analysis, { cost: { index: 6, label: '원가' } })).toBe(false);
     expect(savedChoiceFits(analysis, undefined)).toBe(false);
@@ -271,13 +302,13 @@ describe('4시트 가격표 — 품목 단가 시트', () => {
     expect(isFourSheetWorkbook(sheets)).toBe(true);
   });
 
-  it('품목코드로 붙이고, 모델·품명이 다르거나 중복이면 붙이지 않는다 — 중복은 모든 줄을 뺀다', () => {
-    expect(book.entries['VID-0005']).toEqual({ cost: '500', selling: '900' });
+  it('품목코드로 원가를 붙이고, 모델·품명이 다르거나 중복이면 붙이지 않는다 — 중복은 모든 줄을 뺀다', () => {
+    expect(book.entries['VID-0005']).toEqual({ cost: '500' });
     expect(book.entries['VID-0006']).toBeUndefined();
     expect(book.entries['VID-0008']).toBeUndefined();
     expect(book.summary.unknownCodes).toBe(1);
     expect(book.summary.mismatched).toBe(4);
-    expect(book.summary.issues.map((i) => i.reason)).toEqual([
+    expect(book.summary.issues.map((i) => i.reason).filter((r) => !r.includes('판매가'))).toEqual([
       '견적 단가표에 없는 품목코드',
       '모델이 견적 단가표와 다름',
       '품목코드 중복 — 어느 줄인지 정할 수 없음',
@@ -286,11 +317,22 @@ describe('4시트 가격표 — 품목 단가 시트', () => {
     ]);
   });
 
-  it('모델·품명이 둘 다 비면 붙이지 않는다. 하나만 적혀 있으면 그것으로 대조한다. 빈 가격은 미등록이다', () => {
+  it('판매가가 공개 단가와 다르면(또는 공개 단가가 없으면) 붙이지 않고 센다', () => {
+    expect(book.summary.sellingDiffers).toBe(2); // VID-0005(900 ≠ 공개 1200000), VID-0010(공개 단가 없음)
+  });
+
+  it('모델·품명이 둘 다 비면 붙이지 않는다. 하나만 적혀 있으면 그것으로 대조한다. 빈 원가는 미등록이다', () => {
     expect(book.entries['AUD-0004']).toBeUndefined();
-    expect(book.entries['VID-0010']).toEqual({ selling: '32000' });
+    expect(book.entries['VID-0010']).toBeUndefined();
     expect(book.entries['VID-0007']).toBeUndefined();
-    expect(book.summary.blank).toBe(1);
+    expect(book.summary.blank).toBe(3);
+  });
+
+  it("'원가' 머리글이 없으면 거부한다 — 판매가만 있는 가격표는 받지 않는다", () => {
+    const sellingOnly = readXlsxWorkbook(
+      buildSimpleXlsx([{ name: '품목 단가', rows: [['품목코드', '모델', '품명', '판매가'], ['VID-0005', 'FAKE-MX8', '', n('1')]] }]),
+    );
+    expect(() => readFourSheetPrices(sellingOnly, catalog, '')).toThrow(PriceFileError);
   });
 
   it('원화 밖 통화 기호가 붙은 가격은 원으로 바꿔 읽지 않는다', () => {
@@ -322,12 +364,14 @@ describe('빈 가격표 서식', () => {
     expect(sheets.map((s) => s.name)).toEqual(['품목 단가', '기본값', '노무 확인', '간접비']);
   });
 
-  it('품목 단가 — 품목코드·모델·품명을 채우고 원가·판매가는 비운다', () => {
+  it('품목 단가 — 품목코드·모델·품명을 채우고 원가·판매가는 비운다. 판매가는 선택이라고 적는다', () => {
     const items = sheets[0]!;
     expect(items.rows[0]).toEqual([...ITEM_HEADERS]);
-    expect(items.rows).toHaveLength(catalog.products.length + 1);
-    expect(items.rows[1]!.slice(0, 3)).toEqual(['VID-0005', 'FAKE-MX8', '매트릭스 스위처']);
-    for (const row of items.rows.slice(1)) {
+    expect(items.rows[1]![4]).toBe(ITEM_NOTE_ROW[4]);
+    expect(items.rows[1]![4]).toContain('선택(비우면 공개 단가 사용');
+    expect(items.rows).toHaveLength(catalog.products.length + 2);
+    expect(items.rows[2]!.slice(0, 3)).toEqual(['VID-0005', 'FAKE-MX8', '매트릭스 스위처']);
+    for (const row of items.rows.slice(2)) {
       expect(row[3] ?? '').toBe('');
       expect(row[4] ?? '').toBe('');
     }
@@ -341,11 +385,13 @@ describe('빈 가격표 서식', () => {
     expect(defaults).toContainEqual(['A.AUDIO', 'CBL-0106', '', '']);
   });
 
-  it('그대로 다시 불러오면 아무 가격도 붙지 않는다', () => {
+  it('그대로 다시 불러오면 아무 가격도 붙지 않는다 — 안내 행은 데이터로 읽지 않는다', () => {
     const book = readFourSheetPrices(sheets, catalog, '');
     expect(book.entries).toEqual({});
     expect(book.summary.applied).toBe(0);
     expect(book.summary.mismatched).toBe(0);
+    expect(book.summary.unknownCodes).toBe(0);
+    expect(book.summary.blank).toBe(catalog.products.length);
   });
 });
 
@@ -355,46 +401,29 @@ function fakeBook(catalog: Catalog, entries: PriceBook['entries']): PriceBook {
   return { ...base, entries };
 }
 
-describe('가격표 적용 — 판매가는 카탈로그로, 원가는 원가 세션으로만', () => {
+describe('가격표 적용 — 원가는 원가 세션으로만, 판매가는 공개 단가 그대로', () => {
   const catalog = fakeCatalog();
 
-  it('가격표가 없으면 전 품목 단가 미등록이다', () => {
-    const priced = catalogWithPriceBook(catalog, undefined);
-    expect(priced.pricesAvailable).toBe(false);
-    expect(priced.prices.size).toBe(0);
-    expect(priced.pricesUnavailableReason).toBe(NO_PRICE_BOOK_REASON);
-  });
-
-  it('판매가만 카탈로그에 싣는다 — 원가 값은 카탈로그에 없다', () => {
-    const book = fakeBook(catalog, { 'VID-0005': { cost: '7654321', selling: '1500000' }, 'VID-0007': { cost: '1000' } });
-    const priced = catalogWithPriceBook(catalog, book);
-    expect(priced.pricesAvailable).toBe(true);
-    expect(priced.prices.get('VID-0005')).toBe('1500000');
-    expect(priced.prices.has('VID-0007')).toBe(false);
-    expect([...priced.prices.values()]).not.toContain('7654321');
-    expect(JSON.stringify({ ...priced, prices: [...priced.prices] })).not.toContain('7654321');
-  });
-
-  it('다른 판의 견적 단가표에서 불러온 가격표는 적용하지 않는다', () => {
-    const book = { ...fakeBook(catalog, { 'VID-0005': { selling: '1' } }), catalogSourceSha256: 'd'.repeat(64) };
-    const priced = catalogWithPriceBook(catalog, book);
-    expect(priced.pricesAvailable).toBe(false);
-    expect(priced.pricesUnavailableReason).toBe(STALE_PRICE_BOOK_REASON);
-    expect(costEntriesFromBook(book, catalog)).toEqual([]);
-  });
-
   it('원가는 SKU로 찾는 원가 세션 줄이 된다 — 단위는 견적 단가표 단위', () => {
-    const book = fakeBook(catalog, { 'VID-0005': { cost: '7654321', selling: '1500000' } });
+    const book = fakeBook(catalog, { 'VID-0005': { cost: '7654321' } });
     const session = priceBookCostSession(book, catalog)!;
     expect(session.size).toBe(1);
     expect(session.lookup('VID-0005')?.purchaseUnitPrice).toBe('7654321');
     expect(session.lookup('VID-0005')?.unit).toBe('EA');
     // 세션은 직렬화해도 원가가 나가지 않는다(기존 원가 세션 규칙).
     expect(JSON.stringify(session)).not.toContain('7654321');
+    // 카탈로그(공개 판매가)는 가격표가 바꾸지 않는다.
+    expect(catalog.prices.get('VID-0005')).toBe('1200000');
+  });
+
+  it('다른 판의 견적 단가표에서 불러온 가격표는 적용하지 않는다', () => {
+    const book = { ...fakeBook(catalog, { 'VID-0005': { cost: '1' } }), catalogSourceSha256: 'd'.repeat(64) };
+    expect(costEntriesFromBook(book, catalog)).toEqual([]);
+    expect(priceBookCostSession(book, catalog)).toBeUndefined();
   });
 
   it('원가가 하나도 없으면 원가 세션을 만들지 않는다', () => {
-    expect(priceBookCostSession(fakeBook(catalog, { 'VID-0005': { selling: '1' } }), catalog)).toBeUndefined();
+    expect(priceBookCostSession(fakeBook(catalog, {}), catalog)).toBeUndefined();
     expect(priceBookCostSession(undefined, catalog)).toBeUndefined();
   });
 });
@@ -403,7 +432,7 @@ describe('저장된 가격표 검증', () => {
   const catalog = fakeCatalog();
 
   it('맞는 형식은 그대로 읽는다', () => {
-    const book = fakeBook(catalog, { 'VID-0005': { cost: '1', selling: '2' } });
+    const book = fakeBook(catalog, { 'VID-0005': { cost: '1' } });
     const record = { schemaVersion: 1, book, pumsemColumns: { cost: { index: 6, label: '원가 / 단 가' } } };
     expect(parseStoredPriceRecord(JSON.parse(JSON.stringify(record)))).toEqual(record);
   });
@@ -411,45 +440,14 @@ describe('저장된 가격표 검증', () => {
   it('깨진 값·음수 가격·모르는 칸은 쓰지 않는다', () => {
     const book = fakeBook(catalog, {});
     expect(parseStoredPriceRecord({ schemaVersion: 2 })).toBeUndefined();
-    expect(parseStoredPriceRecord({ schemaVersion: 1, book: { ...book, entries: { A: { selling: '-1' } } } })).toBeUndefined();
-    expect(parseStoredPriceRecord({ schemaVersion: 1, book: { ...book, entries: { A: { selling: '1', supplier: 'x' } } } })).toBeUndefined();
+    expect(parseStoredPriceRecord({ schemaVersion: 1, book: { ...book, entries: { A: { cost: '-1' } } } })).toBeUndefined();
+    expect(parseStoredPriceRecord({ schemaVersion: 1, book: { ...book, entries: { A: { cost: '1', selling: '2' } } } })).toBeUndefined();
+    expect(parseStoredPriceRecord({ schemaVersion: 1, pumsemColumns: { selling: { index: 1, label: 'x' } } })).toBeUndefined();
     expect(parseStoredPriceRecord('문자열')).toBeUndefined();
   });
 
   it('파일 이름을 저장할 자리가 없다', () => {
     const book = fakeBook(catalog, {});
     expect(Object.keys(book).sort()).toEqual(['catalogSourceSha256', 'entries', 'importedAt', 'kind', 'schemaVersion', 'summary']);
-  });
-});
-
-describe('열린 견적에 가격표 단가 적용', () => {
-  const base = fakeCatalog();
-  const doc = (catalogSha: string): QuoteDocument =>
-    ({
-      versions: { catalog: catalogSha },
-      rows: [
-        { type: 'item', rowId: 'a', sku: 'VID-0005', productId: 'VID-0005', unit: 'EA', sellingUnitPrice: '10' },
-        { type: 'item', rowId: 'b', sku: 'VID-0007', productId: 'VID-0007', unit: 'EA', sellingUnitPrice: '20' },
-        { type: 'item', rowId: 'c', sku: 'VID-0009', productId: 'VID-0009', unit: 'EA', sellingUnitPrice: '30' },
-        { type: 'item', rowId: 'd', name: '품목 미연결', unit: 'EA' },
-      ],
-    }) as unknown as QuoteDocument;
-
-  it('판매가를 다시 붙이고, 가격표에 없으면 비운다(0이 아니다). 파생 단가는 그대로다', () => {
-    const priced = catalogWithPriceBook(base, fakeBook(base, { 'VID-0005': { selling: '1500000' } }));
-    const result = repriceFromCatalog(doc(SHA), priced);
-    expect(result.changed).toBe(2);
-    const rows = result.document.rows as unknown as Array<{ rowId: string; sellingUnitPrice?: string }>;
-    expect(rows.find((r) => r.rowId === 'a')!.sellingUnitPrice).toBe('1500000');
-    expect(rows.find((r) => r.rowId === 'b')).not.toHaveProperty('sellingUnitPrice');
-    expect(rows.find((r) => r.rowId === 'c')!.sellingUnitPrice).toBe('30');
-  });
-
-  it('견적 단가표 판이 다른 문서는 건드리지 않는다', () => {
-    const priced = catalogWithPriceBook(base, fakeBook(base, { 'VID-0005': { selling: '1500000' } }));
-    const original = doc('e'.repeat(64));
-    const result = repriceFromCatalog(original, priced);
-    expect(result.basisMismatch).toBe(true);
-    expect(result.document).toBe(original);
   });
 });

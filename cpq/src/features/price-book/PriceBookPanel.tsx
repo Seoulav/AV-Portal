@@ -1,13 +1,17 @@
 /**
- * 가격표 불러오기·지우기·빈 서식 내려받기 (B-20261016-06, LED 구성기 방식).
+ * 원가 가격표 불러오기·지우기·빈 서식 내려받기 (B-20261016-06, LED 구성기 방식).
  *
- * 직원이 고른 파일은 **이 브라우저 안에서만** 읽는다. 원가·판매가는 이
- * 브라우저 저장소(IndexedDB, `services/price-book/store.ts`)에만 두고 다음
- * 방문 때 자동으로 쓴다. 파일 이름·내용을 네트워크로 보내지 않는다.
+ * 2026-10-16 사용자 결정(「옮길 때까지 공개 유지」): 판매가는 공개 `prices.json`이
+ * 기준이다. 이 화면이 다루는 것은 **원가뿐**이다. 가격표에 판매가 열이 있으면
+ * 공개 단가와 대조만 하고, 다르면 건수로 알린다(덮어쓰지 않는다).
  *
- *   1순위  표준품셈 원본 — 시트마다 머리글을 찾고, 처음 한 번은 원가 열·판매가
- *          열을 사람이 확인한다. 고른 열(자리·머리글 이름)만 저장한다.
- *   2순위  4시트 가격표 — `품목 단가` 시트를 읽는다.
+ * 직원이 고른 파일은 **이 브라우저 안에서만** 읽는다. 원가는 이 브라우저
+ * 저장소(IndexedDB, `services/price-book/store.ts`)에만 두고 다음 방문 때 자동으로
+ * 쓴다. 파일 이름·내용을 네트워크로 보내지 않는다.
+ *
+ *   1순위  표준품셈 원본 — 시트마다 머리글을 찾고, 처음 한 번은 원가 열(필수)·판매가
+ *          열(대조용, 선택)을 사람이 확인한다. 고른 열(자리·머리글 이름)만 저장한다.
+ *   2순위  4시트 가격표 — `품목 단가` 시트의 원가 열을 읽는다.
  *
  * 화면에는 **건수와 좌표만** 보여준다. 가격 값은 이 화면에 그리지 않는다.
  */
@@ -63,17 +67,13 @@ export function PriceBookPanel({
   record,
   storeError,
   onRecordChange,
-  documentOpen,
-  onApplyToDocument,
 }: {
-  /** 가격을 붙이기 전 견적 단가표(품목 목록과 지문). */
+  /** 견적 단가표(품목 목록·지문·공개 판매가). 판매가 대조에 쓴다. */
   catalog: Catalog;
   record: StoredPriceRecord | undefined;
   /** 시작할 때 저장소를 읽지 못한 사유. */
   storeError: string | undefined;
   onRecordChange(record: StoredPriceRecord | undefined): void;
-  documentOpen: boolean;
-  onApplyToDocument(): number | 'basis-mismatch' | 'no-document';
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const requestRef = useRef(0);
@@ -170,7 +170,7 @@ export function PriceBookPanel({
     setPending(undefined);
     setResult(undefined);
     setBusy(true);
-    // 화면에서는 바로 뺀다 — 지우기를 누른 뒤에는 원가·판매가를 쓰지 않는다.
+    // 화면에서는 바로 뺀다 — 지우기를 누른 뒤에는 가격표 원가를 쓰지 않는다.
     onRecordChange(undefined);
     void (async () => {
       let cleared = true;
@@ -182,7 +182,7 @@ export function PriceBookPanel({
       if (requestId !== requestRef.current) return;
       setNotice(
         cleared
-          ? { kind: 'ok', text: '이 브라우저에 저장된 가격표(원가·판매가·열 선택)를 지웠습니다.' }
+          ? { kind: 'ok', text: '이 브라우저에 저장된 가격표(원가·열 선택)를 지웠습니다.' }
           : { kind: 'error', text: '저장된 가격표를 지우지 못했습니다 — 이번 방문에서는 적용하지 않습니다.' },
       );
       setBusy(false);
@@ -193,26 +193,16 @@ export function PriceBookPanel({
     downloadBinaryFile(PRICE_TEMPLATE_FILE_NAME, buildBlankPriceTemplate(catalog));
   }
 
-  function handleApply(): void {
-    const outcome = onApplyToDocument();
-    if (outcome === 'no-document') return;
-    setNotice(
-      outcome === 'basis-mismatch'
-        ? { kind: 'error', text: '열린 견적이 다른 판의 견적 단가표로 만들어져 단가를 다시 붙이지 않았습니다.' }
-        : { kind: 'ok', text: outcome === 0 ? '바뀐 단가가 없습니다.' : `열린 견적의 단가 ${outcome}행을 가격표로 바꿨습니다(실행 취소 가능).` },
-    );
-  }
-
   return (
-    <section className="q-card q-price-book" aria-label="가격표">
-      <h3>가격표 (원가·판매가)</h3>
+    <section className="q-card q-price-book" aria-label="원가 가격표">
+      <h3>원가 가격표</h3>
       <p className="q-muted" data-price-book-state={book === undefined ? 'none' : fits ? 'active' : 'stale'}>
         {book === undefined
-          ? "이 브라우저에 저장된 가격표가 없습니다 — 모든 품목이 '단가 미등록'입니다."
+          ? '이 브라우저에 저장된 원가 가격표가 없습니다 — 원가는 미등록입니다.'
           : fits
-            ? `가격표 사용 중 — ${describeKind(book)} · ${formatDate(book.importedAt)} 불러옴 · 판매가 ${book.summary.sellingApplied}건 · 원가 ${book.summary.costApplied}건.`
+            ? `원가 가격표 사용 중 — ${describeKind(book)} · ${formatDate(book.importedAt)} 불러옴 · 원가 ${book.summary.applied}건.`
             : '저장된 가격표가 지금 견적 단가표와 다른 판에서 불러온 것이라 적용하지 않았습니다 — 다시 불러오세요.'}{' '}
-        파일은 이 브라우저 안에서만 읽고 저장하며, 서버로 보내지 않습니다.
+        판매가는 공개 단가를 씁니다. 원가 파일은 이 브라우저 안에서만 읽고 저장하며, 서버로 보내지 않습니다.
       </p>
       {storeError !== undefined && (
         <p role="alert" className="q-notice q-notice-error">
@@ -229,11 +219,6 @@ export function PriceBookPanel({
         <button type="button" className="q-button" onClick={handleTemplate}>
           빈 가격표 서식 내려받기
         </button>
-        {documentOpen && (
-          <button type="button" className="q-button" onClick={handleApply}>
-            열린 견적에 가격표 단가 적용
-          </button>
-        )}
       </div>
       <input
         ref={inputRef}
@@ -270,13 +255,18 @@ function ImportResult({ summary }: { summary: PriceImportSummary }) {
   return (
     <div role="status" aria-label="가격표 불러오기 결과" className="q-price-book-result">
       <p>
-        붙은 품목 <strong data-count="applied">{summary.applied}</strong>건(판매가 {summary.sellingApplied} · 원가{' '}
-        {summary.costApplied}) · 가격표 행 불일치 <strong data-count="mismatched">{summary.mismatched}</strong>건 · 빈 칸{' '}
+        원가가 붙은 품목 <strong data-count="applied">{summary.applied}</strong>건 · 가격표 행 불일치{' '}
+        <strong data-count="mismatched">{summary.mismatched}</strong>건 · 원가 빈 칸{' '}
         <strong data-count="blank">{summary.blank}</strong>건
       </p>
+      {summary.sellingDiffers > 0 && (
+        <p data-count="selling-differs">
+          가격표 판매가가 공개 단가와 다른 품목 {summary.sellingDiffers}건 — 판매가는 공개 단가를 그대로 씁니다(덮어쓰지
+          않음).
+        </p>
+      )}
       <p className="q-muted">
-        원가 빈 칸 {summary.costBlank} · 판매가 빈 칸 {summary.sellingBlank} · 수식이라 읽지 않은 칸 {summary.formulaSkipped} ·
-        숫자가 아닌 칸 {summary.notNumeric}
+        수식이라 읽지 않은 칸 {summary.formulaSkipped} · 숫자가 아닌 칸 {summary.notNumeric}
         {summary.unknownCodes > 0 ? ` · 목록에 없는 품목코드 ${summary.unknownCodes}` : ''} · 파일에서 찾지 못한 품목{' '}
         {summary.missingInFile}
       </p>
@@ -287,7 +277,7 @@ function ImportResult({ summary }: { summary: PriceImportSummary }) {
             <ul>
               {summary.issues.map((issue, index) => (
                 <li key={index}>
-                  가격표 행 불일치, 확인 필요 — 시트 '{issue.sheet}' {issue.row}행{issue.sku !== undefined ? ` (${issue.sku})` : ''}:{' '}
+                  확인 필요 — 시트 '{issue.sheet}' {issue.row}행{issue.sku !== undefined ? ` (${issue.sku})` : ''}:{' '}
                   {issue.reason}
                 </li>
               ))}
@@ -340,19 +330,21 @@ function ColumnChooser({
     const option = analysis.options.find((o) => String(o.index) === value);
     return option === undefined ? undefined : { index: option.index, label: option.label };
   };
-  const ready = cost !== '' || selling !== '';
+  const ready = cost !== '';
 
   return (
     <div role="alert" className="q-field-error" aria-label="가격표 열 확인">
       <p>
-        표준품셈 원본으로 보입니다 — 시트 {analysis.layouts.length}개에서 머리글을 찾았습니다. 원가 열과 판매가 열을
-        확인하세요(첫 시트 '{first.sheet}' 기준 열 문자입니다. 다른 시트는 같은 머리글 이름으로 찾습니다). 매입처·제조사·비고
+        표준품셈 원본으로 보입니다 — 시트 {analysis.layouts.length}개에서 머리글을 찾았습니다. 원가 열을 확인하세요.
+        판매가 열은 고르면 공개 단가와 대조만 합니다(선택). 열 문자는 첫 시트 '{first.sheet}' 기준이고, 다른 시트는 같은 머리글 이름으로 찾습니다. 매입처·제조사·비고
         열은 고를 수 없습니다. 고른 열(자리·머리글 이름)은 저장해 두고 다음부터 다시 묻지 않습니다.
       </p>
       <label>
         원가 열
         <select aria-label="원가 열" value={cost} onChange={(event) => setCost(event.target.value)}>
-          <option value="">(읽지 않음)</option>
+          <option value="" disabled>
+            선택하세요
+          </option>
           {analysis.options.map((o) => (
             <option key={o.index} value={o.index}>
               {o.letter}: {o.label}
@@ -361,9 +353,9 @@ function ColumnChooser({
         </select>
       </label>
       <label>
-        판매가 열
+        판매가 열(선택 — 공개 단가와 대조만)
         <select aria-label="판매가 열" value={selling} onChange={(event) => setSelling(event.target.value)}>
-          <option value="">(읽지 않음)</option>
+          <option value="">(대조 안 함)</option>
           {analysis.options.map((o) => (
             <option key={o.index} value={o.index}>
               {o.letter}: {o.label}
@@ -378,7 +370,8 @@ function ColumnChooser({
         onClick={() => {
           const costRef = refOf(cost);
           const sellingRef = refOf(selling);
-          onConfirm({ ...(costRef ? { cost: costRef } : {}), ...(sellingRef ? { selling: sellingRef } : {}) });
+          if (costRef === undefined) return;
+          onConfirm({ cost: costRef, ...(sellingRef ? { selling: sellingRef } : {}) });
         }}
       >
         이 열로 불러오기

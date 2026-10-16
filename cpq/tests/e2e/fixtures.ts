@@ -9,20 +9,11 @@
  *
  * `page.route()`로 네트워크 요청 자체를 가로챈다 — `public/`이나
  * `dist/`에 이 합성 자료를 실제로 쓰지 않는다.
- *
- * ## 판매 단가 (B-20261016-06)
- *
- * 앱은 이제 `prices.json`을 요청하지 않는다 — 판매가는 이 브라우저에 저장된
- * 가격표(IndexedDB)에서 온다. 기존 시험이 `'/data/approved/prices.json'`에 주던
- * **가짜** 가격은 그대로 두고, `mockResources`가 그 값을 **페이지가 열리기 전에
- * 가격표 저장소에 심는다**(`addInitScript`). `'missing'`이면 저장소를 비운다.
- * 가격표 화면 자체(불러오기·저장·지우기)는 `price-book.spec.ts`가 실제 조작으로 본다.
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { expect, type Locator, type Page } from '@playwright/test';
-import { PRICE_BOOK_DB_NAME, PRICE_BOOK_RECORD_KEY, PRICE_BOOK_STORE } from '../../src/services/price-book/store';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '../..');
 const SKU = 'FIX-0001';
@@ -107,86 +98,8 @@ function syntheticLaborMappings(): unknown {
 
 const GUIDE_FILES = ['guide-won.xlsx', 'guide-pumsem.xlsx', 'guide-ds.xlsx', 'guide-ds-won.xlsx'] as const;
 
-/**
- * `missing` = 404. `Buffer`/객체가 아니면 기본 fixture를 쓴다.
- * 판매 단가(`/data/approved/prices.json`)만 예외: 가짜 가격을 가격표 저장소에 심고,
- * `missing`이면 저장소를 비우고, `browser`면 저장소를 건드리지 않는다.
- */
-export type MockOverride = 'missing' | 'browser' | Buffer | unknown;
-
-const PRICES_PATH = '/data/approved/prices.json';
-
-interface SeedArgs {
-  dbName: string;
-  storeName: string;
-  key: string;
-  record: unknown;
-}
-
-/** 브라우저 안에서 돈다 — 저장소 이름·열쇠는 앱(`store.ts`)과 같은 상수다. */
-function seedPriceBook({ dbName, storeName, key, record }: SeedArgs): void {
-  try {
-    const request = indexedDB.open(dbName, 1);
-    request.onupgradeneeded = () => {
-      if (!request.result.objectStoreNames.contains(storeName)) request.result.createObjectStore(storeName);
-    };
-    request.onsuccess = () => {
-      const db = request.result;
-      const transaction = db.transaction(storeName, 'readwrite');
-      const store = transaction.objectStore(storeName);
-      if (record === null) store.delete(key);
-      else store.put(record, key);
-      transaction.oncomplete = () => db.close();
-    };
-  } catch {
-    // about:blank 등 저장소를 못 쓰는 문서 — 앱 문서가 아니다.
-  }
-}
-
-/** 예전 `prices.json` 모양(가짜 값) → 가격표 저장 모양. 판매가만 담는다. */
-export function priceRecordFromPricesFile(value: unknown): unknown {
-  const file = value as { sourceSha256: string; prices: Record<string, { sellingUnitPrice: string }> };
-  const entries = Object.fromEntries(
-    Object.entries(file.prices).map(([sku, entry]) => [sku, { selling: entry.sellingUnitPrice }]),
-  );
-  const count = Object.keys(entries).length;
-  return {
-    schemaVersion: 1,
-    book: {
-      schemaVersion: 1,
-      kind: 'four-sheet',
-      catalogSourceSha256: file.sourceSha256,
-      importedAt: '2026-01-01T00:00:00.000Z',
-      entries,
-      summary: {
-        applied: count,
-        sellingApplied: count,
-        costApplied: 0,
-        mismatched: 0,
-        blank: 0,
-        costBlank: 0,
-        sellingBlank: 0,
-        formulaSkipped: 0,
-        notNumeric: 0,
-        unknownCodes: 0,
-        missingInFile: 0,
-        sheetsRead: ['품목 단가'],
-        sheetsSkipped: [],
-        issues: [],
-      },
-    },
-  };
-}
-
-/** 페이지가 열리기 전에 가격표 저장소를 이 값으로 맞춘다(`null`이면 비운다). */
-export async function seedStoredPriceRecord(page: Pick<Page, 'addInitScript'>, record: unknown): Promise<void> {
-  await page.addInitScript(seedPriceBook, {
-    dbName: PRICE_BOOK_DB_NAME,
-    storeName: PRICE_BOOK_STORE,
-    key: PRICE_BOOK_RECORD_KEY,
-    record,
-  });
-}
+/** `missing` = 404. `Buffer`/객체가 아니면 기본 fixture를 쓴다. */
+export type MockOverride = 'missing' | Buffer | unknown;
 
 /**
  * 초기 자료 요청을 전부 가로채 합성 fixture로 답한다. `overrides`로 특정
@@ -201,7 +114,7 @@ export async function mockResources(
 
   const defaults: Record<string, MockOverride> = {
     '/data/approved/products.json': syntheticProducts(),
-    [PRICES_PATH]: syntheticPrices(),
+    '/data/approved/prices.json': syntheticPrices(),
     '/data/approved/labor-items.json': syntheticLaborItems(),
     '/data/approved/wage-table.json': syntheticWageTable(),
     '/data/approved/labor-mappings.json': syntheticLaborMappings(),
@@ -212,14 +125,6 @@ export async function mockResources(
   }
 
   const merged = { ...defaults, ...overrides };
-
-  // 판매 단가는 요청이 아니라 가격표 저장소로 들어간다(위 모듈 설명).
-  // `'browser'`이면 저장소를 건드리지 않는다 — 가격표 화면을 실제로 조작하는 시험용.
-  const prices = merged[PRICES_PATH];
-  if (prices !== 'browser') {
-    await seedStoredPriceRecord(page, prices === 'missing' || prices === undefined ? null : priceRecordFromPricesFile(prices));
-  }
-  delete merged[PRICES_PATH];
 
   for (const [path, value] of Object.entries(merged)) {
     await page.route(`**${path}`, async (route) => {

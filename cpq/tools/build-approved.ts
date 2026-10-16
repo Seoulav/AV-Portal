@@ -11,16 +11,12 @@
  * 거짓이었다 — **`npm run build:approved` 가 아무 일도 하지 않고 조용히 끝났다**
  * (실측으로 확인함). 진입을 파일 하나로 분리해 그 판정 자체를 없앴다.
  *
- * 네 파일을 만든다.
+ * 다섯 파일을 만든다.
  *   products.json        제품 (가격 없음)
+ *   prices.json          판매단가만        ← 결정 D3: 반드시 분리
  *   labor-items.json     품셈 항목
  *   wage-table.json      노임표
  *   labor-mappings.json  SKU ↔ 품셈 연결
- *
- * **판매 단가 `prices.json`은 만들지 않는다**(B-20261016-06). 예전에는 결정 D3로
- * 따로 떼어 배포했지만, 공개 저장소·Pages에 판매가가 실렸다. 이제 판매가·원가는
- * 직원이 표준품셈 원본이나 가격표 파일을 「가격표 불러오기」로 골라 그 브라우저에만
- * 저장한다. 이 도구는 가격을 어디에도 쓰지 않는다 — 단가 건수만 화면에 알린다.
  *
  * ## 무인자 기본 출력은 staging 이다
  *
@@ -36,9 +32,9 @@
  * `labor.conflicts`(노임 단위 충돌 등)와 감사 게이트 둘 다 **파일을 쓰기 전에** 돈다.
  * 둘 중 하나라도 걸리면 **아무것도 쓰지 않는다.**
  *
- * ## 네 파일을 "완성된 세트"로 한 번에 자리를 바꾼다
+ * ## 다섯 파일을 "완성된 세트"로 한 번에 자리를 바꾼다
  *
- * 임시 폴더에 네 파일을 전부 쓴 뒤에만 기존 자리와 통째로 바꾼다. 전환은
+ * 임시 폴더에 다섯 파일을 전부 쓴 뒤에만 기존 자리와 통째로 바꾼다. 전환은
  * 두 단계(기존→백업, 임시→기존)로 이뤄지는 `rename` 두 번이라 완전한
  * 단일 연산은 아니다 — 각 단계의 실패를 전부 시험으로 재현했다
  * (`tests/unit/buildApproved.test.ts`). 두 rename 사이에 프로세스가 죽는
@@ -61,6 +57,7 @@ import { buildProducts } from '../src/data/catalog/buildProducts';
 import { buildLabor, type BuildLaborResult } from '../src/data/catalog/buildLabor';
 import {
   productsFileSchema,
+  pricesFileSchema,
   laborItemsFileSchema,
   wageTableFileSchema,
   generatedLaborMappingsFileSchema,
@@ -97,7 +94,7 @@ export interface BlockedApproved {
 }
 
 /**
- * 원시 덤프를 네 배포 파일로 **준비만** 한다 — 디스크에 쓰지 않는다.
+ * 원시 덤프를 다섯 배포 파일로 **준비만** 한다 — 디스크에 쓰지 않는다.
  *
  * 노임 충돌·감사 실패·SKU 중복·sourceSha256 불일치 중 **하나라도 있으면**
  * `ok: false`를 돌려주고, 호출부는 그 경우 `writeApprovedSet`을 부르지 않는다.
@@ -145,8 +142,7 @@ export function prepareApprovedFiles(
     };
   }
 
-  // 판매 단가(`prices`)는 버린다 — 파일로 쓰지 않는다(B-20261016-06).
-  const { products, stats } = buildProducts(raw.sheets);
+  const { products, prices, stats } = buildProducts(raw.sheets);
   // 역산이 어긋난 행은 **승인해 넘겼더라도** 품셈 매핑을 만들지 않는다.
   // 넘긴다는 것은 "교체를 진행한다"는 뜻이지 "그 값이 맞다"는 뜻이 아니다.
   // 매핑이 없으면 견적에서 `unresolved`로 막히고 사람이 직접 채워야 한다.
@@ -175,6 +171,13 @@ export function prepareApprovedFiles(
       sourceSha256,
       products,
     }),
+    'prices.json': pricesFileSchema.parse({
+      schemaVersion: 1,
+      generatedOn,
+      sourceSha256,
+      currency: 'KRW',
+      prices,
+    }),
     'labor-items.json': laborItemsFileSchema.parse({
       schemaVersion: 1,
       generatedOn,
@@ -201,14 +204,14 @@ export function prepareApprovedFiles(
     return { ok: false, reason: `감사 실패 ${findings.length}건 — 아무것도 쓰지 않는다.`, findings };
   }
 
-  // 네 파일이 전부 같은 원본에서 나왔는지 명시로 확인한다(하반기 계획 Task 0 체크리스트).
+  // 다섯 파일이 전부 같은 원본에서 나왔는지 명시로 확인한다(하반기 계획 Task 0 체크리스트).
   const hashes = new Set(
     Object.values(files).map((f) => (f as { sourceSha256: string }).sourceSha256),
   );
   if (hashes.size !== 1) {
     return {
       ok: false,
-      reason: `네 파일의 sourceSha256이 서로 다르다 (${[...hashes].join(', ')}).`,
+      reason: `다섯 파일의 sourceSha256이 서로 다르다 (${[...hashes].join(', ')}).`,
     };
   }
 
@@ -410,9 +413,9 @@ function findLeftovers(outDir: string, fsApi: ApprovedWriteFsApi): string[] {
 }
 
 /**
- * 완성된 네 파일을 `outDir`에 **한 번에** 반영한다.
+ * 완성된 다섯 파일을 `outDir`에 **한 번에** 반영한다.
  *
- * 1. 임시 폴더에 네 파일을 전부 쓴다 — 쓰는 도중 실패하면 임시 폴더만
+ * 1. 임시 폴더에 다섯 파일을 전부 쓴다 — 쓰는 도중 실패하면 임시 폴더만
  *    치우고 `outDir`은 전혀 건드리지 않는다.
  * 2. `outDir`이 이미 있으면 백업 이름으로 옮긴다 — 이 rename이 실패하면
  *    임시 폴더를 치우고 중단한다(`outDir`은 원래 그대로다).

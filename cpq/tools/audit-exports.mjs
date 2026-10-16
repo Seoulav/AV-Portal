@@ -133,7 +133,7 @@ const IDB_CONSTANT_DECLARATION = /\b(PRICE_BOOK_DB_NAME|PRICE_BOOK_STORE|PRICE_B
  * 카탈로그·구성도·도메인 쪽이 가격표 원가를 직접 끌어가지 못하게 한다.
  */
 const PRICE_BOOK_MODULE = /^src\/services\/price-book\//;
-const PRICE_BOOK_IMPORTERS = ['src/services/price-book/', 'src/features/price-book/', 'src/app/App.tsx'];
+const PRICE_BOOK_IMPORTERS = ['src/services/price-book/', 'src/features/price-book/', 'src/app/App.tsx', 'src/app/priceSources.ts'];
 
 /** IndexedDB 허용 파일에서도 다른 브라우저 저장소는 쓰지 않는다. */
 const NON_IDB_PERSISTENCE = /\b(localStorage|sessionStorage|openDatabase|caches)\b/;

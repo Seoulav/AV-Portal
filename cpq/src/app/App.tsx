@@ -37,8 +37,7 @@ import { CableRoutePanel } from '../features/installation/CableRoutePanel';
 import { PortalDiagramInput } from '../features/entry/PortalDiagramInput';
 import { PrivateCostPanel } from '../features/private-cost/PrivateCostPanel';
 import { PriceBookPanel } from '../features/price-book/PriceBookPanel';
-import { catalogWithPriceBook, priceBookCostSession, STALE_PRICE_BOOK_REASON } from '../services/price-book/apply';
-import { loadStoredPriceRecord } from '../services/price-book/store';
+import { costSessionFor, loadPriceSources } from './priceSources';
 import type { StoredPriceRecord } from '../services/price-book/types';
 import { encodeWorkFile, decodeWorkFile } from '../services/files/workFile';
 import { downloadTextFile, downloadBinaryFile } from '../services/files/download';
@@ -93,8 +92,8 @@ export function App() {
 
 function QuoteWorkspace() {
   const [state, setState] = useState<LoadState>({ kind: 'loading' });
-  // 이 브라우저에 저장된 가격표(B-20261016-06). 원가·판매가를 담는다 — 이 값은
-  // 판매가만 담은 카탈로그(`catalogWithPriceBook`)와 원가 세션으로만 흘러간다.
+  // 이 브라우저에 저장된 가격표(B-20261016-06) — **원가만** 담는다. 원가 세션으로만
+  // 흘러간다(영업팀용 0과 원가 영역). 판매가는 공개 `prices.json`이다(`priceSources.ts`).
   const [priceRecord, setPriceRecord] = useState<StoredPriceRecord | undefined>(undefined);
   const [priceStoreError, setPriceStoreError] = useState<string | undefined>(undefined);
   const [entry, setEntry] = useState<EntryView>(null);
@@ -134,19 +133,11 @@ function QuoteWorkspace() {
     return () => requestId === workFileRequestRef.current;
   }
 
-  const baseResources = state.kind === 'ready' ? state.resources : undefined;
+  const resources = state.kind === 'ready' ? state.resources : undefined;
   const priceBook = priceRecord?.book;
-  // 견적 계산·출력이 보는 카탈로그에는 **판매가만** 싣는다. 원가는 아래 원가 세션으로만 간다.
-  const resources = useMemo(
-    () =>
-      baseResources === undefined
-        ? undefined
-        : { ...baseResources, catalog: catalogWithPriceBook(baseResources.catalog, priceBook) },
-    [baseResources, priceBook],
-  );
   const priceBookSession = useMemo(
-    () => (baseResources === undefined ? undefined : priceBookCostSession(priceBook, baseResources.catalog)),
-    [baseResources, priceBook],
+    () => (resources === undefined ? undefined : costSessionFor(resources.catalog, priceBook)),
+    [resources, priceBook],
   );
   const workspace = useWorkspace(resources);
   const status = workspace.status;
@@ -384,10 +375,10 @@ function QuoteWorkspace() {
     let cancelled = false;
     loadResources({ baseUrl: import.meta.env.BASE_URL })
       .then(async (result) => {
-        // 저장된 가격표를 **먼저** 읽고 나서 화면을 연다 — 가격표 적용 전에 품목을
-        // 고르면 단가가 비어 들어간다. 저장소를 못 읽어도 가격표 없이 계속한다.
+        // 저장된 원가 가격표를 먼저 읽고 나서 화면을 연다. 저장소를 못 읽어도
+        // 원가 없이 계속한다(판매가는 이미 카탈로그에 있다).
         if (result.kind === 'ready') {
-          const stored = await loadStoredPriceRecord();
+          const stored = await loadPriceSources();
           if (cancelled) return;
           if (stored.kind === 'ok') setPriceRecord(stored.record);
           if (stored.kind === 'error') setPriceStoreError(stored.reason);
@@ -601,23 +592,19 @@ function QuoteWorkspace() {
             <>
               {!resources.catalog.pricesAvailable && (
                 <p role="status" className="q-notice">
-                  {resources.catalog.pricesUnavailableReason === STALE_PRICE_BOOK_REASON
-                    ? '저장된 가격표가 지금 견적 단가표와 다른 판이라 적용하지 않았습니다'
-                    : '가격표가 없습니다'}{' '}
-                  — 모든 품목을 '단가 미등록'으로 표시합니다. 내려받기는 막지 않습니다.
+                  판매단가 파일이 없습니다({resources.catalog.pricesUnavailableReason}) — 모든 품목을
+                  '미등록'으로 표시합니다.
                 </p>
               )}
-              {baseResources !== undefined && (
+              {resources !== undefined && (
                 <PriceBookPanel
-                  catalog={baseResources.catalog}
+                  catalog={resources.catalog}
                   record={priceRecord}
                   storeError={priceStoreError}
                   onRecordChange={(next) => {
                     setPriceRecord(next);
                     setPriceStoreError(undefined);
                   }}
-                  documentOpen={status.kind === 'editing'}
-                  onApplyToDocument={workspace.applyCatalogPrices}
                 />
               )}
               {workFileOpenError !== undefined && (

@@ -1,12 +1,14 @@
 /**
- * 가격표 파일 방식 (B-20261016-06, LED 구성기 방식) — 실제 화면 조작.
+ * 원가 가격표 (B-20261016-06, LED 구성기 방식, 2026-10-16 「공개 유지안」) — 실제 화면 조작.
  *
- * ⚠ 전부 **가짜** 가격표다. 실제 표준품셈·원가·가격표 파일은 쓰지 않는다.
+ * ⚠ 전부 **가짜** 가격표·가짜 공개 단가다. 실제 표준품셈·원가·가격표 파일은 쓰지 않는다.
+ *
+ *   - 판매가는 공개 단가(`prices.json`), 가격표는 원가만. 판매가가 다르면 알리기만 한다
  *
  *   - 표준품셈 원본(2단 머리글) 불러오기 → 열 확인 → 붙은·불일치·빈 칸 건수
  *   - 저장 → 새로고침 후 유지 → 다시 불러오면 열을 묻지 않음 → 지우기
  *   - 4시트 가격표, 빈 서식 내려받기
- *   - 가격표 없음: 단가 미등록 표시, 내려받기 동작
+ *   - 가격표 없음: 판매가는 공개 단가, 단가 미등록은 공개 단가 없는 품목만, 내려받기 동작
  *   - 고객용 출력·작업 파일에 원가 없음, 영업팀용에만 원가
  *   - 네트워크로 보내는 요청이 없음
  */
@@ -16,6 +18,17 @@ import { strFromU8, unzipSync } from 'fflate';
 import { buildSimpleXlsx, type XlsxCell } from '../../src/services/price-book/xlsxWriter';
 import { readXlsxWorkbook } from '../../src/services/private-cost/readTable';
 import { expandWorkspaceSections, mockResources } from './fixtures';
+
+/** 가짜 **공개** 판매 단가 — FIX-0001만 있다. FIX-0002는 공개 단가가 없다. */
+function publicPrices(selling: string) {
+  return {
+    schemaVersion: 1,
+    generatedOn: '2026-01-01',
+    sourceSha256: 'a'.repeat(64),
+    currency: 'KRW',
+    prices: { 'FIX-0001': { sellingUnitPrice: selling, currency: 'KRW' } },
+  };
+}
 
 const SHA = 'a'.repeat(64);
 const COST_SENTINEL = '7654321';
@@ -82,15 +95,16 @@ async function chooseFile(page: Page, name: string, buffer: Buffer): Promise<voi
   });
 }
 
-async function makeQuote(page: Page): Promise<void> {
+async function makeQuote(page: Page, name = '합성 테스트 품목'): Promise<void> {
   await page.getByRole('button', { name: '품목 직접 선택' }).click();
-  await page.getByLabel('품목 검색').fill('합성 테스트 품목');
+  await page.getByLabel('품목 검색').fill(name);
   await page.getByRole('button', { name: '추가', exact: true }).first().click();
   await page.getByRole('button', { name: '견적 만들기' }).click();
   await expect(page.locator('.q-quote-sheet').first()).toBeVisible();
 }
 
-const quoteRow = (page: Page) => page.locator('.q-quote-table tbody tr', { hasText: '합성 테스트 품목' }).first();
+const quoteRow = (page: Page, name = '합성 테스트 품목') =>
+  page.locator('.q-quote-table tbody tr', { hasText: name }).first();
 const priceState = (page: Page) => page.locator('[data-price-book-state]');
 
 async function bytesOf(download: Download): Promise<Uint8Array> {
@@ -110,28 +124,27 @@ function watchRequests(page: Page): string[] {
   page.on('request', (request) => {
     const url = new URL(request.url());
     // 일반 설정은 localhost(vite dev), portal 설정은 127.0.0.1(정적 서버)에서 돈다.
-    const sameOriginRead = request.method() === 'GET' && ['localhost', '127.0.0.1'].includes(url.hostname);
-    // 배포 자료 경로로 가격 파일을 찾지도 않는다(개발 서버의 소스 모듈 요청은 제외).
-    if (!sameOriginRead || /\/data\/.*price/i.test(url.pathname)) {
+    if (request.method() !== 'GET' || !['localhost', '127.0.0.1'].includes(url.hostname)) {
       sent.push(`${request.method()} ${request.url()}`);
     }
   });
   return sent;
 }
 
-test('표준품셈 원본 — 열 확인 → 결과 건수 → 열린 견적에 적용 → 새로고침 후 유지 → 지우기', async ({ page }) => {
-  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': 'browser' });
+test('표준품셈 원본 — 원가 열 확인 → 결과 건수 → 원가 영역 → 새로고침 후 유지 → 지우기', async ({ page }) => {
+  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': publicPrices('1200000') });
   const sent = watchRequests(page);
   page.on('dialog', (dialog) => void dialog.accept());
   await page.goto('./');
 
-  // 가격표가 없으면 '단가 미등록'이다(0이 아니다).
+  // 가격표가 없어도 판매가는 공개 단가로 붙는다. 원가만 비어 있다.
   await expect(priceState(page)).toHaveAttribute('data-price-book-state', 'none');
-  await expect(page.getByRole('status').filter({ hasText: '가격표가 없습니다' })).toBeVisible();
   await makeQuote(page);
-  await expect(quoteRow(page)).toContainText('단가 미등록');
+  await expect(quoteRow(page)).toContainText('1200000');
+  await expandWorkspaceSections(page);
+  await expect(page.locator('[data-price-book-cost]')).toHaveCount(0);
 
-  // 처음 한 번은 원가 열·판매가 열을 확인한다 — 머리글 이름으로 미리 골라져 있다.
+  // 처음 한 번은 원가 열을 확인한다 — 머리글 이름으로 미리 골라져 있다. 판매가 열은 대조용(선택).
   await chooseFile(page, '가짜-품셈.xlsx', fakePumsem());
   const chooser = page.getByLabel('가격표 열 확인');
   await expect(chooser).toBeVisible();
@@ -145,45 +158,40 @@ test('표준품셈 원본 — 열 확인 → 결과 건수 → 열린 견적에 
   await expect(result.locator('[data-count="applied"]')).toHaveText('1');
   await expect(result.locator('[data-count="mismatched"]')).toHaveText('1');
   await expect(result.locator('[data-count="blank"]')).toHaveText('0');
+  // 가격표 판매가(1200000)가 공개 단가와 같다 — 알릴 것이 없다.
+  await expect(result.locator('[data-count="selling-differs"]')).toHaveCount(0);
   await result.getByText('확인할 행·시트 보기').click();
-  await expect(result).toContainText("가격표 행 불일치, 확인 필요 — 시트 '영상' 6행 (FIX-0002)");
+  await expect(result).toContainText("확인 필요 — 시트 '영상' 6행 (FIX-0002)");
   await expect(priceState(page)).toHaveAttribute('data-price-book-state', 'active');
-  await expect(page.getByRole('status').filter({ hasText: '가격표가 없습니다' })).toHaveCount(0);
 
-  // 열린 견적은 조용히 바뀌지 않는다 — 사람이 눌러야 적용된다.
-  await expect(quoteRow(page)).toContainText('단가 미등록');
-  await page.getByRole('button', { name: '열린 견적에 가격표 단가 적용' }).click();
+  // 원가는 열린 견적의 원가 영역에 바로 쓰인다. 판매가는 그대로다.
+  await expect(page.locator('[data-price-book-cost]')).toContainText('가격표 원가 사용 중 — 1품목');
   await expect(quoteRow(page)).toContainText('1200000');
-  await expect(page.getByRole('status').filter({ hasText: '단가 1행을 가격표로 바꿨습니다' })).toBeVisible();
 
-  // 새로고침해도 가격표는 이 브라우저에 남아 있다.
+  // 새로고침해도 원가 가격표는 이 브라우저에 남아 있다.
   await page.reload();
   await expect(priceState(page)).toHaveAttribute('data-price-book-state', 'active');
-  await expect(page.locator('[data-price-book-state]')).toContainText('판매가 1건 · 원가 1건');
-  await makeQuote(page);
-  await expect(quoteRow(page)).toContainText('1200000');
+  await expect(priceState(page)).toContainText('원가 1건');
 
   // 같은 판 파일을 다시 고르면 저장한 열 선택을 그대로 쓴다 — 다시 묻지 않는다.
   await chooseFile(page, '가짜-품셈.xlsx', fakePumsem());
   await expect(page.getByRole('status', { name: '가격표 불러오기 결과' })).toBeVisible();
   await expect(page.getByLabel('가격표 열 확인')).toHaveCount(0);
 
-  // 지우기 → 새로고침해도 없다.
+  // 지우기 → 저장소 지우기가 끝나면 알린다 → 새로고침해도 없다.
   await page.getByRole('button', { name: '가격표 지우기' }).click();
   await expect(priceState(page)).toHaveAttribute('data-price-book-state', 'none');
-  // 화면에서는 바로 빠지고, 저장소 지우기가 끝나면 알린다 — 그 뒤에 새로고침한다.
-  await expect(page.getByRole('status').filter({ hasText: '저장된 가격표(원가·판매가·열 선택)를 지웠습니다' })).toBeVisible();
+  await expect(page.getByRole('status').filter({ hasText: '저장된 가격표(원가·열 선택)를 지웠습니다' })).toBeVisible();
   await page.reload();
   await expect(priceState(page)).toHaveAttribute('data-price-book-state', 'none');
-  await expect(page.getByRole('status').filter({ hasText: '가격표가 없습니다' })).toBeVisible();
 
-  // 가격표는 브라우저 저장소(IndexedDB)에만 있다 — localStorage를 쓰지 않고, 바깥으로 보내지 않는다.
+  // 원가는 브라우저 저장소(IndexedDB)에만 있다 — localStorage를 쓰지 않고, 바깥으로 보내지 않는다.
   expect(await page.evaluate(() => Object.keys(localStorage).filter((k) => /price|가격/i.test(k)))).toEqual([]);
   expect(sent).toEqual([]);
 });
 
-test('빈 가격표 서식 내려받기 → 채운 4시트 가격표 불러오기', async ({ page }) => {
-  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': 'browser' });
+test('빈 가격표 서식 내려받기 → 채운 4시트 가격표 — 판매가가 공개 단가와 다르면 알리기만 한다', async ({ page }) => {
+  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': publicPrices('1200000') });
   await page.goto('./');
 
   const event = page.waitForEvent('download');
@@ -194,28 +202,33 @@ test('빈 가격표 서식 내려받기 → 채운 4시트 가격표 불러오�
   expect(sheets.map((s) => s.name)).toEqual(['품목 단가', '기본값', '노무 확인', '간접비']);
   const items = sheets[0]!.rows;
   expect(items[0]).toEqual(['품목코드', '모델', '품명', '원가', '판매가', '비고']);
-  expect(items.slice(1).map((r) => r.slice(0, 3))).toEqual([
+  expect(items[1]![4]).toContain('선택(비우면 공개 단가 사용');
+  expect(items.slice(2).map((r) => r.slice(0, 3))).toEqual([
     ['FIX-0001', 'FIX-SPEC', '합성 테스트 품목'],
     ['FIX-0002', 'FIX-2', '합성 두번째 품목'],
   ]);
-  for (const row of items.slice(1)) expect([row[3] ?? '', row[4] ?? '']).toEqual(['', '']);
+  for (const row of items.slice(2)) expect([row[3] ?? '', row[4] ?? '']).toEqual(['', '']);
   expect(sheets[1]!.rows.map((r) => r[0])).toEqual(expect.arrayContaining(['선 종류', 'HDMI', 'LAN', 'A.AUDIO']));
 
   await chooseFile(page, '채운-가격표.xlsx', fakeFourSheet('500', '900'));
   const result = page.getByRole('status', { name: '가격표 불러오기 결과' });
   await expect(result.locator('[data-count="applied"]')).toHaveText('1');
+  await expect(result.locator('[data-count="selling-differs"]')).toContainText('공개 단가와 다른 품목 1건');
   await expect(page.getByLabel('가격표 열 확인')).toHaveCount(0);
   await expect(priceState(page)).toContainText('4시트 가격표');
   await result.getByText('확인할 행·시트 보기').click();
   await expect(result).toContainText("읽지 않은 시트 '기본값' — 이번 판에서는 읽지 않음");
+
+  // 판매가는 덮어쓰지 않는다 — 견적 행은 공개 단가 그대로다.
+  await makeQuote(page);
+  await expect(quoteRow(page)).toContainText('1200000');
 });
 
-test('가격표 없음 — 단가 미등록으로 보이고 내려받기는 막지 않는다', async ({ page }) => {
-  await mockResources(page, { '/data/approved/prices.json': 'missing' });
+test('가격표 없음 — 판매가는 공개 단가로 붙고, 공개 단가가 없는 품목만 단가 미등록, 내려받기는 된다', async ({ page }) => {
+  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': publicPrices('1200000') });
   await page.goto('./');
-  await makeQuote(page);
-  await expect(quoteRow(page)).toContainText('단가 미등록');
-  await expect(quoteRow(page)).not.toContainText('0원');
+  await makeQuote(page, '합성 두번째 품목');
+  await expect(quoteRow(page, '합성 두번째 품목')).toContainText('단가 미등록');
 
   page.on('dialog', (dialog) => void dialog.accept());
   const button = page.getByRole('button', { name: 'Excel 다운로드' });
@@ -224,10 +237,15 @@ test('가격표 없음 — 단가 미등록으로 보이고 내려받기는 막�
   await button.click();
   const files = unzipSync(await bytesOf(await event));
   expect(files['[Content_Types].xml']).toBeDefined();
+
+  await page.reload();
+  await makeQuote(page);
+  await expect(quoteRow(page)).toContainText('1200000');
+  await expect(quoteRow(page)).not.toContainText('단가 미등록');
 });
 
 test('고객용 출력과 작업 파일에는 가격표 원가가 없고, 영업팀용에만 있다', async ({ page }) => {
-  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': 'browser' });
+  await mockResources(page, { '/data/approved/products.json': PRODUCTS, '/data/approved/prices.json': publicPrices('1500000') });
   page.on('dialog', (dialog) => void dialog.accept());
   await page.goto('./');
   await chooseFile(page, '채운-가격표.xlsx', fakeFourSheet(COST_SENTINEL, '1500000'));

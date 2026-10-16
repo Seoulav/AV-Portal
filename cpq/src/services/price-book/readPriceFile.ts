@@ -1,5 +1,9 @@
 /**
- * 가격표 파일 읽기 (B-20261016-06).
+ * 가격표 파일 읽기 (B-20261016-06) — **원가 전용**.
+ *
+ * 2026-10-16 사용자 결정(「옮길 때까지 공개 유지」): 판매가는 공개 `prices.json`이
+ * 기준이다. 여기서는 원가만 읽는다. 판매가 열을 고르면(선택) 공개 단가와 **대조만**
+ * 하고, 다르거나 공개 단가가 없으면 붙이지 않고 `sellingDiffers`로 센다.
  *
  * 두 형식을 받는다. 시트 이름으로 알아본다.
  *
@@ -22,6 +26,7 @@
  */
 import type { Catalog, CatalogProduct } from '../../data/catalog/load';
 import type { DecimalText } from '../../domain/quote/types';
+import { dec } from '../../domain/calculation/rounding';
 import { columnLetter, normalizeNumber } from '../private-cost/parse';
 import type { XlsxSheetGrid } from '../private-cost/readTable';
 import {
@@ -78,41 +83,40 @@ function pushIssue(summary: PriceImportSummary, issue: PriceImportSummary['issue
 }
 
 /**
- * 맞는 행 하나의 원가·판매가 칸을 반영한다. `undefined` 칸은 "그 열을 고르지
- * 않았거나 읽지 않는 품목(파생 단가)"이라 세지 않는다.
+ * 맞는 행 하나를 반영한다. 원가는 붙이고, 판매가(고른 경우)는 공개 단가와
+ * 대조만 한다. `selling`이 `undefined`면 판매가 열을 고르지 않았거나 대조하지
+ * 않는 품목(파생 단가)이다.
  */
 function accumulate(
   summary: PriceImportSummary,
   entries: Record<string, PriceBookEntry>,
-  sku: string,
-  cost: CellRead | undefined,
+  catalog: Catalog,
+  where: { sheet: string; row: number; sku: string },
+  cost: CellRead,
   selling: CellRead | undefined,
 ): void {
-  const entry: PriceBookEntry = {};
-  const tally = (cell: CellRead | undefined, which: 'cost' | 'selling'): void => {
-    if (cell === undefined) return;
-    if (cell.kind === 'empty') {
-      if (which === 'cost') summary.costBlank += 1;
-      else summary.sellingBlank += 1;
-    } else if (cell.kind === 'formula') {
-      summary.formulaSkipped += 1;
-    } else if (cell.kind === 'invalid') {
-      summary.notNumeric += 1;
-    } else {
-      entry[which] = cell.value;
-    }
-  };
-  tally(cost, 'cost');
-  tally(selling, 'selling');
+  if (cost.kind === 'empty') summary.blank += 1;
+  else if (cost.kind === 'formula') summary.formulaSkipped += 1;
+  else if (cost.kind === 'invalid') summary.notNumeric += 1;
+  else {
+    entries[where.sku] = { cost: cost.value };
+    summary.applied += 1;
+  }
 
-  const cells = [cost, selling].filter((c): c is CellRead => c !== undefined);
-  if (cells.length > 0 && cells.every((c) => c.kind === 'empty')) summary.blank += 1;
-
-  if (entry.cost === undefined && entry.selling === undefined) return;
-  entries[sku] = entry;
-  summary.applied += 1;
-  if (entry.cost !== undefined) summary.costApplied += 1;
-  if (entry.selling !== undefined) summary.sellingApplied += 1;
+  if (selling === undefined) return;
+  if (selling.kind === 'formula') summary.formulaSkipped += 1;
+  if (selling.kind === 'invalid') summary.notNumeric += 1;
+  if (selling.kind !== 'value') return;
+  const published = catalog.prices.get(where.sku);
+  if (published !== undefined && dec(published).equals(dec(selling.value))) return;
+  summary.sellingDiffers += 1;
+  pushIssue(summary, {
+    ...where,
+    reason:
+      published === undefined
+        ? '가격표에 판매가가 있지만 공개 단가가 없음 — 붙이지 않음'
+        : '가격표 판매가가 공개 단가와 다름 — 붙이지 않음(공개 단가 사용)',
+  });
 }
 
 /** 파생 단가 품목(`배관 기타자재` 등)은 견적 시점에 계산된다 — 고정 판매가를 붙이지 않는다. */
@@ -185,8 +189,8 @@ export interface PumsemAnalysis {
   skipped: Array<{ name: string; reason: string }>;
   /** 원가·판매가로 고를 수 있는 열(첫 시트 기준, 금지 열·품명·규격 제외). */
   options: PumsemColumn[];
-  /** 머리글 이름으로 미리 골라 둔 열. 사람이 확인하고 바꿀 수 있다. */
-  suggestion: PumsemColumnChoice;
+  /** 머리글 이름으로 미리 골라 둔 열(원가는 `원가`+`단가`, 대조용 판매가는 `재료비`+`단가`). 사람이 확인하고 바꿀 수 있다. */
+  suggestion: Partial<PumsemColumnChoice>;
 }
 
 const HEADER_SCAN_ROWS = 40;
@@ -236,7 +240,7 @@ function layoutOf(sheet: XlsxSheetGrid): PumsemSheetLayout | undefined {
   };
 }
 
-function suggestOf(columns: readonly PumsemColumn[]): PumsemColumnChoice {
+function suggestOf(columns: readonly PumsemColumn[]): Partial<PumsemColumnChoice> {
   const pick = (test: (c: PumsemColumn) => boolean): PumsemColumn | undefined => columns.find(test);
   const cost =
     pick((c) => normalizeText(c.top).startsWith('원가') && normalizeText(c.sub) === '단가') ??
@@ -292,7 +296,7 @@ export function analyzePumsemWorkbook(sheets: readonly XlsxSheetGrid[], catalog:
  * 이름이 달라졌으면 다시 묻는다.
  */
 export function savedChoiceFits(analysis: PumsemAnalysis, saved: PumsemColumnChoice | undefined): boolean {
-  if (saved === undefined || (saved.cost === undefined && saved.selling === undefined)) return false;
+  if (saved === undefined) return false;
   const fits = (ref: { index: number; label: string } | undefined): boolean =>
     ref === undefined ||
     analysis.options.some((c) => c.index === ref.index && normalizeText(c.label) === normalizeText(ref.label));
@@ -318,8 +322,8 @@ export function readPumsemPrices(
   catalog: Catalog,
   importedAt: string,
 ): PriceBook {
-  if (choice.cost === undefined && choice.selling === undefined) {
-    throw new PriceFileError('원가 열과 판매가 열 중 하나는 골라야 합니다.');
+  if (choice.cost === undefined) {
+    throw new PriceFileError('원가 열을 골라야 합니다(판매가 열은 선택입니다).');
   }
   for (const ref of [choice.cost, choice.selling]) {
     if (ref !== undefined && isForbiddenColumnLabel(ref.label)) {
@@ -343,11 +347,11 @@ export function readPumsemPrices(
   for (const layout of analysis.layouts) {
     const sheet = byName.get(layout.sheet);
     if (sheet === undefined) continue;
-    const costColumn = choice.cost === undefined ? undefined : resolveColumn(layout, choice.cost);
+    const costColumn = resolveColumn(layout, choice.cost);
     const sellingColumn = choice.selling === undefined ? undefined : resolveColumn(layout, choice.selling);
     const problem = [
-      costColumn === 'missing' ? `원가 열 '${choice.cost!.label}'이 없음` : undefined,
-      costColumn === 'ambiguous' ? `원가 열 '${choice.cost!.label}'이 둘 이상` : undefined,
+      costColumn === 'missing' ? `원가 열 '${choice.cost.label}'이 없음` : undefined,
+      costColumn === 'ambiguous' ? `원가 열 '${choice.cost.label}'이 둘 이상` : undefined,
       sellingColumn === 'missing' ? `판매가 열 '${choice.selling!.label}'이 없음` : undefined,
       sellingColumn === 'ambiguous' ? `판매가 열 '${choice.selling!.label}'이 둘 이상` : undefined,
     ].filter((p): p is string => p !== undefined);
@@ -374,10 +378,11 @@ export function readPumsemPrices(
         });
         continue;
       }
-      const cost = typeof costColumn === 'number' ? readPriceCell(sheet, r, costColumn) : undefined;
+      if (typeof costColumn !== 'number') continue; // 위에서 시트를 건너뛰었다 — 타입 좁히기용
+      const cost = readPriceCell(sheet, r, costColumn);
       const selling =
         typeof sellingColumn === 'number' && !isDerivedPricing(product) ? readPriceCell(sheet, r, sellingColumn) : undefined;
-      accumulate(summary, entries, product.sku, cost, selling);
+      accumulate(summary, entries, catalog, { sheet: layout.sheet, row: r + 1, sku: product.sku }, cost, selling);
     }
   }
 
@@ -424,8 +429,8 @@ export function readFourSheetPrices(sheets: readonly XlsxSheetGrid[], catalog: C
   const nameColumn = at(FOUR_SHEET_HEADERS.name);
   const costColumn = at(FOUR_SHEET_HEADERS.cost);
   const sellingColumn = at(FOUR_SHEET_HEADERS.selling);
-  if (costColumn === undefined && sellingColumn === undefined) {
-    throw new PriceFileError(`'${FOUR_SHEET_ITEMS}' 시트에 '원가'·'판매가' 머리글이 없습니다.`);
+  if (costColumn === undefined) {
+    throw new PriceFileError(`'${FOUR_SHEET_ITEMS}' 시트에 '원가' 머리글이 없습니다(판매가 열은 선택입니다).`);
   }
 
   const bySku = new Map(catalog.products.map((p) => [p.sku, p]));
@@ -489,10 +494,10 @@ export function readFourSheetPrices(sheets: readonly XlsxSheetGrid[], catalog: C
       });
       continue;
     }
-    const cost = costColumn === undefined ? undefined : readPriceCell(items, r, costColumn);
+    const cost = readPriceCell(items, r, costColumn);
     const selling =
       sellingColumn === undefined || isDerivedPricing(product) ? undefined : readPriceCell(items, r, sellingColumn);
-    accumulate(summary, entries, code, cost, selling);
+    accumulate(summary, entries, catalog, { sheet: items.name, row: r + 1, sku: code }, cost, selling);
   }
   return finishBook('four-sheet', catalog, entries, summary, visited, importedAt);
 }

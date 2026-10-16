@@ -1,9 +1,13 @@
 /**
- * 가격표(원가·판매가) — LED 구성기 방식 (B-20261016-06).
+ * 가격표(원가) — LED 구성기 방식 (B-20261016-06, 2026-10-16 사용자 결정 「공개 유지안」).
  *
- * 가격표는 **저장소·공개 웹에 없다.** 직원이 "가격표 불러오기"로 고른
- * 파일을 이 브라우저 안에서만 읽어 저장하고(`store.ts`), 다음 방문 때
- * 자동으로 쓴다. 파일 이름·내용을 네트워크로 보내지 않는다.
+ * **판매가는 공개 `prices.json`이 기준이다**(회사 서버로 옮길 때까지 공개 유지).
+ * 가격표에서 가져오는 것은 **원가뿐**이다. 원가는 저장소·공개 웹에 없다. 직원이
+ * "가격표 불러오기"로 고른 파일을 이 브라우저 안에서만 읽어 저장하고(`store.ts`),
+ * 다음 방문 때 자동으로 쓴다. 파일 이름·내용을 네트워크로 보내지 않는다.
+ *
+ * 가격표에 판매가 열이 있으면 **공개 단가와 대조만** 한다 — 다르면 붙이지 않고
+ * 건수로 알린다(덮어쓰지 않는다).
  *
  * ## 원가 경계
  *
@@ -11,27 +15,19 @@
  * 보고, 고객용·도메인·직렬화 경로(`src/domain`, `src/export/*`,
  * `src/services/files`)가 여기를 가져오지 못하게 막는다.
  *
- *   - 판매가 → `catalog.prices`(견적 행 단가) — 지금까지 `prices.json`이 하던 일
- *   - 원가   → 원가 세션(`services/private-cost/session.ts`) — 영업팀용(0) 출력과
- *              화면의 원가 영역에서만 쓴다
+ *   - 원가 → 원가 세션(`services/private-cost/session.ts`) — 영업팀용(0) 출력과
+ *            화면의 원가 영역에서만 쓴다
  */
 import { z } from 'zod';
 import type { DecimalText } from '../../domain/quote/types';
 
 const decimalText = z.string().regex(/^\d+(\.\d+)?$/);
 
-export const priceBookEntrySchema = z
-  .object({
-    cost: decimalText.optional(),
-    selling: decimalText.optional(),
-  })
-  .strict();
+export const priceBookEntrySchema = z.object({ cost: decimalText }).strict();
 
 export interface PriceBookEntry {
-  /** 원가(매입 단가). 비어 있으면 원가 미등록이다 — `0`이 아니다. */
-  cost?: DecimalText;
-  /** 판매가(견적 행 단가). 비어 있으면 단가 미등록이다 — `0`이 아니다. */
-  selling?: DecimalText;
+  /** 원가(매입 단가). 원가가 없는 품목은 키 자체가 없다 — `0`이 아니다. */
+  cost: DecimalText;
 }
 
 export type PriceBookKind = 'pumsem' | 'four-sheet';
@@ -53,16 +49,17 @@ const issueSchema = z.object({
 });
 
 export interface PriceImportSummary {
-  /** 원가나 판매가가 하나라도 붙은 품목 수. */
+  /** 원가가 붙은 품목 수. */
   applied: number;
-  sellingApplied: number;
-  costApplied: number;
   /** 가격표 행 불일치 — 그 행의 품명·규격(또는 모델)이 견적 단가표와 달라 붙이지 않은 수. */
   mismatched: number;
-  /** 맞는 행인데 원가·판매가 칸이 **둘 다** 비어 있는 수. */
+  /** 맞는 행인데 원가 칸이 비어 있는 수. */
   blank: number;
-  costBlank: number;
-  sellingBlank: number;
+  /**
+   * 가격표 판매가가 공개 단가와 다른(또는 공개 단가가 없는) 품목 수. 판매가는
+   * 공개 단가가 기준이라 **붙이지 않고** 알리기만 한다. 판매가 열을 고르지 않으면 0.
+   */
+  sellingDiffers: number;
   /** 가격 칸이 수식이라 읽지 않은 칸 수(설계서 §8.3: 수식이 만든 가격을 믿지 않는다). */
   formulaSkipped: number;
   /** 숫자로 읽을 수 없거나 음수인 칸 수. */
@@ -83,12 +80,9 @@ export const MAX_ISSUE_SAMPLES = 50;
 
 const summarySchema = z.object({
   applied: z.number().int(),
-  sellingApplied: z.number().int(),
-  costApplied: z.number().int(),
   mismatched: z.number().int(),
   blank: z.number().int(),
-  costBlank: z.number().int(),
-  sellingBlank: z.number().int(),
+  sellingDiffers: z.number().int(),
   formulaSkipped: z.number().int(),
   notNumeric: z.number().int(),
   unknownCodes: z.number().int(),
@@ -105,7 +99,7 @@ export interface PriceBook {
   catalogSourceSha256: string;
   /** ISO 시각 — 표시용. **파일 이름은 저장하지 않는다**(설계서 §6.3). */
   importedAt: string;
-  /** SKU → 원가·판매가. 둘 다 없는 품목은 키가 없다. */
+  /** SKU → 원가. 원가가 없는 품목은 키가 없다. 판매가는 담지 않는다. */
   entries: Record<string, PriceBookEntry>;
   summary: PriceImportSummary;
 }
@@ -121,17 +115,18 @@ export const priceBookSchema = z.object({
 
 /**
  * 표준품셈 원본에서 사람이 확인한 열 — **값이 아니라 자리와 머리글**이다.
- * 저장해도 원가가 새지 않는다(설계서 §8.2).
+ * 저장해도 원가가 새지 않는다(설계서 §8.2). 원가 열은 필수, 판매가 열은 공개
+ * 단가와 대조할 때만 고른다(선택).
  */
 export interface PumsemColumnChoice {
-  cost?: { index: number; label: string };
+  cost: { index: number; label: string };
   selling?: { index: number; label: string };
 }
 
 const columnRefSchema = z.object({ index: z.number().int().min(0), label: z.string() });
 
 export const pumsemColumnChoiceSchema = z.object({
-  cost: columnRefSchema.optional(),
+  cost: columnRefSchema,
   selling: columnRefSchema.optional(),
 });
 
@@ -163,12 +158,9 @@ export function parseStoredPriceRecord(raw: unknown): StoredPriceRecord | undefi
 export function emptySummary(): PriceImportSummary {
   return {
     applied: 0,
-    sellingApplied: 0,
-    costApplied: 0,
     mismatched: 0,
     blank: 0,
-    costBlank: 0,
-    sellingBlank: 0,
+    sellingDiffers: 0,
     formulaSkipped: 0,
     notNumeric: 0,
     unknownCodes: 0,

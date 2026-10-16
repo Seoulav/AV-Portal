@@ -40,9 +40,7 @@ for(const width of [1280,390]) test(`Builder 작성 → CPQ 새 견적, 시스�
 test('실제 배포 자료와 PDF 경로, 직접 접속 및 포털 복귀',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('./');await expect(page.getByRole('button',{name:'품목 직접 선택'})).toBeEnabled();
- for(const path of ['data/approved/products.json','templates/sanitized/guide-won.xlsx','templates/sanitized/guide-ds.xlsx','templates/sanitized/guide-pumsem.xlsx','templates/sanitized/guide-ds-won.xlsx','reference-docs/2026년도-적용-정보통신공사-표준품셈.pdf','reference-docs/2026년_하반기_적용_정보통신부문_시중노임단가_공표_안내_1부.pdf']) expect((await page.request.get(portal+'cpq/'+path)).status()).toBe(200);
- // B-20261016-06: 판매 단가는 공개 배포하지 않는다 — 가격표는 각자의 브라우저에만 있다.
- expect((await page.request.get(portal+'cpq/data/approved/prices.json')).status()).toBe(404);
+ for(const path of ['data/approved/products.json','data/approved/prices.json','templates/sanitized/guide-won.xlsx','templates/sanitized/guide-ds.xlsx','templates/sanitized/guide-pumsem.xlsx','templates/sanitized/guide-ds-won.xlsx','reference-docs/2026년도-적용-정보통신공사-표준품셈.pdf','reference-docs/2026년_하반기_적용_정보통신부문_시중노임단가_공표_안내_1부.pdf']) expect((await page.request.get(portal+'cpq/'+path)).status()).toBe(200);
  await page.getByRole('link',{name:'AV 포털',exact:true}).click();await expect(page).toHaveURL(/\/AV-Portal\/$/);await page.goBack();await expect(page.getByRole('button',{name:'품목 직접 선택'})).toBeVisible();
  expect(errors).toEqual([]);
  expect(await page.evaluate(async()=>({sw:(await navigator.serviceWorker.getRegistrations()).length,storage:Object.keys(localStorage)}))).toEqual({sw:0,storage:[]});
