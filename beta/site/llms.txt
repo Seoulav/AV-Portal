@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 317개
-- Product Detail: 314개
+- 공개 장비: 321개
+- Product Detail: 318개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1884,6 +1884,34 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://www.analogway.com/products/aquilon-rs6
   매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS6/Technical+Datasheet/Aquilon-RS6-datasheet-en-20260703.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-rs6
+
+- 제품: Analog Way Aquilon Cmini
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-cmini
+  매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-cmini
+
+- 제품: Analog Way Aquilon C
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-c
+  매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-c
+
+- 제품: Analog Way Aquilon C+
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-cplus
+  매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-cplus
+
+- 제품: Analog Way Aquilon Cmax
+  분류: 영상 | Video | Video Processor
+  종류: 장비
+  공식 링크: https://www.analogway.com/products/aquilon-cmax
+  매뉴얼: https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=aquilon-cmax
 
 - 제품: Analog Way Aquilon RS alpha
   분류: 영상 | Video | Video Wall Controller

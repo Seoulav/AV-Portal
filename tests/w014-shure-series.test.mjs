@@ -3,7 +3,7 @@ import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import {readBeforeW018File as readFile} from './w20261016-018-history.mjs';
 import { createHash } from 'node:crypto';
 import { withoutW004Catalog } from './w004-history.mjs';
 import { beforeW13007BehhlGuideCatalog } from './w13007-behhl-guide-history.mjs';

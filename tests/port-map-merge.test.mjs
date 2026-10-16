@@ -2,7 +2,7 @@ import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w2026
 import { beforeW20261016_001Product } from './w20261016-001-history.mjs';
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import {readBeforeW018File as readFile, readdirBeforeW018 as readdir} from './w20261016-018-history.mjs';
 import { prepareProductDetail, isAbsentConnector, prepareIoFallbackEntries, connectorPresentation } from '../prototype/brc-am7/product-detail-model.mjs';
 import { selectCardModes, selectSection03Content } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { renderIoFallbackCards, renderPortMapCards } from '../prototype/brc-am7/detail-enhancement-view.mjs';

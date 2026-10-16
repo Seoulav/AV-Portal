@@ -5,7 +5,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyCatalogNames, applyDetailNames } from '../beta/name-cleanup.mjs';
 import { filterCatalog, mapTopCategories } from '../beta/site/app.js';
-import { readFile } from 'node:fs/promises';
+import {readBeforeW018File as readFile} from './w20261016-018-history.mjs';
 import { beforeW1010Catalog } from './w1010-history.mjs';
 
 test('renames approved catalog categories in place and leaves other fields untouched', () => {

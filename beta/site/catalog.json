@@ -4723,6 +4723,70 @@
   },
   {
     "brand": "Analog Way",
+    "product": "Aquilon Cmini",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-cmini"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+    "slug": "aquilon-cmini",
+    "card_image": "aquilon-cmini-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon C",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-c"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+    "slug": "aquilon-c",
+    "card_image": "aquilon-c-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon C+",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-cplus"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+    "slug": "aquilon-cplus",
+    "card_image": "aquilon-cplus-front.webp"
+  },
+  {
+    "brand": "Analog Way",
+    "product": "Aquilon Cmax",
+    "categories": [
+      "영상",
+      "Video",
+      "Video Processor"
+    ],
+    "kind": "equipment",
+    "official_links": [
+      "https://www.analogway.com/products/aquilon-cmax"
+    ],
+    "manual_link": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf",
+    "slug": "aquilon-cmax",
+    "card_image": "aquilon-cmax-front.webp"
+  },
+  {
+    "brand": "Analog Way",
     "product": "Aquilon RS alpha",
     "categories": [
       "영상",
