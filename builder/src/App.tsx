@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ReactFlowProvider } from '@xyflow/react';
 import { createLibraryIndex, type Library } from './engine';
 import { loadSaved, startAutosave } from './state/autosave';
@@ -50,6 +50,7 @@ function SidePanel() {
 
 export function App() {
   const libraryReady = useBuilder(state => Boolean(state.library));
+  const [mobileView, setMobileView] = useState<'library' | 'canvas' | 'inspector'>('library');
   useEffect(() => {
     let stop: (() => void) | null = null;
     let cancelled = false;
@@ -62,7 +63,10 @@ export function App() {
         const state = builderStore.getState();
         state.setLibrary(library);
         const saved = loadSaved(window.localStorage, library);
-        if (saved.diagram) builderStore.setState({ diagram: saved.diagram });
+        if (saved.diagram) {
+          builderStore.setState({ diagram: saved.diagram });
+          if (saved.diagram.nodes.length) setMobileView('canvas');
+        }
         if (saved.error) state.notify({ text: saved.error, tone: 'error' });
         stop = startAutosave(builderStore, window.localStorage);
       } catch (error) {
@@ -75,10 +79,17 @@ export function App() {
     <ReactFlowProvider>
       <div className="app">
         <Toolbar />
-        <div className="workspace">
-          <LibraryPanel />
-          {libraryReady ? <Canvas /> : <div className="canvas canvas-loading">장비 라이브러리를 불러오는 중입니다…</div>}
-          <SidePanel />
+        <nav className="mobile-workspace-tabs" role="tablist" aria-label="작업 화면">
+          {([['library', '라이브러리'], ['canvas', '캔버스'], ['inspector', '선택 항목·이슈']] as const).map(([view, label]) => (
+            <button key={view} id={`tab-${view}`} type="button" role="tab" aria-controls={`panel-${view}`} aria-selected={mobileView === view} onClick={() => setMobileView(view)}>{label}</button>
+          ))}
+        </nav>
+        <div className="workspace" data-mobile-view={mobileView}>
+          <div id="panel-library" className="workspace-panel workspace-panel-library" role="tabpanel" aria-labelledby="tab-library"><LibraryPanel onEquipmentAdded={() => setMobileView('canvas')} /></div>
+          <div id="panel-canvas" className="workspace-panel workspace-panel-canvas" role="tabpanel" aria-labelledby="tab-canvas">
+            {libraryReady ? <Canvas /> : <div className="canvas canvas-loading">장비 라이브러리를 불러오는 중입니다…</div>}
+          </div>
+          <div id="panel-inspector" className="workspace-panel workspace-panel-inspector" role="tabpanel" aria-labelledby="tab-inspector"><SidePanel /></div>
         </div>
         <EquipmentSettingsModal />
         <Notice />

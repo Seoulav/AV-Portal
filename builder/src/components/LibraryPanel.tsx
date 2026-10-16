@@ -33,7 +33,7 @@ export function groupProducts(products: LibraryProduct[]): [string, LibraryProdu
 
 const unitLabel = (product: LibraryProduct, unit: LibraryUnit) => (product.units.length > 1 ? unit.equipment.model : product.product);
 
-function UnitItem({ product, unit }: { product: LibraryProduct; unit: LibraryUnit }) {
+function UnitItem({ product, unit, onEquipmentAdded }: { product: LibraryProduct; unit: LibraryUnit; onEquipmentAdded?: () => void }) {
   const addEquipment = useBuilder(state => state.addEquipment);
   const flow = useReactFlow();
   const ports = unit.equipment.inputs.length + unit.equipment.outputs.length + unit.equipment.bidirectional.length;
@@ -41,6 +41,7 @@ function UnitItem({ product, unit }: { product: LibraryProduct; unit: LibraryUni
     const bounds = document.querySelector('.canvas')?.getBoundingClientRect();
     const point = bounds ? { x: bounds.left + bounds.width / 2, y: bounds.top + bounds.height / 3 } : { x: 400, y: 200 };
     addEquipment(unit.equipment, freePosition(builderStore.getState().diagram.nodes, flow.screenToFlowPosition(point)));
+    onEquipmentAdded?.();
   };
   return (
     <li
@@ -57,7 +58,7 @@ function UnitItem({ product, unit }: { product: LibraryProduct; unit: LibraryUni
   );
 }
 
-export function LibraryPanel() {
+export function LibraryPanel({ onEquipmentAdded }: { onEquipmentAdded?: () => void } = {}) {
   const library = useBuilder(state => state.library);
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState<Record<string, boolean>>({});
@@ -81,7 +82,7 @@ export function LibraryPanel() {
               {expanded && products.map(product => (
                 <div key={product.productId} className="library-product">
                   <div className="product-brand">{product.brand} <span className="product-kind">{product.categories[2]}</span></div>
-                  <ul>{product.units.map(unit => <UnitItem key={unit.unitId} product={product} unit={unit} />)}</ul>
+                  <ul>{product.units.map(unit => <UnitItem key={unit.unitId} product={product} unit={unit} onEquipmentAdded={onEquipmentAdded} />)}</ul>
                 </div>
               ))}
             </section>
