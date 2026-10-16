@@ -61,7 +61,7 @@ try {
       }
     }
   }
-  for(const slug of ['aquilon-rs6','zenith-200','dci-4-600']){
+  for(const slug of ['aquilon-rs6','aquilon-rs2','dci-4-600']){
     await open(slug,'after',1280,2400);
     const info=await evaluate(`(()=>{const g=document.querySelector('#gallery'),l=document.querySelector('#port-map-list');g.scrollIntoView({block:'start'});const gr=g.getBoundingClientRect(),lr=l.getBoundingClientRect();return {y:Math.max(0,Math.floor(gr.top)),h:Math.min(2200,Math.ceil(lr.bottom-gr.top)),lw:lr.width,items:l.innerText}})()`);
     if(!info.items.trim()) throw Error(`${slug}: Port Map number list is empty`);

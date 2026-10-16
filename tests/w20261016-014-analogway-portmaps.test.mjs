@@ -100,9 +100,9 @@ test('Port Map list collapses repeated numbers into one row with a quantity badg
   });
 });
 
-test('the 11 Analog Way maps use shared card numbers and short photo leaders', () => {
+test('the seven approved Aquilon RS maps use shared card numbers and short photo leaders', () => {
   const root = new URL('../beta/site/detail/data/', import.meta.url);
-  const ids = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200'];
+  const ids = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6'];
   for (const id of ids) {
     const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
     assert.deepEqual(enhancementErrors(product), [], id);
@@ -136,13 +136,12 @@ test('the 11 Analog Way maps use shared card numbers and short photo leaders', (
   }
 });
 
-test('the revised marker counts match each layout while retaining every Port Map number', () => {
+test('the seven approved Aquilon RS marker counts match each layout while retaining every Port Map number', () => {
   const root = new URL('../beta/site/detail/data/', import.meta.url);
   const before = JSON.parse(readFileSync(new URL('./fixtures/w014-analogway-before-revision.json', import.meta.url), 'utf8'));
   const expected = {
     'aquilon-rsalpha': 8, 'aquilon-rs1': 10, 'aquilon-rs2': 10, 'aquilon-rs3': 10,
-    'aquilon-rs4': 10, 'aquilon-rs5': 10, 'aquilon-rs6': 10,
-    'pulse-4k': 10, 'eikos-4k': 10, 'zenith-100': 14, 'zenith-200': 16
+    'aquilon-rs4': 10, 'aquilon-rs5': 10, 'aquilon-rs6': 10
   };
   for (const [id, afterCount] of Object.entries(expected)) {
     const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
@@ -171,26 +170,18 @@ test('Aquilon RS card maps use one grouped edge bracket per card type with card 
   }
 });
 
-test('middle-row fixed-port markers use short edge brackets instead of crossing adjacent rows', () => {
+test('fixed-panel Pulse, Eikos, and Zenith maps are restored to the pre-W-014 baseline', () => {
   const root = new URL('../beta/site/detail/data/', import.meta.url);
-  const required = {
-    'pulse-4k': [3, 4, 5, 6, 7], 'eikos-4k': [3, 4, 5, 6, 7],
-    'zenith-100': [3, 4, 5, 6, 7, 10, 11, 12],
-    'zenith-200': [3, 4, 5, 6, 7, 12, 13, 14]
-  };
-  for (const [id, numbers] of Object.entries(required)) {
+  const prior = JSON.parse(readFileSync(new URL('./fixtures/w014-analogway-prior-portmaps.json', import.meta.url), 'utf8'));
+  for (const id of ['pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200']) {
     const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
-    for (const number of numbers) {
-      const matching = product.portMap.items.filter(item => item.n === number);
-      assert.ok(matching.length, `${id} #${number} missing`);
-      assert.ok(matching.every(item => ['left', 'right'].includes(item.side) && Number.isFinite(item.y1) && Number.isFinite(item.y2)), `${id} #${number} must use an edge bracket`);
-    }
+    assert.deepEqual(product.portMap, prior[id], `${id}: fixed-panel map must remain at the main baseline pending redesign`);
   }
 });
 
 test('other products keep their previous unique-number Port Map list structure', () => {
   const root = new URL('../beta/site/detail/data/', import.meta.url);
-  const targets = new Set(['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6', 'pulse-4k', 'eikos-4k', 'zenith-100', 'zenith-200']);
+  const targets = new Set(['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6']);
   const files = readdirSync(root).filter(file => file.endsWith('.json'));
   withDocument(() => {
     for (const file of files) {

@@ -431,81 +431,82 @@
         "n": 1,
         "label": "선택형 SDI 입력 1·2",
         "desc": "IN #1·2의 BNC · HDMI 1.4 또는 3G-SDI 선택형 입력",
-        "side": "left",
-        "y1": 201,
-        "y2": 215
+        "x1": 145,
+        "x2": 310,
+        "y": 282,
+        "side": "top"
       },
       {
         "n": 2,
         "label": "12G-SDI 입력 3·4",
         "desc": "IN #3·4의 BNC · 12G/6G/3G-SDI 입력",
-        "side": "right",
-        "y1": 210,
-        "y2": 224
+        "x1": 337,
+        "x2": 490,
+        "y": 282,
+        "side": "top"
       },
       {
         "n": 3,
         "label": "HDMI 입력 1·2",
         "desc": "IN #1·2의 HDMI · SDI 단자와 선택적으로 사용",
-        "side": "left",
-        "y1": 303,
-        "y2": 317
+        "x1": 154,
+        "x2": 310,
+        "y": 376,
+        "side": "bottom"
       },
       {
         "n": 4,
         "label": "HDMI 입력 5–8·루프",
         "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
-        "side": "right",
-        "y1": 303,
-        "y2": 317
-      },
-      {
-        "n": 4,
-        "label": "HDMI 입력 5–8·루프",
-        "desc": "IN #5–8 HDMI와 사진에 표기된 IN #5·8 LOOP 연결 영역",
-        "side": "left",
-        "y1": 321,
-        "y2": 335
+        "x1": 337,
+        "x2": 866,
+        "y": 375,
+        "side": "bottom"
       },
       {
         "n": 5,
         "label": "DisplayPort 입력 9·10",
         "desc": "IN #9·10의 DisplayPort 1.2 입력",
-        "side": "right",
-        "y1": 321,
-        "y2": 335
+        "x1": 908,
+        "x2": 1080,
+        "y": 376,
+        "side": "bottom"
       },
       {
         "n": 6,
         "label": "PGM 출력 1·2",
         "desc": "OUT #1·2의 HDMI 및 각각 대응하는 미러 SDI 출력",
-        "side": "left",
-        "y1": 339,
-        "y2": 353
+        "x1": 1106,
+        "x2": 1413,
+        "y": 376,
+        "side": "bottom"
       },
       {
         "n": 7,
         "label": "멀티뷰어 출력",
         "desc": "MVW 표기의 HDMI·SDI 출력",
-        "side": "right",
-        "y1": 339,
-        "y2": 353
+        "x1": 1445,
+        "x2": 1575,
+        "y": 376,
+        "side": "bottom"
       },
       {
         "n": 8,
         "label": "Genlock·Loop",
         "desc": "GENLOCK 입력 및 LOOP BNC",
-        "side": "left",
-        "y1": 219,
-        "y2": 233
+        "x1": 1445,
+        "x2": 1580,
+        "y": 281,
+        "side": "top"
       },
       {
         "n": 9,
         "label": "CONTROL",
         "desc": "CONTROL 표기의 RJ-45 제어 연결",
-        "side": "left",
-        "y1": 433,
-        "y2": 447
+        "x1": 1600,
+        "x2": 1675,
+        "y": 348,
+        "side": "bottom"
       }
     ]
   },
