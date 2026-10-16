@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 316개
-- Product Detail: 313개
+- 공개 장비: 317개
+- Product Detail: 314개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -1963,6 +1963,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   공식 링크: https://cn.hdcvt.com/product_169/567.html
   매뉴얼: ./manuals/hdf-ccf-user-manual-v1-1.pdf
   상세: https://seoulav.github.io/AV-Portal/detail/?product=hdf-ccf
+
+- 제품: Belkin Connect Air
+  분류: 화상회의 | Conferencing | Wireless Presentation
+  종류: 장비
+  공식 링크: https://www.belkin.com/kr/p/%EB%AC%B4%EC%84%A0-hdmi-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4-%EC%96%B4%EB%8C%91%ED%84%B0/AVC024dqBK.html
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=belkin-connect-air
 
 - 제품: RTCOM XDM Series
   분류: 영상 | Video | Modular Matrix

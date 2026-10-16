@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
@@ -40,7 +41,7 @@ const bytes = path => readFileSync(new URL(path,root));
 const hash = value => createHash('sha256').update(value).digest('hex');
 const evidence = read('Work/기록/W-20261003-010-evidence.json');
 const bssEvidence = read('Work/기록/W-20261003-011-evidence.json');
-const manifest = read('beta/site/docs/manifest.json');
+const manifest = beforeW008Manifest(read('beta/site/docs/manifest.json'));
 const slugs = Object.keys(evidence.products);
 const product = slug => read(`beta/site/detail/data/${slug}.json`);
 
@@ -125,7 +126,7 @@ test('JBL I/O, presentation and all other products remain unchanged; only ten sp
       assert.equal(hash(Buffer.from(beforeHarmanW03014Raw(beforeJblW15010Raw(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root),'utf8').replace(/\r\n/g,'\n'),slug),slug))),before.fileSha256,`${slug}: entire JSON bytes must remain unchanged`);
     }
   }
-  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && !isW20261014_005DetailFile(x) && !isW004Name(x) && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x) && !isW006Name(x) && !isW007Name(x) && !isW06002Name(x) && !isW1010Name(x) && !isW1012Name(x)&&!isW009DetailFile(x)&&!slugs.includes(x.slice(0,-5))).sort();
+  const names=readdirSync(new URL('beta/site/detail/data/',root)).filter(x=>x.endsWith('.json') && !isW008DetailFile(x) && !isW20261014_005DetailFile(x) && !isW004Name(x) && x !== 'lh43behhlbfxkr.json'&&!isW029Name(x) && !isW030Name(x) && !isW006Name(x) && !isW007Name(x) && !isW06002Name(x) && !isW1010Name(x) && !isW1012Name(x)&&!isW009DetailFile(x)&&!slugs.includes(x.slice(0,-5))).sort();
   const digest=hash(names.map(name=>{
     const slug=name.slice(0,-5);
     const raw=beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(`beta/site/detail/data/${name}`,root),'utf8').replace(/\r\n/g,'\n'), slug), slug),slug),slug),slug),slug);

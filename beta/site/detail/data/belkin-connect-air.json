@@ -1,0 +1,591 @@
+{
+  "manufacturer": "Belkin",
+  "productName": "Connect Air 무선 HDMI 디스플레이 어댑터",
+  "model": "AVC024",
+  "itemType": "PRODUCT",
+  "categories": [
+    "화상회의",
+    "Conferencing",
+    "Wireless Presentation"
+  ],
+  "english": "Belkin Connect Air is a plug-and-play wireless HDMI display adapter with a USB-C DP Alt Mode transmitter and an HDMI receiver.",
+  "korean": "Belkin Connect Air(AVC024)는 USB-C DP Alt Mode 송신기와 HDMI 수신기로 구성된 무선 화면 공유 어댑터다.",
+  "verificationSummary": "Belkin 한국 공식 페이지와 공식 자료에서 제품 구성·출력·무선·전원·보증을 확인. 운영체제 세부 버전은 명시되지 않음.",
+  "packageStatus": "FOUND",
+  "overview": "Belkin Connect Air는 USB-C DP Alt Mode를 지원하는 노트북·태블릿·휴대전화의 화면과 오디오를 HDMI 디스플레이로 직접 전송하는 송신기(TX)·수신기(RX) 키트다. 별도 앱·드라이버와 Wi-Fi·Bluetooth 또는 네트워크 연결 없이 P2P 방식으로 동작한다. 송신기는 호스트 USB-C 포트에서 전원을 받고, 수신기는 HDMI와 USB-A 전원에 연결한다.\n\n최대 1920×1080, 60Hz 출력, 개방 공간 최대 40m 전송, 지연 80ms 미만을 제시한다. 한 수신기에 송신기 최대 8대를 페어링해 발표자가 차례로 전환할 수 있으며 동시 화면 표시는 지원 구성이 아니다. 4K 신호 입력은 지원하지 않는다.",
+  "images": [
+    {
+      "role": "Main",
+      "file": "belkin-connect-air-main.jpg",
+      "alt": "Belkin Connect Air AVC024 송신기와 HDMI·USB-A 전원 수신기 케이블 플러그",
+      "note": "Main · Belkin 한국 공식 제품 페이지에 연결된 AVC024 모델 공식 제품 이미지 · 송신기 USB-C 및 수신기 HDMI·USB-A 케이블 일체형 플러그 확인",
+      "provider": "Belkin",
+      "model": "AVC024",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "700x700",
+      "resolution": "700x700",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Front",
+      "file": "belkin-connect-air-front-map.jpg",
+      "alt": "Belkin Connect Air AVC024 케이블 일체형 USB-C·HDMI·USB-A 플러그",
+      "note": "기기 본체 단자판이 아닌 케이블 일체형 플러그 표시",
+      "provider": "Belkin",
+      "model": "AVC024",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "700x700",
+      "resolution": "700x700",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    }
+  ],
+  "imageStatuses": [
+    {
+      "role": "Main",
+      "status": "FOUND",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700"
+    },
+    {
+      "role": "Front",
+      "status": "FOUND",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700"
+    },
+    {
+      "role": "Rear",
+      "status": "MISSING",
+      "reason": "본체 전·후면 패널이 없는 케이블 일체형 어댑터"
+    },
+    {
+      "role": "Perspective",
+      "status": "MISSING",
+      "reason": "확인된 공식 제품 이미지는 Main 1종"
+    },
+    {
+      "role": "Other",
+      "status": "MISSING",
+      "reason": "추가 공식 제품 이미지 미등록"
+    }
+  ],
+  "documents": [
+    {
+      "type": "User Manual",
+      "title": "공식 사용 설명서 PDF 미확인",
+      "language": "ko",
+      "status": "MISSING"
+    },
+    {
+      "type": "Independent Specification",
+      "title": "독립 시방서 미확인",
+      "language": "ko",
+      "status": "MISSING"
+    },
+    {
+      "type": "Specification",
+      "title": "ConnectAir Wireless HDMI Display Adapter Sales Sheet",
+      "language": "en",
+      "status": "FOUND",
+      "url": "https://s3.belkin.com/resources/pdf/avc024-sales-sheet.pdf",
+      "note": "Belkin 공식 2쪽 Sales Sheet"
+    },
+    {
+      "type": "Technical Document",
+      "title": "추가 기술 문서 미확인",
+      "language": "ko",
+      "status": "MISSING"
+    }
+  ],
+  "features": [
+    {
+      "text": "Wi-Fi·Bluetooth·사내 네트워크 연결 없이 동작하는 직접 P2P 화면 전송",
+      "source": "P, F"
+    },
+    {
+      "text": "앱·드라이버 설치 없이 USB-C 송신기와 HDMI 수신기로 구성하는 플러그 앤 플레이 연결",
+      "source": "P, F"
+    },
+    {
+      "text": "개방 공간 최대 40m 무선 전송 · 1920×1080 60Hz 출력",
+      "source": "P, F"
+    },
+    {
+      "text": "수신기 1대에 송신기 최대 8대 페어링 · 발표자별 순차 전환",
+      "source": "B, R"
+    }
+  ],
+  "specifications": [
+    {
+      "group": "Video",
+      "name": "최대 비디오 출력",
+      "value": "1920×1080 @ 60Hz",
+      "unit": "",
+      "condition": "4K 입력 미지원",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Wireless",
+      "name": "무선 연결",
+      "value": "P2P 직접 연결",
+      "unit": "",
+      "condition": "Wi-Fi·Bluetooth·네트워크 연결 없이 동작",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Wireless",
+      "name": "무선 전송 거리",
+      "value": "40",
+      "unit": "m",
+      "condition": "개방 공간",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Performance",
+      "name": "지연",
+      "value": "<80",
+      "unit": "ms",
+      "condition": "최대 지연 표기",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Presentation",
+      "name": "수신기당 페어링 송신기",
+      "value": "최대 8",
+      "unit": "대",
+      "condition": "발표자 순차 전환 · 동시 표시 아님",
+      "source": "B, R",
+      "verification": "FOUND"
+    },
+    {
+      "group": "OS",
+      "name": "호환 운영체제",
+      "value": "Windows / macOS / Chrome OS",
+      "unit": "",
+      "condition": "세부 버전 미표기",
+      "source": "F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Transmitter",
+      "name": "USB-C 송신기 전원",
+      "value": "5V / 0.5A",
+      "unit": "",
+      "condition": "호스트 USB-C 포트에서 전원 공급",
+      "source": "S",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Receiver",
+      "name": "USB-A 수신기 전원",
+      "value": "5V / 1A",
+      "unit": "",
+      "condition": "USB-A 전원 입력 · 수신기 최소 2.3W",
+      "source": "S, R",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Transmitter",
+      "name": "치수(W×H×D)",
+      "value": "170×45.21×19.75",
+      "unit": "mm",
+      "condition": "TX",
+      "source": "B",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Receiver",
+      "name": "치수(W×H×D)",
+      "value": "189.96×18.11×9",
+      "unit": "mm",
+      "condition": "RX 수신기",
+      "source": "B",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "무게",
+      "value": "TX 41.8 / RX 22",
+      "unit": "g",
+      "condition": "",
+      "source": "B",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Physical",
+      "name": "케이블 길이",
+      "value": "TX 90 / RX 190",
+      "unit": "mm",
+      "condition": "TX / RX 케이블",
+      "source": "P, B",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Warranty",
+      "name": "품질 보증",
+      "value": "2",
+      "unit": "년",
+      "condition": "",
+      "source": "P, B",
+      "verification": "FOUND"
+    }
+  ],
+  "io": [
+    {
+      "group": "Transmitter",
+      "connector": "USB-C",
+      "signal": "DP Alt Mode 영상·오디오 입력 및 송신기 전원",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "USB-C DP Alt Mode",
+      "availability": "Fixed",
+      "condition": "TX 케이블 일체형 male plug · 호스트가 DP Alt Mode 지원 필요",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Receiver",
+      "connector": "HDMI",
+      "signal": "영상·오디오 출력",
+      "direction": "OUT",
+      "quantity": "1",
+      "protocol": "HDMI",
+      "availability": "Fixed",
+      "condition": "RX 케이블 일체형 male plug · 디스플레이 연결",
+      "source": "P, F",
+      "verification": "FOUND"
+    },
+    {
+      "group": "Receiver",
+      "connector": "USB-A",
+      "signal": "수신기 전원 입력",
+      "direction": "IN",
+      "quantity": "1",
+      "protocol": "5V / 1A · 최소 2.3W",
+      "availability": "Fixed",
+      "condition": "RX 케이블 일체형 male plug · USB-A 전원 어댑터 또는 전원 공급 포트",
+      "source": "S, R",
+      "verification": "FOUND"
+    }
+  ],
+  "sources": [
+    {
+      "code": "P",
+      "name": "Belkin 한국 ConnectAir AVC024 공식 제품 페이지",
+      "url": "https://www.belkin.com/kr/p/%EB%AC%B4%EC%84%A0-hdmi-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4-%EC%96%B4%EB%8C%91%ED%84%B0/AVC024dqBK.html",
+      "scope": "제품 구성·주요 사양·거리·지연·무선 방식·보증"
+    },
+    {
+      "code": "B",
+      "name": "Belkin ConnectAir 공식 Sales Sheet",
+      "url": "https://s3.belkin.com/resources/pdf/avc024-sales-sheet.pdf",
+      "scope": "2쪽 · TX/RX 구성·크기·무게·수신기 1대당 송신기 최대 8대"
+    },
+    {
+      "code": "F",
+      "name": "Belkin 공식 FAQ",
+      "url": "https://www.belkin.com/support-article/?articleNum=337228",
+      "scope": "지원 OS·무선 동작·호환 기기·출력·거리·동시 전환 방식"
+    },
+    {
+      "code": "R",
+      "name": "Belkin 공식 설치·문제 해결 안내",
+      "url": "https://www.belkin.com/support-article/?articleNum=337509",
+      "scope": "TX USB-C DP Alt Mode 요구·RX HDMI/USB-A 전원·최소 2.3W"
+    },
+    {
+      "code": "S",
+      "name": "Belkin 공식 ConnectAir 제품 사양·전원 안내",
+      "url": "https://www.belkin.com/support-article/?articleNum=337227",
+      "scope": "TX/RX 전원 및 치수"
+    }
+  ],
+  "issues": [
+    {
+      "code": "R1",
+      "status": "REVIEW REQUIRED",
+      "title": "4K 입력",
+      "detail": "공식 FAQ는 AVC024가 4K 신호 또는 4K HDCP 키를 지원하지 않는다고 명시한다. 4K 소스 연결 시 영상이 나오지 않을 수 있다."
+    }
+  ],
+  "presentation": {
+    "galleryRightsBadge": "사용자 게시 승인 · 공식 출처 기록",
+    "galleryRights": "이미지 출처와 모델 일치 검증 상태를 확인할 수 있습니다.",
+    "specIntro": "송신기(TX)와 수신기(RX)를 구분해 공식 사양과 연결 조건을 표시합니다.",
+    "ioIntro": "사진에서 확인되는 케이블 일체형 플러그를 입력·출력 용도로 구분했습니다.",
+    "supplementalNote": "공식 Sales Sheet 및 지원 문서로 한국 공식 페이지의 세부 내용을 보충했습니다.",
+    "footerNote": "Belkin Connect Air AVC024 · 공식 출처 기반",
+    "visualVariant": "official-product-images",
+    "galleryFootNote": "Belkin 공식 제품 이미지"
+  },
+  "portMap": {
+    "image": "Front",
+    "items": [
+      {
+        "n": 1,
+        "label": "USB-A POWER",
+        "desc": "수신기 전원 입력 · 케이블 일체형 플러그",
+        "x1": 31,
+        "x2": 73,
+        "y": 315,
+        "side": "bottom"
+      },
+      {
+        "n": 2,
+        "label": "HDMI OUT",
+        "desc": "수신기 영상·오디오 출력 · 케이블 일체형 플러그",
+        "x1": 103,
+        "x2": 139,
+        "y": 408,
+        "side": "bottom"
+      },
+      {
+        "n": 3,
+        "label": "USB-C IN",
+        "desc": "송신기 DP Alt Mode 입력·전원 · 케이블 일체형 플러그",
+        "x1": 194,
+        "x2": 235,
+        "y": 493,
+        "side": "bottom"
+      }
+    ]
+  },
+  "signalFlow": {
+    "type": "extender",
+    "description": "노트북의 USB-C DP Alt Mode 영상·오디오를 송신기가 직접 전송하고, 수신기에서 HDMI 디스플레이로 출력합니다. TX는 호스트 USB-C에서, RX는 USB-A 전원에서 전력을 받습니다.",
+    "inputs": [
+      {
+        "id": "laptop-video",
+        "label": "노트북 영상",
+        "signal": "video",
+        "caption": "USB-C DP Alt Mode",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "laptop-audio",
+        "label": "노트북 오디오",
+        "signal": "audio",
+        "caption": "USB-C DP Alt Mode",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "laptop-power",
+        "label": "노트북 USB-C 전원",
+        "signal": "power",
+        "caption": "TX 전원 공급",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "usb-power-source",
+        "label": "USB-A 전원 공급",
+        "signal": "power",
+        "caption": "RX 전원 입력 · 최소 2.3W",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "id": "display-video",
+        "label": "디스플레이 영상",
+        "signal": "video",
+        "caption": "HDMI",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "id": "display-audio",
+        "label": "디스플레이 오디오",
+        "signal": "audio",
+        "caption": "HDMI",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "processes": [
+      {
+        "id": "tx",
+        "kind": "encode",
+        "label": "Connect Air 송신기",
+        "caption": "USB-C 입력 · P2P 무선 전송",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": "rx",
+        "kind": "decode",
+        "label": "Connect Air 수신기",
+        "caption": "무선 수신 · HDMI 출력",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          },
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "laptop-video",
+        "to": "tx",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "laptop-audio",
+        "to": "tx",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "laptop-power",
+        "to": "tx",
+        "signal": "power",
+        "label": "USB-C 호스트 전원",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "from": "tx",
+        "to": "rx",
+        "signal": "video",
+        "label": "P2P 무선",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "tx",
+        "to": "rx",
+        "signal": "audio",
+        "label": "P2P 무선",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 0
+          },
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "usb-power-source",
+        "to": "rx",
+        "signal": "power",
+        "label": "USB-A 전원 케이블",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 2
+          }
+        ]
+      },
+      {
+        "from": "rx",
+        "to": "display-video",
+        "signal": "video",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      },
+      {
+        "from": "rx",
+        "to": "display-audio",
+        "signal": "audio",
+        "evidence": [
+          {
+            "kind": "io",
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "auxiliary": [],
+    "groups": [],
+    "legend": [
+      {
+        "signal": "video",
+        "label": "영상"
+      },
+      {
+        "signal": "audio",
+        "label": "오디오"
+      },
+      {
+        "signal": "power",
+        "label": "전원"
+      }
+    ],
+    "notes": [
+      "TX USB-C는 호스트의 DP Alt Mode 영상·오디오와 전원을 함께 사용한다.",
+      "RX는 HDMI 디스플레이 연결과 별도 USB-A 전원을 함께 사용한다.",
+      "다중 송신기는 수신기 한 대에 페어링해 발표자가 순차 전환하는 구성."
+    ]
+  }
+}

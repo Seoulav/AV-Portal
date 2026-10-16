@@ -1,8 +1,8 @@
 {
   "note": "공개 산출물 고정값. beta/update-snapshot.mjs로 다시 만든다.",
   "catalog": {
-    "count": 284,
-    "sha256": "C8F7F9A8F983309F52E4FC10902C930E16FB837022E753B8378B36EC767054FD",
+    "count": 285,
+    "sha256": "E3BE3717B1B9D3A7B48271756321C0D7B7F443A5C7B8F56AE39C995EB7FB4DD6",
     "baselineCount": 25,
     "baselineSha256": "B8AB75CBE36032B6C20FB28DE019A234C1EA6CE7CBAB7E0FC7B005C966AFDF26"
   },
@@ -96,6 +96,12 @@
       "features": 7,
       "specifications": 11,
       "io": 2
+    },
+    "belkin-connect-air": {
+      "sha256": "4F5092B94DB5F385460E4BB44E2A75CB24B53002B6C3842EF663E1A5FCDBE261",
+      "features": 4,
+      "specifications": 13,
+      "io": 3
     },
     "blu-100": {
       "sha256": "796E1258675D409B6676F386273B0537C20462D951738B00666C67BCC5A57FCF",

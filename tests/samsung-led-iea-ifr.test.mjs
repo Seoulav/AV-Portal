@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { beforeW20261014_005Catalog, isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { beforeW009Catalog, isW009DetailFile } from './w009-history.mjs';
@@ -41,7 +42,7 @@ const models = [
 const newSlugs = new Set(models.map(([slug]) => slug));
 
 test('three exact workbook models retain their own facts and omit unsupported connector maps', () => {
-  const catalog =beforeW20261014_005Catalog(read('beta/site/catalog.json'));
+  const catalog =beforeW20261014_005Catalog(beforeW008Catalog(read('beta/site/catalog.json')));
   for (const [slug, model, code, pitch, resolution, diode, brightnessName, brightness, contrast] of models) {
     const card = catalog.find(item => item.slug === slug);
     const detail = read(`beta/site/detail/data/${slug}.json`);
@@ -87,11 +88,11 @@ test('three exact workbook models retain their own facts and omit unsupported co
 });
 
 test('LED cabinet addition changes only the three new products and keeps the private workbook offline', () => {
-  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW20261014_005DetailFile(file) && !isW004Name(file) && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
+  const files = readdirSync(new URL('beta/site/detail/data/', root)).filter(file => file.endsWith('.json') && !isW008DetailFile(file) && !isW20261014_005DetailFile(file) && !isW004Name(file) && !newSlugs.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
   assert.equal(files.length, 247);
   const digests = files.map(file => [file, sha(beforeW005Raw(beforeW024Raw(beforeW032Raw(beforeW026Raw(beforeW006Raw(readFileSync(new URL(`beta/site/detail/data/${file}`, root), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
   assert.equal(sha(JSON.stringify(digests)), '02769b62612aacaee971e39f4a7783469415c2a8a4aa8280830b4e4e4f499083');
-  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))));
+  const catalog =beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(beforeW008Catalog(read('beta/site/catalog.json'))))));
   assert.equal(catalog.length, 274);
   assert.equal(catalog.filter(item => item.brand === 'Samsung').length, 35);
   assert.deepEqual(filterCatalog(catalog, { brand: 'Samsung', series: 'led-signage', sort: 'brand' }).map(item => item.slug),

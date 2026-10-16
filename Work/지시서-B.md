@@ -515,3 +515,36 @@
 - Wave for Business 브로슈어 2·7쪽에서 Connect 연동 지지를 확인. 일반 Wave 브로슈어에는 비호환 문구가 없어 Video Bar 연동 불가 표기는 사용자 확인 U(2026-10-13) 유지.
 - CUA에 브라우저 surface가 없어 1280px·390px 화면 캡처는 만들지 못함. 상세 HTML·JSON, 문서 manifest, PDF 다운로드 응답/SHA 및 보기·다운로드 링크 회귀 검사로 비시각 확인.
 - 첨부 이미지는 Link 2 Pro·Link 2C Pro 공동 이미지로 확인되어 일반 Link 2 제품 사진에 사용하지 않음.
+
+## W-20261016-008 — Belkin Connect Air
+
+- 상태: 완료 — PR #571 병합, Pages 배포, 공개 확인 완료.
+- 명세: `Work/작업/W-20261016-008.md` (명세·인계서 읽음, 기준 최신 main `0c8f4192259863c7dd8dca388c457536a1a117cb`; 명세 병합 PR #563)
+- 구현 브랜치: `codex/W-20261016-008-belkin-connect-air` (`codex-b` 별도 워크트리)
+- 인계서의 `ede0dfb0`/열린 PR 표기는 작성 당시 상태로 확인. 실제 main에는 명세와 인계서가 #563으로 병합됨.
+- 승인: Belkin Connect Air 등록·시그널 플로우·AirMedia 비교 장점 정리. 카테고리 `화상회의 / Conferencing / Wireless Presentation` 사용자 승인(2026-10-16). 1단계 기존 한글값 유지, 검증기는 대상 slug 한정 허용.
+- 범위 제외: Crestron 등록, 가격·판매처, `builder/`, `cpq/`, 다른 제조사 제품 변경.
+- 체크리스트:
+  - [x] 한국 공식 제품 정보·공식 글로벌 보충 자료 대조 및 비교 근거표 작성
+  - [x] Belkin 제조사·Connect Air 카탈로그/상세/공식 사진·Port Map·시그널 플로우 등록
+  - [x] 공개 파생물 재생성, 전체 테스트·검사 및 모바일 Port Map 선 미리보기 확인
+  - [x] Work 인계서 작성, PR·CI·병합 순서 확인·배포·공개 점검
+
+- Initial implementation verification before review/main integrations: 753 tests, 752 passed, 0 failed, 1 skipped. Derived output checks and the 390px Port Map preview passed; non-Belkin PDF/manifest mirror changes were 0.
+
+
+### W-008 PR #571 review fixes and latest-main integration
+
+- PR #568 merged into main at `47a432d7` before W-008 integration.
+- Removed Belkin/AVC024-specific branches from the beta and prototype Port Map validators. The Belkin map now uses a separate Front-role photo copy; the product-specific `portMap.note` was removed, and the Korean image note explains that the mapped points are integrated cable plugs, not a chassis panel. Main card image remains unchanged.
+- Added regression assertions for Front-role mapping, the user-facing note, and rejection of a Main-role Port Map. Updated cache tokens in both apps and product models.
+- Recorded the approved Port Map layout exception in `Work/기록/W-20261016-015-예외.md`: diagonal cable-plug photo makes edge brackets ambiguous; marker leaders cross other connectors or cables 0 times.
+- Integrated current `origin/main` through PR #572 (`f8747461`); resolved its overlapping W-009 history-test change with the fixture-based inverse from main. Regenerated snapshot, search index, and readable catalog. `search-index --check` and `verify-pages` passed: 285 equipment, 282 details, 515 reviewed product image assets, 156 uploaded PDFs; the 12 locked PDFs remain.
+- Focused W-008/W-009 regressions passed: 5/5. Full `npm.cmd test` after #572: 756 tests, 755 passed, 0 failed, 1 skipped. `git diff --check` and `git diff --cached --check` passed before final staging.
+- Refreshed local previews: `Work/기록/W-20261016-008-preview/belkin-connect-air-detail-1280.png` (full detail and Signal Flow), `belkin-connect-air-detail-390.png`, `belkin-connect-air-airmedia-comparison-1280.png`, and the previously reviewed `belkin-connect-air-portmap-390.png`.
+- State: MERGED; PR #571 merged at `164a5a81747fe9a45e221ecd0b271ed1146e05be` after integrating latest main `73f4a85f` (including #573). The crop validator and Sony exception record were preserved; the W-008 map test passed independently.
+- Final serial suite after #573: 761 tests, 760 passed, 0 failed, 1 skipped. Builder CI `38884239985` and Pages deployment `38884704104` passed.
+- Final Pages verification: 285 products, 282 details, 515 reviewed images, 156 uploaded PDFs; 12 locked PDFs remain. Search index `--check` passed.
+- Public catalog, detail JSON and detail route returned HTTP 200. Product AVC024, category `화상회의 / Conferencing / Wireless Presentation`, 8 signal-flow connections, and 3 Port Map plugs were present.
+- Public PDF GET returned 200, 122,775 bytes, SHA-256 `e7e3f1a8d8b438aa2f26e1cad5202505980bc1e36d0cadee6952b8c39a25214b`. Non-Belkin mirror changes: 0.
+- CUA had no browser surface; public visual capture unavailable. Local 1280px and 390px previews were reviewed and public JSON/HTML/PDF were checked. No `builder/` or `cpq/` changes.
