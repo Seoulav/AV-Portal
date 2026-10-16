@@ -11,7 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests/e2e',
-  testIgnore: '**/portal-*.spec.ts',
+  testIgnore: ['**/portal-handoff.spec.ts', '**/portal-real-workflow.spec.ts'],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   reporter: 'list',

@@ -629,3 +629,9 @@
 .q-reference-doc-notes p {
   margin: 6px 0 0;
 }
+
+.q-start-intro { max-width: 680px; padding: 20px 0; }
+.q-start-intro strong { display: block; font-size: 18px; }
+.q-start-intro p { color: var(--q-muted); line-height: 1.65; margin-bottom: 0; }
+.q-reference-docs { color: var(--q-muted); }
+.q-reference-docs h3, .q-reference-docs strong { color: var(--q-ink); }

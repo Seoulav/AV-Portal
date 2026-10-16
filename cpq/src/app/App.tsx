@@ -397,9 +397,14 @@ function QuoteWorkspace() {
         </header>
 
         <nav className="q-portal-nav" aria-label="포털 메뉴"><a href="../">AV 포털</a> · <a href="../builder/">구성도</a> · <span aria-current="page">AV 견적 산출기</span></nav>
-        <ReferenceDocs />
-
-        <div className="q-workspace">
+        <div className={`q-workspace${status.kind === 'empty' ? ' q-start-workspace' : ''}`}>
+          {status.kind === 'empty' && (
+            <div className="q-start-heading">
+              <span className="q-start-eyebrow">AV QUOTE WORKSPACE</span>
+              <h1 className="q-start-title">견적 시작</h1>
+              <p>구성도를 가져오거나 포털 품목을 직접 골라 견적을 만드세요.</p>
+            </div>
+          )}
           {/*
             지금 어느 견적을 보고 있는지 **상단에서** 알 수 있어야 한다
             (계획 §1). 값은 갑지 입력에서 그대로 읽는다 — 비어 있으면
@@ -421,6 +426,7 @@ function QuoteWorkspace() {
             </p>
           )}
           <div className="q-tools">
+            <div className="q-start-actions" role="group" aria-label="견적 시작 방법">
             <button
               type="button"
               className="q-button"
@@ -437,6 +443,7 @@ function QuoteWorkspace() {
             >
               품목 직접 선택
             </button>
+            </div>
             <button type="button" className="q-button" onClick={workspace.undo} disabled={!workspace.canUndo}>
               실행 취소
             </button>
@@ -506,8 +513,9 @@ function QuoteWorkspace() {
             </p>
           )}
         </div>
+        <ReferenceDocs />
 
-        <main className="q-main">
+        <main className={`q-main${status.kind === 'editing' ? ' q-editing-main' : ''}`}>
           {state.kind === 'loading' && (
             <p role="status" className="q-notice">
               자료를 불러오는 중입니다…
@@ -561,7 +569,10 @@ function QuoteWorkspace() {
                 ))}
 
               {entry === null && status.kind === 'empty' && (
-                <p className="q-muted">왼쪽 위 버튼으로 구성도를 열거나 품목을 직접 고르세요.</p>
+                <div className="q-start-intro">
+                  <strong>두 가지 방법 중 하나를 선택하세요</strong>
+                  <p>구성도 JSON은 장비 목록을 한 번에 불러오고, 직접 선택은 필요한 품목을 골라 시작합니다.</p>
+                </div>
               )}
 
               {status.kind === 'basis-conflict' && (
