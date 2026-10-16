@@ -93,6 +93,22 @@
     {
       "text": "Wave for Business만 오디오 캐스케이딩 연동 가능, 일반 Wave 연동 불가",
       "source": "M, U"
+    },
+    {
+      "text": "AI Resolution+ 기반 화자 화질·디테일 향상",
+      "source": "B"
+    },
+    {
+      "text": "프라이버시 모드·화이트보드 자동 보정",
+      "source": "B"
+    },
+    {
+      "text": "기본 데스크 스탠드 제공 및 TV·벽걸이·듀얼 스크린 설치 지원",
+      "source": "B"
+    },
+    {
+      "text": "8K Gallery Mode에서 최대 8명 개별 화면 표시",
+      "source": "B"
     }
   ],
   "specifications": [
@@ -266,6 +282,15 @@
       "condition": "",
       "source": "P",
       "verification": "FOUND"
+    },
+    {
+      "group": "Camera",
+      "name": "광각 카메라 화소",
+      "value": "48",
+      "unit": "MP",
+      "condition": "110° HFoV 광각 카메라",
+      "source": "B",
+      "verification": "FOUND"
     }
   ],
   "io": [
@@ -366,6 +391,12 @@
       "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
       "url": "",
       "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Connect 제품 브로슈어(한국어, 2026-10-16)",
+      "url": "",
+      "scope": "8쪽; 듀얼 카메라·오디오·모드·장착 옵션(2–6쪽)"
     }
   ],
   "issues": [

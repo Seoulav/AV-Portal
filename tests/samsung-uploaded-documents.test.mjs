@@ -1,5 +1,6 @@
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
+import { beforeW20261016_003Uploads } from './w20261016-003-history.mjs';
 import { beforeW009Uploads, isW009DetailFile } from './w009-history.mjs';
 import { isW004Name } from './w004-history.mjs';
 import { beforeW013Product, beforeW013Raw } from './w013-history.mjs';
@@ -40,7 +41,7 @@ import {beforeW04021Uploads} from './document-lock-history.mjs';
 
 const root = new URL('../', import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL('beta/site/docs/manifest.json', root), 'utf8'));
-const historicalUploads =beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(beforeW009Uploads(manifest.uploads))));
+const historicalUploads =beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(beforeW009Uploads(beforeW20261016_003Uploads(manifest.uploads)))));
 const historicalManifest = {...manifest, uploads: historicalUploads.slice(0, 22)};
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const files = {

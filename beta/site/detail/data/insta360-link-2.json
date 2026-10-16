@@ -85,6 +85,10 @@
     {
       "text": "제스처 제어·데스크뷰 모드",
       "source": "P"
+    },
+    {
+      "text": "음성 포커스·소음 억제·음성 밸런스 오디오 모드 3종",
+      "source": "B"
     }
   ],
   "specifications": [
@@ -223,6 +227,12 @@
       "name": "사용자 제공 Insta360 Conference Line Product Collection (2026-07-29)",
       "url": "",
       "scope": "포털 문서 카드에 게시한 제품 컬렉션 브로슈어"
+    },
+    {
+      "code": "B",
+      "name": "사용자 제공 Insta360 Link 2 제품 브로슈어(한국어, 2026-10-16)",
+      "url": "",
+      "scope": "8쪽; Link 2·Link 2C 공용 사양과 기능(1–7쪽); 본문 한국어 확인"
     }
   ],
   "issues": [
