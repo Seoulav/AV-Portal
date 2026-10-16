@@ -1,0 +1,45 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { enhancementErrors } from '../beta/site/detail/detail-enhancements.mjs';
+import { portMapGeometry } from '../beta/site/detail/detail-enhancement-view.mjs';
+import { beforeW20261016_005Product, beforeW20261016_005Raw } from './w20261016-005-history.mjs';
+
+const base = new URL('../beta/site/detail/', import.meta.url);
+const fixture = JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-005-prior-fields.json', import.meta.url), 'utf8'));
+const raw = readFileSync(new URL('data/u-bridge-3.json', base), 'utf8');
+const current = JSON.parse(raw);
+const sha = value => createHash('sha256').update(value).digest('hex');
+
+test('U-BRIDGE 3 keeps the manufacturer diagram and all eleven original callout facts', () => {
+  assert.deepEqual(enhancementErrors(current), []);
+  assert.deepEqual(current.images.map(image => [image.role, image.file]), [
+    ['Main', 'u-bridge-3-main.png'],
+    ['Diagram', 'u-bridge-3-panels.png'],
+    ['Other', 'u-bridge-3-diagram.png']
+  ]);
+  assert.deepEqual(current.portMap.items.map(({ n, label, desc }) => ({ n, label, desc })),
+    fixture.prior.portMap.items.map(({ n, label, desc }) => ({ n, label, desc })));
+  assert.equal(current.portMap.items.length, 11);
+  assert.deepEqual(current.portMap.measuredImage, { file: 'u-bridge-3-panels.png', width: 784, height: 580 });
+  const geometry = portMapGeometry(current.portMap, 784, 580);
+  assert.ok(geometry.markers.slice(0, 5).every(marker => marker.side === 'top'));
+  assert.ok(geometry.markers.slice(5).every(marker => marker.side === 'bottom'));
+  assert.equal(sha(readFileSync(new URL('images/u-bridge-3-panels.png', base))), fixture.newImageSha256);
+  assert.equal(sha(readFileSync(new URL('images/u-bridge-3-diagram.png', base))), fixture.originalImageSha256);
+});
+
+test('selective inverse retains every current nonapproved field and rejects drift', () => {
+  const approvedFields = new Set(['images', 'imageStatuses', 'portMap']);
+  const unchanged = Object.fromEntries(Object.entries(current).filter(([field]) => !approvedFields.has(field)));
+  assert.equal(sha(JSON.stringify(unchanged)), fixture.unchangedSha256);
+  assert.deepEqual(beforeW20261016_005Product(current, 'u-bridge-3').portMap, fixture.prior.portMap);
+  assert.equal(sha(beforeW20261016_005Raw(raw, 'u-bridge-3')), sha(JSON.stringify({ ...current, ...fixture.prior }, null, 2) + '\n'));
+  const alteredIo = structuredClone(current);
+  alteredIo.io = [];
+  assert.deepEqual(beforeW20261016_005Product(alteredIo, 'u-bridge-3').io, []);
+  const alteredMap = structuredClone(current);
+  alteredMap.portMap.items[0].label = 'INVALID';
+  assert.throws(() => beforeW20261016_005Product(alteredMap, 'u-bridge-3'), /unexpected W-005 portMap change/);
+});

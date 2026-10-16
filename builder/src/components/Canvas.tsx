@@ -363,6 +363,7 @@ export function Canvas() {
         )}
         {showMiniMap && <MiniMap className="minimap" style={MINIMAP_SIZE} nodeColor={miniMapColor} maskColor={theme === 'dark' ? 'rgba(0, 0, 0, 0.4)' : 'rgba(148, 163, 184, 0.35)'} zoomable pannable />}
       </ReactFlow>
+      {diagram.nodes.length === 0 && <div className="canvas-empty-hint" aria-hidden="true"><strong>첫 장비를 놓아 보세요</strong><span>왼쪽 라이브러리에서 검색하고 ＋를 누르거나 여기로 끌어 놓으세요.</span></div>}
     </div>
   );
 }
