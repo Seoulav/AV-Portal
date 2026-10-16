@@ -25,7 +25,7 @@ const stamp = () => {
   return `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}`;
 };
 
-export function Toolbar() {
+export function Toolbar({ onDiagramOpened, onNewDiagram }: { onDiagramOpened?: () => void; onNewDiagram?: () => void } = {}) {
   const fileInput = useRef<HTMLInputElement>(null);
   const flow = useReactFlow();
   const state = useBuilder(s => s);
@@ -94,6 +94,7 @@ export function Toolbar() {
     const result = state.importText(await file.text());
     if (result.ok) {
       state.notify({ text: `${file.name}을 열었습니다.`, tone: 'info' });
+      onDiagramOpened?.();
       setTimeout(() => flow.fitView(FIT_VIEW), 0);
     } else {
       const [first] = result.errors;
@@ -123,6 +124,7 @@ export function Toolbar() {
   const confirmNew = () => {
     if (state.diagram.nodes.length && !window.confirm('지금 구성도를 비우고 새로 시작할까요? 실행 취소로 되돌릴 수 있습니다.')) return;
     state.newDiagram();
+    onNewDiagram?.();
   };
 
   // 라이브러리와 자동 저장본을 읽기 전에는 편집을 막는다. 읽는 중에 만든 내용이 저장본에 덮이지 않게 한다
