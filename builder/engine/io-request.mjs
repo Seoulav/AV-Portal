@@ -124,11 +124,13 @@ export function overrideApplies(overrides, key, row) {
 //   signalVocabulary: 라이브러리 vocabulary.signals. overrides: 개별 지정 표(시험용으로 바꿔 넣을 수 있다)
 // 결과: { ok, code?, detail?, request, notReflected: [{ code, ports, detail? }] }
 //   code 'library-missing' · 'library-old'(portalIo.ioIndex 없음) · 'library-changed'(라이브러리에 없는 라이브러리 단자)
+//        'generic-equipment'(빌더 전용 일반 장비 — Portal 원본이 없다)
 //        'unit-unsupported'(Portal 제품의 TX/RX·시리즈 배치 단위 — 적용 스크립트가 아직 다루지 않는다. RTCOM은 전달용으로 만든다)
 export function buildIoRequest({ lists, data, libraryEquipment, librarySource, signalVocabulary = [], overrides = IO_OVERRIDES, createdAt }) {
   const fail = (code, detail) => ({ ok: false, code, detail, request: null, notReflected: [] });
   if (!libraryEquipment) return fail('library-missing', data?.model);
   const portal = data?.portal ?? libraryEquipment.portal;
+  if (portal?.source === 'builder') return fail('generic-equipment', libraryEquipment.id);
   if (portal?.source !== 'rtcom' && libraryEquipment.id !== portal?.productId) return fail('unit-unsupported', libraryEquipment.id);
   const libraryPorts = Object.keys(PORT_LISTS).flatMap(list => libraryEquipment[list] ?? []);
   if (libraryPorts.some(port => !Number.isInteger(port.portalIo?.ioIndex))) return fail('library-old', '라이브러리 1.2.0 이상이 필요하다');
