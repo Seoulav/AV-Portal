@@ -33,14 +33,14 @@
       "role": "Diagram",
       "file": "u-bridge-3-panels.png",
       "alt": "U-BRIDGE 3 PC HOST·DEVICE의 앞뒤 단자판 네 개를 재배치한 번호 안내도",
-      "note": "Diagram · 제조사 공식 연결도에서 네 단자판과 PC HOST·DEVICE 제목만 픽셀 그대로 잘라 재배치, 영어 설명선 제외",
+      "note": "Diagram · 제조사 공식 연결도에서 네 단자판과 PC HOST·DEVICE 제목만 픽셀 그대로 잘라 재배치, 두 열 간격 확대·제목 상단 배치, 영어 설명선 제외",
       "provider": "INOGENI",
       "model": "U-BRIDGE 3",
       "sourceUrl": "https://inogeni.com/wp-content/uploads/2024/05/INOGENI-U-BRIDGE-3_Diagram-Connectors_2024-08-1024x924.png",
       "officialSource": true,
       "verificationStatus": "VERIFIED",
       "originalSize": "1024x924",
-      "resolution": "784x580",
+      "resolution": "944x580",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     {
@@ -396,7 +396,7 @@
     "image": "Diagram",
     "measuredImage": {
       "file": "u-bridge-3-panels.png",
-      "width": 784,
+      "width": 944,
       "height": 580
     },
     "items": [
@@ -406,7 +406,7 @@
         "desc": "호스트 PC USB 3.2 Gen 1 연결",
         "x1": 161,
         "x2": 213,
-        "y": 183,
+        "y": 203,
         "side": "top"
       },
       {
@@ -415,34 +415,34 @@
         "desc": "PC HOST 모듈 USB-mini 관리 단자",
         "x1": 266,
         "x2": 314,
-        "y": 183,
+        "y": 203,
         "side": "top"
       },
       {
         "n": 3,
         "label": "DEVICE USB-C",
         "desc": "DEVICE 모듈 USB-C 주변기기 단자",
-        "x1": 464,
-        "x2": 510,
-        "y": 183,
+        "x1": 624,
+        "x2": 670,
+        "y": 203,
         "side": "top"
       },
       {
         "n": 4,
         "label": "DEVICE USB-A 1–2",
         "desc": "DEVICE 모듈 USB-A 주변기기 단자 2개",
-        "x1": 547,
-        "x2": 643,
-        "y": 176,
+        "x1": 707,
+        "x2": 803,
+        "y": 196,
         "side": "top"
       },
       {
         "n": 5,
         "label": "DEVICE MGMT",
         "desc": "DEVICE 모듈 USB-mini 관리 단자",
-        "x1": 684,
-        "x2": 727,
-        "y": 183,
+        "x1": 844,
+        "x2": 887,
+        "y": 203,
         "side": "top"
       },
       {
@@ -476,8 +476,8 @@
         "n": 9,
         "label": "DEVICE DC 24V",
         "desc": "DEVICE 모듈 DC 24V 전원 입력",
-        "x1": 468,
-        "x2": 527,
+        "x1": 628,
+        "x2": 687,
         "y": 396,
         "side": "bottom"
       },
@@ -485,8 +485,8 @@
         "n": 10,
         "label": "DEVICE LINK",
         "desc": "DEVICE 모듈 CAT6A 연장 링크",
-        "x1": 541,
-        "x2": 647,
+        "x1": 701,
+        "x2": 807,
         "y": 399,
         "side": "bottom"
       },
@@ -494,8 +494,8 @@
         "n": 11,
         "label": "DEVICE RS-232",
         "desc": "DEVICE 모듈 RS-232 패스스루",
-        "x1": 661,
-        "x2": 727,
+        "x1": 821,
+        "x2": 887,
         "y": 401,
         "side": "bottom"
       }
