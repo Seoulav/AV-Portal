@@ -334,3 +334,10 @@
 - [x] Updated prototype sources and regenerated beta assets; added boundary and wording regression assertions. W-019 focused tests: 17/17 pass.
 - [x] Full serial suite: 848 tests, 847 pass, 0 fail, 1 skipped. Concurrent mode reproduced the existing Windows RTCOM temp-directory rename EPERM; serial mode passed. Pages verification and search-index check passed.
 - [ ] PR #597 remains open; latest origin/main is 0645b86c. Integrate if #597 merges before W-019 merge.
+
+### W-20261016-019 post-#597 integration (2026-10-17)
+
+- [x] #597 is merged at 1ebee612c72228529af00d0455fa0a6846c89c77. Integrated into this branch as merge commit eb4c19cc; resolved the shared history test while retaining both W-014 and W-019 inverse checks.
+- [x] Regenerated detail assets, search-index (712807 bytes), and readable catalog after main integration.
+- [x] Post-integration serial suite: 855 tests, 854 pass, 0 fail, 1 skipped. verify-pages and search-index --check pass.
+- [ ] Push integration, update PR text, confirm CI, then mark ready and merge.
