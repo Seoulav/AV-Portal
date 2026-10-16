@@ -7,17 +7,21 @@
 //
 // 검사 내용:
 //   1. 금지 import — 고객용/도메인/직렬화 경로가 services/private-cost를 참조하는가
+//      (import 문자열을 실제 경로로 풀어 본다. 1-1: services/price-book은 정해진 화면·앱 파일에서만 가져온다)
 //   2. 영속 저장 API — 원가를 다룰 수 있는 모듈이 localStorage 등에 닿는가
 //   3. 네트워크 API — 원가를 다룰 수 있는 모듈이 fetch 등을 쓰는가
 //   4. 위험한 실행 — eval, new Function, dynamic import (설계서 §8.3)
 //   5. 화면 경로 — 견적 문서를 브라우저에 영속 저장하거나 외부 origin으로 보내는가 (§8.8, §8.4)
 //   6. 시그니처 — calculateQuote/buildCustomerProjection이 PrivateCostSession을 받는가 (§10.4)
 //   7. 영속 저장 허용 목록 — 위 경로 밖(예: 새 services/*)도 브라우저 저장소를 쓰면 막는다.
-//      유일한 예외는 "확인한 품셈 연결 기억"(B-20261016-05) 파일 하나이고, 그 파일도
-//      정해진 열쇠 하나(`LABOR_MEMORY_STORAGE_KEY`)로만 읽고 쓴다.
+//      예외는 두 파일뿐이고, 각 파일은 정해진 열쇠 하나로만 읽고 쓴다.
+//        - "확인한 품셈 연결 기억"(B-20261016-05): localStorage, `LABOR_MEMORY_STORAGE_KEY`
+//        - "가격표"(B-20261016-06, LED 구성기 방식): IndexedDB, 데이터베이스·저장소·열쇠
+//          상수 세 개(`PRICE_BOOK_DB_NAME`·`PRICE_BOOK_STORE`·`PRICE_BOOK_RECORD_KEY`)
+//      가격표는 원가를 담으므로 `services/price-book`도 원가 모듈로 본다(1·3번 규칙).
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { join, relative, sep } from 'node:path';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
@@ -35,10 +39,17 @@ const COST_FREE_PREFIXES = [
   'src/export/variants',
 ];
 
-/** 원가 모듈로 간주하는 경로. */
-const COST_MODULE = /services[/\\]private-cost/;
+/**
+ * 원가 모듈로 간주하는 경로. 가격표(B-20261016-06)도 원가를 담는다 — 고객용·
+ * 도메인·직렬화 경로가 가져오지 못하고(1번), 네트워크에 닿지 못한다(3번).
+ */
+const COST_MODULE = /services[/\\](private-cost|price-book)/;
 
-/** 영속 저장 — 설계서 §8.1: 원가를 localStorage/IndexedDB에 넣지 않는다. */
+/**
+ * 영속 저장 — 설계서 §8.1: 원가를 localStorage/IndexedDB에 넣지 않는다.
+ * 유일한 예외는 2026-10-16 사용자 지시(B-20261016-06, "LED 구성기 방식처럼")로
+ * 둔 가격표 저장 파일 하나다(7번 규칙의 허용 목록).
+ */
 const PERSISTENCE = /\b(localStorage|sessionStorage|indexedDB|openDatabase|caches)\b/;
 
 /** 네트워크 — 설계서 §8.4: 네트워크 요청에 문서 상태를 싣는 공용 함수를 두지 않는다. */
@@ -76,12 +87,56 @@ const BEACON = /navigator\s*\.\s*sendBeacon/;
  */
 const PERSISTENCE_ALLOWED = new Map([
   ['src/services/labor-memory/laborMappingMemory.ts', {
+    kind: 'local-storage',
     keyConstant: 'LABOR_MEMORY_STORAGE_KEY',
     keyValue: 'av-cpq.confirmed-labor-mappings.v1',
+  }],
+  // 가격표(B-20261016-06). 원가·판매가를 이 브라우저에만 둔다. 데이터베이스 하나,
+  // 저장소 하나, 열쇠 하나 — 상수 세 개가 정확히 이 값으로 선언돼 있어야 한다.
+  ['src/services/price-book/store.ts', {
+    kind: 'indexed-db',
+    constants: {
+      PRICE_BOOK_DB_NAME: 'av-cpq.price-book.v1',
+      PRICE_BOOK_STORE: 'price-book',
+      PRICE_BOOK_RECORD_KEY: 'current',
+    },
   }],
 ]);
 /** 저장소 메서드 호출 — 첫 인자가 정해진 열쇠 상수여야 한다. */
 const STORAGE_CALL = /\.(getItem|setItem|removeItem|clear|key)\s*\(([^,)]*)/g;
+
+/**
+ * IndexedDB 호출 — **정해진 모양 그대로만** 허용한다(같은 줄 안에서 닫혀야 한다).
+ *   indexedDB.open(PRICE_BOOK_DB_NAME, …)          데이터베이스는 하나
+ *   transaction(PRICE_BOOK_STORE, 'readonly'|'readwrite')
+ *   objectStore(PRICE_BOOK_STORE) / createObjectStore(PRICE_BOOK_STORE)   (옵션 없이 — 자동 열쇠 금지)
+ *   get(PRICE_BOOK_RECORD_KEY) / delete(PRICE_BOOK_RECORD_KEY)           열쇠는 하나
+ *   put(값, PRICE_BOOK_RECORD_KEY)
+ * 목록을 훑거나 통째로 지우거나 구조를 바꾸는 호출은 막는다.
+ */
+const IDB_CALL_SHAPES = [
+  [/\.open\s*\(/g, /^\s*PRICE_BOOK_DB_NAME\s*,/],
+  [/\.transaction\s*\(/g, /^\s*PRICE_BOOK_STORE\s*,\s*'(readonly|readwrite)'\s*\)/],
+  [/\.objectStore\s*\(/g, /^\s*PRICE_BOOK_STORE\s*\)/],
+  [/\.createObjectStore\s*\(/g, /^\s*PRICE_BOOK_STORE\s*\)/],
+  [/\.get\s*\(/g, /^\s*PRICE_BOOK_RECORD_KEY\s*\)/],
+  [/\.delete\s*\(/g, /^\s*PRICE_BOOK_RECORD_KEY\s*\)/],
+  [/\.put\s*\(/g, /^\s*[A-Za-z_$][\w$]*\s*,\s*PRICE_BOOK_RECORD_KEY\s*\)/],
+];
+const IDB_FORBIDDEN =
+  /\.(getAll|getAllKeys|getKey|openCursor|openKeyCursor|clear|add|deleteDatabase|deleteObjectStore|count|index|createIndex|databases)\s*\(/;
+/** 상수 이름을 다른 곳에서 다시 선언(가리기)하지 못하게 — 선언은 각각 한 번뿐이어야 한다. */
+const IDB_CONSTANT_DECLARATION = /\b(PRICE_BOOK_DB_NAME|PRICE_BOOK_STORE|PRICE_BOOK_RECORD_KEY)\s*=(?!=)/g;
+
+/**
+ * 1-1. 가격표 모듈(원가·판매가를 담는다)을 가져올 수 있는 곳 — 이 목록뿐이다.
+ * 카탈로그·구성도·도메인 쪽이 가격표 원가를 직접 끌어가지 못하게 한다.
+ */
+const PRICE_BOOK_MODULE = /^src\/services\/price-book\//;
+const PRICE_BOOK_IMPORTERS = ['src/services/price-book/', 'src/features/price-book/', 'src/app/App.tsx'];
+
+/** IndexedDB 허용 파일에서도 다른 브라우저 저장소는 쓰지 않는다. */
+const NON_IDB_PERSISTENCE = /\b(localStorage|sessionStorage|openDatabase|caches)\b/;
 
 const findings = [];
 
@@ -100,6 +155,13 @@ function walk(dir) {
 
 function posix(path) {
   return path.split(sep).join('/');
+}
+
+/** import 문자열 → 저장소 기준 경로(`src/...`). 상대 경로와 `@/` 별칭을 푼다. 패키지는 그대로. */
+function importTarget(fromRel, spec) {
+  if (spec.startsWith('@/')) return `src/${spec.slice(2)}`;
+  if (!spec.startsWith('.')) return spec;
+  return posix(relative(ROOT, resolve(ROOT, dirname(fromRel), spec)));
 }
 
 /** 줄 단위 검사 — 주석 줄은 건너뛴다. 설명에 쓴 단어를 위반으로 잡지 않기 위해서다. */
@@ -148,26 +210,46 @@ for (const file of files) {
   const isUi = UI_PREFIXES.some((p) => rel.startsWith(p));
   const persistenceRule = PERSISTENCE_ALLOWED.get(rel);
 
-  if (persistenceRule !== undefined) {
+  if (persistenceRule?.kind === 'local-storage') {
     const declaration = `export const ${persistenceRule.keyConstant} = '${persistenceRule.keyValue}';`;
     if (!source.includes(declaration)) {
       findings.push(`${rel}  허용된 저장 열쇠 ${persistenceRule.keyConstant} = '${persistenceRule.keyValue}' 선언이 없다`);
     }
   }
+  if (persistenceRule?.kind === 'indexed-db') {
+    const declarations = [...source.matchAll(IDB_CONSTANT_DECLARATION)].map((m) => m[1]);
+    for (const name of Object.keys(persistenceRule.constants)) {
+      const count = declarations.filter((d) => d === name).length;
+      if (count !== 1) findings.push(`${rel}  저장 상수 ${name}는 한 번만 선언해야 한다(지금 ${count}번)`);
+    }
+    for (const [name, value] of Object.entries(persistenceRule.constants)) {
+      const declaration = `export const ${name} = '${value}';`;
+      if (!source.includes(declaration)) {
+        findings.push(`${rel}  허용된 저장 상수 ${name} = '${value}' 선언이 없다`);
+      }
+    }
+  }
 
   for (const [number, line] of lines) {
-    // 1. 금지 import
-    if (isCostFree) {
-      const match = /from\s+['"]([^'"]+)['"]/.exec(line);
-      if (match && COST_MODULE.test(match[1])) {
+    // 1. 금지 import — import 문자열을 **실제 경로로 풀어** 본다. 상대 경로
+    //    (`../price-book/store`)로 `services/`를 빼고 들어와도 잡는다(독립 리뷰 지적).
+    const importMatch = /(?:from|import)\s+['"]([^'"]+)['"]/.exec(line);
+    if (importMatch) {
+      const target = importTarget(rel, importMatch[1]);
+      if (isCostFree && (COST_MODULE.test(importMatch[1]) || COST_MODULE.test(target))) {
         findings.push(
-          `${rel}:${number}  원가 모듈 import 금지 경로에서 '${match[1]}'을 가져온다`,
+          `${rel}:${number}  원가 모듈 import 금지 경로에서 '${importMatch[1]}'을 가져온다`,
         );
+      }
+      // 1-1. 가격표 모듈은 허용 목록에서만 가져온다.
+      if (PRICE_BOOK_MODULE.test(target) && !PRICE_BOOK_IMPORTERS.some((p) => rel.startsWith(p))) {
+        findings.push(`${rel}:${number}  가격표 모듈은 정해진 화면·앱 파일에서만 가져온다: '${importMatch[1]}'`);
       }
     }
 
-    // 2. 영속 저장 — 원가를 만질 수 있는 모듈 전부
-    if ((isCostModule || isCostFree) && PERSISTENCE.test(line)) {
+    // 2. 영속 저장 — 원가를 만질 수 있는 모듈 전부. 7번 허용 파일(가격표 저장)만
+    //    예외이고, 그 파일은 아래 7번이 호출 하나하나를 검사한다.
+    if ((isCostModule || isCostFree) && persistenceRule === undefined && PERSISTENCE.test(line)) {
       findings.push(`${rel}:${number}  영속 저장 API 사용: ${line.trim()}`);
     }
 
@@ -180,12 +262,28 @@ for (const file of files) {
     if (PERSISTENCE.test(line) && !isCostModule && !isCostFree && !isUi && persistenceRule === undefined) {
       findings.push(`${rel}:${number}  허용 목록 밖에서 영속 저장 API 사용: ${line.trim()}`);
     }
-    if (persistenceRule !== undefined) {
+    if (persistenceRule?.kind === 'local-storage') {
       for (const match of line.matchAll(STORAGE_CALL)) {
         if (match[1] === 'clear' || match[1] === 'key' || match[2].trim() !== persistenceRule.keyConstant) {
           findings.push(
             `${rel}:${number}  저장소 호출은 ${persistenceRule.keyConstant} 열쇠 하나로만 한다: ${line.trim()}`,
           );
+        }
+      }
+    }
+    if (persistenceRule?.kind === 'indexed-db') {
+      if (NON_IDB_PERSISTENCE.test(line)) {
+        findings.push(`${rel}:${number}  가격표 저장은 IndexedDB 한 곳만 쓴다: ${line.trim()}`);
+      }
+      if (IDB_FORBIDDEN.test(line)) {
+        findings.push(`${rel}:${number}  목록 훑기·통째 지우기 호출 금지(열쇠 하나만 읽고 쓴다): ${line.trim()}`);
+      }
+      for (const [call, shape] of IDB_CALL_SHAPES) {
+        for (const match of line.matchAll(call)) {
+          const rest = line.slice(match.index + match[0].length);
+          if (!shape.test(rest)) {
+            findings.push(`${rel}:${number}  저장소 호출이 정해진 모양(상수·열쇠 하나)이 아니다: ${line.trim()}`);
+          }
         }
       }
     }

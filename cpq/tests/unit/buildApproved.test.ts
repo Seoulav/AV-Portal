@@ -94,13 +94,14 @@ function makeFakeRepo(): { root: string; rawPath: string } {
 }
 
 describe('prepareApprovedFiles — 쓰기 전 검증', () => {
-  it('정상 자료는 다섯 파일을 준비하고 전부 같은 sourceSha256을 쓴다', () => {
+  it('정상 자료는 네 파일을 준비하고 전부 같은 sourceSha256을 쓴다 — 판매 단가 파일은 만들지 않는다(B-20261016-06)', () => {
     const result = prepareApprovedFiles(validCatalog());
     expect(result.ok).toBe(true);
     if (!result.ok) throw new Error('unreachable');
     expect(Object.keys(result.files).sort()).toEqual(
-      ['labor-items.json', 'labor-mappings.json', 'prices.json', 'products.json', 'wage-table.json'].sort(),
+      ['labor-items.json', 'labor-mappings.json', 'products.json', 'wage-table.json'].sort(),
     );
+    expect(JSON.stringify(result.files)).not.toContain('sellingUnitPrice');
     const hashes = new Set(Object.values(result.files).map((f) => (f as { sourceSha256: string }).sourceSha256));
     expect(hashes).toEqual(new Set([SHA]));
   });
@@ -302,11 +303,13 @@ describe('writeApprovedSet — 완성 세트 전환', () => {
 
     writeApprovedSet(result.files, outDir, safety());
 
-    for (const name of ['products.json', 'prices.json', 'labor-items.json', 'wage-table.json', 'labor-mappings.json']) {
+    for (const name of ['products.json', 'labor-items.json', 'wage-table.json', 'labor-mappings.json']) {
       const content = JSON.parse(readFileSync(join(outDir, name), 'utf8'));
       expect(content.old, name).toBeUndefined();
       expect(content.sourceSha256, name).toBe(SHA);
     }
+    // 옛 세트에 있던 판매 단가 파일은 새 세트로 바꾸면서 함께 사라진다(B-20261016-06).
+    expect(existsSync(join(outDir, 'prices.json'))).toBe(false);
     const siblings = siblingsOf(outDir);
     expect(siblings.some((n) => n.includes('.bak-'))).toBe(false);
     expect(siblings.some((n) => n.includes('.tmp-'))).toBe(false);

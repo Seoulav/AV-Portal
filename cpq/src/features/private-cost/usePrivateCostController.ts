@@ -173,6 +173,12 @@ function itemRowsOf(document: QuoteDocument | undefined): QuoteRow[] {
 export function usePrivateCostController(
   document: QuoteDocument | undefined,
   documentGeneration: number,
+  /**
+   * 이 브라우저에 저장된 가격표의 원가(B-20261016-06). 원가 파일을 따로 고르지
+   * 않았으면 이 세션을 쓴다 — 고른 원가 파일이 있으면 그것이 우선한다.
+   * 가격표 원가는 SKU로만 붙는다(품목코드가 곧 견적 단가표 SKU다).
+   */
+  fallbackSession?: PrivateCostSession,
 ): PrivateCostController {
   const [state, setState] = useState<CostControllerState>(() => initialCostControllerState());
   const [links, setLinks] = useState<Record<string, ConfirmedLink>>({});
@@ -545,7 +551,7 @@ export function usePrivateCostController(
     });
   }
 
-  const session = effectiveCostSession(state, documentGeneration);
+  const session = effectiveCostSession(state, documentGeneration) ?? fallbackSession;
   const itemRows = itemRowsOf(document);
   const lines =
     session === undefined

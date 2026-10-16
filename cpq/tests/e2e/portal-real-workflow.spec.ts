@@ -2,11 +2,29 @@ import {test,expect} from '@playwright/test';
 import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {unzipSync,strFromU8} from 'fflate';
+import {buildSimpleXlsx,type XlsxCell} from '../../src/services/price-book/xlsxWriter';
+import {fakePricesFor} from '../fixtures/fakePrices';
 const out=resolve('../.integration/real-workflow');
+// B-20261016-06: 공개 판매 단가(prices.json)를 뺐다. 실제 단가 대신 공개 품목 목록에 **가짜** 가격을 채운
+// 4시트 가격표를 만들어 화면의 「가격표 불러오기」로 넣는다(원가도 가짜).
+function fakePriceWorkbook():Buffer{
+ const products=JSON.parse(readFileSync(new URL('../../data/approved/products.json',import.meta.url),'utf8'));
+ const prices=(fakePricesFor(products) as {prices:Record<string,{sellingUnitPrice:string}>}).prices;
+ const rows:XlsxCell[][]=[['품목코드','모델','품명','원가','판매가','비고']];
+ for(const p of products.products as Array<{sku:string;model:string;quoteName:string}>){
+  const selling=prices[p.sku]?.sellingUnitPrice;
+  rows.push([p.sku,p.model,p.quoteName,selling===undefined?undefined:{number:String(Number(selling)/2)},selling===undefined?undefined:{number:selling}]);
+ }
+ return Buffer.from(buildSimpleXlsx([{name:'품목 단가',rows}]));
+}
 test('실제 Portal 장비를 화면에서 구성하여 승인 CPQ 자료로 새 견적과 Excel 3종을 만든다',async({page,context})=>{
  test.setTimeout(120000);page.setDefaultTimeout(12000);mkdirSync(out,{recursive:true});
  await page.setViewportSize({width:1440,height:1100});
  const errors:string[]=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/AV-Portal/cpq/');
+ await page.getByLabel('가격표 파일 선택').setInputFiles({name:'가짜-가격표.xlsx',mimeType:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',buffer:fakePriceWorkbook()});
+ await expect(page.getByRole('status',{name:'가격표 불러오기 결과'})).toBeVisible();
+ await expect(page.locator('[data-price-book-state]')).toHaveAttribute('data-price-book-state','active');
  await page.goto('/AV-Portal/builder/');
  const add=async(model:string)=>{
   await page.getByPlaceholder('브랜드·모델·분류 검색').fill(model);

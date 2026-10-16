@@ -9,8 +9,9 @@
  * 모아서 화면에 그대로 보여준다 — `undefined` 가격이 '미등록'인 것과
  * 같은 원칙이다(설계서 §5.6): 조용히 기본값으로 메우지 않는다.
  *
- * 예외: `prices.json`은 없어도 된다(결정 D3) — 판매단가 배포를 나중에
- * 가릴 수 있어야 하므로, 이건 "실패"가 아니라 "미등록"으로 다룬다.
+ * 판매 단가는 배포에서 읽지 않는다(B-20261016-06) — 직원이 「가격표
+ * 불러오기」로 이 브라우저에 저장한 가격표에서 온다. 가격표가 없는 것은
+ * "실패"가 아니라 "단가 미등록"이다.
  */
 import { buildLaborReference, loadCatalog, type Catalog } from '../data/catalog/load';
 import { skuMigrationFileSchema } from '../data/catalog/schema';

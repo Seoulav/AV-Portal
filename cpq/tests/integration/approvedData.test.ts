@@ -1,11 +1,10 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 import {
   productsFileSchema,
-  pricesFileSchema,
   laborItemsFileSchema,
   wageTableFileSchema,
   laborMappingsFileSchema,
@@ -23,7 +22,6 @@ import { calculateLaborUnitPrice } from '@/domain/labor/calculateLabor';
 const DIR = resolve(__dirname, '../../data/approved');
 const FILES = [
   'products.json',
-  'prices.json',
   'labor-items.json',
   'wage-table.json',
   'labor-mappings.json',
@@ -40,7 +38,7 @@ beforeAll(() => {
 });
 
 describe('배포 데이터 — 파일 존재와 스키마', () => {
-  it('다섯 파일이 모두 있다', () => {
+  it('네 파일이 모두 있다', () => {
     for (const name of FILES) {
       expect(existsSync(resolve(DIR, name)), `${name}이 있어야 한다`).toBe(true);
     }
@@ -48,10 +46,6 @@ describe('배포 데이터 — 파일 존재와 스키마', () => {
 
   it('products.json이 스키마를 지킨다', () => {
     expect(() => productsFileSchema.parse(raw['products.json'])).not.toThrow();
-  });
-
-  it('prices.json이 스키마를 지킨다', () => {
-    expect(() => pricesFileSchema.parse(raw['prices.json'])).not.toThrow();
   });
 
   it('labor-items.json이 스키마를 지킨다', () => {
@@ -66,7 +60,7 @@ describe('배포 데이터 — 파일 존재와 스키마', () => {
     expect(() => laborMappingsFileSchema.parse(raw['labor-mappings.json'])).not.toThrow();
   });
 
-  it('다섯 파일이 같은 원본에서 나왔다', () => {
+  it('네 파일이 같은 원본에서 나왔다', () => {
     const hashes = new Set(
       FILES.map((n) => (raw[n] as { sourceSha256: string }).sourceSha256),
     );
@@ -98,7 +92,7 @@ describe('배포 데이터 — 민감정보 감사 게이트 (설계서 §8.1, �
   });
 });
 
-describe('배포 데이터 — 결정 D3 가격 분리', () => {
+describe('배포 데이터 — 판매 단가를 배포하지 않는다 (결정 D3 → B-20261016-06)', () => {
   it('products.json에 가격이 없다', () => {
     const products = productsFileSchema.parse(raw['products.json']).products;
     for (const product of products) {
@@ -106,25 +100,36 @@ describe('배포 데이터 — 결정 D3 가격 분리', () => {
     }
   });
 
-  it('prices.json에는 SKU와 숫자만 있다 — 제품명이 없다', () => {
-    const prices = pricesFileSchema.parse(raw['prices.json']);
-    for (const [sku, entry] of Object.entries(prices.prices)) {
-      expect(sku).toMatch(/^[A-Z0-9]{3}-\d{4}$/);
-      expect(Object.keys(entry).sort()).toEqual(['currency', 'sellingUnitPrice']);
+  it('공개 판매 단가 prices.json이 저장소에 없다 — 다시 들어오면 실패한다', () => {
+    // 2026-10-16 사용자 지시: "원가가 AI나 다른 사람 못 보게"(LED 구성기 방식).
+    // 판매가·원가는 「가격표 불러오기」로 각자의 브라우저에만 저장한다.
+    expect(existsSync(resolve(DIR, 'prices.json'))).toBe(false);
+  });
+
+  it('배포 폴더의 어떤 파일에도 판매 단가 칸이 없다', () => {
+    for (const name of readdirSync(DIR)) {
+      const text = readFileSync(resolve(DIR, name), 'utf8');
+      expect(text, name).not.toContain('sellingUnitPrice');
+      expect(text, name).not.toContain('purchaseUnitPrice');
     }
   });
 
-  it('가격의 모든 SKU가 제품에 있다 — 고아 가격이 없다', () => {
-    const products = productsFileSchema.parse(raw['products.json']).products;
-    const prices = pricesFileSchema.parse(raw['prices.json']);
-    const known = new Set(products.map((p) => p.sku));
-    for (const sku of Object.keys(prices.prices)) {
-      expect(known.has(sku), `${sku}에 해당하는 제품이 없다`).toBe(true);
-    }
+  it('UPSTREAM.json에 prices.json 제거가 기록돼 있다', () => {
+    const upstream = JSON.parse(readFileSync(resolve(__dirname, '../../UPSTREAM.json'), 'utf8')) as {
+      localChanges?: { path: string; removed?: boolean; task: string }[];
+    };
+    const removal = upstream.localChanges?.find((c) => c.path === 'data/approved/prices.json');
+    expect(removal?.removed).toBe(true);
+    expect(removal?.task).toBe('B-20261016-06');
   });
 
-  it('prices.json을 빼도 products.json이 혼자 유효하다 (결정 D3의 전제)', () => {
-    // 가격 파일 없이 제품만으로 스키마가 통과해야 "배포에서 빼기만 하면 된다"가 성립한다.
+  it('Pages 빌드 플러그인이 prices.json을 내주지도 복사하지도 않는다', () => {
+    const plugin = readFileSync(resolve(__dirname, '../../tools/vite-approved-data.ts'), 'utf8');
+    expect(plugin).toContain("FORBIDDEN_APPROVED_FILES: readonly string[] = ['prices.json']");
+    expect(plugin).not.toMatch(/OPTIONAL\s*=/);
+  });
+
+  it('products.json이 혼자 유효하다 — 가격 없이 견적 단가표가 선다', () => {
     expect(() => productsFileSchema.parse(raw['products.json'])).not.toThrow();
   });
 });

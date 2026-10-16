@@ -19,6 +19,7 @@ import { computeDocumentBasisConflicts, describeBasisConflicts } from '../domain
 import { computeActiveWarnings } from '../domain/quote/activeWarnings';
 import { withResolvedProduct } from '../domain/quote/resolveProduct';
 import { refreshResolvedRows } from '../domain/quote/refreshResolvedRows';
+import { repriceFromCatalog } from '../domain/quote/repriceFromCatalog';
 import {
   synchronizeMiscMaterials,
   computeMiscMaterialWarnings,
@@ -159,6 +160,12 @@ export interface Workspace {
   recalcPreview: RecalculationPreview | undefined;
   /** `catalog-item-removed` 경고 전용 — 입구와 무관하게 그 행만 다시 찾는다. */
   resolveRow(rowId: string, sku: string): void;
+  /**
+   * 열린 견적의 품목 단가를 지금 가격표(카탈로그 판매가)로 다시 붙인다
+   * (B-20261016-06). 사람이 누를 때만 돌고 실행 취소할 수 있다. 바뀐 행 수를
+   * 돌려준다. 카탈로그 판이 문서와 다르면 아무것도 바꾸지 않고 `'basis-mismatch'`.
+   */
+  applyCatalogPrices(): number | 'basis-mismatch' | 'no-document';
   setQuantity(rowId: string, quantity: string): void;
   setDescription(rowId: string, description: string): void;
   setRemark(rowId: string, remark: string): void;
@@ -878,6 +885,15 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     });
   }, [resources]);
 
+  const applyCatalogPrices = useCallback((): number | 'basis-mismatch' | 'no-document' => {
+    if (resources === undefined || history.present === undefined) return 'no-document';
+    const result = repriceFromCatalog(history.present, resources.catalog);
+    if (result.basisMismatch) return 'basis-mismatch';
+    const catalog = resources.catalog;
+    if (result.changed > 0) commit((document) => repriceFromCatalog(document, catalog).document);
+    return result.changed;
+  }, [resources, history.present, commit]);
+
   const resolveRow = useCallback(
     (rowId: string, sku: string) => {
       if (resources === undefined) return;
@@ -1308,6 +1324,7 @@ export function useWorkspace(resources: Resources | undefined): Workspace {
     cancelRecalculateWithCurrentBasis,
     recalcPreview: effectiveRecalcPreview,
     resolveRow,
+    applyCatalogPrices,
     setQuantity,
     setDescription,
     setRemark,

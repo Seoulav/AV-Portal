@@ -1,13 +1,13 @@
 /**
- * 배포 카탈로그 읽기 (결정 D3).
+ * 배포 카탈로그 읽기 (결정 D3, B-20261016-06).
  *
- * `products.json`과 `prices.json`을 **따로** 읽는다. 가격 파일은 없을 수 있다 —
- * 결정 D3가 "판매가를 가리려면 배포에서 빼기만 하면 된다"로 정해 두었고,
- * 2026-10-04 보강으로 실제로 인증 뒤에 두기로 했다.
+ * 배포에서 읽는 것은 `products.json`(품목 목록)뿐이다. **판매 단가 `prices.json`은
+ * 2026-10-16 저장소·Pages에서 뺐다**(B-20261016-06, LED 구성기 방식). 판매가와
+ * 원가는 직원이 「가격표 불러오기」로 고른 파일을 이 브라우저 안에서만 읽어
+ * 붙인다(`services/price-book/apply.ts`의 `catalogWithPriceBook`).
  *
- * 그래서 **가격이 없는 상태가 정상 경로다.** 404도, 깨진 JSON도, 스키마 불일치도
- * 던지지 않고 `pricesAvailable: false`로 떨어진다. 앱은 단가를 `미등록`으로
- * 표시하고 확정을 막는다 (설계서 §5.6).
+ * 그래서 **가격이 없는 상태가 정상 경로다.** 앱은 단가를 `단가 미등록`으로
+ * 표시한다(설계서 §5.6 — 0으로 채우지 않는다).
  *
  * 반대로 `products.json`이 없으면 **던진다.** 제품 목록 없이는 아무것도 못 한다.
  */
@@ -36,7 +36,12 @@ export interface Catalog {
   pricesUnavailableReason?: string;
 }
 
-/** 이미 파싱한 JSON에서 카탈로그를 만든다. 네트워크를 타지 않아 테스트가 쉽다. */
+/**
+ * 이미 파싱한 JSON에서 카탈로그를 만든다. 네트워크를 타지 않아 테스트가 쉽다.
+ *
+ * `pricesRaw`는 SKU → 판매가 지도(`pricesFileSchema` 모양)다. 앱은 넘기지 않고
+ * (가격은 가격표에서 온다), 시험이 **가짜 가격**을 넣을 때 쓴다.
+ */
 export function buildCatalog(productsRaw: unknown, pricesRaw?: unknown): Catalog {
   const products = productsFileSchema.parse(productsRaw);
 
@@ -48,7 +53,7 @@ export function buildCatalog(productsRaw: unknown, pricesRaw?: unknown): Catalog
   };
 
   if (pricesRaw === undefined) {
-    catalog.pricesUnavailableReason = '가격 파일이 배포에 없다 (결정 D3).';
+    catalog.pricesUnavailableReason = '가격표가 없다 — 「가격표 불러오기」로 이 브라우저에 불러와야 한다';
     return catalog;
   }
 
@@ -87,11 +92,11 @@ export interface LoadCatalogOptions {
 }
 
 /**
- * 배포 데이터를 읽는다.
+ * 배포 데이터(품목 목록)를 읽는다.
  *
  * 같은 origin의 정적 파일만 읽는다. 문서 상태를 바깥으로 보내지 않는다
- * (설계서 §8.4). 빌드 타임 `import`를 쓰지 않는 이유는 결정 D3다 —
- * 번들에 박으면 가격 파일을 빼는 것만으로 되돌릴 수 없다.
+ * (설계서 §8.4). **`prices.json`을 요청하지 않는다**(B-20261016-06) — 판매가는
+ * 가격표에서 온다.
  */
 export async function loadCatalog(options: LoadCatalogOptions = {}): Promise<Catalog> {
   const base = options.baseUrl ?? '/';
@@ -105,19 +110,7 @@ export async function loadCatalog(options: LoadCatalogOptions = {}): Promise<Cat
     );
   }
   const productsRaw: unknown = await productsResponse.json();
-
-  let pricesRaw: unknown;
-  try {
-    const pricesResponse = await get(`${base}data/approved/prices.json`);
-    if (pricesResponse.ok) {
-      pricesRaw = await pricesResponse.json();
-    }
-  } catch {
-    // 네트워크 오류도 "가격 없음"으로 본다. 제품 목록은 이미 읽었다.
-    pricesRaw = undefined;
-  }
-
-  return buildCatalog(productsRaw, pricesRaw);
+  return buildCatalog(productsRaw);
 }
 
 

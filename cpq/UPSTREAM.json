@@ -962,6 +962,13 @@
       "sha256": "7aa217a1edddb7e6dd59e35ee9baec6e62edefe05e5b1dac78922133f8689fb6",
       "task": "B-20261016-07",
       "summary": "회의실 견적 샘플 노무비 단가와 앱 계산이 일치한 품셈 연결 76건의 confirmed를 true로, note를 확인 근거로 바꿈. 다른 칸·순서는 원본 그대로."
+    },
+    {
+      "path": "data/approved/prices.json",
+      "upstreamSha256": "5f50ce536a79c51b908b877bf5aeadee3c5f56b5619d76757ba27b6b0ab41b24",
+      "removed": true,
+      "task": "B-20261016-06",
+      "summary": "판매 단가 파일을 저장소·Pages 배포에서 뺐다(LED 구성기 방식). 판매가·원가는 직원이 표준품셈 원본이나 가격표 파일을 「가격표 불러오기」로 골라 그 브라우저에만 저장한다. 과거 커밋의 파일은 이력에 남는다(이력 재작성 안 함)."
     }
   ]
 }

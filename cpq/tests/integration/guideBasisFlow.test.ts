@@ -20,6 +20,7 @@ import { prepareQuote, type WageMode } from '@/export/variants/prepare';
 import { pickedItemsToQuote } from '@/import/picker/toQuote';
 import { buildCatalog } from '@/data/catalog/load';
 import type { QuoteDocument, QuoteHeader } from '@/domain/quote/types';
+import { fakeApprovedPrices } from '../fixtures/fakePrices';
 
 const ROOT = resolve(__dirname, '../..');
 const approvedJson = (name: string): unknown =>
@@ -47,7 +48,7 @@ const raws = () => ({
 });
 
 const catalog = () =>
-  buildCatalog(approvedJson('products.json'), approvedJson('prices.json'));
+  buildCatalog(approvedJson('products.json'), fakeApprovedPrices());
 
 const header = (): QuoteHeader => ({
   quoteNumber: 'B-1',

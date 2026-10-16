@@ -31,10 +31,12 @@ test('필수 파일 실패 — 품셈 항목이 없으면 사유를 보여주고
 });
 
 test('판매가 없음 — 실패가 아니라 미등록 안내로 처리한다', async ({ page }) => {
+  // B-20261016-06: 판매가는 배포 파일이 아니라 이 브라우저의 가격표에서 온다.
+  // 가격표가 없으면 안내 문구가 "가격표가 없습니다"로 바뀌었다(전: "판매단가 파일이 없습니다").
   await mockResources(page, { '/data/approved/prices.json': 'missing' });
   await page.goto('./');
   await expect(page.getByRole('alert')).not.toBeVisible();
-  await expect(page.getByRole('status')).toContainText('판매단가 파일이 없습니다');
+  await expect(page.getByRole('status')).toContainText('가격표가 없습니다');
   await expect(page.getByRole('button', { name: '구성도 JSON 열기' })).toBeVisible();
 });
 
