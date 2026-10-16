@@ -2,7 +2,9 @@
 
 CPQ는 Configure(구성), Price(가격 계산), Quote(견적 작성)의 약자입니다.
 
-소스 기준은 hkkim0454/AV-CPQ의 7dcb7ab입니다. `UPSTREAM.json`은 선별 반입한 원본 파일별 해시입니다. 카탈로그·판매단가·품셈·노임 및 계산 모듈은 원본을 유지합니다. 연결에 필요한 입력과 배포 경로만 추가합니다.
+소스 기준은 hkkim0454/AV-CPQ의 7dcb7ab입니다. `UPSTREAM.json`은 선별 반입한 원본 파일별 해시입니다. 카탈로그·판매단가·품셈·노임 및 계산 모듈은 원본을 유지합니다. 연결에 필요한 입력과 배포 경로만 추가합니다. 예외로 `data/approved/labor-mappings.json`의 확인 표시(`confirmed`·note)는 B-20261016-07에서 바꿨고, `UPSTREAM.json`의 `localChanges`에 기록했습니다.
+
+품셈 연결 확인 대조(이 PC 전용): `npx vite-node tools/confirm-labor-from-samples.ts -- <샘플.xlsx> --out <저장소 밖 폴더> [--apply]`. 샘플과 금액이 든 결과는 저장소에 넣지 않습니다.
 
 ## 실행 및 검사
 

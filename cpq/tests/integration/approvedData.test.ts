@@ -1,4 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -151,9 +152,41 @@ describe('배포 데이터 — 불변식', () => {
     expect(products.some((p) => p.options['group'] !== undefined)).toBe(true);
   });
 
-  it('모든 매핑이 confirmed: false다 (설계서 §5.3)', () => {
+  it('확인한 매핑만 confirmed: true이고, 각각 금액 없는 확인 근거가 있다 (설계서 §5.3, B-20261016-07)', () => {
+    // 자동 추출 그대로인 매핑은 자동 추출 문구를 그대로 둔다. 사람이 확인한
+    // 매핑은 정해진 근거 문구(날짜·일치 행 수·노임 판·작업 ID)만 쓴다 —
+    // 금액·구매처가 들어갈 자리가 없다.
+    const AUTO_NOTE = '표준품셈 통합문서에서 자동 추출. 사람이 확인하기 전까지 확정에 쓰지 않는다.';
+    const CONFIRM_NOTE =
+      /^\d{4}-\d{2}-\d{2} 회의실 견적 샘플 노무비 단가 일치\(\d+행, \d{2}년 [상하]반기 노임 기준\)로 확인 \(B-20261016-07\)\.$/;
     const mappings = laborMappingsFileSchema.parse(raw['labor-mappings.json']).mappings;
-    expect(mappings.every((m) => m.confirmed === false)).toBe(true);
+    for (const m of mappings) {
+      if (m.confirmed) expect(m.note, m.laborMappingId).toMatch(CONFIRM_NOTE);
+      else expect(m.note, m.laborMappingId).toBe(AUTO_NOTE);
+    }
+    // 아직 확인하지 않은 매핑이 남아 있다 — 전부를 한꺼번에 확인으로 올리지 않았다.
+    expect(mappings.some((m) => !m.confirmed)).toBe(true);
+  });
+
+  it('원본(UPSTREAM)과 다른 배포 데이터는 로컬 변경으로 기록돼 있다', () => {
+    const upstream = JSON.parse(readFileSync(resolve(__dirname, '../../UPSTREAM.json'), 'utf8')) as {
+      files: { path: string; sha256: string }[];
+      localChanges?: { path: string; upstreamSha256: string; sha256: string; task: string }[];
+    };
+    const sha = (name: string): string =>
+      createHash('sha256').update(readFileSync(resolve(DIR, name))).digest('hex');
+    for (const name of FILES) {
+      const path = `data/approved/${name}`;
+      const original = upstream.files.find((f) => f.path === path);
+      expect(original, `${path}가 UPSTREAM.json에 없다`).toBeDefined();
+      const current = sha(name);
+      if (current === original!.sha256) continue;
+      const change = upstream.localChanges?.find((c) => c.path === path);
+      expect(change, `${path}가 원본과 다른데 localChanges 기록이 없다`).toBeDefined();
+      expect(change!.upstreamSha256).toBe(original!.sha256);
+      expect(change!.sha256, `${path}의 localChanges 해시가 지금 파일과 다르다`).toBe(current);
+      expect(change!.task).not.toBe('');
+    }
   });
 
   it('매핑의 SKU와 품셈 항목이 실재한다', () => {

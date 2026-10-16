@@ -60,7 +60,7 @@ import {
   pricesFileSchema,
   laborItemsFileSchema,
   wageTableFileSchema,
-  laborMappingsFileSchema,
+  generatedLaborMappingsFileSchema,
 } from '../src/data/catalog/schema';
 import { auditApprovedPayload } from '../src/data/catalog/audit';
 import {
@@ -190,7 +190,7 @@ export function prepareApprovedFiles(
       sourceSha256,
       wageTable: labor.wageTable,
     }),
-    'labor-mappings.json': laborMappingsFileSchema.parse({
+    'labor-mappings.json': generatedLaborMappingsFileSchema.parse({
       schemaVersion: 1,
       generatedOn,
       sourceSha256,

@@ -31,7 +31,7 @@ import type { ImportWarning } from '@/import/diagram/devices';
  * 확인 항목이 **여러 종류 남은** 실제 승인 카탈로그 문서로 0/1/2 세 등급을
  * 직접 만든다 — 화면을 거치지 않는다.
  *
- *   품셈 연결 미확인   실제 카탈로그 품목(1,331건 전부 confirmed:false)
+ *   품셈 연결 미확인   실제 카탈로그 품목 중 confirmed:false 연결이 붙은 것
  *   판매 단가 미등록   한 행의 단가를 지운다
  *   수량 미확인        한 행에 자리표시자 표식(`quantityUnresolved`)
  *   품목 미연결        구성도 경고(device-not-in-catalog)가 가리키는 행
@@ -65,7 +65,11 @@ const UNMATCHED_NODE = 'node-unmatched';
 
 function blockedPrepared(): PreparedQuote {
   const catalog = buildCatalog(j('products.json'), j('prices.json'));
-  const priced = catalog.products.filter((p) => catalog.prices.has(p.sku) && p.laborMappingId !== undefined);
+  // 확인한 연결(B-20261016-07)이 붙은 품목은 고르지 않는다 — 미확인이 남아야 한다.
+  const unconfirmed = new Set(BASIS.reference.mappings.filter((m) => !m.confirmed).map((m) => m.laborMappingId));
+  const priced = catalog.products.filter(
+    (p) => catalog.prices.has(p.sku) && p.laborMappingId !== undefined && unconfirmed.has(p.laborMappingId),
+  );
   const [a, b, c] = [priced[0]!, priced[1]!, priced[2]!];
   const picked = pickedItemsToQuote(
     {

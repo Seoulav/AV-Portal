@@ -954,5 +954,14 @@
       "path": "reference-docs/2026년도-적용-정보통신공사-표준품셈.pdf",
       "sha256": "7c00add21c816c4118d9851d555889a6fd650679ddc65c3f420e007273f5d721"
     }
+  ],
+  "localChanges": [
+    {
+      "path": "data/approved/labor-mappings.json",
+      "upstreamSha256": "3167389175c5a64415f17d156a09d5b4beafdd5090e6859b251eaf2de8eb6e07",
+      "sha256": "7aa217a1edddb7e6dd59e35ee9baec6e62edefe05e5b1dac78922133f8689fb6",
+      "task": "B-20261016-07",
+      "summary": "회의실 견적 샘플 노무비 단가와 앱 계산이 일치한 품셈 연결 76건의 confirmed를 true로, note를 확인 근거로 바꿈. 다른 칸·순서는 원본 그대로."
+    }
   ]
 }

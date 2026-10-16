@@ -243,15 +243,19 @@ describe('priceQuote — 노무비 연결을 빼먹을 수 없다', () => {
 
   it('자동 품셈 매핑은 미확인이라 확정을 막는다 (설계서 §5.3)', () => {
     const catalog = realCatalog();
-    const matrix = catalog.products.find((p) => p.quoteSpec === 'XDM-12')!;
+    const reference = laborReference();
+    // 사람이 확인한 연결(B-20261016-07)은 빼고, 아직 자동 추출 그대로인
+    // 연결이 붙은 품목으로 본다.
+    const unconfirmed = new Set(reference.mappings.filter((m) => !m.confirmed).map((m) => m.laborMappingId));
+    const product = catalog.products.find((p) => p.laborMappingId !== undefined && unconfirmed.has(p.laborMappingId))!;
     const result = pickedItemsToQuote(
       {
         header: header(),
-        systems: [{ name: '회의실', items: [{ sku: matrix.sku, quantity: '1' }] }],
+        systems: [{ name: '회의실', items: [{ sku: product.sku, quantity: '1' }] }],
       },
       catalog,
     );
-    const priced = priceQuote(result.document, laborReference());
+    const priced = priceQuote(result.document, reference);
     expect(priced.blocking).toBe(true);
     expect(priced.laborWarnings.some((w) => w.code === 'mapping-unconfirmed')).toBe(true);
   });

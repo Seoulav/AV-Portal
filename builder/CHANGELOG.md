@@ -1,5 +1,17 @@
 # Changelog — AV System Builder (AV Portal)
 
+## [미배포] — 2026-10-16 (B-20261016-07 1단계)
+
+[B-20261016-07](../Work/빌더/작업/B-20261016-07.md). 견적 앱: 회의실 견적 샘플로 품셈 연결 한꺼번에 확인.
+
+### Changed
+- 견적 앱 품셈 연결 76개를 `confirmed: true`로 바꿨다. 회의실 견적 샘플의 노무비 단가가 앱 계산(26년 하반기 노임)과 모든 행에서 같았던 연결이다. 이 연결이 붙은 품목은 더 이상 "품셈 연결 미확인"을 묻지 않는다. 남은 미확인 1,255개
+- 스키마: 배포본 연결 파일은 `confirmed: true`를 받고, 추출기 산출물은 계속 `false`만 받는다. `cpq/UPSTREAM.json`에 로컬 변경을 기록했다
+
+### Added
+- `cpq/tools/confirm-labor-from-samples.ts`: 샘플 경로를 인자로 받아 이 PC에서만 돌리는 대조 도구. 금액이 든 결과는 저장소 밖에만 쓴다
+- 시험: `tests/integration/laborConfirmedFlag.test.ts` 4건(가짜 자료), `tests/unit/laborSampleCompare.test.ts` 10건, 배포 데이터 불변식 2건(확인 근거 문구·UPSTREAM 로컬 변경 기록)
+
 ## [미배포] — 2026-10-16 (B-20261016-05)
 
 [B-20261016-05](../Work/빌더/작업/B-20261016-05.md). 견적 앱: 확인 항목이 남아도 Excel 내려받기, 확인한 품셈 연결 기억.

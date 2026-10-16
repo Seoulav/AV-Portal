@@ -58,10 +58,23 @@ function realBasisVersions(): BasisVersions {
   }).versions;
 }
 
-/** 실제 승인 카탈로그(품셈 confirmed:false 정책)로 만든 문서 — 자연히 blocking이다. */
-function realPrepared(): PreparedQuote {
+/**
+ * 실제 승인 카탈로그의 **아직 확인하지 않은**(`confirmed: false`) 품셈 연결이
+ * 붙은 품목으로 만든 문서 — 자연히 blocking이다. B-20261016-07부터 일부
+ * 연결이 확인됐으므로 확인된 연결은 고르지 않는다.
+ */
+function unconfirmedPricedProduct() {
   const cat = buildCatalog(j('products.json'), j('prices.json'));
-  const matrix = cat.products.find((p) => p.quoteSpec === 'XDM-12')!;
+  const mappings = (j('labor-mappings.json') as { mappings: { laborMappingId: string; confirmed: boolean }[] }).mappings;
+  const unconfirmed = new Set(mappings.filter((m) => !m.confirmed).map((m) => m.laborMappingId));
+  const product = cat.products.find(
+    (p) => p.laborMappingId !== undefined && unconfirmed.has(p.laborMappingId) && cat.prices.has(p.sku),
+  )!;
+  return { cat, product };
+}
+
+function realPrepared(): PreparedQuote {
+  const { cat, product: matrix } = unconfirmedPricedProduct();
   const document = pickedItemsToQuote(
     {
       header: {
@@ -94,9 +107,11 @@ function realPrepared(): PreparedQuote {
 }
 
 describe('실제 승인 카탈로그 전제 확인', () => {
-  it('품셈 매핑은 confirmed:false 정책상, 실제 카탈로그로 만든 문서는 항상 blocking이다', () => {
-    // 이 전제가 깨지면(언젠가 confirmed:true 매핑이 섞이면) 아래 시험들의
-    // "자연히 blocking" 가정도 다시 봐야 한다 — 그래서 별도로 확인해 둔다.
+  it('미확인 품셈 연결이 붙은 실제 카탈로그 품목으로 만든 문서는 blocking이다', () => {
+    // 이 전제가 깨지면(미확인 연결 품목이 남지 않거나 미확인이 막지 않으면)
+    // 아래 시험들의 "자연히 blocking" 가정도 다시 봐야 한다 — 그래서 별도로
+    // 확인해 둔다.
+    expect(unconfirmedPricedProduct().product).toBeDefined();
     expect(realPrepared().blocking).toBe(true);
   });
 });
