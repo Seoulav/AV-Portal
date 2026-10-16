@@ -61,6 +61,9 @@ test('mobile adds a library unit to a persistent canvas and keeps it through ins
   await inspectorTab.click();
   await expect(page.getByRole('tabpanel', { name: '선택 항목·이슈' })).toBeVisible();
   await expect(page.locator('.equipment-quote-panel')).toBeVisible();
+  await page.getByRole('button', { name: '설정 열기' }).click({ timeout: 3000 });
+  await expect(page.getByRole('dialog', { name: '장비 설정' })).toBeVisible();
+  await page.keyboard.press('Escape');
   await canvasTab.click();
   await expect(page.locator('.react-flow__node')).toHaveCount(1);
   await expect(page.locator('.react-flow__viewport')).toHaveAttribute('style', zoomBefore!);

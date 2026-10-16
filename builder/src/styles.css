@@ -281,6 +281,10 @@ button.active.lock { border-color: #ef4444; color: #ef4444; background: rgba(239
  .workspace[data-mobile-view='library'] .workspace-panel:not(.workspace-panel-library),
  .workspace[data-mobile-view='canvas'] .workspace-panel:not(.workspace-panel-canvas),
  .workspace[data-mobile-view='inspector'] .workspace-panel:not(.workspace-panel-inspector) { position: absolute; inset: 8px; width: calc(100% - 16px); visibility: hidden; pointer-events: none; }
+ /* React Flow nodes explicitly restore visibility and pointer events; suppress them while their measured canvas is inactive. */
+ .workspace[data-mobile-view='library'] .workspace-panel:not(.workspace-panel-library) *,
+ .workspace[data-mobile-view='canvas'] .workspace-panel:not(.workspace-panel-canvas) *,
+ .workspace[data-mobile-view='inspector'] .workspace-panel:not(.workspace-panel-inspector) * { visibility: hidden !important; pointer-events: none !important; }
  .equipment-quote-panel { max-height: none; }
 }
 .cable-suggestion { display: flex; align-items: center; justify-content: space-between; gap: 8px; }

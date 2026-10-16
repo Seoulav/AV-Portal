@@ -14,6 +14,7 @@ for(const width of [1280,390]) test(`Builder 작성 → CPQ 새 견적, 시스�
  await page.getByRole('button',{name:'FIX 추가',exact:true}).click();
  const node=page.locator('.react-flow__node-equipment').first();await node.click();
  // 시스템명·옵션은 장비 설정 창(B-20261013-01)에서 넣는다. 오른쪽 패널은 요약과 "설정 열기"다
+ if(width===390) await page.getByRole('tab',{name:'선택 항목·이슈'}).click();
  await page.getByRole('button',{name:'설정 열기'}).click();
  const settings=page.getByRole('dialog',{name:'장비 설정'});
  await settings.getByLabel('장비 시스템명').fill('회의실 A');
