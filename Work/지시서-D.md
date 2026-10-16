@@ -25,17 +25,19 @@
 
 ### 검증 결과 (2026-10-16)
 
-- `node --test --test-concurrency=1 tests/*.test.mjs`: **756개, 755 통과, 실패 0, 기존 제외 1**.
+- `node --test --test-concurrency=1 tests/*.test.mjs`: **759개, 758 통과, 실패 0, 기존 제외 1**.
 - crop 있음/y 없음 통과; 명시 y 범위 밖·null·문자열 거부; 범위 경계 통과.
 - 변경 전 지도 175개 및 RTCOM 25개 제품의 통과·거부 결과 일치. crop 없는 168개 결과도 동일.
 - `node beta/update-snapshot.mjs`, `node beta/build-search-index.mjs`, `node beta/build-readable-catalog.mjs` 실행.
-- `node beta/build-search-index.mjs --check`: 통과, 702812 bytes.
-- `node beta/verify-pages.mjs`: 284개 제품, 281개 상세, 509개 사진, PDF 항목 156개 검증 통과.
+- `node beta/build-search-index.mjs --check`: 통과, 702887 bytes.
+- `node beta/verify-pages.mjs`: 284개 제품, 281개 상세, 513개 사진, PDF 항목 156개 검증 통과.
 - `git diff --check`: 통과. 전체 시험의 PDF.js canvas/font 경고는 기준 검사에서도 있었으며 실패 없음.
 - 원본·공개 detail-enhancements 복사본 일치 검사는 기존 전체 시험에서 통과.
 - 전체 앱 5종 × 1280px/390px: 각 17/7/6/5/5개 표식 표시, 페이지 가로 넘침 없음.
 
 - 독립 코드 리뷰: 중요·치명 문제 없음. 검증기 범위·복사본 일치·선택적 역변환 검토, 새 회귀 5/5 통과.
+
+- 최신 main `f8747461` 통합 후 전체 시험·verify-pages·검색 인덱스 확인을 재실행했다. 검색 인덱스 충돌은 재생성으로 해결했다.
 
 ### Work가 직접 확인할 부분
 
