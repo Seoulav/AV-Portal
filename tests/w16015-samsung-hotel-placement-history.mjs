@@ -20,6 +20,5 @@ export function beforeW16015SamsungHotelPlacementProduct(current,slug){
 export function beforeW16015SamsungHotelPlacementRaw(raw,slug){
  if(!fixture[slug])return raw;
  const current=JSON.parse(raw),restored=beforeW16015SamsungHotelPlacementProduct(current,slug);
- return restored===current?raw:JSON.stringify(restored,null,2)+'
-';
+ return restored===current?raw:JSON.stringify(restored,null,2)+'\n';
 }
