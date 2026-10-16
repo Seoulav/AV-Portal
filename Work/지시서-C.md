@@ -1,5 +1,19 @@
 # 세션 C 진행 기록
 
+## W-20261017-003 1부 — Analog Way 레이어 연출 기준 정리
+
+- 상태: REVIEW (미리보기 캡처 및 휴대폰 실측은 실행 환경 차단으로 BLOCKED)
+- 명세: `Work/작업/W-20261017-003.md` · 명세 확인 main `598757af700c961a4caf0888a5f5ce3dcde79c08`
+- 브랜치: `codex/W-20261017-003-aw-layer-rules` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
+- 범위: 15종 상세 공용 레이어 기준 카드와 `Work/기획/AnalogWay-레이어연출기준.md`. XDM-WOS100 기존 문구 및 제품 JSON·layerPlan/videoLayerPlan 값은 변경하지 않는다.
+- [x] W-019·W-011 근거표와 명세를 읽고 Aquilon RS·C, Alta 4K, Midra 4K의 검증된 기준을 통합하기 시작했다.
+- [x] 제품 JSON 계획에서 15개 모델 수치를 정규화하는 모듈과 4개 데이터 기반 예시를 작성했다.
+- [x] 기존 해설 카드에서 공통 규칙 문구를 새 카드로 옮기는 구현을 시작했다. 기존 XDM 비교 DOM 코드는 보존했다.
+- [x] 카드 렌더링·15종 JSON 수치·기존 XDM 비교 DOM 보존 단위 테스트 통과. `verify-pages`, 검색 인덱스 `--check` 통과.
+- [x] 전체 테스트 875건 실행: 872 pass, 2 fail, 1 skip. 실패 2건은 기존 `rtcom-sync.test.mjs`의 임시 디렉터리 `rename` EPERM으로, W-003 변경과 무관함.
+- [ ] 1280px·390px PNG 및 `scrollWidth === 390`: 브라우저 호스트 `screenshot_no_frame`, Windows Edge·Chrome headless `STATUS_BREAKPOINT`로 PNG 생성·390px 측정 불가. Work 측 브라우저 환경에서 시각 검증 필요.
+- [ ] PR 본문에 원문 인용·쪽·미리보기 상태를 기록하고 Work 독립 검토를 요청한다. 사용자 검토 전 병합하지 않는다.
+
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
 - 상태: MERGED (PR #576 병합·Pages 배포·공개 검증 완료)

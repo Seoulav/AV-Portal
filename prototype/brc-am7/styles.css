@@ -467,6 +467,30 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 
 .inogeni-flow .inogeni-control-line { fill: none; stroke: #686580; stroke-width: 2; stroke-dasharray: 7 6; }
 
+/* W-20261017-003 shared Analog Way layer standards card. */
+.aw-layer-standards { min-width: 0; overflow: hidden; margin-top: 22px; padding: 20px; border: 1px solid var(--pg-line); border-radius: var(--pg-r-inner); background: linear-gradient(135deg, #f7faff, #f2fbfc); }
+.aw-layer-standards h2 { margin: 0 0 8px; font-size: 20px; }
+.aw-layer-standards h3 { margin: 18px 0 8px; font-size: 15px; }
+.aw-layer-standards-lead, .aw-layer-standards-table-hint { color: var(--pg-ink-2); line-height: 1.6; }
+.aw-layer-standards-series { min-width: 0; }
+.aw-layer-standards-table-wrap { max-width: 100%; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; }
+.aw-layer-standards-table-wrap table { min-width: 680px; }
+.aw-layer-standards-table-wrap th, .aw-layer-standards-table-wrap td { vertical-align: top; white-space: nowrap; }
+.aw-layer-standards-table-wrap th:first-child { min-width: 130px; text-align: left; }
+.aw-layer-standards-current { background: #eaf3ff; }
+.aw-layer-standards-examples { margin-top: 18px; }
+.aw-layer-standards-example-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.aw-layer-standards-example { min-width: 0; padding: 14px; border: 1px solid var(--pg-line); border-radius: 14px; background: #fff; }
+.aw-layer-standards-example h4 { margin: 0 0 6px; }
+.aw-layer-standards-example p, .aw-layer-standards-explanations { color: var(--pg-ink-2); line-height: 1.6; }
+.aw-layer-standards-example p { margin: 0; }
+.aw-layer-standards-explanations { padding-left: 20px; }
+@media (max-width: 720px) {
+  .aw-layer-standards { padding: 14px; }
+  .aw-layer-standards-example-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* W-20261017-003 shared layer standards card end. */
+
 /* W-20261016-011 shared Midra 4K / Alta 4K layer analysis. */
 .video-layer-plan { margin-top: 22px; padding: 20px; border: 1px solid var(--pg-line); border-radius: var(--pg-r-inner); background: linear-gradient(135deg, #f7faff, #f2fbfc); min-width: 0; }
 .video-layer-plan h2 { margin: 0 0 8px; font-size: 20px; }

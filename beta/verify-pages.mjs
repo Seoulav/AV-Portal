@@ -64,7 +64,7 @@ assert.doesNotMatch(commonStyle, /(?:^|\})\s*body\s*\{/);
   }
 }
 const detail = new URL('detail/', site);
-assert.deepEqual((await readdir(detail)).sort(), ['analogway-layer-guide-data.mjs', 'analogway-layer-guide.mjs', 'app.js', 'data', 'detail-enhancements.mjs', 'detail-enhancement-view.mjs', 'ds8s-guide.mjs', 'front-connection-points-data.mjs', 'front-connection-points.mjs', 'images', 'index.html', 'layer-tables.mjs', 'pdf-documents.mjs', 'product-detail-model.mjs', 'rtcom-embed.mjs', 'styles.css'].sort());
+assert.deepEqual((await readdir(detail)).sort(), ['analogway-layer-guide-data.mjs', 'analogway-layer-guide.mjs', 'analogway-layer-standards.mjs', 'app.js', 'data', 'detail-enhancements.mjs', 'detail-enhancement-view.mjs', 'ds8s-guide.mjs', 'front-connection-points-data.mjs', 'front-connection-points.mjs', 'images', 'index.html', 'layer-tables.mjs', 'pdf-documents.mjs', 'product-detail-model.mjs', 'rtcom-embed.mjs', 'styles.css'].sort());
 const productImageFiles = Object.values(group1Images).flat().map(image => image.file).sort();
 const previewImageFiles = group2Previews.map(entry => entry.image.file);
 assert.equal(new Set([...productImageFiles, ...previewImageFiles]).size, productImageFiles.length + previewImageFiles.length, '이미지 파일명 중복');
