@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -11,8 +12,8 @@ const sha=b=>createHash('sha256').update(b).digest('hex');
 test('W-009 selective inverse restores only approved fields and exposes unrelated regressions',()=>{
  for(const slug of slugs){
   const raw=readFileSync(new URL('../beta/site/detail/data/'+slug+'.json',import.meta.url),'utf8');
-  const current=JSON.parse(raw);
-  const reversed=JSON.parse(beforeW16009Raw(raw,slug));
+  const current=beforeW16015Product(JSON.parse(raw),slug);
+  const reversed=JSON.parse(beforeW16009Raw(beforeW16015Raw(raw,slug),slug));
   const approvedFields=new Set(Object.keys(fixture[slug].prior));
   for(const field of approvedFields)assert.deepEqual(reversed[field],fixture[slug].prior[field],slug+': prior '+field);
   for(const [field,value] of Object.entries(current))if(!approvedFields.has(field))assert.deepEqual(reversed[field],value,slug+': current '+field);
@@ -49,7 +50,7 @@ test('Colorlight board rows and Epson serial socket have distinct source-backed 
  const cg=portMapGeometry(c.portMap,1500,370);
  assert.ok(cg.markers.filter(x=>x.side==='left').every(x=>x.cx<cg.image.x));
  assert.ok(cg.markers.filter(x=>x.side==='right').every(x=>x.cx>cg.image.x+cg.image.width));
- const e=read('eb-l895e');
+ const e=beforeW16015Product(read('eb-l895e'),'eb-l895e');
  assert.equal(e.io.length,9);
  assert.match(e.io[8].condition,/22·184·276쪽/);
  assert.equal(e.io[8].quantity,'1');
