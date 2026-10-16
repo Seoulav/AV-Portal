@@ -42,6 +42,7 @@ test('loupe uses the same 216px diameter in JS and CSS while keeping 3x dialog z
     const css = read(`${prefix}/styles.css`);
     assert.match(js, /const LOUPE_SIZE = 216, LOUPE_ZOOM = 3/);
     assert.match(css, /\.image-loupe\s*\{[^}]*width:\s*216px;[^}]*height:\s*216px;/);
-    assert.match(js, /role === 'Diagram'\) return null/);
+    // 2026-10-16: diagrams also support the mouse loupe.
+    assert.doesNotMatch(js, /role === 'Diagram'\) return null/);
   }
 });

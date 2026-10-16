@@ -125,7 +125,7 @@ test('all seven products preserve the approved marker numbers, labels, and manua
   assert.equal(hash.digest('hex'), '6efdeff673bef36f69c6859ea400b7f02eb77d06f6fd00ebdccfd28f4068b6cd');
 });
 
-test('the seven product cores and photograph-only loupe rule remain scoped', () => {
+test('the seven product cores stay scoped and diagrams allow the loupe (2026-10-16 user request)', () => {
   const hash = createHash('sha256');
   for (const slug of [...a, b, c]) {
     const core = structuredClone(beforeMobileRs232(beforeW12002Product(beforeW013A2Product(product(slug),slug),slug), slug));
@@ -137,7 +137,7 @@ test('the seven product cores and photograph-only loupe rule remain scoped', () 
   assert.equal(hash.digest('hex'), '31844c9b89df4ea3e85c586baf0f28e4697952a1cd797e18ede2644813f5acb9');
   for (const file of ['beta/site/detail/app.js', 'prototype/brc-am7/app.js']) {
     const source = readFileSync(new URL(file, root), 'utf8');
-    assert.equal(source.match(/data\.images\[selectedImage\]\?\.role === 'Diagram'/g)?.length, 2,
-      `${file}: both the inline and dialog loupe exclude diagrams by image role`);
+    assert.doesNotMatch(source, /if \(data\.images\[selectedImage\]\?\.role === 'Diagram'\) return null/,
+      `${file}: 2026-10-16 user request enables inline and dialog diagram loupes`);
   }
 });

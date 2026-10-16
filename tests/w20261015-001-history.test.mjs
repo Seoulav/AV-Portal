@@ -43,7 +43,10 @@ test('all pre-existing products still validate and view source matches the appro
     .replace(/\/\/ HDF-CCF cable scenario renderer start\n[\s\S]*?\/\/ HDF-CCF cable scenario renderer end\n/,'')
     .replace("  if (flow.layout === 'cable-scenarios') return renderCableScenarioFlow(flow, model);\n",'');
   assert.equal(sha(view),'1f512b14f80b04e862e56c9a1c729a1ac73a60ea0986ccb9b1402f538b843e3d');
-  const css=beforeW20261016_001Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8'))
+  // W-20261016-013 changes only these loupe declarations; other CSS still hits the historical hash.
+  const css=beforeW20261016_001Styles(readFileSync(new URL('../beta/site/detail/styles.css',import.meta.url),'utf8')
+    .replace('.dialog-image-wrap { min-height: 120px;', '.dialog-image-wrap {')
+    .replace('.image-loupe { background-repeat: no-repeat; background-color: #fff;', '.image-loupe {'))
     .replace(/\n\/\* W-20261016-010 Aquilon layer-plan card\. \*\/[\s\S]*?\/\* W-20261016-010 Aquilon layer-plan card end\. \*\/\n/,'\n')
     .split('\n/* HDF-CCF cable scenarios. Existing signal-flow layout uses its own classes. */')[0];
   assert.equal(sha(css),'415112b0c26aae92313c91840579a1505d2de0f5d4559367407e44b80f9cc61d');
