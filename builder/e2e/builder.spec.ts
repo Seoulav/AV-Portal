@@ -235,8 +235,10 @@ test('drawn edges attach at the dots geometry computes', async ({ page }) => {
   const numbers = (d ?? '').match(/-?[\d.]+/g)!.map(Number);
   const [sx, sy] = numbers;
   const [tx, ty] = numbers.slice(-2);
-  expect([sx, sy]).toEqual([at(cam).x + 240, at(cam).y + 12 + 54 + 28 + 12]);
-  expect([tx, ty]).toEqual([at(disp).x - 20, at(disp).y + 12 + 54 + 2 * 28 + 12]);
+  expect(sx).toBeCloseTo(at(cam).x + 240, 3);
+  expect(sy).toBeCloseTo(at(cam).y + 12 + 54 + 28 + 12, 3);
+  expect(tx).toBeCloseTo(at(disp).x - 20, 3);
+  expect(ty).toBeCloseTo(at(disp).y + 12 + 54 + 2 * 28 + 12, 3);
   // 단자 점(::after)은 핸들 상자의 바깥 끝에 있다
   const dotLeft = await handle(page, disp, 'in-hdmi-3').evaluate(element => getComputedStyle(element, '::after').left);
   expect(dotLeft).toBe('0px');

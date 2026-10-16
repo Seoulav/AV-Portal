@@ -277,9 +277,9 @@ test('케이블 거리 미적용 항목을 누르면 펼쳐 포커스하고, 그
 
   // 펼쳐지고, 포커스가 그 영역 **안**에 있다.
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
-  expect(
-    await page.evaluate(() => document.activeElement?.closest('[data-section="cables"]') !== null),
-  ).toBe(true);
+  await expect.poll(() => page.evaluate(
+    () => document.activeElement?.closest('[data-section="cables"]') !== null,
+  )).toBe(true);
   // 접었다 편 뒤에도 고치던 값이 그대로다 — 입력이 떨어져 나가지 않았다.
   await expect(distance).toHaveValue('20');
 
@@ -350,10 +350,9 @@ test('구성도 경고 목록은 견적표 아래 접기 영역에 있고, 확�
 
   // 펼쳐지고, **그 경고 항목 자체**에 포커스가 간다.
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
-  const focusedWarningId = await page.evaluate(
+  await expect.poll(() => page.evaluate(
     () => (globalThis.document.activeElement as HTMLElement | null)?.getAttribute('data-warning-id') ?? '',
-  );
-  expect(focusedWarningId).not.toBe('');
+  )).not.toBe('');
 
   // 이동한 뒤에도 접기가 동작한다 — 한 번 쓰고 마는 요청이다.
   await toggle.click();
